@@ -1,114 +1,88 @@
 // discord_app/modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import EyeSlashIcon2 from "../../../../design/components/Icon/native/redesign/generated/EyeSlashIcon.tsx";
 import DenyIcon from "../../../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let reason;
-
-let c3;
-let closure_4;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (reason) => {
-      let items;
-      let tmp10;
-      let tmp4;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(9);
-      reason = reason.reason;
-      if (cResult[0] !== reason) {
-        let EyeSlashIcon;
-        if ("blocked" === reason) {
-          EyeSlashIcon = DenyIcon.DenyIcon;
-        } else {
-          EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
-        }
-        const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
-        const tmp5Result = _false(EyeSlashIcon, obj2);
-        cResult[0] = reason;
-        cResult[1] = tmp5Result;
-        tmp4 = tmp5Result;
-      } else {
-        tmp4 = cResult[1];
-      }
-      if (cResult[2] !== reason) {
-        let uxrh1O;
-        const intl = intl2.intl;
-        const string = intl.string;
-        if ("blocked" === reason) {
-          uxrh1O = intl2.t["WPe+xL"];
-        } else {
-          uxrh1O = intl2.t.uxrh1O;
-        }
-        const stringResult = string(uxrh1O);
-        cResult[2] = reason;
-        cResult[3] = stringResult;
-        tmp8 = stringResult;
-      } else {
-        tmp8 = cResult[3];
-      }
-      if (cResult[4] !== tmp8) {
-        const obj3 = { variant: "text-md/normal", color: "text-muted", children: tmp8 };
-        const tmp12 = _false(Text_Text.Text, obj3);
-        cResult[4] = tmp8;
-        cResult[5] = tmp12;
-        tmp10 = tmp12;
-      } else {
-        tmp10 = cResult[5];
-      }
-      if (cResult[6] === tmp4) {
-        let tmp13;
-        if (cResult[7] === tmp10) {
-          tmp13 = cResult[8];
-        }
-        return tmp13;
-      }
-      const obj4 = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: items };
-      const Stack = Stack_Stack.Stack;
-      items = [tmp4, tmp10];
-      const tmp14 = React3(Stack, obj4);
-      cResult[6] = tmp4;
-      cResult[7] = tmp10;
-      cResult[8] = tmp14;
-      tmp13 = tmp14;
-    }
-  : (reason) => {
-      let EyeSlashIcon;
-      let items;
-      reason = reason.reason;
-      const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: items };
-      const Stack = Stack_Stack.Stack;
-      if ("blocked" === reason) {
-        EyeSlashIcon = DenyIcon.DenyIcon;
-      } else {
-        EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
-      }
-      items = [,];
-      const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
-      items[0] = _false(EyeSlashIcon, obj2);
-      const Text = Text_Text.Text;
-      const intl = intl2.intl;
-      const string = intl.string;
-      const t = intl2.t;
-      const obj3 = {
-        variant: "text-md/normal",
-        color: "text-muted",
-        children: string("blocked" === reason ? t["WPe+xL"] : t.uxrh1O),
-      };
-      items[1] = _false(Text, obj3);
-      return React3(Stack, obj);
-    };
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx",
 );
 
-export default tmp4;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (reason) => {
+      const cResult = c.c(9);
+      reason = reason.reason;
+      if (cResult[0] !== reason) {
+        if ("blocked" === reason) {
+          let EyeSlashIcon = DenyIcon.DenyIcon;
+        } else {
+          EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
+        }
+        const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
+        const tmp5Result = React3(EyeSlashIcon, obj2);
+        cResult[0] = reason;
+        cResult[1] = tmp5Result;
+      } else if (cResult[2] !== reason) {
+        const intl = util.intl;
+        if ("blocked" === reason) {
+          let uxrh1O = util.t["WPe+xL"];
+        } else {
+          uxrh1O = util.t.uxrh1O;
+        }
+        const stringResult = intl.string(uxrh1O);
+        cResult[2] = reason;
+        cResult[3] = stringResult;
+      } else {
+        if (cResult[4] !== cResult[3]) {
+          const obj3 = { variant: "text-md/normal", color: "text-muted", children: tmp9 };
+          const tmp14 = React3(Text_Text.Text, obj3);
+          cResult[4] = tmp9;
+          cResult[5] = tmp14;
+          let tmp12 = tmp14;
+        } else {
+          tmp12 = cResult[5];
+        }
+        if (cResult[6] === tmp4) {
+          if (cResult[7] === tmp12) {
+            let tmp15 = cResult[8];
+          }
+          return tmp15;
+        }
+        const obj4 = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
+        const items = [tmp4, tmp12];
+        obj4.children = items;
+        const tmp18 = React4(Stack_Stack.Stack, obj4);
+        cResult[6] = tmp4;
+        cResult[7] = tmp12;
+        cResult[8] = tmp18;
+        tmp15 = tmp18;
+      }
+    }
+  : (reason) => {
+      const obj = { direction: "horizontal", spacing: nativeDefault.space.PX_8, align: "center", children: null };
+      if ("blocked" === reason.reason) {
+        let EyeSlashIcon = DenyIcon.DenyIcon;
+      } else {
+        EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
+      }
+      const items = [React3(EyeSlashIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED })];
+      const intl = util.intl;
+      const t = util.t;
+      const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
+      items[1] = React3(Text_Text.Text, {
+        variant: "text-md/normal",
+        color: "text-muted",
+        children: intl.string("blocked" === reason.reason ? t["WPe+xL"] : t.uxrh1O),
+      });
+      obj.children = items;
+      return React4(Stack_Stack.Stack, obj);
+    };

@@ -8,13 +8,11 @@ let closure_2 = ChannelRecord.createChannelRecordFromInvite;
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
-export const getEstablishedDate = function getEstablishedDate(tmp2Result4, stateFromStores) {
-  if (null != tmp2Result4) {
-    if ("" !== tmp2Result4) {
+export const getEstablishedDate = function getEstablishedDate(tmpResult4, stateFromStores) {
+  if (null != tmpResult4) {
+    if ("" !== tmpResult4) {
       const _Date = Date;
-      const self = this;
-      const self2 = this;
-      const date = new Date(tmp2Result4);
+      const date = new Date(tmpResult4);
       const _Date2 = Date;
       let toLocaleDateStringResult = null;
       if (date instanceof Date) {
@@ -33,8 +31,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
   if (null == guild.guild) {
     return false;
   } else {
-    const obj = GuildRecordUtils;
-    const features = obj.fromInviteGuild(guild.guild).features;
+    const features = GuildRecordUtils.fromInviteGuild(guild.guild).features;
     if (features.has(GuildFeatures.HUB)) {
       return false;
     } else {

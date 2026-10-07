@@ -1,32 +1,30 @@
 // discord_app/modules/polls/useTrackPollEvents.tsx
-import Constants from "../../Constants.tsx";
 import AppAnalyticsUtilsDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import PollLayoutTypes from "../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
-import react from "../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, attachments_count, closure_0, closure_2, image, stickers_count;
 
-const AnalyticEvents = Constants.AnalyticEvents;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
+
+export const useTrackPollCreationEvents = ReactCompilerGating.isReactCompilerEnabled()
   ? (attachments_count, arg1) => {
       _require = attachments_count;
-      let closure_1 = arg1;
-      let obj = require("react");
-      const cResult = obj.c(5);
+      closure_1 = arg1;
+      const cResult = require("c").c(5);
       if (cResult[0] === arg1) {
-        let tmp2;
-        let tmp3;
         if (cResult[1] === attachments_count) {
-          tmp2 = cResult[2];
+          let tmp2 = cResult[2];
         }
         if (cResult[3] !== tmp2) {
-          let obj2 = { trackPollCreationCancelled: tmp2 };
+          const obj2 = { trackPollCreationCancelled: tmp2 };
           cResult[3] = tmp2;
           cResult[4] = obj2;
-          tmp3 = obj2;
+          let tmp3 = obj2;
         } else {
           tmp3 = cResult[4];
         }
@@ -49,15 +47,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         });
         const obj = AppAnalyticsUtilsDefault;
-        const obj2 = {
+        obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, {
           answers_count: attachments_count.length,
           attachments_count,
           emojis_count: allow_multiselect,
           stickers_count,
           allow_multiselect,
           layout_type: PollLayoutTypes.PollLayoutTypes.DEFAULT,
-        };
-        obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, obj2);
+        });
       };
       cResult[0] = arg1;
       cResult[1] = attachments_count;
@@ -65,40 +62,34 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
     }
   : (attachments_count, arg1) => {
-      let items;
-      let closure_1 = arg1;
-      let obj = {
-        trackPollCreationCancelled: react.useCallback(() => {
-          attachments_count = 0;
-          const allow_multiselect = 0;
-          stickers_count = 0;
-          const item = attachments_count.forEach((image) => {
-            image = image.image;
-            if (null != image) {
-              if (null != image.emoji) {
-                closure_1 = closure_1 + 1;
-              } else if (null != image.stickerId) {
-                closure_2 = closure_2 + 1;
-              } else if (null != image.mediaAttachmentState) {
-                closure_0 = closure_0 + 1;
-              }
+      closure_1 = arg1;
+      let obj = { trackPollCreationCancelled: null };
+      const items = [attachments_count, arg1];
+      obj.trackPollCreationCancelled = noop.useCallback(() => {
+        attachments_count = 0;
+        const allow_multiselect = 0;
+        stickers_count = 0;
+        const item = attachments_count.forEach((image) => {
+          image = image.image;
+          if (null != image) {
+            if (null != image.emoji) {
+              closure_1 = closure_1 + 1;
+            } else if (null != image.stickerId) {
+              closure_2 = closure_2 + 1;
+            } else if (null != image.mediaAttachmentState) {
+              closure_0 = closure_0 + 1;
             }
-          });
-          const obj = AppAnalyticsUtilsDefault;
-          const obj2 = {
-            answers_count: attachments_count.length,
-            attachments_count,
-            emojis_count: allow_multiselect,
-            stickers_count,
-            allow_multiselect,
-            layout_type: PollLayoutTypes.PollLayoutTypes.DEFAULT,
-          };
-          obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, obj2);
-        }, items),
-      };
-      items = [attachments_count, arg1];
+          }
+        });
+        const obj = AppAnalyticsUtilsDefault;
+        obj.trackWithMetadata(AnalyticEvents.POLL_CREATION_CANCELLED, {
+          answers_count: attachments_count.length,
+          attachments_count,
+          emojis_count: allow_multiselect,
+          stickers_count,
+          allow_multiselect,
+          layout_type: PollLayoutTypes.PollLayoutTypes.DEFAULT,
+        });
+      }, items);
       return obj;
     };
-const result = size.fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
-
-export const useTrackPollCreationEvents = tmp2;

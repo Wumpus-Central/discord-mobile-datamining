@@ -1,10 +1,11 @@
 // discord_app/modules/chat_input/native/getChatInputPositionStyle.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { top: undefined };
-const merged = Object.assign(react_native.StyleSheet.absoluteFillObject);
+let obj = {};
+const merged = Object.assign(_mod17.StyleSheet.absoluteFillObject);
+obj.top = undefined;
 const result = size.fileFinishedImporting("modules/chat_input/native/getChatInputPositionStyle.tsx");
 
 export default function getChatInputPositionStyle() {
@@ -14,10 +15,10 @@ export default function getChatInputPositionStyle() {
   }
   let tmp;
   if (!obj.isCreatingThread) {
-    const obj2 = PlatformUtils;
     if (obj2.isIOS()) {
       tmp = obj;
     }
+    obj2 = PlatformUtils;
   }
   return tmp;
 }

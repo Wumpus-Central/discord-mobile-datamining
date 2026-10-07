@@ -2,82 +2,74 @@
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import Server from "../../flow/Server.tsx";
-import ApplicationRecord2 from "../../records/ApplicationRecord.tsx";
 import getGameMediaRefURLDefault from "getGameMediaRefURL.tsx";
 import Record from "../../lib/Record.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
-const ApplicationRecord = ApplicationRecord2;
-let roles;
-
-const createExecutable = ApplicationRecord2.createExecutable;
+require = fn;
+const createExecutable = fn(2009).createExecutable;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
-class GameRecord extends Record {
-  constructor(item10012) {
-    let aliases;
-    let game_flags;
-    let genres;
-    let reviews;
-    let tmp10;
-    let tmp8;
-    const tmp5 = new GameRecord(tmp4, tmp3, tmp2, tmp, new.target, this);
-    ({ id: tmp5.id, name: tmp5.name, description: tmp5.description, aliases } = item10012);
+class GameRecord extends tmp2 {
+  constructor(arg0) {
+    tmp5 = new GameRecord(tmp4, tmp3, tmp2, tmp, new.target, new.target);
+    ({ id: tmp5.id, name: tmp5.name, description: tmp5.description, aliases } = global);
     if (aliases == null) {
       aliases = [];
     }
     tmp5.aliases = aliases;
-    let executables = item10012.executables;
+    executables = global.executables;
     if (executables == null) {
       executables = [];
     }
     tmp5.executables = executables.map(createExecutable);
-    let flag = item10012.overlay;
+    flag = global.overlay;
     if (flag == null) {
       flag = false;
     }
     tmp5.overlay = flag;
-    let flag2 = item10012.overlay_warn;
+    flag2 = global.overlay_warn;
     if (flag2 == null) {
       flag2 = false;
     }
     tmp5.overlayWarn = flag2;
-    let flag3 = item10012.overlay_compatibility_hook;
+    flag3 = global.overlay_compatibility_hook;
     if (flag3 == null) {
       flag3 = false;
     }
     tmp5.overlayCompatibilityHook = flag3;
-    let flag4 = item10012.hook;
+    flag4 = global.hook;
     if (flag4 == null) {
       flag4 = true;
     }
     tmp5.hook = flag4;
-    tmp5.supportsOutOfProcessOverlay = ApplicationRecord.supportsOutOfProcessOverlay(item10012.overlay_methods);
-    let third_party_skus = item10012.third_party_skus;
+    tmp5.supportsOutOfProcessOverlay = closure_3.supportsOutOfProcessOverlay(global.overlay_methods);
+    third_party_skus = global.third_party_skus;
     if (third_party_skus == null) {
       third_party_skus = [];
     }
     tmp5.thirdPartySkus = third_party_skus;
-    let themes = item10012.themes;
+    themes = global.themes;
     if (themes == null) {
       themes = [];
     }
     tmp5.themes = themes;
-    ({ linked_applications: tmp5.linkedApplications, genres } = item10012);
+    ({ linked_applications: tmp5.linkedApplications, genres } = global);
     if (genres == null) {
       genres = [];
     }
     tmp5.genres = genres;
-    let platforms = item10012.platforms;
+    platforms = global.platforms;
     if (platforms == null) {
       platforms = [];
     }
     tmp5.platforms = platforms;
-    let prop = item10012.platform_availability;
+    prop = global.platform_availability;
     if (prop == null) {
       prop = [];
     }
     tmp5.platformAvailability = prop;
-    let websites = item10012.websites;
+    websites = global.websites;
     if (websites == null) {
       websites = [];
     }
@@ -95,179 +87,160 @@ class GameRecord extends Record {
       community_guild_ids: tmp5.communityGuildIds,
       steam_release_status: tmp5.steamReleaseStatus,
       reviews,
-    } = item10012);
-    let steam;
+    } = global);
+    steam = undefined;
     if (reviews != null) {
       steam = reviews.steam;
     }
     if (null != steam) {
-      let tmp9;
+      tmp9 = undefined;
       if (null != reviews.steam) {
-        tmp9 = {
-          rating: reviews.steam.rating,
-          ratingCount: reviews.steam.rating_count,
-          recentRating: reviews.steam.recent_rating,
-          recentRatingCount: reviews.steam.recent_rating_count,
-          localizedRating: reviews.steam.localized_rating,
-          localizedRatingCount: reviews.steam.localized_rating_count,
+        obj = {
+          rating: null,
+          ratingCount: null,
+          recentRating: null,
+          recentRatingCount: null,
+          localizedRating: null,
+          localizedRatingCount: null,
         };
-        const obj = {
-          rating: reviews.steam.rating,
-          ratingCount: reviews.steam.rating_count,
-          recentRating: reviews.steam.recent_rating,
-          recentRatingCount: reviews.steam.recent_rating_count,
-          localizedRating: reviews.steam.localized_rating,
-          localizedRatingCount: reviews.steam.localized_rating_count,
-        };
+        obj.rating = reviews.steam.rating;
+        obj.ratingCount = reviews.steam.rating_count;
+        obj.recentRating = reviews.steam.recent_rating;
+        obj.recentRatingCount = reviews.steam.recent_rating_count;
+        obj.localizedRating = reviews.steam.localized_rating;
+        obj.localizedRatingCount = reviews.steam.localized_rating_count;
+        tmp9 = obj;
       }
-      const obj2 = { steam: tmp9, opencritic: tmp10 };
+      obj1 = { steam: null, opencritic: null };
+      obj1.steam = tmp9;
       tmp10 = undefined;
       if (null != reviews.opencritic) {
-        tmp10 = {
-          topCriticRating: reviews.opencritic.top_critic_rating,
-          topCriticRatingCount: reviews.opencritic.top_critic_rating_count,
-          tier: reviews.opencritic.tier,
-        };
-        const obj3 = {
-          topCriticRating: reviews.opencritic.top_critic_rating,
-          topCriticRatingCount: reviews.opencritic.top_critic_rating_count,
-          tier: reviews.opencritic.tier,
-        };
+        obj4 = { topCriticRating: null, topCriticRatingCount: null, tier: null };
+        obj4.topCriticRating = reviews.opencritic.top_critic_rating;
+        obj4.topCriticRatingCount = reviews.opencritic.top_critic_rating_count;
+        obj4.tier = reviews.opencritic.tier;
+        tmp10 = obj4;
       }
-      tmp8 = obj2;
+      obj1.opencritic = tmp10;
+      tmp8 = obj1;
     } else {
-      let opencritic;
+      opencritic = undefined;
       if (reviews != null) {
         opencritic = reviews.opencritic;
       }
     }
     tmp5.reviews = tmp8;
-    ({ opencritic_url: tmp5.opencriticUrl, game_flags } = item10012);
+    ({ opencritic_url: tmp5.opencriticUrl, game_flags } = global);
     if (game_flags == null) {
       game_flags = 0;
     }
     tmp5.gameFlags = game_flags;
-    tmp5.contentClassification = item10012.content_classification;
+    tmp5.contentClassification = global.content_classification;
     return tmp5;
-  }
-  getOfficialApplicationId() {
-    const linkedApplications = this.linkedApplications;
-    let id;
-    if (linkedApplications != null) {
-      const found = linkedApplications.find((type) => type.type === Server.GameLinkTypes.OFFICIAL);
-      if (found != null) {
-        id = found.id;
-      }
-    }
-    return id;
-  }
-  getIconURL(size, format) {
-    const media = this.media;
-    let icon;
-    const id = this.id;
-    const tmp = getGameMediaRefURLDefault;
-    if (media != null) {
-      icon = media.icon;
-    }
-    const obj = { size, format };
-    return tmp(id, icon, obj);
-  }
-  getBannerURL(size) {
-    const media = this.media;
-    let banner;
-    const id = this.id;
-    const tmp = getGameMediaRefURLDefault;
-    if (media != null) {
-      banner = media.banner;
-    }
-    const obj = { keepAspectRatio: true, size };
-    return tmp(id, banner, obj);
-  }
-  getCoverURL(c9) {
-    const media = this.media;
-    let cover;
-    const id = this.id;
-    const tmp2 = getGameMediaRefURLDefault;
-    if (media != null) {
-      cover = media.cover;
-    }
-    let str = "png";
-    if (AvatarUtils.SUPPORTS_WEBP) {
-      str = "webp";
-    }
-    const obj = { keepAspectRatio: true, format: str, size };
-    return tmp2(id, cover, obj);
-  }
-  getArtworkURLs(size) {
-    let str;
-    const self = this;
-    const tmp = str;
-    str = null;
-    const tmp2 = self;
-    if (str(self[4]).SUPPORTS_WEBP) {
-      str = "webp";
-    }
-    const media = this.media;
-    let artwork;
-    if (media != null) {
-      artwork = media.artwork;
-    }
-    if (artwork == null) {
-      artwork = [];
-    }
-    const mapped = artwork.map((item) => {
-      const obj = { size, format: str, keepAspectRatio: true };
-      return getGameMediaRefURLDefault(self.id, item, obj);
-    });
-    return mapped.filter(tmp(tmp2[5]).isNotNullish);
-  }
-  getScreenshotURL(index, size) {
-    let str;
-    const screenshotUrls = this.screenshotUrls;
-    let tmp;
-    if (screenshotUrls != null) {
-      tmp = screenshotUrls[index];
-    }
-    let tmp7Result = null;
-    if (null != tmp) {
-      const id = this.id;
-      const obj2 = { size, format: str, keepAspectRatio: true };
-      str = null;
-      const obj = { type: "url", value: tmp };
-      const tmp7 = getGameMediaRefURLDefault;
-      if (AvatarUtils.SUPPORTS_WEBP) {
-        str = "webp";
-      }
-      tmp7Result = tmp7(id, obj, obj2);
-    }
-    return tmp7Result;
-  }
-  getScreenshotURLs(arg0) {
-    const self = this;
-    let closure_0 = arg0;
-    let screenshotUrls = this.screenshotUrls;
-    if (screenshotUrls == null) {
-      screenshotUrls = [];
-    }
-    const mapped = screenshotUrls.map((item, index) => self.getScreenshotURL(index, closure_0));
-    return mapped.filter(GlobalUtils.isNotNullish);
-  }
-  getCompanyByRole(DEVELOPER) {
-    let closure_0 = DEVELOPER;
-    const companies = this.companies;
-    let found;
-    if (companies != null) {
-      found = companies.filter((roles) => {
-        roles = roles.roles;
-        return roles.includes(DEVELOPER);
-      });
-    }
-    if (found == null) {
-      found = [];
-    }
-    return found;
   }
 }
 const prototype = GameRecord.prototype;
+prototype["getOfficialApplicationId"] = function getOfficialApplicationId() {
+  const linkedApplications = this.linkedApplications;
+  let id;
+  if (linkedApplications != null) {
+    const found = linkedApplications.find((type) => type.type === Server.GameLinkTypes.OFFICIAL);
+    if (found != null) {
+      id = found.id;
+    }
+  }
+  return id;
+};
+prototype["getIconURL"] = function getIconURL(size, format) {
+  const media = this.media;
+  let icon;
+  if (media != null) {
+    icon = media.icon;
+  }
+  return getGameMediaRefURLDefault(this.id, icon, { size, format });
+};
+prototype["getBannerURL"] = function getBannerURL(size) {
+  const media = this.media;
+  let banner;
+  if (media != null) {
+    banner = media.banner;
+  }
+  return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
+};
+prototype["getCoverURL"] = function getCoverURL(c9) {
+  const media = this.media;
+  let cover;
+  if (media != null) {
+    cover = media.cover;
+  }
+  let str = "png";
+  if (AvatarUtils.SUPPORTS_WEBP) {
+    str = "webp";
+  }
+  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size });
+};
+prototype["getArtworkURLs"] = function getArtworkURLs(size) {
+  const self = this;
+  let str = null;
+  if (str(self[4]).SUPPORTS_WEBP) {
+    str = "webp";
+  }
+  const media = this.media;
+  let artwork;
+  if (media != null) {
+    artwork = media.artwork;
+  }
+  if (artwork == null) {
+    artwork = [];
+  }
+  const mapped = artwork.map((item) =>
+    getGameMediaRefURLDefault(self.id, item, { size, format: str, keepAspectRatio: true }),
+  );
+  return mapped.filter(str(self[5]).isNotNullish);
+};
+prototype["getScreenshotURL"] = function getScreenshotURL(_Math, size) {
+  const screenshotUrls = this.screenshotUrls;
+  let tmp;
+  if (screenshotUrls != null) {
+    tmp = screenshotUrls[_Math];
+  }
+  let tmp7Result = null;
+  if (null != tmp) {
+    const obj = { type: "url", value: tmp };
+    const obj2 = { size, format: null, keepAspectRatio: true };
+    let str = null;
+    if (AvatarUtils.SUPPORTS_WEBP) {
+      str = "webp";
+    }
+    obj2.format = str;
+    tmp7Result = getGameMediaRefURLDefault(this.id, obj, obj2);
+  }
+  return tmp7Result;
+};
+prototype["getScreenshotURLs"] = function getScreenshotURLs(arg0) {
+  const self = this;
+  closure_0 = arg0;
+  let screenshotUrls = this.screenshotUrls;
+  if (screenshotUrls == null) {
+    screenshotUrls = [];
+  }
+  const mapped = screenshotUrls.map((item, index) => self.getScreenshotURL(index, closure_0));
+  return mapped.filter(GlobalUtils.isNotNullish);
+};
+prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
+  closure_0 = DEVELOPER;
+  const companies = this.companies;
+  let found;
+  if (companies != null) {
+    found = companies.filter((roles) => {
+      roles = roles.roles;
+      return roles.includes(closure_0);
+    });
+  }
+  if (found == null) {
+    found = [];
+  }
+  return found;
+};
 
 export default GameRecord;

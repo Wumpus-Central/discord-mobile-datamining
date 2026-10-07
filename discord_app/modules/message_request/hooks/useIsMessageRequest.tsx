@@ -1,27 +1,20 @@
 // discord_app/modules/message_request/hooks/useIsMessageRequest.tsx
 import MessageRequestStore from "../MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../SpamMessageRequestStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+const require = fn;
+fn(558);
+const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp7;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      const tmp = _require;
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageRequestStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -33,37 +26,37 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp6, tmp7);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       const items = [MessageRequestStore];
       const items1 = [arg0];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(items, () => MessageRequestStore.isMessageRequest(closure_0), items1);
+      return require("initialize").useStateFromStores(
+        items,
+        () => MessageRequestStore.isMessageRequest(closure_0),
+        items1,
+      );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
+
+export const useIsMessageRequest = tmp2;
+export const useIsEitherTypeOfMessageRequest = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp7;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(3);
-      const tmp = _require;
+      const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageRequestStore, SpamMessageRequestStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -71,37 +64,35 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const fn = function n() {
           let tmp2 = null != closure_0;
           if (tmp2) {
-            tmp2 = MessageRequestStore.isMessageRequest(closure_0) || SpamMessageRequestStore.isSpam(closure_0);
-            const isMessageRequestResult =
-              MessageRequestStore.isMessageRequest(closure_0) || SpamMessageRequestStore.isSpam(closure_0);
+            let isMessageRequestResult = MessageRequestStore.isMessageRequest(closure_0);
+            if (!isMessageRequestResult) {
+              isMessageRequestResult = SpamMessageRequestStore.isSpam(closure_0);
+            }
+            tmp2 = isMessageRequestResult;
           }
           return tmp2;
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp7);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp7);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       const items = [MessageRequestStore, SpamMessageRequestStore];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(items, () => {
+      return require("initialize").useStateFromStores(items, () => {
         let tmp2 = null != closure_0;
         if (tmp2) {
-          tmp2 = MessageRequestStore.isMessageRequest(closure_0) || SpamMessageRequestStore.isSpam(closure_0);
-          const isMessageRequestResult =
-            MessageRequestStore.isMessageRequest(closure_0) || SpamMessageRequestStore.isSpam(closure_0);
+          let isMessageRequestResult = MessageRequestStore.isMessageRequest(closure_0);
+          if (!isMessageRequestResult) {
+            isMessageRequestResult = SpamMessageRequestStore.isSpam(closure_0);
+          }
+          tmp2 = isMessageRequestResult;
         }
         return tmp2;
       });
     };
-const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
-
-export const useIsMessageRequest = tmp2;
-export const useIsEitherTypeOfMessageRequest = tmp3;

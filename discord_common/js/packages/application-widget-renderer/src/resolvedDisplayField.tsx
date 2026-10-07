@@ -13,7 +13,6 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
   numberFormat,
   arg3,
 ) {
-  let media;
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;
@@ -25,59 +24,57 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
   if (null == subtitle_1) {
     return flag ? { status: "skeleton" } : { status: "hidden" };
   } else {
-    const text = subtitle_1.fields.text;
     const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
-    const iter = resolveFieldValue(text, items);
-    let tmp = null;
+    let iter = resolveFieldValue(subtitle_1.fields.text, items);
+    let str = null;
     if (!flag2) {
-      const label = subtitle_1.fields.label;
       const items1 = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
-      tmp = resolveFieldValue(label, items1);
+      str = resolveFieldValue(subtitle_1.fields.label, items1);
     }
     if (null == iter) {
-      if (null == tmp) {
+      if (null == str) {
         return { status: "skeleton" };
       }
     }
-    const icon = subtitle_1.fields.icon;
     const items2 = [resolvedValues.ResolvedValueType.MEDIA];
-    const tmp3 = resolveFieldValue(icon, items2);
-    let str2 = "";
-    if (null != tmp) {
-      str2 = "";
-      if ("" !== tmp.value) {
-        let formatResult;
-        if (typeof tmp.value === "number") {
-          formatResult = numberFormat.format(tmp.value);
+    const tmp2 = resolveFieldValue(subtitle_1.fields.icon, items2);
+    let str3 = "";
+    if (null != str) {
+      str3 = "";
+      if ("" !== str.value) {
+        if (typeof str.value === "number") {
+          let formatResult = numberFormat.format(str.value);
         } else {
-          formatResult = tmp.value;
+          formatResult = str.value;
         }
         const _HermesInternal = HermesInternal;
-        str2 = "" + formatResult + ": ";
+        str = ": ";
+        const combined = "" + formatResult + ": ";
       }
     }
     let str5 = "\u2013";
     if (null != iter) {
       str5 = "\u2013";
       if ("" !== iter.value) {
-        let formatResult1;
         if (typeof iter.value === "number") {
-          formatResult1 = numberFormat.format(iter.value);
+          iter = iter.value;
+          let formatResult1 = numberFormat.format(iter);
         } else {
           formatResult1 = iter.value;
         }
-        str5 = formatResult1;
       }
     }
+    const obj = { status: "value", text: null, icon: null };
     const _HermesInternal2 = HermesInternal;
-    const obj = { status: "value", text: "" + str2 + str5, icon: media };
-    media = undefined;
-    if (tmp3 != null) {
-      media = tmp3.media;
+    obj.text = "" + str3 + str5;
+    let media;
+    if (tmp2 != null) {
+      media = tmp2.media;
     }
     if (media == null) {
       media = null;
     }
+    obj.icon = media;
     return obj;
   }
 };
@@ -88,8 +85,6 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
   formatDurationNarrow,
   arg4,
 ) {
-  let media;
-  let obj4;
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
@@ -97,27 +92,22 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
   if (null == fields) {
     let tmp4 = null;
     if (flag) {
-      tmp4 = { value: { status: "skeleton" }, label: { status: "skeleton" } };
       const obj2 = { value: { status: "skeleton" }, label: { status: "skeleton" } };
+      tmp4 = obj2;
     }
     return tmp4;
   } else {
-    let obj;
-    const value = fields.fields.value;
     const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
-    const iter = resolveFieldValue(value, items);
-    const label = fields.fields.label;
+    const iter = resolveFieldValue(fields.fields.value, items);
     const items1 = [resolvedValues.ResolvedValueType.STRING];
-    const iter2 = resolveFieldValue(label, items1);
-    const icon = fields.fields.icon;
+    const iter2 = resolveFieldValue(fields.fields.label, items1);
     const items2 = [resolvedValues.ResolvedValueType.MEDIA];
-    const tmp8 = resolveFieldValue(icon, items2);
+    const tmp8 = resolveFieldValue(fields.fields.icon, items2);
     if (null == iter) {
-      obj = { status: "skeleton" };
+      let obj = { status: "skeleton" };
     } else {
-      let formatResult;
       if (iter.type === resolvedValues.ResolvedValueType.STRING) {
-        formatResult = iter.value;
+        let formatResult = iter.value;
       } else if (
         iter.presentationType === ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION
       ) {
@@ -125,23 +115,25 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
       } else {
         formatResult = numberFormat.format(iter.value);
       }
-      obj = { status: "value", text: formatResult, icon: media };
-      media = undefined;
+      obj = { status: "value", text: formatResult, icon: null };
+      let media;
       if (tmp8 != null) {
         media = tmp8.media;
       }
       if (media == null) {
         media = null;
       }
+      obj.icon = media;
     }
-    const obj3 = { value: obj, label: obj4 };
+    const obj3 = { value: obj, label: null };
     if (null == fields.fields.label) {
-      obj4 = { status: "hidden" };
+      let obj4 = { status: "hidden" };
     } else if (null == iter2) {
       obj4 = { status: "skeleton" };
     } else {
       obj4 = { status: "value", text: iter2.value };
     }
+    obj3.label = obj4;
     return obj3;
   }
 };
@@ -150,7 +142,6 @@ export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkele
   description,
   resolveFieldValue,
 ) {
-  let obj;
   let tmp;
   if (componentConfig != null) {
     tmp = componentConfig.fields[description];
@@ -158,7 +149,7 @@ export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkele
   const items = [resolvedValues.ResolvedValueType.STRING];
   const iter = resolveFieldValue(tmp, items);
   if (null == iter) {
-    obj = { status: "skeleton" };
+    let obj = { status: "skeleton" };
   } else {
     obj = { status: "value", text: iter.value };
   }
@@ -175,36 +166,27 @@ export const decimalToClampedPercentage = function decimalToClampedPercentage(va
   return num;
 };
 export const resolveProgressPercentage = function resolveProgressPercentage(iter, iter2) {
-  let num = 0;
-  if (null != iter) {
-    let num2;
-    if (null == iter2) {
-      const value = iter.value;
-      const _isNaN2 = isNaN;
-      let num5 = 0;
-      if (!isNaN(value)) {
-        const _Math4 = Math;
-        const _Math5 = Math;
-        const _Math6 = Math;
-        num5 = Math.min(Math.max(Math.round(100 * value), 0), 100);
-      }
-      num2 = num5;
-    } else {
-      num2 = 0;
-      if (0 !== iter2.value) {
-        const result = iter.value / iter2.value;
-        const _isNaN = isNaN;
-        let num3 = 0;
-        if (!isNaN(result)) {
-          const _Math = Math;
-          const _Math2 = Math;
-          const _Math3 = Math;
-          num3 = Math.min(Math.max(Math.round(100 * result), 0), 100);
-        }
-        num2 = num3;
-      }
+  let num = iter;
+  if (null == iter) {
+    return 0;
+  } else if (null == iter2) {
+    value = num.value;
+    const _isNaN2 = isNaN;
+    num = 0;
+    if (!isNaN(value)) {
+      const _Math4 = Math;
+      const _Math5 = Math;
+      const _Math6 = Math;
+      num = Math.min(Math.max(Math.round(100 * value), 0), 100);
     }
-    num = num2;
+  } else if (0 !== iter2.value) {
+    const result = num.value / iter2.value;
+    const _isNaN = isNaN;
+    if (!isNaN(result)) {
+      const _Math = Math;
+      const _Math2 = Math;
+      const _Math3 = Math;
+      const num3 = Math.min(Math.max(Math.round(100 * result), 0), 100);
+    }
   }
-  return num;
 };

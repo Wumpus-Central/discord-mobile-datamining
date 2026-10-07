@@ -1,58 +1,52 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionChatButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ExpressionPickerConstants from "../../expression_picker/ExpressionPickerConstants.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
 
-let set, set2;
-
-let c10;
-let c9;
-let hasOwnProperty;
-let metroRequire;
-let react = react_mod;
-({ StyleSheet: hasOwnProperty, View: metroRequire } = react_native);
-const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewType;
-({ jsx: c9, jsxs: c10 } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
 let closure_11 = createStyles.createStyles((height) => {
-  let num;
-  let obj2;
-  let size1;
   const obj = {
     wrapper: { height, width: height },
-    glyphOverlay: obj2,
-    glyphButton: size,
-    image: size1,
-    surrogates: {
-      fontSize: num * ((height - nativeDefault.space.PX_8) / 33),
-      color: nativeDefault.colors.TEXT_DEFAULT,
-    },
+    glyphOverlay: null,
+    glyphButton: null,
+    image: null,
+    surrogates: null,
   };
-  obj2 = { alignItems: "center", justifyContent: "center" };
+  const obj2 = {};
   const merged = Object.assign(hasOwnProperty.absoluteFillObject);
-  size = {
+  obj2.alignItems = "center";
+  obj2.justifyContent = "center";
+  obj.glyphOverlay = obj2;
+  const size = {
     borderRadius: nativeDefault.radii.sm,
     height,
     width: height,
     alignItems: "center",
     justifyContent: "center",
   };
-  size1 = { height: height - nativeDefault.space.PX_8, width: height - nativeDefault.space.PX_8 };
-  num = 28;
-  const obj5 = PlatformUtils;
+  obj.glyphButton = size;
+  const size1 = { height: height - nativeDefault.space.PX_8, width: height - nativeDefault.space.PX_8 };
+  obj.image = size1;
+  let num = 28;
   if (obj5.isAndroid()) {
     num = 26;
   }
-  ({ fontSize: num * ((height - nativeDefault.space.PX_8) / 33), color: nativeDefault.colors.TEXT_DEFAULT });
+  obj5 = PlatformUtils;
+  obj.surrogates = {
+    fontSize: num * ((height - nativeDefault.space.PX_8) / 33),
+    color: nativeDefault.colors.TEXT_DEFAULT,
+  };
   return obj;
 });
 let closure_12 = {
@@ -64,38 +58,24 @@ const __initData = {
 const __initData2 = {
   code: "function EmojiSuggestionChatButtonTsx3(){const{emojiAnimationProgress}=this.__closure;return{opacity:1-emojiAnimationProgress.get()};}",
 };
-const forwardRefResult = react.forwardRef((arg0, arg1) => {
-  let PressableOpacity;
-  let active;
-  let c4;
-  let intl;
-  let items2;
-  let items3;
-  let items4;
-  let obj7;
-  let obj9;
-  let onPress;
-  let setDisplayedEmoji;
-  let showKeyboardIcon;
-  let str;
-  let str2;
-  let style;
-  let tmp11;
-  let tmp20Result;
-  let tmp4Result3;
-  let tmp4Result4;
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionChatButton.tsx");
+
+export const EmojiSuggestionChatButton = noop.forwardRef((arg0, arg1) => {
   ({ active, onPress } = arg0);
   ({ style, showKeyboardIcon } = arg0);
   const merged = Object.assign(arg0, Object.assign({ style: 0, active: 0, showKeyboardIcon: 0, onPress: 0 }));
   let unlockedEmojis;
   let lockedEmojis;
-  react = undefined;
+  noop = undefined;
   let sharedValue;
-  let obj = onPress(lockedEmojis[9]);
-  const token = obj.useToken(unlockedEmojis(lockedEmojis[7]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  let tmp4Result2Result = lockedEmojis;
+  const token = onPress(lockedEmojis[9]).useToken(
+    unlockedEmojis(lockedEmojis[7]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  );
   const tmp6 = closure_11(token);
-  let obj2 = onPress(lockedEmojis[10]);
-  const emojiSuggestionBarState = obj2.useEmojiSuggestionBarState(
+  let obj = onPress(lockedEmojis[9]);
+  const emojiSuggestionBarState = onPress(lockedEmojis[10]).useEmojiSuggestionBarState(
     merged,
     onPress(lockedEmojis[10]).MAX_SUGGESTIONS_LARGE,
     1,
@@ -109,60 +89,58 @@ const forwardRefResult = react.forwardRef((arg0, arg1) => {
   }
   let emojiIdentity;
   if (null != first) {
-    const tmp2Result = onPress(lockedEmojis[10]);
-    emojiIdentity = tmp2Result.getEmojiIdentity(first);
+    emojiIdentity = onPress(tmp4Result2Result[10]).getEmojiIdentity(first);
+    const tmp2Result = onPress(tmp4Result2Result[10]);
   }
-  [tmp11, c4] = first(react.useState(first), 2);
-  first(react.useState(first), 2);
+  let obj2 = onPress(lockedEmojis[10]);
+  [tmp11, c4] = first(noop.useState(first), 2);
+  const tmp10 = first(noop.useState(first), 2);
   let num = 0;
-  const useSharedValue = onPress(tmp3[11]).useSharedValue;
-  onPress(lockedEmojis[11]);
   if (null != first) {
     num = 1;
   }
-  sharedValue = useSharedValue(num);
+  sharedValue = onPress(tmp4Result2Result[11]).useSharedValue(num);
   let items = [emojiIdentity];
   const effect = obj4.useEffect(() => {
     if (null != first) {
       setDisplayedEmoji(tmp);
-      set = sharedValue.set;
-      let obj = spring;
-      const result = set(obj.withSpring(1, EmojiSuggestionBarUtils.ITEM_ENTRANCE_SPRING_CONFIG));
+      const result = sharedValue.set(spring.withSpring(1, EmojiSuggestionBarUtils.ITEM_ENTRANCE_SPRING_CONFIG));
     } else {
-      set2 = sharedValue.set;
-      const withSpring = spring.withSpring;
+      const obj2 = spring;
       const fn = function t(arg0) {
         if (true === arg0) {
+          onPress(lockedEmojis[11]).runOnJS(setDisplayedEmoji)(undefined);
           const obj = onPress(lockedEmojis[11]);
-          obj.runOnJS(setDisplayedEmoji)(undefined);
         }
       };
-      const obj2 = { runOnJS: ReanimatedRexport.runOnJS, setDisplayedEmoji };
-      const ITEM_ENTRANCE_SPRING_CONFIG = EmojiSuggestionBarUtils.ITEM_ENTRANCE_SPRING_CONFIG;
-      fn.__closure = obj2;
+      const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setDisplayedEmoji };
+      fn.__closure = obj3;
       fn.__workletHash = 11486975633278;
       fn.__initData = __initData;
-      set2(withSpring(0, ITEM_ENTRANCE_SPRING_CONFIG, "respect-motion-settings", fn));
+      const result1 = sharedValue.set(
+        obj2.withSpring(0, EmojiSuggestionBarUtils.ITEM_ENTRANCE_SPRING_CONFIG, "respect-motion-settings", fn),
+      );
     }
   }, items);
-  const tmp2Result6 = onPress(lockedEmojis[11]);
+  const tmp2Result5 = onPress(tmp4Result2Result[11]);
   class R {
     constructor() {
-      let items;
-      const obj = { opacity: sharedValue.get(), transform: items };
-      items = [{ scale: sharedValue.get() }];
-      ({ scale: sharedValue.get() });
+      obj = { opacity: closure_5.get(), transform: null };
+      obj1 = { scale: closure_5.get() };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
       return obj;
     }
   }
   R.__closure = { emojiAnimationProgress: sharedValue };
   R.__workletHash = 12888902078160;
   R.__initData = __initData;
-  const animatedStyle = tmp2Result6.useAnimatedStyle(R);
-  const tmp2Result7 = onPress(lockedEmojis[11]);
+  const animatedStyle = onPress(tmp4Result2Result[11]).useAnimatedStyle(R);
+  const tmp2Result6 = onPress(tmp4Result2Result[11]);
   class G {
     constructor() {
-      const obj = { opacity: 1 - sharedValue.get() };
+      obj = { opacity: 1 - closure_5.get() };
       return obj;
     }
   }
@@ -170,70 +148,65 @@ const forwardRefResult = react.forwardRef((arg0, arg1) => {
   G.__workletHash = 3538426469891;
   G.__initData = __initData2;
   const items1 = [onPress, unlockedEmojis, lockedEmojis];
-  const animatedStyle1 = tmp2Result7.useAnimatedStyle(G);
-  const obj3 = { style: items2, children: items3 };
-  items2 = [tmp6.wrapper, style];
+  const animatedStyle1 = onPress(tmp4Result2Result[11]).useAnimatedStyle(G);
+  let obj3 = { style: null, children: null };
+  const items2 = [tmp6.wrapper, style];
+  obj3.style = items2;
   const callback = obj4.useCallback(() => {
-    const obj = { unlocked: unlockedEmojis, locked: lockedEmojis };
-    onPress(ExpressionPickerViewType.EMOJI, obj);
+    onPress(ExpressionPickerViewType.EMOJI, { unlocked: unlockedEmojis, locked: lockedEmojis });
   }, items1);
-  const obj5 = {
-    style: animatedStyle1,
-    pointerEvents: str,
-    children: closure_9(unlockedEmojis(lockedEmojis[13]), { active, showKeyboardIcon, onPress }),
-  };
-  str = "auto";
-  const View = tmp4(tmp3[11]).View;
+  const obj5 = { style: animatedStyle1, pointerEvents: null, children: null };
+  let str = "auto";
   if (null != tmp11) {
     str = "none";
   }
-  items3 = [closure_9(View, obj5)];
-  let tmp20Result2 = null != tmp11;
-  if (tmp20Result2) {
-    const obj6 = { style: items4, pointerEvents: str2, children: closure_9(PressableOpacity, obj7) };
-    items4 = [tmp6.glyphOverlay, animatedStyle];
-    str2 = "none";
-    const View2 = tmp4(tmp3[11]).View;
+  obj5.pointerEvents = str;
+  obj5.children = closure_9(unlockedEmojis(tmp4Result2Result[13]), { active, showKeyboardIcon, onPress });
+  const items3 = [closure_9(unlockedEmojis(tmp4Result2Result[11]).View, obj5)];
+  if (null == tmp11) {
+    items3[1] = tmp20;
+    obj3.children = items3;
+    return closure_10(closure_6, obj3);
+  } else {
+    const obj6 = { style: null, pointerEvents: null, children: null };
+    const items4 = [tmp6.glyphOverlay, animatedStyle];
+    obj6.style = items4;
+    let str2 = "none";
     if (null != first) {
       str2 = "auto";
     }
-    obj7 = {
+    obj6.pointerEvents = str2;
+    const obj7 = {
       style: tmp6.glyphButton,
       accessibilityRole: "button",
-      accessibilityLabel: intl.string(onPress(lockedEmojis[15]).t.iZ7Mz9),
-      onPress: callback,
-      children: tmp20Result,
+      accessibilityLabel: null,
+      onPress: null,
+      children: null,
     };
-    PressableOpacity = onPress(tmp3[14]).PressableOpacity;
-    intl = onPress(tmp3[15]).intl;
-    if (null != tmp11.id) {
-      const obj8 = {
-        resizeMode: "contain",
-        style: tmp6.image,
-        placeholder: tmp4Result3,
-        source: obj9,
-        usesSmallCache: true,
-      };
-      const tmp4Result = unlockedEmojis(lockedEmojis[16]);
-      const tmp2Result8 = onPress(lockedEmojis[17]);
-      if (tmp2Result8.isThemeDark(ThemeStore.theme)) {
-        tmp4Result3 = tmp4(tmp3[18]);
-      } else {
-        tmp4Result3 = tmp4(tmp3[19]);
-      }
-      obj9 = { uri: tmp4Result4(tmp11, false, token - unlockedEmojis(lockedEmojis[7]).space.PX_8) };
-      tmp4Result4 = unlockedEmojis(lockedEmojis[20]);
-      tmp20Result = closure_9(tmp4Result, obj8);
-    } else {
-      const obj10 = { allowFontScaling: false, style: tmp6.surrogates, children: tmp11.surrogates };
-      tmp20Result = closure_9(onPress(tmp3[21]).LegacyText, obj10);
+    const intl = onPress(tmp4Result2Result[15]).intl;
+    obj7.accessibilityLabel = intl.string(onPress(tmp4Result2Result[15]).t.iZ7Mz9);
+    obj7.onPress = callback;
+    if (null == tmp11.id) {
+      const obj8 = { allowFontScaling: false, style: tmp6.surrogates, children: tmp11.surrogates };
+      obj7.children = closure_9(onPress(tmp4Result2Result[21]).LegacyText, obj8);
+      obj6.children = closure_9(onPress(tmp4Result2Result[14]).PressableOpacity, obj7);
+      closure_9(tmp4(tmp4Result2Result[11]).View, obj6);
     }
-    tmp20Result2 = closure_9(View2, obj6);
+    const obj9 = { resizeMode: "contain", style: tmp6.image, placeholder: null, source: null, usesSmallCache: true };
+    const tmp4Result = tmp4(tmp4Result2Result[16]);
+    if (tmp2Result8.isThemeDark(ThemeStore.theme)) {
+      let tmp4Result3 = tmp4(tmp4Result2Result[18]);
+    } else {
+      tmp4Result3 = tmp4(tmp4Result2Result[19]);
+    }
+    obj9.placeholder = tmp4Result3;
+    const obj10 = { uri: null };
+    tmp2Result8 = onPress(tmp4Result2Result[17]);
+    tmp4Result2Result = tmp4(tmp4Result2Result[20])(tmp11, false, token - tmp4(tmp4Result2Result[7]).space.PX_8);
+    obj10.uri = tmp4Result2Result;
+    obj9.source = obj10;
+    closure_9(tmp4Result, obj9);
+    const tmp4Result4 = tmp4(tmp4Result2Result[20]);
   }
-  items3[1] = tmp20Result2;
-  return closure_10(closure_6, obj3);
+  const tmp2Result7 = onPress(tmp4Result2Result[11]);
 });
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionChatButton.tsx");
-
-export const EmojiSuggestionChatButton = forwardRefResult;

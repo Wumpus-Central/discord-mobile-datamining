@@ -1,21 +1,16 @@
 // discord_app/design/components/SegmentedControl/native/SegmentedControlPages.native.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import react_native2 from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
+import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
 import MathUtils from "../../../../../discord_common/js/shared/utils/MathUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
 const ReanimatedRexport = ReanimatedRexport2;
-let _require, dependencyMap, importDefault, set;
 
+require = fn;
 let closure_3 = [
   "reportedPageIndex",
   "pageIndex",
@@ -25,12 +20,8 @@ let closure_3 = [
   "activePageRangeStart",
   "activePageRangeEnd",
 ];
-const ScrollView = react_native.ScrollView;
-const jsx = Fragment.jsx;
-let closure_8 = ReanimatedRexport.createAnimatedComponent(ScrollView);
-let ref = {
-  code: "function SegmentedControlPagesNativeTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}",
-};
+const jsx = fn(21).jsx;
+let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
 let pageIndex = {
   code: "function SegmentedControlPagesNativeTsx2(value_0){const{runOnJS,updateCurrentActiveIndex}=this.__closure;runOnJS(updateCurrentActiveIndex)(value_0);}",
 };
@@ -61,7 +52,7 @@ let __initData3 = {
 let closure_19 = {
   code: "function SegmentedControlPagesNativeTsx11(){const{pageIndex,scrollTargetPageIndex}=this.__closure;const idx=pageIndex.get();let lo=Math.floor(idx);let hi=Math.ceil(idx);const target=scrollTargetPageIndex.get();if(target!==-1){lo=Math.min(lo,target);hi=Math.max(hi,target);}return[lo,hi];}",
 };
-let style = {
+const style = {
   code: "function SegmentedControlPagesNativeTsx12(range,prev){const{visiblePageRange}=this.__closure;if(prev==null||prev[0]!==range[0]||prev[1]!==range[1]){visiblePageRange.set(range);}}",
 };
 __initData = {
@@ -100,7 +91,7 @@ const __initData11 = {
 const __initData12 = {
   code: "function SegmentedControlPagesNativeTsx24(range,prev){const{visiblePageRange}=this.__closure;if(prev==null||prev[0]!==range[0]||prev[1]!==range[1]){visiblePageRange.set(range);}}",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
 const __initData13 = {
   code: "function SegmentedControlPagesNativeTsx25(){const{pageIndex,index,scrollTargetPageIndex}=this.__closure;if(Math.floor(pageIndex.get())===index||Math.ceil(pageIndex.get())===index){return true;}if(scrollTargetPageIndex.get()===index){return true;}return false;}",
 };
@@ -143,27 +134,615 @@ const __initData23 = {
 const __initData24 = {
   code: "function SegmentedControlPagesNativeTsx38([start,end]){const{index,runOnJS,setFreeze}=this.__closure;const isInActiveRange_0=index>=start&&index<=end;runOnJS(setFreeze)(!isInActiveRange_0);}",
 };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+let ReactCompilerGating = fn(558);
+let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (reportedPageIndex) => {
+      const cResult = require("c").c(32);
+      if (cResult[0] !== reportedPageIndex) {
+        reportedPageIndex = reportedPageIndex.reportedPageIndex;
+        pageIndex = reportedPageIndex.pageIndex;
+        closure_3 = pageIndex;
+        scrollTargetPageIndex = reportedPageIndex.scrollTargetPageIndex;
+        closure_5 = scrollTargetPageIndex;
+        const index = reportedPageIndex.index;
+        dependencyMap = index;
+        const item = reportedPageIndex.item;
+        class P {
+          constructor() {
+            obj = closure_3;
+            tmp = closure_2;
+            tmp2 = Math.floor(closure_3.get()) === closure_2;
+            if (!tmp2) {
+              _Math = Math;
+              tmp2 = Math.ceil(obj.get()) === tmp;
+            }
+            if (!tmp2) {
+              tmp3 = closure_5;
+              tmp2 = closure_5.get() === tmp;
+            }
+            return tmp2;
+          }
+        }
+        importDefault = tmp12;
+        activePageRangeEnd = reportedPageIndex.activePageRangeEnd;
+        _require = activePageRangeEnd;
+        cResult[0] = reportedPageIndex;
+        cResult[1] = activePageRangeEnd;
+        cResult[2] = tmp12;
+        class O {
+          constructor() {
+            pointerEvents = "box-none";
+            if (closure_4.get() !== closure_2) {
+              pointerEvents = "none";
+            }
+            return { pointerEvents };
+          }
+        }
+        cResult[3] = index;
+        cResult[4] = item;
+        cResult[5] = pageIndex;
+        cResult[6] = reportedPageIndex;
+        cResult[7] = scrollTargetPageIndex;
+        class C {
+          constructor() {
+            return closure_4.get() !== closure_2;
+          }
+        }
+        const tmp10 = scrollTargetPageIndex;
+        const tmp15 = reportedPageIndex(reportedPageIndex, closure_3);
+        const tmp8 = pageIndex;
+      } else {
+        _require = cResult[1];
+        importDefault = cResult[2];
+        dependencyMap = cResult[3];
+        closure_3 = cResult[5];
+        class P {
+          constructor() {
+            obj = closure_3;
+            tmp = closure_2;
+            tmp2 = Math.floor(closure_3.get()) === closure_2;
+            if (!tmp2) {
+              _Math = Math;
+              tmp2 = Math.ceil(obj.get()) === tmp;
+            }
+            if (!tmp2) {
+              tmp3 = closure_5;
+              tmp2 = closure_5.get() === tmp;
+            }
+            return tmp2;
+          }
+        }
+        reportedPageIndex = tmp9;
+        closure_5 = cResult[7];
+      }
+      let obj = require("c");
+      class P {
+        constructor() {
+          obj = closure_3;
+          tmp = closure_2;
+          tmp2 = Math.floor(closure_3.get()) === closure_2;
+          if (!tmp2) {
+            _Math = Math;
+            tmp2 = Math.ceil(obj.get()) === tmp;
+          }
+          if (!tmp2) {
+            tmp3 = closure_5;
+            tmp2 = closure_5.get() === tmp;
+          }
+          return tmp2;
+        }
+      }
+      P.__closure = { pageIndex: tmp8, index: tmp6, scrollTargetPageIndex: tmp10 };
+      P.__workletHash = 2724531395868;
+      P.__initData = __initData13;
+      const derivedValue = require("ReanimatedRexport").useDerivedValue(P);
+      const tmpResult = require("ReanimatedRexport");
+      class O {
+        constructor() {
+          pointerEvents = "box-none";
+          if (closure_4.get() !== closure_2) {
+            pointerEvents = "none";
+          }
+          return { pointerEvents };
+        }
+      }
+      O.__closure = { reportedPageIndex: tmp9, index: tmp6 };
+      O.__workletHash = 9779507421474;
+      O.__initData = __initData14;
+      const animatedProps = require("ReanimatedRexport").useAnimatedProps(O);
+      if (cResult[9] === tmp6) {
+        if (cResult[10] === tmp9) {
+          let tmp18 = cResult[11];
+        }
+        const tmp20 = closure_5(derivedValue.useState(tmp18), 2);
+        current = tmp20[0];
+        closure_8 = tmp22;
+        class P {
+          constructor() {
+            obj = closure_3;
+            tmp = closure_2;
+            tmp2 = Math.floor(closure_3.get()) === closure_2;
+            if (!tmp2) {
+              _Math = Math;
+              tmp2 = Math.ceil(obj.get()) === tmp;
+            }
+            if (!tmp2) {
+              tmp3 = closure_5;
+              tmp2 = closure_5.get() === tmp;
+            }
+            return tmp2;
+          }
+        }
+        class D {
+          constructor() {
+            return closure_4.get() !== closure_2;
+          }
+        }
+        let obj2 = { reportedPageIndex: tmp9, index: tmp6 };
+        D.__closure = obj2;
+        D.__workletHash = 10737484996965;
+        D.__initData = __initData15;
+        class R {
+          constructor(arg0) {
+            obj = closure_0(closure_2[5]);
+            tmp = obj.runOnJS(closure_8)(reportedPageIndex);
+            return;
+          }
+        }
+        let obj3 = { runOnJS: null, setIsAccessibilityHidden: null };
+        class O {
+          constructor() {
+            pointerEvents = "box-none";
+            if (closure_4.get() !== closure_2) {
+              pointerEvents = "none";
+            }
+            return { pointerEvents };
+          }
+        }
+        obj3.setIsAccessibilityHidden = tmp20[1];
+        R.__closure = obj3;
+        R.__workletHash = 17485016054072;
+        R.__initData = __initData16;
+        const animatedReaction = obj5.useAnimatedReaction(D, R);
+        derivedValue.useRef(null);
+        class C {
+          constructor() {
+            return closure_4.get() !== closure_2;
+          }
+        }
+        if (cResult[12] !== current) {
+          class H {
+            constructor() {
+              current = closure_10.current;
+              tmp = closure_10;
+              if (current) {
+                tmp2 = closure_7;
+                current = !closure_7;
+              }
+              tmp.current = closure_7;
+              if (current) {
+                tmp3 = closure_0;
+                tmp4 = closure_2;
+                obj = closure_0(closure_2[9]);
+                current = obj.isIOS();
+              }
+              if (current) {
+                tmp5 = closure_0;
+                tmp6 = closure_2;
+                obj2 = closure_0(closure_2[11]);
+                obj1 = { ref: null, delay: 100 };
+                tmp7 = closure_9;
+                obj1.ref = closure_9;
+                result = obj2.setAccessibilityFocus(obj1);
+              }
+              return;
+            }
+          }
+          let items = [current];
+          cResult[12] = current;
+          cResult[13] = H;
+          cResult[14] = items;
+          class P {
+            constructor() {
+              obj = closure_3;
+              tmp = closure_2;
+              tmp2 = Math.floor(closure_3.get()) === closure_2;
+              if (!tmp2) {
+                _Math = Math;
+                tmp2 = Math.ceil(obj.get()) === tmp;
+              }
+              if (!tmp2) {
+                tmp3 = closure_5;
+                tmp2 = closure_5.get() === tmp;
+              }
+              return tmp2;
+            }
+          }
+          class D {
+            constructor() {
+              return closure_4.get() !== closure_2;
+            }
+          }
+        } else {
+          class H {
+            constructor() {
+              current = closure_10.current;
+              tmp = closure_10;
+              if (current) {
+                tmp2 = closure_7;
+                current = !closure_7;
+              }
+              tmp.current = closure_7;
+              if (current) {
+                tmp3 = closure_0;
+                tmp4 = closure_2;
+                obj = closure_0(closure_2[9]);
+                current = obj.isIOS();
+              }
+              if (current) {
+                tmp5 = closure_0;
+                tmp6 = closure_2;
+                obj2 = closure_0(closure_2[11]);
+                obj1 = { ref: null, delay: 100 };
+                tmp7 = closure_9;
+                obj1.ref = closure_9;
+                result = obj2.setAccessibilityFocus(obj1);
+              }
+              return;
+            }
+          }
+          const tmp29 = cResult[14];
+        }
+        const effect = derivedValue.useEffect(tmp28, tmp29);
+        const fn = function z() {
+          let display = "none";
+          if (derivedValue.get()) {
+            display = "flex";
+          }
+          return { display, flex: 1 };
+        };
+        const obj6 = { isVisibleOnScreen: derivedValue };
+        fn.__closure = obj6;
+        fn.__workletHash = 6740536171688;
+        fn.__initData = __initData17;
+        const animatedStyle = tmp(4618).useAnimatedStyle(fn);
+        if (cResult[15] === tmp4) {
+          class H {
+            constructor() {
+              current = closure_10.current;
+              tmp = closure_10;
+              if (current) {
+                tmp2 = closure_7;
+                current = !closure_7;
+              }
+              tmp.current = closure_7;
+              if (current) {
+                tmp3 = closure_0;
+                tmp4 = closure_2;
+                obj = closure_0(closure_2[9]);
+                current = obj.isIOS();
+              }
+              if (current) {
+                tmp5 = closure_0;
+                tmp6 = closure_2;
+                obj2 = closure_0(closure_2[11]);
+                obj1 = { ref: null, delay: 100 };
+                tmp7 = closure_9;
+                obj1.ref = closure_9;
+                result = obj2.setAccessibilityFocus(obj1);
+              }
+              return;
+            }
+          }
+        }
+        class N {
+          constructor() {
+            tmp = closure_2;
+            tmp2 = closure_2 >= closure_1.get();
+            if (tmp2) {
+              tmp3 = closure_0;
+              tmp2 = tmp <= closure_0.get();
+            }
+            return !tmp2;
+          }
+        }
+        cResult[15] = tmp4;
+        cResult[16] = tmp12;
+        cResult[17] = tmp6;
+        cResult[18] = N;
+        const tmpResult4 = tmp(4618);
+      }
+      class C {
+        constructor() {
+          return closure_4.get() !== closure_2;
+        }
+      }
+      cResult[9] = tmp6;
+      cResult[10] = tmp9;
+      cResult[11] = C;
+      tmp18 = C;
+      const tmpResult3 = require("ReanimatedRexport");
+    }
+  : (children) => {
+      reportedPageIndex = children.reportedPageIndex;
+      pageIndex = children.pageIndex;
+      scrollTargetPageIndex = children.scrollTargetPageIndex;
+      const index = children.index;
+      activePageRangeStart = children.activePageRangeStart;
+      activePageRangeEnd = children.activePageRangeEnd;
+      const merged = Object.assign(
+        children,
+        Object.assign({
+          reportedPageIndex: 0,
+          pageIndex: 0,
+          scrollTargetPageIndex: 0,
+          index: 0,
+          item: 0,
+          activePageRangeStart: 0,
+          activePageRangeEnd: 0,
+        }),
+      );
+      let accessibilityElementsHidden;
+      closure_8 = undefined;
+      ref = undefined;
+      closure_11 = undefined;
+      const fn = function v() {
+        let tmp2 = Math.floor(pageIndex.get()) === index;
+        if (!tmp2) {
+          const _Math = Math;
+          tmp2 = Math.ceil(pageIndex.get()) === index;
+        }
+        if (!tmp2) {
+          tmp2 = scrollTargetPageIndex.get() === index;
+        }
+        return tmp2;
+      };
+      fn.__closure = { pageIndex, index, scrollTargetPageIndex };
+      fn.__workletHash = 4593378569274;
+      fn.__initData = __initData18;
+      const derivedValue = reportedPageIndex(scrollTargetPageIndex[5]).useDerivedValue(fn);
+      let obj = reportedPageIndex(scrollTargetPageIndex[5]);
+      let tmp2 = reportedPageIndex;
+      class I {
+        constructor() {
+          pointerEvents = "box-none";
+          if (reportedPageIndex.get() !== index) {
+            pointerEvents = "none";
+          }
+          return { pointerEvents };
+        }
+      }
+      I.__closure = { reportedPageIndex, index };
+      I.__workletHash = 12899986233414;
+      I.__initData = __initData19;
+      const animatedProps = reportedPageIndex(scrollTargetPageIndex[5]).useAnimatedProps(I);
+      const tmp6 = activePageRangeEnd(
+        derivedValue.useState(() => reportedPageIndex.get() !== index),
+        2,
+      );
+      accessibilityElementsHidden = tmp6[0];
+      closure_8 = tmp8;
+      let obj2 = reportedPageIndex(scrollTargetPageIndex[5]);
+      const fn2 = function p() {
+        return reportedPageIndex.get() !== index;
+      };
+      fn2.__closure = { reportedPageIndex, index };
+      fn2.__workletHash = 2345652853959;
+      fn2.__initData = __initData20;
+      class S {
+        constructor(arg0) {
+          obj = closure_0(closure_2[5]);
+          tmp = obj.runOnJS(closure_8)(children);
+          return;
+        }
+      }
+      let obj3 = reportedPageIndex(scrollTargetPageIndex[5]);
+      S.__closure = { runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setIsAccessibilityHidden: tmp6[1] };
+      S.__workletHash = 15518480728660;
+      S.__initData = __initData21;
+      const animatedReaction = obj3.useAnimatedReaction(fn2, S);
+      derivedValue.useRef(null);
+      ref = derivedValue.useRef(accessibilityElementsHidden);
+      let items = [accessibilityElementsHidden];
+      const effect = derivedValue.useEffect(() => {
+        current = ref.current;
+        if (current) {
+          current = !current;
+        }
+        ref.current = current;
+        if (current) {
+          current = PlatformUtils.isIOS();
+        }
+        if (current) {
+          const obj3 = { ref, delay: 100 };
+          const result = setAccessibilityFocus.setAccessibilityFocus(obj3);
+        }
+      }, items);
+      const obj4 = { runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setIsAccessibilityHidden: tmp6[1] };
+      class W {
+        constructor() {
+          display = "none";
+          if (closure_6.get()) {
+            display = "flex";
+          }
+          return { display, flex: 1 };
+        }
+      }
+      W.__closure = { isVisibleOnScreen: derivedValue };
+      W.__workletHash = 1125238936966;
+      W.__initData = __initData22;
+      const animatedStyle = reportedPageIndex(scrollTargetPageIndex[5]).useAnimatedStyle(W);
+      const tmp13 = activePageRangeEnd(
+        derivedValue.useState(() => {
+          let tmp2 = index >= activePageRangeStart.get();
+          if (tmp2) {
+            tmp2 = index <= activePageRangeEnd.get();
+          }
+          return !tmp2;
+        }),
+        2,
+      );
+      closure_11 = tmp14;
+      const obj5 = reportedPageIndex(scrollTargetPageIndex[5]);
+      class M {
+        constructor() {
+          items = [,];
+          items[0] = activePageRangeStart.get();
+          items[1] = activePageRangeEnd.get();
+          return items;
+        }
+      }
+      M.__closure = { activePageRangeStart, activePageRangeEnd };
+      M.__workletHash = 7158564312502;
+      M.__initData = __initData23;
+      const fn3 = function b(arg0) {
+        [tmp, tmp2] = arg0;
+        let tmp4 = index >= tmp;
+        if (tmp4) {
+          tmp4 = index <= tmp2;
+        }
+        ReanimatedRexport2.runOnJS(closure_11)(!tmp4);
+      };
+      const obj6 = reportedPageIndex(scrollTargetPageIndex[5]);
+      fn3.__closure = { index, runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setFreeze: tmp13[1] };
+      fn3.__workletHash = 13391069051873;
+      fn3.__initData = __initData24;
+      const animatedReaction1 = obj6.useAnimatedReaction(M, fn3);
+      const obj8 = { ref };
+      const merged1 = Object.assign(merged);
+      obj8.animatedProps = animatedProps;
+      let str = "auto";
+      if (accessibilityElementsHidden) {
+        str = "no-hide-descendants";
+      }
+      obj8.importantForAccessibility = str;
+      obj8.accessibilityElementsHidden = accessibilityElementsHidden;
+      const obj9 = {
+        freeze: tmp13[0],
+        children: accessibilityElementsHidden(pageIndex(scrollTargetPageIndex[5]).View, {
+          style: animatedStyle,
+          children: children.item.page,
+        }),
+      };
+      obj8.children = accessibilityElementsHidden(tmp2(scrollTargetPageIndex[12]).Freeze, obj9);
+      return accessibilityElementsHidden(pageIndex(scrollTargetPageIndex[5]).View, obj8, index);
+    };
+const __initData25 = {
+  code: "function SegmentedControlPagesNativeTsx39(min,max){const{activePageRangeStart,activePageRangeEnd}=this.__closure;activePageRangeStart.set(Math.min(activePageRangeStart.get(),min));activePageRangeEnd.set(Math.max(activePageRangeEnd.get(),max));}",
+};
+const __initData26 = {
+  code: "function SegmentedControlPagesNativeTsx40(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}",
+};
+const __initData27 = {
+  code: "function SegmentedControlPagesNativeTsx41(t0){const{expandActivePageRange}=this.__closure;const{activeIndex:activeIndex_0,pressedIndex:pressedIndex_0}=t0;let min_0=activeIndex_0;let max_0=activeIndex_0;if(pressedIndex_0!==-1){min_0=Math.min(activeIndex_0,pressedIndex_0);max_0=Math.max(activeIndex_0,pressedIndex_0);}expandActivePageRange(Math.floor(min_0),Math.ceil(max_0));}",
+};
+const __initData28 = {
+  code: "function SegmentedControlPagesNativeTsx42(min,max){const{activePageRangeStart,activePageRangeEnd}=this.__closure;activePageRangeStart.set(Math.min(activePageRangeStart.get(),min));activePageRangeEnd.set(Math.max(activePageRangeEnd.get(),max));}",
+};
+const __initData29 = {
+  code: "function SegmentedControlPagesNativeTsx43(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}",
+};
+const __initData30 = {
+  code: "function SegmentedControlPagesNativeTsx44({activeIndex:activeIndex_0,pressedIndex:pressedIndex_0}){const{expandActivePageRange}=this.__closure;let min_0=activeIndex_0;let max_0=activeIndex_0;if(pressedIndex_0!==-1){min_0=Math.min(activeIndex_0,pressedIndex_0);max_0=Math.max(activeIndex_0,pressedIndex_0);}expandActivePageRange(Math.floor(min_0),Math.ceil(max_0));}",
+};
+ReactCompilerGating = fn(558);
+let closure_54 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (activeIndex, pressedIndex) => {
+      const cResult = c.c(3);
+      const sharedValue = ReanimatedRexport2.useSharedValue(activeIndex.get());
+      const sharedValue1 = ReanimatedRexport2.useSharedValue(activeIndex.get());
+      const expandActivePageRange = function o(arg0, arg1) {
+        const result = sharedValue.set(Math.min(sharedValue.get(), arg0));
+        const result1 = sharedValue1.set(Math.max(sharedValue1.get(), arg1));
+      };
+      expandActivePageRange.__closure = { activePageRangeStart: sharedValue, activePageRangeEnd: sharedValue1 };
+      expandActivePageRange.__workletHash = 3575728639518;
+      expandActivePageRange.__initData = __initData25;
+      const fn2 = function l() {
+        return { activeIndex: activeIndex.get(), pressedIndex: pressedIndex.get() };
+      };
+      fn2.__closure = { activeIndex, pressedIndex };
+      fn2.__workletHash = 15473938229756;
+      fn2.__initData = __initData26;
+      const fn3 = function s(arg0) {
+        ({ activeIndex, pressedIndex } = arg0);
+        let bound = activeIndex;
+        if (-1 !== pressedIndex) {
+          const _Math = Math;
+          bound = Math.min(activeIndex, pressedIndex);
+          const _Math2 = Math;
+          const bound1 = Math.max(activeIndex, pressedIndex);
+        }
+        const rounded = Math.floor(bound);
+        if (typeof fn === "function") {
+          const _Math3 = Math;
+          const result = sharedValue.set(Math.min(sharedValue.get(), rounded));
+          const _Math4 = Math;
+          const result1 = sharedValue1.set(Math.max(sharedValue1.get(), tmp5));
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      };
+      fn3.__closure = { expandActivePageRange };
+      fn3.__workletHash = 11024199346758;
+      fn3.__initData = __initData27;
+      const animatedReaction = ReanimatedRexport2.useAnimatedReaction(fn2, fn3);
+      if (cResult[0] === sharedValue1) {
+        if (cResult[1] === sharedValue) {
+          let tmp5 = cResult[2];
+        }
+        return tmp5;
+      }
+      const items = [sharedValue, sharedValue1];
+      cResult[0] = sharedValue1;
+      cResult[1] = sharedValue;
+      cResult[2] = items;
+      tmp5 = items;
+    }
+  : (activeIndex, pressedIndex) => {
+      const sharedValue = ReanimatedRexport2.useSharedValue(activeIndex.get());
+      const sharedValue1 = ReanimatedRexport2.useSharedValue(activeIndex.get());
+      const fn = function o(arg0, arg1) {
+        const result = sharedValue.set(Math.min(sharedValue.get(), arg0));
+        const result1 = sharedValue1.set(Math.max(sharedValue1.get(), arg1));
+      };
+      fn.__closure = { activePageRangeStart: sharedValue, activePageRangeEnd: sharedValue1 };
+      fn.__workletHash = 13074491908786;
+      fn.__initData = __initData28;
+      const items = [sharedValue1, sharedValue];
+      const expandActivePageRange = noop.useCallback(fn, items);
+      const fn2 = function c() {
+        return { activeIndex: activeIndex.get(), pressedIndex: pressedIndex.get() };
+      };
+      fn2.__closure = { activeIndex, pressedIndex };
+      fn2.__workletHash = 7031527506303;
+      fn2.__initData = __initData29;
+      const fn3 = function l(arg0) {
+        ({ activeIndex, pressedIndex } = arg0);
+        let bound1 = activeIndex;
+        let bound = activeIndex;
+        if (-1 !== pressedIndex) {
+          const _Math = Math;
+          bound = Math.min(activeIndex, pressedIndex);
+          const _Math2 = Math;
+          bound1 = Math.max(activeIndex, pressedIndex);
+        }
+        const rounded = Math.floor(bound);
+        callback(rounded, Math.ceil(bound1));
+      };
+      fn3.__closure = { expandActivePageRange };
+      fn3.__workletHash = 7154390605088;
+      fn3.__initData = __initData30;
+      const animatedReaction = ReanimatedRexport2.useAnimatedReaction(fn2, fn3);
+      const items1 = [sharedValue, sharedValue1];
+      return items1;
+    };
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlPages.native.tsx");
+
+export const SegmentedControlPages = ReactCompilerGating.isReactCompilerEnabled()
   ? (onEndDragWorklet) => {
-      let activeIndex;
-      let ae;
-      let bounces;
-      let closure_18;
-      let ie;
-      let items;
-      let le;
-      let nativeGesture;
-      let num39;
-      let oe;
-      let onBeginDragWorklet;
-      let onScrollWorklet;
-      let pageWidth;
-      let ref2;
-      let state;
-      let tmp7;
-      const tmp2 = onScrollWorklet;
-      let obj = onBeginDragWorklet(onScrollWorklet[7]);
-      const cResult = obj.c(44);
+      const cResult = onBeginDragWorklet(onScrollWorklet[7]).c(44);
       ({ state, style, bounces, nativeGesture, onBeginDragWorklet } = onEndDragWorklet);
       onEndDragWorklet = onEndDragWorklet.onEndDragWorklet;
       onScrollWorklet = onEndDragWorklet.onScrollWorklet;
@@ -173,29 +752,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const scrollTarget = state.scrollTarget;
       const scrollOverflow = state.scrollOverflow;
       ({ onPageChangeRef: closure_8, pageWidth } = state);
-      const pressedIndex = state.pressedIndex;
+      let obj = onBeginDragWorklet(onScrollWorklet[7]);
+      const sharedValue = onBeginDragWorklet(onScrollWorklet[5]).useSharedValue(activeIndex.get());
       let obj2 = onBeginDragWorklet(onScrollWorklet[5]);
-      const sharedValue = obj2.useSharedValue(activeIndex.get());
+      const sharedValue1 = onBeginDragWorklet(onScrollWorklet[5]).useSharedValue(activeIndex.get());
       let obj3 = onBeginDragWorklet(onScrollWorklet[5]);
-      const sharedValue1 = obj3.useSharedValue(activeIndex.get());
-      const length = items.length;
-      let obj4 = onBeginDragWorklet(onScrollWorklet[5]);
-      const sharedValue2 = obj4.useSharedValue(undefined);
+      const sharedValue2 = onBeginDragWorklet(onScrollWorklet[5]).useSharedValue(undefined);
       __initData = scrollTarget.useRef(false);
       if (cResult[0] !== activeIndex) {
-        let value = activeIndex.get();
-        let num = 0;
+        value = activeIndex.get();
         cResult[0] = activeIndex;
         cResult[1] = value;
-        tmp7 = value;
+        let tmp7 = value;
       } else {
         tmp7 = cResult[1];
       }
       __initData2 = obj5.useRef(tmp7);
       function updateCurrentActiveIndex(current) {
-        ref2.current = current;
+        closure_15.current = current;
       }
-      let tmpResult = onBeginDragWorklet(tmp2[5]);
+      let obj4 = onBeginDragWorklet(onScrollWorklet[5]);
       class L {
         constructor() {
           return activeIndex.get();
@@ -206,19 +782,20 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       L.__initData = pageWidth;
       class K {
         constructor(arg0) {
-          const obj = ReanimatedRexport2;
-          obj.runOnJS(updateCurrentActiveIndex)(arg0);
+          obj = closure_0(closure_2[5]);
+          tmp = obj.runOnJS(updateCurrentActiveIndex)(onEndDragWorklet);
+          return;
         }
       }
-      K.__closure = { runOnJS: onBeginDragWorklet(tmp2[5]).runOnJS, updateCurrentActiveIndex };
+      let tmpResult = onBeginDragWorklet(onScrollWorklet[5]);
+      K.__closure = { runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS, updateCurrentActiveIndex };
       K.__workletHash = 9797123893952;
       K.__initData = sharedValue;
-      ({ runOnJS: onBeginDragWorklet(tmp2[5]).runOnJS, updateCurrentActiveIndex });
       const animatedReaction = tmpResult.useAnimatedReaction(L, K);
-      const tmpResult6 = onBeginDragWorklet(tmp2[5]);
+      const obj6 = { runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS, updateCurrentActiveIndex };
       class U {
         constructor() {
-          return sharedValue.get();
+          return closure_10.get();
         }
       }
       U.__closure = { pageIndex: sharedValue };
@@ -226,13 +803,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       U.__initData = sharedValue1;
       class Q {
         constructor(arg0) {
-          const result = activeIndex.set(arg0);
+          result = activeIndex.set(onEndDragWorklet);
+          return;
         }
       }
       Q.__closure = { activeIndex };
       Q.__workletHash = 2303988655079;
-      Q.__initData = length;
-      const animatedReaction1 = tmpResult6.useAnimatedReaction(U, Q);
+      Q.__initData = items.length;
+      const animatedReaction1 = onBeginDragWorklet(onScrollWorklet[5]).useAnimatedReaction(U, Q);
       function onPageChanged(AUTO_DISMISS) {
         if (ref != null) {
           current = ref.current;
@@ -242,89 +820,38 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[2] === pagerRef) {
-        let tmp11;
         if (cResult[3] === scrollTarget) {
-          tmp11 = cResult[4];
+          let tmp11 = cResult[4];
         }
         __initData3 = tmp11;
         if (cResult[5] === pageWidth) {
-          let tmp12;
-          let tmp13;
-          let tmp23;
-          let tmp26;
           if (cResult[6] === tmp11) {
-            tmp12 = cResult[7];
-            tmp13 = cResult[8];
+            let tmp12 = cResult[7];
+            let tmp13 = cResult[8];
           }
           const effect = obj5.useEffect(tmp12, tmp13);
           function re(arg0, width) {
             if (0 !== pageWidth) {
               const _Math = Math;
               const _Math2 = Math;
-              set = sharedValue.set;
-              const obj3 = MathUtils;
-              const maxResult = max(obj3.roundIfClose(arg0.x / pageWidth, 0.0001), 0);
-              const obj4 = MathUtils;
-              const result = set(min(maxResult, obj4.roundIfClose(width.width / pageWidth, 0.0001) - 1));
+              const bound = Math.max(MathUtils.roundIfClose(arg0.x / pageWidth, 0.0001), 0);
+              const result = sharedValue.set(
+                Math.min(bound, MathUtils.roundIfClose(width.width / pageWidth, 0.0001) - 1),
+              );
               const result1 = sharedValue.get() % 1;
               let tmp4 = result1 === 0;
               if (result1 === 0) {
-                const value = sharedValue1.get();
+                value = sharedValue1.get();
                 tmp4 = value !== sharedValue.get();
               }
               if (tmp4) {
                 const result2 = sharedValue1.set(sharedValue.get());
                 const tmp13Result = ReanimatedRexport2;
-                const runOnJSResult = tmp13Result.runOnJS(onPageChanged);
-                runOnJSResult(sharedValue.get());
+                ReanimatedRexport2.runOnJS(onPageChanged)(sharedValue.get());
+                const runOnJSResult = ReanimatedRexport2.runOnJS(onPageChanged);
               }
             }
           }
-          re.__closure = {
-            pageWidth,
-            pageIndex: sharedValue,
-            roundIfClose: onBeginDragWorklet(tmp2[8]).roundIfClose,
-            reportedPageIndex: sharedValue1,
-            runOnJS: onBeginDragWorklet(tmp2[5]).runOnJS,
-            onPageChanged,
-          };
-          re.__workletHash = 7601802094880;
-          re.__initData = sharedValue2;
-          const obj8 = { onBeginDrag: le, onEndDrag: ie, onMomentumEnd: oe, onScroll: ae };
-          le = function le(arg0) {
-            const result = scrollTarget.set(-1);
-            if (onBeginDragWorklet != null) {
-              tmp2(arg0);
-            }
-          };
-          const obj9 = { scrollTarget, onBeginDragWorklet };
-          le.__closure = obj9;
-          le.__workletHash = 3327779393906;
-          le.__initData = __initData;
-          ie = function ie(arg0) {
-            if (onEndDragWorklet != null) {
-              tmp(arg0);
-            }
-          };
-          const obj10 = { onEndDragWorklet };
-          ie.__closure = obj10;
-          ie.__workletHash = 3007879580981;
-          ie.__initData = __initData2;
-          oe = function oe(contentOffset) {
-            contentOffset = contentOffset.contentOffset;
-            const contentSize = contentOffset.contentSize;
-            if (-1 !== scrollTarget.get()) {
-              const obj2 = MathUtils;
-              if (0 === obj2.roundIfClose(contentOffset.x - scrollTarget.get(), 0.0001)) {
-                const result = scrollTarget.set(-1);
-              } else {
-                const value = scrollTarget.get();
-                const tmpResult = ReanimatedRexport2;
-                tmpResult.runOnJS(closure_18)(value);
-              }
-            }
-            re(contentOffset, contentSize);
-          };
           const obj7 = {
             pageWidth,
             pageIndex: sharedValue,
@@ -333,6 +860,45 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             runOnJS: onBeginDragWorklet(tmp2[5]).runOnJS,
             onPageChanged,
           };
+          re.__closure = obj7;
+          re.__workletHash = 7601802094880;
+          re.__initData = sharedValue2;
+          const obj8 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
+          function le(arg0) {
+            const result = scrollTarget.set(-1);
+            if (onBeginDragWorklet != null) {
+              tmp2(arg0);
+            }
+          }
+          const obj9 = { scrollTarget, onBeginDragWorklet };
+          le.__closure = obj9;
+          le.__workletHash = 3327779393906;
+          le.__initData = __initData;
+          obj8.onBeginDrag = le;
+          function ie(arg0) {
+            if (onEndDragWorklet != null) {
+              tmp(arg0);
+            }
+          }
+          const obj10 = { onEndDragWorklet };
+          ie.__closure = obj10;
+          ie.__workletHash = 3007879580981;
+          ie.__initData = __initData2;
+          obj8.onEndDrag = ie;
+          function oe(contentOffset) {
+            contentOffset = contentOffset.contentOffset;
+            if (-1 !== scrollTarget.get()) {
+              if (0 === obj2.roundIfClose(contentOffset.x - scrollTarget.get(), 0.0001)) {
+                const result = scrollTarget.set(-1);
+              } else {
+                value = scrollTarget.get();
+                ReanimatedRexport2.runOnJS(closure_18)(value);
+                const tmpResult = ReanimatedRexport2;
+              }
+              obj2 = MathUtils;
+            }
+            re(contentOffset, contentOffset.contentSize);
+          }
           const obj11 = {
             scrollTarget,
             roundIfClose: onBeginDragWorklet(tmp2[8]).roundIfClose,
@@ -343,9 +909,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           oe.__closure = obj11;
           oe.__workletHash = 2536156100149;
           oe.__initData = updateCurrentActiveIndex;
-          ae = function ae(arg0) {
-            let contentOffset;
-            let contentSize;
+          obj8.onMomentumEnd = oe;
+          function ae(arg0) {
             ({ contentOffset, contentSize } = arg0);
             if (0 !== contentSize.width) {
               if (sharedValue2.get() !== contentOffset.x) {
@@ -365,122 +930,134 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     const result3 = scrollOverflow.set(0);
                   }
                   if (-1 !== scrollTarget.get()) {
-                    const obj3 = MathUtils;
                     if (0 === obj3.roundIfClose(contentOffset.x - scrollTarget.get(), 0.0001)) {
                       const result4 = scrollTarget.set(-1);
                     }
+                    obj3 = MathUtils;
                   }
                   re(contentOffset, contentSize);
                 } else {
                   const result5 = activeIndex.get() * pageWidth;
-                  const obj = ReanimatedRexport2;
-                  obj.runOnJS(closure_18)(result5);
+                  ReanimatedRexport2.runOnJS(closure_18)(result5);
                 }
               }
             }
-          };
-          const useAnimatedScrollHandler = onBeginDragWorklet(tmp2[5]).useAnimatedScrollHandler;
+          }
           const obj12 = {
             lastScrollOffsetX: null,
-            onScrollWorklet,
-            itemCount: length,
-            pageWidth,
-            activeIndex,
-            runOnJS: onBeginDragWorklet(tmp2[5]).runOnJS,
-            refreshScrollOffset: tmp11,
-            scrollOverflow,
+            onScrollWorklet: null,
+            itemCount: null,
+            pageWidth: null,
+            activeIndex: null,
+            runOnJS: null,
+            refreshScrollOffset: null,
+            scrollOverflow: null,
             scrollTarget: null,
-            roundIfClose: onBeginDragWorklet(tmp2[8]).roundIfClose,
-            resolvePageIndex: re,
+            roundIfClose: null,
+            resolvePageIndex: null,
           };
           class L {
             constructor() {
               return activeIndex.get();
             }
           }
+          obj12.onScrollWorklet = onScrollWorklet;
+          obj12.itemCount = length;
+          obj12.pageWidth = pageWidth;
+          obj12.activeIndex = activeIndex;
+          obj12.runOnJS = onBeginDragWorklet(tmp2[5]).runOnJS;
+          obj12.refreshScrollOffset = tmp11;
+          obj12.scrollOverflow = scrollOverflow;
           class K {
             constructor(arg0) {
-              const obj = ReanimatedRexport2;
-              obj.runOnJS(updateCurrentActiveIndex)(arg0);
+              obj = closure_0(closure_2[5]);
+              tmp = obj.runOnJS(updateCurrentActiveIndex)(onEndDragWorklet);
+              return;
             }
           }
+          obj12.roundIfClose = onBeginDragWorklet(tmp2[8]).roundIfClose;
+          obj12.resolvePageIndex = re;
           ae.__closure = obj12;
           ae.__workletHash = 9770585444979;
           ae.__initData = onPageChanged;
-          const animatedScrollHandler = useAnimatedScrollHandler(obj8);
+          obj8.onScroll = ae;
+          const animatedScrollHandler = onBeginDragWorklet(tmp2[5]).useAnimatedScrollHandler(obj8);
           if (cResult[9] !== pageWidth) {
             const obj13 = { flex: 1, width: pageWidth };
             cResult[9] = pageWidth;
             cResult[10] = obj13;
-            tmp23 = obj13;
+            let tmp22 = obj13;
           } else {
-            tmp23 = cResult[10];
+            tmp22 = cResult[10];
           }
-          style = tmp23;
+          style = tmp22;
           class U {
             constructor() {
-              return sharedValue.get();
+              return closure_10.get();
             }
           }
-          let result = tmp24 * pageWidth;
+          let result = tmp23 * pageWidth;
           if (cResult[13] !== result) {
             const point = { x: result, y: 0 };
             cResult[13] = result;
             cResult[14] = point;
-            tmp26 = point;
+            let tmp25 = point;
           } else {
-            tmp26 = cResult[14];
+            tmp25 = cResult[14];
           }
-          const tmp29 = pagerRef(closure_54(activeIndex, pressedIndex), 2);
-          const first = tmp29[0];
+          const tmp28 = pagerRef(closure_54(activeIndex, state.pressedIndex), 2);
+          const first = tmp28[0];
           class Q {
             constructor(arg0) {
-              const result = activeIndex.set(arg0);
+              result = activeIndex.set(onEndDragWorklet);
+              return;
             }
           }
-          activePageRangeEnd = tmp31;
+          activePageRangeEnd = tmp30;
+          const tmpResult7 = onBeginDragWorklet(tmp2[5]);
           function he() {
             let num = -1;
             if (-1 !== scrollTarget.get()) {
-              const obj2 = MathUtils;
-              num = obj2.roundIfClose(scrollTarget.get() / pageWidth, 0.0001);
+              num = MathUtils.roundIfClose(scrollTarget.get() / pageWidth, 0.0001);
             }
             return num;
           }
           const obj14 = { scrollTarget, roundIfClose: onBeginDragWorklet(tmp2[8]).roundIfClose, pageWidth };
-          const useDerivedValue = onBeginDragWorklet(tmp2[5]).useDerivedValue;
-          onBeginDragWorklet(tmp2[5]);
           he.__closure = obj14;
           class Z {
-            constructor(x) {
-              const result = scrollTarget.set(x);
+            constructor(arg0) {
+              result = scrollTarget.set(onEndDragWorklet);
               if (pagerRef != null) {
                 current = pagerRef.current;
                 if (current != null) {
-                  const obj = { x, animated: false };
-                  current.scrollTo(obj);
+                  obj = { x: null, animated: false };
+                  obj.x = onEndDragWorklet;
+                  scrollToResult = current.scrollTo(obj);
                 }
               }
+              return;
             }
           }
           he.__initData = __initData3;
-          const derivedValue = useDerivedValue(he);
-          const tmpResult9 = onBeginDragWorklet(tmp2[5]);
+          const derivedValue = onBeginDragWorklet(tmp2[5]).useDerivedValue(he);
+          const tmpResult8 = onBeginDragWorklet(tmp2[5]);
           class Ie {
             constructor() {
-              const value = sharedValue.get();
-              const rounded = Math.floor(value);
-              const rounded1 = Math.ceil(value);
-              const value2 = derivedValue.get();
-              let bound1 = rounded1;
-              let bound = rounded;
-              if (-1 !== value2) {
-                const _Math = Math;
-                bound = Math.min(rounded, value2);
-                const _Math2 = Math;
-                bound1 = Math.max(rounded1, value2);
+              value = closure_10.get();
+              rounded = Math.floor(value);
+              rounded1 = Math.ceil(value);
+              value1 = closure_23.get();
+              bound1 = rounded1;
+              bound = rounded;
+              if (-1 !== value1) {
+                _Math = Math;
+                bound = Math.min(rounded, value1);
+                _Math2 = Math;
+                bound1 = Math.max(rounded1, value1);
               }
-              const items = [bound, bound1];
+              items = [,];
+              items[0] = bound;
+              items[1] = bound1;
               return items;
             }
           }
@@ -489,230 +1066,222 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           Ie.__workletHash = 9125733538935;
           Ie.__initData = re;
           function ve(arg0, arg1) {
-            const tmp = null != arg1 && arg1[0] === arg0[0] && arg1[1] === arg0[1];
             if (!tmp) {
               const result = visiblePageRange.set(arg0);
             }
+            tmp = null != arg1 && arg1[0] === arg0[0] && arg1[1] === arg0[1];
           }
           const obj16 = { visiblePageRange };
           ve.__closure = obj16;
           ve.__workletHash = 14106897948399;
           ve.__initData = style;
-          const animatedReaction2 = tmpResult9.useAnimatedReaction(Ie, ve);
+          const animatedReaction2 = onBeginDragWorklet(tmp2[5]).useAnimatedReaction(Ie, ve);
           if (0 === pageWidth) {
             return null;
           } else {
-            if (cResult[15] === tmp23) {
-              let tmp38;
-              let tmp39;
+            if (cResult[15] === tmp22) {
               if (cResult[16] === style) {
-                tmp38 = cResult[17];
+                let tmp36 = cResult[17];
               }
-              if (cResult[18] === tmp29[1]) {
+              if (cResult[18] === tmp30) {
                 if (cResult[19] === first) {
-                  if (cResult[20] === tmp23) {
+                  if (cResult[20] === tmp22) {
                     if (cResult[21] === items) {
                       if (cResult[22] === sharedValue) {
                         if (cResult[23] === sharedValue1) {
                           if (cResult[24] === derivedValue) {
-                            tmp39 = cResult[25];
-                          }
-                          if (cResult[33] === bounces) {
-                            if (cResult[34] === tmp26) {
-                              if (cResult[35] === animatedScrollHandler) {
-                                if (cResult[36] === pageWidth) {
-                                  if (cResult[37] === pagerRef) {
-                                    if (cResult[38] === tmp38) {
-                                      let tmp42;
-                                      let tmp48;
-                                      if (cResult[39] === tmp39) {
-                                        tmp42 = cResult[40];
-                                      }
-                                      if (cResult[41] === nativeGesture) {
-                                        let tmp46;
-                                        if (cResult[42] === tmp42) {
-                                          tmp46 = cResult[43];
+                            if (cResult[33] === bounces) {
+                              if (cResult[34] === tmp25) {
+                                if (cResult[35] === animatedScrollHandler) {
+                                  if (cResult[36] === pageWidth) {
+                                    if (cResult[37] === pagerRef) {
+                                      if (cResult[38] === tmp36) {
+                                        if (cResult[39] === tmp37) {
+                                          let tmp41 = cResult[40];
                                         }
-                                        return tmp46;
-                                      }
-                                      class Pe {
-                                        constructor(item, index) {
-                                          return (
-                                            <closure_47
-                                              key={index}
-                                              index={index}
-                                              activePageRangeStart={activePageRangeStart}
-                                              activePageRangeEnd={activePageRangeEnd}
-                                              reportedPageIndex={sharedValue1}
-                                              pageIndex={sharedValue}
-                                              scrollTargetPageIndex={derivedValue}
-                                              style={style}
-                                              item={item}
-                                            />
-                                          );
+                                        if (cResult[41] === nativeGesture) {
+                                          if (cResult[42] === tmp41) {
+                                            let tmp45 = cResult[43];
+                                          }
+                                          return tmp45;
                                         }
-                                      }
-                                      if (null != nativeGesture) {
-                                        const obj17 = { gesture: nativeGesture, children: null };
                                         class Pe {
-                                          constructor(item, index) {
-                                            return (
-                                              <closure_47
-                                                key={index}
-                                                index={index}
-                                                activePageRangeStart={activePageRangeStart}
-                                                activePageRangeEnd={activePageRangeEnd}
-                                                reportedPageIndex={sharedValue1}
-                                                pageIndex={sharedValue}
-                                                scrollTargetPageIndex={derivedValue}
-                                                style={style}
-                                                item={item}
-                                              />
-                                            );
+                                          constructor(arg0, arg1) {
+                                            obj = {
+                                              index: arg1,
+                                              activePageRangeStart: closure_21,
+                                              activePageRangeEnd: closure_22,
+                                              reportedPageIndex: closure_11,
+                                              pageIndex: closure_10,
+                                              scrollTargetPageIndex: closure_23,
+                                              style: closure_20,
+                                              item: onEndDragWorklet,
+                                            };
+                                            return jsx(f56558, obj, arg1);
                                           }
                                         }
-                                        tmp48 = scrollOverflow(onBeginDragWorklet(tmp2[10]).GestureDetector, obj17);
+                                        if (null != nativeGesture) {
+                                          const obj17 = { gesture: nativeGesture, children: null };
+                                          class Pe {
+                                            constructor(arg0, arg1) {
+                                              obj = {
+                                                index: arg1,
+                                                activePageRangeStart: closure_21,
+                                                activePageRangeEnd: closure_22,
+                                                reportedPageIndex: closure_11,
+                                                pageIndex: closure_10,
+                                                scrollTargetPageIndex: closure_23,
+                                                style: closure_20,
+                                                item: onEndDragWorklet,
+                                              };
+                                              return jsx(f56558, obj, arg1);
+                                            }
+                                          }
+                                          const tmp47 = scrollOverflow(
+                                            onBeginDragWorklet(tmp2[10]).GestureDetector,
+                                            obj17,
+                                          );
+                                        }
+                                        cResult[41] = nativeGesture;
+                                        cResult[42] = tmp41;
+                                        cResult[43] = tmp47;
+                                        tmp45 = tmp47;
                                       }
-                                      cResult[41] = nativeGesture;
-                                      cResult[42] = tmp42;
-                                      cResult[43] = tmp48;
-                                      tmp46 = tmp48;
                                     }
                                   }
                                 }
                               }
                             }
-                          }
-                          const obj18 = {
-                            ref: null,
-                            style: tmp38,
-                            contentOffset: tmp26,
-                            keyboardShouldPersistTaps: "handled",
-                            showsHorizontalScrollIndicator: false,
-                            pagingEnabled: true,
-                            snapToInterval: pageWidth,
-                            snapToAlignment: "center",
-                            decelerationRate: "fast",
-                            centerContent: true,
-                            bounces,
-                            horizontal: true,
-                            accessibilityRole: "none",
-                            onScroll: animatedScrollHandler,
-                            disableIntervalMomentum: true,
-                            scrollEventThrottle: num39,
-                            children: tmp39,
-                          };
-                          class Pe {
-                            constructor(item, index) {
-                              return (
-                                <closure_47
-                                  key={index}
-                                  index={index}
-                                  activePageRangeStart={activePageRangeStart}
-                                  activePageRangeEnd={activePageRangeEnd}
-                                  reportedPageIndex={sharedValue1}
-                                  pageIndex={sharedValue}
-                                  scrollTargetPageIndex={derivedValue}
-                                  style={style}
-                                  item={item}
-                                />
-                              );
+                            const obj18 = {
+                              ref: null,
+                              style: null,
+                              contentOffset: null,
+                              keyboardShouldPersistTaps: "handled",
+                              showsHorizontalScrollIndicator: false,
+                              pagingEnabled: true,
+                              snapToInterval: null,
+                              snapToAlignment: "center",
+                              decelerationRate: "fast",
+                              centerContent: true,
+                              bounces: null,
+                              horizontal: true,
+                              accessibilityRole: "none",
+                              onScroll: null,
+                              disableIntervalMomentum: true,
+                              scrollEventThrottle: null,
+                              children: null,
+                            };
+                            class Pe {
+                              constructor(arg0, arg1) {
+                                obj = {
+                                  index: arg1,
+                                  activePageRangeStart: closure_21,
+                                  activePageRangeEnd: closure_22,
+                                  reportedPageIndex: closure_11,
+                                  pageIndex: closure_10,
+                                  scrollTargetPageIndex: closure_23,
+                                  style: closure_20,
+                                  item: onEndDragWorklet,
+                                };
+                                return jsx(f56558, obj, arg1);
+                              }
                             }
+                            obj18.style = tmp36;
+                            obj18.contentOffset = tmp25;
+                            obj18.snapToInterval = pageWidth;
+                            obj18.bounces = bounces;
+                            obj18.onScroll = animatedScrollHandler;
+                            let num39;
+                            if (tmpResult10.isIOS()) {
+                              num39 = 32;
+                            }
+                            obj18.scrollEventThrottle = num39;
+                            obj18.children = cResult[25];
+                            const tmp42Result = scrollOverflow(ref, obj18);
+                            cResult[33] = bounces;
+                            cResult[34] = tmp25;
+                            cResult[35] = animatedScrollHandler;
+                            cResult[36] = pageWidth;
+                            cResult[37] = pagerRef;
+                            cResult[38] = tmp36;
+                            cResult[39] = cResult[25];
+                            cResult[40] = tmp42Result;
+                            tmp41 = tmp42Result;
+                            tmpResult10 = onBeginDragWorklet(tmp2[9]);
                           }
-                          num39 = undefined;
-                          const tmp43 = scrollOverflow;
-                          const tmpResult10 = onBeginDragWorklet(tmp2[9]);
-                          if (tmpResult10.isIOS()) {
-                            num39 = 32;
-                          }
-                          const tmp43Result = tmp43(ref, obj18);
-                          cResult[33] = bounces;
-                          cResult[34] = tmp26;
-                          cResult[35] = animatedScrollHandler;
-                          cResult[36] = pageWidth;
-                          cResult[37] = pagerRef;
-                          cResult[38] = tmp38;
-                          cResult[39] = tmp39;
-                          cResult[40] = tmp43Result;
-                          tmp42 = tmp43Result;
                         }
                       }
                     }
                   }
                 }
               }
-              if (cResult[26] === tmp29[1]) {
+              if (cResult[26] === tmp30) {
                 if (cResult[27] === first) {
-                  if (cResult[28] === tmp23) {
+                  if (cResult[28] === tmp22) {
                     if (cResult[29] === sharedValue) {
                       if (cResult[30] === sharedValue1) {
-                        let tmp40;
                         if (cResult[31] === derivedValue) {
-                          tmp40 = cResult[32];
+                          let tmp38 = cResult[32];
                         }
-                        const mapped = items.map(tmp40);
+                        const mapped = items.map(tmp38);
                         class Pe {
-                          constructor(item, index) {
-                            return (
-                              <closure_47
-                                key={index}
-                                index={index}
-                                activePageRangeStart={activePageRangeStart}
-                                activePageRangeEnd={activePageRangeEnd}
-                                reportedPageIndex={sharedValue1}
-                                pageIndex={sharedValue}
-                                scrollTargetPageIndex={derivedValue}
-                                style={style}
-                                item={item}
-                              />
-                            );
+                          constructor(arg0, arg1) {
+                            obj = {
+                              index: arg1,
+                              activePageRangeStart: closure_21,
+                              activePageRangeEnd: closure_22,
+                              reportedPageIndex: closure_11,
+                              pageIndex: closure_10,
+                              scrollTargetPageIndex: closure_23,
+                              style: closure_20,
+                              item: onEndDragWorklet,
+                            };
+                            return jsx(f56558, obj, arg1);
                           }
                         }
                         cResult[19] = first;
-                        cResult[20] = tmp23;
+                        cResult[20] = tmp22;
                         cResult[21] = items;
                         cResult[22] = sharedValue;
                         cResult[23] = sharedValue1;
                         cResult[24] = derivedValue;
                         cResult[25] = mapped;
-                        tmp39 = mapped;
                       }
                     }
                   }
                 }
               }
               class Pe {
-                constructor(item, index) {
-                  return (
-                    <closure_47
-                      key={index}
-                      index={index}
-                      activePageRangeStart={activePageRangeStart}
-                      activePageRangeEnd={activePageRangeEnd}
-                      reportedPageIndex={sharedValue1}
-                      pageIndex={sharedValue}
-                      scrollTargetPageIndex={derivedValue}
-                      style={style}
-                      item={item}
-                    />
-                  );
+                constructor(arg0, arg1) {
+                  obj = {
+                    index: arg1,
+                    activePageRangeStart: closure_21,
+                    activePageRangeEnd: closure_22,
+                    reportedPageIndex: closure_11,
+                    pageIndex: closure_10,
+                    scrollTargetPageIndex: closure_23,
+                    style: closure_20,
+                    item: onEndDragWorklet,
+                  };
+                  return jsx(f56558, obj, arg1);
                 }
               }
-              cResult[26] = tmp29[1];
+              cResult[26] = tmp30;
               cResult[27] = first;
-              cResult[28] = tmp23;
+              cResult[28] = tmp22;
               cResult[29] = sharedValue;
               cResult[30] = sharedValue1;
               cResult[31] = derivedValue;
               cResult[32] = Pe;
-              tmp40 = Pe;
+              tmp38 = Pe;
             }
-            const items1 = [tmp23];
-            cResult[15] = tmp23;
+            const items1 = [tmp22];
+            cResult[15] = tmp22;
             cResult[16] = style;
             cResult[17] = items1;
-            tmp38 = items1;
+            tmp36 = items1;
           }
+          const tmpResult9 = onBeginDragWorklet(tmp2[5]);
         }
         const items2 = [pageWidth, tmp11];
         cResult[5] = pageWidth;
@@ -723,36 +1292,25 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = tmp14;
       }
       class Z {
-        constructor(x) {
-          const result = scrollTarget.set(x);
+        constructor(arg0) {
+          result = scrollTarget.set(onEndDragWorklet);
           if (pagerRef != null) {
             current = pagerRef.current;
             if (current != null) {
-              const obj = { x, animated: false };
-              current.scrollTo(obj);
+              obj = { x: null, animated: false };
+              obj.x = onEndDragWorklet;
+              scrollToResult = current.scrollTo(obj);
             }
           }
+          return;
         }
       }
       cResult[2] = pagerRef;
       cResult[3] = scrollTarget;
       tmp11 = Z;
+      const tmpResult6 = onBeginDragWorklet(onScrollWorklet[5]);
     }
   : (onEndDragWorklet) => {
-      let activeIndex;
-      let bounces;
-      let c21;
-      let c22;
-      let ee;
-      let items;
-      let items7;
-      let nativeGesture;
-      let ne;
-      let num;
-      let onBeginDragWorklet;
-      let re;
-      let state;
-      let te;
       ({ state, nativeGesture, onBeginDragWorklet } = onEndDragWorklet);
       onEndDragWorklet = onEndDragWorklet.onEndDragWorklet;
       const onScrollWorklet = onEndDragWorklet.onScrollWorklet;
@@ -770,23 +1328,19 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const scrollOverflow = state.scrollOverflow;
       const onPageChangeRef = state.onPageChangeRef;
       const pageWidth = state.pageWidth;
-      let tmp = onBeginDragWorklet;
-      const tmp2 = onScrollWorklet;
       ({ style, bounces } = onEndDragWorklet);
-      const pressedIndex = state.pressedIndex;
+      const sharedValue = onBeginDragWorklet(onScrollWorklet[5]).useSharedValue(activeIndex.get());
       let obj = onBeginDragWorklet(onScrollWorklet[5]);
-      const sharedValue = obj.useSharedValue(activeIndex.get());
-      let obj2 = onBeginDragWorklet(onScrollWorklet[5]);
-      const sharedValue1 = obj2.useSharedValue(activeIndex.get());
+      const sharedValue1 = onBeginDragWorklet(onScrollWorklet[5]).useSharedValue(activeIndex.get());
       const length = items.length;
-      let obj3 = onBeginDragWorklet(onScrollWorklet[5]);
-      const sharedValue2 = obj3.useSharedValue(undefined);
-      ref = scrollTarget.useRef(false);
-      const ref2 = scrollTarget.useRef(activeIndex.get());
+      let obj2 = onBeginDragWorklet(onScrollWorklet[5]);
+      const sharedValue2 = onBeginDragWorklet(onScrollWorklet[5]).useSharedValue(undefined);
+      scrollTarget.useRef(false);
+      scrollTarget.useRef(activeIndex.get());
       const updateCurrentActiveIndex = scrollTarget.useCallback((current) => {
-        ref2.current = current;
+        closure_15.current = current;
       }, []);
-      let obj4 = onBeginDragWorklet(onScrollWorklet[5]);
+      let obj3 = onBeginDragWorklet(onScrollWorklet[5]);
       class I {
         constructor() {
           return activeIndex.get();
@@ -796,30 +1350,30 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       I.__workletHash = 1395514015727;
       I.__initData = __initData;
       const fn = function v(arg0) {
-        const obj = ReanimatedRexport2;
-        obj.runOnJS(callback)(arg0);
+        ReanimatedRexport2.runOnJS(callback)(arg0);
       };
+      let obj4 = onBeginDragWorklet(onScrollWorklet[5]);
       fn.__closure = { runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS, updateCurrentActiveIndex };
       fn.__workletHash = 12907997375351;
       fn.__initData = __initData;
-      ({ runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS, updateCurrentActiveIndex });
       const animatedReaction = obj4.useAnimatedReaction(I, fn);
+      const obj5 = { runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS, updateCurrentActiveIndex };
       const fn2 = function p() {
         return sharedValue.get();
       };
       fn2.__closure = { pageIndex: sharedValue };
       fn2.__workletHash = 10499929423113;
       fn2.__initData = derivedValue;
-      const obj6 = onBeginDragWorklet(onScrollWorklet[5]);
       class S {
         constructor(arg0) {
-          const result = activeIndex.set(arg0);
+          result = activeIndex.set(onEndDragWorklet);
+          return;
         }
       }
       S.__closure = { activeIndex };
       S.__workletHash = 4431632836916;
       S.__initData = __initData4;
-      const animatedReaction1 = obj6.useAnimatedReaction(fn2, S);
+      const animatedReaction1 = onBeginDragWorklet(onScrollWorklet[5]).useAnimatedReaction(fn2, S);
       const items1 = [onPageChangeRef];
       callback1 = scrollTarget.useCallback((AUTO_DISMISS) => {
         if (onPageChangeRef != null) {
@@ -852,30 +1406,43 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items3);
       class Z {
-        constructor(arg0, width) {
+        constructor(arg0, arg1) {
+          tmp = pageWidth;
           if (0 !== pageWidth) {
-            const _Math = Math;
-            const _Math2 = Math;
-            set = sharedValue.set;
-            const obj3 = MathUtils;
-            const maxResult = max(obj3.roundIfClose(arg0.x / pageWidth, 0.0001), 0);
-            const obj4 = MathUtils;
-            const result = set(min(maxResult, obj4.roundIfClose(width.width / pageWidth, 0.0001) - 1));
-            const result1 = sharedValue.get() % 1;
-            let tmp4 = result1 === 0;
+            tmp10 = onEndDragWorklet;
+            tmp11 = arg1;
+            obj2 = closure_10;
+            tmp12 = globalThis;
+            _Math = Math;
+            _Math2 = Math;
+            tmp13 = closure_0;
+            tmp14 = closure_2;
+            obj3 = closure_0(closure_2[8]);
+            num = 0.0001;
+            bound = Math.max(obj3.roundIfClose(onEndDragWorklet.x / tmp, 0.0001), 0);
+            obj4 = closure_0(closure_2[8]);
+            num2 = 1;
+            result = closure_10.set(Math.min(bound, obj4.roundIfClose(arg1.width / tmp, 0.0001) - 1));
+            result1 = closure_10.get() % 1;
+            tmp4 = result1 === 0;
             if (result1 === 0) {
-              const value = sharedValue1.get();
-              tmp4 = value !== sharedValue.get();
+              tmp2 = closure_11;
+              value = closure_11.get();
+              tmp4 = value !== obj2.get();
             }
             if (tmp4) {
-              const result2 = sharedValue1.set(sharedValue.get());
-              const tmp13Result = ReanimatedRexport2;
-              const runOnJSResult = tmp13Result.runOnJS(callback1);
-              runOnJSResult(sharedValue.get());
+              tmp5 = closure_11;
+              result2 = closure_11.set(obj2.get());
+              tmp13Result = tmp13(tmp14[5]);
+              tmp7 = closure_17;
+              runOnJSResult = tmp13Result.runOnJS(closure_17);
+              tmp8Result = runOnJSResult(obj2.get());
             }
           }
+          return;
         }
       }
+      const obj6 = onBeginDragWorklet(onScrollWorklet[5]);
       Z.__closure = {
         pageWidth,
         pageIndex: sharedValue,
@@ -887,49 +1454,50 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       Z.__workletHash = 8342205089427;
       Z.__initData = __initData5;
       const items4 = [callback1, sharedValue, pageWidth, sharedValue1];
-      ({
+      callback3 = scrollTarget.useCallback(Z, items4);
+      const obj7 = {
         pageWidth,
         pageIndex: sharedValue,
         roundIfClose: onBeginDragWorklet(onScrollWorklet[8]).roundIfClose,
         reportedPageIndex: sharedValue1,
         runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS,
         onPageChanged: callback1,
-      });
-      callback3 = scrollTarget.useCallback(Z, items4);
-      const obj8 = { onBeginDrag: re, onEndDrag: ne, onMomentumEnd: te, onScroll: ee };
-      re = function re(arg0) {
+      };
+      const obj9 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
+      function re(arg0) {
         const result = scrollTarget.set(-1);
         if (onBeginDragWorklet != null) {
           tmp2(arg0);
         }
-      };
+      }
       re.__closure = { scrollTarget, onBeginDragWorklet };
       re.__workletHash = 13774066389517;
       re.__initData = __initData6;
-      ne = function ne(arg0) {
+      obj9.onBeginDrag = re;
+      function ne(arg0) {
         if (onEndDragWorklet != null) {
           tmp(arg0);
         }
-      };
+      }
       ne.__closure = { onEndDragWorklet };
       ne.__workletHash = 1247100135210;
       ne.__initData = __initData7;
-      te = function te(contentOffset) {
+      obj9.onEndDrag = ne;
+      function te(contentOffset) {
         contentOffset = contentOffset.contentOffset;
-        const contentSize = contentOffset.contentSize;
         if (-1 !== scrollTarget.get()) {
-          const obj2 = MathUtils;
           if (0 === obj2.roundIfClose(contentOffset.x - scrollTarget.get(), 0.0001)) {
             const result = scrollTarget.set(-1);
           } else {
-            const value = scrollTarget.get();
+            value = scrollTarget.get();
+            ReanimatedRexport2.runOnJS(callback2)(value);
             const tmpResult = ReanimatedRexport2;
-            tmpResult.runOnJS(callback2)(value);
           }
+          obj2 = MathUtils;
         }
-        callback3(contentOffset, contentSize);
-      };
-      const useAnimatedScrollHandler = onBeginDragWorklet(onScrollWorklet[5]).useAnimatedScrollHandler;
+        callback3(contentOffset, contentOffset.contentSize);
+      }
+      const obj8 = onBeginDragWorklet(onScrollWorklet[5]);
       te.__closure = {
         scrollTarget,
         roundIfClose: onBeginDragWorklet(onScrollWorklet[8]).roundIfClose,
@@ -939,9 +1507,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       };
       te.__workletHash = 7952328022238;
       te.__initData = __initData8;
-      ee = function ee(arg0) {
-        let contentOffset;
-        let contentSize;
+      obj9.onMomentumEnd = te;
+      function ee(arg0) {
         ({ contentOffset, contentSize } = arg0);
         if (0 !== contentSize.width) {
           if (sharedValue2.get() !== contentOffset.x) {
@@ -961,27 +1528,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 const result3 = scrollOverflow.set(0);
               }
               if (-1 !== scrollTarget.get()) {
-                const obj3 = MathUtils;
                 if (0 === obj3.roundIfClose(contentOffset.x - scrollTarget.get(), 0.0001)) {
                   const result4 = scrollTarget.set(-1);
                 }
+                obj3 = MathUtils;
               }
               callback3(contentOffset, contentSize);
             } else {
               const result5 = activeIndex.get() * pageWidth;
-              const obj = ReanimatedRexport2;
-              obj.runOnJS(callback2)(result5);
+              ReanimatedRexport2.runOnJS(callback2)(result5);
             }
           }
         }
-      };
-      ({
+      }
+      const obj10 = {
         scrollTarget,
         roundIfClose: onBeginDragWorklet(onScrollWorklet[8]).roundIfClose,
         runOnJS: onBeginDragWorklet(onScrollWorklet[5]).runOnJS,
         refreshScrollOffset: callback2,
         resolvePageIndex: callback3,
-      });
+      };
       ee.__closure = {
         lastScrollOffsetX: sharedValue2,
         onScrollWorklet,
@@ -997,8 +1563,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       };
       ee.__workletHash = 12685695320253;
       ee.__initData = __initData9;
+      obj9.onScroll = ee;
       const items5 = [pageWidth];
-      ({
+      const obj11 = {
         lastScrollOffsetX: sharedValue2,
         onScrollWorklet,
         itemCount: length,
@@ -1010,8 +1577,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         scrollTarget,
         roundIfClose: onBeginDragWorklet(onScrollWorklet[8]).roundIfClose,
         resolvePageIndex: callback3,
-      });
-      const animatedScrollHandler = useAnimatedScrollHandler(obj8);
+      };
       memo = scrollTarget.useMemo(() => ({ flex: 1, width: pageWidth }), items5);
       const items6 = [sharedValue, pageWidth];
       const memo1 = scrollTarget.useMemo(() => {
@@ -1022,27 +1588,27 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const point = { x: num * pageWidth, y: 0 };
         return point;
       }, items6);
-      [c21, c22] = pagerRef(closure_54(activeIndex, pressedIndex), 2);
-      pagerRef(closure_54(activeIndex, pressedIndex), 2);
+      const animatedScrollHandler = obj8.useAnimatedScrollHandler(obj9);
+      [c21, c22] = pagerRef(closure_54(activeIndex, state.pressedIndex), 2);
+      const tmp16 = pagerRef(closure_54(activeIndex, state.pressedIndex), 2);
       function ae() {
         let num = -1;
         if (-1 !== scrollTarget.get()) {
-          const obj2 = MathUtils;
-          num = obj2.roundIfClose(scrollTarget.get() / pageWidth, 0.0001);
+          num = MathUtils.roundIfClose(scrollTarget.get() / pageWidth, 0.0001);
         }
         return num;
       }
-      const obj11 = onBeginDragWorklet(onScrollWorklet[5]);
+      const obj12 = onBeginDragWorklet(onScrollWorklet[5]);
       ae.__closure = { scrollTarget, roundIfClose: onBeginDragWorklet(onScrollWorklet[8]).roundIfClose, pageWidth };
       ae.__workletHash = 3139503492995;
       ae.__initData = __initData10;
-      ({ scrollTarget, roundIfClose: onBeginDragWorklet(onScrollWorklet[8]).roundIfClose, pageWidth });
-      derivedValue = obj11.useDerivedValue(ae);
+      derivedValue = obj12.useDerivedValue(ae);
+      const obj13 = { scrollTarget, roundIfClose: onBeginDragWorklet(onScrollWorklet[8]).roundIfClose, pageWidth };
       function ie() {
-        const value = sharedValue.get();
+        value = sharedValue.get();
         const rounded = Math.floor(value);
         const rounded1 = Math.ceil(value);
-        const value2 = derivedValue.get();
+        value2 = derivedValue.get();
         let bound1 = rounded1;
         let bound = rounded;
         if (-1 !== value2) {
@@ -1058,647 +1624,68 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       ie.__workletHash = 11592344490710;
       ie.__initData = __initData11;
       function oe(arg0, arg1) {
-        const tmp = null != arg1 && arg1[0] === arg0[0] && arg1[1] === arg0[1];
         if (!tmp) {
           const result = visiblePageRange.set(arg0);
         }
+        tmp = null != arg1 && arg1[0] === arg0[0] && arg1[1] === arg0[1];
       }
       oe.__closure = { visiblePageRange };
       oe.__workletHash = 11577207813194;
       oe.__initData = __initData12;
-      const obj13 = onBeginDragWorklet(onScrollWorklet[5]);
-      const animatedReaction2 = obj13.useAnimatedReaction(ie, oe);
+      const animatedReaction2 = onBeginDragWorklet(onScrollWorklet[5]).useAnimatedReaction(ie, oe);
       if (0 === pageWidth) {
         return null;
       } else {
-        const tmp24 = scrollOverflow;
-        const obj14 = {
+        const obj15 = {
           ref: pagerRef,
-          style: items7,
-          contentOffset: memo1,
+          style: null,
+          contentOffset: null,
           keyboardShouldPersistTaps: "handled",
           showsHorizontalScrollIndicator: false,
           pagingEnabled: true,
-          snapToInterval: pageWidth,
+          snapToInterval: null,
           snapToAlignment: "center",
           decelerationRate: "fast",
           centerContent: true,
-          bounces,
+          bounces: null,
           horizontal: true,
           accessibilityRole: "none",
-          onScroll: animatedScrollHandler,
+          onScroll: null,
           disableIntervalMomentum: true,
-          scrollEventThrottle: num,
-          children: items.map((item, index) => (
-            <closure_47
-              key={index}
-              index={index}
-              activePageRangeStart={activePageRangeStart}
-              activePageRangeEnd={activePageRangeEnd}
-              reportedPageIndex={sharedValue1}
-              pageIndex={sharedValue}
-              scrollTargetPageIndex={derivedValue}
-              style={memo}
-              item={item}
-            />
-          )),
+          scrollEventThrottle: null,
+          children: null,
         };
-        items7 = [memo, style];
-        let tmpResult = tmp(tmp2[9]);
-        num = undefined;
-        const tmp25 = onPageChangeRef;
+        const items7 = [memo, style];
+        obj15.style = items7;
+        obj15.contentOffset = memo1;
+        obj15.snapToInterval = pageWidth;
+        obj15.bounces = bounces;
+        obj15.onScroll = animatedScrollHandler;
+        let num;
         if (tmpResult.isIOS()) {
           num = 32;
         }
-        const tmp24Result = tmp24(tmp25, obj14);
-        let tmp24Result2 = tmp24Result;
+        obj15.scrollEventThrottle = num;
+        obj15.children = items.map((item, index) => (
+          <closure_47
+            key={index}
+            index={index}
+            activePageRangeStart={activePageRangeStart}
+            activePageRangeEnd={activePageRangeEnd}
+            reportedPageIndex={sharedValue1}
+            pageIndex={sharedValue}
+            scrollTargetPageIndex={derivedValue}
+            style={memo}
+            item={item}
+          />
+        ));
+        const tmp23Result = scrollOverflow(onPageChangeRef, obj15);
+        let tmp23Result2 = tmp23Result;
         if (null != nativeGesture) {
-          const obj15 = { gesture: nativeGesture, children: tmp24Result };
-          tmp24Result2 = tmp24(tmp(tmp2[10]).GestureDetector, obj15);
+          const obj16 = { gesture: nativeGesture, children: tmp23Result };
+          tmp23Result2 = tmp23(tmp(tmp2[10]).GestureDetector, obj16);
         }
-        return tmp24Result2;
+        return tmp23Result2;
       }
+      const obj14 = onBeginDragWorklet(onScrollWorklet[5]);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (reportedPageIndex) => {
-      let closure_0;
-      let closure_1;
-      let closure_2;
-      let closure_5;
-      let tmp10;
-      let tmp8;
-      let tmp = _require;
-      let tmp2 = dependencyMap;
-      let obj = require("react");
-      const cResult = obj.c(32);
-      if (cResult[0] !== reportedPageIndex) {
-        reportedPageIndex = reportedPageIndex.reportedPageIndex;
-        pageIndex = reportedPageIndex.pageIndex;
-        closure_3 = pageIndex;
-        scrollTargetPageIndex = reportedPageIndex.scrollTargetPageIndex;
-        closure_5 = scrollTargetPageIndex;
-        const index = reportedPageIndex.index;
-        dependencyMap = index;
-        const item = reportedPageIndex.item;
-        class P {
-          constructor() {
-            let tmp2 = Math.floor(closure_3.get()) === closure_2;
-            if (!tmp2) {
-              const _Math = Math;
-              tmp2 = Math.ceil(closure_3.get()) === closure_2;
-            }
-            if (!tmp2) {
-              tmp2 = closure_5.get() === closure_2;
-            }
-            return tmp2;
-          }
-        }
-        importDefault = tmp12;
-        activePageRangeEnd = reportedPageIndex.activePageRangeEnd;
-        _require = activePageRangeEnd;
-        cResult[0] = reportedPageIndex;
-        cResult[1] = activePageRangeEnd;
-        cResult[2] = tmp12;
-        reportedPageIndex(reportedPageIndex, closure_3);
-        class O {
-          constructor() {
-            let pointerEvents = "box-none";
-            if (reportedPageIndex.get() !== closure_2) {
-              pointerEvents = "none";
-            }
-            return { pointerEvents };
-          }
-        }
-        cResult[3] = index;
-        cResult[4] = item;
-        cResult[5] = pageIndex;
-        cResult[6] = reportedPageIndex;
-        cResult[7] = scrollTargetPageIndex;
-        class C {
-          constructor() {
-            return reportedPageIndex.get() !== closure_2;
-          }
-        }
-        tmp10 = scrollTargetPageIndex;
-        tmp8 = pageIndex;
-      } else {
-        _require = cResult[1];
-        importDefault = cResult[2];
-        dependencyMap = cResult[3];
-        closure_3 = cResult[5];
-        class P {
-          constructor() {
-            let tmp2 = Math.floor(closure_3.get()) === closure_2;
-            if (!tmp2) {
-              const _Math = Math;
-              tmp2 = Math.ceil(closure_3.get()) === closure_2;
-            }
-            if (!tmp2) {
-              tmp2 = closure_5.get() === closure_2;
-            }
-            return tmp2;
-          }
-        }
-        reportedPageIndex = tmp9;
-        closure_5 = cResult[7];
-      }
-      const tmpResult = tmp(4618);
-      class P {
-        constructor() {
-          let tmp2 = Math.floor(closure_3.get()) === closure_2;
-          if (!tmp2) {
-            const _Math = Math;
-            tmp2 = Math.ceil(closure_3.get()) === closure_2;
-          }
-          if (!tmp2) {
-            tmp2 = closure_5.get() === closure_2;
-          }
-          return tmp2;
-        }
-      }
-      P.__closure = { pageIndex: tmp8, index: tmp6, scrollTargetPageIndex: tmp10 };
-      P.__workletHash = 2724531395868;
-      P.__initData = __initData13;
-      const derivedValue = tmpResult.useDerivedValue(P);
-      const tmpResult3 = tmp(4618);
-      class O {
-        constructor() {
-          let pointerEvents = "box-none";
-          if (reportedPageIndex.get() !== closure_2) {
-            pointerEvents = "none";
-          }
-          return { pointerEvents };
-        }
-      }
-      O.__closure = { reportedPageIndex: tmp9, index: tmp6 };
-      O.__workletHash = 9779507421474;
-      O.__initData = __initData14;
-      const animatedProps = tmpResult3.useAnimatedProps(O);
-      if (cResult[9] === tmp6) {
-        let tmp18;
-        let tmp30;
-        if (cResult[10] === tmp9) {
-          tmp18 = cResult[11];
-        }
-        const tmp20 = closure_5(derivedValue.useState(tmp18), 2);
-        current = tmp20[0];
-        closure_8 = tmp22;
-        const obj4 = derivedValue;
-        class P {
-          constructor() {
-            let tmp2 = Math.floor(closure_3.get()) === closure_2;
-            if (!tmp2) {
-              const _Math = Math;
-              tmp2 = Math.ceil(closure_3.get()) === closure_2;
-            }
-            if (!tmp2) {
-              tmp2 = closure_5.get() === closure_2;
-            }
-            return tmp2;
-          }
-        }
-        class D {
-          constructor() {
-            return reportedPageIndex.get() !== closure_2;
-          }
-        }
-        let obj2 = { reportedPageIndex: tmp9, index: tmp6 };
-        D.__closure = obj2;
-        D.__workletHash = 10737484996965;
-        D.__initData = __initData15;
-        class R {
-          constructor(arg0) {
-            const obj = ReanimatedRexport2;
-            obj.runOnJS(closure_8)(arg0);
-          }
-        }
-        let obj3 = { runOnJS: null, setIsAccessibilityHidden: tmp20[1] };
-        const useAnimatedReaction = tmp23.useAnimatedReaction;
-        class O {
-          constructor() {
-            let pointerEvents = "box-none";
-            if (reportedPageIndex.get() !== closure_2) {
-              pointerEvents = "none";
-            }
-            return { pointerEvents };
-          }
-        }
-        R.__closure = obj3;
-        R.__workletHash = 17485016054072;
-        R.__initData = __initData16;
-        const animatedReaction = useAnimatedReaction(D, R);
-        ref = derivedValue.useRef(null);
-        class C {
-          constructor() {
-            return reportedPageIndex.get() !== closure_2;
-          }
-        }
-        if (cResult[12] !== current) {
-          class H {
-            constructor() {
-              current = ref.current && !current;
-              ref.current = current;
-              if (current) {
-                const obj = PlatformUtils;
-                current = obj.isIOS();
-              }
-              if (current) {
-                const obj3 = { ref, delay: 100 };
-                const obj2 = react_native2;
-                const result = obj2.setAccessibilityFocus(obj3);
-              }
-            }
-          }
-          let items = [current];
-          cResult[12] = current;
-          cResult[13] = H;
-          cResult[14] = items;
-          class P {
-            constructor() {
-              let tmp2 = Math.floor(closure_3.get()) === closure_2;
-              if (!tmp2) {
-                const _Math = Math;
-                tmp2 = Math.ceil(closure_3.get()) === closure_2;
-              }
-              if (!tmp2) {
-                tmp2 = closure_5.get() === closure_2;
-              }
-              return tmp2;
-            }
-          }
-          class D {
-            constructor() {
-              return reportedPageIndex.get() !== closure_2;
-            }
-          }
-        } else {
-          class H {
-            constructor() {
-              current = ref.current && !current;
-              ref.current = current;
-              if (current) {
-                const obj = PlatformUtils;
-                current = obj.isIOS();
-              }
-              if (current) {
-                const obj3 = { ref, delay: 100 };
-                const obj2 = react_native2;
-                const result = obj2.setAccessibilityFocus(obj3);
-              }
-            }
-          }
-          tmp30 = cResult[14];
-        }
-        const effect = obj4.useEffect(tmp29, tmp30);
-        const fn = function z() {
-          let display = "none";
-          if (derivedValue.get()) {
-            display = "flex";
-          }
-          return { display, flex: 1 };
-        };
-        const obj5 = { isVisibleOnScreen: derivedValue };
-        fn.__closure = obj5;
-        fn.__workletHash = 6740536171688;
-        fn.__initData = __initData17;
-        const tmpResult4 = tmp(4618);
-        const animatedStyle = tmpResult4.useAnimatedStyle(fn);
-        if (cResult[15] === tmp4) {
-          class H {
-            constructor() {
-              current = ref.current && !current;
-              ref.current = current;
-              if (current) {
-                const obj = PlatformUtils;
-                current = obj.isIOS();
-              }
-              if (current) {
-                const obj3 = { ref, delay: 100 };
-                const obj2 = react_native2;
-                const result = obj2.setAccessibilityFocus(obj3);
-              }
-            }
-          }
-        }
-        class N {
-          constructor() {
-            const tmp2 = closure_2 >= closure_1.get() && closure_2 <= closure_0.get();
-            return !tmp2;
-          }
-        }
-        cResult[15] = tmp4;
-        cResult[16] = tmp12;
-        cResult[17] = tmp6;
-        cResult[18] = N;
-      }
-      class C {
-        constructor() {
-          return reportedPageIndex.get() !== closure_2;
-        }
-      }
-      cResult[9] = tmp6;
-      cResult[10] = tmp9;
-      cResult[11] = C;
-      tmp18 = C;
-    }
-  : (reportedPageIndex) => {
-      let Freeze;
-      let first;
-      let obj10;
-      let obj9;
-      let str;
-      reportedPageIndex = reportedPageIndex.reportedPageIndex;
-      pageIndex = reportedPageIndex.pageIndex;
-      scrollTargetPageIndex = reportedPageIndex.scrollTargetPageIndex;
-      const index = reportedPageIndex.index;
-      activePageRangeStart = reportedPageIndex.activePageRangeStart;
-      activePageRangeEnd = reportedPageIndex.activePageRangeEnd;
-      const item = reportedPageIndex.item;
-      const merged = Object.assign(
-        reportedPageIndex,
-        Object.assign({
-          reportedPageIndex: 0,
-          pageIndex: 0,
-          scrollTargetPageIndex: 0,
-          index: 0,
-          item: 0,
-          activePageRangeStart: 0,
-          activePageRangeEnd: 0,
-        }),
-      );
-      let accessibilityElementsHidden;
-      closure_8 = undefined;
-      ref = undefined;
-      let closure_11;
-      let tmp2 = reportedPageIndex;
-      let obj = reportedPageIndex(scrollTargetPageIndex[5]);
-      const fn = function v() {
-        let tmp2 = Math.floor(pageIndex.get()) === index;
-        if (!tmp2) {
-          const _Math = Math;
-          tmp2 = Math.ceil(pageIndex.get()) === index;
-        }
-        if (!tmp2) {
-          tmp2 = scrollTargetPageIndex.get() === index;
-        }
-        return tmp2;
-      };
-      fn.__closure = { pageIndex, index, scrollTargetPageIndex };
-      fn.__workletHash = 4593378569274;
-      fn.__initData = __initData18;
-      const derivedValue = obj.useDerivedValue(fn);
-      let obj2 = reportedPageIndex(scrollTargetPageIndex[5]);
-      class I {
-        constructor() {
-          let pointerEvents = "box-none";
-          if (reportedPageIndex.get() !== index) {
-            pointerEvents = "none";
-          }
-          return { pointerEvents };
-        }
-      }
-      I.__closure = { reportedPageIndex, index };
-      I.__workletHash = 12899986233414;
-      I.__initData = __initData19;
-      const animatedProps = obj2.useAnimatedProps(I);
-      const tmp6 = activePageRangeEnd(
-        derivedValue.useState(() => reportedPageIndex.get() !== index),
-        2,
-      );
-      accessibilityElementsHidden = tmp6[0];
-      closure_8 = tmp8;
-      let obj3 = reportedPageIndex(scrollTargetPageIndex[5]);
-      const fn2 = function p() {
-        return reportedPageIndex.get() !== index;
-      };
-      fn2.__closure = { reportedPageIndex, index };
-      fn2.__workletHash = 2345652853959;
-      fn2.__initData = __initData20;
-      class S {
-        constructor(arg0) {
-          const obj = ReanimatedRexport2;
-          obj.runOnJS(closure_8)(arg0);
-        }
-      }
-      S.__closure = { runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setIsAccessibilityHidden: tmp6[1] };
-      S.__workletHash = 15518480728660;
-      S.__initData = __initData21;
-      ({ runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setIsAccessibilityHidden: tmp6[1] });
-      const animatedReaction = obj3.useAnimatedReaction(fn2, S);
-      derivedValue.useRef(null);
-      ref = derivedValue.useRef(accessibilityElementsHidden);
-      let items = [accessibilityElementsHidden];
-      const effect = derivedValue.useEffect(() => {
-        current = ref.current && !current;
-        ref.current = current;
-        if (current) {
-          const obj = PlatformUtils;
-          current = obj.isIOS();
-        }
-        if (current) {
-          const obj3 = { ref, delay: 100 };
-          const obj2 = react_native2;
-          const result = obj2.setAccessibilityFocus(obj3);
-        }
-      }, items);
-      const obj5 = reportedPageIndex(scrollTargetPageIndex[5]);
-      class W {
-        constructor() {
-          let display = "none";
-          if (derivedValue.get()) {
-            display = "flex";
-          }
-          return { display, flex: 1 };
-        }
-      }
-      W.__closure = { isVisibleOnScreen: derivedValue };
-      W.__workletHash = 1125238936966;
-      W.__initData = __initData22;
-      const animatedStyle = obj5.useAnimatedStyle(W);
-      const tmp13 = activePageRangeEnd(
-        derivedValue.useState(() => {
-          const tmp2 = index >= activePageRangeStart.get() && index <= activePageRangeEnd.get();
-          return !tmp2;
-        }),
-        2,
-      );
-      closure_11 = tmp15;
-      const first1 = tmp13[0];
-      const obj6 = reportedPageIndex(scrollTargetPageIndex[5]);
-      class M {
-        constructor() {
-          const items = [activePageRangeStart.get(), activePageRangeEnd.get()];
-          return items;
-        }
-      }
-      M.__closure = { activePageRangeStart, activePageRangeEnd };
-      M.__workletHash = 7158564312502;
-      M.__initData = __initData23;
-      const fn3 = function b(arg0) {
-        let tmp;
-        let tmp2;
-        [tmp, tmp2] = arg0;
-        let tmp4 = index >= tmp;
-        const obj = ReanimatedRexport2;
-        const runOnJSResult = obj.runOnJS(closure_11);
-        if (tmp4) {
-          tmp4 = index <= tmp2;
-        }
-        runOnJSResult(!tmp4);
-      };
-      fn3.__closure = { index, runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setFreeze: tmp13[1] };
-      fn3.__workletHash = 13391069051873;
-      fn3.__initData = __initData24;
-      ({ index, runOnJS: reportedPageIndex(scrollTargetPageIndex[5]).runOnJS, setFreeze: tmp13[1] });
-      const animatedReaction1 = obj6.useAnimatedReaction(M, fn3);
-      const obj8 = {
-        ref,
-        animatedProps,
-        importantForAccessibility: str,
-        accessibilityElementsHidden,
-        children: accessibilityElementsHidden(Freeze, obj9),
-      };
-      const View = pageIndex(scrollTargetPageIndex[5]).View;
-      const merged1 = Object.assign(merged);
-      str = "auto";
-      const tmp18 = pageIndex;
-      if (accessibilityElementsHidden) {
-        str = "no-hide-descendants";
-      }
-      obj9 = { freeze: first1, children: accessibilityElementsHidden(tmp18(scrollTargetPageIndex[5]).View, obj10) };
-      Freeze = tmp2(tmp3[12]).Freeze;
-      obj10 = { style: animatedStyle, children: item.page };
-      return accessibilityElementsHidden(View, obj8, index);
-    };
-const __initData25 = {
-  code: "function SegmentedControlPagesNativeTsx39(min,max){const{activePageRangeStart,activePageRangeEnd}=this.__closure;activePageRangeStart.set(Math.min(activePageRangeStart.get(),min));activePageRangeEnd.set(Math.max(activePageRangeEnd.get(),max));}",
-};
-const __initData26 = {
-  code: "function SegmentedControlPagesNativeTsx40(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}",
-};
-const __initData27 = {
-  code: "function SegmentedControlPagesNativeTsx41(t0){const{expandActivePageRange}=this.__closure;const{activeIndex:activeIndex_0,pressedIndex:pressedIndex_0}=t0;let min_0=activeIndex_0;let max_0=activeIndex_0;if(pressedIndex_0!==-1){min_0=Math.min(activeIndex_0,pressedIndex_0);max_0=Math.max(activeIndex_0,pressedIndex_0);}expandActivePageRange(Math.floor(min_0),Math.ceil(max_0));}",
-};
-const __initData28 = {
-  code: "function SegmentedControlPagesNativeTsx42(min,max){const{activePageRangeStart,activePageRangeEnd}=this.__closure;activePageRangeStart.set(Math.min(activePageRangeStart.get(),min));activePageRangeEnd.set(Math.max(activePageRangeEnd.get(),max));}",
-};
-const __initData29 = {
-  code: "function SegmentedControlPagesNativeTsx43(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}",
-};
-const __initData30 = {
-  code: "function SegmentedControlPagesNativeTsx44({activeIndex:activeIndex_0,pressedIndex:pressedIndex_0}){const{expandActivePageRange}=this.__closure;let min_0=activeIndex_0;let max_0=activeIndex_0;if(pressedIndex_0!==-1){min_0=Math.min(activeIndex_0,pressedIndex_0);max_0=Math.max(activeIndex_0,pressedIndex_0);}expandActivePageRange(Math.floor(min_0),Math.ceil(max_0));}",
-};
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_54 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (activeIndex, pressedIndex) => {
-      let closure_0 = activeIndex;
-      let closure_1 = pressedIndex;
-      let obj = react2;
-      const cResult = obj.c(3);
-      const obj2 = ReanimatedRexport2;
-      const sharedValue = obj2.useSharedValue(activeIndex.get());
-      const obj3 = ReanimatedRexport2;
-      const sharedValue1 = obj3.useSharedValue(activeIndex.get());
-      const fn = function o(arg0, arg1) {
-        const result = sharedValue.set(Math.min(sharedValue.get(), arg0));
-        const result1 = sharedValue1.set(Math.max(sharedValue1.get(), arg1));
-      };
-      fn.__closure = { activePageRangeStart: sharedValue, activePageRangeEnd: sharedValue1 };
-      fn.__workletHash = 3575728639518;
-      fn.__initData = __initData25;
-      const fn2 = function l() {
-        const obj = { activeIndex: closure_0.get(), pressedIndex: closure_1.get() };
-        return obj;
-      };
-      fn2.__closure = { activeIndex, pressedIndex };
-      fn2.__workletHash = 15473938229756;
-      fn2.__initData = __initData26;
-      const fn3 = function s(arg0) {
-        let activeIndex;
-        let pressedIndex;
-        ({ activeIndex, pressedIndex } = arg0);
-        let bound = activeIndex;
-        if (-1 !== pressedIndex) {
-          const _Math = Math;
-          bound = Math.min(activeIndex, pressedIndex);
-          const _Math2 = Math;
-          const bound1 = Math.max(activeIndex, pressedIndex);
-        }
-        const rounded = Math.floor(bound);
-        if (typeof fn === "function") {
-          const _Math3 = Math;
-          const result = sharedValue.set(Math.min(sharedValue.get(), rounded));
-          const _Math4 = Math;
-          const result1 = sharedValue1.set(Math.max(sharedValue1.get(), tmp5));
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      };
-      fn3.__closure = { expandActivePageRange: fn };
-      fn3.__workletHash = 11024199346758;
-      fn3.__initData = __initData27;
-      const obj4 = ReanimatedRexport2;
-      const animatedReaction = obj4.useAnimatedReaction(fn2, fn3);
-      if (cResult[0] === sharedValue1) {
-        let tmp5;
-        if (cResult[1] === sharedValue) {
-          tmp5 = cResult[2];
-        }
-        return tmp5;
-      }
-      const items = [sharedValue, sharedValue1];
-      cResult[0] = sharedValue1;
-      cResult[1] = sharedValue;
-      cResult[2] = items;
-      tmp5 = items;
-    }
-  : (activeIndex, pressedIndex) => {
-      let closure_0 = activeIndex;
-      let closure_1 = pressedIndex;
-      let obj = ReanimatedRexport2;
-      const sharedValue = obj.useSharedValue(activeIndex.get());
-      const obj2 = ReanimatedRexport2;
-      const sharedValue1 = obj2.useSharedValue(activeIndex.get());
-      const fn = function o(arg0, arg1) {
-        const result = sharedValue.set(Math.min(sharedValue.get(), arg0));
-        const result1 = sharedValue1.set(Math.max(sharedValue1.get(), arg1));
-      };
-      fn.__closure = { activePageRangeStart: sharedValue, activePageRangeEnd: sharedValue1 };
-      fn.__workletHash = 13074491908786;
-      fn.__initData = __initData28;
-      const items = [sharedValue1, sharedValue];
-      const callback = react.useCallback(fn, items);
-      const fn2 = function c() {
-        const obj = { activeIndex: closure_0.get(), pressedIndex: closure_1.get() };
-        return obj;
-      };
-      fn2.__closure = { activeIndex, pressedIndex };
-      fn2.__workletHash = 7031527506303;
-      fn2.__initData = __initData29;
-      const fn3 = function l(arg0) {
-        let activeIndex;
-        let pressedIndex;
-        ({ activeIndex, pressedIndex } = arg0);
-        let bound1 = activeIndex;
-        let bound = activeIndex;
-        if (-1 !== pressedIndex) {
-          const _Math = Math;
-          bound = Math.min(activeIndex, pressedIndex);
-          const _Math2 = Math;
-          bound1 = Math.max(activeIndex, pressedIndex);
-        }
-        const rounded = Math.floor(bound);
-        callback(rounded, Math.ceil(bound1));
-      };
-      fn3.__closure = { expandActivePageRange: callback };
-      fn3.__workletHash = 7154390605088;
-      fn3.__initData = __initData30;
-      const obj3 = ReanimatedRexport2;
-      const animatedReaction = obj3.useAnimatedReaction(fn2, fn3);
-      const items1 = [sharedValue, sharedValue1];
-      return items1;
-    };
-let result = size.fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlPages.native.tsx");
-
-export const SegmentedControlPages = tmp2;

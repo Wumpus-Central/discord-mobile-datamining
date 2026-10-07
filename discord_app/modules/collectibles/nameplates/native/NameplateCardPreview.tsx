@@ -1,27 +1,21 @@
 // discord_app/modules/collectibles/nameplates/native/NameplateCardPreview.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
-import react from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
 import CollectiblesItemType from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import NameplateDummyUserPreview6 from "NameplateDummyUserPreview.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
+import NameplateDummyUserPreview from "NameplateDummyUserPreview.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-let obj3;
-let size;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { nameplatePreviewContainer: size, nameplateContainer: obj2, nameplate: obj3 };
-size = {
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let obj = { nameplatePreviewContainer: null, nameplateContainer: null, nameplate: null };
+let size = {
   position: "absolute",
   justifyContent: "center",
   alignItems: "center",
@@ -29,105 +23,98 @@ size = {
   height: "100%",
   paddingHorizontal: nativeDefault.space.PX_8,
 };
-createStyles = createStyles.createStyles;
-obj2 = {
+obj.nameplatePreviewContainer = size;
+obj.nameplateContainer = {
   width: "100%",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   borderRadius: nativeDefault.radii.sm,
 };
-obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
-let closure_6 = createStyles(obj);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let obj2 = {
+  width: "100%",
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+  borderRadius: nativeDefault.radii.sm,
+};
+obj.nameplate = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let closure_6 = createStyles.createStyles(obj);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let size = size_mod;
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateCardPreview.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let animate;
-      let item;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let tmp10;
-      let tmp13;
-      let tmp8;
-      const obj = react;
-      const cResult = obj.c(16);
+      const cResult = c.c(16);
       ({ item, animate } = arg0);
       const tmp5 = closure_6();
-      const tmp6 = _modDef38;
-      tmp6(item.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
+      _modDef38(item.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
       if (cResult[0] !== item) {
-        const tmpResult = utils;
-        const nameplateData = tmpResult.getNameplateData(item);
+        const nameplateData = utils.getNameplateData(item);
         cResult[0] = item;
         cResult[1] = nameplateData;
-        tmp8 = nameplateData;
+        let tmp8 = nameplateData;
+        const tmpResult = utils;
       } else {
         tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items };
-        const NameplateDummyUserPreview = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-        items = [{ opacity: 0.6 }];
-        const tmp12 = React3(NameplateDummyUserPreview, obj2);
+        const obj2 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+        const items = [{ opacity: 0.6 }];
+        obj2.style = items;
+        const tmp12 = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj2);
         cResult[2] = tmp12;
-        tmp10 = tmp12;
+        let tmp10 = tmp12;
       } else {
         tmp10 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items1 };
-        const NameplateDummyUserPreview2 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-        items1 = [{ opacity: 0.6 }];
-        const tmp15 = React3(NameplateDummyUserPreview2, obj3);
+        const obj3 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+        const items1 = [{ opacity: 0.6 }];
+        obj3.style = items1;
+        const tmp15 = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj3);
         cResult[3] = tmp15;
-        tmp13 = tmp15;
+        let tmp13 = tmp15;
       } else {
         tmp13 = cResult[3];
       }
       if (cResult[4] === (undefined !== animate && animate)) {
         if (cResult[5] === tmp8) {
-          let tmp16;
           if (cResult[6] === tmp5.nameplate) {
-            tmp16 = cResult[7];
+            let tmp16 = cResult[7];
           }
           if (cResult[8] === tmp5.nameplateContainer) {
-            let tmp18;
-            let tmp22;
-            let tmp25;
             if (cResult[9] === tmp16) {
-              tmp18 = cResult[10];
+              let tmp18 = cResult[10];
             }
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj4 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items2 };
-              const NameplateDummyUserPreview4 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-              items2 = [{ opacity: 0.6 }];
-              const tmp24 = React3(NameplateDummyUserPreview4, obj4);
+              const obj4 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+              const items2 = [{ opacity: 0.6 }];
+              obj4.style = items2;
+              const tmp24 = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj4);
               cResult[11] = tmp24;
-              tmp22 = tmp24;
+              let tmp22 = tmp24;
             } else {
               tmp22 = cResult[11];
             }
             const _Symbol2 = Symbol;
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj5 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items3 };
-              const NameplateDummyUserPreview5 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-              items3 = [{ opacity: 0.6 }];
-              const tmp27 = React3(NameplateDummyUserPreview5, obj5);
+              const obj5 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+              const items3 = [{ opacity: 0.6 }];
+              obj5.style = items3;
+              const tmp27 = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj5);
               cResult[12] = tmp27;
-              tmp25 = tmp27;
+              let tmp25 = tmp27;
             } else {
               tmp25 = cResult[12];
             }
             if (cResult[13] === tmp5.nameplatePreviewContainer) {
-              let tmp28;
               if (cResult[14] === tmp18) {
-                tmp28 = cResult[15];
+                let tmp28 = cResult[15];
               }
               return tmp28;
             }
-            const obj6 = { style: tmp5.nameplatePreviewContainer, children: items4 };
-            items4 = [tmp10, tmp13, tmp18, tmp22, tmp25];
+            const obj6 = { style: tmp5.nameplatePreviewContainer, children: null };
+            const items4 = [tmp10, tmp13, tmp18, tmp22, tmp25];
+            obj6.children = items4;
             const tmp31 = hasOwnProperty(View, obj6);
             cResult[13] = tmp5.nameplatePreviewContainer;
             cResult[14] = tmp18;
@@ -135,13 +122,25 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             tmp28 = tmp31;
           }
           const obj7 = { style: tmp5.nameplateContainer, children: tmp16 };
-          const tmp21 = React3(View, obj7);
+          const tmp21 = React4(View, obj7);
           cResult[8] = tmp5.nameplateContainer;
           cResult[9] = tmp16;
           cResult[10] = tmp21;
           tmp18 = tmp21;
         }
       }
+      const tmp17 = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, {
+        width: 54,
+        avatarSize: native.AvatarSizes.XSMALL,
+        nameplate: tmp8,
+        style: tmp5.nameplate,
+        animate: undefined !== animate && animate,
+      });
+      cResult[4] = undefined !== animate && animate;
+      cResult[5] = tmp8;
+      cResult[6] = tmp5.nameplate;
+      cResult[7] = tmp17;
+      tmp16 = tmp17;
       const obj8 = {
         width: 54,
         avatarSize: native.AvatarSizes.XSMALL,
@@ -149,63 +148,41 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp5.nameplate,
         animate: undefined !== animate && animate,
       };
-      const NameplateDummyUserPreview3 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-      const tmp17 = React3(NameplateDummyUserPreview3, obj8);
-      cResult[4] = undefined !== animate && animate;
-      cResult[5] = tmp8;
-      cResult[6] = tmp5.nameplate;
-      cResult[7] = tmp17;
-      tmp16 = tmp17;
     }
   : (arg0) => {
-      let NameplateDummyUserPreview3;
-      let animate;
-      let item;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let obj6;
       ({ item, animate } = arg0);
       if (animate === undefined) {
         animate = false;
       }
       const tmp = closure_6();
-      const tmp2 = _modDef38;
-      tmp2(item.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
-      const obj2 = { style: tmp.nameplatePreviewContainer, children: items1 };
-      const obj = utils;
-      const nameplateData = obj.getNameplateData(item);
-      const obj3 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items };
-      const NameplateDummyUserPreview = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-      items = [{ opacity: 0.6 }];
-      items1 = [React3(NameplateDummyUserPreview, obj3), , , ,];
-      const obj4 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items2 };
-      const NameplateDummyUserPreview2 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-      items2 = [{ opacity: 0.6 }];
-      items1[1] = React3(NameplateDummyUserPreview2, obj4);
-      const obj5 = { style: tmp.nameplateContainer, children: React3(NameplateDummyUserPreview3, obj6) };
-      obj6 = {
+      _modDef38(item.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
+      const obj2 = { style: tmp.nameplatePreviewContainer, children: null };
+      const nameplateData = utils.getNameplateData(item);
+      const obj3 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+      const items = [{ opacity: 0.6 }];
+      obj3.style = items;
+      const items1 = [React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj3), , , ,];
+      const obj4 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+      const items2 = [{ opacity: 0.6 }];
+      obj4.style = items2;
+      items1[1] = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj4);
+      const obj5 = { style: tmp.nameplateContainer, children: null };
+      obj5.children = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, {
         width: 54,
         avatarSize: native.AvatarSizes.XSMALL,
         nameplate: nameplateData,
         style: tmp.nameplate,
         animate,
-      };
-      NameplateDummyUserPreview3 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-      items1[2] = React3(View, obj5);
-      const obj7 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items3 };
-      const NameplateDummyUserPreview4 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-      items3 = [{ opacity: 0.6 }];
-      items1[3] = React3(NameplateDummyUserPreview4, obj7);
-      const obj8 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: items4 };
-      const NameplateDummyUserPreview5 = NameplateDummyUserPreview6.NameplateDummyUserPreview;
-      items4 = [{ opacity: 0.6 }];
-      items1[4] = React3(NameplateDummyUserPreview5, obj8);
+      });
+      items1[2] = React4(View, obj5);
+      const obj7 = { width: 44, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+      const items3 = [{ opacity: 0.6 }];
+      obj7.style = items3;
+      items1[3] = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj7);
+      const obj8 = { width: 34, avatarSize: native.AvatarSizes.XSMALL, hideAvatar: true, style: null };
+      const items4 = [{ opacity: 0.6 }];
+      obj8.style = items4;
+      items1[4] = React4(NameplateDummyUserPreview.NameplateDummyUserPreview, obj8);
+      obj2.children = items1;
       return hasOwnProperty(View, obj2);
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateCardPreview.tsx");
-
-export default tmp4;

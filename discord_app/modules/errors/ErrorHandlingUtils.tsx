@@ -26,12 +26,21 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
       if (!tmp4) {
         let tmp5 = !("status" in aPIError) || typeof aPIError.status !== "number";
         if (!tmp5) {
-          tmp5 = 0 !== aPIError.status && !set.has(aPIError.status) && !set1.has(aPIError.status);
-          const tmp6 = 0 !== aPIError.status && !set.has(aPIError.status) && !set1.has(aPIError.status);
+          let tmp6 = 0 !== aPIError.status;
+          if (tmp6) {
+            tmp6 = !set.has(aPIError.status);
+          }
+          if (tmp6) {
+            tmp6 = !set1.has(aPIError.status);
+          }
+          tmp5 = tmp6;
         }
         let tmp9 = !tmp5;
         if (tmp5) {
-          const tmp10 = !("code" in aPIError) || typeof aPIError.code !== "number" || !items.includes(aPIError.code);
+          let tmp10 = !("code" in aPIError) || typeof aPIError.code !== "number";
+          if (!tmp10) {
+            tmp10 = !items.includes(aPIError.code);
+          }
           let tmp12 = !tmp10;
           if (tmp10) {
             let hasItem =
@@ -61,7 +70,6 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
     tmp = flag;
   }
   if (!tmp) {
-    const obj = SentryUtilsDefault;
-    obj.captureException(aPIError);
+    SentryUtilsDefault.captureException(aPIError);
   }
 };

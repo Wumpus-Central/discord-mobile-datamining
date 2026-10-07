@@ -1,25 +1,10 @@
 // discord_app/modules/applications/utils/ApplicationInstallUtils.tsx
-import ApplicationCommandConstants from "../../application_commands/ApplicationCommandConstants.tsx";
 import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const f99048 = (oauth2_install_params) => {
-  let prop;
-  if (oauth2_install_params != null) {
-    prop = oauth2_install_params.oauth2_install_params;
-  }
-  let tmp2 = null != prop;
-  if (!tmp2) {
-    let oauth2InstallParams;
-    if (oauth2_install_params != null) {
-      oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
-    }
-    tmp2 = null != oauth2InstallParams;
-  }
-  return tmp2;
-};
-const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
+require = fn;
+const BuiltInSectionId = fn(5795).BuiltInSectionId;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
 export const canInstallApplication = function canInstallApplication(installAppProps) {
@@ -30,7 +15,21 @@ export const canInstallApplication = function canInstallApplication(installAppPr
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some(f99048);
+      someResult = values.some((oauth2_install_params) => {
+        let prop;
+        if (oauth2_install_params != null) {
+          prop = oauth2_install_params.oauth2_install_params;
+        }
+        let tmp2 = null != prop;
+        if (!tmp2) {
+          let oauth2InstallParams;
+          if (oauth2_install_params != null) {
+            oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
+          }
+          tmp2 = null != oauth2InstallParams;
+        }
+        return tmp2;
+      });
     }
     tmp = someResult;
   }
@@ -44,7 +43,21 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some(f99048);
+      someResult = values.some((oauth2_install_params) => {
+        let prop;
+        if (oauth2_install_params != null) {
+          prop = oauth2_install_params.oauth2_install_params;
+        }
+        let tmp2 = null != prop;
+        if (!tmp2) {
+          let oauth2InstallParams;
+          if (oauth2_install_params != null) {
+            oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
+          }
+          tmp2 = null != oauth2InstallParams;
+        }
+        return tmp2;
+      });
     }
     tmp = someResult;
   }
@@ -57,23 +70,18 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
   return tmp;
 };
 export const shouldInstallApplicationOnDemand = function shouldInstallApplicationOnDemand(arg0) {
-  let applicationId;
-  let channel;
-  let commandIntegrationTypes;
   ({ applicationId, channel, commandIntegrationTypes } = arg0);
-  let tmp4 = !(
-    null != commandIntegrationTypes &&
-    !commandIntegrationTypes.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL)
-  );
-  const tmp =
-    null != commandIntegrationTypes &&
-    !commandIntegrationTypes.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL);
-  if (tmp4) {
+  let tmp = null != commandIntegrationTypes;
+  if (tmp) {
+    tmp = !commandIntegrationTypes.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL);
+  }
+  let tmp4 = !tmp;
+  if (!tmp) {
     let tmp6 = applicationId !== BuiltInSectionId.BUILT_IN;
     if (tmp6) {
       const result = ApplicationCommandIndexStore.hasUserStateApplication(applicationId);
       let tmp8 = !result;
-      if (tmp8) {
+      if (!result) {
         let tmp9 = null == channel;
         if (!tmp9) {
           const obj3 = { applicationId, channelId: null, guildId: null };

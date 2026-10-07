@@ -1,25 +1,21 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumExpressionPickerFeatureUpsell.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardIsOpenDefault from "../../../../keyboard/native/useKeyboardIsOpen.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let num, num2, tmp, tmp2;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles((arg0) => {
-  let rect;
-  const obj = { container: rect };
-  rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
+  const obj = { container: null };
+  const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
+  obj.container = rect;
   return obj;
 });
 const __initData = {
@@ -28,45 +24,43 @@ const __initData = {
 const __initData2 = {
   code: "function PremiumExpressionPickerFeatureUpsellTsx2(){const{shouldShow,inPortalKeyboard,bottomSheetIndex}=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}",
 };
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/premium/roadblocks/native/views/PremiumExpressionPickerFeatureUpsell.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (bottomSheetIndex) => {
-      let analyticsLocation;
-      let featureName;
-      let inPortalKeyboard;
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
       ({ featureName, analyticsLocation, inPortalKeyboard } = bottomSheetIndex);
       const shouldShow = bottomSheetIndex.shouldShow;
-      const bottom = useSafeAreaInsetsDefault().bottom;
       const tmp4 = useKeyboardIsOpenDefault();
-      let tmp5 = closure_5(ConstantsIOS.EXPRESSION_FOOTER_HEIGHT + bottom);
+      let tmp5 = closure_5(ConstantsIOS.EXPRESSION_FOOTER_HEIGHT + useSafeAreaInsetsDefault().bottom);
       const fn = function u() {
-        let value1 = shouldShow.get();
-        if (value1) {
-          let tmp5;
-          const value = bottomSheetIndex.get();
+        const value1 = shouldShow.get();
+        if (!value1) {
+          return value1;
+        } else {
+          value = bottomSheetIndex.get();
           if (inPortalKeyboard) {
-            tmp5 = 1 === value;
+            let tmp5 = 1 === value;
           } else {
             tmp5 = 0 === value;
           }
-          value1 = tmp5;
         }
-        return value1;
       };
       fn.__closure = { shouldShow, inPortalKeyboard, bottomSheetIndex };
       fn.__workletHash = 15061973364879;
       fn.__initData = __initData;
-      const obj2 = ReanimatedRexport;
-      const derivedValue = obj2.useDerivedValue(fn);
+      const derivedValue = ReanimatedRexport.useDerivedValue(fn);
       if (cResult[0] === analyticsLocation) {
         if (cResult[1] === featureName) {
           if (cResult[2] === tmp4) {
             if (cResult[3] === derivedValue) {
-              let tmp7;
               if (cResult[4] === tmp5) {
-                tmp7 = cResult[5];
+                let tmp7 = cResult[5];
               }
               return tmp7;
             }
@@ -75,6 +69,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp8 = null;
       if (!tmp4) {
+        const obj3 = { style: tmp5.container, children: null };
+        const obj4 = { shouldShow: derivedValue, featureName, analyticsLocation };
+        obj3.children = jsx(PremiumFeatureUpsellDefault, { shouldShow: derivedValue, featureName, analyticsLocation });
         tmp8 = <View style={tmp5.container}>{null}</View>;
       }
       cResult[0] = analyticsLocation;
@@ -86,20 +83,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
     }
   : (bottomSheetIndex) => {
-      let analyticsLocation;
-      let featureName;
       bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
       const inPortalKeyboard = bottomSheetIndex.inPortalKeyboard;
       const shouldShow = bottomSheetIndex.shouldShow;
       ({ featureName, analyticsLocation } = bottomSheetIndex);
-      const bottom = useSafeAreaInsetsDefault().bottom;
       const tmp3 = useKeyboardIsOpenDefault();
-      const tmp4 = closure_5(ConstantsIOS.EXPRESSION_FOOTER_HEIGHT + bottom);
-      let tmp5 = ReanimatedRexport;
+      ReanimatedRexport;
       class S {
         constructor() {
           tmp = shouldShow.get();
-          if (tmp) {
+          if (!tmp) {
+            return tmp;
+          } else {
             tmp2 = inPortalKeyboard;
             tmp3 = bottomSheetIndex;
             value = bottomSheetIndex.get();
@@ -110,9 +105,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               num = 0;
               tmp5 = 0 === value;
             }
-            tmp = tmp5;
+            tmp6 = tmp5;
           }
-          return tmp;
+          return;
         }
       }
       S.__closure = { shouldShow, inPortalKeyboard, bottomSheetIndex };
@@ -120,12 +115,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       S.__initData = __initData2;
       let tmp7 = null;
       if (!tmp3) {
+        const obj = { style: tmp4.container, children: null };
+        const obj2 = { shouldShow: tmp6, featureName, analyticsLocation };
+        obj.children = jsx(PremiumFeatureUpsellDefault, { shouldShow: tmp6, featureName, analyticsLocation });
         tmp7 = <View style={tmp4.container}>{null}</View>;
       }
       return tmp7;
     };
-const result = size.fileFinishedImporting(
-  "modules/premium/roadblocks/native/views/PremiumExpressionPickerFeatureUpsell.tsx",
-);
-
-export default tmp3;

@@ -1,5 +1,5 @@
 // discord_app/modules/checkpoint/2025/CheckpointUtils.tsx
-import intl4 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import getTimestampString from "../../notification_center/getTimestampString.tsx";
 import _modDef5133 from "../../../../discord_assets/assets/checkpoint/card-plant.png.js";
@@ -18,26 +18,21 @@ const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
 const result = size.fileFinishedImporting("modules/checkpoint/2025/CheckpointUtils.tsx");
 
 export const getVoiceDurationString = function getVoiceDurationString(rounded) {
-  let time;
-  let unit;
-  const obj = TimeUtils;
-  const timeAndUnit = obj.getTimeAndUnit(rounded, items);
+  const timeAndUnit = TimeUtils.getTimeAndUnit(rounded, items);
   ({ time, unit } = timeAndUnit);
-  const obj2 = getTimestampString;
-  const time2 = obj2.getAbbreviatedFormatter();
+  const time2 = getTimestampString.getAbbreviatedFormatter();
   if (null == time) {
-    const intl3 = intl4.intl;
+    const intl3 = util.intl;
     return intl3.formatToPlainString(time2.minutes, { minutes: 0 });
   } else {
-    let formatToPlainStringResult;
     const _Math = Math;
     rounded = Math.round(time);
     if (unit === TimeUtils.TimeUnits.HOURS) {
-      const intl2 = intl4.intl;
+      const intl2 = util.intl;
       const obj3 = { hours: rounded };
-      formatToPlainStringResult = intl2.formatToPlainString(time2.hours, obj3);
+      let formatToPlainStringResult = intl2.formatToPlainString(time2.hours, obj3);
     } else {
-      const intl = intl4.intl;
+      const intl = util.intl;
       const obj4 = { minutes: rounded };
       formatToPlainStringResult = intl.formatToPlainString(time2.minutes, obj4);
     }

@@ -1,55 +1,47 @@
 // discord_common/js/packages/kv-storage/js/index.tsx
-import Dao from "api/Dao.tsx";
-import Table from "api/Table.tsx";
-import TableId from "types/index.tsx";
-import Database from "api/Database.tsx";
-import EntityDao from "api/EntityDao.tsx";
-import GuildDao from "api/GuildDao.tsx";
-import GuildEntityDao from "api/GuildEntityDao.tsx";
-import Kv from "api/Kv.tsx";
-import MessageDao from "api/MessageDao.tsx";
-import api_Stats from "api/Stats.tsx";
 import "module_2080";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/index.tsx");
-for (const key10020 in Dao) {
-  exports[key10020] = Dao[key10020];
+for (const key10020 in require("Dao")) {
+  arg5[key10020] = require("Dao")[key10020];
   continue;
 }
-for (const key10024 in Database) {
-  exports[key10024] = Database[key10024];
+for (const key10024 in require("Database")) {
+  arg5[key10024] = require("Database")[key10024];
   continue;
 }
-for (const key10028 in EntityDao) {
-  exports[key10028] = EntityDao[key10028];
+for (const key10028 in require("EntityDao")) {
+  arg5[key10028] = require("EntityDao")[key10028];
   continue;
 }
-for (const key10032 in GuildDao) {
-  exports[key10032] = GuildDao[key10032];
+for (const key10032 in require("GuildDao")) {
+  arg5[key10032] = require("GuildDao")[key10032];
   continue;
 }
-for (const key10036 in GuildEntityDao) {
-  exports[key10036] = GuildEntityDao[key10036];
+for (const key10036 in require("GuildEntityDao")) {
+  arg5[key10036] = require("GuildEntityDao")[key10036];
   continue;
 }
-for (const key10040 in Kv) {
-  exports[key10040] = Kv[key10040];
+for (const key10040 in require("Kv")) {
+  arg5[key10040] = require("Kv")[key10040];
   continue;
 }
-for (const key10044 in MessageDao) {
-  exports[key10044] = MessageDao[key10044];
+for (const key10044 in require("MessageDao")) {
+  arg5[key10044] = require("MessageDao")[key10044];
   continue;
 }
-for (const key10048 in api_Stats) {
-  exports[key10048] = api_Stats[key10048];
+for (const key10048 in require("api/Stats")) {
+  arg5[key10048] = require("api/Stats")[key10048];
   continue;
 }
-for (const key10052 in Table) {
-  exports[key10052] = Table[key10052];
+for (const key10052 in require("Table")) {
+  arg5[key10052] = require("Table")[key10052];
   continue;
 }
-for (const key10056 in TableId) {
-  exports[key10056] = TableId[key10056];
+for (const key10056 in require("TableId")) {
+  arg5[key10056] = require("TableId")[key10056];
   continue;
 }

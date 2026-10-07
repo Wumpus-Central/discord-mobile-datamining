@@ -3,10 +3,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
   ALL: new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]),
-  ADULT_THEMES: new Set([21]),
+  ADULT_THEMES: null,
 };
-new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
-new Set([21]);
+const set = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
+obj.ADULT_THEMES = new Set([21]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentRatingIGDBTheme.tsx");
 
 export const ContentRatingIGDBTheme = {

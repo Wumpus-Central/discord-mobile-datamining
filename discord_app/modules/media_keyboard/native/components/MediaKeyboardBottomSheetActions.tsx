@@ -6,80 +6,62 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import react_mod from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let dependencyMap, importDefault, obj1, onHeightChange, tmp, tmp2, tmp3, tmp4, variant;
 
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let react = react_mod;
-({ StyleSheet: closure_4, View: hasOwnProperty } = react_native);
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
-  let obj2;
-  let obj3;
-  let obj7;
-  let tmp5;
   let PX_24 = arg0;
-  const obj = {
-    wrap: obj2,
-    container: obj3,
-    buttonsContainer: {
-      gap: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_GAP,
-      alignItems: "stretch",
-      flexDirection: "row",
-      marginHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL,
-    },
-    button: {
-      flexBasis: 64,
-      minHeight: 48,
-      flexGrow: 1,
-      justifyContent: "center",
-      flexDirection: "column",
-      alignItems: "center",
-      padding: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_PADDING,
-      borderRadius: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS,
-      gap: 4,
-    },
-    gradient: obj7,
-  };
-  obj2 = { alignItems: "center", top: undefined };
+  const obj = { wrap: null, container: null, buttonsContainer: null, button: null, gradient: null };
+  const obj2 = {};
   const merged = Object.assign(variant.absoluteFillObject);
-  obj3 = {
+  obj2.alignItems = "center";
+  obj2.top = undefined;
+  obj.wrap = obj2;
+  const obj3 = {
     paddingVertical: nativeDefault.space.PX_8,
     marginHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL,
-    marginBottom: PX_24,
-    borderRadius: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_RADIUS,
-    backgroundColor: tmp5,
-    paddingHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL,
-    borderWidth: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_WIDTH,
-    borderColor: nativeDefault.colors.BORDER_MUTED,
+    marginBottom: null,
+    borderRadius: null,
+    backgroundColor: null,
+    paddingHorizontal: null,
+    borderWidth: null,
   };
-  const obj4 = PlatformUtils;
   if (obj4.isIOS()) {
     PX_24 = nativeDefault.space.PX_24;
   }
-  tmp5 = arg2;
+  let tmp5 = arg2;
+  obj3.marginBottom = PX_24;
+  obj3.borderRadius = nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_RADIUS;
   if (arg2 == null) {
     tmp5 = arg1;
   }
+  obj3.backgroundColor = tmp5;
+  obj3.paddingHorizontal = nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL;
+  obj3.borderWidth = nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_WIDTH;
   const merged1 = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-  ({
+  obj3.borderColor = nativeDefault.colors.BORDER_MUTED;
+  obj.container = obj3;
+  obj4 = PlatformUtils;
+  obj.buttonsContainer = {
     gap: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_GAP,
     alignItems: "stretch",
     flexDirection: "row",
     marginHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL,
-  });
-  obj7 = { color: nativeDefault.colors.BACKGROUND_BASE_LOW };
-  ({
+  };
+  const obj5 = {
+    gap: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_GAP,
+    alignItems: "stretch",
+    flexDirection: "row",
+    marginHorizontal: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL,
+  };
+  obj.button = {
     flexBasis: 64,
     minHeight: 48,
     flexGrow: 1,
@@ -89,88 +71,94 @@ let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
     padding: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_PADDING,
     borderRadius: nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS,
     gap: 4,
-  });
+  };
+  const obj7 = {};
   const merged2 = Object.assign(variant.absoluteFillObject);
+  obj7.color = nativeDefault.colors.BACKGROUND_BASE_LOW;
+  obj.gradient = obj7;
   return obj;
 });
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/media_keyboard/native/components/MediaKeyboardBottomSheetActions.tsx",
+);
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (onHeightChange) => {
-        let button;
-        let items;
-        let tmp13;
-        let tmp14;
-        let tmp15;
-        let tmp17;
-        let tmp5;
-        let token;
-        let obj = onHeightChange(token[7]);
-        const cResult = obj.c(38);
+        const cResult = onHeightChange(token[7]).c(38);
         onHeightChange = onHeightChange.onHeightChange;
-        let obj2 = onHeightChange(token[8]);
-        const gradientValue = obj2.useGradientValue(onHeightChange(token[8]).GradientPercentage.END);
+        let obj = onHeightChange(token[7]);
+        const gradientValue = onHeightChange(token[8]).useGradientValue(
+          onHeightChange(token[8]).GradientPercentage.END,
+        );
         if (cResult[0] !== gradientValue) {
           let hexResult = null;
           if (null != gradientValue) {
             const obj3 = require("../../../../../_runtime/metro/00683__.js")(gradientValue);
-            const alphaResult = obj3.alpha(0.95);
-            hexResult = alphaResult.hex();
+            hexResult = require("../../../../../_runtime/metro/00683__.js")(gradientValue).alpha(0.95).hex();
+            const alphaResult = require("../../../../../_runtime/metro/00683__.js")(gradientValue).alpha(0.95);
           }
           cResult[0] = gradientValue;
           cResult[1] = hexResult;
-          tmp5 = hexResult;
+          let tmp5 = hexResult;
         } else {
           tmp5 = cResult[1];
         }
-        const bottom = require("useSafeAreaInsets")().bottom;
-        const tmpResult = onHeightChange(token[11]);
+        let obj2 = onHeightChange(token[8]);
         const tmp9 = closure_8(
-          bottom,
-          tmpResult.useToken(require("native").colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER),
+          require("useSafeAreaInsets")().bottom,
+          onHeightChange(token[11]).useToken(require("native").colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER),
           tmp5,
         );
         importDefault = tmp9;
+        const tmpResult = onHeightChange(token[11]);
+        token = onHeightChange(token[11]).useToken(
+          require("native").modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE,
+        );
         const tmpResult4 = onHeightChange(token[11]);
-        token = tmpResult4.useToken(require("native").modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
+        const token1 = onHeightChange(token[11]).useToken(
+          require("native").modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE,
+        );
         const tmpResult5 = onHeightChange(token[11]);
-        const token1 = tmpResult5.useToken(require("native").modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
-        const tmpResult6 = onHeightChange(token[11]);
-        const token2 = tmpResult6.useToken(require("native").modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
+        const token2 = onHeightChange(token[11]).useToken(
+          require("native").modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT,
+        );
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const point = { x: 0, y: 0 };
           const point1 = { x: 0, y: 1 };
           cResult[2] = point;
           cResult[3] = point1;
-          tmp14 = point1;
-          tmp13 = point;
+          let tmp14 = point1;
+          let tmp13 = point;
         } else {
           tmp13 = cResult[2];
           tmp14 = cResult[3];
         }
         if (cResult[4] !== tmp9.gradient.color) {
-          const obj11 = require("../../../../../_runtime/metro/00683__.js")(tmp9.gradient.color);
-          const alphaResult1 = obj11.alpha(0);
-          const hexResult1 = alphaResult1.hex();
+          const obj11 = tmp8(tmp2[9])(tmp9.gradient.color);
+          const hexResult1 = tmp8(tmp2[9])(tmp9.gradient.color).alpha(0).hex();
           cResult[4] = tmp9.gradient.color;
           cResult[5] = hexResult1;
-          tmp15 = hexResult1;
+          let tmp15 = hexResult1;
+          const alphaResult1 = tmp8(tmp2[9])(tmp9.gradient.color).alpha(0);
         } else {
           tmp15 = cResult[5];
         }
         if (cResult[6] !== tmp9.gradient.color) {
-          const obj13 = require("../../../../../_runtime/metro/00683__.js")(tmp9.gradient.color);
-          const alphaResult2 = obj13.alpha(1);
-          const hexResult2 = alphaResult2.hex();
+          const obj13 = tmp8(tmp2[9])(tmp9.gradient.color);
+          const hexResult2 = tmp8(tmp2[9])(tmp9.gradient.color).alpha(1).hex();
           cResult[6] = tmp9.gradient.color;
           cResult[7] = hexResult2;
-          tmp17 = hexResult2;
+          let tmp17 = hexResult2;
+          const alphaResult2 = tmp8(tmp2[9])(tmp9.gradient.color).alpha(1);
         } else {
           tmp17 = cResult[7];
         }
         if (cResult[8] === tmp15) {
-          let tmp19;
           if (cResult[9] === tmp17) {
-            tmp19 = cResult[10];
+            let tmp19 = cResult[10];
           }
           if (cResult[11] !== onHeightChange) {
             class N {
@@ -229,23 +217,20 @@ const memoResult = react.memo(
                 tmp4 = jsx;
                 str = "text-muted";
                 str2 = "text-muted";
-                PressableOpacity = closure_0(closure_2[13]).PressableOpacity;
-                IconComponent = onHeightChange.IconComponent;
                 if (!onHeightChange.disabled) {
                   str2 = closure_2;
                 }
                 items = [,];
-                items[0] = tmp4(IconComponent, { size: "md", color: str2 });
+                items[0] = tmp4(onHeightChange.IconComponent, { size: "md", color: str2 });
                 obj1 = { lineClamp: 1, variant: closure_4, color: null, children: null };
-                Text = tmp2(tmp3[14]).Text;
                 if (!onHeightChange.disabled) {
                   str = closure_3;
                 }
                 obj1.color = str;
                 obj1.children = onHeightChange.text;
-                items[1] = tmp4(Text, obj1);
+                items[1] = tmp4(tmp2(tmp3[14]).Text, obj1);
                 obj.children = items;
-                return tmp(PressableOpacity, obj, arg1);
+                return tmp(closure_0(closure_2[13]).PressableOpacity, obj, arg1);
               }
             }
             cResult[22] = token2;
@@ -254,89 +239,82 @@ const memoResult = react.memo(
             cResult[25] = token1;
             cResult[26] = L;
           }
-          const obj4 = { style: tmp9.gradient, pointerEvents: "none" };
-          const tmp8Result = require("LinearGradient");
+          const obj4 = { style: tmp9.gradient };
           const merged = Object.assign(tmp19);
-          let str = "none";
+          obj4.pointerEvents = "none";
+          const tmp26 = closure_6(tmp8(tmp2[12]), obj4);
           cResult[13] = tmp19;
           cResult[14] = tmp9.gradient;
-          cResult[15] = closure_6(tmp8Result, obj4);
-          const tmp26 = closure_6(tmp8Result, obj4);
+          cResult[15] = tmp26;
+          const tmp8Result = tmp8(tmp2[12]);
         }
-        const obj5 = { start: tmp13, end: tmp14, colors: items };
-        items = [tmp15, tmp17];
+        const obj5 = { start: tmp13, end: tmp14, colors: null };
+        let items = [tmp15, tmp17];
+        obj5.colors = items;
         cResult[8] = tmp15;
         cResult[9] = tmp17;
         cResult[10] = obj5;
         tmp19 = obj5;
+        const tmpResult6 = onHeightChange(token[11]);
       }
     : (onHeightChange) => {
-        let closure_1;
-        let closure_2;
-        let closure_3;
-        let items2;
-        let obj6;
         onHeightChange = onHeightChange.onHeightChange;
         const overflowButtons = onHeightChange.overflowButtons;
         importDefault = undefined;
         dependencyMap = undefined;
-        react = undefined;
+        noop = undefined;
         variant = undefined;
-        let obj = onHeightChange(4702);
-        const gradientValue = obj.useGradientValue(onHeightChange(4702).GradientPercentage.END);
+        const gradientValue = onHeightChange(4702).useGradientValue(onHeightChange(4702).GradientPercentage.END);
         let hexResult = null;
         if (null != gradientValue) {
           let obj2 = _modDef683(gradientValue);
-          let alphaResult = obj2.alpha(0.95);
-          hexResult = alphaResult.hex();
+          hexResult = _modDef683(gradientValue).alpha(0.95).hex();
+          let alphaResult = _modDef683(gradientValue).alpha(0.95);
         }
-        const bottom = useSafeAreaInsetsDefault().bottom;
-        const tmpResult = onHeightChange(4586);
+        let obj = onHeightChange(4702);
         const tmp6 = closure_8(
-          bottom,
-          tmpResult.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER),
+          useSafeAreaInsetsDefault().bottom,
+          onHeightChange(4586).useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER),
           hexResult,
         );
         importDefault = tmp6;
+        const tmpResult = onHeightChange(4586);
+        dependencyMap = onHeightChange(4586).useToken(
+          nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE,
+        );
         const tmpResult4 = onHeightChange(4586);
-        dependencyMap = tmpResult4.useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
+        noop = onHeightChange(4586).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
         const tmpResult5 = onHeightChange(4586);
-        react = tmpResult5.useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
-        const tmpResult6 = onHeightChange(4586);
-        variant = tmpResult6.useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
+        variant = onHeightChange(4586).useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
         let items = [tmp6.gradient.color];
-        const memo = react.useMemo(() => {
-          let items;
-          const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items };
-          items = [,];
+        const memo = noop.useMemo(() => {
+          const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
           const obj2 = _modDef683(closure_1.gradient.color);
-          const alphaResult = obj2.alpha(0);
-          items[0] = alphaResult.hex();
+          const items = [_modDef683(closure_1.gradient.color).alpha(0).hex()];
+          const alphaResult = _modDef683(closure_1.gradient.color).alpha(0);
           const obj4 = _modDef683(closure_1.gradient.color);
-          const alphaResult1 = obj4.alpha(1);
-          items[1] = alphaResult1.hex();
+          items[1] = _modDef683(closure_1.gradient.color).alpha(1).hex();
+          obj.colors = items;
           return obj;
         }, items);
         const items1 = [onHeightChange];
-        let obj4 = { style: tmp6.gradient, pointerEvents: "none" };
         const obj3 = {
           style: tmp6.wrap,
           pointerEvents: "box-none",
-          onLayout: react.useCallback((nativeEvent) => {
+          onLayout: noop.useCallback((nativeEvent) => {
             onHeightChange(nativeEvent.nativeEvent.layout.height);
           }, items1),
-          children: items2,
+          children: null,
         };
-        const tmp8 = LinearGradientDefault;
+        let obj4 = { style: tmp6.gradient };
+        const tmpResult6 = onHeightChange(4586);
         const merged = Object.assign(memo);
-        items2 = [closure_6(tmp8, obj4)];
-        const obj5 = { style: tmp6.container, children: closure_6(closure_5, obj6) };
-        obj6 = {
+        obj4.pointerEvents = "none";
+        const items2 = [closure_6(LinearGradientDefault, obj4)];
+        const obj5 = { style: tmp6.container, children: null };
+        obj5.children = closure_6(closure_5, {
           style: tmp6.buttonsContainer,
           children: overflowButtons.map((accessibilityLabel, index) => {
-            let items;
-            let str = "text-muted";
-            let str2 = "text-muted";
             const obj = {
               accessibilityRole: "button",
               accessibilityLabel: accessibilityLabel.text,
@@ -344,29 +322,27 @@ const memoResult = react.memo(
               disabled: accessibilityLabel.disabled,
               style: closure_1.button,
               onPress: accessibilityLabel.onPress,
-              children: items,
+              children: null,
             };
-            const PressableOpacity = Pressables.PressableOpacity;
-            const IconComponent = accessibilityLabel.IconComponent;
+            let str = "text-muted";
+            let str2 = "text-muted";
             if (!accessibilityLabel.disabled) {
               str2 = closure_2;
             }
-            items = [metroRequire(IconComponent, { size: "md", color: str2 })];
-            const obj2 = { lineClamp: 1, variant, color: str, children: accessibilityLabel.text };
-            const Text = Text_Text.Text;
+            const items = [timestampProducer(accessibilityLabel.IconComponent, { size: "md", color: str2 })];
+            const obj2 = { lineClamp: 1, variant, color: null, children: null };
             if (!accessibilityLabel.disabled) {
               str = closure_3;
             }
-            items[1] = metroRequire(Text, obj2);
-            return metroImportDefault(PressableOpacity, obj, index);
+            obj2.color = str;
+            obj2.children = accessibilityLabel.text;
+            items[1] = timestampProducer(Text_Text.Text, obj2);
+            obj.children = items;
+            return React5(Pressables.PressableOpacity, obj, index);
           }),
-        };
+        });
         items2[1] = closure_6(closure_5, obj5);
+        obj3.children = items2;
         return closure_7(closure_5, obj3);
       },
 );
-const result = size.fileFinishedImporting(
-  "modules/media_keyboard/native/components/MediaKeyboardBottomSheetActions.tsx",
-);
-
-export default memoResult;

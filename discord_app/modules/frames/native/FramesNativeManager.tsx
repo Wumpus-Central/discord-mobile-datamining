@@ -1,33 +1,31 @@
 // discord_app/modules/frames/native/FramesNativeManager.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
+import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import FramesStore from "../FramesStore.tsx";
-import PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import FramesManager from "../FramesManager.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const NativeEventEmitter = react_native.NativeEventEmitter;
+require = fn;
+const PlatformUtils = fn(1370);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
-  let self = this;
-  const self2 = this;
-  nativeEventEmitter = new NativeEventEmitter(react_nativeDefault);
+  nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
 }
-class FramesNativeManager extends FramesManager {
+class FramesNativeManager extends tmp5 {
   _initialize() {
-    const self = this;
-    super._initialize();
-    const lifecycleSubscription = this.lifecycleSubscription;
+    self = this;
+    _initializeResult = super._initialize();
+    lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
-      lifecycleSubscription.remove();
+      removeResult = lifecycleSubscription.remove();
     }
-    let addListenerResult;
-    if (nativeEventEmitter != null) {
-      addListenerResult = nativeEventEmitter.addListener("onHostDestroy", () => {
+    obj = closure_4;
+    addListenerResult = undefined;
+    if (closure_4 != null) {
+      str = "onHostDestroy";
+      addListenerResult = obj.addListener("onHostDestroy", () => {
         const allFrames = FramesStore.getAllFrames();
         for (const item10007 of allFrames) {
           let leaveFrameResult = self.leaveFrame(item10007.id);
@@ -36,43 +34,47 @@ class FramesNativeManager extends FramesManager {
       });
     }
     this.lifecycleSubscription = addListenerResult;
+    return;
   }
   _terminate() {
-    super._terminate();
-    const lifecycleSubscription = this.lifecycleSubscription;
+    _terminateResult = super._terminate();
+    lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
-      lifecycleSubscription.remove();
+      removeResult = lifecycleSubscription.remove();
     }
+    return;
   }
-  showRPCDisconnectErrorUI(reason) {
-    let code;
-    let intl;
-    let message;
-    ({ code, message } = reason);
-    const obj = { title: intl.formatToPlainString(intl2.t.hbiAO6, { code }), body: message };
-    const show = actions_AlertActionCreatorsDefault.show;
-    actions_AlertActionCreatorsDefault;
-    intl = intl2.intl;
-    show(obj);
-  }
-  leaveFrame(frameId) {
-    const obj = GlobalUtils;
-    if (obj.isNotNullish(frameId)) {
-      const obj3 = {
+  leaveFrame(arg0) {
+    tmp = closure_2;
+    obj = closure_0(closure_2[7]);
+    if (obj.isNotNullish(global)) {
+      tmp2 = closure_1;
+      obj2 = closure_1(tmp[8]);
+      obj1 = {
         type: "FRAME_SET_ORIENTATION_LOCK_STATE",
-        frameId,
+        frameId: null,
         lockState: null,
         pictureInPictureLockState: null,
       };
-      const obj2 = DispatcherDefault;
-      obj2.dispatch(obj3);
+      obj1.frameId = global;
+      dispatchResult = obj2.dispatch(obj1);
     }
-    super.leaveFrame(frameId);
+    leaveFrameResult = super.leaveFrame(global);
+    return;
   }
 }
-let closure_5 = FramesNativeManager.prototype;
+const prototype = FramesNativeManager.prototype;
+prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
+  ({ code, message } = reason);
+  const obj2 = { title: null, body: null };
+  const intl = util.intl;
+  obj2.title = intl.formatToPlainString(util.t.hbiAO6, { code });
+  obj2.body = message;
+  actions_AlertActionCreatorsDefault.show(obj2);
+};
 FramesNativeManager.displayName = "FramesNativeManager";
 const framesNativeManager = new FramesNativeManager();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramesNativeManager.tsx");
 
 export default framesNativeManager;

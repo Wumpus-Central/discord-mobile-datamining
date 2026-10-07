@@ -2,29 +2,24 @@
 import DispatcherDefault from "../Dispatcher.tsx";
 import SelfPresenceStore from "SelfPresenceStore.tsx";
 import AutomaticLifecycleManager from "../lib/AutomaticLifecycleManager.tsx";
-import size from "../../_runtime/metro/00002__.js";
-
-let map;
 
 function handleChange() {
   const obj = DispatcherDefault;
-  const obj2 = {
+  obj.dispatch({
     type: "SELF_PRESENCE_STORE_UPDATE",
     status: SelfPresenceStore.getStatus(),
     activities: SelfPresenceStore.getActivities(true),
     hiddenActivities: SelfPresenceStore.getHiddenActivities(),
-  };
-  obj.dispatch(obj2);
+  });
 }
-class SelfPresenceStoreManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    map = new Map();
-    applyArgumentsResult.stores = map.set(SelfPresenceStore, handleChange);
-    return applyArgumentsResult;
-  }
-}
-const selfPresenceStoreManager = new SelfPresenceStoreManager();
+const prototype = function SelfPresenceStoreManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  applyArgumentsResult.stores = new Map().set(SelfPresenceStore, handleChange);
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp2 {}
+const prototype1 = new prototype();
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/SelfPresenceStoreManager.tsx");
 
-export default selfPresenceStoreManager;
+export default prototype1;

@@ -1,99 +1,87 @@
 // discord_app/modules/guild_progress/GuildProgressStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import GuildProgressConstants from "GuildProgressConstants.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
-
-let closure_6, importDefault, set;
 
 function completeStep(guild_id, CHANNEL) {
   let tmp = null != obj;
   if (tmp) {
     const hasItem = obj.has(CHANNEL);
     let flag = !hasItem;
-    if (flag) {
+    if (!hasItem) {
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      closure_6[guild_id] = new Set(closure_6[guild_id].add(CHANNEL));
+      const set = new Set(obj.add(CHANNEL));
+      dependencyMap[guild_id] = set;
       flag = true;
-      set = new Set(closure_6[guild_id].add(CHANNEL));
     }
     tmp = flag;
   }
   return tmp;
 }
-const Steps = GuildProgressConstants.Steps;
-const metroRequire = {};
-const PersistedStore = get_initializedDefault.PersistedStore;
-class GuildProgressStore extends PersistedStore {
-  initialize(arg0) {
-    let closure_0;
-    importDefault = arg0;
-    this.waitFor(AuthenticationStore, ChannelStore, GuildStore);
-    closure_6 = {};
-    if (null != arg0) {
-      let tmp2 = importDefault;
-      const obj = SnowflakeUtilsDefault;
-      const keys = obj.keys(arg0);
-      const item = keys.forEach(function (item) {
-        let tmp2 = null != tmp;
-        if (tmp2) {
-          const _Symbol = Symbol;
-          tmp2 = typeof tmp[Symbol.iterator] === "function";
-        }
-        if (tmp2) {
-          const _Set = Set;
-          const self = this;
-          const self2 = this;
-          closure_6[item] = new Set(closure_0[item]);
-          set = new Set(closure_0[item]);
-        }
-      });
-    }
-  }
-  getProgress(arg0) {
-    return closure_6[arg0];
-  }
-  hasProgress(id) {
-    const tmp = null != obj && !obj.has(Steps.DISMISSED);
-    return tmp;
-  }
-  getState() {
-    return closure_6;
-  }
-}
+const Steps = fn(12140).Steps;
+const dependencyMap = {};
+const PersistedStore = initializeDefault.PersistedStore;
+class GuildProgressStore extends PersistedStore {}
 const prototype = GuildProgressStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  importDefault = arg0;
+  this.waitFor(AuthenticationStore, ChannelStore, GuildStore);
+  closure_6 = {};
+  if (null != arg0) {
+    const keys = SnowflakeUtilsDefault.keys(arg0);
+    const item = keys.forEach((item) => {
+      let tmp2 = null != tmp;
+      if (tmp2) {
+        const _Symbol = Symbol;
+        tmp2 = typeof tmp[Symbol.iterator] === "function";
+      }
+      if (tmp2) {
+        const _Set = Set;
+        const set = new Set(tmp);
+        closure_6[item] = set;
+      }
+    });
+  }
+};
+prototype["getProgress"] = function getProgress(arg0) {
+  return dependencyMap[arg0];
+};
+prototype["hasProgress"] = function hasProgress(id) {
+  let tmp = null != obj;
+  if (tmp) {
+    tmp = !obj.has(Steps.DISMISSED);
+  }
+  return tmp;
+};
+prototype["getState"] = function getState() {
+  return closure_6;
+};
 GuildProgressStore.displayName = "GuildProgressStore";
 GuildProgressStore.persistKey = "GuildProgressStore";
-let obj = {
+const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     const items = [];
-    let obj = items(11);
-    const keys = obj.keys(closure_6);
+    const keys = items(11).keys(dependencyMap);
     const item = keys.forEach((item) => {
-      const obj = closure_6[item];
       if (obj.has(Steps.COMPLETED)) {
         items.push(item);
       }
+      obj = dependencyMap[item];
     });
-    const item1 = items.forEach(function (item) {
+    const item1 = items.forEach((item) => {
       const DISMISSED = constants.DISMISSED;
       let tmp = null != obj;
       if (tmp) {
         const hasItem = obj.has(DISMISSED);
         let flag = !hasItem;
-        if (flag) {
+        if (!hasItem) {
           const _Set = Set;
-          const self = this;
-          const self2 = this;
-          closure_1_6[item] = new Set(closure_1_6[item].add(DISMISSED));
+          const set = new Set(obj.add(DISMISSED));
+          dependencyMap[item] = set;
           flag = true;
-          set = new Set(closure_1_6[item].add(DISMISSED));
         }
         tmp = flag;
       }
@@ -102,30 +90,24 @@ let obj = {
   },
   GUILD_PROGRESS_INITIALIZE: function handleInitialize(guildId) {
     guildId = guildId.guildId;
-    if (null == closure_6[guildId]) {
+    if (null == dependencyMap[guildId]) {
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      closure_6[guildId] = new Set();
-      set = new Set();
+      const set = new Set();
+      dependencyMap[guildId] = set;
     }
-    const obj = closure_6[guildId];
     if (!obj.has(Steps.COMPLETED)) {
-      const obj2 = closure_6[guildId];
-      obj2.delete(Steps.DISMISSED);
+      dependencyMap[guildId].delete(Steps.DISMISSED);
     }
+    obj = dependencyMap[guildId];
   },
   GUILD_PROGRESS_COMPLETED_SEEN: function handleCompletedSeen(guildId) {
     guildId = guildId.guildId;
-    if (null == closure_6[guildId]) {
+    if (null == dependencyMap[guildId]) {
       return false;
     } else {
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      const obj = closure_6[guildId];
-      closure_6[guildId] = new Set(obj.add(Steps.COMPLETED));
-      set = new Set(obj.add(Steps.COMPLETED));
+      const set = new Set(dependencyMap[guildId].add(Steps.COMPLETED));
+      dependencyMap[guildId] = set;
     }
   },
   GUILD_PROGRESS_DISMISS: function handleGuildProgressDismiss(guildId) {
@@ -135,13 +117,11 @@ let obj = {
     if (tmp) {
       const hasItem = obj.has(DISMISSED);
       let flag = !hasItem;
-      if (flag) {
+      if (!hasItem) {
         const _Set = Set;
-        const self = this;
-        const self2 = this;
-        closure_6[guildId] = new Set(closure_6[guildId].add(DISMISSED));
+        const set = new Set(obj.add(DISMISSED));
+        dependencyMap[guildId] = set;
         flag = true;
-        set = new Set(closure_6[guildId].add(DISMISSED));
       }
       tmp = flag;
     }
@@ -149,27 +129,30 @@ let obj = {
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
-    const member_count = guild.member_count;
     const guild1 = GuildStore.getGuild(guild.id);
     if (null == guild1) {
       return false;
     } else {
-      const tmp3 = guild1.ownerId === AuthenticationStore.getId() && null != closure_6[guild1.id];
+      let tmp3 = guild1.ownerId === AuthenticationStore.getId();
+      if (tmp3) {
+        tmp3 = null != dependencyMap[guild1.id];
+      }
       if (tmp3) {
         if (null != guild1.icon) {
-          const obj = closure_6[guild1.id];
-          obj.add(Steps.AVATAR);
+          dependencyMap[guild1.id].add(Steps.AVATAR);
         }
-        if (member_count > 1) {
-          const obj2 = closure_6[guild1.id];
-          obj2.add(Steps.INVITE);
+        if (guild.member_count > 1) {
+          dependencyMap[guild1.id].add(Steps.INVITE);
         }
       }
     }
   },
   CHANNEL_CREATE: function handleChannelCreate(channel) {
     channel = channel.channel;
-    let tmp = null != channel && null != channel.guild_id && null != closure_6[channel.guild_id];
+    let tmp = null != channel && null != channel.guild_id;
+    if (tmp) {
+      tmp = null != dependencyMap[channel.guild_id];
+    }
     if (tmp) {
       const guild_id = channel.guild_id;
       const CHANNEL = Steps.CHANNEL;
@@ -177,13 +160,11 @@ let obj = {
       if (tmp5) {
         const hasItem = obj.has(CHANNEL);
         let flag = !hasItem;
-        if (flag) {
+        if (!hasItem) {
           const _Set = Set;
-          const self = this;
-          const self2 = this;
-          closure_6[guild_id] = new Set(closure_6[guild_id].add(CHANNEL));
+          const set = new Set(obj.add(CHANNEL));
+          dependencyMap[guild_id] = set;
           flag = true;
-          set = new Set(closure_6[guild_id].add(CHANNEL));
         }
         tmp5 = flag;
       }
@@ -202,7 +183,7 @@ let obj = {
         tmp3 = null != tmp2.guild_id;
       }
       if (tmp3) {
-        tmp3 = null != closure_6[tmp2.guild_id];
+        tmp3 = null != dependencyMap[tmp2.guild_id];
       }
       if (tmp3) {
         tmp3 = false !== completeStep(tmp2.guild_id, Steps.CHANNEL);
@@ -218,7 +199,13 @@ let obj = {
     guild = guild.guild;
     let tmp = null != guild;
     if (tmp) {
-      let tmp2 = null != guild.id && null != closure_6[guild.id] && null != guild.icon;
+      let tmp2 = null != guild.id;
+      if (tmp2) {
+        tmp2 = null != dependencyMap[guild.id];
+      }
+      if (tmp2) {
+        tmp2 = null != guild.icon;
+      }
       if (tmp2) {
         const id = guild.id;
         const AVATAR = Steps.AVATAR;
@@ -226,13 +213,11 @@ let obj = {
         if (tmp6) {
           const hasItem = obj.has(AVATAR);
           let flag = !hasItem;
-          if (flag) {
+          if (!hasItem) {
             const _Set = Set;
-            const self = this;
-            const self2 = this;
-            closure_6[id] = new Set(closure_6[id].add(AVATAR));
+            const set = new Set(obj.add(AVATAR));
+            dependencyMap[id] = set;
             flag = true;
-            set = new Set(closure_6[id].add(AVATAR));
           }
           tmp6 = flag;
         }
@@ -242,15 +227,17 @@ let obj = {
     }
     return tmp;
   },
-  MESSAGE_CREATE: function handleMessage(message) {
-    message = message.message;
-    const channel = ChannelStore.getChannel(message.channelId);
-    const author = message.author;
+  MESSAGE_CREATE: function handleMessage(channelId) {
+    const channel = ChannelStore.getChannel(channelId.channelId);
+    const author = channelId.message.author;
     let id;
     if (author != null) {
       id = author.id;
     }
-    let tmp3 = id === AuthenticationStore.getId() && null != channel && null != closure_6[channel.guild_id];
+    let tmp3 = id === AuthenticationStore.getId() && null != channel;
+    if (tmp3) {
+      tmp3 = null != dependencyMap[channel.guild_id];
+    }
     if (tmp3) {
       const guild_id = channel.guild_id;
       const MESSAGE = Steps.MESSAGE;
@@ -258,13 +245,11 @@ let obj = {
       if (tmp7) {
         const hasItem = obj.has(MESSAGE);
         let flag = !hasItem;
-        if (flag) {
+        if (!hasItem) {
           const _Set = Set;
-          const self = this;
-          const self2 = this;
-          closure_6[guild_id] = new Set(closure_6[guild_id].add(MESSAGE));
+          const set = new Set(obj.add(MESSAGE));
+          dependencyMap[guild_id] = set;
           flag = true;
-          set = new Set(closure_6[guild_id].add(MESSAGE));
         }
         tmp7 = flag;
       }
@@ -274,20 +259,21 @@ let obj = {
   },
   GUILD_MEMBER_LIST_UPDATE: function handleGuildMember(guildId) {
     guildId = guildId.guildId;
-    let tmp2 = null != closure_6[guildId] && tmp > 1;
+    let tmp2 = null != dependencyMap[guildId];
+    if (tmp2) {
+      tmp2 = tmp > 1;
+    }
     if (tmp2) {
       const INVITE = Steps.INVITE;
       let tmp5 = null != obj;
       if (tmp5) {
         const hasItem = obj.has(INVITE);
         let flag = !hasItem;
-        if (flag) {
+        if (!hasItem) {
           const _Set = Set;
-          const self = this;
-          const self2 = this;
-          closure_6[guildId] = new Set(closure_6[guildId].add(INVITE));
+          const set = new Set(obj.add(INVITE));
+          dependencyMap[guildId] = set;
           flag = true;
-          set = new Set(closure_6[guildId].add(INVITE));
         }
         tmp5 = flag;
       }
@@ -295,8 +281,8 @@ let obj = {
     }
     return tmp2;
   },
-};
-const guildProgressStore = new GuildProgressStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_progress/GuildProgressStore.tsx");
 
 export default guildProgressStore;

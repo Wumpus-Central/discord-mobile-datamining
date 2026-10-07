@@ -1,121 +1,57 @@
 // discord_app/modules/integration_settings/native/useShowUnlinkChannelAlert.tsx
-import intl5 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import AlertDefault from "../../../components_native/common/Alert.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../_runtime/00019_react.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import common_AlertDefault from "../../../components_native/common/Alert.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c4;
-
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
 
 export default function useShowUnlinkChannelAlert(arg0, applicationName, arg2) {
-  let onConfirm;
-  let closure_0 = arg0;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_2 = arg2;
   const items = [arg0, arg2];
-  onConfirm = react.useCallback(
+  onConfirm = noop.useCallback(
     onConfirm(function* () {
-      let intl;
-      let intl2;
-      let v1;
-      if (c4 === 2) {
+      yield v2(tmp23[2]).removeLinkedLobby(tmp3);
+      if (1 === tmp7) {
+        c3 = 0;
+        const obj7 = { title: null, body: null };
+        const intl = tmp3(tmp23[4]).intl;
+        obj7.title = intl.string(tmp3(tmp23[4]).t.vFzPFj);
+        const intl2 = tmp3(tmp23[4]).intl;
+        obj7.body = intl2.string(tmp3(tmp23[4]).t["6D5WVg"]);
+        v2(tmp23[3]).show(obj7);
         c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
+        v2(tmp23[3]);
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        if (closure_128_2 != null) {
+          closure_128_2();
         }
-      } else {
-        let c3;
-        try {
-          c4 = 2;
-          if (0 === v1) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              c3 = 1;
-              const obj3 = v1(closure_2[2]);
-              v1 = 2;
-              c4 = 1;
-              const obj5 = { value: obj3.removeLinkedLobby(tmp), done: false };
-              return obj5;
-            }
-          } else {
-            if (1 === tmp4) {
-              c3 = 0;
-              const obj6 = {
-                title: intl.string(tmp(closure_2[4]).t.vFzPFj),
-                body: intl2.string(tmp(closure_2[4]).t["6D5WVg"]),
-              };
-              const show = v1(closure_2[3]).show;
-              const tmp11 = v1(closure_2[3]);
-              intl = tmp(closure_2[4]).intl;
-              intl2 = tmp(closure_2[4]).intl;
-              show(obj6);
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              c4 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              if (closure_128_2 != null) {
-                closure_128_2();
-              }
-              c3 = 0;
-            }
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp21) {
-          closure_2 = tmp21;
-          if (0 === c3) {
-            c4 = 3;
-            throw tmp21;
-          } else {
-            v1 = 1;
-          }
-        }
+        c3 = 0;
       }
+      return value;
     }),
     items,
   );
   const items1 = [applicationName, onConfirm];
-  return react.useCallback(() => {
-    let intl;
-    let intl2;
-    let intl3;
-    let intl4;
-    let obj2;
-    const obj = {
-      title: intl.string(intl5.t.JmUENg),
-      body: intl2.format(intl5.t["6l2osp"], obj2),
-      cancelText: intl3.string(intl5.t["ETE/oC"]),
-      confirmText: intl4.string(intl5.t["cY+Oob"]),
-      onConfirm,
-      confirmColor: AlertDefault.Colors.RED,
-    };
-    const show = actions_AlertActionCreatorsDefault.show;
-    actions_AlertActionCreatorsDefault;
-    intl = intl5.intl;
-    intl2 = intl5.intl;
-    obj2 = { applicationName };
-    intl3 = intl5.intl;
-    intl4 = intl5.intl;
-    show(obj);
+  return noop.useCallback(() => {
+    const obj2 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.JmUENg);
+    const intl2 = util.intl;
+    obj2.body = intl2.format(util.t["6l2osp"], { applicationName });
+    const intl3 = util.intl;
+    obj2.cancelText = intl3.string(util.t["ETE/oC"]);
+    const intl4 = util.intl;
+    obj2.confirmText = intl4.string(util.t["cY+Oob"]);
+    obj2.onConfirm = onConfirm;
+    obj2.confirmColor = common_AlertDefault.Colors.RED;
+    actions_AlertActionCreatorsDefault.show(obj2);
   }, items1);
 }

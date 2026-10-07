@@ -4,7 +4,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
 
 export default function gameServerResponseToInstance(id) {
-  let num;
   const obj = {
     id: id.id,
     name: id.name,
@@ -12,7 +11,7 @@ export default function gameServerResponseToInstance(id) {
     regionName: id.region_name,
     planId: id.sku_id,
     planName: id.plan_name,
-    onlineConnectionsCount: num,
+    onlineConnectionsCount: null,
     maxConnectionsCount: null,
     serverIP: null,
     port: null,
@@ -24,10 +23,11 @@ export default function gameServerResponseToInstance(id) {
     gameId: null,
     gameConfig: null,
   };
-  num = id.players_count;
+  let num = id.players_count;
   if (num == null) {
     num = 0;
   }
+  obj.onlineConnectionsCount = num;
   ({
     max_players_count: obj.maxConnectionsCount,
     ip: obj.serverIP,

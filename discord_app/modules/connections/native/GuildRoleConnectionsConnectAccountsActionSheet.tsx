@@ -1,17 +1,17 @@
 // discord_app/modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl14 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04817_AssetRegistry.js";
+import _modDef4817 from "../../../../_runtime/metro/04817__.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../channel/useChannelName.tsx";
@@ -26,667 +26,529 @@ import ConnectionsUtils from "../ConnectionsUtils.tsx";
 import getConnectionsRolesDefault from "../../channel/getConnectionsRoles.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import AssetRegistryDefault2 from "../../../../_runtime/11194_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/11195_AssetRegistry.js";
+import _modDef11194 from "../../../../_runtime/metro/11194__.js";
+import _modDef11195 from "../../../../_runtime/metro/11195__.js";
+import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import UserRecord from "../../../records/UserRecord.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import ChannelStore_mod from "../../../stores/ChannelStore.tsx";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
-import Constants_mod from "../Constants.tsx";
-import Constants_mod2 from "../../../Constants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
 
-let BottomSheet, account, c0, importDefault, obj1, onPlatformConnect, tmp7Result;
-
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_24;
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let closure_29;
-let closure_30;
-let closure_31;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
-let rect;
-let size;
-let size1;
-let size2;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-({ ActivityIndicator: metroRequire, Pressable: metroImportDefault, View: metroImportAll } = react_native);
-let ChannelStore = ChannelStore_mod;
-let Constants = Constants_mod2;
-({
-  MetadataFields: closure_17,
-  OperatorTypes: closure_18,
-  GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_19,
-  GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_20,
-} = Constants);
-Constants = Constants_mod2;
-({
-  PlatformTypes: closure_21,
-  UserSettingsSections: closure_22,
-  AnalyticEvents: closure_23,
-  MarketingURLs: closure_24,
-  FRIEND_SYNC_PLATFORM_TYPES: closure_25,
-  ACTIVITY_PLATFORM_TYPES: closure_26,
-  Permissions: closure_27,
-  EMPTY_STRING_SNOWFLAKE_ID: closure_28,
-} = Constants);
-({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  container: { padding: 12 },
-  connectionsChecksGroups: { marginTop: 16, flexDirection: "column" },
-  connectionsChecksGroup: obj2,
-  connectionsChecksGroupPassed: obj3,
-  connectionsChecksGroupPlatformDisabled: obj4,
-  connectionsChecksGroupRequirementsNotMet: rect,
-  connectionsChecksGroupTextContainer: { flex: 1 },
-  connectionsChecksGroupTextNameContainer: { flexDirection: "row", alignItems: "center" },
-  connectionsChecksGroupTextNameInfoIcon: obj5,
-  connectionsChecksGroupCheckmark: size,
-  connectionsChecksGroupCaret: size1,
-  connectionsCheck: { marginTop: 4 },
-  platformIcon: { width: 24, height: 24, marginRight: 12 },
-  channelName: { flexDirection: "row", alignItems: "center", marginBottom: 4 },
-  channelNameIcon: size2,
-  channelNameText: { overflow: "hidden" },
-  header: { flexDirection: "row", width: "100%", alignItems: "center", marginBottom: 8 },
-  content: { width: "100%" },
-  footerText: { marginBottom: 16 },
-  accountConnectedContainer: { flexDirection: "column", alignItems: "flex-start", marginVertical: 24 },
-  accountConnectedPreview: { width: "100%" },
-  accountConnectedPreviewConnectedUserAccount: obj6,
-  accountConnectedPrivacy: { marginTop: 16, width: "100%" },
-  accountConnectedPrivacyOptionsContainer: obj7,
-  roleGranted: obj8,
-  roleGrantedName: { overflow: "hidden", marginRight: 24 },
-  verifiedIcon: { marginRight: 8 },
-  channelsGranted: obj9,
-  manageConnectionsButton: { marginTop: 8 },
-  loading: { marginTop: 24, marginBottom: 32, alignSelf: "center" },
-  appIcon: { marginRight: 8 },
-  botTag: { marginLeft: 4 },
-};
-obj2 = {
-  flexDirection: "row",
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  borderWidth: 2,
-  borderRadius: nativeDefault.radii.md,
-  paddingHorizontal: 16,
-  paddingVertical: 20,
-  marginBottom: 16,
-  width: "100%",
-  alignItems: "center",
-  position: "relative",
-};
-createStyles = createStyles.createStyles;
-obj3 = {
-  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-};
-obj4 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-rect = {
-  paddingVertical: 4,
-  paddingHorizontal: 12,
-  borderRadius: nativeDefault.radii.md,
-  backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
-  position: "absolute",
-  top: -8,
-  right: 20,
-};
-obj5 = { marginLeft: 4, tintColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
-size = { tintColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, width: 24, height: 24 };
-size1 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 24, height: 24 };
-size2 = { tintColor: nativeDefault.colors.TEXT_MUTED, marginRight: 8, width: 24, height: 24 };
-obj6 = {
-  marginTop: 8,
-  borderRadius: nativeDefault.radii.xs,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
-};
-obj7 = {
-  marginTop: 8,
-  borderWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  borderRadius: nativeDefault.radii.xs,
-  padding: 8,
-  flexDirection: "column",
-};
-obj8 = {
-  flexDirection: "row",
-  alignItems: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  paddingVertical: 12,
-  paddingHorizontal: 8,
-  borderTopStartRadius: 4,
-  borderTopEndRadius: 4,
-  marginTop: 16,
-};
-obj9 = {
-  flexDirection: "column",
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
-  padding: 16,
-  borderBottomStartRadius: 4,
-  borderBottomEndRadius: 4,
-  marginBottom: 24,
-};
-const __initData2 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (platformType) => {
-      const obj = react2;
-      const cResult = obj.c(6);
-      platformType = platformType.platformType;
-      const tmp4 = closure_32();
-      const tmp6 = useThemeDefault();
-      if (cResult[0] === platformType) {
-        let tmp7;
-        if (cResult[1] === tmp6) {
-          tmp7 = cResult[2];
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
+let Constants = fn(6686);
+({ MetadataFields: closure_17, OperatorTypes: closure_18, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_19, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_20 } = Constants);
+Constants = fn(1085);
+({ PlatformTypes: closure_21, UserSettingsSections: closure_22, AnalyticEvents: closure_23, MarketingURLs: closure_24, FRIEND_SYNC_PLATFORM_TYPES: closure_25, ACTIVITY_PLATFORM_TYPES: closure_26, Permissions: closure_27, EMPTY_STRING_SNOWFLAKE_ID: closure_28 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_29, jsxs: closure_30, Fragment: items } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { padding: 12 }, connectionsChecksGroups: { marginTop: 16, flexDirection: "column" }, connectionsChecksGroup: { flexDirection: "row", borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" }, connectionsChecksGroupPassed: null, connectionsChecksGroupPlatformDisabled: null, connectionsChecksGroupRequirementsNotMet: null, connectionsChecksGroupTextContainer: null, connectionsChecksGroupTextNameContainer: null, connectionsChecksGroupTextNameInfoIcon: null, connectionsChecksGroupCheckmark: null, connectionsChecksGroupCaret: null, connectionsCheck: null, platformIcon: null, channelName: null, channelNameIcon: null, channelNameText: null, header: null, content: null, footerText: null, accountConnectedContainer: null, accountConnectedPreview: null, accountConnectedPreviewConnectedUserAccount: null, accountConnectedPrivacy: null, accountConnectedPrivacyOptionsContainer: null, roleGranted: null, roleGrantedName: null, verifiedIcon: null, channelsGranted: null, manageConnectionsButton: null, loading: null, appIcon: null, botTag: null };
+let obj3 = { flexDirection: "row", borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: nativeDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
+obj2.connectionsChecksGroupPassed = { borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj4 = { borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.connectionsChecksGroupPlatformDisabled = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+const rect = { paddingVertical: 4, paddingHorizontal: 12, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, position: "absolute", top: -8, right: 20 };
+obj2.connectionsChecksGroupRequirementsNotMet = rect;
+obj2.connectionsChecksGroupTextContainer = { flex: 1 };
+obj2.connectionsChecksGroupTextNameContainer = { flexDirection: "row", alignItems: "center" };
+let obj5 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.connectionsChecksGroupTextNameInfoIcon = { marginLeft: 4, tintColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+let size = { tintColor: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, width: 24, height: 24 };
+obj2.connectionsChecksGroupCheckmark = size;
+const size1 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 24, height: 24 };
+obj2.connectionsChecksGroupCaret = size1;
+obj2.connectionsCheck = { marginTop: 4 };
+obj2.platformIcon = { width: 24, height: 24, marginRight: 12 };
+obj2.channelName = { flexDirection: "row", alignItems: "center", marginBottom: 4 };
+const size2 = { tintColor: nativeDefault.colors.TEXT_MUTED, marginRight: 8, width: 24, height: 24 };
+obj2.channelNameIcon = size2;
+obj2.channelNameText = { overflow: "hidden" };
+obj2.header = { flexDirection: "row", width: "100%", alignItems: "center", marginBottom: 8 };
+obj2.content = { width: "100%" };
+obj2.footerText = { marginBottom: 16 };
+obj2.accountConnectedContainer = { flexDirection: "column", alignItems: "flex-start", marginVertical: 24 };
+obj2.accountConnectedPreview = { width: "100%" };
+let obj6 = { marginLeft: 4, tintColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING };
+obj2.accountConnectedPreviewConnectedUserAccount = { marginTop: 8, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.accountConnectedPrivacy = { marginTop: 16, width: "100%" };
+let obj7 = { marginTop: 8, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.accountConnectedPrivacyOptionsContainer = { marginTop: 8, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, padding: 8, flexDirection: "column" };
+let obj8 = { marginTop: 8, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, padding: 8, flexDirection: "column" };
+obj2.roleGranted = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: 12, paddingHorizontal: 8, borderTopStartRadius: 4, borderTopEndRadius: 4, marginTop: 16 };
+obj2.roleGrantedName = { overflow: "hidden", marginRight: 24 };
+obj2.verifiedIcon = { marginRight: 8 };
+let obj9 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: 12, paddingHorizontal: 8, borderTopStartRadius: 4, borderTopEndRadius: 4, marginTop: 16 };
+obj2.channelsGranted = { flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, padding: 16, borderBottomStartRadius: 4, borderBottomEndRadius: 4, marginBottom: 24 };
+obj2.manageConnectionsButton = { marginTop: 8 };
+obj2.loading = { marginTop: 24, marginBottom: 32, alignSelf: "center" };
+obj2.appIcon = { marginRight: 8 };
+obj2.botTag = { marginLeft: 4 };
+const __initData5 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((platformType) => {
+  const cResult = c.c(6);
+  platformType = platformType.platformType;
+  const tmp4 = closure_32();
+  const tmp6 = useThemeDefault();
+  if (cResult[0] === platformType) {
+    if (cResult[1] === tmp6) {
+      if (cResult[3] === cResult[2]) {
+        if (cResult[4] === tmp4.platformIcon) {
+          let tmp10 = cResult[5];
         }
-        if (cResult[3] === tmp7) {
-          let tmp11;
-          if (cResult[4] === tmp4.platformIcon) {
-            tmp11 = cResult[5];
-          }
-          return tmp11;
-        }
-        const obj2 = { source: tmp7, style: tmp4.platformIcon, disableColor: true };
-        const tmp13 = set(native.Icon, obj2);
-        cResult[3] = tmp7;
-        cResult[4] = tmp4.platformIcon;
-        cResult[5] = tmp13;
-        tmp11 = tmp13;
+        return tmp10;
       }
-      const tmp5Result = PlatformsDefault;
-      const value = tmp5Result.get(platformType);
-      const makeSource = AvatarUtils.makeSource;
-      AvatarUtils;
-      const icon = value.icon;
-      const tmpResult2 = shared;
-      const source = makeSource(tmpResult2.isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
-      cResult[0] = platformType;
-      cResult[1] = tmp6;
-      cResult[2] = source;
-      tmp7 = source;
+      const obj2 = { source: cResult[2], style: tmp4.platformIcon, disableColor: true };
+      const tmp12 = closure_1_29(native.Icon, obj2);
+      cResult[3] = cResult[2];
+      cResult[4] = tmp4.platformIcon;
+      cResult[5] = tmp12;
+      tmp10 = tmp12;
     }
-  : (platformType) => {
-      platformType = platformType.platformType;
-      const tmp = closure_32();
-      const tmp3 = useThemeDefault();
-      const obj = PlatformsDefault;
-      const value = obj.get(platformType);
-      const makeSource = AvatarUtils.makeSource;
-      AvatarUtils;
-      const icon = value.icon;
-      const obj2 = shared;
-      const source = makeSource(obj2.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
-      const obj3 = { source, style: tmp.platformIcon, disableColor: true };
-      return set(native.Icon, obj3);
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let channel;
-      let items;
-      let style;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(15);
-      ({ channel, style } = arg0);
-      const tmp4 = closure_32();
-      if (cResult[0] !== channel) {
-        const tmpResult = utils_ChannelUtils;
-        const channelIcon = tmpResult.getChannelIcon(channel);
-        cResult[0] = channel;
-        cResult[1] = channelIcon;
-        tmp5 = channelIcon;
+  }
+  value = PlatformsDefault.get(platformType);
+  const tmp5Result = PlatformsDefault;
+  const tmpResult = AvatarUtils;
+  const icon = value.icon;
+  const source = tmpResult.makeSource(shared.isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
+  cResult[0] = platformType;
+  cResult[1] = tmp6;
+  cResult[2] = source;
+  const tmpResult2 = shared;
+}) : ((platformType) => {
+  const tmp = closure_32();
+  const tmp3 = useThemeDefault();
+  value = PlatformsDefault.get(platformType.platformType);
+  const obj2 = AvatarUtils;
+  const icon = value.icon;
+  const source = obj2.makeSource(shared.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
+  return closure_1_29(native.Icon, { source, style: tmp.platformIcon, disableColor: true });
+});
+ReactCompilerGating = fn(558);
+let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(15);
+  ({ channel, style } = arg0);
+  const tmp4 = closure_32();
+  if (cResult[0] !== channel) {
+    const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
+    cResult[0] = channel;
+    cResult[1] = channelIcon;
+    let tmp5 = channelIcon;
+    const tmpResult = utils_ChannelUtils;
+  } else {
+    tmp5 = cResult[1];
+  }
+  const tmp7 = useChannelNameDefault(channel);
+  if (cResult[2] === style) {
+    if (cResult[3] === tmp4.channelName) {
+      let tmp8 = cResult[4];
+    }
+    if (cResult[5] === tmp5) {
+      if (cResult[6] === tmp4.channelNameIcon) {
+        let tmp9 = cResult[7];
+      }
+      if (cResult[8] === tmp7) {
+        if (cResult[9] === tmp4.channelNameText) {
+          let tmp12 = cResult[10];
+        }
+        if (cResult[11] === tmp8) {
+          if (cResult[12] === tmp9) {
+            if (cResult[13] === tmp12) {
+              let tmp15 = cResult[14];
+            }
+            return tmp15;
+          }
+        }
+        const obj2 = { style: tmp8, children: null };
+        const items = [tmp9, tmp12];
+        obj2.children = items;
+        const tmp18 = __initData3(closure_1_8, obj2);
+        cResult[11] = tmp8;
+        cResult[12] = tmp9;
+        cResult[13] = tmp12;
+        cResult[14] = tmp18;
+        tmp15 = tmp18;
+      }
+      const obj3 = { variant: "heading-lg/semibold", color: "text-default", style: tmp4.channelNameText, lineClamp: 1, children: tmp7 };
+      const tmp14 = closure_1_29(Text_Text.Text, obj3);
+      cResult[8] = tmp7;
+      cResult[9] = tmp4.channelNameText;
+      cResult[10] = tmp14;
+      tmp12 = tmp14;
+    }
+    let tmp10 = null;
+    if (null != tmp5) {
+      const obj4 = { source: tmp5, style: tmp4.channelNameIcon };
+      tmp10 = closure_1_29(native.Icon, obj4);
+    }
+    cResult[5] = tmp5;
+    cResult[6] = tmp4.channelNameIcon;
+    cResult[7] = tmp10;
+    tmp9 = tmp10;
+  }
+  const items1 = [tmp4.channelName, style];
+  cResult[2] = style;
+  cResult[3] = tmp4.channelName;
+  cResult[4] = items1;
+  tmp8 = items1;
+}) : ((channel) => {
+  channel = channel.channel;
+  const tmp = closure_32();
+  const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
+  const obj2 = { style: null, children: null };
+  const items = [tmp.channelName, channel.style];
+  obj2.style = items;
+  let tmp8 = null;
+  if (null != channelIcon) {
+    const obj3 = { source: channelIcon, style: tmp.channelNameIcon };
+    tmp8 = closure_1_29(native.Icon, obj3);
+  }
+  const items1 = [tmp8, ];
+  const tmp5 = useChannelNameDefault(channel);
+  items1[1] = closure_1_29(Text_Text.Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.channelNameText, lineClamp: 1, children: useChannelNameDefault(channel) });
+  obj2.children = items1;
+  return __initData3(closure_1_8, obj2);
+});
+ReactCompilerGating = fn(558);
+let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((result) => {
+  const cResult = c.c(16);
+  ({ connectionType, connectionMetadataField, operator, value, description } = result);
+  const tmp4 = closure_32();
+  if (connectionType === closure_1_20) {
+    return null;
+  } else {
+    if (null != description) {
+      if (constants2.LESS_THAN === operator) {
+        if (cResult[0] === description) {
+        }
+        const intl2 = util.intl;
+        const obj2 = { description, count: null };
+        const _Math2 = Math;
+        const _Number2 = Number;
+        obj2.count = Math.max(0, Number(value) - 1);
+        const formatResult = intl2.format(util.t["2p7dA3"], obj2);
+        cResult[0] = description;
+        cResult[1] = value;
+        cResult[2] = formatResult;
       } else {
-        tmp5 = cResult[1];
-      }
-      const tmp7 = useChannelNameDefault(channel);
-      if (cResult[2] === style) {
-        let tmp8;
-        if (cResult[3] === tmp4.channelName) {
-          tmp8 = cResult[4];
-        }
-        if (cResult[5] === tmp5) {
-          let tmp9;
-          if (cResult[6] === tmp4.channelNameIcon) {
-            tmp9 = cResult[7];
-          }
-          if (cResult[8] === tmp7) {
-            let tmp12;
-            if (cResult[9] === tmp4.channelNameText) {
-              tmp12 = cResult[10];
+        let tmp9 = description;
+        if (tmp11.GREATER_THAN === operator) {
+          if (cResult[3] === description) {
+            if (cResult[4] === value) {
+              let tmp12 = cResult[5];
             }
-            if (cResult[11] === tmp8) {
-              if (cResult[12] === tmp9) {
-                let tmp15;
-                if (cResult[13] === tmp12) {
-                  tmp15 = cResult[14];
-                }
-                return tmp15;
-              }
-            }
-            const obj2 = { style: tmp8, children: items };
-            items = [tmp9, tmp12];
-            const tmp18 = __initData(metroImportAll, obj2);
-            cResult[11] = tmp8;
-            cResult[12] = tmp9;
-            cResult[13] = tmp12;
-            cResult[14] = tmp18;
-            tmp15 = tmp18;
+            tmp9 = tmp12;
           }
-          const obj3 = {
-            variant: "heading-lg/semibold",
-            color: "text-default",
-            style: tmp4.channelNameText,
-            lineClamp: 1,
-            children: tmp7,
-          };
-          const tmp14 = set(Text_Text.Text, obj3);
-          cResult[8] = tmp7;
-          cResult[9] = tmp4.channelNameText;
-          cResult[10] = tmp14;
-          tmp12 = tmp14;
+          const intl = util.intl;
+          const obj3 = { description, count: null };
+          const _Math = Math;
+          const _Number = Number;
+          obj3.count = Math.max(0, Number(value) + 1);
+          const formatResult1 = intl.format(util.t["2p7dA3"], obj3);
+          cResult[3] = description;
+          cResult[4] = value;
+          cResult[5] = formatResult1;
+          tmp12 = formatResult1;
         }
-        let tmp10 = null;
-        if (null != tmp5) {
-          const obj4 = { source: tmp5, style: tmp4.channelNameIcon };
-          tmp10 = set(native.Icon, obj4);
+      }
+    } else {
+      if (constants2.EQUAL === operator) {
+        let tmp7 = connectionType === constants3.PAYPAL;
+        if (tmp7) {
+          tmp7 = connectionMetadataField === constants.PAYPAL_VERIFIED;
         }
-        cResult[5] = tmp5;
-        cResult[6] = tmp4.channelNameIcon;
-        cResult[7] = tmp10;
-        tmp9 = tmp10;
-      }
-      const items1 = [tmp4.channelName, style];
-      cResult[2] = style;
-      cResult[3] = tmp4.channelName;
-      cResult[4] = items1;
-      tmp8 = items1;
-    }
-  : (channel) => {
-      let items;
-      let items1;
-      channel = channel.channel;
-      const style = channel.style;
-      const tmp = closure_32();
-      const obj = utils_ChannelUtils;
-      const channelIcon = obj.getChannelIcon(channel);
-      const obj2 = { style: items, children: items1 };
-      items = [tmp.channelName, style];
-      let tmp8 = null;
-      const tmp5 = useChannelNameDefault(channel);
-      if (null != channelIcon) {
-        const obj3 = { source: channelIcon, style: tmp.channelNameIcon };
-        tmp8 = set(native.Icon, obj3);
-      }
-      items1 = [tmp8];
-      const obj4 = {
-        variant: "heading-lg/semibold",
-        color: "text-default",
-        style: tmp.channelNameText,
-        lineClamp: 1,
-        children: tmp5,
-      };
-      items1[1] = set(Text_Text.Text, obj4);
-      return __initData(metroImportAll, obj2);
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (result) => {
-      let connectionMetadataField;
-      let connectionType;
-      let description;
-      let operator;
-      let value;
-      const obj = react2;
-      const cResult = obj.c(16);
-      ({ connectionType, connectionMetadataField, operator, value, description } = result);
-      result = result.result;
-      const tmp4 = closure_32();
-      if (connectionType === closure_20) {
+        let v0BlpbA = util.t["0BlpbA"];
+        if (tmp7) {
+          v0BlpbA = util.t.dcSDhW;
+        }
+      } else if (constants2.NOT_EQUAL === operator) {
+        v0BlpbA = util.t.otcpTN;
+      } else if (constants2.LESS_THAN === operator) {
+        v0BlpbA = util.t.Ef35xs;
+      } else if (constants2.GREATER_THAN === operator) {
+        v0BlpbA = util.t["8W9OXU"];
+      } else {
         return null;
+      }
+      if (cResult[6] === connectionMetadataField) {
+        if (cResult[7] === connectionType) {
+          if (cResult[8] === operator) {
+            if (cResult[9] === v0BlpbA) {
+              if (cResult[10] === value) {
+                tmp9 = cResult[11];
+              }
+            }
+          }
+        }
+      }
+      const obj4 = { connectionType, connectionMetadataField, operator, operatorText: v0BlpbA, value };
+      const connectionsCheckText = ConnectionsUtils.getConnectionsCheckText(obj4);
+      cResult[6] = connectionMetadataField;
+      cResult[7] = connectionType;
+      cResult[8] = operator;
+      cResult[9] = v0BlpbA;
+      cResult[10] = value;
+      cResult[11] = connectionsCheckText;
+      tmp9 = connectionsCheckText;
+      const tmpResult = ConnectionsUtils;
+    }
+    if (null == tmp9) {
+      return null;
+    } else {
+      let str = "text-feedback-critical";
+      if (result.result) {
+        str = "text-default";
+      }
+      if (cResult[12] === tmp9) {
+        if (cResult[13] === tmp4.connectionsCheck) {
+          if (cResult[14] === str) {
+            let tmp19 = cResult[15];
+          }
+          return tmp19;
+        }
+      }
+      const obj5 = { variant: "text-xs/normal", color: str, style: tmp4.connectionsCheck, children: tmp9 };
+      const tmp21 = closure_1_29(Text_Text.Text, obj5);
+      cResult[12] = tmp9;
+      cResult[13] = tmp4.connectionsCheck;
+      cResult[14] = str;
+      cResult[15] = tmp21;
+      tmp19 = tmp21;
+    }
+  }
+}) : ((result) => {
+  ({ connectionType, connectionMetadataField, operator, value, description } = result);
+  if (connectionType === closure_1_20) {
+    return null;
+  } else {
+    if (null != description) {
+      if (constants2.LESS_THAN === operator) {
+        const intl = util.intl;
+        const obj2 = { description, count: null };
+        const _Math = Math;
+        const _Number = Number;
+        obj2.count = Math.max(0, Number(value) - 1);
+        let formatResult = intl.format(util.t["2p7dA3"], obj2);
       } else {
-        let tmp10;
-        if (null != description) {
-          if (constants2.LESS_THAN === operator) {
-            if (cResult[0] === description) {
-              let tmp17;
-              if (cResult[1] === value) {
-                tmp17 = cResult[2];
-              }
-              tmp10 = tmp17;
-            }
-            const intl2 = intl14.intl;
-            const format2 = intl2.format;
-            const _Math2 = Math;
-            const _Number2 = Number;
-            const obj2 = { description, count: Math.max(0, Number(value) - 1) };
-            const v2p7dA3 = intl14.t["2p7dA3"];
-            const format2Result = format2(v2p7dA3, obj2);
-            cResult[0] = description;
-            cResult[1] = value;
-            cResult[2] = format2Result;
-            tmp17 = format2Result;
-          } else {
-            tmp10 = description;
-            if (tmp12.GREATER_THAN === operator) {
-              if (cResult[3] === description) {
-                let tmp13;
-                if (cResult[4] === value) {
-                  tmp13 = cResult[5];
-                }
-                tmp10 = tmp13;
-              }
-              const intl = intl14.intl;
-              const format = intl.format;
-              const _Math = Math;
-              const _Number = Number;
-              const obj3 = { description, count: Math.max(0, Number(value) + 1) };
-              const v2p7dA31 = intl14.t["2p7dA3"];
-              const formatResult = format(v2p7dA31, obj3);
-              cResult[3] = description;
-              cResult[4] = value;
-              cResult[5] = formatResult;
-              tmp13 = formatResult;
-            }
+        formatResult = description;
+        if (tmp17.GREATER_THAN === operator) {
+          const intl2 = util.intl;
+          const obj3 = { description, count: null };
+          const _Math2 = Math;
+          const _Number2 = Number;
+          obj3.count = Math.max(0, Number(value) + 1);
+          formatResult = intl2.format(util.t["2p7dA3"], obj3);
+        }
+      }
+    } else {
+      if (constants2.EQUAL === operator) {
+        let tmp12 = connectionType === constants3.PAYPAL;
+        if (tmp12) {
+          tmp12 = connectionMetadataField === constants.PAYPAL_VERIFIED;
+        }
+        let v0BlpbA = util.t["0BlpbA"];
+        if (tmp12) {
+          v0BlpbA = util.t.dcSDhW;
+        }
+      } else if (constants2.NOT_EQUAL === operator) {
+        v0BlpbA = util.t.otcpTN;
+      } else if (constants2.LESS_THAN === operator) {
+        v0BlpbA = util.t.Ef35xs;
+      } else if (constants2.GREATER_THAN === operator) {
+        v0BlpbA = util.t["8W9OXU"];
+      } else {
+        return null;
+      }
+      const obj4 = { connectionType, connectionMetadataField, operator, operatorText: v0BlpbA, value };
+      formatResult = ConnectionsUtils.getConnectionsCheckText(obj4);
+    }
+    let tmp22Result = null;
+    if (null != formatResult) {
+      let str = "text-feedback-critical";
+      if (result.result) {
+        str = "text-default";
+      }
+      const obj5 = { variant: "text-xs/normal", color: str, style: tmp.connectionsCheck, children: formatResult };
+      tmp22Result = closure_1_29(Text_Text.Text, obj5);
+    }
+    return tmp22Result;
+  }
+});
+ReactCompilerGating = fn(558);
+let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? ((eligibilityState) => {
+  const cResult = canStartAuthorization(identity_connected_account_type[18]).c(57);
+  eligibilityState = eligibilityState.eligibilityState;
+  const onAttempted = eligibilityState.onAttempted;
+  const onIdentityAuthorize = eligibilityState.onIdentityAuthorize;
+  const tmp4 = closure_32();
+  let obj = canStartAuthorization(identity_connected_account_type[18]);
+  const getOrFetchApplicationBatched = canStartAuthorization(identity_connected_account_type[29]).useGetOrFetchApplicationBatched(eligibilityState.application_id);
+  const tmp7 = identity_auth_required_scopes(identity_connected_account_type[30])(getOrFetchApplicationBatched);
+  canStartAuthorization = tmp7.canStartAuthorization;
+  const startAuthorization = tmp7.startAuthorization;
+  if (cResult[0] === canStartAuthorization) {
+    if (cResult[1] === eligibilityState.identity_auth_required_scopes) {
+      if (cResult[2] === eligibilityState.identity_connected_account_type) {
+        canStartAuthorization = cResult[3];
+        identity_auth_required_scopes = cResult[4];
+        identity_connected_account_type = cResult[5];
+      }
+      const application = eligibilityState.application;
+      if (cResult[6] !== application) {
+        let bot;
+        if (application != null) {
+          bot = application.bot;
+        }
+        let tmp15 = null;
+        if (null != bot) {
+          tmp15 = new UserRecord(application.bot);
+        }
+        cResult[6] = application;
+        cResult[7] = tmp15;
+        let obj3 = tmp15;
+      } else {
+        obj3 = cResult[7];
+      }
+      const result = eligibilityState.result;
+      if (null == obj3) {
+        if (result) {
+          if (cResult[13] !== tmp4.connectionsChecksGroupCheckmark) {
+            const obj4 = { source: tmp6(tmp2[32]), style: tmp4.connectionsChecksGroupCheckmark };
+            const tmp36 = closure_29(tmp(tmp2[23]).Icon, obj4);
+            cResult[13] = tmp4.connectionsChecksGroupCheckmark;
+            cResult[14] = tmp36;
           }
         } else {
-          let dcSDhW;
-          if (constants2.EQUAL === operator) {
-            let tmp8 = connectionType === constants3.PAYPAL;
-            const v0BlpbA = intl14.t["0BlpbA"];
-            if (tmp8) {
-              tmp8 = connectionMetadataField === constants.PAYPAL_VERIFIED;
-            }
-            dcSDhW = v0BlpbA;
-            if (tmp8) {
-              dcSDhW = intl14.t.dcSDhW;
-            }
-          } else if (constants2.NOT_EQUAL === operator) {
-            dcSDhW = intl14.t.otcpTN;
-          } else if (constants2.LESS_THAN === operator) {
-            dcSDhW = intl14.t.Ef35xs;
-          } else if (constants2.GREATER_THAN === operator) {
-            dcSDhW = intl14.t["8W9OXU"];
-          } else {
-            return null;
-          }
-          if (cResult[6] === connectionMetadataField) {
-            if (cResult[7] === connectionType) {
-              if (cResult[8] === operator) {
-                if (cResult[9] === dcSDhW) {
-                  if (cResult[10] === value) {
-                    tmp10 = cResult[11];
+          if (tmp8) {
+            if (cResult[16] !== tmp4.connectionsChecksGroupCaret) {
+              const obj5 = { source: null, style: null };
+              class G {
+                constructor() {
+                  if (!result) {
+                    tmp = c0;
+                    if (c0) {
+                      tmp2 = closure_2;
+                      tmp3 = null;
+                      someResult = null != closure_2;
+                      if (someResult) {
+                        tmp5 = closure_14;
+                        accounts = closure_14.getAccounts();
+                        someResult = accounts.some(() => { ... });
+                      }
+                      connection_type = null;
+                      tmp6 = onAttempted;
+                      if (!someResult) {
+                        tmp8 = eligibilityState;
+                        connection_type = eligibilityState.connection_type;
+                      }
+                      tmp9 = eligibilityState;
+                      application_id = eligibilityState.application_id;
+                      if (application_id == null) {
+                        application_id = null;
+                      }
+                      tmp6Result = tmp6(connection_type, application_id);
+                      tmp12 = canStartAuthorization;
+                      if (canStartAuthorization) {
+                        tmp18 = startAuthorization;
+                        obj1 = { analyticsLocations: null };
+                        obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                        tmp19 = startAuthorization(obj1);
+                      } else {
+                        tmp13 = null != tmp2;
+                        if (tmp13) {
+                          tmp14 = closure_1;
+                          tmp13 = null != closure_1;
+                        }
+                        if (tmp13) {
+                          tmp13 = null != tmp9.application_id;
+                        }
+                        if (tmp13) {
+                          tmp15 = onIdentityAuthorize;
+                          obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                          obj4.applicationId = tmp9.application_id;
+                          tmp16 = closure_1;
+                          obj4.scopes = closure_1;
+                          obj4.connectedAccountProvider = tmp2;
+                          obj4.wasAlreadyConnected = someResult;
+                          tmp17 = onIdentityAuthorize(obj4);
+                        }
+                      }
+                    }
                   }
+                  return;
                 }
               }
-            }
-          }
-          const obj4 = { connectionType, connectionMetadataField, operator, operatorText: dcSDhW, value };
-          const tmpResult = ConnectionsUtils;
-          const connectionsCheckText = tmpResult.getConnectionsCheckText(obj4);
-          cResult[6] = connectionMetadataField;
-          cResult[7] = connectionType;
-          cResult[8] = operator;
-          cResult[9] = dcSDhW;
-          cResult[10] = value;
-          cResult[11] = connectionsCheckText;
-          tmp10 = connectionsCheckText;
-        }
-        if (null == tmp10) {
-          return null;
-        } else {
-          let str = "text-feedback-critical";
-          if (result) {
-            str = "text-default";
-          }
-          if (cResult[12] === tmp10) {
-            if (cResult[13] === tmp4.connectionsCheck) {
-              let tmp21;
-              if (cResult[14] === str) {
-                tmp21 = cResult[15];
-              }
-              return tmp21;
-            }
-          }
-          const obj5 = { variant: "text-xs/normal", color: str, style: tmp4.connectionsCheck, children: tmp10 };
-          const tmp23 = set(Text_Text.Text, obj5);
-          cResult[12] = tmp10;
-          cResult[13] = tmp4.connectionsCheck;
-          cResult[14] = str;
-          cResult[15] = tmp23;
-          tmp21 = tmp23;
-        }
-      }
-    }
-  : (result) => {
-      let connectionMetadataField;
-      let connectionType;
-      let description;
-      let operator;
-      let value;
-      ({ connectionType, connectionMetadataField, operator, value, description } = result);
-      result = result.result;
-      if (connectionType === closure_20) {
-        return null;
-      } else {
-        let formatResult;
-        if (null != description) {
-          if (constants2.LESS_THAN === operator) {
-            const intl = intl14.intl;
-            const format = intl.format;
-            const _Math = Math;
-            const _Number = Number;
-            const obj2 = { description, count: Math.max(0, Number(value) - 1) };
-            const v2p7dA3 = intl14.t["2p7dA3"];
-            formatResult = format(v2p7dA3, obj2);
-          } else {
-            formatResult = description;
-            if (tmp18.GREATER_THAN === operator) {
-              const intl2 = intl14.intl;
-              const format2 = intl2.format;
-              const _Math2 = Math;
-              const _Number2 = Number;
-              const obj3 = { description, count: Math.max(0, Number(value) + 1) };
-              const v2p7dA31 = intl14.t["2p7dA3"];
-              formatResult = format2(v2p7dA31, obj3);
-            }
-          }
-        } else {
-          let dcSDhW;
-          if (constants2.EQUAL === operator) {
-            let tmp13 = connectionType === constants3.PAYPAL;
-            const v0BlpbA = intl14.t["0BlpbA"];
-            if (tmp13) {
-              tmp13 = connectionMetadataField === constants.PAYPAL_VERIFIED;
-            }
-            dcSDhW = v0BlpbA;
-            if (tmp13) {
-              dcSDhW = intl14.t.dcSDhW;
-            }
-          } else if (constants2.NOT_EQUAL === operator) {
-            dcSDhW = intl14.t.otcpTN;
-          } else if (constants2.LESS_THAN === operator) {
-            dcSDhW = intl14.t.Ef35xs;
-          } else if (constants2.GREATER_THAN === operator) {
-            dcSDhW = intl14.t["8W9OXU"];
-          } else {
-            return null;
-          }
-          const obj4 = { connectionType, connectionMetadataField, operator, operatorText: dcSDhW, value };
-          const obj = ConnectionsUtils;
-          formatResult = obj.getConnectionsCheckText(obj4);
-        }
-        let tmp24Result = null;
-        if (null != formatResult) {
-          let str = "text-feedback-critical";
-          const Text = Text_Text.Text;
-          if (result) {
-            str = "text-default";
-          }
-          const obj5 = { variant: "text-xs/normal", color: str, style: tmp.connectionsCheck, children: formatResult };
-          tmp24Result = set(Text, obj5);
-        }
-        return tmp24Result;
-      }
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function (eligibilityState) {
-      let canStartAuthorization;
-      let identity_auth_required_scopes;
-      let identity_connected_account_type;
-      let intl;
-      let intl2;
-      let items;
-      let items2;
-      let obj = canStartAuthorization(identity_connected_account_type[18]);
-      const cResult = obj.c(57);
-      eligibilityState = eligibilityState.eligibilityState;
-      const onAttempted = eligibilityState.onAttempted;
-      const onIdentityAuthorize = eligibilityState.onIdentityAuthorize;
-      const tmp4 = closure_32();
-      let obj2 = canStartAuthorization(identity_connected_account_type[29]);
-      const getOrFetchApplicationBatched = obj2.useGetOrFetchApplicationBatched(eligibilityState.application_id);
-      const tmp7 = identity_auth_required_scopes(identity_connected_account_type[30])(getOrFetchApplicationBatched);
-      canStartAuthorization = tmp7.canStartAuthorization;
-      const startAuthorization = tmp7.startAuthorization;
-      if (cResult[0] === canStartAuthorization) {
-        if (cResult[1] === eligibilityState.identity_auth_required_scopes) {
-          let obj4;
-          let tmp26;
-          if (cResult[2] === eligibilityState.identity_connected_account_type) {
-            canStartAuthorization = cResult[3];
-            identity_auth_required_scopes = cResult[4];
-            identity_connected_account_type = cResult[5];
-          }
-          const application = eligibilityState.application;
-          if (cResult[6] !== application) {
-            let tmp14 = null;
-            let bot;
-            if (application != null) {
-              bot = application.bot;
-            }
-            let tmp16 = null;
-            if (null != bot) {
-              const self = this;
-              const self2 = this;
-              tmp16 = new UserRecord(application.bot);
-            }
-            cResult[6] = application;
-            cResult[7] = tmp16;
-            obj4 = tmp16;
-          } else {
-            obj4 = cResult[7];
-          }
-          const result = eligibilityState.result;
-          let closure_8 = result;
-          if (null != obj4) {
-            let tmp20;
-            const botTag = tmp4.botTag;
-            if (cResult[8] !== obj4) {
-              const isVerifiedBotResult = obj4.isVerifiedBot();
-              cResult[8] = obj4;
-              cResult[9] = isVerifiedBotResult;
-              tmp20 = isVerifiedBotResult;
+              obj5.source = tmp6(tmp2[33]);
+              obj5.style = tmp4.connectionsChecksGroupCaret;
+              const tmp33 = closure_29(tmp32, obj5);
+              cResult[16] = tmp4.connectionsChecksGroupCaret;
+              cResult[17] = tmp33;
+              let tmp30 = tmp33;
             } else {
-              tmp20 = cResult[9];
+              tmp30 = cResult[17];
             }
-            const obj3 = { style: botTag, verified: tmp20 };
-            const tmp24 = closure_29(identity_auth_required_scopes(identity_connected_account_type[31]), obj3);
-            cResult[10] = tmp4.botTag;
+            let tmp26 = tmp30;
+          } else {
+            const _Symbol = Symbol;
             class G {
               constructor() {
-                tmp = result;
-                if (!tmp) {
-                  tmp2 = c0;
-                  if (tmp2) {
-                    tmp3 = closure_2;
-                    tmp4 = null;
+                if (!result) {
+                  tmp = c0;
+                  if (c0) {
+                    tmp2 = closure_2;
+                    tmp3 = null;
                     someResult = null != closure_2;
                     if (someResult) {
-                      tmp6 = closure_14;
+                      tmp5 = closure_14;
                       accounts = closure_14.getAccounts();
-                      someResult = accounts.some(() => {
-                        /* body not rendered: F141318 */
-                      });
+                      someResult = accounts.some(() => { ... });
                     }
                     connection_type = null;
-                    tmp7 = onAttempted;
+                    tmp6 = onAttempted;
                     if (!someResult) {
-                      tmp9 = eligibilityState;
+                      tmp8 = eligibilityState;
                       connection_type = eligibilityState.connection_type;
                     }
-                    tmp10 = eligibilityState;
+                    tmp9 = eligibilityState;
                     application_id = eligibilityState.application_id;
                     if (application_id == null) {
                       application_id = null;
                     }
-                    tmp7Result = tmp7(connection_type, application_id);
-                    tmp13 = canStartAuthorization;
-                    if (tmp13) {
-                      tmp19 = startAuthorization;
+                    tmp6Result = tmp6(connection_type, application_id);
+                    tmp12 = canStartAuthorization;
+                    if (canStartAuthorization) {
+                      tmp18 = startAuthorization;
                       obj1 = { analyticsLocations: null };
                       obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                      tmp20 = startAuthorization(obj1);
+                      tmp19 = startAuthorization(obj1);
                     } else {
-                      tmp14 = null != tmp3;
-                      if (tmp14) {
-                        tmp15 = closure_1;
-                        tmp14 = null != closure_1;
+                      tmp13 = null != tmp2;
+                      if (tmp13) {
+                        tmp14 = closure_1;
+                        tmp13 = null != closure_1;
                       }
-                      if (tmp14) {
-                        tmp14 = null != tmp10.application_id;
+                      if (tmp13) {
+                        tmp13 = null != tmp9.application_id;
                       }
-                      if (tmp14) {
-                        tmp16 = onIdentityAuthorize;
-                        obj4 = {
-                          applicationId: null,
-                          scopes: null,
-                          connectedAccountProvider: null,
-                          wasAlreadyConnected: null,
-                        };
-                        obj4.applicationId = tmp10.application_id;
-                        tmp17 = closure_1;
+                      if (tmp13) {
+                        tmp15 = onIdentityAuthorize;
+                        obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                        obj4.applicationId = tmp9.application_id;
+                        tmp16 = closure_1;
                         obj4.scopes = closure_1;
-                        obj4.connectedAccountProvider = tmp3;
+                        obj4.connectedAccountProvider = tmp2;
                         obj4.wasAlreadyConnected = someResult;
-                        tmp18 = onIdentityAuthorize(obj4);
+                        tmp17 = onIdentityAuthorize(obj4);
                       }
                     }
                   }
@@ -694,180 +556,69 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            cResult[11] = tmp20;
-            cResult[12] = tmp24;
-          }
-          if (result) {
-            let tmp32;
-            if (cResult[13] !== tmp4.connectionsChecksGroupCheckmark) {
-              const obj5 = {
-                source: identity_auth_required_scopes(identity_connected_account_type[32]),
-                style: tmp4.connectionsChecksGroupCheckmark,
-              };
-              const Icon2 = tmp(tmp2[23]).Icon;
-              cResult[13] = tmp4.connectionsChecksGroupCheckmark;
-              cResult[14] = closure_29(Icon2, obj5);
-              closure_29(Icon2, obj5);
-              class G {
-                constructor() {
-                  tmp = result;
-                  if (!tmp) {
-                    tmp2 = c0;
-                    if (tmp2) {
-                      tmp3 = closure_2;
-                      tmp4 = null;
-                      someResult = null != closure_2;
-                      if (someResult) {
-                        tmp6 = closure_14;
-                        accounts = closure_14.getAccounts();
-                        someResult = accounts.some(() => {
-                          /* body not rendered: F141318 */
-                        });
-                      }
-                      connection_type = null;
-                      tmp7 = onAttempted;
-                      if (!someResult) {
-                        tmp9 = eligibilityState;
-                        connection_type = eligibilityState.connection_type;
-                      }
-                      tmp10 = eligibilityState;
-                      application_id = eligibilityState.application_id;
-                      if (application_id == null) {
-                        application_id = null;
-                      }
-                      tmp7Result = tmp7(connection_type, application_id);
-                      tmp13 = canStartAuthorization;
-                      if (tmp13) {
-                        tmp19 = startAuthorization;
-                        obj1 = { analyticsLocations: null };
-                        obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                        tmp20 = startAuthorization(obj1);
-                      } else {
-                        tmp14 = null != tmp3;
-                        if (tmp14) {
-                          tmp15 = closure_1;
-                          tmp14 = null != closure_1;
-                        }
-                        if (tmp14) {
-                          tmp14 = null != tmp10.application_id;
-                        }
-                        if (tmp14) {
-                          tmp16 = onIdentityAuthorize;
-                          obj4 = {
-                            applicationId: null,
-                            scopes: null,
-                            connectedAccountProvider: null,
-                            wasAlreadyConnected: null,
-                          };
-                          obj4.applicationId = tmp10.application_id;
-                          tmp17 = closure_1;
-                          obj4.scopes = closure_1;
-                          obj4.connectedAccountProvider = tmp3;
-                          obj4.wasAlreadyConnected = someResult;
-                          tmp18 = onIdentityAuthorize(obj4);
-                        }
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            } else {
-              tmp32 = cResult[14];
-            }
-            tmp26 = tmp32;
-          } else if (tmp8) {
-            let tmp29;
-            if (cResult[16] !== tmp4.connectionsChecksGroupCaret) {
-              const obj6 = {
-                source: identity_auth_required_scopes(identity_connected_account_type[33]),
-                style: tmp4.connectionsChecksGroupCaret,
-              };
-              const Icon = tmp(tmp2[23]).Icon;
-              cResult[16] = tmp4.connectionsChecksGroupCaret;
-              cResult[17] = closure_29(Icon, obj6);
-              closure_29(Icon, obj6);
-              class G {
-                constructor() {
-                  tmp = result;
-                  if (!tmp) {
-                    tmp2 = c0;
-                    if (tmp2) {
-                      tmp3 = closure_2;
-                      tmp4 = null;
-                      someResult = null != closure_2;
-                      if (someResult) {
-                        tmp6 = closure_14;
-                        accounts = closure_14.getAccounts();
-                        someResult = accounts.some(() => {
-                          /* body not rendered: F141318 */
-                        });
-                      }
-                      connection_type = null;
-                      tmp7 = onAttempted;
-                      if (!someResult) {
-                        tmp9 = eligibilityState;
-                        connection_type = eligibilityState.connection_type;
-                      }
-                      tmp10 = eligibilityState;
-                      application_id = eligibilityState.application_id;
-                      if (application_id == null) {
-                        application_id = null;
-                      }
-                      tmp7Result = tmp7(connection_type, application_id);
-                      tmp13 = canStartAuthorization;
-                      if (tmp13) {
-                        tmp19 = startAuthorization;
-                        obj1 = { analyticsLocations: null };
-                        obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                        tmp20 = startAuthorization(obj1);
-                      } else {
-                        tmp14 = null != tmp3;
-                        if (tmp14) {
-                          tmp15 = closure_1;
-                          tmp14 = null != closure_1;
-                        }
-                        if (tmp14) {
-                          tmp14 = null != tmp10.application_id;
-                        }
-                        if (tmp14) {
-                          tmp16 = onIdentityAuthorize;
-                          obj4 = {
-                            applicationId: null,
-                            scopes: null,
-                            connectedAccountProvider: null,
-                            wasAlreadyConnected: null,
-                          };
-                          obj4.applicationId = tmp10.application_id;
-                          tmp17 = closure_1;
-                          obj4.scopes = closure_1;
-                          obj4.connectedAccountProvider = tmp3;
-                          obj4.wasAlreadyConnected = someResult;
-                          tmp18 = onIdentityAuthorize(obj4);
-                        }
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            } else {
-              tmp29 = cResult[17];
-            }
-            tmp26 = tmp29;
-          } else {
-            const _Symbol = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj7 = {
-                variant: "text-md/medium",
-                color: "text-muted",
-                children: intl.string(canStartAuthorization(identity_connected_account_type[27]).t.cEts68),
-              };
-              const Text = tmp(tmp2[26]).Text;
-              intl = tmp(tmp2[27]).intl;
-              const tmp28 = closure_29(Text, obj7);
-              cResult[15] = tmp28;
-              tmp26 = tmp28;
+              const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
+              class G {
+                constructor() {
+                  if (!result) {
+                    tmp = c0;
+                    if (c0) {
+                      tmp2 = closure_2;
+                      tmp3 = null;
+                      someResult = null != closure_2;
+                      if (someResult) {
+                        tmp5 = closure_14;
+                        accounts = closure_14.getAccounts();
+                        someResult = accounts.some(() => { ... });
+                      }
+                      connection_type = null;
+                      tmp6 = onAttempted;
+                      if (!someResult) {
+                        tmp8 = eligibilityState;
+                        connection_type = eligibilityState.connection_type;
+                      }
+                      tmp9 = eligibilityState;
+                      application_id = eligibilityState.application_id;
+                      if (application_id == null) {
+                        application_id = null;
+                      }
+                      tmp6Result = tmp6(connection_type, application_id);
+                      tmp12 = canStartAuthorization;
+                      if (canStartAuthorization) {
+                        tmp18 = startAuthorization;
+                        obj1 = { analyticsLocations: null };
+                        obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                        tmp19 = startAuthorization(obj1);
+                      } else {
+                        tmp13 = null != tmp2;
+                        if (tmp13) {
+                          tmp14 = closure_1;
+                          tmp13 = null != closure_1;
+                        }
+                        if (tmp13) {
+                          tmp13 = null != tmp9.application_id;
+                        }
+                        if (tmp13) {
+                          tmp15 = onIdentityAuthorize;
+                          obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                          obj4.applicationId = tmp9.application_id;
+                          tmp16 = closure_1;
+                          obj4.scopes = closure_1;
+                          obj4.connectedAccountProvider = tmp2;
+                          obj4.wasAlreadyConnected = someResult;
+                          tmp17 = onIdentityAuthorize(obj4);
+                        }
+                      }
+                    }
+                  }
+                  return;
+                }
+              }
+              const intl = tmp(tmp2[27]).intl;
+              obj6.children = intl.string(tmp(tmp2[27]).t.cEts68);
+              const tmp29 = closure_29(tmp28, obj6);
+              cResult[15] = tmp29;
+              tmp26 = tmp29;
             } else {
               tmp26 = cResult[15];
             }
@@ -881,559 +632,128 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[24] === tmp10) {
                         if (cResult[25] === onAttempted) {
                           if (cResult[26] === onIdentityAuthorize) {
-                            let tmp35;
                             if (cResult[27] === startAuthorization) {
-                              tmp35 = cResult[28];
+                              let tmp38 = cResult[28];
                             }
                             const officialApplicationIds = tmp(tmp2[28]).officialApplicationIds;
-                            let str2;
-                            const includes = officialApplicationIds.includes;
+                            class G {
+                              constructor() {
+                                if (!result) {
+                                  tmp = c0;
+                                  if (c0) {
+                                    tmp2 = closure_2;
+                                    tmp3 = null;
+                                    someResult = null != closure_2;
+                                    if (someResult) {
+                                      tmp5 = closure_14;
+                                      accounts = closure_14.getAccounts();
+                                      someResult = accounts.some(() => { ... });
+                                    }
+                                    connection_type = null;
+                                    tmp6 = onAttempted;
+                                    if (!someResult) {
+                                      tmp8 = eligibilityState;
+                                      connection_type = eligibilityState.connection_type;
+                                    }
+                                    tmp9 = eligibilityState;
+                                    application_id = eligibilityState.application_id;
+                                    if (application_id == null) {
+                                      application_id = null;
+                                    }
+                                    tmp6Result = tmp6(connection_type, application_id);
+                                    tmp12 = canStartAuthorization;
+                                    if (canStartAuthorization) {
+                                      tmp18 = startAuthorization;
+                                      obj1 = { analyticsLocations: null };
+                                      obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                      tmp19 = startAuthorization(obj1);
+                                    } else {
+                                      tmp13 = null != tmp2;
+                                      if (tmp13) {
+                                        tmp14 = closure_1;
+                                        tmp13 = null != closure_1;
+                                      }
+                                      if (tmp13) {
+                                        tmp13 = null != tmp9.application_id;
+                                      }
+                                      if (tmp13) {
+                                        tmp15 = onIdentityAuthorize;
+                                        obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                        obj4.applicationId = tmp9.application_id;
+                                        tmp16 = closure_1;
+                                        obj4.scopes = closure_1;
+                                        obj4.connectedAccountProvider = tmp2;
+                                        obj4.wasAlreadyConnected = someResult;
+                                        tmp17 = onIdentityAuthorize(obj4);
+                                      }
+                                    }
+                                  }
+                                }
+                                return;
+                              }
+                            }
                             if (application != null) {
-                              str2 = application.id;
+                              let str = application.id;
                             }
-                            if (str2 == null) {
-                              str2 = "";
+                            if (str == null) {
+                              str = "";
                             }
-                            if (includes(str2)) {
+                            if (officialApplicationIds.includes(str)) {
                               return null;
                             } else {
                               let prop = null;
                               if (result) {
                                 prop = tmp4.connectionsChecksGroupPassed;
                               }
-                              let prop1 = null;
-                              if (!tmp8) {
-                                prop1 = tmp4.connectionsChecksGroupPlatformDisabled;
-                              }
-                              if (cResult[29] === tmp4.connectionsChecksGroup) {
-                                if (cResult[30] === prop) {
-                                  let tmp38;
-                                  if (cResult[31] === prop1) {
-                                    tmp38 = cResult[32];
-                                  }
-                                  if (cResult[33] === obj4) {
-                                    let tmp40;
-                                    let tmp44;
-                                    if (cResult[34] === tmp4.appIcon) {
-                                      tmp40 = cResult[35];
-                                    }
-                                    let name;
-                                    if (application != null) {
-                                      name = application.name;
-                                    }
-                                    if (cResult[36] !== name) {
-                                      const obj8 = {
-                                        variant: "text-md/medium",
-                                        color: "mobile-text-heading-primary",
-                                        children: name,
-                                      };
-                                      const tmp46 = closure_29(
-                                        canStartAuthorization(identity_connected_account_type[26]).Text,
-                                        obj8,
-                                      );
-                                      cResult[36] = name;
-                                      cResult[37] = tmp46;
-                                      tmp44 = tmp46;
-                                    } else {
-                                      tmp44 = cResult[37];
-                                    }
-                                    if (cResult[38] === tmp19) {
-                                      if (cResult[39] === tmp4.connectionsChecksGroupTextNameContainer) {
-                                        let tmp47;
-                                        if (cResult[40] === tmp44) {
-                                          tmp47 = cResult[41];
-                                        }
-                                        if (cResult[42] === tmp8) {
-                                          if (cResult[43] === result) {
-                                            let tmp51;
-                                            if (cResult[44] === tmp4.connectionsCheck) {
-                                              tmp51 = cResult[45];
-                                            }
-                                            if (cResult[46] === tmp4.connectionsChecksGroupTextContainer) {
-                                              if (cResult[47] === tmp47) {
-                                                let tmp54;
-                                                if (cResult[48] === tmp51) {
-                                                  tmp54 = cResult[49];
-                                                }
-                                                if (cResult[50] === tmp35) {
-                                                  if (cResult[51] === tmp26) {
-                                                    if (cResult[52] === tmp54) {
-                                                      if (cResult[53] === tmp38) {
-                                                        if (cResult[54] === (result || !tmp8)) {
-                                                          let tmp58;
-                                                          if (cResult[55] === tmp40) {
-                                                            tmp58 = cResult[56];
-                                                          }
-                                                          return tmp58;
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                                const obj9 = {
-                                                  accessibilityRole: "button",
-                                                  style: tmp38,
-                                                  disabled: result || !tmp8,
-                                                  onPress: tmp35,
-                                                  children: items,
-                                                };
-                                                items = [tmp40, ,];
-                                                class G {
-                                                  constructor() {
-                                                    tmp = result;
-                                                    if (!tmp) {
-                                                      tmp2 = c0;
-                                                      if (tmp2) {
-                                                        tmp3 = closure_2;
-                                                        tmp4 = null;
-                                                        someResult = null != closure_2;
-                                                        if (someResult) {
-                                                          tmp6 = closure_14;
-                                                          accounts = closure_14.getAccounts();
-                                                          someResult = accounts.some(() => {
-                                                            /* body not rendered: F141318 */
-                                                          });
-                                                        }
-                                                        connection_type = null;
-                                                        tmp7 = onAttempted;
-                                                        if (!someResult) {
-                                                          tmp9 = eligibilityState;
-                                                          connection_type = eligibilityState.connection_type;
-                                                        }
-                                                        tmp10 = eligibilityState;
-                                                        application_id = eligibilityState.application_id;
-                                                        if (application_id == null) {
-                                                          application_id = null;
-                                                        }
-                                                        tmp7Result = tmp7(connection_type, application_id);
-                                                        tmp13 = canStartAuthorization;
-                                                        if (tmp13) {
-                                                          tmp19 = startAuthorization;
-                                                          obj1 = { analyticsLocations: null };
-                                                          obj1.analyticsLocations = [
-                                                            "Verified Roles Connect Accounts Modal",
-                                                          ];
-                                                          tmp20 = startAuthorization(obj1);
-                                                        } else {
-                                                          tmp14 = null != tmp3;
-                                                          if (tmp14) {
-                                                            tmp15 = closure_1;
-                                                            tmp14 = null != closure_1;
-                                                          }
-                                                          if (tmp14) {
-                                                            tmp14 = null != tmp10.application_id;
-                                                          }
-                                                          if (tmp14) {
-                                                            tmp16 = onIdentityAuthorize;
-                                                            obj4 = {
-                                                              applicationId: null,
-                                                              scopes: null,
-                                                              connectedAccountProvider: null,
-                                                              wasAlreadyConnected: null,
-                                                            };
-                                                            obj4.applicationId = tmp10.application_id;
-                                                            tmp17 = closure_1;
-                                                            obj4.scopes = closure_1;
-                                                            obj4.connectedAccountProvider = tmp3;
-                                                            obj4.wasAlreadyConnected = someResult;
-                                                            tmp18 = onIdentityAuthorize(obj4);
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                    return;
-                                                  }
-                                                }
-                                                items[2] = tmp26;
-                                                const tmp61 = closure_30(startAuthorization, obj9);
-                                                cResult[50] = tmp35;
-                                                cResult[51] = tmp26;
-                                                cResult[52] = tmp54;
-                                                cResult[53] = tmp38;
-                                                cResult[54] = result || !tmp8;
-                                                cResult[55] = tmp40;
-                                                cResult[56] = tmp61;
-                                                tmp58 = tmp61;
-                                              }
-                                            }
-                                            const items1 = [tmp47, tmp51];
-                                            class G {
-                                              constructor() {
-                                                tmp = result;
-                                                if (!tmp) {
-                                                  tmp2 = c0;
-                                                  if (tmp2) {
-                                                    tmp3 = closure_2;
-                                                    tmp4 = null;
-                                                    someResult = null != closure_2;
-                                                    if (someResult) {
-                                                      tmp6 = closure_14;
-                                                      accounts = closure_14.getAccounts();
-                                                      someResult = accounts.some(() => {
-                                                        /* body not rendered: F141318 */
-                                                      });
-                                                    }
-                                                    connection_type = null;
-                                                    tmp7 = onAttempted;
-                                                    if (!someResult) {
-                                                      tmp9 = eligibilityState;
-                                                      connection_type = eligibilityState.connection_type;
-                                                    }
-                                                    tmp10 = eligibilityState;
-                                                    application_id = eligibilityState.application_id;
-                                                    if (application_id == null) {
-                                                      application_id = null;
-                                                    }
-                                                    tmp7Result = tmp7(connection_type, application_id);
-                                                    tmp13 = canStartAuthorization;
-                                                    if (tmp13) {
-                                                      tmp19 = startAuthorization;
-                                                      obj1 = { analyticsLocations: null };
-                                                      obj1.analyticsLocations = [
-                                                        "Verified Roles Connect Accounts Modal",
-                                                      ];
-                                                      tmp20 = startAuthorization(obj1);
-                                                    } else {
-                                                      tmp14 = null != tmp3;
-                                                      if (tmp14) {
-                                                        tmp15 = closure_1;
-                                                        tmp14 = null != closure_1;
-                                                      }
-                                                      if (tmp14) {
-                                                        tmp14 = null != tmp10.application_id;
-                                                      }
-                                                      if (tmp14) {
-                                                        tmp16 = onIdentityAuthorize;
-                                                        obj4 = {
-                                                          applicationId: null,
-                                                          scopes: null,
-                                                          connectedAccountProvider: null,
-                                                          wasAlreadyConnected: null,
-                                                        };
-                                                        obj4.applicationId = tmp10.application_id;
-                                                        tmp17 = closure_1;
-                                                        obj4.scopes = closure_1;
-                                                        obj4.connectedAccountProvider = tmp3;
-                                                        obj4.wasAlreadyConnected = someResult;
-                                                        tmp18 = onIdentityAuthorize(obj4);
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                                return;
-                                              }
-                                            }
-                                            cResult[46] = tmp4.connectionsChecksGroupTextContainer;
-                                            cResult[47] = tmp47;
-                                            cResult[48] = tmp51;
-                                            cResult[49] = tmp57;
-                                            tmp54 = tmp57;
-                                          }
-                                        }
-                                        let tmp52 = null;
-                                        if (!tmp8) {
-                                          tmp52 = null;
-                                          if (!result) {
-                                            const obj11 = {
-                                              variant: "text-xs/normal",
-                                              color: "text-muted",
-                                              style: tmp4.connectionsCheck,
-                                              children: intl2.string(
-                                                canStartAuthorization(identity_connected_account_type[27]).t["+z5dYe"],
-                                              ),
-                                            };
-                                            const Text2 = tmp(tmp2[26]).Text;
-                                            intl2 = tmp(tmp2[27]).intl;
-                                            tmp52 = closure_29(Text2, obj11);
-                                          }
-                                        }
-                                        cResult[42] = tmp8;
-                                        cResult[43] = result;
-                                        cResult[44] = tmp4.connectionsCheck;
-                                        class G {
-                                          constructor() {
-                                            tmp = result;
-                                            if (!tmp) {
-                                              tmp2 = c0;
-                                              if (tmp2) {
-                                                tmp3 = closure_2;
-                                                tmp4 = null;
-                                                someResult = null != closure_2;
-                                                if (someResult) {
-                                                  tmp6 = closure_14;
-                                                  accounts = closure_14.getAccounts();
-                                                  someResult = accounts.some(() => {
-                                                    /* body not rendered: F141318 */
-                                                  });
-                                                }
-                                                connection_type = null;
-                                                tmp7 = onAttempted;
-                                                if (!someResult) {
-                                                  tmp9 = eligibilityState;
-                                                  connection_type = eligibilityState.connection_type;
-                                                }
-                                                tmp10 = eligibilityState;
-                                                application_id = eligibilityState.application_id;
-                                                if (application_id == null) {
-                                                  application_id = null;
-                                                }
-                                                tmp7Result = tmp7(connection_type, application_id);
-                                                tmp13 = canStartAuthorization;
-                                                if (tmp13) {
-                                                  tmp19 = startAuthorization;
-                                                  obj1 = { analyticsLocations: null };
-                                                  obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                                                  tmp20 = startAuthorization(obj1);
-                                                } else {
-                                                  tmp14 = null != tmp3;
-                                                  if (tmp14) {
-                                                    tmp15 = closure_1;
-                                                    tmp14 = null != closure_1;
-                                                  }
-                                                  if (tmp14) {
-                                                    tmp14 = null != tmp10.application_id;
-                                                  }
-                                                  if (tmp14) {
-                                                    tmp16 = onIdentityAuthorize;
-                                                    obj4 = {
-                                                      applicationId: null,
-                                                      scopes: null,
-                                                      connectedAccountProvider: null,
-                                                      wasAlreadyConnected: null,
-                                                    };
-                                                    obj4.applicationId = tmp10.application_id;
-                                                    tmp17 = closure_1;
-                                                    obj4.scopes = closure_1;
-                                                    obj4.connectedAccountProvider = tmp3;
-                                                    obj4.wasAlreadyConnected = someResult;
-                                                    tmp18 = onIdentityAuthorize(obj4);
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            return;
-                                          }
-                                        }
-                                        cResult[45] = tmp52;
-                                        tmp51 = tmp52;
-                                      }
-                                    }
-                                    const obj12 = {
-                                      style: tmp4.connectionsChecksGroupTextNameContainer,
-                                      children: items2,
-                                    };
-                                    items2 = [,];
-                                    class G {
-                                      constructor() {
-                                        tmp = result;
-                                        if (!tmp) {
-                                          tmp2 = c0;
-                                          if (tmp2) {
-                                            tmp3 = closure_2;
-                                            tmp4 = null;
-                                            someResult = null != closure_2;
-                                            if (someResult) {
-                                              tmp6 = closure_14;
-                                              accounts = closure_14.getAccounts();
-                                              someResult = accounts.some(() => {
-                                                /* body not rendered: F141318 */
-                                              });
-                                            }
-                                            connection_type = null;
-                                            tmp7 = onAttempted;
-                                            if (!someResult) {
-                                              tmp9 = eligibilityState;
-                                              connection_type = eligibilityState.connection_type;
-                                            }
-                                            tmp10 = eligibilityState;
-                                            application_id = eligibilityState.application_id;
-                                            if (application_id == null) {
-                                              application_id = null;
-                                            }
-                                            tmp7Result = tmp7(connection_type, application_id);
-                                            tmp13 = canStartAuthorization;
-                                            if (tmp13) {
-                                              tmp19 = startAuthorization;
-                                              obj1 = { analyticsLocations: null };
-                                              obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                                              tmp20 = startAuthorization(obj1);
-                                            } else {
-                                              tmp14 = null != tmp3;
-                                              if (tmp14) {
-                                                tmp15 = closure_1;
-                                                tmp14 = null != closure_1;
-                                              }
-                                              if (tmp14) {
-                                                tmp14 = null != tmp10.application_id;
-                                              }
-                                              if (tmp14) {
-                                                tmp16 = onIdentityAuthorize;
-                                                obj4 = {
-                                                  applicationId: null,
-                                                  scopes: null,
-                                                  connectedAccountProvider: null,
-                                                  wasAlreadyConnected: null,
-                                                };
-                                                obj4.applicationId = tmp10.application_id;
-                                                tmp17 = closure_1;
-                                                obj4.scopes = closure_1;
-                                                obj4.connectedAccountProvider = tmp3;
-                                                obj4.wasAlreadyConnected = someResult;
-                                                tmp18 = onIdentityAuthorize(obj4);
-                                              }
-                                            }
-                                          }
-                                        }
-                                        return;
-                                      }
-                                    }
-                                    items2[1] = tmp19;
-                                    const tmp50 = closure_30(closure_8, obj12);
-                                    cResult[38] = tmp19;
-                                    cResult[39] = tmp4.connectionsChecksGroupTextNameContainer;
-                                    cResult[40] = tmp44;
-                                    cResult[41] = tmp50;
-                                    tmp47 = tmp50;
-                                  }
-                                  let tmp41 = null;
-                                  if (null != obj4) {
-                                    const obj13 = {
-                                      style: tmp4.appIcon,
-                                      user: obj4,
-                                      size: canStartAuthorization(identity_connected_account_type[23]).AvatarSizes
-                                        .XSMALL,
-                                      guildId: "Array",
-                                    };
-                                    const Avatar = tmp(tmp2[23]).Avatar;
-                                    tmp41 = closure_29(Avatar, obj13);
-                                  }
-                                  cResult[33] = obj4;
-                                  cResult[34] = tmp4.appIcon;
-                                  class G {
-                                    constructor() {
-                                      tmp = result;
-                                      if (!tmp) {
-                                        tmp2 = c0;
-                                        if (tmp2) {
-                                          tmp3 = closure_2;
-                                          tmp4 = null;
-                                          someResult = null != closure_2;
-                                          if (someResult) {
-                                            tmp6 = closure_14;
-                                            accounts = closure_14.getAccounts();
-                                            someResult = accounts.some(() => {
-                                              /* body not rendered: F141318 */
-                                            });
-                                          }
-                                          connection_type = null;
-                                          tmp7 = onAttempted;
-                                          if (!someResult) {
-                                            tmp9 = eligibilityState;
-                                            connection_type = eligibilityState.connection_type;
-                                          }
-                                          tmp10 = eligibilityState;
-                                          application_id = eligibilityState.application_id;
-                                          if (application_id == null) {
-                                            application_id = null;
-                                          }
-                                          tmp7Result = tmp7(connection_type, application_id);
-                                          tmp13 = canStartAuthorization;
-                                          if (tmp13) {
-                                            tmp19 = startAuthorization;
-                                            obj1 = { analyticsLocations: null };
-                                            obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                                            tmp20 = startAuthorization(obj1);
-                                          } else {
-                                            tmp14 = null != tmp3;
-                                            if (tmp14) {
-                                              tmp15 = closure_1;
-                                              tmp14 = null != closure_1;
-                                            }
-                                            if (tmp14) {
-                                              tmp14 = null != tmp10.application_id;
-                                            }
-                                            if (tmp14) {
-                                              tmp16 = onIdentityAuthorize;
-                                              obj4 = {
-                                                applicationId: null,
-                                                scopes: null,
-                                                connectedAccountProvider: null,
-                                                wasAlreadyConnected: null,
-                                              };
-                                              obj4.applicationId = tmp10.application_id;
-                                              tmp17 = closure_1;
-                                              obj4.scopes = closure_1;
-                                              obj4.connectedAccountProvider = tmp3;
-                                              obj4.wasAlreadyConnected = someResult;
-                                              tmp18 = onIdentityAuthorize(obj4);
-                                            }
-                                          }
-                                        }
-                                      }
-                                      return;
-                                    }
-                                  }
-                                  tmp40 = tmp41;
-                                }
-                              }
-                              const items3 = [tmp4.connectionsChecksGroup, prop, prop1];
                               class G {
                                 constructor() {
-                                  tmp = result;
-                                  if (!tmp) {
-                                    tmp2 = c0;
-                                    if (tmp2) {
-                                      tmp3 = closure_2;
-                                      tmp4 = null;
+                                  if (!result) {
+                                    tmp = c0;
+                                    if (c0) {
+                                      tmp2 = closure_2;
+                                      tmp3 = null;
                                       someResult = null != closure_2;
                                       if (someResult) {
-                                        tmp6 = closure_14;
+                                        tmp5 = closure_14;
                                         accounts = closure_14.getAccounts();
-                                        someResult = accounts.some(() => {
-                                          /* body not rendered: F141318 */
-                                        });
+                                        someResult = accounts.some(() => { ... });
                                       }
                                       connection_type = null;
-                                      tmp7 = onAttempted;
+                                      tmp6 = onAttempted;
                                       if (!someResult) {
-                                        tmp9 = eligibilityState;
+                                        tmp8 = eligibilityState;
                                         connection_type = eligibilityState.connection_type;
                                       }
-                                      tmp10 = eligibilityState;
+                                      tmp9 = eligibilityState;
                                       application_id = eligibilityState.application_id;
                                       if (application_id == null) {
                                         application_id = null;
                                       }
-                                      tmp7Result = tmp7(connection_type, application_id);
-                                      tmp13 = canStartAuthorization;
-                                      if (tmp13) {
-                                        tmp19 = startAuthorization;
+                                      tmp6Result = tmp6(connection_type, application_id);
+                                      tmp12 = canStartAuthorization;
+                                      if (canStartAuthorization) {
+                                        tmp18 = startAuthorization;
                                         obj1 = { analyticsLocations: null };
                                         obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                                        tmp20 = startAuthorization(obj1);
+                                        tmp19 = startAuthorization(obj1);
                                       } else {
-                                        tmp14 = null != tmp3;
-                                        if (tmp14) {
-                                          tmp15 = closure_1;
-                                          tmp14 = null != closure_1;
+                                        tmp13 = null != tmp2;
+                                        if (tmp13) {
+                                          tmp14 = closure_1;
+                                          tmp13 = null != closure_1;
                                         }
-                                        if (tmp14) {
-                                          tmp14 = null != tmp10.application_id;
+                                        if (tmp13) {
+                                          tmp13 = null != tmp9.application_id;
                                         }
-                                        if (tmp14) {
-                                          tmp16 = onIdentityAuthorize;
-                                          obj4 = {
-                                            applicationId: null,
-                                            scopes: null,
-                                            connectedAccountProvider: null,
-                                            wasAlreadyConnected: null,
-                                          };
-                                          obj4.applicationId = tmp10.application_id;
-                                          tmp17 = closure_1;
+                                        if (tmp13) {
+                                          tmp15 = onIdentityAuthorize;
+                                          obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                          obj4.applicationId = tmp9.application_id;
+                                          tmp16 = closure_1;
                                           obj4.scopes = closure_1;
-                                          obj4.connectedAccountProvider = tmp3;
+                                          obj4.connectedAccountProvider = tmp2;
                                           obj4.wasAlreadyConnected = someResult;
-                                          tmp18 = onIdentityAuthorize(obj4);
+                                          tmp17 = onIdentityAuthorize(obj4);
                                         }
                                       }
                                     }
@@ -1441,10 +761,574 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                   return;
                                 }
                               }
+                              if (!tmp8) {
+                                const connectionsChecksGroupPlatformDisabled = tmp4.connectionsChecksGroupPlatformDisabled;
+                              }
+                              if (cResult[29] === tmp4.connectionsChecksGroup) {
+                                if (cResult[30] === prop) {
+                                  if (cResult[31] === connectionsChecksGroupPlatformDisabled) {
+                                    let tmp40 = cResult[32];
+                                  }
+                                  class G {
+                                    constructor() {
+                                      if (!result) {
+                                        tmp = c0;
+                                        if (c0) {
+                                          tmp2 = closure_2;
+                                          tmp3 = null;
+                                          someResult = null != closure_2;
+                                          if (someResult) {
+                                            tmp5 = closure_14;
+                                            accounts = closure_14.getAccounts();
+                                            someResult = accounts.some(() => { ... });
+                                          }
+                                          connection_type = null;
+                                          tmp6 = onAttempted;
+                                          if (!someResult) {
+                                            tmp8 = eligibilityState;
+                                            connection_type = eligibilityState.connection_type;
+                                          }
+                                          tmp9 = eligibilityState;
+                                          application_id = eligibilityState.application_id;
+                                          if (application_id == null) {
+                                            application_id = null;
+                                          }
+                                          tmp6Result = tmp6(connection_type, application_id);
+                                          tmp12 = canStartAuthorization;
+                                          if (canStartAuthorization) {
+                                            tmp18 = startAuthorization;
+                                            obj1 = { analyticsLocations: null };
+                                            obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                            tmp19 = startAuthorization(obj1);
+                                          } else {
+                                            tmp13 = null != tmp2;
+                                            if (tmp13) {
+                                              tmp14 = closure_1;
+                                              tmp13 = null != closure_1;
+                                            }
+                                            if (tmp13) {
+                                              tmp13 = null != tmp9.application_id;
+                                            }
+                                            if (tmp13) {
+                                              tmp15 = onIdentityAuthorize;
+                                              obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                              obj4.applicationId = tmp9.application_id;
+                                              tmp16 = closure_1;
+                                              obj4.scopes = closure_1;
+                                              obj4.connectedAccountProvider = tmp2;
+                                              obj4.wasAlreadyConnected = someResult;
+                                              tmp17 = onIdentityAuthorize(obj4);
+                                            }
+                                          }
+                                        }
+                                      }
+                                      return;
+                                    }
+                                  }
+                                  if (cResult[33] === obj3) {
+                                    if (cResult[34] === tmp4.appIcon) {
+                                      let tmp42 = cResult[35];
+                                    }
+                                    class G {
+                                      constructor() {
+                                        if (!result) {
+                                          tmp = c0;
+                                          if (c0) {
+                                            tmp2 = closure_2;
+                                            tmp3 = null;
+                                            someResult = null != closure_2;
+                                            if (someResult) {
+                                              tmp5 = closure_14;
+                                              accounts = closure_14.getAccounts();
+                                              someResult = accounts.some(() => { ... });
+                                            }
+                                            connection_type = null;
+                                            tmp6 = onAttempted;
+                                            if (!someResult) {
+                                              tmp8 = eligibilityState;
+                                              connection_type = eligibilityState.connection_type;
+                                            }
+                                            tmp9 = eligibilityState;
+                                            application_id = eligibilityState.application_id;
+                                            if (application_id == null) {
+                                              application_id = null;
+                                            }
+                                            tmp6Result = tmp6(connection_type, application_id);
+                                            tmp12 = canStartAuthorization;
+                                            if (canStartAuthorization) {
+                                              tmp18 = startAuthorization;
+                                              obj1 = { analyticsLocations: null };
+                                              obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                              tmp19 = startAuthorization(obj1);
+                                            } else {
+                                              tmp13 = null != tmp2;
+                                              if (tmp13) {
+                                                tmp14 = closure_1;
+                                                tmp13 = null != closure_1;
+                                              }
+                                              if (tmp13) {
+                                                tmp13 = null != tmp9.application_id;
+                                              }
+                                              if (tmp13) {
+                                                tmp15 = onIdentityAuthorize;
+                                                obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                                obj4.applicationId = tmp9.application_id;
+                                                tmp16 = closure_1;
+                                                obj4.scopes = closure_1;
+                                                obj4.connectedAccountProvider = tmp2;
+                                                obj4.wasAlreadyConnected = someResult;
+                                                tmp17 = onIdentityAuthorize(obj4);
+                                              }
+                                            }
+                                          }
+                                        }
+                                        return;
+                                      }
+                                    }
+                                    if (cResult[36] !== undefined) {
+                                      class G {
+                                        constructor() {
+                                          if (!result) {
+                                            tmp = c0;
+                                            if (c0) {
+                                              tmp2 = closure_2;
+                                              tmp3 = null;
+                                              someResult = null != closure_2;
+                                              if (someResult) {
+                                                tmp5 = closure_14;
+                                                accounts = closure_14.getAccounts();
+                                                someResult = accounts.some(() => { ... });
+                                              }
+                                              connection_type = null;
+                                              tmp6 = onAttempted;
+                                              if (!someResult) {
+                                                tmp8 = eligibilityState;
+                                                connection_type = eligibilityState.connection_type;
+                                              }
+                                              tmp9 = eligibilityState;
+                                              application_id = eligibilityState.application_id;
+                                              if (application_id == null) {
+                                                application_id = null;
+                                              }
+                                              tmp6Result = tmp6(connection_type, application_id);
+                                              tmp12 = canStartAuthorization;
+                                              if (canStartAuthorization) {
+                                                tmp18 = startAuthorization;
+                                                obj1 = { analyticsLocations: null };
+                                                obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                                tmp19 = startAuthorization(obj1);
+                                              } else {
+                                                tmp13 = null != tmp2;
+                                                if (tmp13) {
+                                                  tmp14 = closure_1;
+                                                  tmp13 = null != closure_1;
+                                                }
+                                                if (tmp13) {
+                                                  tmp13 = null != tmp9.application_id;
+                                                }
+                                                if (tmp13) {
+                                                  tmp15 = onIdentityAuthorize;
+                                                  obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                                  obj4.applicationId = tmp9.application_id;
+                                                  tmp16 = closure_1;
+                                                  obj4.scopes = closure_1;
+                                                  obj4.connectedAccountProvider = tmp2;
+                                                  obj4.wasAlreadyConnected = someResult;
+                                                  tmp17 = onIdentityAuthorize(obj4);
+                                                }
+                                              }
+                                            }
+                                          }
+                                          return;
+                                        }
+                                      }
+                                      const tmp48 = closure_29(tmp(tmp2[26]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null });
+                                      cResult[36] = tmp45;
+                                      cResult[37] = tmp48;
+                                      let tmp46 = tmp48;
+                                      const obj7 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+                                    } else {
+                                      tmp46 = cResult[37];
+                                    }
+                                    if (cResult[38] === undefined) {
+                                      if (cResult[39] === tmp4.connectionsChecksGroupTextNameContainer) {
+                                        if (cResult[40] === tmp46) {
+                                          let tmp49 = cResult[41];
+                                        }
+                                        if (cResult[42] === tmp8) {
+                                          if (cResult[43] === result) {
+                                            if (cResult[44] === tmp4.connectionsCheck) {
+                                              let tmp53 = cResult[45];
+                                            }
+                                            if (cResult[46] === tmp4.connectionsChecksGroupTextContainer) {
+                                              if (cResult[47] === tmp49) {
+                                                if (cResult[48] === tmp53) {
+                                                  let tmp56 = cResult[49];
+                                                }
+                                                if (cResult[50] === tmp38) {
+                                                  if (cResult[51] === tmp26) {
+                                                    if (cResult[52] === tmp56) {
+                                                      if (cResult[53] === tmp40) {
+                                                        if (cResult[54] === tmp41) {
+                                                          if (cResult[55] === tmp42) {
+                                                            let tmp59 = cResult[56];
+                                                          }
+                                                          return tmp59;
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                                class G {
+                                                  constructor() {
+                                                    if (!result) {
+                                                      tmp = c0;
+                                                      if (c0) {
+                                                        tmp2 = closure_2;
+                                                        tmp3 = null;
+                                                        someResult = null != closure_2;
+                                                        if (someResult) {
+                                                          tmp5 = closure_14;
+                                                          accounts = closure_14.getAccounts();
+                                                          someResult = accounts.some(() => { ... });
+                                                        }
+                                                        connection_type = null;
+                                                        tmp6 = onAttempted;
+                                                        if (!someResult) {
+                                                          tmp8 = eligibilityState;
+                                                          connection_type = eligibilityState.connection_type;
+                                                        }
+                                                        tmp9 = eligibilityState;
+                                                        application_id = eligibilityState.application_id;
+                                                        if (application_id == null) {
+                                                          application_id = null;
+                                                        }
+                                                        tmp6Result = tmp6(connection_type, application_id);
+                                                        tmp12 = canStartAuthorization;
+                                                        if (canStartAuthorization) {
+                                                          tmp18 = startAuthorization;
+                                                          obj1 = { analyticsLocations: null };
+                                                          obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                                          tmp19 = startAuthorization(obj1);
+                                                        } else {
+                                                          tmp13 = null != tmp2;
+                                                          if (tmp13) {
+                                                            tmp14 = closure_1;
+                                                            tmp13 = null != closure_1;
+                                                          }
+                                                          if (tmp13) {
+                                                            tmp13 = null != tmp9.application_id;
+                                                          }
+                                                          if (tmp13) {
+                                                            tmp15 = onIdentityAuthorize;
+                                                            obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                                            obj4.applicationId = tmp9.application_id;
+                                                            tmp16 = closure_1;
+                                                            obj4.scopes = closure_1;
+                                                            obj4.connectedAccountProvider = tmp2;
+                                                            obj4.wasAlreadyConnected = someResult;
+                                                            tmp17 = onIdentityAuthorize(obj4);
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                    return;
+                                                  }
+                                                }
+                                                const obj8 = { accessibilityRole: "button", style: tmp40, disabled: tmp41, onPress: tmp38, children: null };
+                                                const items = [tmp42, tmp56, tmp26];
+                                                obj8.children = items;
+                                                const tmp61 = closure_30(startAuthorization, obj8);
+                                                cResult[50] = tmp38;
+                                                cResult[51] = tmp26;
+                                                cResult[52] = tmp56;
+                                                cResult[53] = tmp40;
+                                                cResult[54] = tmp41;
+                                                cResult[55] = tmp42;
+                                                cResult[56] = tmp61;
+                                                tmp59 = tmp61;
+                                              }
+                                            }
+                                            class G {
+                                              constructor() {
+                                                if (!result) {
+                                                  tmp = c0;
+                                                  if (c0) {
+                                                    tmp2 = closure_2;
+                                                    tmp3 = null;
+                                                    someResult = null != closure_2;
+                                                    if (someResult) {
+                                                      tmp5 = closure_14;
+                                                      accounts = closure_14.getAccounts();
+                                                      someResult = accounts.some(() => { ... });
+                                                    }
+                                                    connection_type = null;
+                                                    tmp6 = onAttempted;
+                                                    if (!someResult) {
+                                                      tmp8 = eligibilityState;
+                                                      connection_type = eligibilityState.connection_type;
+                                                    }
+                                                    tmp9 = eligibilityState;
+                                                    application_id = eligibilityState.application_id;
+                                                    if (application_id == null) {
+                                                      application_id = null;
+                                                    }
+                                                    tmp6Result = tmp6(connection_type, application_id);
+                                                    tmp12 = canStartAuthorization;
+                                                    if (canStartAuthorization) {
+                                                      tmp18 = startAuthorization;
+                                                      obj1 = { analyticsLocations: null };
+                                                      obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                                      tmp19 = startAuthorization(obj1);
+                                                    } else {
+                                                      tmp13 = null != tmp2;
+                                                      if (tmp13) {
+                                                        tmp14 = closure_1;
+                                                        tmp13 = null != closure_1;
+                                                      }
+                                                      if (tmp13) {
+                                                        tmp13 = null != tmp9.application_id;
+                                                      }
+                                                      if (tmp13) {
+                                                        tmp15 = onIdentityAuthorize;
+                                                        obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                                        obj4.applicationId = tmp9.application_id;
+                                                        tmp16 = closure_1;
+                                                        obj4.scopes = closure_1;
+                                                        obj4.connectedAccountProvider = tmp2;
+                                                        obj4.wasAlreadyConnected = someResult;
+                                                        tmp17 = onIdentityAuthorize(obj4);
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                                return;
+                                              }
+                                            }
+                                            const obj9 = { style: tmp4.connectionsChecksGroupTextContainer, children: null };
+                                            const items1 = [tmp49, tmp53];
+                                            obj9.children = items1;
+                                            const tmp58 = closure_30(result, obj9);
+                                            cResult[46] = tmp4.connectionsChecksGroupTextContainer;
+                                            cResult[47] = tmp49;
+                                            cResult[48] = tmp53;
+                                            cResult[49] = tmp58;
+                                            tmp56 = tmp58;
+                                          }
+                                        }
+                                        class G {
+                                          constructor() {
+                                            if (!result) {
+                                              tmp = c0;
+                                              if (c0) {
+                                                tmp2 = closure_2;
+                                                tmp3 = null;
+                                                someResult = null != closure_2;
+                                                if (someResult) {
+                                                  tmp5 = closure_14;
+                                                  accounts = closure_14.getAccounts();
+                                                  someResult = accounts.some(() => { ... });
+                                                }
+                                                connection_type = null;
+                                                tmp6 = onAttempted;
+                                                if (!someResult) {
+                                                  tmp8 = eligibilityState;
+                                                  connection_type = eligibilityState.connection_type;
+                                                }
+                                                tmp9 = eligibilityState;
+                                                application_id = eligibilityState.application_id;
+                                                if (application_id == null) {
+                                                  application_id = null;
+                                                }
+                                                tmp6Result = tmp6(connection_type, application_id);
+                                                tmp12 = canStartAuthorization;
+                                                if (canStartAuthorization) {
+                                                  tmp18 = startAuthorization;
+                                                  obj1 = { analyticsLocations: null };
+                                                  obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                                  tmp19 = startAuthorization(obj1);
+                                                } else {
+                                                  tmp13 = null != tmp2;
+                                                  if (tmp13) {
+                                                    tmp14 = closure_1;
+                                                    tmp13 = null != closure_1;
+                                                  }
+                                                  if (tmp13) {
+                                                    tmp13 = null != tmp9.application_id;
+                                                  }
+                                                  if (tmp13) {
+                                                    tmp15 = onIdentityAuthorize;
+                                                    obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                                    obj4.applicationId = tmp9.application_id;
+                                                    tmp16 = closure_1;
+                                                    obj4.scopes = closure_1;
+                                                    obj4.connectedAccountProvider = tmp2;
+                                                    obj4.wasAlreadyConnected = someResult;
+                                                    tmp17 = onIdentityAuthorize(obj4);
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            return;
+                                          }
+                                        }
+                                        if (!tmp8) {
+                                          let tmp54 = null;
+                                          if (!result) {
+                                            const obj10 = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
+                                            class G {
+                                              constructor() {
+                                                if (!result) {
+                                                  tmp = c0;
+                                                  if (c0) {
+                                                    tmp2 = closure_2;
+                                                    tmp3 = null;
+                                                    someResult = null != closure_2;
+                                                    if (someResult) {
+                                                      tmp5 = closure_14;
+                                                      accounts = closure_14.getAccounts();
+                                                      someResult = accounts.some(() => { ... });
+                                                    }
+                                                    connection_type = null;
+                                                    tmp6 = onAttempted;
+                                                    if (!someResult) {
+                                                      tmp8 = eligibilityState;
+                                                      connection_type = eligibilityState.connection_type;
+                                                    }
+                                                    tmp9 = eligibilityState;
+                                                    application_id = eligibilityState.application_id;
+                                                    if (application_id == null) {
+                                                      application_id = null;
+                                                    }
+                                                    tmp6Result = tmp6(connection_type, application_id);
+                                                    tmp12 = canStartAuthorization;
+                                                    if (canStartAuthorization) {
+                                                      tmp18 = startAuthorization;
+                                                      obj1 = { analyticsLocations: null };
+                                                      obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                                      tmp19 = startAuthorization(obj1);
+                                                    } else {
+                                                      tmp13 = null != tmp2;
+                                                      if (tmp13) {
+                                                        tmp14 = closure_1;
+                                                        tmp13 = null != closure_1;
+                                                      }
+                                                      if (tmp13) {
+                                                        tmp13 = null != tmp9.application_id;
+                                                      }
+                                                      if (tmp13) {
+                                                        tmp15 = onIdentityAuthorize;
+                                                        obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                                        obj4.applicationId = tmp9.application_id;
+                                                        tmp16 = closure_1;
+                                                        obj4.scopes = closure_1;
+                                                        obj4.connectedAccountProvider = tmp2;
+                                                        obj4.wasAlreadyConnected = someResult;
+                                                        tmp17 = onIdentityAuthorize(obj4);
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                                return;
+                                              }
+                                            }
+                                            const intl2 = tmp(tmp2[27]).intl;
+                                            obj10.children = intl2.string(tmp(tmp2[27]).t["+z5dYe"]);
+                                            tmp54 = closure_29(tmp(tmp2[26]).Text, obj10);
+                                          }
+                                        }
+                                        cResult[42] = tmp8;
+                                        cResult[43] = result;
+                                        cResult[44] = tmp4.connectionsCheck;
+                                        cResult[45] = tmp54;
+                                        tmp53 = tmp54;
+                                      }
+                                    }
+                                    const obj11 = { style: tmp4.connectionsChecksGroupTextNameContainer, children: null };
+                                    const items2 = [tmp46, undefined];
+                                    obj11.children = items2;
+                                    const tmp52 = closure_30(result, obj11);
+                                    cResult[38] = undefined;
+                                    cResult[39] = tmp4.connectionsChecksGroupTextNameContainer;
+                                    cResult[40] = tmp46;
+                                    cResult[41] = tmp52;
+                                    tmp49 = tmp52;
+                                  }
+                                  let tmp43 = null;
+                                  if (null != obj3) {
+                                    const obj12 = { style: null, user: null, size: null, guildId: "Array" };
+                                    class G {
+                                      constructor() {
+                                        if (!result) {
+                                          tmp = c0;
+                                          if (c0) {
+                                            tmp2 = closure_2;
+                                            tmp3 = null;
+                                            someResult = null != closure_2;
+                                            if (someResult) {
+                                              tmp5 = closure_14;
+                                              accounts = closure_14.getAccounts();
+                                              someResult = accounts.some(() => { ... });
+                                            }
+                                            connection_type = null;
+                                            tmp6 = onAttempted;
+                                            if (!someResult) {
+                                              tmp8 = eligibilityState;
+                                              connection_type = eligibilityState.connection_type;
+                                            }
+                                            tmp9 = eligibilityState;
+                                            application_id = eligibilityState.application_id;
+                                            if (application_id == null) {
+                                              application_id = null;
+                                            }
+                                            tmp6Result = tmp6(connection_type, application_id);
+                                            tmp12 = canStartAuthorization;
+                                            if (canStartAuthorization) {
+                                              tmp18 = startAuthorization;
+                                              obj1 = { analyticsLocations: null };
+                                              obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                                              tmp19 = startAuthorization(obj1);
+                                            } else {
+                                              tmp13 = null != tmp2;
+                                              if (tmp13) {
+                                                tmp14 = closure_1;
+                                                tmp13 = null != closure_1;
+                                              }
+                                              if (tmp13) {
+                                                tmp13 = null != tmp9.application_id;
+                                              }
+                                              if (tmp13) {
+                                                tmp15 = onIdentityAuthorize;
+                                                obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                                                obj4.applicationId = tmp9.application_id;
+                                                tmp16 = closure_1;
+                                                obj4.scopes = closure_1;
+                                                obj4.connectedAccountProvider = tmp2;
+                                                obj4.wasAlreadyConnected = someResult;
+                                                tmp17 = onIdentityAuthorize(obj4);
+                                              }
+                                            }
+                                          }
+                                        }
+                                        return;
+                                      }
+                                    }
+                                    obj12.user = obj3;
+                                    obj12.size = tmp(tmp2[23]).AvatarSizes.XSMALL;
+                                    tmp43 = closure_29(tmp(tmp2[23]).Avatar, obj12);
+                                  }
+                                  cResult[33] = obj3;
+                                  cResult[34] = tmp4.appIcon;
+                                  cResult[35] = tmp43;
+                                  tmp42 = tmp43;
+                                }
+                              }
+                              const items3 = [tmp4.connectionsChecksGroup, prop, connectionsChecksGroupPlatformDisabled];
+                              cResult[29] = tmp4.connectionsChecksGroup;
                               cResult[30] = prop;
-                              cResult[31] = prop1;
+                              cResult[31] = connectionsChecksGroupPlatformDisabled;
                               cResult[32] = items3;
-                              tmp38 = items3;
+                              tmp40 = items3;
                             }
                           }
                         }
@@ -1457,61 +1341,53 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
           }
           class G {
             constructor() {
-              tmp = result;
-              if (!tmp) {
-                tmp2 = c0;
-                if (tmp2) {
-                  tmp3 = closure_2;
-                  tmp4 = null;
+              if (!result) {
+                tmp = c0;
+                if (c0) {
+                  tmp2 = closure_2;
+                  tmp3 = null;
                   someResult = null != closure_2;
                   if (someResult) {
-                    tmp6 = closure_14;
+                    tmp5 = closure_14;
                     accounts = closure_14.getAccounts();
-                    someResult = accounts.some(() => {
-                      /* body not rendered: F141318 */
-                    });
+                    someResult = accounts.some(() => { ... });
                   }
                   connection_type = null;
-                  tmp7 = onAttempted;
+                  tmp6 = onAttempted;
                   if (!someResult) {
-                    tmp9 = eligibilityState;
+                    tmp8 = eligibilityState;
                     connection_type = eligibilityState.connection_type;
                   }
-                  tmp10 = eligibilityState;
+                  tmp9 = eligibilityState;
                   application_id = eligibilityState.application_id;
                   if (application_id == null) {
                     application_id = null;
                   }
-                  tmp7Result = tmp7(connection_type, application_id);
-                  tmp13 = canStartAuthorization;
-                  if (tmp13) {
-                    tmp19 = startAuthorization;
+                  tmp6Result = tmp6(connection_type, application_id);
+                  tmp12 = canStartAuthorization;
+                  if (canStartAuthorization) {
+                    tmp18 = startAuthorization;
                     obj1 = { analyticsLocations: null };
                     obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
-                    tmp20 = startAuthorization(obj1);
+                    tmp19 = startAuthorization(obj1);
                   } else {
-                    tmp14 = null != tmp3;
-                    if (tmp14) {
-                      tmp15 = closure_1;
-                      tmp14 = null != closure_1;
+                    tmp13 = null != tmp2;
+                    if (tmp13) {
+                      tmp14 = closure_1;
+                      tmp13 = null != closure_1;
                     }
-                    if (tmp14) {
-                      tmp14 = null != tmp10.application_id;
+                    if (tmp13) {
+                      tmp13 = null != tmp9.application_id;
                     }
-                    if (tmp14) {
-                      tmp16 = onIdentityAuthorize;
-                      obj4 = {
-                        applicationId: null,
-                        scopes: null,
-                        connectedAccountProvider: null,
-                        wasAlreadyConnected: null,
-                      };
-                      obj4.applicationId = tmp10.application_id;
-                      tmp17 = closure_1;
+                    if (tmp13) {
+                      tmp15 = onIdentityAuthorize;
+                      obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                      obj4.applicationId = tmp9.application_id;
+                      tmp16 = closure_1;
                       obj4.scopes = closure_1;
-                      obj4.connectedAccountProvider = tmp3;
+                      obj4.connectedAccountProvider = tmp2;
                       obj4.wasAlreadyConnected = someResult;
-                      tmp18 = onIdentityAuthorize(obj4);
+                      tmp17 = onIdentityAuthorize(obj4);
                     }
                   }
                 }
@@ -1530,1423 +1406,1343 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[26] = onIdentityAuthorize;
           cResult[27] = startAuthorization;
           cResult[28] = G;
-          tmp35 = G;
+          tmp38 = G;
         }
-      }
-      identity_connected_account_type = eligibilityState.identity_connected_account_type;
-      identity_auth_required_scopes = eligibilityState.identity_auth_required_scopes;
-      let flag = canStartAuthorization;
-      if (!flag) {
-        flag = canStartAuthorization;
-        if (null != identity_connected_account_type) {
-          flag = canStartAuthorization;
-          if (null != identity_auth_required_scopes) {
-            const tmp6Result = identity_auth_required_scopes(identity_connected_account_type[20]);
-            const value = tmp6Result.get(identity_connected_account_type);
-            flag = canStartAuthorization;
-            const tmp13 = null != value && value.enabled;
-            if (tmp13) {
-              canStartAuthorization = true;
-              flag = true;
-            }
-          }
-        }
-      }
-      cResult[0] = canStartAuthorization;
-      cResult[1] = eligibilityState.identity_auth_required_scopes;
-      cResult[2] = eligibilityState.identity_connected_account_type;
-      cResult[3] = flag;
-      cResult[4] = identity_auth_required_scopes;
-      cResult[5] = identity_connected_account_type;
-    }
-  : (eligibilityState) => {
-      let c5;
-      let intl;
-      let intl2;
-      let items3;
-      let items4;
-      let items5;
-      let tmp10;
-      let tmp13Result;
-      let tmp15;
-      eligibilityState = eligibilityState.eligibilityState;
-      const onAttempted = eligibilityState.onAttempted;
-      const onIdentityAuthorize = eligibilityState.onIdentityAuthorize;
-      let application;
-      let c9;
-      const tmp = closure_32();
-      let tmp3 = onIdentityAuthorize;
-      let obj = eligibilityState(onIdentityAuthorize[29]);
-      const getOrFetchApplicationBatched = obj.useGetOrFetchApplicationBatched(eligibilityState.application_id);
-      const tmp6 = onAttempted(onIdentityAuthorize[30])(getOrFetchApplicationBatched);
-      const canStartAuthorization = tmp6.canStartAuthorization;
-      const startAuthorization = tmp6.startAuthorization;
-      react = canStartAuthorization;
-      const identity_connected_account_type = eligibilityState.identity_connected_account_type;
-      const identity_auth_required_scopes = eligibilityState.identity_auth_required_scopes;
-      let flag = canStartAuthorization;
-      if (!flag) {
-        flag = canStartAuthorization;
-        if (null != identity_connected_account_type) {
-          flag = canStartAuthorization;
-          if (null != identity_auth_required_scopes) {
-            const tmp5Result = onAttempted(tmp3[20]);
-            const value = tmp5Result.get(identity_connected_account_type);
-            flag = canStartAuthorization;
-            const tmp9 = null != value && value.enabled;
-            if (tmp9) {
-              react = true;
-              flag = true;
-            }
-          }
-        }
-      }
-      application = eligibilityState.application;
-      const items = [application];
-      const memo = react.useMemo(function () {
-        let bot;
-        if (application != null) {
-          bot = application.bot;
-        }
-        let tmp3 = null;
-        if (null != bot) {
-          const self = this;
-          const self2 = this;
-          tmp3 = new UserRecord(application.bot);
-        }
-        return tmp3;
-      }, items);
-      const result = eligibilityState.result;
-      c9 = result;
-      const obj3 = react;
-      if (null != memo) {
-        let obj2 = { style: tmp.botTag, verified: memo.isVerifiedBot() };
-        const tmp5Result2 = onAttempted(tmp3[31]);
-        tmp10 = closure_29(tmp5Result2, obj2);
-      }
-      if (result) {
-        const obj4 = { source: onAttempted(tmp3[32]), style: tmp.connectionsChecksGroupCheckmark };
-        const Icon2 = tmp2(tmp3[23]).Icon;
-        tmp13Result = closure_29(Icon2, obj4);
-        tmp15 = closure_29;
-      } else if (flag) {
-        const obj5 = { source: onAttempted(tmp3[33]), style: tmp.connectionsChecksGroupCaret };
-        const Icon = tmp2(tmp3[23]).Icon;
-        tmp13Result = closure_29(Icon, obj5);
-        tmp15 = closure_29;
       } else {
-        const obj6 = {
-          variant: "text-md/medium",
-          color: "text-muted",
-          children: intl.string(eligibilityState(tmp3[27]).t.cEts68),
-        };
-        const Text = tmp2(tmp3[26]).Text;
-        intl = tmp2(tmp3[27]).intl;
-        tmp13Result = closure_29(Text, obj6);
-        tmp15 = closure_29;
-      }
-      const items1 = [result, flag, canStartAuthorization, startAuthorization, onAttempted, onIdentityAuthorize, , , ,];
-      ({ connection_type: arr2[6], application_id: arr2[7] } = eligibilityState);
-      items1[8] = identity_connected_account_type;
-      items1[9] = identity_auth_required_scopes;
-      const callback = obj3.useCallback(() => {
-        if (!c9) {
-          if (c5) {
-            let someResult = null != identity_connected_account_type;
-            if (someResult) {
-              const accounts = ConnectedAccountsStore.getAccounts();
-              someResult = accounts.some((type) => type.type === identity_connected_account_type);
+        if (cResult[8] !== obj3) {
+          const isVerifiedBotResult = obj3.isVerifiedBot();
+          class G {
+            constructor() {
+              if (!result) {
+                tmp = c0;
+                if (c0) {
+                  tmp2 = closure_2;
+                  tmp3 = null;
+                  someResult = null != closure_2;
+                  if (someResult) {
+                    tmp5 = closure_14;
+                    accounts = closure_14.getAccounts();
+                    someResult = accounts.some(() => { ... });
+                  }
+                  connection_type = null;
+                  tmp6 = onAttempted;
+                  if (!someResult) {
+                    tmp8 = eligibilityState;
+                    connection_type = eligibilityState.connection_type;
+                  }
+                  tmp9 = eligibilityState;
+                  application_id = eligibilityState.application_id;
+                  if (application_id == null) {
+                    application_id = null;
+                  }
+                  tmp6Result = tmp6(connection_type, application_id);
+                  tmp12 = canStartAuthorization;
+                  if (canStartAuthorization) {
+                    tmp18 = startAuthorization;
+                    obj1 = { analyticsLocations: null };
+                    obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                    tmp19 = startAuthorization(obj1);
+                  } else {
+                    tmp13 = null != tmp2;
+                    if (tmp13) {
+                      tmp14 = closure_1;
+                      tmp13 = null != closure_1;
+                    }
+                    if (tmp13) {
+                      tmp13 = null != tmp9.application_id;
+                    }
+                    if (tmp13) {
+                      tmp15 = onIdentityAuthorize;
+                      obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                      obj4.applicationId = tmp9.application_id;
+                      tmp16 = closure_1;
+                      obj4.scopes = closure_1;
+                      obj4.connectedAccountProvider = tmp2;
+                      obj4.wasAlreadyConnected = someResult;
+                      tmp17 = onIdentityAuthorize(obj4);
+                    }
+                  }
+                }
+              }
+              return;
             }
-            let connection_type = null;
+          }
+          cResult[9] = isVerifiedBotResult;
+          let tmp20 = isVerifiedBotResult;
+        } else {
+          tmp20 = cResult[9];
+        }
+        class G {
+          constructor() {
+            if (!result) {
+              tmp = c0;
+              if (c0) {
+                tmp2 = closure_2;
+                tmp3 = null;
+                someResult = null != closure_2;
+                if (someResult) {
+                  tmp5 = closure_14;
+                  accounts = closure_14.getAccounts();
+                  someResult = accounts.some(() => { ... });
+                }
+                connection_type = null;
+                tmp6 = onAttempted;
+                if (!someResult) {
+                  tmp8 = eligibilityState;
+                  connection_type = eligibilityState.connection_type;
+                }
+                tmp9 = eligibilityState;
+                application_id = eligibilityState.application_id;
+                if (application_id == null) {
+                  application_id = null;
+                }
+                tmp6Result = tmp6(connection_type, application_id);
+                tmp12 = canStartAuthorization;
+                if (canStartAuthorization) {
+                  tmp18 = startAuthorization;
+                  obj1 = { analyticsLocations: null };
+                  obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+                  tmp19 = startAuthorization(obj1);
+                } else {
+                  tmp13 = null != tmp2;
+                  if (tmp13) {
+                    tmp14 = closure_1;
+                    tmp13 = null != closure_1;
+                  }
+                  if (tmp13) {
+                    tmp13 = null != tmp9.application_id;
+                  }
+                  if (tmp13) {
+                    tmp15 = onIdentityAuthorize;
+                    obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                    obj4.applicationId = tmp9.application_id;
+                    tmp16 = closure_1;
+                    obj4.scopes = closure_1;
+                    obj4.connectedAccountProvider = tmp2;
+                    obj4.wasAlreadyConnected = someResult;
+                    tmp17 = onIdentityAuthorize(obj4);
+                  }
+                }
+              }
+            }
+            return;
+          }
+        }
+        const obj13 = { style: tmp4.botTag, verified: tmp20 };
+        const tmp24 = closure_29(tmp6(tmp2[31]), obj13);
+        cResult[10] = tmp4.botTag;
+        cResult[11] = tmp20;
+        cResult[12] = tmp24;
+      }
+    }
+  }
+  identity_connected_account_type = eligibilityState.identity_connected_account_type;
+  identity_auth_required_scopes = eligibilityState.identity_auth_required_scopes;
+  let tmp11 = canStartAuthorization;
+  if (!canStartAuthorization) {
+    tmp11 = canStartAuthorization;
+    class G {
+      constructor() {
+        if (!result) {
+          tmp = c0;
+          if (c0) {
+            tmp2 = closure_2;
+            tmp3 = null;
+            someResult = null != closure_2;
+            if (someResult) {
+              tmp5 = closure_14;
+              accounts = closure_14.getAccounts();
+              someResult = accounts.some(() => { ... });
+            }
+            connection_type = null;
+            tmp6 = onAttempted;
             if (!someResult) {
+              tmp8 = eligibilityState;
               connection_type = eligibilityState.connection_type;
             }
-            let application_id = eligibilityState.application_id;
+            tmp9 = eligibilityState;
+            application_id = eligibilityState.application_id;
             if (application_id == null) {
               application_id = null;
             }
-            onAttempted(connection_type, application_id);
+            tmp6Result = tmp6(connection_type, application_id);
+            tmp12 = canStartAuthorization;
             if (canStartAuthorization) {
-              const obj = { analyticsLocations: ["Verified Roles Connect Accounts Modal"] };
-              startAuthorization(obj);
+              tmp18 = startAuthorization;
+              obj1 = { analyticsLocations: null };
+              obj1.analyticsLocations = ["Verified Roles Connect Accounts Modal"];
+              tmp19 = startAuthorization(obj1);
             } else {
-              const tmp14 =
-                null != identity_connected_account_type &&
-                null != identity_auth_required_scopes &&
-                null != eligibilityState.application_id;
-              if (tmp14) {
-                const obj2 = {
-                  applicationId: eligibilityState.application_id,
-                  scopes: identity_auth_required_scopes,
-                  connectedAccountProvider: identity_connected_account_type,
-                  wasAlreadyConnected: someResult,
-                };
-                onIdentityAuthorize(obj2);
+              tmp13 = null != tmp2;
+              if (tmp13) {
+                tmp14 = closure_1;
+                tmp13 = null != closure_1;
+              }
+              if (tmp13) {
+                tmp13 = null != tmp9.application_id;
+              }
+              if (tmp13) {
+                tmp15 = onIdentityAuthorize;
+                obj4 = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
+                obj4.applicationId = tmp9.application_id;
+                tmp16 = closure_1;
+                obj4.scopes = closure_1;
+                obj4.connectedAccountProvider = tmp2;
+                obj4.wasAlreadyConnected = someResult;
+                tmp17 = onIdentityAuthorize(obj4);
               }
             }
           }
         }
-      }, items1);
-      const officialApplicationIds = tmp2(tmp3[28]).officialApplicationIds;
-      let str;
-      const includes = officialApplicationIds.includes;
-      if (application != null) {
-        str = application.id;
+        return;
       }
-      if (str == null) {
-        str = "";
-      }
-      let tmp18Result = null;
-      if (!includes(str)) {
-        const items2 = [tmp.connectionsChecksGroup, ,];
-        let prop = null;
-        const tmp19 = identity_auth_required_scopes;
-        if (result) {
-          prop = tmp.connectionsChecksGroupPassed;
-        }
-        items2[1] = prop;
-        let prop1 = null;
-        if (!flag) {
-          prop1 = tmp.connectionsChecksGroupPlatformDisabled;
-        }
-        const obj7 = {
-          accessibilityRole: "button",
-          style: items2,
-          disabled: result || !flag,
-          onPress: callback,
-          children: items3,
-        };
-        items2[2] = prop1;
-        let tmp15Result = null;
-        if (null != memo) {
-          const obj8 = {
-            style: tmp.appIcon,
-            user: memo,
-            size: eligibilityState(tmp3[23]).AvatarSizes.XSMALL,
-            guildId: "Array",
-          };
-          const Avatar = tmp2(tmp3[23]).Avatar;
-          tmp15Result = tmp15(Avatar, obj8);
-        }
-        items3 = [tmp15Result, ,];
-        let name;
-        const obj10 = { style: tmp.connectionsChecksGroupTextNameContainer, children: items4 };
-        const obj9 = { style: tmp.connectionsChecksGroupTextContainer, children: items5 };
-        const Text2 = tmp2(tmp3[26]).Text;
-        if (application != null) {
-          name = application.name;
-        }
-        const obj11 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name };
-        items4 = [tmp15(Text2, obj11), tmp10];
-        items5 = [closure_30(application, obj10)];
-        let tmp15Result2 = null;
-        if (!flag) {
-          tmp15Result2 = null;
-          if (!result) {
-            const obj12 = {
-              variant: "text-xs/normal",
-              color: "text-muted",
-              style: tmp.connectionsCheck,
-              children: intl2.string(eligibilityState(tmp3[27]).t["+z5dYe"]),
-            };
-            const Text3 = tmp2(tmp3[26]).Text;
-            intl2 = tmp2(tmp3[27]).intl;
-            tmp15Result2 = tmp15(Text3, obj12);
-          }
-        }
-        items5[1] = tmp15Result2;
-        items3[1] = closure_30(application, obj9);
-        items3[2] = tmp13Result;
-        tmp18Result = closure_30(tmp19, obj7);
-      }
-      return tmp18Result;
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (onPlatformConnect) => {
-      let closure_10;
-      let closure_11;
-      let closure_4;
-      let closure_6;
-      let closure_7;
-      let closure_8;
-      let closure_9;
-      let eligibilityStatesGroups;
-      let first;
-      let first1;
-      let guildId;
-      let initialAttemptedApplicationId;
-      let initialAttemptedPlatformType;
-      let onPlatformAttempt;
-      let onPlatformConnected;
-      let roleColor;
-      let tmp12;
-      let tmp15;
-      const tmp = onPlatformConnected;
-      let obj = onPlatformAttempt(onPlatformConnected[18]);
-      const cResult = obj.c(32);
-      ({ eligibilityStatesGroups, onPlatformAttempt } = onPlatformConnect);
-      onPlatformConnect = onPlatformConnect.onPlatformConnect;
-      onPlatformConnected = onPlatformConnect.onPlatformConnected;
-      const onIdentityAuthorize = onPlatformConnect.onPlatformIdentityAuthorize;
-      ({ initialAttemptedPlatformType, initialAttemptedApplicationId } = onPlatformConnect);
-      let tmp3 = closure_32();
-      _slicedToArray = tmp3;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = {};
-        let num = 0;
-        cResult[0] = obj2;
-        first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      const tmp5 = first1;
-      [first1, closure_6] = first1.useState(first);
-      [closure_7, closure_8] = first1.useState(0);
-      const useState = first1.useState;
-      if (initialAttemptedPlatformType == null) {
-        initialAttemptedPlatformType = null;
-      }
-      [closure_9, closure_10] = useState(initialAttemptedPlatformType);
-      const useState2 = tmp5.useState;
-      if (initialAttemptedApplicationId == null) {
-        initialAttemptedApplicationId = null;
-      }
-      [closure_11, closure_12] = useState2(initialAttemptedApplicationId);
-      if (cResult[1] !== eligibilityStatesGroups) {
-        const tmp13 = onPlatformConnect;
-        let obj3 = onPlatformConnect(tmp[34]);
-        const flattenResult = obj3.flatten(eligibilityStatesGroups);
-        let num2 = 1;
-        cResult[1] = eligibilityStatesGroups;
-        cResult[2] = flattenResult;
-        tmp12 = flattenResult;
-      } else {
-        tmp12 = cResult[2];
-      }
-      if (cResult[3] !== tmp12) {
-        const _Symbol = Symbol;
-        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class Z {
-            constructor(connection_type) {
-              let str = "";
-              connection_type = connection_type.connection_type;
-              if (null != connection_type.application_id) {
-                const _HermesInternal = HermesInternal;
-                str = ":" + connection_type.application_id;
-              }
-              return "" + connection_type + str;
-            }
-          }
-          cResult[5] = Z;
-        } else {
-          class Z {
-            constructor(connection_type) {
-              let str = "";
-              connection_type = connection_type.connection_type;
-              if (null != connection_type.application_id) {
-                const _HermesInternal = HermesInternal;
-                str = ":" + connection_type.application_id;
-              }
-              return "" + connection_type + str;
-            }
-          }
-        }
-        const tmp17 = onPlatformConnect;
-        let obj4 = onPlatformConnect(tmp[34]);
-        const groupByResult = obj4.groupBy(tmp12, Z);
-        cResult[3] = tmp12;
-        cResult[4] = groupByResult;
-        tmp15 = groupByResult;
-      } else {
-        class Z {
-          constructor(connection_type) {
-            let str = "";
-            connection_type = connection_type.connection_type;
-            if (null != connection_type.application_id) {
-              const _HermesInternal = HermesInternal;
-              str = ":" + connection_type.application_id;
-            }
-            return "" + connection_type + str;
-          }
-        }
-      }
-      ChannelStore = tmp15;
-      if (cResult[6] === first1) {
-        class Z {
-          constructor(connection_type) {
-            let str = "";
-            connection_type = connection_type.connection_type;
-            if (null != connection_type.application_id) {
-              const _HermesInternal = HermesInternal;
-              str = ":" + connection_type.application_id;
-            }
-            return "" + connection_type + str;
-          }
-        }
-      }
-      function ee(arg0, id) {
-        const obj = {};
-        const merged = Object.assign(first1);
-        obj[arg0] = Date.now();
-        closure_6(obj);
-        closure_10(arg0);
-        id = undefined;
-        if (id != null) {
-          id = id.id;
-        }
-        if (id == null) {
-          id = null;
-        }
-        closure_12(id);
-        onPlatformAttempt();
-        onPlatformConnect(arg0, id);
-      }
-      cResult[6] = first1;
-      cResult[7] = onPlatformAttempt;
-      cResult[8] = onPlatformConnect;
-      cResult[9] = ee;
     }
-  : (eligibilityStatesGroups) => {
-      let _undefined;
-      let _undefined2;
-      let c6;
-      let c7;
-      let c8;
-      let c9;
-      let closure_11;
-      let closure_13;
-      let closure_5;
-      let first;
-      let first1;
-      let guildId;
-      let initialAttemptedApplicationId;
-      let initialAttemptedPlatformType;
-      let onIdentityAuthorize;
-      let onPlatformConnected;
-      let sorted;
-      eligibilityStatesGroups = eligibilityStatesGroups.eligibilityStatesGroups;
-      ({
-        onPlatformAttempt: importDefault,
-        onPlatformConnect: dependencyMap,
-        onPlatformConnected,
-      } = eligibilityStatesGroups);
-      ({
-        onPlatformIdentityAuthorize: _slicedToArray,
-        initialAttemptedPlatformType,
-        initialAttemptedApplicationId,
-      } = eligibilityStatesGroups);
-      c6 = undefined;
-      c7 = undefined;
-      c8 = undefined;
-      c9 = undefined;
-      first = undefined;
-      closure_11 = undefined;
-      first1 = undefined;
-      closure_13 = undefined;
-      let memo;
-      let memo1;
-      let roleColor;
-      react = closure_32();
-      let obj = react;
-      let tmp2 = _slicedToArray(react.useState({}), 2);
-      [c6, c7] = tmp2;
-      let tmp3 = _slicedToArray(react.useState(0), 2);
-      [c8, c9] = tmp3;
-      const useState = react.useState;
-      if (initialAttemptedPlatformType == null) {
-        initialAttemptedPlatformType = null;
-      }
-      [first, closure_11] = useState(initialAttemptedPlatformType);
-      const useState2 = obj.useState;
-      if (initialAttemptedApplicationId == null) {
-        initialAttemptedApplicationId = null;
-      }
-      [first1, closure_13] = useState2(initialAttemptedApplicationId);
-      let items = [eligibilityStatesGroups];
-      memo = obj.useMemo(() => {
-        const obj = _modDef12;
-        return obj.flatten(eligibilityStatesGroups);
-      }, items);
-      let items1 = [memo];
-      memo1 = obj.useMemo(() => {
-        const obj = _modDef12;
-        return obj.groupBy(memo, (connection_type) => {
-          let str = "";
-          connection_type = connection_type.connection_type;
-          if (null != connection_type.application_id) {
-            const _HermesInternal = HermesInternal;
-            str = ":" + connection_type.application_id;
-          }
-          return "" + connection_type + str;
-        });
-      }, items1);
-      let items2 = [memo];
-      const effect = obj.useEffect(() => _undefined2(Date.now()), items2);
-      let items3 = [memo1, first, first1, onPlatformConnected];
-      const effect1 = obj.useEffect(() => {
-        if (null != first) {
-          let str2 = "";
-          if (null != first1) {
-            const _HermesInternal = HermesInternal;
-            str2 = ":" + tmp11;
-          }
-          const _HermesInternal2 = HermesInternal;
-          const arr = memo1["" + first + str2];
-          if (null != arr) {
-            if (arr.every((item) => item.result)) {
-              first = arr[0];
-              let prop;
-              if (first != null) {
-                prop = first.identity_connected_account_type;
-              }
-              if (prop == null) {
-                prop = tmp;
-              }
-              const found = arr.find((application) => null != application.application);
-              let application;
-              if (found != null) {
-                application = found.application;
-              }
-              if (application == null) {
-                application = null;
-              }
-              onPlatformConnected(prop, application);
-            }
-          }
+  }
+  cResult[0] = canStartAuthorization;
+  cResult[1] = eligibilityState.identity_auth_required_scopes;
+  cResult[2] = eligibilityState.identity_connected_account_type;
+  cResult[3] = tmp11;
+  cResult[4] = identity_auth_required_scopes;
+  cResult[5] = identity_connected_account_type;
+  let obj2 = canStartAuthorization(identity_connected_account_type[29]);
+}) : ((eligibilityState) => {
+  eligibilityState = eligibilityState.eligibilityState;
+  const onAttempted = eligibilityState.onAttempted;
+  const onIdentityAuthorize = eligibilityState.onIdentityAuthorize;
+  let application;
+  c9 = undefined;
+  const tmp = closure_32();
+  const getOrFetchApplicationBatched = eligibilityState(onIdentityAuthorize[29]).useGetOrFetchApplicationBatched(eligibilityState.application_id);
+  const tmp6 = onAttempted(onIdentityAuthorize[30])(getOrFetchApplicationBatched);
+  const canStartAuthorization = tmp6.canStartAuthorization;
+  const startAuthorization = tmp6.startAuthorization;
+  noop = canStartAuthorization;
+  const identity_connected_account_type = eligibilityState.identity_connected_account_type;
+  const identity_auth_required_scopes = eligibilityState.identity_auth_required_scopes;
+  let flag = canStartAuthorization;
+  if (!canStartAuthorization) {
+    flag = canStartAuthorization;
+    if (null != identity_connected_account_type) {
+      flag = canStartAuthorization;
+      if (null != identity_auth_required_scopes) {
+        value = tmp5(tmp3[20]).get(identity_connected_account_type);
+        flag = canStartAuthorization;
+        if (tmp9) {
+          noop = true;
+          flag = true;
         }
-      }, items3);
-      let obj2 = eligibilityStatesGroups(4586);
-      roleColor = obj2.useToken(nativeDefault.unsafe_rawColors.GREEN_330);
-      let obj3 = {
-        children: sorted.map(function (item) {
-          let Icon3;
-          let Text3;
-          let intl;
-          let intl2;
-          let intl4;
-          let items1;
-          let items2;
-          let items3;
-          let obj11;
-          let obj17;
-          let tmp20Result;
-          let tmp22;
-          let tmp22Result;
-          if (item.startsWith("" + closure_1_20 + ":")) {
-            if (null != memo1[item][0]) {
-              let obj2 = {
-                eligibilityState: memo1[item][0],
-                onAttempted(arg0, arg1) {
-                  closure_1_11(arg0);
-                  closure_1_13(arg1);
-                  if (null != arg0) {
-                    value();
-                  }
-                },
-                onIdentityAuthorize,
-              };
-              return closure_1_29(closure_1_36, obj2, item);
-            }
-          }
-          const found = arr.find((operator) => null == operator.operator);
-          const found1 = arr.filter((operator) => null != operator.operator);
-          const tmp3 = (null == found || found.result) && found1.every((item) => item.result);
-          const found2 = arr.find((application) => null != application.application);
-          let obj = PlatformsDefault;
-          const value = obj.get(item);
-          importDefault = value;
-          let application;
-          if (found2 != null) {
-            application = found2.application;
-          }
-          let bot;
-          if (application != null) {
-            bot = application.bot;
-          }
-          let tmp11 = null;
-          if (null != bot) {
-            const self = this;
-            const self2 = this;
-            tmp11 = new closure_11(application.bot);
-          }
-          const officialApplicationIds = eligibilityStatesGroups(dependencyMap[28]).officialApplicationIds;
-          let str;
-          const includes = officialApplicationIds.includes;
-          if (application != null) {
-            str = application.id;
-          }
-          if (str == null) {
-            str = "";
-          }
-          let type;
-          const hasItem = includes(str);
-          if (value != null) {
-            type = value.type;
-          }
-          if (type == null) {
-            type = closure_1_19;
-          }
-          if (tmp3) {
-            const obj3 = { source: AssetRegistryDefault2, style: closure_5.connectionsChecksGroupCheckmark };
-            const Icon2 = tmp13(dependencyMap[23]).Icon;
-            tmp20Result = closure_1_29(Icon2, obj3);
-            tmp22 = closure_1_29;
-          } else if (!tmp3 && null != tmp17 && tmp17 <= c8) {
-            const obj4 = {
-              variant: "text-sm/semibold",
-              color: "text-brand",
-              children: intl2.string(eligibilityStatesGroups(dependencyMap[27]).t["5911Lb"]),
-            };
-            const Text2 = tmp13(dependencyMap[26]).Text;
-            intl2 = tmp13(dependencyMap[27]).intl;
-            tmp20Result = closure_1_29(Text2, obj4);
-            tmp22 = closure_1_29;
-          } else if (null == value || value.enabled) {
-            const obj5 = { source: AssetRegistryDefault3, style: closure_5.connectionsChecksGroupCaret };
-            const Icon = tmp13(dependencyMap[23]).Icon;
-            tmp20Result = closure_1_29(Icon, obj5);
-            tmp22 = closure_1_29;
-          } else {
-            const obj6 = {
-              variant: "text-md/medium",
-              color: "text-muted",
-              children: intl.string(eligibilityStatesGroups(dependencyMap[27]).t.cEts68),
-            };
-            const Text = tmp13(dependencyMap[26]).Text;
-            intl = tmp13(dependencyMap[27]).intl;
-            tmp20Result = closure_1_29(Text, obj6);
-            tmp22 = closure_1_29;
-          }
-          let type1;
-          if (value != null) {
-            type1 = value.type;
-          }
-          let tmp26;
-          if (type1 === constants.STEAM) {
-            const intl3 = tmp13(dependencyMap[27]).intl;
-            const stringResult = intl3.string(tmp13(dependencyMap[27]).t.NcZh6K);
-            eligibilityStatesGroups = stringResult;
-            tmp26 = stringResult;
-          }
-          if (hasItem) {
-            const obj7 = { style: closure_5.botTag, guildId, roleColor, size: 16 };
-            tmp22Result = tmp22(tmp5(dependencyMap[36]), obj7);
-          } else if (null != tmp11) {
-            const obj8 = { style: closure_5.botTag, verified: tmp11.isVerifiedBot() };
-            const tmp5Result = BotTagDefault;
-            tmp22Result = tmp22(tmp5Result, obj8);
-          }
-          const items = [closure_5.connectionsChecksGroup, ,];
-          let prop = null;
-          if (tmp3) {
-            prop = closure_5.connectionsChecksGroupPassed;
-          }
-          items[1] = prop;
-          let prop1 = null;
-          if (!(null == value || value.enabled)) {
-            prop1 = closure_5.connectionsChecksGroupPlatformDisabled;
-          }
-          const obj9 = {
-            accessibilityRole: "button",
-            style: items,
-            disabled: tmp3 || !(null == value || value.enabled),
-            onPress() {
-              let type;
-              if (value != null) {
-                type = value.type;
-              }
-              if (type == null) {
-                type = closure_19;
-              }
-              let tmp2 = application;
-              if (application == null) {
-                tmp2 = null;
-              }
-              const obj = {};
-              const merged = Object.assign(c6);
-              obj[type] = Date.now();
-              c7(obj);
-              closure_11(type);
-              let id;
-              if (tmp2 != null) {
-                id = tmp2.id;
-              }
-              if (id == null) {
-                id = null;
-              }
-              closure_13(id);
-              importDefault();
-              dependencyMap(type, tmp2);
-            },
-            children: items1,
-          };
-          items[2] = prop1;
-          let tmp22Result5 = null;
-          if (!tmp3) {
-            tmp22Result5 = null;
-            if (!tmp3 && null != tmp17 && tmp17 <= c8) {
-              const obj10 = {
-                style: closure_5.connectionsChecksGroupRequirementsNotMet,
-                children: tmp22(Text3, obj11),
-              };
-              obj11 = {
-                variant: "text-xs/normal",
-                color: "text-overlay-light",
-                children: intl4.string(eligibilityStatesGroups(dependencyMap[27]).t.UB3hKo),
-              };
-              Text3 = tmp13(dependencyMap[26]).Text;
-              intl4 = tmp13(dependencyMap[27]).intl;
-              tmp22Result5 = tmp22(c8, obj10);
-            }
-          }
-          items1 = [tmp22Result5, , , ,];
-          let tmp22Result6 = null;
-          if (null != value) {
-            const obj12 = { platformType: value.type };
-            tmp22Result6 = tmp22(closure_1_33, obj12);
-          }
-          items1[1] = tmp22Result6;
-          let tmp22Result7 = null;
-          if (null != tmp11) {
-            const obj13 = {
-              style: closure_5.appIcon,
-              user: tmp11,
-              size: eligibilityStatesGroups(dependencyMap[23]).AvatarSizes.XSMALL,
-              guildId: "Array",
-            };
-            const Avatar = tmp13(dependencyMap[23]).Avatar;
-            tmp22Result7 = tmp22(Avatar, obj13);
-          }
-          items1[2] = tmp22Result7;
-          let name;
-          const obj14 = { style: closure_5.connectionsChecksGroupTextContainer, children: items3 };
-          const obj15 = { style: closure_5.connectionsChecksGroupTextNameContainer, children: items2 };
-          const Text4 = tmp13(dependencyMap[26]).Text;
-          if (value != null) {
-            name = value.name;
-          }
-          if (name == null) {
-            let name1;
-            if (application != null) {
-              name1 = application.name;
-            }
-            name = name1;
-          }
-          items2 = [
-            tmp22(Text4, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name }),
-            tmp22Result,
-          ];
-          let tmp22Result8 = null;
-          if (null != tmp26) {
-            const obj16 = {
-              onPress() {
-                _modDef38(null != stringResult, "tooltip is null");
-                const obj = ToastActionCreatorsDefault;
-                const obj2 = { key: "CONNECTIONS_STEAM_TOOLTIP", icon: AssetRegistryDefault, content: stringResult };
-                obj.open(obj2);
-              },
-              children: tmp22(Icon3, obj17),
-            };
-            obj17 = {
-              source: AssetRegistryDefault,
-              size: eligibilityStatesGroups(dependencyMap[23]).Icon.Sizes.SMALL_20,
-              style: closure_5.connectionsChecksGroupTextNameInfoIcon,
-            };
-            Icon3 = tmp13(dependencyMap[23]).Icon;
-            tmp22Result8 = tmp22(c7, obj16);
-          }
-          items2[2] = tmp22Result8;
-          items3 = [
-            closure_1_30(c8, obj15),
-            found1.map((item) => {
-              let connection_metadata_field;
-              let connection_type;
-              let description;
-              let operator;
-              let result;
-              ({ connection_metadata_field, operator, value } = item);
-              ({ connection_type, result, description } = item);
-              value(application[37])(null != connectionMetadataField, "connectionMetadataField is null");
-              value(application[37])(null != operator, "operator is null");
-              value(application[37])(null != value, "value is null");
-              return closure_1_29(
-                closure_1_35,
-                { connectionType, connectionMetadataField, operator, value, result, description },
-                connectionMetadataField,
-              );
-            }),
-          ];
-          items1[3] = closure_1_30(c8, obj14);
-          items1[4] = tmp20Result;
-          return closure_1_30(c7, obj9, item);
-        }),
-      };
-      const keys = Object.keys(memo1);
-      sorted = keys.sort((arg0, arg1) => {
-        let num;
-        const obj = memo1[arg0];
-        const everyResult = obj.every((item) => item.result);
-        const obj2 = memo1[arg1];
-        const everyResult1 = obj2.every((item) => item.result);
-        if (true !== everyResult) {
-          let num2 = 0;
-          if (false === everyResult) {
-            num2 = 0;
-            if (true === everyResult1) {
-              num2 = -1;
-            }
-          }
-          num = num2;
+        const tmp5Result = tmp5(tmp3[20]);
+        tmp9 = null != value && value.enabled;
+      }
+    }
+  }
+  application = eligibilityState.application;
+  const items = [application];
+  const memo = noop.useMemo(() => {
+    let bot;
+    if (application != null) {
+      bot = application.bot;
+    }
+    let tmp3 = null;
+    if (null != bot) {
+      tmp3 = new UserRecord(application.bot);
+    }
+    return tmp3;
+  }, items);
+  const result = eligibilityState.result;
+  c9 = result;
+  if (null != memo) {
+    let obj2 = { style: tmp.botTag, verified: memo.isVerifiedBot() };
+    const tmp5Result2 = tmp5(tmp3[31]);
+    const tmp10 = closure_29(tmp5(tmp3[31]), obj2);
+  }
+  if (result) {
+    const obj4 = { source: tmp5(tmp3[32]), style: tmp.connectionsChecksGroupCheckmark };
+    let tmp13Result = closure_29(tmp2(tmp3[23]).Icon, obj4);
+    let tmp15 = closure_29;
+  } else if (flag) {
+    const obj5 = { source: tmp5(tmp3[33]), style: tmp.connectionsChecksGroupCaret };
+    tmp13Result = closure_29(tmp2(tmp3[23]).Icon, obj5);
+    tmp15 = closure_29;
+  } else {
+    const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
+    const intl = tmp2(tmp3[27]).intl;
+    obj6.children = intl.string(tmp2(tmp3[27]).t.cEts68);
+    tmp13Result = closure_29(tmp2(tmp3[26]).Text, obj6);
+    tmp15 = closure_29;
+  }
+  const items1 = [result, flag, canStartAuthorization, startAuthorization, onAttempted, onIdentityAuthorize, , , , ];
+  ({ connection_type: arr2[6], application_id: arr2[7] } = eligibilityState);
+  items1[8] = identity_connected_account_type;
+  items1[9] = identity_auth_required_scopes;
+  const callback = noop.useCallback(() => {
+    if (!c9) {
+      if (c5) {
+        let someResult = null != identity_connected_account_type;
+        if (someResult) {
+          const accounts = ConnectedAccountsStore.getAccounts();
+          someResult = accounts.some((type) => type.type === identity_connected_account_type);
+        }
+        let connection_type = null;
+        if (!someResult) {
+          connection_type = eligibilityState.connection_type;
+        }
+        let application_id = eligibilityState.application_id;
+        if (application_id == null) {
+          application_id = null;
+        }
+        onAttempted(connection_type, application_id);
+        if (canStartAuthorization) {
+          const obj = { analyticsLocations: ["Verified Roles Connect Accounts Modal"] };
+          startAuthorization(obj);
         } else {
-          num = 1;
+          let tmp13 = null != identity_connected_account_type;
+          if (tmp13) {
+            tmp13 = null != identity_auth_required_scopes;
+          }
+          if (tmp13) {
+            tmp13 = null != eligibilityState.application_id;
+          }
+          if (tmp13) {
+            const obj2 = { applicationId: eligibilityState.application_id, scopes: identity_auth_required_scopes, connectedAccountProvider: identity_connected_account_type, wasAlreadyConnected: someResult };
+            onIdentityAuthorize(obj2);
+          }
         }
-        return num;
-      });
-      return closure_29(closure_31, obj3);
+      }
+    }
+  }, items1);
+  const officialApplicationIds = tmp2(tmp3[28]).officialApplicationIds;
+  let str;
+  if (application != null) {
+    str = application.id;
+  }
+  if (str == null) {
+    str = "";
+  }
+  let tmp18Result = null;
+  if (!officialApplicationIds.includes(str)) {
+    const items2 = [tmp.connectionsChecksGroup, , ];
+    let prop = null;
+    if (result) {
+      prop = tmp.connectionsChecksGroupPassed;
+    }
+    items2[1] = prop;
+    let prop1 = null;
+    if (!flag) {
+      prop1 = tmp.connectionsChecksGroupPlatformDisabled;
+    }
+    const obj7 = { accessibilityRole: "button", style: null, disabled: null, onPress: null, children: null };
+    items2[2] = prop1;
+    obj7.style = items2;
+    let tmp22 = result;
+    if (!result) {
+      tmp22 = !flag;
+    }
+    obj7.disabled = tmp22;
+    obj7.onPress = callback;
+    let tmp15Result = null;
+    if (null != memo) {
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[23]).AvatarSizes.XSMALL, guildId: "Array" };
+      tmp15Result = tmp15(tmp2(tmp3[23]).Avatar, obj8);
+    }
+    const items3 = [tmp15Result, , ];
+    const obj9 = { style: tmp.connectionsChecksGroupTextContainer, children: null };
+    const obj10 = { style: tmp.connectionsChecksGroupTextNameContainer, children: null };
+    let name;
+    if (application != null) {
+      name = application.name;
+    }
+    const obj11 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name };
+    const items4 = [tmp15(tmp2(tmp3[26]).Text, obj11), tmp10];
+    obj10.children = items4;
+    const items5 = [closure_30(application, obj10), ];
+    let tmp15Result2 = null;
+    if (!flag) {
+      tmp15Result2 = null;
+      if (!result) {
+        const obj12 = { variant: "text-xs/normal", color: "text-muted", style: tmp.connectionsCheck, children: null };
+        const intl2 = tmp2(tmp3[27]).intl;
+        obj12.children = intl2.string(tmp2(tmp3[27]).t["+z5dYe"]);
+        tmp15Result2 = tmp15(tmp2(tmp3[26]).Text, obj12);
+      }
+    }
+    items5[1] = tmp15Result2;
+    obj9.children = items5;
+    items3[1] = closure_30(application, obj9);
+    items3[2] = tmp13Result;
+    obj7.children = items3;
+    tmp18Result = closure_30(identity_auth_required_scopes, obj7);
+  }
+  return tmp18Result;
+});
+ReactCompilerGating = fn(558);
+let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPlatformConnect) => {
+  const cResult = onPlatformAttempt(onPlatformConnected[18]).c(32);
+  ({ eligibilityStatesGroups, onPlatformAttempt } = onPlatformConnect);
+  onPlatformConnect = onPlatformConnect.onPlatformConnect;
+  onPlatformConnected = onPlatformConnect.onPlatformConnected;
+  const onIdentityAuthorize = onPlatformConnect.onPlatformIdentityAuthorize;
+  ({ initialAttemptedPlatformType, initialAttemptedApplicationId } = onPlatformConnect);
+  let obj = onPlatformAttempt(onPlatformConnected[18]);
+  _slicedToArray = closure_32();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj2 = {};
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  [first1, closure_6] = first1.useState(first);
+  [closure_7, closure_8] = first1.useState(0);
+  if (initialAttemptedPlatformType == null) {
+    initialAttemptedPlatformType = null;
+  }
+  [closure_9, closure_10] = first1.useState(initialAttemptedPlatformType);
+  if (initialAttemptedApplicationId == null) {
+    initialAttemptedApplicationId = null;
+  }
+  [closure_11, closure_12] = first1.useState(initialAttemptedApplicationId);
+  if (cResult[1] !== eligibilityStatesGroups) {
+    const flattenResult = onPlatformConnect(tmp[34]).flatten(eligibilityStatesGroups);
+    cResult[1] = eligibilityStatesGroups;
+    cResult[2] = flattenResult;
+    let tmp11 = flattenResult;
+    let obj4 = onPlatformConnect(tmp[34]);
+  } else {
+    tmp11 = cResult[2];
+  }
+  if (cResult[3] !== tmp11) {
+    const _Symbol = Symbol;
+    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+      class Z {
+        constructor(arg0) {
+          str = "";
+          if (null != onPlatformConnect.application_id) {
+            tmp = globalThis;
+            _HermesInternal = HermesInternal;
+            str2 = ":";
+            str = ":" + onPlatformConnect.application_id;
+          }
+          return "" + onPlatformConnect.connection_type + str;
+        }
+      }
+      cResult[5] = Z;
+    } else {
+      class Z {
+        constructor(arg0) {
+          str = "";
+          if (null != onPlatformConnect.application_id) {
+            tmp = globalThis;
+            _HermesInternal = HermesInternal;
+            str2 = ":";
+            str = ":" + onPlatformConnect.application_id;
+          }
+          return "" + onPlatformConnect.connection_type + str;
+        }
+      }
+    }
+    const groupByResult = onPlatformConnect(tmp[34]).groupBy(tmp11, Z);
+    cResult[3] = tmp11;
+    cResult[4] = groupByResult;
+    let obj5 = onPlatformConnect(tmp[34]);
+  } else {
+    class Z {
+      constructor(arg0) {
+        str = "";
+        if (null != onPlatformConnect.application_id) {
+          tmp = globalThis;
+          _HermesInternal = HermesInternal;
+          str2 = ":";
+          str = ":" + onPlatformConnect.application_id;
+        }
+        return "" + onPlatformConnect.connection_type + str;
+      }
+    }
+    ChannelStore = tmp14;
+    if (cResult[6] === first1) {
+      class Z {
+        constructor(arg0) {
+          str = "";
+          if (null != onPlatformConnect.application_id) {
+            tmp = globalThis;
+            _HermesInternal = HermesInternal;
+            str2 = ":";
+            str = ":" + onPlatformConnect.application_id;
+          }
+          return "" + onPlatformConnect.connection_type + str;
+        }
+      }
+    }
+    function ee(arg0, id) {
+      const obj = {};
+      const merged = Object.assign(first1);
+      obj[arg0] = Date.now();
+      closure_6(obj);
+      closure_10(arg0);
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      closure_12(id);
+      onPlatformAttempt();
+      onPlatformConnect(arg0, id);
+    }
+    cResult[6] = first1;
+    cResult[7] = onPlatformAttempt;
+    cResult[8] = onPlatformConnect;
+    cResult[9] = ee;
+  }
+  let tmp3 = closure_32();
+}) : ((eligibilityStatesGroups) => {
+  eligibilityStatesGroups = eligibilityStatesGroups.eligibilityStatesGroups;
+  ({ onPlatformAttempt: importDefault, onPlatformConnect: dependencyMap, onPlatformConnected } = eligibilityStatesGroups);
+  ({ onPlatformIdentityAuthorize: _slicedToArray, initialAttemptedPlatformType, initialAttemptedApplicationId } = eligibilityStatesGroups);
+  c6 = undefined;
+  c7 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  first = undefined;
+  closure_11 = undefined;
+  first1 = undefined;
+  closure_13 = undefined;
+  let memo;
+  let memo1;
+  let roleColor;
+  noop = closure_32();
+  [c6, c7] = noop.useState({});
+  let tmp2 = _slicedToArray(noop.useState({}), 2);
+  [c8, c9] = noop.useState(0);
+  if (initialAttemptedPlatformType == null) {
+    initialAttemptedPlatformType = null;
+  }
+  [first, closure_11] = noop.useState(initialAttemptedPlatformType);
+  if (initialAttemptedApplicationId == null) {
+    initialAttemptedApplicationId = null;
+  }
+  [first1, closure_13] = noop.useState(initialAttemptedApplicationId);
+  let items = [eligibilityStatesGroups];
+  memo = obj.useMemo(() => _modDef12.flatten(eligibilityStatesGroups), items);
+  let items1 = [memo];
+  memo1 = obj.useMemo(() => _modDef12.groupBy(memo, (application_id) => {
+    let str = "";
+    if (null != application_id.application_id) {
+      const _HermesInternal = HermesInternal;
+      str = ":" + application_id.application_id;
+    }
+    return "" + application_id.connection_type + str;
+  }), items1);
+  let items2 = [memo];
+  const effect = obj.useEffect(() => _undefined(Date.now()), items2);
+  let items3 = [memo1, first, first1, onPlatformConnected];
+  const effect1 = obj.useEffect(() => {
+    if (null != first) {
+      let str2 = "";
+      if (null != first1) {
+        const _HermesInternal = HermesInternal;
+        str2 = ":" + tmp11;
+      }
+      const _HermesInternal2 = HermesInternal;
+      const arr = memo1["" + tmp + str2];
+      if (null != arr) {
+        if (arr.every((item) => item.result)) {
+          first = arr[0];
+          let prop;
+          if (first != null) {
+            prop = first.identity_connected_account_type;
+          }
+          if (prop == null) {
+            prop = tmp;
+          }
+          const found = arr.find((application) => null != application.application);
+          let application;
+          if (found != null) {
+            application = found.application;
+          }
+          if (application == null) {
+            application = null;
+          }
+          onPlatformConnected(prop, application);
+        }
+      }
+    }
+  }, items3);
+  let tmp3 = _slicedToArray(noop.useState(0), 2);
+  roleColor = eligibilityStatesGroups(4586).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+  let obj3 = { children: null };
+  const keys = Object.keys(memo1);
+  const sorted = keys.sort((arg0, arg1) => {
+    const everyResult = memo1[arg0].every((item) => item.result);
+    const everyResult1 = memo1[arg1].every((item) => item.result);
+    if (true !== everyResult) {
+      let num2 = 0;
+      if (false === everyResult) {
+        num2 = 0;
+        if (true === everyResult1) {
+          num2 = -1;
+        }
+      }
+      let num = num2;
+    } else {
+      num = 1;
+    }
+    return num;
+  });
+  obj3.children = sorted.map((item) => {
+    if (item.startsWith("" + closure_1_20 + ":")) {
+      if (null != arr[0]) {
+        const obj2 = {
+          eligibilityState: arr[0],
+          onAttempted(arg0, arg1) {
+                closure_1_11(arg0);
+                closure_1_13(arg1);
+                if (null != arg0) {
+                  value();
+                }
+              },
+          onIdentityAuthorize
+        };
+        return closure_1_29(closure_1_36, obj2, item);
+      }
+    }
+    const found = arr.find((operator) => null == operator.operator);
+    const found1 = arr.filter((operator) => null != operator.operator);
+    const tmp3 = (null == found || found.result) && found1.every((item) => item.result);
+    const found2 = arr.find((application) => null != application.application);
+    value = PlatformsDefault.get(item);
+    closure_1 = value;
+    let application;
+    if (found2 != null) {
+      application = found2.application;
+    }
+    let bot;
+    if (application != null) {
+      bot = application.bot;
+    }
+    let tmp11 = null;
+    if (null != bot) {
+      tmp11 = new closure_11(application.bot);
+    }
+    const officialApplicationIds = eligibilityStatesGroups(6685).officialApplicationIds;
+    let str;
+    if (application != null) {
+      str = application.id;
+    }
+    if (str == null) {
+      str = "";
+    }
+    let type;
+    const hasItem = officialApplicationIds.includes(str);
+    if (value != null) {
+      type = value.type;
+    }
+    if (type == null) {
+      type = closure_1_19;
+    }
+    let tmp20 = !tmp3;
+    if (!tmp3) {
+      tmp20 = null != tmp19;
+    }
+    if (tmp20) {
+      tmp20 = tmp19 <= c8;
+    }
+    if (tmp3) {
+      const obj3 = { source: _modDef11194, style: closure_5.connectionsChecksGroupCheckmark };
+      let tmp22Result = closure_1_29(tmp15(1188).Icon, obj3);
+      let tmp24 = closure_1_29;
+    } else if (tmp20) {
+      const obj4 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+      const intl2 = tmp15(1126).intl;
+      obj4.children = intl2.string(tmp15(1126).t["5911Lb"]);
+      tmp22Result = closure_1_29(tmp15(4892).Text, obj4);
+      tmp24 = closure_1_29;
+    } else if (tmp8) {
+      const obj5 = { source: _modDef11195, style: closure_5.connectionsChecksGroupCaret };
+      tmp22Result = closure_1_29(tmp15(1188).Icon, obj5);
+      tmp24 = closure_1_29;
+    } else {
+      const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
+      const intl = tmp15(1126).intl;
+      obj6.children = intl.string(tmp15(1126).t.cEts68);
+      tmp22Result = closure_1_29(tmp15(4892).Text, obj6);
+      tmp24 = closure_1_29;
+    }
+    let type1;
+    if (value != null) {
+      type1 = value.type;
+    }
+    let tmp28;
+    if (type1 === constants.STEAM) {
+      const intl3 = tmp15(1126).intl;
+      const stringResult = intl3.string(tmp15(1126).t.NcZh6K);
+      eligibilityStatesGroups = stringResult;
+      tmp28 = stringResult;
+    }
+    if (hasItem) {
+      const obj7 = { style: closure_5.botTag, guildId, roleColor, size: 16 };
+      let tmp24Result = tmp24(OfficialConnectionIconDefault, obj7);
+    } else if (null != tmp11) {
+      const obj8 = { style: closure_5.botTag, verified: tmp11.isVerifiedBot() };
+      tmp24Result = tmp24(BotTagDefault, obj8);
+      const tmp5Result = BotTagDefault;
+    }
+    const items = [closure_5.connectionsChecksGroup, , ];
+    let prop = null;
+    if (tmp3) {
+      prop = closure_5.connectionsChecksGroupPassed;
+    }
+    items[1] = prop;
+    let prop1 = null;
+    if (!(null == value || value.enabled)) {
+      prop1 = closure_5.connectionsChecksGroupPlatformDisabled;
+    }
+    const obj9 = { accessibilityRole: "button", style: items, disabled: null, onPress: null, children: null };
+    items[2] = prop1;
+    let tmp41 = tmp3;
+    if (!tmp3) {
+      tmp41 = !tmp8;
+    }
+    obj9.disabled = tmp41;
+    obj9.onPress = function onPress() {
+      let type;
+      if (value != null) {
+        type = value.type;
+      }
+      if (type == null) {
+        type = closure_3_19;
+      }
+      let tmp2 = application;
+      if (application == null) {
+        tmp2 = null;
+      }
+      const obj = {};
+      const merged = Object.assign(c6);
+      obj[type] = Date.now();
+      c7(obj);
+      closure_11(type);
+      let id;
+      if (tmp2 != null) {
+        id = tmp2.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      closure_13(id);
+      importDefault();
+      dependencyMap(type, tmp2);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (account) => {
-      let closure_6;
-      let closure_8;
-      let first1;
-      let formatToPlainString;
-      let items;
-      let setShowPreviewMetadata;
-      let tmp6;
-      let tmp8;
-      let value;
-      let obj = account(setShowPreviewMetadata[18]);
-      const cResult = obj.c(45);
-      account = account.account;
-      const setShowPreviewInvisibleIcon = account.setShowPreviewInvisibleIcon;
-      setShowPreviewMetadata = account.setShowPreviewMetadata;
-      const tmp4 = closure_32();
-      [tmp6, _asyncToGenerator] = value.useState(account.friendSync);
-      _slicedToArray(value.useState(account.friendSync), 2);
-      const tmp7 = _slicedToArray(value.useState(account.showActivity), 2);
-      [tmp8, _slicedToArray] = tmp7;
-      [value, closure_6] = value.useState(1 === account.metadataVisibility);
-      [first1, closure_8] = value.useState(1 === account.visibility);
-      if (cResult[0] === value) {
-        if (cResult[1] === setShowPreviewInvisibleIcon) {
-          if (cResult[2] === setShowPreviewMetadata) {
-            let tmp13;
-            if (cResult[3] === first1) {
-              tmp13 = cResult[4];
-            }
-            setShowPreviewInvisibleIcon(setShowPreviewMetadata[40])(tmp13);
-            const tmp14 = setShowPreviewInvisibleIcon;
-            if (cResult[5] === account.id) {
-              if (cResult[6] === account.type) {
-                if (cResult[7] === tmp6) {
-                  let tmp16;
-                  let tmp17;
-                  let tmp18;
-                  let tmp42;
-                  if (cResult[8] === tmp8) {
-                    tmp16 = cResult[9];
-                    tmp17 = cResult[10];
-                    tmp18 = cResult[11];
-                  }
-                  if (true === tmp16.hasMetadata) {
-                    let tmp34;
-                    const _Symbol3 = Symbol;
-                    if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                      const intl3 = tmp(tmp2[27]).intl;
-                      const stringResult = intl3.string(account(setShowPreviewMetadata[27]).t.FYKGsL);
-                      cResult[22] = stringResult;
-                      tmp34 = stringResult;
-                    } else {
-                      tmp34 = cResult[22];
+    let tmp24Result5 = null;
+    if (!tmp3) {
+      tmp24Result5 = null;
+      if (tmp20) {
+        const obj10 = { style: closure_5.connectionsChecksGroupRequirementsNotMet, children: null };
+        const obj11 = { variant: "text-xs/normal", color: "text-overlay-light", children: null };
+        const intl4 = tmp15(1126).intl;
+        obj11.children = intl4.string(tmp15(1126).t.UB3hKo);
+        obj10.children = tmp24(tmp15(4892).Text, obj11);
+        tmp24Result5 = tmp24(c8, obj10);
+      }
+    }
+    const items1 = [tmp24Result5, , , , ];
+    let tmp24Result6 = null;
+    if (null != value) {
+      const obj12 = { platformType: value.type };
+      tmp24Result6 = tmp24(closure_1_33, obj12);
+    }
+    items1[1] = tmp24Result6;
+    let tmp24Result7 = null;
+    if (null != tmp11) {
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1188).AvatarSizes.XSMALL, guildId: "Array" };
+      tmp24Result7 = tmp24(tmp15(1188).Avatar, obj13);
+    }
+    items1[2] = tmp24Result7;
+    const obj14 = { style: closure_5.connectionsChecksGroupTextContainer, children: null };
+    const obj15 = { style: closure_5.connectionsChecksGroupTextNameContainer, children: null };
+    let name;
+    if (value != null) {
+      name = value.name;
+    }
+    if (name == null) {
+      let name1;
+      if (application != null) {
+        name1 = application.name;
+      }
+      name = name1;
+    }
+    const items2 = [tmp24(eligibilityStatesGroups(4892).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name }), tmp24Result, ];
+    let tmp24Result8 = null;
+    if (null != tmp28) {
+      const obj16 = {
+        onPress() {
+            _modDef38(null != stringResult, "tooltip is null");
+            const obj = ToastActionCreatorsDefault;
+            obj.open({ key: "CONNECTIONS_STEAM_TOOLTIP", icon: _modDef4817, content: stringResult });
+          },
+        children: null
+      };
+      const obj17 = { source: _modDef4817, size: tmp15(1188).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
+      obj16.children = tmp24(tmp15(1188).Icon, obj17);
+      tmp24Result8 = tmp24(c7, obj16);
+    }
+    items2[2] = tmp24Result8;
+    obj15.children = items2;
+    const items3 = [
+      closure_1_30(c8, obj15),
+      found1.map((item) => {
+        ({ connection_metadata_field, operator, value } = item);
+        ({ connection_type, result, description } = item);
+        value(application[37])(null != connectionMetadataField, "connectionMetadataField is null");
+        value(application[37])(null != operator, "operator is null");
+        value(application[37])(null != value, "value is null");
+        return closure_1_29(closure_1_35, { connectionType, connectionMetadataField, operator, value, result, description }, connectionMetadataField);
+      })
+    ];
+    obj14.children = items3;
+    items1[3] = closure_1_30(c8, obj14);
+    items1[4] = tmp22Result;
+    obj9.children = items1;
+    return closure_1_30(c7, obj9, item);
+  });
+  return closure_29(closure_31, obj3);
+});
+ReactCompilerGating = fn(558);
+let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? ((account) => {
+  const cResult = account(setShowPreviewMetadata[18]).c(45);
+  account = account.account;
+  const setShowPreviewInvisibleIcon = account.setShowPreviewInvisibleIcon;
+  setShowPreviewMetadata = account.setShowPreviewMetadata;
+  const tmp4 = closure_32();
+  const obj = account(setShowPreviewMetadata[18]);
+  [tmp6, asyncGeneratorStep] = value.useState(account.friendSync);
+  const tmp5 = _slicedToArray(value.useState(account.friendSync), 2);
+  [tmp8, _slicedToArray] = value.useState(account.showActivity);
+  [value, closure_6] = value.useState(1 === account.metadataVisibility);
+  [first1, closure_8] = value.useState(1 === account.visibility);
+  if (cResult[0] === value) {
+    if (cResult[1] === setShowPreviewInvisibleIcon) {
+      if (cResult[2] === setShowPreviewMetadata) {
+        if (cResult[3] === first1) {
+          let tmp13 = cResult[4];
+        }
+        setShowPreviewInvisibleIcon(tmp2[40])(tmp13);
+        if (cResult[5] === account.id) {
+          if (cResult[6] === account.type) {
+            if (cResult[7] === tmp6) {
+              if (cResult[8] === tmp8) {
+                let tmp16 = cResult[9];
+              }
+              if (true !== tmp16.hasMetadata) {
+                const _Symbol = Symbol;
+                if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
+                  const intl3 = tmp(tmp2[27]).intl;
+                  const stringResult = intl3.string(tmp(tmp2[27]).t.f7yOAX);
+                  cResult[31] = stringResult;
+                  let tmp41 = stringResult;
+                } else {
+                  tmp41 = cResult[31];
+                }
+                if (cResult[32] === account.id) {
+                  if (cResult[33] === account.type) {
+                    if (cResult[34] === setShowPreviewInvisibleIcon) {
+                      let tmp43 = cResult[35];
                     }
-                    if (cResult[23] === account.id) {
-                      if (cResult[24] === account.type) {
-                        let tmp37;
-                        if (cResult[25] === setShowPreviewMetadata) {
-                          tmp37 = cResult[26];
-                        }
-                        const obj2 = { label: tmp34, value, disabled: !first1, onValueChange: tmp37 };
-                        const tmp40 = closure_29(account(setShowPreviewMetadata[42]).FormSwitchRow, obj2);
-                        cResult[27] = value;
-                        cResult[28] = !first1;
-                        cResult[29] = tmp37;
-                        cResult[30] = tmp40;
+                    if (cResult[36] === tmp43) {
+                      if (cResult[37] === first1) {
+                        let tmp44 = cResult[38];
                       }
-                    }
-                    const fn2 = function $(arg0) {
-                      let id;
-                      let type;
-                      setShowPreviewMetadata(arg0);
-                      closure_6(arg0);
-                      let num = 0;
-                      const setMetadataVisibility = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility;
-                      ({ type, id } = account);
-                      ConnectedAccountsActionCreatorsDefault;
-                      if (arg0) {
-                        num = 1;
-                      }
-                      const result = setMetadataVisibility(type, id, num);
-                    };
-                    cResult[23] = account.id;
-                    cResult[24] = account.type;
-                    cResult[25] = setShowPreviewMetadata;
-                    cResult[26] = fn2;
-                    tmp37 = fn2;
-                  }
-                  const _Symbol2 = Symbol;
-                  const accountConnectedPrivacyOptionsContainer = tmp4.accountConnectedPrivacyOptionsContainer;
-                  if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl4 = tmp(tmp2[27]).intl;
-                    const stringResult1 = intl4.string(account(setShowPreviewMetadata[27]).t.f7yOAX);
-                    cResult[31] = stringResult1;
-                    tmp42 = stringResult1;
-                  } else {
-                    tmp42 = cResult[31];
-                  }
-                  if (cResult[32] === account.id) {
-                    if (cResult[33] === account.type) {
-                      let tmp44;
-                      if (cResult[34] === setShowPreviewInvisibleIcon) {
-                        tmp44 = cResult[35];
-                      }
-                      if (cResult[36] === tmp44) {
-                        let tmp45;
-                        if (cResult[37] === first1) {
-                          tmp45 = cResult[38];
-                        }
-                        if (cResult[39] === tmp33) {
-                          if (cResult[40] === tmp17) {
-                            if (cResult[41] === tmp4.accountConnectedPrivacyOptionsContainer) {
-                              if (cResult[42] === tmp18) {
-                                let tmp48;
-                                if (cResult[43] === tmp45) {
-                                  tmp48 = cResult[44];
-                                }
-                                return tmp48;
+                      if (cResult[39] === undefined) {
+                        if (cResult[40] === tmp17) {
+                          if (cResult[41] === tmp4.accountConnectedPrivacyOptionsContainer) {
+                            if (cResult[42] === tmp18) {
+                              if (cResult[43] === tmp44) {
+                                let tmp47 = cResult[44];
                               }
+                              return tmp47;
                             }
                           }
                         }
-                        const obj3 = { style: accountConnectedPrivacyOptionsContainer, children: items };
-                        items = [tmp45, tmp33, tmp17, tmp18];
-                        const tmp51 = closure_30(closure_8, obj3);
-                        cResult[39] = tmp33;
-                        cResult[40] = tmp17;
-                        cResult[41] = tmp4.accountConnectedPrivacyOptionsContainer;
-                        cResult[42] = tmp18;
-                        cResult[43] = tmp45;
-                        cResult[44] = tmp51;
-                        tmp48 = tmp51;
                       }
-                      const obj4 = { label: tmp42, value: first1, onValueChange: tmp44 };
-                      const tmp47 = closure_29(account(setShowPreviewMetadata[42]).FormSwitchRow, obj4);
-                      cResult[36] = tmp44;
-                      cResult[37] = first1;
-                      cResult[38] = tmp47;
-                      tmp45 = tmp47;
+                      const obj2 = { style: tmp4.accountConnectedPrivacyOptionsContainer, children: null };
+                      const items = [tmp44, undefined, tmp17, tmp18];
+                      obj2.children = items;
+                      const tmp50 = closure_30(closure_8, obj2);
+                      cResult[39] = undefined;
+                      cResult[40] = tmp17;
+                      cResult[41] = tmp4.accountConnectedPrivacyOptionsContainer;
+                      cResult[42] = tmp18;
+                      cResult[43] = tmp44;
+                      cResult[44] = tmp50;
+                      tmp47 = tmp50;
                     }
-                  }
-                  const fn3 = function q(arg0) {
-                    let id;
-                    let type;
-                    setShowPreviewInvisibleIcon(!arg0);
-                    closure_8(arg0);
-                    let num = 0;
-                    const setVisibility = ConnectedAccountsActionCreatorsDefault.setVisibility;
-                    ({ type, id } = account);
-                    ConnectedAccountsActionCreatorsDefault;
-                    if (arg0) {
-                      num = 1;
-                    }
-                    setVisibility(type, id, num);
-                  };
-                  cResult[32] = account.id;
-                  cResult[33] = account.type;
-                  cResult[34] = setShowPreviewInvisibleIcon;
-                  cResult[35] = fn3;
-                  tmp44 = fn3;
-                }
-              }
-            }
-            const tmp14Result = tmp14(setShowPreviewMetadata[20]);
-            value = tmp14Result.get(account.type);
-            let tmp21;
-            if (set.has(account.type)) {
-              let tmp23;
-              const _Symbol = Symbol;
-              if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = tmp(tmp2[27]).intl;
-                const stringResult2 = intl.string(account(setShowPreviewMetadata[27]).t["+KCMSi"]);
-                let num = 12;
-                cResult[12] = stringResult2;
-                tmp23 = stringResult2;
-              } else {
-                tmp23 = cResult[12];
-              }
-              if (cResult[13] === account.id) {
-                let tmp25;
-                if (cResult[14] === account.type) {
-                  tmp25 = cResult[15];
-                }
-                if (cResult[16] === tmp6) {
-                  let tmp26;
-                  if (cResult[17] === tmp25) {
-                    tmp26 = cResult[18];
-                  }
-                  tmp21 = tmp26;
-                }
-                const obj5 = { label: tmp23, value: tmp6, onValueChange: null };
-                class H {
-                  constructor(enabled) {
-                    _asyncToGenerator(enabled);
-                    const obj = ConnectedAccountsActionCreatorsDefault;
-                    obj.setFriendSync(account.type, account.id, enabled);
+                    const obj3 = { label: tmp41, value: first1, onValueChange: tmp43 };
+                    const tmp46 = closure_29(tmp(tmp2[42]).FormSwitchRow, obj3);
+                    cResult[36] = tmp43;
+                    cResult[37] = first1;
+                    cResult[38] = tmp46;
+                    tmp44 = tmp46;
                   }
                 }
-                const tmp28 = closure_29(account(setShowPreviewMetadata[42]).FormSwitchRow, obj5);
-                cResult[16] = tmp6;
-                cResult[17] = tmp25;
-                cResult[18] = tmp28;
-                tmp26 = tmp28;
-              }
-              class H {
-                constructor(enabled) {
-                  _asyncToGenerator(enabled);
-                  const obj = ConnectedAccountsActionCreatorsDefault;
-                  obj.setFriendSync(account.type, account.id, enabled);
-                }
-              }
-              cResult[13] = account.id;
-              cResult[14] = account.type;
-              cResult[15] = H;
-              tmp25 = H;
-            }
-            let tmp30;
-            if (set2.has(account.type)) {
-              if (cResult[19] === account.id) {
-                let tmp31;
-                if (cResult[20] === account.type) {
-                  tmp31 = cResult[21];
-                }
-                class W {
-                  constructor(show_activity) {
-                    _slicedToArray(show_activity);
-                    const obj = ConnectedAccountsActionCreatorsDefault;
-                    obj.setShowActivity(account.type, account.id, show_activity);
+                const fn3 = function q(arg0) {
+                  setShowPreviewInvisibleIcon(!arg0);
+                  closure_8(arg0);
+                  let num = 0;
+                  ({ type, id } = account);
+                  if (arg0) {
+                    num = 1;
                   }
-                }
-                const obj6 = {
-                  label: formatToPlainString(account(setShowPreviewMetadata[27]).t["6u6J0q"], tmp32),
-                  value: tmp8,
-                  onValueChange: tmp31,
+                  ConnectedAccountsActionCreatorsDefault.setVisibility(type, id, num);
                 };
-                const FormSwitchRow = tmp(tmp2[42]).FormSwitchRow;
-                const intl2 = tmp(tmp2[27]).intl;
-                formatToPlainString = intl2.formatToPlainString;
-                class H {
-                  constructor(enabled) {
-                    _asyncToGenerator(enabled);
-                    const obj = ConnectedAccountsActionCreatorsDefault;
-                    obj.setFriendSync(account.type, account.id, enabled);
+                cResult[32] = account.id;
+                cResult[33] = account.type;
+                cResult[34] = setShowPreviewInvisibleIcon;
+                cResult[35] = fn3;
+                tmp43 = fn3;
+              } else {
+                const _Symbol2 = Symbol;
+                if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
+                  const intl2 = tmp(tmp2[27]).intl;
+                  const stringResult1 = intl2.string(tmp(tmp2[27]).t.FYKGsL);
+                  cResult[22] = stringResult1;
+                  let tmp32 = stringResult1;
+                } else {
+                  tmp32 = cResult[22];
+                }
+                if (cResult[23] === account.id) {
+                  if (cResult[24] === account.type) {
+                    if (cResult[25] === setShowPreviewMetadata) {
+                      let tmp35 = cResult[26];
+                    }
+                    if (cResult[27] === value) {
+                      if (cResult[28] === tmp34) {
+                      }
+                    }
+                    const obj4 = { label: tmp32, value, disabled: tmp34, onValueChange: tmp35 };
+                    const tmp38 = closure_29(tmp(tmp2[42]).FormSwitchRow, obj4);
+                    cResult[27] = value;
+                    cResult[28] = tmp34;
+                    cResult[29] = tmp35;
+                    cResult[30] = tmp38;
                   }
                 }
-                tmp32[0] = value.name;
-                tmp30 = closure_29(FormSwitchRow, obj6);
+                const fn2 = function $(arg0) {
+                  setShowPreviewMetadata(arg0);
+                  closure_6(arg0);
+                  let num = 0;
+                  ({ type, id } = account);
+                  if (arg0) {
+                    num = 1;
+                  }
+                  const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(type, id, num);
+                };
+                cResult[23] = account.id;
+                cResult[24] = account.type;
+                cResult[25] = setShowPreviewMetadata;
+                cResult[26] = fn2;
+                tmp35 = fn2;
               }
-              class W {
-                constructor(show_activity) {
-                  _slicedToArray(show_activity);
-                  const obj = ConnectedAccountsActionCreatorsDefault;
-                  obj.setShowActivity(account.type, account.id, show_activity);
-                }
-              }
-              cResult[19] = account.id;
-              cResult[20] = account.type;
-              class H {
-                constructor(enabled) {
-                  _asyncToGenerator(enabled);
-                  const obj = ConnectedAccountsActionCreatorsDefault;
-                  obj.setFriendSync(account.type, account.id, enabled);
-                }
-              }
-              cResult[21] = W;
-              tmp31 = W;
             }
+          }
+        }
+        value = setShowPreviewInvisibleIcon(tmp2[20]).get(account.type);
+        if (!set.has(account.type)) {
+          if (!set2.has(account.type)) {
             cResult[5] = account.id;
             cResult[6] = account.type;
             cResult[7] = tmp6;
             cResult[8] = tmp8;
             cResult[9] = value;
-            cResult[10] = tmp30;
-            cResult[11] = tmp21;
-            tmp17 = tmp30;
-            tmp18 = tmp21;
+            cResult[10] = undefined;
+            cResult[11] = undefined;
             tmp16 = value;
-          }
-        }
-      }
-      const fn = function l() {
-        setShowPreviewInvisibleIcon(!first1);
-        setShowPreviewMetadata(first);
-      };
-      cResult[0] = value;
-      cResult[1] = setShowPreviewInvisibleIcon;
-      cResult[2] = setShowPreviewMetadata;
-      cResult[3] = first1;
-      cResult[4] = fn;
-      tmp13 = fn;
-    }
-  : (account) => {
-      let _undefined;
-      let c3;
-      let closure_4;
-      let closure_6;
-      let closure_8;
-      let first;
-      let first1;
-      let first2;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let items;
-      let obj4;
-      let tmp3;
-      account = account.account;
-      ({ setShowPreviewInvisibleIcon: importDefault, setShowPreviewMetadata: dependencyMap } = account);
-      c3 = undefined;
-      _slicedToArray = undefined;
-      first1 = undefined;
-      closure_6 = undefined;
-      first2 = undefined;
-      closure_8 = undefined;
-      const tmp = closure_32();
-      [tmp3, c3] = _slicedToArray(first1.useState(account.friendSync), 2);
-      const tmp2 = _slicedToArray(first1.useState(account.friendSync), 2);
-      [first, _slicedToArray] = first1.useState(account.showActivity);
-      [first1, closure_6] = first1.useState(1 === account.metadataVisibility);
-      [first2, closure_8] = first1.useState(1 === account.visibility);
-      useMountEffectDefault(() => {
-        importDefault(!first2);
-        dependencyMap(first1);
-      });
-      let obj = PlatformsDefault;
-      const value = obj.get(account.type);
-      let tmp13;
-      if (set.has(account.type)) {
-        const obj2 = {
-          label: intl.string(account(1126).t["+KCMSi"]),
-          value: tmp3,
-          onValueChange(enabled) {
-            _undefined(enabled);
-            const obj = ConnectedAccountsActionCreatorsDefault;
-            obj.setFriendSync(account.type, account.id, enabled);
-          },
-        };
-        const FormSwitchRow = account(8924).FormSwitchRow;
-        intl = account(1126).intl;
-        tmp13 = closure_29(FormSwitchRow, obj2);
-      }
-      let tmp16;
-      if (set2.has(account.type)) {
-        const obj3 = {
-          label: intl2.formatToPlainString(account(1126).t["6u6J0q"], obj4),
-          value: first,
-          onValueChange(show_activity) {
-            closure_4(show_activity);
-            const obj = ConnectedAccountsActionCreatorsDefault;
-            obj.setShowActivity(account.type, account.id, show_activity);
-          },
-        };
-        const FormSwitchRow2 = account(8924).FormSwitchRow;
-        intl2 = account(1126).intl;
-        obj4 = { platform: value.name };
-        tmp16 = closure_29(FormSwitchRow2, obj3);
-      }
-      let tmp19;
-      if (true === value.hasMetadata) {
-        const obj5 = {
-          label: intl3.string(account(1126).t.FYKGsL),
-          value: first1,
-          disabled: !first2,
-          onValueChange(arg0) {
-            let id;
-            let type;
-            dependencyMap(arg0);
-            closure_6(arg0);
-            let num = 0;
-            const setMetadataVisibility = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility;
-            ({ type, id } = account);
-            ConnectedAccountsActionCreatorsDefault;
-            if (arg0) {
-              num = 1;
-            }
-            const result = setMetadataVisibility(type, id, num);
-          },
-        };
-        const FormSwitchRow3 = account(8924).FormSwitchRow;
-        intl3 = account(1126).intl;
-        tmp19 = closure_29(FormSwitchRow3, obj5);
-      }
-      const obj6 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: items };
-      const obj7 = {
-        label: intl4.string(account(1126).t.f7yOAX),
-        value: first2,
-        onValueChange(arg0) {
-          let id;
-          let type;
-          importDefault(!arg0);
-          closure_8(arg0);
-          let num = 0;
-          const setVisibility = ConnectedAccountsActionCreatorsDefault.setVisibility;
-          ({ type, id } = account);
-          ConnectedAccountsActionCreatorsDefault;
-          if (arg0) {
-            num = 1;
-          }
-          setVisibility(type, id, num);
-        },
-      };
-      const FormSwitchRow4 = account(8924).FormSwitchRow;
-      intl4 = account(1126).intl;
-      items = [closure_29(FormSwitchRow4, obj7), tmp19, tmp16, tmp13];
-      return closure_30(closure_8, obj6);
-    };
-const constants8 = {
-  CHECKS_REQUIRED: 0,
-  [0]: "CHECKS_REQUIRED",
-  ACCOUNT_CONNECTED: 1,
-  [1]: "ACCOUNT_CONNECTED",
-  ROLE_GRANTED: 2,
-  [2]: "ROLE_GRANTED",
-};
-size = size_mod;
-let result = size.fileFinishedImporting(
-  "modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx",
-);
-class GuildRoleConnectionsConnectAccountsActionSheet {
-  constructor(guildId) {
-    let Button2;
-    let Text2;
-    let _undefined;
-    let _undefined2;
-    let applicationId;
-    let arr;
-    let arr6;
-    let c16;
-    let c17;
-    let c5;
-    let c6;
-    let c8;
-    let closure_10;
-    let closure_13;
-    let closure_15;
-    let closure_7;
-    let first;
-    let first1;
-    let first2;
-    let first3;
-    let intl;
-    let intl10;
-    let intl11;
-    let intl12;
-    let intl2;
-    let intl3;
-    let intl4;
-    let intl5;
-    let intl6;
-    let intl7;
-    let intl8;
-    let intl9;
-    let items10;
-    let items12;
-    let items13;
-    let items14;
-    let items16;
-    let items17;
-    let items18;
-    let items9;
-    let obj11;
-    let obj15;
-    let obj17;
-    let obj19;
-    let obj25;
-    let obj46;
-    let obj9;
-    let onCloseModal;
-    let platformType;
-    let tmp13;
-    let tmp14;
-    let tmp16;
-    let tmp17;
-    let tmp27;
-    let tmp37Result;
-    let tmp37Result6;
-    let tmp38Result4;
-    let tmp4;
-    let tmp9;
-    const f107083 = () => {
-      let tmp3;
-      let tmp2 = null;
-      if (null != initialAttemptedPlatformType) {
-        obj = { platformType: tmp, applicationId: tmp3 };
-        tmp3 = _asyncToGenerator;
-        if (_asyncToGenerator == null) {
-          tmp3 = null;
-        }
-        tmp2 = obj;
-      }
-      return tmp2;
-    };
-    guildId = guildId.guildId;
-    const role = guildId.role;
-    const initialAttemptedPlatformType = guildId.initialAttemptedPlatformType;
-    ({ initialAttemptedApplicationId: _asyncToGenerator, onCloseModal: _slicedToArray } = guildId);
-    react = undefined;
-    c6 = undefined;
-    closure_7 = undefined;
-    c8 = undefined;
-    first1 = undefined;
-    closure_10 = undefined;
-    first2 = undefined;
-    closure_13 = undefined;
-    first3 = undefined;
-    closure_15 = undefined;
-    c16 = undefined;
-    c17 = undefined;
-    let obj = function _handleAssignRole() {
-      let id;
-      obj = _asyncToGenerator(async () => {
-        let v1;
-        if (c0 === 2) {
-          c0 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp2 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj3 = { value, done: true };
-            return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            if (cResult[19] === account.id) {
+              if (cResult[20] === account.type) {
+                let tmp30 = cResult[21];
+              }
+              class W {
+                constructor(arg0) {
+                  tmp = closure_4(account);
+                  obj = closure_1(closure_2[41]);
+                  setShowActivityResult = obj.setShowActivity(account.type, account.id, account);
+                  return;
+                }
+              }
+              const obj5 = { label: null, value: null, onValueChange: null };
+              const intl = tmp(tmp2[27]).intl;
+              const obj6 = { platform: value.name };
+              obj5.label = intl.formatToPlainString(tmp(tmp2[27]).t["6u6J0q"], obj6);
+              obj5.value = tmp8;
+              obj5.onValueChange = tmp30;
+              closure_29(tmp(tmp2[42]).FormSwitchRow, obj5);
+            }
+            class W {
+              constructor(arg0) {
+                tmp = closure_4(account);
+                obj = closure_1(closure_2[41]);
+                setShowActivityResult = obj.setShowActivity(account.type, account.id, account);
+                return;
+              }
+            }
+            cResult[19] = account.id;
+            cResult[20] = account.type;
+            cResult[21] = W;
+            tmp30 = W;
           }
         } else {
-          try {
-            c0 = 2;
-            if (0 === v1) {
-              if (arg0 === 1) {
-                c0 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c0 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
-              } else {
-                closure_2_10(true);
-                const obj2 = v1(initialAttemptedPlatformType[45]);
-                v1 = 1;
-                c0 = 1;
-                const obj5 = { value: obj2.assignGuildRoleConnection(guildId, id.id), done: false };
-                return obj5;
+          class W {
+            constructor(arg0) {
+              tmp = closure_4(account);
+              obj = closure_1(closure_2[41]);
+              setShowActivityResult = obj.setShowActivity(account.type, account.id, account);
+              return;
+            }
+          }
+          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+            class W {
+              constructor(arg0) {
+                tmp = closure_4(account);
+                obj = closure_1(closure_2[41]);
+                setShowActivityResult = obj.setShowActivity(account.type, account.id, account);
+                return;
               }
-            } else if (arg0 === 1) {
+            }
+            const tmp23Result = tmp23(tmp(tmp2[27]).t["+KCMSi"]);
+            cResult[12] = tmp23Result;
+            let tmp22 = tmp23Result;
+          } else {
+            tmp22 = cResult[12];
+          }
+          if (cResult[13] === account.id) {
+            if (cResult[14] === account.type) {
+              let tmp25 = cResult[15];
+            }
+            class W {
+              constructor(arg0) {
+                tmp = closure_4(account);
+                obj = closure_1(closure_2[41]);
+                setShowActivityResult = obj.setShowActivity(account.type, account.id, account);
+                return;
+              }
+            }
+            const obj7 = { label: tmp22, value: tmp6, onValueChange: null };
+            class H {
+              constructor(arg0) {
+                tmp = closure_3(account);
+                obj = closure_1(closure_2[41]);
+                setFriendSyncResult = obj.setFriendSync(account.type, account.id, account);
+                return;
+              }
+            }
+            const tmp28 = closure_29(tmp(tmp2[42]).FormSwitchRow, obj7);
+            cResult[16] = tmp6;
+            cResult[17] = tmp25;
+            cResult[18] = tmp28;
+          }
+          class H {
+            constructor(arg0) {
+              tmp = closure_3(account);
+              obj = closure_1(closure_2[41]);
+              setFriendSyncResult = obj.setFriendSync(account.type, account.id, account);
+              return;
+            }
+          }
+          cResult[13] = account.id;
+          cResult[14] = account.type;
+          cResult[15] = H;
+          tmp25 = H;
+        }
+        const tmp14Result = setShowPreviewInvisibleIcon(tmp2[20]);
+      }
+    }
+  }
+  const fn = function l() {
+    setShowPreviewInvisibleIcon(!first1);
+    setShowPreviewMetadata(first);
+  };
+  cResult[0] = value;
+  cResult[1] = setShowPreviewInvisibleIcon;
+  cResult[2] = setShowPreviewMetadata;
+  cResult[3] = first1;
+  cResult[4] = fn;
+  tmp13 = fn;
+  const tmp7 = _slicedToArray(value.useState(account.showActivity), 2);
+}) : ((account) => {
+  account = account.account;
+  ({ setShowPreviewInvisibleIcon: importDefault, setShowPreviewMetadata: dependencyMap } = account);
+  c3 = undefined;
+  _slicedToArray = undefined;
+  value = undefined;
+  closure_6 = undefined;
+  first1 = undefined;
+  closure_8 = undefined;
+  const tmp = closure_32();
+  [tmp3, c3] = value.useState(account.friendSync);
+  const tmp4 = _slicedToArray(value.useState(account.showActivity), 2);
+  _slicedToArray = tmp4[1];
+  [value, closure_6] = value.useState(1 === account.metadataVisibility);
+  [first1, closure_8] = value.useState(1 === account.visibility);
+  useMountEffectDefault(() => {
+    importDefault(!first1);
+    dependencyMap(first);
+  });
+  const tmp2 = _slicedToArray(value.useState(account.friendSync), 2);
+  value = PlatformsDefault.get(account.type);
+  let tmp12;
+  if (set.has(account.type)) {
+    const obj2 = { label: null, value: null, onValueChange: null };
+    const intl = account(1126).intl;
+    obj2.label = intl.string(account(1126).t["+KCMSi"]);
+    obj2.value = tmp3;
+    obj2.onValueChange = function onValueChange(enabled) {
+      _undefined(enabled);
+      ConnectedAccountsActionCreatorsDefault.setFriendSync(account.type, account.id, enabled);
+    };
+    tmp12 = closure_29(account(8924).FormSwitchRow, obj2);
+  }
+  let tmp15;
+  if (set2.has(account.type)) {
+    const obj3 = { label: null, value: null, onValueChange: null };
+    const intl2 = account(1126).intl;
+    const obj4 = { platform: value.name };
+    obj3.label = intl2.formatToPlainString(account(1126).t["6u6J0q"], obj4);
+    obj3.value = tmp4[0];
+    obj3.onValueChange = function onValueChange(show_activity) {
+      closure_4(show_activity);
+      ConnectedAccountsActionCreatorsDefault.setShowActivity(account.type, account.id, show_activity);
+    };
+    tmp15 = closure_29(account(8924).FormSwitchRow, obj3);
+  }
+  let tmp18;
+  if (true === value.hasMetadata) {
+    const obj5 = { label: null, value: null, disabled: null, onValueChange: null };
+    const intl3 = account(1126).intl;
+    obj5.label = intl3.string(account(1126).t.FYKGsL);
+    obj5.value = value;
+    obj5.disabled = !first1;
+    obj5.onValueChange = function onValueChange(arg0) {
+      dependencyMap(arg0);
+      closure_6(arg0);
+      let num = 0;
+      ({ type, id } = account);
+      if (arg0) {
+        num = 1;
+      }
+      const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(type, id, num);
+    };
+    tmp18 = closure_29(account(8924).FormSwitchRow, obj5);
+  }
+  const obj6 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
+  const obj7 = { label: null, value: null, onValueChange: null };
+  const intl4 = account(1126).intl;
+  obj7.label = intl4.string(account(1126).t.f7yOAX);
+  obj7.value = first1;
+  obj7.onValueChange = function onValueChange(arg0) {
+    closure_1_1(!arg0);
+    closure_8(arg0);
+    let num = 0;
+    ({ type, id } = account);
+    if (arg0) {
+      num = 1;
+    }
+    ConnectedAccountsActionCreatorsDefault.setVisibility(type, id, num);
+  };
+  const items = [closure_29(account(8924).FormSwitchRow, obj7), tmp18, tmp15, tmp12];
+  obj6.children = items;
+  return closure_30(closure_8, obj6);
+});
+const __initData12 = { CHECKS_REQUIRED: 0, [0]: "CHECKS_REQUIRED", ACCOUNT_CONNECTED: 1, [1]: "ACCOUNT_CONNECTED", ROLE_GRANTED: 2, [2]: "ROLE_GRANTED" };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx");
+class GuildRoleConnectionsConnectAccountsActionSheet {
+  constructor(arg0) {
+    guildId = global.guildId;
+    role = global.role;
+    initialAttemptedPlatformType = global.initialAttemptedPlatformType;
+    closure_2 = initialAttemptedPlatformType;
+    ({ initialAttemptedApplicationId: closure_3, onCloseModal } = global);
+    closure_5 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
+    closure_8 = undefined;
+    closure_9 = undefined;
+    closure_10 = undefined;
+    closure_11 = undefined;
+    closure_12 = undefined;
+    closure_13 = undefined;
+    closure_14 = undefined;
+    closure_15 = undefined;
+    closure_16 = undefined;
+    closure_17 = undefined;
+    closure_18 = undefined;
+    closure_19 = undefined;
+    closure_20 = async function _handleAssignRole() {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c0 = 2;
+          if (0 === v1) {
+            if (arg0 === 1) {
               c0 = 3;
               throw value;
             } else if (arg0 === 2) {
               c0 = 3;
-              obj = { value, done: true };
-              return obj;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              c0 = 3;
-              return { value: "IconComponent", done: null };
+              LocaleStore(true);
+              v1 = 1;
+              c0 = 1;
+              const obj5 = { value: v1(initialAttemptedPlatformType[45]).assignGuildRoleConnection(guildId, id.id), done: false };
+              return obj5;
             }
-          } catch (tmp10) {
+          } else if (arg0 === 1) {
             c0 = 3;
-            throw tmp10;
+            throw value;
+          } else if (arg0 === 2) {
+            c0 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            c0 = 3;
+            return { value: "IconComponent", done: null };
           }
+        } catch (tmp11) {
+          c0 = tmp;
+          throw tmp11;
         }
-      });
-      return obj(...arguments);
+      }
     };
-    let tmp = closure_32();
-    let tmp3 = _slicedToArray(react.useState(constants8.CHECKS_REQUIRED), 2);
-    [tmp4, c5] = tmp3;
-    let tmp5 = _slicedToArray(react.useState(null), 2);
-    [arr, c6] = tmp5;
-    [first, closure_7] = react.useState(false);
-    let tmp8 = _slicedToArray(react.useState(true), 2);
-    [tmp9, c8] = tmp8;
-    [first1, closure_10] = react.useState(false);
-    [tmp13, tmp14] = _slicedToArray(react.useState(true), 2);
-    const tmp12 = _slicedToArray(react.useState(true), 2);
-    [tmp16, tmp17] = react.useState(false);
-    _slicedToArray(react.useState(false), 2);
-    obj = guildId(initialAttemptedPlatformType[43]);
-    const items = [first3];
-    const stateFromStores = obj.useStateFromStores(items, () => first3.getAccounts());
-    let obj2 = guildId(initialAttemptedPlatformType[43]);
-    const items1 = [first1];
-    const stateFromStores1 = obj2.useStateFromStores(items1, () => first1.getNewestTokens());
-    let obj3 = guildId(initialAttemptedPlatformType[43]);
-    const items2 = [first2];
-    const stateFromStores2 = obj3.useStateFromStores(items2, () => first2.getId());
-    [first2, closure_13] = react.useState(null);
-    [first3, closure_15] = react.useState(null);
-    [tmp27, c16] = react.useState(f107083);
-    _slicedToArray(react.useState(f107083), 2);
-    [arr6, c17] = react.useState(null);
-    _slicedToArray(react.useState(null), 2);
-    const tmp30 = role(initialAttemptedPlatformType[19])();
-    let obj4 = guildId(initialAttemptedPlatformType[43]);
-    const items3 = [closure_15];
-    const stateFromStores3 = obj4.useStateFromStores(items3, () =>
-      GuildMemberStore.getMember(guildId, stateFromStores2),
-    );
-    let obj5 = guildId(initialAttemptedPlatformType[43]);
-    const items4 = [closure_13];
-    const stateFromStores4 = obj5.useStateFromStores(items4, () =>
-      ChannelStore.getMutableGuildChannelsForGuild(guildId),
-    );
-    const items5 = [closure_10];
-    const obj6 = guildId(initialAttemptedPlatformType[43]);
-    const stateFromStores5 = obj6.useStateFromStores(items5, () => closure_10.locale);
-    const values = Object.values(stateFromStores4);
-    const found = values.filter((item) => {
-      let hasItem =
-        PermissionStore.can(constants3.VIEW_CHANNEL, item) && PermissionStore.can(constants3.SEND_MESSAGES, item);
+    tmp = closure_32();
+    tmp2 = closure_39;
+    tmp3 = onCloseModal(closure_5.useState(closure_39.CHECKS_REQUIRED), 2);
+    [tmp4, closure_5] = tmp3;
+    tmp5 = onCloseModal(closure_5.useState(null), 2);
+    [arr, closure_6] = tmp5;
+    tmp6 = onCloseModal(closure_5.useState(false), 2);
+    closure_7 = tmp6[1];
+    tmp7 = onCloseModal(closure_5.useState(true), 2);
+    [tmp8, closure_8] = tmp7;
+    tmp9 = onCloseModal(closure_5.useState(false), 2);
+    first = tmp9[0];
+    closure_9 = first;
+    closure_10 = tmp9[1];
+    tmp11 = onCloseModal(closure_5.useState(true), 2);
+    [tmp12, tmp13] = tmp11;
+    tmp14 = onCloseModal(closure_5.useState(false), 2);
+    tmp17 = guildId;
+    tmp18 = closure_2;
+    [tmp15, tmp16] = tmp14;
+    obj = guildId(closure_2[43]);
+    items = [];
+    items[0] = closure_14;
+    stateFromStores = obj.useStateFromStores(items, () => first2.getAccounts());
+    obj2 = guildId(closure_2[43]);
+    items1 = [];
+    items1[0] = closure_9;
+    stateFromStores1 = obj2.useStateFromStores(items1, () => first.getNewestTokens());
+    obj3 = guildId(closure_2[43]);
+    items2 = [];
+    items2[0] = closure_12;
+    stateFromStores2 = obj3.useStateFromStores(items2, () => first1.getId());
+    closure_11 = stateFromStores2;
+    tmp21 = onCloseModal(closure_5.useState(null), 2);
+    first1 = tmp21[0];
+    closure_12 = first1;
+    closure_13 = tmp21[1];
+    tmp23 = onCloseModal(closure_5.useState(null), 2);
+    first2 = tmp23[0];
+    closure_14 = first2;
+    closure_15 = tmp23[1];
+    tmp25 = onCloseModal(closure_5.useState(() => {
+      let tmp2 = null;
+      if (null != initialAttemptedPlatformType) {
+        const obj = { platformType: tmp, applicationId: null };
+        let tmp3 = asyncGeneratorStep;
+        if (asyncGeneratorStep == null) {
+          tmp3 = null;
+        }
+        obj.applicationId = tmp3;
+        tmp2 = obj;
+      }
+      return tmp2;
+    }), 2);
+    [tmp26, closure_16] = tmp25;
+    tmp27 = onCloseModal(closure_5.useState(null), 2);
+    [arr6, closure_17] = tmp27;
+    tmp28 = role;
+    tmp29 = role(closure_2[19])();
+    obj4 = guildId(closure_2[43]);
+    items3 = [];
+    items3[0] = closure_15;
+    stateFromStores3 = obj4.useStateFromStores(items3, () => GuildMemberStore.getMember(guildId, stateFromStores2));
+    closure_18 = stateFromStores3;
+    obj5 = guildId(closure_2[43]);
+    items4 = [];
+    items4[0] = closure_13;
+    stateFromStores4 = obj5.useStateFromStores(items4, () => ChannelStore.getMutableGuildChannelsForGuild(guildId));
+    obj6 = guildId(closure_2[43]);
+    items5 = [];
+    items5[0] = closure_10;
+    stateFromStores5 = obj6.useStateFromStores(items5, () => closure_10.locale);
+    values = Object.values(stateFromStores4);
+    found = values.filter((item) => {
+      let hasItem = PermissionStore.can(constants7.VIEW_CHANNEL, item) && PermissionStore.can(constants7.SEND_MESSAGES, item);
       if (hasItem) {
+        hasItem = getConnectionsRolesDefault(item).includes(role);
         const obj2 = getConnectionsRolesDefault(item);
-        hasItem = obj2.includes(role);
       }
       return hasItem;
     });
-    const items6 = [guildId, role.id, stateFromStores, stateFromStores1];
-    const effect = react.useEffect(() => {
-      obj = GuildActionCreatorsDefault;
-      const guildRoleConnectionsEligibility = obj.fetchGuildRoleConnectionsEligibility(guildId, role.id);
+    closure_19 = found;
+    items6 = [, , , ];
+    items6[0] = guildId;
+    items6[1] = role.id;
+    items6[2] = stateFromStores;
+    items6[3] = stateFromStores1;
+    effect = closure_5.useEffect(() => {
+      const guildRoleConnectionsEligibility = GuildActionCreatorsDefault.fetchGuildRoleConnectionsEligibility(guildId, role.id);
       guildRoleConnectionsEligibility.then((arr) => {
         closure_1_6(arr);
         closure_1_7(arr.some((arr) => arr.every((item) => item.result)));
         closure_1_8(false);
       });
     }, items6);
-    const items7 = [initialAttemptedPlatformType, role.id, guildId];
-    const effect1 = react.useEffect(() => {
+    items7 = [, , ];
+    items7[0] = initialAttemptedPlatformType;
+    items7[1] = role.id;
+    items7[2] = guildId;
+    effect1 = closure_5.useEffect(() => {
       if (null == initialAttemptedPlatformType) {
-        obj = { role_id: role.id };
-        const track = AnalyticsUtilsDefault.track;
-        const PASSPORT_CHALLENGE_VIEWED = constants2.PASSPORT_CHALLENGE_VIEWED;
-        AnalyticsUtilsDefault;
-        const obj2 = AppAnalyticsUtils;
-        const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
-        track(PASSPORT_CHALLENGE_VIEWED, obj);
+        const obj2 = { role_id: role.id };
+        const obj = AnalyticsUtilsDefault;
+        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+        obj.track(constants5.PASSPORT_CHALLENGE_VIEWED, obj2);
       }
     }, items7);
-    const items8 = [first1, found.length, stateFromStores3, guildId, role.id];
-    const effect2 = react.useEffect(() => {
-      let hasItem = first1 && null != stateFromStores3;
+    items8 = [, , , , ];
+    items8[0] = first;
+    items8[1] = found.length;
+    items8[2] = stateFromStores3;
+    items8[3] = guildId;
+    items8[4] = role.id;
+    effect2 = closure_5.useEffect(() => {
+      let hasItem = first;
+      if (first) {
+        hasItem = null != stateFromStores3;
+      }
       if (hasItem) {
         const roles = stateFromStores3.roles;
         hasItem = roles.includes(role.id);
@@ -2956,500 +2752,472 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
         if (found.length > 0) {
           _undefined(constants.ROLE_GRANTED);
         } else {
-          obj = ActionSheetActionCreatorsDefault;
-          obj.hideActionSheet();
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         }
-        const obj2 = { role_id: role.id };
-        const track = AnalyticsUtilsDefault.track;
-        const PASSPORT_CHALLENGE_FINISHED = constants2.PASSPORT_CHALLENGE_FINISHED;
-        AnalyticsUtilsDefault;
-        const obj3 = AppAnalyticsUtils;
-        const merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
-        track(PASSPORT_CHALLENGE_FINISHED, obj2);
+        const obj3 = { role_id: role.id };
+        const obj2 = AnalyticsUtilsDefault;
+        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+        obj2.track(constants5.PASSPORT_CHALLENGE_FINISHED, obj3);
       }
     }, items8);
-    const obj7 = { style: tmp.container, children: items9 };
-    BottomSheet = guildId(initialAttemptedPlatformType[58]).BottomSheet;
-    if (constants8.CHECKS_REQUIRED === tmp4) {
-      const obj8 = { style: tmp.header, children: closure_29(Text2, obj9) };
-      obj9 = {
-        variant: "heading-lg/extrabold",
-        children: intl2.string(guildId(initialAttemptedPlatformType[27]).t.zOZh3R),
-      };
-      Text2 = tmp18(tmp19[26]).Text;
-      intl2 = tmp18(tmp19[27]).intl;
-      tmp37Result = closure_29(tmp39, obj8);
-    } else if (constants8.ACCOUNT_CONNECTED === tmp4) {
-      role(initialAttemptedPlatformType[37])(null != first2, "lastPlatformConnected is null");
-      const tmp29Result = role(initialAttemptedPlatformType[20]);
-      const value = tmp29Result.get(first2);
-      let name;
+    tmp36 = jsx;
+    tmp37 = jsxs;
+    tmp38 = closure_8;
+    obj1 = { style: tmp.container, children: null };
+    if (closure_39.CHECKS_REQUIRED === tmp4) {
+      obj51 = { style: null, children: null };
+      obj51.style = tmp.header;
+      obj52 = { variant: "heading-lg/extrabold", children: null };
+      intl2 = tmp17(tmp18[27]).intl;
+      obj52.children = intl2.string(tmp17(tmp18[27]).t.zOZh3R);
+      obj51.children = tmp36(tmp17(tmp18[26]).Text, obj52);
+      tmp36Result = tmp36(tmp38, obj51);
+    } else if (tmp2.ACCOUNT_CONNECTED === tmp4) {
+      str = "lastPlatformConnected is null";
+      tmp40 = tmp28(tmp18[37])(null != first1, "lastPlatformConnected is null");
+      tmp28Result = tmp28(tmp18[20]);
+      value = tmp28Result.get(first1);
+      name = undefined;
       if (value != null) {
         name = value.name;
       }
       if (name == null) {
-        let name1;
-        if (first3 != null) {
-          name1 = first3.name;
+        name1 = undefined;
+        if (first2 != null) {
+          name1 = first2.name;
         }
         name = name1;
       }
-      const obj10 = {
-        variant: "heading-lg/extrabold",
-        style: tmp.header,
-        children: intl.format(guildId(initialAttemptedPlatformType[27]).t.yQvgBO, obj11),
-      };
-      const Text = tmp18(tmp19[26]).Text;
-      intl = tmp18(tmp19[27]).intl;
-      obj11 = { platformName: name };
-      tmp37Result = closure_29(Text, obj10);
+      obj53 = { variant: "heading-lg/extrabold", style: null, children: null };
+      obj53.style = tmp.header;
+      intl = tmp17(tmp18[27]).intl;
+      obj54 = { platformName: null };
+      obj54.platformName = name;
+      obj53.children = intl.format(tmp17(tmp18[27]).t.yQvgBO, obj54);
+      tmp36Result = tmp36(tmp17(tmp18[26]).Text, obj53);
     } else {
-      tmp37Result = null;
-      if (constants8.ROLE_GRANTED === tmp4) {
-        const obj12 = {
-          variant: "heading-lg/extrabold",
-          style: tmp.header,
-          children: intl12.string(guildId(initialAttemptedPlatformType[27]).t.najNdz),
-        };
-        const Text8 = tmp18(tmp19[26]).Text;
-        intl12 = tmp18(tmp19[27]).intl;
-        tmp37Result = closure_29(Text8, obj12);
+      tmp36Result = null;
+      if (tmp2.ROLE_GRANTED === tmp4) {
+        obj55 = { variant: "heading-lg/extrabold", style: null, children: null };
+        obj55.style = tmp.header;
+        intl12 = tmp17(tmp18[27]).intl;
+        obj55.children = intl12.string(tmp17(tmp18[27]).t.najNdz);
+        tmp36Result = tmp36(tmp17(tmp18[26]).Text, obj55);
       }
     }
-    function handleManageConnections() {
-      if (_slicedToArray != null) {
+    handleManageConnections = function handleManageConnections() {
+      if (onCloseModal != null) {
         tmp();
       }
-      obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-      const obj2 = openUserSettings;
-      const obj3 = { screen: constants.CONNECTIONS };
-      obj2.openUserSettings(obj3);
-    }
-    function handleManageAuthorizedApplications() {
-      if (_slicedToArray != null) {
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      openUserSettings.openUserSettings({ screen: constants4.CONNECTIONS });
+    };
+    handleManageAuthorizedApplications = function handleManageAuthorizedApplications() {
+      if (onCloseModal != null) {
         tmp();
       }
-      obj = ActionSheetActionCreatorsDefault;
-      obj.hideActionSheet();
-      const obj2 = openUserSettings;
-      const obj3 = { screen: constants.AUTHORIZED_APPS };
-      obj2.openUserSettings(obj3);
-    }
-    items9 = [tmp37Result, ,];
-    if (constants8.CHECKS_REQUIRED === tmp4) {
-      let tmp56 = null != arr;
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      openUserSettings.openUserSettings({ screen: constants4.AUTHORIZED_APPS });
+    };
+    items9 = [, , ];
+    items9[0] = tmp36Result;
+    if (tmp2.CHECKS_REQUIRED === tmp4) {
+      tmp55 = null != arr;
+      if (tmp55) {
+        num = 1;
+        tmp55 = arr.length > 1;
+      }
+      tmp56 = null != arr;
       if (tmp56) {
-        tmp56 = arr.length > 1;
+        num2 = 1;
+        tmp56 = 1 === arr.length;
       }
-      let tmp57 = null != arr;
-      if (tmp57) {
-        tmp57 = 1 === arr.length;
+      if (tmp56) {
+        num3 = 1;
+        tmp56 = 1 === arr[0].length;
       }
-      if (tmp57) {
-        tmp57 = 1 === arr[0].length;
-      }
-      if (!tmp9) {
-        let tmp37Result4;
+      if (!tmp8) {
         if (null != arr) {
-          let jHfRvZ;
-          const obj13 = { style: tmp.content, children: items10 };
-          const Text9 = tmp18(tmp19[26]).Text;
-          const intl13 = tmp18(tmp19[27]).intl;
-          const format = intl13.format;
-          const t = tmp18(tmp19[27]).t;
-          if (tmp57) {
+          obj56 = { style: null, children: null };
+          obj56.style = tmp.content;
+          intl13 = tmp17(tmp18[27]).intl;
+          t = tmp17(tmp18[27]).t;
+          if (tmp56) {
             jHfRvZ = t.jHfRvZ;
           } else {
-            jHfRvZ = tmp56 ? t["mOQ8k+"] : t.U0olLg;
+            jHfRvZ = tmp55 ? t["mOQ8k+"] : t.U0olLg;
           }
-          const obj14 = { variant: "text-md/medium", color: "text-default", children: format(jHfRvZ, obj15) };
-          function handlePlatformAttempt() {
-            const track = AnalyticsUtilsDefault.track;
-            const PASSPORT_CHALLENGE_STARTED = constants2.PASSPORT_CHALLENGE_STARTED;
-            obj = { role_id: role.id };
-            AnalyticsUtilsDefault;
-            const obj2 = AppAnalyticsUtils;
-            const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(guildId));
-            track(PASSPORT_CHALLENGE_STARTED, obj);
-          }
-          function handlePlatformConnect(platformType, role_connections_verification_url) {
-            let prop;
-            obj = {
+          obj57 = { variant: "text-md/medium", color: "text-default", children: null };
+          obj58 = { roleName: null };
+          obj58.roleName = role.name;
+          handlePlatformAttempt = function handlePlatformAttempt() {
+            const obj = AnalyticsUtilsDefault;
+            const obj2 = { role_id: role.id };
+            const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
+            obj.track(constants5.PASSPORT_CHALLENGE_STARTED, obj2);
+          };
+          handlePlatformConnect = function handlePlatformConnect(platformType, role_connections_verification_url) {
+            closure_1 = role_connections_verification_url;
+            let obj = {
               platformType,
               location: "Verified Roles Connect Accounts Modal",
               onClose() {
-                let tmp8;
                 let id;
-                if (role_connections_verification_url != null) {
-                  id = role_connections_verification_url.id;
+                if (closure_1 != null) {
+                  id = closure_1.id;
                 }
                 if (id == null) {
                   id = null;
                 }
                 let prop;
-                if (role_connections_verification_url != null) {
-                  prop = role_connections_verification_url.role_connections_verification_url;
+                if (closure_1 != null) {
+                  prop = closure_1.role_connections_verification_url;
                 }
-                const openLazy = role_connections_verification_url(initialAttemptedPlatformType[48]).openLazy;
-                obj = { default: closure_1_40 };
-                role_connections_verification_url(initialAttemptedPlatformType[48]);
-                const resolved = Promise.resolve(obj);
-                const obj3 = {
-                  role,
-                  guildId,
-                  initialAttemptedPlatformType: platformType,
-                  initialAttemptedApplicationId: tmp8,
-                  overrideUrl: { overrideUrl: prop }.overrideUrl,
-                  onCloseModal: _slicedToArray,
-                };
-                tmp8 = null;
-                const obj2 = platformType(initialAttemptedPlatformType[50]);
-                const guildRoleConnectionsConnectAccountsActionSheetKey =
-                  obj2.makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
+                const resolved = Promise.resolve({ default: closure_1_40 });
+                const obj = closure_1(4860);
+                const obj2 = { default: closure_1_40 };
+                const obj4 = { role, guildId, initialAttemptedPlatformType: platformType, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
+                let tmp7 = null;
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(11199).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
-                  tmp8 = id;
+                  tmp7 = id;
                 }
-                openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj3);
+                obj4.initialAttemptedApplicationId = tmp7;
+                obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
+                obj4.onCloseModal = onCloseModal;
+                obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
+                const obj3 = platformType(11199);
               },
-              overrideUrl: prop,
+              overrideUrl: null
             };
-            prop = undefined;
-            const tmp = role(initialAttemptedPlatformType[51]);
+            let prop;
             if (role_connections_verification_url != null) {
               prop = role_connections_verification_url.role_connections_verification_url;
             }
-            tmp(obj);
-          }
-          function handlePlatformIdentityAuthorize(applicationId) {
-            let connectedAccountProvider;
-            let scopes;
+            obj.overrideUrl = prop;
+            role(initialAttemptedPlatformType[51])(obj);
+          };
+          handlePlatformIdentityAuthorize = function handlePlatformIdentityAuthorize(applicationId) {
             applicationId = applicationId.applicationId;
             const wasAlreadyConnected = applicationId.wasAlreadyConnected;
             ({ scopes, connectedAccountProvider } = applicationId);
-            obj = role(initialAttemptedPlatformType[48]);
-            obj.hideActionSheet();
+            role(initialAttemptedPlatformType[48]).hideActionSheet();
             const combined = "OAuth2AuthorizeModal-" + applicationId;
-            let obj2 = role(initialAttemptedPlatformType[52]);
+            let obj = role(initialAttemptedPlatformType[48]);
             function handleModalClose(key) {
-              let tmp14;
               if (key.key === combined) {
-                const obj4 = DispatcherDefault;
-                obj4.unsubscribe("MODAL_POP", handleModalClose);
+                DispatcherDefault.unsubscribe("MODAL_POP", handleModalClose);
                 let tmp = null;
                 if (!wasAlreadyConnected) {
-                  tmp = closure_20;
+                  tmp = closure_3_20;
                 }
-                obj = { default: closure_1_40 };
-                const openLazy = wasAlreadyConnected(combined[48]).openLazy;
-                wasAlreadyConnected(combined[48]);
-                const resolved = Promise.resolve(obj);
-                const obj3 = {
-                  role,
-                  guildId,
-                  initialAttemptedPlatformType: tmp,
-                  initialAttemptedApplicationId: tmp14,
-                  overrideUrl: {}.overrideUrl,
-                  onCloseModal: _slicedToArray,
-                };
-                tmp14 = null;
-                const obj2 = applicationId(combined[50]);
-                const guildRoleConnectionsConnectAccountsActionSheetKey =
-                  obj2.makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
+                const obj2 = { default: closure_1_40 };
+                const resolved = Promise.resolve(obj2);
+                const obj = wasAlreadyConnected(combined[48]);
+                const obj4 = { role, guildId, initialAttemptedPlatformType: tmp, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
+                let tmp13 = null;
+                const guildRoleConnectionsConnectAccountsActionSheetKey = applicationId(combined[50]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != tmp) {
-                  tmp14 = applicationId;
+                  tmp13 = applicationId;
                 }
-                openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj3);
+                obj4.initialAttemptedApplicationId = tmp13;
+                obj4.overrideUrl = {}.overrideUrl;
+                obj4.onCloseModal = onCloseModal;
+                obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
+                const obj3 = applicationId(combined[50]);
               }
             }
-            const subscription = obj2.subscribe("MODAL_POP", handleModalClose);
-            const pushLazy = role(initialAttemptedPlatformType[53]).pushLazy;
-            let obj3 = {
-              clientId: applicationId,
-              scopes,
-              integrationType: guildId(initialAttemptedPlatformType[56]).ApplicationIntegrationType.USER_INSTALL,
-              connectedAccountProvider,
-              callback() {},
-              dismissOAuthModal() {
-                obj = ModalActionCreatorsDefault;
-                return obj.popWithKey(combined);
-              },
+            const subscription = role(initialAttemptedPlatformType[52]).subscribe("MODAL_POP", handleModalClose);
+            let obj2 = role(initialAttemptedPlatformType[52]);
+            let obj4 = { clientId: applicationId, scopes, integrationType: null, connectedAccountProvider: null, callback: null, dismissOAuthModal: null };
+            let obj3 = role(initialAttemptedPlatformType[53]);
+            obj4.integrationType = guildId(initialAttemptedPlatformType[56]).ApplicationIntegrationType.USER_INSTALL;
+            obj4.connectedAccountProvider = connectedAccountProvider;
+            obj4.callback = function callback() {
+
             };
-            role(initialAttemptedPlatformType[53]);
-            const tmp5 = guildId(initialAttemptedPlatformType[55])(
-              initialAttemptedPlatformType[54],
-              initialAttemptedPlatformType.paths,
-            );
-            pushLazy(tmp5, obj3, combined);
-          }
-          function handlePlatformConnected(arg0, arg1) {
+            obj4.dismissOAuthModal = function dismissOAuthModal() {
+              return ModalActionCreatorsDefault.popWithKey(combined);
+            };
+            obj3.pushLazy(guildId(initialAttemptedPlatformType[55])(initialAttemptedPlatformType[54], initialAttemptedPlatformType.paths), obj4, combined);
+          };
+          handlePlatformConnected = function handlePlatformConnected(arg0, arg1) {
             closure_13(arg0);
             closure_15(arg1);
             _undefined(constants.ACCOUNT_CONNECTED);
             _undefined2(null);
             if (null != arg1) {
-              obj = ConnectionsRoleActionCreators;
-              const userApplicationRoleConnections = obj.fetchUserApplicationRoleConnections();
+              const userApplicationRoleConnections = ConnectionsRoleActionCreators.fetchUserApplicationRoleConnections();
+              userApplicationRoleConnections.then((result) => {
+                closure_1_17(result);
+              }).catch(() => {
+
+              });
               const nextPromise = userApplicationRoleConnections.then((result) => {
                 closure_1_17(result);
               });
-              nextPromise.catch(() => {});
             }
-          }
-          obj15 = { roleName: role.name };
-          items10 = [closure_29(Text9, obj14), ,];
-          const obj16 = { style: tmp.connectionsChecksGroups, children: closure_29(closure_37, obj17) };
-          obj17 = {
-            eligibilityStatesGroups: arr,
-            onPlatformAttempt: handlePlatformAttempt,
-            onPlatformConnect: handlePlatformConnect,
-            onPlatformConnected: handlePlatformConnected,
-            onPlatformIdentityAuthorize: handlePlatformIdentityAuthorize,
-            initialAttemptedPlatformType: platformType,
-            initialAttemptedApplicationId: applicationId,
           };
+          obj57.children = intl13.format(jHfRvZ, obj58);
+          items10 = [, , ];
+          items10[0] = tmp36(tmp17(tmp18[26]).Text, obj57);
+          obj59 = { style: null, children: null };
+          obj59.style = tmp.connectionsChecksGroups;
+          obj60 = { eligibilityStatesGroups: null, onPlatformAttempt: null, onPlatformConnect: null, onPlatformConnected: null, onPlatformIdentityAuthorize: null, initialAttemptedPlatformType: null, initialAttemptedApplicationId: null };
+          obj60.eligibilityStatesGroups = arr;
+          obj60.onPlatformAttempt = handlePlatformAttempt;
+          obj60.onPlatformConnect = handlePlatformConnect;
+          obj60.onPlatformConnected = handlePlatformConnected;
+          obj60.onPlatformIdentityAuthorize = handlePlatformIdentityAuthorize;
           platformType = undefined;
-          if (tmp27 != null) {
-            platformType = tmp27.platformType;
+          tmp57 = f57172;
+          if (tmp26 != null) {
+            platformType = tmp26.platformType;
           }
           if (platformType == null) {
             platformType = null;
           }
+          obj60.initialAttemptedPlatformType = platformType;
           applicationId = undefined;
-          if (tmp27 != null) {
-            applicationId = tmp27.applicationId;
+          if (tmp26 != null) {
+            applicationId = tmp26.applicationId;
           }
           if (applicationId == null) {
             applicationId = null;
           }
-          items10[1] = closure_29(c8, obj16);
-          const obj18 = {
-            variant: "text-xs/normal",
-            style: tmp.footerText,
-            color: "text-default",
-            children: intl7.format(guildId(initialAttemptedPlatformType[27]).t.gsgvxh, obj19),
-          };
-          const Text7 = tmp18(tmp19[26]).Text;
-          intl7 = tmp18(tmp19[27]).intl;
-          obj19 = {
-            privacyPolicyUrl: constants6.PRIVACY,
-            onAuthorizedApplicationsClick: handleManageAuthorizedApplications,
-            onConnectionsClick: handleManageConnections,
-          };
-          items10[2] = closure_29(Text7, obj18);
-          tmp37Result4 = closure_30(tmp39, obj13);
+          obj60.initialAttemptedApplicationId = applicationId;
+          obj59.children = tmp36(tmp57, obj60);
+          items10[1] = tmp36(tmp38, obj59);
+          obj61 = { variant: "text-xs/normal", style: null, color: "text-default", children: null };
+          obj61.style = tmp.footerText;
+          intl7 = tmp17(tmp18[27]).intl;
+          obj62 = { privacyPolicyUrl: null, onAuthorizedApplicationsClick: null, onConnectionsClick: null };
+          tmp60 = MarketingURLs;
+          obj62.privacyPolicyUrl = MarketingURLs.PRIVACY;
+          obj62.onAuthorizedApplicationsClick = handleManageAuthorizedApplications;
+          obj62.onConnectionsClick = handleManageConnections;
+          obj61.children = intl7.format(tmp17(tmp18[27]).t.gsgvxh, obj62);
+          items10[2] = tmp36(tmp17(tmp18[26]).Text, obj61);
+          obj56.children = items10;
+          tmp37Result = tmp37(tmp38, obj56);
         }
-        tmp38Result4 = tmp37Result4;
+        tmp63 = tmp37Result;
       }
-      const obj20 = { size: "large", style: tmp.loading };
-      tmp37Result4 = closure_29(c6, obj20);
-    } else if (constants8.ACCOUNT_CONNECTED === tmp4) {
-      role(initialAttemptedPlatformType[37])(null != first2, "lastPlatformConnected is null");
-      const found1 = stateFromStores.find((type) => first2 === type.type);
-      let found2;
-      if (arr6 != null) {
-        found2 = arr6.find((application) => {
-          let id1;
-          const id = application.application.id;
-          if (first3 != null) {
-            id1 = first3.id;
-          }
-          return id === id1;
-        });
-      }
-      const obj21 = { style: tmp.content, children: null };
-      const obj22 = { style: tmp.accountConnectedContainer, children: null };
-      if (null == found1) {
-        let tmp37Result5;
-        if (null == found2) {
-          const obj23 = { size: "large", style: tmp.loading };
-          tmp37Result5 = closure_29(c6, obj23);
-        }
-        obj22.children = tmp37Result5;
-        const items11 = [closure_29(c8, obj22)];
-        const obj24 = {
-          variant: "text-md/normal",
-          color: "text-default",
-          children: intl6.format(guildId(initialAttemptedPlatformType[27]).t.gsgvxh, obj25),
-        };
-        const Text6 = tmp18(tmp19[26]).Text;
-        intl6 = tmp18(tmp19[27]).intl;
-        obj25 = {
-          privacyPolicyUrl: constants6.PRIVACY,
-          onAuthorizedApplicationsClick: handleManageAuthorizedApplications,
-          onConnectionsClick: handleManageConnections,
-        };
-        items11[1] = closure_29(Text6, obj24);
-        obj21.children = items11;
-        tmp38Result4 = closure_30(tmp39, obj21);
-      }
-      let tmp38Result5 = null;
-      if (null != found1) {
-        const obj26 = { children: items13 };
-        const obj27 = { style: tmp.accountConnectedPreview, children: items12 };
-        const obj28 = {
-          variant: "eyebrow",
-          color: "text-default",
-          children: intl3.string(guildId(initialAttemptedPlatformType[27]).t.TOjkEg),
-        };
-        const Text3 = tmp18(tmp19[26]).Text;
-        intl3 = tmp18(tmp19[27]).intl;
-        items12 = [closure_29(Text3, obj28)];
-        const obj29 = {
-          account: found1,
-          userId: stateFromStores2,
-          theme: tmp30,
-          locale: stateFromStores5,
-          style: tmp.accountConnectedPreviewConnectedUserAccount,
-          showMetadata: tmp13,
-          showInvisibleIcon: tmp16,
-        };
-        items12[1] = closure_29(guildId(initialAttemptedPlatformType[59]).ConnectedUserAccount, obj29);
-        items13 = [closure_30(c8, obj27)];
-        const obj30 = { style: tmp.accountConnectedPrivacy, children: items14 };
-        const obj31 = {
-          variant: "eyebrow",
-          color: "text-default",
-          children: intl4.string(guildId(initialAttemptedPlatformType[27]).t.jndPhX),
-        };
-        const Text4 = tmp18(tmp19[26]).Text;
-        intl4 = tmp18(tmp19[27]).intl;
-        items14 = [closure_29(Text4, obj31)];
-        const obj32 = { account: found1, setShowPreviewInvisibleIcon: tmp17, setShowPreviewMetadata: tmp14 };
-        items14[1] = closure_29(closure_38, obj32);
-        items13[1] = closure_30(c8, obj30);
-        tmp38Result5 = closure_30(closure_31, obj26);
-      }
-      const items15 = [tmp38Result5];
-      let tmp38Result6 = null;
-      if (null != found2) {
-        const obj33 = { style: tmp.accountConnectedPreview, children: items16 };
-        const obj34 = {
-          variant: "eyebrow",
-          color: "text-default",
-          children: intl5.string(guildId(initialAttemptedPlatformType[27]).t.TOjkEg),
-        };
-        const Text5 = tmp18(tmp19[26]).Text;
-        intl5 = tmp18(tmp19[27]).intl;
-        items16 = [closure_29(Text5, obj34)];
-        const obj35 = {
-          applicationRoleConnection: found2,
-          theme: tmp30,
-          locale: stateFromStores5,
-          style: tmp.accountConnectedPreviewConnectedUserAccount,
-        };
-        items16[1] = closure_29(guildId(initialAttemptedPlatformType[59]).ConnectedApplicationUserRoleAccount, obj35);
-        tmp38Result6 = closure_30(tmp39, obj33);
-      }
-      const obj36 = { children: items15 };
-      items15[1] = tmp38Result6;
-      tmp37Result5 = closure_30(closure_31, obj36);
+      tmp62 = closure_6;
+      obj63 = { size: "large", style: null };
+      obj63.style = tmp.loading;
+      tmp37Result = tmp36(closure_6, obj63);
     } else {
-      tmp38Result4 = null;
-      if (constants8.ROLE_GRANTED === tmp4) {
-        const obj37 = { style: tmp.content, children: items18 };
-        const obj38 = { style: tmp.roleGranted, children: items17 };
-        const obj39 = { guildId, style: tmp.verifiedIcon, role, size: 24 };
-        items17 = [closure_29(role(initialAttemptedPlatformType[60]), obj39)];
-        const obj40 = {
-          variant: "text-lg/semibold",
-          color: "mobile-text-heading-primary",
-          lineClamp: 1,
-          style: tmp.roleGrantedName,
-          children: role.name,
-        };
-        items17[1] = closure_29(guildId(initialAttemptedPlatformType[26]).Text, obj40);
-        items18 = [closure_30(c8, obj38)];
-        const obj41 = {
-          style: tmp.channelsGranted,
-          children: found.map((channel) => {
-            obj = { channel };
-            return closure_1_29(closure_1_34, obj, channel.id);
-          }),
-        };
-        items18[1] = closure_29(c8, obj41);
-        tmp38Result4 = closure_30(tmp39, obj37);
-      }
-    }
-    items9[1] = tmp38Result4;
-    if (constants8.CHECKS_REQUIRED === tmp4) {
-      const obj42 = {
-        variant: "primary",
-        onPress() {
-          function handleAssignRole() {
-            return obj(...arguments);
+      if (tmp2.ACCOUNT_CONNECTED === tmp4) {
+        str2 = "lastPlatformConnected is null";
+        tmp44 = tmp28(tmp18[37])(null != first1, "lastPlatformConnected is null");
+        found1 = stateFromStores.find((type) => first1 === type.type);
+        found2 = undefined;
+        if (arr6 != null) {
+          found2 = arr6.find((application) => {
+            let id;
+            if (first2 != null) {
+              id = first2.id;
+            }
+            return application.application.id === id;
+          });
+        }
+        obj64 = { style: null, children: null };
+        obj64.style = tmp.content;
+        obj65 = { style: null, children: null };
+        obj65.style = tmp.accountConnectedContainer;
+        if (null == found1) {
+          if (null == found2) {
+            tmp52 = closure_6;
+            obj66 = { size: "large", style: null };
+            obj66.style = tmp.loading;
+            tmp36Result1 = tmp36(closure_6, obj66);
           }
-          return handleAssignRole();
-        },
-        disabled: tmp9,
-        text: intl11.string(guildId(initialAttemptedPlatformType[27]).t["8SuVoE"]),
-        grow: true,
-      };
-      const Button4 = tmp18(tmp19[61]).Button;
-      if (!tmp9) {
-        tmp9 = !first;
+          obj65.children = tmp36Result1;
+          items11 = [, ];
+          items11[0] = tmp36(tmp38, obj65);
+          obj67 = { variant: "text-md/normal", color: "text-default", children: null };
+          intl6 = tmp17(tmp18[27]).intl;
+          obj68 = { privacyPolicyUrl: null, onAuthorizedApplicationsClick: null, onConnectionsClick: null };
+          tmp53 = MarketingURLs;
+          obj68.privacyPolicyUrl = MarketingURLs.PRIVACY;
+          obj68.onAuthorizedApplicationsClick = handleManageAuthorizedApplications;
+          obj68.onConnectionsClick = handleManageConnections;
+          obj67.children = intl6.format(tmp17(tmp18[27]).t.gsgvxh, obj68);
+          items11[1] = tmp36(tmp17(tmp18[26]).Text, obj67);
+          obj64.children = items11;
+          tmp37Result1 = tmp37(tmp38, obj64);
+        }
+        tmp47 = Fragment;
+        tmp37Result2 = null;
+        if (null != found1) {
+          obj69 = { children: null };
+          obj70 = { style: null, children: null };
+          obj70.style = tmp.accountConnectedPreview;
+          obj71 = { variant: "eyebrow", color: "text-default", children: null };
+          intl3 = tmp17(tmp18[27]).intl;
+          obj71.children = intl3.string(tmp17(tmp18[27]).t.TOjkEg);
+          items12 = [, ];
+          items12[0] = tmp36(tmp17(tmp18[26]).Text, obj71);
+          obj72 = { account: null, userId: null, theme: null, locale: null, style: null, showMetadata: null, showInvisibleIcon: null };
+          obj72.account = found1;
+          obj72.userId = stateFromStores2;
+          obj72.theme = tmp29;
+          obj72.locale = stateFromStores5;
+          obj72.style = tmp.accountConnectedPreviewConnectedUserAccount;
+          obj72.showMetadata = tmp12;
+          obj72.showInvisibleIcon = tmp15;
+          items12[1] = tmp36(tmp17(tmp18[59]).ConnectedUserAccount, obj72);
+          obj70.children = items12;
+          items13 = [, ];
+          items13[0] = tmp37(tmp38, obj70);
+          obj73 = { style: null, children: null };
+          obj73.style = tmp.accountConnectedPrivacy;
+          obj74 = { variant: "eyebrow", color: "text-default", children: null };
+          intl4 = tmp17(tmp18[27]).intl;
+          obj74.children = intl4.string(tmp17(tmp18[27]).t.jndPhX);
+          items14 = [, ];
+          items14[0] = tmp36(tmp17(tmp18[26]).Text, obj74);
+          tmp49 = f57174;
+          obj75 = { account: null, setShowPreviewInvisibleIcon: null, setShowPreviewMetadata: null };
+          obj75.account = found1;
+          obj75.setShowPreviewInvisibleIcon = tmp16;
+          obj75.setShowPreviewMetadata = tmp13;
+          items14[1] = tmp36(f57174, obj75);
+          obj73.children = items14;
+          items13[1] = tmp37(tmp38, obj73);
+          obj69.children = items13;
+          tmp37Result2 = tmp37(tmp47, obj69);
+        }
+        items15 = [, ];
+        items15[0] = tmp37Result2;
+        tmp37Result3 = null;
+        if (null != found2) {
+          obj76 = { style: null, children: null };
+          obj76.style = tmp.accountConnectedPreview;
+          obj77 = { variant: "eyebrow", color: "text-default", children: null };
+          intl5 = tmp17(tmp18[27]).intl;
+          obj77.children = intl5.string(tmp17(tmp18[27]).t.TOjkEg);
+          items16 = [, ];
+          items16[0] = tmp36(tmp17(tmp18[26]).Text, obj77);
+          obj78 = { applicationRoleConnection: null, theme: null, locale: null, style: null };
+          obj78.applicationRoleConnection = found2;
+          obj78.theme = tmp29;
+          obj78.locale = stateFromStores5;
+          obj78.style = tmp.accountConnectedPreviewConnectedUserAccount;
+          items16[1] = tmp36(tmp17(tmp18[59]).ConnectedApplicationUserRoleAccount, obj78);
+          obj76.children = items16;
+          tmp37Result3 = tmp37(tmp38, obj76);
+        }
+        obj79 = { children: null };
+        items15[1] = tmp37Result3;
+        obj79.children = items15;
+        tmp36Result1 = tmp37(tmp47, obj79);
+      } else {
+        tmp37Result1 = null;
+        if (tmp2.ROLE_GRANTED === tmp4) {
+          obj80 = { style: null, children: null };
+          obj80.style = tmp.content;
+          obj81 = { style: null, children: null };
+          obj81.style = tmp.roleGranted;
+          obj82 = { guildId: null, style: null, role: null, size: 24 };
+          obj82.guildId = guildId;
+          obj82.style = tmp.verifiedIcon;
+          obj82.role = role;
+          items17 = [, ];
+          items17[0] = tmp36(tmp28(tmp18[60]), obj82);
+          obj83 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
+          obj83.style = tmp.roleGrantedName;
+          obj83.children = role.name;
+          items17[1] = tmp36(tmp17(tmp18[26]).Text, obj83);
+          obj81.children = items17;
+          items18 = [, ];
+          items18[0] = tmp37(tmp38, obj81);
+          obj84 = { style: null, children: null };
+          obj84.style = tmp.channelsGranted;
+          obj84.children = found.map((channel) => closure_1_29(closure_1_34, { channel }, channel.id));
+          items18[1] = tmp36(tmp38, obj84);
+          obj80.children = items18;
+          tmp37Result1 = tmp37(tmp38, obj80);
+        }
       }
-      if (!tmp9) {
-        tmp9 = first1;
-      }
-      intl11 = tmp18(tmp19[27]).intl;
-      tmp37Result6 = closure_29(Button4, obj42);
-    } else if (constants8.ACCOUNT_CONNECTED === tmp4) {
-      const obj43 = {
-        variant: "primary",
-        onPress() {
+      items9[1] = tmp37Result1;
+      if (tmp2.CHECKS_REQUIRED === tmp4) {
+        obj85 = { variant: "primary", onPress: null, disabled: null, text: null, grow: true };
+        obj85.onPress = function onPress() {
+          return (function handleAssignRole() {
+            const self = this;
+            const apply = closure_1_20.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })();
+        };
+        if (!tmp8) {
+          tmp8 = !tmp6[0];
+        }
+        if (!tmp8) {
+          tmp8 = first;
+        }
+        obj85.disabled = tmp8;
+        intl11 = tmp17(tmp18[27]).intl;
+        obj85.text = intl11.string(tmp17(tmp18[27]).t["8SuVoE"]);
+        tmp36Result2 = tmp36(tmp17(tmp18[61]).Button, obj85);
+      } else if (tmp2.ACCOUNT_CONNECTED === tmp4) {
+        obj86 = { variant: "primary", onPress: null, text: null, grow: true };
+        obj86.onPress = function onPress() {
           return _undefined(constants.CHECKS_REQUIRED);
-        },
-        text: intl10.string(guildId(initialAttemptedPlatformType[27]).t.i4jeWR),
-        grow: true,
-      };
-      const Button3 = tmp18(tmp19[61]).Button;
-      intl10 = tmp18(tmp19[27]).intl;
-      tmp37Result6 = closure_29(Button3, obj43);
-    } else {
-      let flag;
-      if (arr != null) {
-        const flatResult = arr.flat();
-        flag = flatResult.some((application_id) => null == application_id.application_id);
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      const obj44 = {
-        variant: "primary",
-        onPress() {
-          if (_slicedToArray != null) {
+        };
+        intl10 = tmp17(tmp18[27]).intl;
+        obj86.text = intl10.string(tmp17(tmp18[27]).t.i4jeWR);
+        tmp36Result2 = tmp36(tmp17(tmp18[61]).Button, obj86);
+      } else {
+        flag = undefined;
+        if (arr != null) {
+          flatResult = arr.flat();
+          flag = flatResult.some((application_id) => null == application_id.application_id);
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        tmp64 = Fragment;
+        obj87 = { variant: "primary", onPress: null, text: null, grow: true };
+        obj87.onPress = function onPress() {
+          if (onCloseModal != null) {
             tmp();
           }
-          obj = ActionSheetActionCreatorsDefault;
-          obj.hideActionSheet();
-        },
-        text: intl8.string(guildId(initialAttemptedPlatformType[27]).t.cpT0Cq),
-        grow: true,
-      };
-      const Button = tmp18(tmp19[61]).Button;
-      intl8 = tmp18(tmp19[27]).intl;
-      const items19 = [closure_29(Button, obj44)];
-      let tmp37Result7 = null;
-      if (flag) {
-        const obj45 = { style: tmp.manageConnectionsButton, children: closure_29(Button2, obj46) };
-        obj46 = {
-          variant: "secondary",
-          onPress: handleManageConnections,
-          text: intl9.string(guildId(initialAttemptedPlatformType[27]).t.VXV55P),
-          grow: true,
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         };
-        Button2 = tmp18(tmp19[61]).Button;
-        intl9 = tmp18(tmp19[27]).intl;
-        tmp37Result7 = closure_29(tmp39, obj45);
+        intl8 = tmp17(tmp18[27]).intl;
+        obj87.text = intl8.string(tmp17(tmp18[27]).t.cpT0Cq);
+        items19 = [, ];
+        items19[0] = tmp36(tmp17(tmp18[61]).Button, obj87);
+        tmp36Result3 = null;
+        if (flag) {
+          obj88 = { style: null, children: null };
+          obj88.style = tmp.manageConnectionsButton;
+          obj89 = { variant: "secondary", onPress: null, text: null, grow: true };
+          obj89.onPress = handleManageConnections;
+          intl9 = tmp17(tmp18[27]).intl;
+          obj89.text = intl9.string(tmp17(tmp18[27]).t.VXV55P);
+          obj88.children = tmp36(tmp17(tmp18[61]).Button, obj89);
+          tmp36Result3 = tmp36(tmp38, obj88);
+        }
+        obj90 = { children: null };
+        items19[1] = tmp36Result3;
+        obj90.children = items19;
+        tmp36Result2 = tmp37(tmp64, obj90);
       }
-      const obj47 = { children: items19 };
-      items19[1] = tmp37Result7;
-      tmp37Result6 = closure_30(closure_31, obj47);
+      obj91 = { children: null };
+      items9[2] = tmp36Result2;
+      obj1.children = items9;
+      obj91.children = tmp37(tmp38, obj1);
+      return tmp36(guildId(closure_2[58]).BottomSheet, obj91);
     }
-    items9[2] = tmp37Result6;
-    const obj48 = { children: closure_30(c8, obj7) };
-    return closure_29(BottomSheet, obj48);
+    return;
   }
 }
 

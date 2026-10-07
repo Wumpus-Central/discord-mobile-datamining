@@ -12,7 +12,10 @@ const obj = {
   "scale-down": DataBindByName.Fit.ScaleDown,
   layout: DataBindByName.Fit.Layout,
 };
-const obj2 = {
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx");
+
+export const FIT_MAP = obj;
+export const ALIGNMENT_MAP = {
   "top-left": DataBindByName.Alignment.TopLeft,
   "top-center": DataBindByName.Alignment.TopCenter,
   "top-right": DataBindByName.Alignment.TopRight,
@@ -23,7 +26,3 @@ const obj2 = {
   "bottom-center": DataBindByName.Alignment.BottomCenter,
   "bottom-right": DataBindByName.Alignment.BottomRight,
 };
-const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx");
-
-export const FIT_MAP = obj;
-export const ALIGNMENT_MAP = obj2;

@@ -1,302 +1,266 @@
 // discord_app/components_native/premium/PremiumBillingInfo.tsx
-import react_native from "../../../_runtime/00017_react-native.js";
-import react2 from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../intl/index.native.tsx";
-import PremiumUtils from "../../utils/PremiumUtils.tsx";
-import BillingPlatformUtils from "../../modules/device/BillingPlatformUtils.tsx";
-import Text_Text from "../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
 import PremiumManagementUtils from "../../modules/premium/native/utils/PremiumManagementUtils.tsx";
 import PremiumSubscriptionInvoice from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import BillingInformation from "../../modules/billing/native/subscription/BillingInformation.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../_runtime/00019_react.js";
-import Constants from "../../Constants.tsx";
-import Fragment from "../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-let USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-const View = react_native.View;
+const util = Text(1126);
+const PremiumUtils = Text(4534);
+const Text_Text = Text(4892);
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1085);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let obj = {
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
-  billingContainer: obj2,
+  billingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 },
   billingRenewalInfo: { marginTop: 4 },
   billingManageGoogle: { marginTop: 8 },
 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 };
-let closure_8 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_8 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let style;
-      let subscription;
-      let tmpResult;
-      const obj = react2;
-      const cResult = obj.c(7);
+      let Text = require;
+      let tmp = dependencyMap;
+      const cResult = c.c(7);
       ({ style, subscription } = arg0);
-      let tmp4 = null;
-      const obj2 = BillingPlatformUtils;
+      let tmp3 = null;
       if (obj2.isGooglePlayBillingSupported()) {
-        tmp4 = null;
+        tmp3 = null;
         if (subscription.isPurchasedViaGoogle) {
-          let tmp5;
-          let tmp6;
           if (cResult[0] !== style) {
             const items = [style];
             cResult[0] = style;
             cResult[1] = items;
-            tmp5 = items;
+            let tmp4 = items;
           } else {
-            tmp5 = cResult[1];
+            tmp4 = cResult[1];
           }
           if (cResult[2] !== subscription.paymentGateway) {
-            const intl = intl3.intl;
-            const format = intl.format;
+            const intl = util.intl;
             const obj3 = {
-              onClick: tmpResult.getExternalSubscriptionMethodUrl(
+              onClick: PremiumUtils.getExternalSubscriptionMethodUrl(
                 subscription.paymentGateway,
                 "SUBSCRIPTION_MANAGEMENT",
               ),
             };
-            const prop = intl3.t["9NPc+O"];
-            tmpResult = PremiumUtils;
-            const formatResult = format(prop, obj3);
+            const formatResult = intl.format(util.t["9NPc+O"], obj3);
             cResult[2] = subscription.paymentGateway;
             cResult[3] = formatResult;
-            tmp6 = formatResult;
+            let tmp5 = formatResult;
+            const TextResult = PremiumUtils;
           } else {
-            tmp6 = cResult[3];
+            tmp5 = cResult[3];
           }
-          if (cResult[4] === tmp5) {
-            let tmp9;
-            if (cResult[5] === tmp6) {
-              tmp9 = cResult[6];
-            }
-            tmp4 = tmp9;
+          if (cResult[4] === tmp4) {
           }
-          const obj4 = { style: tmp5, variant: "text-sm/medium", color: "text-link", children: tmp6 };
-          const tmp11 = metroRequire(Text_Text.Text, obj4);
-          cResult[4] = tmp5;
-          cResult[5] = tmp6;
-          cResult[6] = tmp11;
-          tmp9 = tmp11;
+          Text = Text_Text.Text;
+          const obj4 = { style: tmp4, variant: "text-sm/medium", color: "text-link", children: tmp5 };
+          tmp = timestampProducer(Text, obj4);
+          cResult[4] = tmp4;
+          cResult[5] = tmp5;
+          cResult[6] = tmp;
         }
       }
-      return tmp4;
+      return tmp3;
     }
   : (subscription) => {
-      let format;
-      let items;
-      let obj3;
-      let prop;
-      let tmpResult;
       subscription = subscription.subscription;
-      const style = subscription.style;
       let tmp3 = null;
-      const obj = BillingPlatformUtils;
       if (obj.isGooglePlayBillingSupported()) {
         tmp3 = null;
         if (subscription.isPurchasedViaGoogle) {
-          const obj2 = { style: items, variant: "text-sm/medium", color: "text-link", children: format(prop, obj3) };
-          items = [style];
-          const Text = Text_Text.Text;
-          const intl = intl3.intl;
-          format = intl.format;
-          obj3 = {
-            onClick: tmpResult.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+          const obj2 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
+          const items = [subscription.style];
+          obj2.style = items;
+          const intl = util.intl;
+          const obj3 = {
+            onClick: PremiumUtils.getExternalSubscriptionMethodUrl(
+              subscription.paymentGateway,
+              "SUBSCRIPTION_MANAGEMENT",
+            ),
           };
-          prop = intl3.t["9NPc+O"];
-          tmpResult = PremiumUtils;
-          tmp3 = metroRequire(Text, obj2);
+          obj2.children = intl.format(util.t["9NPc+O"], obj3);
+          tmp3 = timestampProducer(Text_Text.Text, obj2);
+          const tmpResult = PremiumUtils;
         }
       }
       return tmp3;
     };
 let closure_9 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 };
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/PremiumBillingInfo.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let intl2;
-      let items;
-      let items1;
-      let style;
-      let subscription;
-      const obj = react2;
-      const cResult = obj.c(30);
+      const cResult = c.c(30);
       ({ style, subscription } = arg0);
       const tmp4 = closure_8();
-      const id = subscription.id;
       const tmp6 = useAnalyticsLocationsDefault();
       if (cResult[0] === subscription.id) {
-        let tmp7;
         if (cResult[1] === tmp6) {
-          tmp7 = cResult[2];
+          let tmp7 = cResult[2];
         }
-        const tmpResult = PremiumSubscriptionInvoice;
-        const first = _slicedToArray(tmpResult.useFetchSubscriptionInvoicePreview(tmp7), 1)[0];
+        const first = _slicedToArray(PremiumSubscriptionInvoice.useFetchSubscriptionInvoicePreview(tmp7), 1)[0];
         if (cResult[3] === subscription.id) {
-          let tmp12;
-          if ((cResult[4] === subscription.status) !== hasOwnProperty.PAST_DUE) {
-            tmp12 = cResult[5];
+          if (cResult[4] === tmp11) {
+            let tmp12 = cResult[5];
           }
           const tmpResult4 = PremiumSubscriptionInvoice;
-          const first1 = _slicedToArray(tmpResult4.useGetSubscriptionInvoice(tmp12), 1)[0];
-          const tmpResult5 = BillingInformation;
-          const billingInformationNative = tmpResult5.useBillingInformationNative(subscription, first, first1);
+          const billingInformationNative = BillingInformation.useBillingInformationNative(
+            subscription,
+            first,
+            _slicedToArray(tmpResult4.useGetSubscriptionInvoice(tmp12), 1)[0],
+          );
           if (null == first) {
             return null;
           } else {
-            let tmp16;
-            let tmp19;
-            let tmp21;
-            let tmp24;
             if (cResult[6] !== subscription) {
-              const tmpResult6 = PremiumManagementUtils;
-              const externalManagementMessage = tmpResult6.getExternalManagementMessage(subscription, {
+              const externalManagementMessage = PremiumManagementUtils.getExternalManagementMessage(subscription, {
                 shouldAllowExternalManagement: true,
               });
               cResult[6] = subscription;
               cResult[7] = externalManagementMessage;
-              tmp16 = externalManagementMessage;
+              let tmp15 = externalManagementMessage;
+              const tmpResult6 = PremiumManagementUtils;
             } else {
-              tmp16 = cResult[7];
+              tmp15 = cResult[7];
             }
             const _Symbol = Symbol;
-            const title = tmp4.title;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = intl3.intl;
-              const stringResult = intl.string(intl3.t.Sb6wI1);
+              const intl = util.intl;
+              const stringResult = intl.string(util.t.Sb6wI1);
               cResult[8] = stringResult;
-              tmp19 = stringResult;
+              let tmp18 = stringResult;
             } else {
-              tmp19 = cResult[8];
+              tmp18 = cResult[8];
             }
             if (cResult[9] !== tmp4.title) {
               const obj2 = {
-                style: title,
+                style: tmp4.title,
                 accessibilityRole: "header",
                 variant: "eyebrow",
                 color: "text-default",
-                children: tmp19,
+                children: tmp18,
               };
-              const tmp23 = metroRequire(Text_Text.Text, obj2);
+              const tmp22 = timestampProducer(Text_Text.Text, obj2);
               cResult[9] = tmp4.title;
-              cResult[10] = tmp23;
-              tmp21 = tmp23;
+              cResult[10] = tmp22;
+              let tmp20 = tmp22;
             } else {
-              tmp21 = cResult[10];
+              tmp20 = cResult[10];
             }
             const _Symbol2 = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj3 = { variant: "text-md/semibold", children: intl2.string(intl3.t.KXQjfc) };
-              const Text = Text_Text.Text;
-              intl2 = intl3.intl;
-              const tmp26 = metroRequire(Text, obj3);
-              cResult[11] = tmp26;
-              tmp24 = tmp26;
+              const obj3 = { variant: "text-md/semibold", children: null };
+              const intl2 = util.intl;
+              obj3.children = intl2.string(util.t.KXQjfc);
+              const tmp25 = timestampProducer(Text_Text.Text, obj3);
+              cResult[11] = tmp25;
+              let tmp23 = tmp25;
             } else {
-              tmp24 = cResult[11];
+              tmp23 = cResult[11];
             }
             if (cResult[12] === billingInformationNative) {
-              let tmp27;
               if (cResult[13] === tmp4.billingRenewalInfo) {
-                tmp27 = cResult[14];
+                let tmp26 = cResult[14];
               }
               if (cResult[15] === tmp4.billingManageGoogle) {
-                let tmp30;
                 if (cResult[16] === subscription) {
-                  tmp30 = cResult[17];
+                  let tmp29 = cResult[17];
                 }
                 if (cResult[18] === tmp4.billingContainer) {
-                  if (cResult[19] === tmp27) {
-                    let tmp34;
-                    if (cResult[20] === tmp30) {
-                      tmp34 = cResult[21];
+                  if (cResult[19] === tmp26) {
+                    if (cResult[20] === tmp29) {
+                      let tmp33 = cResult[21];
                     }
-                    if (cResult[22] === tmp16) {
-                      let tmp38;
+                    if (cResult[22] === tmp15) {
                       if (cResult[23] === tmp4.externalSubtext) {
-                        tmp38 = cResult[24];
+                        let tmp37 = cResult[24];
                       }
                       if (cResult[25] === style) {
-                        if (cResult[26] === tmp34) {
-                          if (cResult[27] === tmp38) {
-                            let tmp41;
-                            if (cResult[28] === tmp21) {
-                              tmp41 = cResult[29];
+                        if (cResult[26] === tmp33) {
+                          if (cResult[27] === tmp37) {
+                            if (cResult[28] === tmp20) {
+                              let tmp40 = cResult[29];
                             }
-                            return tmp41;
+                            return tmp40;
                           }
                         }
                       }
-                      const obj4 = { style, children: items };
-                      items = [tmp21, tmp34, tmp38];
-                      const tmp44 = metroImportDefault(View, obj4);
+                      const obj4 = { style, children: null };
+                      const items = [tmp20, tmp33, tmp37];
+                      obj4.children = items;
+                      const tmp43 = React5(View, obj4);
                       cResult[25] = style;
-                      cResult[26] = tmp34;
-                      cResult[27] = tmp38;
-                      cResult[28] = tmp21;
-                      cResult[29] = tmp44;
-                      tmp41 = tmp44;
+                      cResult[26] = tmp33;
+                      cResult[27] = tmp37;
+                      cResult[28] = tmp20;
+                      cResult[29] = tmp43;
+                      tmp40 = tmp43;
                     }
-                    let tmp39 = null;
-                    if (null != tmp16) {
-                      const obj5 = { style: tmp4.externalSubtext, variant: "text-sm/medium", children: tmp16 };
-                      tmp39 = metroRequire(Text_Text.Text, obj5);
+                    let tmp38 = null;
+                    if (null != tmp15) {
+                      const obj5 = { style: tmp4.externalSubtext, variant: "text-sm/medium", children: tmp15 };
+                      tmp38 = timestampProducer(Text_Text.Text, obj5);
                     }
-                    cResult[22] = tmp16;
+                    cResult[22] = tmp15;
                     cResult[23] = tmp4.externalSubtext;
-                    cResult[24] = tmp39;
-                    tmp38 = tmp39;
+                    cResult[24] = tmp38;
+                    tmp37 = tmp38;
                   }
                 }
-                const obj6 = { style: tmp4.billingContainer, children: items1 };
-                items1 = [tmp24, tmp27, tmp30];
-                const tmp37 = metroImportDefault(View, obj6);
+                const obj6 = { style: tmp4.billingContainer, children: null };
+                const items1 = [tmp23, tmp26, tmp29];
+                obj6.children = items1;
+                const tmp36 = React5(View, obj6);
                 cResult[18] = tmp4.billingContainer;
-                cResult[19] = tmp27;
-                cResult[20] = tmp30;
-                cResult[21] = tmp37;
-                tmp34 = tmp37;
+                cResult[19] = tmp26;
+                cResult[20] = tmp29;
+                cResult[21] = tmp36;
+                tmp33 = tmp36;
               }
               const obj7 = { style: tmp4.billingManageGoogle, subscription };
-              const tmp33 = metroRequire(closure_9, obj7);
+              const tmp32 = timestampProducer(closure_9, obj7);
               cResult[15] = tmp4.billingManageGoogle;
               cResult[16] = subscription;
-              cResult[17] = tmp33;
-              tmp30 = tmp33;
+              cResult[17] = tmp32;
+              tmp29 = tmp32;
             }
             const obj8 = {
               style: tmp4.billingRenewalInfo,
               variant: "text-sm/medium",
               children: billingInformationNative,
             };
-            const tmp29 = metroRequire(Text_Text.Text, obj8);
+            const tmp28 = timestampProducer(Text_Text.Text, obj8);
             cResult[12] = billingInformationNative;
             cResult[13] = tmp4.billingRenewalInfo;
-            cResult[14] = tmp29;
-            tmp27 = tmp29;
+            cResult[14] = tmp28;
+            tmp26 = tmp28;
           }
+          const tmpResult5 = BillingInformation;
         }
-        const obj9 = { subscriptionId: subscription.id, preventFetch: subscription.status !== hasOwnProperty.PAST_DUE };
+        const obj9 = { subscriptionId: subscription.id, preventFetch: subscription.status !== constants.PAST_DUE };
         cResult[3] = subscription.id;
-        cResult[4] = subscription.status !== hasOwnProperty.PAST_DUE;
+        cResult[4] = subscription.status !== constants.PAST_DUE;
         cResult[5] = obj9;
         tmp12 = obj9;
+        const tmpResult = PremiumSubscriptionInvoice;
       }
       const obj10 = {
-        subscriptionId: id,
+        subscriptionId: subscription.id,
         renewal: true,
         applyEntitlements: true,
         analyticsLocations: tmp6,
@@ -308,12 +272,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj10;
     }
   : (subscription) => {
-      let intl;
-      let intl2;
-      let items;
-      let items1;
       subscription = subscription.subscription;
-      const style = subscription.style;
       const tmp = closure_8();
       const obj = PremiumSubscriptionInvoice;
       const obj2 = {
@@ -323,49 +282,51 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         analyticsLocations: useAnalyticsLocationsDefault(),
         analyticsLocation: AnalyticsLocationDefault.PREMIUM_BILLING_INFO,
       };
-      const first = _slicedToArray(obj.useFetchSubscriptionInvoicePreview(obj2), 1)[0];
-      const obj3 = PremiumSubscriptionInvoice;
-      const obj4 = { subscriptionId: subscription.id, preventFetch: subscription.status !== hasOwnProperty.PAST_DUE };
-      const first1 = _slicedToArray(obj3.useGetSubscriptionInvoice(obj4), 1)[0];
+      const first = _slicedToArray(
+        PremiumSubscriptionInvoice.useGetSubscriptionInvoice({
+          subscriptionId: subscription.id,
+          preventFetch: subscription.status !== constants.PAST_DUE,
+        }),
+        1,
+      )[0];
       BillingInformation;
-      if (null == first) {
+      if (null == _slicedToArray(obj.useFetchSubscriptionInvoicePreview(obj2), 1)[0]) {
         return null;
       } else {
-        const tmp2Result = PremiumManagementUtils;
-        const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, {
+        const externalManagementMessage = PremiumManagementUtils.getExternalManagementMessage(subscription, {
           shouldAllowExternalManagement: true,
         });
-        const obj5 = { style, children: items };
+        const obj5 = { style: subscription.style, children: null };
         const obj6 = {
           style: tmp.title,
           accessibilityRole: "header",
           variant: "eyebrow",
           color: "text-default",
-          children: intl.string(intl3.t.Sb6wI1),
+          children: null,
         };
-        const Text = Text_Text.Text;
-        intl = intl3.intl;
-        items = [metroRequire(Text, obj6), ,];
-        const obj7 = { style: tmp.billingContainer, children: items1 };
-        const obj8 = { variant: "text-md/semibold", children: intl2.string(intl3.t.KXQjfc) };
-        const Text2 = Text_Text.Text;
-        intl2 = intl3.intl;
-        items1 = [metroRequire(Text2, obj8), ,];
-        const obj9 = { style: tmp.billingRenewalInfo, variant: "text-sm/medium", children: tmp7 };
-        items1[1] = metroRequire(Text_Text.Text, obj9);
+        const intl = util.intl;
+        obj6.children = intl.string(util.t.Sb6wI1);
+        const items = [timestampProducer(Text_Text.Text, obj6), ,];
+        const obj7 = { style: tmp.billingContainer, children: null };
+        const obj8 = { variant: "text-md/semibold", children: null };
+        const intl2 = util.intl;
+        obj8.children = intl2.string(util.t.KXQjfc);
+        const items1 = [timestampProducer(Text_Text.Text, obj8), ,];
+        const obj9 = { style: tmp.billingRenewalInfo, variant: "text-sm/medium", children: tmp6 };
+        items1[1] = timestampProducer(Text_Text.Text, obj9);
         const obj10 = { style: tmp.billingManageGoogle, subscription };
-        items1[2] = metroRequire(closure_9, obj10);
-        items[1] = metroImportDefault(View, obj7);
-        let tmp12Result = null;
+        items1[2] = timestampProducer(closure_9, obj10);
+        obj7.children = items1;
+        items[1] = React5(View, obj7);
+        let tmp11Result = null;
         if (null != externalManagementMessage) {
           const obj11 = { style: tmp.externalSubtext, variant: "text-sm/medium", children: externalManagementMessage };
-          tmp12Result = metroRequire(Text_Text.Text, obj11);
+          tmp11Result = timestampProducer(Text_Text.Text, obj11);
         }
-        items[2] = tmp12Result;
-        return metroImportDefault(View, obj5);
+        items[2] = tmp11Result;
+        obj5.children = items;
+        return React5(View, obj5);
       }
+      const obj4 = { subscriptionId: subscription.id, preventFetch: subscription.status !== constants.PAST_DUE };
     };
-const result = size.fileFinishedImporting("components_native/premium/PremiumBillingInfo.tsx");
-
-export default tmp6;
 export const GoogleManagementLink = tmp5;

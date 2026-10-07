@@ -18,7 +18,7 @@ const items = [
     "https://account.battle.net/connections/discord",
   ]),
 ];
-new Set([
+const set = new Set([
   "https://account.riotgames.com/#connected-accounts",
   "https://aes.sgp.pvp.net/providers/discord/link/v1",
   "https://aes.sgp.pvp.net/providers/discord/link/v1?origin=Discord",
@@ -33,7 +33,6 @@ new Set([
   "https://discord.facepunch.com/",
   "https://account.battle.net/connections/discord",
 ]);
-const set1 = new Set(items);
 const result = size.fileFinishedImporting("modules/masked_link/constants/TrustedURLs.tsx");
 
-export const TRUSTED_URLS = set1;
+export const TRUSTED_URLS = new Set(items);

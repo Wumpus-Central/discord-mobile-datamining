@@ -1,95 +1,92 @@
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
-import Constants from "../../Constants.tsx";
 import v1 from "../../../_runtime/01266_v1.js";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_1;
-
-let obj = function _createHandoffToken() {
-  obj = _asyncToGenerator(async (key) => {
-    let c2 = 0;
-    let c3 = 0;
-    return (async function (arg0) {
-      let obj4;
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let handoff_token;
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              return { value, done: true };
-            } else {
-              closure_1 = tmp3;
-              handoff_token = undefined;
-              const HTTP = HTTPUtils.HTTP;
-              const request = {
-                url: constants.HANDOFF,
-                body: obj4,
-                oldFormErrors: true,
-                retries: 1,
-                rejectWithError: false,
-              };
-              c2 = 1;
-              c3 = 1;
-              obj4 = { key };
-              const obj5 = { value: HTTP.post(request), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            return { value, done: true };
-          } else {
-            handoff_token = value.body.handoff_token;
-            if (null != handoff_token) {
-              c3 = 3;
-              return { value: handoff_token, done: true };
-            } else {
-              const _Error = Error;
-              const self = this;
-              const self2 = this;
-              const error = new Error("Missing handoff token!");
-              throw error;
-            }
-          }
-        } catch (tmp11) {
+require = fn;
+let closure_4 = async function _createHandoffToken(key) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (key === 1) {
+      throw value;
+    } else if (key === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (key === 1) {
           c3 = 3;
-          throw tmp11;
+          throw value;
+        } else if (key === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp4;
+          let handoff_token;
+          const HTTP = HTTPUtils.HTTP;
+          const request = {
+            url: constants.HANDOFF,
+            body: null,
+            oldFormErrors: true,
+            retries: 1,
+            rejectWithError: false,
+          };
+          const obj4 = { key };
+          request.body = obj4;
+          c2 = 1;
+          c3 = 1;
+          const obj5 = { value: HTTP.post(request), done: false };
+          return obj5;
+        }
+      } else if (key === 1) {
+        c3 = 3;
+        throw value;
+      } else if (key === 2) {
+        c3 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        handoff_token = value.body.handoff_token;
+        if (null != handoff_token) {
+          c3 = 3;
+          const obj = { value: handoff_token, done: true };
+          return obj;
+        } else {
+          const _Error = Error;
+          const error = new Error("Missing handoff token!");
+          throw error;
         }
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp14) {
+      c3 = tmp;
+      throw tmp14;
+    }
+  }
 };
-const Endpoints = Constants.Endpoints;
-obj = {
-  generateNonce() {
-    obj = v1;
-    return obj.v4();
-  },
-  createHandoffToken() {
-    return obj(...arguments);
-  },
-};
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_web_handoff/MobileWebHandoffUtils.tsx");
 
-export default obj;
+export default {
+  generateNonce() {
+    return v1.v4();
+  },
+  createHandoffToken() {
+    const self = this;
+    const apply = closure_4.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  },
+};

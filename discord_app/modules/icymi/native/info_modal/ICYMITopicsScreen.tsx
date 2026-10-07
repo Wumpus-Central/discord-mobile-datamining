@@ -1,8 +1,8 @@
 // discord_app/modules/icymi/native/info_modal/ICYMITopicsScreen.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import react_native from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BookCheckIcon from "../../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
@@ -16,124 +16,111 @@ import PencilSparkleIcon from "../../../../design/components/Icon/native/redesig
 import PiggyBankIcon from "../../../../design/components/Icon/native/redesign/generated/PiggyBankIcon.tsx";
 import ICYMIAnalytics2 from "../../ICYMIAnalytics.tsx";
 import PaintPaletteIcon from "../../../../design/components/Icon/native/redesign/generated/PaintPaletteIcon.tsx";
-import GuildSettingsDiscoveryConstants from "../../../guild_settings/discovery/GuildSettingsDiscoveryConstants.tsx";
 import ScienceIcon from "../../../../design/components/Icon/native/redesign/generated/ScienceIcon.tsx";
 import MedalIcon from "../../../../design/components/Icon/native/redesign/generated/MedalIcon.tsx";
 import PaintbrushThinIcon from "../../../../design/components/Icon/native/redesign/generated/PaintbrushThinIcon.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native2 from "../../../../../_runtime/00017_react-native.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildDiscoveryCategoryStore from "../../../global_discovery_servers/GuildDiscoveryCategoryStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let c3, closure_1, navigation, set;
-
-let StyleSheet;
-let c10;
-let closure_12;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let rect;
-let size;
-let unpackModuleId;
+require = fn;
 function primaryCategoryToEmojiIcon(categoryid) {
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    return authStore(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
-    return authStore(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
-    return authStore(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
-    return authStore(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.MUSIC === categoryid) {
-    return authStore(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
-    return authStore(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
-    return authStore(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FINANCE === categoryid) {
-    return authStore(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.BOTS === categoryid) {
-    return authStore(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SPORTS === categoryid) {
-    return authStore(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
-    return authStore(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
-    return authStore(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
-    return authStore(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    return authStore(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    return v65535(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
 }
-let _slicedToArray = _slicedToArray_mod;
-({ View: metroRequire, ScrollView: metroImportDefault, StyleSheet } = react_native2);
-const GuildPrimaryCategory = GuildSettingsDiscoveryConstants.GuildPrimaryCategory;
-({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  container: obj2,
-  footer: rect,
-  title: obj3,
-  subtitle: obj4,
-  separator: size,
-  topicsContainer: obj5,
-  scrollContentContainer: obj6,
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
+const GuildPrimaryCategory = fn(16461).GuildPrimaryCategory;
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
+  footer: null,
+  title: null,
+  subtitle: null,
+  separator: null,
+  topicsContainer: null,
+  scrollContentContainer: null,
 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
-createStyles = createStyles.createStyles;
-rect = {
+const rect = {
   position: "absolute",
   bottom: 0,
   left: nativeDefault.space.PX_24,
   right: nativeDefault.space.PX_24,
   paddingBottom: nativeDefault.space.PX_8,
 };
-obj3 = {
+obj2.footer = rect;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+obj2.title = {
   marginTop: nativeDefault.space.PX_24,
   marginBottom: nativeDefault.space.PX_8,
   marginHorizontal: nativeDefault.space.PX_24,
 };
-obj4 = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
-size = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj5 = {
+let obj4 = {
+  marginTop: nativeDefault.space.PX_24,
+  marginBottom: nativeDefault.space.PX_8,
+  marginHorizontal: nativeDefault.space.PX_24,
+};
+obj2.subtitle = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
+let size = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.separator = size;
+let obj5 = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
+obj2.topicsContainer = {
   flex: 1,
   marginHorizontal: nativeDefault.space.PX_16,
   flexWrap: "wrap",
   flexDirection: "row",
   gap: nativeDefault.space.PX_12,
 };
-obj6 = { paddingTop: nativeDefault.space.PX_24 };
-let closure_14 = createStyles(obj);
+let obj6 = {
+  flex: 1,
+  marginHorizontal: nativeDefault.space.PX_16,
+  flexWrap: "wrap",
+  flexDirection: "row",
+  gap: nativeDefault.space.PX_12,
+};
+obj2.scrollContentContainer = { paddingTop: nativeDefault.space.PX_24 };
+let closure_14 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let accessibilityRole;
-      let accessibilityState;
-      let categoryid;
-      let handlePress;
-      let selected;
-      let tmp4;
-      let tmp7;
-      let topic;
-      const obj = react2;
-      const cResult = obj.c(14);
+      const cResult = c.c(14);
       ({ topic, categoryid } = arg0);
       ({ selected, handlePress } = arg0);
       if (cResult[0] !== categoryid) {
         const tmp6 = primaryCategoryToEmojiIcon(categoryid);
         cResult[0] = categoryid;
         cResult[1] = tmp6;
-        tmp4 = tmp6;
+        let tmp4 = tmp6;
       } else {
         tmp4 = cResult[1];
       }
@@ -141,12 +128,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { checked: selected };
         cResult[2] = selected;
         cResult[3] = obj2;
-        tmp7 = obj2;
+        let tmp7 = obj2;
       } else {
         tmp7 = cResult[3];
       }
-      const tmpResult = react_native;
-      const checkboxA11yNative = tmpResult.useCheckboxA11yNative(tmp7);
+      const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative(tmp7);
       ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
       if (null == tmp4) {
         return null;
@@ -156,18 +142,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           str = "primary";
         }
         if (cResult[4] === categoryid) {
-          let tmp9;
           if (cResult[5] === handlePress) {
-            tmp9 = cResult[6];
+            let tmp9 = cResult[6];
           }
           if (cResult[7] === accessibilityRole) {
             if (cResult[8] === accessibilityState) {
               if (cResult[9] === tmp4) {
                 if (cResult[10] === str) {
                   if (cResult[11] === tmp9) {
-                    let tmp10;
                     if (cResult[12] === topic) {
-                      tmp10 = cResult[13];
+                      let tmp10 = cResult[13];
                     }
                     return tmp10;
                   }
@@ -176,7 +160,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { accessibilityRole, accessibilityState, variant: str, text: topic, onPress: tmp9, icon: tmp4 };
-          const tmp12 = authStore(components_Button_Button.Button, obj3);
+          const tmp12 = v65535(components_Button_Button.Button, obj3);
           cResult[7] = accessibilityRole;
           cResult[8] = accessibilityState;
           cResult[9] = tmp4;
@@ -194,74 +178,55 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = fn;
         tmp9 = fn;
       }
+      const tmpResult = useA11yRolesNative;
     }
   : (categoryid) => {
-      let closure_129_1;
-      let selected;
-      let str;
       categoryid = categoryid.categoryid;
-      ({ selected, handlePress: closure_129_1 } = categoryid);
-      const topic = categoryid.topic;
+      ({ selected, handlePress: importDefault } = categoryid);
       const tmp = primaryCategoryToEmojiIcon(categoryid);
-      const obj = react_native;
-      const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
+      const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: selected });
       let tmp8Result = null;
       if (null != tmp) {
         const obj2 = {
           accessibilityRole: tmp5,
           accessibilityState: tmp6,
-          variant: str,
-          text: topic,
-          onPress() {
-            return closure_1_1(categoryid);
-          },
-          icon: tmp,
+          variant: null,
+          text: null,
+          onPress: null,
+          icon: null,
         };
-        str = "tertiary";
-        const Button = components_Button_Button.Button;
+        let str = "tertiary";
         if (selected) {
           str = "primary";
         }
-        tmp8Result = authStore(Button, obj2);
+        obj2.variant = str;
+        obj2.text = categoryid.topic;
+        obj2.onPress = function onPress() {
+          return importDefault(categoryid);
+        };
+        obj2.icon = tmp;
+        tmp8Result = v65535(components_Button_Button.Button, obj2);
       }
       return tmp8Result;
     };
-size = size_mod;
+size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
 
 export default function ICYMITopicsScreen() {
-  let Button;
-  let allCategories;
-  let closure_2;
-  let first;
-  let first1;
-  let handlePress;
-  let intl;
-  let intl2;
-  let intl3;
-  let items4;
-  let obj11;
-  let obj7;
-  let obj8;
   const tmp = closure_14();
-  const tmp2 = dependencyMap;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  const useState = react.useState;
-  set = new Set();
-  [first, importDefault] = useState(set);
-  [first1, dependencyMap] = react.useState(false);
-  let obj = first(1490);
-  navigation = obj.useNavigation();
+  [first, importDefault] = noop.useState(new Set());
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  dependencyMap = tmp6[1];
+  const set = new Set();
+  const navigation = first(1490).useNavigation();
   const items = [navigation, first];
-  const callback = react.useCallback(
+  const callback = noop.useCallback(
     navigation(function* () {
-      let closure_0;
-      let intl;
-      let v2;
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -279,18 +244,18 @@ export default function ICYMITopicsScreen() {
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              closure_1 = tmp3;
-              first = tmp3;
+              closure_1 = tmp4;
+              closure_0 = tmp4;
               v2(true);
               v2 = 1;
               c3 = 1;
-              const obj5 = { value: first(v2[30])(v2[29], v2.paths), done: false };
+              const obj5 = { value: closure_0(v2[30])(v2[29], v2.paths), done: false };
               return obj5;
             }
-          } else if (1 === v2) {
+          } else if (1 === tmp4) {
             if (arg0 === 1) {
               c3 = 3;
               throw value;
@@ -300,10 +265,12 @@ export default function ICYMITopicsScreen() {
               return obj6;
             } else {
               const _Array = Array;
-              const obj3 = closure_1(v2[31]);
               v2 = 2;
               c3 = 1;
-              const obj7 = { value: obj3.fetchPopularGuildsFromCategories(Array.from(closure_129_0), 0), done: false };
+              const obj7 = {
+                value: closure_1(v2[31]).fetchPopularGuildsFromCategories(Array.from(closure_129_0), 0),
+                done: false,
+              };
               return obj7;
             }
           } else if (arg0 === 1) {
@@ -317,99 +284,93 @@ export default function ICYMITopicsScreen() {
             if (value) {
               closure_129_3.push("join_guilds");
             } else {
-              const obj = { key: "ICYMIInfoModal", content: intl.string(first(v2[33]).t.CG4Hks) };
-              const open = closure_1(v2[32]).open;
-              const tmp6 = closure_1(v2[32]);
-              intl = first(v2[33]).intl;
-              open(obj);
+              const obj9 = { key: "ICYMIInfoModal", content: null };
+              const intl = closure_0(v2[33]).intl;
+              obj9.content = intl.string(closure_0(v2[33]).t.CG4Hks);
+              closure_1(v2[32]).open(obj9);
+              const obj = closure_1(v2[32]);
             }
             const _setTimeout = setTimeout;
             const timerId = setTimeout(() => v2(false), 500);
             c3 = 3;
-            return { value: "IconComponent", done: null };
           }
         } catch (tmp28) {
-          c3 = 3;
+          c3 = tmp;
           throw tmp28;
         }
       }
     }),
     items,
   );
-  let obj2 = first(504);
+  let obj = first(1490);
   const items1 = [GuildDiscoveryCategoryStore];
-  const stateFromStoresArray = obj2.useStateFromStoresArray(items1, () => allCategories.getAllCategories());
+  const stateFromStoresArray = first(504).useStateFromStoresArray(items1, () => allCategories.getAllCategories());
   const items2 = [first];
-  _slicedToArray = react.useCallback((categoryId) => {
-    let closure_0 = categoryId;
+  _slicedToArray = noop.useCallback((categoryId) => {
+    closure_0 = categoryId;
     const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
-    const obj = { categoryId, toggled: !first.has(categoryId) };
-    const result = ICYMIAnalytics.trackFeedOnboardingCategoryToggled(obj);
+    const result = ICYMIAnalytics.trackFeedOnboardingCategoryToggled({ categoryId, toggled: !first.has(categoryId) });
     if (first.has(categoryId)) {
       closure_1((items) => {
         items.delete(closure_0);
-        set = new Set(items);
-        return set;
+        return new Set(items);
       });
     } else {
       closure_1((add) => {
         add.add(closure_0);
-        set = new Set(add);
-        return set;
+        return new Set(add);
       });
     }
+    const obj = { categoryId, toggled: !first.has(categoryId) };
   }, items2);
-  let obj3 = {
-    variant: "heading-xl/semibold",
-    color: "mobile-text-heading-primary",
-    style: tmp.title,
-    children: intl.string(first(1126).t.Y5d99L),
-  };
-  const Text = first(4892).Text;
-  intl = first(1126).intl;
-  const children = [closure_10(Text, obj3), , , ,];
-  let obj4 = {
-    variant: "text-sm/normal",
-    color: "text-muted",
-    style: tmp.subtitle,
-    children: intl2.string(first(1126).t.MGZsfv),
-  };
-  const Text2 = first(4892).Text;
-  intl2 = first(1126).intl;
-  children[1] = closure_10(Text2, obj4);
-  let obj5 = { style: tmp.separator };
-  children[2] = closure_10(closure_6, obj5);
+  let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  let intl = first(1126).intl;
+  obj3.children = intl.string(first(1126).t.Y5d99L);
+  const children = [closure_10(first(4892).Text, obj3), , , ,];
+  const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
+  const intl2 = first(1126).intl;
+  obj4.children = intl2.string(first(1126).t.MGZsfv);
+  children[1] = closure_10(first(4892).Text, obj4);
+  children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = {
     showsVerticalScrollIndicator: false,
     style: tmp.container,
     contentContainerStyle: tmp.scrollContentContainer,
-    contentInset: obj7,
-    children: closure_10(closure_6, obj8),
+    contentInset: { bottom: 72 + bottom },
+    children: null,
   };
-  obj7 = { bottom: 72 + bottom };
-  obj8 = {
+  let obj2 = first(504);
+  let obj5 = { style: tmp.separator };
+  let obj7 = { bottom: 72 + bottom };
+  obj6.children = closure_10(closure_6, {
     style: tmp.topicsContainer,
-    children: stateFromStoresArray.map((categoryId) => {
-      const obj = {
-        selected: first.has(categoryId.categoryId),
-        topic: categoryId.name,
-        categoryid: categoryId.categoryId,
-        handlePress,
-      };
-      return authStore(closure_15, obj, categoryId.categoryId);
-    }),
-  };
+    children: stateFromStoresArray.map((categoryId) =>
+      v65535(
+        closure_15,
+        {
+          selected: first.has(categoryId.categoryId),
+          topic: categoryId.name,
+          categoryid: categoryId.categoryId,
+          handlePress,
+        },
+        categoryId.categoryId,
+      ),
+    ),
+  });
   children[3] = closure_10(closure_7, obj6);
-  let tmp13Result = first.size > 0;
-  if (tmp13Result) {
-    const obj9 = { style: items4, children: closure_10(Button, obj11) };
-    items4 = [{ marginBottom: bottom }, tmp.footer];
+  let tmp12Result = first.size > 0;
+  if (tmp12Result) {
+    let obj9 = { style: null, children: null };
     const obj10 = { marginBottom: bottom };
-    obj11 = { loading: first1, size: "lg", text: intl3.string(first(1126).t.PDTjLN), onPress: callback };
-    Button = tmp8(5601).Button;
-    intl3 = tmp8(1126).intl;
-    tmp13Result = closure_10(closure_6, obj9);
+    const items4 = [obj10, tmp.footer];
+    obj9.style = items4;
+    const obj11 = { loading: tmp6[0], size: "lg", text: null, onPress: null };
+    const intl3 = tmp7(1126).intl;
+    obj11.text = intl3.string(tmp7(1126).t.PDTjLN);
+    obj11.onPress = callback;
+    obj9.children = closure_10(tmp7(5601).Button, obj11);
+    tmp12Result = closure_10(closure_6, obj9);
   }
-  children[4] = tmp13Result;
+  children[4] = tmp12Result;
   return closure_12(closure_11, { children });
 }

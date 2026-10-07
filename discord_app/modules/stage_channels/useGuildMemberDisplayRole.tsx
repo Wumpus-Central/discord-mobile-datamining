@@ -2,15 +2,11 @@
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
+const require = fn;
 function getHighestHoistedRole(arg0, arg1) {
-  let obj;
-  let obj2;
   let tmp = arg2;
   if (arg2 === undefined) {
     const items = [GuildStore, GuildMemberStore];
@@ -19,15 +15,14 @@ function getHighestHoistedRole(arg0, arg1) {
   [obj, obj2] = tmp;
   if (null != arg0) {
     if (null != arg1) {
-      const guild = obj.getGuild(arg0);
+      guild = obj.getGuild(arg0);
       if (null == guild) {
         return null;
       } else {
         const member = obj2.getMember(guild.id, arg1);
         let highestHoistedRole = null;
         if (null != member) {
-          const obj3 = PermissionUtilsAll;
-          highestHoistedRole = obj3.getHighestHoistedRole(guild, member);
+          highestHoistedRole = PermissionUtilsAll.getHighestHoistedRole(guild, member);
         }
         return highestHoistedRole;
       }
@@ -35,31 +30,28 @@ function getHighestHoistedRole(arg0, arg1) {
   }
   return null;
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let first;
       _require = arg0;
-      let closure_1 = arg1;
-      const obj = require("react");
-      const cResult = obj.c(5);
-      const tmp = _require;
+      closure_1 = arg1;
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [GuildStore, GuildMemberStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
-        let tmp7;
-        let tmp8;
         if (cResult[2] === arg1) {
-          tmp7 = cResult[3];
-          tmp8 = cResult[4];
+          let tmp7 = cResult[3];
+          let tmp8 = cResult[4];
         }
-        const tmpResult = tmp(504);
-        return tmpResult.useStateFromStores(first, tmp7, tmp8);
+        return tmp(504).useStateFromStores(first, tmp7, tmp8);
       }
       const fn = function u() {
         const items = [GuildStore, GuildMemberStore];
@@ -72,15 +64,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp8 = items1;
       tmp7 = fn;
+      const obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
       _require = arg0;
-      let closure_1 = arg1;
+      closure_1 = arg1;
       let items = [GuildStore, GuildMemberStore];
       const items1 = [arg0, arg1];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(
+      return require("initialize").useStateFromStores(
         items,
         () => {
           const items = [GuildStore, GuildMemberStore];
@@ -89,7 +81,4 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
-
-export default tmp2;
 export { getHighestHoistedRole };

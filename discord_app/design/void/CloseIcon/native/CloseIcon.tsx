@@ -1,26 +1,19 @@
 // discord_app/design/void/CloseIcon/native/CloseIcon.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
+require = fn;
 let closure_2 = ["width", "height", "color"];
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let color;
-      let height;
-      let tmp11;
-      let tmp4;
-      let tmp5;
-      let tmp6;
-      let tmp7;
-      let width;
-      const obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       if (cResult[0] !== arg0) {
         ({ width, height, color } = arg0);
         const tmp10 = _objectWithoutProperties(arg0, closure_2);
@@ -29,10 +22,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = width;
         cResult[3] = height;
         cResult[4] = color;
-        tmp7 = color;
-        tmp6 = height;
-        tmp5 = width;
-        tmp4 = tmp10;
+        let tmp7 = color;
+        let tmp6 = height;
+        let tmp5 = width;
+        let tmp4 = tmp10;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -52,34 +45,37 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         str = tmp7;
       }
       if (cResult[5] !== str) {
+        const obj2 = {
+          fill: str,
+          d: "M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z",
+        };
         const tmp13 = jsx(inlineStyles.Path, {
           fill: str,
           d: "M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z",
         });
         cResult[5] = str;
         cResult[6] = tmp13;
-        tmp11 = tmp13;
+        let tmp11 = tmp13;
       } else {
         tmp11 = cResult[6];
       }
       if (cResult[7] === num6) {
         if (cResult[8] === tmp4) {
           if (cResult[9] === tmp11) {
-            let tmp14;
             if (cResult[10] === num7) {
-              tmp14 = cResult[11];
+              let tmp14 = cResult[11];
             }
             return tmp14;
           }
         }
       }
-      const Svg = inlineStyles.Svg;
+      const obj3 = {};
       const merged = Object.assign(tmp4);
-      const tmp16 = (
-        <Svg width={num7} height={num6} viewBox="0 0 24 24">
-          {tmp11}
-        </Svg>
-      );
+      obj3.width = num7;
+      obj3.height = num6;
+      obj3.viewBox = "0 0 24 24";
+      obj3.children = tmp11;
+      const tmp16 = jsx(inlineStyles.Svg, {});
       cResult[7] = num6;
       cResult[8] = tmp4;
       cResult[9] = tmp11;
@@ -101,17 +97,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         str = "currentColor";
       }
       const merged = Object.assign(width, Object.assign({ width: 0, height: 0, color: 0 }));
-      const Svg = inlineStyles.Svg;
+      const obj = {};
       const merged1 = Object.assign(merged);
-      return (
-        <Svg width={num} height={num2} viewBox="0 0 24 24">
-          {jsx(inlineStyles.Path, {
-            fill: str,
-            d: "M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z",
-          })}
-        </Svg>
-      );
+      obj.width = num;
+      obj.height = num2;
+      obj.viewBox = "0 0 24 24";
+      obj.children = jsx(inlineStyles.Path, {
+        fill: str,
+        d: "M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z",
+      });
+      return jsx(inlineStyles.Svg, {});
     };
-const result = size.fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
-
-export default tmp3;

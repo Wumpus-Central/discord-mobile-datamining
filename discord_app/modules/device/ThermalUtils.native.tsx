@@ -1,41 +1,36 @@
 // discord_app/modules/device/ThermalUtils.native.tsx
-import react_native from "../../../_runtime/00017_react-native.js";
-import react_nativeDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import NativeDeviceThermalStateModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
 import 00570__ from "../../../_runtime/metro/00570__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, state;
 
-const nativeEventEmitter = new react_native.NativeEventEmitter(react_nativeDefault);
+const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeDeviceThermalStateModuleDefault);
 let closure_4 = module_570.create((arg0) => {
-  let closure_0;
-  let rawThermalState;
   _require = arg0;
   nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
     state = state.state;
-    let obj = state(dependencyMap[5]);
-    obj.batchUpdates(() => state((rawThermalState) => {
+    state(dependencyMap[5]).batchUpdates(() => state((rawThermalState) => {
       let tmp = rawThermalState;
       if (rawThermalState.rawThermalState !== state) {
-        tmp = { rawThermalState: tmp2 };
         const obj = { rawThermalState: tmp2 };
+        tmp = obj;
       }
       return tmp;
     }));
   });
-  const tmp2 = _require;
-  let obj = require("PlatformUtils");
   if (!obj.isAndroid()) {
-    const obj3 = react_nativeDefault;
-    const thermalState = obj3.getThermalState();
-    rawThermalState = thermalState;
+    const thermalState = NativeDeviceThermalStateModuleDefault.getThermalState();
+    const rawThermalState = thermalState;
   } else {
-    tmp2(4872);
+    require("DeviceUtils");
   }
   return { rawThermalState };
 });
-let obj = {
+const result = size.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
+
+export default {
   getRawThermalState() {
     return closure_4.getState().rawThermalState;
   },
@@ -43,10 +38,6 @@ let obj = {
     return closure_4((rawThermalState) => rawThermalState.rawThermalState);
   },
   addListener(arg0) {
-    const obj = { remove: closure_4.subscribe(arg0) };
-    return obj;
+    return { remove: closure_4.subscribe(arg0) };
   }
 };
-const result = size.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
-
-export default obj;

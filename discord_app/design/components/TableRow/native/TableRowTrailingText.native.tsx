@@ -1,21 +1,20 @@
 // discord_app/design/components/TableRow/native/TableRowTrailingText.native.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import Text_Text from "../../Text/native/Text.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let text;
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowTrailingText.native.tsx");
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+export const TableRowTrailingText = ReactCompilerGating.isReactCompilerEnabled()
   ? (text) => {
-      let tmp4;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       text = text.text;
       if (cResult[0] !== text) {
+        const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: text };
         const tmp6 = jsx(Text_Text.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
@@ -24,7 +23,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         });
         cResult[0] = text;
         cResult[1] = tmp6;
-        tmp4 = tmp6;
+        let tmp4 = tmp6;
       } else {
         tmp4 = cResult[1];
       }
@@ -32,6 +31,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (children) =>
       jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: children.text });
-const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowTrailingText.native.tsx");
-
-export const TableRowTrailingText = tmp3;

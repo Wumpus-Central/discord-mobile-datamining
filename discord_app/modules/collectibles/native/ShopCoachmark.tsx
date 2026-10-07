@@ -1,85 +1,67 @@
 // discord_app/modules/collectibles/native/ShopCoachmark.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let markAsDismissed;
-
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
+require = fn;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let decorationAsset;
-      let source;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       ({ source, decorationAsset } = arg0);
       const tmp4 = closure_6();
       if (cResult[0] !== decorationAsset) {
         const obj2 = { asset: decorationAsset };
         cResult[0] = decorationAsset;
         cResult[1] = obj2;
-        tmp5 = obj2;
+        let tmp5 = obj2;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === source) {
         if (cResult[3] === tmp4.image) {
-          let tmp6;
           if (cResult[4] === tmp5) {
-            tmp6 = cResult[5];
+            let tmp6 = cResult[5];
           }
           return tmp6;
         }
       }
-      const Avatar = native.Avatar;
-      const tmp7 = (
-        <Avatar style={tmp4.image} source={source} avatarDecoration={tmp5} size={native.AvatarSizes.XXLARGE} />
-      );
+      const tmp7 = jsx(native.Avatar, {
+        style: tmp4.image,
+        source,
+        avatarDecoration: tmp5,
+        size: native.AvatarSizes.XXLARGE,
+      });
       cResult[2] = source;
       cResult[3] = tmp4.image;
       cResult[4] = tmp5;
       cResult[5] = tmp7;
       tmp6 = tmp7;
+      const obj3 = { style: tmp4.image, source, avatarDecoration: tmp5, size: native.AvatarSizes.XXLARGE };
     }
   : (arg0) => {
-      let decorationAsset;
-      let source;
       ({ source, decorationAsset } = arg0);
-      const Avatar = native.Avatar;
-      return (
-        <Avatar
-          style={closure_6().image}
-          source={source}
-          avatarDecoration={{ asset: decorationAsset }}
-          size={native.AvatarSizes.XXLARGE}
-        />
-      );
+      const tmp = closure_6();
+      return jsx(native.Avatar, {
+        style: closure_6().image,
+        source,
+        avatarDecoration: { asset: decorationAsset },
+        size: native.AvatarSizes.XXLARGE,
+      });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (markAsDismissed) => {
-      let avatarSrc;
-      let buttonRef;
-      let decorationAsset;
-      let description;
-      let navigateToShop;
-      let renderImgComponent;
-      let title;
-      let tmp4;
-      let visible;
-      const obj = markAsDismissed(decorationAsset[5]);
-      const cResult = obj.c(14);
+      const cResult = markAsDismissed(decorationAsset[5]).c(14);
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ visible, title, description, avatarSrc } = markAsDismissed);
       decorationAsset = markAsDismissed.decorationAsset;
@@ -90,23 +72,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = markAsDismissed;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] === avatarSrc) {
         if (cResult[3] === decorationAsset) {
-          let tmp5;
-          let tmp7;
           if (cResult[4] === renderImgComponent) {
-            tmp5 = cResult[5];
+            let tmp5 = cResult[5];
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(tmp2[7]).intl;
-            const stringResult = intl.string(markAsDismissed(decorationAsset[7]).t.fYfGgK);
+            const stringResult = intl.string(tmp(tmp2[7]).t.fYfGgK);
             cResult[6] = stringResult;
-            tmp7 = stringResult;
+            let tmp7 = stringResult;
           } else {
             tmp7 = cResult[6];
           }
@@ -115,12 +95,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[9] === tmp4) {
                 if (cResult[10] === tmp5) {
                   if (cResult[11] === title) {
-                    let tmp9;
                     if (cResult[12] === visible) {
-                      tmp9 = cResult[13];
+                      let tmp9 = cResult[13];
                     }
-                    const tmpResult = markAsDismissed(decorationAsset[9]);
-                    const coachmark = tmpResult.useCoachmark(buttonRef, tmp9);
+                    const coachmark = tmp(tmp2[9]).useCoachmark(buttonRef, tmp9);
                     return null;
                   }
                 }
@@ -133,7 +111,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             onDismiss: tmp4,
             visible,
             position: "top",
-            offsetY: avatarSrc(decorationAsset[8]).space.PX_12,
+            offsetY: avatarSrc(tmp2[8]).space.PX_12,
             renderImgComponent: tmp5,
             buttonLabel: tmp7,
             buttonVariant: "primary",
@@ -178,12 +156,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         visible,
         navigateToShop,
       ];
-      const buttonRef = markAsDismissed.buttonRef;
       const memo = description.useMemo(() => {
-        let fn;
-        let intl;
-        let source;
-        let obj = {
+        const obj = {
           title,
           description,
           onDismiss() {
@@ -192,25 +166,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           visible,
           position: "top",
           offsetY: nativeDefault.space.PX_12,
-          renderImgComponent: fn,
-          buttonLabel: intl.string(intl2.t.fYfGgK),
+          renderImgComponent: null,
+          buttonLabel: null,
           buttonVariant: "primary",
-          onButtonPress: navigateToShop,
+          onButtonPress: null,
         };
-        fn = renderImgComponent;
+        let fn = renderImgComponent;
         if (renderImgComponent == null) {
-          fn = () => {
-            const obj = { source, decorationAsset };
-            return decorationAsset(renderImgComponent, obj);
-          };
+          fn = () => decorationAsset(renderImgComponent, { source, decorationAsset });
         }
-        intl = intl2.intl;
+        obj.renderImgComponent = fn;
+        const intl = util.intl;
+        obj.buttonLabel = intl.string(util.t.fYfGgK);
+        obj.onButtonPress = navigateToShop;
         return obj;
       }, items);
-      let obj = markAsDismissed(title[9]);
-      const coachmark = obj.useCoachmark(buttonRef, memo);
+      const coachmark = markAsDismissed(title[9]).useCoachmark(markAsDismissed.buttonRef, memo);
       return null;
     };
-const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
-
-export default tmp2;

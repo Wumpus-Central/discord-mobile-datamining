@@ -3,9 +3,8 @@ import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
 import ZustandStore from "../../lib/ZustandStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const createZustandStore = ZustandStore.createZustandStore;
 const constants = UserSettingsConstants.ProfileCustomizationSubsection;
-const zustandStore = createZustandStore(() => ({
+const zustandStore = ZustandStore.createZustandStore(() => ({
   subsection: constants.USER_PROFILE,
   scrollPosition: null,
   pendingCustomizeBadgesSheet: false,

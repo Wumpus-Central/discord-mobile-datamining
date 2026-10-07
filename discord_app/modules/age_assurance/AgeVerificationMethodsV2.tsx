@@ -1,107 +1,105 @@
 // discord_app/modules/age_assurance/AgeVerificationMethodsV2.tsx
-import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let suspendedUserToken;
-
+require = fn;
 function mapMethodsV2Response(methods) {
-  let footer_message;
-  let prop;
-  obj = {
-    methods: methods.map((method) => {
-      let external_window;
-      let paths;
-      let provided_by;
-      let tmp3;
-      obj = {
-        method: method.method,
-        vendor: method.vendor,
-        title: method.title,
-        description: method.description,
-        providedBy: provided_by,
-        icon: tmp3,
-        externalWindow: external_window,
-      };
-      provided_by = method.provided_by;
-      if (provided_by == null) {
-        provided_by = null;
-      }
-      let icon = method.icon;
-      if (icon == null) {
-        icon = null;
-      }
-      tmp3 = null;
-      if (null != icon) {
-        const obj2 = {
-          paths: paths.map((d) => {
-            let str;
-            obj = { d: d.d, fillRule: str };
-            str = undefined;
-            if ("evenodd" === d.fill_rule) {
-              str = "evenodd";
-            }
-            return obj;
-          }),
-        };
-        paths = icon.paths;
-        tmp3 = obj2;
-      }
-      external_window = method.external_window;
-      if (external_window == null) {
-        external_window = null;
-      }
-      return obj;
-    }),
-    footerMessage: footer_message,
-    outageBannerMessage: prop,
-  };
+  let obj = { methods: null, footerMessage: null, outageBannerMessage: null };
   methods = methods.methods;
-  footer_message = methods.footer_message;
+  obj.methods = methods.map((method) => {
+    let obj = {
+      method: method.method,
+      vendor: method.vendor,
+      title: method.title,
+      description: method.description,
+      providedBy: null,
+      icon: null,
+      externalWindow: null,
+    };
+    let provided_by = method.provided_by;
+    if (provided_by == null) {
+      provided_by = null;
+    }
+    obj.providedBy = provided_by;
+    let icon = method.icon;
+    if (icon == null) {
+      icon = null;
+    }
+    let tmp3 = null;
+    if (null != icon) {
+      const obj2 = { paths: null };
+      const paths = icon.paths;
+      obj2.paths = paths.map((d) => {
+        const obj = { d: d.d, fillRule: null };
+        let str;
+        if ("evenodd" === d.fill_rule) {
+          str = "evenodd";
+        }
+        obj.fillRule = str;
+        return obj;
+      });
+      tmp3 = obj2;
+    }
+    obj.icon = tmp3;
+    let external_window = method.external_window;
+    if (external_window == null) {
+      external_window = null;
+    }
+    obj.externalWindow = external_window;
+    return obj;
+  });
+  let footer_message = methods.footer_message;
   if (footer_message == null) {
     footer_message = null;
   }
-  prop = methods.outage_banner_message;
+  obj.footerMessage = footer_message;
+  let prop = methods.outage_banner_message;
   if (prop == null) {
     prop = null;
   }
+  obj.outageBannerMessage = prop;
   return obj;
 }
-let obj = function _fetchAgeVerificationMethodsV() {
-  obj = _asyncToGenerator(async () => {
-    let c1;
-    let c2;
-    let closure_0 = mapMethodsV2Response;
-    const HTTP = HTTPUtils.HTTP;
-    const obj4 = { url: Endpoints.AGE_VERIFICATION_METHODS_V2, rejectWithError: true };
-    await HTTP.get(obj4);
-    return closure_0(value.body);
-  });
-  return obj(...arguments);
+let closure_6 = async function _fetchAgeVerificationMethodsV() {
+  _require = mapMethodsV2Response;
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({ url: Endpoints.AGE_VERIFICATION_METHODS_V2, rejectWithError: true });
+  return _require(value.body);
 };
-obj = function _fetchAgeVerificationMethodsV2SuspendedUser() {
-  obj = _asyncToGenerator(async () => {
-    let c1;
-    let c2;
-    let obj4;
-    let closure_0 = mapMethodsV2Response;
-    suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
-    const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.AGE_VERIFICATION_SUSPENDED_METHODS_V2, body: obj4, rejectWithError: true };
-    obj4 = { token: suspendedUserToken };
-    await HTTP.post(request);
-    return closure_0(value.body);
-  });
-  return obj(...arguments);
+let closure_7 = async function _fetchAgeVerificationMethodsV2SuspendedUser() {
+  _require = mapMethodsV2Response;
+  suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: Endpoints.AGE_VERIFICATION_SUSPENDED_METHODS_V2,
+    body: { token: suspendedUserToken },
+    rejectWithError: true,
+  };
+  await HTTP.post(request);
+  return _require(value.body);
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
 
 export const fetchAgeVerificationMethodsV2 = function fetchAgeVerificationMethodsV2() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const fetchAgeVerificationMethodsV2SuspendedUser = function fetchAgeVerificationMethodsV2SuspendedUser() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

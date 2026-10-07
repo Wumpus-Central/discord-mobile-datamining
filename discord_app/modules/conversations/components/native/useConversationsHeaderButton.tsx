@@ -1,52 +1,51 @@
 // discord_app/modules/conversations/components/native/useConversationsHeaderButton.tsx
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ConversationsActionCreators from "../../ConversationsActionCreators.tsx";
 import PaperIcon from "../../../../design/components/Icon/native/redesign/generated/PaperIcon.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
-import ConversationConstants from "../../ConversationConstants.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, c1, c3;
 
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
+require = fn;
+const ConversationConstants = fn(7118);
 ({
   CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty,
   MOBILE_FETCH_LIMIT: metroRequire,
-  MOBILE_PREVIEW_MESSAGE_COUNT: metroImportDefault,
+  MOBILE_PREVIEW_MESSAGE_COUNT: closure_7,
 } = ConversationConstants);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
 
 export const useConversationsHeaderButton = function useConversationsHeaderButton(channel) {
-  let callback;
-  let isTopicalNavEnabled;
-  let stateFromStores;
   _require = channel;
-  let tmp = _require;
-  const tmp2 = isTopicalNavEnabled;
-  let obj = require("ConversationExperiments");
-  isTopicalNavEnabled =
-    obj.useIsTopicalNavEnabled(channel.guild_id, "channel_header") &&
-    channel.type === tmp(tmp2[5]).ChannelTypes.GUILD_TEXT;
-  const items = [channel.id];
-  const tmpResult = tmp(tmp2[6]);
-  const conversationBackoffRef = tmpResult.useConversationBackoffRef(items);
-  let obj3 = callback;
-  function fetchPage() {
-    return closure_0(...arguments);
+  let isTopicalNavEnabled = require("ConversationExperiments").useIsTopicalNavEnabled(
+    channel.guild_id,
+    "channel_header",
+  );
+  if (isTopicalNavEnabled) {
+    isTopicalNavEnabled = channel.type === tmp(tmp2[5]).ChannelTypes.GUILD_TEXT;
   }
-  const useCallback = callback.useCallback;
+  fetchPage = isTopicalNavEnabled;
+  let obj = require("ConversationExperiments");
+  const items = [channel.id];
+  const conversationBackoffRef = require("useConversationBackoffRef").useConversationBackoffRef(items);
+  fetchPage = function fetchPage() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
   _require = conversationBackoffRef(function* () {
-    let obj2;
-    let obj7;
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -66,54 +65,52 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
             c3 = 3;
             const obj5 = { value, done: true };
             return obj5;
-          } else {
-            const tmp22 = c1;
-            if (tmp22) {
-              ref = 1;
-              const obj6 = {
-                channelId: null,
-                guildId: null,
-                direction: "before",
-                anchor: null,
-                limit,
-                isJump: true,
-                throwOnError: true,
-                hydrateMessages: obj7,
-              };
-              ({ id: obj3.channelId, guild_id: obj3.guildId } = tmp);
-              obj7 = { limit: limit2 };
-              c1 = 2;
-              c3 = 1;
-              const obj12 = { value: obj2.fetchChannelConversations(obj6), done: false };
-              obj2 = tmp(fetchPage[7]);
-              return obj12;
-            }
+          } else if (c1) {
+            ref = 1;
+            const obj6 = {
+              channelId: null,
+              guildId: null,
+              direction: "before",
+              anchor: null,
+              limit: null,
+              isJump: true,
+              throwOnError: true,
+              hydrateMessages: null,
+            };
+            ({ id: obj3.channelId, guild_id: obj3.guildId } = tmp3);
+            obj6.limit = isTopicalNavEnabled;
+            const obj7 = { limit };
+            obj6.hydrateMessages = obj7;
+            c1 = 2;
+            c3 = 1;
+            const obj12 = { value: tmp3(fetchPage[7]).fetchChannelConversations(obj6), done: false };
+            return obj12;
           }
-        } else if (1 === tmp4) {
-          ref = 0;
-          const current2 = ref.current;
-          current2.fail(closure_128_1);
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+        } else {
+          if (1 === tmp7) {
+            ref = 0;
+            const current2 = ref.current;
+            current2.fail(closure_128_1);
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            const current = ref.current;
+            current.succeed();
+            ref = 0;
+          }
           ref = 0;
           c3 = 3;
           const obj = { value, done: true };
           return obj;
-        } else {
-          const current = ref.current;
-          current.succeed();
-          ref = 0;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp17) {
-        if (0 === ref) {
-          c3 = 3;
-          throw tmp17;
+      } catch (tmp20) {
+        if (tmp4 === ref) {
+          c3 = tmp2;
+          throw tmp20;
         } else {
-          c1 = 1;
+          c1 = tmp;
         }
       }
     }
@@ -122,37 +119,37 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   ({ id: arr2[0], guild_id: arr2[1] } = channel);
   items1[2] = isTopicalNavEnabled;
   items1[3] = conversationBackoffRef;
-  callback = useCallback(fetchPage, items1);
+  callback = callback.useCallback(fetchPage, items1);
   const items2 = [, , ,];
   ({ id: arr3[0], guild_id: arr3[1] } = channel);
   items2[2] = isTopicalNavEnabled;
   items2[3] = callback;
   const effect = callback.useEffect(() => {
-    let hasChannelDataResult = !isTopicalNavEnabled;
-    if (isTopicalNavEnabled) {
-      hasChannelDataResult = ChannelConversationsStore.hasChannelData(channel.id);
+    let hasChannelDataResult = !fetchPage;
+    if (fetchPage) {
+      hasChannelDataResult = ChannelConversationsStore.hasChannelData(user.id);
     }
     if (!hasChannelDataResult) {
-      hasChannelDataResult = ChannelConversationsStore.isPendingFetch(channel.id);
+      hasChannelDataResult = ChannelConversationsStore.isPendingFetch(user.id);
     }
     if (!hasChannelDataResult) {
       callback();
     }
   }, items2);
+  const tmpResult = require("useConversationBackoffRef");
   const items3 = [stateFromStores];
   const items4 = [channel.id];
-  const tmpResult3 = tmp(tmp2[8]);
-  stateFromStores = tmpResult3.useStateFromStores(
+  stateFromStores = require("initialize").useStateFromStores(
     items3,
-    () => ChannelConversationsStore.getEdgeMarker(channel.id, "after"),
+    () => ChannelConversationsStore.getEdgeMarker(user.id, "after"),
     items4,
   );
   const items5 = [stateFromStores, isTopicalNavEnabled, callback];
   const effect1 = callback.useEffect(() => {
-    if (isTopicalNavEnabled) {
+    if (fetchPage) {
       if (null != stateFromStores) {
         const _Date = Date;
-        const sum = tmp2 + hasOwnProperty;
+        const sum = tmp + hasOwnProperty;
         const diff = sum - Date.now();
         if (diff > 0) {
           const _setTimeout = setTimeout;
@@ -164,13 +161,13 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
       }
     }
   }, items5);
+  const tmpResult3 = require("initialize");
   const items6 = [stateFromStores];
   const items7 = [channel.id];
-  const tmpResult4 = tmp(tmp2[8]);
-  const stateFromStores1 = tmpResult4.useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items6,
     () => {
-      const channelConversations = ChannelConversationsStore.getChannelConversations(channel.id);
+      const channelConversations = ChannelConversationsStore.getChannelConversations(user.id);
       let num;
       if (channelConversations != null) {
         num = channelConversations.length;
@@ -183,41 +180,46 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
     items7,
   );
   if (isTopicalNavEnabled) {
-    let num = 0;
     isTopicalNavEnabled = stateFromStores1 > 0;
   }
-  let ref = obj3.useRef(null);
+  callback.useRef(null);
   const items8 = [isTopicalNavEnabled, stateFromStores1, channel.id];
   const effect2 = obj3.useEffect(() => {
-    const tmp = isTopicalNavEnabled && ref.current !== channel.id;
+    let tmp = isTopicalNavEnabled;
+    if (isTopicalNavEnabled) {
+      tmp = ref.current !== user.id;
+    }
     if (tmp) {
-      ref.current = channel.id;
-      const obj = ConversationsActionCreators;
-      const result = obj.trackTopicalNavigationEntrypointImpression(channel.id, stateFromStores1);
+      ref.current = user.id;
+      const result = ConversationsActionCreators.trackTopicalNavigationEntrypointImpression(user.id, stateFromStores1);
     }
   }, items8);
   const items9 = [isTopicalNavEnabled, conversationBackoffRef, ,];
   ({ id: arr10[2], guild_id: arr10[3] } = channel);
-  return obj3.useMemo(() => {
-    let intl;
+  return callback.useMemo(() => {
     let tmp = null;
     if (isTopicalNavEnabled) {
-      let obj = {
+      const obj = {
         source: null,
         IconComponent: PaperIcon.PaperIcon,
         onPress() {
           const current = ref.current;
           current.cancel();
-          const ConversationsAnalytics = closure_0(isTopicalNavEnabled[10]).ConversationsAnalytics;
-          const obj = { channelId: closure_1_0.id, conversationIds: [], isFocusMode: false };
-          const result = ConversationsAnalytics.trackTopicsUnitImpression(obj);
-          const obj2 = closure_0(isTopicalNavEnabled[11]);
-          const obj3 = { channelId: closure_1_0.id, guildId: closure_1_0.guild_id };
-          const result1 = obj2.openConversationNavigator(obj3);
+          const ConversationsAnalytics = closure_0(fetchPage[10]).ConversationsAnalytics;
+          const result = ConversationsAnalytics.trackTopicsUnitImpression({
+            channelId: user.id,
+            conversationIds: [],
+            isFocusMode: false,
+          });
+          const result1 = closure_0(fetchPage[11]).openConversationNavigator({
+            channelId: user.id,
+            guildId: user.guild_id,
+          });
         },
-        accessibilityLabel: intl.string(intl2.t.u54FxB),
+        accessibilityLabel: null,
       };
-      intl = intl2.intl;
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.u54FxB);
       tmp = obj;
     }
     return tmp;

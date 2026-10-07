@@ -1,28 +1,24 @@
 // discord_app/modules/routing/transitionToGuild.native.tsx
-import Constants from "../../Constants.tsx";
 import router_utils from "router_utils.tsx";
 import DeprecatedLayoutAnimation from "../animations/native/DeprecatedLayoutAnimation.tsx";
 import getGuildTransitionRoute from "getGuildTransitionRoute.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import size from "../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
-const Routes = Constants.Routes;
+require = fn;
+const Routes = fn(1085).Routes;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");
 
-export const transitionToGuild = function transitionToGuild(id, arg1) {
+export const transitionToGuild = function transitionToGuild(guildId, arg1) {
   const obj = getGuildTransitionRoute;
-  const first = _slicedToArray(obj.getGuildTransitionRoute(id), 1)[0];
-  const obj2 = DeprecatedLayoutAnimation;
-  const result = obj2.DeprecatedLayoutAnimation({
+  const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimation({
     duration: 0,
     create: "r",
     update: "enabled",
     delete: "toCharArray$esjava$1",
   });
-  const transitionTo = router_utils.transitionTo;
-  const obj3 = { navigationReplace: true };
-  router_utils;
-  const CHANNELResult = Routes.CHANNEL(id, first);
+  const obj3 = router_utils;
+  const obj4 = { navigationReplace: true };
   const merged = Object.assign(arg1);
-  transitionTo(CHANNELResult, obj3);
+  obj3.transitionTo(Routes.CHANNEL(guildId, _slicedToArray(obj.getGuildTransitionRoute(guildId), 1)[0]), obj4);
 };

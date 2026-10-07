@@ -1,52 +1,41 @@
 // discord_app/modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import native from "../../../../design/void/native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09917_AssetRegistry.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _modDef9917 from "../../../../../_runtime/metro/09917__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let isInMainTabsExperiment;
-      let locked;
-      const obj = react2;
-      const cResult = obj.c(3);
-      ({ locked, isInMainTabsExperiment } = arg0);
-      const Sizes = native.Icon.Sizes;
-      const tmp4 = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
-      if (cResult[0] === tmp4) {
-        let tmp6;
-        if ((cResult[1] === false) !== locked) {
-          tmp6 = cResult[2];
-        }
-        return tmp6;
-      }
-      const Icon = native.Icon;
-      const tmp7 = <Icon source={AssetRegistryDefault} size={tmp4} disableColor={false !== locked} />;
-      cResult[0] = tmp4;
-      cResult[1] = false !== locked;
-      cResult[2] = tmp7;
-      tmp6 = tmp7;
-    }
-  : (arg0) => {
-      let isInMainTabsExperiment;
-      let locked;
-      ({ locked, isInMainTabsExperiment } = arg0);
-      const Icon = native.Icon;
-      const Sizes = native.Icon.Sizes;
-      return (
-        <Icon
-          source={AssetRegistryDefault}
-          size={isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL}
-          disableColor={false !== locked}
-        />
-      );
-    };
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx",
 );
 
-export default tmp3;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(3);
+      ({ locked, isInMainTabsExperiment } = arg0);
+      const Sizes = native.Icon.Sizes;
+      const tmp4 = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
+      if (cResult[0] === tmp4) {
+        if (cResult[1] === tmp5) {
+          let tmp6 = cResult[2];
+        }
+        return tmp6;
+      }
+      const tmp7 = jsx(native.Icon, { source: _modDef9917, size: tmp4, disableColor: false !== locked });
+      cResult[0] = tmp4;
+      cResult[1] = false !== locked;
+      cResult[2] = tmp7;
+      tmp6 = tmp7;
+      const obj2 = { source: _modDef9917, size: tmp4, disableColor: false !== locked };
+    }
+  : (arg0) => {
+      ({ locked, isInMainTabsExperiment } = arg0);
+      const obj = { source: _modDef9917, size: null, disableColor: null };
+      const Sizes = native.Icon.Sizes;
+      obj.size = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
+      obj.disableColor = false !== locked;
+      return jsx(native.Icon, { source: _modDef9917, size: null, disableColor: null });
+    };

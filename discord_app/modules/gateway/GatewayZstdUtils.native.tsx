@@ -1,18 +1,14 @@
 // discord_app/modules/gateway/GatewayZstdUtils.native.tsx
-import react_native from "../../../_runtime/00017_react-native.js";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import react_nativeDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import NativeCompressionModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const NativeModules = react_native.NativeModules;
+const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
-  let flag;
-  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    const obj2 = react_nativeDefault;
-    flag = obj2.getConstants().supportsZstd;
+    let flag = NativeCompressionModuleDefault.getConstants().supportsZstd;
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;

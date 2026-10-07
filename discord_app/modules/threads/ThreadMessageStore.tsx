@@ -1,7 +1,7 @@
 // discord_app/modules/threads/ThreadMessageStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import ThreadConstants from "ThreadConstants.tsx";
@@ -13,34 +13,23 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let closure_13, thread;
-
-let c3;
-let closure_4;
 function updateState(type, fn) {
-  let messageCount;
   if (set.has(type.type)) {
-    if (!(type.id in closure_12)) {
-      const obj = {
-        guildId: null,
-        parentId: null,
-        count: messageCount,
-        mostRecentRawMessage: null,
-        mostRecentMessage: null,
-      };
+    if (!(type.id in dependencyMap)) {
+      const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
       ({ guild_id: obj.guildId, parent_id: obj.parentId, messageCount } = type);
-      const id = type.id;
       if (messageCount == null) {
         messageCount = 0;
       }
-      closure_12[id] = obj;
+      obj.count = messageCount;
+      dependencyMap[type.id] = obj;
     }
-    let num = closure_13[tmp5.parentId];
+    let num = dependencyMap2[tmp5.parentId];
     if (num == null) {
       num = 0;
     }
-    closure_13[closure_12[type.id].parentId] = num + 1;
-    fn(closure_12[type.id]);
+    dependencyMap2[dependencyMap[type.id].parentId] = num + 1;
+    fn(dependencyMap[type.id]);
   }
 }
 function updateFromGuild(threads) {
@@ -54,64 +43,56 @@ function updateFromGuild(threads) {
   }
 }
 function updateFromThreadMessages(type) {
-  let messageCount;
-  let closure_0 = type;
+  const mostRecentRawMessage = type;
   if (type.type !== MessageTypes.THREAD_STARTER_MESSAGE) {
     const channel = ChannelStore.getChannel(type.channel_id);
     if (null != channel) {
       if (set.has(channel.type)) {
-        if (!(channel.id in closure_12)) {
+        if (!(channel.id in dependencyMap)) {
           const obj = {
             guildId: null,
             parentId: null,
-            count: messageCount,
+            count: null,
             mostRecentRawMessage: null,
             mostRecentMessage: null,
           };
           ({ guild_id: obj.guildId, parent_id: obj.parentId, messageCount } = channel);
-          const id = channel.id;
           if (messageCount == null) {
             messageCount = 0;
           }
-          closure_12[id] = obj;
+          obj.count = messageCount;
+          dependencyMap[channel.id] = obj;
         }
-        let num = closure_13[tmp4.parentId];
+        let num = dependencyMap2[tmp4.parentId];
         if (num == null) {
           num = 0;
         }
-        closure_13[closure_12[channel.id].parentId] = num + 1;
-        ((arg0) => {
-          arg0.mostRecentRawMessage = mostRecentRawMessage;
-          arg0.mostRecentMessage = null;
-        })(closure_12[channel.id]);
+        dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
+        ((dependencyMap) => {
+          dependencyMap.mostRecentRawMessage = mostRecentRawMessage;
+          dependencyMap.mostRecentMessage = null;
+        })(dependencyMap[channel.id]);
       }
     }
   }
 }
 function updateFromThread(type) {
-  let messageCount;
-  let closure_0 = type;
+  closure_0 = type;
   if (set.has(type.type)) {
-    if (!(type.id in closure_12)) {
-      const obj = {
-        guildId: null,
-        parentId: null,
-        count: messageCount,
-        mostRecentRawMessage: null,
-        mostRecentMessage: null,
-      };
+    if (!(type.id in dependencyMap)) {
+      const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
       ({ guild_id: obj.guildId, parent_id: obj.parentId, messageCount } = type);
-      const id = type.id;
       if (messageCount == null) {
         messageCount = 0;
       }
-      closure_12[id] = obj;
+      obj.count = messageCount;
+      dependencyMap[type.id] = obj;
     }
-    let num = closure_13[tmp5.parentId];
+    let num = dependencyMap2[tmp5.parentId];
     if (num == null) {
       num = 0;
     }
-    closure_13[closure_12[type.id].parentId] = num + 1;
+    dependencyMap2[dependencyMap[type.id].parentId] = num + 1;
     ((mostRecentRawMessage) => {
       if (null != channel.messageCount) {
         mostRecentRawMessage.count = channel.messageCount;
@@ -132,36 +113,35 @@ function updateFromThread(type) {
         mostRecentRawMessage.mostRecentRawMessage = null;
         mostRecentRawMessage.mostRecentMessage = null;
       }
-    })(closure_12[type.id]);
+    })(dependencyMap[type.id]);
   }
 }
 function updateFromServerThread(id) {
-  let messageCount;
   if (null != id) {
-    if (!(id.id in closure_12)) {
+    if (!(id.id in dependencyMap)) {
       const channel = ChannelStore.getChannel(id.id);
       if (null != channel) {
         if (set.has(channel.type)) {
-          if (!(channel.id in closure_12)) {
+          if (!(channel.id in dependencyMap)) {
             const obj = {
               guildId: null,
               parentId: null,
-              count: messageCount,
+              count: null,
               mostRecentRawMessage: null,
               mostRecentMessage: null,
             };
             ({ guild_id: obj.guildId, parent_id: obj.parentId, messageCount } = channel);
-            id = channel.id;
             if (messageCount == null) {
               messageCount = 0;
             }
-            closure_12[id] = obj;
+            obj.count = messageCount;
+            dependencyMap[channel.id] = obj;
           }
-          let num = closure_13[tmp6.parentId];
+          let num = dependencyMap2[tmp6.parentId];
           if (num == null) {
             num = 0;
           }
-          closure_13[closure_12[channel.id].parentId] = num + 1;
+          dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
           ((mostRecentRawMessage) => {
             if (null != channel.messageCount) {
               mostRecentRawMessage.count = channel.messageCount;
@@ -182,7 +162,7 @@ function updateFromServerThread(id) {
               mostRecentRawMessage.mostRecentRawMessage = null;
               mostRecentRawMessage.mostRecentMessage = null;
             }
-          })(closure_12[channel.id]);
+          })(dependencyMap[channel.id]);
         }
         return true;
       }
@@ -191,29 +171,22 @@ function updateFromServerThread(id) {
   return false;
 }
 function handleThreadCreateOrUpdate(channel) {
-  let messageCount;
   channel = channel.channel;
   if (set.has(channel.type)) {
-    if (!(channel.id in closure_12)) {
-      const obj = {
-        guildId: null,
-        parentId: null,
-        count: messageCount,
-        mostRecentRawMessage: null,
-        mostRecentMessage: null,
-      };
+    if (!(channel.id in dependencyMap)) {
+      const obj = { guildId: null, parentId: null, count: null, mostRecentRawMessage: null, mostRecentMessage: null };
       ({ guild_id: obj.guildId, parent_id: obj.parentId, messageCount } = channel);
-      const id = channel.id;
       if (messageCount == null) {
         messageCount = 0;
       }
-      closure_12[id] = obj;
+      obj.count = messageCount;
+      dependencyMap[channel.id] = obj;
     }
-    let num = closure_13[tmp5.parentId];
+    let num = dependencyMap2[tmp5.parentId];
     if (num == null) {
       num = 0;
     }
-    closure_13[closure_12[channel.id].parentId] = num + 1;
+    dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
     ((mostRecentRawMessage) => {
       if (null != channel.messageCount) {
         mostRecentRawMessage.count = channel.messageCount;
@@ -234,7 +207,7 @@ function handleThreadCreateOrUpdate(channel) {
         mostRecentRawMessage.mostRecentRawMessage = null;
         mostRecentRawMessage.mostRecentMessage = null;
       }
-    })(closure_12[channel.id]);
+    })(dependencyMap[channel.id]);
   }
 }
 function handleLoadArchivedThreadsSuccess(threads) {
@@ -244,38 +217,35 @@ function handleLoadArchivedThreadsSuccess(threads) {
 function handleSearchMessagesSuccess(data) {
   data = data.data;
   let item = data.forEach((item) => {
-    let messages;
-    let threads;
     ({ messages, threads } = item);
     item = messages.forEach((arr) => {
       const item = arr.forEach((thread) => {
-        let messageCount;
         thread = thread.thread;
         if (null != thread) {
-          if (!(thread.id in closure_1_12)) {
+          if (!(thread.id in dependencyMap)) {
             channel = channel.getChannel(thread.id);
             if (null != channel) {
               if (set.has(channel.type)) {
-                if (!(channel.id in closure_1_12)) {
+                if (!(channel.id in dependencyMap)) {
                   const obj = {
                     guildId: null,
                     parentId: null,
-                    count: messageCount,
+                    count: null,
                     mostRecentRawMessage: null,
                     mostRecentMessage: null,
                   };
                   ({ guild_id: obj.guildId, parent_id: obj.parentId, messageCount } = channel);
-                  let id = channel.id;
                   if (messageCount == null) {
                     messageCount = 0;
                   }
-                  closure_1_12[id] = obj;
+                  obj.count = messageCount;
+                  dependencyMap[channel.id] = obj;
                 }
                 let num = closure_1_13[tmp6.parentId];
                 if (num == null) {
                   num = 0;
                 }
-                closure_1_13[closure_1_12[channel.id].parentId] = num + 1;
+                closure_1_13[dependencyMap[channel.id].parentId] = num + 1;
                 ((mostRecentRawMessage) => {
                   if (null != channel.messageCount) {
                     mostRecentRawMessage.count = channel.messageCount;
@@ -296,7 +266,7 @@ function handleSearchMessagesSuccess(data) {
                     mostRecentRawMessage.mostRecentRawMessage = null;
                     mostRecentRawMessage.mostRecentMessage = null;
                   }
-                })(closure_1_12[channel.id]);
+                })(dependencyMap[channel.id]);
               }
             }
           }
@@ -308,7 +278,7 @@ function handleSearchMessagesSuccess(data) {
 }
 function handleRelationshipUpdate() {
   for (const key10003 in closure_12) {
-    let tmp5 = closure_12[key10003];
+    let tmp5 = dependencyMap[key10003];
     if (null == tmp5) {
       continue;
     } else {
@@ -333,53 +303,52 @@ function handleRelationshipUpdate() {
 const MAX_THREAD_MESSAGE_COUNT = ThreadConstants.MAX_THREAD_MESSAGE_COUNT;
 const MessageTypes = Constants.MessageTypes;
 const set = new Set();
-let closure_12 = {};
-const Store = get_initializedDefault.Store;
-class ThreadMessageStore extends Store {
-  initialize() {
-    this.waitFor(ChannelStore, MessageStore);
-  }
-  getCount(arg0) {
-    let count;
-    if (closure_12[arg0] != null) {
-      count = tmp.count;
-    }
-    if (count == null) {
-      count = null;
-    }
-    return count;
-  }
-  getMostRecentMessage(id) {
-    let tmp2 = null;
-    if (null != closure_12[id]) {
-      const tmp3 = null == closure_12[id].mostRecentMessage && null != closure_12[id].mostRecentRawMessage;
-      if (tmp3) {
-        let message = MessageStore.getMessage(id, tmp.mostRecentRawMessage.id);
-        if (message == null) {
-          const obj = MessageRecordUtils;
-          message = obj.createMessageRecord(tmp.mostRecentRawMessage);
-        }
-        closure_12[id].mostRecentMessage = message;
-        closure_12[id].mostRecentRawMessage = null;
-      }
-      let mostRecentMessage = tmp.mostRecentMessage;
-      if (mostRecentMessage == null) {
-        mostRecentMessage = null;
-      }
-      tmp2 = mostRecentMessage;
-    }
-    return tmp2;
-  }
-  getChannelThreadsVersion(id) {
-    return closure_13[id];
-  }
-  getInitialOverlayState() {
-    return closure_12;
-  }
-}
+const dependencyMap = {};
+const dependencyMap2 = {};
+const Store = initializeDefault.Store;
+class ThreadMessageStore extends Store {}
 const prototype = ThreadMessageStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ChannelStore, MessageStore);
+};
+prototype["getCount"] = function getCount(arg0) {
+  let count;
+  if (dependencyMap[arg0] != null) {
+    count = tmp.count;
+  }
+  if (count == null) {
+    count = null;
+  }
+  return count;
+};
+prototype["getMostRecentMessage"] = function getMostRecentMessage(id) {
+  let tmp2 = null;
+  if (null != dependencyMap[id]) {
+    if (tmp3) {
+      let message = MessageStore.getMessage(id, tmp.mostRecentRawMessage.id);
+      if (message == null) {
+        message = MessageRecordUtils.createMessageRecord(tmp.mostRecentRawMessage);
+      }
+      tmp.mostRecentMessage = message;
+      tmp.mostRecentRawMessage = null;
+    }
+    let mostRecentMessage = tmp.mostRecentMessage;
+    if (mostRecentMessage == null) {
+      mostRecentMessage = null;
+    }
+    tmp2 = mostRecentMessage;
+    tmp3 = null == tmp.mostRecentMessage && null != tmp.mostRecentRawMessage;
+  }
+  return tmp2;
+};
+prototype["getChannelThreadsVersion"] = function getChannelThreadsVersion(id) {
+  return dependencyMap2[id];
+};
+prototype["getInitialOverlayState"] = function getInitialOverlayState() {
+  return closure_12;
+};
 ThreadMessageStore.displayName = "ThreadMessageStore";
-let obj = {
+const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     closure_13 = {};
     set.clear();
@@ -396,16 +365,16 @@ let obj = {
       if (null == mostRecentMessage) {
         continue;
       } else {
-        let obj2 = { author: tmp8 };
-        let tmp2 = threadMessages[key10009];
+        let obj2 = {};
         let merged1 = Object.assign(mostRecentMessage);
-        let self = this;
-        let self2 = this;
-        let tmp8 = new UserRecord(mostRecentMessage.author);
-        let self3 = this;
-        let self4 = this;
-        let tmp11 = new MessageRecord(obj2);
-        tmp2.mostRecentMessage = tmp11;
+        let tmp7 = new.target;
+        let tmp8 = new.target;
+        let tmp9 = new UserRecord(mostRecentMessage.author);
+        obj2.author = tmp9;
+        let tmp11 = new.target;
+        let tmp12 = new.target;
+        let tmp14 = new MessageRecord(obj2);
+        threadMessages[key10009].mostRecentMessage = tmp14;
         continue;
       }
       continue;
@@ -424,10 +393,10 @@ let obj = {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    const obj = _modDef12;
-    closure_12 = obj.omitBy(closure_12, (guildId) => {
+    closure_12 = _modDef12.omitBy(closure_12, (guildId) => {
       if (guildId.guildId === id) {
-        delete closure_13[guildId.parentId];
+        const parentId = guildId.parentId;
+        delete tmp2[tmp];
       }
       return guildId.guildId === id;
     });
@@ -435,42 +404,42 @@ let obj = {
   THREAD_CREATE: handleThreadCreateOrUpdate,
   THREAD_UPDATE: handleThreadCreateOrUpdate,
   THREAD_LIST_SYNC: function handleThreadListSync(arg0) {
-    let mostRecentMessages;
-    let threads;
     ({ threads, mostRecentMessages } = arg0);
     const item = threads.forEach(updateFromThread);
     if (mostRecentMessages != null) {
       const item1 = mostRecentMessages.forEach((channel_id) => {
-        let messageCount;
-        let closure_0 = channel_id;
+        const mostRecentRawMessage = channel_id;
         channel = channel.getChannel(channel_id.channel_id);
-        const tmp2 = null != channel && channel_id.type !== constants.THREAD_STARTER_MESSAGE;
+        let tmp2 = null != channel;
+        if (tmp2) {
+          tmp2 = channel_id.type !== constants.THREAD_STARTER_MESSAGE;
+        }
         if (tmp2) {
           if (set.has(channel.type)) {
-            if (!(channel.id in closure_1_12)) {
+            if (!(channel.id in dependencyMap)) {
               const obj = {
                 guildId: null,
                 parentId: null,
-                count: messageCount,
+                count: null,
                 mostRecentRawMessage: null,
                 mostRecentMessage: null,
               };
               ({ guild_id: obj.guildId, parent_id: obj.parentId, messageCount } = channel);
-              const id = channel.id;
               if (messageCount == null) {
                 messageCount = 0;
               }
-              closure_1_12[id] = obj;
+              obj.count = messageCount;
+              dependencyMap[channel.id] = obj;
             }
-            let num = closure_1_13[tmp8.parentId];
+            let num = dependencyMap2[tmp8.parentId];
             if (num == null) {
               num = 0;
             }
-            closure_1_13[closure_1_12[channel.id].parentId] = num + 1;
-            ((arg0) => {
-              arg0.mostRecentRawMessage = mostRecentRawMessage;
-              arg0.mostRecentMessage = null;
-            })(closure_1_12[channel.id]);
+            dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
+            ((dependencyMap) => {
+              dependencyMap.mostRecentRawMessage = mostRecentRawMessage;
+              dependencyMap.mostRecentMessage = null;
+            })(dependencyMap[channel.id]);
           }
         }
       });
@@ -484,62 +453,61 @@ let obj = {
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   THREAD_DELETE: function handleThreadDelete(arg0) {
-    delete closure_12[arg0.channel.id];
+    delete tmp2[tmp];
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    const obj = _modDef12;
-    closure_12 = obj.omitBy(closure_12, (parentId) => parentId.parentId === id);
-    delete closure_13[id];
+    closure_12 = _modDef12.omitBy(closure_12, (parentId) => parentId.parentId === id);
+    delete tmp[tmp2];
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {
-    let messageCount;
     message = message.message;
     if (!message.optimistic) {
       if (!message.isPushNotification) {
         if (null == tmp) {
           const channel = ChannelStore.getChannel(message.channel_id);
-          let tmp5 = !(null == channel || !set2.has(channel.type));
-          const tmp4 = null == channel || !set2.has(channel.type);
-          if (tmp5) {
+          let tmp4 = null == channel;
+          if (!tmp4) {
+            tmp4 = !set2.has(channel.type);
+          }
+          let tmp5 = !tmp4;
+          if (!tmp4) {
             let tmp7 = message.type !== MessageTypes.THREAD_STARTER_MESSAGE;
             if (tmp7) {
               const isForumPostResult = channel.isForumPost();
               let tmp9 = !isForumPostResult;
               if (isForumPostResult) {
-                const id = message.id;
-                const obj = SnowflakeUtilsDefault;
-                tmp9 = id !== obj.castChannelIdAsMessageId(channel.id);
+                tmp9 = message.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id);
               }
               tmp7 = tmp9;
             }
             if (tmp7) {
               if (set.has(channel.type)) {
-                if (!(channel.id in closure_12)) {
+                if (!(channel.id in dependencyMap)) {
                   const obj3 = {
                     guildId: null,
                     parentId: null,
-                    count: messageCount,
+                    count: null,
                     mostRecentRawMessage: null,
                     mostRecentMessage: null,
                   };
                   ({ guild_id: obj2.guildId, parent_id: obj2.parentId, messageCount } = channel);
-                  const id2 = channel.id;
                   if (messageCount == null) {
                     messageCount = 0;
                   }
-                  closure_12[id2] = obj3;
+                  obj3.count = messageCount;
+                  dependencyMap[channel.id] = obj3;
                 }
-                let num = closure_13[tmp17.parentId];
+                let num = dependencyMap2[tmp17.parentId];
                 if (num == null) {
                   num = 0;
                 }
-                closure_13[closure_12[channel.id].parentId] = num + 1;
+                dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
                 ((count) => {
                   count.count = Math.min(count.count + 1, MAX_THREAD_MESSAGE_COUNT);
                   count.mostRecentRawMessage = message;
                   count.mostRecentMessage = null;
-                })(closure_12[channel.id]);
+                })(dependencyMap[channel.id]);
               }
             }
             tmp5 = tmp12;
@@ -553,37 +521,29 @@ let obj = {
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
     let mostRecentRawMessage;
-    if (closure_12[message.channel_id] != null) {
+    if (dependencyMap[message.channel_id] != null) {
       mostRecentRawMessage = tmp.mostRecentRawMessage;
     }
     if (mostRecentRawMessage == null) {
       let mostRecentMessage;
-      if (closure_12[message.channel_id] != null) {
+      if (tmp != null) {
         mostRecentMessage = tmp.mostRecentMessage;
       }
       mostRecentRawMessage = mostRecentMessage;
     }
-    if (null != closure_12[message.channel_id]) {
+    if (null != dependencyMap[message.channel_id]) {
       if (null != mostRecentRawMessage) {
         if (mostRecentRawMessage.id === message.id) {
-          let num = closure_13[tmp.parentId];
+          let num = dependencyMap2[tmp.parentId];
           if (num == null) {
             num = 0;
           }
-          closure_13[closure_12[message.channel_id].parentId] = num + 1;
-          if (null != closure_12[message.channel_id].mostRecentMessage) {
-            const obj = MessageRecordUtils;
-            closure_12[message.channel_id].mostRecentMessage = obj.updateMessageRecord(
-              closure_12[message.channel_id].mostRecentMessage,
-              message,
-            );
+          dependencyMap2[tmp.parentId] = num + 1;
+          if (null != tmp.mostRecentMessage) {
+            tmp.mostRecentMessage = MessageRecordUtils.updateMessageRecord(tmp.mostRecentMessage, message);
           }
-          if (null != closure_12[message.channel_id].mostRecentRawMessage) {
-            const obj2 = MessageRecordUtils;
-            closure_12[message.channel_id].mostRecentRawMessage = obj2.updateServerMessage(
-              closure_12[message.channel_id].mostRecentRawMessage,
-              message,
-            );
+          if (null != tmp.mostRecentRawMessage) {
+            tmp.mostRecentRawMessage = MessageRecordUtils.updateServerMessage(tmp.mostRecentRawMessage, message);
           }
         }
       }
@@ -591,100 +551,97 @@ let obj = {
     return false;
   },
   MESSAGE_DELETE: function handleMessageDelete(arg0) {
-    let channelId;
-    let id;
     ({ id, channelId } = arg0);
-    if (null == closure_12[channelId]) {
+    if (null == dependencyMap[channelId]) {
       return false;
     } else {
-      const obj = SnowflakeUtilsDefault;
-      const result = obj.castChannelIdAsMessageId(channelId);
+      const result = SnowflakeUtilsDefault.castChannelIdAsMessageId(channelId);
       const hasItem = set.has(id);
-      let num = closure_13[tmp.parentId];
+      let num = dependencyMap2[tmp.parentId];
       if (num == null) {
         num = 0;
       }
-      closure_13[closure_12[channelId].parentId] = num + 1;
+      dependencyMap2[tmp.parentId] = num + 1;
       let mostRecentMessage = tmp.mostRecentRawMessage;
       if (mostRecentMessage == null) {
         mostRecentMessage = tmp.mostRecentMessage;
       }
-      const tmp3 = null != mostRecentMessage && mostRecentMessage.id === id;
       if (tmp3) {
-        closure_12[channelId].mostRecentMessage = null;
-        closure_12[channelId].mostRecentRawMessage = null;
+        tmp.mostRecentMessage = null;
+        tmp.mostRecentRawMessage = null;
       }
       if (result !== id) {
-        let count;
         if (!hasItem) {
           const _Math = Math;
-          count = Math.max(tmp.count - 1, 0);
+          let count = Math.max(tmp.count - 1, 0);
         }
-        closure_12[channelId].count = count;
+        tmp.count = count;
         set.add(id);
       }
       count = tmp.count;
+      tmp3 = null != mostRecentMessage && mostRecentMessage.id === id;
     }
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
-    let channelId;
-    let ids;
     ({ ids, channelId } = arg0);
-    let tmp = closure_12[channelId];
-    if (null == tmp) {
+    if (null == dependencyMap[channelId]) {
       return false;
     } else {
       const length = ids.filter((item) => {
-        const obj = SnowflakeUtilsDefault;
-        const tmp = obj.castChannelIdAsMessageId(channelId) !== item && !set.has(item);
+        let tmp = SnowflakeUtilsDefault.castChannelIdAsMessageId(channelId) !== item;
+        if (tmp) {
+          tmp = !set.has(item);
+        }
         return tmp;
       }).length;
       if (length > 0) {
-        let num = closure_13[tmp.parentId];
+        let num = dependencyMap2[tmp.parentId];
         if (num == null) {
           num = 0;
         }
-        closure_13[tmp.parentId] = num + 1;
+        dependencyMap2[tmp.parentId] = num + 1;
         let mostRecentMessage = tmp.mostRecentRawMessage;
         if (mostRecentMessage == null) {
           mostRecentMessage = tmp.mostRecentMessage;
         }
-        const tmp3 = null != mostRecentMessage && ids.includes(mostRecentMessage.id);
         if (tmp3) {
           tmp.mostRecentMessage = null;
           tmp.mostRecentRawMessage = null;
         }
         tmp.count = tmp.count - length;
         const item = ids.forEach((item) => set.add(item));
+        tmp3 = null != mostRecentMessage && ids.includes(mostRecentMessage.id);
       }
     }
   },
-  LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(messages) {
+  LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(isAfter) {
     let flag = false;
-    messages = messages.messages;
-    for (const item10007 of messages) {
-      let tmp2 = updateFromServerThread(item10007.thread) || flag;
-      flag = tmp2;
+    for (const item10007 of tmp) {
+      let tmp3 = updateFromServerThread(item10007.thread);
+      if (!tmp3) {
+        tmp3 = flag;
+      }
+      flag = tmp3;
       continue;
     }
-    if (!messages.isAfter) {
-      if (!messages.isBefore) {
-        if (!messages.hasMoreAfter) {
-          const channel = ChannelStore.getChannel(messages.channelId);
+    if (!isAfter.isAfter) {
+      if (!isAfter.isBefore) {
+        if (!isAfter.hasMoreAfter) {
+          const channel = ChannelStore.getChannel(isAfter.channelId);
           if (null != channel) {
             if (set2.has(channel.type)) {
               updateState(channel, (count) => {
-                if (0 === messages.messages.length) {
+                if (0 === isAfter.messages.length) {
                   count.mostRecentRawMessage = null;
                   count.mostRecentMessage = null;
                   count.count = 0;
                 } else {
-                  let first = messages.messages[0];
+                  let first = isAfter.messages[0];
                   if (first == null) {
                     first = null;
                   }
                   count.count =
-                    messages.messages.length >= MAX_THREAD_MESSAGE_COUNT ? MAX_THREAD_MESSAGE_COUNT : count.count;
+                    isAfter.messages.length >= MAX_THREAD_MESSAGE_COUNT ? MAX_THREAD_MESSAGE_COUNT : count.count;
                   let type;
                   if (first != null) {
                     type = first.type;
@@ -703,8 +660,7 @@ let obj = {
     }
     return flag;
   },
-};
-const threadMessageStore = new ThreadMessageStore(DispatcherDefault, obj);
+});
 let result = size.fileFinishedImporting("modules/threads/ThreadMessageStore.tsx");
 
 export default threadMessageStore;

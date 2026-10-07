@@ -1,10 +1,11 @@
 // discord_common/js/shared/shared-constants/InteractionTypes.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { USER_SENDABLE: new Set([2, 3, 4, 5]), FOLLOWUP: new Set([2, 3, 5]), SILENT: new Set([8, 9, 10]) };
-new Set([2, 3, 4, 5]);
-new Set([2, 3, 5]);
-new Set([8, 9, 10]);
+const obj = { USER_SENDABLE: new Set([2, 3, 4, 5]), FOLLOWUP: null, SILENT: null };
+const set = new Set([2, 3, 4, 5]);
+obj.FOLLOWUP = new Set([2, 3, 5]);
+const set1 = new Set([2, 3, 5]);
+obj.SILENT = new Set([8, 9, 10]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/InteractionTypes.tsx");
 
 export const InteractionTypes = {

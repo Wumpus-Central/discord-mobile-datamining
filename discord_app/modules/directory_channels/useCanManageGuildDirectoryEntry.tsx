@@ -1,35 +1,22 @@
 // discord_app/modules/directory_channels/useCanManageGuildDirectoryEntry.tsx
-import Constants from "../../Constants.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, closure_2, dependencyMap;
 
-const Permissions = Constants.Permissions;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const require = fn;
+const Permissions = fn(1085).Permissions;
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let first;
-      let stateFromStores;
-      let stateFromStores1;
-      let tmp10;
-      let tmp12;
-      let tmp14;
-      let tmp16;
-      let tmp18;
-      let tmp6;
-      let tmp8;
       _require = guildId;
-      const obj = require("react");
-      const cResult = obj.c(16);
+      const cResult = require("c").c(16);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -39,16 +26,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = guildId.guildId;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = require("get initialized");
-      stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [stateFromStores1];
         cResult[3] = items1;
-        tmp8 = items1;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[3];
       }
@@ -58,16 +45,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[4] = guildId.channelId;
         cResult[5] = fn2;
-        tmp10 = fn2;
+        let tmp10 = fn2;
       } else {
         tmp10 = cResult[5];
       }
-      const tmpResult4 = require("get initialized");
-      stateFromStores1 = tmpResult4.useStateFromStores(tmp8, tmp10);
+      const tmpResult = require("initialize");
+      stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [PermissionStore];
         cResult[6] = items2;
-        tmp12 = items2;
+        let tmp12 = items2;
       } else {
         tmp12 = cResult[6];
       }
@@ -77,16 +64,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[7] = stateFromStores;
         cResult[8] = fn3;
-        tmp14 = fn3;
+        let tmp14 = fn3;
       } else {
         tmp14 = cResult[8];
       }
-      const tmpResult5 = require("get initialized");
-      const stateFromStores2 = tmpResult5.useStateFromStores(tmp12, tmp14);
+      const tmpResult4 = require("initialize");
+      const stateFromStores2 = require("initialize").useStateFromStores(tmp12, tmp14);
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         const items3 = [PermissionStore];
         cResult[9] = items3;
-        tmp16 = items3;
+        let tmp16 = items3;
       } else {
         tmp16 = cResult[9];
       }
@@ -96,76 +83,77 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[10] = stateFromStores1;
         cResult[11] = fn4;
-        tmp18 = fn4;
+        let tmp18 = fn4;
       } else {
         tmp18 = cResult[11];
       }
-      const tmpResult6 = require("get initialized");
-      const stateFromStores3 = tmpResult6.useStateFromStores(tmp16, tmp18);
+      const tmpResult5 = require("initialize");
+      const stateFromStores3 = require("initialize").useStateFromStores(tmp16, tmp18);
+      let tmp20 = stateFromStores2;
+      if (!stateFromStores2) {
+        tmp20 = stateFromStores3;
+      }
+      let tmp21 = stateFromStores2;
+      if (!stateFromStores2) {
+        tmp21 = stateFromStores3;
+      }
       if (cResult[12] === stateFromStores2) {
-        if (cResult[13] === (stateFromStores2 || stateFromStores3)) {
-          let tmp22;
-          if (cResult[14] === (stateFromStores2 || stateFromStores3)) {
-            tmp22 = cResult[15];
+        if (cResult[13] === tmp20) {
+          if (cResult[14] === tmp21) {
+            let tmp22 = cResult[15];
           }
           return tmp22;
         }
       }
-      const obj2 = {
-        isEntryAdmin: stateFromStores2,
-        canEdit: stateFromStores2 || stateFromStores3,
-        canRemove: stateFromStores2 || stateFromStores3,
-      };
+      const obj2 = { isEntryAdmin: stateFromStores2, canEdit: tmp20, canRemove: tmp21 };
       cResult[12] = stateFromStores2;
-      cResult[13] = stateFromStores2 || stateFromStores3;
-      cResult[14] = stateFromStores2 || stateFromStores3;
+      cResult[13] = tmp20;
+      cResult[14] = tmp21;
       cResult[15] = obj2;
       tmp22 = obj2;
+      const tmpResult6 = require("initialize");
     }
   : (arg0) => {
-      let closure_0;
-      let closure_1;
       _require = arg0;
       const items = [GuildStore];
-      const obj = require("get initialized");
-      dependencyMap = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0.guildId));
+      dependencyMap = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0.guildId));
+      const obj = require("initialize");
       const items1 = [closure_2];
-      const obj2 = require("get initialized");
-      closure_2 = obj2.useStateFromStores(items1, () => ChannelStore.getChannel(closure_0.channelId));
+      closure_2 = require("initialize").useStateFromStores(items1, () => ChannelStore.getChannel(closure_0.channelId));
+      const obj2 = require("initialize");
       const items2 = [PermissionStore];
-      const obj3 = require("get initialized");
-      let stateFromStores = obj3.useStateFromStores(items2, () =>
+      let stateFromStores = require("initialize").useStateFromStores(items2, () =>
         PermissionStore.can(Permissions.ADMINISTRATOR, closure_1),
       );
+      const obj3 = require("initialize");
       const items3 = [PermissionStore];
-      const obj4 = require("get initialized");
-      const stateFromStores1 = obj4.useStateFromStores(items3, () =>
+      const stateFromStores1 = require("initialize").useStateFromStores(items3, () =>
         PermissionStore.can(Permissions.MANAGE_MESSAGES, closure_2),
       );
-      const obj5 = {
-        isEntryAdmin: stateFromStores,
-        canEdit: stateFromStores || stateFromStores1,
-        canRemove: stateFromStores,
-      };
+      const obj5 = { isEntryAdmin: stateFromStores, canEdit: null, canRemove: null };
+      let tmp3 = stateFromStores;
+      if (!stateFromStores) {
+        tmp3 = stateFromStores1;
+      }
+      obj5.canEdit = tmp3;
       if (!stateFromStores) {
         stateFromStores = stateFromStores1;
       }
+      obj5.canRemove = stateFromStores;
       return obj5;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/useCanManageGuildDirectoryEntry.tsx");
+
+export default tmp2;
+export const useCanCreateOrAddGuildInDirectory = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(3);
-      const tmp = _require;
+      const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -175,21 +163,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       const items = [PermissionStore];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(items, () => PermissionStore.can(Permissions.SEND_MESSAGES, closure_0));
+      return require("initialize").useStateFromStores(items, () =>
+        PermissionStore.can(Permissions.SEND_MESSAGES, closure_0),
+      );
     };
-const result = size.fileFinishedImporting("modules/directory_channels/useCanManageGuildDirectoryEntry.tsx");
-
-export default tmp2;
-export const useCanCreateOrAddGuildInDirectory = tmp3;

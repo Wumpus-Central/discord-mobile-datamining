@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx
 import Constants from "../../../../Constants.tsx";
-import intl4 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ReadStateConstants from "../../../read_states/ReadStateConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,36 +11,37 @@ const result = size.fileFinishedImporting(
 );
 
 export const getPushNotificationSelectOptions = function getPushNotificationSelectOptions() {
-  let intl;
-  let intl2;
-  let intl3;
-  const obj = { label: intl.string(intl4.t["HVah/3"]), value: UserNotificationSettings.ALL_MESSAGES };
-  intl = intl4.intl;
+  const obj = { label: null, value: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t["HVah/3"]);
+  obj.value = UserNotificationSettings.ALL_MESSAGES;
   const items = [obj, ,];
-  const obj2 = { label: intl2.string(intl4.t["tu+ZWJ"]), value: UserNotificationSettings.ONLY_MENTIONS };
-  intl2 = intl4.intl;
+  const obj2 = { label: null, value: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t["tu+ZWJ"]);
+  obj2.value = UserNotificationSettings.ONLY_MENTIONS;
   items[1] = obj2;
-  const obj3 = { label: intl3.string(intl4.t.X4wWUi), value: UserNotificationSettings.NO_MESSAGES };
-  intl3 = intl4.intl;
+  const obj3 = { label: null, value: null };
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.X4wWUi);
+  obj3.value = UserNotificationSettings.NO_MESSAGES;
   items[2] = obj3;
   return items;
 };
 export const getUnreadSelectOptions = function getUnreadSelectOptions(notificationSetting) {
-  let intl;
-  let intl2;
-  const obj = { label: intl.string(intl4.t["HVah/3"]), value: UnreadSetting.ALL_MESSAGES };
-  intl = intl4.intl;
+  const obj = { label: null, value: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t["HVah/3"]);
+  obj.value = UnreadSetting.ALL_MESSAGES;
   const items = [obj];
-  const obj2 = {
-    value: UnreadSetting.ONLY_MENTIONS,
-    label: intl2.string(intl4.t["tu+ZWJ"]),
-    disabled: notificationSetting === UserNotificationSettings.ALL_MESSAGES,
-  };
-  intl2 = intl4.intl;
+  const obj2 = { value: UnreadSetting.ONLY_MENTIONS, label: null, disabled: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t["tu+ZWJ"]);
   notificationSetting = undefined;
   if (notificationSetting != null) {
     notificationSetting = notificationSetting.notificationSetting;
   }
+  obj2.disabled = notificationSetting === UserNotificationSettings.ALL_MESSAGES;
   items[1] = obj2;
   return items;
 };

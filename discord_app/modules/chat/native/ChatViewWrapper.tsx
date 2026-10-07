@@ -4,9 +4,8 @@ import ChatViewWrapperBaseDefault from "ChatViewWrapperBase.tsx";
 import AnimatedKeyboardExperiment from "../../keyboard/native/AnimatedKeyboardExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let importDefaultResult;
 if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
-  importDefaultResult = ChatViewWrapperAnimatedKeyboardDefault;
+  let importDefaultResult = ChatViewWrapperAnimatedKeyboardDefault;
 } else {
   importDefaultResult = ChatViewWrapperBaseDefault;
 }

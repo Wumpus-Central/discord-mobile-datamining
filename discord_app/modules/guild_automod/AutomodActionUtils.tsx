@@ -8,7 +8,7 @@ const AutomodActionType = Constants.AutomodActionType;
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");
 
 export const getRuleDefaultActionsFromConfig = function getRuleDefaultActionsFromConfig(defaultActionTypes) {
-  let closure_0 = {
+  closure_0 = {
     [closure_1_2.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "r" } },
     [closure_1_2.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "r" } },
     [closure_1_2.USER_COMMUNICATION_DISABLED]: {
@@ -17,13 +17,11 @@ export const getRuleDefaultActionsFromConfig = function getRuleDefaultActionsFro
     },
     [closure_1_2.QUARANTINE_USER]: { type: AutomodActionType.QUARANTINE_USER, metadata: {} },
   };
-  const arr = Array.from(defaultActionTypes.defaultActionTypes);
-  return arr.map((item) => closure_0[item]);
+  return Array.from(defaultActionTypes.defaultActionTypes).map((item) => closure_0[item]);
 };
 export const getRuleActionsInOrder = function getRuleActionsInOrder(rule) {
-  let closure_0 = rule;
-  const obj = AutomodTriggerConfigs;
-  const availableActionTypes = obj.getAvailableActionTypes(rule.triggerType);
+  let actions = rule;
+  const availableActionTypes = AutomodTriggerConfigs.getAvailableActionTypes(rule.triggerType);
   const mapped = availableActionTypes.map((item) => {
     actions = item;
     actions = actions.actions;
@@ -32,18 +30,18 @@ export const getRuleActionsInOrder = function getRuleActionsInOrder(rule) {
   return mapped.filter(GlobalUtils.isNotNullish);
 };
 export const setRuleAction = function setRuleAction(rule, BLOCK_MESSAGE, arg2) {
-  let tmp4;
-  let closure_0 = BLOCK_MESSAGE;
+  closure_0 = BLOCK_MESSAGE;
   const actions = rule.actions;
-  const found = actions.filter((type) => type.type !== BLOCK_MESSAGE);
-  const obj = { actions: tmp4 };
+  const found = actions.filter((type) => type.type !== closure_0);
+  const obj = {};
   const merged = Object.assign(rule);
-  tmp4 = found;
+  let tmp3 = found;
   if (null != arg2) {
     const items = [];
-    items[HermesBuiltin.arraySpread(items, found, 0)] = arg2;
-    tmp4 = items;
+    items[HermesBuiltin.arraySpread(found, 0)] = arg2;
+    tmp3 = items;
   }
+  obj.actions = tmp3;
   return obj;
 };
 export const isActionFlagToChannel = function isActionFlagToChannel(type) {

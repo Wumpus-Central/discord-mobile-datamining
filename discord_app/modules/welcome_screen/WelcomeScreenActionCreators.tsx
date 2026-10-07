@@ -1,126 +1,60 @@
 // discord_app/modules/welcome_screen/WelcomeScreenActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_1, closure_4;
-
-let obj = function _fetchWelcomeScreen() {
-  obj = _asyncToGenerator(async (guildId) => {
-    let closure_2;
-    let closure_3;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      const obj9 = DispatcherDefault;
-      obj9.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
-      const HTTP = HTTPUtils.HTTP;
-      const get = HTTP.get;
-      const obj4 = { url: Endpoints.GUILD_WELCOME_SCREEN(guildId), oldFormErrors: true, rejectWithError: true };
-      await get(obj4);
-      const obj5 = closure_130_1(closure_130_2[2]);
-      obj5.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
-      await "IconComponent";
-      closure_1 = value;
-      const obj8 = { type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId, welcomeScreen: closure_1.body };
-      obj = closure_130_1(closure_130_2[2]);
-      obj.dispatch(obj8);
-      return closure_1.body;
-    })();
+require = fn;
+let closure_5 = async function _fetchWelcomeScreen() {
+  closure_2 = tmp3;
+  closure_129_0 = closure_0;
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({ url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), oldFormErrors: true, rejectWithError: true });
+  closure_130_1(closure_130_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
+  await "IconComponent";
+  closure_129_1 = value;
+  closure_130_1(closure_130_2[2]).dispatch({
+    type: "WELCOME_SCREEN_FETCH_SUCCESS",
+    guildId: closure_129_0,
+    welcomeScreen: closure_129_1.body,
   });
-  return obj(...arguments);
+  return closure_129_1.body;
 };
-obj = function _saveWelcomeScreen() {
-  obj = _asyncToGenerator(async (guildId, arg1) => {
-    let body = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      let obj5;
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp;
-              closure_2 = tmp4;
-              body = undefined;
-              const obj8 = DispatcherDefault;
-              obj8.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
-              c5 = 1;
-              const HTTP = HTTPUtils.HTTP;
-              const request = {
-                url: Endpoints.GUILD_WELCOME_SCREEN(guildId),
-                body: obj5,
-                oldFormErrors: true,
-                rejectWithError: true,
-              };
-              const patch = HTTP.patch;
-              obj5 = { description: null, welcome_channels: null, enabled: null };
-              ({ description: obj10.description, channels: obj10.welcome_channels, enabled: obj10.enabled } = body);
-              c6 = 2;
-              c7 = 1;
-              const obj6 = { value: patch(request), done: false };
-              return obj6;
-            }
-          } else {
-            if (1 === c6) {
-              c5 = 0;
-              const obj4 = closure_131_1(closure_131_2[2]);
-              obj4.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              body = value;
-              const obj9 = { type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId, welcomeScreen: body.body };
-              obj = closure_131_1(closure_131_2[2]);
-              obj.dispatch(obj9);
-              c5 = 0;
-            }
-            c7 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp17) {
-          closure_4 = tmp17;
-          if (0 === c5) {
-            c7 = 3;
-            throw tmp17;
-          } else {
-            c6 = 1;
-          }
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
+let closure_6 = async function _saveWelcomeScreen(arg0) {
+  closure_3 = tmp3;
+  closure_130_0 = closure_0;
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: Endpoints.GUILD_WELCOME_SCREEN(closure_0),
+    body: { description: null, welcome_channels: null, enabled: null },
+    oldFormErrors: true,
+    rejectWithError: true,
+  };
+  ({ description: obj10.description, channels: obj10.welcome_channels, enabled: obj10.enabled } = closure_1);
+  await HTTP.patch(request);
+  if (1 === tmp7) {
+    c5 = 0;
+    closure_131_1(closure_131_2[2]).dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
+    c7 = 3;
+    closure_131_1(closure_131_2[2]);
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    closure_130_1 = value;
+    closure_131_1(closure_131_2[2]).dispatch({
+      type: "WELCOME_SCREEN_SUBMIT_SUCCESS",
+      guildId: closure_130_0,
+      welcomeScreen: closure_130_1.body,
+    });
+    c5 = 0;
+    closure_131_1(closure_131_2[2]);
+  }
+  return value;
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 
 export const welcomeScreenViewed = function welcomeScreenViewed(guildId) {
@@ -128,26 +62,34 @@ export const welcomeScreenViewed = function welcomeScreenViewed(guildId) {
   if (arg1 === undefined) {
     flag = false;
   }
-  obj = DispatcherDefault;
-  const obj2 = { type: "WELCOME_SCREEN_VIEW", guildId, isLurking: flag };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId, isLurking: flag });
 };
 export const fetchWelcomeScreen = function fetchWelcomeScreen() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const resetWelcomeScreen = function resetWelcomeScreen() {
-  obj = DispatcherDefault;
-  obj.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
 };
 export const clearWelcomeScreenSettings = function clearWelcomeScreenSettings() {
-  obj = DispatcherDefault;
-  obj.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
 };
 export const updateSettings = function updateSettings(settings) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings });
 };
 export const saveWelcomeScreen = function saveWelcomeScreen() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

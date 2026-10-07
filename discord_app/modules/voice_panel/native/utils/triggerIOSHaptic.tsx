@@ -8,7 +8,6 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/utils/trigge
 
 export default function triggerIOSHaptic() {
   if (IS_IOS) {
-    const obj = HapticUtils;
-    const result = obj.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+    const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
   }
 }

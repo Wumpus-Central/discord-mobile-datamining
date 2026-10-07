@@ -1,49 +1,32 @@
 // discord_app/modules/frames/panel/native/FramePanelHeader.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../../_runtime/00576_react.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import useGetOrFetchApplicationsDefault from "../../../applications/useGetOrFetchApplications.tsx";
-import FramesConstants from "../../FramesConstants.tsx";
 import ActivityPanelHeader from "../../../activities/panel/native/ActivityPanelHeader.tsx";
 import InviteActivityButtonDefault from "../../../activities/panel/native/InviteActivityButton.tsx";
 import MinimizeActivityButtonDefault from "../../../activities/panel/native/MinimizeActivityButton.tsx";
 import QuestActivityButtonDefault from "QuestActivityButton.tsx";
 import FramePanelStateContextDefault from "FramePanelStateContext.tsx";
 import panel_LeaveActivityButtonDefault from "LeaveActivityButton.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let metroImportAll;
-let metroImportDefault;
-const View = react_native.View;
-const asLaunched = FramesConstants.asLaunched;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const View = fn(17).View;
+const asLaunched = fn(8738).asLaunched;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let frame;
-      let gesture;
-      let headerStyles;
-      let headerWrapperStyles;
-      let items1;
-      let items2;
-      let landscape;
-      let pipState;
-      let setMode;
-      let tmp4;
-      let wrapperOffset;
-      const obj = react2;
-      const cResult = obj.c(33);
+      const cResult = c.c(33);
       ({ frame, landscape, setMode, pipState, wrapperOffset } = arg0);
       if (cResult[0] !== frame.applicationId) {
         const items = [frame.applicationId];
         cResult[0] = frame.applicationId;
         cResult[1] = items;
-        tmp4 = items;
+        let tmp4 = items;
       } else {
         tmp4 = cResult[1];
       }
@@ -51,26 +34,24 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === landscape) {
         if (cResult[3] === pipState) {
           if (cResult[4] === setMode) {
-            let tmp7;
-            let tmp12;
             if (cResult[5] === wrapperOffset) {
-              tmp7 = cResult[6];
+              let tmp7 = cResult[6];
             }
-            const tmpResult = ActivityPanelHeader;
-            const baseActivityPanelHeaderContent = tmpResult.useBaseActivityPanelHeaderContent(tmp7);
+            const baseActivityPanelHeaderContent = ActivityPanelHeader.useBaseActivityPanelHeaderContent(tmp7);
             ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
-            const tmpResult2 = ActivityPanelHeader;
-            const minimizeAndQuestButtonContainerStyles = tmpResult2.useMinimizeAndQuestButtonContainerStyles();
+            const tmpResult = ActivityPanelHeader;
+            const minimizeAndQuestButtonContainerStyles =
+              ActivityPanelHeader.useMinimizeAndQuestButtonContainerStyles();
             let id;
             if (first != null) {
               id = first.id;
             }
             if (cResult[7] !== id) {
               const obj2 = { applicationId: id };
-              const tmp14 = metroImportDefault(InviteActivityButtonDefault, obj2);
+              const tmp14 = React5(InviteActivityButtonDefault, obj2);
               cResult[7] = id;
               cResult[8] = tmp14;
-              tmp12 = tmp14;
+              let tmp12 = tmp14;
             } else {
               tmp12 = cResult[8];
             }
@@ -79,9 +60,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               prop = minimizeAndQuestButtonContainerStyles.buttonContainerLandscape;
             }
             if (cResult[9] === minimizeAndQuestButtonContainerStyles.buttonContainer) {
-              let tmp16;
               if (cResult[10] === prop) {
-                tmp16 = cResult[11];
+                let tmp16 = cResult[11];
               }
               let tmp17;
               if (!landscape) {
@@ -92,17 +72,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp17 = name;
               }
               if (cResult[12] === setMode) {
-                let tmp19;
-                let tmp22;
                 if (cResult[13] === tmp17) {
-                  tmp19 = cResult[14];
+                  let tmp19 = cResult[14];
                 }
                 if (cResult[15] !== frame.applicationId) {
                   const obj3 = { applicationId: frame.applicationId };
-                  const tmp24 = metroImportDefault(QuestActivityButtonDefault, obj3);
+                  const tmp24 = React5(QuestActivityButtonDefault, obj3);
                   cResult[15] = frame.applicationId;
                   cResult[16] = tmp24;
-                  tmp22 = tmp24;
+                  let tmp22 = tmp24;
                 } else {
                   tmp22 = cResult[16];
                 }
@@ -113,18 +91,16 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[17] === tmp25) {
                   if (cResult[18] === tmp16) {
                     if (cResult[19] === tmp19) {
-                      let tmp26;
                       if (cResult[20] === tmp22) {
-                        tmp26 = cResult[21];
+                        let tmp26 = cResult[21];
                       }
                       let tmp30 = null;
                       if (!landscape) {
                         tmp30 = tmp12;
                       }
                       if (cResult[22] === frame) {
-                        let tmp31;
                         if (cResult[23] === setMode) {
-                          tmp31 = cResult[24];
+                          let tmp31 = cResult[24];
                         }
                         if (cResult[25] === gesture) {
                           if (cResult[26] === headerStyles) {
@@ -132,9 +108,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                               if (cResult[28] === landscape) {
                                 if (cResult[29] === tmp26) {
                                   if (cResult[30] === tmp30) {
-                                    let tmp34;
                                     if (cResult[31] === tmp31) {
-                                      tmp34 = cResult[32];
+                                      let tmp34 = cResult[32];
                                     }
                                     return tmp34;
                                   }
@@ -149,10 +124,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                           headerWrapperStyles,
                           headerStyles,
                           landscape,
-                          children: items1,
+                          children: null,
                         };
-                        items1 = [tmp26, tmp30, tmp31];
-                        const tmp36 = metroImportAll(ActivityPanelHeader.BaseActivityPanelContent, obj4);
+                        const items1 = [tmp26, tmp30, tmp31];
+                        obj4.children = items1;
+                        const tmp36 = closure_1_8(ActivityPanelHeader.BaseActivityPanelContent, obj4);
                         cResult[25] = gesture;
                         cResult[26] = headerStyles;
                         cResult[27] = headerWrapperStyles;
@@ -164,7 +140,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                         tmp34 = tmp36;
                       }
                       const obj5 = { frame, setMode };
-                      const tmp33 = metroImportDefault(panel_LeaveActivityButtonDefault, obj5);
+                      const tmp33 = React5(panel_LeaveActivityButtonDefault, obj5);
                       cResult[22] = frame;
                       cResult[23] = setMode;
                       cResult[24] = tmp33;
@@ -172,9 +148,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const obj6 = { style: tmp16, children: items2 };
-                items2 = [tmp19, tmp22, tmp25];
-                const tmp29 = metroImportAll(View, obj6);
+                const obj6 = { style: tmp16, children: null };
+                const items2 = [tmp19, tmp22, tmp25];
+                obj6.children = items2;
+                const tmp29 = closure_1_8(View, obj6);
                 cResult[17] = tmp25;
                 cResult[18] = tmp16;
                 cResult[19] = tmp19;
@@ -183,7 +160,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp26 = tmp29;
               }
               const obj7 = { activityName: tmp17, setMode };
-              const tmp21 = metroImportDefault(MinimizeActivityButtonDefault, obj7);
+              const tmp21 = React5(MinimizeActivityButtonDefault, obj7);
               cResult[12] = setMode;
               cResult[13] = tmp17;
               cResult[14] = tmp21;
@@ -194,6 +171,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[10] = prop;
             cResult[11] = items3;
             tmp16 = items3;
+            const tmpResult2 = ActivityPanelHeader;
           }
         }
       }
@@ -206,54 +184,39 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj8;
     }
   : (arg0) => {
-      let frame;
-      let gesture;
-      let headerStyles;
-      let headerWrapperStyles;
-      let items2;
-      let items3;
-      let landscape;
-      let pipState;
-      let setMode;
-      let wrapperOffset;
       ({ frame, landscape, setMode } = arg0);
       ({ pipState, wrapperOffset } = arg0);
       const items = [frame.applicationId];
       const first = _slicedToArray(useGetOrFetchApplicationsDefault(items), 1)[0];
-      const obj = ActivityPanelHeader;
-      const baseActivityPanelHeaderContent = obj.useBaseActivityPanelHeaderContent({
+      const baseActivityPanelHeaderContent = ActivityPanelHeader.useBaseActivityPanelHeaderContent({
         landscape,
         setMode,
         wrapperOffset,
         pipState,
       });
       ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
-      const obj2 = ActivityPanelHeader;
-      const minimizeAndQuestButtonContainerStyles = obj2.useMinimizeAndQuestButtonContainerStyles();
+      const minimizeAndQuestButtonContainerStyles = ActivityPanelHeader.useMinimizeAndQuestButtonContainerStyles();
       let id;
-      const tmp8 = InviteActivityButtonDefault;
       if (first != null) {
         id = first.id;
       }
-      const tmp7Result = metroImportDefault(tmp8, { applicationId: id });
-      const items1 = [minimizeAndQuestButtonContainerStyles.buttonContainer];
-      let prop;
+      const tmp7Result = React5(InviteActivityButtonDefault, { applicationId: id });
       const obj3 = {
         hasConnectedActivity: true,
         gesture,
         headerWrapperStyles,
         headerStyles,
         landscape,
-        children: items3,
+        children: null,
       };
-      const BaseActivityPanelContent = ActivityPanelHeader.BaseActivityPanelContent;
+      const items1 = [minimizeAndQuestButtonContainerStyles.buttonContainer];
+      let prop;
       if (landscape) {
         prop = minimizeAndQuestButtonContainerStyles.buttonContainerLandscape;
       }
-      const obj4 = { style: items1, children: items2 };
+      const obj4 = { style: items1, children: null };
       items1[1] = prop;
       let tmp15;
-      const tmpResult = MinimizeActivityButtonDefault;
       if (!landscape) {
         let name;
         if (first != null) {
@@ -261,33 +224,31 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp15 = name;
       }
-      items2 = [metroImportDefault(tmpResult, { activityName: tmp15, setMode }), ,];
-      const obj5 = { applicationId: frame.applicationId };
-      items2[1] = metroImportDefault(QuestActivityButtonDefault, obj5);
+      const items2 = [
+        React5(MinimizeActivityButtonDefault, { activityName: tmp15, setMode }),
+        React5(QuestActivityButtonDefault, { applicationId: frame.applicationId }),
+      ];
       let tmp17 = null;
       if (landscape) {
         tmp17 = tmp7Result;
       }
       items2[2] = tmp17;
-      items3 = [metroImportAll(View, obj4), ,];
+      obj4.children = items2;
+      const items3 = [closure_1_8(View, obj4), ,];
       let tmp18 = null;
       if (!landscape) {
         tmp18 = tmp7Result;
       }
       items3[1] = tmp18;
-      items3[2] = metroImportDefault(panel_LeaveActivityButtonDefault, { frame, setMode });
-      return metroImportAll(BaseActivityPanelContent, obj3);
+      items3[2] = React5(panel_LeaveActivityButtonDefault, { frame, setMode });
+      obj3.children = items3;
+      return closure_1_8(ActivityPanelHeader.BaseActivityPanelContent, obj3);
     };
-const memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_10 = memo(
+ReactCompilerGating = fn(558);
+let closure_10 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let mainFrame;
-        let tmp4;
-        let tmp5;
-        const obj = react2;
-        const cResult = obj.c(5);
+        const cResult = c.c(5);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [FramesStore];
           const fn = function s() {
@@ -300,80 +261,64 @@ let closure_10 = memo(
         } else {
           [tmp4, tmp5] = cResult;
         }
-        const tmpResult = get_initialized;
-        const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-        let tmp8 = null;
-        if (null != stateFromStores) {
+        const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+        if (null == stateFromStores) {
+          return null;
+        } else {
           if (cResult[2] === stateFromStores) {
-            let tmp10;
-            if (cResult[3] === arg0) {
-              tmp10 = cResult[4];
-            }
-            tmp8 = tmp10;
           }
           const obj2 = { frame: stateFromStores };
           const merged = Object.assign(arg0);
-          const tmp16 = metroImportDefault(closure_9, obj2);
+          const tmp15 = React5(closure_9, obj2);
           cResult[2] = stateFromStores;
           cResult[3] = arg0;
-          cResult[4] = tmp16;
-          tmp10 = tmp16;
+          cResult[4] = tmp15;
         }
-        return tmp8;
+        const tmpResult = initialize;
       }
     : (arg0) => {
-        let mainFrame;
         const items = [FramesStore];
-        const obj = get_initialized;
-        const stateFromStores = obj.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
+        const stateFromStores = initialize.useStateFromStores(items, () => asLaunched(mainFrame.getMainFrame()));
         let tmp2 = null;
         if (null != stateFromStores) {
           const obj2 = { frame: stateFromStores };
           const merged = Object.assign(arg0);
-          tmp2 = metroImportDefault(closure_9, obj2);
+          tmp2 = React5(closure_9, obj2);
         }
         return tmp2;
       },
 );
-const memo2 = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memo2Result = memo2(
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelHeader.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        let first;
-        let headerStyles;
-        let pipState;
-        let setMode;
-        let wrapperDimensions;
-        let wrapperOffset;
-        const obj = react2;
-        const cResult = obj.c(9);
+        const cResult = c.c(9);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { context: FramePanelStateContextDefault };
           cResult[0] = obj2;
-          first = obj2;
+          let first = obj2;
         } else {
           first = cResult[0];
         }
-        const tmpResult = ActivityPanelHeader;
-        const baseActivityPanelHeader = tmpResult.useBaseActivityPanelHeader(first);
+        const baseActivityPanelHeader = ActivityPanelHeader.useBaseActivityPanelHeader(first);
         ({ headerStyles, wrapperDimensions, setMode, wrapperOffset, pipState } = baseActivityPanelHeader);
         if (cResult[1] === pipState) {
           if (cResult[2] === setMode) {
             if (cResult[3] === wrapperDimensions.isWindowLandscape) {
-              let tmp7;
               if (cResult[4] === wrapperOffset) {
-                tmp7 = cResult[5];
+                let tmp7 = cResult[5];
               }
               if (cResult[6] === headerStyles) {
-                let tmp9;
                 if (cResult[7] === tmp7) {
-                  tmp9 = cResult[8];
+                  let tmp9 = cResult[8];
                 }
                 return tmp9;
               }
               const obj3 = { style: headerStyles, children: tmp7 };
-              const tmp12 = metroImportDefault(View, obj3);
+              const tmp12 = React5(View, obj3);
               cResult[6] = headerStyles;
               cResult[7] = tmp7;
               cResult[8] = tmp12;
@@ -381,30 +326,33 @@ const memo2Result = memo2(
             }
           }
         }
-        const obj4 = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
-        const tmp8 = metroImportDefault(closure_10, obj4);
+        const tmp8 = React5(closure_10, {
+          landscape: wrapperDimensions.isWindowLandscape,
+          setMode,
+          wrapperOffset,
+          pipState,
+        });
         cResult[1] = pipState;
         cResult[2] = setMode;
         cResult[3] = wrapperDimensions.isWindowLandscape;
         cResult[4] = wrapperOffset;
         cResult[5] = tmp8;
         tmp7 = tmp8;
+        const obj4 = { landscape: wrapperDimensions.isWindowLandscape, setMode, wrapperOffset, pipState };
+        const tmpResult = ActivityPanelHeader;
       }
     : () => {
-        let obj4;
         const obj = ActivityPanelHeader;
-        const obj2 = { context: FramePanelStateContextDefault };
-        const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj2);
-        const obj3 = { style: baseActivityPanelHeader.headerStyles, children: metroImportDefault(closure_10, obj4) };
-        obj4 = {
-          landscape: baseActivityPanelHeader.wrapperDimensions.isWindowLandscape,
-          setMode: baseActivityPanelHeader.setMode,
-          wrapperOffset: baseActivityPanelHeader.wrapperOffset,
-          pipState: baseActivityPanelHeader.pipState,
+        const baseActivityPanelHeader = obj.useBaseActivityPanelHeader({ context: FramePanelStateContextDefault });
+        const obj3 = {
+          style: baseActivityPanelHeader.headerStyles,
+          children: React5(closure_10, {
+            landscape: baseActivityPanelHeader.wrapperDimensions.isWindowLandscape,
+            setMode: baseActivityPanelHeader.setMode,
+            wrapperOffset: baseActivityPanelHeader.wrapperOffset,
+            pipState: baseActivityPanelHeader.pipState,
+          }),
         };
-        return metroImportDefault(View, obj3);
+        return React5(View, obj3);
       },
 );
-const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelHeader.tsx");
-
-export default memo2Result;

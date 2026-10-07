@@ -1,9 +1,9 @@
 // discord_app/modules/tti_analytics/native/navigation/debug/NavigationTTIRegionDebugState.tsx
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let set = new Set();
+const set = new Set();
 const map = new Map();
-let c2 = null;
+let global = null;
 let result = size.fileFinishedImporting(
   "modules/tti_analytics/native/navigation/debug/NavigationTTIRegionDebugState.tsx",
 );
@@ -13,8 +13,8 @@ export const recordNavigationTTIRegionDebugMeasurement = function recordNavigati
   spanComponent,
   activeTraceElapsedMs,
 ) {
-  if (traceId !== c2) {
-    c2 = traceId;
+  if (traceId !== global) {
+    global = traceId;
     map.clear();
   }
   const result = map.set(spanComponent, activeTraceElapsedMs);
@@ -28,8 +28,8 @@ export const getNavigationTTIRegionDebugMeasurement = function getNavigationTTIR
   regionId,
 ) {
   let tmp = null;
-  if (activeTraceId === c2) {
-    let value = map.get(regionId);
+  if (activeTraceId === global) {
+    value = map.get(regionId);
     if (value == null) {
       value = null;
     }
@@ -40,8 +40,6 @@ export const getNavigationTTIRegionDebugMeasurement = function getNavigationTTIR
 export const subscribeNavigationTTIRegionDebugMeasurements = function subscribeNavigationTTIRegionDebugMeasurements(
   arg0,
 ) {
-  let closure_0;
-  set = arg0;
-  set.add(arg0);
+  arg0.add(arg0);
   return () => set.delete(closure_0);
 };

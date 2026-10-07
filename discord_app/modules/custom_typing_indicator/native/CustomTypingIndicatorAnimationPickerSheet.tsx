@@ -1,54 +1,42 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import Card_Card from "../../../design/components/Card/native/Card.native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import Card from "../../../design/components/Card/native/Card.native.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let dependencyMap;
-
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  content: obj2,
-  previewRow: obj3,
-  optionCard: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
-  optionCardSelected: obj4,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  content: { paddingHorizontal: nativeDefault.space.PX_16 },
+  previewRow: null,
+  optionCard: null,
+  optionCardSelected: null,
 };
-obj2 = { paddingHorizontal: nativeDefault.space.PX_16 };
-createStyles = createStyles.createStyles;
-obj3 = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
-obj4 = { borderColor: nativeDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
-let closure_8 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.previewRow = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
+obj2.optionCard = { flex: 1, height: 64, alignItems: "center", justifyContent: "center" };
+let obj4 = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
+obj2.optionCardSelected = { borderColor: nativeDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
+let closure_8 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let isSelected;
-      let label;
-      let onPress;
-      const obj = react2;
-      const cResult = obj.c(13);
+      const cResult = c.c(13);
       ({ label, isSelected, onPress } = arg0);
       const tmp4 = closure_8();
+      let optionCardSelected = isSelected;
+      if (isSelected) {
+        optionCardSelected = tmp4.optionCardSelected;
+      }
       if (cResult[0] === tmp4.optionCard) {
-        let tmp6;
-        let tmp7;
-        let tmp8;
-        if (cResult[1] === (isSelected && tmp4.optionCardSelected)) {
-          tmp6 = cResult[2];
+        if (cResult[1] === optionCardSelected) {
+          let tmp5 = cResult[2];
         }
         let str = "faint";
         if (isSelected) {
@@ -58,347 +46,305 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { checked: isSelected };
           cResult[3] = isSelected;
           cResult[4] = obj2;
-          tmp7 = obj2;
+          let tmp6 = obj2;
         } else {
-          tmp7 = cResult[4];
+          tmp6 = cResult[4];
         }
         if (cResult[5] !== label) {
           const obj3 = { variant: "text-md/medium", color: "text-default", children: label };
-          const tmp10 = metroRequire(Text_Text.Text, obj3);
+          const tmp9 = timestampProducer(Text_Text.Text, obj3);
           cResult[5] = label;
-          cResult[6] = tmp10;
-          tmp8 = tmp10;
+          cResult[6] = tmp9;
+          let tmp7 = tmp9;
         } else {
-          tmp8 = cResult[6];
+          tmp7 = cResult[6];
         }
         if (cResult[7] === onPress) {
-          if (cResult[8] === tmp6) {
+          if (cResult[8] === tmp5) {
             if (cResult[9] === str) {
-              if (cResult[10] === tmp7) {
-                let tmp11;
-                if (cResult[11] === tmp8) {
-                  tmp11 = cResult[12];
+              if (cResult[10] === tmp6) {
+                if (cResult[11] === tmp7) {
+                  let tmp10 = cResult[12];
                 }
-                return tmp11;
+                return tmp10;
               }
             }
           }
         }
         const obj4 = {
-          style: tmp6,
+          style: tmp5,
           onPress,
           border: str,
           accessibilityRole: "togglebutton",
-          accessibilityState: tmp7,
-          children: tmp8,
+          accessibilityState: tmp6,
+          children: tmp7,
         };
-        const tmp13 = metroRequire(Card_Card.Card, obj4);
+        const tmp12 = timestampProducer(Card.Card, obj4);
         cResult[7] = onPress;
-        cResult[8] = tmp6;
+        cResult[8] = tmp5;
         cResult[9] = str;
-        cResult[10] = tmp7;
-        cResult[11] = tmp8;
-        cResult[12] = tmp13;
-        tmp11 = tmp13;
+        cResult[10] = tmp6;
+        cResult[11] = tmp7;
+        cResult[12] = tmp12;
+        tmp10 = tmp12;
       }
-      const items = [tmp4.optionCard, isSelected && tmp4.optionCardSelected];
+      const items = [tmp4.optionCard, optionCardSelected];
       cResult[0] = tmp4.optionCard;
-      cResult[1] = isSelected && tmp4.optionCardSelected;
+      cResult[1] = optionCardSelected;
       cResult[2] = items;
-      tmp6 = items;
+      tmp5 = items;
     }
   : (isSelected) => {
-      let label;
-      let onPress;
-      let str;
       isSelected = isSelected.isSelected;
       ({ label, onPress } = isSelected);
       const tmp = closure_8();
       const items = [tmp.optionCard];
       let optionCardSelected = isSelected;
-      const Card = Card_Card.Card;
       if (isSelected) {
         optionCardSelected = tmp.optionCardSelected;
       }
-      items[1] = optionCardSelected;
       const obj = {
         style: items,
         onPress,
-        border: str,
+        border: null,
         accessibilityRole: "togglebutton",
-        accessibilityState: { checked: isSelected },
-        children: metroRequire(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: label }),
+        accessibilityState: null,
+        children: null,
       };
-      str = "faint";
+      items[1] = optionCardSelected;
+      let str = "faint";
       if (isSelected) {
         str = "none";
       }
-      return metroRequire(Card, obj);
+      obj.border = str;
+      obj.accessibilityState = { checked: isSelected };
+      obj.children = timestampProducer(Text_Text.Text, {
+        variant: "text-md/medium",
+        color: "text-default",
+        children: label,
+      });
+      return timestampProducer(Card.Card, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj5 = { borderColor: nativeDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (initialAnimation) => {
-      let animation;
-      let closure_2;
-      let emojis;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let items;
-      let num;
-      let obj10;
-      let onChange;
-      let tmp10;
-      let tmp11;
-      let tmp12;
-      let tmp14;
-      let tmp7;
-      let tmp8;
-      let tmp9;
-      let obj = onChange(576);
-      const cResult = obj.c(29);
+      let map = onChange;
+      let Stack = dependencyMap;
+      const cResult = onChange(576).c(29);
       ({ emojis, onChange } = initialAnimation);
-      initialAnimation = initialAnimation.initialAnimation;
-      const tmp4 = closure_8();
-      [animation, dependencyMap] = react.useState(initialAnimation);
+      let previewRow = closure_8();
+      let num = 2;
+      [content, dependencyMap] = noop.useState(initialAnimation.initialAnimation);
       if (cResult[0] === emojis) {
         if (cResult[1] === onChange) {
-          if (cResult[2] === animation) {
-            if (cResult[3] === tmp4.content) {
-              if (cResult[4] === tmp4.previewRow) {
-                tmp7 = cResult[5];
-                tmp8 = cResult[6];
-                num = cResult[7];
-                tmp9 = cResult[8];
-                tmp10 = cResult[9];
-                tmp11 = cResult[10];
-                tmp12 = cResult[11];
-              }
-              if (cResult[19] === tmp7) {
-                if (cResult[20] === num) {
-                  let tmp24;
-                  if (cResult[21] === tmp9) {
-                    tmp24 = cResult[22];
-                  }
-                  if (cResult[23] === tmp8) {
-                    if (cResult[24] === tmp10) {
-                      if (cResult[25] === tmp11) {
-                        if (cResult[26] === tmp12) {
-                          let tmp27;
-                          if (cResult[27] === tmp24) {
-                            tmp27 = cResult[28];
+          if (cResult[2] === content) {
+            if (cResult[3] === previewRow.content) {
+              if (cResult[4] === previewRow.previewRow) {
+                if (cResult[19] === cResult[5]) {
+                  if (cResult[20] === tmp5) {
+                    if (cResult[21] === tmp6) {
+                      let tmp27 = cResult[22];
+                    }
+                    if (cResult[23] === tmp4) {
+                      if (cResult[24] === tmp7) {
+                        if (cResult[25] === tmp8) {
+                          if (cResult[26] === tmp9) {
+                            if (cResult[27] === tmp27) {
+                              let tmp30 = cResult[28];
+                            }
+                            return tmp30;
                           }
-                          return tmp27;
                         }
                       }
                     }
+                    const obj2 = { contentStyles: tmp7, dismissAccessibilityLabel: tmp8, children: null };
+                    const items = [tmp9, tmp27];
+                    obj2.children = items;
+                    const tmp32 = closure_7(tmp4, obj2);
+                    cResult[23] = tmp4;
+                    cResult[24] = tmp7;
+                    cResult[25] = tmp8;
+                    cResult[26] = tmp9;
+                    cResult[27] = tmp27;
+                    cResult[28] = tmp32;
+                    tmp30 = tmp32;
                   }
-                  const obj2 = { contentStyles: tmp10, dismissAccessibilityLabel: tmp11, children: items };
-                  items = [tmp12, tmp24];
-                  const tmp29 = closure_7(tmp8, obj2);
-                  cResult[23] = tmp8;
-                  cResult[24] = tmp10;
-                  cResult[25] = tmp11;
-                  cResult[26] = tmp12;
-                  cResult[27] = tmp24;
-                  cResult[28] = tmp29;
-                  tmp27 = tmp29;
                 }
+                const obj3 = { spacing: cResult[7], children: cResult[8] };
+                const tmp29 = closure_6(cResult[5], obj3);
+                cResult[19] = cResult[5];
+                cResult[20] = cResult[7];
+                cResult[21] = cResult[8];
+                cResult[22] = tmp29;
+                tmp27 = tmp29;
               }
-              const obj3 = { spacing: num, children: tmp9 };
-              const tmp26 = closure_6(tmp7, obj3);
-              cResult[19] = tmp7;
-              cResult[20] = num;
-              cResult[21] = tmp9;
-              cResult[22] = tmp26;
-              tmp24 = tmp26;
             }
           }
         }
       }
-      const obj4 = {
-        value: onChange(1385).TypingIndicatorAnimation.UNSPECIFIED,
-        label: intl.string(onChange(1126).t.PoWNfe),
-      };
-      intl = onChange(1126).intl;
+      const obj4 = { value: map(1385).TypingIndicatorAnimation.UNSPECIFIED, label: null };
+      const intl = map(1126).intl;
+      obj4.label = intl.string(map(1126).t.PoWNfe);
       const items1 = [obj4, , ,];
-      const obj5 = {
-        value: onChange(1385).TypingIndicatorAnimation.PULSE,
-        label: intl2.string(animation(3755)["gyL/ce"]),
-      };
-      intl2 = onChange(1126).intl;
+      const obj5 = { value: map(1385).TypingIndicatorAnimation.PULSE, label: null };
+      const intl2 = map(1126).intl;
+      obj5.label = intl2.string(content(3755)["gyL/ce"]);
       items1[1] = obj5;
-      const obj6 = { value: onChange(1385).TypingIndicatorAnimation.RING, label: intl3.string(animation(3755).EgekTm) };
-      intl3 = onChange(1126).intl;
+      const obj6 = { value: map(1385).TypingIndicatorAnimation.RING, label: null };
+      const intl3 = map(1126).intl;
+      obj6.label = intl3.string(content(3755).EgekTm);
       items1[2] = obj6;
-      const obj7 = {
-        value: onChange(1385).TypingIndicatorAnimation.WAVE,
-        label: intl4.string(animation(3755)["8t5EiI"]),
-      };
-      intl4 = onChange(1126).intl;
+      const obj7 = { value: map(1385).TypingIndicatorAnimation.WAVE, label: null };
+      const intl4 = map(1126).intl;
+      obj7.label = intl4.string(content(3755)["8t5EiI"]);
       items1[3] = obj7;
-      const ActionSheet = onChange(6708).ActionSheet;
-      const content = tmp4.content;
+      const ActionSheet = map(6708).ActionSheet;
+      const content2 = previewRow.content;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl5 = onChange(1126).intl;
-        const stringResult = intl5.string(animation(3755)["q+qHax"]);
+        const intl5 = map(1126).intl;
+        const stringResult = intl5.string(tmp10(3755)["q+qHax"]);
         cResult[12] = stringResult;
-        tmp14 = stringResult;
+        let tmp11 = stringResult;
       } else {
-        tmp14 = cResult[12];
+        tmp11 = cResult[12];
       }
       if (cResult[13] === emojis) {
-        let tmp16;
-        if (cResult[14] === animation) {
-          tmp16 = cResult[15];
+        if (cResult[14] === content) {
+          let tmp13 = cResult[15];
         }
-        if (cResult[16] === tmp4.previewRow) {
-          let tmp19;
-          if (cResult[17] === tmp16) {
-            tmp19 = cResult[18];
+        if (cResult[16] === previewRow.previewRow) {
+          if (cResult[17] === tmp13) {
+            let tmp16 = cResult[18];
           }
-          let Stack = onChange(5600).Stack;
-          const items2 = [items1.slice(0, 2), items1.slice(2, 4)];
-          const mapped = items2.map((arr, index) => {
-            let obj = {
-              direction: "horizontal",
-              spacing: 8,
-              children: arr.map((label) => {
-                const obj = {
-                  label: label.label,
-                  isSelected: closure_1 === label.value,
-                  onPress() {
-                    const value = label.value;
-                    closure_2_2(value);
-                    onChange(value);
-                  },
-                };
-                return closure_1_6(closure_1_9, obj, label.label);
-              }),
-            };
-            const Stack = Stack_Stack.Stack;
-            return metroRequire(Stack, obj, index);
-          });
+          Stack = map(5600).Stack;
+          const items2 = [items1.slice(0, num), items1.slice(num, 4)];
+          map = items2.map;
+          const mapped = map((arr, arg1) =>
+            timestampProducer(
+              Stack_Stack.Stack,
+              {
+                direction: "horizontal",
+                spacing: 8,
+                children: arr.map((label) =>
+                  closure_1_6(
+                    closure_1_9,
+                    {
+                      label: label.label,
+                      isSelected: closure_1 === label.value,
+                      onPress() {
+                        value = label.value;
+                        closure_2_2(value);
+                        onChange(value);
+                      },
+                    },
+                    label.label,
+                  ),
+                ),
+              },
+              arg1,
+            ),
+          );
           cResult[0] = emojis;
           cResult[1] = onChange;
-          cResult[2] = animation;
-          ({ content: tmp3[3], previewRow: tmp3[4] } = tmp4);
+          cResult[num] = content;
+          content = previewRow.content;
+          cResult[3] = content;
+          previewRow = previewRow.previewRow;
+          cResult[4] = previewRow;
           cResult[5] = Stack;
           cResult[6] = ActionSheet;
           cResult[7] = 8;
           cResult[8] = mapped;
-          cResult[9] = content;
-          cResult[10] = tmp14;
-          cResult[11] = tmp19;
-          tmp12 = tmp19;
-          tmp11 = tmp14;
-          tmp10 = content;
-          tmp9 = mapped;
-          num = 8;
-          tmp8 = ActionSheet;
-          tmp7 = Stack;
+          cResult[9] = content2;
+          cResult[10] = tmp11;
+          num = 11;
+          cResult[11] = tmp16;
         }
-        const obj8 = { style: tmp4.previewRow, children: tmp16 };
-        const tmp22 = closure_6(View, obj8);
-        cResult[16] = tmp4.previewRow;
-        cResult[17] = tmp16;
-        cResult[18] = tmp22;
-        tmp19 = tmp22;
+        const obj8 = { style: previewRow.previewRow, children: tmp13 };
+        const tmp19 = closure_6(View, obj8);
+        cResult[16] = previewRow.previewRow;
+        cResult[17] = tmp13;
+        cResult[18] = tmp19;
+        tmp16 = tmp19;
       }
-      const obj9 = { config: obj10, size: 54 };
-      obj10 = { emojis, animation, typingSuggestion: onChange(1385).TypingSuggestion.UNSPECIFIED };
-      const tmp13Result = animation(11608);
-      const tmp18 = closure_6(tmp13Result, obj9);
+      const obj9 = { config: null, size: 54 };
+      const obj10 = { emojis, animation: content, typingSuggestion: null };
+      const obj = onChange(576);
+      obj10.typingSuggestion = map(1385).TypingSuggestion.UNSPECIFIED;
+      obj9.config = obj10;
+      const tmp15 = closure_6(content(11608), obj9);
       cResult[13] = emojis;
-      cResult[14] = animation;
-      cResult[15] = tmp18;
-      tmp16 = tmp18;
+      cResult[14] = content;
+      cResult[15] = tmp15;
+      tmp13 = tmp15;
+      const tmp10Result = content(11608);
     }
   : (onChange) => {
-      let animation;
-      let closure_2;
-      let emojis;
-      let initialAnimation;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let intl5;
-      let items1;
-      let items2;
-      let obj7;
-      let obj8;
-      let tmp4;
       onChange = onChange.onChange;
       animation = undefined;
       dependencyMap = undefined;
       ({ emojis, initialAnimation } = onChange);
       const tmp = closure_8();
-      [animation, dependencyMap] = react.useState(initialAnimation);
-      let obj = {
-        value: onChange(1385).TypingIndicatorAnimation.UNSPECIFIED,
-        label: intl.string(onChange(1126).t.PoWNfe),
-      };
-      intl = onChange(1126).intl;
+      [animation, dependencyMap] = noop.useState(initialAnimation);
+      const obj = { value: onChange(1385).TypingIndicatorAnimation.UNSPECIFIED, label: null };
+      const intl = onChange(1126).intl;
+      obj.label = intl.string(onChange(1126).t.PoWNfe);
       const items = [obj, , ,];
-      const obj2 = {
-        value: onChange(1385).TypingIndicatorAnimation.PULSE,
-        label: intl2.string(animation(3755)["gyL/ce"]),
-      };
-      intl2 = onChange(1126).intl;
+      const obj2 = { value: onChange(1385).TypingIndicatorAnimation.PULSE, label: null };
+      const intl2 = onChange(1126).intl;
+      obj2.label = intl2.string(animation(3755)["gyL/ce"]);
       items[1] = obj2;
-      const obj3 = { value: onChange(1385).TypingIndicatorAnimation.RING, label: intl3.string(animation(3755).EgekTm) };
-      intl3 = onChange(1126).intl;
+      const obj3 = { value: onChange(1385).TypingIndicatorAnimation.RING, label: null };
+      const intl3 = onChange(1126).intl;
+      obj3.label = intl3.string(animation(3755).EgekTm);
       items[2] = obj3;
-      const obj4 = {
-        value: onChange(1385).TypingIndicatorAnimation.WAVE,
-        label: intl4.string(animation(3755)["8t5EiI"]),
-      };
-      intl4 = onChange(1126).intl;
+      const obj4 = { value: onChange(1385).TypingIndicatorAnimation.WAVE, label: null };
+      const intl4 = onChange(1126).intl;
+      obj4.label = intl4.string(animation(3755)["8t5EiI"]);
       items[3] = obj4;
-      const obj5 = {
-        contentStyles: tmp.content,
-        dismissAccessibilityLabel: intl5.string(animation(3755)["q+qHax"]),
-        children: items1,
-      };
-      const ActionSheet = onChange(6708).ActionSheet;
-      intl5 = onChange(1126).intl;
-      const obj6 = { style: tmp.previewRow, children: closure_6(tmp4, obj7) };
-      obj7 = { config: obj8, size: 54 };
-      obj8 = { emojis, animation, typingSuggestion: onChange(1385).TypingSuggestion.UNSPECIFIED };
-      tmp4 = animation(11608);
-      items1 = [closure_6(View, obj6)];
-      const obj9 = {
-        spacing: 8,
-        children: items2.map((arr, index) => {
-          let obj = {
+      const obj5 = { contentStyles: tmp.content, dismissAccessibilityLabel: null, children: null };
+      const intl5 = onChange(1126).intl;
+      obj5.dismissAccessibilityLabel = intl5.string(animation(3755)["q+qHax"]);
+      const obj6 = { style: tmp.previewRow, children: null };
+      const obj7 = { config: null, size: 54 };
+      const obj8 = { emojis, animation, typingSuggestion: onChange(1385).TypingSuggestion.UNSPECIFIED };
+      obj7.config = obj8;
+      obj6.children = closure_6(animation(11608), obj7);
+      const items1 = [closure_6(View, obj6)];
+      const obj9 = { spacing: 8, children: null };
+      const items2 = [items.slice(0, 2), items.slice(2, 4)];
+      obj9.children = items2.map((arr, index) =>
+        timestampProducer(
+          Stack_Stack.Stack,
+          {
             direction: "horizontal",
             spacing: 8,
-            children: arr.map((label) => {
-              const obj = {
-                label: label.label,
-                isSelected: closure_1 === label.value,
-                onPress() {
-                  const value = label.value;
-                  closure_2_2(value);
-                  onChange(value);
+            children: arr.map((label) =>
+              closure_1_6(
+                closure_1_9,
+                {
+                  label: label.label,
+                  isSelected: closure_1 === label.value,
+                  onPress() {
+                    value = label.value;
+                    closure_2_2(value);
+                    onChange(value);
+                  },
                 },
-              };
-              return closure_1_6(closure_1_9, obj, label.label);
-            }),
-          };
-          const Stack = Stack_Stack.Stack;
-          return metroRequire(Stack, obj, index);
-        }),
-      };
-      let Stack = onChange(5600).Stack;
-      items2 = [items.slice(0, 2), items.slice(2, 4)];
-      items1[1] = closure_6(Stack, obj9);
-      return closure_7(ActionSheet, obj5);
+                label.label,
+              ),
+            ),
+          },
+          index,
+        ),
+      );
+      items1[1] = closure_6(onChange(5600).Stack, obj9);
+      obj5.children = items1;
+      return closure_7(onChange(6708).ActionSheet, obj5);
     };
-const result = size.fileFinishedImporting(
-  "modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx",
-);
-
-export default tmp4;

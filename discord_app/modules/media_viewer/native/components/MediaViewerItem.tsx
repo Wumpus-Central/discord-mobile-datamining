@@ -1,36 +1,20 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItem.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
+import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import useMediaViewerSources from "../useMediaViewerSources.tsx";
 import useEntranceAnimation from "../useEntranceAnimation.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let index;
-
-const ScrollView = react_native.ScrollView;
-const jsx = Fragment.jsx;
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1369);
 let closure_7 = PlatformUtils.isAndroid();
-const memoResult = react.memo((index) => {
-  let _undefined;
-  let c10;
-  let c13;
-  let c9;
-  let entranceAnimationDriver;
-  let originLayout;
-  let renderMedia;
-  let size1;
-  let source;
-  let str;
-  let tmp12;
-  let tmp2;
-  let tmp25Result;
-  let tmp4;
-  let useItemVisible;
-  let zoomed;
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");
+
+export const MediaViewerItem = noop.memo((index) => {
   index = index.index;
   const onLongPress = index.onLongPress;
   const panGestureConfig = index.panGestureConfig;
@@ -43,29 +27,20 @@ const memoResult = react.memo((index) => {
   c13 = undefined;
   let obscure;
   let mediaItemHasSpoiler;
-  let closure_18;
+  closure_18 = undefined;
   let callback3;
   let callback4;
   let callback5;
   let callback6;
-  let ref3;
-  let obj = zoomed;
   ({ entranceAnimationDriver, originLayout, renderMedia, useItemVisible } = index);
   zoomed.useRef(windowWidth);
-  const ref2 = zoomed.useRef(windowHeight);
+  zoomed.useRef(windowHeight);
+  [tmp2, c9] = panGesture(zoomed.useState(windowWidth), 2);
   const tmp = panGesture(zoomed.useState(windowWidth), 2);
-  [tmp2, c9] = tmp;
-  const tmp3 = panGesture(zoomed.useState(windowHeight), 2);
-  [tmp4, c10] = tmp3;
-  const effect = zoomed.useEffect(() => {
-    const obj = index(panGestureConfig[5]);
-    return obj.dismissKeyboard();
-  }, []);
+  [tmp4, c10] = panGesture(zoomed.useState(windowHeight), 2);
+  const effect = zoomed.useEffect(() => index(panGestureConfig[5]).dismissKeyboard(), []);
   const items = [windowWidth, windowHeight];
   const effect1 = zoomed.useEffect(() => {
-    let closure_0;
-    let current;
-    let current2;
     const timeout = setTimeout(() => {
       closure_1_9(current);
       closure_1_10(current2);
@@ -77,15 +52,15 @@ const memoResult = react.memo((index) => {
   const maximumZoomScale = onLongPress(panGestureConfig[6])(tmp2, tmp4, source).maximumZoomScale;
   const ref = zoomed.useRef(null);
   const ref1 = zoomed.useRef(null);
+  const tmp3 = panGesture(zoomed.useState(windowHeight), 2);
   [tmp12, c13] = panGesture(zoomed.useState(false), 2);
-  panGesture(zoomed.useState(false), 2);
   const callback = zoomed.useCallback((x, y) => {
     if (null != ref.current) {
       const result = ref.current / 2;
       const result1 = ref2.current / 2;
       const current = tmp.current;
       const scrollResponder = current.getScrollResponder();
-      size = { x: x - result / 2, y: y - result1 / 2, width: result, height: result1, animated: true };
+      const size = { x: x - result / 2, y: y - result1 / 2, width: result, height: result1, animated: true };
       const result2 = scrollResponder.scrollResponderZoomTo(size);
     } else if (null !== ref1.current) {
       const current2 = ref1.current;
@@ -101,11 +76,9 @@ const memoResult = react.memo((index) => {
       flag = true;
     }
     if (null != ref.current) {
-      const current4 = tmp.current;
-      const current2 = ref.current;
-      const current3 = ref2.current;
-      const scrollResponder = current4.getScrollResponder();
-      size = { x: 0, y: 0, width: current2, height: current3, animated: flag };
+      const current2 = tmp.current;
+      const scrollResponder = current2.getScrollResponder();
+      const size = { x: 0, y: 0, width: ref.current, height: ref2.current, animated: flag };
       const result = scrollResponder.scrollResponderZoomTo(size);
     } else if (null !== ref1.current) {
       const current = ref1.current;
@@ -119,7 +92,7 @@ const memoResult = react.memo((index) => {
     const isInteracting = panGestureConfig.isInteracting;
     const result1 = isInteracting.set(tmp);
     let tmp4 = closure_7;
-    if (!tmp4) {
+    if (!closure_7) {
       const useEntranceAnimationState = useEntranceAnimation.useEntranceAnimationState;
       tmp4 = !useEntranceAnimationState.getState().isComplete;
     }
@@ -134,32 +107,28 @@ const memoResult = react.memo((index) => {
       }, 500);
     }
   }, items1);
-  const obj2 = index(panGestureConfig[8]);
-  let flattenSourceResult = obj2.flattenSource(source);
+  const tmp11 = panGesture(zoomed.useState(false), 2);
+  let flattenSourceResult = index(panGestureConfig[8]).flattenSource(source);
   if (flattenSourceResult == null) {
     flattenSourceResult = {};
   }
   obscure = flattenSourceResult.obscure;
-  const channelId = flattenSourceResult.channelId;
-  const tmp16Result = index(panGestureConfig[9]);
-  mediaItemHasSpoiler = tmp16Result.useMediaItemHasSpoiler(index);
-  const tmp18 = onLongPress(panGestureConfig[10])(channelId);
+  const obj2 = index(panGestureConfig[8]);
+  mediaItemHasSpoiler = index(panGestureConfig[9]).useMediaItemHasSpoiler(index);
+  const tmp18 = onLongPress(panGestureConfig[10])(flattenSourceResult.channelId);
   closure_18 = tmp18;
   const items2 = [mediaItemHasSpoiler, index, onLongPress, tmp18];
   callback3 = obj.useCallback(() => {
     if (mediaItemHasSpoiler) {
-      const obj = useMediaViewerSources;
-      obj.removeSpoiler(index);
+      useMediaViewerSources.removeSpoiler(index);
     } else if (!closure_18) {
       if (onLongPress != null) {
-        tmp3();
+        tmp2();
       }
     }
   }, items2);
   const items3 = [zoomed, panGestureConfig];
   callback4 = obj.useCallback(() => {
-    let overlayEnabled;
-    let overlayEnabled2;
     if (!zoomed.get()) {
       ({ overlayEnabled, overlayEnabled: overlayEnabled2 } = panGestureConfig);
       const result = overlayEnabled.set(!overlayEnabled2.get());
@@ -167,8 +136,6 @@ const memoResult = react.memo((index) => {
   }, items3);
   const items4 = [callback1, callback, zoomed];
   callback5 = obj.useCallback((arg0) => {
-    let absoluteX;
-    let absoluteY;
     ({ absoluteX, absoluteY } = arg0);
     if (zoomed.get()) {
       callback1();
@@ -178,66 +145,68 @@ const memoResult = react.memo((index) => {
   }, items4);
   const items5 = [index];
   callback6 = obj.useCallback(() => {
-    const obj = useMediaViewerSources;
-    obj.removeSpoiler(index);
+    useMediaViewerSources.removeSpoiler(index);
   }, items5);
   const items6 = [callback5, callback3, callback6, mediaItemHasSpoiler, obscure, panGesture, callback4];
   const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const TapResult = Gesture.Tap();
-    const runOnJSResult = TapResult.runOnJS(true);
-    const enabledResult = runOnJSResult.enabled(!mediaItemHasSpoiler);
-    const maxDistance = enabledResult.numberOfTaps(2).maxDistance;
-    enabledResult.numberOfTaps(2);
+    const runOnJSResult = Gesture.Tap().runOnJS(true);
+    const enabledResult = Gesture.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler);
+    const numberOfTapsResult = Gesture.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(2);
     let num = 10;
     let num2 = 10;
-    const obj4 = PlatformUtils;
-    if (obj4.isAndroid()) {
+    if (obj5.isAndroid()) {
       num2 = 20;
     }
-    const maxDistanceResult = maxDistance(num2);
-    const onStartResult = maxDistanceResult.onStart(callback5);
+    obj5 = PlatformUtils2;
+    const maxDistanceResult = numberOfTapsResult.maxDistance(num2);
     const Gesture2 = LegacyBaseButton.Gesture;
+    const onStartResult = numberOfTapsResult.maxDistance(num2).onStart(callback5);
     const TapResult1 = Gesture2.Tap();
-    const runOnJSResult1 = TapResult1.runOnJS(true);
-    const enabledResult1 = runOnJSResult1.enabled(!mediaItemHasSpoiler);
-    const maxDistance2 = enabledResult1.numberOfTaps(1).maxDistance;
-    enabledResult1.numberOfTaps(1);
+    const runOnJSResult1 = Gesture2.Tap().runOnJS(true);
+    const enabledResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler);
+    const numberOfTapsResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(1);
     let num3 = num;
-    const tmpResult = PlatformUtils;
     if (tmpResult.isAndroid()) {
       num3 = 20;
     }
-    const maxDistance2Result = maxDistance2(num3);
-    const onStartResult1 = maxDistance2Result.onStart(callback4);
+    tmpResult = PlatformUtils2;
+    const maxDistanceResult1 = numberOfTapsResult1.maxDistance(num3);
     const Gesture3 = LegacyBaseButton.Gesture;
+    const onStartResult1 = numberOfTapsResult1.maxDistance(num3).onStart(callback4);
     const TapResult2 = Gesture3.Tap();
-    let tmp9 = mediaItemHasSpoiler;
-    const enabled = TapResult2.runOnJS(true).enabled;
-    TapResult2.runOnJS(true);
+    let tmp6 = mediaItemHasSpoiler;
     if (mediaItemHasSpoiler) {
-      tmp9 = !obscure;
+      tmp6 = !obscure;
     }
-    const enabledResult2 = enabled(tmp9);
-    const maxDistance3 = enabledResult2.numberOfTaps(1).maxDistance;
-    enabledResult2.numberOfTaps(1);
-    const tmpResult2 = PlatformUtils;
+    const runOnJSResult2 = Gesture3.Tap().runOnJS(true);
+    const enabledResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6);
+    const numberOfTapsResult2 = Gesture3.Tap().runOnJS(true).enabled(tmp6).numberOfTaps(1);
     if (tmpResult2.isAndroid()) {
       num = 20;
     }
-    const maxDistance3Result = maxDistance3(num);
-    const onStartResult2 = maxDistance3Result.onStart(callback6);
+    tmpResult2 = PlatformUtils2;
+    const maxDistanceResult2 = numberOfTapsResult2.maxDistance(num);
     const Gesture4 = LegacyBaseButton.Gesture;
-    const ExclusiveResult = Gesture4.Exclusive(onStartResult2, onStartResult, onStartResult1);
+    const onStartResult2 = numberOfTapsResult2.maxDistance(num).onStart(callback6);
     const Gesture5 = LegacyBaseButton.Gesture;
+    const ExclusiveResult = Gesture4.Exclusive(
+      numberOfTapsResult2.maxDistance(num).onStart(callback6),
+      onStartResult,
+      onStartResult1,
+    );
     const LongPressResult = Gesture5.LongPress();
-    const runOnJSResult3 = LongPressResult.runOnJS(true);
-    const enabledResult3 = runOnJSResult3.enabled(!mediaItemHasSpoiler);
-    const onStartResult3 = enabledResult3.onStart(callback3);
+    const runOnJSResult3 = Gesture5.LongPress().runOnJS(true);
+    const enabledResult3 = Gesture5.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler);
     const Gesture6 = LegacyBaseButton.Gesture;
-    return Gesture6.Simultaneous(ExclusiveResult, onStartResult3, panGesture);
+    return Gesture6.Simultaneous(
+      ExclusiveResult,
+      Gesture5.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler).onStart(callback3),
+      panGesture,
+    );
   }, items6);
-  ref3 = obj.useRef(false);
+  zoomed.useRef(false);
   const items7 = [callback1, tmp2, tmp4];
   const effect2 = obj.useEffect(() => {
     if (ref3.current) {
@@ -246,7 +215,8 @@ const memoResult = react.memo((index) => {
       tmp.current = true;
     }
   }, items7);
-  const obj3 = {
+  const tmp16Result = index(panGestureConfig[9]);
+  const tmp26 = windowHeight(index(panGestureConfig[12]).GestureDetector, {
     gesture: memo,
     children: windowHeight(onLongPress(panGestureConfig[13]), {
       entranceAnimationDriver,
@@ -259,47 +229,48 @@ const memoResult = react.memo((index) => {
       windowHeight: tmp4,
       useItemVisible,
     }),
-  };
-  const GestureDetector = tmp16(tmp8[12]).GestureDetector;
-  const tmp26 = windowHeight(GestureDetector, obj3);
-  const tmp27 = ref;
-  if (tmp27) {
-    let obj4 = {
+  });
+  if (ref) {
+    const obj4 = {
       ref: ref1,
-      style: size,
+      style: null,
       minimumZoomScale: 1,
-      maximumZoomScale,
-      onZoomChanged: callback2,
-      children: tmp26,
+      maximumZoomScale: null,
+      onZoomChanged: null,
+      children: null,
     };
-    size = { width: tmp2, height: tmp4 };
-    tmp25Result = tmp25(tmp7(tmp8[14]), obj4);
+    let size = { width: tmp2, height: tmp4 };
+    obj4.style = size;
+    obj4.maximumZoomScale = maximumZoomScale;
+    obj4.onZoomChanged = callback2;
+    obj4.children = tmp26;
+    let tmp25Result = tmp25(tmp7(tmp8[14]), obj4);
   } else {
-    const obj5 = {
+    let obj5 = {
       ref,
-      style: size1,
+      style: null,
       automaticallyAdjustContentInsets: false,
       showsHorizontalScrollIndicator: false,
       showsVerticalScrollIndicator: false,
       minimumZoomScale: 1,
-      maximumZoomScale,
+      maximumZoomScale: null,
       centerContent: true,
       scrollEventThrottle: 16,
-      onScroll: callback2,
-      pointerEvents: str,
-      children: tmp26,
+      onScroll: null,
+      pointerEvents: null,
+      children: null,
     };
-    size1 = { width: tmp2, height: tmp4 };
-    str = "auto";
-    const tmp28 = windowWidth;
+    const size1 = { width: tmp2, height: tmp4 };
+    obj5.style = size1;
+    obj5.maximumZoomScale = maximumZoomScale;
+    obj5.onScroll = callback2;
+    let str = "auto";
     if (tmp12) {
       str = "none";
     }
-    tmp25Result = tmp25(tmp28, obj5);
+    obj5.pointerEvents = str;
+    obj5.children = tmp26;
+    tmp25Result = tmp25(windowWidth, obj5);
   }
   return tmp25Result;
 });
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");
-
-export const MediaViewerItem = memoResult;

@@ -1,28 +1,24 @@
 // discord_app/modules/self_mod/shared/SafetyWarningUtils.tsx
-import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 
 export const trackViewedEvent = function trackViewedEvent(SAFETY_WARNING_MODAL_VIEWED, warningId) {
-  let channelId;
-  let parsed;
-  let senderId;
-  let warningType;
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
-  const obj = { channel_id: channelId, warning_id: parsed, warning_type: warningType, other_user_id: senderId };
-  parsed = undefined;
-  const track = AnalyticsUtilsDefault.track;
-  AnalyticsUtilsDefault;
+  const obj2 = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
+  let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  track(SAFETY_WARNING_MODAL_VIEWED, obj);
+  obj2.warning_id = parsed;
+  obj2.warning_type = warningType;
+  obj2.other_user_id = senderId;
+  AnalyticsUtilsDefault.track(SAFETY_WARNING_MODAL_VIEWED, obj2);
 };
 export const ViewNameTypes = {
   SAFETY_WARNING_BANNER: "safety_warning_banner",
@@ -31,31 +27,27 @@ export const ViewNameTypes = {
   SAFETY_TOOLS_BUTTON: "safety_tools_button",
 };
 export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
-  let channelId;
-  let isNudgeWarning;
-  let parsed;
-  let senderId;
-  let viewName;
-  let warningType;
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, viewName, isNudgeWarning } = warningId);
-  const obj = {
+  const obj2 = {
     channel_id: channelId,
-    warning_id: parsed,
-    warning_type: warningType,
-    other_user_id: senderId,
-    view_name: viewName,
-    is_nudge_warning: isNudgeWarning,
+    warning_id: null,
+    warning_type: null,
+    other_user_id: null,
+    view_name: null,
+    is_nudge_warning: null,
   };
-  parsed = undefined;
-  const track = AnalyticsUtilsDefault.track;
-  const SAFETY_WARNING_VIEWED = AnalyticEvents.SAFETY_WARNING_VIEWED;
-  AnalyticsUtilsDefault;
+  let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  track(SAFETY_WARNING_VIEWED, obj);
+  obj2.warning_id = parsed;
+  obj2.warning_type = warningType;
+  obj2.other_user_id = senderId;
+  obj2.view_name = viewName;
+  obj2.is_nudge_warning = isNudgeWarning;
+  AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_WARNING_VIEWED, obj2);
 };
 export const CtaEventTypes = {
   OPEN_MORE_TIPS: "open_more_tips",
@@ -106,31 +98,27 @@ export const CtaEventTypes = {
   FEEDBACK_DOWNVOTE: "feedback_downvote",
 };
 export const trackCtaEvent = function trackCtaEvent(warningId) {
-  let channelId;
-  let cta;
-  let isNudgeWarning;
-  let parsed;
-  let senderId;
-  let warningType;
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, cta, isNudgeWarning } = warningId);
-  const obj = {
+  const obj2 = {
     channel_id: channelId,
-    warning_id: parsed,
-    warning_type: warningType,
-    other_user_id: senderId,
-    cta,
-    is_nudge_warning: isNudgeWarning,
+    warning_id: null,
+    warning_type: null,
+    other_user_id: null,
+    cta: null,
+    is_nudge_warning: null,
   };
-  parsed = undefined;
-  const track = AnalyticsUtilsDefault.track;
-  const SAFETY_WARNING_CTA_CLICKED = AnalyticEvents.SAFETY_WARNING_CTA_CLICKED;
-  AnalyticsUtilsDefault;
+  let parsed;
   if (null != warningId) {
     const _parseInt = parseInt;
     parsed = parseInt(warningId);
   }
-  track(SAFETY_WARNING_CTA_CLICKED, obj);
+  obj2.warning_id = parsed;
+  obj2.warning_type = warningType;
+  obj2.other_user_id = senderId;
+  obj2.cta = cta;
+  obj2.is_nudge_warning = isNudgeWarning;
+  AnalyticsUtilsDefault.track(AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, obj2);
 };
 export const getUserIsTeen = function getUserIsTeen() {
   const currentUser = UserStore.getCurrentUser();

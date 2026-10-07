@@ -1,22 +1,17 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../../_runtime/00019_react.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, guildId, importDefault, onCloseResult, tmp;
 
-let c9;
-let metroImportAll;
+const require = fn;
 let closure_3 = ["guildId", "handleConfirmAndAck"];
-const View = react_native.View;
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
 let closure_10 = createStyles.createStyles({
   alert: { marginTop: 120 },
   header: { marginTop: 40, textAlign: "center" },
@@ -32,16 +27,15 @@ let closure_10 = createStyles.createStyles({
   },
   illustration: { height: 246, width: 240 },
 });
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let closure_0;
-      let closure_1;
-      let tmp11;
-      let tmp14;
-      let tmp6;
-      let useReducedMotion;
-      const obj = require("react");
-      const cResult = obj.c(36);
+      const cResult = require("c").c(36);
       if (cResult[0] !== guildId) {
         guildId = guildId.guildId;
         _require = guildId;
@@ -53,7 +47,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = guildId;
         cResult[2] = handleConfirmAndAck;
         cResult[3] = tmp9;
-        tmp6 = tmp9;
+        const tmp6 = tmp9;
       } else {
         _require = cResult[1];
         importDefault = cResult[2];
@@ -63,7 +57,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[4] = items;
-        tmp11 = items;
+        let tmp11 = items;
       } else {
         tmp11 = cResult[4];
       }
@@ -77,7 +71,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp4;
         cResult[6] = S;
         cResult[7] = items1;
-        tmp14 = items1;
+        let tmp14 = items1;
       } else {
         class S {
           constructor() {
@@ -86,8 +80,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp14 = cResult[7];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(tmp11, S, tmp14);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp11, S, tmp14);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
@@ -109,7 +103,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      require("get initialized");
+      require("initialize");
       if (null == stateFromStores) {
         class S {
           constructor() {
@@ -140,24 +134,16 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = tmp6;
         cResult[12] = F;
       }
+      const tmpResult = require("initialize");
     }
   : (guildId) => {
-      let intl;
-      let intl2;
-      let intl3;
-      let items2;
-      let obj4;
-      let obj6;
-      let tmp16;
-      let useReducedMotion;
       guildId = guildId.guildId;
       const handleConfirmAndAck = guildId.handleConfirmAndAck;
       const merged = Object.assign(guildId, Object.assign({ guildId: 0, handleConfirmAndAck: 0 }));
       const tmp2 = closure_10();
       const items = [GuildStore];
       const items1 = [guildId];
-      const obj = guildId(merged[9]);
-      const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
+      const stateFromStores = guildId(merged[9]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
       guildId(merged[9]);
       [][0] = AccessibilityStore;
       if (null == stateFromStores) {
@@ -170,44 +156,37 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             onClose();
           }
         }
-        const obj2 = {
-          confirmText: intl.string(guildId(merged[10]).t.NuzmOA),
-          style: tmp2.alert,
-          onCancel: onConfirm,
-          onConfirm,
-          children: items2,
-        };
-        const tmp10 = handleConfirmAndAck(merged[14]);
+        const obj2 = {};
         const merged1 = Object.assign(merged);
-        intl = tmp3(tmp4[10]).intl;
-        const obj3 = { style: tmp2.illustrationContainer, children: closure_8(tmp16, obj4) };
-        obj4 = { source: guildId(merged[11]), autoPlay: !tmp7, style: tmp2.illustration };
-        tmp16 = handleConfirmAndAck(merged[12]);
-        items2 = [closure_8(View, obj3), ,];
+        const intl = tmp3(tmp4[10]).intl;
+        obj2.confirmText = intl.string(tmp3(tmp4[10]).t.NuzmOA);
+        obj2.style = tmp2.alert;
+        obj2.onCancel = onConfirm;
+        obj2.onConfirm = onConfirm;
+        const obj3 = { style: tmp2.illustrationContainer, children: null };
+        const obj4 = { source: null, autoPlay: null, style: null };
+        const tmp10 = handleConfirmAndAck(tmp4[14]);
+        obj4.source = tmp3(tmp4[11]);
+        obj4.autoPlay = !tmp7;
+        obj4.style = tmp2.illustration;
+        obj3.children = closure_8(handleConfirmAndAck(tmp4[12]), obj4);
+        const items2 = [closure_8(View, obj3), ,];
         const obj5 = {
           style: tmp2.header,
           variant: "heading-lg/extrabold",
           color: "mobile-text-heading-primary",
-          children: intl2.format(guildId(merged[10]).t["7hhNEn"], obj6),
+          children: null,
         };
-        const Heading = tmp3(tmp4[13]).Heading;
-        intl2 = tmp3(tmp4[10]).intl;
-        obj6 = { guildName: stateFromStores.name };
-        items2[1] = closure_8(Heading, obj5);
-        const obj7 = {
-          style: tmp2.text,
-          variant: "text-sm/medium",
-          color: "text-default",
-          children: intl3.string(guildId(merged[10]).t.nwpqyc),
-        };
-        const Text = tmp3(tmp4[13]).Text;
-        intl3 = tmp3(tmp4[10]).intl;
-        items2[2] = closure_8(Text, obj7);
+        const intl2 = tmp3(tmp4[10]).intl;
+        const obj6 = { guildName: stateFromStores.name };
+        obj5.children = intl2.format(tmp3(tmp4[10]).t["7hhNEn"], obj6);
+        items2[1] = closure_8(tmp3(tmp4[13]).Heading, obj5);
+        const obj7 = { style: tmp2.text, variant: "text-sm/medium", color: "text-default", children: null };
+        const intl3 = tmp3(tmp4[10]).intl;
+        obj7.children = intl3.string(tmp3(tmp4[10]).t.nwpqyc);
+        items2[2] = closure_8(tmp3(tmp4[13]).Text, obj7);
+        obj2.children = items2;
         return closure_9(tmp10, obj2);
       }
+      const obj = guildId(merged[9]);
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx",
-);
-
-export default tmp4;

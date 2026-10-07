@@ -1,66 +1,59 @@
 // discord_app/actions/ActivitiesActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import MessageConstants from "../modules/messages/MessageConstants.tsx";
 import ChannelActionCreatorsDefault from "ChannelActionCreators.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import _asyncToGenerator_mod from "../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
-import Constants from "../Constants.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let _asyncToGenerator = _asyncToGenerator_mod;
+const require = fn;
+const Constants = fn(1085);
 ({
   Endpoints: hasOwnProperty,
   ActivityTypes: metroRequire,
-  AnalyticEvents: metroImportDefault,
-  LoggingInviteTypes: metroImportAll,
+  AnalyticEvents: closure_7,
+  LoggingInviteTypes: closure_8,
 } = Constants);
-const MessageSendLocation = MessageConstants.MessageSendLocation;
-let obj = {
-  updateActivity(applicationId) {
-    applicationId = applicationId.applicationId;
-    const distributor = applicationId.distributor;
-    let token = applicationId.token;
-    const shareActivity = applicationId.shareActivity;
+const MessageSendLocation = fn(4889).MessageSendLocation;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
+
+export default {
+  updateActivity(share_activity) {
+    const applicationId = share_activity.applicationId;
+    const distributor = share_activity.distributor;
+    let token = share_activity.token;
     if (token === undefined) {
       token = null;
     }
-    let num = applicationId.duration;
+    let num = share_activity.duration;
     if (num === undefined) {
       num = 0;
     }
-    let flag = applicationId.closed;
+    let flag = share_activity.closed;
     if (flag === undefined) {
       flag = false;
     }
-    let exePath = applicationId.exePath;
+    let exePath = share_activity.exePath;
     if (exePath === undefined) {
       exePath = null;
     }
-    let voiceChannelId = applicationId.voiceChannelId;
+    let voiceChannelId = share_activity.voiceChannelId;
     if (voiceChannelId === undefined) {
       voiceChannelId = null;
     }
-    let sessionId = applicationId.sessionId;
+    let sessionId = share_activity.sessionId;
     if (sessionId === undefined) {
       sessionId = null;
     }
-    let mediaSessionId = applicationId.mediaSessionId;
+    let mediaSessionId = share_activity.mediaSessionId;
     if (mediaSessionId === undefined) {
       mediaSessionId = null;
     }
-    let obj = distributor(num[4]);
-    obj.wait(() => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor };
-      return obj.dispatch(obj2);
-    });
+    distributor(num[4]).wait(() =>
+      DispatcherDefault.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor }),
+    );
     const HTTP = applicationId(num[5]).HTTP;
     const request = {
       url: constants.ACTIVITIES,
@@ -68,7 +61,7 @@ let obj = {
         application_id: applicationId,
         token,
         duration: num,
-        share_activity: shareActivity,
+        share_activity: share_activity.shareActivity,
         distributor,
         closed: flag,
         exePath,
@@ -80,25 +73,23 @@ let obj = {
       oldFormErrors: true,
       rejectWithError: true,
     };
+    const obj = distributor(num[4]);
     const postResult = HTTP.post(request);
-    const nextPromise = postResult.then((body) => {
-      const token = body.body.token;
-      const obj = DispatcherDefault;
-      const obj2 = { type: "ACTIVITY_UPDATE_SUCCESS", applicationId, token, duration: num, distributor };
-      obj.dispatch(obj2);
-    });
-    nextPromise.catch(() => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "ACTIVITY_UPDATE_FAIL", applicationId };
-      obj.dispatch(obj2);
-    });
+    HTTP.post(request)
+      .then((body) => {
+        DispatcherDefault.dispatch({
+          type: "ACTIVITY_UPDATE_SUCCESS",
+          applicationId,
+          token: body.body.token,
+          duration: num,
+          distributor,
+        });
+      })
+      .catch(() => {
+        DispatcherDefault.dispatch({ type: "ACTIVITY_UPDATE_FAIL", applicationId });
+      });
   },
   sendActivityInvite(activity) {
-    let _location;
-    let content;
-    let obj2;
-    let targetUserId;
-    let type;
     activity = activity.activity;
     ({ content, location: importDefault } = activity);
     ({ type, targetUserId } = activity);
@@ -106,42 +97,41 @@ let obj = {
     if (null == channel) {
       return Promise.resolve(null);
     } else {
-      const parse = require("MessageParser").parse;
-      require("MessageParser");
-      const tmp8 = channel;
       if (content == null) {
         content = "";
       }
-      const parsed = parse(channel, content);
-      let obj = { activityAction: obj2, location: MessageSendLocation.ACTIVITY_SHARE };
-      obj2 = { type, activity, targetUserId };
+      const parsed = require("MessageParser").parse(channel, content);
       const tmp7Result = require("MessageActionCreators");
-      const sendMessageResult = tmp7Result.sendMessage(channel.id, parsed, false, obj);
-      return sendMessageResult.then(
+      const obj = { activityAction: null, location: null };
+      let obj2 = { type, activity, targetUserId };
+      obj.activityAction = obj2;
+      obj.location = MessageSendLocation.ACTIVITY_SHARE;
+      const obj4 = require("MessageParser");
+      return tmp7Result.sendMessage(channel.id, parsed, false, obj).then(
         (body) => {
-          let APPLICATION;
-          let id;
-          const obj = {
-            location: importDefault,
-            invite_type: APPLICATION,
-            application_id: activity.application_id,
-            guild_id: channel.getGuildId(),
-            channel_id: channel.id,
-            message_id: id,
+          const obj2 = {
+            location: _location,
+            invite_type: null,
+            application_id: null,
+            guild_id: null,
+            channel_id: null,
+            message_id: null,
           };
-          const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-          const INVITE_SENT = metroImportDefault.INVITE_SENT;
-          AppAnalyticsUtilsDefault;
-          if (activity.type === metroRequire.LISTENING) {
-            APPLICATION = metroImportAll.SPOTIFY;
+          if (activity.type === constants2.LISTENING) {
+            let APPLICATION = constants4.SPOTIFY;
           } else {
-            APPLICATION = metroImportAll.APPLICATION;
+            APPLICATION = constants4.APPLICATION;
           }
-          id = null;
+          obj2.invite_type = APPLICATION;
+          obj2.application_id = activity.application_id;
+          obj2.guild_id = channel.getGuildId();
+          obj2.channel_id = channel.id;
+          let id = null;
           if (null != body) {
             id = body.body.id;
           }
-          trackWithMetadata(INVITE_SENT, obj);
+          obj2.message_id = id;
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants3.INVITE_SENT, obj2);
           return Promise.resolve(channel);
         },
         (arg0) => Promise.reject(arg0),
@@ -149,31 +139,19 @@ let obj = {
     }
   },
   sendActivityInviteUser(userId) {
-    let closure_129_0;
-    let closure_129_1;
-    let closure_129_2;
-    let closure_129_3;
     const self = this;
-    ({ type: closure_129_1, activity: closure_129_2, content: closure_129_3, location: closure_129_0 } = userId);
-    userId = userId.userId;
-    let obj = ChannelActionCreatorsDefault;
-    const ensurePrivateChannelResult = obj.ensurePrivateChannel(userId);
-    return ensurePrivateChannelResult.then((channelId) => {
-      const obj = { channelId, type, activity, content, location: _location };
-      return self.sendActivityInvite(obj);
-    });
+    ({ type: importDefault, activity: dependencyMap, content: asyncGeneratorStep, location: require } = userId);
+    return ChannelActionCreatorsDefault.ensurePrivateChannel(userId.userId).then((channelId) =>
+      self.sendActivityInvite({ channelId, type, activity, content, location: _location }),
+    );
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
-    let closure_3;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    _asyncToGenerator = arg3;
-    let closure_4 = arg4;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    asyncGeneratorStep = arg3;
+    closure_4 = arg4;
     return (async () => {
-      let c1;
-      let obj5;
-      let tmp3;
       const obj4 = {};
       if (null != channel_id) {
         obj4.channel_id = channel_id;
@@ -181,27 +159,21 @@ let obj = {
       if (null != message_id) {
         obj4.message_id = message_id;
       }
-      const HTTP = tmp3(c2[5]).HTTP;
+      const HTTP = tmp4(1282).HTTP;
       const request = {
-        url: constants.USER_ACTIVITY_JOIN(tmp3, closure_1, closure_2),
+        url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2),
         retries: 3,
         query: obj4,
-        rejectWithError: obj5.rejectWithMigratedError(),
+        rejectWithError: tmp4(1282).rejectWithMigratedError(),
       };
-      const get = HTTP.get;
-      obj5 = tmp3(c2[5]);
-      await get(request);
-      tmp3 = value;
-      const obj = { secret: tmp3.body.secret, joinUrl: tmp3.body.join_url };
-      return obj;
+      await HTTP.get(request);
+      closure_128_0 = value;
+      return { secret: closure_128_0.body.secret, joinUrl: closure_128_0.body.join_url };
     })();
   },
   subscribeActivities(items) {
-    let closure_0 = items;
+    closure_0 = items;
     return (async () => {
-      let c1;
-      let obj4;
-      let obj8;
       const mapped = v3.map((userId) => ({
         user_id: userId.userId,
         application_id: userId.applicationId,
@@ -209,21 +181,15 @@ let obj = {
         message_id: userId.messageId,
         channel_id: userId.channelId,
       }));
-      const HTTP = v3(dependencyMap[5]).HTTP;
+      const HTTP = v3(1282).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_SUBSCRIBE,
-        body: obj4,
+        body: { subscriptions: mapped },
         retries: 1,
-        rejectWithError: obj8.rejectWithMigratedError(),
+        rejectWithError: v3(1282).rejectWithMigratedError(),
       };
-      obj4 = { subscriptions: mapped };
-      const post = HTTP.post;
-      obj8 = v3(dependencyMap[5]);
-      await post(request);
+      await HTTP.post(request);
       return value.body;
     })();
   },
 };
-const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
-
-export default obj;

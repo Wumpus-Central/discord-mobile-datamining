@@ -3,61 +3,52 @@ import LoggerDefault from "../../modules/debug/Logger.tsx";
 import DOMUtils from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
 import fallbackLocalesDefault from "fallbackLocales.tsx";
 import _mod5959 from "../../../_runtime/metro/05959__.js";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import DiscordNative from "../DiscordNative.tsx";
-import 00012__ from "../../../_runtime/metro/00012__.js";
-import size from "../../../_runtime/metro/00002__.js";
+import apply from "../../../_runtime/metro/00012__.js";
 
-let set;
-
-let obj = function _install() {
-  let availableDictionaries;
-  obj = _asyncToGenerator(async function() {
-    let c3;
-    let c4;
-    let closure_2;
-    function attachToInput(value) {
-      closure_0 = value;
+require = fn;
+let closure_10 = async function _install() {
+  closure_2 = tmp2;
+  closure_1 = tmp3;
+  await availableDictionaries.getAvailableDictionaries();
+  closure_0 = value;
+  if (value == null) {
+    closure_0 = [];
+  }
+  closure_129_0 = closure_0;
+  closure_129_1 = new closure_130_8(closure_129_0);
+  if (!closure_129_1.usesMultilang) {
+    (function attachToInput(arg0) {
+      closure_0 = arg0;
       if (null != document.body) {
         const _document = document;
         const listener = body.addEventListener("beforeinput", (event) => closure_2_9(closure_0, event.target), true);
       }
-    }
-    let value = tmp2;
-    await availableDictionaries.getAvailableDictionaries();
-    let closure_0 = value;
-    if (value == null) {
-      closure_0 = [];
-    }
-    const self = this;
-    value = new closure_130_8(closure_0);
-    if (!value.usesMultilang) {
-      attachToInput(value);
-    }
-    return value;
-  });
-  return obj(...arguments);
+    })(closure_129_1);
+  }
+  return closure_129_1;
 };
-let tmp2 = new LoggerDefault("Spellchecker");
-const metroRequire = tmp2;
+const logger = new LoggerDefault("Spellchecker");
 let spellCheck;
 if (DiscordNative != null) {
   spellCheck = DiscordNative.spellCheck;
 }
 class Spellchecker {
-  constructor(arr) {
-    let first;
+  constructor(arg0) {
     obj = Object.create(new.target.prototype);
+    closure_2 = obj;
     obj.rawLocaleByNormalized = {};
     obj.languageDetector = null;
     obj.availableLanguagesByLanguage = {};
     obj._enabled = true;
     obj.misspelledWord = "";
     obj.corrections = [];
-    let items = [];
-    const item = arr.forEach((item) => {
+    items = [];
+    closure_0 = items;
+    item = global.forEach((item) => {
       let str = "nb";
       if ("no" !== item) {
         str = item;
@@ -70,42 +61,47 @@ class Spellchecker {
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
-          let combined;
           if (null != parsed.langtag.region) {
             const langtag = parsed.langtag;
-            const str3 = langtag.region;
-            const str4 = langtag.language.language;
-            const formatted = str4.toLowerCase();
+            const formatted = langtag.language.language.toLowerCase();
             const _HermesInternal = HermesInternal;
-            combined = "" + formatted + "-" + str3.toUpperCase();
+            const combined = "" + formatted + "-" + langtag.region.toUpperCase();
           }
           if (null != combined) {
             items.push(combined);
             let tmp10 = obj.rawLocaleByNormalized[combined];
-            const rawLocaleByNormalized = obj.rawLocaleByNormalized;
             if (tmp10 == null) {
               tmp10 = item;
             }
-            rawLocaleByNormalized[combined] = tmp10;
+            obj.rawLocaleByNormalized[combined] = tmp10;
           }
         }
       }
       logger.error("" + str2 + " is not a valid locale.");
     });
     obj.availableLocales = items;
-    let tmp2 = obj;
-    const obj2 = items(obj[7]);
+    tmp2 = closure_2;
+    obj2 = closure_0(closure_2[7]);
     obj.useMultilang = obj2.isElectronMultilangSpellcheckEnabled();
     obj.availableLanguagesByLanguage = obj.buildLanguageIndex(items);
     if (obj.useMultilang) {
-      obj.applyLanguages(LocaleStore.locale);
+      tmp13 = closure_5;
+      applyLanguagesResult = obj.applyLanguages(closure_5.locale);
     } else {
-      let str = LocaleStore.locale;
-      let str2 = "-";
-      [first, obj.regionPreference] = str.split("-");
-      const self = this;
-      const self2 = this;
-      const tmp9 = new first(tmp2[8])(first, (arg0) => {
+      tmp3 = closure_5;
+      str = closure_5.locale;
+      str2 = "-";
+      tmp4 = closure_4;
+      num = 2;
+      tmp5 = closure_4(str.split("-"), 2);
+      first = tmp5[0];
+      closure_1 = first;
+      obj.regionPreference = tmp5[1];
+      tmp7 = closure_1;
+      tmp8 = new.target;
+      tmp9 = new.target;
+      tmp10 = first;
+      tmp11 = new closure_1(tmp2[8])(first, (arg0) => {
         const combined = "" + arg0 + "-" + obj.regionPreference;
         const availableLocales = obj.availableLocales;
         if (-1 !== availableLocales.indexOf(combined)) {
@@ -120,10 +116,10 @@ class Spellchecker {
           }
         }
       });
-      let tmp10 = tmp9;
-      obj.languageDetector = tmp9;
+      tmp12 = tmp11;
+      obj.languageDetector = tmp11;
     }
-    spellCheck.on("spellcheck-result", (arg0, arg1) => {
+    onResult = spellCheck.on("spellcheck-result", (arg0, arg1) => {
       let str = arg0;
       if (arg0 == null) {
         str = "";
@@ -137,192 +133,197 @@ class Spellchecker {
     });
     return obj;
   }
-  setLearnedWords(arg0) {
-    spellCheck.setLearnedWords(arg0);
-  }
-  setAppLocale(locale) {
-    const self = this;
-    if (this.useMultilang) {
-      self.applyLanguages(locale);
-    } else {
-      self.regionPreference = locale.split("-")[1];
-    }
-  }
-  detectLanguage(textContent) {
-    const self = this;
-    const tmp = !this.useMultilang && self.enabled;
-    if (tmp) {
-      const languageDetector = self.languageDetector;
-      if (languageDetector != null) {
-        languageDetector.process(textContent);
-      }
-    }
-  }
-  isMisspelled(arg0) {
-    return "" !== this.misspelledWord && arg0 === tmp.misspelledWord;
-  }
-  getCorrectionsForMisspelling(arg0, flag) {
-    return this.isMisspelled(arg0, flag) ? this.corrections : [];
-  }
-  getCachedMisspelling() {
-    return { misspelledWord: this.misspelledWord, corrections: this.corrections };
-  }
-  replaceMisspelling(arg0) {
-    spellCheck.replaceMisspelling(arg0);
-  }
-  applyLocale(mapped1) {
-    let closure_0 = mapped1;
-    const setLocaleResult = spellCheck.setLocale(mapped1);
-    if (setLocaleResult != null) {
-      setLocaleResult.then((result) => {
-        info = info.info;
-        let str = "(unavailable)";
-        const combined = "Switching to " + mapped1;
-        if (result) {
-          str = "(available)";
-        }
-        info(combined, str);
-      });
-    }
-  }
-  applyLanguages(locale) {
-    let mapped1;
-    const self = this;
-    const items = [locale, ...navigator.languages];
-    const mapped = items.map((item) => {
-      let str = "nb";
-      if ("no" !== item) {
-        str = item;
-      }
-      let str2 = fallbackLocalesDefault[str];
-      if (str2 == null) {
-        str2 = str;
-      }
-      obj = _mod5959;
-      const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
-      if (null != parsed) {
-        if (null != parsed.langtag.language) {
-          let combined;
-          if (null != parsed.langtag.region) {
-            const langtag = parsed.langtag;
-            const str3 = langtag.region;
-            const str4 = langtag.language.language;
-            const formatted = str4.toLowerCase();
-            const _HermesInternal = HermesInternal;
-            combined = "" + formatted + "-" + str3.toUpperCase();
-          }
-          if (null != combined) {
-            const availableLocales = self.availableLocales;
-            if (availableLocales.includes(combined)) {
-              return combined;
-            }
-          }
-          const str6 = item.replace(/_/g, "-");
-          const str7 = _slicedToArray(str6.split("-"), 1)[0];
-          let tmp10 = self.availableLanguagesByLanguage[str7.toLowerCase(str7)];
-          if (tmp10 == null) {
-            tmp10 = null;
-          }
-          return tmp10;
-        }
-      }
-      logger.error("" + str2 + " is not a valid locale.");
-    });
-    set = new Set(mapped.filter(mapped1(1375).isNotNullish));
-    const fromResult = from(set);
-    if (0 !== fromResult.length) {
-      mapped1 = fromResult.map((item) => {
-        let tmp = self.rawLocaleByNormalized[item];
-        if (tmp == null) {
-          tmp = item;
-        }
-        return tmp;
-      });
-      if (null == spellCheck.setSpellCheckerLanguages) {
-        let _HermesInternal2 = HermesInternal;
-        let str3 = "setSpellCheckerLanguages unavailable, falling back to single-locale: ";
-        logger.info("setSpellCheckerLanguages unavailable, falling back to single-locale: " + mapped1[0]);
-        self.applyLocale(mapped1[0]);
-      } else {
-        const result = spellCheck.setSpellCheckerLanguages(mapped1);
-        if (result != null) {
-          result.then((result) => {
-            const info = logger.info;
-            const tmp2 = result;
-            if (tmp2) {
-              const _HermesInternal2 = HermesInternal;
-              info("Spellcheck languages: " + mapped1.join(", "), "(applied)");
-            } else {
-              const _HermesInternal = HermesInternal;
-              info("Failed to set spellcheck languages, falling back to single-locale: " + mapped1[0]);
-              self.applyLocale(mapped1[0]);
-            }
-          });
-        }
-      }
-    } else {
-      let str = ", ";
-      let _HermesInternal = HermesInternal;
-      let str2 = "No spellcheck languages resolved from candidates: ";
-      logger.info("No spellcheck languages resolved from candidates: " + items.join(", "));
-    }
-  }
-  buildLanguageIndex(items) {
-    obj = {};
-    const item = items.forEach((item) => {
-      const first = _slicedToArray(item.split("-"), 1)[0];
-      let tmp3 = obj[first];
-      if (tmp3 == null) {
-        tmp3 = item;
-      }
-      obj[first] = tmp3;
-    });
-    return obj;
-  }
 }
 const prototype = Spellchecker.prototype;
 Object.defineProperty(prototype, "enabled", {
   get: function enabled() {
     return this._enabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "enabled", {
   get: undefined,
   set: function enabled(_enabled) {
     this._enabled = _enabled;
-  }
+  },
 });
 Object.defineProperty(prototype, "usesMultilang", {
   get: function usesMultilang() {
     return this.useMultilang;
   },
-  set: undefined
+  set: undefined,
 });
-let closure_9 = module_12.debounce((detectLanguage, hasAttribute) => {
+prototype["setLearnedWords"] = function setLearnedWords(arg0) {
+  spellCheck.setLearnedWords(arg0);
+};
+prototype["setAppLocale"] = function setAppLocale(locale) {
+  const self = this;
+  if (this.useMultilang) {
+    self.applyLanguages(locale);
+  } else {
+    self.regionPreference = locale.split("-")[1];
+  }
+};
+prototype["detectLanguage"] = function detectLanguage(textContent) {
+  const self = this;
+  const useMultilang = this.useMultilang;
+  let enabled = !useMultilang;
+  if (!useMultilang) {
+    enabled = self.enabled;
+  }
+  if (enabled) {
+    const languageDetector = self.languageDetector;
+    if (languageDetector != null) {
+      languageDetector.process(textContent);
+    }
+  }
+};
+prototype["isMisspelled"] = function isMisspelled(arg0) {
+  let tmp2 = "" !== this.misspelledWord;
+  if (tmp2) {
+    tmp2 = arg0 === tmp.misspelledWord;
+  }
+  return tmp2;
+};
+prototype["getCorrectionsForMisspelling"] = function getCorrectionsForMisspelling(arg0, arg1) {
+  return this.isMisspelled(arg0, arg1) ? this.corrections : [];
+};
+prototype["getCachedMisspelling"] = function getCachedMisspelling() {
+  return { misspelledWord: this.misspelledWord, corrections: this.corrections };
+};
+prototype["replaceMisspelling"] = function replaceMisspelling(arg0) {
+  spellCheck.replaceMisspelling(arg0);
+};
+prototype["applyLocale"] = function applyLocale(mapped1) {
+  closure_0 = mapped1;
+  const setLocaleResult = spellCheck.setLocale(mapped1);
+  if (setLocaleResult != null) {
+    setLocaleResult.then((result) => {
+      let str = "(unavailable)";
+      const combined = "Switching to " + closure_0;
+      if (result) {
+        str = "(available)";
+      }
+      logger.info(combined, str);
+    });
+  }
+};
+prototype["applyLanguages"] = function applyLanguages(locale) {
+  const self = this;
+  const items = [locale, ...navigator.languages];
+  const mapped = items.map((item) => {
+    let str = "nb";
+    if ("no" !== item) {
+      str = item;
+    }
+    let str2 = fallbackLocalesDefault[str];
+    if (str2 == null) {
+      str2 = str;
+    }
+    const parsed = _mod5959.parse(str2.replace(/[_-]/g, "-"));
+    if (null != parsed) {
+      if (null != parsed.langtag.language) {
+        if (null != parsed.langtag.region) {
+          const langtag = parsed.langtag;
+          const formatted = langtag.language.language.toLowerCase();
+          const _HermesInternal = HermesInternal;
+          const combined = "" + formatted + "-" + langtag.region.toUpperCase();
+        }
+        if (null != combined) {
+          const availableLocales = self.availableLocales;
+          if (availableLocales.includes(combined)) {
+            return combined;
+          }
+        }
+        const str7 = _slicedToArray(item.replace(/_/g, "-").split("-"), 1)[0];
+        let tmp10 = self.availableLanguagesByLanguage[str7.toLowerCase(str7)];
+        if (tmp10 == null) {
+          tmp10 = null;
+        }
+        return tmp10;
+      }
+    }
+    logger.error("" + str2 + " is not a valid locale.");
+  });
+  const arr = Array.from(new Set(mapped.filter(mapped1(1375).isNotNullish)));
+  if (0 !== arr.length) {
+    mapped1 = arr.map((item) => {
+      let tmp = self.rawLocaleByNormalized[item];
+      if (tmp == null) {
+        tmp = item;
+      }
+      return tmp;
+    });
+    if (null == spellCheck.setSpellCheckerLanguages) {
+      let _HermesInternal2 = HermesInternal;
+      logger.info("setSpellCheckerLanguages unavailable, falling back to single-locale: " + mapped1[0]);
+      self.applyLocale(mapped1[0]);
+    } else {
+      const result = spellCheck.setSpellCheckerLanguages(mapped1);
+      if (result != null) {
+        result.then((result) => {
+          const info = logger.info;
+          if (result) {
+            const _HermesInternal2 = HermesInternal;
+            info("Spellcheck languages: " + mapped1.join(", "), "(applied)");
+          } else {
+            const _HermesInternal = HermesInternal;
+            info("Failed to set spellcheck languages, falling back to single-locale: " + mapped1[0]);
+            self.applyLocale(mapped1[0]);
+          }
+        });
+      }
+    }
+  } else {
+    let _HermesInternal = HermesInternal;
+    logger.info("No spellcheck languages resolved from candidates: " + items.join(", "));
+  }
+  const set = new Set(mapped.filter(mapped1(1375).isNotNullish));
+};
+prototype["buildLanguageIndex"] = function buildLanguageIndex(items) {
+  const obj = {};
+  const item = items.forEach((item) => {
+    const first = _slicedToArray(item.split("-"), 1)[0];
+    let tmp3 = obj[first];
+    if (tmp3 == null) {
+      tmp3 = item;
+    }
+    obj[first] = tmp3;
+  });
+  return obj;
+};
+let closure_9 = apply.debounce((detectLanguage, hasAttribute) => {
   let textContent = null;
   if (null != hasAttribute) {
-    obj = DOMUtils;
     if (!obj.isElement(hasAttribute, globalThis.HTMLInputElement)) {
-      const tmp2Result = DOMUtils;
       if (!tmp2Result.isElement(hasAttribute, globalThis.HTMLTextAreaElement)) {
-        const tmp2Result2 = DOMUtils;
         if (tmp2Result2.isElement(hasAttribute)) {
           if (hasAttribute.hasAttribute("contenteditable")) {
             textContent = hasAttribute.textContent;
           }
         }
+        tmp2Result2 = DOMUtils;
       }
+      tmp2Result = DOMUtils;
     }
     textContent = hasAttribute.value;
+    obj = DOMUtils;
   }
   if (null != textContent) {
     detectLanguage.detectLanguage(textContent);
   }
 }, 250);
+const size = fn(2);
 let result = size.fileFinishedImporting("lib/spellcheck/Spellchecker.tsx");
 
 export { Spellchecker };
 export const install = function install() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

@@ -1,9 +1,9 @@
 // discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { ELIGIBLE_FOR_ATTEMPTS: new Set([2, 5, 9]), ELIGIBLE_FOR_FULFILLMENT: new Set([2, 9]) };
-new Set([2, 5, 9]);
-new Set([2, 9]);
+const obj = { ELIGIBLE_FOR_ATTEMPTS: new Set([2, 5, 9]), ELIGIBLE_FOR_FULFILLMENT: null };
+const set = new Set([2, 5, 9]);
+obj.ELIGIBLE_FOR_FULFILLMENT = new Set([2, 9]);
 const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx",
 );

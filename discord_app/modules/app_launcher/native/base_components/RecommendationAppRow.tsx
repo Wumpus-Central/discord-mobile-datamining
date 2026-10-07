@@ -1,37 +1,31 @@
 // discord_app/modules/app_launcher/native/base_components/RecommendationAppRow.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import AppLauncherHomeScreen from "../screens/home/AppLauncherHomeScreen.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let application;
-      let isFirstRow;
-      let isLastRow;
-      let onPress;
-      let showsPromoted;
-      const obj = react2;
-      const cResult = obj.c(11);
+      const cResult = c.c(11);
       ({ application, onPress, isFirstRow, isLastRow, showsPromoted } = arg0);
       if (cResult[0] === application.bot) {
         if (cResult[1] === application.icon) {
-          let tmp7;
           if (cResult[2] === application.id) {
-            tmp7 = cResult[3];
+            let tmp7 = cResult[3];
           }
           if (cResult[4] === application) {
             if (cResult[5] === tmp7) {
-              if (cResult[6] === (undefined !== isFirstRow && isFirstRow)) {
-                if (cResult[7] === (undefined !== isLastRow && isLastRow)) {
+              if (cResult[6] === tmp4) {
+                if (cResult[7] === tmp5) {
                   if (cResult[8] === onPress) {
-                    let tmp9;
-                    if (cResult[9] === (undefined !== showsPromoted && showsPromoted)) {
-                      tmp9 = cResult[10];
+                    if (cResult[9] === tmp6) {
+                      let tmp9 = cResult[10];
                     }
                     return tmp9;
                   }
@@ -39,38 +33,47 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
+          const obj3 = {
+            application,
+            iconSource: tmp7,
+            onPress,
+            isFirstRow: tmp4,
+            isLastRow: tmp5,
+            showsPromoted: tmp6,
+          };
           const tmp11 = jsx(AppLauncherHomeScreen.BaseAppRow, {
             application,
             iconSource: tmp7,
             onPress,
-            isFirstRow: undefined !== isFirstRow && isFirstRow,
-            isLastRow: undefined !== isLastRow && isLastRow,
-            showsPromoted: undefined !== showsPromoted && showsPromoted,
+            isFirstRow: tmp4,
+            isLastRow: tmp5,
+            showsPromoted: tmp6,
           });
           cResult[4] = application;
           cResult[5] = tmp7;
-          cResult[6] = undefined !== isFirstRow && isFirstRow;
-          cResult[7] = undefined !== isLastRow && isLastRow;
+          cResult[6] = tmp4;
+          cResult[7] = tmp5;
           cResult[8] = onPress;
-          cResult[9] = undefined !== showsPromoted && showsPromoted;
+          cResult[9] = tmp6;
           cResult[10] = tmp11;
           tmp9 = tmp11;
         }
       }
-      const obj2 = AvatarUtilsDefault;
-      const obj4 = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
-      const applicationIconSource = obj2.getApplicationIconSource(obj4);
+      const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({
+        id: application.id,
+        icon: application.icon,
+        bot: application.bot,
+        botIconFirst: true,
+      });
       cResult[0] = application.bot;
       cResult[1] = application.icon;
       cResult[2] = application.id;
       cResult[3] = applicationIconSource;
       tmp7 = applicationIconSource;
+      const obj4 = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
     }
   : (onPress) => {
-      let application;
-      let isFirstRow;
       ({ application, isFirstRow } = onPress);
-      onPress = onPress.onPress;
       if (isFirstRow === undefined) {
         isFirstRow = false;
       }
@@ -82,18 +85,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (showsPromoted === undefined) {
         showsPromoted = false;
       }
-      const obj = AvatarUtilsDefault;
-      const obj2 = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
-      const iconSource = obj.getApplicationIconSource(obj2);
+      const iconSource = AvatarUtilsDefault.getApplicationIconSource({
+        id: application.id,
+        icon: application.icon,
+        bot: application.bot,
+        botIconFirst: true,
+      });
       return jsx(AppLauncherHomeScreen.BaseAppRow, {
         application,
         iconSource,
-        onPress,
+        onPress: onPress.onPress,
         isFirstRow,
         isLastRow,
         showsPromoted,
       });
     };
-const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
-
-export default tmp3;

@@ -5,9 +5,6 @@ import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
-let hasOwnProperty;
 ({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
 let result = size.fileFinishedImporting("modules/messages/canEditMessage.tsx");
 
@@ -18,24 +15,23 @@ export default function canEditMessage(author, id) {
     if (tmp3) {
       let tmp5 = author.state === constants2.SENT;
       if (tmp5) {
-        let tmp9 = !isSystemMessageDefault(author);
-        isSystemMessageDefault(author);
-        if (tmp9) {
-          const obj = MessageRecordUtils;
-          let result = obj.canEditMessageWithStickers(author);
+        const tmp8 = isSystemMessageDefault(author);
+        let tmp9 = !tmp8;
+        if (!tmp8) {
+          let result = MessageRecordUtils.canEditMessageWithStickers(author);
           if (result) {
-            let tmp14 = !author.hasFlag(constants.IS_VOICE_MESSAGE);
-            author.hasFlag(constants.IS_VOICE_MESSAGE);
-            if (tmp14) {
+            const hasFlagResult = author.hasFlag(constants.IS_VOICE_MESSAGE);
+            let tmp14 = !hasFlagResult;
+            if (!hasFlagResult) {
               let tmp15 = null == author.referralTrialOfferId;
               if (tmp15) {
-                let tmp17 = !author.isPoll();
-                author.isPoll();
-                if (tmp17) {
-                  let tmp19 = !isForwardMessageDefault(author);
-                  isForwardMessageDefault(author);
-                  if (tmp19) {
-                    tmp19 = author.type !== hasOwnProperty.MEDIA_MENTION_MESSAGE;
+                const isPollResult = author.isPoll();
+                let tmp17 = !isPollResult;
+                if (!isPollResult) {
+                  const tmp18 = isForwardMessageDefault(author);
+                  let tmp19 = !tmp18;
+                  if (!tmp18) {
+                    tmp19 = author.type !== constants3.MEDIA_MENTION_MESSAGE;
                   }
                   tmp17 = tmp19;
                 }

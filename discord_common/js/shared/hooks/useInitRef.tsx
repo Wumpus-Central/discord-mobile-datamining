@@ -1,8 +1,8 @@
 // discord_common/js/shared/hooks/useInitRef.tsx
-import react from "../../../../_runtime/00019_react.js";
+import _mod19 from "../../../../_runtime/metro/00019__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const useRef = react.useRef;
+const useRef = _mod19.useRef;
 const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useInitRef.tsx");
 
 export default function useInitRef(fn) {

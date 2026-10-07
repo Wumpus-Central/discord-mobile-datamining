@@ -1,17 +1,12 @@
 // discord_app/modules/user_profile/native/UserProfileActivityCardBadges.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../Constants.tsx";
 import UserProfileActivityBadges from "UserProfileActivityBadges.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
+require = fn;
 function getActivityBadges(activity) {
-  let items3;
   if (activity.type === ActivityTypes.PLAYING) {
     const items = [UserProfileActivityBadges.PartyBadge, UserProfileActivityBadges.TimestampBadge];
-    items3 = items;
+    let items3 = items;
   } else if (activity.type === ActivityTypes.LISTENING) {
     const items1 = [UserProfileActivityBadges.TimestampBadge];
     items3 = items1;
@@ -23,53 +18,49 @@ function getActivityBadges(activity) {
   }
   return items3;
 }
-const View = react_native.View;
-const ActivityTypes = Constants.ActivityTypes;
-const jsx = Fragment.jsx;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const View = fn(17).View;
+const ActivityTypes = fn(1085).ActivityTypes;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (activity) => {
-      const obj = activity(576);
-      const cResult = obj.c(12);
+      const cResult = activity(576).c(12);
       activity = activity.activity;
       const style = activity.style;
       if (cResult[0] === activity) {
-        let tmp2;
-        let tmp3;
-        let tmp4;
-        let tmp5;
         if (cResult[1] === style) {
-          tmp2 = cResult[2];
-          tmp3 = cResult[3];
-          tmp4 = cResult[4];
-          tmp5 = cResult[5];
+          let tmp5 = cResult[5];
         }
         const _Symbol = Symbol;
-        if (tmp5 === Symbol.for("react.early_return_sentinel")) {
+        if (tmp5 !== Symbol.for("react.early_return_sentinel")) {
+          return tmp5;
+        } else {
           if (cResult[8] === tmp2) {
             if (cResult[9] === tmp3) {
-              let tmp14;
-              if (cResult[10] === tmp4) {
-                tmp14 = cResult[11];
-              }
-              tmp5 = tmp14;
             }
           }
+          const obj2 = { style: tmp3, children: tmp4 };
           const tmp16 = <tmp2 style={tmp3}>{tmp4}</tmp2>;
           cResult[8] = tmp2;
           cResult[9] = tmp3;
           cResult[10] = tmp4;
           cResult[11] = tmp16;
-          tmp14 = tmp16;
         }
-        return tmp5;
       }
-      const forResult = Symbol.for("react.early_return_sentinel");
+      const obj = activity(576);
       const arr = getActivityBadges(activity);
-      let tmp7 = null;
-      let mapped;
-      let tmp9;
-      let tmp10;
-      if (0 !== arr.length) {
+      if (0 === arr.length) {
+        cResult[0] = activity;
+        cResult[1] = style;
+        cResult[2] = undefined;
+        cResult[3] = undefined;
+        cResult[4] = undefined;
+        cResult[5] = null;
+        tmp5 = null;
+      } else {
         if (cResult[6] !== activity) {
           class B {
             constructor(arg0, arg1) {
@@ -87,30 +78,21 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        mapped = arr.map(B);
-        tmp7 = forResult;
-        tmp9 = style;
-        tmp10 = View;
+        const mapped = arr.map(B);
       }
-      cResult[0] = activity;
-      cResult[1] = style;
-      cResult[2] = tmp10;
-      cResult[3] = tmp9;
-      cResult[4] = mapped;
-      cResult[5] = tmp7;
-      tmp5 = tmp7;
-      tmp4 = mapped;
-      tmp3 = tmp9;
-      tmp2 = tmp10;
+      const forResult = Symbol.for("react.early_return_sentinel");
     }
   : (activity) => {
       activity = activity.activity;
-      const style = activity.style;
       const arr = getActivityBadges(activity);
       let tmp = null;
       if (0 !== arr.length) {
+        const obj = {
+          style: activity.style,
+          children: arr.map((item, index) => <item key={index} activity={activity} />),
+        };
         tmp = (
-          <View style={style}>
+          <View style={activity.style}>
             {arr.map((item, index) => (
               <item key={index} activity={activity} />
             ))}
@@ -119,6 +101,3 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp;
     };
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
-
-export default tmp3;

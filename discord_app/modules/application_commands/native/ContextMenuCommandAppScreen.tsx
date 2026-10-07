@@ -1,25 +1,20 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandAppScreen.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let obj2;
-const jsx = Fragment.jsx;
-let obj = { list: obj2 };
-obj2 = { marginHorizontal: nativeDefault.space.PX_16 };
-let closure_5 = createStyles.createStyles(obj);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { list: { marginHorizontal: nativeDefault.space.PX_16 } };
+let closure_5 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (route) => {
-      let first;
-      let onPressCommand;
-      let section;
-      let tmp6;
-      const tmp = onPressCommand;
-      const obj = section(onPressCommand[5]);
-      const cResult = obj.c(13);
+      const cResult = section(onPressCommand[5]).c(13);
       const params = route.route.params;
       section = params.section;
       const commands = params.commands;
@@ -27,41 +22,46 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { includeKeyboardHeight: true };
         cResult[0] = obj2;
-        first = obj2;
+        let first = obj2;
       } else {
         first = cResult[0];
       }
       const insets = commands(tmp[6])(first).insets;
-      const tmp5 = commands(tmp[7])();
-      const tmp4 = commands;
+      const tmp5 = commands(onPressCommand[7])();
       if (cResult[1] !== commands.length) {
         const items = [commands.length];
         cResult[1] = commands.length;
         cResult[2] = items;
-        tmp6 = items;
+        let tmp6 = items;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] === commands) {
         if (cResult[4] === onPressCommand) {
-          let tmp7;
           if (cResult[5] === section) {
-            tmp7 = cResult[6];
+            let tmp7 = cResult[6];
           }
           const tmp9 = closure_5();
           if (cResult[7] === insets.bottom) {
             if (cResult[8] === tmp5) {
               if (cResult[9] === tmp6) {
                 if (cResult[10] === tmp7) {
-                  let tmp10;
                   if (cResult[11] === tmp9.list) {
-                    tmp10 = cResult[12];
+                    let tmp10 = cResult[12];
                   }
                   return tmp10;
                 }
               }
             }
           }
+          const obj3 = {
+            style: tmp9.list,
+            sections: tmp6,
+            estimatedListSize: "windowSize",
+            itemSize: tmp5,
+            insetEnd: insets.bottom,
+            renderItem: tmp7,
+          };
           const tmp12 = jsx(tmp4(tmp[9]), {
             style: tmp9.list,
             sections: tmp6,
@@ -80,7 +80,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function _(arg0, arg1) {
-        let closure_0;
         section = tmp;
         const diff = commands.length - 1;
         return jsx(
@@ -102,22 +101,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = section;
       cResult[6] = fn;
       tmp7 = fn;
+      const obj = section(onPressCommand[5]);
+      tmp4 = commands;
     }
   : (route) => {
       const params = route.route.params;
       let section = params.section;
       const commands = params.commands;
       const onPressCommand = params.onPressCommand;
-      const insets = commands(onPressCommand[6])({ includeKeyboardHeight: true }).insets;
       let items = [commands.length];
-      const tmp = commands(onPressCommand[7])();
       const items1 = [commands, onPressCommand, section];
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         const items = [commands.length];
         return items;
       }, items);
-      const callback = react.useCallback((arg0, arg1) => {
-        let closure_0;
+      const callback = noop.useCallback((arg0, arg1) => {
         section = tmp;
         const diff = commands.length - 1;
         return jsx(
@@ -134,16 +132,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           commands[arg1].id,
         );
       }, items1);
-      closure_5();
+      const tmp = commands(onPressCommand[7])();
+      const tmp4 = closure_5();
       return jsx(commands(onPressCommand[9]), {
         style: closure_5().list,
         sections: memo,
         estimatedListSize: "windowSize",
         itemSize: tmp,
-        insetEnd: insets.bottom,
+        insetEnd: commands(onPressCommand[6])({ includeKeyboardHeight: true }).insets.bottom,
         renderItem: callback,
       });
     };
-const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
-
-export default tmp2;

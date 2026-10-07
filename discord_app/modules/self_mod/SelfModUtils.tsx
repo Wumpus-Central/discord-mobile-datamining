@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/SelfModUtils.tsx
 import UserStore from "../../stores/UserStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
 
 export const isCurrentUserTeen = function isCurrentUserTeen() {

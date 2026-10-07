@@ -1,8 +1,8 @@
 // discord_app/modules/debug/native/AppCrashedFatalReport.android.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const CrashReportingManager = react_native.NativeModules.CrashReportingManager;
+const CrashReportingManager = _mod17.NativeModules.CrashReportingManager;
 const result = size.fileFinishedImporting("modules/debug/native/AppCrashedFatalReport.android.tsx");
 
 export const init = function init() {

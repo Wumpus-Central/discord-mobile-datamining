@@ -1,43 +1,15 @@
 // discord_app/modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx
 import _modDef12 from "../../../../../_runtime/metro/00012__.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import FunctionUtils from "../../../../utils/FunctionUtils.tsx";
 import UnicodeEmojisDefault from "../../../emojis/UnicodeEmojis.tsx";
-import EmojiPickerListConstants from "EmojiPickerListConstants.tsx";
 import EmojiPickerUtils from "../../EmojiPickerUtils.tsx";
 import age_gate_AgeGateUtils from "../../../age_gate/native/AgeGateUtils.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import EmojiPickerConstants from "../../EmojiPickerConstants.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let set, set2;
-
-let hasOwnProperty;
-let metroRequire;
+require = fn;
 function _computeCategories(arg0) {
-  let categories;
-  let emojis;
-  let emojis2;
-  let emojisDisabled;
-  let emojisHidden;
-  let guild;
-  let isNativeEmojiPickerEnabled;
-  let items1;
-  let num;
-  let obj10;
-  let obj13;
-  let obj19;
-  let obj3;
-  let obj38;
-  let obj39;
-  let obj5;
-  let obj8;
-  let rowSize;
-  let set1;
-  let tmp58Result;
-  let tmp58Result2;
   ({ categories, rowSize, isNativeEmojiPickerEnabled } = arg0);
   const items = [];
   const iter = categories[Symbol.iterator]();
@@ -45,132 +17,147 @@ function _computeCategories(arg0) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     let type = nextResult.type;
-    if (metroRequire.TOP_GUILD_EMOJI === type) {
+    if (constants2.TOP_GUILD_EMOJI === type) {
       let emojis1 = tmp2.emojis;
-      let obj2 = { emojiSections: items, renderingData: obj3, rowSize };
-      obj3 = {
+      let obj2 = { emojiSections: items, renderingData: null, rowSize: null };
+      let obj3 = {
         type: constants3.EMOJI,
         emojis: emojis1.slice(0, rowSize),
         emojisDisabled: null,
         label: null,
-        footer: metroRequire.TOP_GUILD_EMOJI,
+        footer: null,
       };
       ({ emojisDisabled: obj20.emojisDisabled, name: obj20.label } = tmp2);
-      let tmp57 = pushCategory(obj2);
-    } else if (metroRequire.FAVORITES === type) {
-      let obj4 = { emojiSections: items, renderingData: obj5, rowSize };
-      obj5 = {
-        type: constants3.EMOJI,
-        emojis: null,
-        emojisDisabled: null,
-        label: null,
-        footer: metroRequire.FAVORITES,
-      };
+      obj3.footer = constants2.TOP_GUILD_EMOJI;
+      obj2.renderingData = obj3;
+      obj2.rowSize = rowSize;
+      let tmp63 = pushCategory(obj2);
+    } else if (constants2.FAVORITES === type) {
+      let obj4 = { emojiSections: items, renderingData: null, rowSize: null };
+      let obj5 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null };
       ({ emojis: obj18.emojis, emojisDisabled: obj18.emojisDisabled, name: obj18.label } = tmp2);
-      let tmp53 = pushCategory(obj4);
-    } else if (metroRequire.SUGGESTED === type) {
-      let obj6 = { emojiSections: items, renderingData: obj8, rowSize };
-      obj8 = {
-        type: constants3.EMOJI,
-        emojis: emojis2.slice(0, rowSize),
-        emojisDisabled: null,
-        label: null,
-        footer: metroRequire.SUGGESTED,
-      };
-      emojis2 = tmp2.emojis;
+      obj5.footer = constants2.FAVORITES;
+      obj4.renderingData = obj5;
+      obj4.rowSize = rowSize;
+      let tmp59 = pushCategory(obj4);
+    } else if (constants2.SUGGESTED === type) {
+      let obj6 = { emojiSections: items, renderingData: null, rowSize: null };
+      let obj8 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null };
+      let emojis2 = tmp2.emojis;
+      obj8.emojis = emojis2.slice(0, rowSize);
       ({ emojisDisabled: obj16.emojisDisabled, name: obj16.label } = tmp2);
-      let tmp49 = pushCategory(obj6);
-    } else if (metroRequire.RECENT === type) {
-      let obj9 = { emojiSections: items, renderingData: obj10, rowSize };
-      obj10 = { type: constants3.EMOJI, emojisDisabled: null, emojis: null, label: null, footer: metroRequire.RECENT };
+      obj8.footer = constants2.SUGGESTED;
+      obj6.renderingData = obj8;
+      obj6.rowSize = rowSize;
+      let tmp55 = pushCategory(obj6);
+    } else if (constants2.RECENT === type) {
+      let obj9 = { emojiSections: items, renderingData: null, rowSize: null };
+      let obj10 = { type: constants3.EMOJI, emojisDisabled: null, emojis: null, label: null, footer: null };
       ({ emojisDisabled: obj14.emojisDisabled, emojis: obj14.emojis, name: obj14.label } = tmp2);
-      let tmp45 = pushCategory(obj9);
-    } else if (metroRequire.GUILD === type) {
+      obj10.footer = constants2.RECENT;
+      obj9.renderingData = obj10;
+      obj9.rowSize = rowSize;
+      let tmp51 = pushCategory(obj9);
+    } else if (constants2.GUILD === type) {
       ({ guild, emojis, emojisDisabled, emojisHidden } = tmp2);
       if (isNativeEmojiPickerEnabled) {
-        let obj11 = { emojiSections: items, renderingData: obj13 };
-        obj13 = {
+        let obj11 = { emojiSections: items, renderingData: null };
+        let obj13 = {
           type: constants3.NATIVE_SECTION,
           label: null,
           guildId: null,
-          emojiCount: emojis.length,
-          emojisDisabled,
-          emojisHidden,
-          isSectionNitroLocked: tmp2.isNitroLocked,
+          emojiCount: null,
+          emojisDisabled: null,
+          emojisHidden: null,
+          isSectionNitroLocked: null,
         };
         ({ name: obj12.label, id: obj12.guildId } = guild);
-        let tmp41 = pushNativeCategory(obj11);
+        obj13.emojiCount = emojis.length;
+        obj13.emojisDisabled = emojisDisabled;
+        obj13.emojisHidden = emojisHidden;
+        obj13.isSectionNitroLocked = tmp2.isNitroLocked;
+        obj11.renderingData = obj13;
+        let tmp47 = pushNativeCategory(obj11);
       } else {
         let obj7 = age_gate_AgeGateUtils;
         if (obj7.shouldNSFWGateGuild(guild.id)) {
           let obj15 = {
             type: constants3.NSFW,
             label: guild.name,
-            footer: metroRequire.GUILD,
+            footer: constants2.GUILD,
             emojis: [],
-            isSectionNitroLocked: tmp2.isNitroLocked,
+            isSectionNitroLocked: null,
           };
+          obj15.isSectionNitroLocked = tmp2.isNitroLocked;
           let arr = items.push(obj15);
         } else {
-          let obj17 = { emojiSections: items, renderingData: obj19, rowSize };
-          obj19 = {
+          let obj17 = { emojiSections: items, renderingData: null, rowSize: null };
+          let obj19 = {
             type: constants3.EMOJI,
             emojis,
             emojisDisabled,
             label: guild.name,
-            footer: metroRequire.GUILD,
-            isSectionNitroLocked: tmp2.isNitroLocked,
+            footer: constants2.GUILD,
+            isSectionNitroLocked: null,
           };
-          let tmp29 = pushCategory(obj17);
+          obj19.isSectionNitroLocked = tmp2.isNitroLocked;
+          obj17.renderingData = obj19;
+          obj17.rowSize = rowSize;
+          let tmp35 = pushCategory(obj17);
         }
       }
-    } else if (metroRequire.UNICODE === type) {
+    } else if (constants2.UNICODE === type) {
       let obj21 = UnicodeEmojisDefault;
       let byCategory = obj21.getByCategory(tmp2.name);
       if (isNativeEmojiPickerEnabled) {
-        let obj37 = { emojiSections: items, renderingData: obj38 };
-        obj38 = {
+        let obj37 = { emojiSections: items, renderingData: null };
+        let obj38 = {
           type: constants3.NATIVE_SECTION,
-          label: tmp58Result.capitalize(tmp2.name),
-          emojiCount: num,
-          emojisDisabled: set,
-          emojisHidden: set1,
+          label: null,
+          emojiCount: null,
+          emojisDisabled: null,
+          emojisHidden: null,
         };
-        tmp58Result = _modDef12;
-        num = undefined;
+        let tmp64Result = _modDef12;
+        obj38.label = tmp64Result.capitalize(tmp2.name);
+        let num;
         if (byCategory != null) {
           num = byCategory.length;
         }
         if (num == null) {
           num = 0;
         }
+        obj38.emojiCount = num;
         let _Set2 = Set;
-        let self3 = this;
-        let self4 = this;
-        set = new Set();
+        let tmp16 = new.target;
+        let tmp17 = new.target;
+        let set = new Set();
+        obj38.emojisDisabled = set;
         let _Set3 = Set;
-        let self5 = this;
-        let self6 = this;
-        set1 = new Set();
-        let tmp10Result = pushNativeCategory(obj37);
+        let tmp20 = new.target;
+        let tmp21 = new.target;
+        let set1 = new Set();
+        obj38.emojisHidden = set1;
+        obj37.renderingData = obj38;
+        let tmp12Result = pushNativeCategory(obj37);
       } else {
-        let obj = { emojiSections: items, renderingData: obj39, rowSize };
-        obj39 = {
-          type: constants3.EMOJI,
-          emojis: items1,
-          emojisDisabled: set2,
-          label: tmp58Result2.capitalize(tmp2.name),
-          footer: metroRequire.UNICODE,
-        };
-        items1 = byCategory;
+        let obj = { emojiSections: items, renderingData: null, rowSize: null };
+        let obj39 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: null, footer: null };
+        let items1 = byCategory;
         if (byCategory == null) {
           items1 = [];
         }
+        obj39.emojis = items1;
         let _Set = Set;
-        let self = this;
-        let self2 = this;
-        set2 = new Set();
-        tmp58Result2 = _modDef12;
+        let tmp6 = new.target;
+        let tmp7 = new.target;
+        let set2 = new Set();
+        obj39.emojisDisabled = set2;
+        let tmp64Result2 = _modDef12;
+        obj39.label = tmp64Result2.capitalize(tmp2.name);
+        obj39.footer = constants2.UNICODE;
+        obj.renderingData = obj39;
+        obj.rowSize = rowSize;
         let tmp4Result = pushCategory(obj);
       }
     }
@@ -179,14 +166,6 @@ function _computeCategories(arg0) {
   return items;
 }
 function _computeSearchResults(emojis) {
-  let limit;
-  let locked;
-  let obj2;
-  let obj4;
-  let obj6;
-  let rowSize;
-  let substr;
-  let unlocked;
   ({ locked, unlocked } = emojis.emojis);
   ({ rowSize, limit } = emojis);
   if (limit === undefined) {
@@ -194,19 +173,17 @@ function _computeSearchResults(emojis) {
     limit = Number.MAX_SAFE_INTEGER;
   }
   const items = [];
-  const obj = { emojiSections: items, renderingData: obj2, rowSize };
-  obj2 = {
-    type: constants3.EMOJI,
-    emojis: substr,
-    emojisDisabled: new Set(),
-    label: "",
-    footer: metroRequire.SEARCH_RESULTS,
-  };
-  substr = unlocked;
+  const obj = { emojiSections: items, renderingData: null, rowSize: null };
+  const obj2 = { type: constants3.EMOJI, emojis: null, emojisDisabled: null, label: "", footer: null };
+  let substr = unlocked;
   if (unlocked.length > limit) {
     substr = unlocked.slice(0, limit);
   }
-  new Set();
+  obj2.emojis = substr;
+  obj2.emojisDisabled = new Set();
+  obj2.footer = constants2.SEARCH_RESULTS;
+  obj.renderingData = obj2;
+  obj.rowSize = rowSize;
   pushCategory(obj);
   let substr1 = locked;
   if (locked.length > limit) {
@@ -221,21 +198,22 @@ function _computeSearchResults(emojis) {
     }
     continue;
   }
-  const obj3 = { emojiSections: items, renderingData: obj4, rowSize };
-  obj4 = {
-    type: constants3.EMOJI,
-    emojis: substr1,
-    emojisDisabled: set1,
-    label: obj6.getStringForEmojiCategory(hasOwnProperty.PREMIUM_UPSELL),
-    footer: metroRequire.PREMIUM_UPSELL,
-  };
-  obj6 = EmojiPickerUtils;
+  const obj3 = { emojiSections: items, renderingData: null, rowSize: null };
+  const obj4 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
+  const set = new Set();
+  obj4.label = EmojiPickerUtils.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
+  obj4.footer = constants2.PREMIUM_UPSELL;
+  obj3.renderingData = obj4;
+  obj3.rowSize = rowSize;
   pushCategory(obj3);
   return items;
 }
 function pushCategory(renderingData) {
   const emojis = renderingData.renderingData.emojis;
-  const tmp = null != emojis && 0 !== emojis.length;
+  let tmp = null != emojis;
+  if (tmp) {
+    tmp = 0 !== emojis.length;
+  }
   if (tmp) {
     const emojiSections = renderingData.emojiSections;
     emojiSections.push(renderingData.renderingData);
@@ -245,47 +223,41 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
+const EmojiPickerConstants = fn(5649);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: metroRequire } = EmojiPickerConstants);
-const constants3 = EmojiPickerListConstants.EmojiPickerRenderingDataType;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const constants3 = fn(9882).EmojiPickerRenderingDataType;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          let obj2;
-          let obj3;
           const obj = {
-            computeCategories: obj2.cachedFunction(_computeCategories),
-            computeSearchResults: obj3.cachedFunction(_computeSearchResults),
+            computeCategories: FunctionUtils.cachedFunction(_computeCategories),
+            computeSearchResults: null,
           };
-          obj2 = FunctionUtils;
-          obj3 = FunctionUtils;
+          obj.computeSearchResults = FunctionUtils.cachedFunction(_computeSearchResults);
           return obj;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
-      return _slicedToArray(react.useState(first), 1)[0];
+      return _slicedToArray(noop.useState(first), 1)[0];
     }
   : () =>
       _slicedToArray(
-        react.useState(() => {
-          let obj2;
-          let obj3;
+        noop.useState(() => {
           const obj = {
-            computeCategories: obj2.cachedFunction(_computeCategories),
-            computeSearchResults: obj3.cachedFunction(_computeSearchResults),
+            computeCategories: FunctionUtils.cachedFunction(_computeCategories),
+            computeSearchResults: null,
           };
-          obj2 = FunctionUtils;
-          obj3 = FunctionUtils;
+          obj.computeSearchResults = FunctionUtils.cachedFunction(_computeSearchResults);
           return obj;
         }),
         1,
       )[0];
-const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
-
-export default tmp3;

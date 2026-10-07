@@ -3,15 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj2;
 if (MetaQuestUtils.isMetaQuest()) {
-  obj2 = {
-    slotHeight: 24,
-    barColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
-    barWidth: nativeDefault.space.PX_64,
-    barHeight: nativeDefault.space.PX_8,
-    barMarginTop: nativeDefault.space.PX_16,
-  };
   const obj = {
     slotHeight: 24,
     barColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
@@ -19,6 +11,7 @@ if (MetaQuestUtils.isMetaQuest()) {
     barHeight: nativeDefault.space.PX_8,
     barMarginTop: nativeDefault.space.PX_16,
   };
+  let obj2 = obj;
 } else {
   obj2 = {
     slotHeight: 16,
@@ -28,11 +21,10 @@ if (MetaQuestUtils.isMetaQuest()) {
     barMarginTop: nativeDefault.space.PX_4,
   };
 }
-const slotHeight = obj2.slotHeight;
 const result = size.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
 
 export const DRAG_HANDLE = obj2;
-export const HEADER_HANDLE_HEIGHT = slotHeight;
+export const HEADER_HANDLE_HEIGHT = obj2.slotHeight;
 export const MediaKeyboardTarget = {
   CHAT: 0,
   [0]: "CHAT",

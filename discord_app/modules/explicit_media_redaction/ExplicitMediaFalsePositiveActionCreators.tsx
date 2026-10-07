@@ -3,9 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function disableFalsePositiveButton(channelId, messageId) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT", messageId, channelId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT", messageId, channelId });
 }
 const result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/ExplicitMediaFalsePositiveActionCreators.tsx",

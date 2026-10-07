@@ -1,26 +1,15 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTeen.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let selectedTeenId;
-      let stateFromStores;
-      let tmp10;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      const tmp = stateFromStores;
-      const obj = stateFromStores(576);
-      const cResult = obj.c(5);
+      const cResult = stateFromStores(576).c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
         const fn = function s() {
@@ -33,12 +22,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = tmp(573);
-      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const obj = stateFromStores(576);
+      stateFromStores = stateFromStores(573).useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
         cResult[2] = items1;
-        tmp8 = items1;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[2];
       }
@@ -52,22 +41,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = stateFromStores;
         cResult[4] = fn2;
-        tmp10 = fn2;
+        let tmp10 = fn2;
       } else {
         tmp10 = cResult[4];
       }
-      const tmpResult2 = tmp(573);
-      return tmpResult2.useStateFromStores(tmp8, tmp10);
+      const tmpResult = stateFromStores(573);
+      return stateFromStores(573).useStateFromStores(tmp8, tmp10);
     }
   : () => {
-      let closure_0;
-      let selectedTeenId;
       const items = [FamilyCenterStore];
+      _require = require("useStateFromStores").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
       const obj = require("useStateFromStores");
-      _require = obj.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
       const items1 = [UserStore];
-      const obj2 = require("useStateFromStores");
-      return obj2.useStateFromStores(items1, () => {
+      return require("useStateFromStores").useStateFromStores(items1, () => {
         let user;
         if (null !== closure_0) {
           user = UserStore.getUser(tmp);
@@ -75,14 +61,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return user;
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
+
+export const useSelectedTeen = tmp2;
+export const useSelectedTeenId = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let selectedTeenId;
-      let tmp4;
-      let tmp5;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
         const fn = function n() {
@@ -95,16 +80,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = useStateFromStores;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
   : () => {
-      let selectedTeenId;
       const items = [FamilyCenterStore];
-      const obj = useStateFromStores;
-      return obj.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+      return useStateFromStores.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
     };
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
-
-export const useSelectedTeen = tmp2;
-export const useSelectedTeenId = tmp3;

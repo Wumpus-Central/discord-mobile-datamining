@@ -1,48 +1,42 @@
 // discord_app/stores/native/AppStateStore.tsx
-import react_native from "../../../_runtime/00017_react-native.js";
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import _mod17 from "../../../_runtime/metro/00017__.js";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
-import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const AppState = react_native.AppState;
 const AppStates = Constants.AppStates;
-let currentState = AppState.currentState;
+let state = _mod17.AppState.currentState;
 let closure_2 = null;
-const Store = get_initializedDefault.Store;
-class AppStateStore extends Store {
-  getState() {
-    return currentState;
-  }
-  getLastActiveTime() {
-    return closure_2;
-  }
-}
+const Store = initializeDefault.Store;
+class AppStateStore extends Store {}
 const prototype = AppStateStore.prototype;
+prototype["getState"] = function getState() {
+  return state;
+};
+prototype["getLastActiveTime"] = function getLastActiveTime() {
+  return closure_2;
+};
 AppStateStore.displayName = "AppStateStore";
-const promise = asyncRequire(1252, dependencyMap.paths);
-promise.then((addExtraAnalyticsDecorator) => {
-  let client_app_state;
+asyncRequireImpl(1252, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator((arg0) => {
     arg0.client_app_state = client_app_state;
   });
 });
-const obj = {
+const appStateStore = new AppStateStore(DispatcherDefault, {
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
-    if (currentState === state.state) {
+    if (state === state.state) {
       return false;
     } else {
       state = state.state;
-      currentState = state;
       if (state === AppStates.ACTIVE) {
         const _Date = Date;
         closure_2 = Date.now();
       }
     }
   },
-};
-const appStateStore = new AppStateStore(DispatcherDefault, obj);
+});
 let result = size.fileFinishedImporting("stores/native/AppStateStore.tsx");
 
 export default appStateStore;

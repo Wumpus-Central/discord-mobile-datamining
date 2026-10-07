@@ -2,7 +2,9 @@
 import size from "../../_runtime/metro/00002__.js";
 
 let c0 = "not supported";
-const obj = {
+const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
+
+export default {
   waitSubscribed() {
     return Promise.resolve();
   },
@@ -23,11 +25,11 @@ const obj = {
   },
   launch() {
     const error = new Error(c0);
-    return reject(error);
+    return Promise.reject(error);
   },
   launchDispatchApplication() {
     const error = new Error(c0);
-    return reject(error);
+    return Promise.reject(error);
   },
   removeShortcuts() {
     return Promise.resolve(false);
@@ -37,13 +39,10 @@ const obj = {
   },
   launchGame() {
     const error = new Error(c0);
-    return reject(error);
+    return Promise.reject(error);
   },
   isProtocolRegistered() {
     return Promise.resolve(false);
   },
   setRecentGames() {},
 };
-const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
-
-export default obj;

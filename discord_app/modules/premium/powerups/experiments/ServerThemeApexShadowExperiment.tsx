@@ -2,7 +2,7 @@
 import ApexExperiment from "../../../experiments/apex/index.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = {
+const apexExperiment = ApexExperiment.createApexExperiment({
   kind: "guild",
   name: "2026-06-server-theme-apex-shadow",
   defaultConfig: { enabled: false, inExperiment: false, gatesApex: false, rollbackEnabled: false },
@@ -13,8 +13,7 @@ const obj = {
     3: { enabled: true, inExperiment: true, gatesApex: true, rollbackEnabled: false },
     4: { enabled: true, inExperiment: true, gatesApex: true, rollbackEnabled: true },
   },
-};
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
+});
 const result = size.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeApexShadowExperiment.tsx");
 
 export const ServerThemeApexShadowExperiment = apexExperiment;

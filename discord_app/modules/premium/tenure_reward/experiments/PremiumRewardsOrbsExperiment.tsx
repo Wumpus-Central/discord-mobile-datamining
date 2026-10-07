@@ -1,10 +1,8 @@
 // discord_app/modules/premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx
-import react from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import apex_ApexExperimentDefault from "../../../experiments/apex/ApexExperiment.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj3;
+require = fn;
 const PremiumRewardsOrbsTreatment = {
   CONTROL: "control",
   TREATMENT_A: "treatment_a",
@@ -12,7 +10,7 @@ const PremiumRewardsOrbsTreatment = {
   TREATMENT_C: "treatment_c",
   TREATMENT_D: "treatment_d",
 };
-let closure_3 = {
+const dependencyMap = {
   [PremiumRewardsOrbsTreatment.CONTROL]: 0,
   [PremiumRewardsOrbsTreatment.TREATMENT_A]: 250,
   [PremiumRewardsOrbsTreatment.TREATMENT_B]: 500,
@@ -23,27 +21,31 @@ let obj2 = {
   name: "2025-12-nitro-s-rewards",
   kind: "user",
   defaultConfig: { treatment: PremiumRewardsOrbsTreatment.CONTROL },
-  variations: obj3,
-};
-obj3 = {
-  0: { treatment: PremiumRewardsOrbsTreatment.CONTROL },
-  1: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_A },
-  2: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_B },
-  3: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_C },
-  4: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_D },
+  variations: {
+    0: { treatment: PremiumRewardsOrbsTreatment.CONTROL },
+    1: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_A },
+    2: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_B },
+    3: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_C },
+    4: { treatment: PremiumRewardsOrbsTreatment.TREATMENT_D },
+  },
 };
 let tmp2 = apex_ApexExperimentDefault(obj2);
 let closure_4 = tmp2;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx");
+
+export default tmp2;
+export { PremiumRewardsOrbsTreatment };
+export const usePremiumRewardsOrbsExperiment = ReactCompilerGating.isReactCompilerEnabled()
   ? (location) => {
-      let tmp2;
-      const obj = react;
+      const obj = c;
       const cResult = obj.c(6);
       if (cResult[0] !== location) {
         const obj2 = { location };
         cResult[0] = location;
         cResult[1] = obj2;
-        tmp2 = obj2;
+        let tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
@@ -52,17 +54,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         CONTROL = obj.CONTROL;
       }
       if ((cResult[2] === CONTROL) !== obj.CONTROL) {
-        if (cResult[3] === closure_3[CONTROL]) {
-          let tmp6;
+        if (cResult[3] === tmp5) {
           if (cResult[4] === CONTROL) {
-            tmp6 = cResult[5];
+            let tmp6 = cResult[5];
           }
           return tmp6;
         }
       }
-      const obj3 = { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: closure_3[CONTROL] };
+      const obj3 = {
+        treatment: CONTROL,
+        isInTreatment: CONTROL !== obj.CONTROL,
+        orbsRewardAmount: dependencyMap[CONTROL],
+      };
       cResult[2] = CONTROL !== obj.CONTROL;
-      cResult[3] = closure_3[CONTROL];
+      cResult[3] = dependencyMap[CONTROL];
       cResult[4] = CONTROL;
       cResult[5] = obj3;
       tmp6 = obj3;
@@ -73,18 +78,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (CONTROL == null) {
         CONTROL = obj.CONTROL;
       }
-      return { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: closure_3[CONTROL] };
+      return { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: dependencyMap[CONTROL] };
     };
-const result = size.fileFinishedImporting("modules/premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx");
-
-export default tmp2;
-export { PremiumRewardsOrbsTreatment };
-export const usePremiumRewardsOrbsExperiment = tmp3;
 export const getPremiumRewardsOrbsExperiment = function getPremiumRewardsOrbsExperiment(ProgramRewardsUtils) {
   const obj = { location: ProgramRewardsUtils };
   let CONTROL = closure_4.getConfig(obj).treatment;
   if (CONTROL == null) {
     CONTROL = obj.CONTROL;
   }
-  return { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: closure_3[CONTROL] };
+  return { treatment: CONTROL, isInTreatment: CONTROL !== obj.CONTROL, orbsRewardAmount: dependencyMap[CONTROL] };
 };

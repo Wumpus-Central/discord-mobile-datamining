@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx
-import intl2 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import ChannelRecord from "../../../../../records/ChannelRecord.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
@@ -14,17 +14,16 @@ const result = size.fileFinishedImporting(
 );
 
 export const createAddRecipientSystemMessage = function createAddRecipientSystemMessage(message) {
-  let formatToPartsResult;
-  let roleStyle;
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
   const user = UserStore.getUser(first);
   const channel = ChannelStore.getChannel(message.channel_id);
-  const hasItem = null != channel && THREAD_CHANNEL_TYPES.has(channel.type);
-  const obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const obj2 = useAuthorWithProcessedColor;
-  const userAuthorWithProcessedColor = obj2.getUserAuthorWithProcessedColor(user, channel);
+  let hasItem = null != channel;
+  if (hasItem) {
+    hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
+  }
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+  const userAuthorWithProcessedColor = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
   const obj3 = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
@@ -36,15 +35,14 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
       roleStyle,
     }),
   };
-  const intl = intl2.intl;
+  const intl = util.intl;
   const formatToParts = intl.formatToParts;
-  const t = intl2.t;
+  const t = util.t;
   if (hasItem) {
-    formatToPartsResult = formatToParts(t.Vej1Nw, obj3);
+    let formatToPartsResult = formatToParts(t.Vej1Nw, obj3);
   } else {
     formatToPartsResult = formatToParts(t["7/Xl0S"], obj3);
   }
-  const obj4 = { content: formatToPartsResult };
   const merged = Object.assign(createCommonMessageDefault(message));
-  return obj4;
+  return { content: formatToPartsResult };
 };

@@ -4,60 +4,54 @@ import DateUtils from "../../../../../utils/DateUtils.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import shared from "../../../../../design/shared.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07635_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../_runtime/07636_AssetRegistry.js";
+import _modDef7635 from "../../../../../../_runtime/metro/07635__.js";
+import _modDef7636 from "../../../../../../_runtime/metro/07636__.js";
 import MessageAccessibilityActions from "../../MessageAccessibilityActions.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
-import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
-let createStyles = createStyles_mod;
+require = fn;
+let createStyles = fn(4896);
 const result = createStyles.experimental_createToken((theme) => {
-  theme = theme.theme;
   let str = "rgba(201,210,240,0.6)";
-  const obj = shared;
-  if (obj.isThemeDark(theme)) {
+  if (obj.isThemeDark(theme.theme)) {
+    str = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
     const tmpResult = ColorUtils;
-    str = tmpResult.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
   }
   return str;
 });
-createStyles = createStyles_mod;
-let obj = { timestampColor: nativeDefault.colors.TEXT_MUTED, highlightColor: result };
-let closure_4 = createStyles.createNativeStyleProperties(obj);
+createStyles = fn(4896);
+let closure_4 = createStyles.createNativeStyleProperties({
+  timestampColor: nativeDefault.colors.TEXT_MUTED,
+  highlightColor: result,
+});
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/createCommonMessage.tsx");
 
 export default function createCommonMessage(reactions) {
-  let channel;
-  let message;
-  let obj2;
-  let obj3;
-  let obj4;
-  let obj5;
-  let obj6;
-  let theme;
   ({ message, theme } = reactions);
-  reactions = reactions.reactions;
   const tmp = closure_4(theme);
   const obj = {
     id: message.id,
     channelId: message.channel_id,
     type: message.type,
     mentioned: message.mentioned,
-    timestamp: obj2.calendarFormat(message.timestamp, true),
-    timestampColor: tmp.timestampColor,
-    dark: obj3.isThemeDark(theme),
-    highlightColor: tmp.highlightColor,
-    reactions,
-    swipeToReplyIconUrl: obj4.getAssetUriForEmbed(AssetRegistryDefault),
-    swipeToEditIconUrl: obj5.getAssetUriForEmbed(AssetRegistryDefault2),
-    accessibilityActions: obj6.createMessageAccessibilityActions(message, channel),
+    timestamp: null,
+    timestampColor: null,
+    dark: null,
+    highlightColor: null,
+    reactions: null,
+    swipeToReplyIconUrl: null,
+    swipeToEditIconUrl: null,
+    accessibilityActions: null,
   };
-  channel = ChannelStore.getChannel(message.channel_id);
-  obj2 = DateUtils;
-  obj3 = shared;
-  obj4 = renderer_EmbedUtils;
-  obj5 = renderer_EmbedUtils;
-  obj6 = MessageAccessibilityActions;
+  const channel = ChannelStore.getChannel(message.channel_id);
+  obj.timestamp = DateUtils.calendarFormat(message.timestamp, true);
+  obj.timestampColor = tmp.timestampColor;
+  obj.dark = shared.isThemeDark(theme);
+  obj.highlightColor = tmp.highlightColor;
+  obj.reactions = reactions.reactions;
+  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7635);
+  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7636);
+  obj.accessibilityActions = MessageAccessibilityActions.createMessageAccessibilityActions(message, channel);
   return obj;
 }

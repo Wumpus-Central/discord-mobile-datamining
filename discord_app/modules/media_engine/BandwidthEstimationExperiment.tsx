@@ -2,8 +2,7 @@
 import createExperiment from "../experiments/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let items;
-let obj = {
+const obj = {
   kind: "user",
   id: "2024-06_rtc_pacer__simulcast",
   label: "RTC Pacer & Golive Simulcast",
@@ -12,9 +11,9 @@ let obj = {
     fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/",
     simulcastEnabled: false,
   },
-  treatments: items,
+  treatments: null,
 };
-items = [
+const items = [
   {
     id: 1,
     label: "Golive Simulcast without prober 720p@500k",
@@ -72,11 +71,13 @@ items = [
     },
   },
 ];
+obj.treatments = items;
 let currentConfig = createExperiment.createExperiment(obj);
-const obj2 = {
+const result = size.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
+
+export default {
   getConfig(autoTrackExposure, arr) {
-    const obj = { autoTrackExposure };
-    currentConfig = currentConfig.getCurrentConfig({ location: "e1c55b_1" }, obj);
+    currentConfig = currentConfig.getCurrentConfig({ location: "e1c55b_1" }, { autoTrackExposure });
     if (!this.supportsBandwidthEstimationExperimentFullname(currentConfig.fullname, arr)) {
       currentConfig.enabled = false;
     }
@@ -88,7 +89,7 @@ const obj2 = {
       return false;
     } else {
       for (const item10010 of mediaEngineExperiments) {
-        if (arr.includes(item10010)) {
+        if (arg1.includes(item10010)) {
           continue;
         } else {
           obj.return();
@@ -105,14 +106,10 @@ const obj2 = {
     if (3 === parts.length) {
       found = null;
       if ("bandwidth_estimation" === parts[0]) {
-        const str2 = parts[1];
-        const parts1 = str2.split(",");
+        const parts1 = parts[1].split(",");
         found = parts1.filter((item) => 0 !== item.length);
       }
     }
     return found;
   },
 };
-const result = size.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
-
-export default obj2;

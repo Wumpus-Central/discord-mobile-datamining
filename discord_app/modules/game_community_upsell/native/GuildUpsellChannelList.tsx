@@ -1,139 +1,128 @@
 // discord_app/modules/game_community_upsell/native/GuildUpsellChannelList.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl7 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import Card_Card from "../../../design/components/Card/native/Card.native.tsx";
-import BumpingFistsSpotIllustration from "../../../design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx";
-import MobileGameCommunitiesConstants from "MobileGameCommunitiesConstants.tsx";
-import ChatControllersSpotIllustration from "../../../design/components/mana-assets/native/generated/ChatControllersSpotIllustration.native.tsx";
-import MiniaturesSpotIllustration from "../../../design/components/mana-assets/native/generated/MiniaturesSpotIllustration.native.tsx";
+import Card from "../../../design/components/Card/native/Card.native.tsx";
 import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import LocalAppDetectionStore from "../../local_app_detection/native/LocalAppDetectionStore.tsx";
 import ConsentStore from "../../../stores/ConsentStore.tsx";
-import Constants from "../../../Constants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, importDefault, lastScannedAt, style, tmp3;
 
-let c10;
-let closure_12;
-let hasOwnProperty;
-let map1;
-let metroRequire;
-let obj10;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
-let unpackModuleId;
-({ ScrollView: hasOwnProperty, View: metroRequire } = react_native);
-let closure_9 = MobileGameCommunitiesConstants.MAX_DISPLAYED_UPSELL_GUILDS;
-({ AnalyticEvents: c10, Consents: unpackModuleId } = Constants);
-({ jsx: closure_12, jsxs: map1 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  container: obj2,
-  header: obj3,
-  headerTitle: { flex: 1 },
-  listContainer: { flex: 1 },
-  subheaderWrapper: obj4,
-  createDescription: obj5,
-  templateScroll: obj6,
-  templateRow: obj7,
-  templateCard: { width: 204 },
-  templateIconWrapper: obj8,
-  templateTitle: obj9,
-  buttonGroup: obj10,
-  descriptionSpacing: { marginBottom: nativeDefault.space.PX_8 },
-  joinSection: { gap: nativeDefault.space.PX_4 },
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+let closure_9 = fn(16241).MAX_DISPLAYED_UPSELL_GUILDS;
+const Constants = fn(1085);
+({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG },
+  header: null,
+  headerTitle: null,
+  listContainer: null,
+  subheaderWrapper: null,
+  createDescription: null,
+  templateScroll: null,
+  templateRow: null,
+  templateCard: null,
+  templateIconWrapper: null,
+  templateTitle: null,
+  buttonGroup: null,
+  descriptionSpacing: null,
+  joinSection: null,
 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG };
-createStyles = createStyles.createStyles;
-obj3 = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_16 };
-obj4 = { marginBottom: nativeDefault.space.PX_8 };
-obj5 = { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_12 };
-obj6 = { marginHorizontal: -nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12 };
-obj7 = {
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG };
+obj2.header = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_16 };
+obj2.headerTitle = { flex: 1 };
+obj2.listContainer = { flex: 1 };
+let obj4 = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_16 };
+obj2.subheaderWrapper = { marginBottom: nativeDefault.space.PX_8 };
+let obj5 = { marginBottom: nativeDefault.space.PX_8 };
+obj2.createDescription = { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_12 };
+let obj6 = { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_12 };
+obj2.templateScroll = { marginHorizontal: -nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12 };
+let obj7 = { marginHorizontal: -nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12 };
+obj2.templateRow = {
   flexDirection: "row",
   alignItems: "stretch",
   gap: nativeDefault.space.PX_8,
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-obj8 = { alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
-obj9 = { marginBottom: nativeDefault.space.PX_4 };
-obj10 = { gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_20 };
-({ marginBottom: nativeDefault.space.PX_8 });
-({ gap: nativeDefault.space.PX_4 });
-let closure_14 = createStyles(obj);
+obj2.templateCard = { width: 204 };
+let obj8 = {
+  flexDirection: "row",
+  alignItems: "stretch",
+  gap: nativeDefault.space.PX_8,
+  paddingHorizontal: nativeDefault.space.PX_16,
+};
+obj2.templateIconWrapper = { alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
+let obj9 = { alignItems: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.templateTitle = { marginBottom: nativeDefault.space.PX_4 };
+let obj10 = { marginBottom: nativeDefault.space.PX_4 };
+obj2.buttonGroup = { gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_20 };
+const obj11 = { gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_20 };
+obj2.descriptionSpacing = { marginBottom: nativeDefault.space.PX_8 };
+const obj12 = { marginBottom: nativeDefault.space.PX_8 };
+obj2.joinSection = { gap: nativeDefault.space.PX_4 };
+let closure_14 = createStyles.createStyles(obj2);
+const obj13 = { gap: nativeDefault.space.PX_4 };
 let items = [
   {
     id: "hangout",
-    title: intl7.t.ScXySs,
-    description: intl7.t.DSCqxM,
-    Icon: BumpingFistsSpotIllustration.BumpingFistsSpotIllustration,
+    title: fn(1126).t.ScXySs,
+    description: fn(1126).t.DSCqxM,
+    Icon: fn(12829).BumpingFistsSpotIllustration,
   },
   ,
 ];
-({
+const obj14 = {
   id: "hangout",
-  title: intl7.t.ScXySs,
-  description: intl7.t.DSCqxM,
-  Icon: BumpingFistsSpotIllustration.BumpingFistsSpotIllustration,
-});
+  title: fn(1126).t.ScXySs,
+  description: fn(1126).t.DSCqxM,
+  Icon: fn(12829).BumpingFistsSpotIllustration,
+};
 items[1] = {
   id: "gaming",
-  title: intl7.t["F+MTAZ"],
-  description: intl7.t.srNlJw,
-  Icon: ChatControllersSpotIllustration.ChatControllersSpotIllustration,
+  title: fn(1126).t["F+MTAZ"],
+  description: fn(1126).t.srNlJw,
+  Icon: fn(16242).ChatControllersSpotIllustration,
 };
-({
+const obj15 = {
   id: "gaming",
-  title: intl7.t["F+MTAZ"],
-  description: intl7.t.srNlJw,
-  Icon: ChatControllersSpotIllustration.ChatControllersSpotIllustration,
-});
+  title: fn(1126).t["F+MTAZ"],
+  description: fn(1126).t.srNlJw,
+  Icon: fn(16242).ChatControllersSpotIllustration,
+};
 items[2] = {
   id: "hobbies",
-  title: intl7.t["0Ka6B5"],
-  description: intl7.t["5oGAp/"],
-  Icon: MiniaturesSpotIllustration.MiniaturesSpotIllustration,
+  title: fn(1126).t["0Ka6B5"],
+  description: fn(1126).t["5oGAp/"],
+  Icon: fn(16244).MiniaturesSpotIllustration,
 };
-({
+const ReactCompilerGating = fn(558);
+const obj16 = {
   id: "hobbies",
-  title: intl7.t["0Ka6B5"],
-  description: intl7.t["5oGAp/"],
-  Icon: MiniaturesSpotIllustration.MiniaturesSpotIllustration,
-});
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+  title: fn(1126).t["0Ka6B5"],
+  description: fn(1126).t["5oGAp/"],
+  Icon: fn(16244).MiniaturesSpotIllustration,
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let arr2;
-      let closure_0;
-      let constants2;
-      let first;
-      let onPress;
-      let tmp16;
-      let tmp6;
-      let tmp7;
-      let userAgnosticState;
-      let obj = require("react");
-      const cResult = obj.c(59);
+      const cResult = require("c").c(59);
       const tmp4 = closure_14();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { location: "GuildUpsellChannelList" };
+        const obj2 = { location: "GuildUpsellChannelList" };
         cResult[0] = obj2;
-        first = obj2;
+        let first = obj2;
       } else {
         first = cResult[0];
       }
@@ -163,16 +152,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[1] = items;
         cResult[2] = I;
-        tmp7 = I;
-        tmp6 = items;
+        let tmp7 = I;
+        let tmp6 = items;
       } else {
         tmp6 = cResult[1];
         tmp7 = cResult[2];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
-      const tmpResult2 = require("MobileGameCommunitiesActionCreators");
-      const data = tmpResult2.useMobileGameCommunities(stateFromStores).data;
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp6, tmp7);
+      const tmpResult = require("initialize");
+      const data = require("MobileGameCommunitiesActionCreators").useMobileGameCommunities(stateFromStores).data;
       if (cResult[3] !== data) {
         let items1 = data;
         if (data == null) {
@@ -200,7 +189,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[4] = items1;
-        arr2 = items1;
+        let arr2 = items1;
       } else {
         arr2 = cResult[4];
       }
@@ -231,21 +220,17 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function f(guild_id, game_id) {
-          const obj = MobileGameCommunitiesActionCreatorsAll;
-          obj.dismissGuild(guild_id);
-          const obj2 = onPress(dependencyMap[18]);
-          const obj3 = { game_id, guild_id };
-          obj2.track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, obj3);
+          MobileGameCommunitiesActionCreatorsAll.dismissGuild(guild_id);
+          onPress(1252).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
         };
         cResult[7] = fn;
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function w() {
-          const obj = onPress(dependencyMap[19]);
-          obj.openCreateGuildModal();
+          onPress(12372).openCreateGuildModal();
         };
         cResult[8] = fn2;
-        tmp16 = fn2;
+        let tmp16 = fn2;
       } else {
         tmp16 = cResult[8];
       }
@@ -253,28 +238,29 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
         cResult[9] = X;
       } else {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
-        let obj3 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-        let Text = tmp(4892).Text;
         const string = tmp(1126).intl.string;
         class I {
           constructor() {
@@ -296,26 +282,31 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             return someResult;
           }
         }
-        cResult[10] = closure_12(Text, obj3);
-        const tmp19 = closure_12(Text, obj3);
+        const tmp19 = closure_12(tmp(4892).Text, {
+          variant: "heading-md/bold",
+          color: "mobile-text-heading-primary",
+          children: null,
+        });
+        cResult[10] = tmp19;
+        let obj3 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
       } else {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
       }
-      const createDescription = tmp4.createDescription;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
-        cResult[11] = obj6.string(require("intl").t.raDC7V);
-        obj6.string(require("intl").t.raDC7V);
+        cResult[11] = obj6.string(tmp(1126).t.raDC7V);
         class I {
           constructor() {
             hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
@@ -336,23 +327,26 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             return someResult;
           }
         }
+        const stringResult = obj6.string(tmp(1126).t.raDC7V);
       } else {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
       }
       if (cResult[12] !== tmp4.createDescription) {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
-        let obj4 = { variant: "text-sm/medium", color: "text-subtle", style: createDescription, children: tmp20 };
-        const tmp23 = closure_12(require("Text/Text").Text, obj4);
+        let obj4 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.createDescription, children: tmp20 };
+        const tmp23 = closure_12(tmp(4892).Text, obj4);
         class I {
           constructor() {
             hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
@@ -378,74 +372,63 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
       }
       if (cResult[14] === tmp4.templateCard) {
         class X {
           constructor() {
-            const obj = onPress(dependencyMap[19]);
-            const result = obj.openGuildJoinServerScreen();
+            obj = closure_1(closure_1_3[19]);
+            result = obj.openGuildJoinServerScreen();
+            return;
           }
         }
       }
       const mapped = items.map((Icon) => {
-        let intl;
-        let intl2;
-        let items1;
-        const obj = { onPress, radius: 16, style: closure_0.templateCard, children: items };
-        const obj2 = {
-          style: closure_0.templateIconWrapper,
-          children: closure_12(Icon.Icon, { width: 114, height: 64 }),
-        };
-        const Card = Card_Card.Card;
-        items = [closure_12(metroRequire, obj2)];
-        const obj3 = { children: items1 };
+        const obj = { onPress, radius: 16, style: closure_0.templateCard, children: null };
+        items = [
+          __initData(timestampProducer, {
+            style: closure_0.templateIconWrapper,
+            children: __initData(Icon.Icon, { width: 114, height: 64 }),
+          }),
+        ];
+        const obj3 = { children: null };
         const obj4 = {
           variant: "text-md/bold",
           color: "mobile-text-heading-primary",
           style: closure_0.templateTitle,
-          children: intl.string(Icon.title),
+          children: null,
         };
-        const Text = Text_Text.Text;
-        intl = intl7.intl;
-        items1 = [closure_12(Text, obj4)];
-        const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: intl2.string(Icon.description) };
-        const Text2 = Text_Text.Text;
-        intl2 = intl7.intl;
-        items1[1] = closure_12(Text2, obj5);
-        items[1] = map1(metroRequire, obj3);
-        return map1(Card, obj, Icon.id);
+        const intl = util.intl;
+        obj4.children = intl.string(Icon.title);
+        const items1 = [__initData(Text_Text.Text, obj4)];
+        const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+        const intl2 = util.intl;
+        obj5.children = intl2.string(Icon.description);
+        items1[1] = __initData(Text_Text.Text, obj5);
+        obj3.children = items1;
+        items[1] = __initData2(timestampProducer, obj3);
+        obj.children = items;
+        return __initData2(Card.Card, obj, Icon.id);
       });
       cResult[14] = tmp4.templateCard;
       cResult[15] = tmp4.templateIconWrapper;
       cResult[16] = tmp4.templateTitle;
       cResult[17] = mapped;
+      const tmpResult2 = require("MobileGameCommunitiesActionCreators");
     }
   : (style) => {
-      let Text;
-      let closure_0;
-      let constants2;
-      let intl;
-      let items4;
-      let items5;
-      let obj6;
-      let userAgnosticState;
       let callback1;
       let callback2;
-      style = style.style;
       const tmp = closure_14();
       _require = tmp;
       const GameCommunityAddServerEntryExperiment =
         require("GameCommunityUpsellExperiment").GameCommunityAddServerEntryExperiment;
-      const cardAction = GameCommunityAddServerEntryExperiment.useConfig({
-        location: "GuildUpsellChannelList",
-      }).cardAction;
-      let obj = require("get initialized");
       items = [ConsentStore, LocalAppDetectionStore];
-      const stateFromStores = obj.useStateFromStores(items, () => {
+      const stateFromStores = require("initialize").useStateFromStores(items, () => {
         const hasConsentedResult = ConsentStore.hasConsented(constants2.PERSONALIZATION);
         let someResult = !hasConsentedResult;
         if (hasConsentedResult) {
@@ -461,8 +444,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return someResult;
       });
-      let obj2 = require("MobileGameCommunitiesActionCreators");
-      const data = obj2.useMobileGameCommunities(stateFromStores).data;
+      let obj = require("initialize");
+      const data = require("MobileGameCommunitiesActionCreators").useMobileGameCommunities(stateFromStores).data;
       let items1 = [data];
       const memo = callback2.useMemo(() => {
         items = data;
@@ -472,166 +455,137 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return items.slice(0, closure_9);
       }, items1);
       const callback = callback2.useCallback((guild_id, game_id) => {
+        memo(callback1[17]).dismissGuild(guild_id);
         const obj = memo(callback1[17]);
-        obj.dismissGuild(guild_id);
-        const obj2 = data(callback1[18]);
-        const obj3 = { game_id, guild_id };
-        obj2.track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, obj3);
+        data(callback1[18]).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
       }, []);
       callback1 = callback2.useCallback(() => {
-        const obj = data(callback1[19]);
-        obj.openCreateGuildModal();
+        data(callback1[19]).openCreateGuildModal();
       }, []);
       callback2 = callback2.useCallback(() => {
-        const obj = data(callback1[19]);
-        const result = obj.openGuildJoinServerScreen();
+        const result = data(callback1[19]).openGuildJoinServerScreen();
       }, []);
       let items2 = [callback1, callback2, memo.length, tmp];
       const memo1 = callback2.useMemo(() => {
-        let intl;
-        let intl2;
-        let intl3;
-        let intl4;
-        let intl5;
-        let intl6;
-        let items1;
-        let items2;
-        let onPress;
-        let obj = { style: closure_0.subheaderWrapper, children: items };
-        let obj2 = {
-          variant: "heading-md/bold",
-          color: "mobile-text-heading-primary",
-          children: intl.string(intl7.t["abaDI+"]),
-        };
-        let Text = Text_Text.Text;
-        intl = intl7.intl;
-        items = [closure_12(Text, obj2), , , ,];
+        let obj = { style: closure_0.subheaderWrapper, children: null };
+        const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
+        let intl = util.intl;
+        obj2.children = intl.string(util.t["abaDI+"]);
+        items = [__initData(Text_Text.Text, obj2), , , ,];
         let obj3 = {
           variant: "text-sm/medium",
           color: "text-subtle",
           style: closure_0.createDescription,
-          children: intl2.string(intl7.t.raDC7V),
+          children: null,
         };
-        let Text2 = Text_Text.Text;
-        intl2 = intl7.intl;
-        items[1] = closure_12(Text2, obj3);
-        let obj4 = {
+        let intl2 = util.intl;
+        obj3.children = intl2.string(util.t.raDC7V);
+        items[1] = __initData(Text_Text.Text, obj3);
+        items[2] = __initData(hasOwnProperty, {
           horizontal: true,
           showsHorizontalScrollIndicator: false,
           style: closure_0.templateScroll,
           contentContainerStyle: closure_0.templateRow,
           children: items.map((Icon) => {
-            let intl;
-            let intl2;
-            let items1;
-            const obj = { onPress, radius: 16, style: closure_1_0.templateCard, children: items };
-            const obj2 = {
-              style: closure_1_0.templateIconWrapper,
-              children: closure_2_12(Icon.Icon, { width: 114, height: 64 }),
-            };
-            const Card = closure_0(callback1[21]).Card;
-            items = [closure_2_12(closure_2_6, obj2)];
-            const obj3 = { children: items1 };
+            const obj = { onPress, radius: 16, style: closure_1_0.templateCard, children: null };
+            items = [
+              closure_2_12(closure_2_6, {
+                style: closure_1_0.templateIconWrapper,
+                children: closure_2_12(Icon.Icon, { width: 114, height: 64 }),
+              }),
+            ];
+            const obj3 = { children: null };
             const obj4 = {
               variant: "text-md/bold",
               color: "mobile-text-heading-primary",
               style: closure_1_0.templateTitle,
-              children: intl.string(Icon.title),
+              children: null,
             };
-            const Text = closure_0(callback1[20]).Text;
-            intl = closure_0(callback1[9]).intl;
-            items1 = [closure_2_12(Text, obj4)];
-            const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: intl2.string(Icon.description) };
-            const Text2 = closure_0(callback1[20]).Text;
-            intl2 = closure_0(callback1[9]).intl;
-            items1[1] = closure_2_12(Text2, obj5);
+            const intl = closure_0(callback1[9]).intl;
+            obj4.children = intl.string(Icon.title);
+            const items1 = [closure_2_12(closure_0(callback1[20]).Text, obj4)];
+            const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+            const intl2 = closure_0(callback1[9]).intl;
+            obj5.children = intl2.string(Icon.description);
+            items1[1] = closure_2_12(closure_0(callback1[20]).Text, obj5);
+            obj3.children = items1;
             items[1] = closure_2_13(closure_2_6, obj3);
-            return closure_2_13(Card, obj, Icon.id);
+            obj.children = items;
+            return closure_2_13(closure_0(callback1[21]).Card, obj, Icon.id);
           }),
-        };
-        items[2] = closure_12(hasOwnProperty, obj4);
-        let obj5 = { style: closure_0.buttonGroup, children: items1 };
-        const obj6 = {
-          variant: "primary",
-          size: "md",
-          text: intl3.string(intl7.t.B44MTm),
-          onPress: callback1,
-          grow: true,
-        };
-        const Button = components_Button_Button.Button;
-        intl3 = intl7.intl;
-        items1 = [closure_12(Button, obj6)];
-        const obj7 = {
-          variant: "secondary",
-          size: "md",
-          text: intl4.string(intl7.t.wKy7MA),
-          onPress: callback2,
-          grow: true,
-        };
-        const Button2 = components_Button_Button.Button;
-        intl4 = intl7.intl;
-        items1[1] = closure_12(Button2, obj7);
-        items[3] = map1(metroRequire, obj5);
+        });
+        let obj5 = { style: closure_0.buttonGroup, children: null };
+        const obj6 = { variant: "primary", size: "md", text: null, onPress: null, grow: true };
+        const intl3 = util.intl;
+        obj6.text = intl3.string(util.t.B44MTm);
+        obj6.onPress = callback1;
+        let items1 = [__initData(components_Button_Button.Button, obj6)];
+        const obj7 = { variant: "secondary", size: "md", text: null, onPress: null, grow: true };
+        const intl4 = util.intl;
+        obj7.text = intl4.string(util.t.wKy7MA);
+        obj7.onPress = callback2;
+        items1[1] = __initData(components_Button_Button.Button, obj7);
+        obj5.children = items1;
+        items[3] = __initData2(timestampProducer, obj5);
         let tmpResult = memo.length > 0;
         if (tmpResult) {
-          const obj8 = { style: closure_0.joinSection, children: items2 };
-          const obj9 = {
-            variant: "heading-md/bold",
-            color: "mobile-text-heading-primary",
-            children: intl5.string(intl7.t.rJRote),
-          };
-          const Text3 = Text_Text.Text;
-          intl5 = intl7.intl;
-          items2 = [closure_12(Text3, obj9)];
+          const obj8 = { style: closure_0.joinSection, children: null };
+          const obj9 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
+          const intl5 = util.intl;
+          obj9.children = intl5.string(util.t.rJRote);
+          const items2 = [__initData(Text_Text.Text, obj9)];
           const obj10 = {
             variant: "text-sm/medium",
             color: "text-subtle",
             style: closure_0.descriptionSpacing,
-            children: intl6.string(intl7.t.pJT2DK),
+            children: null,
           };
-          const Text4 = Text_Text.Text;
-          intl6 = intl7.intl;
-          items2[1] = closure_12(Text4, obj10);
-          tmpResult = map1(metroRequire, obj8);
+          const intl6 = util.intl;
+          obj10.children = intl6.string(util.t.pJT2DK);
+          items2[1] = __initData(Text_Text.Text, obj10);
+          obj8.children = items2;
+          tmpResult = __initData2(timestampProducer, obj8);
         }
         items[4] = tmpResult;
-        return map1(metroRequire, obj);
+        obj.children = items;
+        return __initData2(timestampProducer, obj);
       }, items2);
-      let obj3 = require("useYouBarTotalHeight");
-      const youBarTotalHeight = obj3.useYouBarTotalHeight();
+      let obj2 = require("MobileGameCommunitiesActionCreators");
+      const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
       const items3 = [youBarTotalHeight];
-      let obj4 = { style: items4, children: items5 };
-      items4 = [tmp.container, style];
-      let obj5 = { style: tmp.header, children: closure_12(Text, obj6) };
-      const memo2 = callback2.useMemo(() => {
-        const obj = {
+      let obj4 = { style: null, children: null };
+      const items4 = [tmp.container, style.style];
+      obj4.style = items4;
+      let obj5 = { style: tmp.header, children: null };
+      const memo2 = callback2.useMemo(
+        () => ({
           paddingHorizontal: nativeDefault.space.PX_16,
           paddingBottom: nativeDefault.space.PX_16 + youBarTotalHeight,
-        };
-        return obj;
-      }, items3);
-      obj6 = {
+        }),
+        items3,
+      );
+      let obj6 = {
         style: tmp.headerTitle,
         color: "mobile-text-heading-primary",
         variant: "heading-lg/bold",
-        children: intl.string(require("intl").t["7hB4kg"]),
+        children: null,
       };
-      Text = require("Text/Text").Text;
-      intl = require("intl").intl;
-      items5 = [closure_12(closure_6, obj5)];
-      let obj7 = {
+      let intl = require("util").intl;
+      obj6.children = intl.string(require("util").t["7hB4kg"]);
+      obj5.children = closure_12(require("Text/Text").Text, obj6);
+      const items5 = [closure_12(closure_6, obj5)];
+      let obj3 = require("useYouBarTotalHeight");
+      items5[1] = closure_12(closure_6, {
         style: tmp.listContainer,
         children: closure_12(require("OneColumnGuildUpsellList").OneColumnGuildUpsellList, {
           suggestedGuilds: memo,
           contentContainerStyle: memo2,
-          cardAction,
+          cardAction: GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildUpsellChannelList" })
+            .cardAction,
           onDismiss: callback,
           subheader: memo1,
         }),
-      };
-      items5[1] = closure_12(closure_6, obj7);
+      });
+      obj4.children = items5;
       return closure_13(closure_6, obj4);
     };
-let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
-
-export default tmp6;

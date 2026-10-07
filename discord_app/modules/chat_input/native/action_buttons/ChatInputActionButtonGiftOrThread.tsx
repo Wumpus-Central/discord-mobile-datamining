@@ -1,47 +1,47 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ChatInputConstants from "../ChatInputConstants.tsx";
 import ChatInputActionButtonDefault from "ChatInputActionButton.tsx";
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem.tsx";
 import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
+require = fn;
 function renderChatInputActionButtonGiftAndThread(id, styleButton, state, cleanup) {
-  let accessible;
-  let canStartThreads;
-  let channel;
-  let onPress;
-  let shouldShowThread;
-  let styleButtonWrapper;
-  let tmpResult;
   ({ accessible, onPress } = styleButton);
   styleButton = styleButton.styleButton;
   ({ canStartThreads, channel, shouldShowThread, styleButtonWrapper } = styleButton);
-  ChatInputActionButtonTransitionItemDefault;
+  const obj = { cleanup, state, children: null };
   if (shouldShowThread) {
-    ChatInputActionButtonDefault;
+    const obj2 = {
+      accessible,
+      accessibilityLabel: null,
+      disabled: null,
+      IconComponent: null,
+      onPress: null,
+      style: null,
+    };
     const intl = onPress(1126).intl;
-    tmpResult = (
-      <tmp2Result
-        accessible={accessible}
-        accessibilityLabel={intl.string(onPress(1126).t["4WNcpu"])}
-        disabled={!canStartThreads}
-        IconComponent={onPress(11880).ThreadPlusIcon}
-        onPress={function onPress(arg0) {
-          return onPress(arg0, ChatInputActionType.THREAD);
-        }}
-        style={styleButton}
-      />
-    );
+    obj2.accessibilityLabel = intl.string(onPress(1126).t["4WNcpu"]);
+    obj2.disabled = !canStartThreads;
+    obj2.IconComponent = onPress(11880).ThreadPlusIcon;
+    obj2.onPress = function onPress(arg0) {
+      return onPress(arg0, ChatInputActionType.THREAD);
+    };
+    obj2.style = styleButton;
+    let tmpResult = jsx(ChatInputActionButtonDefault, {
+      accessible,
+      accessibilityLabel: null,
+      disabled: null,
+      IconComponent: null,
+      onPress: null,
+      style: null,
+    });
+    const tmp2Result = ChatInputActionButtonDefault;
   } else {
+    const obj3 = { accessible, channel, onPress, style: styleButtonWrapper, styleButton };
     tmpResult = jsx(ChatInputActionButtonGiftDefault, {
       accessible,
       channel,
@@ -50,11 +50,8 @@ function renderChatInputActionButtonGiftAndThread(id, styleButton, state, cleanu
       styleButton,
     });
   }
-  return (
-    <tmp4 key={id} cleanup={cleanup} state={state}>
-      {tmpResult}
-    </tmp4>
-  );
+  obj.children = tmpResult;
+  return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, id);
 }
 function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   let str = "gift";
@@ -63,34 +60,42 @@ function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   }
   return str;
 }
-const View = react_native.View;
-const ChatInputActionType = ChatInputConstants.ChatInputActionType;
-const jsx = Fragment.jsx;
+const View = fn(17).View;
+const ChatInputActionType = fn(11589).ChatInputActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles((height, arg1) => {
-  const obj = { container: size };
-  size = { width: height + 2 * arg1, height };
+  const obj = { container: null };
+  const size = { width: height + 2 * arg1, height };
+  obj.container = size;
   return obj;
 });
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx",
+);
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let tmp6;
-        let tmp7;
-        const obj = react2;
-        const cResult = obj.c(7);
-        const obj2 = useToken;
-        const token = obj2.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-        const obj3 = useToken;
-        const tmp5 = closure_7(token, obj3.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN));
+        const cResult = c.c(7);
+        const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+        const tmp5 = closure_7(token, useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN));
         if (cResult[0] !== arg0) {
           const items = [arg0];
           cResult[0] = arg0;
           cResult[1] = items;
-          tmp6 = items;
+          let tmp6 = items;
         } else {
           tmp6 = cResult[1];
         }
         if (cResult[2] !== tmp6) {
+          const obj4 = {
+            items: tmp6,
+            renderItem: renderChatInputActionButtonGiftAndThread,
+            getItemKey: getChatInputActionButtonGiftAndThreadKey,
+          };
           const tmp11 = jsx(native.TransitionGroup, {
             items: tmp6,
             renderItem: renderChatInputActionButtonGiftAndThread,
@@ -98,14 +103,13 @@ const memoResult = react.memo(
           });
           cResult[2] = tmp6;
           cResult[3] = tmp11;
-          tmp7 = tmp11;
+          let tmp7 = tmp11;
         } else {
           tmp7 = cResult[3];
         }
         if (cResult[4] === tmp5.container) {
-          let tmp12;
           if (cResult[5] === tmp7) {
-            tmp12 = cResult[6];
+            let tmp12 = cResult[6];
           }
           return tmp12;
         }
@@ -114,21 +118,31 @@ const memoResult = react.memo(
         cResult[5] = tmp7;
         cResult[6] = tmp13;
         tmp12 = tmp13;
+        const obj5 = { style: tmp5.container, children: tmp7 };
       }
     : (arg0) => {
-        let closure_0 = arg0;
-        const obj = useToken;
-        const token = obj.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+        closure_0 = arg0;
+        const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
         let items = [arg0];
-        const obj2 = useToken;
-        const memo = react.useMemo(() => {
+        const obj3 = {
+          style: closure_7(token, useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN))
+            .container,
+          children: null,
+        };
+        const memo = noop.useMemo(() => {
           const items = [closure_0];
           return items;
         }, items);
+        obj3.children = jsx(native.TransitionGroup, {
+          items: memo,
+          renderItem: renderChatInputActionButtonGiftAndThread,
+          getItemKey: getChatInputActionButtonGiftAndThreadKey,
+        });
         return (
           <View
             style={
-              closure_7(token, obj2.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN)).container
+              closure_7(token, useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN))
+                .container
             }
           >
             {null}
@@ -136,9 +150,3 @@ const memoResult = react.memo(
         );
       },
 );
-let size = size_mod;
-const result = size.fileFinishedImporting(
-  "modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx",
-);
-
-export default memoResult;

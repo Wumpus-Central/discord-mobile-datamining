@@ -1,124 +1,153 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx
 import DurationsDefault from "../../../../../utils/Durations.tsx";
-import intl5 from "../../../../../intl/index.native.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import util from "../../../../../intl/index.native.tsx";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let duration, onSelect;
-
-let c2;
-let c3;
-({ jsx: c2, jsxs: c3 } = Fragment);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+let items = [
+  {
+    duration: 30 * DurationsDefault.Millis.MINUTE,
+    label() {
+      const intl = util.intl;
+      return intl.string(util.t.RxJGbL);
+    },
+  },
+  ,
+  ,
+  ,
+  ,
+];
 let obj = {
   duration: 30 * DurationsDefault.Millis.MINUTE,
   label() {
-    const intl = intl5.intl;
-    return intl.string(intl5.t.RxJGbL);
+    const intl = util.intl;
+    return intl.string(util.t.RxJGbL);
   },
 };
-let items = [obj, , , , ,];
+items[1] = {
+  duration: DurationsDefault.Millis.HOUR,
+  label() {
+    const intl = util.intl;
+    return intl.string(util.t.UMWBZr);
+  },
+};
 let obj2 = {
   duration: DurationsDefault.Millis.HOUR,
   label() {
-    const intl = intl5.intl;
-    return intl.string(intl5.t.UMWBZr);
+    const intl = util.intl;
+    return intl.string(util.t.UMWBZr);
   },
 };
-items[1] = obj2;
+items[2] = {
+  duration: 3 * DurationsDefault.Millis.HOUR,
+  label() {
+    const intl = util.intl;
+    return intl.string(util.t.QmYWtu);
+  },
+};
 let obj3 = {
   duration: 3 * DurationsDefault.Millis.HOUR,
   label() {
-    const intl = intl5.intl;
-    return intl.string(intl5.t.QmYWtu);
+    const intl = util.intl;
+    return intl.string(util.t.QmYWtu);
   },
 };
-items[2] = obj3;
+items[3] = {
+  duration: 8 * DurationsDefault.Millis.HOUR,
+  label() {
+    const intl = util.intl;
+    return intl.string(util.t.EpAXPC);
+  },
+};
 let obj4 = {
   duration: 8 * DurationsDefault.Millis.HOUR,
   label() {
-    const intl = intl5.intl;
-    return intl.string(intl5.t.EpAXPC);
+    const intl = util.intl;
+    return intl.string(util.t.EpAXPC);
   },
 };
-items[3] = obj4;
-let obj5 = {
+items[4] = {
   duration: DurationsDefault.Millis.DAY,
   label() {
-    const intl = intl5.intl;
-    return intl.string(intl5.t["755t4q"]);
+    const intl = util.intl;
+    return intl.string(util.t["755t4q"]);
   },
 };
-items[4] = obj5;
 const obj6 = {
   duration: "Array",
   label() {
-    const intl = intl5.intl;
-    return intl.string(intl5.t["46dqJY"]);
+    const intl = util.intl;
+    return intl.string(util.t["46dqJY"]);
   },
 };
 items[5] = obj6;
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj5 = {
+  duration: DurationsDefault.Millis.DAY,
+  label() {
+    const intl = util.intl;
+    return intl.string(util.t["755t4q"]);
+  },
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onSelect) => {
-      let first;
-      let intl2;
-      let intl3;
-      let intl4;
-      let obj4;
-      let obj = onSelect(576);
-      const cResult = obj.c(9);
+      const cResult = onSelect(576).c(9);
       onSelect = onSelect.onSelect;
-      const obj2 = onSelect(12488);
-      const focusModeEnabled = obj2.useFocusModeEnabled();
+      const obj = onSelect(576);
+      const focusModeEnabled = onSelect(12488).useFocusModeEnabled();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(onSelect(1126).t["sNX1E+"]);
+        const stringResult = intl.string(tmp(1126).t["sNX1E+"]);
         cResult[0] = stringResult;
-        first = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === focusModeEnabled) {
-        let tmp7;
-        let tmp10;
         if (cResult[2] === onSelect) {
-          tmp7 = cResult[3];
+          let tmp7 = cResult[3];
         }
         if (cResult[4] !== onSelect) {
           const mapped = items.map((duration) => {
             duration = duration.duration;
             const label = duration.label;
-            const obj = {
-              accessibilityLabel: label(),
-              accessibilityHint: label(),
-              onPress() {
-                onSelect(true, duration);
+            return closure_1_2(
+              onSelect(dependencyMap[7]).TableRow,
+              {
+                accessibilityLabel: label(),
+                accessibilityHint: label(),
+                onPress() {
+                  onSelect(true, duration);
+                },
+                trailing: null,
+                label: label(),
               },
-              trailing: null,
-              label: label(),
-            };
-            const TableRow = onSelect(dependencyMap[7]).TableRow;
-            return closure_1_2(TableRow, obj, "" + duration);
+              "" + duration,
+            );
           });
           cResult[4] = onSelect;
           cResult[5] = mapped;
-          tmp10 = mapped;
+          let tmp10 = mapped;
         } else {
           tmp10 = cResult[5];
         }
         if (cResult[6] === tmp7) {
-          let tmp13;
           if (cResult[7] === tmp10) {
-            tmp13 = cResult[8];
+            let tmp13 = cResult[8];
           }
           return tmp13;
         }
-        const obj3 = { children: closure_3(onSelect(6081).TableRowGroup, obj4) };
-        const ActionSheet = tmp(6708).ActionSheet;
-        obj4 = { title: first, hasIcons: false, children: items };
+        const obj3 = { children: null };
+        const obj4 = { title: first, hasIcons: false, children: null };
         items = [tmp7, tmp10];
-        const tmp16 = closure_2(ActionSheet, obj3);
+        obj4.children = items;
+        obj3.children = closure_3(tmp(6081).TableRowGroup, obj4);
+        const tmp16 = closure_2(tmp(6708).ActionSheet, obj3);
         cResult[6] = tmp7;
         cResult[7] = tmp10;
         cResult[8] = tmp16;
@@ -126,74 +155,64 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp8 = null;
       if (focusModeEnabled) {
-        const obj5 = {
-          accessibilityLabel: intl2.string(onSelect(1126).t.rk35Gm),
-          accessibilityHint: intl3.string(onSelect(1126).t.rk35Gm),
-          onPress() {
-            onSelect(false, undefined);
-          },
-          trailing: null,
-          label: intl4.string(onSelect(1126).t.rk35Gm),
+        const obj5 = { accessibilityLabel: null, accessibilityHint: null, onPress: null, trailing: null, label: null };
+        const intl2 = tmp(1126).intl;
+        obj5.accessibilityLabel = intl2.string(tmp(1126).t.rk35Gm);
+        const intl3 = tmp(1126).intl;
+        obj5.accessibilityHint = intl3.string(tmp(1126).t.rk35Gm);
+        obj5.onPress = function onPress() {
+          onSelect(false, undefined);
         };
-        let TableRow = tmp(6000).TableRow;
-        intl2 = tmp(1126).intl;
-        intl3 = tmp(1126).intl;
-        intl4 = tmp(1126).intl;
-        tmp8 = closure_2(TableRow, obj5);
+        const intl4 = tmp(1126).intl;
+        obj5.label = intl4.string(tmp(1126).t.rk35Gm);
+        tmp8 = closure_2(tmp(6000).TableRow, obj5);
       }
       cResult[1] = focusModeEnabled;
       cResult[2] = onSelect;
       cResult[3] = tmp8;
       tmp7 = tmp8;
+      const obj2 = onSelect(12488);
     }
   : (onSelect) => {
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
       onSelect = onSelect.onSelect;
-      let obj = onSelect(12488);
-      const focusModeEnabled = obj.useFocusModeEnabled();
-      const ActionSheet = onSelect(6708).ActionSheet;
-      const obj2 = { title: intl.string(onSelect(1126).t["sNX1E+"]), hasIcons: false, children: items };
-      const TableRowGroup = onSelect(6081).TableRowGroup;
-      intl = onSelect(1126).intl;
+      const focusModeEnabled = onSelect(12488).useFocusModeEnabled();
+      const obj2 = { title: null, hasIcons: false, children: null };
+      const intl = onSelect(1126).intl;
+      obj2.title = intl.string(onSelect(1126).t["sNX1E+"]);
       let tmp4Result = null;
       if (focusModeEnabled) {
-        const obj3 = {
-          accessibilityLabel: intl2.string(onSelect(1126).t.rk35Gm),
-          accessibilityHint: intl3.string(onSelect(1126).t.rk35Gm),
-          onPress() {
-            onSelect(false, undefined);
-          },
-          trailing: null,
-          label: intl4.string(onSelect(1126).t.rk35Gm),
+        const obj3 = { accessibilityLabel: null, accessibilityHint: null, onPress: null, trailing: null, label: null };
+        const intl2 = tmp(1126).intl;
+        obj3.accessibilityLabel = intl2.string(tmp(1126).t.rk35Gm);
+        const intl3 = tmp(1126).intl;
+        obj3.accessibilityHint = intl3.string(tmp(1126).t.rk35Gm);
+        obj3.onPress = function onPress() {
+          onSelect(false, undefined);
         };
-        let TableRow = tmp(6000).TableRow;
-        intl2 = tmp(1126).intl;
-        intl3 = tmp(1126).intl;
-        intl4 = tmp(1126).intl;
-        tmp4Result = closure_2(TableRow, obj3);
+        const intl4 = tmp(1126).intl;
+        obj3.label = intl4.string(tmp(1126).t.rk35Gm);
+        tmp4Result = closure_2(tmp(6000).TableRow, obj3);
       }
+      const obj4 = { children: null };
       items = [tmp4Result];
-      const obj4 = { children: closure_3(TableRowGroup, obj2) };
       items[1] = items.map((duration) => {
         duration = duration.duration;
         const label = duration.label;
-        const obj = {
-          accessibilityLabel: label(),
-          accessibilityHint: label(),
-          onPress() {
-            onSelect(true, duration);
+        return closure_1_2(
+          onSelect(dependencyMap[7]).TableRow,
+          {
+            accessibilityLabel: label(),
+            accessibilityHint: label(),
+            onPress() {
+              onSelect(true, duration);
+            },
+            trailing: null,
+            label: label(),
           },
-          trailing: null,
-          label: label(),
-        };
-        const TableRow = onSelect(dependencyMap[7]).TableRow;
-        return closure_1_2(TableRow, obj, "" + duration);
+          "" + duration,
+        );
       });
-      return closure_2(ActionSheet, obj4);
+      obj2.children = items;
+      obj4.children = closure_3(onSelect(6081).TableRowGroup, obj2);
+      return closure_2(onSelect(6708).ActionSheet, obj4);
     };
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
-
-export default tmp4;

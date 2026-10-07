@@ -5,15 +5,6 @@ import BasicWorkScheduler2 from "BasicWorkScheduler.tsx";
 import DispatcherWorkConstants from "DispatcherWorkConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let importDefault;
-
-let c2;
-let c3;
-let closure_4;
-let hasOwnProperty;
-const f114985 = (state) => {
-  const result = closure_0._trackAppBackgrounded(state.state === AppStates.BACKGROUND);
-};
 ({
   DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: c2,
   NATIVE_WORK_BACKOFF_MS: c3,
@@ -24,60 +15,58 @@ const AppStates = Constants.AppStates;
 const BasicWorkScheduler = BasicWorkScheduler2.BasicWorkScheduler;
 class DispatcherWorkScheduler extends BasicWorkScheduler {
   constructor() {
-    let closure_0;
-    const tmp3 = new DispatcherWorkScheduler(tmp2, tmp, new.target, this, undefined);
-    importDefault = tmp3;
-    const obj = DispatcherDefault;
-    const subscription = obj.subscribe("APP_STATE_UPDATE", f114985);
+    closure_0 = undefined;
+    tmp3 = new DispatcherWorkScheduler(tmp2, tmp, new.target, new.target, undefined);
+    closure_0 = tmp3;
+    obj = closure_0(closure_1[3]);
+    subscription = obj.subscribe("APP_STATE_UPDATE", (state) => {
+      const result = closure_0._trackAppBackgrounded(state.state === AppStates.BACKGROUND);
+    });
     return tmp3;
-  }
-  _queueIdleCallback() {
-    const self = this;
-    if (this._enableRequestIdleCallback) {
-      if (!self._criticalWorkScheduled) {
-        let tmp = globalThis;
-        const _performance = performance;
-        let closure_0 = performance.now();
-        const _setTimeout = setTimeout;
-        self._flushIdleHandler = setTimeout(() => {
-          let _consecutiveFlushesBeforeQueueEmpty;
-          let _processWorkCallback;
-          ({ _processWorkCallback, _consecutiveFlushesBeforeQueueEmpty } = self);
-          const tmp = new hasOwnProperty(
-            Math.max(
-              Math.max(0, React3 - (performance.now() - closure_0)) + _false * _consecutiveFlushesBeforeQueueEmpty,
-              React2,
-            ),
-            false,
-          );
-          _processWorkCallback(tmp);
-        }, 1);
-      }
-    }
-    return self._processWorkCallback();
-  }
-  _clearIdleCallback() {
-    const self = this;
-    if (null != this._flushIdleHandler) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(self._flushIdleHandler);
-      self._flushIdleHandler = null;
-    }
   }
 }
 const prototype = DispatcherWorkScheduler.prototype;
+prototype["_queueIdleCallback"] = function _queueIdleCallback() {
+  const self = this;
+  if (this._enableRequestIdleCallback) {
+    if (!self._criticalWorkScheduled) {
+      const _performance = performance;
+      closure_0 = performance.now();
+      const _setTimeout = setTimeout;
+      self._flushIdleHandler = setTimeout(() => {
+        ({ _processWorkCallback, _consecutiveFlushesBeforeQueueEmpty } = self);
+        _processWorkCallback(
+          new hasOwnProperty(
+            Math.max(
+              Math.max(0, React4 - (performance.now() - closure_0)) + React3 * _consecutiveFlushesBeforeQueueEmpty,
+              React2,
+            ),
+            false,
+          ),
+        );
+      }, 1);
+    }
+  }
+  return self._processWorkCallback();
+};
+prototype["_clearIdleCallback"] = function _clearIdleCallback() {
+  const self = this;
+  if (null != this._flushIdleHandler) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(self._flushIdleHandler);
+    self._flushIdleHandler = null;
+  }
+};
 let result = size.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
 export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
-  let closure_0;
   if (typeof DispatcherWorkScheduler === "function") {
-    const self = this;
-    const self2 = this;
-    const tmp5 = new DispatcherWorkScheduler(tmp2, tmp, tmp3, this, undefined);
-    importDefault = tmp5;
-    const obj = DispatcherDefault;
-    const subscription = obj.subscribe("APP_STATE_UPDATE", f114985);
-    return tmp5;
+    const tmp7 = new DispatcherWorkScheduler(tmp2, tmp, tmp3, new.target, undefined);
+    importDefault = tmp7;
+    const subscription = DispatcherDefault.subscribe("APP_STATE_UPDATE", (state) => {
+      const result = closure_0._trackAppBackgrounded(state.state === AppStates.BACKGROUND);
+    });
+    return tmp7;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

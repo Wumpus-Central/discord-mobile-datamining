@@ -7,98 +7,77 @@ import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let c3;
-let closure_4;
-let hasOwnProperty;
 ({ AppContext: c3, AnalyticEvents: closure_4, ComponentActions: hasOwnProperty } = Constants);
-let obj = {
+const result = size.fileFinishedImporting("actions/ChannelRTCActionCreators.tsx");
+
+export default {
   rebuildRTCActiveChannels() {
-    const obj = DispatcherDefault;
-    obj.dispatch({ type: "CHANNEL_RTC_ACTIVE_CHANNELS" });
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_ACTIVE_CHANNELS" });
   },
   selectParticipant(id, id2) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_SELECT_PARTICIPANT", channelId: id, id: id2 };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_SELECT_PARTICIPANT", channelId: id, id: id2 });
   },
   popoutParticipant(channelId, participantId) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_POPOUT_PARTICIPANT", channelId, participantId };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_POPOUT_PARTICIPANT", channelId, participantId });
   },
   returnParticipant(channelId, participantId) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_RETURN_PARTICIPANT", channelId, participantId };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_RETURN_PARTICIPANT", channelId, participantId });
   },
   updateLayout(channelId, video_layout) {
     let APP = arg2;
     if (arg2 === undefined) {
       APP = constants.APP;
     }
-    const track = AnalyticsUtilsDefault.track;
-    const VIDEO_LAYOUT_TOGGLED = constants2.VIDEO_LAYOUT_TOGGLED;
-    const obj = { video_layout };
-    AnalyticsUtilsDefault;
-    const obj2 = AppAnalyticsUtils;
-    const merged = Object.assign(obj2.collectVoiceAnalyticsMetadata(channelId));
-    track(VIDEO_LAYOUT_TOGGLED, obj);
-    const obj3 = DispatcherDefault;
-    const obj4 = { type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout: video_layout, appContext: APP };
-    obj3.dispatch(obj4);
+    const obj = AnalyticsUtilsDefault;
+    const obj2 = { video_layout };
+    const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channelId));
+    obj.track(constants2.VIDEO_LAYOUT_TOGGLED, obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout: video_layout, appContext: APP });
+    const obj5 = { type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout: video_layout, appContext: APP };
   },
   toggleParticipants(channelId, participantsOpen) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN", channelId, participantsOpen };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN", channelId, participantsOpen });
   },
   toggleVoiceParticipantsHidden(channelId, voiceParticipantsHidden) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN", channelId, voiceParticipantsHidden };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({
+      type: "CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN",
+      channelId,
+      voiceParticipantsHidden,
+    });
   },
   updateStageStreamSize(channelId, large) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE", channelId, large };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE", channelId, large });
   },
   updateStageVideoLimitBoostUpsellDismissed(channelId, dismissed) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED", channelId, dismissed };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({
+      type: "CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED",
+      channelId,
+      dismissed,
+    });
   },
   updateChatOpen(id, shown) {
-    let channelId;
     _require = id;
-    let obj = DispatcherDefault;
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown });
     if (shown) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-        const obj = { channelId };
-        ComponentDispatch.dispatch(hasOwnProperty.FOCUS_CHANNEL_TEXT_AREA, obj);
+        ComponentDispatch.dispatch(constants3.FOCUS_CHANNEL_TEXT_AREA, { channelId });
       }, 0);
     } else {
       let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
+    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
   },
   jumpToVoiceChannelMessage(voiceGuildId2, voiceChannelId2, voiceMessageId2, jumpType) {
-    const obj = DispatcherDefault;
-    const obj2 = {
+    DispatcherDefault.dispatch({
       type: "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE",
       guildId: voiceGuildId2,
       channelId: voiceChannelId2,
       messageId: voiceMessageId2,
       jumpType,
-    };
-    obj.dispatch(obj2);
+    });
   },
 };
-const result = size.fileFinishedImporting("actions/ChannelRTCActionCreators.tsx");
-
-export default obj;

@@ -1,65 +1,58 @@
 // discord_app/design/components/TextField/native/TextField.native.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import useTextField from "useTextField.native.tsx";
 import useInputClearButton from "../../Input/native/useInputClearButton.native.tsx";
 import useInputAttachments from "../../Input/native/useInputAttachments.native.tsx";
-import BaseTextField2 from "BaseTextField.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import BaseTextField from "BaseTextField.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const forwardRef = react.forwardRef;
-const forwardRefResult = forwardRef(
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
+
+export const TextField = noop.forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0, arg1) => {
-        let innerRef;
-        let inputProps;
-        let inputStyle;
-        let leading;
-        let state;
-        let tmp6;
-        let trailing;
-        const obj = react2;
-        const cResult = obj.c(8);
-        const obj2 = useTextField;
-        const textField = obj2.useTextField(arg0, arg1);
+        const cResult = c.c(8);
+        const textField = useTextField.useTextField(arg0, arg1);
         ({ innerRef, inputProps, state } = textField);
-        const obj3 = useInputClearButton;
-        const inputClearButtonConfig = obj3.useInputClearButtonConfig(arg0, state);
+        const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(arg0, state);
         if (cResult[0] !== inputClearButtonConfig) {
           let tmp8;
           if (null != inputClearButtonConfig) {
-            const obj5 = { trailing: null, trailingPressableProps: null };
             ({ content: obj4.trailing, pressableProps: obj4.trailingPressableProps } = inputClearButtonConfig);
-            tmp8 = obj5;
+            tmp8 = { trailing: null, trailingPressableProps: null };
+            const obj5 = { trailing: null, trailingPressableProps: null };
           }
           cResult[0] = inputClearButtonConfig;
           cResult[1] = tmp8;
-          tmp6 = tmp8;
+          let tmp6 = tmp8;
         } else {
           tmp6 = cResult[1];
         }
-        const tmpResult = useInputAttachments;
-        const inputAttachments = tmpResult.useInputAttachments(arg0, tmp6);
+        const inputAttachments = useInputAttachments.useInputAttachments(arg0, tmp6);
         ({ leading, trailing, inputStyle } = inputAttachments);
         if (cResult[2] === inputStyle) {
           if (cResult[3] === innerRef) {
             if (cResult[4] === inputProps) {
               if (cResult[5] === leading) {
-                let tmp10;
                 if (cResult[6] === trailing) {
-                  tmp10 = cResult[7];
+                  let tmp10 = cResult[7];
                 }
                 return tmp10;
               }
             }
           }
         }
-        const BaseTextField = BaseTextField2.BaseTextField;
+        const obj6 = {};
         const merged = Object.assign(inputProps);
-        const tmp12 = <BaseTextField ref={innerRef} leading={leading} trailing={trailing} inputStyle={inputStyle} />;
+        obj6.ref = innerRef;
+        obj6.leading = leading;
+        obj6.trailing = trailing;
+        obj6.inputStyle = inputStyle;
+        const tmp12 = jsx(BaseTextField.BaseTextField, {});
         cResult[2] = inputStyle;
         cResult[3] = innerRef;
         cResult[4] = inputProps;
@@ -67,33 +60,26 @@ const forwardRefResult = forwardRef(
         cResult[6] = trailing;
         cResult[7] = tmp12;
         tmp10 = tmp12;
+        const tmpResult = useInputAttachments;
       }
     : (arg0, arg1) => {
-        let innerRef;
-        let inputProps;
-        let inputStyle;
-        let leading;
-        let state;
-        let trailing;
-        const obj = useTextField;
-        const textField = obj.useTextField(arg0, arg1);
+        const textField = useTextField.useTextField(arg0, arg1);
         ({ inputProps, innerRef, state } = textField);
-        const obj2 = useInputClearButton;
-        const inputClearButtonConfig = obj2.useInputClearButtonConfig(arg0, state);
+        const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(arg0, state);
         let tmp5;
         if (null != inputClearButtonConfig) {
-          const obj4 = { trailing: null, trailingPressableProps: null };
           ({ content: obj3.trailing, pressableProps: obj3.trailingPressableProps } = inputClearButtonConfig);
-          tmp5 = obj4;
+          tmp5 = { trailing: null, trailingPressableProps: null };
+          const obj4 = { trailing: null, trailingPressableProps: null };
         }
-        const tmpResult = useInputAttachments;
-        const inputAttachments = tmpResult.useInputAttachments(arg0, tmp5);
+        const inputAttachments = useInputAttachments.useInputAttachments(arg0, tmp5);
         ({ leading, trailing, inputStyle } = inputAttachments);
-        const BaseTextField = BaseTextField2.BaseTextField;
+        const obj5 = {};
         const merged = Object.assign(inputProps);
-        return <BaseTextField ref={innerRef} leading={leading} trailing={trailing} inputStyle={inputStyle} />;
+        obj5.ref = innerRef;
+        obj5.leading = leading;
+        obj5.trailing = trailing;
+        obj5.inputStyle = inputStyle;
+        return jsx(BaseTextField.BaseTextField, {});
       },
 );
-const result = size.fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
-
-export const TextField = forwardRefResult;

@@ -1,54 +1,37 @@
 // discord_app/modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
-import intl5 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
-import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import QuestStore from "../../../quests/QuestStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let c1, c4, config;
-
-let c10;
-let c9;
-let obj2;
-let obj3;
-let obj4;
+require = fn;
 class MobileQuestPreviewControlBar {
-  constructor(questId) {
-    let MobileSearchableSelect;
-    let c3;
-    let intl;
-    let intl2;
-    let intl3;
-    let items10;
-    let items11;
-    let items12;
-    let obj7;
-    let tmp18;
-    let tmp3;
-    questId = questId.questId;
-    const setQuestId = questId.setQuestId;
-    let refreshQuest = questId.refreshQuest;
-    _asyncToGenerator = undefined;
-    let questsWithPreviewAccess;
-    let callback1;
-    let callback3;
-    let tmp = closure_11();
-    let tmp2 = questsWithPreviewAccess(callback1.useState(false), 2);
-    [tmp3, c3] = tmp2;
-    const tmp4 = questId;
-    let obj = questId(refreshQuest[9]);
+  constructor(arg0) {
+    questId = global.questId;
+    setQuestId = global.setQuestId;
+    refreshQuest = global.refreshQuest;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
+    tmp = closure_11();
+    tmp2 = closure_4(closure_5.useState(false), 2);
+    [tmp3, closure_3] = tmp2;
+    tmp4 = questId;
+    tmp5 = refreshQuest;
+    obj = questId(refreshQuest[9]);
     questsWithPreviewAccess = obj.useQuestsWithPreviewAccess();
-    let obj2 = questId(refreshQuest[10]);
-    let items = [callback3];
-    const items1 = [questId];
-    const stateFromStores = obj2.useStateFromStores(
+    closure_4 = questsWithPreviewAccess;
+    obj2 = questId(refreshQuest[10]);
+    items = [];
+    items[0] = closure_7;
+    items1 = [];
+    items1[0] = questId;
+    stateFromStores = obj2.useStateFromStores(
       items,
       () => {
         let fetchQuestPreviewError = null;
@@ -59,20 +42,28 @@ class MobileQuestPreviewControlBar {
       },
       items1,
     );
-    let obj3 = questId(refreshQuest[10]);
-    const items2 = [callback3];
-    const items3 = [questId];
-    let stateFromStores1 = obj3.useStateFromStores(
+    obj3 = questId(refreshQuest[10]);
+    items2 = [];
+    items2[0] = closure_7;
+    items3 = [];
+    items3[0] = questId;
+    stateFromStores1 = obj3.useStateFromStores(
       items2,
       () => {
-        const result = null != questId && QuestStore.isFetchingQuestPreview(tmp);
+        let result = null != questId;
+        if (result) {
+          result = QuestStore.isFetchingQuestPreview(tmp);
+        }
         return result;
       },
       items3,
     );
-    const items4 = [questsWithPreviewAccess, questId];
-    const items5 = [setQuestId];
-    const memo = callback1.useMemo(() => {
+    items4 = [,];
+    items4[0] = questsWithPreviewAccess;
+    items4[1] = questId;
+    items5 = [];
+    items5[0] = setQuestId;
+    memo = closure_5.useMemo(() => {
       const mapped = questsWithPreviewAccess.map((config) => {
         config = config.config;
         let questName;
@@ -85,32 +76,28 @@ class MobileQuestPreviewControlBar {
         if (questName == null) {
           questName = config.id;
         }
-        const obj = { label: "" + questName + " (" + config.id + ")", value: config.id };
-        return obj;
+        return { label: "" + questName + " (" + config.id + ")", value: config.id };
       });
-      const tmp2 = null == questId || mapped.some((value) => value.value === questId);
       if (!tmp2) {
-        let obj = { label: questId, value: questId };
+        const obj = { label: questId, value: questId };
         mapped.unshift(obj);
       }
       return mapped;
     }, items4);
-    const callback = callback1.useCallback((arg0) => {
+    callback = closure_5.useCallback((arg0) => {
       if (null != setQuestId) {
         tmp(arg0);
       }
     }, items5);
-    const items6 = [questId, refreshQuest];
-    callback1 = callback1.useCallback(
-      _asyncToGenerator(async () => {
-        let closure_0;
-        let closure_2;
-        let obj2;
-        let v0;
+    items6 = [,];
+    items6[0] = questId;
+    items6[1] = refreshQuest;
+    callback1 = closure_5.useCallback(
+      closure_3(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp6 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -135,54 +122,50 @@ class MobileQuestPreviewControlBar {
                 v0 = 1;
                 c1 = 2;
                 c4 = 1;
-                const obj5 = { value: obj2.completeQuestPreview(tmp19, 1), done: false };
-                obj2 = tmp(refreshQuest[11]);
+                const obj5 = { value: tmp3(tmp27[11]).completeQuestPreview(tmp22, 1), done: false };
                 return obj5;
+              } else {
+                c4 = 3;
               }
-            } else if (1 === tmp4) {
+            } else if (1 === tmp7) {
               v0 = 0;
               closure_128_3(false);
-              throw refreshQuest;
+              throw tmp27;
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              v0 = 0;
-              closure_128_3(false);
-              c4 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
+            } else if (arg0 !== 2) {
               closure_128_2();
               v0 = 0;
               closure_128_3(false);
             }
+            v0 = 0;
+            closure_128_3(false);
             c4 = 3;
-            return { value: "IconComponent", done: null };
-          } catch (tmp24) {
-            refreshQuest = tmp24;
-            if (0 === v0) {
-              c4 = 3;
-              throw tmp24;
+            const obj = { value, done: true };
+            return obj;
+          } catch (tmp27) {
+            if (tmp4 === v0) {
+              c4 = tmp2;
+              throw tmp27;
             } else {
-              c1 = 1;
+              c1 = tmp;
             }
           }
         }
       }),
       items6,
     );
-    const items7 = [questId, refreshQuest];
-    const callback2 = callback1.useCallback(
-      _asyncToGenerator(async () => {
-        let closure_0;
-        let closure_2;
-        let obj2;
-        let v0;
+    closure_5 = callback1;
+    items7 = [,];
+    items7[0] = questId;
+    items7[1] = refreshQuest;
+    callback2 = closure_5.useCallback(
+      closure_3(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp6 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -207,54 +190,50 @@ class MobileQuestPreviewControlBar {
                 v0 = 1;
                 c1 = 2;
                 c4 = 1;
-                const obj5 = { value: obj2.resetQuestPreviewStatus(tmp19), done: false };
-                obj2 = tmp(refreshQuest[11]);
+                const obj5 = { value: tmp3(tmp27[11]).resetQuestPreviewStatus(tmp22), done: false };
                 return obj5;
+              } else {
+                c4 = 3;
               }
-            } else if (1 === tmp4) {
+            } else if (1 === tmp7) {
               v0 = 0;
               closure_128_3(false);
-              throw refreshQuest;
+              throw tmp27;
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              v0 = 0;
-              closure_128_3(false);
-              c4 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
+            } else if (arg0 !== 2) {
               closure_128_2();
               v0 = 0;
               closure_128_3(false);
             }
+            v0 = 0;
+            closure_128_3(false);
             c4 = 3;
-            return { value: "IconComponent", done: null };
-          } catch (tmp24) {
-            refreshQuest = tmp24;
-            if (0 === v0) {
-              c4 = 3;
-              throw tmp24;
+            const obj = { value, done: true };
+            return obj;
+          } catch (tmp27) {
+            if (tmp4 === v0) {
+              c4 = tmp2;
+              throw tmp27;
             } else {
-              c1 = 1;
+              c1 = tmp;
             }
           }
         }
       }),
       items7,
     );
-    const items8 = [questId, refreshQuest];
-    callback3 = callback1.useCallback(
-      _asyncToGenerator(async () => {
-        let closure_0;
-        let closure_2;
-        let obj2;
-        let v0;
+    closure_6 = callback2;
+    items8 = [,];
+    items8[0] = questId;
+    items8[1] = refreshQuest;
+    callback3 = closure_5.useCallback(
+      closure_3(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp6 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -281,155 +260,174 @@ class MobileQuestPreviewControlBar {
                 const random = Math.random();
                 c1 = 2;
                 c4 = 1;
-                const obj5 = { value: obj2.completeQuestPreview(tmp19, random), done: false };
-                obj2 = tmp(refreshQuest[11]);
+                const obj5 = { value: tmp3(tmp28[11]).completeQuestPreview(tmp22, random), done: false };
                 return obj5;
+              } else {
+                c4 = 3;
               }
-            } else if (1 === tmp4) {
+            } else if (1 === tmp7) {
               v0 = 0;
               closure_128_3(false);
-              throw refreshQuest;
+              throw tmp28;
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              v0 = 0;
-              closure_128_3(false);
-              c4 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
+            } else if (arg0 !== 2) {
               closure_128_2();
               v0 = 0;
               closure_128_3(false);
             }
+            v0 = 0;
+            closure_128_3(false);
             c4 = 3;
-            return { value: "IconComponent", done: null };
-          } catch (tmp25) {
-            refreshQuest = tmp25;
-            if (0 === v0) {
-              c4 = 3;
-              throw tmp25;
+            const obj = { value, done: true };
+            return obj;
+          } catch (tmp28) {
+            if (tmp4 === v0) {
+              c4 = tmp2;
+              throw tmp28;
             } else {
-              c1 = 1;
+              c1 = tmp;
             }
           }
         }
       }),
       items8,
     );
-    const items9 = [questId, callback1, callback2, callback3];
-    let obj4 = { style: tmp.container, children: items10 };
-    const callback4 = callback1.useCallback(() => {
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let items;
-      const tmp = Sheet_showSimpleActionSheet;
-      let obj = { key: "quest-preview-menu", options: items, hasIcons: false };
-      const showSimpleActionSheet = tmp.showSimpleActionSheet;
-      const obj2 = { label: intl.string(intl5.t.jQEfRT), onPress: callback1 };
-      intl = intl5.intl;
-      items = [obj2, , ,];
-      const obj3 = { label: intl2.string(intl5.t.taqkwK), onPress: callback2 };
-      intl2 = intl5.intl;
-      items[1] = obj3;
-      const obj4 = { label: intl3.string(intl5.t.cKSLr4), onPress: callback3 };
-      intl3 = intl5.intl;
-      items[2] = obj4;
-      const obj5 = {
-        label: intl4.string(intl5.t.rNGQfD),
-        onPress() {
-          if (null != closure_1_0) {
-            const obj = questId(refreshQuest[14]);
-            obj.copy(AppRoutes.QUEST_PREVIEW_TOOL_2(tmp));
-          }
-        },
+    closure_7 = callback3;
+    items9 = [, , ,];
+    items9[0] = questId;
+    items9[1] = callback1;
+    items9[2] = callback2;
+    items9[3] = callback3;
+    tmp15 = jsxs;
+    tmp16 = closure_6;
+    obj1 = { style: tmp.container, children: null };
+    tmp17 = jsx;
+    callback4 = closure_5.useCallback(() => {
+      const obj2 = { key: "quest-preview-menu", options: null, hasIcons: false };
+      const obj3 = { label: null, onPress: null };
+      const intl = util.intl;
+      obj3.label = intl.string(util.t.jQEfRT);
+      obj3.onPress = callback1;
+      const items = [obj3, , ,];
+      const obj4 = { label: null, onPress: null };
+      const intl2 = util.intl;
+      obj4.label = intl2.string(util.t.taqkwK);
+      obj4.onPress = callback2;
+      items[1] = obj4;
+      const obj5 = { label: null, onPress: null };
+      const intl3 = util.intl;
+      obj5.label = intl3.string(util.t.cKSLr4);
+      obj5.onPress = callback3;
+      items[2] = obj5;
+      const obj6 = { label: null, onPress: null };
+      const intl4 = util.intl;
+      obj6.label = intl4.string(util.t.rNGQfD);
+      obj6.onPress = function onPress() {
+        if (null != closure_1_0) {
+          questId(refreshQuest[14]).copy(AppRoutes.QUEST_PREVIEW_TOOL_2(tmp));
+          const obj = questId(refreshQuest[14]);
+        }
       };
-      intl4 = intl5.intl;
-      items[3] = obj5;
-      const result = showSimpleActionSheet(obj);
+      items[3] = obj6;
+      obj2.options = items;
+      const result = Sheet_showSimpleActionSheet.showSimpleActionSheet(obj2);
     }, items9);
-    items10 = [closure_9(setQuestId(refreshQuest[15]), {}), ,];
-    let obj5 = { style: tmp.questInputContainer, children: items11 };
-    const obj6 = { style: tmp.searchField, children: closure_9(MobileSearchableSelect, obj7) };
-    obj7 = {
+    items10 = [, ,];
+    items10[0] = jsx(setQuestId(refreshQuest[15]), {});
+    obj12 = { style: tmp.questInputContainer, children: null };
+    obj13 = { style: tmp.searchField, children: null };
+    obj14 = {
       options: memo,
       value: questId,
       onChange: callback,
-      placeholder: intl.string(questId(refreshQuest[13]).t.Zw8jxn),
+      placeholder: null,
       allowCustomValue: true,
-      isDisabled: stateFromStores1 || tmp3,
+      isDisabled: null,
     };
-    MobileSearchableSelect = questId(refreshQuest[16]).MobileSearchableSelect;
     intl = questId(refreshQuest[13]).intl;
-    items11 = [closure_9(tmp16, obj6)];
-    const obj8 = { style: tmp.iconsColumn, children: items12 };
-    const obj9 = {
-      icon: closure_9(tmp4(refreshQuest[18]).RefreshIcon, {}),
-      accessibilityLabel: intl2.string(tmp4(refreshQuest[13]).t.wzzjk9),
-      onPress: refreshQuest,
-      disabled: tmp18,
-      loading: stateFromStores1,
+    obj14.placeholder = intl.string(questId(refreshQuest[13]).t.Zw8jxn);
+    tmp18 = stateFromStores1;
+    if (!stateFromStores1) {
+      tmp18 = tmp3;
+    }
+    obj14.isDisabled = tmp18;
+    obj13.children = tmp17(questId(refreshQuest[16]).MobileSearchableSelect, obj14);
+    items11 = [,];
+    items11[0] = tmp17(tmp16, obj13);
+    obj15 = { style: tmp.iconsColumn, children: null };
+    obj16 = {
+      icon: tmp17(tmp4(tmp5[18]).RefreshIcon, {}),
+      accessibilityLabel: null,
+      onPress: null,
+      disabled: null,
+      loading: null,
       size: "sm",
       variant: "secondary",
     };
-    const IconButton = tmp4(tmp5[17]).IconButton;
     intl2 = tmp4(tmp5[13]).intl;
-    tmp18 = stateFromStores1;
-    if (!tmp18) {
-      const tmp19 = null;
-      tmp18 = null == questId;
+    obj16.accessibilityLabel = intl2.string(tmp4(tmp5[13]).t.wzzjk9);
+    obj16.onPress = refreshQuest;
+    tmp19 = stateFromStores1;
+    if (!stateFromStores1) {
+      tmp20 = null;
+      tmp19 = null == questId;
     }
-    items12 = [closure_9(IconButton, obj9)];
-    let tmp17Result = null != questId;
+    obj16.disabled = tmp19;
+    obj16.loading = stateFromStores1;
+    items12 = [,];
+    items12[0] = tmp17(tmp4(tmp5[17]).IconButton, obj16);
+    tmp17Result = null != questId;
     if (tmp17Result) {
-      const obj10 = {
-        icon: closure_9(tmp4(refreshQuest[19]).MoreVerticalIcon, {}),
-        size: "sm",
-        variant: "secondary",
-        accessibilityLabel: intl3.string(tmp4(refreshQuest[13]).t["+1H47t"]),
-        disabled: stateFromStores1,
-        onPress: callback4,
-      };
-      const IconButton2 = tmp4(tmp5[17]).IconButton;
+      obj17 = { icon: null, size: "sm", variant: "secondary", accessibilityLabel: null, disabled: null, onPress: null };
+      obj17.icon = tmp17(tmp4(tmp5[19]).MoreVerticalIcon, {});
       intl3 = tmp4(tmp5[13]).intl;
+      obj17.accessibilityLabel = intl3.string(tmp4(tmp5[13]).t["+1H47t"]);
       if (!stateFromStores1) {
         stateFromStores1 = tmp3;
       }
-      tmp17Result = closure_9(IconButton2, obj10);
+      obj17.disabled = stateFromStores1;
+      obj17.onPress = callback4;
+      tmp17Result = tmp17(tmp4(tmp5[17]).IconButton, obj17);
     }
     items12[1] = tmp17Result;
-    items11[1] = closure_10(callback2, obj8);
-    items10[1] = closure_10(callback2, obj5);
-    let tmp17Result2 = null != stateFromStores;
-    if (tmp17Result2) {
-      const obj11 = {
-        variant: "text-sm/medium",
-        color: "text-feedback-critical",
-        style: tmp.errorText,
-        children: stateFromStores.message,
-      };
-      tmp17Result2 = closure_9(tmp4(tmp5[20]).Text, obj11);
+    obj15.children = items12;
+    items11[1] = tmp15(tmp16, obj15);
+    obj12.children = items11;
+    items10[1] = tmp15(tmp16, obj12);
+    tmp17Result1 = null != stateFromStores;
+    if (tmp17Result1) {
+      obj18 = { variant: "text-sm/medium", color: "text-feedback-critical", style: null, children: null };
+      obj18.style = tmp.errorText;
+      obj18.children = stateFromStores.message;
+      tmp17Result1 = tmp17(tmp4(tmp5[20]).Text, obj18);
     }
-    items10[2] = tmp17Result2;
-    return closure_10(callback2, obj4);
+    items10[2] = tmp17Result1;
+    obj1.children = items10;
+    return tmp15(tmp16, obj1);
   }
 }
-let _asyncToGenerator = _asyncToGenerator_mod;
-const View = react_native.View;
-const AppRoutes = Constants.AppRoutes;
-({ jsx: c9, jsxs: c10 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
+const View = fn(17).View;
+const AppRoutes = fn(1096).AppRoutes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   container: { overflow: "visible", zIndex: 1 },
-  questInputContainer: obj2,
+  questInputContainer: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    gap: nativeDefault.space.PX_8,
+    zIndex: 2,
+    overflow: "visible",
+  },
   searchField: { flex: 1, zIndex: 3, overflow: "visible" },
-  iconsColumn: obj3,
-  errorText: obj4,
+  iconsColumn: null,
+  errorText: null,
 };
-obj2 = {
+let obj3 = {
   flexDirection: "row",
   alignItems: "flex-start",
   justifyContent: "flex-start",
@@ -437,10 +435,11 @@ obj2 = {
   zIndex: 2,
   overflow: "visible",
 };
-createStyles = createStyles.createStyles;
-obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
-obj4 = { marginTop: nativeDefault.space.PX_4, zIndex: 1 };
-const unpackModuleId = createStyles(obj);
+obj2.iconsColumn = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
+obj2.errorText = { marginTop: nativeDefault.space.PX_4, zIndex: 1 };
+let closure_11 = createStyles.createStyles(obj2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx");
 
 export default MobileQuestPreviewControlBar;

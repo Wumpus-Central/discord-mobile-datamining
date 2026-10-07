@@ -1,37 +1,27 @@
 // discord_app/modules/instant_invite/native/useMobileInviteSuggestions.tsx
-import Constants from "../../../Constants.tsx";
-import Constants2 from "../../../../discord_common/js/shared/Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import Constants3 from "../Constants.tsx";
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import InviteSuggestionsStore from "../../../stores/InviteSuggestionsStore.tsx";
 import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, set;
 
-let _slicedToArray = _slicedToArray_mod;
-const InviteTargetTypes = Constants3.InviteTargetTypes;
-const AnalyticEvents = Constants.AnalyticEvents;
-const NOOP_NULL = Constants2.NOOP_NULL;
+const require = fn;
+const InviteTargetTypes = fn(7239).InviteTargetTypes;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const NOOP_NULL = fn(1096).NOOP_NULL;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
 
-export default function useMobileInviteSuggestions(arg0, _location, inviteTargetType, application_id) {
-  let closure_0;
-  let closure_5;
-  let closure_7;
-  let isFetchingRows;
-  let rows;
+export default function useMobileInviteSuggestions(arg0, _location, arg2, application_id) {
   _require = arg0;
-  dependencyMap = inviteTargetType;
+  dependencyMap = arg2;
   _slicedToArray = application_id;
-  let obj = require("get initialized");
   let items = [closure_7, SortedVoiceStateStore];
-  [rows, closure_5] = obj.useStateFromStoresArray(items, () => {
+  [rows, closure_5] = require("initialize").useStateFromStoresArray(items, () => {
     const items = [InviteSuggestionsStore.getInviteSuggestionRows()];
     let voiceStatesForChannel = null;
     if (null != closure_0) {
@@ -52,33 +42,30 @@ export default function useMobileInviteSuggestions(arg0, _location, inviteTarget
         num_friends: null,
         num_dms: null,
         num_group_dms: null,
-        application_id,
+        application_id: null,
       };
       ({ numFriends: obj2.num_friends, numDms: obj2.num_dms, numGroupDms: obj2.num_group_dms } = initialCounts);
-      const obj = AnalyticsUtilsDefault;
-      obj.track(AnalyticEvents.INVITE_SUGGESTION_OPENED, obj3);
+      obj3.application_id = application_id;
+      AnalyticsUtilsDefault.track(AnalyticEvents.INVITE_SUGGESTION_OPENED, obj3);
     }
   }, items1);
-  const items2 = [arg0, inviteTargetType];
-  const effect1 = rows.useEffect(function () {
+  const items2 = [arg0, arg2];
+  const effect1 = rows.useEffect(() => {
     closure_7(true);
     let isGuildVoiceResult = !tmp3;
-    if (inviteTargetType !== constants.EMBEDDED_APPLICATION) {
+    if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       isGuildVoiceResult = set.isGuildVoice();
     }
     if (isGuildVoiceResult) {
       const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
-      const obj = closure_0(inviteTargetType[11]);
-      isGuildVoiceResult = obj.getGuildMembersInMobileVCInvitesExperiment(obj2);
+      isGuildVoiceResult = closure_0(9520).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(9520);
     }
-    if (inviteTargetType !== constants.EMBEDDED_APPLICATION) {
-      let memberIds;
+    if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
-        memberIds = closure_5.getMemberIds(set.guild_id);
+        let memberIds = closure_5.getMemberIds(set.guild_id);
       }
       const _Set = Set;
-      const self = this;
-      const self2 = this;
       set = new Set(memberIds);
       if (isGuildVoiceResult) {
         isGuildVoiceResult = null != closure_5;
@@ -88,14 +75,18 @@ export default function useMobileInviteSuggestions(arg0, _location, inviteTarget
           set.add(user.user.id);
         });
       }
-      const obj3 = { omitUserIds: set, guild: isFetchingRows.getGuild(set.guild_id), channel: set, inviteTargetType };
-      const loadInviteSuggestions = closure_0(inviteTargetType[12]).loadInviteSuggestions;
-      closure_0(inviteTargetType[12]);
-      const inviteSuggestions = loadInviteSuggestions(obj3);
-      const catchPromise = inviteSuggestions.catch(NOOP_NULL);
-      catchPromise.finally(() => {
+      const obj4 = {
+        omitUserIds: set,
+        guild: isFetchingRows.getGuild(set.guild_id),
+        channel: set,
+        inviteTargetType: dependencyMap,
+      };
+      const inviteSuggestions = closure_0(9521).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(9521);
+      inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });
+      const catchPromise = inviteSuggestions.catch(NOOP_NULL);
     }
     memberIds = [];
   }, items2);

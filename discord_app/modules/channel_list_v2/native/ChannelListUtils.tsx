@@ -20,6 +20,5 @@ export const isNamedCategorySection = function isNamedCategorySection(section) {
   return section >= ChannelListState.SECTION_INDEX_FIRST_NAMED_CATEGORY;
 };
 export const logChannelListEndReached = function logChannelListEndReached() {
-  const obj = AppAnalyticsUtilsDefault;
-  obj.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
+  AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
 };

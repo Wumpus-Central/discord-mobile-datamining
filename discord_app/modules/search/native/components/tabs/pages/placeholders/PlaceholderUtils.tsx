@@ -6,8 +6,6 @@ const result = size.fileFinishedImporting(
 );
 
 export const getAdjustedPlaceholderCount = function getAdjustedPlaceholderCount(numResults) {
-  let numColumns;
-  let placeholderCount;
   ({ numColumns, placeholderCount } = numResults);
   let num = 0;
   if (0 !== placeholderCount) {

@@ -1,26 +1,22 @@
 // discord_app/modules/guild_action_sheet/native/GuildActionSheetUtils.tsx
-import Constants from "../../../Constants.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, obj2, tmp3;
 
-const Permissions = Constants.Permissions;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");
+
+export const useGuildActionSheetPermissions = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp7;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(4);
-      const tmp = _require;
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -46,7 +42,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = A;
         cResult[3] = items1;
-        tmp7 = items1;
+        let tmp7 = items1;
       } else {
         class A {
           constructor() {
@@ -67,21 +63,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStoresObject(first, A, tmp7);
+      let obj = require("c");
+      return require("initialize").useStateFromStoresObject(first, A, tmp7);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("get initialized");
       const items = [PermissionStore];
       const items1 = [arg0];
-      return obj.useStateFromStoresObject(
+      return require("initialize").useStateFromStoresObject(
         items,
         () => {
-          let obj;
           if (null == closure_0) {
-            obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
+            let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
           } else {
             obj = {
               canAccessSettings: PermissionStore.canAccessGuildSettings(closure_0),
@@ -90,7 +83,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 PermissionStore.can(Permissions.MANAGE_NICKNAMES, closure_0),
               canManageChannels: PermissionStore.can(Permissions.MANAGE_CHANNELS, closure_0),
             };
-            PermissionStore.can(Permissions.CHANGE_NICKNAME, closure_0) ||
+            const tmp3 =
+              PermissionStore.can(Permissions.CHANGE_NICKNAME, closure_0) ||
               PermissionStore.can(Permissions.MANAGE_NICKNAMES, closure_0);
           }
           return obj;
@@ -98,6 +92,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");
-
-export const useGuildActionSheetPermissions = tmp2;

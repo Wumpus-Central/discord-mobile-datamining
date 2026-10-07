@@ -1,55 +1,53 @@
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import intl2 from "../../../intl/index.native.tsx";
-import GuildRecord from "../../../records/GuildRecord.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../intl/index.native.tsx";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const isGuildOwner = GuildRecord.isGuildOwner;
-let obj = {
-  title() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["KzCF/6"]);
-  },
-  description() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.xMW8FH);
-  },
-  canCreateGuild: false,
-  useIsGuildSupported() {
-    let obj = get_initialized;
-    const items = [ExperimentStore];
-    return obj.useStateFromStores(
-      items,
-      () => (guild, arg1) => {
-        let obj2;
-        let obj3;
-        let result = closure_1_3(guild, arg1);
-        if (result) {
-          const obj = {
-            guild,
-            isOwner: true,
-            canManageGuildRoleSubscriptions: true,
-            isUserInCreatorMonetizationEligibleCountry: obj2.isUserInCreatorMonetizationEligibleCountry(),
-            shouldRestrictUpdatingRoleSubscriptionSettings: obj3.shouldRestrictUpdatingCreatorMonetizationSettings(
-              guild.id,
-            ),
-          };
-          const canSeeGuildRoleSubscriptionSettings = closure_1_0(closure_1_1[4]).canSeeGuildRoleSubscriptionSettings;
-          closure_1_0(closure_1_1[4]);
-          obj2 = closure_1_0(closure_1_1[5]);
-          obj3 = closure_1_0(closure_1_1[6]);
-          result = canSeeGuildRoleSubscriptionSettings(obj);
-        }
-        return result;
-      },
-      [],
-      get_initialized.statesWillNeverBeEqual,
-    );
-  },
-};
+require = fn;
+const isGuildOwner = fn(2070).isGuildOwner;
+const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx",
 );
 
-export default obj;
+export default {
+  title() {
+    const intl = util.intl;
+    return intl.string(util.t["KzCF/6"]);
+  },
+  description() {
+    const intl = util.intl;
+    return intl.string(util.t.xMW8FH);
+  },
+  canCreateGuild: false,
+  useIsGuildSupported() {
+    const items = [ExperimentStore];
+    return initialize.useStateFromStores(
+      items,
+      () => (guild, arg1) => {
+        let result = closure_1_3(guild, arg1);
+        if (result) {
+          const obj2 = {
+            guild,
+            isOwner: true,
+            canManageGuildRoleSubscriptions: true,
+            isUserInCreatorMonetizationEligibleCountry: null,
+            shouldRestrictUpdatingRoleSubscriptionSettings: null,
+          };
+          const obj = closure_1_0(6773);
+          obj2.isUserInCreatorMonetizationEligibleCountry =
+            closure_1_0(6774).isUserInCreatorMonetizationEligibleCountry();
+          const obj3 = closure_1_0(6774);
+          obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(
+            4507,
+          ).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
+          result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
+          const obj4 = closure_1_0(4507);
+        }
+        return result;
+      },
+      [],
+      initialize.statesWillNeverBeEqual,
+    );
+  },
+};

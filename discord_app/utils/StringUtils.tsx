@@ -5,7 +5,11 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("utils/StringUtils.tsx");
 
 export const isNullOrEmpty = function isNullOrEmpty(id) {
-  return null == id || 0 === id.length;
+  let tmp = null == id;
+  if (!tmp) {
+    tmp = 0 === id.length;
+  }
+  return tmp;
 };
 export const upperCaseFirstChar = utils_StringUtils.upperCaseFirstChar;
 export const getAcronym = utils_StringUtils.getAcronym;

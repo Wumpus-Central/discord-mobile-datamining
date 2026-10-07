@@ -1,9 +1,8 @@
 // discord_common/js/packages/tokens/typography/generated/TypographyVariantRemap.tsx
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let items;
-const obj = { text: new Map(items), heading: new Map([]) };
-items = [
+const obj = { text: null, heading: null };
+const items = [
   ["heading-sm/normal", "experimental/heading-xs/medium"],
   ["heading-sm/medium", "experimental/heading-xs/medium"],
   ["heading-sm/semibold", "experimental/heading-xs/semibold"],
@@ -75,13 +74,14 @@ items = [
   ["nitro-xs", "experimental/nitro-xs"],
   ["code", "experimental/mono-md/bold"],
 ];
-new Map(items);
+obj.text = new Map(items);
+const map = new Map(items);
+obj.heading = new Map([]);
 const items1 = ["mana-type-consolidation", obj];
 const items2 = [items1];
-new Map([]);
-const map2 = new Map(items2);
+const map1 = new Map([]);
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/tokens/typography/generated/TypographyVariantRemap.tsx",
 );
 
-export const TYPOGRAPHY_EXPERIMENT_REMAPS = map2;
+export const TYPOGRAPHY_EXPERIMENT_REMAPS = new Map(items2);

@@ -1,10 +1,6 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx
-import react from "../../../../../_runtime/00019_react.js";
-import ReanimatedHelperTypes_mod from "../../../reanimated/ReanimatedHelperTypes.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let ReanimatedHelperTypes;
 let size = {
   id: "enabled",
   mode: "toCharArray$esjava$1",
@@ -12,15 +8,15 @@ let size = {
   height: null,
   containerHeight: "slide_from_bottom",
   showSecondaryPIP: 2392,
-  scale: ReanimatedHelperTypes.createFakeSharedValue(1),
+  scale: 2393,
 };
-const createContext = react.createContext;
-ReanimatedHelperTypes = ReanimatedHelperTypes_mod;
-const context = createContext(size);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const ReanimatedHelperTypes = fn(6578);
+size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
+const context = noop.createContext(size);
+let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-size = size_mod;
+size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 
 export const VoicePanelPIPStateContext = context;
-export const usePIPState = () => react.useContext(context);
+export const usePIPState = () => noop.useContext(context);

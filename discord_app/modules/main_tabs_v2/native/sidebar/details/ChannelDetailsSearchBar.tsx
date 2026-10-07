@@ -1,82 +1,77 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import ChannelDetailsStore from "stores/ChannelDetailsStore.tsx";
-import ChannelDetailsConstants from "ChannelDetailsConstants.tsx";
 import SearchPlatformActionCreatorsDefault from "../../../../search/native/SearchPlatformActionCreators.tsx";
-import SearchButton from "../../shared_components/SearchButton.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import SearchQueryStore_mod from "../../../../search/native/stores/SearchQueryStore.tsx";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import SearchQueryStore from "../../../../search/native/stores/SearchQueryStore.tsx";
 
-let channelId;
-
-let obj2;
-let SearchQueryStore = SearchQueryStore_mod;
-let closure_5 = ChannelDetailsStore.setIsChannelDetailsSearchActive;
-const CHANNEL_DETAILS_MARGIN = ChannelDetailsConstants.CHANNEL_DETAILS_MARGIN;
-const jsx = Fragment.jsx;
-let obj = { back: obj2 };
-obj2 = {
-  justifyContent: "center",
-  height: SearchButton.SEARCH_BAR_HEIGHT,
-  paddingStart: CHANNEL_DETAILS_MARGIN,
-  paddingEnd: 8,
+const require = fn;
+let closure_5 = fn(7522).setIsChannelDetailsSearchActive;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = {
+  back: {
+    justifyContent: "center",
+    height: fn(12022).SEARCH_BAR_HEIGHT,
+    paddingStart: fn(10666).CHANNEL_DETAILS_MARGIN,
+    paddingEnd: 8,
+  },
 };
 let closure_7 = createStyles.createStyles(obj);
-const forwardRef = react.forwardRef;
-const memoResult = react.memo(
-  forwardRef(
+const ReactCompilerGating = fn(558);
+let obj3 = {
+  justifyContent: "center",
+  height: fn(12022).SEARCH_BAR_HEIGHT,
+  paddingStart: fn(10666).CHANNEL_DETAILS_MARGIN,
+  paddingEnd: 8,
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
+
+export default noop.memo(
+  noop.forwardRef(
     ReactCompilerGating.isReactCompilerEnabled()
       ? (channelId, arg1) => {
-          let channelDetailsSearchContext;
-          let closure_4;
-          let tmp12;
-          let tmp7;
-          let obj = channelId(channelDetailsSearchContext[8]);
-          const cResult = obj.c(22);
-          const tmp = channelId;
+          const cResult = channelId(channelDetailsSearchContext[8]).c(22);
           channelId = channelId.channelId;
           const onBackPress = channelId.onBackPress;
           const showBackButton = channelId.showBackButton;
           let tmp4 = undefined === showBackButton;
-          const guildId = channelId.guildId;
-          const tmp2 = channelDetailsSearchContext;
           if (!tmp4) {
             tmp4 = showBackButton;
           }
           closure_7();
-          const tmpResult = tmp(tmp2[9]);
-          channelDetailsSearchContext = tmpResult.useChannelDetailsSearchContext(channelId, guildId);
+          let obj = channelId(channelDetailsSearchContext[8]);
+          channelDetailsSearchContext = channelId(channelDetailsSearchContext[9]).useChannelDetailsSearchContext(
+            channelId,
+            channelId.guildId,
+          );
           if (cResult[0] !== channelDetailsSearchContext) {
             const fn = function h() {
-              let searchContext;
               return () => {
-                const obj = onBackPress(channelDetailsSearchContext[10]);
-                const obj2 = { searchContext };
-                obj.trackSearchClosed(obj2);
+                onBackPress(channelDetailsSearchContext[10]).trackSearchClosed({ searchContext });
               };
             };
             cResult[0] = channelDetailsSearchContext;
             cResult[1] = fn;
-            tmp7 = fn;
+            let tmp7 = fn;
           } else {
             tmp7 = cResult[1];
           }
           if (cResult[2] === channelId) {
-            let tmp8;
             if (cResult[3] === channelDetailsSearchContext) {
-              tmp8 = cResult[4];
+              let tmp8 = cResult[4];
             }
-            const effect = C.useEffect(tmp7, tmp8);
+            const effect = noop.useEffect(tmp7, tmp8);
             if (cResult[5] !== channelDetailsSearchContext) {
               class C {
                 constructor() {
-                  if (!SearchQueryStore.isInitialSearchQuery(channelDetailsSearchContext)) {
-                    const obj = SearchPlatformActionCreatorsDefault;
-                    obj.updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
+                  tmp = closure_2;
+                  if (!closure_4.isInitialSearchQuery(closure_2)) {
+                    tmp2 = closure_1;
+                    tmp3 = closure_2;
+                    obj = closure_1(closure_2[11]);
+                    updateSearchQueryResult = obj.updateSearchQuery(tmp, (reset) => reset.reset());
                   }
+                  return;
                 }
               }
               cResult[5] = channelDetailsSearchContext;
@@ -84,47 +79,61 @@ const memoResult = react.memo(
             } else {
               class C {
                 constructor() {
-                  if (!SearchQueryStore.isInitialSearchQuery(channelDetailsSearchContext)) {
-                    const obj = SearchPlatformActionCreatorsDefault;
-                    obj.updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
+                  tmp = closure_2;
+                  if (!closure_4.isInitialSearchQuery(closure_2)) {
+                    tmp2 = closure_1;
+                    tmp3 = closure_2;
+                    obj = closure_1(closure_2[11]);
+                    updateSearchQueryResult = obj.updateSearchQuery(tmp, (reset) => reset.reset());
                   }
+                  return;
                 }
               }
             }
-            C = tmp11;
+            noop = C;
             if (cResult[7] === channelId) {
               class C {
                 constructor() {
-                  if (!SearchQueryStore.isInitialSearchQuery(channelDetailsSearchContext)) {
-                    const obj = SearchPlatformActionCreatorsDefault;
-                    obj.updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
+                  tmp = closure_2;
+                  if (!closure_4.isInitialSearchQuery(closure_2)) {
+                    tmp2 = closure_1;
+                    tmp3 = closure_2;
+                    obj = closure_1(closure_2[11]);
+                    updateSearchQueryResult = obj.updateSearchQuery(tmp, (reset) => reset.reset());
                   }
+                  return;
                 }
               }
               SearchQueryStore = tmp12;
               if (cResult[10] === onBackPress) {
                 class C {
                   constructor() {
-                    if (!SearchQueryStore.isInitialSearchQuery(channelDetailsSearchContext)) {
-                      const obj = SearchPlatformActionCreatorsDefault;
-                      obj.updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
+                    tmp = closure_2;
+                    if (!closure_4.isInitialSearchQuery(closure_2)) {
+                      tmp2 = closure_1;
+                      tmp3 = closure_2;
+                      obj = closure_1(closure_2[11]);
+                      updateSearchQueryResult = obj.updateSearchQuery(tmp, (reset) => reset.reset());
                     }
+                    return;
                   }
                 }
               }
               class E {
                 constructor() {
-                  C();
+                  tmp = closure_3();
                   if (undefined !== onBackPress) {
-                    onBackPress();
+                    tmp4 = onBackPress();
                   } else {
-                    tmp12();
+                    tmp2 = closure_4;
+                    tmp3 = closure_4();
                   }
+                  return;
                 }
               }
               cResult[10] = onBackPress;
               cResult[11] = tmp12;
-              cResult[12] = tmp11;
+              cResult[12] = C;
               cResult[13] = E;
             }
             const fn2 = function _() {
@@ -132,43 +141,43 @@ const memoResult = react.memo(
               closure_5(channelId, false, "action");
             };
             cResult[7] = channelId;
-            cResult[8] = tmp11;
+            cResult[8] = C;
             cResult[9] = fn2;
-            tmp12 = fn2;
           }
           const items = [channelId, channelDetailsSearchContext];
           cResult[2] = channelId;
           cResult[3] = channelDetailsSearchContext;
           cResult[4] = items;
           tmp8 = items;
+          const tmpResult = channelId(channelDetailsSearchContext[9]);
         }
       : (channelId, ref) => {
           channelId = channelId.channelId;
           const onBackPress = channelId.onBackPress;
           let flag = channelId.showBackButton;
-          const guildId = channelId.guildId;
           if (flag === undefined) {
             flag = true;
           }
           let channelDetailsSearchContext;
           let callback;
           const tmp = closure_7();
-          let obj = channelId(channelDetailsSearchContext[9]);
-          channelDetailsSearchContext = obj.useChannelDetailsSearchContext(channelId, guildId);
+          channelDetailsSearchContext = channelId(channelDetailsSearchContext[9]).useChannelDetailsSearchContext(
+            channelId,
+            channelId.guildId,
+          );
           const items = [channelId, channelDetailsSearchContext];
-          const effect = callback.useEffect(() => {
-            let searchContext;
-            return () => {
-              const obj = onBackPress(channelDetailsSearchContext[10]);
-              const obj2 = { searchContext };
-              obj.trackSearchClosed(obj2);
-            };
-          }, items);
+          const effect = callback.useEffect(
+            () => () => {
+              onBackPress(channelDetailsSearchContext[10]).trackSearchClosed({ searchContext });
+            },
+            items,
+          );
           const items1 = [channelDetailsSearchContext];
           callback = callback.useCallback(() => {
             if (!SearchQueryStore.isInitialSearchQuery(channelDetailsSearchContext)) {
-              const obj = SearchPlatformActionCreatorsDefault;
-              obj.updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
+              SearchPlatformActionCreatorsDefault.updateSearchQuery(channelDetailsSearchContext, (reset) =>
+                reset.reset(),
+              );
             }
           }, items1);
           const items2 = [channelId, callback];
@@ -185,26 +194,34 @@ const memoResult = react.memo(
               callback1();
             }
           }, items3);
+          const obj2 = { ref, searchContext: channelDetailsSearchContext, backButton: null };
           let tmp9Result = null;
-          onBackPress(channelDetailsSearchContext[15]);
+          let obj = channelId(channelDetailsSearchContext[9]);
           if (flag) {
-            const PressableOpacity = tmp2(tmp3[12]).PressableOpacity;
+            const obj3 = {
+              accessibilityRole: "button",
+              onPress: callback2,
+              style: tmp.back,
+              accessibilityLabel: null,
+              children: null,
+            };
             const intl = tmp2(tmp3[13]).intl;
-            tmp9Result = (
-              <PressableOpacity
-                accessibilityRole="button"
-                onPress={callback2}
-                style={tmp.back}
-                accessibilityLabel={intl.string(tmp2(tmp3[13]).t["13/7kX"])}
-              >
-                {null}
-              </PressableOpacity>
-            );
+            obj3.accessibilityLabel = intl.string(tmp2(tmp3[13]).t["13/7kX"]);
+            obj3.children = jsx(tmp2(tmp3[14]).ChevronLargeLeftIcon, { size: "sm", color: "interactive-text-default" });
+            tmp9Result = jsx(tmp2(tmp3[12]).PressableOpacity, {
+              accessibilityRole: "button",
+              onPress: callback2,
+              style: tmp.back,
+              accessibilityLabel: null,
+              children: null,
+            });
           }
-          return <tmp10 ref={ref} searchContext={channelDetailsSearchContext} backButton={tmp9Result} />;
+          obj2.backButton = tmp9Result;
+          return jsx(onBackPress(channelDetailsSearchContext[15]), {
+            ref,
+            searchContext: channelDetailsSearchContext,
+            backButton: null,
+          });
         },
   ),
 );
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
-
-export default memoResult;

@@ -1,14 +1,13 @@
 // discord_app/modules/native_menu/native/NativeMenuStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 let c0 = null;
 let c1 = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class NativeMenuStore extends Store {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.getMenu = function getMenu() {
       return closure_1_0;
     };
@@ -20,25 +19,24 @@ class NativeMenuStore extends Store {
     };
     return applyArgumentsResult;
   }
-  initialize() {}
 }
-const prototype = NativeMenuStore.prototype;
+NativeMenuStore.prototype["initialize"] = function initialize() {};
 NativeMenuStore.displayName = "NativeMenuStore";
-const obj = {
+const nativeMenuStore = new NativeMenuStore(DispatcherDefault, {
   SHOW_NATIVE_MENU: function handleShowNativeMenu(arg0) {
     ({ menu: c0, key: c1 } = arg0);
   },
   HIDE_NATIVE_MENU: function handleHideNativeMenu(key) {
     if (null != key.key) {
-      if (key.key !== c1) {
+      if (key !== c1) {
         return false;
       }
     }
     c0 = null;
     c1 = null;
   },
-};
-const nativeMenuStore = new NativeMenuStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuStore.tsx");
 
 export default nativeMenuStore;

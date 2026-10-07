@@ -19,8 +19,6 @@ export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = [
   "websocket_message_received",
 ];
 export const filterThrottle = function filterThrottle(arg0) {
-  let closure_0;
-  let closure_1;
   ({ maxBudgetMinute: closure_0, maxBudgetHour: closure_1 } = arg0);
   let minute = { minute: { slot: 0, budgetUsed: 0 }, hour: { slot: 0, budgetUsed: 0 } };
   return () => {
@@ -28,18 +26,18 @@ export const filterThrottle = function filterThrottle(arg0) {
     const rounded = Math.round(timestamp / 1000 / 60);
     const rounded1 = Math.round(timestamp / 1000 / 60 / 60);
     if (minute.minute.slot !== rounded) {
-      minute.minute.slot = rounded;
-      minute.minute.budgetUsed = 0;
+      tmp4.minute.slot = rounded;
+      tmp4.minute.budgetUsed = 0;
     }
     if (minute.hour.slot !== rounded1) {
-      minute.hour.slot = rounded1;
-      minute.hour.budgetUsed = 0;
+      tmp4.hour.slot = rounded1;
+      tmp4.hour.budgetUsed = 0;
     }
-    let flag = tmp4.minute.budgetUsed < closure_0;
+    let flag = tmp4.minute.budgetUsed < closure_1_0;
     if (flag) {
       minute = tmp4.minute;
       minute.budgetUsed = minute.budgetUsed + 1;
-      flag = tmp4.hour.budgetUsed < closure_1;
+      flag = tmp4.hour.budgetUsed < closure_1_1;
     }
     if (flag) {
       const hour = tmp4.hour;

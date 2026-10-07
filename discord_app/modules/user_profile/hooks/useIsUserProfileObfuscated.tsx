@@ -1,23 +1,21 @@
 // discord_app/modules/user_profile/hooks/useIsUserProfileObfuscated.tsx
 import UserProfileStore from "../UserProfileStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
-      let first;
-      let tmp6;
       _require = id;
-      const obj = require("react");
-      const cResult = obj.c(3);
-      const tmp = _require;
+      const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserProfileStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -27,12 +25,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = id.id;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       let bio;
       if (stateFromStores != null) {
         bio = stateFromStores.bio;
@@ -85,8 +83,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (flags) => {
       _require = flags;
       const items = [UserProfileStore];
-      const obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(items, () => UserProfileStore.getUserProfile(flags.id));
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        UserProfileStore.getUserProfile(id.id),
+      );
       let bio;
       if (stateFromStores != null) {
         bio = stateFromStores.bio;
@@ -136,6 +135,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     };
-const result = size.fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");
-
-export default tmp2;

@@ -1,114 +1,103 @@
 // discord_app/modules/icymi/native/NativeICYMIActionCreators.tsx
-import Constants from "../../../Constants.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let constants, guild_score;
+const require = fn;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
 
-const Endpoints = Constants.Endpoints;
-let obj = {
+export default {
   customScoreGuild(arg0) {
-    let guild_id;
     ({ guildId: require, channelScores: importDefault, guildScore: dependencyMap } = arg0);
     return (async () => {
-      let closure_0;
-      let closure_2;
-      let intl;
-      let intl2;
-      let mapped;
-      let obj4;
-      let v1;
       if (constants === 2) {
         constants = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
-        let c3;
         try {
           constants = 2;
-          if (0 === v1) {
+          if (0 === v2) {
             if (arg0 === 1) {
               constants = 3;
               throw value;
             } else if (arg0 === 2) {
               constants = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              const obj11 = tmp(guild_score[2]);
-              if (obj11.icymiEnabled("customScores")) {
+              if (obj13.icymiEnabled("customScores")) {
                 c3 = 1;
-                const HTTP = tmp(guild_score[3]).HTTP;
-                const request = { url: constants.GRAVITY_CUSTOM_GUILD_SCORES, body: obj4, rejectWithError: true };
-                obj4 = { guild_id: require, channel_scores: mapped, guild_score: dependencyMap };
-                mapped = undefined;
-                const put = HTTP.put;
+                const HTTP = tmp3(tmp23[3]).HTTP;
+                const request = { url: constants.GRAVITY_CUSTOM_GUILD_SCORES, body: null, rejectWithError: true };
+                const obj5 = { guild_id, channel_scores: null, guild_score: null };
+                let mapped;
                 if (importDefault != null) {
                   mapped = importDefault.map((channelId) => ({
                     channel_id: channelId.channelId,
                     score: channelId.score,
                   }));
                 }
-                v1 = 2;
+                obj5.channel_scores = mapped;
+                obj5.guild_score = guild_score;
+                request.body = obj5;
+                v2 = 2;
                 constants = 1;
-                const obj5 = { value: put(request), done: false };
-                return obj5;
+                const obj6 = { value: HTTP.put(request), done: false };
+                return obj6;
               }
+              obj13 = tmp3(tmp23[2]);
             }
-          } else if (1 === tmp4) {
-            c3 = 0;
-            const obj6 = { key: "GravityGuildScore", content: intl.string(tmp(guild_score[6]).t.CG4Hks) };
-            const open = v1(guild_score[5]).open;
-            const tmp9 = v1(guild_score[5]);
-            intl = tmp(guild_score[6]).intl;
-            open(obj6);
-          } else if (arg0 === 1) {
-            constants = 3;
-            throw value;
-          } else if (arg0 === 2) {
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              const obj7 = { key: "GravityGuildScore", content: null };
+              const intl = tmp3(tmp23[6]).intl;
+              obj7.content = intl.string(tmp3(tmp23[6]).t.CG4Hks);
+              v2(tmp23[5]).open(obj7);
+              const obj2 = v2(tmp23[5]);
+            } else if (arg0 === 1) {
+              constants = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              const obj8 = {
+                type: "ICYMI_CUSTOM_SCORES_UPDATED",
+                guildId: closure_128_0,
+                channelScores: closure_128_1,
+                guildScore: closure_128_2,
+              };
+              v2(tmp23[4]).dispatch(obj8);
+              const obj9 = v2(tmp23[4]);
+              const obj10 = { key: "GravityGuildScore", content: null };
+              const intl2 = tmp3(tmp23[6]).intl;
+              obj10.content = intl2.string(tmp3(tmp23[6]).t.OMdbs1);
+              v2(tmp23[5]).open(obj10);
+              c3 = 0;
+              const obj11 = v2(tmp23[5]);
+            }
             c3 = 0;
             constants = 3;
             const obj = { value, done: true };
             return obj;
-          } else {
-            const obj7 = {
-              type: "ICYMI_CUSTOM_SCORES_UPDATED",
-              guildId: closure_128_0,
-              channelScores: closure_128_1,
-              guildScore: closure_128_2,
-            };
-            const obj8 = v1(guild_score[4]);
-            obj8.dispatch(obj7);
-            const obj9 = { key: "GravityGuildScore", content: intl2.string(tmp(guild_score[6]).t.OMdbs1) };
-            const open2 = v1(guild_score[5]).open;
-            const tmp37 = v1(guild_score[5]);
-            intl2 = tmp(guild_score[6]).intl;
-            open2(obj9);
-            c3 = 0;
           }
           constants = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp21) {
-          guild_score = tmp21;
-          if (0 === c3) {
-            constants = 3;
-            throw tmp21;
+        } catch (tmp23) {
+          if (tmp4 === c3) {
+            constants = tmp2;
+            throw tmp23;
           } else {
-            v1 = 1;
+            v2 = tmp;
           }
         }
       }
     })();
   },
 };
-const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
-
-export default obj;

@@ -1,19 +1,18 @@
 // discord_app/modules/user_settings/voice/AudioSettingsPending.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-let closure_1 = {};
+let dependencyMap = {};
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsPending.tsx");
 
 export const getPendingAudioSettings = function getPendingAudioSettings(STREAM, arg1) {
-  return closure_1["" + STREAM + ":" + arg1];
+  return dependencyMap["" + STREAM + ":" + arg1];
 };
 export const updatePendingSettings = function updatePendingSettings(context, userId, arg2) {
   const combined = "" + context + ":" + userId;
-  const obj = {};
-  const merged = Object.assign(closure_1[combined]);
+  const merged = Object.assign(dependencyMap[combined]);
   const merged1 = Object.assign(arg2);
-  closure_1[combined] = obj;
+  dependencyMap[combined] = {};
 };
 export const drainPendingAudioSettings = function drainPendingAudioSettings(fn) {
   for (const key10006 in closure_1) {
@@ -21,8 +20,8 @@ export const drainPendingAudioSettings = function drainPendingAudioSettings(fn) 
     let items = [,];
     [arr[0], arr[1]] = tmp3;
     let tmp4 = _slicedToArray(items, 2);
-    let tmp6 = fn(tmp4[0], tmp4[1], closure_1[key10006]);
+    let tmp6 = arg0(tmp4[0], tmp4[1], dependencyMap[key10006]);
     continue;
   }
-  closure_1 = {};
+  dependencyMap = {};
 };

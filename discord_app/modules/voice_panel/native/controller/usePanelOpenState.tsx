@@ -1,21 +1,16 @@
 // discord_app/modules/voice_panel/native/controller/usePanelOpenState.tsx
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import VoicePanelConstants from "../../VoicePanelConstants.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import VoicePanelStore from "../../VoicePanelStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, closure_0, dependencyMap, importDefault, pathname;
 
-let metroImportAll;
-let metroImportDefault;
-const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-({ ComponentActions: metroImportDefault, Routes: metroImportAll } = Constants);
+require = fn;
+const VoicePanelModes = fn(11916).VoicePanelModes;
+const Constants = fn(1085);
+({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = {
   code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}",
 };
@@ -28,25 +23,24 @@ const __initData3 = {
 const __initData4 = {
   code: "function usePanelOpenStateTsx4(props,previous){const{runOnJS,doCloseChannel}=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){runOnJS(doCloseChannel)();}}",
 };
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2, connected) => {
-      let closure_1;
-      let closure_2;
-      let constants2;
-      let tmp12;
       _require = arg0;
       importDefault = arg1;
       dependencyMap = arg2;
-      let obj = require("react");
-      const cResult = obj.c(11);
+      const cResult = require("c").c(11);
       function doCloseChannel() {
-        const state = VoicePanelStore.getState();
+        state = VoicePanelStore.getState();
         return state.closeChannel(closure_0);
       }
-      let obj2 = require("ReanimatedRexport");
+      let obj = require("c");
       class O {
         constructor() {
-          const obj = { connected: connected.get() };
+          obj = { connected: closure_3.get() };
           return obj;
         }
       }
@@ -54,39 +48,40 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       O.__workletHash = 8350408810765;
       O.__initData = __initData;
       class E {
-        constructor(connected, connected2) {
-          let connected1;
-          connected = connected.connected;
-          if (connected2 != null) {
-            connected1 = connected2.connected;
+        constructor(arg0, arg1) {
+          connected = undefined;
+          if (arg1 != null) {
+            connected = arg1.connected;
           }
-          const tmp2 = true === connected1 && !connected;
+          tmp2 = true === connected && !arg0.connected;
           if (tmp2) {
-            const obj = ReanimatedRexport;
-            obj.runOnJS(doCloseChannel)();
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[7]);
+            tmp5 = doCloseChannel;
+            tmp6 = obj.runOnJS(doCloseChannel)();
           }
+          return;
         }
       }
+      let obj2 = require("ReanimatedRexport");
       E.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
       E.__workletHash = 9166012598595;
       E.__initData = __initData2;
-      ({ runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel });
       const animatedReaction = obj2.useAnimatedReaction(O, E);
       if (cResult[0] === arg0) {
         if (cResult[1] === connected) {
           if (cResult[2] === arg1) {
-            let tmp3;
-            let tmp4;
             if (cResult[3] === arg2) {
-              tmp3 = cResult[4];
-              tmp4 = cResult[5];
+              let tmp3 = cResult[4];
+              let tmp4 = cResult[5];
             }
             const effect = doCloseChannel.useEffect(tmp3, tmp4);
             const _Symbol = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
               class S {
                 constructor() {
-                  const obj = closure_1(closure_2[9]);
+                  obj = closure_1(closure_2[9]);
                   return obj.getHistory().location.pathname;
                 }
               }
@@ -94,18 +89,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               class S {
                 constructor() {
-                  const obj = closure_1(closure_2[9]);
+                  obj = closure_1(closure_2[9]);
                   return obj.getHistory().location.pathname;
                 }
               }
             }
             const tmp9 = connected(doCloseChannel.useState(S), 2);
             const first = tmp9[0];
-            let closure_6 = tmp9[1];
+            closure_6 = tmp9[1];
             if (cResult[7] === arg0) {
               class S {
                 constructor() {
-                  const obj = closure_1(closure_2[9]);
+                  obj = closure_1(closure_2[9]);
                   return obj.getHistory().location.pathname;
                 }
               }
@@ -113,29 +108,27 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             class I {
               constructor() {
-                let obj = closure_1(closure_2[9]);
+                obj = closure_1(closure_2[9]);
                 closure_0 = obj.addRouteChangeListener((pathname) => {
-                  let CHANNEL;
-                  let RouteParam2;
-                  let guildIdResult;
                   if (first !== pathname.pathname) {
                     closure_1_6(tmp);
-                    const obj = { path: CHANNEL(guildIdResult, RouteParam2.channelId()) };
-                    const matchPath = closure_0(closure_2[10]).matchPath;
-                    pathname = pathname.pathname;
-                    CHANNEL = constants2.CHANNEL;
-                    closure_0(closure_2[10]);
-                    const RouteParam = closure_0(closure_2[11]).RouteParam;
-                    guildIdResult = RouteParam.guildId();
-                    RouteParam2 = closure_0(closure_2[11]).RouteParam;
-                    const matchPathResult = matchPath(pathname, obj);
-                    const obj2 = closure_0(closure_2[12]);
-                    if (null == obj2.extractParamsFromVoiceModalRoute(pathname).voiceChannelId) {
-                      const tmp2 = null != matchPathResult && matchPathResult.params.channelId === closure_0;
+                    const obj2 = { path: null };
+                    const RouteParam = closure_0(4723).RouteParam;
+                    const obj = closure_0(4710);
+                    const RouteParam2 = closure_0(4723).RouteParam;
+                    obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
+                    const matchPathResult = obj.matchPath(pathname.pathname, obj2);
+                    const guildIdResult = RouteParam.guildId();
+                    if (null == obj3.extractParamsFromVoiceModalRoute(pathname).voiceChannelId) {
+                      let tmp2 = null != matchPathResult;
+                      if (tmp2) {
+                        tmp2 = matchPathResult.params.channelId === closure_0;
+                      }
                       if (!tmp2) {
-                        closure_1(closure_2[13])();
+                        closure_1(9020)();
                       }
                     }
+                    obj3 = closure_0(12565);
                   }
                 });
                 return () => {
@@ -146,7 +139,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             const items = [,];
             class O {
               constructor() {
-                const obj = { connected: connected.get() };
+                obj = { connected: closure_3.get() };
                 return obj;
               }
             }
@@ -155,17 +148,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[8] = first;
             cResult[9] = I;
             class E {
-              constructor(connected, connected2) {
-                let connected1;
-                connected = connected.connected;
-                if (connected2 != null) {
-                  connected1 = connected2.connected;
+              constructor(arg0, arg1) {
+                connected = undefined;
+                if (arg1 != null) {
+                  connected = arg1.connected;
                 }
-                const tmp2 = true === connected1 && !connected;
+                tmp2 = true === connected && !arg0.connected;
                 if (tmp2) {
-                  const obj = ReanimatedRexport;
-                  obj.runOnJS(doCloseChannel)();
+                  tmp3 = closure_0;
+                  tmp4 = closure_2;
+                  obj = closure_0(closure_2[7]);
+                  tmp5 = doCloseChannel;
+                  tmp6 = obj.runOnJS(doCloseChannel)();
                 }
+                return;
               }
             }
             cResult[10] = items;
@@ -175,30 +171,33 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function f() {
         function componentActionOpen(channelId) {
-          const tmp = componentActionOpen === channelId.channelId && componentActionClose.get() !== constants.PANEL;
+          let tmp = componentActionOpen === channelId.channelId;
           if (tmp) {
-            closure_1_2(constants.PANEL);
+            tmp = componentActionClose.get() !== constants.PANEL;
+          }
+          if (tmp) {
+            dependencyMap(constants.PANEL);
           }
         }
         function componentActionClose() {
           if (connected.get()) {
             if (componentActionClose.get() !== constants.PIP) {
-              closure_1_2(tmp5.PIP);
+              dependencyMap(tmp5.PIP);
             }
           } else {
-            const state = first.getState();
+            state = first.getState();
             state.closeChannel(componentActionOpen);
           }
         }
-        let ComponentDispatch = closure_0(closure_2[8]).ComponentDispatch;
+        let ComponentDispatch = closure_0(1121).ComponentDispatch;
         const subscription = ComponentDispatch.subscribe(constants.VOICE_PANEL_OPEN, componentActionOpen);
-        let ComponentDispatch2 = closure_0(closure_2[8]).ComponentDispatch;
+        let ComponentDispatch2 = closure_0(1121).ComponentDispatch;
         const subscription1 = ComponentDispatch2.subscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
         return () => {
           const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-          ComponentDispatch.unsubscribe(metroImportDefault.VOICE_PANEL_OPEN, componentActionOpen);
+          ComponentDispatch.unsubscribe(constants.VOICE_PANEL_OPEN, componentActionOpen);
           const ComponentDispatch2 = ComponentDispatchUtils.ComponentDispatch;
-          ComponentDispatch2.unsubscribe(metroImportDefault.VOICE_PANEL_CLOSE, componentActionClose);
+          ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
         };
       };
       const items1 = [arg0, arg1, arg2, connected];
@@ -210,21 +209,19 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp4 = items1;
       tmp3 = fn;
+      let obj3 = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
     }
   : (arg0, arg1, arg2, connected) => {
-      let closure_2;
-      let constants2;
       _require = arg0;
-      let closure_1 = arg1;
+      closure_1 = arg1;
       dependencyMap = arg2;
       function doCloseChannel() {
-        const state = VoicePanelStore.getState();
+        state = VoicePanelStore.getState();
         return state.closeChannel(closure_0);
       }
-      let obj = require("ReanimatedRexport");
       class O {
         constructor() {
-          const obj = { connected: connected.get() };
+          obj = { connected: closure_3.get() };
           return obj;
         }
       }
@@ -232,87 +229,87 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       O.__workletHash = 8132120691023;
       O.__initData = __initData3;
       class E {
-        constructor(connected, connected2) {
-          let connected1;
-          connected = connected.connected;
-          if (connected2 != null) {
-            connected1 = connected2.connected;
+        constructor(arg0, arg1) {
+          connected = undefined;
+          if (arg1 != null) {
+            connected = arg1.connected;
           }
-          const tmp2 = true === connected1 && !connected;
+          tmp2 = true === connected && !arg0.connected;
           if (tmp2) {
-            const obj = ReanimatedRexport;
-            obj.runOnJS(doCloseChannel)();
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[7]);
+            tmp5 = doCloseChannel;
+            tmp6 = obj.runOnJS(doCloseChannel)();
           }
+          return;
         }
       }
-      let obj2 = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
-      E.__closure = obj2;
+      let obj = require("ReanimatedRexport");
+      E.__closure = { runOnJS: require("ReanimatedRexport").runOnJS, doCloseChannel };
       E.__workletHash = 176531712901;
       E.__initData = __initData4;
       const animatedReaction = obj.useAnimatedReaction(O, E);
       const items = [arg0, arg1, arg2, connected];
       const effect = doCloseChannel.useEffect(() => {
         function componentActionOpen(channelId) {
-          const tmp = componentActionOpen === channelId.channelId && componentActionClose.get() !== constants.PANEL;
+          let tmp = componentActionOpen === channelId.channelId;
           if (tmp) {
-            closure_1_2(constants.PANEL);
+            tmp = componentActionClose.get() !== constants.PANEL;
+          }
+          if (tmp) {
+            dependencyMap(constants.PANEL);
           }
         }
         function componentActionClose() {
           if (connected.get()) {
             if (componentActionClose.get() !== constants.PIP) {
-              closure_1_2(tmp5.PIP);
+              dependencyMap(tmp5.PIP);
             }
           } else {
-            const state = first.getState();
+            state = first.getState();
             state.closeChannel(componentActionOpen);
           }
         }
-        let ComponentDispatch = closure_0(closure_2[8]).ComponentDispatch;
+        let ComponentDispatch = closure_0(1121).ComponentDispatch;
         const subscription = ComponentDispatch.subscribe(constants.VOICE_PANEL_OPEN, componentActionOpen);
-        let ComponentDispatch2 = closure_0(closure_2[8]).ComponentDispatch;
+        let ComponentDispatch2 = closure_0(1121).ComponentDispatch;
         const subscription1 = ComponentDispatch2.subscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
         return () => {
           const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-          ComponentDispatch.unsubscribe(metroImportDefault.VOICE_PANEL_OPEN, componentActionOpen);
+          ComponentDispatch.unsubscribe(constants.VOICE_PANEL_OPEN, componentActionOpen);
           const ComponentDispatch2 = ComponentDispatchUtils.ComponentDispatch;
-          ComponentDispatch2.unsubscribe(metroImportDefault.VOICE_PANEL_CLOSE, componentActionClose);
+          ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
         };
       }, items);
       const tmp3 = connected(
-        doCloseChannel.useState(() => {
-          const obj = closure_1(closure_2[9]);
-          return obj.getHistory().location.pathname;
-        }),
+        doCloseChannel.useState(() => closure_1(12572).getHistory().location.pathname),
         2,
       );
       const first = tmp3[0];
-      let closure_6 = tmp3[1];
+      closure_6 = tmp3[1];
       const items1 = [arg0, first];
       const effect1 = doCloseChannel.useEffect(() => {
-        let obj = closure_1(closure_2[9]);
-        closure_0 = obj.addRouteChangeListener((pathname) => {
-          let CHANNEL;
-          let RouteParam2;
-          let guildIdResult;
+        closure_0 = closure_1(12572).addRouteChangeListener((pathname) => {
           if (first !== pathname.pathname) {
             closure_1_6(tmp);
-            const obj = { path: CHANNEL(guildIdResult, RouteParam2.channelId()) };
-            const matchPath = closure_0(closure_2[10]).matchPath;
-            pathname = pathname.pathname;
-            CHANNEL = constants2.CHANNEL;
-            closure_0(closure_2[10]);
-            const RouteParam = closure_0(closure_2[11]).RouteParam;
-            guildIdResult = RouteParam.guildId();
-            RouteParam2 = closure_0(closure_2[11]).RouteParam;
-            const matchPathResult = matchPath(pathname, obj);
-            const obj2 = closure_0(closure_2[12]);
-            if (null == obj2.extractParamsFromVoiceModalRoute(pathname).voiceChannelId) {
-              const tmp2 = null != matchPathResult && matchPathResult.params.channelId === closure_0;
+            const obj2 = { path: null };
+            const RouteParam = closure_0(4723).RouteParam;
+            const obj = closure_0(4710);
+            const RouteParam2 = closure_0(4723).RouteParam;
+            obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
+            const matchPathResult = obj.matchPath(pathname.pathname, obj2);
+            const guildIdResult = RouteParam.guildId();
+            if (null == obj3.extractParamsFromVoiceModalRoute(pathname).voiceChannelId) {
+              let tmp2 = null != matchPathResult;
+              if (tmp2) {
+                tmp2 = matchPathResult.params.channelId === closure_0;
+              }
               if (!tmp2) {
-                closure_1(closure_2[13])();
+                closure_1(9020)();
               }
             }
+            obj3 = closure_0(12565);
           }
         });
         return () => {
@@ -320,6 +317,3 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items1);
     };
-const result = size.fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
-
-export default tmp3;

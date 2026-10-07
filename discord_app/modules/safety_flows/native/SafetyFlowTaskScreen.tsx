@@ -1,39 +1,26 @@
 // discord_app/modules/safety_flows/native/SafetyFlowTaskScreen.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import ModalScreen2 from "../../../design/components/Modal/native/ModalScreen.native.tsx";
-import ModalContent2 from "../../../design/components/Modal/native/ModalContent.native.tsx";
+import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
+import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
 import ModalActionButton from "../../../design/components/Modal/native/ModalActionButton.native.tsx";
-import ModalFooter2 from "../../../design/components/Modal/native/ModalFooter.native.tsx";
+import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
 import LogOutDisclaimerDefault from "LogOutDisclaimer.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ header: { textAlign: "center" } });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let ImageComponent;
-      let action;
-      let children;
-      let footer;
-      let items;
-      let items2;
-      let items3;
-      let onAction;
-      let submitting;
-      let subtitle;
-      let subtitleColor;
-      let title;
-      let withLogout;
-      const obj = react2;
-      const cResult = obj.c(23);
+      const cResult = c.c(23);
       ({ ImageComponent, title, subtitle, subtitleColor, action, onAction, footer, children, submitting, withLogout } =
         arg0);
       let str = "text-strong";
@@ -46,45 +33,40 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6 = closure_5();
       if (cResult[0] === tmp6.header) {
-        let tmp8;
         if (cResult[1] === title) {
-          tmp8 = cResult[2];
+          let tmp8 = cResult[2];
         }
         if (cResult[3] === tmp6.header) {
           if (cResult[4] === subtitle) {
-            let tmp10;
             if (cResult[5] === str) {
-              tmp10 = cResult[6];
+              let tmp10 = cResult[6];
             }
-            if (cResult[7] === (null != ImageComponent && ImageComponent)) {
+            if (cResult[7] === tmp7) {
               if (cResult[8] === tmp8) {
-                let tmp13;
                 if (cResult[9] === tmp10) {
-                  tmp13 = cResult[10];
+                  let tmp13 = cResult[10];
                 }
                 if (cResult[11] === children) {
-                  let tmp16;
                   if (cResult[12] === tmp13) {
-                    tmp16 = cResult[13];
+                    let tmp16 = cResult[13];
                   }
                   if (cResult[14] === tmp4) {
                     if (cResult[15] === footer) {
                       if (cResult[16] === onAction) {
                         if (cResult[17] === submitting) {
-                          let tmp19;
-                          if (cResult[18] === (undefined === withLogout || withLogout)) {
-                            tmp19 = cResult[19];
+                          if (cResult[18] === tmp5) {
+                            let tmp19 = cResult[19];
                           }
                           if (cResult[20] === tmp16) {
-                            let tmp26;
                             if (cResult[21] === tmp19) {
-                              tmp26 = cResult[22];
+                              let tmp26 = cResult[22];
                             }
                             return tmp26;
                           }
-                          const obj2 = { children: items };
-                          items = [tmp16, tmp19];
-                          const tmp28 = React3(ModalScreen2.ModalScreen, obj2);
+                          const obj2 = { children: null };
+                          const items = [tmp16, tmp19];
+                          obj2.children = items;
+                          const tmp28 = React4(ModalScreen.ModalScreen, obj2);
                           cResult[20] = tmp16;
                           cResult[21] = tmp19;
                           cResult[22] = tmp28;
@@ -96,41 +78,43 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp29Result = footer;
                   if (undefined === footer) {
                     let tmp23 = tmp5;
-                    const ModalFooter = ModalFooter2.ModalFooter;
-                    if (undefined === withLogout || withLogout) {
-                      tmp23 = _false(LogOutDisclaimerDefault, {});
+                    if (tmp5) {
+                      tmp23 = React3(LogOutDisclaimerDefault, {});
                     }
                     const items1 = [tmp23];
                     let tmp24 = null != tmp4;
                     if (tmp24) {
                       const obj3 = { variant: "primary", text: tmp4, onPress: onAction, loading: submitting };
-                      tmp24 = _false(ModalActionButton.ModalActionButton, obj3);
+                      tmp24 = React3(ModalActionButton.ModalActionButton, obj3);
                     }
-                    const obj4 = { children: items1 };
+                    const obj4 = { children: null };
                     items1[1] = tmp24;
-                    tmp29Result = React3(ModalFooter, obj4);
+                    obj4.children = items1;
+                    tmp29Result = React4(ModalFooter.ModalFooter, obj4);
                   }
                   cResult[14] = tmp4;
                   cResult[15] = footer;
                   cResult[16] = onAction;
                   cResult[17] = submitting;
-                  cResult[18] = undefined === withLogout || withLogout;
+                  cResult[18] = tmp5;
                   cResult[19] = tmp29Result;
                   tmp19 = tmp29Result;
                 }
-                const obj5 = { children: items2 };
-                items2 = [tmp13, children];
-                const tmp18 = React3(ModalContent2.ModalContent, obj5);
+                const obj5 = { children: null };
+                const items2 = [tmp13, children];
+                obj5.children = items2;
+                const tmp18 = React4(ModalContent.ModalContent, obj5);
                 cResult[11] = children;
                 cResult[12] = tmp13;
                 cResult[13] = tmp18;
                 tmp16 = tmp18;
               }
             }
-            const obj6 = { align: "center", justify: "center", spacing: 8, children: items3 };
-            items3 = [null != ImageComponent && ImageComponent, tmp8, tmp10];
-            const tmp15 = React3(Stack_Stack.Stack, obj6);
-            cResult[7] = null != ImageComponent && ImageComponent;
+            const obj6 = { align: "center", justify: "center", spacing: 8, children: null };
+            const items3 = [tmp7, tmp8, tmp10];
+            obj6.children = items3;
+            const tmp15 = React4(Stack_Stack.Stack, obj6);
+            cResult[7] = tmp7;
             cResult[8] = tmp8;
             cResult[9] = tmp10;
             cResult[10] = tmp15;
@@ -140,7 +124,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp11 = null != subtitle;
         if (tmp11) {
           const obj7 = { variant: "text-md/medium", color: str, style: tmp6.header, children: subtitle };
-          tmp11 = _false(Text_Text.Text, obj7);
+          tmp11 = React3(Text_Text.Text, obj7);
         }
         cResult[3] = tmp6.header;
         cResult[4] = subtitle;
@@ -148,6 +132,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tmp11;
         tmp10 = tmp11;
       }
+      const tmp9 = React3(Text_Text.Text, {
+        accessibilityRole: "header",
+        variant: "heading-xl/bold",
+        color: "mobile-text-heading-primary",
+        style: tmp6.header,
+        children: title,
+      });
+      cResult[0] = tmp6.header;
+      cResult[1] = title;
+      cResult[2] = tmp9;
+      tmp8 = tmp9;
       const obj8 = {
         accessibilityRole: "header",
         variant: "heading-xl/bold",
@@ -155,79 +150,63 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp6.header,
         children: title,
       };
-      const tmp9 = _false(Text_Text.Text, obj8);
-      cResult[0] = tmp6.header;
-      cResult[1] = title;
-      cResult[2] = tmp9;
-      tmp8 = tmp9;
     }
-  : (title) => {
-      let ImageComponent;
-      let children;
-      let footer;
-      let items1;
-      let onAction;
-      let submitting;
-      let subtitle;
-      let subtitleColor;
-      let withLogout;
-      ({ ImageComponent, subtitle, subtitleColor } = title);
-      title = title.title;
+  : (action) => {
+      ({ ImageComponent, subtitle, subtitleColor } = action);
       if (subtitleColor === undefined) {
         subtitleColor = "text-strong";
       }
-      let action = title.action;
+      action = action.action;
       if (action === undefined) {
         action = null;
       }
-      ({ footer, withLogout, onAction, children, submitting } = title);
+      ({ footer, withLogout, onAction, children, submitting } = action);
       if (withLogout === undefined) {
         withLogout = true;
       }
       const tmp2 = closure_5();
-      const ModalScreen = ModalScreen2.ModalScreen;
-      const ModalContent = ModalContent2.ModalContent;
       let tmp6 = null != ImageComponent;
-      const Stack = Stack_Stack.Stack;
       if (tmp6) {
         tmp6 = ImageComponent;
       }
-      const items = [tmp6, ,];
-      const obj = {
-        accessibilityRole: "header",
-        variant: "heading-xl/bold",
-        color: "mobile-text-heading-primary",
-        style: tmp2.header,
-        children: title,
-      };
-      items[1] = _false(Text_Text.Text, obj);
+      const items = [
+        tmp6,
+        React3(Text_Text.Text, {
+          accessibilityRole: "header",
+          variant: "heading-xl/bold",
+          color: "mobile-text-heading-primary",
+          style: tmp2.header,
+          children: action.title,
+        }),
+      ];
       let tmp7Result = null != subtitle;
       if (tmp7Result) {
         const obj2 = { variant: "text-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
-        tmp7Result = _false(Text_Text.Text, obj2);
+        tmp7Result = React3(Text_Text.Text, obj2);
       }
-      const obj3 = { children: items1 };
+      const obj3 = { children: null };
       items[2] = tmp7Result;
-      items1 = [React3(Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
-      const children1 = [React3(ModalContent, obj3)];
+      const items1 = [
+        React4(Stack_Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }),
+        children,
+      ];
+      obj3.children = items1;
+      const children1 = [React4(ModalContent.ModalContent, obj3)];
       if (undefined === footer) {
-        const ModalFooter = ModalFooter2.ModalFooter;
         if (withLogout) {
-          withLogout = _false(LogOutDisclaimerDefault, {});
+          withLogout = React3(LogOutDisclaimerDefault, {});
         }
         const items3 = [withLogout];
         let tmp7Result2 = null != action;
         if (tmp7Result2) {
           const obj4 = { variant: "primary", text: action, onPress: onAction, loading: submitting };
-          tmp7Result2 = _false(ModalActionButton.ModalActionButton, obj4);
+          tmp7Result2 = React3(ModalActionButton.ModalActionButton, obj4);
         }
-        const obj5 = { children: items3 };
+        const obj5 = { children: null };
         items3[1] = tmp7Result2;
-        footer = React3(ModalFooter, obj5);
+        obj5.children = items3;
+        footer = React4(ModalFooter.ModalFooter, obj5);
       }
       children1[1] = footer;
-      return React3(ModalScreen, { children: children1 });
+      return React4(ModalScreen.ModalScreen, { children: children1 });
     };
-const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
-
-export default tmp4;

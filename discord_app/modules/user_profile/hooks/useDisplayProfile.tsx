@@ -1,44 +1,33 @@
 // discord_app/modules/user_profile/hooks/useDisplayProfile.tsx
 import maybeFetchUserProfileDefault from "../maybeFetchUserProfile.tsx";
 import DisplayProfileDefault from "../DisplayProfile.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import FunctionUtils from "../../../utils/FunctionUtils.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+const require = fn;
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let first;
       _require = arg0;
-      let closure_1 = arg1;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      const tmp = _require;
+      closure_1 = arg1;
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [UserStore, UserProfileStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg1) {
-        let tmp7;
         if (cResult[2] === arg0) {
-          tmp7 = cResult[3];
+          let tmp7 = cResult[3];
         }
-        const tmpResult = tmp(504);
-        return tmpResult.useStateFromStores(first, tmp7);
+        return tmp(504).useStateFromStores(first, tmp7);
       }
       const fn = function s() {
-        let obj;
-        let obj2;
         let tmp2 = null;
         if (null != closure_0) {
           const items = [UserStore, UserProfileStore];
@@ -64,16 +53,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = arg0;
       cResult[3] = fn;
       tmp7 = fn;
+      const obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
       _require = arg0;
-      let closure_1 = arg1;
-      const obj = require("get initialized");
+      closure_1 = arg1;
       let items = [UserStore, UserProfileStore];
-      return obj.useStateFromStores(items, () => {
-        let obj;
-        let obj2;
+      return require("initialize").useStateFromStores(items, () => {
         let tmp2 = null;
         if (null != closure_0) {
           const items = [UserStore, UserProfileStore];
@@ -97,47 +84,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       });
     };
 let closure_6 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, guildId) => {
-      let closure_0;
-      _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      if (cResult[0] === guildId) {
-        let tmp2;
-        let tmp3;
-        if (cResult[1] === arg0) {
-          tmp2 = cResult[2];
-          tmp3 = cResult[3];
-        }
-        const effect = react.useEffect(tmp2, tmp3);
-        return closure_6(arg0, guildId);
-      }
-      const fn = function o() {
-        const tmp = maybeFetchUserProfileDefault;
-        tmp(closure_0, undefined, { guildId });
-      };
-      const items = [guildId, arg0];
-      cResult[0] = guildId;
-      cResult[1] = arg0;
-      cResult[2] = fn;
-      cResult[3] = items;
-      tmp3 = items;
-      tmp2 = fn;
-    }
-  : (arg0, guildId) => {
-      let closure_0 = arg0;
-      const items = [guildId, arg0];
-      const effect = react.useEffect(() => {
-        const tmp = maybeFetchUserProfileDefault;
-        tmp(closure_0, undefined, { guildId });
-      }, items);
-      return closure_6(arg0, guildId);
-    };
+ReactCompilerGating = fn(558);
 function getDisplayProfile(id1, guildId) {
-  let obj;
-  let obj2;
   let tmp = arg2;
   if (arg2 === undefined) {
     const items = [UserStore, UserProfileStore];
@@ -159,12 +107,42 @@ function getDisplayProfile(id1, guildId) {
     return tmp8;
   }
 }
-let closure_7 = FunctionUtils.cachedFunction((arg0, arg1) => {
-  const tmp = new DisplayProfileDefault(arg0, arg1);
-  return tmp;
-});
+const FunctionUtils = fn(2026);
+let closure_7 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
 
 export default tmp2;
-export const useDisplayProfileWithFetchEffect = tmp3;
+export const useDisplayProfileWithFetchEffect = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, guildId) => {
+      _require = arg0;
+      const cResult = require("c").c(4);
+      if (cResult[0] === guildId) {
+        if (cResult[1] === arg0) {
+          let tmp2 = cResult[2];
+          let tmp3 = cResult[3];
+        }
+        const effect = noop.useEffect(tmp2, tmp3);
+        return closure_6(arg0, guildId);
+      }
+      const fn = function o() {
+        maybeFetchUserProfileDefault(closure_0, undefined, { guildId });
+      };
+      const items = [guildId, arg0];
+      cResult[0] = guildId;
+      cResult[1] = arg0;
+      cResult[2] = fn;
+      cResult[3] = items;
+      tmp3 = items;
+      tmp2 = fn;
+      const obj = require("c");
+    }
+  : (arg0, guildId) => {
+      closure_0 = arg0;
+      const items = [guildId, arg0];
+      const effect = noop.useEffect(() => {
+        maybeFetchUserProfileDefault(closure_0, undefined, { guildId });
+      }, items);
+      return closure_6(arg0, guildId);
+    };
 export { getDisplayProfile };

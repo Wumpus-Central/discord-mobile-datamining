@@ -1,5 +1,5 @@
 // discord_app/stores/SurveyStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
@@ -11,37 +11,32 @@ import GuildStore from "GuildStore.tsx";
 import PermissionStore from "PermissionStore.tsx";
 import SelectedGuildStore from "SelectedGuildStore.tsx";
 import UserStore from "UserStore.tsx";
-import Constants from "../Constants.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-let closure_13, currentUser, guildId, guildsArray, memberCount;
-
-let c10;
-let c9;
-let unpackModuleId;
+require = fn;
 function fetchSurveyIfNeeded() {
   let tmp = c18;
-  if (!tmp) {
+  if (!c18) {
     let tmp4 = null == closure_13.lastFetched;
     if (!tmp4) {
       const _Date = Date;
       tmp4 = Date.now() - closure_13.lastFetched >= DAY;
     }
-    tmp = !tmp4 && null == closure_13.surveyOverride;
-    const tmp8 = !tmp4 && null == closure_13.surveyOverride;
+    let tmp8 = !tmp4;
+    if (!tmp4) {
+      tmp8 = null == closure_13.surveyOverride;
+    }
+    tmp = tmp8;
   }
   if (!tmp) {
     c18 = true;
-    obj = surveyFetch;
-    obj.surveyFetch(closure_13.surveyOverride, true);
+    surveyFetch.surveyFetch(closure_13.surveyOverride, true);
   }
 }
 function setSurvey(survey) {
   survey = survey.survey;
   c18 = false;
-  const isActionTriggered = survey.isActionTriggered;
   closure_13.lastFetched = Date.now();
-  if (isActionTriggered) {
+  if (survey.isActionTriggered) {
     const _Date = Date;
     closure_13.lastActionTriggered = Date.now();
   }
@@ -49,7 +44,10 @@ function setSurvey(survey) {
     closure_13.hiddenSurveys = {};
   }
   let tmp3 = null != survey;
-  const tmp4 = tmp3 && null == closure_13.hiddenSurveys[survey.key];
+  let tmp4 = tmp3;
+  if (tmp3) {
+    tmp4 = null == closure_13.hiddenSurveys[survey.key];
+  }
   if (tmp3) {
     tmp3 = (function meetsGuildRequirements(c17) {
       let guild_requirements = c17.guild_requirements;
@@ -168,13 +166,16 @@ function setSurvey(survey) {
       }
     })(survey);
   }
-  const tmp6 = c14 || c15;
+  let tmp6 = c14;
+  if (!c14) {
+    tmp6 = c15;
+  }
   const Storage = Storage2.Storage;
-  const value = Storage.get(unpackModuleId);
+  value = Storage.get(closure_1_11);
   let tmp9 = null == value;
   if (!tmp9) {
+    tmp9 = _modDef4467().diff(value, "day") < 7;
     obj = _modDef4467();
-    tmp9 = obj.diff(value, "day") < 7;
   }
   let tmp11 = null;
   if (tmp4) {
@@ -192,8 +193,6 @@ function setSurvey(survey) {
   c17 = tmp11;
 }
 function handleSelectedGuildChange() {
-  let constants2;
-  let constants3;
   if (null != c17) {
     let flag = (function meetsGuildRequirements(c17) {
       let guild_requirements = c17.guild_requirements;
@@ -450,8 +449,10 @@ function handleSelectedGuildChange() {
     c17 = null;
   }
 }
-({ GuildFeatures: c9, Permissions: c10, FIRST_RUN_DATE_KEY: unpackModuleId } = Constants);
+const Constants = fn(1085);
+({ GuildFeatures: closure_9, Permissions: c10, FIRST_RUN_DATE_KEY: closure_11 } = Constants);
 let obj = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null };
+let closure_13 = obj;
 let c14 = false;
 let c15 = false;
 obj = {};
@@ -471,87 +472,87 @@ let obj2 = {
   GUILD_SIZE_ALL: "guild_size_all",
 };
 const set = new Set(Object.values(obj2));
-const PersistedStore = get_initializedDefault.PersistedStore;
-class SurveyStore extends PersistedStore {
-  initialize(arg0) {
-    const self = this;
-    let tmp = arg0;
-    this.waitFor(GuildMemberCountStore, GuildStore, PermissionStore, SelectedGuildStore, UserStore);
-    if (arg0 == null) {
-      tmp = obj;
-    }
-    closure_13 = tmp;
-    const items = [SelectedGuildStore];
-    self.syncWith(items, handleSelectedGuildChange);
-  }
-  getState() {
-    return closure_13;
-  }
-  getCurrentSurvey() {
-    let tmp = null == closure_13.lastFetched;
-    if (!tmp) {
-      const _Date = Date;
-      tmp = Date.now() - closure_13.lastFetched >= DAY;
-    }
-    let tmp5 = null;
-    if (!tmp) {
-      tmp5 = c17;
-    }
-    return tmp5;
-  }
-  getSurveyOverride() {
-    return closure_13.surveyOverride;
-  }
-  getActionTriggeredSurveyOverride() {
-    return c19;
-  }
-  getLastSeenTimestamp() {
-    return closure_13.lastSeen;
-  }
-  shouldAllowSurveyAction() {
-    let num = closure_13.lastActionTriggered;
-    const timestamp = Date.now();
-    if (num == null) {
-      num = 0;
-    }
-    return timestamp - num >= result;
-  }
-}
+const PersistedStore = initializeDefault.PersistedStore;
+class SurveyStore extends PersistedStore {}
 const prototype = SurveyStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  const self = this;
+  let tmp = arg0;
+  this.waitFor(GuildMemberCountStore, GuildStore, PermissionStore, SelectedGuildStore, UserStore);
+  if (arg0 == null) {
+    tmp = obj;
+  }
+  closure_13 = tmp;
+  const items = [SelectedGuildStore];
+  self.syncWith(items, handleSelectedGuildChange);
+};
+prototype["getState"] = function getState() {
+  return closure_13;
+};
+prototype["getCurrentSurvey"] = function getCurrentSurvey() {
+  let tmp = null == closure_13.lastFetched;
+  if (!tmp) {
+    const _Date = Date;
+    tmp = Date.now() - closure_13.lastFetched >= DAY;
+  }
+  let tmp5 = null;
+  if (!tmp) {
+    tmp5 = c17;
+  }
+  return tmp5;
+};
+prototype["getSurveyOverride"] = function getSurveyOverride() {
+  return closure_13.surveyOverride;
+};
+prototype["getActionTriggeredSurveyOverride"] = function getActionTriggeredSurveyOverride() {
+  return c19;
+};
+prototype["getLastSeenTimestamp"] = function getLastSeenTimestamp() {
+  return closure_13.lastSeen;
+};
+prototype["shouldAllowSurveyAction"] = function shouldAllowSurveyAction() {
+  let num = closure_13.lastActionTriggered;
+  const timestamp = Date.now();
+  if (num == null) {
+    num = 0;
+  }
+  return timestamp - num >= result;
+};
 SurveyStore.displayName = "SurveyStore";
 SurveyStore.persistKey = "SurveyStore";
 let items = [
   (arg0) => {
-    obj = {};
     const merged = Object.assign(arg0);
-    delete obj["validSurveys"];
-    delete obj["currentSurvey"];
-    delete obj["iosIsPushNotificationClicked"];
-    delete obj["iosIsInviteShown"];
-    delete obj["iosFirstRunDate"];
-    return obj;
+    delete tmp[tmp2];
+    delete tmp[tmp2];
+    delete tmp[tmp2];
+    delete tmp[tmp2];
+    delete tmp[tmp2];
+    return {};
   },
   (lastSeen) => {
-    obj = { lastSeen };
+    obj = {};
     const merged = Object.assign(lastSeen);
     lastSeen = lastSeen.lastSeen;
     if (lastSeen == null) {
       lastSeen = null;
     }
+    obj.lastSeen = lastSeen;
     return obj;
   },
   (hiddenSurveys) => {
-    obj = { hiddenSurveys };
+    obj = {};
     const merged = Object.assign(hiddenSurveys);
     hiddenSurveys = hiddenSurveys.hiddenSurveys;
     if (hiddenSurveys == null) {
       hiddenSurveys = {};
     }
+    obj.hiddenSurveys = hiddenSurveys;
     return obj;
   },
 ];
 SurveyStore.migrations = items;
-const obj3 = {
+const surveyStore = new SurveyStore(DispatcherDefault, {
   CONNECTION_OPEN: fetchSurveyIfNeeded,
   CONNECTION_RESUMED: fetchSurveyIfNeeded,
   SURVEY_FETCHED: setSurvey,
@@ -561,23 +562,24 @@ const obj3 = {
     if (obj == null) {
       obj = {};
     }
-    delete obj[key.key];
+    delete tmp[tmp2];
   },
   SURVEY_OVERRIDE: function handleSurveyOverride(id) {
     id = id.id;
     if (id.isActionTriggered) {
       c19 = id;
       if (null != id) {
-        delete closure_13.hiddenSurveys[id];
+        const hiddenSurveys2 = closure_13.hiddenSurveys;
+        delete tmp[tmp2];
       }
     } else {
       c19 = null;
       closure_13.surveyOverride = id;
       if (null != id) {
-        delete closure_13.hiddenSurveys[id];
+        const hiddenSurveys = closure_13.hiddenSurveys;
+        delete tmp3[tmp2];
       }
-      obj = surveyFetch;
-      obj.surveyFetch(closure_13.surveyOverride, true);
+      surveyFetch.surveyFetch(closure_13.surveyOverride, true);
     }
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {
@@ -592,8 +594,8 @@ const obj3 = {
   SURVEY_SEEN: function handleSurveySeen() {
     closure_13.lastSeen = Date.now();
   },
-};
-const surveyStore = new SurveyStore(DispatcherDefault, obj3);
+});
+const size = fn(2);
 const result1 = size.fileFinishedImporting("stores/SurveyStore.tsx");
 
 export default surveyStore;

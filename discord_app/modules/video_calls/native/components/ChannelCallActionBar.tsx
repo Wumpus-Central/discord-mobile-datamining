@@ -1,9 +1,6 @@
 // discord_app/modules/video_calls/native/components/ChannelCallActionBar.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl2 from "../../../../intl/index.native.tsx";
-import CallConstants from "../../../calls/CallConstants.tsx";
-import Constants from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
@@ -12,20 +9,19 @@ import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.t
 import useIsRemoteDefault from "../../../game_console/hooks/useIsRemote.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
 import VoiceChatHooks from "../../../voice_chat/VoiceChatHooks.tsx";
-import useActionBarHeight from "../useActionBarHeight.tsx";
 import CallBarActionAll from "CallBarAction.tsx";
 import useIsFiveButtonLayout from "../useIsFiveButtonLayout.tsx";
 import openIgnoreThermalStateAlert from "../../../activities/native/openIgnoreThermalStateAlert.tsx";
 import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
-import CameraLottie2 from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
+import CameraLottie from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09666_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09667_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../_runtime/09668_AssetRegistry.js";
+import _modDef9666 from "../../../../../_runtime/metro/09666__.js";
+import _modDef9667 from "../../../../../_runtime/metro/09667__.js";
+import _modDef9668 from "../../../../../_runtime/metro/09668__.js";
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import DisconnectRemoteButton from "DisconnectRemoteButton.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
@@ -33,61 +29,46 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import ChannelCallLifecycleStore from "../ChannelCallLifecycleStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
-let importDefault;
 
-let closure_15;
-let closure_16;
-let closure_17;
-let obj2;
-let obj3;
-const View = react_native.View;
-const ParticipantTypes = CallConstants.ParticipantTypes;
-const Features = Constants.Features;
-({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, containerForFiveButtonLayout: obj3 };
-obj2 = {
-  height: useActionBarHeight.CALL_ACTION_BAR_HEIGHT,
+require = fn;
+let View = fn(17).View;
+const ParticipantTypes = fn(4917).ParticipantTypes;
+const Features = fn(4921).Features;
+const jsxProd = fn(21);
+({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: {
+    height: fn(9111).CALL_ACTION_BAR_HEIGHT,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  containerForFiveButtonLayout: null,
+};
+let obj3 = {
+  height: fn(9111).CALL_ACTION_BAR_HEIGHT,
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "row",
 };
-createStyles = createStyles.createStyles;
-obj3 = {
-  height: useActionBarHeight.FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+obj2.containerForFiveButtonLayout = {
+  height: fn(9111).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
   paddingHorizontal: 16,
-  paddingTop: useActionBarHeight.FIVE_BUTTON_CONTAINER_PADDING_TOP,
-  paddingBottom: useActionBarHeight.FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  paddingTop: fn(9111).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(9111).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
   justifyContent: "center",
   flexDirection: "row",
 };
-let closure_18 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_18 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let closure_1;
-      let reactingToThermalState;
-      let ref;
-      let stateFromStores2;
-      let tmp10;
-      let tmp11;
-      let tmp14;
-      let tmp15;
-      let tmp25;
-      let tmp6;
-      let tmp7;
-      let obj = channel(stateFromStores2[15]);
-      const cResult = obj.c(21);
+      const cResult = channel(stateFromStores2[15]).c(21);
       channel = channel.channel;
       const tmp5 = require("useHasVideoPermission")(channel);
-      const tmp4 = importDefault;
       importDefault = tmp5;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelCallLifecycleStore];
@@ -101,8 +82,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const tmpResult = channel(stateFromStores2[17]);
-      const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
+      let obj = channel(stateFromStores2[15]);
+      const tmp4 = importDefault;
+      const stateFromStores = channel(stateFromStores2[17]).useStateFromStores(tmp6, tmp7);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [MediaEngineStore];
         const fn2 = function h() {
@@ -110,14 +92,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        tmp11 = fn2;
-        tmp10 = items1;
+        let tmp11 = fn2;
+        let tmp10 = items1;
       } else {
         tmp10 = cResult[2];
         tmp11 = cResult[3];
       }
-      const tmpResult4 = channel(stateFromStores2[17]);
-      const stateFromStores1 = tmpResult4.useStateFromStores(tmp10, tmp11);
+      const tmpResult = channel(stateFromStores2[17]);
+      const stateFromStores1 = channel(stateFromStores2[17]).useStateFromStores(tmp10, tmp11);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [MediaEngineStore];
         const fn3 = function v() {
@@ -125,23 +107,26 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[4] = items2;
         cResult[5] = fn3;
-        tmp15 = fn3;
-        tmp14 = items2;
+        let tmp15 = fn3;
+        let tmp14 = items2;
       } else {
         tmp14 = cResult[4];
         tmp15 = cResult[5];
       }
+      const tmpResult4 = channel(stateFromStores2[17]);
+      stateFromStores2 = channel(stateFromStores2[17]).useStateFromStores(tmp14, tmp15);
       const tmpResult5 = channel(stateFromStores2[17]);
-      stateFromStores2 = tmpResult5.useStateFromStores(tmp14, tmp15);
-      const reachedLimit = tmp4(tmp2[18])(channel).reachedLimit;
-      const tmpResult6 = channel(stateFromStores2[19]);
-      const stageHasMedia = tmpResult6.useStageHasMedia(channel.id);
+      const stageHasMedia = channel(stateFromStores2[19]).useStageHasMedia(channel.id);
       let tmp19 = !stateFromStores2;
       if (stateFromStores2) {
         tmp19 = !tmp5;
       }
       if (!tmp19) {
-        tmp19 = !stageHasMedia && reachedLimit;
+        let reachedLimit = !stageHasMedia;
+        if (!stageHasMedia) {
+          reachedLimit = tmp4(tmp2[18])(channel).reachedLimit;
+        }
+        tmp19 = reachedLimit;
       }
       ref = ref.useRef(null);
       let str = "unmute";
@@ -150,74 +135,75 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== str) {
         let obj2 = { ref, animation: str };
+        const tmp23 = closure_15(tmp(tmp2[20]).CameraLottie, obj2);
         cResult[6] = str;
-        cResult[7] = closure_15(channel(stateFromStores2[20]).CameraLottie, obj2);
-        const tmp24 = closure_15(channel(stateFromStores2[20]).CameraLottie, obj2);
+        cResult[7] = tmp23;
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class B {
-          constructor(channel) {
-            const obj = CallsUtils;
-            obj.handleToggleVideo(channel);
-            if (ref != null) {
-              const current = ref.current;
+          constructor(arg0) {
+            obj = closure_0(closure_3[21]);
+            handleToggleVideoResult = obj.handleToggleVideo(channel);
+            if (closure_4 != null) {
+              current = closure_4.current;
               if (current != null) {
-                current.play();
+                playResult = current.play();
               }
             }
+            return;
           }
         }
         cResult[8] = B;
-        tmp25 = B;
       } else {
         class B {
-          constructor(channel) {
-            const obj = CallsUtils;
-            obj.handleToggleVideo(channel);
-            if (ref != null) {
-              const current = ref.current;
+          constructor(arg0) {
+            obj = closure_0(closure_3[21]);
+            handleToggleVideoResult = obj.handleToggleVideo(channel);
+            if (closure_4 != null) {
+              current = closure_4.current;
               if (current != null) {
-                current.play();
+                playResult = current.play();
               }
             }
+            return;
           }
         }
       }
-      B = tmp25;
+      View = B;
       if (cResult[9] === channel) {
         class B {
-          constructor(channel) {
-            const obj = CallsUtils;
-            obj.handleToggleVideo(channel);
-            if (ref != null) {
-              const current = ref.current;
+          constructor(arg0) {
+            obj = closure_0(closure_3[21]);
+            handleToggleVideoResult = obj.handleToggleVideo(channel);
+            if (closure_4 != null) {
+              current = closure_4.current;
               if (current != null) {
-                current.play();
+                playResult = current.play();
               }
             }
+            return;
           }
         }
       }
       class F {
         constructor() {
-          tmp = closure_3;
-          if (tmp) {
-            tmp2 = closure_1;
-            if (tmp2) {
-              tmp6 = closure_2;
-              if (tmp6) {
-                tmp10 = closure_0;
-                tmp11 = closure_3;
+          if (closure_3) {
+            tmp = closure_1;
+            if (closure_1) {
+              tmp5 = closure_2;
+              if (closure_2) {
+                tmp9 = closure_0;
+                tmp10 = closure_3;
                 obj2 = closure_0(closure_3[22]);
                 result = obj2.openIgnoreThermalStateAlert(() => closure_1_5(channel));
               } else {
-                tmp7 = closure_5;
-                tmp8 = channel;
-                tmp9 = closure_5(channel);
+                tmp6 = closure_5;
+                tmp7 = channel;
+                tmp8 = closure_5(channel);
               }
             } else {
-              tmp3 = closure_0;
-              tmp4 = closure_3;
+              tmp2 = closure_0;
+              tmp3 = closure_3;
               obj = closure_0(closure_3[21]);
               result1 = obj.showCameraDisabledAlert();
             }
@@ -230,45 +216,44 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = stateFromStores;
       cResult[12] = stateFromStores2;
       cResult[13] = F;
+      const tmpResult6 = channel(stateFromStores2[19]);
     }
   : (channel) => {
-      let closure_1;
-      let intl;
-      let reactingToThermalState;
       channel = channel.channel;
       importDefault = undefined;
       let stateFromStores1;
-      const isSmallSize = channel.isSmallSize;
       const tmp3 = require("useHasVideoPermission")(channel);
-      const tmp = importDefault;
       importDefault = tmp3;
-      let obj = channel(stateFromStores1[17]);
       const items = [ChannelCallLifecycleStore];
-      const stateFromStores = obj.useStateFromStores(items, () => reactingToThermalState.isReactingToThermalState());
-      let obj2 = channel(stateFromStores1[17]);
+      const stateFromStores = channel(stateFromStores1[17]).useStateFromStores(items, () =>
+        reactingToThermalState.isReactingToThermalState(),
+      );
+      let obj = channel(stateFromStores1[17]);
+      const tmp = importDefault;
       const items1 = [MediaEngineStore];
-      stateFromStores1 = obj2.useStateFromStores(items1, () => MediaEngineStore.isVideoEnabled());
+      stateFromStores1 = channel(stateFromStores1[17]).useStateFromStores(items1, () =>
+        MediaEngineStore.isVideoEnabled(),
+      );
+      let obj2 = channel(stateFromStores1[17]);
       const items2 = [MediaEngineStore];
+      const stateFromStores2 = channel(stateFromStores1[17]).useStateFromStores(items2, () =>
+        MediaEngineStore.supports(constants.VIDEO),
+      );
       const obj3 = channel(stateFromStores1[17]);
-      const stateFromStores2 = obj3.useStateFromStores(items2, () => MediaEngineStore.supports(constants.VIDEO));
-      const reachedLimit = require("useChannelVideoLimit")(channel).reachedLimit;
-      obj4 = channel(stateFromStores1[19]);
-      const stageHasMedia = obj4.useStageHasMedia(channel.id);
-      const ref = stateFromStores2.useRef(null);
+      const stageHasMedia = channel(stateFromStores1[19]).useStageHasMedia(channel.id);
+      stateFromStores2.useRef(null);
       const items3 = [stateFromStores1];
       const memo = stateFromStores2.useMemo(() => {
-        let str;
-        const obj = { ref, animation: str };
-        str = "unmute";
-        const CameraLottie = CameraLottie2.CameraLottie;
+        const obj = { ref, animation: null };
+        let str = "unmute";
         if (stateFromStores1) {
           str = "mute";
         }
-        return closure_15(CameraLottie, obj);
+        obj.animation = str;
+        return closure_2_15(CameraLottie.CameraLottie, obj);
       }, items3);
       const callback = stateFromStores2.useCallback((channel) => {
-        const obj = CallsUtils;
-        obj.handleToggleVideo(channel);
+        CallsUtils.handleToggleVideo(channel);
         if (ref != null) {
           const current = ref.current;
           if (current != null) {
@@ -281,62 +266,59 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores2) {
           if (closure_1) {
             if (stateFromStores) {
-              const obj2 = openIgnoreThermalStateAlert;
-              const result = obj2.openIgnoreThermalStateAlert(() => callback(channel));
+              const result = openIgnoreThermalStateAlert.openIgnoreThermalStateAlert(() => callback(channel));
             } else {
               callback(channel);
             }
           } else {
-            const obj = CallsUtils;
-            const result1 = obj.showCameraDisabledAlert();
+            const result1 = CallsUtils.showCameraDisabledAlert();
           }
         }
       }, items4);
       let tmp13 = !stateFromStores2;
-      const ToggledActionButton = stateFromStores(stateFromStores1[24]).ToggledActionButton;
       if (stateFromStores2) {
         tmp13 = !tmp3;
       }
       if (!tmp13) {
-        tmp13 = !stageHasMedia && reachedLimit;
+        let reachedLimit = !stageHasMedia;
+        if (!stageHasMedia) {
+          reachedLimit = require("useChannelVideoLimit")(channel).reachedLimit;
+        }
+        tmp13 = reachedLimit;
       }
-      obj5 = {
+      const obj5 = {
         appearsDisabled: tmp13,
         isActive: stateFromStores1,
         onPress: callback1,
-        accessibilityLabel: intl.string(channel(stateFromStores1[23]).t.HK4JIu),
-        source: tmp(stateFromStores1[25]),
-        isSmallSize,
-        lottieComponent: memo,
+        accessibilityLabel: null,
+        source: null,
+        isSmallSize: null,
+        lottieComponent: null,
       };
-      intl = tmp4(tmp2[23]).intl;
-      return closure_15(ToggledActionButton, obj5);
+      const intl = tmp4(tmp2[23]).intl;
+      obj5.accessibilityLabel = intl.string(channel(stateFromStores1[23]).t.HK4JIu);
+      obj5.source = tmp(stateFromStores1[25]);
+      obj5.isSmallSize = channel.isSmallSize;
+      obj5.lottieComponent = memo;
+      return closure_15(stateFromStores(stateFromStores1[24]).ToggledActionButton, obj5);
     };
-let closure_19 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_19 = tmp3;
+ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isSmallSize) => {
-      let imgSource;
-      let isActive;
-      let isFeatureEnabled;
-      let onPress;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       isSmallSize = isSmallSize.isSmallSize;
       ({ isActive, onPress, imgSource, isFeatureEnabled } = useScreenshareUtilsDefault(isSmallSize.channel));
-      useScreenshareUtilsDefault(isSmallSize.channel);
       if (cResult[0] === isFeatureEnabled) {
-        let tmp5;
-        let tmp8;
         if (cResult[1] === onPress) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = intl2.intl;
-          const stringResult = intl.string(intl2.t.XF1nZz);
+          const intl = util.intl;
+          const stringResult = intl.string(util.t.XF1nZz);
           cResult[3] = stringResult;
-          tmp8 = stringResult;
+          let tmp8 = stringResult;
         } else {
           tmp8 = cResult[3];
         }
@@ -344,9 +326,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[5] === isActive) {
             if (cResult[6] === isSmallSize) {
               if (cResult[7] === tmp5) {
-                let tmp10;
-                if (cResult[8] === !isFeatureEnabled) {
-                  tmp10 = cResult[9];
+                if (cResult[8] === tmp6) {
+                  let tmp10 = cResult[9];
                 }
                 return tmp10;
               }
@@ -361,7 +342,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           onPress: tmp5,
           isSmallSize,
         };
-        const tmp13 = closure_15(CallBarActionAll.ToggledActionButton, obj2);
+        const tmp13 = closure_1_15(CallBarActionAll.ToggledActionButton, obj2);
         cResult[4] = imgSource;
         cResult[5] = isActive;
         cResult[6] = isSmallSize;
@@ -378,18 +359,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = onPress;
       cResult[2] = fn;
       tmp5 = fn;
+      const tmp4 = useScreenshareUtilsDefault(isSmallSize.channel);
     }
   : (arg0) => {
-      let channel;
-      let imgSource;
-      let intl;
-      let isActive;
-      let isFeatureEnabled;
-      let isSmallSize;
-      let onPress;
       ({ channel, isSmallSize } = arg0);
       ({ onPress, isFeatureEnabled, isActive, imgSource } = useScreenshareUtilsDefault(channel));
-      useScreenshareUtilsDefault(channel);
       if (!isFeatureEnabled) {
         onPress = () => {};
       }
@@ -397,65 +371,59 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         appearsDisabled: !isFeatureEnabled,
         source: imgSource,
         isActive,
-        accessibilityLabel: intl.string(intl2.t.XF1nZz),
-        onPress,
-        isSmallSize,
+        accessibilityLabel: null,
+        onPress: null,
+        isSmallSize: null,
       };
-      const ToggledActionButton = CallBarActionAll.ToggledActionButton;
-      intl = intl2.intl;
-      return closure_15(ToggledActionButton, obj);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.XF1nZz);
+      obj.onPress = onPress;
+      obj.isSmallSize = isSmallSize;
+      return closure_1_15(CallBarActionAll.ToggledActionButton, obj);
     };
-let closure_20 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_20 = tmp4;
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let isAudioRouteEnabled;
-      let toggleAudio;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       channel = channel.channel;
       const isSmallSize = channel.isSmallSize;
-      const obj2 = CallsUtils;
-      const maskedSpeakerStates = obj2.useMaskedSpeakerStates();
+      const maskedSpeakerStates = CallsUtils.useMaskedSpeakerStates();
       ({ isAudioRouteEnabled, toggleAudio } = maskedSpeakerStates);
       const routeSource = maskedSpeakerStates.routeSource;
-      const obj3 = VoiceChatHooks;
-      const isConnectedToVoiceChannel = obj3.useIsConnectedToVoiceChannel(channel);
+      const isConnectedToVoiceChannel = VoiceChatHooks.useIsConnectedToVoiceChannel(channel);
       if (cResult[0] === channel.id) {
         if (cResult[1] === isConnectedToVoiceChannel) {
-          let tmp6;
-          let tmp8;
           if (cResult[2] === toggleAudio) {
-            tmp6 = cResult[3];
+            let tmp6 = cResult[3];
           }
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = intl2.intl;
-            const stringResult = intl.string(intl2.t["A/Ly/2"]);
+            const intl = util.intl;
+            const stringResult = intl.string(util.t["A/Ly/2"]);
             cResult[4] = stringResult;
-            tmp8 = stringResult;
+            let tmp8 = stringResult;
           } else {
             tmp8 = cResult[4];
           }
           if (cResult[5] === isAudioRouteEnabled) {
             if (cResult[6] === isSmallSize) {
               if (cResult[7] === routeSource) {
-                let tmp10;
                 if (cResult[8] === tmp6) {
-                  tmp10 = cResult[9];
+                  let tmp10 = cResult[9];
                 }
                 return tmp10;
               }
             }
           }
-          obj4 = {
+          const obj4 = {
             isActive: isAudioRouteEnabled,
             source: routeSource,
             onPress: tmp6,
             accessibilityLabel: tmp8,
             isSmallSize,
           };
-          const tmp13 = closure_15(CallBarActionAll.ToggledActionButton, obj4);
+          const tmp13 = closure_1_15(CallBarActionAll.ToggledActionButton, obj4);
           cResult[5] = isAudioRouteEnabled;
           cResult[6] = isSmallSize;
           cResult[7] = routeSource;
@@ -474,109 +442,92 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn;
     }
   : (channel) => {
-      let c1;
-      let intl;
-      let isAudioRouteEnabled;
-      let routeSource;
       channel = channel.channel;
       c1 = undefined;
-      const isSmallSize = channel.isSmallSize;
-      const obj = CallsUtils;
-      const maskedSpeakerStates = obj.useMaskedSpeakerStates();
+      const maskedSpeakerStates = CallsUtils.useMaskedSpeakerStates();
       ({ toggleAudio: c1, isAudioRouteEnabled, routeSource } = maskedSpeakerStates);
-      const obj2 = VoiceChatHooks;
-      let closure_2 = obj2.useIsConnectedToVoiceChannel(channel);
+      closure_2 = VoiceChatHooks.useIsConnectedToVoiceChannel(channel);
       const obj3 = {
         isActive: isAudioRouteEnabled,
         source: routeSource,
         onPress() {
           _undefined(channel.id, closure_2);
         },
-        accessibilityLabel: intl.string(intl2.t["A/Ly/2"]),
-        isSmallSize,
+        accessibilityLabel: null,
+        isSmallSize: null,
       };
-      const ToggledActionButton = CallBarActionAll.ToggledActionButton;
-      intl = intl2.intl;
-      return closure_15(ToggledActionButton, obj3);
+      const intl = util.intl;
+      obj3.accessibilityLabel = intl.string(util.t["A/Ly/2"]);
+      obj3.isSmallSize = channel.isSmallSize;
+      return closure_1_15(CallBarActionAll.ToggledActionButton, obj3);
     };
-let closure_21 = tmp6;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_21 = tmp5;
+ReactCompilerGating = fn(558);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let first;
-      let tmp6;
-      let obj = channel(576);
-      const cResult = obj.c(6);
+      const cResult = channel(576).c(6);
       channel = channel.channel;
       const isSmallSize = channel.isSmallSize;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(channel(1126).t["6vrfgt"]);
+        const stringResult = intl.string(tmp(1126).t["6vrfgt"]);
         cResult[0] = stringResult;
-        first = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== channel) {
         const fn = function l() {
-          const obj = CallsUtils;
-          obj.handleDisconnect(channel);
+          CallsUtils.handleDisconnect(channel);
         };
         cResult[1] = channel;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] === isSmallSize) {
-        let tmp7;
         if (cResult[4] === tmp6) {
-          tmp7 = cResult[5];
+          let tmp7 = cResult[5];
         }
         return tmp7;
       }
-      const obj2 = { source: AssetRegistryDefault, accessibilityLabel: first, isSmallSize, onPress: tmp6 };
-      const PrimaryActionButton = CallBarActionAll.PrimaryActionButton;
-      const tmp8 = closure_15(PrimaryActionButton, obj2);
+      const obj = channel(576);
+      const tmp8 = closure_15(CallBarActionAll.PrimaryActionButton, {
+        source: _modDef9666,
+        accessibilityLabel: first,
+        isSmallSize,
+        onPress: tmp6,
+      });
       cResult[3] = isSmallSize;
       cResult[4] = tmp6;
       cResult[5] = tmp8;
       tmp7 = tmp8;
+      const obj2 = { source: _modDef9666, accessibilityLabel: first, isSmallSize, onPress: tmp6 };
     }
   : (channel) => {
-      let intl;
       channel = channel.channel;
-      const isSmallSize = channel.isSmallSize;
-      let obj = {
-        source: AssetRegistryDefault,
-        accessibilityLabel: intl.string(channel(1126).t["6vrfgt"]),
-        isSmallSize,
-        onPress() {
-          const obj = CallsUtils;
-          obj.handleDisconnect(channel);
-        },
+      const obj = { source: _modDef9666, accessibilityLabel: null, isSmallSize: null, onPress: null };
+      const intl = channel(1126).intl;
+      obj.accessibilityLabel = intl.string(channel(1126).t["6vrfgt"]);
+      obj.isSmallSize = channel.isSmallSize;
+      obj.onPress = function onPress() {
+        CallsUtils.handleDisconnect(channel);
       };
-      const PrimaryActionButton = CallBarActionAll.PrimaryActionButton;
-      intl = channel(1126).intl;
-      return closure_15(PrimaryActionButton, obj);
+      return closure_15(CallBarActionAll.PrimaryActionButton, obj);
     };
-let closure_22 = tmp7;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_22 = tmp6;
+ReactCompilerGating = fn(558);
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let first;
-      let tmp17;
-      let tmp7;
-      let tmp9;
-      const tmp = channel;
-      let obj = channel(576);
-      const cResult = obj.c(13);
+      let tmp2 = dependencyMap;
+      const cResult = channel(576).c(13);
       channel = channel.channel;
       const isSmallSize = channel.isSmallSize;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore, AuthenticationStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -584,9 +535,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         const fn = function l() {
           const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
           if (null != selectedParticipant) {
-            let tmp4;
             if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
-              tmp4 = null;
+              let tmp4 = null;
             }
             return tmp4;
           }
@@ -598,25 +548,26 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = channel.id;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+      let obj = channel(576);
+      const stateFromStores = channel(504).useStateFromStores(first, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ApplicationStreamingStore];
         cResult[3] = items1;
-        tmp9 = items1;
+        let tmp9 = items1;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
         class T {
           constructor() {
-            let activeStreamForStreamKey = null;
-            if (null != stateFromStores) {
-              activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
+            activeStreamForStreamKey = null;
+            if (null != closure_1) {
+              tmp3 = closure_9;
+              activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
             }
             return activeStreamForStreamKey;
           }
@@ -626,24 +577,35 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class T {
           constructor() {
-            let activeStreamForStreamKey = null;
-            if (null != stateFromStores) {
-              activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
+            activeStreamForStreamKey = null;
+            if (null != closure_1) {
+              tmp3 = closure_9;
+              activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
             }
             return activeStreamForStreamKey;
           }
         }
       }
-      const tmpResult2 = tmp(504);
-      const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, T);
-      let tmp13 = null;
-      if (null != stateFromStores1) {
-        let tmp14;
+      const tmpResult = channel(504);
+      const stateFromStores1 = channel(504).useStateFromStores(tmp9, T);
+      if (null == stateFromStores1) {
         class T {
           constructor() {
-            let activeStreamForStreamKey = null;
-            if (null != stateFromStores) {
-              activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
+            activeStreamForStreamKey = null;
+            if (null != closure_1) {
+              tmp3 = closure_9;
+              activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
+            }
+            return activeStreamForStreamKey;
+          }
+        }
+      } else {
+        class T {
+          constructor() {
+            activeStreamForStreamKey = null;
+            if (null != closure_1) {
+              tmp3 = closure_9;
+              activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
             }
             return activeStreamForStreamKey;
           }
@@ -651,31 +613,33 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class T {
             constructor() {
-              let activeStreamForStreamKey = null;
-              if (null != stateFromStores) {
-                activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
+              activeStreamForStreamKey = null;
+              if (null != closure_1) {
+                tmp3 = closure_9;
+                activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
               }
               return activeStreamForStreamKey;
             }
           }
-          const stringResult = obj4.string(tmp(1126).t.q3O3J8);
           class N {
             constructor() {
-              const obj = ChannelRTCActionCreatorsDefault;
-              const participant = obj.selectParticipant(channel.id, null);
-              const stopStream = StreamActionCreators.stopStream;
-              StreamActionCreators;
-              const obj2 = StreamKeyUtils;
-              stopStream(obj2.encodeStreamKey(stateFromStores1));
+              obj = closure_1(closure_3[29]);
+              participant = obj.selectParticipant(channel.id, null);
+              obj2 = closure_0(closure_3[30]);
+              obj3 = closure_0(closure_3[31]);
+              stopStreamResult = obj2.stopStream(obj3.encodeStreamKey(closure_2));
+              return;
             }
           }
-          tmp14 = stringResult;
+          const stringResult = obj4.string(tmp(1126).t.q3O3J8);
+          const tmp13 = obj4.string(tmp(1126).t.q3O3J8);
         } else {
           class T {
             constructor() {
-              let activeStreamForStreamKey = null;
-              if (null != stateFromStores) {
-                activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
+              activeStreamForStreamKey = null;
+              if (null != closure_1) {
+                tmp3 = closure_9;
+                activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
               }
               return activeStreamForStreamKey;
             }
@@ -684,9 +648,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] === stateFromStores1) {
           class T {
             constructor() {
-              let activeStreamForStreamKey = null;
-              if (null != stateFromStores) {
-                activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
+              activeStreamForStreamKey = null;
+              if (null != closure_1) {
+                tmp3 = closure_9;
+                activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
               }
               return activeStreamForStreamKey;
             }
@@ -694,66 +659,59 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === isSmallSize) {
             class T {
               constructor() {
-                let activeStreamForStreamKey = null;
-                if (null != stateFromStores) {
-                  activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
+                activeStreamForStreamKey = null;
+                if (null != closure_1) {
+                  tmp3 = closure_9;
+                  activeStreamForStreamKey = closure_9.getActiveStreamForStreamKey(tmp);
                 }
                 return activeStreamForStreamKey;
               }
             }
-            tmp13 = tmp17;
           }
           class N {
             constructor() {
-              const obj = ChannelRTCActionCreatorsDefault;
-              const participant = obj.selectParticipant(channel.id, null);
-              const stopStream = StreamActionCreators.stopStream;
-              StreamActionCreators;
-              const obj2 = StreamKeyUtils;
-              stopStream(obj2.encodeStreamKey(stateFromStores1));
+              obj = closure_1(closure_3[29]);
+              participant = obj.selectParticipant(channel.id, null);
+              obj2 = closure_0(closure_3[30]);
+              obj3 = closure_0(closure_3[31]);
+              stopStreamResult = obj2.stopStream(obj3.encodeStreamKey(closure_2));
+              return;
             }
           }
-          const PrimaryActionButton = stateFromStores1(9112).PrimaryActionButton;
-          tmp20[0] = stateFromStores(9667);
-          tmp20[1] = tmp14;
-          tmp20[2] = isSmallSize;
-          tmp20[3] = N;
-          const tmp22 = closure_15(PrimaryActionButton, tmp20);
+          tmp2 = stateFromStores(9667);
+          tmp19[0] = tmp2;
+          tmp19[1] = tmp13;
+          tmp19[2] = isSmallSize;
+          tmp19[3] = N;
+          const tmp21 = closure_15(stateFromStores1(9112).PrimaryActionButton, tmp19);
           cResult[10] = isSmallSize;
           cResult[11] = N;
-          cResult[12] = tmp22;
-          tmp17 = tmp22;
+          cResult[12] = tmp21;
         }
         class N {
           constructor() {
-            const obj = ChannelRTCActionCreatorsDefault;
-            const participant = obj.selectParticipant(channel.id, null);
-            const stopStream = StreamActionCreators.stopStream;
-            StreamActionCreators;
-            const obj2 = StreamKeyUtils;
-            stopStream(obj2.encodeStreamKey(stateFromStores1));
+            obj = closure_1(closure_3[29]);
+            participant = obj.selectParticipant(channel.id, null);
+            obj2 = closure_0(closure_3[30]);
+            obj3 = closure_0(closure_3[31]);
+            stopStreamResult = obj2.stopStream(obj3.encodeStreamKey(closure_2));
+            return;
           }
         }
         cResult[7] = stateFromStores1;
         cResult[8] = channel.id;
         cResult[9] = N;
       }
-      return tmp13;
+      const tmpResult2 = channel(504);
     }
   : (channel) => {
-      let closure_1;
-      let intl;
       channel = channel.channel;
-      const tmp = channel;
-      const isSmallSize = channel.isSmallSize;
-      let obj = channel(504);
       const items = [ChannelRTCStore, AuthenticationStore];
-      importDefault = obj.useStateFromStores(items, () => {
+      importDefault = channel(504).useStateFromStores(items, () => {
         const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
         if (null != selectedParticipant) {
-          let tmp4;
           if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
-            tmp4 = null;
+            let tmp4 = null;
           }
           return tmp4;
         }
@@ -763,9 +721,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp4 = id;
       });
-      let obj2 = channel(504);
+      let obj = channel(504);
       const items1 = [ApplicationStreamingStore];
-      const stateFromStores = obj2.useStateFromStores(items1, () => {
+      const stateFromStores = channel(504).useStateFromStores(items1, () => {
         let activeStreamForStreamKey = null;
         if (null != closure_1) {
           activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
@@ -774,106 +732,87 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       });
       let tmp4 = null;
       if (null != stateFromStores) {
-        const obj3 = {
-          source: AssetRegistryDefault2,
-          accessibilityLabel: intl.string(tmp(1126).t.q3O3J8),
-          isSmallSize,
-          onPress() {
-            const obj = ChannelRTCActionCreatorsDefault;
-            const participant = obj.selectParticipant(channel.id, null);
-            const stopStream = StreamActionCreators.stopStream;
-            StreamActionCreators;
-            const obj2 = StreamKeyUtils;
-            stopStream(obj2.encodeStreamKey(stateFromStores));
-          },
+        const obj3 = { source: _modDef9667, accessibilityLabel: null, isSmallSize: null, onPress: null };
+        const intl = tmp(1126).intl;
+        obj3.accessibilityLabel = intl.string(tmp(1126).t.q3O3J8);
+        obj3.isSmallSize = channel.isSmallSize;
+        obj3.onPress = function onPress() {
+          const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
+          const obj2 = StreamActionCreators;
+          obj2.stopStream(StreamKeyUtils.encodeStreamKey(stateFromStores));
         };
-        const PrimaryActionButton = stateFromStores(9112).PrimaryActionButton;
-        intl = tmp(1126).intl;
-        tmp4 = closure_15(PrimaryActionButton, obj3);
+        tmp4 = closure_15(stateFromStores(9112).PrimaryActionButton, obj3);
       }
       return tmp4;
     };
-let closure_23 = tmp8;
-ReactCompilerGating = ReactCompilerGating_mod;
+let closure_23 = tmp7;
+ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isSmallSize) => {
-      let first;
-      let tmp5;
-      let tmp7;
-      let obj = react2;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       isSmallSize = isSmallSize.isSmallSize;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
-          let applicationId;
           currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
           let _location;
-          const leaveActivity = EmbeddedActivitiesNativeManagerDefault.leaveActivity;
-          EmbeddedActivitiesNativeManagerDefault;
           if (currentEmbeddedActivity != null) {
             _location = currentEmbeddedActivity.location;
           }
-          const obj = { location: _location, applicationId };
-          applicationId = undefined;
+          const obj2 = { location: _location, applicationId: null };
+          let applicationId;
           if (currentEmbeddedActivity != null) {
             applicationId = currentEmbeddedActivity.applicationId;
           }
-          leaveActivity(obj);
+          obj2.applicationId = applicationId;
+          EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl2.intl;
-        const stringResult = intl.string(intl2.t.k0Aph0);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.k0Aph0);
         cResult[1] = stringResult;
-        tmp5 = stringResult;
+        let tmp5 = stringResult;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] !== isSmallSize) {
-        const obj2 = { accessibilityLabel: tmp5, onPress: first, source: AssetRegistryDefault3, isSmallSize };
-        const PrimaryActionButton = CallBarActionAll.PrimaryActionButton;
-        const tmp11 = closure_15(PrimaryActionButton, obj2);
+        let obj2 = { accessibilityLabel: tmp5, onPress: first, source: _modDef9668, isSmallSize };
+        const tmp11 = closure_1_15(CallBarActionAll.PrimaryActionButton, obj2);
         cResult[2] = isSmallSize;
         cResult[3] = tmp11;
-        tmp7 = tmp11;
+        let tmp7 = tmp11;
       } else {
         tmp7 = cResult[3];
       }
       return tmp7;
     }
   : (isSmallSize) => {
-      let intl;
-      isSmallSize = isSmallSize.isSmallSize;
-      let obj = {
-        accessibilityLabel: intl.string(intl2.t.k0Aph0),
-        onPress() {
-          let applicationId;
-          currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-          let _location;
-          const leaveActivity = EmbeddedActivitiesNativeManagerDefault.leaveActivity;
-          EmbeddedActivitiesNativeManagerDefault;
-          if (currentEmbeddedActivity != null) {
-            _location = currentEmbeddedActivity.location;
-          }
-          const obj = { location: _location, applicationId };
-          applicationId = undefined;
-          if (currentEmbeddedActivity != null) {
-            applicationId = currentEmbeddedActivity.applicationId;
-          }
-          leaveActivity(obj);
-        },
-        source: AssetRegistryDefault3,
-        isSmallSize,
+      const obj = { accessibilityLabel: null, onPress: null, source: null, isSmallSize: null };
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.k0Aph0);
+      obj.onPress = function onPress() {
+        currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+        let _location;
+        if (currentEmbeddedActivity != null) {
+          _location = currentEmbeddedActivity.location;
+        }
+        const obj2 = { location: _location, applicationId: null };
+        let applicationId;
+        if (currentEmbeddedActivity != null) {
+          applicationId = currentEmbeddedActivity.applicationId;
+        }
+        obj2.applicationId = applicationId;
+        EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
       };
-      const PrimaryActionButton = CallBarActionAll.PrimaryActionButton;
-      intl = intl2.intl;
-      return closure_15(PrimaryActionButton, obj);
+      obj.source = _modDef9668;
+      obj.isSmallSize = isSmallSize.isSmallSize;
+      return closure_1_15(CallBarActionAll.PrimaryActionButton, obj);
     };
-let obj4 = {
+let obj11 = {
   NONE: 0,
   [0]: "NONE",
   SCREEN_SHARE_START: 1,
@@ -883,111 +822,112 @@ let obj4 = {
   AUDIO_ROUTE: 3,
   [3]: "AUDIO_ROUTE",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      const obj = react2;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       channel = channel.channel;
-      const obj2 = VoiceChatHooks;
-      const isConnectedToVoiceChannel = obj2.useIsConnectedToVoiceChannel(channel);
-      const isActive = useScreenshareUtilsDefault(channel).isActive;
+      const isConnectedToVoiceChannel = VoiceChatHooks.useIsConnectedToVoiceChannel(channel);
       const tmp3 = useIsRemoteDefault();
-      if (cResult[0] === (isConnectedToVoiceChannel && !tmp3)) {
-        if (cResult[1] === (isConnectedToVoiceChannel && !tmp3 && isActive)) {
-          let tmp7;
-          if (cResult[2] === (isConnectedToVoiceChannel && !tmp3)) {
-            tmp7 = cResult[3];
+      let tmp4 = isConnectedToVoiceChannel;
+      if (isConnectedToVoiceChannel) {
+        tmp4 = !tmp3;
+      }
+      let isActive = isConnectedToVoiceChannel;
+      if (isConnectedToVoiceChannel) {
+        isActive = !tmp3;
+      }
+      if (isActive) {
+        isActive = useScreenshareUtilsDefault(channel).isActive;
+      }
+      let tmp5 = isConnectedToVoiceChannel;
+      if (isConnectedToVoiceChannel) {
+        tmp5 = !tmp3;
+      }
+      if (cResult[0] === tmp4) {
+        if (cResult[1] === isActive) {
+          if (cResult[2] === tmp5) {
+            let tmp6 = cResult[3];
           }
-          return tmp7;
+          return tmp6;
         }
       }
-      const obj3 = {
-        [closure_1_25.AUDIO_ROUTE]: isConnectedToVoiceChannel && !tmp3,
-        [closure_1_25.NONE]: true,
-        [closure_1_25.SCREEN_SHARE_END]: isConnectedToVoiceChannel && !tmp3 && isActive,
-        [closure_1_25.SCREEN_SHARE_START]: isConnectedToVoiceChannel && !tmp3,
-      };
-      cResult[0] = isConnectedToVoiceChannel && !tmp3;
-      cResult[1] = isConnectedToVoiceChannel && !tmp3 && isActive;
-      cResult[2] = isConnectedToVoiceChannel && !tmp3;
+      const obj3 = {};
+      obj3[obj11.AUDIO_ROUTE] = tmp4;
+      obj3[obj11.NONE] = true;
+      obj3[obj11.SCREEN_SHARE_END] = isActive;
+      obj3[obj11.SCREEN_SHARE_START] = tmp5;
+      cResult[0] = tmp4;
+      cResult[1] = isActive;
+      cResult[2] = tmp5;
       cResult[3] = obj3;
-      tmp7 = obj3;
+      tmp6 = obj3;
     }
   : (channel) => {
       channel = channel.channel;
-      const obj = VoiceChatHooks;
-      let isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-      const isActive = useScreenshareUtilsDefault(channel).isActive;
+      let isConnectedToVoiceChannel = VoiceChatHooks.useIsConnectedToVoiceChannel(channel);
       const tmp2 = useIsRemoteDefault();
       let tmp4 = isConnectedToVoiceChannel;
-      const AUDIO_ROUTE = obj4.AUDIO_ROUTE;
       if (isConnectedToVoiceChannel) {
         tmp4 = !tmp2;
       }
       const obj2 = {};
-      obj2[AUDIO_ROUTE] = tmp4;
-      obj2[obj4.NONE] = true;
-      let tmp5 = isConnectedToVoiceChannel;
-      const SCREEN_SHARE_END = obj4.SCREEN_SHARE_END;
+      obj2[obj11.AUDIO_ROUTE] = tmp4;
+      obj2[obj11.NONE] = true;
+      let isActive = isConnectedToVoiceChannel;
       if (isConnectedToVoiceChannel) {
-        tmp5 = !tmp2;
+        isActive = !tmp2;
       }
-      if (tmp5) {
-        tmp5 = isActive;
+      if (isActive) {
+        isActive = useScreenshareUtilsDefault(channel).isActive;
       }
-      obj2[SCREEN_SHARE_END] = tmp5;
-      const SCREEN_SHARE_START = obj4.SCREEN_SHARE_START;
+      obj2[obj11.SCREEN_SHARE_END] = isActive;
       if (isConnectedToVoiceChannel) {
         isConnectedToVoiceChannel = !tmp2;
       }
-      obj2[SCREEN_SHARE_START] = isConnectedToVoiceChannel;
+      obj2[obj11.SCREEN_SHARE_START] = isConnectedToVoiceChannel;
       return obj2;
     };
-let closure_26 = tmp9;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_26 = tmp8;
+ReactCompilerGating = fn(558);
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let AUDIO_ROUTE;
-      let tmp2;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       channel = channel.channel;
       if (cResult[0] !== channel) {
         const obj2 = { channel };
         cResult[0] = channel;
         cResult[1] = obj2;
-        tmp2 = obj2;
+        let tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
       const tmp3 = closure_26(tmp2);
-      if (tmp3[obj4.SCREEN_SHARE_END]) {
-        AUDIO_ROUTE = obj4.SCREEN_SHARE_END;
+      if (tmp3[obj11.SCREEN_SHARE_END]) {
+        let AUDIO_ROUTE = obj11.SCREEN_SHARE_END;
       } else {
-        if (!tmp3[obj4.AUDIO_ROUTE]) {
-          AUDIO_ROUTE = tmp3[obj4.SCREEN_SHARE_START] ? obj4.SCREEN_SHARE_START : obj4.NONE;
+        if (!tmp3[obj11.AUDIO_ROUTE]) {
+          AUDIO_ROUTE = tmp3[obj11.SCREEN_SHARE_START] ? obj11.SCREEN_SHARE_START : obj11.NONE;
         }
-        AUDIO_ROUTE = obj4.AUDIO_ROUTE;
+        AUDIO_ROUTE = obj11.AUDIO_ROUTE;
       }
       return AUDIO_ROUTE;
     }
   : (channel) => {
-      let AUDIO_ROUTE;
       channel = channel.channel;
       const tmp = closure_26({ channel });
-      if (tmp[obj4.SCREEN_SHARE_END]) {
-        AUDIO_ROUTE = obj4.SCREEN_SHARE_END;
+      if (tmp[obj11.SCREEN_SHARE_END]) {
+        let AUDIO_ROUTE = obj11.SCREEN_SHARE_END;
       } else {
-        if (!tmp[obj4.AUDIO_ROUTE]) {
-          AUDIO_ROUTE = tmp[obj4.SCREEN_SHARE_START] ? obj4.SCREEN_SHARE_START : obj4.NONE;
+        if (!tmp[obj11.AUDIO_ROUTE]) {
+          AUDIO_ROUTE = tmp[obj11.SCREEN_SHARE_START] ? obj11.SCREEN_SHARE_START : obj11.NONE;
         }
-        AUDIO_ROUTE = obj4.AUDIO_ROUTE;
+        AUDIO_ROUTE = obj11.AUDIO_ROUTE;
       }
       return AUDIO_ROUTE;
     };
-let closure_27 = tmp10;
-let obj5 = {
+let closure_27 = tmp9;
+let obj14 = {
   END_STREAM: 0,
   [0]: "END_STREAM",
   END_ACTIVITY: 1,
@@ -997,45 +937,38 @@ let obj5 = {
   END_REMOTE: 3,
   [3]: "END_REMOTE",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let currentEmbeddedActivity;
-      let first;
-      let tmp10;
-      let tmp14;
-      let tmp15;
-      let tmp17;
-      let tmp18;
-      const tmp = channel;
-      let obj = channel(576);
-      const cResult = obj.c(15);
+      const cResult = channel(576).c(15);
       channel = channel.channel;
-      const obj2 = channel(9090);
-      const isConnectedToVoiceChannel = obj2.useIsConnectedToVoiceChannel(channel);
+      const obj = channel(576);
+      const isConnectedToVoiceChannel = channel(9090).useIsConnectedToVoiceChannel(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore, AuthenticationStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== channel.id) {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         cResult[1] = channel.id;
@@ -1043,80 +976,88 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, S);
+      const obj2 = channel(9090);
+      const stateFromStores = channel(504).useStateFromStores(first, S);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         const items1 = [ApplicationStreamingStore];
         cResult[3] = items1;
-        tmp10 = items1;
+        const tmp10 = items1;
       } else {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
       }
       if (cResult[4] !== stateFromStores) {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         cResult[4] = stateFromStores;
@@ -1124,40 +1065,44 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
       }
-      const tmpResult4 = tmp(504);
-      const stateFromStores1 = tmpResult4.useStateFromStores(tmp10, tmp12);
+      const tmpResult = channel(504);
+      const stateFromStores1 = channel(504).useStateFromStores(tmp10, tmp12);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         const items2 = [EmbeddedActivitiesStore];
@@ -1166,99 +1111,106 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[6] = items2;
         cResult[7] = fn;
-        tmp15 = fn;
-        tmp14 = items2;
+        let tmp15 = fn;
+        const tmp14 = items2;
       } else {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         tmp15 = cResult[7];
       }
-      const tmpResult5 = tmp(504);
-      const stateFromStores2 = tmpResult5.useStateFromStores(tmp14, tmp15);
+      const tmpResult4 = channel(504);
+      const stateFromStores2 = channel(504).useStateFromStores(tmp14, tmp15);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         const items3 = [GameConsoleStore];
         const fn2 = function b() {
-          const obj = {
+          return {
             awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(),
             remoteSessionId: GameConsoleStore.getRemoteSessionId(),
           };
-          return obj;
         };
         cResult[8] = items3;
         cResult[9] = fn2;
-        tmp18 = fn2;
-        tmp17 = items3;
+        let tmp18 = fn2;
+        const tmp17 = items3;
       } else {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         tmp18 = cResult[9];
       }
-      const tmpResult6 = tmp(504);
-      const stateFromStoresObject = tmpResult6.useStateFromStoresObject(tmp17, tmp18);
+      const tmpResult5 = channel(504);
+      const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp17, tmp18);
       let awaitingRemote = stateFromStoresObject.awaitingRemote;
       if (!awaitingRemote) {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
         awaitingRemote = null != tmp20;
@@ -1266,44 +1218,44 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[10] === isConnectedToVoiceChannel) {
         class S {
           constructor() {
-            const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
+            selectedParticipant = closure_7.getSelectedParticipant(channel.id);
             if (null != selectedParticipant) {
-              let tmp4;
+              tmp2 = ParticipantTypes;
               if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
+                tmp3 = closure_10;
                 tmp4 = null;
               }
               return tmp4;
             }
-            let id;
+            id = undefined;
             if (selectedParticipant != null) {
               id = selectedParticipant.id;
             }
             tmp4 = id;
+            return;
           }
         }
       }
       const obj3 = { [closure_28.END_ACTIVITY]: stateFromStores2, [closure_28.END_CALL]: isConnectedToVoiceChannel };
-      obj3[obj5.END_REMOTE] = awaitingRemote;
-      obj3[obj5.END_STREAM] = null != stateFromStores1;
+      obj3[obj14.END_REMOTE] = awaitingRemote;
+      obj3[obj14.END_STREAM] = null != stateFromStores1;
       cResult[10] = isConnectedToVoiceChannel;
       cResult[11] = stateFromStores2;
       cResult[12] = null != stateFromStores1;
       cResult[13] = awaitingRemote;
       cResult[14] = obj3;
+      const tmpResult6 = channel(504);
     }
   : (channel) => {
-      let currentEmbeddedActivity;
       channel = channel.channel;
-      let obj = channel(9090);
-      const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
+      const isConnectedToVoiceChannel = channel(9090).useIsConnectedToVoiceChannel(channel);
+      const obj = channel(9090);
       const items = [ChannelRTCStore, AuthenticationStore];
-      const obj2 = channel(504);
-      let closure_1 = obj2.useStateFromStores(items, () => {
+      closure_1 = channel(504).useStateFromStores(items, () => {
         const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
         if (null != selectedParticipant) {
-          let tmp4;
           if (selectedParticipant.type !== ParticipantTypes.ACTIVITY) {
-            tmp4 = null;
+            let tmp4 = null;
           }
           return tmp4;
         }
@@ -1313,92 +1265,87 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp4 = id;
       });
+      const obj2 = channel(504);
       const items1 = [ApplicationStreamingStore];
-      const obj3 = channel(504);
-      const stateFromStores = obj3.useStateFromStores(items1, () => {
+      const stateFromStores = channel(504).useStateFromStores(items1, () => {
         let activeStreamForStreamKey = null;
         if (null != closure_1) {
           activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(tmp);
         }
         return activeStreamForStreamKey;
       });
+      const obj3 = channel(504);
       const items2 = [EmbeddedActivitiesStore];
-      obj4 = channel(504);
-      const stateFromStores1 = obj4.useStateFromStores(
+      const stateFromStores1 = channel(504).useStateFromStores(
         items2,
         () => null != currentEmbeddedActivity.getCurrentEmbeddedActivity(),
       );
-      obj5 = channel(504);
+      const obj4 = channel(504);
       const items3 = [GameConsoleStore];
-      const stateFromStoresObject = obj5.useStateFromStoresObject(items3, () => {
-        const obj = {
-          awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(),
-          remoteSessionId: GameConsoleStore.getRemoteSessionId(),
-        };
-        return obj;
-      });
+      const stateFromStoresObject = channel(504).useStateFromStoresObject(items3, () => ({
+        awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(),
+        remoteSessionId: GameConsoleStore.getRemoteSessionId(),
+      }));
       let awaitingRemote = stateFromStoresObject.awaitingRemote;
       const obj6 = { [closure_28.END_ACTIVITY]: stateFromStores1, [closure_28.END_CALL]: isConnectedToVoiceChannel };
-      const END_REMOTE = obj5.END_REMOTE;
-      const tmp6 = obj5;
       if (!awaitingRemote) {
         awaitingRemote = null != tmp5;
       }
-      obj6[END_REMOTE] = awaitingRemote;
-      obj6[tmp6.END_STREAM] = null != stateFromStores;
+      obj6[obj14.END_REMOTE] = awaitingRemote;
+      obj6[obj14.END_STREAM] = null != stateFromStores;
       return obj6;
     };
-let closure_29 = tmp11;
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp12 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_29 = tmp10;
+ReactCompilerGating = fn(558);
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let END_REMOTE;
-      let tmp2;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       channel = channel.channel;
       if (cResult[0] !== channel) {
         const obj2 = { channel };
         cResult[0] = channel;
         cResult[1] = obj2;
-        tmp2 = obj2;
+        let tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
       const tmp3 = closure_29(tmp2);
-      if (tmp3[obj5.END_STREAM]) {
-        END_REMOTE = obj5.END_STREAM;
-      } else if (tmp3[obj5.END_REMOTE]) {
-        END_REMOTE = obj5.END_REMOTE;
+      if (tmp3[obj14.END_STREAM]) {
+        let END_REMOTE = obj14.END_STREAM;
+      } else if (tmp3[obj14.END_REMOTE]) {
+        END_REMOTE = obj14.END_REMOTE;
       } else {
-        END_REMOTE = tmp3[obj5.END_ACTIVITY] ? obj5.END_ACTIVITY : obj5.END_CALL;
+        END_REMOTE = tmp3[obj14.END_ACTIVITY] ? obj14.END_ACTIVITY : obj14.END_CALL;
       }
       return END_REMOTE;
     }
   : (channel) => {
-      let END_REMOTE;
-      const obj = { channel: channel.channel };
-      const tmp = closure_29(obj);
-      if (tmp[obj5.END_STREAM]) {
-        END_REMOTE = obj5.END_STREAM;
-      } else if (tmp[obj5.END_REMOTE]) {
-        END_REMOTE = obj5.END_REMOTE;
+      const tmp = closure_29({ channel: channel.channel });
+      if (tmp[obj14.END_STREAM]) {
+        let END_REMOTE = obj14.END_STREAM;
+      } else if (tmp[obj14.END_REMOTE]) {
+        END_REMOTE = obj14.END_REMOTE;
       } else {
-        END_REMOTE = tmp[obj5.END_ACTIVITY] ? obj5.END_ACTIVITY : obj5.END_CALL;
+        END_REMOTE = tmp[obj14.END_ACTIVITY] ? obj14.END_ACTIVITY : obj14.END_CALL;
       }
       return END_REMOTE;
     };
-let closure_30 = tmp12;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_30 = tmp11;
+ReactCompilerGating = fn(558);
+let obj4 = {
+  height: fn(9111).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  paddingHorizontal: 16,
+  paddingTop: fn(9111).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(9111).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  justifyContent: "center",
+  flexDirection: "row",
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallActionBar.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let channel;
-      let shouldShowConnectingScreen;
-      let tmp10;
-      let tmp16Result;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(17);
+      const cResult = c.c(17);
       ({ channel, shouldShowConnectingScreen } = arg0);
       const tmp5 = closure_18();
       const tmp7 = useIsRemoteDefault();
@@ -1406,7 +1353,7 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { channel };
         cResult[0] = channel;
         cResult[1] = obj2;
-        tmp8 = obj2;
+        let tmp8 = obj2;
       } else {
         tmp8 = cResult[1];
       }
@@ -1415,50 +1362,47 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { channel };
         cResult[2] = channel;
         cResult[3] = obj3;
-        tmp10 = obj3;
+        let tmp10 = obj3;
       } else {
         tmp10 = cResult[3];
       }
       const tmp11 = closure_30(tmp10);
+      const analyticsLocations = useAnalyticsLocationsDefault(
+        AnalyticsLocationDefault.CHANNEL_CALL_ACTION_BAR,
+      ).analyticsLocations;
       const tmp6Result = useAnalyticsLocationsDefault;
-      const analyticsLocations = tmp6Result(AnalyticsLocationDefault.CHANNEL_CALL_ACTION_BAR).analyticsLocations;
-      const tmpResult = useIsFiveButtonLayout;
-      const isFiveButtonLayout = tmpResult.useIsFiveButtonLayout(channel.id);
+      const isFiveButtonLayout = useIsFiveButtonLayout.useIsFiveButtonLayout(channel.id);
       const tmp14 = isFiveButtonLayout ? tmp5.containerForFiveButtonLayout : tmp5.container;
       if (cResult[4] === channel) {
         if (cResult[5] === isFiveButtonLayout) {
           if (cResult[6] === tmp7) {
             if (cResult[7] === tmp11) {
               if (cResult[8] === tmp9) {
-                let tmp15;
-                if (cResult[9] === (undefined !== shouldShowConnectingScreen && shouldShowConnectingScreen)) {
-                  tmp15 = cResult[10];
-                }
-                if (cResult[11] === tmp14) {
-                  let tmp34;
-                  if (cResult[12] === tmp15) {
-                    tmp34 = cResult[13];
-                  }
-                  if (cResult[14] === analyticsLocations) {
-                    let tmp38;
-                    if (cResult[15] === tmp34) {
-                      tmp38 = cResult[16];
+                if (cResult[9] === tmp4) {
+                  if (cResult[11] === tmp14) {
+                    if (cResult[12] === tmp15) {
+                      let tmp34 = cResult[13];
                     }
-                    return tmp38;
+                    if (cResult[14] === analyticsLocations) {
+                      if (cResult[15] === tmp34) {
+                        let tmp38 = cResult[16];
+                      }
+                      return tmp38;
+                    }
+                    const obj4 = { value: analyticsLocations, children: tmp34 };
+                    const tmp40 = closure_1_15(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
+                    cResult[14] = analyticsLocations;
+                    cResult[15] = tmp34;
+                    cResult[16] = tmp40;
+                    tmp38 = tmp40;
                   }
-                  obj4 = { value: analyticsLocations, children: tmp34 };
-                  const tmp40 = closure_15(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
-                  cResult[14] = analyticsLocations;
-                  cResult[15] = tmp34;
-                  cResult[16] = tmp40;
-                  tmp38 = tmp40;
+                  const obj5 = { pointerEvents: "box-none", style: tmp14, children: cResult[10] };
+                  const tmp37 = closure_1_15(View, obj5);
+                  cResult[11] = tmp14;
+                  cResult[12] = cResult[10];
+                  cResult[13] = tmp37;
+                  tmp34 = tmp37;
                 }
-                obj5 = { pointerEvents: "box-none", style: tmp14, children: tmp15 };
-                const tmp37 = closure_15(View, obj5);
-                cResult[11] = tmp14;
-                cResult[12] = tmp15;
-                cResult[13] = tmp37;
-                tmp34 = tmp37;
               }
             }
           }
@@ -1466,51 +1410,50 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (undefined !== shouldShowConnectingScreen && shouldShowConnectingScreen) {
         const obj6 = { channel };
-        tmp16Result = closure_15(ChannelCallConnectingScreen.CallConnectingActionBar, obj6);
+        let tmp16Result = closure_1_15(ChannelCallConnectingScreen.CallConnectingActionBar, obj6);
       } else {
-        let tmp22;
-        let tmp27Result;
         let tmp18 = null;
         if (!tmp7) {
           const obj7 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp18 = closure_15(closure_19, obj7);
+          tmp18 = closure_1_15(closure_19, obj7);
         }
         const items = [tmp18, , ,];
-        if (obj4.AUDIO_ROUTE === tmp9) {
+        if (obj11.AUDIO_ROUTE === tmp9) {
           const obj8 = { isSmallSize: isFiveButtonLayout, channel };
-          tmp22 = closure_15(closure_21, obj8);
+          let tmp22 = closure_1_15(closure_21, obj8);
         } else {
-          if (obj4.SCREEN_SHARE_START !== tmp9) {
-            if (obj4.SCREEN_SHARE_END !== tmp9) {
+          if (tmp21.SCREEN_SHARE_START !== tmp9) {
+            if (tmp21.SCREEN_SHARE_END !== tmp9) {
               const NONE = tmp21.NONE;
               tmp22 = null;
             }
           }
           const obj9 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp22 = closure_15(closure_20, obj9);
+          tmp22 = closure_1_15(closure_20, obj9);
         }
         items[1] = tmp22;
         const obj10 = { channel, isSmallSize: isFiveButtonLayout };
-        items[2] = closure_15(ChannelCallMicButton.ChannelCallMicButton, obj10);
-        if (obj5.END_REMOTE === tmp11) {
-          const obj11 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp27Result = closure_15(DisconnectRemoteButton.DisconnectRemoteButton, obj11);
-        } else if (obj5.END_STREAM === tmp11) {
+        items[2] = closure_1_15(ChannelCallMicButton.ChannelCallMicButton, obj10);
+        if (obj14.END_REMOTE === tmp11) {
+          obj11 = { channel, isSmallSize: isFiveButtonLayout };
+          let tmp27Result = closure_1_15(DisconnectRemoteButton.DisconnectRemoteButton, obj11);
+        } else if (tmp28.END_STREAM === tmp11) {
           const obj12 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp27Result = closure_15(closure_23, obj12);
-        } else if (obj5.END_ACTIVITY === tmp11) {
+          tmp27Result = closure_1_15(closure_23, obj12);
+        } else if (tmp28.END_ACTIVITY === tmp11) {
           const obj13 = { isSmallSize: isFiveButtonLayout };
-          tmp27Result = closure_15(closure_24, obj13);
+          tmp27Result = closure_1_15(closure_24, obj13);
         } else {
           tmp27Result = null;
-          if (obj5.END_CALL === tmp11) {
-            const obj14 = { channel, isSmallSize: isFiveButtonLayout };
-            tmp27Result = closure_15(closure_22, obj14);
+          if (tmp28.END_CALL === tmp11) {
+            obj14 = { channel, isSmallSize: isFiveButtonLayout };
+            tmp27Result = closure_1_15(closure_22, obj14);
           }
         }
-        const obj15 = { children: items };
+        const obj15 = { children: null };
         items[3] = tmp27Result;
-        tmp16Result = closure_17(authStore3, obj15);
+        obj15.children = items;
+        tmp16Result = constants(value2, obj15);
       }
       cResult[4] = channel;
       cResult[5] = isFiveButtonLayout;
@@ -1519,93 +1462,84 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp9;
       cResult[9] = undefined !== shouldShowConnectingScreen && shouldShowConnectingScreen;
       cResult[10] = tmp16Result;
-      tmp15 = tmp16Result;
+      const tmpResult = useIsFiveButtonLayout;
     }
   : (arg0) => {
-      let channel;
-      let obj3;
-      let shouldShowConnectingScreen;
-      let tmp11Result;
       ({ channel, shouldShowConnectingScreen } = arg0);
       if (shouldShowConnectingScreen === undefined) {
         shouldShowConnectingScreen = false;
       }
       const tmp = closure_18();
-      const tmp3 = useIsRemoteDefault();
       const tmp4 = closure_27({ channel });
       const tmp5 = closure_30({ channel });
+      const tmp3 = useIsRemoteDefault();
       const tmp6 = useAnalyticsLocationsDefault;
-      const analyticsLocations = tmp6(AnalyticsLocationDefault.CHANNEL_CALL_ACTION_BAR).analyticsLocations;
-      const obj = useIsFiveButtonLayout;
-      const isFiveButtonLayout = obj.useIsFiveButtonLayout(channel.id);
-      const obj2 = { value: analyticsLocations, children: closure_15(View, obj3) };
-      obj3 = {
+      const isFiveButtonLayout = useIsFiveButtonLayout.useIsFiveButtonLayout(channel.id);
+      const obj2 = { value: tmp6(AnalyticsLocationDefault.CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
+      const obj3 = {
         pointerEvents: "box-none",
         style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container,
-        children: tmp11Result,
+        children: null,
       };
-      const AnalyticsLocationProvider = useAnalyticsLocations.AnalyticsLocationProvider;
       if (shouldShowConnectingScreen) {
-        obj4 = { channel };
-        tmp11Result = closure_15(ChannelCallConnectingScreen.CallConnectingActionBar, obj4);
+        const obj4 = { channel };
+        let tmp11Result = closure_1_15(ChannelCallConnectingScreen.CallConnectingActionBar, obj4);
       } else {
-        let tmp9Result5;
-        let tmp9Result6;
         let tmp9Result4 = null;
         if (!tmp3) {
-          obj5 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp9Result4 = closure_15(closure_19, obj5);
+          const obj5 = { channel, isSmallSize: isFiveButtonLayout };
+          tmp9Result4 = closure_1_15(closure_19, obj5);
         }
         const items = [tmp9Result4, , ,];
-        if (obj4.AUDIO_ROUTE === tmp4) {
+        if (obj11.AUDIO_ROUTE === tmp4) {
           const obj6 = { isSmallSize: isFiveButtonLayout, channel };
-          tmp9Result5 = closure_15(closure_21, obj6);
+          let tmp9Result5 = closure_1_15(closure_21, obj6);
         } else {
-          if (obj4.SCREEN_SHARE_START !== tmp4) {
-            if (obj4.SCREEN_SHARE_END !== tmp4) {
+          if (tmp15.SCREEN_SHARE_START !== tmp4) {
+            if (tmp15.SCREEN_SHARE_END !== tmp4) {
               const NONE = tmp15.NONE;
               tmp9Result5 = null;
             }
           }
           const obj7 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp9Result5 = closure_15(closure_20, obj7);
+          tmp9Result5 = closure_1_15(closure_20, obj7);
         }
         items[1] = tmp9Result5;
         const obj8 = { channel, isSmallSize: isFiveButtonLayout };
-        items[2] = closure_15(ChannelCallMicButton.ChannelCallMicButton, obj8);
-        if (obj5.END_REMOTE === tmp5) {
+        items[2] = closure_1_15(ChannelCallMicButton.ChannelCallMicButton, obj8);
+        if (obj14.END_REMOTE === tmp5) {
           const obj9 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp9Result6 = closure_15(DisconnectRemoteButton.DisconnectRemoteButton, obj9);
-        } else if (obj5.END_STREAM === tmp5) {
+          let tmp9Result6 = closure_1_15(DisconnectRemoteButton.DisconnectRemoteButton, obj9);
+        } else if (obj14.END_STREAM === tmp5) {
           const obj10 = { channel, isSmallSize: isFiveButtonLayout };
-          tmp9Result6 = closure_15(closure_23, obj10);
-        } else if (obj5.END_ACTIVITY === tmp5) {
-          const obj11 = { isSmallSize: isFiveButtonLayout };
-          tmp9Result6 = closure_15(closure_24, obj11);
+          tmp9Result6 = closure_1_15(closure_23, obj10);
+        } else if (obj14.END_ACTIVITY === tmp5) {
+          obj11 = { isSmallSize: isFiveButtonLayout };
+          tmp9Result6 = closure_1_15(closure_24, obj11);
         } else {
           tmp9Result6 = null;
-          if (obj5.END_CALL === tmp5) {
+          if (obj14.END_CALL === tmp5) {
             const obj12 = { channel, isSmallSize: isFiveButtonLayout };
-            tmp9Result6 = closure_15(closure_22, obj12);
+            tmp9Result6 = closure_1_15(closure_22, obj12);
           }
         }
-        const obj13 = { children: items };
+        const obj13 = { children: null };
         items[3] = tmp9Result6;
-        tmp11Result = closure_17(authStore3, obj13);
+        obj13.children = items;
+        tmp11Result = constants(value2, obj13);
       }
-      return closure_15(AnalyticsLocationProvider, obj2);
+      obj3.children = tmp11Result;
+      obj2.children = closure_1_15(View, obj3);
+      return closure_1_15(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
     };
-let result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallActionBar.tsx");
-
-export default tmp13;
-export const VideoButton = tmp4;
-export const ScreenshareButton = tmp5;
-export const AudioRouteButton = tmp6;
-export const DisconnectCallButton = tmp7;
-export const DisconnectStreamButton = tmp8;
-export const ActionBarSecondButton = obj4;
-export const useActionBarSecondButtons = tmp9;
-export const useActionBarSecondButton = tmp10;
-export const ActionBarPrimaryButton = obj5;
-export const useActionBarPrimaryButtons = tmp11;
-export const useActionBarPrimaryButton = tmp12;
+export const VideoButton = tmp3;
+export const ScreenshareButton = tmp4;
+export const AudioRouteButton = tmp5;
+export const DisconnectCallButton = tmp6;
+export const DisconnectStreamButton = tmp7;
+export const ActionBarSecondButton = obj11;
+export const useActionBarSecondButtons = tmp8;
+export const useActionBarSecondButton = tmp9;
+export const ActionBarPrimaryButton = obj14;
+export const useActionBarPrimaryButtons = tmp10;
+export const useActionBarPrimaryButton = tmp11;

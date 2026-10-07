@@ -6,11 +6,17 @@ const OrientationLockState = Constants.OrientationLockState;
 const result = size.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
 
 export default function doesOrientationMatchLockState(arg0, arg1) {
-  let tmp = null == arg1 || arg1 === OrientationLockState.UNLOCKED;
+  let tmp = null == arg1;
+  if (!tmp) {
+    tmp = arg1 === OrientationLockState.UNLOCKED;
+  }
   let tmp3 = arg0;
   if (!tmp) {
-    tmp = !tmp3 && arg1 === OrientationLockState.PORTRAIT;
-    const tmp4 = !tmp3 && arg1 === OrientationLockState.PORTRAIT;
+    let tmp4 = !tmp3;
+    if (!tmp3) {
+      tmp4 = arg1 === OrientationLockState.PORTRAIT;
+    }
+    tmp = tmp4;
   }
   if (!tmp) {
     if (tmp3) {

@@ -1,135 +1,108 @@
 // discord_app/modules/oauth2/native/OAuth2AuthorizeContent.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import KeyboardAwareViewDefault from "../../keyboard/native/KeyboardAwareView.tsx";
 import ObscuredSurfaceDefault from "../../safety_common/native/ObscuredSurface.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let onScroll;
-
-let c9;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-({ View: hasOwnProperty, ScrollView: metroRequire } = react_native);
-({ jsx: metroImportDefault, Fragment: metroImportAll, jsxs: c9 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   fill: { flex: 1 },
-  scrollView: obj2,
+  scrollView: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 },
   scrollViewContentLandscape: { flexDirection: "row", alignItems: "center", width: "100%", flexGrow: 1, gap: 16 },
   scrollViewContentPortrait: { flexDirection: "column", width: "100%", flexGrow: 1, gap: 16 },
   header: { paddingTop: 24 },
   bodyContainer: { flexDirection: "column", gap: 16, padding: 16 },
-  bodyContainerBackground: obj3,
-  footerPortrait: { flexDirection: "column", padding: 16, gap: 16 },
-  separator: obj4,
+  bodyContainerBackground: null,
+  footerPortrait: null,
+  separator: null,
 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
+obj2.bodyContainerBackground = {
   marginHorizontal: 16,
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
 };
-obj4 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-let closure_10 = createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.footerPortrait = { flexDirection: "column", padding: 16, gap: 16 };
+let obj4 = {
+  marginHorizontal: 16,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+  borderRadius: nativeDefault.radii.lg,
+};
+obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_10 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeContent.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onScroll) => {
-      let appDetails;
-      let body;
-      let bottom;
-      let centerContent;
-      let closure_4;
-      let first;
-      let first1;
-      let first2;
-      let footer;
-      let header;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let left;
-      let right;
-      let setAllContentSeen;
-      let obj = react2;
-      const cResult = obj.c(57);
+      const cResult = c.c(57);
       ({ header, body, footer, appDetails, centerContent, setAllContentSeen } = onScroll);
       onScroll = onScroll.onScroll;
       const obscured = onScroll.obscured;
-      const hasContentBackground = onScroll.hasContentBackground;
       const tmp3 = closure_10();
-      const ref = react.useRef(null);
-      size = useWindowDimensionsDefault();
-      const tmp7 = useSafeAreaInsetsDefault();
-      ({ left, right, bottom } = tmp7);
-      [first, closure_4] = react.useState(-1);
-      [first1, metroRequire] = react.useState(-1);
-      [first2, metroImportDefault] = react.useState(-1);
-      let tmp14 = first >= 0 && first1 >= 0;
-      if (tmp14) {
-        tmp14 = null == footer || first2 >= 0;
+      const size = useWindowDimensionsDefault();
+      const ref = noop.useRef(null);
+      ({ left, right, bottom } = useSafeAreaInsetsDefault());
+      [height, closure_4] = noop.useState(-1);
+      [first1, closure_6] = noop.useState(-1);
+      const tmp12 = _slicedToArray(noop.useState(-1), 2);
+      closure_7 = tmp12[1];
+      let tmp13 = height >= 0;
+      if (tmp13) {
+        tmp13 = first1 >= 0;
       }
-      metroImportAll = tmp14;
-      if (cResult[0] === first) {
-        if (cResult[1] === tmp14) {
+      if (tmp13) {
+        tmp13 = null == footer || tmp12[0] >= 0;
+        const tmp14 = null == footer || tmp12[0] >= 0;
+      }
+      closure_8 = tmp13;
+      if (cResult[0] === height) {
+        if (cResult[1] === tmp13) {
           if (cResult[2] === first1) {
-            let tmp16;
-            let tmp17;
-            let tmp19;
             if (cResult[3] === setAllContentSeen) {
-              tmp16 = cResult[4];
-              tmp17 = cResult[5];
+              let tmp15 = cResult[4];
+              let tmp16 = cResult[5];
             }
-            const layoutEffect = react.useLayoutEffect(tmp16, tmp17);
+            const layoutEffect = noop.useLayoutEffect(tmp15, tmp16);
             if (cResult[6] !== bottom) {
               let obj3 = { marginBottom: bottom };
               cResult[6] = bottom;
               cResult[7] = obj3;
-              tmp19 = obj3;
+              let tmp18 = obj3;
             } else {
-              tmp19 = cResult[7];
+              tmp18 = cResult[7];
             }
             if (cResult[8] === tmp3.fill) {
-              let tmp20;
-              if (cResult[9] === tmp19) {
-                tmp20 = cResult[10];
+              if (cResult[9] === tmp18) {
+                let tmp19 = cResult[10];
               }
               if (cResult[11] === left) {
-                let tmp21;
                 if (cResult[12] === right) {
-                  tmp21 = cResult[13];
+                  let tmp20 = cResult[13];
                 }
                 if (cResult[14] === tmp3.scrollView) {
-                  let tmp22;
-                  let tmp24;
-                  let tmp26;
-                  let tmp27;
-                  if (cResult[15] === tmp21) {
-                    tmp22 = cResult[16];
+                  if (cResult[15] === tmp20) {
+                    let tmp21 = cResult[16];
                   }
-                  const tmp23 =
-                    size.width > size.height ? tmp3.scrollViewContentLandscape : tmp3.scrollViewContentPortrait;
-                  if (cResult[17] !== tmp23) {
-                    const items = [tmp23];
-                    cResult[17] = tmp23;
+                  const tmp22 = tmp6 ? tmp3.scrollViewContentLandscape : tmp3.scrollViewContentPortrait;
+                  if (cResult[17] !== tmp22) {
+                    const items = [tmp22];
+                    cResult[17] = tmp22;
                     cResult[18] = items;
-                    tmp24 = items;
+                    let tmp23 = items;
                   } else {
-                    tmp24 = cResult[18];
+                    tmp23 = cResult[18];
                   }
                   const _Symbol = Symbol;
                   if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
@@ -141,9 +114,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       closure_4(arg1);
                     }
                     cResult[19] = ee;
-                    tmp26 = ee;
+                    let tmp25 = ee;
                   } else {
-                    tmp26 = cResult[19];
+                    tmp25 = cResult[19];
                   }
                   const _Symbol2 = Symbol;
                   if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
@@ -151,186 +124,177 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       closure_6(nativeEvent.nativeEvent.layout.height);
                     }
                     cResult[20] = te;
-                    tmp27 = te;
+                    let tmp26 = te;
                   } else {
-                    tmp27 = cResult[20];
+                    tmp26 = cResult[20];
                   }
                   if (cResult[21] === onScroll) {
-                    let tmp28;
                     if (cResult[22] === setAllContentSeen) {
-                      tmp28 = cResult[23];
+                      let tmp27 = cResult[23];
                     }
                     if (cResult[24] === header) {
-                      let tmp29;
-                      let tmp34;
                       if (cResult[25] === tmp3.header) {
-                        tmp29 = cResult[26];
+                        let tmp28 = cResult[26];
                       }
                       let prop = null;
-                      if (hasContentBackground) {
+                      if (onScroll.hasContentBackground) {
                         prop = tmp3.bodyContainerBackground;
                       }
-                      if (cResult[27] !== size.width > size.height) {
-                        const tmp35 = size.width > size.height ? { flex: 1 } : {};
-                        cResult[27] = size.width > size.height;
-                        cResult[28] = tmp35;
-                        tmp34 = tmp35;
+                      if (cResult[27] !== tmp6) {
+                        const tmp34 = tmp6 ? { flex: 1 } : {};
+                        cResult[27] = tmp6;
+                        cResult[28] = tmp34;
                       } else {
-                        tmp34 = cResult[28];
-                      }
-                      if (cResult[29] === tmp3.bodyContainer) {
-                        if (cResult[30] === prop) {
-                          let tmp36;
-                          if (cResult[31] === tmp34) {
-                            tmp36 = cResult[32];
-                          }
-                          if (cResult[33] === appDetails) {
-                            let tmp37;
-                            if (cResult[34] === tmp3.separator) {
-                              tmp37 = cResult[35];
+                        if (cResult[29] === tmp3.bodyContainer) {
+                          if (cResult[30] === prop) {
+                            if (cResult[31] === tmp33) {
+                              let tmp36 = cResult[32];
                             }
-                            if (cResult[36] === body) {
-                              if (cResult[37] === tmp36) {
-                                let tmp43;
-                                if (cResult[38] === tmp37) {
-                                  tmp43 = cResult[39];
-                                }
-                                if (cResult[40] === obscured) {
-                                  if (cResult[41] === tmp29) {
-                                    let tmp47;
-                                    if (cResult[42] === tmp43) {
-                                      tmp47 = cResult[43];
-                                    }
-                                    if (cResult[44] === centerContent) {
-                                      if (cResult[45] === tmp28) {
-                                        if (cResult[46] === tmp47) {
-                                          if (cResult[47] === tmp22) {
-                                            let tmp50;
-                                            if (cResult[48] === tmp24) {
-                                              tmp50 = cResult[49];
-                                            }
-                                            if (cResult[50] === footer) {
-                                              let tmp54;
-                                              if (cResult[51] === tmp3.footerPortrait) {
-                                                tmp54 = cResult[52];
+                            if (cResult[33] === appDetails) {
+                              if (cResult[34] === tmp3.separator) {
+                                let tmp37 = cResult[35];
+                              }
+                              if (cResult[36] === body) {
+                                if (cResult[37] === tmp36) {
+                                  if (cResult[38] === tmp37) {
+                                    let tmp43 = cResult[39];
+                                  }
+                                  if (cResult[40] === obscured) {
+                                    if (cResult[41] === tmp28) {
+                                      if (cResult[42] === tmp43) {
+                                        let tmp47 = cResult[43];
+                                      }
+                                      if (cResult[44] === centerContent) {
+                                        if (cResult[45] === tmp27) {
+                                          if (cResult[46] === tmp47) {
+                                            if (cResult[47] === tmp21) {
+                                              if (cResult[48] === tmp23) {
+                                                let tmp50 = cResult[49];
                                               }
-                                              if (cResult[53] === tmp50) {
-                                                if (cResult[54] === tmp54) {
-                                                  let tmp58;
-                                                  if (cResult[55] === tmp20) {
-                                                    tmp58 = cResult[56];
-                                                  }
-                                                  return tmp58;
+                                              if (cResult[50] === footer) {
+                                                if (cResult[51] === tmp3.footerPortrait) {
+                                                  let tmp54 = cResult[52];
                                                 }
+                                                if (cResult[53] === tmp50) {
+                                                  if (cResult[54] === tmp54) {
+                                                    if (cResult[55] === tmp19) {
+                                                      let tmp58 = cResult[56];
+                                                    }
+                                                    return tmp58;
+                                                  }
+                                                }
+                                                const obj4 = { style: tmp19, children: null };
+                                                const items1 = [tmp50, tmp54];
+                                                obj4.children = items1;
+                                                const tmp60 = options(KeyboardAwareViewDefault, obj4);
+                                                cResult[53] = tmp50;
+                                                cResult[54] = tmp54;
+                                                cResult[55] = tmp19;
+                                                cResult[56] = tmp60;
+                                                tmp58 = tmp60;
                                               }
-                                              const obj4 = { style: tmp20, children: items1 };
-                                              items1 = [tmp50, tmp54];
-                                              const tmp60 = React4(KeyboardAwareViewDefault, obj4);
-                                              cResult[53] = tmp50;
-                                              cResult[54] = tmp54;
-                                              cResult[55] = tmp20;
-                                              cResult[56] = tmp60;
-                                              tmp58 = tmp60;
+                                              let tmp55 = null;
+                                              if (null != footer) {
+                                                const obj5 = {
+                                                  onLayout(nativeEvent) {
+                                                    closure_7(nativeEvent.nativeEvent.layout.height);
+                                                  },
+                                                  style: tmp3.footerPortrait,
+                                                  children: footer,
+                                                };
+                                                tmp55 = React5(hasOwnProperty, obj5);
+                                              }
+                                              cResult[50] = footer;
+                                              cResult[51] = tmp3.footerPortrait;
+                                              cResult[52] = tmp55;
+                                              tmp54 = tmp55;
                                             }
-                                            let tmp55 = null;
-                                            if (null != footer) {
-                                              const obj5 = {
-                                                onLayout(nativeEvent) {
-                                                  closure_7(nativeEvent.nativeEvent.layout.height);
-                                                },
-                                                style: tmp3.footerPortrait,
-                                                children: footer,
-                                              };
-                                              tmp55 = metroImportDefault(hasOwnProperty, obj5);
-                                            }
-                                            cResult[50] = footer;
-                                            cResult[51] = tmp3.footerPortrait;
-                                            cResult[52] = tmp55;
-                                            tmp54 = tmp55;
                                           }
                                         }
                                       }
+                                      const obj6 = {
+                                        style: tmp21,
+                                        contentContainerStyle: tmp23,
+                                        ref,
+                                        onContentSizeChange: tmp25,
+                                        scrollEventThrottle: 16,
+                                        onLayout: tmp26,
+                                        onScroll: tmp27,
+                                        centerContent,
+                                        children: tmp47,
+                                      };
+                                      const tmp53 = React5(timestampProducer, obj6);
+                                      cResult[44] = centerContent;
+                                      cResult[45] = tmp27;
+                                      cResult[46] = tmp47;
+                                      cResult[47] = tmp21;
+                                      cResult[48] = tmp23;
+                                      cResult[49] = tmp53;
+                                      tmp50 = tmp53;
                                     }
-                                    const obj6 = {
-                                      style: tmp22,
-                                      contentContainerStyle: tmp24,
-                                      ref,
-                                      onContentSizeChange: tmp26,
-                                      scrollEventThrottle: 16,
-                                      onLayout: tmp27,
-                                      onScroll: tmp28,
-                                      centerContent,
-                                      children: tmp47,
-                                    };
-                                    const tmp53 = metroImportDefault(metroRequire, obj6);
-                                    cResult[44] = centerContent;
-                                    cResult[45] = tmp28;
-                                    cResult[46] = tmp47;
-                                    cResult[47] = tmp22;
-                                    cResult[48] = tmp24;
-                                    cResult[49] = tmp53;
-                                    tmp50 = tmp53;
                                   }
+                                  const obj7 = { obscured, children: null };
+                                  const items2 = [tmp28, tmp43];
+                                  obj7.children = items2;
+                                  const tmp49 = options(ObscuredSurfaceDefault, obj7);
+                                  cResult[40] = obscured;
+                                  cResult[41] = tmp28;
+                                  cResult[42] = tmp43;
+                                  cResult[43] = tmp49;
+                                  tmp47 = tmp49;
                                 }
-                                const obj7 = { obscured, children: items2 };
-                                items2 = [tmp29, tmp43];
-                                const tmp49 = React4(ObscuredSurfaceDefault, obj7);
-                                cResult[40] = obscured;
-                                cResult[41] = tmp29;
-                                cResult[42] = tmp43;
-                                cResult[43] = tmp49;
-                                tmp47 = tmp49;
                               }
+                              const obj8 = { style: tmp36, children: null };
+                              const items3 = [body, tmp37];
+                              obj8.children = items3;
+                              const tmp46 = options(hasOwnProperty, obj8);
+                              cResult[36] = body;
+                              cResult[37] = tmp36;
+                              cResult[38] = tmp37;
+                              cResult[39] = tmp46;
+                              tmp43 = tmp46;
                             }
-                            const obj8 = { style: tmp36, children: items3 };
-                            items3 = [body, tmp37];
-                            const tmp46 = React4(hasOwnProperty, obj8);
-                            cResult[36] = body;
-                            cResult[37] = tmp36;
-                            cResult[38] = tmp37;
-                            cResult[39] = tmp46;
-                            tmp43 = tmp46;
+                            let tmp38 = null;
+                            if (null != appDetails) {
+                              const obj9 = { children: null };
+                              const obj10 = { style: tmp3.separator };
+                              const items4 = [React5(hasOwnProperty, obj10)];
+                              const obj11 = { children: appDetails };
+                              items4[1] = React5(hasOwnProperty, obj11);
+                              obj9.children = items4;
+                              tmp38 = options(closure_1_8, obj9);
+                            }
+                            cResult[33] = appDetails;
+                            cResult[34] = tmp3.separator;
+                            cResult[35] = tmp38;
+                            tmp37 = tmp38;
                           }
-                          let tmp38 = null;
-                          if (null != appDetails) {
-                            const obj10 = { style: tmp3.separator };
-                            const obj9 = { children: items4 };
-                            items4 = [metroImportDefault(hasOwnProperty, obj10)];
-                            const obj11 = { children: appDetails };
-                            items4[1] = metroImportDefault(hasOwnProperty, obj11);
-                            tmp38 = React4(metroImportAll, obj9);
-                          }
-                          cResult[33] = appDetails;
-                          cResult[34] = tmp3.separator;
-                          cResult[35] = tmp38;
-                          tmp37 = tmp38;
                         }
+                        const items5 = [tmp3.bodyContainer, prop, cResult[28]];
+                        cResult[29] = tmp3.bodyContainer;
+                        cResult[30] = prop;
+                        cResult[31] = cResult[28];
+                        cResult[32] = items5;
+                        tmp36 = items5;
                       }
-                      const items5 = [tmp3.bodyContainer, prop, tmp34];
-                      cResult[29] = tmp3.bodyContainer;
-                      cResult[30] = prop;
-                      cResult[31] = tmp34;
-                      cResult[32] = items5;
-                      tmp36 = items5;
                     }
-                    let tmp30 = null;
+                    let tmp29 = null;
                     if (null != header) {
                       const obj12 = { style: tmp3.header, children: header };
-                      tmp30 = metroImportDefault(hasOwnProperty, obj12);
+                      tmp29 = React5(hasOwnProperty, obj12);
                     }
                     cResult[24] = header;
                     cResult[25] = tmp3.header;
-                    cResult[26] = tmp30;
-                    tmp29 = tmp30;
+                    cResult[26] = tmp29;
+                    tmp28 = tmp29;
                   }
                   function oe(nativeEvent) {
                     nativeEvent = nativeEvent.nativeEvent;
                     let contentOffset = nativeEvent.contentOffset;
-                    const layoutMeasurement = nativeEvent.layoutMeasurement;
                     if (contentOffset === undefined) {
                       contentOffset = { y: 0 };
                     }
-                    if (layoutMeasurement.height + contentOffset.y >= nativeEvent.contentSize.height - 5) {
+                    if (nativeEvent.layoutMeasurement.height + contentOffset.y >= nativeEvent.contentSize.height - 5) {
                       if (setAllContentSeen != null) {
                         tmp(true);
                       }
@@ -342,133 +306,112 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[21] = onScroll;
                   cResult[22] = setAllContentSeen;
                   cResult[23] = oe;
-                  tmp28 = oe;
+                  tmp27 = oe;
                 }
-                const items6 = [tmp3.scrollView, tmp21];
+                const items6 = [tmp3.scrollView, tmp20];
                 cResult[14] = tmp3.scrollView;
-                cResult[15] = tmp21;
+                cResult[15] = tmp20;
                 cResult[16] = items6;
-                tmp22 = items6;
+                tmp21 = items6;
               }
               const obj13 = { paddingLeft: left, paddingRight: right };
               cResult[11] = left;
               cResult[12] = right;
               cResult[13] = obj13;
-              tmp21 = obj13;
+              tmp20 = obj13;
             }
-            const items7 = [tmp3.fill, tmp19];
+            const items7 = [tmp3.fill, tmp18];
             cResult[8] = tmp3.fill;
-            cResult[9] = tmp19;
+            cResult[9] = tmp18;
             cResult[10] = items7;
-            tmp20 = items7;
+            tmp19 = items7;
           }
         }
       }
       const fn = function s() {
-        let obj2;
-        let obj3;
         if (closure_8) {
-          const obj = { layoutMeasurement: obj2, contentSize: obj3 };
+          const obj = { layoutMeasurement: null, contentSize: null };
+          const obj2 = { height: first1 };
+          obj.layoutMeasurement = obj2;
+          const obj3 = { height };
+          obj.contentSize = obj3;
           let contentOffset = obj.contentOffset;
-          const layoutMeasurement = obj.layoutMeasurement;
-          obj2 = { height: first1 };
-          obj3 = { height };
           if (contentOffset === undefined) {
             contentOffset = { y: 0 };
           }
-          if (layoutMeasurement.height + contentOffset.y >= obj.contentSize.height - 5) {
+          if (obj.layoutMeasurement.height + contentOffset.y >= obj.contentSize.height - 5) {
             if (setAllContentSeen != null) {
-              tmp7(true);
+              tmp6(true);
             }
           } else if (setAllContentSeen != null) {
-            tmp4(false);
+            tmp3(false);
           }
         }
       };
-      const items8 = [first, tmp14, first1, setAllContentSeen];
-      cResult[0] = first;
-      cResult[1] = tmp14;
+      const items8 = [height, tmp13, first1, setAllContentSeen];
+      cResult[0] = height;
+      cResult[1] = tmp13;
       cResult[2] = first1;
       cResult[3] = setAllContentSeen;
       cResult[4] = fn;
       cResult[5] = items8;
-      tmp17 = items8;
-      tmp16 = fn;
+      tmp16 = items8;
+      tmp15 = fn;
+      const tmp7 = useSafeAreaInsetsDefault();
     }
   : (onScroll) => {
-      let appDetails;
-      let body;
-      let bottom;
-      let centerContent;
-      let closure_4;
-      let first;
-      let first1;
-      let first2;
-      let footer;
-      let hasContentBackground;
-      let header;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items6;
-      let items7;
-      let items8;
-      let left;
-      let obj4;
-      let obscured;
-      let right;
-      let setAllContentSeen;
-      let tmp3Result2;
       ({ header, footer, appDetails, setAllContentSeen } = onScroll);
       onScroll = onScroll.onScroll;
-      first = undefined;
+      height = undefined;
       closure_4 = undefined;
       first1 = undefined;
-      metroRequire = undefined;
-      metroImportDefault = undefined;
-      metroImportAll = undefined;
+      closure_6 = undefined;
+      closure_8 = undefined;
       ({ body, centerContent, hasContentBackground, obscured } = onScroll);
       const tmp = closure_10();
-      const ref = react.useRef(null);
-      size = useWindowDimensionsDefault();
+      const ref = noop.useRef(null);
+      const size = useWindowDimensionsDefault();
       ({ left, right, bottom } = useSafeAreaInsetsDefault());
-      useSafeAreaInsetsDefault();
-      [first, closure_4] = react.useState(-1);
-      [first1, metroRequire] = react.useState(-1);
-      [first2, metroImportDefault] = react.useState(-1);
-      let tmp13 = first >= 0 && first1 >= 0;
-      if (tmp13) {
-        tmp13 = null == footer || first2 >= 0;
+      [height, closure_4] = noop.useState(-1);
+      [first1, closure_6] = noop.useState(-1);
+      const tmp11 = _slicedToArray(noop.useState(-1), 2);
+      closure_7 = tmp11[1];
+      let tmp12 = height >= 0;
+      if (tmp12) {
+        tmp12 = first1 >= 0;
       }
-      metroImportAll = tmp13;
-      const items = [first, tmp13, first1, setAllContentSeen];
-      const layoutEffect = react.useLayoutEffect(() => {
-        let obj2;
-        let obj3;
+      if (tmp12) {
+        tmp12 = null == footer || tmp11[0] >= 0;
+        const tmp13 = null == footer || tmp11[0] >= 0;
+      }
+      closure_8 = tmp12;
+      const items = [height, tmp12, first1, setAllContentSeen];
+      const layoutEffect = noop.useLayoutEffect(() => {
         if (closure_8) {
-          const obj = { layoutMeasurement: obj2, contentSize: obj3 };
+          const obj = { layoutMeasurement: null, contentSize: null };
+          const obj2 = { height: first1 };
+          obj.layoutMeasurement = obj2;
+          const obj3 = { height };
+          obj.contentSize = obj3;
           let contentOffset = obj.contentOffset;
-          const layoutMeasurement = obj.layoutMeasurement;
-          obj2 = { height: first1 };
-          obj3 = { height };
           if (contentOffset === undefined) {
             contentOffset = { y: 0 };
           }
-          if (layoutMeasurement.height + contentOffset.y >= obj.contentSize.height - 5) {
+          if (obj.layoutMeasurement.height + contentOffset.y >= obj.contentSize.height - 5) {
             if (setAllContentSeen != null) {
-              tmp7(true);
+              tmp6(true);
             }
           } else if (setAllContentSeen != null) {
-            tmp4(false);
+            tmp3(false);
           }
         }
       }, items);
-      let obj2 = { style: items1, children: items8 };
-      items1 = [tmp.fill, { marginBottom: bottom }];
+      let obj2 = { style: null, children: null };
+      const items1 = [tmp.fill, { marginBottom: bottom }];
+      obj2.style = items1;
       let obj3 = {
-        style: items2,
-        contentContainerStyle: items3,
+        style: null,
+        contentContainerStyle: null,
         ref,
         onContentSizeChange(arg0, arg1) {
           const current = ref.current;
@@ -484,11 +427,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         onScroll(nativeEvent) {
           nativeEvent = nativeEvent.nativeEvent;
           let contentOffset = nativeEvent.contentOffset;
-          const layoutMeasurement = nativeEvent.layoutMeasurement;
           if (contentOffset === undefined) {
             contentOffset = { y: 0 };
           }
-          if (layoutMeasurement.height + contentOffset.y >= nativeEvent.contentSize.height - 5) {
+          if (nativeEvent.layoutMeasurement.height + contentOffset.y >= nativeEvent.contentSize.height - 5) {
             if (setAllContentSeen != null) {
               tmp(true);
             }
@@ -498,42 +440,47 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         },
         centerContent,
-        children: React4(tmp3Result2, obj4),
+        children: null,
       };
-      items2 = [tmp.scrollView, { paddingLeft: left, paddingRight: right }];
-      items3 = [tmp5 ? tmp.scrollViewContentLandscape : tmp.scrollViewContentPortrait];
-      let tmp18Result = null;
-      obj4 = { obscured, children: items4 };
+      const items2 = [tmp.scrollView, { paddingLeft: left, paddingRight: right }];
+      obj3.style = items2;
+      const items3 = [size.width > size.height ? tmp.scrollViewContentLandscape : tmp.scrollViewContentPortrait];
+      obj3.contentContainerStyle = items3;
+      const tmp6 = useSafeAreaInsetsDefault();
+      const obj4 = { obscured, children: null };
+      let tmp17Result = null;
       const tmp3Result = KeyboardAwareViewDefault;
-      const tmp19 = metroRequire;
-      tmp3Result2 = ObscuredSurfaceDefault;
       if (null != header) {
         const obj5 = { style: tmp.header, children: header };
-        tmp18Result = tmp18(hasOwnProperty, obj5);
+        tmp17Result = React5(hasOwnProperty, obj5);
       }
-      items4 = [tmp18Result];
+      const items4 = [tmp17Result];
       const items5 = [tmp.bodyContainer, ,];
       let prop = null;
       if (hasContentBackground) {
         prop = tmp.bodyContainerBackground;
       }
       items5[1] = prop;
-      const obj6 = { style: items5, children: items6 };
+      const obj6 = { style: items5, children: null };
       items5[2] = size.width > size.height ? { flex: 1 } : {};
-      items6 = [body];
-      let tmp16Result = null;
+      const items6 = [body];
+      let tmp15Result = null;
       if (null != appDetails) {
-        const obj7 = { children: items7 };
+        const obj7 = { children: null };
         const obj8 = { style: tmp.separator };
-        items7 = [metroImportDefault(hasOwnProperty, obj8)];
+        const items7 = [React5(hasOwnProperty, obj8)];
         const obj9 = { children: appDetails };
-        items7[1] = metroImportDefault(hasOwnProperty, obj9);
-        tmp16Result = React4(metroImportAll, obj7);
+        items7[1] = React5(hasOwnProperty, obj9);
+        obj7.children = items7;
+        tmp15Result = options(closure_1_8, obj7);
       }
-      items6[1] = tmp16Result;
-      items4[1] = React4(hasOwnProperty, obj6);
-      items8 = [metroImportDefault(tmp19, obj3)];
-      let tmp18Result2 = null;
+      items6[1] = tmp15Result;
+      obj6.children = items6;
+      items4[1] = options(hasOwnProperty, obj6);
+      obj4.children = items4;
+      obj3.children = options(ObscuredSurfaceDefault, obj4);
+      const items8 = [React5(timestampProducer, obj3)];
+      let tmp17Result2 = null;
       if (null != footer) {
         const obj10 = {
           onLayout(nativeEvent) {
@@ -542,12 +489,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.footerPortrait,
           children: footer,
         };
-        tmp18Result2 = tmp18(hasOwnProperty, obj10);
+        tmp17Result2 = React5(hasOwnProperty, obj10);
       }
-      items8[1] = tmp18Result2;
-      return React4(tmp3Result, obj2);
+      items8[1] = tmp17Result2;
+      obj2.children = items8;
+      return options(tmp3Result, obj2);
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeContent.tsx");
-
-export default tmp5;

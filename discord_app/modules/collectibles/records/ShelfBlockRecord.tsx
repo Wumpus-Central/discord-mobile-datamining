@@ -2,12 +2,42 @@
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-class ShelfBlockRecord {
-  constructor(show_button) {
-    let category_sku_id;
-    const obj = Object.create(new.target.prototype);
+const prototype = function ShelfBlockRecord(show_button) {
+  const obj = Object.create(new.target.prototype);
+  obj.type = ShopBlockType.ShopBlockType.SHELF;
+  ({ name: tmp.name, ranked_sku_ids: tmp.rankedSkuIds, category_sku_id } = show_button);
+  if (category_sku_id == null) {
+    category_sku_id = null;
+  }
+  obj.categorySkuId = category_sku_id;
+  obj.showButton = false !== show_button.show_button;
+  let button_text = show_button.button_text;
+  if (button_text == null) {
+    button_text = null;
+  }
+  obj.buttonText = button_text;
+  let title_color = show_button.title_color;
+  if (title_color == null) {
+    title_color = null;
+  }
+  obj.titleColor = title_color;
+  let prop = show_button.desktop_background_image;
+  if (prop == null) {
+    prop = null;
+  }
+  obj.desktopBackgroundImage = prop;
+  let prop1 = show_button.mobile_background_image;
+  if (prop1 == null) {
+    prop1 = null;
+  }
+  obj.mobileBackgroundImage = prop1;
+  return obj;
+}.prototype;
+prototype["fromServer"] = function fromServer(show_button) {
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
     obj.type = ShopBlockType.ShopBlockType.SHELF;
-    ({ name: tmp.name, ranked_sku_ids: tmp.rankedSkuIds, category_sku_id } = show_button);
+    ({ name: tmp3.name, ranked_sku_ids: tmp3.rankedSkuIds, category_sku_id } = show_button);
     if (category_sku_id == null) {
       category_sku_id = null;
     }
@@ -34,44 +64,10 @@ class ShelfBlockRecord {
     }
     obj.mobileBackgroundImage = prop1;
     return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  static fromServer(show_button) {
-    let category_sku_id;
-    if (typeof ShelfBlockRecord === "function") {
-      const obj = Object.create(tmp.prototype);
-      obj.type = ShopBlockType.ShopBlockType.SHELF;
-      ({ name: tmp3.name, ranked_sku_ids: tmp3.rankedSkuIds, category_sku_id } = show_button);
-      if (category_sku_id == null) {
-        category_sku_id = null;
-      }
-      obj.categorySkuId = category_sku_id;
-      obj.showButton = false !== show_button.show_button;
-      let button_text = show_button.button_text;
-      if (button_text == null) {
-        button_text = null;
-      }
-      obj.buttonText = button_text;
-      let title_color = show_button.title_color;
-      if (title_color == null) {
-        title_color = null;
-      }
-      obj.titleColor = title_color;
-      let prop = show_button.desktop_background_image;
-      if (prop == null) {
-        prop = null;
-      }
-      obj.desktopBackgroundImage = prop;
-      let prop1 = show_button.mobile_background_image;
-      if (prop1 == null) {
-        prop1 = null;
-      }
-      obj.mobileBackgroundImage = prop1;
-      return obj;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-}
+};
 const result = size.fileFinishedImporting("modules/collectibles/records/ShelfBlockRecord.tsx");
 
-export { ShelfBlockRecord };
+export const ShelfBlockRecord = prototype;

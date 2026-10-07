@@ -1,34 +1,31 @@
 // discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting(
-  "../discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx",
-);
+const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx");
 
-export const queueTrackingEventMaker = (dispatcher, TRACK_ACTION_NAME) => {
-  let closure_0 = dispatcher;
-  let closure_1 = TRACK_ACTION_NAME;
+export (dispatcher, TRACK_ACTION_NAME) => {
+  closure_0 = dispatcher;
+  closure_1 = TRACK_ACTION_NAME;
   return (event, arg1, arg2) => {
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    const promise = new Promise((resolve) => {
-      let fingerprint;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    return new Promise((resolve) => {
+      const obj = { type: properties, event, properties, flush: null, fingerprint: null, resolve: null };
       let flag;
-      const obj = { type: properties, event, properties, flush: flag, fingerprint, resolve };
-      flag = undefined;
-      const dispatch = event.dispatch;
       if (closure_2 != null) {
         flag = closure_2.flush;
       }
       if (flag == null) {
         flag = false;
       }
-      fingerprint = undefined;
+      obj.flush = flag;
+      let fingerprint;
       if (closure_2 != null) {
         fingerprint = closure_2.fingerprint;
       }
-      dispatch(obj);
+      obj.fingerprint = fingerprint;
+      obj.resolve = resolve;
+      event.dispatch(obj);
     });
-    return promise;
   };
-};
+}

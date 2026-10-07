@@ -1,30 +1,26 @@
 // discord_app/design/components/Pile/native/PileOverflow.native.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import NumberUtils from "../../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const View = react_native.View;
-({ jsxs: closure_4, jsx: hasOwnProperty } = Fragment);
-let obj = { container: obj2 };
-obj2 = {
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
-  flexShrink: 0,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
+    flexShrink: 0,
+  },
 };
-let closure_6 = createStyles.createStyles(obj);
+let closure_6 = createStyles.createStyles(obj2);
 let items = [
   [64, "text-lg/semibold"],
   [48, "text-md/semibold"],
@@ -34,16 +30,19 @@ let items = [
   [16, "text-xxs/semibold"],
 ];
 const map = new Map(items);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj3 = {
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
+  flexShrink: 0,
+};
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
+
+export const PileOverflow = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let borderRadius;
-      let items1;
-      let locale;
-      let tmp4;
-      let tmp5;
-      let value;
-      const obj = react2;
-      const cResult = obj.c(20);
+      const cResult = c.c(20);
       ({ size, borderRadius, value } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
@@ -57,8 +56,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = useStateFromStores;
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const stateFromStores = useStateFromStores.useStateFromStores(tmp4, tmp5);
       const tmp8 = closure_6();
       let num3 = 4;
       if (size >= 32) {
@@ -66,15 +64,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === borderRadius) {
         if (cResult[3] === size) {
-          let tmp9;
           if (cResult[4] === num3) {
-            tmp9 = cResult[5];
+            let tmp9 = cResult[5];
           }
           if (cResult[6] === tmp8.container) {
-            let tmp10;
-            let tmp11;
             if (cResult[7] === tmp9) {
-              tmp10 = cResult[8];
+              let tmp10 = cResult[8];
             }
             if (cResult[9] !== size) {
               let str = map.get(size);
@@ -83,24 +78,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
               cResult[9] = size;
               cResult[10] = str;
-              tmp11 = str;
+              let tmp11 = str;
             } else {
               tmp11 = cResult[10];
             }
             if (cResult[11] === stateFromStores) {
-              let tmp14;
               if (cResult[12] === value) {
-                tmp14 = cResult[13];
+                let tmp14 = cResult[13];
               }
               if (cResult[14] === tmp11) {
-                let tmp16;
                 if (cResult[15] === tmp14) {
-                  tmp16 = cResult[16];
+                  let tmp16 = cResult[16];
                 }
                 if (cResult[17] === tmp10) {
-                  let tmp19;
                   if (cResult[18] === tmp16) {
-                    tmp19 = cResult[19];
+                    let tmp19 = cResult[19];
                   }
                   return tmp19;
                 }
@@ -111,20 +103,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[19] = tmp22;
                 tmp19 = tmp22;
               }
-              const obj3 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: tmp11, children: items1 };
-              items1 = ["+", tmp14];
-              const tmp18 = React3(Text_Text.Text, obj3);
+              const obj3 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: tmp11, children: null };
+              const items1 = ["+", tmp14];
+              obj3.children = items1;
+              const tmp18 = React4(Text_Text.Text, obj3);
               cResult[14] = tmp11;
               cResult[15] = tmp14;
               cResult[16] = tmp18;
               tmp16 = tmp18;
             }
-            const tmpResult2 = NumberUtils;
-            const humanizeValueResult = tmpResult2.humanizeValue(value, stateFromStores);
+            const humanizeValueResult = NumberUtils.humanizeValue(value, stateFromStores);
             cResult[11] = stateFromStores;
             cResult[12] = value;
             cResult[13] = humanizeValueResult;
             tmp14 = humanizeValueResult;
+            const tmpResult2 = NumberUtils;
           }
           const items2 = [tmp8.container, tmp9];
           cResult[6] = tmp8.container;
@@ -139,40 +132,29 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = num3;
       cResult[5] = obj4;
       tmp9 = obj4;
+      const tmpResult = useStateFromStores;
     }
   : (size) => {
-      let Text;
-      let borderRadius;
-      let items2;
-      let locale;
-      let num;
-      let obj4;
-      let value;
       size = size.size;
       ({ borderRadius, value } = size);
       const items = [LocaleStore];
-      const obj = useStateFromStores;
-      const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
+      const stateFromStores = useStateFromStores.useStateFromStores(items, () => locale.locale);
       const items1 = [closure_6().container];
-      const obj2 = { borderRadius, minWidth: size, height: size, paddingHorizontal: num };
-      num = 4;
+      const obj2 = { borderRadius, minWidth: size, height: size, paddingHorizontal: null };
+      let num = 4;
       if (size >= 32) {
         num = 8;
       }
+      const obj3 = { style: items1, children: null };
+      obj2.paddingHorizontal = num;
       items1[1] = obj2;
-      const obj3 = { style: items1, children: React3(Text, obj4) };
-      Text = Text_Text.Text;
       let str = map.get(size);
       if (str == null) {
         str = "text-md/semibold";
       }
-      obj4 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: items2 };
-      items2 = ["+"];
-      const tmpResult = NumberUtils;
-      items2[1] = tmpResult.humanizeValue(value, stateFromStores);
+      const obj4 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: null };
+      const items2 = ["+", NumberUtils.humanizeValue(value, stateFromStores)];
+      obj4.children = items2;
+      obj3.children = React4(Text_Text.Text, obj4);
       return hasOwnProperty(View, obj3);
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
-
-export const PileOverflow = tmp5;

@@ -4,9 +4,6 @@ import ExperimentStore from "../experiments/ExperimentStore.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
-
-let map;
 
 function isLikelyControl(registeredExperiments, variantId2) {
   if (null == registeredExperiments) {
@@ -37,25 +34,15 @@ function flushFlags(items, set) {
   }
 }
 function syncAllExperimentFlags() {
-  function resetGuildFlags() {
-    const tmp2 = set[Symbol.iterator]();
+  (function resetGuildFlags() {
     while (tmp2 !== undefined) {
       let obj = SentryUtilsDefault;
       let addFeatureFlagResult = obj.addFeatureFlag(tmp3, false);
       continue;
     }
     set.clear();
-  }
-  function getHashToName() {
-    const registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
-    const obj = {};
-    for (const key10006 in registeredExperiments) {
-      obj[ApexExperimentStore.getHash(key10006)] = key10006;
-      continue;
-    }
-    return obj;
-  }
-  resetGuildFlags();
+    tmp2 = set[Symbol.iterator]();
+  })();
   const items = [];
   const items1 = [];
   const items2 = [];
@@ -64,7 +51,10 @@ function syncAllExperimentFlags() {
   const allExperimentAssignments = ExperimentStore.getAllExperimentAssignments();
   for (const key10027 in allExperimentAssignments) {
     let tmp40 = allExperimentAssignments[key10027];
-    let tmp4 = null == tmp40 || tmp40 <= 0;
+    let tmp4 = null == tmp40;
+    if (!tmp4) {
+      tmp4 = tmp40 <= 0;
+    }
     if (tmp4) {
       continue;
     } else {
@@ -92,7 +82,15 @@ function syncAllExperimentFlags() {
     continue;
   }
   let registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
-  const tmp9 = getHashToName();
+  const tmp9 = (function getHashToName() {
+    const registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
+    const obj = {};
+    for (const key10006 in registeredExperiments) {
+      obj[ApexExperimentStore.getHash(key10006)] = key10006;
+      continue;
+    }
+    return obj;
+  })();
   const evaluatedExperiments = ApexExperimentStore.getState().evaluatedExperiments;
   const items4 = ["user", "installation"];
   for (const item10060 of items4) {
@@ -151,7 +149,7 @@ function syncAllExperimentFlags() {
     let tmp28 = evaluatedExperiments == null;
     let tmp29;
     if (!tmp28) {
-      const guild = evaluatedExperiments.guild;
+      guild = evaluatedExperiments.guild;
       tmp28 = guild == null;
       if (!tmp28) {
         tmp29 = guild[guildId];
@@ -190,17 +188,16 @@ function syncAllExperimentFlags() {
   flushFlags(items6, set);
 }
 const set = new Set();
-class SentryExperimentFeatureFlagManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    map = new Map();
-    const result = map.set(ExperimentStore, syncAllExperimentFlags);
-    const result1 = result.set(ApexExperimentStore, syncAllExperimentFlags);
-    applyArgumentsResult.stores = result1.set(SelectedGuildStore, syncAllExperimentFlags);
-    return applyArgumentsResult;
-  }
-}
-const sentryExperimentFeatureFlagManager = new SentryExperimentFeatureFlagManager();
+const prototype = function SentryExperimentFeatureFlagManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  const result = new Map().set(ExperimentStore, syncAllExperimentFlags);
+  const result1 = result.set(ApexExperimentStore, syncAllExperimentFlags);
+  applyArgumentsResult.stores = result1.set(SelectedGuildStore, syncAllExperimentFlags);
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp3 {}
+const prototype1 = new prototype();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/sentry/SentryExperimentFeatureFlagManager.tsx");
 
-export default sentryExperimentFeatureFlagManager;
+export default prototype1;

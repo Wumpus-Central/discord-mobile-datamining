@@ -3,59 +3,39 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import QuestConstants from "../../QuestConstants.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 const ReanimatedRexport = ReanimatedRexport2;
-let _require, bounty, obj1;
 
-let Pressable;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
+require = fn;
 let closure_3 = ["style"];
 let closure_4 = ["style"];
 let closure_5 = ["visible"];
-({ StyleSheet: metroImportAll, View: c9, Pressable } = react_native);
-const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
-({ jsx: closure_12, jsxs: map1 } = Fragment);
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_8, View: closure_9, Pressable } = get_ActivityIndicator);
+const QuestsExperimentLocations = fn(5630).QuestsExperimentLocations;
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let c15 = 40;
+const createStyles = fn(4896);
 let closure_16 = createStyles.createStyles(() => {
-  let obj2;
-  let obj4;
-  let rect;
   const obj = {
-    outerContainer: rect,
-    ctaPressable: obj2,
-    cta: {
-      flexDirection: "row",
-      alignItems: "center",
-      paddingLeft: nativeDefault.space.PX_12,
-      paddingRight: nativeDefault.space.PX_16,
-      paddingVertical: nativeDefault.space.PX_12,
-      gap: nativeDefault.space.PX_12,
-      borderRadius: nativeDefault.radii.lg,
-      overflow: "hidden",
-    },
-    ctaLogoContainer: size,
-    ctaLogo: obj4,
-    ctaInfo: { flex: 1, justifyContent: "center" },
+    outerContainer: null,
+    ctaPressable: null,
+    cta: null,
+    ctaLogoContainer: null,
+    ctaLogo: null,
+    ctaInfo: null,
   };
-  rect = {
+  const rect = {
     position: "absolute",
     bottom: 0,
     left: 0,
@@ -64,9 +44,13 @@ let closure_16 = createStyles.createStyles(() => {
     paddingBottom: nativeDefault.space.PX_16,
     alignItems: "center",
   };
-  obj2 = { alignSelf: "stretch", borderRadius: nativeDefault.radii.lg };
+  obj.outerContainer = rect;
+  const obj2 = {};
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
-  ({
+  obj2.alignSelf = "stretch";
+  obj2.borderRadius = nativeDefault.radii.lg;
+  obj.ctaPressable = obj2;
+  obj.cta = {
     flexDirection: "row",
     alignItems: "center",
     paddingLeft: nativeDefault.space.PX_12,
@@ -75,87 +59,78 @@ let closure_16 = createStyles.createStyles(() => {
     gap: nativeDefault.space.PX_12,
     borderRadius: nativeDefault.radii.lg,
     overflow: "hidden",
-  });
-  size = {
+  };
+  const size = {
     width: v40,
     height: v40,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     borderRadius: nativeDefault.radii.md,
     overflow: "hidden",
   };
-  obj4 = {};
-  const merged1 = Object.assign(metroImportAll.absoluteFillObject);
+  obj.ctaLogoContainer = size;
+  const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
+  obj.ctaLogo = {};
+  obj.ctaInfo = { flex: 1, justifyContent: "center" };
   return obj;
 });
-let entering = function o(sharedValue) {
-  let obj2;
-  const obj = { opacity: obj2.withTiming(sharedValue, timingPresets.timingStandard, "respect-motion-settings") };
-  obj2 = timing;
+let entering = function o(value) {
+  const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-let obj = { withTiming: timing.withTiming, timingStandard: timingPresets.timingStandard };
-entering.__closure = obj;
+entering.__closure = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
 entering.__workletHash = 2981824910249;
 entering.__initData = {
   code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
 };
-let fn2 = function l(sharedValue, fn) {
-  let obj2;
-  const obj = { opacity: obj2.withTiming(sharedValue, timingPresets.timingFast, "respect-motion-settings", fn) };
-  obj2 = timing;
+let fn2 = function l(value, fn) {
+  const obj = { opacity: timing.withTiming(value, timingPresets.timingFast, "respect-motion-settings", fn) };
   return obj;
 };
-let obj2 = { withTiming: timing.withTiming, timingFast: timingPresets.timingFast };
-fn2.__closure = obj2;
+let obj = { withTiming: fn(4897).withTiming, timingStandard: fn(4900).timingStandard };
+fn2.__closure = { withTiming: fn(4897).withTiming, timingFast: fn(4900).timingFast };
 fn2.__workletHash = 15850601331978;
 fn2.__initData = {
   code: "function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){const{withTiming,timingFast}=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};}",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (bounty) => {
-      let getQuestImpressionId;
-      let opacityStyle;
-      let transformStyle;
-      let tmp = bounty;
-      let obj = bounty(getQuestImpressionId[12]);
-      const cResult = obj.c(53);
+      const cResult = bounty(getQuestImpressionId[12]).c(53);
       bounty = bounty.bounty;
       const sourceQuestContent = bounty.sourceQuestContent;
       ({ opacityStyle, transformStyle } = bounty);
       const tmp4 = closure_16();
       if (cResult[0] !== bounty) {
-        const tmpResult = tmp(getQuestImpressionId[13]);
-        const bountyCtaInfo = tmpResult.getBountyCtaInfo(bounty);
+        const bountyCtaInfo = tmp(tmp2[13]).getBountyCtaInfo(bounty);
         let scaledImageUrl;
         if (null != bountyCtaInfo.iconImageUri) {
-          size = { assetUrl: bountyCtaInfo.iconImageUri, width: v40, height: v40 };
-          const tmpResult5 = tmp(getQuestImpressionId[14]);
-          scaledImageUrl = tmpResult5.getScaledImageUrl(size);
+          const size = { assetUrl: bountyCtaInfo.iconImageUri, width: v40, height: v40 };
+          scaledImageUrl = tmp(tmp2[14]).getScaledImageUrl(size);
+          const tmpResult5 = tmp(tmp2[14]);
         }
         cResult[0] = bounty;
         cResult[1] = bountyCtaInfo;
         cResult[2] = scaledImageUrl;
+        const tmpResult = tmp(tmp2[13]);
       }
-      const tmpResult6 = tmp(getQuestImpressionId[6]);
-      const sharedValue = tmpResult6.useSharedValue(0);
-      const tmpResult7 = tmp(getQuestImpressionId[15]);
-      const buttonPressAnimationProps = tmpResult7.useButtonPressAnimationProps(sharedValue);
+      let obj = bounty(getQuestImpressionId[12]);
+      const sharedValue = bounty(getQuestImpressionId[6]).useSharedValue(0);
+      const tmpResult6 = bounty(getQuestImpressionId[6]);
+      const buttonPressAnimationProps = bounty(getQuestImpressionId[15]).useButtonPressAnimationProps(sharedValue);
       if (cResult[3] !== buttonPressAnimationProps) {
         const style = buttonPressAnimationProps.style;
-        cResult[3] = buttonPressAnimationProps;
-        cResult[4] = _objectWithoutProperties(buttonPressAnimationProps, closure_3);
-        cResult[5] = style;
         const tmp17 = _objectWithoutProperties(buttonPressAnimationProps, closure_3);
+        cResult[3] = buttonPressAnimationProps;
+        cResult[4] = tmp17;
+        cResult[5] = style;
       }
-      const tmpResult8 = tmp(getQuestImpressionId[16]);
-      getQuestImpressionId = tmpResult8.useGetQuestImpressionId();
+      const tmpResult7 = bounty(getQuestImpressionId[15]);
+      getQuestImpressionId = bounty(getQuestImpressionId[16]).useGetQuestImpressionId();
       if (cResult[6] === bounty.cta) {
         if (cResult[7] === bounty.id) {
           if (cResult[8] === getQuestImpressionId) {
-            let tmp19;
             if (cResult[9] === sourceQuestContent) {
-              tmp19 = cResult[10];
+              let tmp19 = cResult[10];
             }
             closure_3 = tmp19;
             if (cResult[11] !== tmp19) {
@@ -210,20 +185,19 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class M {
         constructor(arg0) {
-          tmp = closure_0(closure_2[17]);
-          obj = {
+          obj = closure_0(closure_2[17]);
+          obj1 = {
             adContentId: bounty.id,
             adCreativeType: closure_0(closure_2[18]).AdCreativeType.BOUNTY,
             cta: bounty.cta,
           };
-          openAdGameLinkDirectly = tmp.openAdGameLinkDirectly;
-          obj1 = {
+          obj4 = {
             content: bounty,
             ctaContent: closure_0(closure_2[19]).QuestContentCTA.OPEN_GAME_LINK,
             impressionId: closure_2(),
             sourceQuestContent,
           };
-          result = openAdGameLinkDirectly(obj, obj1);
+          result = obj.openAdGameLinkDirectly(obj1, obj4);
           return;
         }
       }
@@ -233,95 +207,96 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = sourceQuestContent;
       cResult[10] = M;
       tmp19 = M;
+      const tmpResult8 = bounty(getQuestImpressionId[16]);
     }
   : (bounty) => {
-      let BackgroundBlurView;
-      let items3;
-      let items4;
-      let items5;
-      let obj10;
-      let obj3;
-      let obj4;
-      let obj6;
-      let obj8;
-      let opacityStyle;
-      let transformStyle;
       bounty = bounty.bounty;
       const sourceQuestContent = bounty.sourceQuestContent;
       let getQuestImpressionId;
       let callback;
       ({ opacityStyle, transformStyle } = bounty);
-      let tmp = closure_16();
-      let obj = bounty(getQuestImpressionId[13]);
-      const bountyCtaInfo = obj.getBountyCtaInfo(bounty);
+      const tmp = closure_16();
+      const bountyCtaInfo = bounty(getQuestImpressionId[13]).getBountyCtaInfo(bounty);
       let scaledImageUrl;
       if (null != bountyCtaInfo.iconImageUri) {
-        size = { assetUrl: bountyCtaInfo.iconImageUri, width: v40, height: v40 };
-        const tmp2Result = bounty(getQuestImpressionId[14]);
-        scaledImageUrl = tmp2Result.getScaledImageUrl(size);
+        const size = { assetUrl: bountyCtaInfo.iconImageUri, width: v40, height: v40 };
+        scaledImageUrl = tmp2(tmp3[14]).getScaledImageUrl(size);
+        const tmp2Result = tmp2(tmp3[14]);
       }
+      let obj = bounty(getQuestImpressionId[13]);
+      const sharedValue = bounty(getQuestImpressionId[6]).useSharedValue(0);
       const tmp2Result4 = bounty(getQuestImpressionId[6]);
-      const sharedValue = tmp2Result4.useSharedValue(0);
+      const buttonPressAnimationProps = bounty(getQuestImpressionId[15]).useButtonPressAnimationProps(sharedValue);
       const tmp2Result5 = bounty(getQuestImpressionId[15]);
-      const buttonPressAnimationProps = tmp2Result5.useButtonPressAnimationProps(sharedValue);
-      const style = buttonPressAnimationProps.style;
       const tmp9 = _objectWithoutProperties(buttonPressAnimationProps, closure_4);
-      const tmp2Result6 = bounty(getQuestImpressionId[16]);
-      getQuestImpressionId = tmp2Result6.useGetQuestImpressionId();
+      getQuestImpressionId = bounty(getQuestImpressionId[16]).useGetQuestImpressionId();
       const items = [, , ,];
       ({ id: arr[0], cta: arr[1] } = bounty);
       items[2] = sourceQuestContent;
       items[3] = getQuestImpressionId;
-      callback = react.useCallback((content) => {
-        const openAdGameLinkDirectly = QuestPlatformUtils.openAdGameLinkDirectly;
-        const obj = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, cta: bounty.cta };
-        const obj2 = {
+      callback = noop.useCallback((content) => {
+        const obj = QuestPlatformUtils;
+        const obj2 = { adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, cta: bounty.cta };
+        const result = obj.openAdGameLinkDirectly(obj2, {
           content,
           ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK,
           impressionId: getQuestImpressionId(),
           sourceQuestContent,
-        };
-        const result = openAdGameLinkDirectly(obj, obj2);
+        });
       }, items);
       const items1 = [callback];
       const items2 = [callback];
-      const callback1 = react.useCallback(() => {
+      const callback1 = noop.useCallback(() => {
         callback(QuestContent.QuestContent.VIDEO_MODAL_MOBILE);
       }, items1);
-      const callback2 = react.useCallback(() => {
+      const callback2 = noop.useCallback(() => {
         callback(QuestContent.QuestContent.VIDEO_MODAL_MOBILE_FOOTER);
       }, items2);
-      let obj2 = { style: items3, children: closure_12(closure_14, obj3) };
-      items3 = [tmp.outerContainer, opacityStyle, transformStyle];
-      obj3 = {
-        onPress: callback1,
-        accessibilityRole: "button",
-        accessibilityLabel: bountyCtaInfo.label,
-        style: items4,
-        children: closure_13(BackgroundBlurView, obj4),
-      };
-      const View = sourceQuestContent(tmp3[6]).View;
+      let obj2 = { style: null, children: null };
+      const items3 = [tmp.outerContainer, opacityStyle, transformStyle];
+      obj2.style = items3;
+      const obj3 = {};
       const merged = Object.assign(tmp9);
-      items4 = [tmp.ctaPressable, style];
-      obj4 = { blurTheme: "dark", style: tmp.cta, pressed: sharedValue, children: items5 };
+      obj3.onPress = callback1;
+      obj3.accessibilityRole = "button";
+      obj3.accessibilityLabel = bountyCtaInfo.label;
+      const items4 = [tmp.ctaPressable, buttonPressAnimationProps.style];
+      obj3.style = items4;
+      const obj4 = { blurTheme: "dark", style: tmp.cta, pressed: sharedValue, children: null };
       const obj5 = {
         style: tmp.ctaLogoContainer,
-        children: closure_12(sourceQuestContent(getQuestImpressionId[21]), obj6),
+        children: closure_12(sourceQuestContent(getQuestImpressionId[21]), {
+          source: { uri: scaledImageUrl },
+          style: tmp.ctaLogo,
+          resizeMode: "cover",
+        }),
       };
-      BackgroundBlurView = tmp2(tmp3[24]).BackgroundBlurView;
-      obj6 = { source: { uri: scaledImageUrl }, style: tmp.ctaLogo, resizeMode: "cover" };
-      items5 = [closure_12(closure_9, obj5), ,];
-      const obj7 = { style: tmp.ctaInfo, children: closure_12(bounty(getQuestImpressionId[22]).Text, obj8) };
-      obj8 = { lineClamp: 2, variant: "text-sm/semibold", color: "text-default", children: bountyCtaInfo.label };
+      const items5 = [closure_12(closure_9, obj5), ,];
+      const obj7 = {
+        style: tmp.ctaInfo,
+        children: closure_12(bounty(getQuestImpressionId[22]).Text, {
+          lineClamp: 2,
+          variant: "text-sm/semibold",
+          color: "text-default",
+          children: bountyCtaInfo.label,
+        }),
+      };
       items5[1] = closure_12(closure_9, obj7);
       const obj9 = {
         accessible: false,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_12(bounty(getQuestImpressionId[23]).Button, obj10),
+        children: closure_12(bounty(getQuestImpressionId[23]).Button, {
+          variant: "primary-overlay",
+          text: bountyCtaInfo.buttonLabel,
+          size: "sm",
+          onPress: callback2,
+        }),
       };
-      obj10 = { variant: "primary-overlay", text: bountyCtaInfo.buttonLabel, size: "sm", onPress: callback2 };
       items5[2] = closure_12(closure_9, obj9);
-      return closure_12(View, obj2);
+      obj4.children = items5;
+      obj3.children = closure_13(bounty(getQuestImpressionId[24]).BackgroundBlurView, obj4);
+      obj2.children = closure_12(closure_14, obj3);
+      return closure_12(sourceQuestContent(getQuestImpressionId[6]).View, obj2);
     };
 const __initData = {
   code: "function BountiesModalAdvertiserCtaTsx3(){const{withTiming,interpolate,visibility,visible,timingStandard,timingFast}=this.__closure;return{transform:[{translateY:withTiming(interpolate(visibility,[0,1],[8,0]),visible?timingStandard:timingFast)}]};}",
@@ -329,22 +304,14 @@ const __initData = {
 const __initData2 = {
   code: "function BountiesModalAdvertiserCtaTsx4(){const{withTiming,interpolate,visibility,visible,timingStandard,timingFast}=this.__closure;return{transform:[{translateY:withTiming(interpolate(visibility,[0,1],[8,0]),visible?timingStandard:timingFast)}]};}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj3 = { withTiming: fn(4897).withTiming, timingFast: fn(4900).timingFast };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalAdvertiserCta.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (visible) => {
-      let animatedStyle;
-      let closure_0;
-      let opacityStyle;
-      let shouldRender;
-      let tmp10;
-      let tmp11;
-      let tmp15;
-      let tmp16;
-      let tmp4;
-      let useReducedMotion;
-      const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(18);
+      const cResult = require("c").c(18);
       if (cResult[0] !== visible) {
         visible = visible.visible;
         _require = visible;
@@ -352,15 +319,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = visible;
         cResult[1] = tmp8;
         cResult[2] = visible;
-        tmp4 = tmp8;
+        let tmp4 = tmp8;
       } else {
         tmp4 = cResult[1];
         _require = cResult[2];
       }
-      const tmpResult = tmp(animatedStyle[25]);
-      const isBountiesModalTransitionsRefactorEnabled = tmpResult.useIsBountiesModalTransitionsRefactorEnabled(
-        QuestsExperimentLocations.VIDEO_MODAL_MOBILE,
-      );
+      let obj = require("c");
+      const isBountiesModalTransitionsRefactorEnabled =
+        require("BountiesModalTransitionsRefactorExperiment").useIsBountiesModalTransitionsRefactorEnabled(
+          QuestsExperimentLocations.VIDEO_MODAL_MOBILE,
+        );
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [AccessibilityStore];
         entering = function b() {
@@ -368,69 +336,82 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = items;
         cResult[4] = entering;
-        tmp11 = entering;
-        tmp10 = items;
+        let tmp11 = entering;
+        let tmp10 = items;
       } else {
         tmp10 = cResult[3];
         tmp11 = cResult[4];
       }
-      const tmpResult4 = tmp(animatedStyle[26]);
-      const stateFromStores = tmpResult4.useStateFromStores(tmp10, tmp11);
+      const tmpResult = require("BountiesModalTransitionsRefactorExperiment");
+      const stateFromStores = require("initialize").useStateFromStores(tmp10, tmp11);
       let num6 = 0;
       if (tmp5) {
         num6 = 1;
       }
+      const tmpResult4 = require("initialize");
       fn2 = function h() {
-        let items;
-        const withTiming = timing.withTiming;
-        timing;
-        const obj = ReanimatedRexport2;
-        const interpolateResult = obj.interpolate(num6, [0, 1], [8, 0]);
-        const tmp3 = timingPresets;
-        const obj2 = { transform: items };
-        items = [{ translateY: withTiming(interpolateResult, closure_0 ? tmp3.timingStandard : tmp3.timingFast) }];
-        ({ translateY: withTiming(interpolateResult, closure_0 ? tmp3.timingStandard : tmp3.timingFast) });
-        return obj2;
+        const obj = timing;
+        const tmp2 = timingPresets;
+        const obj3 = { transform: null };
+        const interpolateResult = ReanimatedRexport2.interpolate(num6, [0, 1], [8, 0]);
+        const items = [
+          {
+            translateY: obj.withTiming(
+              ReanimatedRexport2.interpolate(num6, [0, 1], [8, 0]),
+              closure_0 ? tmp2.timingStandard : tmp2.timingFast,
+            ),
+          },
+        ];
+        obj3.transform = items;
+        return obj3;
       };
-      const tmpResult5 = tmp(animatedStyle[6]);
-      let obj2 = {
-        withTiming: tmp(tmp2[9]).withTiming,
-        interpolate: tmp(tmp2[6]).interpolate,
+      const tmpResult5 = require("ReanimatedRexport");
+      fn2.__closure = {
+        withTiming: require("timing").withTiming,
+        interpolate: require("ReanimatedRexport").interpolate,
         visibility: num6,
         visible: tmp5,
-        timingStandard: tmp(tmp2[10]).timingStandard,
-        timingFast: tmp(tmp2[10]).timingFast,
+        timingStandard: require("timingPresets").timingStandard,
+        timingFast: require("timingPresets").timingFast,
       };
-      fn2.__closure = obj2;
       fn2.__workletHash = 252868467367;
       fn2.__initData = __initData;
       animatedStyle = tmpResult5.useAnimatedStyle(fn2);
       if (cResult[5] !== animatedStyle) {
         const fn3 = function p(arg0, opacityStyle) {
-          const obj = { opacityStyle, transformStyle: animatedStyle };
+          const obj = {};
           const merged = Object.assign(arg0);
-          return closure_12(closure_19, obj);
+          obj.opacityStyle = opacityStyle;
+          obj.transformStyle = animatedStyle;
+          return __initData(closure_19, obj);
         };
         cResult[5] = animatedStyle;
         cResult[6] = fn3;
-        tmp15 = fn3;
+        let tmp15 = fn3;
       } else {
         tmp15 = cResult[6];
       }
       if (cResult[7] !== tmp5) {
-        const obj3 = {
+        let obj3 = {
           visible: tmp5,
-          entranceTiming: tmp(animatedStyle[10]).timingStandard,
-          exitTiming: tmp(animatedStyle[10]).timingFast,
+          entranceTiming: tmp(tmp2[10]).timingStandard,
+          exitTiming: tmp(tmp2[10]).timingFast,
         };
         cResult[7] = tmp5;
         cResult[8] = obj3;
-        tmp16 = obj3;
+        let tmp16 = obj3;
       } else {
         tmp16 = cResult[8];
       }
-      const tmpResult6 = tmp(animatedStyle[27]);
-      const visibilityTransition = tmpResult6.useVisibilityTransition(tmp16);
+      let obj2 = {
+        withTiming: require("timing").withTiming,
+        interpolate: require("ReanimatedRexport").interpolate,
+        visibility: num6,
+        visible: tmp5,
+        timingStandard: require("timingPresets").timingStandard,
+        timingFast: require("timingPresets").timingFast,
+      };
+      const visibilityTransition = require("useVisibilityTransition").useVisibilityTransition(tmp16);
       ({ opacityStyle, shouldRender } = visibilityTransition);
       if (isBountiesModalTransitionsRefactorEnabled) {
         let tmp25;
@@ -439,15 +420,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[9] === tmp15) {
           if (cResult[10] === tmp25) {
-            let tmp26;
             if (cResult[11] === stateFromStores) {
-              tmp26 = cResult[12];
+              let tmp26 = cResult[12];
             }
             return tmp26;
           }
         }
         const obj4 = { useReducedMotion: stateFromStores, item: tmp25, entering, exiting: fn2, renderItem: tmp15 };
-        const tmp31 = closure_12(num6(animatedStyle[28]), obj4);
+        const tmp31 = closure_12(num6(tmp2[28]), obj4);
         cResult[9] = tmp15;
         cResult[10] = tmp25;
         cResult[11] = stateFromStores;
@@ -457,18 +437,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[13] === opacityStyle) {
           if (cResult[14] === tmp4) {
             if (cResult[15] === shouldRender) {
-              let tmp18;
               if (cResult[16] === animatedStyle) {
-                tmp18 = cResult[17];
+                let tmp18 = cResult[17];
               }
               return tmp18;
             }
           }
         }
         let tmp19 = shouldRender;
-        if (tmp19) {
-          const obj5 = { opacityStyle, transformStyle: animatedStyle };
+        if (shouldRender) {
+          const obj5 = {};
           let merged = Object.assign(tmp4);
+          obj5.opacityStyle = opacityStyle;
+          obj5.transformStyle = animatedStyle;
           tmp19 = closure_12(closure_19, obj5);
         }
         cResult[13] = opacityStyle;
@@ -478,80 +459,95 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[17] = tmp19;
         tmp18 = tmp19;
       }
+      const tmpResult6 = require("useVisibilityTransition");
     }
   : (visible) => {
-      let tmp18;
-      let useReducedMotion;
       visible = visible.visible;
       let merged = Object.assign(visible, Object.assign({ visible: 0 }));
       let animatedStyle;
-      let tmp3 = animatedStyle;
+      const isBountiesModalTransitionsRefactorEnabled = visible(
+        animatedStyle[25],
+      ).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
       let obj = visible(animatedStyle[25]);
-      const isBountiesModalTransitionsRefactorEnabled = obj.useIsBountiesModalTransitionsRefactorEnabled(
-        QuestsExperimentLocations.VIDEO_MODAL_MOBILE,
-      );
-      let obj2 = visible(animatedStyle[26]);
       let items = [AccessibilityStore];
       let num = 0;
-      const stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const stateFromStores = visible(animatedStyle[26]).useStateFromStores(
+        items,
+        () => useReducedMotion.useReducedMotion,
+      );
       if (visible) {
         num = 1;
       }
+      let obj2 = visible(animatedStyle[26]);
       entering = function s() {
-        let items;
-        const withTiming = timing.withTiming;
-        timing;
-        const obj = ReanimatedRexport2;
-        const interpolateResult = obj.interpolate(num, [0, 1], [8, 0]);
-        const tmp3 = timingPresets;
-        const obj2 = { transform: items };
-        items = [{ translateY: withTiming(interpolateResult, visible ? tmp3.timingStandard : tmp3.timingFast) }];
-        ({ translateY: withTiming(interpolateResult, visible ? tmp3.timingStandard : tmp3.timingFast) });
-        return obj2;
+        const obj = timing;
+        const tmp2 = timingPresets;
+        const obj3 = { transform: null };
+        const interpolateResult = ReanimatedRexport2.interpolate(num, [0, 1], [8, 0]);
+        const items = [
+          {
+            translateY: obj.withTiming(
+              ReanimatedRexport2.interpolate(num, [0, 1], [8, 0]),
+              visible ? tmp2.timingStandard : tmp2.timingFast,
+            ),
+          },
+        ];
+        obj3.transform = items;
+        return obj3;
       };
-      const tmp2Result = visible(tmp3[6]);
-      const obj3 = {
-        withTiming: tmp2(tmp3[9]).withTiming,
-        interpolate: tmp2(tmp3[6]).interpolate,
+      const tmp2Result = visible(animatedStyle[6]);
+      entering.__closure = {
+        withTiming: visible(animatedStyle[9]).withTiming,
+        interpolate: visible(animatedStyle[6]).interpolate,
         visibility: num,
         visible,
-        timingStandard: tmp2(tmp3[10]).timingStandard,
-        timingFast: tmp2(tmp3[10]).timingFast,
+        timingStandard: visible(animatedStyle[10]).timingStandard,
+        timingFast: visible(animatedStyle[10]).timingFast,
       };
-      entering.__closure = obj3;
       entering.__workletHash = 16458405086304;
       entering.__initData = __initData2;
       animatedStyle = tmp2Result.useAnimatedStyle(entering);
       const items1 = [animatedStyle];
-      const callback = react.useCallback((arg0, opacityStyle) => {
-        const obj = { opacityStyle, transformStyle: animatedStyle };
+      const callback = noop.useCallback((arg0, opacityStyle) => {
+        const obj = {};
         const merged = Object.assign(arg0);
-        return closure_12(closure_19, obj);
+        obj.opacityStyle = opacityStyle;
+        obj.transformStyle = animatedStyle;
+        return __initData(closure_19, obj);
       }, items1);
-      const tmp2Result2 = visible(tmp3[27]);
-      const obj4 = {
+      let obj3 = {
+        withTiming: visible(animatedStyle[9]).withTiming,
+        interpolate: visible(animatedStyle[6]).interpolate,
+        visibility: num,
         visible,
-        entranceTiming: visible(tmp3[10]).timingStandard,
-        exitTiming: visible(tmp3[10]).timingFast,
+        timingStandard: visible(animatedStyle[10]).timingStandard,
+        timingFast: visible(animatedStyle[10]).timingFast,
       };
-      const visibilityTransition = tmp2Result2.useVisibilityTransition(obj4);
+      const tmp2Result2 = visible(animatedStyle[27]);
+      const visibilityTransition = tmp2Result2.useVisibilityTransition({
+        visible,
+        entranceTiming: visible(animatedStyle[10]).timingStandard,
+        exitTiming: visible(animatedStyle[10]).timingFast,
+      });
       let shouldRender = visibilityTransition.shouldRender;
       if (isBountiesModalTransitionsRefactorEnabled) {
-        const obj5 = { useReducedMotion: stateFromStores, item: tmp18, entering, exiting: fn2, renderItem: callback };
-        tmp18 = undefined;
-        const tmp17 = num(tmp3[28]);
+        const obj5 = { useReducedMotion: stateFromStores, item: null, entering: null, exiting: null, renderItem: null };
+        let tmp18;
         if (visible) {
           tmp18 = merged;
         }
-        shouldRender = closure_12(tmp17, obj5);
+        obj5.item = tmp18;
+        obj5.entering = entering;
+        obj5.exiting = fn2;
+        obj5.renderItem = callback;
+        shouldRender = closure_12(num(tmp3[28]), obj5);
+        const tmp17 = num(tmp3[28]);
       } else if (shouldRender) {
-        const obj6 = { opacityStyle: tmp9, transformStyle: animatedStyle };
+        const obj6 = {};
         const merged1 = Object.assign(merged);
+        obj6.opacityStyle = tmp9;
+        obj6.transformStyle = animatedStyle;
         shouldRender = closure_12(closure_19, obj6);
       }
       return shouldRender;
     };
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalAdvertiserCta.tsx");
-
-export default tmp4;

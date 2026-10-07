@@ -3,10 +3,6 @@ import Constants from "../../Constants.tsx";
 import Powerups from "../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES;
-let GUILD_TAGS_BADGE_PACK_FLEX;
-let GUILD_TAGS_BADGE_PACK_PETS;
-let GUILD_TAGS_BADGE_PACK_PLANT;
 const GuildFeatures = Constants.GuildFeatures;
 const GuildTagBadgeKind = {
   SWORD: 0,
@@ -120,21 +116,21 @@ const obj2 = {
   DARK_GRAY: "#222222",
   LIGHT_GRAY: "#cccccc",
 };
-const items = [, , , , , , , , , , , ,];
-const obj3 = { primary: obj2.HOT_PINK, secondary: obj2.LIGHT_PINK };
-items[0] = obj3;
-items[1] = { primary: obj2.ORANGE, secondary: obj2.PEACH };
-items[2] = { primary: obj2.GOLD, secondary: obj2.LIGHT_YELLOW };
-items[3] = { primary: obj2.TEAL, secondary: obj2.MINT_GREEN };
-items[4] = { primary: obj2.BLUE_TEAL, secondary: obj2.LIGHT_BLUE };
-items[5] = { primary: obj2.PURPLE, secondary: obj2.LAVENDER };
-items[6] = { primary: obj2.VIOLET, secondary: obj2.MAUVE };
-items[7] = { primary: obj2.DEEP_PURPLE, secondary: obj2.ORCHID };
-items[8] = { primary: obj2.RED, secondary: obj2.SALMON };
-items[9] = { primary: obj2.BROWN, secondary: obj2.TAN };
-items[10] = { primary: obj2.OLIVE, secondary: obj2.GRAY };
-items[11] = { primary: obj2.BURGUNDY, secondary: obj2.ROSE };
-items[12] = { primary: obj2.DARK_GRAY, secondary: obj2.LIGHT_GRAY };
+const items = [
+  { primary: obj2.HOT_PINK, secondary: obj2.LIGHT_PINK },
+  { primary: obj2.ORANGE, secondary: obj2.PEACH },
+  { primary: obj2.GOLD, secondary: obj2.LIGHT_YELLOW },
+  { primary: obj2.TEAL, secondary: obj2.MINT_GREEN },
+  { primary: obj2.BLUE_TEAL, secondary: obj2.LIGHT_BLUE },
+  { primary: obj2.PURPLE, secondary: obj2.LAVENDER },
+  { primary: obj2.VIOLET, secondary: obj2.MAUVE },
+  { primary: obj2.DEEP_PURPLE, secondary: obj2.ORCHID },
+  { primary: obj2.RED, secondary: obj2.SALMON },
+  { primary: obj2.BROWN, secondary: obj2.TAN },
+  { primary: obj2.OLIVE, secondary: obj2.GRAY },
+  { primary: obj2.BURGUNDY, secondary: obj2.ROSE },
+  { primary: obj2.DARK_GRAY, secondary: obj2.LIGHT_GRAY },
+];
 const obj4 = {
   SIZE_12: 12,
   [12]: "SIZE_12",
@@ -176,14 +172,6 @@ const items4 = [, , , ,];
 } = GuildTagBadgeKind);
 const items5 = [, , , ,];
 ({ BUTTERFLY: arr6[0], SNAIL: arr6[1], CATERPILLAR: arr6[2], SPIDER: arr6[3], BEE: arr6[4] } = GuildTagBadgeKind);
-const primary = items[0].primary;
-const secondary = items[0].secondary;
-const obj5 = {
-  [GUILD_TAGS_BADGE_PACK_PETS]: Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
-  [GUILD_TAGS_BADGE_PACK_FLEX]: Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
-  [GUILD_TAGS_BADGE_PACK_PLANT]: Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  [GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-};
 ({
   GUILD_TAGS_BADGE_PACK_PETS,
   GUILD_TAGS_BADGE_PACK_FLEX,
@@ -195,8 +183,8 @@ const result = size.fileFinishedImporting("modules/guild_tag/GuildTagConstants.t
 export { GuildTagBadgeKind };
 export const GuildTagPalettePresetColor = obj2;
 export const GUILD_TAG_BADGE_PALETTE_PRESETS = items;
-export const GUILD_TAG_BADGE_PRIMARY_DEFAULT = primary;
-export const GUILD_TAG_BADGE_SECONDARY_DEFAULT = secondary;
+export const GUILD_TAG_BADGE_PRIMARY_DEFAULT = items[0].primary;
+export const GUILD_TAG_BADGE_SECONDARY_DEFAULT = items[0].secondary;
 export const getRandomGuildTagBadgePreset = function getRandomGuildTagBadgePreset() {
   return items[Math.floor(Math, Math.random(Math) * items.length)];
 };
@@ -272,4 +260,9 @@ export const BADGE_PACKS = {
   [GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: items4,
   [GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: items5,
 };
-export const BADGE_PACK_TO_SKU_ID = obj5;
+export const BADGE_PACK_TO_SKU_ID = {
+  [GUILD_TAGS_BADGE_PACK_PETS]: Powerups.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
+  [GUILD_TAGS_BADGE_PACK_FLEX]: Powerups.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
+  [GUILD_TAGS_BADGE_PACK_PLANT]: Powerups.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
+  [GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: Powerups.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
+};

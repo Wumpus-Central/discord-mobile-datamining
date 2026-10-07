@@ -1,11 +1,10 @@
 // discord_app/modules/game_store/GameStoreAsset.tsx
-import size_mod from "../../../_runtime/metro/00002__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
-let size = size_mod;
 const result = size.fileFinishedImporting("modules/game_store/GameStoreAsset.tsx");
 
 export const transformStoreAssetFromServer = function transformStoreAssetFromServer(box_art) {
-  size = {
+  const size = {
     id: box_art.id,
     filename: box_art.filename,
     size: box_art.size,

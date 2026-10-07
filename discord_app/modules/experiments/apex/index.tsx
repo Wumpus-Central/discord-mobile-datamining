@@ -1,15 +1,12 @@
 // discord_app/modules/experiments/apex/index.tsx
-import apex_ApexExperiment from "ApexExperiment.tsx";
-import apex_ApexTypes from "ApexTypes.tsx";
+import apex_ApexExperimentDefault from "ApexExperiment.tsx";
 import ApexExperimentStore from "ApexExperimentStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const apex_ApexExperimentDefault = apex_ApexExperiment;
-
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/index.tsx");
 
-export const ApexExperiment = apex_ApexExperiment.ApexExperiment;
-export const ApexExperimentsMessage = apex_ApexTypes.ApexExperimentsMessage;
-export const ExperimentName = apex_ApexTypes.ExperimentName;
+export const ApexExperiment = fn(1441).ApexExperiment;
+export const ApexExperimentsMessage = fn(1443).ApexExperimentsMessage;
+export const ExperimentName = fn(1443).ExperimentName;
 export const createApexExperiment = apex_ApexExperimentDefault;
 export { ApexExperimentStore };

@@ -1,15 +1,10 @@
 // discord_app/modules/video_calls/native/ChannelCallLifecycleStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import _modDef1342 from "../../../../_runtime/metro/01342__.js";
-import DeviceOrientation from "../../device/native/DeviceOrientation.tsx";
-import ChannelCallConstants from "ChannelCallConstants.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
 
-let voiceChannelId;
-
-const VoiceCallOverlayType = ChannelCallConstants.VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(9087).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
@@ -20,7 +15,7 @@ let size = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: DeviceOrientation.OrientationType.PORTRAIT,
+  screenOrientation: fn(8018).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -31,43 +26,47 @@ const size1 = {
   y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: DeviceOrientation.OrientationType.PORTRAIT,
+  screenOrientation: fn(8018).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
 };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let c10 = true;
-const Store = get_initializedDefault.Store;
-class ChannelCallLifecycleStore extends Store {
-  initialize() {
-    this.waitFor(SelectedChannelStore);
-  }
-  shouldReactToSeriousThermalStateWhenActivityFocused() {
-    return c4;
-  }
-  consumedRequestToRespondToSeriousThermalState() {
-    return c5;
-  }
-  disregardSeriousThermalState() {
-    return c6;
-  }
-  isReactingToThermalState() {
-    return c5 && !c6;
-  }
-  getShowActivitiesDebugOverlay() {
-    return visible;
-  }
-  getVoiceCallOverlayLayoutStates() {
-    return obj;
-  }
-  isPipEnabledWhileFocusedOnActivityOrStream() {
-    return c10;
-  }
-}
+const Store = initializeDefault.Store;
+class ChannelCallLifecycleStore extends Store {}
 const prototype = ChannelCallLifecycleStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(SelectedChannelStore);
+};
+prototype["shouldReactToSeriousThermalStateWhenActivityFocused"] =
+  function shouldReactToSeriousThermalStateWhenActivityFocused() {
+    return c4;
+  };
+prototype["consumedRequestToRespondToSeriousThermalState"] = function consumedRequestToRespondToSeriousThermalState() {
+  return c5;
+};
+prototype["disregardSeriousThermalState"] = function disregardSeriousThermalState() {
+  return c6;
+};
+prototype["isReactingToThermalState"] = function isReactingToThermalState() {
+  let tmp = c5;
+  if (c5) {
+    tmp = !c6;
+  }
+  return tmp;
+};
+prototype["getShowActivitiesDebugOverlay"] = function getShowActivitiesDebugOverlay() {
+  return visible;
+};
+prototype["getVoiceCallOverlayLayoutStates"] = function getVoiceCallOverlayLayoutStates() {
+  return obj;
+};
+prototype["isPipEnabledWhileFocusedOnActivityOrStream"] = function isPipEnabledWhileFocusedOnActivityOrStream() {
+  return c10;
+};
 ChannelCallLifecycleStore.displayName = "ChannelCallLifecycleStore";
-const obj2 = {
+const channelCallLifecycleStore = new ChannelCallLifecycleStore(DispatcherDefault, {
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(arg0) {
     if (arg0 == null) {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
@@ -107,8 +106,6 @@ const obj2 = {
     visible = visible.visible;
   },
   VOICE_CALL_OVERLAY_LAYOUT_STATE_UPDATE: function handleVoiceCallOverlayLayoutStateUpdate(arg0) {
-    let voiceCallOverlayLayoutState;
-    let voiceCallOverlayType;
     obj = {};
     ({ voiceCallOverlayType, voiceCallOverlayLayoutState } = arg0);
     const merged = Object.assign(obj);
@@ -133,9 +130,8 @@ const obj2 = {
       c10 = true;
     }
   },
-};
-const channelCallLifecycleStore = new ChannelCallLifecycleStore(DispatcherDefault, obj2);
-size = size_mod;
+});
+size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
 
 export default channelCallLifecycleStore;

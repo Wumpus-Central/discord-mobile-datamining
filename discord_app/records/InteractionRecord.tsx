@@ -1,40 +1,36 @@
 // discord_app/records/InteractionRecord.tsx
 import Record from "../lib/Record.tsx";
 import UserRecord from "UserRecord.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-class InteractionRecord extends Record {
-  constructor(user) {
-    let name_localized;
-    const tmp = new InteractionRecord(new.target, user, this);
-    ({ id: tmp.id, name: tmp.name, type: tmp.type, user: tmp.user, name_localized } = user);
+const prototype = function InteractionRecord(name) {
+  const tmp = new prototype(new.target, name, new.target);
+  ({ id: tmp.id, name: tmp.name, type: tmp.type, user: tmp.user, name_localized } = name);
+  if (name_localized == null) {
+    name_localized = name.name;
+  }
+  tmp.displayName = name_localized;
+  return tmp;
+}.prototype;
+class prototype extends tmp2 {}
+prototype["createFromServer"] = function createFromServer(user) {
+  const obj = {};
+  const merged = Object.assign(user);
+  user = user.user;
+  obj.user = new UserRecord(user);
+  if (typeof prototype === "function") {
+    const tmp7 = new prototype(user, user, UserRecord);
+    ({ id: tmp7.id, name: tmp7.name, type: tmp7.type, user: tmp7.user, name_localized } = obj);
     if (name_localized == null) {
-      name_localized = user.name;
+      name_localized = obj.name;
     }
-    tmp.displayName = name_localized;
-    return tmp;
+    tmp7.displayName = name_localized;
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  static createFromServer(user) {
-    let name_localized;
-    const obj = { user: new UserRecord(user) };
-    const merged = Object.assign(user);
-    user = user.user;
-    new UserRecord(user);
-    if (typeof InteractionRecord === "function") {
-      const self = this;
-      const self2 = this;
-      const tmp5 = new InteractionRecord(user, user, UserRecord);
-      ({ id: tmp5.id, name: tmp5.name, type: tmp5.type, user: tmp5.user, name_localized } = obj);
-      if (name_localized == null) {
-        name_localized = obj.name;
-      }
-      tmp5.displayName = name_localized;
-      return tmp5;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-}
+  const tmp3 = new UserRecord(user);
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("records/InteractionRecord.tsx");
 
-export default InteractionRecord;
+export default prototype;

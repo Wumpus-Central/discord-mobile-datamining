@@ -1,26 +1,25 @@
 // discord_app/hooks/useDebounce.tsx
-import react2 from "../../_runtime/00576_react.js";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../_runtime/00019_react.js";
-import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../_runtime/metro/00002__.js";
+import c from "../../_runtime/00576_c.js";
+import _slicedToArray from "../../_runtime/metro/00032__.js";
+import noop from "../../_runtime/metro/00019__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useDebounce.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      const obj = react2;
-      const cResult = obj.c(4);
-      let closure_2 = _slicedToArray(react.useState(arg0), 2)[1];
-      _slicedToArray(react.useState(arg0), 2);
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const cResult = c.c(4);
+      closure_2 = _slicedToArray(noop.useState(arg0), 2)[1];
       if (cResult[0] === arg1) {
-        let tmp4;
-        let tmp5;
         if (cResult[1] === arg0) {
-          tmp4 = cResult[2];
-          tmp5 = cResult[3];
+          let tmp4 = cResult[2];
+          let tmp5 = cResult[3];
         }
-        const effect = react.useEffect(tmp4, tmp5);
+        const effect = noop.useEffect(tmp4, tmp5);
         return tmp3;
       }
       const fn = function s() {
@@ -38,15 +37,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
       tmp4 = fn;
+      const tmp2 = _slicedToArray(noop.useState(arg0), 2);
     }
   : (arg0, arg1) => {
-      let closure_2;
-      let first;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      [first, closure_2] = react.useState(arg0);
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const tmp = _slicedToArray(noop.useState(arg0), 2);
+      closure_2 = tmp[1];
       const items = [arg0, arg1];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         const timeout = setTimeout(() => {
           closure_1_2(closure_0);
         }, closure_1);
@@ -54,8 +53,5 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           clearTimeout(closure_0);
         };
       }, items);
-      return first;
+      return tmp[0];
     };
-const result = size.fileFinishedImporting("hooks/useDebounce.tsx");
-
-export default tmp2;

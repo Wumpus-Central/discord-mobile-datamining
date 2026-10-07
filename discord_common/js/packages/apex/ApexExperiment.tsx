@@ -1,145 +1,130 @@
 // discord_common/js/packages/apex/ApexExperiment.tsx
-import logger_Logger from "../logger/Logger.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 const require = globalThis.__r;
-let _require, closure_1, closure_3, dependencyMap;
 
-const useEffect = react.useEffect;
-const logger = new logger_Logger.Logger("ApexExperiment");
+const require = fn;
+const useEffect = fn(19).useEffect;
+const logger = new fn(4).Logger("ApexExperiment");
+const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/apex/ApexExperiment.tsx");
 
 export default function createApexExperimentCommon(definition, registerExperiment, arg2, arg3) {
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  function computeVariantConfig(config) {
-    let tmp = closure_1_6[config.variantId];
-    if (tmp == null) {
-      tmp = closure_1_7;
-    }
-    if (typeof tmp !== "function") {
-      return tmp;
-    } else if (null == config.config) {
-      return closure_1_7;
-    } else {
-      try {
-        return tmp(config.config);
-      } catch (tmp2) {
-        const _HermesInternal = HermesInternal;
-        logger.error("Failed to parse dynamic config for experiment " + closure_1_4, tmp2);
-        return null;
-      }
-    }
-  }
   _require = registerExperiment;
   dependencyMap = arg2;
-  let closure_2 = arg3;
+  closure_2 = arg3;
   ({ name: logger, kind: closure_5, variations: closure_6, defaultConfig: closure_7 } = definition);
   registerExperiment.registerExperiment(definition);
-  let closure_8 = null;
-  let obj = require("ReactCompilerGating");
-  let closure_9 = obj.isReactCompilerEnabled();
-  let obj2 = {
+  closure_8 = null;
+  closure_9 = require("ReactCompilerGating").isReactCompilerEnabled();
+  return {
     definition,
     useConfig(cResult) {
-      let prop1;
-      let revision1;
-      let tmp20;
-      let tmp8;
-      const tmp = closure_9;
-      if (tmp) {
-        let first;
-        registerExperiment = cResult;
-        const obj2 = registerExperiment(closure_1[4]);
-        cResult = obj2.c(18);
-        const tmp30 = closure_2(revision1, cResult);
-        closure_1 = tmp30;
-        const tmp31 = closure_2("user", cResult);
-        closure_2 = tmp31;
+      if (closure_9) {
+        closure_129_0 = cResult;
+        cResult = evaluationAndAssignment(576).c(18);
+        const tmp29 = closure_2(revision1, cResult);
+        closure_129_1 = tmp29;
+        const tmp30 = closure_2("user", cResult);
+        closure_129_2 = tmp30;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [registerExperiment];
+          const items = [evaluationAndAssignment];
           cResult[0] = items;
-          first = items;
+          let first = items;
         } else {
           first = cResult[0];
         }
-        if (cResult[1] === tmp30) {
-          let tmp35;
-          let tmp36;
-          let variantId;
-          let tmp49;
-          if (cResult[2] === tmp31) {
-            tmp35 = cResult[3];
-            tmp36 = cResult[4];
+        if (cResult[1] === tmp29) {
+          if (cResult[2] === tmp30) {
+            let tmp34 = cResult[3];
+            let tmp35 = cResult[4];
           }
-          const obj3 = registerExperiment(closure_1[5]);
-          const tmp40 = closure_2(obj3.useStateFromStoresArray(first, tmp35, tmp36), 2);
-          const first1 = tmp40[0];
-          if (tmp40[1] != null) {
-            variantId = tmp42.variantId;
+          const tmp39 = closure_2(evaluationAndAssignment(504).useStateFromStoresArray(first, tmp34, tmp35), 2);
+          const first1 = tmp39[0];
+          closure_129_3 = first1;
+          if (tmp39[1] != null) {
+            const variantId = tmp41.variantId;
           }
           let trackedVariantId;
-          if (tmp40[1] != null) {
-            trackedVariantId = tmp42.trackedVariantId;
+          if (tmp39[1] != null) {
+            trackedVariantId = tmp41.trackedVariantId;
           }
           if (trackedVariantId == null) {
             trackedVariantId = variantId;
           }
+          closure_129_4 = trackedVariantId;
           let revision;
-          if (tmp40[1] != null) {
-            revision = tmp42.revision;
+          if (tmp39[1] != null) {
+            revision = tmp41.revision;
           }
+          closure_129_5 = revision;
           let isOverride;
-          if (tmp40[1] != null) {
-            isOverride = tmp42.isOverride;
+          if (tmp39[1] != null) {
+            isOverride = tmp41.isOverride;
           }
+          closure_129_6 = isOverride;
           let prop;
-          if (tmp40[1] != null) {
-            prop = tmp42.exposureTrackingEnabled;
+          if (tmp39[1] != null) {
+            prop = tmp41.exposureTrackingEnabled;
           }
+          closure_129_7 = prop;
           let useAsEligibility;
-          if (tmp40[1] != null) {
-            useAsEligibility = tmp42.useAsEligibility;
+          if (tmp39[1] != null) {
+            useAsEligibility = tmp41.useAsEligibility;
           }
-          if (cResult[5] !== tmp40[1]) {
-            let tmp50 = null;
-            if (null != tmp40[1]) {
-              if (tmp40[1] !== tmp8) {
-                tmp8 = tmp42;
-                closure_8 = computeVariantConfig(tmp42);
+          closure_129_8 = useAsEligibility;
+          if (cResult[5] !== tmp39[1]) {
+            let tmp49 = null;
+            if (null != tmp41) {
+              if (tmp41 !== tmp8) {
+                tmp8 = tmp41;
+                closure_8 = (function computeVariantConfig(config) {
+                  let tmp2 = closure_1_6[config.variantId];
+                  if (tmp2 == null) {
+                    tmp2 = closure_1_7;
+                  }
+                  if (typeof tmp2 !== "function") {
+                    return tmp2;
+                  } else if (null == config.config) {
+                    return closure_1_7;
+                  } else {
+                    try {
+                      return tmp2(config.config);
+                    } catch (tmp3) {
+                      const _HermesInternal = HermesInternal;
+                      logger.error("Failed to parse dynamic config for experiment " + closure_1_4, tmp3);
+                      return tmp;
+                    }
+                  }
+                })(tmp41);
               }
-              tmp50 = closure_8;
+              tmp49 = closure_8;
             }
-            cResult[5] = tmp40[1];
-            cResult[6] = tmp50;
-            tmp49 = tmp50;
+            cResult[5] = tmp41;
+            cResult[6] = tmp49;
+            let tmp48 = tmp49;
           } else {
-            tmp49 = cResult[6];
+            tmp48 = cResult[6];
           }
-          closure_9 = tmp52;
+          closure_129_9 = tmp51;
           if (cResult[7] === first1) {
             if (cResult[8] === prop) {
               if (cResult[9] === isOverride) {
                 if (cResult[10] === cResult.location) {
-                  if ((cResult[11] === null) == tmp49) {
+                  if (cResult[11] === tmp51) {
                     if (cResult[12] === revision) {
                       if (cResult[13] === trackedVariantId) {
-                        if (cResult[14] === tmp30) {
-                          let tmp53;
-                          let tmp54;
+                        if (cResult[14] === tmp29) {
                           if (cResult[15] === useAsEligibility) {
-                            tmp53 = cResult[16];
-                            tmp54 = cResult[17];
+                            let tmp52 = cResult[16];
+                            let tmp53 = cResult[17];
                           }
-                          tmp8(tmp53, tmp54);
+                          tmp8(tmp52, tmp53);
                           if (null != variantId) {
-                            tmp20 = tmp49;
+                            let tmp19 = tmp48;
                           }
-                          tmp49 = prop1;
+                          tmp48 = prop1;
                         }
                       }
                     }
@@ -149,28 +134,39 @@ export default function createApexExperimentCommon(definition, registerExperimen
             }
           }
           const fn2 = function j() {
-            const tmp2 =
-              null == first1 ||
-              null == trackedVariantId ||
-              null == revision ||
-              false !== isOverride ||
-              true !== prop ||
-              true === useAsEligibility ||
-              closure_9;
+            let tmp2 = null == closure_3;
             if (!tmp2) {
-              const result = registerExperiment.trackExperimentExposure(
-                first1,
-                trackedVariantId1,
-                registerExperiment.location,
+              tmp2 = null == trackedVariantId1;
+            }
+            if (!tmp2) {
+              tmp2 = null == revision1;
+            }
+            if (!tmp2) {
+              tmp2 = false !== isOverride1;
+            }
+            if (!tmp2) {
+              tmp2 = true !== prop1;
+            }
+            if (!tmp2) {
+              tmp2 = true === closure_8;
+            }
+            if (!tmp2) {
+              tmp2 = closure_9;
+            }
+            if (!tmp2) {
+              const result = closure_0.trackExperimentExposure(
+                closure_3,
+                logger,
+                closure_0.location,
+                closure_2_5,
                 revision1,
-                revision,
-                trackedVariantId,
+                trackedVariantId1,
                 closure_1,
               );
             }
           };
           const items1 = [
-            tmp30,
+            tmp29,
             first1,
             trackedVariantId,
             revision,
@@ -178,91 +174,109 @@ export default function createApexExperimentCommon(definition, registerExperimen
             isOverride,
             prop,
             useAsEligibility,
-            null == tmp49,
+            null == tmp48,
           ];
           cResult[7] = first1;
           cResult[8] = prop;
           cResult[9] = isOverride;
           cResult[10] = cResult.location;
-          cResult[11] = null == tmp49;
+          cResult[11] = null == tmp48;
           cResult[12] = revision;
           cResult[13] = trackedVariantId;
-          cResult[14] = tmp30;
+          cResult[14] = tmp29;
           cResult[15] = useAsEligibility;
           cResult[16] = fn2;
           cResult[17] = items1;
-          tmp54 = items1;
-          tmp53 = fn2;
+          tmp53 = items1;
+          tmp52 = fn2;
+          const obj3 = evaluationAndAssignment(504);
         }
         const fn = function s() {
-          return registerExperiment.getEvaluationAndAssignment(revision1, closure_1, trackedVariantId1, closure_2);
+          return closure_0.getEvaluationAndAssignment(closure_2_5, closure_1, logger, closure_2);
         };
-        const items2 = [tmp30, tmp31];
-        cResult[1] = tmp30;
-        cResult[2] = tmp31;
+        const items2 = [tmp29, tmp30];
+        cResult[1] = tmp29;
+        cResult[2] = tmp30;
         cResult[3] = fn;
         cResult[4] = items2;
-        tmp36 = items2;
-        tmp35 = fn;
+        tmp35 = items2;
+        tmp34 = fn;
+        const obj2 = evaluationAndAssignment(576);
       } else {
-        registerExperiment = cResult;
-        let tmp2 = closure_2;
-        const tmp4 = closure_2(revision1, cResult);
-        closure_1 = tmp4;
-        const tmp5 = closure_2("user", cResult);
-        closure_2 = tmp5;
-        const items3 = [registerExperiment];
-        const items4 = [tmp4, tmp5];
-        const obj = registerExperiment(closure_1[5]);
-        const tmp10 = closure_2(
-          obj.useStateFromStoresArray(
+        evaluationAndAssignment = cResult;
+        const tmp3 = closure_2(revision1, cResult);
+        dependencyMap = tmp3;
+        const tmp4 = closure_2("user", cResult);
+        closure_2 = tmp4;
+        const items3 = [evaluationAndAssignment];
+        const items4 = [tmp3, tmp4];
+        const tmp9 = closure_2(
+          evaluationAndAssignment(504).useStateFromStoresArray(
             items3,
-            () => cResult.getEvaluationAndAssignment(closure_5, closure_1, logger, closure_2),
+            () => closure_0.getEvaluationAndAssignment(closure_2_5, closure_1, logger, closure_2),
             items4,
           ),
           2,
         );
-        const first2 = tmp10[0];
+        const first2 = tmp9[0];
         tmp8 = first2;
         let variantId1;
-        if (tmp10[1] != null) {
-          variantId1 = tmp12.variantId;
+        if (tmp9[1] != null) {
+          variantId1 = tmp11.variantId;
         }
         let trackedVariantId1;
-        if (tmp10[1] != null) {
-          trackedVariantId1 = tmp12.trackedVariantId;
+        if (tmp9[1] != null) {
+          trackedVariantId1 = tmp11.trackedVariantId;
         }
         if (trackedVariantId1 == null) {
           trackedVariantId1 = variantId1;
         }
         revision1 = undefined;
-        if (tmp10[1] != null) {
-          revision1 = tmp12.revision;
+        if (tmp9[1] != null) {
+          revision1 = tmp11.revision;
         }
         let isOverride1;
-        if (tmp10[1] != null) {
-          isOverride1 = tmp12.isOverride;
+        if (tmp9[1] != null) {
+          isOverride1 = tmp11.isOverride;
         }
         prop1 = undefined;
-        if (tmp10[1] != null) {
-          prop1 = tmp12.exposureTrackingEnabled;
+        if (tmp9[1] != null) {
+          prop1 = tmp11.exposureTrackingEnabled;
         }
         let useAsEligibility1;
-        if (tmp10[1] != null) {
-          useAsEligibility1 = tmp12.useAsEligibility;
+        if (tmp9[1] != null) {
+          useAsEligibility1 = tmp11.useAsEligibility;
         }
         closure_8 = useAsEligibility1;
-        tmp20 = null;
-        if (null != tmp10[1]) {
-          if (tmp10[1] !== tmp8) {
-            tmp8 = tmp12;
-            closure_8 = computeVariantConfig(tmp12);
+        tmp19 = null;
+        if (null != tmp9[1]) {
+          if (tmp11 !== tmp8) {
+            tmp8 = tmp11;
+            closure_8 = (function computeVariantConfig(config) {
+              let tmp2 = closure_1_6[config.variantId];
+              if (tmp2 == null) {
+                tmp2 = closure_1_7;
+              }
+              if (typeof tmp2 !== "function") {
+                return tmp2;
+              } else if (null == config.config) {
+                return closure_1_7;
+              } else {
+                try {
+                  return tmp2(config.config);
+                } catch (tmp3) {
+                  const _HermesInternal = HermesInternal;
+                  logger.error("Failed to parse dynamic config for experiment " + closure_1_4, tmp3);
+                  return tmp;
+                }
+              }
+            })(tmp11);
           }
-          tmp20 = closure_8;
+          tmp19 = closure_8;
         }
-        closure_9 = tmp22;
+        closure_9 = tmp21;
         const items5 = [
-          tmp4,
+          tmp3,
           first2,
           trackedVariantId1,
           revision1,
@@ -270,47 +284,54 @@ export default function createApexExperimentCommon(definition, registerExperimen
           isOverride1,
           prop1,
           useAsEligibility1,
-          null == tmp20,
+          null == tmp19,
         ];
         tmp8(() => {
-          const tmp2 =
-            null == closure_3 ||
-            null == trackedVariantId1 ||
-            null == revision1 ||
-            false !== isOverride1 ||
-            true !== prop1 ||
-            true === closure_8 ||
-            closure_9;
+          let tmp2 = null == closure_3;
           if (!tmp2) {
-            const result = cResult.trackExperimentExposure(
+            tmp2 = null == trackedVariantId1;
+          }
+          if (!tmp2) {
+            tmp2 = null == revision1;
+          }
+          if (!tmp2) {
+            tmp2 = false !== isOverride1;
+          }
+          if (!tmp2) {
+            tmp2 = true !== prop1;
+          }
+          if (!tmp2) {
+            tmp2 = true === closure_8;
+          }
+          if (!tmp2) {
+            tmp2 = closure_9;
+          }
+          if (!tmp2) {
+            const result = closure_0.trackExperimentExposure(
               closure_3,
               logger,
-              cResult.location,
-              closure_5,
+              closure_0.location,
+              closure_2_5,
               revision1,
               trackedVariantId1,
               closure_1,
             );
           }
         }, items5);
-        tmp20 = prop1;
+        tmp19 = prop1;
+        const obj = evaluationAndAssignment(504);
       }
-      return tmp20;
+      return tmp19;
     },
     getConfig(location, autoTrackExposure) {
-      let exposureTrackingEnabled;
-      let tmp7;
-      let tmp8;
-      let useAsEligibility;
-      const tmp3 = closure_1(closure_5, location);
+      const tmp3 = dependencyMap(closure_1_5, location);
       let tmpResult;
-      if ("guild" === closure_5) {
+      if ("guild" === closure_1_5) {
         const obj = { location: location.location };
-        tmpResult = closure_1("user", obj);
+        tmpResult = dependencyMap("user", obj);
       }
-      [tmp7, tmp8] = registerExperiment.getEvaluationAndAssignment(closure_5, tmp3, logger, tmpResult);
+      [tmp7, tmp8] = evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult);
       let variantId;
-      _slicedToArray(registerExperiment.getEvaluationAndAssignment(closure_5, tmp3, logger, tmpResult), 2);
       if (tmp8 != null) {
         variantId = tmp8.variantId;
       }
@@ -330,16 +351,34 @@ export default function createApexExperimentCommon(definition, registerExperimen
         isOverride = tmp8.isOverride;
       }
       if (tmp8 != null) {
-        exposureTrackingEnabled = tmp8.exposureTrackingEnabled;
+        const exposureTrackingEnabled = tmp8.exposureTrackingEnabled;
       }
       if (tmp8 != null) {
-        useAsEligibility = tmp8.useAsEligibility;
+        const useAsEligibility = tmp8.useAsEligibility;
       }
       let tmp13 = null;
       if (null != tmp8) {
         if (tmp8 !== closure_3) {
           closure_3 = tmp8;
-          closure_8 = computeVariantConfig(tmp8);
+          closure_8 = (function computeVariantConfig(config) {
+            let tmp2 = closure_1_6[config.variantId];
+            if (tmp2 == null) {
+              tmp2 = closure_1_7;
+            }
+            if (typeof tmp2 !== "function") {
+              return tmp2;
+            } else if (null == config.config) {
+              return closure_1_7;
+            } else {
+              try {
+                return tmp2(config.config);
+              } catch (tmp3) {
+                const _HermesInternal = HermesInternal;
+                logger.error("Failed to parse dynamic config for experiment " + closure_1_4, tmp3);
+                return tmp;
+              }
+            }
+          })(tmp8);
         }
         tmp13 = closure_8;
       }
@@ -347,21 +386,27 @@ export default function createApexExperimentCommon(definition, registerExperimen
       if (autoTrackExposure != null) {
         autoTrackExposure = autoTrackExposure.autoTrackExposure;
       }
-      const tmp16 =
+      let tmp16 =
         false !== autoTrackExposure &&
         null != tmp7 &&
         null != trackedVariantId &&
         null != revision &&
-        false === isOverride &&
-        true === exposureTrackingEnabled &&
-        true !== useAsEligibility &&
-        null != tmp13;
+        false === isOverride;
       if (tmp16) {
-        const result = registerExperiment.trackExperimentExposure(
+        tmp16 = true === exposureTrackingEnabled;
+      }
+      if (tmp16) {
+        tmp16 = true !== useAsEligibility;
+      }
+      if (tmp16) {
+        tmp16 = null != tmp13;
+      }
+      if (tmp16) {
+        const result = evaluationAndAssignment.trackExperimentExposure(
           tmp7,
           logger,
           location.location,
-          closure_5,
+          closure_1_5,
           revision,
           trackedVariantId,
           tmp3,
@@ -370,8 +415,11 @@ export default function createApexExperimentCommon(definition, registerExperimen
       if (null != variantId) {
         return tmp13;
       }
-      tmp13 = closure_7;
+      tmp13 = closure_1_7;
+      const tmp6 = _slicedToArray(
+        evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult),
+        2,
+      );
     },
   };
-  return obj2;
 }

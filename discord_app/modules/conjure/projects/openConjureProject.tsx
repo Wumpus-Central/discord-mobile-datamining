@@ -11,23 +11,18 @@ const result = size.fileFinishedImporting("modules/conjure/projects/openConjureP
 
 export const CONJURE_TARGET_PARAM = "target";
 export const openConjureProject = function openConjureProject(id, projectId) {
-  let CHANNELResult;
-  const transitionTo = router_utils.transitionTo;
-  router_utils;
   if (null == projectId) {
-    CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.CONJURE);
+    let CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.CONJURE);
   } else {
     CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.CONJURE, projectId);
   }
-  transitionTo(CHANNELResult);
+  router_utils.transitionTo(CHANNELResult);
 };
 export const openConjureForMe = function openConjureForMe(arg0) {
-  let str;
-  const transitionTo = router_utils.transitionTo;
-  const obj = { search: str.toString() };
-  const obj2 = { [closure_1_4]: "user" };
-  router_utils;
+  const obj2 = { search: null };
+  const obj = router_utils;
+  const obj3 = { [closure_1_4]: "user" };
   const CHANNELResult = Routes.CHANNEL(arg0, StaticChannelRoute.CONJURE);
-  str = new URLSearchParams(obj2);
-  transitionTo(CHANNELResult, obj);
+  obj2.search = new URLSearchParams(obj3).toString();
+  obj.transitionTo(CHANNELResult, obj2);
 };

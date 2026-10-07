@@ -2,7 +2,6 @@
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = { ALL: new Set([1, 2, 3]) };
-new Set([1, 2, 3]);
 const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/ApplicationDirectoryCollectionItemType.tsx",
 );

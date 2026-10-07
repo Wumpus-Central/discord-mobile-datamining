@@ -1,73 +1,64 @@
 // discord_app/design/components/Tabs/native/TabItem.native.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 const ReanimatedRexport = ReanimatedRexport2;
-let _require, obj1;
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
+require = fn;
 let closure_3 = ["label", "count", "index", "itemCount", "state", "pressed", "grow", "variant"];
-const Pressable = react_native.Pressable;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = createStyles_mod;
+let createStyles = fn(4896);
 let obj = {
   item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
-  count: obj2,
+  count: { marginLeft: nativeDefault.space.PX_8 },
 };
-obj2 = { marginLeft: nativeDefault.space.PX_8 };
 let closure_11 = createStyles.createStyles(obj);
-createStyles = createStyles_mod;
-let obj3 = {
+createStyles = fn(4896);
+let obj3 = { marginLeft: nativeDefault.space.PX_8 };
+let closure_12 = createStyles.createStyleProperties({
+  inactive: nativeDefault.colors.TEXT_MUTED,
+  active: nativeDefault.colors.TEXT_BRAND,
+  pressed: nativeDefault.colors.TEXT_BRAND,
+});
+createStyles = fn(4896);
+let obj4 = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
   pressed: nativeDefault.colors.TEXT_BRAND,
 };
-let closure_12 = createStyles.createStyleProperties(obj3);
-createStyles = createStyles_mod;
-let obj4 = {
+let closure_13 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_STRONG,
   pressed: nativeDefault.colors.TEXT_STRONG,
-};
-let closure_13 = createStyles.createStyleProperties(obj4);
+});
 const __initData = {
   code: 'function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else{if(isPressActive){color=colors.inactive;}else{if(isActive){color=colors.active;}}}return{color:withSpring(color,TEXT_SPRING_CONFIG,"animate-always")};}',
 };
 const __initData2 = {
   code: "function TabItemNativeTsx2(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};}",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (index) => {
       index = index.index;
       const activeIndex = index.activeIndex;
       const pressed = index.pressed;
-      const variant = index.variant;
       let tmp = closure_12();
-      if ("overlay" === variant) {
+      if ("overlay" === index.variant) {
         tmp = closure_13();
       }
       const inactive = tmp;
-      let obj = index(pressed[4]);
       const fn = function n() {
-        let obj2;
         let active = inactive.inactive;
-        const tmp2 = pressed.get() >= 0;
-        const value = pressed.get();
+        value = pressed.get();
         if (value === index) {
           active = inactive.pressed;
         } else if (tmp2) {
@@ -75,11 +66,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (tmp5 === index) {
           active = inactive.active;
         }
-        const obj = { color: obj2.withSpring(active, TEXT_SPRING_CONFIG, "animate-always") };
-        obj2 = spring;
+        const obj = { color: null };
+        tmp2 = pressed.get() >= 0;
+        obj.color = spring.withSpring(active, closure_9, "animate-always");
         return obj;
       };
-      let obj2 = {
+      let obj = index(pressed[4]);
+      fn.__closure = {
         colors: tmp,
         pressed,
         index,
@@ -87,7 +80,6 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         withSpring: index(pressed[8]).withSpring,
         TEXT_SPRING_CONFIG,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 3501288786345;
       fn.__initData = __initData;
       return obj.useAnimatedStyle(fn);
@@ -97,18 +89,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const activeIndex = index.activeIndex;
       const pressed = index.pressed;
       let inactive;
-      const variant = index.variant;
       let tmp = closure_12();
-      if ("overlay" === variant) {
+      if ("overlay" === index.variant) {
         tmp = closure_13();
       }
       inactive = tmp;
-      let obj = index(pressed[4]);
       const fn = function c() {
-        let obj2;
         let active = inactive.inactive;
-        const tmp2 = pressed.get() >= 0;
-        const value = pressed.get();
+        value = pressed.get();
         if (value === index) {
           active = inactive.pressed;
         } else if (tmp2) {
@@ -116,11 +104,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (tmp5 === index) {
           active = inactive.active;
         }
-        const obj = { color: obj2.withSpring(active, TEXT_SPRING_CONFIG, "animate-always") };
-        obj2 = spring;
+        const obj = { color: null };
+        tmp2 = pressed.get() >= 0;
+        obj.color = spring.withSpring(active, closure_9, "animate-always");
         return obj;
       };
-      let obj2 = {
+      let obj = index(pressed[4]);
+      fn.__closure = {
         colors: tmp,
         pressed,
         index,
@@ -128,7 +118,6 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         withSpring: index(pressed[8]).withSpring,
         TEXT_SPRING_CONFIG,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 376048369930;
       fn.__initData = __initData2;
       return obj.useAnimatedStyle(fn);
@@ -139,24 +128,14 @@ const __initData3 = {
 const __initData4 = {
   code: "function TabItemNativeTsx4(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let activeIndex;
-      let count;
-      let index;
-      let pressed;
-      let sharedValue;
-      let tmp6;
-      let tmp7;
-      let variant;
-      const tmp = sharedValue;
-      let obj = sharedValue(576);
-      const cResult = obj.c(17);
+      const cResult = sharedValue(576).c(17);
       ({ count, index, activeIndex, pressed, variant } = arg0);
       const tmp4 = closure_11();
-      let obj2 = sharedValue(4618);
-      sharedValue = obj2.useSharedValue(0);
+      let obj = sharedValue(576);
+      sharedValue = sharedValue(4618).useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function n() {
           const result = sharedValue.set(1);
@@ -165,62 +144,54 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = sharedValue;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp7 = items;
-        tmp6 = fn;
+        let tmp7 = items;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[1];
         tmp7 = cResult[2];
       }
-      const layoutEffect = react.useLayoutEffect(tmp6, tmp7);
+      const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
+      let obj2 = sharedValue(4618);
       const fn2 = function w() {
-        let items;
-        let obj2;
-        let obj4;
-        let withSpring;
-        const obj = { opacity: obj2.withSpring(sharedValue.get(), COUNT_SPRING_CONFIG), transform: items };
-        obj2 = spring;
-        const obj3 = {
-          translateX: withSpring(obj4.interpolate(sharedValue.get(), [0, 1], [-10, 0]), COUNT_SPRING_CONFIG),
-        };
-        withSpring = spring.withSpring;
-        spring;
-        items = [obj3];
-        obj4 = ReanimatedRexport2;
+        const obj = { opacity: spring.withSpring(sharedValue.get(), closure_10), transform: null };
+        const obj3 = { translateX: null };
+        const obj4 = spring;
+        obj3.translateX = obj4.withSpring(
+          ReanimatedRexport2.interpolate(sharedValue.get(), [0, 1], [-10, 0]),
+          closure_10,
+        );
+        const items = [obj3];
+        obj.transform = items;
         return obj;
       };
-      const tmpResult = tmp(4618);
-      let obj3 = {
-        withSpring: tmp(5604).withSpring,
+      const tmpResult = sharedValue(4618);
+      fn2.__closure = {
+        withSpring: sharedValue(5604).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
-        interpolate: tmp(4618).interpolate,
+        interpolate: sharedValue(4618).interpolate,
       };
-      fn2.__closure = obj3;
       fn2.__workletHash = 5074862072194;
       fn2.__initData = __initData3;
       const animatedStyle = tmpResult.useAnimatedStyle(fn2);
       if (cResult[3] === activeIndex) {
         if (cResult[4] === index) {
           if (cResult[5] === pressed) {
-            let tmp10;
             if (cResult[6] === variant) {
-              tmp10 = cResult[7];
+              let tmp10 = cResult[7];
             }
             const tmp12 = closure_16(tmp10);
             if (cResult[8] === animatedStyle) {
-              let tmp13;
               if (cResult[9] === tmp4.count) {
-                tmp13 = cResult[10];
+                let tmp13 = cResult[10];
               }
               if (cResult[11] === tmp12) {
-                let tmp14;
                 if (cResult[12] === count) {
-                  tmp14 = cResult[13];
+                  let tmp14 = cResult[13];
                 }
                 if (cResult[14] === tmp13) {
-                  let tmp17;
                   if (cResult[15] === tmp14) {
-                    tmp17 = cResult[16];
+                    let tmp17 = cResult[16];
                   }
                   return tmp17;
                 }
@@ -253,67 +224,67 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = variant;
       cResult[7] = obj6;
       tmp10 = obj6;
-    }
-  : (arg0) => {
-      let activeIndex;
-      let count;
-      let index;
-      let items1;
-      let pressed;
-      let tmp5;
-      let variant;
-      let sharedValue;
-      ({ count, index, activeIndex, pressed, variant } = arg0);
-      const tmp = closure_11();
-      let obj = sharedValue(4618);
-      sharedValue = obj.useSharedValue(0);
-      let items = [sharedValue];
-      const layoutEffect = react.useLayoutEffect(() => {
-        const result = sharedValue.set(1);
-      }, items);
-      let obj2 = sharedValue(4618);
-      class I {
-        constructor() {
-          let items;
-          let obj2;
-          let obj4;
-          let withSpring;
-          const obj = { opacity: obj2.withSpring(sharedValue.get(), COUNT_SPRING_CONFIG), transform: items };
-          obj2 = spring;
-          const obj3 = {
-            translateX: withSpring(obj4.interpolate(sharedValue.get(), [0, 1], [-10, 0]), COUNT_SPRING_CONFIG),
-          };
-          withSpring = spring.withSpring;
-          spring;
-          items = [obj3];
-          obj4 = ReanimatedRexport2;
-          return obj;
-        }
-      }
       let obj3 = {
         withSpring: sharedValue(5604).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
         interpolate: sharedValue(4618).interpolate,
       };
-      I.__closure = obj3;
+    }
+  : (arg0) => {
+      let sharedValue;
+      ({ count, index, activeIndex, pressed, variant } = arg0);
+      const tmp = closure_11();
+      sharedValue = sharedValue(4618).useSharedValue(0);
+      let items = [sharedValue];
+      const layoutEffect = noop.useLayoutEffect(() => {
+        const result = sharedValue.set(1);
+      }, items);
+      let obj = sharedValue(4618);
+      class I {
+        constructor() {
+          obj = { opacity: null, transform: null };
+          obj2 = closure_0(closure_2[8]);
+          obj.opacity = obj2.withSpring(closure_0.get(), closure_10);
+          obj1 = { translateX: null };
+          obj4 = closure_0(closure_2[8]);
+          obj5 = closure_0(closure_2[4]);
+          obj1.translateX = obj4.withSpring(obj5.interpolate(closure_0.get(), [0, 1], [-10, 0]), closure_10);
+          items = [];
+          items[0] = obj1;
+          obj.transform = items;
+          return obj;
+        }
+      }
+      let obj2 = sharedValue(4618);
+      I.__closure = {
+        withSpring: sharedValue(5604).withSpring,
+        countAnimationState: sharedValue,
+        COUNT_SPRING_CONFIG,
+        interpolate: sharedValue(4618).interpolate,
+      };
       I.__workletHash = 8384757524453;
       I.__initData = __initData4;
       const animatedStyle = obj2.useAnimatedStyle(I);
+      let obj3 = {
+        withSpring: sharedValue(5604).withSpring,
+        countAnimationState: sharedValue,
+        COUNT_SPRING_CONFIG,
+        interpolate: sharedValue(4618).interpolate,
+      };
       let obj4 = {
-        style: items1,
+        style: null,
         children: closure_6(sharedValue(4892).Text, {
           animated: true,
           variant: "text-sm/medium",
-          style: tmp5,
+          style: closure_16({ index, activeIndex, pressed, variant }),
           lineClamp: 1,
           children: count,
         }),
       };
-      items1 = [tmp.count, animatedStyle];
-      tmp5 = closure_16({ index, activeIndex, pressed, variant });
-      const View = ReanimatedRexport.View;
-      return closure_6(View, obj4);
+      const items1 = [tmp.count, animatedStyle];
+      obj4.style = items1;
+      return closure_6(ReanimatedRexport.View, obj4);
     };
 const __initData5 = {
   code: "function TabItemNativeTsx5(){const{activeIndex,index}=this.__closure;return{accessibilityState:{selected:activeIndex.get()===index}};}",
@@ -321,33 +292,24 @@ const __initData5 = {
 const __initData6 = {
   code: "function TabItemNativeTsx6(){const{activeIndex,index}=this.__closure;return{accessibilityState:{selected:activeIndex.get()===index}};}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj6 = {
+  inactive: nativeDefault.colors.TEXT_MUTED,
+  active: nativeDefault.colors.TEXT_STRONG,
+  pressed: nativeDefault.colors.TEXT_STRONG,
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Tabs/native/TabItem.native.tsx");
+
+export const TabItem = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let count;
-      let grow;
-      let index;
-      let itemCount;
-      let label;
-      let pressed;
-      let setItemDimensions;
-      let state;
-      let tmp11;
-      let tmp12;
-      let tmp5;
-      let tmp9;
-      let variant;
-      let obj = require("react");
-      const cResult = obj.c(43);
-      const tmp = _require;
-      const tmp2 = setItemDimensions;
+      const cResult = require("c").c(43);
       if (cResult[0] !== arg0) {
         ({ label, count, index } = arg0);
         _require = index;
         ({ itemCount, state, pressed, grow, variant } = arg0);
-        cResult[0] = arg0;
         const tmp15 = _objectWithoutProperties(arg0, closure_3);
+        cResult[0] = arg0;
         class P {
           constructor() {
             obj = { accessibilityState: null };
@@ -364,10 +326,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp15;
         cResult[8] = state;
         cResult[9] = variant;
-        tmp12 = variant;
-        tmp11 = state;
-        tmp9 = pressed;
-        tmp5 = grow;
+        let tmp12 = variant;
+        let tmp11 = state;
+        let tmp9 = pressed;
+        let tmp5 = grow;
       } else {
         tmp5 = cResult[2];
         _require = cResult[3];
@@ -378,7 +340,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const activeIndex = tmp11.activeIndex;
       setItemDimensions = tmp11.setItemDimensions;
       const tmp16 = closure_11();
-      const tmpResult = tmp(tmp2[4]);
+      let obj = require("c");
       class P {
         constructor() {
           obj = { accessibilityState: null };
@@ -390,17 +352,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       P.__closure = { activeIndex, index };
       P.__workletHash = 4443106768702;
       P.__initData = __initData5;
-      const animatedProps = tmpResult.useAnimatedProps(P);
+      const animatedProps = require("ReanimatedRexport").useAnimatedProps(P);
       if (cResult[10] === activeIndex) {
         if (cResult[11] === index) {
           if (cResult[12] === tmp9) {
-            let tmp18;
             if (cResult[13] === tmp12) {
-              tmp18 = cResult[14];
+              let tmp18 = cResult[14];
             }
             closure_16(tmp18);
             if (cResult[15] === index) {
-              let tmp22;
               let num14 = 0;
               if (tmp5) {
                 num14 = 1;
@@ -416,7 +376,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 cResult[19] = obj2;
-                tmp22 = obj2;
+                let tmp22 = obj2;
               } else {
                 tmp22 = cResult[19];
               }
@@ -452,18 +412,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp12;
       cResult[14] = obj3;
       tmp18 = obj3;
+      const tmpResult = require("ReanimatedRexport");
     }
   : (arg0) => {
-      let count;
-      let formatToPlainStringResult;
-      let grow;
-      let index;
-      let itemCount;
-      let items1;
-      let label;
-      let pressed;
-      let state;
-      let variant;
       ({ count, index } = arg0);
       ({ state, pressed, variant } = arg0);
       ({ label, itemCount, grow } = arg0);
@@ -474,45 +425,41 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const activeIndex = state.activeIndex;
       const setItemDimensions = state.setItemDimensions;
       const tmp2 = closure_11();
-      let obj = index(setItemDimensions[4]);
       class T {
         constructor() {
-          const obj = { accessibilityState: { selected: activeIndex.get() === index } };
-          ({ selected: activeIndex.get() === index });
+          obj = { accessibilityState: null };
+          obj1 = { selected: activeIndex.get() === index };
+          obj.accessibilityState = obj1;
           return obj;
         }
       }
       T.__closure = { activeIndex, index };
       T.__workletHash = 16424800592413;
       T.__initData = __initData6;
-      const animatedProps = obj.useAnimatedProps(T);
+      const animatedProps = index(setItemDimensions[4]).useAnimatedProps(T);
       const items = [tmp2.item];
       let num = 0;
-      const tmp6 = closure_16({ index, activeIndex, pressed, variant });
+      let obj = index(setItemDimensions[4]);
       if (grow) {
         num = 1;
       }
-      const obj2 = {
-        style: items,
-        onLayout(nativeEvent) {
-          const obj = ReanimatedRexport2;
-          obj.runOnUI(setItemDimensions)(index, nativeEvent.nativeEvent.layout);
-        },
-        accessibilityRole: "tab",
-        accessibilityHint: formatToPlainStringResult,
-        animatedProps,
-        children: items1,
-      };
+      const obj2 = { style: items };
       items[1] = { flexGrow: num };
       const merged1 = Object.assign(merged);
-      formatToPlainStringResult = undefined;
-      const tmp3Result = index(setItemDimensions[11]);
+      obj2.onLayout = function onLayout(nativeEvent) {
+        ReanimatedRexport2.runOnUI(setItemDimensions)(index, nativeEvent.nativeEvent.layout);
+      };
+      obj2.accessibilityRole = "tab";
+      const tmp6 = closure_16({ index, activeIndex, pressed, variant });
+      let formatToPlainStringResult;
       if (tmp3Result.isAndroid()) {
         const intl = index(tmp4[12]).intl;
         const obj3 = { position: index + 1, tabCount: itemCount };
         formatToPlainStringResult = intl.formatToPlainString(index(tmp4[12]).t["4EsQA1"], obj3);
       }
-      items1 = [
+      obj2.accessibilityHint = formatToPlainStringResult;
+      obj2.animatedProps = animatedProps;
+      const items1 = [
         closure_6(index(setItemDimensions[10]).Text, {
           animated: true,
           variant: "text-sm/semibold",
@@ -527,8 +474,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11Result = closure_6(closure_19, obj4);
       }
       items1[1] = tmp11Result;
+      obj2.children = items1;
       return closure_7(closure_8, obj2);
     };
-let result = size.fileFinishedImporting("design/components/Tabs/native/TabItem.native.tsx");
-
-export const TabItem = tmp3;

@@ -1,9 +1,9 @@
 // discord_app/modules/themes/getSystemTheme.native.tsx
-import react_native from "../../../_runtime/00017_react-native.js";
+import _mod17 from "../../../_runtime/metro/00017__.js";
 import ThemeConstants from "../user_settings/ThemeConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const Appearance = react_native.Appearance;
+const Appearance = _mod17.Appearance;
 const SystemTheme = ThemeConstants.SystemTheme;
 const result = size.fileFinishedImporting("modules/themes/getSystemTheme.native.tsx");
 

@@ -1,29 +1,25 @@
 // discord_app/modules/routing/transitionToChannel.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import Constants from "../../Constants.tsx";
 import router_utils from "router_utils.tsx";
 import useGuildIdForChannelRoute from "useGuildIdForChannelRoute.tsx";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreators.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const Routes = Constants.Routes;
+require = fn;
+const Routes = fn(1085).Routes;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 
 export const transitionToChannel = function transitionToChannel(id, openTextInVoiceIfVoiceChannel) {
   const channel = ChannelStore.getChannel(id);
   if (null != channel) {
-    const obj3 = useGuildIdForChannelRoute;
-    const guildIdForGenericRedirect = obj3.getGuildIdForGenericRedirect(channel);
-    const obj4 = ChannelActionCreatorsDefault;
-    obj4.preload(channel.guild_id, channel.id);
-    const transitionTo = router_utils.transitionTo;
+    const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
+    ChannelActionCreatorsDefault.preload(channel.guild_id, channel.id);
     const obj = { openChannel: true };
-    router_utils;
-    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id);
+    const obj5 = router_utils;
     const merged = Object.assign(openTextInVoiceIfVoiceChannel);
-    transitionTo(CHANNELResult, obj);
+    obj5.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id), obj);
     let prop;
     if (openTextInVoiceIfVoiceChannel != null) {
       prop = openTextInVoiceIfVoiceChannel.openTextInVoiceIfVoiceChannel;
@@ -32,32 +28,27 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
       prop = channel.isGuildVocal();
     }
     if (prop) {
+      ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
       const tmp7Result = ChannelRTCActionCreatorsDefault;
-      tmp7Result.updateChatOpen(channel.id, true);
     }
+    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id);
   }
 };
 export const transitionToThread = function transitionToThread(channel, arg1) {
   _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
-  const obj = useGuildIdForChannelRoute;
-  const guildIdForGenericRedirect = obj.getGuildIdForGenericRedirect(channel);
-  const transitionTo = router_utils.transitionTo;
-  const obj2 = { openChannel: true };
-  router_utils;
-  const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id);
+  const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
+  const obj2 = router_utils;
+  const obj3 = { openChannel: true };
   const merged = Object.assign(arg1);
-  transitionTo(CHANNELResult, obj2);
+  obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id), obj3);
 };
 export const transitionToThreadMessage = function transitionToThreadMessage(channel, id, arg2) {
   _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
-  const obj = useGuildIdForChannelRoute;
-  const guildIdForGenericRedirect = obj.getGuildIdForGenericRedirect(channel);
-  const transitionTo = router_utils.transitionTo;
-  const obj2 = { openChannel: true };
-  router_utils;
-  const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id);
+  const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
+  const obj2 = router_utils;
+  const obj3 = { openChannel: true };
   const merged = Object.assign(arg2);
-  transitionTo(CHANNELResult, obj2);
+  obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id), obj3);
 };
 export const tryTransitionToThreadMessage = function tryTransitionToThreadMessage(
   parentChannelId,
@@ -68,27 +59,21 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
   const channel = ChannelStore.getChannel(threadId);
   if (null != channel) {
     _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
-    const obj3 = useGuildIdForChannelRoute;
-    const guildIdForGenericRedirect = obj3.getGuildIdForGenericRedirect(channel);
-    const transitionTo = router_utils.transitionTo;
+    const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj2 = { openChannel: true };
-    router_utils;
-    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
+    const obj4 = router_utils;
     const merged = Object.assign(arg3);
-    transitionTo(CHANNELResult, obj2);
+    obj4.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId), obj2);
+    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
   } else {
     const channel1 = ChannelStore.getChannel(parentChannelId);
     if (null != channel1) {
-      const obj6 = useGuildIdForChannelRoute;
-      const guildIdForGenericRedirect1 = obj6.getGuildIdForGenericRedirect(channel1);
-      const obj7 = ChannelActionCreatorsDefault;
-      obj7.preload(channel1.guild_id, channel1.id);
-      const transitionTo2 = router_utils.transitionTo;
-      const obj4 = { openChannel: true };
-      router_utils;
-      const CHANNELResult1 = Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id);
+      const guildIdForGenericRedirect1 = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel1);
+      ChannelActionCreatorsDefault.preload(channel1.guild_id, channel1.id);
+      const obj5 = { openChannel: true };
+      const obj9 = router_utils;
       const merged1 = Object.assign(arg3);
-      transitionTo2(CHANNELResult1, obj4);
+      obj9.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id), obj5);
       let prop;
       if (arg3 != null) {
         prop = arg3.openTextInVoiceIfVoiceChannel;
@@ -97,30 +82,27 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
         prop = channel1.isGuildVocal();
       }
       if (prop) {
-        const tmp21Result = ChannelRTCActionCreatorsDefault;
-        tmp21Result.updateChatOpen(channel1.id, true);
+        ChannelRTCActionCreatorsDefault.updateChatOpen(channel1.id, true);
+        const tmp20Result = ChannelRTCActionCreatorsDefault;
       }
+      const CHANNELResult1 = Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id);
     }
   }
 };
 export const transitionToMessage = function transitionToMessage(channelId, messageId, arg2) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
-    const obj = useGuildIdForChannelRoute;
-    const guildIdForGenericRedirect = obj.getGuildIdForGenericRedirect(channel);
-    const transitionTo = router_utils.transitionTo;
-    const obj2 = { openChannel: true };
-    router_utils;
-    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
+    const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
+    const obj3 = { openChannel: true };
+    const obj2 = router_utils;
     const merged = Object.assign(arg2);
-    transitionTo(CHANNELResult, obj2);
+    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId), obj3);
+    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
   }
 };
 export const transitionToStaticChannelRoute = function transitionToStaticChannelRoute(guildId, GUILD_HOME, arg2) {
-  const transitionTo = router_utils.transitionTo;
-  const obj = { openChannel: true };
-  router_utils;
-  const CHANNELResult = Routes.CHANNEL(guildId, GUILD_HOME);
+  const obj = router_utils;
+  const obj2 = { openChannel: true };
   const merged = Object.assign(arg2);
-  transitionTo(CHANNELResult, obj);
+  obj.transitionTo(Routes.CHANNEL(guildId, GUILD_HOME), obj2);
 };

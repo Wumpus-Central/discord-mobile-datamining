@@ -1,112 +1,102 @@
 // discord_app/modules/auth/native/components/utils/usePasswordRegistrationStep.tsx
 import getErrorDefault from "../../getError.tsx";
-import RegistrationUIStore from "../../RegistrationUIStore.tsx";
-import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let c1, c4, importDefault;
 
-const useRegistrationUIStore = RegistrationUIStore.useRegistrationUIStore;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const useRegistrationUIStore = fn(15906).useRegistrationUIStore;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
+
+export const usePasswordRegistrationStep = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_1;
-      let first;
-      let first1;
-      let tmp11;
-      let tmp8;
-      let tmp9;
-      const tmp = first1;
-      let obj = first1(576);
-      const cResult = obj.c(12);
+      const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function l(registrationOptions) {
           return registrationOptions.registrationOptions;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
       let str = useRegistrationUIStore(first).password;
-      const useState = react.useState;
       if (str == null) {
         str = "";
       }
-      [first1, tmp8] = useState(str);
+      const tmp7 = _slicedToArray(noop.useState(str), 2);
+      const first1 = tmp7[0];
+      _require = first1;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function c(errors) {
           return errors.errors;
         };
         cResult[1] = fn2;
-        tmp9 = fn2;
+        let tmp8 = fn2;
       } else {
-        tmp9 = cResult[1];
+        tmp8 = cResult[1];
       }
-      const tmp5Result = useRegistrationUIStore(tmp9);
+      const tmp5Result = useRegistrationUIStore(tmp8);
       if (cResult[2] !== tmp5Result) {
-        const tmp13 = getErrorDefault("password", tmp5Result);
+        const tmp12 = getErrorDefault("password", tmp5Result);
         cResult[2] = tmp5Result;
-        cResult[3] = tmp13;
-        tmp11 = tmp13;
+        cResult[3] = tmp12;
+        let tmp10 = tmp12;
       } else {
-        tmp11 = cResult[3];
+        tmp10 = cResult[3];
       }
-      importDefault = tmp11;
-      const tmpResult = tmp(15929);
-      const passwordScore1 = tmpResult.usePasswordScore(first1);
+      importDefault = tmp10;
+      let obj = require("c");
+      const passwordScore1 = require("usePasswordScore").usePasswordScore(first1);
       const passwordScore = passwordScore1.passwordScore;
-      let tmp15 = null == first1;
-      const passwordValid = passwordScore1.passwordValid;
-      if (!tmp15) {
-        tmp15 = "" === first1;
+      let tmp14 = null == first1;
+      if (!tmp14) {
+        tmp14 = "" === first1;
       }
-      if (!tmp15) {
-        let tmp16 = first1.length < 8 || null != tmp11;
-        if (!tmp16) {
-          tmp16 = false === passwordValid;
+      if (!tmp14) {
+        let tmp15 = first1.length < 8 || null != tmp10;
+        if (!tmp15) {
+          tmp15 = false === passwordScore1.passwordValid;
         }
-        tmp15 = tmp16;
+        tmp14 = tmp15;
       }
       if (cResult[4] === first1) {
-        let tmp17;
-        if (cResult[5] === tmp11) {
-          tmp17 = cResult[6];
+        if (cResult[5] === tmp10) {
+          let tmp16 = cResult[6];
         }
         if (cResult[7] === first1) {
           if (cResult[8] === passwordScore) {
-            if (cResult[9] === tmp15) {
-              let tmp18;
-              if (cResult[10] === tmp17) {
-                tmp18 = cResult[11];
+            if (cResult[9] === tmp14) {
+              if (cResult[10] === tmp16) {
+                let tmp17 = cResult[11];
               }
-              return tmp18;
+              return tmp17;
             }
           }
         }
         let obj2 = {
           password: first1,
-          setPassword: tmp8,
+          setPassword: tmp7[1],
           passwordScore,
-          preventSubmitPassword: tmp15,
-          validatePassword: tmp17,
+          preventSubmitPassword: tmp14,
+          validatePassword: tmp16,
         };
         cResult[7] = first1;
         cResult[8] = passwordScore;
-        cResult[9] = tmp15;
-        cResult[10] = tmp17;
+        cResult[9] = tmp14;
+        cResult[10] = tmp16;
         cResult[11] = obj2;
-        tmp18 = obj2;
+        tmp17 = obj2;
       }
-      let closure_0 = _asyncToGenerator(async () => {
-        let obj3;
+      _require = asyncGeneratorStep(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp6 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -116,7 +106,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return { value: "IconComponent", done: null };
           }
         } else {
-          let c3;
           try {
             c4 = 2;
             if (0 === c1) {
@@ -128,35 +117,35 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                if (null != tmp) {
-                  if ("" !== tmp) {
-                    if (tmp.length < 8) {
-                      const intl2 = tmp(dependencyMap[8]).intl;
+                if (null != tmp3) {
+                  if ("" !== tmp3) {
+                    if (tmp3.length < 8) {
+                      const intl2 = tmp3(1126).intl;
                       c4 = 3;
-                      const obj5 = { value: intl2.string(tmp(dependencyMap[8]).t.DfaKHr), done: true };
+                      const obj5 = { value: intl2.string(tmp3(1126).t.DfaKHr), done: true };
                       return obj5;
                     } else if (null != c1) {
                       c4 = 3;
-                      const obj6 = { value: tmp11, done: true };
+                      const obj6 = { value: tmp14, done: true };
                       return obj6;
                     } else {
                       c3 = 1;
                       c1 = 2;
                       c4 = 1;
-                      const obj7 = { value: obj3.scorePassword(tmp), done: false };
-                      obj3 = tmp(dependencyMap[9]);
+                      const obj7 = { value: tmp3(15917).scorePassword(tmp3), done: false };
                       return obj7;
                     }
                   }
                 }
-                const intl3 = tmp(dependencyMap[8]).intl;
+                const intl3 = tmp3(1126).intl;
                 c4 = 3;
-                const obj8 = { value: intl3.string(tmp(dependencyMap[8]).t.R98xD5), done: true };
+                const obj8 = { value: intl3.string(tmp3(1126).t.R98xD5), done: true };
                 return obj8;
               }
             } else {
-              if (1 === tmp4) {
+              if (1 === tmp7) {
                 c3 = 0;
+                c4 = 3;
               } else if (arg0 === 1) {
                 c4 = 3;
                 throw value;
@@ -165,79 +154,88 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 c4 = 3;
                 const obj9 = { value, done: true };
                 return obj9;
-              } else if (false === value.valid) {
-                const intl = tmp(dependencyMap[8]).intl;
-                c3 = 0;
-                c4 = 3;
-                const obj = { value: intl.string(tmp(dependencyMap[8]).t.DfaKHr), done: true };
-                return obj;
-              } else {
+              } else if (false !== value.valid) {
                 c3 = 0;
               }
+              const intl = tmp3(1126).intl;
+              c3 = 0;
               c4 = 3;
-              return { value: null, done: true };
+              const obj = { value: intl.string(tmp3(1126).t.DfaKHr), done: true };
+              return obj;
             }
-          } catch (tmp22) {
-            let closure_2 = tmp22;
-            if (0 === c3) {
-              c4 = 3;
-              throw tmp22;
+          } catch (tmp25) {
+            closure_2 = tmp25;
+            if (tmp4 === c3) {
+              c4 = tmp2;
+              throw tmp25;
             } else {
-              c1 = 1;
+              c1 = tmp;
             }
           }
         }
       });
       const fn3 = function () {
-        return closure_0(...arguments);
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       };
       cResult[4] = first1;
-      cResult[5] = tmp11;
+      cResult[5] = tmp10;
       cResult[6] = fn3;
-      tmp17 = fn3;
+      tmp16 = fn3;
+      const tmpResult = require("usePasswordScore");
     }
   : () => {
-      let closure_1;
-      let password;
-      let passwordValid;
-      let tmp4;
       let str = useRegistrationUIStore((registrationOptions) => registrationOptions.registrationOptions).password;
-      const useState = react.useState;
       if (str == null) {
         str = "";
       }
-      [password, tmp4] = useState(str);
+      let tmp2 = _slicedToArray(noop.useState(str), 2);
+      const password = tmp2[0];
+      const tmp5 = require("getError")(
+        "password",
+        useRegistrationUIStore((errors) => errors.errors),
+      );
+      importDefault = tmp5;
       const tmpResult = useRegistrationUIStore((errors) => errors.errors);
-      const tmp6 = require("getError")("password", tmpResult);
-      importDefault = tmp6;
-      let obj2 = password(passwordValid[7]);
-      const passwordScore1 = obj2.usePasswordScore(password);
-      passwordValid = passwordScore1.passwordValid;
-      const items = [password, tmp6, passwordValid];
-      const passwordScore = passwordScore1.passwordScore;
-      const memo = react.useMemo(() => {
-        let tmp = null == first || "" === first;
+      const passwordScore = password(passwordValid[7]).usePasswordScore(password);
+      passwordValid = passwordScore.passwordValid;
+      const items = [password, tmp5, passwordValid];
+      const memo = noop.useMemo(() => {
+        let tmp = null == first;
         if (!tmp) {
-          tmp = first.length < 8 || null != closure_1 || false === passwordValid;
-          const tmp2 = first.length < 8 || null != closure_1 || false === passwordValid;
+          tmp = "" === first;
+        }
+        if (!tmp) {
+          let tmp2 = first.length < 8;
+          if (!tmp2) {
+            tmp2 = null != closure_1;
+          }
+          if (!tmp2) {
+            tmp2 = false === passwordValid;
+          }
+          tmp = tmp2;
         }
         return tmp;
       }, items);
-      const items1 = [password, tmp6];
-      let obj3 = {
+      const items1 = [password, tmp5];
+      let obj2 = password(passwordValid[7]);
+      return {
         password,
-        setPassword: tmp4,
-        passwordScore,
+        setPassword: tmp2[1],
+        passwordScore: passwordScore.passwordScore,
         preventSubmitPassword: memo,
-        validatePassword: react.useCallback(
-          _asyncToGenerator(async () => {
-            let closure_0;
-            let closure_2;
-            let obj3;
+        validatePassword: noop.useCallback(
+          asyncGeneratorStep(async () => {
             if (c4 === 2) {
               c4 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
+            } else if (tmp6 === 3) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
@@ -247,7 +245,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return { value: "IconComponent", done: null };
               }
             } else {
-              let c3;
               try {
                 c4 = 2;
                 if (0 === c1) {
@@ -262,32 +259,32 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     if (null != first) {
                       if ("" !== first) {
                         if (first.length < 8) {
-                          const intl2 = tmp(passwordValid[8]).intl;
+                          const intl2 = tmp3(tmp25[8]).intl;
                           c4 = 3;
-                          const obj5 = { value: intl2.string(tmp(passwordValid[8]).t.DfaKHr), done: true };
+                          const obj5 = { value: intl2.string(tmp3(tmp25[8]).t.DfaKHr), done: true };
                           return obj5;
                         } else if (null != closure_1) {
                           c4 = 3;
-                          const obj6 = { value: tmp11, done: true };
+                          const obj6 = { value: tmp14, done: true };
                           return obj6;
                         } else {
                           c3 = 1;
                           c1 = 2;
                           c4 = 1;
-                          const obj7 = { value: obj3.scorePassword(first), done: false };
-                          obj3 = tmp(passwordValid[9]);
+                          const obj7 = { value: tmp3(tmp25[9]).scorePassword(first), done: false };
                           return obj7;
                         }
                       }
                     }
-                    const intl3 = tmp(passwordValid[8]).intl;
+                    const intl3 = tmp3(tmp25[8]).intl;
                     c4 = 3;
-                    const obj8 = { value: intl3.string(tmp(passwordValid[8]).t.R98xD5), done: true };
+                    const obj8 = { value: intl3.string(tmp3(tmp25[8]).t.R98xD5), done: true };
                     return obj8;
                   }
                 } else {
-                  if (1 === tmp4) {
+                  if (1 === tmp7) {
                     c3 = 0;
+                    c4 = 3;
                   } else if (arg0 === 1) {
                     c4 = 3;
                     throw value;
@@ -296,25 +293,21 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     c4 = 3;
                     const obj9 = { value, done: true };
                     return obj9;
-                  } else if (false === value.valid) {
-                    const intl = tmp(passwordValid[8]).intl;
-                    c3 = 0;
-                    c4 = 3;
-                    const obj = { value: intl.string(tmp(passwordValid[8]).t.DfaKHr), done: true };
-                    return obj;
-                  } else {
+                  } else if (false !== value.valid) {
                     c3 = 0;
                   }
+                  const intl = tmp3(tmp25[8]).intl;
+                  c3 = 0;
                   c4 = 3;
-                  return { value: null, done: true };
+                  const obj = { value: intl.string(tmp3(tmp25[8]).t.DfaKHr), done: true };
+                  return obj;
                 }
-              } catch (tmp22) {
-                passwordValid = tmp22;
-                if (0 === c3) {
-                  c4 = 3;
-                  throw tmp22;
+              } catch (tmp25) {
+                if (tmp4 === c3) {
+                  c4 = tmp2;
+                  throw tmp25;
                 } else {
-                  c1 = 1;
+                  c1 = tmp;
                 }
               }
             }
@@ -322,8 +315,4 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           items1,
         ),
       };
-      return obj3;
     };
-const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
-
-export const usePasswordRegistrationStep = tmp2;

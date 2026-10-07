@@ -3,15 +3,11 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsetsSharedValue from "../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import updateSharedValueIfChangedDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import useWindowDimensionsSharedValue from "../../screen/useWindowDimensionsSharedValue.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import LaunchPadConstants from "LaunchPadConstants.tsx";
-import LaunchPadPullTabCache_mod from "LaunchPadPullTabCache.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import LaunchPadPullTabCache2 from "LaunchPadPullTabCache.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let LaunchPadPullTabCache;
-let closure_4;
-let hasOwnProperty;
+require = fn;
+const LaunchPadConstants = fn(11138);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } =
   LaunchPadConstants);
 let closure_6 = {
@@ -26,13 +22,9 @@ let closure_6 = {
   requiresPop: false,
   startShown: false,
 };
-let __closure = {
-  position: LaunchPadPullTabCache.getLaunchPadPullTabPositionCached(),
-  scale: 1,
-  offset: 0,
-  minimized: false,
-};
-LaunchPadPullTabCache = LaunchPadPullTabCache_mod;
+let __closure = { position: null, scale: 1, offset: 0, minimized: false };
+const LaunchPadPullTabCache = fn(17412);
+__closure.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 const __initData = {
   code: "function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){const{launchPadShown}=this.__closure;launchPadShown.set(shown);}",
 };
@@ -81,24 +73,21 @@ let closure_22 = {
 let closure_23 = {
   code: "function onWindowHeightChange_useLaunchPadStateNativeTsx16(){const{launchPadPullTabState,setLaunchPadPullTabBoundedPosition}=this.__closure;const positionY_1=launchPadPullTabState.get().position;setLaunchPadPullTabBoundedPosition(positionY_1);}",
 };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadState.native.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_4;
-      let sharedValue;
-      let sharedValue2;
-      let tmp10;
-      let tmp12;
-      let tmp8;
       let obj = sharedValue(sharedValue2[4]);
       const cResult = obj.c(32);
+      sharedValue = sharedValue(sharedValue2[5]).useSharedValue(closure_6);
       let obj2 = sharedValue(sharedValue2[5]);
-      sharedValue = obj2.useSharedValue(closure_6);
-      let obj3 = sharedValue(sharedValue2[5]);
-      const sharedValue1 = obj3.useSharedValue(obj);
+      const sharedValue1 = sharedValue(sharedValue2[5]).useSharedValue(obj);
+      const obj3 = sharedValue(sharedValue2[5]);
+      sharedValue2 = sharedValue(sharedValue2[5]).useSharedValue(0);
       const obj4 = sharedValue(sharedValue2[5]);
-      sharedValue2 = obj4.useSharedValue(0);
-      const obj5 = sharedValue(sharedValue2[5]);
-      const sharedValue3 = obj5.useSharedValue(false);
+      const sharedValue3 = sharedValue(sharedValue2[5]).useSharedValue(false);
       if (cResult[0] !== sharedValue3) {
         function setLaunchPadShown(arg0) {
           const result = sharedValue3.set(arg0);
@@ -109,7 +98,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         setLaunchPadShown.__initData = __initData;
         cResult[0] = sharedValue3;
         cResult[1] = setLaunchPadShown;
-        tmp8 = setLaunchPadShown;
+        let tmp8 = setLaunchPadShown;
       } else {
         tmp8 = cResult[1];
       }
@@ -123,125 +112,90 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         setLaunchPadPosition.__initData = __initData2;
         cResult[2] = sharedValue2;
         cResult[3] = setLaunchPadPosition;
-        tmp10 = setLaunchPadPosition;
+        let tmp10 = setLaunchPadPosition;
       } else {
         tmp10 = cResult[3];
       }
       if (cResult[4] !== sharedValue1) {
         function setLaunchPadPullTabBoundedPosition(arg0) {
-          const obj = useWindowDimensionsSharedValue;
-          const diff = obj.getWindowDimensionsWorklet().height - sharedValue1.get().offset - closure_4;
-          const obj2 = useSafeAreaInsetsSharedValue;
-          const sum = obj2.getSafeAreaInsetsWorklet().top + hasOwnProperty;
+          const diff =
+            useWindowDimensionsSharedValue.getWindowDimensionsWorklet().height -
+            sharedValue1.get().offset -
+            LAUNCH_PAD_PULL_TAB_MAX_POSITION;
+          const sum = useSafeAreaInsetsSharedValue.getSafeAreaInsetsWorklet().top + LAUNCH_PAD_PULL_TAB_SCALE_OFFSET;
           const bound = Math.max(Math.min(arg0, diff), sum);
           updateSharedValueIfChangedDefault(sharedValue1, { position: bound });
-          const obj3 = ReanimatedRexport;
-          obj3.runOnJS(LaunchPadPullTabCache.persistLaunchPadPullTabPosition)(bound);
+          ReanimatedRexport.runOnJS(LaunchPadPullTabCache2.persistLaunchPadPullTabPosition)(bound);
         }
-        setLaunchPadPullTabBoundedPosition.__closure = {
-          getWindowDimensionsWorklet: sharedValue(sharedValue2[6]).getWindowDimensionsWorklet,
+        const obj8 = {
+          getWindowDimensionsWorklet: tmp(tmp2[6]).getWindowDimensionsWorklet,
           launchPadPullTabState: sharedValue1,
           LAUNCH_PAD_PULL_TAB_MAX_POSITION,
-          getSafeAreaInsetsWorklet: sharedValue(sharedValue2[7]).getSafeAreaInsetsWorklet,
+          getSafeAreaInsetsWorklet: tmp(tmp2[7]).getSafeAreaInsetsWorklet,
           LAUNCH_PAD_PULL_TAB_SCALE_OFFSET,
-          updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-          runOnJS: sharedValue(sharedValue2[5]).runOnJS,
-          persistLaunchPadPullTabPosition: sharedValue(sharedValue2[2]).persistLaunchPadPullTabPosition,
+          updateSharedValueIfChanged: sharedValue1(tmp2[8]),
+          runOnJS: tmp(tmp2[5]).runOnJS,
+          persistLaunchPadPullTabPosition: tmp(tmp2[2]).persistLaunchPadPullTabPosition,
         };
+        setLaunchPadPullTabBoundedPosition.__closure = obj8;
         setLaunchPadPullTabBoundedPosition.__workletHash = 1905227275114;
         setLaunchPadPullTabBoundedPosition.__initData = __initData3;
         cResult[4] = sharedValue1;
         cResult[5] = setLaunchPadPullTabBoundedPosition;
-        tmp12 = setLaunchPadPullTabBoundedPosition;
-        const obj8 = {
-          getWindowDimensionsWorklet: sharedValue(sharedValue2[6]).getWindowDimensionsWorklet,
-          launchPadPullTabState: sharedValue1,
-          LAUNCH_PAD_PULL_TAB_MAX_POSITION,
-          getSafeAreaInsetsWorklet: sharedValue(sharedValue2[7]).getSafeAreaInsetsWorklet,
-          LAUNCH_PAD_PULL_TAB_SCALE_OFFSET,
-          updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-          runOnJS: sharedValue(sharedValue2[5]).runOnJS,
-          persistLaunchPadPullTabPosition: sharedValue(sharedValue2[2]).persistLaunchPadPullTabPosition,
-        };
+        let tmp12 = setLaunchPadPullTabBoundedPosition;
       } else {
         tmp12 = cResult[5];
       }
       LAUNCH_PAD_PULL_TAB_MAX_POSITION = tmp12;
       if (cResult[6] === sharedValue) {
-        let tmp17;
-        let tmp18;
-        let tmp21;
-        let tmp24;
         if (cResult[7] === tmp12) {
-          tmp17 = cResult[8];
+          let tmp17 = cResult[8];
         }
         if (cResult[9] !== sharedValue1) {
           function setLaunchPadPullTabPosition(position, offset) {
-            const obj = { position, offset };
-            updateSharedValueIfChangedDefault(sharedValue1, obj);
+            updateSharedValueIfChangedDefault(sharedValue1, { position, offset });
           }
-          setLaunchPadPullTabPosition.__closure = {
-            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-            launchPadPullTabState: sharedValue1,
-          };
+          const obj9 = { updateSharedValueIfChanged: sharedValue1(tmp2[8]), launchPadPullTabState: sharedValue1 };
+          setLaunchPadPullTabPosition.__closure = obj9;
           setLaunchPadPullTabPosition.__workletHash = 6850185694143;
           setLaunchPadPullTabPosition.__initData = __initData5;
           cResult[9] = sharedValue1;
           cResult[10] = setLaunchPadPullTabPosition;
-          tmp18 = setLaunchPadPullTabPosition;
-          const obj9 = {
-            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-            launchPadPullTabState: sharedValue1,
-          };
+          let tmp18 = setLaunchPadPullTabPosition;
         } else {
           tmp18 = cResult[10];
         }
         if (cResult[11] !== sharedValue1) {
           function setLaunchPadPullTabScale(scale) {
-            const obj = { scale };
-            updateSharedValueIfChangedDefault(sharedValue1, obj);
+            updateSharedValueIfChangedDefault(sharedValue1, { scale });
           }
-          setLaunchPadPullTabScale.__closure = {
-            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-            launchPadPullTabState: sharedValue1,
-          };
+          const obj10 = { updateSharedValueIfChanged: sharedValue1(tmp2[8]), launchPadPullTabState: sharedValue1 };
+          setLaunchPadPullTabScale.__closure = obj10;
           setLaunchPadPullTabScale.__workletHash = 4772968963371;
           setLaunchPadPullTabScale.__initData = __initData6;
           cResult[11] = sharedValue1;
           cResult[12] = setLaunchPadPullTabScale;
-          tmp21 = setLaunchPadPullTabScale;
-          const obj10 = {
-            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-            launchPadPullTabState: sharedValue1,
-          };
+          let tmp21 = setLaunchPadPullTabScale;
         } else {
           tmp21 = cResult[12];
         }
         if (cResult[13] !== sharedValue1) {
           function setLaunchPadPullTabMinimized(minimized) {
-            const obj = { minimized };
-            updateSharedValueIfChangedDefault(sharedValue1, obj);
+            updateSharedValueIfChangedDefault(sharedValue1, { minimized });
           }
-          setLaunchPadPullTabMinimized.__closure = {
-            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-            launchPadPullTabState: sharedValue1,
-          };
+          const obj11 = { updateSharedValueIfChanged: sharedValue1(tmp2[8]), launchPadPullTabState: sharedValue1 };
+          setLaunchPadPullTabMinimized.__closure = obj11;
           setLaunchPadPullTabMinimized.__workletHash = 2379539261994;
           setLaunchPadPullTabMinimized.__initData = __initData7;
           cResult[13] = sharedValue1;
           cResult[14] = setLaunchPadPullTabMinimized;
-          tmp24 = setLaunchPadPullTabMinimized;
-          const obj11 = {
-            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
-            launchPadPullTabState: sharedValue1,
-          };
+          let tmp24 = setLaunchPadPullTabMinimized;
         } else {
           tmp24 = cResult[14];
         }
         if (cResult[15] === sharedValue1) {
-          let tmp27;
           if (cResult[16] === tmp12) {
-            tmp27 = cResult[17];
+            let tmp27 = cResult[17];
           }
           if (cResult[18] === tmp27) {
             if (cResult[19] === tmp10) {
@@ -249,17 +203,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[21] === tmp18) {
                   if (cResult[22] === tmp21) {
                     if (cResult[23] === tmp17) {
-                      let tmp29;
                       if (cResult[24] === tmp8) {
-                        tmp29 = cResult[25];
+                        let tmp29 = cResult[25];
                       }
                       if (cResult[26] === sharedValue) {
                         if (cResult[27] === sharedValue1) {
                           if (cResult[28] === sharedValue2) {
                             if (cResult[29] === sharedValue3) {
-                              let tmp30;
                               if (cResult[30] === tmp29) {
-                                tmp30 = cResult[31];
+                                let tmp30 = cResult[31];
                               }
                               return tmp30;
                             }
@@ -330,30 +282,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp12;
       cResult[8] = setLaunchPadPullTabTranslation;
       tmp17 = setLaunchPadPullTabTranslation;
+      const obj5 = sharedValue(sharedValue2[5]);
     }
   : () => {
-      let sharedValue;
-      let sharedValue2;
       let obj = sharedValue(sharedValue2[5]);
       sharedValue = obj.useSharedValue(closure_6);
+      const sharedValue1 = sharedValue(sharedValue2[5]).useSharedValue(obj);
       let obj2 = sharedValue(sharedValue2[5]);
-      const sharedValue1 = obj2.useSharedValue(obj);
+      sharedValue2 = sharedValue(sharedValue2[5]).useSharedValue(0);
       let obj3 = sharedValue(sharedValue2[5]);
-      sharedValue2 = obj3.useSharedValue(0);
-      let obj4 = sharedValue(sharedValue2[5]);
-      const sharedValue3 = obj4.useSharedValue(false);
+      const sharedValue3 = sharedValue(sharedValue2[5]).useSharedValue(false);
       const items = [sharedValue, sharedValue1, sharedValue2, sharedValue3];
-      let obj5 = {
+      let obj4 = sharedValue(sharedValue2[5]);
+      return {
         launchPadSharedState: sharedValue2,
         launchPadPullTabState: sharedValue1,
         launchPadShown: sharedValue3,
         gestureState: sharedValue,
         updaters: sharedValue3.useMemo(() => {
-          let onWindowHeightChange;
-          let setLaunchPadPullTabMinimized;
-          let setLaunchPadPullTabPosition;
-          let setLaunchPadPullTabScale;
-          let setLaunchPadPullTabTranslation;
           function setLaunchPadShown(arg0) {
             const result = sharedValue3.set(arg0);
           }
@@ -364,22 +310,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           function setLaunchPadPosition(arg0) {
             const result = sharedValue2.set(Math.max(Math.min(arg0, 1), 0));
           }
-          let obj2 = { launchPadSharedState: sharedValue2 };
-          setLaunchPadPosition.__closure = obj2;
+          setLaunchPadPosition.__closure = { launchPadSharedState: sharedValue2 };
           setLaunchPadPosition.__workletHash = 3036375090904;
           setLaunchPadPosition.__initData = __initData2;
           function setLaunchPadPullTabBoundedPosition(arg0) {
-            const obj = sharedValue(sharedValue2[6]);
             const diff =
-              obj.getWindowDimensionsWorklet().height - closure_1_1.get().offset - LAUNCH_PAD_PULL_TAB_MAX_POSITION;
-            const obj2 = sharedValue(sharedValue2[7]);
-            const sum = obj2.getSafeAreaInsetsWorklet().top + LAUNCH_PAD_PULL_TAB_SCALE_OFFSET;
+              sharedValue(sharedValue2[6]).getWindowDimensionsWorklet().height -
+              closure_1_1.get().offset -
+              LAUNCH_PAD_PULL_TAB_MAX_POSITION;
+            const obj = sharedValue(sharedValue2[6]);
+            const sum = sharedValue(sharedValue2[7]).getSafeAreaInsetsWorklet().top + LAUNCH_PAD_PULL_TAB_SCALE_OFFSET;
             const bound = Math.max(Math.min(arg0, diff), sum);
             sharedValue1(sharedValue2[8])(closure_1_1, { position: bound });
-            const obj3 = sharedValue(sharedValue2[5]);
-            obj3.runOnJS(sharedValue(sharedValue2[2]).persistLaunchPadPullTabPosition)(bound);
+            const obj2 = sharedValue(sharedValue2[7]);
+            sharedValue(sharedValue2[5]).runOnJS(sharedValue(sharedValue2[2]).persistLaunchPadPullTabPosition)(bound);
           }
-          let obj3 = {
+          setLaunchPadPullTabBoundedPosition.__closure = {
             getWindowDimensionsWorklet: sharedValue(sharedValue2[6]).getWindowDimensionsWorklet,
             launchPadPullTabState: sharedValue1,
             LAUNCH_PAD_PULL_TAB_MAX_POSITION,
@@ -389,69 +335,85 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             runOnJS: sharedValue(sharedValue2[5]).runOnJS,
             persistLaunchPadPullTabPosition: sharedValue(sharedValue2[2]).persistLaunchPadPullTabPosition,
           };
-          setLaunchPadPullTabBoundedPosition.__closure = obj3;
           setLaunchPadPullTabBoundedPosition.__workletHash = 1408606511545;
           setLaunchPadPullTabBoundedPosition.__initData = __initData3;
           const obj4 = {
             setLaunchPadShown,
             setLaunchPadPosition,
-            setLaunchPadPullTabTranslation,
-            setLaunchPadPullTabPosition,
-            setLaunchPadPullTabScale,
-            setLaunchPadPullTabMinimized,
-            onWindowHeightChange,
+            setLaunchPadPullTabTranslation: null,
+            setLaunchPadPullTabPosition: null,
+            setLaunchPadPullTabScale: null,
+            setLaunchPadPullTabMinimized: null,
+            onWindowHeightChange: null,
           };
-          setLaunchPadPullTabTranslation = function setLaunchPadPullTabTranslation(arg0) {
+          function setLaunchPadPullTabTranslation(arg0) {
             setLaunchPadPullTabBoundedPosition(sharedValue.get().initialPullTabPosition + arg0);
+          }
+          setLaunchPadPullTabTranslation.__closure = {
+            gestureState: setLaunchPadPullTabBoundedPosition,
+            setLaunchPadPullTabBoundedPosition,
           };
-          const obj5 = { gestureState: setLaunchPadPullTabBoundedPosition, setLaunchPadPullTabBoundedPosition };
-          setLaunchPadPullTabTranslation.__closure = obj5;
           setLaunchPadPullTabTranslation.__workletHash = 10179367798639;
           setLaunchPadPullTabTranslation.__initData = __initData4;
-          setLaunchPadPullTabPosition = function setLaunchPadPullTabPosition(position, offset) {
-            const obj = { position, offset };
-            sharedValue1(sharedValue2[8])(closure_1_1, obj);
+          obj4.setLaunchPadPullTabTranslation = setLaunchPadPullTabTranslation;
+          function setLaunchPadPullTabPosition(position, offset) {
+            sharedValue1(sharedValue2[8])(closure_1_1, { position, offset });
+          }
+          let obj2 = { launchPadSharedState: sharedValue2 };
+          const obj3 = {
+            getWindowDimensionsWorklet: sharedValue(sharedValue2[6]).getWindowDimensionsWorklet,
+            launchPadPullTabState: sharedValue1,
+            LAUNCH_PAD_PULL_TAB_MAX_POSITION,
+            getSafeAreaInsetsWorklet: sharedValue(sharedValue2[7]).getSafeAreaInsetsWorklet,
+            LAUNCH_PAD_PULL_TAB_SCALE_OFFSET,
+            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
+            runOnJS: sharedValue(sharedValue2[5]).runOnJS,
+            persistLaunchPadPullTabPosition: sharedValue(sharedValue2[2]).persistLaunchPadPullTabPosition,
           };
+          const obj5 = { gestureState: setLaunchPadPullTabBoundedPosition, setLaunchPadPullTabBoundedPosition };
           setLaunchPadPullTabPosition.__closure = {
             updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
             launchPadPullTabState: sharedValue1,
           };
           setLaunchPadPullTabPosition.__workletHash = 10672582165192;
           setLaunchPadPullTabPosition.__initData = __initData5;
-          setLaunchPadPullTabScale = function setLaunchPadPullTabScale(scale) {
-            const obj = { scale };
-            sharedValue1(sharedValue2[8])(closure_1_1, obj);
+          obj4.setLaunchPadPullTabPosition = setLaunchPadPullTabPosition;
+          function setLaunchPadPullTabScale(scale) {
+            sharedValue1(sharedValue2[8])(closure_1_1, { scale });
+          }
+          const obj6 = {
+            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
+            launchPadPullTabState: sharedValue1,
           };
-          ({ updateSharedValueIfChanged: sharedValue1(sharedValue2[8]), launchPadPullTabState: sharedValue1 });
           setLaunchPadPullTabScale.__closure = {
             updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
             launchPadPullTabState: sharedValue1,
           };
           setLaunchPadPullTabScale.__workletHash = 11683465594520;
           setLaunchPadPullTabScale.__initData = __initData6;
-          setLaunchPadPullTabMinimized = function setLaunchPadPullTabMinimized(minimized) {
-            const obj = { minimized };
-            sharedValue1(sharedValue2[8])(closure_1_1, obj);
+          obj4.setLaunchPadPullTabScale = setLaunchPadPullTabScale;
+          function setLaunchPadPullTabMinimized(minimized) {
+            sharedValue1(sharedValue2[8])(closure_1_1, { minimized });
+          }
+          const obj7 = {
+            updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
+            launchPadPullTabState: sharedValue1,
           };
-          ({ updateSharedValueIfChanged: sharedValue1(sharedValue2[8]), launchPadPullTabState: sharedValue1 });
           setLaunchPadPullTabMinimized.__closure = {
             updateSharedValueIfChanged: sharedValue1(sharedValue2[8]),
             launchPadPullTabState: sharedValue1,
           };
           setLaunchPadPullTabMinimized.__workletHash = 13110719005625;
           setLaunchPadPullTabMinimized.__initData = __initData7;
-          onWindowHeightChange = function onWindowHeightChange() {
+          obj4.setLaunchPadPullTabMinimized = setLaunchPadPullTabMinimized;
+          function onWindowHeightChange() {
             setLaunchPadPullTabBoundedPosition(sharedValue1.get().position);
-          };
+          }
           onWindowHeightChange.__closure = { launchPadPullTabState: sharedValue1, setLaunchPadPullTabBoundedPosition };
           onWindowHeightChange.__workletHash = 16524574498091;
           onWindowHeightChange.__initData = __initData8;
-          ({ updateSharedValueIfChanged: sharedValue1(sharedValue2[8]), launchPadPullTabState: sharedValue1 });
+          obj4.onWindowHeightChange = onWindowHeightChange;
           return obj4;
         }, items),
       };
-      return obj5;
     };
-let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadState.native.tsx");
-
-export default tmp3;

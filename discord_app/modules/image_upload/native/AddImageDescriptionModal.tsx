@@ -1,87 +1,61 @@
 // discord_app/modules/image_upload/native/AddImageDescriptionModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../../intl/index.native.tsx";
-import DraftStore from "../../../stores/DraftStore.tsx";
+import util from "../../../intl/index.native.tsx";
 import ModalStackNavigatorDefault from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
 
-let ChannelMessage, navigation;
-
-let c10;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let size;
-let unpackModuleId;
-let react = react_mod;
-({ View: hasOwnProperty, Image: metroRequire, ScrollView: metroImportDefault } = react_native);
-const DraftType = DraftStore.DraftType;
-({ jsx: c10, jsxs: unpackModuleId } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { contentContainer: obj2, imageContainer: obj3, image: size, placeholderText: obj4 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles = createStyles.createStyles;
-obj3 = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
-size = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: nativeDefault.radii.sm };
-obj4 = { color: nativeDefault.colors.TEXT_MUTED };
-let closure_12 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const DraftType = fn(7044).DraftType;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  imageContainer: null,
+  image: null,
+  placeholderText: null,
+};
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
+let size = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: nativeDefault.radii.sm };
+obj2.image = size;
+let obj4 = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
+obj2.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
+let closure_12 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
-      let channelId;
-      let closure_4;
-      let first;
-      let first1;
-      let height;
-      let source;
-      let stateFromStores;
-      let width;
-      let obj = channelId(stateFromStores[9]);
-      const cResult = obj.c(43);
+      const cResult = channelId(stateFromStores[9]).c(43);
       ({ source, channelId } = id);
       id = id.id;
       closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UploadAttachmentStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channelId) {
-        let tmp7;
-        let tmp9;
-        let tmp19;
-        let tmp20;
-        let tmp21;
-        let tmp24;
         if (cResult[2] === id) {
-          tmp7 = cResult[3];
+          let tmp7 = cResult[3];
         }
-        const tmpResult = channelId(stateFromStores[10]);
-        stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+        stateFromStores = channelId(tmp2[10]).useStateFromStores(first, tmp7);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { ignoreKeyboard: true };
           cResult[4] = obj2;
-          tmp9 = obj2;
+          let tmp9 = obj2;
         } else {
           tmp9 = cResult[4];
         }
         ({ width, height } = source);
-        id(stateFromStores[11])(tmp9);
+        id(tmp2[11])(tmp9);
         let str;
-        const useState = react.useState;
         if (stateFromStores != null) {
           str = stateFromStores.description;
         }
@@ -90,31 +64,31 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         class R {
           constructor() {
-            return UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage);
+            return closure_9.getUpload(channelId, id, DraftType.ChannelMessage);
           }
         }
-        const tmp13 = first1(useState(str), 2);
+        const tmp13 = first1(noop.useState(str), 2);
         first1 = tmp13[0];
-        react = obj4.useRef(first1);
-        const ref = obj4.useRef(null);
-        const ref1 = react.useRef(null);
-        const tmpResult2 = channelId(stateFromStores[12]);
-        navigation = tmpResult2.useNavigation();
+        noop = obj4.useRef(first1);
+        const tmpResult = channelId(tmp2[10]);
+        const ref = noop.useRef(null);
+        const ref1 = noop.useRef(null);
+        const navigation = channelId(tmp2[12]).useNavigation();
         const _Symbol2 = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { includeKeyboardHeight: true };
           cResult[5] = obj3;
-          tmp19 = obj3;
+          let tmp19 = obj3;
         } else {
           tmp19 = cResult[5];
         }
         const insets = tmp10(tmp2[13])(tmp19).insets;
         const _Symbol3 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [{ ref, offset: { type: "toBottom" } }];
           const obj5 = { ref, offset: { type: "toBottom" } };
+          const items1 = [obj5];
           cResult[6] = items1;
-          tmp20 = items1;
+          let tmp20 = items1;
         } else {
           tmp20 = cResult[6];
         }
@@ -122,26 +96,28 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { insets, inputs: tmp20, scrollViewRef: ref1 };
           cResult[7] = insets;
           cResult[8] = obj6;
-          tmp21 = obj6;
+          let tmp21 = obj6;
         } else {
           tmp21 = cResult[8];
         }
-        id(stateFromStores[14])(tmp21);
+        id(tmp2[14])(tmp21);
         if (cResult[9] !== first1) {
           class V {
             constructor() {
-              closure_4.current = first1;
+              closure_4.current = closure_3;
+              return;
             }
           }
           const items2 = [first1];
           cResult[9] = first1;
           cResult[10] = V;
           cResult[11] = items2;
-          tmp24 = items2;
+          let tmp24 = items2;
         } else {
           class V {
             constructor() {
-              closure_4.current = first1;
+              closure_4.current = closure_3;
+              return;
             }
           }
           tmp24 = cResult[11];
@@ -150,36 +126,30 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[12] === channelId) {
           class V {
             constructor() {
-              closure_4.current = first1;
+              closure_4.current = closure_3;
+              return;
             }
           }
         }
         const fn = function z() {
-          let obj = {
+          navigation.setOptions({
             headerRight(arg0) {
-              let ref;
-              const tmp = channelId(stateFromStores[15]);
-              const getRenderHeaderTextButton = tmp.getRenderHeaderTextButton;
               const intl = channelId(stateFromStores[16]).intl;
-              let obj = {};
-              const renderHeaderTextButton = getRenderHeaderTextButton(
+              const renderHeaderTextButton = channelId(stateFromStores[15]).getRenderHeaderTextButton(
                 intl.string(channelId(stateFromStores[16]).t["R3BPH+"]),
                 () => {
-                  const obj = { description: ref.current };
-                  const update = id(stateFromStores[17]).update;
-                  ChannelMessage = ChannelMessage.ChannelMessage;
-                  id(stateFromStores[17]);
-                  const merged = Object.assign(closure_1_2);
-                  update(closure_1_0, closure_1_1, ChannelMessage, obj);
-                  const obj2 = id(stateFromStores[18]);
-                  obj2.close();
+                  const obj2 = {};
+                  const merged = Object.assign(dependencyMap);
+                  obj2.description = ref.current;
+                  id(8842).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                  const obj = id(8842);
+                  id(11049).close();
                 },
               );
               let merged = Object.assign(arg0);
-              return renderHeaderTextButton(obj);
+              return renderHeaderTextButton({});
             },
-          };
-          navigation.setOptions(obj);
+          });
         };
         const items3 = [channelId, id, stateFromStores, navigation];
         cResult[12] = channelId;
@@ -188,46 +158,34 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = stateFromStores;
         cResult[16] = items3;
         cResult[17] = fn;
+        const tmpResult2 = channelId(tmp2[12]);
       }
       class R {
         constructor() {
-          return UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage);
+          return closure_9.getUpload(channelId, id, DraftType.ChannelMessage);
         }
       }
       cResult[1] = channelId;
       cResult[2] = id;
       cResult[3] = R;
       tmp7 = R;
+      let obj = channelId(stateFromStores[9]);
     }
   : (id) => {
-      let channelId;
-      let closure_4;
-      let first;
-      let height;
-      let intl;
-      let intl2;
-      let items1;
-      let items4;
-      let items5;
-      let obj7;
-      let obj9;
-      let source;
-      let width;
       ({ source, channelId } = id);
       id = id.id;
       let stateFromStores;
-      let value;
-      react = undefined;
-      navigation = undefined;
-      let tmp = closure_12();
-      let obj = channelId(stateFromStores[10]);
+      value = undefined;
+      noop = undefined;
+      let navigation;
+      const tmp = closure_12();
       const items = [UploadAttachmentStore];
-      stateFromStores = obj.useStateFromStores(items, () =>
+      stateFromStores = channelId(stateFromStores[10]).useStateFromStores(items, () =>
         UploadAttachmentStore.getUpload(channelId, id, DraftType.ChannelMessage),
       );
       ({ width, height } = source);
       let num = 1;
-      const tmp6 = id(stateFromStores[11])({ ignoreKeyboard: true });
+      let obj = channelId(stateFromStores[10]);
       if (null != width) {
         num = 1;
         if (null != height) {
@@ -240,26 +198,24 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj2 = react;
       let str;
-      const useState = react.useState;
       if (stateFromStores != null) {
         str = stateFromStores.description;
       }
       if (str == null) {
         str = "";
       }
-      const tmp7 = value(useState(str), 2);
+      const tmp7 = value(noop.useState(str), 2);
       value = tmp7[0];
-      const tmp9 = tmp7[1];
-      react = obj2.useRef(value);
-      const ref = obj2.useRef(null);
-      const ref1 = obj2.useRef(null);
-      const tmp2Result = channelId(stateFromStores[12]);
-      navigation = tmp2Result.useNavigation();
+      noop = obj2.useRef(value);
+      const ref = noop.useRef(null);
+      const ref1 = noop.useRef(null);
+      const tmp6 = id(stateFromStores[11])({ ignoreKeyboard: true });
+      navigation = channelId(stateFromStores[12]).useNavigation();
       const insets = tmp5(tmp3[13])({ includeKeyboardHeight: true }).insets;
-      const obj3 = { insets, inputs: items1, scrollViewRef: ref1 };
-      items1 = [{ ref, offset: { type: "toBottom" } }];
+      const obj3 = { insets, inputs: null, scrollViewRef: ref1 };
+      const items1 = [{ ref, offset: { type: "toBottom" } }];
+      obj3.inputs = items1;
       id(stateFromStores[14])(obj3);
       const items2 = [value];
       const effect = obj2.useEffect(() => {
@@ -267,103 +223,98 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const items3 = [channelId, id, stateFromStores, navigation];
       const effect1 = obj2.useEffect(() => {
-        let obj = {
+        navigation.setOptions({
           headerRight(arg0) {
-            let ref;
-            const tmp = channelId(stateFromStores[15]);
-            const getRenderHeaderTextButton = tmp.getRenderHeaderTextButton;
             const intl = channelId(stateFromStores[16]).intl;
-            let obj = {};
-            const renderHeaderTextButton = getRenderHeaderTextButton(
+            const renderHeaderTextButton = channelId(stateFromStores[15]).getRenderHeaderTextButton(
               intl.string(channelId(stateFromStores[16]).t["R3BPH+"]),
               () => {
-                const obj = { description: ref.current };
-                const update = id(stateFromStores[17]).update;
-                ChannelMessage = ChannelMessage.ChannelMessage;
-                id(stateFromStores[17]);
-                const merged = Object.assign(closure_1_2);
-                update(closure_1_0, closure_1_1, ChannelMessage, obj);
-                const obj2 = id(stateFromStores[18]);
-                obj2.close();
+                const obj2 = {};
+                const merged = Object.assign(dependencyMap);
+                obj2.description = ref.current;
+                id(8842).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                const obj = id(8842);
+                id(11049).close();
               },
             );
             let merged = Object.assign(arg0);
-            return renderHeaderTextButton(obj);
+            return renderHeaderTextButton({});
           },
-        };
-        navigation.setOptions(obj);
+        });
       }, items3);
-      const obj4 = {
-        ref: ref1,
-        style: tmp.contentContainer,
-        contentContainerStyle: {
-          padding: id(stateFromStores[7]).space.PX_16,
-          paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
-        },
-        children: items5,
-      };
-      const obj6 = { style: tmp.imageContainer, children: closure_10(closure_6, obj7) };
-      obj7 = { style: items4, source };
-      items4 = [tmp.image, { aspectRatio: num, maxHeight: tmp6.height / 2 }];
-      ({
+      const obj4 = { ref: ref1, style: tmp.contentContainer, contentContainerStyle: null, children: null };
+      const tmp2Result = channelId(stateFromStores[12]);
+      obj4.contentContainerStyle = {
         padding: id(stateFromStores[7]).space.PX_16,
         paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
-      });
-      items5 = [closure_10(navigation, obj6)];
+      };
+      const obj6 = { style: tmp.imageContainer, children: null };
+      const obj7 = { style: null, source };
+      const items4 = [tmp.image, { aspectRatio: num, maxHeight: tmp6.height / 2 }];
+      obj7.style = items4;
+      obj6.children = closure_10(closure_6, obj7);
+      const items5 = [closure_10(navigation, obj6)];
       const obj8 = {
         ref,
-        containerStyle: obj9,
-        label: intl.string(channelId(stateFromStores[16]).t.eOB2eR),
-        placeholder: intl2.string(channelId(stateFromStores[16]).t.RNH1jn),
-        value,
-        onChange: tmp9,
-        placeholderTextColor: tmp.placeholderText.color,
+        containerStyle: null,
+        label: null,
+        placeholder: null,
+        value: null,
+        onChange: null,
+        placeholderTextColor: null,
         maxLength: 1000,
         autoFocus: true,
       };
-      obj9 = { paddingTop: id(stateFromStores[7]).space.PX_16 };
-      const TextArea = tmp2(tmp3[19]).TextArea;
-      intl = tmp2(tmp3[16]).intl;
-      intl2 = tmp2(tmp3[16]).intl;
-      items5[1] = closure_10(TextArea, obj8);
+      const obj5 = {
+        padding: id(stateFromStores[7]).space.PX_16,
+        paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
+      };
+      obj8.containerStyle = { paddingTop: id(stateFromStores[7]).space.PX_16 };
+      let intl = tmp2(tmp3[16]).intl;
+      obj8.label = intl.string(channelId(stateFromStores[16]).t.eOB2eR);
+      const intl2 = tmp2(tmp3[16]).intl;
+      obj8.placeholder = intl2.string(channelId(stateFromStores[16]).t.RNH1jn);
+      obj8.value = value;
+      obj8.onChange = tmp7[1];
+      obj8.placeholderTextColor = tmp.placeholderText.color;
+      items5[1] = closure_10(channelId(stateFromStores[19]).TextArea, obj8);
+      obj4.children = items5;
       return closure_11(closure_7, obj4);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj5 = { color: nativeDefault.colors.TEXT_MUTED };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/image_upload/native/AddImageDescriptionModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (source) => {
-      let first;
-      let id;
-      let obj = source(id[9]);
-      const cResult = obj.c(5);
+      const cResult = source(id[9]).c(5);
       source = source.source;
       const channelId = source.channelId;
       id = source.id;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(tmp2[16]).intl;
-        const stringResult = intl.string(source(id[16]).t["5S2AK+"]);
+        const stringResult = intl.string(tmp(tmp2[16]).t["5S2AK+"]);
         cResult[0] = stringResult;
-        first = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channelId) {
         if (cResult[2] === id) {
-          let tmp6;
           if (cResult[3] === source) {
-            tmp6 = cResult[4];
+            let tmp6 = cResult[4];
           }
           return tmp6;
         }
       }
-      const obj2 = {
+      const tmp7 = closure_10(channelId(id[20]), {
         screenKey: "addImageDescriptionModal",
         title: first,
         render() {
-          const obj = { source, channelId, id };
-          return authStore(closure_13, obj);
+          return v65535(closure_13, { source, channelId, id });
         },
-      };
-      const tmp7 = closure_10(channelId(id[20]), obj2);
+      });
       cResult[1] = channelId;
       cResult[2] = id;
       cResult[3] = source;
@@ -371,24 +322,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
     }
   : (arg0) => {
-      let channelId;
-      let id;
-      let intl;
-      let source;
       ({ source: require, channelId: importDefault, id: dependencyMap } = arg0);
-      let obj = {
-        screenKey: "addImageDescriptionModal",
-        title: intl.string(intl3.t["5S2AK+"]),
-        render() {
-          const obj = { source: require, channelId: importDefault, id: dependencyMap };
-          return authStore(closure_13, obj);
-        },
+      const obj = { screenKey: "addImageDescriptionModal", title: null, render: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t["5S2AK+"]);
+      obj.render = function render() {
+        return v65535(closure_13, { source, channelId, id });
       };
-      const tmp = ModalStackNavigatorDefault;
-      intl = intl3.intl;
-      return closure_10(tmp, obj);
+      return closure_10(ModalStackNavigatorDefault, obj);
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/image_upload/native/AddImageDescriptionModal.tsx");
-
-export default tmp5;

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx
-import intl3 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -8,12 +8,11 @@ const result = size.fileFinishedImporting(
 );
 
 export const showDataPrivacyRateLimitAlert = function showDataPrivacyRateLimitAlert(message) {
-  let intl;
-  let intl2;
-  const obj = { title: intl.string(intl3.t["43LbVL"]), body: message, confirmText: intl2.string(intl3.t.BddRzS) };
-  const show = AlertActionCreatorsDefault.show;
-  AlertActionCreatorsDefault;
-  intl = intl3.intl;
-  intl2 = intl3.intl;
-  show(obj);
+  const obj2 = { title: null, body: null, confirmText: null };
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["43LbVL"]);
+  obj2.body = message;
+  const intl2 = util.intl;
+  obj2.confirmText = intl2.string(util.t.BddRzS);
+  AlertActionCreatorsDefault.show(obj2);
 };

@@ -1,42 +1,31 @@
 // discord_app/modules/guild_automod/native/components/ExemptChannelsActionSheet.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import getFlattedChannelListDefault from "../../../channel/getFlattedChannelList.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildCategoryStore from "../../../../stores/GuildCategoryStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, guildId;
-
+require = fn;
 function getChannelOptionId(channel) {
   return channel.channel.id;
 }
 function getChannelOptionName(name) {
   return name.name;
 }
-const jsx = Fragment.jsx;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp7;
-      let tmp9;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(8);
-      const tmp = _require;
+      let mapped = dependencyMap;
+      const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildCategoryStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -48,28 +37,28 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
       if (cResult[4] !== stateFromStores) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class C {
-            constructor(channel) {
-              channel = channel.channel;
+            constructor(arg0) {
+              channel = arg0.channel;
               return !channel.isThread();
             }
           }
           cResult[6] = C;
         } else {
           class C {
-            constructor(channel) {
-              channel = channel.channel;
+            constructor(arg0) {
+              channel = arg0.channel;
               return !channel.isThread();
             }
           }
@@ -77,85 +66,82 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           class S {
-            constructor(channel) {
-              let obj2;
-              channel = channel.channel;
-              const obj = { channel, name: obj2.computeChannelName(channel, UserStore, RelationshipStore) };
-              obj2 = closure_0(dependencyMap[9]);
+            constructor(arg0) {
+              channel = arg0.channel;
+              obj = { channel, name: null };
+              obj2 = closure_0(closure_1_2[9]);
+              obj.name = obj2.computeChannelName(channel, closure_1_7, closure_1_6);
               return obj;
             }
           }
           cResult[7] = S;
         } else {
           class S {
-            constructor(channel) {
-              let obj2;
-              channel = channel.channel;
-              const obj = { channel, name: obj2.computeChannelName(channel, UserStore, RelationshipStore) };
-              obj2 = closure_0(dependencyMap[9]);
+            constructor(arg0) {
+              channel = arg0.channel;
+              obj = { channel, name: null };
+              obj2 = closure_0(closure_1_2[9]);
+              obj.name = obj2.computeChannelName(channel, closure_1_7, closure_1_6);
               return obj;
             }
           }
         }
-        const arr3 = getFlattedChannelListDefault(stateFromStores._categories, stateFromStores, C);
-        const mapped = arr3.map(S);
+        mapped = getFlattedChannelListDefault(stateFromStores._categories, stateFromStores, C).map(S);
         cResult[4] = stateFromStores;
         cResult[5] = mapped;
-        tmp9 = mapped;
+        const arr3 = getFlattedChannelListDefault(stateFromStores._categories, stateFromStores, C);
       } else {
         class S {
-          constructor(channel) {
-            let obj2;
-            channel = channel.channel;
-            const obj = { channel, name: obj2.computeChannelName(channel, UserStore, RelationshipStore) };
-            obj2 = closure_0(dependencyMap[9]);
+          constructor(arg0) {
+            channel = arg0.channel;
+            obj = { channel, name: null };
+            obj2 = closure_0(closure_1_2[9]);
+            obj.name = obj2.computeChannelName(channel, closure_1_7, closure_1_6);
             return obj;
           }
         }
       }
-      return tmp9;
+      const tmpResult = require("initialize");
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("get initialized");
       const items = [GuildCategoryStore];
       const items1 = [arg0];
-      const stateFromStores = obj.useStateFromStores(items, () => GuildCategoryStore.getCategories(closure_0), items1);
+      const stateFromStores = require("initialize").useStateFromStores(
+        items,
+        () => GuildCategoryStore.getCategories(closure_0),
+        items1,
+      );
       const items2 = [stateFromStores];
-      return react.useMemo(() => {
-        const arr = getFlattedChannelListDefault(stateFromStores._categories, stateFromStores, (channel) => {
-          channel = channel.channel;
-          return !channel.isThread();
-        });
-        return arr.map((channel) => {
-          let obj2;
-          channel = channel.channel;
-          const obj = { channel, name: obj2.computeChannelName(channel, closure_1_7, closure_1_6) };
-          obj2 = closure_1_0(closure_1_2[9]);
-          return obj;
-        });
-      }, items2);
+      return noop.useMemo(
+        () =>
+          getFlattedChannelListDefault(stateFromStores._categories, stateFromStores, (channel) => {
+            channel = channel.channel;
+            return !channel.isThread();
+          }).map((channel) => {
+            channel = channel.channel;
+            const obj = {
+              channel,
+              name: closure_1_0(closure_1_2[9]).computeChannelName(channel, closure_1_7, closure_1_6),
+            };
+            return obj;
+          }),
+        items2,
+      );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptChannelsActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let exemptChannels;
-      let first;
-      let onSave;
-      let tmp10;
-      let tmp11;
-      let tmp12;
-      let tmp6;
-      let tmp7;
-      let obj = guildId(576);
-      const cResult = obj.c(13);
+      const cResult = guildId(576).c(13);
       guildId = guildId.guildId;
       ({ exemptChannels, onSave } = guildId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -167,41 +153,43 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = guildId;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = guildId(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+      const obj = guildId(576);
+      const stateFromStores = guildId(504).useStateFromStores(first, tmp6, tmp7);
       const tmp9 = closure_11(guildId);
       if (cResult[4] !== stateFromStores) {
         const fn2 = function v(channel) {
-          channel = channel.channel;
-          const obj = utils_ChannelUtils;
-          const channelIconComponentWithGuild = obj.getChannelIconComponentWithGuild(channel, stateFromStores);
+          const channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(
+            channel.channel,
+            stateFromStores,
+          );
           let tmp4 = null;
           if (null != channelIconComponentWithGuild) {
+            const obj2 = { IconComponent: channelIconComponentWithGuild };
             tmp4 = jsx(TableRow.TableRow.Icon, { IconComponent: channelIconComponentWithGuild });
           }
           return tmp4;
         };
         cResult[4] = stateFromStores;
         cResult[5] = fn2;
-        tmp10 = fn2;
+        let tmp10 = fn2;
       } else {
         tmp10 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(guildId(1126).t.OGiMXJ);
+        const stringResult = intl.string(tmp(1126).t.OGiMXJ);
         const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(guildId(1126).t.vephiL);
+        const stringResult1 = intl2.string(tmp(1126).t.vephiL);
         cResult[6] = stringResult;
         cResult[7] = stringResult1;
-        tmp12 = stringResult1;
-        tmp11 = stringResult;
+        let tmp12 = stringResult1;
+        let tmp11 = stringResult;
       } else {
         tmp11 = cResult[6];
         tmp12 = cResult[7];
@@ -209,9 +197,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[8] === exemptChannels) {
         if (cResult[9] === onSave) {
           if (cResult[10] === tmp9) {
-            let tmp15;
             if (cResult[11] === tmp10) {
-              tmp15 = cResult[12];
+              let tmp15 = cResult[12];
             }
             return tmp15;
           }
@@ -235,46 +222,74 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = tmp10;
       cResult[12] = tmp16;
       tmp15 = tmp16;
+      let obj2 = {
+        title: tmp11,
+        searchPlaceholder: tmp12,
+        listId: "automod-exempt-channels",
+        items: tmp9,
+        initialSelected: exemptChannels,
+        getId: getChannelOptionId,
+        getSearchText: getChannelOptionName,
+        renderLabel: getChannelOptionName,
+        renderIcon: tmp10,
+        onSave,
+      };
+      const tmpResult = guildId(504);
     }
   : (guildId) => {
-      let exemptChannels;
-      let onSave;
       guildId = guildId.guildId;
       ({ exemptChannels, onSave } = guildId);
-      let obj = guildId(504);
       const items = [GuildStore];
       const items1 = [guildId];
-      const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
+      const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
       const items2 = [stateFromStores];
-      const tmp2 = closure_11(guildId);
-      const callback = react.useCallback((channel) => {
-        channel = channel.channel;
-        const obj = utils_ChannelUtils;
-        const channelIconComponentWithGuild = obj.getChannelIconComponentWithGuild(channel, stateFromStores);
+      const obj = guildId(504);
+      const callback = noop.useCallback((channel) => {
+        const channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(
+          channel.channel,
+          stateFromStores,
+        );
         let tmp4 = null;
         if (null != channelIconComponentWithGuild) {
+          const obj2 = { IconComponent: channelIconComponentWithGuild };
           tmp4 = jsx(TableRow.TableRow.Icon, { IconComponent: channelIconComponentWithGuild });
         }
         return tmp4;
       }, items2);
-      let tmp4 = stateFromStores(17756);
+      let obj2 = {
+        title: null,
+        searchPlaceholder: null,
+        listId: "automod-exempt-channels",
+        items: null,
+        initialSelected: null,
+        getId: null,
+        getSearchText: null,
+        renderLabel: null,
+        renderIcon: null,
+        onSave: null,
+      };
+      const tmp2 = closure_11(guildId);
       const intl = guildId(1126).intl;
+      obj2.title = intl.string(guildId(1126).t.OGiMXJ);
       const intl2 = guildId(1126).intl;
-      return (
-        <tmp4
-          title={intl.string(guildId(1126).t.OGiMXJ)}
-          searchPlaceholder={intl2.string(guildId(1126).t.vephiL)}
-          listId="automod-exempt-channels"
-          items={tmp2}
-          initialSelected={exemptChannels}
-          getId={getChannelOptionId}
-          getSearchText={getChannelOptionName}
-          renderLabel={getChannelOptionName}
-          renderIcon={callback}
-          onSave={onSave}
-        />
-      );
+      obj2.searchPlaceholder = intl2.string(guildId(1126).t.vephiL);
+      obj2.items = tmp2;
+      obj2.initialSelected = exemptChannels;
+      obj2.getId = getChannelOptionId;
+      obj2.getSearchText = getChannelOptionName;
+      obj2.renderLabel = getChannelOptionName;
+      obj2.renderIcon = callback;
+      obj2.onSave = onSave;
+      return jsx(stateFromStores(17756), {
+        title: null,
+        searchPlaceholder: null,
+        listId: "automod-exempt-channels",
+        items: null,
+        initialSelected: null,
+        getId: null,
+        getSearchText: null,
+        renderLabel: null,
+        renderIcon: null,
+        onSave: null,
+      });
     };
-const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptChannelsActionSheet.tsx");
-
-export default tmp2;

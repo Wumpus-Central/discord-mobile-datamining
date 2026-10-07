@@ -1,52 +1,34 @@
 // discord_app/components_native/common/VoiceSensitivity.tsx
-import react_native from "../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../Constants.tsx";
-import intl5 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
-import NativePermissionConstants from "../../modules/native_permissions/NativePermissionConstants.tsx";
-import _asyncToGenerator_mod from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../_runtime/00019_react.js";
-import MediaEngineStore_mod from "../../stores/MediaEngineStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import SpeakingStore from "../../stores/SpeakingStore.tsx";
 import AppStateStore from "../../stores/native/AppStateStore.tsx";
-import Fragment from "../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../design/components/Styles/native/createStyles.tsx";
-import ColorUtils_mod from "../../utils/ColorUtils.tsx";
-import ReactCompilerGating from "../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let auto, c1, c2;
-
-let ColorUtils;
-let closure_12;
-let map1;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let rect;
-let _asyncToGenerator = _asyncToGenerator_mod;
-const View = react_native.View;
-let MediaEngineStore = MediaEngineStore_mod;
-const AppStates = Constants.AppStates;
-const NativePermissionTypes = NativePermissionConstants.NativePermissionTypes;
-({ jsx: closure_12, jsxs: map1 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
+require = fn;
+const View = fn(17).View;
+const AppStates = fn(1085).AppStates;
+const NativePermissionTypes = fn(5105).NativePermissionTypes;
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   sensitivity: { position: "relative", height: 20 },
   sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
-  sensitivityFill: rect,
-  sensitivityCommon: { height: 6, borderRadius: 3 },
-  sensitivityMin: obj2,
-  sensitivityMax: obj3,
-  sensitivityDefault: obj4,
-  sensitivitySpeaking: obj5,
-  sensitivitySlider: { flex: 1, backgroundColor: "transparent", marginVertical: -10 },
+  sensitivityFill: null,
+  sensitivityCommon: null,
+  sensitivityMin: null,
+  sensitivityMax: null,
+  sensitivityDefault: null,
+  sensitivitySpeaking: null,
+  sensitivitySlider: null,
 };
-rect = {
+const rect = {
   position: "absolute",
   backgroundColor: nativeDefault.unsafe_rawColors.WHITE,
   opacity: 0.5,
@@ -55,55 +37,44 @@ rect = {
   right: 0,
   bottom: 7,
 };
-createStyles = createStyles.createStyles;
-obj2 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
-obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-obj4 = { flex: 1, backgroundColor: ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6) };
-ColorUtils = ColorUtils_mod;
-obj5 = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
-let closure_14 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.sensitivityFill = rect;
+obj2.sensitivityCommon = { height: 6, borderRadius: 3 };
+obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
+let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
+obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+let obj5 = { flex: 1, backgroundColor: null };
+const ColorUtils = fn(4733);
+obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
+obj2.sensitivityDefault = obj5;
+let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj2.sensitivitySpeaking = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj2.sensitivitySlider = { flex: 1, backgroundColor: "transparent", marginVertical: -10 };
+let closure_14 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj6 = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/common/VoiceSensitivity.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (auto) => {
-      let closure_3;
-      let closure_7;
-      let first;
-      let first1;
-      let first3;
-      let items3;
-      let items4;
-      let ref;
-      let state;
-      let stateFromStores;
-      let tmp15;
-      let tmp16;
-      let tmp17;
-      let tmp25;
-      let tmp42;
-      let tmp43;
-      let width;
-      const tmp = auto;
-      let tmp2 = first1;
-      let obj = auto(first1[14]);
-      const cResult = obj.c(75);
+      const cResult = auto(first1[14]).c(75);
       auto = auto.auto;
       const onThresholdChange = auto.onThresholdChange;
-      const threshold = auto.threshold;
-      let tmp4 = ref();
-      const sum = threshold + 100;
-      let obj2 = stateFromStores;
+      const tmp4 = ref();
+      const sum = auto.threshold + 100;
       ref = stateFromStores.useRef(null);
       stateFromStores.useRef(null);
-      let ref2 = stateFromStores.useRef(null);
+      stateFromStores.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const result = first3.isCurrentUserSpeaking();
         cResult[0] = result;
-        first = result;
+        let first = result;
       } else {
         first = cResult[0];
       }
-      const tmp13 = width(obj2.useState(first), 2);
+      const tmp13 = width(stateFromStores.useState(first), 2);
       first1 = tmp13[0];
-      _asyncToGenerator = tmp13[1];
+      asyncGeneratorStep = tmp13[1];
       width = onThresholdChange(tmp2[15])().width;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [state];
@@ -114,72 +85,81 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = items;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp17 = items1;
-        tmp16 = fn;
-        tmp15 = items;
+        let tmp17 = items1;
+        let tmp16 = fn;
+        let tmp15 = items;
       } else {
         tmp15 = cResult[1];
         tmp16 = cResult[2];
         tmp17 = cResult[3];
       }
-      const tmpResult = tmp(tmp2[16]);
-      stateFromStores = tmpResult.useStateFromStores(tmp15, tmp16, tmp17);
-      const tmp12Result = width(obj2.useState(0), 2);
+      let obj = auto(first1[14]);
+      stateFromStores = auto(first1[16]).useStateFromStores(tmp15, tmp16, tmp17);
+      const tmp12Result = width(stateFromStores.useState(0), 2);
       const first2 = tmp12Result[0];
       MediaEngineStore = tmp12Result[1];
-      const tmp12Result4 = width(obj2.useState(sum), 2);
+      const tmp12Result4 = width(stateFromStores.useState(sum), 2);
       first3 = tmp12Result4[0];
       state = tmp12Result4[1];
-      [tmp25, AppStates] = width(obj2.useState(first3 / 100), 2);
-      width(obj2.useState(first3 / 100), 2);
-      [r10089, NativePermissionTypes] = width(obj2.useState(width * (1 - first2 / -100)), 2);
-      width(obj2.useState(width * (1 - first2 / -100)), 2);
+      const tmpResult = auto(first1[16]);
+      [tmp25, AppStates] = width(stateFromStores.useState(first3 / 100), 2);
+      const tmp12Result5 = width(stateFromStores.useState(first3 / 100), 2);
+      [r10089, NativePermissionTypes] = width(stateFromStores.useState(width * (1 - first2 / -100)), 2);
       if (cResult[4] === auto) {
-        let tmp27;
-        let tmp28;
         if (cResult[5] === first3) {
-          tmp27 = cResult[6];
-          tmp28 = cResult[7];
+          let tmp27 = cResult[6];
+          let tmp28 = cResult[7];
         }
         const effect = obj2.useEffect(tmp27, tmp28);
         if (cResult[8] === auto) {
           if (cResult[9] === first2) {
-            let tmp30;
-            let tmp31;
-            let tmp39;
             if (cResult[10] === width) {
-              tmp30 = cResult[11];
-              tmp31 = cResult[12];
+              let tmp30 = cResult[11];
+              let tmp31 = cResult[12];
             }
             const effect1 = obj2.useEffect(tmp30, tmp31);
             const _Symbol = Symbol;
             class D {
               constructor() {
                 if (!auto) {
-                  NativePermissionTypes(width * (1 - first2 / -100));
+                  tmp = closure_11;
+                  tmp2 = width;
+                  tmp3 = closure_6;
+                  num = -100;
+                  num2 = 1;
+                  tmp4 = closure_11(width * (1 - closure_6 / -100));
                 }
+                return;
               }
             }
             if (tmp33 === Symbol.for("react.memo_cache_sentinel")) {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
               cResult[13] = U;
               class D {
                 constructor() {
                   if (!auto) {
-                    NativePermissionTypes(width * (1 - first2 / -100));
+                    tmp = closure_11;
+                    tmp2 = width;
+                    tmp3 = closure_6;
+                    num = -100;
+                    num2 = 1;
+                    tmp4 = closure_11(width * (1 - closure_6 / -100));
                   }
+                  return;
                 }
               }
             } else {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
             }
@@ -188,74 +168,98 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
               cResult[14] = tmp35;
               class D {
                 constructor() {
                   if (!auto) {
-                    NativePermissionTypes(width * (1 - first2 / -100));
+                    tmp = closure_11;
+                    tmp2 = width;
+                    tmp3 = closure_6;
+                    num = -100;
+                    num2 = 1;
+                    tmp4 = closure_11(width * (1 - closure_6 / -100));
                   }
+                  return;
                 }
               }
             } else {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
             }
             if (cResult[15] !== onThresholdChange) {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
               cResult[15] = onThresholdChange;
               class D {
                 constructor() {
                   if (!auto) {
-                    NativePermissionTypes(width * (1 - first2 / -100));
+                    tmp = closure_11;
+                    tmp2 = width;
+                    tmp3 = closure_6;
+                    num = -100;
+                    num2 = 1;
+                    tmp4 = closure_11(width * (1 - closure_6 / -100));
                   }
+                  return;
                 }
               }
               cResult[16] = tmp37;
             } else {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
             }
             if (cResult[17] !== stateFromStores) {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
               const items2 = [tmp34];
               class D {
                 constructor() {
                   if (!auto) {
-                    NativePermissionTypes(width * (1 - first2 / -100));
+                    tmp = closure_11;
+                    tmp2 = width;
+                    tmp3 = closure_6;
+                    num = -100;
+                    num2 = 1;
+                    tmp4 = closure_11(width * (1 - closure_6 / -100));
                   }
+                  return;
                 }
               }
               cResult[17] = stateFromStores;
               cResult[18] = tmp40;
               cResult[19] = items2;
-              tmp39 = items2;
+              let tmp39 = items2;
             } else {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
               tmp39 = cResult[19];
@@ -263,44 +267,53 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const effect2 = obj2.useEffect(tmp40, tmp39);
             obj2.useRef(false);
             ref = obj2.useRef(false);
-            ref2 = obj2.useRef(null);
+            obj2.useRef(null);
             if (cResult[20] === auto) {
               class U {
                 constructor(arg0, arg1) {
-                  closure_3(arg1);
-                  closure_7(arg0);
+                  tmp = closure_3(arg1);
+                  tmp2 = closure_7(auto);
+                  return;
                 }
               }
               const effect3 = obj2.useEffect(tmp42, tmp43);
               if (auto) {
-                let tmp57;
                 class U {
                   constructor(arg0, arg1) {
-                    closure_3(arg1);
-                    closure_7(arg0);
+                    tmp = closure_3(arg1);
+                    tmp2 = closure_7(auto);
+                    return;
                   }
                 }
                 const _Symbol3 = Symbol;
                 class D {
                   constructor() {
                     if (!auto) {
-                      NativePermissionTypes(width * (1 - first2 / -100));
+                      tmp = closure_11;
+                      tmp2 = width;
+                      tmp3 = closure_6;
+                      num = -100;
+                      num2 = 1;
+                      tmp4 = closure_11(width * (1 - closure_6 / -100));
                     }
+                    return;
                   }
                 }
                 if (first1) {
                   class U {
                     constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
+                      tmp = closure_3(arg1);
+                      tmp2 = closure_7(auto);
+                      return;
                     }
                   }
                 }
                 if (cResult[25] !== first1) {
                   class U {
                     constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
+                      tmp = closure_3(arg1);
+                      tmp2 = closure_7(auto);
+                      return;
                     }
                   }
                   const string = tmp54.string;
@@ -308,8 +321,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   class D {
                     constructor() {
                       if (!auto) {
-                        NativePermissionTypes(width * (1 - first2 / -100));
+                        tmp = closure_11;
+                        tmp2 = width;
+                        tmp3 = closure_6;
+                        num = -100;
+                        num2 = 1;
+                        tmp4 = closure_11(width * (1 - closure_6 / -100));
                       }
+                      return;
                     }
                   }
                   cResult[25] = first1;
@@ -317,162 +336,176 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   class U {
                     constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
+                      tmp = closure_3(arg1);
+                      tmp2 = closure_7(auto);
+                      return;
                     }
                   }
-                }
-                const _Symbol4 = Symbol;
-                if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                  class U {
-                    constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
-                    }
-                  }
-                  function _e() {
-                    ref.current = false;
-                    if (null != ref2.current) {
-                      const _clearTimeout = clearTimeout;
-                      clearTimeout(ref2.current);
-                      ref2.current = null;
-                    }
-                  }
+                  const _Symbol4 = Symbol;
                   class D {
                     constructor() {
                       if (!auto) {
-                        NativePermissionTypes(width * (1 - first2 / -100));
+                        tmp = closure_11;
+                        tmp2 = width;
+                        tmp3 = closure_6;
+                        num = -100;
+                        num2 = 1;
+                        tmp4 = closure_11(width * (1 - closure_6 / -100));
                       }
+                      return;
                     }
                   }
-                  cResult[28] = _e;
-                  tmp57 = _e;
-                } else {
-                  class U {
-                    constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
-                    }
-                  }
-                  tmp57 = cResult[28];
-                }
-                if (cResult[29] === tmp50) {
-                  class U {
-                    constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
-                    }
-                  }
-                  if (cResult[32] === tmp4.sensitivityBar) {
+                  if (cResult[29] === tmp50) {
                     class U {
                       constructor(arg0, arg1) {
-                        closure_3(arg1);
-                        closure_7(arg0);
+                        tmp = closure_3(arg1);
+                        tmp2 = closure_7(auto);
+                        return;
                       }
                     }
-                    if (cResult[35] === tmp4.sensitivity) {
+                    if (cResult[32] === tmp4.sensitivityBar) {
                       class U {
                         constructor(arg0, arg1) {
-                          closure_3(arg1);
-                          closure_7(arg0);
+                          tmp = closure_3(arg1);
+                          tmp2 = closure_7(auto);
+                          return;
                         }
                       }
+                      if (cResult[35] === tmp4.sensitivity) {
+                        class U {
+                          constructor(arg0, arg1) {
+                            tmp = closure_3(arg1);
+                            tmp2 = closure_7(auto);
+                            return;
+                          }
+                        }
+                      }
+                      class D {
+                        constructor() {
+                          if (!auto) {
+                            tmp = closure_11;
+                            tmp2 = width;
+                            tmp3 = closure_6;
+                            num = -100;
+                            num2 = 1;
+                            tmp4 = closure_11(width * (1 - closure_6 / -100));
+                          }
+                          return;
+                        }
+                      }
+                      tmp69[2] = tmp52;
+                      tmp69[3] = num25;
+                      tmp69[6] = tmp53;
+                      tmp69[7] = tmp58;
+                      tmp69[8] = tmp59;
+                      tmp69[9] = tmp4.sensitivity;
+                      tmp69[10] = tmp64;
+                      const tmp70 = closure_12(tmp(tmp2[21]).AccessibilityFocusView, tmp69);
+                      cResult[35] = tmp4.sensitivity;
+                      cResult[36] = num25;
+                      cResult[37] = tmp53;
+                      cResult[38] = tmp64;
+                      cResult[39] = tmp70;
                     }
                     class D {
                       constructor() {
                         if (!auto) {
-                          NativePermissionTypes(width * (1 - first2 / -100));
+                          tmp = closure_11;
+                          tmp2 = width;
+                          tmp3 = closure_6;
+                          num = -100;
+                          num2 = 1;
+                          tmp4 = closure_11(width * (1 - closure_6 / -100));
                         }
+                        return;
                       }
                     }
-                    tmp68[2] = tmp52;
-                    tmp68[3] = 0;
-                    tmp68[6] = tmp55;
-                    tmp68[7] = tmp58;
-                    tmp68[8] = tmp57;
-                    tmp68[9] = tmp4.sensitivity;
-                    tmp68[10] = tmp63;
-                    cResult[35] = tmp4.sensitivity;
-                    cResult[36] = 0;
-                    cResult[37] = tmp55;
-                    cResult[38] = tmp63;
-                    cResult[39] = closure_12(tmp(tmp2[21]).AccessibilityFocusView, tmp68);
-                    const tmp69 = closure_12(tmp(tmp2[21]).AccessibilityFocusView, tmp68);
+                    const obj3 = { style: tmp4.sensitivityBar, children: tmp60 };
+                    const tmp66 = closure_12(first2, obj3);
+                    cResult[32] = tmp4.sensitivityBar;
+                    cResult[33] = tmp60;
+                    cResult[34] = tmp66;
                   }
-                  class D {
-                    constructor() {
-                      if (!auto) {
-                        NativePermissionTypes(width * (1 - first2 / -100));
-                      }
-                    }
-                  }
-                  let obj3 = { style: tmp4.sensitivityBar, children: tmp59 };
-                  cResult[32] = tmp4.sensitivityBar;
-                  cResult[33] = tmp59;
-                  cResult[34] = closure_12(first2, obj3);
-                  const tmp65 = closure_12(first2, obj3);
+                  let obj4 = { style: null };
+                  const items3 = [tmp4.sensitivityCommon, tmp50];
+                  obj4.style = items3;
+                  const tmp63 = closure_12(first2, obj4);
+                  cResult[29] = tmp50;
+                  cResult[30] = tmp4.sensitivityCommon;
+                  cResult[31] = tmp63;
                 }
-                let obj4 = { style: items3 };
-                items3 = [tmp4.sensitivityCommon, tmp50];
-                cResult[29] = tmp50;
-                cResult[30] = tmp4.sensitivityCommon;
-                cResult[31] = closure_12(first2, obj4);
-                const tmp62 = closure_12(first2, obj4);
               } else {
                 class U {
                   constructor(arg0, arg1) {
-                    closure_3(arg1);
-                    closure_7(arg0);
+                    tmp = closure_3(arg1);
+                    tmp2 = closure_7(auto);
+                    return;
                   }
                 }
                 if (cResult[43] !== tmp25) {
                   class U {
                     constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
+                      tmp = closure_3(arg1);
+                      tmp2 = closure_7(auto);
+                      return;
                     }
                   }
                   tmp46[0] = tmp25;
                   class D {
                     constructor() {
                       if (!auto) {
-                        NativePermissionTypes(width * (1 - first2 / -100));
+                        tmp = closure_11;
+                        tmp2 = width;
+                        tmp3 = closure_6;
+                        num = -100;
+                        num2 = 1;
+                        tmp4 = closure_11(width * (1 - closure_6 / -100));
                       }
+                      return;
                     }
                   }
                   cResult[44] = tmp46;
                 } else {
                   class U {
                     constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
+                      tmp = closure_3(arg1);
+                      tmp2 = closure_7(auto);
+                      return;
                     }
                   }
                 }
                 if (cResult[45] === tmp4.sensitivityCommon) {
                   class U {
                     constructor(arg0, arg1) {
-                      closure_3(arg1);
-                      closure_7(arg0);
+                      tmp = closure_3(arg1);
+                      tmp2 = closure_7(auto);
+                      return;
                     }
                   }
                 }
                 class D {
                   constructor() {
                     if (!auto) {
-                      NativePermissionTypes(width * (1 - first2 / -100));
+                      tmp = closure_11;
+                      tmp2 = width;
+                      tmp3 = closure_6;
+                      num = -100;
+                      num2 = 1;
+                      tmp4 = closure_11(width * (1 - closure_6 / -100));
                     }
+                    return;
                   }
                 }
-                let obj5 = { ref, style: items4 };
-                items4 = [, ,];
+                let obj5 = { ref, style: null };
+                const items4 = [, ,];
                 ({ sensitivityCommon: arr7[0], sensitivityMin: arr7[1] } = tmp4);
                 items4[2] = tmp46;
+                obj5.style = items4;
+                const tmp49 = closure_12(first2, obj5);
                 cResult[45] = tmp4.sensitivityCommon;
                 cResult[46] = tmp4.sensitivityMin;
                 cResult[47] = tmp46;
-                cResult[48] = closure_12(first2, obj5);
-                const tmp49 = closure_12(first2, obj5);
+                cResult[48] = tmp49;
               }
             }
             function ve() {
@@ -486,17 +519,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         ref.current = null;
                       }
                       let AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-                      let announce = AccessibilityAnnouncer.announce;
-                      let intl = intl5.intl;
-                      announce(intl.string(intl5.t.haLKZ0));
+                      let intl = util.intl;
+                      AccessibilityAnnouncer.announce(intl.string(util.t.haLKZ0));
                     } else {
                       const _setTimeout = setTimeout;
                       ref.current = setTimeout(() => {
                         ref.current = null;
                         const AccessibilityAnnouncer = auto(first1[19]).AccessibilityAnnouncer;
-                        const announce = AccessibilityAnnouncer.announce;
                         const intl = auto(first1[20]).intl;
-                        announce(intl.string(auto(first1[20]).t.X2hJL7));
+                        AccessibilityAnnouncer.announce(intl.string(auto(first1[20]).t.X2hJL7));
                       }, 1000);
                     }
                     return () => {
@@ -526,8 +557,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         class D {
           constructor() {
             if (!auto) {
-              NativePermissionTypes(width * (1 - first2 / -100));
+              tmp = closure_11;
+              tmp2 = width;
+              tmp3 = closure_6;
+              num = -100;
+              num2 = 1;
+              tmp4 = closure_11(width * (1 - closure_6 / -100));
             }
+            return;
           }
         }
         const items6 = [auto, first2, width];
@@ -542,8 +579,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       class W {
         constructor() {
           if (!auto) {
-            AppStates(first3 / 100);
+            tmp = closure_10;
+            tmp2 = closure_8;
+            num = 100;
+            tmp3 = closure_10(closure_8 / 100);
           }
+          return;
         }
       }
       const items7 = [auto, first3];
@@ -553,59 +594,40 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items7;
       tmp28 = items7;
       tmp27 = W;
+      const tmp12Result6 = width(stateFromStores.useState(width * (1 - first2 / -100)), 2);
     }
   : (auto) => {
-      let _undefined;
-      let c10;
-      let fn;
-      let intl;
-      let intl2;
-      let intl4;
-      let items10;
-      let items11;
-      let items5;
-      let items6;
-      let items7;
-      let items8;
-      let items9;
-      let num;
-      let obj4;
-      let obj5;
-      let stringResult;
-      let tmp17;
       auto = auto.auto;
       const onThresholdChange = auto.onThresholdChange;
       let width;
       let stateFromStores;
       let first2;
-      let state;
+      state = undefined;
       c10 = undefined;
       let ref;
-      const threshold = auto.threshold;
       const tmp = ref();
-      const sum = threshold + 100;
+      const sum = auto.threshold + 100;
       stateFromStores.useRef(null);
-      const ref1 = stateFromStores.useRef(null);
       stateFromStores.useRef(null);
       const tmp6 = width(stateFromStores.useState(first2.isCurrentUserSpeaking()), 2);
       const first = tmp6[0];
-      let closure_3 = tmp6[1];
+      closure_3 = tmp6[1];
       width = onThresholdChange(first[15])().width;
-      let obj = auto(first[16]);
+      const ref1 = stateFromStores.useRef(null);
+      const tmp8 = onThresholdChange;
       const items = [state];
-      stateFromStores = obj.useStateFromStores(items, () => state.getState(), []);
+      stateFromStores = auto(first[16]).useStateFromStores(items, () => state.getState(), []);
       const tmp12 = width(stateFromStores.useState(0), 2);
       const first1 = tmp12[0];
-      let closure_7 = tmp12[1];
+      closure_7 = tmp12[1];
       const tmp14 = width(stateFromStores.useState(sum), 2);
       first2 = tmp14[0];
       state = tmp14[1];
-      const tmp16 = width(stateFromStores.useState(first2 / 100), 2);
-      [tmp17, c10] = tmp16;
+      let obj = auto(first[16]);
+      [tmp17, c10] = width(stateFromStores.useState(first2 / 100), 2);
       const tmp18 = width(stateFromStores.useState(width * (1 - first1 / -100)), 2);
-      let closure_11 = tmp18[1];
+      closure_11 = tmp18[1];
       const items1 = [auto, first2];
-      const first3 = tmp18[0];
       const effect = stateFromStores.useEffect(() => {
         if (!auto) {
           _undefined(first2 / 100);
@@ -626,76 +648,79 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         state(arg0);
       }, []);
       const effect2 = stateFromStores.useEffect(() => {
-        let _true;
-        function listenOnlyIfWeHavePermission() {
-          return obj(...arguments);
-        }
-        let obj = function _listenOnlyIfWeHavePermission2() {
-          obj = _asyncToGenerator(async () => {
-            let obj3;
-            if (c2 === 2) {
-              c2 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp2 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
+        closure_1 = async function _listenOnlyIfWeHavePermission2() {
+          if (c2 === 2) {
+            c2 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj = { value, done: true };
+              return obj;
             } else {
-              try {
-                c2 = 2;
-                if (0 === c1) {
-                  if (arg0 === 1) {
-                    c2 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c2 = 3;
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    let closure_0 = tmp3;
-                    c1 = 1;
-                    c2 = 1;
-                    const obj4 = {
-                      value: obj3.hasPermission(constants.AUDIO, { showAuthorizationError: false }),
-                      done: false,
-                    };
-                    obj3 = closure_2_1(first[17]);
-                    return obj4;
-                  }
-                } else if (arg0 === 1) {
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            try {
+              c2 = 2;
+              if (0 === c1) {
+                if (arg0 === 1) {
                   c2 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c2 = 3;
-                  const obj5 = { value, done: true };
-                  return obj5;
+                  const obj2 = { value, done: true };
+                  return obj2;
                 } else {
-                  const tmp4 = value && !closure_128_0;
-                  if (tmp4) {
-                    mediaEngine = mediaEngine.getMediaEngine();
-                    mediaEngine.on(_true(first[18]).MediaEngineEvent.VoiceActivity, closure_1_12);
-                  }
-                  c2 = 3;
-                  return { value: "IconComponent", done: null };
+                  closure_0 = tmp4;
+                  c1 = 1;
+                  c2 = 1;
+                  const obj4 = {
+                    value: onThresholdChange(7288).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                    done: false,
+                  };
+                  return obj4;
                 }
-              } catch (tmp16) {
+              } else if (arg0 === 1) {
                 c2 = 3;
-                throw tmp16;
+                throw value;
+              } else if (arg0 === 2) {
+                c2 = 3;
+                const obj5 = { value, done: true };
+                return obj5;
+              } else {
+                let tmp5 = value;
+                if (value) {
+                  tmp5 = !closure_128_0;
+                }
+                if (tmp5) {
+                  mediaEngine = mediaEngine.getMediaEngine();
+                  mediaEngine.on(auto(4951).MediaEngineEvent.VoiceActivity, callback);
+                }
+                c2 = 3;
+                return { value: "IconComponent", done: null };
               }
+            } catch (tmp17) {
+              c2 = tmp;
+              throw tmp17;
             }
-          });
-          return obj(...arguments);
+          }
         };
         if (stateFromStores === _undefined.ACTIVE) {
-          let c0 = false;
-          listenOnlyIfWeHavePermission();
+          c0 = false;
+          (function listenOnlyIfWeHavePermission() {
+            const self = this;
+            const apply = closure_1.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })();
           return () => {
-            let c0 = true;
+            c0 = true;
             const mediaEngine = MediaEngineStore.getMediaEngine();
             mediaEngine.removeListener(BaseConnectionEvent.MediaEngineEvent.VoiceActivity, callback);
           };
@@ -716,17 +741,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   ref.current = null;
                 }
                 let AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-                let announce = AccessibilityAnnouncer.announce;
-                let intl = intl5.intl;
-                announce(intl.string(intl5.t.haLKZ0));
+                let intl = util.intl;
+                AccessibilityAnnouncer.announce(intl.string(util.t.haLKZ0));
               } else {
                 const _setTimeout = setTimeout;
                 ref.current = setTimeout(() => {
                   ref.current = null;
                   const AccessibilityAnnouncer = auto(first[19]).AccessibilityAnnouncer;
-                  const announce = AccessibilityAnnouncer.announce;
                   const intl = auto(first[20]).intl;
-                  announce(intl.string(auto(first[20]).t.X2hJL7));
+                  AccessibilityAnnouncer.announce(intl.string(auto(first[20]).t.X2hJL7));
                 }, 1000);
               }
               return () => {
@@ -744,76 +767,86 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp.current = true;
         }
       }, items4);
-      const tmp8 = onThresholdChange;
       if (auto) {
         let obj2 = {
           accessible: true,
           role: "meter",
-          "aria-label": intl2.string(auto(first[20]).t.yZcOjo),
-          "aria-valuenow": num,
+          "aria-label": null,
+          "aria-valuenow": null,
           "aria-valuemin": 0,
           "aria-valuemax": 100,
-          "aria-valuetext": stringResult,
-          onAccessibilityFocus() {
-            ref.current = true;
-          },
-          onAccessibilityBlur() {
-            ref.current = false;
-            if (null != ref2.current) {
-              const _clearTimeout = clearTimeout;
-              clearTimeout(ref2.current);
-              ref2.current = null;
-            }
-          },
-          style: tmp.sensitivity,
-          children: callback(first1, obj4),
+          "aria-valuetext": null,
+          onAccessibilityFocus: null,
+          onAccessibilityBlur: null,
+          style: null,
+          children: null,
         };
-        const tmp30 = first ? tmp.sensitivitySpeaking : tmp.sensitivityDefault;
-        const AccessibilityFocusView = tmp10(tmp9[21]).AccessibilityFocusView;
-        intl2 = tmp10(tmp9[20]).intl;
-        num = 0;
-        const tmp31 = ref;
+        const intl2 = tmp10(tmp9[20]).intl;
+        obj2["aria-label"] = intl2.string(tmp10(tmp9[20]).t.yZcOjo);
+        let num = 0;
         if (first) {
           num = 100;
         }
+        obj2["aria-valuenow"] = num;
         const intl3 = tmp10(tmp9[20]).intl;
         const string = intl3.string;
         const t = tmp10(tmp9[20]).t;
         if (first) {
-          stringResult = string(t.haLKZ0);
+          let stringResult = string(t.haLKZ0);
         } else {
           stringResult = string(t.X2hJL7);
         }
-        let obj3 = { children: items6 };
-        obj4 = { style: tmp.sensitivityBar, children: callback(first1, obj5) };
-        obj5 = { style: items5 };
-        items5 = [tmp.sensitivityCommon, tmp30];
-        items6 = [callback(AccessibilityFocusView, obj2)];
-        const obj6 = { inset: true, children: intl4.string(auto(first[20]).t.W3K5Im) };
-        const FormHint = tmp10(tmp9[22]).FormHint;
-        intl4 = tmp10(tmp9[20]).intl;
-        items6[1] = callback(FormHint, obj6);
-        return tmp31(first1, obj3);
+        const obj3 = { children: null };
+        obj2["aria-valuetext"] = stringResult;
+        obj2.onAccessibilityFocus = function onAccessibilityFocus() {
+          closure_14.current = true;
+        };
+        obj2.onAccessibilityBlur = function onAccessibilityBlur() {
+          closure_14.current = false;
+          if (null != ref2.current) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(ref2.current);
+            ref2.current = null;
+          }
+        };
+        obj2.style = tmp.sensitivity;
+        let obj4 = { style: tmp.sensitivityBar, children: null };
+        let obj5 = { style: null };
+        const items5 = [tmp.sensitivityCommon, first ? tmp.sensitivitySpeaking : tmp.sensitivityDefault];
+        obj5.style = items5;
+        obj4.children = callback(first1, obj5);
+        obj2.children = callback(first1, obj4);
+        const items6 = [callback(tmp10(tmp9[21]).AccessibilityFocusView, obj2)];
+        const obj6 = { inset: true, children: null };
+        const intl4 = tmp10(tmp9[20]).intl;
+        obj6.children = intl4.string(tmp10(tmp9[20]).t.W3K5Im);
+        items6[1] = callback(tmp10(tmp9[22]).FormHint, obj6);
+        obj3.children = items6;
+        return ref(first1, obj3);
       } else {
-        const obj9 = { ref, style: items7 };
-        items7 = [, ,];
-        const obj7 = { style: tmp.sensitivity, children: items10 };
-        const obj8 = { style: tmp.sensitivityBar, children: items8 };
+        const obj7 = { style: tmp.sensitivity, children: null };
+        const obj8 = { style: tmp.sensitivityBar, children: null };
+        const obj9 = { ref, style: null };
+        const items7 = [, ,];
         ({ sensitivityCommon: arr6[0], sensitivityMin: arr6[1] } = tmp);
         const obj10 = { flex: tmp17 };
         items7[2] = obj10;
-        items8 = [callback(first1, obj9)];
-        const obj11 = { ref: ref1, style: items9 };
-        items9 = [, ,];
+        obj9.style = items7;
+        const items8 = [callback(first1, obj9)];
+        const obj11 = { ref: ref1, style: null };
+        const items9 = [, ,];
         ({ sensitivityCommon: arr8[0], sensitivityMax: arr8[1] } = tmp);
         const obj12 = { flex: 1 - tmp17 };
         items9[2] = obj12;
+        obj11.style = items9;
         items8[1] = callback(first1, obj11);
-        items10 = [ref(first1, obj8), ,];
-        const obj13 = { ref: ref2, style: items11 };
-        items11 = [tmp.sensitivityFill];
-        const obj14 = { left: first3 };
+        obj8.children = items8;
+        const items10 = [ref(first1, obj8), ,];
+        const obj13 = { ref: ref2, style: null };
+        const items11 = [tmp.sensitivityFill];
+        const obj14 = { left: tmp18[0] };
         items11[1] = obj14;
+        obj13.style = items11;
         items10[1] = callback(first1, obj13);
         const obj15 = {
           style: tmp.sensitivitySlider,
@@ -822,27 +855,29 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           maximumValue: 100,
           minimumTrackTintColor: "transparent",
           maximumTrackTintColor: "transparent",
-          accessibilityLabel: intl.string(auto(first[20]).t["sqUm+k"]),
-          onValueChange: callback1,
-          onSlidingComplete: function handleSlidingComplete(arg0) {
-            onThresholdChange(-1 * (100 - arg0));
-          },
-          onResponderGrant: fn,
+          accessibilityLabel: null,
+          onValueChange: null,
+          onSlidingComplete: null,
+          onResponderGrant: null,
         };
-        const tmp8Result = tmp8(first[24]);
-        intl = tmp10(tmp9[20]).intl;
-        fn = undefined;
-        const tmp10Result = auto(first[23]);
-        const tmp26 = ref;
-        const tmp27 = first1;
-        const tmp28 = callback;
+        let intl = tmp10(tmp9[20]).intl;
+        obj15.accessibilityLabel = intl.string(tmp10(tmp9[20]).t["sqUm+k"]);
+        obj15.onValueChange = callback1;
+        obj15.onSlidingComplete = function handleSlidingComplete(arg0) {
+          onThresholdChange(-1 * (100 - arg0));
+        };
+        const tmp25 = ref;
+        const tmp26 = first1;
+        const tmp27 = callback;
+        const tmp8Result = tmp8(tmp9[24]);
+        let fn;
         if (tmp10Result.isAndroid()) {
           fn = () => true;
         }
-        items10[2] = tmp28(tmp8Result, obj15);
-        return tmp26(tmp27, obj7);
+        obj15.onResponderGrant = fn;
+        items10[2] = tmp27(tmp8Result, obj15);
+        obj7.children = items10;
+        return tmp25(tmp26, obj7);
       }
+      const tmp16 = width(stateFromStores.useState(first2 / 100), 2);
     };
-let result = size.fileFinishedImporting("components_native/common/VoiceSensitivity.tsx");
-
-export default tmp4;

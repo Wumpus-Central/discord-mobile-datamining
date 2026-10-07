@@ -1,5 +1,5 @@
 // discord_app/modules/multi_account/native/openManageAccountsModal.tsx
-import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Constants from "../Constants.tsx";
@@ -9,9 +9,10 @@ const SWITCH_ACCOUNTS_MODAL_KEY = Constants.SWITCH_ACCOUNTS_MODAL_KEY;
 const result = size.fileFinishedImporting("modules/multi_account/native/openManageAccountsModal.tsx");
 
 export default function openManageAccountsModal(initialRouteName) {
-  const obj = ActionSheetActionCreatorsDefault;
-  obj.hideActionSheet();
-  const obj2 = ModalActionCreatorsDefault;
-  const obj3 = { initialRouteName };
-  obj2.pushLazy(asyncRequire(16356, dependencyMap.paths), obj3, SWITCH_ACCOUNTS_MODAL_KEY);
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  ModalActionCreatorsDefault.pushLazy(
+    asyncRequireImpl(16356, dependencyMap.paths),
+    { initialRouteName },
+    SWITCH_ACCOUNTS_MODAL_KEY,
+  );
 }

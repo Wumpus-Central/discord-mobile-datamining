@@ -1,5 +1,4 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesFastestList.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import FastestListPropsPlaceholder from "../../../../fastest_list/props/FastestListPropsPlaceholder.tsx";
 import FastestListItemTypeDefault from "../../../../fastest_list/FastestListItemType.tsx";
@@ -12,71 +11,53 @@ import MessagesItemEmptyState from "items/MessagesItemEmptyState.tsx";
 import MessagesItemSeparator from "items/MessagesItemSeparator.tsx";
 import MessagesItemSuggestedFriendsHeaderDefault from "items/MessagesItemSuggestedFriendsHeader.tsx";
 import MessagesItemAddFriendsWidget from "items/MessagesItemAddFriendsWidget.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const MessagesItemHappeningNowDefault = MessagesItemHappeningNow;
-const MessagesItemEmptyStateDefault = MessagesItemEmptyState;
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
-  ({ backgroundColor: nativeDefault.colors.BORDER_SUBTLE });
   return obj;
 });
-const memoResult = react.memo(
-  react.forwardRef(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFastestList.tsx");
+
+export default noop.memo(
+  noop.forwardRef(
     ReactCompilerGating.isReactCompilerEnabled()
       ? (listLeft, arg1) => {
-          let accessibilityLabel;
-          let data;
-          let handleScrollAnimated;
-          let insetEnd;
-          let listItemHeight;
-          let listItemSizes;
-          let listItemSuggestedFriendHeight;
-          let scrollIndicatorInsetBottom;
-          let scrollPosition;
-          let sections;
-          let setAddedFriendSuggestions;
-          let tmp4;
-          let tmp5;
-          let obj = listItemHeight(listLeft[5]);
-          const cResult = obj.c(58);
+          const cResult = listItemHeight(listLeft[5]).c(58);
           ({ accessibilityLabel, data, handleScrollAnimated, insetEnd, listItemHeight } = listLeft);
           ({ listItemSizes, listItemSuggestedFriendHeight } = listLeft);
           listLeft = listLeft.listLeft;
           const listRefHappeningNow = listLeft.listRefHappeningNow;
           const listTop = listLeft.listTop;
           ({ scrollIndicatorInsetBottom, scrollPosition } = listLeft);
-          let tmp2 = scrollPosition();
+          scrollPosition();
           const channels = data.channels;
           const channelFavorites = data.channelFavorites;
           const friendSuggestions = data.friendSuggestions;
           const renderHeader = data.renderHeader;
           const renderFooter = data.renderFooter;
           ({ sections, setAddedFriendSuggestions } = data);
-          const ref = listRefHappeningNow.useRef(null);
-          const obj2 = listRefHappeningNow;
+          listRefHappeningNow.useRef(null);
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
             const fn = function c() {
-              let obj = {
+              return {
                 scrollToTop(arg0) {
                   const current = ref.current;
-                  const tmp = undefined !== arg0 && arg0;
                   if (current != null) {
                     const obj = { section: 0, item: 0, animated: tmp };
                     current.scrollToLocation(obj);
                   }
                 },
               };
-              return obj;
             };
             const items = [];
-            let num = 0;
             cResult[0] = fn;
             cResult[1] = items;
             tmp4 = fn;
@@ -84,7 +65,7 @@ const memoResult = react.memo(
           } else {
             [tmp4, tmp5] = cResult;
           }
-          const imperativeHandle = obj2.useImperativeHandle(arg1, tmp4, tmp5);
+          const imperativeHandle = listRefHappeningNow.useImperativeHandle(arg1, tmp4, tmp5);
           if (cResult[2] === channelFavorites) {
             if (cResult[3] === channels) {
               if (cResult[4] === friendSuggestions) {
@@ -92,21 +73,27 @@ const memoResult = react.memo(
                   if (cResult[6] === listItemSuggestedFriendHeight) {
                     if (cResult[9] === listLeft) {
                       if (cResult[10] === listTop) {
-                        let tmp8;
                         if (cResult[11] === scrollPosition) {
-                          tmp8 = cResult[12];
+                          let tmp8 = cResult[12];
                         }
                         const _Symbol = Symbol;
                         class L {
-                          constructor(arg0, arg1, stickyAt) {
-                            let tmp2 = null;
-                            if (arg0 === useMessagesData.MessagesDataSections.SuggestedFriends) {
-                              tmp2 = jsx(MessagesItemSuggestedFriendsHeaderDefault, {
-                                scrollPosition,
-                                stickyAt,
-                                stickyTop: listTop,
-                                stickyLeft: listLeft,
-                              });
+                          constructor(arg0, arg1, arg2) {
+                            tmp = closure_2;
+                            tmp2 = null;
+                            if (listLeft === closure_0(closure_2[6]).MessagesDataSections.SuggestedFriends) {
+                              tmp3 = arg2;
+                              tmp4 = jsx;
+                              tmp5 = closure_1;
+                              obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
+                              tmp6 = scrollPosition;
+                              obj.scrollPosition = scrollPosition;
+                              obj.stickyAt = arg2;
+                              tmp7 = listTop;
+                              obj.stickyTop = listTop;
+                              tmp8 = listLeft;
+                              obj.stickyLeft = listLeft;
+                              tmp2 = jsx(closure_1(tmp[11]), obj);
                             }
                             return tmp2;
                           }
@@ -114,23 +101,32 @@ const memoResult = react.memo(
                         if (tmp9 === Symbol.for("react.memo_cache_sentinel")) {
                           class N {
                             constructor(arg0) {
-                              let num = 0;
-                              if (arg0 === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
-                                num = listItemHeight(listLeft[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
+                              tmp = listItemHeight;
+                              tmp2 = listLeft;
+                              num = 0;
+                              if (listLeft === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
+                                num = tmp(tmp2[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
                               }
                               return num;
                             }
                           }
                           class L {
-                            constructor(arg0, arg1, stickyAt) {
-                              let tmp2 = null;
-                              if (arg0 === useMessagesData.MessagesDataSections.SuggestedFriends) {
-                                tmp2 = jsx(MessagesItemSuggestedFriendsHeaderDefault, {
-                                  scrollPosition,
-                                  stickyAt,
-                                  stickyTop: listTop,
-                                  stickyLeft: listLeft,
-                                });
+                            constructor(arg0, arg1, arg2) {
+                              tmp = closure_2;
+                              tmp2 = null;
+                              if (listLeft === closure_0(closure_2[6]).MessagesDataSections.SuggestedFriends) {
+                                tmp3 = arg2;
+                                tmp4 = jsx;
+                                tmp5 = closure_1;
+                                obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
+                                tmp6 = scrollPosition;
+                                obj.scrollPosition = scrollPosition;
+                                obj.stickyAt = arg2;
+                                tmp7 = listTop;
+                                obj.stickyTop = listTop;
+                                tmp8 = listLeft;
+                                obj.stickyLeft = listLeft;
+                                tmp2 = jsx(closure_1(tmp[11]), obj);
                               }
                               return tmp2;
                             }
@@ -138,9 +134,11 @@ const memoResult = react.memo(
                         } else {
                           class N {
                             constructor(arg0) {
-                              let num = 0;
-                              if (arg0 === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
-                                num = listItemHeight(listLeft[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
+                              tmp = listItemHeight;
+                              tmp2 = listLeft;
+                              num = 0;
+                              if (listLeft === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
+                                num = tmp(tmp2[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
                               }
                               return num;
                             }
@@ -149,24 +147,33 @@ const memoResult = react.memo(
                         if (cResult[14] !== tmp8) {
                           class N {
                             constructor(arg0) {
-                              let num = 0;
-                              if (arg0 === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
-                                num = listItemHeight(listLeft[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
+                              tmp = listItemHeight;
+                              tmp2 = listLeft;
+                              num = 0;
+                              if (listLeft === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
+                                num = tmp(tmp2[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
                               }
                               return num;
                             }
                           }
                           tmp12[0] = tmp8;
                           class L {
-                            constructor(arg0, arg1, stickyAt) {
-                              let tmp2 = null;
-                              if (arg0 === useMessagesData.MessagesDataSections.SuggestedFriends) {
-                                tmp2 = jsx(MessagesItemSuggestedFriendsHeaderDefault, {
-                                  scrollPosition,
-                                  stickyAt,
-                                  stickyTop: listTop,
-                                  stickyLeft: listLeft,
-                                });
+                            constructor(arg0, arg1, arg2) {
+                              tmp = closure_2;
+                              tmp2 = null;
+                              if (listLeft === closure_0(closure_2[6]).MessagesDataSections.SuggestedFriends) {
+                                tmp3 = arg2;
+                                tmp4 = jsx;
+                                tmp5 = closure_1;
+                                obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
+                                tmp6 = scrollPosition;
+                                obj.scrollPosition = scrollPosition;
+                                obj.stickyAt = arg2;
+                                tmp7 = listTop;
+                                obj.stickyTop = listTop;
+                                tmp8 = listLeft;
+                                obj.stickyLeft = listLeft;
+                                tmp2 = jsx(closure_1(tmp[11]), obj);
                               }
                               return tmp2;
                             }
@@ -174,11 +181,22 @@ const memoResult = react.memo(
                           cResult[14] = tmp8;
                           class X {
                             constructor() {
-                              if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
-                                return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
-                              } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
-                                return jsx(MessagesItemEmptyStateDefault, {});
+                              tmp3 = closure_2;
+                              tmp = renderHeader;
+                              tmp2 = closure_0;
+                              if (closure_0(closure_2[6]).MessagesDataHeader.HappeningNow === renderHeader) {
+                                tmp7 = jsx;
+                                tmp8 = closure_1;
+                                obj = { listRef: null };
+                                tmp9 = listRefHappeningNow;
+                                obj.listRef = listRefHappeningNow;
+                                return jsx(closure_1(tmp3[12]), obj);
+                              } else if (tmp2(tmp3[6]).MessagesDataHeader.EmptyState === tmp) {
+                                tmp5 = jsx;
+                                tmp6 = closure_1;
+                                return jsx(closure_1(tmp3[13]), {});
                               } else {
+                                tmp4 = null;
                                 return null;
                               }
                             }
@@ -186,9 +204,11 @@ const memoResult = react.memo(
                         } else {
                           class N {
                             constructor(arg0) {
-                              let num = 0;
-                              if (arg0 === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
-                                num = listItemHeight(listLeft[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
+                              tmp = listItemHeight;
+                              tmp2 = listLeft;
+                              num = 0;
+                              if (listLeft === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
+                                num = tmp(tmp2[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
                               }
                               return num;
                             }
@@ -197,9 +217,11 @@ const memoResult = react.memo(
                         if (cResult[16] === listRefHappeningNow) {
                           class N {
                             constructor(arg0) {
-                              let num = 0;
-                              if (arg0 === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
-                                num = listItemHeight(listLeft[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
+                              tmp = listItemHeight;
+                              tmp2 = listLeft;
+                              num = 0;
+                              if (listLeft === listItemHeight(listLeft[6]).MessagesDataSections.SuggestedFriends) {
+                                num = tmp(tmp2[11]).MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT;
                               }
                               return num;
                             }
@@ -207,26 +229,37 @@ const memoResult = react.memo(
                           if (cResult[19] !== renderHeader) {
                             class B {
                               constructor() {
-                                if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
-                                  const tmp2Result = MessagesItemHappeningNow;
+                                tmp2 = closure_0;
+                                tmp3 = closure_2;
+                                tmp = renderHeader;
+                                if (closure_0(closure_2[6]).MessagesDataHeader.HappeningNow === renderHeader) {
+                                  tmp2Result = tmp2(tmp3[12]);
                                   return tmp2Result.getMessagesItemHappeningNowHeight();
-                                } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
-                                  return MessagesItemEmptyState.MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
+                                } else if (tmp2(tmp3[6]).MessagesDataHeader.EmptyState === tmp) {
+                                  return tmp2(tmp3[13]).MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
                                 } else {
+                                  num = 0;
                                   return 0;
                                 }
                               }
                             }
                             class L {
-                              constructor(arg0, arg1, stickyAt) {
-                                let tmp2 = null;
-                                if (arg0 === useMessagesData.MessagesDataSections.SuggestedFriends) {
-                                  tmp2 = jsx(MessagesItemSuggestedFriendsHeaderDefault, {
-                                    scrollPosition,
-                                    stickyAt,
-                                    stickyTop: listTop,
-                                    stickyLeft: listLeft,
-                                  });
+                              constructor(arg0, arg1, arg2) {
+                                tmp = closure_2;
+                                tmp2 = null;
+                                if (listLeft === closure_0(closure_2[6]).MessagesDataSections.SuggestedFriends) {
+                                  tmp3 = arg2;
+                                  tmp4 = jsx;
+                                  tmp5 = closure_1;
+                                  obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
+                                  tmp6 = scrollPosition;
+                                  obj.scrollPosition = scrollPosition;
+                                  obj.stickyAt = arg2;
+                                  tmp7 = listTop;
+                                  obj.stickyTop = listTop;
+                                  tmp8 = listLeft;
+                                  obj.stickyLeft = listLeft;
+                                  tmp2 = jsx(closure_1(tmp[11]), obj);
                                 }
                                 return tmp2;
                               }
@@ -235,39 +268,61 @@ const memoResult = react.memo(
                           } else {
                             class B {
                               constructor() {
-                                if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
-                                  const tmp2Result = MessagesItemHappeningNow;
+                                tmp2 = closure_0;
+                                tmp3 = closure_2;
+                                tmp = renderHeader;
+                                if (closure_0(closure_2[6]).MessagesDataHeader.HappeningNow === renderHeader) {
+                                  tmp2Result = tmp2(tmp3[12]);
                                   return tmp2Result.getMessagesItemHappeningNowHeight();
-                                } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
-                                  return MessagesItemEmptyState.MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
+                                } else if (tmp2(tmp3[6]).MessagesDataHeader.EmptyState === tmp) {
+                                  return tmp2(tmp3[13]).MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
                                 } else {
+                                  num = 0;
                                   return 0;
                                 }
                               }
                             }
                           }
                           class L {
-                            constructor(arg0, arg1, stickyAt) {
-                              let tmp2 = null;
-                              if (arg0 === useMessagesData.MessagesDataSections.SuggestedFriends) {
-                                tmp2 = jsx(MessagesItemSuggestedFriendsHeaderDefault, {
-                                  scrollPosition,
-                                  stickyAt,
-                                  stickyTop: listTop,
-                                  stickyLeft: listLeft,
-                                });
+                            constructor(arg0, arg1, arg2) {
+                              tmp = closure_2;
+                              tmp2 = null;
+                              if (listLeft === closure_0(closure_2[6]).MessagesDataSections.SuggestedFriends) {
+                                tmp3 = arg2;
+                                tmp4 = jsx;
+                                tmp5 = closure_1;
+                                obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
+                                tmp6 = scrollPosition;
+                                obj.scrollPosition = scrollPosition;
+                                obj.stickyAt = arg2;
+                                tmp7 = listTop;
+                                obj.stickyTop = listTop;
+                                tmp8 = listLeft;
+                                obj.stickyLeft = listLeft;
+                                tmp2 = jsx(closure_1(tmp[11]), obj);
                               }
                               return tmp2;
                             }
                           }
-                          const obj3 = { getComponent: X, getSize: B };
+                          let obj3 = { getComponent: X, getSize: B };
                           class X {
                             constructor() {
-                              if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
-                                return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
-                              } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
-                                return jsx(MessagesItemEmptyStateDefault, {});
+                              tmp3 = closure_2;
+                              tmp = renderHeader;
+                              tmp2 = closure_0;
+                              if (closure_0(closure_2[6]).MessagesDataHeader.HappeningNow === renderHeader) {
+                                tmp7 = jsx;
+                                tmp8 = closure_1;
+                                obj = { listRef: null };
+                                tmp9 = listRefHappeningNow;
+                                obj.listRef = listRefHappeningNow;
+                                return jsx(closure_1(tmp3[12]), obj);
+                              } else if (tmp2(tmp3[6]).MessagesDataHeader.EmptyState === tmp) {
+                                tmp5 = jsx;
+                                tmp6 = closure_1;
+                                return jsx(closure_1(tmp3[13]), {});
                               } else {
+                                tmp4 = null;
                                 return null;
                               }
                             }
@@ -278,11 +333,22 @@ const memoResult = react.memo(
                         }
                         class X {
                           constructor() {
-                            if (useMessagesData.MessagesDataHeader.HappeningNow === renderHeader) {
-                              return jsx(MessagesItemHappeningNowDefault, { listRef: listRefHappeningNow });
-                            } else if (useMessagesData.MessagesDataHeader.EmptyState === renderHeader) {
-                              return jsx(MessagesItemEmptyStateDefault, {});
+                            tmp3 = closure_2;
+                            tmp = renderHeader;
+                            tmp2 = closure_0;
+                            if (closure_0(closure_2[6]).MessagesDataHeader.HappeningNow === renderHeader) {
+                              tmp7 = jsx;
+                              tmp8 = closure_1;
+                              obj = { listRef: null };
+                              tmp9 = listRefHappeningNow;
+                              obj.listRef = listRefHappeningNow;
+                              return jsx(closure_1(tmp3[12]), obj);
+                            } else if (tmp2(tmp3[6]).MessagesDataHeader.EmptyState === tmp) {
+                              tmp5 = jsx;
+                              tmp6 = closure_1;
+                              return jsx(closure_1(tmp3[13]), {});
                             } else {
+                              tmp4 = null;
                               return null;
                             }
                           }
@@ -293,15 +359,22 @@ const memoResult = react.memo(
                       }
                     }
                     class L {
-                      constructor(arg0, arg1, stickyAt) {
-                        let tmp2 = null;
-                        if (arg0 === useMessagesData.MessagesDataSections.SuggestedFriends) {
-                          tmp2 = jsx(MessagesItemSuggestedFriendsHeaderDefault, {
-                            scrollPosition,
-                            stickyAt,
-                            stickyTop: listTop,
-                            stickyLeft: listLeft,
-                          });
+                      constructor(arg0, arg1, arg2) {
+                        tmp = closure_2;
+                        tmp2 = null;
+                        if (listLeft === closure_0(closure_2[6]).MessagesDataSections.SuggestedFriends) {
+                          tmp3 = arg2;
+                          tmp4 = jsx;
+                          tmp5 = closure_1;
+                          obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
+                          tmp6 = scrollPosition;
+                          obj.scrollPosition = scrollPosition;
+                          obj.stickyAt = arg2;
+                          tmp7 = listTop;
+                          obj.stickyTop = listTop;
+                          tmp8 = listLeft;
+                          obj.stickyLeft = listLeft;
+                          tmp2 = jsx(closure_1(tmp[11]), obj);
                         }
                         return tmp2;
                       }
@@ -317,12 +390,14 @@ const memoResult = react.memo(
           }
           const fn2 = function u(arg0, row) {
             if (useMessagesData.MessagesDataSections.FavoriteChannels === arg0) {
+              const obj2 = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
               return jsx(MessagesItemChannel.MessagesItemChannelFast, {
                 channelId: channelFavorites[row].channelId,
                 placeholderHeight: listItemHeight,
                 row,
               });
             } else if (useMessagesData.MessagesDataSections.Channels === arg0) {
+              const obj3 = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
               return jsx(MessagesItemChannel.MessagesItemChannelFast, {
                 channelId: channels[row].channelId,
                 placeholderHeight: listItemHeight,
@@ -335,16 +410,17 @@ const memoResult = react.memo(
                 suggestedFriend: friendSuggestions[row],
                 onAddFriendSuggestions: setAddedFriendSuggestions,
               };
-              const MessagesItemSuggestedFriendFast = MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFast;
+              const obj5 = { height: listItemSuggestedFriendHeight };
               const merged = Object.assign(obj4);
-              return <MessagesItemSuggestedFriendFast height={listItemSuggestedFriendHeight} />;
+              return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFast, {
+                height: listItemSuggestedFriendHeight,
+              });
             } else if (useMessagesData.MessagesDataSections.Placeholders === arg0) {
+              const obj = { row, height: listItemHeight };
               return jsx(MessagesItemPlaceholderDefault, { row, height: listItemHeight });
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const self = this;
-              const self2 = this;
               const error = new Error("Invalid section " + arg0 + " in Messages renderItem");
               throw error;
             }
@@ -356,14 +432,9 @@ const memoResult = react.memo(
           cResult[6] = listItemSuggestedFriendHeight;
           cResult[7] = setAddedFriendSuggestions;
           cResult[8] = fn2;
+          let obj = listItemHeight(listLeft[5]);
         }
       : (listItemSizes, arg1) => {
-          let accessibilityLabel;
-          let data;
-          let handleScrollAnimated;
-          let insetEnd;
-          let listItemHeight;
-          let scrollIndicatorInsetBottom;
           ({ data, listItemHeight } = listItemSizes);
           listItemSizes = listItemSizes.listItemSizes;
           const listItemSuggestedFriendHeight = listItemSizes.listItemSuggestedFriendHeight;
@@ -373,17 +444,17 @@ const memoResult = react.memo(
           const scrollPosition = listItemSizes.scrollPosition;
           ({ accessibilityLabel, handleScrollAnimated, insetEnd, scrollIndicatorInsetBottom } = listItemSizes);
           let tmp = listTop();
-          let closure_7 = tmp;
+          closure_7 = tmp;
           const channels = data.channels;
           const channelFavorites = data.channelFavorites;
           const friendSuggestions = data.friendSuggestions;
           const renderHeader = data.renderHeader;
           const renderFooter = data.renderFooter;
           const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
-          const sections = data.sections;
           const ref = listLeft.useRef(null);
-          const imperativeHandle = listLeft.useImperativeHandle(arg1, () => {
-            let obj = {
+          const imperativeHandle = listLeft.useImperativeHandle(
+            arg1,
+            () => ({
               scrollToTop() {
                 let flag = arg0;
                 if (arg0 === undefined) {
@@ -395,9 +466,9 @@ const memoResult = react.memo(
                   current.scrollToLocation(obj);
                 }
               },
-            };
-            return obj;
-          }, []);
+            }),
+            [],
+          );
           const items = [
             channelFavorites,
             listItemHeight,
@@ -407,14 +478,16 @@ const memoResult = react.memo(
             listItemSuggestedFriendHeight,
           ];
           const items1 = [listTop, listLeft, scrollPosition];
-          const callback = listLeft.useCallback(function (arg0, row) {
+          const callback = listLeft.useCallback((arg0, row) => {
             if (useMessagesData.MessagesDataSections.FavoriteChannels === arg0) {
+              const obj2 = { channelId: channelFavorites[row].channelId, placeholderHeight: listItemHeight, row };
               return jsx(MessagesItemChannel.MessagesItemChannelFast, {
                 channelId: channelFavorites[row].channelId,
                 placeholderHeight: listItemHeight,
                 row,
               });
             } else if (useMessagesData.MessagesDataSections.Channels === arg0) {
+              const obj3 = { channelId: channels[row].channelId, placeholderHeight: listItemHeight, row };
               return jsx(MessagesItemChannel.MessagesItemChannelFast, {
                 channelId: channels[row].channelId,
                 placeholderHeight: listItemHeight,
@@ -427,24 +500,23 @@ const memoResult = react.memo(
                 suggestedFriend: friendSuggestions[row],
                 onAddFriendSuggestions: setAddedFriendSuggestions,
               };
-              const MessagesItemSuggestedFriendFast = MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFast;
+              const obj5 = { height: listItemSuggestedFriendHeight };
               const merged = Object.assign(obj4);
-              return <MessagesItemSuggestedFriendFast height={listItemSuggestedFriendHeight} />;
+              return jsx(MessagesItemSuggestedFriend.MessagesItemSuggestedFriendFast, {
+                height: listItemSuggestedFriendHeight,
+              });
             } else if (useMessagesData.MessagesDataSections.Placeholders === arg0) {
+              const obj = { row, height: listItemHeight };
               return jsx(MessagesItemPlaceholderDefault, { row, height: listItemHeight });
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const self = this;
-              const self2 = this;
               const error = new Error("Invalid section " + arg0 + " in Messages renderItem");
               throw error;
             }
           }, items);
-          const memo = listLeft.useMemo(() => {
-            let stickyLeft;
-            let stickyTop;
-            let obj = {
+          const memo = listLeft.useMemo(
+            () => ({
               getComponent(arg0, arg1, stickyAt) {
                 let tmp2 = null;
                 if (arg0 === listItemHeight(listItemSuggestedFriendHeight[6]).MessagesDataSections.SuggestedFriends) {
@@ -460,13 +532,12 @@ const memoResult = react.memo(
                 }
                 return num;
               },
-            };
-            return obj;
-          }, items1);
+            }),
+            items1,
+          );
           const items2 = [renderHeader, listRefHappeningNow];
-          const memo1 = listLeft.useMemo(() => {
-            let listRef;
-            let obj = {
+          const memo1 = listLeft.useMemo(
+            () => ({
               getComponent() {
                 if (listItemHeight(listItemSuggestedFriendHeight[6]).MessagesDataHeader.HappeningNow === renderHeader) {
                   const obj = { listRef };
@@ -481,8 +552,7 @@ const memoResult = react.memo(
               },
               getSize() {
                 if (listItemHeight(listItemSuggestedFriendHeight[6]).MessagesDataHeader.HappeningNow === renderHeader) {
-                  const tmp2Result = listItemHeight(listItemSuggestedFriendHeight[12]);
-                  return tmp2Result.getMessagesItemHappeningNowHeight();
+                  return listItemHeight(listItemSuggestedFriendHeight[12]).getMessagesItemHappeningNowHeight();
                 } else if (
                   listItemHeight(listItemSuggestedFriendHeight[6]).MessagesDataHeader.EmptyState === renderHeader
                 ) {
@@ -491,9 +561,9 @@ const memoResult = react.memo(
                   return 0;
                 }
               },
-            };
-            return obj;
-          }, items2);
+            }),
+            items2,
+          );
           const items3 = [renderFooter];
           const memo2 = listLeft.useMemo(
             () => ({
@@ -516,7 +586,7 @@ const memoResult = react.memo(
           );
           const items4 = [listItemHeight, listItemSuggestedFriendHeight];
           const items5 = [channels, channelFavorites];
-          const callback1 = listLeft.useCallback(function (arg0) {
+          const callback1 = listLeft.useCallback((arg0) => {
             if (useMessagesData.MessagesDataSections.FavoriteChannels !== arg0) {
               if (useMessagesData.MessagesDataSections.Channels !== arg0) {
                 if (useMessagesData.MessagesDataSections.Placeholders !== arg0) {
@@ -527,8 +597,6 @@ const memoResult = react.memo(
                   } else {
                     const _Error = Error;
                     const _HermesInternal = HermesInternal;
-                    const self = this;
-                    const self2 = this;
                     const error = new Error("Invalid section " + arg0 + " in Messages renderItem");
                     throw error;
                   }
@@ -561,26 +629,17 @@ const memoResult = react.memo(
                 paddingHorizontal: nativeDefault.space.PX_8,
                 paddingVertical: nativeDefault.space.PX_4,
               },
-              sectionItem: {
-                type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM,
-                colorHex: closure_7.placeholder.backgroundColor,
-                labelPadding: nativeDefault.space.PX_4,
-                labelSize: listItemSizes.label,
-                labelSecondarySize: listItemSizes.labelSecondary,
-                padding: nativeDefault.space.PX_16,
-                shape: "circle",
-                shapeSize: listItemSizes.avatar,
-              },
+              sectionItem: null,
             };
-            ({
+            const obj2 = {
               type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE,
               colorHex: closure_7.placeholder.backgroundColor,
               shape: "rect",
               borderRadius: nativeDefault.radii.lg,
               paddingHorizontal: nativeDefault.space.PX_8,
               paddingVertical: nativeDefault.space.PX_4,
-            });
-            ({
+            };
+            obj.sectionItem = {
               type: FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM,
               colorHex: closure_7.placeholder.backgroundColor,
               labelPadding: nativeDefault.space.PX_4,
@@ -589,10 +648,10 @@ const memoResult = react.memo(
               padding: nativeDefault.space.PX_16,
               shape: "circle",
               shapeSize: listItemSizes.avatar,
-            });
+            };
             return obj;
           }, items6);
-          let obj = {
+          return listRefHappeningNow(listItemSizes(listItemSuggestedFriendHeight[17]), {
             insetEnd,
             accessibilityLabel,
             estimatedListSize: "windowSize",
@@ -612,13 +671,9 @@ const memoResult = react.memo(
             scrollIndicatorInsetEnd: scrollIndicatorInsetBottom,
             scrollReporting: "animatedCallbacks",
             scrollHandlerAnimated: handleScrollAnimated,
-            sections,
+            sections: data.sections,
             sectionHeaderSize: memo.getSize,
-          };
-          return listRefHappeningNow(listItemSizes(listItemSuggestedFriendHeight[17]), obj);
+          });
         },
   ),
 );
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFastestList.tsx");
-
-export default memoResult;

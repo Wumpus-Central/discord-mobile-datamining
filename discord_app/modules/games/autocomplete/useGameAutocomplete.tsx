@@ -1,30 +1,24 @@
 // discord_app/modules/games/autocomplete/useGameAutocomplete.tsx
-import react2 from "../../../../_runtime/00576_react.js";
-import Constants from "../../../Constants.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import GameAutocompleteTypes from "GameAutocompleteTypes.tsx";
 import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
 import GameAutocompleteActionCreators from "GameAutocompleteActionCreators.tsx";
 import GameSearchSession from "GameSearchSession.tsx";
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import GameAutocompleteStore from "GameAutocompleteStore.tsx";
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-let _slicedToArray = _slicedToArray_mod;
-const QueryIds = Constants.QueryIds;
-let obj = {
+require = fn;
+const QueryIds = fn(1085).QueryIds;
+const initialize = fn(504);
+const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
   getQueryId(name) {
-    let DEFAULT;
     if (DEFAULT === undefined) {
       DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
     }
-    const GAME_AUTOCOMPLETE = QueryIds.GAME_AUTOCOMPLETE;
-    const obj = GameAutocompleteUtils;
-    return GAME_AUTOCOMPLETE(obj.normalizeGameAutocompleteQuery(name), DEFAULT);
+    return QueryIds.GAME_AUTOCOMPLETE(GameAutocompleteUtils.normalizeGameAutocompleteQuery(name), DEFAULT);
   },
   get(arg0, arg1) {
     let results = GameAutocompleteStore.getResults(arg0, arg1);
@@ -34,8 +28,7 @@ let obj = {
     return results;
   },
   load(arg0, arg1) {
-    const obj = GameAutocompleteActionCreators;
-    return obj.fetchGameAutocomplete(arg0, arg1);
+    return GameAutocompleteActionCreators.fetchGameAutocomplete(arg0, arg1);
   },
   getIsLoading(arg0, arg1) {
     return GameAutocompleteStore.isFetching(arg0, arg1);
@@ -47,8 +40,11 @@ let obj = {
       if (tmp) {
         let tmp2 = 429 === status;
         if (!tmp2) {
-          tmp2 = status >= 500 && 503 !== status;
-          const tmp3 = status >= 500 && 503 !== status;
+          let tmp3 = status >= 500;
+          if (tmp3) {
+            tmp3 = 503 !== status;
+          }
+          tmp2 = tmp3;
         }
         tmp = tmp2;
       }
@@ -57,27 +53,19 @@ let obj = {
   },
   staleAfter: 3600,
   failureStaleAfter: 60,
-};
-const fetchStore = get_initialized.createFetchStore(GameAutocompleteStore, obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+});
+let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_129_1;
-      let tmp3;
-      let tmp4;
-      let tmp5;
-      let closure_0 = arg0;
-      const obj = react2;
-      const cResult = obj.c(3);
-      [tmp3, closure_129_1] = react.useState(arg0);
-      _slicedToArray(react.useState(arg0), 2);
-      let closure_2 = react.useRef(tmp3);
-      let closure_3 = react.useRef(0);
+      closure_0 = arg0;
+      const cResult = c.c(3);
+      [tmp3, dependencyMap] = noop.useState(arg0);
+      noop.useRef(tmp3);
+      noop.useRef(0);
       if (cResult[0] !== arg0) {
         const fn = function n() {
-          let current;
           if (current !== ref.current) {
-            if (null != current) {
+            if (null != tmp) {
               if (null != ref.current) {
                 const _Date2 = Date;
                 function emit() {
@@ -90,42 +78,38 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
                 const _setTimeout = setTimeout;
                 current = setTimeout(emit, Math.min(200, Math.max(0, 500 - (Date.now() - ref2.current))));
                 return () => {
-                  clearTimeout(current);
+                  clearTimeout(closure_0);
                 };
               }
             }
             const _Date = Date;
             ref2.current = Date.now();
-            ref.current = current;
-            closure_1(current);
+            ref.current = tmp;
+            closure_1(tmp);
           }
         };
         const items = [arg0];
         cResult[0] = arg0;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp5 = items;
-        tmp4 = fn;
+        let tmp5 = items;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
       }
-      const effect = react.useEffect(tmp4, tmp5);
+      const effect = noop.useEffect(tmp4, tmp5);
       return tmp3;
     }
   : (arg0) => {
-      let closure_129_1;
-      let tmp2;
-      let closure_0 = arg0;
-      const tmp = _slicedToArray(react.useState(arg0), 2);
-      [tmp2, closure_129_1] = tmp;
-      let closure_2 = react.useRef(tmp2);
-      let closure_3 = react.useRef(0);
+      closure_0 = arg0;
+      [tmp2, dependencyMap] = noop.useState(arg0);
+      noop.useRef(tmp2);
+      noop.useRef(0);
       const items = [arg0];
-      const effect = react.useEffect(() => {
-        let current;
+      const effect = noop.useEffect(() => {
         if (current !== ref.current) {
-          if (null != current) {
+          if (null != tmp) {
             if (null != ref.current) {
               const _Date2 = Date;
               function emit() {
@@ -138,43 +122,39 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
               const _setTimeout = setTimeout;
               current = setTimeout(emit, Math.min(200, Math.max(0, 500 - (Date.now() - ref2.current))));
               return () => {
-                clearTimeout(current);
+                clearTimeout(closure_0);
               };
             }
           }
           const _Date = Date;
           ref2.current = Date.now();
-          ref.current = current;
-          closure_1(current);
+          ref.current = tmp;
+          closure_1(tmp);
         }
       }, items);
       return tmp2;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
+
+export const GAME_AUTOCOMPLETE_DEBOUNCE_MS = 200;
+export const GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS = 500;
+export const useGameAutocomplete = fetchStore;
+export const useDebouncedGameAutocomplete = ReactCompilerGating.isReactCompilerEnabled()
   ? (name, surface) => {
-      let DEFAULT;
-      let closure_2;
-      let data;
-      let isLoading;
-      let query;
-      let tmp10;
-      let tmp11;
-      let tmp4;
-      let tmp2 = DEFAULT;
-      const obj = surface(DEFAULT[9]);
-      const cResult = obj.c(27);
+      const cResult = surface(DEFAULT[9]).c(27);
       surface = surface.surface;
       DEFAULT = surface.profile;
       if (undefined === DEFAULT) {
         DEFAULT = tmp(tmp2[5]).GameAutocompleteProfile.DEFAULT;
       }
       if (cResult[0] !== name) {
-        const tmpResult = surface(tmp2[6]);
-        const result = tmpResult.normalizeGameAutocompleteQuery(name);
+        const result = tmp(tmp2[6]).normalizeGameAutocompleteQuery(name);
         cResult[0] = name;
         cResult[1] = result;
-        tmp4 = result;
+        let tmp4 = result;
+        const tmpResult = tmp(tmp2[6]);
       } else {
         tmp4 = cResult[1];
       }
@@ -182,14 +162,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = closure_7(tmp4);
       const tmp7 = fetchStore(tmp6, DEFAULT);
       ({ data, isLoading } = tmp7);
-      const error = tmp7.error;
-      [tmp10, tmp11] = query.useState(null);
-      _slicedToArray(query.useState(null), 2);
+      const obj = surface(DEFAULT[9]);
       const tmp8 = _slicedToArray;
+      [tmp10, tmp11] = query.useState(null);
       if (cResult[2] === data) {
-        let tmp12;
         if (cResult[3] === tmp6) {
-          tmp12 = cResult[4];
+          let tmp12 = cResult[4];
         }
         if (null == tmp4) {
           if (null != tmp10) {
@@ -198,12 +176,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           let tmp14 = null != tmp12;
           if (tmp14) {
-            let results1;
-            const results = tmp12.results;
+            let results;
             if (tmp10 != null) {
-              results1 = tmp10.results;
+              results = tmp10.results;
             }
-            tmp14 = results !== results1;
+            tmp14 = tmp12.results !== results;
           }
           if (tmp14) {
             tmp11(tmp12);
@@ -223,35 +200,29 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (query == null) {
           query = null;
         }
-        let results2;
+        let results1;
         if (tmp18 != null) {
-          results2 = tmp18.results;
+          results1 = tmp18.results;
         }
-        if (results2 == null) {
-          results2 = null;
+        if (results1 == null) {
+          results1 = null;
         }
         if (cResult[5] === DEFAULT) {
-          let tmp21;
           if (cResult[6] === surface) {
-            tmp21 = cResult[7];
+            let tmp21 = cResult[7];
           }
           const first = tmp8(obj3.useState(tmp21), 1)[0];
           if (cResult[8] === tmp4) {
-            let tmp23;
-            let tmp24;
             if (cResult[9] === first) {
-              tmp23 = cResult[10];
-              tmp24 = cResult[11];
+              let tmp23 = cResult[10];
+              let tmp24 = cResult[11];
             }
             const effect = obj3.useEffect(tmp23, tmp24);
             if (cResult[12] === query) {
-              if (cResult[13] === results2) {
-                let tmp26;
-                let tmp27;
-                let tmp29;
+              if (cResult[13] === results1) {
                 if (cResult[14] === first) {
-                  tmp26 = cResult[15];
-                  tmp27 = cResult[16];
+                  let tmp26 = cResult[15];
+                  let tmp27 = cResult[16];
                 }
                 const effect1 = obj3.useEffect(tmp26, tmp27);
                 if (cResult[17] !== first.end) {
@@ -261,76 +232,100 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[17] = first.end;
                   class F {
                     constructor() {
-                      const tmp2 = null != query && null != results2;
+                      tmp2 = null != c3;
+                      tmp = c3;
                       if (tmp2) {
-                        first.onResults(query, results2);
+                        tmp3 = c4;
+                        tmp2 = null != c4;
                       }
+                      if (tmp2) {
+                        tmp4 = closure_5;
+                        tmp5 = c4;
+                        onResultsResult = closure_5.onResults(tmp, c4);
+                      }
+                      return;
                     }
                   }
                   cResult[18] = fn2;
-                  tmp29 = fn2;
+                  let tmp29 = fn2;
                 } else {
                   tmp29 = cResult[18];
                 }
                 class F {
                   constructor() {
-                    const tmp2 = null != query && null != results2;
+                    tmp2 = null != c3;
+                    tmp = c3;
                     if (tmp2) {
-                      first.onResults(query, results2);
+                      tmp3 = c4;
+                      tmp2 = null != c4;
                     }
+                    if (tmp2) {
+                      tmp4 = closure_5;
+                      tmp5 = c4;
+                      onResultsResult = closure_5.onResults(tmp, c4);
+                    }
+                    return;
                   }
                 }
                 const effect2 = obj3.useEffect(tmp29, tmp30);
                 if (!isLoading) {
                   isLoading = tmp6 !== tmp4;
                 }
-                let tmp32 = null;
+                let error = null;
                 if (tmp6 === tmp4) {
-                  tmp32 = error;
+                  error = tmp7.error;
                 }
-                if (cResult[21] === results2) {
+                if (cResult[21] === results1) {
                   if (cResult[22] === first.end) {
                     if (cResult[23] === first.select) {
                       if (cResult[24] === isLoading) {
-                        let tmp33;
-                        if (cResult[25] === tmp32) {
-                          tmp33 = cResult[26];
+                        if (cResult[25] === error) {
+                          let tmp33 = cResult[26];
                         }
                         return tmp33;
                       }
                     }
                   }
                 }
-                const obj2 = { results: results2, isLoading, error: tmp32, onSelect: null, endSession: first.end };
+                const obj2 = { results: results1, isLoading, error, onSelect: null, endSession: null };
                 class C {
                   constructor() {
-                    const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+                    gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
                     return gameSearchSession;
                   }
                 }
-                cResult[21] = results2;
+                obj2.endSession = first.end;
+                cResult[21] = results1;
                 cResult[22] = first.end;
                 cResult[23] = first.select;
                 cResult[24] = isLoading;
-                cResult[25] = tmp32;
+                cResult[25] = error;
                 cResult[26] = obj2;
                 tmp33 = obj2;
               }
             }
             class F {
               constructor() {
-                const tmp2 = null != query && null != results2;
+                tmp2 = null != c3;
+                tmp = c3;
                 if (tmp2) {
-                  first.onResults(query, results2);
+                  tmp3 = c4;
+                  tmp2 = null != c4;
                 }
+                if (tmp2) {
+                  tmp4 = closure_5;
+                  tmp5 = c4;
+                  onResultsResult = closure_5.onResults(tmp, c4);
+                }
+                return;
               }
             }
-            const items = [first, query, results2];
+            const items = [first, query, results1];
             cResult[12] = query;
-            cResult[13] = results2;
+            cResult[13] = results1;
             class C {
               constructor() {
-                const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+                gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
                 return gameSearchSession;
               }
             }
@@ -347,7 +342,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[9] = first;
           class C {
             constructor() {
-              const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+              gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
               return gameSearchSession;
             }
           }
@@ -358,7 +353,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         class C {
           constructor() {
-            const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+            gameSearchSession = new closure_0(closure_1[10]).GameSearchSession(surface, DEFAULT);
             return gameSearchSession;
           }
         }
@@ -371,12 +366,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != data) {
         tmp13 = null;
         if (null != tmp6) {
+          const obj4 = { query: tmp6, results: data };
           class F {
             constructor() {
-              const tmp2 = null != query && null != results2;
+              tmp2 = null != c3;
+              tmp = c3;
               if (tmp2) {
-                first.onResults(query, results2);
+                tmp3 = c4;
+                tmp2 = null != c4;
               }
+              if (tmp2) {
+                tmp4 = closure_5;
+                tmp5 = c4;
+                onResultsResult = closure_5.onResults(tmp, c4);
+              }
+              return;
             }
           }
         }
@@ -387,38 +391,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp13;
     }
   : (name, arg1) => {
-      let c2;
-      let data;
-      let isLoading;
-      let profile;
-      let require;
-      let tmp22;
-      let tmp8;
-      let tmp9;
       ({ surface: require, profile } = arg1);
       if (profile === undefined) {
-        let tmp2 = profile;
         profile = require("GameAutocompleteTypes").GameAutocompleteProfile.DEFAULT;
       }
       let query;
-      let results2;
+      let results1;
       let first;
-      const obj = require("GameAutocompleteUtils");
-      const result = obj.normalizeGameAutocompleteQuery(name);
+      const result = require("GameAutocompleteUtils").normalizeGameAutocompleteQuery(name);
       _slicedToArray = result;
       const tmp4 = closure_7(result);
       const tmp5 = fetchStore(tmp4, profile);
       ({ data, isLoading } = tmp5);
-      const error = tmp5.error;
+      const obj = require("GameAutocompleteUtils");
+      const tmp6 = _slicedToArray;
       [tmp8, tmp9] = query.useState(null);
       let tmp10 = null;
-      _slicedToArray(query.useState(null), 2);
-      const tmp6 = _slicedToArray;
       if (null != data) {
         tmp10 = null;
         if (null != tmp4) {
-          tmp10 = { query: tmp4, results: data };
           const obj3 = { query: tmp4, results: data };
+          tmp10 = obj3;
         }
       }
       if (null == result) {
@@ -428,12 +421,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let tmp11 = null != tmp10;
         if (tmp11) {
-          let results1;
-          const results = tmp10.results;
+          let results;
           if (tmp8 != null) {
-            results1 = tmp8.results;
+            results = tmp8.results;
           }
-          tmp11 = results !== results1;
+          tmp11 = tmp10.results !== results;
         }
         if (tmp11) {
           tmp9(tmp10);
@@ -453,12 +445,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (query == null) {
         query = null;
       }
-      results2 = undefined;
+      results1 = undefined;
       if (tmp15 != null) {
-        results2 = tmp15.results;
+        results1 = tmp15.results;
       }
-      if (results2 == null) {
-        results2 = null;
+      if (results1 == null) {
+        results1 = null;
       }
       first = tmp6(
         obj2.useState(() => {
@@ -471,29 +463,28 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = obj2.useEffect(() => {
         first.onQuery(c2);
       }, items);
-      const items1 = [first, query, results2];
+      const items1 = [first, query, results1];
       const effect1 = obj2.useEffect(() => {
-        const tmp2 = null != query && null != results2;
+        let tmp2 = null != query;
         if (tmp2) {
-          first.onResults(query, results2);
+          tmp2 = null != results1;
+        }
+        if (tmp2) {
+          first.onResults(query, results1);
         }
       }, items1);
       const items2 = [first];
       const effect2 = obj2.useEffect(() => first.end, items2);
-      const obj6 = { results: results2, isLoading, error: tmp22, onSelect: null, endSession: null };
+      const obj6 = { results: results1, isLoading: null, error: null, onSelect: null, endSession: null };
       if (!isLoading) {
         isLoading = tmp4 !== result;
       }
-      tmp22 = null;
+      obj6.isLoading = isLoading;
+      let error = null;
       if (tmp4 === result) {
-        tmp22 = error;
+        error = tmp5.error;
       }
+      obj6.error = error;
       ({ select: obj4.onSelect, end: obj4.endSession } = first);
       return obj6;
     };
-let result = size.fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
-
-export const GAME_AUTOCOMPLETE_DEBOUNCE_MS = 200;
-export const GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS = 500;
-export const useGameAutocomplete = fetchStore;
-export const useDebouncedGameAutocomplete = tmp4;

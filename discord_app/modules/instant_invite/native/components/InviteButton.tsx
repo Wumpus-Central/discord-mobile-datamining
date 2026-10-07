@@ -1,165 +1,174 @@
 // discord_app/modules/instant_invite/native/components/InviteButton.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl6 from "../../../../intl/index.native.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import Constants from "../../Constants.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const View = react_native.View;
-const InviteSendStates = Constants.InviteSendStates;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const InviteSendStates = fn(7239).InviteSendStates;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let disabled;
-        let flag2;
-        let onPressSend;
-        let sendState;
-        let tmp8;
-        const obj = react2;
-        const cResult = obj.c(11);
+        const cResult = c.c(11);
         ({ sendState, disabled, onPressSend } = arg0);
         let flag = undefined !== disabled && disabled;
         const tmp4 = closure_5();
-        const intl = intl6.intl;
-        intl.string(intl6.t.jYnGPG);
+        const intl = util.intl;
+        intl.string(util.t.jYnGPG);
         if (InviteSendStates.SENDING === sendState) {
-          let first;
           const _Symbol4 = Symbol;
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl5 = intl6.intl;
-            const stringResult1 = intl5.string(intl6.t.jYnGPG);
+            const intl5 = util.intl;
+            const stringResult1 = intl5.string(util.t.jYnGPG);
             cResult[0] = stringResult1;
-            first = stringResult1;
+            let first = stringResult1;
           } else {
             first = cResult[0];
           }
-          flag = false;
-          flag2 = true;
-          tmp8 = first;
-        } else if (InviteSendStates.SENT === sendState) {
-          let tmp14;
-          const _Symbol3 = Symbol;
-          if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl4 = intl6.intl;
-            const stringResult2 = intl4.string(intl6.t.dVT149);
-            cResult[1] = stringResult2;
-            tmp14 = stringResult2;
-          } else {
-            tmp14 = cResult[1];
-          }
-          flag = true;
-          flag2 = false;
-          tmp8 = tmp14;
-        } else if (InviteSendStates.ERROR === sendState) {
-          let tmp11;
-          const _Symbol2 = Symbol;
-          if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = intl6.intl;
-            const stringResult3 = intl3.string(intl6.t.wNcfpX);
-            cResult[2] = stringResult3;
-            tmp11 = stringResult3;
-          } else {
-            tmp11 = cResult[2];
-          }
-          flag = false;
-          tmp8 = tmp11;
-          flag2 = false;
         } else {
-          const _Symbol = Symbol;
-          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = intl6.intl;
-            const stringResult4 = intl2.string(intl6.t.jYnGPG);
-            cResult[3] = stringResult4;
-            tmp8 = stringResult4;
+          if (InviteSendStates.SENT === sendState) {
+            const _Symbol3 = Symbol;
+            if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl4 = util.intl;
+              const stringResult2 = intl4.string(util.t.dVT149);
+              cResult[1] = stringResult2;
+              let tmp14 = stringResult2;
+            } else {
+              tmp14 = cResult[1];
+            }
+            flag = true;
+            let flag2 = false;
+            let tmp8 = tmp14;
+          } else if (InviteSendStates.ERROR === sendState) {
+            const _Symbol2 = Symbol;
+            if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl3 = util.intl;
+              const stringResult3 = intl3.string(util.t.wNcfpX);
+              cResult[2] = stringResult3;
+              let tmp11 = stringResult3;
+            } else {
+              tmp11 = cResult[2];
+            }
+            flag = false;
+            tmp8 = tmp11;
+            flag2 = false;
           } else {
-            tmp8 = cResult[3];
-          }
-          flag2 = false;
-        }
-        if (!flag) {
-          flag = flag2;
-        }
-        if (cResult[4] === onPressSend) {
-          if (cResult[5] === flag) {
-            let tmp19;
-            if (cResult[6] === tmp8) {
-              tmp19 = cResult[7];
+            const _Symbol = Symbol;
+            if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl2 = util.intl;
+              const stringResult4 = intl2.string(util.t.jYnGPG);
+              cResult[3] = stringResult4;
+              tmp8 = stringResult4;
+            } else {
+              tmp8 = cResult[3];
             }
-            if (cResult[8] === tmp4.buttonWrapper) {
-              let tmp21;
-              if (cResult[9] === tmp19) {
-                tmp21 = cResult[10];
+            flag2 = false;
+          }
+          if (!flag) {
+            flag = flag2;
+          }
+          if (cResult[4] === onPressSend) {
+            if (cResult[5] === flag) {
+              if (cResult[6] === tmp8) {
+                let tmp20 = cResult[7];
               }
-              return tmp21;
+              if (cResult[8] === tmp4.buttonWrapper) {
+                if (cResult[9] === tmp20) {
+                  let tmp23 = cResult[10];
+                }
+                return tmp23;
+              }
+              const obj2 = { style: tmp4.buttonWrapper, children: tmp20 };
+              const tmp26 = <View style={tmp4.buttonWrapper}>{tmp20}</View>;
+              cResult[8] = tmp4.buttonWrapper;
+              cResult[9] = tmp20;
+              cResult[10] = tmp26;
+              tmp23 = tmp26;
             }
-            const tmp24 = <View style={tmp4.buttonWrapper}>{tmp19}</View>;
-            cResult[8] = tmp4.buttonWrapper;
-            cResult[9] = tmp19;
-            cResult[10] = tmp24;
-            tmp21 = tmp24;
           }
+          const obj3 = {
+            accessibilityRole: "none",
+            size: "sm",
+            variant: "secondary",
+            text: tmp8,
+            onPress: onPressSend,
+            disabled: flag,
+            grow: true,
+          };
+          const tmp22 = jsx(components_Button_Button.Button, {
+            accessibilityRole: "none",
+            size: "sm",
+            variant: "secondary",
+            text: tmp8,
+            onPress: onPressSend,
+            disabled: flag,
+            grow: true,
+          });
+          cResult[4] = onPressSend;
+          cResult[5] = flag;
+          cResult[6] = tmp8;
+          cResult[7] = tmp22;
+          tmp20 = tmp22;
         }
-        const tmp20 = jsx(components_Button_Button.Button, {
-          accessibilityRole: "none",
-          size: "sm",
-          variant: "secondary",
-          text: tmp8,
-          onPress: onPressSend,
-          disabled: flag,
-          grow: true,
-        });
-        cResult[4] = onPressSend;
-        cResult[5] = flag;
-        cResult[6] = tmp8;
-        cResult[7] = tmp20;
-        tmp19 = tmp20;
       }
-    : (onPressSend) => {
-        let disabled;
-        let flag;
-        let sendState;
-        ({ sendState, disabled } = onPressSend);
+    : (onPress) => {
+        ({ sendState, disabled } = onPress);
         if (disabled === undefined) {
           disabled = false;
         }
-        onPressSend = onPressSend.onPressSend;
-        const tmp = closure_5();
-        const intl = intl6.intl;
-        intl.string(intl6.t.jYnGPG);
+        const intl = util.intl;
+        intl.string(util.t.jYnGPG);
         if (InviteSendStates.SENDING === sendState) {
-          const intl5 = intl6.intl;
-          let stringResult1 = intl5.string(intl6.t.jYnGPG);
+          const intl5 = util.intl;
+          let stringResult1 = intl5.string(util.t.jYnGPG);
           disabled = false;
-          flag = true;
+          let flag = true;
         } else if (InviteSendStates.SENT === sendState) {
-          const intl4 = intl6.intl;
-          stringResult1 = intl4.string(intl6.t.dVT149);
+          const intl4 = util.intl;
+          stringResult1 = intl4.string(util.t.dVT149);
           disabled = true;
           flag = false;
         } else if (InviteSendStates.ERROR === sendState) {
-          const intl3 = intl6.intl;
-          stringResult1 = intl3.string(intl6.t.wNcfpX);
+          const intl3 = util.intl;
+          stringResult1 = intl3.string(util.t.wNcfpX);
           disabled = false;
           flag = false;
         } else {
-          const intl2 = intl6.intl;
-          stringResult1 = intl2.string(intl6.t.jYnGPG);
+          const intl2 = util.intl;
+          stringResult1 = intl2.string(util.t.jYnGPG);
           flag = false;
         }
-        const Button = components_Button_Button.Button;
+        const obj = { style: closure_5().buttonWrapper, children: null };
+        const obj2 = {
+          accessibilityRole: "none",
+          size: "sm",
+          variant: "secondary",
+          text: stringResult1,
+          onPress: onPress.onPressSend,
+          disabled: null,
+          grow: true,
+        };
         if (!disabled) {
           disabled = flag;
         }
-        return <View style={tmp.buttonWrapper}>{null}</View>;
+        obj2.disabled = disabled;
+        obj.children = jsx(components_Button_Button.Button, {
+          accessibilityRole: "none",
+          size: "sm",
+          variant: "secondary",
+          text: stringResult1,
+          onPress: onPress.onPressSend,
+          disabled: null,
+          grow: true,
+        });
+        return <View style={closure_5().buttonWrapper}>{null}</View>;
       },
 );
-const result = size.fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
-
-export default memoResult;

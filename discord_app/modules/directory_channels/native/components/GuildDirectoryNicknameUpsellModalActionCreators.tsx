@@ -1,21 +1,18 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModalActionCreators.tsx
-import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const GUILD_DIRECTORY_NICKNAME_UPSELL_MODAL_KEY = "GUILD_DIRECTORY_NICKNAME_UPSELL_MODAL_KEY";
-let obj = {
-  open(merged) {
-    const obj = ModalActionCreatorsDefault;
-    obj.pushLazy(asyncRequire(12470, dependencyMap.paths), merged, GUILD_DIRECTORY_NICKNAME_UPSELL_MODAL_KEY);
-  },
-  close() {
-    const obj = ModalActionCreatorsDefault;
-    obj.popWithKey(GUILD_DIRECTORY_NICKNAME_UPSELL_MODAL_KEY);
-  },
-};
+let c3 = "GUILD_DIRECTORY_NICKNAME_UPSELL_MODAL_KEY";
 const result = size.fileFinishedImporting(
   "modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModalActionCreators.tsx",
 );
 
-export default obj;
+export default {
+  open(merged) {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12470, dependencyMap.paths), merged, c3);
+  },
+  close() {
+    ModalActionCreatorsDefault.popWithKey(c3);
+  },
+};

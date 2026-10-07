@@ -1,109 +1,93 @@
 // discord_app/modules/network/networkAwareRetry.tsx
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let c6;
-
-let obj = function _networkAwareRetry() {
-  obj = _asyncToGenerator(async function (arg0) {
-    let closure_2;
-    let closure_3;
-    let id;
-    let num14;
-    let obj2;
-    let obj7;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (1 === c6) {
-      if (arg0 === 1) {
-        let c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        id = closure_131_4.getId();
-        closure_3 = 0;
-        if (closure_3 >= num14) {
-          const _Error2 = Error;
-          const self3 = this;
-          const self4 = this;
-          const error = new Error("Unreachable code in networkAwareRetry");
-          throw error;
-        }
-      }
-    } else if (2 === c6) {
-      let c5 = 0;
-      if (closure_3 + 1 >= num14) {
-        throw closure_4;
-      } else {
-        c6 = 4;
-        c7 = 1;
-        const obj6 = { value: obj7.timeoutPromise(2000 * (closure_3 + 1)), done: false };
-        obj7 = closure_131_0(closure_131_2[2]);
-        return obj6;
-      }
-    } else if (3 === c6) {
-      if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 0;
-        c7 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        c5 = 0;
-        c7 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      }
-    } else if (4 === c6) {
-      if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
-      } else {
-        c6 = 5;
-        c7 = 1;
-        const obj11 = { value: obj2.awaitOnline(), done: false };
-        obj2 = closure_131_1(closure_131_2[3]);
-        return obj11;
-      }
-    } else if (arg0 === 1) {
+const require = fn;
+let closure_5 = async function _networkAwareRetry(arg0) {
+  if (1 === tmp7) {
+    if (arg0 === 1) {
       c7 = 3;
       throw value;
     } else if (arg0 === 2) {
       c7 = 3;
-      obj = { value, done: true };
-      return obj;
-    } else if (id !== closure_131_4.getId()) {
-      const _Error = Error;
-      const self = this;
-      const self2 = this;
-      const error1 = new Error("User changed.");
-      throw error1;
+      return { value, done: true };
     } else {
-      closure_3 = closure_3 + 1;
+      const id = closure_131_4.getId();
+      closure_130_3 = 0;
+      if (closure_130_3 >= closure_130_1) {
+        const _Error2 = Error;
+        const error = new Error("Unreachable code in networkAwareRetry");
+        throw error;
+      }
     }
-    await closure_0();
-    closure_3 = tmp;
-    id = tmp4;
-    num14 = closure_1;
-    if (closure_1 === undefined) {
-      num14 = 3;
+  } else if (2 === tmp7) {
+    c5 = 0;
+    closure_130_4 = closure_4;
+    if (closure_130_3 + 1 >= closure_130_1) {
+      throw closure_130_4;
+    } else {
+      c6 = 4;
+      c7 = 1;
+      return { value: closure_131_0(closure_131_2[2]).timeoutPromise(2000 * (closure_130_3 + 1)), done: false };
     }
-    return "Reflect";
-  });
-  return obj(...arguments);
+  } else if (3 === tmp7) {
+    if (arg0 === 1) {
+      c7 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c5 = 0;
+      c7 = 3;
+      return { value, done: true };
+    } else {
+      c5 = 0;
+      c7 = 3;
+      return { value, done: true };
+    }
+  } else if (4 === tmp7) {
+    if (arg0 === 1) {
+      c7 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c7 = 3;
+      return { value, done: true };
+    } else {
+      c6 = 5;
+      c7 = 1;
+      return { value: closure_131_1(closure_131_2[3]).awaitOnline(), done: false };
+    }
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c7 = 3;
+    return { value, done: true };
+  } else if (id !== closure_131_4.getId()) {
+    const _Error = Error;
+    const error1 = new Error("User changed.");
+    throw error1;
+  } else {
+    closure_130_3 = closure_130_3 + 1;
+  }
+  await closure_130_0();
+  closure_3 = tmp3;
+  closure_130_0 = closure_0;
+  let num14 = closure_1;
+  if (closure_1 === undefined) {
+    num14 = 3;
+  }
+  closure_130_1 = num14;
+  return "Reflect";
 };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/network/networkAwareRetry.tsx");
 
 export default function networkAwareRetry() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }

@@ -1,64 +1,52 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationInviteActionSheet.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import _modDef2391 from "../GameOrganizationInvitesUntranslated.messages.js";
-import Constants2 from "../../instant_invite/Constants.tsx";
 import InstantInviteUtils from "../../../utils/InstantInviteUtils.tsx";
 import UserPlaceholderRowDefault from "../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 import InviteSuggestionsActionCreators from "../../../actions/InviteSuggestionsActionCreators.tsx";
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import InstantInviteSendStateStore from "../../instant_invite/InstantInviteSendStateStore.tsx";
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import InviteSuggestionsStore from "../../../stores/InviteSuggestionsStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let dependencyMap, guildId, importDefault, inviteSuggestionRows;
-
-let closure_12;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let tmp12;
-let unpackModuleId;
-const GameOrganizationInviteListDefault = tmp12(13794);
+require = fn;
 function isInvitableUserRow(type) {
-  const tmp3 =
-    (type.type === InstantInviteUtils.RowTypes.FRIEND || type.type === InstantInviteUtils.RowTypes.DM) &&
-    !type.item.bot;
+  let tmp3 = type.type === InstantInviteUtils.RowTypes.FRIEND;
+  if (!tmp3) {
+    tmp3 = type.type === InstantInviteUtils.RowTypes.DM;
+  }
+  if (tmp3) {
+    tmp3 = !type.item.bot;
+  }
   return tmp3;
 }
-let _slicedToArray = _slicedToArray_mod;
-const View = react_native.View;
-({ setSendState: metroRequire, useInstantInviteSendStates: metroImportDefault } = InstantInviteSendStateStore);
-const InviteSendStates = Constants2.InviteSendStates;
-const NOOP_NULL = Constants.NOOP_NULL;
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let obj = { header: obj2, centeredText: { textAlign: "center" } };
-obj2 = { paddingTop: nativeDefault.space.PX_16 };
-let closure_13 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const View = fn(17).View;
+const InstantInviteSendStateStore = fn(9567);
+({ setSendState: metroRequire, useInstantInviteSendStates: closure_7 } = InstantInviteSendStateStore);
+const InviteSendStates = fn(7239).InviteSendStates;
+const NOOP_NULL = fn(1096).NOOP_NULL;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
+let closure_13 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      const obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
         let num3 = 0;
         do {
           let obj2 = { row: num3 };
-          let arr = items.push(unpackModuleId(UserPlaceholderRowDefault, obj2, num3));
+          let arr = items.push(closure_1_11(UserPlaceholderRowDefault, obj2, num3));
           num3 = num3 + 1;
         } while (num3 < 10);
         const obj3 = { children: items };
-        const tmp3Result = unpackModuleId(View, obj3);
+        const tmp3Result = closure_1_11(View, obj3);
         cResult[0] = tmp3Result;
-        first = tmp3Result;
+        let first = tmp3Result;
       } else {
         first = cResult[0];
       }
@@ -69,43 +57,36 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let num = 0;
       do {
         let obj = { row: num };
-        let arr = children.push(unpackModuleId(UserPlaceholderRowDefault, obj, num));
+        let arr = children.push(closure_1_11(UserPlaceholderRowDefault, obj, num));
         num = num + 1;
       } while (num < 10);
-      return unpackModuleId(View, { children });
+      return closure_1_11(View, { children });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj3 = { paddingTop: nativeDefault.space.PX_16 };
+const size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/game_organization_invites/native/GameOrganizationInviteActionSheet.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let closure_1;
-      let closure_3;
-      let combined;
-      let intl2;
-      let intl3;
-      let items2;
-      let tmp15;
-      let tmp25;
-      let tmp6;
-      let tmp8;
-      let tmp9;
-      let tmp = combined;
-      let obj = combined(576);
-      const cResult = obj.c(51);
-      guildId = guildId.guildId;
-      const tmp4 = closure_13();
-      combined = "game-organization-invite:" + guildId;
+      let formatToPlainString = combined;
+      const cResult = combined(576).c(51);
+      let str = closure_13();
+      combined = "game-organization-invite:" + guildId.guildId;
       if (cResult[0] !== combined) {
         const fn = function s(arg0) {
           return arg0[combined];
         };
         cResult[0] = combined;
         cResult[1] = fn;
-        tmp6 = fn;
+        let tmp4 = fn;
       } else {
-        tmp6 = cResult[1];
+        tmp4 = cResult[1];
       }
-      const tmp7 = closure_7(tmp6);
-      importDefault = tmp7;
+      const tmp5 = closure_7(tmp4);
+      importDefault = tmp5;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [InviteSuggestionsStore];
         const fn2 = function x() {
@@ -115,273 +96,251 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items;
         cResult[3] = fn2;
-        tmp9 = fn2;
-        tmp8 = items;
+        let tmp7 = fn2;
+        let tmp6 = items;
       } else {
-        tmp8 = cResult[2];
-        tmp9 = cResult[3];
+        tmp6 = cResult[2];
+        tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp8, tmp9);
-      [r10047, dependencyMap] = react.useState(true);
-      _slicedToArray(react.useState(true), 2);
-      _slicedToArray = react.useRef("");
+      let obj = combined(576);
+      const stateFromStoresArray = formatToPlainString(504).useStateFromStoresArray(tmp6, tmp7);
+      const formatToPlainStringResult = formatToPlainString(504);
+      [r10047, dependencyMap] = noop.useState(true);
+      _slicedToArray = noop.useRef("");
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
-          constructor(current) {
-            closure_3.current = current;
-            const obj = InviteSuggestionsActionCreators;
-            const result = obj.searchInviteSuggestions(current);
+          constructor(arg0) {
+            closure_3.current = guildId;
+            obj = closure_0(closure_2[15]);
+            result = obj.searchInviteSuggestions(guildId);
+            return;
           }
         }
         cResult[4] = R;
       } else {
         class R {
-          constructor(current) {
-            closure_3.current = current;
-            const obj = InviteSuggestionsActionCreators;
-            const result = obj.searchInviteSuggestions(current);
+          constructor(arg0) {
+            closure_3.current = guildId;
+            obj = closure_0(closure_2[15]);
+            result = obj.searchInviteSuggestions(guildId);
+            return;
           }
         }
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class F {
           constructor() {
-            let ref;
-            const tmp = InviteSuggestionsActionCreators;
-            let obj = { omitUserIds: new Set() };
-            const loadInviteSuggestions = tmp.loadInviteSuggestions;
-            new Set();
-            const inviteSuggestions = loadInviteSuggestions(obj);
-            const nextPromise = inviteSuggestions.then(() => {
+            obj = closure_0(closure_2[15]);
+            obj1 = { omitUserIds: null };
+            set = new Set();
+            obj1.omitUserIds = set;
+            inviteSuggestions = obj.loadInviteSuggestions(obj1);
+            nextPromise = inviteSuggestions.then(() => {
               if ("" !== ref.current) {
+                const result = combined(dependencyMap[15]).searchInviteSuggestions(tmp.current);
                 const obj = combined(dependencyMap[15]);
-                const result = obj.searchInviteSuggestions(tmp.current);
               }
             });
-            const catchPromise = nextPromise.catch(NOOP_NULL);
-            catchPromise.finally(() => closure_1_2(false));
+            catchPromise = nextPromise.catch(NOOP_NULL);
+            cleanupPromise = catchPromise.finally(() => closure_1_2(false));
+            return;
           }
         }
         const items1 = [];
         cResult[5] = F;
         cResult[6] = items1;
-        tmp15 = items1;
+        let tmp13 = items1;
       } else {
         class F {
           constructor() {
-            let ref;
-            const tmp = InviteSuggestionsActionCreators;
-            let obj = { omitUserIds: new Set() };
-            const loadInviteSuggestions = tmp.loadInviteSuggestions;
-            new Set();
-            const inviteSuggestions = loadInviteSuggestions(obj);
-            const nextPromise = inviteSuggestions.then(() => {
+            obj = closure_0(closure_2[15]);
+            obj1 = { omitUserIds: null };
+            set = new Set();
+            obj1.omitUserIds = set;
+            inviteSuggestions = obj.loadInviteSuggestions(obj1);
+            nextPromise = inviteSuggestions.then(() => {
               if ("" !== ref.current) {
+                const result = combined(dependencyMap[15]).searchInviteSuggestions(tmp.current);
                 const obj = combined(dependencyMap[15]);
-                const result = obj.searchInviteSuggestions(tmp.current);
               }
             });
-            const catchPromise = nextPromise.catch(NOOP_NULL);
-            catchPromise.finally(() => closure_1_2(false));
+            catchPromise = nextPromise.catch(NOOP_NULL);
+            cleanupPromise = catchPromise.finally(() => closure_1_2(false));
+            return;
           }
         }
-        tmp15 = cResult[6];
+        tmp13 = cResult[6];
       }
-      const effect = react.useEffect(F, tmp15);
-      if (cResult[7] !== tmp7) {
+      const effect = noop.useEffect(F, tmp13);
+      if (cResult[7] !== tmp5) {
         class F {
           constructor() {
-            let ref;
-            const tmp = InviteSuggestionsActionCreators;
-            let obj = { omitUserIds: new Set() };
-            const loadInviteSuggestions = tmp.loadInviteSuggestions;
-            new Set();
-            const inviteSuggestions = loadInviteSuggestions(obj);
-            const nextPromise = inviteSuggestions.then(() => {
+            obj = closure_0(closure_2[15]);
+            obj1 = { omitUserIds: null };
+            set = new Set();
+            obj1.omitUserIds = set;
+            inviteSuggestions = obj.loadInviteSuggestions(obj1);
+            nextPromise = inviteSuggestions.then(() => {
               if ("" !== ref.current) {
+                const result = combined(dependencyMap[15]).searchInviteSuggestions(tmp.current);
                 const obj = combined(dependencyMap[15]);
-                const result = obj.searchInviteSuggestions(tmp.current);
               }
             });
-            const catchPromise = nextPromise.catch(NOOP_NULL);
-            catchPromise.finally(() => closure_1_2(false));
+            catchPromise = nextPromise.catch(NOOP_NULL);
+            cleanupPromise = catchPromise.finally(() => closure_1_2(false));
+            return;
           }
         }
-        cResult[7] = tmp7;
-        cResult[8] = tmp18;
+        cResult[7] = tmp5;
+        cResult[8] = tmp16;
       } else {
         class F {
           constructor() {
-            let ref;
-            const tmp = InviteSuggestionsActionCreators;
-            let obj = { omitUserIds: new Set() };
-            const loadInviteSuggestions = tmp.loadInviteSuggestions;
-            new Set();
-            const inviteSuggestions = loadInviteSuggestions(obj);
-            const nextPromise = inviteSuggestions.then(() => {
+            obj = closure_0(closure_2[15]);
+            obj1 = { omitUserIds: null };
+            set = new Set();
+            obj1.omitUserIds = set;
+            inviteSuggestions = obj.loadInviteSuggestions(obj1);
+            nextPromise = inviteSuggestions.then(() => {
               if ("" !== ref.current) {
+                const result = combined(dependencyMap[15]).searchInviteSuggestions(tmp.current);
                 const obj = combined(dependencyMap[15]);
-                const result = obj.searchInviteSuggestions(tmp.current);
               }
             });
-            const catchPromise = nextPromise.catch(NOOP_NULL);
-            catchPromise.finally(() => closure_1_2(false));
+            catchPromise = nextPromise.catch(NOOP_NULL);
+            cleanupPromise = catchPromise.finally(() => closure_1_2(false));
+            return;
           }
         }
       }
       if (cResult[9] !== combined) {
         class X {
-          constructor(id) {
-            metroRequire(combined, id.id, InviteSendStates.SENT);
+          constructor(arg0) {
+            tmp = setSendState(closure_0, guildId.id, InviteSendStates.SENT);
+            return;
           }
         }
         cResult[9] = combined;
         cResult[10] = X;
       } else {
         class X {
-          constructor(id) {
-            metroRequire(combined, id.id, InviteSendStates.SENT);
+          constructor(arg0) {
+            tmp = setSendState(closure_0, guildId.id, InviteSendStates.SENT);
+            return;
           }
         }
       }
-      if (cResult[11] === tmp4.centeredText) {
+      if (cResult[11] === str.centeredText) {
         class X {
-          constructor(id) {
-            metroRequire(combined, id.id, InviteSendStates.SENT);
+          constructor(arg0) {
+            tmp = setSendState(closure_0, guildId.id, InviteSendStates.SENT);
+            return;
           }
         }
-        if (cResult[27] === tmp20) {
-          class X {
-            constructor(id) {
-              metroRequire(combined, id.id, InviteSendStates.SENT);
-            }
-          }
-        }
-        const obj2 = { size: str, round: flag, onChange: R, placeholder: tmp22 };
-        cResult[27] = tmp20;
-        cResult[28] = flag;
-        cResult[29] = R;
-        cResult[30] = tmp22;
-        cResult[31] = str;
-        cResult[32] = closure_11(tmp20, obj2);
-        const tmp31 = closure_11(tmp20, obj2);
       }
-      const intl = tmp(1126).intl;
+      const intl = formatToPlainString(1126).intl;
+      let centeredText = importDefault;
       const stringResult = intl.string(_modDef2391.nVMqjA);
-      const ActionSheet = tmp(6708).ActionSheet;
       if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
         class X {
-          constructor(id) {
-            metroRequire(combined, id.id, InviteSendStates.SENT);
+          constructor(arg0) {
+            tmp = setSendState(closure_0, guildId.id, InviteSendStates.SENT);
+            return;
           }
         }
-        const stringResult1 = obj4.string(tmp(1126).t.cpT0Cq);
+        const stringResult1 = obj4.string(formatToPlainString(1126).t.cpT0Cq);
         cResult[26] = stringResult1;
-        tmp25 = stringResult1;
+        const tmp19 = stringResult1;
       } else {
         class X {
-          constructor(id) {
-            metroRequire(combined, id.id, InviteSendStates.SENT);
+          constructor(arg0) {
+            tmp = setSendState(closure_0, guildId.id, InviteSendStates.SENT);
+            return;
           }
         }
       }
-      const Stack = tmp(5600).Stack;
-      const PX_16 = tmp23(587).space.PX_16;
-      const header = tmp4.header;
-      const obj5 = { spacing: nativeDefault.space.PX_4, children: items2 };
-      const Stack2 = tmp(5600).Stack;
-      const obj6 = {
+      let obj2 = { spacing: nativeDefault.space.PX_4, children: null };
+      const obj5 = {
         variant: "heading-lg/bold",
         color: "mobile-text-heading-primary",
-        style: tmp4.centeredText,
-        children: intl2.formatToPlainString(_modDef2391.EnTIIr, { noun: stringResult }),
+        style: str.centeredText,
+        children: null,
       };
-      const Heading = tmp(4892).Heading;
-      intl2 = tmp(1126).intl;
-      items2 = [closure_11(Heading, obj6)];
-      const obj7 = {
-        variant: "text-sm/medium",
-        color: "text-muted",
-        style: tmp4.centeredText,
-        children: intl3.formatToPlainString(_modDef2391.BBk7Qw, { noun: stringResult }),
-      };
-      const Text = tmp(4892).Text;
-      intl3 = tmp(1126).intl;
-      items2[1] = closure_11(Text, obj7);
-      const tmp27 = closure_12(Stack2, obj5);
-      const SearchField = tmp(6554).SearchField;
-      const intl4 = tmp(1126).intl;
-      cResult[11] = tmp4.centeredText;
-      cResult[12] = tmp4.header;
-      cResult[13] = SearchField;
-      cResult[14] = Stack;
-      cResult[15] = ActionSheet;
+      const intl2 = formatToPlainString(1126).intl;
+      obj5.children = intl2.formatToPlainString(_modDef2391.EnTIIr, { noun: stringResult });
+      const items2 = [closure_11(formatToPlainString(4892).Heading, obj5)];
+      const obj6 = { variant: "text-sm/medium", color: "text-muted", style: str.centeredText, children: null };
+      const intl3 = formatToPlainString(1126).intl;
+      obj6.children = intl3.formatToPlainString(_modDef2391.BBk7Qw, { noun: stringResult });
+      items2[1] = closure_11(formatToPlainString(4892).Text, obj6);
+      obj2.children = items2;
+      const tmp10 = _slicedToArray(noop.useState(true), 2);
+      const intl4 = formatToPlainString(1126).intl;
+      formatToPlainString = intl4.formatToPlainString;
+      const tmp21 = closure_12(formatToPlainString(5600).Stack, obj2);
+      centeredText = str.centeredText;
+      cResult[11] = centeredText;
+      cResult[12] = str.header;
+      cResult[13] = formatToPlainString(6554).SearchField;
+      cResult[14] = formatToPlainString(5600).Stack;
+      cResult[15] = formatToPlainString(6708).ActionSheet;
       cResult[16] = true;
       cResult[17] = R;
-      cResult[18] = intl4.formatToPlainString(_modDef2391.cRK6SQ, { noun: stringResult });
-      cResult[19] = PX_16;
-      cResult[20] = header;
-      cResult[21] = tmp27;
+      cResult[18] = formatToPlainString(_modDef2391.cRK6SQ, { noun: stringResult });
+      cResult[19] = nativeDefault.space.PX_16;
+      cResult[20] = str.header;
+      cResult[21] = tmp21;
       cResult[22] = true;
       cResult[23] = true;
-      cResult[24] = tmp25;
+      cResult[24] = tmp19;
+      str = "md";
       cResult[25] = "md";
-      const formatToPlainStringResult = intl4.formatToPlainString(_modDef2391.cRK6SQ, { noun: stringResult });
+      const formatToPlainStringResult1 = formatToPlainString(_modDef2391.cRK6SQ, { noun: stringResult });
     }
   : (guildId) => {
-      let Stack;
-      let closure_1;
-      let closure_2;
-      let closure_3;
-      let first;
-      let intl2;
-      let intl3;
-      let intl4;
-      let intl5;
-      let items3;
-      let items4;
-      let obj3;
-      let tmp14Result;
-      dependencyMap = undefined;
-      guildId = guildId.guildId;
-      let tmp = closure_13();
-      const combined = "game-organization-invite:" + guildId;
+      _slicedToArray = undefined;
+      const tmp = closure_13();
+      const combined = "game-organization-invite:" + guildId.guildId;
       const tmp3 = closure_7((arg0) => arg0[combined]);
       importDefault = tmp3;
-      let obj = combined(504);
       const items = [InviteSuggestionsStore];
-      const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
+      const stateFromStoresArray = combined(504).useStateFromStoresArray(items, () => {
         inviteSuggestionRows = inviteSuggestionRows.getInviteSuggestionRows();
         const found = inviteSuggestionRows.filter(isInvitableUserRow);
         return found.map((item) => item.item);
       });
-      [first, dependencyMap] = react.useState(true);
-      _slicedToArray = react.useRef("");
-      const callback = react.useCallback((current) => {
+      const tmp6 = _slicedToArray(noop.useState(true), 2);
+      dependencyMap = tmp6[1];
+      _slicedToArray = noop.useRef("");
+      const callback = noop.useCallback((current) => {
         closure_3.current = current;
-        const obj = InviteSuggestionsActionCreators;
-        const result = obj.searchInviteSuggestions(current);
+        const result = InviteSuggestionsActionCreators.searchInviteSuggestions(current);
       }, []);
-      const effect = react.useEffect(() => {
-        let ref;
-        const tmp = InviteSuggestionsActionCreators;
-        let obj = { omitUserIds: new Set() };
-        const loadInviteSuggestions = tmp.loadInviteSuggestions;
-        new Set();
-        const inviteSuggestions = loadInviteSuggestions(obj);
+      const effect = noop.useEffect(() => {
+        const obj2 = { omitUserIds: null };
+        let obj = InviteSuggestionsActionCreators;
+        obj2.omitUserIds = new Set();
+        const inviteSuggestions = obj.loadInviteSuggestions(obj2);
+        const set = new Set();
         const nextPromise = inviteSuggestions.then(() => {
           if ("" !== ref.current) {
-            const obj = combined(closure_2[15]);
-            const result = obj.searchInviteSuggestions(tmp.current);
+            const result = combined(9521).searchInviteSuggestions(tmp.current);
+            const obj = combined(9521);
           }
         });
-        const catchPromise = nextPromise.catch(NOOP_NULL);
-        catchPromise.finally(() => closure_1_2(false));
+        inviteSuggestions
+          .then(() => {
+            if ("" !== ref.current) {
+              const result = combined(9521).searchInviteSuggestions(tmp.current);
+              const obj = combined(9521);
+            }
+          })
+          .catch(NOOP_NULL)
+          .finally(() => dependencyMap(false));
       }, []);
       const items1 = [tmp3];
       const items2 = [combined];
-      const callback1 = react.useCallback((arg0) => {
+      const callback1 = noop.useCallback((arg0) => {
         let tmp2;
         if (closure_1 != null) {
           tmp2 = tmp[arg0];
@@ -391,62 +350,49 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       }, items1);
-      const callback2 = react.useCallback((id) => {
-        metroRequire(combined, id.id, InviteSendStates.SENT);
+      const callback2 = noop.useCallback((id) => {
+        timestampProducer(combined, id.id, InviteSendStates.SENT);
       }, items2);
       const intl = combined(1126).intl;
       const stringResult = intl.string(_modDef2391.nVMqjA);
-      const obj2 = {
+      let obj2 = {
         scrollable: true,
         startExpanded: true,
-        dismissAccessibilityLabel: intl2.string(combined(1126).t.cpT0Cq),
-        header: closure_12(Stack, obj3),
-        children: tmp14Result,
+        dismissAccessibilityLabel: null,
+        header: null,
+        children: null,
       };
-      const ActionSheet = combined(6708).ActionSheet;
-      intl2 = combined(1126).intl;
-      obj3 = { spacing: nativeDefault.space.PX_16, style: tmp.header, children: items4 };
-      Stack = combined(5600).Stack;
-      const obj4 = { spacing: nativeDefault.space.PX_4, children: items3 };
-      const Stack2 = combined(5600).Stack;
+      const intl2 = combined(1126).intl;
+      obj2.dismissAccessibilityLabel = intl2.string(combined(1126).t.cpT0Cq);
+      const obj3 = { spacing: nativeDefault.space.PX_16, style: tmp.header, children: null };
+      const obj4 = { spacing: nativeDefault.space.PX_4, children: null };
       const obj5 = {
         variant: "heading-lg/bold",
         color: "mobile-text-heading-primary",
         style: tmp.centeredText,
-        children: intl3.formatToPlainString(_modDef2391.EnTIIr, { noun: stringResult }),
+        children: null,
       };
-      const Heading = combined(4892).Heading;
-      intl3 = combined(1126).intl;
-      items3 = [closure_11(Heading, obj5)];
-      const obj6 = {
-        variant: "text-sm/medium",
-        color: "text-muted",
-        style: tmp.centeredText,
-        children: intl4.formatToPlainString(_modDef2391.BBk7Qw, { noun: stringResult }),
-      };
-      const Text = combined(4892).Text;
-      intl4 = combined(1126).intl;
-      items3[1] = closure_11(Text, obj6);
-      items4 = [closure_12(Stack2, obj4)];
-      const obj7 = {
-        size: "md",
-        round: true,
-        onChange: callback,
-        placeholder: intl5.formatToPlainString(_modDef2391.cRK6SQ, { noun: stringResult }),
-      };
-      const SearchField = combined(6554).SearchField;
-      intl5 = combined(1126).intl;
-      items4[1] = closure_11(SearchField, obj7);
-      if (first) {
-        tmp14Result = closure_11(closure_15, {});
+      const intl3 = combined(1126).intl;
+      obj5.children = intl3.formatToPlainString(_modDef2391.EnTIIr, { noun: stringResult });
+      const items3 = [closure_11(combined(4892).Heading, obj5)];
+      const obj6 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
+      const intl4 = combined(1126).intl;
+      obj6.children = intl4.formatToPlainString(_modDef2391.BBk7Qw, { noun: stringResult });
+      items3[1] = closure_11(combined(4892).Text, obj6);
+      obj4.children = items3;
+      const items4 = [closure_12(combined(5600).Stack, obj4)];
+      const obj7 = { size: "md", round: true, onChange: callback, placeholder: null };
+      const intl5 = combined(1126).intl;
+      obj7.placeholder = intl5.formatToPlainString(_modDef2391.cRK6SQ, { noun: stringResult });
+      items4[1] = closure_11(combined(6554).SearchField, obj7);
+      obj3.children = items4;
+      obj2.header = closure_12(combined(5600).Stack, obj3);
+      if (tmp6[0]) {
+        let tmp13Result = closure_11(closure_15, {});
       } else {
         const obj8 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-        tmp14Result = closure_11(GameOrganizationInviteListDefault, obj8);
+        tmp13Result = closure_11(GameOrganizationInviteListDefault, obj8);
       }
-      return closure_11(ActionSheet, obj2);
+      obj2.children = tmp13Result;
+      return closure_11(combined(6708).ActionSheet, obj2);
     };
-let result = size.fileFinishedImporting(
-  "modules/game_organization_invites/native/GameOrganizationInviteActionSheet.tsx",
-);
-
-export default tmp4;

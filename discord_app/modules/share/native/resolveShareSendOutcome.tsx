@@ -2,8 +2,6 @@
 import formatResults from "../formatResults.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let set;
-
 const result = size.fileFinishedImporting("modules/share/native/resolveShareSendOutcome.tsx");
 
 export const getShareUploadError = function getShareUploadError(uploadError) {
@@ -16,11 +14,12 @@ export const getShareUploadError = function getShareUploadError(uploadError) {
   }
   return uploadError;
 };
-export const pairDestinationsWithChannels = function pairDestinationsWithChannels(arr, value) {
+export const pairDestinationsWithChannels = function pairDestinationsWithChannels(arr, arg1) {
+  closure_0 = arg1;
   const items = [];
   const item = arr.forEach((destination, index) => {
-    if (null != value[index]) {
-      const obj = { destination, channelId: value[index] };
+    if (null != closure_0[index]) {
+      const obj = { destination, channelId: tmp };
       items.push(obj);
     }
   });
@@ -29,22 +28,15 @@ export const pairDestinationsWithChannels = function pairDestinationsWithChannel
 export const withoutSentDestinations = function withoutSentDestinations(arr, arr2) {
   if (0 === arr2.length) {
     const items = [];
-    HermesBuiltin.arraySpread(items, arr, 0);
+    HermesBuiltin.arraySpread(arr, 0);
     return items;
   } else {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
     set = new Set(arr2.map(set(10724).destinationKey));
-    return arr.filter((item) => {
-      const has = set.has;
-      const obj = formatResults;
-      return !has(obj.destinationKey(item));
-    });
+    return arr.filter((item) => !set.has(formatResults.destinationKey(item)));
   }
 };
 export const resolveShareSendOutcome = function resolveShareSendOutcome(arr) {
-  let tmp3;
   const found = arr.filter((status) => "sent" === status.status);
   const found1 = arr.filter((status) => "failed" === status.status);
   let tmp = null;
@@ -59,10 +51,10 @@ export const resolveShareSendOutcome = function resolveShareSendOutcome(arr) {
   const obj = {
     sentDestinations: found.map((destination) => destination.destination),
     failedDestinations: found1.map((destination) => destination.destination),
-    transitionChannelId: tmp3,
-    uploadErrorToAlert: tmp,
+    transitionChannelId: null,
+    uploadErrorToAlert: null,
   };
-  tmp3 = null;
+  let tmp3 = null;
   if (0 === found1.length) {
     const first = found[0];
     let channelId;
@@ -74,5 +66,7 @@ export const resolveShareSendOutcome = function resolveShareSendOutcome(arr) {
     }
     tmp3 = channelId;
   }
+  obj.transitionChannelId = tmp3;
+  obj.uploadErrorToAlert = tmp;
   return obj;
 };

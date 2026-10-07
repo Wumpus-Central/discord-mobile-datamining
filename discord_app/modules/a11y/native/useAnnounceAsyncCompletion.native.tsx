@@ -1,21 +1,18 @@
 // discord_app/modules/a11y/native/useAnnounceAsyncCompletion.native.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const AccessibilityInfo = react_native.AccessibilityInfo;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const AccessibilityInfo = fn(17).AccessibilityInfo;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp2;
-      let tmp3;
-      let tmp5;
-      let obj = require("react");
-      const cResult = obj.c(3);
-      _require = react.useRef(null);
+      const cResult = require("c").c(3);
+      _require = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
           return () => {
@@ -34,31 +31,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3] = cResult;
       }
-      const effect = react.useEffect(tmp2, tmp3);
+      const effect = noop.useEffect(tmp2, tmp3);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function s(intl, polite) {
-          ref = intl;
           let str = "assertive";
           if (undefined !== polite) {
             str = polite;
           }
-          let tmp = ref;
-          const AccessibilityAnnouncer = ref(dependencyMap[4]).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer = ref(4735).AccessibilityAnnouncer;
           AccessibilityAnnouncer.announce(intl, str);
-          const obj = ref(dependencyMap[5]);
           if (obj.isIOS()) {
-            let resolved;
-            const tmpResult = tmp(dependencyMap[6]);
             if (tmpResult.getIsScreenReaderEnabled()) {
               let current = ref.current;
               if (current != null) {
-                let currentResult = current();
+                current();
               }
-              const self = this;
-              const self2 = this;
-              resolved = new Promise((arg0) => {
-                let closure_1;
-                ref = arg0;
+              let resolved = new Promise((arg0) => {
                 const timeout = setTimeout(() => {
                   const current = ref.current;
                   let currentResult;
@@ -67,8 +55,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   return currentResult;
                 }, 1800);
-                let closure_2 = AccessibilityInfo.addEventListener("announcementFinished", (event) => {
-                  const tmp = event.announcement === ref && event.success;
+                closure_2 = AccessibilityInfo.addEventListener("announcementFinished", (event) => {
                   if (tmp) {
                     const current = ref.current;
                     if (current != null) {
@@ -76,7 +63,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 });
-                ref.current = () => {
+                arg0.current = () => {
                   clearTimeout(closure_1);
                   closure_2.remove();
                   ref.current = null;
@@ -87,17 +74,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return resolved;
           }
           resolved = Promise.resolve();
+          obj = intl(1369);
         };
         cResult[2] = fn2;
-        tmp5 = fn2;
+        let tmp5 = fn2;
       } else {
         tmp5 = cResult[2];
       }
       return tmp5;
     }
   : () => {
-      let ref = react.useRef(null);
-      const effect = react.useEffect(
+      noop.useRef(null);
+      const effect = noop.useEffect(
         () => () => {
           const current = ref.current;
           if (current != null) {
@@ -107,29 +95,20 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      return react.useCallback(function (intl) {
-        ref = intl;
+      return noop.useCallback((intl) => {
         let str = polite;
         if (polite === undefined) {
           str = "assertive";
         }
-        let tmp = ref;
-        const AccessibilityAnnouncer = ref(dependencyMap[4]).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = ref(4735).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl, str);
-        const obj = ref(dependencyMap[5]);
         if (obj.isIOS()) {
-          let resolved;
-          const tmpResult = tmp(dependencyMap[6]);
           if (tmpResult.getIsScreenReaderEnabled()) {
             let current = ref.current;
             if (current != null) {
-              let currentResult = current();
+              current();
             }
-            const self = this;
-            const self2 = this;
-            resolved = new Promise((arg0) => {
-              let closure_1;
-              ref = arg0;
+            let resolved = new Promise((arg0) => {
               const timeout = setTimeout(() => {
                 const current = ref.current;
                 let currentResult;
@@ -138,8 +117,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 return currentResult;
               }, 1800);
-              let closure_2 = AccessibilityInfo.addEventListener("announcementFinished", (event) => {
-                const tmp = event.announcement === ref && event.success;
+              closure_2 = AccessibilityInfo.addEventListener("announcementFinished", (event) => {
                 if (tmp) {
                   const current = ref.current;
                   if (current != null) {
@@ -147,7 +125,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               });
-              ref.current = () => {
+              arg0.current = () => {
                 clearTimeout(closure_1);
                 closure_2.remove();
                 ref.current = null;
@@ -158,8 +136,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return resolved;
         }
         resolved = Promise.resolve();
+        obj = intl(1369);
       }, []);
     };
-const result = size.fileFinishedImporting("modules/a11y/native/useAnnounceAsyncCompletion.native.tsx");
-
-export default tmp2;

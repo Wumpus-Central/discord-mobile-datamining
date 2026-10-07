@@ -11,25 +11,22 @@ export const getCheckpointFlow = function getCheckpointFlow(flag) {
   return flag ? CheckpointFlow.SHARED_DATA : CheckpointFlow.NO_SHARED_DATA;
 };
 export const getCheckpointRoutes = function getCheckpointRoutes(arg0) {
-  let CHECKPOINT_NO_SHARED_DATA_FLOW;
   if (arg0 === CheckpointNavigation.CheckpointFlow.SHARED_DATA) {
-    CHECKPOINT_NO_SHARED_DATA_FLOW = CheckpointSharedDataFlow.CHECKPOINT_SHARED_DATA_FLOW;
+    let CHECKPOINT_NO_SHARED_DATA_FLOW = CheckpointSharedDataFlow.CHECKPOINT_SHARED_DATA_FLOW;
   } else {
     CHECKPOINT_NO_SHARED_DATA_FLOW = CheckpointNoSharedDataFlow.CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   return CHECKPOINT_NO_SHARED_DATA_FLOW;
 };
 export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(checkpointFlow, arg1, arg2) {
-  let INTRODUCTION;
-  let prop;
   if (checkpointFlow === CheckpointNavigation.CheckpointFlow.SHARED_DATA) {
-    prop = CheckpointSharedDataFlow.CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = CheckpointSharedDataFlow.CHECKPOINT_SHARED_DATA_FLOW;
   } else {
     prop = CheckpointNoSharedDataFlow.CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const index = prop.indexOf(arg1);
   if (-1 === index) {
-    INTRODUCTION = CheckpointNavigation.CheckpointRoute.INTRODUCTION;
+    let INTRODUCTION = CheckpointNavigation.CheckpointRoute.INTRODUCTION;
   } else {
     INTRODUCTION = prop[index + arg2];
     if (INTRODUCTION == null) {

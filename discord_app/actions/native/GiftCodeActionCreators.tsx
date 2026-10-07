@@ -1,184 +1,174 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
-import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let c5, c6, closure_3;
-
-let closure_4;
-let hasOwnProperty;
+require = fn;
 function redeemGiftCode() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let value = function _redeemGiftCode() {
-  const obj = _asyncToGenerator(async function (code) {
-    let c0;
-    let c2;
-    let c3;
-    let obj9;
-    let options;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (code === 1) {
-        throw value;
-      } else if (code === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_7 = async function _redeemGiftCode(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c4;
-      try {
-        let channelId;
-        let channel_id;
-        let paymentSource;
-        let id;
-        let entitlement;
-        let billingError;
-        c6 = 2;
-        if (0 === c5) {
-          if (code === 1) {
-            c6 = 3;
-            throw value;
-          } else if (code === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            code = undefined;
-            options = undefined;
-            c3 = undefined;
-            ({ code: c0, options } = closure_0);
-            if (options === undefined) {
-              options = closure_2_6;
-            }
-            ({ onRedeemed: c2, onError: c3 } = closure_0);
-            channelId = undefined;
-            channel_id = undefined;
-            paymentSource = undefined;
-            id = undefined;
-            entitlement = undefined;
-            billingError = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === c5) {
-          if (code === 1) {
-            c6 = 3;
-            throw value;
-          } else if (code === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            const obj18 = closure_130_0(closure_130_2[2]);
-            if (obj18.getIsPaymentsBlocked()) {
-              closure_130_1(closure_130_2[3])();
-              c6 = 3;
-              return { value: "IconComponent", done: null };
-            } else {
-              channelId = options.channelId;
-              let tmp36 = null;
-              if (undefined !== channelId) {
-                tmp36 = channelId;
-              }
-              channel_id = tmp36;
-              paymentSource = options.paymentSource;
-              let tmp41 = null;
-              if (undefined !== paymentSource) {
-                tmp41 = paymentSource;
-              }
-              id = tmp41;
-              const obj8 = { type: "GIFT_CODE_REDEEM", code };
-              const obj7 = closure_130_1(closure_130_2[4]);
-              obj7.dispatch(obj8);
-              c4 = 1;
-              const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-              const request = {
-                url: closure_130_4.GIFT_CODE_REDEEM(code),
-                body: obj9,
-                oldFormErrors: true,
-                rejectWithError: false,
-              };
-              const post = HTTP.post;
-              obj9 = { channel_id, payment_source_id: id };
-              id = undefined;
-              if (id != null) {
-                id = id.id;
-              }
-              c5 = 3;
-              c6 = 1;
-              const obj10 = { value: post(request), done: false };
-              return obj10;
-            }
-          }
-        } else if (2 === c5) {
-          c4 = 0;
-          let closure_10 = closure_3;
-          const self = this;
-          const self2 = this;
-          billingError = new closure_130_0(closure_130_2[7]).BillingError(closure_10);
-          const obj11 = { type: "GIFT_CODE_REDEEM_FAILURE", code, error: billingError };
-          const obj4 = closure_130_1(closure_130_2[4]);
-          obj4.dispatch(obj11);
-          const obj6 = closure_130_1(closure_130_2[6]);
-          obj6.track(closure_130_5.OPEN_MODAL, { type: "gift_accept", location: null });
-          if (c3 != null) {
-            tmp27(billingError);
-          }
-          throw billingError;
-        } else if (code === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
           throw value;
-        } else if (code === 2) {
-          c4 = 0;
+        } else if (arg0 === 2) {
           c6 = 3;
-          const obj12 = { value, done: true };
-          return obj12;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          entitlement = value;
-          const obj13 = { type: "GIFT_CODE_REDEEM_SUCCESS", code };
-          const obj15 = closure_130_1(closure_130_2[4]);
-          obj15.dispatch(obj13);
-          const obj17 = closure_130_1(closure_130_2[6]);
-          obj17.track(closure_130_5.OPEN_MODAL, { type: "gift_accept" });
-          if (tmp != null) {
-            tmp();
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ code: closure_129_0, options } = closure_0);
+          if (options === undefined) {
+            options = timestampProducer;
           }
-          value = { code, entitlement };
-          c4 = 0;
-          c6 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
+          closure_129_1 = options;
+          ({ onRedeemed: closure_129_2, onError: closure_129_3 } = closure_0);
+          let channelId;
+          closure_129_5 = undefined;
+          let paymentSource;
+          closure_129_7 = undefined;
+          closure_129_8 = undefined;
+          closure_129_9 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp61) {
-        closure_3 = tmp61;
-        if (0 === c4) {
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
           c6 = 3;
-          throw tmp61;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          c5 = 2;
+          if (obj18.getIsPaymentsBlocked()) {
+            closure_130_1(closure_130_2[3])();
+            c6 = 3;
+            return { value: "IconComponent", done: null };
+          } else {
+            channelId = closure_129_1.channelId;
+            let tmp41 = null;
+            if (undefined !== channelId) {
+              tmp41 = channelId;
+            }
+            closure_129_5 = tmp41;
+            paymentSource = closure_129_1.paymentSource;
+            let tmp46 = null;
+            if (undefined !== paymentSource) {
+              tmp46 = paymentSource;
+            }
+            closure_129_7 = tmp46;
+            const obj8 = { type: "GIFT_CODE_REDEEM", code: closure_129_0 };
+            closure_130_1(closure_130_2[4]).dispatch(obj8);
+            c4 = 1;
+            const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+            const request = {
+              url: closure_130_4.GIFT_CODE_REDEEM(closure_129_0),
+              body: null,
+              oldFormErrors: true,
+              rejectWithError: false,
+            };
+            const obj9 = { channel_id: closure_129_5, payment_source_id: null };
+            let id;
+            if (closure_129_7 != null) {
+              id = closure_129_7.id;
+            }
+            obj9.payment_source_id = id;
+            request.body = obj9;
+            c5 = 3;
+            c6 = 1;
+            const obj10 = { value: HTTP.post(request), done: false };
+            return obj10;
+          }
+          obj18 = closure_130_0(closure_130_2[2]);
         }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        closure_129_10 = closure_3;
+        const billingError = new closure_130_0(closure_130_2[7]).BillingError(closure_129_10);
+        closure_129_9 = billingError;
+        const obj11 = { type: "GIFT_CODE_REDEEM_FAILURE", code: closure_129_0, error: closure_129_9 };
+        closure_130_1(closure_130_2[4]).dispatch(obj11);
+        const obj4 = closure_130_1(closure_130_2[4]);
+        closure_130_1(closure_130_2[6]).track(closure_130_5.OPEN_MODAL, { type: "gift_accept", location: null });
+        if (closure_129_3 != null) {
+          tmp32(closure_129_9);
+        }
+        throw closure_129_9;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      } else {
+        closure_129_8 = value;
+        const obj13 = { type: "GIFT_CODE_REDEEM_SUCCESS", code: closure_129_0 };
+        closure_130_1(closure_130_2[4]).dispatch(obj13);
+        const obj15 = closure_130_1(closure_130_2[4]);
+        closure_130_1(closure_130_2[6]).track(closure_130_5.OPEN_MODAL, { type: "gift_accept" });
+        if (closure_129_2 != null) {
+          closure_129_2();
+        }
+        const obj = { code: closure_129_0, entitlement: closure_129_8 };
+        c4 = 0;
+        c6 = 3;
+        const obj14 = { value: obj, done: true };
+        return obj14;
+      }
+    } catch (tmp66) {
+      closure_3 = tmp66;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp66;
+      } else {
+        c5 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
 function openGiftCodeRedeemModal(c0, fromServer) {
-  const obj = ModalActionCreatorsDefault;
-  const obj2 = { code: _require, giftCodeDebugOverride: fromServer };
-  obj.pushLazy(asyncRequire(11110, dependencyMap.paths), obj2, "GIFT_CODE_REDEEM_MODAL_KEY");
+  ModalActionCreatorsDefault.pushLazy(
+    asyncRequireImpl(11110, dependencyMap.paths),
+    { code: _require, giftCodeDebugOverride: fromServer },
+    "GIFT_CODE_REDEEM_MODAL_KEY",
+  );
 }
+const Constants = fn(1085);
 ({ Endpoints: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let closure_6 = Object.freeze({});
+const size = fn(2);
 const result = size.fileFinishedImporting("actions/native/GiftCodeActionCreators.tsx");
 
 export default { redeemGiftCode, openGiftCodeRedeemModal };

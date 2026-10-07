@@ -1,12 +1,10 @@
 // discord_app/stores/NotificationSettingsStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-let TTSNotificationTypes;
-let c3;
 const DesktopNotificationTypes = Constants.DesktopNotificationTypes;
 ({ NotificationPermissionTypes: c3, TTSNotificationTypes } = Constants);
 let obj = {
@@ -22,44 +20,35 @@ let obj = {
 function handleSetDesktopType(desktopType) {
   obj.desktopType = desktopType.desktopType;
 }
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
-class NotificationSettingsStore extends DeviceSettingsStore {
-  initialize(arg0) {
-    obj = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(arg0);
-  }
-  getUserAgnosticState() {
-    return obj;
-  }
-  getDesktopType() {
-    return obj.desktopType;
-  }
-  getTTSType() {
-    return obj.ttsType;
-  }
-  getDisabledSounds() {
-    return obj.disabledSounds;
-  }
-  getDisableAllSounds() {
-    return obj.disableAllSounds;
-  }
-  getDisableUnreadBadge() {
-    return obj.disableUnreadBadge;
-  }
-  getNotifyMessagesInSelectedChannel() {
-    return obj.notifyMessagesInSelectedChannel;
-  }
-  isSoundDisabled(message1) {
-    let disableAllSounds = obj.disableAllSounds;
-    if (!disableAllSounds) {
-      const disabledSounds = obj.disabledSounds;
-      disableAllSounds = -1 !== disabledSounds.indexOf(message1);
-    }
-    return disableAllSounds;
-  }
-}
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
+class NotificationSettingsStore extends DeviceSettingsStore {}
 const prototype = NotificationSettingsStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  obj = {};
+  const merged = Object.assign(obj);
+  const merged1 = Object.assign(arg0);
+};
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return obj;
+};
+prototype["getDesktopType"] = function getDesktopType() {
+  return obj.desktopType;
+};
+prototype["getTTSType"] = function getTTSType() {
+  return obj.ttsType;
+};
+prototype["getDisabledSounds"] = function getDisabledSounds() {
+  return obj.disabledSounds;
+};
+prototype["getDisableAllSounds"] = function getDisableAllSounds() {
+  return obj.disableAllSounds;
+};
+prototype["getDisableUnreadBadge"] = function getDisableUnreadBadge() {
+  return obj.disableUnreadBadge;
+};
+prototype["getNotifyMessagesInSelectedChannel"] = function getNotifyMessagesInSelectedChannel() {
+  return obj.notifyMessagesInSelectedChannel;
+};
 Object.defineProperty(prototype, "taskbarFlash", {
   get: function taskbarFlash() {
     return obj.taskbarFlash;
@@ -72,29 +61,39 @@ Object.defineProperty(prototype, "screenDowntimeReminder", {
   },
   set: undefined,
 });
+prototype["isSoundDisabled"] = function isSoundDisabled(message1) {
+  let disableAllSounds = obj.disableAllSounds;
+  if (!disableAllSounds) {
+    const disabledSounds = obj.disabledSounds;
+    disableAllSounds = -1 !== disabledSounds.indexOf(message1);
+  }
+  return disableAllSounds;
+};
 NotificationSettingsStore.displayName = "NotificationSettingsStore";
 NotificationSettingsStore.persistKey = "notifications";
 const items = [
   (arg0) => {
-    let NEVER;
-    obj = {
-      disabledSounds: obj.disabledSounds || [],
-      disableUnreadBadge: obj.disableUnreadBadge || false,
-      taskbarFlash: null == obj.taskbarFlash || obj.taskbarFlash,
-      ttsType: NEVER,
-    };
+    obj = {};
     const merged = Object.assign(arg0);
-    NEVER = obj.ttsType || TTSNotificationTypes.NEVER;
-    if (null == obj.desktopType) {
+    obj.disabledSounds = obj.disabledSounds || [];
+    obj.disableUnreadBadge = obj.disableUnreadBadge || false;
+    obj.taskbarFlash = null == obj.taskbarFlash || obj.taskbarFlash;
+    let NEVER = obj.ttsType;
+    if (!NEVER) {
+      NEVER = TTSNotificationTypes.NEVER;
+    }
+    obj.ttsType = NEVER;
+    if (null != obj.desktopType) {
+      return obj;
+    } else {
       obj.desktopType = PlatformUtils.isPlatformEmbedded
         ? DesktopNotificationTypes.ALL
         : DesktopNotificationTypes.NEVER;
     }
-    return obj;
   },
 ];
 NotificationSettingsStore.migrations = items;
-const obj2 = {
+const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, {
   NOTIFICATIONS_SET_DESKTOP_TYPE: handleSetDesktopType,
   NOTIFICATIONS_SET_TTS_TYPE: function handleSetTTSType(ttsType) {
     obj.ttsType = ttsType.ttsType;
@@ -125,8 +124,7 @@ const obj2 = {
   NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: function handleSetScreenDowntimeReminder(screenDowntimeReminder) {
     obj.screenDowntimeReminder = screenDowntimeReminder.screenDowntimeReminder;
   },
-};
-const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, obj2);
+});
 const result = size.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
 
 export default notificationSettingsStore;

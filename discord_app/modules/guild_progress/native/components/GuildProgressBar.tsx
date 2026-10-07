@@ -1,65 +1,69 @@
 // discord_app/modules/guild_progress/native/components/GuildProgressBar.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import GuildProgressUtils from "../GuildProgressUtils.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let percent, set;
-
-let obj2;
-let obj3;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { wrapper: obj2, progress: obj3 };
-obj2 = {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  wrapper: {
+    position: "relative",
+    backgroundColor: fn(12145).PROGRESS_BACKGROUND_COLOR,
+    borderRadius: nativeDefault.radii.xs,
+    height: 8,
+  },
+  progress: null,
+};
+let obj3 = {
   position: "relative",
-  backgroundColor: GuildProgressUtils.PROGRESS_BACKGROUND_COLOR,
+  backgroundColor: fn(12145).PROGRESS_BACKGROUND_COLOR,
   borderRadius: nativeDefault.radii.xs,
   height: 8,
 };
-createStyles = createStyles.createStyles;
-obj3 = {
+obj2.progress = {
   position: "absolute",
   height: 8,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.xs,
 };
-let closure_6 = createStyles(obj);
+let closure_6 = createStyles.createStyles(obj2);
 const __initData = {
   code: 'function GuildProgressBarTsx1(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+"%"};}',
 };
 const __initData2 = {
   code: 'function GuildProgressBarTsx2(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+"%"};}',
 };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj4 = {
+  position: "absolute",
+  height: 8,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
+  borderRadius: nativeDefault.radii.xs,
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressBar.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (percent) => {
-      let obj = percent(576);
-      const cResult = obj.c(13);
-      const tmp = percent;
+      const cResult = percent(576).c(13);
       percent = percent.percent;
       const style = percent.style;
       const tmp4 = closure_6();
-      const obj2 = percent(4618);
-      const sharedValue = obj2.useSharedValue(0);
+      const obj = percent(576);
+      const tmp = percent;
+      const sharedValue = percent(4618).useSharedValue(0);
       if (cResult[0] === percent) {
-        let tmp6;
-        let tmp7;
         if (cResult[1] === sharedValue) {
-          tmp6 = cResult[2];
-          tmp7 = cResult[3];
+          let tmp6 = cResult[2];
+          let tmp7 = cResult[3];
         }
-        const effect = react.useEffect(tmp6, tmp7);
-        const tmpResult = tmp(4618);
+        const effect = noop.useEffect(tmp6, tmp7);
         class R {
           constructor() {
-            const obj = { width: "" + sharedValue.get() + "%" };
+            obj = { width: "" + closure_1.get() + "%" };
             return obj;
           }
         }
@@ -67,27 +71,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         R.__closure = obj3;
         R.__workletHash = 14122394499539;
         R.__initData = __initData;
-        const animatedStyle = tmpResult.useAnimatedStyle(R);
+        const animatedStyle = tmp(4618).useAnimatedStyle(R);
         if (cResult[4] === style) {
-          let tmp12;
           if (cResult[5] === tmp4.wrapper) {
-            tmp12 = cResult[6];
+            let tmp12 = cResult[6];
           }
           if (cResult[7] === animatedStyle) {
-            let tmp13;
             if (cResult[8] === tmp4.progress) {
-              tmp13 = cResult[9];
+              let tmp13 = cResult[9];
             }
             if (cResult[10] === tmp12) {
-              let tmp18;
               if (cResult[11] === tmp13) {
-                tmp18 = cResult[12];
+                let tmp18 = cResult[12];
               }
               return tmp18;
             }
             class R {
               constructor() {
-                const obj = { width: "" + sharedValue.get() + "%" };
+                obj = { width: "" + closure_1.get() + "%" };
                 return obj;
               }
             }
@@ -101,7 +102,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           class R {
             constructor() {
-              const obj = { width: "" + sharedValue.get() + "%" };
+              obj = { width: "" + closure_1.get() + "%" };
               return obj;
             }
           }
@@ -118,11 +119,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp4.wrapper;
         cResult[6] = items1;
         tmp12 = items1;
+        const tmpResult = tmp(4618);
       }
       const fn = function u() {
-        set = sharedValue.set;
-        const obj = timing;
-        const result = set(obj.withTiming(percent, timingPresets.timingSlow));
+        const result = sharedValue.set(timing.withTiming(percent, timingPresets.timingSlow));
       };
       const items2 = [percent, sharedValue];
       cResult[0] = percent;
@@ -131,32 +131,30 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items2;
       tmp7 = items2;
       tmp6 = fn;
+      const obj2 = percent(4618);
     }
   : (percent) => {
       percent = percent.percent;
-      const style = percent.style;
       const tmp = closure_6();
-      let obj = percent(4618);
-      const sharedValue = obj.useSharedValue(0);
+      const sharedValue = percent(4618).useSharedValue(0);
       const items = [percent, sharedValue];
-      const effect = react.useEffect(() => {
-        set = sharedValue.set;
-        const obj = timing;
-        const result = set(obj.withTiming(percent, timingPresets.timingSlow));
+      const effect = noop.useEffect(() => {
+        const result = sharedValue.set(timing.withTiming(percent, timingPresets.timingSlow));
       }, items);
+      const obj = percent(4618);
       const fn = function _() {
-        const obj = { width: "" + sharedValue.get() + "%" };
-        return obj;
+        return { width: "" + sharedValue.get() + "%" };
       };
       fn.__closure = { percentWidth: sharedValue };
       fn.__workletHash = 17127431788560;
       fn.__initData = __initData2;
-      const items1 = [tmp.wrapper, style];
-      const obj2 = percent(4618);
-      const animatedStyle = obj2.useAnimatedStyle(fn);
+      const obj3 = { style: null, children: null };
+      const items1 = [tmp.wrapper, percent.style];
+      obj3.style = items1;
+      const animatedStyle = percent(4618).useAnimatedStyle(fn);
+      const obj4 = { style: null };
       const items2 = [tmp.progress, animatedStyle];
-      return <View style={items1}>{null}</View>;
+      obj4.style = items2;
+      obj3.children = jsx(sharedValue(4618).View, { style: null });
+      return <View style={null}>{null}</View>;
     };
-let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressBar.tsx");
-
-export default tmp3;

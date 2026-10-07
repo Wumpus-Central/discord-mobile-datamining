@@ -5,6 +5,5 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("lib/getTimeZone.native.tsx");
 
 export default function getTimeZone() {
-  const obj = DeviceUtils;
-  return obj.getTimeZone();
+  return DeviceUtils.getTimeZone();
 }

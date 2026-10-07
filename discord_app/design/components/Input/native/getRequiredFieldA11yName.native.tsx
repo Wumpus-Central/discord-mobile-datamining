@@ -1,5 +1,5 @@
 // discord_app/design/components/Input/native/getRequiredFieldA11yName.native.tsx
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/components/Input/native/getRequiredFieldA11yName.native.tsx");
@@ -9,9 +9,9 @@ export const getRequiredFieldA11yName = function getRequiredFieldA11yName(access
   if (null != accessibilityLabel) {
     if ("" !== accessibilityLabel) {
       if (true === required) {
-        const intl = intl2.intl;
+        const intl = util.intl;
         const _HermesInternal = HermesInternal;
-        combined = "" + accessibilityLabel + " (" + intl.string(intl2.t.EkokLy) + ")";
+        combined = "" + accessibilityLabel + " (" + intl.string(util.t.EkokLy) + ")";
       }
     }
   }

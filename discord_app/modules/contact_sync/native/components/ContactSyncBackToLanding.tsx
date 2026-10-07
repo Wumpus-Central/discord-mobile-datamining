@@ -4,32 +4,29 @@ import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, navigation;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(3);
-      let obj2 = require("useNavigation");
-      const tmp2 = navigation;
-      navigation = obj2.useNavigation();
+      const cResult = require("c").c(3);
+      const obj = require("c");
       const tmp = _require;
+      const tmp2 = navigation;
+      navigation = require("useNavigation").useNavigation();
       if (cResult[0] === navigation) {
-        let tmp5;
         if (cResult[1] === arg0) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         return tmp5;
       }
-      const tmpResult = tmp(tmp2[3]);
-      const tmp6 = tmpResult.getHeaderBackButton(() => {
+      let obj2 = require("useNavigation");
+      const tmp6 = tmp(tmp2[3]).getHeaderBackButton(() => {
         if (null != closure_0.navigateToLandingPage) {
           const result = closure_0.navigateToLandingPage();
         } else {
-          const obj2 = ContactSyncModalActionCreators;
-          obj2.goBackToLanding(navigation);
+          ContactSyncModalActionCreators.goBackToLanding(navigation);
         }
       }, true)(arg0);
       cResult[0] = navigation;
@@ -38,21 +35,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = tmp6;
     }
   : (arg0) => {
-      let closure_0;
-      let closure_1;
       _require = arg0;
+      dependencyMap = require("useNavigation").useNavigation();
       const obj = require("useNavigation");
-      dependencyMap = obj.useNavigation();
-      let obj2 = require("NavigatorHeader");
-      return obj2.getHeaderBackButton(() => {
+      return require("NavigatorHeader").getHeaderBackButton(() => {
         if (null != closure_0.navigateToLandingPage) {
           const result = closure_0.navigateToLandingPage();
         } else {
-          const obj2 = ContactSyncModalActionCreators;
-          obj2.goBackToLanding(closure_1);
+          ContactSyncModalActionCreators.goBackToLanding(closure_1);
         }
       }, true)(arg0);
     };
-let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
-
-export default tmp2;

@@ -1,9 +1,8 @@
 // discord_app/utils/native/StyleSheetUtils.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let getStyleProp;
-const obj = { getStyleProp };
-getStyleProp = function getStyleProp(style, borderRadius) {
+const obj = { getStyleProp: null };
+function getStyleProp(style, borderRadius) {
   if (null != borderRadius) {
     if ("" !== borderRadius) {
       const _Array = Array;
@@ -23,7 +22,8 @@ getStyleProp = function getStyleProp(style, borderRadius) {
       }
     }
   }
-};
+}
+obj.getStyleProp = getStyleProp;
 const result = size.fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
 
 export default obj;

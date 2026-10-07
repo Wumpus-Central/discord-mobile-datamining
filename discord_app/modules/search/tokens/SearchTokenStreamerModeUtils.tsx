@@ -1,41 +1,30 @@
 // discord_app/modules/search/tokens/SearchTokenStreamerModeUtils.tsx
 import isGuildLikeSearchContext from "../isGuildLikeSearchContext.tsx";
 import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
-import Constants from "../../../Constants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let set;
-
-let c3;
-let closure_4;
+require = fn;
 function getValidOrderedFilterTokens(type, items) {
-  let tmp;
-  let tmp14;
-  let tmp2;
-  let tmp6;
   [tmp] = items;
   items = [tmp];
   [tmp2] = items;
   const items1 = [];
-  const tmp3 = !tmp2.hidePersonalInformation;
-  if (tmp3) {
+  if (!tmp2.hidePersonalInformation) {
     items1.push(constants.FILTER_FROM);
   }
   const items2 = [tmp];
-  [tmp6] = items2;
-  const obj = isGuildLikeSearchContext;
-  let result = obj.isGuildLikeSearchContext(type);
+  [tmp5] = items2;
+  let result = isGuildLikeSearchContext.isGuildLikeSearchContext(type);
   if (!result) {
-    result = type.type === constants2.DMS && !tmp6.hidePersonalInformation;
+    result = type.type === constants2.DMS && !tmp5.hidePersonalInformation;
+    const tmp8 = type.type === constants2.DMS && !tmp5.hidePersonalInformation;
   }
   if (result) {
     items1.push(constants.FILTER_IN);
   }
   items1.push(constants.FILTER_HAS);
   const items3 = [tmp];
-  [tmp14] = items3;
-  const tmp15 = !tmp14.hidePersonalInformation;
-  if (tmp15) {
+  [tmp13] = items3;
+  if (!tmp13.hidePersonalInformation) {
     items1.push(constants.FILTER_MENTIONS);
   }
   items1.push(constants.FILTER_ON);
@@ -44,11 +33,12 @@ function getValidOrderedFilterTokens(type, items) {
   items1.push(constants.FILTER_AUTHOR_TYPE);
   return items1;
 }
+const Constants = fn(1085);
 ({ SearchTokenTypes: c3, SearchTypes: closure_4 } = Constants);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/tokens/SearchTokenStreamerModeUtils.tsx");
 
 export const isFromUserFilterSupported = function isFromUserFilterSupported() {
-  let tmp3;
   let tmp = arg0;
   if (arg0 === undefined) {
     const items = [StreamerModeStore];
@@ -58,7 +48,6 @@ export const isFromUserFilterSupported = function isFromUserFilterSupported() {
   return !tmp3.hidePersonalInformation;
 };
 export const isMentionsUserFilterSupported = function isMentionsUserFilterSupported() {
-  let tmp3;
   let tmp = arg0;
   if (arg0 === undefined) {
     const items = [StreamerModeStore];
@@ -68,22 +57,20 @@ export const isMentionsUserFilterSupported = function isMentionsUserFilterSuppor
   return !tmp3.hidePersonalInformation;
 };
 export const isInChannelFilterSupported = function isInChannelFilterSupported(selectedSearchContext) {
-  let tmp3;
   let tmp = arg1;
   if (arg1 === undefined) {
     const items = [StreamerModeStore];
     tmp = items;
   }
   [tmp3] = tmp;
-  const obj = isGuildLikeSearchContext;
-  let result = obj.isGuildLikeSearchContext(selectedSearchContext);
+  let result = isGuildLikeSearchContext.isGuildLikeSearchContext(selectedSearchContext);
   if (!result) {
     result = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
+    const tmp6 = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
   }
   return result;
 };
 export { getValidOrderedFilterTokens };
 export const getValidFilterTokens = function getValidFilterTokens(type, items) {
-  set = new Set(getValidOrderedFilterTokens(type, items));
-  return set;
+  return new Set(getValidOrderedFilterTokens(type, items));
 };

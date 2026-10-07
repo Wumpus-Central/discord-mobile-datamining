@@ -1,26 +1,24 @@
 // discord_common/js/packages/transition-group/TransitionChildMapping.tsx
-import react from "../../../../_runtime/00019_react.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionChildMapping.tsx");
 
 export const getChildMapping = function getChildMapping(children) {
-  const obj = {};
   if (children) {
-    const Children = react.Children;
+    const Children = noop.Children;
     const mapped = Children.map(children, (arg0) => arg0);
     if (mapped != null) {
       const item = mapped.forEach((key) => {
         if (null != key.key) {
-          obj[key.key] = key.key;
+          obj[key] = key;
         }
       });
     }
   }
-  return obj;
+  return {};
 };
 export const mergeChildMappings = function mergeChildMappings() {
-  let num2;
   let obj = children;
   if (children === undefined) {
     obj = {};
@@ -54,32 +52,28 @@ export const mergeChildMappings = function mergeChildMappings() {
   }
   const obj4 = {};
   for (const key10018 in obj2) {
-    let tmp10;
     if (obj3.hasOwnProperty(key10018)) {
-      let num;
       for (let num = 0; num < obj3[key10018].length; num = num + 1) {
-        let tmp9;
         let tmp6 = obj3[key10018][num];
-        let tmp7 = obj3[key10018][num];
         if (obj2.hasOwnProperty(tmp6)) {
-          tmp9 = obj2[tmp6];
+          let tmp8 = obj2[tmp6];
         } else {
-          tmp9 = obj[tmp6];
+          tmp8 = obj[tmp6];
         }
-        obj4[tmp7] = tmp9;
+        obj4[obj3[key10018][num]] = tmp8;
       }
     }
     if (obj2.hasOwnProperty(key10018)) {
-      tmp10 = obj2[key10018];
+      let tmp9 = obj2[key10018];
     } else {
-      tmp10 = obj[key10018];
+      tmp9 = obj[key10018];
     }
-    obj4[key10018] = tmp10;
+    obj4[key10018] = tmp9;
     continue;
   }
   for (let num2 = 0; num2 < arr2.length; num2 = num2 + 1) {
-    let tmp11 = arr2[num2];
-    obj4[arr2[num2]] = obj2.hasOwnProperty(tmp11) ? obj2[tmp11] : obj[tmp11];
+    let tmp10 = arr2[num2];
+    obj4[arr2[num2]] = obj2.hasOwnProperty(tmp10) ? obj2[tmp10] : obj[tmp10];
   }
   return obj4;
 };

@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileTryItOutEditForm.tsx
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../_runtime/00576_react.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
@@ -21,87 +21,52 @@ import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedSty
 import EditUserProfileAvatarDefault from "EditUserProfileAvatar.tsx";
 import UserProfileFloatingUpsell from "UserProfileFloatingUpsell.tsx";
 import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let currentUser, tryItOutChanges;
-
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 function EditableBanner(user) {
-  let intl;
-  let obj2;
-  let tmp4;
   user = user.user;
   const merged = Object.assign(user, Object.assign({ user: 0 }));
   let analyticsLocations;
-  let tmp2 = analyticsLocations(6664);
-  analyticsLocations = tmp2(analyticsLocations(6688).EDIT_BANNER).analyticsLocations;
+  analyticsLocations = analyticsLocations(6664)(analyticsLocations(6688).EDIT_BANNER).analyticsLocations;
   const items = [analyticsLocations, user];
-  const callback = react.useCallback(() => {
-    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-    const obj = {
-      user,
-      analyticsLocations,
-      onBannerChange: UserProfileActionCreators.setTryItOutBanner,
-      isTryItOut: true,
-    };
-    ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(14434, dependencyMap.paths);
-    openLazy(tmp2, "Change Banner", obj);
+  const callback = noop.useCallback(() => {
+    const obj2 = { user, analyticsLocations, onBannerChange: null, isTryItOut: true };
+    const obj = ActionSheetActionCreatorsDefault;
+    obj2.onBannerChange = UserProfileActionCreators.setTryItOutBanner;
+    obj.openLazy(asyncRequireImpl(14434, dependencyMap.paths), "Change Banner", obj2);
   }, items);
-  let obj = { value: analyticsLocations, children: closure_7(tmp4, obj2) };
-  const AnalyticsLocationProvider = user(6664).AnalyticsLocationProvider;
-  obj2 = {
-    user,
-    onPressEdit: callback,
-    editButtonAccessibilityLabel: intl.string(user(1126).t.VqsHy0),
-    bannerSafeArea: 12,
-    isUserProfileEditingRefresh: true,
-  };
-  tmp4 = analyticsLocations(14432);
+  let obj = { value: analyticsLocations, children: null };
+  let obj2 = {};
+  const tmp2 = analyticsLocations(6664);
   const merged1 = Object.assign(merged);
-  intl = user(1126).intl;
-  return closure_7(AnalyticsLocationProvider, obj);
+  obj2.user = user;
+  obj2.onPressEdit = callback;
+  const intl = user(1126).intl;
+  obj2.editButtonAccessibilityLabel = intl.string(user(1126).t.VqsHy0);
+  obj2.bannerSafeArea = 12;
+  obj2.isUserProfileEditingRefresh = true;
+  obj.children = closure_7(analyticsLocations(14432), obj2);
+  return closure_7(user(6664).AnalyticsLocationProvider, obj);
 }
-({ ScrollView: closure_4, View: hasOwnProperty } = react_native);
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+get_ActivityIndicator = fn(17);
+({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTryItOutEditForm.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (currentUser) => {
-      let avatarBackground;
-      let containerBackground;
-      let gradientFallbackBackground;
-      let gradientSecondaryBackground;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let primaryColor;
-      let secondaryColor;
-      let theme;
-      let tmp10;
-      let tmp9;
-      let tryItOutAvatar;
-      let tryItOutBanner;
-      let tryItOutDisplayNameStyles;
-      let tryItOutThemeColors;
-      const obj = react2;
-      const cResult = obj.c(90);
+      const cResult = c.c(90);
       currentUser = currentUser.currentUser;
       const tmp5 = UserProfileSharedStylesDefault();
       const tmp6 = UserProfileEditFormSharedStylesDefault();
       const tmp7 = useSafeAreaInsetsDefault();
-      const obj2 = UserProfileFloatingUpsell;
-      const floatingUpsellHeight = obj2.useFloatingUpsellHeight();
+      const floatingUpsellHeight = UserProfileFloatingUpsell.useFloatingUpsellHeight();
       const onLayout = floatingUpsellHeight.onLayout;
-      const height = floatingUpsellHeight.height;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserProfileSettingsStore];
         const fn = function u() {
@@ -120,50 +85,42 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp9, tmp10] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp9, tmp10);
+      const stateFromStoresObject = initialize.useStateFromStoresObject(tmp9, tmp10);
       ({ tryItOutAvatar, tryItOutBanner, tryItOutThemeColors, tryItOutDisplayNameStyles } = stateFromStoresObject);
       let str = currentUser.id;
-      const tmp4Result = useDisplayProfileDefault;
+      const tmpResult = initialize;
       if (str == null) {
         str = "";
       }
-      const tmp4ResultResult = tmp4Result(str);
-      const tmpResult4 = userSettingToActivity;
-      const customStatusActivity = tmpResult4.useCustomStatusActivity();
+      const tmp4ResultResult = useDisplayProfileDefault(str);
+      const tmp4Result = useDisplayProfileDefault;
+      const customStatusActivity = userSettingToActivity.useCustomStatusActivity();
       if (cResult[2] === currentUser.id) {
-        let tmp16;
         if (cResult[3] === tryItOutAvatar) {
-          tmp16 = cResult[4];
+          let tmp16 = cResult[4];
         }
         const tmp18 = useBadgesDefault(tmp4ResultResult);
         if (cResult[5] === currentUser) {
           if (cResult[6] === tmp4ResultResult) {
-            let tmp19;
             if (cResult[7] === tryItOutThemeColors) {
-              tmp19 = cResult[8];
+              let tmp19 = cResult[8];
             }
             ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault(tmp19));
-            useProfileThemeDefault(tmp19);
             if (cResult[9] === primaryColor) {
               if (cResult[10] === secondaryColor) {
-                let tmp22;
-                let tmp26;
-                let tmp27;
                 if (cResult[11] === theme) {
-                  tmp22 = cResult[12];
+                  let tmp22 = cResult[12];
                 }
-                const tmpResult5 = useUserProfileColors;
-                const userProfileColors = tmpResult5.useUserProfileColors(tmp22);
+                const userProfileColors = useUserProfileColors.useUserProfileColors(tmp22);
                 ({ gradientFallbackBackground, gradientSecondaryBackground, containerBackground, avatarBackground } =
                   userProfileColors);
-                const sum = tmp7.bottom + height;
+                const sum = tmp7.bottom + floatingUpsellHeight.height;
                 const sum1 = sum + nativeDefault.space.PX_16;
                 if (cResult[13] !== avatarBackground) {
                   const obj3 = { backgroundColor: avatarBackground };
                   cResult[13] = avatarBackground;
                   cResult[14] = obj3;
-                  tmp26 = obj3;
+                  let tmp26 = obj3;
                 } else {
                   tmp26 = cResult[14];
                 }
@@ -182,23 +139,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { backgroundColor: gradientSecondaryBackground };
                   cResult[15] = gradientSecondaryBackground;
                   cResult[16] = obj4;
-                  tmp27 = obj4;
+                  let tmp27 = obj4;
                 } else {
                   tmp27 = cResult[16];
                 }
                 if (cResult[17] === tmp6.container) {
-                  let tmp28;
-                  let tmp29;
-                  let tmp33;
                   if (cResult[18] === tmp27) {
-                    tmp28 = cResult[19];
+                    let tmp28 = cResult[19];
                   }
                   if (cResult[20] !== tmp6.bounceOffset) {
                     const obj5 = { style: tmp6.bounceOffset };
-                    const tmp32 = metroImportDefault(hasOwnProperty, obj5);
+                    const tmp32 = React5(hasOwnProperty, obj5);
                     cResult[20] = tmp6.bounceOffset;
                     cResult[21] = tmp32;
-                    tmp29 = tmp32;
+                    let tmp29 = tmp32;
                   } else {
                     tmp29 = cResult[21];
                   }
@@ -206,7 +160,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj6 = { backgroundColor: gradientSecondaryBackground };
                     cResult[22] = gradientSecondaryBackground;
                     cResult[23] = obj6;
-                    tmp33 = obj6;
+                    let tmp33 = obj6;
                   } else {
                     tmp33 = cResult[23];
                   }
@@ -214,113 +168,98 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[25] === tmp4ResultResult) {
                       if (cResult[26] === tmp16) {
                         if (cResult[27] === tryItOutBanner) {
-                          let tmp34;
                           if (cResult[28] === tryItOutThemeColors) {
-                            tmp34 = cResult[29];
+                            let tmp34 = cResult[29];
                           }
                           if (cResult[30] === tmp26) {
                             if (cResult[31] === tmp6.avatarContainer) {
                               if (cResult[32] === tmp5.avatarBackground) {
-                                let tmp38;
                                 if (cResult[33] === tmp5.avatarPosition) {
-                                  tmp38 = cResult[34];
+                                  let tmp38 = cResult[34];
                                 }
                                 if (cResult[35] === tmp26) {
-                                  let tmp39;
                                   if (cResult[36] === currentUser) {
-                                    tmp39 = cResult[37];
+                                    let tmp39 = cResult[37];
                                   }
                                   if (cResult[38] === tmp38) {
-                                    let tmp42;
-                                    let tmp46;
                                     if (cResult[39] === tmp39) {
-                                      tmp42 = cResult[40];
+                                      let tmp42 = cResult[40];
                                     }
                                     if (cResult[41] !== sum1) {
                                       const obj7 = { paddingTop: 0, paddingBottom: sum1 };
                                       cResult[41] = sum1;
                                       cResult[42] = obj7;
-                                      tmp46 = obj7;
+                                      let tmp46 = obj7;
                                     } else {
                                       tmp46 = cResult[42];
                                     }
                                     if (cResult[43] === tmp5.profileContent) {
                                       if (cResult[44] === tmp5.profileContentWrapper) {
-                                        let tmp47;
                                         if (cResult[45] === tmp46) {
-                                          tmp47 = cResult[46];
+                                          let tmp47 = cResult[46];
                                         }
                                         if (cResult[47] === customStatusActivity) {
-                                          if ((cResult[48] === null) != primaryColor) {
+                                          if (cResult[48] === tmp21) {
                                             if (cResult[49] === tmp5.customStatusBubble) {
-                                              let tmp48;
                                               if (cResult[50] === tmp5.emojiOnlyCustomStatusBubble) {
-                                                tmp48 = cResult[51];
+                                                let tmp48 = cResult[51];
                                               }
                                               if (cResult[52] === tmp18) {
                                                 if (cResult[53] === containerBackground) {
                                                   if (cResult[54] === str2) {
                                                     if (cResult[55] === str3) {
                                                       if (cResult[56] === currentUser) {
-                                                        let tmp51;
                                                         if (cResult[57] === tryItOutDisplayNameStyles) {
-                                                          tmp51 = cResult[58];
+                                                          let tmp51 = cResult[58];
                                                         }
                                                         if (cResult[59] === gradientFallbackBackground) {
                                                           if (cResult[60] === primaryColor) {
                                                             if (cResult[61] === secondaryColor) {
                                                               if (cResult[62] === tmp47) {
                                                                 if (cResult[63] === tmp48) {
-                                                                  let tmp54;
                                                                   if (cResult[64] === tmp51) {
-                                                                    tmp54 = cResult[65];
+                                                                    let tmp54 = cResult[65];
                                                                   }
                                                                   if (cResult[66] === tmp42) {
-                                                                    let tmp57;
                                                                     if (cResult[67] === tmp54) {
-                                                                      tmp57 = cResult[68];
+                                                                      let tmp57 = cResult[68];
                                                                     }
                                                                     if (cResult[69] === gradientFallbackBackground) {
                                                                       if (cResult[70] === primaryColor) {
                                                                         if (cResult[71] === secondaryColor) {
                                                                           if (cResult[72] === tmp33) {
                                                                             if (cResult[73] === tmp34) {
-                                                                              let tmp61;
                                                                               if (cResult[74] === tmp57) {
-                                                                                tmp61 = cResult[75];
+                                                                                let tmp61 = cResult[75];
                                                                               }
                                                                               if (cResult[76] === tmp61) {
-                                                                                let tmp64;
-                                                                                let tmp68;
                                                                                 if (cResult[77] === tmp29) {
-                                                                                  tmp64 = cResult[78];
+                                                                                  let tmp64 = cResult[78];
                                                                                 }
                                                                                 if (cResult[79] !== onLayout) {
                                                                                   const obj8 = { onLayout };
-                                                                                  const tmp70 = metroImportDefault(
+                                                                                  const tmp70 = React5(
                                                                                     UserProfileTryItOutGetPremiumUpsellDefault,
                                                                                     obj8,
                                                                                   );
                                                                                   cResult[79] = onLayout;
                                                                                   cResult[80] = tmp70;
-                                                                                  tmp68 = tmp70;
+                                                                                  let tmp68 = tmp70;
                                                                                 } else {
                                                                                   tmp68 = cResult[80];
                                                                                 }
                                                                                 if (cResult[81] === tmp64) {
                                                                                   if (cResult[82] === tmp68) {
-                                                                                    let tmp71;
                                                                                     if (cResult[83] === tmp28) {
-                                                                                      tmp71 = cResult[84];
+                                                                                      let tmp71 = cResult[84];
                                                                                     }
                                                                                     if (cResult[85] === primaryColor) {
                                                                                       if (
                                                                                         cResult[86] === secondaryColor
                                                                                       ) {
                                                                                         if (cResult[87] === tmp71) {
-                                                                                          let tmp75;
                                                                                           if (cResult[88] === theme) {
-                                                                                            tmp75 = cResult[89];
+                                                                                            let tmp75 = cResult[89];
                                                                                           }
                                                                                           return tmp75;
                                                                                         }
@@ -332,7 +271,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                       secondaryColor,
                                                                                       children: tmp71,
                                                                                     };
-                                                                                    const tmp77 = metroImportDefault(
+                                                                                    const tmp77 = React5(
                                                                                       native.ThemeContextProvider,
                                                                                       obj9,
                                                                                     );
@@ -346,10 +285,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                 }
                                                                                 const obj10 = {
                                                                                   style: tmp28,
-                                                                                  children: items1,
+                                                                                  children: null,
                                                                                 };
-                                                                                items1 = [tmp64, tmp68];
-                                                                                const tmp74 = metroImportAll(
+                                                                                const items1 = [tmp64, tmp68];
+                                                                                obj10.children = items1;
+                                                                                const tmp74 = closure_1_8(
                                                                                   hasOwnProperty,
                                                                                   obj10,
                                                                                 );
@@ -359,12 +299,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                 cResult[84] = tmp74;
                                                                                 tmp71 = tmp74;
                                                                               }
-                                                                              const obj11 = { children: items2 };
-                                                                              items2 = [tmp29, tmp61];
-                                                                              const tmp67 = metroImportAll(
-                                                                                React3,
-                                                                                obj11,
-                                                                              );
+                                                                              const obj11 = { children: null };
+                                                                              const items2 = [tmp29, tmp61];
+                                                                              obj11.children = items2;
+                                                                              const tmp67 = closure_1_8(React4, obj11);
                                                                               cResult[76] = tmp61;
                                                                               cResult[77] = tmp29;
                                                                               cResult[78] = tmp67;
@@ -379,10 +317,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                       primaryColor,
                                                                       secondaryColor,
                                                                       containerStyle: tmp33,
-                                                                      children: items3,
+                                                                      children: null,
                                                                     };
-                                                                    items3 = [tmp34, tmp57];
-                                                                    const tmp63 = metroImportAll(
+                                                                    const items3 = [tmp34, tmp57];
+                                                                    obj12.children = items3;
+                                                                    const tmp63 = closure_1_8(
                                                                       UserProfileGradientContainerDefault,
                                                                       obj12,
                                                                     );
@@ -395,9 +334,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                     cResult[75] = tmp63;
                                                                     tmp61 = tmp63;
                                                                   }
-                                                                  const obj13 = { children: items4 };
-                                                                  items4 = [tmp42, tmp54];
-                                                                  const tmp60 = metroImportAll(hasOwnProperty, obj13);
+                                                                  const obj13 = { children: null };
+                                                                  const items4 = [tmp42, tmp54];
+                                                                  obj13.children = items4;
+                                                                  const tmp60 = closure_1_8(hasOwnProperty, obj13);
                                                                   cResult[66] = tmp42;
                                                                   cResult[67] = tmp54;
                                                                   cResult[68] = tmp60;
@@ -412,10 +352,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                           primaryColor,
                                                           secondaryColor,
                                                           containerStyle: tmp47,
-                                                          children: items5,
+                                                          children: null,
                                                         };
-                                                        items5 = [tmp48, tmp51];
-                                                        const tmp56 = metroImportAll(
+                                                        const items5 = [tmp48, tmp51];
+                                                        obj14.children = items5;
+                                                        const tmp56 = closure_1_8(
                                                           UserProfileGradientContainerDefault,
                                                           obj14,
                                                         );
@@ -441,7 +382,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                 displayNameAccessibilityRole: "header",
                                                 pendingDisplayNameStyles: tryItOutDisplayNameStyles,
                                               };
-                                              const tmp53 = metroImportDefault(UserProfilePrimaryInfoDefault, obj15);
+                                              const tmp53 = React5(UserProfilePrimaryInfoDefault, obj15);
                                               cResult[52] = tmp18;
                                               cResult[53] = containerBackground;
                                               cResult[54] = str2;
@@ -455,7 +396,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                         const obj16 = {
                                           customStatusActivity,
-                                          hasCustomProfileTheme: null != primaryColor,
+                                          hasCustomProfileTheme: tmp21,
                                           style: null,
                                           emojiOnlyStyle: null,
                                           editEnabled: true,
@@ -464,9 +405,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                           customStatusBubble: obj18.style,
                                           emojiOnlyCustomStatusBubble: obj18.emojiOnlyStyle,
                                         } = tmp5);
-                                        const tmp50 = metroImportDefault(UserProfileCustomStatusBubbleDefault, obj16);
+                                        const tmp50 = React5(UserProfileCustomStatusBubbleDefault, obj16);
                                         cResult[47] = customStatusActivity;
-                                        cResult[48] = null != primaryColor;
+                                        cResult[48] = tmp21;
                                         cResult[49] = tmp5.customStatusBubble;
                                         cResult[50] = tmp5.emojiOnlyCustomStatusBubble;
                                         cResult[51] = tmp50;
@@ -483,7 +424,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     tmp47 = items6;
                                   }
                                   const obj17 = { style: tmp38, children: tmp39 };
-                                  const tmp45 = metroImportDefault(hasOwnProperty, obj17);
+                                  const tmp45 = React5(hasOwnProperty, obj17);
                                   cResult[38] = tmp38;
                                   cResult[39] = tmp39;
                                   cResult[40] = tmp45;
@@ -496,7 +437,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   isTryItOut: true,
                                   isUserProfileEditingRefresh: true,
                                 };
-                                const tmp41 = metroImportDefault(EditUserProfileAvatarDefault, obj19);
+                                const tmp41 = React5(EditUserProfileAvatarDefault, obj19);
                                 cResult[35] = tmp26;
                                 cResult[36] = currentUser;
                                 cResult[37] = tmp41;
@@ -525,7 +466,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     pendingBanner: tryItOutBanner,
                     pendingThemeColors: tryItOutThemeColors,
                   };
-                  const tmp37 = metroImportDefault(EditableBanner, obj20);
+                  const tmp37 = React5(EditableBanner, obj20);
                   cResult[24] = currentUser;
                   cResult[25] = tmp4ResultResult;
                   cResult[26] = tmp16;
@@ -539,6 +480,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp27;
                 cResult[19] = items8;
                 tmp28 = items8;
+                const tmpResult5 = useUserProfileColors;
               }
             }
             const obj21 = { theme, primaryColor, secondaryColor };
@@ -547,6 +489,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = theme;
             cResult[12] = obj21;
             tmp22 = obj21;
+            const tmp20 = useProfileThemeDefault(tmp19);
           }
         }
         const obj22 = {
@@ -561,47 +504,24 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = obj22;
         tmp19 = obj22;
       }
-      const obj23 = { userId: currentUser.id, image: tryItOutAvatar };
-      const tmpResult6 = RecentAvatarUtils;
-      const pendingAvatarSrc = tmpResult6.getPendingAvatarSrc(obj23);
+      const tmpResult4 = userSettingToActivity;
+      const pendingAvatarSrc = RecentAvatarUtils.getPendingAvatarSrc({ userId: currentUser.id, image: tryItOutAvatar });
       cResult[2] = currentUser.id;
       cResult[3] = tryItOutAvatar;
       cResult[4] = pendingAvatarSrc;
       tmp16 = pendingAvatarSrc;
+      const obj23 = { userId: currentUser.id, image: tryItOutAvatar };
+      const tmpResult6 = RecentAvatarUtils;
     }
   : (currentUser) => {
-      let avatarBackground;
-      let containerBackground;
-      let gradientFallbackBackground;
-      let gradientSecondaryBackground;
-      let height;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let items6;
-      let items7;
-      let items8;
-      let obj6;
-      let onLayout;
-      let primaryColor;
-      let secondaryColor;
-      let theme;
-      let tryItOutAvatar;
-      let tryItOutBanner;
-      let tryItOutDisplayNameStyles;
-      let tryItOutThemeColors;
       currentUser = currentUser.currentUser;
       const tmp3 = UserProfileSharedStylesDefault();
       const tmp4 = UserProfileEditFormSharedStylesDefault();
       const tmp5 = useSafeAreaInsetsDefault();
-      const obj = UserProfileFloatingUpsell;
-      const floatingUpsellHeight = obj.useFloatingUpsellHeight();
+      const floatingUpsellHeight = UserProfileFloatingUpsell.useFloatingUpsellHeight();
       ({ height, onLayout } = floatingUpsellHeight);
       const items = [UserProfileSettingsStore];
-      const obj2 = get_initialized;
-      const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
+      const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
         tryItOutChanges = tryItOutChanges.getTryItOutChanges();
         return {
           tryItOutAvatar: tryItOutChanges.tryItOutAvatar,
@@ -612,16 +532,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       });
       ({ tryItOutThemeColors, tryItOutAvatar, tryItOutBanner, tryItOutDisplayNameStyles } = stateFromStoresObject);
       let str = currentUser.id;
-      const tmp9 = useDisplayProfileDefault;
       if (str == null) {
         str = "";
       }
-      const tmp9Result = tmp9(str);
+      const tmp9Result = useDisplayProfileDefault(str);
+      const customStatusActivity = userSettingToActivity.useCustomStatusActivity();
       const tmp6Result = userSettingToActivity;
-      const customStatusActivity = tmp6Result.useCustomStatusActivity();
+      const pendingAvatarSrc = RecentAvatarUtils.getPendingAvatarSrc({ userId: currentUser.id, image: tryItOutAvatar });
       const obj3 = { userId: currentUser.id, image: tryItOutAvatar };
       const tmp6Result3 = RecentAvatarUtils;
-      const pendingAvatarSrc = tmp6Result3.getPendingAvatarSrc(obj3);
       const tmp13 = useBadgesDefault(tmp9Result);
       ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({
         user: currentUser,
@@ -629,14 +548,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         pendingThemeColors: tryItOutThemeColors,
         isPreview: true,
       }));
-      useProfileThemeDefault({
+      const tmp14 = useProfileThemeDefault({
         user: currentUser,
         displayProfile: tmp9Result,
         pendingThemeColors: tryItOutThemeColors,
         isPreview: true,
       });
-      const tmp6Result4 = useUserProfileColors;
-      const userProfileColors = tmp6Result4.useUserProfileColors({ theme, primaryColor, secondaryColor });
+      const userProfileColors = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor });
       ({ gradientFallbackBackground, gradientSecondaryBackground, containerBackground, avatarBackground } =
         userProfileColors);
       const sum = tmp5.bottom + height;
@@ -653,33 +571,34 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (str3 == null) {
         str3 = "";
       }
-      const obj5 = { theme, primaryColor, secondaryColor, children: metroImportAll(hasOwnProperty, obj6) };
-      obj6 = { style: items1, children: items8 };
-      items1 = [tmp4.container, { backgroundColor: gradientSecondaryBackground }];
-      const obj7 = { children: items2 };
-      const obj8 = { style: tmp4.bounceOffset };
-      const ThemeContextProvider = native.ThemeContextProvider;
-      items2 = [metroImportDefault(hasOwnProperty, obj8)];
+      const obj5 = { theme, primaryColor, secondaryColor, children: null };
+      const obj6 = { style: null, children: null };
+      const items1 = [tmp4.container, { backgroundColor: gradientSecondaryBackground }];
+      obj6.style = items1;
+      const obj7 = { children: null };
+      const items2 = [React5(hasOwnProperty, { style: tmp4.bounceOffset })];
       const obj9 = {
         fallbackBackground: gradientFallbackBackground,
         primaryColor,
         secondaryColor,
         containerStyle: { backgroundColor: gradientSecondaryBackground },
-        children: items3,
+        children: null,
       };
-      items3 = [,];
-      const tmpResult = UserProfileGradientContainerDefault;
-      items3[0] = metroImportDefault(EditableBanner, {
-        user: currentUser,
-        displayProfile: tmp9Result,
-        pendingAvatarSrc,
-        pendingBanner: tryItOutBanner,
-        pendingThemeColors: tryItOutThemeColors,
-      });
-      const obj10 = { children: items5 };
+      const obj8 = { style: tmp4.bounceOffset };
+      const tmp6Result4 = useUserProfileColors;
+      const items3 = [
+        React5(EditableBanner, {
+          user: currentUser,
+          displayProfile: tmp9Result,
+          pendingAvatarSrc,
+          pendingBanner: tryItOutBanner,
+          pendingThemeColors: tryItOutThemeColors,
+        }),
+      ];
+      const obj10 = { children: null };
       const obj11 = {
-        style: items4,
-        children: metroImportDefault(EditUserProfileAvatarDefault, {
+        style: null,
+        children: React5(EditUserProfileAvatarDefault, {
           user: currentUser,
           disableStatus: true,
           statusStyle: obj4,
@@ -687,49 +606,51 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           isUserProfileEditingRefresh: true,
         }),
       };
-      items4 = [, , ,];
+      const items4 = [, , ,];
       ({ avatarBackground: arr5[0], avatarPosition: arr5[1] } = tmp3);
       items4[2] = tmp4.avatarContainer;
       items4[3] = obj4;
-      items5 = [metroImportDefault(hasOwnProperty, obj11)];
+      obj11.style = items4;
+      const items5 = [React5(hasOwnProperty, obj11)];
       const obj12 = {
         fallbackBackground: gradientFallbackBackground,
         primaryColor,
         secondaryColor,
-        containerStyle: items6,
-        children: items7,
+        containerStyle: null,
+        children: null,
       };
-      items6 = [, ,];
+      const items6 = [, ,];
       ({ profileContentWrapper: arr7[0], profileContent: arr7[1] } = tmp3);
       items6[2] = { paddingTop: 0, paddingBottom: sum1 };
-      items7 = [,];
-      const obj13 = {
-        customStatusActivity,
-        hasCustomProfileTheme: null != primaryColor,
-        style: tmp3.customStatusBubble,
-        emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble,
-        editEnabled: true,
-      };
-      const tmpResult2 = UserProfileGradientContainerDefault;
-      items7[0] = metroImportDefault(UserProfileCustomStatusBubbleDefault, obj13);
-      items7[1] = metroImportDefault(UserProfilePrimaryInfoDefault, {
-        user: currentUser,
-        displayName: str2,
-        pronouns: str3,
-        badges: tmp13,
-        badgeContainerBackground: containerBackground,
-        displayNameAccessibilityRole: "header",
-        pendingDisplayNameStyles: tryItOutDisplayNameStyles,
-      });
-      items5[1] = metroImportAll(tmpResult2, obj12);
-      items3[1] = metroImportAll(hasOwnProperty, obj10);
-      items2[1] = metroImportAll(tmpResult, obj9);
-      items8 = [
-        metroImportAll(React3, obj7),
-        metroImportDefault(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout }),
+      obj12.containerStyle = items6;
+      const tmpResult = UserProfileGradientContainerDefault;
+      const items7 = [
+        React5(UserProfileCustomStatusBubbleDefault, {
+          customStatusActivity,
+          hasCustomProfileTheme: null != primaryColor,
+          style: tmp3.customStatusBubble,
+          emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble,
+          editEnabled: true,
+        }),
+        React5(UserProfilePrimaryInfoDefault, {
+          user: currentUser,
+          displayName: str2,
+          pronouns: str3,
+          badges: tmp13,
+          badgeContainerBackground: containerBackground,
+          displayNameAccessibilityRole: "header",
+          pendingDisplayNameStyles: tryItOutDisplayNameStyles,
+        }),
       ];
-      return metroImportDefault(ThemeContextProvider, obj5);
+      obj12.children = items7;
+      items5[1] = closure_1_8(UserProfileGradientContainerDefault, obj12);
+      obj10.children = items5;
+      items3[1] = closure_1_8(hasOwnProperty, obj10);
+      obj9.children = items3;
+      items2[1] = closure_1_8(tmpResult, obj9);
+      obj7.children = items2;
+      const items8 = [closure_1_8(React4, obj7), React5(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout })];
+      obj6.children = items8;
+      obj5.children = closure_1_8(hasOwnProperty, obj6);
+      return React5(native.ThemeContextProvider, obj5);
     };
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTryItOutEditForm.tsx");
-
-export default tmp4;

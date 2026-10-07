@@ -1,36 +1,32 @@
 // discord_app/modules/devtools/native/components/screens/performance/useMountTimer.tsx
-import react2 from "../../../../../../../_runtime/00576_react.js";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../../../_runtime/00576_c.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = globalThis.__r;
+
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_129_0;
-      let first;
-      let tmp3;
-      let tmp5;
-      let tmp6;
-      let tmp7;
-      let obj = react2;
-      const cResult = obj.c(5);
-      [tmp3, closure_129_0] = _slicedToArray(react.useState(null), 2);
-      const tmp2 = _slicedToArray(react.useState(null), 2);
-      let closure_1 = react.useRef(0);
-      let closure_2 = react.useRef(0);
-      let closure_3 = react.useRef(null);
+      const cResult = c.c(5);
+      [tmp3, require] = noop.useState(null);
+      noop.useRef(0);
+      noop.useRef(0);
+      noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c(params) {
           const sum = ref.current + 1;
           ref.current = sum;
-          ref3.current = sum;
-          ref2.current = performance.now();
-          const obj = { batchKey: sum, params };
-          closure_1_0(obj);
+          closure_3.current = sum;
+          closure_2.current = performance.now();
+          require({ batchKey: sum, params });
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -45,7 +41,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return diff;
         };
         cResult[1] = fn2;
-        tmp5 = fn2;
+        let tmp5 = fn2;
       } else {
         tmp5 = cResult[1];
       }
@@ -56,7 +52,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         };
         cResult[2] = fn3;
-        tmp6 = fn3;
+        let tmp6 = fn3;
       } else {
         tmp6 = cResult[2];
       }
@@ -64,30 +60,28 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { run: tmp3, begin: first, measure: tmp5, cancel: tmp6 };
         cResult[3] = tmp3;
         cResult[4] = obj2;
-        tmp7 = obj2;
+        let tmp7 = obj2;
       } else {
         tmp7 = cResult[4];
       }
       return tmp7;
     }
   : () => {
-      let closure_0;
-      let first;
-      [first, closure_0] = react.useState(null);
-      let closure_1 = react.useRef(0);
-      let closure_2 = react.useRef(0);
-      let closure_3 = react.useRef(null);
-      let obj = {
-        run: first,
-        begin: react.useCallback((params) => {
+      const tmp = _slicedToArray(noop.useState(null), 2);
+      closure_0 = tmp[1];
+      noop.useRef(0);
+      noop.useRef(0);
+      noop.useRef(null);
+      return {
+        run: tmp[0],
+        begin: noop.useCallback((params) => {
           const sum = ref.current + 1;
           ref.current = sum;
-          ref3.current = sum;
-          ref2.current = performance.now();
-          const obj = { batchKey: sum, params };
-          closure_0(obj);
+          closure_3.current = sum;
+          closure_2.current = performance.now();
+          closure_0({ batchKey: sum, params });
         }, []),
-        measure: react.useCallback((arg0) => {
+        measure: noop.useCallback((arg0) => {
           let diff = null;
           if (arg0 === ref3.current) {
             ref3.current = null;
@@ -96,14 +90,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return diff;
         }, []),
-        cancel: react.useCallback((arg0) => {
+        cancel: noop.useCallback((arg0) => {
           if (arg0 === ref3.current) {
             tmp.current = null;
           }
         }, []),
       };
-      return obj;
     };
-const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
-
-export default tmp2;

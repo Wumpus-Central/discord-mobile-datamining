@@ -6,7 +6,9 @@ import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
+
+export const useDefaultAppLauncherWidth = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
       const width = useWindowDimensionsDefault().width;
       let bound = width;
@@ -25,6 +27,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return bound;
     };
-const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
-
-export const useDefaultAppLauncherWidth = tmp2;

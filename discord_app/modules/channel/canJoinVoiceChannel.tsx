@@ -8,8 +8,12 @@ const BasicPermissions = Constants.BasicPermissions;
 const result = size.fileFinishedImporting("modules/channel/canJoinVoiceChannel.tsx");
 
 export default function canJoinVoiceChannel(type, canBasicChannel) {
-  const canBasicChannelResult =
-    isPrivate(type.type) ||
-    canBasicChannel.canBasicChannel(BasicPermissions.CONNECT | BasicPermissions.VIEW_CHANNEL, type);
+  let canBasicChannelResult = isPrivate(type.type);
+  if (!canBasicChannelResult) {
+    canBasicChannelResult = canBasicChannel.canBasicChannel(
+      BasicPermissions.CONNECT | BasicPermissions.VIEW_CHANNEL,
+      type,
+    );
+  }
   return canBasicChannelResult;
 }

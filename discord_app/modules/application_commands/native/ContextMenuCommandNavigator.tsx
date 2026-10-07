@@ -1,48 +1,35 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandNavigator.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../_runtime/07568_NativeStackView.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-let metroImportAll;
-let metroImportDefault;
-let obj2;
+require = fn;
 let closure_3 = ["children"];
-const View = react_native.View;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let closure_9 = NativeStackView.createNativeStackNavigator();
-let obj = { container: { flex: 1 }, content: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_10 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const NativeStackNavigator = fn(7568);
+let closure_9 = NativeStackNavigator.createNativeStackNavigator();
+const createStyles = fn(4896);
+let obj3 = { container: { flex: 1 }, content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
+let closure_10 = createStyles.createStyles(obj3);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandNavigator.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_0;
-      let intl;
-      let items1;
-      let left;
-      let obj3;
-      let right;
-      let tmp5;
-      let tmp6;
-      let tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(18);
+      const cResult = require("c").c(18);
       const tmp4 = closure_10();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function l() {
-          const obj = closure_0(dependencyMap[9]);
-          return obj.trackAppUIViewed();
+          return closure_0(6997).trackAppUIViewed();
         };
         const items = [];
         cResult[0] = fn;
@@ -52,44 +39,36 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const layoutEffect = react.useLayoutEffect(tmp5, tmp6);
-      const tmpResult = tmp(6503);
-      const accessibilityNativeStackOptions = tmpResult.useAccessibilityNativeStackOptions();
+      const layoutEffect = noop.useLayoutEffect(tmp5, tmp6);
+      let obj = require("c");
+      const accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
+      const tmpResult = require("Navigator");
       ({ left, right } = accessibilityNativeStackOptions(1618)());
-      accessibilityNativeStackOptions(1618)();
       if (cResult[2] === left) {
-        let tmp10;
         if (cResult[3] === right) {
-          tmp10 = cResult[4];
+          let tmp10 = cResult[4];
         }
         if (cResult[5] === tmp4.container) {
-          let tmp11;
           if (cResult[6] === tmp10) {
-            tmp11 = cResult[7];
+            let tmp11 = cResult[7];
           }
           if (cResult[8] === accessibilityNativeStackOptions) {
-            let tmp12;
-            let tmp13;
-            let tmp17;
-            let tmp21;
             if (cResult[9] === tmp4.content) {
-              tmp12 = cResult[10];
+              let tmp12 = cResult[10];
             }
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              let obj2 = {
-                name: "root",
-                options: obj3,
-                getComponent() {
-                  return closure_0(dependencyMap[14]).default;
-                },
+              let obj2 = { name: "root", options: null, getComponent: null };
+              let obj3 = { title: null };
+              const intl = tmp(1126).intl;
+              obj3.title = intl.string(tmp(1126).t.PHjkRE);
+              obj2.options = obj3;
+              obj2.getComponent = function getComponent() {
+                return closure_0(17074).default;
               };
-              obj3 = { title: intl.string(tmp(1126).t.PHjkRE) };
-              const Screen = closure_9.Screen;
-              intl = tmp(1126).intl;
-              const tmp16 = closure_7(Screen, obj2);
+              const tmp16 = closure_7(closure_9.Screen, obj2);
               cResult[11] = tmp16;
-              tmp13 = tmp16;
+              let tmp13 = tmp16;
             } else {
               tmp13 = cResult[11];
             }
@@ -106,29 +85,29 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   return { title };
                 },
                 getComponent() {
-                  return closure_0(dependencyMap[15]).default;
+                  return closure_0(17076).default;
                 },
               };
               const tmp20 = closure_7(closure_9.Screen, obj4);
               cResult[12] = tmp20;
-              tmp17 = tmp20;
+              let tmp17 = tmp20;
             } else {
               tmp17 = cResult[12];
             }
             if (cResult[13] !== tmp12) {
-              const obj5 = { screenOptions: tmp12, children: items1 };
-              items1 = [tmp13, tmp17];
+              const obj5 = { screenOptions: tmp12, children: null };
+              const items1 = [tmp13, tmp17];
+              obj5.children = items1;
               const tmp24 = closure_8(closure_9.Navigator, obj5);
               cResult[13] = tmp12;
               cResult[14] = tmp24;
-              tmp21 = tmp24;
+              let tmp21 = tmp24;
             } else {
               tmp21 = cResult[14];
             }
             if (cResult[15] === tmp11) {
-              let tmp25;
               if (cResult[16] === tmp21) {
-                tmp25 = cResult[17];
+                let tmp25 = cResult[17];
               }
               return tmp25;
             }
@@ -140,29 +119,23 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp25 = tmp28;
           }
           const fn2 = function _(navigation) {
-            let renderModalCloseImage;
             navigation = navigation.navigation;
-            let obj = {
+            const obj = {
               contentStyle: closure_0.content,
               headerShadowVisible: false,
               headerTitle(children) {
-                children = children.children;
-                const obj = { title: children };
-                const tmp = closure_1_4(children, closure_1_3);
-                const GenericHeaderTitle = closure_1_0(closure_1_2[12]).GenericHeaderTitle;
-                const merged = Object.assign(tmp);
-                return closure_1_7(GenericHeaderTitle, obj);
+                const merged = Object.assign(closure_1_4(children, closure_1_3));
+                return closure_1_7(closure_1_0(dependencyMap[12]).GenericHeaderTitle, { title: children.children });
               },
               headerTitleAlign: "center",
-              headerLeft: renderModalCloseImage,
+              headerLeft: null,
             };
             if (navigation.getState().routes[0].key === navigation.route.key) {
-              const obj3 = HeaderShared;
-              renderModalCloseImage = obj3.getRenderModalCloseImage(navigation);
+              let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
             } else {
-              const obj2 = HeaderShared;
-              renderModalCloseImage = obj2.getRenderModalBackImage(navigation);
+              renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
             }
+            obj.headerLeft = renderModalCloseImage;
             let merged = Object.assign(accessibilityNativeStackOptions);
             return obj;
           };
@@ -182,86 +155,69 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = right;
       cResult[4] = obj7;
       tmp10 = obj7;
+      const tmp9 = accessibilityNativeStackOptions(1618)();
     }
   : () => {
-      let Navigator;
-      let Screen;
-      let closure_0;
-      let closure_1;
-      let intl;
-      let items;
-      let items1;
-      let obj3;
-      let obj5;
       const tmp = closure_10();
       _require = tmp;
-      const layoutEffect = react.useLayoutEffect(() => {
-        const obj = closure_0(dependencyMap[9]);
-        return obj.trackAppUIViewed();
-      }, []);
-      let obj = require("Navigator");
-      importDefault = obj.useAccessibilityNativeStackOptions();
+      const layoutEffect = noop.useLayoutEffect(() => closure_0(6997).trackAppUIViewed(), []);
+      importDefault = require("Navigator").useAccessibilityNativeStackOptions();
       const rect = useSafeAreaInsetsDefault();
-      let obj2 = { style: items, children: closure_8(Navigator, obj3) };
-      items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
-      obj3 = {
+      let obj2 = { style: null, children: null };
+      const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+      obj2.style = items;
+      let obj3 = {
         screenOptions(navigation) {
-          let renderModalCloseImage;
           navigation = navigation.navigation;
-          let obj = {
+          const obj = {
             contentStyle: closure_0.content,
             headerShadowVisible: false,
             headerTitle(children) {
-              children = children.children;
               const merged = Object.assign(children, Object.assign({ children: 0 }));
-              const obj = { title: children };
-              const GenericHeaderTitle = closure_1_0(closure_1_2[12]).GenericHeaderTitle;
               const merged1 = Object.assign(merged);
-              return closure_1_7(GenericHeaderTitle, obj);
+              return closure_1_7(closure_1_0(dependencyMap[12]).GenericHeaderTitle, { title: children.children });
             },
             headerTitleAlign: "center",
-            headerLeft: renderModalCloseImage,
+            headerLeft: null,
           };
           if (navigation.getState().routes[0].key === navigation.route.key) {
-            const obj3 = HeaderShared;
-            renderModalCloseImage = obj3.getRenderModalCloseImage(navigation);
+            let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
           } else {
-            const obj2 = HeaderShared;
-            renderModalCloseImage = obj2.getRenderModalBackImage(navigation);
+            renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
           }
+          obj.headerLeft = renderModalCloseImage;
           let merged = Object.assign(closure_1);
           return obj;
         },
-        children: items1,
+        children: null,
       };
-      const obj4 = {
-        name: "root",
-        options: obj5,
-        getComponent() {
-          return closure_0(dependencyMap[14]).default;
-        },
-      };
+      const obj4 = { name: "root", options: null, getComponent: null };
+      const obj5 = { title: null };
       ({ Navigator, Screen } = closure_9);
-      obj5 = { title: intl.string(require("intl").t.PHjkRE) };
-      intl = require("intl").intl;
-      items1 = [closure_7(Screen, obj4)];
-      const obj6 = {
-        name: "app",
-        options(route) {
-          const section = route.route.params.section;
-          let title;
-          if (section != null) {
-            title = section.name;
-          }
-          return { title };
-        },
-        getComponent() {
-          return closure_0(dependencyMap[15]).default;
-        },
+      const intl = require("util").intl;
+      obj5.title = intl.string(require("util").t.PHjkRE);
+      obj4.options = obj5;
+      obj4.getComponent = function getComponent() {
+        return closure_0(17074).default;
       };
-      items1[1] = closure_7(closure_9.Screen, obj6);
+      const items1 = [
+        closure_7(Screen, obj4),
+        closure_7(closure_9.Screen, {
+          name: "app",
+          options(route) {
+            const section = route.route.params.section;
+            let title;
+            if (section != null) {
+              title = section.name;
+            }
+            return { title };
+          },
+          getComponent() {
+            return closure_0(17076).default;
+          },
+        }),
+      ];
+      obj3.children = items1;
+      obj2.children = closure_8(Navigator, obj3);
       return closure_7(View, obj2);
     };
-const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandNavigator.tsx");
-
-export default tmp3;

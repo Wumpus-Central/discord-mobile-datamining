@@ -5,20 +5,14 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
 
 export const updateBackgroundGradientPreset = function updateBackgroundGradientPreset(id) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: id };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: id });
 };
 export const updateMobilePendingThemeIndex = function updateMobilePendingThemeIndex(mobileThemesIndex) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "UPDATE_MOBILE_PENDING_THEME_INDEX", mobileThemesIndex };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "UPDATE_MOBILE_PENDING_THEME_INDEX", mobileThemesIndex });
 };
 export const resetBackgroundGradientPreset = function resetBackgroundGradientPreset() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
+  DispatcherDefault.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
 };
 export const resetPreviewClientTheme = function resetPreviewClientTheme() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
+  DispatcherDefault.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
 };

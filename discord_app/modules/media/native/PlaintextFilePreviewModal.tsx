@@ -1,9 +1,7 @@
 // discord_app/modules/media/native/PlaintextFilePreviewModal.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../discord_common/js/shared/Constants.tsx";
-import intl3 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -15,113 +13,90 @@ import SuspiciousDownloadUtils from "../../suspicious_downloads/SuspiciousDownlo
 import openPlaintextFilePreview from "openPlaintextFilePreview.tsx";
 import SuspiciousDownloadModalActionCreatorsDefault from "../../suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx";
 import useDownloadedFile from "../useDownloadedFile.tsx";
-import _objectWithoutProperties_mod from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let dependencyMap, importDefault, items;
-
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
+require = fn;
 function closeModal() {
-  const obj = ModalActionCreatorsDefault;
-  obj.popWithKey(openPlaintextFilePreview.PLAINTEXT_FILE_PREVIEW_MODAL_KEY);
+  ModalActionCreatorsDefault.popWithKey(openPlaintextFilePreview.PLAINTEXT_FILE_PREVIEW_MODAL_KEY);
 }
 let closure_3 = ["ref"];
-let _objectWithoutProperties = _objectWithoutProperties_mod;
-({ ScrollView: metroImportDefault, View: metroImportAll } = react_native);
-const Fonts = Constants.Fonts;
-const jsx = Fragment.jsx;
+get_ActivityIndicator = fn(17);
+({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const constants = { PREVIEW: "PREVIEW" };
-let createStyles = createStyles_mod;
-let obj = {
-  container: obj2,
+const createStyles = fn(4896);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
   scroller: { flex: 1 },
-  scrollerContent: obj3,
-  code: { fontFamily: Fonts.CODE_NORMAL },
-  errorContainer: obj4,
+  scrollerContent: null,
+  code: null,
+  errorContainer: null,
 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles = createStyles.createStyles;
-obj3 = { padding: nativeDefault.space.PX_16 };
-obj4 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
-let closure_11 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.scrollerContent = { padding: nativeDefault.space.PX_16 };
+obj2.code = { fontFamily: fn(1096).Fonts.CODE_NORMAL };
+let obj4 = { padding: nativeDefault.space.PX_16 };
+obj2.errorContainer = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
+let closure_11 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let bytesLeft;
-      let fileContents;
-      let url;
-      let wordWrap;
-      const obj = react2;
-      const cResult = obj.c(21);
+      const cResult = c.c(21);
       ({ url, wordWrap } = arg0);
       const tmp4 = closure_11();
-      const obj2 = useDownloadedFile;
-      const downloadedFile = obj2.useDownloadedFile(url, undefined);
+      const downloadedFile = useDownloadedFile.useDownloadedFile(url, undefined);
       ({ fileContents, bytesLeft } = downloadedFile);
       if (downloadedFile.hadError) {
-        let first;
-        let tmp38;
         const _Symbol2 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const Text = Text_Text.Text;
-          const intl = intl3.intl;
-          const tmp37 = (
-            <Text variant="text-md/normal" color="text-muted">
-              {intl.string(intl3.t.fEptJP)}
-            </Text>
-          );
+          const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+          const intl = util.intl;
+          obj3.children = intl.string(util.t.fEptJP);
+          const tmp37 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
           cResult[0] = tmp37;
-          first = tmp37;
+          let first = tmp37;
         } else {
           first = cResult[0];
         }
         if (cResult[1] !== tmp4.errorContainer) {
-          const tmp41 = <metroImportAll style={tmp4.errorContainer}>{first}</metroImportAll>;
+          const obj4 = { style: tmp4.errorContainer, children: first };
+          const tmp41 = <closure_1_8 style={tmp4.errorContainer}>{first}</closure_1_8>;
           cResult[1] = tmp4.errorContainer;
           cResult[2] = tmp41;
-          tmp38 = tmp41;
+          let tmp38 = tmp41;
         } else {
           tmp38 = cResult[2];
         }
         return tmp38;
       } else if (null == fileContents) {
-        let tmp27;
-        let tmp30;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp29 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
           cResult[3] = tmp29;
-          tmp27 = tmp29;
+          let tmp27 = tmp29;
         } else {
           tmp27 = cResult[3];
         }
         if (cResult[4] !== tmp4.loadingContainer) {
-          const tmp33 = <metroImportAll style={tmp4.loadingContainer}>{tmp27}</metroImportAll>;
+          const obj5 = { style: tmp4.loadingContainer, children: tmp27 };
+          const tmp33 = <closure_1_8 style={tmp4.loadingContainer}>{tmp27}</closure_1_8>;
           cResult[4] = tmp4.loadingContainer;
           cResult[5] = tmp33;
-          tmp30 = tmp33;
+          let tmp30 = tmp33;
         } else {
           tmp30 = cResult[5];
         }
         return tmp30;
       } else {
-        let tmp7;
         if (cResult[6] !== bytesLeft) {
-          const tmpResult = useDownloadedFile;
-          const bytesLeftNotice = tmpResult.getBytesLeftNotice(bytesLeft);
+          const bytesLeftNotice = useDownloadedFile.getBytesLeftNotice(bytesLeft);
           cResult[6] = bytesLeft;
           cResult[7] = bytesLeftNotice;
-          tmp7 = bytesLeftNotice;
+          let tmp7 = bytesLeftNotice;
+          const tmpResult = useDownloadedFile;
         } else {
           tmp7 = cResult[7];
         }
@@ -131,62 +106,64 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           combined = "" + fileContents + "\n" + tmp7;
         }
         if (cResult[8] === tmp4.code) {
-          let tmp11;
-          let tmp18;
           if (cResult[9] === combined) {
-            tmp11 = cResult[10];
+            scrollerContent = cResult[10];
           }
           if (wordWrap) {
-            if (cResult[11] === tmp11) {
+            if (cResult[11] === scrollerContent) {
               if (cResult[12] === tmp4.scroller) {
-                let tmp22;
-                if (cResult[13] === tmp4.scrollerContent) {
-                  tmp22 = cResult[14];
-                }
-                tmp18 = tmp22;
               }
             }
+            const obj6 = { style: null, contentContainerStyle: null, children: null };
             ({ scroller: obj7.style, scrollerContent: obj7.contentContainerStyle } = tmp4);
-            const tmp25 = (
-              <metroImportDefault style={null} contentContainerStyle={null}>
-                {tmp11}
-              </metroImportDefault>
+            obj6.children = scrollerContent;
+            const tmp24 = (
+              <React5 style={null} contentContainerStyle={null}>
+                {null}
+              </React5>
             );
-            cResult[11] = tmp11;
-            cResult[12] = tmp4.scroller;
-            cResult[13] = tmp4.scrollerContent;
-            cResult[14] = tmp25;
-            tmp22 = tmp25;
+            cResult[11] = scrollerContent;
+            ({ scroller: tmp3[12], scrollerContent } = tmp4);
+            cResult[13] = scrollerContent;
+            cResult[14] = tmp24;
           } else {
-            if (cResult[15] === tmp11) {
-              let tmp14;
+            if (cResult[15] === scrollerContent) {
               if (cResult[16] === tmp4.scrollerContent) {
-                tmp14 = cResult[17];
+                let tmp13 = cResult[17];
               }
               if (cResult[18] === tmp4.scroller) {
-                if (cResult[19] === tmp14) {
-                  tmp18 = cResult[20];
+                if (cResult[19] === tmp13) {
+                  let tmp17 = cResult[20];
                 }
+                return tmp17;
               }
-              const tmp21 = <metroImportDefault style={tmp4.scroller}>{tmp14}</metroImportDefault>;
+              const obj8 = { style: tmp4.scroller, children: tmp13 };
+              const tmp20 = <React5 style={tmp4.scroller}>{tmp13}</React5>;
               cResult[18] = tmp4.scroller;
-              cResult[19] = tmp14;
-              cResult[20] = tmp21;
-              tmp18 = tmp21;
+              cResult[19] = tmp13;
+              cResult[20] = tmp20;
+              tmp17 = tmp20;
             }
-            const tmp17 = (
-              <metroImportDefault horizontal contentContainerStyle={tmp4.scrollerContent}>
-                {tmp11}
-              </metroImportDefault>
+            const obj9 = { horizontal: true, contentContainerStyle: tmp4.scrollerContent, children: scrollerContent };
+            const tmp16 = (
+              <React5 horizontal contentContainerStyle={tmp4.scrollerContent}>
+                {scrollerContent}
+              </React5>
             );
-            cResult[15] = tmp11;
+            cResult[15] = scrollerContent;
             cResult[16] = tmp4.scrollerContent;
-            cResult[17] = tmp17;
-            tmp14 = tmp17;
+            cResult[17] = tmp16;
+            tmp13 = tmp16;
           }
-          return tmp18;
         }
-        const tmp13 = jsx(Text_Text.Text, {
+        const obj10 = {
+          variant: "text-sm/normal",
+          color: "text-default",
+          style: tmp4.code,
+          selectable: true,
+          children: combined,
+        };
+        const tmp12 = jsx(Text_Text.Text, {
           variant: "text-sm/normal",
           color: "text-default",
           style: tmp4.code,
@@ -195,39 +172,46 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         });
         cResult[8] = tmp4.code;
         cResult[9] = combined;
-        cResult[10] = tmp13;
-        tmp11 = tmp13;
+        cResult[10] = tmp12;
+        scrollerContent = tmp12;
       }
     }
   : (arg0) => {
-      let intl;
-      let url;
-      let wordWrap;
       ({ url, wordWrap } = arg0);
       const tmp = closure_11();
-      const obj = useDownloadedFile;
-      const downloadedFile = obj.useDownloadedFile(url, undefined);
+      const downloadedFile = useDownloadedFile.useDownloadedFile(url, undefined);
       const fileContents = downloadedFile.fileContents;
       if (downloadedFile.hadError) {
-        ({ variant: "text-md/normal", color: "text-muted", children: intl.string(intl3.t.fEptJP) });
-        const Text = Text_Text.Text;
-        intl = intl3.intl;
-        return <metroImportAll style={tmp.errorContainer}>{null}</metroImportAll>;
+        const obj2 = { style: tmp.errorContainer, children: null };
+        const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
+        const intl = util.intl;
+        obj3.children = intl.string(util.t.fEptJP);
+        obj2.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
+        return <closure_1_8 style={tmp.errorContainer}>{null}</closure_1_8>;
       } else if (null == fileContents) {
+        const obj4 = {
+          style: tmp.loadingContainer,
+          children: jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}),
+        };
         return (
-          <metroImportAll style={tmp.loadingContainer}>
+          <closure_1_8 style={tmp.loadingContainer}>
             {jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {})}
-          </metroImportAll>
+          </closure_1_8>
         );
       } else {
-        let obj8;
-        const tmp2Result = useDownloadedFile;
-        const bytesLeftNotice = tmp2Result.getBytesLeftNotice(tmp5);
+        const bytesLeftNotice = useDownloadedFile.getBytesLeftNotice(tmp5);
         let combined = fileContents;
         if ("" !== bytesLeftNotice) {
           const _HermesInternal = HermesInternal;
           combined = "" + fileContents + "\n" + bytesLeftNotice;
         }
+        const obj6 = {
+          variant: "text-sm/normal",
+          color: "text-default",
+          style: tmp.code,
+          selectable: true,
+          children: combined,
+        };
         const tmp10 = jsx(Text_Text.Text, {
           variant: "text-sm/normal",
           color: "text-default",
@@ -236,36 +220,39 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           children: combined,
         });
         if (wordWrap) {
-          const obj7 = { style: null, contentContainerStyle: null, children: tmp10 };
+          const obj7 = { style: null, contentContainerStyle: null, children: null };
           ({ scroller: obj5.style, scrollerContent: obj5.contentContainerStyle } = tmp);
-          obj8 = obj7;
+          obj7.children = tmp10;
+          let obj8 = obj7;
         } else {
           obj8 = { style: tmp.scroller, children: null };
+          const obj9 = { horizontal: true, contentContainerStyle: tmp.scrollerContent, children: tmp10 };
+          obj8.children = (
+            <React5 horizontal contentContainerStyle={tmp.scrollerContent}>
+              {tmp10}
+            </React5>
+          );
         }
-        return <metroImportDefault {...obj8} />;
+        return <React5 {...obj8} />;
       }
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj5 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media/native/PlaintextFilePreviewModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (url) => {
-      let container;
-      let first1;
-      let obj2;
-      let obj3;
-      let tmp13;
-      let wordWrap;
-      let tmp = url;
-      let obj = url(wordWrap[14]);
-      const cResult = obj.c(23);
+      const cResult = url(wordWrap[14]).c(23);
       url = url.url;
       const tmp4 = closure_11();
       importDefault = tmp4;
-      [wordWrap, closure_3] = react.useState(true);
+      [wordWrap, closure_3] = noop.useState(true);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = tmp(tmp2[17]).intl;
-        const stringResult = intl.string(tmp(wordWrap[17]).t.AMKNT1);
+        const stringResult = intl.string(tmp(tmp2[17]).t.AMKNT1);
         cResult[0] = stringResult;
-        first1 = stringResult;
+        let first1 = stringResult;
       } else {
         first1 = cResult[0];
       }
@@ -311,9 +298,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_3((arg0) => !arg0);
           }
         }
-        const stringResult1 = obj2.string(tmp(wordWrap[17]).t["1WjMbC"]);
+        const stringResult1 = obj2.string(tmp(tmp2[17]).t["1WjMbC"]);
         cResult[4] = stringResult1;
-        tmp13 = stringResult1;
+        const tmp13 = stringResult1;
       } else {
         class M {
           constructor() {
@@ -329,14 +316,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp16[0] = tmp13;
         tmp16[1] = function action() {
-          const obj = SuspiciousDownloadUtils;
           if (null == obj.isSuspiciousDownload(url)) {
-            const obj3 = LinkingDefault;
-            obj3.openURL(url);
+            LinkingDefault.openURL(url);
           } else {
-            const obj2 = SuspiciousDownloadModalActionCreatorsDefault;
-            obj2.show(url);
+            SuspiciousDownloadModalActionCreatorsDefault.show(url);
           }
+          obj = SuspiciousDownloadUtils;
         };
         cResult[5] = url;
         cResult[6] = tmp16;
@@ -376,17 +361,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               obj = {
                 items: closure_4,
                 children(ref) {
-                  let intl;
-                  const obj = {
-                    IconComponent: url(wordWrap[23]).MoreHorizontalIcon,
-                    accessibilityLabel: intl.string(url(wordWrap[17]).t.PdRCRg),
-                    ref: ref.ref,
-                  };
-                  const tmp = items(ref.ref, closure_1_3);
-                  const HeaderActionButton = url(wordWrap[22]).HeaderActionButton;
-                  intl = url(wordWrap[17]).intl;
-                  const merged = Object.assign(tmp);
-                  return closure_1_9(HeaderActionButton, obj);
+                  const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                  const intl = url(1126).intl;
+                  obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
+                  obj.ref = ref.ref;
+                  const merged = Object.assign(items(ref, closure_1_3));
+                  return closure_1_9(url(6890).HeaderActionButton, obj);
                 },
               };
               return jsx(closure_0(closure_2[21]).ContextMenu, obj);
@@ -400,17 +380,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               obj = {
                 items: closure_4,
                 children(ref) {
-                  let intl;
-                  const obj = {
-                    IconComponent: url(wordWrap[23]).MoreHorizontalIcon,
-                    accessibilityLabel: intl.string(url(wordWrap[17]).t.PdRCRg),
-                    ref: ref.ref,
-                  };
-                  const tmp = items(ref.ref, closure_1_3);
-                  const HeaderActionButton = url(wordWrap[22]).HeaderActionButton;
-                  intl = url(wordWrap[17]).intl;
-                  const merged = Object.assign(tmp);
-                  return closure_1_9(HeaderActionButton, obj);
+                  const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                  const intl = url(1126).intl;
+                  obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
+                  obj.ref = ref.ref;
+                  const merged = Object.assign(items(ref, closure_1_3));
+                  return closure_1_9(url(6890).HeaderActionButton, obj);
                 },
               };
               return jsx(closure_0(closure_2[21]).ContextMenu, obj);
@@ -423,17 +398,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               obj = {
                 items: closure_4,
                 children(ref) {
-                  let intl;
-                  const obj = {
-                    IconComponent: url(wordWrap[23]).MoreHorizontalIcon,
-                    accessibilityLabel: intl.string(url(wordWrap[17]).t.PdRCRg),
-                    ref: ref.ref,
-                  };
-                  const tmp = items(ref.ref, closure_1_3);
-                  const HeaderActionButton = url(wordWrap[22]).HeaderActionButton;
-                  intl = url(wordWrap[17]).intl;
-                  const merged = Object.assign(tmp);
-                  return closure_1_9(HeaderActionButton, obj);
+                  const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                  const intl = url(1126).intl;
+                  obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
+                  obj.ref = ref.ref;
+                  const merged = Object.assign(items(ref, closure_1_3));
+                  return closure_1_9(url(6890).HeaderActionButton, obj);
                 },
               };
               return jsx(closure_0(closure_2[21]).ContextMenu, obj);
@@ -442,7 +412,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         class F {
           constructor() {
-            return <metroImportAll style={container.container}>{null}</metroImportAll>;
+            obj = { style: closure_1.container, children: null };
+            obj1 = { url, wordWrap: closure_2 };
+            obj.children = jsx(f57246, obj1);
+            return jsx(View, obj);
           }
         }
         cResult[13] = tmp4.container;
@@ -454,90 +427,78 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp12;
       cResult[8] = tmp16;
       cResult[9] = items;
+      let obj = url(wordWrap[14]);
     }
   : (url) => {
-      let closure_2;
       url = url.url;
       const fileName = url.fileName;
       let memo;
       const tmp = closure_11();
       dependencyMap = tmp;
-      const tmp2 = memo(react.useState(true), 2);
+      const tmp2 = memo(noop.useState(true), 2);
       const first = tmp2[0];
-      let closure_4 = tmp2[1];
+      closure_4 = tmp2[1];
       items = [url, first];
-      memo = react.useMemo(() => {
+      memo = noop.useMemo(() => {
+        let obj = { label: null, trailingIndicator: null, action: null };
+        const intl = util.intl;
+        obj.label = intl.string(util.t.AMKNT1);
         let CheckmarkSmallIcon;
-        let intl;
-        let intl2;
-        let obj = {
-          label: intl.string(intl3.t.AMKNT1),
-          trailingIndicator: CheckmarkSmallIcon,
-          action() {
-            return closure_1_4((arg0) => !arg0);
-          },
-        };
-        intl = intl3.intl;
-        CheckmarkSmallIcon = undefined;
         if (first) {
           CheckmarkSmallIcon = CheckmarkSmallIcon2.CheckmarkSmallIcon;
         }
-        items = [obj];
-        let obj2 = {
-          label: intl2.string(intl3.t["1WjMbC"]),
-          action() {
-            const obj = url(closure_2[10]);
-            if (null == obj.isSuspiciousDownload(closure_1_0)) {
-              const obj3 = fileName(closure_2[12]);
-              obj3.openURL(closure_1_0);
-            } else {
-              const obj2 = fileName(closure_2[11]);
-              obj2.show(closure_1_0);
-            }
-          },
+        obj.trailingIndicator = CheckmarkSmallIcon;
+        obj.action = function action() {
+          return closure_1_4((arg0) => !arg0);
         };
-        intl2 = intl3.intl;
+        items = [obj];
+        let obj2 = { label: null, action: null };
+        const intl2 = util.intl;
+        obj2.label = intl2.string(util.t["1WjMbC"]);
+        obj2.action = function action() {
+          if (null == obj.isSuspiciousDownload(closure_1_0)) {
+            fileName(dependencyMap[12]).openURL(closure_1_0);
+            const obj3 = fileName(dependencyMap[12]);
+          } else {
+            fileName(dependencyMap[11]).show(closure_1_0);
+            const obj2 = fileName(dependencyMap[11]);
+          }
+          obj = url(dependencyMap[10]);
+        };
         items[1] = obj2;
         return items;
       }, items);
       const items1 = [fileName, memo, tmp.container, url, first];
-      const memo1 = react.useMemo(() => {
-        let container;
-        let obj3;
-        let wordWrap;
+      const memo1 = noop.useMemo(() => {
         let obj = {};
         const obj2 = {
           title: fileName,
-          headerLeft: obj3.getHeaderCloseButton(closeModal),
+          headerLeft: NavigatorHeader.getHeaderCloseButton(closeModal),
           headerRight() {
             return jsx(url(container[21]).ContextMenu, {
               items,
               children(ref) {
-                let intl;
                 const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-                const obj = {
-                  IconComponent: url(container[23]).MoreHorizontalIcon,
-                  accessibilityLabel: intl.string(url(container[17]).t.PdRCRg),
-                  ref: ref.ref,
-                };
-                const HeaderActionButton = url(container[22]).HeaderActionButton;
-                intl = url(container[17]).intl;
+                const obj = { IconComponent: url(7588).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+                const intl = url(1126).intl;
+                obj.accessibilityLabel = intl.string(url(1126).t.PdRCRg);
+                obj.ref = ref.ref;
                 const merged1 = Object.assign(merged);
-                return closure_1_9(HeaderActionButton, obj);
+                return closure_1_9(url(6890).HeaderActionButton, obj);
               },
             });
           },
           render() {
-            return <closure_2_8 style={container.container}>{null}</closure_2_8>;
+            const obj = { style: container.container, children: <closure_2_13 url={url} wordWrap={wordWrap} /> };
+            return (
+              <closure_2_8 style={container.container}>
+                <closure_2_13 url={url} wordWrap={wordWrap} />
+              </closure_2_8>
+            );
           },
         };
-        const PREVIEW = constants.PREVIEW;
-        obj[PREVIEW] = obj2;
-        obj3 = NavigatorHeader;
+        obj[constants.PREVIEW] = obj2;
         return obj;
       }, items1);
       return jsx(url(10989).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
     };
-const result = size.fileFinishedImporting("modules/media/native/PlaintextFilePreviewModal.tsx");
-
-export default tmp4;

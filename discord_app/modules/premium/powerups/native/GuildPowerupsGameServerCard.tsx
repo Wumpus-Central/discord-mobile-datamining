@@ -1,41 +1,34 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useGuildPowerupOnShowMoreDefault from "hooks/useGuildPowerupOnShowMore.tsx";
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard.tsx";
 import useGameServerPowerupStatusDefault from "../../../game_server/hooks/useGameServerPowerupStatus.tsx";
 import useGameServerPerkDefault from "../../../game_server/hooks/useGameServerPerk.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GameServerStore from "../../../game_server/GameServerStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let guildId;
+const useGuildPowerupOnShowMoreDefault = description(12240);
+const GuildPowerupsPerkCardDefault = description(12245);
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { flex: 1, paddingVertical: nativeDefault.space.PX_8 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
 
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { riveContainer: obj2 };
-obj2 = { flex: 1, paddingVertical: nativeDefault.space.PX_8 };
-let closure_7 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let first;
-      let tmp12;
-      let tmp13;
-      let tmp7;
-      let useReducedMotion;
-      const obj = guildId(576);
-      const cResult = obj.c(17);
+      let tmp2 = dependencyMap;
+      const cResult = guildId(576).c(17);
       guildId = guildId.guildId;
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GameServerStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -45,66 +38,62 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = guildId;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = guildId(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-      const tmp10 = useGameServerPowerupStatusDefault(guildId);
-      const tmp11 = useGameServerPerkDefault(guildId);
+      const obj = guildId(576);
+      description = importDefault;
+      const stateFromStores = guildId(504).useStateFromStores(first, tmp7);
+      const tmp9 = useGameServerPowerupStatusDefault(guildId);
+      let title = useGameServerPerkDefault(guildId);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [AccessibilityStore];
         class C {
           constructor() {
-            return useReducedMotion.useReducedMotion;
+            return closure_1_4.useReducedMotion;
           }
         }
         cResult[3] = items1;
         cResult[4] = C;
-        tmp13 = C;
-        tmp12 = items1;
+        let tmp11 = C;
+        let tmp10 = items1;
       } else {
-        tmp12 = cResult[3];
-        tmp13 = cResult[4];
+        tmp10 = cResult[3];
+        tmp11 = cResult[4];
       }
-      const tmpResult2 = guildId(504);
-      const stateFromStores1 = tmpResult2.useStateFromStores(tmp12, tmp13);
-      const tmp16 = useGuildPowerupOnShowMoreDefault(guildId, tmp11);
-      let tmp17 = null;
+      const tmpResult = guildId(504);
+      const stateFromStores1 = guildId(504).useStateFromStores(tmp10, tmp11);
+      const tmp14 = useGuildPowerupOnShowMoreDefault(guildId, title);
+      let tmp15 = null;
       if (null != stateFromStores) {
-        tmp17 = null;
-        if (null != tmp11) {
-          let tmp18;
+        tmp15 = null;
+        if (null != title) {
           if (cResult[5] !== stateFromStores1) {
-            const obj3 = { reducedMotion: null };
+            const obj2 = { stateMachine: "SM_Auto", dataBinding: null };
             class C {
               constructor() {
-                return useReducedMotion.useReducedMotion;
+                return closure_1_4.useReducedMotion;
               }
             }
-            const tmp20 = jsx(guildId(4684).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: obj3 });
+            obj2.dataBinding = { reducedMotion: null };
+            const tmp18 = jsx(tmp(4684).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
             cResult[5] = stateFromStores1;
-            cResult[6] = tmp20;
-            tmp18 = tmp20;
+            cResult[6] = tmp18;
+            let tmp16 = tmp18;
+            const obj3 = { reducedMotion: null };
           } else {
-            tmp18 = cResult[6];
+            tmp16 = cResult[6];
           }
           if (cResult[7] === tmp4.riveContainer) {
-            let tmp21;
-            if (cResult[8] === tmp18) {
-              tmp21 = cResult[9];
+            if (cResult[8] === tmp16) {
+              let tmp19 = cResult[9];
             }
-            if (cResult[10] === tmp11.cost) {
-              if (cResult[11] === tmp11.description) {
-                if (cResult[12] === tmp11.title) {
-                  if (cResult[13] === tmp16) {
-                    if (cResult[14] === tmp10) {
-                      let tmp24;
-                      if (cResult[15] === tmp21) {
-                        tmp24 = cResult[16];
-                      }
-                      tmp17 = tmp24;
+            if (cResult[10] === title.cost) {
+              if (cResult[11] === title.description) {
+                if (cResult[12] === title.title) {
+                  if (cResult[13] === tmp14) {
+                    if (cResult[14] === tmp9) {
                     }
                   }
                 }
@@ -112,72 +101,84 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             class C {
               constructor() {
-                return useReducedMotion.useReducedMotion;
+                return closure_1_4.useReducedMotion;
               }
             }
-            ({ title: tmp26[0], description: tmp26[1], cost: tmp26[2] } = tmp11);
-            tmp26[4] = tmp21;
-            tmp26[6] = tmp10;
-            tmp26[7] = tmp16;
-            const tmp27 = jsx(GuildPowerupsPerkCardDefault, tmp26);
-            cResult[10] = tmp11.cost;
-            cResult[11] = tmp11.description;
-            cResult[12] = tmp11.title;
-            cResult[13] = tmp16;
-            cResult[14] = tmp10;
-            cResult[15] = tmp21;
-            cResult[16] = tmp27;
-            tmp24 = tmp27;
+            ({ title: tmp24[0], description: tmp24[1], cost: tmp24[2] } = title);
+            tmp24[4] = tmp19;
+            tmp24[6] = tmp9;
+            tmp24[7] = tmp14;
+            tmp2 = jsx(GuildPowerupsPerkCardDefault, tmp24);
+            ({ cost: tmp3[10], description } = title);
+            cResult[11] = description;
+            title = title.title;
+            cResult[12] = title;
+            cResult[13] = tmp14;
+            cResult[14] = tmp9;
+            cResult[15] = tmp19;
+            cResult[16] = tmp2;
           }
           class C {
             constructor() {
-              return useReducedMotion.useReducedMotion;
+              return closure_1_4.useReducedMotion;
             }
           }
-          const tmp23 = <View style={tmp4.riveContainer}>{tmp18}</View>;
+          const obj4 = { style: tmp4.riveContainer, children: tmp16 };
+          const tmp21 = <View style={tmp4.riveContainer}>{tmp16}</View>;
           cResult[7] = tmp4.riveContainer;
-          cResult[8] = tmp18;
-          cResult[9] = tmp23;
-          tmp21 = tmp23;
+          cResult[8] = tmp16;
+          cResult[9] = tmp21;
+          tmp19 = tmp21;
         }
       }
-      return tmp17;
+      return tmp15;
     }
   : (guildId) => {
-      let useReducedMotion;
       guildId = guildId.guildId;
-      const items = [GameServerStore];
       const tmp = closure_7();
+      const tmp2 = guildId;
+      const items = [GameServerStore];
+      const stateFromStores = guildId(504).useStateFromStores(items, () => GameServerStore.getStateForGuild(guildId));
       const obj = guildId(504);
-      const stateFromStores = obj.useStateFromStores(items, () => GameServerStore.getStateForGuild(guildId));
-      const tmp6 = useGameServerPowerupStatusDefault(guildId);
       const tmp7 = useGameServerPerkDefault(guildId);
+      const tmp6 = useGameServerPowerupStatusDefault(guildId);
       const items1 = [AccessibilityStore];
-      const obj2 = guildId(504);
-      const stateFromStores1 = obj2.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+      const stateFromStores1 = guildId(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
         if (null != tmp7) {
+          const obj4 = {
+            title: null,
+            description: null,
+            cost: null,
+            costDecorator: "+",
+            riveComponent: null,
+            badge: "beta",
+            status: null,
+            onPress: null,
+          };
           ({ title: obj3.title, description: obj3.description, cost: obj3.cost } = tmp7);
+          const obj5 = { style: tmp.riveContainer, children: null };
+          const obj6 = { stateMachine: "SM_Auto", dataBinding: null };
           const obj10 = { reducedMotion: stateFromStores1 };
-          GuildPowerupsPerkCardDefault;
-          tmp10 = (
-            <tmp5Result
-              title={null}
-              description={null}
-              cost={null}
-              costDecorator="+"
-              riveComponent={null}
-              badge="beta"
-              status={tmp6}
-              onPress={tmp9}
-            />
-          );
+          obj6.dataBinding = obj10;
+          obj5.children = jsx(tmp2(4684).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+          obj4.riveComponent = <View style={tmp.riveContainer}>{null}</View>;
+          obj4.status = tmp6;
+          obj4.onPress = tmp9;
+          tmp10 = jsx(GuildPowerupsPerkCardDefault, {
+            title: null,
+            description: null,
+            cost: null,
+            costDecorator: "+",
+            riveComponent: null,
+            badge: "beta",
+            status: null,
+            onPress: null,
+          });
+          const tmp5Result = GuildPowerupsPerkCardDefault;
         }
       }
       return tmp10;
     };
-const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
-
-export default tmp3;

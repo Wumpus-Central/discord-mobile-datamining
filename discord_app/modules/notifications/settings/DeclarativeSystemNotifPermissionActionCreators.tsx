@@ -3,8 +3,9 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers.android.tsx";
 import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics.tsx";
 import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/notifications/settings/DeclarativeSystemNotifPermissionActionCreators.tsx",
 );
@@ -12,14 +13,12 @@ let result = size.fileFinishedImporting(
 export const refreshSystemNotifPermissionsAsync = function refreshSystemNotifPermissionsAsync(
   notification_settings_screen,
 ) {
-  const obj = DeclarativeSystemNotifPermissionHelpersDefault;
-  const result = obj.refreshSystemNotifPermissions();
+  const result = DeclarativeSystemNotifPermissionHelpersDefault.refreshSystemNotifPermissions();
   if (null != result) {
     const disabledSettings = DeclarativeSystemNotifPermissionStore.getDisabledSettings();
+    DispatcherDefault.dispatch(result);
     const tmpResult = DispatcherDefault;
-    tmpResult.dispatch(result);
-    const obj3 = DeclarativeSystemNotifPermissionAnalytics;
-    const result1 = obj3.trackSystemNotifSettingsReenabled(
+    const result1 = DeclarativeSystemNotifPermissionAnalytics.trackSystemNotifSettingsReenabled(
       disabledSettings,
       result.disabledSettings,
       notification_settings_screen,

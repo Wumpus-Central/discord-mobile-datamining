@@ -1,975 +1,1137 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../../Constants.tsx";
-import intl2 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import merged5 from "../../../../../../_runtime/05081_merged5.js";
-import ApplicationCommandConstants from "../../../../application_commands/ApplicationCommandConstants.tsx";
+import _mod5081 from "module_5081" /* 5081 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/11804_AssetRegistry.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../../_runtime/00019_react.js";
+import _modDef11804 from "../../../../../../_runtime/metro/11804__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import 00012__ from "../../../../../../_runtime/metro/00012__.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import apply from "../../../../../../_runtime/metro/00012__.js";
 
-let choices, option, query;
-
-let c10;
-let c9;
-let obj2;
-let react = react_mod;
-const View = react_native.View;
-const AutoCompleteResultTypes = Constants.AutoCompleteResultTypes;
-const AUTOCOMPLETE_OPTION_DEBOUNCE_TIME = ApplicationCommandConstants.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME;
-({ jsx: c9, jsxs: c10 } = Fragment);
-const executeCommand = module_12.debounce(executeCommandDefault, AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
-let obj = { commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" }, commandChoiceLoadingItem: obj2, emptyState: { backgroundColor: "transparent" } };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" };
+require = fn;
+const View = fn(17).View;
+fn(1085).AutoCompleteResultTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const executeCommand = apply.debounce(executeCommandDefault, fn(5795).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+  leading: true,
+  trailing: true,
+});
+const createStyles = fn(4896);
+let obj = {
+  commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" },
+  commandChoiceLoadingItem: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+    height: 16,
+    borderRadius: nativeDefault.radii.lg,
+    alignSelf: "flex-start",
+  },
+  emptyState: { backgroundColor: "transparent" },
+};
 let closure_12 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
-  let autocompleteResults;
-  let channel;
-  let first1;
-  let initChoice;
-  let items1;
-  let lastErrored;
-  let onChoiceSelect;
-  let onDismissAutocompleteSheet;
-  const tmp2 = option;
-  let obj = option(channel[13]);
-  const cResult = obj.c(47);
-  option = option.option;
-  ({ initChoice, onChoiceSelect } = option);
-  ({ onDismissAutocompleteSheet, channel } = option);
-  const activeCommand = option.activeCommand;
-  const optionValues = option.optionValues;
-  let obj2 = optionValues;
-  let str;
-  const useState = optionValues.useState;
-  if (initChoice != null) {
-    str = initChoice.name;
-  }
-  if (str == null) {
-    str = "";
-  }
-  const tmp5 = activeCommand(useState(str), 2);
-  query = tmp5[0];
-  const tmp7 = tmp5[1];
-  const ref = obj2.useRef(null);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ref];
-    cResult[0] = items;
-    first1 = items;
-  } else {
-    first1 = cResult[0];
-  }
-  if (cResult[1] === channel.id) {
-    if (cResult[2] === option.name) {
-      let tmp11;
-      let tmp12;
-      let arr3;
-      if (cResult[3] === query) {
-        tmp11 = cResult[4];
-        tmp12 = cResult[5];
+fn(558);
+let obj3 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  height: 16,
+  borderRadius: nativeDefault.radii.lg,
+  alignSelf: "flex-start",
+};
+let ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (choices) => {
+      let withResult2 = index;
+      let exhaustiveResult = onChoiceSelect;
+      const cResult = index(onChoiceSelect[13]).c(17);
+      ({ item, index } = choices);
+      choices = choices.choices;
+      onChoiceSelect = choices.onChoiceSelect;
+      let CHOICE_LOADING = AutoCompleteResultTypes;
+      let tmp4 = item.type === AutoCompleteResultTypes.CHOICE;
+      let obj2 = index(onChoiceSelect[13]);
+      if (!tmp4) {
+        tmp4 = item.type === CHOICE_LOADING.CHOICE_LOADING;
       }
-      const tmp2Result = tmp2(channel[14]);
-      const stateFromStoresObject = tmp2Result.useStateFromStoresObject(first1, tmp11, tmp12);
-      ({ autocompleteResults, lastErrored } = stateFromStoresObject);
-      if (cResult[6] === autocompleteResults) {
-        if (cResult[7] === lastErrored) {
-          if (cResult[8] === query) {
-            arr3 = cResult[9];
+      if (!tmp4) {
+        tmp4 = item.type === CHOICE_LOADING.LABEL;
+      }
+      choices(onChoiceSelect[19])(tmp4, "Invalid autocomplete result type");
+      const tmp6 = closure_12();
+      closure_3 = tmp6;
+      const width = 100 * Math.random() + 50;
+      if (cResult[0] === choices) {
+        if (cResult[1] === index) {
+          let tmp7 = cResult[2];
+        }
+        closure_5 = tmp7;
+        if (cResult[3] === tmp7) {
+          if (cResult[4] === item) {
+            if (cResult[5] === onChoiceSelect) {
+              if (cResult[6] === tmp6) {
+                return cResult[7];
+              }
+            }
           }
-          if (cResult[16] === activeCommand) {
-            if (cResult[17] === channel) {
-              if (cResult[18] === option.name) {
-                if (cResult[19] === optionValues) {
-                  let tmp25;
-                  let tmp26;
-                  if (cResult[20] === query) {
-                    tmp25 = cResult[21];
-                    tmp26 = cResult[22];
-                  }
-                  const effect = obj2.useEffect(tmp25, tmp26);
-                  if (cResult[23] === arr3) {
-                    let tmp28;
-                    if (cResult[24] === onChoiceSelect) {
-                      tmp28 = cResult[25];
-                    }
-                    if (cResult[26] === onChoiceSelect) {
-                      let tmp29;
-                      let tmp33;
-                      if (cResult[27] === query) {
-                        tmp29 = cResult[28];
+        }
+        if (cResult[8] === tmp7) {
+          if (cResult[9] === onChoiceSelect) {
+            let LABEL = cResult[10];
+          }
+          if (cResult[11] === tmp7) {
+            if (cResult[12] === onChoiceSelect) {
+              let tmp8 = cResult[13];
+            }
+            if (cResult[14] === tmp7) {
+              if (cResult[15] === tmp6) {
+                let tmp9 = cResult[16];
+              }
+              withResult2(exhaustiveResult[22]);
+              class A {
+                constructor(arg0) {
+                  closure_0 = choices;
+                  obj = {
+                    label: null,
+                    onPress() {
+                      if (onChoiceSelect != null) {
+                        const obj = { name: null, value: null, displayName: null };
+                        ({ label: obj.name, label: obj.value, label: obj.displayName } = closure_0);
+                        tmp(obj);
                       }
-                      const _Symbol = Symbol;
-                      class W {
-                        constructor() {
-                          if ("" !== first) {
-                            if (onChoiceSelect != null) {
-                              const obj = { name: first, value: first, displayName: first };
-                              tmp2(obj);
-                            }
-                            const obj2 = ActionSheetActionCreatorsDefault;
-                            obj2.hideActionSheet();
-                          }
-                        }
-                      }
-                      if (tmp30 === Symbol.for("react.memo_cache_sentinel")) {
-                        const string = tmp2(channel[16]).intl.string;
-                        class W {
-                          constructor() {
-                            if ("" !== first) {
-                              if (onChoiceSelect != null) {
-                                const obj = { name: first, value: first, displayName: first };
-                                tmp2(obj);
-                              }
-                              const obj2 = ActionSheetActionCreatorsDefault;
-                              obj2.hideActionSheet();
-                            }
-                          }
-                        }
-                        cResult[29] = tmp32;
-                        class V {
-                          constructor() {
-                            let obj2;
-                            let obj3;
-                            const obj = { command: activeCommand, optionValues, context: obj2 };
-                            obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-                            obj3 = { name: option.name, query };
-                            executeCommand(obj);
-                            const current = ref.current;
-                            if (current != null) {
-                              current.scrollToOffset({ offset: 0, animated: false });
-                            }
-                          }
-                        }
-                      }
-                      if (cResult[30] !== tmp29) {
-                        let obj3 = { placeholder: null, onChange: tmp7, autoFocus: true, returnKeyType: "done", onSubmitEditing: tmp29 };
-                        class W {
-                          constructor() {
-                            if ("" !== first) {
-                              if (onChoiceSelect != null) {
-                                const obj = { name: first, value: first, displayName: first };
-                                tmp2(obj);
-                              }
-                              const obj2 = ActionSheetActionCreatorsDefault;
-                              obj2.hideActionSheet();
-                            }
-                          }
-                        }
-                        class V {
-                          constructor() {
-                            let obj2;
-                            let obj3;
-                            const obj = { command: activeCommand, optionValues, context: obj2 };
-                            obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-                            obj3 = { name: option.name, query };
-                            executeCommand(obj);
-                            const current = ref.current;
-                            if (current != null) {
-                              current.scrollToOffset({ offset: 0, animated: false });
-                            }
-                          }
-                        }
-                        cResult[30] = tmp29;
-                        cResult[31] = tmp35;
-                        tmp33 = tmp35;
-                      } else {
-                        tmp33 = cResult[31];
-                      }
-                      class V {
-                        constructor() {
-                          let obj2;
-                          let obj3;
-                          const obj = { command: activeCommand, optionValues, context: obj2 };
-                          obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-                          obj3 = { name: option.name, query };
-                          executeCommand(obj);
-                          const current = ref.current;
-                          if (current != null) {
-                            current.scrollToOffset({ offset: 0, animated: false });
-                          }
-                        }
-                      }
-                      const _Symbol2 = Symbol;
-                      if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-                        class Y {
-                          constructor(type, arg1) {
-                            let str = "placeholder";
-                            if (type.type === constants.CHOICE) {
-                              str = type.choice.name;
-                            }
-                            return "" + str + "_" + arg1;
-                          }
-                        }
-                        class W {
-                          constructor() {
-                            if ("" !== first) {
-                              if (onChoiceSelect != null) {
-                                const obj = { name: first, value: first, displayName: first };
-                                tmp2(obj);
-                              }
-                              const obj2 = ActionSheetActionCreatorsDefault;
-                              obj2.hideActionSheet();
-                            }
-                          }
-                        }
-                      } else {
-                        class Y {
-                          constructor(type, arg1) {
-                            let str = "placeholder";
-                            if (type.type === constants.CHOICE) {
-                              str = type.choice.name;
-                            }
-                            return "" + str + "_" + arg1;
-                          }
-                        }
-                      }
-                      if (cResult[35] === arr3) {
-                        class Y {
-                          constructor(type, arg1) {
-                            let str = "placeholder";
-                            if (type.type === constants.CHOICE) {
-                              str = type.choice.name;
-                            }
-                            return "" + str + "_" + arg1;
-                          }
-                        }
-                        if (cResult[38] !== lastErrored) {
-                          class Y {
-                            constructor(type, arg1) {
-                              let str = "placeholder";
-                              if (type.type === constants.CHOICE) {
-                                str = type.choice.name;
-                              }
-                              return "" + str + "_" + arg1;
-                            }
-                          }
-                          if (tmp42) {
-                            class Y {
-                              constructor(type, arg1) {
-                                let str = "placeholder";
-                                if (type.type === constants.CHOICE) {
-                                  str = type.choice.name;
-                                }
-                                return "" + str + "_" + arg1;
-                              }
-                            }
-                            class W {
-                              constructor() {
-                                if ("" !== first) {
-                                  if (onChoiceSelect != null) {
-                                    const obj = { name: first, value: first, displayName: first };
-                                    tmp2(obj);
-                                  }
-                                  const obj2 = ActionSheetActionCreatorsDefault;
-                                  obj2.hideActionSheet();
-                                }
-                              }
-                            }
-                          }
-                          class W {
-                            constructor() {
-                              if ("" !== first) {
-                                if (onChoiceSelect != null) {
-                                  const obj = { name: first, value: first, displayName: first };
-                                  tmp2(obj);
-                                }
-                                const obj2 = ActionSheetActionCreatorsDefault;
-                                obj2.hideActionSheet();
-                              }
-                            }
-                          }
-                          cResult[38] = lastErrored;
-                          class V {
-                            constructor() {
-                              let obj2;
-                              let obj3;
-                              const obj = { command: activeCommand, optionValues, context: obj2 };
-                              obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-                              obj3 = { name: option.name, query };
-                              executeCommand(obj);
-                              const current = ref.current;
-                              if (current != null) {
-                                current.scrollToOffset({ offset: 0, animated: false });
-                              }
-                            }
-                          }
-                        } else {
-                          class Y {
-                            constructor(type, arg1) {
-                              let str = "placeholder";
-                              if (type.type === constants.CHOICE) {
-                                str = type.choice.name;
-                              }
-                              return "" + str + "_" + arg1;
-                            }
-                          }
-                        }
-                        class W {
-                          constructor() {
-                            if ("" !== first) {
-                              if (onChoiceSelect != null) {
-                                const obj = { name: first, value: first, displayName: first };
-                                tmp2(obj);
-                              }
-                              const obj2 = ActionSheetActionCreatorsDefault;
-                              obj2.hideActionSheet();
-                            }
-                          }
-                        }
-                        const obj4 = { option: null, onDismiss: onDismissAutocompleteSheet, children: items1 };
-                        class V {
-                          constructor() {
-                            let obj2;
-                            let obj3;
-                            const obj = { command: activeCommand, optionValues, context: obj2 };
-                            obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-                            obj3 = { name: option.name, query };
-                            executeCommand(obj);
-                            const current = ref.current;
-                            if (current != null) {
-                              current.scrollToOffset({ offset: 0, animated: false });
-                            }
-                          }
-                        }
-                        items1 = [tmp33, tmp36, tmp38, tmp42];
-                        cResult[40] = onDismissAutocompleteSheet;
-                        cResult[41] = option;
-                        cResult[42] = tmp36;
-                        cResult[43] = tmp38;
-                        cResult[44] = tmp42;
-                        cResult[45] = tmp33;
-                        cResult[46] = closure_10(tmp2(channel[18]).AppLauncherCommandOptionActionSheet, obj4);
-                        const tmp46 = closure_10(tmp2(channel[18]).AppLauncherCommandOptionActionSheet, obj4);
-                      }
-                      const obj5 = { ref, keyExtractor: Y, data: arr3, renderItem: tmp28, scrollEnabled: true };
-                      cResult[35] = arr3;
-                      cResult[36] = tmp28;
-                      cResult[37] = closure_9(tmp2(channel[17]).AppLauncherList, obj5);
-                      const tmp40 = closure_9(tmp2(channel[17]).AppLauncherList, obj5);
-                    }
-                    class W {
-                      constructor() {
-                        if ("" !== first) {
-                          if (onChoiceSelect != null) {
-                            const obj = { name: first, value: first, displayName: first };
-                            tmp2(obj);
-                          }
-                          const obj2 = ActionSheetActionCreatorsDefault;
-                          obj2.hideActionSheet();
-                        }
-                      }
-                    }
-                    cResult[26] = onChoiceSelect;
-                    class V {
-                      constructor() {
-                        let obj2;
-                        let obj3;
-                        const obj = { command: activeCommand, optionValues, context: obj2 };
-                        obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-                        obj3 = { name: option.name, query };
-                        executeCommand(obj);
-                        const current = ref.current;
-                        if (current != null) {
-                          current.scrollToOffset({ offset: 0, animated: false });
-                        }
-                      }
-                    }
-                    cResult[27] = query;
-                    cResult[28] = W;
-                    tmp29 = W;
-                  }
-                  const fn2 = function $(item) {
-                    const obj = { item: item.item, index: item.index, onChoiceSelect, choices: arr3 };
-                    return React4(closure_13, obj);
+                      ActionSheetActionCreatorsDefault.hideActionSheet();
+                    },
                   };
-                  class V {
-                    constructor() {
-                      let obj2;
-                      let obj3;
-                      const obj = { command: activeCommand, optionValues, context: obj2 };
-                      obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-                      obj3 = { name: option.name, query };
-                      executeCommand(obj);
-                      const current = ref.current;
-                      if (current != null) {
-                        current.scrollToOffset({ offset: 0, animated: false });
-                      }
-                    }
-                  }
-                  cResult[24] = onChoiceSelect;
-                  cResult[25] = fn2;
-                  tmp28 = fn2;
+                  obj1 = {
+                    lineClamp: 1,
+                    variant: "text-md/normal",
+                    color: "mobile-text-heading-primary",
+                    children: null,
+                  };
+                  items = ['"'];
+                  items[1] = choices.label;
+                  items[2] = '"';
+                  obj1.children = items;
+                  obj.label = closure_1_10(index(onChoiceSelect[21]).Text, obj1);
+                  return closure_1_9(closure_5, obj);
                 }
               }
+              let obj = { type: CHOICE_LOADING.CHOICE };
+              const obj4 = { type: null };
+              LABEL = CHOICE_LOADING.LABEL;
+              obj4.type = LABEL;
+              const withResult = obj3.with(obj, LABEL);
+              const obj5 = { type: null };
+              CHOICE_LOADING = CHOICE_LOADING.CHOICE_LOADING;
+              obj5.type = CHOICE_LOADING;
+              withResult2 = obj3.with(obj, LABEL).with(obj4, tmp8).with(obj5, tmp9);
+              exhaustiveResult = withResult2.exhaustive();
+              cResult[3] = tmp7;
+              cResult[4] = item;
+              cResult[5] = onChoiceSelect;
+              cResult[6] = tmp6;
+              cResult[7] = exhaustiveResult;
+              const withResult1 = obj3.with(obj, LABEL).with(obj4, tmp8);
             }
-          }
-          class V {
-            constructor() {
-              let obj2;
-              let obj3;
-              const obj = { command: activeCommand, optionValues, context: obj2 };
-              obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-              obj3 = { name: option.name, query };
-              executeCommand(obj);
-              const current = ref.current;
-              if (current != null) {
-                current.scrollToOffset({ offset: 0, animated: false });
+            class A {
+              constructor(arg0) {
+                closure_0 = choices;
+                obj = {
+                  label: null,
+                  onPress() {
+                    if (onChoiceSelect != null) {
+                      const obj = { name: null, value: null, displayName: null };
+                      ({ label: obj.name, label: obj.value, label: obj.displayName } = closure_0);
+                      tmp(obj);
+                    }
+                    ActionSheetActionCreatorsDefault.hideActionSheet();
+                  },
+                };
+                obj1 = {
+                  lineClamp: 1,
+                  variant: "text-md/normal",
+                  color: "mobile-text-heading-primary",
+                  children: null,
+                };
+                items = ['"'];
+                items[1] = choices.label;
+                items[2] = '"';
+                obj1.children = items;
+                obj.label = closure_1_10(index(onChoiceSelect[21]).Text, obj1);
+                return closure_1_9(closure_5, obj);
               }
             }
+            cResult[14] = tmp7;
+            cResult[15] = tmp6;
+            cResult[16] = tmp10;
+            tmp9 = tmp10;
           }
-          const items2 = [channel, option.name, activeCommand, optionValues, query];
-          cResult[16] = activeCommand;
-          cResult[17] = channel;
-          cResult[18] = option.name;
-          cResult[19] = optionValues;
-          cResult[20] = query;
-          cResult[21] = V;
-          cResult[22] = items2;
-          tmp26 = items2;
-          tmp25 = V;
-        }
-      }
-      const items3 = [];
-      if ("" !== query) {
-        class Y {
-          constructor(type, arg1) {
-            let str = "placeholder";
-            if (type.type === constants.CHOICE) {
-              str = type.choice.name;
-            }
-            return "" + str + "_" + arg1;
-          }
-        }
-        items3.push(tmp14);
-      }
-      if (null == autocompleteResults) {
-        class Y {
-          constructor(type, arg1) {
-            let str = "placeholder";
-            if (type.type === constants.CHOICE) {
-              str = type.choice.name;
-            }
-            return "" + str + "_" + arg1;
-          }
-        }
-        class W {
-          constructor() {
-            if ("" !== first) {
-              if (onChoiceSelect != null) {
-                const obj = { name: first, value: first, displayName: first };
-                tmp2(obj);
-              }
-              const obj2 = ActionSheetActionCreatorsDefault;
-              obj2.hideActionSheet();
-            }
-          }
-        }
-        cResult[7] = lastErrored;
-        class V {
-          constructor() {
-            let obj2;
-            let obj3;
-            const obj = { command: activeCommand, optionValues, context: obj2 };
-            obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-            obj3 = { name: option.name, query };
-            executeCommand(obj);
-            const current = ref.current;
-            if (current != null) {
-              current.scrollToOffset({ offset: 0, animated: false });
-            }
-          }
-        }
-        cResult[8] = query;
-        cResult[9] = items3;
-        arr3 = items3;
-      }
-      if (null != autocompleteResults) {
-        class Y {
-          constructor(type, arg1) {
-            let str = "placeholder";
-            if (type.type === constants.CHOICE) {
-              str = type.choice.name;
-            }
-            return "" + str + "_" + arg1;
-          }
-        }
-        const push = items3.push;
-        class W {
-          constructor() {
-            if ("" !== first) {
-              if (onChoiceSelect != null) {
-                const obj = { name: first, value: first, displayName: first };
-                tmp2(obj);
-              }
-              const obj2 = ActionSheetActionCreatorsDefault;
-              obj2.hideActionSheet();
-            }
-          }
-        }
-        class V {
-          constructor() {
-            let obj2;
-            let obj3;
-            const obj = { command: activeCommand, optionValues, context: obj2 };
-            obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-            obj3 = { name: option.name, query };
-            executeCommand(obj);
-            const current = ref.current;
-            if (current != null) {
-              current.scrollToOffset({ offset: 0, animated: false });
-            }
-          }
-        }
-        HermesBuiltin.arraySpread(tmp17, tmp16, 0);
-        HermesBuiltin.apply(push, tmp17, items3);
-      }
-    }
-  }
-  const fn = function h() {
-    const obj = { autocompleteResults: ApplicationCommandAutocompleteStore.getAutocompleteChoices(channel.id, option.name, first), lastErrored: ApplicationCommandAutocompleteStore.getLastErrored(channel.id) };
-    return obj;
-  };
-  const items4 = [channel.id, option.name, query];
-  cResult[1] = channel.id;
-  cResult[2] = option.name;
-  cResult[3] = query;
-  cResult[4] = fn;
-  cResult[5] = items4;
-  tmp12 = items4;
-  tmp11 = fn;
-}) : ((option) => {
-  let initChoice;
-  let intl;
-  let items6;
-  let onChoiceSelect;
-  option = option.option;
-  ({ initChoice, onChoiceSelect } = option);
-  const channel = option.channel;
-  const activeCommand = option.activeCommand;
-  const optionValues = option.optionValues;
-  query = undefined;
-  let ref;
-  let autocompleteResults;
-  let lastErrored;
-  let memo;
-  let obj = optionValues;
-  let str;
-  const onDismissAutocompleteSheet = option.onDismissAutocompleteSheet;
-  const useState = optionValues.useState;
-  if (initChoice != null) {
-    str = initChoice.name;
-  }
-  if (str == null) {
-    str = "";
-  }
-  const tmp = activeCommand(useState(str), 2);
-  query = tmp[0];
-  const tmp3 = tmp[1];
-  ref = obj.useRef(null);
-  let obj2 = option(channel[14]);
-  let items = [ref];
-  let items1 = [channel.id, option.name, query];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
-    const obj = { autocompleteResults: ApplicationCommandAutocompleteStore.getAutocompleteChoices(channel.id, option.name, first), lastErrored: ApplicationCommandAutocompleteStore.getLastErrored(channel.id) };
-    return obj;
-  }, items1);
-  autocompleteResults = stateFromStoresObject.autocompleteResults;
-  lastErrored = stateFromStoresObject.lastErrored;
-  let items2 = [query, autocompleteResults, lastErrored];
-  memo = obj.useMemo(function() {
-    const items = [];
-    if ("" !== first) {
-      const obj = { type: AutoCompleteResultTypes.LABEL, label: tmp2 };
-      items.push(obj);
-    }
-    if (null == autocompleteResults) {
-      if (!lastErrored) {
-        const push = items.push;
-        const _Array = Array;
-        const self = this;
-        const self2 = this;
-        const array = new Array(4);
-        const items1 = [];
-        const obj2 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
-        HermesBuiltin.arraySpread(items1, array.fill(obj2), 0);
-        HermesBuiltin.apply(push, items1, items);
-      }
-      return items;
-    }
-    if (null != autocompleteResults) {
-      const push2 = items.push;
-      const items2 = [];
-      HermesBuiltin.arraySpread(items2, autocompleteResults.map((choice) => ({ type: constants.CHOICE, choice })), 0);
-      HermesBuiltin.apply(push2, items2, items);
-    }
-  }, items2);
-  let tmp13Result = 0 === memo.length && !lastErrored;
-  const items3 = [channel, option.name, activeCommand, optionValues, query];
-  const effect = obj.useEffect(() => {
-    let obj2;
-    let obj3;
-    const obj = { command: activeCommand, optionValues, context: obj2 };
-    obj2 = { channel, guild: GuildStore.getGuild(channel.guild_id), autocomplete: obj3 };
-    obj3 = { name: option.name, query };
-    executeCommand(obj);
-    const current = ref.current;
-    if (current != null) {
-      current.scrollToOffset({ offset: 0, animated: false });
-    }
-  }, items3);
-  const items4 = [onChoiceSelect, memo];
-  const items5 = [onChoiceSelect, query];
-  const callback = obj.useCallback((item) => {
-    const obj = { item: item.item, index: item.index, onChoiceSelect, choices: memo };
-    return React4(closure_13, obj);
-  }, items4);
-  const callback1 = obj.useCallback(() => {
-    if ("" !== first) {
-      if (onChoiceSelect != null) {
-        const obj = { name: first, value: first, displayName: first };
-        tmp2(obj);
-      }
-      const obj2 = ActionSheetActionCreatorsDefault;
-      obj2.hideActionSheet();
-    }
-  }, items5);
-  let obj3 = { option, onDismiss: onDismissAutocompleteSheet, children: items6 };
-  const AppLauncherCommandOptionActionSheet = tmp5(tmp6[18]).AppLauncherCommandOptionActionSheet;
-  const obj4 = { placeholder: intl.string(option(channel[16]).t.Wuie9L), onChange: tmp3, autoFocus: true, returnKeyType: "done", onSubmitEditing: callback1 };
-  const AppLauncherListSearchBar = tmp5(tmp6[17]).AppLauncherListSearchBar;
-  intl = tmp5(tmp6[16]).intl;
-  items6 = [memo(AppLauncherListSearchBar, obj4), , , ];
-  if (tmp13Result) {
-    tmp13Result = tmp13(tmp5(tmp6[17]).AppLauncherListEmptyState, {});
-  }
-  items6[1] = tmp13Result;
-  const obj5 = {
-    ref,
-    keyExtractor(type, arg1) {
-      let str = "placeholder";
-      if (type.type === lastErrored.CHOICE) {
-        str = type.choice.name;
-      }
-      return "" + str + "_" + arg1;
-    },
-    data: memo,
-    renderItem: callback,
-    scrollEnabled: true
-  };
-  items6[2] = memo(option(channel[17]).AppLauncherList, obj5);
-  if (lastErrored) {
-    lastErrored = tmp13(closure_14, {});
-  }
-  items6[3] = lastErrored;
-  return closure_10(AppLauncherCommandOptionActionSheet, obj3);
-});
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((choices) => {
-  let index;
-  let item;
-  let obj2;
-  let onChoiceSelect;
-  let obj = index(onChoiceSelect[13]);
-  const cResult = obj.c(17);
-  ({ item, index } = choices);
-  choices = choices.choices;
-  const tmp2 = onChoiceSelect;
-  onChoiceSelect = choices.onChoiceSelect;
-  let tmp6 = item.type === AutoCompleteResultTypes.CHOICE;
-  const tmp4 = choices(onChoiceSelect[19]);
-  if (!tmp6) {
-    tmp6 = item.type === AutoCompleteResultTypes.CHOICE_LOADING;
-  }
-  if (!tmp6) {
-    tmp6 = item.type === AutoCompleteResultTypes.LABEL;
-  }
-  tmp4(tmp6, "Invalid autocomplete result type");
-  const tmp8 = closure_12();
-  let closure_3 = tmp8;
-  const width = 100 * Math.random() + 50;
-  if (cResult[0] === choices) {
-    let tmp9;
-    let tmp10;
-    if (cResult[1] === index) {
-      tmp9 = cResult[2];
-    }
-    let closure_5 = tmp9;
-    if (cResult[3] === tmp9) {
-      if (cResult[4] === item) {
-        if (cResult[5] === onChoiceSelect) {
-          if (cResult[6] === tmp8) {
-            tmp10 = cResult[7];
-          }
-          return tmp10;
-        }
-      }
-    }
-    if (cResult[8] === tmp9) {
-      let tmp11;
-      if (cResult[9] === onChoiceSelect) {
-        tmp11 = cResult[10];
-      }
-      if (cResult[11] === tmp9) {
-        let tmp12;
-        if (cResult[12] === onChoiceSelect) {
-          tmp12 = cResult[13];
-        }
-        if (cResult[14] === tmp9) {
-          let tmp13;
-          if (cResult[15] === tmp8) {
-            tmp13 = cResult[16];
-          }
-          index(tmp2[22]);
           class A {
-            constructor(label) {
-              let items;
-              let obj2;
-              let closure_0 = label;
-              let obj = {
-                label: closure_1_10(index(onChoiceSelect[21]).Text, obj2),
+            constructor(arg0) {
+              closure_0 = choices;
+              obj = {
+                label: null,
                 onPress() {
                   if (onChoiceSelect != null) {
                     const obj = { name: null, value: null, displayName: null };
-                    ({ label: obj.name, label: obj.value, label: obj.displayName } = label);
+                    ({ label: obj.name, label: obj.value, label: obj.displayName } = closure_0);
                     tmp(obj);
                   }
-                  const obj2 = ActionSheetActionCreatorsDefault;
-                  obj2.hideActionSheet();
-                }
+                  ActionSheetActionCreatorsDefault.hideActionSheet();
+                },
               };
-              obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items };
-              items = ["\"", label.label, "\""];
+              obj1 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+              items = ['"'];
+              items[1] = choices.label;
+              items[2] = '"';
+              obj1.children = items;
+              obj.label = closure_1_10(index(onChoiceSelect[21]).Text, obj1);
               return closure_1_9(closure_5, obj);
             }
           }
-          let obj3 = { type: AutoCompleteResultTypes.CHOICE };
-          let obj4 = { type: AutoCompleteResultTypes.LABEL };
-          const obj5 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
-          const withResult = obj2.with(obj3, tmp11);
-          const withResult1 = withResult.with(obj4, tmp12);
-          const withResult2 = withResult1.with(obj5, tmp13);
-          const exhaustiveResult = withResult2.exhaustive();
-          cResult[3] = tmp9;
-          cResult[4] = item;
-          cResult[5] = onChoiceSelect;
-          cResult[6] = tmp8;
-          cResult[7] = exhaustiveResult;
-          tmp10 = exhaustiveResult;
+          cResult[11] = tmp7;
+          cResult[12] = onChoiceSelect;
+          cResult[13] = A;
+          tmp8 = A;
         }
-        class A {
-          constructor(label) {
-            let items;
-            let obj2;
-            let closure_0 = label;
-            let obj = {
-              label: closure_1_10(index(onChoiceSelect[21]).Text, obj2),
-              onPress() {
-                if (onChoiceSelect != null) {
-                  const obj = { name: null, value: null, displayName: null };
-                  ({ label: obj.name, label: obj.value, label: obj.displayName } = label);
-                  tmp(obj);
-                }
-                const obj2 = ActionSheetActionCreatorsDefault;
-                obj2.hideActionSheet();
-              }
-            };
-            obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items };
-            items = ["\"", label.label, "\""];
-            return closure_1_9(closure_5, obj);
-          }
-        }
-        cResult[14] = tmp9;
-        cResult[15] = tmp8;
-        cResult[16] = tmp14;
-        tmp13 = tmp14;
-      }
-      class A {
-        constructor(label) {
-          let items;
-          let obj2;
-          let closure_0 = label;
+        const fn2 = function f(children) {
+          const choice = children;
           let obj = {
-            label: closure_1_10(index(onChoiceSelect[21]).Text, obj2),
+            label: closure_1_9(index(onChoiceSelect[21]).Text, {
+              lineClamp: 1,
+              variant: "text-md/normal",
+              color: "mobile-text-heading-primary",
+              children: children.choice.displayName,
+            }),
             onPress() {
               if (onChoiceSelect != null) {
+                tmp(choice.choice);
+              }
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+            },
+          };
+          return closure_1_9(closure_5, obj);
+        };
+        cResult[8] = tmp7;
+        cResult[9] = onChoiceSelect;
+        cResult[10] = fn2;
+        LABEL = fn2;
+      }
+      const fn = function y(arg0) {
+        ({ label, onPress } = arg0);
+        return options(TableRow.TableRow, { label, onPress, start: 0 === index, end: index === choices.length - 1 });
+      };
+      cResult[0] = choices;
+      cResult[1] = index;
+      cResult[2] = fn;
+      tmp7 = fn;
+    }
+  : (arg0) => {
+      ({ item, index: require, choices: importDefault, onChoiceSelect: dependencyMap } = arg0);
+      closure_3 = undefined;
+      noop = undefined;
+      function ListItem(arg0) {
+        ({ label, onPress } = arg0);
+        return options(TableRow.TableRow, {
+          label,
+          onPress,
+          start: 0 === closure_1_0,
+          end: closure_1_0 === length.length - 1,
+        });
+      }
+      let tmp4 = item.type === AutoCompleteResultTypes.CHOICE;
+      if (!tmp4) {
+        tmp4 = item.type === AutoCompleteResultTypes.CHOICE_LOADING;
+      }
+      if (!tmp4) {
+        tmp4 = item.type === AutoCompleteResultTypes.LABEL;
+      }
+      _modDef38(tmp4, "Invalid autocomplete result type");
+      closure_3 = closure_12();
+      noop = noop.useMemo(() => 100 * Math.random() + 50, []);
+      const match = _mod5081.match(item);
+      let obj = { type: AutoCompleteResultTypes.CHOICE };
+      let obj2 = { type: AutoCompleteResultTypes.LABEL };
+      const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
+        const choice = children;
+        let obj = {
+          label: closure_1_9(Text_Text.Text, {
+            lineClamp: 1,
+            variant: "text-md/normal",
+            color: "mobile-text-heading-primary",
+            children: children.choice.displayName,
+          }),
+          onPress() {
+            if (dependencyMap != null) {
+              tmp(choice.choice);
+            }
+            ActionSheetActionCreatorsDefault.hideActionSheet();
+          },
+        };
+        return closure_1_9(ListItem, obj);
+      });
+      let obj3 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
+      const withResult1 = match
+        .with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
+          const choice = children;
+          let obj = {
+            label: closure_1_9(Text_Text.Text, {
+              lineClamp: 1,
+              variant: "text-md/normal",
+              color: "mobile-text-heading-primary",
+              children: children.choice.displayName,
+            }),
+            onPress() {
+              if (dependencyMap != null) {
+                tmp(choice.choice);
+              }
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+            },
+          };
+          return closure_1_9(ListItem, obj);
+        })
+        .with({ type: AutoCompleteResultTypes.LABEL }, (label) => {
+          closure_0 = label;
+          let obj = {
+            label: null,
+            onPress() {
+              if (dependencyMap != null) {
                 const obj = { name: null, value: null, displayName: null };
-                ({ label: obj.name, label: obj.value, label: obj.displayName } = label);
+                ({ label: obj.name, label: obj.value, label: obj.displayName } = closure_0);
                 tmp(obj);
               }
-              const obj2 = ActionSheetActionCreatorsDefault;
-              obj2.hideActionSheet();
-            }
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+            },
           };
-          obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items };
-          items = ["\"", label.label, "\""];
-          return closure_1_9(closure_5, obj);
-        }
+          let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+          const items = ['"', label.label, '"'];
+          obj2.children = items;
+          obj.label = closure_1_10(Text_Text.Text, obj2);
+          return closure_1_9(ListItem, obj);
+        });
+      return match
+        .with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
+          const choice = children;
+          let obj = {
+            label: closure_1_9(Text_Text.Text, {
+              lineClamp: 1,
+              variant: "text-md/normal",
+              color: "mobile-text-heading-primary",
+              children: children.choice.displayName,
+            }),
+            onPress() {
+              if (dependencyMap != null) {
+                tmp(choice.choice);
+              }
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+            },
+          };
+          return closure_1_9(ListItem, obj);
+        })
+        .with({ type: AutoCompleteResultTypes.LABEL }, (label) => {
+          closure_0 = label;
+          let obj = {
+            label: null,
+            onPress() {
+              if (dependencyMap != null) {
+                const obj = { name: null, value: null, displayName: null };
+                ({ label: obj.name, label: obj.value, label: obj.displayName } = closure_0);
+                tmp(obj);
+              }
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+            },
+          };
+          let obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+          const items = ['"', label.label, '"'];
+          obj2.children = items;
+          obj.label = closure_1_10(Text_Text.Text, obj2);
+          return closure_1_9(ListItem, obj);
+        })
+        .with({ type: AutoCompleteResultTypes.CHOICE_LOADING }, () => {
+          const obj = { label: null };
+          const obj2 = { style: closure_3.commandChoiceLoadingContainer, children: null };
+          const obj3 = { style: null };
+          const items = [closure_3.commandChoiceLoadingItem, { width }];
+          obj3.style = items;
+          obj2.children = options(View, obj3);
+          obj.label = options(View, obj2);
+          return options(ListItem, obj);
+        })
+        .exhaustive();
+    };
+ReactCompilerGating = fn(558);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(3);
+      const tmp4 = closure_12();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.rTAbPn);
+        cResult[0] = stringResult;
+        let first = stringResult;
+      } else {
+        first = cResult[0];
       }
-      cResult[11] = tmp9;
-      cResult[12] = onChoiceSelect;
-      cResult[13] = A;
-      tmp12 = A;
+      if (cResult[1] !== tmp4.emptyState) {
+        const obj2 = { style: tmp4.emptyState, lightSource: _modDef11804, darkSource: _modDef11804, title: first };
+        const tmp10 = options(native.EmptyState, obj2);
+        cResult[1] = tmp4.emptyState;
+        cResult[2] = tmp10;
+        let tmp7 = tmp10;
+      } else {
+        tmp7 = cResult[2];
+      }
+      return tmp7;
     }
-    const fn2 = function f(children) {
-      let obj2;
-      let obj = {
-        label: closure_1_9(index(onChoiceSelect[21]).Text, obj2),
-        onPress() {
-          if (onChoiceSelect != null) {
-            tmp(children.choice);
-          }
-          const obj = ActionSheetActionCreatorsDefault;
-          obj.hideActionSheet();
-        }
-      };
-      obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: children.choice.displayName };
-      return closure_1_9(closure_5, obj);
+  : () => {
+      const obj = { style: closure_12().emptyState, lightSource: _modDef11804, darkSource: _modDef11804, title: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.rTAbPn);
+      return options(native.EmptyState, obj);
     };
-    cResult[8] = tmp9;
-    cResult[9] = onChoiceSelect;
-    cResult[10] = fn2;
-    tmp11 = fn2;
-  }
-  const fn = function y(arg0) {
-    let label;
-    let onPress;
-    ({ label, onPress } = arg0);
-    const obj = { label, onPress, start: 0 === index, end: index === choices.length - 1 };
-    return React4(TableRow.TableRow, obj);
-  };
-  cResult[0] = choices;
-  cResult[1] = index;
-  cResult[2] = fn;
-  tmp9 = fn;
-}) : ((arg0) => {
-  let item;
-  let length;
-  let width;
-  ({ item, index: require, choices: importDefault, onChoiceSelect: dependencyMap } = arg0);
-  let closure_3;
-  react = undefined;
-  function ListItem(arg0) {
-    let label;
-    let onPress;
-    ({ label, onPress } = arg0);
-    const obj = { label, onPress, start: 0 === require, end: require === importDefault.length - 1 };
-    return React4(TableRow.TableRow, obj);
-  }
-  let tmp4 = item.type === AutoCompleteResultTypes.CHOICE;
-  const tmp2 = _modDef38;
-  if (!tmp4) {
-    tmp4 = item.type === AutoCompleteResultTypes.CHOICE_LOADING;
-  }
-  if (!tmp4) {
-    tmp4 = item.type === AutoCompleteResultTypes.LABEL;
-  }
-  tmp2(tmp4, "Invalid autocomplete result type");
-  closure_3 = closure_12();
-  react = react.useMemo(() => 100 * Math.random() + 50, []);
-  const str = merged5;
-  const match = str.match(item);
-  let obj = { type: AutoCompleteResultTypes.CHOICE };
-  let obj2 = { type: AutoCompleteResultTypes.LABEL };
-  let obj3 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
-  const withResult = match.with(obj, (children) => {
-    let obj2;
-    let obj = {
-      label: closure_1_9(Text_Text.Text, obj2),
-      onPress() {
-        if (dependencyMap != null) {
-          tmp(children.choice);
-        }
-        const obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
-      }
-    };
-    obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: children.choice.displayName };
-    return closure_1_9(ListItem, obj);
-  });
-  const withResult1 = withResult.with(obj2, (label) => {
-    let items;
-    let obj2;
-    require = label;
-    let obj = {
-      label: closure_1_10(Text_Text.Text, obj2),
-      onPress() {
-        if (dependencyMap != null) {
-          const obj = { name: null, value: null, displayName: null };
-          ({ label: obj.name, label: obj.value, label: obj.displayName } = label);
-          tmp(obj);
-        }
-        const obj2 = ActionSheetActionCreatorsDefault;
-        obj2.hideActionSheet();
-      }
-    };
-    obj2 = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items };
-    items = ["\"", label.label, "\""];
-    return closure_1_9(ListItem, obj);
-  });
-  const withResult2 = withResult1.with(obj3, () => {
-    let items;
-    let obj2;
-    let obj3;
-    const obj = { label: React4(View, obj2) };
-    obj2 = { style: closure_3.commandChoiceLoadingContainer, children: React4(View, obj3) };
-    obj3 = { style: items };
-    items = [closure_3.commandChoiceLoadingItem, ];
-    const obj4 = { width };
-    items[1] = obj4;
-    return React4(ListItem, obj);
-  });
-  return withResult2.exhaustive();
-});
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  let tmp7;
-  const obj = react2;
-  const cResult = obj.c(3);
-  const tmp4 = closure_12();
-  const emptyState = tmp4.emptyState;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = intl2.intl;
-    const stringResult = intl.string(intl2.t.rTAbPn);
-    cResult[0] = stringResult;
-    first = stringResult;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tmp4.emptyState) {
-    const obj2 = { style: emptyState, lightSource: AssetRegistryDefault, darkSource: AssetRegistryDefault, title: first };
-    const EmptyState = native.EmptyState;
-    const tmp10 = React4(EmptyState, obj2);
-    cResult[1] = tmp4.emptyState;
-    cResult[2] = tmp10;
-    tmp7 = tmp10;
-  } else {
-    tmp7 = cResult[2];
-  }
-  return tmp7;
-}) : (() => {
-  let intl;
-  const obj = { style: closure_12().emptyState, lightSource: AssetRegistryDefault, darkSource: AssetRegistryDefault, title: intl.string(intl2.t.rTAbPn) };
-  const EmptyState = native.EmptyState;
-  intl = intl2.intl;
-  return React4(EmptyState, obj);
-});
-const result = size.fileFinishedImporting("modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx",
+);
 
-export default tmp3;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (option) => {
+      const cResult = option(channel[13]).c(47);
+      option = option.option;
+      ({ initChoice, onChoiceSelect } = option);
+      ({ onDismissAutocompleteSheet, channel } = option);
+      const activeCommand = option.activeCommand;
+      const optionValues = option.optionValues;
+      let str;
+      if (initChoice != null) {
+        str = initChoice.name;
+      }
+      if (str == null) {
+        str = "";
+      }
+      const tmp4 = activeCommand(optionValues.useState(str), 2);
+      query = tmp4[0];
+      const ref = optionValues.useRef(null);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [ref];
+        cResult[0] = items;
+        let first1 = items;
+      } else {
+        first1 = cResult[0];
+      }
+      if (cResult[1] === channel.id) {
+        if (cResult[2] === option.name) {
+          if (cResult[3] === query) {
+            let tmp9 = cResult[4];
+            let tmp10 = cResult[5];
+          }
+          const stateFromStoresObject = tmp(channel[14]).useStateFromStoresObject(first1, tmp9, tmp10);
+          ({ autocompleteResults, lastErrored } = stateFromStoresObject);
+          if (cResult[6] === autocompleteResults) {
+            if (cResult[7] === lastErrored) {
+              if (cResult[8] === query) {
+                if (cResult[16] === activeCommand) {
+                  if (cResult[17] === channel) {
+                    if (cResult[18] === option.name) {
+                      if (cResult[19] === optionValues) {
+                        if (cResult[20] === query) {
+                          let tmp19 = cResult[21];
+                          let tmp20 = cResult[22];
+                        }
+                        const effect = obj2.useEffect(tmp19, tmp20);
+                        if (cResult[23] === arr3) {
+                          if (cResult[24] === onChoiceSelect) {
+                            let tmp22 = cResult[25];
+                          }
+                          if (cResult[26] === onChoiceSelect) {
+                            if (cResult[27] === query) {
+                              let tmp23 = cResult[28];
+                            }
+                            const _Symbol2 = Symbol;
+                            class W {
+                              constructor() {
+                                tmp = closure_5;
+                                if ("" !== closure_5) {
+                                  tmp3 = null;
+                                  if (onChoiceSelect != null) {
+                                    obj = { name: null, value: null, displayName: null };
+                                    obj.name = tmp;
+                                    obj.value = tmp;
+                                    obj.displayName = tmp;
+                                    tmp2Result = tmp2(obj);
+                                  }
+                                  tmp5 = closure_1;
+                                  tmp6 = closure_2;
+                                  obj2 = closure_1(closure_2[15]);
+                                  hideActionSheetResult = obj2.hideActionSheet();
+                                }
+                                return;
+                              }
+                            }
+                            if (tmp24 === Symbol.for("react.memo_cache_sentinel")) {
+                              const string = tmp(channel[16]).intl.string;
+                              class W {
+                                constructor() {
+                                  tmp = closure_5;
+                                  if ("" !== closure_5) {
+                                    tmp3 = null;
+                                    if (onChoiceSelect != null) {
+                                      obj = { name: null, value: null, displayName: null };
+                                      obj.name = tmp;
+                                      obj.value = tmp;
+                                      obj.displayName = tmp;
+                                      tmp2Result = tmp2(obj);
+                                    }
+                                    tmp5 = closure_1;
+                                    tmp6 = closure_2;
+                                    obj2 = closure_1(closure_2[15]);
+                                    hideActionSheetResult = obj2.hideActionSheet();
+                                  }
+                                  return;
+                                }
+                              }
+                              cResult[29] = tmp26;
+                              class V {
+                                constructor() {
+                                  obj = { command: activeCommand, optionValues, context: null };
+                                  obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                                  obj4 = { name: option.name, query: closure_5 };
+                                  obj1.autocomplete = obj4;
+                                  obj.context = obj1;
+                                  tmp = closure_11(obj);
+                                  current = closure_6.current;
+                                  if (current != null) {
+                                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                                  }
+                                  return;
+                                }
+                              }
+                            }
+                            if (cResult[30] !== tmp23) {
+                              const obj3 = {
+                                placeholder: null,
+                                onChange: null,
+                                autoFocus: true,
+                                returnKeyType: "done",
+                                onSubmitEditing: null,
+                              };
+                              class W {
+                                constructor() {
+                                  tmp = closure_5;
+                                  if ("" !== closure_5) {
+                                    tmp3 = null;
+                                    if (onChoiceSelect != null) {
+                                      obj = { name: null, value: null, displayName: null };
+                                      obj.name = tmp;
+                                      obj.value = tmp;
+                                      obj.displayName = tmp;
+                                      tmp2Result = tmp2(obj);
+                                    }
+                                    tmp5 = closure_1;
+                                    tmp6 = closure_2;
+                                    obj2 = closure_1(closure_2[15]);
+                                    hideActionSheetResult = obj2.hideActionSheet();
+                                  }
+                                  return;
+                                }
+                              }
+                              obj3.onChange = tmp4[1];
+                              obj3.onSubmitEditing = tmp23;
+                              class V {
+                                constructor() {
+                                  obj = { command: activeCommand, optionValues, context: null };
+                                  obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                                  obj4 = { name: option.name, query: closure_5 };
+                                  obj1.autocomplete = obj4;
+                                  obj.context = obj1;
+                                  tmp = closure_11(obj);
+                                  current = closure_6.current;
+                                  if (current != null) {
+                                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                                  }
+                                  return;
+                                }
+                              }
+                              cResult[30] = tmp23;
+                              cResult[31] = tmp29;
+                              let tmp27 = tmp29;
+                            } else {
+                              tmp27 = cResult[31];
+                            }
+                            class V {
+                              constructor() {
+                                obj = { command: activeCommand, optionValues, context: null };
+                                obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                                obj4 = { name: option.name, query: closure_5 };
+                                obj1.autocomplete = obj4;
+                                obj.context = obj1;
+                                tmp = closure_11(obj);
+                                current = closure_6.current;
+                                if (current != null) {
+                                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                                }
+                                return;
+                              }
+                            }
+                            const _Symbol3 = Symbol;
+                            if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
+                              class Y {
+                                constructor(arg0, arg1) {
+                                  str = "placeholder";
+                                  if (option.type === closure_1_8.CHOICE) {
+                                    str = option.choice.name;
+                                  }
+                                  return "" + str + "_" + arg1;
+                                }
+                              }
+                              class W {
+                                constructor() {
+                                  tmp = closure_5;
+                                  if ("" !== closure_5) {
+                                    tmp3 = null;
+                                    if (onChoiceSelect != null) {
+                                      obj = { name: null, value: null, displayName: null };
+                                      obj.name = tmp;
+                                      obj.value = tmp;
+                                      obj.displayName = tmp;
+                                      tmp2Result = tmp2(obj);
+                                    }
+                                    tmp5 = closure_1;
+                                    tmp6 = closure_2;
+                                    obj2 = closure_1(closure_2[15]);
+                                    hideActionSheetResult = obj2.hideActionSheet();
+                                  }
+                                  return;
+                                }
+                              }
+                            } else {
+                              class Y {
+                                constructor(arg0, arg1) {
+                                  str = "placeholder";
+                                  if (option.type === closure_1_8.CHOICE) {
+                                    str = option.choice.name;
+                                  }
+                                  return "" + str + "_" + arg1;
+                                }
+                              }
+                            }
+                            if (cResult[35] === arr3) {
+                              class Y {
+                                constructor(arg0, arg1) {
+                                  str = "placeholder";
+                                  if (option.type === closure_1_8.CHOICE) {
+                                    str = option.choice.name;
+                                  }
+                                  return "" + str + "_" + arg1;
+                                }
+                              }
+                              if (cResult[38] !== lastErrored) {
+                                class Y {
+                                  constructor(arg0, arg1) {
+                                    str = "placeholder";
+                                    if (option.type === closure_1_8.CHOICE) {
+                                      str = option.choice.name;
+                                    }
+                                    return "" + str + "_" + arg1;
+                                  }
+                                }
+                                if (lastErrored) {
+                                  class Y {
+                                    constructor(arg0, arg1) {
+                                      str = "placeholder";
+                                      if (option.type === closure_1_8.CHOICE) {
+                                        str = option.choice.name;
+                                      }
+                                      return "" + str + "_" + arg1;
+                                    }
+                                  }
+                                  class W {
+                                    constructor() {
+                                      tmp = closure_5;
+                                      if ("" !== closure_5) {
+                                        tmp3 = null;
+                                        if (onChoiceSelect != null) {
+                                          obj = { name: null, value: null, displayName: null };
+                                          obj.name = tmp;
+                                          obj.value = tmp;
+                                          obj.displayName = tmp;
+                                          tmp2Result = tmp2(obj);
+                                        }
+                                        tmp5 = closure_1;
+                                        tmp6 = closure_2;
+                                        obj2 = closure_1(closure_2[15]);
+                                        hideActionSheetResult = obj2.hideActionSheet();
+                                      }
+                                      return;
+                                    }
+                                  }
+                                }
+                                class W {
+                                  constructor() {
+                                    tmp = closure_5;
+                                    if ("" !== closure_5) {
+                                      tmp3 = null;
+                                      if (onChoiceSelect != null) {
+                                        obj = { name: null, value: null, displayName: null };
+                                        obj.name = tmp;
+                                        obj.value = tmp;
+                                        obj.displayName = tmp;
+                                        tmp2Result = tmp2(obj);
+                                      }
+                                      tmp5 = closure_1;
+                                      tmp6 = closure_2;
+                                      obj2 = closure_1(closure_2[15]);
+                                      hideActionSheetResult = obj2.hideActionSheet();
+                                    }
+                                    return;
+                                  }
+                                }
+                                cResult[38] = lastErrored;
+                                class V {
+                                  constructor() {
+                                    obj = { command: activeCommand, optionValues, context: null };
+                                    obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                                    obj4 = { name: option.name, query: closure_5 };
+                                    obj1.autocomplete = obj4;
+                                    obj.context = obj1;
+                                    tmp = closure_11(obj);
+                                    current = closure_6.current;
+                                    if (current != null) {
+                                      scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                                    }
+                                    return;
+                                  }
+                                }
+                              } else {
+                                class Y {
+                                  constructor(arg0, arg1) {
+                                    str = "placeholder";
+                                    if (option.type === closure_1_8.CHOICE) {
+                                      str = option.choice.name;
+                                    }
+                                    return "" + str + "_" + arg1;
+                                  }
+                                }
+                              }
+                              class W {
+                                constructor() {
+                                  tmp = closure_5;
+                                  if ("" !== closure_5) {
+                                    tmp3 = null;
+                                    if (onChoiceSelect != null) {
+                                      obj = { name: null, value: null, displayName: null };
+                                      obj.name = tmp;
+                                      obj.value = tmp;
+                                      obj.displayName = tmp;
+                                      tmp2Result = tmp2(obj);
+                                    }
+                                    tmp5 = closure_1;
+                                    tmp6 = closure_2;
+                                    obj2 = closure_1(closure_2[15]);
+                                    hideActionSheetResult = obj2.hideActionSheet();
+                                  }
+                                  return;
+                                }
+                              }
+                              const obj4 = { option: null, onDismiss: null, children: null };
+                              class V {
+                                constructor() {
+                                  obj = { command: activeCommand, optionValues, context: null };
+                                  obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                                  obj4 = { name: option.name, query: closure_5 };
+                                  obj1.autocomplete = obj4;
+                                  obj.context = obj1;
+                                  tmp = closure_11(obj);
+                                  current = closure_6.current;
+                                  if (current != null) {
+                                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                                  }
+                                  return;
+                                }
+                              }
+                              obj4.onDismiss = onDismissAutocompleteSheet;
+                              const items1 = [tmp27, tmp30, tmp32, tmp36];
+                              obj4.children = items1;
+                              const tmp40 = closure_10(tmp(channel[18]).AppLauncherCommandOptionActionSheet, obj4);
+                              cResult[40] = onDismissAutocompleteSheet;
+                              cResult[41] = option;
+                              cResult[42] = tmp30;
+                              cResult[43] = tmp32;
+                              cResult[44] = tmp36;
+                              cResult[45] = tmp27;
+                              cResult[46] = tmp40;
+                            }
+                            const obj5 = { ref, keyExtractor: Y, data: arr3, renderItem: tmp22, scrollEnabled: true };
+                            const tmp34 = closure_9(tmp(channel[17]).AppLauncherList, obj5);
+                            cResult[35] = arr3;
+                            cResult[36] = tmp22;
+                            cResult[37] = tmp34;
+                          }
+                          class W {
+                            constructor() {
+                              tmp = closure_5;
+                              if ("" !== closure_5) {
+                                tmp3 = null;
+                                if (onChoiceSelect != null) {
+                                  obj = { name: null, value: null, displayName: null };
+                                  obj.name = tmp;
+                                  obj.value = tmp;
+                                  obj.displayName = tmp;
+                                  tmp2Result = tmp2(obj);
+                                }
+                                tmp5 = closure_1;
+                                tmp6 = closure_2;
+                                obj2 = closure_1(closure_2[15]);
+                                hideActionSheetResult = obj2.hideActionSheet();
+                              }
+                              return;
+                            }
+                          }
+                          cResult[26] = onChoiceSelect;
+                          class V {
+                            constructor() {
+                              obj = { command: activeCommand, optionValues, context: null };
+                              obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                              obj4 = { name: option.name, query: closure_5 };
+                              obj1.autocomplete = obj4;
+                              obj.context = obj1;
+                              tmp = closure_11(obj);
+                              current = closure_6.current;
+                              if (current != null) {
+                                scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                              }
+                              return;
+                            }
+                          }
+                          cResult[27] = query;
+                          cResult[28] = W;
+                          tmp23 = W;
+                        }
+                        const fn2 = function $(item) {
+                          return options(closure_13, {
+                            item: item.item,
+                            index: item.index,
+                            onChoiceSelect,
+                            choices: arr3,
+                          });
+                        };
+                        class V {
+                          constructor() {
+                            obj = { command: activeCommand, optionValues, context: null };
+                            obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                            obj4 = { name: option.name, query: closure_5 };
+                            obj1.autocomplete = obj4;
+                            obj.context = obj1;
+                            tmp = closure_11(obj);
+                            current = closure_6.current;
+                            if (current != null) {
+                              scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                            }
+                            return;
+                          }
+                        }
+                        cResult[24] = onChoiceSelect;
+                        cResult[25] = fn2;
+                        tmp22 = fn2;
+                      }
+                    }
+                  }
+                }
+                class V {
+                  constructor() {
+                    obj = { command: activeCommand, optionValues, context: null };
+                    obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                    obj4 = { name: option.name, query: closure_5 };
+                    obj1.autocomplete = obj4;
+                    obj.context = obj1;
+                    tmp = closure_11(obj);
+                    current = closure_6.current;
+                    if (current != null) {
+                      scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                    }
+                    return;
+                  }
+                }
+                const items2 = [channel, option.name, activeCommand, optionValues, query];
+                cResult[16] = activeCommand;
+                cResult[17] = channel;
+                cResult[18] = option.name;
+                cResult[19] = optionValues;
+                cResult[20] = query;
+                cResult[21] = V;
+                cResult[22] = items2;
+                tmp20 = items2;
+                tmp19 = V;
+              }
+            }
+          }
+          const items3 = [];
+          if ("" === query) {
+            class Y {
+              constructor(arg0, arg1) {
+                str = "placeholder";
+                if (option.type === closure_1_8.CHOICE) {
+                  str = option.choice.name;
+                }
+                return "" + str + "_" + arg1;
+              }
+            }
+            if (null != autocompleteResults) {
+              class Y {
+                constructor(arg0, arg1) {
+                  str = "placeholder";
+                  if (option.type === closure_1_8.CHOICE) {
+                    str = option.choice.name;
+                  }
+                  return "" + str + "_" + arg1;
+                }
+              }
+              const _Symbol = Symbol;
+              class W {
+                constructor() {
+                  tmp = closure_5;
+                  if ("" !== closure_5) {
+                    tmp3 = null;
+                    if (onChoiceSelect != null) {
+                      obj = { name: null, value: null, displayName: null };
+                      obj.name = tmp;
+                      obj.value = tmp;
+                      obj.displayName = tmp;
+                      tmp2Result = tmp2(obj);
+                    }
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj2 = closure_1(closure_2[15]);
+                    hideActionSheetResult = obj2.hideActionSheet();
+                  }
+                  return;
+                }
+              }
+              if (tmp14 === Symbol.for("react.memo_cache_sentinel")) {
+                class Y {
+                  constructor(arg0, arg1) {
+                    str = "placeholder";
+                    if (option.type === closure_1_8.CHOICE) {
+                      str = option.choice.name;
+                    }
+                    return "" + str + "_" + arg1;
+                  }
+                }
+                class W {
+                  constructor() {
+                    tmp = closure_5;
+                    if ("" !== closure_5) {
+                      tmp3 = null;
+                      if (onChoiceSelect != null) {
+                        obj = { name: null, value: null, displayName: null };
+                        obj.name = tmp;
+                        obj.value = tmp;
+                        obj.displayName = tmp;
+                        tmp2Result = tmp2(obj);
+                      }
+                      tmp5 = closure_1;
+                      tmp6 = closure_2;
+                      obj2 = closure_1(closure_2[15]);
+                      hideActionSheetResult = obj2.hideActionSheet();
+                    }
+                    return;
+                  }
+                }
+              } else {
+                class Y {
+                  constructor(arg0, arg1) {
+                    str = "placeholder";
+                    if (option.type === closure_1_8.CHOICE) {
+                      str = option.choice.name;
+                    }
+                    return "" + str + "_" + arg1;
+                  }
+                }
+              }
+              const mapped = autocompleteResults.map(F);
+              class V {
+                constructor() {
+                  obj = { command: activeCommand, optionValues, context: null };
+                  obj1 = { channel, guild: closure_7.getGuild(channel.guild_id), autocomplete: null };
+                  obj4 = { name: option.name, query: closure_5 };
+                  obj1.autocomplete = obj4;
+                  obj.context = obj1;
+                  tmp = closure_11(obj);
+                  current = closure_6.current;
+                  if (current != null) {
+                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
+                  }
+                  return;
+                }
+              }
+              cResult[13] = autocompleteResults;
+              cResult[14] = mapped;
+            }
+          } else {
+            class Y {
+              constructor(arg0, arg1) {
+                str = "placeholder";
+                if (option.type === closure_1_8.CHOICE) {
+                  str = option.choice.name;
+                }
+                return "" + str + "_" + arg1;
+              }
+            }
+            items3.push(tmp12);
+          }
+          const tmpResult = tmp(channel[14]);
+        }
+      }
+      const fn = function h() {
+        return {
+          autocompleteResults: ApplicationCommandAutocompleteStore.getAutocompleteChoices(
+            channel.id,
+            option.name,
+            first,
+          ),
+          lastErrored: ApplicationCommandAutocompleteStore.getLastErrored(channel.id),
+        };
+      };
+      const items4 = [channel.id, option.name, query];
+      cResult[1] = channel.id;
+      cResult[2] = option.name;
+      cResult[3] = query;
+      cResult[4] = fn;
+      cResult[5] = items4;
+      tmp10 = items4;
+      tmp9 = fn;
+      let obj = option(channel[13]);
+    }
+  : (onDismiss) => {
+      const option = onDismiss.option;
+      ({ initChoice, onChoiceSelect } = onDismiss);
+      const channel = onDismiss.channel;
+      const activeCommand = onDismiss.activeCommand;
+      const optionValues = onDismiss.optionValues;
+      query = undefined;
+      let ref;
+      let autocompleteResults;
+      let lastErrored;
+      let memo;
+      let str;
+      if (initChoice != null) {
+        str = initChoice.name;
+      }
+      if (str == null) {
+        str = "";
+      }
+      const tmp = activeCommand(optionValues.useState(str), 2);
+      query = tmp[0];
+      ref = obj.useRef(null);
+      let items = [ref];
+      let items1 = [channel.id, option.name, query];
+      const stateFromStoresObject = option(channel[14]).useStateFromStoresObject(
+        items,
+        () => ({
+          autocompleteResults: ApplicationCommandAutocompleteStore.getAutocompleteChoices(
+            channel.id,
+            option.name,
+            first,
+          ),
+          lastErrored: ApplicationCommandAutocompleteStore.getLastErrored(channel.id),
+        }),
+        items1,
+      );
+      autocompleteResults = stateFromStoresObject.autocompleteResults;
+      lastErrored = stateFromStoresObject.lastErrored;
+      let items2 = [query, autocompleteResults, lastErrored];
+      memo = obj.useMemo(() => {
+        const items = [];
+        if ("" !== first) {
+          const obj = { type: AutoCompleteResultTypes.LABEL, label: tmp };
+          items.push(obj);
+        }
+        if (null == autocompleteResults) {
+          if (!lastErrored) {
+            const push = items.push;
+            const _Array = Array;
+            const array = new Array(4);
+            const obj2 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
+            const items1 = [];
+            HermesBuiltin.arraySpread(array.fill(obj2), 0);
+            HermesBuiltin.apply(items1, items);
+          }
+          return items;
+        }
+        if (null != autocompleteResults) {
+          const push2 = items.push;
+          const items2 = [];
+          HermesBuiltin.arraySpread(
+            autocompleteResults.map((choice) => ({ type: constants.CHOICE, choice })),
+            0,
+          );
+          HermesBuiltin.apply(items2, items);
+        }
+      }, items2);
+      let tmp12Result = 0 === memo.length && !lastErrored;
+      const items3 = [channel, option.name, activeCommand, optionValues, query];
+      const effect = obj.useEffect(() => {
+        const obj = { command: activeCommand, optionValues, context: null };
+        const obj2 = {
+          channel,
+          guild: GuildStore.getGuild(channel.guild_id),
+          autocomplete: { name: option.name, query },
+        };
+        obj.context = obj2;
+        executeCommand(obj);
+        const current = ref.current;
+        if (current != null) {
+          current.scrollToOffset({ offset: 0, animated: false });
+        }
+      }, items3);
+      const items4 = [onChoiceSelect, memo];
+      const items5 = [onChoiceSelect, query];
+      const callback = obj.useCallback(
+        (item) => options(closure_13, { item: item.item, index: item.index, onChoiceSelect, choices: memo }),
+        items4,
+      );
+      const callback1 = obj.useCallback(() => {
+        if ("" !== first) {
+          if (onChoiceSelect != null) {
+            const obj = { name: first, value: first, displayName: first };
+            tmp2(obj);
+          }
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+        }
+      }, items5);
+      const obj3 = { option, onDismiss: onDismiss.onDismissAutocompleteSheet, children: null };
+      const obj4 = { placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", onSubmitEditing: null };
+      const intl = tmp4(tmp5[16]).intl;
+      obj4.placeholder = intl.string(option(channel[16]).t.Wuie9L);
+      obj4.onChange = tmp[1];
+      obj4.onSubmitEditing = callback1;
+      const items6 = [memo(option(channel[17]).AppLauncherListSearchBar, obj4), , ,];
+      if (tmp12Result) {
+        tmp12Result = tmp12(tmp4(tmp5[17]).AppLauncherListEmptyState, {});
+      }
+      items6[1] = tmp12Result;
+      items6[2] = memo(option(channel[17]).AppLauncherList, {
+        ref,
+        keyExtractor(type, arg1) {
+          let str = "placeholder";
+          if (type.type === lastErrored.CHOICE) {
+            str = type.choice.name;
+          }
+          return "" + str + "_" + arg1;
+        },
+        data: memo,
+        renderItem: callback,
+        scrollEnabled: true,
+      });
+      if (lastErrored) {
+        lastErrored = tmp12(closure_14, {});
+      }
+      items6[3] = lastErrored;
+      obj3.children = items6;
+      return closure_10(option(channel[18]).AppLauncherCommandOptionActionSheet, obj3);
+    };

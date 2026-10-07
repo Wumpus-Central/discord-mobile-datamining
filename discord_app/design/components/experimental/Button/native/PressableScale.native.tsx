@@ -1,41 +1,26 @@
 // discord_app/design/components/experimental/Button/native/PressableScale.native.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import ReanimatedRexport2 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 import ButtonHooks from "../../../Button/native/ButtonHooks.native.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexport = ReanimatedRexport2;
 
+require = fn;
 let closure_2 = ["style", "scaleAmountInPx", "onLayout", "onPressIn", "onPressOut"];
 let closure_3 = ["style"];
 let closure_4 = ["style"];
-const Pressable = react_native.Pressable;
-const jsx = Fragment.jsx;
-let closure_7 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const forwardRef = react.forwardRef;
-const forwardRefResult = forwardRef(
+const jsx = fn(21).jsx;
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/Button/native/PressableScale.native.tsx");
+
+export const PressableScale = noop.forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0, ref) => {
-        let onLayout;
-        let onPressIn;
-        let onPressOut;
-        let scaleAmountInPx;
-        let style;
-        let tmp15;
-        let tmp16;
-        let tmp4;
-        let tmp5;
-        let tmp6;
-        let tmp7;
-        let tmp8;
-        let tmp9;
-        const obj = react2;
-        const cResult = obj.c(18);
+        const cResult = c.c(18);
         if (cResult[0] !== arg0) {
           ({ style, scaleAmountInPx, onLayout, onPressIn, onPressOut } = arg0);
           const tmp12 = _objectWithoutProperties(arg0, closure_2);
@@ -46,12 +31,12 @@ const forwardRefResult = forwardRef(
           cResult[4] = tmp12;
           cResult[5] = style;
           cResult[6] = scaleAmountInPx;
-          tmp9 = scaleAmountInPx;
-          tmp8 = style;
-          tmp7 = tmp12;
-          tmp6 = onPressOut;
-          tmp5 = onPressIn;
-          tmp4 = onLayout;
+          let tmp9 = scaleAmountInPx;
+          let tmp8 = style;
+          let tmp7 = tmp12;
+          let tmp6 = onPressOut;
+          let tmp5 = onPressIn;
+          let tmp4 = onLayout;
         } else {
           tmp4 = cResult[1];
           tmp5 = cResult[2];
@@ -64,41 +49,42 @@ const forwardRefResult = forwardRef(
         if (undefined !== tmp9) {
           num8 = tmp9;
         }
+        const sharedValue = ReanimatedRexport2.useSharedValue(0);
         const tmpResult = ReanimatedRexport2;
-        const sharedValue = tmpResult.useSharedValue(0);
-        const tmpResult2 = ButtonHooks;
-        const buttonPressAnimationProps = tmpResult2.useButtonPressAnimationProps(sharedValue, num8, tmp4, tmp5, tmp6);
+        const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(sharedValue, num8, tmp4, tmp5, tmp6);
         if (cResult[7] !== buttonPressAnimationProps) {
           const style2 = buttonPressAnimationProps.style;
           const tmp19 = _objectWithoutProperties(buttonPressAnimationProps, closure_3);
           cResult[7] = buttonPressAnimationProps;
           cResult[8] = style2;
           cResult[9] = tmp19;
-          tmp16 = tmp19;
-          tmp15 = style2;
+          let tmp16 = tmp19;
+          let tmp15 = style2;
         } else {
           tmp15 = cResult[8];
           tmp16 = cResult[9];
         }
         if (cResult[10] === tmp15) {
-          let tmp20;
           if (cResult[11] === tmp8) {
-            tmp20 = cResult[12];
+            let tmp20 = cResult[12];
           }
           if (cResult[13] === tmp16) {
             if (cResult[14] === tmp7) {
               if (cResult[15] === ref) {
-                let tmp22;
                 if (cResult[16] === tmp20) {
-                  tmp22 = cResult[17];
+                  let tmp22 = cResult[17];
                 }
                 return tmp22;
               }
             }
           }
+          const obj2 = {};
           const merged = Object.assign(tmp16);
           const merged1 = Object.assign(tmp7);
-          const tmp31 = <closure_7 ref={ref} accessibilityRole="button" style={tmp20} />;
+          obj2.ref = ref;
+          obj2.accessibilityRole = "button";
+          obj2.style = tmp20;
+          const tmp31 = <closure_7 />;
           cResult[13] = tmp16;
           cResult[14] = tmp7;
           cResult[15] = ref;
@@ -111,38 +97,33 @@ const forwardRefResult = forwardRef(
         cResult[11] = tmp8;
         cResult[12] = items;
         tmp20 = items;
+        const tmpResult2 = ButtonHooks;
       }
     : (scaleAmountInPx, ref) => {
-        let onPressIn;
-        let onPressOut;
         let num = scaleAmountInPx.scaleAmountInPx;
-        const style = scaleAmountInPx.style;
         if (num === undefined) {
           num = 8;
         }
-        const onLayout = scaleAmountInPx.onLayout;
         ({ onPressIn, onPressOut } = scaleAmountInPx);
         const merged = Object.assign(
           scaleAmountInPx,
           Object.assign({ style: 0, scaleAmountInPx: 0, onLayout: 0, onPressIn: 0, onPressOut: 0 }),
         );
-        const obj = ReanimatedRexport2;
-        const sharedValue = obj.useSharedValue(0);
-        const obj2 = ButtonHooks;
-        const buttonPressAnimationProps = obj2.useButtonPressAnimationProps(
+        const sharedValue = ReanimatedRexport2.useSharedValue(0);
+        const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(
           sharedValue,
           num,
-          onLayout,
+          scaleAmountInPx.onLayout,
           onPressIn,
           onPressOut,
         );
-        const style2 = buttonPressAnimationProps.style;
+        const obj3 = {};
         const merged1 = Object.assign(_objectWithoutProperties(buttonPressAnimationProps, closure_4));
         const merged2 = Object.assign(merged);
-        const items = [style2, style];
-        return <closure_7 ref={ref} accessibilityRole="button" style={items} />;
+        obj3.ref = ref;
+        obj3.accessibilityRole = "button";
+        const items = [buttonPressAnimationProps.style, scaleAmountInPx.style];
+        obj3.style = items;
+        return <closure_7 />;
       },
 );
-const result = size.fileFinishedImporting("design/components/experimental/Button/native/PressableScale.native.tsx");
-
-export const PressableScale = forwardRefResult;

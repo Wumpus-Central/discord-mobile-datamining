@@ -1,52 +1,19 @@
 // discord_app/modules/collectibles/CollectiblesShopStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import size from "../../../_runtime/metro/00002__.js";
-
-let closure_4, closure_6;
 
 const items = [];
-const React2 = items;
-const _false = null;
-const React3 = {};
+let analyticsLocations = items;
+let c3 = null;
+let closure_4 = {};
 let set = new Set();
-const metroRequire = {};
-const Store = get_initializedDefault.Store;
-class CollectiblesShopStore extends Store {
-  getAnalytics() {
-    return { analyticsLocations, analyticsSource };
-  }
-  getLayout(arg0) {
-    let tmp = null;
-    if (null != arg0) {
-      let tmp3 = closure_4[arg0];
-      if (tmp3 == null) {
-        tmp3 = null;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  }
-  isFetchingLayout(c0) {
-    const hasItem = null != c0 && set.has(c0);
-    return hasItem;
-  }
-  getLayoutFetchError(c0) {
-    let tmp = null;
-    if (null != c0) {
-      let tmp3 = closure_6[c0];
-      if (tmp3 == null) {
-        tmp3 = null;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  }
-}
+let closure_6 = {};
+const Store = initializeDefault.Store;
+class CollectiblesShopStore extends Store {}
 const prototype = CollectiblesShopStore.prototype;
 Object.defineProperty(prototype, "analyticsLocations", {
   get: function analyticsLocations() {
-    return analyticsLocations;
+    return closure_2;
   },
   set: undefined,
 });
@@ -62,24 +29,56 @@ Object.defineProperty(prototype, "initialProductSkuId", {
   },
   set: undefined,
 });
+prototype["getAnalytics"] = function getAnalytics() {
+  return { analyticsLocations, analyticsSource };
+};
+prototype["getLayout"] = function getLayout(arg0) {
+  let tmp = null;
+  if (null != arg0) {
+    let tmp3 = closure_4[arg0];
+    if (tmp3 == null) {
+      tmp3 = null;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
+prototype["isFetchingLayout"] = function isFetchingLayout(arg0) {
+  let hasItem = null != arg0;
+  if (hasItem) {
+    hasItem = set.has(arg0);
+  }
+  return hasItem;
+};
+prototype["getLayoutFetchError"] = function getLayoutFetchError(arg0) {
+  let tmp = null;
+  if (null != arg0) {
+    let tmp3 = closure_6[arg0];
+    if (tmp3 == null) {
+      tmp3 = null;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
 CollectiblesShopStore.displayName = "CollectiblesShopStore";
-const obj = {
+const collectiblesShopStore = new CollectiblesShopStore(DispatcherDefault, {
   COLLECTIBLES_SHOP_OPEN: function handleOpen(analyticsLocations) {
     analyticsLocations = analyticsLocations.analyticsLocations;
     if (analyticsLocations == null) {
       analyticsLocations = items;
     }
-    let closure_2 = analyticsLocations;
+    closure_2 = analyticsLocations;
     analyticsSource = analyticsLocations.analyticsSource;
     if (analyticsSource == null) {
       analyticsSource = null;
     }
-    let c3 = analyticsSource;
+    c3 = analyticsSource;
     const initialProductSkuId = analyticsLocations.initialProductSkuId;
   },
   COLLECTIBLES_SHOP_CLOSE: function handleClose() {
-    let closure_2 = items;
-    let c3 = null;
+    closure_2 = items;
+    c3 = null;
     c0 = undefined;
   },
   COLLECTIBLES_PRODUCT_DETAILS_OPEN: function handleProductDetailsOpen(skuId) {
@@ -93,7 +92,7 @@ const obj = {
   COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: function handleShopTabLayoutFetchSuccess(tab) {
     tab = tab.tab;
     closure_4[tab] = tab.layoutId;
-    delete closure_6[tab];
+    delete tmp[tmp2];
     set.delete(tab);
   },
   COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: function handleShopTabLayoutFetchFailure(tab) {
@@ -102,15 +101,15 @@ const obj = {
     set.delete(tab);
   },
   LOGOUT: function handleLogout() {
-    let closure_2 = items;
-    let c3 = null;
+    closure_2 = items;
+    c3 = null;
     c0 = undefined;
     closure_4 = {};
     set = new Set();
     closure_6 = {};
   },
-};
-const collectiblesShopStore = new CollectiblesShopStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopStore.tsx");
 
 export default collectiblesShopStore;

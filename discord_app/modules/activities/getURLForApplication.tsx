@@ -1,17 +1,21 @@
 // discord_app/modules/activities/getURLForApplication.tsx
 import TestModeStore from "../../stores/game_store/TestModeStore.tsx";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 
 export default function getURLForApplication(arg0) {
-  let activityUrlOverride;
-  const state = DeveloperActivityShelfStore.getState();
-  const useActivityUrlOverride =
-    state.useActivityUrlOverride && null != state.activityUrlOverride && "" !== state.activityUrlOverride;
+  state = DeveloperActivityShelfStore.getState();
+  let useActivityUrlOverride = state.useActivityUrlOverride;
   if (useActivityUrlOverride) {
-    activityUrlOverride = DeveloperActivityShelfStore.getState().activityUrlOverride;
+    useActivityUrlOverride = null != state.activityUrlOverride;
+  }
+  if (useActivityUrlOverride) {
+    useActivityUrlOverride = "" !== state.activityUrlOverride;
+  }
+  if (useActivityUrlOverride) {
+    let activityUrlOverride = DeveloperActivityShelfStore.getState().activityUrlOverride;
   } else if (TestModeStore.inTestModeForEmbeddedApplication(arg0)) {
     activityUrlOverride = TestModeStore.testModeOriginURL;
   } else {
@@ -23,8 +27,6 @@ export default function getURLForApplication(arg0) {
         const _window2 = window;
         const _window3 = window;
         const _HermesInternal2 = HermesInternal;
-        const self = this;
-        const self2 = this;
         const uRL = new URL(ACTIVITY_APPLICATION_HOST, "" + window.location.protocol + "//" + window.location.host);
         const _HermesInternal3 = HermesInternal;
         uRL.hostname = "" + arg0 + "." + uRL.hostname;
@@ -45,8 +47,6 @@ export const getNonTestModeUrlForApplication = function getNonTestModeUrlForAppl
     const _window = window;
     const _window2 = window;
     const _HermesInternal2 = HermesInternal;
-    const self = this;
-    const self2 = this;
     const uRL = new URL(ACTIVITY_APPLICATION_HOST, "" + window.location.protocol + "//" + window.location.host);
     const _HermesInternal3 = HermesInternal;
     uRL.hostname = "" + parseCsp + "." + uRL.hostname;
@@ -57,8 +57,13 @@ export const getNonTestModeUrlForApplication = function getNonTestModeUrlForAppl
   }
 };
 export const isUsingDevShelfActivityUrlOverride = function isUsingDevShelfActivityUrlOverride() {
-  const state = DeveloperActivityShelfStore.getState();
-  const useActivityUrlOverride =
-    state.useActivityUrlOverride && null != state.activityUrlOverride && "" !== state.activityUrlOverride;
+  state = DeveloperActivityShelfStore.getState();
+  let useActivityUrlOverride = state.useActivityUrlOverride;
+  if (useActivityUrlOverride) {
+    useActivityUrlOverride = null != state.activityUrlOverride;
+  }
+  if (useActivityUrlOverride) {
+    useActivityUrlOverride = "" !== state.activityUrlOverride;
+  }
   return useActivityUrlOverride;
 };

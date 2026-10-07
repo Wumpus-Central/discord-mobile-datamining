@@ -1,78 +1,47 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import WarningIcon from "../../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import ReadStateConstants from "../../../../read_states/ReadStateConstants.tsx";
 import isRoleRequiredDefault from "../../../../channel/isRoleRequired.tsx";
 import LockIcon from "../../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import RedesignChannelListConstants from "../../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
 import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import GuildRoleSubscriptionGatedChannelIconDefault from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import guild_channels_ChannelTitleDefault from "ChannelTitle.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
-import PlatformUtils_mod from "../../../../../utils/PlatformUtils.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let metroImportDefault;
-let metroRequire;
-let num2;
-let obj2;
-const View = react_native.View;
-const SUBTITLE_OPACITY_NORMAL = RedesignChannelListConstants.SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = ReadStateConstants.UnreadSetting;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-createStyles = createStyles.createStyles;
-let PlatformUtils = PlatformUtils_mod;
+require = fn;
+const View = fn(17).View;
+const UnreadSetting = fn(5078).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let PlatformUtils = fn(1369);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
 }
-let obj = {
+let obj3 = {
   channelContent: { flex: 1, marginTop: num },
   channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 },
   rightBox: { flexDirection: "column", alignItems: "flex-end" },
   rightContentAbsolute: { position: "absolute", right: 0, top: 0 },
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
-  channelTraitIcon: obj2,
+  channelTraitIcon: null,
 };
-obj2 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: num2 };
-PlatformUtils = PlatformUtils_mod;
-num2 = 0;
+let obj4 = { opacity: fn(11711).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+PlatformUtils = fn(1369);
+let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;
 }
-let closure_8 = createStyles(obj);
+obj4.marginTop = num2;
+obj3.channelTraitIcon = obj4;
+let closure_8 = createStyles.createStyles(obj3);
+const ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let channel;
-      let connected;
-      let isSubscriptionGated;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let items7;
-      let lastMessageTimestampString;
-      let layout;
-      let locked;
-      let mentionBadge;
-      let mentionCount;
-      let muted;
-      let name;
-      let needSubscriptionToAccess;
-      let resolvedUnreadSetting;
-      let subtitle;
-      let tmp5;
-      let unread;
-      const obj = react2;
-      const cResult = obj.c(69);
+      const cResult = c.c(69);
       ({
         name,
         subtitle,
@@ -91,21 +60,17 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       } = arg0);
       const tmp4 = closure_8();
       if (cResult[0] !== layout) {
-        const tmpResult = ChannelListLayout;
-        const layoutStyles = tmpResult.getLayoutStyles(layout);
+        const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
         cResult[0] = layout;
         cResult[1] = layoutStyles;
-        tmp5 = layoutStyles;
+        let tmp5 = layoutStyles;
+        const tmpResult = ChannelListLayout;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === channel) {
-        let tmp7;
-        let tmp11;
-        let tmp15;
-        let tmp21;
         if (cResult[3] === locked) {
-          tmp7 = cResult[4];
+          let tmp7 = cResult[4];
         }
         if (cResult[5] !== channel) {
           let isNSFWResult;
@@ -114,17 +79,25 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[5] = channel;
           cResult[6] = isNSFWResult;
-          tmp11 = isNSFWResult;
+          let tmp11 = isNSFWResult;
         } else {
           tmp11 = cResult[6];
         }
+        let tmp14 = tmp7;
+        if (!tmp7) {
+          tmp14 = tmp11;
+        }
         if (cResult[7] !== subtitle) {
-          const isValidElementResult = react.isValidElement(subtitle);
+          const isValidElementResult = noop.isValidElement(subtitle);
           cResult[7] = subtitle;
           cResult[8] = isValidElementResult;
-          tmp15 = isValidElementResult;
+          let tmp15 = isValidElementResult;
         } else {
           tmp15 = cResult[8];
+        }
+        let tmp20 = tmp19;
+        if (null != lastMessageTimestampString) {
+          tmp20 = null == mentionBadge;
         }
         let str = "center";
         if (tmp15) {
@@ -134,25 +107,23 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { justifyContent: str };
           cResult[9] = str;
           cResult[10] = obj2;
-          tmp21 = obj2;
+          let tmp21 = obj2;
         } else {
           tmp21 = cResult[10];
         }
         if (cResult[11] === tmp4.leftBox) {
-          let tmp22;
-          let tmp23;
           if (cResult[12] === tmp21) {
-            tmp22 = cResult[13];
+            let tmp22 = cResult[13];
           }
           let num13 = 0;
-          if (null != lastMessageTimestampString && null == mentionBadge) {
+          if (tmp20) {
             num13 = 30;
           }
           if (cResult[14] !== num13) {
             const obj3 = { flexDirection: "row", paddingRight: num13, alignItems: "center" };
             cResult[14] = num13;
             cResult[15] = obj3;
-            tmp23 = obj3;
+            let tmp23 = obj3;
           } else {
             tmp23 = cResult[15];
           }
@@ -164,64 +135,55 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[18] === muted) {
                 if (cResult[19] === name) {
                   if (cResult[20] === resolvedUnreadSetting) {
-                    let tmp25;
                     if (cResult[21] === unread) {
-                      tmp25 = cResult[22];
+                      let tmp25 = cResult[22];
                     }
-                    if (cResult[23] === (tmp7 || tmp11)) {
+                    if (cResult[23] === tmp14) {
                       if (cResult[24] === isSubscriptionGated) {
                         if (cResult[25] === needSubscriptionToAccess) {
                           if (cResult[26] === tmp7) {
                             if (cResult[27] === tmp11) {
                               if (cResult[28] === tmp4.channelTraitIcon) {
-                                let tmp29;
                                 if (cResult[29] === tmp4.channelTraits) {
-                                  tmp29 = cResult[30];
+                                  let tmp29 = cResult[30];
                                 }
                                 if (cResult[31] === tmp25) {
                                   if (cResult[32] === tmp29) {
-                                    let tmp40;
                                     if (cResult[33] === tmp23) {
-                                      tmp40 = cResult[34];
+                                      let tmp40 = cResult[34];
                                     }
                                     if (cResult[35] === tmp5) {
                                       if (cResult[36] === mentionCount) {
                                         if (cResult[37] === tmp15) {
-                                          let tmp44;
                                           if (cResult[38] === subtitle) {
-                                            tmp44 = cResult[39];
+                                            let tmp44 = cResult[39];
                                           }
                                           if (cResult[40] === tmp40) {
                                             if (cResult[41] === tmp44) {
-                                              let tmp48;
                                               if (cResult[42] === tmp22) {
-                                                tmp48 = cResult[43];
+                                                let tmp48 = cResult[43];
                                               }
-                                              const tmp52 =
-                                                null != lastMessageTimestampString && null == mentionBadge
-                                                  ? tmp4.rightContentAbsolute
-                                                  : tmp4.rightBox;
+                                              const tmp52 = tmp20 ? tmp4.rightContentAbsolute : tmp4.rightBox;
                                               if (cResult[44] === lastMessageTimestampString) {
-                                                let tmp53;
-                                                let tmp57;
-                                                let tmp58;
-                                                let tmp60;
-                                                if ((cResult[45] === null) != lastMessageTimestampString) {
-                                                  tmp53 = cResult[46];
+                                                if (cResult[45] === tmp19) {
+                                                  let tmp53 = cResult[46];
                                                 }
                                                 const _Symbol = Symbol;
                                                 if (cResult[47] === Symbol.for("react.memo_cache_sentinel")) {
                                                   const obj4 = { alignItems: "center", paddingLeft: 4 };
                                                   cResult[47] = obj4;
-                                                  tmp57 = obj4;
+                                                  let tmp57 = obj4;
                                                 } else {
                                                   tmp57 = cResult[47];
                                                 }
-                                                if (cResult[48] !== (null != lastMessageTimestampString)) {
-                                                  const tmp59 = null != lastMessageTimestampString && { marginTop: 5 };
-                                                  cResult[48] = null != lastMessageTimestampString;
-                                                  cResult[49] = tmp59;
-                                                  tmp58 = tmp59;
+                                                if (cResult[48] !== tmp19) {
+                                                  let obj5 = tmp19;
+                                                  if (tmp19) {
+                                                    obj5 = { marginTop: 5 };
+                                                  }
+                                                  cResult[48] = tmp19;
+                                                  cResult[49] = obj5;
+                                                  let tmp58 = obj5;
                                                 } else {
                                                   tmp58 = cResult[49];
                                                 }
@@ -229,111 +191,105 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                                                   const items = [tmp57, tmp58];
                                                   cResult[50] = tmp58;
                                                   cResult[51] = items;
-                                                  tmp60 = items;
+                                                  let tmp59 = items;
                                                 } else {
-                                                  tmp60 = cResult[51];
+                                                  tmp59 = cResult[51];
                                                 }
                                                 if (cResult[52] === mentionBadge) {
-                                                  let tmp61;
-                                                  let tmp65;
-                                                  if (cResult[53] === tmp60) {
-                                                    tmp61 = cResult[54];
+                                                  if (cResult[53] === tmp59) {
+                                                    let tmp60 = cResult[54];
                                                   }
-                                                  if (
-                                                    cResult[55] !==
-                                                    (null != lastMessageTimestampString && null == mentionBadge)
-                                                  ) {
-                                                    let tmp66 = tmp20;
-                                                    if (tmp66) {
-                                                      const obj5 = { style: { flex: 1 } };
-                                                      tmp66 = metroRequire(View, obj5);
+                                                  if (cResult[55] !== tmp20) {
+                                                    let tmp65 = tmp20;
+                                                    if (tmp20) {
+                                                      const obj6 = { style: { flex: 1 } };
+                                                      tmp65 = timestampProducer(View, obj6);
                                                     }
-                                                    cResult[55] =
-                                                      null != lastMessageTimestampString && null == mentionBadge;
-                                                    cResult[56] = tmp66;
-                                                    tmp65 = tmp66;
+                                                    cResult[55] = tmp20;
+                                                    cResult[56] = tmp65;
+                                                    let tmp64 = tmp65;
                                                   } else {
-                                                    tmp65 = cResult[56];
+                                                    tmp64 = cResult[56];
                                                   }
                                                   if (cResult[57] === tmp52) {
                                                     if (cResult[58] === tmp53) {
-                                                      if (cResult[59] === tmp61) {
-                                                        let tmp69;
-                                                        if (cResult[60] === tmp65) {
-                                                          tmp69 = cResult[61];
+                                                      if (cResult[59] === tmp60) {
+                                                        if (cResult[60] === tmp64) {
+                                                          let tmp68 = cResult[61];
                                                         }
                                                         if (cResult[62] === tmp4.channelContainer) {
                                                           if (cResult[63] === tmp48) {
-                                                            let tmp73;
-                                                            if (cResult[64] === tmp69) {
-                                                              tmp73 = cResult[65];
+                                                            if (cResult[64] === tmp68) {
+                                                              let tmp72 = cResult[65];
                                                             }
                                                             if (cResult[66] === tmp4.channelContent) {
-                                                              let tmp77;
-                                                              if (cResult[67] === tmp73) {
-                                                                tmp77 = cResult[68];
+                                                              if (cResult[67] === tmp72) {
+                                                                let tmp76 = cResult[68];
                                                               }
-                                                              return tmp77;
+                                                              return tmp76;
                                                             }
-                                                            const obj6 = {
+                                                            const obj7 = {
                                                               style: tmp4.channelContent,
-                                                              children: tmp73,
+                                                              children: tmp72,
                                                             };
-                                                            const tmp80 = metroRequire(View, obj6);
+                                                            const tmp79 = timestampProducer(View, obj7);
                                                             cResult[66] = tmp4.channelContent;
-                                                            cResult[67] = tmp73;
-                                                            cResult[68] = tmp80;
-                                                            tmp77 = tmp80;
+                                                            cResult[67] = tmp72;
+                                                            cResult[68] = tmp79;
+                                                            tmp76 = tmp79;
                                                           }
                                                         }
-                                                        const obj7 = { style: tmp4.channelContainer, children: items1 };
-                                                        items1 = [tmp48, tmp69];
-                                                        const tmp76 = metroImportDefault(View, obj7);
+                                                        const obj8 = { style: tmp4.channelContainer, children: null };
+                                                        const items1 = [tmp48, tmp68];
+                                                        obj8.children = items1;
+                                                        const tmp75 = React5(View, obj8);
                                                         cResult[62] = tmp4.channelContainer;
                                                         cResult[63] = tmp48;
-                                                        cResult[64] = tmp69;
-                                                        cResult[65] = tmp76;
-                                                        tmp73 = tmp76;
+                                                        cResult[64] = tmp68;
+                                                        cResult[65] = tmp75;
+                                                        tmp72 = tmp75;
                                                       }
                                                     }
                                                   }
-                                                  const obj8 = { style: tmp52, children: items2 };
-                                                  items2 = [tmp53, tmp61, tmp65];
-                                                  const tmp72 = metroImportDefault(View, obj8);
+                                                  const obj9 = { style: tmp52, children: null };
+                                                  const items2 = [tmp53, tmp60, tmp64];
+                                                  obj9.children = items2;
+                                                  const tmp71 = React5(View, obj9);
                                                   cResult[57] = tmp52;
                                                   cResult[58] = tmp53;
-                                                  cResult[59] = tmp61;
-                                                  cResult[60] = tmp65;
-                                                  cResult[61] = tmp72;
-                                                  tmp69 = tmp72;
+                                                  cResult[59] = tmp60;
+                                                  cResult[60] = tmp64;
+                                                  cResult[61] = tmp71;
+                                                  tmp68 = tmp71;
                                                 }
-                                                const obj9 = { style: tmp60, children: mentionBadge };
-                                                const tmp64 = metroRequire(View, obj9);
+                                                const obj10 = { style: tmp59, children: mentionBadge };
+                                                const tmp63 = timestampProducer(View, obj10);
                                                 cResult[52] = mentionBadge;
-                                                cResult[53] = tmp60;
-                                                cResult[54] = tmp64;
-                                                tmp61 = tmp64;
+                                                cResult[53] = tmp59;
+                                                cResult[54] = tmp63;
+                                                tmp60 = tmp63;
                                               }
                                               let tmp54 = tmp19;
-                                              if (tmp54) {
-                                                const obj10 = {
+                                              if (tmp19) {
+                                                const obj11 = {
                                                   variant: "text-xs/medium",
                                                   color: "text-muted",
                                                   style: { marginLeft: "auto" },
                                                   maxFontSizeMultiplier: 1.75,
                                                   children: lastMessageTimestampString,
                                                 };
-                                                tmp54 = metroRequire(Text_Text.Text, obj10);
+                                                tmp54 = timestampProducer(Text_Text.Text, obj11);
                                               }
                                               cResult[44] = lastMessageTimestampString;
-                                              cResult[45] = null != lastMessageTimestampString;
+                                              cResult[45] = tmp19;
                                               cResult[46] = tmp54;
                                               tmp53 = tmp54;
                                             }
                                           }
-                                          const obj11 = { style: tmp22, children: items3 };
-                                          items3 = [tmp40, tmp44];
-                                          const tmp51 = metroImportDefault(View, obj11);
+                                          const obj12 = { style: tmp22, children: null };
+                                          const items3 = [tmp40, tmp44];
+                                          obj12.children = items3;
+                                          const tmp51 = React5(View, obj12);
                                           cResult[40] = tmp40;
                                           cResult[41] = tmp44;
                                           cResult[42] = tmp22;
@@ -352,12 +308,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                                       if (num38 > 0) {
                                         num39 = 20;
                                       }
-                                      const obj12 = { style: items4, children: subtitle };
-                                      items4 = [{ paddingRight: num39 }];
-                                      const obj13 = { paddingRight: num39 };
-                                      const obj14 = { marginTop: tmp5.messagePreview.margin.marginTop };
-                                      items4[1] = obj14;
-                                      tmp46Result = metroRequire(View, obj12);
+                                      const obj13 = { style: null, children: null };
+                                      const obj14 = { paddingRight: num39 };
+                                      const items4 = [obj14];
+                                      const obj15 = { marginTop: tmp5.messagePreview.margin.marginTop };
+                                      items4[1] = obj15;
+                                      obj13.style = items4;
+                                      obj13.children = subtitle;
+                                      tmp46Result = timestampProducer(View, obj13);
                                     }
                                     cResult[35] = tmp5;
                                     cResult[36] = mentionCount;
@@ -367,9 +325,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                                     tmp44 = tmp46Result;
                                   }
                                 }
-                                const obj15 = { style: tmp23, children: items5 };
-                                items5 = [tmp25, tmp29];
-                                const tmp43 = metroImportDefault(View, obj15);
+                                const obj16 = { style: tmp23, children: null };
+                                const items5 = [tmp25, tmp29];
+                                obj16.children = items5;
+                                const tmp43 = React5(View, obj16);
                                 cResult[31] = tmp25;
                                 cResult[32] = tmp29;
                                 cResult[33] = tmp23;
@@ -382,7 +341,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     let tmp31Result = tmp14;
-                    if (tmp31Result) {
+                    if (tmp14) {
                       const items6 = [tmp4.channelTraits];
                       let num24 = 1;
                       if (tmp7) {
@@ -391,30 +350,32 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                           num24 = 2;
                         }
                       }
-                      const obj16 = { style: items6, children: items7 };
-                      const obj17 = { maxWidth: 14 * num24 };
-                      items6[1] = obj17;
+                      const obj17 = { style: null, children: null };
+                      const obj18 = { maxWidth: 14 * num24 };
+                      items6[1] = obj18;
+                      obj17.style = items6;
                       let tmp33 = tmp7;
-                      if (tmp33) {
-                        const obj18 = { size: "xxs", color: "icon-muted", style: tmp4.channelTraitIcon };
-                        tmp33 = metroRequire(LockIcon.LockIcon, obj18);
-                      }
-                      items7 = [tmp33, ,];
-                      let tmp35 = tmp11;
-                      if (tmp35) {
+                      if (tmp7) {
                         const obj19 = { size: "xxs", color: "icon-muted", style: tmp4.channelTraitIcon };
-                        tmp35 = metroRequire(WarningIcon.WarningIcon, obj19);
+                        tmp33 = timestampProducer(LockIcon.LockIcon, obj19);
+                      }
+                      const items7 = [tmp33, ,];
+                      let tmp35 = tmp11;
+                      if (tmp11) {
+                        const obj20 = { size: "xxs", color: "icon-muted", style: tmp4.channelTraitIcon };
+                        tmp35 = timestampProducer(WarningIcon.WarningIcon, obj20);
                       }
                       items7[1] = tmp35;
                       let tmp37 = isSubscriptionGated;
-                      if (tmp37) {
-                        const obj20 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
-                        tmp37 = metroRequire(GuildRoleSubscriptionGatedChannelIconDefault, obj20);
+                      if (isSubscriptionGated) {
+                        const obj21 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
+                        tmp37 = timestampProducer(GuildRoleSubscriptionGatedChannelIconDefault, obj21);
                       }
                       items7[2] = tmp37;
-                      tmp31Result = metroImportDefault(View, obj16);
+                      obj17.children = items7;
+                      tmp31Result = React5(View, obj17);
                     }
-                    cResult[23] = tmp7 || tmp11;
+                    cResult[23] = tmp14;
                     cResult[24] = isSubscriptionGated;
                     cResult[25] = needSubscriptionToAccess;
                     cResult[26] = tmp7;
@@ -428,8 +389,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj21 = { title: name, muted, unread, resolvedUnreadSetting, connected, layout };
-          const tmp28 = metroRequire(guild_channels_ChannelTitleDefault, obj21);
+          const obj22 = { title: name, muted, unread, resolvedUnreadSetting, connected, layout };
+          const tmp28 = timestampProducer(guild_channels_ChannelTitleDefault, obj22);
           cResult[16] = connected;
           cResult[17] = layout;
           cResult[18] = muted;
@@ -447,8 +408,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp8 = null != channel;
       if (tmp8) {
-        tmp8 = locked || isRoleRequiredDefault(channel);
-        const tmp9 = locked || isRoleRequiredDefault(channel);
+        let tmp9 = locked;
+        if (!locked) {
+          tmp9 = isRoleRequiredDefault(channel);
+        }
+        tmp8 = tmp9;
       }
       cResult[2] = channel;
       cResult[3] = locked;
@@ -456,27 +420,6 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
     }
   : (arg0) => {
-      let channel;
-      let connected;
-      let isSubscriptionGated;
-      let items1;
-      let items3;
-      let items4;
-      let items5;
-      let items6;
-      let items7;
-      let lastMessageTimestampString;
-      let layout;
-      let locked;
-      let mentionBadge;
-      let mentionCount;
-      let muted;
-      let name;
-      let needSubscriptionToAccess;
-      let obj3;
-      let resolvedUnreadSetting;
-      let subtitle;
-      let unread;
       ({
         subtitle,
         resolvedUnreadSetting,
@@ -491,42 +434,48 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       ({ name, unread, muted, connected, needSubscriptionToAccess } = arg0);
       const tmp = closure_8();
       let tmp10Result = null != channel;
-      const obj = ChannelListLayout;
-      const layoutStyles = obj.getLayoutStyles(layout);
+      const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
       if (tmp10Result) {
         if (!locked) {
           locked = isRoleRequiredDefault(channel);
         }
         tmp10Result = locked;
       }
-      let isNSFWResult;
       if (channel != null) {
-        isNSFWResult = channel.isNSFW();
+        let isNSFWResult = channel.isNSFW();
       }
-      const isValidElementResult = react.isValidElement(subtitle);
+      const isValidElementResult = noop.isValidElement(subtitle);
       let obj17 = null != lastMessageTimestampString;
-      let tmp10Result6 = obj17 && null == mentionBadge;
-      const obj2 = { style: tmp.channelContent, children: metroImportDefault(View, obj3) };
+      let tmp10Result6 = obj17;
+      if (obj17) {
+        tmp10Result6 = null == mentionBadge;
+      }
+      const obj2 = { style: tmp.channelContent, children: null };
+      const obj3 = { style: tmp.channelContainer, children: null };
       const items = [tmp.leftBox];
       let str = "center";
-      obj3 = { style: tmp.channelContainer, children: items6 };
       if (isValidElementResult) {
         str = "space-between";
       }
-      const obj4 = { style: items, children: items4 };
+      const obj4 = { style: items, children: null };
       items[1] = { justifyContent: str };
       let num = 0;
       if (tmp10Result6) {
         num = 30;
       }
-      const obj5 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: items1 };
-      const obj6 = { title: name, muted, unread, resolvedUnreadSetting, connected, layout };
-      const tmp14 = guild_channels_ChannelTitleDefault;
+      const obj5 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
+      const obj6 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null, layout: null };
       if (resolvedUnreadSetting == null) {
         resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
       }
-      items1 = [metroRequire(tmp14, obj6)];
-      let tmp12Result = tmp10Result || isNSFWResult;
+      obj6.resolvedUnreadSetting = resolvedUnreadSetting;
+      obj6.connected = connected;
+      obj6.layout = layout;
+      const items1 = [timestampProducer(guild_channels_ChannelTitleDefault, obj6)];
+      let tmp12Result = tmp10Result;
+      if (!tmp10Result) {
+        tmp12Result = isNSFWResult;
+      }
       if (tmp12Result) {
         const items2 = [tmp.channelTraits];
         let num3 = 1;
@@ -536,28 +485,31 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             num3 = 2;
           }
         }
-        const obj7 = { style: items2, children: items3 };
+        const obj7 = { style: null, children: null };
         const obj8 = { maxWidth: 14 * num3 };
         items2[1] = obj8;
+        obj7.style = items2;
         if (tmp10Result) {
           const obj9 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
-          tmp10Result = metroRequire(LockIcon.LockIcon, obj9);
+          tmp10Result = timestampProducer(LockIcon.LockIcon, obj9);
         }
-        items3 = [tmp10Result, ,];
+        const items3 = [tmp10Result, ,];
         if (isNSFWResult) {
           const obj10 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
-          isNSFWResult = metroRequire(WarningIcon.WarningIcon, obj10);
+          isNSFWResult = timestampProducer(WarningIcon.WarningIcon, obj10);
         }
         items3[1] = isNSFWResult;
         if (isSubscriptionGated) {
           const obj11 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
-          isSubscriptionGated = metroRequire(GuildRoleSubscriptionGatedChannelIconDefault, obj11);
+          isSubscriptionGated = timestampProducer(GuildRoleSubscriptionGatedChannelIconDefault, obj11);
         }
         items3[2] = isSubscriptionGated;
-        tmp12Result = metroImportDefault(View, obj7);
+        obj7.children = items3;
+        tmp12Result = React5(View, obj7);
       }
       items1[1] = tmp12Result;
-      items4 = [metroImportDefault(View, obj5)];
+      obj5.children = items1;
+      const items4 = [React5(View, obj5)];
       let tmp10Result4 = null;
       if (isValidElementResult) {
         if (mentionCount == null) {
@@ -567,18 +519,21 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (mentionCount > 0) {
           num5 = 20;
         }
-        const obj12 = { style: items5, children: subtitle };
-        items5 = [{ paddingRight: num5 }];
+        const obj12 = { style: null, children: null };
         const obj13 = { paddingRight: num5 };
+        const items5 = [obj13];
         const obj14 = { marginTop: layoutStyles.messagePreview.margin.marginTop };
         items5[1] = obj14;
-        tmp10Result4 = metroRequire(View, obj12);
+        obj12.style = items5;
+        obj12.children = subtitle;
+        tmp10Result4 = timestampProducer(View, obj12);
       }
       items4[1] = tmp10Result4;
-      items6 = [metroImportDefault(View, obj4)];
+      obj4.children = items4;
+      const items6 = [React5(View, obj4)];
+      const obj15 = { style: tmp10Result6 ? tmp.rightContentAbsolute : tmp.rightBox, children: null };
       let tmp10Result5 = obj17;
-      const obj15 = { style: tmp10Result6 ? tmp.rightContentAbsolute : tmp.rightBox, children: items7 };
-      if (tmp10Result5) {
+      if (obj17) {
         const obj16 = {
           variant: "text-xs/medium",
           color: "text-muted",
@@ -586,29 +541,32 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           maxFontSizeMultiplier: 1.75,
           children: lastMessageTimestampString,
         };
-        tmp10Result5 = metroRequire(Text_Text.Text, obj16);
+        tmp10Result5 = timestampProducer(Text_Text.Text, obj16);
       }
-      items7 = [tmp10Result5, ,];
+      const items7 = [tmp10Result5, ,];
       const items8 = [{ alignItems: "center", paddingLeft: 4 }];
       if (obj17) {
         obj17 = { marginTop: 5 };
       }
       items8[1] = obj17;
-      items7[1] = metroRequire(View, { style: items8, children: mentionBadge });
+      items7[1] = timestampProducer(View, { style: items8, children: mentionBadge });
       if (tmp10Result6) {
         const obj18 = { style: { flex: 1 } };
-        tmp10Result6 = metroRequire(View, obj18);
+        tmp10Result6 = timestampProducer(View, obj18);
       }
       items7[2] = tmp10Result6;
-      items6[1] = metroImportDefault(View, obj15);
-      return metroRequire(View, obj2);
+      obj15.children = items7;
+      items6[1] = React5(View, obj15);
+      obj3.children = items6;
+      obj2.children = React5(View, obj3);
+      return timestampProducer(View, obj2);
     };
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx",
 );
 
 export const renderChannelContent = function renderChannelContent(arg0) {
-  const obj = {};
   const merged = Object.assign(arg0);
-  return metroRequire(closure_9, obj);
+  return timestampProducer(closure_9, {});
 };

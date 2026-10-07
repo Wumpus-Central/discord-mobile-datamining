@@ -1,32 +1,26 @@
 // discord_app/modules/threads/native/components/redesign/ThreadList.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
-import intl5 from "../../../../../intl/index.native.tsx";
+import c from "../../../../../../_runtime/00576_c.js";
+import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import TableRow2 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import defaultMVCPConfig from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import _mod8404 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import RowButton from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
 import ThreadPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ThreadListTableRowDefault from "ThreadListTableRow.tsx";
+import ThreadListEmptyDefault from "ThreadListEmpty.tsx";
 import ThreadListLoadingIndicatorDefault from "ThreadListLoadingIndicator.tsx";
-import react_mod from "../../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let onCreateThreadPress, onEndReached;
-
-let closure_4;
-let hasOwnProperty;
+require = fn;
 function renderItem(item) {
   item = item.item;
   const type = item.type;
   if ("section" === type) {
+    const obj2 = { title: item.title };
     return <closure_9 title={item.title} />;
   } else if ("thread" === type) {
     const obj = { threadId: null, onPress: null, start: null, end: null };
@@ -45,9 +39,10 @@ function keyExtractor(type) {
 function getThreadListStateKey(arg0) {
   return arg0;
 }
-let react = react_mod;
-({ StyleSheet: closure_4, View: hasOwnProperty } = react_native);
-const jsx = Fragment.jsx;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, flexGrow: 1 },
   center: { justifyContent: "center", alignItems: "center" },
@@ -55,32 +50,28 @@ let closure_7 = createStyles.createStyles({
   footer: { marginVertical: 16, justifyContent: "center", alignItems: "center" },
   section: { marginTop: 16, marginBottom: 8 },
 });
-let set = new Set();
-let ReactCompilerGating = ReactCompilerGating_mod;
+const set = new Set();
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (title) => {
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(5);
+      const cResult = c.c(5);
       const tmp4 = closure_7();
-      const section = tmp4.section;
       if (cResult[0] !== title.title) {
         const formatted = str.toUpperCase();
-        cResult[0] = title.title;
+        cResult[0] = str;
         cResult[1] = formatted;
-        tmp5 = formatted;
+        let tmp5 = formatted;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp4.section) {
-        let tmp7;
         if (cResult[3] === tmp5) {
-          tmp7 = cResult[4];
+          let tmp7 = cResult[4];
         }
         return tmp7;
       }
       const tmp8 = jsx(Text_Text.Text, {
-        style: section,
+        style: tmp4.section,
         accessibilityRole: "header",
         variant: "text-xs/bold",
         color: "text-default",
@@ -92,13 +83,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
     }
   : (title) => {
-      const str = title.title;
-      const Text = Text_Text.Text;
-      return (
-        <Text style={closure_7().section} accessibilityRole="header" variant="text-xs/bold" color="text-default">
-          {str.toUpperCase()}
-        </Text>
-      );
+      const tmp = closure_7();
+      return jsx(Text_Text.Text, {
+        style: closure_7().section,
+        accessibilityRole: "header",
+        variant: "text-xs/bold",
+        color: "text-default",
+        children: title.title.toUpperCase(),
+      });
     };
 let __initData = {
   code: 'function ThreadListTsx1(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,"respect-motion-settings",function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}',
@@ -112,216 +104,204 @@ __initData = {
 let closure_15 = {
   code: "function ThreadListTsx4(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (state) => {
-      let cleanUp;
-      let contentContainerStyle;
-      let sharedValue;
-      let obj = cleanUp(sharedValue[5]);
-      const cResult = obj.c(12);
+      const cResult = cleanUp(sharedValue[5]).c(12);
       ({ contentContainerStyle, cleanUp } = state);
       state = state.state;
       const children = state.children;
-      const useSharedValue = cleanUp(sharedValue[8]).useSharedValue;
+      let obj = cleanUp(sharedValue[5]);
       let num = 0;
-      cleanUp(sharedValue[8]);
       if (state === cleanUp(sharedValue[9]).TransitionStates.MOUNTED) {
         num = 1;
       }
-      sharedValue = useSharedValue(num);
+      sharedValue = cleanUp(sharedValue[8]).useSharedValue(num);
+      let obj2 = cleanUp(sharedValue[8]);
       let fn = function c() {
-        let fn;
-        let springStandard;
-        let value;
-        let withSpring;
-        let obj = { opacity: withSpring(value, springStandard, "respect-motion-settings", fn) };
-        let tmp = spring;
-        withSpring = tmp.withSpring;
+        let obj = { opacity: null };
         value = sharedValue.get();
-        fn = function t(arg0) {
-          const tmp = arg0 && state === cleanUp(sharedValue[9]).TransitionStates.YEETED;
+        const fn = function t(arg0) {
+          let tmp = arg0;
+          if (arg0) {
+            tmp = state === cleanUp(sharedValue[9]).TransitionStates.YEETED;
+          }
           if (tmp) {
+            cleanUp(sharedValue[8]).runOnJS(closure_1_0)();
             const obj = cleanUp(sharedValue[8]);
-            obj.runOnJS(closure_1_0)();
           }
         };
-        const obj2 = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-        springStandard = springPresets.springStandard;
-        fn.__closure = obj2;
+        const obj2 = spring;
+        fn.__closure = {
+          state,
+          TransitionStates: native.TransitionStates,
+          runOnJS: ReanimatedRexport.runOnJS,
+          cleanUp,
+        };
         fn.__workletHash = 2519144051135;
         fn.__initData = __initData;
+        obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
         return obj;
       };
       const tmpResult = cleanUp(sharedValue[8]);
-      let obj2 = {
-        withSpring: cleanUp(tmp2[10]).withSpring,
+      fn.__closure = {
+        withSpring: cleanUp(sharedValue[10]).withSpring,
         opacity: sharedValue,
-        springStandard: cleanUp(tmp2[11]).springStandard,
+        springStandard: cleanUp(sharedValue[11]).springStandard,
         state,
-        TransitionStates: cleanUp(tmp2[9]).TransitionStates,
-        runOnJS: cleanUp(tmp2[8]).runOnJS,
+        TransitionStates: cleanUp(sharedValue[9]).TransitionStates,
+        runOnJS: cleanUp(sharedValue[8]).runOnJS,
         cleanUp,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 14452694677256;
       fn.__initData = __initData;
       const animatedStyle = tmpResult.useAnimatedStyle(fn);
       if (cResult[0] === sharedValue) {
-        let tmp7;
-        let tmp8;
-        let tmp11;
         if (cResult[1] === state) {
-          tmp7 = cResult[2];
-          tmp8 = cResult[3];
+          let tmp6 = cResult[2];
+          let tmp7 = cResult[3];
         }
-        const effect = react.useEffect(tmp7, tmp8);
+        const effect = noop.useEffect(tmp6, tmp7);
         if (cResult[4] !== animatedStyle) {
           const items = [closure_4.absoluteFill, animatedStyle];
           cResult[4] = animatedStyle;
           cResult[5] = items;
-          tmp11 = items;
+          let tmp10 = items;
         } else {
-          tmp11 = cResult[5];
+          tmp10 = cResult[5];
         }
         if (cResult[6] === children) {
-          let tmp13;
           if (cResult[7] === contentContainerStyle) {
-            tmp13 = cResult[8];
+            let tmp12 = cResult[8];
           }
-          if (cResult[9] === tmp11) {
-            let tmp17;
-            if (cResult[10] === tmp13) {
-              tmp17 = cResult[11];
+          if (cResult[9] === tmp10) {
+            if (cResult[10] === tmp12) {
+              let tmp16 = cResult[11];
             }
-            return tmp17;
+            return tmp16;
           }
-          const tmp20 = jsx(state(sharedValue[8]).View, { style: tmp11, children: tmp13 });
-          cResult[9] = tmp11;
-          cResult[10] = tmp13;
-          cResult[11] = tmp20;
-          tmp17 = tmp20;
+          const obj4 = { style: tmp10, children: tmp12 };
+          const tmp19 = jsx(state(tmp2[8]).View, { style: tmp10, children: tmp12 });
+          cResult[9] = tmp10;
+          cResult[10] = tmp12;
+          cResult[11] = tmp19;
+          tmp16 = tmp19;
         }
-        const tmp16 = <closure_5 style={contentContainerStyle}>{children}</closure_5>;
+        const obj5 = { style: contentContainerStyle, children };
+        const tmp15 = <closure_5 style={contentContainerStyle}>{children}</closure_5>;
         cResult[6] = children;
         cResult[7] = contentContainerStyle;
-        cResult[8] = tmp16;
-        tmp13 = tmp16;
+        cResult[8] = tmp15;
+        tmp12 = tmp15;
       }
       const fn2 = function l() {
         let num = 1;
-        set = sharedValue.set;
         if (state === native.TransitionStates.YEETED) {
           num = 0;
         }
-        const result = set(num);
+        const result = sharedValue.set(num);
       };
       const items1 = [sharedValue, state];
       cResult[0] = sharedValue;
       cResult[1] = state;
       cResult[2] = fn2;
       cResult[3] = items1;
-      tmp8 = items1;
-      tmp7 = fn2;
+      tmp7 = items1;
+      tmp6 = fn2;
+      const obj3 = {
+        withSpring: cleanUp(sharedValue[10]).withSpring,
+        opacity: sharedValue,
+        springStandard: cleanUp(sharedValue[11]).springStandard,
+        state,
+        TransitionStates: cleanUp(sharedValue[9]).TransitionStates,
+        runOnJS: cleanUp(sharedValue[8]).runOnJS,
+        cleanUp,
+      };
     }
   : (cleanUp) => {
-      let children;
-      let contentContainerStyle;
       cleanUp = cleanUp.cleanUp;
-      const state = cleanUp.state;
+      state = cleanUp.state;
       let sharedValue;
-      let tmp = cleanUp;
       ({ contentContainerStyle, children } = cleanUp);
-      const useSharedValue = cleanUp(sharedValue[8]).useSharedValue;
       let num = 0;
-      cleanUp(sharedValue[8]);
       if (state === cleanUp(sharedValue[9]).TransitionStates.MOUNTED) {
         num = 1;
       }
-      sharedValue = useSharedValue(num);
+      sharedValue = cleanUp(sharedValue[8]).useSharedValue(num);
+      let obj = cleanUp(sharedValue[8]);
       let fn = function u() {
-        let fn;
-        let springStandard;
-        let value;
-        let withSpring;
-        let obj = { opacity: withSpring(value, springStandard, "respect-motion-settings", fn) };
-        let tmp = spring;
-        withSpring = tmp.withSpring;
+        let obj = { opacity: null };
         value = sharedValue.get();
-        fn = function t(arg0) {
-          const tmp = arg0 && state === cleanUp(sharedValue[9]).TransitionStates.YEETED;
+        const fn = function t(arg0) {
+          let tmp = arg0;
+          if (arg0) {
+            tmp = state === cleanUp(sharedValue[9]).TransitionStates.YEETED;
+          }
           if (tmp) {
+            cleanUp(sharedValue[8]).runOnJS(closure_1_0)();
             const obj = cleanUp(sharedValue[8]);
-            obj.runOnJS(closure_1_0)();
           }
         };
-        const obj2 = { state, TransitionStates: native.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
-        springStandard = springPresets.springStandard;
-        fn.__closure = obj2;
+        const obj2 = spring;
+        fn.__closure = {
+          state,
+          TransitionStates: native.TransitionStates,
+          runOnJS: ReanimatedRexport.runOnJS,
+          cleanUp,
+        };
         fn.__workletHash = 16446648633017;
         fn.__initData = __initData;
+        obj.opacity = obj2.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
         return obj;
       };
-      const tmpResult = tmp(sharedValue[8]);
-      let obj = {
-        withSpring: tmp(tmp2[10]).withSpring,
+      const tmpResult = cleanUp(sharedValue[8]);
+      fn.__closure = {
+        withSpring: cleanUp(sharedValue[10]).withSpring,
         opacity: sharedValue,
-        springStandard: tmp(tmp2[11]).springStandard,
+        springStandard: cleanUp(sharedValue[11]).springStandard,
         state,
-        TransitionStates: tmp(tmp2[9]).TransitionStates,
-        runOnJS: tmp(tmp2[8]).runOnJS,
+        TransitionStates: cleanUp(sharedValue[9]).TransitionStates,
+        runOnJS: cleanUp(sharedValue[8]).runOnJS,
         cleanUp,
       };
-      fn.__closure = obj;
       fn.__workletHash = 14186737058634;
       fn.__initData = __initData;
       const items = [sharedValue, state];
       const animatedStyle = tmpResult.useAnimatedStyle(fn);
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         let num = 1;
-        set = sharedValue.set;
         if (state === native.TransitionStates.YEETED) {
           num = 0;
         }
-        const result = set(num);
+        const result = sharedValue.set(num);
       }, items);
+      const obj3 = { style: null, children: <closure_5 style={contentContainerStyle}>{children}</closure_5> };
       const items1 = [closure_4.absoluteFill, animatedStyle];
-      const View = state(tmp2[8]).View;
-      return <View style={items1}>{null}</View>;
+      obj3.style = items1;
+      return jsx(state(sharedValue[8]).View, {
+        style: null,
+        children: <closure_5 style={contentContainerStyle}>{children}</closure_5>,
+      });
     };
 const constants = { LIST: "list", EMPTY: "empty", LOADING: "loading" };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadList.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onCreateThreadPress) => {
-      let Icon;
-      let arr4;
-      let canLoadMore;
-      let channel;
-      let closure_3;
-      let contentContainerStyle;
-      let formatToPlainString;
-      let formatToPlainString2;
-      let intl3;
-      let intl4;
-      let loadMore;
-      let obj4;
-      let obj7;
-      let obj9;
-      let onThreadPress;
-      let obj = onThreadPress(contentContainerStyle[5]);
-      const cResult = obj.c(28);
+      const cResult = onThreadPress(contentContainerStyle[5]).c(28);
       ({ channel, onThreadPress } = onCreateThreadPress);
       onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
       contentContainerStyle = onCreateThreadPress.contentContainerStyle;
       const tmp4 = canLoadMore();
-      react = tmp4;
-      const obj2 = onThreadPress(contentContainerStyle[12]);
-      const activeThreads = obj2.useActiveThreads(channel);
+      noop = tmp4;
+      let obj = onThreadPress(contentContainerStyle[5]);
+      const activeThreads = onThreadPress(contentContainerStyle[12]).useActiveThreads(channel);
       const joinedThreadIds = activeThreads.joinedThreadIds;
       const unjoinedThreadIds = activeThreads.unjoinedThreadIds;
-      const useArchivedThreads = onThreadPress(contentContainerStyle[12]).useArchivedThreads;
-      onThreadPress(contentContainerStyle[12]);
-      const archivedThreads = useArchivedThreads(
+      let obj2 = onThreadPress(contentContainerStyle[12]);
+      const archivedThreads = onThreadPress(contentContainerStyle[12]).useArchivedThreads(
         channel,
         onThreadPress(contentContainerStyle[13]).ThreadSortOrder.LATEST_ACTIVITY,
         loadMore,
@@ -333,390 +313,278 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const loading = archivedThreads.loading;
       if (cResult[0] === canLoadMore) {
         if (cResult[1] === loadMore) {
-          let tmp8;
-          let items3;
           if (cResult[2] === loading) {
-            tmp8 = cResult[3];
+            let tmp7 = cResult[3];
           }
-          onEndReached = tmp8;
+          onEndReached = tmp7;
           if (cResult[4] === threadIds) {
             if (cResult[5] === joinedThreadIds) {
               if (cResult[6] === onThreadPress) {
                 if (cResult[7] === unjoinedThreadIds) {
-                  items3 = cResult[8];
+                  let items3 = cResult[8];
                 }
                 if (loading) {
-                  let tmp23;
-                  if (0 === arr4.length) {
+                  if (0 === arr3.length) {
                     const _Symbol3 = Symbol;
                     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
                       let items = [constants.LOADING];
                       cResult[9] = items;
-                      class Y {
-                        constructor(key, arg1, state, cleanUp) {
-                          let footer;
-                          let intl;
-                          let tmp13;
-                          if (constants.EMPTY === arg1) {
-                            return (
-                              <closure_16
-                                key={key}
-                                contentContainerStyle={closure_3.container}
-                                state={state}
-                                cleanUp={cleanUp}
-                              >
-                                {null}
-                              </closure_16>
-                            );
-                          } else if (constants.LOADING === arg1) {
-                            const items = [,];
-                            ({ container: arr[0], center: arr[1] } = closure_3);
-                            return (
-                              <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                                {null}
-                              </closure_16>
-                            );
-                          } else if (constants.LIST === arg1) {
-                            ({
-                              data: arr4,
-                              ListHeaderComponent,
-                              ListHeaderComponentStyle: closure_3.header,
-                              renderItem,
-                              keyExtractor,
-                              onEndReached,
-                              onEndReachedThreshold: 0.4,
-                              accessibilityLabel: intl.string(intl5.t.B2panI),
-                              ListFooterComponent: tmp13,
-                              ListFooterComponentStyle: footer,
-                              contentContainerStyle,
-                            });
-                            const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                            intl = intl5.intl;
-                            tmp13 = undefined;
-                            if (loading) {
-                              tmp13 = ThreadListLoadingIndicatorDefault;
-                            }
-                            footer = undefined;
-                            if (loading) {
-                              footer = closure_3.footer;
-                            }
-                            return (
-                              <closure_16
-                                key={key}
-                                contentContainerStyle={closure_3.container}
-                                state={state}
-                                cleanUp={cleanUp}
-                              >
-                                {null}
-                              </closure_16>
-                            );
-                          }
-                        }
-                      }
-                    }
-                    class Y {
-                      constructor(key, arg1, state, cleanUp) {
-                        let footer;
-                        let intl;
-                        let tmp13;
-                        if (constants.EMPTY === arg1) {
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LOADING === arg1) {
-                          const items = [,];
-                          ({ container: arr[0], center: arr[1] } = closure_3);
-                          return (
-                            <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LIST === arg1) {
-                          ({
-                            data: arr4,
-                            ListHeaderComponent,
-                            ListHeaderComponentStyle: closure_3.header,
-                            renderItem,
-                            keyExtractor,
-                            onEndReached,
-                            onEndReachedThreshold: 0.4,
-                            accessibilityLabel: intl.string(intl5.t.B2panI),
-                            ListFooterComponent: tmp13,
-                            ListFooterComponentStyle: footer,
-                            contentContainerStyle,
-                          });
-                          const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                          intl = intl5.intl;
-                          tmp13 = undefined;
-                          if (loading) {
-                            tmp13 = ThreadListLoadingIndicatorDefault;
-                          }
-                          footer = undefined;
-                          if (loading) {
-                            footer = closure_3.footer;
-                          }
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        }
-                      }
                     }
                   }
-                  if (cResult[12] !== onCreateThreadPress) {
-                    let tmp24 = null;
-                    if (null != onCreateThreadPress) {
-                      const obj3 = {
-                        icon: threadIds(Icon, obj4),
-                        onPress: onCreateThreadPress,
-                        label: intl4.string(onThreadPress(contentContainerStyle[15]).t.rBIGBL),
-                        start: true,
-                        end: true,
-                        arrow: true,
-                      };
-                      const TableRow = onThreadPress(tmp2[16]).TableRow;
-                      obj4 = { IconComponent: null };
-                      Icon = onThreadPress(tmp2[17]).RowButton.Icon;
-                      class Y {
-                        constructor(key, arg1, state, cleanUp) {
-                          let footer;
-                          let intl;
-                          let tmp13;
-                          if (constants.EMPTY === arg1) {
-                            return (
-                              <closure_16
-                                key={key}
-                                contentContainerStyle={closure_3.container}
-                                state={state}
-                                cleanUp={cleanUp}
-                              >
-                                {null}
-                              </closure_16>
-                            );
-                          } else if (constants.LOADING === arg1) {
-                            const items = [,];
-                            ({ container: arr[0], center: arr[1] } = closure_3);
-                            return (
-                              <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                                {null}
-                              </closure_16>
-                            );
-                          } else if (constants.LIST === arg1) {
-                            ({
-                              data: arr4,
-                              ListHeaderComponent,
-                              ListHeaderComponentStyle: closure_3.header,
-                              renderItem,
-                              keyExtractor,
-                              onEndReached,
-                              onEndReachedThreshold: 0.4,
-                              accessibilityLabel: intl.string(intl5.t.B2panI),
-                              ListFooterComponent: tmp13,
-                              ListFooterComponentStyle: footer,
-                              contentContainerStyle,
-                            });
-                            const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                            intl = intl5.intl;
-                            tmp13 = undefined;
-                            if (loading) {
-                              tmp13 = ThreadListLoadingIndicatorDefault;
-                            }
-                            footer = undefined;
-                            if (loading) {
-                              footer = closure_3.footer;
-                            }
-                            return (
-                              <closure_16
-                                key={key}
-                                contentContainerStyle={closure_3.container}
-                                state={state}
-                                cleanUp={cleanUp}
-                              >
-                                {null}
-                              </closure_16>
-                            );
-                          }
-                        }
-                      }
-                      intl4 = onThreadPress(tmp2[15]).intl;
-                      tmp24 = threadIds(TableRow, obj3);
-                    }
-                    cResult[12] = onCreateThreadPress;
-                    class Y {
-                      constructor(key, arg1, state, cleanUp) {
-                        let footer;
-                        let intl;
-                        let tmp13;
-                        if (constants.EMPTY === arg1) {
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LOADING === arg1) {
-                          const items = [,];
-                          ({ container: arr[0], center: arr[1] } = closure_3);
-                          return (
-                            <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LIST === arg1) {
-                          ({
-                            data: arr4,
-                            ListHeaderComponent,
-                            ListHeaderComponentStyle: closure_3.header,
-                            renderItem,
-                            keyExtractor,
-                            onEndReached,
-                            onEndReachedThreshold: 0.4,
-                            accessibilityLabel: intl.string(intl5.t.B2panI),
-                            ListFooterComponent: tmp13,
-                            ListFooterComponentStyle: footer,
-                            contentContainerStyle,
-                          });
-                          const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                          intl = intl5.intl;
-                          tmp13 = undefined;
-                          if (loading) {
-                            tmp13 = ThreadListLoadingIndicatorDefault;
-                          }
-                          footer = undefined;
-                          if (loading) {
-                            footer = closure_3.footer;
-                          }
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        }
-                      }
-                    }
-                    tmp23 = tmp24;
+                }
+                if (0 !== arr3.length) {
+                  const _Symbol2 = Symbol;
+                  if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+                    const items1 = [constants.LIST];
+                    cResult[11] = items1;
+                    let tmp14 = items1;
                   } else {
-                    tmp23 = cResult[13];
+                    tmp14 = cResult[11];
                   }
-                  ListHeaderComponent = tmp23;
-                  if (cResult[14] === contentContainerStyle) {
-                    if (cResult[15] === tmp23) {
-                      if (cResult[16] === arr4) {
-                        if (cResult[17] === loading) {
-                          if (cResult[18] === onCreateThreadPress) {
-                            if (cResult[19] === tmp8) {
-                              if (cResult[20] === tmp4.center) {
-                                if (cResult[21] === tmp4.container) {
-                                  if (cResult[22] === tmp4.footer) {
-                                    let tmp26;
-                                    if (cResult[23] === tmp4.header) {
-                                      tmp26 = cResult[24];
-                                    }
-                                    if (cResult[25] === tmp26) {
-                                      let tmp27;
-                                      if (cResult[26] === tmp15) {
-                                        tmp27 = cResult[27];
-                                      }
-                                      return tmp27;
-                                    }
-                                    const obj5 = { items: tmp15, renderItem: null, getItemKey: getThreadListStateKey };
-                                    class Y {
-                                      constructor(key, arg1, state, cleanUp) {
-                                        let footer;
-                                        let intl;
-                                        let tmp13;
-                                        if (constants.EMPTY === arg1) {
-                                          return (
-                                            <closure_16
-                                              key={key}
-                                              contentContainerStyle={closure_3.container}
-                                              state={state}
-                                              cleanUp={cleanUp}
-                                            >
-                                              {null}
-                                            </closure_16>
-                                          );
-                                        } else if (constants.LOADING === arg1) {
-                                          const items = [,];
-                                          ({ container: arr[0], center: arr[1] } = closure_3);
-                                          return (
-                                            <closure_16
-                                              key={key}
-                                              contentContainerStyle={items}
-                                              state={state}
-                                              cleanUp={cleanUp}
-                                            >
-                                              {null}
-                                            </closure_16>
-                                          );
-                                        } else if (constants.LIST === arg1) {
-                                          ({
-                                            data: arr4,
-                                            ListHeaderComponent,
-                                            ListHeaderComponentStyle: closure_3.header,
-                                            renderItem,
-                                            keyExtractor,
-                                            onEndReached,
-                                            onEndReachedThreshold: 0.4,
-                                            accessibilityLabel: intl.string(intl5.t.B2panI),
-                                            ListFooterComponent: tmp13,
-                                            ListFooterComponentStyle: footer,
-                                            contentContainerStyle,
-                                          });
-                                          const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                                          intl = intl5.intl;
-                                          tmp13 = undefined;
-                                          if (loading) {
-                                            tmp13 = ThreadListLoadingIndicatorDefault;
-                                          }
-                                          footer = undefined;
-                                          if (loading) {
-                                            footer = closure_3.footer;
-                                          }
-                                          return (
-                                            <closure_16
-                                              key={key}
-                                              contentContainerStyle={closure_3.container}
-                                              state={state}
-                                              cleanUp={cleanUp}
-                                            >
-                                              {null}
-                                            </closure_16>
-                                          );
-                                        }
-                                      }
-                                    }
-                                    const tmp30 = threadIds(
-                                      onThreadPress(contentContainerStyle[9]).TransitionGroup,
-                                      obj5,
-                                    );
-                                    cResult[25] = tmp26;
-                                    cResult[26] = tmp15;
-                                    cResult[27] = tmp30;
-                                    tmp27 = tmp30;
+                  let tmp11 = tmp14;
+                } else {
+                  const _Symbol = Symbol;
+                  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+                    const items2 = [constants.EMPTY];
+                    cResult[10] = items2;
+                    tmp11 = items2;
+                  } else {
+                    tmp11 = cResult[10];
+                  }
+                }
+                if (cResult[12] !== onCreateThreadPress) {
+                  let tmp21 = null;
+                  if (null != onCreateThreadPress) {
+                    let obj4 = { icon: null, onPress: null, label: null, start: true, end: true, arrow: true };
+                    let obj5 = { IconComponent: onThreadPress(tmp2[18]).ThreadPlusIcon };
+                    obj4.icon = threadIds(onThreadPress(tmp2[17]).RowButton.Icon, obj5);
+                    obj4.onPress = onCreateThreadPress;
+                    class Y {
+                      constructor(arg0, arg1, arg2, arg3) {
+                        tmp = closure_17;
+                        if (closure_17.EMPTY === arg1) {
+                          tmp22 = jsx;
+                          tmp23 = f75622;
+                          obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                          tmp24 = closure_3;
+                          obj1.contentContainerStyle = closure_3.container;
+                          obj1.state = arg2;
+                          obj1.cleanUp = arg3;
+                          tmp25 = closure_1;
+                          tmp26 = closure_2;
+                          obj6 = { onCreateThreadPress: null };
+                          tmp27 = onCreateThreadPress;
+                          obj6.onCreateThreadPress = onCreateThreadPress;
+                          obj1.children = jsx(closure_1(closure_2[19]), obj6);
+                          return jsx(f75622, obj1, onCreateThreadPress);
+                        } else if (tmp.LOADING === arg1) {
+                          tmp17 = jsx;
+                          tmp18 = f75622;
+                          obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                          tmp19 = closure_3;
+                          items = [,];
+                          ({ container: arr[0], center: arr[1] } = closure_3);
+                          obj7.contentContainerStyle = items;
+                          obj7.state = arg2;
+                          obj7.cleanUp = arg3;
+                          tmp20 = closure_1;
+                          tmp21 = closure_2;
+                          obj7.children = jsx(closure_1(closure_2[20]), {});
+                          return jsx(f75622, obj7, onCreateThreadPress);
+                        } else if (tmp.LIST === arg1) {
+                          tmp2 = jsx;
+                          obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                          obj.contentContainerStyle = closure_3.container;
+                          obj.state = arg2;
+                          obj.cleanUp = arg3;
+                          tmp5 = closure_0;
+                          tmp3 = f75622;
+                          tmp4 = closure_3;
+                          tmp6 = closure_2;
+                          obj8 = {
+                            data: null,
+                            ListHeaderComponent: null,
+                            ListHeaderComponentStyle: null,
+                            renderItem: null,
+                            keyExtractor: null,
+                            onEndReached: null,
+                            onEndReachedThreshold: 0.4,
+                            accessibilityLabel: null,
+                            ListFooterComponent: null,
+                            ListFooterComponentStyle: null,
+                            contentContainerStyle: null,
+                          };
+                          tmp7 = closure_12;
+                          obj8.data = closure_12;
+                          tmp8 = closure_13;
+                          obj8.ListHeaderComponent = closure_13;
+                          obj8.ListHeaderComponentStyle = closure_3.header;
+                          tmp9 = renderItem;
+                          obj8.renderItem = renderItem;
+                          tmp10 = keyExtractor;
+                          obj8.keyExtractor = keyExtractor;
+                          tmp11 = closure_11;
+                          obj8.onEndReached = closure_11;
+                          intl = closure_0(closure_2[15]).intl;
+                          obj8.accessibilityLabel = intl.string(closure_0(closure_2[15]).t.B2panI);
+                          tmp13 = undefined;
+                          tmp12 = loading;
+                          if (loading) {
+                            tmp14 = closure_1;
+                            tmp13 = closure_1(tmp6[20]);
+                          }
+                          obj8.ListFooterComponent = tmp13;
+                          footer = undefined;
+                          if (tmp12) {
+                            footer = tmp4.footer;
+                          }
+                          obj8.ListFooterComponentStyle = footer;
+                          tmp16 = contentContainerStyle;
+                          obj8.contentContainerStyle = contentContainerStyle;
+                          obj.children = tmp2(closure_0(closure_2[21]).AnimatedFlashList, obj8);
+                          return tmp2(tmp3, obj, onCreateThreadPress);
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                    obj4.label = obj10.string(onThreadPress(tmp2[15]).t.rBIGBL);
+                    tmp21 = threadIds(onThreadPress(tmp2[16]).TableRow, obj4);
+                  }
+                  cResult[12] = onCreateThreadPress;
+                  cResult[13] = tmp21;
+                  let tmp20 = tmp21;
+                } else {
+                  tmp20 = cResult[13];
+                }
+                ListHeaderComponent = tmp20;
+                if (cResult[14] === contentContainerStyle) {
+                  if (cResult[15] === tmp20) {
+                    if (cResult[16] === arr3) {
+                      if (cResult[17] === loading) {
+                        if (cResult[18] === onCreateThreadPress) {
+                          if (cResult[19] === tmp7) {
+                            if (cResult[20] === tmp4.center) {
+                              if (cResult[21] === tmp4.container) {
+                                if (cResult[22] === tmp4.footer) {
+                                  if (cResult[23] === tmp4.header) {
+                                    let tmp23 = cResult[24];
                                   }
+                                  if (cResult[25] === tmp23) {
+                                    if (cResult[26] === tmp11) {
+                                      let tmp24 = cResult[27];
+                                    }
+                                    return tmp24;
+                                  }
+                                  const obj6 = { items: tmp11, renderItem: tmp23, getItemKey: getThreadListStateKey };
+                                  class Y {
+                                    constructor(arg0, arg1, arg2, arg3) {
+                                      tmp = closure_17;
+                                      if (closure_17.EMPTY === arg1) {
+                                        tmp22 = jsx;
+                                        tmp23 = f75622;
+                                        obj1 = {
+                                          contentContainerStyle: null,
+                                          state: null,
+                                          cleanUp: null,
+                                          children: null,
+                                        };
+                                        tmp24 = closure_3;
+                                        obj1.contentContainerStyle = closure_3.container;
+                                        obj1.state = arg2;
+                                        obj1.cleanUp = arg3;
+                                        tmp25 = closure_1;
+                                        tmp26 = closure_2;
+                                        obj6 = { onCreateThreadPress: null };
+                                        tmp27 = onCreateThreadPress;
+                                        obj6.onCreateThreadPress = onCreateThreadPress;
+                                        obj1.children = jsx(closure_1(closure_2[19]), obj6);
+                                        return jsx(f75622, obj1, onCreateThreadPress);
+                                      } else if (tmp.LOADING === arg1) {
+                                        tmp17 = jsx;
+                                        tmp18 = f75622;
+                                        obj7 = {
+                                          contentContainerStyle: null,
+                                          state: null,
+                                          cleanUp: null,
+                                          children: null,
+                                        };
+                                        tmp19 = closure_3;
+                                        items = [,];
+                                        ({ container: arr[0], center: arr[1] } = closure_3);
+                                        obj7.contentContainerStyle = items;
+                                        obj7.state = arg2;
+                                        obj7.cleanUp = arg3;
+                                        tmp20 = closure_1;
+                                        tmp21 = closure_2;
+                                        obj7.children = jsx(closure_1(closure_2[20]), {});
+                                        return jsx(f75622, obj7, onCreateThreadPress);
+                                      } else if (tmp.LIST === arg1) {
+                                        tmp2 = jsx;
+                                        obj = {
+                                          contentContainerStyle: null,
+                                          state: null,
+                                          cleanUp: null,
+                                          children: null,
+                                        };
+                                        obj.contentContainerStyle = closure_3.container;
+                                        obj.state = arg2;
+                                        obj.cleanUp = arg3;
+                                        tmp5 = closure_0;
+                                        tmp3 = f75622;
+                                        tmp4 = closure_3;
+                                        tmp6 = closure_2;
+                                        obj8 = {
+                                          data: null,
+                                          ListHeaderComponent: null,
+                                          ListHeaderComponentStyle: null,
+                                          renderItem: null,
+                                          keyExtractor: null,
+                                          onEndReached: null,
+                                          onEndReachedThreshold: 0.4,
+                                          accessibilityLabel: null,
+                                          ListFooterComponent: null,
+                                          ListFooterComponentStyle: null,
+                                          contentContainerStyle: null,
+                                        };
+                                        tmp7 = closure_12;
+                                        obj8.data = closure_12;
+                                        tmp8 = closure_13;
+                                        obj8.ListHeaderComponent = closure_13;
+                                        obj8.ListHeaderComponentStyle = closure_3.header;
+                                        tmp9 = renderItem;
+                                        obj8.renderItem = renderItem;
+                                        tmp10 = keyExtractor;
+                                        obj8.keyExtractor = keyExtractor;
+                                        tmp11 = closure_11;
+                                        obj8.onEndReached = closure_11;
+                                        intl = closure_0(closure_2[15]).intl;
+                                        obj8.accessibilityLabel = intl.string(closure_0(closure_2[15]).t.B2panI);
+                                        tmp13 = undefined;
+                                        tmp12 = loading;
+                                        if (loading) {
+                                          tmp14 = closure_1;
+                                          tmp13 = closure_1(tmp6[20]);
+                                        }
+                                        obj8.ListFooterComponent = tmp13;
+                                        footer = undefined;
+                                        if (tmp12) {
+                                          footer = tmp4.footer;
+                                        }
+                                        obj8.ListFooterComponentStyle = footer;
+                                        tmp16 = contentContainerStyle;
+                                        obj8.contentContainerStyle = contentContainerStyle;
+                                        obj.children = tmp2(closure_0(closure_2[21]).AnimatedFlashList, obj8);
+                                        return tmp2(tmp3, obj, onCreateThreadPress);
+                                      } else {
+                                        return;
+                                      }
+                                    }
+                                  }
+                                  cResult[25] = tmp23;
+                                  cResult[26] = tmp11;
+                                  cResult[27] = tmp27;
+                                  tmp24 = tmp27;
                                 }
                               }
                             }
@@ -725,500 +593,316 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  class Y {
-                    constructor(key, arg1, state, cleanUp) {
-                      let footer;
-                      let intl;
-                      let tmp13;
-                      if (constants.EMPTY === arg1) {
-                        return (
-                          <closure_16
-                            key={key}
-                            contentContainerStyle={closure_3.container}
-                            state={state}
-                            cleanUp={cleanUp}
-                          >
-                            {null}
-                          </closure_16>
-                        );
-                      } else if (constants.LOADING === arg1) {
-                        const items = [,];
-                        ({ container: arr[0], center: arr[1] } = closure_3);
-                        return (
-                          <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                            {null}
-                          </closure_16>
-                        );
-                      } else if (constants.LIST === arg1) {
-                        ({
-                          data: arr4,
-                          ListHeaderComponent,
-                          ListHeaderComponentStyle: closure_3.header,
-                          renderItem,
-                          keyExtractor,
-                          onEndReached,
-                          onEndReachedThreshold: 0.4,
-                          accessibilityLabel: intl.string(intl5.t.B2panI),
-                          ListFooterComponent: tmp13,
-                          ListFooterComponentStyle: footer,
-                          contentContainerStyle,
-                        });
-                        const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                        intl = intl5.intl;
-                        tmp13 = undefined;
-                        if (loading) {
-                          tmp13 = ThreadListLoadingIndicatorDefault;
-                        }
-                        footer = undefined;
-                        if (loading) {
-                          footer = closure_3.footer;
-                        }
-                        return (
-                          <closure_16
-                            key={key}
-                            contentContainerStyle={closure_3.container}
-                            state={state}
-                            cleanUp={cleanUp}
-                          >
-                            {null}
-                          </closure_16>
-                        );
-                      }
-                    }
-                  }
-                  cResult[14] = contentContainerStyle;
-                  cResult[15] = tmp23;
-                  cResult[16] = arr4;
-                  cResult[17] = loading;
-                  cResult[18] = onCreateThreadPress;
-                  cResult[19] = tmp8;
-                  cResult[20] = tmp4.center;
-                  cResult[21] = tmp4.container;
-                  cResult[22] = tmp4.footer;
-                  cResult[23] = tmp4.header;
-                  cResult[24] = Y;
-                  tmp26 = Y;
                 }
-                if (0 !== arr4.length) {
-                  const _Symbol2 = Symbol;
-                  if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-                    const items1 = [constants.LIST];
-                    cResult[11] = items1;
-                    class Y {
-                      constructor(key, arg1, state, cleanUp) {
-                        let footer;
-                        let intl;
-                        let tmp13;
-                        if (constants.EMPTY === arg1) {
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LOADING === arg1) {
-                          const items = [,];
-                          ({ container: arr[0], center: arr[1] } = closure_3);
-                          return (
-                            <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LIST === arg1) {
-                          ({
-                            data: arr4,
-                            ListHeaderComponent,
-                            ListHeaderComponentStyle: closure_3.header,
-                            renderItem,
-                            keyExtractor,
-                            onEndReached,
-                            onEndReachedThreshold: 0.4,
-                            accessibilityLabel: intl.string(intl5.t.B2panI),
-                            ListFooterComponent: tmp13,
-                            ListFooterComponentStyle: footer,
-                            contentContainerStyle,
-                          });
-                          const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                          intl = intl5.intl;
-                          tmp13 = undefined;
-                          if (loading) {
-                            tmp13 = ThreadListLoadingIndicatorDefault;
-                          }
-                          footer = undefined;
-                          if (loading) {
-                            footer = closure_3.footer;
-                          }
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        }
+                class Y {
+                  constructor(arg0, arg1, arg2, arg3) {
+                    tmp = closure_17;
+                    if (closure_17.EMPTY === arg1) {
+                      tmp22 = jsx;
+                      tmp23 = f75622;
+                      obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                      tmp24 = closure_3;
+                      obj1.contentContainerStyle = closure_3.container;
+                      obj1.state = arg2;
+                      obj1.cleanUp = arg3;
+                      tmp25 = closure_1;
+                      tmp26 = closure_2;
+                      obj6 = { onCreateThreadPress: null };
+                      tmp27 = onCreateThreadPress;
+                      obj6.onCreateThreadPress = onCreateThreadPress;
+                      obj1.children = jsx(closure_1(closure_2[19]), obj6);
+                      return jsx(f75622, obj1, onCreateThreadPress);
+                    } else if (tmp.LOADING === arg1) {
+                      tmp17 = jsx;
+                      tmp18 = f75622;
+                      obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                      tmp19 = closure_3;
+                      items = [,];
+                      ({ container: arr[0], center: arr[1] } = closure_3);
+                      obj7.contentContainerStyle = items;
+                      obj7.state = arg2;
+                      obj7.cleanUp = arg3;
+                      tmp20 = closure_1;
+                      tmp21 = closure_2;
+                      obj7.children = jsx(closure_1(closure_2[20]), {});
+                      return jsx(f75622, obj7, onCreateThreadPress);
+                    } else if (tmp.LIST === arg1) {
+                      tmp2 = jsx;
+                      obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                      obj.contentContainerStyle = closure_3.container;
+                      obj.state = arg2;
+                      obj.cleanUp = arg3;
+                      tmp5 = closure_0;
+                      tmp3 = f75622;
+                      tmp4 = closure_3;
+                      tmp6 = closure_2;
+                      obj8 = {
+                        data: null,
+                        ListHeaderComponent: null,
+                        ListHeaderComponentStyle: null,
+                        renderItem: null,
+                        keyExtractor: null,
+                        onEndReached: null,
+                        onEndReachedThreshold: 0.4,
+                        accessibilityLabel: null,
+                        ListFooterComponent: null,
+                        ListFooterComponentStyle: null,
+                        contentContainerStyle: null,
+                      };
+                      tmp7 = closure_12;
+                      obj8.data = closure_12;
+                      tmp8 = closure_13;
+                      obj8.ListHeaderComponent = closure_13;
+                      obj8.ListHeaderComponentStyle = closure_3.header;
+                      tmp9 = renderItem;
+                      obj8.renderItem = renderItem;
+                      tmp10 = keyExtractor;
+                      obj8.keyExtractor = keyExtractor;
+                      tmp11 = closure_11;
+                      obj8.onEndReached = closure_11;
+                      intl = closure_0(closure_2[15]).intl;
+                      obj8.accessibilityLabel = intl.string(closure_0(closure_2[15]).t.B2panI);
+                      tmp13 = undefined;
+                      tmp12 = loading;
+                      if (loading) {
+                        tmp14 = closure_1;
+                        tmp13 = closure_1(tmp6[20]);
                       }
-                    }
-                  }
-                  class Y {
-                    constructor(key, arg1, state, cleanUp) {
-                      let footer;
-                      let intl;
-                      let tmp13;
-                      if (constants.EMPTY === arg1) {
-                        return (
-                          <closure_16
-                            key={key}
-                            contentContainerStyle={closure_3.container}
-                            state={state}
-                            cleanUp={cleanUp}
-                          >
-                            {null}
-                          </closure_16>
-                        );
-                      } else if (constants.LOADING === arg1) {
-                        const items = [,];
-                        ({ container: arr[0], center: arr[1] } = closure_3);
-                        return (
-                          <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                            {null}
-                          </closure_16>
-                        );
-                      } else if (constants.LIST === arg1) {
-                        ({
-                          data: arr4,
-                          ListHeaderComponent,
-                          ListHeaderComponentStyle: closure_3.header,
-                          renderItem,
-                          keyExtractor,
-                          onEndReached,
-                          onEndReachedThreshold: 0.4,
-                          accessibilityLabel: intl.string(intl5.t.B2panI),
-                          ListFooterComponent: tmp13,
-                          ListFooterComponentStyle: footer,
-                          contentContainerStyle,
-                        });
-                        const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                        intl = intl5.intl;
-                        tmp13 = undefined;
-                        if (loading) {
-                          tmp13 = ThreadListLoadingIndicatorDefault;
-                        }
-                        footer = undefined;
-                        if (loading) {
-                          footer = closure_3.footer;
-                        }
-                        return (
-                          <closure_16
-                            key={key}
-                            contentContainerStyle={closure_3.container}
-                            state={state}
-                            cleanUp={cleanUp}
-                          >
-                            {null}
-                          </closure_16>
-                        );
+                      obj8.ListFooterComponent = tmp13;
+                      footer = undefined;
+                      if (tmp12) {
+                        footer = tmp4.footer;
                       }
-                    }
-                  }
-                } else {
-                  const _Symbol = Symbol;
-                  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-                    const items2 = [constants.EMPTY];
-                    cResult[10] = items2;
-                    class Y {
-                      constructor(key, arg1, state, cleanUp) {
-                        let footer;
-                        let intl;
-                        let tmp13;
-                        if (constants.EMPTY === arg1) {
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LOADING === arg1) {
-                          const items = [,];
-                          ({ container: arr[0], center: arr[1] } = closure_3);
-                          return (
-                            <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                              {null}
-                            </closure_16>
-                          );
-                        } else if (constants.LIST === arg1) {
-                          ({
-                            data: arr4,
-                            ListHeaderComponent,
-                            ListHeaderComponentStyle: closure_3.header,
-                            renderItem,
-                            keyExtractor,
-                            onEndReached,
-                            onEndReachedThreshold: 0.4,
-                            accessibilityLabel: intl.string(intl5.t.B2panI),
-                            ListFooterComponent: tmp13,
-                            ListFooterComponentStyle: footer,
-                            contentContainerStyle,
-                          });
-                          const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                          intl = intl5.intl;
-                          tmp13 = undefined;
-                          if (loading) {
-                            tmp13 = ThreadListLoadingIndicatorDefault;
-                          }
-                          footer = undefined;
-                          if (loading) {
-                            footer = closure_3.footer;
-                          }
-                          return (
-                            <closure_16
-                              key={key}
-                              contentContainerStyle={closure_3.container}
-                              state={state}
-                              cleanUp={cleanUp}
-                            >
-                              {null}
-                            </closure_16>
-                          );
-                        }
-                      }
+                      obj8.ListFooterComponentStyle = footer;
+                      tmp16 = contentContainerStyle;
+                      obj8.contentContainerStyle = contentContainerStyle;
+                      obj.children = tmp2(closure_0(closure_2[21]).AnimatedFlashList, obj8);
+                      return tmp2(tmp3, obj, onCreateThreadPress);
+                    } else {
+                      return;
                     }
                   }
                 }
+                cResult[14] = contentContainerStyle;
+                cResult[15] = tmp20;
+                cResult[16] = arr3;
+                cResult[17] = loading;
+                cResult[18] = onCreateThreadPress;
+                cResult[19] = tmp7;
+                cResult[20] = tmp4.center;
+                cResult[21] = tmp4.container;
+                cResult[22] = tmp4.footer;
+                cResult[23] = tmp4.header;
+                cResult[24] = Y;
+                tmp23 = Y;
               }
             }
           }
           items3 = [];
           if (joinedThreadIds.length > 0) {
-            const push = items3.push;
-            const obj6 = {
-              type: "section",
-              title: formatToPlainString(onThreadPress(contentContainerStyle[15]).t.fcXlhe, obj7),
-            };
+            const obj7 = { type: "section", title: null };
             let intl = onThreadPress(tmp2[15]).intl;
-            formatToPlainString = intl.formatToPlainString;
-            obj7 = { count: null };
+            const obj8 = { count: joinedThreadIds.length };
+            obj7.title = intl.formatToPlainString(onThreadPress(tmp2[15]).t.fcXlhe, obj8);
+            items3.push(obj7);
             class Y {
-              constructor(key, arg1, state, cleanUp) {
-                let footer;
-                let intl;
-                let tmp13;
-                if (constants.EMPTY === arg1) {
-                  return (
-                    <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
-                } else if (constants.LOADING === arg1) {
-                  const items = [,];
+              constructor(arg0, arg1, arg2, arg3) {
+                tmp = closure_17;
+                if (closure_17.EMPTY === arg1) {
+                  tmp22 = jsx;
+                  tmp23 = f75622;
+                  obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                  tmp24 = closure_3;
+                  obj1.contentContainerStyle = closure_3.container;
+                  obj1.state = arg2;
+                  obj1.cleanUp = arg3;
+                  tmp25 = closure_1;
+                  tmp26 = closure_2;
+                  obj6 = { onCreateThreadPress: null };
+                  tmp27 = onCreateThreadPress;
+                  obj6.onCreateThreadPress = onCreateThreadPress;
+                  obj1.children = jsx(closure_1(closure_2[19]), obj6);
+                  return jsx(f75622, obj1, onCreateThreadPress);
+                } else if (tmp.LOADING === arg1) {
+                  tmp17 = jsx;
+                  tmp18 = f75622;
+                  obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                  tmp19 = closure_3;
+                  items = [,];
                   ({ container: arr[0], center: arr[1] } = closure_3);
-                  return (
-                    <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
-                } else if (constants.LIST === arg1) {
-                  ({
-                    data: arr4,
-                    ListHeaderComponent,
-                    ListHeaderComponentStyle: closure_3.header,
-                    renderItem,
-                    keyExtractor,
-                    onEndReached,
+                  obj7.contentContainerStyle = items;
+                  obj7.state = arg2;
+                  obj7.cleanUp = arg3;
+                  tmp20 = closure_1;
+                  tmp21 = closure_2;
+                  obj7.children = jsx(closure_1(closure_2[20]), {});
+                  return jsx(f75622, obj7, onCreateThreadPress);
+                } else if (tmp.LIST === arg1) {
+                  tmp2 = jsx;
+                  obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                  obj.contentContainerStyle = closure_3.container;
+                  obj.state = arg2;
+                  obj.cleanUp = arg3;
+                  tmp5 = closure_0;
+                  tmp3 = f75622;
+                  tmp4 = closure_3;
+                  tmp6 = closure_2;
+                  obj8 = {
+                    data: null,
+                    ListHeaderComponent: null,
+                    ListHeaderComponentStyle: null,
+                    renderItem: null,
+                    keyExtractor: null,
+                    onEndReached: null,
                     onEndReachedThreshold: 0.4,
-                    accessibilityLabel: intl.string(intl5.t.B2panI),
-                    ListFooterComponent: tmp13,
-                    ListFooterComponentStyle: footer,
-                    contentContainerStyle,
-                  });
-                  const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                  intl = intl5.intl;
+                    accessibilityLabel: null,
+                    ListFooterComponent: null,
+                    ListFooterComponentStyle: null,
+                    contentContainerStyle: null,
+                  };
+                  tmp7 = closure_12;
+                  obj8.data = closure_12;
+                  tmp8 = closure_13;
+                  obj8.ListHeaderComponent = closure_13;
+                  obj8.ListHeaderComponentStyle = closure_3.header;
+                  tmp9 = renderItem;
+                  obj8.renderItem = renderItem;
+                  tmp10 = keyExtractor;
+                  obj8.keyExtractor = keyExtractor;
+                  tmp11 = closure_11;
+                  obj8.onEndReached = closure_11;
+                  intl = closure_0(closure_2[15]).intl;
+                  obj8.accessibilityLabel = intl.string(closure_0(closure_2[15]).t.B2panI);
                   tmp13 = undefined;
+                  tmp12 = loading;
                   if (loading) {
-                    tmp13 = ThreadListLoadingIndicatorDefault;
+                    tmp14 = closure_1;
+                    tmp13 = closure_1(tmp6[20]);
                   }
+                  obj8.ListFooterComponent = tmp13;
                   footer = undefined;
-                  if (loading) {
-                    footer = closure_3.footer;
+                  if (tmp12) {
+                    footer = tmp4.footer;
                   }
-                  return (
-                    <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
+                  obj8.ListFooterComponentStyle = footer;
+                  tmp16 = contentContainerStyle;
+                  obj8.contentContainerStyle = contentContainerStyle;
+                  obj.children = tmp2(closure_0(closure_2[21]).AnimatedFlashList, obj8);
+                  return tmp2(tmp3, obj, onCreateThreadPress);
+                } else {
+                  return;
                 }
               }
             }
-            const arr = push(obj6);
-            const item = joinedThreadIds.forEach((threadId, index) => {
-              const obj = {
-                type: "thread",
-                threadId,
-                start: 0 === index,
-                end: index === joinedThreadIds.length - 1,
-                onPress: onThreadPress,
-              };
-              return items3.push(obj);
-            });
           }
           if (unjoinedThreadIds.length > 0) {
-            const push2 = items3.push;
-            const obj8 = {
-              type: "section",
-              title: formatToPlainString2(onThreadPress(contentContainerStyle[15]).t.GHY7yQ, obj9),
-            };
+            const obj9 = { type: "section", title: null };
             const intl2 = onThreadPress(tmp2[15]).intl;
-            formatToPlainString2 = intl2.formatToPlainString;
-            obj9 = { count: null };
+            const obj11 = { count: unjoinedThreadIds.length };
+            obj9.title = intl2.formatToPlainString(onThreadPress(tmp2[15]).t.GHY7yQ, obj11);
+            items3.push(obj9);
             class Y {
-              constructor(key, arg1, state, cleanUp) {
-                let footer;
-                let intl;
-                let tmp13;
-                if (constants.EMPTY === arg1) {
-                  return (
-                    <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
-                } else if (constants.LOADING === arg1) {
-                  const items = [,];
+              constructor(arg0, arg1, arg2, arg3) {
+                tmp = closure_17;
+                if (closure_17.EMPTY === arg1) {
+                  tmp22 = jsx;
+                  tmp23 = f75622;
+                  obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                  tmp24 = closure_3;
+                  obj1.contentContainerStyle = closure_3.container;
+                  obj1.state = arg2;
+                  obj1.cleanUp = arg3;
+                  tmp25 = closure_1;
+                  tmp26 = closure_2;
+                  obj6 = { onCreateThreadPress: null };
+                  tmp27 = onCreateThreadPress;
+                  obj6.onCreateThreadPress = onCreateThreadPress;
+                  obj1.children = jsx(closure_1(closure_2[19]), obj6);
+                  return jsx(f75622, obj1, onCreateThreadPress);
+                } else if (tmp.LOADING === arg1) {
+                  tmp17 = jsx;
+                  tmp18 = f75622;
+                  obj7 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                  tmp19 = closure_3;
+                  items = [,];
                   ({ container: arr[0], center: arr[1] } = closure_3);
-                  return (
-                    <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
-                } else if (constants.LIST === arg1) {
-                  ({
-                    data: arr4,
-                    ListHeaderComponent,
-                    ListHeaderComponentStyle: closure_3.header,
-                    renderItem,
-                    keyExtractor,
-                    onEndReached,
+                  obj7.contentContainerStyle = items;
+                  obj7.state = arg2;
+                  obj7.cleanUp = arg3;
+                  tmp20 = closure_1;
+                  tmp21 = closure_2;
+                  obj7.children = jsx(closure_1(closure_2[20]), {});
+                  return jsx(f75622, obj7, onCreateThreadPress);
+                } else if (tmp.LIST === arg1) {
+                  tmp2 = jsx;
+                  obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+                  obj.contentContainerStyle = closure_3.container;
+                  obj.state = arg2;
+                  obj.cleanUp = arg3;
+                  tmp5 = closure_0;
+                  tmp3 = f75622;
+                  tmp4 = closure_3;
+                  tmp6 = closure_2;
+                  obj8 = {
+                    data: null,
+                    ListHeaderComponent: null,
+                    ListHeaderComponentStyle: null,
+                    renderItem: null,
+                    keyExtractor: null,
+                    onEndReached: null,
                     onEndReachedThreshold: 0.4,
-                    accessibilityLabel: intl.string(intl5.t.B2panI),
-                    ListFooterComponent: tmp13,
-                    ListFooterComponentStyle: footer,
-                    contentContainerStyle,
-                  });
-                  const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                  intl = intl5.intl;
+                    accessibilityLabel: null,
+                    ListFooterComponent: null,
+                    ListFooterComponentStyle: null,
+                    contentContainerStyle: null,
+                  };
+                  tmp7 = closure_12;
+                  obj8.data = closure_12;
+                  tmp8 = closure_13;
+                  obj8.ListHeaderComponent = closure_13;
+                  obj8.ListHeaderComponentStyle = closure_3.header;
+                  tmp9 = renderItem;
+                  obj8.renderItem = renderItem;
+                  tmp10 = keyExtractor;
+                  obj8.keyExtractor = keyExtractor;
+                  tmp11 = closure_11;
+                  obj8.onEndReached = closure_11;
+                  intl = closure_0(closure_2[15]).intl;
+                  obj8.accessibilityLabel = intl.string(closure_0(closure_2[15]).t.B2panI);
                   tmp13 = undefined;
+                  tmp12 = loading;
                   if (loading) {
-                    tmp13 = ThreadListLoadingIndicatorDefault;
+                    tmp14 = closure_1;
+                    tmp13 = closure_1(tmp6[20]);
                   }
+                  obj8.ListFooterComponent = tmp13;
                   footer = undefined;
-                  if (loading) {
-                    footer = closure_3.footer;
+                  if (tmp12) {
+                    footer = tmp4.footer;
                   }
-                  return (
-                    <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
+                  obj8.ListFooterComponentStyle = footer;
+                  tmp16 = contentContainerStyle;
+                  obj8.contentContainerStyle = contentContainerStyle;
+                  obj.children = tmp2(closure_0(closure_2[21]).AnimatedFlashList, obj8);
+                  return tmp2(tmp3, obj, onCreateThreadPress);
+                } else {
+                  return;
                 }
               }
             }
-            push2(obj8);
-            const item1 = unjoinedThreadIds.forEach((threadId, index) => {
-              const obj = {
-                type: "thread",
-                threadId,
-                start: 0 === index,
-                end: index === unjoinedThreadIds.length - 1,
-                onPress: onThreadPress,
-              };
-              return items3.push(obj);
-            });
-          }
-          if (threadIds.length > 0) {
-            const push3 = items3.push;
-            ({ type: "section", title: intl3.string(onThreadPress(contentContainerStyle[15]).t.XsgrjS) });
-            intl3 = onThreadPress(tmp2[15]).intl;
-            class Y {
-              constructor(key, arg1, state, cleanUp) {
-                let footer;
-                let intl;
-                let tmp13;
-                if (constants.EMPTY === arg1) {
-                  return (
-                    <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
-                } else if (constants.LOADING === arg1) {
-                  const items = [,];
-                  ({ container: arr[0], center: arr[1] } = closure_3);
-                  return (
-                    <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
-                } else if (constants.LIST === arg1) {
-                  ({
-                    data: arr4,
-                    ListHeaderComponent,
-                    ListHeaderComponentStyle: closure_3.header,
-                    renderItem,
-                    keyExtractor,
-                    onEndReached,
-                    onEndReachedThreshold: 0.4,
-                    accessibilityLabel: intl.string(intl5.t.B2panI),
-                    ListFooterComponent: tmp13,
-                    ListFooterComponentStyle: footer,
-                    contentContainerStyle,
-                  });
-                  const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-                  intl = intl5.intl;
-                  tmp13 = undefined;
-                  if (loading) {
-                    tmp13 = ThreadListLoadingIndicatorDefault;
-                  }
-                  footer = undefined;
-                  if (loading) {
-                    footer = closure_3.footer;
-                  }
-                  return (
-                    <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
-                      {null}
-                    </closure_16>
-                  );
-                }
-              }
-            }
-            const item2 = threadIds.forEach((threadId, index) => {
-              const obj = {
-                type: "thread",
-                threadId,
-                start: 0 === index,
-                end: index === threadIds.length - 1,
-                onPress: onThreadPress,
-              };
-              return items3.push(obj);
-            });
           }
           cResult[4] = threadIds;
           cResult[5] = joinedThreadIds;
           cResult[6] = onThreadPress;
           cResult[7] = unjoinedThreadIds;
           cResult[8] = items3;
-          arr4 = items3;
         }
       }
       const fn = function n() {
-        const tmp = !loading && canLoadMore;
+        let tmp = !loading;
+        if (!loading) {
+          tmp = canLoadMore;
+        }
         if (tmp) {
           loadMore();
         }
@@ -1227,26 +911,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = loadMore;
       cResult[2] = loading;
       cResult[3] = fn;
-      tmp8 = fn;
+      tmp7 = fn;
+      let obj3 = onThreadPress(contentContainerStyle[12]);
     }
   : (onCreateThreadPress) => {
-      let channel;
-      let closure_3;
-      let onThreadPress;
       ({ channel, onThreadPress } = onCreateThreadPress);
       onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
       const contentContainerStyle = onCreateThreadPress.contentContainerStyle;
       let canLoadMore;
       let loadMore;
       let tmp = canLoadMore();
-      react = tmp;
-      let obj = onThreadPress(contentContainerStyle[12]);
-      const activeThreads = obj.useActiveThreads(channel);
+      noop = tmp;
+      const activeThreads = onThreadPress(contentContainerStyle[12]).useActiveThreads(channel);
       const joinedThreadIds = activeThreads.joinedThreadIds;
       const unjoinedThreadIds = activeThreads.unjoinedThreadIds;
-      const useArchivedThreads = onThreadPress(contentContainerStyle[12]).useArchivedThreads;
-      const tmp3 = onThreadPress(contentContainerStyle[12]);
-      const archivedThreads = useArchivedThreads(
+      let obj = onThreadPress(contentContainerStyle[12]);
+      const archivedThreads = onThreadPress(contentContainerStyle[12]).useArchivedThreads(
         channel,
         onThreadPress(contentContainerStyle[13]).ThreadSortOrder.LATEST_ACTIVITY,
         loadMore,
@@ -1257,86 +937,74 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       loadMore = archivedThreads.loadMore;
       const loading = archivedThreads.loading;
       let items = [loading, canLoadMore, loadMore];
-      onEndReached = react.useCallback(() => {
-        const tmp = !loading && canLoadMore;
+      onEndReached = noop.useCallback(() => {
+        let tmp = !loading;
+        if (!loading) {
+          tmp = canLoadMore;
+        }
         if (tmp) {
           loadMore();
         }
       }, items);
       let items1 = [threadIds, joinedThreadIds, onThreadPress, unjoinedThreadIds];
-      const memo = react.useMemo(() => {
-        let intl;
-        let intl2;
-        let intl3;
-        let obj3;
-        let obj5;
+      const memo = noop.useMemo(() => {
         const items = [];
         if (joinedThreadIds.length > 0) {
-          const push2 = items.push;
-          const obj2 = {
-            type: "section",
-            title: intl2.formatToPlainString(onThreadPress(contentContainerStyle[15]).t.fcXlhe, obj3),
-          };
-          intl2 = onThreadPress(contentContainerStyle[15]).intl;
-          obj3 = { count: joinedThreadIds.length };
-          push2(obj2);
-          const item = joinedThreadIds.forEach((threadId, index) => {
-            const obj = {
+          const obj2 = { type: "section", title: null };
+          const intl2 = onThreadPress(contentContainerStyle[15]).intl;
+          const obj3 = { count: joinedThreadIds.length };
+          obj2.title = intl2.formatToPlainString(onThreadPress(contentContainerStyle[15]).t.fcXlhe, obj3);
+          items.push(obj2);
+          const item = joinedThreadIds.forEach((threadId, index) =>
+            items.push({
               type: "thread",
               threadId,
               start: 0 === index,
               end: index === joinedThreadIds.length - 1,
               onPress: onThreadPress,
-            };
-            return items.push(obj);
-          });
+            }),
+          );
         }
         if (unjoinedThreadIds.length > 0) {
-          const push3 = items.push;
-          const obj4 = {
-            type: "section",
-            title: intl3.formatToPlainString(onThreadPress(contentContainerStyle[15]).t.GHY7yQ, obj5),
-          };
-          intl3 = onThreadPress(contentContainerStyle[15]).intl;
-          obj5 = { count: unjoinedThreadIds.length };
-          push3(obj4);
-          const item1 = unjoinedThreadIds.forEach((threadId, index) => {
-            const obj = {
+          const obj4 = { type: "section", title: null };
+          const intl3 = onThreadPress(contentContainerStyle[15]).intl;
+          const obj5 = { count: unjoinedThreadIds.length };
+          obj4.title = intl3.formatToPlainString(onThreadPress(contentContainerStyle[15]).t.GHY7yQ, obj5);
+          items.push(obj4);
+          const item1 = unjoinedThreadIds.forEach((threadId, index) =>
+            items.push({
               type: "thread",
               threadId,
               start: 0 === index,
               end: index === unjoinedThreadIds.length - 1,
               onPress: onThreadPress,
-            };
-            return items.push(obj);
-          });
+            }),
+          );
         }
         if (threadIds.length > 0) {
-          let obj = { type: "section", title: intl.string(onThreadPress(contentContainerStyle[15]).t.XsgrjS) };
-          const push = items.push;
-          intl = onThreadPress(contentContainerStyle[15]).intl;
-          push(obj);
-          const item2 = threadIds.forEach((threadId, index) => {
-            const obj = {
+          const obj = { type: "section", title: null };
+          const intl = onThreadPress(contentContainerStyle[15]).intl;
+          obj.title = intl.string(onThreadPress(contentContainerStyle[15]).t.XsgrjS);
+          items.push(obj);
+          const item2 = threadIds.forEach((threadId, index) =>
+            items.push({
               type: "thread",
               threadId,
               start: 0 === index,
               end: index === threadIds.length - 1,
               onPress: onThreadPress,
-            };
-            return items.push(obj);
-          });
+            }),
+          );
         }
         return items;
       }, items1);
       let items2 = [memo.length, loading];
       const items3 = [onCreateThreadPress];
-      const memo1 = react.useMemo(() => {
-        let items2;
+      const memo1 = noop.useMemo(() => {
         if (loading) {
           if (0 === memo.length) {
             const items = [constants.LOADING];
-            items2 = items;
+            let items2 = items;
           }
           return items2;
         }
@@ -1347,14 +1015,23 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           items2 = [constants.LIST];
         }
       }, items2);
-      const memo2 = react.useMemo(() => {
+      const memo2 = noop.useMemo(() => {
         let tmp2 = null;
         if (null != onCreateThreadPress) {
-          const TableRow = TableRow2.TableRow;
-          ({ IconComponent: ThreadPlusIcon.ThreadPlusIcon });
-          const Icon = RowButton.RowButton.Icon;
-          const intl = intl5.intl;
-          tmp2 = <TableRow icon={null} onPress={tmp} label={intl.string(intl5.t.rBIGBL)} start end arrow />;
+          const obj = { icon: null, onPress: null, label: null, start: true, end: true, arrow: true };
+          const obj2 = { IconComponent: ThreadPlusIcon.ThreadPlusIcon };
+          obj.icon = jsx(RowButton.RowButton.Icon, { IconComponent: ThreadPlusIcon.ThreadPlusIcon });
+          obj.onPress = tmp;
+          const intl = util.intl;
+          obj.label = intl.string(util.t.rBIGBL);
+          tmp2 = jsx(TableRow.TableRow, {
+            icon: null,
+            onPress: null,
+            label: null,
+            start: true,
+            end: true,
+            arrow: true,
+          });
         }
         return tmp2;
       }, items3);
@@ -1366,26 +1043,32 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items4[7] = onEndReached;
       items4[8] = loading;
       items4[9] = contentContainerStyle;
-      const callback1 = react.useCallback((key, arg1, state, cleanUp) => {
-        let footer;
-        let intl;
-        let tmp13;
+      const callback1 = noop.useCallback((key, arg1, state, cleanUp) => {
         if (constants.EMPTY === arg1) {
+          const obj2 = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
+          const obj3 = { onCreateThreadPress };
+          obj2.children = jsx(ThreadListEmptyDefault, { onCreateThreadPress });
           return (
             <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
               {null}
             </closure_16>
           );
         } else if (constants.LOADING === arg1) {
+          const obj4 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
           const items = [,];
           ({ container: arr[0], center: arr[1] } = closure_3);
+          obj4.contentContainerStyle = items;
+          obj4.state = state;
+          obj4.cleanUp = cleanUp;
+          obj4.children = jsx(ThreadListLoadingIndicatorDefault, {});
           return (
-            <closure_16 key={key} contentContainerStyle={items} state={state} cleanUp={cleanUp}>
+            <closure_16 key={key} contentContainerStyle={null} state={null} cleanUp={null}>
               {null}
             </closure_16>
           );
         } else if (constants.LIST === arg1) {
-          ({
+          const obj = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
+          const obj5 = {
             data: memo,
             ListHeaderComponent: memo2,
             ListHeaderComponentStyle: closure_3.header,
@@ -1393,21 +1076,37 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             keyExtractor,
             onEndReached,
             onEndReachedThreshold: 0.4,
-            accessibilityLabel: intl.string(intl5.t.B2panI),
-            ListFooterComponent: tmp13,
-            ListFooterComponentStyle: footer,
-            contentContainerStyle,
-          });
-          const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
-          intl = intl5.intl;
-          tmp13 = undefined;
+            accessibilityLabel: null,
+            ListFooterComponent: null,
+            ListFooterComponentStyle: null,
+            contentContainerStyle: null,
+          };
+          const intl = util.intl;
+          obj5.accessibilityLabel = intl.string(util.t.B2panI);
+          let tmp13;
           if (loading) {
             tmp13 = ThreadListLoadingIndicatorDefault;
           }
-          footer = undefined;
+          obj5.ListFooterComponent = tmp13;
+          let footer;
           if (loading) {
             footer = closure_3.footer;
           }
+          obj5.ListFooterComponentStyle = footer;
+          obj5.contentContainerStyle = contentContainerStyle;
+          obj.children = jsx(_mod8404.AnimatedFlashList, {
+            data: memo,
+            ListHeaderComponent: memo2,
+            ListHeaderComponentStyle: closure_3.header,
+            renderItem,
+            keyExtractor,
+            onEndReached,
+            onEndReachedThreshold: 0.4,
+            accessibilityLabel: null,
+            ListFooterComponent: null,
+            ListFooterComponentStyle: null,
+            contentContainerStyle: null,
+          });
           return (
             <closure_16 key={key} contentContainerStyle={closure_3.container} state={state} cleanUp={cleanUp}>
               {null}
@@ -1415,9 +1114,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           );
         }
       }, items4);
-      let obj2 = { items: memo1, renderItem: callback1, getItemKey: getThreadListStateKey };
-      return threadIds(onThreadPress(contentContainerStyle[9]).TransitionGroup, obj2);
+      return threadIds(onThreadPress(contentContainerStyle[9]).TransitionGroup, {
+        items: memo1,
+        renderItem: callback1,
+        getItemKey: getThreadListStateKey,
+      });
     };
-let result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadList.tsx");
-
-export default tmp4;

@@ -1,36 +1,39 @@
 // discord_app/modules/profile_customization/native/EditIcon.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let obj2;
-let size;
-let size1;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { editIcon: obj2, xs: size, sm: size1 };
-createStyles = createStyles.createStyles;
-obj2 = {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  editIcon: {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  },
+  xs: null,
+  sm: null,
+};
+let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md };
+obj2.xs = size;
+const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
+obj2.sm = size1;
+let closure_5 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md };
-size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
-let closure_5 = createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+size = fn(2);
+const result = size.fileFinishedImporting("modules/profile_customization/native/EditIcon.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let items;
-      let style;
-      const obj = react2;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       ({ style, size } = arg0);
       let str = "xs";
       if (undefined !== size) {
@@ -40,27 +43,26 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = "sm" === str ? tmp4.sm : tmp4.xs;
       if (cResult[0] === style) {
         if (cResult[1] === tmp4.editIcon) {
-          let tmp6;
-          let tmp7;
           if (cResult[2] === tmp5) {
-            tmp6 = cResult[3];
+            let tmp6 = cResult[3];
           }
           const iconContainerStyle = tmp6.iconContainerStyle;
           if (cResult[4] !== str) {
+            const obj2 = { size: str };
             const tmp9 = jsx(PencilIcon.PencilIcon, { size: str });
             cResult[4] = str;
             cResult[5] = tmp9;
-            tmp7 = tmp9;
+            let tmp7 = tmp9;
           } else {
             tmp7 = cResult[5];
           }
           if (cResult[6] === iconContainerStyle) {
-            let tmp10;
             if (cResult[7] === tmp7) {
-              tmp10 = cResult[8];
+              let tmp10 = cResult[8];
             }
             return tmp10;
           }
+          const obj3 = { style: iconContainerStyle, children: tmp7 };
           const tmp13 = <View style={iconContainerStyle}>{tmp7}</View>;
           cResult[6] = iconContainerStyle;
           cResult[7] = tmp7;
@@ -68,8 +70,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = tmp13;
         }
       }
-      const obj4 = { iconContainerStyle: items };
-      items = [tmp4.editIcon, tmp5, style];
+      const obj4 = { iconContainerStyle: null };
+      const items = [tmp4.editIcon, tmp5, style];
+      obj4.iconContainerStyle = items;
       cResult[0] = style;
       cResult[1] = tmp4.editIcon;
       cResult[2] = tmp5;
@@ -83,12 +86,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         str = "xs";
       }
       const tmp = closure_5();
-      let closure_2 = tmp;
+      const editIcon = tmp;
       const items = [tmp, style, str];
       return (
         <View
           style={
-            react.useMemo(() => {
+            noop.useMemo(() => {
               const iconContainerStyle = [editIcon.editIcon, "sm" === str ? editIcon.sm : editIcon.xs, style];
               return { iconContainerStyle };
             }, items).iconContainerStyle
@@ -98,7 +101,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         </View>
       );
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/profile_customization/native/EditIcon.tsx");
-
-export default tmp3;

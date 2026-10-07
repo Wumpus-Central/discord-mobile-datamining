@@ -1,29 +1,21 @@
 // discord_app/modules/conjure/app_channel/native/ConjureChannelChatToasts.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import Card_Card from "../../../../design/components/Card/native/Card.native.tsx";
+import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import useConjureChatToastMessagesDefault from "../useConjureChatToastMessages.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-let rect;
-const View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { column: rect, opaque: obj2, card: obj3, body: { flex: 1 } };
-rect = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { column: null, opaque: null, card: null, body: null };
+const rect = {
   position: "absolute",
   top: nativeDefault.space.PX_8,
   right: nativeDefault.space.PX_12,
@@ -31,111 +23,106 @@ rect = {
   alignItems: "flex-end",
   gap: nativeDefault.space.PX_8,
 };
-createStyles = createStyles.createStyles;
-obj2 = {
+obj2.column = rect;
+obj2.opaque = {
   width: 304,
   maxWidth: "100%",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS,
 };
-obj3 = { padding: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let closure_7 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let obj3 = {
+  width: 304,
+  maxWidth: "100%",
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  borderRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS,
+};
+obj2.card = {
+  padding: nativeDefault.space.PX_8,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: nativeDefault.space.PX_8,
+};
+obj2.body = { flex: 1 };
+let closure_7 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (message) => {
-      let items;
-      let items1;
-      let tmp6;
-      const obj = react2;
-      const cResult = obj.c(23);
+      const cResult = c.c(23);
       message = message.message;
       const onOpenChat = message.onOpenChat;
       const tmp4 = closure_7();
-      const obj2 = UserUtils;
-      const name = obj2.useName(message.author);
+      const name = UserUtils.useName(message.author);
       if (cResult[0] !== message) {
-        const str = message.content;
-        const str3 = str.replace(/\s+/g, " ");
-        let trimmed = str3.trim();
-        if ("" === trimmed) {
-          let stringResult;
-          if (message.stickerItems.length > 0) {
-            const intl2 = intl3.intl;
-            stringResult = intl2.string(intl3.t.kHdYCW);
-          } else {
-            const intl = intl3.intl;
-            stringResult = intl.string(intl3.t["6hGo0c"]);
-          }
-          trimmed = stringResult;
+        const trimmed = message.content.replace(/\s+/g, " ").trim();
+        if ("" !== trimmed) {
+          cResult[0] = message;
+          cResult[1] = trimmed;
+          let tmp6 = trimmed;
+        } else if (message.stickerItems.length > 0) {
+          const intl2 = util.intl;
+          let stringResult = intl2.string(util.t.kHdYCW);
+        } else {
+          const intl = util.intl;
+          stringResult = intl.string(util.t["6hGo0c"]);
         }
-        cResult[0] = message;
-        cResult[1] = trimmed;
-        tmp6 = trimmed;
+        const str3 = message.content.replace(/\s+/g, " ");
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] === message) {
-        let tmp9;
-        let tmp10;
-        let tmp13;
-        let tmp16;
         if (cResult[3] === onOpenChat) {
-          tmp9 = cResult[4];
+          let tmp10 = cResult[4];
         }
         if (cResult[5] !== message.author) {
           const obj3 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
-          const Avatar = native.Avatar;
-          const tmp12 = hasOwnProperty(Avatar, obj3);
+          const tmp13 = hasOwnProperty(native.Avatar, obj3);
           cResult[5] = message.author;
-          cResult[6] = tmp12;
-          tmp10 = tmp12;
+          cResult[6] = tmp13;
+          let tmp11 = tmp13;
         } else {
-          tmp10 = cResult[6];
+          tmp11 = cResult[6];
         }
         if (cResult[7] !== name) {
           const obj4 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };
-          const tmp15 = hasOwnProperty(Text_Text.Text, obj4);
+          const tmp16 = hasOwnProperty(Text_Text.Text, obj4);
           cResult[7] = name;
-          cResult[8] = tmp15;
-          tmp13 = tmp15;
+          cResult[8] = tmp16;
+          let tmp14 = tmp16;
         } else {
-          tmp13 = cResult[8];
+          tmp14 = cResult[8];
         }
         if (cResult[9] !== tmp6) {
           const obj5 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: tmp6 };
-          const tmp18 = hasOwnProperty(Text_Text.Text, obj5);
+          const tmp19 = hasOwnProperty(Text_Text.Text, obj5);
           cResult[9] = tmp6;
-          cResult[10] = tmp18;
-          tmp16 = tmp18;
+          cResult[10] = tmp19;
+          let tmp17 = tmp19;
         } else {
-          tmp16 = cResult[10];
+          tmp17 = cResult[10];
         }
         if (cResult[11] === tmp4.body) {
-          if (cResult[12] === tmp13) {
-            let tmp19;
-            if (cResult[13] === tmp16) {
-              tmp19 = cResult[14];
+          if (cResult[12] === tmp14) {
+            if (cResult[13] === tmp17) {
+              let tmp20 = cResult[14];
             }
-            if (cResult[15] === tmp9) {
+            if (cResult[15] === tmp10) {
               if (cResult[16] === tmp4.card) {
-                if (cResult[17] === tmp10) {
-                  let tmp23;
-                  if (cResult[18] === tmp19) {
-                    tmp23 = cResult[19];
+                if (cResult[17] === tmp11) {
+                  if (cResult[18] === tmp20) {
+                    let tmp24 = cResult[19];
                   }
                   if (cResult[20] === tmp4.opaque) {
-                    let tmp26;
-                    if (cResult[21] === tmp23) {
-                      tmp26 = cResult[22];
+                    if (cResult[21] === tmp24) {
+                      let tmp27 = cResult[22];
                     }
-                    return tmp26;
+                    return tmp27;
                   }
-                  const obj6 = { style: tmp4.opaque, children: tmp23 };
-                  const tmp29 = hasOwnProperty(View, obj6);
+                  const obj6 = { style: tmp4.opaque, children: tmp24 };
+                  const tmp30 = hasOwnProperty(View, obj6);
                   cResult[20] = tmp4.opaque;
-                  cResult[21] = tmp23;
-                  cResult[22] = tmp29;
-                  tmp26 = tmp29;
+                  cResult[21] = tmp24;
+                  cResult[22] = tmp30;
+                  tmp27 = tmp30;
                 }
               }
             }
@@ -144,27 +131,29 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               shadow: "high",
               border: "subtle",
               style: tmp4.card,
-              onPress: tmp9,
-              children: items,
+              onPress: tmp10,
+              children: null,
             };
-            items = [tmp10, tmp19];
-            const tmp25 = metroRequire(Card_Card.Card, obj7);
-            cResult[15] = tmp9;
+            const items = [tmp11, tmp20];
+            obj7.children = items;
+            const tmp26 = timestampProducer(Card.Card, obj7);
+            cResult[15] = tmp10;
             cResult[16] = tmp4.card;
-            cResult[17] = tmp10;
-            cResult[18] = tmp19;
-            cResult[19] = tmp25;
-            tmp23 = tmp25;
+            cResult[17] = tmp11;
+            cResult[18] = tmp20;
+            cResult[19] = tmp26;
+            tmp24 = tmp26;
           }
         }
-        const obj8 = { style: tmp4.body, children: items1 };
-        items1 = [tmp13, tmp16];
-        const tmp22 = metroRequire(View, obj8);
+        const obj8 = { style: tmp4.body, children: null };
+        const items1 = [tmp14, tmp17];
+        obj8.children = items1;
+        const tmp23 = timestampProducer(View, obj8);
         cResult[11] = tmp4.body;
-        cResult[12] = tmp13;
-        cResult[13] = tmp16;
-        cResult[14] = tmp22;
-        tmp19 = tmp22;
+        cResult[12] = tmp14;
+        cResult[13] = tmp17;
+        cResult[14] = tmp23;
+        tmp20 = tmp23;
       }
       const fn = function x() {
         return onOpenChat(message);
@@ -172,135 +161,118 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = message;
       cResult[3] = onOpenChat;
       cResult[4] = fn;
-      tmp9 = fn;
+      tmp10 = fn;
     }
   : (message) => {
-      let Card;
-      let items1;
-      let items2;
-      let obj3;
       message = message.message;
       const onOpenChat = message.onOpenChat;
       const tmp = closure_7();
-      const obj = UserUtils;
-      const str = message.content;
-      const name = obj.useName(message.author);
-      const str2 = str.replace(/\s+/g, " ");
-      let trimmed = str2.trim();
-      if ("" === trimmed) {
-        let stringResult;
-        if (message.stickerItems.length > 0) {
-          const intl2 = intl3.intl;
-          stringResult = intl2.string(intl3.t.kHdYCW);
-        } else {
-          const intl = intl3.intl;
-          stringResult = intl.string(intl3.t["6hGo0c"]);
-        }
-        trimmed = stringResult;
+      const name = UserUtils.useName(message.author);
+      const trimmed = message.content.replace(/\s+/g, " ").trim();
+      if ("" !== trimmed) {
+        const items = [message, onOpenChat];
+        const obj2 = { style: tmp.opaque, children: null };
+        const callback = noop.useCallback(() => onOpenChat(message), items);
+        const obj3 = {
+          variant: "primary",
+          shadow: "high",
+          border: "subtle",
+          style: tmp.card,
+          onPress: callback,
+          children: null,
+        };
+        const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
+        const items1 = [hasOwnProperty(native.Avatar, obj4)];
+        const obj5 = { style: tmp.body, children: null };
+        const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };
+        const items2 = [hasOwnProperty(Text_Text.Text, obj6)];
+        const obj7 = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: trimmed };
+        items2[1] = hasOwnProperty(Text_Text.Text, obj7);
+        obj5.children = items2;
+        items1[1] = timestampProducer(View, obj5);
+        obj3.children = items1;
+        obj2.children = timestampProducer(Card.Card, obj3);
+        return hasOwnProperty(View, obj2);
+      } else if (message.stickerItems.length > 0) {
+        const intl2 = util.intl;
+        let stringResult = intl2.string(util.t.kHdYCW);
+      } else {
+        const intl = util.intl;
+        stringResult = intl.string(util.t["6hGo0c"]);
       }
-      const items = [message, onOpenChat];
-      const obj2 = { style: tmp.opaque, children: metroRequire(Card, obj3) };
-      const callback = react.useCallback(() => onOpenChat(message), items);
-      obj3 = {
-        variant: "primary",
-        shadow: "high",
-        border: "subtle",
-        style: tmp.card,
-        onPress: callback,
-        children: items1,
-      };
-      Card = Card_Card.Card;
-      const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
-      const Avatar = native.Avatar;
-      items1 = [hasOwnProperty(Avatar, obj4)];
-      const obj5 = { style: tmp.body, children: items2 };
-      items2 = [
-        hasOwnProperty(Text_Text.Text, {
-          variant: "text-xs/semibold",
-          color: "text-default",
-          lineClamp: 1,
-          children: name,
-        }),
-        hasOwnProperty(Text_Text.Text, {
-          variant: "text-sm/normal",
-          color: "text-default",
-          lineClamp: 1,
-          children: trimmed,
-        }),
-      ];
-      items1[1] = metroRequire(View, obj5);
-      return hasOwnProperty(View, obj2);
+      const str2 = message.content.replace(/\s+/g, " ");
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj4 = {
+  padding: nativeDefault.space.PX_8,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: nativeDefault.space.PX_8,
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/app_channel/native/ConjureChannelChatToasts.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onOpenChat) => {
-      let obj = onOpenChat(576);
-      const cResult = obj.c(8);
+      const cResult = onOpenChat(576).c(8);
       onOpenChat = onOpenChat.onOpenChat;
-      const channelId = onOpenChat.channelId;
       const tmp2 = closure_7();
-      const arr = useConjureChatToastMessagesDefault(channelId, true);
+      const arr = useConjureChatToastMessagesDefault(onOpenChat.channelId, true);
+      let num = 0;
       if (0 === arr.length) {
         return null;
       } else {
-        let tmp4;
         if (cResult[0] === arr) {
-          let tmp3;
           if (cResult[1] === onOpenChat) {
-            tmp3 = cResult[2];
-          }
-          if (cResult[5] === tmp2.column) {
-            let tmp6;
-            if (cResult[6] === tmp3) {
-              tmp6 = cResult[7];
+            if (cResult[5] === tmp2.column) {
+              if (cResult[6] === tmp3) {
+                let tmp7 = cResult[7];
+              }
+              return tmp7;
             }
-            return tmp6;
+            const obj2 = {
+              style: tmp12,
+              pointerEvents: "box-none",
+              accessibilityLiveRegion: "polite",
+              children: cResult[2],
+            };
+            const tmp10 = closure_5(View, obj2);
+            cResult[5] = tmp2.column;
+            cResult[6] = cResult[2];
+            cResult[7] = tmp10;
+            tmp7 = tmp10;
           }
-          const obj2 = { style: tmp11, pointerEvents: "box-none", accessibilityLiveRegion: "polite", children: tmp3 };
-          const tmp9 = closure_5(View, obj2);
-          cResult[5] = tmp2.column;
-          cResult[6] = tmp3;
-          cResult[7] = tmp9;
-          tmp6 = tmp9;
         }
         if (cResult[3] !== onOpenChat) {
           const fn = function x(message) {
-            const obj = { message, onOpenChat };
-            return hasOwnProperty(closure_8, obj, message.id);
+            return hasOwnProperty(closure_8, { message, onOpenChat }, message.id);
           };
           cResult[3] = onOpenChat;
           cResult[4] = fn;
-          tmp4 = fn;
+          let tmp4 = fn;
         } else {
           tmp4 = cResult[4];
         }
         const mapped = arr.map(tmp4);
-        cResult[0] = arr;
+        cResult[num] = arr;
         cResult[1] = onOpenChat;
+        num = 2;
         cResult[2] = mapped;
-        tmp3 = mapped;
       }
+      const obj = onOpenChat(576);
     }
   : (onOpenChat) => {
       onOpenChat = onOpenChat.onOpenChat;
-      const channelId = onOpenChat.channelId;
-      const tmp = closure_7();
-      const arr = useConjureChatToastMessagesDefault(channelId, true);
+      const arr = useConjureChatToastMessagesDefault(onOpenChat.channelId, true);
       let tmp2 = null;
       if (0 !== arr.length) {
-        let obj = {
+        const obj = {
           style: tmp.column,
           pointerEvents: "box-none",
           accessibilityLiveRegion: "polite",
-          children: arr.map((message) => {
-            const obj = { message, onOpenChat };
-            return hasOwnProperty(closure_8, obj, message.id);
-          }),
+          children: arr.map((message) => hasOwnProperty(closure_8, { message, onOpenChat }, message.id)),
         };
         tmp2 = closure_5(View, obj);
       }
       return tmp2;
     };
-const result = size.fileFinishedImporting("modules/conjure/app_channel/native/ConjureChannelChatToasts.tsx");
-
-export default tmp4;

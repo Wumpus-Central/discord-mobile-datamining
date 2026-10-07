@@ -2,12 +2,10 @@
 import UnicodeEmojisDefault from "../UnicodeEmojis.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let map;
-
 let result = size.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 
 export default function dedupeEmojisByNameOrId(arg0) {
-  map = new Map();
+  const map = new Map();
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

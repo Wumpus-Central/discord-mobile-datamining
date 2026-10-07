@@ -1,31 +1,22 @@
 // discord_app/modules/forums/native/posts/ForumPostMessageContent.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useNativeForumPostContentDefault from "hooks/useNativeForumPostContent.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_4 = createStyles.createStyles({ text: { alignSelf: "flex-start" } });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (hasUnreads) => {
-      let content;
-      let isMessageDeleted;
-      let lineClamp;
-      let message;
-      let messageContent;
-      let messageLoaded;
-      let senderModifier;
-      let style;
-      let variant;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       ({ messageContent, message, isMessageDeleted, messageLoaded, lineClamp, senderModifier } = hasUnreads);
       let num = 2;
-      hasUnreads = hasUnreads.hasUnreads;
       if (undefined !== lineClamp) {
         num = lineClamp;
       }
@@ -34,34 +25,39 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === message) {
           if (cResult[2] === messageContent) {
             if (cResult[3] === messageLoaded) {
-              let tmp5;
               if (cResult[4] === senderModifier) {
-                tmp5 = cResult[5];
+                let tmp5 = cResult[5];
               }
               ({ content, style, variant } = useNativeForumPostContentDefault(tmp5));
               let str = "text-muted";
-              useNativeForumPostContentDefault(tmp5);
-              if (hasUnreads) {
+              if (hasUnreads.hasUnreads) {
                 str = "text-default";
               }
               if (cResult[6] === style) {
-                let tmp8;
                 if (cResult[7] === tmp4.text) {
-                  tmp8 = cResult[8];
+                  let tmp8 = cResult[8];
                 }
                 if (cResult[9] === content) {
                   if (cResult[10] === num) {
                     if (cResult[11] === str) {
                       if (cResult[12] === tmp8) {
-                        let tmp9;
                         if (cResult[13] === variant) {
-                          tmp9 = cResult[14];
+                          let tmp9 = cResult[14];
                         }
                         return tmp9;
                       }
                     }
                   }
                 }
+                const obj2 = {
+                  variant,
+                  color: str,
+                  lineClamp: num,
+                  ellipsizeMode: "tail",
+                  includeFontPadding: true,
+                  style: tmp8,
+                  children: content,
+                };
                 const tmp11 = jsx(Text_Text.Text, {
                   variant,
                   color: str,
@@ -84,6 +80,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[7] = tmp4.text;
               cResult[8] = items;
               tmp8 = items;
+              const tmp7 = useNativeForumPostContentDefault(tmp5);
             }
           }
         }
@@ -97,42 +94,45 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = obj3;
       tmp5 = obj3;
     }
-  : (lineClamp) => {
-      let content;
-      let hasUnreads;
-      let isMessageDeleted;
-      let message;
-      let messageContent;
-      let messageLoaded;
-      let style;
-      let variant;
-      let num = lineClamp.lineClamp;
-      ({ messageContent, message, isMessageDeleted, hasUnreads, messageLoaded } = lineClamp);
+  : (senderModifier) => {
+      let num = senderModifier.lineClamp;
+      ({ messageContent, message, isMessageDeleted, hasUnreads, messageLoaded } = senderModifier);
       if (num === undefined) {
         num = 2;
       }
-      const senderModifier = lineClamp.senderModifier;
       const tmp = closure_4();
       ({ content, style, variant } = useNativeForumPostContentDefault({
         message,
         messageLoaded,
         messageContent,
         isMessageDeleted,
-        senderModifier,
+        senderModifier: senderModifier.senderModifier,
       }));
+      const obj = {
+        variant,
+        color: null,
+        lineClamp: null,
+        ellipsizeMode: "tail",
+        includeFontPadding: true,
+        style: null,
+        children: null,
+      };
       let str = "text-muted";
-      useNativeForumPostContentDefault({ message, messageLoaded, messageContent, isMessageDeleted, senderModifier });
-      const Text = Text_Text.Text;
       if (hasUnreads) {
         str = "text-default";
       }
+      obj.color = str;
+      obj.lineClamp = num;
       const items = [style, tmp.text];
-      return (
-        <Text variant={variant} color={str} lineClamp={num} ellipsizeMode="tail" includeFontPadding style={items}>
-          {content}
-        </Text>
-      );
+      obj.style = items;
+      obj.children = content;
+      return jsx(Text_Text.Text, {
+        variant,
+        color: null,
+        lineClamp: null,
+        ellipsizeMode: "tail",
+        includeFontPadding: true,
+        style: null,
+        children: null,
+      });
     };
-const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
-
-export default tmp3;

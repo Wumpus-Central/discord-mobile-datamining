@@ -1,17 +1,14 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeWind.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
+require = fn;
 let closure_2 = ["width", "height", "primaryTintColor", "secondaryTintColor"];
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const primaryBaseColors = ["#816bee", "#b79cf8", "#f0f0f0"];
 const secondaryBaseColors = ["#6c9ca6", "#9af4dc", "#f0f0f0"];
 const primaryTintLuminances = [0.07, 0.35, 1];
@@ -27,21 +24,13 @@ const items1 = [
   { base: 1, tint: 1 },
   { base: 6, tint: 1 },
 ];
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeWind.tsx");
+
+export const GuildBadgeWind = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let height;
-      let primaryColorsTransformed;
-      let primaryTintColor;
-      let secondaryColorsTransformed;
-      let secondaryTintColor;
-      let tmp4;
-      let tmp5;
-      let tmp6;
-      let tmp7;
-      let tmp8;
-      let width;
-      const obj = react2;
-      const cResult = obj.c(66);
+      const cResult = c.c(66);
       if (cResult[0] !== arg0) {
         ({ width, height, primaryTintColor, secondaryTintColor } = arg0);
         const tmp11 = _objectWithoutProperties(arg0, closure_2);
@@ -51,11 +40,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = secondaryTintColor;
         cResult[4] = width;
         cResult[5] = height;
-        tmp8 = height;
-        tmp7 = width;
-        tmp6 = secondaryTintColor;
-        tmp5 = tmp11;
-        tmp4 = primaryTintColor;
+        let tmp8 = height;
+        let tmp7 = width;
+        let tmp6 = secondaryTintColor;
+        let tmp5 = tmp11;
+        let tmp4 = primaryTintColor;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -72,31 +61,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         num8 = tmp8;
       }
       if (cResult[6] === tmp4) {
-        let tmp12;
-        let tmp14;
-        let tmp18;
-        let tmp17;
-        let tmp22;
-        let tmp25;
-        let tmp29;
-        let tmp32;
-        let tmp36;
-        let tmp35;
-        let tmp40;
-        let tmp43;
-        let tmp46;
-        let tmp49;
-        let tmp52;
-        let tmp55;
-        let tmp58;
-        let tmp61;
-        let tmp64;
-        let tmp67;
-        let tmp70;
-        let tmp73;
-        let tmp76;
         if (cResult[7] === tmp6) {
-          tmp12 = cResult[8];
+          let tmp12 = cResult[8];
         }
         ({ primaryColorsTransformed, secondaryColorsTransformed } = tmp12);
         if (cResult[9] !== primaryColorsTransformed[1]) {
@@ -104,23 +70,23 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             d: "M14 4V3h-2V1H8v1H7v1H6V2H3v1H2v4H1v3h1V9h1V8h5V6h1V5h5v1h1V4h-1Z",
             fill: primaryColorsTransformed[1],
           };
-          const tmp16 = React3(inlineStyles.Path, obj2);
+          const tmp16 = React4(inlineStyles.Path, obj2);
           cResult[9] = primaryColorsTransformed[1];
           cResult[10] = tmp16;
-          tmp14 = tmp16;
+          let tmp14 = tmp16;
         } else {
           tmp14 = cResult[10];
         }
         if (cResult[11] !== secondaryColorsTransformed[1]) {
           const obj3 = { d: "M9 6v1H8v2h1v2h2v1h3v-1h1V6H9Z", fill: secondaryColorsTransformed[1] };
-          const tmp20 = React3(inlineStyles.Path, obj3);
+          const tmp20 = React4(inlineStyles.Path, obj3);
           const obj4 = { d: "M4 10v4h1v1h3v-1h1v-4H4Z", fill: secondaryColorsTransformed[1] };
-          const tmp21 = React3(inlineStyles.Path, obj4);
+          const tmp21 = React4(inlineStyles.Path, obj4);
           cResult[11] = secondaryColorsTransformed[1];
           cResult[12] = tmp20;
           cResult[13] = tmp21;
-          tmp18 = tmp21;
-          tmp17 = tmp20;
+          let tmp18 = tmp21;
+          let tmp17 = tmp20;
         } else {
           tmp17 = cResult[12];
           tmp18 = cResult[13];
@@ -130,53 +96,53 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             d: "M8 14H5v1h3v-1ZM14 11h-3v1h3v-1ZM15 10h-1v1h1v-1ZM9 13H8v1h1v-1Z",
             fill: secondaryColorsTransformed[0],
           };
-          const tmp24 = React3(inlineStyles.Path, obj5);
+          const tmp24 = React4(inlineStyles.Path, obj5);
           cResult[14] = secondaryColorsTransformed[0];
           cResult[15] = tmp24;
-          tmp22 = tmp24;
+          let tmp22 = tmp24;
         } else {
           tmp22 = cResult[15];
         }
         if (cResult[16] !== secondaryColorsTransformed[2]) {
           const obj6 = { d: "M9 7H8v1h1V7ZM11 8h-1v1h1V8ZM14 6H9v1h5V6Z", fill: secondaryColorsTransformed[2] };
-          const tmp27 = React3(inlineStyles.Path, obj6);
+          const tmp27 = React4(inlineStyles.Path, obj6);
           cResult[16] = secondaryColorsTransformed[2];
           cResult[17] = tmp27;
-          tmp25 = tmp27;
+          let tmp25 = tmp27;
         } else {
           tmp25 = cResult[17];
         }
         const _Symbol = Symbol;
         if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp31 = React3(inlineStyles.Path, {
+          const tmp31 = React4(inlineStyles.Path, {
             d: "M8 1H7v1h1V1ZM15 3h-1v1h1V3ZM14 8h-1v2h1V8ZM9 6H8v1h1V6Z",
             fill: "#000",
           });
           cResult[18] = tmp31;
-          tmp29 = tmp31;
+          let tmp29 = tmp31;
         } else {
           tmp29 = cResult[18];
         }
         if (cResult[19] !== primaryColorsTransformed[0]) {
           const obj7 = { d: "M9 5H8v1h1V5Z", fill: primaryColorsTransformed[0] };
-          const tmp34 = React3(inlineStyles.Path, obj7);
+          const tmp34 = React4(inlineStyles.Path, obj7);
           cResult[19] = primaryColorsTransformed[0];
           cResult[20] = tmp34;
-          tmp32 = tmp34;
+          let tmp32 = tmp34;
         } else {
           tmp32 = cResult[20];
         }
         const _Symbol2 = Symbol;
         if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp38 = React3(inlineStyles.Path, { d: "M3 9H2v1h1V9ZM7 13H6v1h1v-1ZM6 12H5v1h1v-1Z", fill: "#000" });
-          const tmp39 = React3(inlineStyles.Path, {
+          const tmp38 = React4(inlineStyles.Path, { d: "M3 9H2v1h1V9ZM7 13H6v1h1v-1ZM6 12H5v1h1v-1Z", fill: "#000" });
+          const tmp39 = React4(inlineStyles.Path, {
             d: "M6 12H5v1h1v-1ZM13 10h-1v1h1v-1ZM12 9h-1v1h1V9ZM5 14H4v1h1v-1ZM9 14H8v1h1v-1ZM2 10H1v1h1v-1ZM3 14H2v1h1v-1ZM2 15H1v1h1v-1ZM15 4v2h-1v1h1v4h1V4h-1ZM13 2V1h-1v2h2V2h-1ZM6 1H3v1h3V1ZM13 7h-3v1h3V7ZM7 10H4v1h3v-1ZM8 15H5v1h3v-1ZM7 2H6v1h1V2ZM3 2H2v1h1V2Z",
             fill: "#000",
           });
           cResult[21] = tmp38;
           cResult[22] = tmp39;
-          tmp36 = tmp39;
-          tmp35 = tmp38;
+          let tmp36 = tmp39;
+          let tmp35 = tmp38;
         } else {
           tmp35 = cResult[21];
           tmp36 = cResult[22];
@@ -186,118 +152,118 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             d: "M6 2H3v1h3V2ZM7 3H6v1h1V3ZM4 5H3v1h1V5ZM2 7H1v1h1V7ZM3 3H2v1h1V3Z",
             fill: primaryColorsTransformed[2],
           };
-          const tmp42 = React3(inlineStyles.Path, obj8);
+          const tmp42 = React4(inlineStyles.Path, obj8);
           cResult[23] = primaryColorsTransformed[2];
           cResult[24] = tmp42;
-          tmp40 = tmp42;
+          let tmp40 = tmp42;
         } else {
           tmp40 = cResult[24];
         }
         const _Symbol3 = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp45 = React3(inlineStyles.Path, {
+          const tmp45 = React4(inlineStyles.Path, {
             d: "M14 12h-3v1h3v-1ZM10 11V8H9v1H8v1h1v4h1v-2h1v-1h-1ZM15 11h-1v1h1v-1ZM2 3H1v4h1V3ZM1 7H0v3h1V7ZM4 11H3v3h1v-3ZM8 11H7v2h1v-2ZM1 11H0v4h1v-4ZM12 0H8v1h4V0Z",
             fill: "#000",
           });
           cResult[25] = tmp45;
-          tmp43 = tmp45;
+          let tmp43 = tmp45;
         } else {
           tmp43 = cResult[25];
         }
         if (cResult[26] !== primaryColorsTransformed[2]) {
           const obj9 = { d: "M8 2H7v1h1V2ZM12 1H8v1h4V1Z", fill: primaryColorsTransformed[2] };
-          const tmp48 = React3(inlineStyles.Path, obj9);
+          const tmp48 = React4(inlineStyles.Path, obj9);
           cResult[26] = primaryColorsTransformed[2];
           cResult[27] = tmp48;
-          tmp46 = tmp48;
+          let tmp46 = tmp48;
         } else {
           tmp46 = cResult[27];
         }
         const _Symbol4 = Symbol;
         if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp51 = React3(inlineStyles.Path, { d: "M14 5H9v1h5V5Z", fill: "#000" });
+          const tmp51 = React4(inlineStyles.Path, { d: "M14 5H9v1h5V5Z", fill: "#000" });
           cResult[28] = tmp51;
-          tmp49 = tmp51;
+          let tmp49 = tmp51;
         } else {
           tmp49 = cResult[28];
         }
         if (cResult[29] !== primaryColorsTransformed[0]) {
           const obj10 = { d: "M14 4V3h-1v1H9v1h5v1h1V4h-1Z", fill: primaryColorsTransformed[0] };
-          const tmp54 = React3(inlineStyles.Path, obj10);
+          const tmp54 = React4(inlineStyles.Path, obj10);
           cResult[29] = primaryColorsTransformed[0];
           cResult[30] = tmp54;
-          tmp52 = tmp54;
+          let tmp52 = tmp54;
         } else {
           tmp52 = cResult[30];
         }
         if (cResult[31] !== secondaryColorsTransformed[2]) {
           const obj11 = { d: "M5 11H4v1h1v-1Z", fill: secondaryColorsTransformed[2] };
-          const tmp57 = React3(inlineStyles.Path, obj11);
+          const tmp57 = React4(inlineStyles.Path, obj11);
           cResult[31] = secondaryColorsTransformed[2];
           cResult[32] = tmp57;
-          tmp55 = tmp57;
+          let tmp55 = tmp57;
         } else {
           tmp55 = cResult[32];
         }
         if (cResult[33] !== primaryColorsTransformed[0]) {
           const obj12 = { d: "M7 6v1H3v1h5V6H7Z", fill: primaryColorsTransformed[0] };
-          const tmp60 = React3(inlineStyles.Path, obj12);
+          const tmp60 = React4(inlineStyles.Path, obj12);
           cResult[33] = primaryColorsTransformed[0];
           cResult[34] = tmp60;
-          tmp58 = tmp60;
+          let tmp58 = tmp60;
         } else {
           tmp58 = cResult[34];
         }
         const _Symbol5 = Symbol;
         if (cResult[35] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp63 = React3(inlineStyles.Path, { d: "M7 7v1H3v1h5V7H7Z", fill: "#000" });
+          const tmp63 = React4(inlineStyles.Path, { d: "M7 7v1H3v1h5V7H7Z", fill: "#000" });
           cResult[35] = tmp63;
-          tmp61 = tmp63;
+          let tmp61 = tmp63;
         } else {
           tmp61 = cResult[35];
         }
         if (cResult[36] !== primaryColorsTransformed[0]) {
           const obj13 = { d: "M3 8H2v1h1V8ZM2 9H1v1h1V9Z", fill: primaryColorsTransformed[0] };
-          const tmp66 = React3(inlineStyles.Path, obj13);
+          const tmp66 = React4(inlineStyles.Path, obj13);
           cResult[36] = primaryColorsTransformed[0];
           cResult[37] = tmp66;
-          tmp64 = tmp66;
+          let tmp64 = tmp66;
         } else {
           tmp64 = cResult[37];
         }
         if (cResult[38] !== secondaryColorsTransformed[1]) {
           const obj14 = { d: "M3 9v1H2v1H1v4h1v-1h1v-3h1v-1h4V9H3Z", fill: secondaryColorsTransformed[1] };
-          const tmp69 = React3(inlineStyles.Path, obj14);
+          const tmp69 = React4(inlineStyles.Path, obj14);
           cResult[38] = secondaryColorsTransformed[1];
           cResult[39] = tmp69;
-          tmp67 = tmp69;
+          let tmp67 = tmp69;
         } else {
           tmp67 = cResult[39];
         }
         if (cResult[40] !== secondaryColorsTransformed[2]) {
           const obj15 = { d: "M3 10H2v1h1v-1ZM2 11H1v1h1v-1Z", fill: secondaryColorsTransformed[2] };
-          const tmp72 = React3(inlineStyles.Path, obj15);
+          const tmp72 = React4(inlineStyles.Path, obj15);
           cResult[40] = secondaryColorsTransformed[2];
           cResult[41] = tmp72;
-          tmp70 = tmp72;
+          let tmp70 = tmp72;
         } else {
           tmp70 = cResult[41];
         }
         if (cResult[42] !== secondaryColorsTransformed[0]) {
           const obj16 = { d: "M3 13H2v1h1v-1ZM2 14H1v1h1v-1Z", fill: secondaryColorsTransformed[0] };
-          const tmp75 = React3(inlineStyles.Path, obj16);
+          const tmp75 = React4(inlineStyles.Path, obj16);
           cResult[42] = secondaryColorsTransformed[0];
           cResult[43] = tmp75;
-          tmp73 = tmp75;
+          let tmp73 = tmp75;
         } else {
           tmp73 = cResult[43];
         }
         if (cResult[44] !== secondaryColorsTransformed[2]) {
           const obj17 = { d: "M8 9H3v1h5V9Z", fill: secondaryColorsTransformed[2] };
-          const tmp78 = React3(inlineStyles.Path, obj17);
+          const tmp78 = React4(inlineStyles.Path, obj17);
           cResult[44] = secondaryColorsTransformed[2];
           cResult[45] = tmp78;
-          tmp76 = tmp78;
+          let tmp76 = tmp78;
         } else {
           tmp76 = cResult[45];
         }
@@ -319,9 +285,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                       if (cResult[61] === tmp18) {
                                         if (cResult[62] === tmp22) {
                                           if (cResult[63] === tmp25) {
-                                            let tmp79;
                                             if (cResult[64] === num7) {
-                                              tmp79 = cResult[65];
+                                              let tmp79 = cResult[65];
                                             }
                                             return tmp79;
                                           }
@@ -342,9 +307,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj18 = { width: num7, height: num8, viewBox: "0 0 16 16", fill: "none", children: items };
-        const Svg = inlineStyles.Svg;
+        const obj18 = {};
         const merged = Object.assign(tmp5);
+        obj18.width = num7;
+        obj18.height = num8;
+        obj18.viewBox = "0 0 16 16";
+        obj18.fill = "none";
         items = [
           tmp14,
           tmp17,
@@ -369,7 +337,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp73,
           tmp76,
         ];
-        const tmp84 = hasOwnProperty(Svg, obj18);
+        obj18.children = items;
+        const tmp84 = hasOwnProperty(inlineStyles.Svg, obj18);
         cResult[46] = num8;
         cResult[47] = tmp5;
         cResult[48] = tmp32;
@@ -392,6 +361,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[65] = tmp84;
         tmp79 = tmp84;
       }
+      const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({
+        primaryBaseColors,
+        primaryTintColor: tmp4,
+        primaryTintLuminances,
+        primaryLuminanceWeights: items,
+        secondaryBaseColors,
+        secondaryTintColor: tmp6,
+        secondaryTintLuminances,
+        secondaryLuminanceWeights: items1,
+      });
+      cResult[6] = tmp4;
+      cResult[7] = tmp6;
+      cResult[8] = transformedBadgeColors;
+      tmp12 = transformedBadgeColors;
       const obj19 = {
         primaryBaseColors,
         primaryTintColor: tmp4,
@@ -403,17 +386,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         secondaryLuminanceWeights: items1,
       };
       const tmpResult = GuildBadgeUtils;
-      const transformedBadgeColors = tmpResult.getTransformedBadgeColors(obj19);
-      cResult[6] = tmp4;
-      cResult[7] = tmp6;
-      cResult[8] = transformedBadgeColors;
-      tmp12 = transformedBadgeColors;
     }
   : (width) => {
-      let primaryColorsTransformed;
-      let primaryTintColor;
-      let secondaryColorsTransformed;
-      let secondaryTintColor;
       let num = width.width;
       if (num === undefined) {
         num = 24;
@@ -427,8 +401,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         width,
         Object.assign({ width: 0, height: 0, primaryTintColor: 0, secondaryTintColor: 0 }),
       );
-      const obj = GuildBadgeUtils;
-      const obj2 = {
+      const transformedBadgeColors = GuildBadgeUtils.getTransformedBadgeColors({
         primaryBaseColors,
         primaryTintColor,
         primaryTintLuminances,
@@ -437,71 +410,56 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         secondaryTintColor,
         secondaryTintLuminances,
         secondaryLuminanceWeights: items1,
-      };
-      const transformedBadgeColors = obj.getTransformedBadgeColors(obj2);
+      });
       ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-      const obj3 = { width: num, height: num2, viewBox: "0 0 16 16", fill: "none", children: items };
-      const Svg = inlineStyles.Svg;
+      const obj3 = {};
       const merged1 = Object.assign(merged);
-      items = [, , , , , , , , , , , , , , , , , , , , ,];
-      const obj4 = {
-        d: "M14 4V3h-2V1H8v1H7v1H6V2H3v1H2v4H1v3h1V9h1V8h5V6h1V5h5v1h1V4h-1Z",
-        fill: primaryColorsTransformed[1],
-      };
-      items[0] = React3(inlineStyles.Path, obj4);
-      const obj5 = { d: "M9 6v1H8v2h1v2h2v1h3v-1h1V6H9Z", fill: secondaryColorsTransformed[1] };
-      items[1] = React3(inlineStyles.Path, obj5);
-      const obj6 = { d: "M4 10v4h1v1h3v-1h1v-4H4Z", fill: secondaryColorsTransformed[1] };
-      items[2] = React3(inlineStyles.Path, obj6);
-      const obj7 = {
-        d: "M8 14H5v1h3v-1ZM14 11h-3v1h3v-1ZM15 10h-1v1h1v-1ZM9 13H8v1h1v-1Z",
-        fill: secondaryColorsTransformed[0],
-      };
-      items[3] = React3(inlineStyles.Path, obj7);
-      const obj8 = { d: "M9 7H8v1h1V7ZM11 8h-1v1h1V8ZM14 6H9v1h5V6Z", fill: secondaryColorsTransformed[2] };
-      items[4] = React3(inlineStyles.Path, obj8);
-      items[5] = React3(inlineStyles.Path, {
-        d: "M8 1H7v1h1V1ZM15 3h-1v1h1V3ZM14 8h-1v2h1V8ZM9 6H8v1h1V6Z",
-        fill: "#000",
-      });
-      const obj9 = { d: "M9 5H8v1h1V5Z", fill: primaryColorsTransformed[0] };
-      items[6] = React3(inlineStyles.Path, obj9);
-      items[7] = React3(inlineStyles.Path, { d: "M3 9H2v1h1V9ZM7 13H6v1h1v-1ZM6 12H5v1h1v-1Z", fill: "#000" });
-      items[8] = React3(inlineStyles.Path, {
-        d: "M6 12H5v1h1v-1ZM13 10h-1v1h1v-1ZM12 9h-1v1h1V9ZM5 14H4v1h1v-1ZM9 14H8v1h1v-1ZM2 10H1v1h1v-1ZM3 14H2v1h1v-1ZM2 15H1v1h1v-1ZM15 4v2h-1v1h1v4h1V4h-1ZM13 2V1h-1v2h2V2h-1ZM6 1H3v1h3V1ZM13 7h-3v1h3V7ZM7 10H4v1h3v-1ZM8 15H5v1h3v-1ZM7 2H6v1h1V2ZM3 2H2v1h1V2Z",
-        fill: "#000",
-      });
-      const obj10 = {
-        d: "M6 2H3v1h3V2ZM7 3H6v1h1V3ZM4 5H3v1h1V5ZM2 7H1v1h1V7ZM3 3H2v1h1V3Z",
-        fill: primaryColorsTransformed[2],
-      };
-      items[9] = React3(inlineStyles.Path, obj10);
-      items[10] = React3(inlineStyles.Path, {
-        d: "M14 12h-3v1h3v-1ZM10 11V8H9v1H8v1h1v4h1v-2h1v-1h-1ZM15 11h-1v1h1v-1ZM2 3H1v4h1V3ZM1 7H0v3h1V7ZM4 11H3v3h1v-3ZM8 11H7v2h1v-2ZM1 11H0v4h1v-4ZM12 0H8v1h4V0Z",
-        fill: "#000",
-      });
-      const obj11 = { d: "M8 2H7v1h1V2ZM12 1H8v1h4V1Z", fill: primaryColorsTransformed[2] };
-      items[11] = React3(inlineStyles.Path, obj11);
-      items[12] = React3(inlineStyles.Path, { d: "M14 5H9v1h5V5Z", fill: "#000" });
-      const obj12 = { d: "M14 4V3h-1v1H9v1h5v1h1V4h-1Z", fill: primaryColorsTransformed[0] };
-      items[13] = React3(inlineStyles.Path, obj12);
-      const obj13 = { d: "M5 11H4v1h1v-1Z", fill: secondaryColorsTransformed[2] };
-      items[14] = React3(inlineStyles.Path, obj13);
-      const obj14 = { d: "M7 6v1H3v1h5V6H7Z", fill: primaryColorsTransformed[0] };
-      items[15] = React3(inlineStyles.Path, obj14);
-      items[16] = React3(inlineStyles.Path, { d: "M7 7v1H3v1h5V7H7Z", fill: "#000" });
-      const obj15 = { d: "M3 8H2v1h1V8ZM2 9H1v1h1V9Z", fill: primaryColorsTransformed[0] };
-      items[17] = React3(inlineStyles.Path, obj15);
-      const obj16 = { d: "M3 9v1H2v1H1v4h1v-1h1v-3h1v-1h4V9H3Z", fill: secondaryColorsTransformed[1] };
-      items[18] = React3(inlineStyles.Path, obj16);
-      const obj17 = { d: "M3 10H2v1h1v-1ZM2 11H1v1h1v-1Z", fill: secondaryColorsTransformed[2] };
-      items[19] = React3(inlineStyles.Path, obj17);
-      const obj18 = { d: "M3 13H2v1h1v-1ZM2 14H1v1h1v-1Z", fill: secondaryColorsTransformed[0] };
-      items[20] = React3(inlineStyles.Path, obj18);
-      const obj19 = { d: "M8 9H3v1h5V9Z", fill: secondaryColorsTransformed[2] };
-      items[21] = React3(inlineStyles.Path, obj19);
-      return hasOwnProperty(Svg, obj3);
+      obj3.width = num;
+      obj3.height = num2;
+      obj3.viewBox = "0 0 16 16";
+      obj3.fill = "none";
+      items = [
+        React4(inlineStyles.Path, {
+          d: "M14 4V3h-2V1H8v1H7v1H6V2H3v1H2v4H1v3h1V9h1V8h5V6h1V5h5v1h1V4h-1Z",
+          fill: primaryColorsTransformed[1],
+        }),
+        React4(inlineStyles.Path, { d: "M9 6v1H8v2h1v2h2v1h3v-1h1V6H9Z", fill: secondaryColorsTransformed[1] }),
+        React4(inlineStyles.Path, { d: "M4 10v4h1v1h3v-1h1v-4H4Z", fill: secondaryColorsTransformed[1] }),
+        React4(inlineStyles.Path, {
+          d: "M8 14H5v1h3v-1ZM14 11h-3v1h3v-1ZM15 10h-1v1h1v-1ZM9 13H8v1h1v-1Z",
+          fill: secondaryColorsTransformed[0],
+        }),
+        React4(inlineStyles.Path, {
+          d: "M9 7H8v1h1V7ZM11 8h-1v1h1V8ZM14 6H9v1h5V6Z",
+          fill: secondaryColorsTransformed[2],
+        }),
+        React4(inlineStyles.Path, { d: "M8 1H7v1h1V1ZM15 3h-1v1h1V3ZM14 8h-1v2h1V8ZM9 6H8v1h1V6Z", fill: "#000" }),
+        React4(inlineStyles.Path, { d: "M9 5H8v1h1V5Z", fill: primaryColorsTransformed[0] }),
+        React4(inlineStyles.Path, { d: "M3 9H2v1h1V9ZM7 13H6v1h1v-1ZM6 12H5v1h1v-1Z", fill: "#000" }),
+        React4(inlineStyles.Path, {
+          d: "M6 12H5v1h1v-1ZM13 10h-1v1h1v-1ZM12 9h-1v1h1V9ZM5 14H4v1h1v-1ZM9 14H8v1h1v-1ZM2 10H1v1h1v-1ZM3 14H2v1h1v-1ZM2 15H1v1h1v-1ZM15 4v2h-1v1h1v4h1V4h-1ZM13 2V1h-1v2h2V2h-1ZM6 1H3v1h3V1ZM13 7h-3v1h3V7ZM7 10H4v1h3v-1ZM8 15H5v1h3v-1ZM7 2H6v1h1V2ZM3 2H2v1h1V2Z",
+          fill: "#000",
+        }),
+        React4(inlineStyles.Path, {
+          d: "M6 2H3v1h3V2ZM7 3H6v1h1V3ZM4 5H3v1h1V5ZM2 7H1v1h1V7ZM3 3H2v1h1V3Z",
+          fill: primaryColorsTransformed[2],
+        }),
+        React4(inlineStyles.Path, {
+          d: "M14 12h-3v1h3v-1ZM10 11V8H9v1H8v1h1v4h1v-2h1v-1h-1ZM15 11h-1v1h1v-1ZM2 3H1v4h1V3ZM1 7H0v3h1V7ZM4 11H3v3h1v-3ZM8 11H7v2h1v-2ZM1 11H0v4h1v-4ZM12 0H8v1h4V0Z",
+          fill: "#000",
+        }),
+        React4(inlineStyles.Path, { d: "M8 2H7v1h1V2ZM12 1H8v1h4V1Z", fill: primaryColorsTransformed[2] }),
+        React4(inlineStyles.Path, { d: "M14 5H9v1h5V5Z", fill: "#000" }),
+        React4(inlineStyles.Path, { d: "M14 4V3h-1v1H9v1h5v1h1V4h-1Z", fill: primaryColorsTransformed[0] }),
+        React4(inlineStyles.Path, { d: "M5 11H4v1h1v-1Z", fill: secondaryColorsTransformed[2] }),
+        React4(inlineStyles.Path, { d: "M7 6v1H3v1h5V6H7Z", fill: primaryColorsTransformed[0] }),
+        React4(inlineStyles.Path, { d: "M7 7v1H3v1h5V7H7Z", fill: "#000" }),
+        React4(inlineStyles.Path, { d: "M3 8H2v1h1V8ZM2 9H1v1h1V9Z", fill: primaryColorsTransformed[0] }),
+        React4(inlineStyles.Path, { d: "M3 9v1H2v1H1v4h1v-1h1v-3h1v-1h4V9H3Z", fill: secondaryColorsTransformed[1] }),
+        React4(inlineStyles.Path, { d: "M3 10H2v1h1v-1ZM2 11H1v1h1v-1Z", fill: secondaryColorsTransformed[2] }),
+        React4(inlineStyles.Path, { d: "M3 13H2v1h1v-1ZM2 14H1v1h1v-1Z", fill: secondaryColorsTransformed[0] }),
+        React4(inlineStyles.Path, { d: "M8 9H3v1h5V9Z", fill: secondaryColorsTransformed[2] }),
+      ];
+      obj3.children = items;
+      return hasOwnProperty(inlineStyles.Svg, obj3);
     };
-const result = size.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeWind.tsx");
-
-export const GuildBadgeWind = tmp4;

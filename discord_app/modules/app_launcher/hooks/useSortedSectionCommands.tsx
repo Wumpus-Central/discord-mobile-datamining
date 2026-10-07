@@ -1,61 +1,53 @@
 // discord_app/modules/app_launcher/hooks/useSortedSectionCommands.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
 import ApplicationDirectoryActionCreatorsAll from "../../global_discovery_apps/ApplicationDirectoryActionCreators.tsx";
-import AppLauncherConstants from "../AppLauncherConstants.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let importDefault, sectionId;
+const require = fn;
+const CommandListSortOrder = fn(11773).CommandListSortOrder;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
-const CommandListSortOrder = AppLauncherConstants.CommandListSortOrder;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (sectionId) => {
-      let canSort;
-      let closure_1;
-      let popularSortedCommands;
-      let tmp4;
-      let tmp5;
-      let obj = sectionId(576);
-      const cResult = obj.c(15);
+      const cResult = alphabeticalSortedCommands(576).c(15);
       sectionId = sectionId.sectionId;
+      alphabeticalSortedCommands = sectionId;
       const prop = sectionId.commandsByActiveSection;
-      [tmp4, tmp5] = react.useState(CommandListSortOrder.ALPHABETICAL);
+      let obj = alphabeticalSortedCommands(576);
+      [tmp4, tmp5] = noop.useState(CommandListSortOrder.ALPHABETICAL);
       importDefault = tmp5;
-      _slicedToArray(react.useState(CommandListSortOrder.ALPHABETICAL), 2);
       if (cResult[0] === prop) {
-        let tmp6;
-        let tmp9;
-        let tmp12;
-        let tmp15;
         if (cResult[1] === sectionId) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
         if (cResult[3] !== tmp6) {
           const obj3 = { alphabeticalSortedCommands: tmp6 };
           cResult[3] = tmp6;
           cResult[4] = obj3;
-          tmp9 = obj3;
+          let tmp9 = obj3;
         } else {
           tmp9 = cResult[4];
         }
-        const alphabeticalSortedCommands = tmp9.alphabeticalSortedCommands;
+        alphabeticalSortedCommands = tmp9.alphabeticalSortedCommands;
         const items = [alphabeticalSortedCommands];
-        const memo = react.useMemo(() => {
-          const f141950 = (command) => command.command;
+        const memo = noop.useMemo(() => {
           if (memo.length <= 1) {
-            return { popularSortedCommands: memo, canSort: false };
+            const obj2 = { popularSortedCommands: memo, canSort: false };
+            return obj2;
           } else {
-            let obj;
-            let closure_0 = false;
+            closure_0 = false;
             const mapped = memo.map((command, alphabeticalSortIndex) => {
-              const tmp = closure_0 || null != command.global_popularity_rank;
+              let tmp = closure_0;
+              if (!closure_0) {
+                tmp = null != command.global_popularity_rank;
+              }
               closure_0 = tmp;
               return { command, alphabeticalSortIndex };
             });
-            let tmp = closure_0;
-            if (tmp) {
+            if (closure_0) {
               const sorted = mapped.sort((command, command2) => {
                 const global_popularity_rank = command.command.global_popularity_rank;
                 const global_popularity_rank2 = command2.command.global_popularity_rank;
@@ -73,8 +65,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   return 1;
                 }
               });
-              obj = { popularSortedCommands: mapped.map(f141950), canSort: true };
-              const obj3 = { popularSortedCommands: mapped.map(f141950), canSort: true };
+              const obj3 = { popularSortedCommands: mapped.map((command) => command.command), canSort: true };
+              let obj = obj3;
             } else {
               obj = { popularSortedCommands: memo, canSort: false };
             }
@@ -85,57 +77,62 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== sectionId) {
           class L {
             constructor() {
-              const obj = ApplicationDirectoryActionCreatorsAll;
-              const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-              const application = obj.getApplication(sectionId, obj2);
+              obj = closure_2(closure_3[5]);
+              obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+              application = obj.getApplication(closure_0, obj1);
+              return;
             }
           }
           const items1 = [sectionId];
           cResult[5] = sectionId;
           cResult[6] = L;
           cResult[7] = items1;
-          tmp12 = items1;
+          let tmp12 = items1;
         } else {
           class L {
             constructor() {
-              const obj = ApplicationDirectoryActionCreatorsAll;
-              const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-              const application = obj.getApplication(sectionId, obj2);
+              obj = closure_2(closure_3[5]);
+              obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+              application = obj.getApplication(closure_0, obj1);
+              return;
             }
           }
           tmp12 = cResult[7];
         }
-        const effect = react.useEffect(L, tmp12);
+        const effect = noop.useEffect(L, tmp12);
         if (cResult[8] !== canSort) {
           class L {
             constructor() {
-              const obj = ApplicationDirectoryActionCreatorsAll;
-              const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-              const application = obj.getApplication(sectionId, obj2);
+              obj = closure_2(closure_3[5]);
+              obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+              application = obj.getApplication(closure_0, obj1);
+              return;
             }
           }
           const items2 = [canSort];
           cResult[8] = canSort;
           cResult[9] = tmp16;
           cResult[10] = items2;
-          tmp15 = items2;
+          let tmp15 = items2;
         } else {
           class L {
             constructor() {
-              const obj = ApplicationDirectoryActionCreatorsAll;
-              const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-              const application = obj.getApplication(sectionId, obj2);
+              obj = closure_2(closure_3[5]);
+              obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+              application = obj.getApplication(closure_0, obj1);
+              return;
             }
           }
           tmp15 = cResult[10];
         }
-        const layoutEffect = react.useLayoutEffect(tmp16, tmp15);
+        const layoutEffect = noop.useLayoutEffect(tmp16, tmp15);
         if (CommandListSortOrder.POPULAR !== tmp4) {
           class L {
             constructor() {
-              const obj = ApplicationDirectoryActionCreatorsAll;
-              const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-              const application = obj.getApplication(sectionId, obj2);
+              obj = closure_2(closure_3[5]);
+              obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+              application = obj.getApplication(closure_0, obj1);
+              return;
             }
           }
           popularSortedCommands = tmp6;
@@ -143,9 +140,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] === canSort) {
           class L {
             constructor() {
-              const obj = ApplicationDirectoryActionCreatorsAll;
-              const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-              const application = obj.getApplication(sectionId, obj2);
+              obj = closure_2(closure_3[5]);
+              obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+              application = obj.getApplication(closure_0, obj1);
+              return;
             }
           }
         }
@@ -155,22 +153,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp4;
         cResult[14] = obj4;
       }
-      const found = prop.find((section) => section.section.id === sectionId);
+      const found = prop.find((section) => section.section.id === alphabeticalSortedCommands);
       if (found != null) {
         class L {
           constructor() {
-            const obj = ApplicationDirectoryActionCreatorsAll;
-            const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-            const application = obj.getApplication(sectionId, obj2);
+            obj = closure_2(closure_3[5]);
+            obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+            application = obj.getApplication(closure_0, obj1);
+            return;
           }
         }
       }
       if (undefined == null) {
         class L {
           constructor() {
-            const obj = ApplicationDirectoryActionCreatorsAll;
-            const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-            const application = obj.getApplication(sectionId, obj2);
+            obj = closure_2(closure_3[5]);
+            obj1 = { dontRefetchMs: closure_1(closure_3[6]).Millis.DAY };
+            application = obj.getApplication(closure_0, obj1);
+            return;
           }
         }
       }
@@ -178,22 +178,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = sectionId;
       cResult[2] = undefined;
       tmp6 = tmp8;
+      const tmp3 = _slicedToArray(noop.useState(CommandListSortOrder.ALPHABETICAL), 2);
     }
   : (sectionId) => {
-      let canSort;
-      let commands;
-      let popularSortedCommands;
-      let tmp3;
-      let tmp4;
       sectionId = sectionId.sectionId;
       const commandsByActiveSection = sectionId.commandsByActiveSection;
       let setSortOrder;
       canSort = undefined;
-      [tmp3, tmp4] = _slicedToArray(react.useState(CommandListSortOrder.ALPHABETICAL), 2);
+      [tmp3, tmp4] = noop.useState(CommandListSortOrder.ALPHABETICAL);
       const items = [commandsByActiveSection, sectionId];
-      const tmp2 = _slicedToArray(react.useState(CommandListSortOrder.ALPHABETICAL), 2);
-      const memo = react.useMemo(() => {
-        const found = commandsByActiveSection.find((section) => section.section.id === sectionId);
+      const memo = noop.useMemo(() => {
+        const found = commandsByActiveSection.find((section) => section.section.id === memo);
         let data;
         if (found != null) {
           data = found.data;
@@ -204,20 +199,21 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return data;
       }, items);
       const items1 = [memo];
-      const memo1 = react.useMemo(() => {
-        const f141950 = (command) => command.command;
+      const memo1 = noop.useMemo(() => {
         if (memo.length <= 1) {
-          return { popularSortedCommands: memo, canSort: false };
+          const obj2 = { popularSortedCommands: memo, canSort: false };
+          return obj2;
         } else {
-          let obj;
-          let closure_0 = false;
+          closure_0 = false;
           const mapped = memo.map((command, alphabeticalSortIndex) => {
-            const tmp = closure_0 || null != command.global_popularity_rank;
+            let tmp = closure_0;
+            if (!closure_0) {
+              tmp = null != command.global_popularity_rank;
+            }
             closure_0 = tmp;
             return { command, alphabeticalSortIndex };
           });
-          let tmp = closure_0;
-          if (tmp) {
+          if (closure_0) {
             const sorted = mapped.sort((command, command2) => {
               const global_popularity_rank = command.command.global_popularity_rank;
               const global_popularity_rank2 = command2.command.global_popularity_rank;
@@ -235,8 +231,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return 1;
               }
             });
-            obj = { popularSortedCommands: mapped.map(f141950), canSort: true };
-            const obj3 = { popularSortedCommands: mapped.map(f141950), canSort: true };
+            const obj3 = { popularSortedCommands: mapped.map((command) => command.command), canSort: true };
+            let obj = obj3;
           } else {
             obj = { popularSortedCommands: memo, canSort: false };
           }
@@ -245,23 +241,19 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       ({ popularSortedCommands, canSort } = memo1);
       const items2 = [sectionId];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         const obj = ApplicationDirectoryActionCreatorsAll;
-        const obj2 = { dontRefetchMs: DurationsDefault.Millis.DAY };
-        const application = obj.getApplication(sectionId, obj2);
+        const application = obj.getApplication(memo, { dontRefetchMs: DurationsDefault.Millis.DAY });
       }, items2);
       const items3 = [canSort];
-      const layoutEffect = react.useLayoutEffect(() => {
+      const layoutEffect = noop.useLayoutEffect(() => {
         if (canSort) {
           setSortOrder(CommandListSortOrder.POPULAR);
         }
       }, items3);
       if (CommandListSortOrder.POPULAR !== sortOrder) {
         const ALPHABETICAL = CommandListSortOrder.ALPHABETICAL;
-        commands = memo;
+        const commands = memo;
       }
       return { sortOrder, setSortOrder, commands, canSort };
     };
-const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
-
-export default tmp2;

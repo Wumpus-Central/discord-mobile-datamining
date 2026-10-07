@@ -1,106 +1,84 @@
 // discord_app/modules/create_guild/native/components/CreationIntent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl8 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import react_native from "../../../a11y/native/setAccessibilityFocus.android.tsx";
-import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import TableRowGroup2 from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import NewUserAnalyticsUtils from "../../../nuf/native/NewUserAnalyticsUtils.tsx";
 import ChairIllocon from "../../../../design/components/mana-assets/native/generated/ChairIllocon.native.tsx";
 import WorldIllocon from "../../../../design/components/mana-assets/native/generated/WorldIllocon.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native2 from "../../../../../_runtime/00017_react-native.js";
-import CreateGuildConstants from "../CreateGuildConstants.tsx";
-import Constants from "../../../../Constants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let dependencyMap, navigation;
-
-let c10;
-let c9;
-let closure_12;
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let unpackModuleId;
-({ View: closure_4, ScrollView: hasOwnProperty } = react_native2);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const CreateGuildConstants = fn(6475);
 ({
   CreateGuildModalStates: metroRequire,
-  GuildTemplateTriggers: metroImportDefault,
-  NUXGuildTemplatesAnalytics: metroImportAll,
+  GuildTemplateTriggers: closure_7,
+  NUXGuildTemplatesAnalytics: closure_8,
 } = CreateGuildConstants);
-({ AnalyticEvents: c9, AnalyticsLocations: c10 } = Constants);
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  contentContainer: obj2,
-  scrollContainer: obj3,
-  headerContainer: { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 },
-  headerTitle: { textAlign: "center", marginBottom: 8 },
-  headerDescription: { lineHeight: 18, textAlign: "center" },
-  sections: obj4,
-  skipDescription: { marginTop: 16, paddingHorizontal: 16, lineHeight: 18, textAlign: "center" },
+const Constants = fn(1085);
+({ AnalyticEvents: closure_9, AnalyticsLocations: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  contentContainer: { flex: 1, marginTop: fn(6075).NAV_BAR_HEIGHT },
+  scrollContainer: null,
+  headerContainer: null,
+  headerTitle: null,
+  headerDescription: null,
+  sections: null,
+  skipDescription: null,
 };
-obj2 = { flex: 1, marginTop: NavigatorConstants.NAV_BAR_HEIGHT };
-createStyles = createStyles.createStyles;
-obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
-let closure_13 = createStyles(obj);
+let obj3 = { flex: 1, marginTop: fn(6075).NAV_BAR_HEIGHT };
+obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
+obj2.headerTitle = { textAlign: "center", marginBottom: 8 };
+obj2.headerDescription = { lineHeight: 18, textAlign: "center" };
+let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+obj2.skipDescription = { marginTop: 16, paddingHorizontal: 16, lineHeight: 18, textAlign: "center" };
+let closure_13 = createStyles.createStyles(obj2);
 let closure_14 = Math.random() < 0.5;
-const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj5 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/create_guild/native/components/CreationIntent.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildTemplate) => {
-      let contentContainer;
-      let headerContainer;
-      let headerTitle;
-      let intl4;
-      let intl6;
-      let items4;
-      let items5;
-      let scrollContainer;
-      let tmp11;
-      let tmp12;
-      let tmp8;
-      let tmp9;
-      let tmp = guildTemplate;
-      const tmp2 = navigation;
-      let obj = guildTemplate(navigation[9]);
-      const cResult = obj.c(38);
+      const cResult = guildTemplate(navigation[9]).c(38);
       guildTemplate = guildTemplate.guildTemplate;
       const trigger = guildTemplate.trigger;
       const tmp4 = closure_13();
+      let obj = guildTemplate(navigation[9]);
+      navigation = guildTemplate(navigation[10]).useNavigation();
       let obj2 = guildTemplate(navigation[10]);
-      navigation = obj2.useNavigation();
-      let obj3 = guildTemplate(navigation[11]);
-      const isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
-      let obj4 = isScreenReaderEnabled;
+      const isScreenReaderEnabled = guildTemplate(navigation[11]).useIsScreenReaderEnabled();
       const ref = isScreenReaderEnabled.useRef(null);
       if (cResult[0] !== isScreenReaderEnabled) {
         const fn = function o() {
-          const tmp = isScreenReaderEnabled && null != ref.current;
+          let tmp = isScreenReaderEnabled;
+          if (isScreenReaderEnabled) {
+            tmp = null != ref.current;
+          }
           if (tmp) {
             const obj2 = { ref, delay: 100 };
-            const obj = react_native;
-            const result = obj.setAccessibilityFocus(obj2);
+            const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
           }
         };
         const items = [isScreenReaderEnabled];
         cResult[0] = isScreenReaderEnabled;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp9 = items;
-        tmp8 = fn;
+        let tmp9 = items;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[1];
         tmp9 = cResult[2];
@@ -108,20 +86,20 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = obj4.useEffect(tmp8, tmp9);
       if (cResult[3] !== trigger) {
         const fn2 = function h() {
-          if (metroImportDefault.NUF === trigger) {
-            const obj2 = NewUserAnalyticsUtils;
-            obj2.trackNUFStep(metroImportAll.STEP_GUILD_TEMPLATE, metroImportAll.STEP_CREATION_INTENT, { skip: false });
+          if (constants2.NUF === trigger) {
+            NewUserAnalyticsUtils.trackNUFStep(constants3.STEP_GUILD_TEMPLATE, constants3.STEP_CREATION_INTENT, {
+              skip: false,
+            });
           } else if (tmp2.IN_APP === tmp) {
-            const obj = AnalyticsUtilsDefault;
-            obj.track(constants.OPEN_MODAL, { type: "Server Intent Discovery" });
+            AnalyticsUtilsDefault.track(constants4.OPEN_MODAL, { type: "Server Intent Discovery" });
           }
         };
         const items1 = [trigger];
         cResult[3] = trigger;
         cResult[4] = fn2;
         cResult[5] = items1;
-        tmp12 = items1;
-        tmp11 = fn2;
+        let tmp12 = items1;
+        let tmp11 = fn2;
       } else {
         tmp11 = cResult[4];
         tmp12 = cResult[5];
@@ -129,22 +107,17 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const effect1 = obj4.useEffect(tmp11, tmp12);
       if (cResult[6] === guildTemplate) {
         if (cResult[7] === navigation) {
-          let tmp14;
-          let tmp16;
-          let tmp18;
-          let tmp21;
-          let tmp23;
           if (cResult[8] === trigger) {
-            tmp14 = cResult[9];
+            let tmp14 = cResult[9];
           }
-          let closure_5 = tmp14;
+          closure_5 = tmp14;
           const _Symbol = Symbol;
           ({ contentContainer, scrollContainer, headerContainer, headerTitle } = tmp4);
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(tmp2[15]).intl;
             const stringResult = intl.string(tmp(tmp2[15]).t.f3MvGS);
             cResult[10] = stringResult;
-            tmp16 = stringResult;
+            let tmp16 = stringResult;
           } else {
             tmp16 = cResult[10];
           }
@@ -160,42 +133,43 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp20 = closure_11(tmp(tmp2[16]).Text, obj5);
             cResult[11] = tmp4.headerTitle;
             cResult[12] = tmp20;
-            tmp18 = tmp20;
+            let tmp18 = tmp20;
           } else {
             tmp18 = cResult[12];
           }
           const _Symbol2 = Symbol;
-          const headerDescription = tmp4.headerDescription;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const intl2 = tmp(tmp2[15]).intl;
             const stringResult1 = intl2.string(tmp(tmp2[15]).t.nOzc7w);
             cResult[13] = stringResult1;
-            tmp21 = stringResult1;
+            let tmp21 = stringResult1;
           } else {
             tmp21 = cResult[13];
           }
           if (cResult[14] !== tmp4.headerDescription) {
-            let obj6 = { style: headerDescription, variant: "text-sm/medium", color: "text-default", children: tmp21 };
+            let obj6 = {
+              style: tmp4.headerDescription,
+              variant: "text-sm/medium",
+              color: "text-default",
+              children: tmp21,
+            };
             const tmp25 = closure_11(tmp(tmp2[16]).Text, obj6);
             cResult[14] = tmp4.headerDescription;
             cResult[15] = tmp25;
-            tmp23 = tmp25;
+            let tmp23 = tmp25;
           } else {
             tmp23 = cResult[15];
           }
           if (cResult[16] === tmp4.headerContainer) {
             if (cResult[17] === tmp18) {
-              let tmp26;
-              let tmp30;
               if (cResult[18] === tmp23) {
-                tmp26 = cResult[19];
+                let tmp26 = cResult[19];
               }
               if (cResult[20] !== tmp14) {
-                let tmp37;
-                const obj7 = { hasIcons: true, children: null };
-                const TableRowGroup = tmp(tmp2[17]).TableRowGroup;
-                const tmp35 = trigger(tmp2[18]);
-                const obj8 = { Icon: null, message: null, onPress: null };
+                let obj7 = { hasIcons: true, children: null };
+                let tmp34 = trigger;
+                let tmp33Result2 = trigger(tmp2[18]);
+                let obj8 = { Icon: null, message: null, onPress: null };
                 if (closure_14) {
                   obj8.Icon = tmp(tmp2[19]).ChairIllocon;
                   const intl5 = tmp(tmp2[15]).intl;
@@ -203,172 +177,170 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   obj8.onPress = function onPress() {
                     return closure_5(false);
                   };
-                  const items2 = [closure_11(tmp35, obj8)];
-                  const obj9 = {
-                    Icon: tmp(tmp2[20]).WorldIllocon,
-                    message: intl6.string(tmp(tmp2[15]).t.h9Q1lG),
-                    onPress() {
-                      return closure_5(true);
-                    },
-                  };
-                  const tmp34Result = trigger(tmp2[18]);
-                  intl6 = tmp(tmp2[15]).intl;
-                  items2[1] = closure_11(tmp34Result, obj9);
-                  obj7.children = items2;
-                  tmp37 = obj7;
-                } else {
-                  obj8.Icon = tmp(tmp2[20]).WorldIllocon;
-                  const intl3 = tmp(tmp2[15]).intl;
-                  obj8.message = intl3.string(tmp(tmp2[15]).t.h9Q1lG);
-                  obj8.onPress = function onPress() {
+                  obj8 = [,];
+                  obj8[0] = closure_11(tmp33Result2, obj8);
+                  tmp34 = tmp34(tmp2[18]);
+                  const obj9 = { Icon: tmp(tmp2[20]).WorldIllocon, message: null, onPress: null };
+                  const intl6 = tmp(tmp2[15]).intl;
+                  obj9.message = intl6.string(tmp(tmp2[15]).t.h9Q1lG);
+                  obj9.onPress = function onPress() {
                     return closure_5(true);
                   };
-                  const items3 = [closure_11(tmp35, obj8)];
-                  const obj10 = {
-                    Icon: tmp(tmp2[19]).ChairIllocon,
-                    message: intl4.string(tmp(tmp2[15]).t.uE7zcu),
-                    onPress() {
-                      return closure_5(false);
-                    },
+                  tmp33Result2 = closure_11(tmp34, obj9);
+                  obj8[1] = tmp33Result2;
+                  obj7.children = obj8;
+                  let tmp37 = obj7;
+                  const tmp33Result = closure_11(tmp33Result2, obj8);
+                } else {
+                  obj8[0] = tmp(tmp2[20]).WorldIllocon;
+                  const intl3 = tmp(tmp2[15]).intl;
+                  obj8[1] = intl3.string(tmp(tmp2[15]).t.h9Q1lG);
+                  obj8[2] = function onPress() {
+                    return closure_5(true);
                   };
-                  const tmp34Result2 = trigger(tmp2[18]);
-                  intl4 = tmp(tmp2[15]).intl;
-                  items3[1] = closure_11(tmp34Result2, obj10);
-                  obj7.children = items3;
+                  const items2 = [closure_11(tmp33Result2, obj8)];
+                  const obj10 = { Icon: tmp(tmp2[19]).ChairIllocon, message: null, onPress: null };
+                  const intl4 = tmp(tmp2[15]).intl;
+                  obj10.message = intl4.string(tmp(tmp2[15]).t.uE7zcu);
+                  obj10.onPress = function onPress() {
+                    return closure_5(false);
+                  };
+                  items2[1] = closure_11(tmp34(tmp2[18]), obj10);
+                  obj7.children = items2;
                   tmp37 = obj7;
+                  const tmp34Result = tmp34(tmp2[18]);
                 }
-                const tmp31Result = closure_12(TableRowGroup, tmp37);
+                const tmp31Result = closure_12(tmp(tmp2[17]).TableRowGroup, tmp37);
                 cResult[20] = tmp14;
                 cResult[21] = tmp31Result;
-                tmp30 = tmp31Result;
               } else {
-                tmp30 = cResult[21];
-              }
-              if (cResult[22] === tmp4.sections) {
-                let tmp40;
-                let tmp44;
-                if (cResult[23] === tmp30) {
-                  tmp40 = cResult[24];
-                }
-                const skipDescription = tmp4.skipDescription;
-                if (cResult[25] !== tmp14) {
-                  const intl7 = tmp(tmp2[15]).intl;
-                  const obj11 = {
-                    onSkip() {
-                      return closure_5(null);
-                    },
-                  };
-                  const formatResult = intl7.format(tmp(tmp2[15]).t["SMc+Gz"], obj11);
-                  cResult[25] = tmp14;
-                  cResult[26] = formatResult;
-                  tmp44 = formatResult;
-                } else {
-                  tmp44 = cResult[26];
-                }
-                if (cResult[27] === tmp4.skipDescription) {
-                  let tmp46;
-                  if (cResult[28] === tmp44) {
-                    tmp46 = cResult[29];
+                if (cResult[22] === tmp4.sections) {
+                  if (cResult[23] === tmp30) {
+                    let tmp41 = cResult[24];
                   }
-                  if (cResult[30] === tmp4.scrollContainer) {
-                    if (cResult[31] === tmp26) {
-                      if (cResult[32] === tmp40) {
-                        let tmp49;
-                        if (cResult[33] === tmp46) {
-                          tmp49 = cResult[34];
-                        }
-                        if (cResult[35] === tmp4.contentContainer) {
-                          let tmp53;
-                          if (cResult[36] === tmp49) {
-                            tmp53 = cResult[37];
+                  if (cResult[25] !== tmp14) {
+                    const intl7 = tmp(tmp2[15]).intl;
+                    const obj11 = {
+                      onSkip() {
+                        return closure_5(null);
+                      },
+                    };
+                    const formatResult = intl7.format(tmp(tmp2[15]).t["SMc+Gz"], obj11);
+                    cResult[25] = tmp14;
+                    cResult[26] = formatResult;
+                    let tmp45 = formatResult;
+                  } else {
+                    tmp45 = cResult[26];
+                  }
+                  if (cResult[27] === tmp4.skipDescription) {
+                    if (cResult[28] === tmp45) {
+                      let tmp47 = cResult[29];
+                    }
+                    if (cResult[30] === tmp4.scrollContainer) {
+                      if (cResult[31] === tmp26) {
+                        if (cResult[32] === tmp41) {
+                          if (cResult[33] === tmp47) {
+                            let tmp50 = cResult[34];
                           }
-                          return tmp53;
+                          if (cResult[35] === tmp4.contentContainer) {
+                            if (cResult[36] === tmp50) {
+                              let tmp54 = cResult[37];
+                            }
+                            return tmp54;
+                          }
+                          const rect = { top: true, left: true, right: true, style: contentContainer, children: tmp50 };
+                          const tmp56 = closure_11(tmp(tmp2[21]).SafeAreaPaddingView, rect);
+                          cResult[35] = tmp4.contentContainer;
+                          cResult[36] = tmp50;
+                          cResult[37] = tmp56;
+                          tmp54 = tmp56;
                         }
-                        const rect = { top: true, left: true, right: true, style: contentContainer, children: tmp49 };
-                        const tmp55 = closure_11(tmp(tmp2[21]).SafeAreaPaddingView, rect);
-                        cResult[35] = tmp4.contentContainer;
-                        cResult[36] = tmp49;
-                        cResult[37] = tmp55;
-                        tmp53 = tmp55;
                       }
                     }
+                    const obj12 = { style: scrollContainer, children: null };
+                    const items3 = [tmp26, tmp41, tmp47];
+                    obj12.children = items3;
+                    const tmp53 = closure_12(closure_5, obj12);
+                    cResult[30] = tmp4.scrollContainer;
+                    cResult[31] = tmp26;
+                    cResult[32] = tmp41;
+                    cResult[33] = tmp47;
+                    cResult[34] = tmp53;
+                    tmp50 = tmp53;
                   }
-                  const obj12 = { style: scrollContainer, children: items4 };
-                  items4 = [tmp26, tmp40, tmp46];
-                  const tmp52 = closure_12(closure_5, obj12);
-                  cResult[30] = tmp4.scrollContainer;
-                  cResult[31] = tmp26;
-                  cResult[32] = tmp40;
-                  cResult[33] = tmp46;
-                  cResult[34] = tmp52;
-                  tmp49 = tmp52;
+                  const obj13 = {
+                    style: tmp4.skipDescription,
+                    variant: "text-sm/medium",
+                    color: "text-default",
+                    children: tmp45,
+                  };
+                  const tmp49 = closure_11(tmp(tmp2[16]).Text, obj13);
+                  cResult[27] = tmp4.skipDescription;
+                  cResult[28] = tmp45;
+                  cResult[29] = tmp49;
+                  tmp47 = tmp49;
                 }
-                const obj13 = {
-                  style: skipDescription,
-                  variant: "text-sm/medium",
-                  color: "text-default",
-                  children: tmp44,
-                };
-                const tmp48 = closure_11(tmp(tmp2[16]).Text, obj13);
-                cResult[27] = tmp4.skipDescription;
-                cResult[28] = tmp44;
-                cResult[29] = tmp48;
-                tmp46 = tmp48;
+                const obj14 = { style: tmp4.sections, children: cResult[21] };
+                const tmp44 = closure_11(ref, obj14);
+                cResult[22] = tmp4.sections;
+                cResult[23] = cResult[21];
+                cResult[24] = tmp44;
+                tmp41 = tmp44;
               }
-              const obj14 = { style: tmp4.sections, children: tmp30 };
-              const tmp43 = closure_11(ref, obj14);
-              cResult[22] = tmp4.sections;
-              cResult[23] = tmp30;
-              cResult[24] = tmp43;
-              tmp40 = tmp43;
             }
           }
-          const obj15 = { style: headerContainer, children: items5 };
-          items5 = [tmp18, tmp23];
+          const obj15 = { style: headerContainer, children: null };
+          const items4 = [tmp18, tmp23];
+          obj15.children = items4;
           const tmp29 = closure_12(ref, obj15);
           class P {
-            constructor(isCommunityIntent) {
-              let flag;
-              let id1;
-              const obj = { skipped: null == isCommunityIntent, is_community: flag };
-              flag = isCommunityIntent;
-              const track = AnalyticsUtilsDefault.track;
-              const GUILD_CREATION_INTENT_SELECTED = constants.GUILD_CREATION_INTENT_SELECTED;
-              AnalyticsUtilsDefault;
-              if (isCommunityIntent == null) {
+            constructor(arg0) {
+              tmp = closure_1;
+              tmp2 = closure_2;
+              obj = closure_1(closure_2[14]);
+              tmp3 = AnalyticEvents;
+              obj1 = { skipped: null == guildTemplate, is_community: null };
+              flag = guildTemplate;
+              if (guildTemplate == null) {
                 flag = false;
               }
-              track(GUILD_CREATION_INTENT_SELECTED, obj);
-              const obj2 = { guildTemplate, isCommunityIntent };
-              navigation.push(metroRequire.CREATE_SERVER, obj2);
-              if (metroImportDefault.NUF === trigger) {
-                const obj3 = NewUserAnalyticsUtils;
-                obj3.trackNUFStep(metroImportAll.STEP_CREATION_INTENT, metroImportAll.STEP_GUILD_CREATE, {
+              obj1.is_community = flag;
+              trackResult = obj.track(AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, obj1);
+              obj11 = { guildTemplate, isCommunityIntent: guildTemplate };
+              tmp5 = guildTemplate;
+              arr = closure_2.push(CreateGuildModalStates.CREATE_SERVER, obj11);
+              if (GuildTemplateTriggers.NUF === trigger) {
+                tmp11 = closure_0;
+                obj4 = closure_0(tmp2[13]);
+                tmp12 = closure_8;
+                trackNUFStepResult = obj4.trackNUFStep(closure_8.STEP_CREATION_INTENT, closure_8.STEP_GUILD_CREATE, {
                   skip: false,
                 });
-                let id;
-                const track2 = AnalyticsUtilsDefault.track;
-                const CREATE_GUILD_VIEWED = constants.CREATE_GUILD_VIEWED;
-                AnalyticsUtilsDefault;
-                if (guildTemplate != null) {
-                  id = guildTemplate.id;
+                tmpResult = tmp(tmp2[14]);
+                id = undefined;
+                if (tmp5 != null) {
+                  id = tmp5.id;
                 }
-                const obj4 = { guild_template_name: id };
-                track2(CREATE_GUILD_VIEWED, obj4);
-              } else if (tmp9.IN_APP === tmp8) {
-                const obj5 = { type: "Create Guild Step 2", location_section: constants2.CREATE_JOIN_GUILD_MODAL };
-                const tmpResult3 = AnalyticsUtilsDefault;
-                tmpResult3.track(constants.OPEN_MODAL, obj5);
-                const obj6 = { location_section: constants2.CREATE_JOIN_GUILD_MODAL, guild_template_name: id1 };
+                obj12 = { guild_template_name: null };
+                obj12.guild_template_name = id;
+                trackResult1 = tmpResult.track(tmp3.CREATE_GUILD_VIEWED, obj12);
+              } else if (tmp8.IN_APP === tmp7) {
+                tmpResult1 = tmp(tmp2[14]);
+                obj13 = { type: "Create Guild Step 2", location_section: null };
+                tmp16 = AnalyticsLocations;
+                obj13.location_section = AnalyticsLocations.CREATE_JOIN_GUILD_MODAL;
+                trackResult2 = tmpResult1.track(tmp3.OPEN_MODAL, obj13);
+                tmpResult2 = tmp(tmp2[14]);
+                obj14 = { location_section: null, guild_template_name: null };
+                obj14.location_section = AnalyticsLocations.CREATE_JOIN_GUILD_MODAL;
                 id1 = undefined;
-                const track3 = AnalyticsUtilsDefault.track;
-                const CREATE_GUILD_VIEWED2 = constants.CREATE_GUILD_VIEWED;
-                AnalyticsUtilsDefault;
-                if (guildTemplate != null) {
-                  id1 = guildTemplate.id;
+                if (tmp5 != null) {
+                  id1 = tmp5.id;
                 }
-                track3(CREATE_GUILD_VIEWED2, obj6);
+                obj14.guild_template_name = id1;
+                trackResult3 = tmpResult2.track(tmp3.CREATE_GUILD_VIEWED, obj14);
               }
+              return;
             }
           }
           cResult[17] = tmp18;
@@ -378,46 +350,53 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       class P {
-        constructor(isCommunityIntent) {
-          let flag;
-          let id1;
-          const obj = { skipped: null == isCommunityIntent, is_community: flag };
-          flag = isCommunityIntent;
-          const track = AnalyticsUtilsDefault.track;
-          const GUILD_CREATION_INTENT_SELECTED = constants.GUILD_CREATION_INTENT_SELECTED;
-          AnalyticsUtilsDefault;
-          if (isCommunityIntent == null) {
+        constructor(arg0) {
+          tmp = closure_1;
+          tmp2 = closure_2;
+          obj = closure_1(closure_2[14]);
+          tmp3 = AnalyticEvents;
+          obj1 = { skipped: null == guildTemplate, is_community: null };
+          flag = guildTemplate;
+          if (guildTemplate == null) {
             flag = false;
           }
-          track(GUILD_CREATION_INTENT_SELECTED, obj);
-          const obj2 = { guildTemplate, isCommunityIntent };
-          navigation.push(metroRequire.CREATE_SERVER, obj2);
-          if (metroImportDefault.NUF === trigger) {
-            const obj3 = NewUserAnalyticsUtils;
-            obj3.trackNUFStep(metroImportAll.STEP_CREATION_INTENT, metroImportAll.STEP_GUILD_CREATE, { skip: false });
-            let id;
-            const track2 = AnalyticsUtilsDefault.track;
-            const CREATE_GUILD_VIEWED = constants.CREATE_GUILD_VIEWED;
-            AnalyticsUtilsDefault;
-            if (guildTemplate != null) {
-              id = guildTemplate.id;
+          obj1.is_community = flag;
+          trackResult = obj.track(AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, obj1);
+          obj11 = { guildTemplate, isCommunityIntent: guildTemplate };
+          tmp5 = guildTemplate;
+          arr = closure_2.push(CreateGuildModalStates.CREATE_SERVER, obj11);
+          if (GuildTemplateTriggers.NUF === trigger) {
+            tmp11 = closure_0;
+            obj4 = closure_0(tmp2[13]);
+            tmp12 = closure_8;
+            trackNUFStepResult = obj4.trackNUFStep(closure_8.STEP_CREATION_INTENT, closure_8.STEP_GUILD_CREATE, {
+              skip: false,
+            });
+            tmpResult = tmp(tmp2[14]);
+            id = undefined;
+            if (tmp5 != null) {
+              id = tmp5.id;
             }
-            const obj4 = { guild_template_name: id };
-            track2(CREATE_GUILD_VIEWED, obj4);
-          } else if (tmp9.IN_APP === tmp8) {
-            const obj5 = { type: "Create Guild Step 2", location_section: constants2.CREATE_JOIN_GUILD_MODAL };
-            const tmpResult3 = AnalyticsUtilsDefault;
-            tmpResult3.track(constants.OPEN_MODAL, obj5);
-            const obj6 = { location_section: constants2.CREATE_JOIN_GUILD_MODAL, guild_template_name: id1 };
+            obj12 = { guild_template_name: null };
+            obj12.guild_template_name = id;
+            trackResult1 = tmpResult.track(tmp3.CREATE_GUILD_VIEWED, obj12);
+          } else if (tmp8.IN_APP === tmp7) {
+            tmpResult1 = tmp(tmp2[14]);
+            obj13 = { type: "Create Guild Step 2", location_section: null };
+            tmp16 = AnalyticsLocations;
+            obj13.location_section = AnalyticsLocations.CREATE_JOIN_GUILD_MODAL;
+            trackResult2 = tmpResult1.track(tmp3.OPEN_MODAL, obj13);
+            tmpResult2 = tmp(tmp2[14]);
+            obj14 = { location_section: null, guild_template_name: null };
+            obj14.location_section = AnalyticsLocations.CREATE_JOIN_GUILD_MODAL;
             id1 = undefined;
-            const track3 = AnalyticsUtilsDefault.track;
-            const CREATE_GUILD_VIEWED2 = constants.CREATE_GUILD_VIEWED;
-            AnalyticsUtilsDefault;
-            if (guildTemplate != null) {
-              id1 = guildTemplate.id;
+            if (tmp5 != null) {
+              id1 = tmp5.id;
             }
-            track3(CREATE_GUILD_VIEWED2, obj6);
+            obj14.guild_template_name = id1;
+            trackResult3 = tmpResult2.track(tmp3.CREATE_GUILD_VIEWED, obj14);
           }
+          return;
         }
       }
       cResult[6] = guildTemplate;
@@ -425,188 +404,142 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = trigger;
       cResult[9] = P;
       tmp14 = P;
+      let obj3 = guildTemplate(navigation[11]);
     }
   : (arg0) => {
-      let TableRowGroup;
-      let closure_2;
-      let guildTemplate;
-      let intl;
-      let intl2;
-      let intl4;
-      let intl6;
-      let intl7;
-      let items2;
-      let items3;
-      let obj13;
-      let obj3;
-      let require;
-      let tmp10;
-      let tmp15;
-      let trigger;
       ({ guildTemplate: require, trigger } = arg0);
-      dependencyMap = undefined;
       function onPress(isCommunityIntent) {
-        let flag;
-        let id1;
-        const obj = { skipped: null == isCommunityIntent, is_community: flag };
-        flag = isCommunityIntent;
-        const track = AnalyticsUtilsDefault.track;
-        const GUILD_CREATION_INTENT_SELECTED = constants.GUILD_CREATION_INTENT_SELECTED;
-        AnalyticsUtilsDefault;
+        const obj2 = { skipped: null == isCommunityIntent, is_community: null };
+        let flag = isCommunityIntent;
         if (isCommunityIntent == null) {
           flag = false;
         }
-        track(GUILD_CREATION_INTENT_SELECTED, obj);
-        const obj2 = { guildTemplate: require, isCommunityIntent };
-        closure_2.push(metroRequire.CREATE_SERVER, obj2);
-        if (metroImportDefault.NUF === trigger) {
-          const obj3 = NewUserAnalyticsUtils;
-          obj3.trackNUFStep(metroImportAll.STEP_CREATION_INTENT, metroImportAll.STEP_GUILD_CREATE, { skip: false });
+        obj2.is_community = flag;
+        AnalyticsUtilsDefault.track(constants4.GUILD_CREATION_INTENT_SELECTED, obj2);
+        closure_2.push(constants.CREATE_SERVER, { guildTemplate, isCommunityIntent });
+        if (constants2.NUF === trigger) {
+          NewUserAnalyticsUtils.trackNUFStep(constants3.STEP_CREATION_INTENT, constants3.STEP_GUILD_CREATE, {
+            skip: false,
+          });
           let id;
-          const track2 = AnalyticsUtilsDefault.track;
-          const CREATE_GUILD_VIEWED = constants.CREATE_GUILD_VIEWED;
-          AnalyticsUtilsDefault;
-          if (require != null) {
-            id = require.id;
+          if (guildTemplate != null) {
+            id = guildTemplate.id;
           }
-          const obj4 = { guild_template_name: id };
-          track2(CREATE_GUILD_VIEWED, obj4);
-        } else if (tmp9.IN_APP === tmp8) {
-          const obj5 = { type: "Create Guild Step 2", location_section: constants2.CREATE_JOIN_GUILD_MODAL };
+          const obj5 = { guild_template_name: id };
+          AnalyticsUtilsDefault.track(constants4.CREATE_GUILD_VIEWED, obj5);
+          const tmpResult = AnalyticsUtilsDefault;
+        } else if (tmp8.IN_APP === tmp7) {
+          const obj6 = { type: "Create Guild Step 2", location_section: constants5.CREATE_JOIN_GUILD_MODAL };
+          AnalyticsUtilsDefault.track(constants4.OPEN_MODAL, obj6);
           const tmpResult3 = AnalyticsUtilsDefault;
-          tmpResult3.track(constants.OPEN_MODAL, obj5);
-          const obj6 = { location_section: constants2.CREATE_JOIN_GUILD_MODAL, guild_template_name: id1 };
-          id1 = undefined;
-          const track3 = AnalyticsUtilsDefault.track;
-          const CREATE_GUILD_VIEWED2 = constants.CREATE_GUILD_VIEWED;
-          AnalyticsUtilsDefault;
-          if (require != null) {
-            id1 = require.id;
+          const obj7 = { location_section: constants5.CREATE_JOIN_GUILD_MODAL, guild_template_name: null };
+          let id1;
+          if (guildTemplate != null) {
+            id1 = guildTemplate.id;
           }
-          track3(CREATE_GUILD_VIEWED2, obj6);
+          obj7.guild_template_name = id1;
+          AnalyticsUtilsDefault.track(constants4.CREATE_GUILD_VIEWED, obj7);
+          const tmpResult4 = AnalyticsUtilsDefault;
         }
+        const obj3 = { guildTemplate, isCommunityIntent };
       }
       let tmp = closure_13();
-      let obj = useNavigation;
-      dependencyMap = obj.useNavigation();
-      let obj2 = useIsScreenReaderEnabled;
-      const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+      dependencyMap = useNavigation.useNavigation();
+      const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
       const ref = isScreenReaderEnabled.useRef(null);
       const items = [isScreenReaderEnabled];
       const effect = isScreenReaderEnabled.useEffect(() => {
-        const tmp = isScreenReaderEnabled && null != ref.current;
+        let tmp = isScreenReaderEnabled;
+        if (isScreenReaderEnabled) {
+          tmp = null != ref.current;
+        }
         if (tmp) {
           const obj2 = { ref, delay: 100 };
-          const obj = react_native;
-          const result = obj.setAccessibilityFocus(obj2);
+          const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
         }
       }, items);
       const items1 = [trigger];
       const effect1 = isScreenReaderEnabled.useEffect(() => {
-        if (metroImportDefault.NUF === trigger) {
-          const obj2 = NewUserAnalyticsUtils;
-          obj2.trackNUFStep(metroImportAll.STEP_GUILD_TEMPLATE, metroImportAll.STEP_CREATION_INTENT, { skip: false });
+        if (constants2.NUF === trigger) {
+          NewUserAnalyticsUtils.trackNUFStep(constants3.STEP_GUILD_TEMPLATE, constants3.STEP_CREATION_INTENT, {
+            skip: false,
+          });
         } else if (tmp2.IN_APP === tmp) {
-          const obj = AnalyticsUtilsDefault;
-          obj.track(constants.OPEN_MODAL, { type: "Server Intent Discovery" });
+          AnalyticsUtilsDefault.track(constants4.OPEN_MODAL, { type: "Server Intent Discovery" });
         }
       }, items1);
-      const rect = {
-        top: true,
-        left: true,
-        right: true,
-        style: tmp.contentContainer,
-        children: closure_12(tmp10, obj3),
-      };
-      obj3 = { style: tmp.scrollContainer, children: items3 };
-      let obj4 = { style: tmp.headerContainer, children: items2 };
-      const SafeAreaPaddingView = common_SafeAreaView.SafeAreaPaddingView;
+      const rect = { top: true, left: true, right: true, style: tmp.contentContainer, children: null };
+      let obj3 = { style: tmp.scrollContainer, children: null };
+      let obj4 = { style: tmp.headerContainer, children: null };
       let obj5 = {
         ref,
         style: tmp.headerTitle,
         accessibilityRole: "header",
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
-        children: intl.string(intl8.t.f3MvGS),
+        children: null,
       };
-      const Text = Text_Text.Text;
-      intl = intl8.intl;
-      items2 = [closure_11(Text, obj5)];
-      let obj6 = {
-        style: tmp.headerDescription,
-        variant: "text-sm/medium",
-        color: "text-default",
-        children: intl2.string(intl8.t.nOzc7w),
-      };
-      const Text2 = Text_Text.Text;
-      intl2 = intl8.intl;
-      items2[1] = closure_11(Text2, obj6);
-      items3 = [closure_12(ref, obj4), ,];
+      const intl = util.intl;
+      obj5.children = intl.string(util.t.f3MvGS);
+      const items2 = [closure_11(Text_Text.Text, obj5)];
+      let obj6 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
+      const intl2 = util.intl;
+      obj6.children = intl2.string(util.t.nOzc7w);
+      items2[1] = closure_11(Text_Text.Text, obj6);
+      obj4.children = items2;
+      const items3 = [closure_12(ref, obj4), ,];
+      let obj7 = { style: tmp.sections, children: null };
       const obj8 = { hasIcons: true, children: null };
-      const obj7 = { style: tmp.sections, children: closure_12(TableRowGroup, tmp15) };
-      TableRowGroup = TableRowGroup2.TableRowGroup;
       const tmp13 = trigger(11974);
       const obj9 = { Icon: null, message: null, onPress: null };
-      tmp10 = onPress;
-      const tmp11 = ref;
       if (closure_14) {
         obj9.Icon = ChairIllocon.ChairIllocon;
-        const intl5 = intl8.intl;
-        obj9.message = intl5.string(intl8.t.uE7zcu);
+        const intl5 = util.intl;
+        obj9.message = intl5.string(util.t.uE7zcu);
         obj9.onPress = function onPress() {
           onPress(false);
         };
         const items4 = [closure_11(tmp13, obj9)];
-        const obj10 = {
-          Icon: WorldIllocon.WorldIllocon,
-          message: intl6.string(intl8.t.h9Q1lG),
-          onPress() {
-            onPress(true);
-          },
+        const obj10 = { Icon: WorldIllocon.WorldIllocon, message: null, onPress: null };
+        const intl6 = util.intl;
+        obj10.message = intl6.string(util.t.h9Q1lG);
+        obj10.onPress = function onPress() {
+          onPress(true);
         };
-        const tmp12Result = trigger(11974);
-        intl6 = intl8.intl;
-        items4[1] = closure_11(tmp12Result, obj10);
+        items4[1] = closure_11(trigger(11974), obj10);
         obj8.children = items4;
-        tmp15 = obj8;
+        let tmp15 = obj8;
+        const tmp12Result = trigger(11974);
       } else {
         obj9.Icon = WorldIllocon.WorldIllocon;
-        const intl3 = intl8.intl;
-        obj9.message = intl3.string(intl8.t.h9Q1lG);
+        const intl3 = util.intl;
+        obj9.message = intl3.string(util.t.h9Q1lG);
         obj9.onPress = function onPress() {
           onPress(true);
         };
         const items5 = [closure_11(tmp13, obj9)];
-        const obj11 = {
-          Icon: ChairIllocon.ChairIllocon,
-          message: intl4.string(intl8.t.uE7zcu),
-          onPress() {
-            onPress(false);
-          },
+        const obj11 = { Icon: ChairIllocon.ChairIllocon, message: null, onPress: null };
+        const intl4 = util.intl;
+        obj11.message = intl4.string(util.t.uE7zcu);
+        obj11.onPress = function onPress() {
+          onPress(false);
         };
-        const tmp12Result2 = trigger(11974);
-        intl4 = intl8.intl;
-        items5[1] = closure_11(tmp12Result2, obj11);
+        items5[1] = closure_11(trigger(11974), obj11);
         obj8.children = items5;
         tmp15 = obj8;
+        const tmp12Result2 = trigger(11974);
       }
-      items3[1] = closure_11(tmp11, obj7);
-      const obj12 = {
-        style: tmp.skipDescription,
-        variant: "text-sm/medium",
-        color: "text-default",
-        children: intl7.format(intl8.t["SMc+Gz"], obj13),
-      };
-      const Text3 = Text_Text.Text;
-      intl7 = intl8.intl;
-      obj13 = {
+      obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp15);
+      items3[1] = closure_11(ref, obj7);
+      const obj12 = { style: tmp.skipDescription, variant: "text-sm/medium", color: "text-default", children: null };
+      const intl7 = util.intl;
+      obj12.children = intl7.format(util.t["SMc+Gz"], {
         onSkip() {
           onPress(null);
         },
-      };
-      items3[2] = closure_11(Text3, obj12);
-      return closure_11(SafeAreaPaddingView, rect);
+      });
+      items3[2] = closure_11(Text_Text.Text, obj12);
+      obj3.children = items3;
+      rect.children = closure_12(onPress, obj3);
+      return closure_11(common_SafeAreaView.SafeAreaPaddingView, rect);
     };
-let result = size.fileFinishedImporting("modules/create_guild/native/components/CreationIntent.tsx");
-
-export default tmp7;

@@ -1,6 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelPermissions.tsx
 import Constants from "../../Constants.tsx";
 import BigFlagUtils_mod from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import "BigFlagUtils";
 import size from "../../../_runtime/metro/00002__.js";
 
 const Permissions = Constants.Permissions;
@@ -10,23 +11,15 @@ const combineResult = BigFlagUtils.combine(
   Permissions.MUTE_MEMBERS,
   Permissions.MOVE_MEMBERS,
 );
-BigFlagUtils = BigFlagUtils_mod;
+let BigFlagUtils = BigFlagUtils_mod;
 const items = [, ,];
 ({ SPEAK: arr[0], REQUEST_TO_SPEAK: arr[1], USE_VAD: arr[2] } = Permissions);
 const combineResult1 = BigFlagUtils.combine(Permissions.MANAGE_CHANNELS, Permissions.MANAGE_ROLES);
 const set = new Set(items);
-BigFlagUtils = BigFlagUtils_mod;
-const combineResult2 = BigFlagUtils.combine(combineResult, Permissions.MANAGE_ROLES);
-BigFlagUtils = BigFlagUtils_mod;
+let BigFlagUtils = BigFlagUtils_mod;
 const combineResult3 = BigFlagUtils.combine(Permissions.CONNECT, Permissions.VIEW_CHANNEL);
-BigFlagUtils = BigFlagUtils_mod;
-const combineResult4 = BigFlagUtils.combine(
-  combineResult3,
-  Permissions.READ_MESSAGE_HISTORY,
-  Permissions.REQUEST_TO_SPEAK,
-  Permissions.SPEAK,
-  Permissions.USE_VAD,
-);
+let BigFlagUtils = BigFlagUtils_mod;
+const combineResult2 = BigFlagUtils.combine(combineResult, Permissions.MANAGE_ROLES);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelPermissions.tsx");
 
 export const MODERATE_STAGE_CHANNEL_PERMISSIONS = combineResult;
@@ -34,4 +27,10 @@ export const CREATE_STAGE_CHANNEL_PERMISSIONS = combineResult1;
 export const STAGE_CHANNEL_DISABLED_PERMISSIONS = set;
 export const UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS = combineResult2;
 export const JOIN_VOCAL_CHANNEL_PERMISSIONS = combineResult3;
-export const LURKER_STAGE_CHANNEL_PERMISSIONS_ALLOWLIST = combineResult4;
+export const LURKER_STAGE_CHANNEL_PERMISSIONS_ALLOWLIST = BigFlagUtils.combine(
+  combineResult3,
+  Permissions.READ_MESSAGE_HISTORY,
+  Permissions.REQUEST_TO_SPEAK,
+  Permissions.SPEAK,
+  Permissions.USE_VAD,
+);

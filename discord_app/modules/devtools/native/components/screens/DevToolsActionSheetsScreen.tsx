@@ -1,59 +1,52 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequire from "../../../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../../actions/ModalActionCreators.tsx";
-import TableRowGroup2 from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import BottomSheetTitleHeader2 from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SuspiciousDownloadModalActionCreatorsDefault from "../../../../suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx";
 import BlockedDomainModalActionCreatorsDefault from "../../../../blocked_domains/BlockedDomainModalActionCreators.native.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let BottomSheet, dependencyMap, selectedType;
-
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-({ View: hasOwnProperty, ScrollView: metroRequire } = react_native);
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { wrap: obj2, contentContainer: obj3 };
-obj2 = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  wrap: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    flex: 1,
+    paddingHorizontal: nativeDefault.space.PX_12,
+  },
+  contentContainer: null,
+};
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   flex: 1,
   paddingHorizontal: nativeDefault.space.PX_12,
 };
-createStyles = createStyles.createStyles;
-obj3 = { paddingVertical: nativeDefault.space.PX_16 };
-let closure_9 = createStyles(obj);
-let obj4 = {
-  type: "blocked-domain",
-  label: "Blocked Domain",
-  description: "Shows a warning for potentially malicious domains",
-  show() {
-    const obj = BlockedDomainModalActionCreatorsDefault;
-    return obj.show("https://example-phishing-site.com/malicious-page");
-  },
-};
+obj2.contentContainer = { paddingVertical: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
 let items = [
-  obj4,
+  {
+    type: "blocked-domain",
+    label: "Blocked Domain",
+    description: "Shows a warning for potentially malicious domains",
+    show() {
+      return BlockedDomainModalActionCreatorsDefault.show("https://example-phishing-site.com/malicious-page");
+    },
+  },
   {
     type: "suspicious-download",
     label: "Suspicious Download",
     description: "Warns users about potentially dangerous file downloads",
     show() {
-      const obj = SuspiciousDownloadModalActionCreatorsDefault;
-      return obj.show("https://suspicious-file.com/dangerous-file.exe");
+      return SuspiciousDownloadModalActionCreatorsDefault.show("https://suspicious-file.com/dangerous-file.exe");
     },
   },
   {
@@ -61,9 +54,8 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      const obj = ModalActionCreatorsDefault;
-      return obj.pushLazy(
-        asyncRequire(15616, dependencyMap.paths),
+      return ModalActionCreatorsDefault.pushLazy(
+        asyncRequireImpl(15616, dependencyMap.paths),
         {
           warningId: "test-warning-123",
           warningType: "inappropriate_conversation",
@@ -75,184 +67,178 @@ let items = [
     },
   },
 ];
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (selectedType) => {
-      let closure_2;
-      let length;
-      let obj5;
-      let obj6;
-      let tmp4;
-      let tmp5;
-      let tmp9;
-      let obj = selectedType(576);
-      const cResult = obj.c(9);
+      const cResult = selectedType(576).c(9);
       selectedType = selectedType.selectedType;
       const onSelect = selectedType.onSelect;
       if (cResult[0] !== onSelect) {
         const fn = function o(type) {
-          const obj = ActionSheetActionCreatorsDefault;
-          obj.hideActionSheet("action-sheet-selector");
+          ActionSheetActionCreatorsDefault.hideActionSheet("action-sheet-selector");
           onSelect(type.type);
           type.show();
         };
         cResult[0] = onSelect;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       dependencyMap = tmp4;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { title: "Select Action Sheet", subtitle: null };
         const _HermesInternal = HermesInternal;
-        const obj2 = { title: "Select Action Sheet", subtitle: "" + items.length + " options" };
-        const BottomSheetTitleHeader = tmp(6651).BottomSheetTitleHeader;
-        const tmp8 = closure_7(BottomSheetTitleHeader, obj2);
+        obj2.subtitle = "" + items.length + " options";
+        const tmp8 = closure_7(tmp(6651).BottomSheetTitleHeader, obj2);
         cResult[2] = tmp8;
-        tmp5 = tmp8;
+        let tmp5 = tmp8;
       } else {
         tmp5 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { paddingHorizontal: onSelect(587).space.PX_12 };
         cResult[3] = obj3;
-        tmp9 = obj3;
+        let tmp9 = obj3;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] === tmp4) {
-        let tmp11;
-        let tmp13;
         if (cResult[5] === selectedType) {
-          tmp11 = cResult[6];
+          let tmp11 = cResult[6];
         }
         if (cResult[7] !== tmp11) {
-          const obj4 = { header: tmp5, children: closure_7(closure_5, obj5) };
-          obj5 = { style: tmp9, children: closure_7(selectedType(6081).TableRowGroup, obj6) };
-          BottomSheet = tmp(6652).BottomSheet;
-          obj6 = { hasIcons: true, children: tmp11 };
-          const tmp16 = closure_7(BottomSheet, obj4);
+          const obj4 = { header: tmp5, children: null };
+          const obj5 = { style: tmp9, children: null };
+          const obj6 = { hasIcons: true, children: tmp11 };
+          obj5.children = closure_7(tmp(6081).TableRowGroup, obj6);
+          obj4.children = closure_7(closure_5, obj5);
+          const tmp16 = closure_7(tmp(6652).BottomSheet, obj4);
           cResult[7] = tmp11;
           cResult[8] = tmp16;
-          tmp13 = tmp16;
+          let tmp13 = tmp16;
         } else {
           tmp13 = cResult[8];
         }
         return tmp13;
       }
       const mapped = items.map((type, index) => {
-        let tmpResult;
-        let closure_0 = type;
+        closure_0 = type;
         const obj = {
-          icon: closure_1_7(selectedType(closure_2[16]).WarningIcon, { size: "md" }),
+          icon: closure_1_7(selectedType(4809).WarningIcon, { size: "md" }),
           label: null,
           subLabel: null,
           onPress() {
-            return closure_2(type);
+            return closure_2(closure_0);
           },
-          trailing: tmpResult,
-          start: 0 === index,
-          end: index === length.length - 1,
+          trailing: null,
+          start: null,
+          end: null,
         };
-        const TableRow = selectedType(closure_2[15]).TableRow;
         ({ label: obj.label, description: obj.subLabel } = type);
-        tmpResult = undefined;
+        let tmpResult;
         if (closure_0 === type.type) {
-          tmpResult = closure_1_7(selectedType(closure_2[17]).CheckmarkLargeIcon, {
+          tmpResult = closure_1_7(selectedType(4583).CheckmarkLargeIcon, {
             size: "md",
             color: "text-feedback-positive",
           });
         }
-        return closure_1_7(TableRow, obj, type.type);
+        obj.trailing = tmpResult;
+        obj.start = 0 === index;
+        obj.end = index === length.length - 1;
+        return closure_1_7(selectedType(6000).TableRow, obj, type.type);
       });
       cResult[4] = tmp4;
       cResult[5] = selectedType;
       cResult[6] = mapped;
       tmp11 = mapped;
+      let obj = selectedType(576);
     }
   : (arg0) => {
-      let BottomSheetTitleHeader;
-      let TableRowGroup;
-      let closure_2;
-      let length;
-      let obj2;
-      let obj3;
-      let obj5;
-      let onSelect;
-      let require;
       ({ selectedType: require, onSelect } = arg0);
       items = [onSelect];
-      dependencyMap = react.useCallback((type) => {
-        const obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet("action-sheet-selector");
+      dependencyMap = noop.useCallback((type) => {
+        ActionSheetActionCreatorsDefault.hideActionSheet("action-sheet-selector");
         onSelect(type.type);
         type.show();
       }, items);
-      let obj = { header: closure_7(BottomSheetTitleHeader, obj2), children: closure_7(closure_5, obj3) };
-      BottomSheet = Sheet_BottomSheet.BottomSheet;
-      obj2 = { title: "Select Action Sheet", subtitle: "" + items.length + " options" };
-      BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
-      obj3 = { style: { paddingHorizontal: onSelect(587).space.PX_12 }, children: closure_7(TableRowGroup, obj5) };
-      obj5 = {
+      let obj = {
+        header: closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, {
+          title: "Select Action Sheet",
+          subtitle: "" + items.length + " options",
+        }),
+        children: null,
+      };
+      const obj3 = { style: null, children: null };
+      const obj2 = { title: "Select Action Sheet", subtitle: "" + items.length + " options" };
+      obj3.style = { paddingHorizontal: onSelect(587).space.PX_12 };
+      const obj4 = { paddingHorizontal: onSelect(587).space.PX_12 };
+      obj3.children = closure_7(TableRowGroup.TableRowGroup, {
         hasIcons: true,
         children: items.map((type, index) => {
-          let tmpResult;
-          const require = type;
+          closure_0 = type;
           const obj = {
             icon: closure_1_7(require("WarningIcon").WarningIcon, { size: "md" }),
             label: null,
             subLabel: null,
             onPress() {
-              return closure_2(type);
+              return closure_2(closure_0);
             },
-            trailing: tmpResult,
-            start: 0 === index,
-            end: index === items.length - 1,
+            trailing: null,
+            start: null,
+            end: null,
           };
-          const TableRow = require("TableRow").TableRow;
           ({ label: obj.label, description: obj.subLabel } = type);
-          tmpResult = undefined;
-          if (require === type.type) {
+          let tmpResult;
+          if (closure_0 === type.type) {
             tmpResult = closure_1_7(require("CheckmarkLargeIcon").CheckmarkLargeIcon, {
               size: "md",
               color: "text-feedback-positive",
             });
           }
-          return closure_1_7(TableRow, obj, type.type);
+          obj.trailing = tmpResult;
+          obj.start = 0 === index;
+          obj.end = index === length.length - 1;
+          return closure_1_7(require("TableRow").TableRow, obj, type.type);
         }),
-      };
-      ({ paddingHorizontal: onSelect(587).space.PX_12 });
-      TableRowGroup = TableRowGroup2.TableRowGroup;
-      return closure_7(BottomSheet, obj);
+      });
+      obj.children = closure_7(closure_5, obj3);
+      return closure_7(Sheet_BottomSheet.BottomSheet, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj4 = { paddingVertical: nativeDefault.space.PX_16 };
+let obj5 = {
+  type: "blocked-domain",
+  label: "Blocked Domain",
+  description: "Shows a warning for potentially malicious domains",
+  show() {
+    return BlockedDomainModalActionCreatorsDefault.show("https://example-phishing-site.com/malicious-page");
+  },
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let Card;
-      let obj3;
-      let obj5;
-      let onSelect;
-      let tmp11;
-      let tmp7;
-      let obj = selectedType(576);
-      const cResult = obj.c(13);
+      const cResult = selectedType(576).c(13);
       closure_9();
-      [selectedType, importDefault] = react.useState("blocked-domain");
+      [selectedType, importDefault] = noop.useState("blocked-domain");
       if (cResult[0] !== selectedType) {
         const found = items.find((type) => type.type === first);
         cResult[0] = selectedType;
         cResult[1] = found;
-        tmp7 = found;
+        let tmp7 = found;
       } else {
         tmp7 = cResult[1];
       }
       if (cResult[2] !== selectedType) {
         class T {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            const obj2 = { default: closure_11 };
-            const obj3 = { selectedType, onSelect };
-            obj.openLazy(Promise.resolve(obj2), "action-sheet-selector", obj3);
+            obj = closure_1(closure_2[13]);
+            obj1 = { default: f71126 };
+            obj4 = { selectedType: closure_0, onSelect: closure_1 };
+            openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
+            return;
           }
         }
         cResult[2] = selectedType;
@@ -260,98 +246,101 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class T {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            const obj2 = { default: closure_11 };
-            const obj3 = { selectedType, onSelect };
-            obj.openLazy(Promise.resolve(obj2), "action-sheet-selector", obj3);
+            obj = closure_1(closure_2[13]);
+            obj1 = { default: f71126 };
+            obj4 = { selectedType: closure_0, onSelect: closure_1 };
+            openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
+            return;
           }
         }
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            const obj2 = { default: closure_11 };
-            const obj3 = { selectedType, onSelect };
-            obj.openLazy(Promise.resolve(obj2), "action-sheet-selector", obj3);
+            obj = closure_1(closure_2[13]);
+            obj1 = { default: f71126 };
+            obj4 = { selectedType: closure_0, onSelect: closure_1 };
+            openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
+            return;
           }
         }
-        const tmp12 = closure_7(selectedType(4892).Text, { variant: "heading-lg/medium", children: "Action Sheets" });
+        const tmp12 = closure_7(tmp(4892).Text, { variant: "heading-lg/medium", children: "Action Sheets" });
         cResult[4] = tmp12;
-        tmp11 = tmp12;
+        const tmp11 = tmp12;
       } else {
         class T {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            const obj2 = { default: closure_11 };
-            const obj3 = { selectedType, onSelect };
-            obj.openLazy(Promise.resolve(obj2), "action-sheet-selector", obj3);
+            obj = closure_1(closure_2[13]);
+            obj1 = { default: f71126 };
+            obj4 = { selectedType: closure_0, onSelect: closure_1 };
+            openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
+            return;
           }
         }
       }
       if (cResult[5] === T) {
         class T {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            const obj2 = { default: closure_11 };
-            const obj3 = { selectedType, onSelect };
-            obj.openLazy(Promise.resolve(obj2), "action-sheet-selector", obj3);
+            obj = closure_1(closure_2[13]);
+            obj1 = { default: f71126 };
+            obj4 = { selectedType: closure_0, onSelect: closure_1 };
+            openLazyResult = obj.openLazy(Promise.resolve(obj1), "action-sheet-selector", obj4);
+            return;
           }
         }
       }
-      let obj2 = { spacing: 16, children: closure_8(Card, obj3) };
-      const Stack = tmp(5600).Stack;
-      obj3 = { children: items };
+      const obj2 = { spacing: 16, children: null };
+      const obj3 = { children: null };
       items = [tmp11];
-      Card = tmp(6002).Card;
       const obj4 = {
         description: "Tap an option to launch the action sheet immediately",
         hasIcons: false,
-        children: closure_7(selectedType(6000).TableRow, obj5),
+        children: closure_7(selectedType(6000).TableRow, {
+          label: tmp7.label,
+          subLabel: tmp7.description,
+          arrow: true,
+          onPress: T,
+        }),
       };
-      const TableRowGroup = tmp(6081).TableRowGroup;
-      obj5 = { label: tmp7.label, subLabel: tmp7.description, arrow: true, onPress: T };
-      items[1] = closure_7(TableRowGroup, obj4);
+      items[1] = closure_7(selectedType(6081).TableRowGroup, obj4);
+      obj3.children = items;
+      obj2.children = closure_8(selectedType(6002).Card, obj3);
+      const obj = selectedType(576);
+      const obj5 = { label: tmp7.label, subLabel: tmp7.description, arrow: true, onPress: T };
       cResult[5] = T;
       cResult[6] = tmp7.description;
       cResult[7] = tmp7.label;
-      cResult[8] = closure_7(Stack, obj2);
-      closure_7(Stack, obj2);
+      cResult[8] = closure_7(selectedType(5600).Stack, obj2);
+      const tmp13 = closure_7(selectedType(5600).Stack, obj2);
     }
   : () => {
-      let Card;
-      let Stack;
-      let items1;
-      let obj2;
-      let obj3;
-      let obj5;
-      let onSelect;
       const tmp = closure_9();
-      [selectedType, onSelect] = react.useState("blocked-domain");
+      [selectedType, onSelect] = noop.useState("blocked-domain");
       const found = items.find((type) => type.type === first);
       items = [selectedType];
-      let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: closure_7(Stack, obj2) };
-      const callback = react.useCallback(() => {
-        const obj = ActionSheetActionCreatorsDefault;
-        const obj2 = { default: closure_11 };
-        const obj3 = { selectedType, onSelect };
-        obj.openLazy(Promise.resolve(obj2), "action-sheet-selector", obj3);
+      const obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
+      const callback = noop.useCallback(() => {
+        ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_11 }), "action-sheet-selector", {
+          selectedType,
+          onSelect,
+        });
       }, items);
-      obj2 = { spacing: 16, children: closure_8(Card, obj3) };
-      Stack = selectedType(5600).Stack;
-      obj3 = { children: items1 };
-      Card = selectedType(6002).Card;
-      items1 = [closure_7(selectedType(4892).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
+      const obj2 = { spacing: 16, children: null };
+      const obj3 = { children: null };
+      const items1 = [closure_7(selectedType(4892).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
       const obj4 = {
         description: "Tap an option to launch the action sheet immediately",
         hasIcons: false,
-        children: closure_7(selectedType(6000).TableRow, obj5),
+        children: closure_7(selectedType(6000).TableRow, {
+          label: found.label,
+          subLabel: found.description,
+          arrow: true,
+          onPress: callback,
+        }),
       };
-      const TableRowGroup = selectedType(6081).TableRowGroup;
-      obj5 = { label: found.label, subLabel: found.description, arrow: true, onPress: callback };
-      items1[1] = closure_7(TableRowGroup, obj4);
+      items1[1] = closure_7(selectedType(6081).TableRowGroup, obj4);
+      obj3.children = items1;
+      obj2.children = closure_8(selectedType(6002).Card, obj3);
+      obj.children = closure_7(selectedType(5600).Stack, obj2);
       return closure_7(closure_6, obj);
     };
-const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");
-
-export default tmp5;

@@ -1,45 +1,27 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountScreen.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../Constants.tsx";
-import intl4 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import WebAuthnActionCreators from "../../../webauthn/WebAuthnActionCreators.tsx";
 import MFAUtils from "../../../../utils/MFAUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SafetyHubActionCreatorsAll from "../../../safety_hub/SafetyHubActionCreators.tsx";
 import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
 import SettingsAccountHeaderDefault from "SettingsAccountHeader.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import WebAuthnStore from "../../../webauthn/WebAuthnStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, navigation;
-
-let c10;
-let closure_12;
-let obj2;
-let unpackModuleId;
+require = fn;
 function getAccountSettings() {
-  let intl;
-  let intl2;
-  let items;
-  let items2;
-  let items3;
-  let items4;
-  const obj = { label: intl.string(intl4.t.e262Nn), settings: items };
-  intl = intl4.intl;
-  items = [, , , , , ,];
+  const obj = { label: null, settings: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.e262Nn);
+  const items = [, , , , , ,];
   ({
     ACCOUNT_USERNAME: arr[0],
     ACCOUNT_DISPLAY_NAME: arr[1],
@@ -49,9 +31,10 @@ function getAccountSettings() {
     ACCOUNT_AGE_GROUP_NON_ADULT: arr[5],
     ACCOUNT_AGE_GROUP_ASSIGNED_ADULT: arr[6],
   } = MobileUserSettings);
+  obj.settings = items;
   const items1 = [obj, , ,];
-  const obj2 = { label: authStore(closure_15, {}), settings: items2 };
-  items2 = [, , , , ,];
+  const obj2 = { label: v65535(closure_15, {}), settings: null };
+  const items2 = [, , , , ,];
   ({
     ACCOUNT_CHANGE_PASSWORD: arr3[0],
     ACCOUNT_WEB_AUTHN_VIEW: arr3[1],
@@ -60,285 +43,236 @@ function getAccountSettings() {
     ACCOUNT_REMOVE_2FA: arr3[4],
     ACCOUNT_SMS_BACKUP: arr3[5],
   } = MobileUserSettings);
+  obj2.settings = items2;
   items1[1] = obj2;
-  const obj3 = { label: authStore(closure_16, {}), settings: items3 };
-  items3 = [,];
+  const obj3 = { label: v65535(closure_16, {}), settings: null };
+  const items3 = [,];
   ({ ACCOUNT_AGE_GROUP: arr4[0], ACCOUNT_STANDING: arr4[1] } = MobileUserSettings);
+  obj3.settings = items3;
   items1[2] = obj3;
-  const obj4 = { label: intl2.string(intl4.t["5V0AkP"]), settings: items4 };
-  intl2 = intl4.intl;
-  items4 = [,];
+  const obj4 = { label: null, settings: null };
+  const intl2 = util.intl;
+  obj4.label = intl2.string(util.t["5V0AkP"]);
+  const items4 = [,];
   ({ ACCOUNT_DISABLE: arr5[0], ACCOUNT_DELETE: arr5[1] } = MobileUserSettings);
+  obj4.settings = items4;
   items1[3] = obj4;
   return items1;
 }
-const View = react_native.View;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = Fragment);
-let obj = { upsellPasswordless: obj2, upsellImagePasswordless: { height: "100%", width: "100%" } };
-obj2 = {
-  marginBottom: 16,
-  borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED,
-  borderWidth: 1,
-  borderRadius: nativeDefault.radii.lg,
+const View = fn(17).View;
+const MobileUserSettings = fn(7645).MobileUserSettings;
+const UserSettingsSections = fn(1085).UserSettingsSections;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj = {
+  upsellPasswordless: {
+    marginBottom: 16,
+    borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED,
+    borderWidth: 1,
+    borderRadius: nativeDefault.radii.lg,
+  },
+  upsellImagePasswordless: { height: "100%", width: "100%" },
 };
 let closure_13 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let intl;
-      let intl2;
-      let items;
-      let items1;
-      let items2;
-      let obj13;
-      let obj17;
-      let obj5;
-      let tmp13;
-      let tmp15;
-      let tmp16;
-      let tmp17;
-      let tmp20;
-      let tmp23;
-      let tmp24;
-      let tmp26;
-      let tmp29;
-      let tmp33;
-      let tmp6;
-      let tmp7;
-      let tmp8;
-      let tmp9;
-      const obj = navigation(576);
-      const cResult = obj.c(23);
+      const cResult = navigation(576).c(23);
       const tmp4 = closure_13();
-      const obj2 = navigation(1490);
-      navigation = obj2.useNavigation();
+      const obj = navigation(576);
+      navigation = navigation(1490).useNavigation();
       if (cResult[0] !== navigation) {
         const fn = function t() {
           navigation.push(UserSettingsSections.WEBAUTHN_REGISTER);
         };
         cResult[0] = navigation;
         cResult[1] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[1];
       }
-      const upsellPasswordless = tmp4.upsellPasswordless;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { flexDirection: "row", gap: 8 };
         cResult[2] = obj3;
-        tmp7 = obj3;
+        let tmp7 = obj3;
       } else {
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        size = { width: 70, height: 70 };
+        const size = { width: 70, height: 70 };
         cResult[3] = size;
-        tmp8 = size;
+        let tmp8 = size;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] !== tmp4.upsellImagePasswordless) {
-        const obj4 = { style: tmp8, children: closure_10(tmp13, obj5) };
-        obj5 = { source: navigation(14509), resizeMode: "contain", style: tmp4.upsellImagePasswordless };
-        tmp13 = FastImageDefault;
+        const obj4 = { style: tmp8, children: null };
+        const obj5 = { source: tmp(14509), resizeMode: "contain", style: tmp4.upsellImagePasswordless };
+        obj4.children = closure_10(FastImageDefault, obj5);
         const tmp14 = closure_10(View, obj4);
         cResult[4] = tmp4.upsellImagePasswordless;
         cResult[5] = tmp14;
-        tmp9 = tmp14;
+        let tmp9 = tmp14;
       } else {
         tmp9 = cResult[5];
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj6 = { flex: 1 };
         cResult[6] = obj6;
-        tmp15 = obj6;
+        let tmp15 = obj6;
       } else {
         tmp15 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const obj7 = { flexShrink: 1, width: "90%", gap: 8 };
         cResult[7] = obj7;
-        tmp16 = obj7;
+        let tmp16 = obj7;
       } else {
         tmp16 = cResult[7];
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj8 = {
-          variant: "heading-lg/medium",
-          color: "mobile-text-heading-primary",
-          children: intl.string(navigation(1126).t["+Svv46"]),
-        };
-        const Heading = tmp(4892).Heading;
-        intl = tmp(1126).intl;
-        const tmp19 = closure_10(Heading, obj8);
+        const obj8 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
+        const intl = tmp(1126).intl;
+        obj8.children = intl.string(tmp(1126).t["+Svv46"]);
+        const tmp19 = closure_10(tmp(4892).Heading, obj8);
         cResult[8] = tmp19;
-        tmp17 = tmp19;
+        let tmp17 = tmp19;
       } else {
         tmp17 = cResult[8];
       }
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj9 = {
-          variant: "text-md/normal",
-          color: "text-muted",
-          children: intl2.string(navigation(1126).t.S0g2K9),
-        };
-        const Text = tmp(4892).Text;
-        intl2 = tmp(1126).intl;
-        const tmp22 = closure_10(Text, obj9);
+        const obj9 = { variant: "text-md/normal", color: "text-muted", children: null };
+        const intl2 = tmp(1126).intl;
+        obj9.children = intl2.string(tmp(1126).t.S0g2K9);
+        const tmp22 = closure_10(tmp(4892).Text, obj9);
         cResult[9] = tmp22;
-        tmp20 = tmp22;
+        let tmp20 = tmp22;
       } else {
         tmp20 = cResult[9];
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         const obj10 = { flexDirection: "row" };
         cResult[10] = obj10;
-        tmp23 = obj10;
+        let tmp23 = obj10;
       } else {
         tmp23 = cResult[10];
       }
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = tmp(1126).intl;
-        const stringResult = intl3.string(navigation(1126).t.piGf5c);
+        const stringResult = intl3.string(tmp(1126).t.piGf5c);
         cResult[11] = stringResult;
-        tmp24 = stringResult;
+        let tmp24 = stringResult;
       } else {
         tmp24 = cResult[11];
       }
       if (cResult[12] !== tmp6) {
         const obj11 = { text: tmp24, onPress: tmp6, size: "sm" };
-        const tmp28 = closure_10(navigation(5601).Button, obj11);
+        const tmp28 = closure_10(tmp(5601).Button, obj11);
         cResult[12] = tmp6;
         cResult[13] = tmp28;
-        tmp26 = tmp28;
+        let tmp26 = tmp28;
       } else {
         tmp26 = cResult[13];
       }
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp32 = closure_10(View, {});
         cResult[14] = tmp32;
-        tmp29 = tmp32;
+        let tmp29 = tmp32;
       } else {
         tmp29 = cResult[14];
       }
       if (cResult[15] !== tmp26) {
-        const obj12 = { style: tmp15, children: closure_11(View, obj13) };
-        obj13 = { style: tmp16, children: items };
-        items = [tmp17, tmp20];
-        const obj14 = { style: tmp23, children: items1 };
-        items1 = [tmp26, tmp29];
+        const obj12 = { style: tmp15, children: null };
+        const obj13 = { style: tmp16, children: null };
+        const items = [tmp17, tmp20];
+        const obj14 = { style: tmp23, children: null };
+        const items1 = [tmp26, tmp29];
+        obj14.children = items1;
         items[2] = closure_11(View, obj14);
+        obj13.children = items;
+        obj12.children = closure_11(View, obj13);
         const tmp37 = closure_10(View, obj12);
         cResult[15] = tmp26;
         cResult[16] = tmp37;
-        tmp33 = tmp37;
+        let tmp33 = tmp37;
       } else {
         tmp33 = cResult[16];
       }
       if (cResult[17] === tmp33) {
-        let tmp38;
         if (cResult[18] === tmp9) {
-          tmp38 = cResult[19];
+          let tmp38 = cResult[19];
         }
         if (cResult[20] === tmp4.upsellPasswordless) {
-          let tmp40;
           if (cResult[21] === tmp38) {
-            tmp40 = cResult[22];
+            let tmp40 = cResult[22];
           }
           return tmp40;
         }
-        const obj15 = { style: upsellPasswordless, children: tmp38 };
+        const obj15 = { style: tmp4.upsellPasswordless, children: tmp38 };
         const tmp43 = closure_10(View, obj15);
         cResult[20] = tmp4.upsellPasswordless;
         cResult[21] = tmp38;
         cResult[22] = tmp43;
         tmp40 = tmp43;
       }
-      const obj16 = { border: "none", shadow: "none", children: closure_11(View, obj17) };
-      obj17 = { style: tmp7, children: items2 };
-      items2 = [tmp9, tmp33];
-      const Card = tmp(6002).Card;
-      const tmp39 = closure_10(Card, obj16);
+      const obj16 = { border: "none", shadow: "none", children: null };
+      const obj17 = { style: tmp7, children: null };
+      const items2 = [tmp9, tmp33];
+      obj17.children = items2;
+      obj16.children = closure_11(View, obj17);
+      const tmp39 = closure_10(navigation(6002).Card, obj16);
       cResult[17] = tmp33;
       cResult[18] = tmp9;
       cResult[19] = tmp39;
       tmp38 = tmp39;
+      const obj2 = navigation(1490);
     }
   : () => {
-      let Card;
-      let closure_0;
-      let intl;
-      let intl2;
-      let intl3;
-      let items;
-      let items1;
-      let items2;
-      let obj3;
-      let obj4;
-      let obj6;
-      let obj8;
-      let tmp2;
       const tmp = closure_13();
+      _require = require("useNavigation").useNavigation();
+      const obj2 = { style: tmp.upsellPasswordless, children: null };
+      const obj3 = { border: "none", shadow: "none", children: null };
+      const obj4 = { style: { flexDirection: "row", gap: 8 }, children: null };
+      const obj5 = { style: { width: 70, height: 70 }, children: null };
+      const obj6 = { source: null, resizeMode: "contain", style: null };
       const obj = require("useNavigation");
-      _require = obj.useNavigation();
-      const obj2 = { style: tmp.upsellPasswordless, children: closure_10(Card, obj3) };
-      obj3 = { border: "none", shadow: "none", children: closure_11(View, obj4) };
-      obj4 = { style: { flexDirection: "row", gap: 8 }, children: items };
-      const obj5 = { style: { width: 70, height: 70 }, children: closure_10(tmp2, obj6) };
-      Card = require("Card/Card").Card;
-      obj6 = { source: require("AssetRegistry"), resizeMode: "contain", style: tmp.upsellImagePasswordless };
-      tmp2 = FastImageDefault;
-      items = [closure_10(View, obj5)];
-      const obj7 = { style: { flex: 1 }, children: closure_11(View, obj8) };
-      obj8 = { style: { flexShrink: 1, width: "90%", gap: 8 }, children: items1 };
-      const obj9 = {
-        variant: "heading-lg/medium",
-        color: "mobile-text-heading-primary",
-        children: intl.string(require("intl").t["+Svv46"]),
+      obj6.source = require("../../../../../_runtime/metro/14509__.js");
+      obj6.style = tmp.upsellImagePasswordless;
+      obj5.children = closure_10(FastImageDefault, obj6);
+      const items = [closure_10(View, obj5)];
+      const obj7 = { style: { flex: 1 }, children: null };
+      const obj8 = { style: { flexShrink: 1, width: "90%", gap: 8 }, children: null };
+      const obj9 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
+      const intl = require("util").intl;
+      obj9.children = intl.string(require("util").t["+Svv46"]);
+      const items1 = [closure_10(require("Text/Text").Heading, obj9), ,];
+      const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
+      const intl2 = require("util").intl;
+      obj10.children = intl2.string(require("util").t.S0g2K9);
+      items1[1] = closure_10(require("Text/Text").Text, obj10);
+      const obj11 = { style: { flexDirection: "row" }, children: null };
+      const obj12 = { text: null, onPress: null, size: "sm" };
+      const intl3 = require("util").intl;
+      obj12.text = intl3.string(require("util").t.piGf5c);
+      obj12.onPress = function onPress() {
+        closure_0.push(UserSettingsSections.WEBAUTHN_REGISTER);
       };
-      const Heading = require("Text/Text").Heading;
-      intl = require("intl").intl;
-      items1 = [closure_10(Heading, obj9), ,];
-      const obj10 = {
-        variant: "text-md/normal",
-        color: "text-muted",
-        children: intl2.string(require("intl").t.S0g2K9),
-      };
-      const Text = require("Text/Text").Text;
-      intl2 = require("intl").intl;
-      items1[1] = closure_10(Text, obj10);
-      const obj11 = { style: { flexDirection: "row" }, children: items2 };
-      const obj12 = {
-        text: intl3.string(require("intl").t.piGf5c),
-        onPress() {
-          closure_0.push(UserSettingsSections.WEBAUTHN_REGISTER);
-        },
-        size: "sm",
-      };
-      const Button = require("components/Button/Button").Button;
-      intl3 = require("intl").intl;
-      items2 = [closure_10(Button, obj12), closure_10(View, {})];
+      const items2 = [closure_10(require("components/Button/Button").Button, obj12), closure_10(View, {})];
+      obj11.children = items2;
       items1[2] = closure_11(View, obj11);
+      obj8.children = items1;
+      obj7.children = closure_11(View, obj8);
       items[1] = closure_10(View, obj7);
+      obj4.children = items;
+      obj3.children = closure_11(View, obj4);
+      obj2.children = closure_10(require("Card").Card, obj3);
       return closure_10(View, obj2);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_0;
-      let intl;
-      let items2;
-      let tmp12;
-      let tmp13;
-      let tmp15;
-      let tmp19;
-      let tmp22;
-      let tmp4;
-      let tmp5;
-      let obj = require("react");
-      const cResult = obj.c(10);
+      const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [WebAuthnStore];
         const fn = function o() {
@@ -352,200 +286,193 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = require("get initialized");
-      const tmp7 = _slicedToArray(tmpResult.useStateFromStoresObject(tmp4, tmp5), 2);
-      _require = tmp9;
-      const first = tmp7[0];
-      const tmpResult2 = require("SettingsAccountUtils");
-      const isUserVerified = tmpResult2.useIsUserVerified();
-      const tmp11 = require("MFAUtils").hasWebAuthn && isUserVerified && tmp7[1] && !first;
+      let obj = require("c");
+      const tmp7 = _slicedToArray(require("initialize").useStateFromStoresObject(tmp4, tmp5), 2);
+      _require = tmp8;
+      const tmpResult = require("initialize");
+      const isUserVerified = require("SettingsAccountUtils").useIsUserVerified();
+      const tmp10 = require("MFAUtils").hasWebAuthn && isUserVerified && tmp7[1] && !tmp7[0];
       if (cResult[2] !== tmp7[1]) {
         const fn2 = function u() {
           if (!closure_0) {
-            const obj = WebAuthnActionCreators;
-            const webAuthnCredentials = obj.fetchWebAuthnCredentials();
+            const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
           }
         };
-        const items1 = [tmp7[1]];
-        cResult[2] = tmp7[1];
+        const items1 = [tmp8];
+        cResult[2] = tmp8;
         cResult[3] = fn2;
         cResult[4] = items1;
-        tmp13 = items1;
-        tmp12 = fn2;
+        let tmp12 = items1;
+        let tmp11 = fn2;
       } else {
-        tmp12 = cResult[3];
-        tmp13 = cResult[4];
+        tmp11 = cResult[3];
+        tmp12 = cResult[4];
       }
-      const effect = react.useEffect(tmp12, tmp13);
-      if (cResult[5] !== tmp11) {
-        const tmp16 = tmp11 && closure_10(closure_14, {});
-        cResult[5] = tmp11;
-        cResult[6] = tmp16;
-        tmp15 = tmp16;
+      const effect = noop.useEffect(tmp11, tmp12);
+      if (cResult[5] !== tmp10) {
+        let tmp15 = tmp10;
+        if (tmp10) {
+          tmp15 = closure_10(closure_14, {});
+        }
+        cResult[5] = tmp10;
+        cResult[6] = tmp15;
+        let tmp14 = tmp15;
       } else {
-        tmp15 = cResult[6];
+        tmp14 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { title: intl.string(require("intl").t.fuTmEJ) };
-        const TableRowGroupTitle = tmp(6081).TableRowGroupTitle;
-        intl = tmp(1126).intl;
-        const tmp21 = closure_10(TableRowGroupTitle, obj2);
-        cResult[7] = tmp21;
-        tmp19 = tmp21;
+        const obj2 = { title: null };
+        const intl = tmp(1126).intl;
+        obj2.title = intl.string(tmp(1126).t.fuTmEJ);
+        const tmp20 = closure_10(tmp(6081).TableRowGroupTitle, obj2);
+        cResult[7] = tmp20;
+        let tmp18 = tmp20;
       } else {
-        tmp19 = cResult[7];
+        tmp18 = cResult[7];
       }
-      if (cResult[8] !== tmp15) {
-        const obj3 = { children: items2 };
-        items2 = [tmp15, tmp19];
-        const tmp25 = closure_11(closure_12, obj3);
-        cResult[8] = tmp15;
-        cResult[9] = tmp25;
-        tmp22 = tmp25;
+      if (cResult[8] !== tmp14) {
+        const obj3 = { children: null };
+        const items2 = [tmp14, tmp18];
+        obj3.children = items2;
+        const tmp24 = closure_11(closure_12, obj3);
+        cResult[8] = tmp14;
+        cResult[9] = tmp24;
+        let tmp21 = tmp24;
       } else {
-        tmp22 = cResult[9];
+        tmp21 = cResult[9];
       }
-      return tmp22;
+      return tmp21;
     }
   : () => {
-      let first;
-      let intl;
-      let items3;
-      let tmp = first;
-      let obj = first(504);
       let items = [WebAuthnStore];
       const tmp3 = _slicedToArray(
-        obj.useStateFromStoresObject(items, () => {
+        first(504).useStateFromStoresObject(items, () => {
           const items = [WebAuthnStore.hasCredentials, WebAuthnStore.hasFetchedCredentials()];
           return items;
         }),
         2,
       );
       first = tmp3[0];
-      let closure_1 = tmp5;
-      const obj2 = first(14510);
-      const isUserVerified = obj2.useIsUserVerified();
+      closure_1 = tmp5;
+      let obj = first(504);
+      const isUserVerified = first(14510).useIsUserVerified();
       const items1 = [tmp3[1], first, isUserVerified];
-      const memo = react.useMemo(() => {
-        const tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1 && !first;
+      const memo = noop.useMemo(() => {
+        let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
+        if (tmp) {
+          tmp = !first;
+        }
         return tmp;
       }, items1);
       const items2 = [tmp3[1]];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (!closure_1) {
-          const obj = WebAuthnActionCreators;
-          const webAuthnCredentials = obj.fetchWebAuthnCredentials();
+          const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
         }
       }, items2);
-      const obj3 = { children: items3 };
-      items3 = [memo && closure_10(closure_14, {})];
-      const tmp11 = memo && closure_10(closure_14, {});
-      const obj4 = { title: intl.string(tmp(1126).t.fuTmEJ) };
-      const TableRowGroupTitle = tmp(6081).TableRowGroupTitle;
-      intl = tmp(1126).intl;
-      items3[1] = closure_10(TableRowGroupTitle, obj4);
+      let tmp11 = memo;
+      if (memo) {
+        tmp11 = closure_10(closure_14, {});
+      }
+      const obj3 = { children: null };
+      const items3 = [tmp11];
+      const obj4 = { title: null };
+      const intl = tmp(1126).intl;
+      obj4.title = intl.string(first(1126).t.fuTmEJ);
+      items3[1] = closure_10(first(6081).TableRowGroupTitle, obj4);
+      obj3.children = items3;
       return closure_11(closure_12, obj3);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp5;
-      let tmp7;
-      const obj = react2;
-      const cResult = obj.c(4);
-      const obj2 = TinyBroncoSettingsPredicate;
-      const isTinyBroncoSettingsEnabled = obj2.useIsTinyBroncoSettingsEnabled();
+      const cResult = c.c(4);
+      const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
       if (cResult[0] !== isTinyBroncoSettingsEnabled) {
-        const intl = intl4.intl;
-        const string = intl.string;
-        const t = intl4.t;
-        const stringResult = string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]);
+        const intl = util.intl;
+        const t = util.t;
+        const stringResult = intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]);
         cResult[0] = isTinyBroncoSettingsEnabled;
         cResult[1] = stringResult;
-        tmp5 = stringResult;
       } else {
-        tmp5 = cResult[1];
+        if (cResult[2] !== cResult[1]) {
+          const obj3 = { title: tmp5 };
+          const tmp10 = v65535(TableRowGroup.TableRowGroupTitle, obj3);
+          cResult[2] = tmp5;
+          cResult[3] = tmp10;
+          let tmp8 = tmp10;
+        } else {
+          tmp8 = cResult[3];
+        }
+        return tmp8;
       }
-      if (cResult[2] !== tmp5) {
-        const obj3 = { title: tmp5 };
-        const tmp9 = authStore(TableRowGroup.TableRowGroupTitle, obj3);
-        cResult[2] = tmp5;
-        cResult[3] = tmp9;
-        tmp7 = tmp9;
-      } else {
-        tmp7 = cResult[3];
-      }
-      return tmp7;
     }
   : () => {
-      const obj = TinyBroncoSettingsPredicate;
-      const isTinyBroncoSettingsEnabled = obj.useIsTinyBroncoSettingsEnabled();
-      const TableRowGroupTitle = TableRowGroup.TableRowGroupTitle;
-      const intl = intl4.intl;
-      const string = intl.string;
-      const t = intl4.t;
-      const obj2 = { title: string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]) };
-      return authStore(TableRowGroupTitle, obj2);
+      const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+      const intl = util.intl;
+      const t = util.t;
+      return v65535(TableRowGroup.TableRowGroupTitle, {
+        title: intl.string(isTinyBroncoSettingsEnabled ? t.GI2mea : t["16r9jm"]),
+      });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let tmp9;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { sections: getAccountSettings(), ListHeaderComponent: SettingsAccountHeaderDefault };
-        const createList = SettingBuilders.createList;
-        SettingBuilders;
-        const list = createList(obj2);
+        const list = SettingBuilders.createList(obj2);
         cResult[0] = list;
-        first = list;
+        let first = list;
+        const tmpResult = SettingBuilders;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { node: first };
-        const tmp12 = authStore(SettingLayoutDefault, obj3);
-        cResult[1] = tmp12;
-        tmp9 = tmp12;
+        const tmp11 = v65535(SettingLayoutDefault, obj3);
+        cResult[1] = tmp11;
+        let tmp8 = tmp11;
       } else {
-        tmp9 = cResult[1];
+        tmp8 = cResult[1];
       }
-      return tmp9;
+      return tmp8;
     }
   : () => {
-      const node = react.useMemo(() => {
+      const node = noop.useMemo(() => {
         const obj = require("SettingBuilders");
-        const obj2 = { sections: getAccountSettings(), ListHeaderComponent: SettingsAccountHeaderDefault };
-        return obj.createList(obj2);
+        return obj.createList({ sections: getAccountSettings(), ListHeaderComponent: SettingsAccountHeaderDefault });
       }, []);
-      return authStore(SettingLayoutDefault, { node });
+      return v65535(SettingLayoutDefault, { node });
     };
-let memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(
+ReactCompilerGating = fn(558);
+let obj3 = {
+  marginBottom: 16,
+  borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED,
+  borderWidth: 1,
+  borderRadius: nativeDefault.radii.lg,
+};
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountScreen.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        let first;
-        let tmp5;
-        let obj = react2;
-        const cResult = obj.c(2);
+        const cResult = c.c(2);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t() {
-            const obj = SafetyHubActionCreatorsAll;
-            const safetyHubData = obj.getSafetyHubData();
+            const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
           };
           cResult[0] = fn;
-          first = fn;
+          let first = fn;
         } else {
           first = cResult[0];
         }
         useMountEffectDefault(first);
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp8 = authStore(closure_18, {});
+          const tmp8 = v65535(closure_18, {});
           cResult[1] = tmp8;
-          tmp5 = tmp8;
+          let tmp5 = tmp8;
         } else {
           tmp5 = cResult[1];
         }
@@ -553,13 +480,8 @@ const memoResult = memo(
       }
     : () => {
         useMountEffectDefault(() => {
-          const obj = SafetyHubActionCreatorsAll;
-          const safetyHubData = obj.getSafetyHubData();
+          const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
         });
-        return authStore(closure_18, {});
+        return v65535(closure_18, {});
       },
 );
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountScreen.tsx");
-
-export default memoResult;

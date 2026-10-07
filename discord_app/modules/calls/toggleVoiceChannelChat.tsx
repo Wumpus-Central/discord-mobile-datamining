@@ -3,8 +3,8 @@ import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreat
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import ChannelRTCStore from "ChannelRTCStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
 export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
@@ -20,9 +20,9 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
           if (open == null) {
             tmp3 = !ChannelRTCStore.getChatOpen(channelId);
           }
-          const obj3 = ChannelRTCActionCreatorsDefault;
-          obj3.updateChatOpen(channelId, tmp3);
-          return { channelId, chatOpen: tmp3 };
+          ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, tmp3);
+          const obj2 = { channelId, chatOpen: tmp3 };
+          return obj2;
         }
       }
       return null;

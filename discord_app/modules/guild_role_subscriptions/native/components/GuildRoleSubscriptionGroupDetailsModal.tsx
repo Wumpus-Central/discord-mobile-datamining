@@ -1,8 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import Constants from "../../../../Constants.tsx";
-import intl5 from "../../../../intl/index.native.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
@@ -11,170 +9,142 @@ import FormSeparatorDefault from "FormSeparator.tsx";
 import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSettingsDisabledContext.tsx";
 import FormImagePicker from "FormImagePicker.tsx";
 import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import RoleTierEditStore from "../RoleTierEditStore.tsx";
-import GuildRoleSubscriptionsConstants from "../../GuildRoleSubscriptionsConstants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let c10;
-let c9;
-let metroImportDefault;
-let metroRequire;
-let unpackModuleId;
-const View = react_native.View;
-({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroImportDefault } =
+require = fn;
+const View = fn(17).View;
+const GuildRoleSubscriptionsConstants = fn(15038);
+({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } =
   GuildRoleSubscriptionsConstants);
-const UPLOAD_BANNER_SIZE = Constants.UPLOAD_BANNER_SIZE;
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = Fragment);
+const UPLOAD_BANNER_SIZE = fn(1085).UPLOAD_BANNER_SIZE;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(4896);
 let closure_12 = createStyles.createStyles({
   coverPhoto: { height: 114, width: "100%" },
   coverDescription: { marginTop: 16 },
   paddedContainer: { paddingHorizontal: 16 },
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let cover;
-      let description;
-      let first;
-      let items;
-      let items1;
-      let setCover;
-      let setDescription;
-      let tmp10;
-      const obj = react2;
-      const cResult = obj.c(32);
+      const cResult = c.c(32);
       ({ cover, setCover, description, setDescription } = arg0);
       const tmp4 = closure_12();
       const tmp6 = FormStylesDefault();
-      const obj2 = RoleSubscriptionSettingsDisabledContext;
-      const roleSubscriptionSettingsDisabled = obj2.useRoleSubscriptionSettingsDisabled();
-      const header = tmp6.header;
+      const roleSubscriptionSettingsDisabled =
+        RoleSubscriptionSettingsDisabledContext.useRoleSubscriptionSettingsDisabled();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl5.intl;
-        const stringResult = intl.string(intl5.t["3S8gA7"]);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t["3S8gA7"]);
         cResult[0] = stringResult;
-        first = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp6.header) {
-        const obj3 = { style: header, children: first };
-        const tmp12 = React4(FormHeaderDefault, obj3);
+        const obj3 = { style: tmp6.header, children: first };
+        const tmp12 = options(FormHeaderDefault, obj3);
         cResult[1] = tmp6.header;
         cResult[2] = tmp12;
-        tmp10 = tmp12;
+        let tmp10 = tmp12;
       } else {
         tmp10 = cResult[2];
       }
       if (cResult[3] === cover) {
         if (cResult[4] === roleSubscriptionSettingsDisabled) {
           if (cResult[5] === setCover) {
-            let tmp14;
-            let tmp16;
-            let tmp18;
             if (cResult[6] === tmp4.coverPhoto) {
-              tmp14 = cResult[7];
+              let tmp14 = cResult[7];
             }
             const _Symbol = Symbol;
-            const coverDescription = tmp4.coverDescription;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl2 = intl5.intl;
-              const stringResult1 = intl2.string(intl5.t["0ng4rB"]);
+              const intl2 = util.intl;
+              const stringResult1 = intl2.string(util.t["0ng4rB"]);
               cResult[8] = stringResult1;
-              tmp16 = stringResult1;
+              let tmp16 = stringResult1;
             } else {
               tmp16 = cResult[8];
             }
             if (cResult[9] !== tmp4.coverDescription) {
               const obj4 = {
-                style: coverDescription,
+                style: tmp4.coverDescription,
                 variant: "text-sm/medium",
                 color: "text-default",
                 children: tmp16,
               };
-              const tmp20 = React4(Text_Text.Text, obj4);
+              const tmp20 = options(Text_Text.Text, obj4);
               cResult[9] = tmp4.coverDescription;
               cResult[10] = tmp20;
-              tmp18 = tmp20;
+              let tmp18 = tmp20;
             } else {
               tmp18 = cResult[10];
             }
             if (cResult[11] === tmp4.paddedContainer) {
               if (cResult[12] === tmp14) {
-                let tmp21;
-                let tmp25;
-                let tmp28;
-                let tmp30;
-                let tmp33;
                 if (cResult[13] === tmp18) {
-                  tmp21 = cResult[14];
+                  let tmp21 = cResult[14];
                 }
                 if (cResult[15] !== tmp4.paddedContainer) {
                   const obj5 = { style: tmp4.paddedContainer };
-                  const tmp27 = React4(FormSeparatorDefault, obj5);
+                  const tmp27 = options(FormSeparatorDefault, obj5);
                   cResult[15] = tmp4.paddedContainer;
                   cResult[16] = tmp27;
-                  tmp25 = tmp27;
+                  let tmp25 = tmp27;
                 } else {
                   tmp25 = cResult[16];
                 }
                 const _Symbol2 = Symbol;
-                const header2 = tmp6.header;
                 if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl3 = intl5.intl;
-                  const stringResult2 = intl3.string(intl5.t["74JctW"]);
+                  const intl3 = util.intl;
+                  const stringResult2 = intl3.string(util.t["74JctW"]);
                   cResult[17] = stringResult2;
-                  tmp28 = stringResult2;
+                  let tmp28 = stringResult2;
                 } else {
                   tmp28 = cResult[17];
                 }
                 if (cResult[18] !== tmp6.header) {
-                  const obj6 = { style: header2, children: tmp28 };
-                  const tmp32 = React4(FormHeaderDefault, obj6);
+                  const obj6 = { style: tmp6.header, children: tmp28 };
+                  const tmp32 = options(FormHeaderDefault, obj6);
                   cResult[18] = tmp6.header;
                   cResult[19] = tmp32;
-                  tmp30 = tmp32;
+                  let tmp30 = tmp32;
                 } else {
                   tmp30 = cResult[19];
                 }
                 const _Symbol3 = Symbol;
-                const textInput = tmp6.textInput;
                 if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl4 = intl5.intl;
-                  const stringResult3 = intl4.string(intl5.t["3YHwoG"]);
+                  const intl4 = util.intl;
+                  const stringResult3 = intl4.string(util.t["3YHwoG"]);
                   cResult[20] = stringResult3;
-                  tmp33 = stringResult3;
+                  let tmp33 = stringResult3;
                 } else {
                   tmp33 = cResult[20];
                 }
                 if (cResult[21] === description) {
                   if (cResult[22] === tmp6.textInput) {
                     if (cResult[23] === roleSubscriptionSettingsDisabled) {
-                      let tmp35;
                       if (cResult[24] === setDescription) {
-                        tmp35 = cResult[25];
+                        let tmp35 = cResult[25];
                       }
                       if (cResult[26] === tmp25) {
                         if (cResult[27] === tmp30) {
                           if (cResult[28] === tmp35) {
                             if (cResult[29] === tmp10) {
-                              let tmp39;
                               if (cResult[30] === tmp21) {
-                                tmp39 = cResult[31];
+                                let tmp39 = cResult[31];
                               }
                               return tmp39;
                             }
                           }
                         }
                       }
-                      const obj7 = { children: items };
-                      items = [tmp10, tmp21, tmp25, tmp30, tmp35];
-                      const tmp42 = authStore(unpackModuleId, obj7);
+                      const obj7 = { children: null };
+                      const items = [tmp10, tmp21, tmp25, tmp30, tmp35];
+                      obj7.children = items;
+                      const tmp42 = v65535(closure_1_11, obj7);
                       cResult[26] = tmp25;
                       cResult[27] = tmp30;
                       cResult[28] = tmp35;
@@ -186,17 +156,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj8 = {
-                  style: textInput,
+                  style: tmp6.textInput,
                   showTopContainer: false,
                   multiline: true,
-                  maxLength: metroImportDefault,
+                  maxLength,
                   numberOfLines: 3,
                   value: description,
                   placeholder: tmp33,
                   onChange: setDescription,
                   disabled: roleSubscriptionSettingsDisabled,
                 };
-                const tmp38 = React4(Form.FormInput, obj8);
+                const tmp38 = options(Form.FormInput, obj8);
                 cResult[21] = description;
                 cResult[22] = tmp6.textInput;
                 cResult[23] = roleSubscriptionSettingsDisabled;
@@ -205,9 +175,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp35 = tmp38;
               }
             }
-            const obj9 = { style: tmp13, children: items1 };
-            items1 = [tmp14, tmp18];
-            const tmp24 = authStore(View, obj9);
+            const obj9 = { style: tmp13, children: null };
+            const items1 = [tmp14, tmp18];
+            obj9.children = items1;
+            const tmp24 = v65535(View, obj9);
             cResult[11] = tmp4.paddedContainer;
             cResult[12] = tmp14;
             cResult[13] = tmp18;
@@ -216,6 +187,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
+      const tmp15 = options(FormImagePicker.ImagePickerIcon, {
+        style: tmp4.coverPhoto,
+        image: cover,
+        imageUploadSize: UPLOAD_BANNER_SIZE.width,
+        previewShape: FormImagePicker.PreviewShape.SQUIRCLE,
+        setImage: setCover,
+        disabled: roleSubscriptionSettingsDisabled,
+        standalone: true,
+        size: 114,
+      });
+      cResult[3] = cover;
+      cResult[4] = roleSubscriptionSettingsDisabled;
+      cResult[5] = setCover;
+      cResult[6] = tmp4.coverPhoto;
+      cResult[7] = tmp15;
+      tmp14 = tmp15;
       const obj10 = {
         style: tmp4.coverPhoto,
         image: cover,
@@ -226,37 +213,39 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         standalone: true,
         size: 114,
       };
-      const ImagePickerIcon = FormImagePicker.ImagePickerIcon;
-      const tmp15 = React4(ImagePickerIcon, obj10);
-      cResult[3] = cover;
-      cResult[4] = roleSubscriptionSettingsDisabled;
-      cResult[5] = setCover;
-      cResult[6] = tmp4.coverPhoto;
-      cResult[7] = tmp15;
-      tmp14 = tmp15;
     }
   : (arg0) => {
-      let cover;
-      let description;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let items;
-      let items1;
-      let setCover;
-      let setDescription;
       ({ cover, setCover, description, setDescription } = arg0);
       const tmp = closure_12();
       const tmp2 = FormStylesDefault();
-      const obj = RoleSubscriptionSettingsDisabledContext;
-      const roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
-      const obj2 = { children: items };
-      const obj3 = { style: tmp2.header, children: intl.string(intl5.t["3S8gA7"]) };
-      const tmp4 = FormHeaderDefault;
-      intl = intl5.intl;
-      items = [React4(tmp4, obj3), , , ,];
-      const obj4 = { style: tmp.paddedContainer, children: items1 };
+      const roleSubscriptionSettingsDisabled =
+        RoleSubscriptionSettingsDisabledContext.useRoleSubscriptionSettingsDisabled();
+      const obj2 = { children: null };
+      const obj3 = { style: tmp2.header, children: null };
+      const intl = util.intl;
+      obj3.children = intl.string(util.t["3S8gA7"]);
+      const items = [options(FormHeaderDefault, obj3), , , ,];
+      const obj4 = { style: tmp.paddedContainer, children: null };
+      const items1 = [
+        options(FormImagePicker.ImagePickerIcon, {
+          style: tmp.coverPhoto,
+          image: cover,
+          imageUploadSize: UPLOAD_BANNER_SIZE.width,
+          previewShape: FormImagePicker.PreviewShape.SQUIRCLE,
+          setImage: setCover,
+          disabled: roleSubscriptionSettingsDisabled,
+          standalone: true,
+          size: 114,
+        }),
+      ];
+      const obj6 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
+      const intl2 = util.intl;
+      obj6.children = intl2.string(util.t["0ng4rB"]);
+      items1[1] = options(Text_Text.Text, obj6);
+      obj4.children = items1;
+      items[1] = v65535(View, obj4);
+      items[2] = options(FormSeparatorDefault, { style: tmp.paddedContainer });
+      const obj8 = { style: tmp2.header, children: null };
       const obj5 = {
         style: tmp.coverPhoto,
         image: cover,
@@ -267,65 +256,51 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         standalone: true,
         size: 114,
       };
-      const ImagePickerIcon = FormImagePicker.ImagePickerIcon;
-      items1 = [React4(ImagePickerIcon, obj5)];
-      const obj6 = {
-        style: tmp.coverDescription,
-        variant: "text-sm/medium",
-        color: "text-default",
-        children: intl2.string(intl5.t["0ng4rB"]),
-      };
-      const Text = Text_Text.Text;
-      intl2 = intl5.intl;
-      items1[1] = React4(Text, obj6);
-      items[1] = authStore(View, obj4);
       const obj7 = { style: tmp.paddedContainer };
-      items[2] = React4(FormSeparatorDefault, obj7);
-      const obj8 = { style: tmp2.header, children: intl3.string(intl5.t["74JctW"]) };
-      const tmp5 = FormHeaderDefault;
-      intl3 = intl5.intl;
-      items[3] = React4(tmp5, obj8);
+      const intl3 = util.intl;
+      obj8.children = intl3.string(util.t["74JctW"]);
+      items[3] = options(FormHeaderDefault, obj8);
       const obj9 = {
         style: tmp2.textInput,
         showTopContainer: false,
         multiline: true,
-        maxLength: metroImportDefault,
+        maxLength,
         numberOfLines: 3,
         value: description,
-        placeholder: intl4.string(intl5.t["3YHwoG"]),
-        onChange: setDescription,
-        disabled: roleSubscriptionSettingsDisabled,
+        placeholder: null,
+        onChange: null,
+        disabled: null,
       };
-      const FormInput = Form.FormInput;
-      intl4 = intl5.intl;
-      items[4] = React4(FormInput, obj9);
-      return authStore(unpackModuleId, obj2);
+      const intl4 = util.intl;
+      obj9.placeholder = intl4.string(util.t["3YHwoG"]);
+      obj9.onChange = setDescription;
+      obj9.disabled = roleSubscriptionSettingsDisabled;
+      items[4] = options(Form.FormInput, obj9);
+      obj2.children = items;
+      return v65535(closure_1_11, obj2);
     };
 let closure_13 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let arr;
-      let tmp11;
-      let tmp12;
-      let tmp5;
-      let tmp6;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       [tmp5, tmp6] = RoleTierEditStore.useGroupCoverState();
-      _slicedToArray(RoleTierEditStore.useGroupCoverState(), 2);
+      const tmp4 = _slicedToArray(RoleTierEditStore.useGroupCoverState(), 2);
       [arr, tmp8] = RoleTierEditStore.useGroupDescriptionState();
       let tmp9 = arr.length > 0;
-      _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 2);
       if (tmp9) {
         tmp9 = null != tmp5;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl5.intl;
-        const stringResult = intl.string(intl5.t.EPOLQD);
-        const intl2 = intl5.intl;
-        const stringResult1 = intl2.string(intl5.t["LeAm+L"]);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.EPOLQD);
+        const intl2 = util.intl;
+        const stringResult1 = intl2.string(util.t["LeAm+L"]);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp11 = stringResult;
@@ -337,15 +312,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === arr) {
           if (cResult[4] === arg0) {
             if (cResult[5] === tmp6) {
-              let tmp15;
               if (cResult[6] === tmp8) {
-                tmp15 = cResult[7];
+                let tmp15 = cResult[7];
               }
               if (cResult[8] === tmp9) {
                 if (cResult[9] === arg0) {
-                  let tmp18;
                   if (cResult[10] === tmp15) {
-                    tmp18 = cResult[11];
+                    let tmp18 = cResult[11];
                   }
                   return tmp18;
                 }
@@ -354,12 +327,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 title: tmp11,
                 description: tmp12,
                 canProceedToNextStep: tmp9,
-                nextStep: metroRequire.DETAILS,
-                children: tmp15,
+                nextStep: constants.DETAILS,
               };
-              const tmp21 = GuildRoleSubscriptionTierEditStepDefault;
               const merged = Object.assign(arg0);
-              const tmp26 = React4(tmp21, obj2);
+              obj2.children = tmp15;
+              const tmp26 = options(GuildRoleSubscriptionTierEditStepDefault, obj2);
               cResult[8] = tmp9;
               cResult[9] = arg0;
               cResult[10] = tmp15;
@@ -369,9 +341,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj3 = { cover: tmp5, setCover: tmp6, description: arr, setDescription: tmp8 };
+      const obj3 = {};
       const merged1 = Object.assign(arg0);
-      const tmp17 = React4(closure_13, obj3);
+      obj3.cover = tmp5;
+      obj3.setCover = tmp6;
+      obj3.description = arr;
+      obj3.setDescription = tmp8;
+      const tmp17 = options(closure_13, obj3);
       cResult[2] = tmp5;
       cResult[3] = arr;
       cResult[4] = arg0;
@@ -379,37 +355,30 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp8;
       cResult[7] = tmp17;
       tmp15 = tmp17;
+      const tmp7 = _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 2);
     }
   : (arg0) => {
-      let first;
-      let intl;
-      let intl2;
-      let obj2;
-      let tmp2;
-      let tmp3;
-      let tmp5;
       [tmp2, tmp3] = RoleTierEditStore.useGroupCoverState();
-      _slicedToArray(RoleTierEditStore.useGroupCoverState(), 2);
-      [first, tmp5] = RoleTierEditStore.useGroupDescriptionState();
-      const tmp6 = first.length > 0 && null != tmp2;
-      const obj = {
-        title: intl.string(intl5.t.EPOLQD),
-        description: intl2.string(intl5.t["LeAm+L"]),
-        canProceedToNextStep: tmp6,
-        nextStep: metroRequire.DETAILS,
-        children: React4(closure_13, obj2),
-      };
-      const tmp8 = GuildRoleSubscriptionTierEditStepDefault;
-      intl = intl5.intl;
-      intl2 = intl5.intl;
+      [first, obj2.setDescription] = RoleTierEditStore.useGroupDescriptionState();
+      let tmp5 = first.length > 0;
+      if (tmp5) {
+        tmp5 = null != tmp2;
+      }
+      const obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null };
+      const tmp = _slicedToArray(RoleTierEditStore.useGroupCoverState(), 2);
+      const intl = util.intl;
+      obj.title = intl.string(util.t.EPOLQD);
+      const intl2 = util.intl;
+      obj.description = intl2.string(util.t["LeAm+L"]);
+      obj.canProceedToNextStep = tmp5;
+      obj.nextStep = constants.DETAILS;
       const merged = Object.assign(arg0);
-      obj2 = { cover: tmp2, setCover: tmp3, description: first, setDescription: tmp5 };
+      const obj2 = {};
       const merged1 = Object.assign(arg0);
-      return React4(tmp8, obj);
+      obj2.cover = tmp2;
+      obj2.setCover = tmp3;
+      obj2.description = first;
+      obj.children = options(closure_13, obj2);
+      return options(GuildRoleSubscriptionTierEditStepDefault, obj);
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx",
-);
-
-export default tmp6;
 export const Content = tmp5;

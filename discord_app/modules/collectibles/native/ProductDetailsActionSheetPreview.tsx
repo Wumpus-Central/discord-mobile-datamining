@@ -1,144 +1,172 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetPreview.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import IndividualProductPreview from "IndividualProductPreview.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-({ useCallback: closure_4, useState: hasOwnProperty } = react);
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { previewContainer: { flex: 1 }, previewDivider: obj2 };
-obj2 = {
+const require = globalThis.__r;
+
+require = fn;
+const noop = fn(19);
+({ useCallback: closure_4, useState: hasOwnProperty } = noop);
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  previewContainer: { flex: 1 },
+  previewDivider: {
+    borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
+    borderBottomWidth: 1,
+    paddingBottom: nativeDefault.space.PX_16,
+    flex: 1,
+  },
+};
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {
   borderBottomColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
   borderBottomWidth: 1,
   paddingBottom: nativeDefault.space.PX_16,
   flex: 1,
 };
-let closure_8 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_129_0;
-      let first;
-      let handlePreviewPress;
-      let onBundleActiveItemChange;
-      let onTrackPress;
-      let product;
-      let tmp10Result;
-      let tmp6;
-      const obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       ({ product, handlePreviewPress, onTrackPress, onBundleActiveItemChange } = arg0);
-      const tmp4 = closure_8();
-      [tmp6, closure_129_0] = hasOwnProperty(0);
-      _slicedToArray(hasOwnProperty(0), 2);
+      const tmp3 = closure_8();
+      let num = 2;
+      [tmp5, require] = hasOwnProperty(0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o(nativeEvent) {
-          closure_1_0(nativeEvent.nativeEvent.layout.width);
+          require(nativeEvent.nativeEvent.layout.width);
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
-      const tmp8 = product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
+      const tmp7 = product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
       if (cResult[1] === handlePreviewPress) {
-        if (cResult[2] === tmp8) {
+        if (cResult[2] === tmp7) {
           if (cResult[3] === onBundleActiveItemChange) {
             if (cResult[4] === onTrackPress) {
               if (cResult[5] === product) {
-                if (cResult[6] === tmp4.previewDivider) {
-                  let tmp9;
-                  if (cResult[7] === tmp6) {
-                    tmp9 = cResult[8];
-                  }
-                  if (cResult[9] === tmp4.previewContainer) {
-                    let tmp14;
-                    if (cResult[10] === tmp9) {
-                      tmp14 = cResult[11];
+                if (cResult[6] === tmp3.previewDivider) {
+                  if (cResult[7] === tmp5) {
+                    if (cResult[9] === tmp3.previewContainer) {
+                      if (cResult[10] === tmp8) {
+                        let tmp14 = cResult[11];
+                      }
+                      return tmp14;
                     }
-                    return tmp14;
+                    const obj3 = { style: tmp3.previewContainer, onLayout: first, children: cResult[8] };
+                    const tmp17 = (
+                      <View style={tmp3.previewContainer} onLayout={first}>
+                        {cResult[8]}
+                      </View>
+                    );
+                    cResult[9] = tmp3.previewContainer;
+                    cResult[10] = cResult[8];
+                    cResult[11] = tmp17;
+                    tmp14 = tmp17;
                   }
-                  const tmp17 = (
-                    <View style={tmp4.previewContainer} onLayout={first}>
-                      {tmp9}
-                    </View>
-                  );
-                  cResult[9] = tmp4.previewContainer;
-                  cResult[10] = tmp9;
-                  cResult[11] = tmp17;
-                  tmp14 = tmp17;
                 }
               }
             }
           }
         }
       }
-      if (tmp8) {
-        tmp10Result = jsx(BundleProductDetailsActionSheetPreviewDefault, {
+      if (tmp7) {
+        const obj = {
           product,
-          width: tmp6,
+          width: tmp5,
+          handlePreviewPress,
+          onTrackPress,
+          onActiveItemChange: onBundleActiveItemChange,
+        };
+        let tmp9Result = jsx(BundleProductDetailsActionSheetPreviewDefault, {
+          product,
+          width: tmp5,
           handlePreviewPress,
           onTrackPress,
           onActiveItemChange: onBundleActiveItemChange,
         });
       } else {
-        tmp10Result = <View style={tmp4.previewDivider}>{null}</View>;
+        const obj4 = { style: tmp3.previewDivider, children: null };
+        const obj5 = { product, width: tmp5, handlePreviewPress, onTrackPress };
+        obj4.children = jsx(IndividualProductPreview.IndividualProductPreview, {
+          product,
+          width: tmp5,
+          handlePreviewPress,
+          onTrackPress,
+        });
+        tmp9Result = <View style={tmp3.previewDivider}>{null}</View>;
       }
       cResult[1] = handlePreviewPress;
-      cResult[2] = tmp8;
+      cResult[num] = tmp7;
       cResult[3] = onBundleActiveItemChange;
       cResult[4] = onTrackPress;
       cResult[5] = product;
-      cResult[6] = tmp4.previewDivider;
-      cResult[7] = tmp6;
-      cResult[8] = tmp10Result;
-      tmp9 = tmp10Result;
+      product = tmp3.previewDivider;
+      cResult[6] = product;
+      cResult[7] = tmp5;
+      num = 8;
+      cResult[8] = tmp9Result;
+      const tmp4 = _slicedToArray(hasOwnProperty(0), 2);
     }
   : (onBundleActiveItemChange) => {
-      let c0;
-      let handlePreviewPress;
-      let onTrackPress;
-      let product;
-      let tmp3;
-      let tmp7Result;
       ({ product, handlePreviewPress, onTrackPress } = onBundleActiveItemChange);
       c0 = undefined;
-      onBundleActiveItemChange = onBundleActiveItemChange.onBundleActiveItemChange;
       const tmp = closure_8();
       [tmp3, c0] = hasOwnProperty(0);
-      _slicedToArray(hasOwnProperty(0), 2);
+      const tmp2 = _slicedToArray(hasOwnProperty(0), 2);
+      const obj = {
+        style: tmp.previewContainer,
+        onLayout: React4((nativeEvent) => {
+          _undefined(nativeEvent.nativeEvent.layout.width);
+        }, []),
+        children: null,
+      };
       if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-        tmp7Result = jsx(BundleProductDetailsActionSheetPreviewDefault, {
+        const obj2 = {
           product,
           width: tmp3,
           handlePreviewPress,
           onTrackPress,
-          onActiveItemChange: onBundleActiveItemChange,
+          onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange,
+        };
+        let tmp7Result = jsx(BundleProductDetailsActionSheetPreviewDefault, {
+          product,
+          width: tmp3,
+          handlePreviewPress,
+          onTrackPress,
+          onActiveItemChange: onBundleActiveItemChange.onBundleActiveItemChange,
         });
       } else {
+        const obj3 = { style: tmp.previewDivider, children: null };
+        const obj4 = { product, width: tmp3, handlePreviewPress, onTrackPress };
+        obj3.children = jsx(IndividualProductPreview.IndividualProductPreview, {
+          product,
+          width: tmp3,
+          handlePreviewPress,
+          onTrackPress,
+        });
         tmp7Result = <View style={tmp.previewDivider}>{null}</View>;
       }
+      obj.children = tmp7Result;
       return (
         <View
           style={tmp.previewContainer}
-          onLayout={React3((nativeEvent) => {
+          onLayout={React4((nativeEvent) => {
             _undefined(nativeEvent.nativeEvent.layout.width);
           }, [])}
         >
-          {tmp7Result}
+          {null}
         </View>
       );
     };
-const result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetPreview.tsx");
-
-export default tmp3;

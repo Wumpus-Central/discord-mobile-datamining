@@ -1,51 +1,43 @@
 // discord_app/modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx
-import react from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import createExperiment from "../experiments/index.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let items;
-let obj = {
+const obj = {
   kind: "user",
   id: "2023-09_iar_user_reporting",
   label: "Safety Experience IAR User Reporting",
   defaultConfig: { enabled: false },
-  treatments: items,
+  treatments: null,
 };
-items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
+const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
+obj.treatments = items;
 const experiment = createExperiment.createExperiment(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
+
+export default experiment;
+export const useIsIarUserReportingEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? (location) => {
-      let tmp2;
-      let tmp3;
-      const obj = react;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       if (cResult[0] !== location) {
         const obj2 = { location };
         cResult[0] = location;
         cResult[1] = obj2;
-        tmp2 = obj2;
+        let tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { autoTrackExposure: true };
         cResult[2] = obj3;
-        tmp3 = obj3;
+        let tmp3 = obj3;
       } else {
         tmp3 = cResult[2];
       }
       return experiment.useExperiment(tmp2, tmp3).enabled;
     }
-  : (location) => {
-      const obj = { location };
-      return experiment.useExperiment(obj, { autoTrackExposure: true }).enabled;
-    };
-const result = size.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
-
-export default experiment;
-export const useIsIarUserReportingEnabled = tmp3;
+  : (location) => experiment.useExperiment({ location }, { autoTrackExposure: true }).enabled;
 export const isIarUserReportingEnabled = function isIarUserReportingEnabled(location) {
-  const obj = { location };
-  return experiment.getCurrentConfig(obj, { autoTrackExposure: true }).enabled;
+  return experiment.getCurrentConfig({ location }, { autoTrackExposure: true }).enabled;
 };

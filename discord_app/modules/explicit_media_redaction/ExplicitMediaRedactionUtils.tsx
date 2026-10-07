@@ -1,7 +1,6 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx
-import react from "../../../_runtime/00576_react.js";
-import Constants from "../../Constants.tsx";
-import intl2 from "../../intl/index.native.tsx";
+import c from "../../../_runtime/00576_c.js";
+import util from "../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
@@ -11,111 +10,76 @@ import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatu
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import SelfModUtils from "../self_mod/SelfModUtils.tsx";
 import ObscuredMediaUtils from "ObscuredMediaUtils.tsx";
-import ObscureMediaModels from "ObscureMediaModels.tsx";
 import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
-import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(6809);
+require = fn;
+const ExplicitMediaRedactionConstants = fn(7123);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
-  EXPLICIT_MEDIA_MIN_WIDTH: metroImportDefault,
-  MESSAGE_SCAN_TIMEOUT: metroImportAll,
+  EXPLICIT_MEDIA_MIN_WIDTH: closure_7,
+  MESSAGE_SCAN_TIMEOUT: closure_8,
 } = ExplicitMediaRedactionConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = RegionalFeatureConfigUtils;
-      let isFeatureAgeGated = obj.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-      const obj2 = AgeVerificationUtils;
+      let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
+        AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+      );
       if (isFeatureAgeGated) {
         isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
       }
       return isFeatureAgeGated;
     }
   : () => {
-      const obj = RegionalFeatureConfigUtils;
-      let isFeatureAgeGated = obj.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-      const obj2 = AgeVerificationUtils;
+      let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
+        AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+      );
       if (isFeatureAgeGated) {
         isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
       }
       return isFeatureAgeGated;
     };
 let closure_10 = tmp3;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      const obj = react;
-      const cResult = obj.c(2);
-      const tmp4 = closure_10();
-      let tmp5 = !tmp4;
-      if (tmp4) {
-        tmp5 = null == arg0;
-      }
-      let tmp7 = !tmp5;
-      if (tmp7) {
-        let tmp8;
-        if (cResult[0] !== arg0) {
-          const AGE_VERIFICATION_OBSCURABLE_REASONS = ObscureMediaModels.AGE_VERIFICATION_OBSCURABLE_REASONS;
-          const hasItem = AGE_VERIFICATION_OBSCURABLE_REASONS.has(arg0);
-          cResult[0] = arg0;
-          cResult[1] = hasItem;
-          tmp8 = hasItem;
-        } else {
-          tmp8 = cResult[1];
-        }
-        tmp7 = tmp8;
-      }
-      return tmp7;
-    }
-  : (arg0) => {
-      const tmp = closure_10();
-      let tmp2 = !tmp;
-      if (tmp) {
-        tmp2 = null == arg0;
-      }
-      let hasItem = !tmp2;
-      if (hasItem) {
-        const AGE_VERIFICATION_OBSCURABLE_REASONS = ObscureMediaModels.AGE_VERIFICATION_OBSCURABLE_REASONS;
-        hasItem = AGE_VERIFICATION_OBSCURABLE_REASONS.has(arg0);
-      }
-      return hasItem;
-    };
+ReactCompilerGating = fn(558);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
   if (preloaded_user_settings.ExplicitContentRedaction.SHOW === prop) {
     return () => {
-      const intl = intl2.intl;
-      return intl.string(intl2.t["5k5OFp"]);
+      const intl = util.intl;
+      return intl.string(util.t["5k5OFp"]);
     };
   } else if (preloaded_user_settings.ExplicitContentRedaction.BLUR === prop) {
     return () => {
-      const intl = intl2.intl;
-      return intl.string(intl2.t.S49Uad);
+      const intl = util.intl;
+      return intl.string(util.t.S49Uad);
     };
   } else if (preloaded_user_settings.ExplicitContentRedaction.BLOCK === prop) {
     return () => {
-      const intl = intl2.intl;
-      return intl.string(intl2.t["D/157Y"]);
+      const intl = util.intl;
+      return intl.string(util.t["D/157Y"]);
     };
   }
 };
 export const isPendingScanVersion = function isPendingScanVersion(contentScanVersion) {
-  const value = DevSettingsStore.get("explicit_media_redaction_ignore_pending_scan");
+  value = DevSettingsStore.get("explicit_media_redaction_ignore_pending_scan");
   let tmp2 = !value;
-  if (tmp2) {
-    let tmp4 = 0 !== contentScanVersion && -1 !== contentScanVersion;
+  if (!value) {
+    let tmp4 = 0 !== contentScanVersion;
     if (tmp4) {
-      tmp4 = null == contentScanVersion || contentScanVersion !== ExplicitMediaStore.validContentScanVersion;
-      const tmp6 = null == contentScanVersion || contentScanVersion !== ExplicitMediaStore.validContentScanVersion;
+      tmp4 = -1 !== contentScanVersion;
+    }
+    if (tmp4) {
+      let tmp6 = null == contentScanVersion;
+      if (!tmp6) {
+        tmp6 = contentScanVersion !== ExplicitMediaStore.validContentScanVersion;
+      }
+      tmp4 = tmp6;
     }
     tmp2 = tmp4;
   }
@@ -142,51 +106,41 @@ export const TrackMediaRedactionContext = {
   EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED: "explicit_media_add_media_to_forum_post_blocked",
 };
 export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0) {
-  let channelId;
-  let guild_id;
-  let messageId;
-  let obj;
   ({ channelId, messageId } = arg0);
   if (null != channelId) {
     if (null != messageId) {
       const channel = ChannelStore.getChannel(channelId);
-      const obj2 = {
+      const obj3 = {
         action: tmp,
-        guild_id,
-        channel_id: channelId,
-        message_id: messageId,
-        user_is_underage: obj.isCurrentUserTeen(),
-        context: tmp2,
+        guild_id: null,
+        channel_id: null,
+        message_id: null,
+        user_is_underage: null,
+        context: null,
       };
-      guild_id = undefined;
-      const track = AnalyticsUtilsDefault.track;
-      const EXPLICIT_MEDIA_ACTION = AnalyticEvents.EXPLICIT_MEDIA_ACTION;
-      AnalyticsUtilsDefault;
+      let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      obj = SelfModUtils;
-      track(EXPLICIT_MEDIA_ACTION, obj2);
+      obj3.guild_id = guild_id;
+      obj3.channel_id = channelId;
+      obj3.message_id = messageId;
+      const obj2 = AnalyticsUtilsDefault;
+      obj3.user_is_underage = SelfModUtils.isCurrentUserTeen();
+      obj3.context = tmp2;
+      obj2.track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj3);
     }
   }
 };
 export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
 export const trackScanTiming = function trackScanTiming(setAt, UPDATE) {
-  let items;
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
-  const tmp2 = MonitoringAgentDefault;
-  const increment = tmp2.increment;
-  const obj = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: items };
-  items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
-  increment(obj);
+  const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
+  const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
+  obj2.tags = items;
+  MonitoringAgentDefault.increment(obj2);
 };
 export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
-  let attachmentIds;
-  let channelId;
-  let embedIds;
-  let guild_id;
-  let messageId;
-  let obj2;
   ({ channelId, messageId, attachmentIds, embedIds } = arg0);
   if (null != channelId) {
     if (null != messageId) {
@@ -199,34 +153,34 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
       }
       if (0 !== num) {
         const channel = ChannelStore.getChannel(channelId);
-        const obj = {
+        const obj2 = {
           channel_id: channelId,
-          guild_id,
-          message_id: messageId,
-          embed_ids: embedIds,
-          user_is_underage: obj2.isCurrentUserTeen(),
-          scan_timeout_duration: metroImportAll,
-          attachment_ids_v2: attachmentIds,
+          guild_id: null,
+          message_id: null,
+          embed_ids: null,
+          user_is_underage: null,
+          scan_timeout_duration: null,
+          attachment_ids_v2: null,
         };
-        guild_id = undefined;
-        const track = AnalyticsUtilsDefault.track;
-        const EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT = AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
-        AnalyticsUtilsDefault;
+        let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
         }
-        obj2 = SelfModUtils;
-        track(EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        const obj3 = {
+        obj2.guild_id = guild_id;
+        obj2.message_id = messageId;
+        obj2.embed_ids = embedIds;
+        const obj = AnalyticsUtilsDefault;
+        obj2.user_is_underage = SelfModUtils.isCurrentUserTeen();
+        obj2.scan_timeout_duration = scan_timeout_duration;
+        obj2.attachment_ids_v2 = attachmentIds;
+        obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj2);
+        const obj4 = {
           name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
           tags: ["metricVersion:1"],
         };
-        const increment = MonitoringAgentDefault.increment;
-        MonitoringAgentDefault;
-        increment(obj3);
-        const obj4 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION };
-        const distribution = MonitoringAgentDefault.distribution;
-        MonitoringAgentDefault;
+        MonitoringAgentDefault.increment(obj4);
+        const tmp3Result = MonitoringAgentDefault;
+        const obj5 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION };
         let num4;
         if (attachmentIds != null) {
           num4 = attachmentIds.length;
@@ -241,7 +195,8 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         if (num5 == null) {
           num5 = 0;
         }
-        distribution(obj4, num4 + num5);
+        MonitoringAgentDefault.distribution(obj5, num4 + num5);
+        const tmp3Result2 = MonitoringAgentDefault;
       } else {
         let num3;
         if (embedIds != null) {
@@ -255,51 +210,36 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
   }
 };
 export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicitMediaRedactableMessagedLoaded(arg0) {
-  let channelId;
-  let guild_id;
-  let numOfAttachmentsPendingScan;
-  let numOfEmbedsPendingScan;
   ({ channelId, numOfAttachmentsPendingScan, numOfEmbedsPendingScan } = arg0);
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
-    const obj2 = {
+    const obj = {
       channel_id: channelId,
-      guild_id,
-      num_of_attachments: tmp,
-      num_of_attachments_pending_scan: numOfAttachmentsPendingScan,
-      num_of_embeds: tmp2,
-      num_of_embeds_pending_scan: numOfEmbedsPendingScan,
+      guild_id: null,
+      num_of_attachments: null,
+      num_of_attachments_pending_scan: null,
+      num_of_embeds: null,
+      num_of_embeds_pending_scan: null,
     };
-    guild_id = undefined;
-    const track = AnalyticsUtilsDefault.track;
-    const EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED = AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED;
-    AnalyticsUtilsDefault;
+    let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    track(EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, obj2);
+    obj.guild_id = guild_id;
+    obj.num_of_attachments = tmp;
+    obj.num_of_attachments_pending_scan = numOfAttachmentsPendingScan;
+    obj.num_of_embeds = tmp2;
+    obj.num_of_embeds_pending_scan = numOfEmbedsPendingScan;
+    AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, obj);
     const sum = numOfAttachmentsPendingScan + numOfEmbedsPendingScan;
     if (sum > 0) {
-      const obj = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 };
-      const distribution = MonitoringAgentDefault.distribution;
-      MonitoringAgentDefault;
-      distribution(obj, sum);
+      const obj2 = { name: MetricEvents.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 };
+      MonitoringAgentDefault.distribution(obj2, sum);
+      const tmp10Result = MonitoringAgentDefault;
     }
   }
 };
 export const trackRedactableMessageLoaded = function trackRedactableMessageLoaded(arg0) {
-  let channelId;
-  let guild_id;
-  let messageId;
-  let numOfAttachments;
-  let numOfEmbeds;
-  let numOfExplicitAttachments;
-  let numOfExplicitEmbeds;
-  let numOfGoreAttachments;
-  let numOfGoreEmbeds;
-  let numOfSelfHarmAttachments;
-  let numOfSelfHarmEmbeds;
-  let type;
   ({
     messageId,
     channelId,
@@ -315,96 +255,102 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
   if (!tmp) {
     tmp = numOfExplicitEmbeds > 0;
   }
-  const tmp2 = numOfGoreAttachments > 0 || numOfGoreEmbeds > 0;
-  const tmp3 = numOfSelfHarmAttachments > 0 || numOfSelfHarmEmbeds > 0;
   if (null != channelId) {
     if (null != messageId) {
       const channel = ChannelStore.getChannel(channelId);
-      const obj = {
+      const obj2 = {
         message_id: messageId,
         channel_id: channelId,
-        channel_type: type,
-        guild_id,
-        num_of_attachments: numOfAttachments,
-        num_of_gore_attachments: numOfGoreAttachments,
-        num_of_explicit_attachments: numOfExplicitAttachments,
-        num_of_self_harm_attachments: numOfSelfHarmAttachments,
-        num_of_embeds: numOfEmbeds,
-        num_of_gore_embeds: numOfGoreEmbeds,
-        num_of_explicit_embeds: numOfExplicitEmbeds,
-        num_of_self_harm_embeds: numOfSelfHarmEmbeds,
-        has_redactable_explicit: tmp,
-        has_redactable_gore: tmp2,
-        has_redactable_self_harm: tmp3,
+        channel_type: null,
+        guild_id: null,
+        num_of_attachments: null,
+        num_of_gore_attachments: null,
+        num_of_explicit_attachments: null,
+        num_of_self_harm_attachments: null,
+        num_of_embeds: null,
+        num_of_gore_embeds: null,
+        num_of_explicit_embeds: null,
+        num_of_self_harm_embeds: null,
+        has_redactable_explicit: null,
+        has_redactable_gore: null,
+        has_redactable_self_harm: null,
       };
-      type = undefined;
-      const track = AnalyticsUtilsDefault.track;
-      const REDACTABLE_MESSAGE_LOADED = AnalyticEvents.REDACTABLE_MESSAGE_LOADED;
-      AnalyticsUtilsDefault;
+      let type;
       if (channel != null) {
         type = channel.type;
       }
-      guild_id = undefined;
+      obj2.channel_type = type;
+      let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      track(REDACTABLE_MESSAGE_LOADED, obj);
+      obj2.guild_id = guild_id;
+      obj2.num_of_attachments = numOfAttachments;
+      obj2.num_of_gore_attachments = numOfGoreAttachments;
+      obj2.num_of_explicit_attachments = numOfExplicitAttachments;
+      obj2.num_of_self_harm_attachments = numOfSelfHarmAttachments;
+      obj2.num_of_embeds = numOfEmbeds;
+      obj2.num_of_gore_embeds = numOfGoreEmbeds;
+      obj2.num_of_explicit_embeds = numOfExplicitEmbeds;
+      obj2.num_of_self_harm_embeds = numOfSelfHarmEmbeds;
+      obj2.has_redactable_explicit = tmp;
+      obj2.has_redactable_gore = tmp2;
+      obj2.has_redactable_self_harm = tmp3;
+      AnalyticsUtilsDefault.track(AnalyticEvents.REDACTABLE_MESSAGE_LOADED, obj2);
     }
   }
+  tmp2 = numOfGoreAttachments > 0 || numOfGoreEmbeds > 0;
+  tmp3 = numOfSelfHarmAttachments > 0 || numOfSelfHarmEmbeds > 0;
 };
 export const trackExplicitMediaScanComplete = function trackExplicitMediaScanComplete(channelId) {
-  let guild_id;
-  let type;
   channelId = channelId.channelId;
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
-    const obj = {
+    const obj2 = {
       message_id: tmp,
       channel_id: channelId,
-      channel_type: type,
-      guild_id,
-      num_of_attachments: tmp2,
-      num_of_explicit_attachments: tmp3,
-      num_of_embeds: tmp4,
-      num_of_explicit_embeds: tmp5,
+      channel_type: null,
+      guild_id: null,
+      num_of_attachments: null,
+      num_of_explicit_attachments: null,
+      num_of_embeds: null,
+      num_of_explicit_embeds: null,
     };
-    type = undefined;
-    const track = AnalyticsUtilsDefault.track;
-    const EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE = AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE;
-    AnalyticsUtilsDefault;
+    let type;
     if (channel != null) {
       type = channel.type;
     }
-    guild_id = undefined;
+    obj2.channel_type = type;
+    let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    track(EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, obj);
+    obj2.guild_id = guild_id;
+    obj2.num_of_attachments = tmp2;
+    obj2.num_of_explicit_attachments = tmp3;
+    obj2.num_of_embeds = tmp4;
+    obj2.num_of_explicit_embeds = tmp5;
+    AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, obj2);
   }
 };
 export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
-  const f94367 = (item) => {
+  let attachments = message.attachments;
+  let embeds = message.embeds;
+  const attachments1 = attachments.map((item) => {
     item.content_scan_version = -1;
     return item;
-  };
-  const f94368 = (components) => {
+  });
+  let components = message.components;
+  const embeds1 = embeds.map((components) => {
     components.contentScanVersion = -1;
     components = components.components;
-    const failOverComponentMedia = closure_1_0(closure_1_2[11]).failOverComponentMedia;
-    closure_1_0(closure_1_2[11]);
     if (components == null) {
       components = [];
     }
-    const result = failOverComponentMedia(components);
+    const result = closure_1_0(closure_1_2[11]).failOverComponentMedia(components);
     return components;
-  };
-  let attachments = message.attachments;
-  let embeds = message.embeds;
-  const attachments1 = attachments.map(f94367);
-  let components = message.components;
-  const embeds1 = embeds.map(f94368);
-  let obj = ObscuredMediaUtils;
-  let result = obj.failOverComponentMedia(components);
+  });
+  let result = ObscuredMediaUtils.failOverComponentMedia(components);
   const messageSnapshots = message.messageSnapshots;
   let messageSnapshots1 = messageSnapshots;
   if (null != messageSnapshots) {
@@ -414,13 +360,22 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
         message = message.message;
         const attachments = message.attachments;
         const embeds = message.embeds;
-        const mapped = attachments.map(f94367);
+        const mapped = attachments.map((item) => {
+          item.content_scan_version = -1;
+          return item;
+        });
         let components = message.components;
-        const mapped1 = embeds.map(f94368);
-        const obj = ObscuredMediaUtils;
-        let result = obj.failOverComponentMedia(components);
-        const obj2 = { message: message.merge({ attachments: mapped, embeds: mapped1, components }) };
-        return message.merge(obj2);
+        const mapped1 = embeds.map((components) => {
+          components.contentScanVersion = -1;
+          components = components.components;
+          if (components == null) {
+            components = [];
+          }
+          const result = closure_1_0(closure_1_2[11]).failOverComponentMedia(components);
+          return components;
+        });
+        let result = ObscuredMediaUtils.failOverComponentMedia(components);
+        return message.merge({ message: message.merge({ attachments: mapped, embeds: mapped1, components }) });
       });
     }
   }
@@ -429,36 +384,66 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
 export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
   if (tmp) {
-    tmp = arg0 <= metroImportDefault || arg1 <= metroRequire;
-    const tmp3 = arg0 <= metroImportDefault || arg1 <= metroRequire;
+    let tmp3 = arg0 <= React5;
+    if (!tmp3) {
+      tmp3 = arg1 <= timestampProducer;
+    }
+    tmp = tmp3;
   }
   return tmp;
 };
 export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplicitMedia() {
-  const obj = RegionalFeatureConfigUtils;
-  let isFeatureAgeGatedResult = obj.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-  const obj2 = AgeVerificationUtils;
+  let isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+  );
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
   return isFeatureAgeGatedResult;
 };
 export const useShouldAgeVerifyForExplicitMedia = tmp3;
-export const useShouldAgeVerifyForReason = tmp4;
+export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let AGE_VERIFICATION_OBSCURABLE_REASONS = require;
+      let hasItem = dependencyMap;
+      const cResult = c.c(2);
+      const tmp3 = closure_10();
+      let tmp4 = !tmp3;
+      if (tmp3) {
+        tmp4 = null == arg0;
+      }
+      if (tmp4) {
+        return !tmp4;
+      } else if (cResult[0] !== arg0) {
+        AGE_VERIFICATION_OBSCURABLE_REASONS = ObscureMediaModels.AGE_VERIFICATION_OBSCURABLE_REASONS;
+        hasItem = AGE_VERIFICATION_OBSCURABLE_REASONS.has(arg0);
+        cResult[0] = arg0;
+        cResult[1] = hasItem;
+      }
+    }
+  : (arg0) => {
+      const tmp = closure_10();
+      let tmp2 = !tmp;
+      if (tmp) {
+        tmp2 = null == arg0;
+      }
+      let hasItem = !tmp2;
+      if (!tmp2) {
+        const AGE_VERIFICATION_OBSCURABLE_REASONS = ObscureMediaModels.AGE_VERIFICATION_OBSCURABLE_REASONS;
+        hasItem = AGE_VERIFICATION_OBSCURABLE_REASONS.has(arg0);
+      }
+      return hasItem;
+    };
 export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(obscure) {
-  obscure = obscure.obscure;
-  const obj = AgeVerificationUtils;
   if (obj.isVerifiedAdult()) {
     let str = "show";
-    const track = AnalyticsUtilsDefault.track;
-    const EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2 = AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2;
-    AnalyticsUtilsDefault;
-    if (obscure) {
+    if (obscure.obscure) {
       str = "hide";
     }
-    const obj2 = { toggle_direction: str };
-    track(EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj2);
+    const obj3 = { toggle_direction: str };
+    AnalyticsUtilsDefault.track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj3);
   }
+  obj = AgeVerificationUtils;
 };
 export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {
   const message_snapshots = message.message_snapshots;
@@ -470,15 +455,21 @@ export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSna
       if (message != null) {
         attachments = message.attachments;
       }
-      let tmp2 = null != attachments && message.message.attachments.length > 0;
+      let tmp2 = null != attachments;
+      if (tmp2) {
+        tmp2 = message.message.attachments.length > 0;
+      }
       if (!tmp2) {
         const message2 = message.message;
         let embeds;
         if (message2 != null) {
           embeds = message2.embeds;
         }
-        tmp2 = null != embeds && message.message.embeds.length > 0;
-        const tmp4 = null != embeds && message.message.embeds.length > 0;
+        let tmp4 = null != embeds;
+        if (tmp4) {
+          tmp4 = message.message.embeds.length > 0;
+        }
+        tmp2 = tmp4;
       }
       return tmp2;
     });

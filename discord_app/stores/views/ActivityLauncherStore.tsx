@@ -1,93 +1,81 @@
 // discord_app/stores/views/ActivityLauncherStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import LocalActivityStore from "../LocalActivityStore.tsx";
 import SelfPresenceStore from "../SelfPresenceStore.tsx";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let hasOwnProperty;
-let metroRequire;
+const require = fn;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {
-  let applicationId;
-  let remotePartyId;
-  const f106634 = () => {
-    obj = activityType(dependencyMap[4]);
-    const obj2 = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType };
-    return obj.dispatch(obj2);
-  };
   ({ applicationId, remotePartyId } = type);
   if (COMPLETE === constants.COMPLETE) {
     if (obj[applicationId] != null) {
-      delete obj[applicationId][tmp];
+      delete tmp3[tmp4];
     }
-    if (null != closure_8[applicationId]) {
-      const obj7 = closure_8[applicationId];
-      obj7.stop();
-      delete closure_8[applicationId];
+    if (null != dependencyMap[applicationId]) {
+      dependencyMap[applicationId].stop();
+      delete tmp[tmp2];
     }
   } else {
     obj = obj[applicationId];
     if (obj == null) {
       obj = {};
     }
-    let obj2 = { state: COMPLETE, remotePartyId };
+    const obj2 = { state: COMPLETE, remotePartyId };
     obj[JOIN] = obj2;
     obj[applicationId] = obj;
     if (COMPLETE === constants.FAILED) {
-      let closure_1 = JOIN;
-      if (null != closure_8[applicationId]) {
-        const obj5 = closure_8[applicationId];
-        obj5.stop();
+      closure_129_0 = applicationId;
+      closure_129_1 = JOIN;
+      if (null != dependencyMap[applicationId]) {
+        dependencyMap[applicationId].stop();
       }
-      const self3 = this;
-      const self4 = this;
       const timeout = new applicationId(2046).Timeout();
-      timeout.start(c9, f106634);
-      closure_8[applicationId] = timeout;
+      timeout.start(c9, () =>
+        DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
+      );
+      dependencyMap[applicationId] = timeout;
     } else if (COMPLETE === constants.LOADING) {
       let num = 15000;
       if (null == remotePartyId) {
         num = c9;
       }
-      closure_1 = JOIN;
-      if (null != closure_8[applicationId]) {
-        const obj3 = closure_8[applicationId];
-        obj3.stop();
+      const activityType = JOIN;
+      if (null != dependencyMap[applicationId]) {
+        dependencyMap[applicationId].stop();
       }
-      const self = this;
-      const self2 = this;
       const timeout1 = new applicationId(2046).Timeout();
-      timeout1.start(num, f106634);
-      closure_8[applicationId] = timeout1;
+      timeout1.start(num, () =>
+        DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
+      );
+      dependencyMap[applicationId] = timeout1;
     }
   }
 }
 function handleActivityComplete(type) {
-  const tmp =
-    ("ACTIVITY_JOIN" !== type.type || null == type.parentApplicationId) &&
-    handleActivityStateChanged(hasOwnProperty.COMPLETE, metroRequire.JOIN, type);
+  let tmp = "ACTIVITY_JOIN" !== type.type;
+  if (!tmp) {
+    tmp = null == type.parentApplicationId;
+  }
+  if (tmp) {
+    tmp = handleActivityStateChanged(constants.COMPLETE, constants2.JOIN, type);
+  }
   return tmp;
 }
 function handleActivityUpdate() {
   const entries = Object.entries(obj);
   const mapped = entries.map((item) => {
-    let remotePartyId;
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = item;
-    obj = { applicationId: tmp, remotePartyId };
-    remotePartyId = undefined;
+    obj = { applicationId: tmp, remotePartyId: null };
+    let remotePartyId;
     if (tmp2[constants.JOIN] != null) {
       remotePartyId = tmp3.remotePartyId;
     }
+    obj.remotePartyId = remotePartyId;
     return obj;
   });
   const found = mapped.filter((remotePartyId) => null != remotePartyId.remotePartyId);
-  let c0 = false;
+  c0 = false;
   const item = found.forEach((item) => {
-    let applicationId;
-    let remotePartyId;
     ({ applicationId, remotePartyId } = item);
     const applicationActivity = LocalActivityStore.getApplicationActivity(applicationId);
     const applicationActivity1 = SelfPresenceStore.getApplicationActivity(applicationId);
@@ -111,36 +99,36 @@ function handleActivityUpdate() {
     }
     if (!tmp4) {
       obj = { applicationId, remotePartyId };
-      handleActivityStateChanged(hasOwnProperty.COMPLETE, metroRequire.JOIN, obj);
+      handleActivityStateChanged(constants.COMPLETE, constants2.JOIN, obj);
       c0 = true;
     }
   });
   return c0;
 }
+const Constants = fn(1085);
 ({ ActivityActionStates: hasOwnProperty, ActivityActionTypes: metroRequire } = Constants);
 let obj = {};
-let closure_8 = {};
+const dependencyMap = {};
 let c9 = 120000;
-const Store = get_initializedDefault.Store;
-class ActivityLauncherStore extends Store {
-  initialize() {
-    const items = [LocalActivityStore, SelfPresenceStore];
-    this.syncWith(items, handleActivityUpdate);
-  }
-  getState(arg0, arg1) {
-    let state;
-    if (obj[arg0] != null) {
-      if (obj[arg0][arg1] != null) {
-        state = tmp4.state;
-      }
-    }
-    return state;
-  }
-  getStates() {
-    return obj;
-  }
-}
+const Store = initializeDefault.Store;
+class ActivityLauncherStore extends Store {}
 const prototype = ActivityLauncherStore.prototype;
+prototype["initialize"] = function initialize() {
+  const items = [LocalActivityStore, SelfPresenceStore];
+  this.syncWith(items, handleActivityUpdate);
+};
+prototype["getState"] = function getState(arg0, arg1) {
+  state = undefined;
+  if (obj[arg0] != null) {
+    if (tmp[arg1] != null) {
+      state = tmp4.state;
+    }
+  }
+  return state;
+};
+prototype["getStates"] = function getStates() {
+  return obj;
+};
 ActivityLauncherStore.displayName = "ActivityLauncherStore";
 obj = {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(activityLauncherStates) {
@@ -148,10 +136,10 @@ obj = {
     const merged = Object.assign(activityLauncherStates.activityLauncherStates);
   },
   ACTIVITY_JOIN_LOADING(type) {
-    return handleActivityStateChanged(hasOwnProperty.LOADING, metroRequire.JOIN, type);
+    return handleActivityStateChanged(constants.LOADING, constants2.JOIN, type);
   },
   ACTIVITY_JOIN_FAILED(type) {
-    return handleActivityStateChanged(hasOwnProperty.FAILED, metroRequire.JOIN, type);
+    return handleActivityStateChanged(constants.FAILED, constants2.JOIN, type);
   },
   ACTIVITY_JOIN: handleActivityComplete,
   EMBEDDED_ACTIVITY_CLOSE: handleActivityComplete,
@@ -159,11 +147,12 @@ obj = {
     if (null == obj[arg0.applicationId]) {
       return false;
     } else {
-      delete obj[arg0.applicationId][tmp];
+      delete tmp[tmp2];
     }
   },
 };
 const activityLauncherStore = new ActivityLauncherStore(DispatcherDefault, obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/views/ActivityLauncherStore.tsx");
 
 export default activityLauncherStore;

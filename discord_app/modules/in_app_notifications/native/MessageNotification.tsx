@@ -1,64 +1,47 @@
 // discord_app/modules/in_app_notifications/native/MessageNotification.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../_runtime/00576_react.js";
-import intl2 from "../../../intl/index.native.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import MessageParserDefault from "../../messages/MessageParser.tsx";
 import MessagePreviewTextDefault from "MessagePreviewText.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
-import InAppNotificationConstants from "InAppNotificationConstants.tsx";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let hasOwnProperty;
-let metroRequire;
+require = fn;
+const InAppNotificationConstants = fn(12493);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } =
   InAppNotificationConstants);
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
-let memo = react.memo;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_9 = memo(
+let ReactCompilerGating = fn(558);
+let closure_9 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (message) => {
-        let tmp3;
-        const obj = react2;
-        const cResult = obj.c(2);
+        const cResult = c.c(2);
         message = message.message;
         if (cResult[0] !== message) {
-          const tmp8 = jsx(MessagePreviewTextDefault, { message, lineClamp: metroRequire, maxHeight: hasOwnProperty });
+          const obj2 = { message, lineClamp, maxHeight };
+          const tmp8 = jsx(MessagePreviewTextDefault, { message, lineClamp, maxHeight });
           cResult[0] = message;
           cResult[1] = tmp8;
-          tmp3 = tmp8;
+          let tmp3 = tmp8;
         } else {
           tmp3 = cResult[1];
         }
         return tmp3;
       }
-    : (message) =>
-        jsx(MessagePreviewTextDefault, {
-          message: message.message,
-          lineClamp: metroRequire,
-          maxHeight: hasOwnProperty,
-        }),
+    : (message) => jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight }),
 );
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let author;
-      let containerStyles;
-      let roleStyle;
-      let tmp4;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(7);
+      const cResult = c.c(7);
       ({ author, containerStyles } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -73,35 +56,34 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       let colorString;
-      const tmpResult = get_initialized;
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       if (author != null) {
         colorString = author.colorString;
       }
       let colorStrings;
-      const tmp10 = cResult[2];
       if (author != null) {
         colorStrings = author.colorStrings;
       }
-      if (tmp10 === colorStrings) {
+      if (cResult[2] === colorStrings) {
         if (cResult[3] === containerStyles) {
           if (cResult[4] === colorString) {
-            let tmp12;
-            if (cResult[5] === ("dot" === stateFromStores && undefined !== colorString)) {
-              tmp12 = cResult[6];
+            if (cResult[5] === tmp9) {
+              let tmp11 = cResult[6];
             }
-            return tmp12;
+            return tmp11;
           }
         }
       }
-      let tmp14Result;
+      let tmp13Result;
       if ("dot" === stateFromStores && undefined !== colorString) {
+        const obj2 = { color: colorString, colors: null, containerStyles: null };
         let colorStrings1;
-        const RoleDot = native.RoleDot;
         if (author != null) {
           colorStrings1 = author.colorStrings;
         }
-        tmp14Result = <RoleDot color={colorString} colors={colorStrings1} containerStyles={containerStyles} />;
+        obj2.colors = colorStrings1;
+        obj2.containerStyles = containerStyles;
+        tmp13Result = jsx(native.RoleDot, { color: colorString, colors: null, containerStyles: null });
       }
       let colorStrings2;
       if (author != null) {
@@ -111,44 +93,45 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = containerStyles;
       cResult[4] = colorString;
       cResult[5] = "dot" === stateFromStores && undefined !== colorString;
-      cResult[6] = tmp14Result;
-      tmp12 = tmp14Result;
+      cResult[6] = tmp13Result;
+      tmp11 = tmp13Result;
+      const tmpResult = initialize;
     }
   : (author) => {
-      let roleStyle;
       author = author.author;
-      const containerStyles = author.containerStyles;
       const items = [AccessibilityStore];
       let colorString;
-      const obj = get_initialized;
-      const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
+      const stateFromStores = initialize.useStateFromStores(items, () => roleStyle.roleStyle);
       if (author != null) {
         colorString = author.colorString;
       }
       let tmp6Result;
       if ("dot" === stateFromStores) {
         if (undefined !== colorString) {
+          const obj2 = { color: colorString, colors: null, containerStyles: null };
           let colorStrings;
-          const RoleDot = native.RoleDot;
           if (author != null) {
             colorStrings = author.colorStrings;
           }
-          tmp6Result = <RoleDot color={colorString} colors={colorStrings} containerStyles={containerStyles} />;
+          obj2.colors = colorStrings;
+          obj2.containerStyles = author.containerStyles;
+          tmp6Result = jsx(native.RoleDot, { color: colorString, colors: null, containerStyles: null });
         }
       }
       return tmp6Result;
     };
-const memoResult = react.memo(function MessageNotification(notification) {
-  let id;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/MessageNotification.tsx");
+
+export default noop.memo(function MessageNotification(notification) {
   notification = notification.notification;
   let nullableMessageAuthor;
   let handleDismissNotification;
   const message = notification.message;
   const channel = notification.channel;
   const parentChannel = notification.parentChannel;
-  const guild = notification.guild;
+  guild = notification.guild;
   let tmp2 = 0 === message.content.length;
-  const tmp = closure_8();
   if (tmp2) {
     tmp2 = null !== message.interaction;
   }
@@ -163,50 +146,47 @@ const memoResult = react.memo(function MessageNotification(notification) {
   }
   if (tmp2) {
     let intl = message(parentChannel[10]).intl;
-    let formatToPlainString = intl.formatToPlainString;
-    const v7eikg1 = message(parentChannel[10]).t["7eikg1"];
     const interaction = message.interaction;
     let user;
-    const getUserAuthor = message(parentChannel[11]).getUserAuthor;
-    message(parentChannel[11]);
     if (interaction != null) {
       user = interaction.user;
     }
-    let obj = { username: getUserAuthor(user, channel).nick };
-    message.content = formatToPlainString(v7eikg1, obj);
+    let obj2 = { username: message(parentChannel[11]).getUserAuthor(user, channel).nick };
+    message.content = intl.formatToPlainString(message(parentChannel[10]).t["7eikg1"], obj2);
+    let obj = message(parentChannel[11]);
   }
-  let obj2 = message(parentChannel[11]);
-  nullableMessageAuthor = obj2.useNullableMessageAuthor(message);
-  const obj3 = { author: nullableMessageAuthor, containerStyles: tmp.newContainerRoleDot };
-  const tmp14 = closure_10(obj3);
-  const obj4 = message(parentChannel[12]);
-  handleDismissNotification = obj4.useInAppNotificationContext().handleDismissNotification;
+  const tmp = closure_8();
+  nullableMessageAuthor = message(parentChannel[11]).useNullableMessageAuthor(message);
+  const obj3 = message(parentChannel[11]);
+  const obj4 = { author: nullableMessageAuthor, containerStyles: tmp.newContainerRoleDot };
+  const tmp12 = closure_10({ author: nullableMessageAuthor, containerStyles: tmp.newContainerRoleDot });
+  handleDismissNotification = message(parentChannel[12]).useInAppNotificationContext().handleDismissNotification;
   const items = [nullableMessageAuthor.nick, channel.id, message.content];
   const effect = guild.useEffect(() => {
-    let obj2;
-    const intl = intl2.intl;
-    const formatToPlainString = intl.formatToPlainString;
-    const obj = { userName: nullableMessageAuthor.nick, message: obj2.unparse(message.content, channel.id, true) };
-    const Hjp1LH = intl2.t.Hjp1LH;
-    obj2 = MessageParserDefault;
-    const formatToPlainStringResult = formatToPlainString(Hjp1LH, obj);
+    const intl = util.intl;
+    const obj = {
+      userName: nullableMessageAuthor.nick,
+      message: MessageParserDefault.unparse(message.content, channel.id, true),
+    };
     const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-    AccessibilityAnnouncer.announce(formatToPlainStringResult);
+    AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.Hjp1LH, obj));
   }, items);
   const items1 = [channel.id, message.id];
   const items2 = [channel.id];
   const callback = guild.useCallback(() => {
-    const obj = ModalActionCreatorsDefault;
-    obj.popAll();
-    const obj2 = transitionToChannel;
-    obj2.transitionToMessage(channel.id, message.id, { navigationReplace: true });
+    ModalActionCreatorsDefault.popAll();
+    transitionToChannel.transitionToMessage(channel.id, message.id, { navigationReplace: true });
   }, items1);
   const items3 = [channel, parentChannel, guild, nullableMessageAuthor, handleDismissNotification];
-  const callback1 = guild.useCallback(() => {
-    const obj = ModalActionCreatorsDefault;
-    const obj2 = { channelId: channel.id };
-    return obj.pushLazy(asyncRequire(12510, dependencyMap.paths), obj2, "in-app-notification-settings-modal");
-  }, items2);
+  const callback1 = guild.useCallback(
+    () =>
+      ModalActionCreatorsDefault.pushLazy(
+        asyncRequireImpl(12510, dependencyMap.paths),
+        { channelId: channel.id },
+        "in-app-notification-settings-modal",
+      ),
+    items2,
+  );
   const memo = guild.useMemo(
     () => ({
       type: "message",
@@ -218,28 +198,40 @@ const memoResult = react.memo(function MessageNotification(notification) {
     }),
     items3,
   );
-  const NotificationPressable = message(parentChannel[19]).NotificationPressable;
-  ({ user: message.author, guildId: id, size: message(parentChannel[9]).AvatarSizes.NORMAL });
+  const obj6 = { user: message.author, guildId: null, size: null };
   const guild2 = notification.guild;
-  id = undefined;
-  const Avatar = message(parentChannel[9]).Avatar;
+  let id;
   if (guild2 != null) {
     id = guild2.id;
   }
-  return (
-    <NotificationPressable
-      icon={null}
-      accessoryLabelNode={tmp14}
-      rightAccessory={null}
-      header={memo}
-      notification={notification}
-      onPress={callback}
-      onSettingsPress={callback1}
-    >
-      {null}
-    </NotificationPressable>
-  );
+  const obj7 = {
+    icon: null,
+    accessoryLabelNode: null,
+    rightAccessory: null,
+    children: null,
+    header: null,
+    notification: null,
+    onPress: null,
+    onSettingsPress: null,
+  };
+  obj6.guildId = id;
+  obj6.size = message(parentChannel[9]).AvatarSizes.NORMAL;
+  obj7.icon = jsx(message(parentChannel[9]).Avatar, { user: message.author, guildId: null, size: null });
+  obj7.accessoryLabelNode = tmp12;
+  obj7.rightAccessory = jsx(message(parentChannel[20]).MediaPreviewRightAccessory, { message });
+  obj7.children = <closure_9 message={message} />;
+  obj7.header = memo;
+  obj7.notification = notification;
+  obj7.onPress = callback;
+  obj7.onSettingsPress = callback1;
+  return jsx(message(parentChannel[19]).NotificationPressable, {
+    icon: null,
+    accessoryLabelNode: null,
+    rightAccessory: null,
+    children: null,
+    header: null,
+    notification: null,
+    onPress: null,
+    onSettingsPress: null,
+  });
 });
-const result = size.fileFinishedImporting("modules/in_app_notifications/native/MessageNotification.tsx");
-
-export default memoResult;

@@ -1,19 +1,16 @@
 // discord_app/modules/user_settings/premium/native/PremiumReferralTrialPill.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react from "../../../../../_runtime/00576_react.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let hasExtraMargin;
-
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
+const View = _mod17.View;
+const jsx = jsxProd.jsx;
 let obj = {
   pillParent: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "center" },
   pillParentExtraMargin: {
@@ -24,10 +21,19 @@ let obj = {
     marginTop: 36,
     marginBottom: 20,
   },
-  pillContainer: obj2,
+  pillContainer: {
+    backgroundColor: nativeDefault.colors.WHITE,
+    borderRadius: nativeDefault.radii.round,
+    alignItems: "center",
+    justifyContent: "center",
+    margin: 8,
+    paddingHorizontal: 8,
+    overflow: "visible",
+  },
   text: { color: "#AC46C3", paddingHorizontal: 1, paddingBottom: 2, textAlign: "center" },
 };
-obj2 = {
+let closure_4 = createStyles.createStyles(obj);
+let obj2 = {
   backgroundColor: nativeDefault.colors.WHITE,
   borderRadius: nativeDefault.radii.round,
   alignItems: "center",
@@ -36,48 +42,43 @@ obj2 = {
   paddingHorizontal: 8,
   overflow: "visible",
 };
-let closure_4 = createStyles.createStyles(obj);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumReferralTrialPill.tsx");
+
+export const PremiumReferralTrialPill = ReactCompilerGating.isReactCompilerEnabled()
   ? (hasExtraMargin) => {
-      let first;
-      let pillContainer;
-      let text;
-      let tmp8;
-      const obj = react;
-      const cResult = obj.c(9);
-      hasExtraMargin = hasExtraMargin.hasExtraMargin;
+      const cResult = c.c(9);
       const tmp4 = closure_4();
-      const tmp5 = hasExtraMargin ? tmp4.pillParentExtraMargin : tmp4.pillParent;
+      const tmp5 = hasExtraMargin.hasExtraMargin ? tmp4.pillParentExtraMargin : tmp4.pillParent;
       ({ pillContainer, text } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl2.intl;
-        const str = intl.string(intl2.t.Y1q7js);
-        const formatted = str.toUpperCase();
+        const intl = util.intl;
+        const formatted = intl.string(util.t.Y1q7js).toUpperCase();
         cResult[0] = formatted;
-        first = formatted;
+        let first = formatted;
+        const str = intl.string(util.t.Y1q7js);
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.text) {
+        const obj2 = { variant: "text-xs/bold", style: text, children: first };
         const tmp10 = jsx(Text_Text.Text, { variant: "text-xs/bold", style: text, children: first });
         cResult[1] = tmp4.text;
         cResult[2] = tmp10;
-        tmp8 = tmp10;
+        let tmp8 = tmp10;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] === tmp4.pillContainer) {
-        let tmp11;
         if (cResult[4] === tmp8) {
-          tmp11 = cResult[5];
+          let tmp11 = cResult[5];
         }
         if (cResult[6] === tmp5) {
-          let tmp13;
           if (cResult[7] === tmp11) {
-            tmp13 = cResult[8];
+            let tmp13 = cResult[8];
           }
           return tmp13;
         }
+        const obj3 = { style: tmp5, children: tmp11 };
         const tmp16 = <View style={tmp5}>{tmp11}</View>;
         cResult[6] = tmp5;
         cResult[7] = tmp11;
@@ -91,15 +92,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = tmp12;
     }
   : (hasExtraMargin) => {
-      let str;
-      hasExtraMargin = hasExtraMargin.hasExtraMargin;
       const tmp = closure_4();
-      ({ variant: "text-xs/bold", style: tmp.text, children: str.toUpperCase() });
-      const Text = Text_Text.Text;
-      const intl = intl2.intl;
-      str = intl.string(intl2.t.Y1q7js);
-      return <View style={hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent}>{null}</View>;
+      const obj = { style: hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent, children: null };
+      const obj2 = { style: tmp.pillContainer, children: null };
+      const obj3 = { variant: "text-xs/bold", style: tmp.text, children: null };
+      const intl = util.intl;
+      obj3.children = intl.string(util.t.Y1q7js).toUpperCase();
+      obj2.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+      obj.children = <View style={tmp.pillContainer}>{null}</View>;
+      return <View style={hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent}>{null}</View>;
     };
-const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumReferralTrialPill.tsx");
-
-export const PremiumReferralTrialPill = tmp2;

@@ -1,53 +1,46 @@
 // discord_app/modules/app_launcher/hooks/useCommandContext.tsx
-import react2 from "../../../../_runtime/00576_react.js";
-import react from "../../../../_runtime/00019_react.js";
+import c from "../../../../_runtime/00576_c.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+function getCommandContext(type) {
+  if ("contextless" === type.type) {
+    let obj = { channel: "start", guild: "unicodeVersion" };
+  } else {
+    obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
+  }
+  return obj;
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
+
+export { getCommandContext };
+export const useCommandContext = ReactCompilerGating.isReactCompilerEnabled()
   ? (type) => {
-      let tmp2;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] !== type) {
-        let obj2;
         if ("contextless" === type.type) {
-          obj2 = { channel: "start", guild: "unicodeVersion" };
+          let obj2 = { channel: "start", guild: "unicodeVersion" };
         } else {
           obj2 = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
         }
         cResult[0] = type;
         cResult[1] = obj2;
-        tmp2 = obj2;
       } else {
-        tmp2 = cResult[1];
+        return cResult[1];
       }
-      return tmp2;
     }
   : (arg0) => {
       const type = arg0;
       const items = [arg0];
-      return react.useMemo(() => {
-        let obj;
+      return noop.useMemo(() => {
         if ("contextless" === type.type) {
-          obj = { channel: "start", guild: "unicodeVersion" };
+          let obj = { channel: "start", guild: "unicodeVersion" };
         } else {
           obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
         }
         return obj;
       }, items);
     };
-function getCommandContext(type) {
-  let obj;
-  if ("contextless" === type.type) {
-    obj = { channel: "start", guild: "unicodeVersion" };
-  } else {
-    obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
-  }
-  return obj;
-}
-const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
-
-export { getCommandContext };
-export const useCommandContext = tmp2;

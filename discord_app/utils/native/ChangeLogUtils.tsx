@@ -1,77 +1,65 @@
 // discord_app/utils/native/ChangeLogUtils.tsx
-import Fragment from "../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1936 from "../../../_runtime/metro/01936__.js";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
-import LegacyTokens from "../../design/migrations/native/LegacyTokens.tsx";
 import ManaTypeConsolidationExperiment from "../../modules/design/ManaTypeConsolidationExperiment.tsx";
 import MarkupRulesUtils from "../../modules/markup/MarkupRulesUtils.tsx";
-import react from "../../../_runtime/00019_react.js";
-import react_native from "../../../_runtime/00017_react-native.js";
-import createStyles_mod from "../../design/components/Styles/native/createStyles.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 import CustomMarkup from "../../modules/markup/CustomMarkup.native.tsx";
-import ReactCompilerGating_mod from "../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let length;
-
-let c3;
-let closure_4;
-let obj2;
-let obj3;
-({ View: c3, Image: closure_4 } = react_native);
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = {
-  link: obj2,
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  link: { color: nativeDefault.colors.TEXT_LINK },
   list: { marginBottom: 10 },
   image: { alignSelf: "center", flex: 1 },
-  container: obj3,
-  text: { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED },
+  container: null,
+  text: null,
 };
-obj2 = { color: nativeDefault.colors.TEXT_LINK };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { color: nativeDefault.colors.TEXT_LINK };
+obj2.container = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: LegacyTokens.DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5627).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
-({ fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED });
-let closure_6 = createStyles(obj);
+const obj4 = {
+  borderLeftWidth: 2,
+  paddingLeft: 8,
+  marginBottom: 10,
+  borderLeftColor: fn(5627).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+};
+obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
+let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let node;
-      let output;
-      let state;
-      let styling;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       ({ node, output, state, styling } = arg0);
       const tmp2 = closure_6();
       if (cResult[0] === node.content) {
         if (cResult[1] === output) {
-          let tmp7;
           if (cResult[2] === state) {
-            tmp7 = cResult[3];
+            let tmp7 = cResult[3];
           }
           if (cResult[4] === node.target) {
             if (cResult[5] === state.key) {
               if (cResult[6] === tmp2.link) {
                 if (cResult[7] === styling.components.Link) {
-                  let tmp10;
                   if (cResult[8] === tmp7) {
-                    tmp10 = cResult[9];
+                    let tmp10 = cResult[9];
                   }
                   return tmp10;
                 }
               }
             }
           }
+          const obj2 = { className: tmp5, target: tmp6, children: tmp7 };
           const tmp12 = (
             <tmp3 key={tmp4} className={tmp5} target={tmp6}>
               {tmp7}
@@ -86,10 +74,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = tmp12;
         }
       }
-      const content = node.content;
-      const obj3 = { inLink: true };
+      const obj3 = {};
       const merged = Object.assign(state);
-      const outputResult = output(content, obj3);
+      obj3.inLink = true;
+      const outputResult = output(node.content, obj3);
       cResult[0] = node.content;
       cResult[1] = output;
       cResult[2] = state;
@@ -97,115 +85,104 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = outputResult;
     }
   : (arg0) => {
-      let node;
-      let output;
-      let state;
-      let styling;
       ({ node, state } = arg0);
       ({ output, styling } = arg0);
-      const Link = styling.components.Link;
-      const content = node.content;
-      const obj2 = { inLink: true };
+      const obj = { className: closure_6().link, target: node.target, children: null };
+      const obj2 = {};
       const merged = Object.assign(state);
-      return (
-        <Link key={state.key} className={closure_6().link} target={node.target}>
-          {output(content, obj2)}
-        </Link>
+      obj2.inLink = true;
+      obj.children = output(node.content, obj2);
+      return jsx(
+        styling.components.Link,
+        { className: closure_6().link, target: node.target, children: null },
+        state.key,
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (state) => {
-      let node;
-      let output;
-      let styling;
-      let tmp6;
-      const obj = output(styling[9]);
-      const cResult = obj.c(14);
+      const cResult = output(ListItem[9]).c(14);
       ({ node, output } = state);
       state = state.state;
-      styling = state.styling;
+      ListItem = state.styling;
       const tmp2 = closure_6();
       if (cResult[0] === node.items) {
         if (cResult[1] === output) {
           if (cResult[2] === state) {
-            if (cResult[3] === styling.components.ListItem) {
-              tmp6 = cResult[4];
-            }
-            if (cResult[9] === (styling.components.List || closure_3)) {
-              if (cResult[10] === state.key) {
-                if (cResult[11] === tmp2.list) {
-                  let tmp9;
-                  if (cResult[12] === tmp6) {
-                    tmp9 = cResult[13];
+            if (cResult[3] === ListItem.components.ListItem) {
+              if (cResult[9] === tmp3) {
+                if (cResult[10] === state.key) {
+                  if (cResult[11] === tmp2.list) {
+                    if (cResult[12] === tmp6) {
+                      let tmp10 = cResult[13];
+                    }
+                    return tmp10;
                   }
-                  return tmp9;
                 }
               }
+              const obj2 = { style: tmp5, children: cResult[4] };
+              const tmp12 = (
+                <tmp3 key={tmp4} style={tmp5}>
+                  {cResult[4]}
+                </tmp3>
+              );
+              cResult[9] = tmp3;
+              cResult[10] = state.key;
+              cResult[11] = tmp2.list;
+              cResult[12] = cResult[4];
+              cResult[13] = tmp12;
+              tmp10 = tmp12;
             }
-            const tmp11 = jsx(styling.components.List || closure_3, { style: tmp5, children: tmp6 }, tmp4);
-            cResult[9] = styling.components.List || closure_3;
-            cResult[10] = state.key;
-            cResult[11] = tmp2.list;
-            cResult[12] = tmp6;
-            cResult[13] = tmp11;
-            tmp9 = tmp11;
           }
         }
       }
       if (cResult[5] === output) {
         if (cResult[6] === state) {
-          let tmp7;
-          if (cResult[7] === styling.components.ListItem) {
-            tmp7 = cResult[8];
+          if (cResult[7] === ListItem.components.ListItem) {
+            let tmp7 = cResult[8];
           }
           let items = node.items;
           const mapped = items.map(tmp7);
-          cResult[0] = node.items;
+          node = node.items;
+          cResult[0] = node;
           cResult[1] = output;
           cResult[2] = state;
-          cResult[3] = styling.components.ListItem;
+          ListItem = ListItem.components.ListItem;
+          cResult[3] = ListItem;
           cResult[4] = mapped;
-          tmp6 = mapped;
         }
       }
       const fn = function l(arg0, id) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         return jsx(
-          styling.components.ListItem,
+          ListItem.components.ListItem,
           {
             children(arg0) {
               closure_0 = output;
-              let closure_1 = state;
-              let closure_2 = arg0;
+              closure_1 = state;
+              closure_2 = arg0;
               const items = [];
               length = [];
               const item = closure_0.forEach((type, index) => {
                 if ("list" === type.type) {
                   if (closure_4.length > 0) {
-                    const push = items.push;
-                    const obj = { variant: "text-sm/normal", children: closure_0(closure_4, closure_1) };
-                    const Text = item(closure_2_2[7]).Text;
+                    const obj = { variant: "text-sm/normal" };
                     const merged = Object.assign(closure_2);
-                    push(closure_2_5(Text, obj, -1));
+                    obj.children = closure_0(closure_4, closure_1);
+                    items.push(closure_2_5(closure_0(styling[7]).Text, obj, -1));
                     closure_4 = [];
                   }
-                  const push2 = items.push;
                   const obj2 = { children: closure_0(type, closure_1) };
-                  push2(closure_2_5(closure_2_3, obj2, index));
+                  items.push(closure_2_5(closure_2_3, obj2, index));
                 } else {
                   closure_4.push(type);
                 }
               });
               if (length.length > 0) {
-                const push = items.push;
-                const Text = Text_Text.Text;
+                const obj = { variant: "text-sm/normal" };
                 const merged = Object.assign(arg0);
-                push(
-                  <Text key={-1} variant="text-sm/normal">
-                    {output(length, state)}
-                  </Text>,
-                );
+                obj.children = output(length, state);
+                items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, -1));
                 length = [];
               }
               return items;
@@ -216,82 +193,71 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       };
       cResult[5] = output;
       cResult[6] = state;
-      cResult[7] = styling.components.ListItem;
+      cResult[7] = ListItem.components.ListItem;
       cResult[8] = fn;
       tmp7 = fn;
+      let obj = output(ListItem[9]);
     }
   : (styling) => {
-      let state;
       ({ output: require, state } = styling);
       styling = styling.styling;
-      const node = styling.node;
       let List = styling.components.List;
-      const tmp = closure_6();
       if (!List) {
         List = closure_3;
       }
-      let items = node.items;
-      return (
-        <List key={state.key} style={tmp.list}>
-          {items.map((item, index) =>
-            jsx(
-              styling.components.ListItem,
-              {
-                children(arg0) {
-                  item = require;
-                  let closure_1 = state;
-                  let closure_2 = arg0;
-                  const items = [];
-                  length = [];
-                  item = item.forEach((type, index) => {
-                    if ("list" === type.type) {
-                      if (closure_4.length > 0) {
-                        const push = items.push;
-                        const obj = { variant: "text-sm/normal", children: closure_0(closure_4, closure_1) };
-                        const Text = item(closure_2_2[7]).Text;
-                        const merged = Object.assign(closure_2);
-                        push(closure_2_5(Text, obj, -1));
-                        closure_4 = [];
-                      }
-                      const push2 = items.push;
-                      const obj2 = { children: closure_0(type, closure_1) };
-                      push2(closure_2_5(closure_2_3, obj2, index));
-                    } else {
-                      closure_4.push(type);
-                    }
-                  });
-                  if (length.length > 0) {
-                    let push = items.push;
-                    let Text = Text_Text.Text;
-                    let merged = Object.assign(arg0);
-                    push(
-                      <Text key={-1} variant="text-sm/normal">
-                        {require(length, state)}
-                      </Text>,
-                    );
-                    length = [];
+      let obj = { style: closure_6().list, children: null };
+      let items = styling.node.items;
+      obj.children = items.map((item, index) =>
+        jsx(
+          styling.components.ListItem,
+          {
+            children(arg0) {
+              item = closure_2_0;
+              closure_1 = state;
+              closure_2 = arg0;
+              const items = [];
+              length = [];
+              item = item.forEach((type, index) => {
+                if ("list" === type.type) {
+                  if (closure_4.length > 0) {
+                    const obj = { variant: "text-sm/normal" };
+                    const merged = Object.assign(closure_2);
+                    obj.children = closure_0(closure_4, closure_1);
+                    items.push(closure_2_5(closure_0(styling[7]).Text, obj, -1));
+                    closure_4 = [];
                   }
-                  return items;
-                },
-              },
-              index,
-            ),
-          )}
+                  const obj2 = { children: closure_0(type, closure_1) };
+                  items.push(closure_2_5(closure_2_3, obj2, index));
+                } else {
+                  closure_4.push(type);
+                }
+              });
+              if (length.length > 0) {
+                let obj = { variant: "text-sm/normal" };
+                let merged = Object.assign(arg0);
+                obj.children = closure_2_0(length, state);
+                items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, -1));
+                length = [];
+              }
+              return items;
+            },
+          },
+          index,
+        ),
+      );
+      return (
+        <List key={state.key} style={closure_6().list}>
+          {null}
         </List>
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (styling) => {
-      let node;
-      let output;
-      let state;
-      const obj = react2;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       ({ node, output, state } = styling);
-      styling = styling.styling;
       const tmp4 = closure_6();
-      const components = styling.components;
+      const components = styling.styling.components;
       let Paragraph;
       if (components != null) {
         Paragraph = components.Paragraph;
@@ -301,21 +267,20 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === node.content) {
         if (cResult[1] === output) {
-          let tmp8;
           if (cResult[2] === state) {
-            tmp8 = cResult[3];
+            let tmp8 = cResult[3];
           }
           if (cResult[4] === Paragraph) {
             if (cResult[5] === state.key) {
               if (cResult[6] === tmp4.text) {
-                let tmp10;
                 if (cResult[7] === tmp8) {
-                  tmp10 = cResult[8];
+                  let tmp10 = cResult[8];
                 }
                 return tmp10;
               }
             }
           }
+          const obj2 = { variant: "text-sm/normal", style: tmp7, children: tmp8 };
           const tmp12 = (
             <Paragraph key={tmp6} variant="text-sm/normal" style={tmp7}>
               {tmp8}
@@ -337,36 +302,28 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = outputResult;
     }
   : (state) => {
-      let node;
-      let output;
-      let styling;
       state = state.state;
       ({ node, output, styling } = state);
       const components = styling.components;
       let Paragraph;
-      const tmp = closure_6();
       if (components != null) {
         Paragraph = components.Paragraph;
       }
       if (Paragraph == null) {
         Paragraph = Text_Text.Text;
       }
+      const tmp = closure_6();
       return (
-        <Paragraph key={state.key} variant="text-sm/normal" style={tmp.text}>
+        <Paragraph key={state.key} variant="text-sm/normal" style={closure_6().text}>
           {output(node.content, state)}
         </Paragraph>
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let node;
-      let output;
-      let state;
-      const obj = react2;
-      const cResult = obj.c(11);
+      const cResult = c.c(11);
       ({ node, output, state } = arg0);
-      const obj2 = ManaTypeConsolidationExperiment;
       if (obj2.useManaTypeConsolidationExperiment("ChangeLogStrong")) {
         let str;
         if (state != null) {
@@ -377,17 +334,16 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] === node) {
           if (cResult[5] === output) {
-            let tmp8;
             if (cResult[6] === state) {
-              tmp8 = cResult[7];
+              let tmp8 = cResult[7];
             }
             if (cResult[8] === str) {
-              let tmp10;
               if (cResult[9] === tmp8) {
-                tmp10 = cResult[10];
+                let tmp10 = cResult[10];
               }
               return tmp10;
             }
+            const obj3 = { variant: "experimental/body-sm/semibold", color: str, children: tmp8 };
             const tmp12 = jsx(Text_Text.Text, { variant: "experimental/body-sm/semibold", color: str, children: tmp8 });
             cResult[8] = str;
             cResult[9] = tmp8;
@@ -395,19 +351,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             tmp10 = tmp12;
           }
         }
-        const tmpResult = MarkupRulesUtils;
-        const smartOutputResult = tmpResult.smartOutput(node, output, state);
+        const smartOutputResult = MarkupRulesUtils.smartOutput(node, output, state);
         cResult[4] = node;
         cResult[5] = output;
         cResult[6] = state;
         cResult[7] = smartOutputResult;
         tmp8 = smartOutputResult;
+        const tmpResult = MarkupRulesUtils;
       } else {
         if (cResult[0] === node) {
           if (cResult[1] === output) {
-            let tmp4;
             if (cResult[2] === state) {
-              tmp4 = cResult[3];
+              let tmp4 = cResult[3];
             }
             return tmp4;
           }
@@ -420,28 +375,28 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = reactResult;
         tmp4 = reactResult;
       }
+      obj2 = ManaTypeConsolidationExperiment;
     }
   : (arg0) => {
-      let node;
-      let output;
-      let reactResult;
-      let state;
       ({ node, output, state } = arg0);
-      const obj = ManaTypeConsolidationExperiment;
       if (obj.useManaTypeConsolidationExperiment("ChangeLogStrong")) {
         let str;
-        const Text = Text_Text.Text;
         if (state != null) {
           str = state.textColor;
         }
         if (str == null) {
           str = "text-default";
         }
-        reactResult = (
-          <Text variant="experimental/body-sm/semibold" color={str}>
-            {MarkupRulesUtils.smartOutput(node, output, state)}
-          </Text>
-        );
+        const obj2 = {
+          variant: "experimental/body-sm/semibold",
+          color: str,
+          children: MarkupRulesUtils.smartOutput(node, output, state),
+        };
+        let reactResult = jsx(Text_Text.Text, {
+          variant: "experimental/body-sm/semibold",
+          color: str,
+          children: MarkupRulesUtils.smartOutput(node, output, state),
+        });
         const tmpResult = MarkupRulesUtils;
       } else {
         const strong = rules.strong;
@@ -449,25 +404,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return reactResult;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let node;
-      let state;
-      let tmp4;
-      let tmp7;
-      const obj = react2;
-      const cResult = obj.c(8);
+      const cResult = c.c(8);
       ({ node, state } = arg0);
       const tmp3 = closure_6();
-      const image = tmp3.image;
-      const key = state.key;
       if (cResult[0] !== node.target) {
-        const obj2 = _modDef1936;
-        const sanitizeUrlResult = obj2.sanitizeUrl(node.target);
+        const sanitizeUrlResult = _modDef1936.sanitizeUrl(node.target);
         cResult[0] = node.target;
         cResult[1] = sanitizeUrlResult;
-        tmp4 = sanitizeUrlResult;
+        let tmp4 = sanitizeUrlResult;
       } else {
         tmp4 = cResult[1];
       }
@@ -475,20 +422,19 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { uri: tmp4 };
         cResult[2] = tmp4;
         cResult[3] = obj3;
-        tmp7 = obj3;
+        let tmp7 = obj3;
       } else {
         tmp7 = cResult[3];
       }
       if (cResult[4] === state.key) {
         if (cResult[5] === tmp3.image) {
-          let tmp8;
           if (cResult[6] === tmp7) {
-            tmp8 = cResult[7];
+            let tmp8 = cResult[7];
           }
           return tmp8;
         }
       }
-      const tmp9 = <React3 key={key} style={image} source={tmp7} />;
+      const tmp9 = <React4 key={state.key} style={tmp3.image} source={tmp7} />;
       cResult[4] = state.key;
       cResult[5] = tmp3.image;
       cResult[6] = tmp7;
@@ -496,48 +442,40 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
     }
   : (arg0) => {
-      let node;
-      let obj3;
-      let state;
       ({ node, state } = arg0);
-      const obj2 = { uri: obj3.sanitizeUrl(node.target) };
-      obj3 = _modDef1936;
-      return <React3 key={state.key} style={closure_6().image} source={obj2} />;
+      const obj = { style: closure_6().image, source: null };
+      const obj2 = { uri: _modDef1936.sanitizeUrl(node.target) };
+      obj.source = obj2;
+      return <React4 key={state.key} style={closure_6().image} source={null} />;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let node;
-      let output;
-      let state;
-      const obj = react2;
-      const cResult = obj.c(11);
+      const cResult = c.c(11);
       ({ node, output, state } = arg0);
       const tmp4 = closure_6();
       if (cResult[0] === node.content) {
         if (cResult[1] === output) {
-          let tmp8;
           if (cResult[2] === state) {
-            tmp8 = cResult[3];
+            let tmp8 = cResult[3];
           }
           if (cResult[4] === tmp4.text) {
-            let tmp10;
             if (cResult[5] === tmp8) {
-              tmp10 = cResult[6];
+              let tmp10 = cResult[6];
             }
             if (cResult[7] === state.key) {
               if (cResult[8] === tmp4.container) {
-                let tmp13;
                 if (cResult[9] === tmp10) {
-                  tmp13 = cResult[10];
+                  let tmp13 = cResult[10];
                 }
                 return tmp13;
               }
             }
+            const obj2 = { style: tmp6, children: tmp10 };
             const tmp16 = (
-              <_false key={tmp5} style={tmp6}>
+              <React3 key={tmp5} style={tmp6}>
                 {tmp10}
-              </_false>
+              </React3>
             );
             cResult[7] = state.key;
             cResult[8] = tmp4.container;
@@ -545,6 +483,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[10] = tmp16;
             tmp13 = tmp16;
           }
+          const obj3 = { variant: "text-sm/normal", style: tmp7, children: tmp8 };
           const tmp12 = jsx(Text_Text.Text, { variant: "text-sm/normal", style: tmp7, children: tmp8 });
           cResult[4] = tmp4.text;
           cResult[5] = tmp8;
@@ -560,20 +499,28 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = outputResult;
     }
   : (state) => {
-      let node;
-      let output;
       state = state.state;
       ({ node, output } = state);
       const tmp = closure_6();
-      ({ variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) });
-      const Text = Text_Text.Text;
+      const obj = {
+        style: tmp.container,
+        children: jsx(Text_Text.Text, {
+          variant: "text-sm/normal",
+          style: tmp.text,
+          children: output(node.content, state),
+        }),
+      };
       return (
-        <_false key={state.key} style={tmp.container}>
-          {null}
-        </_false>
+        <React3 key={state.key} style={tmp.container}>
+          {jsx(Text_Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) })}
+        </React3>
       );
     };
-const obj5 = {
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
+
+export const baseRules = rules;
+export const customRules = {
   link(inlineStoreParams) {
     const styling = inlineStoreParams;
     return {
@@ -634,7 +581,3 @@ const obj5 = {
     };
   },
 };
-const result = size.fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
-
-export const baseRules = rules;
-export const customRules = obj5;

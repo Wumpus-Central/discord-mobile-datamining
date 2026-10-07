@@ -3,17 +3,11 @@ import MemberVerificationUtils from "../MemberVerificationUtils.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
+require = fn;
 function shouldShowMembershipVerificationGate(guildId) {
-  let items;
-  let obj;
-  let obj2;
-  let obj3;
   let tmp = items;
   if (items === undefined) {
     items = [GuildStore, UserStore, GuildMemberStore];
@@ -23,7 +17,7 @@ function shouldShowMembershipVerificationGate(guildId) {
   if (null == guildId) {
     return false;
   } else {
-    const guild = obj.getGuild(guildId);
+    guild = obj.getGuild(guildId);
     const currentUser = obj2.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
@@ -38,26 +32,24 @@ function shouldShowMembershipVerificationGate(guildId) {
       flag = flag2;
     }
     if (flag) {
-      const obj4 = MemberVerificationUtils;
-      flag = obj4.guildHasVerificationGate(guild);
+      flag = MemberVerificationUtils.guildHasVerificationGate(guild);
     }
     return flag;
   }
 }
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
+
+export { shouldShowMembershipVerificationGate };
+export const useShowMemberVerificationGate = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp8;
-      let tmp9;
       _require = arg0;
-      const tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(4);
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [GuildStore, UserStore, GuildMemberStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -74,22 +66,20 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp9 = items1;
-        tmp8 = fn;
+        let tmp9 = items1;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp8, tmp9);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp8, tmp9);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       let items = [GuildStore, UserStore, GuildMemberStore];
       const items1 = [arg0];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(
+      return require("initialize").useStateFromStores(
         items,
         () => {
           let tmp2 = null != closure_0;
@@ -102,7 +92,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
-
-export { shouldShowMembershipVerificationGate };
-export const useShowMemberVerificationGate = tmp2;

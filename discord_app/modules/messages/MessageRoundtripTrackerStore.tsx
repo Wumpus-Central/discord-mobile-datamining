@@ -1,16 +1,15 @@
 // discord_app/modules/messages/MessageRoundtripTrackerStore.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import NetStats from "../network/NetStats.android.tsx";
 import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
 import NetworkStore from "../../stores/NetworkStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 function trackRoundtrip(channelId) {
   const basicChannel = ChannelStore.getBasicChannel(channelId.channelId);
   if (null != basicChannel) {
@@ -24,130 +23,125 @@ function trackRoundtrip(channelId) {
       if (null != channelId.gatewaySeenTimestamp) {
         diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
       }
-      const obj = NetStats;
-      const signalStrength = obj.getSignalStrength();
-      const obj3 = {
-        api_latency_ms: diff,
-        gateway_latency_ms: diff1,
-        guild_size: GuildMemberCountStore.getMemberCount(basicChannel.guild_id),
-        mobile_network_type: NetworkStore.getType(),
-        num_attachments: channelId.attachmentCount,
-      };
-      const track = AnalyticsUtilsDefault.track;
-      const SEND_MESSAGE_ROUNDTRIP = AnalyticEvents.SEND_MESSAGE_ROUNDTRIP;
-      AnalyticsUtilsDefault;
+      const signalStrength = NetStats.getSignalStrength();
+      const obj4 = {};
       const merged = Object.assign(getDeviceMetadataDefault());
-      ({ id: obj2.channel_id, type: obj2.channel_type, guild_id: obj2.guild_id } = basicChannel);
-      let tmp18 = null != signalStrength;
-      if (tmp18) {
-        tmp18 = { mobile_signal_strength_level: signalStrength };
-        const obj5 = { mobile_signal_strength_level: signalStrength };
+      obj4.api_latency_ms = diff;
+      obj4.gateway_latency_ms = diff1;
+      ({ id: obj3.channel_id, type: obj3.channel_type, guild_id: obj3.guild_id } = basicChannel);
+      obj4.guild_size = GuildMemberCountStore.getMemberCount(basicChannel.guild_id);
+      obj4.mobile_network_type = NetworkStore.getType();
+      obj4.num_attachments = channelId.attachmentCount;
+      let tmp17 = null != signalStrength;
+      if (tmp17) {
+        const obj6 = { mobile_signal_strength_level: signalStrength };
+        tmp17 = obj6;
       }
-      const merged1 = Object.assign(tmp18);
-      track(SEND_MESSAGE_ROUNDTRIP, obj3);
+      const merged1 = Object.assign(tmp17);
+      AnalyticsUtilsDefault.track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj4);
     }
   } else {
     const _HermesInternal = HermesInternal;
     logger.warn("Ignoring a messageData for channel " + channelId.channelId + " because we can't find that channel.");
   }
 }
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const logger = new LoggerDefault("MessageRoundtripTrackerStore");
-const tmp2 = new LoggerDefault("MessageRoundtripTrackerStore");
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class MessageRoundtripTrackerStoreClass extends Store {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    applyArgumentsResult.pendingMessages = new Map();
-    new Map();
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    map = new Map();
+    applyArgumentsResult.pendingMessages = map;
     return applyArgumentsResult;
-  }
-  initialize() {
-    this.waitFor(ChannelStore, GuildMemberCountStore, NetworkStore);
-  }
-  recordMessageSendAttempt(channelId, nonce, arg2) {
-    const self = this;
-    let closure_0 = nonce;
-    let obj = arg2;
-    if (arg2 === undefined) {
-      obj = {};
-    }
-    const attachments = obj.attachments;
-    let num;
-    if (attachments != null) {
-      num = attachments.length;
-    }
-    if (num == null) {
-      num = 0;
-    }
-    const attachmentsToUpload = obj.attachmentsToUpload;
-    let num2;
-    if (attachmentsToUpload != null) {
-      num2 = attachmentsToUpload.length;
-    }
-    if (num2 == null) {
-      num2 = 0;
-    }
-    let pendingMessages = this.pendingMessages;
-    const obj2 = {
-      initialSendTimestamp: Date.now(),
-      apiResponseTimestamp: null,
-      gatewaySeenTimestamp: null,
-      channelId,
-      attachmentCount: num + num2,
-    };
-    const result = pendingMessages.set(nonce, obj2);
-    const timerId = setTimeout(() => {
-      const pendingMessages = self.pendingMessages;
-      const value = pendingMessages.get(nonce);
-      if (null != value) {
-        trackRoundtrip(value);
-        const pendingMessages2 = self.pendingMessages;
-        pendingMessages2.delete(nonce);
-      }
-    }, 30000);
-  }
-  recordMessageSendApiResponse(stickerById) {
-    const self = this;
-    const pendingMessages = this.pendingMessages;
-    const value = pendingMessages.get(stickerById);
-    if (null != value) {
-      const obj = { apiResponseTimestamp: Date.now() };
-      const merged = Object.assign(value);
-      const _Date = Date;
-      const tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
-      if (tmp6) {
-        trackRoundtrip(obj);
-        const pendingMessages3 = self.pendingMessages;
-        pendingMessages3.delete(stickerById);
-      } else {
-        const pendingMessages2 = self.pendingMessages;
-        const result = pendingMessages2.set(stickerById, obj);
-      }
-    }
-  }
-  recordGatewayResponse(nonce) {
-    const self = this;
-    const pendingMessages = this.pendingMessages;
-    const value = pendingMessages.get(nonce);
-    if (null != value) {
-      const obj = { gatewaySeenTimestamp: Date.now() };
-      const merged = Object.assign(value);
-      const _Date = Date;
-      const tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
-      if (tmp6) {
-        trackRoundtrip(obj);
-        const pendingMessages3 = self.pendingMessages;
-        pendingMessages3.delete(nonce);
-      } else {
-        const pendingMessages2 = self.pendingMessages;
-        const result = pendingMessages2.set(nonce, obj);
-      }
-    }
   }
 }
 const prototype = MessageRoundtripTrackerStoreClass.prototype;
-let obj = {
+prototype["initialize"] = function initialize() {
+  this.waitFor(ChannelStore, GuildMemberCountStore, NetworkStore);
+};
+prototype["recordMessageSendAttempt"] = function recordMessageSendAttempt(channelId, arg1, arg2) {
+  const self = this;
+  closure_0 = arg1;
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  const attachments = obj.attachments;
+  let num;
+  if (attachments != null) {
+    num = attachments.length;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  const attachmentsToUpload = obj.attachmentsToUpload;
+  let num2;
+  if (attachmentsToUpload != null) {
+    num2 = attachmentsToUpload.length;
+  }
+  if (num2 == null) {
+    num2 = 0;
+  }
+  let pendingMessages = this.pendingMessages;
+  const result = pendingMessages.set(arg1, {
+    initialSendTimestamp: Date.now(),
+    apiResponseTimestamp: null,
+    gatewaySeenTimestamp: null,
+    channelId,
+    attachmentCount: num + num2,
+  });
+  const timerId = setTimeout(() => {
+    const pendingMessages = self.pendingMessages;
+    value = pendingMessages.get(closure_0);
+    if (null != value) {
+      trackRoundtrip(value);
+      const pendingMessages2 = self.pendingMessages;
+      pendingMessages2.delete(closure_0);
+    }
+  }, 30000);
+};
+prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(stickerById) {
+  const self = this;
+  const pendingMessages = this.pendingMessages;
+  value = pendingMessages.get(stickerById);
+  if (null != value) {
+    const obj = {};
+    const merged = Object.assign(value);
+    const _Date = Date;
+    obj.apiResponseTimestamp = Date.now();
+    if (tmp6) {
+      trackRoundtrip(obj);
+      const pendingMessages3 = self.pendingMessages;
+      pendingMessages3.delete(stickerById);
+    } else {
+      const pendingMessages2 = self.pendingMessages;
+      const result = pendingMessages2.set(stickerById, obj);
+    }
+    tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
+  }
+};
+prototype["recordGatewayResponse"] = function recordGatewayResponse(nonce) {
+  const self = this;
+  const pendingMessages = this.pendingMessages;
+  value = pendingMessages.get(nonce);
+  if (null != value) {
+    const obj = {};
+    const merged = Object.assign(value);
+    const _Date = Date;
+    obj.gatewaySeenTimestamp = Date.now();
+    if (tmp6) {
+      trackRoundtrip(obj);
+      const pendingMessages3 = self.pendingMessages;
+      pendingMessages3.delete(nonce);
+    } else {
+      const pendingMessages2 = self.pendingMessages;
+      const result = pendingMessages2.set(nonce, obj);
+    }
+    tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
+  }
+};
+const messageRoundtripTrackerStoreClass = new MessageRoundtripTrackerStoreClass(DispatcherDefault, {
   MESSAGE_CREATE: function handleMessageCreate(optimistic) {
     optimistic = optimistic.optimistic;
     const nonce = optimistic.message.nonce;
@@ -158,8 +152,8 @@ let obj = {
       const result = messageRoundtripTrackerStoreClass.recordGatewayResponse(nonce);
     }
   },
-};
-const messageRoundtripTrackerStoreClass = new MessageRoundtripTrackerStoreClass(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/MessageRoundtripTrackerStore.tsx");
 
 export default messageRoundtripTrackerStoreClass;

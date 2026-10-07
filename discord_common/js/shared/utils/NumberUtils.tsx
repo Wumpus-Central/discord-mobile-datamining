@@ -1,21 +1,19 @@
 // discord_common/js/shared/utils/NumberUtils.tsx
 import index.native from "../i18n/index.native.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 let c1 = 1000000;
 const map = new Map();
+const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/NumberUtils.tsx");
 
 export const shortenAndLocalizeNumber = function shortenAndLocalizeNumber(count) {
   if (count < c1) {
-    const locale = module_1889.getLocale();
+    locale = module_1889.getLocale();
     const _HermesInternal = HermesInternal;
     const combined = "" + locale + "|" + "";
-    let value = map.get(combined);
+    value = map.get(combined);
     if (null == value) {
       const _Intl = Intl;
-      const self = this;
-      const self2 = this;
       const numberFormat = new Intl.NumberFormat(locale, undefined);
       const result = map.set(combined, numberFormat);
       value = numberFormat;
@@ -32,11 +30,9 @@ export const humanizeValue = function humanizeValue(newPostCount, stateFromStore
   if (newPostCount < 1000) {
     const _HermesInternal = HermesInternal;
     const combined = "" + stateFromStores + "|" + "";
-    let value = map.get(combined);
+    value = map.get(combined);
     if (null == value) {
       const _Intl2 = Intl;
-      const self3 = this;
-      const self4 = this;
       const numberFormat = new Intl.NumberFormat(stateFromStores, undefined);
       const result = map.set(combined, numberFormat);
       value = numberFormat;
@@ -45,20 +41,18 @@ export const humanizeValue = function humanizeValue(newPostCount, stateFromStore
     return value.format(Math.floor(newPostCount));
   } else if (newPostCount < c1) {
     const NUMBER_ABBREVIATIONS_THOUSAND = module_1889.Messages.NUMBER_ABBREVIATIONS_THOUSAND;
+    const obj = { num: null };
     const _Math = Math;
-    const format = NUMBER_ABBREVIATIONS_THOUSAND.format;
-    const obj = { num: Math.floor(newPostCount / 1000) };
-    return format(obj);
+    obj.num = Math.floor(newPostCount / 1000);
+    return NUMBER_ABBREVIATIONS_THOUSAND.format(obj);
   } else {
     const _Math3 = Math;
     const _HermesInternal2 = HermesInternal;
-    const result1 = Math.floor(10 * newPostCount / tmp15) / 10;
+    const result1 = Math.floor(10 * newPostCount / tmp19) / 10;
     const combined1 = "" + stateFromStores + "|" + 1;
-    let value2 = map.get(combined1);
+    value2 = map.get(combined1);
     if (null == value2) {
       const _Intl = Intl;
-      const self = this;
-      const self2 = this;
       const numberFormat1 = new Intl.NumberFormat(stateFromStores, { maximumFractionDigits: 1 });
       const result2 = map.set(combined1, numberFormat1);
       value2 = numberFormat1;
@@ -68,7 +62,7 @@ export const humanizeValue = function humanizeValue(newPostCount, stateFromStore
     return NUMBER_ABBREVIATIONS_MILLION.format(obj2);
   }
 };
-export const truncateAndLocalizeNumber = function(communicators, stateFromStores) {
+export const truncateAndLocalizeNumber = (communicators, stateFromStores) => {
   if (communicators < 1000000) {
     let num2 = 1;
     if (tmp % 1 === 0) {
@@ -76,11 +70,9 @@ export const truncateAndLocalizeNumber = function(communicators, stateFromStores
     }
     const _HermesInternal2 = HermesInternal;
     const combined = "" + stateFromStores + "|" + num2;
-    let value = map.get(combined);
+    value = map.get(combined);
     if (null == value) {
       const _Intl2 = Intl;
-      const self3 = this;
-      const self4 = this;
       const obj2 = { maximumFractionDigits: num2 };
       const numberFormat = new Intl.NumberFormat(stateFromStores, obj2);
       const result = map.set(combined, numberFormat);
@@ -95,11 +87,9 @@ export const truncateAndLocalizeNumber = function(communicators, stateFromStores
     }
     const _HermesInternal = HermesInternal;
     const combined1 = "" + stateFromStores + "|" + num;
-    let value2 = map.get(combined1);
+    value2 = map.get(combined1);
     if (null == value2) {
       const _Intl = Intl;
-      const self = this;
-      const self2 = this;
       const obj3 = { maximumFractionDigits: num };
       const numberFormat1 = new Intl.NumberFormat(stateFromStores, obj3);
       const result1 = map.set(combined1, numberFormat1);
@@ -132,8 +122,6 @@ export const formatPercent = function formatPercent(stateFromStores, percentComp
   if (arg2 === undefined) {
     obj = {};
   }
-  const obj2 = { style: "percent", minimumFractionDigits: 0 };
   const merged = Object.assign(obj);
-  const NumberFormatResult = NumberFormat(stateFromStores, obj2);
-  return NumberFormatResult.format(percentComplete);
+  return Intl.NumberFormat(stateFromStores, { style: "percent", minimumFractionDigits: 0 }).format(percentComplete);
 };

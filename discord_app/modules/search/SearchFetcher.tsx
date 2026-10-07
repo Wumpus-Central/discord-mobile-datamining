@@ -1,75 +1,70 @@
 // discord_app/modules/search/SearchFetcher.tsx
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import _modDef1478 from "../../../_runtime/metro/01478__.js";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let c5, c6, closure_3;
-
-let hasOwnProperty;
-let metroRequire;
+require = fn;
+const Constants = fn(1085);
 ({ SearchTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
 class SearchFetcher {
-  constructor(searchId, searchType, query) {
-    const merged = Object.assign({ isCanceled: false });
-    merged.searchId = searchId;
-    merged.searchType = searchType;
-    merged.query = query;
+  constructor(arg0, arg1, arg2) {
+    merged = Object.assign({ isCanceled: false });
+    merged.searchId = global;
+    merged.searchType = fn;
+    merged.query = importDefault;
     return merged;
   }
-  fetch(arg0, arg1, arg2) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let self = this;
-    return self(function* () {
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+}
+const prototype = SearchFetcher.prototype;
+prototype["fetch"] = function fetch(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  const self = this;
+  return self(function* () {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        let c4;
-        try {
-          let config;
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_2 = tmp;
-              config = undefined;
-              closure_1 = undefined;
-              if (!self.isCanceled) {
-                c4 = 1;
-                c5 = 2;
-                c6 = 1;
-                const obj5 = { value: self.makeRequest({ rejectWithError: false }), done: false };
-                return obj5;
-              }
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            if (!self.isCanceled) {
+              c4 = 1;
+              c5 = 2;
+              c6 = 1;
+              const obj5 = { value: self.makeRequest({ rejectWithError: false }), done: false };
+              return obj5;
             }
-          } else if (1 === c5) {
+          }
+        } else {
+          if (1 === tmp7) {
             c4 = 0;
-            closure_2 = closure_3;
-            self = this;
-            const self2 = this;
-            const obj2 = new closure_1(closure_2[4])("SearchFetcher");
-            obj2.error(closure_2);
-            closure_130_2(closure_2);
+            closure_129_2 = closure_3;
+            const obj2 = new closure_1(tmp3[4])("SearchFetcher");
+            obj2.error(closure_129_2);
+            closure_130_2(closure_129_2);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -79,188 +74,185 @@ class SearchFetcher {
             const obj = { value, done: true };
             return obj;
           } else {
-            config = value;
-            if (null == config) {
+            closure_129_0 = value;
+            if (null == closure_129_0) {
               c4 = 0;
               c6 = 3;
               return { value: "IconComponent", done: null };
-            } else if (closure_130_3.isCanceled) {
-              c4 = 0;
-              c6 = 3;
-              return { value: "IconComponent", done: null };
-            } else {
-              if (200 === config.status) {
-                closure_130_0(config);
-              } else if (202 === config.status) {
+            } else if (!closure_130_3.isCanceled) {
+              if (200 === closure_129_0.status) {
+                closure_130_0(closure_129_0);
+              } else if (202 === closure_129_0.status) {
                 const attempts = closure_130_3.query.attempts;
-                let c0 = attempts;
-                const query = closure_130_3.query;
+                c0 = attempts;
                 if (attempts == null) {
                   c0 = 0;
                 }
-                query.attempts = c0 + 1;
+                closure_130_3.query.attempts = c0 + 1;
                 if (closure_130_3.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
                   return { value: "IconComponent", done: null };
                 } else {
                   const _parseInt = parseInt;
-                  closure_1 = parseInt(config.headers["retry-after"]);
+                  closure_129_1 = parseInt(closure_129_0.headers["retry-after"]);
                   const _isNaN = isNaN;
                   let num2 = 5000;
-                  if (!isNaN(closure_1)) {
+                  if (!isNaN(closure_129_1)) {
                     num2 = 5000;
-                    if (0 !== closure_1) {
-                      num2 = closure_1 * closure_1(closure_2[3]).Millis.SECOND;
+                    if (0 !== closure_129_1) {
+                      num2 = closure_129_1 * closure_1(tmp3[3]).Millis.SECOND;
                     }
                   }
                   closure_130_3.retryDelay = num2;
                   closure_130_3.retryLater(closure_130_0, closure_130_1, closure_130_2);
-                  closure_130_1(config);
+                  closure_130_1(closure_129_0);
                 }
               }
               c4 = 0;
             }
           }
+          c4 = 0;
           c6 = 3;
           return { value: "IconComponent", done: null };
-        } catch (tmp44) {
-          closure_3 = tmp44;
-          if (0 === c4) {
-            c6 = 3;
-            throw tmp44;
-          } else {
-            c5 = 1;
-          }
+        }
+        c6 = 3;
+      } catch (tmp49) {
+        closure_3 = tmp49;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp49;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-  }
-  cancel() {
-    this.isCanceled = true;
-    if (null != this.indexingPollId) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.indexingPollId);
     }
+  })();
+};
+prototype["cancel"] = function cancel() {
+  this.isCanceled = true;
+  if (null != this.indexingPollId) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(tmp.indexingPollId);
   }
-  retryLater(c165, cache, serializer) {
-    const self = this;
-    if (null != this.indexingPollId) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(self.indexingPollId);
-    }
-    const _fetch = self.fetch;
-    self.indexingPollId = setTimeout(_fetch.bind(self, c165, cache, serializer), self.retryDelay);
+};
+prototype["retryLater"] = function retryLater(c165, cache, serializer) {
+  const self = this;
+  if (null != this.indexingPollId) {
+    const _clearTimeout = clearTimeout;
+    clearTimeout(self.indexingPollId);
   }
-}
-const prototype = SearchFetcher.prototype;
+  const _fetch = self.fetch;
+  self.indexingPollId = setTimeout(_fetch.bind(self, c165, cache, serializer), self.retryDelay);
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/SearchFetcher.tsx");
-class SearchFetcherImpl extends SearchFetcher {
-  getEndpoint() {
-    const self = this;
-    const searchType = this.searchType;
-    if (hasOwnProperty.GUILD === searchType) {
-      if (null != self.searchId) {
-        if ("" !== self.searchId) {
-          return metroRequire.SEARCH_GUILD(self.searchId);
-        }
-      }
-    } else if (hasOwnProperty.GUILD_CHANNEL === searchType) {
-      if (null != self.searchId) {
-        if ("" !== self.searchId) {
-          const channel = ChannelStore.getChannel(self.searchId);
-          let guildId;
-          if (channel != null) {
-            guildId = channel.getGuildId();
-          }
-          if (null != guildId) {
-            return metroRequire.SEARCH_GUILD(guildId);
-          }
-        }
-      }
-    } else if (hasOwnProperty.CHANNEL === searchType) {
-      if (null != self.searchId) {
-        if ("" !== self.searchId) {
-          return metroRequire.SEARCH_CHANNEL(self.searchId);
-        }
-      }
-    } else {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const self2 = this;
-      const self3 = this;
-      const error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
-      throw error;
-    }
-  }
-  makeRequest(rejectWithError) {
-    let obj2;
-    rejectWithError = rejectWithError.rejectWithError;
-    const endpoint = this.getEndpoint();
-    let value = null;
-    if (null != endpoint) {
-      const HTTP = HTTPUtils.HTTP;
-      const request = { url: endpoint, query: obj2.stringify(this.query), oldFormErrors: true, rejectWithError };
-      const get = HTTP.get;
-      obj2 = _modDef1478;
-      value = get(request);
-    }
-    return value;
-  }
-}
+class SearchFetcherImpl extends SearchFetcher {}
 const prototype2 = SearchFetcherImpl.prototype;
+prototype2["getEndpoint"] = function getEndpoint() {
+  const self = this;
+  const searchType = this.searchType;
+  if (constants.GUILD === searchType) {
+    if (null != self.searchId) {
+      if ("" !== self.searchId) {
+        return timestampProducer.SEARCH_GUILD(self.searchId);
+      }
+    }
+  } else if (constants.GUILD_CHANNEL === searchType) {
+    if (null != self.searchId) {
+      if ("" !== self.searchId) {
+        const channel = ChannelStore.getChannel(self.searchId);
+        let guildId;
+        if (channel != null) {
+          guildId = channel.getGuildId();
+        }
+        if (null != guildId) {
+          return timestampProducer.SEARCH_GUILD(guildId);
+        }
+      }
+    }
+  } else if (constants.CHANNEL === searchType) {
+    if (null != self.searchId) {
+      if ("" !== self.searchId) {
+        return timestampProducer.SEARCH_CHANNEL(self.searchId);
+      }
+    }
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
+    throw error;
+  }
+};
+prototype2["makeRequest"] = function makeRequest(rejectWithError) {
+  const endpoint = this.getEndpoint();
+  value = null;
+  if (null != endpoint) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: endpoint,
+      query: _modDef1478.stringify(this.query),
+      oldFormErrors: true,
+      rejectWithError: rejectWithError.rejectWithError,
+    };
+    value = HTTP.get(request);
+  }
+  return value;
+};
 class SearchTabFetcherImpl extends SearchFetcher {
-  constructor(channelId, type, searchQuery, requestPayload) {
-    const tmp2 = new tmp(channelId, type, searchQuery, new.target);
-    tmp2.payload = requestPayload;
-    return tmp2;
-  }
-  getEndpoint() {
-    const self = this;
-    const searchType = this.searchType;
-    if (hasOwnProperty.DMS === searchType) {
-      return metroRequire.SEARCH_TABS_DMS;
-    } else {
-      if (hasOwnProperty.GUILD_CHANNEL !== searchType) {
-        if (hasOwnProperty.GUILD !== searchType) {
-          if (hasOwnProperty.THREAD !== searchType) {
-            if (hasOwnProperty.CHANNEL === searchType) {
-              if (null != self.searchId) {
-                if ("" !== self.searchId) {
-                  return metroRequire.SEARCH_TABS_CHANNEL(self.searchId);
-                }
-              }
-            } else {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              const self2 = this;
-              const self3 = this;
-              const error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
-              throw error;
-            }
-          }
-        }
-      }
-      if (null != self.searchId) {
-        if ("" !== self.searchId) {
-          return metroRequire.SEARCH_TABS_GUILD(self.searchId);
-        }
-      }
-    }
-  }
-  makeRequest(rejectWithError) {
-    rejectWithError = rejectWithError.rejectWithError;
-    const endpoint = this.getEndpoint();
-    let postResult = null;
-    if (null != endpoint) {
-      const HTTP = HTTPUtils.HTTP;
-      const request = { url: endpoint, body: this.payload, oldFormErrors: true, rejectWithError };
-      postResult = HTTP.post(request);
-    }
-    return postResult;
+  constructor(arg0, arg1, arg2, arg3) {
+    tmp1 = new tmp(global, fn, importDefault, new.target);
+    tmp1.payload = importAll;
+    return tmp1;
   }
 }
 const prototype3 = SearchTabFetcherImpl.prototype;
+prototype3["getEndpoint"] = function getEndpoint() {
+  const self = this;
+  const searchType = this.searchType;
+  if (constants.DMS === searchType) {
+    return timestampProducer.SEARCH_TABS_DMS;
+  } else {
+    if (constants.GUILD_CHANNEL !== searchType) {
+      if (constants.GUILD !== searchType) {
+        if (constants.THREAD !== searchType) {
+          if (constants.CHANNEL === searchType) {
+            if (null != self.searchId) {
+              if ("" !== self.searchId) {
+                return timestampProducer.SEARCH_TABS_CHANNEL(self.searchId);
+              }
+            }
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
+            throw error;
+          }
+        }
+      }
+    }
+    if (null != self.searchId) {
+      if ("" !== self.searchId) {
+        return timestampProducer.SEARCH_TABS_GUILD(self.searchId);
+      }
+    }
+  }
+};
+prototype3["makeRequest"] = function makeRequest(rejectWithError) {
+  const endpoint = this.getEndpoint();
+  let postResult = null;
+  if (null != endpoint) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: endpoint,
+      body: this.payload,
+      oldFormErrors: true,
+      rejectWithError: rejectWithError.rejectWithError,
+    };
+    postResult = HTTP.post(request);
+  }
+  return postResult;
+};
 
 export { SearchFetcher };
 export { SearchFetcherImpl };

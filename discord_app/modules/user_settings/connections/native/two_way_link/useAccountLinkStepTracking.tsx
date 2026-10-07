@@ -1,48 +1,45 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/useAccountLinkStepTracking.tsx
-import Constants from "../../../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-const AnalyticEvents = Constants.AnalyticEvents;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/useAccountLinkStepTracking.tsx",
+);
+
+export const useAccountLinkStepTracking = ReactCompilerGating.isReactCompilerEnabled()
   ? (platform_type, location_stack) => {
-      let ref;
       _require = platform_type;
-      let obj = require("react");
-      const cResult = obj.c(7);
-      dependencyMap = react.useRef(null);
+      const cResult = require("c").c(7);
+      dependencyMap = noop.useRef(null);
       if (cResult[0] === location_stack) {
-        let tmp2;
         if (cResult[1] === platform_type) {
-          tmp2 = cResult[2];
+          let tmp2 = cResult[2];
         }
         if (cResult[3] === location_stack) {
-          let tmp3;
-          let tmp4;
           if (cResult[4] === platform_type) {
-            tmp3 = cResult[5];
-            tmp4 = cResult[6];
+            let tmp3 = cResult[5];
+            let tmp4 = cResult[6];
           }
-          const effect = react.useEffect(tmp3, tmp4);
+          const effect = noop.useEffect(tmp3, tmp4);
           return tmp2;
         }
         const fn2 = function o() {
-          let tmp4;
           const items = ["landing"];
-          const obj = { location_stack, previous_step: tmp4, current_step: items[0], platform_type };
-          tmp4 = undefined;
-          const track = AnalyticsUtilsDefault.track;
-          const ACCOUNT_LINK_STEP = AnalyticEvents.ACCOUNT_LINK_STEP;
-          AnalyticsUtilsDefault;
+          const obj2 = { location_stack, previous_step: null, current_step: null, platform_type: null };
+          let tmp3;
           if (null != ref.current) {
-            tmp4 = items[ref.current];
+            tmp3 = items[ref.current];
           }
-          track(ACCOUNT_LINK_STEP, obj);
+          obj2.previous_step = tmp3;
+          obj2.current_step = items[0];
+          obj2.platform_type = platform_type;
+          AnalyticsUtilsDefault.track(AnalyticEvents.ACCOUNT_LINK_STEP, obj2);
           ref.current = 0;
         };
         let items = [location_stack, platform_type];
@@ -54,23 +51,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = fn2;
       }
       const fn = function c(index) {
-        let tmp8;
         if (null != index) {
           index = index.index;
-          const obj = {
-            location_stack: tmp3,
-            previous_step: tmp8,
-            current_step: index.routeNames[index],
-            platform_type: tmp2,
-          };
-          tmp8 = undefined;
-          const track = AnalyticsUtilsDefault.track;
-          const ACCOUNT_LINK_STEP = AnalyticEvents.ACCOUNT_LINK_STEP;
-          AnalyticsUtilsDefault;
+          const obj2 = { location_stack: tmp3, previous_step: null, current_step: null, platform_type: null };
+          let tmp7;
           if (null != ref.current) {
-            tmp8 = index.routeNames[ref.current];
+            tmp7 = index.routeNames[ref.current];
           }
-          track(ACCOUNT_LINK_STEP, obj);
+          obj2.previous_step = tmp7;
+          obj2.current_step = index.routeNames[index];
+          obj2.platform_type = tmp2;
+          AnalyticsUtilsDefault.track(AnalyticEvents.ACCOUNT_LINK_STEP, obj2);
           ref.current = index;
         }
       };
@@ -78,50 +69,39 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = platform_type;
       cResult[2] = fn;
       tmp2 = fn;
+      let obj = require("c");
     }
   : (platform_type, location_stack) => {
-      const ref = react.useRef(null);
+      noop.useRef(null);
       let items = [location_stack, platform_type];
       const items1 = [location_stack, platform_type];
-      const callback = react.useCallback((index) => {
-        let tmp8;
+      const callback = noop.useCallback((index) => {
         if (null != index) {
           index = index.index;
-          const obj = {
-            location_stack: tmp3,
-            previous_step: tmp8,
-            current_step: index.routeNames[index],
-            platform_type: tmp2,
-          };
-          tmp8 = undefined;
-          const track = AnalyticsUtilsDefault.track;
-          const ACCOUNT_LINK_STEP = AnalyticEvents.ACCOUNT_LINK_STEP;
-          AnalyticsUtilsDefault;
+          const obj2 = { location_stack: tmp3, previous_step: null, current_step: null, platform_type: null };
+          let tmp7;
           if (null != ref.current) {
-            tmp8 = index.routeNames[ref.current];
+            tmp7 = index.routeNames[ref.current];
           }
-          track(ACCOUNT_LINK_STEP, obj);
+          obj2.previous_step = tmp7;
+          obj2.current_step = index.routeNames[index];
+          obj2.platform_type = tmp2;
+          AnalyticsUtilsDefault.track(AnalyticEvents.ACCOUNT_LINK_STEP, obj2);
           ref.current = index;
         }
       }, items);
-      const effect = react.useEffect(() => {
-        let tmp4;
+      const effect = noop.useEffect(() => {
         const items = ["landing"];
-        const obj = { location_stack, previous_step: tmp4, current_step: items[0], platform_type };
-        tmp4 = undefined;
-        const track = AnalyticsUtilsDefault.track;
-        const ACCOUNT_LINK_STEP = AnalyticEvents.ACCOUNT_LINK_STEP;
-        AnalyticsUtilsDefault;
+        const obj2 = { location_stack, previous_step: null, current_step: null, platform_type: null };
+        let tmp3;
         if (null != ref.current) {
-          tmp4 = items[ref.current];
+          tmp3 = items[ref.current];
         }
-        track(ACCOUNT_LINK_STEP, obj);
+        obj2.previous_step = tmp3;
+        obj2.current_step = items[0];
+        obj2.platform_type = platform_type;
+        AnalyticsUtilsDefault.track(AnalyticEvents.ACCOUNT_LINK_STEP, obj2);
         ref.current = 0;
       }, items1);
       return callback;
     };
-const result = size.fileFinishedImporting(
-  "modules/user_settings/connections/native/two_way_link/useAccountLinkStepTracking.tsx",
-);
-
-export const useAccountLinkStepTracking = tmp2;

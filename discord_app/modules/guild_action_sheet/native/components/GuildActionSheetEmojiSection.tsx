@@ -1,5 +1,4 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
@@ -7,43 +6,30 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
 import PremiumUpsellUtilsDefault from "../../../../utils/native/PremiumUpsellUtils.tsx";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../../emojis/EmojiStore.tsx";
-import ThemeStore_mod from "../../../user_settings/ThemeStore.tsx";
+import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let guildId, importDefault;
 
-let Fonts;
-let c10;
-let c9;
-let closure_12;
-let obj2;
-let obj3;
-let size;
-let unpackModuleId;
-let _slicedToArray = _slicedToArray_mod;
-const View = react_native.View;
-let ThemeStore = ThemeStore_mod;
-({ UpsellTypes: c9, AnalyticsSections: c10, Fonts } = Constants);
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1085);
+({ UpsellTypes: closure_9, AnalyticsSections: c10, Fonts } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" },
-  dotSeparator: size,
-  premiumTitle: obj2,
-  emojiContainer: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", padding: 4 },
-  emoji: { width: 24, height: 24 },
-  emojiCount: obj3,
+  dotSeparator: null,
+  premiumTitle: null,
+  emojiContainer: null,
+  emoji: null,
+  emojiCount: null,
 };
-size = {
+let size = {
   width: 4,
   height: 4,
   borderRadius: nativeDefault.radii.xs,
@@ -51,47 +37,45 @@ size = {
   marginLeft: 8,
   backgroundColor: nativeDefault.colors.TEXT_SUBTLE,
 };
-createStyles = createStyles.createStyles;
-obj2 = {
+obj2.dotSeparator = size;
+obj2.premiumTitle = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
   marginLeft: 4,
   fontFamily: Fonts.PRIMARY_BOLD,
   fontSize: 12,
 };
-obj3 = {
+obj2.emojiContainer = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", padding: 4 };
+obj2.emoji = { width: 24, height: 24 };
+let obj3 = {
+  color: nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+  marginLeft: 4,
+  fontFamily: Fonts.PRIMARY_BOLD,
+  fontSize: 12,
+};
+obj2.emojiCount = {
   color: nativeDefault.colors.TEXT_SUBTLE,
   fontSize: 12,
   fontFamily: Fonts.PRIMARY_BOLD,
   textAlign: "center",
   textAlignVertical: "center",
 };
-let closure_13 = createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_13 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = {
+  color: nativeDefault.colors.TEXT_SUBTLE,
+  fontSize: 12,
+  fontFamily: Fonts.PRIMARY_BOLD,
+  textAlign: "center",
+  textAlignVertical: "center",
+};
+size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let analyticsLocations;
-      let closure_1;
-      let closure_3;
-      let currentUser;
-      let first;
-      let first1;
-      let intl;
-      let items4;
-      let items5;
-      let items6;
-      let items7;
-      let num8;
-      let obj10;
-      let obj6;
-      let stateFromStores;
-      let tmp10;
-      let tmp13;
-      let tmp14;
-      let tmp15;
-      let tmp26;
-      let tmp30Result;
-      let tmp35;
-      let obj = guildId(first[11]);
-      const cResult = obj.c(9);
+      const cResult = guildId(first[11]).c(9);
       guildId = guildId.guildId;
       let tmp4 = closure_13();
       importDefault = tmp4;
@@ -99,90 +83,89 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [analyticsLocations];
         cResult[0] = items;
-        first1 = items;
+        let first1 = items;
       } else {
         first1 = cResult[0];
       }
       if (cResult[1] !== guildId) {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         const items1 = [guildId];
         cResult[1] = guildId;
         cResult[2] = E;
         cResult[3] = items1;
-        tmp10 = items1;
+        let tmp10 = items1;
       } else {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         tmp10 = cResult[3];
       }
+      let obj = guildId(first[11]);
+      const stateFromStoresArray = guildId(first[12]).useStateFromStoresArray(first1, E, tmp10);
       const tmpResult = guildId(first[12]);
-      const stateFromStoresArray = tmpResult.useStateFromStoresArray(first1, E, tmp10);
-      const width = require("useWindowDimensions")().width;
-      const tmpResult4 = guildId(first[14]);
-      const token = tmpResult4.useToken(require("native").modules.mobile.TABLE_ROW_PADDING);
+      const token = guildId(first[14]).useToken(require("native").modules.mobile.TABLE_ROW_PADDING);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         const items2 = [UserStore];
         class O {
           constructor() {
-            return currentUser.getCurrentUser();
+            return closure_1_8.getCurrentUser();
           }
         }
         const items3 = [];
         cResult[4] = items2;
         cResult[5] = O;
         cResult[6] = items3;
-        tmp15 = items3;
-        tmp14 = O;
-        tmp13 = items2;
+        let tmp15 = items3;
+        let tmp14 = O;
+        const tmp13 = items2;
       } else {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         tmp14 = cResult[5];
         tmp15 = cResult[6];
       }
+      const tmpResult4 = guildId(first[14]);
+      stateFromStores = guildId(first[12]).useStateFromStores(tmp13, tmp14, tmp15);
       const tmpResult5 = guildId(first[12]);
-      stateFromStores = tmpResult5.useStateFromStores(tmp13, tmp14, tmp15);
-      const tmp11Result = require("PremiumUtils");
-      let result = tmp11Result.canUseEmojisEverywhere(stateFromStores);
+      let result = require("PremiumUtils").canUseEmojisEverywhere(stateFromStores);
       let tmp18 = !result;
-      if (tmp18) {
+      if (!result) {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         tmp18 = !obj6.isPremium(stateFromStores);
       }
-      const diff = width - (26 + 2 * token);
+      const diff = require("useWindowDimensions")().width - (26 + 2 * token);
       const rounded = Math.floor(diff / 32);
       let result1 = (diff - 24 * rounded) / (2 * rounded);
       let num7 = 4;
       if (4 <= result1) {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         num7 = 4;
         if (result1 < 12) {
           class E {
             constructor() {
-              return EmojiStore.getGuildEmoji(guildId);
+              return closure_6.getGuildEmoji(guildId);
             }
           }
         }
@@ -190,14 +173,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (first) {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
-        num8 = 0;
+        let num8 = 0;
       } else {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         num8 = stateFromStoresArray.length - tmp22;
@@ -207,128 +190,187 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (0 < num8) {
         class E {
           constructor() {
-            return EmojiStore.getGuildEmoji(guildId);
+            return closure_6.getGuildEmoji(guildId);
           }
         }
         diff1 = tmp22 - 1;
         const _Math = Math;
         class O {
           constructor() {
-            return currentUser.getCurrentUser();
+            return closure_1_8.getCurrentUser();
           }
         }
         bound = Math.min(num8 + 1, 99);
       }
       const substr = stateFromStoresArray.slice(0, diff1);
-      const tmp11Result2 = require("useAnalyticsLocations");
-      analyticsLocations = tmp11Result2(tmp11(tmp2[17]).EMOJI_PICKER).analyticsLocations;
+      const tmp11Result = require("PremiumUtils");
+      analyticsLocations = require("useAnalyticsLocations")(tmp11(tmp2[17]).EMOJI_PICKER).analyticsLocations;
       if (cResult[7] !== analyticsLocations) {
         class K {
-          constructor(arg0, currentUser) {
-            let obj5;
-            let result = null == currentUser;
+          constructor(arg0, arg1) {
+            result = null == arg1;
             if (!result) {
-              const obj = PremiumUtilsDefault;
-              result = obj.canUseEmojisEverywhere(currentUser);
+              tmp2 = closure_1;
+              tmp3 = closure_2;
+              obj = closure_1(closure_2[15]);
+              result = obj.canUseEmojisEverywhere(arg1);
             }
             if (!result) {
-              const _HermesInternal = HermesInternal;
-              const obj2 = ActionSheetActionCreatorsDefault;
-              obj2.hideActionSheet("GuildProfile:" + arg0);
-              const obj4 = { initialUpsellKey: constants.GLOBAL_EMOJI, analyticsLocation: obj5, analyticsLocations };
-              obj5 = { section: constants2.EMOJI_PICKER_POPOUT };
-              const obj3 = PremiumUpsellUtilsDefault;
-              const result1 = obj3.handleShowUpsellAlert(obj4);
+              tmp4 = guildId;
+              tmp5 = closure_1;
+              tmp6 = closure_2;
+              obj2 = closure_1(closure_2[18]);
+              tmp7 = globalThis;
+              _HermesInternal = HermesInternal;
+              str = "GuildProfile:";
+              hideActionSheetResult = obj2.hideActionSheet("GuildProfile:" + guildId);
+              tmp9 = closure_1;
+              tmp10 = closure_2;
+              obj3 = closure_1(closure_2[19]);
+              obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null };
+              tmp11 = UpsellTypes;
+              obj1.initialUpsellKey = UpsellTypes.GLOBAL_EMOJI;
+              obj6 = { section: null };
+              tmp12 = AnalyticsSections;
+              obj6.section = AnalyticsSections.EMOJI_PICKER_POPOUT;
+              obj1.analyticsLocation = obj6;
+              tmp13 = analyticsLocations;
+              obj1.analyticsLocations = analyticsLocations;
+              result1 = obj3.handleShowUpsellAlert(obj1);
             }
+            return;
           }
         }
         cResult[7] = analyticsLocations;
         class O {
           constructor() {
-            return currentUser.getCurrentUser();
+            return closure_1_8.getCurrentUser();
           }
         }
         cResult[8] = K;
-        tmp26 = K;
       } else {
         class K {
-          constructor(arg0, currentUser) {
-            let obj5;
-            let result = null == currentUser;
+          constructor(arg0, arg1) {
+            result = null == arg1;
             if (!result) {
-              const obj = PremiumUtilsDefault;
-              result = obj.canUseEmojisEverywhere(currentUser);
+              tmp2 = closure_1;
+              tmp3 = closure_2;
+              obj = closure_1(closure_2[15]);
+              result = obj.canUseEmojisEverywhere(arg1);
             }
             if (!result) {
-              const _HermesInternal = HermesInternal;
-              const obj2 = ActionSheetActionCreatorsDefault;
-              obj2.hideActionSheet("GuildProfile:" + arg0);
-              const obj4 = { initialUpsellKey: constants.GLOBAL_EMOJI, analyticsLocation: obj5, analyticsLocations };
-              obj5 = { section: constants2.EMOJI_PICKER_POPOUT };
-              const obj3 = PremiumUpsellUtilsDefault;
-              const result1 = obj3.handleShowUpsellAlert(obj4);
+              tmp4 = guildId;
+              tmp5 = closure_1;
+              tmp6 = closure_2;
+              obj2 = closure_1(closure_2[18]);
+              tmp7 = globalThis;
+              _HermesInternal = HermesInternal;
+              str = "GuildProfile:";
+              hideActionSheetResult = obj2.hideActionSheet("GuildProfile:" + guildId);
+              tmp9 = closure_1;
+              tmp10 = closure_2;
+              obj3 = closure_1(closure_2[19]);
+              obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null };
+              tmp11 = UpsellTypes;
+              obj1.initialUpsellKey = UpsellTypes.GLOBAL_EMOJI;
+              obj6 = { section: null };
+              tmp12 = AnalyticsSections;
+              obj6.section = AnalyticsSections.EMOJI_PICKER_POPOUT;
+              obj1.analyticsLocation = obj6;
+              tmp13 = analyticsLocations;
+              obj1.analyticsLocations = analyticsLocations;
+              result1 = obj3.handleShowUpsellAlert(obj1);
             }
+            return;
           }
         }
       }
-      K = tmp26;
+      ThemeStore = K;
+      const tmp11Result2 = require("useAnalyticsLocations");
       const tmpResult6 = guildId(first[20]);
-      const isThemeDarkResult = tmpResult6.isThemeDark(K.theme);
       const unsafe_rawColors = tmp11(tmp2[9]).unsafe_rawColors;
-      const tmp28 = isThemeDarkResult
+      const tmp28 = guildId(first[20]).isThemeDark(ThemeStore.theme)
         ? unsafe_rawColors.PREMIUM_TIER_2_PURPLE
         : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS;
       let tmp30Result4 = null;
       if (substr.length > 0) {
         class K {
-          constructor(arg0, currentUser) {
-            let obj5;
-            let result = null == currentUser;
+          constructor(arg0, arg1) {
+            result = null == arg1;
             if (!result) {
-              const obj = PremiumUtilsDefault;
-              result = obj.canUseEmojisEverywhere(currentUser);
+              tmp2 = closure_1;
+              tmp3 = closure_2;
+              obj = closure_1(closure_2[15]);
+              result = obj.canUseEmojisEverywhere(arg1);
             }
             if (!result) {
-              const _HermesInternal = HermesInternal;
-              const obj2 = ActionSheetActionCreatorsDefault;
-              obj2.hideActionSheet("GuildProfile:" + arg0);
-              const obj4 = { initialUpsellKey: constants.GLOBAL_EMOJI, analyticsLocation: obj5, analyticsLocations };
-              obj5 = { section: constants2.EMOJI_PICKER_POPOUT };
-              const obj3 = PremiumUpsellUtilsDefault;
-              const result1 = obj3.handleShowUpsellAlert(obj4);
+              tmp4 = guildId;
+              tmp5 = closure_1;
+              tmp6 = closure_2;
+              obj2 = closure_1(closure_2[18]);
+              tmp7 = globalThis;
+              _HermesInternal = HermesInternal;
+              str = "GuildProfile:";
+              hideActionSheetResult = obj2.hideActionSheet("GuildProfile:" + guildId);
+              tmp9 = closure_1;
+              tmp10 = closure_2;
+              obj3 = closure_1(closure_2[19]);
+              obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null };
+              tmp11 = UpsellTypes;
+              obj1.initialUpsellKey = UpsellTypes.GLOBAL_EMOJI;
+              obj6 = { section: null };
+              tmp12 = AnalyticsSections;
+              obj6.section = AnalyticsSections.EMOJI_PICKER_POPOUT;
+              obj1.analyticsLocation = obj6;
+              tmp13 = analyticsLocations;
+              obj1.analyticsLocations = analyticsLocations;
+              result1 = obj3.handleShowUpsellAlert(obj1);
             }
+            return;
           }
         }
-        let obj2 = {
-          title: obj9.string(guildId(tmp2[22]).t.Q60n1E),
-          trailing: tmp30Result,
-          children: closure_12(tmp35, obj10),
-        };
-        const RowGroup = tmp(tmp2[21]).RowGroup;
+        let obj2 = { title: null, trailing: null, children: null };
         class O {
           constructor() {
-            return currentUser.getCurrentUser();
+            return closure_1_8.getCurrentUser();
           }
         }
-        tmp30Result = null;
+        obj2.title = obj9.string(tmp(tmp2[22]).t.Q60n1E);
+        let tmp30Result = null;
         if (tmp18) {
           class K {
-            constructor(arg0, currentUser) {
-              let obj5;
-              let result = null == currentUser;
+            constructor(arg0, arg1) {
+              result = null == arg1;
               if (!result) {
-                const obj = PremiumUtilsDefault;
-                result = obj.canUseEmojisEverywhere(currentUser);
+                tmp2 = closure_1;
+                tmp3 = closure_2;
+                obj = closure_1(closure_2[15]);
+                result = obj.canUseEmojisEverywhere(arg1);
               }
               if (!result) {
-                const _HermesInternal = HermesInternal;
-                const obj2 = ActionSheetActionCreatorsDefault;
-                obj2.hideActionSheet("GuildProfile:" + arg0);
-                const obj4 = { initialUpsellKey: constants.GLOBAL_EMOJI, analyticsLocation: obj5, analyticsLocations };
-                obj5 = { section: constants2.EMOJI_PICKER_POPOUT };
-                const obj3 = PremiumUpsellUtilsDefault;
-                const result1 = obj3.handleShowUpsellAlert(obj4);
+                tmp4 = guildId;
+                tmp5 = closure_1;
+                tmp6 = closure_2;
+                obj2 = closure_1(closure_2[18]);
+                tmp7 = globalThis;
+                _HermesInternal = HermesInternal;
+                str = "GuildProfile:";
+                hideActionSheetResult = obj2.hideActionSheet("GuildProfile:" + guildId);
+                tmp9 = closure_1;
+                tmp10 = closure_2;
+                obj3 = closure_1(closure_2[19]);
+                obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null };
+                tmp11 = UpsellTypes;
+                obj1.initialUpsellKey = UpsellTypes.GLOBAL_EMOJI;
+                obj6 = { section: null };
+                tmp12 = AnalyticsSections;
+                obj6.section = AnalyticsSections.EMOJI_PICKER_POPOUT;
+                obj1.analyticsLocation = obj6;
+                tmp13 = analyticsLocations;
+                obj1.analyticsLocations = analyticsLocations;
+                result1 = obj3.handleShowUpsellAlert(obj1);
               }
+              return;
             }
           }
           tmp32[1] = function onPress() {
@@ -336,140 +378,132 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           };
           class O {
             constructor() {
-              return currentUser.getCurrentUser();
+              return closure_1_8.getCurrentUser();
             }
           }
-          let obj3 = { style: tmp4.header, children: items4 };
+          let obj3 = { style: tmp4.header, children: null };
           let obj4 = { style: tmp4.dotSeparator };
-          let PressableOpacity = tmp(tmp2[23]).PressableOpacity;
-          items4 = [tmp30(num7, obj4), ,];
-          let obj5 = { source: require("AssetRegistry"), color: tmp28, size: guildId(tmp2[24]).Icon.Sizes.SMALL };
-          const Icon = tmp(tmp2[24]).Icon;
-          items4[1] = tmp30(Icon, obj5);
-          const obj7 = { style: items5, children: intl.string(guildId(first[22]).t.p1j56s) };
-          items5 = [tmp4.premiumTitle];
+          const items4 = [tmp30(num7, obj4), ,];
+          let obj5 = { source: tmp11(tmp2[25]), color: tmp28, size: tmp(tmp2[24]).Icon.Sizes.SMALL };
+          items4[1] = tmp30(tmp(tmp2[24]).Icon, obj5);
+          const obj7 = { style: null, children: null };
+          const items5 = [tmp4.premiumTitle];
           const obj8 = { color: tmp28 };
           items5[1] = obj8;
-          const LegacyText = tmp(tmp2[24]).LegacyText;
-          intl = tmp(tmp2[22]).intl;
-          items4[2] = tmp30(LegacyText, obj7);
+          obj7.style = items5;
+          const intl = tmp(tmp2[22]).intl;
+          obj7.children = intl.string(tmp(tmp2[22]).t.p1j56s);
+          items4[2] = tmp30(tmp(tmp2[24]).LegacyText, obj7);
+          obj3.children = items4;
           tmp32[2] = closure_12(num7, obj3);
-          tmp30Result = tmp30(PressableOpacity, tmp32);
+          tmp30Result = tmp30(tmp(tmp2[23]).PressableOpacity, tmp32);
         }
-        obj10 = { style: tmp4.emojiContainer, children: items6 };
-        items6 = [
+        obj2.trailing = tmp30Result;
+        const obj10 = { style: tmp4.emojiContainer, children: null };
+        const items6 = [
           substr.map((accessibilityLabel) => {
-            let items;
-            let obj2;
-            let obj5;
-            let obj6;
-            let tmp3Result;
-            let tmp3Result2;
-            let tmp4;
-            let closure_0 = accessibilityLabel;
+            closure_0 = accessibilityLabel;
             let obj = {
               accessibilityRole: "image",
               accessibilityLabel: accessibilityLabel.name,
               onPress() {
-                const obj = HapticUtils;
-                const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-                const obj2 = ToastUtils;
-                obj2.presentEmoji(accessibilityLabel);
+                const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+                ToastUtils.presentEmoji(closure_0);
                 if (!first) {
                   closure_3(true);
                 }
               },
-              children: closure_1_11(tmp4, obj2),
+              children: null,
             };
-            const PressableOpacity = guildId(first[23]).PressableOpacity;
-            obj2 = { resizeMode: "contain", style: items, placeholder: tmp3Result, source: obj5 };
-            items = [closure_1.emoji];
+            let obj2 = { resizeMode: "contain", style: null, placeholder: null, source: null };
+            const items = [closure_1.emoji, { margin: num7 }];
+            obj2.style = items;
             const obj3 = { margin: num7 };
-            items[1] = obj3;
-            tmp4 = closure_1(first[29]);
-            const obj4 = guildId(first[20]);
+            const tmp4 = closure_1(first[29]);
             if (obj4.isThemeDark(K.theme)) {
-              tmp3Result = closure_1(first[30]);
+              let tmp3Result = closure_1(first[30]);
             } else {
               tmp3Result = closure_1(first[31]);
             }
-            obj5 = { uri: tmp3Result2.getEmojiURL(obj6) };
-            obj6 = { id: accessibilityLabel.id, animated: accessibilityLabel.animated, size: 48 };
-            tmp3Result2 = closure_1(first[32]);
-            return closure_1_11(PressableOpacity, obj, accessibilityLabel.id);
+            obj2.placeholder = tmp3Result;
+            const obj5 = { uri: null };
+            obj4 = guildId(first[20]);
+            obj5.uri = closure_1(first[32]).getEmojiURL({
+              id: accessibilityLabel.id,
+              animated: accessibilityLabel.animated,
+              size: 48,
+            });
+            obj2.source = obj5;
+            obj.children = closure_1_11(tmp4, obj2);
+            return closure_1_11(guildId(first[23]).PressableOpacity, obj, accessibilityLabel.id);
           }),
         ];
         let tmp30Result3 = null;
-        tmp35 = num7;
         if (bound > 0) {
           class K {
-            constructor(arg0, currentUser) {
-              let obj5;
-              let result = null == currentUser;
+            constructor(arg0, arg1) {
+              result = null == arg1;
               if (!result) {
-                const obj = PremiumUtilsDefault;
-                result = obj.canUseEmojisEverywhere(currentUser);
+                tmp2 = closure_1;
+                tmp3 = closure_2;
+                obj = closure_1(closure_2[15]);
+                result = obj.canUseEmojisEverywhere(arg1);
               }
               if (!result) {
-                const _HermesInternal = HermesInternal;
-                const obj2 = ActionSheetActionCreatorsDefault;
-                obj2.hideActionSheet("GuildProfile:" + arg0);
-                const obj4 = { initialUpsellKey: constants.GLOBAL_EMOJI, analyticsLocation: obj5, analyticsLocations };
-                obj5 = { section: constants2.EMOJI_PICKER_POPOUT };
-                const obj3 = PremiumUpsellUtilsDefault;
-                const result1 = obj3.handleShowUpsellAlert(obj4);
+                tmp4 = guildId;
+                tmp5 = closure_1;
+                tmp6 = closure_2;
+                obj2 = closure_1(closure_2[18]);
+                tmp7 = globalThis;
+                _HermesInternal = HermesInternal;
+                str = "GuildProfile:";
+                hideActionSheetResult = obj2.hideActionSheet("GuildProfile:" + guildId);
+                tmp9 = closure_1;
+                tmp10 = closure_2;
+                obj3 = closure_1(closure_2[19]);
+                obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null };
+                tmp11 = UpsellTypes;
+                obj1.initialUpsellKey = UpsellTypes.GLOBAL_EMOJI;
+                obj6 = { section: null };
+                tmp12 = AnalyticsSections;
+                obj6.section = AnalyticsSections.EMOJI_PICKER_POPOUT;
+                obj1.analyticsLocation = obj6;
+                tmp13 = analyticsLocations;
+                obj1.analyticsLocations = analyticsLocations;
+                result1 = obj3.handleShowUpsellAlert(obj1);
               }
+              return;
             }
           }
-          const PressableOpacity2 = tmp(tmp2[23]).PressableOpacity;
-          const intl2 = tmp(tmp2[22]).intl;
           class O {
             constructor() {
-              return currentUser.getCurrentUser();
+              return closure_1_8.getCurrentUser();
             }
           }
-          tmp37[1] = tmp38(guildId(first[22]).t["UKOtz+"]);
+          tmp37[1] = tmp38(tmp(tmp2[22]).t["UKOtz+"]);
           tmp37[2] = function onPress() {
-            const obj = HapticUtils;
-            const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
             closure_3(true);
           };
-          const obj11 = { style: items7, children: "+" + bound };
-          items7 = [, ,];
+          const obj11 = { style: null, children: null };
+          const items7 = [, ,];
           ({ emoji: arr10[0], emojiCount: arr10[1] } = tmp4);
           const obj12 = { margin: num7 };
           items7[2] = obj12;
+          obj11.style = items7;
           let _HermesInternal = HermesInternal;
-          const LegacyText2 = tmp(tmp2[24]).LegacyText;
-          tmp37[3] = tmp30(LegacyText2, obj11);
-          tmp30Result3 = tmp30(PressableOpacity2, tmp37, -1);
+          obj11.children = "+" + bound;
+          tmp37[3] = tmp30(tmp(tmp2[24]).LegacyText, obj11);
+          tmp30Result3 = tmp30(tmp(tmp2[23]).PressableOpacity, tmp37, -1);
         }
         items6[1] = tmp30Result3;
-        tmp30Result4 = tmp30(RowGroup, obj2);
+        obj10.children = items6;
+        obj2.children = closure_12(num7, obj10);
+        tmp30Result4 = tmp30(tmp(tmp2[21]).RowGroup, obj2);
       }
       return tmp30Result4;
     }
   : (guildId) => {
-      let LegacyText2;
-      let closure_1;
-      let closure_3;
-      let closure_7;
-      let currentUser;
-      let first;
-      let intl;
-      let intl2;
-      let intl3;
-      let items4;
-      let items5;
-      let items6;
-      let items7;
-      let length;
-      let num3;
-      let obj13;
-      let obj15;
-      let obj8;
-      let tmp20Result;
-      let tmp25;
       guildId = guildId.guildId;
       first = undefined;
       _slicedToArray = undefined;
@@ -479,27 +513,28 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ThemeStore = undefined;
       const tmp = closure_13();
       importDefault = tmp;
-      let obj = stateFromStores;
       [first, _slicedToArray] = stateFromStores.useState(false);
-      let tmp4 = guildId;
-      let obj2 = guildId(first[12]);
       let items = [analyticsLocations];
       const items1 = [guildId];
-      const stateFromStoresArray = obj2.useStateFromStoresArray(items, () => EmojiStore.getGuildEmoji(guildId), items1);
-      const width = require("useWindowDimensions")().width;
+      const stateFromStoresArray = guildId(first[12]).useStateFromStoresArray(
+        items,
+        () => EmojiStore.getGuildEmoji(guildId),
+        items1,
+      );
+      let obj = stateFromStores;
+      let obj2 = guildId(first[12]);
+      const token = guildId(first[14]).useToken(require("native").modules.mobile.TABLE_ROW_PADDING);
       let obj3 = guildId(first[14]);
-      const token = obj3.useToken(require("native").modules.mobile.TABLE_ROW_PADDING);
-      let obj4 = guildId(first[12]);
       const items2 = [UserStore];
-      stateFromStores = obj4.useStateFromStores(items2, () => currentUser.getCurrentUser(), []);
-      let obj5 = require("PremiumUtils");
-      let result = obj5.canUseEmojisEverywhere(stateFromStores);
+      stateFromStores = guildId(first[12]).useStateFromStores(items2, () => currentUser.getCurrentUser(), []);
+      let obj4 = guildId(first[12]);
+      let result = require("PremiumUtils").canUseEmojisEverywhere(stateFromStores);
       let tmp10 = !result;
-      if (tmp10) {
-        const tmp6Result = require("PremiumUtils");
-        tmp10 = !tmp6Result.isPremium(stateFromStores);
+      if (!result) {
+        tmp10 = !tmp6(tmp5[15]).isPremium(stateFromStores);
+        const tmp6Result = tmp6(tmp5[15]);
       }
-      const diff = width - (26 + 2 * token);
+      const diff = require("useWindowDimensions")().width - (26 + 2 * token);
       const rounded = Math.floor(diff / 32);
       let result1 = (diff - 24 * rounded) / (2 * rounded);
       num = 4;
@@ -510,8 +545,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (first) {
-        length = stateFromStoresArray.length;
-        num3 = 0;
+        let length = stateFromStoresArray.length;
+        let num3 = 0;
       } else {
         length = 2 * rounded;
         num3 = stateFromStoresArray.length - length;
@@ -524,141 +559,125 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         bound = Math.min(num3 + 1, 99);
       }
       const substr = stateFromStoresArray.slice(0, diff1);
-      const tmp6Result2 = require("useAnalyticsLocations");
-      analyticsLocations = tmp6Result2(tmp6(tmp5[17]).EMOJI_PICKER).analyticsLocations;
+      let obj5 = require("PremiumUtils");
+      analyticsLocations = require("useAnalyticsLocations")(tmp6(tmp5[17]).EMOJI_PICKER).analyticsLocations;
       const items3 = [analyticsLocations];
       ThemeStore = obj.useCallback((arg0, currentUser) => {
-        let obj5;
         let result = null == currentUser;
         if (!result) {
-          const obj = PremiumUtilsDefault;
-          result = obj.canUseEmojisEverywhere(currentUser);
+          result = PremiumUtilsDefault.canUseEmojisEverywhere(currentUser);
         }
         if (!result) {
           const _HermesInternal = HermesInternal;
-          const obj2 = ActionSheetActionCreatorsDefault;
-          obj2.hideActionSheet("GuildProfile:" + arg0);
-          const obj4 = { initialUpsellKey: constants.GLOBAL_EMOJI, analyticsLocation: obj5, analyticsLocations };
-          obj5 = { section: constants2.EMOJI_PICKER_POPOUT };
-          const obj3 = PremiumUpsellUtilsDefault;
-          const result1 = obj3.handleShowUpsellAlert(obj4);
+          ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfile:" + arg0);
+          const obj4 = { initialUpsellKey: constants.GLOBAL_EMOJI, analyticsLocation: null, analyticsLocations: null };
+          const obj5 = { section: constants2.EMOJI_PICKER_POPOUT };
+          obj4.analyticsLocation = obj5;
+          obj4.analyticsLocations = analyticsLocations;
+          const result1 = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj4);
         }
       }, items3);
-      const tmp4Result = tmp4(first[20]);
-      const isThemeDarkResult = tmp4Result.isThemeDark(ThemeStore.theme);
+      const tmp6Result2 = require("useAnalyticsLocations");
+      const tmp4Result = guildId(first[20]);
       const unsafe_rawColors = tmp6(tmp5[9]).unsafe_rawColors;
-      const tmp18 = isThemeDarkResult
+      const tmp18 = guildId(first[20]).isThemeDark(ThemeStore.theme)
         ? unsafe_rawColors.PREMIUM_TIER_2_PURPLE
         : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS;
       let tmp20Result4 = null;
       if (substr.length > 0) {
-        let obj6 = {
-          title: intl.string(tmp4(tmp5[22]).t.Q60n1E),
-          trailing: tmp20Result,
-          children: closure_12(tmp25, obj13),
-        };
-        const RowGroup = tmp4(tmp5[21]).RowGroup;
-        intl = tmp4(tmp5[22]).intl;
-        tmp20Result = null;
+        const obj6 = { title: null, trailing: null, children: null };
+        const intl = tmp4(tmp5[22]).intl;
+        obj6.title = intl.string(tmp4(tmp5[22]).t.Q60n1E);
+        let tmp20Result = null;
         if (tmp10) {
           const obj7 = {
             accessibilityRole: "button",
             onPress() {
               return closure_7(guildId, stateFromStores);
             },
-            children: closure_12(num, obj8),
+            children: null,
           };
-          obj8 = { style: tmp.header, children: items4 };
+          const obj8 = { style: tmp.header, children: null };
           const obj9 = { style: tmp.dotSeparator };
-          let PressableOpacity = tmp4(tmp5[23]).PressableOpacity;
-          items4 = [closure_11(num, obj9), ,];
-          const obj10 = { source: require("AssetRegistry"), color: tmp18, size: tmp4(first[24]).Icon.Sizes.SMALL };
-          const Icon = tmp4(tmp5[24]).Icon;
-          items4[1] = closure_11(Icon, obj10);
-          const obj11 = { style: items5, children: intl2.string(tmp4(first[22]).t.p1j56s) };
-          items5 = [tmp.premiumTitle];
+          const items4 = [closure_11(num, obj9), ,];
+          const obj10 = { source: tmp6(tmp5[25]), color: tmp18, size: tmp4(tmp5[24]).Icon.Sizes.SMALL };
+          items4[1] = closure_11(tmp4(tmp5[24]).Icon, obj10);
+          const obj11 = { style: null, children: null };
+          const items5 = [tmp.premiumTitle];
           const obj12 = { color: tmp18 };
           items5[1] = obj12;
-          const LegacyText = tmp4(tmp5[24]).LegacyText;
-          intl2 = tmp4(tmp5[22]).intl;
-          items4[2] = closure_11(LegacyText, obj11);
-          tmp20Result = closure_11(PressableOpacity, obj7);
+          obj11.style = items5;
+          const intl2 = tmp4(tmp5[22]).intl;
+          obj11.children = intl2.string(tmp4(tmp5[22]).t.p1j56s);
+          items4[2] = closure_11(tmp4(tmp5[24]).LegacyText, obj11);
+          obj8.children = items4;
+          obj7.children = closure_12(num, obj8);
+          tmp20Result = closure_11(tmp4(tmp5[23]).PressableOpacity, obj7);
         }
-        obj13 = { style: tmp.emojiContainer, children: items6 };
-        items6 = [
+        obj6.trailing = tmp20Result;
+        const obj13 = { style: tmp.emojiContainer, children: null };
+        const items6 = [
           substr.map((accessibilityLabel) => {
-            let items;
-            let obj2;
-            let obj5;
-            let obj6;
-            let tmp3Result;
-            let tmp3Result2;
-            let tmp4;
-            let closure_0 = accessibilityLabel;
+            closure_0 = accessibilityLabel;
             let obj = {
               accessibilityRole: "image",
               accessibilityLabel: accessibilityLabel.name,
               onPress() {
-                const obj = HapticUtils;
-                const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-                const obj2 = ToastUtils;
-                obj2.presentEmoji(accessibilityLabel);
+                const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+                ToastUtils.presentEmoji(closure_0);
                 if (!first) {
                   closure_3(true);
                 }
               },
-              children: closure_1_11(tmp4, obj2),
+              children: null,
             };
-            const PressableOpacity = guildId(first[23]).PressableOpacity;
-            obj2 = { resizeMode: "contain", style: items, placeholder: tmp3Result, source: obj5 };
-            items = [closure_1.emoji];
+            let obj2 = { resizeMode: "contain", style: null, placeholder: null, source: null };
+            const items = [closure_1.emoji, { margin: num }];
+            obj2.style = items;
             const obj3 = { margin: num };
-            items[1] = obj3;
-            tmp4 = closure_1(first[29]);
-            const obj4 = guildId(first[20]);
+            const tmp4 = closure_1(first[29]);
             if (obj4.isThemeDark(closure_7.theme)) {
-              tmp3Result = closure_1(first[30]);
+              let tmp3Result = closure_1(first[30]);
             } else {
               tmp3Result = closure_1(first[31]);
             }
-            obj5 = { uri: tmp3Result2.getEmojiURL(obj6) };
-            obj6 = { id: accessibilityLabel.id, animated: accessibilityLabel.animated, size: 48 };
-            tmp3Result2 = closure_1(first[32]);
-            return closure_1_11(PressableOpacity, obj, accessibilityLabel.id);
+            obj2.placeholder = tmp3Result;
+            const obj5 = { uri: null };
+            obj4 = guildId(first[20]);
+            obj5.uri = closure_1(first[32]).getEmojiURL({
+              id: accessibilityLabel.id,
+              animated: accessibilityLabel.animated,
+              size: 48,
+            });
+            obj2.source = obj5;
+            obj.children = closure_1_11(tmp4, obj2);
+            return closure_1_11(guildId(first[23]).PressableOpacity, obj, accessibilityLabel.id);
           }),
         ];
         let tmp20Result3 = null;
-        tmp25 = num;
         if (bound > 0) {
-          const obj14 = {
-            accessibilityRole: "button",
-            accessibilityLabel: intl3.string(tmp4(first[22]).t["UKOtz+"]),
-            onPress() {
-              const obj = HapticUtils;
-              const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-              closure_3(true);
-            },
-            children: closure_11(LegacyText2, obj15),
+          const obj14 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+          const intl3 = tmp4(tmp5[22]).intl;
+          obj14.accessibilityLabel = intl3.string(tmp4(tmp5[22]).t["UKOtz+"]);
+          obj14.onPress = function onPress() {
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+            closure_3(true);
           };
-          const PressableOpacity2 = tmp4(tmp5[23]).PressableOpacity;
-          intl3 = tmp4(tmp5[22]).intl;
-          obj15 = { style: items7, children: "+" + bound };
-          items7 = [, ,];
+          const obj15 = { style: null, children: null };
+          const items7 = [, ,];
           ({ emoji: arr10[0], emojiCount: arr10[1] } = tmp);
           const obj16 = { margin: num };
           items7[2] = obj16;
+          obj15.style = items7;
           let _HermesInternal = HermesInternal;
-          LegacyText2 = tmp4(tmp5[24]).LegacyText;
-          tmp20Result3 = closure_11(PressableOpacity2, obj14, -1);
+          obj15.children = "+" + bound;
+          obj14.children = closure_11(tmp4(tmp5[24]).LegacyText, obj15);
+          tmp20Result3 = closure_11(tmp4(tmp5[23]).PressableOpacity, obj14, -1);
         }
         items6[1] = tmp20Result3;
-        tmp20Result4 = closure_11(RowGroup, obj6);
+        obj13.children = items6;
+        obj6.children = closure_12(num, obj13);
+        tmp20Result4 = closure_11(tmp4(tmp5[21]).RowGroup, obj6);
       }
       return tmp20Result4;
     };
-size = size_mod;
-let result = size.fileFinishedImporting(
-  "modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx",
-);
-
-export default tmp5;

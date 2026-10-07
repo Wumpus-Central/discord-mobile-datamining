@@ -1,22 +1,15 @@
 // discord_app/modules/stage_channels/native/components/AudienceGridRow.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import StageChannelsConstants from "../../StageChannelsConstants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import BlankAudienceTileDefault from "BlankAudienceTile.tsx";
 import AudienceTileDefault from "AudienceTile.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let count;
-
-let hasOwnProperty;
-let metroRequire;
-const View = react_native.View;
-const MAX_AUDIENCE_ROW_LIMIT = StageChannelsConstants.MAX_AUDIENCE_ROW_LIMIT;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+require = fn;
+const View = fn(17).View;
+const MAX_AUDIENCE_ROW_LIMIT = fn(5578).MAX_AUDIENCE_ROW_LIMIT;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({
   rowContainer: {
     flex: 1,
@@ -26,29 +19,25 @@ let closure_7 = createStyles.createStyles({
     justifyContent: "space-between",
   },
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (count) => {
-      let tmp2;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       count = count.count;
       if (cResult[0] !== count) {
-        let num3;
         const items = [];
         for (let num3 = 0; num3 < count; num3 = num3 + 1) {
           let arr = items.push(hasOwnProperty(BlankAudienceTileDefault, {}, num3));
         }
         cResult[0] = count;
         cResult[1] = items;
-        tmp2 = items;
+        let tmp2 = items;
       } else {
         tmp2 = cResult[1];
       }
       return tmp2;
     }
   : (count) => {
-      let num;
       count = count.count;
       const items = [];
       for (let num = 0; num < count; num = num + 1) {
@@ -56,19 +45,15 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return items;
     };
-let closure_8 = tmp4;
-const memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(
+let closure_8 = tmp3;
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        let items;
-        let participants;
-        let renderBlankAudience;
-        let theme;
-        let tmp5;
-        let obj = channel(576);
-        const cResult = obj.c(18);
+        const cResult = channel(576).c(18);
         channel = channel.channel;
         ({ participants, renderBlankAudience, theme } = channel);
         const tmp3 = closure_7();
@@ -84,68 +69,61 @@ const memoResult = memo(
           const obj2 = { justifyContent: str };
           cResult[0] = str;
           cResult[1] = obj2;
-          tmp5 = obj2;
+          let tmp5 = obj2;
         } else {
           tmp5 = cResult[1];
         }
         if (cResult[2] === tmp3.rowContainer) {
-          let tmp6;
-          let tmp7;
           if (cResult[3] === tmp5) {
-            tmp6 = cResult[4];
+            let tmp6 = cResult[4];
           }
           if (cResult[5] === channel) {
             if (cResult[6] === participants) {
-              let tmp10;
               if (cResult[7] === theme) {
-                tmp7 = cResult[8];
-              }
-              if (cResult[12] !== num) {
-                let tmp11 = null;
-                if (num > 0) {
-                  const obj3 = { count: num };
-                  tmp11 = closure_5(closure_8, obj3);
-                }
-                cResult[12] = num;
-                cResult[13] = tmp11;
-                tmp10 = tmp11;
-              } else {
-                tmp10 = cResult[13];
-              }
-              if (cResult[14] === tmp6) {
-                if (cResult[15] === tmp7) {
-                  let tmp14;
-                  if (cResult[16] === tmp10) {
-                    tmp14 = cResult[17];
+                if (cResult[12] !== num) {
+                  let tmp12 = null;
+                  if (num > 0) {
+                    const obj3 = { count: num };
+                    tmp12 = closure_5(closure_8, obj3);
                   }
-                  return tmp14;
+                  cResult[12] = num;
+                  cResult[13] = tmp12;
+                  let tmp11 = tmp12;
+                } else {
+                  tmp11 = cResult[13];
                 }
+                if (cResult[14] === tmp6) {
+                  if (cResult[15] === tmp7) {
+                    if (cResult[16] === tmp11) {
+                      let tmp15 = cResult[17];
+                    }
+                    return tmp15;
+                  }
+                }
+                const obj4 = { style: tmp6, children: null };
+                const items = [cResult[8], tmp11];
+                obj4.children = items;
+                const tmp18 = closure_6(View, obj4);
+                cResult[14] = tmp6;
+                cResult[15] = cResult[8];
+                cResult[16] = tmp11;
+                cResult[17] = tmp18;
+                tmp15 = tmp18;
               }
-              const obj4 = { style: tmp6, children: items };
-              items = [tmp7, tmp10];
-              const tmp17 = closure_6(View, obj4);
-              cResult[14] = tmp6;
-              cResult[15] = tmp7;
-              cResult[16] = tmp10;
-              cResult[17] = tmp17;
-              tmp14 = tmp17;
             }
           }
           if (cResult[9] === channel) {
-            let tmp8;
             if (cResult[10] === theme) {
-              tmp8 = cResult[11];
+              let tmp8 = cResult[11];
             }
             const mapped = participants.map(tmp8);
             cResult[5] = channel;
             cResult[6] = participants;
             cResult[7] = theme;
             cResult[8] = mapped;
-            tmp7 = mapped;
           }
           const fn = function h(participant) {
-            const obj = { theme, channel, participant };
-            return hasOwnProperty(AudienceTileDefault, obj, participant.id);
+            return hasOwnProperty(AudienceTileDefault, { theme, channel, participant }, participant.id);
           };
           cResult[9] = channel;
           cResult[10] = theme;
@@ -157,34 +135,29 @@ const memoResult = memo(
         cResult[3] = tmp5;
         cResult[4] = items1;
         tmp6 = items1;
+        const obj = channel(576);
       }
     : (theme) => {
-        let channel;
-        let items1;
-        let participants;
-        let renderBlankAudience;
         ({ channel: require, participants, renderBlankAudience } = theme);
         if (renderBlankAudience === undefined) {
           renderBlankAudience = true;
         }
         theme = theme.theme;
         let num = 0;
-        const tmp = closure_7();
         if (renderBlankAudience) {
           num = MAX_AUDIENCE_ROW_LIMIT - participants.length;
         }
-        const items = [tmp.rowContainer];
+        const items = [closure_7().rowContainer];
         let str = "center";
         if (renderBlankAudience) {
           str = "space-between";
         }
-        let obj = { style: items, children: items1 };
+        const obj = { style: items, children: null };
         items[1] = { justifyContent: str };
-        items1 = [
-          participants.map((participant) => {
-            const obj = { theme, channel: require, participant };
-            return hasOwnProperty(AudienceTileDefault, obj, participant.id);
-          }),
+        const items1 = [
+          participants.map((participant) =>
+            hasOwnProperty(AudienceTileDefault, { theme, channel, participant }, participant.id),
+          ),
         ];
         let tmp5 = null;
         if (num > 0) {
@@ -192,10 +165,8 @@ const memoResult = memo(
           tmp5 = closure_5(closure_8, obj2);
         }
         items1[1] = tmp5;
+        obj.children = items1;
         return closure_6(View, obj);
       },
 );
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
-
-export default memoResult;
-export const BlankAudience = tmp4;
+export const BlankAudience = tmp3;

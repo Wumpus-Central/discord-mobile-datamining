@@ -1,19 +1,15 @@
 // discord_app/modules/voice_calls/native/CallStateHooks.tsx
-import CallConstants from "../../calls/CallConstants.tsx";
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import CallStore from "../../../stores/CallStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
-import Constants from "../../../Constants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, channelId, dependencyMap;
 
-let metroImportAll;
-let metroImportDefault;
-({ EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault, RTCConnectionStates: metroImportAll } = Constants);
-const ParticipantTypes = CallConstants.ParticipantTypes;
+const require = fn;
+const Constants = fn(1085);
+({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, RTCConnectionStates: closure_8 } = Constants);
+const ParticipantTypes = fn(4917).ParticipantTypes;
 let obj = {};
 const merged = Object.assign({ initialized: false, callId: "a" });
 let obj2 = {
@@ -23,10 +19,10 @@ let obj2 = {
   RINGING: "ringing",
   CONNECTED: "connected",
 };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
 export default function _default() {
-  let closure_0;
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = closure_7;
@@ -42,37 +38,44 @@ export default function _default() {
   }
   let stateFromStores;
   const id = AuthenticationStore.getId();
-  obj = require("get initialized");
+  obj = require("initialize");
   const items = [CallStore];
   const items1 = [tmp, id];
   const stateFromStoresArray = obj.useStateFromStoresArray(
     items,
     () => {
-      let found;
       const call = CallStore.getCall(closure_0);
       if (null != call) {
         const ringing = call.ringing;
-        found = ringing.filter((item) => item !== id);
+        let found = ringing.filter((item) => item !== id);
       } else {
         found = [];
       }
-      const initialized = obj.initialized || found.length > 0;
+      let initialized = obj.initialized;
+      if (!initialized) {
+        initialized = found.length > 0;
+      }
       obj.initialized = initialized;
       return found;
     },
     items1,
   );
   const participants = stateFromStores.getParticipants(tmp);
-  let found = participants.filter((type) => type.type !== ParticipantTypes.ACTIVITY && type.user.id !== id);
+  let found = participants.filter((type) => {
+    let tmp = type.type !== ParticipantTypes.ACTIVITY;
+    if (tmp) {
+      tmp = type.user.id !== id;
+    }
+    return tmp;
+  });
   const tmp3 = id(9458)();
   dependencyMap = tmp3;
-  obj2 = require("get initialized");
+  obj2 = require("initialize");
   const items2 = [RTCConnectionStore];
   stateFromStores = obj2.useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);
   const items3 = [RTCConnectionStore];
   const items4 = [stateFromStores, tmp3, tmp];
-  const obj3 = require("get initialized");
-  const stateFromStores1 = obj3.useStateFromStores(
+  const stateFromStores1 = require("initialize").useStateFromStores(
     items3,
     () => {
       channelId = undefined;
@@ -81,18 +84,20 @@ export default function _default() {
       }
       if (channelId === closure_0) {
         obj.initialized = true;
-        return metroImportAll.RTC_CONNECTED;
+        return constants.RTC_CONNECTED;
       } else {
-        const tmp2 = null != stateFromStores && obj.callId === stateFromStores;
         if (!tmp2) {
           obj.initialized = false;
         }
         obj.callId = stateFromStores;
-        const state = RTCConnectionStore.getState();
+        state = RTCConnectionStore.getState();
         let initialized = obj.initialized;
         if (!initialized) {
-          initialized = state !== metroImportAll.DISCONNECTED && state !== metroImportAll.RTC_DISCONNECTED;
-          const tmp10 = state !== metroImportAll.DISCONNECTED && state !== metroImportAll.RTC_DISCONNECTED;
+          let tmp10 = state !== constants.DISCONNECTED;
+          if (tmp10) {
+            tmp10 = state !== constants.RTC_DISCONNECTED;
+          }
+          initialized = tmp10;
         }
         obj.initialized = initialized;
         return state;
@@ -101,7 +106,7 @@ export default function _default() {
     items4,
   );
   obj.initialized = obj.initialized || flag2;
-  let state = obj2.CONNECTING;
+  state = obj2.CONNECTING;
   let initialized = tmp6.initialized;
   if (flag) {
     state = tmp7.DISCONNECTING;

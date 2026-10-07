@@ -6,17 +6,14 @@ const result = size.fileFinishedImporting("modules/media_channel/MediaPostThumbn
 
 export const MAX_THUMBNAIL_COUNT = 4;
 export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
-  let image;
-  let thumbnail;
   if (null != arg0) {
-    let tmp;
     ({ thumbnail, image } = arg0);
     if (null != thumbnail) {
       let url2 = thumbnail.proxy_url;
       if (url2 == null) {
         url2 = thumbnail.url;
       }
-      tmp = url2;
+      let tmp = url2;
     } else if (null != image) {
       let url = image.proxy_url;
       if (url == null) {
@@ -28,11 +25,9 @@ export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
   }
 };
 export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) {
-  let combined;
-  const obj = MediaFormatTesters;
   if (obj.isAnimatedImageUrl(coverImage)) {
     const _HermesInternal = HermesInternal;
-    combined = "" + coverImage + "?format=webp";
+    let combined = "" + coverImage + "?format=webp";
   } else {
     MediaFormatTesters;
     combined = coverImage;
@@ -40,8 +35,6 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
   return combined;
 };
 export const getThumbnailImage = function getThumbnailImage(thumbnail) {
-  let proxy_url;
-  let url;
   if (null != thumbnail) {
     ({ url, proxy_url } = thumbnail);
     let tmp = url;
@@ -49,12 +42,12 @@ export const getThumbnailImage = function getThumbnailImage(thumbnail) {
       tmp = url;
       if (null != proxy_url) {
         let combined = proxy_url;
-        const obj = MediaFormatTesters;
         if (obj.isVideoUrl(url)) {
           const _HermesInternal = HermesInternal;
           combined = "" + proxy_url + "?format=webp";
         }
         tmp = combined;
+        obj = MediaFormatTesters;
       }
     }
     return tmp;

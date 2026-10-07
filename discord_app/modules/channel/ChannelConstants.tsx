@@ -48,7 +48,6 @@ const frozen = Object.freeze({
   IS_GAME_INVITES_CHANNEL: 4194304,
   HAS_ONLY_SYSTEM_MESSAGES: 8388608,
 });
-const set1 = new Set(Object.values(obj2));
 const result = size.fileFinishedImporting("modules/channel/ChannelConstants.tsx");
 
 export { StaticChannelRoute };
@@ -70,4 +69,4 @@ export const ChannelFlags = frozen;
 export const MAX_CHANNEL_TOPIC_LENGTH = 1024;
 export const MAX_FORUM_CHANNEL_TOPIC_LENGTH = 4096;
 export const StaticChannelId = obj2;
-export const StaticChannelIds = set1;
+export const StaticChannelIds = new Set(Object.values(obj2));

@@ -1,19 +1,25 @@
 // discord_app/modules/reactions/canAddNewReactions.tsx
-import Constants from "../../Constants.tsx";
 import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const Permissions = Constants.Permissions;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 
 export default (getGuildId) => {
   const guildId = getGuildId.getGuildId();
-  const canChatInGuildResult =
-    ((null != guildId &&
-      GuildVerificationStore.canChatInGuild(guildId) &&
-      PermissionStore.can(Permissions.ADD_REACTIONS, getGuildId)) ||
-      getGuildId.isPrivate()) &&
-    !getGuildId.isSystemDM();
+  let canChatInGuildResult = null != guildId;
+  if (canChatInGuildResult) {
+    canChatInGuildResult = GuildVerificationStore.canChatInGuild(guildId);
+  }
+  if (canChatInGuildResult) {
+    canChatInGuildResult = PermissionStore.can(Permissions.ADD_REACTIONS, getGuildId);
+  }
+  if (!canChatInGuildResult) {
+    canChatInGuildResult = getGuildId.isPrivate();
+  }
+  if (canChatInGuildResult) {
+    canChatInGuildResult = !getGuildId.isSystemDM();
+  }
   return canChatInGuildResult;
 };

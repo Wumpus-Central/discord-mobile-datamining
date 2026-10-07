@@ -1,5 +1,5 @@
 // discord_app/stores/UploadAttachmentStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import DraftStore from "DraftStore.tsx";
@@ -10,181 +10,152 @@ import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-let closure_4;
-let hasOwnProperty;
 const DraftType = DraftStore.DraftType;
 ({ AnalyticEvents: closure_4, MAX_UPLOAD_COUNT: hasOwnProperty } = Constants);
 let map = new Map();
 let closure_7 = [];
-const Store = get_initializedDefault.Store;
-class UploadAttachmentStore extends Store {
-  getFirstUpload(arg0, arg1) {
-    map = map.get(arg0);
-    if (map == null) {
-      const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
-    }
-    let value2;
-    if (map != null) {
-      value2 = map.get(arg1);
-    }
-    if (value2 == null) {
-      value2 = closure_7;
-    }
-    let first = null;
-    if (value2.length > 0) {
-      first = value2[0];
-    }
-    return first;
-  }
-  hasAdditionalUploads(arg0, arg1) {
-    map = map.get(arg0);
-    if (map == null) {
-      const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
-    }
-    let value2;
-    if (map != null) {
-      value2 = map.get(arg1);
-    }
-    if (value2 == null) {
-      value2 = closure_7;
-    }
-    let num = value2.length;
-    if (num == null) {
-      num = 0;
-    }
-    return num > 1;
-  }
-  getUploads(id, ChannelMessage) {
-    map = map.get(id);
-    if (map == null) {
-      const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
-    }
-    let value2;
-    if (map != null) {
-      value2 = map.get(ChannelMessage);
-    }
-    if (value2 == null) {
-      value2 = closure_7;
-    }
-    return value2;
-  }
-  getUploadCount(channelId, draftType) {
-    map = map.get(channelId);
-    if (map == null) {
-      const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
-    }
-    let value2;
-    if (map != null) {
-      value2 = map.get(draftType);
-    }
-    if (value2 == null) {
-      value2 = closure_7;
-    }
-    let num = value2.length;
-    if (num == null) {
-      num = 0;
-    }
-    return num;
-  }
-  getUpload(channelId, id, ChannelMessage) {
-    let closure_0 = id;
-    map = map.get(channelId);
-    if (map == null) {
-      const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
-    }
-    let value2;
-    if (map != null) {
-      value2 = map.get(ChannelMessage);
-    }
-    if (value2 == null) {
-      value2 = closure_7;
-    }
-    return value2.find((id) => id.id === closure_0);
-  }
-  findUpload(channelId, ChannelMessage, cResult) {
-    map = map.get(channelId);
-    if (map == null) {
-      const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
-    }
-    let value2;
-    if (map != null) {
-      value2 = map.get(ChannelMessage);
-    }
-    if (value2 == null) {
-      value2 = closure_7;
-    }
-    return value2.find(cResult);
-  }
-}
+const Store = initializeDefault.Store;
+class UploadAttachmentStore extends Store {}
 const prototype = UploadAttachmentStore.prototype;
+prototype["getFirstUpload"] = function getFirstUpload(arg0, arg1) {
+  map = map.get(arg0);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  value2 = undefined;
+  if (map != null) {
+    value2 = map.get(arg1);
+  }
+  if (value2 == null) {
+    value2 = closure_7;
+  }
+  let first = null;
+  if (value2.length > 0) {
+    first = value2[0];
+  }
+  return first;
+};
+prototype["hasAdditionalUploads"] = function hasAdditionalUploads(arg0, arg1) {
+  map = map.get(arg0);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  value2 = undefined;
+  if (map != null) {
+    value2 = map.get(arg1);
+  }
+  if (value2 == null) {
+    value2 = closure_7;
+  }
+  let num = value2.length;
+  if (num == null) {
+    num = 0;
+  }
+  return num > 1;
+};
+prototype["getUploads"] = function getUploads(id, ChannelMessage) {
+  map = map.get(id);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  value2 = undefined;
+  if (map != null) {
+    value2 = map.get(ChannelMessage);
+  }
+  if (value2 == null) {
+    value2 = closure_7;
+  }
+  return value2;
+};
+prototype["getUploadCount"] = function getUploadCount(channelId, draftType) {
+  map = map.get(channelId);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  value2 = undefined;
+  if (map != null) {
+    value2 = map.get(draftType);
+  }
+  if (value2 == null) {
+    value2 = closure_7;
+  }
+  let num = value2.length;
+  if (num == null) {
+    num = 0;
+  }
+  return num;
+};
+prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
+  closure_0 = id;
+  map = map.get(channelId);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  value2 = undefined;
+  if (map != null) {
+    value2 = map.get(ChannelMessage);
+  }
+  if (value2 == null) {
+    value2 = closure_7;
+  }
+  return value2.find((id) => id.id === closure_0);
+};
+prototype["findUpload"] = function findUpload(channelId, ChannelMessage, cResult) {
+  map = map.get(channelId);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  value2 = undefined;
+  if (map != null) {
+    value2 = map.get(ChannelMessage);
+  }
+  if (value2 == null) {
+    value2 = closure_7;
+  }
+  return value2.find(cResult);
+};
 UploadAttachmentStore.displayName = "UploadAttachmentStore";
-let obj = {
+const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
   UPLOAD_ATTACHMENT_POP_FILE: function handlePopFile(channelId) {
     channelId = channelId.channelId;
-    const ChannelMessage = DraftType.ChannelMessage;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self2 = this;
-      const self = this;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
-      value3 = map.get(ChannelMessage);
+      value3 = map.get(DraftType.ChannelMessage);
     }
     if (value3 == null) {
       value3 = closure_7;
     }
     const items = [...value3];
     items.shift();
-    const ChannelMessage2 = DraftType.ChannelMessage;
     let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
-      const self3 = this;
-      const self4 = this;
       value4 = new Map();
     }
-    const result = value4.set(ChannelMessage2, items);
+    const result = value4.set(DraftType.ChannelMessage, items);
     const result1 = obj.set(channelId, value4);
   },
   UPLOAD_ATTACHMENT_ADD_FILES: function handleAddFiles(arg0) {
-    let channelId;
-    let draftType;
-    let files;
-    let intl;
-    let intl2;
-    let obj3;
     ({ files, channelId } = arg0);
     ({ draftType, allowOptimization: importDefault } = arg0);
     let items;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self2 = this;
-      const self = this;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -195,40 +166,31 @@ let obj = {
     if (items.length + files.length > closure_5) {
       if (draftType !== DraftType.SlashCommand) {
         if (draftType !== DraftType.ApplicationLauncherCommand) {
-          const obj2 = {
-            title: intl.string(channelId(items[3]).t.wOr6hB),
-            body: intl2.formatToPlainString(channelId(items[3]).t["qqyp/e"], obj3),
-          };
-          const show = require("AlertActionCreators").show;
-          require("AlertActionCreators");
-          intl = channelId(items[3]).intl;
-          intl2 = channelId(items[3]).intl;
-          obj3 = { limit: tmp3 };
-          show(obj2);
+          const obj2 = { title: null, body: null };
+          const intl = channelId(items[3]).intl;
+          obj2.title = intl.string(channelId(items[3]).t.wOr6hB);
+          const intl2 = channelId(items[3]).intl;
+          const obj3 = { limit: tmp5 };
+          obj2.body = intl2.formatToPlainString(channelId(items[3]).t["qqyp/e"], obj3);
+          require("AlertActionCreators").show(obj2);
+          const obj4 = require("AlertActionCreators");
         }
       }
     }
-    const arr2 = require("../../_runtime/metro/00012__.js");
-    const item = arr2.forEach(files, (file) => {
+    const item = require("../../_runtime/metro/00012__.js").forEach(files, (file) => {
       const cloudUpload = new CloudUpload.CloudUpload(file, channelId, items.length, importDefault);
       items.push(cloudUpload);
     });
     let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
-      const self3 = this;
-      const self4 = this;
       value4 = new Map();
     }
     const result = value4.set(draftType, items);
     const result1 = obj.set(channelId, value4);
+    const arr2 = require("../../_runtime/metro/00012__.js");
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
-    let channelId;
-    let closure_4;
-    let draftType;
-    let filename;
-    let isThumbnail;
     ({
       channelId,
       id: require,
@@ -238,15 +200,12 @@ let obj = {
       thumbnail: closure_4,
       draftType,
     } = arg0);
-    let obj = map;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -254,7 +213,6 @@ let obj = {
       value3 = closure_7;
     }
     const mapped = value3.map((id) => {
-      let tmp4;
       if (id.id === require) {
         let tmp3;
         if (null != DraftType) {
@@ -262,26 +220,25 @@ let obj = {
             tmp3 = DraftType;
           }
         }
-        const obj = { spoilered: tmp3, has_alt_text: tmp4 };
-        tmp4 = undefined;
-        if (null != dependencyMap) {
-          if (dependencyMap !== id.description) {
-            tmp4 = dependencyMap.trim().length > 0;
+        const obj = { spoilered: tmp3, has_alt_text: null };
+        let tmp4;
+        if (null != description) {
+          if (description !== id.description) {
+            tmp4 = description.trim().length > 0;
           }
         }
-        const tmp5 = null == obj.spoilered && null == obj.has_alt_text;
+        obj.has_alt_text = tmp4;
         if (!tmp5) {
-          const obj2 = AnalyticsUtilsDefault;
-          obj2.track(isThumbnail.MEDIA_DRAFT_EDITED, obj);
+          AnalyticsUtilsDefault.track(constants.MEDIA_DRAFT_EDITED, obj);
         }
-        if (null != importDefault) {
-          id.filename = importDefault;
+        if (null != filename) {
+          id.filename = filename;
         }
         if (null != DraftType) {
           id.spoiler = DraftType;
         }
-        if (null != dependencyMap) {
-          id.description = dependencyMap;
+        if (null != description) {
+          id.description = description;
         }
         if (null != isThumbnail) {
           id.isThumbnail = isThumbnail;
@@ -293,28 +250,20 @@ let obj = {
     });
     let value4 = obj.get(channelId);
     if (value4 == null) {
-      let tmp4 = globalThis;
       const _Map2 = Map;
-      const self3 = this;
-      const self4 = this;
       value4 = new Map();
     }
     const result = value4.set(draftType, mapped);
     const result1 = obj.set(channelId, value4);
   },
   UPLOAD_ATTACHMENT_REMOVE_FILE: function handleRemoveFile(id) {
-    let channelId;
-    let draftType;
     ({ channelId, id: require, draftType } = id);
-    let obj = map;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self2 = this;
-      const self = this;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -322,19 +271,15 @@ let obj = {
       value3 = closure_7;
     }
     const items = [...value3];
-    const findIndexResult = items.findIndex((item) => {
-      const obj = uploader_UploadUtils;
-      const obj2 = { uri: filename, filename };
-      return obj.doesImageMatchUpload(obj2, item);
-    });
+    const findIndexResult = items.findIndex((item) =>
+      uploader_UploadUtils.doesImageMatchUpload({ uri: filename, filename }, item),
+    );
     if (findIndexResult > -1) {
       const first = items.splice(findIndexResult, 1)[0];
       first.removeFromMsgDraft();
       let value4 = obj.get(channelId);
       if (value4 == null) {
         const _Map2 = Map;
-        const self3 = this;
-        const self4 = this;
         value4 = new Map();
       }
       const result = value4.set(draftType, items);
@@ -342,19 +287,14 @@ let obj = {
     }
   },
   UPLOAD_ATTACHMENT_REMOVE_FILES: function handleRemoveFiles(arg0) {
-    let attachmentIds;
-    let channelId;
-    let draftType;
     ({ channelId, attachmentIds, draftType } = arg0);
     let items;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self2 = this;
-      const self = this;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -363,7 +303,7 @@ let obj = {
     }
     items = [...value3];
     const item = attachmentIds.forEach((item) => {
-      let closure_0 = item;
+      closure_0 = item;
       const findIndexResult = items.findIndex((id) => closure_0 === id.id);
       if (findIndexResult > -1) {
         const first = items.splice(findIndexResult, 1)[0];
@@ -373,8 +313,6 @@ let obj = {
     let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
-      const self3 = this;
-      const self4 = this;
       value4 = new Map();
     }
     const result = value4.set(draftType, items);
@@ -382,49 +320,33 @@ let obj = {
   },
   UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function handleClearAllFiles(channelId) {
     channelId = channelId.channelId;
-    const draftType = channelId.draftType;
-    const obj = map;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map();
     }
-    const result = map.set(draftType, []);
-    const result1 = obj.set(channelId, map);
+    const result = map.set(channelId.draftType, []);
+    const result1 = map.set(channelId, map);
   },
   UPLOAD_ATTACHMENT_SET_UPLOADS: function handleSetUploads(channelId) {
-    let draftType;
-    let uploads;
     channelId = channelId.channelId;
     ({ uploads, draftType } = channelId);
-    const obj = map;
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map();
     }
     const result = map.set(draftType, uploads);
-    const result1 = obj.set(channelId, map);
+    const result1 = map.set(channelId, map);
   },
   UPLOAD_ATTACHMENT_SET_FILE: function handleSetFile(arg0) {
-    let allowOptimization;
-    let channelId;
-    let closure_129_0;
-    let draftType;
-    let file;
-    ({ channelId, id: closure_129_0, file, draftType, allowOptimization } = arg0);
+    ({ channelId, id: require, file, draftType, allowOptimization } = arg0);
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
-      const self2 = this;
-      const self = this;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -432,21 +354,18 @@ let obj = {
       value3 = closure_7;
     }
     const items = [...value3];
-    const found = items.filter((id) => id.id !== closure_1_0);
+    const found = items.filter((id) => id.id !== require);
     const cloudUpload = new CloudUpload.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);
     let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
-      const self3 = this;
-      const self4 = this;
       value4 = new Map();
     }
     const result = value4.set(draftType, found);
     const result1 = obj.set(channelId, value4);
   },
-};
-const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, obj);
+});
 let result = size.fileFinishedImporting("stores/UploadAttachmentStore.tsx");
 
 export default uploadAttachmentStore;

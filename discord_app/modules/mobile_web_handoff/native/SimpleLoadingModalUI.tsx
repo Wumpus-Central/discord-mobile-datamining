@@ -1,36 +1,22 @@
 // discord_app/modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react_mod from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let catchPromise, dependencyMap, operation;
-
-let c3;
-let closure_4;
-let react = react_mod;
-({ Modal: c3, View: closure_4 } = react_native);
-let jsx = Fragment.jsx;
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Modal: c3, View: closure_4 } = get_ActivityIndicator);
+let jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({
   modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" },
 });
 let constants = { OPENING: 0, [0]: "OPENING", SHOWN: 1, [1]: "SHOWN", DISMISSED: 2, [2]: "DISMISSED" };
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (operation) => {
-      let cancelable;
-      let closure_1;
-      let closure_2;
-      let onDismissed;
-      let onRejected;
-      let onResolved;
-      let ref;
-      let tmp2;
-      let tmp3;
-      let tmp4;
-      const obj = operation(576);
-      const cResult = obj.c(31);
+      const cResult = operation(576).c(31);
       operation = operation.operation;
       ({ onResolved, onRejected, cancelable, onDismissed } = operation);
       if (cResult[0] !== onResolved) {
@@ -40,7 +26,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = onResolved;
         cResult[1] = fn;
-        tmp2 = fn;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
@@ -52,12 +38,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[2] = onRejected;
         cResult[3] = fn2;
-        tmp3 = fn2;
+        let tmp3 = fn2;
       } else {
         tmp3 = cResult[3];
       }
-      react = tmp3;
-      let closure_3 = undefined !== cancelable && cancelable;
+      noop = tmp3;
+      closure_3 = undefined !== cancelable && cancelable;
       if (cResult[4] !== onDismissed) {
         let fn3 = onDismissed;
         if (undefined === onDismissed) {
@@ -65,20 +51,24 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[4] = onDismissed;
         cResult[5] = fn3;
-        tmp4 = fn3;
+        let tmp4 = fn3;
       } else {
         tmp4 = cResult[5];
       }
-      let closure_4 = tmp4;
+      closure_4 = tmp4;
       M();
-      jsx = react.useRef(constants.OPENING);
+      jsx = noop.useRef(constants.OPENING);
       if (cResult[6] !== tmp4) {
         class M {
           constructor() {
-            if (ref.current === constants.SHOWN) {
-              closure_4();
+            tmp = closure_5;
+            tmp2 = closure_7;
+            if (closure_5.current === closure_7.SHOWN) {
+              tmp3 = closure_4;
+              tmp4 = closure_4();
             }
-            ref.current = constants.DISMISSED;
+            tmp.current = tmp2.DISMISSED;
+            return;
           }
         }
         cResult[6] = tmp4;
@@ -86,10 +76,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class M {
           constructor() {
-            if (ref.current === constants.SHOWN) {
-              closure_4();
+            tmp = closure_5;
+            tmp2 = closure_7;
+            if (closure_5.current === closure_7.SHOWN) {
+              tmp3 = closure_4;
+              tmp4 = closure_4();
             }
-            ref.current = constants.DISMISSED;
+            tmp.current = tmp2.DISMISSED;
+            return;
           }
         }
       }
@@ -97,37 +91,49 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[8] === tmp6) {
         class M {
           constructor() {
-            if (ref.current === constants.SHOWN) {
-              closure_4();
+            tmp = closure_5;
+            tmp2 = closure_7;
+            if (closure_5.current === closure_7.SHOWN) {
+              tmp3 = closure_4;
+              tmp4 = closure_4();
             }
-            ref.current = constants.DISMISSED;
+            tmp.current = tmp2.DISMISSED;
+            return;
           }
         }
         constants = C;
         if (cResult[11] === tmp6) {
           class M {
             constructor() {
-              if (ref.current === constants.SHOWN) {
-                closure_4();
+              tmp = closure_5;
+              tmp2 = closure_7;
+              if (closure_5.current === closure_7.SHOWN) {
+                tmp3 = closure_4;
+                tmp4 = closure_4();
               }
-              ref.current = constants.DISMISSED;
+              tmp.current = tmp2.DISMISSED;
+              return;
             }
           }
-          let closure_8 = W;
+          closure_8 = W;
           if (cResult[14] === operation) {
             class M {
               constructor() {
-                if (ref.current === constants.SHOWN) {
-                  closure_4();
+                tmp = closure_5;
+                tmp2 = closure_7;
+                if (closure_5.current === closure_7.SHOWN) {
+                  tmp3 = closure_4;
+                  tmp4 = closure_4();
                 }
-                ref.current = constants.DISMISSED;
+                tmp.current = tmp2.DISMISSED;
+                return;
               }
             }
           }
           class B {
             constructor() {
               promise = operation();
-              nextPromise = promise.then((result) => constants(result));
+              nextPromise = promise.then((result) => closure_1_7(result));
               catchPromise = nextPromise.catch((error) => closure_1_8(error));
               return;
             }
@@ -141,8 +147,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         class W {
           constructor(arg0) {
-            closure_2(arg0);
-            M();
+            tmp = closure_2(operation);
+            tmp2 = closure_6();
+            return;
           }
         }
         cResult[11] = tmp6;
@@ -151,75 +158,107 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class C {
         constructor(arg0) {
-          closure_1(arg0);
-          M();
+          tmp = closure_1(operation);
+          tmp2 = closure_6();
+          return;
         }
       }
       cResult[8] = tmp6;
       cResult[9] = tmp2;
       cResult[10] = C;
+      const obj = operation(576);
     }
   : (operation) => {
-      let ref;
       operation = operation.operation;
       const S = operation.onResolved;
       if (S === undefined) {
         class S {
-          constructor() {}
+          constructor() {
+            return;
+          }
         }
       }
+      const onResolved = S;
       const I = operation.onRejected;
       if (I === undefined) {
         class I {
-          constructor() {}
+          constructor() {
+            return;
+          }
         }
       }
+      const onRejected = I;
       const cancelable = operation.cancelable;
       if (cancelable === undefined) {
         class I {
-          constructor() {}
+          constructor() {
+            return;
+          }
         }
       }
       const onDismissed = operation.onDismissed;
       if (onDismissed === undefined) {
         class I {
-          constructor() {}
+          constructor() {
+            return;
+          }
         }
       }
-      let callback;
       let callback1;
-      const tmp = callback();
-      jsx = I.useRef(callback1.OPENING);
+      jsx = onRejected.useRef(callback1.OPENING);
       const items = [onDismissed];
-      callback = I.useCallback(() => {
-        if (ref.current === callback1.SHOWN) {
+      const callback = onRejected.useCallback(() => {
+        if (ref.current === constants.SHOWN) {
           onDismissed();
         }
-        ref.current = callback1.DISMISSED;
+        ref.current = constants.DISMISSED;
       }, items);
       const items1 = [callback, S];
-      callback1 = I.useCallback((arg0) => {
-        S(arg0);
+      callback1 = onRejected.useCallback((arg0) => {
+        onResolved(arg0);
         callback();
       }, items1);
       const items2 = [callback, I];
-      const callback2 = I.useCallback((arg0) => {
-        I(arg0);
+      const callback2 = onRejected.useCallback((_55) => {
+        onRejected(_55);
         callback();
       }, items2);
       const items3 = [operation, callback1, callback2];
-      const effect = I.useEffect(() => {
+      const effect = onRejected.useEffect(() => {
         const promise = operation();
-        const nextPromise = promise.then((result) => callback1(result));
-        nextPromise.catch((error) => callback2(error));
+        operation()
+          .then((result) => constants(result))
+          .catch((error) => callback2(error));
       }, items3);
-      ({ style: tmp.modalBackground, children: jsx(operation(S[6]).ActivityIndicator, {}) });
+      const obj = {
+        transparent: true,
+        animationType: "none",
+        onShow() {
+          if (ref.current === constants.DISMISSED) {
+            onDismissed();
+          } else {
+            tmp.current = tmp2.SHOWN;
+          }
+        },
+        onRequestClose() {
+          if (cancelable) {
+            callback();
+          }
+        },
+        children: null,
+      };
+      const tmp = callback();
+      obj.children = (
+        <onDismissed style={callback().modalBackground}>
+          {jsx(operation(onResolved[6]).ActivityIndicator, {})}
+        </onDismissed>
+      );
       return (
         <cancelable
           transparent
           animationType="none"
           onShow={function onShow() {
-            if (ref.current === callback1.DISMISSED) {
+            if (ref.current === constants.DISMISSED) {
               onDismissed();
             } else {
               tmp.current = tmp2.SHOWN;
@@ -235,6 +274,3 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         </cancelable>
       );
     };
-const result = size.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
-
-export default tmp3;

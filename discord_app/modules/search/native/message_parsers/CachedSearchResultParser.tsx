@@ -3,12 +3,12 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
 
-export function CachedSearchResultParser() {
+export const CachedSearchResultParser = function CachedSearchResultParser() {
   const obj = Object.create(new.target.prototype);
   obj.resultsCache = new Map();
   obj.parse = function parse(id) {
     const resultsCache = obj.resultsCache;
-    const value = resultsCache.get(id.id);
+    value = resultsCache.get(id.id);
     if (null != value) {
       return value;
     } else {
@@ -18,6 +18,5 @@ export function CachedSearchResultParser() {
       return searchResults;
     }
   };
-  new Map();
   return obj;
-}
+}.prototype;

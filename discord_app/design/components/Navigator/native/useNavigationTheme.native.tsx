@@ -1,37 +1,32 @@
 // discord_app/design/components/Navigator/native/useNavigationTheme.native.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Link from "../../../../../_runtime/01491_Link.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import shared from "../../../shared.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (theme) => {
-      let tmp9;
-      const obj = react2;
-      const cResult = obj.c(11);
-      const obj2 = useToken;
-      const token = obj2.useToken(nativeDefault.colors.TEXT_STRONG, theme);
-      const obj3 = useToken;
-      const token1 = obj3.useToken(nativeDefault.colors.BORDER_SUBTLE, theme);
-      const obj4 = useToken;
-      const token2 = obj4.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, theme);
-      const obj5 = useToken;
-      const token3 = obj5.useToken(nativeDefault.colors.TEXT_MUTED, theme);
-      const obj6 = useToken;
-      const token4 = obj6.useToken(nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, theme);
-      if (cResult[0] !== theme) {
-        const tmpResult = shared;
-        const isThemeDarkResult = tmpResult.isThemeDark(theme);
-        cResult[0] = theme;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigationTheme.native.tsx");
+
+export const useNavigationTheme = ReactCompilerGating.isReactCompilerEnabled()
+  ? (DARK) => {
+      const cResult = c.c(11);
+      const token = useToken.useToken(nativeDefault.colors.TEXT_STRONG, DARK);
+      const token1 = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE, DARK);
+      const token2 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, DARK);
+      const token3 = useToken.useToken(nativeDefault.colors.TEXT_MUTED, DARK);
+      const token4 = useToken.useToken(nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, DARK);
+      if (cResult[0] !== DARK) {
+        const isThemeDarkResult = shared.isThemeDark(DARK);
+        cResult[0] = DARK;
         cResult[1] = isThemeDarkResult;
-        tmp9 = isThemeDarkResult;
+        let tmp9 = isThemeDarkResult;
+        const tmpResult = shared;
       } else {
         tmp9 = cResult[1];
       }
@@ -39,14 +34,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === token2) {
           if (cResult[4] === token4) {
             if (cResult[5] === token) {
-              let tmp11;
               if (cResult[6] === token3) {
-                tmp11 = cResult[7];
+                let tmp11 = cResult[7];
               }
               if (cResult[8] === tmp9) {
-                let tmp12;
                 if (cResult[9] === tmp11) {
-                  tmp12 = cResult[10];
+                  let tmp12 = cResult[10];
                 }
                 return tmp12;
               }
@@ -75,28 +68,31 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = obj8;
       tmp11 = obj8;
     }
-  : (theme) => {
-      let token;
-      let token1;
-      _require = theme;
+  : (DARK) => {
+      _require = DARK;
+      token = require("useToken").useToken(token(token1[4]).colors.TEXT_STRONG, DARK);
       let obj = require("useToken");
-      token = obj.useToken(token(token1[4]).colors.TEXT_STRONG, theme);
-      let obj2 = require("useToken");
-      token1 = obj2.useToken(token(token1[4]).colors.BORDER_SUBTLE, theme);
+      token1 = require("useToken").useToken(token(token1[4]).colors.BORDER_SUBTLE, DARK);
+      const obj2 = require("useToken");
+      const token2 = require("useToken").useToken(token(token1[4]).colors.MOBILE_ACTIONSHEET_BACKGROUND, DARK);
       const obj3 = require("useToken");
-      const token2 = obj3.useToken(token(token1[4]).colors.MOBILE_ACTIONSHEET_BACKGROUND, theme);
+      const token3 = require("useToken").useToken(token(token1[4]).colors.TEXT_MUTED, DARK);
       const obj4 = require("useToken");
-      const token3 = obj4.useToken(token(token1[4]).colors.TEXT_MUTED, theme);
-      const obj5 = require("useToken");
-      const token4 = obj5.useToken(token(token1[4]).colors.BACKGROUND_FEEDBACK_NOTIFICATION, theme);
-      const items = [token1, token2, token4, token, token3, theme];
+      const token4 = require("useToken").useToken(token(token1[4]).colors.BACKGROUND_FEEDBACK_NOTIFICATION, DARK);
+      const items = [token1, token2, token4, token, token3, DARK];
       return token2.useMemo(() => {
-        let obj2;
-        const obj = { dark: obj2.isThemeDark(theme), colors: obj3, fonts: Link.DefaultTheme.fonts };
-        obj2 = shared;
+        const obj = {
+          dark: shared.isThemeDark(closure_0),
+          colors: {
+            primary: token,
+            background: "transparent",
+            border: token1,
+            card: token2,
+            text: token3,
+            notification: token4,
+          },
+          fonts: Link.DefaultTheme.fonts,
+        };
         return obj;
       }, items);
     };
-const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigationTheme.native.tsx");
-
-export const useNavigationTheme = tmp2;

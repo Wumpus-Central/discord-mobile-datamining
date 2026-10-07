@@ -1,36 +1,36 @@
 // discord_app/modules/share/native/ShareFooterLayout.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
-let _require;
 
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let View = react_native.View;
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  footer: obj2,
-  footerSeparator: obj3,
-  warningWrapper: { display: "flex", flexDirection: "column", gap: 8 },
-  chatRow: obj4,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  footer: {
+    display: "flex",
+    flexDirection: "column",
+    flexShrink: 0,
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingVertical: nativeDefault.space.PX_12,
+    gap: nativeDefault.space.PX_12,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
+    borderTopWidth: 1,
+    borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+  },
+  footerSeparator: null,
+  warningWrapper: null,
+  chatRow: null,
 };
-obj2 = {
+let obj3 = {
   display: "flex",
   flexDirection: "column",
   flexShrink: 0,
@@ -41,52 +41,47 @@ obj2 = {
   borderTopWidth: 1,
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-createStyles = createStyles.createStyles;
-obj3 = {
+obj2.footerSeparator = {
   marginHorizontal: -nativeDefault.space.PX_16,
   borderBottomWidth: 1,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
-obj4 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" };
-let closure_7 = createStyles(obj);
+obj2.warningWrapper = { display: "flex", flexDirection: "column", gap: 8 };
+let obj4 = {
+  marginHorizontal: -nativeDefault.space.PX_16,
+  borderBottomWidth: 1,
+  borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
+};
+obj2.chatRow = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" };
+let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: 'function ShareFooterLayoutTsx1(){const{withSpring,footerPaddingBottom,ON_PRESS_SPRING}=this.__closure;return{paddingBottom:withSpring(footerPaddingBottom,ON_PRESS_SPRING,"respect-motion-settings")};}',
 };
 const __initData2 = {
   code: "function ShareFooterLayoutTsx2(){const{withSpring,footerPaddingBottom,ON_PRESS_SPRING}=this.__closure;return{paddingBottom:withSpring(footerPaddingBottom,ON_PRESS_SPRING,'respect-motion-settings')};}",
 };
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj5 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let avoidKeyboard;
-      let chatInput;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let preview;
-      let sendButton;
-      let tmp5;
-      let warningText;
-      let obj = react2;
-      const cResult = obj.c(22);
+      const cResult = c.c(22);
       ({ preview, chatInput, sendButton, warningText, avoidKeyboard } = arg0);
       const tmp4 = closure_7();
       if (cResult[0] !== avoidKeyboard) {
-        let obj2 = { includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false };
+        const obj2 = { includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false };
         cResult[0] = avoidKeyboard;
         cResult[1] = obj2;
-        tmp5 = obj2;
+        let tmp5 = obj2;
       } else {
         tmp5 = cResult[1];
       }
       const sum = tmp4.footer.paddingVertical + useSafeAreaInsetsKeyboardAwareDefault(tmp5).insets.bottom;
       const require = sum;
       const fn = function y() {
-        let obj2;
-        const obj = {
-          paddingBottom: obj2.withSpring(require, springPresets.ON_PRESS_SPRING, "respect-motion-settings"),
-        };
-        obj2 = spring;
+        const obj = { paddingBottom: spring.withSpring(sum, springPresets.ON_PRESS_SPRING, "respect-motion-settings") };
         return obj;
       };
       const tmpResult = ReanimatedRexport;
@@ -97,24 +92,19 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__workletHash = 13733030539245;
       fn.__initData = __initData;
-      ({ withSpring: spring.withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: springPresets.ON_PRESS_SPRING });
       const animatedStyle = tmpResult.useAnimatedStyle(fn);
       if (cResult[2] === animatedStyle) {
-        let tmp9;
         if (cResult[3] === tmp4.footer) {
-          tmp9 = cResult[4];
+          let tmp9 = cResult[4];
         }
         if (cResult[5] === preview) {
-          let tmp10;
           if (cResult[6] === tmp4.footerSeparator) {
-            tmp10 = cResult[7];
+            let tmp10 = cResult[7];
           }
           if (cResult[8] === chatInput) {
             if (cResult[9] === sendButton) {
-              let tmp16;
-              let tmp20;
               if (cResult[10] === tmp4.chatRow) {
-                tmp16 = cResult[11];
+                let tmp16 = cResult[11];
               }
               if (cResult[12] !== warningText) {
                 let tmp22 = null != warningText;
@@ -124,27 +114,26 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 cResult[12] = warningText;
                 cResult[13] = tmp22;
-                tmp20 = tmp22;
+                let tmp20 = tmp22;
               } else {
                 tmp20 = cResult[13];
               }
               if (cResult[14] === tmp4.warningWrapper) {
                 if (cResult[15] === tmp16) {
-                  let tmp24;
                   if (cResult[16] === tmp20) {
-                    tmp24 = cResult[17];
+                    let tmp24 = cResult[17];
                   }
                   if (cResult[18] === tmp9) {
                     if (cResult[19] === tmp10) {
-                      let tmp28;
                       if (cResult[20] === tmp24) {
-                        tmp28 = cResult[21];
+                        let tmp28 = cResult[21];
                       }
                       return tmp28;
                     }
                   }
-                  const obj5 = { style: tmp9, children: items };
-                  items = [tmp10, tmp24];
+                  const obj5 = { style: tmp9, children: null };
+                  const items = [tmp10, tmp24];
+                  obj5.children = items;
                   const tmp30 = closure_6(ReanimatedRexportDefault.View, obj5);
                   cResult[18] = tmp9;
                   cResult[19] = tmp10;
@@ -153,8 +142,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp28 = tmp30;
                 }
               }
-              const obj6 = { style: tmp4.warningWrapper, children: items1 };
-              items1 = [tmp16, tmp20];
+              const obj6 = { style: tmp4.warningWrapper, children: null };
+              const items1 = [tmp16, tmp20];
+              obj6.children = items1;
               const tmp27 = closure_6(View, obj6);
               cResult[14] = tmp4.warningWrapper;
               cResult[15] = tmp16;
@@ -163,8 +153,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               tmp24 = tmp27;
             }
           }
-          const obj7 = { style: tmp4.chatRow, children: items2 };
-          items2 = [chatInput, sendButton];
+          const obj7 = { style: tmp4.chatRow, children: null };
+          const items2 = [chatInput, sendButton];
+          obj7.children = items2;
           const tmp19 = closure_6(View, obj7);
           cResult[8] = chatInput;
           cResult[9] = sendButton;
@@ -174,10 +165,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp11 = null;
         if (null != preview) {
-          const obj8 = { children: items3 };
-          items3 = [preview];
+          const obj8 = { children: null };
+          const items3 = [preview];
           const obj9 = { style: tmp4.footerSeparator };
           items3[1] = closure_4(View, obj9);
+          obj8.children = items3;
           tmp11 = closure_6(closure_5, obj8);
         }
         cResult[5] = preview;
@@ -190,19 +182,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4.footer;
       cResult[4] = items4;
       tmp9 = items4;
+      const obj3 = {
+        withSpring: spring.withSpring,
+        footerPaddingBottom: sum,
+        ON_PRESS_SPRING: springPresets.ON_PRESS_SPRING,
+      };
     }
   : (arg0) => {
-      let avoidKeyboard;
-      let c0;
-      let chatInput;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let preview;
-      let sendButton;
-      let warningText;
       ({ preview, warningText } = arg0);
       ({ chatInput, sendButton, avoidKeyboard } = arg0);
       const tmp = closure_7();
@@ -213,49 +199,46 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           includeCustomKeyboardHeight: false,
         }).insets.bottom;
       _require = sum;
-      let obj = require("ReanimatedRexport");
       const fn = function f() {
-        let obj2;
-        const obj = { paddingBottom: obj2.withSpring(c0, springPresets.ON_PRESS_SPRING, "respect-motion-settings") };
-        obj2 = spring;
+        const obj = { paddingBottom: spring.withSpring(c0, springPresets.ON_PRESS_SPRING, "respect-motion-settings") };
         return obj;
       };
-      let obj2 = {
+      let obj = require("ReanimatedRexport");
+      const tmp4 = _require;
+      fn.__closure = {
         withSpring: require("spring").withSpring,
         footerPaddingBottom: sum,
         ON_PRESS_SPRING: require("springPresets").ON_PRESS_SPRING,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 13722943567118;
       fn.__initData = __initData2;
       const animatedStyle = obj.useAnimatedStyle(fn);
-      const obj3 = { style: items, children: items2 };
-      items = [tmp.footer, animatedStyle];
+      const obj3 = { style: null, children: null };
+      const items = [tmp.footer, animatedStyle];
+      obj3.style = items;
       let tmp6Result = null;
-      View = ReanimatedRexportDefault.View;
-      const tmp4 = _require;
       if (null != preview) {
-        const obj4 = { children: items1 };
-        items1 = [preview];
+        const obj4 = { children: null };
+        const items1 = [preview];
         const obj5 = { style: tmp.footerSeparator };
         items1[1] = closure_4(View, obj5);
+        obj4.children = items1;
         tmp6Result = closure_6(closure_5, obj4);
       }
-      items2 = [tmp6Result];
-      const obj7 = { style: tmp.chatRow, children: items3 };
-      items3 = [chatInput, sendButton];
-      const obj6 = { style: tmp.warningWrapper, children: items4 };
-      items4 = [closure_6(View, obj7)];
+      const items2 = [tmp6Result];
+      const obj6 = { style: tmp.warningWrapper, children: null };
+      const obj7 = { style: tmp.chatRow, children: null };
+      const items3 = [chatInput, sendButton];
+      obj7.children = items3;
+      const items4 = [closure_6(View, obj7)];
       let tmp12 = null != warningText;
-      const tmp11 = View;
       if (tmp12) {
         const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
         tmp12 = closure_4(tmp4(4892).Text, obj8);
       }
       items4[1] = tmp12;
-      items2[1] = closure_6(tmp11, obj6);
-      return closure_6(View, obj3);
+      obj6.children = items4;
+      items2[1] = closure_6(View, obj6);
+      obj3.children = items2;
+      return closure_6(ReanimatedRexportDefault.View, obj3);
     };
-const result = size.fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
-
-export default tmp5;

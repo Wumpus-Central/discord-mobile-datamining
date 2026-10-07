@@ -1,42 +1,39 @@
 // discord_app/modules/experiments/trigger_points/Helpers.tsx
-import ExperimentConstants from "../ExperimentConstants.tsx";
 import ApexExperimentStore from "../apex/ApexExperimentStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const CommonTriggerPoints = ExperimentConstants.CommonTriggerPoints;
+const CommonTriggerPoints = fn(4783).CommonTriggerPoints;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {
-  constructor(items, COLLECTIBLES_SHOP_OPEN, params) {
-    const obj = Object.create(new.target.prototype);
-    obj.experiments = items;
-    obj.triggerPoint = COLLECTIBLES_SHOP_OPEN;
-    obj.params = params;
+  constructor(arg0, arg1, arg2) {
+    obj = Object.create(new.target.prototype);
+    obj.experiments = global;
+    obj.triggerPoint = fn;
+    obj.params = importDefault;
     return obj;
-  }
-  registeredExperimentIds() {
-    const experiments = this.experiments;
-    return experiments.map((definition) => definition.definition.id);
-  }
-  trigger() {
-    let experiments;
-    let triggerPoint;
-    let obj = arg0;
-    if (arg0 === undefined) {
-      obj = {};
-    }
-    const result = ApexExperimentStore.trackCommonTriggerPointExposures(this.params.location);
-    ({ triggerPoint, experiments } = this);
-    const obj2 = {};
-    const merged = Object.assign(this.params);
-    const merged1 = Object.assign(obj);
-    const item = experiments.forEach((trackExposure) => {
-      trackExposure.trackExposure(obj2);
-    });
-  }
-  getExperiments() {
-    return this.experiments;
   }
 }
 const prototype = CommonTriggerPointConfiguration.prototype;
+prototype["registeredExperimentIds"] = function registeredExperimentIds() {
+  const experiments = this.experiments;
+  return experiments.map((definition) => definition.definition.id);
+};
+prototype["trigger"] = function trigger() {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  const result = ApexExperimentStore.trackCommonTriggerPointExposures(this.params.location);
+  ({ triggerPoint, experiments } = this);
+  const obj2 = {};
+  const merged = Object.assign(this.params);
+  const merged1 = Object.assign(obj);
+  const item = experiments.forEach((trackExposure) => {
+    trackExposure.trackExposure(obj2);
+  });
+};
+prototype["getExperiments"] = function getExperiments() {
+  return this.experiments;
+};
 
 export { CommonTriggerPointConfiguration };

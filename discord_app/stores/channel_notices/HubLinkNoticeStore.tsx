@@ -1,13 +1,11 @@
 // discord_app/stores/channel_notices/HubLinkNoticeStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import HotspotStore from "../../modules/hotspot/HotspotStore.tsx";
 import GuildStore from "../GuildStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 function checkGuildIsHub(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let tmp2 = null != guild;
   if (tmp2) {
     const features = guild.features;
@@ -23,24 +21,26 @@ function checkGuildIsHub(id) {
 function handleHotspotUpdates() {
   return true;
 }
-const GuildFeatures = Constants.GuildFeatures;
+const GuildFeatures = fn(1085).GuildFeatures;
 let c3 = false;
-const Store = get_initializedDefault.Store;
-class HubLinkNoticeStore extends Store {
-  initialize() {
-    this.waitFor(GuildStore, HotspotStore);
-    const items = [HotspotStore];
-    this.syncWith(items, handleHotspotUpdates);
-  }
-  channelNoticePredicate(features) {
-    features = features.features;
-    const hasItem = features.has(GuildFeatures.LINKED_TO_HUB) && !c3;
-    return hasItem;
-  }
-}
+const Store = initializeDefault.Store;
+class HubLinkNoticeStore extends Store {}
 const prototype = HubLinkNoticeStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GuildStore, HotspotStore);
+  const items = [HotspotStore];
+  this.syncWith(items, handleHotspotUpdates);
+};
+prototype["channelNoticePredicate"] = function channelNoticePredicate(features) {
+  features = features.features;
+  let hasItem = features.has(GuildFeatures.LINKED_TO_HUB);
+  if (hasItem) {
+    hasItem = !c3;
+  }
+  return hasItem;
+};
 HubLinkNoticeStore.displayName = "HubLinkNoticeStore";
-let obj = {
+const hubLinkNoticeStore = new HubLinkNoticeStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(arg0) {
     const obj = arg0.guilds[Symbol.iterator]();
     while (obj !== undefined) {
@@ -66,8 +66,8 @@ let obj = {
     }
     return tmp2;
   },
-};
-const hubLinkNoticeStore = new HubLinkNoticeStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/channel_notices/HubLinkNoticeStore.tsx");
 
 export default hubLinkNoticeStore;

@@ -1,160 +1,148 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPHandoff.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../_runtime/00576_c.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let set;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (subscribe) => {
-      let tmp2;
-      let closure_0 = subscribe;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] !== subscribe) {
         const fn = function n() {
-          return closure_0.arePIPCardsSettled();
+          return subscribe.arePIPCardsSettled();
         };
         cResult[0] = subscribe;
         cResult[1] = fn;
-        tmp2 = fn;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
-      return react.useSyncExternalStore(subscribe.subscribe, tmp2);
+      return noop.useSyncExternalStore(subscribe.subscribe, tmp2);
     }
   : (subscribe) => {
-      let closure_0 = subscribe;
       const items = [subscribe];
-      return react.useSyncExternalStore(
+      return noop.useSyncExternalStore(
         subscribe.subscribe,
-        react.useCallback(() => closure_0.arePIPCardsSettled(), items),
+        noop.useCallback(() => subscribe.arePIPCardsSettled(), items),
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (subscribe) => {
-      let tmp2;
-      let closure_0 = subscribe;
-      const obj = react2;
-      const cResult = obj.c(2);
-      if (cResult[0] !== subscribe) {
-        const fn = function n() {
-          return panelLayoutCommitted.isPanelLayoutCommitted();
-        };
-        cResult[0] = subscribe;
-        cResult[1] = fn;
-        tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return react.useSyncExternalStore(subscribe.subscribe, tmp2);
-    }
-  : (subscribe) => {
-      let closure_0 = subscribe;
-      const items = [subscribe];
-      return react.useSyncExternalStore(
-        subscribe.subscribe,
-        react.useCallback(() => panelLayoutCommitted.isPanelLayoutCommitted(), items),
-      );
-    };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPHandoff.tsx");
 class VoicePanelPIPHandoff {
   constructor() {
-    const obj = Object.create(new.target.prototype);
-    obj.cards = new Map();
-    new Map();
-    obj.listeners = new Set();
+    obj = Object.create(new.target.prototype);
+    closure_0 = obj;
+    map = new Map();
+    obj.cards = map;
+    set = new Set();
+    obj.listeners = set;
     obj.inPIPLayout = 0;
     obj.inFlight = 0;
     obj.subscribe = function subscribe(arg0) {
-      let closure_0;
-      listeners = arg0;
-      listeners = listeners.listeners;
+      closure_0 = arg0;
+      let listeners = closure_0.listeners;
       listeners.add(arg0);
       return () => {
-        listeners = obj.listeners;
+        const listeners = obj.listeners;
         listeners.delete(closure_0);
       };
     };
-    new Set();
     return obj;
-  }
-  syncCardPIPLayout(id, inPIPLayout) {
-    const self = this;
-    const cards = this.cards;
-    const value = cards.get(id);
-    if (null == value) {
-      const cards3 = self.cards;
-      const obj2 = { inPIPLayout, arrived: true };
-      const result = cards3.set(id, obj2);
-      self.recount();
-    } else if (value.inPIPLayout !== inPIPLayout) {
-      const cards2 = self.cards;
-      const obj = { inPIPLayout, arrived: !inPIPLayout };
-      const result1 = cards2.set(id, obj);
-      self.recount();
-    }
-  }
-  setCardArrivedInPIP(id) {
-    const self = this;
-    const cards = this.cards;
-    const value = cards.get(id);
-    const tmp2 = null == value || value.arrived;
-    if (!tmp2) {
-      const cards2 = self.cards;
-      const obj = { arrived: true };
-      set = cards2.set;
-      const merged = Object.assign(value);
-      const result = set(id, obj);
-      self.recount();
-    }
-  }
-  removeCard(id) {
-    const self = this;
-    const cards = this.cards;
-    if (cards.delete(id)) {
-      self.recount();
-    }
-  }
-  arePIPCardsSettled() {
-    return 0 === this.inFlight;
-  }
-  isPanelLayoutCommitted() {
-    return 0 === this.inPIPLayout;
-  }
-  recount() {
-    const self = this;
-    let num = 0;
-    let num2 = 0;
-    const cards = this.cards;
-    const values = cards.values();
-    const iter = values[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      if (nextResult.inPIPLayout) {
-        num = num + 1;
-        if (!tmp3.arrived) {
-          num2 = num2 + 1;
-        }
-      }
-      continue;
-    }
-    if (num !== self.inPIPLayout) {
-      self.inPIPLayout = num;
-      self.inFlight = num2;
-      const listeners = self.listeners;
-      for (const item10029 of listeners) {
-        let item10029Result = item10029();
-        continue;
-      }
-    }
   }
 }
 const prototype = VoicePanelPIPHandoff.prototype;
+prototype["syncCardPIPLayout"] = function syncCardPIPLayout(id, inPIPLayout) {
+  const self = this;
+  const cards = this.cards;
+  value = cards.get(id);
+  if (null == value) {
+    const cards3 = self.cards;
+    const obj2 = { inPIPLayout, arrived: true };
+    const result = cards3.set(id, obj2);
+    self.recount();
+  } else if (value.inPIPLayout !== inPIPLayout) {
+    const cards2 = self.cards;
+    const obj = { inPIPLayout, arrived: !inPIPLayout };
+    const result1 = cards2.set(id, obj);
+    self.recount();
+  }
+};
+prototype["setCardArrivedInPIP"] = function setCardArrivedInPIP(id) {
+  const self = this;
+  const cards = this.cards;
+  value = cards.get(id);
+  if (!tmp2) {
+    const cards2 = self.cards;
+    const obj = {};
+    const merged = Object.assign(value);
+    obj.arrived = true;
+    const result = cards2.set(id, obj);
+    self.recount();
+  }
+};
+prototype["removeCard"] = function removeCard(id) {
+  const self = this;
+  const cards = this.cards;
+  if (cards.delete(id)) {
+    self.recount();
+  }
+};
+prototype["arePIPCardsSettled"] = function arePIPCardsSettled() {
+  return 0 === this.inFlight;
+};
+prototype["isPanelLayoutCommitted"] = function isPanelLayoutCommitted() {
+  return 0 === this.inPIPLayout;
+};
+prototype["recount"] = function recount() {
+  const self = this;
+  let num = 0;
+  let num2 = 0;
+  const cards = this.cards;
+  const values = cards.values();
+  const iter = values[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    if (nextResult.inPIPLayout) {
+      num = num + 1;
+      if (!tmp3.arrived) {
+        num2 = num2 + 1;
+      }
+    }
+    continue;
+  }
+  if (num !== self.inPIPLayout) {
+    self.inPIPLayout = num;
+    self.inFlight = num2;
+    const listeners = self.listeners;
+    for (const item10029 of listeners) {
+      let item10029Result = item10029();
+      continue;
+    }
+  }
+};
 
 export default VoicePanelPIPHandoff;
 export const usePIPCardsSettled = tmp2;
-export const usePIPPanelLayoutCommitted = tmp3;
+export const usePIPPanelLayoutCommitted = ReactCompilerGating.isReactCompilerEnabled()
+  ? (subscribe) => {
+      const cResult = c.c(2);
+      if (cResult[0] !== subscribe) {
+        const fn = function n() {
+          return subscribe.isPanelLayoutCommitted();
+        };
+        cResult[0] = subscribe;
+        cResult[1] = fn;
+        let tmp2 = fn;
+      } else {
+        tmp2 = cResult[1];
+      }
+      return noop.useSyncExternalStore(subscribe.subscribe, tmp2);
+    }
+  : (subscribe) => {
+      const items = [subscribe];
+      return noop.useSyncExternalStore(
+        subscribe.subscribe,
+        noop.useCallback(() => subscribe.isPanelLayoutCommitted(), items),
+      );
+    };

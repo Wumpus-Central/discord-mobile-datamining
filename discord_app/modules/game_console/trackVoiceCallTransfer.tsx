@@ -1,20 +1,15 @@
 // discord_app/modules/game_console/trackVoiceCallTransfer.tsx
-import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import SessionsStore from "../../stores/SessionsStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
 export default function trackVoiceCallTransfer(channel_id, target_platform, sessionId) {
-  let guild_id;
   let str = "discord_client";
-  const track = AnalyticsUtilsDefault.track;
-  const VOICE_CALL_TRANSFER = AnalyticEvents.VOICE_CALL_TRANSFER;
-  AnalyticsUtilsDefault;
   if (null != sessionId) {
     const sessionById = SessionsStore.getSessionById(sessionId);
     let os;
@@ -23,17 +18,21 @@ export default function trackVoiceCallTransfer(channel_id, target_platform, sess
     }
     str = os;
   }
-  const obj = {
+  const obj2 = {
     source_platform: str,
-    guild_id,
-    channel_id,
-    rtc_connection_id: RTCConnectionStore.getRTCConnectionId(),
-    target_platform,
+    guild_id: null,
+    channel_id: null,
+    rtc_connection_id: null,
+    target_platform: null,
   };
   const channel = ChannelStore.getChannel(channel_id);
-  guild_id = undefined;
+  let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  track(VOICE_CALL_TRANSFER, obj);
+  obj2.guild_id = guild_id;
+  obj2.channel_id = channel_id;
+  obj2.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+  obj2.target_platform = target_platform;
+  AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_CALL_TRANSFER, obj2);
 }

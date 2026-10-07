@@ -1,69 +1,62 @@
 // discord_app/stores/DeveloperExperimentStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import UserStoreUtils from "../modules/user/UserStoreUtils.tsx";
-import UserStoreConstants from "../modules/user/UserStoreConstants.tsx";
-import ExperimentConstants from "../modules/experiments/ExperimentConstants.tsx";
 import GuildStore from "GuildStore.tsx";
 import UserStore from "UserStore.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-const ExperimentBuckets = ExperimentConstants.ExperimentBuckets;
-const Environments = UserStoreConstants.Environments;
+require = fn;
+const ExperimentBuckets = fn(4783).ExperimentBuckets;
+const Environments = fn(1389).Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {
   const _window = window;
   tmp2 = window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING;
 }
 function init() {
-  const obj = UserStoreUtils;
-  closure_5 = obj.isStaffEnv(UserStore.getCurrentUser());
+  closure_5 = UserStoreUtils.isStaffEnv(UserStore.getCurrentUser());
 }
 let closure_5 = tmp2;
-const Store = get_initializedDefault.Store;
-class DeveloperExperimentStore extends Store {
-  initialize() {
-    let obj2;
-    const self = this;
-    this.waitFor(UserStore, GuildStore);
-    const obj = { isDeveloper: obj2 };
-    obj2 = {
+const Store = initializeDefault.Store;
+class DeveloperExperimentStore extends Store {}
+const prototype = DeveloperExperimentStore.prototype;
+prototype["initialize"] = function initialize() {
+  const self = this;
+  this.waitFor(UserStore, GuildStore);
+  const obj = {
+    isDeveloper: {
       configurable: false,
       get() {
         return closure_5;
       },
       set() {},
+    },
+  };
+  Object.defineProperties(this, obj);
+  closure_5 = self(1388).isStaffEnv(UserStore.getCurrentUser());
+  const timerId = setTimeout(() => Object.freeze(self));
+};
+prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {
+  let tmp = null;
+  if (closure_5) {
+    const obj = {
+      type: "developer",
+      name: "discord_dev_testing",
+      revision: 1,
+      override: true,
+      bucket: ExperimentBuckets.TREATMENT_1,
     };
-    Object.defineProperties(this, obj);
-    const obj3 = self(1388);
-    closure_5 = obj3.isStaffEnv(UserStore.getCurrentUser());
-    const timerId = setTimeout(() => Object.freeze(self));
+    tmp = obj;
   }
-  getExperimentDescriptor() {
-    let tmp = null;
-    if (closure_5) {
-      tmp = {
-        type: "developer",
-        name: "discord_dev_testing",
-        revision: 1,
-        override: true,
-        bucket: ExperimentBuckets.TREATMENT_1,
-      };
-      const obj = {
-        type: "developer",
-        name: "discord_dev_testing",
-        revision: 1,
-        override: true,
-        bucket: ExperimentBuckets.TREATMENT_1,
-      };
-    }
-    return tmp;
-  }
-}
-const prototype = DeveloperExperimentStore.prototype;
+  return tmp;
+};
 DeveloperExperimentStore.displayName = "DeveloperExperimentStore";
-let obj = { CONNECTION_OPEN: init, OVERLAY_INITIALIZE: init, CURRENT_USER_UPDATE: init };
-const developerExperimentStore = new DeveloperExperimentStore(DispatcherDefault, obj);
+const developerExperimentStore = new DeveloperExperimentStore(DispatcherDefault, {
+  CONNECTION_OPEN: init,
+  OVERLAY_INITIALIZE: init,
+  CURRENT_USER_UPDATE: init,
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/DeveloperExperimentStore.tsx");
 
 export default developerExperimentStore;

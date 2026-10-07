@@ -1,10 +1,8 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActions.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../Constants.tsx";
-import intl8 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
-import ButtonConstants from "../../../../design/components/Button/native/ButtonConstants.native.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import ImagePickerUtils from "../../../image/native/ImagePickerUtils.tsx";
@@ -15,57 +13,34 @@ import CalendarPlusIcon from "../../../../design/components/Icon/native/redesign
 import ThreadPlusIcon from "../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ChatInputActionButtonDefault from "ChatInputActionButton.tsx";
 import MediaKeyboardButtonIcon from "../../../media_keyboard/native/MediaKeyboardButtonIcon.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ChatInputConstants from "../ChatInputConstants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let canStartThreads, closure_12;
-
-let c9;
-let hasOwnProperty;
-let metroImportAll;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
+require = fn;
+const ChatInputConstants = fn(11589);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
-({ jsx: metroImportAll, Fragment: c9 } = Fragment);
-let createStyles = createStyles_mod;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4896);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
-  themedChatInput: obj2,
-  buttonWrapper: obj3,
-  activeBrand: obj4,
+  themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG },
+  buttonWrapper: null,
+  activeBrand: null,
 };
-obj2 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-createStyles = createStyles.createStyles;
-obj3 = { maxHeight: ButtonConstants.SMALL_BUTTON_HEIGHT + ButtonConstants.SMALL_BUTTON_PADDING };
-obj4 = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
-let closure_10 = createStyles(obj);
+let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
+obj.buttonWrapper = { maxHeight: fn(5607).SMALL_BUTTON_HEIGHT + fn(5607).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5607).SMALL_BUTTON_HEIGHT + fn(5607).SMALL_BUTTON_PADDING };
+obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
+let closure_10 = createStyles.createStyles(obj);
 let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };
-const forwardRefResult = react.forwardRef((canStartThreads, arg1) => {
-  let View;
-  let c17;
-  let c18;
-  let canUpload;
-  let closure_11;
-  let closure_9;
-  let disabled;
-  let items3;
-  let keyboardType;
-  let obj7;
-  let onContextMenuOpen;
-  let onPressAction;
-  let tmp12;
+const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
   canStartThreads = canStartThreads.canStartThreads;
   const channel = canStartThreads.channel;
   const isAppLauncherEnabled = canStartThreads.isAppLauncherEnabled;
   ({ keyboardType, onPressAction } = canStartThreads);
-  ({ shouldPhotosButtonBeDisabled: react, canUpload } = canStartThreads);
+  ({ shouldPhotosButtonBeDisabled: noop, canUpload } = canStartThreads);
   const canPostPolls = canStartThreads.canPostPolls;
   const onPollsPress = canStartThreads.onPollsPress;
   const onAttachPress = canStartThreads.onAttachPress;
@@ -74,31 +49,32 @@ const forwardRefResult = react.forwardRef((canStartThreads, arg1) => {
   c18 = undefined;
   let tmp = onContextMenuOpen();
   __initData = tmp;
-  let tmp2 = canStartThreads;
+  closure_12 = canStartThreads(isAppLauncherEnabled[8]).useClientThemesOverride(tmp.themedChatInput);
   let obj = canStartThreads(isAppLauncherEnabled[8]);
-  closure_12 = obj.useClientThemesOverride(tmp.themedChatInput);
+  const token = canStartThreads(isAppLauncherEnabled[9]).useToken(
+    channel(isAppLauncherEnabled[6]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP,
+  );
+  closure_13 = channel(isAppLauncherEnabled[10])({ includeCustomKeyboard: true });
   let obj2 = canStartThreads(isAppLauncherEnabled[9]);
-  const token = obj2.useToken(channel(isAppLauncherEnabled[6]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP);
-  let closure_13 = channel(isAppLauncherEnabled[10])({ includeCustomKeyboard: true });
-  let obj3 = canStartThreads(isAppLauncherEnabled[11]);
-  const keyboardWillOpen = obj3.useKeyboardContextForType(
+  const tmp4 = channel;
+  const keyboardWillOpen = canStartThreads(isAppLauncherEnabled[11]).useKeyboardContextForType(
     canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.SYSTEM,
   ).keyboardWillOpen;
   const tmp6 = channel(isAppLauncherEnabled[13])(channel);
-  let closure_15 = tmp6;
+  closure_15 = tmp6;
+  let obj3 = canStartThreads(isAppLauncherEnabled[11]);
+  const canSendScheduledMessagesInChannel = canStartThreads(
+    isAppLauncherEnabled[14],
+  ).useCanSendScheduledMessagesInChannel(channel);
   let obj4 = canStartThreads(isAppLauncherEnabled[14]);
-  const canSendScheduledMessagesInChannel = obj4.useCanSendScheduledMessagesInChannel(channel);
-  [c17, c18] = onPressAction(react.useState(false), 2);
-  onPressAction(react.useState(false), 2);
-  const tmp9 = onPressAction(react.useState(true), 2);
-  let closure_19 = tmp9[1];
-  const first = tmp9[0];
-  let closure_20 = react.useRef(null);
-  const imperativeHandle = react.useImperativeHandle(
+  [c17, c18] = onPressAction(noop.useState(false), 2);
+  const tmp9 = onPressAction(noop.useState(true), 2);
+  closure_19 = tmp9[1];
+  closure_20 = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(
     arg1,
-    react.useMemo(() => {
-      let ref;
-      let closure_0 = {
+    noop.useMemo(() => {
+      closure_0 = {
         onDismissActions(arg0) {
           closure_1_18(arg0);
           closure_1_19(false);
@@ -108,17 +84,14 @@ const forwardRefResult = react.forwardRef((canStartThreads, arg1) => {
           closure_1_19(true);
         },
         focusPhotosButton() {
-          const obj = canStartThreads(isAppLauncherEnabled[15]);
-          const obj2 = { ref, delay: 0 };
-          const result = obj.setAccessibilityFocus(obj2);
+          const result = canStartThreads(isAppLauncherEnabled[15]).setAccessibilityFocus({ ref, delay: 0 });
         },
       };
-      let obj = {
+      return {
         showActionsImperativeApi() {
           return closure_0;
         },
       };
-      return obj;
     }, []).showActionsImperativeApi,
   );
   let items = [
@@ -133,130 +106,111 @@ const forwardRefResult = react.forwardRef((canStartThreads, arg1) => {
     onPollsPress,
     onAttachPress,
   ];
-  const length = react.useMemo(() => {
-    let id;
-    let intl;
-    let intl2;
-    let intl3;
-    let intl4;
-    let intl5;
-    let intl6;
-    let intl7;
-    let result = canUpload && !closure_15;
+  noop.useMemo(() => {
+    let result = canUpload;
+    if (canUpload) {
+      result = !closure_15;
+    }
     if (result) {
-      let obj = ImagePickerUtils;
-      result = obj.isImageCaptureIntentSupported();
+      result = ImagePickerUtils.isImageCaptureIntentSupported();
     }
     const items = [];
     if (result) {
-      const push = items.push;
-      const obj2 = {
-        label: intl.string(intl8.t.uje3P9),
-        IconComponent: CameraIcon.CameraIcon,
-        action() {
-          return onPressAction({}, canUpload.CAMERA);
-        },
+      const obj2 = { label: null, IconComponent: null, action: null };
+      const intl = util.intl;
+      obj2.label = intl.string(util.t.uje3P9);
+      obj2.IconComponent = CameraIcon.CameraIcon;
+      obj2.action = function action() {
+        return onPressAction({}, canUpload.CAMERA);
       };
-      intl = intl8.intl;
-      push(obj2);
+      items.push(obj2);
     }
     if (canUpload) {
-      const push2 = items.push;
-      const obj3 = {
-        label: intl2.string(intl8.t.Zmm6dN),
-        IconComponent: ImageIcon.ImageIcon,
-        action() {
-          return onPressAction({}, canUpload.ALL_PHOTOS);
-        },
+      const obj3 = { label: null, IconComponent: null, action: null };
+      const intl2 = util.intl;
+      obj3.label = intl2.string(util.t.Zmm6dN);
+      obj3.IconComponent = ImageIcon.ImageIcon;
+      obj3.action = function action() {
+        return onPressAction({}, canUpload.ALL_PHOTOS);
       };
-      intl2 = intl8.intl;
-      push2(obj3);
+      items.push(obj3);
     }
     if (canPostPolls) {
-      const push3 = items.push;
-      const obj4 = { label: intl3.string(intl8.t.RgIi2B), IconComponent: PollsIcon.PollsIcon, action: onPollsPress };
-      intl3 = intl8.intl;
-      push3(obj4);
+      const obj4 = { label: null, IconComponent: null, action: null };
+      const intl3 = util.intl;
+      obj4.label = intl3.string(util.t.RgIi2B);
+      obj4.IconComponent = PollsIcon.PollsIcon;
+      obj4.action = onPollsPress;
+      items.push(obj4);
     }
     if (canStartThreads) {
-      const push4 = items.push;
-      const obj5 = {
-        label: intl4.string(intl8.t["7Xm5QI"]),
-        IconComponent: ThreadPlusIcon.ThreadPlusIcon,
-        action() {
-          return onPressAction({}, canUpload.THREAD);
-        },
+      const obj5 = { label: null, IconComponent: null, action: null };
+      const intl4 = util.intl;
+      obj5.label = intl4.string(util.t["7Xm5QI"]);
+      obj5.IconComponent = ThreadPlusIcon.ThreadPlusIcon;
+      obj5.action = function action() {
+        return onPressAction({}, canUpload.THREAD);
       };
-      intl4 = intl8.intl;
-      push4(obj5);
+      items.push(obj5);
     }
     if (isAppLauncherEnabled) {
-      const push5 = items.push;
-      const obj6 = {
-        label: intl5.string(intl8.t.PHjkRE),
-        IconComponent: AppsIcon.AppsIcon,
-        action() {
-          return onPressAction({}, canUpload.APPS);
-        },
+      const obj6 = { label: null, IconComponent: null, action: null };
+      const intl5 = util.intl;
+      obj6.label = intl5.string(util.t.PHjkRE);
+      obj6.IconComponent = AppsIcon.AppsIcon;
+      obj6.action = function action() {
+        return onPressAction({}, canUpload.APPS);
       };
-      intl5 = intl8.intl;
-      push5(obj6);
+      items.push(obj6);
     }
     if (canUpload) {
-      const push6 = items.push;
-      const obj7 = {
-        label: intl6.string(intl8.t["8Hvr3+"]),
-        IconComponent: AttachmentIcon.AttachmentIcon,
-        action: onAttachPress,
-      };
-      intl6 = intl8.intl;
-      push6(obj7);
+      const obj7 = { label: null, IconComponent: null, action: null };
+      const intl6 = util.intl;
+      obj7.label = intl6.string(util.t["8Hvr3+"]);
+      obj7.IconComponent = AttachmentIcon.AttachmentIcon;
+      obj7.action = onAttachPress;
+      items.push(obj7);
     }
     if (canSendScheduledMessagesInChannel) {
-      const push7 = items.push;
-      const obj8 = {
-        label: intl7.string(intl8.t["3+ii4F"]),
-        IconComponent: CalendarPlusIcon.CalendarPlusIcon,
-        action() {
-          const obj = canStartThreads(isAppLauncherEnabled[25]);
-          return obj.openScheduleMessageActionSheet(
-            id.id,
-            canStartThreads(isAppLauncherEnabled[26]).ScheduledMessageEntryPoint.ATTACH_MENU,
-          );
-        },
+      const obj8 = { label: null, IconComponent: null, action: null };
+      const intl7 = util.intl;
+      obj8.label = intl7.string(util.t["3+ii4F"]);
+      obj8.IconComponent = CalendarPlusIcon.CalendarPlusIcon;
+      obj8.action = function action() {
+        return canStartThreads(isAppLauncherEnabled[25]).openScheduleMessageActionSheet(
+          id.id,
+          canStartThreads(isAppLauncherEnabled[26]).ScheduledMessageEntryPoint.ATTACH_MENU,
+        );
       };
-      intl7 = intl8.intl;
-      push7(obj8);
+      items.push(obj8);
     }
     return items;
   }, items);
   let items1 = [onContextMenuOpen];
-  const onOpen = react.useCallback(() => {
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { type: metroRequire.OPENED };
-    obj.track(AnalyticEvents.CHAT_INPUT_OMNI_BUTTON_ACTION, obj2);
+  const onOpen = noop.useCallback(() => {
+    AnalyticsUtilsDefault.track(AnalyticEvents.CHAT_INPUT_OMNI_BUTTON_ACTION, { type: constants.OPENED });
     if (onContextMenuOpen != null) {
       onContextMenuOpen();
     }
   }, items1);
-  const onClose = react.useCallback((arg0) => {
-    const tmp = arg0;
-    if (tmp) {
+  const onClose = noop.useCallback((arg0) => {
+    if (arg0) {
       const obj2 = { type: canPostPolls.CLOSED };
+      channel(isAppLauncherEnabled[27]).track(onPollsPress.CHAT_INPUT_OMNI_BUTTON_ACTION, obj2);
       const obj = channel(isAppLauncherEnabled[27]);
-      obj.track(onPollsPress.CHAT_INPUT_OMNI_BUTTON_ACTION, obj2);
     }
   }, []);
   const items2 = [];
-  let obj5 = { type: canUpload.PHOTOS, active: tmp12 };
-  let push = items2.push;
-  tmp12 =
+  let obj5 = { type: canUpload.PHOTOS, active: null };
+  const tmp8 = onPressAction(noop.useState(false), 2);
+  obj5.active =
     keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.MEDIA ||
-    keyboardType === tmp2(tmp3[12]).KeyboardTypes.APP_LAUNCHER;
-  push(obj5);
-  let closure_24 = !first;
-  const tmp2Result = tmp2(isAppLauncherEnabled[28]);
-  const tmp4 = channel;
+    keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.APP_LAUNCHER;
+  items2.push(obj5);
+  closure_24 = !tmp9[0];
+  const tmp11 =
+    keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.MEDIA ||
+    keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.APP_LAUNCHER;
   class Q {
     constructor() {
       return { opacity: 1 };
@@ -265,91 +219,90 @@ const forwardRefResult = react.forwardRef((canStartThreads, arg1) => {
   Q.__closure = {};
   Q.__workletHash = 13622805272332;
   Q.__initData = __initData;
-  let obj6 = { children: onAttachPress(View, obj7) };
-  const animatedStyle = tmp2Result.useAnimatedStyle(Q);
-  obj7 = {
-    style: items3,
+  let obj6 = { children: null };
+  const animatedStyle = canStartThreads(isAppLauncherEnabled[28]).useAnimatedStyle(Q);
+  let obj7 = {
+    style: null,
     children: items2.map((item, index) => {
-      let active;
-      let intl;
-      let intl2;
-      let intl3;
-      let obj4;
-      let obj8;
-      let tmp12;
-      let type;
       ({ type, active } = item);
       if (canUpload.PHOTOS === type) {
-        let tmp44Result;
         if (length.length > 0) {
-          let obj2 = {
+          const obj2 = {
             items: tmp31,
             triggerOnLongPress: true,
             align: "above",
             onOpen,
             onClose,
             children(arg0) {
-              let accessibilityActions;
-              let intl;
-              let intl2;
-              let items1;
-              let obj2;
-              let onAccessibilityAction;
-              let ref;
-              let tmp2;
               ({ ref, accessibilityActions, onAccessibilityAction } = arg0);
               const obj = {
-                ref: tmp2.mergeRefs.apply(items1),
-                accessibilityLabel: intl.string(intl8.t.aDZSuz),
-                accessibilityHint: intl2.string(intl8.t.o7j1jA),
-                accessibilityState: obj2,
-                accessibilityActions,
-                onAccessibilityAction,
-                active,
-                activeIconStyle: activeBrand.activeBrand,
-                disabled: react,
-                IconComponent: MediaKeyboardButtonIcon.MediaKeyboardButtonIcon,
-                onPress(arg0) {
-                  return closure_1_3(arg0, constants.PHOTOS);
-                },
+                ref: null,
+                accessibilityLabel: null,
+                accessibilityHint: null,
+                accessibilityState: null,
+                accessibilityActions: null,
+                onAccessibilityAction: null,
+                active: null,
+                activeIconStyle: null,
+                disabled: null,
+                IconComponent: null,
+                onPress: null,
               };
-              const items = [ref, closure_20, closure_9];
-              items1 = [...items.filter(Boolean)];
               const tmp = ChatInputActionButtonDefault;
-              tmp2 = mergeProps;
-              intl = intl8.intl;
-              intl2 = intl8.intl;
-              obj2 = { expanded: active };
-              return metroImportAll(tmp, obj);
+              const items = [ref, closure_20, closure_2_9];
+              const items1 = [...items.filter(Boolean)];
+              obj.ref = mergeProps.mergeRefs.apply(items1);
+              const intl = util.intl;
+              obj.accessibilityLabel = intl.string(util.t.aDZSuz);
+              const intl2 = util.intl;
+              obj.accessibilityHint = intl2.string(util.t.o7j1jA);
+              obj.accessibilityState = { expanded: active };
+              obj.accessibilityActions = accessibilityActions;
+              obj.onAccessibilityAction = onAccessibilityAction;
+              obj.active = active;
+              obj.activeIconStyle = activeBrand.activeBrand;
+              obj.disabled = disabled;
+              obj.IconComponent = MediaKeyboardButtonIcon.MediaKeyboardButtonIcon;
+              obj.onPress = function onPress(arg0) {
+                return closure_1_3(arg0, constants.PHOTOS);
+              };
+              return closure_3_8(tmp, obj);
             },
           };
-          tmp44Result = onAttachPress(canStartThreads(isAppLauncherEnabled[29]).ContextMenu, obj2, index);
+          let tmp44Result = onAttachPress(canStartThreads(isAppLauncherEnabled[29]).ContextMenu, obj2, index);
         } else {
-          let mergeRefsResult;
-          const tmp47 = channel(isAppLauncherEnabled[30]);
           if (null != closure_9) {
+            let mergeRefsResult = canStartThreads(isAppLauncherEnabled[31]).mergeRefs(closure_20, tmp48);
             const obj5 = canStartThreads(isAppLauncherEnabled[31]);
-            mergeRefsResult = obj5.mergeRefs(closure_20, tmp48);
           } else {
             mergeRefsResult = closure_20;
           }
           const obj3 = {
             ref: mergeRefsResult,
-            accessibilityLabel: intl2.string(canStartThreads(isAppLauncherEnabled[17]).t.aDZSuz),
-            accessibilityHint: intl3.string(canStartThreads(isAppLauncherEnabled[17]).t.o7j1jA),
-            accessibilityState: obj4,
-            active,
-            activeIconStyle: activeBrand.activeBrand,
-            disabled,
-            IconComponent: canStartThreads(isAppLauncherEnabled[32]).MediaKeyboardButtonIcon,
-            onPress(arg0) {
-              return onPressAction(arg0, canUpload.PHOTOS);
-            },
+            accessibilityLabel: null,
+            accessibilityHint: null,
+            accessibilityState: null,
+            active: null,
+            activeIconStyle: null,
+            disabled: null,
+            IconComponent: null,
+            onPress: null,
           };
-          intl2 = canStartThreads(isAppLauncherEnabled[17]).intl;
-          intl3 = canStartThreads(isAppLauncherEnabled[17]).intl;
-          obj4 = { expanded: active };
-          tmp44Result = onAttachPress(tmp47, obj3, index);
+          let intl2 = canStartThreads(isAppLauncherEnabled[17]).intl;
+          obj3.accessibilityLabel = intl2.string(canStartThreads(isAppLauncherEnabled[17]).t.aDZSuz);
+          const intl3 = canStartThreads(isAppLauncherEnabled[17]).intl;
+          obj3.accessibilityHint = intl3.string(canStartThreads(isAppLauncherEnabled[17]).t.o7j1jA);
+          const obj4 = { expanded: active };
+          obj3.accessibilityState = obj4;
+          obj3.active = active;
+          obj3.activeIconStyle = activeBrand.activeBrand;
+          obj3.disabled = disabled;
+          obj3.IconComponent = canStartThreads(isAppLauncherEnabled[32]).MediaKeyboardButtonIcon;
+          obj3.onPress = function onPress(arg0) {
+            return onPressAction(arg0, canUpload.PHOTOS);
+          };
+          tmp44Result = onAttachPress(channel(isAppLauncherEnabled[30]), obj3, index);
+          const tmp47 = channel(isAppLauncherEnabled[30]);
         }
         return tmp44Result;
       } else if (canUpload.APPS === type) {
@@ -364,22 +317,30 @@ const forwardRefResult = react.forwardRef((canStartThreads, arg1) => {
         return onAttachPress(channel(isAppLauncherEnabled[33]), obj6, index);
       } else if (canUpload.ALL_PHOTOS === type) {
         const obj7 = {
-          accessibilityLabel: intl.string(canStartThreads(isAppLauncherEnabled[17]).t.ZT24In),
-          accessible: !closure_24,
-          accessibilityState: obj8,
-          active,
-          activeIconStyle: activeBrand.activeBrand,
-          disabled: !canUpload,
-          IconComponent: canStartThreads(isAppLauncherEnabled[19]).ImageIcon,
-          onPress(arg0) {
-            return onPressAction(arg0, canUpload.ALL_PHOTOS);
-          },
-          style: styleButton,
+          accessibilityLabel: null,
+          accessible: null,
+          accessibilityState: null,
+          active: null,
+          activeIconStyle: null,
+          disabled: null,
+          IconComponent: null,
+          onPress: null,
+          style: null,
         };
-        const tmp17 = channel(isAppLauncherEnabled[30]);
-        intl = canStartThreads(isAppLauncherEnabled[17]).intl;
-        obj8 = { expanded: active };
-        return onAttachPress(tmp17, obj7, index);
+        let intl = canStartThreads(isAppLauncherEnabled[17]).intl;
+        obj7.accessibilityLabel = intl.string(canStartThreads(isAppLauncherEnabled[17]).t.ZT24In);
+        obj7.accessible = !closure_24;
+        const obj8 = { expanded: active };
+        obj7.accessibilityState = obj8;
+        obj7.active = active;
+        obj7.activeIconStyle = activeBrand.activeBrand;
+        obj7.disabled = !canUpload;
+        obj7.IconComponent = canStartThreads(isAppLauncherEnabled[19]).ImageIcon;
+        obj7.onPress = function onPress(arg0) {
+          return onPressAction(arg0, canUpload.ALL_PHOTOS);
+        };
+        obj7.style = styleButton;
+        return onAttachPress(channel(isAppLauncherEnabled[30]), obj7, index);
       } else {
         let obj = {
           accessible: !closure_24,
@@ -388,23 +349,32 @@ const forwardRefResult = react.forwardRef((canStartThreads, arg1) => {
           onPress: onPressAction,
           styleButtonWrapper: activeBrand.buttonWrapper,
           styleButton,
-          shouldShowThread: tmp12,
+          shouldShowThread: null,
         };
-        tmp12 = true === active;
-        const tmp5 = channel(isAppLauncherEnabled[34]);
+        let tmp12 = true === active;
         if (tmp12) {
-          tmp12 = closure_13 || keyboardWillOpen || c17;
+          let tmp13 = closure_13;
+          if (!closure_13) {
+            tmp13 = keyboardWillOpen;
+          }
+          if (!tmp13) {
+            tmp13 = c17;
+          }
+          tmp12 = tmp13;
         }
-        return onAttachPress(tmp5, obj, "gift-or-thread");
+        obj.shouldShowThread = tmp12;
+        return onAttachPress(channel(isAppLauncherEnabled[34]), obj, "gift-or-thread");
       }
     }),
   };
-  items3 = [tmp.actions, animatedStyle, { gap: token }];
-  View = tmp4(tmp3[28]).View;
+  const items3 = [tmp.actions, animatedStyle, { gap: token }];
+  obj7.style = items3;
+  obj6.children = onAttachPress(tmp4(isAppLauncherEnabled[28]).View, obj7);
   return onAttachPress(closure_9, obj6);
 });
 forwardRefResult.displayName = "ChatInputActions";
-const memoResult = react.memo(forwardRefResult);
+let obj5 = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActions.tsx");
 
-export default memoResult;
+export default noop.memo(forwardRefResult);

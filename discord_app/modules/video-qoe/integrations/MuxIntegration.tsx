@@ -2,73 +2,80 @@
 import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
-class MuxIntegration {
-  static mapDiscordToMuxMetadata(config, sessionId) {
-    let durationMs;
+const prototype = function MuxIntegration() {
+  return Object.create(new.target.prototype);
+}.prototype;
+prototype["mapDiscordToMuxMetadata"] = function mapDiscordToMuxMetadata(config, sessionId) {
+  const obj = {
+    env_key: "1qd16mdmdjasipqg3irobln4u",
+    session_id: sessionId,
+    player_name: "discord",
+    player_version: "1.0.0",
+    video_id: config.contentMetadata.contentId,
+    video_title: config.contentMetadata.title,
+    video_duration: null,
+    video_content_type: null,
+    video_series: null,
+    video_producer: null,
+    video_brand: null,
+    video_cdn: "Cloudflare",
+    video_stream_type: null,
+    view_client_application_name: null,
+    view_client_application_version: null,
+    viewer_user_id: null,
+    viewer_plan: null,
+  };
+  let durationMs = config.contentMetadata.durationMs;
+  if (durationMs == null) {
+    let result;
+    if (null != config.contentMetadata.durationSec) {
+      result = 1000 * config.contentMetadata.durationSec;
+    }
+    durationMs = result;
+  }
+  obj.video_duration = durationMs;
+  obj.video_content_type = config.contentMetadata.contentType;
+  obj.video_series = config.contentMetadata.questId;
+  obj.video_producer = config.contentMetadata.gameId;
+  let str = config.contentMetadata.gameName;
+  if (str == null) {
+    str = "Discord";
+  }
+  obj.video_brand = str;
+  obj.video_stream_type = config.contentMetadata.videoStreamType;
+  obj.view_client_application_name = this.getBuildChannel();
+  obj.view_client_application_version = this.getAppVersion();
+  const userContext = config.userContext;
+  let userId;
+  if (userContext != null) {
+    userId = userContext.userId;
+  }
+  obj.viewer_user_id = userId;
+  const userContext2 = config.userContext;
+  let userTier;
+  if (userContext2 != null) {
+    userTier = userContext2.userTier;
+  }
+  obj.viewer_plan = userTier;
+  return obj;
+};
+prototype["getAppVersion"] = function getAppVersion() {
+  return "35020100000000";
+};
+prototype["getBuildChannel"] = function getBuildChannel() {
+  try {
+    const _window = window;
     let str;
-    let userId;
-    let userTier;
-    const obj = {
-      env_key: "1qd16mdmdjasipqg3irobln4u",
-      session_id: sessionId,
-      player_name: "discord",
-      player_version: "1.0.0",
-      video_id: config.contentMetadata.contentId,
-      video_title: config.contentMetadata.title,
-      video_duration: durationMs,
-      video_content_type: config.contentMetadata.contentType,
-      video_series: config.contentMetadata.questId,
-      video_producer: config.contentMetadata.gameId,
-      video_brand: str,
-      video_cdn: "Cloudflare",
-      video_stream_type: config.contentMetadata.videoStreamType,
-      view_client_application_name: this.getBuildChannel(),
-      view_client_application_version: this.getAppVersion(),
-      viewer_user_id: userId,
-      viewer_plan: userTier,
-    };
-    durationMs = config.contentMetadata.durationMs;
-    if (durationMs == null) {
-      let result;
-      if (null != config.contentMetadata.durationSec) {
-        result = 1000 * config.contentMetadata.durationSec;
-      }
-      durationMs = result;
+    if (GLOBAL_ENV != null) {
+      str = GLOBAL_ENV.RELEASE_CHANNEL;
     }
-    str = config.contentMetadata.gameName;
     if (str == null) {
-      str = "Discord";
+      str = "stable";
     }
-    const userContext = config.userContext;
-    userId = undefined;
-    if (userContext != null) {
-      userId = userContext.userId;
-    }
-    const userContext2 = config.userContext;
-    userTier = undefined;
-    if (userContext2 != null) {
-      userTier = userContext2.userTier;
-    }
-    return obj;
+    return str;
+  } catch (err) {
+    return "stable";
   }
-  static getAppVersion() {
-    return "35020100000000";
-  }
-  static getBuildChannel() {
-    try {
-      const _window = window;
-      let str;
-      if (GLOBAL_ENV != null) {
-        str = GLOBAL_ENV.RELEASE_CHANNEL;
-      }
-      if (str == null) {
-        str = "stable";
-      }
-      return str;
-    } catch (err) {
-      return "stable";
-    }
-  }
-}
+};
 
-export { MuxIntegration };
+export const MuxIntegration = prototype;

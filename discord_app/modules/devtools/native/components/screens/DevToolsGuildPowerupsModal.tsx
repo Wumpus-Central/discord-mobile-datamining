@@ -1,62 +1,59 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import HeaderShared from "../../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import getNavigationModalPresentationDefault from "../../../../main_tabs_v2/native/utils/getNavigationModalPresentation.tsx";
 import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import NativeStackView from "../../../../../../_runtime/07568_NativeStackView.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
+require = fn;
 let closure_3 = ["children"];
-const jsx = Fragment.jsx;
-let Screen = NativeStackView.createNativeStackNavigator();
-const memoResult = react.memo(
+const jsx = fn(21).jsx;
+const NativeStackNavigator = fn(7568);
+let closure_6 = NativeStackNavigator.createNativeStackNavigator();
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        let accessibilityNativeStackOptions;
-        let tmp10;
-        let tmp4;
-        let tmp5;
+        const cResult = accessibilityNativeStackOptions(576).c(5);
         let obj = accessibilityNativeStackOptions(576);
-        const cResult = obj.c(5);
-        let obj2 = accessibilityNativeStackOptions(6503);
-        accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
+        accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
         if (cResult[0] !== accessibilityNativeStackOptions) {
           const fn = function o(navigation) {
-            let obj2;
-            let obj = {
+            const obj = {
               headerTitle(children) {
-                children = children.children;
-                const obj = { title: children };
-                const tmp = closure_1_4(children, closure_1_3);
-                const GenericHeaderTitle = accessibilityNativeStackOptions(closure_1_2[7]).GenericHeaderTitle;
-                const merged = Object.assign(tmp);
-                return closure_1_5(GenericHeaderTitle, obj);
+                const merged = Object.assign(closure_1_4(children, closure_1_3));
+                return closure_1_5(accessibilityNativeStackOptions(closure_1_2[7]).GenericHeaderTitle, {
+                  title: children.children,
+                });
               },
-              headerLeft: obj2.getRenderModalCloseImage(navigation),
+              headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
               headerTitleAlign: "center",
             };
-            navigation = navigation.navigation;
-            obj2 = HeaderShared;
             let merged = Object.assign(accessibilityNativeStackOptions);
             const merged1 = Object.assign(getNavigationModalPresentationDefault());
             return obj;
           };
           cResult[0] = accessibilityNativeStackOptions;
           cResult[1] = fn;
-          tmp4 = fn;
+          let tmp4 = fn;
         } else {
           tmp4 = cResult[1];
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          Screen = Screen.Screen;
+          const obj3 = {
+            name: "DevToolsGuildPowerups",
+            options() {
+              return { title: "Guild Powerups" };
+            },
+            component: DevToolsGuildPowerupsScreenDefault,
+          };
           const tmp9 = (
-            <Screen
+            <closure_6.Screen
               name="DevToolsGuildPowerups"
               options={function options() {
                 return { title: "Guild Powerups" };
@@ -65,51 +62,63 @@ const memoResult = react.memo(
             />
           );
           cResult[2] = tmp9;
-          tmp5 = tmp9;
+          let tmp5 = tmp9;
         } else {
           tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4) {
+          const obj4 = { screenOptions: tmp4, children: tmp5 };
           const tmp13 = <closure_6.Navigator screenOptions={tmp4}>{tmp5}</closure_6.Navigator>;
           cResult[3] = tmp4;
           cResult[4] = tmp13;
-          tmp10 = tmp13;
+          let tmp10 = tmp13;
         } else {
           tmp10 = cResult[4];
         }
         return tmp10;
       }
     : () => {
-        let Navigator;
-        let closure_0;
-        let obj = require("Navigator");
-        _require = obj.useAccessibilityNativeStackOptions();
-        ({ Navigator, Screen } = closure_6);
-        ({
-          name: "DevToolsGuildPowerups",
-          options() {
-            return { title: "Guild Powerups" };
+        _require = require("Navigator").useAccessibilityNativeStackOptions();
+        const obj2 = {
+          screenOptions(navigation) {
+            const obj = {
+              headerTitle(children) {
+                const merged = Object.assign(children, Object.assign({ children: 0 }));
+                const merged1 = Object.assign(merged);
+                return closure_1_5(closure_1_0(closure_1_2[7]).GenericHeaderTitle, { title: children.children });
+              },
+              headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
+              headerTitleAlign: "center",
+            };
+            let merged = Object.assign(closure_0);
+            let merged1 = Object.assign(getNavigationModalPresentationDefault());
+            return obj;
           },
-          component: DevToolsGuildPowerupsScreenDefault,
-        });
+          children: null,
+        };
+        let obj = require("Navigator");
+        ({ Navigator, Screen } = closure_6);
+        obj2.children = (
+          <Screen
+            name="DevToolsGuildPowerups"
+            options={function options() {
+              return { title: "Guild Powerups" };
+            }}
+            component={DevToolsGuildPowerupsScreenDefault}
+          />
+        );
         return (
           <Navigator
             screenOptions={function screenOptions(navigation) {
-              let obj2;
-              let obj = {
+              const obj = {
                 headerTitle(children) {
-                  children = children.children;
                   const merged = Object.assign(children, Object.assign({ children: 0 }));
-                  const obj = { title: children };
-                  const GenericHeaderTitle = closure_1_0(closure_1_2[7]).GenericHeaderTitle;
                   const merged1 = Object.assign(merged);
-                  return closure_1_5(GenericHeaderTitle, obj);
+                  return closure_1_5(closure_1_0(closure_1_2[7]).GenericHeaderTitle, { title: children.children });
                 },
-                headerLeft: obj2.getRenderModalCloseImage(navigation),
+                headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
                 headerTitleAlign: "center",
               };
-              navigation = navigation.navigation;
-              obj2 = HeaderShared;
               let merged = Object.assign(closure_0);
               let merged1 = Object.assign(getNavigationModalPresentationDefault());
               return obj;
@@ -120,6 +129,3 @@ const memoResult = react.memo(
         );
       },
 );
-const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
-
-export default memoResult;

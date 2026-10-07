@@ -1,5 +1,5 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellActionCreators.tsx
-import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUtils from "../../dismissible_content/DismissibleContentUtils.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
@@ -7,27 +7,24 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import size from "../../../../_runtime/metro/00002__.js";
 
 const PASSKEY_UPSELL_KEY = "PASSKEY_UPSELL_KEY";
-let obj = {
+let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellActionCreators.tsx");
+
+export default {
   openPasskeyUpsell() {
-    const obj = DismissibleContentUnsafeUtils;
     if (!obj.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL)) {
       const self = this;
-      const tmpResult = DismissibleContentUtils;
-      const markDismissibleContentAsShown = tmpResult.requestMarkDismissibleContentAsShown(
+      const markDismissibleContentAsShown = DismissibleContentUtils.requestMarkDismissibleContentAsShown(
         dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL,
       );
       const result = this.openPasskeyUpsellPromoSheet();
+      const tmpResult = DismissibleContentUtils;
     }
+    obj = DismissibleContentUnsafeUtils;
   },
   openPasskeyUpsellPromoSheet() {
-    const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequire(15530, dependencyMap.paths), PASSKEY_UPSELL_KEY);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15530, dependencyMap.paths), PASSKEY_UPSELL_KEY);
   },
   closePasskeyUpsellPromoSheet() {
-    const obj = ActionSheetActionCreatorsDefault;
-    obj.hideActionSheet(PASSKEY_UPSELL_KEY);
+    ActionSheetActionCreatorsDefault.hideActionSheet(PASSKEY_UPSELL_KEY);
   },
 };
-let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellActionCreators.tsx");
-
-export default obj;

@@ -1,24 +1,16 @@
 // discord_app/modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx
-import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl5 from "../../../../intl/index.native.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreators.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let officialMessageStyle;
-      let tmp4;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         const fn = function n() {
@@ -31,80 +23,75 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return initialize.useStateFromStores(tmp4, tmp5);
     }
   : () => {
-      let officialMessageStyle;
       const items = [AccessibilityStore];
-      const obj = get_initialized;
-      return obj.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
+      return initialize.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      const obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { label: intl.string(intl5.t.ERaS6f), value: "default" };
-        intl = intl5.intl;
+        const obj2 = { label: null, value: "default" };
+        const intl = util.intl;
+        obj2.label = intl.string(util.t.ERaS6f);
         const items = [obj2, , ,];
-        const obj3 = { label: intl2.string(intl5.t.JKfipk), value: "no_text_color" };
-        intl2 = intl5.intl;
+        const obj3 = { label: null, value: "no_text_color" };
+        const intl2 = util.intl;
+        obj3.label = intl2.string(util.t.JKfipk);
         items[1] = obj3;
-        const obj4 = { label: intl3.string(intl5.t.O2vBoY), value: "no_gradient" };
-        intl3 = intl5.intl;
+        const obj4 = { label: null, value: "no_gradient" };
+        const intl3 = util.intl;
+        obj4.label = intl3.string(util.t.O2vBoY);
         items[2] = obj4;
-        const obj5 = { label: intl4.string(intl5.t["+loyQl"]), value: "hidden" };
-        intl4 = intl5.intl;
+        const obj5 = { label: null, value: "hidden" };
+        const intl4 = util.intl;
+        obj5.label = intl4.string(util.t["+loyQl"]);
         items[3] = obj5;
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () =>
-      react.useMemo(() => {
-        let intl;
-        let intl2;
-        let intl3;
-        let intl4;
-        const obj = { label: intl.string(intl5.t.ERaS6f), value: "default" };
-        intl = intl5.intl;
+      noop.useMemo(() => {
+        const obj = { label: null, value: "default" };
+        const intl = util.intl;
+        obj.label = intl.string(util.t.ERaS6f);
         const items = [obj, , ,];
-        const obj2 = { label: intl2.string(intl5.t.JKfipk), value: "no_text_color" };
-        intl2 = intl5.intl;
+        const obj2 = { label: null, value: "no_text_color" };
+        const intl2 = util.intl;
+        obj2.label = intl2.string(util.t.JKfipk);
         items[1] = obj2;
-        const obj3 = { label: intl3.string(intl5.t.O2vBoY), value: "no_gradient" };
-        intl3 = intl5.intl;
+        const obj3 = { label: null, value: "no_gradient" };
+        const intl3 = util.intl;
+        obj3.label = intl3.string(util.t.O2vBoY);
         items[2] = obj3;
-        const obj4 = { label: intl4.string(intl5.t["+loyQl"]), value: "hidden" };
-        intl4 = intl5.intl;
+        const obj4 = { label: null, value: "hidden" };
+        const intl4 = util.intl;
+        obj4.label = intl4.string(util.t["+loyQl"]);
         items[3] = obj4;
         return items;
       }, []);
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
-  const obj = AccessibilityActionCreators;
-  const result = obj.setOfficialMessageStyle(officialMessageStyle);
+  const result = AccessibilityActionCreators.setOfficialMessageStyle(officialMessageStyle);
 }
-let obj = {
+const SettingBuilders = fn(11142);
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = intl5.intl;
-    return intl.string(intl5.t.nC2XBl);
+    const intl = util.intl;
+    return intl.string(util.t.nC2XBl);
   },
-  parent: MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: tmp3,
-};
-const radio = SettingBuilders.createRadio(obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
 
 export default radio;

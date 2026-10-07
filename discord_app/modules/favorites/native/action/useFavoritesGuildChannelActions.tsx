@@ -2,41 +2,34 @@
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import FavoriteStore from "../../FavoriteStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (channelId, arg1) => {
-      let dismissBetaTag;
-      let hasAccess;
-      let isExperimentEnabled;
-      let shouldShowBetaTag;
-      let tmp5;
-      let tmp7;
-      let tmp9;
       _require = channelId;
-      const tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(17);
-      const obj2 = require("FavoritesHooks");
-      const favoritesAccess = obj2.useFavoritesAccess(arg1);
+      const cResult = require("c").c(17);
+      const obj = require("c");
+      const favoritesAccess = require("FavoritesHooks").useFavoritesAccess(arg1);
       ({ hasAccess, isExperimentEnabled } = favoritesAccess);
       if (cResult[0] !== channelId) {
-        const tmpResult = tmp(2077);
-        const isFavoritableChannelResult = tmpResult.isFavoritableChannel(channelId);
+        const isFavoritableChannelResult = tmp(2077).isFavoritableChannel(channelId);
         cResult[0] = channelId;
         cResult[1] = isFavoritableChannelResult;
-        tmp5 = isFavoritableChannelResult;
+        let tmp5 = isFavoritableChannelResult;
+        const tmpResult = tmp(2077);
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FavoriteStore];
         cResult[2] = items;
-        tmp7 = items;
+        let tmp7 = items;
       } else {
         tmp7 = cResult[2];
       }
@@ -46,14 +39,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = channelId.id;
         cResult[4] = fn;
-        tmp9 = fn;
+        let tmp9 = fn;
       } else {
         tmp9 = cResult[4];
       }
-      const tmpResult5 = tmp(504);
-      const stateFromStores = tmpResult5.useStateFromStores(tmp7, tmp9);
-      const tmpResult6 = tmp(10049);
-      const isFavoritesGuildSelected = tmpResult6.useIsFavoritesGuildSelected();
+      const obj2 = require("FavoritesHooks");
+      const stateFromStores = require("initialize").useStateFromStores(tmp7, tmp9);
+      const tmpResult5 = require("initialize");
+      const isFavoritesGuildSelected = require("FavoritesHooks").useIsFavoritesGuildSelected();
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [GuildMemberStore, AuthenticationStore];
         cResult[5] = items1;
@@ -61,8 +54,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] !== channelId.guild_id) {
         class C {
           constructor() {
-            const isMemberResult =
-              null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+            isMemberResult = null == closure_0.guild_id;
+            if (!isMemberResult) {
+              tmp3 = closure_3;
+              tmp4 = closure_2;
+              isMemberResult = closure_3.isMember(tmp.guild_id, closure_2.getId());
+            }
             return isMemberResult;
           }
         }
@@ -71,29 +68,40 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class C {
           constructor() {
-            const isMemberResult =
-              null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+            isMemberResult = null == closure_0.guild_id;
+            if (!isMemberResult) {
+              tmp3 = closure_3;
+              tmp4 = closure_2;
+              isMemberResult = closure_3.isMember(tmp.guild_id, closure_2.getId());
+            }
             return isMemberResult;
           }
         }
       }
-      tmp(504);
+      require("initialize");
       if (tmp5) {
         class C {
           constructor() {
-            const isMemberResult =
-              null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+            isMemberResult = null == closure_0.guild_id;
+            if (!isMemberResult) {
+              tmp3 = closure_3;
+              tmp4 = closure_2;
+              isMemberResult = closure_3.isMember(tmp.guild_id, closure_2.getId());
+            }
             return isMemberResult;
           }
         }
       }
-      const useFavoritesBetaTagDismissibleContent = tmp(10063).useFavoritesBetaTagDismissibleContent;
-      tmp(10063);
+      const tmpResult6 = require("FavoritesHooks");
       if (hasAccess) {
         class C {
           constructor() {
-            const isMemberResult =
-              null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+            isMemberResult = null == closure_0.guild_id;
+            if (!isMemberResult) {
+              tmp3 = closure_3;
+              tmp4 = closure_2;
+              isMemberResult = closure_3.isMember(tmp.guild_id, closure_2.getId());
+            }
             return isMemberResult;
           }
         }
@@ -101,8 +109,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (hasAccess) {
         class C {
           constructor() {
-            const isMemberResult =
-              null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+            isMemberResult = null == closure_0.guild_id;
+            if (!isMemberResult) {
+              tmp3 = closure_3;
+              tmp4 = closure_2;
+              isMemberResult = closure_3.isMember(tmp.guild_id, closure_2.getId());
+            }
             return isMemberResult;
           }
         }
@@ -110,23 +122,50 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (hasAccess) {
         class C {
           constructor() {
-            const isMemberResult =
-              null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+            isMemberResult = null == closure_0.guild_id;
+            if (!isMemberResult) {
+              tmp3 = closure_3;
+              tmp4 = closure_2;
+              isMemberResult = closure_3.isMember(tmp.guild_id, closure_2.getId());
+            }
             return isMemberResult;
           }
         }
       }
-      const favoritesBetaTagDismissibleContent = useFavoritesBetaTagDismissibleContent(hasAccess);
+      const favoritesBetaTagDismissibleContent =
+        require("FavoritesDismissibleContent").useFavoritesBetaTagDismissibleContent(hasAccess);
       ({ shouldShowBetaTag, dismissBetaTag } = favoritesBetaTagDismissibleContent);
       if (cResult[8] === tmp5) {
         class C {
           constructor() {
-            const isMemberResult =
-              null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+            isMemberResult = null == closure_0.guild_id;
+            if (!isMemberResult) {
+              tmp3 = closure_3;
+              tmp4 = closure_2;
+              isMemberResult = closure_3.isMember(tmp.guild_id, closure_2.getId());
+            }
             return isMemberResult;
           }
         }
       }
+      cResult[8] = tmp5;
+      cResult[9] = channelId.id;
+      cResult[10] = dismissBetaTag;
+      cResult[11] = hasAccess;
+      cResult[12] = stateFromStores;
+      cResult[13] = isExperimentEnabled;
+      cResult[14] = isFavoritesGuildSelected;
+      cResult[15] = shouldShowBetaTag;
+      cResult[16] = {
+        isExperimentEnabled,
+        hasFavoritesAccess: hasAccess,
+        canFavoriteChannel: tmp5,
+        isChannelInFavorites: stateFromStores,
+        isFavoritesGuild: isFavoritesGuildSelected,
+        channelId: channelId.id,
+        shouldShowBetaTag,
+        dismissBetaTag,
+      };
       const obj3 = {
         isExperimentEnabled,
         hasFavoritesAccess: hasAccess,
@@ -137,53 +176,45 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         shouldShowBetaTag,
         dismissBetaTag,
       };
-      cResult[8] = tmp5;
-      cResult[9] = channelId.id;
-      cResult[10] = dismissBetaTag;
-      cResult[11] = hasAccess;
-      cResult[12] = stateFromStores;
-      cResult[13] = isExperimentEnabled;
-      cResult[14] = isFavoritesGuildSelected;
-      cResult[15] = shouldShowBetaTag;
-      cResult[16] = obj3;
+      const tmpResult8 = require("FavoritesDismissibleContent");
     }
   : (channelId, arg1) => {
-      let hasAccess;
-      let isExperimentEnabled;
       _require = channelId;
-      const tmp = _require;
-      const obj = require("FavoritesHooks");
-      const favoritesAccess = obj.useFavoritesAccess(arg1);
+      const favoritesAccess = require("FavoritesHooks").useFavoritesAccess(arg1);
       ({ hasAccess, isExperimentEnabled } = favoritesAccess);
+      const obj = require("FavoritesHooks");
+      const tmp = _require;
+      let isFavoritableChannelResult = require("FavoritesUtils").isFavoritableChannel(channelId);
       const obj2 = require("FavoritesUtils");
-      let isFavoritableChannelResult = obj2.isFavoritableChannel(channelId);
       const items = [FavoriteStore];
-      const obj3 = require("get initialized");
-      const stateFromStores = obj3.useStateFromStores(items, () => FavoriteStore.isFavorite(channelId.id));
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        FavoriteStore.isFavorite(channelId.id),
+      );
+      const obj3 = require("initialize");
+      const isFavoritesGuildSelected = require("FavoritesHooks").useIsFavoritesGuildSelected();
       const obj4 = require("FavoritesHooks");
-      const isFavoritesGuildSelected = obj4.useIsFavoritesGuildSelected();
       const items1 = [GuildMemberStore, AuthenticationStore];
-      const obj5 = require("get initialized");
       if (isFavoritableChannelResult) {
         isFavoritableChannelResult = obj5.useStateFromStores(items1, () => {
-          const isMemberResult =
-            null == channelId.guild_id || GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+          let isMemberResult = null == channelId.guild_id;
+          if (!isMemberResult) {
+            isMemberResult = GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
+          }
           return isMemberResult;
         });
       }
-      let tmp8 = hasAccess;
-      const useFavoritesBetaTagDismissibleContent = tmp(10063).useFavoritesBetaTagDismissibleContent;
-      tmp(10063);
+      obj5 = require("initialize");
+      let tmp7 = hasAccess;
       if (hasAccess) {
-        tmp8 = isFavoritableChannelResult;
+        tmp7 = isFavoritableChannelResult;
       }
-      if (tmp8) {
-        tmp8 = !stateFromStores;
+      if (tmp7) {
+        tmp7 = !stateFromStores;
       }
-      if (tmp8) {
-        tmp8 = !isFavoritesGuildSelected;
+      if (tmp7) {
+        tmp7 = !isFavoritesGuildSelected;
       }
-      const favoritesBetaTagDismissibleContent = useFavoritesBetaTagDismissibleContent(tmp8);
+      const favoritesBetaTagDismissibleContent = tmp(10063).useFavoritesBetaTagDismissibleContent(tmp7);
       return {
         isExperimentEnabled,
         hasFavoritesAccess: hasAccess,
@@ -195,6 +226,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag,
       };
     };
-const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
-
-export default tmp2;

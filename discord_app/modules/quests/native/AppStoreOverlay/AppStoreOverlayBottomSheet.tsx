@@ -3,76 +3,71 @@ import openURLDefault from "../../../../lib/openURL.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AppStoreOverlayContent from "AppStoreOverlayContent.tsx";
 import AppStoreOverlayBody from "AppStoreOverlayBody.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let BottomSheet, metadata;
-
-let hasOwnProperty;
-let metroRequire;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ headerBar: { zIndex: 1 }, bodyContainer: { flex: 1, minHeight: 0 } });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (metadata) => {
-      let bottomSheetClose;
-      let bottomSheetRef;
-      let onDismiss;
-      let onOpen;
-      let onOverlaySurfaceClick;
-      let tmp7;
-      let tmp8;
-      let trackOverlayCarouselScroll;
-      const tmp = metadata;
-      let obj = metadata(onDismiss[5]);
-      const cResult = obj.c(38);
+      const cResult = metadata(onDismiss[5]).c(38);
       metadata = metadata.metadata;
       ({ trackOverlayCarouselScroll, onOverlaySurfaceClick, onOpen } = metadata);
-      const tmp2 = onDismiss;
       onDismiss = metadata.onDismiss;
       const onInstallPress = metadata.onInstallPress;
       closure_7();
       const height = onOpen(onDismiss[6])().height;
-      const tmp5 = onInstallPress(react.useState(0), 2);
-      [r10029, react] = tmp5;
-      const obj3 = metadata(onDismiss[7]);
-      const bottomSheetRef1 = obj3.useBottomSheetRef();
+      const obj = metadata(onDismiss[5]);
+      const tmp = metadata;
+      const tmp2 = onDismiss;
+      [r10029, noop] = onInstallPress(noop.useState(0), 2);
+      const tmp5 = onInstallPress(noop.useState(0), 2);
+      const bottomSheetRef1 = metadata(onDismiss[7]).useBottomSheetRef();
       ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
-      const ref = react.useRef(null);
+      noop.useRef(null);
       if (cResult[0] !== onOpen) {
         const fn = function c() {
-          ref.current = Date.now();
+          closure_5.current = Date.now();
           onOpen();
         };
         const items = [onOpen];
         cResult[0] = onOpen;
-        let num = 1;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp8 = items;
-        tmp7 = fn;
+        let tmp8 = items;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[1];
         tmp8 = cResult[2];
       }
-      const effect = react.useEffect(tmp7, tmp8);
-      const ref2 = react.useRef(false);
+      const effect = noop.useEffect(tmp7, tmp8);
+      noop.useRef(false);
       if (cResult[3] !== onDismiss) {
         class D {
           constructor() {
-            if (!ref2.current) {
+            if (!closure_6.current) {
+              flag = true;
               tmp.current = true;
-              const current = ref.current;
-              let num = 0;
+              tmp2 = closure_5;
+              current = closure_5.current;
+              tmp4 = null;
+              num = 0;
+              tmp3 = onDismiss;
               if (null != current) {
-                const _Date = Date;
+                tmp5 = globalThis;
+                _Date = Date;
                 num = Date.now() - current;
               }
-              onDismiss(num);
+              tmp3Result = tmp3(num);
             }
+            return;
           }
         }
         cResult[3] = onDismiss;
@@ -80,56 +75,73 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class D {
           constructor() {
-            if (!ref2.current) {
+            if (!closure_6.current) {
+              flag = true;
               tmp.current = true;
-              const current = ref.current;
-              let num = 0;
+              tmp2 = closure_5;
+              current = closure_5.current;
+              tmp4 = null;
+              num = 0;
+              tmp3 = onDismiss;
               if (null != current) {
-                const _Date = Date;
+                tmp5 = globalThis;
+                _Date = Date;
                 num = Date.now() - current;
               }
-              onDismiss(num);
+              tmp3Result = tmp3(num);
             }
+            return;
           }
         }
       }
-      const tmpResult = tmp(tmp2[8]);
-      const unmountEffect = tmpResult.useUnmountEffect(D);
+      const obj3 = metadata(onDismiss[7]);
+      const unmountEffect = tmp(tmp2[8]).useUnmountEffect(D);
       if (cResult[5] === metadata.storeUrl) {
         class D {
           constructor() {
-            if (!ref2.current) {
+            if (!closure_6.current) {
+              flag = true;
               tmp.current = true;
-              const current = ref.current;
-              let num = 0;
+              tmp2 = closure_5;
+              current = closure_5.current;
+              tmp4 = null;
+              num = 0;
+              tmp3 = onDismiss;
               if (null != current) {
-                const _Date = Date;
+                tmp5 = globalThis;
+                _Date = Date;
                 num = Date.now() - current;
               }
-              onDismiss(num);
+              tmp3Result = tmp3(num);
             }
+            return;
           }
         }
         if (cResult[8] === metadata.appId) {
           class D {
             constructor() {
-              if (!ref2.current) {
+              if (!closure_6.current) {
+                flag = true;
                 tmp.current = true;
-                const current = ref.current;
-                let num = 0;
+                tmp2 = closure_5;
+                current = closure_5.current;
+                tmp4 = null;
+                num = 0;
+                tmp3 = onDismiss;
                 if (null != current) {
-                  const _Date = Date;
+                  tmp5 = globalThis;
+                  _Date = Date;
                   num = Date.now() - current;
                 }
-                onDismiss(num);
+                tmp3Result = tmp3(num);
               }
+              return;
             }
           }
         }
         const fn2 = function w() {
           onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.RATING_STAT);
-          const obj = AppStoreOverlayContent;
-          obj.openAppStoreReviews(metadata.storeUrl, metadata.platform, metadata.appId);
+          AppStoreOverlayContent.openAppStoreReviews(metadata.storeUrl, metadata.platform, metadata.appId);
         };
         cResult[8] = metadata.appId;
         cResult[9] = metadata.platform;
@@ -139,20 +151,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class U {
         constructor() {
-          onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.MAIN_CTA);
-          openURLDefault(metadata.storeUrl);
+          tmp = onInstallPress(closure_0(closure_2[9]).AppStoreOverlaySurfaces.MAIN_CTA);
+          tmp2 = closure_1(closure_2[10])(metadata.storeUrl);
+          return;
         }
       }
       cResult[5] = metadata.storeUrl;
       cResult[6] = onInstallPress;
       cResult[7] = U;
+      const tmpResult = tmp(tmp2[8]);
     }
   : (metadata) => {
-      let bottomSheetClose;
-      let bottomSheetRef;
-      let items5;
-      let onOverlaySurfaceClick;
-      let trackOverlayCarouselScroll;
       metadata = metadata.metadata;
       const onOpen = metadata.onOpen;
       const onDismiss = metadata.onDismiss;
@@ -161,17 +170,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let ref2;
       ({ trackOverlayCarouselScroll, onOverlaySurfaceClick } = metadata);
       const tmp = ref2();
-      const height = onOpen(onDismiss[6])().height;
       const tmp2 = onInstallPress(first.useState(0), 2);
       first = tmp2[0];
-      let closure_5 = tmp2[1];
-      let obj = metadata(onDismiss[7]);
-      const bottomSheetRef1 = obj.useBottomSheetRef();
+      closure_5 = tmp2[1];
+      const bottomSheetRef1 = metadata(onDismiss[7]).useBottomSheetRef();
       ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
       const ref = first.useRef(null);
       const items = [onOpen];
       const effect = first.useEffect(() => {
-        ref.current = Date.now();
+        closure_6.current = Date.now();
         onOpen();
       }, items);
       ref2 = first.useRef(false);
@@ -188,8 +195,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           onDismiss(num);
         }
       }, items1);
-      const obj2 = metadata(onDismiss[8]);
-      const unmountEffect = obj2.useUnmountEffect(callback);
+      const obj = metadata(onDismiss[7]);
+      const unmountEffect = metadata(onDismiss[8]).useUnmountEffect(callback);
       const items2 = [metadata.storeUrl, onInstallPress];
       const callback1 = first.useCallback(() => {
         onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.MAIN_CTA);
@@ -200,34 +207,38 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       items3[3] = onInstallPress;
       const callback2 = first.useCallback(() => {
         onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.RATING_STAT);
-        const obj = AppStoreOverlayContent;
-        obj.openAppStoreReviews(metadata.storeUrl, metadata.platform, metadata.appId);
+        AppStoreOverlayContent.openAppStoreReviews(metadata.storeUrl, metadata.platform, metadata.appId);
       }, items3);
       const items4 = [first];
       const callback3 = first.useCallback((nativeEvent) => {
         closure_5(nativeEvent.nativeEvent.layout.height);
       }, []);
-      const memo = first.useMemo(() => {
-        const obj = { paddingBottom: first + AppStoreOverlayBody.APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
-        return obj;
-      }, items4);
+      const memo = first.useMemo(
+        () => ({ paddingBottom: first + AppStoreOverlayBody.APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT }),
+        items4,
+      );
       const obj3 = {
         ref: bottomSheetRef,
         scrollable: true,
         handleDisabled: true,
-        startHeight: height * metadata(onDismiss[12]).APP_STORE_OVERLAY_HEIGHT_RATIO,
+        startHeight: onOpen(onDismiss[6])().height * metadata(onDismiss[12]).APP_STORE_OVERLAY_HEIGHT_RATIO,
         onDismiss: callback,
         footer: closure_5(metadata(onDismiss[12]).AppStoreOverlayFooter, {
           onInstallPress: callback1,
           onLayout: callback3,
         }),
-        children: items5,
+        children: null,
       };
-      BottomSheet = metadata(onDismiss[15]).BottomSheet;
-      items5 = [,];
+      const items5 = [
+        closure_5(metadata(onDismiss[13]).ActionSheetHeaderBar, {
+          variant: "overlay",
+          style: tmp.headerBar,
+          onPress: bottomSheetClose,
+        }),
+      ];
+      const obj2 = metadata(onDismiss[8]);
       const obj4 = { variant: "overlay", style: tmp.headerBar, onPress: bottomSheetClose };
-      items5[0] = closure_5(metadata(onDismiss[13]).ActionSheetHeaderBar, obj4);
-      const obj5 = {
+      items5[1] = closure_5(metadata(onDismiss[14]).BottomSheetScrollView, {
         style: tmp.bodyContainer,
         contentContainerStyle: memo,
         children: closure_5(metadata(onDismiss[12]).AppStoreOverlayBody, {
@@ -237,11 +248,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           onCarouselScroll: trackOverlayCarouselScroll,
           onOverlaySurfaceClick,
         }),
-      };
-      const BottomSheetScrollView = metadata(onDismiss[14]).BottomSheetScrollView;
-      items5[1] = closure_5(BottomSheetScrollView, obj5);
-      return ref(BottomSheet, obj3);
+      });
+      obj3.children = items5;
+      return ref(metadata(onDismiss[15]).BottomSheet, obj3);
     };
-const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");
-
-export default tmp3;

@@ -1,14 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../Constants.tsx";
-import intl4 from "../../../../intl/index.native.tsx";
-import useToken5 from "../../../../design/tokens/native/useToken.tsx";
+import util from "../../../../intl/index.native.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import RoleIconUtils from "../../../guild_boosting/RoleIconUtils.tsx";
 import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
 import FormStylesDefault from "FormStyles.tsx";
-import GuildRoleSubscriptionsConstants from "../../GuildRoleSubscriptionsConstants.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import GuildRoleSubscriptionMemberPreview from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
 import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSettingsDisabledContext.tsx";
@@ -16,245 +13,197 @@ import FormImagePicker from "FormImagePicker.tsx";
 import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep.tsx";
 import EditStateContextProvider from "../../edit_state/EditStateContextProvider.tsx";
 import FormRoleColorPickerDefault from "FormRoleColorPicker.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
 const FormImagePickerDefault = FormImagePicker;
-let _require;
 
-let c10;
-let c9;
-let obj2;
-let unpackModuleId;
-const View = react_native.View;
-const constants = GuildRoleSubscriptionsConstants.GuildRoleSubscriptionsTierScenes;
-const UPLOAD_SMALL_SIZE = Constants.UPLOAD_SMALL_SIZE;
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = Fragment);
-let obj = {
+require = fn;
+const View = fn(17).View;
+const constants = fn(15038).GuildRoleSubscriptionsTierScenes;
+const UPLOAD_SMALL_SIZE = fn(1085).UPLOAD_SMALL_SIZE;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   memberPreviews: { paddingHorizontal: 16, paddingTop: 26 },
-  member: obj2,
+  member: {
+    padding: 16,
+    borderRadius: nativeDefault.radii.none,
+    borderWidth: 0,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderColor: nativeDefault.colors.BORDER_STRONG,
+  },
   memberLight: { borderTopLeftRadius: 8, borderTopRightRadius: 8, borderTopWidth: 1 },
   memberDark: { borderBottomLeftRadius: 8, borderBottomRightRadius: 8, borderBottomWidth: 1 },
 };
-obj2 = {
-  padding: 16,
-  borderRadius: nativeDefault.radii.none,
-  borderWidth: 0,
-  borderLeftWidth: 1,
-  borderRightWidth: 1,
-  borderColor: nativeDefault.colors.BORDER_STRONG,
-};
-let closure_12 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_12 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (role) => {
-      let items;
-      let tmp13;
-      const obj = react2;
-      const cResult = obj.c(28);
+      const cResult = c.c(28);
       role = role.role;
       const tmp4 = closure_12();
-      const useToken = useToken5.useToken;
-      useToken5;
-      const token = useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.DARK);
-      const useToken2 = useToken5.useToken;
-      useToken5;
-      const token2 = useToken2(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.LIGHT);
-      const useToken3 = useToken5.useToken;
-      useToken5;
-      const token3 = useToken3(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.DARK);
-      const useToken4 = useToken5.useToken;
-      useToken5;
-      const token4 = useToken4(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.LIGHT);
-      if (cResult[0] !== token2) {
-        const obj2 = { backgroundColor: token2 };
-        cResult[0] = token2;
-        cResult[1] = obj2;
-        tmp13 = obj2;
+      const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.DARK);
+      const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.LIGHT);
+      const token2 = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.DARK);
+      const token3 = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.LIGHT);
+      if (cResult[0] !== token1) {
+        const obj6 = { backgroundColor: token1 };
+        cResult[0] = token1;
+        cResult[1] = obj6;
+        let tmp9 = obj6;
       } else {
-        tmp13 = cResult[1];
+        tmp9 = cResult[1];
       }
       if (cResult[2] === tmp4.member) {
         if (cResult[3] === tmp4.memberLight) {
-          let tmp14;
-          let tmp15;
-          if (cResult[4] === tmp13) {
-            tmp14 = cResult[5];
+          if (cResult[4] === tmp9) {
+            let tmp10 = cResult[5];
           }
-          if (cResult[6] !== token4) {
-            const obj3 = { color: token4 };
-            cResult[6] = token4;
-            cResult[7] = obj3;
-            tmp15 = obj3;
+          if (cResult[6] !== token3) {
+            const obj7 = { color: token3 };
+            cResult[6] = token3;
+            cResult[7] = obj7;
+            let tmp11 = obj7;
           } else {
-            tmp15 = cResult[7];
+            tmp11 = cResult[7];
           }
           if (cResult[8] === role) {
-            if (cResult[9] === tmp14) {
-              let tmp16;
-              let tmp19;
-              if (cResult[10] === tmp15) {
-                tmp16 = cResult[11];
+            if (cResult[9] === tmp10) {
+              if (cResult[10] === tmp11) {
+                let tmp12 = cResult[11];
               }
               if (cResult[12] !== token) {
-                const obj4 = { backgroundColor: token };
+                const obj8 = { backgroundColor: token };
                 cResult[12] = token;
-                cResult[13] = obj4;
-                tmp19 = obj4;
+                cResult[13] = obj8;
+                let tmp15 = obj8;
               } else {
-                tmp19 = cResult[13];
+                tmp15 = cResult[13];
               }
               if (cResult[14] === tmp4.member) {
                 if (cResult[15] === tmp4.memberDark) {
-                  let tmp20;
-                  let tmp21;
-                  if (cResult[16] === tmp19) {
-                    tmp20 = cResult[17];
+                  if (cResult[16] === tmp15) {
+                    let tmp16 = cResult[17];
                   }
-                  if (cResult[18] !== token3) {
-                    const obj5 = { color: token3 };
-                    cResult[18] = token3;
-                    cResult[19] = obj5;
-                    tmp21 = obj5;
+                  if (cResult[18] !== token2) {
+                    const obj9 = { color: token2 };
+                    cResult[18] = token2;
+                    cResult[19] = obj9;
+                    let tmp17 = obj9;
                   } else {
-                    tmp21 = cResult[19];
+                    tmp17 = cResult[19];
                   }
                   if (cResult[20] === role) {
-                    if (cResult[21] === tmp20) {
-                      let tmp22;
-                      if (cResult[22] === tmp21) {
-                        tmp22 = cResult[23];
+                    if (cResult[21] === tmp16) {
+                      if (cResult[22] === tmp17) {
+                        let tmp18 = cResult[23];
                       }
                       if (cResult[24] === tmp4.memberPreviews) {
-                        if (cResult[25] === tmp16) {
-                          let tmp25;
-                          if (cResult[26] === tmp22) {
-                            tmp25 = cResult[27];
+                        if (cResult[25] === tmp12) {
+                          if (cResult[26] === tmp18) {
+                            let tmp21 = cResult[27];
                           }
-                          return tmp25;
+                          return tmp21;
                         }
                       }
-                      const obj6 = { style: tmp4.memberPreviews, children: items };
-                      items = [tmp16, tmp22];
-                      const tmp28 = authStore(View, obj6);
+                      const obj10 = { style: tmp4.memberPreviews, children: null };
+                      const items = [tmp12, tmp18];
+                      obj10.children = items;
+                      const tmp24 = v65535(View, obj10);
                       cResult[24] = tmp4.memberPreviews;
-                      cResult[25] = tmp16;
-                      cResult[26] = tmp22;
-                      cResult[27] = tmp28;
-                      tmp25 = tmp28;
+                      cResult[25] = tmp12;
+                      cResult[26] = tmp18;
+                      cResult[27] = tmp24;
+                      tmp21 = tmp24;
                     }
                   }
-                  const obj7 = { style: tmp20, textStyle: tmp21, role };
-                  const tmp24 = React4(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj7);
+                  const obj11 = { style: tmp16, textStyle: tmp17, role };
+                  const tmp20 = options(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj11);
                   cResult[20] = role;
-                  cResult[21] = tmp20;
-                  cResult[22] = tmp21;
-                  cResult[23] = tmp24;
-                  tmp22 = tmp24;
+                  cResult[21] = tmp16;
+                  cResult[22] = tmp17;
+                  cResult[23] = tmp20;
+                  tmp18 = tmp20;
                 }
               }
               const items1 = [, ,];
               ({ member: arr2[0], memberDark: arr2[1] } = tmp4);
-              items1[2] = tmp19;
+              items1[2] = tmp15;
               cResult[14] = tmp4.member;
               cResult[15] = tmp4.memberDark;
-              cResult[16] = tmp19;
+              cResult[16] = tmp15;
               cResult[17] = items1;
-              tmp20 = items1;
+              tmp16 = items1;
             }
           }
-          const obj8 = { style: tmp14, textStyle: tmp15, role };
-          const tmp18 = React4(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj8);
+          const obj12 = { style: tmp10, textStyle: tmp11, role };
+          const tmp14 = options(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj12);
           cResult[8] = role;
-          cResult[9] = tmp14;
-          cResult[10] = tmp15;
-          cResult[11] = tmp18;
-          tmp16 = tmp18;
+          cResult[9] = tmp10;
+          cResult[10] = tmp11;
+          cResult[11] = tmp14;
+          tmp12 = tmp14;
         }
       }
       const items2 = [, ,];
       ({ member: arr[0], memberLight: arr[1] } = tmp4);
-      items2[2] = tmp13;
+      items2[2] = tmp9;
       cResult[2] = tmp4.member;
       cResult[3] = tmp4.memberLight;
-      cResult[4] = tmp13;
+      cResult[4] = tmp9;
       cResult[5] = items2;
-      tmp14 = items2;
+      tmp10 = items2;
     }
   : (role) => {
-      let items;
-      let items1;
-      let items2;
       role = role.role;
       const tmp = closure_12();
-      const useToken = useToken5.useToken;
-      useToken5;
-      const token = useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.DARK);
-      const useToken2 = useToken5.useToken;
-      useToken5;
-      const token2 = useToken2(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.LIGHT);
-      const useToken3 = useToken5.useToken;
-      useToken5;
-      const token3 = useToken3(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.DARK);
-      const useToken4 = useToken5.useToken;
-      const obj = { style: tmp.memberPreviews, children: items1 };
-      useToken5;
-      const token4 = useToken4(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.LIGHT);
-      const obj2 = { style: items, textStyle: { color: token4 }, role };
-      items = [, ,];
+      const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.DARK);
+      const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.LIGHT);
+      const token2 = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.DARK);
+      const obj5 = { style: tmp.memberPreviews, children: null };
+      const token3 = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.LIGHT);
+      const obj6 = { style: null, textStyle: { color: token3 }, role };
+      const items = [, ,];
       ({ member: arr[0], memberLight: arr[1] } = tmp);
-      items[2] = { backgroundColor: token2 };
-      items1 = [React4(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj2)];
-      const obj3 = { style: items2, textStyle: { color: token3 }, role };
-      items2 = [, ,];
+      items[2] = { backgroundColor: token1 };
+      obj6.style = items;
+      const items1 = [options(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj6)];
+      const obj7 = { style: null, textStyle: { color: token2 }, role };
+      const items2 = [, ,];
       ({ member: arr3[0], memberDark: arr3[1] } = tmp);
       items2[2] = { backgroundColor: token };
-      items1[1] = React4(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj3);
-      return authStore(View, obj);
+      obj7.style = items2;
+      items1[1] = options(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, obj7);
+      obj5.children = items1;
+      return v65535(View, obj5);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let editStateId;
-      let guildId;
-      let items;
-      let tmp12;
-      let tmp14;
-      let tmp18;
-      let tmp22;
-      let tmp24;
-      let tmp27;
-      let tmp29;
-      let tmp8;
-      let tmp9;
-      let obj = react2;
-      const cResult = obj.c(29);
+      const cResult = c.c(29);
       const tmp5 = FormStylesDefault();
-      const obj2 = EditStateContextProvider;
-      const editStateContext = obj2.useEditStateContext();
+      const editStateContext = EditStateContextProvider.useEditStateContext();
       ({ editStateId, guildId } = editStateContext);
-      const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      [tmp8, tmp9] = obj3.useRoleColor(editStateId, guildId);
-      _slicedToArray(obj3.useRoleColor(editStateId, guildId), 2);
-      const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      const tmp10 = _slicedToArray(obj4.useRoleIcon(editStateId, guildId), 2)[1];
-      let closure_0 = tmp10;
-      const obj5 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      const role = obj5.useRole(editStateId, guildId);
+      [tmp8, tmp9] = GuildRoleSubscriptionListingEditStateUtilsAll.useRoleColor(editStateId, guildId);
+      const tmp7 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useRoleColor(editStateId, guildId), 2);
+      const tmp10 = _slicedToArray(
+        GuildRoleSubscriptionListingEditStateUtilsAll.useRoleIcon(editStateId, guildId),
+        2,
+      )[1];
+      closure_0 = tmp10;
+      const role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(editStateId, guildId);
       if (cResult[0] !== role) {
-        const tmpResult = RoleIconUtils;
-        let roleIconData = tmpResult.getRoleIconData(role);
+        let roleIconData = RoleIconUtils.getRoleIconData(role);
         if (roleIconData == null) {
           roleIconData = {};
         }
         cResult[0] = role;
         cResult[1] = roleIconData;
-        tmp12 = roleIconData;
+        let tmp12 = roleIconData;
+        const tmpResult = RoleIconUtils;
       } else {
         tmp12 = cResult[1];
       }
@@ -262,112 +211,105 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== customIconSrc) {
         let tmp16;
         if (null != customIconSrc) {
-          tmp16 = { uri: customIconSrc };
           const obj6 = { uri: customIconSrc };
+          tmp16 = obj6;
         }
         cResult[2] = customIconSrc;
         cResult[3] = tmp16;
-        tmp14 = tmp16;
+        let tmp14 = tmp16;
       } else {
         tmp14 = cResult[3];
       }
-      const tmpResult2 = RoleSubscriptionSettingsDisabledContext;
-      const roleSubscriptionSettingsDisabled = tmpResult2.useRoleSubscriptionSettingsDisabled();
+      const roleSubscriptionSettingsDisabled =
+        RoleSubscriptionSettingsDisabledContext.useRoleSubscriptionSettingsDisabled();
       if (cResult[4] !== role) {
         const obj7 = { role };
-        const tmp21 = React4(closure_13, obj7);
+        const tmp21 = options(closure_13, obj7);
         cResult[4] = role;
         cResult[5] = tmp21;
-        tmp18 = tmp21;
+        let tmp18 = tmp21;
       } else {
         tmp18 = cResult[5];
       }
-      const header = tmp5.header;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl4.intl;
-        const stringResult = intl.string(intl4.t.sEr1zr);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.sEr1zr);
         cResult[6] = stringResult;
-        tmp22 = stringResult;
+        let tmp22 = stringResult;
       } else {
         tmp22 = cResult[6];
       }
       if (cResult[7] !== tmp5.header) {
-        const obj8 = { style: header, children: tmp22 };
-        const tmp26 = React4(FormHeaderDefault, obj8);
+        const obj8 = { style: tmp5.header, children: tmp22 };
+        const tmp26 = options(FormHeaderDefault, obj8);
         cResult[7] = tmp5.header;
         cResult[8] = tmp26;
-        tmp24 = tmp26;
+        let tmp24 = tmp26;
       } else {
         tmp24 = cResult[8];
       }
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = intl4.intl;
-        const stringResult1 = intl2.string(intl4.t.Glqj9m);
+        const intl2 = util.intl;
+        const stringResult1 = intl2.string(util.t.Glqj9m);
         cResult[9] = stringResult1;
-        tmp27 = stringResult1;
+        let tmp27 = stringResult1;
       } else {
         tmp27 = cResult[9];
       }
       if (cResult[10] !== tmp10) {
         const fn = function x(icon) {
-          const obj = { icon: icon.uri, unicodeEmoji: "Array" };
-          return closure_0(obj);
+          return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
         };
         cResult[10] = tmp10;
         cResult[11] = fn;
-        tmp29 = fn;
+        let tmp29 = fn;
       } else {
         tmp29 = cResult[11];
       }
       if (cResult[12] === tmp14) {
         if (cResult[13] === roleSubscriptionSettingsDisabled) {
-          let tmp30;
-          let tmp33;
-          let tmp35;
           if (cResult[14] === tmp29) {
-            tmp30 = cResult[15];
+            let tmp30 = cResult[15];
           }
           const _Symbol = Symbol;
-          const header2 = tmp5.header;
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = intl4.intl;
-            const stringResult2 = intl3.string(intl4.t["W7hH+z"]);
+            const intl3 = util.intl;
+            const stringResult2 = intl3.string(util.t["W7hH+z"]);
             cResult[16] = stringResult2;
-            tmp33 = stringResult2;
+            let tmp33 = stringResult2;
           } else {
             tmp33 = cResult[16];
           }
           if (cResult[17] !== tmp5.header) {
-            const obj9 = { style: header2, children: tmp33 };
-            const tmp37 = React4(FormHeaderDefault, obj9);
+            const obj9 = { style: tmp5.header, children: tmp33 };
+            const tmp37 = options(FormHeaderDefault, obj9);
             cResult[17] = tmp5.header;
             cResult[18] = tmp37;
-            tmp35 = tmp37;
+            let tmp35 = tmp37;
           } else {
             tmp35 = cResult[18];
           }
           if (cResult[19] === tmp8) {
             if (cResult[20] === roleSubscriptionSettingsDisabled) {
-              let tmp38;
               if (cResult[21] === tmp9) {
-                tmp38 = cResult[22];
+                let tmp38 = cResult[22];
               }
               if (cResult[23] === tmp35) {
                 if (cResult[24] === tmp38) {
                   if (cResult[25] === tmp18) {
                     if (cResult[26] === tmp24) {
-                      let tmp41;
                       if (cResult[27] === tmp30) {
-                        tmp41 = cResult[28];
+                        let tmp41 = cResult[28];
                       }
                       return tmp41;
                     }
                   }
                 }
               }
-              const obj10 = { children: items };
-              items = [tmp18, tmp24, tmp30, tmp35, tmp38];
-              const tmp44 = authStore(unpackModuleId, obj10);
+              const obj10 = { children: null };
+              const items = [tmp18, tmp24, tmp30, tmp35, tmp38];
+              obj10.children = items;
+              const tmp44 = v65535(closure_1_11, obj10);
               cResult[23] = tmp35;
               cResult[24] = tmp38;
               cResult[25] = tmp18;
@@ -378,7 +320,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj11 = { color: tmp8, onChange: tmp9, disabled: roleSubscriptionSettingsDisabled };
-          const tmp40 = React4(FormRoleColorPickerDefault, obj11);
+          const tmp40 = options(FormRoleColorPickerDefault, obj11);
           cResult[19] = tmp8;
           cResult[20] = roleSubscriptionSettingsDisabled;
           cResult[21] = tmp9;
@@ -390,45 +332,35 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         description: tmp27,
         image: tmp14,
         imageUploadSize: UPLOAD_SMALL_SIZE,
-        previewShape: FormImagePicker.PreviewShape.SQUIRCLE,
+        previewShape: null,
         previewResizeMode: "cover",
-        setImage: tmp29,
-        disabled: roleSubscriptionSettingsDisabled,
+        setImage: null,
+        disabled: null,
       };
-      const tmp4Result = FormImagePickerDefault;
-      const tmp32 = React4(tmp4Result, obj12);
+      const tmpResult2 = RoleSubscriptionSettingsDisabledContext;
+      obj12.previewShape = FormImagePicker.PreviewShape.SQUIRCLE;
+      obj12.setImage = tmp29;
+      obj12.disabled = roleSubscriptionSettingsDisabled;
+      const tmp32 = options(FormImagePickerDefault, obj12);
       cResult[12] = tmp14;
       cResult[13] = roleSubscriptionSettingsDisabled;
       cResult[14] = tmp29;
       cResult[15] = tmp32;
       tmp30 = tmp32;
+      const tmp4Result = FormImagePickerDefault;
     }
   : () => {
-      let closure_0;
-      let editStateId;
-      let guildId;
-      let intl;
-      let intl2;
-      let intl3;
-      let items1;
-      let role;
-      let tmp7;
-      let tmp8;
       const tmp3 = role(13728)();
-      let obj = require("EditStateContextProvider");
-      const editStateContext = obj.useEditStateContext();
+      const editStateContext = require("EditStateContextProvider").useEditStateContext();
       ({ editStateId, guildId } = editStateContext);
-      const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      [tmp7, tmp8] = obj2.useRoleColor(editStateId, guildId);
-      _slicedToArray(obj2.useRoleColor(editStateId, guildId), 2);
-      const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      _require = _slicedToArray(obj3.useRoleIcon(editStateId, guildId), 2)[1];
-      const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      role = obj4.useRole(editStateId, guildId);
+      const obj = require("EditStateContextProvider");
+      [tmp7, tmp8] = GuildRoleSubscriptionListingEditStateUtilsAll.useRoleColor(editStateId, guildId);
+      const tmp6 = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useRoleColor(editStateId, guildId), 2);
+      _require = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useRoleIcon(editStateId, guildId), 2)[1];
+      role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(editStateId, guildId);
       const items = [role];
-      const customIconSrc = react.useMemo(() => {
-        const obj = RoleIconUtils;
-        let roleIconData = obj.getRoleIconData(role);
+      const customIconSrc = noop.useMemo(() => {
+        let roleIconData = RoleIconUtils.getRoleIconData(role);
         if (roleIconData == null) {
           roleIconData = {};
         }
@@ -436,69 +368,83 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }, items).customIconSrc;
       let tmp10;
       if (null != customIconSrc) {
-        tmp10 = { uri: customIconSrc };
         const obj5 = { uri: customIconSrc };
+        tmp10 = obj5;
       }
+      const roleSubscriptionSettingsDisabled =
+        require("RoleSubscriptionSettingsDisabledContext").useRoleSubscriptionSettingsDisabled();
+      const obj6 = { children: null };
+      const items1 = [closure_9(closure_13, { role }), , , ,];
+      const obj7 = { style: tmp3.header, children: null };
       const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
-      const roleSubscriptionSettingsDisabled = tmp4Result.useRoleSubscriptionSettingsDisabled();
-      const obj6 = { children: items1 };
-      items1 = [closure_9(closure_13, { role }), , , ,];
-      const obj7 = { style: tmp3.header, children: intl.string(require("intl").t.sEr1zr) };
-      const tmpResult = role(9490);
-      intl = tmp4(1126).intl;
-      items1[1] = closure_9(tmpResult, obj7);
+      const intl = tmp4(1126).intl;
+      obj7.children = intl.string(require("util").t.sEr1zr);
+      items1[1] = closure_9(role(9490), obj7);
       const obj8 = {
-        description: intl2.string(require("intl").t.Glqj9m),
-        image: tmp10,
-        imageUploadSize: UPLOAD_SMALL_SIZE,
-        previewShape: require("FormImagePicker").PreviewShape.SQUIRCLE,
+        description: null,
+        image: null,
+        imageUploadSize: null,
+        previewShape: null,
         previewResizeMode: "cover",
-        setImage(icon) {
-          const obj = { icon: icon.uri, unicodeEmoji: "Array" };
-          return closure_0(obj);
-        },
-        disabled: roleSubscriptionSettingsDisabled,
+        setImage: null,
+        disabled: null,
       };
+      const tmpResult = role(9490);
+      const intl2 = tmp4(1126).intl;
+      obj8.description = intl2.string(require("util").t.Glqj9m);
+      obj8.image = tmp10;
+      obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
+      obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
+      obj8.setImage = function setImage(icon) {
+        return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
+      };
+      obj8.disabled = roleSubscriptionSettingsDisabled;
+      items1[2] = closure_9(role(17973), obj8);
+      const obj9 = { style: tmp3.header, children: null };
       const tmpResult3 = role(17973);
-      intl2 = tmp4(1126).intl;
-      items1[2] = closure_9(tmpResult3, obj8);
-      const obj9 = { style: tmp3.header, children: intl3.string(require("intl").t["W7hH+z"]) };
-      const tmpResult4 = role(9490);
-      intl3 = tmp4(1126).intl;
-      items1[3] = closure_9(tmpResult4, obj9);
+      const intl3 = tmp4(1126).intl;
+      obj9.children = intl3.string(require("util").t["W7hH+z"]);
+      items1[3] = closure_9(role(9490), obj9);
       items1[4] = closure_9(role(18009), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+      obj6.children = items1;
       return closure_10(closure_11, obj6);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+let obj3 = {
+  padding: 16,
+  borderRadius: nativeDefault.radii.none,
+  borderWidth: 0,
+  borderLeftWidth: 1,
+  borderRightWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_STRONG,
+};
+ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      const obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp5 = React4(closure_14, {});
+        const tmp5 = options(closure_14, {});
         cResult[0] = tmp5;
-        first = tmp5;
+        let first = tmp5;
       } else {
         first = cResult[0];
       }
       return first;
     }
-  : () => React4(closure_14, {});
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  : () => options(closure_14, {});
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp12;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(5);
+      const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl4.intl;
-        const stringResult = intl.string(intl4.t.AbcgTx);
-        const intl2 = intl4.intl;
-        const stringResult1 = intl2.string(intl4.t.YAUjGn);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.AbcgTx);
+        const intl2 = util.intl;
+        const stringResult1 = intl2.string(util.t.YAUjGn);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -507,50 +453,34 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = React4(closure_14, {});
+        const tmp11 = options(closure_14, {});
         cResult[2] = tmp11;
-        tmp8 = tmp11;
+        let tmp8 = tmp11;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] !== arg0) {
-        const obj2 = {
-          title: tmp4,
-          description: tmp5,
-          canProceedToNextStep: true,
-          nextStep: constants.CONFIRMATION,
-          children: tmp8,
-        };
-        const tmp15 = GuildRoleSubscriptionTierEditStepDefault;
+        const obj2 = { title: tmp4, description: tmp5, canProceedToNextStep: true, nextStep: constants.CONFIRMATION };
         const merged = Object.assign(arg0);
-        const tmp20 = React4(tmp15, obj2);
+        obj2.children = tmp8;
+        const tmp20 = options(GuildRoleSubscriptionTierEditStepDefault, obj2);
         cResult[3] = arg0;
         cResult[4] = tmp20;
-        tmp12 = tmp20;
+        let tmp12 = tmp20;
       } else {
         tmp12 = cResult[4];
       }
       return tmp12;
     }
   : (arg0) => {
-      let intl;
-      let intl2;
-      const obj = {
-        title: intl.string(intl4.t.AbcgTx),
-        description: intl2.string(intl4.t.YAUjGn),
-        canProceedToNextStep: true,
-        nextStep: constants.CONFIRMATION,
-        children: React4(closure_14, {}),
-      };
-      const tmp = GuildRoleSubscriptionTierEditStepDefault;
-      intl = intl4.intl;
-      intl2 = intl4.intl;
+      const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.AbcgTx);
+      const intl2 = util.intl;
+      obj.description = intl2.string(util.t.YAUjGn);
+      obj.nextStep = constants.CONFIRMATION;
       const merged = Object.assign(arg0);
-      return React4(tmp, obj);
+      obj.children = options(closure_14, {});
+      return options(GuildRoleSubscriptionTierEditStepDefault, obj);
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx",
-);
-
-export default tmp4;
 export const GuildRoleSubscriptionTierDesignTab = tmp3;

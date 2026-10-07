@@ -1,95 +1,83 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../_runtime/00576_react.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../Constants.tsx";
 import native from "../../../design/void/native.tsx";
-import shared from "../../../design/shared.tsx";
-import LegacyTokens from "../../../design/migrations/native/LegacyTokens.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13436_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/13437_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/13438_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/13439_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/13440_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/13441_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/13442_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../_runtime/13443_AssetRegistry.js";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _modDef13436 from "../../../../_runtime/metro/13436__.js";
+import _modDef13437 from "../../../../_runtime/metro/13437__.js";
+import _modDef13438 from "../../../../_runtime/metro/13438__.js";
+import _modDef13439 from "../../../../_runtime/metro/13439__.js";
+import _modDef13440 from "../../../../_runtime/metro/13440__.js";
+import _modDef13441 from "../../../../_runtime/metro/13441__.js";
+import _modDef13442 from "../../../../_runtime/metro/13442__.js";
+import _modDef13443 from "../../../../_runtime/metro/13443__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const GuildIconDefault = GuildIcon;
 
-let c3;
-let closure_4;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
+require = fn;
 function getTierIcon(theme, tier) {
   if (BoostedGuildTiers.NONE === tier) {
-    const tmp19 = AssetRegistryDefault;
-    let tmp20 = AssetRegistryDefault2;
-    const obj4 = shared;
+    let tmp20 = _modDef13437;
+    const tmp19 = _modDef13436;
     if (obj4.isThemeDark(theme)) {
       tmp20 = tmp19;
     }
     return tmp20;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    const tmp14 = AssetRegistryDefault3;
-    let tmp15 = AssetRegistryDefault4;
-    const obj3 = shared;
+    let tmp15 = _modDef13439;
+    const tmp14 = _modDef13438;
     if (obj3.isThemeDark(theme)) {
       tmp15 = tmp14;
     }
     return tmp15;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    const tmp9 = AssetRegistryDefault5;
-    let tmp10 = AssetRegistryDefault6;
-    const obj2 = shared;
+    let tmp10 = _modDef13441;
+    const tmp9 = _modDef13440;
     if (obj2.isThemeDark(theme)) {
       tmp10 = tmp9;
     }
     return tmp10;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    const tmp4 = AssetRegistryDefault7;
-    let tmp5 = AssetRegistryDefault8;
-    const obj = shared;
+    let tmp5 = _modDef13443;
+    const tmp4 = _modDef13442;
     if (obj.isThemeDark(theme)) {
       tmp5 = tmp4;
     }
     return tmp5;
   }
 }
-({ View: c3, Image: closure_4 } = react_native);
-const BoostedGuildTiers = Constants.BoostedGuildTiers;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  guild: obj2,
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  guild: {
+    padding: 16,
+    borderRadius: nativeDefault.radii.xs,
+    flexDirection: "row",
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  },
   guildInfo: { marginLeft: 16 },
-  guildName: obj3,
-  tierPill: obj4,
-  tierPillImage: { width: 16, height: 16 },
-  tierPillText: obj5,
+  guildName: null,
+  tierPill: null,
+  tierPillImage: null,
+  tierPillText: null,
 };
-obj2 = {
+let obj3 = {
   padding: 16,
   borderRadius: nativeDefault.radii.xs,
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-createStyles = createStyles.createStyles;
-obj3 = { fontSize: 16, lineHeight: 20, color: LegacyTokens.DARK_WHITE_500_LIGHT_BLACK_500 };
-obj4 = {
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5627).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.tierPill = {
   marginTop: 8,
   padding: 4,
   paddingRight: 8,
@@ -98,71 +86,72 @@ obj4 = {
   borderRadius: 11,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj5 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: LegacyTokens.DARK_WHITE_500_LIGHT_PRIMARY_660 };
-let closure_9 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj2.tierPillImage = { width: 16, height: 16 };
+let obj5 = {
+  marginTop: 8,
+  padding: 4,
+  paddingRight: 8,
+  alignSelf: "flex-start",
+  flexDirection: "row",
+  borderRadius: 11,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+};
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5627).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+let closure_9 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let items;
-      let theme;
-      let tier;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       ({ tier, theme } = arg0);
       const tmp4 = closure_9();
       if (cResult[0] === theme) {
-        let tmp7;
         if (cResult[1] === tier) {
-          tmp7 = cResult[2];
+          let tmp7 = cResult[2];
         }
         if (cResult[3] === tmp4.tierPillImage) {
-          let tmp9;
-          let tmp13;
           if (cResult[4] === tmp7) {
-            tmp9 = cResult[5];
+            let tmp9 = cResult[5];
           }
-          const tierPillText = tmp4.tierPillText;
           if (cResult[6] !== tier) {
-            const tmpResult = GuildBoostingUtils;
-            const tierName = tmpResult.getTierName(tier);
+            const tierName = GuildBoostingUtils.getTierName(tier);
             cResult[6] = tier;
             cResult[7] = tierName;
-            tmp13 = tierName;
+            let tmp13 = tierName;
+            const tmpResult = GuildBoostingUtils;
           } else {
             tmp13 = cResult[7];
           }
           if (cResult[8] === tmp4.tierPillText) {
-            let tmp15;
             if (cResult[9] === tmp13) {
-              tmp15 = cResult[10];
+              let tmp15 = cResult[10];
             }
             if (cResult[11] === tmp4.tierPill) {
               if (cResult[12] === tmp9) {
-                let tmp18;
                 if (cResult[13] === tmp15) {
-                  tmp18 = cResult[14];
+                  let tmp18 = cResult[14];
                 }
                 return tmp18;
               }
             }
-            const obj2 = { style: tmp5, children: items };
-            items = [tmp9, tmp15];
-            const tmp21 = metroImportAll(_false, obj2);
+            const obj2 = { style: tmp5, children: null };
+            const items = [tmp9, tmp15];
+            obj2.children = items;
+            const tmp21 = closure_1_8(React3, obj2);
             cResult[11] = tmp4.tierPill;
             cResult[12] = tmp9;
             cResult[13] = tmp15;
             cResult[14] = tmp21;
             tmp18 = tmp21;
           }
-          const obj3 = { style: tierPillText, children: tmp13 };
-          const tmp17 = metroImportDefault(native.LegacyText, obj3);
+          const obj3 = { style: tmp4.tierPillText, children: tmp13 };
+          const tmp17 = React5(native.LegacyText, obj3);
           cResult[8] = tmp4.tierPillText;
           cResult[9] = tmp13;
           cResult[10] = tmp17;
           tmp15 = tmp17;
         }
         const obj4 = { style: tmp6, source: tmp7 };
-        const tmp12 = metroImportDefault(React3, obj4);
+        const tmp12 = React5(React4, obj4);
         cResult[3] = tmp4.tierPillImage;
         cResult[4] = tmp7;
         cResult[5] = tmp12;
@@ -175,33 +164,27 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
     }
   : (tier) => {
-      let items;
-      let obj4;
       tier = tier.tier;
-      const theme = tier.theme;
       const tmp = closure_9();
-      const obj = { style: tmp.tierPill, children: items };
-      items = [,];
-      const obj2 = { style: tmp.tierPillImage, source: getTierIcon(theme, tier) };
-      items[0] = metroImportDefault(React3, obj2);
-      const obj3 = { style: tmp.tierPillText, children: obj4.getTierName(tier) };
-      const LegacyText = native.LegacyText;
-      obj4 = GuildBoostingUtils;
-      items[1] = metroImportDefault(LegacyText, obj3);
-      return metroImportAll(_false, obj);
+      const obj = { style: tmp.tierPill, children: null };
+      const items = [React5(React4, { style: tmp.tierPillImage, source: getTierIcon(tier.theme, tier) })];
+      const obj3 = { style: tmp.tierPillText, children: null };
+      const obj2 = { style: tmp.tierPillImage, source: getTierIcon(tier.theme, tier) };
+      obj3.children = GuildBoostingUtils.getTierName(tier);
+      items[1] = React5(native.LegacyText, obj3);
+      obj.children = items;
+      return closure_1_8(React3, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5627).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let guild;
-      let items1;
-      let items2;
-      let style;
-      let theme;
-      let tmp5;
-      let tmp6;
-      const obj = react2;
-      const cResult = obj.c(21);
+      const cResult = c.c(21);
       ({ guild, style } = arg0);
       const tmp4 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -216,52 +199,45 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
       if (cResult[2] === style) {
-        let tmp9;
-        let tmp10;
         if (cResult[3] === tmp4.guild) {
-          tmp9 = cResult[4];
+          let tmp9 = cResult[4];
         }
         if (cResult[5] !== guild) {
           const obj2 = { guild, size: GuildIcon.GuildIconSizes.LARGE, selected: false };
-          const tmp13 = GuildIconDefault;
-          const tmp14 = metroImportDefault(tmp13, obj2);
+          const tmp14 = React5(GuildIconDefault, obj2);
           cResult[5] = guild;
           cResult[6] = tmp14;
-          tmp10 = tmp14;
+          let tmp10 = tmp14;
         } else {
           tmp10 = cResult[6];
         }
         if (cResult[7] === guild.name) {
-          let tmp15;
           if (cResult[8] === tmp4.guildName) {
-            tmp15 = cResult[9];
+            let tmp15 = cResult[9];
           }
           if (cResult[10] === guild.premiumTier) {
-            let tmp18;
             if (cResult[11] === stateFromStores) {
-              tmp18 = cResult[12];
+              let tmp18 = cResult[12];
             }
             if (cResult[13] === tmp4.guildInfo) {
               if (cResult[14] === tmp15) {
-                let tmp22;
                 if (cResult[15] === tmp18) {
-                  tmp22 = cResult[16];
+                  let tmp22 = cResult[16];
                 }
                 if (cResult[17] === tmp9) {
                   if (cResult[18] === tmp10) {
-                    let tmp26;
                     if (cResult[19] === tmp22) {
-                      tmp26 = cResult[20];
+                      let tmp26 = cResult[20];
                     }
                     return tmp26;
                   }
                 }
-                const obj3 = { style: tmp9, children: items1 };
-                items1 = [tmp10, tmp22];
-                const tmp29 = metroImportAll(_false, obj3);
+                const obj3 = { style: tmp9, children: null };
+                const items1 = [tmp10, tmp22];
+                obj3.children = items1;
+                const tmp29 = closure_1_8(React3, obj3);
                 cResult[17] = tmp9;
                 cResult[18] = tmp10;
                 cResult[19] = tmp22;
@@ -269,9 +245,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp26 = tmp29;
               }
             }
-            const obj4 = { style: tmp4.guildInfo, children: items2 };
-            items2 = [tmp15, tmp18];
-            const tmp25 = metroImportAll(_false, obj4);
+            const obj4 = { style: tmp4.guildInfo, children: null };
+            const items2 = [tmp15, tmp18];
+            obj4.children = items2;
+            const tmp25 = closure_1_8(React3, obj4);
             cResult[13] = tmp4.guildInfo;
             cResult[14] = tmp15;
             cResult[15] = tmp18;
@@ -279,14 +256,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             tmp22 = tmp25;
           }
           const obj5 = { tier: guild.premiumTier, theme: stateFromStores };
-          const tmp21 = metroImportDefault(closure_11, obj5);
+          const tmp21 = React5(closure_11, obj5);
           cResult[10] = guild.premiumTier;
           cResult[11] = stateFromStores;
           cResult[12] = tmp21;
           tmp18 = tmp21;
         }
         const obj6 = { style: tmp4.guildName, children: guild.name };
-        const tmp17 = metroImportDefault(native.LegacyText, obj6);
+        const tmp17 = React5(native.LegacyText, obj6);
         cResult[7] = guild.name;
         cResult[8] = tmp4.guildName;
         cResult[9] = tmp17;
@@ -297,34 +274,26 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4.guild;
       cResult[4] = items3;
       tmp9 = items3;
+      const tmpResult = initialize;
     }
   : (guild) => {
-      let items1;
-      let items2;
-      let items3;
-      let theme;
       guild = guild.guild;
-      const style = guild.style;
       const tmp = closure_9();
       const items = [ThemeStore];
-      const obj2 = { style: items1, children: items2 };
-      items1 = [tmp.guild, style];
-      const obj = get_initialized;
-      const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
-      const obj3 = { guild, size: GuildIcon.GuildIconSizes.LARGE, selected: false };
-      const tmp3 = GuildIconDefault;
-      items2 = [metroImportDefault(tmp3, obj3)];
-      const obj4 = { style: tmp.guildInfo, children: items3 };
-      items3 = [,];
-      const obj5 = { style: tmp.guildName, children: guild.name };
-      items3[0] = metroImportDefault(native.LegacyText, obj5);
-      const obj6 = { tier: guild.premiumTier, theme: stateFromStores };
-      items3[1] = metroImportDefault(closure_11, obj6);
-      items2[1] = metroImportAll(_false, obj4);
-      return metroImportAll(_false, obj2);
+      const obj2 = { style: null, children: null };
+      const items1 = [tmp.guild, guild.style];
+      obj2.style = items1;
+      const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
+      const obj3 = { guild, size: null, selected: false };
+      obj3.size = GuildIcon.GuildIconSizes.LARGE;
+      const items2 = [React5(GuildIconDefault, obj3)];
+      const obj4 = { style: tmp.guildInfo, children: null };
+      const items3 = [
+        React5(native.LegacyText, { style: tmp.guildName, children: guild.name }),
+        React5(closure_11, { tier: guild.premiumTier, theme: stateFromStores }),
+      ];
+      obj4.children = items3;
+      items2[1] = closure_1_8(React3, obj4);
+      obj2.children = items2;
+      return closure_1_8(React3, obj2);
     };
-const result = size.fileFinishedImporting(
-  "components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx",
-);
-
-export default tmp6;

@@ -1,22 +1,28 @@
 // discord_app/design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx
 import waveTransition from "waveTransition.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_0, closure_12, current, initialDelay, play, ref2, ref3, tmp;
+require = fn;
+const ReactCompilerGating = fn(558);
+function linesKeyFor(join) {
+  let joined = join;
+  if (Array.isArray(join)) {
+    joined = join.join("\0");
+  }
+  return joined;
+}
+function linesFromKey(str) {
+  return str.split("\0");
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx");
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export { linesKeyFor };
+export { linesFromKey };
+export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled()
   ? (initialDelay) => {
-      let delay;
-      let ref6;
-      let ref7;
-      let ref8;
-      let str;
-      let text;
-      let obj = delay(initialDelay[3]);
-      const cResult = obj.c(43);
+      const cResult = delay(initialDelay[3]).c(43);
       ({ text, delay } = initialDelay);
       initialDelay = initialDelay.initialDelay;
       const duration = initialDelay.duration;
@@ -25,7 +31,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const onComplete = initialDelay.onComplete;
       const onStart = initialDelay.onStart;
       const createController = initialDelay.createController;
-      ref = reducedMotion.useRef(null);
+      reducedMotion.useRef(null);
       if (cResult[0] !== text) {
         const _Array = Array;
         let joined = text;
@@ -34,7 +40,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = text;
         cResult[1] = joined;
-        str = joined;
+        let str = joined;
       } else {
         str = cResult[1];
       }
@@ -49,35 +55,31 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = duration(reducedMotion.useState(0), 2);
       const first = tmp6[0];
       closure_12 = tmp8;
-      obj2.useRef(0);
-      obj2.useRef(null);
-      const ref4 = obj2.useRef(null);
-      const ref5 = obj2.useRef(true);
-      let closure_17 = obj2.useRef(onComplete);
-      let closure_18 = obj2.useRef(onStart);
-      ref = obj2.useRef(current);
-      ref2 = obj2.useRef(createController);
-      ref3 = obj2.useRef(trailingWidth);
-      const ref9 = obj2.useRef(duration);
-      const ref10 = obj2.useRef(reducedMotion);
-      const tmp5 = duration;
+      reducedMotion.useRef(0);
+      reducedMotion.useRef(null);
+      reducedMotion.useRef(null);
+      reducedMotion.useRef(true);
+      closure_17 = obj2.useRef(onComplete);
+      closure_18 = obj2.useRef(onStart);
+      reducedMotion.useRef(current);
+      reducedMotion.useRef(createController);
+      reducedMotion.useRef(trailingWidth);
+      reducedMotion.useRef(duration);
+      reducedMotion.useRef(reducedMotion);
       if (cResult[4] === createController) {
         if (cResult[5] === duration) {
           if (cResult[6] === current) {
             if (cResult[7] === onComplete) {
               if (cResult[8] === onStart) {
                 if (cResult[9] === reducedMotion) {
-                  let tmp9;
-                  let tmp17;
-                  let tmp20;
                   if (cResult[10] === trailingWidth) {
-                    tmp9 = cResult[11];
+                    let tmp9 = cResult[11];
                   }
                   const effect = obj2.useEffect(tmp9);
-                  const tmp5Result = tmp5(reducedMotion.useState(str), 2);
+                  const tmp5Result = tmp5(obj2.useState(str), 2);
                   if (tmp5Result[0] !== str) {
                     tmp5Result[1](str);
-                    tmp6[1](0);
+                    tmp8(0);
                   }
                   let num5 = 0;
                   if (current.length > 0) {
@@ -104,7 +106,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  G = tmp15;
+                  play = G;
                   const _Symbol2 = Symbol;
                   if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                     class Q {
@@ -123,10 +125,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         return obj;
                       }
                     }
-                    const items = [tmp15];
+                    const items = [G];
                     cResult[13] = Q;
                     cResult[14] = items;
-                    tmp17 = items;
+                    let tmp17 = items;
                   } else {
                     class Q {
                       constructor() {
@@ -146,14 +148,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     tmp17 = cResult[14];
                   }
-                  const imperativeHandle = obj2.useImperativeHandle(ref, Q, tmp17);
+                  const imperativeHandle = obj2.useImperativeHandle(initialDelay.ref, Q, tmp17);
                   const _Symbol3 = Symbol;
                   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                     class X {
                       constructor() {
                         str = closure_19.current[0];
                         tmp = closure_20;
-                        current = closure_20.current;
                         if (str == null) {
                           str = "";
                         }
@@ -177,25 +178,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                             return currentResult;
                           },
                         };
-                        currentResult = current(obj);
+                        currentResult = closure_20.current(obj);
                         closure_0 = currentResult;
                         closure_8.current = currentResult;
                         return () => {
-                          delay.destroy();
-                          ref.current = null;
+                          currentResult.destroy();
+                          closure_8.current = null;
                         };
                       }
                     }
                     const items1 = [];
                     cResult[15] = X;
                     cResult[16] = items1;
-                    tmp20 = items1;
+                    let tmp20 = items1;
                   } else {
                     class X {
                       constructor() {
                         str = closure_19.current[0];
                         tmp = closure_20;
-                        current = closure_20.current;
                         if (str == null) {
                           str = "";
                         }
@@ -219,12 +219,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                             return currentResult;
                           },
                         };
-                        currentResult = current(obj);
+                        currentResult = closure_20.current(obj);
                         closure_0 = currentResult;
                         closure_8.current = currentResult;
                         return () => {
-                          delay.destroy();
-                          ref.current = null;
+                          currentResult.destroy();
+                          closure_8.current = null;
                         };
                       }
                     }
@@ -236,7 +236,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       constructor() {
                         str = closure_19.current[0];
                         tmp = closure_20;
-                        current = closure_20.current;
                         if (str == null) {
                           str = "";
                         }
@@ -260,12 +259,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                             return currentResult;
                           },
                         };
-                        currentResult = current(obj);
+                        currentResult = closure_20.current(obj);
                         closure_0 = currentResult;
                         closure_8.current = currentResult;
                         return () => {
-                          delay.destroy();
-                          ref.current = null;
+                          currentResult.destroy();
+                          closure_8.current = null;
                         };
                       }
                     }
@@ -293,11 +292,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         constructor() {
           closure_17.current = onComplete;
           closure_18.current = onStart;
-          ref6.current = current;
-          ref7.current = createController;
-          ref8.current = trailingWidth;
-          ref9.current = duration;
-          ref10.current = reducedMotion;
+          closure_19.current = closure_10;
+          closure_20.current = createController;
+          closure_21.current = trailingWidth;
+          closure_22.current = duration;
+          closure_23.current = reducedMotion;
+          return;
         }
       }
       cResult[4] = createController;
@@ -309,10 +309,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = trailingWidth;
       cResult[11] = K;
       tmp9 = K;
+      let obj = delay(initialDelay[3]);
+      tmp5 = duration;
     }
   : (initialDelay) => {
-      let delay;
-      let text;
       ({ text, delay } = initialDelay);
       initialDelay = initialDelay.initialDelay;
       const duration = initialDelay.duration;
@@ -324,55 +324,44 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let lines;
       let first;
       closure_12 = undefined;
-      ref2 = undefined;
-      ref3 = undefined;
-      let ref4;
-      let ref5;
-      let closure_17;
-      let closure_18;
-      let ref6;
-      let ref7;
-      let ref8;
-      let ref9;
-      let ref10;
+      closure_17 = undefined;
+      closure_18 = undefined;
       current = undefined;
       play = undefined;
-      let obj = reducedMotion;
-      ref = reducedMotion.useRef(null);
+      reducedMotion.useRef(null);
       let joined = text;
       if (Array.isArray(text)) {
-        let str = "\0";
         joined = text.join("\0");
       }
       const items = [joined];
       lines = obj.useMemo(() => joined.split("\0"), items);
-      const tmp2 = duration(obj.useState(0), 2);
+      const tmp2 = duration(reducedMotion.useState(0), 2);
       first = tmp2[0];
       closure_12 = tmp4;
-      ref2 = obj.useRef(0);
-      ref3 = obj.useRef(null);
-      ref4 = obj.useRef(null);
-      ref5 = obj.useRef(true);
+      reducedMotion.useRef(0);
+      reducedMotion.useRef(null);
+      reducedMotion.useRef(null);
+      reducedMotion.useRef(true);
       closure_17 = obj.useRef(onComplete);
       closure_18 = obj.useRef(onStart);
-      ref6 = obj.useRef(lines);
-      ref7 = obj.useRef(createController);
-      ref8 = obj.useRef(trailingWidth);
-      ref9 = obj.useRef(duration);
-      ref10 = obj.useRef(reducedMotion);
+      reducedMotion.useRef(lines);
+      reducedMotion.useRef(createController);
+      reducedMotion.useRef(trailingWidth);
+      reducedMotion.useRef(duration);
+      reducedMotion.useRef(reducedMotion);
       const effect = obj.useEffect(() => {
         closure_17.current = onComplete;
         closure_18.current = onStart;
-        ref6.current = lines;
-        ref7.current = createController;
-        ref8.current = trailingWidth;
-        ref9.current = duration;
-        ref10.current = reducedMotion;
+        closure_19.current = lines;
+        closure_20.current = createController;
+        closure_21.current = trailingWidth;
+        closure_22.current = duration;
+        closure_23.current = reducedMotion;
       });
-      const tmp6 = duration(obj.useState(joined), 2);
+      const tmp6 = duration(reducedMotion.useState(joined), 2);
       if (tmp6[0] !== joined) {
         tmp6[1](joined);
-        tmp2[1](0);
+        tmp4(0);
       }
       let num = 0;
       if (lines.length > 0) {
@@ -387,7 +376,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const items1 = [play];
       const imperativeHandle = obj.useImperativeHandle(
-        ref,
+        initialDelay.ref,
         () => ({
           play,
           stop() {
@@ -403,11 +392,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const effect1 = obj.useEffect(() => {
         let str = ref6.current[0];
-        current = ref7.current;
         if (str == null) {
           str = "";
         }
-        const obj = {
+        let currentResult = ref7.current({
           to: str,
           trailingWidth: ref8.current,
           onStart() {
@@ -426,13 +414,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return currentResult;
           },
-        };
-        let currentResult = current(obj);
+        });
         delay = currentResult;
         closure_8.current = currentResult;
         return () => {
-          delay.destroy();
-          ref.current = null;
+          currentResult.destroy();
+          closure_8.current = null;
         };
       }, []);
       const items2 = [duration, reducedMotion, trailingWidth];
@@ -455,26 +442,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             ref3.current = current;
             ref5.current = null == current2;
             if (null == current2) {
-              current.setTransition(current, current);
+              current.setTransition(tmp2, tmp2);
             } else {
-              current.setTransition(current2, current);
+              current.setTransition(current2, tmp2);
               current.play();
             }
           }
           if (null != delay) {
-            let current3;
-            let sum;
             if (ref10.current) {
-              current3 = waveTransition.REDUCED_MOTION_PASS_MS;
+              let current3 = waveTransition.REDUCED_MOTION_PASS_MS;
             } else {
               current3 = ref9.current;
             }
             if (ref5.current) {
-              sum = delay + initialDelay;
+              let sum = delay + initialDelay;
             } else {
               sum = delay + current3;
             }
-            ref2.current = sum;
+            closure_13.current = sum;
           }
         }
       }, items3);
@@ -488,18 +473,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       return { current, lines };
     };
-function linesKeyFor(join) {
-  let joined = join;
-  if (Array.isArray(join)) {
-    joined = join.join("\0");
-  }
-  return joined;
-}
-function linesFromKey(str) {
-  return str.split("\0");
-}
-const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx");
-
-export { linesKeyFor };
-export { linesFromKey };
-export const useAIShimmerCycle = tmp2;

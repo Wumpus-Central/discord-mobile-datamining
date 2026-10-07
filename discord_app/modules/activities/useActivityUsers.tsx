@@ -1,56 +1,48 @@
 // discord_app/modules/activities/useActivityUsers.tsx
 import UserStore from "../../stores/UserStore.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useActivityUsers.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let first;
       _require = arg0;
       dependencyMap = arg1;
-      const tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(5);
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [EmbeddedActivitiesStore, UserStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
-        let tmp7;
-        let tmp8;
         if (cResult[2] === arg1) {
-          tmp7 = cResult[3];
-          tmp8 = cResult[4];
+          let tmp7 = cResult[3];
+          let tmp8 = cResult[4];
         }
-        const tmpResult = tmp(573);
-        return tmpResult.useStateFromStoresArray(first, tmp7, tmp8);
+        return tmp(573).useStateFromStoresArray(first, tmp7, tmp8);
       }
       const fn = function s() {
-        let user;
         if (null == closure_1) {
           return [];
         } else {
-          let items;
           const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
           const found = embeddedActivitiesForChannel.find(
             (applicationId) => applicationId.applicationId === closure_1_0,
           );
           if (null == found) {
-            items = [];
+            let items = [];
           } else {
             const _Array = Array;
-            const arr = Array.from(found.userIds);
-            const mapped = arr.map((item) => user.getUser(item));
+            const mapped = Array.from(found.userIds).map((item) => user.getUser(item));
             items = mapped.filter((item) => null != item);
+            const arr = Array.from(found.userIds);
           }
           return items;
         }
@@ -62,34 +54,31 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp8 = items1;
       tmp7 = fn;
+      const obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
       _require = arg0;
       dependencyMap = arg1;
       let items = [EmbeddedActivitiesStore, UserStore];
       const items1 = [arg1, arg0];
-      const obj = require("useStateFromStores");
-      return obj.useStateFromStoresArray(
+      return require("useStateFromStores").useStateFromStoresArray(
         items,
         () => {
-          let user;
           if (null == closure_1) {
             return [];
           } else {
-            let items;
             const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
             const found = embeddedActivitiesForChannel.find(
               (applicationId) => applicationId.applicationId === closure_1_0,
             );
             if (null == found) {
-              items = [];
+              let items = [];
             } else {
               const _Array = Array;
-              const arr = Array.from(found.userIds);
-              const mapped = arr.map((item) => user.getUser(item));
+              const mapped = Array.from(found.userIds).map((item) => user.getUser(item));
               items = mapped.filter((item) => null != item);
+              const arr = Array.from(found.userIds);
             }
             return items;
           }
@@ -97,6 +86,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/activities/useActivityUsers.tsx");
-
-export default tmp2;

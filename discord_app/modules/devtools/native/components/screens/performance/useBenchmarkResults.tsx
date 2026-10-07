@@ -1,29 +1,27 @@
 // discord_app/modules/devtools/native/components/screens/performance/useBenchmarkResults.tsx
-import react2 from "../../../../../../../_runtime/00576_react.js";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../../../_runtime/00576_c.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/devtools/native/components/screens/performance/useBenchmarkResults.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_129_0;
-      let first;
-      let tmp4;
-      let tmp5;
-      let tmp6;
-      let obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
-      [tmp4, closure_129_0] = react.useState(first);
-      _slicedToArray(react.useState(first), 2);
-      let closure_1 = react.useRef(0);
+      [tmp4, require] = noop.useState(first);
+      closure_1 = noop.useRef(0);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s(label, elapsedMs) {
           label((arg0) => {
@@ -33,45 +31,43 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           });
         };
         cResult[1] = fn;
-        tmp5 = fn;
+        let tmp5 = fn;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v(arg0) {
-          let ref;
-          let closure_0 = arg0;
+          closure_0 = arg0;
           closure_0((arg0) => {
             ref.current = ref.current + 1;
-            const obj = { kind: "scroll", id: ref.current };
             const merged = Object.assign(closure_0);
-            const items = [obj, ...arg0];
+            const items = [{ kind: "scroll", id: ref.current }, ...arg0];
             return items;
           });
         };
         cResult[2] = fn2;
-        tmp6 = fn2;
+        let tmp6 = fn2;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
           constructor() {
-            return closure_1_0([]);
+            return closure_0([]);
           }
         }
         cResult[3] = S;
       } else {
         class S {
           constructor() {
-            return closure_1_0([]);
+            return closure_0([]);
           }
         }
       }
       if (cResult[4] !== tmp4) {
         class S {
           constructor() {
-            return closure_1_0([]);
+            return closure_0([]);
           }
         }
         tmp9[0] = tmp4;
@@ -83,20 +79,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class S {
           constructor() {
-            return closure_1_0([]);
+            return closure_0([]);
           }
         }
       }
       return tmp9;
     }
   : () => {
-      let closure_0;
-      let first;
-      [first, closure_0] = react.useState([]);
-      let closure_1 = react.useRef(0);
-      let obj = {
-        results: first,
-        addMount: react.useCallback((label, elapsedMs) => {
+      const tmp = _slicedToArray(noop.useState([]), 2);
+      closure_0 = tmp[1];
+      closure_1 = noop.useRef(0);
+      return {
+        results: tmp[0],
+        addMount: noop.useCallback((label, elapsedMs) => {
           label((arg0) => {
             const obj = { kind: "mount", id: +elapsedMs.current, label, elapsedMs };
             elapsedMs.current = +elapsedMs.current + 1;
@@ -104,8 +99,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return items;
           });
         }, []),
-        addScroll: react.useCallback((arg0) => {
-          let ref;
+        addScroll: noop.useCallback((arg0) => {
           closure_0 = arg0;
           closure_0((arg0) => {
             const obj = { kind: "scroll", id: +ref.current };
@@ -115,12 +109,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return items;
           });
         }, []),
-        clear: react.useCallback(() => closure_0([]), []),
+        clear: noop.useCallback(() => closure_0([]), []),
       };
-      return obj;
     };
-const result = size.fileFinishedImporting(
-  "modules/devtools/native/components/screens/performance/useBenchmarkResults.tsx",
-);
-
-export default tmp2;

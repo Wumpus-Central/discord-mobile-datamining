@@ -1,7 +1,6 @@
 // discord_app/components/billing/BillingConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let items;
 const obj = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",
@@ -16,10 +15,10 @@ const obj = {
   USER_TEMPORARY_BAN: 5,
   [5]: "USER_TEMPORARY_BAN",
 };
-const obj2 = { CAN_MAKE_SUBSCRIPTION_UPDATES: new Set(items) };
-items = [,];
+const obj2 = { CAN_MAKE_SUBSCRIPTION_UPDATES: null };
+const items = [,];
 ({ FRACTIONAL_PREMIUM: arr[0], DEFERRED_START: arr[1] } = obj);
-new Set(items);
+obj2.CAN_MAKE_SUBSCRIPTION_UPDATES = new Set(items);
 const result = size.fileFinishedImporting("components/billing/BillingConstants.tsx");
 
 export const RefundReason = {

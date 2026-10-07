@@ -1,59 +1,61 @@
 // discord_app/modules/lurker_mode/native/ServerPreviewPill.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { pill: obj2, text: { color: nativeDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 } };
-obj2 = {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  pill: {
+    paddingHorizontal: 10,
+    paddingVertical: nativeDefault.space.PX_4,
+    borderRadius: nativeDefault.radii.lg,
+    backgroundColor: nativeDefault.colors.WHITE,
+  },
+  text: null,
+};
+const obj3 = {
   paddingHorizontal: 10,
   paddingVertical: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.lg,
   backgroundColor: nativeDefault.colors.WHITE,
 };
-createStyles = createStyles.createStyles;
-({ color: nativeDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 });
-let closure_4 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.text = { color: nativeDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj4 = { color: nativeDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewPill.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let pill;
-      let text;
-      let tmp7;
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       const tmp4 = closure_4();
       ({ pill, text } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl2.intl;
-        const stringResult = intl.string(intl2.t.KNhFgD);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.KNhFgD);
         cResult[0] = stringResult;
-        first = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.text) {
+        const obj2 = { variant: "text-xs/bold", style: text, children: first };
         const tmp9 = jsx(Text_Text.Text, { variant: "text-xs/bold", style: text, children: first });
         cResult[1] = tmp4.text;
         cResult[2] = tmp9;
-        tmp7 = tmp9;
+        let tmp7 = tmp9;
       } else {
         tmp7 = cResult[2];
       }
       if (cResult[3] === tmp4.pill) {
-        let tmp10;
         if (cResult[4] === tmp7) {
-          tmp10 = cResult[5];
+          let tmp10 = cResult[5];
         }
         return tmp10;
       }
@@ -68,17 +70,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
     }
   : () => {
-      let intl;
       const tmp = closure_4();
-      ({ variant: "text-xs/bold", style: tmp.text, children: intl.string(intl2.t.KNhFgD) });
-      const Text = Text_Text.Text;
-      intl = intl2.intl;
+      const obj = { style: tmp.pill, accessibilityRole: "text", children: null };
+      const obj2 = { variant: "text-xs/bold", style: tmp.text, children: null };
+      const intl = util.intl;
+      obj2.children = intl.string(util.t.KNhFgD);
+      obj.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
       return (
         <View style={tmp.pill} accessibilityRole="text">
           {null}
         </View>
       );
     };
-const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewPill.tsx");
-
-export default tmp4;

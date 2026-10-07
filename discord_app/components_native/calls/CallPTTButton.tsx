@@ -1,50 +1,38 @@
 // discord_app/components_native/calls/CallPTTButton.tsx
-import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../Constants.tsx";
 import ReanimatedRexport from "../../modules/reanimated/ReanimatedRexport.tsx";
 import MediaEngineActionCreators from "../../modules/media_engine/MediaEngineActionCreators.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import MediaEngineStore_mod from "../../stores/MediaEngineStore.tsx";
+import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
-import createStyles_mod from "../../design/components/Styles/native/createStyles.tsx";
-import ColorUtils_mod from "../../utils/ColorUtils.tsx";
-import ReactCompilerGating from "../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let tmp;
-
-let ColorUtils;
-let obj3;
-let obj4;
-let obj5;
-let react = react_mod;
-let MediaEngineStore = MediaEngineStore_mod;
-const InputModes = Constants.InputModes;
-const jsx = Fragment.jsx;
+require = fn;
+const InputModes = fn(1085).InputModes;
+const jsx = fn(21).jsx;
 const CallPTTButtonLooks = { BRAND: "brand", BLUR: "blur" };
-let createStyles = createStyles_mod;
+const createStyles = fn(4896);
 let obj2 = {
   button: { margin: 13 },
-  container: obj3,
-  buttonBlur: { backgroundColor: "transparent" },
-  buttonBlurPressed: obj4,
-  textStyle: { fontSize: 16 },
-  brandButtonContainer: obj5,
+  container: null,
+  buttonBlur: null,
+  buttonBlurPressed: null,
+  textStyle: null,
+  brandButtonContainer: null,
 };
-obj3 = {
-  borderRadius: nativeDefault.radii.xs,
-  overflow: "hidden",
-  backgroundColor: ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24),
-};
-createStyles = createStyles.createStyles;
-ColorUtils = ColorUtils_mod;
-obj4 = { backgroundColor: ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6) };
-ColorUtils = ColorUtils_mod;
-obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_11 = createStyles(obj2);
+let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: null };
+let ColorUtils = fn(4733);
+obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+obj2.container = obj4;
+obj2.buttonBlur = { backgroundColor: "transparent" };
+const obj5 = { backgroundColor: null };
+ColorUtils = fn(4733);
+obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6);
+obj2.buttonBlurPressed = obj5;
+obj2.textStyle = { fontSize: 16 };
+obj2.brandButtonContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_11 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function CallPTTButtonTsx1(){const{runOnJS,setDragging}=this.__closure;runOnJS(setDragging)(false);}",
 };
@@ -57,39 +45,26 @@ const __initData3 = {
 const __initData4 = {
   code: "function CallPTTButtonTsx4(){const{runOnJS,setDragging,setPressed,setIsSwipeToChatDisabled}=this.__closure;runOnJS(setDragging)(true);runOnJS(setPressed)(false);if(setIsSwipeToChatDisabled!=null){runOnJS(setIsSwipeToChatDisabled)(false);}}",
 };
-const memo = react.memo;
-const memoResult = memo(
+const ReactCompilerGating = fn(558);
+let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (stopCallback) => {
-        let closure_4;
-        let first;
-        let first1;
-        let look;
-        let mode;
-        let ref;
-        let sendCallback;
-        let stateFromStores1;
-        let style;
-        let tmp10;
-        let tmp11;
-        let tmp14;
-        let tmp16;
-        let tmp17;
-        let tmp6;
-        let tmp7;
         let obj = sendCallback(stateFromStores1[11]);
         const cResult = obj.c(42);
         ({ look, style, sendCallback } = stopCallback);
-        stopCallback = stopCallback.stopCallback;
         if (undefined === look) {
           look = obj.BRAND;
         }
-        const tmp5 = closure_11();
+        closure_11();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [MediaEngineStore];
           class T {
             constructor() {
-              return mode.getMode();
+              return closure_6.getMode();
             }
           }
           cResult[0] = items;
@@ -98,34 +73,33 @@ const memoResult = memo(
         } else {
           [tmp6, tmp7] = cResult;
         }
-        let tmpResult = sendCallback(tmp2[12]);
-        const stateFromStores = tmpResult.useStateFromStores(tmp6, T);
+        const stateFromStores = sendCallback(stateFromStores1[12]).useStateFromStores(tmp6, T);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [ref];
           class I {
             constructor() {
-              return ref.getChannelId();
+              return closure_7.getChannelId();
             }
           }
           cResult[2] = items1;
           cResult[3] = I;
-          tmp11 = I;
-          tmp10 = items1;
+          let tmp11 = I;
+          let tmp10 = items1;
         } else {
           tmp10 = cResult[2];
           tmp11 = cResult[3];
         }
-        const tmpResult4 = sendCallback(stateFromStores1[12]);
-        stateFromStores1 = tmpResult4.useStateFromStores(tmp10, tmp11);
+        let tmpResult = sendCallback(stateFromStores1[12]);
+        stateFromStores1 = sendCallback(stateFromStores1[12]).useStateFromStores(tmp10, tmp11);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [first1];
           class I {
             constructor() {
-              return ref.getChannelId();
+              return closure_7.getChannelId();
             }
           }
           cResult[4] = items2;
-          tmp14 = items2;
+          let tmp14 = items2;
         } else {
           tmp14 = cResult[4];
         }
@@ -136,25 +110,25 @@ const memoResult = memo(
           const items3 = [stateFromStores1];
           class I {
             constructor() {
-              return ref.getChannelId();
+              return closure_7.getChannelId();
             }
           }
           cResult[5] = stateFromStores1;
           cResult[6] = fn;
           cResult[7] = items3;
-          tmp17 = items3;
-          tmp16 = fn;
+          let tmp17 = items3;
+          let tmp16 = fn;
         } else {
           tmp16 = cResult[6];
           tmp17 = cResult[7];
         }
+        const tmpResult4 = sendCallback(stateFromStores1[12]);
+        const stateFromStores2 = sendCallback(stateFromStores1[12]).useStateFromStores(tmp14, tmp16, tmp17);
         const tmpResult5 = sendCallback(stateFromStores1[12]);
-        const stateFromStores2 = tmpResult5.useStateFromStores(tmp14, tmp16, tmp17);
-        const tmp18 = stopCallback(stateFromStores1[13])(stateFromStores1);
-        const tmp19 = first(react.useState(false), 2);
+        const tmp19 = first(noop.useState(false), 2);
         first = tmp19[0];
-        react = tmp21;
-        const tmp22 = first(react.useState(false), 2);
+        noop = tmp21;
+        const tmp22 = first(noop.useState(false), 2);
         first1 = tmp22[0];
         MediaEngineStore = tmp24;
         let isGuildStageVoiceResult;
@@ -164,9 +138,9 @@ const memoResult = memo(
         if (isGuildStageVoiceResult) {
           isGuildStageVoiceResult = !tmp18;
         }
-        ref = obj6.useRef(false);
-        const tmpResult6 = sendCallback(stateFromStores1[14]);
-        const voiceChatNavigationContext = tmpResult6.useVoiceChatNavigationContext();
+        ref = noop.useRef(false);
+        tmp18 = stopCallback.stopCallback(stateFromStores1[13])(stateFromStores1);
+        const voiceChatNavigationContext = sendCallback(stateFromStores1[14]).useVoiceChatNavigationContext();
         let prop;
         if (voiceChatNavigationContext != null) {
           prop = voiceChatNavigationContext.setIsSwipeToChatDisabled;
@@ -174,54 +148,55 @@ const memoResult = memo(
         if (cResult[8] === first1) {
           if (cResult[9] === first) {
             if (cResult[10] === sendCallback) {
-              let tmp29;
-              let tmp30;
               if (cResult[11] === stopCallback) {
-                tmp29 = cResult[12];
-                tmp30 = cResult[13];
+                let tmp29 = cResult[12];
+                let tmp30 = cResult[13];
               }
               const effect = obj6.useEffect(tmp30, tmp29);
               if (cResult[14] !== prop) {
                 class N {
                   constructor() {
-                    closure_4(true);
-                    mode(false);
-                    if (prop != null) {
-                      prop(true);
+                    tmp = closure_4(true);
+                    tmp2 = closure_6(false);
+                    if (setIsSwipeToChatDisabled != null) {
+                      tmp3 = setIsSwipeToChatDisabled(true);
                     }
+                    return;
                   }
                 }
                 cResult[14] = prop;
                 class I {
                   constructor() {
-                    return ref.getChannelId();
+                    return closure_7.getChannelId();
                   }
                 }
                 cResult[15] = N;
               } else {
                 class N {
                   constructor() {
-                    closure_4(true);
-                    mode(false);
-                    if (prop != null) {
-                      prop(true);
+                    tmp = closure_4(true);
+                    tmp2 = closure_6(false);
+                    if (setIsSwipeToChatDisabled != null) {
+                      tmp3 = setIsSwipeToChatDisabled(true);
                     }
+                    return;
                   }
                 }
               }
               class I {
                 constructor() {
-                  return ref.getChannelId();
+                  return closure_7.getChannelId();
                 }
               }
               if (cResult[18] !== prop) {
                 class N {
                   constructor() {
-                    closure_4(true);
-                    mode(false);
-                    if (prop != null) {
-                      prop(true);
+                    tmp = closure_4(true);
+                    tmp2 = closure_6(false);
+                    if (setIsSwipeToChatDisabled != null) {
+                      tmp3 = setIsSwipeToChatDisabled(true);
                     }
+                    return;
                   }
                 }
                 if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
@@ -235,7 +210,7 @@ const memoResult = memo(
                   let obj2 = { runOnJS: sendCallback(tmp2[16]).runOnJS, setDragging: null };
                   class I {
                     constructor() {
-                      return ref.getChannelId();
+                      return closure_7.getChannelId();
                     }
                   }
                   CallPTTButtonTsx1.__closure = obj2;
@@ -253,34 +228,31 @@ const memoResult = memo(
                 }
                 class I {
                   constructor() {
-                    return ref.getChannelId();
+                    return closure_7.getChannelId();
                   }
                 }
                 function et() {
-                  const obj = ReanimatedRexport;
-                  obj.runOnJS(mode)(true);
-                  const obj2 = ReanimatedRexport;
-                  obj2.runOnJS(closure_4)(false);
+                  ReanimatedRexport.runOnJS(closure_6)(true);
+                  ReanimatedRexport.runOnJS(closure_4)(false);
                   if (null != prop) {
+                    ReanimatedRexport.runOnJS(tmp5)(false);
                     const tmpResult = ReanimatedRexport;
-                    tmpResult.runOnJS(tmp5)(false);
                   }
                 }
                 const obj3 = {
-                  runOnJS: sendCallback(stateFromStores1[16]).runOnJS,
-                  setDragging: tmp22[1],
-                  setPressed: tmp19[1],
+                  runOnJS: sendCallback(tmp2[16]).runOnJS,
+                  setDragging: tmp24,
+                  setPressed: tmp21,
                   setIsSwipeToChatDisabled: prop,
                 };
-                const onStart = obj9.Pan().onStart;
-                obj9.Pan();
                 et.__closure = obj3;
                 et.__workletHash = 10056118853836;
                 et.__initData = __initData2;
-                const onStartResult = onStart(et);
+                const PanResult = obj9.Pan();
+                const onEndResult = obj9.Pan().onStart(et).onEnd(CallPTTButtonTsx1);
                 cResult[18] = prop;
-                cResult[19] = onStartResult.onEnd(CallPTTButtonTsx1);
-                const onEndResult = onStartResult.onEnd(CallPTTButtonTsx1);
+                cResult[19] = onEndResult;
+                const onStartResult = obj9.Pan().onStart(et);
               } else {
                 class CallPTTButtonTsx1 {
                   constructor() {
@@ -289,16 +261,7 @@ const memoResult = memo(
                     return;
                   }
                 }
-              }
-              if (null != stateFromStores1) {
-                class CallPTTButtonTsx1 {
-                  constructor() {
-                    obj = closure_0(closure_2[16]);
-                    tmp = obj.runOnJS(closure_6)(false);
-                    return;
-                  }
-                }
-                if (prop.VOICE_ACTIVITY !== stateFromStores) {
+                if (null != stateFromStores1) {
                   class CallPTTButtonTsx1 {
                     constructor() {
                       obj = closure_0(closure_2[16]);
@@ -306,100 +269,119 @@ const memoResult = memo(
                       return;
                     }
                   }
+                  if (prop.VOICE_ACTIVITY !== stateFromStores) {
+                    class CallPTTButtonTsx1 {
+                      constructor() {
+                        obj = closure_0(closure_2[16]);
+                        tmp = obj.runOnJS(closure_6)(false);
+                        return;
+                      }
+                    }
+                  }
                 }
+                return null;
               }
-              return null;
             }
           }
         }
         class A {
           constructor() {
-            if ((first || first1) !== ref.current) {
-              const obj = MediaEngineActionCreators;
-              obj.setPushToTalkState(first || first1);
-              if (first || first1) {
+            tmp = closure_3;
+            if (!closure_3) {
+              tmp = closure_5;
+            }
+            tmp2 = closure_7;
+            if (tmp !== closure_7.current) {
+              tmp3 = closure_0;
+              tmp4 = closure_2;
+              obj = closure_0(closure_2[15]);
+              setPushToTalkStateResult = obj.setPushToTalkState(tmp);
+              if (tmp) {
+                tmp8 = null;
                 if (sendCallback != null) {
-                  sendCallback();
+                  tmp9 = sendCallback();
                 }
-              } else if (stopCallback != null) {
-                stopCallback();
+              } else {
+                tmp6 = null;
+                if (stopCallback != null) {
+                  tmp7 = stopCallback();
+                }
               }
             }
-            ref.current = first || first1;
+            tmp2.current = tmp;
+            return;
           }
         }
-        const items4 = [ref, first, first1, sendCallback, stopCallback];
+        const items4 = [ref, first, first1, sendCallback, stopCallback.stopCallback];
         cResult[8] = first1;
         cResult[9] = first;
         cResult[10] = sendCallback;
-        cResult[11] = stopCallback;
+        cResult[11] = stopCallback.stopCallback;
         cResult[12] = items4;
         cResult[13] = A;
         tmp30 = A;
         tmp29 = items4;
+        const tmpResult6 = sendCallback(stateFromStores1[14]);
       }
     : (look) => {
-        let closure_4;
-        let intl;
-        let obj;
-        let sendCallback;
-        let style;
         let BRAND = look.look;
         if (BRAND === undefined) {
           BRAND = obj.BRAND;
         }
         ({ style, sendCallback } = look);
-        const stopCallback = look.stopCallback;
         let stateFromStores1;
         let first;
-        react = undefined;
+        noop = undefined;
         let first1;
         let mode;
         let ref;
         let prop;
-        const tmp2 = closure_11();
+        let string = closure_11();
+        let onTouchStart = stateFromStores1;
         obj = sendCallback(stateFromStores1[12]);
         const items = [mode];
         const stateFromStores = obj.useStateFromStores(items, () => mode.getMode());
-        let obj2 = sendCallback(stateFromStores1[12]);
         const items1 = [ref];
-        stateFromStores1 = obj2.useStateFromStores(items1, () => ref.getChannelId());
+        stateFromStores1 = sendCallback(stateFromStores1[12]).useStateFromStores(items1, () => ref.getChannelId());
+        let obj2 = sendCallback(stateFromStores1[12]);
         const items2 = [first1];
         const items3 = [stateFromStores1];
-        const obj3 = sendCallback(stateFromStores1[12]);
-        const stateFromStores2 = obj3.useStateFromStores(
+        const stateFromStores2 = sendCallback(stateFromStores1[12]).useStateFromStores(
           items2,
           () => ChannelStore.getChannel(stateFromStores1),
           items3,
         );
-        const tmp8 = stopCallback(stateFromStores1[13])(stateFromStores1);
-        const tmp9 = first(react.useState(false), 2);
-        first = tmp9[0];
-        react = tmp11;
-        const tmp12 = first(react.useState(false), 2);
-        first1 = tmp12[0];
-        mode = tmp14;
+        let View = stopCallback;
+        const obj3 = sendCallback(stateFromStores1[12]);
+        const tmp6 = first(noop.useState(false), 2);
+        first = tmp6[0];
+        noop = tmp8;
+        const tmp9 = first(noop.useState(false), 2);
+        first1 = tmp9[0];
+        mode = tmp11;
         let isGuildStageVoiceResult;
-        const tmp7 = stopCallback;
         if (stateFromStores2 != null) {
           isGuildStageVoiceResult = stateFromStores2.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          isGuildStageVoiceResult = !tmp8;
+          isGuildStageVoiceResult = !tmp5;
         }
         ref = obj5.useRef(false);
-        const tmp3Result = sendCallback(stateFromStores1[14]);
-        const voiceChatNavigationContext = tmp3Result.useVoiceChatNavigationContext();
+        tmp5 = look.stopCallback(stateFromStores1[13])(stateFromStores1);
+        const voiceChatNavigationContext = sendCallback(onTouchStart[14]).useVoiceChatNavigationContext();
         prop = undefined;
         if (voiceChatNavigationContext != null) {
           prop = voiceChatNavigationContext.setIsSwipeToChatDisabled;
         }
-        const items4 = [ref, first, first1, sendCallback, stopCallback];
+        const items4 = [ref, first, first1, sendCallback, look.stopCallback];
         const effect = obj5.useEffect(() => {
-          if ((first || first1) !== ref.current) {
-            const obj = MediaEngineActionCreators;
-            obj.setPushToTalkState(first || first1);
-            if (first || first1) {
+          let tmp = first;
+          if (!first) {
+            tmp = first1;
+          }
+          if (tmp !== ref.current) {
+            MediaEngineActionCreators.setPushToTalkState(tmp);
+            if (tmp) {
               if (sendCallback != null) {
                 sendCallback();
               }
@@ -407,102 +389,120 @@ const memoResult = memo(
               stopCallback();
             }
           }
-          ref.current = first || first1;
+          ref.current = tmp;
         }, items4);
-        const Gesture = sendCallback(tmp4[17]).Gesture;
-        const PanResult = Gesture.Pan();
+        const Gesture = sendCallback(onTouchStart[17]).Gesture;
+        const tmp2Result = sendCallback(onTouchStart[14]);
         class G {
           constructor() {
-            const obj = ReanimatedRexport;
-            obj.runOnJS(mode)(true);
-            const obj2 = ReanimatedRexport;
-            obj2.runOnJS(closure_4)(false);
-            if (null != prop) {
-              const tmpResult = ReanimatedRexport;
-              tmpResult.runOnJS(tmp5)(false);
+            tmp = closure_0;
+            tmp2 = closure_2;
+            obj = closure_0(closure_2[16]);
+            tmp3 = obj.runOnJS(closure_6)(true);
+            obj2 = closure_0(closure_2[16]);
+            tmp4 = obj2.runOnJS(closure_4)(false);
+            if (null != setIsSwipeToChatDisabled) {
+              tmpResult = tmp(tmp2[16]);
+              tmp6 = tmpResult.runOnJS(tmp5)(false);
             }
+            return;
           }
         }
+        const PanResult = Gesture.Pan();
         G.__closure = {
-          runOnJS: sendCallback(stateFromStores1[16]).runOnJS,
-          setDragging: tmp12[1],
-          setPressed: tmp9[1],
+          runOnJS: sendCallback(onTouchStart[16]).runOnJS,
+          setDragging: tmp9[1],
+          setPressed: tmp6[1],
           setIsSwipeToChatDisabled: prop,
         };
         G.__workletHash = 12037532002826;
         G.__initData = __initData4;
-        ({
-          runOnJS: sendCallback(stateFromStores1[16]).runOnJS,
-          setDragging: tmp12[1],
-          setPressed: tmp9[1],
+        const obj4 = {
+          runOnJS: sendCallback(onTouchStart[16]).runOnJS,
+          setDragging: tmp9[1],
+          setPressed: tmp6[1],
           setIsSwipeToChatDisabled: prop,
-        });
-        PanResult.onStart(G);
+        };
         class F {
           constructor() {
-            const obj = ReanimatedRexport;
-            obj.runOnJS(mode)(false);
+            obj = closure_0(closure_2[16]);
+            tmp = obj.runOnJS(closure_6)(false);
+            return;
           }
         }
-        F.__closure = { runOnJS: sendCallback(stateFromStores1[16]).runOnJS, setDragging: tmp12[1] };
+        const onStartResult = PanResult.onStart(G);
+        F.__closure = { runOnJS: sendCallback(onTouchStart[16]).runOnJS, setDragging: tmp9[1] };
         F.__workletHash = 11266403476668;
         F.__initData = __initData3;
-        let tmp22 = null;
-        ({ runOnJS: sendCallback(stateFromStores1[16]).runOnJS, setDragging: tmp12[1] });
+        let onEndResult = onStartResult.onEnd(F);
+        let tmp18 = null;
         if (null != stateFromStores1) {
-          tmp22 = null;
+          tmp18 = null;
           if (prop.VOICE_ACTIVITY !== stateFromStores) {
-            tmp22 = null;
+            tmp18 = null;
             if (!isGuildStageVoiceResult) {
-              let buttonBlurPressed;
-              let items7;
               if (BRAND === obj.BRAND) {
-                const items5 = [tmp2.brandButtonContainer];
-                const items6 = [tmp2.button, style];
-                buttonBlurPressed = items6;
-                items7 = items5;
+                const items5 = [string.brandButtonContainer];
+                const items6 = [string.button, style];
+                let buttonBlurPressed = items6;
+                let items7 = items5;
               } else {
                 items7 = [, ,];
-                ({ button: arr6[0], container: arr6[1] } = tmp2);
+                ({ button: arr6[0], container: arr6[1] } = string);
                 items7[2] = style;
                 if (!first) {
                   if (!first1) {
-                    buttonBlurPressed = tmp2.buttonBlur;
+                    buttonBlurPressed = string.buttonBlur;
                   }
                 }
-                buttonBlurPressed = tmp2.buttonBlurPressed;
+                buttonBlurPressed = string.buttonBlurPressed;
               }
-              const GestureDetector = sendCallback(tmp4[17]).GestureDetector;
-              const View = tmp7(tmp4[16]).View;
-              ({
+              const obj7 = { gesture: onEndResult, children: null };
+              View = View(onTouchStart[16]).View;
+              const obj8 = { style: items7, children: null };
+              style = sendCallback(onTouchStart[19]).Button;
+              const obj9 = {
                 style: buttonBlurPressed,
-                textStyle: tmp2.textStyle,
-                text: intl.string(sendCallback(stateFromStores1[18]).t.Q8gkVL),
-                onTouchStart() {
-                  closure_4(true);
-                  mode(false);
-                  if (prop != null) {
-                    prop(true);
-                  }
-                },
-                onTouchEnd() {
-                  closure_4(false);
-                  if (prop != null) {
-                    prop(false);
-                  }
-                },
+                textStyle: string.textStyle,
+                text: null,
+                onTouchStart: null,
+                onTouchEnd: null,
                 darkenOnPress: true,
-              });
-              const Button = sendCallback(tmp4[19]).Button;
-              intl = sendCallback(tmp4[18]).intl;
-              tmp22 = <GestureDetector gesture={tmp21}>{null}</GestureDetector>;
+              };
+              const intl = sendCallback(onTouchStart[18]).intl;
+              string = intl.string;
+              obj9.text = string(sendCallback(onTouchStart[18]).t.Q8gkVL);
+              onTouchStart = function onTouchStart() {
+                closure_4(true);
+                mode(false);
+                if (prop != null) {
+                  prop(true);
+                }
+              };
+              obj9.onTouchStart = onTouchStart;
+              obj9.onTouchEnd = function onTouchEnd() {
+                closure_4(false);
+                if (prop != null) {
+                  prop(false);
+                }
+              };
+              obj8.children = (
+                <style
+                  style={buttonBlurPressed}
+                  textStyle={string.textStyle}
+                  text={null}
+                  onTouchStart={null}
+                  onTouchEnd={null}
+                  darkenOnPress
+                />
+              );
+              onEndResult = <View style={items7}>{null}</View>;
+              obj7.children = onEndResult;
+              jsx(sendCallback(onTouchStart[17]).GestureDetector, { gesture: onEndResult, children: null });
             }
           }
         }
-        return tmp22;
+        return tmp18;
       },
 );
-const result = size.fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
-
-export default memoResult;
 export { CallPTTButtonLooks };

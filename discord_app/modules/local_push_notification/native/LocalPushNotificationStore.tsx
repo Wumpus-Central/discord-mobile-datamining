@@ -1,41 +1,37 @@
 // discord_app/modules/local_push_notification/native/LocalPushNotificationStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import Constants2 from "../../../Constants.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildVerificationStore from "../../../stores/GuildVerificationStore.tsx";
-import Constants from "Constants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let userInfo;
-
-let hasOwnProperty;
-let metroRequire;
+require = fn;
+const Constants = fn(8739);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
-const VerificationLevels = Constants2.VerificationLevels;
+const VerificationLevels = fn(1085).VerificationLevels;
 const set = new Set();
-const Store = get_initializedDefault.Store;
-class LocalPushNotificationStore extends Store {
-  initialize() {
-    this.waitFor(GuildStore, GuildVerificationStore);
-  }
-  isScheduled(arg0) {
-    return set.has(arg0);
-  }
-}
+const Store = initializeDefault.Store;
+class LocalPushNotificationStore extends Store {}
 const prototype = LocalPushNotificationStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(GuildStore, GuildVerificationStore);
+};
+prototype["isScheduled"] = function isScheduled(arg0) {
+  return set.has(arg0);
+};
 LocalPushNotificationStore.displayName = "LocalPushNotificationStore";
-let obj = {
+const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleCheckScheduledNotifs() {
-    let obj = PushNotificationDefault;
-    const scheduledLocalNotifications = obj.getScheduledLocalNotifications((arr) => {
-      let guild;
-      const found = arr.filter(
-        (userInfo) => null != userInfo.userInfo && userInfo.userInfo.type === constants.GUILD_VERIFICATION,
-      );
+    const scheduledLocalNotifications = PushNotificationDefault.getScheduledLocalNotifications((arr) => {
+      const found = arr.filter((userInfo) => {
+        let tmp = null != userInfo.userInfo;
+        if (tmp) {
+          tmp = userInfo.userInfo.type === constants.GUILD_VERIFICATION;
+        }
+        return tmp;
+      });
       const item = found.forEach((userInfo) => {
         userInfo = userInfo.userInfo;
         const guildId = userInfo.guildId;
@@ -44,16 +40,15 @@ let obj = {
             set.add(userInfo);
           }
         }
-        const obj = closure_1_1(closure_1_2[4]);
-        const result = obj.cancelLocalNotifications(userInfo);
-        const obj2 = closure_1_1(closure_1_2[4]);
-        const result1 = obj2.cancelLocalNotifications(userInfo);
+        const result = closure_1_1(8995).cancelLocalNotifications(userInfo);
+        const obj = closure_1_1(8995);
+        const result1 = closure_1_1(8995).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
+        const obj2 = closure_1_1(8995);
       });
     });
   },
   GUILD_CREATE: function handleGuildVerificationChecked(guild) {
-    let intl;
     const id = guild.guild.id;
     guild = GuildStore.getGuild(id);
     if (null == guild) {
@@ -62,28 +57,27 @@ let obj = {
       const check = GuildVerificationStore.getCheck(id);
       if (!check.canChat) {
         if (guild.verificationLevel === VerificationLevels.MEDIUM) {
-          let obj;
           const verificationLevel = guild.verificationLevel;
           if (VerificationLevels.MEDIUM === verificationLevel) {
-            obj = _modDef4467(check.accountDeadline);
+            let obj = _modDef4467(check.accountDeadline);
           } else if (VerificationLevels.HIGH === verificationLevel) {
             obj = _modDef4467(check.memberDeadline);
           }
           if (null != obj) {
             if (!obj.isSameOrBefore(_modDef4467(), "minute")) {
-              const obj2 = { type: hasOwnProperty.GUILD_VERIFICATION, guildId: guild.id };
+              const obj2 = { type: constants.GUILD_VERIFICATION, guildId: guild.id };
               set.add(obj2);
               const obj3 = {
                 userInfo: obj2,
-                fireDate: obj.format(metroRequire),
+                fireDate: obj.format(timestampProducer),
                 alertTitle: guild.name,
-                alertBody: intl.string(intl2.t["hrDBa+"]),
+                alertBody: null,
                 category: "local",
               };
-              const scheduleLocalNotification = PushNotificationDefault.scheduleLocalNotification;
-              PushNotificationDefault;
-              intl = intl2.intl;
-              const result = scheduleLocalNotification(obj3);
+              const intl = util.intl;
+              obj3.alertBody = intl.string(util.t["hrDBa+"]);
+              const result = PushNotificationDefault.scheduleLocalNotification(obj3);
+              const tmp15Result = PushNotificationDefault;
             }
           }
         }
@@ -91,20 +85,18 @@ let obj = {
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
-    const obj = { type: hasOwnProperty.GUILD_VERIFICATION, guildId: guild.guild.id };
+    const obj = { type: constants.GUILD_VERIFICATION, guildId: guild.guild.id };
     if (set.has(obj)) {
-      const obj3 = PushNotificationDefault;
-      const result = obj3.cancelLocalNotifications(obj);
+      const result = PushNotificationDefault.cancelLocalNotifications(obj);
       set.delete(obj);
     }
   },
   LOGOUT: function handleCancelAll() {
     set.clear();
-    const obj = PushNotificationDefault;
-    const result = obj.cancelAllLocalNotifications();
+    const result = PushNotificationDefault.cancelAllLocalNotifications();
   },
-};
-const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/local_push_notification/native/LocalPushNotificationStore.tsx");
 
 export default localPushNotificationStore;

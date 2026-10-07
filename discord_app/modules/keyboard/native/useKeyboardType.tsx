@@ -1,26 +1,22 @@
 // discord_app/modules/keyboard/native/useKeyboardType.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import AppEntryKeyContext from "../../window/native/AppEntryKeyContext.tsx";
 import KeyboardUIStore from "KeyboardUIStore.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const KeyboardUIStoreDefault = KeyboardUIStore;
-let type;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0 = arg0;
-      const obj = react2;
-      const cResult = obj.c(3);
-      const obj2 = AppEntryKeyContext;
-      const appEntryKey = obj2.useAppEntryKey();
+      closure_0 = arg0;
+      const cResult = c.c(3);
+      const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] === appEntryKey) {
-        let tmp4;
         if (cResult[1] === arg0) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
         return KeyboardUIStoreDefault(tmp4);
       }
@@ -33,99 +29,82 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
     }
   : (arg0) => {
-      let closure_0 = arg0;
-      const obj = AppEntryKeyContext;
-      let closure_1 = obj.useAppEntryKey();
+      closure_0 = arg0;
+      closure_1 = AppEntryKeyContext.useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_1].keyboardContexts[closure_0]);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      const obj = react2;
-      const cResult = obj.c(2);
-      const obj2 = AppEntryKeyContext;
-      const appEntryKey = obj2.useAppEntryKey();
+      const cResult = c.c(2);
+      const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
         const fn = function t(arg0) {
           return arg0.byAppEntry[appEntryKey].keyboardType;
         };
         cResult[0] = appEntryKey;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       return KeyboardUIStoreDefault(tmp4);
     }
   : () => {
-      const obj = AppEntryKeyContext;
-      let closure_0 = obj.useAppEntryKey();
+      closure_0 = AppEntryKeyContext.useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].keyboardType);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      const obj = react2;
-      const cResult = obj.c(2);
-      const obj2 = AppEntryKeyContext;
-      const appEntryKey = obj2.useAppEntryKey();
+      const cResult = c.c(2);
+      const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
         const fn = function t(arg0) {
           return arg0.byAppEntry[appEntryKey].keyboardTypePrevious;
         };
         cResult[0] = appEntryKey;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       return KeyboardUIStoreDefault(tmp4);
     }
   : () => {
-      const obj = AppEntryKeyContext;
-      let closure_0 = obj.useAppEntryKey();
+      closure_0 = AppEntryKeyContext.useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].keyboardTypePrevious);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let appEntryKey;
-      let sharedValue;
+      const cResult = appEntryKey(576).c(4);
+      const obj = appEntryKey(576);
       let tmp = appEntryKey;
-      let obj = appEntryKey(576);
-      const cResult = obj.c(4);
+      appEntryKey = appEntryKey(1487).useAppEntryKey();
       const obj2 = appEntryKey(1487);
-      appEntryKey = obj2.useAppEntryKey();
       let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-      const useSharedValue = appEntryKey(4618).useSharedValue;
-      appEntryKey(4618);
       if (appEntryKey === undefined) {
         DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
       }
-      const obj3 = sharedValue(1488);
-      sharedValue = useSharedValue(obj3.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
+      const obj3 = appEntryKey(4618);
+      sharedValue = obj3.useSharedValue(sharedValue(1488).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
       if (cResult[0] === appEntryKey) {
-        let tmp7;
-        let tmp8;
         if (cResult[1] === sharedValue) {
-          tmp7 = cResult[2];
-          tmp8 = cResult[3];
+          let tmp6 = cResult[2];
+          let tmp7 = cResult[3];
         }
-        const effect = react.useEffect(tmp7, tmp8);
+        const effect = noop.useEffect(tmp6, tmp7);
         return sharedValue;
       }
       const fn = function y() {
-        const obj = KeyboardUIStore;
-        return obj.addKeyboardTypeChangedListener((type, arg1) => {
+        return KeyboardUIStore.addKeyboardTypeChangedListener((type, arg1) => {
           let tmp = null != arg1;
-          type = type.type;
           if (tmp) {
             tmp = arg1 !== appEntryKey;
           }
           if (!tmp) {
-            const result = sharedValue.set(type);
+            const result = sharedValue.set(type.type);
           }
         });
       };
@@ -134,132 +113,51 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = sharedValue;
       cResult[2] = fn;
       cResult[3] = items;
-      tmp8 = items;
-      tmp7 = fn;
+      tmp7 = items;
+      tmp6 = fn;
+      const obj4 = sharedValue(1488);
     }
   : () => {
-      let appEntryKey;
-      let sharedValue;
+      appEntryKey = appEntryKey(1487).useAppEntryKey();
+      const obj = appEntryKey(1487);
       let tmp = appEntryKey;
-      let obj = appEntryKey(1487);
-      appEntryKey = obj.useAppEntryKey();
       let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-      const useSharedValue = appEntryKey(4618).useSharedValue;
-      appEntryKey(4618);
       if (appEntryKey === undefined) {
         DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
       }
-      const obj2 = sharedValue(1488);
-      sharedValue = useSharedValue(obj2.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
+      const obj2 = appEntryKey(4618);
+      sharedValue = obj2.useSharedValue(sharedValue(1488).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
       const items = [appEntryKey, sharedValue];
-      const effect = react.useEffect(() => {
-        const obj = KeyboardUIStore;
-        return obj.addKeyboardTypeChangedListener((type, arg1) => {
-          let tmp = null != arg1;
-          type = type.type;
-          if (tmp) {
-            tmp = arg1 !== appEntryKey;
-          }
-          if (!tmp) {
-            const result = sharedValue.set(type);
-          }
-        });
-      }, items);
+      const effect = noop.useEffect(
+        () =>
+          KeyboardUIStore.addKeyboardTypeChangedListener((type, arg1) => {
+            let tmp = null != arg1;
+            if (tmp) {
+              tmp = arg1 !== appEntryKey;
+            }
+            if (!tmp) {
+              const result = sharedValue.set(type.type);
+            }
+          }),
+        items,
+      );
       return sharedValue;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
 function getKeyboardContextForType(EXPRESSION) {
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
-  const obj = KeyboardUIStoreDefault;
-  return obj.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[EXPRESSION];
+  return KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[EXPRESSION];
 }
 function getKeyboardType() {
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
-  const obj = KeyboardUIStoreDefault;
-  return obj.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType;
+  return KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType;
 }
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      let appEntryKey;
-      let sharedValue;
-      let tmp = appEntryKey;
-      let obj = appEntryKey(576);
-      const cResult = obj.c(4);
-      const obj2 = appEntryKey(1487);
-      appEntryKey = obj2.useAppEntryKey();
-      const useSharedValue = appEntryKey(4618).useSharedValue;
-      let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-      appEntryKey(4618);
-      const SYSTEM = appEntryKey(1616).KeyboardTypes.SYSTEM;
-      if (appEntryKey === undefined) {
-        DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
-      }
-      const obj3 = sharedValue(1488);
-      sharedValue = useSharedValue(
-        true === obj3.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[SYSTEM].keyboardWillOpen,
-      );
-      if (cResult[0] === appEntryKey) {
-        let tmp7;
-        let tmp8;
-        if (cResult[1] === sharedValue) {
-          tmp7 = cResult[2];
-          tmp8 = cResult[3];
-        }
-        const effect = react.useEffect(tmp7, tmp8);
-        return sharedValue;
-      }
-      const fn = function y() {
-        const obj = KeyboardUIStore;
-        return obj.addKeyboardWillOpenChangedListener((arg0, arg1) => {
-          const tmp = null != arg1 && arg1 !== appEntryKey;
-          if (!tmp) {
-            const result = sharedValue.set(arg0);
-          }
-        });
-      };
-      const items = [appEntryKey, sharedValue];
-      cResult[0] = appEntryKey;
-      cResult[1] = sharedValue;
-      cResult[2] = fn;
-      cResult[3] = items;
-      tmp8 = items;
-      tmp7 = fn;
-    }
-  : () => {
-      let appEntryKey;
-      let sharedValue;
-      let tmp = appEntryKey;
-      let obj = appEntryKey(1487);
-      appEntryKey = obj.useAppEntryKey();
-      const useSharedValue = appEntryKey(4618).useSharedValue;
-      let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-      appEntryKey(4618);
-      const SYSTEM = appEntryKey(1616).KeyboardTypes.SYSTEM;
-      if (appEntryKey === undefined) {
-        DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
-      }
-      const obj2 = sharedValue(1488);
-      sharedValue = useSharedValue(
-        true === obj2.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[SYSTEM].keyboardWillOpen,
-      );
-      const items = [appEntryKey, sharedValue];
-      const effect = react.useEffect(() => {
-        const obj = KeyboardUIStore;
-        return obj.addKeyboardWillOpenChangedListener((arg0, arg1) => {
-          const tmp = null != arg1 && arg1 !== appEntryKey;
-          if (!tmp) {
-            const result = sharedValue.set(arg0);
-          }
-        });
-      }, items);
-      return sharedValue;
-    };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardType.tsx");
 
 export default tmp3;
@@ -271,9 +169,84 @@ export const getKeyboardTypePrevious = function getKeyboardTypePrevious() {
   if (arg0 === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
-  const obj = KeyboardUIStoreDefault;
-  return obj.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardTypePrevious;
+  return KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardTypePrevious;
 };
 export const useKeyboardTypePrevious = tmp4;
 export const useKeyboardTypeSharedValue = tmp5;
-export const useKeyboardWillOpenSharedValue = tmp6;
+export const useKeyboardWillOpenSharedValue = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = appEntryKey(576).c(4);
+      const obj = appEntryKey(576);
+      let tmp = appEntryKey;
+      appEntryKey = appEntryKey(1487).useAppEntryKey();
+      const obj2 = appEntryKey(1487);
+      let DEFAULT_APP_ENTRY_KEY = appEntryKey;
+      if (appEntryKey === undefined) {
+        DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
+      }
+      const obj3 = appEntryKey(4618);
+      sharedValue = obj3.useSharedValue(
+        true ===
+          sharedValue(1488).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[
+            appEntryKey(undefined, 1616).KeyboardTypes.SYSTEM
+          ].keyboardWillOpen,
+      );
+      if (cResult[0] === appEntryKey) {
+        if (cResult[1] === sharedValue) {
+          let tmp6 = cResult[2];
+          let tmp7 = cResult[3];
+        }
+        const effect = noop.useEffect(tmp6, tmp7);
+        return sharedValue;
+      }
+      const fn = function y() {
+        return KeyboardUIStore.addKeyboardWillOpenChangedListener((arg0, arg1) => {
+          let tmp = null != arg1;
+          if (tmp) {
+            tmp = arg1 !== appEntryKey;
+          }
+          if (!tmp) {
+            const result = sharedValue.set(arg0);
+          }
+        });
+      };
+      const items = [appEntryKey, sharedValue];
+      cResult[0] = appEntryKey;
+      cResult[1] = sharedValue;
+      cResult[2] = fn;
+      cResult[3] = items;
+      tmp7 = items;
+      tmp6 = fn;
+      const obj4 = sharedValue(1488);
+    }
+  : () => {
+      appEntryKey = appEntryKey(1487).useAppEntryKey();
+      const obj = appEntryKey(1487);
+      let tmp = appEntryKey;
+      let DEFAULT_APP_ENTRY_KEY = appEntryKey;
+      if (appEntryKey === undefined) {
+        DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
+      }
+      const obj2 = appEntryKey(4618);
+      sharedValue = obj2.useSharedValue(
+        true ===
+          sharedValue(1488).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[
+            appEntryKey(undefined, 1616).KeyboardTypes.SYSTEM
+          ].keyboardWillOpen,
+      );
+      const items = [appEntryKey, sharedValue];
+      const effect = noop.useEffect(
+        () =>
+          KeyboardUIStore.addKeyboardWillOpenChangedListener((arg0, arg1) => {
+            let tmp = null != arg1;
+            if (tmp) {
+              tmp = arg1 !== appEntryKey;
+            }
+            if (!tmp) {
+              const result = sharedValue.set(arg0);
+            }
+          }),
+        items,
+      );
+      return sharedValue;
+    };

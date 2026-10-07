@@ -1,7 +1,6 @@
 // discord_app/modules/devtools/dev_settings/DevSettingsStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
   MESSAGING: 0,
@@ -83,78 +82,76 @@ const obj2 = {
     category: obj.LIBDISCORE,
   },
 };
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
-class DevSettingsStore extends DeviceSettingsStore {
-  getUserAgnosticState() {
-    return { toggleStates };
-  }
-  initialize(toggleStates) {
-    for (const key10005 in obj2) {
-      let flag;
+let toggleStates = {};
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
+class DevSettingsStore extends DeviceSettingsStore {}
+const prototype = DevSettingsStore.prototype;
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return { toggleStates };
+};
+prototype["initialize"] = function initialize(toggleStates) {
+  for (const key10005 in obj2) {
+    let flag;
+    if (arg0 != null) {
+      toggleStates = arg0.toggleStates;
       if (toggleStates != null) {
-        toggleStates = toggleStates.toggleStates;
-        if (toggleStates != null) {
-          flag = toggleStates[key10005];
-        }
+        flag = toggleStates[key10005];
       }
-      if (flag == null) {
-        flag = false;
-      }
-      if (!flag) {
-        continue;
-      } else {
-        closure_1[key10005] = flag;
-        continue;
-      }
-      continue;
     }
-  }
-  get(arg0) {
-    let flag = toggleStates[arg0];
     if (flag == null) {
       flag = false;
     }
-    return flag;
+    if (!flag) {
+      continue;
+    } else {
+      closure_1[key10005] = flag;
+      continue;
+    }
+    continue;
   }
-  enabled() {
-    return toggleStates;
+};
+prototype["get"] = function get(arg0) {
+  let flag = toggleStates[arg0];
+  if (flag == null) {
+    flag = false;
   }
-  allByCategory(PREMIUM) {
-    let closure_0 = PREMIUM;
-    const entries = Object.entries(closure_0);
-    const found = entries.filter((item) => {
-      let tmp;
-      [, tmp] = item;
-      return tmp.category === PREMIUM;
-    });
-    return found.map((item) => {
-      let tmp;
-      let tmp2;
-      [tmp, tmp2] = item;
-      const items = [tmp, ,];
-      let flag = toggleStates[tmp];
-      if (flag == null) {
-        flag = false;
-      }
-      items[1] = flag;
-      items[2] = tmp2;
-      return items;
-    });
-  }
-}
-const prototype = DevSettingsStore.prototype;
+  return flag;
+};
+prototype["enabled"] = function enabled() {
+  return closure_1;
+};
+prototype["allByCategory"] = function allByCategory(PREMIUM) {
+  closure_0 = PREMIUM;
+  const entries = Object.entries(closure_0);
+  const found = entries.filter((item) => {
+    [, tmp] = item;
+    return tmp.category === closure_0;
+  });
+  return found.map((item) => {
+    [tmp, tmp2] = item;
+    const items = [tmp, ,];
+    let flag = toggleStates[tmp];
+    if (flag == null) {
+      flag = false;
+    }
+    items[1] = flag;
+    items[2] = tmp2;
+    return items;
+  });
+};
 DevSettingsStore.displayName = "DevToolsDevSettingsStore";
 DevSettingsStore.persistKey = "DevToolsDevSettingsStore";
-const obj3 = {
+const devSettingsStore = new DevSettingsStore(DispatcherDefault, {
   DEV_TOOLS_DEV_SETTING_SET: function handleSet(value) {
     if (false !== value.value) {
-      toggleStates[value.toggle] = value.value;
+      closure_1[value.toggle] = value.value;
     } else {
-      delete toggleStates[value.toggle];
+      const toggle = value.toggle;
+      delete tmp2[tmp];
     }
   },
-};
-const devSettingsStore = new DevSettingsStore(DispatcherDefault, obj3);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/dev_settings/DevSettingsStore.tsx");
 
 export default devSettingsStore;

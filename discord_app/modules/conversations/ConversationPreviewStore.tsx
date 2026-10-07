@@ -1,23 +1,18 @@
 // discord_app/modules/conversations/ConversationPreviewStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import LRUCacheDefault from "../../../_runtime/01444_LRUCache.js";
+import privDefault from "../../../_runtime/01444_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
-import ConversationConstants from "ConversationConstants.tsx";
 import ConversationMessageCacheUtils from "ConversationMessageCacheUtils.tsx";
 import ConversationsUtils from "ConversationsUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, set;
-
+require = fn;
 function clearMessageIndex(conversationId) {
-  const tmp2 = map[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     let first = tmp5[0];
@@ -26,28 +21,32 @@ function clearMessageIndex(conversationId) {
     }
     continue;
   }
+  tmp2 = map[Symbol.iterator]();
 }
 function handleReaction(messageId) {
   messageId = messageId.messageId;
-  const value = map.get(messageId);
+  value = map.get(messageId);
   let flag = false;
   if (null != value) {
     const peekResult = navigation.peek(value);
     flag = false;
     if (null != peekResult) {
       const messageByMessageId = peekResult.messageByMessageId;
-      const value2 = messageByMessageId.get(messageId);
+      value2 = messageByMessageId.get(messageId);
       flag = false;
       if (null != value2) {
-        const obj = ConversationMessageCacheUtils;
-        const applyReactionResult = obj.applyReaction(messageId, value2);
+        const applyReactionResult = ConversationMessageCacheUtils.applyReaction(messageId, value2);
         let flag2 = null != applyReactionResult;
         if (flag2) {
           const messageByMessageId2 = peekResult.messageByMessageId;
           const result = messageByMessageId2.set(messageId, applyReactionResult);
-          const tmp5Result = ConversationMessageCacheUtils;
-          const result1 = tmp5Result.replaceHydratedMessage(peekResult, messageId, applyReactionResult);
+          const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(
+            peekResult,
+            messageId,
+            applyReactionResult,
+          );
           flag2 = true;
+          const tmp5Result = ConversationMessageCacheUtils;
         }
         flag = flag2;
       }
@@ -56,25 +55,24 @@ function handleReaction(messageId) {
   return flag;
 }
 function handleRelationshipUpdate() {
-  let c0 = false;
+  c0 = false;
   let item = navigation.forEach((messageByMessageId) => {
     messageByMessageId = messageByMessageId.messageByMessageId;
     const item = messageByMessageId.forEach((item, index) => {
-      const obj = ConversationMessageCacheUtils;
-      const result = obj.applyRelationshipFlags(item);
+      const result = ConversationMessageCacheUtils.applyRelationshipFlags(item);
       if (null != result) {
         c0 = true;
         messageByMessageId = messageByMessageId.messageByMessageId;
         const result1 = messageByMessageId.set(index, result);
+        const result2 = ConversationMessageCacheUtils.replaceHydratedMessage(messageByMessageId, index, result);
         const tmpResult = ConversationMessageCacheUtils;
-        const result2 = tmpResult.replaceHydratedMessage(messageByMessageId, index, result);
       }
     });
   });
   return c0;
 }
 function removeMessage(id) {
-  const value = map.get(id);
+  value = map.get(id);
   if (null == value) {
     return false;
   } else {
@@ -82,12 +80,10 @@ function removeMessage(id) {
     if (null == peekResult) {
       return false;
     } else {
-      const obj2 = ConversationMessageCacheUtils;
-      const result = obj2.removeHydratedMessage(peekResult, id);
+      const result = ConversationMessageCacheUtils.removeHydratedMessage(peekResult, id);
       const messageByMessageId = peekResult.messageByMessageId;
-      const deleteResult = messageByMessageId.delete(id);
       map.delete(id);
-      return deleteResult;
+      return messageByMessageId.delete(id);
     }
   }
 }
@@ -115,83 +111,85 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: ConversationConstants.MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-let tmp2 = new LRUCacheDefault(obj);
-const metroImportDefault = tmp2;
+let obj = { max: fn(7118).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(7118).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
-const Store = get_initializedDefault.Store;
-class ConversationPreviewStore extends Store {
-  initialize() {
-    this.waitFor(AuthenticationStore, ChannelStore, RelationshipStore, UserStore);
-  }
-  touchConversation(body) {
-    return null != navigation.get(body);
-  }
-  getConversation(c3) {
-    const peekResult = navigation.peek(c3);
-    let conversation;
-    if (peekResult != null) {
-      conversation = peekResult.conversation;
-    }
-    if (conversation == null) {
-      conversation = null;
-    }
-    return conversation;
-  }
-  isFullyHydrated(arg0) {
-    const peekResult = navigation.peek(arg0);
-    let fullyHydrated;
-    if (peekResult != null) {
-      fullyHydrated = peekResult.fullyHydrated;
-    }
-    return true === fullyHydrated;
-  }
-  getHydratedMessages(arg0) {
-    const peekResult = navigation.peek(arg0);
-    let hydratedMessages;
-    if (peekResult != null) {
-      hydratedMessages = peekResult.hydratedMessages;
-    }
-    if (hydratedMessages == null) {
-      hydratedMessages = null;
-    }
-    return hydratedMessages;
-  }
-  getMessage(arg0) {
-    const value = map.get(arg0);
-    let tmp2 = null;
-    if (null != value) {
-      const peekResult = navigation.peek(value);
-      let value2;
-      if (peekResult != null) {
-        const messageByMessageId = peekResult.messageByMessageId;
-        value2 = messageByMessageId.get(arg0);
-      }
-      if (value2 == null) {
-        value2 = null;
-      }
-      tmp2 = value2;
-    }
-    return tmp2;
-  }
-  isConversationFetchPending(arg0, arg1) {
-    const value = map1.get(arg0);
-    let tmp = null != value && 0 !== value.size;
-    if (tmp) {
-      const hasItem = true !== arg1 || value.has("full");
-      tmp = hasItem;
-    }
-    return tmp;
-  }
-}
+const Store = initializeDefault.Store;
+class ConversationPreviewStore extends Store {}
 const prototype = ConversationPreviewStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, ChannelStore, RelationshipStore, UserStore);
+};
+prototype["touchConversation"] = function touchConversation(arg0) {
+  return null != navigation.get(arg0);
+};
+prototype["getConversation"] = function getConversation(conversationId) {
+  const peekResult = navigation.peek(conversationId);
+  let conversation;
+  if (peekResult != null) {
+    conversation = peekResult.conversation;
+  }
+  if (conversation == null) {
+    conversation = null;
+  }
+  return conversation;
+};
+prototype["isFullyHydrated"] = function isFullyHydrated(arg0) {
+  const peekResult = navigation.peek(arg0);
+  let fullyHydrated;
+  if (peekResult != null) {
+    fullyHydrated = peekResult.fullyHydrated;
+  }
+  return true === fullyHydrated;
+};
+prototype["getHydratedMessages"] = function getHydratedMessages(arg0) {
+  const peekResult = navigation.peek(arg0);
+  let hydratedMessages;
+  if (peekResult != null) {
+    hydratedMessages = peekResult.hydratedMessages;
+  }
+  if (hydratedMessages == null) {
+    hydratedMessages = null;
+  }
+  return hydratedMessages;
+};
+prototype["getMessage"] = function getMessage(arg0) {
+  value = map.get(arg0);
+  let tmp2 = null;
+  if (null != value) {
+    const peekResult = navigation.peek(value);
+    value2 = undefined;
+    if (peekResult != null) {
+      const messageByMessageId = peekResult.messageByMessageId;
+      value2 = messageByMessageId.get(arg0);
+    }
+    if (value2 == null) {
+      value2 = null;
+    }
+    tmp2 = value2;
+  }
+  return tmp2;
+};
+prototype["isConversationFetchPending"] = function isConversationFetchPending(arg0, arg1) {
+  value = map1.get(arg0);
+  let tmp = null != value;
+  if (tmp) {
+    tmp = 0 !== value.size;
+  }
+  if (tmp) {
+    let hasItem = true !== arg1;
+    if (!hasItem) {
+      hasItem = value.has("full");
+    }
+    tmp = hasItem;
+  }
+  return tmp;
+};
 ConversationPreviewStore.displayName = "ConversationPreviewStore";
-let obj2 = {
+const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault, {
   CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(rawConversation) {
-    rawConversation = rawConversation.rawConversation;
-    const obj = ConversationsUtils;
-    const mapConversationResult = obj.mapConversation(rawConversation);
+    const mapConversationResult = ConversationsUtils.mapConversation(rawConversation.rawConversation);
     if (null == mapConversationResult) {
       return false;
     } else {
@@ -199,19 +197,16 @@ let obj2 = {
       if (null != peekResult) {
         peekResult.conversation = mapConversationResult;
       } else {
-        const _Map = Map;
-        const self = this;
-        const self2 = this;
-        const id = mapConversationResult.id;
-        const obj2 = {
+        const obj3 = {
           conversation: mapConversationResult,
           hydratedMessages: null,
           fullyHydrated: false,
-          messageByMessageId: map,
+          messageByMessageId: null,
         };
-        set = navigation.set;
+        const _Map = Map;
         map = new Map();
-        const result = set(id, obj2);
+        obj3.messageByMessageId = map;
+        const result = navigation.set(mapConversationResult.id, obj3);
       }
       return true;
     }
@@ -225,33 +220,18 @@ let obj2 = {
       if (tmp) {
         str = "full";
       }
-      const value = map1.get(conversationId);
+      value = map1.get(conversationId);
       if (null != value) {
         value.add(str);
       } else {
         const _Set = Set;
         const items = [str];
-        const self = this;
-        const self2 = this;
-        set = map1.set;
-        const set1 = new Set(items);
-        const result = set(conversationId, set1);
+        const set = new Set(items);
+        const result = map1.set(conversationId, set);
       }
     }
   },
   CONVERSATION_MESSAGES_FETCH_SUCCESS: function handleConversationMessagesFetchSuccess(isStandalone) {
-    let _undefined;
-    let conversationId;
-    let fullyHydrated;
-    function reindexMessages(conversationId, peekResult) {
-      clearMessageIndex(conversationId);
-      const messageByMessageId = peekResult.messageByMessageId;
-      const keys = messageByMessageId.keys();
-      for (const item10011 of keys) {
-        let result = map.set(item10011, conversationId);
-        continue;
-      }
-    }
     ({ conversationId, fullyHydrated } = isStandalone);
     _require = undefined;
     if (true !== isStandalone.isStandalone) {
@@ -261,7 +241,7 @@ let obj2 = {
       if (fullyHydrated) {
         str = "full";
       }
-      const value = map1.get(conversationId);
+      value = map1.get(conversationId);
       if (null != value) {
         value.delete(str);
         if (0 === value.size) {
@@ -288,10 +268,18 @@ let obj2 = {
             }
           },
         };
-        const obj3 = require("ConversationMessageCacheUtils");
         if (obj3.applyHydratedMessages(obj2)) {
-          reindexMessages(conversationId, peekResult);
+          (function reindexMessages(conversationId, peekResult) {
+            clearMessageIndex(conversationId);
+            const messageByMessageId = peekResult.messageByMessageId;
+            const keys = messageByMessageId.keys();
+            for (const item10011 of keys) {
+              let result = map.set(item10011, arg0);
+              continue;
+            }
+          })(conversationId, peekResult);
         }
+        obj3 = require("ConversationMessageCacheUtils");
       }
       return true;
     }
@@ -305,7 +293,7 @@ let obj2 = {
       if (tmp) {
         str = "full";
       }
-      const value = map1.get(conversationId);
+      value = map1.get(conversationId);
       if (null != value) {
         value.delete(str);
         if (0 === value.size) {
@@ -320,9 +308,13 @@ let obj2 = {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    const tmp =
-      (!("unavailable" in guild) || true !== guild.unavailable) &&
-      evictWhere((guildId) => guildId.guildId === guild.id);
+    let tmp = !("unavailable" in guild);
+    if (!tmp) {
+      tmp = true !== guild.unavailable;
+    }
+    if (tmp) {
+      tmp = evictWhere((guildId) => guildId.guildId === guild.id);
+    }
     return tmp;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
@@ -330,25 +322,28 @@ let obj2 = {
     const id = message.id;
     let tmp = null != id;
     if (tmp) {
-      const value = map.get(id);
+      value = map.get(id);
       let flag = false;
       if (null != value) {
         const peekResult = navigation.peek(value);
         flag = false;
         if (null != peekResult) {
           const messageByMessageId = peekResult.messageByMessageId;
-          const value2 = messageByMessageId.get(id);
+          value2 = messageByMessageId.get(id);
           flag = false;
           if (null != value2) {
-            const obj = MessageRecordUtils;
-            const updateMessageRecordResult = obj.updateMessageRecord(value2, message);
+            const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(value2, message);
             let flag2 = null != updateMessageRecordResult;
             if (flag2) {
               const messageByMessageId2 = peekResult.messageByMessageId;
               const result = messageByMessageId2.set(id, updateMessageRecordResult);
-              const tmp7Result = ConversationMessageCacheUtils;
-              const result1 = tmp7Result.replaceHydratedMessage(peekResult, id, updateMessageRecordResult);
+              const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(
+                peekResult,
+                id,
+                updateMessageRecordResult,
+              );
               flag2 = true;
+              const tmp7Result = ConversationMessageCacheUtils;
             }
             flag = flag2;
           }
@@ -362,24 +357,26 @@ let obj2 = {
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_ADD_MANY: function handleReactionBatch(messageId) {
     messageId = messageId.messageId;
-    const reactions = messageId.reactions;
-    const value = map.get(messageId);
+    value = map.get(messageId);
     let flag = false;
     if (null != value) {
       const peekResult = navigation.peek(value);
       flag = false;
       if (null != peekResult) {
         const messageByMessageId = peekResult.messageByMessageId;
-        const value2 = messageByMessageId.get(messageId);
+        value2 = messageByMessageId.get(messageId);
         flag = false;
         if (null != value2) {
-          const addReactionBatchResult = value2.addReactionBatch(reactions, AuthenticationStore.getId());
+          const addReactionBatchResult = value2.addReactionBatch(messageId.reactions, AuthenticationStore.getId());
           let flag2 = null != addReactionBatchResult;
           if (flag2) {
             const messageByMessageId2 = peekResult.messageByMessageId;
             const result = messageByMessageId2.set(messageId, addReactionBatchResult);
-            const obj2 = ConversationMessageCacheUtils;
-            const result1 = obj2.replaceHydratedMessage(peekResult, messageId, addReactionBatchResult);
+            const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(
+              peekResult,
+              messageId,
+              addReactionBatchResult,
+            );
             flag2 = true;
           }
           flag = flag2;
@@ -390,14 +387,14 @@ let obj2 = {
   },
   MESSAGE_REACTION_REMOVE_ALL: function handleRemoveAllReactions(messageId) {
     messageId = messageId.messageId;
-    const value = map.get(messageId);
+    value = map.get(messageId);
     let flag = false;
     if (null != value) {
       const peekResult = navigation.peek(value);
       flag = false;
       if (null != peekResult) {
         const messageByMessageId = peekResult.messageByMessageId;
-        const value2 = messageByMessageId.get(messageId);
+        value2 = messageByMessageId.get(messageId);
         flag = false;
         if (null != value2) {
           const result = value2.set("reactions", []);
@@ -405,8 +402,7 @@ let obj2 = {
           if (flag2) {
             const messageByMessageId2 = peekResult.messageByMessageId;
             const result1 = messageByMessageId2.set(messageId, result);
-            const obj2 = ConversationMessageCacheUtils;
-            const result2 = obj2.replaceHydratedMessage(peekResult, messageId, result);
+            const result2 = ConversationMessageCacheUtils.replaceHydratedMessage(peekResult, messageId, result);
             flag2 = true;
           }
           flag = flag2;
@@ -417,24 +413,22 @@ let obj2 = {
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(messageId) {
     messageId = messageId.messageId;
-    const emoji = messageId.emoji;
-    const value = map.get(messageId);
+    value = map.get(messageId);
     let flag = false;
     if (null != value) {
       const peekResult = navigation.peek(value);
       flag = false;
       if (null != peekResult) {
         const messageByMessageId = peekResult.messageByMessageId;
-        const value2 = messageByMessageId.get(messageId);
+        value2 = messageByMessageId.get(messageId);
         flag = false;
         if (null != value2) {
-          const result = value2.removeReactionsForEmoji(emoji);
+          const result = value2.removeReactionsForEmoji(messageId.emoji);
           let flag2 = null != result;
           if (flag2) {
             const messageByMessageId2 = peekResult.messageByMessageId;
             const result1 = messageByMessageId2.set(messageId, result);
-            const obj2 = ConversationMessageCacheUtils;
-            const result2 = obj2.replaceHydratedMessage(peekResult, messageId, result);
+            const result2 = ConversationMessageCacheUtils.replaceHydratedMessage(peekResult, messageId, result);
             flag2 = true;
           }
           flag = flag2;
@@ -445,14 +439,13 @@ let obj2 = {
   },
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
-    const value = map.get(id);
+    value = map.get(id);
     let flag = false;
     if (null != value) {
       const peekResult = navigation.peek(value);
       flag = false;
       if (null != peekResult) {
-        const obj2 = ConversationMessageCacheUtils;
-        const result = obj2.removeHydratedMessage(peekResult, id);
+        const result = ConversationMessageCacheUtils.removeHydratedMessage(peekResult, id);
         const messageByMessageId = peekResult.messageByMessageId;
         flag = messageByMessageId.delete(id);
         map.delete(id);
@@ -462,7 +455,6 @@ let obj2 = {
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
     let flag = false;
-    const tmp = arg0.ids[Symbol.iterator]();
     while (tmp !== undefined) {
       if (removeMessage(tmp2)) {
         flag = true;
@@ -479,8 +471,8 @@ let obj2 = {
     map.clear();
     map1.clear();
   },
-};
-const conversationPreviewStore = new ConversationPreviewStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationPreviewStore.tsx");
 
 export default conversationPreviewStore;

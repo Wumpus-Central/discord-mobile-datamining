@@ -1,64 +1,55 @@
 // discord_app/modules/stickers/native/StickerPickerListEmptyState.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../Constants.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
-import AssetRegistryDefault from "../../../../_runtime/10160_AssetRegistry.js";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _modDef10160 from "../../../../_runtime/metro/10160__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let insetBottom;
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = {
+  emptyStateContainer: { padding: 0, flex: 1 },
+  emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },
+  emptyStateImage: null,
+};
+let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
+let closure_7 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let obj4 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
 
-let obj2;
-let obj3;
-const ScrollView = react_native.ScrollView;
-const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: obj2, emptyStateImage: obj3 };
-obj2 = { color: nativeDefault.colors.TEXT_SUBTLE };
-createStyles = createStyles.createStyles;
-obj3 = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
-let closure_7 = createStyles(obj);
-const memoResult = react.memo(
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (insetBottom) => {
-        let inActionSheet;
-        let insetTop;
-        const obj = react2;
-        const cResult = obj.c(14);
+        const cResult = c.c(14);
         ({ inActionSheet, insetTop } = insetBottom);
-        insetBottom = insetBottom.insetBottom;
         const tmp4 = closure_7();
-        const sum = insetBottom + EXPRESSION_FOOTER_HEIGHT;
+        const sum = insetBottom.insetBottom + EXPRESSION_FOOTER_HEIGHT;
         if (cResult[0] === insetTop) {
-          let tmp6;
-          let BottomSheetScrollView;
-          let tmp10;
-          let tmp12;
           if (cResult[1] === sum) {
-            tmp6 = cResult[2];
+            let tmp6 = cResult[2];
           }
-          const tmpResult = useModalDismissGuardRefreshControl;
-          const modalDismissGuardRefreshControl = tmpResult.useModalDismissGuardRefreshControl();
+          const modalDismissGuardRefreshControl =
+            useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
           if (inActionSheet) {
-            BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
+            let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
           } else {
             BottomSheetScrollView = ScrollView;
           }
           const _Symbol = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = intl2.intl;
-            const stringResult = intl.string(intl2.t.jyiGfc);
+            const intl = util.intl;
+            const stringResult = intl.string(util.t.jyiGfc);
             cResult[3] = stringResult;
-            tmp10 = stringResult;
+            let tmp10 = stringResult;
           } else {
             tmp10 = cResult[3];
           }
@@ -66,27 +57,31 @@ const memoResult = react.memo(
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { marginBottom: 0 };
             cResult[4] = obj2;
-            tmp12 = obj2;
+            let tmp12 = obj2;
           } else {
             tmp12 = cResult[4];
           }
           if (cResult[5] === tmp4.emptyStateBody) {
             if (cResult[6] === tmp4.emptyStateContainer) {
-              let tmp13;
               if (cResult[7] === tmp4.emptyStateImage) {
-                tmp13 = cResult[8];
+                let tmp13 = cResult[8];
               }
               if (cResult[9] === BottomSheetScrollView) {
                 if (cResult[10] === tmp6) {
                   if (cResult[11] === tmp8) {
-                    let tmp17;
                     if (cResult[12] === tmp13) {
-                      tmp17 = cResult[13];
+                      let tmp17 = cResult[13];
                     }
                     return tmp17;
                   }
                 }
               }
+              const obj3 = {
+                contentContainerStyle: tmp6,
+                keyboardShouldPersistTaps: "always",
+                refreshControl: tmp8,
+                children: tmp13,
+              };
               const tmp19 = (
                 <BottomSheetScrollView
                   contentContainerStyle={tmp6}
@@ -104,27 +99,35 @@ const memoResult = react.memo(
               tmp17 = tmp19;
             }
           }
+          const obj4 = {
+            body: tmp10,
+            bodyStyle: null,
+            containerStyle: null,
+            imageStyle: null,
+            source: null,
+            titleStyle: null,
+          };
           ({
             emptyStateBody: obj5.bodyStyle,
             emptyStateContainer: obj5.containerStyle,
             emptyStateImage: obj5.imageStyle,
           } = tmp4);
-          const RefreshEmptyState = native.RefreshEmptyState;
-          const tmp16 = (
-            <RefreshEmptyState
-              body={tmp10}
-              bodyStyle={null}
-              containerStyle={null}
-              imageStyle={null}
-              source={AssetRegistryDefault}
-              titleStyle={tmp12}
-            />
-          );
+          obj4.source = _modDef10160;
+          obj4.titleStyle = tmp12;
+          const tmp16 = jsx(native.RefreshEmptyState, {
+            body: tmp10,
+            bodyStyle: null,
+            containerStyle: null,
+            imageStyle: null,
+            source: null,
+            titleStyle: null,
+          });
           cResult[5] = tmp4.emptyStateBody;
           cResult[6] = tmp4.emptyStateContainer;
           cResult[7] = tmp4.emptyStateImage;
           cResult[8] = tmp16;
           tmp13 = tmp16;
+          const tmpResult = useModalDismissGuardRefreshControl;
         }
         const obj6 = { marginBottom: sum, marginTop: insetTop, flex: 1 };
         cResult[0] = insetTop;
@@ -133,50 +136,60 @@ const memoResult = react.memo(
         tmp6 = obj6;
       }
     : (insetBottom) => {
-        let inActionSheet;
-        let insetTop;
-        let intl;
         ({ inActionSheet, insetTop } = insetBottom);
         insetBottom = insetBottom.insetBottom;
         const items = [insetBottom, insetTop];
-        const tmp = closure_7();
-        const memo = react.useMemo(
+        const memo = noop.useMemo(
           () => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }),
           items,
         );
-        const obj = insetTop(9938);
-        const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
+        const tmp = closure_7();
+        const modalDismissGuardRefreshControl = insetTop(9938).useModalDismissGuardRefreshControl();
         if (inActionSheet) {
           let BottomSheetScrollView = insetTop(6119).BottomSheetScrollView;
         } else {
           BottomSheetScrollView = ScrollView;
         }
+        const obj2 = {
+          contentContainerStyle: memo,
+          keyboardShouldPersistTaps: "always",
+          refreshControl: null,
+          children: null,
+        };
         let tmp7;
         if (inActionSheet) {
           tmp7 = modalDismissGuardRefreshControl;
         }
-        ({
-          body: intl.string(insetTop(1126).t.jyiGfc),
+        obj2.refreshControl = tmp7;
+        const obj5 = {
+          body: null,
           bodyStyle: null,
           containerStyle: null,
           imageStyle: null,
-          source: insetBottom(10160),
-          titleStyle: { marginBottom: 0 },
-        });
-        const RefreshEmptyState = insetTop(1188).RefreshEmptyState;
-        intl = insetTop(1126).intl;
+          source: null,
+          titleStyle: null,
+        };
+        const intl = insetTop(1126).intl;
+        obj5.body = intl.string(insetTop(1126).t.jyiGfc);
         ({
           emptyStateBody: obj3.bodyStyle,
           emptyStateContainer: obj3.containerStyle,
           emptyStateImage: obj3.imageStyle,
         } = tmp);
+        obj5.source = insetBottom(10160);
+        obj5.titleStyle = { marginBottom: 0 };
+        obj2.children = jsx(insetTop(1188).RefreshEmptyState, {
+          body: null,
+          bodyStyle: null,
+          containerStyle: null,
+          imageStyle: null,
+          source: null,
+          titleStyle: null,
+        });
         return (
-          <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={tmp7}>
+          <BottomSheetScrollView contentContainerStyle={memo} keyboardShouldPersistTaps="always" refreshControl={null}>
             {null}
           </BottomSheetScrollView>
         );
       },
 );
-const result = size.fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
-
-export default memoResult;

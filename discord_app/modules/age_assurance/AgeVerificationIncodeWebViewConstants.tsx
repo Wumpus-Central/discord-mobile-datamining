@@ -1,11 +1,11 @@
 // discord_app/modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-const __DISCORD_AGE_VERIFICATION_INCODE_PARAMS__ = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
+let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
 let c1 = "Verification.Result";
 let c2 = "Verification.CaptureComplete";
 let c3 = "Verification.FallbackRequest";
-const __DISCORD_APPLY_INCODE_FALLBACK_SESSION__ = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
+let c4 = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
 const AgeVerificationIncodeResultStatus = { COMPLETED: "completed", CANCELLED: "cancelled", ERROR: "error" };
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx");
 
@@ -18,20 +18,11 @@ export const VERIFICATION_FALLBACK_REQUEST_EVENT_TYPE = "Verification.FallbackRe
 export const INCODE_FALLBACK_SESSION_CALLBACK_KEY = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
 export { AgeVerificationIncodeResultStatus };
 export const readInjectedIncodeParams = function readInjectedIncodeParams() {
-  let apiUrl;
-  let consentId;
-  let interviewId;
-  let method;
-  let schemaVersion;
-  let sessionToken;
-  let theme;
-  if (null != window[__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__]) {
-    if (typeof window[__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__] === "object") {
-      let tmp2;
-      ({ schemaVersion, apiUrl, sessionToken, consentId, interviewId, theme, method } =
-        window[__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__]);
+  if (null != window[c0]) {
+    if (typeof tmp === "object") {
+      ({ schemaVersion, apiUrl, sessionToken, consentId, interviewId, theme, method } = tmp);
       if (null == schemaVersion) {
-        tmp2 = null;
+        let tmp2 = null;
         if (typeof apiUrl === "string") {
           tmp2 = null;
           if (typeof sessionToken === "string") {
@@ -40,13 +31,15 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
               tmp2 = null;
               if (typeof interviewId === "string") {
                 if (null == theme) {
-                  const obj = { apiUrl, sessionToken, consentId, interviewId, theme, method };
+                  const obj = { apiUrl, sessionToken, consentId, interviewId, theme: null, method: null };
                   if (theme == null) {
                     theme = null;
                   }
+                  obj.theme = theme;
                   if (method == null) {
                     method = null;
                   }
+                  obj.method = method;
                   tmp2 = obj;
                 } else {
                   tmp2 = null;
@@ -64,21 +57,21 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
   return null;
 };
 export const buildIncodeParamsInjection = function buildIncodeParamsInjection(arg0, arg1) {
-  const obj = { schemaVersion: 2 };
+  const obj = {};
   const merged = Object.assign(arg0);
+  obj.schemaVersion = 2;
   const json = JSON.stringify(JSON.stringify(obj));
   return (
     "if (window.location.origin === " +
     JSON.stringify(arg1) +
     ") { window." +
-    __DISCORD_AGE_VERIFICATION_INCODE_PARAMS__ +
+    c0 +
     " = JSON.parse(" +
     json +
     "); } true;"
   );
 };
 export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str) {
-  let obj;
   if (null == str) {
     return null;
   } else {
@@ -96,8 +89,8 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
       if (typeof parsed.interviewId === "string") {
         tmp10 = null;
         if (0 !== parsed.interviewId.length) {
-          tmp10 = { kind: "capture_complete", interviewId: parsed.interviewId };
           const obj2 = { kind: "capture_complete", interviewId: parsed.interviewId };
+          tmp10 = obj2;
         }
       }
       return tmp10;
@@ -111,8 +104,8 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
         if (typeof parsed.previousInterviewId === "string") {
           tmp9 = null;
           if (0 !== parsed.previousInterviewId.length) {
-            tmp9 = { kind: "fallback_request", previousInterviewId: parsed.previousInterviewId };
             const obj3 = { kind: "fallback_request", previousInterviewId: parsed.previousInterviewId };
+            tmp9 = obj3;
           }
         }
         return tmp9;
@@ -125,16 +118,15 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
           return null;
         } else {
           const status = parsed.status;
-          const tmp7 = obj;
           if (status !== obj.COMPLETED) {
-            let tmp8;
             if (status !== tmp7.CANCELLED) {
-              tmp8 = null;
+              let tmp8 = null;
             }
             return tmp8;
           }
           obj = { kind: "result", status };
           tmp8 = obj;
+          tmp7 = obj;
         }
       }
     }
@@ -161,7 +153,7 @@ export const buildIncodeFallbackSessionInjection = function buildIncodeFallbackS
     "(function(){var detail=JSON.parse(" +
     json +
     ");var key=" +
-    JSON.stringify(__DISCORD_APPLY_INCODE_FALLBACK_SESSION__) +
+    JSON.stringify(c4) +
     ';var n=0;var apply=function(){var cb=window[key];if(typeof cb==="function"){cb(detail);return true;}return false;};if(apply()){return;}var id=setInterval(function(){n+=1;if(apply()||n>40){clearInterval(id);}},50);})();true;'
   );
 };

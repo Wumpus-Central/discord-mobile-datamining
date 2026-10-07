@@ -9,13 +9,12 @@ const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBack
 export default function isVideoBackgroundEnabled(location) {
   let tmp3 = isVideoBackgroundSupportedDefault();
   if (tmp3) {
-    const obj = PlatformUtils;
-    const isIOSResult = obj.isIOS();
+    const isIOSResult = PlatformUtils.isIOS();
     let enabled = !isIOSResult;
     if (isIOSResult) {
       const obj2 = { location };
+      enabled = VirtualBackgroundsIosExperimentDefault.getConfig(obj2).enabled;
       const tmpResult = VirtualBackgroundsIosExperimentDefault;
-      enabled = tmpResult.getConfig(obj2).enabled;
     }
     tmp3 = enabled;
   }

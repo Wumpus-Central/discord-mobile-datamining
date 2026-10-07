@@ -25,16 +25,12 @@ export const areSetsEqual = function areSetsEqual(set, set2) {
 export const toSetInplace = function toSetInplace(features) {
   if (null == features) {
     const _Set3 = Set;
-    const self3 = this;
-    const self4 = this;
-    set = new Set();
+    let set = new Set();
   } else {
     const _Set = Set;
     set = features;
     if (!(features instanceof Set)) {
       const _Set2 = Set;
-      const self = this;
-      const self2 = this;
       set = new Set(features);
     }
   }

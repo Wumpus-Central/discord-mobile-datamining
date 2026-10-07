@@ -1,19 +1,17 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
 import v1 from "../../../../_runtime/01266_v1.js";
-import _modDef1351 from "../../../../_runtime/metro/01351__.js";
+import formatDefault from "../../../../_runtime/01351_format.js";
 import getDescriptionDefault from "getDescription.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
+require = fn;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];
 let c6 = "https://discordapp.onelink.me";
+const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
 
 export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
-  let androidFallbackLink;
-  let iosFallbackLink;
-  let utmSource;
   ({ utmSource, androidFallbackLink, iosFallbackLink } = arg1);
   const tmp = _objectWithoutProperties(arg1, closure_3);
   const str = new URL(inviteDynamicLinkTemplate);
@@ -29,25 +27,22 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
     continue;
   }
   const encodeURIComponentResult = encodeURIComponent(str.toString());
-  const items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
   const encodeURIComponentResult1 = encodeURIComponent("discord://app/open#" + str.toString());
-  const encodeURIComponentResult2 = encodeURIComponent(getDescriptionDefault());
+  const items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
   const regExp = new RegExp("(" + items.join("|") + ")", "ig");
-  const tmp9 = _modDef1351;
+  const tmp9 = formatDefault;
   let match;
   if (tmp9 != null) {
     if (tmp9.ua != null) {
       match = str2.match(regExp);
     }
   }
-  const tmp12 = null != match;
-  const tmp5Result = _modDef1351;
+  const tmp5Result = formatDefault;
   let name;
   if (tmp5Result != null) {
     name = tmp5Result.name;
   }
-  const tmp15 = "Safari" === name && !tmp12;
-  const tmp5Result2 = _modDef1351;
+  const tmp5Result2 = formatDefault;
   let family;
   if (tmp5Result2 != null) {
     const os = tmp5Result2.os;
@@ -56,7 +51,6 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
     }
   }
   let str3 = "false";
-  const tmp18 = "iOS" !== family || tmp15;
   if (tmp18) {
     str3 = "true";
   }
@@ -80,7 +74,7 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
     "&af_force_deeplink=" +
     str3 +
     "&af_og_description=" +
-    encodeURIComponentResult2 +
+    encodeURIComponent(getDescriptionDefault()) +
     "&af_dp=" +
     encodeURIComponentResult1;
   let sum = combined;
@@ -96,39 +90,33 @@ export default function generateDynamicLink(inviteDynamicLinkTemplate, arg1) {
   return sum1;
 }
 export const generateAttemptId = function generateAttemptId() {
-  const obj = v1;
-  return obj.v4();
+  return v1.v4();
 };
 export const parseDynamicLink = function parseDynamicLink(str) {
   if (str.startsWith(c6)) {
     try {
       const _URL = URL;
-      const self = this;
-      const self2 = this;
       const uRL = new URL(str);
       const searchParams = uRL.searchParams;
-      const value = searchParams.get("deep_link_value");
-      const obj = searchParams;
+      value = searchParams.get("deep_link_value");
       if (null == value) {
         return null;
       } else {
         const _decodeURIComponent = decodeURIComponent;
         const _URL2 = URL;
-        const self3 = this;
-        const self4 = this;
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
-        const value2 = obj.get("pid");
+        value2 = obj.get("pid");
         const obj2 = { utmSource: value2 };
         const entries = searchParams2.entries();
-        const tmp10 = obj2;
-        const tmp14 = entries[Symbol.iterator]();
-        while (tmp14 !== undefined) {
-          [, tmp10[tmp19[0]]] = tmp16;
+        const tmp16 = entries[Symbol.iterator]();
+        while (tmp16 !== undefined) {
+          [, obj2[tmp21[0]]] = tmp18;
           continue;
         }
         return obj2;
       }
+      obj = searchParams;
     } catch (err) {
       return null;
     }

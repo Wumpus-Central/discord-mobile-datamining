@@ -1,58 +1,48 @@
 // discord_app/modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx
-import get_initialized from "../../../../../../../discord_common/js/packages/flux/index.tsx";
-import SearchConstants from "../../../../SearchConstants.tsx";
+import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 import SearchUtils from "../../../../SearchUtils.tsx";
 import usePlaceholderStyles from "../../../hooks/usePlaceholderStyles.tsx";
 import SearchMessageStore from "../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
-import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
 
-let searchContext;
+require = fn;
+let closure_4 = fn(7524).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx",
+);
 
-let closure_4 = SearchConstants.SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export const useSearchMessagesLoadingState = ReactCompilerGating.isReactCompilerEnabled()
   ? (searchContext) => {
-      let numColumns;
-      let placeholderHeight;
-      let tab;
-      let obj = searchContext(tab[4]);
-      const cResult = obj.c(8);
+      const cResult = searchContext(tab[4]).c(8);
       searchContext = searchContext.searchContext;
       tab = searchContext.tab;
       ({ placeholderHeight, numColumns } = searchContext);
       if (cResult[0] === numColumns) {
-        let tmp4;
-        let tmp7;
         if (cResult[1] === placeholderHeight) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
-        const tmpResult = searchContext(tab[5]);
-        const fullscreenPlaceholderCount = tmpResult.useFullscreenPlaceholderCount(tmp4);
+        const fullscreenPlaceholderCount = tmp(tmp2[5]).useFullscreenPlaceholderCount(tmp4);
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SearchQueryStore, fullscreenPlaceholderCount];
-          let num = 3;
           cResult[3] = items;
-          tmp7 = items;
+          let tmp7 = items;
         } else {
           tmp7 = cResult[3];
         }
         if (cResult[4] === fullscreenPlaceholderCount) {
           if (cResult[5] === searchContext) {
-            let tmp10;
             if (cResult[6] === tab) {
-              tmp10 = cResult[7];
+              let tmp10 = cResult[7];
             }
-            const tmpResult2 = searchContext(tab[7]);
-            return tmpResult2.useStateFromStoresObject(tmp7, tmp10);
+            return tmp(tmp2[7]).useStateFromStoresObject(tmp7, tmp10);
           }
         }
         const fn = function p() {
-          let num;
           const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
-          const obj = SearchUtils;
-          const searchTabFetchId = obj.getSearchTabFetchId(searchContext, tab, searchResultsQuery);
+          const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, tab, searchResultsQuery);
           const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
           let isFetching = !tmp5;
           if (isInitialFetchComplete) {
@@ -61,13 +51,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             isFirstPageLoading: !isInitialFetchComplete,
             isNextPageLoading: isFetching,
-            placeholderCount: num,
+            placeholderCount: null,
           };
           if (!isInitialFetchComplete) {
-            num = Math.max(fullscreenPlaceholderCount, closure_4[tab]);
+            let num = Math.max(fullscreenPlaceholderCount, closure_4[tab]);
           } else {
             num = 0;
           }
+          obj2.placeholderCount = num;
           return obj2;
         };
         cResult[4] = fullscreenPlaceholderCount;
@@ -75,27 +66,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tab;
         cResult[7] = fn;
         tmp10 = fn;
+        const tmpResult = tmp(tmp2[5]);
       }
       let obj2 = { placeholderHeight, numColumns };
       cResult[0] = numColumns;
       cResult[1] = placeholderHeight;
       cResult[2] = obj2;
       tmp4 = obj2;
+      const obj = searchContext(tab[4]);
     }
   : (arg0) => {
-      let numColumns;
-      let placeholderHeight;
       ({ searchContext: require, tab: dependencyMap } = arg0);
       ({ placeholderHeight, numColumns } = arg0);
-      let obj = usePlaceholderStyles;
-      let closure_2 = obj.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-      let obj2 = get_initialized;
+      closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
       const items = [SearchQueryStore, closure_2];
-      return obj2.useStateFromStoresObject(items, () => {
-        let num;
-        const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(require);
-        const obj = SearchUtils;
-        const searchTabFetchId = obj.getSearchTabFetchId(require, dependencyMap, searchResultsQuery);
+      return initialize.useStateFromStoresObject(items, () => {
+        const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_1_0);
+        const searchTabFetchId = SearchUtils.getSearchTabFetchId(closure_1_0, dependencyMap, searchResultsQuery);
         const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
         let isFetching = !tmp5;
         if (isInitialFetchComplete) {
@@ -104,18 +91,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           isFirstPageLoading: !isInitialFetchComplete,
           isNextPageLoading: isFetching,
-          placeholderCount: num,
+          placeholderCount: null,
         };
         if (!isInitialFetchComplete) {
-          num = Math.max(closure_2, closure_4[dependencyMap]);
+          let num = Math.max(closure_2, closure_4[dependencyMap]);
         } else {
           num = 0;
         }
+        obj2.placeholderCount = num;
         return obj2;
       });
     };
-const result = size.fileFinishedImporting(
-  "modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx",
-);
-
-export const useSearchMessagesLoadingState = tmp2;

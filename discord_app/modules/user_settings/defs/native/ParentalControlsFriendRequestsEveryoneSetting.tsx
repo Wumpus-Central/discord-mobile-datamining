@@ -1,77 +1,86 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl2 from "../../../../intl/index.native.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_4;
-let hasOwnProperty;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+require = fn;
+const Constants = fn(1085);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11142);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp6;
-      const obj = react2;
-      const cResult = obj.c(2);
-      const obj2 = useSelectedTeen;
-      const selectedTeenId = obj2.useSelectedTeenId();
+      const cResult = c.c(2);
+      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
       const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
       const controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
       if (cResult[0] !== controlledSetting) {
-        const tmpResult = UserSettingsUtils;
-        const flags = tmpResult.computeFlags(controlledSetting);
+        const flags = UserSettingsUtils.computeFlags(controlledSetting);
         cResult[0] = controlledSetting;
         cResult[1] = flags;
-        tmp6 = flags;
+        let tmp6 = flags;
+        const tmpResult = UserSettingsUtils;
       } else {
         tmp6 = cResult[1];
       }
       return tmp6.all;
     }
   : () => {
-      let controlledSetting;
-      let obj = controlledSetting(8330);
-      const selectedTeenId = obj.useSelectedTeenId();
+      const selectedTeenId = controlledSetting(8330).useSelectedTeenId();
       const ParentalControlledFriendSourceFlags = controlledSetting(14642).ParentalControlledFriendSourceFlags;
       controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
       const items = [controlledSetting];
-      return react.useMemo(() => {
-        const obj = UserSettingsUtils;
-        return obj.computeFlags(controlledSetting);
-      }, items).all;
+      return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
     };
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.mGr3CX);
+    const intl = util.intl;
+    return intl.string(util.t.mGr3CX);
   },
-  parent: MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: tmp3,
+  parent: fn(7645).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+        const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
+        const controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
+        if (cResult[0] !== controlledSetting) {
+          const flags = UserSettingsUtils.computeFlags(controlledSetting);
+          cResult[0] = controlledSetting;
+          cResult[1] = flags;
+          let tmp6 = flags;
+          const tmpResult = UserSettingsUtils;
+        } else {
+          tmp6 = cResult[1];
+        }
+        return tmp6.all;
+      }
+    : () => {
+        const selectedTeenId = controlledSetting(8330).useSelectedTeenId();
+        const ParentalControlledFriendSourceFlags = controlledSetting(14642).ParentalControlledFriendSourceFlags;
+        controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
+        const items = [controlledSetting];
+        return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
+      },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      let tmp7;
       const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
-      const updateControlledSetting = ParentalControlledFriendSourceFlags.updateControlledSetting;
       if (arg0) {
-        tmp7 = React3;
+        let tmp7 = React4;
       } else {
-        tmp7 = React3 & ~hasOwnProperty.NO_RELATION;
+        tmp7 = React4 & ~constants.NO_RELATION;
       }
-      const result = updateControlledSetting(selectedTeenId, tmp7);
+      const result = ParentalControlledFriendSourceFlags.updateControlledSetting(selectedTeenId, tmp7);
     }
   },
   unsearchable: true,
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx",
 );

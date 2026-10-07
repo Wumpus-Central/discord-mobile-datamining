@@ -1,27 +1,31 @@
 // discord_app/modules/premium/GuildCapUpsellHooks.tsx
-import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
-import react from "../../../_runtime/00576_react.js";
-import Constants from "../../Constants.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../_runtime/00576_c.js";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import HotspotStore2 from "../hotspot/index.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const MAX_USER_GUILDS = Constants.MAX_USER_GUILDS;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const MAX_USER_GUILDS = fn(1085).MAX_USER_GUILDS;
+const ReactCompilerGating = fn(558);
+function hasIncreasedGuildCap(currentUser) {
+  let result = PremiumUtilsDefault.canUseIncreasedGuildCap(currentUser);
+  if (!result) {
+    let isStaffResult;
+    if (currentUser != null) {
+      isStaffResult = currentUser.isStaff();
+    }
+    result = true === isStaffResult;
+  }
+  return result;
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
+
+export const useShouldShowInlineGuildCapUpsell = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let currentUser;
-      let guildCount;
-      let tmp11;
-      let tmp12;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      let tmp9;
-      let obj = react;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         const fn = function n() {
@@ -34,8 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      let stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      let stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [HotspotStore2.HotspotStore];
         const fn2 = function c() {
@@ -44,32 +47,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        tmp9 = fn2;
-        tmp8 = items1;
+        let tmp9 = fn2;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult3 = get_initialized;
-      const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp9);
+      const tmpResult = initialize;
+      const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [UserStore];
         class C {
           constructor() {
-            const obj = PremiumUtilsDefault;
-            return !obj.isPremium(currentUser.getCurrentUser());
+            obj = closure_1_1(closure_1_2[7]);
+            return !obj.isPremium(closure_1_4.getCurrentUser());
           }
         }
         cResult[4] = items2;
         cResult[5] = C;
-        tmp12 = C;
-        tmp11 = items2;
+        let tmp12 = C;
+        let tmp11 = items2;
       } else {
         tmp11 = cResult[4];
         tmp12 = cResult[5];
       }
-      const tmpResult4 = get_initialized;
-      const stateFromStoresObject = tmpResult4.useStateFromStoresObject(tmp11, tmp12);
+      const tmpResult3 = initialize;
+      const stateFromStoresObject = initialize.useStateFromStoresObject(tmp11, tmp12);
       if (stateFromStores) {
         stateFromStores = stateFromStores1;
       }
@@ -79,25 +82,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return stateFromStores;
     }
   : () => {
-      let currentUser;
-      let guildCount;
-      let obj = get_initialized;
       const items = [GuildStore];
-      let stateFromStores = obj.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
-      const useStateFromStores = get_initialized.useStateFromStores;
-      const items1 = [];
-      get_initialized;
-      items1[0] = HotspotStore2.HotspotStore;
-      const stateFromStores1 = useStateFromStores(items1, () => {
+      let stateFromStores = initialize.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
+      const items1 = [HotspotStore2.HotspotStore];
+      const stateFromStores1 = initialize.useStateFromStores(items1, () => {
         const HotspotStore = HotspotStore2.HotspotStore;
         return HotspotStore.hasHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
       });
       const items2 = [UserStore];
-      const obj2 = get_initialized;
-      const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => {
-        const obj = PremiumUtilsDefault;
-        return !obj.isPremium(currentUser.getCurrentUser());
-      });
+      const stateFromStoresObject = initialize.useStateFromStoresObject(
+        items2,
+        () => !PremiumUtilsDefault.isPremium(currentUser.getCurrentUser()),
+      );
       if (stateFromStores) {
         stateFromStores = stateFromStores1;
       }
@@ -106,32 +102,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return stateFromStores;
     };
-function hasIncreasedGuildCap(currentUser) {
-  const obj = PremiumUtilsDefault;
-  let result = obj.canUseIncreasedGuildCap(currentUser);
-  if (!result) {
-    let isStaffResult;
-    if (currentUser != null) {
-      isStaffResult = currentUser.isStaff();
-    }
-    result = true === isStaffResult;
-  }
-  return result;
-}
-let result = size.fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
-
-export const useShouldShowInlineGuildCapUpsell = tmp2;
 export const hideInlineGuildCapUpsell = function hideInlineGuildCapUpsell() {
-  const obj = HotspotStore2;
-  obj.hideHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
+  HotspotStore2.hideHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
 };
 export { hasIncreasedGuildCap };
 export const isAtGuildCapAndNonPremium = function isAtGuildCapAndNonPremium() {
   let tmp = GuildStore.getGuildCount() >= MAX_USER_GUILDS;
   if (tmp) {
     const currentUser = UserStore.getCurrentUser();
-    const obj2 = PremiumUtilsDefault;
-    let result = obj2.canUseIncreasedGuildCap(currentUser);
+    let result = PremiumUtilsDefault.canUseIncreasedGuildCap(currentUser);
     if (!result) {
       let isStaffResult;
       if (currentUser != null) {

@@ -1,74 +1,63 @@
 // discord_app/modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx
-import DismissibleContentConstants from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 import openGuildPowerupRollbackSheetDefault from "../utils/openGuildPowerupRollbackSheet.tsx";
-import _slicedToArray_mod from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let dependencyMap;
+const require = fn;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
 
-let _slicedToArray = _slicedToArray_mod;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2) => {
-      let closure_2;
-      let first;
-      let modalConfig;
-      let ref;
-      let shouldShow;
+      const cResult = modalConfig(576).c(9);
       let obj = modalConfig(576);
-      const cResult = obj.c(9);
       ({ shouldShow, modalConfig } = first(12184)(arg0, arg1));
-      first(12184)(arg0, arg1);
       if (cResult[0] === modalConfig) {
         if (cResult[1] === shouldShow) {
-          let tmp6;
-          if (cResult[2] === (undefined !== arg2 && arg2)) {
-            tmp6 = cResult[3];
+          if (cResult[2] === tmp4) {
+            let tmp6 = cResult[3];
           }
-          const tmpResult = modalConfig(6901);
-          const tmp11 = _slicedToArray(tmpResult.useSelectedDismissibleContent(tmp6), 2);
+          const tmp11 = _slicedToArray(modalConfig(6901).useSelectedDismissibleContent(tmp6), 2);
           first = tmp11[0];
           dependencyMap = tmp13;
-          _slicedToArray = react.useRef(false);
+          _slicedToArray = noop.useRef(false);
           if (cResult[4] === tmp11[1]) {
             if (cResult[5] === modalConfig) {
-              let tmp14;
-              let tmp15;
               if (cResult[6] === first) {
-                tmp14 = cResult[7];
-                tmp15 = cResult[8];
+                let tmp14 = cResult[7];
+                let tmp15 = cResult[8];
               }
-              const effect = react.useEffect(tmp14, tmp15);
+              const effect = noop.useEffect(tmp14, tmp15);
             }
           }
           let fn = function f() {
-            let bodies;
-            let fn;
-            const current = ref.current || null == modalConfig || first !== modalConfig.dismissibleContent;
+            let current = ref.current;
+            if (!current) {
+              current = null == modalConfig;
+            }
+            if (!current) {
+              current = first !== modalConfig.dismissibleContent;
+            }
             if (!current) {
               ref.current = true;
-              let obj = {
-                header: null,
-                body: bodies.join("\n\n"),
-                ctaText: modalConfig.primaryButtonText,
-                onCtaPress: fn,
-                onDismiss() {
-                  closure_1_2(constants.USER_DISMISS);
-                },
-              };
+              const obj = { header: null, body: null, ctaText: null, onCtaPress: null, onDismiss: null };
               ({ header: obj.header, bodies } = modalConfig);
-              fn = undefined;
-              const tmp8 = openGuildPowerupRollbackSheetDefault;
+              obj.body = bodies.join("\n\n");
+              obj.ctaText = modalConfig.primaryButtonText;
+              let fn;
               if (null != modalConfig.primaryButtonText) {
                 fn = () => {
-                  closure_1_2(constants.TAKE_ACTION);
-                  const obj = first(closure_2[8]);
-                  obj.hideActionSheet(modalConfig(closure_2[7]).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+                  dependencyMap(constants.TAKE_ACTION);
+                  first(4860).hideActionSheet(modalConfig(12186).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
                 };
               }
-              tmp8(obj);
+              obj.onCtaPress = fn;
+              obj.onDismiss = function onDismiss() {
+                dependencyMap(constants.USER_DISMISS);
+              };
+              openGuildPowerupRollbackSheetDefault(obj);
             }
           };
           const items = [first, modalConfig, tmp11[1]];
@@ -79,11 +68,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = items;
           tmp15 = items;
           tmp14 = fn;
+          const tmpResult = modalConfig(6901);
         }
       }
       let tmp7 = shouldShow;
-      if (tmp7) {
-        let tmp8 = null;
+      if (shouldShow) {
         tmp7 = null != modalConfig;
       }
       if (tmp7) {
@@ -98,12 +87,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = undefined !== arg2 && arg2;
       cResult[3] = items1;
       tmp6 = items1;
+      const tmp5 = first(12184)(arg0, arg1);
     }
   : (arg0, arg1) => {
-      let closure_2;
-      let modalConfig;
-      let ref;
-      let shouldShow;
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
@@ -113,7 +99,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = undefined;
       _slicedToArray = undefined;
       ({ shouldShow, modalConfig } = first(12184)(arg0, arg1));
-      first(12184)(arg0, arg1);
       if (shouldShow) {
         shouldShow = null != modalConfig;
       }
@@ -124,41 +109,38 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (shouldShow) {
         items.push(modalConfig.dismissibleContent);
       }
-      let obj = modalConfig(6901);
-      const tmp5 = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
+      const tmp2 = first(12184)(arg0, arg1);
+      const tmp5 = _slicedToArray(modalConfig(6901).useSelectedDismissibleContent(items), 2);
       first = tmp5[0];
       dependencyMap = tmp7;
-      _slicedToArray = react.useRef(false);
+      _slicedToArray = noop.useRef(false);
       const items1 = [first, modalConfig, tmp5[1]];
-      const effect = react.useEffect(() => {
-        let bodies;
-        let fn;
-        const current = ref.current || null == modalConfig || first !== modalConfig.dismissibleContent;
+      const effect = noop.useEffect(() => {
+        let current = ref.current;
+        if (!current) {
+          current = null == modalConfig;
+        }
+        if (!current) {
+          current = first !== modalConfig.dismissibleContent;
+        }
         if (!current) {
           ref.current = true;
-          let obj = {
-            header: null,
-            body: bodies.join("\n\n"),
-            ctaText: modalConfig.primaryButtonText,
-            onCtaPress: fn,
-            onDismiss() {
-              closure_1_2(constants.USER_DISMISS);
-            },
-          };
+          const obj = { header: null, body: null, ctaText: null, onCtaPress: null, onDismiss: null };
           ({ header: obj.header, bodies } = modalConfig);
-          fn = undefined;
-          const tmp8 = openGuildPowerupRollbackSheetDefault;
+          obj.body = bodies.join("\n\n");
+          obj.ctaText = modalConfig.primaryButtonText;
+          let fn;
           if (null != modalConfig.primaryButtonText) {
             fn = () => {
-              closure_1_2(constants.TAKE_ACTION);
-              const obj = first(closure_2[8]);
-              obj.hideActionSheet(modalConfig(closure_2[7]).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+              dependencyMap(constants.TAKE_ACTION);
+              first(4860).hideActionSheet(modalConfig(12186).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
             };
           }
-          tmp8(obj);
+          obj.onCtaPress = fn;
+          obj.onDismiss = function onDismiss() {
+            dependencyMap(constants.USER_DISMISS);
+          };
+          openGuildPowerupRollbackSheetDefault(obj);
         }
       }, items1);
     };
-const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
-
-export default tmp2;

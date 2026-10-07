@@ -15,7 +15,6 @@ const obj = {
 };
 const items = [, ,];
 ({ ROUTE: arr[0], PRESSABLE: arr[1], STATIC: arr[2] } = obj);
-const set = new Set(items);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRendererConstants.tsx");
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
@@ -27,4 +26,4 @@ export const ListItemType = {
   SECTION_ROW_PLACEHOLDER: "section_row_placeholder",
   SETTING_SEARCH_RESULT: "setting_search_result",
 };
-export const SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES = set;
+export const SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES = new Set(items);

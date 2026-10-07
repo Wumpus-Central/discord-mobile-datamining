@@ -1,11 +1,9 @@
 // discord_app/modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx
-import intl3 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
 ({ HelpdeskArticles: c3, NOOP: closure_4 } = Constants);
 const result = size.fileFinishedImporting(
   "modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx",
@@ -13,163 +11,113 @@ const result = size.fileFinishedImporting(
 
 export const getPrivateChannelIntegrationAddedSystemMessageContent =
   function getPrivateChannelIntegrationAddedSystemMessageContent(applicationNameHook) {
-    let application;
-    let format2Result;
-    let obj2;
-    let obj4;
-    let username;
-    let usernameHook;
     ({ application, username, usernameHook } = applicationNameHook);
     if (usernameHook === undefined) {
-      usernameHook = React3;
+      usernameHook = React4;
     }
     applicationNameHook = applicationNameHook.applicationNameHook;
     if (applicationNameHook === undefined) {
-      applicationNameHook = React3;
+      applicationNameHook = React4;
     }
     if (null != application) {
-      const intl2 = intl3.intl;
-      const format2 = intl2.format;
+      const intl2 = util.intl;
       const obj3 = {
         username,
         otherUsername: application.name,
         usernameHook,
         otherUsernameHook: applicationNameHook,
-        helpCenterLink: obj4.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
+        helpCenterLink: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
       };
-      const J8SaGy = intl3.t.J8SaGy;
-      obj4 = HelpdeskUtilsDefault;
-      format2Result = format2(J8SaGy, obj3);
+      let formatResult = intl2.format(util.t.J8SaGy, obj3);
     } else {
-      const intl = intl3.intl;
-      const format = intl.format;
+      const intl = util.intl;
       const obj = {
         username,
         usernameHook,
-        helpCenterLink: obj2.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
+        helpCenterLink: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
       };
-      const prop = intl3.t["+6V2sd"];
-      obj2 = HelpdeskUtilsDefault;
-      format2Result = format(prop, obj);
+      formatResult = intl.format(util.t["+6V2sd"], obj);
     }
-    return format2Result;
+    return formatResult;
   };
 export const getPrivateChannelIntegrationRemovedSystemMessageContent =
   function getPrivateChannelIntegrationRemovedSystemMessageContent(applicationNameHook) {
-    let application;
-    let format2Result;
-    let obj2;
-    let obj4;
-    let username;
-    let usernameHook;
     ({ application, username, usernameHook } = applicationNameHook);
     if (usernameHook === undefined) {
-      usernameHook = React3;
+      usernameHook = React4;
     }
     applicationNameHook = applicationNameHook.applicationNameHook;
     if (applicationNameHook === undefined) {
-      applicationNameHook = React3;
+      applicationNameHook = React4;
     }
     if (null != application) {
-      const intl2 = intl3.intl;
-      const format2 = intl2.format;
+      const intl2 = util.intl;
       const obj3 = {
         username,
         otherUsername: application.name,
         usernameHook,
         otherUsernameHook: applicationNameHook,
-        helpCenterLink: obj4.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
+        helpCenterLink: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
       };
-      const eGCDak = intl3.t.eGCDak;
-      obj4 = HelpdeskUtilsDefault;
-      format2Result = format2(eGCDak, obj3);
+      let formatResult = intl2.format(util.t.eGCDak, obj3);
     } else {
-      const intl = intl3.intl;
-      const format = intl.format;
+      const intl = util.intl;
       const obj = {
         username,
         usernameHook,
-        helpCenterLink: obj2.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
+        helpCenterLink: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS),
       };
-      const sAX6rs = intl3.t.sAX6rs;
-      obj2 = HelpdeskUtilsDefault;
-      format2Result = format(sAX6rs, obj);
+      formatResult = intl.format(util.t.sAX6rs, obj);
     }
-    return format2Result;
+    return formatResult;
   };
 export const getPrivateChannelIntegrationAddedSystemMessageASTContent =
   function getPrivateChannelIntegrationAddedSystemMessageASTContent(arg0) {
-    let application;
-    let formatToPartsResult;
-    let medium;
-    let obj2;
-    let obj3;
-    let obj5;
-    let obj6;
-    let username;
-    let usernameOnClick;
     ({ application, username, usernameOnClick, medium } = arg0);
     if (null != application) {
-      const intl = intl3.intl;
-      const formatToParts = intl.formatToParts;
+      const intl = util.intl;
       const obj = {
         username,
         otherUsername: application.name,
         usernameOnClick,
         otherUsernameOnClick: tmp,
         medium,
-        helpCenterLink: obj2,
+        helpCenterLink: null,
       };
-      obj2 = { url: obj3.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
-      const prop = intl3.t["8r+Z+I"];
-      obj3 = HelpdeskUtilsDefault;
-      formatToPartsResult = formatToParts(prop, obj);
+      const obj2 = { url: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
+      obj.helpCenterLink = obj2;
+      let formatToPartsResult = intl.formatToParts(util.t["8r+Z+I"], obj);
     } else {
-      const intl2 = intl3.intl;
-      const formatToParts2 = intl2.formatToParts;
-      const obj4 = { username, usernameOnClick, medium, helpCenterLink: obj5 };
-      obj5 = { url: obj6.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
-      const ojysqe = intl3.t.ojysqe;
-      obj6 = HelpdeskUtilsDefault;
-      formatToPartsResult = formatToParts2(ojysqe, obj4);
+      const intl2 = util.intl;
+      const obj4 = { username, usernameOnClick, medium, helpCenterLink: null };
+      const obj5 = { url: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
+      obj4.helpCenterLink = obj5;
+      formatToPartsResult = intl2.formatToParts(util.t.ojysqe, obj4);
     }
     return formatToPartsResult;
   };
 export const getPrivateChannelIntegrationRemovedSystemMessageASTContent =
   function getPrivateChannelIntegrationRemovedSystemMessageASTContent(arg0) {
-    let application;
-    let formatToPartsResult;
-    let medium;
-    let obj2;
-    let obj3;
-    let obj5;
-    let obj6;
-    let username;
-    let usernameOnClick;
     ({ application, username, usernameOnClick, medium } = arg0);
     if (null != application) {
-      const intl = intl3.intl;
-      const formatToParts = intl.formatToParts;
+      const intl = util.intl;
       const obj = {
         username,
         otherUsername: application.name,
         usernameOnClick,
         otherUsernameOnClick: tmp,
         medium,
-        helpCenterLink: obj2,
+        helpCenterLink: null,
       };
-      obj2 = { url: obj3.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
-      const zmc0mq = intl3.t.zmc0mq;
-      obj3 = HelpdeskUtilsDefault;
-      formatToPartsResult = formatToParts(zmc0mq, obj);
+      const obj2 = { url: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
+      obj.helpCenterLink = obj2;
+      let formatToPartsResult = intl.formatToParts(util.t.zmc0mq, obj);
     } else {
-      const intl2 = intl3.intl;
-      const formatToParts2 = intl2.formatToParts;
-      const obj4 = { username, usernameOnClick, medium, helpCenterLink: obj5 };
-      obj5 = { url: obj6.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
-      const prop = intl3.t["x2CN/Z"];
-      obj6 = HelpdeskUtilsDefault;
-      formatToPartsResult = formatToParts2(prop, obj4);
+      const intl2 = util.intl;
+      const obj4 = { username, usernameOnClick, medium, helpCenterLink: null };
+      const obj5 = { url: HelpdeskUtilsDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS) };
+      obj4.helpCenterLink = obj5;
+      formatToPartsResult = intl2.formatToParts(util.t["x2CN/Z"], obj4);
     }
     return formatToPartsResult;
   };

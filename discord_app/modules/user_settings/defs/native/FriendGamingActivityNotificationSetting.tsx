@@ -1,26 +1,24 @@
 // discord_app/modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FriendGamingActivityNotificationUtils from "../../../notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["yq/aPt"]);
+    const intl = util.intl;
+    return intl.string(util.t["yq/aPt"]);
   },
   useDescription() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.Amy1fz);
+    const intl = util.intl;
+    return intl.string(util.t.Amy1fz);
   },
-  parent: MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: UserSettings.EnableFriendGamingActivityNotifications.useSetting,
   onValueChange: FriendGamingActivityNotificationUtils.onFriendGamingActivityNotificationSettingsChanged,
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
 const result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/FriendGamingActivityNotificationSetting.tsx",
 );

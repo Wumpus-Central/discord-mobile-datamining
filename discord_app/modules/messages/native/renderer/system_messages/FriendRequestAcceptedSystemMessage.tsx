@@ -1,26 +1,23 @@
 // discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07756_AssetRegistry.js";
+import _modDef7756 from "../../../../../../_runtime/metro/07756__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx",
 );
 
 export const createFriendRequestAcceptedSystemMessage = function createFriendRequestAcceptedSystemMessage(message) {
-  let obj5;
-  let obj7;
-  let tmp18Result2;
   message = message.message;
-  const roleStyle = message.roleStyle;
   const channel = ChannelStore.getChannel(message.channel_id);
   if (null != channel) {
     if (channel.isDM()) {
@@ -29,59 +26,50 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
       const currentUser = UserStore.getCurrentUser();
       if (null != user) {
         if (null != currentUser) {
-          let formatToPartsResult;
-          const obj9 = useAuthorWithProcessedColor;
-          const userAuthorWithProcessedColor = obj9.getUserAuthorWithProcessedColor(user, channel);
-          const obj = { userId: recipientId, message, author: userAuthorWithProcessedColor, roleStyle };
-          const obj2 = {
-            username: userAuthorWithProcessedColor.nick,
-            usernameOnClick: formatUsernameOnClickDefault(obj),
-          };
-          const content = message.content;
+          let colorString = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
+          const obj = { userId: recipientId, message, author: colorString, roleStyle: message.roleStyle };
+          let obj2 = { username: colorString.nick, usernameOnClick: formatUsernameOnClickDefault(obj) };
+          let content = message.content;
           if (null != content) {
-            let tmp6;
             if ("" !== content) {
-              let formatToParts2Result;
               const obj3 = { baseTextColor: nativeDefault.colors.TEXT_SUBTLE };
-              const createNativeStyleProperties = createStyles.createNativeStyleProperties;
-              createStyles;
-              const baseTextColor = createNativeStyleProperties(obj3)(message.theme).baseTextColor;
-              const intl2 = intl3.intl;
+              const intl2 = util.intl;
               const formatToParts2 = intl2.formatToParts;
-              const t2 = intl3.t;
-              if (message.author.id === currentUser.id) {
-                const v6pQebO = t2["6pQebO"];
-                const obj4 = { note: content, formattedNote: obj5 };
-                const merged = Object.assign(obj2);
-                obj5 = { colorString: userAuthorWithProcessedColor.colorString };
-                formatToParts2Result = formatToParts2(v6pQebO, obj4);
+              let t1 = util.t;
+              if (tmp18) {
+                t1 = {};
+                obj2 = Object.assign(obj2);
+                t1.note = content;
+                content = { colorString: null };
+                colorString = colorString.colorString;
+                content.colorString = colorString;
+                t1.formattedNote = content;
+                let formatToParts2Result = formatToParts2(t1["6pQebO"], t1);
               } else {
-                const bNrwDM = t2.bNrwDM;
-                const obj6 = { note: content, formattedNote: obj7 };
-                const merged1 = Object.assign(obj2);
-                obj7 = { colorString: userAuthorWithProcessedColor.colorString };
-                formatToParts2Result = formatToParts2(bNrwDM, obj6);
+                const obj4 = {};
+                const merged = Object.assign(obj2);
+                obj4.note = content;
+                const obj5 = { colorString: colorString.colorString };
+                obj4.formattedNote = obj5;
+                formatToParts2Result = formatToParts2(t1.bNrwDM, obj4);
               }
-              formatToPartsResult = formatToParts2Result;
-              tmp6 = baseTextColor;
+              const baseTextColor = createStyles.createNativeStyleProperties(obj3)(message.theme).baseTextColor;
+              const tmp15Result = createStyles;
             }
-            const obj8 = {
-              content: formatToPartsResult,
-              iconUrl: tmp18Result2.getAssetUriForEmbed(AssetRegistryDefault),
-              textColor: tmp6,
-            };
-            tmp18Result2 = renderer_EmbedUtils;
-            const merged2 = Object.assign(createCommonMessageDefault(message));
-            return obj8;
           }
-          const intl = intl3.intl;
+          const intl = util.intl;
           const formatToParts = intl.formatToParts;
-          const t = intl3.t;
+          const t = util.t;
           if (message.author.id === currentUser.id) {
-            formatToPartsResult = formatToParts(t.REfFZs, obj2);
+            let formatToPartsResult = formatToParts(t.REfFZs, obj2);
           } else {
             formatToPartsResult = formatToParts(t.hyPOTm, obj2);
           }
+          const obj6 = { content: formatToPartsResult, iconUrl: null, textColor: null };
+          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7756);
+          obj6.textColor = undefined;
+          const merged1 = Object.assign(createCommonMessageDefault(message));
+          return obj6;
         }
       }
       return null;

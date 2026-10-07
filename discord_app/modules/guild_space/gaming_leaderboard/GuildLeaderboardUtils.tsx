@@ -1,28 +1,27 @@
 // discord_app/modules/guild_space/gaming_leaderboard/GuildLeaderboardUtils.tsx
-import intl3 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import GuildLeaderboardStatCopy from "GuildLeaderboardStatCopy.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/GuildLeaderboardUtils.tsx");
 
 export const LEADERBOARD_WINNER_ROLE_NAME_PREFIX =
   "leaderboard-winner-badge-sentinel-deliberately-longer-than-the-100-character-maximum-role-name-length:";
 export const getLeaderboardWinnerBadgeText = function getLeaderboardWinnerBadgeText(activeLeaderboardWinnerData) {
-  const obj = GuildLeaderboardStatCopy;
-  const name = obj.getStatName(activeLeaderboardWinnerData.winningStat).name;
+  const name = GuildLeaderboardStatCopy.getStatName(activeLeaderboardWinnerData.winningStat).name;
   const winningStreak = activeLeaderboardWinnerData.winningStreak;
   if (null != winningStreak) {
-    let formatToPlainStringResult;
     if (winningStreak > 1) {
-      const intl2 = intl3.intl;
+      const intl2 = util.intl;
       const obj2 = { streakCount: winningStreak, statName: name };
-      formatToPlainStringResult = intl2.formatToPlainString(intl3.t.owAd83, obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(util.t.owAd83, obj2);
     }
     return formatToPlainStringResult;
   }
-  const intl = intl3.intl;
-  formatToPlainStringResult = intl.formatToPlainString(intl3.t.So4gmj, { statName: name });
+  const intl = util.intl;
+  formatToPlainStringResult = intl.formatToPlainString(util.t.So4gmj, { statName: name });
 };
 export const encodeWinnerData = function encodeWinnerData(activeLeaderboardWinnerData) {
   let num = activeLeaderboardWinnerData.winningStat;
@@ -41,6 +40,5 @@ export const encodeWinnerData = function encodeWinnerData(activeLeaderboardWinne
 };
 export const decodeWinnerData = function decodeWinnerData(str) {
   const tmp = _slicedToArray(str.split("|"), 3);
-  const obj = { winningStat: parseInt(tmp[0]), winningStreak: parseInt(tmp[1]), winningWeek: tmp2 };
-  return obj;
+  return { winningStat: parseInt(tmp[0]), winningStreak: parseInt(tmp[1]), winningWeek: tmp[2] };
 };

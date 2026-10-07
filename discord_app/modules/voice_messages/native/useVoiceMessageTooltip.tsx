@@ -1,41 +1,32 @@
 // discord_app/modules/voice_messages/native/useVoiceMessageTooltip.tsx
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useKeyboardIsOpen from "../../keyboard/native/useKeyboardIsOpen.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
-import VoiceMessagesUIStore from "VoiceMessagesUIStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
+require = fn;
+const VoiceMessagesUIStore = fn(11587);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,
   useVoiceMessagesUIStore: metroRequire,
 } = VoiceMessagesUIStore);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_0;
-      let first;
-      let tmp10;
-      let tmp11;
-      let tmp14;
-      let tmp7;
-      let tmp9;
-      let obj = require("react");
-      const cResult = obj.c(8);
-      const ref = react.useRef(null);
+      const cResult = require("c").c(8);
+      const ref = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(showVoiceMessagesTooltip) {
           return showVoiceMessagesTooltip.showVoiceMessagesTooltip;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -43,9 +34,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp6;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(require("intl").t["hP6+07"]);
+        const stringResult = intl.string(tmp(1126).t["hP6+07"]);
         cResult[1] = stringResult;
-        tmp7 = stringResult;
+        let tmp7 = stringResult;
       } else {
         tmp7 = cResult[1];
       }
@@ -53,21 +44,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { position: "top", label: tmp7, visible: tmp6 };
         cResult[2] = tmp6;
         cResult[3] = obj3;
-        tmp9 = obj3;
+        let tmp9 = obj3;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] !== tmp6) {
         const fn2 = function h() {
-          let keyboardIsOpen;
           if (keyboardIsOpen) {
-            let obj = useKeyboardIsOpen;
-            keyboardIsOpen = obj.getKeyboardIsOpen({ includeCustomKeyboard: true });
-            let closure_1 = subscribeToKeyboardUIStore(() => {
-              const obj = closure_2_0(closure_2_1[6]);
+            keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
+            closure_1 = subscribeToKeyboardUIStore(() => {
               if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
                 closure_2_4();
               }
+              obj = closure_0(dependencyMap[6]);
             });
             const _setTimeout = setTimeout;
             const timeout = setTimeout(() => {
@@ -83,47 +72,45 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = tmp6;
         cResult[5] = fn2;
         cResult[6] = items;
-        tmp11 = items;
-        tmp10 = fn2;
+        let tmp11 = items;
+        let tmp10 = fn2;
       } else {
         tmp10 = cResult[5];
         tmp11 = cResult[6];
       }
-      const effect = react.useEffect(tmp10, tmp11);
-      const tmpResult = require("useTooltip");
-      const tooltip = tmpResult.useTooltip(ref, tmp9);
+      const effect = noop.useEffect(tmp10, tmp11);
+      let obj = require("c");
+      const tooltip = require("useTooltip").useTooltip(ref, tmp9);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { tooltipTargetRef: ref, showVoiceMessagesTooltip };
         cResult[7] = obj4;
-        tmp14 = obj4;
+        let tmp14 = obj4;
       } else {
         tmp14 = cResult[7];
       }
       return tmp14;
     }
   : () => {
-      let visible;
-      const ref = react.useRef(null);
+      const ref = noop.useRef(null);
       const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
       _require = tmp2;
       const items = [tmp2];
       const items1 = [tmp2];
-      const memo = react.useMemo(() => {
-        let intl;
-        const obj = { position: "top", label: intl.string(intl2.t["hP6+07"]), visible };
-        intl = intl2.intl;
+      const memo = noop.useMemo(() => {
+        const obj = { position: "top", label: null, visible: null };
+        const intl = util.intl;
+        obj.label = intl.string(util.t["hP6+07"]);
+        obj.visible = visible;
         return obj;
       }, items);
-      const effect = react.useEffect(() => {
-        let keyboardIsOpen;
+      const effect = noop.useEffect(() => {
         if (keyboardIsOpen) {
-          let obj = useKeyboardIsOpen;
-          keyboardIsOpen = obj.getKeyboardIsOpen({ includeCustomKeyboard: true });
-          let closure_1 = subscribeToKeyboardUIStore(() => {
-            const obj = visible(closure_2_1[6]);
+          keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
+          closure_1 = subscribeToKeyboardUIStore(() => {
             if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
               closure_2_4();
             }
+            obj = closure_0(dependencyMap[6]);
           });
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
@@ -135,10 +122,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           };
         }
       }, items1);
-      let obj = require("useTooltip");
-      const tooltip = obj.useTooltip(ref, memo);
+      const tooltip = require("useTooltip").useTooltip(ref, memo);
       return { tooltipTargetRef: ref, showVoiceMessagesTooltip };
     };
-const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
-
-export default tmp3;

@@ -1,10 +1,8 @@
 // discord_app/stores/native/PushNotificationPermissionStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PushNotificationDefault from "../../lib/pushnotification/PushNotification.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let set;
 let obj = {
   INIT: 0,
   [0]: "INIT",
@@ -15,7 +13,7 @@ let obj = {
   PROMPT_SKIPPED: 3,
   [3]: "PROMPT_SKIPPED",
 };
-let obj2 = {
+const obj2 = {
   MESSAGE_SENT: 0,
   [0]: "MESSAGE_SENT",
   INVITE_ACCEPTED: 1,
@@ -45,62 +43,55 @@ let obj3 = {
     [obj2.GUILD_OPEN_BOTTOM_SHEET]: null,
     [obj2.CALL_DISCONNECT_BOTTOM_SHEET]: null,
   },
-  eligiblePromptTypes: set,
+  eligiblePromptTypes: new Set([]),
 };
-set = new Set([]);
 obj = obj3;
 let authorizationStatus = null;
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
-class PushNotificationPermissionStore extends DeviceSettingsStore {
-  initialize(promptLastSeen) {
-    let _Set1;
-    let constants2;
-    obj = { promptLastSeen: obj2, eligiblePromptTypes: _Set1 };
-    const merged = Object.assign(obj3);
-    let tmp4 = promptLastSeen;
-    if (promptLastSeen == null) {
-      tmp4 = null;
-    }
-    const merged1 = Object.assign(tmp4);
-    obj2 = {};
-    const merged2 = Object.assign(tmp2.promptLastSeen);
-    promptLastSeen = undefined;
-    if (promptLastSeen != null) {
-      promptLastSeen = promptLastSeen.promptLastSeen;
-    }
-    const merged3 = Object.assign(promptLastSeen);
-    const items = [...tmp2.eligiblePromptTypes];
-    const _Set = Set;
-    let eligiblePromptTypes;
-    if (promptLastSeen != null) {
-      eligiblePromptTypes = promptLastSeen.eligiblePromptTypes;
-    }
-    if (eligiblePromptTypes == null) {
-      eligiblePromptTypes = [];
-    }
-    HermesBuiltin.arraySpread(items, eligiblePromptTypes, tmp9);
-    _Set1 = new _Set(items.filter((item) => item !== constants2.POST_REACTION_BANNER));
-    obj3 = PushNotificationDefault;
-    obj3.checkPermissions((sound) => {
-      let _alert;
-      let badge;
-      ({ alert: _alert, badge } = sound);
-      if (!_alert) {
-        _alert = sound.sound;
-      }
-      if (!_alert) {
-        _alert = badge;
-      }
-      if (_alert) {
-        obj.permissionState = constants.REQUESTED;
-      }
-    });
-  }
-  getUserAgnosticState() {
-    return obj;
-  }
-}
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
+class PushNotificationPermissionStore extends DeviceSettingsStore {}
 const prototype = PushNotificationPermissionStore.prototype;
+prototype["initialize"] = function initialize(promptLastSeen) {
+  obj = {};
+  const merged = Object.assign(obj3);
+  let tmp3 = promptLastSeen;
+  if (promptLastSeen == null) {
+    tmp3 = null;
+  }
+  const merged1 = Object.assign(tmp3);
+  const merged2 = Object.assign(tmp.promptLastSeen);
+  promptLastSeen = undefined;
+  if (promptLastSeen != null) {
+    promptLastSeen = promptLastSeen.promptLastSeen;
+  }
+  const merged3 = Object.assign(promptLastSeen);
+  obj.promptLastSeen = {};
+  const items = [...tmp.eligiblePromptTypes];
+  let eligiblePromptTypes;
+  if (promptLastSeen != null) {
+    eligiblePromptTypes = promptLastSeen.eligiblePromptTypes;
+  }
+  if (eligiblePromptTypes == null) {
+    eligiblePromptTypes = [];
+  }
+  HermesBuiltin.arraySpread(eligiblePromptTypes, tmp8);
+  obj.eligiblePromptTypes = new Set(items.filter((item) => item !== constants2.POST_REACTION_BANNER));
+  obj3 = PushNotificationDefault;
+  obj3.checkPermissions((sound) => {
+    ({ alert: _alert, badge } = sound);
+    if (!_alert) {
+      _alert = sound.sound;
+    }
+    if (!_alert) {
+      _alert = badge;
+    }
+    if (_alert) {
+      obj.permissionState = constants.REQUESTED;
+    }
+  });
+};
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return obj;
+};
 Object.defineProperty(prototype, "permissionState", {
   get: function permissionState() {
     return obj.permissionState;
@@ -124,25 +115,20 @@ Object.defineProperty(prototype, "authorizationStatus", {
 PushNotificationPermissionStore.displayName = "PushNotificationPermissionStore";
 PushNotificationPermissionStore.persistKey = "PushNotificationPermissionStoreKey_1";
 let items = [
-  function (promptLastSeen) {
-    let eligiblePromptTypes;
-    obj = { promptLastSeen: obj2, eligiblePromptTypes };
+  (promptLastSeen) => {
+    obj = {};
     const merged = Object.assign(obj3);
     const merged1 = Object.assign(promptLastSeen);
-    obj2 = {};
     const merged2 = Object.assign(obj3.promptLastSeen);
     const merged3 = Object.assign(promptLastSeen.promptLastSeen);
+    obj.promptLastSeen = {};
     if (null == promptLastSeen.eligiblePromptTypes) {
       const _Set4 = Set;
-      const self5 = this;
-      const self6 = this;
-      eligiblePromptTypes = new Set([]);
+      let eligiblePromptTypes = new Set([]);
     } else {
       const _Array = Array;
       if (Array.isArray(promptLastSeen.eligiblePromptTypes)) {
         const _Set3 = Set;
-        const self3 = this;
-        const self4 = this;
         eligiblePromptTypes = new Set(promptLastSeen.eligiblePromptTypes);
       } else {
         const _Set = Set;
@@ -150,38 +136,32 @@ let items = [
           eligiblePromptTypes = promptLastSeen.eligiblePromptTypes;
         } else {
           const _Set2 = Set;
-          const self = this;
-          const self2 = this;
           eligiblePromptTypes = new Set([]);
         }
       }
     }
+    obj.eligiblePromptTypes = eligiblePromptTypes;
     return obj;
   },
 ];
 PushNotificationPermissionStore.migrations = items;
-const obj4 = {
+const pushNotificationPermissionStore = new PushNotificationPermissionStore(DispatcherDefault, {
   PUSH_NOTIFICATION_PERMISSION_SET_STATE: function setPushNotificationPermissionState(permissionState) {
     obj.permissionState = permissionState.permissionState;
   },
   PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN: function setPushPermissionReactivationSeen(promptType) {
-    promptType = promptType.promptType;
-    const promptLastSeen = obj.promptLastSeen;
-    promptLastSeen[promptType] = new Date();
-    new Date();
+    obj.promptLastSeen[promptType.promptType] = new Date();
     return true;
   },
   PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE: function setPromptTypeAsEligible(promptType) {
-    promptType = promptType.promptType;
-    set = new Set(obj.eligiblePromptTypes);
-    obj.eligiblePromptTypes = set.add(promptType);
+    obj.eligiblePromptTypes = new Set(obj.eligiblePromptTypes).add(promptType.promptType);
     return true;
   },
   PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE: function setNotificationAuthorizationStatus(authorizationStatus) {
     authorizationStatus = authorizationStatus.authorizationStatus;
   },
-};
-const pushNotificationPermissionStore = new PushNotificationPermissionStore(DispatcherDefault, obj4);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/native/PushNotificationPermissionStore.tsx");
 
 export default pushNotificationPermissionStore;

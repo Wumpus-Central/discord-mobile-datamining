@@ -2,17 +2,19 @@
 import VerificationUtilsDefault from "../VerificationUtils.tsx";
 import SafetyFlowsLegacyRequiredActionsExperiment from "../../safety_flows/SafetyFlowsLegacyRequiredActionsExperiment.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/isFullScreenVerificationModalRequired.tsx");
 
 export default function isFullScreenVerificationModalRequired(requiredAction, location) {
-  const obj = VerificationUtilsDefault;
-  let result = obj.isFullScreenVerification(requiredAction) && null != AuthenticationStore.getToken();
+  let result = VerificationUtilsDefault.isFullScreenVerification(requiredAction);
+  if (result) {
+    result = null != AuthenticationStore.getToken();
+  }
   if (result) {
     const obj3 = { location, requiredAction };
-    const obj2 = SafetyFlowsLegacyRequiredActionsExperiment;
-    result = !obj2.shouldUseSafetyFlowsForRequiredAction(obj3);
+    result = !SafetyFlowsLegacyRequiredActionsExperiment.shouldUseSafetyFlowsForRequiredAction(obj3);
   }
   return result;
 }

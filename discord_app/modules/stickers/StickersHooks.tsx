@@ -1,7 +1,6 @@
 // discord_app/modules/stickers/StickersHooks.tsx
-import react2 from "../../../_runtime/00576_react.js";
-import Constants from "../../Constants.tsx";
-import intl3 from "../../intl/index.native.tsx";
+import c from "../../../_runtime/00576_c.js";
+import util from "../../intl/index.native.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import StickersUtils from "StickersUtils.tsx";
@@ -10,33 +9,26 @@ import StickerSendability from "StickerSendability.tsx";
 import useManageResourcePermissions from "../permissions/useManageResourcePermissions.tsx";
 import FrecencyUserSettingsHooks from "../user_settings/FrecencyUserSettingsHooks.tsx";
 import StickersActionCreators from "StickersActionCreators.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import StickersPersistedStore from "StickersPersistedStore.tsx";
 import StickersStore from "StickersStore.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, c1, current, dependencyMap, flattenedGuildIds, rowCount, rowIndex, visibleRowIndex;
 
-let react = react_mod;
-const Permissions = Constants.Permissions;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const Permissions = fn(1085).Permissions;
+fn(558);
+let ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let tmp5;
-      let tmp6;
       _require = arg0;
-      let tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(6);
+      const cResult = require("c").c(6);
       closure_13();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StickersStore];
@@ -50,22 +42,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
       if (cResult[2] === stateFromStores) {
-        let tmp9;
-        let tmp10;
         if (cResult[3] === arg0) {
-          tmp9 = cResult[4];
-          tmp10 = cResult[5];
+          let tmp9 = cResult[4];
+          let tmp10 = cResult[5];
         }
-        const effect = react.useEffect(tmp9, tmp10);
+        const effect = noop.useEffect(tmp9, tmp10);
       }
       const fn2 = function l() {
-        const tmp = stateFromStores && null == StickersStore.getStickerPack(closure_0);
+        let tmp = stateFromStores;
+        if (stateFromStores) {
+          tmp = null == StickersStore.getStickerPack(closure_0);
+        }
         if (tmp) {
-          const obj = StickersActionCreators;
-          const stickerPack = obj.fetchStickerPack(closure_0);
+          const stickerPack = StickersActionCreators.fetchStickerPack(closure_0);
         }
       };
       const items1 = [arg0, stateFromStores];
@@ -75,61 +67,34 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp10 = items1;
       tmp9 = fn2;
+      const tmpResult = require("initialize");
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      let tmp = closure_13();
-      let obj = require("get initialized");
+      closure_13();
       const items = [StickersStore];
-      const stateFromStores = obj.useStateFromStores(items, () => StickersStore.hasLoadedStickerPacks);
+      const stateFromStores = require("initialize").useStateFromStores(
+        items,
+        () => StickersStore.hasLoadedStickerPacks,
+      );
       const items1 = [arg0, stateFromStores];
-      const effect = react.useEffect(() => {
-        const tmp = stateFromStores && null == StickersStore.getStickerPack(closure_0);
+      const effect = noop.useEffect(() => {
+        let tmp = stateFromStores;
+        if (stateFromStores) {
+          tmp = null == StickersStore.getStickerPack(closure_0);
+        }
         if (tmp) {
-          const obj = StickersActionCreators;
-          const stickerPack = obj.fetchStickerPack(closure_0);
+          const stickerPack = StickersActionCreators.fetchStickerPack(closure_0);
         }
       }, items1);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (dependencyMap) => {
-      const obj = react2;
-      const cResult = obj.c(3);
-      const AnimateStickers = UserSettings.AnimateStickers;
-      const setting = AnimateStickers.useSetting();
-      if (cResult[0] === setting) {
-        let tmp5;
-        if (cResult[1] === dependencyMap) {
-          tmp5 = cResult[2];
-        }
-        return tmp5;
-      }
-      const tmpResult = StickersUtils;
-      const shouldAnimateStickerResult = tmpResult.shouldAnimateSticker(setting, dependencyMap);
-      cResult[0] = setting;
-      cResult[1] = dependencyMap;
-      cResult[2] = shouldAnimateStickerResult;
-      tmp5 = shouldAnimateStickerResult;
-    }
-  : (dependencyMap) => {
-      const AnimateStickers = UserSettings.AnimateStickers;
-      const setting = AnimateStickers.useSetting();
-      const obj = StickersUtils;
-      return obj.shouldAnimateSticker(setting, dependencyMap);
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp2;
-      let tmp3;
-      let obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
-          const obj = require("StickersActionCreators");
-          const stickerPacks = obj.fetchStickerPacks();
+          const stickerPacks = require("StickersActionCreators").fetchStickerPacks();
         };
         const items = [];
         cResult[0] = fn;
@@ -139,32 +104,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp2, tmp3] = cResult;
       }
-      const effect = react.useEffect(tmp2, tmp3);
+      const effect = noop.useEffect(tmp2, tmp3);
     }
   : () => {
-      const effect = react.useEffect(() => {
-        const obj = require("StickersActionCreators");
-        const stickerPacks = obj.fetchStickerPacks();
+      const effect = noop.useEffect(() => {
+        const stickerPacks = require("StickersActionCreators").fetchStickerPacks();
       }, []);
     };
 let closure_13 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? (getGuildId) => {
-      let allGuildStickers;
-      let currentUser;
-      let id;
-      let name;
-      let tmp10;
-      let tmp11;
-      let tmp12;
-      let tmp16;
-      let tmp17;
-      let tmp6;
-      let tmp7;
       _require = getGuildId;
-      const obj = require("react");
-      const cResult = obj.c(15);
+      const cResult = require("c").c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [StickersStore];
         const fn = function c() {
@@ -177,8 +129,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const tmp2Result = require("get initialized");
-      const stateFromStores = tmp2Result.useStateFromStores(tmp6, tmp7);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp6, tmp7);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [SortedGuildStore, GuildStore];
         const fn2 = function f() {
@@ -196,39 +148,38 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = items1;
         cResult[3] = fn2;
         cResult[4] = items2;
-        tmp12 = items2;
-        tmp11 = fn2;
-        tmp10 = items1;
+        let tmp12 = items2;
+        let tmp11 = fn2;
+        let tmp10 = items1;
       } else {
         tmp10 = cResult[2];
         tmp11 = cResult[3];
         tmp12 = cResult[4];
       }
-      const tmp2Result3 = require("get initialized");
-      const stateFromStoresArray = tmp2Result3.useStateFromStoresArray(tmp10, tmp11, tmp12);
+      const tmp2Result = require("initialize");
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp10, tmp11, tmp12);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items3 = [UserStore];
         class E {
           constructor() {
-            return currentUser.getCurrentUser();
+            return closure_1_9.getCurrentUser();
           }
         }
         cResult[5] = items3;
         cResult[6] = E;
-        tmp17 = E;
-        tmp16 = items3;
+        let tmp17 = E;
+        let tmp16 = items3;
       } else {
         tmp16 = cResult[5];
         tmp17 = cResult[6];
       }
-      const tmp2Result4 = require("get initialized");
-      const stateFromStores1 = tmp2Result4.useStateFromStores(tmp16, tmp17);
+      const tmp2Result3 = require("initialize");
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp16, tmp17);
       if (cResult[7] === getGuildId) {
         if (cResult[8] === stateFromStores) {
           if (cResult[9] === stateFromStoresArray) {
-            let tmp20;
             if (cResult[10] === stateFromStores1) {
-              tmp20 = cResult[11];
+              let tmp20 = cResult[11];
             }
             return tmp20;
           }
@@ -236,24 +187,30 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items4 = [];
       const iter = stateFromStoresArray[Symbol.iterator]();
-      const nextResult = iter.next();
+      const tmp2Result4 = require("initialize");
       while (iter !== undefined) {
         ({ name, id } = nextResult);
         class E {
           constructor() {
-            return currentUser.getCurrentUser();
+            return closure_1_9.getCurrentUser();
           }
         }
-        let tmp24 = null != tmp23 && 0 !== tmp23.length;
+        let tmp24 = null != tmp23;
         if (tmp24) {
-          let obj2 = { type: require("StickersTypes").StickerCategoryTypes.GUILD, id, name, stickers: tmp23 };
+          tmp24 = 0 !== tmp23.length;
+        }
+        if (tmp24) {
+          let obj2 = { type: null, id: null, name: null, stickers: null };
           class E {
             constructor() {
-              return currentUser.getCurrentUser();
+              return closure_1_9.getCurrentUser();
             }
           }
-          let push = items4.push;
-          let arr = push(obj2);
+          obj2.type = require("StickersTypes").StickerCategoryTypes.GUILD;
+          obj2.id = id;
+          obj2.name = name;
+          obj2.stickers = tmp23;
+          let arr = items4.push(obj2);
         }
         continue;
       }
@@ -262,46 +219,46 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         guildId = getGuildId.getGuildId();
       }
       if (null != guildId) {
-        let guild = GuildStore.getGuild(getGuildId.getGuildId());
+        guild = GuildStore.getGuild(getGuildId.getGuildId());
         class E {
           constructor() {
-            return currentUser.getCurrentUser();
+            return closure_1_9.getCurrentUser();
           }
         }
-        const obj9 = require("useManageResourcePermissions");
-        const canManageAllExpressions = obj9.getManageResourcePermissions(guild).canManageAllExpressions;
         const findIndexResult = items4.findIndex((id) => id.id === getGuildId.getGuildId());
-        const tmp45 = _require;
         if (findIndexResult >= 1) {
           items4.unshift(items4.splice(findIndexResult, 1)[0]);
         } else {
-          const tmp34 = -1 === findIndexResult && null != guild && canManageAllExpressions;
           if (tmp34) {
-            const obj3 = {
-              type: tmp45(5436).StickerCategoryTypes.EMPTY_GUILD_UPSELL,
-              id: null,
-              name: null,
-              stickers: [],
-            };
+            const obj3 = { type: null, id: null, name: null, stickers: null };
             class E {
               constructor() {
-                return currentUser.getCurrentUser();
+                return closure_1_9.getCurrentUser();
               }
             }
+            obj3.type = tmp45(5436).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
             ({ id: obj6.id, name: obj6.name } = guild);
+            obj3.stickers = [];
             tmp35(obj3);
           }
+          tmp34 =
+            -1 === findIndexResult && null != guild && obj9.getManageResourcePermissions(guild).canManageAllExpressions;
         }
         if (null != stateFromStores1) {
-          const obj4 = { permission: Permissions.USE_EXTERNAL_EMOJIS, user: stateFromStores1, context: getGuildId };
-          const obj7 = require("PermissionUtils");
+          const obj4 = { permission: null, user: null, context: null };
           class E {
             constructor() {
-              return currentUser.getCurrentUser();
+              return closure_1_9.getCurrentUser();
             }
           }
-          obj7.can(obj4);
+          obj4.permission = Permissions.USE_EXTERNAL_EMOJIS;
+          obj4.user = stateFromStores1;
+          obj4.context = getGuildId;
+          require("PermissionUtils").can(obj4);
+          const obj7 = require("PermissionUtils");
         }
+        obj9 = require("useManageResourcePermissions");
+        tmp45 = _require;
       }
       cResult[7] = getGuildId;
       cResult[8] = stateFromStores;
@@ -309,19 +266,17 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = stateFromStores1;
       cResult[11] = items4;
       tmp20 = items4;
+      nextResult = iter.next();
     }
   : (arg0) => {
-      let allGuildStickers;
-      let closure_0;
-      let currentUser;
-      let stateFromStoresArray;
       _require = arg0;
-      let obj = require("get initialized");
       let items = [StickersStore];
-      const stateFromStores = obj.useStateFromStores(items, () => allGuildStickers.getAllGuildStickers());
-      const obj2 = require("get initialized");
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        allGuildStickers.getAllGuildStickers(),
+      );
+      let obj = require("initialize");
       const items1 = [SortedGuildStore, GuildStore];
-      stateFromStoresArray = obj2.useStateFromStoresArray(items1, () => {
+      stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
         flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
         const items = [];
         const item = flattenedGuildIds.forEach((item) => {
@@ -332,28 +287,25 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return items;
       }, []);
-      const obj3 = require("get initialized");
+      const obj2 = require("initialize");
       const items2 = [UserStore];
-      const stateFromStores1 = obj3.useStateFromStores(items2, () => currentUser.getCurrentUser());
+      const stateFromStores1 = require("initialize").useStateFromStores(items2, () => currentUser.getCurrentUser());
       const items3 = [stateFromStores, stateFromStoresArray, stateFromStores1, arg0];
-      return react.useMemo(() => {
-        let id;
-        let name;
+      return noop.useMemo(() => {
         const items = [];
         const iter = stateFromStoresArray[Symbol.iterator]();
-        const nextResult = iter.next();
         while (iter !== undefined) {
           ({ name, id } = nextResult);
-          let value = stateFromStores.get(id);
+          value = stateFromStores.get(id);
           let arr2 = value;
           let tmp6 = null != value;
           if (tmp6) {
             tmp6 = 0 !== arr2.length;
           }
           if (tmp6) {
-            let obj = { type: StickersTypes.StickerCategoryTypes.GUILD, id, name, stickers: arr2 };
-            let push = items.push;
-            let arr = push(obj);
+            let obj = { type: StickersTypes.StickerCategoryTypes.GUILD, id, name, stickers: null };
+            obj.stickers = arr2;
+            let arr = items.push(obj);
           }
           continue;
         }
@@ -363,40 +315,40 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != guildId) {
           guild = GuildStore.getGuild(obj2.getGuildId());
-          const obj6 = useManageResourcePermissions;
-          const canManageAllExpressions = obj6.getManageResourcePermissions(guild).canManageAllExpressions;
           const findIndexResult = items.findIndex((id) => id.id === guildId.getGuildId());
           if (findIndexResult >= 1) {
             items.unshift(items.splice(findIndexResult, 1)[0]);
           } else {
-            const tmp15 = -1 === findIndexResult && null != guild && canManageAllExpressions;
             if (tmp15) {
-              const unshift = items.unshift;
-              ({ id: obj3.id, name: obj3.name } = guild);
               const obj5 = {
                 type: StickersTypes.StickerCategoryTypes.EMPTY_GUILD_UPSELL,
                 id: null,
                 name: null,
-                stickers: [],
+                stickers: null,
               };
-              unshift(obj5);
+              ({ id: obj3.id, name: obj3.name } = guild);
+              obj5.stickers = [];
+              items.unshift(obj5);
             }
+            tmp15 =
+              -1 === findIndexResult &&
+              null != guild &&
+              obj6.getManageResourcePermissions(guild).canManageAllExpressions;
           }
           if (null != stateFromStores1) {
-            const obj8 = { permission: Permissions.USE_EXTERNAL_EMOJIS, user: tmp20, context: guildId };
-            const obj4 = PermissionUtilsAll;
-            obj4.can(obj8);
+            const obj8 = { permission: Permissions.USE_EXTERNAL_EMOJIS, user: tmp20, context: obj2 };
+            PermissionUtilsAll.can(obj8);
           }
+          obj6 = useManageResourcePermissions;
         }
         return items;
       }, items3);
     };
 let closure_15 = [];
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = FrecencyUserSettingsHooks;
-      const favoriteStickers = obj.useFrecencySettings().favoriteStickers;
+      const favoriteStickers = FrecencyUserSettingsHooks.useFrecencySettings().favoriteStickers;
       let stickerIds;
       if (favoriteStickers != null) {
         stickerIds = favoriteStickers.stickerIds;
@@ -407,8 +359,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return stickerIds;
     }
   : () => {
-      const obj = FrecencyUserSettingsHooks;
-      const favoriteStickers = obj.useFrecencySettings().favoriteStickers;
+      const favoriteStickers = FrecencyUserSettingsHooks.useFrecencySettings().favoriteStickers;
       let stickerIds;
       if (favoriteStickers != null) {
         stickerIds = favoriteStickers.stickerIds;
@@ -419,40 +370,33 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return stickerIds;
     };
 let closure_16 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_0;
-      let first;
-      let tmp7;
-      let tmp8;
-      let tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(4);
+      const cResult = require("c").c(4);
       const tmp4 = closure_16();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StickersStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp4) {
         const fn = function s() {
-          let stickerById;
           const mapped = closure_0.map((item) => stickerById.getStickerById(item));
           return mapped.filter((item) => {
             let tmp = null != item;
             if (tmp) {
-              const obj = closure_1_0(closure_1_2[15]);
-              const isGuildStickerResult = obj.isGuildSticker(item);
+              const isGuildStickerResult = closure_1_0(dependencyMap[15]).isGuildSticker(item);
               let result = !isGuildStickerResult;
               if (isGuildStickerResult) {
-                const tmp2Result = closure_1_0(closure_1_2[15]);
-                result = tmp2Result.isAvailableGuildSticker(item);
+                result = closure_1_0(dependencyMap[15]).isAvailableGuildSticker(item);
+                const tmp2Result = closure_1_0(dependencyMap[15]);
               }
               tmp = result;
+              const obj = closure_1_0(dependencyMap[15]);
             }
             return tmp;
           });
@@ -461,38 +405,35 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = tmp4;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp8 = items1;
-        tmp7 = fn;
+        let tmp8 = items1;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStoresArray(first, tmp7, tmp8);
+      let obj = require("c");
+      return require("initialize").useStateFromStoresArray(first, tmp7, tmp8);
     }
   : () => {
-      let closure_0;
       let tmp = closure_16();
       _require = tmp;
-      let obj = require("get initialized");
       const items = [StickersStore];
       const items1 = [tmp];
-      return obj.useStateFromStoresArray(
+      return require("initialize").useStateFromStoresArray(
         items,
         () => {
-          let stickerById;
           const mapped = closure_0.map((item) => stickerById.getStickerById(item));
           return mapped.filter((item) => {
             let tmp = null != item;
             if (tmp) {
-              const obj = closure_1_0(closure_1_2[15]);
-              const isGuildStickerResult = obj.isGuildSticker(item);
+              const isGuildStickerResult = closure_1_0(dependencyMap[15]).isGuildSticker(item);
               let result = !isGuildStickerResult;
               if (isGuildStickerResult) {
-                const tmp2Result = closure_1_0(closure_1_2[15]);
-                result = tmp2Result.isAvailableGuildSticker(item);
+                result = closure_1_0(dependencyMap[15]).isAvailableGuildSticker(item);
+                const tmp2Result = closure_1_0(dependencyMap[15]);
               }
               tmp = result;
+              const obj = closure_1_0(dependencyMap[15]);
             }
             return tmp;
           });
@@ -501,62 +442,54 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 let closure_17 = tmp6;
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = react2;
-      const cResult = obj.c(2);
-      const obj2 = FrecencyUserSettingsHooks;
-      const frecencySettings = obj2.useFrecencySettings();
-      let tmp3 = closure_15;
+      const cResult = c.c(2);
+      let stickerFrecency = FrecencyUserSettingsHooks.useFrecencySettings();
+      let tmp3 = null;
       let stickers;
-      if (frecencySettings != null) {
-        const stickerFrecency = frecencySettings.stickerFrecency;
-        if (stickerFrecency != null) {
-          stickers = stickerFrecency.stickers;
+      if (stickerFrecency != null) {
+        const stickerFrecency2 = stickerFrecency.stickerFrecency;
+        if (stickerFrecency2 != tmp3) {
+          stickers = stickerFrecency2.stickers;
         }
       }
-      if (null != stickers) {
-        let tmp6;
+      if (tmp3 == stickers) {
+        return closure_15;
+      } else {
         let stickers1;
-        const first = cResult[0];
-        if (frecencySettings != null) {
-          const stickerFrecency2 = frecencySettings.stickerFrecency;
-          if (stickerFrecency2 != null) {
-            stickers1 = stickerFrecency2.stickers;
+        if (stickerFrecency != tmp3) {
+          const stickerFrecency3 = stickerFrecency.stickerFrecency;
+          if (stickerFrecency3 != tmp3) {
+            stickers1 = stickerFrecency3.stickers;
           }
         }
-        if (first !== stickers1) {
+        if (cResult[0] !== stickers1) {
           let stickers2;
-          const _Object = Object;
-          if (frecencySettings != null) {
-            const stickerFrecency3 = frecencySettings.stickerFrecency;
-            if (stickerFrecency3 != null) {
-              stickers2 = stickerFrecency3.stickers;
+          if (stickerFrecency != tmp3) {
+            const stickerFrecency4 = stickerFrecency.stickerFrecency;
+            if (stickerFrecency4 != tmp3) {
+              stickers2 = stickerFrecency4.stickers;
             }
           }
-          const keys1 = keys(stickers2);
+          const keys = Object.keys(stickers2);
           let stickers3;
-          if (frecencySettings != null) {
-            const stickerFrecency4 = frecencySettings.stickerFrecency;
-            if (stickerFrecency4 != null) {
-              stickers3 = stickerFrecency4.stickers;
+          if (stickerFrecency != tmp3) {
+            stickerFrecency = stickerFrecency.stickerFrecency;
+            tmp3 = stickerFrecency == tmp3;
+            if (!tmp3) {
+              stickers3 = stickerFrecency.stickers;
             }
           }
           cResult[0] = stickers3;
-          cResult[1] = keys1;
-          tmp6 = keys1;
-        } else {
-          tmp6 = cResult[1];
+          cResult[1] = keys;
         }
-        tmp3 = tmp6;
       }
-      return tmp3;
     }
   : () => {
-      const obj = FrecencyUserSettingsHooks;
-      const frecencySettings = obj.useFrecencySettings();
-      let keys1 = closure_15;
+      const frecencySettings = FrecencyUserSettingsHooks.useFrecencySettings();
+      let keys = closure_15;
       let stickers;
       if (frecencySettings != null) {
         const stickerFrecency = frecencySettings.stickerFrecency;
@@ -566,113 +499,68 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (null != stickers) {
         let stickers1;
-        const _Object = Object;
         if (frecencySettings != null) {
           const stickerFrecency2 = frecencySettings.stickerFrecency;
           if (stickerFrecency2 != null) {
             stickers1 = stickerFrecency2.stickers;
           }
         }
-        keys1 = keys(stickers1);
+        keys = Object.keys(stickers1);
       }
-      return keys1;
+      return keys;
     };
 let closure_18 = tmp7;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      let closure_0;
-      let first;
-      let tmp7;
-      let tmp8;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      const tmp4 = closure_18();
-      const tmp = _require;
-      _require = tmp4;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [StickersStore];
-        cResult[0] = items;
-        first = items;
-      } else {
-        first = cResult[0];
+ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (dependencyMap) => {
+      const cResult = c.c(3);
+      const AnimateStickers = UserSettings.AnimateStickers;
+      const setting = AnimateStickers.useSetting();
+      if (cResult[0] === setting) {
+        if (cResult[1] === dependencyMap) {
+          let tmp5 = cResult[2];
+        }
+        return tmp5;
       }
-      if (cResult[1] !== tmp4) {
-        const fn = function s() {
-          let stickerById;
-          const mapped = closure_0.map((item) => stickerById.getStickerById(item));
-          return mapped.filter((item) => undefined !== item);
-        };
-        const items1 = [tmp4];
-        cResult[1] = tmp4;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        tmp8 = items1;
-        tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
-      }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStoresArray(first, tmp7, tmp8);
+      const shouldAnimateStickerResult = StickersUtils.shouldAnimateSticker(setting, dependencyMap);
+      cResult[0] = setting;
+      cResult[1] = dependencyMap;
+      cResult[2] = shouldAnimateStickerResult;
+      tmp5 = shouldAnimateStickerResult;
+      const tmpResult = StickersUtils;
     }
-  : () => {
-      let closure_0;
-      const tmp = closure_18();
-      _require = tmp;
-      const items = [StickersStore];
-      const items1 = [tmp];
-      const obj = require("get initialized");
-      return obj.useStateFromStoresArray(
-        items,
-        () => {
-          let stickerById;
-          const mapped = closure_0.map((item) => stickerById.getStickerById(item));
-          return mapped.filter((item) => undefined !== item);
-        },
-        items1,
-      );
+  : (dependencyMap) => {
+      const AnimateStickers = UserSettings.AnimateStickers;
+      const setting = AnimateStickers.useSetting();
+      return StickersUtils.shouldAnimateSticker(setting, dependencyMap);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let currentUser;
-      let premiumPacks;
-      let stateFromStores;
-      let tmp12;
-      let tmp13;
-      let tmp17;
-      let tmp19;
-      let tmp21;
-      let tmp22;
-      let tmp6;
-      let tmp7;
-      let tmp8;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(23);
-      const tmp5 = closure_17();
+      let RECENT = stateFromStores;
+      const cResult = require("c").c(23);
+      const tmp3 = closure_17();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StickersStore, StickersPersistedStore];
         const fn = function c() {
-          const obj = {
+          return {
             packs: premiumPacks.getPremiumPacks(),
             frequentlyUsedStickers: StickersPersistedStore.stickerFrecencyWithoutFetchingLatest.frequently,
           };
-          return obj;
         };
         const items1 = [];
         cResult[0] = items;
         cResult[1] = fn;
         cResult[2] = items1;
-        tmp6 = items;
-        tmp7 = fn;
-        tmp8 = items1;
+        tmp4 = items;
+        tmp5 = fn;
+        tmp6 = items1;
       } else {
-        [tmp6, tmp7, tmp8] = cResult;
+        [tmp4, tmp5, tmp6] = cResult;
       }
-      const tmp2Result = require("get initialized");
-      const stateFromStoresObject = tmp2Result.useStateFromStoresObject(tmp6, tmp7, tmp8);
+      const obj = require("c");
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp4, tmp5, tmp6);
       const packs = stateFromStoresObject.packs;
       const prop = stateFromStoresObject.frequentlyUsedStickers;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -682,119 +570,111 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = items2;
         cResult[4] = fn2;
-        tmp13 = fn2;
-        tmp12 = items2;
+        let tmp11 = fn2;
+        let tmp10 = items2;
       } else {
-        tmp12 = cResult[3];
-        tmp13 = cResult[4];
+        tmp10 = cResult[3];
+        tmp11 = cResult[4];
       }
-      const tmp2Result2 = require("get initialized");
-      stateFromStores = tmp2Result2.useStateFromStores(tmp12, tmp13);
-      const tmp16 = closure_14(arg0);
+      let tmpResult = require("initialize");
+      stateFromStores = require("initialize").useStateFromStores(tmp10, tmp11);
+      const tmp14 = closure_14(arg0);
       if (cResult[5] === arg0) {
-        if (cResult[6] === tmp5) {
+        if (cResult[6] === tmp3) {
           if (cResult[7] === prop) {
-            if (cResult[8] === tmp16) {
+            if (cResult[8] === tmp14) {
               if (cResult[9] === packs) {
                 if (cResult[10] === stateFromStores) {
-                  tmp17 = cResult[11];
+                  return cResult[11];
                 }
-                return tmp17;
               }
             }
           }
         }
       }
-      const mapped = packs.map(tmp2(tmp3[15]).createStickerPackCategory);
+      const mapped = packs.map(tmp(RECENT[15]).createStickerPackCategory);
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp2(tmp3[19]).intl;
-        const stringResult = intl.string(require("intl").t.y3LQCG);
+        const intl = tmp(RECENT[19]).intl;
+        const stringResult = intl.string(tmp(RECENT[19]).t.y3LQCG);
         cResult[12] = stringResult;
-        tmp19 = stringResult;
+        let tmp16 = stringResult;
       } else {
-        tmp19 = cResult[12];
+        tmp16 = cResult[12];
       }
-      if (cResult[13] !== tmp5) {
+      if (cResult[13] !== tmp3) {
         const obj2 = {
-          type: require("StickersTypes").StickerCategoryTypes.FAVORITE,
-          id: require("StickersTypes").StickerCategoryTypes.FAVORITE,
-          name: tmp19,
-          stickers: tmp5,
+          type: tmp(RECENT[17]).StickerCategoryTypes.FAVORITE,
+          id: tmp(RECENT[17]).StickerCategoryTypes.FAVORITE,
+          name: tmp16,
+          stickers: tmp3,
         };
-        cResult[13] = tmp5;
+        cResult[13] = tmp3;
         cResult[14] = obj2;
-        tmp21 = obj2;
+        let tmp18 = obj2;
       } else {
-        tmp21 = cResult[14];
+        tmp18 = cResult[14];
       }
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp2(tmp3[19]).intl;
-        const stringResult1 = intl2.string(require("intl").t["6hjpXW"]);
+        const intl2 = tmp(RECENT[19]).intl;
+        const stringResult1 = intl2.string(tmp(RECENT[19]).t["6hjpXW"]);
         cResult[15] = stringResult1;
-        tmp22 = stringResult1;
+        let tmp19 = stringResult1;
       } else {
-        tmp22 = cResult[15];
+        tmp19 = cResult[15];
       }
       if (cResult[16] === arg0) {
         if (cResult[17] === prop) {
           if (cResult[18] === packs) {
-            let tmp24;
-            let tmp25;
             if (cResult[19] === stateFromStores) {
-              tmp24 = cResult[20];
+              let tmp21 = cResult[20];
             }
-            if (cResult[21] !== tmp24) {
-              const obj3 = {
-                type: require("StickersTypes").StickerCategoryTypes.RECENT,
-                id: require("StickersTypes").StickerCategoryTypes.RECENT,
-                name: tmp22,
-                stickers: tmp24,
-              };
-              cResult[21] = tmp24;
+            if (cResult[21] !== tmp21) {
+              const obj3 = { type: tmp(RECENT[17]).StickerCategoryTypes.RECENT, id: null, name: null, stickers: null };
+              RECENT = tmp(RECENT[17]).StickerCategoryTypes.RECENT;
+              obj3.id = RECENT;
+              obj3.name = tmp19;
+              obj3.stickers = tmp21;
+              cResult[21] = tmp21;
               cResult[22] = obj3;
-              tmp25 = obj3;
+              let tmp22 = obj3;
             } else {
-              tmp25 = cResult[22];
+              tmp22 = cResult[22];
             }
-            const items3 = [tmp21, tmp25];
-            HermesBuiltin.arraySpread(items3, mapped, HermesBuiltin.arraySpread(items3, tmp16, 2));
+            const items3 = [tmp18, tmp22];
+            HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(tmp14, 2));
             cResult[5] = arg0;
-            cResult[6] = tmp5;
+            cResult[6] = tmp3;
             cResult[7] = prop;
-            cResult[8] = tmp16;
+            cResult[8] = tmp14;
             cResult[9] = packs;
             cResult[10] = stateFromStores;
             cResult[11] = items3;
-            tmp17 = items3;
           }
         }
       }
       let found;
       if (prop != null) {
         found = prop.filter((guild_id) => {
-          let someResult;
-          closure_0 = guild_id;
-          const obj = StickersUtils;
           if (obj.isGuildSticker(guild_id)) {
             const stickersByGuildId = StickersStore.getStickersByGuildId(guild_id.guild_id);
             let flag;
             if (stickersByGuildId != null) {
-              flag = stickersByGuildId.some((id) => id.id === closure_0.id);
+              flag = stickersByGuildId.some((id) => id.id === guild_id.id);
             }
             if (flag == null) {
               flag = false;
             }
             if (flag) {
-              const tmpResult = StickerSendability;
-              const stickerSendability = tmpResult.getStickerSendability(guild_id, stateFromStores, closure_0);
+              const stickerSendability = StickerSendability.getStickerSendability(guild_id, stateFromStores, guild_id);
               flag = stickerSendability !== StickerSendability.StickerSendability.NONSENDABLE;
+              const tmpResult = StickerSendability;
             }
-            someResult = flag;
+            let someResult = flag;
           } else {
-            const tmpResult2 = StickersUtils;
             if (tmpResult2.isStandardSticker(guild_id)) {
-              someResult = packs.some((id) => id.id === closure_0.pack_id);
+              someResult = packs.some((id) => id.id === guild_id.pack_id);
             }
+            tmpResult2 = StickersUtils;
           }
           return someResult;
         });
@@ -807,78 +687,73 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[18] = packs;
       cResult[19] = stateFromStores;
       cResult[20] = found;
-      tmp24 = found;
+      tmp21 = found;
+      let tmpResult2 = require("initialize");
     }
   : (arg0) => {
-      let closure_5;
-      let currentUser;
-      let packs;
       _require = arg0;
       const tmp = closure_17();
       const stickers = tmp;
-      let obj = require("get initialized");
       let items = [StickersStore, StickersPersistedStore];
-      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-        const obj = {
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(
+        items,
+        () => ({
           packs: StickersStore.getPremiumPacks(),
           frequentlyUsedStickers: StickersPersistedStore.stickerFrecencyWithoutFetchingLatest.frequently,
-        };
-        return obj;
-      }, []);
+        }),
+        [],
+      );
       packs = stateFromStoresObject.packs;
       const frequentlyUsedStickers = stateFromStoresObject.frequentlyUsedStickers;
-      let obj2 = require("get initialized");
+      let obj = require("initialize");
       const items1 = [UserStore];
-      const stateFromStores = obj2.useStateFromStores(items1, () => currentUser.getCurrentUser());
+      const stateFromStores = require("initialize").useStateFromStores(items1, () => currentUser.getCurrentUser());
       const tmp4 = closure_14(arg0);
-      react = tmp4;
+      noop = tmp4;
       const items2 = [packs, tmp, frequentlyUsedStickers, tmp4, stateFromStores, arg0];
-      return react.useMemo(() => {
-        let found;
-        let intl;
-        let intl2;
+      return noop.useMemo(() => {
         const mapped = packs.map(StickersUtils.createStickerPackCategory);
-        let obj = {
+        const obj = {
           type: StickersTypes.StickerCategoryTypes.FAVORITE,
           id: StickersTypes.StickerCategoryTypes.FAVORITE,
-          name: intl.string(intl3.t.y3LQCG),
-          stickers,
+          name: null,
+          stickers: null,
         };
-        intl = intl3.intl;
+        const intl = util.intl;
+        obj.name = intl.string(util.t.y3LQCG);
+        obj.stickers = stickers;
         const items = [obj];
         const obj2 = {
           type: StickersTypes.StickerCategoryTypes.RECENT,
           id: StickersTypes.StickerCategoryTypes.RECENT,
-          name: intl2.string(intl3.t["6hjpXW"]),
-          stickers: found,
+          name: null,
+          stickers: null,
         };
-        intl2 = intl3.intl;
-        found = undefined;
+        const intl2 = util.intl;
+        obj2.name = intl2.string(util.t["6hjpXW"]);
+        let found;
         if (frequentlyUsedStickers != null) {
           found = frequentlyUsedStickers.filter((guild_id) => {
-            let someResult;
-            closure_0 = guild_id;
-            const obj = closure_0(packs[15]);
             if (obj.isGuildSticker(guild_id)) {
               const stickersByGuildId = StickersStore.getStickersByGuildId(guild_id.guild_id);
               let flag;
               if (stickersByGuildId != null) {
-                flag = stickersByGuildId.some((id) => id.id === closure_0.id);
+                flag = stickersByGuildId.some((id) => id.id === guild_id.id);
               }
               if (flag == null) {
                 flag = false;
               }
               if (flag) {
-                const tmpResult = closure_0(packs[22]);
-                const stickerSendability = tmpResult.getStickerSendability(guild_id, stateFromStores, closure_1_0);
+                const stickerSendability = tmp(packs[22]).getStickerSendability(guild_id, stateFromStores, closure_1_0);
                 flag = stickerSendability !== tmp(packs[22]).StickerSendability.NONSENDABLE;
+                const tmpResult = tmp(packs[22]);
               }
-              someResult = flag;
+              let someResult = flag;
             } else {
-              const tmpResult2 = closure_0(packs[15]);
               if (tmpResult2.isStandardSticker(guild_id)) {
-                someResult = closure_1_2.some((id) => id.id === closure_0.pack_id);
+                someResult = closure_1_2.some((id) => id.id === guild_id.pack_id);
               }
+              tmpResult2 = tmp(packs[15]);
             }
             return someResult;
           });
@@ -886,32 +761,68 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         if (found == null) {
           found = [];
         }
+        obj2.stickers = found;
         items[1] = obj2;
-        HermesBuiltin.arraySpread(items, mapped, HermesBuiltin.arraySpread(items, closure_5, 2));
+        HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(closure_5, 2));
         return items;
       }, items2);
     };
 let closure_19 = tmp9;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (id, arg1) => {
-      let closure_5;
-      let first;
-      let tmp10;
-      let tmp12;
-      let tmp13;
-      let tmp23;
-      let tmp7;
-      _require = id;
-      let tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(22);
-      const tmp4 = undefined !== arg1 && arg1;
-      let closure_1 = tmp4;
+ReactCompilerGating = fn(558);
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = require("c").c(4);
+      const tmp4 = closure_18();
+      _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [StickersStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== tmp4) {
+        const fn = function s() {
+          const mapped = closure_0.map((item) => stickerById.getStickerById(item));
+          return mapped.filter((item) => undefined !== item);
+        };
+        const items1 = [tmp4];
+        cResult[1] = tmp4;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        let tmp8 = items1;
+        let tmp7 = fn;
+      } else {
+        tmp7 = cResult[2];
+        tmp8 = cResult[3];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStoresArray(first, tmp7, tmp8);
+    }
+  : () => {
+      const tmp = closure_18();
+      _require = tmp;
+      const items = [StickersStore];
+      const items1 = [tmp];
+      return require("initialize").useStateFromStoresArray(
+        items,
+        () => {
+          const mapped = closure_0.map((item) => stickerById.getStickerById(item));
+          return mapped.filter((item) => undefined !== item);
+        },
+        items1,
+      );
+    };
+ReactCompilerGating = fn(558);
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id, arg1) => {
+      _require = id;
+      const cResult = require("c").c(22);
+      closure_1 = tmp4;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [StickersStore];
+        cResult[0] = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -921,27 +832,26 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = id.id;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-      let obj3 = react;
-      [tmp10, dependencyMap] = current(react.useState(true), 2);
-      const tmp9 = current(react.useState(true), 2);
-      [tmp12, _asyncToGenerator] = current(react.useState(false), 2);
-      const tmp11 = current(react.useState(false), 2);
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
+      const tmpResult = require("initialize");
+      [tmp10, dependencyMap] = current(noop.useState(true), 2);
+      const tmp9 = current(noop.useState(true), 2);
+      [tmp12, asyncGeneratorStep] = current(noop.useState(false), 2);
       if (cResult[3] !== id) {
-        const tmpResult3 = tmp(5435);
-        let isGuildStickerResult = tmpResult3.isGuildSticker(id);
+        let isGuildStickerResult = tmp(5435).isGuildSticker(id);
         if (!isGuildStickerResult) {
+          isGuildStickerResult = tmp(5435).isStandardSticker(id);
           const tmpResult4 = tmp(5435);
-          isGuildStickerResult = tmpResult4.isStandardSticker(id);
         }
         cResult[3] = id;
         cResult[4] = isGuildStickerResult;
-        tmp13 = isGuildStickerResult;
+        let tmp13 = isGuildStickerResult;
+        const tmpResult3 = tmp(5435);
       } else {
         tmp13 = cResult[4];
       }
@@ -949,17 +859,16 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === tmp13) {
           if (cResult[7] === id) {
             if (cResult[8] === tmp10) {
-              let tmp15;
-              let tmp20;
               if (cResult[9] === stateFromStores) {
-                tmp15 = cResult[10];
+                let tmp15 = cResult[10];
               }
               current = tmp15;
-              react = obj3.useRef(tmp15);
+              noop = obj3.useRef(tmp15);
               if (cResult[11] !== tmp15) {
                 class R {
                   constructor() {
-                    closure_5.current = current;
+                    closure_5.current = closure_4;
+                    return;
                   }
                 }
                 cResult[11] = tmp15;
@@ -967,7 +876,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 class R {
                   constructor() {
-                    closure_5.current = current;
+                    closure_5.current = closure_4;
+                    return;
                   }
                 }
               }
@@ -976,12 +886,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                 class P {
                   constructor() {
                     tmp = closure_3(async () => {
-                      let closure_0;
-                      let obj2;
                       if (c3 === 2) {
                         c3 = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");
-                      } else if (tmp3 === 3) {
+                      } else if (tmp6 === 3) {
                         if (arg0 === 1) {
                           throw value;
                         } else if (arg0 === 2) {
@@ -991,7 +899,6 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           return { value: "IconComponent", done: null };
                         }
                       } else {
-                        let c2;
                         try {
                           c3 = 2;
                           if (0 === c1) {
@@ -1013,8 +920,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                         c2 = 1;
                                         c1 = 2;
                                         c3 = 1;
-                                        const obj5 = { value: obj2.fetchSticker(tmp19.id), done: false };
-                                        obj2 = tmp(c2[13]);
+                                        const obj5 = { value: tmp3(c2[13]).fetchSticker(tmp23.id), done: false };
                                         return obj5;
                                       }
                                     }
@@ -1023,7 +929,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                           } else {
-                            if (1 === tmp4) {
+                            if (1 === tmp7) {
                               c2 = 0;
                             } else if (arg0 === 1) {
                               c3 = 3;
@@ -1039,13 +945,12 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             closure_128_3(true);
                           }
                           c3 = 3;
-                          return { value: "IconComponent", done: null };
-                        } catch (tmp12) {
-                          if (0 === c2) {
-                            c3 = 3;
-                            throw tmp12;
+                        } catch (tmp15) {
+                          if (tmp4 === c2) {
+                            c3 = tmp2;
+                            throw tmp15;
                           } else {
-                            c1 = 1;
+                            c1 = tmp;
                           }
                         }
                       }
@@ -1057,17 +962,15 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[13] = tmp4;
                 cResult[14] = P;
                 cResult[15] = items1;
-                tmp20 = items1;
+                let tmp20 = items1;
               } else {
                 class P {
                   constructor() {
                     tmp = closure_3(async () => {
-                      let closure_0;
-                      let obj2;
                       if (c3 === 2) {
                         c3 = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");
-                      } else if (tmp3 === 3) {
+                      } else if (tmp6 === 3) {
                         if (arg0 === 1) {
                           throw value;
                         } else if (arg0 === 2) {
@@ -1077,7 +980,6 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           return { value: "IconComponent", done: null };
                         }
                       } else {
-                        let c2;
                         try {
                           c3 = 2;
                           if (0 === c1) {
@@ -1099,8 +1001,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                         c2 = 1;
                                         c1 = 2;
                                         c3 = 1;
-                                        const obj5 = { value: obj2.fetchSticker(tmp19.id), done: false };
-                                        obj2 = tmp(c2[13]);
+                                        const obj5 = { value: tmp3(c2[13]).fetchSticker(tmp23.id), done: false };
                                         return obj5;
                                       }
                                     }
@@ -1109,7 +1010,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                           } else {
-                            if (1 === tmp4) {
+                            if (1 === tmp7) {
                               c2 = 0;
                             } else if (arg0 === 1) {
                               c3 = 3;
@@ -1125,13 +1026,12 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             closure_128_3(true);
                           }
                           c3 = 3;
-                          return { value: "IconComponent", done: null };
-                        } catch (tmp12) {
-                          if (0 === c2) {
-                            c3 = 3;
-                            throw tmp12;
+                        } catch (tmp15) {
+                          if (tmp4 === c2) {
+                            c3 = tmp2;
+                            throw tmp15;
                           } else {
-                            c1 = 1;
+                            c1 = tmp;
                           }
                         }
                       }
@@ -1146,12 +1046,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                 class P {
                   constructor() {
                     tmp = closure_3(async () => {
-                      let closure_0;
-                      let obj2;
                       if (c3 === 2) {
                         c3 = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");
-                      } else if (tmp3 === 3) {
+                      } else if (tmp6 === 3) {
                         if (arg0 === 1) {
                           throw value;
                         } else if (arg0 === 2) {
@@ -1161,7 +1059,6 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           return { value: "IconComponent", done: null };
                         }
                       } else {
-                        let c2;
                         try {
                           c3 = 2;
                           if (0 === c1) {
@@ -1183,8 +1080,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                         c2 = 1;
                                         c1 = 2;
                                         c3 = 1;
-                                        const obj5 = { value: obj2.fetchSticker(tmp19.id), done: false };
-                                        obj2 = tmp(c2[13]);
+                                        const obj5 = { value: tmp3(c2[13]).fetchSticker(tmp23.id), done: false };
                                         return obj5;
                                       }
                                     }
@@ -1193,7 +1089,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                           } else {
-                            if (1 === tmp4) {
+                            if (1 === tmp7) {
                               c2 = 0;
                             } else if (arg0 === 1) {
                               c3 = 3;
@@ -1209,13 +1105,12 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             closure_128_3(true);
                           }
                           c3 = 3;
-                          return { value: "IconComponent", done: null };
-                        } catch (tmp12) {
-                          if (0 === c2) {
-                            c3 = 3;
-                            throw tmp12;
+                        } catch (tmp15) {
+                          if (tmp4 === c2) {
+                            c3 = tmp2;
+                            throw tmp15;
                           } else {
-                            c1 = 1;
+                            c1 = tmp;
                           }
                         }
                       }
@@ -1231,12 +1126,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                 class P {
                   constructor() {
                     tmp = closure_3(async () => {
-                      let closure_0;
-                      let obj2;
                       if (c3 === 2) {
                         c3 = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");
-                      } else if (tmp3 === 3) {
+                      } else if (tmp6 === 3) {
                         if (arg0 === 1) {
                           throw value;
                         } else if (arg0 === 2) {
@@ -1246,7 +1139,6 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                           return { value: "IconComponent", done: null };
                         }
                       } else {
-                        let c2;
                         try {
                           c3 = 2;
                           if (0 === c1) {
@@ -1268,8 +1160,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                         c2 = 1;
                                         c1 = 2;
                                         c3 = 1;
-                                        const obj5 = { value: obj2.fetchSticker(tmp19.id), done: false };
-                                        obj2 = tmp(c2[13]);
+                                        const obj5 = { value: tmp3(c2[13]).fetchSticker(tmp23.id), done: false };
                                         return obj5;
                                       }
                                     }
@@ -1278,7 +1169,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                           } else {
-                            if (1 === tmp4) {
+                            if (1 === tmp7) {
                               c2 = 0;
                             } else if (arg0 === 1) {
                               c3 = 3;
@@ -1294,13 +1185,12 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             closure_128_3(true);
                           }
                           c3 = 3;
-                          return { value: "IconComponent", done: null };
-                        } catch (tmp12) {
-                          if (0 === c2) {
-                            c3 = 3;
-                            throw tmp12;
+                        } catch (tmp15) {
+                          if (tmp4 === c2) {
+                            c3 = tmp2;
+                            throw tmp15;
                           } else {
-                            c1 = 1;
+                            c1 = tmp;
                           }
                         }
                       }
@@ -1312,12 +1202,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                   class P {
                     constructor() {
                       tmp = closure_3(async () => {
-                        let closure_0;
-                        let obj2;
                         if (c3 === 2) {
                           c3 = 3;
                           throw new TypeError("Generator functions may not be called on executing generators");
-                        } else if (tmp3 === 3) {
+                        } else if (tmp6 === 3) {
                           if (arg0 === 1) {
                             throw value;
                           } else if (arg0 === 2) {
@@ -1327,7 +1215,6 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             return { value: "IconComponent", done: null };
                           }
                         } else {
-                          let c2;
                           try {
                             c3 = 2;
                             if (0 === c1) {
@@ -1349,8 +1236,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                           c2 = 1;
                                           c1 = 2;
                                           c3 = 1;
-                                          const obj5 = { value: obj2.fetchSticker(tmp19.id), done: false };
-                                          obj2 = tmp(c2[13]);
+                                          const obj5 = { value: tmp3(c2[13]).fetchSticker(tmp23.id), done: false };
                                           return obj5;
                                         }
                                       }
@@ -1359,7 +1245,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                             } else {
-                              if (1 === tmp4) {
+                              if (1 === tmp7) {
                                 c2 = 0;
                               } else if (arg0 === 1) {
                                 c3 = 3;
@@ -1375,13 +1261,12 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                               closure_128_3(true);
                             }
                             c3 = 3;
-                            return { value: "IconComponent", done: null };
-                          } catch (tmp12) {
-                            if (0 === c2) {
-                              c3 = 3;
-                              throw tmp12;
+                          } catch (tmp15) {
+                            if (tmp4 === c2) {
+                              c3 = tmp2;
+                              throw tmp15;
                             } else {
-                              c1 = 1;
+                              c1 = tmp;
                             }
                           }
                         }
@@ -1394,12 +1279,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                   class P {
                     constructor() {
                       tmp = closure_3(async () => {
-                        let closure_0;
-                        let obj2;
                         if (c3 === 2) {
                           c3 = 3;
                           throw new TypeError("Generator functions may not be called on executing generators");
-                        } else if (tmp3 === 3) {
+                        } else if (tmp6 === 3) {
                           if (arg0 === 1) {
                             throw value;
                           } else if (arg0 === 2) {
@@ -1409,7 +1292,6 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             return { value: "IconComponent", done: null };
                           }
                         } else {
-                          let c2;
                           try {
                             c3 = 2;
                             if (0 === c1) {
@@ -1431,8 +1313,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                           c2 = 1;
                                           c1 = 2;
                                           c3 = 1;
-                                          const obj5 = { value: obj2.fetchSticker(tmp19.id), done: false };
-                                          obj2 = tmp(c2[13]);
+                                          const obj5 = { value: tmp3(c2[13]).fetchSticker(tmp23.id), done: false };
                                           return obj5;
                                         }
                                       }
@@ -1441,7 +1322,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                             } else {
-                              if (1 === tmp4) {
+                              if (1 === tmp7) {
                                 c2 = 0;
                               } else if (arg0 === 1) {
                                 c3 = 3;
@@ -1457,13 +1338,12 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                               closure_128_3(true);
                             }
                             c3 = 3;
-                            return { value: "IconComponent", done: null };
-                          } catch (tmp12) {
-                            if (0 === c2) {
-                              c3 = 3;
-                              throw tmp12;
+                          } catch (tmp15) {
+                            if (tmp4 === c2) {
+                              c3 = tmp2;
+                              throw tmp15;
                             } else {
-                              c1 = 1;
+                              c1 = tmp;
                             }
                           }
                         }
@@ -1483,7 +1363,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj2 = {
+      const obj2 = {
         hasFetched: tmp12,
         isReturnable: tmp13,
         renderableSticker: id,
@@ -1497,13 +1377,9 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = stateFromStores;
       cResult[10] = obj2;
       tmp15 = obj2;
+      const tmp11 = current(noop.useState(false), 2);
     }
   : (renderableSticker) => {
-      let c3;
-      let closure_2;
-      let closure_5;
-      let items3;
-      let tmp7;
       _require = renderableSticker;
       let flag = arg1;
       if (arg1 === undefined) {
@@ -1511,44 +1387,40 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       c3 = undefined;
       let obj4;
-      react = undefined;
-      let tmp = _require;
-      let obj = require("get initialized");
+      noop = undefined;
       const items = [StickersStore];
-      const stateFromStores = obj.useStateFromStores(items, () => StickersStore.getStickerById(renderableSticker.id));
-      let obj2 = react;
-      const tmp4 = obj4(react.useState(true), 2);
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        StickersStore.getStickerById(id.id),
+      );
+      const tmp4 = obj4(noop.useState(true), 2);
       dependencyMap = tmp4[1];
-      const first = tmp4[0];
-      [tmp7, c3] = obj4(react.useState(false), 2);
-      obj4(react.useState(false), 2);
-      let obj3 = require("StickersUtils");
-      let isGuildStickerResult = obj3.isGuildSticker(renderableSticker);
+      let obj = require("initialize");
+      const tmp = _require;
+      [tmp6, c3] = obj4(noop.useState(false), 2);
+      const tmp5 = obj4(noop.useState(false), 2);
+      let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
       if (!isGuildStickerResult) {
+        isGuildStickerResult = tmp(5435).isStandardSticker(renderableSticker);
         const tmpResult = tmp(5435);
-        isGuildStickerResult = tmpResult.isStandardSticker(renderableSticker);
       }
       obj4 = {
-        hasFetched: tmp7,
+        hasFetched: tmp6,
         isReturnable: isGuildStickerResult,
         renderableSticker,
-        shouldFetch: first,
+        shouldFetch: tmp4[0],
         stickersStoreDefinition: stateFromStores,
       };
-      react = obj2.useRef(obj4);
+      noop = obj2.useRef(obj4);
       const effect = obj2.useEffect(() => {
         closure_5.current = obj4;
       });
       const items1 = [flag];
       const effect1 = obj2.useEffect(() => {
-        let ref;
-        const tmp = (async () => {
-          let closure_0;
-          let obj2;
+        (async () => {
           if (c3 === 2) {
             c3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp6 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -1558,7 +1430,6 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
               return { value: "IconComponent", done: null };
             }
           } else {
-            let c2;
             try {
               c3 = 2;
               if (0 === c1) {
@@ -1571,7 +1442,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj4;
                 } else {
                   current = ref.current;
-                  if (false) {
+                  if (flag) {
                     if (!current.isReturnable) {
                       if (null == current.stickersStoreDefinition) {
                         if (current.shouldFetch) {
@@ -1580,8 +1451,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                             c2 = 1;
                             c1 = 2;
                             c3 = 1;
-                            const obj5 = { value: obj2.fetchSticker(tmp19.id), done: false };
-                            obj2 = tmp(c2[13]);
+                            const obj5 = { value: tmp3(c2[13]).fetchSticker(tmp23.id), done: false };
                             return obj5;
                           }
                         }
@@ -1590,7 +1460,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               } else {
-                if (1 === tmp4) {
+                if (1 === tmp7) {
                   c2 = 0;
                 } else if (arg0 === 1) {
                   c3 = 3;
@@ -1606,76 +1476,30 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_3(true);
               }
               c3 = 3;
-              return { value: "IconComponent", done: null };
-            } catch (tmp12) {
-              if (0 === c2) {
-                c3 = 3;
-                throw tmp12;
+            } catch (tmp15) {
+              if (tmp4 === c2) {
+                c3 = tmp2;
+                throw tmp15;
               } else {
-                c1 = 1;
+                c1 = tmp;
               }
             }
           }
         })();
       }, items1);
       if (isGuildStickerResult) {
-        const items2 = [renderableSticker, tmp7];
-        items3 = items2;
+        const items2 = [renderableSticker, tmp6];
+        let items3 = items2;
       } else {
-        let tmp12 = stateFromStores;
+        let tmp11 = stateFromStores;
         if (stateFromStores == null) {
-          tmp12 = null;
+          tmp11 = null;
         }
-        items3 = [tmp12, tmp7];
+        items3 = [tmp11, tmp6];
       }
       return items3;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let tmp2;
-      const obj = react2;
-      const cResult = obj.c(3);
-      const arr = closure_19(arg0);
-      if (cResult[0] !== arr) {
-        let tmp4;
-        const _Symbol = Symbol;
-        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function c(type) {
-            const tmp =
-              type.type === require("StickersTypes").StickerCategoryTypes.EMPTY_GUILD_UPSELL ||
-              type.stickers.length > 0;
-            return tmp;
-          };
-          cResult[2] = fn;
-          tmp4 = fn;
-        } else {
-          tmp4 = cResult[2];
-        }
-        const found = arr.filter(tmp4, []);
-        cResult[0] = arr;
-        cResult[1] = found;
-        tmp2 = found;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return tmp2;
-    }
-  : (arg0) => {
-      let tmp = closure_19(arg0);
-      let closure_0 = tmp;
-      const items = [tmp];
-      return react.useMemo(
-        () =>
-          closure_0.filter((type) => {
-            const tmp =
-              type.type === closure_1_0(closure_1_2[17]).StickerCategoryTypes.EMPTY_GUILD_UPSELL ||
-              type.stickers.length > 0;
-            return tmp;
-          }, []),
-        items,
-      );
-    };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/StickersHooks.tsx");
 
 export const useFetchStickerPack = tmp2;
@@ -1712,11 +1536,6 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
     flag,
   ];
   return stickerNodeWidth.useMemo(() => {
-    let gridSectionIndex;
-    let items1;
-    let items2;
-    let stickers;
-    let type;
     let rounded = Math.floor((items2 - items1 + rowCount) / (gridSectionIndex + rowCount));
     const items = [];
     items1 = [];
@@ -1727,90 +1546,97 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
     const rounded1 = Math.floor(Math.max(rowCount, (items2 - items1 - gridSectionIndex * rounded) / (rounded - 1)));
     if (0 !== items2) {
       function addGridSection(sendable, SEARCH_RESULTS) {
-        let intl;
         const category = SEARCH_RESULTS;
-        let obj = collapsedStickersCategories(num[15]);
-        let guild;
+        if (flag === undefined) {
+          flag = false;
+        }
+        guild = undefined;
         if (obj.isGuildSticker(sendable[0])) {
           guild = stickersCategories.getGuild(sendable[0].guild_id);
         }
-        const tmpResult = collapsedStickersCategories(num[16]);
-        const canCreateExpressions = tmpResult.getManageResourcePermissions(guild).canCreateExpressions;
+        obj = collapsedStickersCategories(num[15]);
         const guildId = flag.getGuildId();
-        let tmp8 = null != guild;
+        const tmpResult = collapsedStickersCategories(num[16]);
+        let canCreateExpressions = null != guild;
         const findIndexResult = visibleRowIndex.findIndex(
-          (type) => type.type === category(items1[17]).StickerCategoryTypes.FAVORITE,
+          (type) => type.type === category(5436).StickerCategoryTypes.FAVORITE,
         );
-        const findIndexResult1 = visibleRowIndex.findIndex(
-          (type) => type.type === category(items1[17]).StickerCategoryTypes.RECENT,
-        );
-        if (tmp8) {
-          tmp8 = guildId === guild.id;
+        if (canCreateExpressions) {
+          canCreateExpressions = guildId === guild.id;
         }
-        if (tmp8) {
-          tmp8 = canCreateExpressions;
+        if (canCreateExpressions) {
+          canCreateExpressions = tmpResult.getManageResourcePermissions(guild).canCreateExpressions;
         }
-        if (tmp8) {
-          const length2 = sendable.length;
-          const tmpResult2 = collapsedStickersCategories(num[18]);
-          tmp8 = length2 < tmpResult2.getTotalStickerCountForTier(guild.premiumTier);
+        if (canCreateExpressions) {
+          canCreateExpressions =
+            sendable.length < collapsedStickersCategories(tmp2[18]).getTotalStickerCountForTier(guild.premiumTier);
+          const tmpResult2 = collapsedStickersCategories(tmp2[18]);
         }
         let sum = length;
-        if (tmp8) {
+        if (canCreateExpressions) {
           sum = length + 1;
         }
         rounded = Math.ceil(sum / category);
         num = 0;
-        const tmp12 = gridSectionIndex;
         if (!flag) {
           num = rounded;
         }
-        items1[tmp12] = num;
+        items1[gridSectionIndex] = num;
         for (let num2 = 0; num2 < rounded; num2 = num2 + 1) {
           let result = num2 * category;
           let substr = sendable.slice(result, result + category);
           let mapped = substr.map((sticker, columnIndex) => {
-            let str;
             const obj = {
               type: StickersTypes.StickerGridItemTypes.STICKER,
               sticker,
-              packId: str,
-              gridSectionIndex,
-              rowIndex,
-              columnIndex,
-              visibleRowIndex,
-              category,
+              packId: null,
+              gridSectionIndex: null,
+              rowIndex: null,
+              columnIndex: null,
+              visibleRowIndex: null,
+              category: null,
             };
-            str = "TODO - fix";
-            const obj2 = StickersUtils;
+            let str = "TODO - fix";
             if (obj2.isStandardSticker(sticker)) {
               str = sticker.pack_id;
             }
+            obj.packId = str;
+            obj.gridSectionIndex = gridSectionIndex;
+            obj.rowIndex = rowIndex;
+            obj.columnIndex = columnIndex;
+            obj.visibleRowIndex = visibleRowIndex;
+            obj.category = category;
             return obj;
           });
-          let tmp16 = gridSectionIndex > findIndexResult1;
-          if (tmp16) {
-            tmp16 = gridSectionIndex > findIndexResult;
+          let tmp15 = gridSectionIndex > findIndexResult1;
+          if (tmp15) {
+            tmp15 = gridSectionIndex > findIndexResult;
           }
-          if (tmp16) {
-            tmp16 = null != guild;
+          if (tmp15) {
+            tmp15 = null != guild;
           }
-          if (tmp16) {
-            tmp16 = sum > sendable.length;
+          if (tmp15) {
+            tmp15 = sum > sendable.length;
           }
-          if (tmp16) {
+          if (tmp15) {
             let obj2 = {
-              type: collapsedStickersCategories(num[17]).StickerGridItemTypes.CREATE_STICKER,
-              guild_id: guild.id,
-              name: intl.string(collapsedStickersCategories(num[19]).t["UwF+Cw"]),
-              gridSectionIndex,
-              rowIndex,
-              columnIndex: mapped.length,
-              visibleRowIndex,
+              type: null,
+              guild_id: null,
+              name: null,
+              gridSectionIndex: null,
+              rowIndex: null,
+              columnIndex: null,
+              visibleRowIndex: null,
             };
-            let push = mapped.push;
-            intl = collapsedStickersCategories(num[19]).intl;
-            let arr = push(obj2);
+            obj2.type = collapsedStickersCategories(num[17]).StickerGridItemTypes.CREATE_STICKER;
+            obj2.guild_id = guild.id;
+            let intl = collapsedStickersCategories(num[19]).intl;
+            obj2.name = intl.string(collapsedStickersCategories(num[19]).t["UwF+Cw"]);
+            obj2.gridSectionIndex = gridSectionIndex;
+            obj2.rowIndex = rowIndex;
+            obj2.columnIndex = mapped.length;
+            obj2.visibleRowIndex = visibleRowIndex;
+            let arr = mapped.push(obj2);
           }
           if (!flag) {
             visibleRowIndex = visibleRowIndex + 1;
@@ -1820,36 +1646,27 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           rowIndex = rowIndex + 1;
         }
         gridSectionIndex = gridSectionIndex + 1;
+        findIndexResult1 = visibleRowIndex.findIndex(
+          (type) => type.type === category(5436).StickerCategoryTypes.RECENT,
+        );
       }
-      let tmp22 = items;
-      let tmp23 = null;
       if (null == items) {
         const iter = stickersCategories[Symbol.iterator]();
-        flag = true;
-        let tmp8 = stickersCategories;
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp11 = nextResult;
           if (nextResult.stickers.length > 0) {
-            let tmp17 = rowCount;
             rowCount = rowCount + 1;
-            let tmp18 = nextResult;
             let obj = rounded;
             let hasItem;
             ({ stickers, type } = tmp11);
             if (rounded != null) {
-              let tmp20 = nextResult;
               hasItem = obj.has(tmp11.id);
             }
             let addGridSectionResult = addGridSection(stickers, type, true === hasItem);
-          } else {
-            let tmp12 = nextResult;
-            if (tmp11.type === collapsedStickersCategories(num[17]).StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
-              let tmp15 = gridSectionIndex;
-              items1[gridSectionIndex] = 0;
-              let tmp16 = gridSectionIndex;
-              gridSectionIndex = gridSectionIndex + 1;
-            }
+          } else if (tmp11.type === collapsedStickersCategories(num[17]).StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
+            items1[gridSectionIndex] = 0;
+            gridSectionIndex = gridSectionIndex + 1;
           }
           continue;
         }
@@ -1866,14 +1683,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         }
       }
     }
-    let obj2 = {
-      rowCount,
-      rowCountBySection: items1,
-      stickersGrid: items2,
-      gutterWidth: rounded1,
-      columnCounts: items,
-    };
-    return obj2;
+    return { rowCount, rowCountBySection: items1, stickersGrid: items2, gutterWidth: rounded1, columnCounts: items };
   }, items);
 };
 export function useHasSendableSticker() {
@@ -1886,4 +1696,45 @@ export const useLatestFrecentStickerIds = tmp7;
 export const useLatestFrecentStickers = tmp8;
 export const useStickerPackCategories = tmp9;
 export const useStickerForRenderableSticker = tmp10;
-export const useFilteredStickerPackCategories = tmp11;
+export const useFilteredStickerPackCategories = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(3);
+      const arr = closure_19(arg0);
+      if (cResult[0] !== arr) {
+        const _Symbol = Symbol;
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn = function c(type) {
+            let tmp = type.type === require("StickersTypes").StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+            if (!tmp) {
+              tmp = type.stickers.length > 0;
+            }
+            return tmp;
+          };
+          cResult[2] = fn;
+          let tmp3 = fn;
+        } else {
+          tmp3 = cResult[2];
+        }
+        const found = arr.filter(tmp3, []);
+        cResult[0] = arr;
+        cResult[1] = found;
+      } else {
+        return cResult[1];
+      }
+    }
+  : (arg0) => {
+      let tmp = closure_19(arg0);
+      closure_0 = tmp;
+      const items = [tmp];
+      return noop.useMemo(
+        () =>
+          closure_0.filter((type) => {
+            let tmp = type.type === closure_1_0(closure_1_2[17]).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+            if (!tmp) {
+              tmp = type.stickers.length > 0;
+            }
+            return tmp;
+          }, []),
+        items,
+      );
+    };

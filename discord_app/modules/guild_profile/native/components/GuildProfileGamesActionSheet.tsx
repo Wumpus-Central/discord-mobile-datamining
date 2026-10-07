@@ -1,29 +1,20 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
+import c from "../../../../../_runtime/00576_c.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import TableRow2 from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import components_GameIconDefault from "GameIcon.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let BottomSheet;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let activityLevel;
-      let game;
-      let tmp4;
-      const obj = react2;
-      const cResult = obj.c(13);
+      const cResult = c.c(13);
       ({ game, activityLevel } = arg0);
       if (cResult[0] !== game.id) {
         const obj2 = {
@@ -33,35 +24,33 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = game.id;
         cResult[1] = obj2;
-        tmp4 = obj2;
+        let tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
       const tmp6 = useOpenGameProfileModalDefault(tmp4);
-      let closure_0 = tmp6;
+      closure_0 = tmp6;
       if (cResult[2] === activityLevel) {
-        let tmp8;
         if (cResult[3] === game) {
-          tmp8 = cResult[4];
+          let tmp8 = cResult[4];
         }
-        if ((cResult[5] === null) != tmp6) {
-          let tmp10;
+        if (cResult[5] === tmp7) {
           if (cResult[6] === tmp6) {
-            tmp10 = cResult[7];
+            let tmp10 = cResult[7];
           }
-          if ((cResult[8] === null) != tmp6) {
+          if (cResult[8] === tmp7) {
             if (cResult[9] === game.name) {
               if (cResult[10] === tmp8) {
-                let tmp11;
                 if (cResult[11] === tmp10) {
-                  tmp11 = cResult[12];
+                  let tmp11 = cResult[12];
                 }
                 return tmp11;
               }
             }
           }
-          const tmp13 = jsx(TableRow2.TableRow, { icon: tmp8, label: game.name, arrow: null != tmp6, onPress: tmp10 });
-          cResult[8] = null != tmp6;
+          const obj3 = { icon: tmp8, label: game.name, arrow: tmp7, onPress: tmp10 };
+          const tmp13 = jsx(TableRow.TableRow, { icon: tmp8, label: game.name, arrow: tmp7, onPress: tmp10 });
+          cResult[8] = tmp7;
           cResult[9] = game.name;
           cResult[10] = tmp8;
           cResult[11] = tmp10;
@@ -69,10 +58,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = tmp13;
         }
         let fn;
-        if (null != tmp6) {
+        if (tmp7) {
           fn = () => closure_0();
         }
-        cResult[5] = null != tmp6;
+        cResult[5] = tmp7;
         cResult[6] = tmp6;
         cResult[7] = fn;
         tmp10 = fn;
@@ -83,25 +72,36 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       tmp8 = tmp9;
     }
-  : (game) => {
-      game = game.game;
-      const activityLevel = game.activityLevel;
+  : (activityLevel) => {
+      const game = activityLevel.game;
       const obj = {
         gameId: game.id,
         source: GameProfileAnalyticUtils.GameProfileSources.GuildProfileGames,
         trackEntryPointImpression: true,
       };
-      const tmp = useOpenGameProfileModalDefault;
-      const tmpResult = tmp(obj);
-      let closure_0 = tmpResult;
-      const TableRow = TableRow2.TableRow;
+      const tmpResult = useOpenGameProfileModalDefault(obj);
+      closure_0 = tmpResult;
+      const obj2 = {
+        icon: jsx(components_GameIconDefault, { game, activityLevel: activityLevel.activityLevel }),
+        label: game.name,
+        arrow: null != tmpResult,
+        onPress: null,
+      };
       let fn;
       if (null != tmpResult) {
         fn = () => closure_0();
       }
-      return <TableRow icon={null} label={game.name} arrow={null != tmpResult} onPress={fn} />;
+      obj2.onPress = fn;
+      return jsx(TableRow.TableRow, {
+        icon: jsx(components_GameIconDefault, { game, activityLevel: activityLevel.activityLevel }),
+        label: game.name,
+        arrow: null != tmpResult,
+        onPress: null,
+      });
     };
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 48 } });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx");
 
 export default function GuildProfileGamesActionSheet(profile) {
@@ -109,35 +109,40 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
+  const allGuildProfileGames = id(9423).useAllGuildProfileGames(profile);
   let obj = id(9423);
-  const allGuildProfileGames = obj.useAllGuildProfileGames(profile);
-  const obj2 = id(7852);
-  const bottomSheetRef = obj2.useBottomSheetRef().bottomSheetRef;
-  const name = profile.name;
   const intl = id(1126).intl;
+  const obj2 = id(7852);
   const items = [id];
-  const str = intl.format(id(1126).t.vuAVo7, { serverName: name });
-  const str1 = str.toString();
-  const callback = react.useCallback(() => {
-    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-    ActionSheetActionCreatorsDefault;
-    const obj = { guildId: id };
-    const tmp2 = asyncRequire(9410, dependencyMap.paths);
-    openLazy(tmp2, "GuildProfileActionSheet:" + id, obj);
+  const str = intl.format(id(1126).t.vuAVo7, { serverName: profile.name });
+  const callback = noop.useCallback(() => {
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(asyncRequireImpl(9410, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
   }, items);
-  BottomSheet = id(6652).BottomSheet;
-  const BottomSheetScrollView = id(6119).BottomSheetScrollView;
-  ({
-    title: str1,
+  const obj3 = {
+    ref: obj2.useBottomSheetRef().bottomSheetRef,
+    scrollable: true,
+    onDismiss: callback,
+    startHeight: 300,
+    children: null,
+  };
+  const obj4 = { children: null };
+  const obj5 = { style: tmp.container, children: null };
+  const str1 = intl.format(id(1126).t.vuAVo7, { serverName: profile.name }).toString();
+  obj5.children = jsx(id(6081).TableRowGroup, {
+    title: intl.format(id(1126).t.vuAVo7, { serverName: profile.name }).toString(),
     hasIcons: true,
     children: allGuildProfileGames.map((game) => (
       <closure_6 key={game.id} game={game} activityLevel={gameActivity[game.id]} />
     )),
   });
-  const TableRowGroup = id(6081).TableRowGroup;
-  return (
-    <BottomSheet ref={bottomSheetRef} scrollable onDismiss={callback} startHeight={300}>
-      {null}
-    </BottomSheet>
-  );
+  obj4.children = <View style={tmp.container}>{null}</View>;
+  obj3.children = jsx(id(6119).BottomSheetScrollView, { children: null });
+  return jsx(id(6652).BottomSheet, {
+    ref: obj2.useBottomSheetRef().bottomSheetRef,
+    scrollable: true,
+    onDismiss: callback,
+    startHeight: 300,
+    children: null,
+  });
 }

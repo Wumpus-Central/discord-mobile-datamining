@@ -1,5 +1,5 @@
 // discord_app/design/components/Button/native/ButtonPill.native.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
@@ -7,162 +7,127 @@ import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.
 import shared from "../../../shared.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
+import ButtonConstants2 from "ButtonConstants.native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
 import ButtonShine from "ButtonShine.native.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import ButtonEllipsis from "ButtonEllipsis.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ButtonConstants_mod from "ButtonConstants.native.tsx";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
 const ReanimatedRexportDefault = ReanimatedRexport;
-let _require;
 
-let c9;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-({ View: hasOwnProperty, StyleSheet: metroRequire } = react_native);
-({ jsx: metroImportDefault, jsxs: metroImportAll, Fragment: c9 } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 300;
-let ButtonConstants = ButtonConstants_mod;
-const getButtonPadding = ButtonConstants.getButtonPadding;
-const paddingVertical = getButtonPadding(ButtonConstants.SMALL_BUTTON_HEIGHT, ButtonConstants.SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = ButtonConstants_mod;
-const getButtonPadding2 = ButtonConstants.getButtonPadding;
-const paddingVertical2 = getButtonPadding2(
-  ButtonConstants.MEDIUM_BUTTON_HEIGHT,
-  ButtonConstants.MEDIUM_BUTTON_ICON_SIZE,
+let ButtonConstants = fn(5607);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5607).SMALL_BUTTON_HEIGHT, fn(5607).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5607);
+const paddingVertical2 = ButtonConstants.getButtonPadding(
+  fn(5607).MEDIUM_BUTTON_HEIGHT,
+  fn(5607).MEDIUM_BUTTON_ICON_SIZE,
 );
-ButtonConstants = ButtonConstants_mod;
-const getButtonPadding3 = ButtonConstants.getButtonPadding;
-const paddingVertical3 = getButtonPadding3(ButtonConstants.LARGE_BUTTON_HEIGHT, ButtonConstants.LARGE_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5607);
+const paddingVertical3 = ButtonConstants.getButtonPadding(
+  fn(5607).LARGE_BUTTON_HEIGHT,
+  fn(5607).LARGE_BUTTON_ICON_SIZE,
+);
+const createStyles = fn(4896);
 let closure_14 = createStyles.createStyles((arg0, arg1) => {
-  let obj;
-  let obj7;
   if ("sm" === arg1) {
-    obj = {
-      minHeight: ButtonConstants.SMALL_BUTTON_HEIGHT,
-      minWidth: ButtonConstants.SMALL_BUTTON_HEIGHT,
-      paddingHorizontal: ButtonConstants.SMALL_BUTTON_HORIZONTAL_PADDING,
-      paddingVertical,
-    };
     const obj2 = {
-      minHeight: ButtonConstants.SMALL_BUTTON_HEIGHT,
-      minWidth: ButtonConstants.SMALL_BUTTON_HEIGHT,
-      paddingHorizontal: ButtonConstants.SMALL_BUTTON_HORIZONTAL_PADDING,
+      minHeight: ButtonConstants2.SMALL_BUTTON_HEIGHT,
+      minWidth: ButtonConstants2.SMALL_BUTTON_HEIGHT,
+      paddingHorizontal: ButtonConstants2.SMALL_BUTTON_HORIZONTAL_PADDING,
       paddingVertical,
     };
+    let obj = obj2;
   } else if ("md" === arg1) {
-    obj = {
-      minHeight: ButtonConstants.MEDIUM_BUTTON_HEIGHT,
-      minWidth: ButtonConstants.MEDIUM_BUTTON_HEIGHT,
-      paddingHorizontal: ButtonConstants.MEDIUM_BUTTON_HORIZONTAL_PADDING,
-      paddingVertical: paddingVertical2,
-    };
     const obj3 = {
-      minHeight: ButtonConstants.MEDIUM_BUTTON_HEIGHT,
-      minWidth: ButtonConstants.MEDIUM_BUTTON_HEIGHT,
-      paddingHorizontal: ButtonConstants.MEDIUM_BUTTON_HORIZONTAL_PADDING,
+      minHeight: ButtonConstants2.MEDIUM_BUTTON_HEIGHT,
+      minWidth: ButtonConstants2.MEDIUM_BUTTON_HEIGHT,
+      paddingHorizontal: ButtonConstants2.MEDIUM_BUTTON_HORIZONTAL_PADDING,
       paddingVertical: paddingVertical2,
     };
+    obj = obj3;
   } else {
     obj = {};
     if ("lg" === arg1) {
-      obj = {
-        minHeight: ButtonConstants.LARGE_BUTTON_HEIGHT,
-        minWidth: ButtonConstants.LARGE_BUTTON_HEIGHT,
-        paddingHorizontal: ButtonConstants.LARGE_BUTTON_HORIZONTAL_PADDING,
-        paddingVertical: paddingVertical3,
-      };
       const obj5 = {
-        minHeight: ButtonConstants.LARGE_BUTTON_HEIGHT,
-        minWidth: ButtonConstants.LARGE_BUTTON_HEIGHT,
-        paddingHorizontal: ButtonConstants.LARGE_BUTTON_HORIZONTAL_PADDING,
+        minHeight: ButtonConstants2.LARGE_BUTTON_HEIGHT,
+        minWidth: ButtonConstants2.LARGE_BUTTON_HEIGHT,
+        paddingHorizontal: ButtonConstants2.LARGE_BUTTON_HORIZONTAL_PADDING,
         paddingVertical: paddingVertical3,
       };
+      obj = obj5;
     }
   }
-  const obj4 = ButtonConstants;
-  const buttonBorderRadius = obj4.getButtonBorderRadius(arg1);
-  const obj6 = {
-    pill: obj7,
-    expressivePill: { overflow: "hidden", borderRadius: buttonBorderRadius },
-    expressiveRiveFill: { color: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT },
-    childContainer: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      flexGrow: 1,
-      maxWidth: "100%",
-    },
-    ellipsis: { position: "absolute", height: "100%", width: "100%", justifyContent: "center", alignItems: "center" },
-  };
-  obj7 = {
+  const buttonBorderRadius = ButtonConstants2.getButtonBorderRadius(arg1);
+  const obj6 = { pill: null, expressivePill: null, expressiveRiveFill: null, childContainer: null, ellipsis: null };
+  const merged = Object.assign(obj);
+  obj6.pill = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     overflow: "hidden",
-    borderWidth: ButtonConstants.BUTTON_BORDER_WIDTH,
+    borderWidth: ButtonConstants2.BUTTON_BORDER_WIDTH,
     borderRadius: buttonBorderRadius,
   };
-  const merged = Object.assign(obj);
-  ({ color: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT });
+  obj6.expressivePill = { overflow: "hidden", borderRadius: buttonBorderRadius };
+  const obj7 = {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    borderWidth: ButtonConstants2.BUTTON_BORDER_WIDTH,
+    borderRadius: buttonBorderRadius,
+  };
+  obj6.expressiveRiveFill = { color: nativeDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
+  obj6.childContainer = {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    flexGrow: 1,
+    maxWidth: "100%",
+  };
+  obj6.ellipsis = {
+    position: "absolute",
+    height: "100%",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  };
   return obj6;
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let ExpressiveButtonRive;
-      let children;
-      let expressivePressState;
-      let expressiveRiveRef;
-      let items1;
-      let items2;
-      let items4;
-      let items5;
-      let items6;
-      let obj5;
-      let obj6;
-      let pressed;
-      let shiny;
-      let str4;
-      let style;
-      let variant;
-      const obj = react2;
-      const cResult = obj.c(42);
+      const cResult = c.c(42);
       ({ children, variant, style, shiny, expressiveRiveRef, expressivePressState } = arg0);
       let tmp4 = undefined !== shiny;
       ({ pressed, size } = arg0);
       if (tmp4) {
         tmp4 = shiny;
       }
+      const buttonPillStyles = ButtonHooks.useButtonPillStyles(variant, pressed);
       const tmpResult = ButtonHooks;
-      const buttonPillStyles = tmpResult.useButtonPillStyles(variant, pressed);
+      const gradientPillStyles = ButtonHooks.useGradientPillStyles(variant);
       const tmpResult7 = ButtonHooks;
-      const gradientPillStyles = tmpResult7.useGradientPillStyles(variant);
-      const tmpResult8 = native;
-      const theme = tmpResult8.useThemeContext().theme;
+      const theme = native.useThemeContext().theme;
       const tmp7 = closure_14(variant, size);
+      const tmpResult8 = native;
+      const token = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT);
       const tmpResult9 = useToken;
-      const token = tmpResult9.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT);
+      const token1 = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
       const tmpResult10 = useToken;
-      const token1 = tmpResult10.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
-      const tmpResult11 = useToken;
-      const token2 = tmpResult11.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
+      const token2 = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
       if (cResult[0] === token) {
         if (cResult[1] === token1) {
-          let tmp12;
-          let tmp14;
           if (cResult[2] === token2) {
-            tmp12 = cResult[3];
+            let tmp12 = cResult[3];
           }
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -172,16 +137,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               nativeDefault.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS,
             ];
             cResult[4] = items;
-            tmp14 = items;
+            let tmp14 = items;
           } else {
             tmp14 = cResult[4];
           }
           if (cResult[5] === tmp4) {
-            let tmp15;
-            let tmp35;
-            let tmp34;
             if (cResult[6] === variant) {
-              tmp15 = cResult[7];
+              let tmp15 = cResult[7];
             }
             if ("experimental_premium-primary" !== variant) {
               if ("experimental_premium-basic" !== variant) {
@@ -189,40 +151,38 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[27] === expressiveRiveRef) {
                     if (cResult[28] === tmp7) {
                       if (cResult[29] === theme) {
-                        let tmp18;
                         if (cResult[30] === variant) {
-                          tmp18 = cResult[31];
+                          let tmp18 = cResult[31];
                         }
                         if (cResult[32] === buttonPillStyles) {
-                          let tmp26;
                           if (cResult[33] === style) {
-                            tmp26 = cResult[34];
+                            let tmp26 = cResult[34];
                           }
                           if (cResult[35] === children) {
                             if (cResult[36] === tmp15) {
-                              let tmp27;
                               if (cResult[37] === tmp26) {
-                                tmp27 = cResult[38];
+                                let tmp27 = cResult[38];
                               }
                               if (cResult[39] === tmp27) {
-                                let tmp30;
                                 if (cResult[40] === tmp18) {
-                                  tmp30 = cResult[41];
+                                  let tmp30 = cResult[41];
                                 }
                                 return tmp30;
                               }
-                              const obj2 = { children: items1 };
-                              items1 = [tmp18, tmp27];
-                              const tmp33 = metroImportAll(React4, obj2);
+                              const obj2 = { children: null };
+                              const items1 = [tmp18, tmp27];
+                              obj2.children = items1;
+                              const tmp33 = closure_1_8(options, obj2);
                               cResult[39] = tmp27;
                               cResult[40] = tmp18;
                               cResult[41] = tmp33;
                               tmp30 = tmp33;
                             }
                           }
-                          const obj3 = { style: tmp26, children: items2 };
-                          items2 = [children, tmp15];
-                          const tmp29 = metroImportAll(ReanimatedRexportDefault.View, obj3);
+                          const obj3 = { style: tmp26, children: null };
+                          const items2 = [children, tmp15];
+                          obj3.children = items2;
+                          const tmp29 = closure_1_8(ReanimatedRexportDefault.View, obj3);
                           cResult[35] = children;
                           cResult[36] = tmp15;
                           cResult[37] = tmp26;
@@ -240,24 +200,30 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 let tmp20Result = "expressive" === variant;
                 if (tmp20Result) {
-                  const obj4 = { style: items4, children: metroImportDefault(ExpressiveButtonRive, obj5) };
-                  items4 = [metroRequire.absoluteFill, tmp7.expressivePill];
-                  obj5 = {
+                  const obj4 = { style: null, children: null };
+                  const items4 = [timestampProducer.absoluteFill, tmp7.expressivePill];
+                  obj4.style = items4;
+                  const obj5 = {
                     withReducedMotion: "short-loop",
                     ref: expressiveRiveRef,
                     fit: "layout",
-                    artboard: str4,
-                    dataBinding: obj6,
+                    artboard: null,
+                    dataBinding: null,
                   };
-                  ExpressiveButtonRive = native.ExpressiveButtonRive;
-                  str4 = "Mobile Expressive Button Dark Mode";
-                  const tmpResult12 = shared;
+                  let str4 = "Mobile Expressive Button Dark Mode";
                   if (tmpResult12.isThemeLight(theme)) {
                     str4 = "Mobile Expressive Button Lightmode";
                   }
-                  obj6 = { buttonColor: tmp7.expressiveRiveFill.color, cornerRadius: tmp7.expressivePill.borderRadius };
+                  obj5.artboard = str4;
+                  const obj6 = {
+                    buttonColor: tmp7.expressiveRiveFill.color,
+                    cornerRadius: tmp7.expressivePill.borderRadius,
+                  };
                   const merged = Object.assign(expressivePressState);
-                  tmp20Result = metroImportDefault(hasOwnProperty, obj4);
+                  obj5.dataBinding = obj6;
+                  obj4.children = React5(native.ExpressiveButtonRive, obj5);
+                  tmp20Result = React5(hasOwnProperty, obj4);
+                  tmpResult12 = shared;
                 }
                 cResult[26] = expressivePressState;
                 cResult[27] = expressiveRiveRef;
@@ -274,55 +240,52 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               const point1 = { x: 1, y: 0 };
               cResult[8] = point;
               cResult[9] = point1;
-              tmp35 = point1;
-              tmp34 = point;
+              let tmp35 = point1;
+              let tmp34 = point;
             } else {
               tmp34 = cResult[8];
               tmp35 = cResult[9];
             }
             if (cResult[10] === gradientPillStyles) {
-              let tmp36;
               if (cResult[11] === style) {
-                tmp36 = cResult[12];
+                let tmp36 = cResult[12];
               }
               if ("experimental_premium-basic" === variant) {
                 tmp12 = tmp14;
               }
               if (cResult[13] === tmp36) {
-                let tmp38;
                 if (cResult[14] === tmp12) {
-                  tmp38 = cResult[15];
+                  let tmp38 = cResult[15];
                 }
                 if (cResult[16] === buttonPillStyles) {
-                  let tmp41;
                   if (cResult[17] === style) {
-                    tmp41 = cResult[18];
+                    let tmp41 = cResult[18];
                   }
                   if (cResult[19] === children) {
                     if (cResult[20] === tmp15) {
-                      let tmp42;
                       if (cResult[21] === tmp41) {
-                        tmp42 = cResult[22];
+                        let tmp42 = cResult[22];
                       }
                       if (cResult[23] === tmp38) {
-                        let tmp45;
                         if (cResult[24] === tmp42) {
-                          tmp45 = cResult[25];
+                          let tmp45 = cResult[25];
                         }
                         return tmp45;
                       }
-                      const obj7 = { children: items5 };
-                      items5 = [tmp38, tmp42];
-                      const tmp48 = metroImportAll(React4, obj7);
+                      const obj7 = { children: null };
+                      const items5 = [tmp38, tmp42];
+                      obj7.children = items5;
+                      const tmp48 = closure_1_8(options, obj7);
                       cResult[23] = tmp38;
                       cResult[24] = tmp42;
                       cResult[25] = tmp48;
                       tmp45 = tmp48;
                     }
                   }
-                  const obj8 = { style: tmp41, children: items6 };
-                  items6 = [children, tmp15];
-                  const tmp44 = metroImportAll(ReanimatedRexportDefault.View, obj8);
+                  const obj8 = { style: tmp41, children: null };
+                  const items6 = [children, tmp15];
+                  obj8.children = items6;
+                  const tmp44 = closure_1_8(ReanimatedRexportDefault.View, obj8);
                   cResult[19] = children;
                   cResult[20] = tmp15;
                   cResult[21] = tmp41;
@@ -336,13 +299,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp41 = items7;
               }
               const obj9 = { start: tmp34, end: tmp35, style: tmp36, colors: tmp12 };
-              const tmp40 = metroImportDefault(LinearGradientDefault, obj9);
+              const tmp40 = React5(LinearGradientDefault, obj9);
               cResult[13] = tmp36;
               cResult[14] = tmp12;
               cResult[15] = tmp40;
               tmp38 = tmp40;
             }
-            const items8 = [style, gradientPillStyles, metroRequire.absoluteFill];
+            const items8 = [style, gradientPillStyles, timestampProducer.absoluteFill];
             cResult[10] = gradientPillStyles;
             cResult[11] = style;
             cResult[12] = items8;
@@ -351,7 +314,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp16 = null;
           if (tmp4) {
             const obj10 = { variant };
-            tmp16 = metroImportDefault(ButtonShine.ButtonShine, obj10);
+            tmp16 = React5(ButtonShine.ButtonShine, obj10);
           }
           cResult[5] = tmp4;
           cResult[6] = variant;
@@ -365,46 +328,22 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = token2;
       cResult[3] = items9;
       tmp12 = items9;
+      const tmpResult11 = useToken;
     }
-  : (pressed) => {
-      let ExpressiveButtonRive;
-      let children;
-      let expressiveRiveRef;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let items6;
-      let items7;
-      let items8;
-      let items9;
-      let obj10;
-      let obj9;
-      let shiny;
-      let str;
-      let style;
-      let variant;
-      ({ children, variant, style, shiny } = pressed);
-      pressed = pressed.pressed;
+  : (expressivePressState) => {
+      ({ children, variant, style, shiny } = expressivePressState);
       if (shiny === undefined) {
         shiny = false;
       }
-      const expressivePressState = pressed.expressivePressState;
-      ({ expressiveRiveRef, size } = pressed);
-      const obj = ButtonHooks;
-      const buttonPillStyles = obj.useButtonPillStyles(variant, pressed);
-      const obj2 = ButtonHooks;
-      const gradientPillStyles = obj2.useGradientPillStyles(variant);
-      const obj3 = native;
-      const theme = obj3.useThemeContext().theme;
+      expressivePressState = expressivePressState.expressivePressState;
+      ({ expressiveRiveRef, size } = expressivePressState);
+      const buttonPillStyles = ButtonHooks.useButtonPillStyles(variant, expressivePressState.pressed);
+      const gradientPillStyles = ButtonHooks.useGradientPillStyles(variant);
       const tmp5 = closure_14(variant, size);
-      let items = [, ,];
-      const obj4 = useToken;
-      items[0] = obj4.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT);
-      const obj5 = useToken;
-      items[1] = obj5.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
-      const obj6 = useToken;
-      items[2] = obj6.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
+      const obj3 = native;
+      let items = [useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), ,];
+      items[1] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
+      items[2] = useToken.useToken(nativeDefault.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
       const items1 = [
         nativeDefault.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS,
         nativeDefault.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2,
@@ -413,140 +352,99 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp7 = null;
       if (shiny) {
         const obj7 = { variant };
-        tmp7 = metroImportDefault(ButtonShine.ButtonShine, obj7);
+        tmp7 = React5(ButtonShine.ButtonShine, obj7);
       }
       if ("experimental_premium-primary" !== variant) {
-        let obj11;
         if ("experimental_premium-basic" !== variant) {
           let tmp11Result = "expressive" === variant;
           if (tmp11Result) {
-            const obj8 = { style: items2, children: metroImportDefault(ExpressiveButtonRive, obj9) };
-            items2 = [metroRequire.absoluteFill, tmp5.expressivePill];
-            obj9 = {
+            const obj8 = { style: null, children: null };
+            const items2 = [timestampProducer.absoluteFill, tmp5.expressivePill];
+            obj8.style = items2;
+            const obj9 = {
               withReducedMotion: "short-loop",
               ref: expressiveRiveRef,
               fit: "layout",
-              artboard: str,
-              dataBinding: obj10,
+              artboard: null,
+              dataBinding: null,
             };
-            ExpressiveButtonRive = native.ExpressiveButtonRive;
-            str = "Mobile Expressive Button Dark Mode";
-            const tmpResult = shared;
-            if (tmpResult.isThemeLight(theme)) {
+            let str = "Mobile Expressive Button Dark Mode";
+            if (tmpResult.isThemeLight(obj3.useThemeContext().theme)) {
               str = "Mobile Expressive Button Lightmode";
             }
-            obj10 = { buttonColor: tmp5.expressiveRiveFill.color, cornerRadius: tmp5.expressivePill.borderRadius };
+            obj9.artboard = str;
+            const obj10 = {
+              buttonColor: tmp5.expressiveRiveFill.color,
+              cornerRadius: tmp5.expressivePill.borderRadius,
+            };
             const merged = Object.assign(expressivePressState);
-            tmp11Result = metroImportDefault(hasOwnProperty, obj8);
+            obj9.dataBinding = obj10;
+            obj8.children = React5(native.ExpressiveButtonRive, obj9);
+            tmp11Result = React5(hasOwnProperty, obj8);
+            tmpResult = shared;
           }
-          obj11 = { children: items3 };
-          items3 = [tmp11Result];
-          const obj12 = { style: items4, children: items5 };
-          items4 = [style, buttonPillStyles];
-          items5 = [children, tmp7];
-          items3[1] = metroImportAll(ReanimatedRexportDefault.View, obj12);
+          let obj11 = { children: null };
+          const items3 = [tmp11Result];
+          const obj12 = { style: null, children: null };
+          const items4 = [style, buttonPillStyles];
+          obj12.style = items4;
+          const items5 = [children, tmp7];
+          obj12.children = items5;
+          items3[1] = closure_1_8(ReanimatedRexportDefault.View, obj12);
+          obj11.children = items3;
         }
-        return metroImportAll(tmp10, obj11);
+        return closure_1_8(tmp10, obj11);
       }
-      const obj13 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, style: items6, colors: items };
-      items6 = [style, gradientPillStyles, metroRequire.absoluteFill];
-      const tmp6Result = LinearGradientDefault;
+      const obj13 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, style: null, colors: null };
+      const items6 = [style, gradientPillStyles, timestampProducer.absoluteFill];
+      obj13.style = items6;
       if ("experimental_premium-basic" === variant) {
         items = items1;
       }
-      const obj14 = { children: items7 };
-      items7 = [metroImportDefault(tmp6Result, obj13)];
-      const obj15 = { style: items8, children: items9 };
-      items8 = [style, buttonPillStyles];
-      items9 = [children, tmp7];
-      items7[1] = metroImportAll(ReanimatedRexportDefault.View, obj15);
+      const obj14 = { children: null };
+      obj13.colors = items;
+      const items7 = [React5(LinearGradientDefault, obj13)];
+      const obj15 = { style: null, children: null };
+      const items8 = [style, buttonPillStyles];
+      obj15.style = items8;
+      const items9 = [children, tmp7];
+      obj15.children = items9;
+      items7[1] = closure_1_8(ReanimatedRexportDefault.View, obj15);
+      obj14.children = items7;
       obj11 = obj14;
+      const tmp6Result = LinearGradientDefault;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (loading) => {
-      let tmp2;
-      const obj = react2;
-      const cResult = obj.c(4);
-      if (null == loading.loading) {
-        let tmp9;
-        if (cResult[0] !== loading) {
-          const obj2 = {};
-          const merged = Object.assign(loading);
-          const tmp15 = metroImportDefault(closure_16, obj2);
-          cResult[0] = loading;
-          cResult[1] = tmp15;
-          tmp9 = tmp15;
-        } else {
-          tmp9 = cResult[1];
-        }
-        tmp2 = tmp9;
-      } else if (cResult[2] !== loading) {
-        const obj3 = {};
-        const merged1 = Object.assign(loading);
-        const tmp8 = metroImportDefault(closure_17, obj3);
-        cResult[2] = loading;
-        cResult[3] = tmp8;
-        tmp2 = tmp8;
-      } else {
-        tmp2 = cResult[3];
-      }
-      return tmp2;
-    }
-  : (loading) => {
-      let tmp6;
-      if (null == loading.loading) {
-        const obj2 = {};
-        const merged = Object.assign(loading);
-        tmp6 = metroImportDefault(closure_16, obj2);
-      } else {
-        const obj = {};
-        const merged1 = Object.assign(loading);
-        tmp6 = metroImportDefault(closure_17, obj);
-      }
-      return tmp6;
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
+fn(558);
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let expressivePressState;
-      let expressiveRiveRef;
-      let pressed;
-      let shiny;
-      let style;
-      let variant;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       ({ children, style, pressed, variant, size, shiny, expressiveRiveRef, expressivePressState } = arg0);
       let str = "primary";
       if (undefined !== variant) {
         str = variant;
       }
       if (undefined === size) {
-        size = ButtonConstants.DEFAULT_BUTTON_SIZE;
+        size = ButtonConstants2.DEFAULT_BUTTON_SIZE;
       }
       const tmp5 = closure_14(str, size);
       if (cResult[0] === style) {
-        let tmp6;
         if (cResult[1] === tmp5.pill) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
         if (cResult[3] === children) {
-          let tmp7;
           if (cResult[4] === tmp5.childContainer) {
-            tmp7 = cResult[5];
+            let tmp7 = cResult[5];
           }
           if (cResult[6] === expressivePressState) {
             if (cResult[7] === expressiveRiveRef) {
               if (cResult[8] === pressed) {
-                if (cResult[9] === (undefined !== shiny && shiny)) {
+                if (cResult[9] === tmp4) {
                   if (cResult[10] === size) {
                     if (cResult[11] === tmp6) {
                       if (cResult[12] === tmp7) {
-                        let tmp11;
                         if (cResult[13] === str) {
-                          tmp11 = cResult[14];
+                          let tmp11 = cResult[14];
                         }
                         return tmp11;
                       }
@@ -561,16 +459,16 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             size,
             style: tmp6,
             pressed,
-            shiny: undefined !== shiny && shiny,
+            shiny: tmp4,
             expressiveRiveRef,
             expressivePressState,
             children: tmp7,
           };
-          const tmp14 = metroImportDefault(closure_15, obj2);
+          const tmp14 = React5(closure_15, obj2);
           cResult[6] = expressivePressState;
           cResult[7] = expressiveRiveRef;
           cResult[8] = pressed;
-          cResult[9] = undefined !== shiny && shiny;
+          cResult[9] = tmp4;
           cResult[10] = size;
           cResult[11] = tmp6;
           cResult[12] = tmp7;
@@ -579,7 +477,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = tmp14;
         }
         const obj3 = { style: tmp5.childContainer, children };
-        const tmp10 = metroImportDefault(hasOwnProperty, obj3);
+        const tmp10 = React5(hasOwnProperty, obj3);
         cResult[3] = children;
         cResult[4] = tmp5.childContainer;
         cResult[5] = tmp10;
@@ -592,13 +490,6 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
     }
   : (variant) => {
-      let children;
-      let expressivePressState;
-      let expressiveRiveRef;
-      let items;
-      let obj2;
-      let pressed;
-      let style;
       let str = variant.variant;
       ({ children, style, pressed } = variant);
       if (str === undefined) {
@@ -606,7 +497,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let DEFAULT_BUTTON_SIZE = variant.size;
       if (DEFAULT_BUTTON_SIZE === undefined) {
-        DEFAULT_BUTTON_SIZE = ButtonConstants.DEFAULT_BUTTON_SIZE;
+        DEFAULT_BUTTON_SIZE = ButtonConstants2.DEFAULT_BUTTON_SIZE;
       }
       let flag = variant.shiny;
       if (flag === undefined) {
@@ -617,39 +508,22 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         variant: str,
         size: DEFAULT_BUTTON_SIZE,
-        style: items,
+        style: null,
         pressed,
         shiny: flag,
         expressiveRiveRef,
         expressivePressState,
-        children: metroImportDefault(hasOwnProperty, obj2),
+        children: React5(hasOwnProperty, { style: tmp3.childContainer, children }),
       };
-      items = [tmp3.pill, style];
-      obj2 = { style: tmp3.childContainer, children };
-      return metroImportDefault(closure_15, obj);
+      const items = [tmp3.pill, style];
+      obj.style = items;
+      return React5(closure_15, obj);
     };
-let closure_16 = tmp8;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_16 = tmp5;
+ReactCompilerGating = fn(558);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let closure_129_2;
-      let expressivePressState;
-      let expressiveRiveRef;
-      let items1;
-      let loaderSize;
-      let loading;
-      let pressed;
-      let style;
-      let tmp10;
-      let tmp13;
-      let tmp14;
-      let tmp25;
-      let tmp8;
-      let tmp9;
-      let variant;
-      const obj = react2;
-      const cResult = obj.c(32);
+      const cResult = c.c(32);
       ({ children, style, pressed, variant, size, loading, loaderSize, expressiveRiveRef, expressivePressState } =
         arg0);
       let str = "primary";
@@ -657,13 +531,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         str = variant;
       }
       if (undefined === size) {
-        size = ButtonConstants.DEFAULT_BUTTON_SIZE;
+        size = ButtonConstants2.DEFAULT_BUTTON_SIZE;
       }
-      let closure_0 = tmp4;
+      closure_0 = tmp4;
       const tmp5 = closure_14(str, size);
-      let closure_1 = react.useRef(null);
-      [tmp8, closure_129_2] = _slicedToArray(react.useState(tmp4), 2);
-      const tmp7 = _slicedToArray(react.useState(tmp4), 2);
+      noop.useRef(null);
+      [tmp8, dependencyMap] = noop.useState(undefined !== loading && loading);
       if (cResult[0] !== (undefined !== loading && loading)) {
         const fn = function o() {
           if (null != ref.current) {
@@ -671,7 +544,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             clearTimeout(ref.current);
           }
           if (closure_0) {
-            closure_1_2(true);
+            dependencyMap(true);
           } else {
             const _setTimeout = setTimeout;
             ref.current = setTimeout(() => {
@@ -679,50 +552,44 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             }, 500);
           }
         };
-        const items = [undefined !== loading && loading];
-        cResult[0] = undefined !== loading && loading;
+        const items = [tmp4];
+        cResult[0] = tmp4;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp10 = items;
-        tmp9 = fn;
+        let tmp10 = items;
+        let tmp9 = fn;
       } else {
         tmp9 = cResult[1];
         tmp10 = cResult[2];
       }
-      const effect = react.useEffect(tmp9, tmp10);
+      const effect = noop.useEffect(tmp9, tmp10);
+      const tmp7 = _slicedToArray(noop.useState(undefined !== loading && loading), 2);
       [tmp13, tmp14] = closure_22(undefined !== loading && loading, size);
-      _slicedToArray(closure_22(undefined !== loading && loading, size), 2);
       if (cResult[3] === style) {
-        let tmp15;
         if (cResult[4] === tmp5.pill) {
-          tmp15 = cResult[5];
+          let tmp15 = cResult[5];
         }
         if (cResult[6] === tmp13) {
-          let tmp16;
           if (cResult[7] === tmp5.childContainer) {
-            tmp16 = cResult[8];
+            let tmp16 = cResult[8];
           }
           if (cResult[9] === children) {
-            let tmp17;
             if (cResult[10] === tmp16) {
-              tmp17 = cResult[11];
+              let tmp17 = cResult[11];
             }
             if (cResult[12] === tmp14) {
-              let tmp21;
               if (cResult[13] === tmp5.ellipsis) {
-                tmp21 = cResult[14];
+                let tmp21 = cResult[14];
               }
               if (cResult[15] === loaderSize) {
                 if (cResult[16] === tmp8) {
                   if (cResult[17] === size) {
-                    let tmp22;
                     if (cResult[18] === str) {
-                      tmp22 = cResult[19];
+                      let tmp22 = cResult[19];
                     }
                     if (cResult[20] === tmp22) {
-                      let tmp26;
                       if (cResult[21] === tmp21) {
-                        tmp26 = cResult[22];
+                        let tmp26 = cResult[22];
                       }
                       if (cResult[23] === expressivePressState) {
                         if (cResult[24] === expressiveRiveRef) {
@@ -731,9 +598,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                               if (cResult[27] === tmp26) {
                                 if (cResult[28] === tmp15) {
                                   if (cResult[29] === tmp17) {
-                                    let tmp30;
                                     if (cResult[30] === str) {
-                                      tmp30 = cResult[31];
+                                      let tmp30 = cResult[31];
                                     }
                                     return tmp30;
                                   }
@@ -750,10 +616,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                         pressed,
                         expressiveRiveRef,
                         expressivePressState,
-                        children: items1,
+                        children: null,
                       };
-                      items1 = [tmp17, tmp26];
-                      const tmp33 = metroImportAll(closure_15, obj3);
+                      const items1 = [tmp17, tmp26];
+                      obj3.children = items1;
+                      const tmp33 = closure_1_8(closure_15, obj3);
                       cResult[23] = expressivePressState;
                       cResult[24] = expressiveRiveRef;
                       cResult[25] = pressed;
@@ -766,7 +633,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp30 = tmp33;
                     }
                     const obj4 = { style: tmp21, children: tmp22 };
-                    const tmp29 = metroImportDefault(ReanimatedRexportDefault.View, obj4);
+                    const tmp29 = React5(ReanimatedRexportDefault.View, obj4);
                     cResult[20] = tmp22;
                     cResult[21] = tmp21;
                     cResult[22] = tmp29;
@@ -775,14 +642,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               let tmp24Result = tmp8;
-              if (tmp24Result) {
-                const obj5 = { variant: str, size: tmp25 };
-                tmp25 = loaderSize;
-                const Ellipsis = ButtonEllipsis.Ellipsis;
+              if (tmp8) {
+                const obj5 = { variant: str, size: null };
+                let tmp25 = loaderSize;
                 if (loaderSize == null) {
                   tmp25 = size;
                 }
-                tmp24Result = metroImportDefault(Ellipsis, obj5);
+                obj5.size = tmp25;
+                tmp24Result = React5(ButtonEllipsis.Ellipsis, obj5);
               }
               cResult[15] = loaderSize;
               cResult[16] = tmp8;
@@ -798,7 +665,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             tmp21 = items2;
           }
           const obj6 = { style: tmp16, children };
-          const tmp20 = metroImportDefault(ReanimatedRexportDefault.View, obj6);
+          const tmp20 = React5(ReanimatedRexportDefault.View, obj6);
           cResult[9] = children;
           cResult[10] = tmp16;
           cResult[11] = tmp20;
@@ -815,22 +682,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp5.pill;
       cResult[5] = items4;
       tmp15 = items4;
+      const tmp6Result = _slicedToArray(closure_22(undefined !== loading && loading, size), 2);
     }
   : (variant) => {
-      let c2;
-      let children;
-      let expressivePressState;
-      let expressiveRiveRef;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let pressed;
-      let style;
-      let tmp12Result;
-      let tmp5;
-      let tmp8;
-      let tmp9;
       let str = variant.variant;
       ({ children, style, pressed } = variant);
       if (str === undefined) {
@@ -838,7 +692,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let DEFAULT_BUTTON_SIZE = variant.size;
       if (DEFAULT_BUTTON_SIZE === undefined) {
-        DEFAULT_BUTTON_SIZE = ButtonConstants.DEFAULT_BUTTON_SIZE;
+        DEFAULT_BUTTON_SIZE = ButtonConstants2.DEFAULT_BUTTON_SIZE;
       }
       let flag = variant.loading;
       if (flag === undefined) {
@@ -848,17 +702,15 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       c2 = undefined;
       ({ expressiveRiveRef, expressivePressState } = variant);
       const tmp3 = closure_14(str, DEFAULT_BUTTON_SIZE);
-      let closure_1 = react.useRef(null);
-      let tmp4 = _slicedToArray(react.useState(flag), 2);
-      [tmp5, c2] = tmp4;
+      noop.useRef(null);
+      [tmp5, c2] = noop.useState(flag);
       const items = [flag];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (null != ref.current) {
           const _clearTimeout = clearTimeout;
           clearTimeout(ref.current);
         }
-        const tmp4 = flag;
-        if (tmp4) {
+        if (flag) {
           _undefined(true);
         } else {
           const _setTimeout = setTimeout;
@@ -867,36 +719,40 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           }, 500);
         }
       }, items);
+      const tmp4 = _slicedToArray(noop.useState(flag), 2);
       const obj = {
         variant: str,
         size: DEFAULT_BUTTON_SIZE,
-        style: items1,
+        style: null,
         pressed,
         expressiveRiveRef,
         expressivePressState,
-        children: items3,
+        children: null,
       };
-      items1 = [tmp3.pill, style];
-      [tmp8, tmp9] = _slicedToArray(closure_22(flag, DEFAULT_BUTTON_SIZE), 2);
-      const obj2 = { style: items2, children };
-      items2 = [tmp3.childContainer, tmp8];
-      const tmp7 = _slicedToArray(closure_22(flag, DEFAULT_BUTTON_SIZE), 2);
-      items3 = [metroImportDefault(ReanimatedRexportDefault.View, obj2)];
-      const obj3 = { style: items4, children: tmp12Result };
-      items4 = [tmp3.ellipsis, tmp9];
-      const View = ReanimatedRexportDefault.View;
+      const items1 = [tmp3.pill, style];
+      obj.style = items1;
+      [tmp8, tmp9] = closure_22(flag, DEFAULT_BUTTON_SIZE);
+      const obj2 = { style: null, children };
+      const items2 = [tmp3.childContainer, tmp8];
+      obj2.style = items2;
+      const items3 = [React5(ReanimatedRexportDefault.View, obj2)];
+      const obj3 = { style: null, children: null };
+      const items4 = [tmp3.ellipsis, tmp9];
+      obj3.style = items4;
       if (tmp12Result) {
-        const obj4 = { variant: str, size: loaderSize };
-        const Ellipsis = ButtonEllipsis.Ellipsis;
+        const obj4 = { variant: str, size: null };
         if (loaderSize == null) {
           loaderSize = DEFAULT_BUTTON_SIZE;
         }
-        tmp12Result = metroImportDefault(Ellipsis, obj4);
+        obj4.size = loaderSize;
+        tmp12Result = React5(ButtonEllipsis.Ellipsis, obj4);
       }
-      items3[1] = metroImportDefault(View, obj3);
-      return metroImportAll(closure_15, obj);
+      obj3.children = tmp12Result;
+      items3[1] = React5(ReanimatedRexportDefault.View, obj3);
+      obj.children = items3;
+      return closure_1_8(closure_15, obj);
     };
-let closure_17 = tmp9;
+let closure_17 = tmp6;
 const __initData = {
   code: 'function ButtonPillNativeTsx1(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?0:1,SUBTLE_SPRING,"animate-always");if(useReducedMotion){return{opacity:loading?opacityTransition:withDelay(FADE_DELAY,opacityTransition),transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?-1*offsetY:0,SUBTLE_SPRING)}]};}',
 };
@@ -909,103 +765,103 @@ const __initData3 = {
 const __initData4 = {
   code: "function ButtonPillNativeTsx4(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition_0=withSpring(loading?1:0,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?withDelay(FADE_DELAY,opacityTransition_0):opacityTransition_0,transform:[{translateY:0}]};}return{opacity:opacityTransition_0,transform:[{translateY:withSpring(loading?0:offsetY,SUBTLE_SPRING)}]};}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (loading, arg1) => {
-      let num;
       _require = loading;
-      let obj = require("react");
-      const cResult = obj.c(3);
-      const enabled = react.useContext(require("react").AccessibilityPreferencesContext).reducedMotion.enabled;
+      const cResult = require("c").c(3);
+      const enabled = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext)
+        .reducedMotion.enabled;
       num = 12;
       if ("lg" === arg1) {
         num = 18;
       }
-      let tmpResult = tmp(tmp2[14]);
+      const obj = require("c");
       const fn = function o() {
-        let tmp8;
         num = 1;
-        const withSpring = spring.withSpring;
-        spring;
-        if (loading) {
+        if (closure_0) {
           num = 0;
         }
-        const withSpringResult = withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
-        const obj = { opacity: null, transform: null };
+        const withSpringResult = spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
+        const obj2 = { opacity: null, transform: null };
         if (enabled) {
           let withDelayResult = withSpringResult;
-          if (!loading) {
+          if (!closure_0) {
+            withDelayResult = ReanimatedRexport.withDelay(c10, withSpringResult);
             const tmpResult = ReanimatedRexport;
-            withDelayResult = tmpResult.withDelay(c10, withSpringResult);
           }
-          obj.opacity = withDelayResult;
+          obj2.opacity = withDelayResult;
           const items = [{ translateY: 0 }];
-          obj.transform = items;
-          tmp8 = obj;
+          obj2.transform = items;
+          let tmp6 = obj2;
         } else {
-          obj.opacity = withSpringResult;
+          obj2.opacity = withSpringResult;
           let num2 = 0;
-          const withSpring2 = spring.withSpring;
-          spring;
-          if (loading) {
+          if (closure_0) {
             num2 = -1 * num;
           }
-          const items1 = [{ translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) }];
-          obj.transform = items1;
-          tmp8 = obj;
-          const obj2 = { translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) };
+          const obj3 = { translateY: spring.withSpring(num2, springPresets.SUBTLE_SPRING) };
+          const items1 = [obj3];
+          obj2.transform = items1;
+          tmp6 = obj2;
+          const tmpResult2 = spring;
         }
-        return tmp8;
+        return tmp6;
       };
-      let obj2 = {
-        withSpring: tmp(tmp2[18]).withSpring,
+      let tmpResult = require("ReanimatedRexport");
+      fn.__closure = {
+        withSpring: require("spring").withSpring,
         loading,
-        SUBTLE_SPRING: tmp(tmp2[19]).SUBTLE_SPRING,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
         useReducedMotion: enabled,
-        withDelay: tmp(tmp2[14]).withDelay,
+        withDelay: require("ReanimatedRexport").withDelay,
         FADE_DELAY,
         offsetY: num,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 8139455165925;
       fn.__initData = __initData;
       const animatedStyle = tmpResult.useAnimatedStyle(fn);
-      const tmpResult2 = tmp(tmp2[14]);
+      let obj2 = {
+        withSpring: require("spring").withSpring,
+        loading,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
+        useReducedMotion: enabled,
+        withDelay: require("ReanimatedRexport").withDelay,
+        FADE_DELAY,
+        offsetY: num,
+      };
       const fn2 = function l() {
-        let tmp7;
         num = 0;
-        const withSpring = spring.withSpring;
-        spring;
-        if (loading) {
+        if (closure_0) {
           num = 1;
         }
-        const withSpringResult = withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
-        const obj = { opacity: null, transform: null };
+        const withSpringResult = spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
+        const obj2 = { opacity: null, transform: null };
         if (enabled) {
           let withDelayResult = withSpringResult;
-          if (loading) {
+          if (closure_0) {
+            withDelayResult = ReanimatedRexport.withDelay(c10, withSpringResult);
             const tmpResult = ReanimatedRexport;
-            withDelayResult = tmpResult.withDelay(c10, withSpringResult);
           }
-          obj.opacity = withDelayResult;
+          obj2.opacity = withDelayResult;
           const items = [{ translateY: 0 }];
-          obj.transform = items;
-          tmp7 = obj;
+          obj2.transform = items;
+          let tmp5 = obj2;
         } else {
-          obj.opacity = withSpringResult;
+          obj2.opacity = withSpringResult;
           let num2 = 0;
-          const withSpring2 = spring.withSpring;
-          spring;
-          if (!loading) {
+          if (!closure_0) {
             num2 = num;
           }
-          const items1 = [{ translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) }];
-          obj.transform = items1;
-          tmp7 = obj;
-          const obj2 = { translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) };
+          const obj3 = { translateY: spring.withSpring(num2, springPresets.SUBTLE_SPRING) };
+          const items1 = [obj3];
+          obj2.transform = items1;
+          tmp5 = obj2;
+          const tmpResult2 = spring;
         }
-        return tmp7;
+        return tmp5;
       };
+      let tmpResult2 = require("ReanimatedRexport");
       fn2.__closure = {
         withSpring: require("spring").withSpring,
         loading,
@@ -1017,20 +873,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn2.__workletHash = 7833278703280;
       fn2.__initData = __initData2;
-      ({
-        withSpring: require("spring").withSpring,
-        loading,
-        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
-        useReducedMotion: enabled,
-        withDelay: require("ReanimatedRexport").withDelay,
-        FADE_DELAY,
-        offsetY: num,
-      });
       const animatedStyle1 = tmpResult2.useAnimatedStyle(fn2);
       if (cResult[0] === animatedStyle) {
-        let tmp6;
         if (cResult[1] === animatedStyle1) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
         return tmp6;
       }
@@ -1041,118 +887,153 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
     }
   : (loading, arg1) => {
-      let num;
       _require = loading;
-      const enabled = react.useContext(require("react").AccessibilityPreferencesContext).reducedMotion.enabled;
+      const enabled = noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext)
+        .reducedMotion.enabled;
       num = 12;
       if ("lg" === arg1) {
         num = 18;
       }
-      let tmpResult = tmp(tmp2[14]);
       const fn = function o() {
-        let tmp8;
         num = 1;
-        const withSpring = spring.withSpring;
-        spring;
-        if (loading) {
+        if (closure_0) {
           num = 0;
         }
-        const withSpringResult = withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
-        const obj = { opacity: null, transform: null };
+        const withSpringResult = spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
+        const obj2 = { opacity: null, transform: null };
         if (enabled) {
           let withDelayResult = withSpringResult;
-          if (!loading) {
+          if (!closure_0) {
+            withDelayResult = ReanimatedRexport.withDelay(c10, withSpringResult);
             const tmpResult = ReanimatedRexport;
-            withDelayResult = tmpResult.withDelay(c10, withSpringResult);
           }
-          obj.opacity = withDelayResult;
+          obj2.opacity = withDelayResult;
           const items = [{ translateY: 0 }];
-          obj.transform = items;
-          tmp8 = obj;
+          obj2.transform = items;
+          let tmp6 = obj2;
         } else {
-          obj.opacity = withSpringResult;
+          obj2.opacity = withSpringResult;
           let num2 = 0;
-          const withSpring2 = spring.withSpring;
-          spring;
-          if (loading) {
+          if (closure_0) {
             num2 = -1 * num;
           }
-          const items1 = [{ translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) }];
-          obj.transform = items1;
-          tmp8 = obj;
-          const obj2 = { translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) };
+          const obj3 = { translateY: spring.withSpring(num2, springPresets.SUBTLE_SPRING) };
+          const items1 = [obj3];
+          obj2.transform = items1;
+          tmp6 = obj2;
+          const tmpResult2 = spring;
         }
-        return tmp8;
+        return tmp6;
       };
-      let obj = {
-        withSpring: tmp(tmp2[18]).withSpring,
+      let tmpResult = require("ReanimatedRexport");
+      fn.__closure = {
+        withSpring: require("spring").withSpring,
         loading,
-        SUBTLE_SPRING: tmp(tmp2[19]).SUBTLE_SPRING,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
         useReducedMotion: enabled,
-        withDelay: tmp(tmp2[14]).withDelay,
+        withDelay: require("ReanimatedRexport").withDelay,
         FADE_DELAY,
         offsetY: num,
       };
-      fn.__closure = obj;
       fn.__workletHash = 7437403999943;
       fn.__initData = __initData3;
       let items = [tmpResult.useAnimatedStyle(fn)];
-      const tmpResult2 = tmp(tmp2[14]);
-      const fn2 = function l() {
-        let tmp7;
-        num = 0;
-        const withSpring = spring.withSpring;
-        spring;
-        if (loading) {
-          num = 1;
-        }
-        const withSpringResult = withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
-        const obj = { opacity: null, transform: null };
-        if (enabled) {
-          let withDelayResult = withSpringResult;
-          if (loading) {
-            const tmpResult = ReanimatedRexport;
-            withDelayResult = tmpResult.withDelay(c10, withSpringResult);
-          }
-          obj.opacity = withDelayResult;
-          const items = [{ translateY: 0 }];
-          obj.transform = items;
-          tmp7 = obj;
-        } else {
-          obj.opacity = withSpringResult;
-          let num2 = 0;
-          const withSpring2 = spring.withSpring;
-          spring;
-          if (!loading) {
-            num2 = num;
-          }
-          const items1 = [{ translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) }];
-          obj.transform = items1;
-          tmp7 = obj;
-          const obj2 = { translateY: withSpring2(num2, springPresets.SUBTLE_SPRING) };
-        }
-        return tmp7;
-      };
-      let obj2 = {
-        withSpring: tmp(tmp2[18]).withSpring,
+      const obj = {
+        withSpring: require("spring").withSpring,
         loading,
-        SUBTLE_SPRING: tmp(tmp2[19]).SUBTLE_SPRING,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
         useReducedMotion: enabled,
-        withDelay: tmp(tmp2[14]).withDelay,
+        withDelay: require("ReanimatedRexport").withDelay,
         FADE_DELAY,
         offsetY: num,
       };
-      fn2.__closure = obj2;
+      const fn2 = function l() {
+        num = 0;
+        if (closure_0) {
+          num = 1;
+        }
+        const withSpringResult = spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always");
+        const obj2 = { opacity: null, transform: null };
+        if (enabled) {
+          let withDelayResult = withSpringResult;
+          if (closure_0) {
+            withDelayResult = ReanimatedRexport.withDelay(c10, withSpringResult);
+            const tmpResult = ReanimatedRexport;
+          }
+          obj2.opacity = withDelayResult;
+          const items = [{ translateY: 0 }];
+          obj2.transform = items;
+          let tmp5 = obj2;
+        } else {
+          obj2.opacity = withSpringResult;
+          let num2 = 0;
+          if (!closure_0) {
+            num2 = num;
+          }
+          const obj3 = { translateY: spring.withSpring(num2, springPresets.SUBTLE_SPRING) };
+          const items1 = [obj3];
+          obj2.transform = items1;
+          tmp5 = obj2;
+          const tmpResult2 = spring;
+        }
+        return tmp5;
+      };
+      let tmpResult2 = require("ReanimatedRexport");
+      fn2.__closure = {
+        withSpring: require("spring").withSpring,
+        loading,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
+        useReducedMotion: enabled,
+        withDelay: require("ReanimatedRexport").withDelay,
+        FADE_DELAY,
+        offsetY: num,
+      };
       fn2.__workletHash = 1552363136150;
       fn2.__initData = __initData4;
       items[1] = tmpResult2.useAnimatedStyle(fn2);
       return items;
     };
-let closure_22 = tmp10;
-let size = size_mod;
+let closure_22 = tmp7;
+const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/ButtonPill.native.tsx");
 
-export const ButtonPill = tmp7;
-export const BasicButtonPill = tmp8;
-export const LoadingButtonPill = tmp9;
-export const useLoadingStyles = tmp10;
+export const ButtonPill = ReactCompilerGating.isReactCompilerEnabled()
+  ? (loading) => {
+      const cResult = c.c(4);
+      if (null == loading.loading) {
+        if (cResult[0] !== loading) {
+          const obj2 = {};
+          const merged = Object.assign(loading);
+          const tmp15 = React5(closure_16, obj2);
+          cResult[0] = loading;
+          cResult[1] = tmp15;
+        }
+      } else {
+        if (cResult[2] !== loading) {
+          const obj3 = {};
+          const merged1 = Object.assign(loading);
+          const tmp8 = React5(closure_17, obj3);
+          cResult[2] = loading;
+          cResult[3] = tmp8;
+          let tmp2 = tmp8;
+        } else {
+          tmp2 = cResult[3];
+        }
+        return tmp2;
+      }
+    }
+  : (loading) => {
+      if (null == loading.loading) {
+        const obj2 = {};
+        const merged = Object.assign(loading);
+        let tmp6 = React5(closure_16, obj2);
+      } else {
+        const obj = {};
+        const merged1 = Object.assign(loading);
+        tmp6 = React5(closure_17, obj);
+      }
+      return tmp6;
+    };
+export const BasicButtonPill = tmp5;
+export const LoadingButtonPill = tmp6;
+export const useLoadingStyles = tmp7;

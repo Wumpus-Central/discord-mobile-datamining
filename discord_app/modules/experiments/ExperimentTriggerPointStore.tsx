@@ -1,43 +1,43 @@
 // discord_app/modules/experiments/ExperimentTriggerPointStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Dispatcher2 from "../../Dispatcher.tsx";
 import ConnectionOpenTriggerPoint2 from "trigger_points/ConnectionOpenTriggerPoint.tsx";
 import ExperimentStore from "ExperimentStore.tsx";
 import ApexExperimentStore from "apex/ApexExperimentStore.tsx";
-import DebugExperiment from "apex/DebugExperiment.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const Dispatcher = Dispatcher2;
 
+require = fn;
 function handleConnectionOpen() {
   const ConnectionOpenTriggerPoint = ConnectionOpenTriggerPoint2.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
-const Store = get_initializedDefault.Store;
+const DebugExperiment = fn(13517);
+const Store = initializeDefault.Store;
 class ExperimentTriggerPointStore extends Store {
   constructor() {
-    const obj = { CONNECTION_OPEN: handleConnectionOpen };
-    const tmp2 = Dispatcher;
-    const tmp3 = new tmp(tmp2, obj, Dispatcher2.DispatchBand.Early, handleConnectionOpen, new.target);
-    return tmp3;
-  }
-  initialize() {
-    this.waitFor(ExperimentStore, ApexExperimentStore);
+    tmp2 = closure_1(closure_2[5]);
+    obj = { CONNECTION_OPEN: handleConnectionOpen };
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_2[5]).DispatchBand.Early, handleConnectionOpen, new.target);
+    return tmp1;
   }
 }
 const prototype = ExperimentTriggerPointStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ExperimentStore, ApexExperimentStore);
+};
 ExperimentTriggerPointStore.displayName = "ExperimentTriggerPointStore";
 let obj = { CONNECTION_OPEN: handleConnectionOpen };
-const tmp4 = new "initialize"(
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
+
+export default new "initialize"(
   Dispatcher,
   obj,
-  Dispatcher2.DispatchBand.Early,
+  fn(584).DispatchBand.Early,
   prototype,
   ExperimentTriggerPointStore,
   "initialize",
   Dispatcher,
   obj,
 );
-const result = size.fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
-
-export default tmp4;

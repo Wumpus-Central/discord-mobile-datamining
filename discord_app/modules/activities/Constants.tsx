@@ -4,7 +4,6 @@ import Server from "../../flow/Server.tsx";
 import ActivityApplications from "../../../discord_common/js/shared/shared-constants/ActivityApplications.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let items3;
 const ChannelTypes = Constants.ChannelTypes;
 const items = [
   "1037680572660727838",
@@ -22,7 +21,6 @@ const items = [
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 const obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
-const set = new Set(items2);
 const obj2 = {
   label_type: Server.EmbeddedActivityLabelTypes.NONE,
   release_phase: "",
@@ -36,22 +34,26 @@ const obj3 = {
   legacy_responsive_aspect_ratio: false,
   default_orientation_lock_state: obj.UNLOCKED,
   tablet_default_orientation_lock_state: obj.UNLOCKED,
-  supported_platforms: items3,
-  client_platform_config: {
-    [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj2,
-    [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj2,
-    [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj2,
-  },
+  supported_platforms: null,
+  client_platform_config: null,
   has_csp_exception: false,
   displays_advertisements: false,
-  blocked_locales: [],
-  supported_locales: [],
+  blocked_locales: null,
+  supported_locales: null,
 };
-items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
+const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
+obj3.supported_platforms = items3;
+obj3.client_platform_config = {
+  [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj2,
+  [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj2,
+  [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj2,
+};
+obj3.blocked_locales = [];
+obj3.supported_locales = [];
 const items4 = [, , ,];
 ({ GUILD_TEXT: arr5[0], DM: arr5[1], GROUP_DM: arr5[2], GUILD_SPACE: arr5[3] } = ChannelTypes);
 const items5 = [];
-items5[HermesBuiltin.arraySpread(items5, items4, 0)] = ChannelTypes.GUILD_VOICE;
+items5[HermesBuiltin.arraySpread(items4, 0)] = ChannelTypes.GUILD_VOICE;
 const result = size.fileFinishedImporting("modules/activities/Constants.tsx");
 
 export const ACTIVITY_INVITE_COVER_IMAGE_SIZE = 160;
@@ -124,7 +126,7 @@ export const ActivityTooltipName = {
   YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP",
 };
 export const OrientationLockState = obj;
-export const APPLICATIONS_WITH_ALLOWED_POPUPS = set;
+export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = {
   UNHANDLED: -1,
   [-1]: "UNHANDLED",

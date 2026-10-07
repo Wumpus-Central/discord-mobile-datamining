@@ -104,7 +104,6 @@ const items = [
   dismissible_content.DismissibleContent.TINY_BRONCO_NOTICE,
   dismissible_content.DismissibleContent.PREMIUM_GIFT_QUANTITY_STEPPER_NEW_BADGE,
 ];
-const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");
 
-export const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set;
+export const CONTENT_TYPES_WITH_BYPASS_FATIGUE = new Set(items);

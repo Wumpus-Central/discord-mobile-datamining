@@ -22,12 +22,8 @@ export default function computeInitialClearAfter() {
         return ClearAfterValues.DONT_CLEAR;
       } else {
         const _Date2 = Date;
-        const self = this;
-        const self2 = this;
         const date = new Date();
         const _Date3 = Date;
-        const self3 = this;
-        const self4 = this;
         const date1 = new Date(NumberResult);
         const fullYear = date.getFullYear();
         let tmp3 = fullYear === date1.getFullYear();
@@ -36,14 +32,13 @@ export default function computeInitialClearAfter() {
           tmp3 = month === date1.getMonth();
         }
         if (tmp3) {
+          tmp3 = date.getDate() === date1.getDate();
           const date2 = date.getDate();
-          tmp3 = date2 === date1.getDate();
         }
         if (tmp3) {
           const _Number = Number;
           const _Date = Date;
-          const NumberResult1 = Number(NumberResult);
-          let closure_0 = NumberResult1 - Date.now();
+          closure_0 = Number(NumberResult) - Date.now();
           let TODAY = items.find((item) => closure_0 <= item);
           if (TODAY == null) {
             TODAY = ClearAfterValues.TODAY;

@@ -3,30 +3,23 @@ import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import WebViewDefault from "../../../../../../_runtime/07983_WebView.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, importDefault, num, num2, openURLResult, tmp6, url;
 
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
 let closure_3 = ["style", "playerState", "onDataReceived", "baseURL", "injectedJavaScript", "panGestureConfig"];
-({ ActivityIndicator: metroRequire, View: metroImportDefault } = react_native);
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const PlatformUtils = fn(1369);
 let str = "";
 if (PlatformUtils.isIOS()) {
   str =
     "\n  window.addEventListener('click', function(event) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({event: 'click'}));\n  });\n";
 }
-let obj = {
+const PlayerState = {
   UNREADY: 0,
   [0]: "UNREADY",
   READY: 1,
@@ -46,6 +39,7 @@ let obj = {
   VIDEO_CUED: 8,
   [8]: "VIDEO_CUED",
 };
+const createStyles = fn(4896);
 let closure_12 = createStyles.createStyles({
   loading: {
     top: 0,
@@ -69,25 +63,15 @@ const __initData3 = {
 const __initData4 = {
   code: "function MediaModalWebViewTsx4(){const{withTiming,loaderOpacity}=this.__closure;return{opacity:withTiming(loaderOpacity.get())};}",
 };
-const forwardRef = react.forwardRef;
-const memoResult = react.memo(
-  forwardRef(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/components/renderers/MediaModalWebView.tsx");
+
+export default noop.memo(
+  noop.forwardRef(
     ReactCompilerGating.isReactCompilerEnabled()
       ? (onDataReceived, ref) => {
-          let closure_0;
-          let closure_1;
-          let closure_2;
-          let injectedJavaScript;
-          let panGestureConfig;
-          let playerState;
-          let sharedValue;
-          let style;
-          let tmp4;
-          let tmp5;
-          let tmp9;
-          let tmp = _require;
-          let obj = require("react");
-          const cResult = obj.c(38);
+          const cResult = require("c").c(38);
           if (cResult[0] !== onDataReceived) {
             ({ style, playerState } = onDataReceived);
             closure_3 = playerState;
@@ -114,7 +98,7 @@ const memoResult = react.memo(
             cResult[5] = playerState;
             cResult[6] = tmp13;
             cResult[7] = style;
-            tmp9 = tmp13;
+            let tmp9 = tmp13;
             class U {
               constructor() {
                 obj = { opacity: null };
@@ -123,8 +107,7 @@ const memoResult = react.memo(
                 return obj;
               }
             }
-            tmp5 = injectedJavaScript;
-            tmp4 = baseURL;
+            let tmp5 = injectedJavaScript;
           } else {
             _require = cResult[1];
             tmp5 = cResult[2];
@@ -134,11 +117,11 @@ const memoResult = react.memo(
             tmp9 = cResult[6];
           }
           closure_12();
-          const tmpResult = tmp(4618);
-          sharedValue = tmpResult.useSharedValue(1);
-          const tmpResult4 = tmp(4618);
-          const sharedValue1 = tmpResult4.useSharedValue(0);
-          const tmpResult5 = tmp(4618);
+          let obj = require("c");
+          sharedValue = require("ReanimatedRexport").useSharedValue(1);
+          const tmpResult = require("ReanimatedRexport");
+          const sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
+          const tmpResult4 = require("ReanimatedRexport");
           class O {
             constructor() {
               obj = { opacity: null };
@@ -147,12 +130,12 @@ const memoResult = react.memo(
               return obj;
             }
           }
-          let obj2 = { withTiming: tmp(4897).withTiming, webviewOpacity: sharedValue1 };
-          O.__closure = obj2;
+          const tmpResult5 = require("ReanimatedRexport");
+          O.__closure = { withTiming: require("timing").withTiming, webviewOpacity: sharedValue1 };
           O.__workletHash = 2179142865986;
           O.__initData = __initData;
           const animatedStyle = tmpResult5.useAnimatedStyle(O);
-          const tmpResult6 = tmp(4618);
+          const obj2 = { withTiming: require("timing").withTiming, webviewOpacity: sharedValue1 };
           class U {
             constructor() {
               obj = { opacity: null };
@@ -161,24 +144,21 @@ const memoResult = react.memo(
               return obj;
             }
           }
-          U.__closure = { withTiming: tmp(4897).withTiming, loaderOpacity: sharedValue };
+          const tmpResult6 = require("ReanimatedRexport");
+          U.__closure = { withTiming: require("timing").withTiming, loaderOpacity: sharedValue };
           U.__workletHash = 7752174298017;
           U.__initData = __initData2;
-          ({ withTiming: tmp(4897).withTiming, loaderOpacity: sharedValue });
           const animatedStyle1 = tmpResult6.useAnimatedStyle(U);
           if (cResult[8] === sharedValue) {
             if (cResult[9] === tmp8) {
-              let tmp19;
-              let tmp20;
               if (cResult[10] === sharedValue1) {
-                tmp19 = cResult[11];
-                tmp20 = cResult[12];
+                let tmp19 = cResult[11];
+                let tmp20 = cResult[12];
               }
               const effect = sharedValue1.useEffect(tmp19, tmp20);
               if (cResult[13] === tmp6) {
-                let tmp23;
                 if (cResult[14] === panGestureConfig) {
-                  tmp23 = cResult[15];
+                  let tmp23 = cResult[15];
                 }
                 if (cResult[16] !== tmp4) {
                   class G {
@@ -415,16 +395,7 @@ const memoResult = react.memo(
                     }
                   }
                 }
-                const obj4 = {
-                  injectedJavaScript: combined,
-                  bounces: false,
-                  ref,
-                  scrollEnabled: false,
-                  javaScriptEnabled: true,
-                  onMessage: tmp23,
-                  allowsInlineMediaPlayback: true,
-                  onShouldStartLoadWithRequest: G,
-                };
+                const obj4 = {};
                 class O {
                   constructor() {
                     obj = { opacity: null };
@@ -433,9 +404,14 @@ const memoResult = react.memo(
                     return obj;
                   }
                 }
-                const tmp36 = WebViewDefault;
                 const merged = Object.assign(tmp9);
-                let flag = false;
+                obj4.injectedJavaScript = combined;
+                obj4.bounces = false;
+                obj4.ref = ref;
+                obj4.scrollEnabled = false;
+                obj4.javaScriptEnabled = true;
+                obj4.onMessage = tmp23;
+                obj4.allowsInlineMediaPlayback = true;
                 class U {
                   constructor() {
                     obj = { opacity: null };
@@ -444,11 +420,12 @@ const memoResult = react.memo(
                     return obj;
                   }
                 }
+                obj4.onShouldStartLoadWithRequest = G;
+                const tmp39 = closure_8(WebViewDefault, obj4);
                 cResult[21] = tmp23;
                 cResult[22] = G;
                 cResult[23] = tmp9;
                 cResult[24] = ref;
-                const tmp39 = closure_8(tmp36, obj4);
                 class N {
                   constructor() {
                     tmp = closure_3;
@@ -513,15 +490,9 @@ const memoResult = react.memo(
           cResult[12] = items;
           tmp20 = items;
           tmp19 = N;
+          const obj3 = { withTiming: require("timing").withTiming, loaderOpacity: sharedValue };
         }
       : (playerState, ref) => {
-          let injectedJavaScript;
-          let items3;
-          let items4;
-          let items5;
-          let obj9;
-          let style;
-          let tmp15;
           playerState = playerState.playerState;
           const onDataReceived = playerState.onDataReceived;
           const baseURL = playerState.baseURL;
@@ -538,30 +509,28 @@ const memoResult = react.memo(
               panGestureConfig: 0,
             }),
           );
-          let tmp3 = baseURL;
-          const tmp2 = closure_12();
           let obj = playerState(baseURL[8]);
           const sharedValue = obj.useSharedValue(1);
-          let obj2 = playerState(baseURL[8]);
-          const sharedValue1 = obj2.useSharedValue(0);
-          const obj3 = playerState(baseURL[8]);
+          const tmp2 = closure_12();
+          let tmp3 = baseURL;
+          const sharedValue1 = playerState(baseURL[8]).useSharedValue(0);
+          const obj2 = playerState(baseURL[8]);
           class T {
             constructor() {
-              let obj2;
-              const obj = { opacity: obj2.withTiming(sharedValue1.get()) };
-              obj2 = timing;
+              obj = { opacity: null };
+              obj2 = closure_0(closure_2[9]);
+              obj.opacity = obj2.withTiming(closure_5.get());
               return obj;
             }
           }
+          const obj3 = playerState(baseURL[8]);
           T.__closure = { withTiming: playerState(baseURL[9]).withTiming, webviewOpacity: sharedValue1 };
           T.__workletHash = 12268127790848;
           T.__initData = __initData3;
-          ({ withTiming: playerState(baseURL[9]).withTiming, webviewOpacity: sharedValue1 });
           const animatedStyle = obj3.useAnimatedStyle(T);
+          const obj4 = { withTiming: playerState(baseURL[9]).withTiming, webviewOpacity: sharedValue1 };
           const fn = function f() {
-            let obj2;
-            const obj = { opacity: obj2.withTiming(sharedValue.get()) };
-            obj2 = timing;
+            const obj = { opacity: timing.withTiming(sharedValue.get()) };
             return obj;
           };
           const obj5 = playerState(baseURL[8]);
@@ -569,20 +538,17 @@ const memoResult = react.memo(
           fn.__workletHash = 3523153039463;
           fn.__initData = __initData4;
           const items = [playerState, sharedValue, sharedValue1];
-          ({ withTiming: playerState(baseURL[9]).withTiming, loaderOpacity: sharedValue });
           const animatedStyle1 = obj5.useAnimatedStyle(fn);
           const effect = sharedValue1.useEffect(() => {
-            const tmp3 = playerState !== obj.BUFFERING && playerState !== obj.PLAYING && playerState !== obj.ERRORED;
             if (!tmp3) {
               const result = sharedValue.set(0);
               const result1 = sharedValue1.set(1);
             }
+            tmp3 = playerState !== obj.BUFFERING && playerState !== obj.PLAYING && playerState !== obj.ERRORED;
           }, items);
           const items1 = [onDataReceived, panGestureConfig];
           const items2 = [baseURL];
           const callback = sharedValue1.useCallback((nativeEvent) => {
-            let overlayEnabled;
-            let overlayEnabled2;
             const parsed = JSON.parse(nativeEvent.nativeEvent.data);
             if (null != parsed) {
               if ("click" === parsed.event) {
@@ -592,7 +558,7 @@ const memoResult = react.memo(
             }
             onDataReceived(nativeEvent.nativeEvent.data);
           }, items1);
-          const obj7 = { style, children: items4 };
+          const obj7 = { style, children: null };
           const callback1 = sharedValue1.useCallback((url) => {
             let tmp = "about:blank" !== url.url;
             if (tmp) {
@@ -601,46 +567,45 @@ const memoResult = react.memo(
             }
             if (tmp) {
               tmp = null == url.isTopFrame || url.isTopFrame;
+              const tmp4 = null == url.isTopFrame || url.isTopFrame;
             }
             let flag = !tmp;
             if (tmp) {
-              const obj = LinkingDefault;
-              obj.openURL(url.url);
+              LinkingDefault.openURL(url.url);
               flag = false;
             }
             return flag;
           }, items2);
-          const obj8 = { style: items3, children: closure_8(tmp15, obj9) };
-          items3 = [animatedStyle, { flex: 1 }];
-          const View = onDataReceived(baseURL[8]).View;
-          obj9 = {
-            injectedJavaScript: "" + injectedJavaScript + "\n" + str,
-            bounces: false,
-            ref,
-            scrollEnabled: false,
-            javaScriptEnabled: true,
-            onMessage: callback,
-            allowsInlineMediaPlayback: true,
-            mediaPlaybackRequiresUserAction: false,
-            onShouldStartLoadWithRequest: callback1,
-          };
-          tmp15 = onDataReceived(baseURL[11]);
-          const merged1 = Object.assign(merged);
-          items4 = [closure_8(View, obj8)];
-          let tmp13Result = playerState !== obj.PLAYING && playerState !== obj.PAUSED;
+          const obj8 = { style: null, children: null };
+          const items3 = [animatedStyle, { flex: 1 }];
+          obj8.style = items3;
+          const obj9 = {};
+          const obj6 = { withTiming: playerState(baseURL[9]).withTiming, loaderOpacity: sharedValue };
           const tmp14 = onDataReceived;
+          const merged1 = Object.assign(merged);
+          obj9.injectedJavaScript = "" + injectedJavaScript + "\n" + str;
+          obj9.bounces = false;
+          obj9.ref = ref;
+          obj9.scrollEnabled = false;
+          obj9.javaScriptEnabled = true;
+          obj9.onMessage = callback;
+          obj9.allowsInlineMediaPlayback = true;
+          obj9.mediaPlaybackRequiresUserAction = false;
+          obj9.onShouldStartLoadWithRequest = callback1;
+          obj8.children = closure_8(onDataReceived(baseURL[11]), obj9);
+          const items4 = [closure_8(onDataReceived(baseURL[8]).View, obj8)];
+          let tmp13Result = playerState !== obj.PLAYING && playerState !== obj.PAUSED;
           if (tmp13Result) {
-            const obj10 = { style: items5, children: closure_8(closure_6, { color: "white", size: "large" }) };
-            items5 = [animatedStyle1, tmp2.loading];
-            const View2 = tmp14(tmp3[8]).View;
-            tmp13Result = closure_8(View2, obj10);
+            const obj10 = { style: null, children: null };
+            const items5 = [animatedStyle1, tmp2.loading];
+            obj10.style = items5;
+            obj10.children = closure_8(closure_6, { color: "white", size: "large" });
+            tmp13Result = closure_8(tmp14(tmp3[8]).View, obj10);
           }
           items4[1] = tmp13Result;
+          obj7.children = items4;
           return closure_9(closure_7, obj7);
         },
   ),
 );
-let result = size.fileFinishedImporting("modules/media_viewer/native/components/renderers/MediaModalWebView.tsx");
-
-export default memoResult;
-export const PlayerState = obj;
+export { PlayerState };

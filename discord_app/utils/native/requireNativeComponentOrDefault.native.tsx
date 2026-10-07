@@ -1,24 +1,14 @@
 // discord_app/utils/native/requireNativeComponentOrDefault.native.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
-import react_native from "../../../_runtime/00017_react-native.js";
+import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let set;
-
-let _window;
-let c2;
-let map;
-({ requireNativeComponent: _window, UIManager: map, View: c2 } = react_native);
+({ requireNativeComponent: closure_0, UIManager: closure_1, View: c2 } = get_ActivityIndicator);
 const logger = new LoggerDefault("RequireNativeComponentOrDefault");
-const tmp3 = new LoggerDefault("RequireNativeComponentOrDefault");
-map = new Map();
+const map = new Map();
 let result = size.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
 
 export default function requireNativeComponentOrDefault(warnWhenMissing) {
-  let componentFoundInstance;
-  let componentMissingFallbackInstance;
-  let componentName;
-  let value;
   ({ componentName, componentFoundInstance, componentMissingFallbackInstance } = warnWhenMissing);
   if (componentMissingFallbackInstance === undefined) {
     componentMissingFallbackInstance = React2;
@@ -27,13 +17,12 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
   if (flag === undefined) {
     flag = true;
   }
-  if (map.hasViewManagerConfig(componentName)) {
+  if (framebus.hasViewManagerConfig(componentName)) {
     if (!map.has(componentName)) {
-      set = map.set;
       if (componentFoundInstance == null) {
         componentFoundInstance = React(componentName);
       }
-      const result = set(componentName, componentFoundInstance);
+      const result = map.set(componentName, componentFoundInstance);
     }
     value = map.get(componentName);
   } else {

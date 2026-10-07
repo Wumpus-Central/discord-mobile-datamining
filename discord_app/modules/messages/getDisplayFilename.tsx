@@ -10,8 +10,7 @@ export default function getDisplayFilename(title) {
       const lastIndexOfResult = filename.lastIndexOf(".");
       let str2 = "";
       if (lastIndexOfResult > 0) {
-        const str3 = title.filename;
-        str2 = str3.substr(lastIndexOfResult);
+        str2 = title.filename.substr(lastIndexOfResult);
       }
       return title.title + str2;
     }

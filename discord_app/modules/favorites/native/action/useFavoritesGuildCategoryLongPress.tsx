@@ -1,77 +1,72 @@
 // discord_app/modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx
-import Constants from "../../../../Constants.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import FavoritesUtils from "../../FavoritesUtils.tsx";
 import openFavoritesGuildCategoryActionSheetDefault from "../openFavoritesGuildCategoryActionSheet.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ChannelTypes = Constants.ChannelTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ChannelTypes = fn(1085).ChannelTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (getGuildId) => {
-      let id;
-      let intl;
-      let tmp4;
-      const obj = id(576);
-      const cResult = obj.c(5);
+      const cResult = id(576).c(5);
       if (cResult[0] !== getGuildId) {
-        const tmpResult = id(2077);
-        const isFavoritesGuildIdResult =
-          tmpResult.isFavoritesGuildId(getGuildId.getGuildId()) && getGuildId.type === ChannelTypes.GUILD_CATEGORY;
+        let isFavoritesGuildIdResult = tmp(2077).isFavoritesGuildId(getGuildId.getGuildId());
+        if (isFavoritesGuildIdResult) {
+          isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
+        }
         cResult[0] = getGuildId;
         cResult[1] = isFavoritesGuildIdResult;
-        tmp4 = isFavoritesGuildIdResult;
+        let tmp4 = isFavoritesGuildIdResult;
+        const tmpResult = tmp(2077);
       } else {
         tmp4 = cResult[1];
       }
       id = getGuildId.id;
       if (cResult[2] === id) {
-        let tmp7;
         if (cResult[3] === tmp4) {
-          tmp7 = cResult[4];
+          let tmp7 = cResult[4];
         }
         return tmp7;
       }
       let tmp8 = null;
       if (tmp4) {
-        const obj2 = {
-          label: intl.string(id(1126).t.Xm41aV),
-          perform() {
-            return openFavoritesGuildCategoryActionSheetDefault(id);
-          },
+        const obj2 = { label: null, perform: null };
+        const intl = tmp(1126).intl;
+        obj2.label = intl.string(tmp(1126).t.Xm41aV);
+        obj2.perform = function perform() {
+          return openFavoritesGuildCategoryActionSheetDefault(id);
         };
-        intl = tmp(1126).intl;
         tmp8 = obj2;
       }
       cResult[2] = id;
       cResult[3] = tmp4;
       cResult[4] = tmp8;
       tmp7 = tmp8;
+      const obj = id(576);
     }
   : (getGuildId) => {
-      let obj = FavoritesUtils;
-      const isFavoritesGuildIdResult =
-        obj.isFavoritesGuildId(getGuildId.getGuildId()) && getGuildId.type === ChannelTypes.GUILD_CATEGORY;
+      let isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(getGuildId.getGuildId());
+      if (isFavoritesGuildIdResult) {
+        isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
+      }
       require = isFavoritesGuildIdResult;
       const id = getGuildId.id;
       const items = [isFavoritesGuildIdResult, id];
-      return react.useMemo(() => {
-        let intl;
+      return noop.useMemo(() => {
         let tmp = null;
-        if (require) {
-          const obj = {
-            label: intl.string(intl2.t.Xm41aV),
-            perform() {
-              return id(dependencyMap[6])(closure_1_1);
-            },
+        if (isFavoritesGuildIdResult) {
+          const obj = { label: null, perform: null };
+          const intl = util.intl;
+          obj.label = intl.string(util.t.Xm41aV);
+          obj.perform = function perform() {
+            return id(dependencyMap[6])(closure_1_1);
           };
-          intl = intl2.intl;
           tmp = obj;
         }
         return tmp;
       }, items);
     };
-const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
-
-export default tmp2;

@@ -23,7 +23,7 @@ export const conjureActivity = function conjureActivity(finishedAt) {
 export const sortConjureProjects = function sortConjureProjects(items) {
   items = [...items];
   return items.sort((sortTime, sortTime2) => {
-    const diff = closure_1_0[sortTime.activity] - closure_1_0[sortTime2.activity];
+    const diff = dependencyMap[sortTime.activity] - dependencyMap[sortTime2.activity];
     if (0 !== diff) {
       return diff;
     } else if (sortTime.sortTime !== sortTime2.sortTime) {

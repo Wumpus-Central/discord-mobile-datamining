@@ -1,36 +1,28 @@
 // discord_app/modules/stage_channels/native/components/ModeratorStartStageView.tsx
 import useCurrentUserStageRolesDefault from "../../useCurrentUserStageRoles.tsx";
-import useCanCreateAnEventDefault from "../../../guild_scheduled_events/useCanCreateAnEvent.tsx";
-import StageViewWithPromptsDefault from "StageViewWithPrompts.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const useCanCreateAnEventDefault = tmp10(9206);
+const StageViewWithPromptsDefault = tmp10(9616);
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageView.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let channel;
-      let first;
-      let guild_id;
-      let items2;
-      let obj4;
-      let onSkip;
-      let tmp6;
-      let tmp7;
-      const obj = guild_id(576);
-      const cResult = obj.c(34);
+      let tmp2 = dependencyMap;
+      const cResult = guild_id(576).c(34);
       ({ channel, onSkip } = arg0);
       guild_id = channel.guild_id;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -42,51 +34,48 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = guild_id;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
+      const obj = guild_id(576);
+      const stateFromStores = guild_id(504).useStateFromStores(first, tmp6, tmp7);
       const tmpResult = guild_id(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
-      const tmpResult5 = guild_id(9195);
-      const first1 = _slicedToArray(tmpResult5.useGuildChannelScheduledEvents(channel.id), 1)[0];
+      const first1 = _slicedToArray(guild_id(9195).useGuildChannelScheduledEvents(channel.id), 1)[0];
+      let tmp10 = importDefault;
       const moderator = useCurrentUserStageRolesDefault(channel.id, true).moderator;
-      const tmpResult6 = guild_id(9204);
-      const canManageGuildEvent = tmpResult6.useManageResourcePermissions(channel).canManageGuildEvent;
+      const tmpResult5 = guild_id(9195);
+      const canManageGuildEvent = guild_id(9204).useManageResourcePermissions(channel).canManageGuildEvent;
       if (cResult[4] === canManageGuildEvent) {
-        let tmp11;
-        let tmp14;
         if (cResult[5] === first1) {
-          tmp11 = cResult[6];
+          let tmp11 = cResult[6];
         }
         const tmp13 = useCanCreateAnEventDefault(guild_id);
-        const tmpResult7 = guild_id(9207);
-        const isLive = tmpResult7.useStageChannelStartEvent(channel.id).isLive;
+        const isLive = tmp(9207).useStageChannelStartEvent(channel.id).isLive;
         if (cResult[7] !== first1) {
-          const tmpResult8 = guild_id(9198);
-          const nextRecurrenceIdInEvent = tmpResult8.getNextRecurrenceIdInEvent(first1);
+          const nextRecurrenceIdInEvent = tmp(9198).getNextRecurrenceIdInEvent(first1);
           cResult[7] = first1;
           cResult[8] = nextRecurrenceIdInEvent;
-          tmp14 = nextRecurrenceIdInEvent;
+          let tmp14 = nextRecurrenceIdInEvent;
+          const tmpResult8 = tmp(9198);
         } else {
           tmp14 = cResult[8];
         }
-        let tmp18 = null;
-        if (null != stateFromStores) {
-          let tmp20;
-          let tmp19;
+        if (null == stateFromStores) {
+          return null;
+        } else {
           const _Symbol = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(1126).intl;
-            const stringResult = intl.string(guild_id(1126).t.QGnDLs);
+            const stringResult = intl.string(tmp(1126).t.QGnDLs);
             const intl2 = tmp(1126).intl;
-            const stringResult1 = intl2.string(guild_id(1126).t["s/uXzq"]);
+            const stringResult1 = intl2.string(tmp(1126).t["s/uXzq"]);
             cResult[9] = stringResult;
             cResult[10] = stringResult1;
-            tmp20 = stringResult1;
-            tmp19 = stringResult;
+            let tmp20 = stringResult1;
+            let tmp19 = stringResult;
           } else {
             tmp19 = cResult[9];
             tmp20 = cResult[10];
@@ -96,55 +85,49 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[13] === first1) {
                 if (cResult[14] === stateFromStores) {
                   if (cResult[15] === isLive) {
-                    let tmp23;
                     if (cResult[16] === tmp14) {
-                      tmp23 = cResult[17];
+                      let tmp23 = cResult[17];
                     }
                     if (cResult[18] === channel) {
                       if (cResult[19] === isLive) {
-                        let tmp26;
                         if (cResult[20] === moderator) {
-                          tmp26 = cResult[21];
+                          let tmp26 = cResult[21];
                         }
                         if (cResult[22] === tmp13) {
                           if (cResult[23] === channel) {
                             if (cResult[24] === stateFromStores) {
-                              let tmp29;
-                              let tmp32;
                               if (cResult[25] === isLive) {
-                                tmp29 = cResult[26];
+                                let tmp29 = cResult[26];
                               }
                               if (cResult[27] !== onSkip) {
                                 const obj2 = { onContinue: onSkip };
-                                const tmp34 = closure_5(guild_id(9571).ContinueToStagePrompt, obj2);
+                                const tmp34 = closure_5(tmp(9571).ContinueToStagePrompt, obj2);
                                 cResult[27] = onSkip;
                                 cResult[28] = tmp34;
-                                tmp32 = tmp34;
+                                let tmp32 = tmp34;
                               } else {
                                 tmp32 = cResult[28];
                               }
                               if (cResult[29] === tmp29) {
                                 if (cResult[30] === tmp32) {
                                   if (cResult[31] === tmp23) {
-                                    let tmp35;
-                                    if (cResult[32] === tmp26) {
-                                      tmp35 = cResult[33];
-                                    }
-                                    tmp18 = tmp35;
                                   }
                                 }
                               }
-                              const obj3 = { title: tmp19, body: tmp20, children: closure_7(closure_6, obj4) };
-                              obj4 = { children: items2 };
-                              items2 = [tmp23, tmp26, tmp29, tmp32];
-                              const tmp10Result = StageViewWithPromptsDefault;
-                              const tmp40 = closure_5(tmp10Result, obj3);
+                              tmp10 = StageViewWithPromptsDefault;
+                              const obj3 = { title: tmp19, body: tmp20, children: null };
+                              tmp19 = closure_7;
+                              tmp20 = closure_6;
+                              const obj4 = { children: null };
+                              const items2 = [tmp23, tmp26, tmp29, tmp32];
+                              obj4.children = items2;
+                              obj3.children = closure_7(closure_6, obj4);
+                              tmp2 = closure_5(tmp10, obj3);
                               cResult[29] = tmp29;
                               cResult[30] = tmp32;
                               cResult[31] = tmp23;
                               cResult[32] = tmp26;
-                              cResult[33] = tmp40;
-                              tmp35 = tmp40;
+                              cResult[33] = tmp2;
                             }
                           }
                         }
@@ -193,45 +176,37 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[17] = tmp24;
           tmp23 = tmp24;
         }
-        return tmp18;
+        const tmpResult7 = tmp(9207);
       }
       const canManageGuildEventResult = canManageGuildEvent(first1);
       cResult[4] = canManageGuildEvent;
       cResult[5] = first1;
       cResult[6] = canManageGuildEventResult;
       tmp11 = canManageGuildEventResult;
+      const tmpResult6 = guild_id(9204);
     }
   : (channel) => {
-      let intl;
-      let intl2;
-      let obj10;
       channel = channel.channel;
       const guild_id = channel.guild_id;
-      const onSkip = channel.onSkip;
       const items = [GuildStore];
       const items1 = [guild_id];
+      const stateFromStores = guild_id(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
       const obj = guild_id(504);
-      const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
+      const first = _slicedToArray(guild_id(9195).useGuildChannelScheduledEvents(channel.id), 1)[0];
       const obj2 = guild_id(9195);
-      const first = _slicedToArray(obj2.useGuildChannelScheduledEvents(channel.id), 1)[0];
-      const moderator = useCurrentUserStageRolesDefault(channel.id, true).moderator;
       const obj3 = guild_id(9204);
-      const canManageGuildEventResult = obj3.useManageResourcePermissions(channel).canManageGuildEvent(first);
+      const canManageGuildEventResult = guild_id(9204).useManageResourcePermissions(channel).canManageGuildEvent(first);
       const tmp7 = useCanCreateAnEventDefault(guild_id);
+      const isLive = guild_id(9207).useStageChannelStartEvent(channel.id).isLive;
       const obj4 = guild_id(9207);
-      const isLive = obj4.useStageChannelStartEvent(channel.id).isLive;
-      const obj5 = guild_id(9198);
-      const nextRecurrenceIdInEvent = obj5.getNextRecurrenceIdInEvent(first);
+      const nextRecurrenceIdInEvent = guild_id(9198).getNextRecurrenceIdInEvent(first);
       let tmp10Result6 = null;
       if (null != stateFromStores) {
-        const obj6 = {
-          title: intl.string(guild_id(1126).t.QGnDLs),
-          body: intl2.string(guild_id(1126).t["s/uXzq"]),
-          children: closure_7(closure_6, obj10),
-        };
-        const tmp5Result = StageViewWithPromptsDefault;
-        intl = tmp(1126).intl;
-        intl2 = tmp(1126).intl;
+        const obj6 = { title: null, body: null, children: null };
+        const intl = tmp(1126).intl;
+        obj6.title = intl.string(tmp(1126).t.QGnDLs);
+        const intl2 = tmp(1126).intl;
+        obj6.body = intl2.string(tmp(1126).t["s/uXzq"]);
         let tmp10Result = null;
         if (canManageGuildEventResult) {
           tmp10Result = null;
@@ -248,7 +223,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items2 = [tmp10Result, , ,];
         let tmp10Result4 = null;
-        if (moderator) {
+        if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
           const obj8 = { channel, isLive };
           tmp10Result4 = closure_5(tmp(9571).StartStagePrompt, obj8);
         }
@@ -258,14 +233,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { channel, isLive, guild: stateFromStores };
           tmp10Result5 = closure_5(tmp(9208).ScheduleEventPrompt, obj9);
         }
-        obj10 = { children: items2 };
+        const obj10 = { children: null };
         items2[2] = tmp10Result5;
-        const obj11 = { onContinue: onSkip };
-        items2[3] = closure_5(guild_id(9571).ContinueToStagePrompt, obj11);
-        tmp10Result6 = closure_5(tmp5Result, obj6);
+        const obj11 = { onContinue: channel.onSkip };
+        items2[3] = closure_5(tmp(9571).ContinueToStagePrompt, obj11);
+        obj10.children = items2;
+        obj6.children = closure_7(closure_6, obj10);
+        tmp10Result6 = closure_5(StageViewWithPromptsDefault, obj6);
+        const tmp5Result = StageViewWithPromptsDefault;
       }
       return tmp10Result6;
     };
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageView.tsx");
-
-export default tmp4;

@@ -1,38 +1,37 @@
 // discord_app/modules/conversations/native/createConversationHeader.tsx
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef3655 from "../Conversations.messages.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11577_AssetRegistry.js";
+import _modDef11577 from "../../../../_runtime/metro/11577__.js";
 import RowGeneratorConstants from "../../messages/native/renderer/RowGeneratorConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const result = size.fileFinishedImporting("modules/conversations/native/createConversationHeader.tsx");
 
 export default function createConversationHeader(conversationId) {
-  let intl;
-  let obj2;
   const obj = {
     conversationId: conversationId.id,
     channelId: conversationId.channelId,
     startMessageId: conversationId.startMessageId,
     title: conversationId.title,
-    expandIconUrl: obj2.getAssetUriForEmbed(AssetRegistryDefault),
-    expandAccessibilityLabel: intl.string(_modDef3655.pU5Dut),
+    expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef11577),
+    expandAccessibilityLabel: null,
   };
-  obj2 = renderer_EmbedUtils;
-  intl = intl2.intl;
+  const intl = util.intl;
+  obj.expandAccessibilityLabel = intl.string(_modDef3655.pU5Dut);
   return obj;
 }
 export const isConversationStartMessage = function isConversationStartMessage(startMessageId, id) {
-  return startMessageId.startMessageId === id && startMessageId.messageCount > 1;
+  let tmp = startMessageId.startMessageId === id;
+  if (tmp) {
+    tmp = startMessageId.messageCount > 1;
+  }
+  return tmp;
 };
 export const findConversationHeaderRowIndex = function findConversationHeaderRowIndex(previousRows, startMessageId) {
-  const obj = computeScrollData;
-  const findMessageRowIndexResult = obj.findMessageRowIndex(previousRows, startMessageId.startMessageId);
+  const findMessageRowIndexResult = computeScrollData.findMessageRowIndex(previousRows, startMessageId.startMessageId);
   if (null != findMessageRowIndexResult) {
     let type;
     if (previousRows[findMessageRowIndexResult + 1] != null) {
@@ -40,7 +39,7 @@ export const findConversationHeaderRowIndex = function findConversationHeaderRow
     }
     let sum;
     if (type === constants.SEPARATOR) {
-      if (previousRows[findMessageRowIndexResult + 1].id === constants2.CONVERSATION) {
+      if (tmp2.id === constants2.CONVERSATION) {
         sum = findMessageRowIndexResult + 1;
       }
     }

@@ -1,42 +1,21 @@
 // discord_app/modules/channel_list_v2/native/ChannelListFastList.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import FastListDefault from "../../../lib/native/FastList.tsx";
-import reactDefault from "../../../hooks/useForwardedRef.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import useForwardedRefDefault from "../../../hooks/useForwardedRef.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const memoResult = react.memo(
-  react.forwardRef(
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListFastList.tsx");
+
+export default noop.memo(
+  noop.forwardRef(
     ReactCompilerGating.isReactCompilerEnabled()
       ? (arg0, arg1) => {
-          let endReachedThreshold;
-          let getItemSize;
-          let getRecyclerKey;
-          let getSectionFooterSize;
-          let getSectionHeaderSize;
-          let headerSize;
-          let initialScrollItem;
-          let initialScrollSection;
-          let insetEnd;
-          let listViewportHeight;
-          let onEndReached;
-          let onScroll;
-          let onScrollWorklet;
-          let renderAccessory;
-          let renderHeader;
-          let renderItem;
-          let renderSectionFooter;
-          let renderSectionHeader;
-          let scrollIndicatorInsetBottom;
-          let sections;
-          let tmp5;
-          let waitFor;
-          const obj = react2;
-          const cResult = obj.c(25);
+          const cResult = c.c(25);
           ({
             endReachedThreshold,
             getItemSize,
@@ -60,12 +39,12 @@ const memoResult = react.memo(
             sections,
             waitFor,
           } = arg0);
-          const tmp4 = _slicedToArray(reactDefault(arg1), 2)[1];
+          const tmp4 = _slicedToArray(useForwardedRefDefault(arg1), 2)[1];
           if (cResult[0] !== scrollIndicatorInsetBottom) {
             const obj2 = { bottom: scrollIndicatorInsetBottom };
             cResult[0] = scrollIndicatorInsetBottom;
             cResult[1] = obj2;
-            tmp5 = obj2;
+            let tmp5 = obj2;
           } else {
             tmp5 = cResult[1];
           }
@@ -90,9 +69,8 @@ const memoResult = react.memo(
                                               if (cResult[20] === tmp5) {
                                                 if (cResult[21] === sections) {
                                                   if (cResult[22] === tmp4) {
-                                                    let tmp6;
                                                     if (cResult[23] === waitFor) {
-                                                      tmp6 = cResult[24];
+                                                      let tmp6 = cResult[24];
                                                     }
                                                     return tmp6;
                                                   }
@@ -171,26 +149,6 @@ const memoResult = react.memo(
           tmp6 = tmp7;
         }
       : (scrollIndicatorInsetBottom, arg1) => {
-          let endReachedThreshold;
-          let getItemSize;
-          let getRecyclerKey;
-          let getSectionFooterSize;
-          let getSectionHeaderSize;
-          let headerSize;
-          let initialScrollItem;
-          let initialScrollSection;
-          let insetEnd;
-          let listViewportHeight;
-          let onEndReached;
-          let onScroll;
-          let onScrollWorklet;
-          let renderAccessory;
-          let renderHeader;
-          let renderItem;
-          let renderSectionFooter;
-          let renderSectionHeader;
-          let sections;
-          let waitFor;
           scrollIndicatorInsetBottom = scrollIndicatorInsetBottom.scrollIndicatorInsetBottom;
           ({
             endReachedThreshold,
@@ -215,13 +173,12 @@ const memoResult = react.memo(
             waitFor,
           } = scrollIndicatorInsetBottom);
           const items = [scrollIndicatorInsetBottom];
-          const ref = _slicedToArray(reactDefault(arg1), 2)[1];
-          const scrollIndicatorInsets = react.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
+          const scrollIndicatorInsets = noop.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
           return jsx(FastListDefault, {
             insetEnd,
             scrollIndicatorInsets,
             waitFor,
-            ref,
+            ref: _slicedToArray(useForwardedRefDefault(arg1), 2)[1],
             chunkBase,
             stickyHeaderFooter: true,
             renderHeader,
@@ -249,6 +206,3 @@ const memoResult = react.memo(
         },
   ),
 );
-const result = size.fileFinishedImporting("modules/channel_list_v2/native/ChannelListFastList.tsx");
-
-export default memoResult;

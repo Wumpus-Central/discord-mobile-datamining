@@ -1,19 +1,16 @@
 // discord_app/modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import native from "../../../../design/void/native.tsx";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import GuildsBarConstants from "../GuildsBarConstants.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const PixelRatio = react_native.PixelRatio;
+const PixelRatio = _mod17.PixelRatio;
 const GUILD_ITEM_SIZE = GuildsBarConstants.GUILD_ITEM_SIZE;
-let size = size_mod;
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
 
 export default function computeGuildsBarCutout(containerSize) {
-  let roundToNearestPixelResult2;
   containerSize = containerSize.containerSize;
-  const position = containerSize.position;
   if (containerSize === undefined) {
     containerSize = GUILD_ITEM_SIZE;
   }
@@ -31,18 +28,15 @@ export default function computeGuildsBarCutout(containerSize) {
   }
   const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(BADGE_SIZE + 2 * BADGE_PADDING);
   const roundToNearestPixelResult1 = PixelRatio.roundToNearestPixel(BADGE_SIZE2 + 2 * BADGE_PADDING);
-  size = {
+  const size = {
     shape: ClipView.CutoutShape.RoundedRect,
     x: 0,
     y: 0,
     width: roundToNearestPixelResult,
     height: roundToNearestPixelResult1,
-    cornerRadius: roundToNearestPixelResult2,
+    cornerRadius: PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2),
   };
-  roundToNearestPixelResult2 = PixelRatio.roundToNearestPixel(
-    Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2,
-  );
-  if ("top-right" === position) {
+  if ("top-right" === containerSize.position) {
     size.x = containerSize - roundToNearestPixelResult + BADGE_PADDING;
     size.y = -BADGE_PADDING;
   } else {

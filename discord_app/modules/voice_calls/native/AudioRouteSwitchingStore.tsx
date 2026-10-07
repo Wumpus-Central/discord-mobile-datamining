@@ -1,6 +1,6 @@
 // discord_app/modules/voice_calls/native/AudioRouteSwitchingStore.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import VoiceCallTypes from "../VoiceCallTypes.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -9,8 +9,7 @@ import AudioRouteStore from "../AudioRouteStore.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function handleAudioRouteChanged() {
-  const tmp = c7;
-  if (tmp) {
+  if (c7) {
     const currentRouteType = AudioRouteStore.getCurrentRouteType();
     let flag2 = currentRouteType !== VoiceCallTypes.RouteTypes.UNKNOWN;
     if (flag2) {
@@ -34,28 +33,26 @@ function handleAudioRouteChanged() {
     return false;
   }
 }
-const NativeModules = react_native.NativeModules;
+const NativeModules = _mod17.NativeModules;
 let c6 = null;
 let c7 = false;
-const Store = get_initializedDefault.Store;
-class AudioRouteSwitchingStore extends Store {
-  initialize() {
-    this.waitFor(AudioRouteStore, ChannelStore, RTCConnectionStore);
-    const items = [AudioRouteStore];
-    this.syncWith(items, handleAudioRouteChanged);
-  }
-  getConnectedChannelId() {
-    return c6;
-  }
-  getQueueAudioSwap() {
-    return c7;
-  }
-}
+const Store = initializeDefault.Store;
+class AudioRouteSwitchingStore extends Store {}
 const prototype = AudioRouteSwitchingStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AudioRouteStore, ChannelStore, RTCConnectionStore);
+  const items = [AudioRouteStore];
+  this.syncWith(items, handleAudioRouteChanged);
+};
+prototype["getConnectedChannelId"] = function getConnectedChannelId() {
+  return c6;
+};
+prototype["getQueueAudioSwap"] = function getQueueAudioSwap() {
+  return c7;
+};
 AudioRouteSwitchingStore.displayName = "AudioRouteSwitchingStore";
-const obj = {
+const audioRouteSwitchingStore = new AudioRouteSwitchingStore(DispatcherDefault, {
   RTC_CONNECTION_STATE: function handleConnectionStatusChanged() {
-    let id;
     const isConnectedResult = RTCConnectionStore.isConnected();
     const channelId = RTCConnectionStore.getChannelId();
     if (isConnectedResult) {
@@ -65,8 +62,11 @@ const obj = {
           let tmp10 = null == channel;
           if (!tmp10) {
             const isGuildStageVoiceResult = channel.isGuildStageVoice();
-            tmp10 = !isGuildStageVoiceResult && !channel.isGuildVoice();
-            !isGuildStageVoiceResult && !channel.isGuildVoice();
+            let tmp12 = !isGuildStageVoiceResult;
+            if (!isGuildStageVoiceResult) {
+              tmp12 = !channel.isGuildVoice();
+            }
+            tmp10 = tmp12;
           }
           if (!tmp10) {
             if (null != channel) {
@@ -82,15 +82,20 @@ const obj = {
         }
       }
     }
-    let flag = !isConnectedResult && null == channelId && null != id;
+    let flag = !isConnectedResult;
+    if (!isConnectedResult) {
+      flag = null == channelId;
+    }
+    if (flag) {
+      flag = null != id;
+    }
     if (flag) {
       id = null;
       flag = true;
     }
     return flag;
   },
-};
-const audioRouteSwitchingStore = new AudioRouteSwitchingStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/voice_calls/native/AudioRouteSwitchingStore.tsx");
 
 export default audioRouteSwitchingStore;

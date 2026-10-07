@@ -1,21 +1,18 @@
 // discord_app/modules/install/native/InstallTime.tsx
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeInstallTimeModule.tsx";
+import NativeInstallTimeModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeInstallTimeModule.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
 function getFirstInstallTimeMillis(arg0) {
-  let num2;
-  const from = arg0.from;
-  const obj = react_nativeDefault;
-  const firstInstallTimeMillis = obj.getFirstInstallTimeMillis();
+  const firstInstallTimeMillis = NativeInstallTimeModuleDefault.getFirstInstallTimeMillis();
   let str = "InstallTimeLaunch";
-  if ("authed" === from) {
+  if ("authed" === arg0.from) {
     str = "InstallTimeAuthed";
   }
   const Storage = Storage4.Storage;
-  const value = Storage.get(str);
+  value = Storage.get(str);
   if (null != value) {
     if (value > 0) {
       let bound = value;
@@ -23,11 +20,11 @@ function getFirstInstallTimeMillis(arg0) {
         const _Math = Math;
         bound = Math.max(value, firstInstallTimeMillis);
       }
-      num2 = bound;
+      let num2 = bound;
     }
     return num2;
   }
-  if ("authed" === from) {
+  if ("authed" === arg0.from) {
     num2 = 0;
     if (AuthenticationStore.isAuthenticated()) {
       const _Date2 = Date;
@@ -46,6 +43,7 @@ function getFirstInstallTimeMillis(arg0) {
     const result1 = Storage2.set(str, num2);
   }
 }
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/install/native/InstallTime.tsx");
 
 export { getFirstInstallTimeMillis };
@@ -59,8 +57,7 @@ export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(un
     const diff = Date.now() - tmp;
     let result = diff;
     if (null != unit) {
-      const obj = TimeUtils;
-      result = obj.convertMinutesToGivenTimeUnit(diff / TimeUtils.MS_PER_MINUTE, unit);
+      result = TimeUtils.convertMinutesToGivenTimeUnit(diff / TimeUtils.MS_PER_MINUTE, unit);
     }
     return result;
   }

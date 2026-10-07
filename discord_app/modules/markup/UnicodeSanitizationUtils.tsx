@@ -2,16 +2,9 @@
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let regExp2;
-let regExp3;
-let regExp4;
-let regExp5;
-let regExp6;
-let regExp7;
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
-  const obj = URLUtilsDefault;
-  const result = obj.safeDecodeURIComponent(hash);
+  const result = URLUtilsDefault.safeDecodeURIComponent(hash);
   if (null == result) {
     return hash;
   } else {
@@ -21,12 +14,9 @@ function safelyPartiallyDecodeURIComponent(hash) {
     let str4 = "";
     if (hash.length > 0) {
       do {
-        let sum;
-        let substr1;
         let codePointAtResult = str2.codePointAt(0);
         let codePointAtResult1 = str.codePointAt(0);
         if (codePointAtResult !== codePointAtResult1) {
-          let tmp10;
           let _String2 = String;
           let fromCodePointResult = String.fromCodePoint(codePointAtResult1);
           let _encodeURIComponent = encodeURIComponent;
@@ -37,14 +27,14 @@ function safelyPartiallyDecodeURIComponent(hash) {
           }
           if (codePointAtResult1 >= 0) {
             if (codePointAtResult1 < 128) {
-              tmp10 = 1 !== closure_5[codePointAtResult1];
+              let tmp10 = 1 !== closure_5[codePointAtResult1];
               let tmp20 = fromCodePointResult;
               if (tmp10) {
                 tmp20 = encodeURIComponentResult;
               }
-              sum = str3 + tmp20;
+              let sum = str3 + tmp20;
               substr = str2.substring(num);
-              substr1 = str.substring(fromCodePointResult.length);
+              let substr1 = str.substring(fromCodePointResult.length);
             }
           }
           tmp10 =
@@ -236,7 +226,7 @@ const regExp1 = new RegExp(
     items.join("|"),
   "gu",
 );
-let obj = { character: "h", matcher: regExp2 };
+let obj = { character: "h", matcher: null };
 const items1 = [
   "H",
   "\u04BB",
@@ -257,8 +247,10 @@ const items1 = [
   "\u{1D691}",
   "\uFF48",
 ];
-regExp2 = new RegExp(items1.join("|"), "gu");
+const regExp2 = new RegExp(items1.join("|"), "gu");
+obj.matcher = regExp2;
 const items2 = [obj, , , , ,];
+const obj2 = { character: "t", matcher: null };
 const items3 = [
   "T",
   "\u{1D42D}",
@@ -275,9 +267,10 @@ const items3 = [
   "\u{1D669}",
   "\u{1D69D}",
 ];
-const obj2 = { character: "t", matcher: regExp3 };
-regExp3 = new RegExp(items3.join("|"), "gu");
+const regExp3 = new RegExp(items3.join("|"), "gu");
+obj2.matcher = regExp3;
 items2[1] = obj2;
+const obj3 = { character: "p", matcher: null };
 const items4 = [
   "P",
   "\u03C1",
@@ -311,9 +304,10 @@ const items4 = [
   "\uFF50",
   "\u048F",
 ];
-const obj3 = { character: "p", matcher: regExp4 };
-regExp4 = new RegExp(items4.join("|"), "gu");
+const regExp4 = new RegExp(items4.join("|"), "gu");
+obj3.matcher = regExp4;
 items2[2] = obj3;
+const obj4 = { character: "s", matcher: null };
 const items5 = [
   "S",
   "\u01BD",
@@ -337,9 +331,10 @@ const items5 = [
   "\u{1D69C}",
   "\uFF53",
 ];
-const obj4 = { character: "s", matcher: regExp5 };
-regExp5 = new RegExp(items5.join("|"), "gu");
+const regExp5 = new RegExp(items5.join("|"), "gu");
+obj4.matcher = regExp5;
 items2[3] = obj4;
+const obj5 = { character: ":", matcher: null };
 const items6 = [
   "\u02D0",
   "\u02F8",
@@ -361,9 +356,10 @@ const items6 = [
   ";",
   "\u037E",
 ];
-const obj5 = { character: ":", matcher: regExp6 };
-regExp6 = new RegExp(items6.join("|"), "gu");
+const regExp6 = new RegExp(items6.join("|"), "gu");
+obj5.matcher = regExp6;
 items2[4] = obj5;
+const obj6 = { character: "/", matcher: null };
 const items7 = [
   "\u1735",
   "\u2041",
@@ -380,8 +376,8 @@ const items7 = [
   "\u4E3F",
   "\u{1D23A}",
 ];
-const obj6 = { character: "/", matcher: regExp7 };
-regExp7 = new RegExp(items7.join("|"), "gu");
+const regExp7 = new RegExp(items7.join("|"), "gu");
+obj6.matcher = regExp7;
 items2[5] = obj6;
 let closure_5 = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
@@ -396,26 +392,25 @@ export const BLANK_CHARACTERS_TO_SANITIZE_REGEX_EXCLUDING_TABS = regExp1;
 export const sanitizeWhitespace = function sanitizeWhitespace(url) {
   return url.replace(regExp, "");
 };
-export const sanitizeWhitespaceExcludingTabs = function sanitizeWhitespaceExcludingTabs(substr) {
-  return substr.replace(regExp1, "");
+export const sanitizeWhitespaceExcludingTabs = function sanitizeWhitespaceExcludingTabs(str) {
+  return str.replace(regExp1, "");
 };
 export const UNICODE_CONFUSABLES_FOR_URL_DETECTION = items2;
 export const sanitizeUnicodeConfusables = function sanitizeUnicodeConfusables(sanitizeWhitespaceResult) {
-  let closure_0 = sanitizeWhitespaceResult;
+  closure_0 = sanitizeWhitespaceResult;
   const item = items2.forEach((matcher) => {
     closure_0 = closure_0.replace(matcher.matcher, matcher.character);
   });
   return closure_0;
 };
 export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(uRL) {
-  let protocol;
   let startsWithResult = "null" === uRL.origin;
   if (startsWithResult) {
     const pathname = uRL.pathname;
     startsWithResult = pathname.startsWith("//");
   }
   if (startsWithResult) {
-    protocol = uRL.protocol;
+    let protocol = uRL.protocol;
   } else {
     let str3 = "";
     if ("" !== uRL.username) {
@@ -430,12 +425,12 @@ export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(uR
       text1 = `${tmp2}@`;
     }
     let str8 = "";
-    const str6 = uRL.href;
     if ("//" === str6.substr(uRL.protocol.length, 2)) {
       str8 = "//";
     }
     const _HermesInternal = HermesInternal;
     protocol = "" + uRL.protocol + str8 + text1 + uRL.host;
+    str6 = uRL.href;
   }
   const sum = protocol + safelyPartiallyDecodeURIComponent(uRL.pathname);
   const sum1 = sum + safelyPartiallyDecodeURIComponent(uRL.search);

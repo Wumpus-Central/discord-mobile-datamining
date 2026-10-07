@@ -1,21 +1,16 @@
 // discord_app/modules/conjure/chat/native/ConjureAwaitingUser.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let set;
-
-let rect;
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-let obj = { ring: rect };
-rect = {
+const createStyles = fn(4896);
+let obj2 = { ring: null };
+const rect = {
   position: "absolute",
   top: -PX_4,
   right: -PX_4,
@@ -25,21 +20,21 @@ rect = {
   borderColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.md,
 };
-let closure_6 = createStyles.createStyles(obj);
+obj2.ring = rect;
+let closure_6 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ConjureAwaitingUserTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
 };
 const __initData2 = {
   code: "function ConjureAwaitingUserTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
 };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureAwaitingUser.tsx");
+
+export const ConjureAwaitingPulseRing = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let stateFromStores;
-      let tmp5;
-      let tmp6;
-      let useReducedMotion;
-      let obj = stateFromStores(576);
-      const cResult = obj.c(9);
+      const cResult = stateFromStores(576).c(9);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -53,62 +48,51 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
+      let obj = stateFromStores(576);
+      stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
       const tmpResult = stateFromStores(504);
-      stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-      const tmpResult3 = stateFromStores(4618);
-      const sharedValue = tmpResult3.useSharedValue(0);
+      const sharedValue = stateFromStores(4618).useSharedValue(0);
       if (cResult[2] === sharedValue) {
-        let tmp10;
-        let tmp11;
         if (cResult[3] === stateFromStores) {
-          tmp10 = cResult[4];
-          tmp11 = cResult[5];
+          let tmp10 = cResult[4];
+          let tmp11 = cResult[5];
         }
-        const effect = react.useEffect(tmp10, tmp11);
+        const effect = noop.useEffect(tmp10, tmp11);
         const fn3 = function w() {
-          const obj = { opacity: sharedValue.get() };
-          return obj;
+          return { opacity: sharedValue.get() };
         };
         let obj2 = { opacity: sharedValue };
         fn3.__closure = obj2;
         fn3.__workletHash = 8512415125100;
         fn3.__initData = __initData;
-        const tmpResult4 = stateFromStores(4618);
-        const animatedStyle = tmpResult4.useAnimatedStyle(fn3);
+        const animatedStyle = tmp(4618).useAnimatedStyle(fn3);
         if (cResult[6] === animatedStyle) {
-          let tmp16;
           if (cResult[7] === tmp4.ring) {
-            tmp16 = cResult[8];
+            let tmp16 = cResult[8];
           }
           return tmp16;
         }
+        let obj3 = { pointerEvents: "none", style: null };
         const items1 = [tmp4.ring, animatedStyle];
-        const tmp19 = jsx(sharedValue(4618).View, { pointerEvents: "none", style: items1 });
+        obj3.style = items1;
+        const tmp19 = jsx(sharedValue(4618).View, { pointerEvents: "none", style: null });
         cResult[6] = animatedStyle;
         cResult[7] = tmp4.ring;
         cResult[8] = tmp19;
         tmp16 = tmp19;
+        const tmpResult4 = tmp(4618);
       }
       const fn2 = function y() {
-        let Easing;
-        let fn;
         if (stateFromStores) {
-          const obj2 = ReanimatedRexport;
-          obj2.cancelAnimation(sharedValue);
+          ReanimatedRexport.cancelAnimation(sharedValue);
           const result = sharedValue.set(0);
         } else {
-          set = sharedValue.set;
-          const withRepeat = ReanimatedRexport.withRepeat;
-          ReanimatedRexport;
-          let obj = { duration: 1000, easing: Easing.inOut(ReanimatedRexport.Easing.ease) };
-          const withTiming = timing.withTiming;
-          timing;
-          Easing = ReanimatedRexport.Easing;
-          const result1 = set(withRepeat(withTiming(0.35, obj), -1, true));
-          fn = () => {
-            const obj = stateFromStores(dependencyMap[8]);
-            return obj.cancelAnimation(sharedValue);
-          };
+          const obj = ReanimatedRexport;
+          const obj3 = { duration: 1000, easing: null };
+          const Easing = ReanimatedRexport.Easing;
+          obj3.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
+          const result1 = sharedValue.set(obj.withRepeat(timing.withTiming(0.35, obj3), -1, true));
+          const fn = () => stateFromStores(dependencyMap[8]).cancelAnimation(sharedValue);
         }
         return fn;
       };
@@ -119,52 +103,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items2;
       tmp11 = items2;
       tmp10 = fn2;
+      const tmpResult3 = stateFromStores(4618);
     }
   : () => {
-      let stateFromStores;
-      let useReducedMotion;
       const tmp = closure_6();
-      let obj = stateFromStores(504);
       const items = [AccessibilityStore];
-      stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      let obj2 = stateFromStores(4618);
-      const sharedValue = obj2.useSharedValue(0);
+      stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      let obj = stateFromStores(504);
+      const sharedValue = stateFromStores(4618).useSharedValue(0);
       const items1 = [sharedValue, stateFromStores];
-      const effect = react.useEffect(() => {
-        let Easing;
-        let fn;
+      const effect = noop.useEffect(() => {
         if (stateFromStores) {
-          const obj2 = ReanimatedRexport;
-          obj2.cancelAnimation(sharedValue);
+          ReanimatedRexport.cancelAnimation(sharedValue);
           const result = sharedValue.set(0);
         } else {
-          set = sharedValue.set;
-          const withRepeat = ReanimatedRexport.withRepeat;
-          ReanimatedRexport;
-          let obj = { duration: 1000, easing: Easing.inOut(ReanimatedRexport.Easing.ease) };
-          const withTiming = timing.withTiming;
-          timing;
-          Easing = ReanimatedRexport.Easing;
-          const result1 = set(withRepeat(withTiming(0.35, obj), -1, true));
-          fn = () => {
-            const obj = stateFromStores(dependencyMap[8]);
-            return obj.cancelAnimation(sharedValue);
-          };
+          const obj = ReanimatedRexport;
+          const obj3 = { duration: 1000, easing: null };
+          const Easing = ReanimatedRexport.Easing;
+          obj3.easing = Easing.inOut(ReanimatedRexport.Easing.ease);
+          const result1 = sharedValue.set(obj.withRepeat(timing.withTiming(0.35, obj3), -1, true));
+          const fn = () => stateFromStores(dependencyMap[8]).cancelAnimation(sharedValue);
         }
         return fn;
       }, items1);
+      let obj2 = stateFromStores(4618);
       let fn = function p() {
-        const obj = { opacity: sharedValue.get() };
-        return obj;
+        return { opacity: sharedValue.get() };
       };
       fn.__closure = { opacity: sharedValue };
       fn.__workletHash = 4491518532559;
       fn.__initData = __initData2;
-      const obj3 = stateFromStores(4618);
-      const animatedStyle = obj3.useAnimatedStyle(fn);
+      const animatedStyle = stateFromStores(4618).useAnimatedStyle(fn);
+      let obj4 = { pointerEvents: "none", style: null };
       const items2 = [tmp.ring, animatedStyle];
-      return jsx(sharedValue(4618).View, { pointerEvents: "none", style: items2 });
+      obj4.style = items2;
+      return jsx(sharedValue(4618).View, { pointerEvents: "none", style: null });
     };
-let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureAwaitingUser.tsx");
-
-export const ConjureAwaitingPulseRing = tmp2;

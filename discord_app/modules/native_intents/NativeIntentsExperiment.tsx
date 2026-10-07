@@ -2,20 +2,20 @@
 import createExperiment from "../experiments/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let items;
 const obj = {
   kind: "user",
   id: "2025-06_native_intents",
   label: "Native Intents",
   defaultConfig: { searchEnabled: false, clearEnabled: false, activityEnabled: false },
-  treatments: items,
+  treatments: null,
 };
-items = [
+const items = [
   { id: 1, label: "All enabled", config: { searchEnabled: true, clearEnabled: true, activityEnabled: true } },
   { id: 2, label: "Clear Only", config: { searchEnabled: false, clearEnabled: true, activityEnabled: false } },
   { id: 3, label: "Activities Only", config: { searchEnabled: false, clearEnabled: false, activityEnabled: true } },
   { id: 4, label: "Activities and Clear", config: { searchEnabled: false, clearEnabled: true, activityEnabled: true } },
 ];
+obj.treatments = items;
 const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/native_intents/NativeIntentsExperiment.tsx");
 

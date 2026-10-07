@@ -5,9 +5,6 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const EDGE_GUTTER = VoicePanelCardConstants.EDGE_GUTTER;
 const fn = function t(arg0) {
-  let contentHeight;
-  let safeArea;
-  let windowHeight;
   ({ contentHeight, windowHeight, safeArea } = arg0);
   const bound = Math.max(safeArea.top, EDGE_GUTTER);
   let bound1 = bound;
@@ -22,7 +19,6 @@ fn.__workletHash = 9988657249690;
 fn.__initData = {
   code: "function calculateContentCenterOffset_calculateContentCenterOffsetTsx1({contentHeight:contentHeight,windowHeight:windowHeight,safeArea:safeArea}){const{EDGE_GUTTER,roundToNearestPixel}=this.__closure;const safeAreaTop=Math.max(safeArea.top,EDGE_GUTTER);const safeAreaBottom=Math.max(safeArea.bottom,EDGE_GUTTER);if(windowHeight<=contentHeight){return safeAreaTop;}return Math.max(safeAreaTop,safeAreaTop+roundToNearestPixel((windowHeight-safeAreaTop-safeAreaBottom-contentHeight)/2));}",
 };
-({ EDGE_GUTTER, roundToNearestPixel: roundToNearestPixelDefault });
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculateContentCenterOffset.tsx");
 
 export default fn;

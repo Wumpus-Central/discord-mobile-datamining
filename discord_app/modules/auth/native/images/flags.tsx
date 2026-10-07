@@ -1,70 +1,69 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import AssetRegistry from "../../../../../_runtime/15262_AssetRegistry.js";
-import AssetRegistry2 from "../../../../../_runtime/15263_AssetRegistry.js";
-import AssetRegistry3 from "../../../../../_runtime/15264_AssetRegistry.js";
-import AssetRegistry4 from "../../../../../_runtime/15265_AssetRegistry.js";
-import AssetRegistry5 from "../../../../../_runtime/15266_AssetRegistry.js";
-import AssetRegistry6 from "../../../../../_runtime/15267_AssetRegistry.js";
-import AssetRegistry7 from "../../../../../_runtime/15268_AssetRegistry.js";
-import AssetRegistry8 from "../../../../../_runtime/15269_AssetRegistry.js";
-import AssetRegistry9 from "../../../../../_runtime/15270_AssetRegistry.js";
-import AssetRegistry10 from "../../../../../_runtime/15271_AssetRegistry.js";
-import AssetRegistry11 from "../../../../../_runtime/15272_AssetRegistry.js";
-import AssetRegistry12 from "../../../../../_runtime/15273_AssetRegistry.js";
-import AssetRegistry13 from "../../../../../_runtime/15274_AssetRegistry.js";
-import AssetRegistry14 from "../../../../../_runtime/15275_AssetRegistry.js";
-import AssetRegistry15 from "../../../../../_runtime/15276_AssetRegistry.js";
-import AssetRegistry16 from "../../../../../_runtime/15277_AssetRegistry.js";
-import AssetRegistry17 from "../../../../../_runtime/15278_AssetRegistry.js";
-import AssetRegistry18 from "../../../../../_runtime/15279_AssetRegistry.js";
-import AssetRegistry19 from "../../../../../_runtime/15280_AssetRegistry.js";
-import AssetRegistry20 from "../../../../../_runtime/15281_AssetRegistry.js";
-import AssetRegistry21 from "../../../../../_runtime/15282_AssetRegistry.js";
-import AssetRegistry22 from "../../../../../_runtime/15283_AssetRegistry.js";
-import AssetRegistry23 from "../../../../../_runtime/15284_AssetRegistry.js";
-import AssetRegistry24 from "../../../../../_runtime/15285_AssetRegistry.js";
-import AssetRegistry25 from "../../../../../_runtime/15286_AssetRegistry.js";
-import AssetRegistry26 from "../../../../../_runtime/15287_AssetRegistry.js";
-import AssetRegistry27 from "../../../../../_runtime/15288_AssetRegistry.js";
-import AssetRegistry28 from "../../../../../_runtime/15289_AssetRegistry.js";
-import AssetRegistry29 from "../../../../../_runtime/15290_AssetRegistry.js";
-import AssetRegistry30 from "../../../../../_runtime/15291_AssetRegistry.js";
-import AssetRegistry31 from "../../../../../_runtime/15292_AssetRegistry.js";
+import _mod15262 from "../../../../../_runtime/metro/15262__.js";
+import _mod15263 from "../../../../../_runtime/metro/15263__.js";
+import _mod15264 from "../../../../../_runtime/metro/15264__.js";
+import _mod15265 from "../../../../../_runtime/metro/15265__.js";
+import _mod15266 from "../../../../../_runtime/metro/15266__.js";
+import _mod15267 from "../../../../../_runtime/metro/15267__.js";
+import _mod15268 from "../../../../../_runtime/metro/15268__.js";
+import _mod15269 from "../../../../../_runtime/metro/15269__.js";
+import _mod15270 from "../../../../../_runtime/metro/15270__.js";
+import _mod15271 from "../../../../../_runtime/metro/15271__.js";
+import _mod15272 from "../../../../../_runtime/metro/15272__.js";
+import _mod15273 from "../../../../../_runtime/metro/15273__.js";
+import _mod15274 from "../../../../../_runtime/metro/15274__.js";
+import _mod15275 from "../../../../../_runtime/metro/15275__.js";
+import _mod15276 from "../../../../../_runtime/metro/15276__.js";
+import _mod15277 from "../../../../../_runtime/metro/15277__.js";
+import _mod15278 from "../../../../../_runtime/metro/15278__.js";
+import _mod15279 from "../../../../../_runtime/metro/15279__.js";
+import _mod15280 from "../../../../../_runtime/metro/15280__.js";
+import _mod15281 from "../../../../../_runtime/metro/15281__.js";
+import _mod15282 from "../../../../../_runtime/metro/15282__.js";
+import _mod15283 from "../../../../../_runtime/metro/15283__.js";
+import _mod15284 from "../../../../../_runtime/metro/15284__.js";
+import _mod15285 from "../../../../../_runtime/metro/15285__.js";
+import _mod15286 from "../../../../../_runtime/metro/15286__.js";
+import _mod15287 from "../../../../../_runtime/metro/15287__.js";
+import _mod15288 from "../../../../../_runtime/metro/15288__.js";
+import _mod15289 from "../../../../../_runtime/metro/15289__.js";
+import _mod15290 from "../../../../../_runtime/metro/15290__.js";
+import _mod15291 from "../../../../../_runtime/metro/15291__.js";
+import _mod15292 from "../../../../../_runtime/metro/15292__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = {
-  bg: AssetRegistry,
-  cs: AssetRegistry2,
-  da: AssetRegistry3,
-  de: AssetRegistry4,
-  el: AssetRegistry5,
-  "en-GB": AssetRegistry6,
-  "en-US": AssetRegistry7,
-  "es-ES": AssetRegistry8,
-  "es-419": AssetRegistry9,
-  fi: AssetRegistry10,
-  fr: AssetRegistry11,
-  hi: AssetRegistry12,
-  hr: AssetRegistry13,
-  hu: AssetRegistry14,
-  it: AssetRegistry15,
-  ja: AssetRegistry16,
-  ko: AssetRegistry17,
-  lt: AssetRegistry18,
-  nl: AssetRegistry19,
-  no: AssetRegistry20,
-  pl: AssetRegistry21,
-  "pt-BR": AssetRegistry22,
-  ro: AssetRegistry23,
-  ru: AssetRegistry24,
-  "sv-SE": AssetRegistry25,
-  th: AssetRegistry26,
-  tr: AssetRegistry27,
-  uk: AssetRegistry28,
-  vi: AssetRegistry29,
-  "zh-CN": AssetRegistry30,
-  "zh-TW": AssetRegistry31,
-};
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = obj;
+export const flags = {
+  bg: _mod15262,
+  cs: _mod15263,
+  da: _mod15264,
+  de: _mod15265,
+  el: _mod15266,
+  "en-GB": _mod15267,
+  "en-US": _mod15268,
+  "es-ES": _mod15269,
+  "es-419": _mod15270,
+  fi: _mod15271,
+  fr: _mod15272,
+  hi: _mod15273,
+  hr: _mod15274,
+  hu: _mod15275,
+  it: _mod15276,
+  ja: _mod15277,
+  ko: _mod15278,
+  lt: _mod15279,
+  nl: _mod15280,
+  no: _mod15281,
+  pl: _mod15282,
+  "pt-BR": _mod15283,
+  ro: _mod15284,
+  ru: _mod15285,
+  "sv-SE": _mod15286,
+  th: _mod15287,
+  tr: _mod15288,
+  uk: _mod15289,
+  vi: _mod15290,
+  "zh-CN": _mod15291,
+  "zh-TW": _mod15292,
+};

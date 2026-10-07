@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx
-import react from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useStateFromSharedValue from "../../../../reanimated/native/useStateFromSharedValue.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
@@ -7,56 +7,53 @@ import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 let closure_3 = createStyles.createStyles((arg0) => {
-  let colors;
-  let colors2;
   const obj = {
     iconBg: { backgroundColor: "transparent" },
     iconBgSelected: { backgroundColor: nativeDefault.colors.WHITE },
-    iconBgVoiceMuted: {
-      borderWidth: 1,
-      borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
-      backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
-    },
-    iconFill: { color: arg0 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_STRONG },
-    iconFillMuted: { color: nativeDefault.colors.ICON_MUTED },
-    iconFillRed: { color: nativeDefault.unsafe_rawColors.RED_400 },
-    iconFillSelected: { color: nativeDefault.colors.BLACK },
-    iconBadgeIndicator: { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE },
+    iconBgVoiceMuted: null,
+    iconFill: null,
+    iconFillMuted: null,
+    iconFillRed: null,
+    iconFillSelected: null,
+    iconBadgeIndicator: null,
   };
-  ({ backgroundColor: nativeDefault.colors.WHITE });
-  ({
+  const obj2 = { backgroundColor: nativeDefault.colors.WHITE };
+  obj.iconBgVoiceMuted = {
     borderWidth: 1,
     borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
     backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
-  });
-  colors = nativeDefault.colors;
-  ({ color: nativeDefault.colors.ICON_MUTED });
-  ({ color: nativeDefault.unsafe_rawColors.RED_400 });
-  ({ color: nativeDefault.colors.BLACK });
-  colors2 = nativeDefault.colors;
+  };
+  const colors = nativeDefault.colors;
+  obj.iconFill = { color: arg0 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_STRONG };
+  const obj3 = {
+    borderWidth: 1,
+    borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
+    backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED,
+  };
+  obj.iconFillMuted = { color: nativeDefault.colors.ICON_MUTED };
+  const obj4 = { color: nativeDefault.colors.ICON_MUTED };
+  obj.iconFillRed = { color: nativeDefault.unsafe_rawColors.RED_400 };
+  const obj5 = { color: nativeDefault.unsafe_rawColors.RED_400 };
+  obj.iconFillSelected = { color: nativeDefault.colors.BLACK };
+  const colors2 = nativeDefault.colors;
+  obj.iconBadgeIndicator = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE };
   return obj;
 });
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
+
+export const useVoicePanelButtonStyles = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      const obj = react;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c(drawerMode) {
           return drawerMode.drawerMode;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
-      const tmpResult = useStateFromSharedValue;
-      return closure_3(tmpResult.useDerivedStateFromSharedValue(arg0, first));
+      return closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, first));
     }
-  : (arg0) => {
-      const obj = useStateFromSharedValue;
-      return closure_3(obj.useDerivedStateFromSharedValue(arg0, (drawerMode) => drawerMode.drawerMode));
-    };
-const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
-
-export const useVoicePanelButtonStyles = tmp2;
+  : (arg0) =>
+      closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, (drawerMode) => drawerMode.drawerMode));

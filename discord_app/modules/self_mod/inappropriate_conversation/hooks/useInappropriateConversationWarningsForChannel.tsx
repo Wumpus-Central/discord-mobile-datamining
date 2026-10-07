@@ -1,28 +1,24 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx
-import ChannelSafetyWarningsStore2 from "../../ChannelSafetyWarningsStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 
 const require = globalThis.__r;
-const ChannelSafetyWarningsStore = ChannelSafetyWarningsStore2;
-let _require;
 
-const SafetyWarningTypes = ChannelSafetyWarningsStore2.SafetyWarningTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const SafetyWarningTypes = fn(9799).SafetyWarningTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx",
+);
+
+export const useInappropriateConversationWarningsForChannel = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp7;
-      let tmp8;
       _require = arg0;
-      const tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(7);
+      const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelSafetyWarningsStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -34,59 +30,56 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
       if (cResult[4] !== stateFromStores) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class R {
-            constructor(type) {
-              return (
-                type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 ||
-                type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2
-              );
+            constructor(arg0) {
+              tmp2 =
+                arg0.type === closure_1_3.INAPPROPRIATE_CONVERSATION_TIER_1 ||
+                arg0.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
+              return tmp2;
             }
           }
           cResult[6] = R;
         } else {
           class R {
-            constructor(type) {
-              return (
-                type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 ||
-                type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2
-              );
+            constructor(arg0) {
+              tmp2 =
+                arg0.type === closure_1_3.INAPPROPRIATE_CONVERSATION_TIER_1 ||
+                arg0.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
+              return tmp2;
             }
           }
         }
         const found = stateFromStores.filter(R);
         cResult[4] = stateFromStores;
         cResult[5] = found;
-        tmp8 = found;
       } else {
         class R {
-          constructor(type) {
-            return (
-              type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 ||
-              type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2
-            );
+          constructor(arg0) {
+            tmp2 =
+              arg0.type === closure_1_3.INAPPROPRIATE_CONVERSATION_TIER_1 ||
+              arg0.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2;
+            return tmp2;
           }
         }
       }
-      return tmp8;
+      const tmpResult = require("initialize");
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       const items = [ChannelSafetyWarningsStore];
       const items1 = [arg0];
-      const obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(
+      const stateFromStores = require("initialize").useStateFromStores(
         items,
         () => ChannelSafetyWarningsStore.getChannelSafetyWarnings(closure_0),
         items1,
@@ -97,8 +90,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2,
       );
     };
-const result = size.fileFinishedImporting(
-  "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx",
-);
-
-export const useInappropriateConversationWarningsForChannel = tmp2;

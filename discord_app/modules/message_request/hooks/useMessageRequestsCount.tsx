@@ -1,17 +1,16 @@
 // discord_app/modules/message_request/hooks/useMessageRequestsCount.tsx
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import react from "../../../../_runtime/00576_react.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import MessageRequestStore from "../MessageRequestStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
+
+export const useMessageRequestsCount = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let messageRequestsCount;
-      let tmp4;
-      let tmp5;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageRequestStore];
         const fn = function u() {
@@ -24,15 +23,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return initialize.useStateFromStores(tmp4, tmp5);
     }
   : () => {
-      let messageRequestsCount;
       const items = [MessageRequestStore];
-      const obj = get_initialized;
-      return obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
+      return initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
     };
-const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestsCount.tsx");
-
-export const useMessageRequestsCount = tmp2;

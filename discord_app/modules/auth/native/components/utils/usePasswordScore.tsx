@@ -1,43 +1,32 @@
 // discord_app/modules/auth/native/components/utils/usePasswordScore.tsx
-import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray_mod from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, c5, c6;
 
-let _slicedToArray = _slicedToArray_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
+
+export const PasswordScore = { WEAK: 2, [2]: "WEAK", MEDIUM: 3, [3]: "MEDIUM", STRONG: 4, [4]: "STRONG" };
+export const usePasswordScore = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let ref;
-      let tmp10;
-      let tmp3;
-      let tmp5;
-      let tmp6;
-      let tmp7;
-      let tmp9;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(8);
-      [tmp3, dependencyMap] = react.useState(null);
-      _slicedToArray(react.useState(null), 2);
-      const tmp4 = _slicedToArray(react.useState(null), 2);
-      [tmp5, _asyncToGenerator] = tmp4;
-      _slicedToArray = react.useRef(null);
+      const cResult = require("c").c(8);
+      let obj = require("c");
+      [tmp3, dependencyMap] = noop.useState(null);
+      const tmp2 = _slicedToArray(noop.useState(null), 2);
+      [tmp5, asyncGeneratorStep] = noop.useState(null);
+      _slicedToArray = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
-          const tmp = closure_0(dependencyMap[5]);
-          const throttle = tmp.throttle;
-          closure_0 = _asyncToGenerator(async (arg0) => {
-            let closure_2;
-            let obj2;
-            closure_0 = arg0;
+          closure_0 = asyncGeneratorStep(async (arg0) => {
             if (c6 === 2) {
               c6 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
+            } else if (tmp6 === 3) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
@@ -47,9 +36,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return { value: "IconComponent", done: null };
               }
             } else {
-              let c4;
               try {
-                let closure_1;
                 c6 = 2;
                 if (0 === c5) {
                   if (arg0 === 1) {
@@ -60,52 +47,58 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj4 = { value, done: true };
                     return obj4;
                   } else {
-                    closure_1 = tmp4;
-                    closure_0 = undefined;
+                    closure_1 = tmp7;
+                    closure_129_0 = undefined;
                     if (null != closure_0) {
                       if (closure_0.length > 0) {
                         c4 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj5 = { value: obj2.scorePassword(closure_0), done: false };
-                        obj2 = closure_0(dependencyMap[6]);
+                        const obj5 = { value: closure_0(dependencyMap[6]).scorePassword(closure_0), done: false };
                         return obj5;
                       }
                     }
                   }
-                } else if (1 === c5) {
-                  c4 = 0;
-                  closure_1(null);
-                  tmp(null);
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
+                } else {
+                  if (1 === tmp7) {
+                    c4 = 0;
+                    closure_1(null);
+                    tmp3(null);
+                  } else if (arg0 === 1) {
+                    c6 = 3;
+                    throw value;
+                  } else if (arg0 !== 2) {
+                    closure_129_0 = value;
+                    closure_1(closure_129_0.password_strength);
+                    tmp3(closure_129_0.valid);
+                    c4 = 0;
+                  }
                   c4 = 0;
                   c6 = 3;
                   const obj = { value, done: true };
                   return obj;
-                } else {
-                  closure_0 = value;
-                  closure_1(closure_0.password_strength);
-                  tmp(closure_0.valid);
-                  c4 = 0;
                 }
                 c6 = 3;
-                return { value: "IconComponent", done: null };
-              } catch (tmp21) {
-                let closure_3 = tmp21;
-                if (0 === c4) {
-                  c6 = 3;
-                  throw tmp21;
+              } catch (tmp24) {
+                closure_3 = tmp24;
+                if (tmp4 === c4) {
+                  c6 = tmp2;
+                  throw tmp24;
                 } else {
-                  c5 = 1;
+                  c5 = tmp;
                 }
               }
             }
           });
-          ref.current = throttle(function () {
-            return closure_0(...arguments);
+          ref.current = closure_0(dependencyMap[5]).throttle(function () {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
           }, 250);
           return () => {
             const current = ref.current;
@@ -127,10 +120,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const effect = react.useEffect(tmp6, tmp7);
+      const effect = noop.useEffect(tmp6, tmp7);
       if (cResult[2] !== arg0) {
         const fn2 = function o() {
-          const tmp = null != ref.current && closure_0.length > 0;
+          let tmp = null != ref.current;
+          if (tmp) {
+            tmp = closure_0.length > 0;
+          }
           if (tmp) {
             ref.current(closure_0);
           }
@@ -139,17 +135,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = arg0;
         cResult[3] = fn2;
         cResult[4] = items1;
-        tmp10 = items1;
-        tmp9 = fn2;
+        let tmp10 = items1;
+        let tmp9 = fn2;
       } else {
         tmp9 = cResult[3];
         tmp10 = cResult[4];
       }
-      const effect1 = react.useEffect(tmp9, tmp10);
+      const effect1 = noop.useEffect(tmp9, tmp10);
       if (cResult[5] === tmp3) {
-        let tmp12;
         if (cResult[6] === tmp5) {
-          tmp12 = cResult[7];
+          let tmp12 = cResult[7];
         }
         return tmp12;
       }
@@ -158,28 +153,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp5;
       cResult[7] = obj3;
       tmp12 = obj3;
+      const tmp4 = _slicedToArray(noop.useState(null), 2);
     }
   : (arg0) => {
-      let ref;
-      let tmp2;
-      let tmp4;
-      let closure_0 = arg0;
-      let tmp = _slicedToArray(react.useState(null), 2);
-      [tmp2, dependencyMap] = tmp;
-      const tmp3 = _slicedToArray(react.useState(null), 2);
-      [tmp4, _asyncToGenerator] = tmp3;
-      _slicedToArray = react.useRef(null);
-      const effect = react.useEffect(() => {
-        const tmp = closure_0(dependencyMap[5]);
-        const throttle = tmp.throttle;
-        closure_0 = _asyncToGenerator(async (arg0) => {
-          let closure_2;
-          let obj2;
-          closure_0 = arg0;
+      closure_0 = arg0;
+      [tmp2, dependencyMap] = noop.useState(null);
+      let tmp = _slicedToArray(noop.useState(null), 2);
+      [tmp4, asyncGeneratorStep] = noop.useState(null);
+      _slicedToArray = noop.useRef(null);
+      const effect = noop.useEffect(() => {
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c6 === 2) {
             c6 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp6 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -189,9 +176,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return { value: "IconComponent", done: null };
             }
           } else {
-            let c4;
             try {
-              let closure_1;
               c6 = 2;
               if (0 === c5) {
                 if (arg0 === 1) {
@@ -202,52 +187,58 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  closure_1 = tmp4;
-                  closure_0 = undefined;
+                  closure_1 = tmp7;
+                  closure_129_0 = undefined;
                   if (null != closure_0) {
                     if (closure_0.length > 0) {
                       c4 = 1;
                       c5 = 2;
                       c6 = 1;
-                      const obj5 = { value: obj2.scorePassword(closure_0), done: false };
-                      obj2 = closure_0(dependencyMap[6]);
+                      const obj5 = { value: closure_0(dependencyMap[6]).scorePassword(closure_0), done: false };
                       return obj5;
                     }
                   }
                 }
-              } else if (1 === c5) {
-                c4 = 0;
-                closure_1(null);
-                tmp(null);
-              } else if (arg0 === 1) {
-                c6 = 3;
-                throw value;
-              } else if (arg0 === 2) {
+              } else {
+                if (1 === tmp7) {
+                  c4 = 0;
+                  closure_1(null);
+                  tmp3(null);
+                } else if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 !== 2) {
+                  closure_129_0 = value;
+                  closure_1(closure_129_0.password_strength);
+                  tmp3(closure_129_0.valid);
+                  c4 = 0;
+                }
                 c4 = 0;
                 c6 = 3;
                 const obj = { value, done: true };
                 return obj;
-              } else {
-                closure_0 = value;
-                closure_1(closure_0.password_strength);
-                tmp(closure_0.valid);
-                c4 = 0;
               }
               c6 = 3;
-              return { value: "IconComponent", done: null };
-            } catch (tmp21) {
-              let closure_3 = tmp21;
-              if (0 === c4) {
-                c6 = 3;
-                throw tmp21;
+            } catch (tmp24) {
+              closure_3 = tmp24;
+              if (tmp4 === c4) {
+                c6 = tmp2;
+                throw tmp24;
               } else {
-                c5 = 1;
+                c5 = tmp;
               }
             }
           }
         });
-        ref.current = throttle(function () {
-          return closure_0(...arguments);
+        ref.current = closure_0(dependencyMap[5]).throttle(function () {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         }, 250);
         return () => {
           const current = ref.current;
@@ -262,15 +253,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }, []);
       const items = [arg0];
-      const effect1 = react.useEffect(() => {
-        const tmp = null != ref.current && closure_0.length > 0;
+      const effect1 = noop.useEffect(() => {
+        let tmp = null != ref.current;
+        if (tmp) {
+          tmp = closure_0.length > 0;
+        }
         if (tmp) {
           ref.current(closure_0);
         }
       }, items);
       return { passwordScore, passwordValid };
     };
-const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
-
-export const PasswordScore = { WEAK: 2, [2]: "WEAK", MEDIUM: 3, [3]: "MEDIUM", STRONG: 4, [4]: "STRONG" };
-export const usePasswordScore = tmp2;

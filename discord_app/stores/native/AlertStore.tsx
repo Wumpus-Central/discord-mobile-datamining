@@ -1,26 +1,24 @@
 // discord_app/stores/native/AlertStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 let c0 = null;
 let closure_1 = -1;
 let c2 = null;
-const Store = get_initializedDefault.Store;
-class AlertStore extends Store {
-  getAlert() {
-    return c0;
-  }
-  getAlertKey() {
-    return "alert-store-" + closure_1;
-  }
-  isAlertDismissable() {
-    return c2;
-  }
-}
+const Store = initializeDefault.Store;
+class AlertStore extends Store {}
 const prototype = AlertStore.prototype;
+prototype["getAlert"] = function getAlert() {
+  return c0;
+};
+prototype["getAlertKey"] = function getAlertKey() {
+  return "alert-store-" + closure_1;
+};
+prototype["isAlertDismissable"] = function isAlertDismissable() {
+  return c2;
+};
 AlertStore.displayName = "AlertStore";
-const obj = {
+const alertStore = new AlertStore(DispatcherDefault, {
   ALERT_OPEN: function handleOpen(arg0) {
     closure_1 = closure_1 + 1;
     ({ alert: c0, isDismissable: c2 } = arg0);
@@ -29,8 +27,8 @@ const obj = {
     c0 = null;
     c2 = null;
   },
-};
-const alertStore = new AlertStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/native/AlertStore.tsx");
 
 export default alertStore;

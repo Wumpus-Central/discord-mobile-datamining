@@ -1,81 +1,68 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx
-import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import GuildOnboardingHomeSettingsStore2 from "../GuildOnboardingHomeSettingsStore.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
+import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";
 import GuildOnboardingMemberActionStore from "../GuildOnboardingMemberActionStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const GuildOnboardingHomeSettingsStore = GuildOnboardingHomeSettingsStore2;
-let dependencyMap, guildId;
-
-let c10;
-let c9;
-let unpackModuleId;
-const NO_SETTINGS = GuildOnboardingHomeSettingsStore2.NO_SETTINGS;
-const AnalyticEvents = Constants.AnalyticEvents;
-({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const NO_SETTINGS = fn(5083).NO_SETTINGS;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let closure_2;
-      let first;
-      let tmp = guildId;
-      let obj = guildId(576);
-      const cResult = obj.c(24);
+      const cResult = guildId(576).c(24);
       guildId = guildId.guildId;
-      let obj2 = guildId(4618);
-      const sharedValue = obj2.useSharedValue(-999);
+      let obj = guildId(576);
+      let tmp = guildId;
+      const sharedValue = guildId(4618).useSharedValue(-999);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildOnboardingHomeSettingsStore];
-        let num = 0;
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== guildId) {
         class I {
           constructor() {
-            return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+            return closure_5.getSettings(guildId);
           }
         }
-        let num2 = 1;
         cResult[1] = guildId;
         cResult[2] = I;
       } else {
         class I {
           constructor() {
-            return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+            return closure_5.getSettings(guildId);
           }
         }
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, I);
-      let tmp10 = !stateFromStores(6738)(guildId);
+      let obj2 = guildId(4618);
+      const stateFromStores = tmp(504).useStateFromStores(first, I);
       const tmp9 = stateFromStores(6738)(guildId);
-      if (tmp10) {
+      let tmp10 = !tmp9;
+      if (!tmp9) {
         class I {
           constructor() {
-            return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+            return closure_5.getSettings(guildId);
           }
         }
         if (stateFromStores != null) {
           class I {
             constructor() {
-              return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+              return closure_5.getSettings(guildId);
             }
           }
           if (tmp12 != null) {
             class I {
               constructor() {
-                return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+                return closure_5.getSettings(guildId);
               }
             }
           }
@@ -83,7 +70,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (undefined == null) {
           class I {
             constructor() {
-              return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+              return closure_5.getSettings(guildId);
             }
           }
         }
@@ -93,13 +80,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] === guildId) {
         class I {
           constructor() {
-            return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+            return closure_5.getSettings(guildId);
           }
         }
         if (cResult[6] === guildId) {
           class I {
             constructor() {
-              return GuildOnboardingHomeSettingsStore.getSettings(guildId);
+              return closure_5.getSettings(guildId);
             }
           }
         }
@@ -110,70 +97,57 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = items1;
       }
       const fn = function p() {
-        let completedActions;
-        let keys;
-        let num;
-        let num2;
         if (stateFromStores === NO_SETTINGS) {
-          const obj2 = GuildOnboardingHomeActionCreators;
-          const guildHomeSettings = obj2.fetchGuildHomeSettings(guildId);
+          const guildHomeSettings = GuildOnboardingHomeActionCreators.fetchGuildHomeSettings(guildId);
         } else if (null != stateFromStores) {
-          const obj = {
-            num_member_actions: num,
-            num_member_actions_completed: keys(completedActions).length,
-            num_resource_channels: num2,
-          };
-          const track = AnalyticsUtilsDefault.track;
-          const SERVER_GUIDE_VIEWED = AnalyticEvents.SERVER_GUIDE_VIEWED;
-          AnalyticsUtilsDefault;
-          const obj4 = AppAnalyticsUtils;
-          const merged = Object.assign(obj4.collectGuildAnalyticsMetadata(guildId));
+          const obj = {};
+          const obj3 = AnalyticsUtilsDefault;
+          const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
           const newMemberActions = stateFromStores.newMemberActions;
-          num = undefined;
+          let num;
           if (newMemberActions != null) {
             num = newMemberActions.length;
           }
           if (num == null) {
             num = 0;
           }
-          const _Object = Object;
-          keys = Object.keys;
-          completedActions = GuildOnboardingMemberActionStore.getCompletedActions(guildId);
+          obj.num_member_actions = num;
+          let completedActions = GuildOnboardingMemberActionStore.getCompletedActions(guildId);
           if (completedActions == null) {
             completedActions = {};
           }
+          obj.num_member_actions_completed = Object.keys(completedActions).length;
           const resourceChannels = stateFromStores.resourceChannels;
-          num2 = undefined;
+          let num2;
           if (resourceChannels != null) {
             num2 = resourceChannels.length;
           }
           if (num2 == null) {
             num2 = 0;
           }
-          track(SERVER_GUIDE_VIEWED, obj);
+          obj.num_resource_channels = num2;
+          obj3.track(AnalyticEvents.SERVER_GUIDE_VIEWED, obj);
         }
       };
       cResult[3] = guildId;
       cResult[4] = stateFromStores;
       cResult[5] = fn;
+      const tmpResult = tmp(504);
     }
   : (guildId) => {
-      let closure_2;
-      let items3;
-      let items4;
       guildId = guildId.guildId;
       dependencyMap = undefined;
       let tmp = dependencyMap;
+      const sharedValue = guildId(4618).useSharedValue(-999);
       let obj = guildId(4618);
-      const sharedValue = obj.useSharedValue(-999);
-      let obj2 = guildId(504);
       const items = [GuildOnboardingHomeSettingsStore];
-      const stateFromStores = obj2.useStateFromStores(items, () =>
+      const stateFromStores = guildId(504).useStateFromStores(items, () =>
         GuildOnboardingHomeSettingsStore.getSettings(guildId),
       );
+      let tmp4 = stateFromStores;
       const tmp5 = stateFromStores(6738)(guildId);
       let tmp6 = !tmp5;
-      if (tmp6) {
+      if (!tmp5) {
         let num;
         if (stateFromStores != null) {
           let resourceChannels = stateFromStores.resourceChannels;
@@ -184,98 +158,89 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (num == null) {
           num = 0;
         }
-        let num2 = 0;
         tmp6 = 0 === num;
       }
       dependencyMap = tmp6;
       const items1 = [guildId, stateFromStores, tmp6];
-      const effect = react.useEffect(() => {
-        let completedActions;
-        let keys;
-        let num;
-        let num2;
+      const effect = noop.useEffect(() => {
         if (stateFromStores === NO_SETTINGS) {
-          const obj2 = GuildOnboardingHomeActionCreators;
-          const guildHomeSettings = obj2.fetchGuildHomeSettings(guildId);
+          const guildHomeSettings = GuildOnboardingHomeActionCreators.fetchGuildHomeSettings(guildId);
         } else if (null != stateFromStores) {
-          const obj = {
-            num_member_actions: num,
-            num_member_actions_completed: keys(completedActions).length,
-            num_resource_channels: num2,
-          };
-          const track = AnalyticsUtilsDefault.track;
-          const SERVER_GUIDE_VIEWED = AnalyticEvents.SERVER_GUIDE_VIEWED;
-          AnalyticsUtilsDefault;
-          const obj4 = AppAnalyticsUtils;
-          const merged = Object.assign(obj4.collectGuildAnalyticsMetadata(guildId));
+          const obj = {};
+          const obj3 = AnalyticsUtilsDefault;
+          const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
           const newMemberActions = stateFromStores.newMemberActions;
-          num = undefined;
+          let num;
           if (newMemberActions != null) {
             num = newMemberActions.length;
           }
           if (num == null) {
             num = 0;
           }
-          const _Object = Object;
-          keys = Object.keys;
-          completedActions = GuildOnboardingMemberActionStore.getCompletedActions(guildId);
+          obj.num_member_actions = num;
+          let completedActions = GuildOnboardingMemberActionStore.getCompletedActions(guildId);
           if (completedActions == null) {
             completedActions = {};
           }
+          obj.num_member_actions_completed = Object.keys(completedActions).length;
           const resourceChannels = stateFromStores.resourceChannels;
-          num2 = undefined;
+          let num2;
           if (resourceChannels != null) {
             num2 = resourceChannels.length;
           }
           if (num2 == null) {
             num2 = 0;
           }
-          track(SERVER_GUIDE_VIEWED, obj);
+          obj.num_resource_channels = num2;
+          obj3.track(AnalyticEvents.SERVER_GUIDE_VIEWED, obj);
         }
       }, items1);
       const items2 = [guildId, tmp6, stateFromStores];
-      const effect1 = react.useEffect(() => {
-        const tmp = closure_2 && stateFromStores !== NO_SETTINGS;
+      const effect1 = noop.useEffect(() => {
+        let tmp = closure_2;
+        if (closure_2) {
+          tmp = stateFromStores !== NO_SETTINGS;
+        }
         if (tmp) {
-          const obj = GuildActionCreatorsDefault;
-          const result = obj.escapeToDefaultChannel(guildId);
+          const result = GuildActionCreatorsDefault.escapeToDefaultChannel(guildId);
         }
       }, items2);
-      let tmp11Result2 = null;
-      if (!tmp6) {
-        let tmp13Result;
-        let obj4 = { guildId, hideDescription: tmp5 };
-        const obj3 = { guildId, scrollValue: sharedValue, children: items3 };
-        items3 = [,];
-        const tmp4Result = stateFromStores(16563);
-        items3[0] = closure_9(stateFromStores(16547), obj4);
+      if (tmp6) {
+        return null;
+      } else {
+        let obj3 = { guildId, scrollValue: sharedValue, children: null };
+        const obj4 = { guildId, hideDescription: tmp5 };
+        const items3 = [closure_9(tmp4(16547), obj4)];
         if (tmp5) {
-          const obj5 = { children: items4 };
+          let obj5 = { children: null };
           const obj6 = { guildId };
-          items4 = [closure_9(stateFromStores(16552), obj6), ,];
+          const items4 = [closure_9(tmp4(16552), obj6), ,];
           const obj7 = { guildId };
-          items4[1] = closure_9(stateFromStores(16556), obj7);
+          items4[1] = closure_9(tmp4(16556), obj7);
+          tmp4 = tmp4(16557);
           const obj8 = { guildId };
-          items4[2] = closure_9(stateFromStores(16557), obj8);
-          tmp13Result = closure_11(closure_10, obj5);
+          tmp = closure_9(tmp4, obj8);
+          items4[2] = tmp;
+          obj5.children = items4;
+          let tmp12Result = closure_11(closure_10, obj5);
         } else {
           const obj9 = { guildId };
-          tmp13Result = closure_9(tmp4(16560), obj9);
+          tmp12Result = closure_9(tmp4(16560), obj9);
         }
-        items3[1] = tmp13Result;
-        tmp11Result2 = closure_11(tmp4Result, obj3);
+        items3[1] = tmp12Result;
+        obj3.children = items3;
+        closure_11(tmp4(16563), obj3);
+        const tmp4Result = tmp4(16563);
       }
-      return tmp11Result2;
+      let obj2 = guildId(504);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let canSeeOnboardingHome;
-      let hasLoadedExperiments;
-      let tmp4;
-      let tmp5;
-      let obj = guildId(canSeeOnboardingHome[7]);
-      const cResult = obj.c(9);
+      const cResult = guildId(canSeeOnboardingHome[7]).c(9);
       guildId = guildId.guildId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ExperimentStore];
@@ -289,26 +254,23 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
+      let obj = guildId(canSeeOnboardingHome[7]);
+      const stateFromStores = guildId(canSeeOnboardingHome[9]).useStateFromStores(tmp4, tmp5);
       const tmpResult = guildId(canSeeOnboardingHome[9]);
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      const tmpResult2 = guildId(canSeeOnboardingHome[21]);
-      canSeeOnboardingHome = tmpResult2.useCanSeeOnboardingHome(guildId);
+      canSeeOnboardingHome = guildId(canSeeOnboardingHome[21]).useCanSeeOnboardingHome(guildId);
       if (cResult[2] === canSeeOnboardingHome) {
         if (cResult[3] === guildId) {
-          let tmp9;
-          let tmp10;
-          let tmp13;
           if (cResult[4] === stateFromStores) {
-            tmp9 = cResult[5];
-            tmp10 = cResult[6];
+            let tmp9 = cResult[5];
+            let tmp10 = cResult[6];
           }
-          const effect = react.useEffect(tmp9, tmp10);
+          const effect = noop.useEffect(tmp9, tmp10);
           if (cResult[7] !== guildId) {
             const obj2 = { guildId };
             const tmp16 = closure_9(closure_12, obj2);
             cResult[7] = guildId;
             cResult[8] = tmp16;
-            tmp13 = tmp16;
+            let tmp13 = tmp16;
           } else {
             tmp13 = cResult[8];
           }
@@ -318,8 +280,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const fn2 = function _() {
         if (stateFromStores) {
           if (!canSeeOnboardingHome) {
-            const obj = GuildActionCreatorsDefault;
-            const result = obj.escapeToDefaultChannel(guildId);
+            const result = GuildActionCreatorsDefault.escapeToDefaultChannel(guildId);
           }
         }
       };
@@ -331,27 +292,25 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items1;
       tmp10 = items1;
       tmp9 = fn2;
+      const tmpResult2 = guildId(canSeeOnboardingHome[21]);
     }
   : (guildId) => {
-      let hasLoadedExperiments;
       guildId = guildId.guildId;
       let canSeeOnboardingHome;
-      let obj = guildId(canSeeOnboardingHome[9]);
       const items = [ExperimentStore];
-      const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
-      const obj2 = guildId(canSeeOnboardingHome[21]);
-      canSeeOnboardingHome = obj2.useCanSeeOnboardingHome(guildId);
+      const stateFromStores = guildId(canSeeOnboardingHome[9]).useStateFromStores(
+        items,
+        () => hasLoadedExperiments.hasLoadedExperiments,
+      );
+      let obj = guildId(canSeeOnboardingHome[9]);
+      canSeeOnboardingHome = guildId(canSeeOnboardingHome[21]).useCanSeeOnboardingHome(guildId);
       const items1 = [guildId, stateFromStores, canSeeOnboardingHome];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (stateFromStores) {
           if (!canSeeOnboardingHome) {
-            const obj = GuildActionCreatorsDefault;
-            const result = obj.escapeToDefaultChannel(guildId);
+            const result = GuildActionCreatorsDefault.escapeToDefaultChannel(guildId);
           }
         }
       }, items1);
       return closure_9(closure_12, { guildId });
     };
-let result = size.fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx");
-
-export default tmp3;

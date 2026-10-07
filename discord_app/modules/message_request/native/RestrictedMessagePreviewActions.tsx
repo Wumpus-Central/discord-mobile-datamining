@@ -1,222 +1,153 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewActions.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ReportModals from "../../in_app_reports/ReportModals.tsx";
 import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
-import RestrictionConfirmationConstants from "../../relationships/native/RestrictionConfirmationConstants.tsx";
 import PeopleUtilsDefault from "../../people/PeopleUtils.tsx";
 import UserProfileAlertUtils from "../../user_profile/native/UserProfileAlertUtils.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
-import Constants from "../../../Constants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let c10;
-let c9;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-const View = react_native.View;
-({ AnalyticsPages: metroRequire, RelationshipTypes: metroImportDefault } = Constants);
-let closure_8 = RestrictionConfirmationConstants.BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
-({ jsx: c9, jsxs: c10 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, buttonRow: obj3 };
-obj2 = { gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
-createStyles = createStyles.createStyles;
-obj3 = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
-let closure_11 = createStyles(obj);
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1085);
+({ AnalyticsPages: metroRequire, RelationshipTypes: closure_7 } = Constants);
+let closure_8 = fn(9829).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { container: { gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 }, buttonRow: null };
+let obj3 = { gap: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_12 };
+obj2.buttonRow = { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(obj2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewActions.tsx");
 
 export default function RestrictedMessagePreviewActions(channel) {
-  let formatResult;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl6;
-  let intl7;
-  let intl8;
-  let intl9;
-  let isLoaded;
-  let isReportable;
-  let items10;
-  let items9;
-  let obj8;
-  let tmp18;
-  let tmp19;
   channel = channel.channel;
   const user = channel.user;
   let message;
   const tmp = closure_11();
-  let obj = channel(message[8]);
-  const dMMessageToReport = obj.useDMMessageToReport(channel, user.id, true === user.bot);
+  const dMMessageToReport = channel(message[8]).useDMMessageToReport(channel, user.id, true === user.bot);
   message = dMMessageToReport.message;
   ({ isReportable, isLoaded } = dMMessageToReport);
-  let obj2 = channel(message[9]);
+  let obj = channel(message[8]);
   const items = [RelationshipStore];
   const items1 = [user.id];
-  const stateFromStores = obj2.useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id), items1);
+  const stateFromStores = channel(message[9]).useStateFromStores(
+    items,
+    () => RelationshipStore.getRelationshipType(user.id),
+    items1,
+  );
   const items2 = [user.id];
   const items3 = [user.id];
-  const callback = react.useCallback(() => {
-    let obj3;
-    const obj2 = { userId: user.id, context: obj3 };
-    obj3 = { location: metroRequire.DM_CHANNEL };
-    const obj = RelationshipActionCreatorsDefault;
-    obj.addRelationship(obj2);
+  const callback = noop.useCallback(() => {
+    const obj2 = { userId: user.id, context: { location: constants.DM_CHANNEL } };
+    RelationshipActionCreatorsDefault.addRelationship(obj2);
   }, items2);
   const items4 = [user.id];
-  const callback1 = react.useCallback(() => {
-    const obj = PeopleUtilsDefault;
-    const obj2 = { userId: user.id, location: metroRequire.DM_CHANNEL };
-    const result = obj.maybeConfirmFriendRequestAccept(obj2);
+  const callback1 = noop.useCallback(() => {
+    const result = PeopleUtilsDefault.maybeConfirmFriendRequestAccept({
+      userId: user.id,
+      location: constants.DM_CHANNEL,
+    });
   }, items3);
   const items5 = [user];
-  const callback2 = react.useCallback(() => {
-    const obj = RelationshipActionCreatorsDefault;
-    const obj2 = { location: metroRequire.DM_CHANNEL };
-    obj.cancelFriendRequest(user.id, obj2);
+  const callback2 = noop.useCallback(() => {
+    RelationshipActionCreatorsDefault.cancelFriendRequest(user.id, { location: constants.DM_CHANNEL });
   }, items4);
   const items6 = [user.id, channel.id];
-  const callback3 = react.useCallback(() => {
-    let id;
-    let obj2;
-    let obj = {
-      userDisplayName: obj2.getName(user),
-      onConfirm() {
-        const obj = user(message[10]);
-        const obj2 = { location: constants.DM_CHANNEL };
-        obj.removeFriend(id.id, obj2);
-      },
+  const callback3 = noop.useCallback(() => {
+    const obj2 = { userDisplayName: null, onConfirm: null };
+    const obj = UserProfileAlertUtils;
+    obj2.userDisplayName = UserUtilsDefault.getName(user);
+    obj2.onConfirm = function onConfirm() {
+      user(message[10]).removeFriend(id.id, { location: constants.DM_CHANNEL });
     };
-    const confirmRemoveFriend = UserProfileAlertUtils.confirmRemoveFriend;
-    UserProfileAlertUtils;
-    obj2 = UserUtilsDefault;
-    confirmRemoveFriend(obj);
+    obj.confirmRemoveFriend(obj2);
   }, items5);
   const items7 = [user.id];
-  const callback4 = react.useCallback(() => {
-    const obj = ActionSheetActionCreatorsDefault;
-    const obj2 = { userId: user.id, channelId: channel.id };
-    obj.openLazy(asyncRequire(9830, dependencyMap.paths), closure_8, obj2);
+  const callback4 = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9830, dependencyMap.paths), closure_8, {
+      userId: user.id,
+      channelId: channel.id,
+    });
   }, items6);
   const items8 = [message, channel.id];
-  const callback5 = react.useCallback(() => {
-    const obj = RelationshipActionCreatorsDefault;
-    const obj2 = { location: metroRequire.DM_CHANNEL };
-    obj.unblockUser(user.id, obj2);
+  const callback5 = noop.useCallback(() => {
+    RelationshipActionCreatorsDefault.unblockUser(user.id, { location: constants.DM_CHANNEL });
   }, items7);
   let tmp14 = null;
-  const callback6 = react.useCallback(() => {
-    let id;
+  const callback6 = noop.useCallback(() => {
     if (null != message) {
-      let obj = ReportModals;
-      const result = obj.showReportModalForFirstDM(tmp, () => {
-        const obj = user(message[18]);
-        obj.closePrivateChannel(id.id, true);
+      const result = ReportModals.showReportModalForFirstDM(tmp, () => {
+        user(message[18]).closePrivateChannel(id.id, true);
       });
     }
   }, items8);
   if (stateFromStores !== constants2.BLOCKED) {
-    let obj3 = {
-      size: "sm",
-      variant: "secondary",
-      text: intl.string(channel(message[20]).t.l4Emac),
-      onPress: callback4,
-    };
-    const Button = tmp2(tmp3[19]).Button;
-    intl = tmp2(tmp3[20]).intl;
-    tmp14 = closure_9(Button, obj3);
+    const obj3 = { size: "sm", variant: "secondary", text: null, onPress: null };
+    const intl = tmp2(tmp3[20]).intl;
+    obj3.text = intl.string(tmp2(tmp3[20]).t.l4Emac);
+    obj3.onPress = callback4;
+    tmp14 = closure_9(tmp2(tmp3[19]).Button, obj3);
   }
   let tmp16 = null;
   if (isReportable) {
     if (null != message) {
-      const obj4 = {
-        size: "sm",
-        variant: "destructive",
-        text: intl2.string(channel(message[20]).t.HHZmDn),
-        disabled: null == message,
-        onPress: callback6,
-      };
-      const Button2 = tmp2(tmp3[19]).Button;
-      intl2 = tmp2(tmp3[20]).intl;
-      tmp16 = closure_9(Button2, obj4);
+      const obj4 = { size: "sm", variant: "destructive", text: null, disabled: null, onPress: null };
+      const intl2 = tmp2(tmp3[20]).intl;
+      obj4.text = intl2.string(tmp2(tmp3[20]).t.HHZmDn);
+      obj4.disabled = null == message;
+      obj4.onPress = callback6;
+      tmp16 = closure_9(tmp2(tmp3[19]).Button, obj4);
     } else {
       tmp16 = null;
     }
   }
   if (constants2.NONE === stateFromStores) {
-    tmp18 = null;
-    tmp19 = null;
-    formatResult = null;
+    let tmp18 = null;
+    let tmp19 = null;
+    let formatResult = null;
     if (!user.bot) {
-      const obj5 = {
-        size: "sm",
-        variant: "active",
-        text: intl8.string(channel(message[20]).t["PMsq/b"]),
-        onPress: callback,
-      };
-      const Button7 = tmp2(tmp3[19]).Button;
-      intl8 = tmp2(tmp3[20]).intl;
-      tmp19 = closure_9(Button7, obj5);
+      const obj5 = { size: "sm", variant: "active", text: null, onPress: null };
+      const intl8 = tmp2(tmp3[20]).intl;
+      obj5.text = intl8.string(tmp2(tmp3[20]).t["PMsq/b"]);
+      obj5.onPress = callback;
+      tmp19 = closure_9(tmp2(tmp3[19]).Button, obj5);
       tmp18 = null;
       formatResult = null;
     }
   } else if (constants2.PENDING_INCOMING === stateFromStores) {
     const intl5 = tmp2(tmp3[20]).intl;
-    const format = intl5.format;
-    const obj6 = { username: obj8.getName(user) };
-    const uIomXw = tmp2(tmp3[20]).t.uIomXw;
-    obj8 = user(message[13]);
-    formatResult = format(uIomXw, obj6);
-    const obj7 = {
-      size: "sm",
-      variant: "active",
-      text: intl6.string(channel(message[20]).t["+WbSn5"]),
-      onPress: callback1,
-    };
-    const Button5 = tmp2(tmp3[19]).Button;
-    intl6 = tmp2(tmp3[20]).intl;
-    tmp19 = closure_9(Button5, obj7);
-    const obj9 = {
-      size: "sm",
-      variant: "secondary",
-      text: intl7.string(channel(message[20]).t.rQSndv),
-      onPress: callback2,
-    };
-    const Button6 = tmp2(tmp3[19]).Button;
-    intl7 = tmp2(tmp3[20]).intl;
-    tmp18 = closure_9(Button6, obj9);
+    const obj6 = { username: user(tmp3[13]).getName(user) };
+    formatResult = intl5.format(tmp2(tmp3[20]).t.uIomXw, obj6);
+    const obj7 = { size: "sm", variant: "active", text: null, onPress: null };
+    const intl6 = tmp2(tmp3[20]).intl;
+    obj7.text = intl6.string(tmp2(tmp3[20]).t["+WbSn5"]);
+    obj7.onPress = callback1;
+    tmp19 = closure_9(tmp2(tmp3[19]).Button, obj7);
+    const obj9 = { size: "sm", variant: "secondary", text: null, onPress: null };
+    const intl7 = tmp2(tmp3[20]).intl;
+    obj9.text = intl7.string(tmp2(tmp3[20]).t.rQSndv);
+    obj9.onPress = callback2;
+    tmp18 = closure_9(tmp2(tmp3[19]).Button, obj9);
+    const obj8 = user(tmp3[13]);
   } else if (constants2.FRIEND === stateFromStores) {
-    const obj10 = {
-      size: "sm",
-      variant: "secondary",
-      text: intl4.string(channel(message[20]).t.cvSt1J),
-      onPress: callback3,
-    };
-    const Button4 = tmp2(tmp3[19]).Button;
-    intl4 = tmp2(tmp3[20]).intl;
-    tmp19 = closure_9(Button4, obj10);
+    const obj10 = { size: "sm", variant: "secondary", text: null, onPress: null };
+    const intl4 = tmp2(tmp3[20]).intl;
+    obj10.text = intl4.string(tmp2(tmp3[20]).t.cvSt1J);
+    obj10.onPress = callback3;
+    tmp19 = closure_9(tmp2(tmp3[19]).Button, obj10);
     tmp18 = null;
     formatResult = null;
   } else if (constants2.PENDING_OUTGOING === stateFromStores) {
-    const obj11 = {
-      size: "sm",
-      variant: "active",
-      text: intl3.string(channel(message[20]).t.xMH6vD),
-      disabled: true,
-      onPress: "Boolean",
-    };
-    const Button3 = tmp2(tmp3[19]).Button;
-    intl3 = tmp2(tmp3[20]).intl;
-    tmp19 = closure_9(Button3, obj11);
+    const obj11 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "Boolean" };
+    const intl3 = tmp2(tmp3[20]).intl;
+    obj11.text = intl3.string(tmp2(tmp3[20]).t.xMH6vD);
+    tmp19 = closure_9(tmp2(tmp3[19]).Button, obj11);
     tmp18 = null;
     formatResult = null;
   } else {
@@ -224,28 +155,26 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp19 = null;
     formatResult = null;
     if (constants2.BLOCKED === stateFromStores) {
-      const obj12 = {
-        size: "sm",
-        variant: "secondary",
-        text: intl9.string(channel(message[20]).t.XyHpKH),
-        onPress: callback5,
-      };
-      const Button8 = tmp2(tmp3[19]).Button;
-      intl9 = tmp2(tmp3[20]).intl;
-      tmp19 = closure_9(Button8, obj12);
+      const obj12 = { size: "sm", variant: "secondary", text: null, onPress: null };
+      const intl9 = tmp2(tmp3[20]).intl;
+      obj12.text = intl9.string(tmp2(tmp3[20]).t.XyHpKH);
+      obj12.onPress = callback5;
+      tmp19 = closure_9(tmp2(tmp3[19]).Button, obj12);
       tmp18 = null;
       formatResult = null;
     }
   }
+  const obj13 = { style: tmp.container, children: null };
   let tmp28 = null != formatResult;
-  const obj13 = { style: tmp.container, children: items9 };
   if (tmp28) {
     const obj14 = { variant: "text-sm/normal", color: "text-default", children: formatResult };
     tmp28 = closure_9(tmp2(tmp3[21]).Text, obj14);
   }
-  items9 = [tmp28];
-  const obj15 = { style: tmp.buttonRow, children: items10 };
-  items10 = [tmp19, tmp18, tmp14, tmp16];
+  const items9 = [tmp28];
+  const obj15 = { style: tmp.buttonRow, children: null };
+  const items10 = [tmp19, tmp18, tmp14, tmp16];
+  obj15.children = items10;
   items9[1] = closure_10(View, obj15);
+  obj13.children = items9;
   return closure_10(View, obj13);
 }

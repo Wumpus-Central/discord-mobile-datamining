@@ -2,59 +2,9 @@
 import _mod12 from "../../../_runtime/metro/00012__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let text;
-
 const result = size.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
 
 export const mapConversation = function mapConversation(rawConversation) {
-  let brief_summary;
-  let entries1;
-  let flagged_message_details;
-  let keywords;
-  let tmp5;
-  let tmp6;
-  function parseTopicExtractionSummary(content_json) {
-    let found;
-    let obj2;
-    try {
-      const _JSON = JSON;
-      const parsed = JSON.parse(content_json);
-      let title;
-      if (parsed != null) {
-        title = parsed.title;
-      }
-      let tmp7 = null;
-      if (typeof title === "string") {
-        let brief_summary;
-        if (parsed != null) {
-          brief_summary = tmp4.brief_summary;
-        }
-        tmp7 = null;
-        if (typeof brief_summary === "string") {
-          const obj = { title: obj2.upperFirst(parsed.title), brief_summary: parsed.brief_summary, key_points: found };
-          const _Array = Array;
-          obj2 = _mod12;
-          if (Array.isArray(parsed.key_points)) {
-            const key_points = parsed.key_points;
-            const mapped = key_points.map((text) => {
-              text = undefined;
-              if (text != null) {
-                text = text.text;
-              }
-              return text;
-            });
-            found = mapped.filter((item) => typeof item === "string");
-          } else {
-            found = [];
-          }
-          tmp7 = obj;
-        }
-      }
-      return tmp7;
-    } catch (err) {
-      return null;
-    }
-  }
   const summary_map = rawConversation.summary_map;
   let found;
   if (summary_map != null) {
@@ -63,7 +13,51 @@ export const mapConversation = function mapConversation(rawConversation) {
   }
   let tmp2 = null;
   if (null != found) {
-    tmp2 = parseTopicExtractionSummary(found.content_json);
+    tmp2 = (function parseTopicExtractionSummary(content_json) {
+      try {
+        const _JSON = JSON;
+        const parsed = JSON.parse(content_json);
+        let filter = parsed;
+        let title;
+        if (parsed != null) {
+          title = parsed.title;
+        }
+        let tmp6 = null;
+        if (typeof title === "string") {
+          let brief_summary;
+          if (filter != null) {
+            brief_summary = filter.brief_summary;
+          }
+          tmp6 = null;
+          if (typeof brief_summary === "string") {
+            const obj = {
+              title: _mod12.upperFirst(filter.title),
+              brief_summary: filter.brief_summary,
+              key_points: null,
+            };
+            const _Array = Array;
+            if (Array.isArray(filter.key_points)) {
+              const key_points = filter.key_points;
+              const mapped = key_points.map((text) => {
+                text = undefined;
+                if (text != null) {
+                  text = text.text;
+                }
+                return text;
+              });
+              filter = mapped.filter;
+              let found = filter((str) => typeof str === "string");
+            } else {
+              found = [];
+            }
+            obj.key_points = found;
+          }
+        }
+        return tmp6;
+      } catch (err) {
+        return null;
+      }
+    })(found.content_json);
   }
   let title;
   if (tmp2 != null) {
@@ -76,8 +70,8 @@ export const mapConversation = function mapConversation(rawConversation) {
       const obj5 = {
         id: rawConversation.id,
         title: null,
-        briefSummary: brief_summary,
-        keyPoints: tmp2.key_points,
+        briefSummary: null,
+        keyPoints: null,
         channelId: null,
         guildId: null,
         messageIds: null,
@@ -86,17 +80,19 @@ export const mapConversation = function mapConversation(rawConversation) {
         endMessageId: null,
         messageCount: null,
         userCount: null,
-        keywords,
-        summaryMap: tmp5,
+        keywords: null,
+        summaryMap: null,
         engagement: null,
         substance: null,
         dynamics: null,
-        moderation: tmp6,
+        moderation: null,
       };
       ({ title: obj3.title, brief_summary } = tmp2);
       if (brief_summary == null) {
         brief_summary = null;
       }
+      obj5.briefSummary = brief_summary;
+      obj5.keyPoints = tmp2.key_points;
       ({
         channel_id: obj3.channelId,
         guild_id: obj3.guildId,
@@ -111,19 +107,20 @@ export const mapConversation = function mapConversation(rawConversation) {
       if (keywords == null) {
         keywords = [];
       }
-      tmp5 = null;
+      obj5.keywords = keywords;
+      let tmp5 = null;
       if (null != rawConversation.summary_map) {
-        let obj = {
-          entries: entries1.map((summaryType) => ({
-            summaryType: summaryType.summary_type,
-            contentJson: summaryType.content_json,
-          })),
-        };
-        entries1 = rawConversation.summary_map.entries;
+        let obj = { entries: null };
+        const entries1 = rawConversation.summary_map.entries;
+        obj.entries = entries1.map((summaryType) => ({
+          summaryType: summaryType.summary_type,
+          contentJson: summaryType.content_json,
+        }));
         tmp5 = obj;
       }
+      obj5.summaryMap = tmp5;
       ({ engagement: obj3.engagement, substance: obj3.substance, dynamics: obj3.dynamics } = rawConversation);
-      tmp6 = null;
+      let tmp6 = null;
       if (null != rawConversation.moderation) {
         const moderation = rawConversation.moderation;
         const obj6 = {
@@ -133,13 +130,7 @@ export const mapConversation = function mapConversation(rawConversation) {
           flaggedMessageCount: null,
           totalMessageCount: null,
           flaggedMessageIds: null,
-          flaggedMessageDetails: flagged_message_details.map((messageId) => ({
-            messageId: messageId.message_id,
-            category: messageId.category,
-            severity: messageId.severity,
-            confidence: messageId.confidence,
-            reason: messageId.reason,
-          })),
+          flaggedMessageDetails: null,
           flaggedSummaryDetails: null,
           flaggedTitle: null,
           flaggedSummary: null,
@@ -155,6 +146,13 @@ export const mapConversation = function mapConversation(rawConversation) {
           flagged_message_ids: obj2.flaggedMessageIds,
           flagged_message_details,
         } = moderation);
+        obj6.flaggedMessageDetails = flagged_message_details.map((messageId) => ({
+          messageId: messageId.message_id,
+          category: messageId.category,
+          severity: messageId.severity,
+          confidence: messageId.confidence,
+          reason: messageId.reason,
+        }));
         ({
           flagged_summary_details: obj2.flaggedSummaryDetails,
           flagged_title: obj2.flaggedTitle,
@@ -164,6 +162,7 @@ export const mapConversation = function mapConversation(rawConversation) {
         } = moderation);
         tmp6 = obj6;
       }
+      obj5.moderation = tmp6;
       tmp4 = obj5;
     }
   }

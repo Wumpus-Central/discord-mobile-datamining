@@ -2,18 +2,18 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import ICYMIStore from "ICYMIStore.tsx";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let item;
-
-let closure_4;
-let hasOwnProperty;
+require = fn;
+const Constants = fn(1085);
 ({ ChannelTypes: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-let obj = {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/ICYMIAnalytics.tsx");
+
+export const DEFAULT_UX_VARIATION = "default";
+export const ICYMIAnalytics = {
   trackItemInteraction(feed_item_type) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.FEED_ITEM_INTERACTED, {
       load_id: ICYMIStore.getLoadId(),
       feed_item_type: feed_item_type.type,
       feed_item_id: feed_item_type.id,
@@ -24,21 +24,19 @@ let obj = {
       impression_id: feed_item_type.impressionId,
       ux_variation: feed_item_type.uxVariation,
       session_interaction_index: feed_item_type.sessionInteractionIndex,
-    };
-    obj.track(hasOwnProperty.FEED_ITEM_INTERACTED, obj2);
+    });
   },
   trackItemShortImpression(viewableItems, arr2, stateFromStores) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.FEED_ITEM_SEEN_BATCH, {
       load_id: ICYMIStore.getLoadId(),
       home_session_id: "gravity",
       feed_item_ids: viewableItems.map((item) => item.item.id),
       feed_item_types: viewableItems.map((item) => {
-        let str3;
         item = item.item;
         const kind = item.data.kind;
         if ("end" === kind) {
-          str3 = "end";
+          let str3 = "end";
         } else if ("loading" === kind) {
           str3 = "loading";
         } else {
@@ -76,21 +74,19 @@ let obj = {
       all_feed_item_indices: arr2.map((item, index) => index),
       feed_version: stateFromStores,
       version: 3,
-    };
-    obj.track(hasOwnProperty.FEED_ITEM_SEEN_BATCH, obj2);
+    });
   },
   trackItemLongImpression(viewableItems, arr2, stateFromStores) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.FEED_ITEM_SEEN_LONG, {
       load_id: ICYMIStore.getLoadId(),
       home_session_id: "gravity",
       feed_item_ids: viewableItems.map((item) => item.item.id),
       feed_item_types: viewableItems.map((item) => {
-        let str3;
         item = item.item;
         const kind = item.data.kind;
         if ("end" === kind) {
-          str3 = "end";
+          let str3 = "end";
         } else if ("loading" === kind) {
           str3 = "loading";
         } else {
@@ -128,87 +124,83 @@ let obj = {
       all_feed_item_indices: arr2.map((item, index) => index),
       feed_version: stateFromStores,
       version: 3,
-    };
-    obj.track(hasOwnProperty.FEED_ITEM_SEEN_LONG, obj2);
+    });
   },
   trackFeedShown(homeSessionId) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.FEED_SHOWN, {
       load_id: ICYMIStore.getLoadId(),
       home_session_id: homeSessionId.homeSessionId,
       variant: homeSessionId.variant,
-    };
-    obj.track(hasOwnProperty.FEED_SHOWN, obj2);
+    });
   },
   trackFeedFirstScrollStarted() {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = { load_id: ICYMIStore.getLoadId(), home_session_id: "gravity" };
-    obj.track(hasOwnProperty.HOME_FIRST_SCROLL_STARTED, obj2);
+    obj.track(hasOwnProperty.HOME_FIRST_SCROLL_STARTED, {
+      load_id: ICYMIStore.getLoadId(),
+      home_session_id: "gravity",
+    });
   },
   trackFeedFeedbackPromptViewed() {
-    const obj = AnalyticsUtilsDefault;
-    obj.track(hasOwnProperty.HOME_FEEDBACK_PROMPT_VIEWED);
+    AnalyticsUtilsDefault.track(hasOwnProperty.HOME_FEEDBACK_PROMPT_VIEWED);
   },
   trackFeedFeedbackSubmitted(arg0) {
-    const track = AnalyticsUtilsDefault.track;
-    const HOME_FEEDBACK_SUBMITTED = hasOwnProperty.HOME_FEEDBACK_SUBMITTED;
-    const obj = { load_id: ICYMIStore.getLoadId(), home_session_id: "gravity" };
+    const obj = AnalyticsUtilsDefault;
     const merged = Object.assign(arg0);
-    track(HOME_FEEDBACK_SUBMITTED, obj);
+    obj.track(hasOwnProperty.HOME_FEEDBACK_SUBMITTED, { load_id: ICYMIStore.getLoadId(), home_session_id: "gravity" });
   },
   trackFeedOnboardingScreenSkipped(location) {
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { location: location.location };
-    obj.track(hasOwnProperty.ICYMI_ONBOARDING_SCREEN_SKIPPED, obj2);
+    AnalyticsUtilsDefault.track(hasOwnProperty.ICYMI_ONBOARDING_SCREEN_SKIPPED, { location: location.location });
   },
   trackFeedOnboardingGuildToggled(guildId) {
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { guild_id: guildId.guildId, toggled: guildId.toggled };
-    obj.track(hasOwnProperty.ICYMI_ONBOARDING_GUILD_TOGGLED, obj2);
+    AnalyticsUtilsDefault.track(hasOwnProperty.ICYMI_ONBOARDING_GUILD_TOGGLED, {
+      guild_id: guildId.guildId,
+      toggled: guildId.toggled,
+    });
   },
   trackFeedOnboardingCategoryToggled(categoryId) {
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { category_id: categoryId.categoryId, toggled: categoryId.toggled };
-    obj.track(hasOwnProperty.ICYMI_ONBOARDING_CATEGORY_TOGGLED, obj2);
+    AnalyticsUtilsDefault.track(hasOwnProperty.ICYMI_ONBOARDING_CATEGORY_TOGGLED, {
+      category_id: categoryId.categoryId,
+      toggled: categoryId.toggled,
+    });
   },
   trackFeedEmptyLoadingSeen() {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = { load_id: ICYMIStore.getLoadId(), version: ICYMIStore.getVersion() };
-    obj.track(hasOwnProperty.ICYMI_FEED_EMPTY_LOADING_SEEN, obj2);
+    obj.track(hasOwnProperty.ICYMI_FEED_EMPTY_LOADING_SEEN, {
+      load_id: ICYMIStore.getLoadId(),
+      version: ICYMIStore.getVersion(),
+    });
   },
   trackFeedEmptyLoadingComplete(dwellTimeMs) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.ICYMI_FEED_EMPTY_LOADING_COMPLETE, {
       load_id: ICYMIStore.getLoadId(),
       dwell_time_ms: dwellTimeMs.dwellTimeMs,
       version: ICYMIStore.getVersion(),
-    };
-    obj.track(hasOwnProperty.ICYMI_FEED_EMPTY_LOADING_COMPLETE, obj2);
+    });
   },
   trackFeedEmptyLoadingAbandoned(dwellTimeMs) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.ICYMI_FEED_EMPTY_LOADING_ABANDONED, {
       load_id: ICYMIStore.getLoadId(),
       dwell_time_ms: dwellTimeMs.dwellTimeMs,
       version: ICYMIStore.getVersion(),
-    };
-    obj.track(hasOwnProperty.ICYMI_FEED_EMPTY_LOADING_ABANDONED, obj2);
+    });
   },
   trackFeedSessionStarted(sessionStartTimeMs) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.FEED_SESSION_STARTED, {
       load_id: ICYMIStore.getLoadId(),
       version: ICYMIStore.getVersion(),
       session_start_time_ms: sessionStartTimeMs.sessionStartTimeMs,
       icymi_session_id: sessionStartTimeMs.icymiSessionId,
       previous_icymi_session_count: sessionStartTimeMs.previousIcymiSessionCount,
       ux_variation: sessionStartTimeMs.uxVariation,
-    };
-    obj.track(hasOwnProperty.FEED_SESSION_STARTED, obj2);
+    });
   },
   trackFeedSessionCompleted(sessionDurationMs) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.FEED_SESSION_COMPLETED, {
       load_id: ICYMIStore.getLoadId(),
       version: ICYMIStore.getVersion(),
       session_duration_ms: sessionDurationMs.sessionDurationMs,
@@ -227,13 +219,10 @@ let obj = {
       interaction_count: sessionDurationMs.interactionCount,
       dwelled_count: sessionDurationMs.dwelledCount,
       unique_dwelled_count: sessionDurationMs.uniqueDwelledCount,
-    };
-    obj.track(hasOwnProperty.FEED_SESSION_COMPLETED, obj2);
+    });
   },
   trackFeedItemDwell1s(impressionId) {
-    let itemChannelType;
-    const tmp = AnalyticsUtilsDefault;
-    const obj = {
+    const obj3 = {
       load_id: ICYMIStore.getLoadId(),
       version: ICYMIStore.getVersion(),
       impression_id: impressionId.impressionId,
@@ -246,7 +235,7 @@ let obj = {
       item_feed_index: impressionId.itemFeedIndex,
       is_initially_visible: impressionId.isInitiallyVisible,
       item_score: impressionId.itemScore,
-      item_channel_type: itemChannelType,
+      item_channel_type: null,
       item_card_height: null,
       is_dwelling: null,
       interaction_action_types: null,
@@ -254,26 +243,23 @@ let obj = {
       ux_variation: null,
       session_impression_index: null,
     };
-    const track = tmp.track;
-    const FEED_ITEM_1S_DWELLED = hasOwnProperty.FEED_ITEM_1S_DWELLED;
-    itemChannelType = impressionId.itemChannelType;
+    let itemChannelType = impressionId.itemChannelType;
     if (itemChannelType == null) {
       itemChannelType = null;
     }
+    obj3.item_channel_type = itemChannelType;
     ({
-      itemCardHeight: obj.item_card_height,
-      isDwelling: obj.is_dwelling,
-      interactionActionTypes: obj.interaction_action_types,
-      interactionCount: obj.interaction_count,
-      uxVariation: obj.ux_variation,
-      sessionImpressionIndex: obj.session_impression_index,
+      itemCardHeight: obj2.item_card_height,
+      isDwelling: obj2.is_dwelling,
+      interactionActionTypes: obj2.interaction_action_types,
+      interactionCount: obj2.interaction_count,
+      uxVariation: obj2.ux_variation,
+      sessionImpressionIndex: obj2.session_impression_index,
     } = impressionId);
-    track(FEED_ITEM_1S_DWELLED, obj);
+    AnalyticsUtilsDefault.track(hasOwnProperty.FEED_ITEM_1S_DWELLED, obj3);
   },
   trackFeedItemDwelled(impressionId) {
-    let itemChannelType;
-    const tmp = AnalyticsUtilsDefault;
-    const obj = {
+    const obj3 = {
       load_id: ICYMIStore.getLoadId(),
       version: ICYMIStore.getVersion(),
       impression_id: impressionId.impressionId,
@@ -288,34 +274,29 @@ let obj = {
       item_feed_index: impressionId.itemFeedIndex,
       is_initially_visible: impressionId.isInitiallyVisible,
       item_score: impressionId.itemScore,
-      item_channel_type: itemChannelType,
+      item_channel_type: null,
       item_card_height: null,
       ux_variation: null,
       interaction_action_types: null,
       interaction_count: null,
       session_impression_index: null,
     };
-    const track = tmp.track;
-    const FEED_ITEM_DWELLED = hasOwnProperty.FEED_ITEM_DWELLED;
-    itemChannelType = impressionId.itemChannelType;
+    let itemChannelType = impressionId.itemChannelType;
     if (itemChannelType == null) {
       itemChannelType = null;
     }
+    obj3.item_channel_type = itemChannelType;
     ({
-      itemCardHeight: obj.item_card_height,
-      uxVariation: obj.ux_variation,
-      interactionActionTypes: obj.interaction_action_types,
-      interactionCount: obj.interaction_count,
-      sessionImpressionIndex: obj.session_impression_index,
+      itemCardHeight: obj2.item_card_height,
+      uxVariation: obj2.ux_variation,
+      interactionActionTypes: obj2.interaction_action_types,
+      interactionCount: obj2.interaction_count,
+      sessionImpressionIndex: obj2.session_impression_index,
     } = impressionId);
-    track(FEED_ITEM_DWELLED, obj);
+    AnalyticsUtilsDefault.track(hasOwnProperty.FEED_ITEM_DWELLED, obj3);
   },
   trackFeedItemActioned(icymiSessionId) {
-    let impressionId;
-    const tmp = AnalyticsUtilsDefault;
-    const track = tmp.track;
-    const FEED_ITEM_ACTIONED = hasOwnProperty.FEED_ITEM_ACTIONED;
-    const obj = {
+    const obj2 = {
       load_id: ICYMIStore.getLoadId(),
       icymi_session_id: icymiSessionId.icymiSessionId,
       ux_variation: icymiSessionId.uxVariation,
@@ -323,32 +304,25 @@ let obj = {
       session_action_index: icymiSessionId.sessionActionIndex,
       item_id: icymiSessionId.itemId,
       item_type: icymiSessionId.itemType,
-      impression_id: impressionId,
-      action_gesture_type: icymiSessionId.actionParameters.actionGestureType,
-      action_target_element: icymiSessionId.actionParameters.actionTargetElement,
-      action_intent_type: icymiSessionId.actionParameters.actionIntentType,
-      action_destination_type: icymiSessionId.actionParameters.actionDestinationType,
+      impression_id: null,
+      action_gesture_type: null,
+      action_target_element: null,
+      action_intent_type: null,
+      action_destination_type: null,
     };
-    impressionId = icymiSessionId.impressionId;
+    let impressionId = icymiSessionId.impressionId;
     if (impressionId == null) {
       impressionId = null;
     }
-    track(FEED_ITEM_ACTIONED, obj);
+    obj2.impression_id = impressionId;
+    obj2.action_gesture_type = icymiSessionId.actionParameters.actionGestureType;
+    obj2.action_target_element = icymiSessionId.actionParameters.actionTargetElement;
+    obj2.action_intent_type = icymiSessionId.actionParameters.actionIntentType;
+    obj2.action_destination_type = icymiSessionId.actionParameters.actionDestinationType;
+    AnalyticsUtilsDefault.track(hasOwnProperty.FEED_ITEM_ACTIONED, obj2);
   },
   trackFeedFilterActioned(icymiSessionId) {
-    let impressionId;
-    let itemId;
-    let itemType;
-    let newOutSetting;
-    let newTuneSetting;
-    let previousOutSetting;
-    let previousTuneSetting;
-    let targetChannelId;
-    let targetGuildId;
-    const tmp = AnalyticsUtilsDefault;
-    const track = tmp.track;
-    const FEED_FILTER_ACTIONED = hasOwnProperty.FEED_FILTER_ACTIONED;
-    const obj = {
+    const obj2 = {
       load_id: ICYMIStore.getLoadId(),
       icymi_session_id: icymiSessionId.icymiSessionId,
       ux_variation: icymiSessionId.uxVariation,
@@ -356,57 +330,66 @@ let obj = {
       session_action_index: icymiSessionId.sessionActionIndex,
       filter_setting_context: icymiSessionId.filterParameters.filterSettingContext,
       filter_target_type: icymiSessionId.filterParameters.filterTargetType,
-      target_guild_id: targetGuildId,
-      target_channel_id: targetChannelId,
-      previous_tune_setting: previousTuneSetting,
-      new_tune_setting: newTuneSetting,
-      previous_out_setting: previousOutSetting,
-      new_out_setting: newOutSetting,
-      item_id: itemId,
-      item_type: itemType,
-      impression_id: impressionId,
+      target_guild_id: null,
+      target_channel_id: null,
+      previous_tune_setting: null,
+      new_tune_setting: null,
+      previous_out_setting: null,
+      new_out_setting: null,
+      item_id: null,
+      item_type: null,
+      impression_id: null,
     };
-    targetGuildId = icymiSessionId.filterParameters.targetGuildId;
+    let targetGuildId = icymiSessionId.filterParameters.targetGuildId;
     if (targetGuildId == null) {
       targetGuildId = null;
     }
-    targetChannelId = icymiSessionId.filterParameters.targetChannelId;
+    obj2.target_guild_id = targetGuildId;
+    let targetChannelId = icymiSessionId.filterParameters.targetChannelId;
     if (targetChannelId == null) {
       targetChannelId = null;
     }
-    previousTuneSetting = icymiSessionId.filterParameters.previousTuneSetting;
+    obj2.target_channel_id = targetChannelId;
+    let previousTuneSetting = icymiSessionId.filterParameters.previousTuneSetting;
     if (previousTuneSetting == null) {
       previousTuneSetting = null;
     }
-    newTuneSetting = icymiSessionId.filterParameters.newTuneSetting;
+    obj2.previous_tune_setting = previousTuneSetting;
+    let newTuneSetting = icymiSessionId.filterParameters.newTuneSetting;
     if (newTuneSetting == null) {
       newTuneSetting = null;
     }
-    previousOutSetting = icymiSessionId.filterParameters.previousOutSetting;
+    obj2.new_tune_setting = newTuneSetting;
+    let previousOutSetting = icymiSessionId.filterParameters.previousOutSetting;
     if (previousOutSetting == null) {
       previousOutSetting = null;
     }
-    newOutSetting = icymiSessionId.filterParameters.newOutSetting;
+    obj2.previous_out_setting = previousOutSetting;
+    let newOutSetting = icymiSessionId.filterParameters.newOutSetting;
     if (newOutSetting == null) {
       newOutSetting = null;
     }
-    itemId = icymiSessionId.itemId;
+    obj2.new_out_setting = newOutSetting;
+    let itemId = icymiSessionId.itemId;
     if (itemId == null) {
       itemId = null;
     }
-    itemType = icymiSessionId.itemType;
+    obj2.item_id = itemId;
+    let itemType = icymiSessionId.itemType;
     if (itemType == null) {
       itemType = null;
     }
-    impressionId = icymiSessionId.impressionId;
+    obj2.item_type = itemType;
+    let impressionId = icymiSessionId.impressionId;
     if (impressionId == null) {
       impressionId = null;
     }
-    track(FEED_FILTER_ACTIONED, obj);
+    obj2.impression_id = impressionId;
+    AnalyticsUtilsDefault.track(hasOwnProperty.FEED_FILTER_ACTIONED, obj2);
   },
   trackFeedPageActioned(icymiSessionId) {
     const obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    obj.track(hasOwnProperty.FEED_PAGE_ACTIONED, {
       load_id: ICYMIStore.getLoadId(),
       icymi_session_id: icymiSessionId.icymiSessionId,
       ux_variation: icymiSessionId.uxVariation,
@@ -416,11 +399,6 @@ let obj = {
       action_target_element: icymiSessionId.actionParameters.actionTargetElement,
       action_intent_type: icymiSessionId.actionParameters.actionIntentType,
       action_destination_type: icymiSessionId.actionParameters.actionDestinationType,
-    };
-    obj.track(hasOwnProperty.FEED_PAGE_ACTIONED, obj2);
+    });
   },
 };
-const result = size.fileFinishedImporting("modules/icymi/ICYMIAnalytics.tsx");
-
-export const DEFAULT_UX_VARIATION = "default";
-export const ICYMIAnalytics = obj;

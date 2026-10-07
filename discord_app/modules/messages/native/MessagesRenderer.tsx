@@ -1,18 +1,15 @@
 // discord_app/modules/messages/native/MessagesRenderer.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
-import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import discord_common_shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
-import flow_Client from "../../../flow/Client.tsx";
+import Client from "../../../flow/Client.tsx";
 import CodedLink from "../../coded_links/CodedLink.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
-import RowGeneratorConstants from "renderer/RowGeneratorConstants.tsx";
-import useChatBottomManagerUIStore from "../../chat_input/native/useChatBottomManagerUIStore.tsx";
 import messages_MessagesUtils from "MessagesUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
@@ -23,57 +20,29 @@ import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/
 import MessagesHandlers from "MessagesHandlers.tsx";
 import MessageDataSnowflakeUtils from "snowflake/MessageDataSnowflakeUtils.tsx";
 import MessagesUtilsDefault from "../../../utils/native/MessagesUtils.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
-import Constants from "../../../Constants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import size_mod from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require,
-  author,
-  c2,
-  closure_2,
-  closure_3,
-  closure_5,
-  constants,
-  firstIgnoredScrollEventTimestampRef,
-  invites,
-  messages,
-  set,
-  shouldForceRender,
-  startOrCancelChannelLatestMessagesLoad;
-
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let map1;
+require = fn;
 function handleTapShowAltText(description) {
   openMediaModalOverlayAltTextSheetDefault({ description: description.nativeEvent.description });
 }
 function handleMediaPlayFinishedAnalytics(nativeEvent) {
-  nativeEvent = nativeEvent.nativeEvent;
-  const obj = messages_MessagesUtils;
-  const result = obj.handleMediaPlayFinishedAnalytics(nativeEvent);
+  const result = messages_MessagesUtils.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
 }
 function isLoadingAtTop(arg0, arg1) {
-  const tmp = arg1;
-  if (tmp) {
+  if (arg1) {
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (nextResult.changeType === Changeset.INSERT) {
-        let tmp9 = nextResult.index <= 1;
+        let tmp8 = nextResult.index <= 1;
         iter.return();
-        return tmp9;
+        return tmp8;
       }
     }
     return false;
@@ -81,10 +50,10 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let react = react_mod;
-let closure_6 = useChatBottomManagerUIStore.updateShouldShowJumpToPresentButton;
-let closure_7 = GuildMemberStore.getUserCommunicationDisabledVersion;
-const Changeset = RowGeneratorConstants.Changeset;
+let closure_6 = fn(9100).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(2112).getUserCommunicationDisabledVersion;
+const Changeset = fn(7603).Changeset;
+const Constants = fn(1085);
 ({
   ActivityActionTypes: closure_12,
   MAX_MESSAGES_PER_CHANNEL: map1,
@@ -92,34 +61,11 @@ const Changeset = RowGeneratorConstants.Changeset;
   MessageTypes: closure_15,
   Permissions: closure_16,
 } = Constants);
-({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = Fragment);
-const forwardRefResult = react.forwardRef((messages, arg1) => {
-  let channelLatestMessageLoadingStatsManager;
-  let closure_15;
-  let closure_18;
-  let closure_19;
-  let closure_23;
-  let closure_24;
-  let closure_25;
-  let closure_26;
-  let closure_33;
-  let closure_34;
-  let first2;
-  let handleScrollPosition;
-  let hasJumpedToOriginalPost;
-  let items4;
-  let loadMoreAfter;
-  let loadMoreBefore;
-  let scrollToTopMessage;
-  let updateNativeRows;
-  const f106760 = (id) => id.id;
+const jsxProd = fn(21);
+({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
+const forwardRefResult = noop.forwardRef((messages, arg1) => {
   _require = messages;
   function handleVisibleMessagesChange(arg0) {
-    let firstVisibleMessagePercentVisible;
-    let firstVisibleMessageRowIndex;
-    let lastVisibleMessagePercentVisible;
-    let lastVisibleMessageRowIndex;
-    let source;
     ({
       firstVisibleMessageRowIndex,
       firstVisibleMessagePercentVisible,
@@ -127,20 +73,17 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
       lastVisibleMessagePercentVisible,
       source,
     } = arg0);
-    const obj = messages_MessagesUtils;
-    const obj2 = {
+    const visibleMessages = messages_MessagesUtils.getVisibleMessages({
       firstVisibleMessageRowIndex,
       lastVisibleMessageRowIndex,
       firstVisibleMessagePercentVisible,
       lastVisibleMessagePercentVisible,
-      chatManager,
+      chatManager: first,
       channelId: messages.channelId,
-    };
-    const visibleMessages = obj.getVisibleMessages(obj2);
+    });
     if (visibleMessages.length > 0) {
       const obj3 = { visibleMessages, source };
-      const tmpResult = QuestActionCreators;
-      const result = tmpResult.questsVisibleMobileMessagesChanged(obj3);
+      const result = QuestActionCreators.questsVisibleMobileMessagesChanged(obj3);
       const tmpResult5 = MessageImpressionAnalyticsHelpers;
       const result1 = tmpResult5.handleAnnouncementMessageViewTracking(
         visibleMessages,
@@ -169,170 +112,159 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
         messages.guildId,
         messages.channel,
       );
+      const tmpResult = QuestActionCreators;
     }
+    const obj2 = {
+      firstVisibleMessageRowIndex,
+      lastVisibleMessageRowIndex,
+      firstVisibleMessagePercentVisible,
+      lastVisibleMessagePercentVisible,
+      chatManager: first,
+      channelId: messages.channelId,
+    };
   }
   function findMessageIndex(ChatTTITracker) {
     if (null != ChatTTITracker) {
-      const obj = computeScrollData;
-      return obj.findMessageRowIndex(first.getPreviousRows(), ChatTTITracker);
+      return computeScrollData.findMessageRowIndex(first.getPreviousRows(), ChatTTITracker);
     }
   }
-  let current = function _handleTapNavBar() {
-    let obj = _asyncToGenerator(async () => {
-      let channel;
-      let obj6;
-      let useReducedMotion;
-      let v1;
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  closure_28 = async function _handleTapNavBar() {
+    if (hasJumpedToOriginalPost === 2) {
+      hasJumpedToOriginalPost = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c2 = 2;
-          if (0 === v1) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              let closure_0 = tmp;
-              useReducedMotion = undefined;
-              ({ channel, useReducedMotion } = messages);
-              if (channel.isForumPost()) {
-                if (!ref2.current) {
-                  const obj2 = v1(c2[20]);
-                  if (null == callback2(obj2.castChannelIdAsMessageId(channel.id))) {
-                    const obj5 = { channelId: channel.id, jump: obj6, limit };
-                    obj6 = { messageId: channel.id, flash: false };
-                    const tmp10Result = v1(c2[26]);
-                    v1 = 1;
-                    c2 = 1;
-                    const obj7 = { value: tmp10Result.fetchMessages(obj5), done: false };
-                    return obj7;
-                  } else {
-                    const tmp10Result3 = v1(c2[20]);
-                    const tmp24 = findMessageIndex(tmp10Result3.castChannelIdAsMessageId(channel.id));
-                    if (null == tmp24) {
-                      c2 = 3;
-                      return { value: "IconComponent", done: null };
-                    } else {
-                      const obj8 = { animated: !useReducedMotion };
-                      const tmp10Result4 = v1(c2[17]);
-                      tmp10Result4.scrollTo(ref.current, tmp24, obj8);
-                      const _setTimeout2 = setTimeout;
-                      const timerId = setTimeout(() => closure_2_25(!closure_1_0), 10 * tmp24);
-                    }
-                  }
-                }
-              }
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        hasJumpedToOriginalPost = 2;
+        if (0 === v1) {
+          if (arg0 === 1) {
+            hasJumpedToOriginalPost = 3;
             throw value;
           } else if (arg0 === 2) {
-            c2 = 3;
-            const obj = { value, done: true };
-            return obj;
+            hasJumpedToOriginalPost = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            const _setTimeout = setTimeout;
-            const timerId1 = setTimeout(() => closure_2_25(!closure_1_0), 50);
+            closure_0 = tmp2;
+            closure_128_0 = undefined;
+            ({ channel, useReducedMotion } = messages);
+            closure_128_0 = useReducedMotion;
+            if (channel.isForumPost()) {
+              if (!ref2.current) {
+                if (null == callback2(obj2.castChannelIdAsMessageId(channel.id))) {
+                  const obj5 = { channelId: channel.id, jump: null, limit: null };
+                  const obj6 = { messageId: channel.id, flash: false };
+                  obj5.jump = obj6;
+                  obj5.limit = limit;
+                  v1 = 1;
+                  hasJumpedToOriginalPost = 1;
+                  const obj7 = { value: tmp11(tmp12[26]).fetchMessages(obj5), done: false };
+                  return obj7;
+                } else {
+                  const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
+                  if (null == tmp26) {
+                    hasJumpedToOriginalPost = 3;
+                    return { value: "IconComponent", done: null };
+                  } else {
+                    const obj8 = { animated: !useReducedMotion };
+                    tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);
+                    const _setTimeout2 = setTimeout;
+                    const timerId = setTimeout(() => closure_2_25(!closure_1_0), 10 * tmp26);
+                    const tmp11Result4 = tmp11(tmp12[17]);
+                  }
+                  const tmp11Result3 = tmp11(tmp12[20]);
+                }
+                obj2 = v1(hasJumpedToOriginalPost[20]);
+              }
+            }
+            hasJumpedToOriginalPost = 3;
           }
-          c2 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp18) {
-          c2 = 3;
-          throw tmp18;
+        } else if (arg0 === 1) {
+          hasJumpedToOriginalPost = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          const _setTimeout = setTimeout;
+          const timerId1 = setTimeout(() => closure_2_25(!closure_1_0), 50);
         }
+        hasJumpedToOriginalPost = 3;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp19) {
+        hasJumpedToOriginalPost = tmp;
+        throw tmp19;
       }
-    });
-    return obj(...arguments);
+    }
   };
   function scrollToBottom() {
     let flag = arg0;
     if (arg0 === undefined) {
       flag = true;
     }
+    closure_1_26({ eventTimestamp: Date.now(), isAtBottom: true });
     const obj = { eventTimestamp: Date.now(), isAtBottom: true };
-    closure_26(obj);
-    scrollToBottom = NativeChatUtilsDefault.scrollToBottom;
-    current = ref5.current;
-    NativeChatUtilsDefault;
     if (flag) {
       flag = !messages.useReducedMotion;
     }
-    scrollToBottom(current, flag);
+    NativeChatUtilsDefault.scrollToBottom(ref5.current, flag);
   }
   function jumpToPresent() {
-    let channel;
     ({ messages, channel } = closure_0);
     if (null == messages.jumpReturnTargetId) {
       if (!messages.loadingMore) {
         if (messages.hasMoreAfter) {
-          const obj2 = { channelId: channel.id, limit: map1, jump: { present: true } };
-          const obj5 = MessageActionCreatorsDefault;
-          const messages1 = obj5.fetchMessages(obj2);
+          const obj2 = { channelId: channel.id, limit, jump: { present: true } };
+          const messages1 = MessageActionCreatorsDefault.fetchMessages(obj2);
         } else {
+          const obj3 = { eventTimestamp: null, isAtBottom: true };
           const _Date = Date;
-          const obj3 = { eventTimestamp: Date.now(), isAtBottom: true };
-          closure_26(obj3);
-          const obj4 = NativeChatUtilsDefault;
-          obj4.scrollToBottom(ref5.current, !tmp.useReducedMotion);
+          obj3.eventTimestamp = Date.now();
+          closure_1_26(obj3);
+          NativeChatUtilsDefault.scrollToBottom(ref5.current, !tmp.useReducedMotion);
         }
       }
     } else {
-      const obj6 = { channelId: channel.id, messageId: messages.jumpReturnTargetId, flash: true };
-      const obj = MessageActionCreatorsDefault;
-      obj.jumpToMessage(obj6);
+      const obj6 = { channelId: channel.id, messageId: jumpReturnTargetId, flash: true };
+      MessageActionCreatorsDefault.jumpToMessage(obj6);
     }
   }
   function scrollToNewMessages() {
     let id = ReadStateStore.ackMessageId(messages.channel.id);
-    const obj = { channelId: messages.channel.id, messageId: id, offset: 1, context: "Mark As Read" };
-    const jumpToMessage = MessageActionCreatorsDefault.jumpToMessage;
-    MessageActionCreatorsDefault;
+    const obj2 = { channelId: messages.channel.id, messageId: null, offset: 1, context: "Mark As Read" };
     if (id == null) {
       id = messages.channel.id;
     }
-    jumpToMessage(obj);
+    obj2.messageId = id;
+    MessageActionCreatorsDefault.jumpToMessage(obj2);
   }
   function getChatRef() {
     return ref5;
   }
   function clearRowsState(reason) {
-    let obj3;
-    let obj4;
     ref.current = false;
-    closure_18.current = false;
+    closure_1_18.current = false;
     handleTapShowAltText.current = false;
-    closure_19.current = false;
+    closure_1_19.current = false;
     handleMediaPlayFinishedAnalytics.current = false;
     isLoadingAtTop.current = false;
-    closure_23.current = false;
+    closure_1_23.current = false;
     ref1.current = false;
     ref2.current = [];
     ref4.current = false;
     ref3.current = null;
-    size = chatUpdatesQueue.blockers.size;
+    const size = chatUpdatesQueue.blockers.size;
     const length2 = first.getPreviousRows().length;
     first.clear();
     chatUpdatesQueue.clear();
-    const obj = NativeChatUtilsDefault;
-    obj.clearRows(ref5.current);
-    const tmp4 = SentryUtilsDefault;
-    const addBreadcrumb = tmp4.addBreadcrumb;
-    const obj2 = {
+    NativeChatUtilsDefault.clearRows(ref5.current);
+    const obj3 = {
       category: "chat.queue.clear",
       message:
         "clearRows (" +
@@ -343,57 +275,39 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
         size +
         " jsRows=" +
         length2,
-      data: obj3,
+      data: null,
     };
-    obj3 = {
-      reason,
-      changesetUpdateId: obj4.getChangesetIdForChat(ref5.current),
-      queueLength: chatUpdatesQueue.queue.length,
-      blockers: size,
-      chatManagerRows: length2,
-    };
-    obj4 = ChatChangesetUpdateTracker;
-    addBreadcrumb(obj2);
+    const obj4 = { reason, changesetUpdateId: null, queueLength: null, blockers: null, chatManagerRows: null };
+    const obj2 = SentryUtilsDefault;
+    obj4.changesetUpdateId = ChatChangesetUpdateTracker.getChangesetIdForChat(ref5.current);
+    obj4.queueLength = chatUpdatesQueue.queue.length;
+    obj4.blockers = size;
+    obj4.chatManagerRows = length2;
+    obj3.data = obj4;
+    obj2.addBreadcrumb(obj3);
   }
   function clearRows() {
     clearRowsState("channel-change");
-    ref(messages.channelId, messages.screenIndex, false);
+    closure_6(messages.channelId, messages.screenIndex, false);
   }
-  const chatManager = first2(
-    react.useState(() => {
-      const tmp = new first(dependencyMap[15])();
-      return tmp;
-    }),
+  let first = first1(
+    noop.useState(() => new first(hasJumpedToOriginalPost[15])()),
     1,
   )[0];
-  const first1 = first2(
-    react.useState(() => {
-      const tmp = new first(dependencyMap[16])();
-      return tmp;
-    }),
-    1,
-  )[0];
-  let tmp3 = first2(react.useState(false), 2);
-  [dependencyMap, _asyncToGenerator] = tmp3;
-  let tmp4 = first2(react.useState(false), 2);
-  first2 = tmp4[0];
-  react = tmp4[1];
-  const ref = react.useRef(false);
-  const ref1 = react.useRef(false);
-  const ref2 = react.useRef([]);
-  let ref3 = react.useRef(null);
-  const ref4 = react.useRef(false);
-  const ref5 = react.useRef(null);
-  const callback = react.useCallback((rows) => {
-    let HACK_iOSForceAnimations;
-    let forceReload;
-    let hasMoreMessagesAfter;
-    let isAnimated;
-    let scrollData;
+  [dependencyMap, asyncGeneratorStep] = first1(noop.useState(false), 2);
+  let tmp3 = first1(noop.useState(false), 2);
+  first1 = tmp3[0];
+  noop = tmp3[1];
+  const ref = noop.useRef(false);
+  const ref1 = noop.useRef(false);
+  let ref2 = noop.useRef([]);
+  const ref3 = noop.useRef(null);
+  const ref4 = noop.useRef(false);
+  const ref5 = noop.useRef(null);
+  const callback = noop.useCallback((rows) => {
     ({ rows, hasMoreMessagesAfter, scrollData, HACK_iOSForceAnimations, forceReload, isAnimated } = rows);
     const tmp = isLoadingAtTop(rows.rows, ref1.current);
-    const obj = NativeChatUtilsDefault;
-    obj.updateRows(ref5.current, {
+    NativeChatUtilsDefault.updateRows(ref5.current, {
       rows,
       isLoadingAtTop: tmp,
       scrollData,
@@ -403,92 +317,95 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     });
     ref1.current = hasMoreMessagesAfter;
   }, []);
-  current = require("MessagesHooks");
-  const chatUpdatesQueue = current.useChatUpdatesQueue(ref5, callback);
+  let tmp2 = first1(noop.useState(false), 2);
+  const chatUpdatesQueue = require("MessagesHooks").useChatUpdatesQueue(ref5, callback);
   let items = [,];
   ({ canChat: arr[0], channel: arr[1] } = messages);
   const items1 = [messages.messages];
-  const callback1 = react.useCallback(() => {
-    let canChat = messages.canChat && PermissionStore.can(handleVisibleMessagesChange.ADD_REACTIONS, messages.channel);
+  const callback1 = noop.useCallback(() => {
+    let canChat = messages.canChat;
+    if (canChat) {
+      canChat = PermissionStore.can(constants4.ADD_REACTIONS, messages.channel);
+    }
     if (!canChat) {
       const channel = messages.channel;
       canChat = channel.isPrivate();
     }
     return canChat;
   }, items);
-  const callback2 = react.useCallback((arg0) => {
+  const callback2 = noop.useCallback((arg0) => {
     messages = arg0;
     messages = messages.messages;
-    const arr = _modDef12;
-    return arr.find(messages.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
+    return _modDef12.find(messages.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
   }, items1);
   const items2 = [, ,];
   ({ channel: arr3[0], channelId: arr3[1] } = messages);
   items2[2] = messages.messages.jumpTargetId;
-  let callback3 = react.useCallback((arg0) => {
+  let callback3 = noop.useCallback((arg0) => {
     const channel = messages.channel;
     let isForumPostResult = channel.isForumPost();
     if (isForumPostResult) {
-      const obj = SnowflakeUtilsDefault;
-      isForumPostResult = obj.castChannelIdAsMessageId(messages.channelId) === messages.messages.jumpTargetId;
+      isForumPostResult =
+        SnowflakeUtilsDefault.castChannelIdAsMessageId(messages.channelId) === messages.messages.jumpTargetId;
     }
     if (isForumPostResult) {
       isForumPostResult = !arg0;
     }
     return isForumPostResult;
   }, items2);
+  let obj = require("MessagesHooks");
   let obj2 = {
     channelId: messages.channelId,
     jumpTargetId: messages.messages.jumpTargetId,
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
     shouldJumpToOriginalPost: callback3,
   };
-  let tmp17 = chatManager(11169)(obj2);
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = tmp17);
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11169)({
+    channelId: messages.channelId,
+    jumpTargetId: messages.messages.jumpTargetId,
+    oldestUnreadMessageId: messages.oldestUnreadMessageId,
+    shouldJumpToOriginalPost: callback3,
+  }));
   let obj3 = {
     chatRef: ref5,
-    chatManager,
+    chatManager: first,
     chatUpdatesQueue,
     pendingUpdatesQueueRef: ref2,
     animatedRef: ref,
     fetchMoreBefore() {
-      let id;
       messages = messages.messages;
       let hasMoreBefore = messages.hasMoreBefore;
-      const channelId = messages.channelId;
       if (hasMoreBefore) {
         hasMoreBefore = !messages.loadingMore;
       }
       if (hasMoreBefore) {
-        const obj = { channelId, before: id, limit: map1 };
-        const fetchMessages = MessageActionCreatorsDefault.fetchMessages;
-        MessageActionCreatorsDefault;
+        const obj2 = { channelId: messages.channelId, before: null, limit: null };
         const firstResult = messages.first();
-        id = undefined;
+        let id;
         if (firstResult != null) {
           id = firstResult.id;
         }
-        const messages1 = fetchMessages(obj);
+        obj2.before = id;
+        obj2.limit = limit;
+        const messages1 = MessageActionCreatorsDefault.fetchMessages(obj2);
       }
     },
     fetchMoreAfter() {
-      let id;
       messages = messages.messages;
       let hasMoreAfter = messages.hasMoreAfter;
-      const channelId = messages.channelId;
       if (hasMoreAfter) {
         hasMoreAfter = !messages.loadingMore;
       }
       if (hasMoreAfter) {
-        const obj = { channelId, after: id, limit: map1 };
-        const fetchMessages = MessageActionCreatorsDefault.fetchMessages;
-        MessageActionCreatorsDefault;
+        const obj2 = { channelId: messages.channelId, after: null, limit: null };
         const lastResult = messages.last();
-        id = undefined;
+        let id;
         if (lastResult != null) {
           id = lastResult.id;
         }
-        const messages1 = fetchMessages(obj);
+        obj2.after = id;
+        obj2.limit = limit;
+        const messages1 = MessageActionCreatorsDefault.fetchMessages(obj2);
       }
     },
     handleVisibleMessagesChange,
@@ -502,7 +419,12 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
   };
-  let tmp18 = chatManager(11171)(obj3);
+  const tmp16 = first(11169)({
+    channelId: messages.channelId,
+    jumpTargetId: messages.messages.jumpTargetId,
+    oldestUnreadMessageId: messages.oldestUnreadMessageId,
+    shouldJumpToOriginalPost: callback3,
+  });
   ({
     hasHandledScrollRef: closure_18,
     isAtBottomRef: closure_19,
@@ -518,8 +440,60 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     updateNativeRows,
     handleScrollPosition,
-  } = tmp18);
-  const ref6 = react.useRef(null);
+  } = first(11171)({
+    chatRef: ref5,
+    chatManager: first,
+    chatUpdatesQueue,
+    pendingUpdatesQueueRef: ref2,
+    animatedRef: ref,
+    fetchMoreBefore() {
+      messages = messages.messages;
+      let hasMoreBefore = messages.hasMoreBefore;
+      if (hasMoreBefore) {
+        hasMoreBefore = !messages.loadingMore;
+      }
+      if (hasMoreBefore) {
+        const obj2 = { channelId: messages.channelId, before: null, limit: null };
+        const firstResult = messages.first();
+        let id;
+        if (firstResult != null) {
+          id = firstResult.id;
+        }
+        obj2.before = id;
+        obj2.limit = limit;
+        const messages1 = MessageActionCreatorsDefault.fetchMessages(obj2);
+      }
+    },
+    fetchMoreAfter() {
+      messages = messages.messages;
+      let hasMoreAfter = messages.hasMoreAfter;
+      if (hasMoreAfter) {
+        hasMoreAfter = !messages.loadingMore;
+      }
+      if (hasMoreAfter) {
+        const obj2 = { channelId: messages.channelId, after: null, limit: null };
+        const lastResult = messages.last();
+        let id;
+        if (lastResult != null) {
+          id = lastResult.id;
+        }
+        obj2.after = id;
+        obj2.limit = limit;
+        const messages1 = MessageActionCreatorsDefault.fetchMessages(obj2);
+      }
+    },
+    handleVisibleMessagesChange,
+    applyNativeRowsUpdate: callback,
+    messages: messages.messages,
+    channel: messages.channel,
+    channelId: messages.channelId,
+    screenIndex: messages.screenIndex,
+    onScroll: messages.onScroll,
+    useReducedMotion: messages.useReducedMotion,
+    isStaff: messages.isStaff,
+    visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
+  }));
+  const ref6 = noop.useRef(null);
   ref6.current = {
     getMessage: callback2,
     chatInputRef: messages.chatInputRef,
@@ -530,22 +504,75 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     loadMoreBefore,
     loadMoreAfter,
   };
-  const first3 = first2(
-    react.useState(() => {
-      const messagesHandlers = new MessagesHandlers.MessagesHandlers(() => ref.current);
-      return messagesHandlers;
-    }),
+  const first2 = first1(
+    noop.useState(() => new MessagesHandlers.MessagesHandlers(() => ref.current)),
     1,
   )[0];
-  const imperativeHandle = react.useImperativeHandle(arg1, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     scrollToBottom,
     jumpToPresent,
     scrollToNewMessages,
     getChatRef,
   }));
+  let tmp17 = first(11171)({
+    chatRef: ref5,
+    chatManager: first,
+    chatUpdatesQueue,
+    pendingUpdatesQueueRef: ref2,
+    animatedRef: ref,
+    fetchMoreBefore() {
+      messages = messages.messages;
+      let hasMoreBefore = messages.hasMoreBefore;
+      if (hasMoreBefore) {
+        hasMoreBefore = !messages.loadingMore;
+      }
+      if (hasMoreBefore) {
+        const obj2 = { channelId: messages.channelId, before: null, limit: null };
+        const firstResult = messages.first();
+        let id;
+        if (firstResult != null) {
+          id = firstResult.id;
+        }
+        obj2.before = id;
+        obj2.limit = limit;
+        const messages1 = MessageActionCreatorsDefault.fetchMessages(obj2);
+      }
+    },
+    fetchMoreAfter() {
+      messages = messages.messages;
+      let hasMoreAfter = messages.hasMoreAfter;
+      if (hasMoreAfter) {
+        hasMoreAfter = !messages.loadingMore;
+      }
+      if (hasMoreAfter) {
+        const obj2 = { channelId: messages.channelId, after: null, limit: null };
+        const lastResult = messages.last();
+        let id;
+        if (lastResult != null) {
+          id = lastResult.id;
+        }
+        obj2.after = id;
+        obj2.limit = limit;
+        const messages1 = MessageActionCreatorsDefault.fetchMessages(obj2);
+      }
+    },
+    handleVisibleMessagesChange,
+    applyNativeRowsUpdate: callback,
+    messages: messages.messages,
+    channel: messages.channel,
+    channelId: messages.channelId,
+    screenIndex: messages.screenIndex,
+    onScroll: messages.onScroll,
+    useReducedMotion: messages.useReducedMotion,
+    isStaff: messages.isStaff,
+    visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
+  });
   let obj4 = {
-    chatManager,
-    rowGenerator: first1,
+    chatManager: first,
+    rowGenerator: first1(
+      noop.useState(() => new first(hasJumpedToOriginalPost[16])()),
+      1,
+    )[0],
     animatingStickerMessageIdRef: ref3,
     canAddNewReactions: callback1,
     channel: messages.channel,
@@ -587,146 +614,167 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  let tmp22 = chatManager(11574)(obj4);
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = tmp22);
-  const effect = react.useEffect(() => {
-    let channelId;
-    let channelId2;
-    let messages2;
-    let messages3;
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11574)({
+    chatManager: first,
+    rowGenerator: first1(
+      noop.useState(() => new first(hasJumpedToOriginalPost[16])()),
+      1,
+    )[0],
+    animatingStickerMessageIdRef: ref3,
+    canAddNewReactions: callback1,
+    channel: messages.channel,
+    messages: messages.messages,
+    isMessagesReady: messages.isMessagesReady,
+    uploads: messages.uploads,
+    roleStyle: messages.roleStyle,
+    oldestUnreadMessageId: messages.oldestUnreadMessageId,
+    replyingMessageId: messages.replyingMessageId,
+    inlineAttachmentMedia: messages.inlineAttachmentMedia,
+    inlineEmbedMedia: messages.inlineEmbedMedia,
+    renderEmbeds: messages.renderEmbeds,
+    renderReactions: messages.renderReactions,
+    animateEmoji: messages.animateEmoji,
+    gifAutoPlay: messages.gifAutoPlay,
+    timestampHourCycle: messages.timestampHourCycle,
+    currentUserId: messages.currentUserId,
+    renderCommunicationDisabled: messages.renderCommunicationDisabled,
+    selectedSummary: messages.selectedSummary,
+    selectedConversation: messages.selectedConversation,
+    enableSwipeActions: messages.enableSwipeActions,
+    isResourceChannel: messages.isResourceChannel,
+    shouldObscureSpoiler: messages.shouldObscureSpoiler,
+    shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents,
+    unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds,
+    containerWidth: messages.containerWidth,
+    chatRef: ref5,
+    loadedRef: ref4,
+    animatedRef: ref,
+    hasMoreMessagesAfterForLastUpdateRef: ref1,
+    updateNativeRows,
+    isLoadingAtTop,
+    channelLatestMessageLoadingStatsManager,
+    channelId: messages.channelId,
+    isMessagesCached: messages.isMessagesCached,
+    chatUpdatesQueue,
+    shouldJumpToOriginalPost: callback3,
+    findMessageIndex,
+    scrollToTopMessage,
+    useReducedMotion: messages.useReducedMotion,
+  }));
+  const effect = noop.useEffect(() => {
     messages = messages.messages;
     const oldestUnreadMessageId = messages.oldestUnreadMessageId;
     if (messages.isMessagesReady) {
-      ({ jumpTargetId: obj2.scrollToMessageId, jumpTargetId: obj2.jumpTargetId } = messages);
       const obj5 = {
         scrollToMessageId: null,
         jumpTargetId: null,
-        jumpType: messages(dependencyMap[29]).JumpType.INSTANT,
-        focusTargetId: messages.focusTargetId,
-        hasJumpedToOriginalPost: dependencyMap,
+        jumpType: null,
+        focusTargetId: null,
+        hasJumpedToOriginalPost: null,
       };
+      ({ jumpTargetId: obj2.scrollToMessageId, jumpTargetId: obj2.jumpTargetId } = messages);
+      obj5.jumpType = messages(hasJumpedToOriginalPost[29]).JumpType.INSTANT;
+      obj5.focusTargetId = messages.focusTargetId;
+      obj5.hasJumpedToOriginalPost = hasJumpedToOriginalPost;
       closure_33(obj5);
-      const tmp5 = messages;
       if (null != messages.jumpTargetId) {
+        const obj7 = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, hasJumpedToOriginalPost: null };
         ({ jumpTargetId: obj3.scrollToMessageId, jumpTargetId: obj3.jumpTargetId } = messages);
-        const obj6 = {
-          scrollToMessageId: null,
-          jumpTargetId: null,
-          jumpType: tmp5(dependencyMap[29]).JumpType.INSTANT,
-          hasJumpedToOriginalPost: dependencyMap,
-        };
-        closure_34(obj6);
+        obj7.jumpType = tmp5(hasJumpedToOriginalPost[29]).JumpType.INSTANT;
+        obj7.hasJumpedToOriginalPost = hasJumpedToOriginalPost;
+        closure_34(obj7);
       } else if (null != oldestUnreadMessageId) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(() => {
-          const obj = {
-            scrollToMessageId: oldestUnreadMessageId,
-            jumpTargetId: messages.jumpTargetId,
-            jumpType: flow_Client.JumpType.INSTANT,
-            hasJumpedToOriginalPost: dependencyMap,
-          };
-          return closure_34(obj);
-        }, 50);
+        const timerId = setTimeout(
+          () =>
+            closure_2_34({
+              scrollToMessageId: oldestUnreadMessageId,
+              jumpTargetId: messages.jumpTargetId,
+              jumpType: Client.JumpType.INSTANT,
+              hasJumpedToOriginalPost,
+            }),
+          50,
+        );
       }
+      tmp5 = messages;
     } else {
-      let obj = { hasJumpedToOriginalPost: dependencyMap };
+      const obj = { hasJumpedToOriginalPost };
       closure_33(obj);
     }
     ({ channelId, messages: messages2 } = messages);
-    const recordMessageRender = first(dependencyMap[11]).recordMessageRender;
-    first(dependencyMap[11]);
-    const mapped = messages2.map(f106760);
+    const mapped = messages2.map((id) => id.id);
     let hasFetched = messages2.hasFetched;
     if (!hasFetched) {
       hasFetched = messages2.ready && !messages2.cached;
+      const tmp17 = messages2.ready && !messages2.cached;
     }
-    recordMessageRender(channelId, mapped, hasFetched, messages2.hasMoreAfter);
+    first(hasJumpedToOriginalPost[11]).recordMessageRender(channelId, mapped, hasFetched, messages2.hasMoreAfter);
     ({ channelId: channelId2, messages: messages3 } = messages);
-    const recordMessageRender2 = first(dependencyMap[11]).recordMessageRender;
-    first(dependencyMap[11]);
-    const mapped1 = messages3.map(f106760);
+    const obj4 = first(hasJumpedToOriginalPost[11]);
+    const mapped1 = messages3.map((id) => id.id);
     let hasFetched2 = messages3.hasFetched;
     if (!hasFetched2) {
       hasFetched2 = messages3.ready && !messages3.cached;
+      const tmp20 = messages3.ready && !messages3.cached;
     }
-    recordMessageRender2(channelId2, mapped1, hasFetched2, messages3.hasMoreAfter);
+    first(hasJumpedToOriginalPost[11]).recordMessageRender(channelId2, mapped1, hasFetched2, messages3.hasMoreAfter);
     return () => {
       clearRowsState("unmount");
     };
   }, []);
   const items3 = [,];
   ({ channelId: arr4[0], screenIndex: arr4[1] } = messages);
-  const effect1 = react.useEffect(
+  const effect1 = noop.useEffect(
     () => () => {
       ref(messages.channelId, messages.screenIndex, false);
     },
     items3,
   );
-  let obj5 = { props: messages, shouldForceRender: first2 };
-  ref3 = react.useRef(obj5);
-  const layoutEffect = react.useLayoutEffect(function () {
-    let channelId2;
-    let channelId3;
-    let closure_1;
-    let closure_19;
-    let closure_24;
-    let closure_4;
-    let first;
-    let focusTargetId;
-    let jumpTargetId;
-    let jumpType;
-    let messages3;
-    let minimizeScrolling;
-    let scrollToMessageId;
-    let shouldInitialScroll;
-    const props = ref3.current.props;
-    current = { props, shouldForceRender };
+  ref2 = noop.useRef({ props: messages, shouldForceRender: first1 });
+  const layoutEffect = noop.useLayoutEffect(() => {
+    const props = ref2.current.props;
     const tmp2 = props;
-    ref3.current = current;
+    ref2.current = { props, shouldForceRender };
     if (null != props.currentUserId) {
       const messages4 = tmp2.messages;
       const messages5 = props.messages;
       if (props.channelId !== tmp2.channelId) {
         closure_3(false);
       }
+      let tmp6 = !tmp106;
+      if (props.channelId === tmp2.channelId) {
+        tmp6 = closure_2;
+      }
       const channelId = tmp2.channelId;
       let obj2 = {
         clearRows,
         startOrCancelChannelLatestMessagesLoad,
-        hasJumpedToOriginalPost: props.channelId === tmp2.channelId && closure_2,
+        hasJumpedToOriginalPost: tmp6,
         firstIgnoredScrollEventTimestampRef,
       };
       if (props.channelId !== channelId) {
         obj2.clearRows();
-        let obj3 = first(dependencyMap[14]);
-        const result = obj3.clearChannelDimensions(channelId);
+        const result = first(hasJumpedToOriginalPost[14]).clearChannelDimensions(channelId);
         const result1 = obj2.startOrCancelChannelLatestMessagesLoad(obj2.hasJumpedToOriginalPost);
         obj2.firstIgnoredScrollEventTimestampRef.current = undefined;
+        let obj3 = first(hasJumpedToOriginalPost[14]);
       }
       const isMessagesAckable = props.isMessagesAckable;
       let isMessagesAckable2 = !isMessagesAckable;
-      const tmp15 = closure_18;
       if (!isMessagesAckable) {
         isMessagesAckable2 = tmp2.isMessagesAckable;
       }
       if (isMessagesAckable2) {
         tmp15.current = false;
       }
-      const tmp17 = closure_25;
-      const tmp18 = closure_3;
-      if (callback3(props.channelId === tmp2.channelId && closure_2)) {
+      if (callback3(tmp6)) {
         tmp17(false);
         if (messages5.jumpSequenceId === messages4.jumpSequenceId) {
           tmp18(true);
         }
       }
-      let tmp22 = first;
-      let tmp25 = ref2;
-      let tmp26 = first;
-      const obj4 = { isAtBottom: ref2.current, hasPreviousMessages: null != first.getPreviousMessages() };
-      const tmp21 = tmp2.isMessagesReady && !tmp2.isMessagesCached && props.isMessagesCached;
-      const tmp24 = first(dependencyMap[32]);
-      const tmp24Result = tmp24(tmp2, obj4, props);
+      const obj4 = { isAtBottom: ref.current, hasPreviousMessages: null != previousMessages.getPreviousMessages() };
+      const tmp24Result = first(hasJumpedToOriginalPost[32])(tmp2, obj4, props);
       ({ jumpTargetId, focusTargetId } = tmp24Result);
       let tmp28 = props.theme !== tmp2.theme;
       ({ scrollToMessageId, jumpType, minimizeScrolling, shouldInitialScroll } = tmp24Result);
@@ -759,32 +807,28 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
         props.isStaff !== tmp2.isStaff ||
         props.isAgeVerified !== tmp2.isAgeVerified;
       if (!tmp29) {
-        tmp29 = tmp !== shouldForceRender && shouldForceRender;
+        tmp29 = tmp !== tmp3 && tmp3;
+        const tmp30 = tmp !== tmp3 && tmp3;
       }
       if (!tmp29) {
         tmp29 = props.displayNameStylesEnabled !== tmp2.displayNameStylesEnabled;
       }
-      first = tmp31;
-      let tmp32 = first;
-      const uploads = props.uploads;
-      const uploads2 = tmp2.uploads;
-      const tmp34 = first(dependencyMap[33])(props.interactionStates, tmp2.interactionStates);
+      previousMessages = tmp31;
+      const tmp34 = first(hasJumpedToOriginalPost[33])(props.interactionStates, tmp2.interactionStates);
       closure_2 = !tmp34;
       closure_3 = tmp35;
       shouldForceRender = tmp36;
       closure_5 = tmp37;
       closure_6 = props.shouldDisableInteractiveComponents !== tmp2.shouldDisableInteractiveComponents;
       closure_7 = tmp38;
-      let closure_8 = tmp39;
-      let closure_9 = tmp40;
-      let closure_10 = tmp41;
+      closure_8 = tmp39;
+      closure_9 = tmp40;
+      closure_10 = tmp41;
       let channel = tmp2.channel;
-      const forwardGuildsVersion = props.forwardGuildsVersion;
-      const forwardGuildsVersion2 = tmp2.forwardGuildsVersion;
       const tmp42 = channel.isForumPost() && props.isFollowingForumPost !== tmp2.isFollowingForumPost;
-      let closure_11 = tmp42;
-      constants = tmp43;
-      let closure_13 = tmp44;
+      closure_11 = tmp42;
+      closure_12 = tmp43;
+      closure_13 = tmp44;
       callback3 = tmp45;
       const tmp46 =
         props.activityInstanceIds !== tmp2.activityInstanceIds ||
@@ -794,11 +838,18 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
         props.messagesWithActivitiesLaunching !== tmp2.messagesWithActivitiesLaunching ||
         props.invalidApplicationIds !== tmp2.invalidApplicationIds;
       startOrCancelChannelLatestMessagesLoad = tmp46;
-      let obj5 = messages(dependencyMap[33]);
-      const result2 = obj5.areArraysShallowEqual(props.activityInviteMessageIds, tmp2.activityInviteMessageIds);
-      let closure_16 = !result2;
-      let obj6 = messages(dependencyMap[33]);
-      const result3 = obj6.areArraysShallowEqual(
+      tmp15 = closure_18;
+      tmp17 = closure_25;
+      tmp18 = closure_3;
+      const tmp21 = tmp2.isMessagesReady && !tmp2.isMessagesCached && props.isMessagesCached;
+      const tmp24 = first(hasJumpedToOriginalPost[32]);
+      const result2 = messages(hasJumpedToOriginalPost[33]).areArraysShallowEqual(
+        props.activityInviteMessageIds,
+        tmp2.activityInviteMessageIds,
+      );
+      closure_16 = !result2;
+      let obj5 = messages(hasJumpedToOriginalPost[33]);
+      const result3 = messages(hasJumpedToOriginalPost[33]).areArraysShallowEqual(
         props.resolvedReferralTrialOfferIds,
         tmp2.resolvedReferralTrialOfferIds,
       );
@@ -809,20 +860,14 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
       if (!tmp52) {
         tmp52 = props.isPremiumTier2User !== tmp2.isPremiumTier2User;
       }
-      let closure_17 = tmp52;
+      closure_17 = tmp52;
       closure_18 = tmp53;
-      let closure_20 = tmp55;
-      let closure_21 = tmp56;
-      let closure_22 = tmp57;
-      let closure_23 = tmp58;
+      closure_20 = tmp55;
+      closure_21 = tmp56;
+      closure_22 = tmp57;
+      closure_23 = tmp58;
       const currentUserDisplayNameStyles = props.currentUserDisplayNameStyles;
       let fontId;
-      const guildEmojis = props.guildEmojis;
-      const guildEmojis2 = tmp2.guildEmojis;
-      const voiceStatePrivateChannelId = props.voiceStatePrivateChannelId;
-      const voiceStatePrivateChannelId2 = tmp2.voiceStatePrivateChannelId;
-      const displayNameStylesEnabled = props.displayNameStylesEnabled;
-      const displayNameStylesEnabled2 = tmp2.displayNameStylesEnabled;
       if (currentUserDisplayNameStyles != null) {
         fontId = currentUserDisplayNameStyles.fontId;
       }
@@ -832,20 +877,17 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
         fontId1 = currentUserDisplayNameStyles2.fontId;
       }
       firstIgnoredScrollEventTimestampRef = tmp62;
-      const tmp61 = voiceStatePrivateChannelId !== voiceStatePrivateChannelId2;
-      const tmp47Result = messages(dependencyMap[33]);
-      const result4 = tmp47Result.areArraysShallowEqual(props.fetchingSkuIds, tmp2.fetchingSkuIds);
+      let obj6 = messages(hasJumpedToOriginalPost[33]);
+      const tmp61 = props.voiceStatePrivateChannelId !== tmp2.voiceStatePrivateChannelId;
+      const result4 = messages(hasJumpedToOriginalPost[33]).areArraysShallowEqual(
+        props.fetchingSkuIds,
+        tmp2.fetchingSkuIds,
+      );
       closure_25 = !result4;
-      let closure_26 = tmp65;
+      closure_26 = tmp65;
       if (!tmp29) {
-        if (
-          !(
-            props.resolvingGiftCodes !== tmp2.resolvingGiftCodes ||
-            props.resolvedGiftCodes !== tmp2.resolvedGiftCodes ||
-            props.acceptingGiftCodes !== tmp2.acceptingGiftCodes
-          )
-        ) {
-          if (uploads === uploads2) {
+        if (!tmp31) {
+          if (props.uploads === tmp2.uploads) {
             if (!tmp46) {
               if (props.messages === tmp2.messages) {
                 if (props.editingMessageId === tmp2.editingMessageId) {
@@ -898,35 +940,17 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                                                                           props.cacheStoreLoaded ===
                                                                           tmp2.cacheStoreLoaded
                                                                         ) {
-                                                                          if (
-                                                                            props.currentClientVoiceChannelId ===
-                                                                            tmp2.currentClientVoiceChannelId
-                                                                          ) {
-                                                                            if (
-                                                                              props.communicationDisabledVersion ===
-                                                                              tmp2.communicationDisabledVersion
-                                                                            ) {
-                                                                              if (
-                                                                                props.messageAuthorMembers ===
-                                                                                tmp2.messageAuthorMembers
-                                                                              ) {
-                                                                                if (
-                                                                                  props.failedMessagesVersion ===
-                                                                                  tmp2.failedMessagesVersion
-                                                                                ) {
+                                                                          if (!tmp55) {
+                                                                            if (!tmp38) {
+                                                                              if (!tmp39) {
+                                                                                if (!tmp40) {
                                                                                   if (
-                                                                                    forwardGuildsVersion ===
-                                                                                    forwardGuildsVersion2
+                                                                                    props.forwardGuildsVersion ===
+                                                                                    tmp2.forwardGuildsVersion
                                                                                   ) {
-                                                                                    if (
-                                                                                      props.renderCommunicationDisabled ===
-                                                                                      tmp2.renderCommunicationDisabled
-                                                                                    ) {
+                                                                                    if (!tmp41) {
                                                                                       if (tmp34) {
-                                                                                        if (
-                                                                                          props.interactionComponentStatesVersion ===
-                                                                                          tmp2.interactionComponentStatesVersion
-                                                                                        ) {
+                                                                                        if (!tmp37) {
                                                                                           if (!tmp42) {
                                                                                             if (null == jumpTargetId) {
                                                                                               if (
@@ -948,25 +972,17 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                                                                                                         props.shouldDisableInteractiveComponents ===
                                                                                                         tmp2.shouldDisableInteractiveComponents
                                                                                                       ) {
-                                                                                                        if (
-                                                                                                          props.channelPolls ===
-                                                                                                          tmp2.channelPolls
-                                                                                                        ) {
-                                                                                                          if (
-                                                                                                            props.messageReferencePolls ===
-                                                                                                            tmp2.messageReferencePolls
-                                                                                                          ) {
+                                                                                                        if (!tmp35) {
+                                                                                                          if (!tmp36) {
                                                                                                             if (
-                                                                                                              props.showMediaPostSharePrompt ===
-                                                                                                              tmp2.showMediaPostSharePrompt
+                                                                                                              !tmp43
                                                                                                             ) {
                                                                                                               if (
                                                                                                                 props.threadStartingReferenceMessage ===
                                                                                                                 tmp2.threadStartingReferenceMessage
                                                                                                               ) {
                                                                                                                 if (
-                                                                                                                  props.unloadedContentEntryMessageIds ===
-                                                                                                                  tmp2.unloadedContentEntryMessageIds
+                                                                                                                  !tmp44
                                                                                                                 ) {
                                                                                                                   if (
                                                                                                                     result2
@@ -975,40 +991,33 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                                                                                                                       !tmp52
                                                                                                                     ) {
                                                                                                                       if (
-                                                                                                                        props.guildInviteColorsFetched ===
-                                                                                                                        tmp2.guildInviteColorsFetched
+                                                                                                                        !tmp53
                                                                                                                       ) {
                                                                                                                         if (
-                                                                                                                          guildEmojis ===
-                                                                                                                          guildEmojis2
+                                                                                                                          props.guildEmojis ===
+                                                                                                                          tmp2.guildEmojis
                                                                                                                         ) {
                                                                                                                           if (
-                                                                                                                            props.selfActivities ===
-                                                                                                                            tmp2.selfActivities
+                                                                                                                            !tmp54
                                                                                                                           ) {
                                                                                                                             if (
-                                                                                                                              props.activityLaunchJoinStates ===
-                                                                                                                              tmp2.activityLaunchJoinStates
+                                                                                                                              !tmp57
                                                                                                                             ) {
                                                                                                                               if (
-                                                                                                                                props.authorizedAppsTokens ===
-                                                                                                                                tmp2.authorizedAppsTokens
+                                                                                                                                !tmp58
                                                                                                                               ) {
                                                                                                                                 if (
-                                                                                                                                  displayNameStylesEnabled ===
-                                                                                                                                  displayNameStylesEnabled2
+                                                                                                                                  props.displayNameStylesEnabled ===
+                                                                                                                                  tmp2.displayNameStylesEnabled
                                                                                                                                 ) {
                                                                                                                                   if (
-                                                                                                                                    fontId ===
-                                                                                                                                    fontId1
+                                                                                                                                    !tmp62
                                                                                                                                   ) {
                                                                                                                                     if (
-                                                                                                                                      props.voiceStateChannelIdSummaryForGuild ===
-                                                                                                                                      tmp2.voiceStateChannelIdSummaryForGuild
+                                                                                                                                      !tmp56
                                                                                                                                     ) {
                                                                                                                                       if (
-                                                                                                                                        props.voiceInviteDataByChannelId ===
-                                                                                                                                        tmp2.voiceInviteDataByChannelId
+                                                                                                                                        !tmp65
                                                                                                                                       ) {
                                                                                                                                         if (
                                                                                                                                           result4
@@ -1019,17 +1028,16 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                                                                                                                                             messages,
                                                                                                                                           } =
                                                                                                                                             tmp2);
-                                                                                                                                          const recordMessageRender =
+                                                                                                                                          let obj8 =
                                                                                                                                             first(
-                                                                                                                                              dependencyMap[11],
-                                                                                                                                            ).recordMessageRender;
-                                                                                                                                          const tmp68 =
-                                                                                                                                            first(
-                                                                                                                                              dependencyMap[11],
+                                                                                                                                              hasJumpedToOriginalPost[11],
                                                                                                                                             );
                                                                                                                                           const mapped =
                                                                                                                                             messages.map(
-                                                                                                                                              f106760,
+                                                                                                                                              (
+                                                                                                                                                id,
+                                                                                                                                              ) =>
+                                                                                                                                                id.id,
                                                                                                                                             );
                                                                                                                                           let hasFetched =
                                                                                                                                             messages.hasFetched;
@@ -1039,8 +1047,11 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                                                                                                                                             hasFetched =
                                                                                                                                               messages.ready &&
                                                                                                                                               !messages.cached;
+                                                                                                                                            const tmp69 =
+                                                                                                                                              messages.ready &&
+                                                                                                                                              !messages.cached;
                                                                                                                                           }
-                                                                                                                                          recordMessageRender(
+                                                                                                                                          obj8.recordMessageRender(
                                                                                                                                             channelId2,
                                                                                                                                             mapped,
                                                                                                                                             hasFetched,
@@ -1113,9 +1124,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
         }
       }
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      set = new Set();
+      const set = new Set();
       if (props.editingMessageId !== tmp2.editingMessageId) {
         if (null != tmp2.editingMessageId) {
           set.add(tmp2.editingMessageId);
@@ -1134,20 +1143,22 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
       }
       if (props.isMessagesReady === tmp2.isMessagesReady) {
         if (props.isCallActive === tmp2.isCallActive) {
-          let closure_28 = props.channelThreadsVersion !== tmp2.channelThreadsVersion;
-          let closure_29 = props.rsvpVersion !== tmp2.rsvpVersion;
-          let closure_30 = props.repliedIds !== tmp2.repliedIds;
-          let closure_31 = props.hasLoadedExperiments !== tmp2.hasLoadedExperiments;
+          closure_28 = props.channelThreadsVersion !== tmp2.channelThreadsVersion;
+          closure_29 = props.rsvpVersion !== tmp2.rsvpVersion;
+          closure_30 = props.repliedIds !== tmp2.repliedIds;
+          closure_31 = props.hasLoadedExperiments !== tmp2.hasLoadedExperiments;
           let num = props.communicationDisabledVersion;
           if (num == null) {
             num = -1;
           }
-          let closure_33 = tmp86;
+          const cacheStoreLoaded = props.cacheStoreLoaded;
+          let cacheStoreLoaded2 = !cacheStoreLoaded;
+          if (!cacheStoreLoaded) {
+            cacheStoreLoaded2 = tmp2.cacheStoreLoaded;
+          }
           let voiceChannelIdChangedAuthorIds = null;
-          if (props.voiceStateChannelIdSummaryForGuild !== tmp2.voiceStateChannelIdSummaryForGuild) {
+          if (tmp56) {
             let prop = props.voiceStateChannelIdSummaryForGuild;
-            const getVoiceChannelIdChangedAuthorIds = messages(dependencyMap[13]).getVoiceChannelIdChangedAuthorIds;
-            messages(dependencyMap[13]);
             if (prop == null) {
               prop = null;
             }
@@ -1155,13 +1166,14 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
             if (prop1 == null) {
               prop1 = null;
             }
-            voiceChannelIdChangedAuthorIds = getVoiceChannelIdChangedAuthorIds(prop, prop1);
+            voiceChannelIdChangedAuthorIds = messages(hasJumpedToOriginalPost[13]).getVoiceChannelIdChangedAuthorIds(
+              prop,
+              prop1,
+            );
+            const tmp47Result2 = messages(hasJumpedToOriginalPost[13]);
           }
           const messages1 = tmp2.messages;
           const item = messages1.forEach((author) => {
-            let code2;
-            let messageAuthorMembers;
-            let type;
             if (closure_21) {
               if (null != voiceChannelIdChangedAuthorIds) {
                 if (null != author.author) {
@@ -1215,14 +1227,14 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                 while (iter !== undefined) {
                   let code = nextResult.code;
                   if (nextResult.type === CodedLink.CodedLinkType.INVITE) {
-                    invites = props.invites;
-                    let value = invites.get(code);
-                    let tmp202 = value;
+                    let invites = props.invites;
+                    value = invites.get(code);
+                    let tmp194 = value;
                     if (null != value) {
-                      if (null != tmp202.channel) {
+                      if (null != tmp194.channel) {
                         let obj2 = InviteTypeUtils;
-                        if (obj2.isVoiceChannelInvite(tmp202)) {
-                          let id = tmp202.channel.id;
+                        if (obj2.isVoiceChannelInvite(tmp194)) {
+                          let id = tmp194.channel.id;
                           if (props.voiceInviteDataByChannelId[id] !== props.voiceInviteDataByChannelId[id]) {
                             let addResult6 = set.add(author.id);
                             iter.return();
@@ -1238,8 +1250,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
             if (!closure_10) {
               if (closure_8) {
                 if (null != props.guildId) {
-                  const obj3 = messages_MessagesUtils;
-                  const messageAuthorMemberUserIds = obj3.getMessageAuthorMemberUserIds(author);
+                  const messageAuthorMemberUserIds = messages_MessagesUtils.getMessageAuthorMemberUserIds(author);
                   if (
                     messageAuthorMemberUserIds.some(
                       (item) => props.messageAuthorMembers[item] !== messageAuthorMembers.messageAuthorMembers[item],
@@ -1262,7 +1273,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
               if (closure_5) {
                 const interactionComponentStates = props.interactionComponentStates;
                 const interactionComponentStates2 = props.interactionComponentStates;
-                const value3 = interactionComponentStates.get(author.id);
+                value3 = interactionComponentStates.get(author.id);
                 if (value3 !== interactionComponentStates2.get(author.id)) {
                   set.add(author.id);
                 }
@@ -1300,28 +1311,27 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
               const channel = props.channel;
               if (channel.isForumPost()) {
                 if (closure_11) {
-                  const id2 = author.id;
-                  const obj5 = SnowflakeUtilsDefault;
-                  if (id2 === obj5.castChannelIdAsMessageId(props.channelId)) {
+                  if (author.id === obj5.castChannelIdAsMessageId(props.channelId)) {
                     set.add(author.id);
                   }
+                  obj5 = SnowflakeUtilsDefault;
                 }
               }
-              if (constants3) {
+              if (closure_15) {
                 if (null != author.activityInstance) {
                   set.add(author.id);
                 }
               }
-              let tmp80 = closure_16;
-              if (tmp80) {
+              let tmp72 = closure_16;
+              if (closure_16) {
                 const activity2 = author.activity;
                 let party_id;
                 if (activity2 != null) {
                   party_id = activity2.party_id;
                 }
-                tmp80 = null != party_id;
+                tmp72 = null != party_id;
               }
-              if (tmp80) {
+              if (tmp72) {
                 set.add(author.id);
               }
               if (closure_23) {
@@ -1343,21 +1353,20 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                 if (author.codedLinks.length > 0) {
                   const codedLinks2 = author.codedLinks;
                   const iter2 = codedLinks2[Symbol.iterator]();
-                  const nextResult1 = iter2.next();
                   while (iter2 !== undefined) {
                     ({ type, code: code2 } = nextResult1);
                     if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
                       let first = _slicedToArray(code2.split("-"), 1)[0];
                       let fetchingSkuIds = props.fetchingSkuIds;
-                      let tmp105 = first;
+                      let tmp97 = first;
                       if (fetchingSkuIds.includes(first)) {
                         let addResult20 = set.add(author.id);
                         iter2.return();
                       } else {
-                        let value4 = SKUStore.get(tmp105);
+                        let value4 = SKUStore.get(tmp97);
                         if (null != value4) {
                           let invalidApplicationIds = props.invalidApplicationIds;
-                          if (invalidApplicationIds.includes(tmp111.applicationId)) {
+                          if (invalidApplicationIds.includes(tmp103.applicationId)) {
                             let addResult21 = set.add(author.id);
                             iter2.return();
                           }
@@ -1366,27 +1375,32 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                     }
                     continue;
                   }
+                  nextResult1 = iter2.next();
                 }
               }
               if (null != author.author) {
-                const obj9 = MessagesUtilsDefault;
                 if (!obj9.messageAuthorActivitiesChanged(author, props, props)) {
-                  const obj6 = MessagesUtilsDefault;
                   if (!obj6.codedLinksChanged(author, props, props)) {
                     if (!closure_1) {
-                      const obj8 = MessagesUtilsDefault;
                       if (!obj8.mediaPostPreviewEmbedsChanged(author, props, props)) {
-                        const tmp134 = closure_33 && author.embeds.length > 0;
-                        if (tmp134) {
+                        let tmp126 = cacheStoreLoaded2;
+                        if (cacheStoreLoaded2) {
+                          tmp126 = author.embeds.length > 0;
+                        }
+                        if (tmp126) {
                           set.add(author.id);
                         }
-                        const tmp138 =
-                          author.type === constants3.THREAD_STARTER_MESSAGE &&
-                          props.threadStartingReferenceMessage !== props.threadStartingReferenceMessage;
-                        if (tmp138) {
+                        let tmp130 = author.type === constants3.THREAD_STARTER_MESSAGE;
+                        if (tmp130) {
+                          tmp130 = props.threadStartingReferenceMessage !== props.threadStartingReferenceMessage;
+                        }
+                        if (tmp130) {
                           set.add(author.id);
                         }
-                        let hasItem1 = constants2 && null != author.applicationId;
+                        let hasItem1 = closure_14;
+                        if (closure_14) {
+                          hasItem1 = null != author.applicationId;
+                        }
                         if (hasItem1) {
                           const invalidApplicationIds2 = props.invalidApplicationIds;
                           hasItem1 = invalidApplicationIds2.includes(author.applicationId);
@@ -1405,245 +1419,274 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                             set.add(author.id);
                           }
                         }
-                        const tmp151 = closure_18 && author.codedLinks.length > 0;
-                        if (tmp151) {
+                        let tmp143 = closure_18;
+                        if (closure_18) {
+                          tmp143 = author.codedLinks.length > 0;
+                        }
+                        if (tmp143) {
                           set.add(author.id);
                         }
-                        let tmp154 = closure_19 || closure_22;
-                        if (tmp154) {
+                        let tmp146 = closure_19;
+                        if (!closure_19) {
+                          tmp146 = closure_22;
+                        }
+                        if (tmp146) {
                           const activity3 = author.activity;
                           let party_id1;
                           if (activity3 != null) {
                             party_id1 = activity3.party_id;
                           }
-                          tmp154 = null != party_id1;
+                          tmp146 = null != party_id1;
                         }
-                        if (tmp154) {
+                        if (tmp146) {
                           set.add(author.id);
                         }
                       }
+                      obj8 = MessagesUtilsDefault;
                     } else {
                       MessagesUtilsDefault;
                     }
                   }
+                  obj6 = MessagesUtilsDefault;
                 }
                 set.add(author.id);
+                obj9 = MessagesUtilsDefault;
               }
             }
             set.add(author.id);
           });
           const obj7 = {
             forceRender: tmp29,
-            forceReload: tmp28,
-            updateMessageIds: set,
-            scrollToMessageId,
-            jumpTargetId,
-            jumpType,
-            focusTargetId,
-            ignoreEmbedDescriptionCache: !props.cacheStoreLoaded && tmp2.cacheStoreLoaded,
-            messagesNewlyLoaded: tmp21,
-            shouldInitialScroll,
-            minimizeScrolling,
-            isAnimated:
-              props.channelId !== tmp2.channelId ||
-              messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId,
-            hasJumpedToOriginalPost: props.channelId === tmp2.channelId && closure_2,
+            forceReload: null,
+            updateMessageIds: null,
+            scrollToMessageId: null,
+            jumpTargetId: null,
+            jumpType: null,
+            focusTargetId: null,
+            ignoreEmbedDescriptionCache: null,
+            messagesNewlyLoaded: null,
+            shouldInitialScroll: null,
+            minimizeScrolling: null,
+            isAnimated: null,
+            hasJumpedToOriginalPost: null,
           };
-          const tmp94 = closure_33;
           if (!tmp28) {
-            tmp28 = tmp108;
+            tmp28 = tmp106;
           }
-          tmp94(obj7);
+          obj7.forceReload = tmp28;
+          obj7.updateMessageIds = set;
+          obj7.scrollToMessageId = scrollToMessageId;
+          obj7.jumpTargetId = jumpTargetId;
+          obj7.jumpType = jumpType;
+          obj7.focusTargetId = focusTargetId;
+          obj7.ignoreEmbedDescriptionCache = cacheStoreLoaded2;
+          obj7.messagesNewlyLoaded = tmp21;
+          obj7.shouldInitialScroll = shouldInitialScroll;
+          obj7.minimizeScrolling = minimizeScrolling;
+          obj7.isAnimated =
+            props.channelId !== tmp2.channelId ||
+            messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId;
+          obj7.hasJumpedToOriginalPost = tmp6;
+          cacheStoreLoaded2(obj7);
           closure_5(false);
           ({ channelId: channelId3, messages: messages3 } = tmp2);
-          const recordMessageRender2 = first(dependencyMap[11]).recordMessageRender;
-          const tmp100 = first(dependencyMap[11]);
-          const mapped1 = messages3.map(f106760);
+          const obj13 = first(hasJumpedToOriginalPost[11]);
+          const mapped1 = messages3.map((id) => id.id);
           let hasFetched2 = messages3.hasFetched;
           if (!hasFetched2) {
             hasFetched2 = messages3.ready && !messages3.cached;
+            const tmp100 = messages3.ready && !messages3.cached;
           }
-          let tmp105 = mapped1;
-          recordMessageRender2(channelId3, mapped1, hasFetched2, messages3.hasMoreAfter);
+          obj13.recordMessageRender(channelId3, mapped1, hasFetched2, messages3.hasMoreAfter);
+          const tmp92 =
+            props.channelId !== tmp2.channelId ||
+            messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId;
         }
       }
+      const tmp47Result = messages(hasJumpedToOriginalPost[33]);
       const messages2 = tmp2.messages;
-      const find = first(dependencyMap[19]).find;
-      first(dependencyMap[19]);
-      const toArrayResult = messages2.toArray();
-      const found = find(toArrayResult.reverse(), (type) => type.type === constants.CALL);
+      const arr = first(hasJumpedToOriginalPost[19]);
+      const found = arr.find(messages2.toArray().reverse(), (type) => type.type === constants.CALL);
       if (null != found) {
         set.add(found.id);
       }
+      const toArrayResult = messages2.toArray();
     }
+    const obj = { props, shouldForceRender };
   });
-  let obj6 = { children: items4 };
-  let obj7 = {
-    ref: ref5,
-    style: messages.style,
-    inverted: true,
-    channelId: messages.channelId,
-    alwaysRespectKeyboard: messages.alwaysRespectKeyboard,
-    onChatScrollPosition: handleScrollPosition,
-    onTapImage: first3.handleTapImage,
-    onTapChannel: first3.handleTapChannel,
-    onLongPressChannel: first3.handleLongPressChannel,
-    onTapAttachmentLink: first3.handleTapAttachmentLink,
-    onTapAttachmentTextPreview: first3.handleTapAttachmentTextPreview,
-    onLongPressAttachmentLink: first3.handleLongPressAttachmentLink,
-    onTapCall: first3.handleTapCall,
-    onTapMention: first3.handleTapMention,
-    onTapCommandMention: first3.handleTapCommandMention,
-    onLongPressCommandMention: first3.handleLongPressCommandMention,
-    onTapGameMention: first3.handleTapGameMention,
-    onTapLink: first3.handleTapLink,
-    onLongPressLink: first3.handleLongPressLink,
-    onTapReaction: first3.handleTapReaction,
-    onLongPressReaction: first3.handleLongPressReaction,
-    onTapAvatar: first3.handleTapAvatar,
-    onTapUsername: first3.handleTapUsername,
-    onLongPressUsername: first3.handleLongPressUsername,
-    onTapSticker: first3.handleOpenSticker,
-    onLongPressSticker: function handleLongPressSticker(nativeEvent) {
-      const obj = MessageDataSnowflakeUtils;
-      const messageId = obj.getNativeSyntheticEventData(nativeEvent).messageId;
-      current = ref3.current;
-      const items = [messageId];
-      set = new Set(items);
-      if (null != current) {
-        set.add(current);
-      }
-      let tmp3 = null;
-      if (current !== messageId) {
-        tmp3 = messageId;
-      }
-      ref3.current = tmp3;
-      closure_33({ forceRender: true, updateMessageIds: set });
-    },
-    onLongPressMessage: first3.handleLongPressMessage,
-    onInitiateReply: first3.handleInitiateReply,
-    onInitiateEdit: first3.handleInitiateEdit,
-    onInitiateThread: first3.handleInitiateThread,
-    onTapMessage: first3.handleTapMessage,
-    onDoubleTapMessage: first3.handleDoubleTapMessage,
-    onTapSeparator: first3.handleTapSeparator,
-    onTapInviteEmbed: first3.handleTapInviteEmbed,
-    onTapInviteEmbedAccept: first3.handleTapInviteEmbedAccept,
-    onTapJoinActivity: first3.handleTapJoinActivity,
-    onTapJoinRichPresence: first3.handleTapJoinRichPresence,
-    onPressKey: messages.onPressKey,
-    animateEmoji: messages.animateEmoji,
-    onTapGiftCodeEmbed: first3.handleTapGiftCodeEmbed,
-    onTapCancelUploadItem: first3.handleTapCancelUploadItem,
-    onTapMessageReply: first3.handleTapReply,
-    onTapSummary: first3.handleTapSummary,
-    onTapSummaryJump: first3.handleTapSummaryJump,
-    onTapConversationHeader: first3.handleTapConversationHeader,
-    onTapGiftCodeAccept: first3.handleTapGiftCodeAccept,
-    onTapReferralRedeem: first3.handleTapReferralRedeem,
-    onGiftIntentCardViewed: first3.handleGiftIntentCardViewed,
-    onTapGiftIntentPrimaryCta: first3.handleTapGiftIntentPrimaryCta,
-    onTapGiftIntentSecondaryCta: first3.handleTapGiftIntentSecondaryCta,
-    onTapThreadEmbed: first3.handleTapThreadEmbed,
-    onTapEmoji: first3.handleTapEmoji,
-    onTapTimestamp: first3.handleTapTimestamp,
-    onTapInlineCode: first3.handleTapInlineCode,
-    onTapRoleIcon: first3.handleTapRoleIcon,
-    onTapVoiceChannelBadge: first3.handleTapVoiceChannelBadge,
-    onTapGameIcon: first3.handleTapGameIcon,
-    onTapSuppressNotificationsIcon: first3.handleTapSuppressNotificationsIcon,
-    onTapConnectionsRoleTag: first3.handleTapConnectionsRoleTag,
-    onTapTimeoutIcon: first3.handleTapTimeoutIcon,
-    onTapButtonActionComponent: first3.handleTapButtonActionComponent,
-    onTapSelectActionComponent: first3.handleTapSelectActionComponent,
-    onTapWelcomeReply: first3.handleTapWelcomeReply,
-    onTapInviteToSpeak: first3.handleTapInviteToSpeak,
-    onTapAutoModerationActions: first3.handleTapAutoModerationActions,
-    onTapAutoModerationFeedback: first3.handleTapAutoModerationFeedback,
-    onTapFollowForumPost: first3.handleTapFollowForumPost,
-    onTapShareForumPost: first3.handleTapShareForumPost,
-    onTapReactionOverflow: first3.handleTapReactionOverflow,
-    onTapNavBar: function handleTapNavBar() {
-      return obj(...arguments);
-    },
-    onTapCopyText: first3.handleCopyText,
-    onTapOpTag: first3.handleTapOpTag,
-    onTapTag: first3.handleTapTag,
-    onMediaAttachmentPlaybackEnded: first3.handleMediaAttachmentPlaybackEnded,
-    onMediaAttachmentPlaybackStarted: first3.handleMediaAttachmentPlaybackStarted,
-    onVoiceMessagePlaybackFailed: first3.handleVoiceMessagePlaybackFailed,
-    onTapShowAltText: handleTapShowAltText,
-    onTapPostPreviewEmbed: first3.handleTapPostPreviewEmbed,
-    onTapDismissMediaPostSharePrompt: first3.handleTapDismissMediaPostSharePrompt,
-    onTapObscuredMediaLearnMore: first3.handleTapObscuredMediaLearnMore,
-    onTapObscuredMediaToggle: first3.onTapObscuredMediaToggle,
-    onTapSafetyPolicyNoticeEmbed: first3.handleTapSafetyPolicyNoticeEmbed,
-    onTapSafetySystemNotificationCta: first3.handleTapSafetySystemNotificationCta,
-    onTapPollAnswer: first3.handleTapPollAnswer,
-    onTapPollSubmitVote: first3.handleTapPollSubmitVote,
-    onTapPollAction: first3.handleTapPollAction,
-    onLongPressPollImage: first3.handleLongPressPollImage,
-    onTapCtaButton: first3.handleTapCtaButton,
-    onMessageAccessibilityAction: first3.handleMessageAccessibilityAction,
-    onTapForwardFooter: first3.handleTapForwardFooter,
-    onTapInlineForward: first3.handleTapInlineForward,
-    onTapClanTagChiplet: first3.handleTapClanTagChiplet,
-    onTapContentInventoryEntryEmbed: first3.handleTapContentInventoryEntryEmbed,
-    onTapCheckpointCard: first3.handleTapCheckpointCard,
-    onTapSoundmoji: first3.handleTapSoundmoji,
-    onTapAppMessageEmbed: first3.handleTapAppMessageEmbed,
-    onTapPreviewSharedClientTheme: first3.handleTapPreviewSharedClientTheme,
-    onSharedClientThemeViewed: first3.handleSharedClientThemeViewed,
-    children: messages.children,
-    HACK_fixModalInteraction: messages.HACK_fixModalInteraction,
-    onTapTableView: function handleTapTableView() {
-      const obj = PlatformUtils;
-      const isIOSResult = obj.isIOS() && messages.keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
-      if (isIOSResult) {
-        current = messages.chatInputRef.current;
-        if (current != null) {
-          current.closeCustomKeyboard();
+  let obj6 = { children: null };
+  const items4 = [
+    findMessageIndex(first(11519), {
+      ref: ref5,
+      style: messages.style,
+      inverted: true,
+      channelId: messages.channelId,
+      alwaysRespectKeyboard: messages.alwaysRespectKeyboard,
+      onChatScrollPosition: handleScrollPosition,
+      onTapImage: first2.handleTapImage,
+      onTapChannel: first2.handleTapChannel,
+      onLongPressChannel: first2.handleLongPressChannel,
+      onTapAttachmentLink: first2.handleTapAttachmentLink,
+      onTapAttachmentTextPreview: first2.handleTapAttachmentTextPreview,
+      onLongPressAttachmentLink: first2.handleLongPressAttachmentLink,
+      onTapCall: first2.handleTapCall,
+      onTapMention: first2.handleTapMention,
+      onTapCommandMention: first2.handleTapCommandMention,
+      onLongPressCommandMention: first2.handleLongPressCommandMention,
+      onTapGameMention: first2.handleTapGameMention,
+      onTapLink: first2.handleTapLink,
+      onLongPressLink: first2.handleLongPressLink,
+      onTapReaction: first2.handleTapReaction,
+      onLongPressReaction: first2.handleLongPressReaction,
+      onTapAvatar: first2.handleTapAvatar,
+      onTapUsername: first2.handleTapUsername,
+      onLongPressUsername: first2.handleLongPressUsername,
+      onTapSticker: first2.handleOpenSticker,
+      onLongPressSticker: function handleLongPressSticker(nativeEvent) {
+        const messageId = MessageDataSnowflakeUtils.getNativeSyntheticEventData(nativeEvent).messageId;
+        const current = ref3.current;
+        const items = [messageId];
+        const set = new Set(items);
+        if (null != current) {
+          set.add(current);
         }
-      }
-    },
-    onFirstLayout: function handleFirstLayout(nativeEvent) {
-      nativeEvent = nativeEvent.nativeEvent;
-      const obj = {
-        firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex,
-        lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex,
-        firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible,
-        lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible,
-        source: QuestTypes.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT,
-      };
-      handleVisibleMessagesChange(obj);
-    },
-    onMediaPlayFinishedAnalytics: handleMediaPlayFinishedAnalytics,
-    onMessageVisibilityChanged: function handleMessageVisibilityChanged(nativeEvent) {
-      nativeEvent = nativeEvent.nativeEvent;
-      const obj = {
-        firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex,
-        lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex,
-        firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible,
-        lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible,
-        source: QuestTypes.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED,
-      };
-      handleVisibleMessagesChange(obj);
-    },
-  };
-  items4 = [findMessageIndex(chatManager(11519), obj7)];
-  let obj8 = { messages: messages.messages };
-  items4[1] = findMessageIndex(require("ChatTTITracker").ChatTTITracker, obj8);
-  return ref2(closure_18, obj6);
+        let tmp3 = null;
+        if (current !== messageId) {
+          tmp3 = messageId;
+        }
+        ref3.current = tmp3;
+        closure_1_33({ forceRender: true, updateMessageIds: set });
+      },
+      onLongPressMessage: first2.handleLongPressMessage,
+      onInitiateReply: first2.handleInitiateReply,
+      onInitiateEdit: first2.handleInitiateEdit,
+      onInitiateThread: first2.handleInitiateThread,
+      onTapMessage: first2.handleTapMessage,
+      onDoubleTapMessage: first2.handleDoubleTapMessage,
+      onTapSeparator: first2.handleTapSeparator,
+      onTapInviteEmbed: first2.handleTapInviteEmbed,
+      onTapInviteEmbedAccept: first2.handleTapInviteEmbedAccept,
+      onTapJoinActivity: first2.handleTapJoinActivity,
+      onTapJoinRichPresence: first2.handleTapJoinRichPresence,
+      onPressKey: messages.onPressKey,
+      animateEmoji: messages.animateEmoji,
+      onTapGiftCodeEmbed: first2.handleTapGiftCodeEmbed,
+      onTapCancelUploadItem: first2.handleTapCancelUploadItem,
+      onTapMessageReply: first2.handleTapReply,
+      onTapSummary: first2.handleTapSummary,
+      onTapSummaryJump: first2.handleTapSummaryJump,
+      onTapConversationHeader: first2.handleTapConversationHeader,
+      onTapGiftCodeAccept: first2.handleTapGiftCodeAccept,
+      onTapReferralRedeem: first2.handleTapReferralRedeem,
+      onGiftIntentCardViewed: first2.handleGiftIntentCardViewed,
+      onTapGiftIntentPrimaryCta: first2.handleTapGiftIntentPrimaryCta,
+      onTapGiftIntentSecondaryCta: first2.handleTapGiftIntentSecondaryCta,
+      onTapThreadEmbed: first2.handleTapThreadEmbed,
+      onTapEmoji: first2.handleTapEmoji,
+      onTapTimestamp: first2.handleTapTimestamp,
+      onTapInlineCode: first2.handleTapInlineCode,
+      onTapRoleIcon: first2.handleTapRoleIcon,
+      onTapVoiceChannelBadge: first2.handleTapVoiceChannelBadge,
+      onTapGameIcon: first2.handleTapGameIcon,
+      onTapSuppressNotificationsIcon: first2.handleTapSuppressNotificationsIcon,
+      onTapConnectionsRoleTag: first2.handleTapConnectionsRoleTag,
+      onTapTimeoutIcon: first2.handleTapTimeoutIcon,
+      onTapButtonActionComponent: first2.handleTapButtonActionComponent,
+      onTapSelectActionComponent: first2.handleTapSelectActionComponent,
+      onTapWelcomeReply: first2.handleTapWelcomeReply,
+      onTapInviteToSpeak: first2.handleTapInviteToSpeak,
+      onTapAutoModerationActions: first2.handleTapAutoModerationActions,
+      onTapAutoModerationFeedback: first2.handleTapAutoModerationFeedback,
+      onTapFollowForumPost: first2.handleTapFollowForumPost,
+      onTapShareForumPost: first2.handleTapShareForumPost,
+      onTapReactionOverflow: first2.handleTapReactionOverflow,
+      onTapNavBar: function handleTapNavBar() {
+        const self = this;
+        const apply = closure_28.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      },
+      onTapCopyText: first2.handleCopyText,
+      onTapOpTag: first2.handleTapOpTag,
+      onTapTag: first2.handleTapTag,
+      onMediaAttachmentPlaybackEnded: first2.handleMediaAttachmentPlaybackEnded,
+      onMediaAttachmentPlaybackStarted: first2.handleMediaAttachmentPlaybackStarted,
+      onVoiceMessagePlaybackFailed: first2.handleVoiceMessagePlaybackFailed,
+      onTapShowAltText: handleTapShowAltText,
+      onTapPostPreviewEmbed: first2.handleTapPostPreviewEmbed,
+      onTapDismissMediaPostSharePrompt: first2.handleTapDismissMediaPostSharePrompt,
+      onTapObscuredMediaLearnMore: first2.handleTapObscuredMediaLearnMore,
+      onTapObscuredMediaToggle: first2.onTapObscuredMediaToggle,
+      onTapSafetyPolicyNoticeEmbed: first2.handleTapSafetyPolicyNoticeEmbed,
+      onTapSafetySystemNotificationCta: first2.handleTapSafetySystemNotificationCta,
+      onTapPollAnswer: first2.handleTapPollAnswer,
+      onTapPollSubmitVote: first2.handleTapPollSubmitVote,
+      onTapPollAction: first2.handleTapPollAction,
+      onLongPressPollImage: first2.handleLongPressPollImage,
+      onTapCtaButton: first2.handleTapCtaButton,
+      onMessageAccessibilityAction: first2.handleMessageAccessibilityAction,
+      onTapForwardFooter: first2.handleTapForwardFooter,
+      onTapInlineForward: first2.handleTapInlineForward,
+      onTapClanTagChiplet: first2.handleTapClanTagChiplet,
+      onTapContentInventoryEntryEmbed: first2.handleTapContentInventoryEntryEmbed,
+      onTapCheckpointCard: first2.handleTapCheckpointCard,
+      onTapSoundmoji: first2.handleTapSoundmoji,
+      onTapAppMessageEmbed: first2.handleTapAppMessageEmbed,
+      onTapPreviewSharedClientTheme: first2.handleTapPreviewSharedClientTheme,
+      onSharedClientThemeViewed: first2.handleSharedClientThemeViewed,
+      children: messages.children,
+      HACK_fixModalInteraction: messages.HACK_fixModalInteraction,
+      onTapTableView: function handleTapTableView() {
+        let isIOSResult = PlatformUtils.isIOS();
+        if (isIOSResult) {
+          isIOSResult = messages.keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
+        }
+        if (isIOSResult) {
+          const current = messages.chatInputRef.current;
+          if (current != null) {
+            current.closeCustomKeyboard();
+          }
+        }
+      },
+      onFirstLayout: function handleFirstLayout(nativeEvent) {
+        nativeEvent = nativeEvent.nativeEvent;
+        handleVisibleMessagesChange({
+          firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex,
+          lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex,
+          firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible,
+          lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible,
+          source: QuestTypes.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT,
+        });
+      },
+      onMediaPlayFinishedAnalytics: handleMediaPlayFinishedAnalytics,
+      onMessageVisibilityChanged: function handleMessageVisibilityChanged(nativeEvent) {
+        nativeEvent = nativeEvent.nativeEvent;
+        handleVisibleMessagesChange({
+          firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex,
+          lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex,
+          firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible,
+          lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible,
+          source: QuestTypes.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED,
+        });
+      },
+    }),
+    findMessageIndex(require("ChatTTITracker").ChatTTITracker, { messages: messages.messages }),
+  ];
+  obj6.children = items4;
+  return ref(closure_18, obj6);
 });
 forwardRefResult.displayName = "Messages";
-const memoResult = react.memo(forwardRefResult, (interactionStates, interactionStates2) => {
-  const tmp3 =
-    shallowEqualDefault(interactionStates, interactionStates2, ["interactionStates"], {
-      shouldWarnLargeObjects: false,
-    }) && shallowEqualDefault(interactionStates.interactionStates, interactionStates2.interactionStates);
-  return tmp3;
-});
-let size = size_mod;
+let size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesRenderer.tsx");
 
-export default memoResult;
+export default noop.memo(
+  forwardRefResult,
+  (interactionStates, interactionStates2) =>
+    discord_common_shallowEqualDefault(interactionStates, interactionStates2, ["interactionStates"], {
+      shouldWarnLargeObjects: false,
+    }) && discord_common_shallowEqualDefault(interactionStates.interactionStates, interactionStates2.interactionStates),
+);

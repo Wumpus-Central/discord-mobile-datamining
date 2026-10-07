@@ -1,51 +1,48 @@
 // discord_app/design/components/Modal/native/Modal.native.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
-import Navigator2 from "../../Navigator/native/Navigator.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import Navigator from "../../Navigator/native/Navigator.native.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");
+
+export const Modal = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp6;
-      const obj = react2;
-      const cResult = obj.c(5);
-      const tmp4 = useSafeAreaInsetsDefault();
-      const sum = NavigatorConstants.NAV_BAR_HEIGHT + tmp4.top;
+      const cResult = c.c(5);
+      const sum = NavigatorConstants.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top;
       if (cResult[0] !== sum) {
         const obj2 = { height: sum };
         cResult[0] = sum;
         cResult[1] = obj2;
-        tmp6 = obj2;
+        let tmp6 = obj2;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] === arg0) {
-        let tmp7;
         if (cResult[3] === tmp6) {
-          tmp7 = cResult[4];
+          let tmp7 = cResult[4];
         }
         return tmp7;
       }
-      const Navigator = Navigator2.Navigator;
+      const obj3 = {};
       const merged = Object.assign(arg0);
-      const tmp9 = <Navigator headerStyle={tmp6} />;
+      obj3.headerStyle = tmp6;
+      const tmp9 = jsx(Navigator.Navigator, {});
       cResult[2] = arg0;
       cResult[3] = tmp6;
       cResult[4] = tmp9;
       tmp7 = tmp9;
+      const tmp4 = useSafeAreaInsetsDefault();
     }
   : (arg0) => {
-      const tmp = useSafeAreaInsetsDefault();
-      const Navigator = Navigator2.Navigator;
+      const obj = {};
       const merged = Object.assign(arg0);
-      ({ height: NavigatorConstants.NAV_BAR_HEIGHT + tmp.top });
-      return <Navigator headerStyle={{ height: NavigatorConstants.NAV_BAR_HEIGHT + tmp.top }} />;
+      const tmp = useSafeAreaInsetsDefault();
+      obj.headerStyle = { height: NavigatorConstants.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top };
+      return jsx(Navigator.Navigator, {});
     };
-const result = size.fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");
-
-export const Modal = tmp3;

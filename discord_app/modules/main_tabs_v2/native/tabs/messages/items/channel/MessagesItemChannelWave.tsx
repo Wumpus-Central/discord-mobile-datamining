@@ -1,34 +1,38 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx
-import Fragment from "../../../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../../../_runtime/00576_react.js";
-import intl2 from "../../../../../../../intl/index.native.tsx";
+import c from "../../../../../../../../_runtime/00576_c.js";
+import util from "../../../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../../design/components/Button/native/Button.native.tsx";
-import react from "../../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const memoResult = react.memo(
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx",
+);
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let first;
-        let hasNameplate;
-        let tmp7;
-        let wavePressed;
-        const obj = react2;
-        const cResult = obj.c(5);
+        const cResult = c.c(5);
         ({ wavePressed, hasNameplate } = arg0);
-        const tmp4 = undefined !== hasNameplate && hasNameplate;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = intl2.intl;
-          const stringResult = intl.string(intl2.t.n8nU4W);
+          const intl = util.intl;
+          const stringResult = intl.string(util.t.n8nU4W);
           cResult[0] = stringResult;
-          first = stringResult;
+          let first = stringResult;
         } else {
           first = cResult[0];
         }
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj2 = {
+            style: { marginTop: 3 },
+            variant: "text-sm/semibold",
+            "aria-hidden": true,
+            children: "\u{1F44B}",
+          };
           const tmp9 = jsx(Text_Text.Text, {
             style: { marginTop: 3 },
             variant: "text-sm/semibold",
@@ -36,7 +40,7 @@ const memoResult = react.memo(
             children: "\u{1F44B}",
           });
           cResult[1] = tmp9;
-          tmp7 = tmp9;
+          let tmp7 = tmp9;
         } else {
           tmp7 = cResult[1];
         }
@@ -45,9 +49,8 @@ const memoResult = react.memo(
           str = "secondary-overlay";
         }
         if (cResult[2] === str) {
-          let tmp10;
           if (cResult[3] === wavePressed) {
-            tmp10 = cResult[4];
+            let tmp10 = cResult[4];
           }
           return tmp10;
         }
@@ -62,24 +65,34 @@ const memoResult = react.memo(
         cResult[3] = wavePressed;
         cResult[4] = tmp11;
         tmp10 = tmp11;
+        tmp4 = undefined !== hasNameplate && hasNameplate;
       }
     : (hasNameplate) => {
         let flag = hasNameplate.hasNameplate;
-        const wavePressed = hasNameplate.wavePressed;
         if (flag === undefined) {
           flag = false;
         }
-        const Button = components_Button_Button.Button;
-        const intl = intl2.intl;
+        const obj = { text: null, icon: null, variant: null, size: "sm", onPress: null };
+        const intl = util.intl;
+        obj.text = intl.string(util.t.n8nU4W);
+        obj.icon = jsx(Text_Text.Text, {
+          style: { marginTop: 3 },
+          variant: "text-sm/semibold",
+          "aria-hidden": true,
+          children: "\u{1F44B}",
+        });
         let str = "secondary";
         if (flag) {
           str = "secondary-overlay";
         }
-        return <Button text={intl.string(intl2.t.n8nU4W)} icon={null} variant={str} size="sm" onPress={wavePressed} />;
+        obj.variant = str;
+        obj.onPress = hasNameplate.wavePressed;
+        return jsx(components_Button_Button.Button, {
+          text: null,
+          icon: null,
+          variant: null,
+          size: "sm",
+          onPress: null,
+        });
       },
 );
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx",
-);
-
-export default memoResult;

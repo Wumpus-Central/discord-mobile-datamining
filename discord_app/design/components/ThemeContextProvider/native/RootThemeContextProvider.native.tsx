@@ -1,31 +1,16 @@
 // discord_app/design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ThemeTypes = Constants.ThemeTypes;
-const jsx = Fragment.jsx;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const ThemeTypes = fn(1096).ThemeTypes;
+const jsx = fn(21).jsx;
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let contrast;
-      let density;
-      let disableAdaptiveTheme;
-      let enabledExperiments;
-      let flags;
-      let gradient;
-      let primaryColor;
-      let reduceAdaptiveTheme;
-      let saturation;
-      let secondaryColor;
-      let theme;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       ({
         children,
         theme,
@@ -73,25 +58,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === num2) {
         if (cResult[1] === str) {
-          if (cResult[2] === (undefined !== disableAdaptiveTheme && disableAdaptiveTheme)) {
+          if (cResult[2] === tmp8) {
             if (cResult[3] === enabledExperiments) {
               if (cResult[4] === num) {
                 if (cResult[5] === tmp7) {
                   if (cResult[6] === tmp5) {
-                    if (cResult[7] === (undefined !== reduceAdaptiveTheme && reduceAdaptiveTheme)) {
+                    if (cResult[7] === tmp9) {
                       if (cResult[8] === num3) {
                         if (cResult[9] === tmp6) {
-                          let tmp10;
                           if (cResult[10] === theme) {
-                            tmp10 = cResult[11];
+                            let tmp10 = cResult[11];
                           }
                           if (cResult[12] === children) {
-                            let tmp12;
                             if (cResult[13] === tmp10) {
-                              tmp12 = cResult[14];
+                              let tmp12 = cResult[14];
                             }
                             return tmp12;
                           }
+                          const obj2 = { value: tmp10, children };
                           const tmp14 = jsx(native.ThemeContext.Provider, { value: tmp10, children });
                           cResult[12] = children;
                           cResult[13] = tmp10;
@@ -107,8 +91,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = native;
-      const themedContext = tmpResult.createThemedContext({
+      const themedContext = native.createThemedContext({
         theme,
         primaryColor: tmp5,
         secondaryColor: tmp6,
@@ -134,48 +117,47 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = theme;
       cResult[11] = themedContext;
       tmp10 = themedContext;
+      const tmpResult = native;
     }
-  : (theme) => {
-      let gradient;
-      let DARK = theme.theme;
-      const children = theme.children;
+  : (children) => {
+      let DARK = children.theme;
       if (DARK === undefined) {
         DARK = gradient.DARK;
       }
-      let primaryColor = theme.primaryColor;
+      let primaryColor = children.primaryColor;
       if (primaryColor === undefined) {
         primaryColor = null;
       }
-      let secondaryColor = theme.secondaryColor;
+      let secondaryColor = children.secondaryColor;
       if (secondaryColor === undefined) {
         secondaryColor = null;
       }
-      gradient = theme.gradient;
+      gradient = children.gradient;
       if (gradient === undefined) {
         gradient = null;
       }
-      let num = theme.flags;
+      let num = children.flags;
       if (num === undefined) {
         num = 0;
       }
-      let num2 = theme.contrast;
+      let num2 = children.contrast;
       if (num2 === undefined) {
         num2 = 1;
       }
-      let num3 = theme.saturation;
+      let num3 = children.saturation;
       if (num3 === undefined) {
         num3 = 1;
       }
-      const enabledExperiments = theme.enabledExperiments;
-      let str = theme.density;
+      const enabledExperiments = children.enabledExperiments;
+      let str = children.density;
       if (str === undefined) {
         str = "compact";
       }
-      let flag = theme.disableAdaptiveTheme;
+      let flag = children.disableAdaptiveTheme;
       if (flag === undefined) {
         flag = false;
       }
-      let flag2 = theme.reduceAdaptiveTheme;
+      let flag2 = children.reduceAdaptiveTheme;
       if (flag2 === undefined) {
         flag2 = false;
       }
@@ -192,75 +174,72 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         flag,
         flag2,
       ];
-      const value = secondaryColor.useMemo(() => {
-        const obj = native;
-        const obj2 = {
-          theme: DARK,
-          primaryColor,
-          secondaryColor,
-          gradient,
-          flags: num,
-          contrast: num2,
-          saturation: num3,
-          enabledExperiments,
-          density: str,
-          disableAdaptiveTheme: flag,
-          reduceAdaptiveTheme: flag2,
-        };
-        return obj.createThemedContext(obj2);
-      }, items);
-      return num(DARK(primaryColor[5]).ThemeContext.Provider, { value, children });
+      value = secondaryColor.useMemo(
+        () =>
+          native.createThemedContext({
+            theme: DARK,
+            primaryColor,
+            secondaryColor,
+            gradient,
+            flags: num,
+            contrast: num2,
+            saturation: num3,
+            enabledExperiments,
+            density: str,
+            disableAdaptiveTheme: flag,
+            reduceAdaptiveTheme: flag2,
+          }),
+        items,
+      );
+      return num(DARK(primaryColor[5]).ThemeContext.Provider, { value, children: children.children });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (children) => {
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(5);
-      const obj2 = native;
-      const themeContext = obj2.useThemeContext();
-      if (cResult[0] !== themeContext) {
-        const obj3 = { primaryColor: null, secondaryColor: null, gradient: null };
-        const createThemedContext = native.createThemedContext;
-        native;
-        const merged = Object.assign(themeContext);
-        const themedContext = createThemedContext(obj3);
-        cResult[0] = themeContext;
-        cResult[1] = themedContext;
-        tmp5 = themedContext;
-      } else {
-        tmp5 = cResult[1];
-      }
-      if (cResult[2] === children.children) {
-        let tmp12;
-        if (cResult[3] === tmp5) {
-          tmp12 = cResult[4];
-        }
-        return tmp12;
-      }
-      const tmp13 = jsx(native.ThemeContext.Provider, { value: tmp5, children: children.children });
-      cResult[2] = children.children;
-      cResult[3] = tmp5;
-      cResult[4] = tmp13;
-      tmp12 = tmp13;
-    }
-  : (children) => {
-      let themeContext;
-      let obj = themeContext(4595);
-      themeContext = obj.useThemeContext();
-      const items = [themeContext];
-      const memo = react.useMemo(() => {
-        const obj = { primaryColor: null, secondaryColor: null, gradient: null };
-        const createThemedContext = native.createThemedContext;
-        native;
-        const merged = Object.assign(themeContext);
-        return createThemedContext(obj);
-      }, items);
-      return jsx(themeContext(4595).ThemeContext.Provider, { value: memo, children: children.children });
-    };
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx",
 );
 
 export const RootThemeContextProvider = tmp2;
-export const DisableCustomTheme = tmp3;
+export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
+  ? (children) => {
+      const cResult = c.c(5);
+      const themeContext = native.useThemeContext();
+      if (cResult[0] !== themeContext) {
+        const obj3 = {};
+        const merged = Object.assign(themeContext);
+        obj3.primaryColor = null;
+        obj3.secondaryColor = null;
+        obj3.gradient = null;
+        const themedContext = native.createThemedContext(obj3);
+        cResult[0] = themeContext;
+        cResult[1] = themedContext;
+        let tmp5 = themedContext;
+        const tmpResult = native;
+      } else {
+        tmp5 = cResult[1];
+      }
+      if (cResult[2] === children.children) {
+        if (cResult[3] === tmp5) {
+          let tmp11 = cResult[4];
+        }
+        return tmp11;
+      }
+      const tmp12 = jsx(native.ThemeContext.Provider, { value: tmp5, children: children.children });
+      cResult[2] = children.children;
+      cResult[3] = tmp5;
+      cResult[4] = tmp12;
+      tmp11 = tmp12;
+      const obj4 = { value: tmp5, children: children.children };
+    }
+  : (children) => {
+      themeContext = themeContext(4595).useThemeContext();
+      const items = [themeContext];
+      const memo = noop.useMemo(() => {
+        const obj2 = {};
+        const merged = Object.assign(themeContext);
+        obj2.primaryColor = null;
+        obj2.secondaryColor = null;
+        obj2.gradient = null;
+        return native.createThemedContext(obj2);
+      }, items);
+      return jsx(themeContext(4595).ThemeContext.Provider, { value: memo, children: children.children });
+    };

@@ -1,41 +1,35 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import SendMessageIcon from "../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import FloatingActionButton2 from "../../../../design/components/Button/native/FloatingActionButton.native.tsx";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import FloatingActionButton from "../../../../design/components/Button/native/FloatingActionButton.native.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let dependencyMap, importDefault;
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let _slicedToArray = _slicedToArray_mod;
-const StyleSheet = react_native.StyleSheet;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.7;
-let createStyles = createStyles_mod;
-let obj = { sendContainer: obj2, gradient: obj3 };
-obj2 = { top: undefined };
-createStyles = createStyles.createStyles;
+const createStyles = fn(4896);
+let obj = { sendContainer: null, gradient: null };
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj3.top = undefined;
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj3 = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.sendContainer = obj3;
+let obj4 = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-let closure_9 = createStyles(obj);
+obj4.color = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
+obj.gradient = obj4;
+let closure_9 = createStyles.createStyles(obj);
 const __initData = {
   code: "function MediaKeyboardFloatingSendTsx1(){const{animatedIndex,INDEX_HEADER_CHANGE_THRESHOLD,hasUploads}=this.__closure;const isSheetOpen=animatedIndex.get()>INDEX_HEADER_CHANGE_THRESHOLD;return isSheetOpen&&hasUploads;}",
 };
@@ -48,39 +42,32 @@ const __initData3 = {
 const __initData4 = {
   code: "function MediaKeyboardFloatingSendTsx4(visible){const{isSendVisibleSharedValue}=this.__closure;isSendVisibleSharedValue.set(visible);}",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? (animatedIndex) => {
-      let draftType;
-      let first;
-      let tmp = animatedIndex;
-      const obj = animatedIndex(draftType[8]);
-      const cResult = obj.c(5);
+      const cResult = animatedIndex(draftType[8]).c(5);
       animatedIndex = animatedIndex.animatedIndex;
       const channelId = animatedIndex.channelId;
       draftType = animatedIndex.draftType;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UploadAttachmentStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channelId) {
-        let tmp6;
-        let tmp7;
         if (cResult[2] === draftType) {
-          tmp6 = cResult[3];
-          tmp7 = cResult[4];
+          let tmp6 = cResult[3];
+          let tmp7 = cResult[4];
         }
-        const tmpResult = tmp(draftType[9]);
-        const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
-        const tmpResult3 = tmp(draftType[10]);
-        const sharedValue = tmpResult3.useSharedValue(false);
-        const tmpResult4 = tmp(draftType[10]);
+        const stateFromStores = tmp(tmp2[9]).useStateFromStores(first, tmp6, tmp7);
+        const tmpResult = tmp(tmp2[9]);
+        const sharedValue = tmp(tmp2[10]).useSharedValue(false);
+        const tmpResult3 = tmp(tmp2[10]);
         class V {
           constructor() {
-            const tmp = animatedIndex.get() > c8 && stateFromStores;
+            tmp = animatedIndex.get() > c8 && closure_3;
             return tmp;
           }
         }
@@ -95,7 +82,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         fn2.__closure = obj3;
         fn2.__workletHash = 10753585819648;
         fn2.__initData = __initData2;
-        const animatedReaction = tmpResult4.useAnimatedReaction(V, fn2);
+        const animatedReaction = tmp(tmp2[10]).useAnimatedReaction(V, fn2);
         return sharedValue;
       }
       const fn = function o() {
@@ -108,6 +95,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp7 = items1;
       tmp6 = fn;
+      const obj = animatedIndex(draftType[8]);
     }
   : (animatedIndex) => {
       animatedIndex = animatedIndex.animatedIndex;
@@ -115,20 +103,18 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const draftType = animatedIndex.draftType;
       const items = [UploadAttachmentStore];
       const items1 = [channelId, draftType];
-      const obj = animatedIndex(draftType[9]);
-      const stateFromStores = obj.useStateFromStores(
+      const stateFromStores = animatedIndex(draftType[9]).useStateFromStores(
         items,
         () => UploadAttachmentStore.getUploadCount(channelId, draftType) > 0,
         items1,
       );
+      const obj = animatedIndex(draftType[9]);
+      const sharedValue = animatedIndex(draftType[10]).useSharedValue(false);
       const obj2 = animatedIndex(draftType[10]);
-      const sharedValue = obj2.useSharedValue(false);
       const fn = function c() {
-        const tmp = animatedIndex.get() > c8 && stateFromStores;
-        return tmp;
+        return animatedIndex.get() > c8 && stateFromStores;
       };
-      const obj4 = { animatedIndex, INDEX_HEADER_CHANGE_THRESHOLD, hasUploads: stateFromStores };
-      fn.__closure = obj4;
+      fn.__closure = { animatedIndex, INDEX_HEADER_CHANGE_THRESHOLD, hasUploads: stateFromStores };
       fn.__workletHash = 17017286047714;
       fn.__initData = __initData3;
       const fn2 = function l(arg0) {
@@ -137,8 +123,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { isSendVisibleSharedValue: sharedValue };
       fn2.__workletHash = 130474191942;
       fn2.__initData = __initData4;
-      const obj3 = animatedIndex(draftType[10]);
-      const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
+      const animatedReaction = animatedIndex(draftType[10]).useAnimatedReaction(fn, fn2);
       return sharedValue;
     };
 const __initData5 = {
@@ -153,73 +138,54 @@ const __initData7 = {
 const __initData8 = {
   code: "function MediaKeyboardFloatingSendTsx8(){const{sendVisibleSharedValue}=this.__closure;return{pointerEvents:sendVisibleSharedValue.get()?'box-none':'none'};}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
-  react.forwardRef(
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx");
+
+export default noop.memo(
+  noop.forwardRef(
     ReactCompilerGating.isReactCompilerEnabled()
       ? (arg0, arg1) => {
-          let animatedIndex;
-          let bottom;
-          let channelId;
-          let closure_2;
-          let draftType;
-          let items;
-          let items2;
-          let onSend;
-          let require;
-          let obj = react2;
-          const cResult = obj.c(30);
+          const cResult = c.c(30);
           ({ animatedIndex, channelId, draftType, onSend } = arg0);
           const tmp4 = closure_9();
           const tmp6 = bottom(1618)();
-          [bottom, require] = react.useState(null);
-          _slicedToArray(react.useState(null), 2);
+          [bottom, require] = noop.useState(null);
           if (bottom == null) {
             bottom = tmp6.bottom;
           }
           if (cResult[0] === animatedIndex) {
             if (cResult[1] === channelId) {
-              let tmp8;
-              let tmp18;
-              let tmp17;
-              let tmp19;
-              let tmp21;
               if (cResult[2] === draftType) {
-                tmp8 = cResult[3];
+                let tmp8 = cResult[3];
               }
               const tmp10 = closure_14(tmp8);
               dependencyMap = tmp10;
               const fn = function w() {
-                let num;
-                let sum;
-                let withSpring;
-                const obj = { height: sum + nativeDefault.space.PX_32, opacity: withSpring(num) };
-                sum = bottom + nativeDefault.space.PX_64;
-                withSpring = spring.withSpring;
-                num = 0;
-                spring;
+                const obj = { height: null, opacity: null };
+                const sum = bottom + nativeDefault.space.PX_64;
+                obj.height = sum + nativeDefault.space.PX_32;
+                let num = 0;
                 if (closure_2.get()) {
                   num = 1;
                 }
+                obj.opacity = spring.withSpring(num);
                 return obj;
               };
               const obj3 = {
                 insetFab: bottom,
-                tokens: bottom(587),
+                tokens: tmp5(587),
                 withSpring: spring.withSpring,
                 sendVisibleSharedValue: tmp10,
               };
-              const useAnimatedStyle = ReanimatedRexport.useAnimatedStyle;
-              ReanimatedRexport;
               fn.__closure = obj3;
-              let num = 16399716270519;
               fn.__workletHash = 16399716270519;
               fn.__initData = __initData5;
-              const animatedStyle = useAnimatedStyle(fn);
-              const tmpResult2 = ReanimatedRexport;
+              const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
+              const tmpResult = ReanimatedRexport;
               class T {
                 constructor() {
-                  let pointerEvents = "none";
+                  pointerEvents = "none";
                   if (closure_2.get()) {
                     pointerEvents = "box-none";
                   }
@@ -230,217 +196,211 @@ const memoResult = react.memo(
               T.__closure = obj4;
               T.__workletHash = 17338809179807;
               T.__initData = __initData6;
-              const animatedProps = tmpResult2.useAnimatedProps(T);
+              const animatedProps = ReanimatedRexport.useAnimatedProps(T);
               const _Symbol = Symbol;
               if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
                 const point = { x: 0, y: 0 };
                 const point1 = { x: 0, y: 1 };
                 cResult[4] = point;
                 cResult[5] = point1;
-                tmp18 = point1;
-                tmp17 = point;
+                let tmp17 = point1;
+                let tmp16 = point;
               } else {
-                tmp17 = cResult[4];
-                tmp18 = cResult[5];
+                tmp16 = cResult[4];
+                tmp17 = cResult[5];
               }
               if (cResult[6] !== tmp4.gradient.color) {
-                const obj9 = bottom(683)(tmp4.gradient.color);
-                const alphaResult = obj9.alpha(0);
-                const hexResult = alphaResult.hex();
+                const obj10 = tmp5(683)(tmp4.gradient.color);
+                const hexResult = tmp5(683)(tmp4.gradient.color).alpha(0).hex();
                 cResult[6] = tmp4.gradient.color;
                 cResult[7] = hexResult;
-                tmp19 = hexResult;
+                let tmp18 = hexResult;
+                const alphaResult = tmp5(683)(tmp4.gradient.color).alpha(0);
               } else {
-                tmp19 = cResult[7];
+                tmp18 = cResult[7];
               }
               if (cResult[8] !== tmp4.gradient.color) {
-                const obj11 = bottom(683)(tmp4.gradient.color);
-                const hexResult1 = obj11.hex();
+                const hexResult1 = tmp5(683)(tmp4.gradient.color).hex();
                 cResult[8] = tmp4.gradient.color;
                 cResult[9] = hexResult1;
-                tmp21 = hexResult1;
+                let tmp20 = hexResult1;
+                const obj12 = tmp5(683)(tmp4.gradient.color);
               } else {
-                tmp21 = cResult[9];
+                tmp20 = cResult[9];
               }
-              if (cResult[10] === tmp19) {
-                let tmp23;
-                if (cResult[11] === tmp21) {
-                  tmp23 = cResult[12];
+              if (cResult[10] === tmp18) {
+                if (cResult[11] === tmp20) {
+                  let tmp22 = cResult[12];
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                   class K {
                     constructor() {
-                      return { setInsetFab: require };
+                      obj = { setInsetFab: closure_0 };
+                      return obj;
                     }
                   }
                   cResult[13] = K;
                 } else {
                   class K {
                     constructor() {
-                      return { setInsetFab: require };
+                      obj = { setInsetFab: closure_0 };
+                      return obj;
                     }
                   }
                 }
-                const imperativeHandle = react.useImperativeHandle(arg1, K);
+                const imperativeHandle = noop.useImperativeHandle(arg1, K);
                 if (cResult[14] === animatedStyle) {
                   class K {
                     constructor() {
-                      return { setInsetFab: require };
+                      obj = { setInsetFab: closure_0 };
+                      return obj;
                     }
                   }
-                  if (cResult[17] === tmp23) {
-                    let tmp36;
-                    let tmp35;
+                  if (cResult[17] === tmp22) {
                     class K {
                       constructor() {
-                        return { setInsetFab: require };
+                        obj = { setInsetFab: closure_0 };
+                        return obj;
                       }
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
                       class K {
                         constructor() {
-                          return { setInsetFab: require };
+                          obj = { setInsetFab: closure_0 };
+                          return obj;
                         }
                       }
-                      const stringResult = obj14.string(intl2.t.TXNS7S);
-                      const tmp39 = closure_6(SendMessageIcon.SendMessageIcon, {});
+                      const stringResult = obj15.string(util.t.TXNS7S);
+                      const tmp38 = closure_6(SendMessageIcon.SendMessageIcon, {});
                       cResult[20] = stringResult;
-                      cResult[21] = tmp39;
-                      tmp36 = tmp39;
-                      tmp35 = stringResult;
+                      cResult[21] = tmp38;
+                      let tmp35 = tmp38;
+                      const tmp34 = stringResult;
                     } else {
                       class K {
                         constructor() {
-                          return { setInsetFab: require };
+                          obj = { setInsetFab: closure_0 };
+                          return obj;
                         }
                       }
-                      tmp36 = cResult[21];
+                      tmp35 = cResult[21];
                     }
                     if (cResult[22] === bottom) {
                       class K {
                         constructor() {
-                          return { setInsetFab: require };
+                          obj = { setInsetFab: closure_0 };
+                          return obj;
                         }
                       }
                       if (cResult[25] === animatedProps) {
                         class K {
                           constructor() {
-                            return { setInsetFab: require };
+                            obj = { setInsetFab: closure_0 };
+                            return obj;
                           }
                         }
                       }
-                      const obj5 = { style: tmp27, animatedProps, children: items };
-                      items = [tmp28, tmp40];
+                      const obj5 = { style: tmp26, animatedProps, children: null };
+                      const items = [tmp27, tmp39];
+                      obj5.children = items;
+                      const tmp44 = closure_7(tmp5(4618).View, obj5);
                       cResult[25] = animatedProps;
-                      cResult[26] = tmp40;
-                      cResult[27] = tmp27;
-                      cResult[28] = tmp28;
-                      const tmp45 = closure_7(bottom(4618).View, obj5);
+                      cResult[26] = tmp39;
+                      cResult[27] = tmp26;
+                      cResult[28] = tmp27;
                       class T {
                         constructor() {
-                          let pointerEvents = "none";
+                          pointerEvents = "none";
                           if (closure_2.get()) {
                             pointerEvents = "box-none";
                           }
                           return { pointerEvents };
                         }
                       }
-                      cResult[29] = tmp45;
+                      cResult[29] = tmp44;
                     }
-                    const obj6 = { accessibilityLabel: tmp35, icon: tmp36, onPress: onSend, positionBottom: bottom };
+                    const obj6 = { accessibilityLabel: tmp34, icon: tmp35, onPress: onSend, positionBottom: bottom };
+                    const tmp41 = closure_6(FloatingActionButton.FloatingActionButton, obj6);
                     cResult[22] = bottom;
                     cResult[23] = onSend;
-                    cResult[24] = closure_6(FloatingActionButton2.FloatingActionButton, obj6);
-                    const tmp42 = closure_6(FloatingActionButton2.FloatingActionButton, obj6);
+                    cResult[24] = tmp41;
                   }
-                  const obj7 = { style: tmp4.gradient, pointerEvents: "none" };
-                  const tmp5Result = bottom(5612);
-                  const merged = Object.assign(tmp23);
-                  cResult[17] = tmp23;
+                  const obj7 = { style: tmp4.gradient };
+                  const merged = Object.assign(tmp22);
+                  obj7.pointerEvents = "none";
+                  const tmp33 = closure_6(tmp5(5612), obj7);
+                  cResult[17] = tmp22;
                   cResult[18] = tmp4.gradient;
-                  cResult[19] = closure_6(tmp5Result, obj7);
-                  const tmp34 = closure_6(tmp5Result, obj7);
+                  cResult[19] = tmp33;
+                  const tmp5Result = tmp5(5612);
                 }
                 const items1 = [animatedStyle, tmp4.sendContainer];
                 cResult[14] = animatedStyle;
                 cResult[15] = tmp4.sendContainer;
                 cResult[16] = items1;
               }
-              const obj8 = { start: tmp17, end: tmp18, colors: items2 };
-              items2 = [tmp19, tmp21];
-              cResult[10] = tmp19;
-              cResult[11] = tmp21;
+              const obj8 = { start: tmp16, end: tmp17, colors: null };
+              const items2 = [tmp18, tmp20];
+              obj8.colors = items2;
+              cResult[10] = tmp18;
+              cResult[11] = tmp20;
               cResult[12] = obj8;
-              tmp23 = obj8;
+              tmp22 = obj8;
+              const tmpResult2 = ReanimatedRexport;
             }
           }
-          const obj10 = { animatedIndex, channelId, draftType };
+          const obj9 = { animatedIndex, channelId, draftType };
           cResult[0] = animatedIndex;
           cResult[1] = channelId;
           cResult[2] = draftType;
-          cResult[3] = obj10;
-          tmp8 = obj10;
+          cResult[3] = obj9;
+          tmp8 = obj9;
+          const tmp7 = _slicedToArray(noop.useState(null), 2);
         }
       : (arg0, arg1) => {
-          let animatedIndex;
-          let bottom;
-          let c1;
-          let channelId;
-          let closure_0;
-          let closure_3;
-          let draftType;
-          let intl;
-          let items1;
-          let items2;
-          let onSend;
           importDefault = undefined;
           bottom = undefined;
           _slicedToArray = undefined;
           ({ animatedIndex, channelId, draftType, onSend } = arg0);
           const tmp = closure_9();
           const _require = tmp;
-          const tmp2 = importDefault;
           const tmp4 = require("useSafeAreaInsets")();
-          [bottom, c1] = react.useState(null);
-          _slicedToArray(react.useState(null), 2);
+          [bottom, c1] = noop.useState(null);
           if (bottom == null) {
             bottom = tmp4.bottom;
           }
           const tmp6 = closure_14({ animatedIndex, channelId, draftType });
           _slicedToArray = tmp6;
-          let obj2 = require("ReanimatedRexport");
+          const tmp5 = _slicedToArray(noop.useState(null), 2);
           const fn = function b() {
-            let num;
-            let sum;
-            let withSpring;
-            const obj = { height: sum + nativeDefault.space.PX_32, opacity: withSpring(num) };
-            sum = bottom + nativeDefault.space.PX_64;
-            withSpring = spring.withSpring;
-            num = 0;
-            spring;
+            const obj = { height: null, opacity: null };
+            const sum = bottom + nativeDefault.space.PX_64;
+            obj.height = sum + nativeDefault.space.PX_32;
+            let num = 0;
             if (closure_3.get()) {
               num = 1;
             }
+            obj.opacity = spring.withSpring(num);
             return obj;
           };
+          let obj2 = require("ReanimatedRexport");
           fn.__closure = {
             insetFab: bottom,
-            tokens: tmp2(bottom[6]),
+            tokens: require("native"),
             withSpring: require("spring").withSpring,
             sendVisibleSharedValue: tmp6,
           };
           fn.__workletHash = 14820101088757;
           fn.__initData = __initData7;
-          ({
+          const animatedStyle = obj2.useAnimatedStyle(fn);
+          const obj3 = {
             insetFab: bottom,
-            tokens: tmp2(bottom[6]),
+            tokens: require("native"),
             withSpring: require("spring").withSpring,
             sendVisibleSharedValue: tmp6,
-          });
-          const animatedStyle = obj2.useAnimatedStyle(fn);
-          let obj4 = require("ReanimatedRexport");
+          };
           const fn2 = function p() {
             let pointerEvents = "none";
             if (closure_3.get()) {
@@ -452,39 +412,34 @@ const memoResult = react.memo(
           fn2.__workletHash = 7153934955217;
           fn2.__initData = __initData8;
           let items = [tmp.gradient.color];
-          const animatedProps = obj4.useAnimatedProps(fn2);
-          const memo = react.useMemo(() => {
-            let items;
-            const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items };
-            items = [,];
+          const animatedProps = require("ReanimatedRexport").useAnimatedProps(fn2);
+          const memo = noop.useMemo(() => {
+            const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
             const obj2 = _modDef683(closure_0.gradient.color);
-            const alphaResult = obj2.alpha(0);
-            items[0] = alphaResult.hex();
-            const obj4 = _modDef683(closure_0.gradient.color);
-            items[1] = obj4.hex();
+            const items = [_modDef683(closure_0.gradient.color).alpha(0).hex()];
+            const alphaResult = _modDef683(closure_0.gradient.color).alpha(0);
+            items[1] = _modDef683(closure_0.gradient.color).hex();
+            obj.colors = items;
             return obj;
           }, items);
-          const imperativeHandle = react.useImperativeHandle(arg1, () => ({ setInsetFab }));
-          const obj5 = { style: items1, animatedProps, children: items2 };
-          items1 = [animatedStyle, tmp.sendContainer];
-          const View = tmp2(tmp3[10]).View;
-          const obj6 = { style: tmp.gradient, pointerEvents: "none" };
-          const tmp2Result = tmp2(bottom[14]);
+          const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ setInsetFab }));
+          const obj5 = { style: null, animatedProps, children: null };
+          const items1 = [animatedStyle, tmp.sendContainer];
+          obj5.style = items1;
+          const obj6 = { style: tmp.gradient };
+          const obj4 = require("ReanimatedRexport");
           const merged = Object.assign(memo);
-          items2 = [closure_6(tmp2Result, obj6)];
-          const obj7 = {
-            accessibilityLabel: intl.string(require("intl").t.TXNS7S),
-            icon: closure_6(require("SendMessageIcon").SendMessageIcon, {}),
-            onPress: onSend,
-            positionBottom: bottom,
-          };
-          const FloatingActionButton = require("FloatingActionButton").FloatingActionButton;
-          intl = require("intl").intl;
-          items2[1] = closure_6(FloatingActionButton, obj7);
-          return closure_7(View, obj5);
+          obj6.pointerEvents = "none";
+          const items2 = [closure_6(require("LinearGradient"), obj6)];
+          const obj7 = { accessibilityLabel: null, icon: null, onPress: null, positionBottom: null };
+          const intl = require("util").intl;
+          obj7.accessibilityLabel = intl.string(require("util").t.TXNS7S);
+          obj7.icon = closure_6(require("SendMessageIcon").SendMessageIcon, {});
+          obj7.onPress = onSend;
+          obj7.positionBottom = bottom;
+          items2[1] = closure_6(require("FloatingActionButton").FloatingActionButton, obj7);
+          obj5.children = items2;
+          return closure_7(require("ReanimatedRexport").View, obj5);
         },
   ),
 );
-let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx");
-
-export default memoResult;

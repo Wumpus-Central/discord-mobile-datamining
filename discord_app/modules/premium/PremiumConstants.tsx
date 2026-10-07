@@ -1,42 +1,12 @@
 // discord_app/modules/premium/PremiumConstants.tsx
 import FractionalPremiumSKUs from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
-import intl from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import EmojiConstants from "../emojis/EmojiConstants.tsx";
 import BadgeRarity from "../../../discord_common/js/shared/shared-constants/BadgeRarity.tsx";
 import gift_intent_type from "../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_intent_type.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let BITRATE_MAX;
-let BoostedGuildTiers;
-let GuildFeatures;
-let MAX_ATTACHMENT_SIZE;
-let MAX_STAGE_VIDEO_USER_LIMIT_TIER01;
-let MAX_STAGE_VIDEO_USER_LIMIT_TIER2;
-let MAX_STAGE_VIDEO_USER_LIMIT_TIER3;
-let items14;
-let items15;
-let items16;
-let items17;
-let items18;
-let items19;
-let items20;
-let items21;
-let items22;
-let items23;
-let items24;
-let items25;
-let items26;
-let obj30;
-let obj31;
-let obj32;
-let obj33;
-let obj34;
-let obj35;
-let obj36;
-let obj37;
-let obj38;
-let obj39;
 ({
   BoostedGuildTiers,
   MAX_ATTACHMENT_SIZE,
@@ -53,7 +23,6 @@ const items = [
   { id: "tier-1", value: obj.TIER_1, label: "Classic" },
   { id: "tier-2", value: obj.TIER_2, label: "Standard" },
 ];
-const DEFAULT_EMOJI_SLOTS = EmojiConstants.DEFAULT_EMOJI_SLOTS;
 const obj2 = {
   NONE: "628379670982688768",
   TIER_0: "978380684370378762",
@@ -66,16 +35,14 @@ const items1 = [,];
 ({ TIER_0: arr2[0], TIER_2: arr2[1] } = obj2);
 const items2 = [, , , ,];
 ({ NONE: arr3[0], TIER_0: arr3[1], TIER_1: arr3[2], TIER_2: arr3[3], GUILD: arr3[4] } = obj2);
-const obj3 = {
+const frozen = Object.freeze({ [obj.TIER_0]: 0, [obj.TIER_1]: 1, [obj.TIER_2]: 2 });
+const frozen1 = Object.freeze({
   [obj2.TIER_0]: obj.TIER_0,
   [obj2.TIER_1]: obj.TIER_1,
   [obj2.TIER_2]: obj.TIER_2,
   [obj2.NONE]: obj.TIER_2,
   [obj2.LEGACY]: obj.TIER_2,
-};
-const frozen = Object.freeze({ [obj.TIER_0]: 0, [obj.TIER_1]: 1, [obj.TIER_2]: 2 });
-const obj4 = { [obj.TIER_0]: obj2.TIER_0, [obj.TIER_1]: obj2.TIER_1, [obj.TIER_2]: obj2.TIER_2 };
-const frozen1 = Object.freeze(obj3);
+});
 const obj5 = {
   NONE_MONTH: "628379151761408000",
   NONE_YEAR: "628381571568631808",
@@ -111,7 +78,7 @@ const items3 = [, , , , , , , , , ,];
   PREMIUM_MONTH_LEGACY: arr4[9],
   PREMIUM_YEAR_LEGACY: arr4[10],
 } = obj5);
-const frozen2 = Object.freeze(obj4);
+const frozen2 = Object.freeze({ [obj.TIER_0]: obj2.TIER_0, [obj.TIER_1]: obj2.TIER_1, [obj.TIER_2]: obj2.TIER_2 });
 const items4 = [, , ,];
 ({
   PREMIUM_MONTH_TIER_2: arr5[0],
@@ -119,6 +86,15 @@ const items4 = [, , ,];
   PREMIUM_6_MONTH_TIER_2: arr5[2],
   PREMIUM_YEAR_TIER_2: arr5[3],
 } = obj5);
+const obj3 = {
+  [obj2.TIER_0]: obj.TIER_0,
+  [obj2.TIER_1]: obj.TIER_1,
+  [obj2.TIER_2]: obj.TIER_2,
+  [obj2.NONE]: obj.TIER_2,
+  [obj2.LEGACY]: obj.TIER_2,
+};
+const obj4 = { [obj.TIER_0]: obj2.TIER_0, [obj.TIER_1]: obj2.TIER_1, [obj.TIER_2]: obj2.TIER_2 };
+const set = new Set(items3);
 const items5 = [, , ,];
 ({
   PREMIUM_MONTH_GUILD: arr6[0],
@@ -126,39 +102,182 @@ const items5 = [, , ,];
   PREMIUM_6_MONTH_GUILD: arr6[2],
   PREMIUM_YEAR_GUILD: arr6[3],
 } = obj5);
-const set = new Set(items3);
+const set1 = new Set(items4);
 const items6 = [, ,];
 ({ PREMIUM_MONTH_TIER_0: arr7[0], PREMIUM_MONTH_TIER_1: arr7[1], PREMIUM_MONTH_TIER_2: arr7[2] } = obj5);
-const set1 = new Set(items4);
+const set2 = new Set(items5);
 const items7 = [, , ,];
 ({ NONE_MONTH: arr8[0], NONE_3_MONTH: arr8[1], NONE_6_MONTH: arr8[2], NONE_YEAR: arr8[3] } = obj5);
-const set2 = new Set(items5);
-const obj6 = {
+const set3 = new Set(items6);
+const frozen3 = Object.freeze({
   [obj2.TIER_0]: obj5.PREMIUM_MONTH_TIER_0,
   [obj2.TIER_1]: obj5.PREMIUM_MONTH_TIER_1,
   [obj2.TIER_2]: obj5.PREMIUM_MONTH_TIER_2,
   [obj2.NONE]: undefined,
   [obj2.GUILD]: undefined,
   [obj2.LEGACY]: undefined,
-};
-const obj7 = {
+});
+const obj8 = { MONTH: 1, [1]: "MONTH", YEAR: 2, [2]: "YEAR", DAY: 3, [3]: "DAY" };
+const obj9 = {};
+const frozen4 = Object.freeze({
   [obj2.TIER_0]: obj5.PREMIUM_YEAR_TIER_0,
   [obj2.TIER_1]: obj5.PREMIUM_YEAR_TIER_1,
   [obj2.TIER_2]: obj5.PREMIUM_YEAR_TIER_2,
   [obj2.NONE]: undefined,
   [obj2.GUILD]: undefined,
   [obj2.LEGACY]: undefined,
-};
-const set3 = new Set(items6);
-const set4 = new Set(items7);
-const frozen3 = Object.freeze(obj6);
-const obj8 = { MONTH: 1, [1]: "MONTH", YEAR: 2, [2]: "YEAR", DAY: 3, [3]: "DAY" };
-const obj9 = {};
-const frozen4 = Object.freeze(obj7);
-obj9[obj.TIER_0] = intl.t["t9uG/o"];
-obj9[obj.TIER_1] = intl.t.FSOz78;
-obj9[obj.TIER_2] = intl.t.lG6a5x;
+});
+obj9[obj.TIER_0] = util.t["t9uG/o"];
+obj9[obj.TIER_1] = util.t.FSOz78;
+obj9[obj.TIER_2] = util.t.lG6a5x;
+const frozen5 = Object.freeze(obj9);
 const items8 = [obj5.PREMIUM_MONTH_TIER_2];
+const frozen6 = Object.freeze({
+  [obj5.NONE_MONTH]: {
+    id: obj5.NONE_MONTH,
+    name: "None Monthly",
+    skuId: obj2.NONE,
+    interval: obj8.MONTH,
+    intervalCount: 1,
+  },
+  [obj5.NONE_YEAR]: {
+    id: obj5.NONE_YEAR,
+    name: "None Yearly",
+    skuId: obj2.NONE,
+    interval: obj8.YEAR,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_MONTH_TIER_0]: {
+    id: obj5.PREMIUM_MONTH_TIER_0,
+    name: "Nitro Basic Monthly",
+    premiumType: obj.TIER_0,
+    skuId: obj2.TIER_0,
+    interval: obj8.MONTH,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_YEAR_TIER_0]: {
+    id: obj5.PREMIUM_YEAR_TIER_0,
+    name: "Nitro Basic Yearly",
+    premiumType: obj.TIER_0,
+    skuId: obj2.TIER_0,
+    interval: obj8.YEAR,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_MONTH_TIER_1]: {
+    id: obj5.PREMIUM_MONTH_TIER_1,
+    name: "Nitro Classic Monthly",
+    premiumType: obj.TIER_1,
+    skuId: obj2.TIER_1,
+    interval: obj8.MONTH,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_YEAR_TIER_1]: {
+    id: obj5.PREMIUM_YEAR_TIER_1,
+    name: "Nitro Classic Yearly",
+    premiumType: obj.TIER_1,
+    skuId: obj2.TIER_1,
+    interval: obj8.YEAR,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_MONTH_TIER_2]: {
+    id: obj5.PREMIUM_MONTH_TIER_2,
+    name: "Nitro Monthly",
+    premiumType: obj.TIER_2,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_YEAR_TIER_2]: {
+    id: obj5.PREMIUM_YEAR_TIER_2,
+    name: "Nitro Yearly",
+    premiumType: obj.TIER_2,
+    skuId: obj2.TIER_2,
+    interval: obj8.YEAR,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_MONTH_GUILD]: {
+    id: obj5.PREMIUM_MONTH_GUILD,
+    name: "Nitro Server Boost Monthly",
+    skuId: obj2.GUILD,
+    interval: obj8.MONTH,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_YEAR_GUILD]: {
+    id: obj5.PREMIUM_YEAR_GUILD,
+    name: "Nitro Server Boost Yearly",
+    skuId: obj2.GUILD,
+    interval: obj8.YEAR,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_3_MONTH_TIER_2]: {
+    id: obj5.PREMIUM_3_MONTH_TIER_2,
+    name: "Nitro Three Month",
+    premiumType: obj.TIER_2,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
+    intervalCount: 3,
+  },
+  [obj5.PREMIUM_6_MONTH_TIER_2]: {
+    id: obj5.PREMIUM_6_MONTH_TIER_2,
+    name: "Nitro Six Month",
+    premiumType: obj.TIER_2,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
+    intervalCount: 6,
+  },
+  [obj5.PREMIUM_3_MONTH_GUILD]: {
+    id: obj5.PREMIUM_3_MONTH_GUILD,
+    name: "Nitro Server Boost Three Month",
+    skuId: obj2.GUILD,
+    interval: obj8.MONTH,
+    intervalCount: 3,
+  },
+  [obj5.PREMIUM_6_MONTH_GUILD]: {
+    id: obj5.PREMIUM_6_MONTH_GUILD,
+    name: "Nitro Server Boost Six Month",
+    skuId: obj2.GUILD,
+    interval: obj8.MONTH,
+    intervalCount: 6,
+  },
+  [obj5.NONE_3_MONTH]: {
+    id: obj5.NONE_3_MONTH,
+    name: "None Three Month",
+    skuId: obj2.NONE,
+    interval: obj8.MONTH,
+    intervalCount: 3,
+  },
+  [obj5.NONE_6_MONTH]: {
+    id: obj5.NONE_6_MONTH,
+    name: "None Six Month",
+    skuId: obj2.NONE,
+    interval: obj8.MONTH,
+    intervalCount: 6,
+  },
+  [obj5.PREMIUM_MONTH_LEGACY]: {
+    id: obj5.PREMIUM_MONTH_LEGACY,
+    name: "Nitro Monthly (Legacy)",
+    premiumType: obj.TIER_2,
+    skuId: obj2.LEGACY,
+    interval: obj8.MONTH,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_YEAR_LEGACY]: {
+    id: obj5.PREMIUM_YEAR_LEGACY,
+    name: "Nitro Classic Yearly (Legacy)",
+    premiumType: obj.TIER_2,
+    skuId: obj2.LEGACY,
+    interval: obj8.YEAR,
+    intervalCount: 1,
+  },
+  [obj5.PREMIUM_GROUP_MONTH]: {
+    id: obj5.PREMIUM_GROUP_MONTH,
+    name: "Nitro Squad Monthly",
+    premiumType: obj.TIER_2,
+    skuId: obj2.TIER_2,
+    interval: obj8.MONTH,
+    intervalCount: 1,
+  },
+});
 const obj10 = { id: obj5.NONE_MONTH, name: "None Monthly", skuId: obj2.NONE, interval: obj8.MONTH, intervalCount: 1 };
 const obj11 = { id: obj5.NONE_YEAR, name: "None Yearly", skuId: obj2.NONE, interval: obj8.YEAR, intervalCount: 1 };
 const obj12 = {
@@ -291,28 +410,23 @@ const obj28 = {
   interval: obj8.MONTH,
   intervalCount: 1,
 };
-const freezeResult = freeze(obj9);
-const frozen5 = Object.freeze({
-  [obj5.NONE_MONTH]: obj10,
-  [obj5.NONE_YEAR]: obj11,
-  [obj5.PREMIUM_MONTH_TIER_0]: obj12,
-  [obj5.PREMIUM_YEAR_TIER_0]: obj13,
-  [obj5.PREMIUM_MONTH_TIER_1]: obj14,
-  [obj5.PREMIUM_YEAR_TIER_1]: obj15,
-  [obj5.PREMIUM_MONTH_TIER_2]: obj16,
-  [obj5.PREMIUM_YEAR_TIER_2]: obj17,
-  [obj5.PREMIUM_MONTH_GUILD]: obj18,
-  [obj5.PREMIUM_YEAR_GUILD]: obj19,
-  [obj5.PREMIUM_3_MONTH_TIER_2]: obj20,
-  [obj5.PREMIUM_6_MONTH_TIER_2]: obj21,
-  [obj5.PREMIUM_3_MONTH_GUILD]: obj22,
-  [obj5.PREMIUM_6_MONTH_GUILD]: obj23,
-  [obj5.NONE_3_MONTH]: obj24,
-  [obj5.NONE_6_MONTH]: obj25,
-  [obj5.PREMIUM_MONTH_LEGACY]: obj26,
-  [obj5.PREMIUM_YEAR_LEGACY]: obj27,
-  [obj5.PREMIUM_GROUP_MONTH]: obj28,
-});
+const obj6 = {
+  [obj2.TIER_0]: obj5.PREMIUM_MONTH_TIER_0,
+  [obj2.TIER_1]: obj5.PREMIUM_MONTH_TIER_1,
+  [obj2.TIER_2]: obj5.PREMIUM_MONTH_TIER_2,
+  [obj2.NONE]: undefined,
+  [obj2.GUILD]: undefined,
+  [obj2.LEGACY]: undefined,
+};
+const obj7 = {
+  [obj2.TIER_0]: obj5.PREMIUM_YEAR_TIER_0,
+  [obj2.TIER_1]: obj5.PREMIUM_YEAR_TIER_1,
+  [obj2.TIER_2]: obj5.PREMIUM_YEAR_TIER_2,
+  [obj2.NONE]: undefined,
+  [obj2.GUILD]: undefined,
+  [obj2.LEGACY]: undefined,
+};
+const set4 = new Set(items7);
 const items9 = [
   "520373071933079552",
   "902329034132684800",
@@ -333,37 +447,57 @@ const items11 = ["1223319122125783040", "1223380890109870080"];
 const items12 = ["1503844767820152833", "1503844767820152834"];
 const items13 = ["1161363847311785984"];
 const obj29 = {
-  "520373071933079552": obj30,
-  "902329034132684800": obj31,
-  "983601860436819968": obj32,
-  "983601860436819969": obj33,
-  "984244797441048577": obj34,
-  "1004850445463584768": obj35,
-  "1070132870233980928": obj36,
-  "1073698058383917056": obj37,
-  "1268347360493174784": obj38,
-  "1161363847311785984": obj39,
+  "520373071933079552": null,
+  "902329034132684800": null,
+  "983601860436819968": null,
+  "983601860436819969": null,
+  "984244797441048577": null,
+  "1004850445463584768": null,
+  "1070132870233980928": null,
+  "1073698058383917056": null,
+  "1268347360493174784": null,
+  "1161363847311785984": null,
 };
-obj30 = { id: "520373071933079552", skus: items14 };
-items14 = [obj2.TIER_2];
-obj31 = { id: "902329034132684800", skus: items15 };
-items15 = [obj2.TIER_2];
-obj32 = { id: "983601860436819968", skus: items16 };
-items16 = [obj2.TIER_2];
-obj33 = { id: "983601860436819969", skus: items17 };
-items17 = [obj2.TIER_2];
-obj34 = { id: "984244797441048577", skus: items18 };
-items18 = [obj2.TIER_2];
-obj35 = { id: "1004850445463584768", skus: items19 };
-items19 = [obj2.TIER_2];
-obj36 = { id: "1070132870233980928", skus: items20 };
-items20 = [obj2.TIER_0];
-obj37 = { id: "1073698058383917056", skus: items21 };
-items21 = [obj2.TIER_2];
-obj38 = { id: "1268347360493174784", skus: items22 };
-items22 = [obj2.TIER_2];
-obj39 = { id: "1161363847311785984", skus: items23 };
-items23 = [obj2.TIER_2];
+const obj30 = { id: "520373071933079552", skus: null };
+const items14 = [obj2.TIER_2];
+obj30.skus = items14;
+obj29["520373071933079552"] = obj30;
+const obj31 = { id: "902329034132684800", skus: null };
+const items15 = [obj2.TIER_2];
+obj31.skus = items15;
+obj29["902329034132684800"] = obj31;
+const obj32 = { id: "983601860436819968", skus: null };
+const items16 = [obj2.TIER_2];
+obj32.skus = items16;
+obj29["983601860436819968"] = obj32;
+const obj33 = { id: "983601860436819969", skus: null };
+const items17 = [obj2.TIER_2];
+obj33.skus = items17;
+obj29["983601860436819969"] = obj33;
+const obj34 = { id: "984244797441048577", skus: null };
+const items18 = [obj2.TIER_2];
+obj34.skus = items18;
+obj29["984244797441048577"] = obj34;
+const obj35 = { id: "1004850445463584768", skus: null };
+const items19 = [obj2.TIER_2];
+obj35.skus = items19;
+obj29["1004850445463584768"] = obj35;
+const obj36 = { id: "1070132870233980928", skus: null };
+const items20 = [obj2.TIER_0];
+obj36.skus = items20;
+obj29["1070132870233980928"] = obj36;
+const obj37 = { id: "1073698058383917056", skus: null };
+const items21 = [obj2.TIER_2];
+obj37.skus = items21;
+obj29["1073698058383917056"] = obj37;
+const obj38 = { id: "1268347360493174784", skus: null };
+const items22 = [obj2.TIER_2];
+obj38.skus = items22;
+obj29["1268347360493174784"] = obj38;
+const obj39 = { id: "1161363847311785984", skus: null };
+const items23 = [obj2.TIER_2];
+obj39.skus = items23;
+obj29["1161363847311785984"] = obj39;
 const obj40 = {
   PREMIUM_TIER_1: 1,
   [1]: "PREMIUM_TIER_1",
@@ -374,14 +508,7 @@ const obj40 = {
   PREMIUM_TIER_0: 8,
   [8]: "PREMIUM_TIER_0",
 };
-const obj41 = {
-  [obj2.TIER_0]: obj40.PREMIUM_TIER_0,
-  [obj2.TIER_1]: obj40.PREMIUM_TIER_1,
-  [obj2.TIER_2]: obj40.PREMIUM_TIER_2,
-  [obj2.GUILD]: obj40.GUILD_BOOST,
-};
-const set5 = new Set(items8);
-const frozen6 = Object.freeze(obj29);
+const frozen7 = Object.freeze(obj29);
 const obj42 = {
   [BoostedGuildTiers.NONE]: 5,
   [BoostedGuildTiers.TIER_1]: 10,
@@ -405,8 +532,15 @@ const obj44 = {
   [BoostedGuildTiers.TIER_2]: 36,
   [BoostedGuildTiers.TIER_3]: 48,
 };
+const obj41 = {
+  [obj2.TIER_0]: obj40.PREMIUM_TIER_0,
+  [obj2.TIER_1]: obj40.PREMIUM_TIER_1,
+  [obj2.TIER_2]: obj40.PREMIUM_TIER_2,
+  [obj2.GUILD]: obj40.GUILD_BOOST,
+};
+const set5 = new Set(items8);
 const obj46 = {
-  features: items24,
+  features: null,
   limits: {
     emoji: 100,
     bitrate: 128000,
@@ -418,23 +552,11 @@ const obj46 = {
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
   },
 };
-items24 = [,];
-const obj45 = {
-  features: [],
-  limits: {
-    emoji: DEFAULT_EMOJI_SLOTS,
-    bitrate: BITRATE_MAX,
-    fileSize: MAX_ATTACHMENT_SIZE,
-    screenShareQualityFramerate: 30,
-    screenShareQualityResolution: "720p",
-    soundboardSounds: obj44[BoostedGuildTiers.NONE],
-    stickers: obj43[BoostedGuildTiers.NONE],
-    stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
-  },
-};
+const items24 = [,];
 ({ INVITE_SPLASH: arr25[0], ANIMATED_ICON: arr25[1] } = GuildFeatures);
+obj46.features = items24;
 const obj47 = {
-  features: items25,
+  features: null,
   limits: {
     emoji: 150,
     bitrate: 256000,
@@ -446,10 +568,11 @@ const obj47 = {
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
   },
 };
-items25 = [, , ,];
+const items25 = [, , ,];
 ({ INVITE_SPLASH: arr26[0], ANIMATED_ICON: arr26[1], BANNER: arr26[2], ROLE_ICONS: arr26[3] } = GuildFeatures);
+obj47.features = items25;
 const obj48 = {
-  features: items26,
+  features: null,
   limits: {
     emoji: 250,
     bitrate: 384000,
@@ -461,7 +584,7 @@ const obj48 = {
     stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER3,
   },
 };
-items26 = [, , , , ,];
+const items26 = [, , , , ,];
 ({
   INVITE_SPLASH: arr27[0],
   ANIMATED_ICON: arr27[1],
@@ -470,7 +593,8 @@ items26 = [, , , , ,];
   VANITY_URL: arr27[4],
   ROLE_ICONS: arr27[5],
 } = GuildFeatures);
-const frozen7 = Object.freeze(obj41);
+obj48.features = items26;
+const frozen8 = Object.freeze(obj41);
 const items27 = [, , , , , , , ,];
 ({
   PREMIUM_MONTH_TIER_0: arr28[0],
@@ -491,9 +615,20 @@ const items28 = [, , ,];
   PREMIUM_YEAR_GUILD: arr29[3],
 } = obj5);
 const obj49 = { HIGH_STREAMING_QUALITY: "high_streaming_quality", MID_STREAMING_QUALITY: "mid_streaming_quality" };
-const obj50 = { [obj49.HIGH_STREAMING_QUALITY]: obj.TIER_2, [obj49.MID_STREAMING_QUALITY]: obj.TIER_1 };
-const frozen8 = Object.freeze({
-  [BoostedGuildTiers.NONE]: obj45,
+const frozen9 = Object.freeze({
+  [BoostedGuildTiers.NONE]: {
+    features: [],
+    limits: {
+      emoji: EmojiConstants.DEFAULT_EMOJI_SLOTS,
+      bitrate: BITRATE_MAX,
+      fileSize: MAX_ATTACHMENT_SIZE,
+      screenShareQualityFramerate: 30,
+      screenShareQualityResolution: "720p",
+      soundboardSounds: obj44[BoostedGuildTiers.NONE],
+      stickers: obj43[BoostedGuildTiers.NONE],
+      stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
+    },
+  },
   [BoostedGuildTiers.TIER_1]: obj46,
   [BoostedGuildTiers.TIER_2]: obj47,
   [BoostedGuildTiers.TIER_3]: obj48,
@@ -524,17 +659,34 @@ const obj51 = {
   NITROWEEN_STANDARD: 12,
   [12]: "NITROWEEN_STANDARD",
 };
-const frozen9 = Object.freeze(obj50);
 const frozen10 = Object.freeze({
+  [obj49.HIGH_STREAMING_QUALITY]: obj.TIER_2,
+  [obj49.MID_STREAMING_QUALITY]: obj.TIER_1,
+});
+const frozen11 = Object.freeze({
   IS_BLOCKED_IOS: 32,
   IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
   SUPPRESS_NOTIFICATION: 128,
 });
-const frozen11 = Object.freeze({
+const frozen12 = Object.freeze({
   [obj.TIER_0]: { fileSize: 52428800 },
   [obj.TIER_1]: { fileSize: 52428800 },
   [obj.TIER_2]: { fileSize: 524288000 },
 });
+const obj45 = {
+  features: [],
+  limits: {
+    emoji: EmojiConstants.DEFAULT_EMOJI_SLOTS,
+    bitrate: BITRATE_MAX,
+    fileSize: MAX_ATTACHMENT_SIZE,
+    screenShareQualityFramerate: 30,
+    screenShareQualityResolution: "720p",
+    soundboardSounds: obj44[BoostedGuildTiers.NONE],
+    stickers: obj43[BoostedGuildTiers.NONE],
+    stageVideoUsers: MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
+  },
+};
+const obj50 = { [obj49.HIGH_STREAMING_QUALITY]: obj.TIER_2, [obj49.MID_STREAMING_QUALITY]: obj.TIER_1 };
 const items29 = [, ,];
 ({ SNOWGLOBE: arr30[0], BOX: arr30[1], CUP: arr30[2] } = obj51);
 const items30 = [, , ,];
@@ -572,129 +724,131 @@ const items33 = [, , , , , , ,];
 const obj53 = {};
 const obj54 = {
   id: obj52.PREMIUM_TENURE_1_MONTH,
-  nameUnformatted: intl.t.LR1C0a,
-  nameUnformattedNitro: intl.t.tx9Fvw,
+  nameUnformatted: null,
+  nameUnformattedNitro: null,
   tenureReqNumMonths: 1,
   hasWideArt: false,
   glowColor: "#b54913",
-  rarity: BadgeRarity.BadgeRarity.COMMON,
+  rarity: null,
 };
-const set6 = new Set(["PL", "TR"]);
 const combined = items32.concat(items29);
-const PREMIUM_TENURE_1_MONTH = obj52.PREMIUM_TENURE_1_MONTH;
-obj53[PREMIUM_TENURE_1_MONTH] = obj54;
+obj54.nameUnformatted = util.t.LR1C0a;
+obj54.nameUnformattedNitro = util.t.tx9Fvw;
+obj54.rarity = BadgeRarity.BadgeRarity.COMMON;
+obj53[obj52.PREMIUM_TENURE_1_MONTH] = obj54;
+const set6 = new Set(["PL", "TR"]);
 obj53[obj52.PREMIUM_TENURE_3_MONTH] = {
   id: obj52.PREMIUM_TENURE_3_MONTH,
-  nameUnformatted: intl.t["rI1/3H"],
-  nameUnformattedNitro: intl.t.xJNb5C,
+  nameUnformatted: util.t["rI1/3H"],
+  nameUnformattedNitro: util.t.xJNb5C,
   tenureReqNumMonths: 3,
   hasWideArt: false,
   glowColor: "#9e9e9e",
   rarity: BadgeRarity.BadgeRarity.COMMON,
 };
-({
+const obj55 = {
   id: obj52.PREMIUM_TENURE_3_MONTH,
-  nameUnformatted: intl.t["rI1/3H"],
-  nameUnformattedNitro: intl.t.xJNb5C,
+  nameUnformatted: util.t["rI1/3H"],
+  nameUnformattedNitro: util.t.xJNb5C,
   tenureReqNumMonths: 3,
   hasWideArt: false,
   glowColor: "#9e9e9e",
   rarity: BadgeRarity.BadgeRarity.COMMON,
-});
+};
 obj53[obj52.PREMIUM_TENURE_6_MONTH] = {
   id: obj52.PREMIUM_TENURE_6_MONTH,
-  nameUnformatted: intl.t.VkhVKS,
-  nameUnformattedNitro: intl.t["4scBFY"],
+  nameUnformatted: util.t.VkhVKS,
+  nameUnformattedNitro: util.t["4scBFY"],
   tenureReqNumMonths: 6,
   hasWideArt: false,
   glowColor: "#ffa813",
   rarity: BadgeRarity.BadgeRarity.RARE,
 };
-({
+const obj56 = {
   id: obj52.PREMIUM_TENURE_6_MONTH,
-  nameUnformatted: intl.t.VkhVKS,
-  nameUnformattedNitro: intl.t["4scBFY"],
+  nameUnformatted: util.t.VkhVKS,
+  nameUnformattedNitro: util.t["4scBFY"],
   tenureReqNumMonths: 6,
   hasWideArt: false,
   glowColor: "#ffa813",
   rarity: BadgeRarity.BadgeRarity.RARE,
-});
+};
 obj53[obj52.PREMIUM_TENURE_12_MONTH] = {
   id: obj52.PREMIUM_TENURE_12_MONTH,
-  nameUnformatted: intl.t.gzUfNS,
-  nameUnformattedNitro: intl.t["83Jw2B"],
+  nameUnformatted: util.t.gzUfNS,
+  nameUnformattedNitro: util.t["83Jw2B"],
   tenureReqNumMonths: 12,
   hasWideArt: false,
   glowColor: "#5eacc2",
   rarity: BadgeRarity.BadgeRarity.RARE,
 };
-({
+const obj57 = {
   id: obj52.PREMIUM_TENURE_12_MONTH,
-  nameUnformatted: intl.t.gzUfNS,
-  nameUnformattedNitro: intl.t["83Jw2B"],
+  nameUnformatted: util.t.gzUfNS,
+  nameUnformattedNitro: util.t["83Jw2B"],
   tenureReqNumMonths: 12,
   hasWideArt: false,
   glowColor: "#5eacc2",
   rarity: BadgeRarity.BadgeRarity.RARE,
-});
+};
 obj53[obj52.PREMIUM_TENURE_24_MONTH] = {
   id: obj52.PREMIUM_TENURE_24_MONTH,
-  nameUnformatted: intl.t.fuwTPm,
-  nameUnformattedNitro: intl.t.vRSCKv,
+  nameUnformatted: util.t.fuwTPm,
+  nameUnformattedNitro: util.t.vRSCKv,
   tenureReqNumMonths: 24,
   hasWideArt: false,
   glowColor: "#6d5cf2",
   rarity: BadgeRarity.BadgeRarity.EPIC,
 };
-({
+const obj58 = {
   id: obj52.PREMIUM_TENURE_24_MONTH,
-  nameUnformatted: intl.t.fuwTPm,
-  nameUnformattedNitro: intl.t.vRSCKv,
+  nameUnformatted: util.t.fuwTPm,
+  nameUnformattedNitro: util.t.vRSCKv,
   tenureReqNumMonths: 24,
   hasWideArt: false,
   glowColor: "#6d5cf2",
   rarity: BadgeRarity.BadgeRarity.EPIC,
-});
+};
 obj53[obj52.PREMIUM_TENURE_36_MONTH] = {
   id: obj52.PREMIUM_TENURE_36_MONTH,
-  nameUnformatted: intl.t.qNhNk4,
-  nameUnformattedNitro: intl.t.mV86tk,
+  nameUnformatted: util.t.qNhNk4,
+  nameUnformattedNitro: util.t.mV86tk,
   tenureReqNumMonths: 36,
   hasWideArt: false,
   glowColor: "#32c102",
   rarity: BadgeRarity.BadgeRarity.EPIC,
 };
-({
+const obj59 = {
   id: obj52.PREMIUM_TENURE_36_MONTH,
-  nameUnformatted: intl.t.qNhNk4,
-  nameUnformattedNitro: intl.t.mV86tk,
+  nameUnformatted: util.t.qNhNk4,
+  nameUnformattedNitro: util.t.mV86tk,
   tenureReqNumMonths: 36,
   hasWideArt: false,
   glowColor: "#32c102",
   rarity: BadgeRarity.BadgeRarity.EPIC,
-});
+};
 obj53[obj52.PREMIUM_TENURE_60_MONTH] = {
   id: obj52.PREMIUM_TENURE_60_MONTH,
-  nameUnformatted: intl.t["wvX+eD"],
-  nameUnformattedNitro: intl.t.WcsLxW,
+  nameUnformatted: util.t["wvX+eD"],
+  nameUnformattedNitro: util.t.WcsLxW,
   tenureReqNumMonths: 60,
   hasWideArt: true,
   glowColor: "#f29cc3",
   rarity: BadgeRarity.BadgeRarity.MYTHIC,
 };
-({
+const obj60 = {
   id: obj52.PREMIUM_TENURE_60_MONTH,
-  nameUnformatted: intl.t["wvX+eD"],
-  nameUnformattedNitro: intl.t.WcsLxW,
+  nameUnformatted: util.t["wvX+eD"],
+  nameUnformattedNitro: util.t.WcsLxW,
   tenureReqNumMonths: 60,
   hasWideArt: true,
   glowColor: "#f29cc3",
   rarity: BadgeRarity.BadgeRarity.MYTHIC,
-});
+};
 obj53[obj52.PREMIUM_TENURE_72_MONTH] = {
   id: obj52.PREMIUM_TENURE_72_MONTH,
-  nameUnformatted: intl.t["/menIw"],
-  nameUnformattedNitro: intl.t["Z/qgMK"],
+  nameUnformatted: util.t["/menIw"],
+  nameUnformattedNitro: util.t["Z/qgMK"],
   tenureReqNumMonths: 72,
   hasWideArt: true,
   glowColor: "#078292",
@@ -704,15 +858,6 @@ const obj62 = { HOUR: 1, [1]: "HOUR", DAY: 2, [2]: "DAY" };
 const items34 = [obj62.HOUR, 1];
 const items35 = [obj62.DAY, 1];
 const items36 = [obj62.DAY, 3];
-({
-  id: obj52.PREMIUM_TENURE_72_MONTH,
-  nameUnformatted: intl.t["/menIw"],
-  nameUnformattedNitro: intl.t["Z/qgMK"],
-  tenureReqNumMonths: 72,
-  hasWideArt: true,
-  glowColor: "#078292",
-  rarity: BadgeRarity.BadgeRarity.MYTHIC,
-});
 const result = size.fileFinishedImporting("modules/premium/PremiumConstants.tsx");
 
 export const GiftIntentType = gift_intent_type.GiftIntentType;
@@ -750,8 +895,8 @@ export const DiscountUserUsageLimitIntervalTypes = {
   YEAR: 4,
   [4]: "YEAR",
 };
-export const PREMIUM_TYPE_DISPLAY_NAME = freezeResult;
-export const SubscriptionPlanInfo = frozen5;
+export const PREMIUM_TYPE_DISPLAY_NAME = frozen5;
+export const SubscriptionPlanInfo = frozen6;
 export const PAUSE_ELIGIBLE_PLANS = set5;
 export const PREMIUM_YEARLY_DISCOUNT_PERCENT = 16;
 export const PREMIUM_6_MONTH_DISCOUNT_PERCENT = 8;
@@ -814,7 +959,7 @@ export const TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT = items13;
 export const DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT = [];
 export const DEFAULT_SOUND_SLOTS = 8;
 export const MORE_SOUNDBOARD_SOUNDS = 200;
-export const SubscriptionTrials = frozen6;
+export const SubscriptionTrials = frozen7;
 export const PremiumUpsellTypes = {
   ANIMATED_GUILD_BANNER_TOOLTIP: "animated_guild_banner_tooltip",
   EMOJI_PICKER_SEARCH: "emoji_picker_search",
@@ -917,7 +1062,7 @@ export const PremiumUpsellTypes = {
   STREAM_QUALITY_UPSELL: "stream_quality_upsell",
 };
 export const PurchasedFlags = obj40;
-export const SKU_ID_PURCHASED_FLAGS = frozen7;
+export const SKU_ID_PURCHASED_FLAGS = frozen8;
 export const MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE = 52428800;
 export const MAX_PREMIUM_TIER_1_ATTACHMENT_SIZE = 52428800;
 export const MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE = 524288000;
@@ -955,7 +1100,7 @@ export const PerkIcons = {
   SOUNDBOARD: 13,
   [13]: "SOUNDBOARD",
 };
-export const BoostedGuildFeatures = frozen8;
+export const BoostedGuildFeatures = frozen9;
 export const ORDERED_PREMIUM_SUBSCRIPTION_PLANS = items27;
 export const ORDERED_PREMIUM_GUILD_SUBSCRIPTION_PLANS = items28;
 export const AnalyticsPremiumFeatureNames = {
@@ -979,7 +1124,7 @@ export const DISCOUNTS = {
   [obj5.PREMIUM_3_MONTH_TIER_2]: 5,
 };
 export const StreamQualities = obj49;
-export const StreamQualitiesToPremiumType = frozen9;
+export const StreamQualitiesToPremiumType = frozen10;
 export const PremiumMarketingEntrypoints = {
   UserSettings: 0,
   [0]: "UserSettings",
@@ -996,8 +1141,8 @@ export const InboundPromotionErrorCodes = {
   PREVIOUS_SUBSCRIBER: "previous_subscriber",
   BLOCKED_PAYMENT: "blocked_payment",
 };
-export const PromotionFlags = frozen10;
-export const PremiumUserLimits = frozen11;
+export const PromotionFlags = frozen11;
+export const PremiumUserLimits = frozen12;
 export const PremiumFeatureHelperActions = {
   EXPLORE_ALL_PERKS_CLICKED: "explore_all_perks_clicked",
   HELPER_COLLAPSED: "helper_collapsed",

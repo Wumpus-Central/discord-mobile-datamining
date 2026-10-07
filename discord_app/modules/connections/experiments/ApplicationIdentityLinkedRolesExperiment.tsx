@@ -1,34 +1,36 @@
 // discord_app/modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import createExperiment from "../../experiments/index.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let items;
 let obj = {
   kind: "guild",
   id: "2026-04_application_identity_linked_roles",
   label: "Application Identity Linked Roles",
   defaultConfig: { enabled: false },
-  treatments: items,
+  treatments: null,
 };
-items = [{ id: 1, label: "Enable Application Identity Linked Roles", config: { enabled: true } }];
+const items = [{ id: 1, label: "Enable Application Identity Linked Roles", config: { enabled: true } }];
+obj.treatments = items;
 const experiment = createExperiment.createExperiment(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting(
+  "modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx",
+);
+
+export const ApplicationIdentityLinkedRolesExperiment = experiment;
+export const useApplicationIdentityLinkedRolesEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId, location) => {
-      const obj = react;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       if (cResult[0] === guildId) {
-        let tmp2;
-        let tmp4;
         if (cResult[1] === location) {
-          tmp2 = cResult[2];
+          let tmp2 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { autoTrackExposure: false };
           cResult[3] = obj2;
-          tmp4 = obj2;
+          let tmp4 = obj2;
         } else {
           tmp4 = cResult[3];
         }
@@ -40,13 +42,4 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId, location) => {
-      const obj = { guildId, location };
-      return experiment.useExperiment(obj, { autoTrackExposure: false }).enabled;
-    };
-const result = size.fileFinishedImporting(
-  "modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx",
-);
-
-export const ApplicationIdentityLinkedRolesExperiment = experiment;
-export const useApplicationIdentityLinkedRolesEnabled = tmp3;
+  : (guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;

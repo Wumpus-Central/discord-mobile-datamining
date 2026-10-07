@@ -1,44 +1,34 @@
 // discord_app/design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let onFocus;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onFocus) => {
-      let tmp3;
-      const obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       onFocus = onFocus.onFocus;
       const onBlur = onFocus.onBlur;
-      const obj2 = BottomSheetModal;
-      const bottomSheetInternal = obj2.useBottomSheetInternal(true);
+      const bottomSheetInternal = BottomSheetModal.useBottomSheetInternal(true);
       if (null != bottomSheetInternal) {
         if (cResult[3] === bottomSheetInternal) {
-          let tmp4;
           if (cResult[4] === onFocus) {
-            tmp4 = cResult[5];
+            let tmp4 = cResult[5];
           }
           if (cResult[6] === bottomSheetInternal) {
-            let tmp5;
             if (cResult[7] === onBlur) {
-              tmp5 = cResult[8];
+              let tmp5 = cResult[8];
             }
             if (cResult[9] === tmp4) {
-              let tmp6;
-              if (cResult[10] === tmp5) {
-                tmp6 = cResult[11];
-              }
-              tmp3 = tmp6;
             }
             const obj3 = { onFocus: tmp4, onBlur: tmp5 };
             cResult[9] = tmp4;
             cResult[10] = tmp5;
             cResult[11] = obj3;
-            tmp6 = obj3;
           }
           const fn2 = function t(arg0) {
             const shouldHandleKeyboardEvents = bottomSheetInternal.shouldHandleKeyboardEvents;
@@ -66,8 +56,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[0] === onBlur) {
           if (cResult[1] === onFocus) {
-            tmp3 = cResult[2];
+            let tmp3 = cResult[2];
           }
+          return tmp3;
         }
         const obj4 = { onFocus, onBlur };
         cResult[0] = onBlur;
@@ -75,19 +66,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = obj4;
         tmp3 = obj4;
       }
-      return tmp3;
     }
   : (onFocus) => {
       onFocus = onFocus.onFocus;
       const onBlur = onFocus.onBlur;
-      let obj = BottomSheetModal;
-      const bottomSheetInternal = obj.useBottomSheetInternal(true);
+      const bottomSheetInternal = BottomSheetModal.useBottomSheetInternal(true);
       const items = [bottomSheetInternal, onBlur, onFocus];
-      return react.useMemo(() => {
-        let obj;
+      return noop.useMemo(() => {
         if (null == bottomSheetInternal) {
-          obj = { onFocus, onBlur };
           const obj2 = { onFocus, onBlur };
+          let obj = obj2;
         } else {
           obj = {
             onFocus(arg0) {
@@ -109,6 +97,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }, items);
     };
-let result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
-
-export default tmp2;

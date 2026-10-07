@@ -1,64 +1,71 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchBottomFade.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import _modDef683 from "../../../../../../_runtime/metro/00683__.js";
-import Constants from "../../../../../Constants.tsx";
 import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
 import useSearchHostSurface from "../useSearchHostSurface.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const VerticalGradient = Constants.VerticalGradient;
-const jsx = Fragment.jsx;
+require = fn;
+const VerticalGradient = fn(1085).VerticalGradient;
+const jsx = fn(21).jsx;
 const locations = [0, 0.8];
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles((height) => {
-  let rect;
-  const obj = { fade: rect };
-  rect = { position: "absolute", left: 0, right: 0, bottom: 0, height };
+  const obj = { fade: null };
+  const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height };
+  obj.fade = rect;
   return obj;
 });
-let memo = react.memo;
-const memoResult = memo(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/intelligence_layer/search/native/components/SmartSearchBottomFade.tsx",
+);
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (height) => {
-        let tmp5;
-        const obj = react2;
-        const cResult = obj.c(8);
+        const cResult = c.c(8);
         const tmp3 = closure_7(height.height);
-        const obj2 = useSearchHostSurface;
-        const searchHostSurfaceColor = obj2.useSearchHostSurfaceColor();
+        const searchHostSurfaceColor = useSearchHostSurface.useSearchHostSurfaceColor();
         if (cResult[0] !== searchHostSurfaceColor) {
           const obj3 = _modDef683(searchHostSurfaceColor);
-          const alphaResult = obj3.alpha(0);
-          const hexResult = alphaResult.hex();
+          const hexResult = _modDef683(searchHostSurfaceColor).alpha(0).hex();
           cResult[0] = searchHostSurfaceColor;
           cResult[1] = hexResult;
-          tmp5 = hexResult;
+          let tmp5 = hexResult;
+          const alphaResult = _modDef683(searchHostSurfaceColor).alpha(0);
         } else {
           tmp5 = cResult[1];
         }
         if (cResult[2] === searchHostSurfaceColor) {
-          let tmp8;
           if (cResult[3] === tmp5) {
-            tmp8 = cResult[4];
+            let tmp8 = cResult[4];
           }
           if (cResult[5] === tmp8) {
-            let tmp9;
             if (cResult[6] === tmp3.fade) {
-              tmp9 = cResult[7];
+              let tmp9 = cResult[7];
             }
             return tmp9;
           }
+          const obj4 = {
+            pointerEvents: "none",
+            style: tmp3.fade,
+            start: null,
+            end: null,
+            colors: null,
+            locations: null,
+          };
           ({ START: obj5.start, END: obj5.end } = VerticalGradient);
+          obj4.colors = tmp8;
+          obj4.locations = locations;
           const tmp14 = jsx(LinearGradientDefault, {
             pointerEvents: "none",
             style: tmp3.fade,
             start: null,
             end: null,
-            colors: tmp8,
-            locations,
+            colors: null,
+            locations: null,
           });
           cResult[5] = tmp8;
           cResult[6] = tmp3.fade;
@@ -74,15 +81,11 @@ const memoResult = memo(
     : (height) => {
         let searchHostSurfaceColor;
         const tmp = closure_7(height.height);
-        let obj = searchHostSurfaceColor(16890);
-        searchHostSurfaceColor = obj.useSearchHostSurfaceColor();
+        searchHostSurfaceColor = searchHostSurfaceColor(16890).useSearchHostSurfaceColor();
         let items = [searchHostSurfaceColor];
-        const memo = react.useMemo(() => {
-          const items = [,];
+        const memo = noop.useMemo(() => {
           const obj = _modDef683(searchHostSurfaceColor);
-          const alphaResult = obj.alpha(0);
-          items[0] = alphaResult.hex();
-          items[1] = searchHostSurfaceColor;
+          const items = [_modDef683(searchHostSurfaceColor).alpha(0).hex(), searchHostSurfaceColor];
           return items;
         }, items);
         return jsx(LinearGradientDefault, {
@@ -95,8 +98,3 @@ const memoResult = memo(
         });
       },
 );
-const result = size.fileFinishedImporting(
-  "modules/intelligence_layer/search/native/components/SmartSearchBottomFade.tsx",
-);
-
-export default memoResult;

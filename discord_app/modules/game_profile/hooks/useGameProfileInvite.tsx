@@ -1,35 +1,28 @@
 // discord_app/modules/game_profile/hooks/useGameProfileInvite.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import GameStore from "../../games/GameStore.tsx";
 import GuildMembershipStore from "../../../stores/GuildMembershipStore.tsx";
 import InviteStore from "../../../stores/InviteStore.tsx";
-import Constants from "../../../Constants.tsx";
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, c3, c4;
 
-let QueryIds;
-let metroImportDefault;
-const f97266 = (category) =>
-  category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD;
+const require = fn;
 function isUsableGameProfileInvite(state) {
-  let tmp = null != state && state.state !== metroImportDefault.RESOLVING;
+  let tmp = null != state;
   if (tmp) {
-    let tmp4 = state.state !== metroImportDefault.EXPIRED && state.state !== tmp3.BANNED;
+    tmp = state.state !== constants.RESOLVING;
+  }
+  if (tmp) {
+    let tmp4 = state.state !== constants.EXPIRED && state.state !== tmp3.BANNED;
     if (tmp4) {
       let tmp5 = null != state.expires_at;
       if (tmp5) {
         const _Date = Date;
-        const self = this;
-        const self2 = this;
-        const _Date2 = Date;
         const date = new Date(state.expires_at);
+        const _Date2 = Date;
         const time = date.getTime();
         tmp5 = time <= Date.now();
       }
@@ -39,8 +32,10 @@ function isUsableGameProfileInvite(state) {
   }
   return tmp;
 }
-({ InviteStates: metroImportDefault, QueryIds } = Constants);
-let obj = {
+const Constants = fn(1085);
+({ InviteStates: closure_7, QueryIds } = Constants);
+const initialize = fn(504);
+const obj2 = {
   getQueryId: QueryIds.GAME_PROFILE_INVITE,
   staleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: 5 * DurationsDefault.Seconds.MINUTE,
@@ -49,17 +44,18 @@ let obj = {
       return null;
     } else {
       const invite = InviteStore.getInvite(arg0);
-      let tmp2 = null != invite && invite.state !== metroImportDefault.RESOLVING;
+      let tmp2 = null != invite;
       if (tmp2) {
-        let tmp4 = invite.state !== metroImportDefault.EXPIRED && invite.state !== tmp3.BANNED;
+        tmp2 = invite.state !== constants.RESOLVING;
+      }
+      if (tmp2) {
+        let tmp4 = invite.state !== constants.EXPIRED && invite.state !== tmp3.BANNED;
         if (tmp4) {
           let tmp5 = null != invite.expires_at;
           if (tmp5) {
             const _Date = Date;
-            const self = this;
-            const self2 = this;
-            const _Date2 = Date;
             const date = new Date(invite.expires_at);
+            const _Date2 = Date;
             const time = date.getTime();
             tmp5 = time <= Date.now();
           }
@@ -67,25 +63,20 @@ let obj = {
         }
         tmp2 = tmp4;
       }
-      let tmp9 = null;
+      let tmp11 = null;
       if (tmp2) {
-        tmp9 = invite;
+        tmp11 = invite;
       }
-      return tmp9;
+      return tmp11;
     }
   },
-  load: function () {
-    return closure_9(...arguments);
-  },
+  load: null,
 };
-const createFetchStore = get_initialized.createFetchStore;
-let closure_9 = _asyncToGenerator(async function (arg0) {
-  let obj2;
-  let closure_0 = arg0;
+let closure_9 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -106,13 +97,16 @@ let closure_9 = _asyncToGenerator(async function (arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          let closure_2 = tmp;
-          let c1 = 0;
+          closure_2 = tmp2;
+          c1 = 0;
+          closure_129_0 = closure_0;
           if (null != closure_0) {
             c3 = 1;
             c4 = 1;
-            const obj5 = { value: obj2.resolveInvite(tmp15, "game_profile"), done: false };
-            obj2 = InstantInviteActionCreatorsDefault;
+            const obj5 = {
+              value: InstantInviteActionCreatorsDefault.resolveInvite(tmp18, "game_profile"),
+              done: false,
+            };
             return obj5;
           }
         }
@@ -123,66 +117,69 @@ let closure_9 = _asyncToGenerator(async function (arg0) {
         c4 = 3;
         const obj = { value, done: true };
         return obj;
-      } else if (!closure_130_8(closure_130_6.getInvite(closure_0))) {
+      } else if (!closure_130_8(closure_130_6.getInvite(closure_129_0))) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const self = this;
-        const self2 = this;
-        const error = new Error("Failed to resolve game profile invite: " + closure_0);
+        const error = new Error("Failed to resolve game profile invite: " + closure_129_0);
         throw error;
       }
       c4 = 3;
       return { value: "IconComponent", done: null };
-    } catch (tmp19) {
-      c4 = 3;
-      throw tmp19;
+    } catch (tmp22) {
+      c4 = tmp;
+      throw tmp22;
     }
   }
 });
-let closure_10 = createFetchStore(InviteStore, obj);
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.load = function () {
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+let closure_10 = initialize.createFetchStore(InviteStore, obj2);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileInvite.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (websites, current) => {
-      let data;
-      let tmp14;
-      let tmp18;
-      let tmp21;
-      let tmp22;
-      let tmp4;
-      let tmp5;
-      let tmp7;
       _require = current;
-      const tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(15);
-      const ref = react.useRef(current);
-      const tmp2 = data;
+      const cResult = require("c").c(15);
+      noop.useRef(current);
       if (cResult[0] !== current) {
         const fn = function u() {
-          ref.current = current;
+          closure_1.current = current;
         };
         const items = [current];
         cResult[0] = current;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp5 = items;
-        tmp4 = fn;
+        let tmp5 = items;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
       }
-      const effect = react.useEffect(tmp4, tmp5);
+      const effect = noop.useEffect(tmp4, tmp5);
       if (cResult[3] !== websites) {
         let found;
         if (websites != null) {
           websites = websites.websites;
           if (websites != null) {
-            found = websites.find(f97266);
+            found = websites.find(
+              (category) =>
+                category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD,
+            );
           }
         }
         let arr;
         if (found != null) {
-          const str = found.url;
-          const parts = str.split("/");
+          const parts = found.url.split("/");
           arr = parts.pop();
         }
         let tmp11 = null;
@@ -194,7 +191,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[3] = websites;
         cResult[4] = tmp11;
-        tmp7 = tmp11;
+        let tmp7 = tmp11;
       } else {
         tmp7 = cResult[4];
       }
@@ -202,54 +199,53 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       data = tmp12.data;
       let isLoading = tmp12.isLoading;
       let tmp13 = null != tmp7;
-      const error = tmp12.error;
       if (tmp13) {
         tmp13 = null == data;
       }
       if (tmp13) {
         if (!isLoading) {
-          isLoading = null == error;
+          isLoading = null == tmp12.error;
         }
         tmp13 = isLoading;
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [GuildMembershipStore];
         cResult[5] = items1;
-        tmp14 = items1;
+        let tmp14 = items1;
       } else {
         tmp14 = cResult[5];
       }
       let id;
-      const tmp16 = cResult[6];
       if (data != null) {
-        let guild = data.guild;
+        guild = data.guild;
         if (guild != null) {
           id = guild.id;
         }
       }
-      if (tmp16 !== id) {
+      if (cResult[6] !== id) {
         if (data != null) {
           let guild2 = data.guild;
           class G {
             constructor() {
-              let id;
+              tmp = data;
+              id = undefined;
               if (data != null) {
-                const guild = data.guild;
+                guild = tmp.guild;
                 if (guild != null) {
                   id = guild.id;
                 }
               }
-              let isMemberResult = null != id;
+              isMemberResult = null != id;
               if (isMemberResult) {
-                let id1;
-                const isMember = GuildMembershipStore.isMember;
-                if (data != null) {
-                  const guild2 = data.guild;
+                id1 = undefined;
+                tmp4 = closure_5;
+                if (tmp != null) {
+                  guild2 = tmp.guild;
                   if (guild2 != null) {
                     id1 = guild2.id;
                   }
                 }
-                isMemberResult = isMember(id1);
+                isMemberResult = closure_5.isMember(id1);
               }
               return isMemberResult;
             }
@@ -257,36 +253,37 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         class G {
           constructor() {
-            let id;
+            tmp = data;
+            id = undefined;
             if (data != null) {
-              const guild = data.guild;
+              guild = tmp.guild;
               if (guild != null) {
                 id = guild.id;
               }
             }
-            let isMemberResult = null != id;
+            isMemberResult = null != id;
             if (isMemberResult) {
-              let id1;
-              const isMember = GuildMembershipStore.isMember;
-              if (data != null) {
-                const guild2 = data.guild;
+              id1 = undefined;
+              tmp4 = closure_5;
+              if (tmp != null) {
+                guild2 = tmp.guild;
                 if (guild2 != null) {
                   id1 = guild2.id;
                 }
               }
-              isMemberResult = isMember(id1);
+              isMemberResult = closure_5.isMember(id1);
             }
             return isMemberResult;
           }
         }
         cResult[6] = undefined;
         cResult[7] = G;
-        tmp18 = G;
+        let tmp17 = G;
       } else {
-        tmp18 = cResult[7];
+        tmp17 = cResult[7];
       }
-      const tmpResult = tmp(tmp2[7]);
-      const stateFromStores = tmpResult.useStateFromStores(tmp14, tmp18);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp14, tmp17);
       if (cResult[8] !== data) {
         const fn2 = function _() {
           if (null != data) {
@@ -299,24 +296,25 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const items2 = [];
         class G {
           constructor() {
-            let id;
+            tmp = data;
+            id = undefined;
             if (data != null) {
-              const guild = data.guild;
+              guild = tmp.guild;
               if (guild != null) {
                 id = guild.id;
               }
             }
-            let isMemberResult = null != id;
+            isMemberResult = null != id;
             if (isMemberResult) {
-              let id1;
-              const isMember = GuildMembershipStore.isMember;
-              if (data != null) {
-                const guild2 = data.guild;
+              id1 = undefined;
+              tmp4 = closure_5;
+              if (tmp != null) {
+                guild2 = tmp.guild;
                 if (guild2 != null) {
                   id1 = guild2.id;
                 }
               }
-              isMemberResult = isMember(id1);
+              isMemberResult = closure_5.isMember(id1);
             }
             return isMemberResult;
           }
@@ -324,20 +322,19 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = data;
         cResult[9] = fn2;
         cResult[10] = items2;
-        tmp22 = items2;
-        tmp21 = fn2;
+        let tmp21 = items2;
+        let tmp20 = fn2;
       } else {
-        tmp21 = cResult[9];
-        tmp22 = cResult[10];
+        tmp20 = cResult[9];
+        tmp21 = cResult[10];
       }
-      const effect1 = react.useEffect(tmp21, tmp22);
+      const effect1 = noop.useEffect(tmp20, tmp21);
       if (cResult[11] === data) {
         if (cResult[12] === stateFromStores) {
-          let tmp24;
           if (cResult[13] === tmp13) {
-            tmp24 = cResult[14];
+            let tmp23 = cResult[14];
           }
-          return tmp24;
+          return tmp23;
         }
       }
       const obj3 = { invite: data, isMember: stateFromStores, isResolving: tmp13 };
@@ -345,27 +342,29 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = stateFromStores;
       cResult[13] = tmp13;
       cResult[14] = obj3;
-      tmp24 = obj3;
+      tmp23 = obj3;
+      const tmpResult = require("initialize");
     }
   : (websites, current) => {
-      let tmp8;
       _require = current;
-      const ref = react.useRef(current);
+      noop.useRef(current);
       const items = [current];
-      const effect = react.useEffect(() => {
-        ref.current = current;
+      const effect = noop.useEffect(() => {
+        closure_1.current = current;
       }, items);
       let found;
       if (websites != null) {
         websites = websites.websites;
         if (websites != null) {
-          found = websites.find(f97266);
+          found = websites.find(
+            (category) =>
+              category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD,
+          );
         }
       }
       let arr;
       if (found != null) {
-        const str = found.url;
-        const parts = str.split("/");
+        const parts = found.url.split("/");
         arr = parts.pop();
       }
       let tmp4 = null;
@@ -378,14 +377,12 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_10(tmp4);
       const data = tmp5.data;
       let isLoading = tmp5.isLoading;
-      const error = tmp5.error;
       const items1 = [GuildMembershipStore];
       const items2 = [data];
-      const obj2 = require("get initialized");
-      const stateFromStores = obj2.useStateFromStores(items1, () => {
+      const stateFromStores = require("initialize").useStateFromStores(items1, () => {
         let id;
         if (data != null) {
-          const guild = data.guild;
+          guild = data.guild;
           if (guild != null) {
             id = guild.id;
           }
@@ -393,18 +390,17 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         let isMemberResult = null != id;
         if (isMemberResult) {
           let id1;
-          const isMember = GuildMembershipStore.isMember;
           if (data != null) {
             const guild2 = data.guild;
             if (guild2 != null) {
               id1 = guild2.id;
             }
           }
-          isMemberResult = isMember(id1);
+          isMemberResult = GuildMembershipStore.isMember(id1);
         }
         return isMemberResult;
       });
-      const effect1 = react.useEffect(() => {
+      const effect1 = noop.useEffect(() => {
         if (null != data) {
           current = ref.current;
           if (current != null) {
@@ -412,19 +408,17 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items2);
-      const obj3 = { invite: data, isMember: stateFromStores, isResolving: tmp8 };
-      tmp8 = null != tmp4 && null == data;
+      const obj3 = { invite: data, isMember: stateFromStores, isResolving: null };
+      let tmp8 = null != tmp4 && null == data;
       if (tmp8) {
         if (!isLoading) {
-          isLoading = null == error;
+          isLoading = null == tmp5.error;
         }
         tmp8 = isLoading;
       }
+      obj3.isResolving = tmp8;
       return obj3;
     };
-const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileInvite.tsx");
-
-export default tmp6;
 export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsite(game) {
   let flag;
   if (game != null) {
@@ -443,7 +437,6 @@ export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsit
   return flag;
 };
 export const preloadGameProfileInvite = function preloadGameProfileInvite(arg0) {
-  let closure_0;
   _require = arg0;
   const useGame = require("useGame").useGame;
   let items = [arg0];
@@ -454,13 +447,15 @@ export const preloadGameProfileInvite = function preloadGameProfileInvite(arg0) 
     if (game != null) {
       const websites = game.websites;
       if (websites != null) {
-        found = websites.find(f97266);
+        found = websites.find(
+          (category) =>
+            category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD,
+        );
       }
     }
     let arr;
     if (found != null) {
-      const str = found.url;
-      const parts = str.split("/");
+      const parts = found.url.split("/");
       arr = parts.pop();
     }
     let tmp4 = null;

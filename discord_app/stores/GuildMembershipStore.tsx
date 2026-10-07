@@ -1,71 +1,70 @@
 // discord_app/stores/GuildMembershipStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Dispatcher2 from "../Dispatcher.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
 const Dispatcher = Dispatcher2;
-let _require;
 
-function CACHE_LOADED(arg0) {
-  return closure_0.handleCacheLoaded(arg0);
-}
-function CACHE_LOADED_LAZY(arg0) {
-  return closure_0.handleCacheLoadedLazy(arg0);
-}
-function CONNECTION_OPEN(arg0) {
-  return closure_0.handleConnectionOpen(arg0);
-}
-function GUILD_CREATE(arg0) {
-  return closure_0.handleGuildCreate(arg0);
-}
-const Store = get_initializedDefault.Store;
+require = fn;
+const Store = initializeDefault.Store;
 class GuildMembershipStore extends Store {
   constructor() {
-    _require = undefined;
-    const tmp2 = Dispatcher;
-    const obj = { CACHE_LOADED, CACHE_LOADED_LAZY, CONNECTION_OPEN, GUILD_CREATE, GUILD_DELETE };
+    closure_0 = undefined;
+    tmp2 = closure_1(closure_2[1]);
+    obj = {
+      CACHE_LOADED(arg0) {
+        return closure_0.handleCacheLoaded(arg0);
+      },
+      CACHE_LOADED_LAZY(arg0) {
+        return closure_0.handleCacheLoadedLazy(arg0);
+      },
+      CONNECTION_OPEN(arg0) {
+        return closure_0.handleConnectionOpen(arg0);
+      },
+      GUILD_CREATE(arg0) {
+        return closure_0.handleGuildCreate(arg0);
+      },
+      GUILD_DELETE: null,
+    };
     class GUILD_DELETE {
       constructor(arg0) {
-        return closure_0.handleGuildDelete(arg0);
+        return closure_0.handleGuildDelete(global);
       }
     }
-    const tmp3 = new tmp(tmp2, obj, Dispatcher2.DispatchBand.Early, GUILD_DELETE, new.target, tmp, tmp2);
-    _require = tmp3;
-    tmp3.guildIds = new Set();
-    new Set();
-    return tmp3;
-  }
-  allGuildIds() {
-    return this.guildIds;
-  }
-  isMember(arg0) {
-    const guildIds = this.guildIds;
-    return guildIds.has(arg0);
-  }
-  handleConnectionOpen(unavailableGuilds) {
-    const items = [...unavailableGuilds.unavailableGuilds];
-    this.guildIds = new Set(items);
-    new Set(items);
-  }
-  handleCacheLoaded(guilds) {
-    const f85889 = (id) => id.id;
-    guilds = guilds.guilds;
-    this.guildIds = new Set(guilds.map(f85889));
-    new Set(guilds.map(f85889));
-  }
-  handleCacheLoadedLazy(guilds) {
-    guilds = guilds.guilds;
-    for (const item10007 of guilds) {
-      let guildIds = this.guildIds;
-      let addResult = guildIds.add(item10007.id);
-      continue;
-    }
-  }
-  handleGuildCreate(guild) {
-    const guildIds = this.guildIds;
-    guildIds.add(guild.guild.id);
+    obj.GUILD_DELETE = GUILD_DELETE;
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_2[1]).DispatchBand.Early, GUILD_DELETE, new.target, tmp, tmp2);
+    closure_0 = tmp1;
+    set = new Set();
+    tmp1.guildIds = set;
+    return tmp1;
   }
 }
+const prototype = GuildMembershipStore.prototype;
+prototype["allGuildIds"] = function allGuildIds() {
+  return this.guildIds;
+};
+prototype["isMember"] = function isMember(arg0) {
+  const guildIds = this.guildIds;
+  return guildIds.has(arg0);
+};
+prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds) {
+  const items = [...unavailableGuilds.unavailableGuilds];
+  this.guildIds = new Set(items);
+};
+prototype["handleCacheLoaded"] = function handleCacheLoaded(guilds) {
+  guilds = guilds.guilds;
+  this.guildIds = new Set(guilds.map((id) => id.id));
+};
+prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
+  for (const item10007 of tmp) {
+    let guildIds = this.guildIds;
+    let addResult = guildIds.add(item10007.id);
+    continue;
+  }
+};
+prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
+  const guildIds = this.guildIds;
+  guildIds.add(guild.guild.id);
+};
 function handleGuildDelete(guild) {
   if (true !== guild.guild.unavailable) {
     const self = this;
@@ -73,12 +72,20 @@ function handleGuildDelete(guild) {
     guildIds.delete(guild.guild.id);
   }
 }
-GuildMembershipStore.prototype["handleGuildDelete"] = handleGuildDelete;
+prototype["handleGuildDelete"] = handleGuildDelete;
 let obj = {
-  CACHE_LOADED,
-  CACHE_LOADED_LAZY,
-  CONNECTION_OPEN,
-  GUILD_CREATE,
+  CACHE_LOADED(arg0) {
+    return closure_0.handleCacheLoaded(arg0);
+  },
+  CACHE_LOADED_LAZY(arg0) {
+    return closure_0.handleCacheLoadedLazy(arg0);
+  },
+  CONNECTION_OPEN(arg0) {
+    return closure_0.handleConnectionOpen(arg0);
+  },
+  GUILD_CREATE(arg0) {
+    return closure_0.handleGuildCreate(arg0);
+  },
   GUILD_DELETE(arg0) {
     return closure_0.handleGuildDelete(arg0);
   },
@@ -86,19 +93,19 @@ let obj = {
 let tmp2 = new tmp(
   Dispatcher,
   obj,
-  Dispatcher2.DispatchBand.Early,
+  fn(584).DispatchBand.Early,
   GuildMembershipStore,
   tmp,
   Dispatcher,
   obj,
-  this,
+  new.target,
   undefined,
   handleGuildDelete,
   globalThis,
 );
-const React = tmp2;
-const set = new Set();
-tmp2.guildIds = set;
+let closure_129_0 = tmp2;
+tmp2.guildIds = new Set();
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/GuildMembershipStore.tsx");
 
 export default tmp2;

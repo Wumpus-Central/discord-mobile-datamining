@@ -1,59 +1,52 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
-import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../../../../Constants.tsx";
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import PlayStationLinkConstants from "PlayStationLinkConstants.tsx";
 import _modDef8800 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
-import react from "../../../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-let arr, navigation, platformType;
-
-const constants = PlayStationLinkConstants.PlayStationLinkModalScenes;
-const HelpdeskArticles = Constants.HelpdeskArticles;
-const jsx = Fragment.jsx;
+const require = fn;
+const constants = fn(8798).PlayStationLinkModalScenes;
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ image: { width: 230, height: 160 } });
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx",
+);
+
+export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
   ? (platformType) => {
-      let first;
-      let intl2;
-      let intl3;
-      let intl4;
-      let tmp11;
-      let tmp17;
-      const obj = navigation(576);
-      const cResult = obj.c(11);
+      const cResult = navigation(576).c(11);
       platformType = platformType.platformType;
       const tmp4 = closure_7();
-      const obj2 = navigation(1490);
-      navigation = obj2.useNavigation();
+      const obj = navigation(576);
+      navigation = navigation(1490).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = HelpdeskUtilsDefault;
-        const articleURL = obj3.getArticleURL(HelpdeskArticles.PS_CONNECTION);
+        const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.PS_CONNECTION);
         const intl = tmp(1126).intl;
         const obj4 = { helpdeskArticleUrl: articleURL };
-        const formatResult = intl.format(navigation(1126).t.kqZQNe, obj4);
+        const formatResult = intl.format(tmp(1126).t.kqZQNe, obj4);
         cResult[0] = formatResult;
-        first = formatResult;
+        let first = formatResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = {
-          label: intl2.string(navigation(1126).t["+eJP7o"]),
-          subLabel: intl3.string(navigation(1126).t["+0VIUh"]),
-          icon: navigation(5892).VoiceNormalIcon,
-        };
-        intl2 = tmp(1126).intl;
-        intl3 = tmp(1126).intl;
+        const obj5 = { label: null, subLabel: null, icon: null };
+        const intl2 = tmp(1126).intl;
+        obj5.label = intl2.string(tmp(1126).t["+eJP7o"]);
+        const intl3 = tmp(1126).intl;
+        obj5.subLabel = intl3.string(tmp(1126).t["+0VIUh"]);
+        obj5.icon = tmp(5892).VoiceNormalIcon;
         const items = [obj5];
-        const obj6 = { label: intl4.string(navigation(1126).t.ZH4QFa), icon: navigation(8771).GameControllerIcon };
-        intl4 = tmp(1126).intl;
+        const obj6 = { label: null, icon: null };
+        const intl4 = tmp(1126).intl;
+        obj6.label = intl4.string(tmp(1126).t.ZH4QFa);
+        obj6.icon = tmp(8771).GameControllerIcon;
         items[1] = obj6;
         cResult[1] = items;
-        tmp11 = items;
+        let tmp11 = items;
       } else {
         tmp11 = cResult[1];
       }
@@ -91,7 +84,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const image = tmp4.image;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
@@ -99,12 +91,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const stringResult = obj7.string(navigation(1126).t.xAWHOy);
+        const stringResult = obj7.string(tmp(1126).t.xAWHOy);
         const intl5 = tmp(1126).intl;
-        const stringResult1 = intl5.string(navigation(1126).t["ZJ/vBh"]);
+        const stringResult1 = intl5.string(tmp(1126).t["ZJ/vBh"]);
         cResult[5] = stringResult;
         cResult[6] = stringResult1;
-        tmp17 = stringResult1;
+        let tmp17 = stringResult1;
+        const tmp16 = stringResult;
       } else {
         class N {
           constructor() {
@@ -122,23 +115,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
+      const obj2 = navigation(1490);
       cResult[7] = N;
       cResult[8] = platformType;
       cResult[9] = tmp4.image;
       cResult[10] = jsx(navigation(8773).TwoWayLinkLanding, {
         platformType,
         img: tmp14,
-        imgStyle: image,
+        imgStyle: tmp4.image,
         headerConnect: tmp16,
         headerReconnect: tmp17,
         body: first,
         onNext: N,
         valueProps: tmp11,
       });
-      jsx(navigation(8773).TwoWayLinkLanding, {
+      const tmp20 = jsx(navigation(8773).TwoWayLinkLanding, {
         platformType,
         img: tmp14,
-        imgStyle: image,
+        imgStyle: tmp4.image,
         headerConnect: tmp16,
         headerReconnect: tmp17,
         body: first,
@@ -147,61 +141,57 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       });
     }
   : (platformType) => {
-      navigation = undefined;
-      platformType = platformType.platformType;
+      let navigation;
       const tmp = closure_7();
+      navigation = navigation(1490).useNavigation();
       let obj = navigation(1490);
-      navigation = obj.useNavigation();
-      let obj2 = HelpdeskUtilsDefault;
-      const articleURL = obj2.getArticleURL(HelpdeskArticles.PS_CONNECTION);
+      const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.PS_CONNECTION);
       let intl = navigation(1126).intl;
       let items = [navigation];
-      const formatResult = intl.format(navigation(1126).t.kqZQNe, { helpdeskArticleUrl: articleURL });
-      const memo = react.useMemo(() => {
-        let intl;
-        let intl2;
-        let intl3;
-        const obj = {
-          label: intl.string(navigation(dependencyMap[5]).t["+eJP7o"]),
-          subLabel: intl2.string(navigation(dependencyMap[5]).t["+0VIUh"]),
-          icon: navigation(dependencyMap[6]).VoiceNormalIcon,
-        };
-        intl = navigation(dependencyMap[5]).intl;
-        intl2 = navigation(dependencyMap[5]).intl;
+      const memo = noop.useMemo(() => {
+        const obj = { label: null, subLabel: null, icon: null };
+        const intl = navigation(1126).intl;
+        obj.label = intl.string(navigation(1126).t["+eJP7o"]);
+        const intl2 = navigation(1126).intl;
+        obj.subLabel = intl2.string(navigation(1126).t["+0VIUh"]);
+        obj.icon = navigation(5892).VoiceNormalIcon;
         const items = [obj];
-        const obj2 = {
-          label: intl3.string(navigation(dependencyMap[5]).t.ZH4QFa),
-          icon: navigation(dependencyMap[7]).GameControllerIcon,
-        };
-        intl3 = navigation(dependencyMap[5]).intl;
+        const obj2 = { label: null, icon: null };
+        const intl3 = navigation(1126).intl;
+        obj2.label = intl3.string(navigation(1126).t.ZH4QFa);
+        obj2.icon = navigation(8771).GameControllerIcon;
         items[1] = obj2;
         return items;
       }, []);
-      const callback = react.useCallback(() => {
+      const callback = noop.useCallback(() => {
         navigation.push(constants.PRE_CONNECT);
       }, items);
-      const memo1 = react.useMemo(() => {
-        const obj = { uri: _modDef8800 };
-        return obj;
-      }, []);
-      const TwoWayLinkLanding = navigation(8773).TwoWayLinkLanding;
+      const memo1 = noop.useMemo(() => ({ uri: _modDef8800 }), []);
+      const obj3 = {
+        platformType: platformType.platformType,
+        img: memo1,
+        imgStyle: tmp.image,
+        headerConnect: null,
+        headerReconnect: null,
+        body: null,
+        onNext: null,
+        valueProps: null,
+      };
       let intl2 = navigation(1126).intl;
+      obj3.headerConnect = intl2.string(navigation(1126).t.xAWHOy);
       let intl3 = navigation(1126).intl;
-      return (
-        <TwoWayLinkLanding
-          platformType={platformType}
-          img={memo1}
-          imgStyle={tmp.image}
-          headerConnect={intl2.string(navigation(1126).t.xAWHOy)}
-          headerReconnect={intl3.string(navigation(1126).t["ZJ/vBh"])}
-          body={formatResult}
-          onNext={callback}
-          valueProps={memo}
-        />
-      );
+      obj3.headerReconnect = intl3.string(navigation(1126).t["ZJ/vBh"]);
+      obj3.body = intl.format(navigation(1126).t.kqZQNe, { helpdeskArticleUrl: articleURL });
+      obj3.onNext = callback;
+      obj3.valueProps = memo;
+      return jsx(navigation(8773).TwoWayLinkLanding, {
+        platformType: platformType.platformType,
+        img: memo1,
+        imgStyle: tmp.image,
+        headerConnect: null,
+        headerReconnect: null,
+        body: null,
+        onNext: null,
+        valueProps: null,
+      });
     };
-const result = size.fileFinishedImporting(
-  "modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx",
-);
-
-export const PlayStationLinkLanding = tmp2;

@@ -1,67 +1,58 @@
 // discord_app/components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx
-import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import PermissionUtils from "../../utils/PermissionUtils.tsx";
-import DenyIcon2 from "../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
-import CheckmarkLargeBoldIcon2 from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
-import SlashIcon2 from "../../design/components/Icon/native/redesign/generated/SlashIcon.tsx";
-import react from "../../../_runtime/00019_react.js";
-import react_native from "../../../_runtime/00017_react-native.js";
-import createStyles_mod from "../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import DenyIcon from "../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
+import CheckmarkLargeBoldIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
+import SlashIcon from "../../design/components/Icon/native/redesign/generated/SlashIcon.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
-let importDefault;
-
-let c3;
-let closure_4;
-let obj2;
-let obj3;
-let obj4;
+require = fn;
 function getIcon(arg0, arg1, icon) {
   if (PermissionUtils.DENY === arg0) {
-    const DenyIcon = DenyIcon2.DenyIcon;
+    const obj2 = { size: "sm", style: icon.icon, color: null };
     const colors3 = nativeDefault.colors;
-    return <DenyIcon size="sm" style={icon.icon} color={arg1 ? colors3.WHITE : colors3.ICON_FEEDBACK_CRITICAL} />;
+    obj2.color = arg1 ? colors3.WHITE : colors3.ICON_FEEDBACK_CRITICAL;
+    return jsx(DenyIcon.DenyIcon, { size: "sm", style: icon.icon, color: null });
   } else if (PermissionUtils.ALLOW === arg0) {
-    const CheckmarkLargeBoldIcon = CheckmarkLargeBoldIcon2.CheckmarkLargeBoldIcon;
+    const obj3 = { size: "sm", style: icon.icon, color: null };
     const colors2 = nativeDefault.colors;
-    return (
-      <CheckmarkLargeBoldIcon
-        size="sm"
-        style={icon.icon}
-        color={arg1 ? colors2.WHITE : colors2.ICON_FEEDBACK_POSITIVE}
-      />
-    );
+    obj3.color = arg1 ? colors2.WHITE : colors2.ICON_FEEDBACK_POSITIVE;
+    return jsx(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, { size: "sm", style: icon.icon, color: null });
   } else if (PermissionUtils.PASSTHROUGH === arg0) {
-    const SlashIcon = SlashIcon2.SlashIcon;
+    const obj = { size: "sm", style: icon.icon, color: null };
     const colors = nativeDefault.colors;
-    return <SlashIcon size="sm" style={icon.icon} color={arg1 ? colors.WHITE : colors.INTERACTIVE_TEXT_DEFAULT} />;
+    obj.color = arg1 ? colors.WHITE : colors.INTERACTIVE_TEXT_DEFAULT;
+    return jsx(SlashIcon.SlashIcon, { size: "sm", style: icon.icon, color: null });
   } else {
     return null;
   }
 }
-({ Pressable: c3, View: closure_4 } = react_native);
-const jsx = Fragment.jsx;
+get_ActivityIndicator = fn(17);
+({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-let createStyles = createStyles_mod;
+const createStyles = fn(4896);
 let obj = {
-  ternaryCheckBox: obj2,
-  iconWrapper: { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" },
-  icon: obj3,
-  denyActive: obj4,
-  denySelected: {
-    backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
-    borderRadius: nativeDefault.radii.sm - 2,
+  ternaryCheckBox: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: md,
+    height: nativeDefault.space.PX_32,
+    paddingVertical: PX_4,
+    paddingHorizontal: PX_4 / 2,
+    flexDirection: "row",
   },
-  allowActive: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE },
-  allowSelected: { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE },
-  passthroughSelected: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED },
-  passthroughActive: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER },
-  disabled: { opacity: 0.3 },
+  iconWrapper: { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" },
+  icon: null,
+  denyActive: null,
+  denySelected: null,
+  allowActive: null,
+  allowSelected: null,
+  passthroughSelected: null,
+  passthroughActive: null,
+  disabled: null,
 };
-obj2 = {
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: md,
   height: nativeDefault.space.PX_32,
@@ -69,28 +60,30 @@ obj2 = {
   paddingHorizontal: PX_4 / 2,
   flexDirection: "row",
 };
-createStyles = createStyles.createStyles;
-obj3 = { marginHorizontal: nativeDefault.space.PX_8 };
-obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-({ backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.sm - 2 });
-({ backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE });
-({ backgroundColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE });
-({ backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED });
-({ backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER });
-let closure_6 = createStyles(obj);
-let items = [PermissionUtils.DENY, PermissionUtils.PASSTHROUGH, PermissionUtils.ALLOW];
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };
+let obj4 = { marginHorizontal: nativeDefault.space.PX_8 };
+obj.denyActive = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+const obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+obj.denySelected = {
+  backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
+  borderRadius: nativeDefault.radii.sm - 2,
+};
+const obj6 = { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.sm - 2 };
+obj.allowActive = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE };
+const obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE };
+obj.allowSelected = { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
+const obj8 = { backgroundColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
+obj.passthroughSelected = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
+obj.disabled = { opacity: 0.3 };
+let closure_6 = createStyles.createStyles(obj);
+let items = [fn(4520).DENY, fn(4520).PASSTHROUGH, fn(4520).ALLOW];
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (selected) => {
-      let accessibilityRole;
-      let accessibilityState;
-      let permissionTitle;
-      let styles;
-      let tmp4;
-      let tmp6;
-      let type;
-      const obj = type(styles[11]);
-      const cResult = obj.c(22);
+      let v6639O5 = styles;
+      const cResult = type(styles[11]).c(22);
       ({ permissionTitle, type } = selected);
       selected = selected.selected;
       styles = selected.styles;
@@ -99,258 +92,274 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { selected };
         cResult[0] = selected;
         cResult[1] = obj2;
-        tmp4 = obj2;
+        let tmp4 = obj2;
       } else {
         tmp4 = cResult[1];
       }
-      const tmpResult = type(styles[12]);
-      const radioA11yNative = tmpResult.useRadioA11yNative(tmp4);
+      const obj = type(styles[11]);
+      const radioA11yNative = type(v6639O5[12]).useRadioA11yNative(tmp4);
       ({ accessibilityRole, accessibilityState } = radioA11yNative);
       if (cResult[2] !== type) {
-        let stringResult;
-        if (type(styles[5]).DENY === type) {
-          const intl2 = type(tmp2[6]).intl;
-          stringResult = intl2.string(type(tmp2[6]).t["6639O5"]);
-        } else if (type(styles[5]).ALLOW === type) {
-          const intl = type(tmp2[6]).intl;
-          stringResult = intl.string(type(tmp2[6]).t.RzDfSk);
-        } else if (type(styles[5]).PASSTHROUGH === type) {
-          const intl3 = type(tmp2[6]).intl;
-          stringResult = intl3.string(type(tmp2[6]).t.ujC3ZS);
+        if (type(v6639O5[5]).DENY === type) {
+          const intl2 = type(v6639O5[6]).intl;
+          v6639O5 = type(v6639O5[6]).t["6639O5"];
+          let stringResult = intl2.string(v6639O5);
+          cResult[2] = type;
+          cResult[3] = stringResult;
+        } else if (type(v6639O5[5]).ALLOW !== type) {
+          if (type(v6639O5[5]).PASSTHROUGH === type) {
+            const intl3 = type(v6639O5[6]).intl;
+            stringResult = intl3.string(type(v6639O5[6]).t.ujC3ZS);
+          }
         }
-        cResult[2] = type;
-        cResult[3] = stringResult;
-        tmp6 = stringResult;
+        const intl = type(v6639O5[6]).intl;
+        stringResult = intl.string(type(v6639O5[6]).t.RzDfSk);
       } else {
-        tmp6 = cResult[3];
-      }
-      if (cResult[4] === permissionTitle) {
-        let obj4;
-        if (cResult[5] === tmp6) {
-          obj4 = cResult[6];
-        }
-        const joined = obj4.join(", ");
-        if (cResult[7] === selected) {
-          if (cResult[8] === styles) {
-            let tmp10;
-            if (cResult[9] === type) {
-              tmp10 = cResult[10];
-            }
-            if (cResult[11] === selected) {
-              if (cResult[12] === styles) {
-                let tmp11;
-                if (cResult[13] === type) {
-                  tmp11 = cResult[14];
-                }
-                if (cResult[15] === accessibilityRole) {
-                  if (cResult[16] === accessibilityState) {
-                    if (cResult[17] === onPress) {
-                      if (cResult[18] === joined) {
-                        if (cResult[19] === tmp10) {
-                          let tmp14;
-                          if (cResult[20] === tmp11) {
-                            tmp14 = cResult[21];
+        if (cResult[4] === permissionTitle) {
+          if (cResult[5] === tmp6) {
+            let obj4 = cResult[6];
+          }
+          const joined = obj4.join(", ");
+          if (cResult[7] === selected) {
+            if (cResult[8] === styles) {
+              if (cResult[9] === type) {
+                let tmp12 = cResult[10];
+              }
+              if (cResult[11] === selected) {
+                if (cResult[12] === styles) {
+                  if (cResult[13] === type) {
+                    let tmp13 = cResult[14];
+                  }
+                  if (cResult[15] === accessibilityRole) {
+                    if (cResult[16] === accessibilityState) {
+                      if (cResult[17] === onPress) {
+                        if (cResult[18] === joined) {
+                          if (cResult[19] === tmp12) {
+                            if (cResult[20] === tmp13) {
+                              let tmp16 = cResult[21];
+                            }
+                            return tmp16;
                           }
-                          return tmp14;
                         }
                       }
                     }
                   }
-                }
-                class I {
-                  constructor(arg0) {
-                    tmp = selected;
-                    if (!tmp) {
-                      if (!selected.pressed) {
-                        tmp2 = styles;
-                        iconWrapper = styles.iconWrapper;
+                  class I {
+                    constructor(arg0) {
+                      items = selected;
+                      if (!selected) {
+                        if (!selected.pressed) {
+                          tmp = styles;
+                          return styles.iconWrapper;
+                        }
                       }
-                      return iconWrapper;
+                      tmp2 = type;
+                      iconWrapper = styles;
+                      tmp3 = closure_0;
+                      tmp4 = closure_2;
+                      if (closure_0(closure_2[5]).DENY === type) {
+                        tmp6 = items ? iconWrapper.denySelected : iconWrapper.denyActive;
+                      } else {
+                        if (tmp3(tmp4[5]).ALLOW === tmp2) {
+                          tmp5 = items ? iconWrapper.allowSelected : iconWrapper.allowActive;
+                        } else if (tmp3(tmp4[5]).PASSTHROUGH === tmp2) {
+                          tmp5 = items ? iconWrapper.passthroughSelected : iconWrapper.passthroughActive;
+                        }
+                        items = [,];
+                        items[0] = tmp5;
+                        iconWrapper = iconWrapper.iconWrapper;
+                        items[1] = iconWrapper;
+                        tmp7 = items;
+                      }
+                      return;
                     }
-                    tmp3 = type;
-                    tmp4 = styles;
-                    tmp5 = closure_0;
-                    tmp6 = closure_2;
-                    if (closure_0(closure_2[5]).DENY === type) {
-                      tmp7 = tmp ? tmp4.denySelected : tmp4.denyActive;
-                    } else if (tmp5(tmp6[5]).ALLOW === tmp3) {
-                      tmp7 = tmp ? tmp4.allowSelected : tmp4.allowActive;
-                    } else if (tmp5(tmp6[5]).PASSTHROUGH === tmp3) {
-                      tmp7 = tmp ? tmp4.passthroughSelected : tmp4.passthroughActive;
+                  }
+                  tmp19[0] = accessibilityRole;
+                  tmp19[1] = joined;
+                  tmp19[2] = accessibilityState;
+                  tmp19[3] = tmp12;
+                  tmp19[4] = onPress;
+                  tmp19[5] = tmp13;
+                  const tmp20 = <closure_3 {...tmp19} />;
+                  cResult[15] = accessibilityRole;
+                  cResult[16] = accessibilityState;
+                  cResult[17] = onPress;
+                  cResult[18] = joined;
+                  cResult[19] = tmp12;
+                  cResult[20] = tmp13;
+                  cResult[21] = tmp20;
+                  tmp16 = tmp20;
+                }
+              }
+              class I {
+                constructor(arg0) {
+                  items = selected;
+                  if (!selected) {
+                    if (!selected.pressed) {
+                      tmp = styles;
+                      return styles.iconWrapper;
+                    }
+                  }
+                  tmp2 = type;
+                  iconWrapper = styles;
+                  tmp3 = closure_0;
+                  tmp4 = closure_2;
+                  if (closure_0(closure_2[5]).DENY === type) {
+                    tmp6 = items ? iconWrapper.denySelected : iconWrapper.denyActive;
+                  } else {
+                    if (tmp3(tmp4[5]).ALLOW === tmp2) {
+                      tmp5 = items ? iconWrapper.allowSelected : iconWrapper.allowActive;
+                    } else if (tmp3(tmp4[5]).PASSTHROUGH === tmp2) {
+                      tmp5 = items ? iconWrapper.passthroughSelected : iconWrapper.passthroughActive;
                     }
                     items = [,];
-                    items[0] = tmp7;
-                    items[1] = tmp4.iconWrapper;
-                    iconWrapper = items;
-                    return;
+                    items[0] = tmp5;
+                    iconWrapper = iconWrapper.iconWrapper;
+                    items[1] = iconWrapper;
+                    tmp7 = items;
                   }
+                  return;
                 }
-                tmp17[0] = accessibilityRole;
-                tmp17[1] = joined;
-                tmp17[2] = accessibilityState;
-                tmp17[3] = tmp10;
-                tmp17[4] = onPress;
-                tmp17[5] = tmp11;
-                const tmp18 = <closure_3 {...tmp17} />;
-                cResult[15] = accessibilityRole;
-                cResult[16] = accessibilityState;
-                cResult[17] = onPress;
-                cResult[18] = joined;
-                cResult[19] = tmp10;
-                cResult[20] = tmp11;
-                cResult[21] = tmp18;
-                tmp14 = tmp18;
               }
+              cResult[11] = selected;
+              cResult[12] = styles;
+              cResult[13] = type;
+              cResult[14] = tmp15;
+              tmp13 = tmp15;
             }
-            class I {
-              constructor(arg0) {
-                tmp = selected;
-                if (!tmp) {
-                  if (!selected.pressed) {
-                    tmp2 = styles;
-                    iconWrapper = styles.iconWrapper;
-                  }
-                  return iconWrapper;
+          }
+          class I {
+            constructor(arg0) {
+              items = selected;
+              if (!selected) {
+                if (!selected.pressed) {
+                  tmp = styles;
+                  return styles.iconWrapper;
                 }
-                tmp3 = type;
-                tmp4 = styles;
-                tmp5 = closure_0;
-                tmp6 = closure_2;
-                if (closure_0(closure_2[5]).DENY === type) {
-                  tmp7 = tmp ? tmp4.denySelected : tmp4.denyActive;
-                } else if (tmp5(tmp6[5]).ALLOW === tmp3) {
-                  tmp7 = tmp ? tmp4.allowSelected : tmp4.allowActive;
-                } else if (tmp5(tmp6[5]).PASSTHROUGH === tmp3) {
-                  tmp7 = tmp ? tmp4.passthroughSelected : tmp4.passthroughActive;
+              }
+              tmp2 = type;
+              iconWrapper = styles;
+              tmp3 = closure_0;
+              tmp4 = closure_2;
+              if (closure_0(closure_2[5]).DENY === type) {
+                tmp6 = items ? iconWrapper.denySelected : iconWrapper.denyActive;
+              } else {
+                if (tmp3(tmp4[5]).ALLOW === tmp2) {
+                  tmp5 = items ? iconWrapper.allowSelected : iconWrapper.allowActive;
+                } else if (tmp3(tmp4[5]).PASSTHROUGH === tmp2) {
+                  tmp5 = items ? iconWrapper.passthroughSelected : iconWrapper.passthroughActive;
                 }
                 items = [,];
-                items[0] = tmp7;
-                items[1] = tmp4.iconWrapper;
-                iconWrapper = items;
-                return;
+                items[0] = tmp5;
+                iconWrapper = iconWrapper.iconWrapper;
+                items[1] = iconWrapper;
+                tmp7 = items;
               }
+              return;
             }
-            cResult[11] = selected;
-            cResult[12] = styles;
-            cResult[13] = type;
-            cResult[14] = tmp13;
-            tmp11 = tmp13;
           }
+          cResult[7] = selected;
+          cResult[8] = styles;
+          cResult[9] = type;
+          cResult[10] = I;
+          tmp12 = I;
         }
-        class I {
-          constructor(arg0) {
-            tmp = selected;
-            if (!tmp) {
-              if (!selected.pressed) {
-                tmp2 = styles;
-                iconWrapper = styles.iconWrapper;
-              }
-              return iconWrapper;
-            }
-            tmp3 = type;
-            tmp4 = styles;
-            tmp5 = closure_0;
-            tmp6 = closure_2;
-            if (closure_0(closure_2[5]).DENY === type) {
-              tmp7 = tmp ? tmp4.denySelected : tmp4.denyActive;
-            } else if (tmp5(tmp6[5]).ALLOW === tmp3) {
-              tmp7 = tmp ? tmp4.allowSelected : tmp4.allowActive;
-            } else if (tmp5(tmp6[5]).PASSTHROUGH === tmp3) {
-              tmp7 = tmp ? tmp4.passthroughSelected : tmp4.passthroughActive;
-            }
-            items = [,];
-            items[0] = tmp7;
-            items[1] = tmp4.iconWrapper;
-            iconWrapper = items;
-            return;
-          }
-        }
-        cResult[7] = selected;
-        cResult[8] = styles;
-        cResult[9] = type;
-        cResult[10] = I;
-        tmp10 = I;
+        items = [permissionTitle];
+        const _Boolean = Boolean;
+        const found = items.filter(Boolean);
+        cResult[4] = permissionTitle;
+        cResult[5] = cResult[3];
+        cResult[6] = found;
+        obj4 = found;
       }
-      items = [permissionTitle, tmp6];
-      const found = items.filter(Boolean);
-      cResult[4] = permissionTitle;
-      cResult[5] = tmp6;
-      cResult[6] = found;
-      obj4 = found;
+      const tmpResult = type(v6639O5[12]);
     }
   : (type) => {
-      let onPress;
-      let permissionTitle;
-      let stringResult;
       type = type.type;
       const selected = type.selected;
       const styles = type.styles;
       ({ permissionTitle, onPress } = type);
-      const obj = type(styles[12]);
-      const radioA11yNative = obj.useRadioA11yNative({ selected });
+      const radioA11yNative = type(styles[12]).useRadioA11yNative({ selected });
+      const obj2 = {
+        accessibilityRole: radioA11yNative.accessibilityRole,
+        accessibilityLabel: null,
+        accessibilityState: null,
+        style: null,
+        onPress: null,
+        children: null,
+      };
       items = [permissionTitle];
-      const accessibilityState = radioA11yNative.accessibilityState;
       if (type(styles[5]).DENY === type) {
         const intl2 = tmp(tmp2[6]).intl;
-        stringResult = intl2.string(tmp(tmp2[6]).t["6639O5"]);
-      } else if (type(styles[5]).ALLOW === type) {
+        let stringResult = intl2.string(tmp(tmp2[6]).t["6639O5"]);
+      } else if (tmp(tmp2[5]).ALLOW === type) {
         const intl = tmp(tmp2[6]).intl;
         stringResult = intl.string(tmp(tmp2[6]).t.RzDfSk);
-      } else if (type(styles[5]).PASSTHROUGH === type) {
+      } else if (tmp(tmp2[5]).PASSTHROUGH === type) {
         const intl3 = tmp(tmp2[6]).intl;
         stringResult = intl3.string(tmp(tmp2[6]).t.ujC3ZS);
       }
       items[1] = stringResult;
       const found = items.filter(Boolean);
+      obj2.accessibilityLabel = found.join(", ");
+      obj2.accessibilityState = radioA11yNative.accessibilityState;
+      obj2.style = function style(pressed) {
+        items = selected;
+        if (!selected) {
+          if (!pressed.pressed) {
+            return styles.iconWrapper;
+          }
+        }
+        let iconWrapper = styles;
+        if (PermissionUtils.DENY !== type) {
+          if (PermissionUtils.ALLOW === type) {
+            let tmp5 = items ? iconWrapper.allowSelected : iconWrapper.allowActive;
+          } else if (PermissionUtils.PASSTHROUGH === type) {
+            tmp5 = items ? iconWrapper.passthroughSelected : iconWrapper.passthroughActive;
+          }
+          items = [tmp5];
+          iconWrapper = iconWrapper.iconWrapper;
+          items[1] = iconWrapper;
+        }
+      };
+      obj2.onPress = onPress;
+      obj2.children = getIcon(type, selected, styles);
       return (
         <closure_3
           accessibilityRole={radioA11yNative.accessibilityRole}
-          accessibilityLabel={found.join(", ")}
-          accessibilityState={accessibilityState}
-          style={function style(pressed) {
-            let tmp7;
-            if (!selected) {
-              let iconWrapper;
-              if (!pressed.pressed) {
-                iconWrapper = styles.iconWrapper;
-              }
-              return iconWrapper;
-            }
-            if (PermissionUtils.DENY === type) {
-              tmp7 = selected ? styles.denySelected : styles.denyActive;
-            } else if (PermissionUtils.ALLOW === type) {
-              tmp7 = selected ? styles.allowSelected : styles.allowActive;
-            } else if (PermissionUtils.PASSTHROUGH === type) {
-              tmp7 = selected ? styles.passthroughSelected : styles.passthroughActive;
-            }
-            items = [tmp7, styles.iconWrapper];
-            iconWrapper = items;
-          }}
-          onPress={onPress}
+          accessibilityLabel={null}
+          accessibilityState={null}
+          style={null}
+          onPress={null}
         >
-          {getIcon(type, selected, styles)}
+          {null}
         </closure_3>
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
+ReactCompilerGating = fn(558);
+const obj10 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx",
+);
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (permissionTitle) => {
-        let disabled;
-        let onValueChange;
-        const obj = permissionTitle(onValueChange[11]);
-        const cResult = obj.c(13);
+        const cResult = permissionTitle(onValueChange[11]).c(13);
         permissionTitle = permissionTitle.permissionTitle;
-        const value = permissionTitle.value;
+        value = permissionTitle.value;
         importDefault = value;
         ({ disabled, onValueChange } = permissionTitle);
-        let tmp2 = undefined !== disabled && disabled;
         const tmp3 = closure_6();
         const styles = tmp3;
+        let disabled2 = tmp2;
+        if (undefined !== disabled && disabled) {
+          disabled2 = tmp3.disabled;
+        }
         if (cResult[0] === tmp3.ternaryCheckBox) {
-          let tmp5;
-          if (cResult[1] === (tmp2 && tmp3.disabled)) {
-            tmp5 = cResult[2];
+          if (cResult[1] === disabled2) {
+            let tmp4 = cResult[2];
           }
           let str = "auto";
           if (tmp2) {
@@ -359,37 +368,42 @@ const memoResult = react.memo(
           if (cResult[3] === onValueChange) {
             if (cResult[4] === permissionTitle) {
               if (cResult[5] === tmp3) {
-                let tmp6;
                 if (cResult[6] === value) {
-                  tmp6 = cResult[7];
+                  let tmp5 = cResult[7];
                 }
                 if (cResult[8] === permissionTitle) {
-                  if (cResult[9] === tmp5) {
+                  if (cResult[9] === tmp4) {
                     if (cResult[10] === str) {
-                      let tmp9;
-                      if (cResult[11] === tmp6) {
-                        tmp9 = cResult[12];
+                      if (cResult[11] === tmp5) {
+                        let tmp8 = cResult[12];
                       }
-                      return tmp9;
+                      return tmp8;
                     }
                   }
                 }
-                const tmp12 = (
+                const obj2 = {
+                  style: tmp4,
+                  pointerEvents: str,
+                  accessibilityRole: "radiogroup",
+                  accessibilityLabel: permissionTitle,
+                  children: tmp5,
+                };
+                const tmp11 = (
                   <closure_4
-                    style={tmp5}
+                    style={tmp4}
                     pointerEvents={str}
                     accessibilityRole="radiogroup"
                     accessibilityLabel={permissionTitle}
                   >
-                    {tmp6}
+                    {tmp5}
                   </closure_4>
                 );
                 cResult[8] = permissionTitle;
-                cResult[9] = tmp5;
+                cResult[9] = tmp4;
                 cResult[10] = str;
-                cResult[11] = tmp6;
-                cResult[12] = tmp12;
-                tmp9 = tmp12;
+                cResult[11] = tmp5;
+                cResult[12] = tmp11;
+                tmp8 = tmp11;
               }
             }
           }
@@ -403,9 +417,12 @@ const memoResult = react.memo(
                 selected={closure_1 === type}
                 styles={styles}
                 onPress={function onPress() {
-                  const tmp2 = null != onValueChange && importDefault !== type;
+                  let tmp2 = null != onValueChange;
                   if (tmp2) {
-                    onValueChange(type);
+                    tmp2 = value !== closure_0;
+                  }
+                  if (tmp2) {
+                    onValueChange(closure_0);
                   }
                 }}
               />
@@ -416,16 +433,16 @@ const memoResult = react.memo(
           cResult[5] = tmp3;
           cResult[6] = value;
           cResult[7] = mapped;
-          tmp6 = mapped;
+          tmp5 = mapped;
         }
-        items = [tmp3.ternaryCheckBox, tmp2 && tmp3.disabled];
+        items = [tmp3.ternaryCheckBox, disabled2];
         cResult[0] = tmp3.ternaryCheckBox;
-        cResult[1] = tmp2 && tmp3.disabled;
+        cResult[1] = disabled2;
         cResult[2] = items;
-        tmp5 = items;
+        tmp4 = items;
+        const obj = permissionTitle(onValueChange[11]);
       }
     : (permissionTitle) => {
-        let disabled;
         permissionTitle = permissionTitle.permissionTitle;
         ({ value: importDefault, disabled } = permissionTitle);
         if (disabled === undefined) {
@@ -435,43 +452,49 @@ const memoResult = react.memo(
         const tmp = closure_6();
         const styles = tmp;
         items = [tmp.ternaryCheckBox];
-        const disabled2 = disabled && tmp.disabled;
+        let disabled2 = disabled;
+        if (disabled) {
+          disabled2 = tmp.disabled;
+        }
+        const obj = {
+          style: items,
+          pointerEvents: null,
+          accessibilityRole: "radiogroup",
+          accessibilityLabel: null,
+          children: null,
+        };
         items[1] = disabled2;
         let str = "auto";
         if (disabled) {
           str = "none";
         }
+        obj.pointerEvents = str;
+        obj.accessibilityLabel = permissionTitle;
+        obj.children = items.map((type, index) => {
+          permissionTitle = type;
+          return (
+            <closure_1_9
+              key={"checkbox-" + index}
+              permissionTitle={permissionTitle}
+              type={type}
+              selected={closure_1 === type}
+              styles={styles}
+              onPress={function onPress() {
+                let tmp2 = null != onValueChange;
+                if (tmp2) {
+                  tmp2 = importDefault !== closure_0;
+                }
+                if (tmp2) {
+                  onValueChange(closure_0);
+                }
+              }}
+            />
+          );
+        });
         return (
-          <closure_4
-            style={items}
-            pointerEvents={str}
-            accessibilityRole="radiogroup"
-            accessibilityLabel={permissionTitle}
-          >
-            {items.map((type, index) => {
-              permissionTitle = type;
-              return (
-                <closure_1_9
-                  key={"checkbox-" + index}
-                  permissionTitle={permissionTitle}
-                  type={type}
-                  selected={closure_1 === type}
-                  styles={styles}
-                  onPress={function onPress() {
-                    const tmp2 = null != onValueChange && importDefault !== type;
-                    if (tmp2) {
-                      onValueChange(type);
-                    }
-                  }}
-                />
-              );
-            })}
+          <closure_4 style={items} pointerEvents={null} accessibilityRole="radiogroup" accessibilityLabel={null}>
+            {null}
           </closure_4>
         );
       },
 );
-const result = size.fileFinishedImporting(
-  "components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx",
-);
-
-export default memoResult;

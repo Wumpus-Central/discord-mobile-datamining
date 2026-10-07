@@ -1,34 +1,26 @@
 // discord_app/modules/screen/native/DimensionsStore.android.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react_native2 from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
+import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import AppEntryKey from "../../window/native/AppEntryKey.tsx";
-import react_native3 from "readAppEntryWindowMetrics.android.tsx";
+import readAppEntryWindowMetrics from "readAppEntryWindowMetrics.android.tsx";
 import useSystemKeyboardHeight from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
 import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
 import 00570__ from "../../../../_runtime/metro/00570__.js";
 import SafeAreaStore from "../../safe_area/SafeAreaStore.native.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const f84261 = () => state.setState((arg0) => closure_1_4(arg0));
 function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
-  let height2;
-  let height4;
-  let width2;
-  let width4;
-  size = {};
+  const size = {};
   const merged = Object.assign(Dimensions.get("window"));
-  const obj2 = react_native3;
-  const merged1 = Object.assign(obj2.readWindowSizeForAppEntry(appEntryKey));
-  const obj3 = react_native3;
-  let size2 = obj3.readScreenSizeForAppEntry(appEntryKey);
+  const merged1 = Object.assign(readAppEntryWindowMetrics.readWindowSizeForAppEntry(appEntryKey));
+  let size2 = readAppEntryWindowMetrics.readScreenSizeForAppEntry(appEntryKey);
   if (size2 == null) {
     size2 = Dimensions.get("screen");
   }
   let obj5 = arg1;
   const fontScale = size.fontScale;
   let windowDimensions;
-  const tmp5 = size2.width > size2.height;
   if (arg1 != null) {
     windowDimensions = obj5.windowDimensions;
   }
@@ -37,48 +29,46 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
     prop = obj5.windowDimensionsIgnoringKeyboard;
   }
   const width = size.width;
-  ({ width: width2, height: height2 } = size2);
-  const height = size.height;
-  const tmp2Result = useSafeAreaInsets;
-  const rect = tmp2Result.getSafeAreaInsets(appEntryKey);
-  let tmp8 = height2;
+  ({ width: width2, height } = size2);
+  const tmp5 = size2.width > size2.height;
+  const rect = useSafeAreaInsets.getSafeAreaInsets(appEntryKey);
+  let tmp8 = height;
   let tmp9 = width2;
-  if (height2 === width) {
+  if (height === width) {
     tmp8 = width2;
-    tmp9 = height2;
+    tmp9 = height;
   }
   const bound = Math.min(width + rect.left + rect.right, tmp9);
-  const sum = height + rect.top + rect.bottom;
-  const obj4 = { appEntryKey };
+  const sum = size.height + rect.top + rect.bottom;
+  const tmp2Result = useSafeAreaInsets;
+  const bound1 = Math.min(sum - useSystemKeyboardHeight.getSystemKeyboardHeight({ appEntryKey }), tmp8);
   let width1;
-  const tmp2Result3 = useSystemKeyboardHeight;
-  const minResult = min(sum - tmp2Result3.getSystemKeyboardHeight(obj4), tmp8);
   if (windowDimensions != null) {
     width1 = windowDimensions.width;
   }
   if (width1 !== bound) {
-    const size1 = { width: bound, height: minResult };
+    const size1 = { width: bound, height: bound1 };
     windowDimensions = size1;
   }
   const width3 = size.width;
-  ({ width: width4, height: height4 } = size2);
-  const height3 = size.height;
-  const tmp2Result4 = useSafeAreaInsets;
-  const rect2 = tmp2Result4.getSafeAreaInsets(appEntryKey);
-  let tmp14 = height4;
+  ({ width: width4, height: height2 } = size2);
+  const obj4 = { appEntryKey };
+  const tmp2Result3 = useSystemKeyboardHeight;
+  const rect2 = useSafeAreaInsets.getSafeAreaInsets(appEntryKey);
+  let tmp14 = height2;
   let tmp15 = width4;
-  if (height4 === width3) {
+  if (height2 === width3) {
     tmp14 = width4;
-    tmp15 = height4;
+    tmp15 = height2;
   }
-  const bound1 = Math.min(width3 + rect2.left + rect2.right, tmp15);
-  const bound2 = Math.min(height3 + rect2.top + rect2.bottom, tmp14);
+  const bound2 = Math.min(width3 + rect2.left + rect2.right, tmp15);
+  const bound3 = Math.min(size.height + rect2.top + rect2.bottom, tmp14);
   let width5;
   if (prop != null) {
     width5 = prop.width;
   }
-  if (width5 !== bound1) {
-    const size3 = { width: bound1, height: bound2 };
+  if (width5 !== bound2) {
+    const size3 = { width: bound2, height: bound3 };
     prop = size3;
   }
   let windowDimensions1;
@@ -91,6 +81,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
     }
   }
   obj5 = { fontScale, screenIsLandscape: tmp5, windowDimensions, windowDimensionsIgnoringKeyboard: prop };
+  const tmp2Result4 = useSafeAreaInsets;
 }
 function getDimensionsStoreState(arg0) {
   let tmp = arg0;
@@ -117,27 +108,22 @@ function getDimensionsStoreState(arg0) {
     continue;
   }
   if (!flag) {
-    tmp = { byAppEntry };
     const obj2 = { byAppEntry };
+    tmp = obj2;
   }
   return tmp;
 }
-const Dimensions = react_native.Dimensions;
+const Dimensions = _mod17.Dimensions;
 let byAppEntry = module_570.create(() => getDimensionsStoreState(undefined));
 const subscription = SafeAreaStore.subscribe(() => {
-  const obj = react_native2;
-  obj.batchUpdates(f84261);
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });
 subscribeToKeyboardUIStore(() => {
-  const obj = react_native2;
-  obj.batchUpdates(f84261);
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });
 const listener = Dimensions.addEventListener("change", () => {
-  let state;
-  const obj = react_native2;
-  obj.batchUpdates(f84261);
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });
-let size = size_mod;
 const result = size.fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
 
 export default byAppEntry;

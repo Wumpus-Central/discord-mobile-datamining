@@ -1,43 +1,39 @@
 // discord_app/modules/reactions/native/useEmojisForReactionRow.tsx
-import EmojiConstants from "../../emojis/EmojiConstants.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let obj1;
 
-const EmojiIntention = EmojiConstants.EmojiIntention;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const EmojiIntention = fn(1380).EmojiIntention;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
+
+export const useEmojisForReactionRow = ReactCompilerGating.isReactCompilerEnabled()
   ? (getGuildId, arg1, arg2) => {
-      let tmp4;
       const _require = getGuildId;
-      let obj = require("react");
-      const cResult = obj.c(11);
-      const tmp = _require;
+      const cResult = require("c").c(11);
       if (cResult[0] !== getGuildId) {
         const guildId = getGuildId.getGuildId();
         cResult[0] = getGuildId;
         cResult[1] = guildId;
-        tmp4 = guildId;
+        let tmp4 = guildId;
       } else {
         tmp4 = cResult[1];
       }
-      const tmpResult = tmp(9883);
-      const frequentlyUsedReactionEmojis = tmpResult.useFrequentlyUsedReactionEmojis(tmp4);
+      const obj = require("c");
+      const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(tmp4);
       const rounded = Math.floor(Math.min(useWindowDimensionsDefault().width, arg1) / arg2);
       if (cResult[2] === getGuildId) {
         if (cResult[3] === frequentlyUsedReactionEmojis) {
-          let arr2;
           if (cResult[4] === rounded) {
-            arr2 = cResult[5];
+            let arr2 = cResult[5];
           }
           if (cResult[8] === arr2) {
-            let tmp8;
             if (cResult[9] === rounded) {
-              tmp8 = cResult[10];
+              let tmp8 = cResult[10];
             }
             return tmp8;
           }
@@ -82,22 +78,24 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = rounded;
       cResult[5] = found;
       arr2 = found;
+      const tmpResult = require("EmojiPickerUtils");
     }
   : (getGuildId, arg1, arg2) => {
-      let rounded;
       const _require = getGuildId;
       const guildId = getGuildId.getGuildId();
-      let obj = require("EmojiPickerUtils");
-      const frequentlyUsedReactionEmojis = obj.useFrequentlyUsedReactionEmojis(guildId);
+      const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(guildId);
       rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[5])().width, arg1) / arg2);
       const items = [frequentlyUsedReactionEmojis, getGuildId, rounded];
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         let length;
-        const found = frequentlyUsedReactionEmojis.filter((emoji) => {
-          const obj = frequentlyUsedReactionEmojis(rounded[6]);
-          const obj2 = { emoji, channel, intention: constants.REACTION };
-          return !obj.isEmojiFilteredOrLocked(obj2);
-        });
+        const found = frequentlyUsedReactionEmojis.filter(
+          (emoji) =>
+            !frequentlyUsedReactionEmojis(rounded[6]).isEmojiFilteredOrLocked({
+              emoji,
+              channel,
+              intention: constants.REACTION,
+            }),
+        );
         if (found.length < rounded) {
           do {
             let arr = found.push(null);
@@ -108,6 +106,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       return memo.slice(0, rounded - 1);
     };
-const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
-
-export const useEmojisForReactionRow = tmp2;

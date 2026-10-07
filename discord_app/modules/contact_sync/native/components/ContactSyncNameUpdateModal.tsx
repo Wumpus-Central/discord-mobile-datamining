@@ -1,135 +1,73 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import ContactSyncConstants from "../ContactSyncConstants.tsx";
-import ContactSyncUtils from "../ContactSyncUtils.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import NavigatorHeader_mod from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-let _require, c2, c4;
-
-let NavigatorHeader;
-let obj2;
+require = fn;
 function onClose() {
-  const arr = ModalActionCreatorsDefault;
-  arr.pop();
+  ModalActionCreatorsDefault.pop();
 }
-const View = react_native.View;
-const ContactSyncScenes = ContactSyncConstants.ContactSyncScenes;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = {
-  flex: 1,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  justifyContent: "center",
-  paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32,
+const View = fn(17).View;
+const ContactSyncScenes = fn(12342).ContactSyncScenes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  container: {
+    flex: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    justifyContent: "center",
+    paddingTop: fn(6075).NAV_BAR_HEIGHT + 32,
+  },
 };
-let closure_10 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_10 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let onNext;
-      let require;
-      let tmp13;
-      let tmp6;
-      let obj = react2;
-      const cResult = obj.c(8);
+      const cResult = require("c").c(8);
       const tmp3 = closure_10();
-      let obj2 = ContactSyncUtils;
-      const contactSyncAccount = obj2.useContactSyncAccount();
-      [tmp6, require] = _slicedToArray(react.useState(false), 2);
-      const tmp5 = _slicedToArray(react.useState(false), 2);
+      const obj = require("c");
+      const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
+      const obj2 = require("ContactSyncUtils");
+      [tmp6, closure_0] = noop.useState(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let closure_0 = _asyncToGenerator(async (arg0) => {
-          let intl;
-          closure_0 = arg0;
-          if (c4 === 2) {
+        _require = asyncGeneratorStep(async (arg0) => {
+          closure_1 = tmp3;
+          closure_0(true);
+          await first(12348).updateName(closure_0);
+          if (1 === tmp7) {
+            c3 = 0;
+            const obj7 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
+            const intl = closure_0(1126).intl;
+            obj7.content = intl.string(closure_0(1126).t.R0RpRX);
+            obj7.icon = first(4813);
+            first(4574).open(obj7);
+            closure_0(false);
             c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let c3;
-            try {
-              c4 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  let closure_1 = tmp;
-                  closure_0(true);
-                  c3 = 1;
-                  c2 = 2;
-                  c4 = 1;
-                  const obj5 = { value: obj3.updateName(closure_0), done: false };
-                  obj3 = onNext(dependencyMap[13]);
-                  return obj5;
-                }
-              } else {
-                if (1 === tmp4) {
-                  c3 = 0;
-                  const obj6 = {
-                    key: "ERROR_GENERIC_TITLE",
-                    content: intl.string(closure_0(dependencyMap[15]).t.R0RpRX),
-                    icon: onNext(dependencyMap[16]),
-                  };
-                  const open = onNext(dependencyMap[14]).open;
-                  const tmp13 = onNext(dependencyMap[14]);
-                  intl = closure_0(dependencyMap[15]).intl;
-                  open(obj6);
-                  closure_0(false);
-                } else if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  c4 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_0(false);
-                  onClose();
-                  c3 = 0;
-                }
-                c4 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp27) {
-              if (0 === c3) {
-                c4 = 3;
-                throw tmp27;
-              } else {
-                c2 = 1;
-              }
-            }
+            first(4574);
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_0(false);
+            onClose();
+            c3 = 0;
           }
+          return value;
         });
-        onNext = function onNext() {
-          return closure_0(...arguments);
-        };
+        function onNext() {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        }
         cResult[0] = onNext;
       } else {
         onNext = cResult[0];
@@ -137,192 +75,158 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {
-            return first(null);
+            return closure_1(null);
           }
         }
         cResult[1] = E;
       } else {
         class E {
           constructor() {
-            return first(null);
+            return closure_1(null);
           }
         }
       }
       if (contactSyncAccount != null) {
         class E {
           constructor() {
-            return first(null);
+            return closure_1(null);
           }
         }
       }
       if (undefined == null) {
         class E {
           constructor() {
-            return first(null);
+            return closure_1(null);
           }
         }
       }
       if (cResult[2] === tmp6) {
         class E {
           constructor() {
-            return first(null);
+            return closure_1(null);
           }
         }
         if (cResult[5] === tmp3.container) {
           class E {
             constructor() {
-              return first(null);
+              return closure_1(null);
             }
           }
           return tmp13;
         }
+        const obj3 = { style: tmp3.container, children: tmp11 };
         const tmp16 = <View style={tmp3.container}>{tmp11}</View>;
         cResult[5] = tmp3.container;
         cResult[6] = tmp11;
         cResult[7] = tmp16;
         tmp13 = tmp16;
       }
+      const tmp12 = jsx(onNext(12361), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
       cResult[2] = tmp6;
       cResult[3] = undefined;
-      cResult[4] = jsx(onNext(12361), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
-      const tmp12 = jsx(onNext(12361), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
+      cResult[4] = tmp12;
+      const tmp5 = _slicedToArray(noop.useState(false), 2);
     }
   : () => {
-      let str;
       function onNext() {
-        return obj(...arguments);
+        const self = this;
+        const apply = closure_2.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       }
-      let obj = function _onNext2() {
-        obj = _asyncToGenerator(async (arg0) => {
-          let closure_1;
-          let intl;
-          closure_0 = arg0;
-          if (c4 === 2) {
-            c4 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let c3;
-            try {
-              c4 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  closure_2_0(true);
-                  c3 = 1;
-                  obj3 = tmp(c2[13]);
-                  c2 = 2;
-                  c4 = 1;
-                  const obj5 = { value: obj3.updateName(closure_0), done: false };
-                  return obj5;
-                }
-              } else {
-                if (1 === tmp4) {
-                  c3 = 0;
-                  const obj6 = {
-                    key: "ERROR_GENERIC_TITLE",
-                    content: intl.string(closure_0(c2[15]).t.R0RpRX),
-                    icon: tmp(c2[16]),
-                  };
-                  const open = tmp(c2[14]).open;
-                  const tmp13 = tmp(c2[14]);
-                  intl = closure_0(c2[15]).intl;
-                  open(obj6);
-                  closure_129_0(false);
-                } else if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  c4 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  closure_129_0(false);
-                  closure_1_9();
-                  c3 = 0;
-                }
-                c4 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp27) {
-              if (0 === c3) {
-                c4 = 3;
-                throw tmp27;
-              } else {
-                c2 = 1;
-              }
-            }
-          }
-        });
-        return obj(...arguments);
+      dependencyMap = async function _onNext2(arg0) {
+        _require(true);
+        await tmp3(12348).updateName(closure_0);
+        if (1 === tmp7) {
+          c3 = 0;
+          const obj7 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
+          const intl = closure_0(1126).intl;
+          obj7.content = intl.string(closure_0(1126).t.R0RpRX);
+          obj7.icon = tmp3(4813);
+          tmp3(4574).open(obj7);
+          closure_129_0(false);
+          c4 = 3;
+          tmp3(4574);
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_0(false);
+          onClose();
+          c3 = 0;
+        }
+        return value;
       };
       const tmp = closure_10();
-      obj = require("ContactSyncUtils");
-      const contactSyncAccount = obj.useContactSyncAccount();
-      const tmp3 = _slicedToArray(react.useState(false), 2);
+      const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
+      const tmp3 = _slicedToArray(noop.useState(false), 2);
       _require = tmp3[1];
-      obj3 = {
+      const obj2 = { style: tmp.container, children: null };
+      const obj3 = {
         onNext,
         onRemoveName() {
           return onNext(null);
         },
         loading: tmp3[0],
-        initialName: str,
+        initialName: null,
       };
-      str = undefined;
-      onNext(obj[17]);
+      let str;
+      const obj = require("ContactSyncUtils");
       if (contactSyncAccount != null) {
         str = contactSyncAccount.name;
       }
       if (str == null) {
         str = "";
       }
+      obj3.initialName = str;
+      obj2.children = jsx(onNext(12361), {
+        onNext,
+        onRemoveName() {
+          return onNext(null);
+        },
+        loading: tmp3[0],
+        initialName: null,
+      });
       return <View style={tmp.container}>{null}</View>;
     };
-let obj3 = {};
-let obj4 = {
+const obj5 = {};
+const obj6 = {
   render() {
     return <closure_11 />;
   },
   ignoreKeyboard: true,
   fullscreen: true,
-  headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
+  headerLeft: null,
   title: "",
 };
-const NAME_INPUT = ContactSyncScenes.NAME_INPUT;
-NavigatorHeader = NavigatorHeader_mod;
-obj3[NAME_INPUT] = obj4;
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const NavigatorHeader = fn(6017);
+obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
+obj5[ContactSyncScenes.NAME_INPUT] = obj6;
+ReactCompilerGating = fn(558);
+let obj3 = {
+  flex: 1,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  justifyContent: "center",
+  paddingTop: fn(6075).NAV_BAR_HEIGHT + 32,
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      const obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = jsx(Navigator.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj3 });
+        const obj2 = { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj5 };
+        const tmp8 = jsx(Navigator.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj5 });
         cResult[0] = tmp8;
-        first = tmp8;
+        let first = tmp8;
       } else {
         first = cResult[0];
       }
       return first;
     }
-  : () => jsx(Navigator.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj3 });
-const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
-
-export default tmp2;
+  : () => jsx(Navigator.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj5 });

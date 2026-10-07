@@ -1,35 +1,144 @@
 // discord_app/modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
-import Constants from "../../../../Constants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import LayerContext from "../../../../design/components/Layers/native/LayerContext.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let manager;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const NOOP = fn(1085).NOOP;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const context = noop.createContext(null);
+fn(558);
+const ReactCompilerGating = fn(558);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (manager) => {
+      const cResult = items(576).c(14);
+      items = manager.manager;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = {};
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      const tmp3 = _slicedToArray(noop.useState(first), 2)[1];
+      closure_1 = tmp3;
+      if (cResult[1] === tmp3) {
+        if (cResult[2] === items) {
+          let tmp4 = cResult[3];
+        }
+        if (cResult[4] !== items) {
+          const items1 = [items];
+          cResult[4] = items;
+          cResult[5] = items1;
+          let tmp5 = items1;
+        } else {
+          tmp5 = cResult[5];
+        }
+        const effect = noop.useEffect(tmp4, tmp5);
+        if (cResult[6] !== items) {
+          const fn2 = function h(current) {
+            return items.setSurfaceRef(current);
+          };
+          cResult[6] = items;
+          cResult[7] = fn2;
+          let tmp7 = fn2;
+        } else {
+          tmp7 = cResult[7];
+        }
+        if (cResult[8] !== items.items) {
+          const _Symbol = Symbol;
+          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+            const fn3 = function p(children) {
+              return closure_1_7(React.Fragment, { children: children.component }, children.key);
+            };
+            cResult[10] = fn3;
+            let tmp9 = fn3;
+          } else {
+            tmp9 = cResult[10];
+          }
+          const items2 = items.items;
+          const mapped = items2.map(tmp9);
+          items = items.items;
+          cResult[8] = items;
+          cResult[9] = mapped;
+        } else {
+          if (cResult[11] === tmp7) {
+            if (cResult[12] === tmp8) {
+              let tmp12 = cResult[13];
+            }
+            return tmp12;
+          }
+          const obj4 = {
+            style: closure_11.overlay,
+            ref: tmp7,
+            onLayout: NOOP,
+            pointerEvents: "box-none",
+            children: cResult[9],
+          };
+          const tmp17 = closure_7(closure_5, obj4);
+          cResult[11] = tmp7;
+          cResult[12] = cResult[9];
+          cResult[13] = tmp17;
+          tmp12 = tmp17;
+        }
+      }
+      const fn = function f() {
+        closure_0 = items;
+        items.invalidate = () => closure_1_1({});
+        return () => {
+          closure_0.invalidate = () => null;
+        };
+      };
+      cResult[1] = tmp3;
+      cResult[2] = items;
+      cResult[3] = fn;
+      tmp4 = fn;
+      const obj = items(576);
+    }
+  : (manager) => {
+      manager = manager.manager;
+      closure_1 = _slicedToArray(noop.useState({}), 2)[1];
+      const items = [manager];
+      const effect = noop.useEffect(() => {
+        closure_0 = manager;
+        manager.invalidate = () => closure_1_1({});
+        return () => {
+          closure_0.invalidate = () => null;
+        };
+      }, items);
+      const obj = {
+        style: closure_11.overlay,
+        ref(current) {
+          return manager.setSurfaceRef(current);
+        },
+        onLayout: NOOP,
+        pointerEvents: "box-none",
+        children: null,
+      };
+      const items1 = manager.items;
+      obj.children = items1.map((children) =>
+        closure_1_7(React.Fragment, { children: children.component }, children.key),
+      );
+      return closure_7(closure_5, obj);
+    };
+let obj = { overlay: null };
+let obj4 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj4.zIndex = 1;
+obj.overlay = obj4;
+const styles = StyleSheet.create(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
 
-let StyleSheet;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-({ StyleSheet, View: hasOwnProperty } = react_native);
-const NOOP = Constants.NOOP;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-const context = react.createContext(null);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+export const SidebarCoachmarkOverlayContext = context;
+export const SidebarCoachmarkOverlay = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let enabled;
-      let first;
-      let items;
-      const obj = react2;
-      const cResult = obj.c(8);
+      const cResult = c.c(8);
       ({ children, enabled } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t() {
@@ -37,7 +146,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           return layerContextManager;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -47,22 +156,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = tmp4;
       }
       if (cResult[1] === enabled) {
-        let tmp6;
         if (cResult[2] === tmp4) {
-          tmp6 = cResult[3];
+          let tmp6 = cResult[3];
         }
         if (cResult[4] === children) {
           if (cResult[5] === tmp5) {
-            let tmp10;
             if (cResult[6] === tmp6) {
-              tmp10 = cResult[7];
+              let tmp10 = cResult[7];
             }
             return tmp10;
           }
         }
-        const obj2 = { value: tmp5, children: items };
-        items = [children, tmp6];
-        const tmp13 = metroImportAll(context.Provider, obj2);
+        const obj2 = { value: tmp5, children: null };
+        const items = [children, tmp6];
+        obj2.children = items;
+        const tmp13 = closure_1_8(context.Provider, obj2);
         cResult[4] = children;
         cResult[5] = tmp5;
         cResult[6] = tmp6;
@@ -72,7 +180,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp7 = null;
       if (enabled) {
         const obj3 = { manager: tmp4 };
-        tmp7 = metroImportDefault(closure_10, obj3);
+        tmp7 = React5(closure_10, obj3);
       }
       cResult[1] = enabled;
       cResult[2] = tmp4;
@@ -80,157 +188,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
     }
   : (enabled) => {
-      let items;
       enabled = enabled.enabled;
-      const children = enabled.children;
       const tmp = useInitialValueDefault(() => {
         const layerContextManager = new LayerContext.LayerContextManager();
         return layerContextManager;
       });
       let tmp3 = null;
-      const Provider = context.Provider;
       if (enabled) {
         tmp3 = tmp;
       }
-      const obj = { value: tmp3, children: items };
-      items = [children];
+      const obj = { value: tmp3, children: null };
+      const items = [enabled.children];
       let tmp4 = null;
       if (enabled) {
         const obj2 = { manager: tmp };
-        tmp4 = metroImportDefault(closure_10, obj2);
+        tmp4 = React5(closure_10, obj2);
       }
       items[1] = tmp4;
-      return metroImportAll(Provider, obj);
+      obj.children = items;
+      return closure_1_8(context.Provider, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (manager) => {
-      let first;
-      let obj = manager(576);
-      const cResult = obj.c(14);
-      manager = manager.manager;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = {};
-        cResult[0] = obj2;
-        first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      const tmp3 = _slicedToArray(react.useState(first), 2)[1];
-      let closure_1 = tmp3;
-      if (cResult[1] === tmp3) {
-        let tmp4;
-        let tmp5;
-        let tmp7;
-        let tmp8;
-        if (cResult[2] === manager) {
-          tmp4 = cResult[3];
-        }
-        if (cResult[4] !== manager) {
-          const items = [manager];
-          cResult[4] = manager;
-          cResult[5] = items;
-          tmp5 = items;
-        } else {
-          tmp5 = cResult[5];
-        }
-        const effect = react.useEffect(tmp4, tmp5);
-        if (cResult[6] !== manager) {
-          const fn2 = function h(current) {
-            return manager.setSurfaceRef(current);
-          };
-          cResult[6] = manager;
-          cResult[7] = fn2;
-          tmp7 = fn2;
-        } else {
-          tmp7 = cResult[7];
-        }
-        if (cResult[8] !== manager.items) {
-          let tmp9;
-          const _Symbol = Symbol;
-          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn3 = function p(children) {
-              const obj = { children: children.component };
-              return closure_1_7(React.Fragment, obj, children.key);
-            };
-            cResult[10] = fn3;
-            tmp9 = fn3;
-          } else {
-            tmp9 = cResult[10];
-          }
-          const items1 = manager.items;
-          const mapped = items1.map(tmp9);
-          cResult[8] = manager.items;
-          cResult[9] = mapped;
-          tmp8 = mapped;
-        } else {
-          tmp8 = cResult[9];
-        }
-        if (cResult[11] === tmp7) {
-          let tmp11;
-          if (cResult[12] === tmp8) {
-            tmp11 = cResult[13];
-          }
-          return tmp11;
-        }
-        const obj4 = {
-          style: closure_11.overlay,
-          ref: tmp7,
-          onLayout: NOOP,
-          pointerEvents: "box-none",
-          children: tmp8,
-        };
-        const tmp16 = closure_7(closure_5, obj4);
-        cResult[11] = tmp7;
-        cResult[12] = tmp8;
-        cResult[13] = tmp16;
-        tmp11 = tmp16;
-      }
-      const fn = function f() {
-        let closure_0 = manager;
-        manager.invalidate = () => closure_1_1({});
-        return () => {
-          closure_0.invalidate = () => null;
-        };
-      };
-      cResult[1] = tmp3;
-      cResult[2] = manager;
-      cResult[3] = fn;
-      tmp4 = fn;
-    }
-  : (manager) => {
-      let items1;
-      manager = manager.manager;
-      let closure_1 = _slicedToArray(react.useState({}), 2)[1];
-      const items = [manager];
-      const effect = react.useEffect(() => {
-        let closure_0 = manager;
-        manager.invalidate = () => closure_1_1({});
-        return () => {
-          closure_0.invalidate = () => null;
-        };
-      }, items);
-      let obj = {
-        style: closure_11.overlay,
-        ref(current) {
-          return manager.setSurfaceRef(current);
-        },
-        onLayout: NOOP,
-        pointerEvents: "box-none",
-        children: items1.map((children) => {
-          const obj = { children: children.component };
-          return closure_1_7(React.Fragment, obj, children.key);
-        }),
-      };
-      items1 = manager.items;
-      return closure_7(closure_5, obj);
-    };
-let obj = { overlay: obj2 };
-obj2 = { zIndex: 1 };
-const create = StyleSheet.create;
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-let closure_11 = create(obj);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
-
-export const SidebarCoachmarkOverlayContext = context;
-export const SidebarCoachmarkOverlay = tmp5;

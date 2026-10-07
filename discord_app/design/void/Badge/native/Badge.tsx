@@ -1,60 +1,61 @@
 // discord_app/design/void/Badge/native/Badge.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../../_runtime/00576_react.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../Constants.tsx";
 import NumberUtils from "../../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import shared from "../../../shared.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import LegacyText_LegacyTextDefault from "../../LegacyText/native/LegacyText.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
-import BadgeConstants from "../../BadgeConstants/native/BadgeConstants.tsx";
-import createStyles_mod from "../../../components/Styles/native/createStyles.tsx";
-import PlatformUtils_mod from "../../../../utils/PlatformUtils.tsx";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let importDefault;
-
-let BADGE_PADDING;
-let BADGE_SIZE;
-let PlatformUtils;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let size;
-let space;
-let str;
-const View = react_native.View;
-const Fonts = Constants.Fonts;
-({
-  BADGE_MASK_SIZE: metroRequire,
-  BADGE_MASK_UNREAD_SIZE: metroImportDefault,
-  BADGE_PADDING,
-  BADGE_SIZE,
-} = BadgeConstants);
+require = fn;
+const View = fn(17).View;
+const BadgeConstants = fn(1190);
+({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = {
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
   badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 },
-  badge: obj2,
-  badgeText: obj3,
-  experimentalBadgeText: obj4,
-  noCount: size,
-  unread: obj5,
-  mention: obj6,
-  lowImportanceMention: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG },
-  eventsMentionBadge: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG },
+  badge: {
+    paddingLeft: BADGE_PADDING,
+    paddingRight: BADGE_PADDING,
+    borderRadius: nativeDefault.space.PX_8,
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+  },
+  badgeText: null,
+  experimentalBadgeText: null,
+  noCount: null,
+  unread: null,
+  mention: null,
+  lowImportanceMention: null,
+  eventsMentionBadge: null,
 };
-obj2 = {
+let obj4 = {
+  minWidth: BADGE_SIZE - 2 * BADGE_PADDING,
+  color: nativeDefault.colors.WHITE,
+  fontSize: 12,
+  lineHeight: null,
+  fontFamily: null,
+  textAlign: "center",
+  textAlignVertical: null,
+};
+let PlatformUtils = fn(1369);
+PlatformUtils = PlatformUtils.isAndroid();
+const space = nativeDefault.space;
+obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
+obj4.fontFamily = fn(1085).Fonts.PRIMARY_BOLD;
+PlatformUtils = fn(1369);
+let str;
+if (PlatformUtils.isAndroid()) {
+  str = "center";
+}
+obj4.textAlignVertical = str;
+obj2.badgeText = obj4;
+let obj3 = {
   paddingLeft: BADGE_PADDING,
   paddingRight: BADGE_PADDING,
   borderRadius: nativeDefault.space.PX_8,
@@ -62,52 +63,26 @@ obj2 = {
   alignItems: "center",
   overflow: "hidden",
 };
-createStyles = createStyles.createStyles;
-obj3 = {
+obj2.experimentalBadgeText = {
   minWidth: BADGE_SIZE - 2 * BADGE_PADDING,
   color: nativeDefault.colors.WHITE,
-  fontSize: 12,
-  lineHeight: PlatformUtils ? space.PX_12 : space.PX_16,
-  fontFamily: Fonts.PRIMARY_BOLD,
   textAlign: "center",
-  textAlignVertical: str,
 };
-PlatformUtils = PlatformUtils_mod;
-PlatformUtils.isAndroid();
-space = nativeDefault.space;
-PlatformUtils = PlatformUtils_mod;
-str = undefined;
-if (PlatformUtils.isAndroid()) {
-  str = "center";
-}
-obj4 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
-size = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: nativeDefault.colors.WHITE };
-obj5 = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-({ backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG });
-({ backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG });
-let closure_11 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let size = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: nativeDefault.colors.WHITE };
+obj2.noCount = size;
+const obj7 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, textAlign: "center" };
+obj2.unread = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+const obj8 = { backgroundColor: nativeDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+obj2.mention = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+const obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+obj2.lowImportanceMention = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+const obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+obj2.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+let closure_11 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let accessibilityElementsHidden;
-      let accessibilityLabel;
-      let accessible;
-      let dotStyle;
-      let eventsMentionBadge;
-      let hideCount;
-      let importantForAccessibility;
-      let isMentionLowImportance;
-      let locale;
-      let maxValue;
-      let style;
-      let textStyle;
-      let tmp10;
-      let tmp11;
-      let unreadIndicator;
-      let value;
-      const obj = react2;
-      const cResult = obj.c(29);
+      const cResult = c.c(29);
       ({
         value,
         style,
@@ -132,10 +107,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         num = maxValue;
       }
       let eventsMentionBadge2 = undefined !== eventsMentionBadge && eventsMentionBadge;
-      const tmp7 = undefined !== isMentionLowImportance && isMentionLowImportance;
       const tmp8 = closure_11();
-      const tmpResult = shared;
-      const themeContext = tmpResult.useThemeContext();
+      const tmp7 = undefined !== isMentionLowImportance && isMentionLowImportance;
+      const themeContext = shared.useThemeContext();
       let flag;
       if (themeContext != null) {
         const enabledExperiments = themeContext.enabledExperiments;
@@ -158,26 +132,23 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp10, tmp11] = cResult;
       }
-      const tmpResult4 = get_initialized;
-      const stateFromStores = tmpResult4.useStateFromStores(tmp10, tmp11);
+      const tmpResult = shared;
+      const stateFromStores = initialize.useStateFromStores(tmp10, tmp11);
       if (undefined !== unreadIndicator && unreadIndicator) {
-        let tmp14;
-        let tmp15;
         if (0 === value) {
-          tmp14 = BADGE_SIZE_UNREAD;
+          let tmp14 = BADGE_SIZE_UNREAD;
         }
         if (cResult[2] !== tmp14) {
           const obj2 = { height: tmp14, minWidth: tmp14 };
           cResult[2] = tmp14;
           cResult[3] = obj2;
-          tmp15 = obj2;
+          let tmp15 = obj2;
         } else {
           tmp15 = cResult[3];
         }
-        if (undefined !== unreadIndicator && unreadIndicator) {
-          let unread;
+        if (tmp6) {
           if (0 === value) {
-            unread = tmp8.unread;
+            let unread = tmp8.unread;
           }
           if (eventsMentionBadge2) {
             eventsMentionBadge2 = tmp8.eventsMentionBadge;
@@ -186,69 +157,65 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[5] === tmp8.badge) {
               if (cResult[6] === tmp15) {
                 if (cResult[7] === unread) {
-                  let tmp16;
-                  let tmp17;
                   if (cResult[8] === eventsMentionBadge2) {
-                    tmp16 = cResult[9];
+                    let tmp16 = cResult[9];
                   }
-                  if (value > 0) {
-                    let tmp19;
-                    if (cResult[10] === dotStyle) {
-                      if (cResult[11] === (undefined !== hideCount && hideCount)) {
-                        if (cResult[12] === flag) {
-                          if (cResult[13] === stateFromStores) {
-                            if (cResult[14] === num) {
-                              if (cResult[15] === tmp8.badgeText) {
-                                if (cResult[16] === tmp8.experimentalBadgeText) {
-                                  if (cResult[17] === tmp8.noCount) {
-                                    if (cResult[18] === textStyle) {
-                                      if (cResult[19] === (undefined !== unreadIndicator && unreadIndicator)) {
-                                        let tmp18;
-                                        if (cResult[20] === value) {
-                                          tmp18 = cResult[21];
-                                        }
-                                        if (
-                                          cResult[22] ===
-                                          (undefined !== accessibilityElementsHidden && accessibilityElementsHidden)
-                                        ) {
-                                          if (cResult[23] === accessibilityLabel) {
-                                            if (cResult[24] === accessible) {
-                                              if (cResult[25] === tmp16) {
-                                                if (cResult[26] === str) {
-                                                  let tmp25;
-                                                  if (cResult[27] === tmp18) {
-                                                    tmp25 = cResult[28];
-                                                  }
-                                                  tmp17 = tmp25;
-                                                }
+                  if (value <= 0) {
+                    if (!tmp6) {
+                      return null;
+                    }
+                  }
+                  if (cResult[10] === dotStyle) {
+                    if (cResult[11] === tmp5) {
+                      if (cResult[12] === flag) {
+                        if (cResult[13] === stateFromStores) {
+                          if (cResult[14] === num) {
+                            if (cResult[15] === tmp8.badgeText) {
+                              if (cResult[16] === tmp8.experimentalBadgeText) {
+                                if (cResult[17] === tmp8.noCount) {
+                                  if (cResult[18] === textStyle) {
+                                    if (cResult[19] === tmp6) {
+                                      if (cResult[20] === value) {
+                                        let tmp18 = cResult[21];
+                                      }
+                                      if (cResult[22] === tmp4) {
+                                        if (cResult[23] === accessibilityLabel) {
+                                          if (cResult[24] === accessible) {
+                                            if (cResult[25] === tmp16) {
+                                              if (cResult[26] === str) {
                                               }
                                             }
                                           }
                                         }
-                                        const tmp28 = (
-                                          <View
-                                            pointerEvents="none"
-                                            style={tmp16}
-                                            accessible={accessible}
-                                            accessibilityLabel={accessibilityLabel}
-                                            accessibilityElementsHidden={
-                                              undefined !== accessibilityElementsHidden && accessibilityElementsHidden
-                                            }
-                                            importantForAccessibility={str}
-                                          >
-                                            {tmp18}
-                                          </View>
-                                        );
-                                        cResult[22] =
-                                          undefined !== accessibilityElementsHidden && accessibilityElementsHidden;
-                                        cResult[23] = accessibilityLabel;
-                                        cResult[24] = accessible;
-                                        cResult[25] = tmp16;
-                                        cResult[26] = str;
-                                        cResult[27] = tmp18;
-                                        cResult[28] = tmp28;
-                                        tmp25 = tmp28;
                                       }
+                                      const obj3 = {
+                                        pointerEvents: "none",
+                                        style: tmp16,
+                                        accessible,
+                                        accessibilityLabel,
+                                        accessibilityElementsHidden: tmp4,
+                                        importantForAccessibility: str,
+                                        children: tmp18,
+                                      };
+                                      const tmp29 = (
+                                        <View
+                                          pointerEvents="none"
+                                          style={tmp16}
+                                          accessible={accessible}
+                                          accessibilityLabel={accessibilityLabel}
+                                          accessibilityElementsHidden={tmp4}
+                                          importantForAccessibility={str}
+                                        >
+                                          {tmp18}
+                                        </View>
+                                      );
+                                      cResult[22] = tmp4;
+                                      cResult[23] = accessibilityLabel;
+                                      cResult[24] = accessible;
+                                      cResult[25] = tmp16;
+                                      cResult[26] = str;
+                                      cResult[27] = tmp18;
+                                      cResult[28] = tmp29;
                                     }
                                   }
                                 }
@@ -258,59 +225,64 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                     }
-                    if (!(undefined !== unreadIndicator && unreadIndicator)) {
-                      let tmp20Result;
-                      if (undefined !== hideCount && hideCount) {
-                        const items1 = [tmp8.noCount, dotStyle];
-                        tmp20Result = <View style={items1} />;
-                      } else if (flag) {
-                        const items2 = [tmp8.experimentalBadgeText, textStyle];
-                        const Text = Text_Text.Text;
-                        const _Math2 = Math;
-                        tmp20Result = (
-                          <Text
-                            variant="experimental/body-xs/semibold"
-                            color="none"
-                            style={items2}
-                            lineClamp={1}
-                            allowFontScaling={false}
-                          >
-                            {NumberUtils.humanizeValue(Math.min(value, num), stateFromStores)}
-                          </Text>
-                        );
-                        const tmpResult5 = NumberUtils;
-                      } else {
-                        const items3 = [tmp8.badgeText, textStyle];
-                        LegacyText_LegacyTextDefault;
-                        const _Math = Math;
-                        tmp20Result = (
-                          <tmp22 style={items3} numberOfLines={1} allowFontScaling={false}>
-                            {NumberUtils.humanizeValue(Math.min(value, num), stateFromStores)}
-                          </tmp22>
-                        );
-                        const tmpResult6 = NumberUtils;
-                      }
-                      tmp19 = tmp20Result;
-                    } else {
-                      tmp19 = null;
-                    }
-                    cResult[10] = dotStyle;
-                    cResult[11] = undefined !== hideCount && hideCount;
-                    cResult[12] = flag;
-                    cResult[13] = stateFromStores;
-                    cResult[14] = num;
-                    cResult[15] = tmp8.badgeText;
-                    cResult[16] = tmp8.experimentalBadgeText;
-                    cResult[17] = tmp8.noCount;
-                    cResult[18] = textStyle;
-                    cResult[19] = undefined !== unreadIndicator && unreadIndicator;
-                    cResult[20] = value;
-                    cResult[21] = tmp19;
-                    tmp18 = tmp19;
-                  } else {
-                    tmp17 = null;
                   }
-                  return tmp17;
+                  if (tmp6) {
+                    if (0 === value) {
+                      cResult[10] = dotStyle;
+                      cResult[11] = tmp5;
+                      cResult[12] = flag;
+                      cResult[13] = stateFromStores;
+                      cResult[14] = num;
+                      cResult[15] = tmp8.badgeText;
+                      cResult[16] = tmp8.experimentalBadgeText;
+                      cResult[17] = tmp8.noCount;
+                      cResult[18] = textStyle;
+                      cResult[19] = tmp6;
+                      cResult[20] = value;
+                      cResult[21] = null;
+                      tmp18 = null;
+                    }
+                  }
+                  if (tmp5) {
+                    const obj4 = { style: null };
+                    const items1 = [tmp8.noCount, dotStyle];
+                    obj4.style = items1;
+                    let tmp20Result = <View style={null} />;
+                  } else if (flag) {
+                    const obj5 = {
+                      variant: "experimental/body-xs/semibold",
+                      color: "none",
+                      style: null,
+                      lineClamp: 1,
+                      allowFontScaling: false,
+                      children: null,
+                    };
+                    const items2 = [tmp8.experimentalBadgeText, textStyle];
+                    obj5.style = items2;
+                    const _Math2 = Math;
+                    obj5.children = NumberUtils.humanizeValue(Math.min(value, num), stateFromStores);
+                    tmp20Result = jsx(Text_Text.Text, {
+                      variant: "experimental/body-xs/semibold",
+                      color: "none",
+                      style: null,
+                      lineClamp: 1,
+                      allowFontScaling: false,
+                      children: null,
+                    });
+                    const tmpResult5 = NumberUtils;
+                  } else {
+                    const obj6 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
+                    const items3 = [tmp8.badgeText, textStyle];
+                    obj6.style = items3;
+                    const _Math = Math;
+                    obj6.children = NumberUtils.humanizeValue(Math.min(value, num), stateFromStores);
+                    tmp20Result = (
+                      <tmp22 style={null} numberOfLines={1} allowFontScaling={false}>
+                        {null}
+                      </tmp22>
+                    );
+                    const tmpResult6 = NumberUtils;
+                  }
                 }
               }
             }
@@ -327,14 +299,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         unread = tmp7 ? tmp8.lowImportanceMention : tmp8.mention;
       }
       tmp14 = BADGE_SIZE;
+      const tmpResult4 = initialize;
     }
   : (value) => {
-      let accessibilityElementsHidden;
-      let accessibilityLabel;
-      let accessible;
-      let dotStyle;
-      let textStyle;
-      let tmp8Result2;
       value = value.value;
       require = value;
       const style = value.style;
@@ -367,11 +334,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag4 === undefined) {
         flag4 = false;
       }
-      const tmp = closure_11();
-      let closure_5 = tmp;
-      let tmp3 = flag2;
-      let obj = require("shared");
-      const themeContext = obj.useThemeContext();
+      let items2 = closure_11();
+      const themeContext = require("shared").useThemeContext();
       let flag5;
       if (themeContext != null) {
         const enabledExperiments = themeContext.enabledExperiments;
@@ -382,84 +346,84 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag5 == null) {
         flag5 = false;
       }
-      let items = [closure_5];
-      const tmp2Result = require("get initialized");
-      const stateFromStores = tmp2Result.useStateFromStores(items, () => closure_5.locale);
-      const items1 = [tmp, style, flag2, value, flag3, flag4];
+      let obj = require("shared");
+      let items = [items2];
+      const stateFromStores = require("initialize").useStateFromStores(items, () => items2.locale);
+      const items1 = [items2, style, flag2, value, flag3, flag4];
       if (value > 0) {
-        let tmp10;
-        if (!flag2) {
-          let tmp8Result;
-          if (flag) {
-            const items2 = [tmp.noCount, dotStyle];
-            tmp8Result = <tmp9 style={items2} />;
-          } else if (flag5) {
-            const items3 = [tmp.experimentalBadgeText, textStyle];
-            const Text = tmp2(tmp3[13]).Text;
-            const _Math2 = Math;
-            tmp8Result = (
-              <Text
-                variant="experimental/body-xs/semibold"
-                color="none"
-                style={items3}
-                lineClamp={1}
-                allowFontScaling={false}
-              >
-                {require("NumberUtils").humanizeValue(Math.min(value, num), stateFromStores)}
-              </Text>
-            );
-            const tmp2Result3 = require("NumberUtils");
-          } else {
-            const items4 = [tmp.badgeText, textStyle];
-            style(tmp3[15]);
-            const _Math = Math;
-            tmp8Result = (
-              <tmp12 style={items4} numberOfLines={1} allowFontScaling={false}>
-                {require("NumberUtils").humanizeValue(Math.min(value, num), stateFromStores)}
-              </tmp12>
-            );
-            const tmp2Result4 = require("NumberUtils");
+        const obj2 = {
+          pointerEvents: "none",
+          style: tmp5,
+          accessible,
+          accessibilityLabel,
+          accessibilityElementsHidden,
+          importantForAccessibility: str,
+          children: null,
+        };
+        if (flag2) {
+          if (0 === value) {
+            obj2.children = null;
+            let tmp7Result = <tmp8 {...obj2} />;
           }
-          tmp10 = tmp8Result;
-        } else {
-          tmp10 = null;
         }
-        tmp8Result2 = (
-          <tmp9
-            pointerEvents="none"
-            style={tmp6}
-            accessible={accessible}
-            accessibilityLabel={accessibilityLabel}
-            accessibilityElementsHidden={accessibilityElementsHidden}
-            importantForAccessibility={str}
-          >
-            {tmp10}
-          </tmp9>
-        );
+        if (flag) {
+          const obj3 = { style: null };
+          items2 = [,];
+          items2[0] = items2.noCount;
+          items2[1] = dotStyle;
+          obj3.style = items2;
+          let tmp7Result2 = <tmp8 style={null} />;
+        } else if (flag5) {
+          const obj4 = {
+            variant: "experimental/body-xs/semibold",
+            color: "none",
+            style: null,
+            lineClamp: 1,
+            allowFontScaling: false,
+            children: null,
+          };
+          const items3 = [items2.experimentalBadgeText, textStyle];
+          obj4.style = items3;
+          const _Math2 = Math;
+          obj4.children = tmp(tmp2[14]).humanizeValue(Math.min(value, num), stateFromStores);
+          tmp7Result2 = jsx(tmp(tmp2[13]).Text, {
+            variant: "experimental/body-xs/semibold",
+            color: "none",
+            style: null,
+            lineClamp: 1,
+            allowFontScaling: false,
+            children: null,
+          });
+          const tmpResult3 = tmp(tmp2[14]);
+        } else {
+          const obj5 = { style: null, numberOfLines: 1, allowFontScaling: false, children: null };
+          const items4 = [items2.badgeText, textStyle];
+          obj5.style = items4;
+          const tmp11 = style(tmp2[15]);
+          const _Math = Math;
+          obj5.children = tmp(tmp2[14]).humanizeValue(Math.min(value, num), stateFromStores);
+          tmp7Result2 = (
+            <tmp11 style={null} numberOfLines={1} allowFontScaling={false}>
+              {null}
+            </tmp11>
+          );
+          const tmpResult4 = tmp(tmp2[14]);
+        }
       } else {
-        tmp8Result2 = null;
+        tmp7Result = null;
       }
-      return tmp8Result2;
+      return tmp7Result;
     };
-let closure_12 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_12 = tmp4;
+ReactCompilerGating = fn(558);
+const obj11 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+size = fn(2);
+let result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
+
+export default tmp4;
+export const MaskedBadge = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let accessibilityElementsHidden;
-      let accessibilityLabel;
-      let dotStyle;
-      let hideCount;
-      let importantForAccessibility;
-      let isMentionLowImportance;
-      let maskStyle;
-      let maxValue;
-      let onLayout;
-      let style;
-      let textStyle;
-      let unreadIndicator;
-      let value;
-      const obj = react2;
-      const cResult = obj.c(23);
+      const cResult = c.c(23);
       ({
         style,
         maskStyle,
@@ -477,58 +441,51 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } = arg0);
       const tmp3 = closure_11();
       if (undefined !== unreadIndicator && unreadIndicator) {
-        let tmp4;
         if (0 === value) {
-          tmp4 = metroImportDefault;
+          let tmp4 = React5;
         }
         const result = tmp4 / 2;
         if (cResult[0] === tmp4) {
-          let tmp6;
           if (cResult[1] === result) {
-            tmp6 = cResult[2];
+            let tmp6 = cResult[2];
           }
           if (cResult[3] === maskStyle) {
             if (cResult[4] === tmp3.badgeMask) {
-              let tmp7;
-              let tmp8;
               if (cResult[5] === tmp6) {
-                tmp7 = cResult[6];
+                let tmp7 = cResult[6];
               }
-              if (value > 0) {
-                if (cResult[7] === accessibilityElementsHidden) {
-                  if (cResult[8] === accessibilityLabel) {
-                    if (cResult[9] === dotStyle) {
-                      if (cResult[10] === hideCount) {
-                        if (cResult[11] === importantForAccessibility) {
-                          if (cResult[12] === isMentionLowImportance) {
-                            if (cResult[13] === maxValue) {
-                              if (cResult[14] === style) {
-                                if (cResult[15] === textStyle) {
-                                  if (cResult[16] === (undefined !== unreadIndicator && unreadIndicator)) {
-                                    let tmp9;
-                                    if (cResult[17] === value) {
-                                      tmp9 = cResult[18];
-                                    }
-                                    if (cResult[19] === tmp7) {
-                                      if (cResult[20] === onLayout) {
-                                        let tmp13;
-                                        if (cResult[21] === tmp9) {
-                                          tmp13 = cResult[22];
-                                        }
-                                        tmp8 = tmp13;
-                                      }
-                                    }
-                                    const tmp16 = (
-                                      <View pointerEvents="none" style={tmp7} onLayout={onLayout}>
-                                        {tmp9}
-                                      </View>
-                                    );
-                                    cResult[19] = tmp7;
-                                    cResult[20] = onLayout;
-                                    cResult[21] = tmp9;
-                                    cResult[22] = tmp16;
-                                    tmp13 = tmp16;
+              if (value <= 0) {
+                if (!tmp2) {
+                  return null;
+                }
+              }
+              if (cResult[7] === accessibilityElementsHidden) {
+                if (cResult[8] === accessibilityLabel) {
+                  if (cResult[9] === dotStyle) {
+                    if (cResult[10] === hideCount) {
+                      if (cResult[11] === importantForAccessibility) {
+                        if (cResult[12] === isMentionLowImportance) {
+                          if (cResult[13] === maxValue) {
+                            if (cResult[14] === style) {
+                              if (cResult[15] === textStyle) {
+                                if (cResult[16] === tmp2) {
+                                  if (cResult[17] === value) {
+                                    let tmp9 = cResult[18];
                                   }
+                                  if (cResult[19] === tmp7) {
+                                    if (cResult[20] === onLayout) {
+                                    }
+                                  }
+                                  const obj2 = { pointerEvents: "none", style: tmp7, onLayout, children: tmp9 };
+                                  const tmp16 = (
+                                    <View pointerEvents="none" style={tmp7} onLayout={onLayout}>
+                                      {tmp9}
+                                    </View>
+                                  );
+                                  cResult[19] = tmp7;
+                                  cResult[20] = onLayout;
+                                  cResult[21] = tmp9;
+                                  cResult[22] = tmp16;
                                 }
                               }
                             }
@@ -538,38 +495,48 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const tmp12 = (
-                  <closure_12
-                    style={style}
-                    textStyle={textStyle}
-                    dotStyle={dotStyle}
-                    value={value}
-                    maxValue={maxValue}
-                    hideCount={hideCount}
-                    unreadIndicator={undefined !== unreadIndicator && unreadIndicator}
-                    accessibilityLabel={accessibilityLabel}
-                    accessibilityElementsHidden={accessibilityElementsHidden}
-                    importantForAccessibility={importantForAccessibility}
-                    isMentionLowImportance={isMentionLowImportance}
-                  />
-                );
-                cResult[7] = accessibilityElementsHidden;
-                cResult[8] = accessibilityLabel;
-                cResult[9] = dotStyle;
-                cResult[10] = hideCount;
-                cResult[11] = importantForAccessibility;
-                cResult[12] = isMentionLowImportance;
-                cResult[13] = maxValue;
-                cResult[14] = style;
-                cResult[15] = textStyle;
-                cResult[16] = undefined !== unreadIndicator && unreadIndicator;
-                cResult[17] = value;
-                cResult[18] = tmp12;
-                tmp9 = tmp12;
-              } else {
-                tmp8 = null;
               }
-              return tmp8;
+              const obj3 = {
+                style,
+                textStyle,
+                dotStyle,
+                value,
+                maxValue,
+                hideCount,
+                unreadIndicator: tmp2,
+                accessibilityLabel,
+                accessibilityElementsHidden,
+                importantForAccessibility,
+                isMentionLowImportance,
+              };
+              const tmp12 = (
+                <closure_12
+                  style={style}
+                  textStyle={textStyle}
+                  dotStyle={dotStyle}
+                  value={value}
+                  maxValue={maxValue}
+                  hideCount={hideCount}
+                  unreadIndicator={tmp2}
+                  accessibilityLabel={accessibilityLabel}
+                  accessibilityElementsHidden={accessibilityElementsHidden}
+                  importantForAccessibility={importantForAccessibility}
+                  isMentionLowImportance={isMentionLowImportance}
+                />
+              );
+              cResult[7] = accessibilityElementsHidden;
+              cResult[8] = accessibilityLabel;
+              cResult[9] = dotStyle;
+              cResult[10] = hideCount;
+              cResult[11] = importantForAccessibility;
+              cResult[12] = isMentionLowImportance;
+              cResult[13] = maxValue;
+              cResult[14] = style;
+              cResult[15] = textStyle;
+              cResult[16] = tmp2;
+              cResult[17] = value;
+              cResult[18] = tmp12;
+              tmp9 = tmp12;
             }
           }
           const items = [tmp3.badgeMask, tmp6, maskStyle];
@@ -585,21 +552,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = obj4;
         tmp6 = obj4;
       }
-      tmp4 = metroRequire;
+      tmp4 = timestampProducer;
     }
   : (maskStyle) => {
-      let accessibilityElementsHidden;
-      let accessibilityLabel;
-      let dotStyle;
-      let hideCount;
-      let importantForAccessibility;
-      let maxValue;
-      let onLayout;
-      let style;
-      let textStyle;
-      let tmp3;
       maskStyle = maskStyle.maskStyle;
-      const value = maskStyle.value;
+      value = maskStyle.value;
       importDefault = value;
       let flag = maskStyle.unreadIndicator;
       ({
@@ -616,12 +573,40 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = false;
       }
-      const isMentionLowImportance = maskStyle.isMentionLowImportance;
       const tmp = closure_11();
       const badgeMask = tmp;
       let items = [tmp, maskStyle, flag, value];
       if (value > 0) {
-        tmp3 = (
+        let obj = { pointerEvents: "none", style: tmp2, onLayout, children: null };
+        const obj2 = {
+          style,
+          textStyle,
+          dotStyle,
+          value,
+          maxValue,
+          hideCount,
+          unreadIndicator: flag,
+          accessibilityLabel,
+          accessibilityElementsHidden,
+          importantForAccessibility,
+          isMentionLowImportance: maskStyle.isMentionLowImportance,
+        };
+        obj.children = (
+          <closure_12
+            style={style}
+            textStyle={textStyle}
+            dotStyle={dotStyle}
+            value={value}
+            maxValue={maxValue}
+            hideCount={hideCount}
+            unreadIndicator={flag}
+            accessibilityLabel={accessibilityLabel}
+            accessibilityElementsHidden={accessibilityElementsHidden}
+            importantForAccessibility={importantForAccessibility}
+            isMentionLowImportance={maskStyle.isMentionLowImportance}
+          />
+        );
+        let tmp3 = (
           <View pointerEvents="none" style={tmp2} onLayout={onLayout}>
             {null}
           </View>
@@ -631,8 +616,3 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     };
-size = size_mod;
-let result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
-
-export default tmp5;
-export const MaskedBadge = tmp6;

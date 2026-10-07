@@ -1,20 +1,18 @@
 // discord_app/modules/polls/chat/usePollMessageContextItemTypes.tsx
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import react from "../../../../_runtime/00576_react.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let poll;
-
+require = fn;
 const PollMessageContextItemTypes = { END_EARLY: 0, [0]: "END_EARLY" };
 let closure_4 = [];
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (poll) => {
-      let id;
-      let tmp4;
-      let tmp5;
-      const obj = react;
+      const obj = c;
       const cResult = obj.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
@@ -28,24 +26,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       poll = poll.poll;
       if (poll.isPoll()) {
         if (null != poll) {
           if (cResult[2] === poll.author) {
             if (cResult[3] === stateFromStores) {
-              let tmp9;
               if (cResult[4] === poll.expiry) {
-                tmp9 = cResult[5];
+                let tmp9 = cResult[5];
               }
               return tmp9;
             }
           }
           const expiry = poll.expiry;
           const _Date = Date;
+          const isSameOrBeforeResult = expiry.isSameOrBefore(Date.now());
+          let tmp11 = !isSameOrBeforeResult;
+          if (!isSameOrBeforeResult) {
+            tmp11 = poll.author.id === stateFromStores;
+          }
           const items1 = [];
-          const tmp11 = !expiry.isSameOrBefore(Date.now()) && poll.author.id === stateFromStores;
           if (tmp11) {
             items1.push(obj.END_EARLY);
           }
@@ -59,8 +59,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_4;
     }
   : (poll) => {
-      let id;
-      const obj = get_initialized;
+      const obj = initialize;
       const items = [AuthenticationStore];
       poll = poll.poll;
       const stateFromStores = obj.useStateFromStores(items, () => id.getId());
@@ -68,8 +67,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != poll) {
           const expiry = poll.expiry;
           const _Date = Date;
+          const isSameOrBeforeResult = expiry.isSameOrBefore(Date.now());
+          let tmp5 = !isSameOrBeforeResult;
+          if (!isSameOrBeforeResult) {
+            tmp5 = poll.author.id === stateFromStores;
+          }
           const items1 = [];
-          const tmp5 = !expiry.isSameOrBefore(Date.now()) && poll.author.id === stateFromStores;
           if (tmp5) {
             items1.push(obj.END_EARLY);
           }
@@ -78,7 +81,4 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_4;
     };
-const result = size.fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
-
-export default tmp2;
 export { PollMessageContextItemTypes };

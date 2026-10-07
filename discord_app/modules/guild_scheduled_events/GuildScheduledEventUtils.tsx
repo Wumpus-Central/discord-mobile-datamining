@@ -4,10 +4,6 @@ import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
-let closure_4;
-let hasOwnProperty;
 ({
   UpcomingGuildEventNoticeTypes: c2,
   NEW_EVENT_WINDOW_MILLISECONDS: c3,
@@ -23,18 +19,15 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
   flag,
 ) {
   const obj = _modDef4467();
-  const date = new Date(guildScheduledEvent.scheduled_start_time);
-  const time = date.getTime();
-  const diff = time - React3;
+  const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
+  const diff = time - React4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
       const obj4 = _modDef4467(arg1);
-      const isBetween = obj4.isBetween;
-      let EVENT_STARTING_SOON;
       const isBetweenResult = obj4.isBetween(diff, time);
-      const obj5 = _modDef4467(time);
+      let EVENT_STARTING_SOON;
       if (!isBetweenResult) {
-        if (!isBetween(obj5.subtract(hasOwnProperty, "days"), time)) {
+        if (!obj4.isBetween(obj5.subtract(hasOwnProperty, "days"), time)) {
           EVENT_STARTING_SOON = constants.EVENT_STARTING_SOON;
         }
       }
@@ -44,18 +37,18 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
     }
   } else {
     let tmp5 = arg2;
-    const tmpResult = SnowflakeUtilsDefault;
-    const extractTimestampResult = tmpResult.extractTimestamp(guildScheduledEvent.id);
-    const _Math = Math;
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(guildScheduledEvent.id);
     if (arg2 == null) {
       tmp5 = extractTimestampResult;
     }
-    if (obj.isBetween(extractTimestampResult, min(tmp5 + _false, time))) {
+    if (obj.isBetween(extractTimestampResult, Math.min(tmp5 + React3, time))) {
       if (null == arg1) {
         if (!flag) {
           return constants.NEW_EVENT;
         }
       }
     }
+    const tmpResult = SnowflakeUtilsDefault;
   }
+  const date = new Date(guildScheduledEvent.scheduled_start_time);
 };

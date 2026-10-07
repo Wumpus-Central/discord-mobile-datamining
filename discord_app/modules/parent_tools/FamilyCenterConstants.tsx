@@ -1,14 +1,14 @@
 // discord_app/modules/parent_tools/FamilyCenterConstants.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
-import intl3 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import _modDef2521 from "FamilyCenter.messages.js";
-import PathUtils from "../../../discord_common/js/shared/utils/PathUtils.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 const result = 30 * DurationsDefault.Millis.SECOND;
 const result1 = 5 * DurationsDefault.Millis.MINUTE;
 const result2 = 5 * DurationsDefault.Millis.MINUTE;
-let obj = {
+const PathUtils = fn(1094);
+const obj2 = {
   USER_ADD: 1,
   [1]: "USER_ADD",
   GUILD_ADD: 2,
@@ -27,201 +27,172 @@ let obj = {
   [8]: "GIFTS",
 };
 const items = [
-  obj.USER_INTERACTION,
+  obj2.USER_INTERACTION,
   {
     priority: 100,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.kvTgWP);
     },
     tooltipDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.w4wmnb);
+      if (arg0) {
+        let stringResult = string(tmp.w4wmnb);
       } else {
         stringResult = string(tmp.foTzbd);
       }
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = intl3.intl;
-      const obj = { count };
-      return intl.formatToPlainString(_modDef2521["4T3zWT"], obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521["4T3zWT"], { count });
     },
     sectionDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.w4wmnb);
+      if (arg0) {
+        let stringResult = string(tmp.w4wmnb);
       } else {
         stringResult = string(tmp.foTzbd);
       }
       return stringResult;
     },
     timestampFormatter() {
-      let intl;
-      let intl2;
-      const obj = {
-        today: intl.string(_modDef2521.fLBUx7),
-        yesterday: intl2.string(_modDef2521.cHHgxI),
-        days: _modDef2521.qvKjp8,
-      };
-      intl = intl3.intl;
-      intl2 = intl3.intl;
+      const obj = { today: null, yesterday: null, days: null };
+      const intl = util.intl;
+      obj.today = intl.string(_modDef2521.fLBUx7);
+      const intl2 = util.intl;
+      obj.yesterday = intl2.string(_modDef2521.cHHgxI);
+      obj.days = _modDef2521.qvKjp8;
       return obj;
     },
   },
 ];
 const items1 = [items, , , , , , ,];
 const items2 = [
-  obj.USER_CALLED,
+  obj2.USER_CALLED,
   {
     priority: 200,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.D7Sngz);
     },
     tooltipDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.aiAhnQ);
+      if (arg0) {
+        let stringResult = string(tmp.aiAhnQ);
       } else {
         stringResult = string(tmp["4ufgdz"]);
       }
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = intl3.intl;
-      const obj = { count };
-      return intl.formatToPlainString(_modDef2521["0GE4Ni"], obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521["0GE4Ni"], { count });
     },
     sectionDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.aiAhnQ);
+      if (arg0) {
+        let stringResult = string(tmp.aiAhnQ);
       } else {
         stringResult = string(tmp["4ufgdz"]);
       }
       return stringResult;
     },
     timestampFormatter() {
-      let intl;
-      let intl2;
-      const obj = {
-        today: intl.string(_modDef2521.IHd5cZ),
-        yesterday: intl2.string(_modDef2521.wOsfxv),
-        days: _modDef2521.oCk8c4,
-      };
-      intl = intl3.intl;
-      intl2 = intl3.intl;
+      const obj = { today: null, yesterday: null, days: null };
+      const intl = util.intl;
+      obj.today = intl.string(_modDef2521.IHd5cZ);
+      const intl2 = util.intl;
+      obj.yesterday = intl2.string(_modDef2521.wOsfxv);
+      obj.days = _modDef2521.oCk8c4;
       return obj;
     },
   },
 ];
 items1[1] = items2;
 const items3 = [
-  obj.USER_ADD,
+  obj2.USER_ADD,
   {
     priority: 300,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.kIcKAj);
     },
     tooltipDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.BkVb1X);
+      if (arg0) {
+        let stringResult = string(tmp.BkVb1X);
       } else {
         stringResult = string(tmp.mpHHfa);
       }
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = intl3.intl;
-      const obj = { count };
-      return intl.formatToPlainString(_modDef2521["TEvo+H"], obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521["TEvo+H"], { count });
     },
     sectionDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.BkVb1X);
+      if (arg0) {
+        let stringResult = string(tmp.BkVb1X);
       } else {
         stringResult = string(tmp.mpHHfa);
       }
       return stringResult;
     },
     timestampFormatter() {
-      let intl;
-      let intl2;
-      const obj = {
-        today: intl.string(_modDef2521.JUHIYZ),
-        yesterday: intl2.string(_modDef2521.GiswUW),
-        days: _modDef2521["fwQgE/"],
-      };
-      intl = intl3.intl;
-      intl2 = intl3.intl;
+      const obj = { today: null, yesterday: null, days: null };
+      const intl = util.intl;
+      obj.today = intl.string(_modDef2521.JUHIYZ);
+      const intl2 = util.intl;
+      obj.yesterday = intl2.string(_modDef2521.GiswUW);
+      obj.days = _modDef2521["fwQgE/"];
       return obj;
     },
   },
 ];
 items1[2] = items3;
 const items4 = [
-  obj.GUILD_ADD,
+  obj2.GUILD_ADD,
   {
     priority: 400,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.uav9Bh);
     },
     tooltipDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.LVNgTD);
+      if (arg0) {
+        let stringResult = string(tmp.LVNgTD);
       } else {
         stringResult = string(tmp.TA8GFt);
       }
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = intl3.intl;
-      const obj = { count };
-      return intl.formatToPlainString(_modDef2521["7feG7T"], obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521["7feG7T"], { count });
     },
     sectionDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.LVNgTD);
+      if (arg0) {
+        let stringResult = string(tmp.LVNgTD);
       } else {
         stringResult = string(tmp.TA8GFt);
       }
@@ -231,39 +202,34 @@ const items4 = [
 ];
 items1[3] = items4;
 const items5 = [
-  obj.GUILD_INTERACTION,
+  obj2.GUILD_INTERACTION,
   {
     priority: 500,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.CcrbCw);
     },
     tooltipDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.BLgIrk);
+      if (arg0) {
+        let stringResult = string(tmp.BLgIrk);
       } else {
         stringResult = string(tmp.sSJauZ);
       }
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = intl3.intl;
-      const obj = { count };
-      return intl.formatToPlainString(_modDef2521.rcPInc, obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521.rcPInc, { count });
     },
     sectionDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.BLgIrk);
+      if (arg0) {
+        let stringResult = string(tmp.BLgIrk);
       } else {
         stringResult = string(tmp.sSJauZ);
       }
@@ -273,63 +239,57 @@ const items5 = [
 ];
 items1[4] = items5;
 const items6 = [
-  obj.TOTAL_VOICE_MINUTES,
+  obj2.TOTAL_VOICE_MINUTES,
   {
     priority: 175,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.eo4Fxh);
     },
     tooltipDescription() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521["O/AElu"]);
     },
     sectionHeader(count) {
-      const intl = intl3.intl;
-      const obj = { count };
-      return intl.formatToPlainString(_modDef2521.eGFWUd, obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521.eGFWUd, { count });
     },
     sectionDescription() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521["O/AElu"]);
     },
   },
 ];
 items1[5] = items6;
 const items7 = [
-  obj.PURCHASES,
+  obj2.PURCHASES,
   {
     priority: 150,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.NMYKsh);
     },
     tooltipDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.cqIdqZ);
+      if (arg0) {
+        let stringResult = string(tmp.cqIdqZ);
       } else {
         stringResult = string(tmp["85PtWu"]);
       }
       return stringResult;
     },
     sectionHeader(amount) {
-      const intl = intl3.intl;
-      const obj = { amount };
-      return intl.formatToPlainString(_modDef2521.FPViWL, obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521.FPViWL, { amount });
     },
     sectionDescription(arg0) {
-      let stringResult;
-      const intl = intl3.intl;
+      const intl = util.intl;
       const string = intl.string;
       const tmp = _modDef2521;
-      const tmp2 = arg0;
-      if (tmp2) {
-        stringResult = string(tmp.cqIdqZ);
+      if (arg0) {
+        let stringResult = string(tmp.cqIdqZ);
       } else {
         stringResult = string(tmp["85PtWu"]);
       }
@@ -339,31 +299,37 @@ const items7 = [
 ];
 items1[6] = items7;
 const items8 = [
-  obj.GIFTS,
+  obj2.GIFTS,
   {
     priority: 600,
     tooltipHeader() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.ULUspo);
     },
     tooltipDescription() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.nH8vlc);
     },
     sectionHeader(amount) {
-      const intl = intl3.intl;
-      const obj = { amount };
-      return intl.formatToPlainString(_modDef2521["0R6I/b"], obj);
+      const intl = util.intl;
+      return intl.formatToPlainString(_modDef2521["0R6I/b"], { amount });
     },
     sectionDescription() {
-      const intl = intl3.intl;
+      const intl = util.intl;
       return intl.string(_modDef2521.nH8vlc);
     },
   },
 ];
 items1[7] = items8;
-const obj2 = { CHECK: 0, [0]: "CHECK", X: 1, [1]: "X" };
-const obj3 = {
+const wrapPathsResult = PathUtils.wrapPaths(
+  Object.freeze({
+    FAMILY_CENTER_SETTINGS: "/family-center/settings",
+    FAMILY_CENTER_MY_FAMILY: "/family-center/my-family",
+  }),
+  [":", "?", "@"],
+);
+const obj3 = { CHECK: 0, [0]: "CHECK", X: 1, [1]: "X" };
+const obj4 = {
   GENERIC_ERROR: 0,
   [0]: "GENERIC_ERROR",
   INELIGIBLE_FOR_FAMILY_CENTER: 1,
@@ -373,93 +339,12 @@ const obj3 = {
   MAX_CONNECTIONS_REACHED: 3,
   [3]: "MAX_CONNECTIONS_REACHED",
 };
-const obj4 = { 290000: null, 290002: null, 290005: null };
 ({
   INELIGIBLE_FOR_FAMILY_CENTER: obj5[290000],
   MAX_CONNECTIONS_REACHED: obj5[290002],
   PENDING_REQUEST_EXISTS: obj5[290005],
-} = obj3);
-const wrapPathsResult = PathUtils.wrapPaths(
-  Object.freeze({
-    FAMILY_CENTER_SETTINGS: "/family-center/settings",
-    FAMILY_CENTER_MY_FAMILY: "/family-center/my-family",
-  }),
-  [":", "?", "@"],
-);
-const map = new Map(items1);
-const obj6 = {
-  header() {
-    const intl = intl3.intl;
-    return intl.string(_modDef2521.nGX8Co);
-  },
-  description() {
-    const intl = intl3.intl;
-    return intl.string(_modDef2521.Uss2dn);
-  },
-  icon: obj2.X,
-};
-const obj7 = {
-  header() {
-    const intl = intl3.intl;
-    return intl.string(_modDef2521.tu0MRv);
-  },
-  description(email) {
-    let formatToPlainStringResult;
-    email = email.email;
-    if (null != email) {
-      const intl2 = intl3.intl;
-      const obj = { email };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef2521.xNEkdx, obj);
-    } else {
-      const intl = intl3.intl;
-      formatToPlainStringResult = intl.string(_modDef2521.Xyjnwn);
-    }
-    return formatToPlainStringResult;
-  },
-  icon: obj2.CHECK,
-};
-const obj8 = {
-  header(isAdult) {
-    let stringResult;
-    isAdult = isAdult.isAdult;
-    const intl = intl3.intl;
-    const string = intl.string;
-    const tmp = _modDef2521;
-    if (isAdult) {
-      stringResult = string(tmp.bS5x94);
-    } else {
-      stringResult = string(tmp.MzX4RP);
-    }
-    return stringResult;
-  },
-  description(isAdult) {
-    let formatResult;
-    isAdult = isAdult.isAdult;
-    const intl = intl3.intl;
-    const format = intl.format;
-    const tmp = _modDef2521;
-    if (isAdult) {
-      formatResult = format(tmp.GKzqWi, { link: "https://support.discord.com/hc/articles/14155043715735" });
-    } else {
-      formatResult = format(tmp["69F+eS"], { link: "https://support.discord.com/hc/articles/14155060633623" });
-    }
-    return formatResult;
-  },
-  icon: obj2.X,
-};
-const obj9 = {
-  header() {
-    const intl = intl3.intl;
-    return intl.string(_modDef2521.W9JLJh);
-  },
-  description() {
-    const intl = intl3.intl;
-    return intl.format(_modDef2521.On5iRI, {
-      link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
-    });
-  },
-  icon: obj2.X,
-};
+} = obj4);
+const size = fn(2);
 const result3 = size.fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
 
 export const RESTRICTED_HOURS_LAYER_KEY = "RESTRICTED_HOURS_LAYER";
@@ -517,7 +402,7 @@ export const UserLinkStatus = {
   EXPIRED: 5,
   [5]: "EXPIRED",
 };
-export const TeenActionDisplayType = obj;
+export const TeenActionDisplayType = obj2;
 export const FamilyCenterSubPages = {
   ACTIVITY: "ACTIVITY",
   REQUESTS: "REQUESTS",
@@ -566,44 +451,102 @@ export const FamilyCenterAction = {
   CopyLink: 10,
   [10]: "CopyLink",
 };
-export const ACTION_TO_TEXT = map;
-export const FamilyCenterIconType = obj2;
-export const FamilyCenterFailureCode = obj3;
-export const FAMILY_CENTER_ERROR_CODE_TO_FAILURE = obj4;
+export const ACTION_TO_TEXT = new Map(items1);
+export const FamilyCenterIconType = obj3;
+export const FamilyCenterFailureCode = obj4;
+export const FAMILY_CENTER_ERROR_CODE_TO_FAILURE = { 290000: null, 290002: null, 290005: null };
 export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = {
-  [obj3.GENERIC_ERROR]: obj6,
-  [obj3.PENDING_REQUEST_EXISTS]: obj7,
-  [obj3.MAX_CONNECTIONS_REACHED]: obj8,
-  [obj3.INELIGIBLE_FOR_FAMILY_CENTER]: obj9,
+  [obj4.GENERIC_ERROR]: {
+    header() {
+      const intl = util.intl;
+      return intl.string(_modDef2521.nGX8Co);
+    },
+    description() {
+      const intl = util.intl;
+      return intl.string(_modDef2521.Uss2dn);
+    },
+    icon: obj3.X,
+  },
+  [obj4.PENDING_REQUEST_EXISTS]: {
+    header() {
+      const intl = util.intl;
+      return intl.string(_modDef2521.tu0MRv);
+    },
+    description(email) {
+      email = email.email;
+      if (null != email) {
+        const intl2 = util.intl;
+        const obj = { email };
+        let formatToPlainStringResult = intl2.formatToPlainString(_modDef2521.xNEkdx, obj);
+      } else {
+        const intl = util.intl;
+        formatToPlainStringResult = intl.string(_modDef2521.Xyjnwn);
+      }
+      return formatToPlainStringResult;
+    },
+    icon: obj3.CHECK,
+  },
+  [obj4.MAX_CONNECTIONS_REACHED]: {
+    header(isAdult) {
+      const intl = util.intl;
+      const string = intl.string;
+      const tmp = _modDef2521;
+      if (isAdult.isAdult) {
+        let stringResult = string(tmp.bS5x94);
+      } else {
+        stringResult = string(tmp.MzX4RP);
+      }
+      return stringResult;
+    },
+    description(isAdult) {
+      const intl = util.intl;
+      const format = intl.format;
+      const tmp = _modDef2521;
+      if (isAdult.isAdult) {
+        let formatResult = format(tmp.GKzqWi, { link: "https://support.discord.com/hc/articles/14155043715735" });
+      } else {
+        formatResult = format(tmp["69F+eS"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+      }
+      return formatResult;
+    },
+    icon: obj3.X,
+  },
+  [obj4.INELIGIBLE_FOR_FAMILY_CENTER]: {
+    header() {
+      const intl = util.intl;
+      return intl.string(_modDef2521.W9JLJh);
+    },
+    description() {
+      const intl = util.intl;
+      return intl.format(_modDef2521.On5iRI, {
+        link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
+      });
+    },
+    icon: obj3.X,
+  },
 };
 export const CONNECT_GUARDIAN_BOTTOM_SHEET_KEY = "ConnectGuardianBottomSheet";
 export const PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER = () => {
-  let intl;
-  let intl2;
-  const time = {
-    seconds: intl.string(_modDef2521.CJdoee),
-    minutes: _modDef2521.InzMn3,
-    hours: _modDef2521.ErkYCI,
-    yesterday: intl2.string(_modDef2521.GvfssA),
-    days: _modDef2521.pWig18,
-    date: _modDef2521.MP3khg,
-  };
-  intl = intl3.intl;
-  intl2 = intl3.intl;
+  const time = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
+  const intl = util.intl;
+  time.seconds = intl.string(_modDef2521.CJdoee);
+  time.minutes = _modDef2521.InzMn3;
+  time.hours = _modDef2521.ErkYCI;
+  const intl2 = util.intl;
+  time.yesterday = intl2.string(_modDef2521.GvfssA);
+  time.days = _modDef2521.pWig18;
+  time.date = _modDef2521.MP3khg;
   return time;
 };
 export const ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER = () => {
-  let intl;
-  let intl2;
-  const time = {
-    seconds: intl.string(_modDef2521.Bqsamd),
-    minutes: _modDef2521.kX3wJg,
-    hours: _modDef2521.J18GbG,
-    yesterday: intl2.string(_modDef2521.Ln9zMn),
-    days: _modDef2521.WRtySz,
-    date: _modDef2521.Y3ZYtM,
-  };
-  intl = intl3.intl;
-  intl2 = intl3.intl;
+  const time = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
+  const intl = util.intl;
+  time.seconds = intl.string(_modDef2521.Bqsamd);
+  time.minutes = _modDef2521.kX3wJg;
+  time.hours = _modDef2521.J18GbG;
+  const intl2 = util.intl;
+  time.yesterday = intl2.string(_modDef2521.Ln9zMn);
+  time.days = _modDef2521.WRtySz;
+  time.date = _modDef2521.Y3ZYtM;
   return time;
 };

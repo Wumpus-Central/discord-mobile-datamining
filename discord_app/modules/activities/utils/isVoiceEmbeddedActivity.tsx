@@ -4,8 +4,9 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
 
 export default function isVoiceEmbeddedActivity(arg0) {

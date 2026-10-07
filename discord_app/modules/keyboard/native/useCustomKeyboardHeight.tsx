@@ -1,42 +1,36 @@
 // discord_app/modules/keyboard/native/useCustomKeyboardHeight.tsx
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import AppEntryKeyContext from "../../window/native/AppEntryKeyContext.tsx";
 import KeyboardUIStoreDefault from "KeyboardUIStore.native.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      const obj = react;
-      const cResult = obj.c(2);
-      const obj2 = AppEntryKeyContext;
-      const appEntryKey = obj2.useAppEntryKey();
+      const cResult = c.c(2);
+      const appEntryKey = AppEntryKeyContext.useAppEntryKey();
       if (cResult[0] !== appEntryKey) {
         const fn = function t(arg0) {
           return arg0.byAppEntry[appEntryKey].customKeyboardHeight;
         };
         cResult[0] = appEntryKey;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       return KeyboardUIStoreDefault(tmp4);
     }
   : () => {
-      const obj = AppEntryKeyContext;
-      let closure_0 = obj.useAppEntryKey();
+      closure_0 = AppEntryKeyContext.useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
     };
-const result = size.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
-
-export default tmp2;
 export const getCustomKeyboardHeight = function getCustomKeyboardHeight() {
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
-  const obj = KeyboardUIStoreDefault;
-  return obj.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;
+  return KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;
 };

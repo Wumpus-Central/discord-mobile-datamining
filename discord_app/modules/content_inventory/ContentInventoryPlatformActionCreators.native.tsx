@@ -6,6 +6,6 @@ const result = size.fileFinishedImporting(
   "modules/content_inventory/ContentInventoryPlatformActionCreators.native.tsx",
 );
 
-export const showUserProfile = function showUserProfile(arg0) {
-  showUserProfileActionSheetDefault(arg0);
+export const showUserProfile = function showUserProfile(showUserProfileResult) {
+  showUserProfileActionSheetDefault(showUserProfileResult);
 };

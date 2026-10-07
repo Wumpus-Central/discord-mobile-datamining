@@ -1,285 +1,269 @@
 // discord_app/modules/app_database/system/DatabaseManager.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Dispatcher2 from "../../../Dispatcher.tsx";
 import _mod2079 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
-import react_nativeAll from "StartupData.native.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import StartupDataAll from "StartupData.native.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
 const Dispatcher = Dispatcher2;
-let _require, c2, c3, c5, c6, closure_3;
 
-let tmp;
-function CLEAR_CACHES(arg0) {
-  return closure_0.handleClearCaches(arg0);
-}
-function CONNECTION_CLOSED() {
-  return closure_0.handleAuthenticationStoreChanged();
-}
-function CONNECTION_OPEN() {
-  return closure_0.handleConnectionOpen();
-}
+require = fn;
 function databaseName(arg0) {
   return "@account." + arg0;
 }
-let obj = function _trySpeculativelyOpenDatabaseAsync() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0 = arg0;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c4;
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            const tmp21 = databaseName(closure_0);
-            const _HermesInternal = HermesInternal;
-            closure_2_6.verbose("speculatively opening " + tmp21);
-            c4 = 1;
-            const Database = require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").Database;
-            c5 = 2;
-            c6 = 1;
-            const obj4 = { value: Database.open(tmp21), done: false };
-            return obj4;
-          }
-        } else if (1 === c5) {
-          c4 = 0;
-          closure_0 = closure_3;
-          closure_130_6.warn("couldn't speculatively open database.", closure_0);
-          c6 = 3;
-          return { value: null, done: true };
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 0;
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          c4 = 0;
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          const tmp25 = databaseName(closure_0);
+          const _HermesInternal = HermesInternal;
+          timestampProducer.verbose("speculatively opening " + tmp25);
+          c4 = 1;
+          const Database = require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").Database;
+          c5 = 2;
+          c6 = 1;
+          const obj4 = { value: Database.open(tmp25), done: false };
+          return obj4;
         }
-      } catch (tmp12) {
-        closure_3 = tmp12;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp12;
-        } else {
-          c5 = 1;
-        }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_0 = closure_3;
+        closure_130_6.warn("couldn't speculatively open database.", closure_129_0);
+        c6 = 3;
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        c4 = 0;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp15) {
+      closure_3 = tmp15;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp15;
+      } else {
+        c5 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
-let tmp3 = new LoggerDefault("DatabaseManager");
-const metroRequire = tmp3;
-const Store = get_initializedDefault.Store;
+let closure_6 = new LoggerDefault("DatabaseManager");
+const Store = initializeDefault.Store;
 class DatabaseManager extends Store {
   constructor() {
-    _require = undefined;
-    const tmp2 = Dispatcher;
-    obj = { CLEAR_CACHES, CONNECTION_CLOSED, CONNECTION_OPEN, LOGOUT };
+    closure_0 = undefined;
+    tmp2 = closure_1(closure_3[4]);
+    obj = {
+      CLEAR_CACHES(arg0) {
+        return closure_0.handleClearCaches(arg0);
+      },
+      CONNECTION_CLOSED() {
+        return closure_0.handleAuthenticationStoreChanged();
+      },
+      CONNECTION_OPEN() {
+        return closure_0.handleConnectionOpen();
+      },
+      LOGOUT: null,
+    };
     class LOGOUT {
       constructor() {
         return closure_0.handleAuthenticationStoreChanged();
       }
     }
-    const tmp3 = new tmp(tmp2, obj, Dispatcher2.DispatchBand.Early, LOGOUT, new.target, tmp, tmp2);
-    _require = tmp3;
-    tmp3.databases = new Map();
-    tmp3.activeUserId = null;
-    tmp3.preventWritingCachesAgainThisSession = false;
-    new Map();
-    return tmp3;
+    obj.LOGOUT = LOGOUT;
+    tmp1 = new tmp(tmp2, obj, closure_0(closure_3[4]).DispatchBand.Early, LOGOUT, new.target, tmp, tmp2);
+    closure_0 = tmp1;
+    map = new Map();
+    tmp1.databases = map;
+    tmp1.activeUserId = null;
+    tmp1.preventWritingCachesAgainThisSession = false;
+    return tmp1;
   }
-  initialize() {
-    const self = this;
-    this.waitFor(AuthenticationStore);
-    const carefullySpeculativelyOpen = this.carefullySpeculativelyOpen;
-    obj = react_nativeAll;
-    const result = carefullySpeculativelyOpen(obj.getUserId());
-    const result1 = this.handleAuthenticationStoreChanged();
-    AuthenticationStore.addChangeListener(() => self.handleAuthenticationStoreChanged());
-  }
-  databaseName(arg0) {
-    return "@account." + arg0;
-  }
-  database(arg0) {
-    let tmp = null;
-    if (null != arg0) {
-      const self = this;
-      const databases = this.databases;
-      let value = databases.get(arg0);
-      if (value == null) {
-        value = null;
-      }
-      tmp = value;
-    }
-    return tmp;
-  }
-  carefullyOpenDatabase(id) {
-    function tryUntil(arg0, fn) {
-      let num = 0;
-      if (0 >= 50) {
-        return null;
-      } else {
-        let tmp2;
-        try {
-          tmp2 = fn();
-        } catch (tmp3) {
-          const _HermesInternal = HermesInternal;
-          logger.error("tryUntil " + num, tmp3);
-          num = num + 1;
-        }
-        return tmp2;
-      }
-    }
-    const self = this;
-    if (this.preventWritingCachesAgainThisSession) {
-      logger.verbose("Not opening database because caches have been manually cleared.");
-      return null;
-    } else {
-      if (null != id) {
-        const databases2 = self.databases;
-        if (!databases2.has(id)) {
-          let tmp2 = globalThis;
-          let _HermesInternal = HermesInternal;
-          const combined = "@account." + id;
-          const _HermesInternal2 = HermesInternal;
-          logger.verbose("synchronously opening " + combined);
-          let num = 50;
-          const tmp6 = tryUntil(50, () => {
-            const Database = _mod2079.Database;
-            return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
-          });
-          const _HermesInternal3 = HermesInternal;
-          logger.verbose("added database (" + id + " \u2192 " + tmp6 + ")");
-          const databases = self.databases;
-          const result = databases.set(id, tmp6);
-          self.emitChange();
-        }
-      }
-      return self.database(id);
-    }
-  }
-  replaceDisableAllDatabases(arg0) {
-    const self = this;
-    closure_6.info("disabling and nulling all databases (reason: " + arg0 + ")");
-    const databases = this.databases;
-    const keys = databases.keys();
-    const iter = keys[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let databases2 = self.databases;
-      let tmp4 = nextResult;
-      let value = databases2.get(nextResult);
-      let obj2 = value;
-      if (value != null) {
-        let disableResult = value.disable(arg0);
-      }
-      if (obj2 != null) {
-        let closeResult = obj2.close();
-      }
-      let databases3 = self.databases;
-      let result = databases3.set(tmp4, null);
-      continue;
-    }
-    self.emitChange();
-  }
-  remove(arg0) {
+}
+const prototype = DatabaseManager.prototype;
+prototype["initialize"] = function initialize() {
+  const self = this;
+  this.waitFor(AuthenticationStore);
+  const result = this.carefullySpeculativelyOpen(StartupDataAll.getUserId());
+  const result1 = this.handleAuthenticationStoreChanged();
+  AuthenticationStore.addChangeListener(() => self.handleAuthenticationStoreChanged());
+};
+prototype["databaseName"] = function databaseName(arg0) {
+  return "@account." + arg0;
+};
+prototype["database"] = function database(arg0) {
+  let tmp = null;
+  if (null != arg0) {
     const self = this;
     const databases = this.databases;
-    const value = databases.get(arg0);
-    closure_6.log("removing database (user: " + arg0 + ", database: " + value + ")");
+    value = databases.get(arg0);
+    if (value == null) {
+      value = null;
+    }
+    tmp = value;
+  }
+  return tmp;
+};
+prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
+  const self = this;
+  if (this.preventWritingCachesAgainThisSession) {
+    logger.verbose("Not opening database because caches have been manually cleared.");
+    return null;
+  } else {
+    if (null != id) {
+      const databases2 = self.databases;
+      if (!databases2.has(id)) {
+        const _HermesInternal = HermesInternal;
+        const combined = "@account." + id;
+        const _HermesInternal2 = HermesInternal;
+        logger.verbose("synchronously opening " + combined);
+        const tmp6 = (function tryUntil(arg0, fn) {
+          if (0 >= 50) {
+            return null;
+          } else {
+            try {
+              return fn();
+            } catch (tmp7) {
+              logger.error(tmp2 + tmp5, tmp7);
+              const num = tmp5 + tmp;
+            }
+          }
+        })(50, () => {
+          const Database = _mod2079.Database;
+          return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
+        });
+        const _HermesInternal3 = HermesInternal;
+        logger.verbose("added database (" + id + " \u2192 " + tmp6 + ")");
+        const databases = self.databases;
+        const result = databases.set(id, tmp6);
+        self.emitChange();
+      }
+    }
+    return self.database(id);
+  }
+};
+prototype["replaceDisableAllDatabases"] = function replaceDisableAllDatabases(arg0) {
+  const self = this;
+  closure_6.info("disabling and nulling all databases (reason: " + arg0 + ")");
+  const databases = this.databases;
+  const keys = databases.keys();
+  const iter = keys[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let databases2 = self.databases;
+    let tmp4 = nextResult;
+    value = databases2.get(nextResult);
+    let obj2 = value;
+    if (value != null) {
+      let disableResult = value.disable(arg0);
+    }
+    if (obj2 != null) {
+      let closeResult = obj2.close();
+    }
+    let databases3 = self.databases;
+    let result = databases3.set(tmp4, null);
+    continue;
+  }
+  self.emitChange();
+};
+prototype["remove"] = function remove(arg0) {
+  const self = this;
+  const databases = this.databases;
+  value = databases.get(arg0);
+  closure_6.log("removing database (user: " + arg0 + ", database: " + value + ")");
+  if (value != null) {
+    value.close();
+  }
+  const databases2 = self.databases;
+  databases2.delete(arg0);
+  self.emitChange();
+};
+prototype["handleClearCaches"] = function handleClearCaches(preventWritingCachesAgainThisSession) {
+  const self = this;
+  if (preventWritingCachesAgainThisSession.preventWritingCachesAgainThisSession) {
+    self.preventWritingCachesAgainThisSession = true;
+  }
+  const result = self.replaceDisableAllDatabases(
+    "DatabaseManager (" + preventWritingCachesAgainThisSession.reason + ")",
+  );
+};
+prototype["handleConnectionOpen"] = function handleConnectionOpen() {
+  const self = this;
+  const id = AuthenticationStore.getId();
+  const databases = this.databases;
+  value = databases.get(id);
+  if (value != null) {
+    const stateResult = value.state();
+  }
+  let tmp3 = null == value;
+  if (tmp3) {
+    tmp3 = stateResult !== _mod2079.DatabaseState.Open;
+  }
+  if (tmp3) {
+    self.remove(id);
+  }
+  const result = self.carefullyOpenDatabase(id);
+};
+prototype["handleAuthenticationStoreChanged"] = function handleAuthenticationStoreChanged() {
+  const self = this;
+  const id = AuthenticationStore.getId();
+  const activeUserId = this.activeUserId;
+  if (id !== activeUserId) {
+    const databases2 = self.databases;
+    value = databases2.get(activeUserId);
+    const _HermesInternal = HermesInternal;
+    closure_6.verbose("active user changed (now: " + id + ", was: " + activeUserId + ", was: " + value + ")");
     if (value != null) {
       value.close();
     }
-    const databases2 = self.databases;
-    databases2.delete(arg0);
-    self.emitChange();
+    StartupDataAll.setUserId(id);
+    self.activeUserId = id;
+    const databases = self.databases;
+    databases.delete(activeUserId);
   }
-  handleClearCaches(preventWritingCachesAgainThisSession) {
-    const self = this;
-    if (preventWritingCachesAgainThisSession.preventWritingCachesAgainThisSession) {
-      self.preventWritingCachesAgainThisSession = true;
-    }
-    const result = self.replaceDisableAllDatabases(
-      "DatabaseManager (" + preventWritingCachesAgainThisSession.reason + ")",
-    );
-  }
-  handleConnectionOpen() {
-    let stateResult;
-    const self = this;
-    const id = AuthenticationStore.getId();
-    const databases = this.databases;
-    const value = databases.get(id);
-    if (value != null) {
-      stateResult = value.state();
-    }
-    const tmp3 = null == value && stateResult !== _mod2079.DatabaseState.Open;
-    if (tmp3) {
-      self.remove(id);
-    }
-    const result = self.carefullyOpenDatabase(id);
-  }
-  handleAuthenticationStoreChanged() {
-    const self = this;
-    const id = AuthenticationStore.getId();
-    const activeUserId = this.activeUserId;
-    if (id !== activeUserId) {
-      const databases2 = self.databases;
-      const value = databases2.get(activeUserId);
-      const _HermesInternal = HermesInternal;
-      closure_6.verbose("active user changed (now: " + id + ", was: " + activeUserId + ", was: " + value + ")");
-      if (value != null) {
-        value.close();
-      }
-      obj = react_nativeAll;
-      obj.setUserId(id);
-      self.activeUserId = id;
-      const databases = self.databases;
-      databases.delete(activeUserId);
-    }
-  }
-}
+};
 function carefullySpeculativelyOpen(userId) {
-  let closure_0 = userId;
-  const self = this;
+  closure_0 = userId;
+  let self = this;
   return (async () => {
-    function trySpeculativelyOpenDatabaseAsync() {
-      return closure_1_8(...arguments);
-    }
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    } else if (tmp5 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -290,8 +274,8 @@ function carefullySpeculativelyOpen(userId) {
       }
     } else {
       try {
-        let closure_0;
         c3 = 2;
+        let verboseResult = 0;
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
@@ -301,16 +285,30 @@ function carefullySpeculativelyOpen(userId) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_1 = tmp;
-            closure_0 = undefined;
+            closure_1 = tmp2;
+            closure_0 = tmp3;
+            closure_128_0 = undefined;
             if (self.preventWritingCachesAgainThisSession) {
-              closure_1_6.verbose("Not opening database because caches have been manually cleared.");
+              verboseResult = closure_1_6.verbose("Not opening database because caches have been manually cleared.");
             } else if (null != closure_0) {
               c2 = 1;
               c3 = 1;
-              const obj4 = { value: trySpeculativelyOpenDatabaseAsync(closure_0), done: false };
+              const obj4 = {
+                value: (function trySpeculativelyOpenDatabaseAsync() {
+                  self = this;
+                  const apply = closure_1_8.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_0),
+                done: false,
+              };
               return obj4;
             }
+            c3 = 3;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -320,38 +318,43 @@ function carefullySpeculativelyOpen(userId) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          closure_0 = value;
-          if (null != closure_0) {
+          closure_128_0 = value;
+          verboseResult = null;
+          if (null != closure_128_0) {
             const databases2 = closure_129_1.databases;
             if (!databases2.has(closure_129_0)) {
               const _HermesInternal = HermesInternal;
-              closure_1_6.verbose("added speculative database (" + closure_129_0 + " \u2192 " + closure_0 + ")");
+              closure_1_6.verbose("added speculative database (" + closure_129_0 + " \u2192 " + closure_128_0 + ")");
               const databases = closure_129_1.databases;
-              const result = databases.set(closure_129_0, closure_0);
+              const result = databases.set(closure_129_0, closure_128_0);
               closure_129_1.emitChange();
             }
           }
-          const _HermesInternal2 = HermesInternal;
-          closure_1_6.verbose("discarding speculative database (" + closure_129_0 + " \u2192 " + closure_0 + ")");
-          obj = closure_0;
-          if (closure_0 != null) {
-            obj.close();
-          }
         }
-        c3 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp31) {
-        c3 = 3;
-        throw tmp31;
+        const _HermesInternal2 = HermesInternal;
+        closure_1_6.verbose("discarding speculative database (" + closure_129_0 + " \u2192 " + closure_128_0 + ")");
+        if (closure_128_0 != verboseResult) {
+          verboseResult = obj.close();
+        }
+        obj = closure_128_0;
+      } catch (tmp32) {
+        c3 = tmp;
+        throw tmp32;
       }
     }
   })();
 }
-DatabaseManager.prototype["carefullySpeculativelyOpen"] = carefullySpeculativelyOpen;
-obj = {
-  CLEAR_CACHES,
-  CONNECTION_CLOSED,
-  CONNECTION_OPEN,
+prototype["carefullySpeculativelyOpen"] = carefullySpeculativelyOpen;
+let obj = {
+  CLEAR_CACHES(arg0) {
+    return closure_0.handleClearCaches(arg0);
+  },
+  CONNECTION_CLOSED() {
+    return closure_0.handleAuthenticationStoreChanged();
+  },
+  CONNECTION_OPEN() {
+    return closure_0.handleConnectionOpen();
+  },
   LOGOUT() {
     return closure_0.handleAuthenticationStoreChanged();
   },
@@ -359,22 +362,23 @@ obj = {
 let tmp2 = new tmp(
   Dispatcher,
   obj,
-  Dispatcher2.DispatchBand.Early,
+  fn(584).DispatchBand.Early,
   DatabaseManager,
   tmp,
   Dispatcher,
   obj,
-  this,
+  new.target,
   undefined,
   carefullySpeculativelyOpen,
   globalThis,
-  require,
+  fn,
 );
-const React = tmp2;
-const map = new Map();
-tmp2.databases = map;
+let closure_129_0 = tmp2;
+let tmp3 = new LoggerDefault("DatabaseManager");
+tmp2.databases = new Map();
 tmp2.activeUserId = null;
 tmp2.preventWritingCachesAgainThisSession = false;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_database/system/DatabaseManager.tsx");
 
 export default tmp2;

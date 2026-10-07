@@ -6,19 +6,11 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import Constants from "../../Constants.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let c9;
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 function canReactToMessageInternal(state, getGuildId, items) {
-  let obj;
-  let obj2;
   [obj, obj2] = items;
   const guildId = getGuildId.getGuildId();
   const currentUser = obj.getCurrentUser();
@@ -33,45 +25,48 @@ function canReactToMessageInternal(state, getGuildId, items) {
       member = obj2.getMember(guildId, currentUser.id);
     }
   }
-  let tmp6 =
-    canAddNewReactionsDefault(getGuildId) &&
-    !getGuildId.isArchivedLockedThread() &&
-    state.state !== metroImportDefault.SEND_FAILED &&
-    state.type !== metroImportAll.THREAD_STARTER_MESSAGE;
+  let tmp6 = canAddNewReactionsDefault(getGuildId) && !getGuildId.isArchivedLockedThread();
   if (tmp6) {
-    const obj3 = FlagUtils;
-    tmp6 = !obj3.hasFlag(state.flags, constants3.EPHEMERAL);
+    tmp6 = state.state !== constants.SEND_FAILED;
   }
   if (tmp6) {
-    const obj4 = CommunicationDisabledUtils;
-    tmp6 = !obj4.isMemberCommunicationDisabled(member);
+    tmp6 = state.type !== constants2.THREAD_STARTER_MESSAGE;
+  }
+  if (tmp6) {
+    tmp6 = !FlagUtils.hasFlag(state.flags, constants3.EPHEMERAL);
+  }
+  if (tmp6) {
+    tmp6 = !CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
   }
   return tmp6;
 }
-({ MessageStates: metroImportDefault, MessageTypes: metroImportAll, MessageFlags: c9 } = Constants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const Constants = fn(1085);
+({ MessageStates: closure_7, MessageTypes: closure_8, MessageFlags: closure_9 } = Constants);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
+
+export const canReactToMessage = function canReactToMessage(message, channel) {
+  const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
+  return canReactToMessageInternal(message, channel, items);
+};
+export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let first;
       _require = arg0;
-      let closure_1 = arg1;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      const tmp = _require;
+      closure_1 = arg1;
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg1) {
-        let tmp9;
         if (cResult[2] === arg0) {
-          tmp9 = cResult[3];
+          let tmp9 = cResult[3];
         }
-        const tmpResult = tmp(504);
-        return tmpResult.useStateFromStores(first, tmp9);
+        return tmp(504).useStateFromStores(first, tmp9);
       }
       class M {
         constructor() {
@@ -87,22 +82,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = arg0;
       cResult[3] = M;
       tmp9 = M;
+      const obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
       _require = arg0;
-      let closure_1 = arg1;
+      closure_1 = arg1;
       let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(items, () => {
+      return require("initialize").useStateFromStores(items, () => {
         const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
         return canReactToMessageInternal(closure_0, closure_1, items);
       });
     };
-const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
-
-export const canReactToMessage = function canReactToMessage(message, channel) {
-  const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
-  return canReactToMessageInternal(message, channel, items);
-};
-export const useCanReactToMessage = tmp3;

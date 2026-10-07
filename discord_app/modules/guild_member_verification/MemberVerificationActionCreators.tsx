@@ -3,527 +3,500 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import InviteCodeUtils from "../instant_invite/InviteCodeUtils.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import InviteStore from "../../stores/InviteStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let closure_3, closure_6, currentUser, isMember;
-
-let c9;
-let metroImportAll;
-let obj = function _fetchVerificationForm() {
-  let inviteKeyForGuildId;
-  obj = _asyncToGenerator(async (guildId, arg1) => {
-    let closure_2;
-    let closure_4;
-    let closure_5;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
-    return (async (arg0, value) => {
-      let guildProfileFromServer;
-      let id;
-      let obj10;
-      let obj11;
-      let obj4;
-      let result;
-      let inviteKeyForGuildId2 = closure_1;
-      if (closure_1 == null) {
-        isMember = inviteKeyForGuildId;
-        inviteKeyForGuildId2 = inviteKeyForGuildId.getInviteKeyForGuildId(guildId);
-      }
-      currentUser = currentUser.getCurrentUser();
-      isMember = isMember.isMember;
-      if (currentUser != null) {
-        id = currentUser.id;
-      }
-      const tmp27 = !isMember(guildId, id);
-      const HTTP = HTTPUtils.HTTP;
-      isMember = HTTP.get;
-      const request = {
-        url: closure_2_9.GUILD_MEMBER_VERIFICATION(guildId),
-        query: obj4,
-        oldFormErrors: true,
-        rejectWithError: obj10.rejectWithMigratedError(),
-      };
-      obj4 = { with_guild: tmp27, invite_code: result };
-      if (null != inviteKeyForGuildId2) {
-        const obj9 = InviteCodeUtils;
-        result = obj9.parseInviteCodeFromInviteKey(tmp22);
-      }
-      obj10 = HTTPUtils;
-      isMember = isMember(request);
-      await isMember;
-      const obj7 = { type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId };
-      const obj5 = closure_132_1(closure_132_2[8]);
-      obj5.dispatch(obj7);
-      await "IconComponent";
-      closure_1 = value;
-      if (null == closure_1.body) {
-        throw closure_1;
-      }
-      const body = closure_1.body;
-      isMember = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj11 };
-      obj11 = {
-        version: body.version,
-        description: body.description,
-        formFields: body.form_fields,
-        guild: body.guild,
-        profile: guildProfileFromServer,
-      };
-      guildProfileFromServer = null;
-      const dispatch = closure_132_1(closure_132_2[8]).dispatch;
-      closure_132_1(closure_132_2[8]);
-      if (null != body.profile) {
-        obj = closure_132_0(closure_132_2[9]);
-        guildProfileFromServer = obj.buildGuildProfileFromServer(body.profile);
-      }
-      dispatch(isMember);
-      isMember = body;
-      return isMember;
-    })();
-  });
-  return obj(...arguments);
+require = fn;
+let closure_10 = async function _fetchVerificationForm() {
+  closure_4 = tmp3;
+  closure_3 = tmp5;
+  closure_131_0 = closure_0;
+  let inviteKeyForGuildId2 = closure_1;
+  if (closure_1 == null) {
+    inviteKeyForGuildId2 = inviteKeyForGuildId.getInviteKeyForGuildId(closure_0);
+  }
+  currentUser = currentUser.getCurrentUser();
+  if (currentUser != null) {
+    const id = currentUser.id;
+  }
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: options.GUILD_MEMBER_VERIFICATION(closure_0),
+    query: null,
+    oldFormErrors: true,
+    rejectWithError: null,
+  };
+  const obj5 = { with_guild: !member.isMember(closure_0, id), invite_code: null };
+  if (null != inviteKeyForGuildId2) {
+    const result = InviteCodeUtils.parseInviteCodeFromInviteKey(tmp27);
+    InviteCodeUtils;
+  }
+  obj5.invite_code = result;
+  request.query = obj5;
+  !member.isMember(closure_0, id);
+  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  await HTTP.get(request);
+  closure_132_1(closure_132_2[8]).dispatch({ type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: closure_131_0 });
+  await "IconComponent";
+  closure_131_1 = value;
+  if (null == closure_131_1.body) {
+    throw closure_131_1;
+  }
+  const body = closure_131_1.body;
+  const obj11 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_131_0, form: null };
+  const obj12 = {
+    version: body.version,
+    description: body.description,
+    formFields: body.form_fields,
+    guild: body.guild,
+    profile: null,
+  };
+  let guildProfileFromServer = null;
+  if (null != body.profile) {
+    guildProfileFromServer = closure_132_0(closure_132_2[9]).buildGuildProfileFromServer(body.profile);
+    closure_132_0(closure_132_2[9]);
+  }
+  obj12.profile = guildProfileFromServer;
+  obj11.form = obj12;
+  closure_132_1(closure_132_2[8]).dispatch(obj11);
+  return body;
 };
-obj = function _updateVerificationForm() {
-  obj = _asyncToGenerator(async (guildId, form_fields, enabled, bulk_action) => {
-    let c6 = 0;
-    let c7 = 0;
-    return (async (arg0, value, arg2, arg3) => {
-      let obj10;
-      let obj4;
-      let obj8;
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let body;
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              closure_5 = tmp;
-              closure_4 = tmp4;
-              body = undefined;
-              const HTTP = HTTPUtils.HTTP;
-              const request = {
-                url: closure_2_9.GUILD_MEMBER_VERIFICATION(guildId),
-                body: obj4,
-                oldFormErrors: true,
-                rejectWithError: obj10.rejectWithMigratedError(),
-              };
-              const patch = HTTP.patch;
-              obj4 = { form_fields, enabled, bulk_action };
-              c6 = 1;
-              c7 = 1;
-              obj10 = HTTPUtils;
-              const obj6 = { value: patch(request), done: false };
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            return { value, done: true };
-          } else {
-            body = value.body;
-            const obj7 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj8 };
-            obj8 = { version: body.version, description: body.description, formFields: body.form_fields };
-            const obj5 = closure_133_1(closure_133_2[8]);
-            obj5.dispatch(obj7);
-            c7 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp5) {
-          c7 = 3;
-          throw tmp5;
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _updateVerificationFormDescription() {
-  obj = _asyncToGenerator(async (guildId, description) => {
-    let c4 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      let obj10;
-      let obj4;
-      let obj8;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let body;
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp;
-              closure_2 = tmp4;
-              body = undefined;
-              const HTTP = HTTPUtils.HTTP;
-              const request = {
-                url: closure_2_9.GUILD_MEMBER_VERIFICATION(guildId),
-                body: obj4,
-                oldFormErrors: true,
-                rejectWithError: obj10.rejectWithMigratedError(),
-              };
-              const patch = HTTP.patch;
-              obj4 = { description };
-              c4 = 1;
-              c5 = 1;
-              obj10 = HTTPUtils;
-              const obj6 = { value: patch(request), done: false };
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            return { value, done: true };
-          } else {
-            body = value.body;
-            const obj7 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj8 };
-            obj8 = { version: body.version, description: body.description, formFields: body.form_fields };
-            const obj5 = closure_131_1(closure_131_2[8]);
-            obj5.dispatch(obj7);
-            c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp5) {
-          c5 = 3;
-          throw tmp5;
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _enableVerificationForm() {
-  obj = _asyncToGenerator(async (arg0, enabled) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c2 = 0;
-    return (async (arg0, value) => {
-      let obj4;
-      let obj7;
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              return { value, done: true };
-            } else {
-              const HTTP = HTTPUtils.HTTP;
-              const request = {
-                url: closure_2_9.GUILD_MEMBER_VERIFICATION(closure_0),
-                body: obj4,
-                oldFormErrors: true,
-                rejectWithError: obj7.rejectWithMigratedError(),
-              };
-              const patch = HTTP.patch;
-              obj4 = { enabled };
-              c3 = 1;
-              c2 = 1;
-              obj7 = HTTPUtils;
-              const obj5 = { value: patch(request), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            return { value, done: true };
-          } else {
-            c2 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp4) {
-          c2 = 3;
-          throw tmp4;
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _submitVerificationForm() {
-  obj = _asyncToGenerator(async function (guildId, arg1) {
-    let intl2;
-    let intl3;
-    let intl4;
-    let intl5;
-    let intl6;
-    let message;
-    let obj7;
-    let obj9;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    if (c9 === 2) {
-      c9 = 3;
+let closure_11 = async function _updateVerificationForm(arg0) {
+  closure_0 = arg0;
+  c6 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c7 === 2) {
+      c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (guildId === 1) {
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
         throw value;
-      } else if (guildId === 2) {
-        let obj2 = { value, done: true };
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
         return obj2;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
-      let c7;
       try {
-        let status;
-        let num9;
-        let body;
-        c9 = 2;
-        if (0 === c8) {
-          if (guildId === 1) {
-            c9 = 3;
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
             throw value;
-          } else if (guildId === 2) {
-            c9 = 3;
+          } else if (arg0 === 2) {
+            c7 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_5 = tmp;
-            status = tmp4;
-            num9 = closure_2;
-            if (closure_2 === undefined) {
-              num9 = 200;
-            }
-            body = undefined;
-            c8 = 1;
-            c9 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === c8) {
-          if (guildId === 1) {
-            c9 = 3;
-            throw value;
-          } else if (guildId === 2) {
-            c9 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else if (closure_133_4.isFullServerPreview(guildId)) {
-            const obj6 = { memberOptions: { isPending: false } };
-            const obj11 = closure_133_0(closure_133_2[10]);
-            const result = obj11.updateImpersonatedData(guildId, obj6);
-            c9 = 3;
-            return { value: "IconComponent", done: null };
-          } else {
-            c7 = 1;
-            const HTTP = closure_133_0(closure_133_2[6]).HTTP;
+            closure_5 = tmp2;
+            closure_4 = tmp5;
+            closure_132_0 = closure_0;
+            let body;
+            const HTTP = HTTPUtils.HTTP;
             const request = {
-              url: closure_133_9.GUILD_MEMBER_REQUEST_TO_JOIN(guildId),
-              body: obj7,
-              rejectWithError: obj9.rejectWithMigratedError(),
+              url: closure_2_9.GUILD_MEMBER_VERIFICATION(closure_0),
+              body: null,
+              oldFormErrors: true,
+              rejectWithError: null,
             };
-            const put = HTTP.put;
-            obj7 = { version: closure_1.version, form_fields: closure_1.formFields };
-            obj9 = closure_133_0(closure_133_2[6]);
-            c8 = 3;
-            c9 = 1;
-            const obj8 = { value: put(request), done: false };
-            return obj8;
+            const obj4 = { form_fields, enabled, bulk_action };
+            request.body = obj4;
+            request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+            c6 = 1;
+            c7 = 1;
+            const obj6 = { value: HTTP.patch(request), done: false };
+            return obj6;
           }
-        } else if (2 === c8) {
-          c7 = 0;
-          status = closure_6;
-          status = status.status;
-          if (429 === status) {
-            const obj4 = closure_133_0(closure_133_2[12]);
-            obj4.closeContextMenu();
-            const obj10 = {
-              title: intl3.string(closure_133_0(closure_133_2[14]).t.MmIrpf),
-              body: intl4.string(closure_133_0(closure_133_2[14]).t.yjpDQ3),
-              confirmText: intl5.string(closure_133_0(closure_133_2[14]).t.XNGT1O),
-            };
-            const show = closure_133_1(closure_133_2[13]).show;
-            const tmp38 = closure_133_1(closure_133_2[13]);
-            intl3 = closure_133_0(closure_133_2[14]).intl;
-            intl4 = closure_133_0(closure_133_2[14]).intl;
-            intl5 = closure_133_0(closure_133_2[14]).intl;
-            show(obj10);
-            const obj12 = { message: intl6.string(closure_133_0(closure_133_2[14]).t.yjpDQ3) };
-            const merged = Object.assign(status);
-            intl6 = closure_133_0(closure_133_2[14]).intl;
-            throw obj12;
-          } else if (403 === status) {
-            const obj13 = { message: intl2.string(closure_133_0(closure_133_2[14]).t["8T1rxN"]) };
-            const merged1 = Object.assign(status);
-            intl2 = closure_133_0(closure_133_2[14]).intl;
-            throw obj13;
-          } else {
-            const obj14 = { message };
-            const merged2 = Object.assign(status);
-            const self = this;
-            const self2 = this;
-            const aPIError = new closure_133_0(closure_133_2[15]).APIError(status);
-            const anyErrorMessage = aPIError.getAnyErrorMessage();
-            message = anyErrorMessage;
-            if (anyErrorMessage == null) {
-              const intl = closure_133_0(closure_133_2[14]).intl;
-              message = intl.string(closure_133_0(closure_133_2[14]).t.R0RpRX);
-            }
-            throw obj14;
-          }
-        } else if (guildId === 1) {
-          c9 = 3;
+        } else if (arg0 === 1) {
+          c7 = 3;
           throw value;
-        } else if (guildId === 2) {
-          c7 = 0;
-          c9 = 3;
-          const obj15 = { value, done: true };
-          return obj15;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj = { value, done: true };
+          return obj;
         } else {
           body = value.body;
-          const obj17 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId, request: body };
-          const obj16 = closure_133_1(closure_133_2[8]);
-          const dispatchResult = obj16.dispatch(obj17);
-          const obj18 = closure_133_0(closure_133_2[11]);
-          const hasNonTermsFormFieldResult = obj18.hasNonTermsFormField(closure_1.formFields) && -1 !== num9;
-          if (hasNonTermsFormFieldResult) {
-            const _setTimeout = setTimeout;
-            const timerId = setTimeout(() => {
-              obj = closure_1(closure_2[8]);
-              const obj2 = { type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId };
-              obj.dispatch(obj2);
-            }, num9);
-          }
-          c7 = 0;
-          c9 = 3;
-          obj = { value: body, done: true };
-          return obj;
+          const obj7 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_132_0, form: null };
+          const obj8 = { version: body.version, description: body.description, formFields: body.form_fields };
+          obj7.form = obj8;
+          closure_133_1(closure_133_2[8]).dispatch(obj7);
+          c7 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } catch (tmp73) {
-        closure_6 = tmp73;
-        if (0 === c7) {
-          c9 = 3;
-          throw tmp73;
-        } else {
-          c8 = 2;
-        }
+      } catch (tmp6) {
+        c7 = tmp;
+        throw tmp6;
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
-({ AnalyticEvents: metroImportAll, Endpoints: c9 } = Constants);
-obj = {
+let closure_12 = async function _updateVerificationFormDescription(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = tmp2;
+            closure_2 = tmp5;
+            closure_130_0 = closure_0;
+            let body;
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: closure_2_9.GUILD_MEMBER_VERIFICATION(closure_0),
+              body: null,
+              oldFormErrors: true,
+              rejectWithError: null,
+            };
+            const obj4 = { description };
+            request.body = obj4;
+            request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+            c4 = 1;
+            c5 = 1;
+            const obj6 = { value: HTTP.patch(request), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          body = value.body;
+          const obj7 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: closure_130_0, form: null };
+          const obj8 = { version: body.version, description: body.description, formFields: body.form_fields };
+          obj7.form = obj8;
+          closure_131_1(closure_131_2[8]).dispatch(obj7);
+          c5 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp6) {
+        c5 = tmp;
+        throw tmp6;
+      }
+    }
+  })();
+};
+let closure_13 = async function _enableVerificationForm(arg0) {
+  closure_0 = arg0;
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            const HTTP = HTTPUtils.HTTP;
+            const request = {
+              url: closure_2_9.GUILD_MEMBER_VERIFICATION(closure_0),
+              body: null,
+              oldFormErrors: true,
+              rejectWithError: null,
+            };
+            const obj4 = { enabled };
+            request.body = obj4;
+            request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+            c3 = 1;
+            c2 = 1;
+            const obj5 = { value: HTTP.patch(request), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c2 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp5) {
+        c2 = tmp;
+        throw tmp5;
+      }
+    }
+  })();
+};
+let closure_14 = async function _submitVerificationForm(arg0) {
+  if (c9 === 2) {
+    c9 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c9 = 2;
+      if (0 === c8) {
+        if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c9 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          closure_132_2 = undefined;
+          closure_132_0 = guildId;
+          closure_132_1 = closure_1;
+          let num9 = closure_2;
+          if (closure_2 === undefined) {
+            num9 = 200;
+          }
+          closure_132_2 = num9;
+          let body;
+          c8 = 1;
+          c9 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c9 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else if (closure_133_4.isFullServerPreview(closure_132_0)) {
+          const obj7 = { memberOptions: { isPending: false } };
+          const result = closure_133_0(closure_133_2[10]).updateImpersonatedData(closure_132_0, obj7);
+          c9 = 3;
+          return { value: "IconComponent", done: null };
+        } else {
+          c7 = 1;
+          const HTTP = closure_133_0(closure_133_2[6]).HTTP;
+          const request = {
+            url: closure_133_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_132_0),
+            body: null,
+            rejectWithError: null,
+          };
+          const obj8 = { version: closure_132_1.version, form_fields: closure_132_1.formFields };
+          request.body = obj8;
+          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
+          c8 = 3;
+          c9 = 1;
+          const obj9 = { value: HTTP.put(request), done: false };
+          return obj9;
+        }
+      } else if (2 === tmp7) {
+        c7 = 0;
+        closure_132_4 = closure_6;
+        const status = closure_132_4.status;
+        if (429 === status) {
+          closure_133_0(closure_133_2[12]).closeContextMenu();
+          const obj4 = closure_133_0(closure_133_2[12]);
+          const obj11 = { title: null, body: null, confirmText: null };
+          const intl3 = closure_133_0(closure_133_2[14]).intl;
+          obj11.title = intl3.string(closure_133_0(closure_133_2[14]).t.MmIrpf);
+          const intl4 = closure_133_0(closure_133_2[14]).intl;
+          obj11.body = intl4.string(closure_133_0(closure_133_2[14]).t.yjpDQ3);
+          const intl5 = closure_133_0(closure_133_2[14]).intl;
+          obj11.confirmText = intl5.string(closure_133_0(closure_133_2[14]).t.XNGT1O);
+          closure_133_1(closure_133_2[13]).show(obj11);
+          const obj13 = {};
+          const merged = Object.assign(closure_132_4);
+          const intl6 = closure_133_0(closure_133_2[14]).intl;
+          obj13.message = intl6.string(closure_133_0(closure_133_2[14]).t.yjpDQ3);
+          throw obj13;
+        } else if (403 === status) {
+          const obj14 = {};
+          const merged1 = Object.assign(closure_132_4);
+          const intl2 = closure_133_0(closure_133_2[14]).intl;
+          obj14.message = intl2.string(closure_133_0(closure_133_2[14]).t["8T1rxN"]);
+          throw obj14;
+        } else {
+          const obj15 = {};
+          const merged2 = Object.assign(closure_132_4);
+          const aPIError = new closure_133_0(closure_133_2[15]).APIError(closure_132_4);
+          const anyErrorMessage = aPIError.getAnyErrorMessage();
+          let message = anyErrorMessage;
+          if (anyErrorMessage == null) {
+            const intl = closure_133_0(closure_133_2[14]).intl;
+            message = intl.string(closure_133_0(closure_133_2[14]).t.R0RpRX);
+          }
+          obj15.message = message;
+          throw obj15;
+        }
+      } else if (arg0 === 1) {
+        c9 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 0;
+        c9 = 3;
+        const obj16 = { value, done: true };
+        return obj16;
+      } else {
+        body = value.body;
+        const obj18 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_132_0, request: body };
+        closure_133_1(closure_133_2[8]).dispatch(obj18);
+        const obj17 = closure_133_1(closure_133_2[8]);
+        let hasNonTermsFormFieldResult = closure_133_0(closure_133_2[11]).hasNonTermsFormField(
+          closure_132_1.formFields,
+        );
+        if (hasNonTermsFormFieldResult) {
+          hasNonTermsFormFieldResult = -1 !== closure_132_2;
+        }
+        if (hasNonTermsFormFieldResult) {
+          const _setTimeout = setTimeout;
+          const timerId = setTimeout(() => {
+            closure_1(closure_2[8]).dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId });
+          }, closure_132_2);
+        }
+        c7 = 0;
+        c9 = 3;
+        const obj = { value: body, done: true };
+        return obj;
+      }
+    } catch (tmp75) {
+      closure_6 = tmp75;
+      if (tmp4 === c7) {
+        c9 = tmp2;
+        throw tmp75;
+      } else {
+        c8 = tmp;
+      }
+    }
+  }
+};
+const Constants = fn(1085);
+({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationActionCreators.tsx");
+
+export default {
   fetchVerificationForm() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_10.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   },
   updateVerificationForm() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_11.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   },
   updateVerificationFormFieldsLocal(guildId, formFields) {
-    let obj3;
-    const obj2 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj3, isLocalUpdate: true };
-    obj3 = { formFields };
-    obj = DispatcherDefault;
-    obj.dispatch(obj2);
+    const obj2 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: { formFields }, isLocalUpdate: true };
+    DispatcherDefault.dispatch(obj2);
   },
   updateVerificationFormDescription() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_12.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   },
   updateVerificationFormDescriptionLocal(guildId, description) {
-    let obj3;
-    const obj2 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj3, isLocalUpdate: true };
-    obj3 = { description };
-    obj = DispatcherDefault;
-    obj.dispatch(obj2);
+    const obj2 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: { description }, isLocalUpdate: true };
+    DispatcherDefault.dispatch(obj2);
   },
   enableVerificationForm() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_13.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   },
   submitVerificationForm() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_14.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   },
   clearCoachmark() {
-    obj = DispatcherDefault;
-    obj.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
+    DispatcherDefault.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
   },
   reportApplication(arg0) {
-    let guild;
-    let guildJoinRequest;
-    let guildJoinRequestUser;
-    let reason;
-    let reasonOther;
-    let responses;
     ({ guild, guildJoinRequest, guildJoinRequestUser, reason, reasonOther, responses } = arg0);
-    obj = AnalyticsUtilsDefault;
-    const obj2 = {
+    AnalyticsUtilsDefault.track(constants.GUILD_MEMBER_APPLICATION_REPORTED, {
       application_id: guildJoinRequest.joinRequestId,
       applicant_id: guildJoinRequestUser.id,
       guild_id: guild.id,
       reason,
       reason_other: reasonOther,
       responses,
-    };
-    obj.track(metroImportAll.GUILD_MEMBER_APPLICATION_REPORTED, obj2);
+    });
   },
 };
-let result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationActionCreators.tsx");
-
-export default obj;
 export const DISABLE_JOIN_REQUEST_COACHMARK = -1;
 export const showCoachmark = function showCoachmark(guildId) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId });
 };

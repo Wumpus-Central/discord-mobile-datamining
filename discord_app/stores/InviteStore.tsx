@@ -1,30 +1,28 @@
 // discord_app/stores/InviteStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../Constants.tsx";
 import InviteCodeUtils from "../modules/instant_invite/InviteCodeUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 function updateInvite(code, fn) {
-  let obj3;
   let str = code;
   if (code == null) {
     str = "";
   }
-  const obj = InviteCodeUtils;
-  const result = obj.parseExtraDataFromInviteKey(str);
-  const value = map.get(str);
+  const result = InviteCodeUtils.parseExtraDataFromInviteKey(str);
+  value = map.get(str);
   if (null != value) {
     const obj2 = { state: InviteStates.RESOLVING };
     const merged = Object.assign(value);
-    obj3 = obj2;
+    let obj3 = obj2;
   } else {
     obj3 = { state: InviteStates.RESOLVING, code: result.baseCode };
   }
   fn(obj3);
   map = new Map(map);
   const result1 = map.set(str, obj3);
-  const guild = obj3.guild;
+  guild = obj3.guild;
   let id;
   if (guild != null) {
     id = guild.id;
@@ -36,11 +34,11 @@ function updateInvite(code, fn) {
   }
 }
 function handleInviteResolveFailure(code) {
+  const banned = code;
   updateInvite(code.code, (arg0) => {
-    if ("banned" in code) {
-      let EXPIRED;
-      if (code.banned) {
-        EXPIRED = InviteStates.BANNED;
+    if ("banned" in banned) {
+      if (banned.banned) {
+        let EXPIRED = InviteStates.BANNED;
       }
       arg0.state = EXPIRED;
     }
@@ -50,37 +48,32 @@ function handleInviteResolveFailure(code) {
 const InviteStates = Constants.InviteStates;
 new Map();
 const map1 = new Map();
-let obj4 = {};
 let map = new Map();
-new Map();
-const Store = get_initializedDefault.Store;
-class InviteStore extends Store {
-  getInvite(arg0) {
-    return map.get(arg0);
-  }
-  getInviteError(arg0) {
-    return map1.get(arg0);
-  }
-  getInvites() {
-    return map;
-  }
-  getInviteKeyForGuildId(id) {
-    return obj4[id];
-  }
-  getFriendMemberIds(arg0) {
-    return map.get(arg0);
-  }
-}
+const Store = initializeDefault.Store;
+class InviteStore extends Store {}
 const prototype = InviteStore.prototype;
+prototype["getInvite"] = function getInvite(arg0) {
+  return map.get(arg0);
+};
+prototype["getInviteError"] = function getInviteError(arg0) {
+  return map1.get(arg0);
+};
+prototype["getInvites"] = function getInvites() {
+  return map;
+};
+prototype["getInviteKeyForGuildId"] = function getInviteKeyForGuildId(id) {
+  return obj4[id];
+};
+prototype["getFriendMemberIds"] = function getFriendMemberIds(arg0) {
+  return map.get(arg0);
+};
 InviteStore.displayName = "InviteStore";
-let obj = {
+const inviteStore = new InviteStore(DispatcherDefault, {
   INVITE_RESOLVE: function handleInviteResolve(code) {
     code = code.code;
-    const obj = InviteCodeUtils;
-    const result = obj.parseExtraDataFromInviteKey(code);
+    const result = InviteCodeUtils.parseExtraDataFromInviteKey(code);
     map = new Map(map);
-    const obj2 = { code: result.baseCode, state: InviteStates.RESOLVING };
-    const result1 = map.set(code, obj2);
+    const result1 = map.set(code, { code: result.baseCode, state: InviteStates.RESOLVING });
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(code) {
     updateInvite(code.code, (arg0) => {
@@ -168,10 +161,9 @@ let obj = {
       channel.state = InviteStates.ACCEPTED;
       channel.guild = code.invite.guild;
       channel.new_member = code.invite.new_member;
-      const obj = {};
       const merged = Object.assign(channel.channel);
       const merged1 = Object.assign(code.invite.channel);
-      channel.channel = obj;
+      channel.channel = {};
     });
   },
   INVITE_ACCEPT_FAILURE: function handleAcceptInviteFailure(code) {
@@ -202,16 +194,13 @@ let obj = {
   INVITE_FRIEND_MEMBERS_FETCH_FAILURE: function handleInviteFriendMembersFetchFailure(code) {
     if (map.has(code.code)) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map(map);
       map.delete(code.code);
     } else {
       return false;
     }
   },
-};
-const inviteStore = new InviteStore(DispatcherDefault, obj);
+});
 let result = size.fileFinishedImporting("stores/InviteStore.tsx");
 
 export default inviteStore;

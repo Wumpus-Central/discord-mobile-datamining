@@ -1,63 +1,54 @@
 // discord_app/modules/conjure/agent_activity/useConjureElapsedMs.tsx
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let _slicedToArray = _slicedToArray_mod;
+const require = fn;
 let closure_4 = { second: 1000, minute: 60000 };
+const ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/useConjureElapsedMs.tsx");
 
 export const useConjureElapsedMs = function useConjureElapsedMs(startedAt, arg1) {
-  let bound1;
-  let closure_2;
-  let first1;
-  let str;
   if (closure_5) {
-    let first;
-    _require = startedAt;
-    const obj = require("react");
-    const cResult = obj.c(5);
+    closure_129_0 = startedAt;
+    const cResult = require("c").c(5);
     let str2 = "second";
     if (undefined !== arg1) {
       str2 = arg1;
     }
+    closure_129_1 = str2;
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function c() {
         return Date.now();
       };
       cResult[0] = fn;
-      first = fn;
+      let first = fn;
     } else {
       first = cResult[0];
     }
-    [, _slicedToArray] = react.useState(first);
+    const obj = require("c");
+    closure_129_2 = _slicedToArray(noop.useState(first), 2)[1];
     if (cResult[1] === str2) {
-      let tmp18;
-      let tmp19;
       if (cResult[2] === startedAt) {
-        tmp18 = cResult[3];
-        tmp19 = cResult[4];
+        let tmp16 = cResult[3];
+        let tmp17 = cResult[4];
       }
-      const effect = react.useEffect(tmp18, tmp19);
+      const effect = noop.useEffect(tmp16, tmp17);
       let bound;
       if (null != startedAt) {
         const _Math2 = Math;
-        bound = Math.max(0, tmp17 - startedAt);
+        bound = Math.max(0, tmp15 - startedAt);
       }
-      bound1 = bound;
+      let bound1 = bound;
     }
     const fn2 = function v() {
-      let timeout;
       if (null != timeout) {
-        let closure_1 = tmp4;
+        closure_1 = tmp4;
         function tick() {
-          let timeout;
           const timestamp = Date.now();
           tick(timestamp);
           timeout = setTimeout(tick, closure_1 - ((((timestamp - timeout) % closure_1) + closure_1) % closure_1));
@@ -75,8 +66,9 @@ export const useConjureElapsedMs = function useConjureElapsedMs(startedAt, arg1)
     cResult[2] = startedAt;
     cResult[3] = fn2;
     cResult[4] = items;
-    tmp19 = items;
-    tmp18 = fn2;
+    tmp17 = items;
+    tmp16 = fn2;
+    const tmp14 = _slicedToArray(noop.useState(first), 2);
   } else {
     _require = startedAt;
     str = arg1;
@@ -84,15 +76,16 @@ export const useConjureElapsedMs = function useConjureElapsedMs(startedAt, arg1)
       str = "second";
     }
     _slicedToArray = undefined;
-    [first1, _slicedToArray] = react.useState(() => Date.now());
+    const tmp3 = _slicedToArray(
+      noop.useState(() => Date.now()),
+      2,
+    );
+    _slicedToArray = tmp3[1];
     const items1 = [startedAt, str];
-    const effect1 = react.useEffect(() => {
-      let closure_0;
-      let timeout;
+    const effect1 = noop.useEffect(() => {
       if (null != timeout) {
-        let closure_1 = tmp4;
+        closure_1 = tmp4;
         function tick() {
-          let timeout;
           const timestamp = Date.now();
           tick(timestamp);
           timeout = setTimeout(tick, closure_1 - ((((timestamp - timeout) % closure_1) + closure_1) % closure_1));
@@ -107,7 +100,7 @@ export const useConjureElapsedMs = function useConjureElapsedMs(startedAt, arg1)
     }, items1);
     if (null != startedAt) {
       const _Math = Math;
-      bound1 = Math.max(0, first1 - startedAt);
+      bound1 = Math.max(0, tmp3[0] - startedAt);
     }
   }
   return bound1;

@@ -1,41 +1,55 @@
 // discord_app/modules/user_settings/defs/native/AppVersionSetting.tsx
-import intl2 from "../../../../intl/index.native.tsx";
-import UserSettings from "../../UserSettings.tsx";
-import ClydeIcon from "../../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
+import util from "../../../../intl/index.native.tsx";
 import CopyClientInfoSetting from "CopyClientInfoSetting.tsx";
-import react_native from "../../../../utils/native/ClientInfoUtils.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import ClientInfoUtils from "../../../../utils/native/ClientInfoUtils.tsx";
 
-const constants = react_native.getConstants();
+require = fn;
+const constants = ClientInfoUtils.getConstants();
+const SettingBuilders = fn(11142);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.H66MEk);
+    const intl = util.intl;
+    return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: ClydeIcon.ClydeIcon,
+  IconComponent: fn(10560).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
-    let combined;
-    const obj = CopyClientInfoSetting;
-    const clientInfoString = obj.getClientInfoString(closure_3.ReleaseChannel);
-    const getClientInfoString = CopyClientInfoSetting.getClientInfoString;
-    CopyClientInfoSetting;
-    const obj2 = react_native;
-    const clientInfoString1 = getClientInfoString(obj2.getBuildNumberLabel());
+    const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
+    const obj2 = CopyClientInfoSetting;
+    const clientInfoString1 = obj2.getClientInfoString(ClientInfoUtils.getBuildNumberLabel());
     const hasItem = clientInfoString1.includes("dev");
-    const obj4 = CopyClientInfoSetting;
-    const clientInfoString2 = obj4.getClientInfoString(closure_3.Version);
+    const clientInfoString2 = CopyClientInfoSetting.getClientInfoString(closure_3.Version);
     if (hasItem) {
-      combined = concat(clientInfoString2, " (", clientInfoString, ")");
+      let combined = concat(clientInfoString2, " (", clientInfoString, ")");
     } else {
       combined = concat(clientInfoString2, " (", clientInfoString1, ") - ", clientInfoString);
     }
     return combined;
   },
-  usePredicate: UserSettings.DeveloperMode.useSetting,
+  usePredicate: fn(2028).DeveloperMode.useSetting,
 };
-const createStaticResult = SettingBuilders.createStatic(obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
 
-export default createStaticResult;
+export default SettingBuilders.createStatic({
+  useTitle: function useAppVersionSettingTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.H66MEk);
+  },
+  parent: null,
+  IconComponent: fn(10560).ClydeIcon,
+  useTrailing: function useAppVersionSettingTrailing() {
+    const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
+    const obj2 = CopyClientInfoSetting;
+    const clientInfoString1 = obj2.getClientInfoString(ClientInfoUtils.getBuildNumberLabel());
+    const hasItem = clientInfoString1.includes("dev");
+    const clientInfoString2 = CopyClientInfoSetting.getClientInfoString(closure_3.Version);
+    if (hasItem) {
+      let combined = concat(clientInfoString2, " (", clientInfoString, ")");
+    } else {
+      combined = concat(clientInfoString2, " (", clientInfoString1, ") - ", clientInfoString);
+    }
+    return combined;
+  },
+  usePredicate: fn(2028).DeveloperMode.useSetting,
+});

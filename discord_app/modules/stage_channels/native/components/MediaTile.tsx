@@ -1,88 +1,78 @@
 // discord_app/modules/stage_channels/native/components/MediaTile.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import CallConstants from "../../../calls/CallConstants.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let channel;
-
-let obj2;
-const View = react_native.View;
-const ParticipantTypes = CallConstants.ParticipantTypes;
-const jsx = Fragment.jsx;
-let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: obj2 };
-obj2 = { flex: 1, borderRadius: nativeDefault.radii.sm };
+const require = fn;
+const View = fn(17).View;
+const ParticipantTypes = fn(4917).ParticipantTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = {
+  container: { flex: 1, marginHorizontal: 4, marginVertical: 4 },
+  media: { flex: 1, borderRadius: nativeDefault.radii.sm },
+};
 let closure_7 = createStyles.createStyles(obj);
-const memo = react.memo;
-const memoResult = memo(
+const ReactCompilerGating = fn(558);
+let obj3 = { flex: 1, borderRadius: nativeDefault.radii.sm };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        let first;
-        const obj = channel(576);
-        const cResult = obj.c(23);
+        const cResult = channel(576).c(23);
         channel = channel.channel;
         const participant = channel.participant;
-        size = channel.size;
+        const size = channel.size;
         const tmp4 = closure_7();
-        const obj2 = channel(9743);
-        const speakerTileStyles = obj2.useSpeakerTileStyles();
+        const obj = channel(576);
+        const speakerTileStyles = channel(9743).useSpeakerTileStyles();
         const width = participant(1484)().width;
-        const obj3 = channel(5919);
-        const isScreenLandscape = obj3.useIsScreenLandscape();
+        const obj2 = channel(9743);
         const tmp6 = participant;
+        const isScreenLandscape = channel(5919).useIsScreenLandscape();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];
           cResult[0] = items;
-          first = items;
+          let first = items;
         } else {
           first = cResult[0];
         }
         if (cResult[1] === channel.id) {
-          let tmp10;
-          let tmp11;
           if (cResult[2] === participant.id) {
-            tmp10 = cResult[3];
-            tmp11 = cResult[4];
+            let tmp10 = cResult[3];
+            let tmp11 = cResult[4];
           }
-          const tmpResult = channel(504);
-          const stateFromStores = tmpResult.useStateFromStores(first, tmp10, tmp11);
+          const stateFromStores = tmp(504).useStateFromStores(first, tmp10, tmp11);
           if (null != stateFromStores) {
             if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
               if (cResult[5] === size) {
-                let tmp14;
                 if (cResult[6] === speakerTileStyles) {
-                  tmp14 = cResult[7];
+                  let tmp14 = cResult[7];
                 }
                 if (cResult[8] === isScreenLandscape) {
                   if (cResult[9] === size) {
-                    let tmp16;
                     if (cResult[10] === width) {
-                      tmp16 = cResult[11];
+                      let tmp16 = cResult[11];
                     }
                     if (cResult[12] === tmp4.container) {
                       if (cResult[13] === tmp14) {
-                        let tmp18;
                         if (cResult[14] === tmp16) {
-                          tmp18 = cResult[15];
+                          let tmp18 = cResult[15];
                         }
                         if (cResult[16] === channel) {
                           if (cResult[17] === stateFromStores) {
-                            let tmp19;
                             if (cResult[18] === tmp4.media) {
-                              tmp19 = cResult[19];
+                              let tmp19 = cResult[19];
                             }
                             if (cResult[20] === tmp18) {
-                              let tmp23;
                               if (cResult[21] === tmp19) {
-                                tmp23 = cResult[22];
+                                let tmp23 = cResult[22];
                               }
                               return tmp23;
                             }
+                            const obj4 = { style: tmp18, children: tmp19 };
                             const tmp26 = <View style={tmp18}>{tmp19}</View>;
                             cResult[20] = tmp18;
                             cResult[21] = tmp19;
@@ -90,25 +80,34 @@ const memoResult = memo(
                             tmp23 = tmp26;
                           }
                         }
-                        tmp6(9754);
-                        const tmp22 = (
-                          <tmp6Result
-                            hasBottomSafeArea={false}
-                            hasLeftSafeArea={false}
-                            hasRightSafeArea={false}
-                            hasTopSafeArea={false}
-                            participant={stateFromStores}
-                            avatarSize={channel(1188).AvatarSizes.XLARGE}
-                            channel={channel}
-                            shrinkStreamEmptyState={false}
-                            contentStyle={tmp4.media}
-                          />
-                        );
+                        const obj5 = {
+                          hasBottomSafeArea: false,
+                          hasLeftSafeArea: false,
+                          hasRightSafeArea: false,
+                          hasTopSafeArea: false,
+                          participant: stateFromStores,
+                          avatarSize: tmp(1188).AvatarSizes.XLARGE,
+                          channel,
+                          shrinkStreamEmptyState: false,
+                          contentStyle: tmp4.media,
+                        };
+                        const tmp22 = jsx(tmp6(9754), {
+                          hasBottomSafeArea: false,
+                          hasLeftSafeArea: false,
+                          hasRightSafeArea: false,
+                          hasTopSafeArea: false,
+                          participant: stateFromStores,
+                          avatarSize: tmp(1188).AvatarSizes.XLARGE,
+                          channel,
+                          shrinkStreamEmptyState: false,
+                          contentStyle: tmp4.media,
+                        });
                         cResult[16] = channel;
                         cResult[17] = stateFromStores;
                         cResult[18] = tmp4.media;
                         cResult[19] = tmp22;
                         tmp19 = tmp22;
+                        const tmp6Result = tmp6(9754);
                       }
                     }
                     const items1 = [tmp28, tmp14, tmp16];
@@ -119,20 +118,20 @@ const memoResult = memo(
                     tmp18 = items1;
                   }
                 }
-                const tmpResult3 = channel(9743);
-                const tileWidthStyle = tmpResult3.getTileWidthStyle(size, width, isScreenLandscape);
+                const tileWidthStyle = tmp(9743).getTileWidthStyle(size, width, isScreenLandscape);
                 cResult[8] = isScreenLandscape;
                 cResult[9] = size;
                 cResult[10] = width;
                 cResult[11] = tileWidthStyle;
                 tmp16 = tileWidthStyle;
+                const tmpResult3 = tmp(9743);
               }
-              const tmpResult4 = channel(9743);
-              const sizeStyle = tmpResult4.getSizeStyle(size, speakerTileStyles);
+              const sizeStyle = tmp(9743).getSizeStyle(size, speakerTileStyles);
               cResult[5] = size;
               cResult[6] = speakerTileStyles;
               cResult[7] = sizeStyle;
               tmp14 = sizeStyle;
+              const tmpResult4 = tmp(9743);
             }
           }
           return null;
@@ -147,54 +146,64 @@ const memoResult = memo(
         cResult[4] = items2;
         tmp11 = items2;
         tmp10 = fn;
+        const obj3 = channel(5919);
       }
     : (channel) => {
         channel = channel.channel;
         const participant = channel.participant;
-        size = channel.size;
+        const size = channel.size;
         const tmp = closure_7();
+        const speakerTileStyles = channel(9743).useSpeakerTileStyles();
         const obj = channel(9743);
-        const speakerTileStyles = obj.useSpeakerTileStyles();
-        const width = participant(1484)().width;
+        const tmp5 = participant;
+        const isScreenLandscape = channel(5919).useIsScreenLandscape();
         const obj2 = channel(5919);
-        const isScreenLandscape = obj2.useIsScreenLandscape();
         const items = [ChannelRTCStore];
         const items1 = [channel.id, participant.id];
-        const obj3 = channel(504);
-        const stateFromStores = obj3.useStateFromStores(
+        const stateFromStores = channel(504).useStateFromStores(
           items,
           () => ChannelRTCStore.getParticipant(channel.id, participant.id),
           items1,
         );
         let tmp8 = null;
-        const tmp5 = participant;
         if (null != stateFromStores) {
           tmp8 = null;
           if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
-            const items2 = [tmp.container, ,];
-            const tmp2Result = channel(9743);
-            items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
-            const tmp2Result2 = channel(9743);
-            items2[2] = tmp2Result2.getTileWidthStyle(size, width, isScreenLandscape);
-            ({
+            const obj4 = { style: null, children: null };
+            const items2 = [tmp.container, tmp2(9743).getSizeStyle(size, speakerTileStyles)];
+            const tmp2Result = tmp2(9743);
+            items2[2] = tmp2(9743).getTileWidthStyle(size, participant(1484)().width, isScreenLandscape);
+            obj4.style = items2;
+            const obj5 = {
               hasBottomSafeArea: false,
               hasLeftSafeArea: false,
               hasRightSafeArea: false,
               hasTopSafeArea: false,
               participant: stateFromStores,
-              avatarSize: channel(1188).AvatarSizes.XLARGE,
-              channel,
+              avatarSize: null,
+              channel: null,
               shrinkStreamEmptyState: false,
-              contentStyle: tmp.media,
+              contentStyle: null,
+            };
+            const tmp2Result2 = tmp2(9743);
+            obj5.avatarSize = tmp2(1188).AvatarSizes.XLARGE;
+            obj5.channel = channel;
+            obj5.contentStyle = tmp.media;
+            obj4.children = jsx(tmp5(9754), {
+              hasBottomSafeArea: false,
+              hasLeftSafeArea: false,
+              hasRightSafeArea: false,
+              hasTopSafeArea: false,
+              participant: stateFromStores,
+              avatarSize: null,
+              channel: null,
+              shrinkStreamEmptyState: false,
+              contentStyle: null,
             });
-            tmp5(9754);
-            tmp8 = <View style={items2}>{null}</View>;
+            tmp8 = <View style={null}>{null}</View>;
+            const tmp5Result = tmp5(9754);
           }
         }
         return tmp8;
       },
 );
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
-
-export default memoResult;

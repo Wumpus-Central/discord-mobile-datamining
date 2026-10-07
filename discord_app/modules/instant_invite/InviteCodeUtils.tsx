@@ -2,24 +2,20 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef1478 from "../../../_runtime/metro/01478__.js";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import size from "../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
+require = fn;
 function readSnowflake(firstQueryStringValue) {
   let tmp;
   if (typeof firstQueryStringValue === "string") {
-    const obj = SnowflakeUtilsDefault;
     if (obj.isProbablyAValidSnowflake(firstQueryStringValue)) {
       tmp = firstQueryStringValue;
     }
+    obj = SnowflakeUtilsDefault;
   }
   return tmp;
 }
 function generateInviteKeyFromExtraData(arg0) {
-  let baseCode;
-  let guildScheduledEventId;
-  let targetChannelId;
-  let targetMessageId;
   ({ baseCode, guildScheduledEventId, targetChannelId, targetMessageId } = arg0);
   const obj = {};
   if (null != guildScheduledEventId) {
@@ -31,8 +27,7 @@ function generateInviteKeyFromExtraData(arg0) {
       obj[message] = targetMessageId;
     }
   }
-  const obj2 = _modDef1478;
-  const json = obj2.stringify(obj);
+  const json = _modDef1478.stringify(obj);
   let combined = baseCode;
   if ("" !== json) {
     const _HermesInternal = HermesInternal;
@@ -43,11 +38,11 @@ function generateInviteKeyFromExtraData(arg0) {
 const event = "event";
 const channel = "channel";
 const message = "message";
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/InviteCodeUtils.tsx");
 
 export { readSnowflake };
 export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlParams(match2, search) {
-  let tmp9Result;
   if (null == search) {
     return match2;
   } else {
@@ -56,73 +51,67 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       substr = search.substring(1);
     }
     try {
-      const obj = _modDef1478;
-      const parsed = obj.parse(substr);
-      const obj2 = QueryStringUtils;
-      const firstQueryStringValue = obj2.getFirstQueryStringValue(parsed[event]);
-      const obj3 = QueryStringUtils;
-      const tmp11 = readSnowflake(obj3.getFirstQueryStringValue(parsed[channel]));
+      const parsed = _modDef1478.parse(substr);
+      const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
+      const tmp12 = readSnowflake(QueryStringUtils.getFirstQueryStringValue(parsed[channel]));
       const obj4 = {
         baseCode: match2,
         guildScheduledEventId: firstQueryStringValue,
-        targetChannelId: tmp11,
-        targetMessageId: tmp9Result,
+        targetChannelId: tmp12,
+        targetMessageId: null,
       };
-      tmp9Result = undefined;
-      if (null != tmp11) {
-        const tmp5Result = QueryStringUtils;
-        tmp9Result = readSnowflake(tmp5Result.getFirstQueryStringValue(parsed[message]));
+      let tmp10Result;
+      if (null != tmp12) {
+        tmp10Result = readSnowflake(QueryStringUtils.getFirstQueryStringValue(parsed[message]));
+        const tmp6Result = QueryStringUtils;
       }
+      obj4.targetMessageId = tmp10Result;
       return generateInviteKeyFromExtraData(obj4);
     } catch (err) {
-      return match2;
+      return tmp;
     }
   }
 };
 export { generateInviteKeyFromExtraData };
 export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(inviteKey) {
-  let tmp2;
-  let tmp3;
-  let tmp5;
   [tmp2, tmp3] = inviteKey.split("?");
-  _slicedToArray(inviteKey.split("?"), 2);
   if (null == tmp3) {
-    return { baseCode: tmp2 };
+    const obj2 = { baseCode: tmp2 };
+    return obj2;
   } else {
-    const obj4 = _modDef1478;
-    const parsed = obj4.parse(tmp3);
-    const obj5 = QueryStringUtils;
-    const firstQueryStringValue = obj5.getFirstQueryStringValue(parsed[event]);
-    const obj6 = QueryStringUtils;
-    const firstQueryStringValue1 = obj6.getFirstQueryStringValue(parsed[channel]);
+    const parsed = _modDef1478.parse(tmp3);
+    const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
+    const firstQueryStringValue1 = QueryStringUtils.getFirstQueryStringValue(parsed[channel]);
     let tmp4;
     if (typeof firstQueryStringValue1 === "string") {
-      const tmp9Result = SnowflakeUtilsDefault;
       if (tmp9Result.isProbablyAValidSnowflake(firstQueryStringValue1)) {
         tmp4 = firstQueryStringValue1;
       }
+      tmp9Result = SnowflakeUtilsDefault;
     }
     const obj = {
       baseCode: tmp2,
       guildScheduledEventId: firstQueryStringValue,
       targetChannelId: tmp4,
-      targetMessageId: tmp5,
+      targetMessageId: null,
     };
-    tmp5 = undefined;
+    let tmp5;
     if (null != tmp4) {
-      const tmp12Result = QueryStringUtils;
-      const firstQueryStringValue2 = tmp12Result.getFirstQueryStringValue(parsed[message]);
+      const firstQueryStringValue2 = QueryStringUtils.getFirstQueryStringValue(parsed[message]);
       let tmp8;
       if (typeof firstQueryStringValue2 === "string") {
-        const tmp9Result2 = SnowflakeUtilsDefault;
         if (tmp9Result2.isProbablyAValidSnowflake(firstQueryStringValue2)) {
           tmp8 = firstQueryStringValue2;
         }
+        tmp9Result2 = SnowflakeUtilsDefault;
       }
       tmp5 = tmp8;
+      const tmp12Result = QueryStringUtils;
     }
+    obj.targetMessageId = tmp5;
     return obj;
   }
+  const tmp = _slicedToArray(inviteKey.split("?"), 2);
 };
 export const parseInviteCodeFromInviteKey = function parseInviteCodeFromInviteKey(code) {
   return _slicedToArray(code.split("?"), 1)[0];

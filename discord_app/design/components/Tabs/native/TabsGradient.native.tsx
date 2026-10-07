@@ -1,26 +1,19 @@
 // discord_app/design/components/Tabs/native/TabsGradient.native.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
-import Constants from "../../../../Constants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
 const ReanimatedRexport = ReanimatedRexport2;
-let _require;
 
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-const HorizontalGradient = Constants.HorizontalGradient;
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = Fragment);
+require = fn;
+const HorizontalGradient = fn(1085).HorizontalGradient;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 const SPRING_CONFIG = { mass: 1, damping: 30, stiffness: 250 };
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles({
   gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 },
   left: { left: 0 },
@@ -32,44 +25,36 @@ const __initData = {
 const __initData2 = {
   code: "function TabsGradientNativeTsx2(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (visible) => {
       _require = visible;
-      let obj = require("ReanimatedRexport");
       const fn = function s() {
-        const withSpring = spring.withSpring;
         let num = 0;
-        spring;
         if (visible.get()) {
           num = 1;
         }
-        const obj = { opacity: withSpring(num, SPRING_CONFIG) };
-        return obj;
+        return { opacity: spring.withSpring(num, closure_8) };
       };
+      let obj = require("ReanimatedRexport");
       fn.__closure = { withSpring: require("spring").withSpring, visible, SPRING_CONFIG };
       fn.__workletHash = 14959306962615;
       fn.__initData = __initData;
-      ({ withSpring: require("spring").withSpring, visible, SPRING_CONFIG });
       return obj.useAnimatedStyle(fn);
     }
   : (visible) => {
       _require = visible;
-      let obj = require("ReanimatedRexport");
       const fn = function s() {
-        const withSpring = spring.withSpring;
         let num = 0;
-        spring;
         if (visible.get()) {
           num = 1;
         }
-        const obj = { opacity: withSpring(num, SPRING_CONFIG) };
-        return obj;
+        return { opacity: spring.withSpring(num, closure_8) };
       };
+      let obj = require("ReanimatedRexport");
       fn.__closure = { withSpring: require("spring").withSpring, visible, SPRING_CONFIG };
       fn.__workletHash = 9616093623476;
       fn.__initData = __initData2;
-      ({ withSpring: require("spring").withSpring, visible, SPRING_CONFIG });
       return obj.useAnimatedStyle(fn);
     };
 const __initData3 = {
@@ -90,20 +75,20 @@ const __initData7 = {
 const __initData8 = {
   code: "function TabsGradientNativeTsx8(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()<totalItemWidth.get()-pageWidth&&totalItemWidth.get()>pageWidth;}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (state) => {
-      let items1;
-      let tmp6;
-      const obj = react2;
-      const cResult = obj.c(19);
+      const cResult = c.c(19);
       state = state.state;
       const colors = state.colors;
       const scrollOffset = state.scrollOffset;
       const itemDimensions = state.itemDimensions;
       const pageWidth = state.pageWidth;
       const fn = function n() {
-        const value = itemDimensions.get();
+        value = itemDimensions.get();
         return (
           value.reduce((acc, width) => {
             let num;
@@ -121,123 +106,118 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { itemDimensions, state };
       fn.__workletHash = 14345525935302;
       fn.__initData = __initData3;
-      const obj2 = ReanimatedRexport2;
-      const derivedValue = obj2.useDerivedValue(fn);
+      const derivedValue = ReanimatedRexport2.useDerivedValue(fn);
       const fn2 = function h() {
-        const tmp = scrollOffset.get() > 0 && derivedValue.get() > pageWidth;
+        let tmp = scrollOffset.get() > 0;
+        if (tmp) {
+          tmp = derivedValue.get() > pageWidth;
+        }
         return tmp;
       };
       fn2.__closure = { scrollOffset, totalItemWidth: derivedValue, pageWidth };
       fn2.__workletHash = 2192318560183;
       fn2.__initData = __initData4;
-      const obj3 = ReanimatedRexport2;
-      const tmp4 = closure_12(obj3.useDerivedValue(fn2));
+      const tmp3 = closure_12(ReanimatedRexport2.useDerivedValue(fn2));
       const fn3 = function f() {
-        const value = scrollOffset.get();
-        const tmp3 = value < derivedValue.get() - pageWidth && derivedValue.get() > tmp2;
-        return tmp3;
+        value = scrollOffset.get();
+        return value < derivedValue.get() - pageWidth && derivedValue.get() > tmp2;
       };
       fn3.__closure = { scrollOffset, totalItemWidth: derivedValue, pageWidth };
       fn3.__workletHash = 10153920408340;
       fn3.__initData = __initData5;
-      const obj4 = ReanimatedRexport2;
-      const tmp5 = closure_12(obj4.useDerivedValue(fn3));
+      const tmp4 = closure_12(ReanimatedRexport2.useDerivedValue(fn3));
       const rect = closure_9();
       if (cResult[0] !== colors) {
         const items = [];
-        let num = 0;
-        HermesBuiltin.arraySpread(items, colors, 0);
+        HermesBuiltin.arraySpread(colors, 0);
         const reversed = items.reverse();
         cResult[0] = colors;
         cResult[1] = reversed;
-        tmp6 = reversed;
+        let tmp5 = reversed;
       } else {
-        tmp6 = cResult[1];
+        tmp5 = cResult[1];
       }
-      if (cResult[2] === tmp4) {
+      if (cResult[2] === tmp3) {
         if (cResult[3] === rect.gradient) {
-          let tmp11;
           if (cResult[4] === rect.left) {
-            tmp11 = cResult[5];
+            let tmp10 = cResult[5];
           }
           if (cResult[6] === colors) {
-            let tmp12;
-            if (cResult[7] === tmp11) {
-              tmp12 = cResult[8];
+            if (cResult[7] === tmp10) {
+              let tmp11 = cResult[8];
             }
-            if (cResult[9] === tmp5) {
+            if (cResult[9] === tmp4) {
               if (cResult[10] === rect.gradient) {
-                let tmp17;
                 if (cResult[11] === rect.right) {
-                  tmp17 = cResult[12];
+                  let tmp16 = cResult[12];
                 }
-                if (cResult[13] === tmp6) {
-                  let tmp18;
-                  if (cResult[14] === tmp17) {
-                    tmp18 = cResult[15];
+                if (cResult[13] === tmp5) {
+                  if (cResult[14] === tmp16) {
+                    let tmp17 = cResult[15];
                   }
-                  if (cResult[16] === tmp12) {
-                    let tmp23;
-                    if (cResult[17] === tmp18) {
-                      tmp23 = cResult[18];
+                  if (cResult[16] === tmp11) {
+                    if (cResult[17] === tmp17) {
+                      let tmp22 = cResult[18];
                     }
-                    return tmp23;
+                    return tmp22;
                   }
-                  const obj7 = { children: items1 };
-                  items1 = [tmp12, tmp18];
-                  const tmp26 = metroRequire(hasOwnProperty, obj7);
-                  cResult[16] = tmp12;
-                  cResult[17] = tmp18;
-                  cResult[18] = tmp26;
-                  tmp23 = tmp26;
+                  const obj7 = { children: null };
+                  const items1 = [tmp11, tmp17];
+                  obj7.children = items1;
+                  const tmp25 = timestampProducer(hasOwnProperty, obj7);
+                  cResult[16] = tmp11;
+                  cResult[17] = tmp17;
+                  cResult[18] = tmp25;
+                  tmp22 = tmp25;
                 }
-                const obj10 = { start: null, end: null, colors: tmp6, style: tmp17, pointerEvents: "none" };
+                const obj10 = { start: null, end: null, colors: null, style: null, pointerEvents: "none" };
                 ({ START: obj6.start, END: obj6.end } = HorizontalGradient);
-                const tmp22 = React3(LinearGradient, obj10);
-                cResult[13] = tmp6;
-                cResult[14] = tmp17;
-                cResult[15] = tmp22;
-                tmp18 = tmp22;
+                obj10.colors = tmp5;
+                obj10.style = tmp16;
+                const tmp21 = React4(LinearGradient, obj10);
+                cResult[13] = tmp5;
+                cResult[14] = tmp16;
+                cResult[15] = tmp21;
+                tmp17 = tmp21;
               }
             }
             const items2 = [, ,];
             ({ right: arr3[0], gradient: arr3[1] } = rect);
-            items2[2] = tmp5;
-            cResult[9] = tmp5;
+            items2[2] = tmp4;
+            cResult[9] = tmp4;
             cResult[10] = rect.gradient;
             cResult[11] = rect.right;
             cResult[12] = items2;
-            tmp17 = items2;
+            tmp16 = items2;
           }
-          const obj11 = { start: null, end: null, colors, style: tmp11, pointerEvents: "none" };
+          const obj11 = { start: null, end: null, colors: null, style: null, pointerEvents: "none" };
           ({ START: obj5.start, END: obj5.end } = HorizontalGradient);
-          const tmp16 = React3(LinearGradient, obj11);
+          obj11.colors = colors;
+          obj11.style = tmp10;
+          const tmp15 = React4(LinearGradient, obj11);
           cResult[6] = colors;
-          cResult[7] = tmp11;
-          cResult[8] = tmp16;
-          tmp12 = tmp16;
+          cResult[7] = tmp10;
+          cResult[8] = tmp15;
+          tmp11 = tmp15;
         }
       }
       const items3 = [, ,];
       ({ left: arr2[0], gradient: arr2[1] } = rect);
-      items3[2] = tmp4;
-      cResult[2] = tmp4;
+      items3[2] = tmp3;
+      cResult[2] = tmp3;
       cResult[3] = rect.gradient;
       cResult[4] = rect.left;
       cResult[5] = items3;
-      tmp11 = items3;
+      tmp10 = items3;
     }
   : (state) => {
-      let items1;
-      let items2;
-      let items3;
       state = state.state;
       const colors = state.colors;
       const scrollOffset = state.scrollOffset;
       const itemDimensions = state.itemDimensions;
       const pageWidth = state.pageWidth;
       const fn = function f() {
-        const value = itemDimensions.get();
+        value = itemDimensions.get();
         return (
           value.reduce((acc, width) => {
             let num;
@@ -255,60 +235,60 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { itemDimensions, state };
       fn.__workletHash = 16849390127683;
       fn.__initData = __initData6;
-      const obj = ReanimatedRexport2;
-      const derivedValue = obj.useDerivedValue(fn);
+      const derivedValue = ReanimatedRexport2.useDerivedValue(fn);
       const fn2 = function p() {
-        const tmp = scrollOffset.get() > 0 && derivedValue.get() > pageWidth;
+        let tmp = scrollOffset.get() > 0;
+        if (tmp) {
+          tmp = derivedValue.get() > pageWidth;
+        }
         return tmp;
       };
       fn2.__closure = { scrollOffset, totalItemWidth: derivedValue, pageWidth };
       fn2.__workletHash = 14441291265460;
       fn2.__initData = __initData7;
-      const obj2 = ReanimatedRexport2;
-      const tmp2 = closure_12(obj2.useDerivedValue(fn2));
-      const obj3 = ReanimatedRexport2;
+      const tmp2 = closure_12(ReanimatedRexport2.useDerivedValue(fn2));
       class W {
         constructor() {
-          const value = scrollOffset.get();
-          const tmp3 = value < derivedValue.get() - pageWidth && derivedValue.get() > tmp2;
+          obj = closure_5;
+          value = scrollOffset.get();
+          tmp3 = value < closure_5.get() - pageWidth && obj.get() > tmp2;
           return tmp3;
         }
       }
       W.__closure = { scrollOffset, totalItemWidth: derivedValue, pageWidth };
       W.__workletHash = 6131269821593;
       W.__initData = __initData8;
-      let tmp3 = closure_12(obj3.useDerivedValue(W));
       const tmp4 = closure_9();
       let items = [colors];
+      const obj4 = { children: null };
       const obj5 = {
         start: HorizontalGradient.START,
         end: HorizontalGradient.END,
         colors,
-        style: items1,
+        style: null,
         pointerEvents: "none",
       };
-      items1 = [, ,];
-      const obj4 = { children: items2 };
+      const items1 = [, ,];
       ({ left: arr2[0], gradient: arr2[1] } = tmp4);
       items1[2] = tmp2;
-      const memo = react.useMemo(() => {
+      obj5.style = items1;
+      const memo = noop.useMemo(() => {
         const items = [...colors];
         return items.reverse();
       }, items);
-      items2 = [React3(LinearGradient, obj5)];
+      const items2 = [React4(LinearGradient, obj5)];
       const obj6 = {
         start: HorizontalGradient.START,
         end: HorizontalGradient.END,
         colors: memo,
-        style: items3,
+        style: null,
         pointerEvents: "none",
       };
-      items3 = [, ,];
+      const items3 = [, ,];
       ({ right: arr4[0], gradient: arr4[1] } = tmp4);
-      items3[2] = tmp3;
-      items2[1] = React3(LinearGradient, obj6);
-      return metroRequire(hasOwnProperty, obj4);
+      items3[2] = closure_12(ReanimatedRexport2.useDerivedValue(W));
+      obj6.style = items3;
+      items2[1] = React4(LinearGradient, obj6);
+      obj4.children = items2;
+      return timestampProducer(hasOwnProperty, obj4);
     };
-const result = size.fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
-
-export default tmp3;

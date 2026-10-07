@@ -1,76 +1,67 @@
 // discord_app/modules/native_permissions/mobile/PermissionsAlertModal.tsx
-import react2 from "../../../../_runtime/00576_react.js";
-import intl3 from "../../../intl/index.native.tsx";
-import AlertModal2 from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import c from "../../../../_runtime/00576_c.js";
+import util from "../../../intl/index.native.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c2;
-let c3;
-({ jsx: c2, jsxs: c3 } = Fragment);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let body;
-      let first;
-      let intl2;
-      let items;
-      let onConfirm;
-      let title;
-      let tmp12;
-      let tmp6;
-      let tmp9;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       ({ title, body, onConfirm } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl3.intl;
-        const stringResult = intl.string(intl3.t.jVcuVY);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.jVcuVY);
         cResult[0] = stringResult;
-        first = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== onConfirm) {
         const obj2 = { onPress: onConfirm, text: first };
-        const tmp8 = React2(AlertModal2.AlertActionButton, obj2, "confirm");
+        const tmp8 = React2(AlertModal.AlertActionButton, obj2, "confirm");
         cResult[1] = onConfirm;
         cResult[2] = tmp8;
-        tmp6 = tmp8;
+        let tmp6 = tmp8;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { variant: "secondary", text: intl2.string(intl3.t.cpT0Cq) };
-        const AlertActionButton = AlertModal2.AlertActionButton;
-        intl2 = intl3.intl;
-        const tmp11 = React2(AlertActionButton, obj3, "close");
+        const obj3 = { variant: "secondary", text: null };
+        const intl2 = util.intl;
+        obj3.text = intl2.string(util.t.cpT0Cq);
+        const tmp11 = React2(AlertModal.AlertActionButton, obj3, "close");
         cResult[3] = tmp11;
-        tmp9 = tmp11;
+        let tmp9 = tmp11;
       } else {
         tmp9 = cResult[3];
       }
       if (cResult[4] !== tmp6) {
-        const obj4 = { children: items };
-        items = [tmp6, tmp9];
-        const tmp14 = _false(AlertModal2.AlertActions, obj4);
+        const obj4 = { children: null };
+        const items = [tmp6, tmp9];
+        obj4.children = items;
+        const tmp14 = React3(AlertModal.AlertActions, obj4);
         cResult[4] = tmp6;
         cResult[5] = tmp14;
-        tmp12 = tmp14;
+        let tmp12 = tmp14;
       } else {
         tmp12 = cResult[5];
       }
       if (cResult[6] === body) {
         if (cResult[7] === tmp12) {
-          let tmp15;
           if (cResult[8] === title) {
-            tmp15 = cResult[9];
+            let tmp15 = cResult[9];
           }
           return tmp15;
         }
       }
-      const tmp16 = React2(AlertModal2.AlertModal, { title, content: body, actions: tmp12 });
+      const tmp16 = React2(AlertModal.AlertModal, { title, content: body, actions: tmp12 });
       cResult[6] = body;
       cResult[7] = tmp12;
       cResult[8] = title;
@@ -78,29 +69,18 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
     }
   : (arg0) => {
-      let AlertActions;
-      let body;
-      let intl;
-      let intl2;
-      let items;
-      let obj2;
-      let onConfirm;
-      let title;
       ({ title, body, onConfirm } = arg0);
-      const obj = { title, content: body, actions: _false(AlertActions, obj2) };
-      const AlertModal = AlertModal2.AlertModal;
-      obj2 = { children: items };
-      AlertActions = AlertModal2.AlertActions;
-      const obj3 = { onPress: onConfirm, text: intl.string(intl3.t.jVcuVY) };
-      const AlertActionButton = AlertModal2.AlertActionButton;
-      intl = intl3.intl;
-      items = [React2(AlertActionButton, obj3, "confirm")];
-      const obj4 = { variant: "secondary", text: intl2.string(intl3.t.cpT0Cq) };
-      const AlertActionButton2 = AlertModal2.AlertActionButton;
-      intl2 = intl3.intl;
-      items[1] = React2(AlertActionButton2, obj4, "close");
-      return React2(AlertModal, obj);
+      const obj = { title, content: body, actions: null };
+      const obj2 = { children: null };
+      const obj3 = { onPress: onConfirm, text: null };
+      const intl = util.intl;
+      obj3.text = intl.string(util.t.jVcuVY);
+      const items = [React2(AlertModal.AlertActionButton, obj3, "confirm")];
+      const obj4 = { variant: "secondary", text: null };
+      const intl2 = util.intl;
+      obj4.text = intl2.string(util.t.cpT0Cq);
+      items[1] = React2(AlertModal.AlertActionButton, obj4, "close");
+      obj2.children = items;
+      obj.actions = React3(AlertModal.AlertActions, obj2);
+      return React2(AlertModal.AlertModal, obj);
     };
-const result = size.fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
-
-export default tmp4;

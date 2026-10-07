@@ -1,8 +1,8 @@
 // discord_app/modules/auth/native/components/WideAuthScrollContext.tsx
-import react from "../../../../../_runtime/00019_react.js";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const context = react.createContext(() => {});
+const context = noop.createContext(() => {});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/WideAuthScrollContext.tsx");
 
 export const WideAuthScrollContext = context;

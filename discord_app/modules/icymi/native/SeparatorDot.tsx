@@ -1,46 +1,45 @@
 // discord_app/modules/icymi/native/SeparatorDot.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let size;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { separatorDot: size };
-size = {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { separatorDot: null };
+let size = {
   width: 4,
   height: 4,
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
-let closure_4 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.separatorDot = size;
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp3;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       const tmp2 = closure_4();
       if (cResult[0] !== tmp2.separatorDot) {
+        const obj2 = { style: null };
         const items = [tmp2.separatorDot];
-        const tmp6 = <View style={items} />;
+        obj2.style = items;
+        const tmp6 = <View style={null} />;
         cResult[0] = tmp2.separatorDot;
         cResult[1] = tmp6;
-        tmp3 = tmp6;
+        let tmp3 = tmp6;
       } else {
         tmp3 = cResult[1];
       }
       return tmp3;
     }
   : () => {
+      const obj = { style: null };
       const items = [closure_4().separatorDot];
-      return <View style={items} />;
+      obj.style = items;
+      return <View style={null} />;
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/icymi/native/SeparatorDot.tsx");
-
-export default tmp3;

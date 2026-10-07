@@ -4,19 +4,14 @@ import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const tmp = useIsWindowLargeDefault();
-      const obj = MetaQuestUtils;
-      const tmp2 = obj.isMetaQuest() || tmp;
-      return tmp2;
+      return MetaQuestUtils.isMetaQuest() || tmp;
     }
   : () => {
       const tmp = useIsWindowLargeDefault();
-      const obj = MetaQuestUtils;
-      const tmp2 = obj.isMetaQuest() || tmp;
-      return tmp2;
+      return MetaQuestUtils.isMetaQuest() || tmp;
     };
-const result = size.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
-
-export default tmp2;

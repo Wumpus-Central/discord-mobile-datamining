@@ -1,15 +1,6 @@
 // discord_common/js/shared/Constants.tsx
-import generated_ThemeTypes from "config/colors/generated/ThemeTypes.tsx";
-import NoopUtils from "utils/NoopUtils.tsx";
-import GameGenres from "shared-constants/GameGenres.tsx";
-import "BigFlagUtils";
 import BigFlagUtils_mod from "utils/BigFlagUtils.tsx";
-import PathUtils_mod from "utils/PathUtils.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let BigFlagUtils;
-let str4;
-let str5;
 let str = "";
 if (typeof location !== "undefined") {
   const _location = location;
@@ -17,13 +8,12 @@ if (typeof location !== "undefined") {
 }
 let str2 = "";
 if (typeof window !== "undefined") {
-  let _window = window;
+  const _window = window;
   str2 = window.GLOBAL_ENV.WEBAPP_ENDPOINT;
 }
 const sum = str + str2;
-_window = sum;
 const text = `${str}//discord.gg`;
-let map = text;
+let closure_1 = text;
 const obj = {
   STRIPE: 1,
   [1]: "STRIPE",
@@ -80,26 +70,23 @@ const frozen1 = Object.freeze({
   [obj.APPLE_ADVANCED_COMMERCE]: "Apple",
   [obj.TDS]: "TDS",
 });
-const _Object = Object;
 if (typeof window !== "undefined") {
   const _window2 = window;
   str3 = window.GLOBAL_ENV.BRAINTREE_KEY;
 }
-const obj2 = {
-  BRAINTREE: { KEY: str3, PAYMENT_GATEWAY: "braintree" },
-  STRIPE: { KEY: str4, PAYMENT_GATEWAY: "stripe" },
-  ADYEN: { KEY: str5, PAYMENT_GATEWAY: "adyen" },
-};
-str4 = "";
+const obj2 = { BRAINTREE: { KEY: str3, PAYMENT_GATEWAY: "braintree" }, STRIPE: null, ADYEN: null };
+let str4 = "";
 if (typeof window !== "undefined") {
   const _window3 = window;
   str4 = window.GLOBAL_ENV.STRIPE_KEY;
 }
-str5 = "";
+obj2.STRIPE = { KEY: str4, PAYMENT_GATEWAY: "stripe" };
+let str5 = "";
 if (typeof window !== "undefined") {
   const _window4 = window;
   str5 = window.GLOBAL_ENV.ADYEN_KEY;
 }
+obj2.ADYEN = { KEY: str5, PAYMENT_GATEWAY: "adyen" };
 const obj3 = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",
@@ -163,9 +150,8 @@ items1[5] = items6;
 const items7 = [obj3.CASH_APP, "cashapp"];
 items1[6] = items7;
 const items8 = [];
-const freezeResult = freeze(obj2);
-HermesBuiltin.arraySpread(items8, items1, 0);
-map = new Map(items8);
+const frozen2 = Object.freeze(obj2);
+HermesBuiltin.arraySpread(items1, 0);
 const items9 = [obj3.BANCONTACT, "bancontact"];
 const items10 = [items9, , ,];
 const items11 = [obj3.GIROPAY, "giropay"];
@@ -174,6 +160,7 @@ const items12 = [obj3.IDEAL, "ideal"];
 items10[2] = items12;
 const items13 = [obj3.PIX, "pix"];
 items10[3] = items13;
+const map = new Map(items8);
 const items14 = [, , , , , , , , , , , ,];
 ({
   PAYSAFE_CARD: arr15[0],
@@ -190,6 +177,7 @@ const items14 = [, , , , , , , , , , , ,];
   PRZELEWY24: arr15[11],
   CASH_APP: arr15[12],
 } = obj3);
+const map1 = new Map(items10);
 const items15 = [, , , , , , ,];
 ({
   PAYSAFE_CARD: arr16[0],
@@ -201,7 +189,7 @@ const items15 = [, , , , , , ,];
   EPS: arr16[6],
   IDEAL: arr16[7],
 } = obj3);
-const map1 = new Map(items10);
+const set = new Set(items14);
 const items16 = [, , , , , , , , , ,];
 ({
   CARD: arr17[0],
@@ -216,7 +204,7 @@ const items16 = [, , , , , , , , , ,];
   TDS_WALLET: arr17[9],
   PIX_AUTOMATICO: arr17[10],
 } = obj3);
-const set = new Set(items14);
+const set1 = new Set(items15);
 const items17 = [, , , , ,];
 ({
   GIROPAY: arr18[0],
@@ -229,75 +217,178 @@ const items17 = [, , , , ,];
 const items18 = [];
 const items19 = [, ,];
 ({ PAYSAFE_CARD: arr20[0], GRABPAY_MY: arr20[1], GOPAY_WALLET: arr20[2] } = obj3);
-const set1 = new Set(items15);
-const set2 = new Set(items16);
-HermesBuiltin.arraySpread(items18, items19, HermesBuiltin.arraySpread(items18, items17, 0));
+HermesBuiltin.arraySpread(items19, HermesBuiltin.arraySpread(items17, 0));
 const items20 = [...items18];
+const set2 = new Set(items16);
 const items21 = [obj3.SEPA_DEBIT];
-const items22 = [obj3.SOFORT];
 const set3 = new Set(items20);
-const obj4 = { SUBSCRIPTION: 0, [0]: "SUBSCRIPTION", ONE_TIME: 1, [1]: "ONE_TIME" };
+const items22 = [obj3.SOFORT];
 const set4 = new Set(items21);
-const set5 = new Set(items22);
-const frozen2 = Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 });
+const obj4 = { SUBSCRIPTION: 0, [0]: "SUBSCRIPTION", ONE_TIME: 1, [1]: "ONE_TIME" };
+const frozen3 = Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 });
 const obj5 = {
-  CREATE_INSTANT_INVITE: BigFlagUtils.getBrandedFlag(0),
-  KICK_MEMBERS: BigFlagUtils.getBrandedFlag(1),
-  BAN_MEMBERS: BigFlagUtils.getBrandedFlag(2),
-  ADMINISTRATOR: BigFlagUtils.getBrandedFlag(3),
-  MANAGE_CHANNELS: BigFlagUtils.getBrandedFlag(4),
-  MANAGE_GUILD: BigFlagUtils.getBrandedFlag(5),
-  CHANGE_NICKNAME: BigFlagUtils.getBrandedFlag(26),
-  MANAGE_NICKNAMES: BigFlagUtils.getBrandedFlag(27),
-  MANAGE_ROLES: BigFlagUtils.getBrandedFlag(28),
-  MANAGE_WEBHOOKS: BigFlagUtils.getBrandedFlag(29),
-  MANAGE_GUILD_EXPRESSIONS: BigFlagUtils.getBrandedFlag(30),
-  CREATE_GUILD_EXPRESSIONS: BigFlagUtils.getBrandedFlag(43),
-  VIEW_AUDIT_LOG: BigFlagUtils.getBrandedFlag(7),
-  VIEW_CHANNEL: BigFlagUtils.getBrandedFlag(10),
-  VIEW_GUILD_ANALYTICS: BigFlagUtils.getBrandedFlag(19),
-  VIEW_CREATOR_MONETIZATION_ANALYTICS: BigFlagUtils.getBrandedFlag(41),
-  MODERATE_MEMBERS: BigFlagUtils.getBrandedFlag(40),
-  USE_EMBEDDED_ACTIVITIES: BigFlagUtils.getBrandedFlag(39),
-  USE_EXTERNAL_APPS: BigFlagUtils.getBrandedFlag(50),
-  SEND_MESSAGES: BigFlagUtils.getBrandedFlag(11),
-  SEND_TTS_MESSAGES: BigFlagUtils.getBrandedFlag(12),
-  MANAGE_MESSAGES: BigFlagUtils.getBrandedFlag(13),
-  EMBED_LINKS: BigFlagUtils.getBrandedFlag(14),
-  ATTACH_FILES: BigFlagUtils.getBrandedFlag(15),
-  READ_MESSAGE_HISTORY: BigFlagUtils.getBrandedFlag(16),
-  MENTION_EVERYONE: BigFlagUtils.getBrandedFlag(17),
-  USE_EXTERNAL_EMOJIS: BigFlagUtils.getBrandedFlag(18),
-  ADD_REACTIONS: BigFlagUtils.getBrandedFlag(6),
-  USE_APPLICATION_COMMANDS: BigFlagUtils.getBrandedFlag(31),
-  MANAGE_THREADS: BigFlagUtils.getBrandedFlag(34),
-  CREATE_PUBLIC_THREADS: BigFlagUtils.getBrandedFlag(35),
-  CREATE_PRIVATE_THREADS: BigFlagUtils.getBrandedFlag(36),
-  USE_EXTERNAL_STICKERS: BigFlagUtils.getBrandedFlag(37),
-  SEND_MESSAGES_IN_THREADS: BigFlagUtils.getBrandedFlag(38),
-  SEND_VOICE_MESSAGES: BigFlagUtils.getBrandedFlag(46),
-  SEND_POLLS: BigFlagUtils.getBrandedFlag(49),
-  PIN_MESSAGES: BigFlagUtils.getBrandedFlag(51),
-  BYPASS_SLOWMODE: BigFlagUtils.getBrandedFlag(52),
-  MANAGE_OFFICIAL_MESSAGES: BigFlagUtils.getBrandedFlag(53),
-  CONNECT: BigFlagUtils.getBrandedFlag(20),
-  SPEAK: BigFlagUtils.getBrandedFlag(21),
-  MUTE_MEMBERS: BigFlagUtils.getBrandedFlag(22),
-  DEAFEN_MEMBERS: BigFlagUtils.getBrandedFlag(23),
-  MOVE_MEMBERS: BigFlagUtils.getBrandedFlag(24),
-  USE_VAD: BigFlagUtils.getBrandedFlag(25),
-  PRIORITY_SPEAKER: BigFlagUtils.getBrandedFlag(8),
-  STREAM: BigFlagUtils.getBrandedFlag(9),
-  USE_SOUNDBOARD: BigFlagUtils.getBrandedFlag(42),
-  USE_EXTERNAL_SOUNDS: BigFlagUtils.getBrandedFlag(45),
-  SET_VOICE_CHANNEL_STATUS: BigFlagUtils.getBrandedFlag(48),
-  REQUEST_TO_SPEAK: BigFlagUtils.getBrandedFlag(32),
-  MANAGE_EVENTS: BigFlagUtils.getBrandedFlag(33),
-  CREATE_EVENTS: BigFlagUtils.getBrandedFlag(44),
+  CREATE_INSTANT_INVITE: null,
+  KICK_MEMBERS: null,
+  BAN_MEMBERS: null,
+  ADMINISTRATOR: null,
+  MANAGE_CHANNELS: null,
+  MANAGE_GUILD: null,
+  CHANGE_NICKNAME: null,
+  MANAGE_NICKNAMES: null,
+  MANAGE_ROLES: null,
+  MANAGE_WEBHOOKS: null,
+  MANAGE_GUILD_EXPRESSIONS: null,
+  CREATE_GUILD_EXPRESSIONS: null,
+  VIEW_AUDIT_LOG: null,
+  VIEW_CHANNEL: null,
+  VIEW_GUILD_ANALYTICS: null,
+  VIEW_CREATOR_MONETIZATION_ANALYTICS: null,
+  MODERATE_MEMBERS: null,
+  USE_EMBEDDED_ACTIVITIES: null,
+  USE_EXTERNAL_APPS: null,
+  SEND_MESSAGES: null,
+  SEND_TTS_MESSAGES: null,
+  MANAGE_MESSAGES: null,
+  EMBED_LINKS: null,
+  ATTACH_FILES: null,
+  READ_MESSAGE_HISTORY: null,
+  MENTION_EVERYONE: null,
+  USE_EXTERNAL_EMOJIS: null,
+  ADD_REACTIONS: null,
+  USE_APPLICATION_COMMANDS: null,
+  MANAGE_THREADS: null,
+  CREATE_PUBLIC_THREADS: null,
+  CREATE_PRIVATE_THREADS: null,
+  USE_EXTERNAL_STICKERS: null,
+  SEND_MESSAGES_IN_THREADS: null,
+  SEND_VOICE_MESSAGES: null,
+  SEND_POLLS: null,
+  PIN_MESSAGES: null,
+  BYPASS_SLOWMODE: null,
+  MANAGE_OFFICIAL_MESSAGES: null,
+  CONNECT: null,
+  SPEAK: null,
+  MUTE_MEMBERS: null,
+  DEAFEN_MEMBERS: null,
+  MOVE_MEMBERS: null,
+  USE_VAD: null,
+  PRIORITY_SPEAKER: null,
+  STREAM: null,
+  USE_SOUNDBOARD: null,
+  USE_EXTERNAL_SOUNDS: null,
+  SET_VOICE_CHANNEL_STATUS: null,
+  REQUEST_TO_SPEAK: null,
+  MANAGE_EVENTS: null,
+  CREATE_EVENTS: null,
 };
-const frozen3 = Object.freeze({ [obj4.SUBSCRIPTION]: "subscription", [obj4.ONE_TIME]: "sku" });
-const freeze2 = Object.freeze;
-const freeze2Result = freeze2(obj5);
+const frozen4 = Object.freeze({ [obj4.SUBSCRIPTION]: "subscription", [obj4.ONE_TIME]: "sku" });
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.CREATE_INSTANT_INVITE = BigFlagUtils.getBrandedFlag(0);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.KICK_MEMBERS = BigFlagUtils.getBrandedFlag(1);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.BAN_MEMBERS = BigFlagUtils.getBrandedFlag(2);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.ADMINISTRATOR = BigFlagUtils.getBrandedFlag(3);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_CHANNELS = BigFlagUtils.getBrandedFlag(4);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_GUILD = BigFlagUtils.getBrandedFlag(5);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.CHANGE_NICKNAME = BigFlagUtils.getBrandedFlag(26);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_NICKNAMES = BigFlagUtils.getBrandedFlag(27);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_ROLES = BigFlagUtils.getBrandedFlag(28);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_WEBHOOKS = BigFlagUtils.getBrandedFlag(29);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_GUILD_EXPRESSIONS = BigFlagUtils.getBrandedFlag(30);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.CREATE_GUILD_EXPRESSIONS = BigFlagUtils.getBrandedFlag(43);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.VIEW_AUDIT_LOG = BigFlagUtils.getBrandedFlag(7);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.VIEW_CHANNEL = BigFlagUtils.getBrandedFlag(10);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.VIEW_GUILD_ANALYTICS = BigFlagUtils.getBrandedFlag(19);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.VIEW_CREATOR_MONETIZATION_ANALYTICS = BigFlagUtils.getBrandedFlag(41);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MODERATE_MEMBERS = BigFlagUtils.getBrandedFlag(40);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_EMBEDDED_ACTIVITIES = BigFlagUtils.getBrandedFlag(39);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_EXTERNAL_APPS = BigFlagUtils.getBrandedFlag(50);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.SEND_MESSAGES = BigFlagUtils.getBrandedFlag(11);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.SEND_TTS_MESSAGES = BigFlagUtils.getBrandedFlag(12);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_MESSAGES = BigFlagUtils.getBrandedFlag(13);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.EMBED_LINKS = BigFlagUtils.getBrandedFlag(14);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.ATTACH_FILES = BigFlagUtils.getBrandedFlag(15);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.READ_MESSAGE_HISTORY = BigFlagUtils.getBrandedFlag(16);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MENTION_EVERYONE = BigFlagUtils.getBrandedFlag(17);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_EXTERNAL_EMOJIS = BigFlagUtils.getBrandedFlag(18);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.ADD_REACTIONS = BigFlagUtils.getBrandedFlag(6);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_APPLICATION_COMMANDS = BigFlagUtils.getBrandedFlag(31);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_THREADS = BigFlagUtils.getBrandedFlag(34);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.CREATE_PUBLIC_THREADS = BigFlagUtils.getBrandedFlag(35);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.CREATE_PRIVATE_THREADS = BigFlagUtils.getBrandedFlag(36);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_EXTERNAL_STICKERS = BigFlagUtils.getBrandedFlag(37);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.SEND_MESSAGES_IN_THREADS = BigFlagUtils.getBrandedFlag(38);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.SEND_VOICE_MESSAGES = BigFlagUtils.getBrandedFlag(46);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.SEND_POLLS = BigFlagUtils.getBrandedFlag(49);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.PIN_MESSAGES = BigFlagUtils.getBrandedFlag(51);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.BYPASS_SLOWMODE = BigFlagUtils.getBrandedFlag(52);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_OFFICIAL_MESSAGES = BigFlagUtils.getBrandedFlag(53);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.CONNECT = BigFlagUtils.getBrandedFlag(20);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.SPEAK = BigFlagUtils.getBrandedFlag(21);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MUTE_MEMBERS = BigFlagUtils.getBrandedFlag(22);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.DEAFEN_MEMBERS = BigFlagUtils.getBrandedFlag(23);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MOVE_MEMBERS = BigFlagUtils.getBrandedFlag(24);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_VAD = BigFlagUtils.getBrandedFlag(25);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.PRIORITY_SPEAKER = BigFlagUtils.getBrandedFlag(8);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.STREAM = BigFlagUtils.getBrandedFlag(9);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_SOUNDBOARD = BigFlagUtils.getBrandedFlag(42);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.USE_EXTERNAL_SOUNDS = BigFlagUtils.getBrandedFlag(45);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.SET_VOICE_CHANNEL_STATUS = BigFlagUtils.getBrandedFlag(48);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.REQUEST_TO_SPEAK = BigFlagUtils.getBrandedFlag(32);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.MANAGE_EVENTS = BigFlagUtils.getBrandedFlag(33);
+let BigFlagUtils = BigFlagUtils_mod;
+obj5.CREATE_EVENTS = BigFlagUtils.getBrandedFlag(44);
+const frozen5 = Object.freeze(obj5);
 const items23 = [, , , , , , , ,];
 ({
   KICK_MEMBERS: arr24[0],
@@ -309,32 +400,33 @@ const items23 = [, , , , , , , ,];
   MANAGE_MESSAGES: arr24[6],
   MANAGE_THREADS: arr24[7],
   MODERATE_MEMBERS: arr24[8],
-} = freeze2Result);
-BigFlagUtils = BigFlagUtils_mod;
+} = frozen5);
+let BigFlagUtils = BigFlagUtils_mod;
 const items24 = [...items23];
+const set5 = new Set(items22);
 const obj6 = {
   PRESSKIT: "https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am",
   REBRAND_PRESSKIT:
     "https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0",
   STATUS: "https://discordstatus.com",
-  HELP_AND_SUPPORT: "//" + "support.discord.com" + "/hc/en-us",
-  HELP_ARTICLE_ORBS_FAQ: "https://" + "support.discord.com" + "/hc/en-us/articles/30593690165783",
-  FEEDBACK: "//" + "feedback.discord.com",
-  EMAIL_SUPPORT: "mailto:support@" + "discord.com",
-  EMAIL_LAW_ENFORCEMENT: "mailto:lawenforcement@" + "discord.com",
-  EMAIL_HYPESQUAD: "mailto:hypesquad@" + "discord.com",
-  EMAIL_JOBS: "mailto:jobs@" + "discord.com",
+  HELP_AND_SUPPORT: null,
+  HELP_ARTICLE_ORBS_FAQ: null,
+  FEEDBACK: null,
+  EMAIL_SUPPORT: null,
+  EMAIL_LAW_ENFORCEMENT: null,
+  EMAIL_HYPESQUAD: null,
+  EMAIL_JOBS: null,
   DEV_PERKS_FORM: "https://goo.gl/forms/oZfKBStV3sR8GHdU2",
   VERIFICATION_REQUIREMENTS: "https://dis.gd/vfqual",
-  BASE_URL: "https://" + "discord.com",
-  PRESS_INQUIRIES: "mailto:press@" + "discord.com",
+  BASE_URL: null,
+  PRESS_INQUIRIES: null,
   CONTACT_US: "https://dis.gd/contact",
   DEV_LANDING: "/build",
   DEV_PORTAL: "/developers",
   DEV_PORTAL_APPLICATIONS: "/developers/applications",
   DEV_PORTAL_DOCUMENTATION: "/developers/docs",
   DEV_PORTAL_SELF_SERVE_MODAL: "/developers/?store_signup=true",
-  PARTNER_CODE_OF_CONDUCT: "https://" + "support.discord.com" + "/hc/en-us/articles/360024871991",
+  PARTNER_CODE_OF_CONDUCT: null,
   SUBMIT_TNS_REPORT: "https://dis.gd/request",
   MERCH_STORE: "https://discordmerch.com",
   MOD_ACADEMY_EXAM: "https://dis.gd/exam",
@@ -343,174 +435,116 @@ const obj6 = {
   TWITTER_SUPPORT: "https://twitter.com/discord_support",
   QUESTS: "/quests",
 };
-const applyResult = BigFlagUtils.combine.apply(items24);
 const combined = "https://" + "status.discord.com";
+obj6.HELP_AND_SUPPORT = "//" + "support.discord.com" + "/hc/en-us";
+obj6.HELP_ARTICLE_ORBS_FAQ = "https://" + "support.discord.com" + "/hc/en-us/articles/30593690165783";
+obj6.FEEDBACK = "//" + "feedback.discord.com";
+obj6.EMAIL_SUPPORT = "mailto:support@" + "discord.com";
+obj6.EMAIL_LAW_ENFORCEMENT = "mailto:lawenforcement@" + "discord.com";
+obj6.EMAIL_HYPESQUAD = "mailto:hypesquad@" + "discord.com";
+obj6.EMAIL_JOBS = "mailto:jobs@" + "discord.com";
+obj6.BASE_URL = "https://" + "discord.com";
+obj6.PRESS_INQUIRIES = "mailto:press@" + "discord.com";
+obj6.PARTNER_CODE_OF_CONDUCT = "https://" + "support.discord.com" + "/hc/en-us/articles/360024871991";
+const applyResult = BigFlagUtils.combine.apply(items24);
 const obj8 = {
-  WELCOME: "" + sum + "/welcome/",
-  ME: "" + sum + "/channels/@me",
-  SETTINGS(arg0, arg1) {
-    let str = "";
-    if (null != arg1) {
-      str = "";
-      if ("" !== arg1) {
-        const _HermesInternal = HermesInternal;
-        str = "/" + arg1;
-      }
-    }
-    return "" + _window + "/settings/" + arg0 + str;
-  },
-  CONNECTION(arg0) {
-    return "" + _window + "/connections/" + arg0;
-  },
-  CHANGELOGS: "" + sum + "/settings/changelogs",
-  LOGIN: "" + sum + "/login",
-  LOGIN_WITH_REDIRECT(arg0) {
-    return "" + _window + "/login?redirect_to=" + arg0;
-  },
-  REGISTER: "" + sum + "/register",
-  REGISTER_WITH_REDIRECT(arg0) {
-    return "" + _window + "/register?redirect_to=" + arg0;
-  },
-  CREATE_GUILD: "" + sum + "/guilds/create",
-  VANITY_INVITE(arg0) {
-    return "" + map + "/" + arg0;
-  },
-  HYPESQUAD_ONLINE: "" + sum + "/settings/hypesquad-online",
-  BROWSE_NITRO_TITLES: "" + sum + "/store/browse?type=nitro",
-  SKU_DETAILS(arg0, arg1) {
-    let str = "";
-    if (null != arg1) {
-      const _HermesInternal = HermesInternal;
-      str = "?store_listing_id=" + arg1;
-    }
-    return "" + _window + "/store/skus/" + arg0 + str;
-  },
-  MESSAGE(arg0, arg1, arg2) {
-    return "/channels/" + arg0 + "/" + arg1 + "/" + arg2;
-  },
-  CHANNEL(arg0, arg1) {
-    return "/channels/" + arg0 + "/" + arg1;
-  },
-  REPORT: "" + sum + "/report",
-  QUEST_PREVIEW_TOOL_2(arg0) {
-    return "" + _window + "/quest-preview/" + arg0;
-  },
-  QUEST_HOME_PREVIEW(arg0) {
-    return "" + _window + "/quest-home?ad_creative_ids=" + arg0;
-  },
-  QUEST_BAR_PREVIEW(arg0) {
-    return "" + _window + "/quest-bar-preview?ad_creative_ids=" + arg0;
-  },
+  WELCOME: null,
+  ME: null,
+  SETTINGS: null,
+  CONNECTION: null,
+  CHANGELOGS: null,
+  LOGIN: null,
+  LOGIN_WITH_REDIRECT: null,
+  REGISTER: null,
+  REGISTER_WITH_REDIRECT: null,
+  CREATE_GUILD: null,
+  VANITY_INVITE: null,
+  HYPESQUAD_ONLINE: null,
+  BROWSE_NITRO_TITLES: null,
+  SKU_DETAILS: null,
+  MESSAGE: null,
+  CHANNEL: null,
+  REPORT: null,
+  QUEST_PREVIEW_TOOL_2: null,
+  QUEST_HOME_PREVIEW: null,
+  QUEST_BAR_PREVIEW: null,
 };
+const frozen6 = Object.freeze({
+  TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
+});
+obj8.WELCOME = "" + sum + "/welcome/";
+obj8.ME = "" + sum + "/channels/@me";
+obj8.SETTINGS = function SETTINGS(arg0, arg1) {
+  let str = "";
+  if (null != arg1) {
+    str = "";
+    if ("" !== arg1) {
+      const _HermesInternal = HermesInternal;
+      str = "/" + arg1;
+    }
+  }
+  return "" + sum + "/settings/" + arg0 + str;
+};
+obj8.CONNECTION = function CONNECTION(arg0) {
+  return "" + sum + "/connections/" + arg0;
+};
+obj8.CHANGELOGS = "" + sum + "/settings/changelogs";
+obj8.LOGIN = "" + sum + "/login";
+obj8.LOGIN_WITH_REDIRECT = function LOGIN_WITH_REDIRECT(arg0) {
+  return "" + sum + "/login?redirect_to=" + arg0;
+};
+obj8.REGISTER = "" + sum + "/register";
+obj8.REGISTER_WITH_REDIRECT = function REGISTER_WITH_REDIRECT(arg0) {
+  return "" + sum + "/register?redirect_to=" + arg0;
+};
+obj8.CREATE_GUILD = "" + sum + "/guilds/create";
+obj8.VANITY_INVITE = function VANITY_INVITE(arg0) {
+  return "" + text + "/" + arg0;
+};
+obj8.HYPESQUAD_ONLINE = "" + sum + "/settings/hypesquad-online";
+obj8.BROWSE_NITRO_TITLES = "" + sum + "/store/browse?type=nitro";
+obj8.SKU_DETAILS = function SKU_DETAILS(arg0, arg1) {
+  let str = "";
+  if (null != arg1) {
+    const _HermesInternal = HermesInternal;
+    str = "?store_listing_id=" + arg1;
+  }
+  return "" + sum + "/store/skus/" + arg0 + str;
+};
+obj8.MESSAGE = function MESSAGE(arg0, arg1, arg2) {
+  return "/channels/" + arg0 + "/" + arg1 + "/" + arg2;
+};
+obj8.CHANNEL = function CHANNEL(arg0, arg1) {
+  return "/channels/" + arg0 + "/" + arg1;
+};
+obj8.REPORT = "" + sum + "/report";
+obj8.QUEST_PREVIEW_TOOL_2 = function QUEST_PREVIEW_TOOL_2(arg0) {
+  return "" + sum + "/quest-preview/" + arg0;
+};
+obj8.QUEST_HOME_PREVIEW = function QUEST_HOME_PREVIEW(arg0) {
+  return "" + sum + "/quest-home?ad_creative_ids=" + arg0;
+};
+obj8.QUEST_BAR_PREVIEW = function QUEST_BAR_PREVIEW(arg0) {
+  return "" + sum + "/quest-bar-preview?ad_creative_ids=" + arg0;
+};
+const frozen7 = Object.freeze(obj8);
+fn(1094);
 const obj7 = {
   TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
 };
-const frozen4 = Object.freeze(obj7);
-const freeze3 = Object.freeze;
-const freeze3Result = freeze3(obj8);
-let PathUtils = PathUtils_mod;
-const wrapPathsResult = PathUtils.wrapPaths(freeze3Result);
-PathUtils = PathUtils_mod;
-const wrapPathsResult1 = PathUtils.wrapPaths({
-  INDEX: "/",
-  INDEX_WORD: "/index",
-  INDEX_BUCKET: "/index/:bucketId",
-  CHANGELOGS: "/changelogs/:date",
-  COMMUNITY: "/community",
-  COMPANY: "/company",
-  COMPANY_INFORMATION: "/company-information",
-  CREATORS: "/creators",
-  DOWNLOADS: "/downloads",
-  DOWNLOAD: "/download",
-  GAMING: "/gaming",
-  PRIVACY: "/privacy",
-  TOS: "/tos",
-  TERMS: "/terms",
-  STORE_TERMS: "/store-terms",
-  ACKNOWLEDGEMENTS: "/acknowledgements",
-  LICENSES: "/licenses",
-  PARTNERS: "/partners",
-  HYPESQUAD: "/hypesquad",
-  HYPESQUAD_RIOT: "/hypesquad-riot",
-  BRANDING: "/branding",
-  ERROR_404: "/404",
-  JOBS: "/jobs",
-  JOB: "/jobs/:jobId",
-  STREAMKIT: "/streamkit",
-  SECURITY: "/security",
-  NITRO: "/nitro",
-  DISCOVER: "/servers",
-  QUESTS: "/ads/quests",
-  GUIDELINES: "/guidelines",
-  RICH_PRESENCE: "/rich-presence",
-  VERIFICATION: "/verification",
-  OPEN_SOURCE: "/open-source",
-  WARFRAME: "/warframe",
-  REMOTE_AUTH: "/ra/:remoteAuthFingerprint",
-  SAFETY_LANDING: "/safetycenter",
-  SAFETY_ARTICLE_ROOT: "/safety",
-  SAFETY_ARTICLE: "/safety/:article",
-  NEWSROOM: "/newsroom",
-  INSPIRATION: "/inspiration",
-  MOD_ACADEMY_LANDING: "/moderation",
-  MOD_ACADEMY_EXAM: "/moderation/exam",
-  MOD_ACADEMY_ARTICLE: "/moderation/:article",
-  BLOG: "/blog",
-  BUILD: "/build",
-  DEVELOPERS: "/developers",
-  APP_DIRECTORY: "/application-directory",
-  REFRESH_INDEX: "/new",
-  REFRESH_INDEX_WORD: "/new/index",
-  REFRESH_COMPANY: "/new/company",
-  REFRESH_DOWNLOAD: "/new/download",
-  REFRESH_PRIVACY: "/new/privacy",
-  REFRESH_TERMS: "/new/terms",
-  REFRESH_ACKNOWLEDGEMENTS: "/new/acknowledgements",
-  REFRESH_LICENSES: "/new/licenses",
-  REFRESH_BRANDING: "/new/branding",
-  REFRESH_JOBS: "/new/jobs",
-  REFRESH_JOB: "/new/jobs/:jobId",
-  REFRESH_STREAMKIT: "/new/streamkit",
-  REFRESH_NITRO: "/new/nitro",
-  REFRESH_GUIDELINES: "/new/guidelines",
-  REFRESH_SAFETY_LANDING: "/new/safety",
-  REFRESH_SAFETY_ARTICLE: "/new/safety/:article",
-  COLLEGE: "/college",
-  LEAGUE_CLUBS: "/league-communities",
-  DISCORD_RECRUITING_SCAMS: "/discord-recruitment-scams",
-  DEV_NEWSLETTER_SIGNUP: "/dev-newsletter",
-  LEGACY_DEV_NEWSLETTER: "/newsletter",
-  LEGAL_ARCHIVE: "/archive/",
-  TERMS_MAY_2020: "/archive/terms/may-2020",
-  PRIVACY_JUNE_2020: "/archive/privacy/june-2020",
-  GUIDELINES_MAY_2020: "/archive/guidelines/may-2020",
-  FALL_RELEASE_2023: "/fallrelease",
-  MOBILE_REDESIGN_2023: "/mobile",
-  REFRESH_XBOX_OFFER: "/new/discord-xbox-offer-2019",
-  REFRESH_WHY_DISCORD: "/why-discord-is-different",
-  WHY_DISCORD: "/why-discord",
-  XBOX_OFFER: "/discord-xbox-offer-2020",
-  COLLEGE_BRUINS: "/bruins",
-  COLLEGE_ANTEATERS: "/anteaters",
-  COLLEGE_GAUCHOS: "/gauchos",
-  COLLEGE_BEARS: "/bears",
-  COLLEGE_SLUGS: "/slugs",
-  BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM: "/terms/back-to-school-2020/instagram",
-  BACK_TO_SCHOOL_GIVEAWAY_TWITTER: "/terms/back-to-school-2020/twitter",
-  SNOWSGIVING_GIVEAWAY_INSTAGRAM: "/terms/snowsgiving-2020/instagram",
-  SNOWSGIVING_GIVEAWAY_TWITTER: "/terms/snowsgiving-2020/twitter",
-});
-const frozen5 = Object.freeze({
+const PathUtils = fn(1094);
+const wrapPathsResult = PathUtils.wrapPaths(frozen7);
+const frozen8 = Object.freeze({
   FACEBOOK_URL: "https://www.facebook.com/discord/",
   INSTAGRAM_URL: "https://www.instagram.com/discord/",
   YOUTUBE_URL: "https://www.youtube.com/discord/",
   TIKTOK_URL: "https://www.tiktok.com/@discord",
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/Constants.tsx");
-const GameGenres_export = GameGenres.GameGenres;
 
-export const ThemeExtends = generated_ThemeTypes.ThemeExtends;
-export const ThemeTypes = generated_ThemeTypes.ThemeTypes;
+export const ThemeExtends = fn(1098).ThemeExtends;
+export const ThemeTypes = fn(1098).ThemeTypes;
 export const APP_URL_PREFIX = sum;
 export const VANITY_URL_PREFIX = text;
 export const PRIMARY_DOMAIN = "discord.com";
@@ -562,7 +596,7 @@ export const RevenueCampaigns = {
 export const PaymentGateways = obj;
 export const InternalPaymentGateways = { VIRTUAL_CURRENCY: 8, [8]: "VIRTUAL_CURRENCY" };
 export const PaymentGatewayToFriendlyName = frozen1;
-export const PaymentSettings = freezeResult;
+export const PaymentSettings = frozen2;
 export const BrowserAutofillPaymentMethodTypes = { GOOGLE_PAY: "google_pay", APPLE_PAY: "apple_pay" };
 export const PaymentSourceTypes = obj3;
 export const ADYEN_PAYMENT_SOURCE_ENTRIES = items1;
@@ -607,10 +641,10 @@ export const BraintreeErrors = {
   VENMO_DESKTOP_CANCELED: "VENMO_DESKTOP_CANCELED",
   VENMO_CANCELED: "VENMO_CANCELED",
 };
-export const ExternalSKUStrategyTypes = frozen2;
+export const ExternalSKUStrategyTypes = frozen3;
 export const RevenueSurfaces = { DISCOVERY: 0, [0]: "DISCOVERY", CHECKOUT: 1, [1]: "CHECKOUT" };
 export const PurchaseTypes = obj4;
-export const PurchaseTypeToAnalyticsPaymentType = frozen3;
+export const PurchaseTypeToAnalyticsPaymentType = frozen4;
 export const OfferTriggerTypes = {
   PREMIUM_UPSELL_VIEWED: "premium_upsell_viewed",
   VIDEO_STREAM_ENDED: "video_stream_ended",
@@ -626,11 +660,11 @@ export const BasicPermissions = {
   CONNECT: 1048576,
   [1048576]: "CONNECT",
 };
-export const Permissions = freeze2Result;
-export const NOOP = NoopUtils.NOOP;
-export const NOOP_NULL = NoopUtils.NOOP_NULL;
-export const NOOP_PROMISE = NoopUtils.NOOP_PROMISE;
-export const NOOP_TRUE = NoopUtils.NOOP_TRUE;
+export const Permissions = frozen5;
+export const NOOP = fn(1099).NOOP;
+export const NOOP_NULL = fn(1099).NOOP_NULL;
+export const NOOP_PROMISE = fn(1099).NOOP_PROMISE;
+export const NOOP_TRUE = fn(1099).NOOP_TRUE;
 export const ElevatedPermissionsList = items23;
 export const ElevatedPermissions = applyResult;
 export const RPC_VERSION = 1;
@@ -903,10 +937,98 @@ export const TOKENS_KEY = "tokens";
 export const STATUS_DOMAIN = "status.discord.com";
 export const STATUS_PAGE_ENDPOINT = combined;
 export const Links = obj6;
-export const LocalizedLinks = frozen4;
+export const LocalizedLinks = frozen6;
 export const AppRoutes = wrapPathsResult;
-export const WebRoutes = wrapPathsResult1;
-export const SOCIAL_LINKS = frozen5;
+export const WebRoutes = PathUtils.wrapPaths({
+  INDEX: "/",
+  INDEX_WORD: "/index",
+  INDEX_BUCKET: "/index/:bucketId",
+  CHANGELOGS: "/changelogs/:date",
+  COMMUNITY: "/community",
+  COMPANY: "/company",
+  COMPANY_INFORMATION: "/company-information",
+  CREATORS: "/creators",
+  DOWNLOADS: "/downloads",
+  DOWNLOAD: "/download",
+  GAMING: "/gaming",
+  PRIVACY: "/privacy",
+  TOS: "/tos",
+  TERMS: "/terms",
+  STORE_TERMS: "/store-terms",
+  ACKNOWLEDGEMENTS: "/acknowledgements",
+  LICENSES: "/licenses",
+  PARTNERS: "/partners",
+  HYPESQUAD: "/hypesquad",
+  HYPESQUAD_RIOT: "/hypesquad-riot",
+  BRANDING: "/branding",
+  ERROR_404: "/404",
+  JOBS: "/jobs",
+  JOB: "/jobs/:jobId",
+  STREAMKIT: "/streamkit",
+  SECURITY: "/security",
+  NITRO: "/nitro",
+  DISCOVER: "/servers",
+  QUESTS: "/ads/quests",
+  GUIDELINES: "/guidelines",
+  RICH_PRESENCE: "/rich-presence",
+  VERIFICATION: "/verification",
+  OPEN_SOURCE: "/open-source",
+  WARFRAME: "/warframe",
+  REMOTE_AUTH: "/ra/:remoteAuthFingerprint",
+  SAFETY_LANDING: "/safetycenter",
+  SAFETY_ARTICLE_ROOT: "/safety",
+  SAFETY_ARTICLE: "/safety/:article",
+  NEWSROOM: "/newsroom",
+  INSPIRATION: "/inspiration",
+  MOD_ACADEMY_LANDING: "/moderation",
+  MOD_ACADEMY_EXAM: "/moderation/exam",
+  MOD_ACADEMY_ARTICLE: "/moderation/:article",
+  BLOG: "/blog",
+  BUILD: "/build",
+  DEVELOPERS: "/developers",
+  APP_DIRECTORY: "/application-directory",
+  REFRESH_INDEX: "/new",
+  REFRESH_INDEX_WORD: "/new/index",
+  REFRESH_COMPANY: "/new/company",
+  REFRESH_DOWNLOAD: "/new/download",
+  REFRESH_PRIVACY: "/new/privacy",
+  REFRESH_TERMS: "/new/terms",
+  REFRESH_ACKNOWLEDGEMENTS: "/new/acknowledgements",
+  REFRESH_LICENSES: "/new/licenses",
+  REFRESH_BRANDING: "/new/branding",
+  REFRESH_JOBS: "/new/jobs",
+  REFRESH_JOB: "/new/jobs/:jobId",
+  REFRESH_STREAMKIT: "/new/streamkit",
+  REFRESH_NITRO: "/new/nitro",
+  REFRESH_GUIDELINES: "/new/guidelines",
+  REFRESH_SAFETY_LANDING: "/new/safety",
+  REFRESH_SAFETY_ARTICLE: "/new/safety/:article",
+  COLLEGE: "/college",
+  LEAGUE_CLUBS: "/league-communities",
+  DISCORD_RECRUITING_SCAMS: "/discord-recruitment-scams",
+  DEV_NEWSLETTER_SIGNUP: "/dev-newsletter",
+  LEGACY_DEV_NEWSLETTER: "/newsletter",
+  LEGAL_ARCHIVE: "/archive/",
+  TERMS_MAY_2020: "/archive/terms/may-2020",
+  PRIVACY_JUNE_2020: "/archive/privacy/june-2020",
+  GUIDELINES_MAY_2020: "/archive/guidelines/may-2020",
+  FALL_RELEASE_2023: "/fallrelease",
+  MOBILE_REDESIGN_2023: "/mobile",
+  REFRESH_XBOX_OFFER: "/new/discord-xbox-offer-2019",
+  REFRESH_WHY_DISCORD: "/why-discord-is-different",
+  WHY_DISCORD: "/why-discord",
+  XBOX_OFFER: "/discord-xbox-offer-2020",
+  COLLEGE_BRUINS: "/bruins",
+  COLLEGE_ANTEATERS: "/anteaters",
+  COLLEGE_GAUCHOS: "/gauchos",
+  COLLEGE_BEARS: "/bears",
+  COLLEGE_SLUGS: "/slugs",
+  BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM: "/terms/back-to-school-2020/instagram",
+  BACK_TO_SCHOOL_GIVEAWAY_TWITTER: "/terms/back-to-school-2020/twitter",
+  SNOWSGIVING_GIVEAWAY_INSTAGRAM: "/terms/snowsgiving-2020/instagram",
+  SNOWSGIVING_GIVEAWAY_TWITTER: "/terms/snowsgiving-2020/twitter",
+});
+export const SOCIAL_LINKS = frozen8;
 export const WebAnalyticsEvents = {
   EXPERIMENT_USER_TRIGGERED: "experiment_user_triggered",
   EXPERIMENT_GUILD_TRIGGERED: "experiment_guild_triggered",
@@ -1164,7 +1286,7 @@ export const SKUFeatureTypes = {
   SECURE_NETWORKING: 13,
   [13]: "SECURE_NETWORKING",
 };
-export { GameGenres_export as GameGenres };
+export const GameGenres = fn(1100).GameGenres;
 export const PriceTierTypes = {
   GUILD_ROLE_SUBSCRIPTIONS: 1,
   [1]: "GUILD_ROLE_SUBSCRIPTIONS",

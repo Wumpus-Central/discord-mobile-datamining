@@ -5,332 +5,350 @@ import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUti
 import TTIAnalyticsUtils from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import handleSupportedURLDefault from "handleSupportedURL.tsx";
 import DeepLinkTypes from "../../deep_link/DeepLinkTypes.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
-import Constants from "../../../Constants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let channel, channelId, closure_2, closure_3, closure_4, closure_5, message;
-
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let obj = function _handleIncomingURL() {
-  let constants2;
-  let constants3;
-  let logger;
-  let state;
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let url = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
-    return (async function (arg0, value) {
-      let Iterable;
-      let obj13;
-      let obj15;
-      let obj17;
-      let obj19;
-      let obj9;
-      let tmp198;
-      let tmp199;
-      let tmp82;
-      if (c8 === 2) {
-        c8 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+require = fn;
+let closure_11 = async function _handleIncomingURL(arg0) {
+  closure_0 = arg0;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          let str2;
-          let closure_7;
-          let fingerprint;
-          let attemptId;
-          let payload;
-          let installationId;
-          let didRegister;
-          let inviteCode;
-          let guildTemplateCode;
-          let authToken;
-          let result1;
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              return { value, done: true };
-            } else {
-              closure_4 = tmp;
-              closure_3 = tmp17;
-              url = undefined;
-              Iterable = undefined;
-              str2 = undefined;
-              let str35;
-              let closure_6;
-              closure_7 = undefined;
-              fingerprint = undefined;
-              attemptId = undefined;
-              payload = undefined;
-              installationId = undefined;
-              didRegister = undefined;
-              inviteCode = undefined;
-              guildTemplateCode = undefined;
-              authToken = undefined;
-              result1 = undefined;
-              ({ url, source: Iterable } = url);
-              const _HermesInternal = HermesInternal;
-              logger.log("Opening url: " + url + " [" + Iterable + "]");
-              if (state.getState() !== constants.ACTIVE) {
-                let str = "deeplink";
-                const trackAppOpened = TTIAnalyticsUtils.trackAppOpened;
-                TTIAnalyticsUtils;
-                if (null == url) {
-                  str = "launcher";
-                }
-                trackAppOpened(str);
-              }
-              if (null != url) {
-                if (url.startsWith("discord://app/open")) {
-                  const index = url.indexOf("#");
-                  if (-1 !== index) {
-                    str2 = url.substring(index + 1);
-                    if ("" !== str2) {
-                      if ("" !== str2.trim()) {
-                        const _URL2 = URL;
-                        const self5 = this;
-                        const self6 = this;
-                        str35 = new URL(str2);
-                        closure_6 = ["campaign", "deep_link_value", "media_source"];
-                        closure_2 = 0;
-                        let searchParams = str35.searchParams;
-                        const items = [];
-                        closure_2 = HermesBuiltin.arraySpread(items, searchParams.keys(), closure_2);
-                        const found = items.filter((item) => {
-                          const startsWithResult = item.startsWith("af_") || closure_1_6.includes(item);
-                          return startsWithResult;
-                        });
-                        const item = found.forEach((item) => {
-                          let searchParams;
-                          searchParams = searchParams.searchParams;
-                          return searchParams.delete(item);
-                        });
-                        url = str35.toString();
-                        Iterable = DeepLinkTypes.DeeplinkSource.AppsFlyer;
-                        const _HermesInternal2 = HermesInternal;
-                        logger.log("Extracted clean URL from AppsFlyer legacy URL: " + url);
-                        c6 = 0;
-                      }
-                    }
-                    const obj4 = { originalUrl: url };
-                    logger.warn("Empty or whitespace-only URL fragment in AppsFlyer legacy URL", obj4);
-                    c8 = 3;
-                    return { value: undefined, done: true };
-                  } else {
-                    const obj7 = { originalUrl: url };
-                    logger.warn("No hash mark found in AppsFlyer legacy URL", obj7);
-                  }
-                }
-                if (url.startsWith("discordwidget:///")) {
-                  if (url.startsWith("discordwidget:///open-voice-panel")) {
-                    channelId = channelId.getChannelId();
-                    channel = null;
-                    if (null != channelId) {
-                      channel = channel.getChannel(channelId);
-                    }
-                    if (null != channel) {
-                      const obj30 = PrivateChannelCallUtils;
-                      const result = obj30.navigateToVoiceChannel(channel, "LiveActivity");
-                      const index1 = url.indexOf("?");
-                      let str3 = "";
-                      const _URLSearchParams = URLSearchParams;
-                      if (index1 >= 0) {
-                        str3 = url.slice(index1 + 1);
-                      }
-                      const self3 = this;
-                      const self4 = this;
-                      const _URLSearchParams1 = new _URLSearchParams(str3);
-                      value = _URLSearchParams1.get("source");
-                      const tmp164 = "lockScreen" !== value && "dynamicIsland" !== value;
-                      if (!tmp164) {
-                        const obj8 = { action: "Open Voice Panel", channel_id: channel.id, surface: value };
-                        const obj22 = AnalyticsUtilsDefault;
-                        obj22.track(constants2.LIVE_ACTIVITY_INTERACTED, obj8);
-                      }
-                    }
-                    c8 = 3;
-                    return { value: "IconComponent", done: null };
-                  } else {
-                    const parts = url.split("voice/");
-                    if (2 !== parts.length) {
-                      c8 = 3;
-                      return { value: "IconComponent", done: null };
-                    } else {
-                      const str36 = parts[1];
-                      const parts1 = str36.split("/");
-                      if (0 === parts1.length) {
-                        c8 = 3;
-                        return { value: "IconComponent", done: null };
-                      } else if ("user" !== parts1[0]) {
-                        if ("invite" === parts1[0]) {
-                          const obj12 = { payload: obj13, isAppStartupNavigation };
-                          obj13 = { type: constants3.CREATE_VOICE_INVITE, guildId: parts1[1], channelId: parts1[2] };
-                          handleSupportedURLDefault(obj12);
-                        } else if ("wave" === parts1[0]) {
-                          const obj14 = { payload: obj15, isAppStartupNavigation };
-                          obj15 = {
-                            type: constants3.SEND_VOICE_HANGOUT_WAVE,
-                            guildId: parts1[1],
-                            channelId: parts1[2],
-                          };
-                          handleSupportedURLDefault(obj14);
-                        } else if ("join" === parts1[0]) {
-                          const obj16 = { payload: obj17, isAppStartupNavigation };
-                          obj17 = { type: constants3.CHANNEL, guildId: parts1[1], channelId: parts1[2] };
-                          handleSupportedURLDefault(obj16);
-                        } else if (2 === parts1.length) {
-                          [tmp198, tmp199] = parts1;
-                          const obj18 = { payload: obj19, isAppStartupNavigation };
-                          obj19 = { type: constants3.CHANNEL, guildId: tmp198, channelId: tmp199 };
-                          handleSupportedURLDefault(obj18);
-                          c8 = 3;
-                          return { value: undefined, done: true };
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  const _URL = URL;
-                  const self = this;
-                  const self2 = this;
-                  const uRL = new URL(url);
-                  if ("l.discord.com" === uRL.hostname) {
-                    const _fetch = fetch;
-                    c7 = 2;
-                    c8 = 1;
-                    const obj21 = { value: fetch(url, { method: "HEAD", redirect: "follow" }), done: false };
-                    return obj21;
-                  }
-                }
-              }
-              c8 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          } else if (1 === tmp4) {
-            c6 = 0;
-            message = closure_5;
-            const obj23 = { originalUrl: url.url, extractedUrlString: str2, error: message.message };
-            closure_132_10.warn("Failed to parse URL from AppsFlyer legacy URL", obj23);
-            c8 = 3;
-            return { value: undefined, done: true };
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
             c8 = 3;
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            return { value, done: true };
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            url = value.url;
-            Iterable = closure_132_0(closure_132_2[7]).DeeplinkSource.Iterable;
-          }
-          closure_7 = closure_132_1(closure_132_2[11])(url, true);
-          fingerprint = closure_7.fingerprint;
-          attemptId = closure_7.attemptId;
-          payload = closure_7.payload;
-          installationId = closure_7.installationId;
-          didRegister = closure_7.didRegister;
-          closure_132_10.log("Parsed url as: ", closure_7);
-          inviteCode = payload.inviteCode;
-          guildTemplateCode = payload.guildTemplateCode;
-          authToken = payload.authToken;
-          result1 = null;
-          if (null != inviteCode) {
-            const obj5 = closure_132_0(closure_132_2[12]);
-            result1 = obj5.parseInviteCodeFromInviteKey(inviteCode);
-          }
-          const tmp60 =
-            null == fingerprint &&
-            null == attemptId &&
-            null == inviteCode &&
-            null == guildTemplateCode &&
-            null == authToken &&
-            null == Iterable &&
-            null == installationId;
-          if (!tmp60) {
-            const obj25 = {
-              invite_code: result1,
-              guild_template_code: guildTemplateCode,
-              has_auth_token: tmp82,
-              is_backgrounded: closure_132_6.getState() === closure_132_7.BACKGROUND,
-              attempt_id: attemptId,
-              deeplink_source: Iterable,
-              link_type: payload.type,
-              is_cold_start: isAppStartupNavigation,
-              received_installation_id: installationId,
-            };
-            tmp82 = null != authToken;
-            const track = closure_132_1(closure_132_2[9]).track;
-            const EXTERNAL_DYNAMIC_LINK_RECEIVED = closure_132_8.EXTERNAL_DYNAMIC_LINK_RECEIVED;
-            closure_132_1(closure_132_2[9]);
-            if (tmp82) {
-              tmp82 = 0 === authToken.length;
+            closure_4 = tmp3;
+            closure_3 = tmp5;
+            closure_131_0 = closure_0;
+            closure_131_1 = isAppStartupNavigation;
+            let url;
+            let AppsFlyer;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            closure_131_6 = undefined;
+            closure_131_7 = undefined;
+            let fingerprint;
+            let attemptId;
+            let payload;
+            let installationId;
+            let didRegister;
+            let inviteCode;
+            let guildTemplateCode;
+            let authToken;
+            closure_131_16 = undefined;
+            ({ url: closure_131_2, source: closure_131_3 } = closure_0);
+            const _HermesInternal = HermesInternal;
+            logger.log("Opening url: " + url + " [" + AppsFlyer + "]");
+            if (state.getState() !== constants.ACTIVE) {
+              let str = "deeplink";
+              if (null == url) {
+                str = "launcher";
+              }
+              TTIAnalyticsUtils.trackAppOpened(str);
             }
-            let obj26 = null;
-            if (didRegister) {
-              obj26 = { did_register: true };
+            if (null == url) {
+              c8 = 3;
+            } else {
+              if (url.startsWith("discord://app/open")) {
+                const index = url.indexOf("#");
+                if (-1 !== index) {
+                  const str2 = url.substring(index + 1);
+                  closure_131_4 = str2;
+                  if ("" !== str2) {
+                    if ("" !== str2.trim()) {
+                      c6 = 1;
+                      const _URL2 = URL;
+                      const str35 = new URL(str2);
+                      closure_131_5 = str35;
+                      closure_131_6 = ["campaign", "deep_link_value", "media_source"];
+                      closure_2 = 0;
+                      let searchParams = str35.searchParams;
+                      const items = [];
+                      closure_2 = HermesBuiltin.arraySpread(searchParams.keys(), closure_2);
+                      const found = items.filter((item) => {
+                        let startsWithResult = item.startsWith("af_");
+                        if (!startsWithResult) {
+                          startsWithResult = closure_1_6.includes(item);
+                        }
+                        return startsWithResult;
+                      });
+                      const item = found.forEach((item) => {
+                        searchParams = searchParams.searchParams;
+                        return searchParams.delete(item);
+                      });
+                      url = str35.toString();
+                      AppsFlyer = DeepLinkTypes.DeeplinkSource.AppsFlyer;
+                      const _HermesInternal2 = HermesInternal;
+                      logger.log("Extracted clean URL from AppsFlyer legacy URL: " + url);
+                      c6 = 0;
+                    }
+                  }
+                  const obj5 = { originalUrl: url };
+                  logger.warn("Empty or whitespace-only URL fragment in AppsFlyer legacy URL", obj5);
+                  c8 = 3;
+                  const obj8 = { value: undefined, done: true };
+                  return obj8;
+                } else {
+                  const obj9 = { originalUrl: url };
+                  logger.warn("No hash mark found in AppsFlyer legacy URL", obj9);
+                }
+              }
+              if (url.startsWith("discordwidget:///")) {
+                if (url.startsWith("discordwidget:///open-voice-panel")) {
+                  channelId = channelId.getChannelId();
+                  channel = null;
+                  if (null != channelId) {
+                    channel = channel.getChannel(channelId);
+                  }
+                  if (null != channel) {
+                    const result = PrivateChannelCallUtils.navigateToVoiceChannel(channel, "LiveActivity");
+                    const index1 = url.indexOf("?");
+                    let str3 = "";
+                    if (index1 >= 0) {
+                      str3 = url.slice(index1 + 1);
+                    }
+                    const uRLSearchParams = new URLSearchParams(str3);
+                    value = uRLSearchParams.get("source");
+                    let tmp169 = "lockScreen" !== value;
+                    if (tmp169) {
+                      tmp169 = "dynamicIsland" !== value;
+                    }
+                    if (!tmp169) {
+                      const obj10 = { action: "Open Voice Panel", channel_id: channel.id, surface: value };
+                      AnalyticsUtilsDefault.track(constants2.LIVE_ACTIVITY_INTERACTED, obj10);
+                    }
+                  }
+                  c8 = 3;
+                  return { value: "IconComponent", done: null };
+                } else {
+                  const parts = url.split("voice/");
+                  if (2 !== parts.length) {
+                    c8 = 3;
+                    return { value: "IconComponent", done: null };
+                  } else {
+                    const parts1 = parts[1].split("/");
+                    if (0 === parts1.length) {
+                      c8 = 3;
+                      return { value: "IconComponent", done: null };
+                    } else if ("user" !== parts1[0]) {
+                      if ("invite" === parts1[0]) {
+                        const obj14 = { payload: null, isAppStartupNavigation: null };
+                        const obj15 = {
+                          type: constants3.CREATE_VOICE_INVITE,
+                          guildId: parts1[1],
+                          channelId: parts1[2],
+                        };
+                        obj14.payload = obj15;
+                        obj14.isAppStartupNavigation = isAppStartupNavigation;
+                        handleSupportedURLDefault(obj14);
+                      } else if ("wave" === parts1[0]) {
+                        const obj16 = { payload: null, isAppStartupNavigation: null };
+                        const obj17 = {
+                          type: constants3.SEND_VOICE_HANGOUT_WAVE,
+                          guildId: parts1[1],
+                          channelId: parts1[2],
+                        };
+                        obj16.payload = obj17;
+                        obj16.isAppStartupNavigation = isAppStartupNavigation;
+                        handleSupportedURLDefault(obj16);
+                      } else if ("join" === parts1[0]) {
+                        const obj18 = { payload: null, isAppStartupNavigation: null };
+                        const obj19 = { type: constants3.CHANNEL, guildId: parts1[1], channelId: parts1[2] };
+                        obj18.payload = obj19;
+                        obj18.isAppStartupNavigation = isAppStartupNavigation;
+                        handleSupportedURLDefault(obj18);
+                      } else if (2 === parts1.length) {
+                        [tmp207, tmp208] = parts1;
+                        const obj20 = { payload: null, isAppStartupNavigation: null };
+                        const obj21 = { type: constants3.CHANNEL, guildId: tmp207, channelId: tmp208 };
+                        obj20.payload = obj21;
+                        obj20.isAppStartupNavigation = isAppStartupNavigation;
+                        handleSupportedURLDefault(obj20);
+                        c8 = 3;
+                        const obj22 = { value: undefined, done: true };
+                        return obj22;
+                      }
+                    }
+                  }
+                }
+              } else {
+                const _URL = URL;
+                const uRL = new URL(url);
+              }
             }
-            const merged = Object.assign(obj26);
-            let tmp100 = null;
-            if (null != fingerprint) {
-              const obj27 = { fingerprint: obj9.extractId(fingerprint) };
-              tmp100 = obj27;
-              obj9 = closure_132_0(closure_132_2[13]);
-            }
-            const merged1 = Object.assign(tmp100);
-            track(EXTERNAL_DYNAMIC_LINK_RECEIVED, obj25);
+            const _fetch = fetch;
+            c7 = 2;
+            c8 = 1;
+            const obj23 = { value: fetch(url, { method: "HEAD", redirect: "follow" }), done: false };
+            return obj23;
           }
-          const tmp112 = null != result1 && null != installationId;
-          if (tmp112) {
-            const obj10 = closure_132_1(closure_132_2[14]);
-            const result2 = obj10.setReceivedInstallationIdForInviteCode(result1, installationId);
+        } else if (1 === tmp8) {
+          c6 = 0;
+          closure_131_17 = searchParams;
+          const obj25 = {
+            originalUrl: closure_131_0.url,
+            extractedUrlString: closure_131_4,
+            error: closure_131_17.message,
+          };
+          closure_132_10.warn("Failed to parse URL from AppsFlyer legacy URL", obj25);
+          c8 = 3;
+          const obj26 = { value: undefined, done: true };
+          return obj26;
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          url = value.url;
+          AppsFlyer = closure_132_0(closure_132_2[7]).DeeplinkSource.Iterable;
+        }
+        closure_131_7 = closure_132_1(closure_132_2[11])(url, true);
+        fingerprint = closure_131_7.fingerprint;
+        attemptId = closure_131_7.attemptId;
+        payload = closure_131_7.payload;
+        installationId = closure_131_7.installationId;
+        didRegister = closure_131_7.didRegister;
+        closure_132_10.log("Parsed url as: ", closure_131_7);
+        inviteCode = payload.inviteCode;
+        guildTemplateCode = payload.guildTemplateCode;
+        authToken = payload.authToken;
+        let result1 = null;
+        if (null != inviteCode) {
+          result1 = closure_132_0(closure_132_2[12]).parseInviteCodeFromInviteKey(inviteCode);
+          const obj6 = closure_132_0(closure_132_2[12]);
+        }
+        closure_131_16 = result1;
+        let tmp64 = null == fingerprint;
+        if (tmp64) {
+          tmp64 = null == attemptId;
+        }
+        if (tmp64) {
+          tmp64 = null == inviteCode;
+        }
+        if (tmp64) {
+          tmp64 = null == guildTemplateCode;
+        }
+        if (tmp64) {
+          tmp64 = null == authToken;
+        }
+        if (tmp64) {
+          tmp64 = null == AppsFlyer;
+        }
+        if (tmp64) {
+          tmp64 = null == installationId;
+        }
+        if (!tmp64) {
+          const obj27 = {
+            invite_code: closure_131_16,
+            guild_template_code: guildTemplateCode,
+            has_auth_token: null,
+            is_backgrounded: null,
+            attempt_id: null,
+            deeplink_source: null,
+            link_type: null,
+            is_cold_start: null,
+            received_installation_id: null,
+          };
+          let tmp85 = null != authToken;
+          if (tmp85) {
+            tmp85 = 0 === authToken.length;
           }
-          const tmp124 = null != result1 && didRegister;
-          if (tmp124) {
-            const obj11 = closure_132_0(closure_132_2[15]);
-            const result3 = obj11.setRegistrationHandoff();
+          obj27.has_auth_token = tmp85;
+          obj27.is_backgrounded = closure_132_6.getState() === closure_132_7.BACKGROUND;
+          obj27.attempt_id = attemptId;
+          obj27.deeplink_source = AppsFlyer;
+          obj27.link_type = payload.type;
+          obj27.is_cold_start = closure_131_1;
+          obj27.received_installation_id = installationId;
+          let obj28 = null;
+          if (didRegister) {
+            obj28 = { did_register: true };
           }
-          closure_132_1(closure_132_2[16])(url);
-          const obj28 = { payload, isAppStartupNavigation };
-          closure_132_1(closure_132_2[10])(obj28);
-        } catch (tmp171) {
-          closure_5 = tmp171;
-          if (0 === c6) {
-            c8 = 3;
-            throw tmp171;
-          } else {
-            c7 = 1;
+          const merged = Object.assign(obj28);
+          let tmp103 = null;
+          if (null != fingerprint) {
+            const obj29 = { fingerprint: closure_132_0(closure_132_2[13]).extractId(fingerprint) };
+            tmp103 = obj29;
+            const obj11 = closure_132_0(closure_132_2[13]);
           }
+          const merged1 = Object.assign(tmp103);
+          closure_132_1(closure_132_2[9]).track(closure_132_8.EXTERNAL_DYNAMIC_LINK_RECEIVED, obj27);
+          const obj7 = closure_132_1(closure_132_2[9]);
+        }
+        let tmp115 = null != closure_131_16;
+        if (tmp115) {
+          tmp115 = null != installationId;
+        }
+        if (tmp115) {
+          const result2 = closure_132_1(closure_132_2[14]).setReceivedInstallationIdForInviteCode(
+            closure_131_16,
+            installationId,
+          );
+          const obj12 = closure_132_1(closure_132_2[14]);
+        }
+        let tmp127 = null != closure_131_16;
+        if (tmp127) {
+          tmp127 = didRegister;
+        }
+        if (tmp127) {
+          const result3 = closure_132_0(closure_132_2[15]).setRegistrationHandoff();
+          const obj13 = closure_132_0(closure_132_2[15]);
+        }
+        closure_132_1(closure_132_2[16])(url);
+        const obj30 = { payload, isAppStartupNavigation: closure_131_1 };
+        closure_132_1(closure_132_2[10])(obj30);
+      } catch (tmp177) {
+        searchParams = tmp177;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp177;
+        } else {
+          c7 = tmp;
         }
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-({ AppStates: metroImportDefault, AnalyticEvents: metroImportAll, LinkingTypes: c9 } = Constants);
-const tmp3 = new LoggerDefault("index.native.tsx");
-let closure_10 = tmp3;
+const Constants = fn(1085);
+({ AppStates: closure_7, AnalyticEvents: closure_8, LinkingTypes: closure_9 } = Constants);
+let closure_10 = new LoggerDefault("index.native.tsx");
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleIncomingURL.tsx");
 
 export default function handleIncomingURL() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }

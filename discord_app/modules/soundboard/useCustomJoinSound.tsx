@@ -1,152 +1,131 @@
 // discord_app/modules/soundboard/useCustomJoinSound.tsx
-import SoundboardConstants from "SoundboardConstants.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let closure_3 = SoundboardConstants.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+const require = fn;
+let closure_3 = fn(5689).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
+
+export { CustomSoundType };
+export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
       _require = arg0;
-      const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(3);
+      const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function u() {
-          let GLOBAL;
-          let joinSound;
           const guilds = UserSettingsProtoStore.settings.guilds;
-          let obj;
+          let guilds1;
           if (guilds != null) {
-            obj = guilds.guilds;
+            guilds1 = guilds.guilds;
           }
-          if (obj == null) {
-            obj = {};
+          if (guilds1 == null) {
+            guilds1 = {};
           }
           let joinSound1;
-          if (obj[closure_0] != null) {
+          if (guilds1[closure_0] != null) {
             joinSound1 = tmp.joinSound;
           }
-          if (obj[closure_3] != null) {
-            joinSound = tmp3.joinSound;
+          if (guilds1[closure_3] != null) {
+            const joinSound = tmp3.joinSound;
           }
           let tmp4 = joinSound1;
           if (joinSound1 == null) {
             tmp4 = joinSound;
           }
-          let tmp5;
           if (null != tmp4) {
-            const obj2 = { type: GLOBAL };
+            const obj = {};
             const merged = Object.assign(tmp4);
             if (null != joinSound1) {
-              GLOBAL = obj.GUILD;
+              let GLOBAL = obj.GUILD;
             } else {
               GLOBAL = obj.GLOBAL;
             }
-            tmp5 = obj2;
+            obj.type = GLOBAL;
           }
-          return tmp5;
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp6);
+      let obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("get initialized");
       const items = [UserSettingsProtoStore];
-      return obj.useStateFromStores(items, () => {
-        let GLOBAL;
-        let joinSound;
+      return require("initialize").useStateFromStores(items, () => {
         const guilds = UserSettingsProtoStore.settings.guilds;
-        let obj;
+        let guilds1;
         if (guilds != null) {
-          obj = guilds.guilds;
+          guilds1 = guilds.guilds;
         }
-        if (obj == null) {
-          obj = {};
+        if (guilds1 == null) {
+          guilds1 = {};
         }
         let joinSound1;
-        if (obj[closure_0] != null) {
+        if (guilds1[closure_0] != null) {
           joinSound1 = tmp.joinSound;
         }
-        if (obj[closure_3] != null) {
-          joinSound = tmp3.joinSound;
+        if (guilds1[closure_3] != null) {
+          const joinSound = tmp3.joinSound;
         }
         let tmp4 = joinSound1;
         if (joinSound1 == null) {
           tmp4 = joinSound;
         }
-        let tmp5;
         if (null != tmp4) {
-          const obj2 = { type: GLOBAL };
+          const obj = {};
           const merged = Object.assign(tmp4);
           if (null != joinSound1) {
-            GLOBAL = obj.GUILD;
+            let GLOBAL = obj.GUILD;
           } else {
             GLOBAL = obj.GLOBAL;
           }
-          tmp5 = obj2;
+          obj.type = GLOBAL;
         }
-        return tmp5;
       });
     };
-const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
-
-export { CustomSoundType };
-export const useCustomJoinSound = tmp2;
 export const getCustomJoinSound = function getCustomJoinSound(arg0) {
-  let GLOBAL;
-  let joinSound;
   const guilds = UserSettingsProtoStore.settings.guilds;
-  let obj;
+  let guilds1;
   if (guilds != null) {
-    obj = guilds.guilds;
+    guilds1 = guilds.guilds;
   }
-  if (obj == null) {
-    obj = {};
+  if (guilds1 == null) {
+    guilds1 = {};
   }
   let joinSound1;
-  if (obj[arg0] != null) {
+  if (guilds1[arg0] != null) {
     joinSound1 = tmp.joinSound;
   }
-  if (obj[closure_3] != null) {
-    joinSound = tmp3.joinSound;
+  if (guilds1[closure_3] != null) {
+    const joinSound = tmp3.joinSound;
   }
   let tmp4 = joinSound1;
   if (joinSound1 == null) {
     tmp4 = joinSound;
   }
-  let tmp5;
   if (null != tmp4) {
-    const obj2 = { type: GLOBAL };
+    const obj = {};
     const merged = Object.assign(tmp4);
     if (null != joinSound1) {
-      GLOBAL = obj.GUILD;
+      let GLOBAL = obj.GUILD;
     } else {
       GLOBAL = obj.GLOBAL;
     }
-    tmp5 = obj2;
+    obj.type = GLOBAL;
   }
-  return tmp5;
 };

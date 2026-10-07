@@ -41,28 +41,46 @@ function splitsCharacter(target, sum) {
       if (null != codePointAtResult) {
         let tmp8 = 8205 === codePointAtResult;
         if (!tmp8) {
-          tmp8 = codePointAtResult >= 65024 && codePointAtResult <= 65039;
-          const tmp7 = codePointAtResult >= 65024 && codePointAtResult <= 65039;
+          let tmp7 = codePointAtResult >= 65024;
+          if (tmp7) {
+            tmp7 = codePointAtResult <= 65039;
+          }
+          tmp8 = tmp7;
         }
         if (!tmp8) {
-          tmp8 = codePointAtResult >= 127995 && codePointAtResult <= 127999;
-          const tmp9 = codePointAtResult >= 127995 && codePointAtResult <= 127999;
+          let tmp9 = codePointAtResult >= 127995;
+          if (tmp9) {
+            tmp9 = codePointAtResult <= 127999;
+          }
+          tmp8 = tmp9;
         }
         if (!tmp8) {
-          tmp8 = codePointAtResult >= 768 && codePointAtResult <= 879;
-          const tmp10 = codePointAtResult >= 768 && codePointAtResult <= 879;
+          let tmp10 = codePointAtResult >= 768;
+          if (tmp10) {
+            tmp10 = codePointAtResult <= 879;
+          }
+          tmp8 = tmp10;
         }
         if (!tmp8) {
-          tmp8 = codePointAtResult >= 8400 && codePointAtResult <= 8447;
-          const tmp11 = codePointAtResult >= 8400 && codePointAtResult <= 8447;
+          let tmp11 = codePointAtResult >= 8400;
+          if (tmp11) {
+            tmp11 = codePointAtResult <= 8447;
+          }
+          tmp8 = tmp11;
         }
         if (!tmp8) {
-          tmp8 = codePointAtResult >= 65056 && codePointAtResult <= 65071;
-          const tmp12 = codePointAtResult >= 65056 && codePointAtResult <= 65071;
+          let tmp12 = codePointAtResult >= 65056;
+          if (tmp12) {
+            tmp12 = codePointAtResult <= 65071;
+          }
+          tmp8 = tmp12;
         }
         if (!tmp8) {
-          tmp8 = codePointAtResult >= 917536 && codePointAtResult <= 917631;
-          const tmp13 = codePointAtResult >= 917536 && codePointAtResult <= 917631;
+          let tmp13 = codePointAtResult >= 917536;
+          if (tmp13) {
+            tmp13 = codePointAtResult <= 917631;
+          }
+          tmp8 = tmp13;
         }
         if (tmp8) {
           return true;
@@ -71,9 +89,21 @@ function splitsCharacter(target, sum) {
       if (8205 === sum) {
         return true;
       } else {
-        const tmp14 = null != sum && sum >= 127462 && sum <= 127487;
+        let tmp14 = null != sum;
         if (tmp14) {
-          const tmp15 = null != codePointAtResult && codePointAtResult >= 127462 && codePointAtResult <= 127487;
+          tmp14 = sum >= 127462;
+        }
+        if (tmp14) {
+          tmp14 = sum <= 127487;
+        }
+        if (tmp14) {
+          let tmp15 = null != codePointAtResult;
+          if (tmp15) {
+            tmp15 = codePointAtResult >= 127462;
+          }
+          if (tmp15) {
+            tmp15 = codePointAtResult <= 127487;
+          }
           if (tmp15) {
             let sum1;
             if (tmp > 0) {
@@ -96,9 +126,15 @@ function splitsCharacter(target, sum) {
                 }
               }
             }
+            let tmp19 = null != sum1;
+            if (tmp19) {
+              tmp19 = sum1 >= 127462;
+            }
+            if (tmp19) {
+              tmp19 = sum1 <= 127487;
+            }
             let num44 = 0;
             let num45 = 0;
-            const tmp19 = null != sum1 && sum1 >= 127462 && sum1 <= 127487;
             if (tmp19) {
               const sum2 = num44 + 1;
               const diff = tmp - 2;
@@ -212,7 +248,7 @@ export const safeRevealBoundary = function safeRevealBoundary(str, arg1, arg2) {
     return tmp;
   }
 };
-export const reconcileRevealedLength = function reconcileRevealedLength(target, target2, length) {
+export const reconcileRevealedLength = function reconcileRevealedLength(target, target, length) {
   const bound = Math.min(Math.max(length, 0), target.length);
   if (0 === bound) {
     return 0;
@@ -228,7 +264,6 @@ export const reconcileRevealedLength = function reconcileRevealedLength(target, 
     if (0 < bound1) {
       let num3 = 0;
       num = 0;
-      const charCodeAtResult = target.charCodeAt(0);
       if (charCodeAtResult === target.charCodeAt(0)) {
         const sum = num3 + 1;
         num = sum;
@@ -241,6 +276,7 @@ export const reconcileRevealedLength = function reconcileRevealedLength(target, 
           }
         }
       }
+      charCodeAtResult = target.charCodeAt(0);
     }
     let tmp6 = num;
     if (0 < num) {
@@ -263,7 +299,6 @@ export const reconcileRevealedLength = function reconcileRevealedLength(target, 
 };
 export const nextRevealLength = function nextRevealLength(target) {
   target = target.target;
-  const elapsedMs = target.elapsedMs;
   const bound = Math.min(Math.max(target.revealed, 0), target.length);
   const diff = target.length - bound;
   if (diff <= 0) {
@@ -280,7 +315,7 @@ export const nextRevealLength = function nextRevealLength(target) {
     const _Math6 = Math;
     const bound2 = Math.min(
       target.length,
-      bound + Math.min(120, Math.max(1, Math.round(bound1 * Math.max(elapsedMs, 0)))),
+      bound + Math.min(120, Math.max(1, Math.round(bound1 * Math.max(target.elapsedMs, 0)))),
     );
     let tmp9 = bound2;
     if (bound2 < target.length) {

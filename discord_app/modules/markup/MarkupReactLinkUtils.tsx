@@ -6,18 +6,15 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(target) {
-  let tmp = null != target.target;
-  if (tmp) {
+  if (null == target.target) {
+    return tmp;
+  } else {
     MaskedLinkUtils;
-    if (null != target.title) {
-      let title;
-      if ("" !== target.title) {
-        title = target.title;
-      }
-      tmp = tmp5(tmp6, title);
+    if (null == target.title) {
+      let title = MarkupParser.astToString(target.content);
+      tmp5(tmp6, title);
+      const tmp2Result = MarkupParser;
     }
-    const tmp2Result = MarkupParser;
-    title = tmp2Result.astToString(target.content);
+    title = target.title;
   }
-  return tmp;
 };

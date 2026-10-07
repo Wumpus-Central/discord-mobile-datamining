@@ -1,242 +1,217 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReadonly.tsx
 import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import router_utils from "../../../routing/router_utils.tsx";
-import intl4 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import ChannelRecord from "../../../../records/ChannelRecord.tsx";
-import GuildChannelStore2 from "../../../../stores/GuildChannelStore.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import ChatInputConstants from "../ChatInputConstants.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import GuildChannelStore from "../../../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-const GuildChannelStore = GuildChannelStore2;
-let _require;
-
-let closure_12;
-let map1;
+require = fn;
 function sortChannelsByLastMessageId(id, id2) {
-  const compare = SnowflakeUtilsDefault.compare;
-  SnowflakeUtilsDefault;
-  const lastMessageIdResult = ReadStateStore.lastMessageId(id2.id);
-  return compare(lastMessageIdResult, ReadStateStore.lastMessageId(id.id));
+  const obj = SnowflakeUtilsDefault;
+  return obj.compare(ReadStateStore.lastMessageId(id2.id), ReadStateStore.lastMessageId(id.id));
 }
-const isTextChannel = ChannelRecord.isTextChannel;
-let closure_6 = GuildChannelStore2.GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = ChatInputConstants.TextAreaCta;
+const isTextChannel = fn(2055).isTextChannel;
+let closure_6 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
+const TextAreaCta = fn(11589).TextAreaCta;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
-const jsx = Fragment.jsx;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let first;
-      let stateFromStores;
-      let stateFromStoresArray1;
-      let tmp11;
-      let tmp14;
-      let tmp16;
-      let tmp18;
-      let tmp21;
-      let tmp24;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(29);
+      const cResult = require("c").c(29);
+      let obj = require("c");
+      const channelAction = require("MemberActionUtils").useMemberActionsForChannel(arg0, arg1).channelAction;
       let obj2 = require("MemberActionUtils");
-      const channelAction = obj2.useMemberActionsForChannel(arg0, arg1).channelAction;
       let channelId;
-      const useNextMemberAction = require("MemberActionUtils").useNextMemberAction;
-      require("MemberActionUtils");
       if (channelAction != null) {
         channelId = channelAction.channelId;
       }
-      const nextMemberAction = useNextMemberAction(arg0, channelId);
+      const nextMemberAction = require("MemberActionUtils").useNextMemberAction(arg0, channelId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [stateFromStoresArray1];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       let channelId1;
-      const tmp9 = cResult[1];
       if (nextMemberAction != null) {
         channelId1 = nextMemberAction.channelId;
       }
-      if (tmp9 !== channelId1) {
+      if (cResult[1] !== channelId1) {
         let channelId2;
         if (nextMemberAction != null) {
           channelId2 = nextMemberAction.channelId;
         }
         class S {
           constructor() {
-            let channelId;
-            const getChannel = ChannelStore.getChannel;
-            if (nextMemberAction != null) {
-              channelId = nextMemberAction.channelId;
+            channelId = undefined;
+            tmp = closure_4;
+            if (closure_1 != null) {
+              channelId = closure_1.channelId;
             }
-            return getChannel(channelId);
+            return closure_4.getChannel(channelId);
           }
         }
         cResult[1] = channelId2;
         cResult[2] = S;
-        tmp11 = S;
+        let tmp9 = S;
       } else {
-        tmp11 = cResult[2];
+        tmp9 = cResult[2];
       }
-      const tmpResult = require("get initialized");
-      stateFromStores = tmpResult.useStateFromStores(first, tmp11);
+      const obj3 = require("MemberActionUtils");
+      stateFromStores = require("initialize").useStateFromStores(first, tmp9);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [];
         class S {
           constructor() {
-            let channelId;
-            const getChannel = ChannelStore.getChannel;
-            if (nextMemberAction != null) {
-              channelId = nextMemberAction.channelId;
+            channelId = undefined;
+            tmp = closure_4;
+            if (closure_1 != null) {
+              channelId = closure_1.channelId;
             }
-            return getChannel(channelId);
+            return closure_4.getChannel(channelId);
           }
         }
         cResult[3] = items1;
-        tmp14 = items1;
+        let tmp12 = items1;
       } else {
-        tmp14 = cResult[3];
+        tmp12 = cResult[3];
       }
       if (cResult[4] !== arg0) {
         const fn = function p() {
-          const arr = GuildChannelStore.getChannels(closure_0)[closure_6];
-          const mapped = arr.map((channel) => channel.channel);
+          const mapped = GuildChannelStore.getChannels(closure_0)[closure_6].map((channel) => channel.channel);
           return mapped.sort(sortChannelsByLastMessageId);
         };
         class S {
           constructor() {
-            let channelId;
-            const getChannel = ChannelStore.getChannel;
-            if (nextMemberAction != null) {
-              channelId = nextMemberAction.channelId;
+            channelId = undefined;
+            tmp = closure_4;
+            if (closure_1 != null) {
+              channelId = closure_1.channelId;
             }
-            return getChannel(channelId);
+            return closure_4.getChannel(channelId);
           }
         }
         cResult[5] = fn;
-        tmp16 = fn;
+        let tmp14 = fn;
       } else {
-        tmp16 = cResult[5];
+        tmp14 = cResult[5];
       }
-      const tmpResult3 = require("get initialized");
-      const stateFromStoresArray = tmpResult3.useStateFromStoresArray(tmp14, tmp16);
+      const tmpResult = require("initialize");
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp12, tmp14);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [];
         class S {
           constructor() {
-            let channelId;
-            const getChannel = ChannelStore.getChannel;
-            if (nextMemberAction != null) {
-              channelId = nextMemberAction.channelId;
+            channelId = undefined;
+            tmp = closure_4;
+            if (closure_1 != null) {
+              channelId = closure_1.channelId;
             }
-            return getChannel(channelId);
+            return closure_4.getChannel(channelId);
           }
         }
         cResult[6] = items2;
-        tmp18 = items2;
+        let tmp16 = items2;
       } else {
-        tmp18 = cResult[6];
+        tmp16 = cResult[6];
       }
       if (cResult[7] !== stateFromStoresArray) {
         class P {
           constructor() {
-            const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-            const found1 = found.filter((type) => stateFromStoresArray(type.type));
+            found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+            found1 = found.filter((type) => stateFromStoresArray(type.type));
             return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
           }
         }
         const items3 = [];
         class S {
           constructor() {
-            let channelId;
-            const getChannel = ChannelStore.getChannel;
-            if (nextMemberAction != null) {
-              channelId = nextMemberAction.channelId;
+            channelId = undefined;
+            tmp = closure_4;
+            if (closure_1 != null) {
+              channelId = closure_1.channelId;
             }
-            return getChannel(channelId);
+            return closure_4.getChannel(channelId);
           }
         }
         cResult[7] = stateFromStoresArray;
         cResult[8] = P;
         cResult[9] = items3;
-        tmp21 = items3;
+        let tmp19 = items3;
       } else {
         class P {
           constructor() {
-            const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-            const found1 = found.filter((type) => stateFromStoresArray(type.type));
+            found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+            found1 = found.filter((type) => stateFromStoresArray(type.type));
             return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
           }
         }
-        tmp21 = cResult[9];
+        tmp19 = cResult[9];
       }
-      const tmpResult4 = require("get initialized");
-      stateFromStoresArray1 = tmpResult4.useStateFromStoresArray(tmp18, P, tmp21);
+      const tmpResult3 = require("initialize");
+      stateFromStoresArray1 = require("initialize").useStateFromStoresArray(tmp16, P, tmp19);
       if (null != stateFromStores) {
         class P {
           constructor() {
-            const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-            const found1 = found.filter((type) => stateFromStoresArray(type.type));
+            found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+            found1 = found.filter((type) => stateFromStoresArray(type.type));
             return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
           }
         }
         if (cResult[12] === arg0) {
           class P {
             constructor() {
-              const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-              const found1 = found.filter((type) => stateFromStoresArray(type.type));
+              found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+              found1 = found.filter((type) => stateFromStoresArray(type.type));
               return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
             }
           }
-          if (cResult[15] === tmp30) {
+          if (cResult[15] === tmp29) {
             class P {
               constructor() {
-                const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-                const found1 = found.filter((type) => stateFromStoresArray(type.type));
+                found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+                found1 = found.filter((type) => stateFromStoresArray(type.type));
                 return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
               }
             }
-            tmp24 = tmp33;
           }
           class D {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-              obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = router_utils;
-              obj3.transitionToGuild(closure_0, stateFromStores.id);
+              obj = closure_1(closure_2[18]);
+              obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[19]);
+              transitionToGuildResult = obj3.transitionToGuild(closure_0, closure_2.id);
+              return;
             }
           }
-          tmp33[0] = tmp30;
-          tmp33[1] = D;
-          cResult[15] = tmp30;
+          tmp32[0] = tmp29;
+          tmp32[1] = D;
+          cResult[15] = tmp29;
           cResult[16] = D;
-          cResult[17] = tmp33;
+          cResult[17] = tmp32;
         }
         class D {
           constructor() {
-            const obj = AppAnalyticsUtilsDefault;
-            const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-            obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-            const obj3 = router_utils;
-            obj3.transitionToGuild(closure_0, stateFromStores.id);
+            obj = closure_1(closure_2[18]);
+            obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+            obj3 = closure_0(closure_2[19]);
+            transitionToGuildResult = obj3.transitionToGuild(closure_0, closure_2.id);
+            return;
           }
         }
         cResult[12] = arg0;
@@ -245,106 +220,110 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class P {
           constructor() {
-            const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-            const found1 = found.filter((type) => stateFromStoresArray(type.type));
+            found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+            found1 = found.filter((type) => stateFromStoresArray(type.type));
             return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
           }
         }
         if (0 === stateFromStoresArray1.length) {
           class P {
             constructor() {
-              const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-              const found1 = found.filter((type) => stateFromStoresArray(type.type));
+              found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+              found1 = found.filter((type) => stateFromStoresArray(type.type));
               return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
             }
           }
           class D {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-              obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = router_utils;
-              obj3.transitionToGuild(closure_0, stateFromStores.id);
+              obj = closure_1(closure_2[18]);
+              obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[19]);
+              transitionToGuildResult = obj3.transitionToGuild(closure_0, closure_2.id);
+              return;
             }
           }
           if (cResult[19] !== arg0) {
             class P {
               constructor() {
-                const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-                const found1 = found.filter((type) => stateFromStoresArray(type.type));
+                found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+                found1 = found.filter((type) => stateFromStoresArray(type.type));
                 return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
               }
             }
-            tmp29[0] = tmp27;
+            tmp27[0] = tmp25;
             class D {
               constructor() {
-                const obj = AppAnalyticsUtilsDefault;
-                const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-                obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-                const obj3 = router_utils;
-                obj3.transitionToGuild(closure_0, stateFromStores.id);
+                obj = closure_1(closure_2[18]);
+                obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
+                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                obj3 = closure_0(closure_2[19]);
+                transitionToGuildResult = obj3.transitionToGuild(closure_0, closure_2.id);
+                return;
               }
             }
+            tmp27[1] = tmp25;
             cResult[19] = arg0;
-            cResult[20] = tmp29;
+            cResult[20] = tmp27;
           } else {
             class P {
               constructor() {
-                const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-                const found1 = found.filter((type) => stateFromStoresArray(type.type));
+                found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+                found1 = found.filter((type) => stateFromStoresArray(type.type));
                 return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
               }
             }
           }
-          tmp24 = tmp29;
         } else {
           class P {
             constructor() {
-              const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-              const found1 = found.filter((type) => stateFromStoresArray(type.type));
+              found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+              found1 = found.filter((type) => stateFromStoresArray(type.type));
               return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
             }
           }
           if (cResult[23] === stateFromStoresArray1[0]) {
             class P {
               constructor() {
-                const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-                const found1 = found.filter((type) => stateFromStoresArray(type.type));
+                found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+                found1 = found.filter((type) => stateFromStoresArray(type.type));
                 return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
               }
             }
-            if (cResult[26] === tmp22) {
+            if (cResult[26] === tmp20) {
               class P {
                 constructor() {
-                  const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
-                  const found1 = found.filter((type) => stateFromStoresArray(type.type));
+                  found = closure_3.filter(closure_0(closure_2[15]).isNotNullish);
+                  found1 = found.filter((type) => stateFromStoresArray(type.type));
                   return found1.filter((item) => closure_1_7.can(constants.SEND_MESSAGES, item));
                 }
               }
+              return tmp23;
             }
             class D {
               constructor() {
-                const obj = AppAnalyticsUtilsDefault;
-                const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-                obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-                const obj3 = router_utils;
-                obj3.transitionToGuild(closure_0, stateFromStores.id);
+                obj = closure_1(closure_2[18]);
+                obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
+                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                obj3 = closure_0(closure_2[19]);
+                transitionToGuildResult = obj3.transitionToGuild(closure_0, closure_2.id);
+                return;
               }
             }
-            tmp25[0] = tmp22;
-            tmp25[1] = H;
-            cResult[26] = tmp22;
+            tmp23[0] = tmp20;
+            tmp23[1] = H;
+            cResult[26] = tmp20;
             cResult[27] = H;
-            cResult[28] = tmp25;
-            tmp24 = tmp25;
+            cResult[28] = tmp23;
           }
           class D {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-              obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = router_utils;
-              obj3.transitionToGuild(closure_0, stateFromStores.id);
+              obj = closure_1(closure_2[18]);
+              obj1 = { cta_type: TextAreaCta.CHANNEL_LINK };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[19]);
+              transitionToGuildResult = obj3.transitionToGuild(closure_0, closure_2.id);
+              return;
             }
           }
           cResult[23] = stateFromStoresArray1[0];
@@ -352,50 +331,36 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[25] = H;
         }
       }
-      return tmp24;
+      const tmpResult4 = require("initialize");
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let formatToPlainString;
-      let intl;
-      let obj3;
-      let obj5;
-      let obj6;
-      let q1krfU;
-      let stateFromStores;
-      let stateFromStoresArray1;
-      let tmpResult7;
       _require = arg0;
+      const channelAction = require("MemberActionUtils").useMemberActionsForChannel(arg0, arg1).channelAction;
       let obj = require("MemberActionUtils");
-      const channelAction = obj.useMemberActionsForChannel(arg0, arg1).channelAction;
       let channelId;
-      const useNextMemberAction = require("MemberActionUtils").useNextMemberAction;
-      require("MemberActionUtils");
       if (channelAction != null) {
         channelId = channelAction.channelId;
       }
-      channelId = useNextMemberAction(arg0, channelId);
+      channelId = require("MemberActionUtils").useNextMemberAction(arg0, channelId);
+      let obj2 = require("MemberActionUtils");
       const items = [stateFromStoresArray1];
-      const tmpResult = require("get initialized");
-      stateFromStores = tmpResult.useStateFromStores(items, () => {
+      stateFromStores = require("initialize").useStateFromStores(items, () => {
         channelId = undefined;
-        const getChannel = ChannelStore.getChannel;
         if (channelId != null) {
           channelId = channelId.channelId;
         }
-        return getChannel(channelId);
+        return ChannelStore.getChannel(channelId);
       });
+      const tmpResult = require("initialize");
       const items1 = [GuildChannelStore];
-      const tmpResult5 = require("get initialized");
-      const stateFromStoresArray = tmpResult5.useStateFromStoresArray(items1, () => {
-        const arr = GuildChannelStore.getChannels(closure_0)[closure_6];
-        const mapped = arr.map((channel) => channel.channel);
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
+        const mapped = GuildChannelStore.getChannels(closure_0)[closure_6].map((channel) => channel.channel);
         return mapped.sort(sortChannelsByLastMessageId);
       });
+      const tmpResult5 = require("initialize");
       const items2 = [PermissionStore];
       const items3 = [stateFromStoresArray];
-      const tmpResult6 = require("get initialized");
-      stateFromStoresArray1 = tmpResult6.useStateFromStoresArray(
+      stateFromStoresArray1 = require("initialize").useStateFromStoresArray(
         items2,
         () => {
           const found = stateFromStoresArray.filter(GlobalUtils.isNotNullish);
@@ -405,81 +370,71 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         items3,
       );
       if (null != stateFromStores) {
-        let obj2 = {
-          text: formatToPlainString(q1krfU, obj3),
-          handlePress() {
-            const obj = AppAnalyticsUtilsDefault;
-            const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-            obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-            const obj3 = router_utils;
-            obj3.transitionToGuild(closure_0, stateFromStores.id);
-          },
-        };
+        const obj3 = { text: null, handlePress: null };
         const intl2 = tmp(tmp2[16]).intl;
-        formatToPlainString = intl2.formatToPlainString;
-        obj3 = { channelName: tmpResult7.computeChannelName(stateFromStores, UserStore, RelationshipStore) };
-        q1krfU = tmp(tmp2[16]).t.q1krfU;
-        obj5 = obj2;
-        tmpResult7 = require("useChannelName");
-      } else if (0 === stateFromStoresArray1.length) {
-        const obj4 = {
-          text: intl.string(require("intl").t["gHD/nZ"]),
-          handlePress() {
-            const obj = AppAnalyticsUtilsDefault;
-            const obj2 = { cta_type: TextAreaCta.CHANNEL_LIST };
-            obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-            const obj3 = router_utils;
-            obj3.transitionToGuild(closure_0, undefined);
-          },
+        const obj4 = { channelName: tmp(tmp2[17]).computeChannelName(stateFromStores, UserStore, RelationshipStore) };
+        obj3.text = intl2.formatToPlainString(tmp(tmp2[16]).t.q1krfU, obj4);
+        obj3.handlePress = function handlePress() {
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, {
+            cta_type: TextAreaCta.CHANNEL_LINK,
+          });
+          const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
+          router_utils.transitionToGuild(closure_0, stateFromStores.id);
         };
-        intl = tmp(tmp2[16]).intl;
-        obj5 = obj4;
+        let obj6 = obj3;
+        const tmpResult7 = tmp(tmp2[17]);
+      } else if (0 === stateFromStoresArray1.length) {
+        const obj5 = { text: null, handlePress: null };
+        const intl = tmp(tmp2[16]).intl;
+        obj5.text = intl.string(tmp(tmp2[16]).t["gHD/nZ"]);
+        obj5.handlePress = function handlePress() {
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, {
+            cta_type: TextAreaCta.CHANNEL_LIST,
+          });
+          const obj2 = { cta_type: TextAreaCta.CHANNEL_LIST };
+          router_utils.transitionToGuild(closure_0, undefined);
+        };
+        obj6 = obj5;
       } else {
         const intl3 = tmp(tmp2[16]).intl;
-        const formatToPlainString2 = intl3.formatToPlainString;
         let str = "";
-        const q1krfU2 = tmp(tmp2[16]).t.q1krfU;
         if (null != stateFromStoresArray1[0]) {
-          const tmpResult8 = require("useChannelName");
-          str = tmpResult8.computeChannelName(stateFromStoresArray1[0], UserStore, RelationshipStore);
+          str = tmp(tmp2[17]).computeChannelName(stateFromStoresArray1[0], UserStore, RelationshipStore);
+          const tmpResult8 = tmp(tmp2[17]);
         }
-        obj5 = {
-          text: formatToPlainString2(q1krfU2, obj6),
-          handlePress() {
-            const obj = AppAnalyticsUtilsDefault;
-            const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
-            obj.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
-            const obj3 = router_utils;
-            obj3.transitionToGuild(closure_0, stateFromStoresArray1[0].id);
-          },
+        obj6 = { text: null, handlePress: null };
+        const obj7 = { channelName: str };
+        obj6.text = intl3.formatToPlainString(tmp(tmp2[16]).t.q1krfU, obj7);
+        obj6.handlePress = function handlePress() {
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, {
+            cta_type: TextAreaCta.CHANNEL_LINK,
+          });
+          const obj2 = { cta_type: TextAreaCta.CHANNEL_LINK };
+          router_utils.transitionToGuild(closure_0, stateFromStoresArray1[0].id);
         };
-        obj6 = { channelName: str };
       }
-      return obj5;
+      return obj6;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReadonly.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (guildId) => {
-        let first;
-        let handlePress;
-        let text;
-        const obj = react2;
-        const cResult = obj.c(4);
+        const cResult = c.c(4);
         ({ text, handlePress } = closure_15(guildId.guildId, guildId.channel));
-        closure_15(guildId.guildId, guildId.channel);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = intl4.intl;
-          const stringResult = intl.string(intl4.t["9cs5LM"]);
+          const intl = util.intl;
+          const stringResult = intl.string(util.t["9cs5LM"]);
           cResult[0] = stringResult;
-          first = stringResult;
+          let first = stringResult;
         } else {
           first = cResult[0];
         }
         if (cResult[1] === handlePress) {
-          let tmp7;
           if (cResult[2] === text) {
-            tmp7 = cResult[3];
+            let tmp7 = cResult[3];
           }
           return tmp7;
         }
@@ -493,24 +448,20 @@ const memoResult = react.memo(
         cResult[2] = text;
         cResult[3] = tmp8;
         tmp7 = tmp8;
+        const tmp4 = closure_15(guildId.guildId, guildId.channel);
       }
     : (guildId) => {
-        let handlePress;
-        let text;
         ({ text, handlePress } = closure_15(guildId.guildId, guildId.channel));
-        closure_15(guildId.guildId, guildId.channel);
-        ChatInputGuardDefault;
-        const intl = intl4.intl;
-        return (
-          <tmp2
-            type="simple-action"
-            actionOnPress={handlePress}
-            actionLabel={intl.string(intl4.t["9cs5LM"])}
-            message={text}
-          />
-        );
+        const obj = { type: "simple-action", actionOnPress: handlePress, actionLabel: null, message: null };
+        const tmp = closure_15(guildId.guildId, guildId.channel);
+        const intl = util.intl;
+        obj.actionLabel = intl.string(util.t["9cs5LM"]);
+        obj.message = text;
+        return jsx(ChatInputGuardDefault, {
+          type: "simple-action",
+          actionOnPress: handlePress,
+          actionLabel: null,
+          message: null,
+        });
       },
 );
-const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReadonly.tsx");
-
-export default memoResult;

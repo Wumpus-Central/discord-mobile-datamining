@@ -1,56 +1,39 @@
 // discord_app/modules/soundboard/native/SoundButton.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport2 from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import getSoundboardEmojiUrlDefault from "utils/getSoundboardEmojiUrl.tsx";
-import SoundboardStyleConstants from "SoundboardStyleConstants.tsx";
 import openSoundboardSoundPreviewActionSheetDefault from "utils/openSoundboardSoundPreviewActionSheet.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
 const ReanimatedRexport_mod = ReanimatedRexport2;
-let _require, set;
 
-let hasOwnProperty;
-let metroRequire;
-let num;
-let obj2;
-let obj3;
-let obj4;
-let rect;
-let size;
-let size1;
-const View = react_native.View;
-const SOUND_BUTTON_HEIGHT = SoundboardStyleConstants.SOUND_BUTTON_HEIGHT;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_7 = ReanimatedRexport.createAnimatedComponent(View);
 const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
-let createStyles = createStyles_mod;
+const createStyles = fn(4896);
 let obj = {
-  button: obj2,
-  buttonPressed: obj3,
-  buttonDisabled: { opacity: 0.5 },
-  buttonPlaying: obj4,
-  playingBackground: rect,
-  emoji: { height: 24, width: 24, fontSize: num, lineHeight: 28 },
-  emojiWrapper: size,
-  text: { marginHorizontal: 8 },
-  textPlaying: { marginHorizontal: 6 },
-  lock: size1,
+  button: null,
+  buttonPressed: null,
+  buttonDisabled: null,
+  buttonPlaying: null,
+  playingBackground: null,
+  emoji: null,
+  emojiWrapper: null,
+  text: null,
+  textPlaying: null,
+  lock: null,
 };
-obj2 = {
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+obj.button = {
   marginTop: 4,
-  height: SOUND_BUTTON_HEIGHT,
+  height: fn(17258).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -60,11 +43,23 @@ obj2 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
 };
-createStyles = createStyles.createStyles;
-const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj3 = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
-obj4 = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.STATUS_SPEAKING };
-rect = {
+let obj2 = {
+  marginTop: 4,
+  height: fn(17258).SOUND_BUTTON_HEIGHT,
+  backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: nativeDefault.radii.lg,
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_MUTED,
+};
+obj.buttonPressed = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
+obj.buttonDisabled = { opacity: 0.5 };
+let obj4 = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };
+obj.buttonPlaying = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.STATUS_SPEAKING };
+const rect = {
   position: "absolute",
   top: 0,
   bottom: 0,
@@ -73,11 +68,14 @@ rect = {
   backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG,
   borderRadius: nativeDefault.radii.lg - 2,
 };
-num = undefined;
+obj.playingBackground = rect;
+const PlatformUtils = fn(1369);
+let num;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
-size = {
+obj.emoji = { height: 24, width: 24, fontSize: num, lineHeight: 28 };
+let size = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -88,7 +86,10 @@ size = {
   borderRadius: nativeDefault.radii.round,
   marginBottom: 8,
 };
-size1 = {
+obj.emojiWrapper = size;
+obj.text = { marginHorizontal: 8 };
+obj.textPlaying = { marginHorizontal: 6 };
+const size1 = {
   position: "absolute",
   top: nativeDefault.space.PX_12,
   end: nativeDefault.space.PX_12,
@@ -96,29 +97,24 @@ size1 = {
   height: 12,
   tintColor: nativeDefault.colors.WHITE,
 };
-let closure_9 = createStyles(obj);
-ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(Pressables.PressableOpacity);
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj.lock = size1;
+let closure_9 = createStyles.createStyles(obj);
+let ReanimatedRexport = ReanimatedRexport_mod;
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5916).PressableOpacity);
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp4;
-      let tmp5;
-      let closure_0 = arg0;
-      const obj = react2;
-      const cResult = obj.c(20);
-      const obj2 = ReanimatedRexport2;
-      const sharedValue = obj2.useSharedValue(0);
-      const obj3 = ReanimatedRexport2;
-      const sharedValue1 = obj3.useSharedValue(0);
+      closure_0 = arg0;
+      const cResult = c.c(20);
+      const sharedValue = ReanimatedRexport2.useSharedValue(0);
+      const sharedValue1 = ReanimatedRexport2.useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function o() {
           const result = sharedValue.set(1);
         };
         cResult[0] = sharedValue;
-        let num = 1;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
@@ -128,36 +124,31 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = sharedValue;
         cResult[3] = fn2;
-        tmp5 = fn2;
+        let tmp5 = fn2;
       } else {
         tmp5 = cResult[3];
       }
       if (cResult[4] === arg0) {
-        let tmp6;
         if (cResult[5] === sharedValue1) {
-          tmp6 = cResult[6];
+          let tmp6 = cResult[6];
         }
         if (cResult[7] === arg0) {
           if (cResult[8] === sharedValue1) {
-            let tmp7;
             if (cResult[9] === sharedValue) {
-              tmp7 = cResult[10];
+              let tmp7 = cResult[10];
             }
-            const effect = react.useEffect(tmp6, tmp7);
+            const effect = noop.useEffect(tmp6, tmp7);
             if (cResult[11] === tmp4) {
-              let tmp10;
               if (cResult[12] === tmp5) {
-                tmp10 = cResult[13];
+                let tmp10 = cResult[13];
               }
               if (cResult[14] === sharedValue1) {
-                let tmp11;
                 if (cResult[15] === sharedValue) {
-                  tmp11 = cResult[16];
+                  let tmp11 = cResult[16];
                 }
                 if (cResult[17] === tmp10) {
-                  let tmp12;
                   if (cResult[18] === tmp11) {
-                    tmp12 = cResult[19];
+                    let tmp12 = cResult[19];
                   }
                   return tmp12;
                 }
@@ -189,11 +180,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn3 = function h() {
         let num = 0;
-        set = sharedValue1.set;
         if (closure_0) {
           num = 1;
         }
-        const result = set(num);
+        const result = sharedValue1.set(num);
       };
       cResult[4] = arg0;
       cResult[5] = sharedValue1;
@@ -201,27 +191,24 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn3;
     }
   : (arg0) => {
-      let closure_0 = arg0;
-      const obj = ReanimatedRexport2;
-      const sharedValue = obj.useSharedValue(0);
-      const obj2 = ReanimatedRexport2;
-      const sharedValue1 = obj2.useSharedValue(0);
+      closure_0 = arg0;
+      const sharedValue = ReanimatedRexport2.useSharedValue(0);
+      const sharedValue1 = ReanimatedRexport2.useSharedValue(0);
       const items = [sharedValue];
       const items1 = [sharedValue];
-      const callback = react.useCallback(() => {
+      const callback = noop.useCallback(() => {
         const result = sharedValue.set(1);
       }, items);
       const items2 = [arg0, sharedValue1, sharedValue];
-      const callback1 = react.useCallback(() => {
+      const callback1 = noop.useCallback(() => {
         const result = sharedValue.set(0);
       }, items1);
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         let num = 0;
-        set = sharedValue1.set;
         if (closure_0) {
           num = 1;
         }
-        const result = set(num);
+        const result = sharedValue1.set(num);
       }, items2);
       return {
         handlers: { pressIn: callback, pressOut: callback1 },
@@ -234,161 +221,148 @@ const __initData = {
 const __initData2 = {
   code: 'function SoundButtonTsx2(){const{animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG}=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+"deg"}]};}',
 };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? (animationConfig) => {
       _require = animationConfig;
-      let obj = require("ReanimatedRexport");
       const fn = function t() {
-        let items3;
         const pressed = animationConfig.sharedValues.pressed;
         const playing = animationConfig.sharedValues.playing;
-        const value = pressed.get();
-        let num = animationConfig.playingAnimationDelay;
+        value = pressed.get();
         const tmp3 = playing.get() > 0;
-        const withDelay = ReanimatedRexport2.withDelay;
-        ReanimatedRexport2;
+        let num = animationConfig.playingAnimationDelay;
         if (num == null) {
           num = 0;
         }
-        const withSpring = spring.withSpring;
-        spring;
+        const obj = ReanimatedRexport2;
+        const tmp4Result = spring;
         const playing2 = animationConfig.sharedValues.playing;
         const items = [1, animationConfig.scaleFactors.playing];
         const tmp4Result5 = ReanimatedRexport2;
-        const withDelayResult = withDelay(
+        const withDelayResult = obj.withDelay(
           num,
-          withSpring(tmp4Result5.interpolate(playing2.get(), [0, 1], items), SPRING_CONFIG),
+          tmp4Result.withSpring(ReanimatedRexport2.interpolate(playing2.get(), [0, 1], items), closure_8),
         );
-        const withSpring2 = spring.withSpring;
-        spring;
+        const tmp4Result6 = spring;
         const pressed2 = animationConfig.sharedValues.pressed;
         const items1 = [1, animationConfig.scaleFactors.pressed];
-        const tmp4Result7 = ReanimatedRexport2;
-        const withSpring2Result = withSpring2(tmp4Result7.interpolate(pressed2.get(), [0, 1], items1), SPRING_CONFIG);
-        let tmp11 = withSpring2Result;
+        const withSpringResult = tmp4Result6.withSpring(
+          ReanimatedRexport2.interpolate(pressed2.get(), [0, 1], items1),
+          closure_8,
+        );
+        let tmp8 = withSpringResult;
         if (0 === value) {
-          tmp11 = withSpring2Result;
+          tmp8 = withSpringResult;
           if (tmp3) {
-            tmp11 = withDelayResult;
+            tmp8 = withDelayResult;
           }
         }
-        const items2 = [{ scale: tmp11 }];
+        const items2 = [{ scale: tmp8 }];
+        const tmp4Result7 = ReanimatedRexport2;
         const pressed3 = animationConfig.sharedValues.pressed;
-        const interpolate = ReanimatedRexport2.interpolate;
         let num2;
-        ReanimatedRexport2;
-        const value2 = pressed3.get();
+        value2 = pressed3.get();
         if (animationConfig != null) {
           num2 = animationConfig.pressedRotationDegrees;
         }
         if (num2 == null) {
           num2 = 0;
         }
-        const obj = { transform: items2 };
-        const obj2 = { rotate: "" + interpolate(value2, [0, 1], items3) + "deg" };
-        items3 = [0, num2];
-        items2[1] = obj2;
-        return obj;
+        const obj2 = { transform: null };
+        const obj3 = { rotate: null };
+        const items3 = [0, num2];
+        obj3.rotate = "" + ReanimatedRexport2.interpolate(value2, [0, 1], items3) + "deg";
+        items2[1] = obj3;
+        obj2.transform = items2;
+        return obj2;
       };
-      let obj2 = {
+      let obj = require("ReanimatedRexport");
+      fn.__closure = {
         animationConfig,
         withDelay: require("ReanimatedRexport").withDelay,
         withSpring: require("spring").withSpring,
         interpolate: require("ReanimatedRexport").interpolate,
         SPRING_CONFIG,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 13932429225740;
       fn.__initData = __initData;
       return obj.useAnimatedStyle(fn);
     }
   : (animationConfig) => {
       _require = animationConfig;
-      let obj = require("ReanimatedRexport");
       const fn = function t() {
-        let items3;
         const pressed = animationConfig.sharedValues.pressed;
         const playing = animationConfig.sharedValues.playing;
-        const value = pressed.get();
-        let num = animationConfig.playingAnimationDelay;
+        value = pressed.get();
         const tmp3 = playing.get() > 0;
-        const withDelay = ReanimatedRexport2.withDelay;
-        ReanimatedRexport2;
+        let num = animationConfig.playingAnimationDelay;
         if (num == null) {
           num = 0;
         }
-        const withSpring = spring.withSpring;
-        spring;
+        const obj = ReanimatedRexport2;
+        const tmp4Result = spring;
         const playing2 = animationConfig.sharedValues.playing;
         const items = [1, animationConfig.scaleFactors.playing];
         const tmp4Result5 = ReanimatedRexport2;
-        const withDelayResult = withDelay(
+        const withDelayResult = obj.withDelay(
           num,
-          withSpring(tmp4Result5.interpolate(playing2.get(), [0, 1], items), SPRING_CONFIG),
+          tmp4Result.withSpring(ReanimatedRexport2.interpolate(playing2.get(), [0, 1], items), closure_8),
         );
-        const withSpring2 = spring.withSpring;
-        spring;
+        const tmp4Result6 = spring;
         const pressed2 = animationConfig.sharedValues.pressed;
         const items1 = [1, animationConfig.scaleFactors.pressed];
-        const tmp4Result7 = ReanimatedRexport2;
-        const withSpring2Result = withSpring2(tmp4Result7.interpolate(pressed2.get(), [0, 1], items1), SPRING_CONFIG);
-        let tmp11 = withSpring2Result;
+        const withSpringResult = tmp4Result6.withSpring(
+          ReanimatedRexport2.interpolate(pressed2.get(), [0, 1], items1),
+          closure_8,
+        );
+        let tmp8 = withSpringResult;
         if (0 === value) {
-          tmp11 = withSpring2Result;
+          tmp8 = withSpringResult;
           if (tmp3) {
-            tmp11 = withDelayResult;
+            tmp8 = withDelayResult;
           }
         }
-        const items2 = [{ scale: tmp11 }];
+        const items2 = [{ scale: tmp8 }];
+        const tmp4Result7 = ReanimatedRexport2;
         const pressed3 = animationConfig.sharedValues.pressed;
-        const interpolate = ReanimatedRexport2.interpolate;
         let num2;
-        ReanimatedRexport2;
-        const value2 = pressed3.get();
+        value2 = pressed3.get();
         if (animationConfig != null) {
           num2 = animationConfig.pressedRotationDegrees;
         }
         if (num2 == null) {
           num2 = 0;
         }
-        const obj = { transform: items2 };
-        const obj2 = { rotate: "" + interpolate(value2, [0, 1], items3) + "deg" };
-        items3 = [0, num2];
-        items2[1] = obj2;
-        return obj;
+        const obj2 = { transform: null };
+        const obj3 = { rotate: null };
+        const items3 = [0, num2];
+        obj3.rotate = "" + ReanimatedRexport2.interpolate(value2, [0, 1], items3) + "deg";
+        items2[1] = obj3;
+        obj2.transform = items2;
+        return obj2;
       };
-      let obj2 = {
+      let obj = require("ReanimatedRexport");
+      fn.__closure = {
         animationConfig,
         withDelay: require("ReanimatedRexport").withDelay,
         withSpring: require("spring").withSpring,
         interpolate: require("ReanimatedRexport").interpolate,
         SPRING_CONFIG,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 15726002162159;
       fn.__initData = __initData2;
       return obj.useAnimatedStyle(fn);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let emoji;
-      let emoji2;
-      let first;
-      let sharedValues;
-      let sound;
-      let tmp5;
-      let tmp8;
-      let tmp9;
-      const obj = react2;
-      const cResult = obj.c(21);
+      const cResult = c.c(21);
       ({ sound, sharedValues } = arg0);
       const tmp3 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { pressed: 0.8, playing: 1.2 };
         cResult[0] = obj2;
-        first = obj2;
+        let first = obj2;
       } else {
         first = cResult[0];
       }
@@ -396,7 +370,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { sharedValues, scaleFactors: first };
         cResult[1] = sharedValues;
         cResult[2] = obj3;
-        tmp5 = obj3;
+        let tmp5 = obj3;
       } else {
         tmp5 = cResult[2];
       }
@@ -404,7 +378,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { pressed: 0.7200000000000001, playing: 1.08 };
         cResult[3] = obj4;
-        tmp8 = obj4;
+        let tmp8 = obj4;
       } else {
         tmp8 = cResult[3];
       }
@@ -412,23 +386,21 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { sharedValues, scaleFactors: tmp8, playingAnimationDelay: 100, pressedRotationDegrees: -15 };
         cResult[4] = sharedValues;
         cResult[5] = obj5;
-        tmp9 = obj5;
+        let tmp9 = obj5;
       } else {
         tmp9 = cResult[5];
       }
       const tmp6Result = closure_14(tmp9);
       if (cResult[6] === tmp7) {
-        let tmp11;
-        let tmp12;
         if (cResult[7] === tmp3.emojiWrapper) {
-          tmp11 = cResult[8];
+          let tmp11 = cResult[8];
         }
         ({ emoji, emoji: emoji2 } = tmp3);
         if (cResult[9] !== sound) {
           const tmp14 = getSoundboardEmojiUrlDefault(sound, 24);
           cResult[9] = sound;
           cResult[10] = tmp14;
-          tmp12 = tmp14;
+          let tmp12 = tmp14;
         } else {
           tmp12 = cResult[10];
         }
@@ -438,19 +410,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[11] === tmp3.emoji) {
           if (cResult[12] === tmp12) {
-            let tmp16;
             if (cResult[13] === str) {
-              tmp16 = cResult[14];
+              let tmp16 = cResult[14];
             }
             if (cResult[15] === tmp6Result) {
-              let tmp20;
               if (cResult[16] === tmp16) {
-                tmp20 = cResult[17];
+                let tmp20 = cResult[17];
               }
               if (cResult[18] === tmp20) {
-                let tmp24;
                 if (cResult[19] === tmp11) {
-                  tmp24 = cResult[20];
+                  let tmp24 = cResult[20];
                 }
                 return tmp24;
               }
@@ -484,67 +453,57 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = items;
     }
   : (arg0) => {
-      let items;
-      let obj2;
-      let obj3;
-      let sharedValues;
-      let sound;
-      let str;
-      let tmp5;
       ({ sound, sharedValues } = arg0);
       const tmp = closure_9();
-      const obj = { style: items, children: hasOwnProperty(closure_7, obj2) };
-      items = [tmp.emojiWrapper, closure_14({ sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } })];
-      closure_14({ sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } });
-      obj2 = {
+      const obj = { style: null, children: null };
+      const items = [tmp.emojiWrapper, closure_14({ sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } })];
+      obj.style = items;
+      const obj2 = {
         style: closure_14({
           sharedValues,
           scaleFactors: { pressed: 0.7200000000000001, playing: 1.08 },
           playingAnimationDelay: 100,
           pressedRotationDegrees: -15,
         }),
-        children: hasOwnProperty(tmp5, obj3),
+        children: null,
       };
-      obj3 = {
-        fastImageStyle: tmp.emoji,
-        textEmojiStyle: tmp.emoji,
-        src: getSoundboardEmojiUrlDefault(sound, 24),
-        name: str,
-      };
-      str = sound.emojiName;
-      tmp5 = EmojiDefault;
+      const obj3 = { fastImageStyle: tmp.emoji, textEmojiStyle: tmp.emoji, src: null, name: null };
+      const tmp2 = closure_14({ sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } });
+      obj3.src = getSoundboardEmojiUrlDefault(sound, 24);
+      let str = sound.emojiName;
       if (str == null) {
         str = "";
       }
+      obj3.name = str;
+      obj2.children = hasOwnProperty(EmojiDefault, obj3);
+      obj.children = hasOwnProperty(closure_7, obj2);
       return hasOwnProperty(closure_7, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
+ReactCompilerGating = fn(558);
+let obj5 = { borderStyle: "solid", borderWidth: 2, borderColor: nativeDefault.colors.STATUS_SPEAKING };
+size = fn(2);
+let result = size.fileFinishedImporting("modules/soundboard/native/SoundButton.tsx");
+
+export const SoundButton = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (sound) => {
-        let isSectionLocked;
-        let items;
-        let items1;
-        let lockedAccessibilityHint;
-        let onLockedPress;
-        let soundGridLocation;
-        let style;
-        let obj = sound(soundGridLocation[10]);
-        const cResult = obj.c(56);
+        const cResult = sound(soundGridLocation[10]).c(56);
         sound = sound.sound;
         const channel = sound.channel;
         soundGridLocation = sound.soundGridLocation;
         ({ style, isSectionLocked } = sound);
-        const tmpResult = sound(soundGridLocation[14]);
-        const buttonWidth = tmpResult.useSoundButtonStyleConfig().buttonWidth;
+        let obj = sound(soundGridLocation[10]);
+        const buttonWidth = sound(soundGridLocation[14]).useSoundButtonStyleConfig().buttonWidth;
         const tmp6 = closure_9();
         const tmp7 = channel(soundGridLocation[15])(sound, channel.id);
         const playSoundboardSound = tmp7.playSoundboardSound;
         const isPlayingSound = tmp7.isPlayingSound;
+        const tmpResult = sound(soundGridLocation[14]);
+        const analyticsLocations = channel(soundGridLocation[16])(
+          channel(tmp2[17]).SOUNDBOARD_BUTTON,
+        ).analyticsLocations;
         const tmp8 = channel(soundGridLocation[16]);
-        const analyticsLocations = tmp8(channel(tmp2[17]).SOUNDBOARD_BUTTON).analyticsLocations;
-        const tmpResult2 = sound(soundGridLocation[18]);
-        const soundboardSoundLock = tmpResult2.useSoundboardSoundLock(sound, channel);
+        const soundboardSoundLock = sound(soundGridLocation[18]).useSoundboardSoundLock(sound, channel);
         const isLocked = soundboardSoundLock.isLocked;
         ({ lockedAccessibilityHint, onLockedPress } = soundboardSoundLock);
         if (cResult[0] === analyticsLocations) {
@@ -552,18 +511,15 @@ const memoResult = react.memo(
             if (cResult[2] === onLockedPress) {
               if (cResult[3] === playSoundboardSound) {
                 if (cResult[4] === isLocked) {
-                  let tmp10;
-                  let tmp14;
-                  let tmp15;
                   if (cResult[5] === soundGridLocation) {
-                    tmp10 = cResult[6];
+                    let tmp10 = cResult[6];
                   }
                   const tmp12 = closure_11(isPlayingSound);
                   const _Symbol = Symbol;
                   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-                    let obj2 = { pressed: 0.95, playing: 1.05 };
+                    const obj2 = { pressed: 0.95, playing: 1.05 };
                     cResult[7] = obj2;
-                    tmp14 = obj2;
+                    let tmp14 = obj2;
                   } else {
                     tmp14 = cResult[7];
                   }
@@ -571,7 +527,7 @@ const memoResult = react.memo(
                     const obj3 = { sharedValues: tmp12.sharedValues, scaleFactors: tmp14 };
                     cResult[8] = tmp12.sharedValues;
                     cResult[9] = obj3;
-                    tmp15 = obj3;
+                    let tmp15 = obj3;
                   } else {
                     tmp15 = cResult[9];
                   }
@@ -580,16 +536,14 @@ const memoResult = react.memo(
                   if (cResult[10] === analyticsLocations) {
                     if (cResult[11] === channel) {
                       if (cResult[12] === sound) {
-                        let tmp19;
-                        let tmp20;
                         if (cResult[13] === soundGridLocation) {
-                          tmp19 = cResult[14];
+                          let tmp19 = cResult[14];
                         }
                         if (cResult[15] !== buttonWidth) {
                           const obj4 = { width: buttonWidth };
                           cResult[15] = buttonWidth;
                           cResult[16] = obj4;
-                          tmp20 = obj4;
+                          let tmp20 = obj4;
                         } else {
                           tmp20 = cResult[16];
                         }
@@ -604,7 +558,7 @@ const memoResult = react.memo(
                         let buttonDisabled = null;
                         if (isLocked) {
                           buttonDisabled = null;
-                          if (!(undefined !== isSectionLocked && isSectionLocked)) {
+                          if (!tmp4) {
                             buttonDisabled = tmp6.buttonDisabled;
                           }
                         }
@@ -614,34 +568,29 @@ const memoResult = react.memo(
                               if (cResult[20] === tmp20) {
                                 if (cResult[21] === buttonPressed) {
                                   if (cResult[22] === buttonPlaying) {
-                                    let tmp24;
                                     if (cResult[23] === buttonDisabled) {
-                                      tmp24 = cResult[24];
+                                      let tmp24 = cResult[24];
                                     }
                                     if (cResult[25] === isPlayingSound) {
-                                      let tmp25;
                                       if (cResult[26] === tmp6.playingBackground) {
-                                        tmp25 = cResult[27];
+                                        let tmp25 = cResult[27];
                                       }
                                       if (cResult[28] === tmp12.sharedValues) {
-                                        if (cResult[29] === (null != sound.emojiId || null != sound.emojiName)) {
-                                          let tmp29;
+                                        if (cResult[29] === tmp5) {
                                           if (cResult[30] === sound) {
-                                            tmp29 = cResult[31];
+                                            let tmp29 = cResult[31];
                                           }
                                           let textPlaying = null;
                                           if (isPlayingSound) {
                                             textPlaying = tmp6.textPlaying;
                                           }
                                           if (cResult[32] === tmp6.text) {
-                                            let tmp34;
                                             if (cResult[33] === textPlaying) {
-                                              tmp34 = cResult[34];
+                                              let tmp34 = cResult[34];
                                             }
                                             if (cResult[35] === sound.name) {
-                                              let tmp35;
                                               if (cResult[36] === tmp34) {
-                                                tmp35 = cResult[37];
+                                                let tmp35 = cResult[37];
                                               }
                                               if (cResult[38] === tmp12.handlers.pressIn) {
                                                 if (cResult[39] === tmp12.handlers.pressOut) {
@@ -652,28 +601,23 @@ const memoResult = react.memo(
                                                           if (cResult[44] === tmp24) {
                                                             if (cResult[45] === tmp25) {
                                                               if (cResult[46] === tmp29) {
-                                                                let tmp38;
                                                                 if (cResult[47] === tmp35) {
-                                                                  tmp38 = cResult[48];
+                                                                  let tmp38 = cResult[48];
                                                                 }
-                                                                if (
-                                                                  cResult[49] ===
-                                                                  (undefined !== isSectionLocked && isSectionLocked)
-                                                                ) {
+                                                                if (cResult[49] === tmp4) {
                                                                   if (cResult[50] === isLocked) {
-                                                                    let tmp42;
                                                                     if (cResult[51] === tmp6.lock) {
-                                                                      tmp42 = cResult[52];
+                                                                      let tmp42 = cResult[52];
                                                                     }
                                                                     if (cResult[53] === tmp38) {
-                                                                      let tmp45;
                                                                       if (cResult[54] === tmp42) {
-                                                                        tmp45 = cResult[55];
+                                                                        let tmp45 = cResult[55];
                                                                       }
                                                                       return tmp45;
                                                                     }
-                                                                    const obj5 = { children: items };
-                                                                    items = [tmp38, tmp42];
+                                                                    const obj5 = { children: null };
+                                                                    const items = [tmp38, tmp42];
+                                                                    obj5.children = items;
                                                                     const tmp48 = onLockedPress(
                                                                       analyticsLocations,
                                                                       obj5,
@@ -682,7 +626,7 @@ const memoResult = react.memo(
                                                                     cResult[54] = tmp42;
                                                                     class E {
                                                                       constructor() {
-                                                                        openSoundboardSoundPreviewActionSheetDefault(
+                                                                        tmp = closure_1(closure_2[20])(
                                                                           channel,
                                                                           sound,
                                                                           analyticsLocations[
@@ -690,19 +634,22 @@ const memoResult = react.memo(
                                                                           ],
                                                                           soundGridLocation,
                                                                         );
+                                                                        return;
                                                                       }
                                                                     }
                                                                     cResult[55] = tmp48;
                                                                     tmp45 = tmp48;
                                                                   }
                                                                 }
-                                                                let tmp43 = isLocked && !tmp4;
+                                                                let tmp43 = isLocked;
+                                                                if (isLocked) {
+                                                                  tmp43 = !tmp4;
+                                                                }
                                                                 if (tmp43) {
                                                                   const obj6 = { style: tmp6.lock };
                                                                   tmp43 = isLocked(tmp(tmp2[22]).LockIcon, obj6);
                                                                 }
-                                                                cResult[49] =
-                                                                  undefined !== isSectionLocked && isSectionLocked;
+                                                                cResult[49] = tmp4;
                                                                 cResult[50] = isLocked;
                                                                 cResult[51] = tmp6.lock;
                                                                 cResult[52] = tmp43;
@@ -725,20 +672,22 @@ const memoResult = react.memo(
                                                 onPressOut: tmp12.handlers.pressOut,
                                                 onPress: tmp10,
                                                 onLongPress: tmp19,
-                                                children: items1,
+                                                children: null,
                                               };
-                                              items1 = [tmp25, ,];
+                                              const items1 = [tmp25, ,];
                                               class E {
                                                 constructor() {
-                                                  openSoundboardSoundPreviewActionSheetDefault(
+                                                  tmp = closure_1(closure_2[20])(
                                                     channel,
                                                     sound,
                                                     analyticsLocations[analyticsLocations.length - 1],
                                                     soundGridLocation,
                                                   );
+                                                  return;
                                                 }
                                               }
                                               items1[2] = tmp35;
+                                              obj7.children = items1;
                                               const tmp41 = onLockedPress(closure_10, obj7);
                                               cResult[38] = tmp12.handlers.pressIn;
                                               cResult[39] = tmp12.handlers.pressOut;
@@ -759,7 +708,7 @@ const memoResult = react.memo(
                                               variant: "text-sm/semibold",
                                               children: sound.name,
                                             };
-                                            const tmp37 = isLocked(sound(soundGridLocation[21]).Text, obj8);
+                                            const tmp37 = isLocked(tmp(tmp2[21]).Text, obj8);
                                             cResult[35] = sound.name;
                                             cResult[36] = tmp34;
                                             cResult[37] = tmp37;
@@ -773,18 +722,18 @@ const memoResult = react.memo(
                                         }
                                       }
                                       let tmp30 = tmp5;
-                                      if (tmp30) {
+                                      if (tmp5) {
                                         const obj9 = { sharedValues: tmp12.sharedValues, sound };
                                         tmp30 = isLocked(closure_15, obj9);
                                       }
                                       cResult[28] = tmp12.sharedValues;
-                                      cResult[29] = null != sound.emojiId || null != sound.emojiName;
+                                      cResult[29] = tmp5;
                                       cResult[30] = sound;
                                       cResult[31] = tmp30;
                                       tmp29 = tmp30;
                                     }
                                     let tmp26 = isPlayingSound;
-                                    if (tmp26) {
+                                    if (isPlayingSound) {
                                       const obj10 = { style: tmp6.playingBackground };
                                       tmp26 = isLocked(analyticsLocations, obj10);
                                     }
@@ -801,12 +750,13 @@ const memoResult = react.memo(
                         const items3 = [tmp6.button, tmp20, buttonPressed, tmp17, , ,];
                         class E {
                           constructor() {
-                            openSoundboardSoundPreviewActionSheetDefault(
+                            tmp = closure_1(closure_2[20])(
                               channel,
                               sound,
                               analyticsLocations[analyticsLocations.length - 1],
                               soundGridLocation,
                             );
+                            return;
                           }
                         }
                         items3[5] = buttonDisabled;
@@ -825,12 +775,13 @@ const memoResult = react.memo(
                   }
                   class E {
                     constructor() {
-                      openSoundboardSoundPreviewActionSheetDefault(
+                      tmp = closure_1(closure_2[20])(
                         channel,
                         sound,
                         analyticsLocations[analyticsLocations.length - 1],
                         soundGridLocation,
                       );
+                      return;
                     }
                   }
                   cResult[10] = analyticsLocations;
@@ -845,16 +796,14 @@ const memoResult = react.memo(
           }
         }
         const fn = function o() {
-          let initialScrollLocation;
           if (isLocked) {
             onLockedPress(() => {
               const obj = sound(soundGridLocation[19]);
-              const obj2 = {
+              const result = obj.openSoundboardSoundPickerActionSheet({
                 channel,
                 analyticsSource: channel(soundGridLocation[17]).PREMIUM_UPSELL,
                 initialScrollLocation,
-              };
-              const result = obj.openSoundboardSoundPickerActionSheet(obj2);
+              });
             });
           } else {
             playSoundboardSound(analyticsLocations);
@@ -868,14 +817,13 @@ const memoResult = react.memo(
         cResult[5] = soundGridLocation;
         cResult[6] = fn;
         tmp10 = fn;
+        const tmpResult2 = sound(soundGridLocation[18]);
       }
     : (sound) => {
-        let items3;
         sound = sound.sound;
         const channel = sound.channel;
         const soundGridLocation = sound.soundGridLocation;
         let flag = sound.isSectionLocked;
-        const style = sound.style;
         if (flag === undefined) {
           flag = false;
         }
@@ -883,9 +831,7 @@ const memoResult = react.memo(
         let analyticsLocations;
         let isLocked;
         let onLockedPress;
-        let obj = sound(soundGridLocation[14]);
         let tmp3 = null != sound.emojiId;
-        const buttonWidth = obj.useSoundButtonStyleConfig().buttonWidth;
         if (!tmp3) {
           tmp3 = null != sound.emojiName;
         }
@@ -893,38 +839,35 @@ const memoResult = react.memo(
         const tmp5 = channel(soundGridLocation[15])(sound, channel.id);
         playSoundboardSound = tmp5.playSoundboardSound;
         const isPlayingSound = tmp5.isPlayingSound;
-        const tmp6 = channel(tmp2[16]);
-        analyticsLocations = tmp6(channel(tmp2[17]).SOUNDBOARD_BUTTON).analyticsLocations;
-        const tmpResult = sound(soundGridLocation[18]);
-        const soundboardSoundLock = tmpResult.useSoundboardSoundLock(sound, channel);
+        let obj = sound(soundGridLocation[14]);
+        analyticsLocations = channel(soundGridLocation[16])(channel(tmp2[17]).SOUNDBOARD_BUTTON).analyticsLocations;
+        const tmp6 = channel(soundGridLocation[16]);
+        const soundboardSoundLock = sound(soundGridLocation[18]).useSoundboardSoundLock(sound, channel);
         isLocked = soundboardSoundLock.isLocked;
         onLockedPress = soundboardSoundLock.onLockedPress;
         const items = [analyticsLocations, onLockedPress, channel, soundGridLocation, playSoundboardSound, isLocked];
-        const lockedAccessibilityHint = soundboardSoundLock.lockedAccessibilityHint;
         const callback = playSoundboardSound.useCallback(() => {
-          let initialScrollLocation;
           if (isLocked) {
             onLockedPress(() => {
               const obj = sound(soundGridLocation[19]);
-              const obj2 = {
+              const result = obj.openSoundboardSoundPickerActionSheet({
                 channel,
                 analyticsSource: channel(soundGridLocation[17]).PREMIUM_UPSELL,
                 initialScrollLocation,
-              };
-              const result = obj.openSoundboardSoundPickerActionSheet(obj2);
+              });
             });
           } else {
             playSoundboardSound(analyticsLocations);
           }
         }, items);
         const tmp9 = closure_11(isPlayingSound);
-        let obj2 = { sharedValues: tmp9.sharedValues, scaleFactors: { pressed: 0.95, playing: 1.05 } };
         const pressed = tmp9.sharedValues.pressed;
+        const obj2 = { sharedValues: tmp9.sharedValues, scaleFactors: { pressed: 0.95, playing: 1.05 } };
+        const tmpResult = sound(soundGridLocation[18]);
         const items1 = [channel, sound, soundGridLocation, analyticsLocations];
-        const items2 = [tmp4.button, { width: buttonWidth }, , , , ,];
+        const tmp10 = closure_14({ sharedValues: tmp9.sharedValues, scaleFactors: { pressed: 0.95, playing: 1.05 } });
+        const items2 = [tmp4.button, { width: obj.useSoundButtonStyleConfig().buttonWidth }, , , , ,];
         let buttonPressed = null;
-        const tmp10 = closure_14(obj2);
-        const tmp11 = pressed.get() > 0;
         const callback1 = playSoundboardSound.useCallback(() => {
           openSoundboardSoundPreviewActionSheetDefault(
             channel,
@@ -954,21 +897,21 @@ const memoResult = react.memo(
           style: items2,
           accessibilityRole: "button",
           accessibilityLabel: sound.name,
-          accessibilityHint: lockedAccessibilityHint,
+          accessibilityHint: soundboardSoundLock.lockedAccessibilityHint,
           onPressIn: tmp9.handlers.pressIn,
           onPressOut: tmp9.handlers.pressOut,
           onPress: callback,
           onLongPress: callback1,
-          children: items3,
+          children: null,
         };
         items2[5] = buttonDisabled;
-        items2[6] = style;
+        items2[6] = sound.style;
         let tmp19 = isPlayingSound;
-        if (tmp19) {
+        if (isPlayingSound) {
           const obj4 = { style: tmp4.playingBackground };
           tmp19 = isLocked(tmp14, obj4);
         }
-        items3 = [tmp19, ,];
+        const items3 = [tmp19, ,];
         if (tmp3) {
           const obj5 = { sharedValues: tmp9.sharedValues, sound };
           tmp3 = isLocked(closure_15, obj5);
@@ -976,13 +919,17 @@ const memoResult = react.memo(
         items3[1] = tmp3;
         const items4 = [tmp4.text];
         let textPlaying = null;
-        const Text = tmp(tmp2[21]).Text;
         if (isPlayingSound) {
           textPlaying = tmp4.textPlaying;
         }
-        const obj6 = { lineClamp: 1, style: items4, variant: "text-sm/semibold", children: sound.name };
         items4[1] = textPlaying;
-        items3[2] = isLocked(Text, obj6);
+        items3[2] = isLocked(sound(soundGridLocation[21]).Text, {
+          lineClamp: 1,
+          style: items4,
+          variant: "text-sm/semibold",
+          children: sound.name,
+        });
+        obj3.children = items3;
         const children = [onLockedPress(closure_10, obj3)];
         if (isLocked) {
           isLocked = !flag;
@@ -995,7 +942,3 @@ const memoResult = react.memo(
         return onLockedPress(analyticsLocations, { children });
       },
 );
-size = size_mod;
-let result = size.fileFinishedImporting("modules/soundboard/native/SoundButton.tsx");
-
-export const SoundButton = memoResult;

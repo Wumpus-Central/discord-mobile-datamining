@@ -1,343 +1,322 @@
 // discord_app/modules/auth/native/components/utils/useIdentityRegistrationStep.tsx
-import Constants from "../../../../../Constants.tsx";
-import intl3 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import PhoneOrEmailUtils from "../../../../phone/PhoneOrEmailUtils.tsx";
-import ValidationUtilsDefault from "../../../../../utils/ValidationUtils.tsx";
-import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray_mod from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../../_runtime/00019_react.js";
-import RegistrationUIStore from "../../RegistrationUIStore.tsx";
-import RegistrationConstants from "../../../RegistrationConstants.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, closure_5, closure_8, importDefault, navigation, phone, ref, step;
 
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let unpackModuleId;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
+require = fn;
+const RegistrationUIStore = fn(15906);
 ({
   setRegistrationErrors: metroRequire,
-  updateRegistrationOptions: metroImportDefault,
-  useRegistrationUIStore: metroImportAll,
+  updateRegistrationOptions: closure_7,
+  useRegistrationUIStore: closure_8,
 } = RegistrationUIStore);
+const RegistrationConstants = fn(15907);
 ({
-  authStateToRegisterTransitionStep: c9,
+  authStateToRegisterTransitionStep: closure_9,
   RegisterTransitionSteps: c10,
-  RegistrationTransitionActionTypes: unpackModuleId,
+  RegistrationTransitionActionTypes: closure_11,
 } = RegistrationConstants);
-const AbortCodes = Constants.AbortCodes;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const AbortCodes = fn(1085).AbortCodes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
+
+export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_4;
-      let closure_6;
-      let context;
-      let first;
-      let obj3;
       _require = arg0;
+      const cResult = require("c").c(21);
+      let obj = require("c");
       const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(21);
-      let obj2 = require("useNavigation");
-      navigation = obj2.useNavigation();
       const tmp2 = context;
+      const navigation = require("useNavigation").useNavigation();
       context = first.useContext(require("Auth").TrackRegistrationContext);
-      [_asyncToGenerator] = first.useState("");
+      let obj2 = require("useNavigation");
+      asyncGeneratorStep = _slicedToArray(first.useState(""), 2)[0];
       _slicedToArray = first.useRef("");
       [first, closure_6] = first.useState("");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
-          constructor(arg0, current) {
-            closure_6(arg0);
-            closure_4.current = current;
+          constructor(arg0, arg1) {
+            tmp = closure_6(arg0);
+            closure_4.current = arg1;
+            return;
           }
         }
         cResult[0] = R;
       } else {
         class R {
-          constructor(arg0, current) {
-            closure_6(arg0);
-            closure_4.current = current;
+          constructor(arg0, arg1) {
+            tmp = closure_6(arg0);
+            closure_4.current = arg1;
+            return;
           }
         }
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         class F {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return arg0.errors;
           }
         }
         cResult[1] = F;
       } else {
         class F {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return arg0.errors;
           }
         }
       }
       const tmp11 = closure_8(F);
-      if (tmp11.error_code === AbortCodes.PHONE_CARRIER_TYPE_NOT_MOBILE) {
+      if (tmp11.error_code !== AbortCodes.PHONE_CARRIER_TYPE_NOT_MOBILE) {
         class F {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return arg0.errors;
           }
         }
-        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        if (tmp11.error_code !== tmp12.INVALID_PHONE_NUMBER) {
           class F {
-            constructor(errors) {
-              return errors.errors;
+            constructor(arg0) {
+              return arg0.errors;
             }
           }
-          let stringResult = obj3.string(tmp(tmp2[10]).t.F8UYVY);
-          cResult[2] = stringResult;
-        } else {
-          class F {
-            constructor(errors) {
-              return errors.errors;
-            }
-          }
-        }
-      } else {
-        class F {
-          constructor(errors) {
-            return errors.errors;
-          }
-        }
-      }
-      if (cResult[3] === arg0) {
-        class F {
-          constructor(errors) {
-            return errors.errors;
-          }
-        }
-      }
-      _require = _asyncToGenerator(async (sourceState) => {
-        let c6 = 0;
-        let c7 = 0;
-        let c5 = 0;
-        return (async (arg0) => {
-          let intl;
-          let intl2;
-          let items;
-          let items1;
-          let obj13;
-          let obj14;
-          if (c7 === 2) {
-            c7 = 3;
-            let str = "Generator functions may not be called on executing generators";
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              let obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let tmp51;
-            try {
-              let found;
-              c7 = 2;
-              if (0 === c6) {
+          _require = asyncGeneratorStep(async (sourceState) => {
+            c6 = 0;
+            c7 = 0;
+            c5 = 0;
+            return (async (arg0) => {
+              if (c7 === 2) {
+                c7 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp7 === 3) {
                 if (arg0 === 1) {
-                  c7 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c7 = 3;
-                  return { value, done: true };
+                  let obj3 = { value, done: true };
+                  return obj3;
                 } else {
-                  closure_3 = undefined;
-                  tmp51 = undefined;
-                  found = undefined;
-                  const sum = tmp51.current + c5;
-                  phone = sum;
-                  const obj7 = { email: "Array", phone: sum };
-                  closure_2_7(obj7);
-                  step = closure_2_9(sourceState);
-                  c5 = 1;
-                  c6 = 2;
-                  c7 = 1;
-                  const obj8 = { phone: sum };
-                  const obj9 = { value: obj14.registerPhone(obj8), done: false };
-                  obj14 = sourceState(context[11]);
-                  return obj9;
-                }
-              } else if (1 === tmp5) {
-                c5 = 0;
-                closure_3 = tmp51;
-                found = closure_3;
-                if (closure_3 instanceof sourceState(context[12]).CaptchaCancelError) {
-                  c7 = 3;
                   return { value: "IconComponent", done: null };
-                } else {
-                  let obj3 = sourceState(context[13]);
-                  tmp51 = obj3.getAuthenticationErrorsFromAPIError(closure_3);
-                  closure_2_6(tmp51);
-                  const _Object = Object;
-                  const keys = Object.keys(tmp51);
-                  found = keys.filter((item) => {
-                    const items = ["phone"];
-                    return items.includes(item);
-                  });
-                  if (found.length > 0) {
-                    if (null != tmp51.error_code) {
-                      found = { step, actionType: constants2.RESPONSE_ERROR, details: items };
-                      items = [];
-                      phone = HermesBuiltin.arraySpread(items, found, 0);
-                      const obj5 = sourceState(context[14]);
-                      items[phone] = obj5.getCommonErrorDetails(tmp51.error_code);
-                      phone = phone + 1;
-                      found(found);
-                    }
-                    c7 = 3;
-                    return { value: undefined, done: true };
-                  }
-                  const tmp26 = null != tmp51.error_code && null != tmp51.message;
-                  if (tmp26) {
-                    found = { step, actionType: constants2.RESPONSE_ERROR, details: items1 };
-                    let obj4 = sourceState(context[14]);
-                    items1 = [obj4.getCommonErrorDetails(tmp51.error_code)];
-                    found(found);
-                  }
                 }
-              } else if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c5 = 0;
-                c7 = 3;
-                let obj = { value, done: true };
-                return obj;
               } else {
-                const obj11 = { step, toStep: constants.PHONE_VERIFICATION, actionType: constants2.SUCCESS };
-                found(obj11);
-                c5 = 0;
-                const push = phone.push;
-                const obj12 = {
-                  title: intl.string(sourceState(context[10]).t.h7hdQh),
-                  description: intl2.formatToPlainString(sourceState(context[10]).t.e5WzVa, obj13),
-                  phone,
-                  sourceState,
-                  onPhoneTokenReceived(phoneToken) {
-                    let obj3;
-                    const obj = { email: "r", phone, phoneToken };
-                    closure_3_7(obj);
-                    const obj2 = {
-                      step: constants.PHONE_VERIFICATION,
-                      toStep: obj3.getNextRegistrationTransitionStep(closure_0),
+                try {
+                  c7 = 2;
+                  if (0 === c6) {
+                    if (arg0 === 1) {
+                      c7 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c7 = 3;
+                      const obj5 = { value, done: true };
+                      return obj5;
+                    } else {
+                      closure_3 = tmp3;
+                      closure_130_0 = sourceState;
+                      closure_130_1 = undefined;
+                      closure_130_2 = undefined;
+                      closure_130_3 = undefined;
+                      let authenticationErrorsFromAPIError;
+                      closure_130_5 = undefined;
+                      const sum = tmp55.current + c5;
+                      closure_130_1 = sum;
+                      const obj7 = { email: "Array", phone: sum };
+                      closure_2_7(obj7);
+                      closure_130_2 = closure_2_9(sourceState);
+                      c5 = 1;
+                      const obj8 = { phone: sum };
+                      c6 = 2;
+                      c7 = 1;
+                      const obj9 = { value: sourceState(context[11]).registerPhone(obj8), done: false };
+                      return obj9;
+                    }
+                  } else if (1 === tmp8) {
+                    c5 = 0;
+                    closure_130_3 = tmp55;
+                    if (closure_130_3 instanceof sourceState(context[12]).CaptchaCancelError) {
+                      c7 = 3;
+                      return { value: "IconComponent", done: null };
+                    } else {
+                      authenticationErrorsFromAPIError = sourceState(context[13]).getAuthenticationErrorsFromAPIError(
+                        closure_130_3,
+                      );
+                      v2(authenticationErrorsFromAPIError);
+                      const _Object = Object;
+                      const keys = Object.keys(authenticationErrorsFromAPIError);
+                      closure_130_5 = keys.filter((item) => {
+                        const items = ["phone"];
+                        return items.includes(item);
+                      });
+                      if (closure_130_5.length <= 0) {
+                        let tmp30 = null != authenticationErrorsFromAPIError.error_code;
+                        if (tmp30) {
+                          tmp30 = null != authenticationErrorsFromAPIError.message;
+                        }
+                        if (tmp30) {
+                          const obj10 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
+                          let items = [
+                            sourceState(context[14]).getCommonErrorDetails(authenticationErrorsFromAPIError.error_code),
+                          ];
+                          obj10.details = items;
+                          tmp5(obj10);
+                          let obj4 = sourceState(context[14]);
+                        }
+                        c7 = 3;
+                      }
+                      const obj11 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
+                      let phone = 0;
+                      const items1 = [];
+                      phone = HermesBuiltin.arraySpread(closure_130_5, 0);
+                      let obj2 = sourceState(context[13]);
+                      items1[phone] = sourceState(context[14]).getCommonErrorDetails(
+                        authenticationErrorsFromAPIError.error_code,
+                      );
+                      phone = phone + 1;
+                      obj11.details = items1;
+                      tmp5(obj11);
+                      const obj6 = sourceState(context[14]);
+                    }
+                  } else if (arg0 === 1) {
+                    c7 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c5 = 0;
+                    c7 = 3;
+                    let obj = { value, done: true };
+                    return obj;
+                  } else {
+                    const obj12 = {
+                      step: closure_130_2,
+                      toStep: constants.PHONE_VERIFICATION,
                       actionType: constants2.SUCCESS,
                     };
-                    obj3 = closure_0(context[16]);
-                    found(obj2);
-                    const obj4 = closure_0(context[16]);
-                    const nextAuthState = obj4.getNextAuthState(closure_0);
-                    const dispatch = phone.dispatch;
-                    const str = closure_0(context[17]).StackActions;
-                    dispatch(str.replace(nextAuthState));
-                  },
-                  onBail() {
-                    c6("");
-                    phone.pop();
-                    sourceState();
-                  },
-                };
-                const VERIFY_PHONE = sourceState(context[15]).AuthStates.VERIFY_PHONE;
-                intl = sourceState(context[10]).intl;
-                intl2 = sourceState(context[10]).intl;
-                obj13 = { phone };
-                push(VERIFY_PHONE, obj12);
-                c7 = 3;
-                return { value: "IconComponent", done: null };
+                    tmp5(obj12);
+                    c5 = 0;
+                    const obj13 = {
+                      title: null,
+                      description: null,
+                      phone: null,
+                      sourceState: null,
+                      onPhoneTokenReceived: null,
+                      onBail: null,
+                    };
+                    const intl = sourceState(context[10]).intl;
+                    obj13.title = intl.string(sourceState(context[10]).t.h7hdQh);
+                    const intl2 = sourceState(context[10]).intl;
+                    const obj15 = { phone: closure_130_1 };
+                    obj13.description = intl2.formatToPlainString(sourceState(context[10]).t.e5WzVa, obj15);
+                    obj13.phone = closure_130_1;
+                    obj13.sourceState = sourceState;
+                    obj13.onPhoneTokenReceived = function onPhoneTokenReceived(phoneToken) {
+                      const obj = { email: "r", phone, phoneToken };
+                      closure_3_7(obj);
+                      const obj2 = {
+                        step: constants.PHONE_VERIFICATION,
+                        toStep: closure_0(context[16]).getNextRegistrationTransitionStep(closure_0),
+                        actionType: constants2.SUCCESS,
+                      };
+                      closure_2(obj2);
+                      const obj3 = closure_0(context[16]);
+                      const nextAuthState = closure_0(context[16]).getNextAuthState(closure_0);
+                      const obj4 = closure_0(context[16]);
+                      phone.dispatch(closure_0(context[17]).StackActions.replace(nextAuthState));
+                    };
+                    obj13.onBail = function onBail() {
+                      c6("");
+                      phone.pop();
+                      sourceState();
+                    };
+                    phone.push(sourceState(context[15]).AuthStates.VERIFY_PHONE, obj13);
+                    c7 = 3;
+                    return { value: "IconComponent", done: null };
+                  }
+                } catch (tmp55) {
+                  if (tmp4 === c5) {
+                    c7 = tmp2;
+                    throw tmp55;
+                  } else {
+                    c6 = tmp;
+                  }
+                }
               }
-            } catch (tmp51) {
-              if (0 === c5) {
-                c7 = 3;
-                throw tmp51;
-              } else {
-                c6 = 1;
-              }
+            })();
+          });
+          const fn = function () {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
             }
+            return applyArgumentsResult;
+          };
+          cResult[3] = arg0;
+          cResult[4] = first;
+          cResult[5] = navigation;
+          cResult[6] = context;
+          cResult[7] = fn;
+        }
+      }
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        class F {
+          constructor(arg0) {
+            return arg0.errors;
           }
-        })();
-      });
-      const fn = function () {
-        return closure_0(...arguments);
-      };
-      cResult[3] = arg0;
-      cResult[4] = first;
-      cResult[5] = navigation;
-      cResult[6] = context;
-      cResult[7] = fn;
+        }
+        let stringResult = obj3.string(tmp(tmp2[10]).t.F8UYVY);
+        cResult[2] = stringResult;
+      } else {
+        class F {
+          constructor(arg0) {
+            return arg0.errors;
+          }
+        }
+      }
+      const tmp6 = _slicedToArray(first.useState(""), 2);
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let loginEmail;
-      let tmp14;
       _require = arg0;
       importDefault = arg1;
-      let tmp = navigation;
-      let obj = require("useNavigation");
-      navigation = obj.useNavigation();
-      let obj2 = react;
-      const context = react.useContext(require("Auth").TrackRegistrationContext);
-      const tmp4 = loginEmail(react.useState(""), 2);
+      navigation = require("useNavigation").useNavigation();
+      const context = noop.useContext(require("Auth").TrackRegistrationContext);
+      const tmp4 = loginEmail(noop.useState(""), 2);
       loginEmail = tmp4[0];
-      const tmp6 = tmp4[1];
-      react = react.useRef("");
-      const tmp7 = loginEmail(react.useState(""), 2);
-      const first1 = tmp7[0];
-      let closure_7 = tmp7[1];
-      const callback = react.useCallback((arg0, current) => {
+      noop = noop.useRef("");
+      const tmp6 = loginEmail(noop.useState(""), 2);
+      const first1 = tmp6[0];
+      closure_7 = tmp6[1];
+      const callback = noop.useCallback((arg0, current) => {
         closure_7(arg0);
         closure_5.current = current;
       }, []);
-      const tmp10 = closure_8((errors) => errors.errors);
-      closure_8 = tmp10;
-      let items = [tmp10];
-      const memo = react.useMemo(() => {
-        const intl = intl3.intl;
-        return intl.string(intl3.t.F8UYVY);
+      const tmp9 = closure_8((errors) => errors.errors);
+      closure_8 = tmp9;
+      let items = [tmp9];
+      const memo = noop.useMemo(() => {
+        const intl = util.intl;
+        return intl.string(util.t.F8UYVY);
       }, items);
-      const useCallback = react.useCallback;
       _require = context((sourceState) => {
-        let closure_3;
-        let c6 = 0;
-        let c7 = 0;
-        let c5 = 0;
+        c6 = 0;
+        c7 = 0;
+        c5 = 0;
         return (function* (arg0) {
-          let intl;
-          let intl2;
-          let items;
-          let items1;
-          let obj13;
-          let obj14;
           if (c7 === 2) {
             c7 = 3;
-            let str = "Generator functions may not be called on executing generators";
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
+          } else if (tmp7 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              let obj2 = { value, done: true };
-              return obj2;
+              let obj3 = { value, done: true };
+              return obj3;
             } else {
               return { value: "IconComponent", done: null };
             }
           } else {
             try {
-              let tmp;
-              let found;
               c7 = 2;
               if (0 === c6) {
                 if (arg0 === 1) {
@@ -345,60 +324,71 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   throw value;
                 } else if (arg0 === 2) {
                   c7 = 3;
-                  return { value, done: true };
+                  const obj5 = { value, done: true };
+                  return obj5;
                 } else {
-                  tmp = undefined;
-                  found = undefined;
+                  closure_130_0 = sourceState;
+                  closure_130_1 = undefined;
+                  closure_130_2 = undefined;
+                  let authenticationErrorsFromAPIError;
+                  closure_130_4 = undefined;
                   const sum = ref.current + c6;
-                  phone = sum;
+                  closure_130_1 = sum;
                   const obj7 = { email: "Array", phone: sum };
-                  closure_2_7(obj7);
-                  step = closure_2_9(sourceState);
+                  v3(obj7);
+                  closure_130_2 = closure_9(sourceState);
                   ref = 1;
+                  const obj8 = { phone: sum };
                   c6 = 2;
                   c7 = 1;
-                  const obj8 = { phone: sum };
-                  const obj9 = { value: obj14.registerPhone(obj8), done: false };
-                  obj14 = sourceState(navigation[11]);
+                  const obj9 = { value: sourceState(navigation[11]).registerPhone(obj8), done: false };
                   return obj9;
                 }
-              } else if (1 === tmp5) {
+              } else if (1 === tmp8) {
                 ref = 0;
-                closure_5 = closure_4;
-                found = closure_5;
-                if (closure_5 instanceof sourceState(navigation[12]).CaptchaCancelError) {
+                closure_130_5 = closure_4;
+                if (closure_130_5 instanceof sourceState(navigation[12]).CaptchaCancelError) {
                   c7 = 3;
                   return { value: "IconComponent", done: null };
                 } else {
-                  let obj3 = sourceState(navigation[13]);
-                  tmp = obj3.getAuthenticationErrorsFromAPIError(closure_5);
-                  first1(tmp);
+                  authenticationErrorsFromAPIError = sourceState(navigation[13]).getAuthenticationErrorsFromAPIError(
+                    closure_130_5,
+                  );
+                  first1(authenticationErrorsFromAPIError);
                   const _Object = Object;
-                  const keys = Object.keys(tmp);
-                  found = keys.filter((item) => {
+                  const keys = Object.keys(authenticationErrorsFromAPIError);
+                  closure_130_4 = keys.filter((item) => {
                     const items = ["phone"];
                     return items.includes(item);
                   });
-                  if (found.length > 0) {
-                    if (null != tmp.error_code) {
-                      found = { step, actionType: constants2.RESPONSE_ERROR, details: items };
-                      items = [];
-                      phone = HermesBuiltin.arraySpread(items, found, 0);
-                      const obj5 = sourceState(navigation[14]);
-                      items[phone] = obj5.getCommonErrorDetails(tmp.error_code);
-                      phone = phone + 1;
-                      tmp(found);
+                  if (closure_130_4.length <= 0) {
+                    let tmp30 = null != authenticationErrorsFromAPIError.error_code;
+                    if (tmp30) {
+                      tmp30 = null != authenticationErrorsFromAPIError.message;
+                    }
+                    if (tmp30) {
+                      const obj10 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
+                      let items = [
+                        sourceState(navigation[14]).getCommonErrorDetails(authenticationErrorsFromAPIError.error_code),
+                      ];
+                      obj10.details = items;
+                      tmp3(obj10);
+                      let obj4 = sourceState(navigation[14]);
                     }
                     c7 = 3;
-                    return { value: undefined, done: true };
                   }
-                  const tmp26 = null != tmp.error_code && null != tmp.message;
-                  if (tmp26) {
-                    found = { step, actionType: constants2.RESPONSE_ERROR, details: items1 };
-                    let obj4 = sourceState(navigation[14]);
-                    items1 = [obj4.getCommonErrorDetails(tmp.error_code)];
-                    tmp(found);
-                  }
+                  const obj11 = { step: closure_130_2, actionType: constants2.RESPONSE_ERROR, details: null };
+                  let phone = 0;
+                  const items1 = [];
+                  phone = HermesBuiltin.arraySpread(closure_130_4, 0);
+                  let obj2 = sourceState(navigation[13]);
+                  items1[phone] = sourceState(navigation[14]).getCommonErrorDetails(
+                    authenticationErrorsFromAPIError.error_code,
+                  );
+                  phone = phone + 1;
+                  obj11.details = items1;
+                  tmp3(obj11);
+                  const obj6 = sourceState(navigation[14]);
                 }
               } else if (arg0 === 1) {
                 c7 = 3;
@@ -409,96 +399,110 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 let obj = { value, done: true };
                 return obj;
               } else {
-                const obj11 = { step, toStep: constants.PHONE_VERIFICATION, actionType: constants2.SUCCESS };
-                tmp(obj11);
-                ref = 0;
-                const push = found.push;
                 const obj12 = {
-                  title: intl.string(sourceState(navigation[10]).t.h7hdQh),
-                  description: intl2.formatToPlainString(sourceState(navigation[10]).t.e5WzVa, obj13),
-                  phone,
-                  sourceState,
-                  onPhoneTokenReceived(phoneToken) {
-                    let obj3;
-                    const obj = { email: "r", phone, phoneToken };
-                    closure_3_7(obj);
-                    const obj2 = {
-                      step: constants.PHONE_VERIFICATION,
-                      toStep: obj3.getNextRegistrationTransitionStep(closure_0),
-                      actionType: constants2.SUCCESS,
-                    };
-                    obj3 = closure_0(navigation[16]);
-                    closure_3(obj2);
-                    const obj4 = closure_0(navigation[16]);
-                    const nextAuthState = obj4.getNextAuthState(closure_0);
-                    const dispatch = found.dispatch;
-                    const str = closure_0(navigation[17]).StackActions;
-                    dispatch(str.replace(nextAuthState));
-                  },
-                  onBail() {
-                    c7("");
-                    found.pop();
-                    sourceState();
-                  },
+                  step: closure_130_2,
+                  toStep: constants.PHONE_VERIFICATION,
+                  actionType: constants2.SUCCESS,
                 };
-                const VERIFY_PHONE = sourceState(navigation[15]).AuthStates.VERIFY_PHONE;
-                intl = sourceState(navigation[10]).intl;
-                intl2 = sourceState(navigation[10]).intl;
-                obj13 = { phone };
-                push(VERIFY_PHONE, obj12);
+                tmp3(obj12);
+                ref = 0;
+                const obj13 = {
+                  title: null,
+                  description: null,
+                  phone: null,
+                  sourceState: null,
+                  onPhoneTokenReceived: null,
+                  onBail: null,
+                };
+                const intl = sourceState(navigation[10]).intl;
+                obj13.title = intl.string(sourceState(navigation[10]).t.h7hdQh);
+                const intl2 = sourceState(navigation[10]).intl;
+                const obj15 = { phone: closure_130_1 };
+                obj13.description = intl2.formatToPlainString(sourceState(navigation[10]).t.e5WzVa, obj15);
+                obj13.phone = closure_130_1;
+                obj13.sourceState = sourceState;
+                obj13.onPhoneTokenReceived = function onPhoneTokenReceived(phoneToken) {
+                  const obj = { email: "r", phone, phoneToken };
+                  closure_7(obj);
+                  const obj2 = {
+                    step: constants.PHONE_VERIFICATION,
+                    toStep: closure_0(navigation[16]).getNextRegistrationTransitionStep(closure_0),
+                    actionType: constants2.SUCCESS,
+                  };
+                  closure_3(obj2);
+                  const obj3 = closure_0(navigation[16]);
+                  const nextAuthState = closure_0(navigation[16]).getNextAuthState(closure_0);
+                  const obj4 = closure_0(navigation[16]);
+                  closure_2.dispatch(closure_0(navigation[17]).StackActions.replace(nextAuthState));
+                };
+                obj13.onBail = function onBail() {
+                  c7("");
+                  closure_2.pop();
+                  sourceState();
+                };
+                tmp5.push(sourceState(navigation[15]).AuthStates.VERIFY_PHONE, obj13);
                 c7 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp51) {
-              closure_4 = tmp51;
-              if (0 === ref) {
-                c7 = 3;
-                throw tmp51;
+            } catch (tmp55) {
+              closure_4 = tmp55;
+              if (tmp4 === ref) {
+                c7 = tmp2;
+                throw tmp55;
               } else {
-                c6 = 1;
+                c6 = tmp;
               }
             }
           }
         })();
       });
       let items1 = [arg0, first1, context, navigation];
-      const callback1 = useCallback(function () {
-        return closure_0(...arguments);
+      const callback1 = noop.useCallback(function () {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       }, items1);
       if (arg1 === require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE) {
-        tmp14 = require("getError")("phone", tmp10);
+        let tmp13 = require("getError")("phone", tmp9);
       } else {
-        let str = "email";
-        tmp14 = require("getError")("email", tmp10);
+        tmp13 = require("getError")("email", tmp9);
       }
-      let closure_9 = tmp14;
-      const items2 = [arg1, first1, loginEmail, tmp14];
+      closure_9 = tmp13;
+      const items2 = [arg1, first1, loginEmail, tmp13];
       const items3 = [loginEmail];
       const memo1 = obj2.useMemo(() => {
         const tmp = closure_1 === PhoneOrEmailUtils.PhoneOrEmailSelectorForceMode.PHONE ? first1 : first;
-        return null == tmp || "" === tmp || null != closure_9;
+        let tmp2 = null == tmp;
+        if (!tmp2) {
+          tmp2 = "" === tmp;
+        }
+        if (!tmp2) {
+          tmp2 = null != closure_9;
+        }
+        return tmp2;
       }, items2);
-      let obj3 = {
+      let obj = require("useNavigation");
+      return {
         loginEmail,
-        setLoginEmail: tmp6,
+        setLoginEmail: tmp4[1],
         loginPhone: first1,
         updateLoginPhone: callback,
         identityErrorMessage: memo,
         registerAndVerifyPhone: callback1,
         preventSubmitIdentity: memo1,
-        identityError: tmp14,
-        validateEmail: obj2.useCallback(() => {
+        identityError: tmp13,
+        validateEmail: noop.useCallback(() => {
           let stringResult = null;
-          const obj = ValidationUtilsDefault;
           if (!obj.isEmail(first)) {
-            const intl = intl3.intl;
-            stringResult = intl.string(intl3.t.nr0MVZ);
+            const intl = util.intl;
+            stringResult = intl.string(util.t.nr0MVZ);
           }
           return stringResult;
         }, items3),
       };
-      return obj3;
     };
-const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
-
-export const useIdentityRegistrationStep = tmp4;

@@ -28,17 +28,10 @@ export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(pr
   }
 };
 export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(analyticsID, TRENDING_GIFS, arg2) {
-  let limit;
-  let num2;
-  let obj;
-  let offset;
-  let results;
-  let tmp2;
-  let totalResults;
   if (null != TRENDING_GIFS) {
     const obj2 = {};
     obj2[TRENDING_GIFS] = 1;
-    obj = obj2;
+    let obj = obj2;
   } else {
     obj = {};
   }
@@ -52,14 +45,13 @@ export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(an
     load_id: analyticsID,
     limit,
     offset,
-    page: num2,
-    total_results: totalResults,
-    page_results: tmp2,
-    num_modifiers: Object.keys(obj).length,
-    modifiers: obj,
+    page: null,
+    total_results: null,
+    page_results: null,
+    num_modifiers: null,
+    modifiers: null,
   };
-  num2 = 1;
-  totalResults = obj3.totalResults;
+  let num2 = 1;
   if (null != limit) {
     num2 = 1;
     if (null != offset) {
@@ -67,9 +59,14 @@ export const calculateAnalyticsMetadata = function calculateAnalyticsMetadata(an
       num2 = Math.floor(offset / limit) + 1;
     }
   }
-  tmp2 = null;
+  obj4.page = num2;
+  obj4.total_results = obj3.totalResults;
+  let tmp2 = null;
   if (null != results) {
     tmp2 = results;
   }
+  obj4.page_results = tmp2;
+  obj4.num_modifiers = Object.keys(obj).length;
+  obj4.modifiers = obj;
   return obj4;
 };

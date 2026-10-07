@@ -1,11 +1,8 @@
 // discord_app/modules/gateway/RequestGatewaySocket.tsx
-import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let c7, closure_4;
-
+const require = fn;
 function setRequestedBy(arg0) {
   c6 = false;
   let num = map.get(arg0);
@@ -38,81 +35,77 @@ function stopRequest(arg0) {
     const result = map.set(arg0, diff);
   }
 }
-let obj = function _withRequest() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_10 = async function _withRequest(arg0) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c5;
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_3 = tmp;
-            let closure_2 = tmp4;
-            c5 = 1;
-            setRequestedBy(closure_0);
-            c6 = 2;
-            c7 = 1;
-            const obj4 = { value: closure_1(), done: false };
-            return obj4;
-          }
-        } else if (1 === c6) {
-          c5 = 0;
-          closure_131_9(closure_0);
-          throw closure_4;
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 0;
-          closure_131_9(closure_0);
           c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          c5 = 0;
-          closure_131_9(closure_0);
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = closure_0;
+          c5 = 1;
+          setRequestedBy(closure_0);
+          c6 = 2;
+          c7 = 1;
+          const obj4 = { value: importDefault(), done: false };
+          return obj4;
         }
-      } catch (tmp26) {
-        closure_4 = tmp26;
-        if (0 === c5) {
-          c7 = 3;
-          throw tmp26;
-        } else {
-          c6 = 1;
-        }
+      } else if (1 === tmp7) {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        throw closure_4;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        c7 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        c5 = 0;
+        closure_131_9(closure_130_0);
+        c7 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp29) {
+      closure_4 = tmp29;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp29;
+      } else {
+        c6 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_5 = ["COLD_START"];
 let c6 = true;
 const map = new Map();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
 
 export const isRequested = function isRequested() {
@@ -122,8 +115,7 @@ export function recordStartHeadlessTask() {
   c6 = false;
 }
 export const describeConnectionReasons = function describeConnectionReasons() {
-  const tmp = c6 ? closure_5 : [];
-  const items = [...tmp, ...map.keys()];
+  const items = [...(c6 ? closure_5 : []), ...map.keys()];
   const sorted = items.sort();
   let str = "NO_REASONS";
   if (sorted.length > 0) {
@@ -134,23 +126,20 @@ export const describeConnectionReasons = function describeConnectionReasons() {
 export { setRequestedBy };
 export const startBridgeTo = function startBridgeTo(arg0) {
   const combined = "BRIDGE:" + arg0;
-  let closure_1 = performance.now();
+  closure_1 = performance.now();
   c6 = false;
   let num = map.get(combined);
   if (num == null) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  let obj2 = combined(6994);
-  obj2.requestSafeIdleCallback(
+  combined(6994).requestSafeIdleCallback(
     () => {
       if (map.has(combined)) {
+        const obj3 = { bridge_token: combined, cleared_after: null };
         const _performance = performance;
-        const obj2 = { bridge_token: combined, cleared_after: performance.now() - closure_1 };
-        const track = AnalyticsUtilsDefault.track;
-        const GATEWAY_BRIDGE_TIMEOUT = AnalyticEvents.GATEWAY_BRIDGE_TIMEOUT;
-        AnalyticsUtilsDefault;
-        track(GATEWAY_BRIDGE_TIMEOUT, obj2);
+        obj3.cleared_after = performance.now() - closure_1;
+        AnalyticsUtilsDefault.track(AnalyticEvents.GATEWAY_BRIDGE_TIMEOUT, obj3);
       }
       c6 = false;
       let num = map.get(combined);
@@ -166,8 +155,16 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     },
     { timeout: 5000 },
   );
+  let obj2 = combined(6994);
 };
 export { stopRequest };
 export const withRequest = function withRequest() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

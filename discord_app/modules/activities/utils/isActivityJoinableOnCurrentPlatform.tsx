@@ -5,28 +5,26 @@ import hasFlagDefault from "hasFlag.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
-let hasOwnProperty;
 ({ ActivityFlags: c3, ActivityGamePlatforms: closure_4, ActivityTypes: hasOwnProperty } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx");
 
 export default function isActivityJoinableOnCurrentPlatform(type) {
-  const tmp = null == type || !hasFlagDefault(type, constants.JOIN) || type.type !== hasOwnProperty.PLAYING;
+  let tmp = null == type;
   if (!tmp) {
-    let DESKTOP;
-    let tmp9;
-    const obj = utils_PlatformUtils;
+    tmp = !hasFlagDefault(type, constants.JOIN);
+  }
+  if (!tmp) {
+    tmp = type.type !== constants3.PLAYING;
+  }
+  if (!tmp) {
     if (obj.isIOS()) {
-      DESKTOP = constants2.IOS;
-      tmp9 = constants2;
+      let DESKTOP = constants2.IOS;
+      let tmp9 = constants2;
     } else {
-      const tmp6Result = MetaQuestUtils;
       if (tmp6Result.isMetaQuest()) {
         DESKTOP = constants2.META_QUEST;
         tmp9 = constants2;
       } else {
-        const tmp6Result2 = utils_PlatformUtils;
         if (tmp6Result2.isAndroid()) {
           DESKTOP = constants2.ANDROID;
           tmp9 = constants2;
@@ -34,7 +32,9 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
           DESKTOP = constants2.DESKTOP;
           tmp9 = constants2;
         }
+        tmp6Result2 = utils_PlatformUtils;
       }
+      tmp6Result = MetaQuestUtils;
     }
     let platform;
     if (type != null) {
@@ -47,31 +47,41 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       if (type != null) {
         supported_platforms = type.supported_platforms;
       }
-      const hasItem =
-        null != supported_platforms && 0 !== supported_platforms.length && supported_platforms.includes(DESKTOP);
+      let hasItem = null != supported_platforms;
+      if (hasItem) {
+        hasItem = 0 !== supported_platforms.length;
+      }
+      if (hasItem) {
+        hasItem = supported_platforms.includes(DESKTOP);
+      }
       return hasItem;
     }
+    obj = utils_PlatformUtils;
   } else {
     return false;
   }
 }
 export const getCurrentActivityGamePlatform = function getCurrentActivityGamePlatform() {
-  let META_QUEST;
-  const obj = utils_PlatformUtils;
   if (obj.isIOS()) {
-    META_QUEST = constants2.IOS;
+    let META_QUEST = constants2.IOS;
   } else {
-    const tmpResult = MetaQuestUtils;
     if (tmpResult.isMetaQuest()) {
       META_QUEST = constants2.META_QUEST;
     } else {
+      META_QUEST = utils_PlatformUtils.isAndroid() ? constants2.ANDROID : constants2.DESKTOP;
       const tmpResult2 = utils_PlatformUtils;
-      META_QUEST = tmpResult2.isAndroid() ? constants2.ANDROID : constants2.DESKTOP;
     }
+    tmpResult = MetaQuestUtils;
   }
   return META_QUEST;
 };
 export const isActivityJoinable = function isActivityJoinable(type) {
-  const tmp = null == type || !hasFlagDefault(type, constants.JOIN) || type.type !== hasOwnProperty.PLAYING;
+  let tmp = null == type;
+  if (!tmp) {
+    tmp = !hasFlagDefault(type, constants.JOIN);
+  }
+  if (!tmp) {
+    tmp = type.type !== constants3.PLAYING;
+  }
   return !tmp;
 };

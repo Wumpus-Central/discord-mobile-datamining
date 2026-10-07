@@ -1,149 +1,140 @@
 // discord_app/modules/game_console/native/transferToXbox.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../Constants.tsx";
 import GameConsoleAlertUtilsDefault from "../GameConsoleAlertUtils.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../_runtime/00019_react.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let closure_2, nonce;
-
-let obj = function _transferToXbox() {
-  obj = _asyncToGenerator(async (arg0) => {
-    const user = arg0;
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let obj10;
-      let obj13;
-      let obj16;
-      let paths;
-      let tmp44Result;
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+const require = fn;
+let closure_8 = async function _transferToXbox(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              nonce = undefined;
-              closure_2 = undefined;
-              c3 = 1;
-              c4 = 1;
-              const obj3 = { value: obj16.maybeShowPTTAlert(constants.XBOX), done: false };
-              obj16 = GameConsoleAlertUtilsDefault;
-              return obj3;
-            }
-          } else if (1 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              c3 = 2;
-              c4 = 1;
-              const obj7 = { value: obj13.disconnectRemote(), done: false };
-              obj13 = closure_130_2(closure_130_3[6]);
-              return obj7;
-            }
-          } else if (2 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              c3 = 3;
-              c4 = 1;
-              const obj9 = { value: obj10.getConnectNonce(), done: false };
-              obj10 = closure_130_2(closure_130_3[6]);
-              return obj9;
-            }
-          } else if (3 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              nonce = value;
-              const obj12 = { nonce, forQRCode: false };
-              closure_2 = closure_130_1(closure_130_3[7])(user, obj12);
-              c3 = 4;
-              c4 = 1;
-              const obj14 = { value: closure_130_5.canOpenURL(closure_2), done: false };
-              return obj14;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
-          } else if (value) {
-            closure_130_1(closure_130_3[11])(user.id, closure_130_6.XBOX);
-            const obj4 = closure_130_2(closure_130_3[6]);
-            obj4.waitForSession(closure_130_6.XBOX, user.id, nonce);
-            const obj5 = closure_130_2(closure_130_3[12]);
-            obj5.stopOwnStream(false);
-            closure_130_5.openURL(closure_2);
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          } else {
-            c4 = 3;
-            const obj17 = {
-              importer() {
-                const promise = user(paths[10])(paths[9], paths.paths);
-                return promise.then((result) => {
-                  let closure_0 = result.default;
-                  return (arg0) => {
-                    obj = {};
-                    const merged = Object.assign(arg0);
-                    return closure_2_7(closure_0, obj);
-                  };
-                });
-              },
-              isDismissable: false,
-            };
-            const obj18 = { value: tmp44Result.openLazy(obj17), done: true };
-            tmp44Result = closure_130_1(closure_130_3[8]);
-            return obj18;
-          }
-        } catch (tmp38) {
           c4 = 3;
-          throw tmp38;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          c3 = 1;
+          c4 = 1;
+          const obj3 = { value: GameConsoleAlertUtilsDefault.maybeShowPTTAlert(constants.XBOX), done: false };
+          return obj3;
         }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          c3 = 2;
+          c4 = 1;
+          const obj7 = { value: closure_130_2(closure_130_3[6]).disconnectRemote(), done: false };
+          return obj7;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          c3 = 3;
+          c4 = 1;
+          const obj9 = { value: closure_130_2(closure_130_3[6]).getConnectNonce(), done: false };
+          return obj9;
+        }
+      } else if (3 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
+        } else {
+          closure_129_1 = value;
+          const obj12 = { nonce: closure_129_1, forQRCode: false };
+          closure_129_2 = closure_130_1(closure_130_3[7])(closure_129_0, obj12);
+          c3 = 4;
+          c4 = 1;
+          const obj14 = { value: closure_130_5.canOpenURL(closure_129_2), done: false };
+          return obj14;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj15 = { value, done: true };
+        return obj15;
+      } else if (value) {
+        closure_130_1(closure_130_3[11])(closure_129_0.id, closure_130_6.XBOX);
+        closure_130_2(closure_130_3[6]).waitForSession(closure_130_6.XBOX, closure_129_0.id, closure_129_1);
+        const obj4 = closure_130_2(closure_130_3[6]);
+        closure_130_2(closure_130_3[12]).stopOwnStream(false);
+        closure_130_5.openURL(closure_129_2);
+        c4 = 3;
+        return { value: "IconComponent", done: null };
+      } else {
+        const obj17 = {
+          importer() {
+            return closure_1_0(paths[10])(paths[9], paths.paths).then((result) => {
+              closure_0 = result.default;
+              return (arg0) => {
+                const merged = Object.assign(arg0);
+                return closure_2_7(closure_0, {});
+              };
+            });
+          },
+          isDismissable: false,
+        };
+        c4 = 3;
+        const obj18 = { value: closure_130_1(closure_130_3[8]).openLazy(obj17), done: true };
+        return obj18;
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp39) {
+      c4 = tmp;
+      throw tmp39;
+    }
+  }
 };
-const Linking = react_native.Linking;
-const PlatformTypes = Constants.PlatformTypes;
-const jsx = Fragment.jsx;
+const Linking = fn(17).Linking;
+const PlatformTypes = fn(1085).PlatformTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
 
 export default function transferToXbox() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }

@@ -9,7 +9,4 @@ const result1 = size.fileFinishedImporting(
   "modules/explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx",
 );
 
-export const useSensitiveMediaSettingDisabled = () => {
-  const obj = useParentalControlSettings;
-  return obj.useIsParentallyControlled();
-};
+export const useSensitiveMediaSettingDisabled = () => useParentalControlSettings.useIsParentallyControlled();

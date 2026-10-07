@@ -1,17 +1,16 @@
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx
-import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
-  show(href) {
-    const obj = ActionSheetActionCreatorsDefault;
-    const obj2 = { href };
-    obj.openLazy(asyncRequire(11220, dependencyMap.paths), "suspicious-download", obj2);
-  },
-};
 const result = size.fileFinishedImporting(
   "modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx",
 );
 
-export default obj;
+export default {
+  show(href) {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11220, dependencyMap.paths), "suspicious-download", {
+      href,
+    });
+  },
+};

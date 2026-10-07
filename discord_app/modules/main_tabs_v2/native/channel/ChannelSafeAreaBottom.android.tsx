@@ -4,9 +4,8 @@ import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated.
 import AnimatedKeyboardExperiment from "../../../keyboard/native/AnimatedKeyboardExperiment.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let importDefaultResult;
 if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
-  importDefaultResult = ChannelSafeAreaBottomNoopDefault;
+  let importDefaultResult = ChannelSafeAreaBottomNoopDefault;
 } else {
   importDefaultResult = ChannelSafeAreaBottomAnimatedDefault;
 }

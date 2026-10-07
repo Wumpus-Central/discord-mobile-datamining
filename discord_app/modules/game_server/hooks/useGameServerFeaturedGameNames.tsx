@@ -1,21 +1,18 @@
 // discord_app/modules/game_server/hooks/useGameServerFeaturedGameNames.tsx
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import useGame from "../../games/hooks/useGame.tsx";
 import GameServerConstants from "../GameServerConstants.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
 ({ MINECRAFT_GAME_ID: c2, HYTALE_GAME_ID: c3 } = GameServerConstants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = react;
-      const cResult = obj.c(3);
-      const obj2 = useGame;
-      const data = obj2.useGame(React2).data;
-      const obj3 = useGame;
-      const data2 = obj3.useGame(_false).data;
+      const cResult = c.c(3);
+      const data = useGame.useGame(React2).data;
+      const data2 = useGame.useGame(React3).data;
       let str;
       if (data != null) {
         str = data.name;
@@ -31,9 +28,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         str2 = "Hytale";
       }
       if (cResult[0] === str) {
-        let tmp2;
         if (cResult[1] === str2) {
-          tmp2 = cResult[2];
+          let tmp2 = cResult[2];
         }
         return tmp2;
       }
@@ -44,11 +40,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = obj4;
     }
   : () => {
-      let str2;
-      const obj = useGame;
-      const data = obj.useGame(React2).data;
-      const obj2 = useGame;
-      const data2 = obj2.useGame(_false).data;
+      const data = useGame.useGame(React2).data;
+      const data2 = useGame.useGame(React3).data;
       let str;
       if (data != null) {
         str = data.name;
@@ -56,16 +49,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "Minecraft";
       }
-      const obj3 = { gameName: str, gameName2: str2 };
-      str2 = undefined;
+      const obj3 = { gameName: str, gameName2: null };
+      let str2;
       if (data2 != null) {
         str2 = data2.name;
       }
       if (str2 == null) {
         str2 = "Hytale";
       }
+      obj3.gameName2 = str2;
       return obj3;
     };
-const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
-
-export default tmp3;

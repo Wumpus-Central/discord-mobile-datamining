@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
 import Constants from "../../../../Constants.tsx";
-import intl4 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import FileUtils from "../../../../utils/FileUtils.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/07837_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/07838_AssetRegistry.js";
+import _modDef7837 from "../../../../../_runtime/metro/07837__.js";
+import _modDef7838 from "../../../../../_runtime/metro/07838__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const MessageFailureState = RowGeneratorConstants.MessageFailureState;
@@ -13,70 +13,68 @@ const MessageEmbedTypes = Constants.MessageEmbedTypes;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
 
 export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
-  let colors;
-  let intl;
-  let intl2;
-  let intl3;
-  let obj;
-  let obj4;
-  let obj6;
-  let str;
-  let uploaderFile;
   ({ uploaderFile, colors } = useAttachmentUploadPreview);
   if (null != uploaderFile) {
-    let obj3;
     if (useAttachmentUploadPreview.useAttachmentUploadPreview) {
       const obj2 = {
         type: MessageEmbedTypes.TEXT,
-        messageSendError: intl3.string(intl4.t.lBLP4u),
-        failureState: MessageFailureState.UNSPECIFIED,
+        messageSendError: null,
+        failureState: null,
         disableBackgroundColor: true,
-        bodyTextColor: colors.failedMessageBodyTextColor,
-        iconURL: obj6.getAssetUriForEmbed(AssetRegistryDefault2),
+        bodyTextColor: null,
+        iconURL: null,
       };
-      intl3 = intl4.intl;
-      obj3 = obj2;
-      obj6 = renderer_EmbedUtils;
+      const intl3 = util.intl;
+      obj2.messageSendError = intl3.string(util.t.lBLP4u);
+      obj2.failureState = MessageFailureState.UNSPECIFIED;
+      obj2.bodyTextColor = colors.failedMessageBodyTextColor;
+      colors = renderer_EmbedUtils.getAssetUriForEmbed;
+      obj2.iconURL = colors(_modDef7838);
+      let obj3 = obj2;
     } else {
       obj3 = {
         type: MessageEmbedTypes.TEXT,
-        numAttachments: intl2.formatToPlainString(intl4.t.D0noUt, obj4),
-        failureState: MessageFailureState.UPLOAD_FAILED,
-        attachmentsSize: "" + str,
-        bodyTextColor: colors.embedBodyTextColor,
+        numAttachments: null,
+        failureState: null,
+        attachmentsSize: null,
+        bodyTextColor: null,
       };
-      intl2 = intl4.intl;
-      str = "";
-      obj4 = { count: uploaderFile.attachmentsCount };
+      const intl2 = util.intl;
+      const obj4 = { count: uploaderFile.attachmentsCount };
+      obj3.numAttachments = intl2.formatToPlainString(util.t.D0noUt, obj4);
+      obj3.failureState = MessageFailureState.UPLOAD_FAILED;
+      let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
+        str = " (" + FileUtils.sizeString(uploaderFile.currentSize) + ")";
         const tmp6Result = FileUtils;
-        str = " (" + tmp6Result.sizeString(uploaderFile.currentSize) + ")";
       }
+      obj3.attachmentsSize = "" + str;
+      obj3.bodyTextColor = colors.embedBodyTextColor;
     }
-    obj = obj3;
   } else {
-    obj = {
+    const obj = {
       type: MessageEmbedTypes.TEXT,
-      messageSendError: intl.string(intl4.t.lBLP4u),
-      failureState: MessageFailureState.UNSPECIFIED,
+      messageSendError: null,
+      failureState: null,
       disableBackgroundColor: true,
-      bodyTextColor: colors.failedMessageBodyTextColor,
+      bodyTextColor: null,
     };
-    intl = intl4.intl;
+    const intl = util.intl;
+    obj.messageSendError = intl.string(util.t.lBLP4u);
+    obj.failureState = MessageFailureState.UNSPECIFIED;
+    obj.bodyTextColor = colors.failedMessageBodyTextColor;
+    return obj;
   }
-  return obj;
 }
 export const createAutomodBlockedMessageEmbed = function createAutomodBlockedMessageEmbed(errorMessage) {
-  let obj2;
   const obj = {
     type: MessageEmbedTypes.TEXT,
     messageSendError: errorMessage.errorMessage,
     failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE,
     disableBackgroundColor: true,
     bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor,
-    iconURL: obj2.getAssetUriForEmbed(AssetRegistryDefault),
+    iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef7837),
   };
-  obj2 = renderer_EmbedUtils;
   return obj;
 };

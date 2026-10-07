@@ -8,217 +8,201 @@ import PlainRecord from "../lib/PlainRecord.tsx";
 import GuildRecord from "../records/GuildRecord.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-let vanityURLCode;
-
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {
-  let afkTimeout;
-  let afk_channel_id;
-  let application_id;
-  let banner;
-  let date;
-  let description;
-  let discovery_splash;
-  let explicitContentFilter;
-  let game_application_ids;
-  let guild_space_settings;
-  let home_header;
-  let hub_type;
-  let icon;
-  let maxMembers;
-  let maxStageVideoChannelUsers;
-  let maxVideoChannelUsers;
-  let mfa_level;
-  let nsfwLevel;
-  let obj2;
-  let preferredLocale;
-  let premiumProgressBarEnabled;
-  let premiumTier;
-  let profile;
-  let prop;
-  let prop1;
-  let prop2;
-  let prop3;
-  let prop4;
-  let rules_channel_id;
-  let splash;
-  let system_channel_id;
-  let tmp33;
-  let tmp35;
-  let tmp36;
-  let tmp8Result2;
-  let vanity_url_code;
-  let verificationLevel;
-  let verification_role_id;
   const obj = {
     id: properties.id,
     joinedAt: joinedAt.joinedAt,
     premiumSubscriberCount: joinedAt.premiumSubscriberCount,
     name: properties.name,
-    description,
-    icon,
-    splash,
-    banner,
-    homeHeader: home_header,
-    features: obj2.toSetInplace(properties.features),
-    preferredLocale,
+    description: null,
+    icon: null,
+    splash: null,
+    banner: null,
+    homeHeader: null,
+    features: null,
+    preferredLocale: null,
     ownerId: null,
-    application_id,
-    afkChannelId: afk_channel_id,
-    afkTimeout,
-    systemChannelId: system_channel_id,
-    verificationLevel,
-    explicitContentFilter,
+    application_id: null,
+    afkChannelId: null,
+    afkTimeout: null,
+    systemChannelId: null,
+    verificationLevel: null,
+    explicitContentFilter: null,
     defaultMessageNotifications: null,
-    mfaLevel: mfa_level,
-    vanityURLCode: vanity_url_code,
-    premiumTier,
-    premiumProgressBarEnabled,
-    premiumProgressBarEnabledUserUpdatedAt: date,
+    mfaLevel: null,
+    vanityURLCode: null,
+    premiumTier: null,
+    premiumProgressBarEnabled: null,
+    premiumProgressBarEnabledUserUpdatedAt: null,
     systemChannelFlags: null,
-    discoverySplash: discovery_splash,
-    rulesChannelId: rules_channel_id,
-    safetyAlertsChannelId: prop,
-    publicUpdatesChannelId: prop1,
-    maxStageVideoChannelUsers,
-    maxVideoChannelUsers,
-    maxMembers,
-    nsfwLevel,
-    ownerConfiguredContentLevel: prop2,
-    hubType: hub_type,
-    latestOnboardingQuestionId: prop3,
-    profile,
-    guildTheme: tmp33,
-    premiumFeatures: tmp35,
-    moderatorReporting: tmp36,
-    guildSpaceSettings: guild_space_settings,
-    verificationRoleId: verification_role_id,
-    gameApplicationIds: game_application_ids,
-    officialMessageColor: prop4,
-    incidentsData: tmp8Result2.fromServerGuildIncidentsData(properties.incidents_data),
+    discoverySplash: null,
+    rulesChannelId: null,
+    safetyAlertsChannelId: null,
+    publicUpdatesChannelId: null,
+    maxStageVideoChannelUsers: null,
+    maxVideoChannelUsers: null,
+    maxMembers: null,
+    nsfwLevel: null,
+    ownerConfiguredContentLevel: null,
+    hubType: null,
+    latestOnboardingQuestionId: null,
+    profile: null,
+    guildTheme: null,
+    premiumFeatures: null,
+    moderatorReporting: null,
+    guildSpaceSettings: null,
+    verificationRoleId: null,
+    gameApplicationIds: null,
+    officialMessageColor: null,
+    incidentsData: null,
   };
-  description = properties.description;
+  let description = properties.description;
   if (description == null) {
     description = null;
   }
-  icon = properties.icon;
+  obj.description = description;
+  let icon = properties.icon;
   if (icon == null) {
     icon = null;
   }
-  splash = properties.splash;
+  obj.icon = icon;
+  let splash = properties.splash;
   if (splash == null) {
     splash = null;
   }
-  banner = properties.banner;
+  obj.splash = splash;
+  let banner = properties.banner;
   if (banner == null) {
     banner = null;
   }
-  home_header = properties.home_header;
+  obj.banner = banner;
+  let home_header = properties.home_header;
   if (home_header == null) {
     home_header = null;
   }
-  preferredLocale = properties.preferred_locale;
-  obj2 = SetUtils;
+  obj.homeHeader = home_header;
+  obj.features = SetUtils.toSetInplace(properties.features);
+  let preferredLocale = properties.preferred_locale;
   if (preferredLocale == null) {
-    preferredLocale = metroImportDefault.preferredLocale;
+    preferredLocale = React5.preferredLocale;
   }
+  obj.preferredLocale = preferredLocale;
   ({ owner_id: obj.ownerId, application_id } = properties);
   if (application_id == null) {
     application_id = null;
   }
-  afk_channel_id = properties.afk_channel_id;
+  obj.application_id = application_id;
+  let afk_channel_id = properties.afk_channel_id;
   if (afk_channel_id == null) {
     afk_channel_id = null;
   }
-  afkTimeout = properties.afk_timeout;
+  obj.afkChannelId = afk_channel_id;
+  let afkTimeout = properties.afk_timeout;
   if (afkTimeout == null) {
-    afkTimeout = metroImportDefault.afkTimeout;
+    afkTimeout = React5.afkTimeout;
   }
-  system_channel_id = properties.system_channel_id;
+  obj.afkTimeout = afkTimeout;
+  let system_channel_id = properties.system_channel_id;
   if (system_channel_id == null) {
     system_channel_id = null;
   }
-  verificationLevel = properties.verification_level;
+  obj.systemChannelId = system_channel_id;
+  let verificationLevel = properties.verification_level;
   if (verificationLevel == null) {
-    verificationLevel = metroImportDefault.verificationLevel;
+    verificationLevel = React5.verificationLevel;
   }
-  explicitContentFilter = properties.explicit_content_filter;
+  obj.verificationLevel = verificationLevel;
+  let explicitContentFilter = properties.explicit_content_filter;
   if (explicitContentFilter == null) {
-    explicitContentFilter = metroImportDefault.explicitContentFilter;
+    explicitContentFilter = React5.explicitContentFilter;
   }
+  obj.explicitContentFilter = explicitContentFilter;
   ({ default_message_notifications: obj.defaultMessageNotifications, mfa_level } = properties);
   if (mfa_level == null) {
-    mfa_level = metroImportDefault.mfaLevel;
+    mfa_level = React5.mfaLevel;
   }
-  vanity_url_code = properties.vanity_url_code;
+  obj.mfaLevel = mfa_level;
+  let vanity_url_code = properties.vanity_url_code;
   if (vanity_url_code == null) {
     vanity_url_code = null;
   }
-  premiumTier = properties.premium_tier;
+  obj.vanityURLCode = vanity_url_code;
+  let premiumTier = properties.premium_tier;
   if (premiumTier == null) {
-    premiumTier = metroImportDefault.premiumTier;
+    premiumTier = React5.premiumTier;
   }
-  premiumProgressBarEnabled = properties.premium_progress_bar_enabled || metroImportDefault.premiumProgressBarEnabled;
-  date = null;
+  obj.premiumTier = premiumTier;
+  let premiumProgressBarEnabled = properties.premium_progress_bar_enabled;
+  if (!premiumProgressBarEnabled) {
+    premiumProgressBarEnabled = React5.premiumProgressBarEnabled;
+  }
+  obj.premiumProgressBarEnabled = premiumProgressBarEnabled;
+  let date = null;
   if (null != properties.premium_progress_bar_enabled_user_updated_at) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
     date = new Date(properties.premium_progress_bar_enabled_user_updated_at);
   }
+  obj.premiumProgressBarEnabledUserUpdatedAt = date;
   ({ system_channel_flags: obj.systemChannelFlags, discovery_splash } = properties);
   if (discovery_splash == null) {
     discovery_splash = null;
   }
-  rules_channel_id = properties.rules_channel_id;
+  obj.discoverySplash = discovery_splash;
+  let rules_channel_id = properties.rules_channel_id;
   if (rules_channel_id == null) {
     rules_channel_id = null;
   }
-  prop = properties.safety_alerts_channel_id;
+  obj.rulesChannelId = rules_channel_id;
+  let prop = properties.safety_alerts_channel_id;
   if (prop == null) {
     prop = null;
   }
-  prop1 = properties.public_updates_channel_id;
+  obj.safetyAlertsChannelId = prop;
+  let prop1 = properties.public_updates_channel_id;
   if (prop1 == null) {
     prop1 = null;
   }
-  maxStageVideoChannelUsers = properties.max_stage_video_channel_users;
+  obj.publicUpdatesChannelId = prop1;
+  let maxStageVideoChannelUsers = properties.max_stage_video_channel_users;
   if (maxStageVideoChannelUsers == null) {
-    maxStageVideoChannelUsers = metroImportDefault.maxStageVideoChannelUsers;
+    maxStageVideoChannelUsers = React5.maxStageVideoChannelUsers;
   }
-  maxVideoChannelUsers = properties.max_video_channel_users;
+  obj.maxStageVideoChannelUsers = maxStageVideoChannelUsers;
+  let maxVideoChannelUsers = properties.max_video_channel_users;
   if (maxVideoChannelUsers == null) {
-    maxVideoChannelUsers = metroImportDefault.maxVideoChannelUsers;
+    maxVideoChannelUsers = React5.maxVideoChannelUsers;
   }
-  maxMembers = properties.max_members;
+  obj.maxVideoChannelUsers = maxVideoChannelUsers;
+  let maxMembers = properties.max_members;
   if (maxMembers == null) {
-    maxMembers = metroImportDefault.maxMembers;
+    maxMembers = React5.maxMembers;
   }
-  nsfwLevel = properties.nsfw_level;
+  obj.maxMembers = maxMembers;
+  let nsfwLevel = properties.nsfw_level;
   if (nsfwLevel == null) {
-    nsfwLevel = metroImportDefault.nsfwLevel;
+    nsfwLevel = React5.nsfwLevel;
   }
-  prop2 = properties.owner_configured_content_level;
+  obj.nsfwLevel = nsfwLevel;
+  let prop2 = properties.owner_configured_content_level;
   if (prop2 == null) {
     prop2 = null;
   }
-  hub_type = properties.hub_type;
+  obj.ownerConfiguredContentLevel = prop2;
+  let hub_type = properties.hub_type;
   if (hub_type == null) {
     hub_type = null;
   }
-  prop3 = properties.latest_onboarding_question_id;
+  obj.hubType = hub_type;
+  let prop3 = properties.latest_onboarding_question_id;
   if (prop3 == null) {
     prop3 = null;
   }
-  profile = properties.profile;
+  obj.latestOnboardingQuestionId = prop3;
+  let profile = properties.profile;
   if (profile == null) {
     profile = null;
   }
+  obj.profile = profile;
   const theme = properties.theme;
   if (undefined === theme) {
     guildTheme = undefined;
@@ -228,61 +212,68 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     if (guildTheme == null) {
       guildTheme = null;
     }
-    tmp33 = guildTheme;
+    let tmp35 = guildTheme;
   } else {
-    tmp33 = null;
+    tmp35 = null;
     if (null != theme) {
-      const tmp8Result = guildThemeSerialization;
-      let fromServerGuildThemeResult = tmp8Result.fromServerGuildTheme(theme);
+      let fromServerGuildThemeResult = guildThemeSerialization.fromServerGuildTheme(theme);
       if (fromServerGuildThemeResult == null) {
         fromServerGuildThemeResult = { enabled: false, themeSettings: null };
       }
-      tmp33 = fromServerGuildThemeResult;
+      tmp35 = fromServerGuildThemeResult;
+      const tmp8Result = guildThemeSerialization;
     }
   }
-  tmp35 = null;
+  obj.guildTheme = tmp35;
+  let tmp37 = null;
   if (null != properties.premium_features) {
-    const obj3 = {
-      features: null,
-      additionalEmojiSlots: null,
-      additionalStickerSlots: null,
-      additionalSoundSlots: null,
-    };
     ({
       features: obj5.features,
       additional_emoji_slots: obj5.additionalEmojiSlots,
       additional_sticker_slots: obj5.additionalStickerSlots,
       additional_sound_slots: obj5.additionalSoundSlots,
     } = properties.premium_features);
-    tmp35 = obj3;
+    tmp37 = { features: null, additionalEmojiSlots: null, additionalStickerSlots: null, additionalSoundSlots: null };
+    const obj3 = {
+      features: null,
+      additionalEmojiSlots: null,
+      additionalStickerSlots: null,
+      additionalSoundSlots: null,
+    };
   }
-  tmp36 = null;
+  obj.premiumFeatures = tmp37;
+  let tmp38 = null;
   if (null != properties.moderator_reporting) {
-    const obj4 = { moderatorReportingEnabled: null, moderatorReportChannelId: null };
     ({
       moderator_reporting_enabled: obj6.moderatorReportingEnabled,
       moderator_report_channel_id: obj6.moderatorReportChannelId,
     } = properties.moderator_reporting);
-    tmp36 = obj4;
+    tmp38 = { moderatorReportingEnabled: null, moderatorReportChannelId: null };
+    const obj4 = { moderatorReportingEnabled: null, moderatorReportChannelId: null };
   }
-  guild_space_settings = properties.guild_space_settings;
+  obj.moderatorReporting = tmp38;
+  let guild_space_settings = properties.guild_space_settings;
   if (guild_space_settings == null) {
     guild_space_settings = null;
   }
-  verification_role_id = properties.verification_role_id;
+  obj.guildSpaceSettings = guild_space_settings;
+  let verification_role_id = properties.verification_role_id;
   if (verification_role_id == null) {
     verification_role_id = null;
   }
-  game_application_ids = properties.game_application_ids;
+  obj.verificationRoleId = verification_role_id;
+  let game_application_ids = properties.game_application_ids;
   if (game_application_ids == null) {
     game_application_ids = null;
   }
-  prop4 = properties.official_message_color;
+  obj.gameApplicationIds = game_application_ids;
+  let prop4 = properties.official_message_color;
   if (prop4 == null) {
     prop4 = null;
   }
-  tmp8Result2 = guildIncidentsSerialization;
-  return metroRequire(metroImportAll, guildTheme, obj);
+  obj.officialMessageColor = prop4;
+  obj.incidentsData = guildIncidentsSerialization.fromServerGuildIncidentsData(properties.incidents_data);
+  return timestampProducer(closure_1_8, guildTheme, obj);
 }
 ({
   constructInPlace: c3,
@@ -290,22 +281,18 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   objectIsPlainRecordOfType: hasOwnProperty,
   tryReuseExistingInPlacePlainRecord: metroRequire,
 } = PlainRecord);
-({ GUILD_DEFAULT_PROPERTY_VALUES: metroImportDefault, GuildRecordTypeTag: metroImportAll } = GuildRecord);
+({ GUILD_DEFAULT_PROPERTY_VALUES: closure_7, GuildRecordTypeTag: closure_8 } = GuildRecord);
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
 const result = size.fileFinishedImporting("utils/GuildRecordUtils.tsx");
 
-export const isGuildRecord = function isGuildRecord(guild) {
-  return hasOwnProperty(metroImportAll, guild);
+export const isGuildRecord = function isGuildRecord(has) {
+  return hasOwnProperty(closure_1_8, has);
 };
 export { fromGuildPropertiesWithAdditionalFields };
 export const fromServer = function fromServer(joined_at, joinedAt) {
-  let date;
-  let tmp4;
   if (null != joined_at.joined_at) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
-    date = new Date(joined_at.joined_at);
+    let date = new Date(joined_at.joined_at);
   } else {
     date = undefined;
     if (joinedAt != null) {
@@ -322,41 +309,37 @@ export const fromServer = function fromServer(joined_at, joinedAt) {
   if (null == joined_at.properties) {
     _modDef38(null != joinedAt, "If guild.properties is null, existingGuild must be passed in");
     const obj2 = { joinedAt: date, premiumSubscriberCount: num };
-    tmp4 = React3(joinedAt, obj2);
+    let tmp6 = React4(joinedAt, obj2);
   } else {
     const obj = { joinedAt: date, premiumSubscriberCount: num };
-    tmp4 = fromGuildPropertiesWithAdditionalFields(joined_at.properties, obj, joinedAt);
+    tmp6 = fromGuildPropertiesWithAdditionalFields(joined_at.properties, obj, joinedAt);
   }
-  return tmp4;
+  return tmp6;
 };
 export const attachSerializedData = function attachSerializedData(guild, roles, selfMember) {
-  let tmp4;
-  let toISOStringResult;
-  let toISOStringResult1;
-  const obj = {
-    joinedAt: toISOStringResult,
-    premiumProgressBarEnabledUserUpdatedAt: toISOStringResult1,
-    features: Array.from(guild.features),
-    roles,
-    member: tmp4,
-  };
+  const obj = {};
   const merged = Object.assign(guild);
-  toISOStringResult = null;
+  let toISOStringResult = null;
   if (null != guild.joinedAt) {
     const joinedAt = guild.joinedAt;
     toISOStringResult = joinedAt.toISOString();
   }
-  toISOStringResult1 = null;
+  obj.joinedAt = toISOStringResult;
+  let toISOStringResult1 = null;
   if (null != guild.premiumProgressBarEnabledUserUpdatedAt) {
     const premiumProgressBarEnabledUserUpdatedAt = guild.premiumProgressBarEnabledUserUpdatedAt;
     toISOStringResult1 = premiumProgressBarEnabledUserUpdatedAt.toISOString();
   }
-  tmp4 = null;
+  obj.premiumProgressBarEnabledUserUpdatedAt = toISOStringResult1;
+  obj.features = Array.from(guild.features);
+  obj.roles = roles;
+  let tmp4 = null;
   if (null != selfMember) {
-    const obj3 = { userId: null, roles: null };
     ({ userId: obj2.userId, roles: obj2.roles } = selfMember);
-    tmp4 = obj3;
+    tmp4 = { userId: null, roles: null };
+    const obj3 = { userId: null, roles: null };
   }
+  obj.member = tmp4;
   return obj;
 };
 export const fromBackgroundSync = function fromBackgroundSync(properties, guildTheme) {
@@ -369,12 +352,9 @@ export const fromBackgroundSync = function fromBackgroundSync(properties, guildT
   return tmp;
 };
 export const fromGuild = function fromGuild(guild, guild2) {
-  let date;
   if (null != guild.joined_at) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
-    date = new Date(guild.joined_at);
+    let date = new Date(guild.joined_at);
   } else {
     date = undefined;
     if (guild2 != null) {
@@ -384,11 +364,13 @@ export const fromGuild = function fromGuild(guild, guild2) {
       date = null;
     }
   }
-  const obj = { joinedAt: date, premiumSubscriberCount: guild.premium_subscription_count };
-  return fromGuildPropertiesWithAdditionalFields(guild, obj, guild2);
+  return fromGuildPropertiesWithAdditionalFields(
+    guild,
+    { joinedAt: date, premiumSubscriberCount: guild.premium_subscription_count },
+    guild2,
+  );
 };
 export const fromInviteGuild = function fromInviteGuild(guild) {
-  let obj2;
   const obj = {
     id: guild.id,
     name: guild.name,
@@ -396,7 +378,7 @@ export const fromInviteGuild = function fromInviteGuild(guild) {
     icon: guild.icon,
     splash: guild.splash,
     banner: guild.banner,
-    features: obj2.toSetInplace(guild.features),
+    features: SetUtils.toSetInplace(guild.features),
     verificationLevel: null,
     vanityURLCode: null,
     premiumSubscriberCount: null,
@@ -412,261 +394,220 @@ export const fromInviteGuild = function fromInviteGuild(guild) {
     premium_tier: obj.premiumTier,
     home_header: obj.homeHeader,
   } = guild);
-  obj2 = SetUtils;
-  const obj3 = {};
-  const merged = Object.assign(metroImportDefault);
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj3);
+  return React3(closure_1_8, {});
 };
 export const fromGuildProfile = function fromGuildProfile(profile) {
-  let obj2;
-  let premiumSubscriberCount;
-  let premiumTier;
   const obj = {
     id: profile.id,
     name: profile.name,
     description: profile.description,
     icon: profile.icon,
-    premiumSubscriberCount,
-    premiumTier,
-    features: obj2.toSetInplace(profile.features),
+    premiumSubscriberCount: null,
+    premiumTier: null,
+    features: null,
   };
-  premiumSubscriberCount = profile.premiumSubscriberCount;
+  let premiumSubscriberCount = profile.premiumSubscriberCount;
   if (premiumSubscriberCount == null) {
-    premiumSubscriberCount = metroImportDefault.premiumSubscriberCount;
+    premiumSubscriberCount = React5.premiumSubscriberCount;
   }
-  premiumTier = profile.premiumTier;
+  obj.premiumSubscriberCount = premiumSubscriberCount;
+  let premiumTier = profile.premiumTier;
   if (premiumTier == null) {
-    premiumTier = metroImportDefault.premiumTier;
+    premiumTier = React5.premiumTier;
   }
-  obj2 = SetUtils;
-  const obj3 = {};
-  const merged = Object.assign(metroImportDefault);
+  obj.premiumTier = premiumTier;
+  obj.features = SetUtils.toSetInplace(profile.features);
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj3);
+  return React3(closure_1_8, {});
 };
 export const fromStoreListingGuild = function fromStoreListingGuild(id) {
-  let icon;
-  const obj = { id: id.id, name: id.name, icon };
-  icon = id.icon;
+  const obj = { id: id.id, name: id.name, icon: null };
+  let icon = id.icon;
   if (icon == null) {
     icon = null;
   }
-  const obj2 = {};
-  const merged = Object.assign(metroImportDefault);
+  obj.icon = icon;
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj2);
+  return React3(closure_1_8, {});
 };
 export const fromDirectoryGuild = function fromDirectoryGuild(id) {
-  let description;
-  let icon;
-  let obj2;
-  let splash;
-  const obj = { id: id.id, name: id.name, icon, description, splash, features: obj2.toSetInplace(id.features) };
-  icon = id.icon;
+  const obj = { id: id.id, name: id.name, icon: null, description: null, splash: null, features: null };
+  let icon = id.icon;
   if (icon == null) {
     icon = null;
   }
-  description = id.description;
+  obj.icon = icon;
+  let description = id.description;
   if (description == null) {
     description = null;
   }
-  splash = id.splash;
+  obj.description = description;
+  let splash = id.splash;
   if (splash == null) {
     splash = null;
   }
-  obj2 = SetUtils;
-  const obj3 = {};
-  const merged = Object.assign(metroImportDefault);
+  obj.splash = splash;
+  obj.features = SetUtils.toSetInplace(id.features);
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj3);
+  return React3(closure_1_8, {});
 };
 export const fromGuildDirectoryEntry = function fromGuildDirectoryEntry(entry) {
-  let description;
-  let icon;
-  let obj2;
-  let splash;
-  let str;
-  const obj = { id: entry.guildId, name: str, icon, description, splash, features: obj2.toSetInplace(entry.features) };
-  str = entry.name;
+  const obj = { id: entry.guildId, name: null, icon: null, description: null, splash: null, features: null };
+  let str = entry.name;
   if (str == null) {
     str = "";
   }
-  icon = entry.icon;
+  obj.name = str;
+  let icon = entry.icon;
   if (icon == null) {
     icon = null;
   }
-  description = entry.description;
+  obj.icon = icon;
+  let description = entry.description;
   if (description == null) {
     description = null;
   }
-  splash = entry.splash;
+  obj.description = description;
+  let splash = entry.splash;
   if (splash == null) {
     splash = null;
   }
-  obj2 = SetUtils;
-  const obj3 = {};
-  const merged = Object.assign(metroImportDefault);
+  obj.splash = splash;
+  obj.features = SetUtils.toSetInplace(entry.features);
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj3);
+  return React3(closure_1_8, {});
 };
 export const fromVerificationGateGuild = function fromVerificationGateGuild(stateFromStores1) {
-  let description;
-  let icon;
-  let obj2;
-  let splash;
-  let verificationLevel;
   const obj = {
     id: stateFromStores1.id,
     name: stateFromStores1.name,
-    icon,
-    description,
-    splash,
-    features: obj2.toSetInplace(stateFromStores1.features),
-    verificationLevel,
+    icon: null,
+    description: null,
+    splash: null,
+    features: null,
+    verificationLevel: null,
   };
-  icon = stateFromStores1.icon;
+  let icon = stateFromStores1.icon;
   if (icon == null) {
     icon = null;
   }
-  description = stateFromStores1.description;
+  obj.icon = icon;
+  let description = stateFromStores1.description;
   if (description == null) {
     description = null;
   }
-  splash = stateFromStores1.splash;
+  obj.description = description;
+  let splash = stateFromStores1.splash;
   if (splash == null) {
     splash = null;
   }
-  verificationLevel = stateFromStores1.verification_level;
-  obj2 = SetUtils;
+  obj.splash = splash;
+  obj.features = SetUtils.toSetInplace(stateFromStores1.features);
+  let verificationLevel = stateFromStores1.verification_level;
   if (verificationLevel == null) {
-    verificationLevel = metroImportDefault.verificationLevel;
+    verificationLevel = React5.verificationLevel;
   }
-  const obj3 = {};
-  const merged = Object.assign(metroImportDefault);
+  obj.verificationLevel = verificationLevel;
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj3);
+  return React3(closure_1_8, {});
 };
 export const fromClientDiscoverableGuild = function fromClientDiscoverableGuild(guild) {
-  let banner;
-  let description;
-  let discoverySplash;
-  let icon;
-  let obj2;
-  let preferredLocale;
-  let premiumSubscriberCount;
-  let splash;
   const obj = {
     id: guild.id,
     name: guild.name,
-    description,
-    splash,
-    banner,
-    preferredLocale,
-    icon,
-    features: obj2.toSetInplace(guild.features),
-    premiumSubscriberCount,
-    discoverySplash,
+    description: null,
+    splash: null,
+    banner: null,
+    preferredLocale: null,
+    icon: null,
+    features: null,
+    premiumSubscriberCount: null,
+    discoverySplash: null,
   };
-  description = guild.description;
+  let description = guild.description;
   if (description == null) {
     description = null;
   }
-  splash = guild.splash;
+  obj.description = description;
+  let splash = guild.splash;
   if (splash == null) {
     splash = null;
   }
-  banner = guild.banner;
+  obj.splash = splash;
+  let banner = guild.banner;
   if (banner == null) {
     banner = null;
   }
-  preferredLocale = guild.preferredLocale;
+  obj.banner = banner;
+  let preferredLocale = guild.preferredLocale;
   if (preferredLocale == null) {
-    preferredLocale = metroImportDefault.preferredLocale;
+    preferredLocale = React5.preferredLocale;
   }
-  icon = guild.icon;
+  obj.preferredLocale = preferredLocale;
+  let icon = guild.icon;
   if (icon == null) {
     icon = null;
   }
-  premiumSubscriberCount = guild.premiumSubscriptionCount;
-  obj2 = SetUtils;
+  obj.icon = icon;
+  obj.features = SetUtils.toSetInplace(guild.features);
+  let premiumSubscriberCount = guild.premiumSubscriptionCount;
   if (premiumSubscriberCount == null) {
-    premiumSubscriberCount = metroImportDefault.premiumSubscriberCount;
+    premiumSubscriberCount = React5.premiumSubscriberCount;
   }
-  discoverySplash = guild.discoverySplash;
+  obj.premiumSubscriberCount = premiumSubscriberCount;
+  let discoverySplash = guild.discoverySplash;
   if (discoverySplash == null) {
     discoverySplash = null;
   }
-  const obj3 = {};
-  const merged = Object.assign(metroImportDefault);
+  obj.discoverySplash = discoverySplash;
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj3);
+  return React3(closure_1_8, {});
 };
 export const fromGuildBasic = function fromGuildBasic(guild) {
-  let description;
-  let discovery_splash;
-  let icon;
-  let obj2;
-  let splash;
   const obj = {
     id: guild.id,
     name: guild.name,
-    icon,
-    description,
-    splash,
-    discoverySplash: discovery_splash,
-    features: obj2.toSetInplace(guild.features),
+    icon: null,
+    description: null,
+    splash: null,
+    discoverySplash: null,
+    features: null,
   };
-  icon = guild.icon;
+  let icon = guild.icon;
   if (icon == null) {
     icon = null;
   }
-  description = guild.description;
+  obj.icon = icon;
+  let description = guild.description;
   if (description == null) {
     description = null;
   }
-  splash = guild.splash;
+  obj.description = description;
+  let splash = guild.splash;
   if (splash == null) {
     splash = null;
   }
-  discovery_splash = guild.discovery_splash;
+  obj.splash = splash;
+  let discovery_splash = guild.discovery_splash;
   if (discovery_splash == null) {
     discovery_splash = null;
   }
-  obj2 = SetUtils;
-  const obj3 = {};
-  const merged = Object.assign(metroImportDefault);
+  obj.discoverySplash = discovery_splash;
+  obj.features = SetUtils.toSetInplace(guild.features);
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return _false(metroImportAll, obj3);
+  return React3(closure_1_8, {});
 };
 export const dangerouslyConstructGuildRecordFromUntypedObject =
   function dangerouslyConstructGuildRecordFromUntypedObject(id) {
-    let date;
-    let defaultMessageNotifications;
-    let explicitContentFilter;
-    let gameApplicationIds;
-    let guildSpaceSettings;
-    let guildTheme;
-    let incidentsData;
-    let joinedAt2;
-    let latestOnboardingQuestionId;
-    let maxMembers;
-    let maxStageVideoChannelUsers;
-    let maxVideoChannelUsers;
-    let mfaLevel;
-    let moderatorReporting;
-    let nsfwLevel;
-    let obj2;
-    let officialMessageColor;
-    let preferredLocale;
-    let premiumFeatures;
-    let premiumProgressBarEnabled;
-    let premiumSubscriberCount;
-    let premiumTier;
-    let profile;
-    let prop;
-    let verificationLevel;
-    let verificationRoleId;
     const obj = {
       id: id.id,
       name: id.name || "",
@@ -676,137 +617,193 @@ export const dangerouslyConstructGuildRecordFromUntypedObject =
       splash: id.splash || null,
       banner: id.banner || null,
       homeHeader: id.homeHeader || null,
-      features: obj2.toSetInplace(id.features),
-      preferredLocale,
-      afkChannelId: id.afkChannelId || null,
-      afkTimeout: id.afkTimeout,
-      systemChannelId: id.systemChannelId || null,
-      verificationLevel,
-      joinedAt: joinedAt2,
-      defaultMessageNotifications,
-      mfaLevel,
-      application_id: id.application_id || null,
-      explicitContentFilter,
-      vanityURLCode: id.vanityURLCode || null,
-      premiumTier,
-      premiumSubscriberCount,
-      premiumProgressBarEnabled,
-      premiumProgressBarEnabledUserUpdatedAt: date,
-      systemChannelFlags: id.systemChannelFlags,
-      discoverySplash: id.discoverySplash || null,
-      rulesChannelId: id.rulesChannelId || null,
-      safetyAlertsChannelId: id.safetyAlertsChannelId || null,
-      publicUpdatesChannelId: id.publicUpdatesChannelId || null,
-      maxStageVideoChannelUsers,
-      maxVideoChannelUsers,
-      maxMembers,
-      nsfwLevel,
-      ownerConfiguredContentLevel: prop,
+      features: SetUtils.toSetInplace(id.features),
+      preferredLocale: null,
+      afkChannelId: null,
+      afkTimeout: null,
+      systemChannelId: null,
+      verificationLevel: null,
+      joinedAt: null,
+      defaultMessageNotifications: null,
+      mfaLevel: null,
+      application_id: null,
+      explicitContentFilter: null,
+      vanityURLCode: null,
+      premiumTier: null,
+      premiumSubscriberCount: null,
+      premiumProgressBarEnabled: null,
+      premiumProgressBarEnabledUserUpdatedAt: null,
+      systemChannelFlags: null,
+      discoverySplash: null,
+      rulesChannelId: null,
+      safetyAlertsChannelId: null,
+      publicUpdatesChannelId: null,
+      maxStageVideoChannelUsers: null,
+      maxVideoChannelUsers: null,
+      maxMembers: null,
+      nsfwLevel: null,
+      ownerConfiguredContentLevel: null,
       hubType: null,
-      latestOnboardingQuestionId,
-      profile,
-      guildTheme,
-      premiumFeatures,
-      moderatorReporting,
-      guildSpaceSettings,
-      gameApplicationIds,
-      officialMessageColor,
-      verificationRoleId,
-      incidentsData,
+      latestOnboardingQuestionId: null,
+      profile: null,
+      guildTheme: null,
+      premiumFeatures: null,
+      moderatorReporting: null,
+      guildSpaceSettings: null,
+      gameApplicationIds: null,
+      officialMessageColor: null,
+      verificationRoleId: null,
+      incidentsData: null,
     };
-    preferredLocale = id.preferredLocale || metroImportDefault.preferredLocale;
-    verificationLevel = id.verificationLevel || metroImportDefault.verificationLevel;
+    let preferredLocale = id.preferredLocale;
+    if (!preferredLocale) {
+      preferredLocale = React5.preferredLocale;
+    }
+    obj.preferredLocale = preferredLocale;
+    obj.afkChannelId = id.afkChannelId || null;
+    obj.afkTimeout = id.afkTimeout;
+    obj.systemChannelId = id.systemChannelId || null;
+    let verificationLevel = id.verificationLevel;
+    if (!verificationLevel) {
+      verificationLevel = React5.verificationLevel;
+    }
+    obj.verificationLevel = verificationLevel;
     const joinedAt = id.joinedAt;
-    obj2 = SetUtils;
     if (id.joinedAt instanceof Date) {
-      joinedAt2 = joinedAt;
+      let joinedAt2 = joinedAt;
     } else if (null != joinedAt) {
       const _Date = Date;
-      const self = this;
-      const self2 = this;
       joinedAt2 = new Date(id.joinedAt);
     } else {
       joinedAt2 = id.joinedAt;
     }
-    defaultMessageNotifications = id.defaultMessageNotifications || metroImportDefault.defaultMessageNotifications;
-    mfaLevel = id.mfaLevel || metroImportDefault.mfaLevel;
-    explicitContentFilter = id.explicitContentFilter || metroImportDefault.explicitContentFilter;
-    premiumTier = id.premiumTier || metroImportDefault.premiumTier;
-    premiumSubscriberCount = id.premiumSubscriberCount || metroImportDefault.premiumSubscriberCount;
-    premiumProgressBarEnabled = id.premiumProgressBarEnabled || metroImportDefault.premiumProgressBarEnabled;
+    obj.joinedAt = joinedAt2;
+    let defaultMessageNotifications = id.defaultMessageNotifications;
+    if (!defaultMessageNotifications) {
+      defaultMessageNotifications = React5.defaultMessageNotifications;
+    }
+    obj.defaultMessageNotifications = defaultMessageNotifications;
+    let mfaLevel = id.mfaLevel;
+    if (!mfaLevel) {
+      mfaLevel = React5.mfaLevel;
+    }
+    obj.mfaLevel = mfaLevel;
+    obj.application_id = id.application_id || null;
+    let explicitContentFilter = id.explicitContentFilter;
+    if (!explicitContentFilter) {
+      explicitContentFilter = React5.explicitContentFilter;
+    }
+    obj.explicitContentFilter = explicitContentFilter;
+    obj.vanityURLCode = id.vanityURLCode || null;
+    let premiumTier = id.premiumTier;
+    if (!premiumTier) {
+      premiumTier = React5.premiumTier;
+    }
+    obj.premiumTier = premiumTier;
+    let premiumSubscriberCount = id.premiumSubscriberCount;
+    if (!premiumSubscriberCount) {
+      premiumSubscriberCount = React5.premiumSubscriberCount;
+    }
+    obj.premiumSubscriberCount = premiumSubscriberCount;
+    let premiumProgressBarEnabled = id.premiumProgressBarEnabled;
+    if (!premiumProgressBarEnabled) {
+      premiumProgressBarEnabled = React5.premiumProgressBarEnabled;
+    }
+    obj.premiumProgressBarEnabled = premiumProgressBarEnabled;
     const premiumProgressBarEnabledUserUpdatedAt = id.premiumProgressBarEnabledUserUpdatedAt;
     if (id.premiumProgressBarEnabledUserUpdatedAt instanceof Date) {
-      date = premiumProgressBarEnabledUserUpdatedAt;
+      let date = premiumProgressBarEnabledUserUpdatedAt;
     } else {
       date = null;
       if (null != premiumProgressBarEnabledUserUpdatedAt) {
         const _Date2 = Date;
-        const self3 = this;
-        const self4 = this;
         date = new Date(id.premiumProgressBarEnabledUserUpdatedAt);
       }
     }
-    maxStageVideoChannelUsers = id.maxStageVideoChannelUsers || metroImportDefault.maxStageVideoChannelUsers;
-    maxVideoChannelUsers = id.maxVideoChannelUsers || metroImportDefault.maxVideoChannelUsers;
-    maxMembers = id.maxMembers || metroImportDefault.maxMembers;
-    nsfwLevel = id.nsfwLevel;
-    if (nsfwLevel == null) {
-      nsfwLevel = metroImportDefault.nsfwLevel;
+    obj.premiumProgressBarEnabledUserUpdatedAt = date;
+    obj.systemChannelFlags = id.systemChannelFlags;
+    obj.discoverySplash = id.discoverySplash || null;
+    obj.rulesChannelId = id.rulesChannelId || null;
+    obj.safetyAlertsChannelId = id.safetyAlertsChannelId || null;
+    obj.publicUpdatesChannelId = id.publicUpdatesChannelId || null;
+    let maxStageVideoChannelUsers = id.maxStageVideoChannelUsers;
+    if (!maxStageVideoChannelUsers) {
+      maxStageVideoChannelUsers = React5.maxStageVideoChannelUsers;
     }
-    prop = id.ownerConfiguredContentLevel;
+    obj.maxStageVideoChannelUsers = maxStageVideoChannelUsers;
+    let maxVideoChannelUsers = id.maxVideoChannelUsers;
+    if (!maxVideoChannelUsers) {
+      maxVideoChannelUsers = React5.maxVideoChannelUsers;
+    }
+    obj.maxVideoChannelUsers = maxVideoChannelUsers;
+    let maxMembers = id.maxMembers;
+    if (!maxMembers) {
+      maxMembers = React5.maxMembers;
+    }
+    obj.maxMembers = maxMembers;
+    let nsfwLevel = id.nsfwLevel;
+    if (nsfwLevel == null) {
+      nsfwLevel = React5.nsfwLevel;
+    }
+    obj.nsfwLevel = nsfwLevel;
+    let prop = id.ownerConfiguredContentLevel;
     if (prop == null) {
       prop = null;
     }
+    obj.ownerConfiguredContentLevel = prop;
     ({ hubType: obj.hubType, latestOnboardingQuestionId } = id);
     if (latestOnboardingQuestionId == null) {
       latestOnboardingQuestionId = null;
     }
-    profile = id.profile;
+    obj.latestOnboardingQuestionId = latestOnboardingQuestionId;
+    let profile = id.profile;
     if (profile == null) {
       profile = null;
     }
-    guildTheme = id.guildTheme;
+    obj.profile = profile;
+    let guildTheme = id.guildTheme;
     if (guildTheme == null) {
       guildTheme = null;
     }
-    premiumFeatures = id.premiumFeatures;
+    obj.guildTheme = guildTheme;
+    let premiumFeatures = id.premiumFeatures;
     if (premiumFeatures == null) {
       premiumFeatures = null;
     }
-    moderatorReporting = id.moderatorReporting;
+    obj.premiumFeatures = premiumFeatures;
+    let moderatorReporting = id.moderatorReporting;
     if (moderatorReporting == null) {
       moderatorReporting = null;
     }
-    guildSpaceSettings = id.guildSpaceSettings;
+    obj.moderatorReporting = moderatorReporting;
+    let guildSpaceSettings = id.guildSpaceSettings;
     if (guildSpaceSettings == null) {
       guildSpaceSettings = null;
     }
-    gameApplicationIds = id.gameApplicationIds;
+    obj.guildSpaceSettings = guildSpaceSettings;
+    let gameApplicationIds = id.gameApplicationIds;
     if (gameApplicationIds == null) {
       gameApplicationIds = null;
     }
-    officialMessageColor = id.officialMessageColor;
+    obj.gameApplicationIds = gameApplicationIds;
+    let officialMessageColor = id.officialMessageColor;
     if (officialMessageColor == null) {
       officialMessageColor = null;
     }
-    verificationRoleId = id.verificationRoleId;
+    obj.officialMessageColor = officialMessageColor;
+    let verificationRoleId = id.verificationRoleId;
     if (verificationRoleId == null) {
       verificationRoleId = null;
     }
-    incidentsData = id.incidentsData;
+    obj.verificationRoleId = verificationRoleId;
+    let incidentsData = id.incidentsData;
     if (incidentsData == null) {
       incidentsData = null;
     }
-    return _false(metroImportAll, obj);
+    obj.incidentsData = incidentsData;
+    return React3(closure_1_8, obj);
   };
 export const toGuildProperties = function toGuildProperties(id) {
-  let items;
-  let obj6;
-  let premiumProgressBarEnabledUserUpdatedAt;
-  let tmp3;
-  let tmp4;
-  let tmp9;
-  let toISOStringResult;
   const obj = {
     id: id.id,
     name: id.name,
@@ -826,11 +823,11 @@ export const toGuildProperties = function toGuildProperties(id) {
     explicit_content_filter: id.explicitContentFilter,
     default_message_notifications: id.defaultMessageNotifications,
     mfa_level: id.mfaLevel,
-    vanity_url_code: vanityURLCode,
+    vanity_url_code: null,
     premium_tier: null,
     premium_progress_bar_enabled: null,
-    premium_progress_bar_enabled_user_updated_at: toISOStringResult,
-    premium_features: tmp3,
+    premium_progress_bar_enabled_user_updated_at: null,
+    premium_features: null,
     system_channel_flags: null,
     discovery_splash: null,
     rules_channel_id: null,
@@ -840,51 +837,59 @@ export const toGuildProperties = function toGuildProperties(id) {
     max_video_channel_users: null,
     max_members: null,
     nsfw_level: null,
-    nsfw: items.includes(id.nsfwLevel),
+    nsfw: null,
     owner_configured_content_level: null,
     hub_type: null,
     latest_onboarding_question_id: null,
     profile: null,
-    theme: tmp4,
-    moderator_reporting: tmp9,
+    theme: null,
+    moderator_reporting: null,
     guild_space_settings: null,
     official_message_color: null,
-    incidents_data: obj6.toServerGuildIncidentsData(id.incidentsData),
+    incidents_data: null,
     game_application_ids: null,
     verification_role_id: null,
   };
-  vanityURLCode = id.vanityURLCode;
+  let vanityURLCode = id.vanityURLCode;
   if (vanityURLCode == null) {
     vanityURLCode = null;
   }
+  obj.vanity_url_code = vanityURLCode;
   ({
     premiumTier: obj.premium_tier,
     premiumProgressBarEnabled: obj.premium_progress_bar_enabled,
     premiumProgressBarEnabledUserUpdatedAt,
   } = id);
-  toISOStringResult = undefined;
+  let toISOStringResult;
   if (premiumProgressBarEnabledUserUpdatedAt != null) {
     toISOStringResult = premiumProgressBarEnabledUserUpdatedAt.toISOString();
   }
   if (toISOStringResult == null) {
     toISOStringResult = null;
   }
-  tmp3 = null;
+  obj.premium_progress_bar_enabled_user_updated_at = toISOStringResult;
+  let tmp3 = null;
   if (null != id.premiumFeatures) {
-    const obj3 = {
-      features: null,
-      additional_emoji_slots: null,
-      additional_sticker_slots: null,
-      additional_sound_slots: null,
-    };
     ({
       features: obj2.features,
       additionalEmojiSlots: obj2.additional_emoji_slots,
       additionalStickerSlots: obj2.additional_sticker_slots,
       additionalSoundSlots: obj2.additional_sound_slots,
     } = id.premiumFeatures);
-    tmp3 = obj3;
+    tmp3 = {
+      features: null,
+      additional_emoji_slots: null,
+      additional_sticker_slots: null,
+      additional_sound_slots: null,
+    };
+    const obj3 = {
+      features: null,
+      additional_emoji_slots: null,
+      additional_sticker_slots: null,
+      additional_sound_slots: null,
+    };
   }
+  obj.premium_features = tmp3;
   ({
     systemChannelFlags: obj.system_channel_flags,
     discoverySplash: obj.discovery_splash,
@@ -896,69 +901,61 @@ export const toGuildProperties = function toGuildProperties(id) {
     maxMembers: obj.max_members,
     nsfwLevel: obj.nsfw_level,
   } = id);
-  items = [,];
+  const items = [,];
   ({ AGE_RESTRICTED: arr[0], EXPLICIT: arr[1] } = GuildNSFWContentLevel);
+  obj.nsfw = items.includes(id.nsfwLevel);
   ({
     ownerConfiguredContentLevel: obj.owner_configured_content_level,
     hubType: obj.hub_type,
     latestOnboardingQuestionId: obj.latest_onboarding_question_id,
     profile: obj.profile,
   } = id);
-  tmp4 = null;
+  let tmp4 = null;
   if (null != id.guildTheme) {
     const guildTheme = id.guildTheme;
     const obj9 = { enabled: guildTheme.enabled };
-    const obj4 = guildThemeSerialization;
-    const merged = Object.assign(obj4.toServerGuildThemeSettings(guildTheme.themeSettings));
+    const merged = Object.assign(guildThemeSerialization.toServerGuildThemeSettings(guildTheme.themeSettings));
     tmp4 = obj9;
   }
-  tmp9 = null;
+  obj.theme = tmp4;
+  let tmp9 = null;
   if (null != id.moderatorReporting) {
-    const obj10 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
     ({
       moderatorReportingEnabled: obj5.moderator_reporting_enabled,
       moderatorReportChannelId: obj5.moderator_report_channel_id,
     } = id.moderatorReporting);
-    tmp9 = obj10;
+    tmp9 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
+    const obj10 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
   }
+  obj.moderator_reporting = tmp9;
   ({ guildSpaceSettings: obj.guild_space_settings, officialMessageColor: obj.official_message_color } = id);
+  obj.incidents_data = guildIncidentsSerialization.toServerGuildIncidentsData(id.incidentsData);
   ({ gameApplicationIds: obj.game_application_ids, verificationRoleId: obj.verification_role_id } = id);
-  obj6 = guildIncidentsSerialization;
   return obj;
 };
 export const fromSerializedGuildRecord = function fromSerializedGuildRecord(item10009) {
-  let date;
-  let date1;
-  let obj2;
-  const obj = {
-    features: obj2.toSetInplace(item10009.features),
-    joinedAt: date,
-    premiumProgressBarEnabledUserUpdatedAt: date1,
-  };
-  const merged = Object.assign(metroImportDefault);
+  const obj = {};
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(item10009);
-  date = null;
-  obj2 = SetUtils;
+  obj.features = SetUtils.toSetInplace(item10009.features);
+  let date = null;
   if (null != item10009.joinedAt) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
     date = new Date(item10009.joinedAt);
   }
-  date1 = null;
+  obj.joinedAt = date;
+  let date1 = null;
   if (null != item10009.premiumProgressBarEnabledUserUpdatedAt) {
     const _Date2 = Date;
-    const self3 = this;
-    const self4 = this;
     date1 = new Date(item10009.premiumProgressBarEnabledUserUpdatedAt);
   }
-  delete obj["roles"];
-  delete obj["member"];
-  return _false(metroImportAll, obj);
+  obj.premiumProgressBarEnabledUserUpdatedAt = date1;
+  delete tmp2[tmp];
+  delete tmp2[tmp];
+  return React3(closure_1_8, obj);
 };
 export const constructFromPartialGuildRecord = function constructFromPartialGuildRecord(arg0) {
-  const obj = {};
-  const merged = Object.assign(metroImportDefault);
+  const merged = Object.assign(React5);
   const merged1 = Object.assign(arg0);
-  return _false(metroImportAll, obj);
+  return React3(closure_1_8, {});
 };

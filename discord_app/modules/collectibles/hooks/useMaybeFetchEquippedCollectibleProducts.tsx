@@ -1,28 +1,21 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx
 import useDisplayProfileDefault from "../../user_profile/hooks/useDisplayProfile.tsx";
 import StorefrontProductActionCreators from "../../storefront/StorefrontProductActionCreators.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, guildId) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp7;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(12);
+      const cResult = require("c").c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -34,24 +27,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
       const tmp9 = useDisplayProfileDefault(arg0, guildId);
-      const tmpResult3 = require("useAvatarDecoration");
-      const avatarDecoration = tmpResult3.useAvatarDecoration(stateFromStores, guildId);
+      const tmpResult = require("initialize");
+      const avatarDecoration = require("useAvatarDecoration").useAvatarDecoration(stateFromStores, guildId);
       if (cResult[4] === guildId) {
-        let tmp11;
         if (cResult[5] === stateFromStores) {
-          tmp11 = cResult[6];
+          let tmp11 = cResult[6];
         }
-        const tmpResult4 = require("useNameplate");
-        const nameplate = tmpResult4.useNameplate(tmp11);
+        const nameplate = tmp(7899).useNameplate(tmp11);
         let skuId;
         if (avatarDecoration != null) {
           skuId = avatarDecoration.skuId;
@@ -77,9 +68,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] === skuId) {
           if (cResult[8] === skuId1) {
             if (cResult[9] === skuId2) {
-              let tmp18;
               if (cResult[10] === skuId3) {
-                tmp18 = cResult[11];
+                let tmp18 = cResult[11];
               }
               return tmp18;
             }
@@ -93,29 +83,29 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = skuId3;
         cResult[11] = found;
         tmp18 = found;
+        const tmpResult4 = tmp(7899);
       }
       const obj2 = { user: stateFromStores, guildId };
       cResult[4] = guildId;
       cResult[5] = stateFromStores;
       cResult[6] = obj2;
       tmp11 = obj2;
+      const tmpResult3 = require("useAvatarDecoration");
     }
   : (arg0, guildId) => {
-      let closure_0;
-      let skuId;
-      let skuId1;
-      let skuId3;
       _require = arg0;
       let items = [skuId3];
       const items1 = [arg0];
-      const obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(closure_0), items1);
+      const stateFromStores = require("initialize").useStateFromStores(
+        items,
+        () => UserStore.getUser(closure_0),
+        items1,
+      );
       const tmp2 = skuId(skuId1[5])(arg0, guildId);
+      const obj = require("initialize");
+      const avatarDecoration = require("useAvatarDecoration").useAvatarDecoration(stateFromStores, guildId);
       const obj2 = require("useAvatarDecoration");
-      const avatarDecoration = obj2.useAvatarDecoration(stateFromStores, guildId);
-      const obj3 = require("useNameplate");
-      const obj4 = { user: stateFromStores, guildId };
-      const nameplate = obj3.useNameplate(obj4);
+      const nameplate = require("useNameplate").useNameplate({ user: stateFromStores, guildId });
       skuId = undefined;
       if (avatarDecoration != null) {
         skuId = avatarDecoration.skuId;
@@ -145,30 +135,31 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
     };
 let closure_5 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2) => {
-      let closure_0;
       _require = arg2;
-      let obj = require("react");
-      const cResult = obj.c(4);
+      const cResult = require("c").c(4);
       const tmp2 = closure_5(arg0, arg1);
       const skuIds = tmp2;
       if (cResult[0] === arg2) {
-        let tmp3;
-        let tmp4;
         if (cResult[1] === tmp2) {
-          tmp3 = cResult[2];
-          tmp4 = cResult[3];
+          let tmp3 = cResult[2];
+          let tmp4 = cResult[3];
         }
-        const effect = react.useEffect(tmp3, tmp4);
+        const effect = noop.useEffect(tmp3, tmp4);
       }
       const fn = function c() {
-        const tmp = closure_0 && 0 !== skuIds.length;
+        let tmp = closure_0;
+        if (closure_0) {
+          tmp = 0 !== skuIds.length;
+        }
         if (tmp) {
           const obj2 = { skuIds };
-          const obj = StorefrontProductActionCreators;
-          const result = obj.maybeFetchProductsBySkuIds(obj2);
+          const result = StorefrontProductActionCreators.maybeFetchProductsBySkuIds(obj2);
         }
       };
       const items = [arg2, tmp2];
@@ -178,22 +169,22 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp4 = items;
       tmp3 = fn;
+      let obj = require("c");
     }
   : (arg0, arg1, arg2) => {
-      let closure_0 = arg2;
+      closure_0 = arg2;
       let tmp = closure_5(arg0, arg1);
       const skuIds = tmp;
       const items = [arg2, tmp];
-      const effect = react.useEffect(() => {
-        const tmp = closure_0 && 0 !== skuIds.length;
+      const effect = noop.useEffect(() => {
+        let tmp = closure_0;
+        if (closure_0) {
+          tmp = 0 !== skuIds.length;
+        }
         if (tmp) {
           const obj2 = { skuIds };
-          const obj = StorefrontProductActionCreators;
-          const result = obj.maybeFetchProductsBySkuIds(obj2);
+          const result = StorefrontProductActionCreators.maybeFetchProductsBySkuIds(obj2);
         }
       }, items);
     };
-let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
-
-export default tmp3;
 export const useEquippedCollectibleSkuIds = tmp2;

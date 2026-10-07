@@ -7,7 +7,6 @@ const obj = {
     "https://discord.com/connections/playstation/link",
   ]),
 };
-new Set(["https://discord.com/connections/playstation-stg/link", "https://discord.com/connections/playstation/link"]);
 const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/ConsoleAuthorizationRedirectURIs.tsx",
 );

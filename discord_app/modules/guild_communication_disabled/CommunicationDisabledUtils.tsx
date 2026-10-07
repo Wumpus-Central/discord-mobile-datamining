@@ -7,14 +7,10 @@ export const isCommunicationDisabled = function isCommunicationDisabled(communic
   let tmp = null != communicationDisabledUserMap;
   if (tmp) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
-    const _Date2 = Date;
-    const self3 = this;
-    const self4 = this;
     const date = new Date(communicationDisabledUserMap);
-    tmp = date > new Date();
+    const _Date2 = Date;
     const date1 = new Date();
+    tmp = date > date1;
   }
   return tmp;
 };
@@ -26,14 +22,10 @@ export const isMemberCommunicationDisabled = function isMemberCommunicationDisab
   let tmp2 = null != prop;
   if (tmp2) {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
-    const _Date2 = Date;
-    const self3 = this;
-    const self4 = this;
     const date = new Date(prop);
-    tmp2 = date > new Date();
+    const _Date2 = Date;
     const date1 = new Date();
+    tmp2 = date > date1;
   }
   return tmp2;
 };

@@ -2,32 +2,23 @@
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+const require = fn;
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
-      let extractTimestampResult;
-      let first;
-      let lastMessageId;
-      let message;
-      let tmp10;
-      let tmp7;
-      let tmp9;
       _require = id;
-      const obj = require("react");
-      const cResult = obj.c(7);
-      const obj2 = require("useMessageRequestPreview");
-      const messageRequestPreview = obj2.useMessageRequestPreview(id);
+      const cResult = require("c").c(7);
+      const obj = require("c");
       const tmp = _require;
+      const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -37,16 +28,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = id.id;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+      const obj2 = require("useMessageRequestPreview");
+      const stateFromStores = tmp(504).useStateFromStores(first, tmp7);
       if (cResult[3] === stateFromStores) {
         if (cResult[4] === messageRequestPreview) {
-          tmp9 = cResult[5];
-          tmp10 = cResult[6];
+          let tmp9 = cResult[5];
+          let tmp10 = cResult[6];
         }
         const _Symbol = Symbol;
         if (tmp10 !== Symbol.for("react.early_return_sentinel")) {
@@ -55,20 +46,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp9;
       }
       const obj3 = { lastMessageId: stateFromStores };
-      const forResult = Symbol.for("react.early_return_sentinel");
+      const tmpResult = tmp(504);
       const merged = Object.assign(messageRequestPreview);
       ({ lastMessageId, message } = obj3);
       if (obj3.loaded) {
         if (null != message) {
-          const obj6 = SnowflakeUtilsDefault;
-          extractTimestampResult = obj6.extractTimestamp(message.id);
+          let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
         }
         let str = "";
         let calendarResult;
         if (null != extractTimestampResult) {
-          const obj7 = _modDef4467(extractTimestampResult);
-          calendarResult = obj7.calendar();
+          calendarResult = _modDef4467(extractTimestampResult).calendar();
           str = forResult;
+          const obj7 = _modDef4467(extractTimestampResult);
         }
         cResult[3] = stateFromStores;
         cResult[4] = messageRequestPreview;
@@ -79,62 +69,50 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       extractTimestampResult = null;
       if (null != lastMessageId) {
-        const obj5 = SnowflakeUtilsDefault;
-        extractTimestampResult = obj5.extractTimestamp(lastMessageId);
+        extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
       }
+      forResult = Symbol.for("react.early_return_sentinel");
     }
   : (arg0) => {
-      let extractTimestampResult;
-      let id;
-      let items;
-      let lastMessageId;
-      let message;
-      let obj3;
       _require = arg0;
+      const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(arg0);
+      const obj2 = { lastMessageId: null };
       const obj = require("useMessageRequestPreview");
-      const messageRequestPreview = obj.useMessageRequestPreview(arg0);
-      const obj2 = { lastMessageId: obj3.useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id)) };
-      items = [ReadStateStore];
-      obj3 = require("get initialized");
+      const items = [ReadStateStore];
+      obj2.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
       const merged = Object.assign(messageRequestPreview);
       ({ lastMessageId, message } = obj2);
       if (obj2.loaded) {
         if (null != message) {
-          const obj5 = SnowflakeUtilsDefault;
-          extractTimestampResult = obj5.extractTimestamp(message.id);
+          let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
         }
         let str = "";
         if (null != extractTimestampResult) {
+          str = _modDef4467(extractTimestampResult).calendar();
           const obj6 = _modDef4467(extractTimestampResult);
-          str = obj6.calendar();
         }
         return str;
       }
       extractTimestampResult = null;
       if (null != lastMessageId) {
-        const obj4 = SnowflakeUtilsDefault;
-        extractTimestampResult = obj4.extractTimestamp(lastMessageId);
+        extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
       }
+      const obj3 = require("initialize");
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
+
+export const useMessageRequestTimestampText = tmp2;
+export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
-      let extractTimestampResult;
-      let first;
-      let lastMessageId;
-      let message;
-      let tmp10;
-      let tmp7;
-      let tmp9;
       _require = id;
-      const obj = require("react");
-      const cResult = obj.c(7);
-      const obj2 = require("useMessageRequestPreview");
-      const messageRequestPreview = obj2.useMessageRequestPreview(id);
+      const cResult = require("c").c(7);
+      const obj = require("c");
+      const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -144,16 +122,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = id.id;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+      const obj2 = require("useMessageRequestPreview");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
       if (cResult[3] === stateFromStores) {
         if (cResult[4] === messageRequestPreview) {
-          tmp9 = cResult[5];
-          tmp10 = cResult[6];
+          let tmp9 = cResult[5];
+          let tmp10 = cResult[6];
         }
         const _Symbol = Symbol;
         if (tmp10 !== Symbol.for("react.early_return_sentinel")) {
@@ -162,20 +140,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp9;
       }
       const obj3 = { lastMessageId: stateFromStores };
-      const forResult = Symbol.for("react.early_return_sentinel");
+      const tmpResult = require("initialize");
       const merged = Object.assign(messageRequestPreview);
       ({ lastMessageId, message } = obj3);
       if (obj3.loaded) {
         if (null != message) {
-          const obj6 = SnowflakeUtilsDefault;
-          extractTimestampResult = obj6.extractTimestamp(message.id);
+          let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
         }
         let str = "";
         let timestampString;
         if (null != extractTimestampResult) {
-          const tmpResult2 = require("ThreadUtils");
-          timestampString = tmpResult2.getTimestampString(extractTimestampResult);
+          timestampString = tmp(7420).getTimestampString(extractTimestampResult);
           str = forResult;
+          const tmpResult2 = tmp(7420);
         }
         cResult[3] = stateFromStores;
         cResult[4] = messageRequestPreview;
@@ -186,45 +163,34 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       extractTimestampResult = null;
       if (null != lastMessageId) {
-        const obj5 = SnowflakeUtilsDefault;
-        extractTimestampResult = obj5.extractTimestamp(lastMessageId);
+        extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
       }
+      forResult = Symbol.for("react.early_return_sentinel");
     }
   : (arg0) => {
-      let extractTimestampResult;
-      let id;
-      let items;
-      let lastMessageId;
-      let message;
-      let obj3;
       _require = arg0;
+      const messageRequestPreview = require("useMessageRequestPreview").useMessageRequestPreview(arg0);
+      const obj2 = { lastMessageId: null };
       const obj = require("useMessageRequestPreview");
-      const messageRequestPreview = obj.useMessageRequestPreview(arg0);
-      const obj2 = { lastMessageId: obj3.useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id)) };
-      items = [ReadStateStore];
-      obj3 = require("get initialized");
+      const tmp = _require;
+      const items = [ReadStateStore];
+      obj2.lastMessageId = require("initialize").useStateFromStores(items, () => ReadStateStore.lastMessageId(id.id));
       const merged = Object.assign(messageRequestPreview);
       ({ lastMessageId, message } = obj2);
-      const tmp = _require;
       if (obj2.loaded) {
         if (null != message) {
-          const obj5 = SnowflakeUtilsDefault;
-          extractTimestampResult = obj5.extractTimestamp(message.id);
+          let extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
         }
         let str = "";
         if (null != extractTimestampResult) {
+          str = tmp(7420).getTimestampString(extractTimestampResult);
           const tmpResult = tmp(7420);
-          str = tmpResult.getTimestampString(extractTimestampResult);
         }
         return str;
       }
       extractTimestampResult = null;
       if (null != lastMessageId) {
-        const obj4 = SnowflakeUtilsDefault;
-        extractTimestampResult = obj4.extractTimestamp(lastMessageId);
+        extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
       }
+      const obj3 = require("initialize");
     };
-const result = size.fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
-
-export const useMessageRequestTimestampText = tmp2;
-export const useMessageRequestRelativeTimestampText = tmp3;

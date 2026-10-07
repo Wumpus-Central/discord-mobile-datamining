@@ -1,82 +1,82 @@
 // discord_common/js/packages/i18n/i18n.tsx
-import _mod580 from "../../../../_runtime/metro/00580__.js";
-import react_native from "getSystemLocale.tsx";
+import getSystemLocale from "getSystemLocale.tsx";
 import _modDef1892 from "../../../../_runtime/metro/01892__.js";
-import _default2 from "../../../../_runtime/01929__default2.js";
 import _mod1933 from "../../../../_runtime/metro/01933__.js";
 import parse from "parse.tsx";
-import 01901__ from "../../../../_runtime/metro/01901__.js";
-import 01902__ from "../../../../_runtime/metro/01902__.js";
-import 01903__ from "../../../../_runtime/metro/01903__.js";
-import 01904__ from "../../../../_runtime/metro/01904__.js";
-import 01905__ from "../../../../_runtime/metro/01905__.js";
-import 01906__ from "../../../../_runtime/metro/01906__.js";
-import 01907__ from "../../../../_runtime/metro/01907__.js";
-import 01908__ from "../../../../_runtime/metro/01908__.js";
-import 01909__ from "../../../../_runtime/metro/01909__.js";
-import 01910__ from "../../../../_runtime/metro/01910__.js";
-import 01911__ from "../../../../_runtime/metro/01911__.js";
-import 01912__ from "../../../../_runtime/metro/01912__.js";
-import 01913__ from "../../../../_runtime/metro/01913__.js";
-import 01914__ from "../../../../_runtime/metro/01914__.js";
-import 01915__ from "../../../../_runtime/metro/01915__.js";
-import 01916__ from "../../../../_runtime/metro/01916__.js";
-import 01917__ from "../../../../_runtime/metro/01917__.js";
-import 01918__ from "../../../../_runtime/metro/01918__.js";
-import 01919__ from "../../../../_runtime/metro/01919__.js";
-import 01920__ from "../../../../_runtime/metro/01920__.js";
-import 01921__ from "../../../../_runtime/metro/01921__.js";
-import 01922__ from "../../../../_runtime/metro/01922__.js";
-import 01923__ from "../../../../_runtime/metro/01923__.js";
-import 01924__ from "../../../../_runtime/metro/01924__.js";
-import 01925__ from "../../../../_runtime/metro/01925__.js";
-import 01926__ from "../../../../_runtime/metro/01926__.js";
-import 01927__ from "../../../../_runtime/metro/01927__.js";
-import 01928__ from "../../../../_runtime/metro/01928__.js";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let _instance_members_initializer_I18N_;
-
+require = fn;
 global.IntlMessageFormat = _modDef1892;
-delete global["IntlMessageFormat"];
+const module_1901 = fn(1901);
+const module_1902 = fn(1902);
+const module_1903 = fn(1903);
+const module_1904 = fn(1904);
+const module_1905 = fn(1905);
+const module_1906 = fn(1906);
+const module_1907 = fn(1907);
+const module_1908 = fn(1908);
+const module_1909 = fn(1909);
+const module_1910 = fn(1910);
+const module_1911 = fn(1911);
+const module_1912 = fn(1912);
+const module_1913 = fn(1913);
+const module_1914 = fn(1914);
+const module_1915 = fn(1915);
+const module_1916 = fn(1916);
+const module_1917 = fn(1917);
+const module_1918 = fn(1918);
+const module_1919 = fn(1919);
+const module_1920 = fn(1920);
+const module_1921 = fn(1921);
+const module_1922 = fn(1922);
+const module_1923 = fn(1923);
+const module_1924 = fn(1924);
+const module_1925 = fn(1925);
+const module_1926 = fn(1926);
+const module_1927 = fn(1927);
+const module_1928 = fn(1928);
+delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  const _module28 = _default2;
+  fn(1929);
 }
 const React2 = "en-US";
 class Provider {
-  constructor(_getParsedMessages) {
-    const merged = Object.assign({ _context: null, _parsedMessages: null });
-    const obj = { messages: {}, defaultMessages: {}, locale };
+  constructor(arg0) {
+    merged = Object.assign({ _context: null, _parsedMessages: null });
+    obj = { messages: {}, defaultMessages: {}, locale: c2 };
     merged[0] = obj;
     merged[1] = {};
-    merged._getParsedMessages = _getParsedMessages;
+    merged._getParsedMessages = global;
     return merged;
   }
-  getMessages() {
-    return this._parsedMessages;
-  }
 }
-const prototype = Provider.prototype;
+Provider.prototype["getMessages"] = function getMessages() {
+  return this._parsedMessages;
+};
 class LazyPropertyProvider extends Provider {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult._refresh = function _refresh(defaultMessages) {
-      let closure_0 = defaultMessages;
+      closure_0 = defaultMessages;
       let obj = _parsedMessages;
       if (_parsedMessages === undefined) {
         obj = {};
       }
       const keys = Object.keys(defaultMessages.defaultMessages);
       const item = keys.forEach((item) => {
-        let closure_0 = item;
+        closure_0 = item;
         obj = {
           configurable: true,
           get() {
-            delete obj[item];
-            const _getParsedMessagesResult = applyArgumentsResult._getParsedMessages(item, item, applyArgumentsResult._refresh);
-            obj[item] = _getParsedMessagesResult;
+            delete tmp2[tmp];
+            const _getParsedMessagesResult = applyArgumentsResult._getParsedMessages(
+              closure_0,
+              closure_0,
+              applyArgumentsResult._refresh,
+            );
+            obj[closure_0] = _getParsedMessagesResult;
             return _getParsedMessagesResult;
-          }
+          },
         };
         Object.defineProperty(obj, item, obj);
       });
@@ -84,73 +84,65 @@ class LazyPropertyProvider extends Provider {
     };
     return applyArgumentsResult;
   }
-  refresh(_context) {
-    this._context = _context;
-    this._refresh(_context, this._parsedMessages);
-  }
 }
-const prototype2 = LazyPropertyProvider.prototype;
+LazyPropertyProvider.prototype["refresh"] = function refresh(_context) {
+  this._context = _context;
+  this._refresh(_context, this._parsedMessages);
+};
 class ProxyProvider extends Provider {
-  constructor(_getParsedMessages) {
-    let tmp;
-    const tmp2 = new tmp(_getParsedMessages, new.target);
-    let closure_0 = tmp2;
-    tmp2._createProxy = function _createProxy() {
-      let _context;
+  constructor(arg0) {
+    tmp1 = new tmp(global, new.target);
+    closure_0 = tmp1;
+    tmp1._createProxy = function _createProxy() {
       if (_context === undefined) {
-        let tmp = _context;
         _context = _context._context;
       }
-      const obj = {
-        get(arg0, item) {
-          let tmp = arg0[item];
-          if (!tmp) {
-            const _getParsedMessagesResult = _context._getParsedMessages(_context, item, _context._createProxy);
-            arg0[item] = _getParsedMessagesResult;
-            tmp = _getParsedMessagesResult;
-          }
-          return tmp;
-        }
-      };
-      const proxy = new Proxy({}, obj);
+      const proxy = new Proxy(
+        {},
+        {
+          get(arg0, arg1) {
+            let tmp = arg0[arg1];
+            if (!tmp) {
+              const _getParsedMessagesResult = _context._getParsedMessages(_context, arg1, _context._createProxy);
+              arg0[arg1] = _getParsedMessagesResult;
+              tmp = _getParsedMessagesResult;
+            }
+            return tmp;
+          },
+        },
+      );
       return proxy;
     };
-    tmp2._parsedMessages = tmp2._createProxy(tmp2._context);
-    return tmp2;
-  }
-  refresh(arg0) {
-    const self = this;
-    const merged = Object.assign(this._context, arg0);
-    const keys = Object.keys(this._parsedMessages);
-    const item = keys.forEach((item) => {
-      delete self._parsedMessages[item];
-    });
+    tmp1._parsedMessages = tmp1._createProxy(tmp1._context);
+    return tmp1;
   }
 }
-const prototype3 = ProxyProvider.prototype;
-const EventEmitter = _mod580.EventEmitter;
-_instance_members_initializer_I18N_ = function() {
+ProxyProvider.prototype["refresh"] = function refresh(arg0) {
+  const self = this;
+  const merged = Object.assign(this._context, arg0);
+  const keys = Object.keys(this._parsedMessages);
+  const item = keys.forEach((item) => {
+    delete tmp2[tmp];
+  });
+};
+const EventEmitter = fn(580).EventEmitter;
+_instance_members_initializer_I18N_ = function () {
   const self = this;
   this.loadPromise = Promise.resolve();
-  this.resolveLanguageLoaded = function resolveLanguageLoaded() {
-
-  };
+  this.resolveLanguageLoaded = function resolveLanguageLoaded() {};
   this._languages = [];
   this._chosenLocale = "";
-  this._getParsedMessages = function _getParsedMessages(_context, item, _createProxy) {
-    let defaultMessages;
+  this._getParsedMessages = function _getParsedMessages(_context, arg1, _createProxy) {
     ({ defaultMessages, locale } = _context);
-    if (typeof _context.messages[item] || defaultMessages[item] === "object") {
-      const obj3 = { messages: _context.messages[item] || defaultMessages[item], defaultMessages: defaultMessages[item], locale };
+    if (typeof _context.messages[arg1] || defaultMessages[arg1] === "object") {
+      const obj3 = { messages: tmp4, defaultMessages: defaultMessages[arg1], locale };
       return _createProxy(obj3);
     } else {
       try {
-        const obj = self(dependencyMap[32]);
-        return obj.getMessage(_context.messages[item] || defaultMessages[item], locale);
+        return self(1934).getMessage(tmp4, locale);
       } catch (err) {
-        if (typeof defaultMessages[item] === "string") {
-          const obj2 = self(dependencyMap[32]);
-          return obj2.getMessage(defaultMessages[item], locale);
+        if (typeof tmp3[tmp2] === "string") {
+          return self(1934).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -164,226 +156,191 @@ _instance_members_initializer_I18N_ = function() {
   };
 };
 class I18N extends EventEmitter {
-  constructor(initialLocale) {
-    let getLanguages;
-    let getMessages;
-    let tmp12;
-    const f85392 = (resolveLanguageLoaded) => {
-      obj.resolveLanguageLoaded = resolveLanguageLoaded;
-    };
-    initialLocale = initialLocale.initialLocale;
-    ({ getMessages, getLanguages } = initialLocale);
-    const obj = new I18N(tmp5, tmp4, tmp3, tmp2, new.target, this, tmp);
-    _instance_members_initializer_I18N_();
-    obj.initialLanguageLoad = new Promise(f85392);
-    new Promise(f85392);
+  constructor(arg0) {
+    closure_0 = undefined;
+    ({ getMessages, getLanguages } = global);
+    tmp6 = new I18N(tmp5, tmp4, tmp3, tmp2, new.target, new.target, tmp);
+    closure_0 = tmp6;
+    tmp7 = _instance_members_initializer_I18N_();
+    promise = new Promise((resolveLanguageLoaded) => {
+      closure_0.resolveLanguageLoaded = resolveLanguageLoaded;
+    });
+    tmp6.initialLanguageLoad = promise;
     if (Intl.__addLocaleData) {
-      const _Intl = Intl;
-      Intl.__addLocaleData(_mod1933);
+      _Intl = Intl;
+      tmp9 = closure_0;
+      tmp10 = closure_1;
+      __addLocaleDataResult = Intl.__addLocaleData(closure_0(closure_1[31]));
     }
-    obj._languages = getLanguages();
+    tmp6._languages = getLanguages();
     if (null != window.Proxy) {
-      const self2 = this;
-      tmp12 = new ProxyProvider(obj._getParsedMessages);
+      tmp15 = ProxyProvider;
+      tmp16 = new.target;
+      tmp14 = new ProxyProvider(tmp6._getParsedMessages);
     } else {
-      const self = this;
-      tmp12 = new LazyPropertyProvider(obj._getParsedMessages);
+      tmp12 = LazyPropertyProvider;
+      tmp13 = new.target;
+      tmp14 = new LazyPropertyProvider(tmp6._getParsedMessages);
     }
-    obj._provider = tmp12;
-    const _provider = obj._provider;
-    obj.Messages = _provider.getMessages();
-    obj._getMessages = getMessages;
-    try {
-      const _Intl2 = Intl;
-      const self3 = this;
-      const numberFormat = new Intl.NumberFormat(initialLocale, {});
-      const setLocale = obj.setLocale;
-      if (!initialLocale) {
-        initialLocale = obj.getDefaultLocale();
-      }
-      setLocale(initialLocale);
-    } catch (err) {
-      obj.setLocale(obj.getDefaultLocale());
-    }
-    obj.on("newListener", obj._handleNewListener);
-    return obj;
-  }
-  updateMessagesForExperiment(c2, fn) {
-    const self = this;
-    let closure_1 = c2;
-    let closure_0 = fn;
-    const _fetchMessagesResult = this._fetchMessages(c2);
-    if (_fetchMessagesResult instanceof Promise) {
-      _fetchMessagesResult.then((result) => {
-        result = self._applyMessagesForLocale(fn(result), closure_1);
-      });
-    } else {
-      let result = self._applyMessagesForLocale(fn(_fetchMessagesResult), c2);
-    }
-  }
-  setLocale(_requestedLocale) {
-    const self = this;
-    if (this._chosenLocale !== _requestedLocale) {
-      self._requestedLocale = _requestedLocale;
-      self._chosenLocale = _requestedLocale;
-      const _chosenLocale = self._chosenLocale;
-      self.loadPromise = self._loadMessagesForLocale(_requestedLocale);
-      self.emit("locale", self._chosenLocale, _chosenLocale);
-    }
-  }
-  setUpdateRules(fn) {
-    const obj = parse;
-    obj.setUpdateRules(fn);
-  }
-  getLanguages() {
-    return this._languages;
-  }
-  getAvailableLocales() {
-    const self = this;
-    const _languages = this._languages;
-    const found = _languages.filter((enabled) => enabled.enabled);
-    const mapped = found.map((item) => {
-      let code;
-      let name;
-      let tmp;
-      ({ code, name } = item);
-      const obj = { value: code, name, localizedName: tmp };
-      tmp = self.Messages[code];
-      if (tmp == null) {
-        tmp = name;
-      }
-      return obj;
-    });
-    return mapped.sort((name, name2) => {
-      const str = name.name;
-      const str2 = name2.name;
-      const formatted = str.toLowerCase();
-      const formatted1 = str2.toLowerCase();
-      let num = -1;
-      if (formatted >= formatted1) {
-        let num2 = 0;
-        if (formatted > formatted1) {
-          num2 = 1;
-        }
-        num = num2;
-      }
-      return num;
-    });
-  }
-  getLocale() {
-    return this._chosenLocale;
-  }
-  getLocaleInfo() {
-    const self = this;
-    const _languages = this._languages;
-    return _languages.find((code) => code.code === self._chosenLocale);
-  }
-  getDefaultLocale() {
-    const obj = react_native;
-    let str = obj.getSystemLocale();
-    if (str == null) {
-      str = c2;
-    }
-    const _languages = this._languages;
-    const found = _languages.filter((enabled) => enabled.enabled);
-    const mapped = found.map((code) => code.code);
-    if (mapped.includes(str)) {
-      return str;
-    } else {
-      let found2;
-      const parts = str.split("-");
-      const first = parts[0];
-      if (mapped.includes(parts[0])) {
-        found2 = first;
-      } else {
-        if ("zh" === first) {
-          if (parts.length > 1) {
-            if ("Hant" === parts[1]) {
-              let found1 = mapped.find((item) => "zh-TW" === item);
-              if (found1 == null) {
-                found1 = c2;
-              }
-              found2 = found1;
-            }
-          }
-        }
-        found2 = mapped.find((item) => item.split("-")[0] === parts[0]);
-        if (found2 == null) {
-          found2 = c2;
-        }
-      }
-      return found2;
-    }
-  }
-  _loadMessagesForLocale(_requestedLocale) {
-    let nextPromise;
-    const self = this;
-    let closure_0 = _requestedLocale;
-    const _fetchMessagesResult = this._fetchMessages(_requestedLocale);
-    if (_fetchMessagesResult instanceof Promise) {
-      nextPromise = _fetchMessagesResult.then((result) => self._applyMessagesForLocale(result, _requestedLocale));
-    } else {
-      const result = self._applyMessagesForLocale(_fetchMessagesResult, _requestedLocale);
-      nextPromise = Promise.resolve();
-    }
-    return nextPromise;
-  }
-  _applyMessagesForLocale(_fetchMessagesResult, locale) {
-    const self = this;
-    let _findMessagesResult = arg2;
-    if (arg2 === undefined) {
-      _findMessagesResult = self._findMessages(c2);
-    }
-    if (self._requestedLocale === locale) {
-      const _provider = self._provider;
-      const obj = { messages: _fetchMessagesResult, defaultMessages: _findMessagesResult, locale };
-      _provider.refresh(obj);
-      const languageLoaded = self.resolveLanguageLoaded();
-    }
-  }
-  _findMessages(c2) {
-    const _fetchMessagesResult = this._fetchMessages(c2);
-    if (_fetchMessagesResult instanceof Promise) {
-      const _Error = Error;
-      const self = this;
-      const self2 = this;
-      const error = new Error("Messages are still loading.");
-      throw error;
-    } else {
-      return _fetchMessagesResult;
-    }
-  }
-  _fetchMessages(c2) {
-    const self = this;
-    let closure_0 = c2;
-    const tmp = c2 === c2 ? (() => {
-      const error = new Error("Error Loading " + locale);
-      throw error;
-    }) : (() => {
-      let _fetchMessagesResult;
-      if (-1 === closure_0.indexOf("-")) {
-        _fetchMessagesResult = self._fetchMessages(c2);
-      } else {
-        _fetchMessagesResult = self._fetchMessages(closure_0.split("-")[0]);
-      }
-      return _fetchMessagesResult;
-    });
-    try {
-      let catchPromise;
-      const _getMessagesResult = self._getMessages(c2);
-      if (_getMessagesResult instanceof Promise) {
-        catchPromise = promise.catch(tmp);
-      } else {
-        catchPromise = promise;
-      }
-      return catchPromise;
-    } catch (err) {
-      return tmp();
-    }
+    tmp6._provider = tmp14;
+    _provider = tmp6._provider;
+    tmp6.Messages = _provider.getMessages();
+    tmp6._getMessages = getMessages;
+    return;
   }
 }
-const prototype4 = I18N.prototype;
+const prototype = I18N.prototype;
+prototype["updateMessagesForExperiment"] = function updateMessagesForExperiment(c2, fn) {
+  const self = this;
+  closure_1 = c2;
+  closure_0 = fn;
+  const _fetchMessagesResult = this._fetchMessages(c2);
+  if (_fetchMessagesResult instanceof Promise) {
+    _fetchMessagesResult.then((result) => {
+      result = self._applyMessagesForLocale(closure_0(result), closure_1);
+    });
+  } else {
+    let result = self._applyMessagesForLocale(fn(_fetchMessagesResult), c2);
+  }
+};
+prototype["setLocale"] = function setLocale(_requestedLocale) {
+  const self = this;
+  if (this._chosenLocale !== _requestedLocale) {
+    self._requestedLocale = _requestedLocale;
+    self._chosenLocale = _requestedLocale;
+    self.loadPromise = self._loadMessagesForLocale(_requestedLocale);
+    self.emit("locale", self._chosenLocale, self._chosenLocale);
+  }
+};
+prototype["setUpdateRules"] = function setUpdateRules(fn) {
+  parse.setUpdateRules(fn);
+};
+prototype["getLanguages"] = function getLanguages() {
+  return this._languages;
+};
+prototype["getAvailableLocales"] = function getAvailableLocales() {
+  const self = this;
+  const _languages = this._languages;
+  const found = _languages.filter((enabled) => enabled.enabled);
+  const mapped = found.map((item) => {
+    ({ code, name } = item);
+    const obj = { value: code, name, localizedName: null };
+    let tmp = self.Messages[code];
+    if (tmp == null) {
+      tmp = name;
+    }
+    obj.localizedName = tmp;
+    return obj;
+  });
+  return mapped.sort((name, name2) => {
+    const formatted = name.name.toLowerCase();
+    const formatted1 = name2.name.toLowerCase();
+    let num = -1;
+    if (formatted >= formatted1) {
+      let num2 = 0;
+      if (formatted > formatted1) {
+        num2 = 1;
+      }
+      num = num2;
+    }
+    return num;
+  });
+};
+prototype["getLocale"] = function getLocale() {
+  return this._chosenLocale;
+};
+prototype["getLocaleInfo"] = function getLocaleInfo() {
+  const self = this;
+  const _languages = this._languages;
+  return _languages.find((code) => code.code === self._chosenLocale);
+};
+prototype["getDefaultLocale"] = function getDefaultLocale() {
+  let str = getSystemLocale.getSystemLocale();
+  if (str == null) {
+    str = c2;
+  }
+  const _languages = this._languages;
+  const found = _languages.filter((enabled) => enabled.enabled);
+  const mapped = found.map((code) => code.code);
+  if (mapped.includes(str)) {
+    return str;
+  } else {
+    const parts = str.split("-");
+    const first = parts[0];
+    if (mapped.includes(parts[0])) {
+      let found2 = first;
+    } else {
+      if ("zh" === first) {
+        if (parts.length > 1) {
+          if ("Hant" === parts[1]) {
+            let found1 = mapped.find((item) => "zh-TW" === item);
+            if (found1 == null) {
+              found1 = c2;
+            }
+            found2 = found1;
+          }
+        }
+      }
+      found2 = mapped.find((item) => item.split("-")[0] === parts[0]);
+      if (found2 == null) {
+        found2 = c2;
+      }
+    }
+    return found2;
+  }
+};
+prototype["_loadMessagesForLocale"] = function _loadMessagesForLocale(_requestedLocale) {
+  const self = this;
+  closure_0 = _requestedLocale;
+  const _fetchMessagesResult = this._fetchMessages(_requestedLocale);
+  if (_fetchMessagesResult instanceof Promise) {
+    let nextPromise = _fetchMessagesResult.then((result) => self._applyMessagesForLocale(result, closure_0));
+  } else {
+    const result = self._applyMessagesForLocale(_fetchMessagesResult, _requestedLocale);
+    nextPromise = Promise.resolve();
+  }
+  return nextPromise;
+};
+prototype["_applyMessagesForLocale"] = function _applyMessagesForLocale(_fetchMessagesResult, locale) {
+  const self = this;
+  let _findMessagesResult = arg2;
+  if (arg2 === undefined) {
+    _findMessagesResult = self._findMessages(c2);
+  }
+  if (self._requestedLocale === locale) {
+    const _provider = self._provider;
+    const obj = { messages: _fetchMessagesResult, defaultMessages: _findMessagesResult, locale };
+    _provider.refresh(obj);
+    const languageLoaded = self.resolveLanguageLoaded();
+  }
+};
+prototype["_findMessages"] = function _findMessages(c2) {
+  const _fetchMessagesResult = this._fetchMessages(c2);
+  if (_fetchMessagesResult instanceof Promise) {
+    const _Error = Error;
+    const error = new Error("Messages are still loading.");
+    throw error;
+  } else {
+    return _fetchMessagesResult;
+  }
+};
+prototype["_fetchMessages"] = function _fetchMessages(c2) {
+  const self = this;
+  closure_0 = c2;
+  try {
+    const _getMessagesResult = self._getMessages(c2);
+    if (_getMessagesResult instanceof Promise) {
+      let catchPromise = promise.catch(tmp3);
+    } else {
+      catchPromise = promise;
+    }
+    return catchPromise;
+  } catch (err) {
+    return tmp();
+  }
+};
+const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
-export const getSystemLocale = react_native.getSystemLocale;
+export const getSystemLocale = fn(1348).getSystemLocale;
 export { I18N };

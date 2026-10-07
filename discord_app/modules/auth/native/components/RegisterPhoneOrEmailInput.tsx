@@ -1,42 +1,29 @@
 // discord_app/modules/auth/native/components/RegisterPhoneOrEmailInput.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import PhoneOrEmailUtils from "../../../phone/PhoneOrEmailUtils.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import PhoneStore from "../../../phone/PhoneStore.tsx";
-import RegistrationUIStore from "../RegistrationUIStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let loginPhone, navigation;
-
-let hasOwnProperty;
-let metroRequire;
+require = fn;
+const RegistrationUIStore = fn(15906);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
+
+export const RegisterPhoneOrEmailInput = ReactCompilerGating.isReactCompilerEnabled()
   ? (loginPhone) => {
-      let autoFocus;
-      let closure_8;
-      let inputError;
-      let onSubmit;
-      let setLoginPhone;
-      let submitBehavior;
-      let tmp15;
-      let tmp6;
-      let tmp8;
-      let tmp9;
-      const tmp = loginPhone;
-      let obj = loginPhone(setLoginPhone[5]);
-      const cResult = obj.c(37);
+      const cResult = loginPhone(setLoginPhone[5]).c(37);
       loginPhone = loginPhone.loginPhone;
       const loginEmail = loginPhone.loginEmail;
       setLoginPhone = loginPhone.setLoginPhone;
       const setLoginEmail = loginPhone.setLoginEmail;
       const inputMode = loginPhone.inputMode;
       ({ onSubmit, inputError, submitBehavior, autoFocus } = loginPhone);
-      const obj2 = loginPhone(setLoginPhone[6]);
-      navigation = obj2.useNavigation();
+      let obj = loginPhone(setLoginPhone[5]);
+      const tmp = loginPhone;
+      const navigation = loginPhone(setLoginPhone[6]).useNavigation();
       const ref = setLoginEmail.useRef(null);
       if (autoFocus == null) {
         autoFocus = false;
@@ -45,7 +32,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { inputRef: ref, enabled: autoFocus };
         cResult[0] = autoFocus;
         cResult[1] = obj3;
-        tmp6 = obj3;
+        let tmp6 = obj3;
       } else {
         tmp6 = cResult[1];
       }
@@ -59,18 +46,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[2] = items;
         cResult[3] = E;
-        tmp9 = E;
-        tmp8 = items;
+        let tmp9 = E;
+        let tmp8 = items;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = tmp(setLoginPhone[8]);
-      const stateFromStores = tmpResult.useStateFromStores(tmp8, tmp9);
+      const obj2 = loginPhone(setLoginPhone[6]);
+      const stateFromStores = tmp(setLoginPhone[8]).useStateFromStores(tmp8, tmp9);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return loginPhone.errors;
           }
         }
         cResult[4] = T;
@@ -81,17 +68,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       } else {
         class T {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return loginPhone.errors;
           }
         }
       }
       const tmp13 = ref(tmp12);
-      let closure_7 = tmp13;
+      closure_7 = tmp13;
       if (cResult[5] !== tmp13) {
         class T {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return loginPhone.errors;
           }
         }
         cResult[5] = tmp13;
@@ -103,16 +90,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tmp15;
       } else {
         class T {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return loginPhone.errors;
           }
         }
       }
-      tmp15 = tmp14;
       if (cResult[7] === tmp14) {
         class T {
-          constructor(errors) {
-            return errors.errors;
+          constructor(arg0) {
+            return loginPhone.errors;
           }
         }
       }
@@ -132,39 +118,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = fn;
     }
   : (loginPhone) => {
-      let autoFocus;
-      let inputError;
-      let onSubmit;
-      let str;
-      let str2;
-      let str3;
-      let stringResult;
-      let stringResult1;
-      let submitBehavior;
       loginPhone = loginPhone.loginPhone;
       const loginEmail = loginPhone.loginEmail;
       const setLoginPhone = loginPhone.setLoginPhone;
       const setLoginEmail = loginPhone.setLoginEmail;
       const inputMode = loginPhone.inputMode;
       ({ inputError, autoFocus } = loginPhone);
-      let closure_7;
+      closure_7 = undefined;
       let callback;
-      const tmp = loginPhone;
       ({ onSubmit, submitBehavior } = loginPhone);
-      let obj = loginPhone(setLoginPhone[6]);
-      navigation = obj.useNavigation();
+      const navigation = loginPhone(setLoginPhone[6]).useNavigation();
       let ref = setLoginEmail.useRef(null);
-      const obj3 = { inputRef: ref, enabled: autoFocus };
+      const obj3 = { inputRef: ref, enabled: null };
+      let obj = loginPhone(setLoginPhone[6]);
       const tmp5 = loginEmail;
-      const tmp6 = loginEmail(setLoginPhone[7]);
       if (autoFocus == null) {
         autoFocus = false;
       }
-      tmp6(obj3);
+      obj3.enabled = autoFocus;
+      loginEmail(setLoginPhone[7])(obj3);
+      const tmp6 = loginEmail(setLoginPhone[7]);
       const items = [inputMode];
-      const tmpResult = tmp(setLoginPhone[8]);
-      const stateFromStores = tmpResult.useStateFromStores(items, () => inputMode.getCountryCode());
-      const code = stateFromStores.code;
+      const stateFromStores = loginPhone(setLoginPhone[8]).useStateFromStores(items, () => inputMode.getCountryCode());
       const tmp9 = ref((errors) => errors.errors);
       closure_7 = tmp9;
       const items1 = [tmp9];
@@ -172,7 +147,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != closure_7[arg0]) {
           const obj = {};
           const merged = Object.assign(closure_7);
-          delete obj[tmp];
+          delete tmp2[tmp];
           hasOwnProperty(obj);
         }
       }, items1);
@@ -208,16 +183,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items4);
-      if (inputMode === tmp(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
+      if (inputMode === loginPhone(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
         const intl2 = tmp(tmp2[11]).intl;
-        stringResult = intl2.string(tmp(tmp2[11]).t["eJnn0+"]);
+        let stringResult = intl2.string(tmp(tmp2[11]).t["eJnn0+"]);
       } else {
         const intl = tmp(tmp2[11]).intl;
         stringResult = intl.string(tmp(tmp2[11]).t.dI4d4S);
       }
-      if (inputMode === tmp(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
+      if (inputMode === loginPhone(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
         const intl4 = tmp(tmp2[11]).intl;
-        stringResult1 = intl4.string(tmp(tmp2[11]).t.wpJ1dT);
+        let stringResult1 = intl4.string(tmp(tmp2[11]).t.wpJ1dT);
       } else {
         const intl3 = tmp(tmp2[11]).intl;
         stringResult1 = intl3.string(tmp(tmp2[11]).t.a17rBk);
@@ -225,7 +200,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {
         ref,
         alpha2: stateFromStores.alpha2,
-        countryCode: code,
+        countryCode: stateFromStores.code,
         onChange: callback1,
         onSubmitEditing: onSubmit,
         placeholder: stringResult,
@@ -237,27 +212,27 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         onPressCountrySelector: callback2,
         forceMode: inputMode,
         submitBehavior,
-        autoComplete: str,
-        keyboardType: str2,
+        autoComplete: null,
+        keyboardType: null,
         clearable: true,
-        status: str3,
+        status: null,
       };
-      str = "email";
       const tmp16 = closure_7;
-      const tmp5Result = tmp5(setLoginPhone[12]);
-      if (inputMode === tmp(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
+      const tmpResult = loginPhone(setLoginPhone[8]);
+      let str = "email";
+      if (inputMode === loginPhone(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
         str = "tel";
       }
-      str2 = "email-address";
-      if (inputMode === tmp(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
+      obj4.autoComplete = str;
+      let str2 = "email-address";
+      if (inputMode === loginPhone(setLoginPhone[9]).PhoneOrEmailSelectorForceMode.PHONE) {
         str2 = "number-pad";
       }
-      str3 = undefined;
+      obj4.keyboardType = str2;
+      let str3;
       if (null != inputError) {
         str3 = "error";
       }
-      return tmp16(tmp5Result, obj4);
+      obj4.status = str3;
+      return tmp16(tmp5(setLoginPhone[12]), obj4);
     };
-const result = size.fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
-
-export const RegisterPhoneOrEmailInput = tmp3;

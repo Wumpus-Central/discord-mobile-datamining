@@ -1,26 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfileAlertUserReported.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
-import intl4 from "../../../intl/index.native.tsx";
-import AlertModal2 from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import c from "../../../../_runtime/00576_c.js";
+import util from "../../../intl/index.native.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAlertUserReported.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let intl3;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl4.intl;
-        const stringResult = intl.string(intl4.t.IwHU3R);
-        const intl2 = intl4.intl;
-        const stringResult1 = intl2.string(intl4.t.qxyRaq);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.IwHU3R);
+        const intl2 = util.intl;
+        const stringResult1 = intl2.string(util.t.qxyRaq);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -29,30 +26,32 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const AlertModal = AlertModal2.AlertModal;
-        const AlertActions = AlertModal2.AlertActions;
-        ({ text: intl3.string(intl4.t.BddRzS) });
-        const AlertActionButton = AlertModal2.AlertActionButton;
-        intl3 = intl4.intl;
-        const tmp10 = <AlertModal title={tmp4} content={tmp5} actions={null} />;
+        const obj2 = { title: tmp4, content: tmp5, actions: null };
+        const obj3 = { children: null };
+        const obj4 = { text: null };
+        const intl3 = util.intl;
+        obj4.text = intl3.string(util.t.BddRzS);
+        obj3.children = jsx(AlertModal.AlertActionButton, { text: null }, "okay");
+        obj2.actions = jsx(AlertModal.AlertActions, { children: null });
+        const tmp10 = jsx(AlertModal.AlertModal, { title: tmp4, content: tmp5, actions: null });
         cResult[2] = tmp10;
-        tmp8 = tmp10;
+        let tmp8 = tmp10;
       } else {
         tmp8 = cResult[2];
       }
       return tmp8;
     }
   : () => {
-      let intl3;
-      const AlertModal = AlertModal2.AlertModal;
-      const intl = intl4.intl;
-      const intl2 = intl4.intl;
-      const AlertActions = AlertModal2.AlertActions;
-      ({ text: intl3.string(intl4.t.BddRzS) });
-      const AlertActionButton = AlertModal2.AlertActionButton;
-      intl3 = intl4.intl;
-      return <AlertModal title={intl.string(intl4.t.IwHU3R)} content={intl2.string(intl4.t.qxyRaq)} actions={null} />;
+      const obj = { title: null, content: null, actions: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.IwHU3R);
+      const intl2 = util.intl;
+      obj.content = intl2.string(util.t.qxyRaq);
+      const obj2 = { children: null };
+      const obj3 = { text: null };
+      const intl3 = util.intl;
+      obj3.text = intl3.string(util.t.BddRzS);
+      obj2.children = jsx(AlertModal.AlertActionButton, { text: null }, "okay");
+      obj.actions = jsx(AlertModal.AlertActions, { children: null });
+      return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
     };
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAlertUserReported.tsx");
-
-export default tmp3;

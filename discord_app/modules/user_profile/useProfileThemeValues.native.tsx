@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/useProfileThemeValues.native.tsx
-import react from "../../../_runtime/00019_react.js";
+import _mod19 from "../../../_runtime/metro/00019__.js";
 import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import react2 from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import shims from "../../../discord_common/js/packages/tokens/shims.native.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
@@ -9,16 +9,13 @@ import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const useMemo = react.useMemo;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const useMemo = _mod19.useMemo;
+const result = size.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");
+
+export const useProfileThemeValues = ReactCompilerGating.isReactCompilerEnabled()
   ? (theme) => {
-      let saturation;
-      let tmp4;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         const fn = function n() {
@@ -31,51 +28,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = useStateFromStores;
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      let tmp8 = null;
-      if (null != theme) {
-        let OPACITY_WHITE_24;
+      const stateFromStores = useStateFromStores.useStateFromStores(tmp4, tmp5);
+      if (null == theme) {
+        return null;
+      } else {
         if (cResult[2] === theme) {
-          let tmp9;
-          let tmp10;
-          let tmp11;
-          let tmp12;
-          let tmp13;
           if (cResult[3] === stateFromStores) {
-            tmp9 = cResult[4];
-            tmp10 = cResult[5];
-            tmp11 = cResult[6];
-            tmp12 = cResult[7];
-            tmp13 = cResult[8];
+            let tmp8 = cResult[4];
+            let tmp9 = cResult[5];
+            let tmp10 = cResult[6];
+            let tmp11 = cResult[7];
+            let tmp12 = cResult[8];
           }
-          if (cResult[9] === tmp9) {
-            if (cResult[10] === tmp10) {
-              if (cResult[11] === tmp11) {
-                if (cResult[12] === tmp12) {
-                  let tmp18;
-                  if (cResult[13] === tmp13) {
-                    tmp18 = cResult[14];
-                  }
-                  tmp8 = tmp18;
+          if (cResult[9] === tmp8) {
+            if (cResult[10] === tmp9) {
+              if (cResult[11] === tmp10) {
+                if (cResult[12] === tmp11) {
                 }
               }
             }
           }
           const obj2 = {
-            overlaySyncedWithUserTheme: tmp9,
-            overlay: tmp10,
-            sectionBox: tmp11,
-            dividerOpacity: tmp12,
-            rolePillBackgroundColor: tmp13,
+            overlaySyncedWithUserTheme: tmp8,
+            overlay: tmp9,
+            sectionBox: tmp10,
+            dividerOpacity: tmp11,
+            rolePillBackgroundColor: tmp12,
           };
-          cResult[9] = tmp9;
-          cResult[10] = tmp10;
-          cResult[11] = tmp11;
-          cResult[12] = tmp12;
-          cResult[13] = tmp13;
+          cResult[9] = tmp8;
+          cResult[10] = tmp9;
+          cResult[11] = tmp10;
+          cResult[12] = tmp11;
+          cResult[13] = tmp12;
           cResult[14] = obj2;
-          tmp18 = obj2;
         }
         const obj3 = { theme, saturation: stateFromStores };
         const internal = nativeDefault.internal;
@@ -90,15 +75,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           nativeDefault.colors.PROFILE_GRADIENT_OVERLAY,
           obj3,
         );
-        const tmpResult3 = shims;
         if (theme === tmpResult3.getThemes().LIGHT) {
-          OPACITY_WHITE_24 = nativeDefault.unsafe_rawColors.OPACITY_WHITE_24;
+          let OPACITY_WHITE_24 = nativeDefault.unsafe_rawColors.OPACITY_WHITE_24;
         } else {
           const internal3 = nativeDefault.internal;
           OPACITY_WHITE_24 = internal3.resolveSemanticColor(theme, nativeDefault.colors.BACKGROUND_MOD_SUBTLE, obj3);
         }
+        tmpResult3 = shims;
         let num3 = 0.12;
-        const tmpResult4 = shims;
         if (theme === tmpResult4.getThemes().DARK) {
           num3 = 0.24;
         }
@@ -115,65 +99,60 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = OPACITY_WHITE_24;
         cResult[7] = num3;
         cResult[8] = semanticColor2;
-        tmp12 = num3;
-        tmp13 = semanticColor2;
-        tmp11 = OPACITY_WHITE_24;
-        tmp10 = semanticColor1;
-        tmp9 = semanticColor;
+        tmp11 = num3;
+        tmp12 = semanticColor2;
+        tmp10 = OPACITY_WHITE_24;
+        tmp9 = semanticColor1;
+        tmp8 = semanticColor;
+        tmpResult4 = shims;
       }
-      return tmp8;
+      const tmpResult = useStateFromStores;
     }
   : (theme) => {
-      let saturation;
       _require = theme;
-      let obj = require("useStateFromStores");
       const items = [AccessibilityStore];
-      const stateFromStores = obj.useStateFromStores(items, () => saturation.saturation);
+      const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => saturation.saturation);
       const items1 = [theme, stateFromStores];
       return useMemo(() => {
-        let OPACITY_WHITE_24;
-        let internal2;
-        let internal3;
-        let internal4;
-        let num;
         if (null == theme) {
           return null;
         } else {
           const obj = { theme, saturation: stateFromStores };
           const obj2 = {
-            overlaySyncedWithUserTheme: internal3.resolveSemanticColor(
-              theme,
-              nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME,
-              obj,
-            ),
-            overlay: internal4.resolveSemanticColor(theme, nativeDefault.colors.PROFILE_GRADIENT_OVERLAY, obj),
-            sectionBox: OPACITY_WHITE_24,
-            dividerOpacity: num,
-            rolePillBackgroundColor: internal2.resolveSemanticColor(
-              theme,
-              nativeDefault.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND,
-              obj,
-            ),
+            overlaySyncedWithUserTheme: null,
+            overlay: null,
+            sectionBox: null,
+            dividerOpacity: null,
+            rolePillBackgroundColor: null,
           };
-          internal3 = nativeDefault.internal;
-          internal4 = nativeDefault.internal;
-          const obj4 = shims;
+          const internal3 = nativeDefault.internal;
+          obj2.overlaySyncedWithUserTheme = internal3.resolveSemanticColor(
+            theme,
+            nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME,
+            obj,
+          );
+          const internal4 = nativeDefault.internal;
+          obj2.overlay = internal4.resolveSemanticColor(theme, nativeDefault.colors.PROFILE_GRADIENT_OVERLAY, obj);
           if (theme === obj4.getThemes().LIGHT) {
-            OPACITY_WHITE_24 = nativeDefault.unsafe_rawColors.OPACITY_WHITE_24;
+            let OPACITY_WHITE_24 = nativeDefault.unsafe_rawColors.OPACITY_WHITE_24;
           } else {
             const internal = nativeDefault.internal;
             OPACITY_WHITE_24 = internal.resolveSemanticColor(theme, nativeDefault.colors.BACKGROUND_MOD_SUBTLE, obj);
           }
-          num = 0.12;
-          const tmp5Result = shims;
+          obj2.sectionBox = OPACITY_WHITE_24;
+          obj4 = shims;
+          let num = 0.12;
           if (theme === tmp5Result.getThemes().DARK) {
             num = 0.24;
           }
-          internal2 = nativeDefault.internal;
+          obj2.dividerOpacity = num;
+          const internal2 = nativeDefault.internal;
+          obj2.rolePillBackgroundColor = internal2.resolveSemanticColor(
+            theme,
+            nativeDefault.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND,
+            obj,
+          );
           return obj2;
         }
       }, items1);
     };
-const result = size.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");
-
-export const useProfileThemeValues = tmp2;

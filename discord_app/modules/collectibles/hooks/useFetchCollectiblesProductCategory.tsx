@@ -1,29 +1,24 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx
 import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
+
+export const useFetchCollectiblesProductCategory = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp10;
-      let tmp7;
-      let tmp9;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(6);
+      const cResult = require("c").c(6);
       useMaybeFetchCollectiblesCategoriesDefault();
-      const tmp = _require;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [CollectiblesCategoryStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -37,17 +32,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(573);
-      [tmp9, tmp10] = tmpResult.useStateFromStoresArray(first, tmp7);
-      _slicedToArray(tmpResult.useStateFromStoresArray(first, tmp7), 2);
+      const obj = require("c");
+      const tmpResult = require("useStateFromStores");
+      [tmp9, tmp10] = require("useStateFromStores").useStateFromStoresArray(first, tmp7);
       if (cResult[3] === tmp10) {
-        let tmp11;
         if (cResult[4] === tmp9) {
-          tmp11 = cResult[5];
+          let tmp11 = cResult[5];
         }
         return tmp11;
       }
@@ -56,15 +50,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp9;
       cResult[5] = obj2;
       tmp11 = obj2;
+      const tmp8 = _slicedToArray(require("useStateFromStores").useStateFromStoresArray(first, tmp7), 2);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       useMaybeFetchCollectiblesCategoriesDefault();
       let items = [CollectiblesCategoryStore];
-      const obj = require("useStateFromStores");
       const tmp2 = _slicedToArray(
-        obj.useStateFromStoresArray(items, () => {
+        require("useStateFromStores").useStateFromStoresArray(items, () => {
           const items = [
             CollectiblesCategoryStore.isFetchingCategories,
             CollectiblesCategoryStore.getCategoryForProduct(closure_0),
@@ -75,6 +68,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
       return { isFetching: tmp2[0], category: tmp2[1] };
     };
-const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
-
-export const useFetchCollectiblesProductCategory = tmp2;

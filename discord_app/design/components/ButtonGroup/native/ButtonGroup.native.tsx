@@ -1,26 +1,21 @@
 // discord_app/design/components/ButtonGroup/native/ButtonGroup.native.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import Stack_Stack from "../../Stack/native/Stack.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
+require = fn;
 let closure_2 = ["size", "children", "style"];
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ container: { paddingVertical: 16 } });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
+
+export const ButtonGroup = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let style;
-      let tmp4;
-      let tmp5;
-      let tmp6;
-      let tmp7;
-      const obj = react2;
-      const cResult = obj.c(13);
+      const cResult = c.c(13);
       if (cResult[0] !== arg0) {
         ({ size, children, style } = arg0);
         const tmp10 = _objectWithoutProperties(arg0, closure_2);
@@ -29,10 +24,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = tmp10;
         cResult[3] = style;
         cResult[4] = size;
-        tmp7 = size;
-        tmp6 = style;
-        tmp5 = tmp10;
-        tmp4 = children;
+        let tmp7 = size;
+        let tmp6 = style;
+        let tmp5 = tmp10;
+        let tmp4 = children;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -49,28 +44,25 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num6 = 12;
       }
       if (cResult[5] === tmp6) {
-        let tmp12;
         if (cResult[6] === tmp11.container) {
-          tmp12 = cResult[7];
+          let tmp12 = cResult[7];
         }
         if (cResult[8] === tmp4) {
           if (cResult[9] === tmp5) {
             if (cResult[10] === num6) {
-              let tmp13;
               if (cResult[11] === tmp12) {
-                tmp13 = cResult[12];
+                let tmp13 = cResult[12];
               }
               return tmp13;
             }
           }
         }
-        const Stack = Stack_Stack.Stack;
+        const obj2 = {};
         const merged = Object.assign(tmp5);
-        const tmp18 = (
-          <Stack spacing={num6} style={tmp12}>
-            {tmp4}
-          </Stack>
-        );
+        obj2.spacing = num6;
+        obj2.style = tmp12;
+        obj2.children = tmp4;
+        const tmp18 = jsx(Stack_Stack.Stack, {});
         cResult[8] = tmp4;
         cResult[9] = tmp5;
         cResult[10] = num6;
@@ -85,8 +77,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = items;
     }
   : (size) => {
-      let children;
-      let style;
       let str = size.size;
       if (str === undefined) {
         str = "md";
@@ -94,19 +84,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ children, style } = size);
       const merged = Object.assign(size, Object.assign({ size: 0, children: 0, style: 0 }));
       let num = 8;
-      const tmp2 = closure_5();
       if ("sm" === str) {
         num = 12;
       }
-      const Stack = Stack_Stack.Stack;
+      const obj = {};
       const merged1 = Object.assign(merged);
-      const items = [tmp2.container, style];
-      return (
-        <Stack spacing={num} style={items}>
-          {children}
-        </Stack>
-      );
+      obj.spacing = num;
+      const items = [closure_5().container, style];
+      obj.style = items;
+      obj.children = children;
+      return jsx(Stack_Stack.Stack, {});
     };
-const result = size.fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
-
-export const ButtonGroup = tmp3;

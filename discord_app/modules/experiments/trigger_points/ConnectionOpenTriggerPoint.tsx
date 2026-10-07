@@ -4,11 +4,10 @@ import Helpers from "Helpers.tsx";
 import ContentInventoryExperiments from "../../content_inventory/ContentInventoryExperiments.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const CommonTriggerPoints = ExperimentConstants.CommonTriggerPoints;
 const items = [ContentInventoryExperiments.HotwheelsActivityFeedNvidiaExperiment];
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(
   items,
-  CommonTriggerPoints.CONNECTION_OPEN,
+  ExperimentConstants.CommonTriggerPoints.CONNECTION_OPEN,
   { location: "app open" },
 );
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/ConnectionOpenTriggerPoint.tsx");

@@ -1,12 +1,11 @@
 // discord_common/js/packages/rtn-codegen/js/EmojiPickerRowViewNativeComponent.tsx
-import DynamicallyInjectedByGestureHandler from "../../../../../_runtime/00106_DynamicallyInjectedByGestureHandler.js";
+import weakSet from "../../../../../_runtime/00106_weakSet.js";
 import 00065__ from "../../../../../_runtime/metro/00065__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj2;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "EmojiPickerRowView", directEventTypes: { topPressEmoji: { registrationName: "onPressEmoji" }, topLongPressEmoji: { registrationName: "onLongPressEmoji" } }, validAttributes: obj2 };
-obj2 = { rowData: true };
-const merged = Object.assign(DynamicallyInjectedByGestureHandler.ConditionallyIgnoredEventHandlers({ onPressEmoji: true, onLongPressEmoji: true }));
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "EmojiPickerRowView", directEventTypes: { topPressEmoji: { registrationName: "onPressEmoji" }, topLongPressEmoji: { registrationName: "onLongPressEmoji" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onPressEmoji: true, onLongPressEmoji: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { rowData: true };
 const value = module_65.get("EmojiPickerRowView", () => obj);
 const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/EmojiPickerRowViewNativeComponent.tsx");
 

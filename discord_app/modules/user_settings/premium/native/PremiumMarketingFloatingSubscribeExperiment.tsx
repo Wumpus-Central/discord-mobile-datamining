@@ -2,7 +2,7 @@
 import ApexExperiment from "../../../experiments/apex/index.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = {
+const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-07-nitro-floating-subscribe",
   kind: "user",
   defaultConfig: { enabled: false, showAfterLastCard: false },
@@ -11,8 +11,7 @@ const obj = {
     1: { enabled: true, showAfterLastCard: false },
     2: { enabled: true, showAfterLastCard: true },
   },
-};
-const apexExperiment = ApexExperiment.createApexExperiment(obj);
+});
 const result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/PremiumMarketingFloatingSubscribeExperiment.tsx",
 );

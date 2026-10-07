@@ -1,35 +1,29 @@
 // discord_app/design/components/Pile/native/AvatarPile.native.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import ClipView from "../../Icon/native/ClipView.tsx";
-import Pile2 from "Pile.native.tsx";
+import Pile from "Pile.native.tsx";
 import PileOverflow from "PileOverflow.native.tsx";
 import ListUtils from "../../../../utils/ListUtils.tsx";
 import CutoutableAvatarImage from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (size) => {
-      let children;
-      let items;
-      let names;
-      let totalCount;
-      const obj = react2;
-      const cResult = obj.c(13);
-      ({ totalCount, names, children } = size);
-      const Children = react.Children;
-      size = size.size;
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
+
+export const AvatarPile = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(13);
+      ({ totalCount, names, children } = arg0);
+      const Children = noop.Children;
       const countResult = Children.count(children);
-      const tmp5 = CutoutableAvatarImage.AVATAR_SIZE_MAP[size];
+      const tmp5 = CutoutableAvatarImage.AVATAR_SIZE_MAP[arg0.size];
       if (cResult[0] === names) {
-        let tmp6;
         if (cResult[1] === totalCount) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
         let num3 = 3;
         if (tmp5 <= 40) {
@@ -37,17 +31,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] === tmp5) {
           if (cResult[4] === countResult) {
-            let tmp8;
             if (cResult[5] === totalCount) {
-              tmp8 = cResult[6];
+              let tmp8 = cResult[6];
             }
             if (cResult[7] === tmp5) {
               if (cResult[8] === children) {
                 if (cResult[9] === tmp6) {
                   if (cResult[10] === num3) {
-                    let tmp12;
                     if (cResult[11] === tmp8) {
-                      tmp12 = cResult[12];
+                      let tmp12 = cResult[12];
                     }
                     return tmp12;
                   }
@@ -60,11 +52,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               size: tmp5,
               gap: num3,
               depthX: 0.4,
-              children: items,
+              children: null,
             };
-            const Pile = Pile2.Pile;
-            items = [children, tmp8];
-            const tmp14 = React3(Pile, obj2);
+            const items = [children, tmp8];
+            obj2.children = items;
+            const tmp14 = React4(Pile.Pile, obj2);
             cResult[7] = tmp5;
             cResult[8] = children;
             cResult[9] = tmp6;
@@ -77,7 +69,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp10 = null != totalCount && countResult < totalCount;
         if (tmp10) {
           const obj3 = { size: tmp5, borderRadius: tmp5 / 2, value: totalCount - countResult };
-          tmp10 = _false(PileOverflow.PileOverflow, obj3);
+          tmp10 = React3(PileOverflow.PileOverflow, obj3);
         }
         cResult[3] = tmp5;
         cResult[4] = countResult;
@@ -85,49 +77,39 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = tmp10;
         tmp8 = tmp10;
       }
-      const tmpResult = ListUtils;
-      const listSummaryLabel = tmpResult.getListSummaryLabel(names, totalCount);
+      const listSummaryLabel = ListUtils.getListSummaryLabel(names, totalCount);
       cResult[0] = names;
       cResult[1] = totalCount;
       cResult[2] = listSummaryLabel;
       tmp6 = listSummaryLabel;
+      const tmpResult = ListUtils;
     }
   : (arg0) => {
-      let children;
-      let items;
-      let names;
-      let num;
-      let obj2;
-      let totalCount;
       ({ totalCount, children } = arg0);
-      const Children = react.Children;
+      const Children = noop.Children;
       ({ size, names } = arg0);
       const countResult = Children.count(children);
       const tmp4 = CutoutableAvatarImage.AVATAR_SIZE_MAP[size];
       const obj = {
-        "aria-label": obj2.getListSummaryLabel(names, totalCount),
+        "aria-label": ListUtils.getListSummaryLabel(names, totalCount),
         shape: ClipView.CutoutShape.Circle,
         size: tmp4,
-        gap: num,
+        gap: null,
         depthX: 0.4,
-        children: items,
+        children: null,
       };
-      const Pile = Pile2.Pile;
-      num = 3;
-      obj2 = ListUtils;
+      let num = 3;
       if (tmp4 <= 40) {
         num = 2;
       }
-      items = [children];
+      obj.gap = num;
+      const items = [children];
       let tmp6 = null != totalCount && countResult < totalCount;
       if (tmp6) {
         const obj3 = { size: tmp4, borderRadius: tmp4 / 2, value: totalCount - countResult };
-        tmp6 = _false(PileOverflow.PileOverflow, obj3);
+        tmp6 = React3(PileOverflow.PileOverflow, obj3);
       }
       items[1] = tmp6;
-      return React3(Pile, obj);
+      obj.children = items;
+      return React4(Pile.Pile, obj);
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
-
-export const AvatarPile = tmp3;

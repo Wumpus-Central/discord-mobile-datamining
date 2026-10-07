@@ -1,10 +1,9 @@
 // discord_app/modules/native_permissions/mobile/openNotificationSettings.native.tsx
-import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
+import NativeDeviceSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/native_permissions/mobile/openNotificationSettings.native.tsx");
 
 export default function openNotificationSettings() {
-  const obj = react_nativeDefault;
-  const result = obj.openNotificationSettings();
+  const result = NativeDeviceSettingsModuleDefault.openNotificationSettings();
 }

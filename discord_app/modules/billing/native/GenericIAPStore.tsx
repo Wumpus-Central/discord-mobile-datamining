@@ -1,40 +1,38 @@
 // discord_app/modules/billing/native/GenericIAPStore.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ProductIds from "../../premium/native/ProductIds.android.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
 let c3 = null;
 let canMakePayments = false;
 let storeFront = null;
-const Store = get_initializedDefault.Store;
-class GenericIAPStore extends Store {
-  canMakePurchase() {
-    return canMakePayments;
-  }
-  genericProductsLoaded() {
-    let tmp = null != c3;
-    if (tmp) {
-      const arr = _modDef12;
-      tmp =
-        arr.filter(c3, (identifier) => {
-          const GenericProductIds = ProductIds.GenericProductIds;
-          return GenericProductIds.includes(identifier.identifier);
-        }).length === ProductIds.GenericProductIds.length;
-    }
-    return tmp;
-  }
-  getProducts() {
-    return c3;
-  }
-  getStoreFront() {
-    return storeFront;
-  }
-}
+const Store = initializeDefault.Store;
+class GenericIAPStore extends Store {}
 const prototype = GenericIAPStore.prototype;
+prototype["canMakePurchase"] = function canMakePurchase() {
+  return canMakePayments;
+};
+prototype["genericProductsLoaded"] = function genericProductsLoaded() {
+  let tmp = null != c3;
+  if (tmp) {
+    tmp =
+      _modDef12.filter(c3, (identifier) => {
+        const GenericProductIds = ProductIds.GenericProductIds;
+        return GenericProductIds.includes(identifier.identifier);
+      }).length === ProductIds.GenericProductIds.length;
+  }
+  return tmp;
+};
+prototype["getProducts"] = function getProducts() {
+  return c3;
+};
+prototype["getStoreFront"] = function getStoreFront() {
+  return storeFront;
+};
 GenericIAPStore.displayName = "GenericIAPStore";
-const obj = {
+const genericIAPStore = new GenericIAPStore(DispatcherDefault, {
   IAP_LOAD_GENERIC_PRODUCTS: function initGenericProducts(arg0) {
     ({ products: c3, storeFront } = arg0);
   },
@@ -44,8 +42,8 @@ const obj = {
   GENERIC_IAP_SET_STORE_FRONT: function setStoreFront(storeFront) {
     storeFront = storeFront.storeFront;
   },
-};
-const genericIAPStore = new GenericIAPStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
 
 export default genericIAPStore;

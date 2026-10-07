@@ -1,21 +1,15 @@
 // discord_app/modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx
-import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
-import react from "../../../../../_runtime/00576_react.js";
-import intl2 from "../../../../intl/index.native.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreators.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+require = fn;
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      let tmp5;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         const fn = function t() {
@@ -28,28 +22,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return initialize.useStateFromStores(tmp4, tmp5);
     }
   : () => {
       const items = [AccessibilityStore];
-      const obj = get_initialized;
-      return obj.useStateFromStores(items, () => AccessibilityStore.alwaysShowLinkDecorations);
+      return initialize.useStateFromStores(items, () => AccessibilityStore.alwaysShowLinkDecorations);
     };
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
-  const obj = AccessibilityActionCreators;
-  const result = obj.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
+  const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-let obj = {
+const SettingBuilders = fn(11142);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.OLZFB8);
+    const intl = util.intl;
+    return intl.string(util.t.OLZFB8);
   },
-  parent: MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7645).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onShowLinkDecorationsValueChange,
-};
-const toggle = SettingBuilders.createToggle(obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");
 
 export default toggle;

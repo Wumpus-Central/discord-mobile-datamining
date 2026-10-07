@@ -1,22 +1,17 @@
 // discord_app/modules/app_analytics/ThreadAnalyticsUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import Constants from "../../Constants.tsx";
 import router_utils from "../routing/router_utils.tsx";
-import ChannelRecord from "../../records/ChannelRecord.tsx";
 import ThreadMembersStore from "../threads/ThreadMembersStore.tsx";
 import ThreadMessageStore from "../threads/ThreadMessageStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;
-const Permissions = Constants.Permissions;
+require = fn;
+const THREAD_CHANNEL_TYPES = fn(2055).THREAD_CHANNEL_TYPES;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
 
 export const collectThreadMetadata = function collectThreadMetadata(channel, arg1) {
-  let archived;
-  let flag3;
-  let num;
-  let obj3;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -27,43 +22,47 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
     if (THREAD_CHANNEL_TYPES.has(channel.type)) {
       let lastRouteChangeSource;
       if (flag) {
-        const obj = router_utils;
-        lastRouteChangeSource = obj.getLastRouteChangeSource();
+        lastRouteChangeSource = router_utils.getLastRouteChangeSource();
       }
-      const threadMetadata = channel.threadMetadata;
       const obj2 = {
         location: lastRouteChangeSource,
         thread_approximate_member_count: ThreadMembersStore.getMemberCount(channel.id),
         thread_approximate_message_count: ThreadMessageStore.getCount(channel.id),
-        thread_archived: true === archived,
-        thread_locked: flag3,
-        thread_auto_archive_duration_minutes: num,
-        thread_approximate_creation_date: obj3.extractTimestamp(channel.id),
-        can_send_message: PermissionStore.can(Permissions.SEND_MESSAGES, channel),
-        parent_channel_type: channel.parentChannelThreadType,
+        thread_archived: null,
+        thread_locked: null,
+        thread_auto_archive_duration_minutes: null,
+        thread_approximate_creation_date: null,
+        can_send_message: null,
+        parent_channel_type: null,
       };
-      archived = undefined;
+      const threadMetadata = channel.threadMetadata;
+      let archived;
       if (threadMetadata != null) {
         archived = threadMetadata.archived;
       }
+      obj2.thread_archived = true === archived;
       const threadMetadata2 = channel.threadMetadata;
-      flag3 = undefined;
+      let flag3;
       if (threadMetadata2 != null) {
         flag3 = threadMetadata2.locked;
       }
       if (flag3 == null) {
         flag3 = false;
       }
+      obj2.thread_locked = flag3;
       const threadMetadata3 = channel.threadMetadata;
-      num = undefined;
+      let num;
       if (threadMetadata3 != null) {
         num = threadMetadata3.autoArchiveDuration;
       }
       if (num == null) {
         num = 0;
       }
+      obj2.thread_auto_archive_duration_minutes = num;
+      obj2.thread_approximate_creation_date = SnowflakeUtilsDefault.extractTimestamp(channel.id);
+      obj2.can_send_message = PermissionStore.can(Permissions.SEND_MESSAGES, channel);
+      obj2.parent_channel_type = channel.parentChannelThreadType;
       tmp = obj2;
-      obj3 = SnowflakeUtilsDefault;
     }
   }
   return tmp;

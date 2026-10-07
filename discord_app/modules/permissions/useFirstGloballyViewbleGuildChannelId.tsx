@@ -1,28 +1,23 @@
 // discord_app/modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx
-import Constants from "../../../discord_common/js/shared/Constants.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const Permissions = Constants.Permissions;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const Permissions = fn(1096).Permissions;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
+
+export const useFirstGloballyViewbleGuildChannelId = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp7;
       _require = arg0;
-      const tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(4);
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildChannelStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -34,41 +29,38 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               let channel = item10010.channel;
               let obj2 = PermissionUtilsAll;
               if (obj2.canEveryone(Permissions.VIEW_CHANNEL, channel)) {
-                let id = channel.id;
                 obj.return();
-                return id;
+                return channel.id;
               }
             }
-            let id1;
+            let id;
             if (selectableChannels != null) {
               const first = selectableChannels[0];
               if (first != null) {
-                id1 = first.channel.id;
+                id = first.channel.id;
               }
             }
-            return id1;
+            return id;
           }
         };
         const items1 = [arg0];
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp6, tmp7);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6, tmp7);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      const obj = require("get initialized");
       const items = [GuildChannelStore];
       const items1 = [arg0];
-      return obj.useStateFromStores(
+      return require("initialize").useStateFromStores(
         items,
         () => {
           if (null != closure_0) {
@@ -77,24 +69,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               let channel = item10010.channel;
               let obj2 = PermissionUtilsAll;
               if (obj2.canEveryone(Permissions.VIEW_CHANNEL, channel)) {
-                let id = channel.id;
                 obj.return();
-                return id;
+                return channel.id;
               }
             }
-            let id1;
+            let id;
             if (selectableChannels != null) {
               const first = selectableChannels[0];
               if (first != null) {
-                id1 = first.channel.id;
+                id = first.channel.id;
               }
             }
-            return id1;
+            return id;
           }
         },
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
-
-export const useFirstGloballyViewbleGuildChannelId = tmp2;

@@ -1,6 +1,6 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx
 import Constants from "../../../Constants.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -10,16 +10,11 @@ const result = size.fileFinishedImporting(
 );
 
 export const getCreatorMonetizationAcceptTermsCheckboxText = function getCreatorMonetizationAcceptTermsCheckboxText() {
-  let obj2;
-  let obj3;
-  const intl = intl2.intl;
-  const format = intl.format;
+  const intl = util.intl;
   const obj = {
-    fullTermsUrl: obj2.getArticleURL(HelpdeskArticles.CREATOR_TERMS),
-    creatorRevenuePolicyUrl: obj3.getArticleURL(HelpdeskArticles.CREATOR_POLICY),
+    fullTermsUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CREATOR_TERMS),
+    creatorRevenuePolicyUrl: null,
   };
-  const prop = intl2.t["+ALa7+"];
-  obj2 = HelpdeskUtilsDefault;
-  obj3 = HelpdeskUtilsDefault;
-  return format(prop, obj);
+  obj.creatorRevenuePolicyUrl = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CREATOR_POLICY);
+  return intl.format(util.t["+ALa7+"], obj);
 };

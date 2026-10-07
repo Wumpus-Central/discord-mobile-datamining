@@ -1,133 +1,117 @@
 // discord_app/modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import APIErrorDefault from "../../errors/APIError.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = globalThis.__r;
-let _require;
 
-let obj = function _getApplicationSubscriptionGroupListingsForApplication() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let c2;
-    let c3;
-    let obj7;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    const HTTP = require("HTTPUtils").HTTP;
-    const obj4 = {
-      url: Endpoints.APPLICATION_SUBSCRIPTION_GROUP_LISTING(closure_0, closure_1),
-      rejectWithError: obj7.rejectWithMigratedError(),
-    };
-    const get = HTTP.get;
-    obj7 = require("HTTPUtils");
-    await get(obj4);
-    return value.body;
+const require = fn;
+let closure_5 = async function _getApplicationSubscriptionGroupListingsForApplication() {
+  const HTTP = require("HTTPUtils").HTTP;
+  await HTTP.get({
+    url: Endpoints.APPLICATION_SUBSCRIPTION_GROUP_LISTING(closure_0, closure_1),
+    rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
   });
-  return obj(...arguments);
+  return value.body;
 };
-obj = function _getEntitlementsForGuild() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c1;
-    let c2;
-    let obj7;
-    let closure_0 = arg0;
+let closure_6 = async function _getEntitlementsForGuild() {
+  const HTTP = require("HTTPUtils").HTTP;
+  const request = {
+    url: Endpoints.GUILD_ENTITLEMENTS(closure_0),
+    query: { with_sku: true, with_application: true },
+    rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
+  };
+  await HTTP.get(request);
+  return value.body;
+};
+let closure_7 = async function _getSubscriptionGroupForSubscriptionPlan() {
+  const HTTP = require("HTTPUtils").HTTP;
+  await HTTP.get({
+    url: Endpoints.SUBSCRIPTION_PLAN_GROUP_LISTING(closure_0),
+    rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
+  });
+  return value.body;
+};
+let closure_8 = async function _fetchEligibleApplicationSubscriptionGuilds() {
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
     const HTTP = require("HTTPUtils").HTTP;
     const request = {
-      url: Endpoints.GUILD_ENTITLEMENTS(closure_0),
-      query: { with_sku: true, with_application: true },
-      rejectWithError: obj7.rejectWithMigratedError(),
+      url: constants.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
+      query: { application_id, sku_id },
+      rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
     };
-    const get = HTTP.get;
-    obj7 = require("HTTPUtils");
-    await get(request);
+    await HTTP.get(request);
     return value.body;
-  });
-  return obj(...arguments);
+  })();
 };
-obj = function _getSubscriptionGroupForSubscriptionPlan() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c1;
-    let c2;
-    let obj7;
-    let closure_0 = arg0;
-    const HTTP = require("HTTPUtils").HTTP;
-    const obj4 = {
-      url: Endpoints.SUBSCRIPTION_PLAN_GROUP_LISTING(closure_0),
-      rejectWithError: obj7.rejectWithMigratedError(),
-    };
-    const get = HTTP.get;
-    obj7 = require("HTTPUtils");
-    await get(obj4);
-    return value.body;
-  });
-  return obj(...arguments);
-};
-obj = function _fetchEligibleApplicationSubscriptionGuilds() {
-  obj = _asyncToGenerator(async (application_id, sku_id) => {
-    let c3 = 0;
-    let c2 = 0;
-    return (async (arg0, value) => {
-      let obj4;
-      let obj8;
-      const HTTP = require("HTTPUtils").HTTP;
-      const request = {
-        url: constants.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
-        query: obj4,
-        rejectWithError: obj8.rejectWithMigratedError(),
-      };
-      const get = HTTP.get;
-      obj4 = { application_id, sku_id };
-      obj8 = require("HTTPUtils");
-      await get(request);
-      return value.body;
-    })();
-  });
-  return obj(...arguments);
-};
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 
 export const getApplicationSubscriptionGroupListingsForApplication =
   function getApplicationSubscriptionGroupListingsForApplication() {
-    return obj(...arguments);
+    const self = this;
+    const apply = closure_5.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   };
 export const getEntitlementsForGuild = function getEntitlementsForGuild() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const getSubscriptionGroupForSubscriptionPlan = function getSubscriptionGroupForSubscriptionPlan() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const fetchApplication = function fetchApplication(applicationId, signal) {
-  let obj4;
   _require = applicationId;
-  obj = DispatcherDefault;
-  let obj2 = { type: "APPLICATION_FETCH", applicationId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_FETCH", applicationId });
   const HTTP = require("HTTPUtils").HTTP;
-  const get = HTTP.get;
-  const obj3 = {
-    url: Endpoints.APPLICATION_PUBLIC(applicationId),
-    signal,
-    rejectWithError: obj4.rejectWithMigratedError(),
-  };
-  obj4 = require("HTTPUtils");
-  const value = get(obj3);
-  const nextPromise = value.then((application) => {
-    obj = DispatcherDefault;
-    const obj2 = { type: "APPLICATION_FETCH_SUCCESS", application: application.body, isHydrated: true };
-    obj.dispatch(obj2);
-    return application.body;
-  });
-  return nextPromise.catch((error) => {
-    obj = DispatcherDefault;
-    const obj2 = { type: "APPLICATION_FETCH_FAIL", applicationId };
-    obj.dispatch(obj2);
-    const tmp2 = new APIErrorDefault(error);
-    return reject(tmp2);
-  });
+  const obj3 = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: null };
+  let obj2 = { type: "APPLICATION_FETCH", applicationId };
+  obj3.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+  value = HTTP.get(obj3);
+  const obj4 = require("HTTPUtils");
+  return value
+    .then((application) => {
+      DispatcherDefault.dispatch({
+        type: "APPLICATION_FETCH_SUCCESS",
+        application: application.body,
+        isHydrated: true,
+      });
+      return application.body;
+    })
+    .catch((error) => {
+      DispatcherDefault.dispatch({ type: "APPLICATION_FETCH_FAIL", applicationId });
+      const obj2 = { type: "APPLICATION_FETCH_FAIL", applicationId };
+      return Promise.reject(new APIErrorDefault(error));
+    });
 };
 export const fetchEligibleApplicationSubscriptionGuilds = function fetchEligibleApplicationSubscriptionGuilds() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

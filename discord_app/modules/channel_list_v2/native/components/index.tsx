@@ -9,11 +9,10 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const DividerDefault = Divider;
 
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/index.tsx");
-const Divider_export = DividerDefault;
 
 export const renderChannelBadge = components_ChannelBadge.renderChannelBadge;
 export const VocalChannelJoinButton = VocalChannelJoinButtonDefault;
-export { Divider_export as Divider };
+export const Divider = DividerDefault;
 export const DIVIDER_MARGIN_BOTTOM = Divider.DIVIDER_MARGIN_BOTTOM;
 export const DIVIDER_MARGIN_TOP = Divider.DIVIDER_MARGIN_TOP;
 export const NewBadge = NewBadgeDefault;

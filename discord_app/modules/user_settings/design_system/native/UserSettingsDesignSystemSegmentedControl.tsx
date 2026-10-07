@@ -1,51 +1,41 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let announceResult;
 
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-({ View: closure_4, ScrollView: hasOwnProperty } = react_native);
-({ jsxs: metroRequire, jsx: metroImportDefault } = Fragment);
-let obj = { container: { margin: 16, flex: 1, alignItems: "center", padding: 40 }, item: obj2 };
-obj2 = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-  borderWidth: 2,
-  borderColor: nativeDefault.colors.BORDER_STRONG,
-  flex: 1,
-  alignItems: "center",
-  justifyContent: "center",
-  height: 400,
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: { margin: 16, flex: 1, alignItems: "center", padding: 40 },
+  item: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderWidth: 2,
+    borderColor: nativeDefault.colors.BORDER_STRONG,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    height: 400,
+  },
 };
-let closure_8 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let closure_8 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let items1;
-      let obj3;
-      let obj4;
       let sum;
-      const obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       const tmp2 = closure_8();
       if (cResult[0] === arg0) {
-        let tmp3;
         if (cResult[1] === tmp2.item) {
-          tmp3 = cResult[2];
+          let tmp3 = cResult[2];
         }
         return tmp3;
       }
@@ -53,15 +43,19 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       let num = 0;
       if (0 < arg0) {
         do {
-          let obj2 = { label: "Item " + sum, id: "item-" + sum, page: metroImportDefault(React3, obj3) };
+          let obj2 = { label: null, id: null, page: null };
           sum = num + 1;
           let _HermesInternal = HermesInternal;
-          let push = items.push;
+          obj2.label = "Item " + sum;
           let _HermesInternal2 = HermesInternal;
-          obj3 = { style: tmp2.item, children: metroRequire(Text_Text.Text, obj4) };
-          obj4 = { variant: "heading-xxl/bold", children: items1 };
-          items1 = ["Item ", sum];
-          let arr = push(obj2);
+          obj2.id = "item-" + sum;
+          let obj3 = { style: tmp2.item, children: null };
+          let obj4 = { variant: "heading-xxl/bold", children: null };
+          let items1 = ["Item ", sum];
+          obj4.children = items1;
+          obj3.children = timestampProducer(Text_Text.Text, obj4);
+          obj2.page = React5(React4, obj3);
+          let arr = items.push(obj2);
           num = sum;
         } while (sum < arg0);
       }
@@ -71,58 +65,63 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = items;
     }
   : (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const tmp = closure_8();
       const item = tmp;
       let items = [arg0, tmp.item];
-      return react.useMemo(() => {
-        let items1;
-        let obj2;
-        let obj3;
+      return noop.useMemo(() => {
         let sum;
         const items = [];
         let num = 0;
         if (0 < closure_0) {
           do {
-            let obj = { label: "Item " + sum, id: "item-" + sum, page: metroImportDefault(React3, obj2) };
+            let obj = { label: null, id: null, page: null };
             sum = num + 1;
             let _HermesInternal = HermesInternal;
-            let push = items.push;
+            obj.label = "Item " + sum;
             let _HermesInternal2 = HermesInternal;
-            obj2 = { style: item.item, children: metroRequire(Text_Text.Text, obj3) };
-            obj3 = { variant: "heading-xxl/bold", children: items1 };
-            items1 = ["Item ", sum];
-            let arr = push(obj);
+            obj.id = "item-" + sum;
+            let obj2 = { style: item.item, children: null };
+            let obj3 = { variant: "heading-xxl/bold", children: null };
+            let items1 = ["Item ", sum];
+            obj3.children = items1;
+            obj2.children = timestampProducer(Text_Text.Text, obj3);
+            obj.page = React5(React4, obj2);
+            let arr = items.push(obj);
             num = sum;
           } while (sum < closure_0);
         }
         return items;
       }, items);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj3 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderWidth: 2,
+  borderColor: nativeDefault.colors.BORDER_STRONG,
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center",
+  height: 400,
+};
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_2;
-      let first;
-      let items;
-      let items1;
-      let require;
-      let tmp5;
-      const obj = require("react");
-      const cResult = obj.c(27);
-      [tmp5, require] = react.useState(0);
-      _slicedToArray(react.useState(0), 2);
-      [first, _slicedToArray] = react.useState(3);
+      const cResult = require("c").c(27);
+      const obj = require("c");
+      [tmp5, require] = noop.useState(0);
+      [first, _slicedToArray] = noop.useState(3);
       closure_8();
       const tmp9 = closure_9(first);
       if (cResult[0] === tmp9) {
-        let tmp10;
-        let tmp15;
         if (cResult[1] === tmp5) {
-          tmp10 = cResult[2];
+          let tmp10 = cResult[2];
         }
-        const tmpResult = require("SegmentedControlState");
-        const segmentedControlState = tmpResult.useSegmentedControlState(tmp10);
+        const segmentedControlState = require("SegmentedControlState").useSegmentedControlState(tmp10);
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
@@ -148,13 +147,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { state: segmentedControlState };
-          const obj3 = { state: segmentedControlState };
           const tmp16 = closure_7(require("SegmentedControl").SegmentedControl, obj2);
+          const obj3 = { state: segmentedControlState };
           const tmp17 = closure_7(require("SegmentedControlPages").SegmentedControlPages, obj3);
           cResult[4] = segmentedControlState;
           cResult[5] = tmp16;
           cResult[6] = tmp17;
-          tmp15 = tmp17;
+          let tmp15 = tmp17;
         } else {
           class I {
             constructor(arg0) {
@@ -251,103 +250,98 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const obj4 = { spacing: 24, children: items };
-              items = [tmp14, tmp15, tmp28];
+              const obj4 = { spacing: 24, children: null };
+              const items = [tmp14, tmp15, tmp28];
+              obj4.children = items;
+              const tmp33 = closure_6(require("Stack/Stack").Stack, obj4);
               cResult[20] = tmp28;
               cResult[21] = tmp14;
               cResult[22] = tmp15;
-              cResult[23] = closure_6(require("Stack/Stack").Stack, obj4);
-              const tmp33 = closure_6(require("Stack/Stack").Stack, obj4);
+              cResult[23] = tmp33;
             }
-            const obj5 = { spacing: 8, direction: "horizontal", children: items1 };
-            items1 = [tmp20, tmp25];
+            const obj5 = { spacing: 8, direction: "horizontal", children: null };
+            const items1 = [tmp20, tmp25];
+            obj5.children = items1;
+            const tmp30 = closure_6(require("Stack/Stack").Stack, obj5);
             cResult[17] = tmp20;
             cResult[18] = tmp25;
-            cResult[19] = closure_6(require("Stack/Stack").Stack, obj5);
-            const tmp30 = closure_6(require("Stack/Stack").Stack, obj5);
+            cResult[19] = tmp30;
           }
           const obj6 = { text: "Remove Tab", variant: "destructive", size: "sm", disabled: 2 === first, onPress: O };
+          const tmp27 = closure_7(require("components/Button/Button").Button, obj6);
           cResult[14] = 2 === first;
           cResult[15] = O;
-          cResult[16] = closure_7(require("components/Button/Button").Button, obj6);
-          const tmp27 = closure_7(require("components/Button/Button").Button, obj6);
+          cResult[16] = tmp27;
         }
         const obj7 = { text: "Add Tab", variant: "active", size: "sm", disabled: first >= 5, onPress: P };
+        const tmp22 = closure_7(require("components/Button/Button").Button, obj7);
         cResult[9] = first >= 5;
         cResult[10] = P;
-        cResult[11] = closure_7(require("components/Button/Button").Button, obj7);
-        const tmp22 = closure_7(require("components/Button/Button").Button, obj7);
+        cResult[11] = tmp22;
+        const tmpResult = require("SegmentedControlState");
       }
       const obj8 = { items: tmp9, pageWidth: tmp5, defaultIndex: 1 };
       cResult[0] = tmp9;
       cResult[1] = tmp5;
       cResult[2] = obj8;
       tmp10 = obj8;
+      const tmp4 = _slicedToArray(noop.useState(0), 2);
     }
   : () => {
-      let Stack;
-      let closure_0;
-      let closure_2;
-      let first;
-      let first1;
-      let items;
-      let items1;
-      let obj3;
-      let obj4;
-      [first, _require] = react.useState(0);
-      [first1, _slicedToArray] = react.useState(3);
-      const tmp5 = closure_8();
-      const tmp6 = closure_9(first1);
-      const obj = require("SegmentedControlState");
-      const segmentedControlState = obj.useSegmentedControlState({ items: tmp6, pageWidth: first, defaultIndex: 1 });
-      const obj2 = { children: closure_7(closure_4, obj3) };
-      obj3 = {
-        style: tmp5.container,
-        onLayout: react.useCallback((nativeEvent) => {
+      const tmp = _slicedToArray(noop.useState(0), 2);
+      _require = tmp[1];
+      [first, _slicedToArray] = noop.useState(3);
+      const tmp4 = closure_8();
+      const tmp5 = closure_9(first);
+      const segmentedControlState = require("SegmentedControlState").useSegmentedControlState({
+        items: tmp5,
+        pageWidth: tmp[0],
+        defaultIndex: 1,
+      });
+      const obj2 = { children: null };
+      const obj3 = {
+        style: tmp4.container,
+        onLayout: noop.useCallback((nativeEvent) => {
           closure_0(nativeEvent.nativeEvent.layout.width);
         }, []),
-        children: closure_6(Stack, obj4),
+        children: null,
       };
-      obj4 = { spacing: 24, children: items };
-      Stack = require("Stack/Stack").Stack;
-      items = [
+      const obj4 = { spacing: 24, children: null };
+      const items = [
         closure_7(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }),
         closure_7(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState }),
       ];
-      const obj5 = { spacing: 8, direction: "horizontal", children: items1 };
-      const Stack2 = require("Stack/Stack").Stack;
-      items1 = [,];
-      const obj6 = {
-        text: "Add Tab",
-        variant: "active",
-        size: "sm",
-        disabled: first1 >= 5,
-        onPress() {
-          const sum = first1 + 1;
-          closure_2(sum);
-          const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-          AccessibilityAnnouncer.announce("Tab added, " + sum + " tabs", "polite");
-        },
-      };
-      items1[0] = closure_7(require("components/Button/Button").Button, obj6);
-      const obj7 = {
-        text: "Remove Tab",
-        variant: "destructive",
-        size: "sm",
-        disabled: 2 === first1,
-        onPress() {
-          const diff = first1 - 1;
-          closure_2(diff);
-          const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-          AccessibilityAnnouncer.announce("Tab removed, " + diff + " tabs", "polite");
-        },
-      };
-      items1[1] = closure_7(require("components/Button/Button").Button, obj7);
-      items[2] = closure_6(Stack2, obj5);
+      const obj5 = { spacing: 8, direction: "horizontal", children: null };
+      const items1 = [
+        closure_7(require("components/Button/Button").Button, {
+          text: "Add Tab",
+          variant: "active",
+          size: "sm",
+          disabled: first >= 5,
+          onPress() {
+            const sum = first + 1;
+            closure_2(sum);
+            const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce("Tab added, " + sum + " tabs", "polite");
+          },
+        }),
+        closure_7(require("components/Button/Button").Button, {
+          text: "Remove Tab",
+          variant: "destructive",
+          size: "sm",
+          disabled: 2 === first,
+          onPress() {
+            const diff = first - 1;
+            closure_2(diff);
+            const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce("Tab removed, " + diff + " tabs", "polite");
+          },
+        }),
+      ];
+      obj5.children = items1;
+      items[2] = closure_6(require("Stack/Stack").Stack, obj5);
+      obj4.children = items;
+      obj3.children = closure_6(require("Stack/Stack").Stack, obj4);
+      obj2.children = closure_7(closure_4, obj3);
       return closure_7(closure_5, obj2);
     };
-const result = size.fileFinishedImporting(
-  "modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx",
-);
-
-export default tmp4;

@@ -1,47 +1,41 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import PremiumConstants from "../../../premium/PremiumConstants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06954_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/08917_AssetRegistry.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _modDef6954 from "../../../../../_runtime/metro/06954__.js";
+import _modDef8917 from "../../../../../_runtime/metro/08917__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const PremiumTypes = PremiumConstants.PremiumTypes;
-const jsx = Fragment.jsx;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const PremiumTypes = fn(1379).PremiumTypes;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let premiumType;
-      let style;
-      let tmp5;
-      let tmp6;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       ({ premiumType, style } = arg0);
       if (premiumType === PremiumTypes.TIER_0) {
-        tmp5 = AssetRegistryDefault2;
-        tmp6 = importDefault;
+        let tmp5 = _modDef8917;
+        let tmp6 = importDefault;
       } else {
-        tmp5 = AssetRegistryDefault;
+        tmp5 = _modDef6954;
         tmp6 = importDefault;
       }
       if (cResult[0] !== premiumType) {
-        const tmpResult = PremiumUtils;
-        const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(premiumType);
+        const premiumTypeDisplayName = PremiumUtils.getPremiumTypeDisplayName(premiumType);
         cResult[0] = premiumType;
         cResult[1] = premiumTypeDisplayName;
-        tmp8 = premiumTypeDisplayName;
+        let tmp8 = premiumTypeDisplayName;
+        const tmpResult = PremiumUtils;
       } else {
         tmp8 = cResult[1];
       }
       if (cResult[2] === tmp5) {
         if (cResult[3] === style) {
-          let tmp10;
           if (cResult[4] === tmp8) {
-            tmp10 = cResult[5];
+            let tmp10 = cResult[5];
           }
           return tmp10;
         }
@@ -61,30 +55,34 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
     }
   : (premiumType) => {
-      let tmp;
-      let tmp3;
       premiumType = premiumType.premiumType;
-      const style = premiumType.style;
       if (premiumType === PremiumTypes.TIER_0) {
-        tmp3 = AssetRegistryDefault2;
-        tmp = importDefault;
+        let tmp3 = _modDef8917;
+        let tmp = importDefault;
       } else {
         tmp = importDefault;
-        tmp3 = AssetRegistryDefault;
+        tmp3 = _modDef6954;
       }
-      tmp(5981);
-      const obj2 = PremiumUtils;
+      const obj = {
+        accessible: true,
+        accessibilityLabel: null,
+        accessibilityRole: "header",
+        style: null,
+        resizeMode: "contain",
+        source: null,
+      };
+      const tmpResult = tmp(5981);
+      obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
+      obj.style = premiumType.style;
+      obj.source = tmp3;
       return (
         <tmpResult
           accessible
-          accessibilityLabel={obj2.getPremiumTypeDisplayName(premiumType)}
+          accessibilityLabel={null}
           accessibilityRole="header"
-          style={style}
+          style={null}
           resizeMode="contain"
-          source={tmp3}
+          source={null}
         />
       );
     };
-const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
-
-export default tmp3;

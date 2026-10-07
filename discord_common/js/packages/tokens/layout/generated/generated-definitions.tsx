@@ -1,7 +1,6 @@
 // discord_common/js/packages/tokens/layout/generated/generated-definitions.tsx
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let obj3;
 const obj = {
   SPACE_0: 0,
   SPACE_4: 4,
@@ -70,7 +69,12 @@ const obj = {
   BREAKPOINT_MAX: "var(--breakpoint-max)",
 };
 const obj2 = {
-  SPACE_0: obj3,
+  SPACE_0: {
+    css: "0px",
+    resolve() {
+      return 0;
+    },
+  },
   SPACE_4: {
     css: "4px",
     resolve() {
@@ -285,12 +289,6 @@ const obj4 = {
   PX_128: 128,
   PX_160: 160,
   PX_192: 192,
-};
-obj3 = {
-  css: "0px",
-  resolve() {
-    return 0;
-  },
 };
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/tokens/layout/generated/generated-definitions.tsx",

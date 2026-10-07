@@ -1,31 +1,26 @@
 // discord_app/design/components/Navigator/native/SceneLoadingIndicator.native.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import ActivityIndicator_ActivityIndicator from "../../ActivityIndicator/native/ActivityIndicator.native.tsx";
 import NavScrim from "NavScrim.android.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-const View = react_native.View;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({ loadingContainer: { flex: 1, paddingTop: 40 } });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/SceneLoadingIndicator.native.tsx");
+
+export const SceneLoadingIndicator = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let items;
-      let tmp10;
-      let tmp5;
-      let tmp6;
-      const obj = react2;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       const tmp4 = closure_5();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = _false(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
-        const tmp9 = _false(NavScrim.NavScrim, {});
+        const tmp8 = React3(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
+        const tmp9 = React3(NavScrim.NavScrim, {});
         cResult[0] = tmp8;
         cResult[1] = tmp9;
         tmp5 = tmp8;
@@ -34,23 +29,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6] = cResult;
       }
       if (cResult[2] !== tmp4.loadingContainer) {
-        const obj2 = { style: tmp4.loadingContainer, children: items };
-        items = [tmp5, tmp6];
-        const tmp13 = React3(View, obj2);
+        const obj2 = { style: tmp4.loadingContainer, children: null };
+        const items = [tmp5, tmp6];
+        obj2.children = items;
+        const tmp13 = React4(View, obj2);
         cResult[2] = tmp4.loadingContainer;
         cResult[3] = tmp13;
-        tmp10 = tmp13;
+        let tmp10 = tmp13;
       } else {
         tmp10 = cResult[3];
       }
       return tmp10;
     }
   : () => {
-      let items;
-      const obj = { style: closure_5().loadingContainer, children: items };
-      items = [_false(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}), _false(NavScrim.NavScrim, {})];
-      return React3(View, obj);
+      const obj = { style: closure_5().loadingContainer, children: null };
+      const items = [React3(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}), React3(NavScrim.NavScrim, {})];
+      obj.children = items;
+      return React4(View, obj);
     };
-const result = size.fileFinishedImporting("design/components/Navigator/native/SceneLoadingIndicator.native.tsx");
-
-export const SceneLoadingIndicator = tmp4;

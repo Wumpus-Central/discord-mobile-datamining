@@ -1,7 +1,6 @@
 // discord_app/modules/scheduled_messages/ScheduledMessageStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 function handleScheduledMessageRemovalStart(scheduledMessageId) {
   scheduledMessageId = scheduledMessageId.scheduledMessageId;
@@ -9,8 +8,6 @@ function handleScheduledMessageRemovalStart(scheduledMessageId) {
     return false;
   } else {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
     set = new Set(set);
     set.add(scheduledMessageId);
   }
@@ -24,17 +21,14 @@ function handleScheduledMessageRemovalSuccess(scheduledMessageId) {
   }
   set = new Set(set);
   set.delete(scheduledMessageId);
-  const obj = {};
   const merged = Object.assign(closure_1);
-  closure_1 = obj;
-  delete obj2[scheduledMessageId];
+  closure_1 = {};
+  delete tmp[tmp2];
 }
 function handleScheduledMessageRemovalFailure(scheduledMessageId) {
   scheduledMessageId = scheduledMessageId.scheduledMessageId;
   if (set.has(scheduledMessageId)) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
     set = new Set(set);
     set.delete(scheduledMessageId);
   } else {
@@ -49,23 +43,23 @@ function reset() {
 let c0 = false;
 let closure_1 = {};
 let set = new Set();
-const Store = get_initializedDefault.Store;
-class ScheduledMessageStore extends Store {
-  getMessagesPendingRemoval() {
-    return set;
-  }
-  getScheduledMessagesForInbox() {
-    return closure_1;
-  }
-}
-Object.defineProperty(ScheduledMessageStore.prototype, "loading", {
+const Store = initializeDefault.Store;
+class ScheduledMessageStore extends Store {}
+const prototype = ScheduledMessageStore.prototype;
+prototype["getMessagesPendingRemoval"] = function getMessagesPendingRemoval() {
+  return set;
+};
+prototype["getScheduledMessagesForInbox"] = function getScheduledMessagesForInbox() {
+  return closure_1;
+};
+Object.defineProperty(prototype, "loading", {
   get: function loading() {
     return c0;
   },
   set: undefined,
 });
 ScheduledMessageStore.displayName = "scheduledMessageStore";
-let obj = {
+const scheduledMessageStore = new ScheduledMessageStore(DispatcherDefault, {
   SCHEDULED_MESSAGES_CREATE_SUCCESS: function handleScheduledMessageCreateSuccess(scheduledMessageSend) {
     scheduledMessageSend = scheduledMessageSend.scheduledMessageSend;
     const obj = {};
@@ -93,10 +87,9 @@ let obj = {
       c0 = true;
     }
   },
-  FETCH_SCHEDULED_MESSAGES_SUCCESS: function handleFetchScheduledMessagesSuccess(messages) {
-    messages = messages.messages;
+  FETCH_SCHEDULED_MESSAGES_SUCCESS: function handleFetchScheduledMessagesSuccess(arg0) {
     closure_1 = {};
-    for (const item10007 of messages) {
+    for (const item10007 of tmp) {
       closure_1[item10007.scheduledMessageId] = item10007;
       continue;
     }
@@ -111,8 +104,8 @@ let obj = {
   },
   LOGOUT: reset,
   CONNECTION_OPEN: reset,
-};
-const scheduledMessageStore = new ScheduledMessageStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageStore.tsx");
 
 export default scheduledMessageStore;

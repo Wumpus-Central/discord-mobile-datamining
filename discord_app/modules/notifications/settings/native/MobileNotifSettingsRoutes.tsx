@@ -1,5 +1,5 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import _modDef2847 from "../../NotificationSettings.messages.js";
 import BellIcon from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
 import notifications_NotificationSettingsUtils from "../../NotificationSettingsUtils.tsx";
@@ -10,118 +10,129 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-function getComponent() {
-  return require("RedesignSettingsNotificationScreen").default;
-}
-const getComponent2 = function getComponent() {
-  return require("RedesignSettingsRealtimeScreen").default;
-};
-const getComponent3 = function getComponent() {
-  return require("RedesignSettingsCategorySocialScreen").default;
-};
-const getComponent4 = function getComponent() {
-  return require("RedesignSettingsCategoryServerScreen").default;
-};
-const getComponent5 = function getComponent() {
-  return require("RedesignSettingsCategoryOtherScreen").default;
-};
 let SettingBuilders = SettingBuilders_mod;
-let obj = {
+const obj = {
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.HcoRu0);
+    const intl = util.intl;
+    return intl.string(util.t.HcoRu0);
   },
   IconComponent: BellIcon.BellIcon,
   parent: null,
   usePredicate() {
-    const obj = notifications_NotificationSettingsUtils;
-    return obj.useIsDeclarativeSettingsUIAvailable("RootRoute");
+    return notifications_NotificationSettingsUtils.useIsDeclarativeSettingsUIAvailable("RootRoute");
   },
-  screen: { route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIFICATIONS_REDESIGN, getComponent },
+  screen: {
+    route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIFICATIONS_REDESIGN,
+    getComponent() {
+      return require("RedesignSettingsNotificationScreen").default;
+    },
+  },
 };
-const createRoute = SettingBuilders.createRoute;
-({ route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIFICATIONS_REDESIGN, getComponent });
-const route = createRoute(obj);
-SettingBuilders = SettingBuilders_mod;
-const createRoute2 = SettingBuilders.createRoute;
+const route = SettingBuilders.createRoute(obj);
+let SettingBuilders = SettingBuilders_mod;
 const obj3 = {
   useTitle() {
-    const intl = intl2.intl;
+    const intl = util.intl;
     return intl.string(_modDef2847.S5cB9e);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
-    const obj = notifications_NotificationSettingsUtils;
-    return obj.useNotifCategoryVisibility("REALTIME");
+    return notifications_NotificationSettingsUtils.useNotifCategoryVisibility("REALTIME");
   },
-  screen: {
-    route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_REALTIME,
-    getComponent: getComponent2,
+  screen: null,
+};
+const obj2 = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIFICATIONS_REDESIGN,
+  getComponent() {
+    return require("RedesignSettingsNotificationScreen").default;
   },
 };
-({ route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_REALTIME, getComponent: getComponent2 });
-const route2 = createRoute2(obj3);
-SettingBuilders = SettingBuilders_mod;
-const createRoute3 = SettingBuilders.createRoute;
+obj3.screen = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_REALTIME,
+  getComponent() {
+    return require("RedesignSettingsRealtimeScreen").default;
+  },
+};
+const route1 = SettingBuilders.createRoute(obj3);
+let SettingBuilders = SettingBuilders_mod;
 const obj5 = {
   useTitle() {
-    const intl = intl2.intl;
+    const intl = util.intl;
     return intl.string(_modDef2847["UzRF+8"]);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
-    const obj = notifications_NotificationSettingsUtils;
-    return obj.useNotifCategoryVisibility("CATEGORY_SOCIAL");
+    return notifications_NotificationSettingsUtils.useNotifCategoryVisibility("CATEGORY_SOCIAL");
   },
-  screen: {
-    route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SOCIAL,
-    getComponent: getComponent3,
+  screen: null,
+};
+const obj4 = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_REALTIME,
+  getComponent() {
+    return require("RedesignSettingsRealtimeScreen").default;
   },
 };
-({ route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SOCIAL, getComponent: getComponent3 });
-const route3 = createRoute3(obj5);
-SettingBuilders = SettingBuilders_mod;
-const createRoute4 = SettingBuilders.createRoute;
+obj5.screen = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SOCIAL,
+  getComponent() {
+    return require("RedesignSettingsCategorySocialScreen").default;
+  },
+};
+const route2 = SettingBuilders.createRoute(obj5);
+let SettingBuilders = SettingBuilders_mod;
 const obj7 = {
   useTitle() {
-    const intl = intl2.intl;
+    const intl = util.intl;
     return intl.string(_modDef2847.zRKbpz);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
-    const obj = notifications_NotificationSettingsUtils;
-    return obj.useNotifCategoryVisibility("CATEGORY_SERVER");
+    return notifications_NotificationSettingsUtils.useNotifCategoryVisibility("CATEGORY_SERVER");
   },
-  screen: {
-    route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER,
-    getComponent: getComponent4,
+  screen: null,
+};
+const obj6 = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SOCIAL,
+  getComponent() {
+    return require("RedesignSettingsCategorySocialScreen").default;
   },
 };
-({ route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER, getComponent: getComponent4 });
-const route4 = createRoute4(obj7);
-SettingBuilders = SettingBuilders_mod;
-const createRoute5 = SettingBuilders.createRoute;
+obj7.screen = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER,
+  getComponent() {
+    return require("RedesignSettingsCategoryServerScreen").default;
+  },
+};
+const route3 = SettingBuilders.createRoute(obj7);
+let SettingBuilders = SettingBuilders_mod;
 const obj9 = {
   useTitle() {
-    const intl = intl2.intl;
+    const intl = util.intl;
     return intl.string(_modDef2847.q5M7HV);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
-    const obj = notifications_NotificationSettingsUtils;
-    return obj.useNotifCategoryVisibility("CATEGORY_OTHER");
+    return notifications_NotificationSettingsUtils.useNotifCategoryVisibility("CATEGORY_OTHER");
   },
-  screen: {
-    route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_OTHER,
-    getComponent: getComponent5,
+  screen: null,
+};
+const obj8 = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER,
+  getComponent() {
+    return require("RedesignSettingsCategoryServerScreen").default;
   },
 };
-({ route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_OTHER, getComponent: getComponent5 });
-const route5 = createRoute5(obj9);
+obj9.screen = {
+  route: MobileNotifSettingsSections.MobileNotifSettingsSections.NOTIF_CATEGORY_OTHER,
+  getComponent() {
+    return require("RedesignSettingsCategoryOtherScreen").default;
+  },
+};
+const route4 = SettingBuilders.createRoute(obj9);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx");
 
 export const RootRoute = route;
-export const RealtimeRoute = route2;
-export const CategorySocialRoute = route3;
-export const CategoryServerRoute = route4;
-export const CategoryOtherRoute = route5;
+export const RealtimeRoute = route1;
+export const CategorySocialRoute = route2;
+export const CategoryServerRoute = route3;
+export const CategoryOtherRoute = route4;

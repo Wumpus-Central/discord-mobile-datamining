@@ -6,6 +6,5 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/activities/utils/isOnConsole.tsx");
 
 export default function isOnConsole(arg0) {
-  const tmp3 = isOnXboxDefault(arg0) || isOnPlayStationDefault(arg0);
-  return tmp3;
+  return isOnXboxDefault(arg0) || isOnPlayStationDefault(arg0);
 }

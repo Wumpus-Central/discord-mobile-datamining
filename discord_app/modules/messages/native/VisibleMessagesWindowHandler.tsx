@@ -20,9 +20,6 @@ export default function VisibleMessagesWindowHandler() {
     obj.data = null;
   };
   data.handleScrollPosition = function handleScrollPosition(arg0) {
-    let firstVisibleMessageRowIndex;
-    let lastVisibleMessageRowIndex;
-    let rows;
     ({ rows, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex } = arg0);
     if (null != data.callback) {
       let tmp2 = null;
@@ -101,8 +98,7 @@ export default function VisibleMessagesWindowHandler() {
         tmp18 = null;
         if (null != lastVisibleMessageRowIndex) {
           const _Math = Math;
-          let sum1 =
-            firstVisibleMessageRowIndex + Math.floor((lastVisibleMessageRowIndex - firstVisibleMessageRowIndex) / 2);
+          let sum1 = firstVisibleMessageRowIndex + Math.floor((lastVisibleMessageRowIndex - firstVisibleMessageRowIndex) / 2);
           tmp18 = null;
           if (sum1 < rows.length) {
             while (true) {
@@ -137,9 +133,10 @@ export default function VisibleMessagesWindowHandler() {
           }
         }
       }
-      data = { topVisibleMessage: tmp2, middleVisibleMessage: tmp18, bottomVisibleMessage: tmp9, data };
+      data = { topVisibleMessage: tmp2, middleVisibleMessage: tmp18, bottomVisibleMessage: tmp9 };
+      data.data = data;
       data.callback(data.data);
     }
   };
   return data;
-}
+}.prototype;

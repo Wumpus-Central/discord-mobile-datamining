@@ -1,30 +1,29 @@
 // discord_app/modules/guild_onboarding_home/hasPendingMemberAction.tsx
-import Constants from "../../Constants.tsx";
 import FlagUtilsAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import GuildMemberConstants from "../guild_member/GuildMemberConstants.tsx";
 import guildHasOnboardingHomeDefault from "guildHasOnboardingHome.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.tsx";
 import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const GuildFeatures = Constants.GuildFeatures;
-const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
+const GuildFeatures = fn(1085).GuildFeatures;
+const GuildMemberFlags = fn(4501).GuildMemberFlags;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 
 export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, selectedChannelId) {
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   const channel = ChannelStore.getChannel(selectedChannelId);
-  let hasItem = null != guild && null != channel && guildHasOnboardingHomeDefault(guild);
+  let hasItem = null != guild && null != channel;
+  if (hasItem) {
+    hasItem = guildHasOnboardingHomeDefault(guild);
+  }
   if (hasItem) {
     const features = guild.features;
     hasItem = features.has(GuildFeatures.GUILD_SERVER_GUIDE);
   }
   if (hasItem) {
-    const hasFlag = FlagUtilsAll.hasFlag;
-    FlagUtilsAll;
     const selfMember = GuildMemberStore.getSelfMember(guild.id);
     let num;
     if (selfMember != null) {
@@ -33,7 +32,7 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
     if (num == null) {
       num = 0;
     }
-    hasItem = !hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+    hasItem = !FlagUtilsAll.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
   }
   if (hasItem) {
     hasItem = GuildOnboardingHomeSettingsStore.hasMemberAction(guild.id, channel.id);

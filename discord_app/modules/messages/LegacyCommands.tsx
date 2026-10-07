@@ -5,57 +5,44 @@ import AppAnalyticsUtilsDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import ReactionActionCreators from "../reactions/ReactionActionCreators.tsx";
 import ChangeNicknameActionCreatorsDefault from "../../actions/ChangeNicknameActionCreators.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
-import Constants from "../../Constants.tsx";
-import module_1936_mod from "../../../_runtime/metro/01936__.js";
-import size from "../../../_runtime/metro/00002__.js";
+import t_mod from "../../../_runtime/metro/01936__.js";
 
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let module_1936;
-let obj2;
-let obj3;
-({ AnalyticEvents: metroRequire, MARKDOWN_SPOILER_WRAPPER: metroImportDefault, ME: metroImportAll } = Constants);
+require = fn;
+const Constants = fn(1085);
+({ AnalyticEvents: metroRequire, MARKDOWN_SPOILER_WRAPPER: closure_7, ME: closure_8 } = Constants);
 const re9 = /\\([*?+/])/g;
 const COMMANDS = {
   tts: {
     action() {
-      let EnableTTSCommand;
-      const obj = { tts: EnableTTSCommand.getSetting() };
-      EnableTTSCommand = UserSettings.EnableTTSCommand;
+      const obj = { tts: null };
+      const EnableTTSCommand = UserSettings.EnableTTSCommand;
+      obj.tts = EnableTTSCommand.getSetting();
       return obj;
     },
   },
   me: {
     action(arg0) {
-      const obj = { content: "_" + arg0 + "_" };
-      return obj;
+      return { content: "_" + arg0 + "_" };
     },
   },
   tableflip: {
     action(arg0) {
-      let str;
-      const obj = { content: str.trim() };
-      str = "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B";
+      const obj = { content: "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
       return obj;
     },
   },
   unflip: {
     action(arg0) {
-      let str;
-      const obj = { content: str.trim() };
-      str = "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)";
+      const obj = { content: "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
       return obj;
     },
   },
   shrug: {
     action(arg0) {
-      let str;
-      const obj = { content: str.trim() };
-      str = "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF";
+      const obj = { content: "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
       return obj;
     },
   },
@@ -64,111 +51,99 @@ const COMMANDS = {
       channel = channel.channel;
       if (null != channel.guild_id) {
         const obj = ChangeNicknameActionCreatorsDefault;
-        obj.changeNickname(channel.guild_id, channel.id, metroImportAll, arg0);
+        obj.changeNickname(channel.guild_id, channel.id, closure_1_8, arg0);
         return { content: "" };
       }
     },
   },
-  reaction: obj2,
-  searchReplace: obj3,
-  spoiler: {
-    action(View) {
-      let str;
-      const obj = { content: str.trim() };
-      str = metroImportDefault(View);
-      return obj;
-    },
-  },
+  reaction: null,
+  searchReplace: null,
+  spoiler: null,
 };
-obj2 = {
-  match: module_1936.anyScopeRegex(/^\+:(.+?): *$/),
-  action(str, channel) {
-    channel = channel.channel;
-    if (!channel.isEdit) {
-      if (MessageStore.hasPresent(channel.id)) {
-        const messages = MessageStore.getMessages(channel.id);
-        const lastResult = messages.last();
-        if (null != lastResult) {
-          if (null != lastResult.id) {
-            const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(channel.guild_id);
-            const getByName = disambiguatedEmojiContext.getByName;
-            const trimmed = str.trim();
-            const byName = getByName(trimmed.slice(2, -1));
-            if (null != byName) {
-              const addReaction = ReactionActionCreators.addReaction;
-              const id = channel.id;
-              const id2 = lastResult.id;
-              ReactionActionCreators;
-              const obj3 = ReactionUtils;
-              addReaction(id, id2, obj3.toReactionEmoji(byName));
-              return { content: "" };
-            }
-          }
-        }
-      }
-    }
-  },
-};
-module_1936 = module_1936_mod;
-obj3 = {
-  match: module_1936.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/),
-  action(str, channel) {
-    let str2;
-    let str3;
-    channel = channel.channel;
-    if (!channel.isEdit) {
-      const lastEditableMessage = MessageStore.getLastEditableMessage(channel.id);
-      if (null != lastEditableMessage) {
-        if (null != lastEditableMessage.id) {
-          let str7;
-          const self = this;
-          const _Array = Array;
-          let match = str.match(this.match.regex);
-          if (match == null) {
-            match = [];
-          }
-          [r10014, str, str2, str3] = from(match);
-          let parts;
-          _slicedToArray(from(match), 4);
-          if (str3 != null) {
-            parts = str3.split("");
-          }
-          if (parts == null) {
-            parts = [];
-          }
-          const replaced = str.replace(re9, (arg0, arg1) => arg1);
-          const replaced1 = str2.replace(re9, (arg0, arg1) => arg1);
-          if (parts.includes("g")) {
-            str7 = str6.replaceAll(replaced, replaced1);
-          } else {
-            str7 = str6.replace(replaced, replaced1);
-          }
-          if (null == str7) {
-            if (0 === lastEditableMessage.attachments.length) {
-              const obj = MessageActionCreatorsDefault;
-              obj.deleteMessage(channel.id, lastEditableMessage.id);
-            }
+let obj2 = { match: null, action: null };
+let t = t_mod;
+obj2.match = t.anyScopeRegex(/^\+:(.+?): *$/);
+obj2.action = function action(str, channel) {
+  channel = channel.channel;
+  if (!channel.isEdit) {
+    if (MessageStore.hasPresent(channel.id)) {
+      const messages = MessageStore.getMessages(channel.id);
+      const lastResult = messages.last();
+      if (null != lastResult) {
+        if (null != lastResult.id) {
+          const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(channel.guild_id);
+          const trimmed = str.trim();
+          const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
+          if (null != byName) {
+            const obj3 = ReactionActionCreators;
+            obj3.addReaction(channel.id, lastResult.id, ReactionUtils.toReactionEmoji(byName));
             return { content: "" };
           }
-          if (str7 !== lastEditableMessage.content) {
-            const obj3 = { content: str7 };
-            const obj2 = MessageActionCreatorsDefault;
-            obj2.editMessage(channel.id, lastEditableMessage.id, obj3);
-          }
         }
       }
-      return { content: "" };
     }
+  }
+};
+COMMANDS.reaction = obj2;
+let obj3 = { match: null, action: null };
+let t = t_mod;
+obj3.match = t.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
+obj3.action = function action(str, channel) {
+  channel = channel.channel;
+  if (!channel.isEdit) {
+    const lastEditableMessage = MessageStore.getLastEditableMessage(channel.id);
+    if (null != lastEditableMessage) {
+      if (null != lastEditableMessage.id) {
+        const self = this;
+        let match = str.match(this.match.regex);
+        if (match == null) {
+          match = [];
+        }
+        [r10014, str, str2, str3] = Array.from(match);
+        let parts;
+        if (str3 != null) {
+          parts = str3.split("");
+        }
+        if (parts == null) {
+          parts = [];
+        }
+        const replaced = str.replace(re9, (arg0, arg1) => arg1);
+        const replaced1 = str2.replace(re9, (arg0, arg1) => arg1);
+        if (parts.includes("g")) {
+          let str7 = str6.replaceAll(replaced, replaced1);
+        } else {
+          str7 = str6.replace(replaced, replaced1);
+        }
+        if (null == str7) {
+          if (0 === lastEditableMessage.attachments.length) {
+            MessageActionCreatorsDefault.deleteMessage(channel.id, lastEditableMessage.id);
+          }
+          return { content: "" };
+        }
+        if (str7 !== lastEditableMessage.content) {
+          const obj3 = { content: str7 };
+          MessageActionCreatorsDefault.editMessage(channel.id, lastEditableMessage.id, obj3);
+        }
+        const tmp5 = _slicedToArray(Array.from(match), 4);
+      }
+    }
+    return { content: "" };
+  }
+};
+COMMANDS.searchReplace = obj3;
+COMMANDS.spoiler = {
+  action(arg0) {
+    const obj = { content: React5(arg0).trim() };
+    return obj;
   },
 };
-module_1936 = module_1936_mod;
 Object.setPrototypeOf(COMMANDS, null);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/LegacyCommands.tsx");
 
 export { COMMANDS };
 export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
   for (const key10005 in obj) {
-    let obj;
     let str = obj[key10005];
     if (null == str.match) {
       continue;
@@ -176,15 +151,15 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
       let regex = str.match.regex;
       let isMatch;
       if (regex != null) {
-        isMatch = regex.test(text);
+        isMatch = regex.test(arg0);
       }
       if (!isMatch) {
         continue;
       } else {
-        obj = AppAnalyticsUtilsDefault;
+        let obj = AppAnalyticsUtilsDefault;
         let obj2 = { command: key10005 };
-        let trackWithMetadataResult = obj.trackWithMetadata(metroRequire.SLASH_COMMAND_USED, obj2);
-        return str.action(text, arg1);
+        let trackWithMetadataResult = obj.trackWithMetadata(constants.SLASH_COMMAND_USED, obj2);
+        return str.action(arg0, arg1);
       }
     }
     continue;

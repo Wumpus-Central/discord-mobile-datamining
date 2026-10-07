@@ -2,8 +2,6 @@
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let map, set;
-
 const turnSettled = ConjureChatStore.turnSettled;
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePendingPlan.tsx");
 
@@ -37,7 +35,7 @@ export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
   }
 };
 export const planVersions = function planVersions(memo) {
-  map = new Map();
+  const map = new Map();
   let render_id = null;
   let num = 0;
   const iter = memo[Symbol.iterator]();
@@ -48,7 +46,8 @@ export const planVersions = function planVersions(memo) {
       if ("plan_implemented" !== tmp3.kind) {
         if (null != tmp3.proposal) {
           if (null != render_id) {
-            let obj = { version: num, superseded: true };
+            let obj = { version: null, superseded: true };
+            obj.version = num;
             let result = map.set(render_id, obj);
           }
           let sum = num + 1;
@@ -67,19 +66,18 @@ export const planVersions = function planVersions(memo) {
   return map;
 };
 export const planCardExpanded = function planCardExpanded(c19, render_id, arg2) {
-  let value = c19.get(render_id);
+  value = c19.get(render_id);
   if (value == null) {
     value = !arg2;
   }
   return value;
 };
 export const togglePlanCard = function togglePlanCard(get, arg1, arg2) {
-  map = new Map(get);
-  set = map.set;
-  let value = get.get(arg1);
+  const map = new Map(get);
+  value = get.get(arg1);
   if (value == null) {
     value = !arg2;
   }
-  const result = set(arg1, !value);
+  const result = map.set(arg1, !value);
   return map;
 };

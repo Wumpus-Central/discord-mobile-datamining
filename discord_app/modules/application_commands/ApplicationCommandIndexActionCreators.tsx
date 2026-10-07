@@ -1,247 +1,249 @@
 // discord_app/modules/application_commands/ApplicationCommandIndexActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_4;
-let hasOwnProperty;
-let obj = function _fetchApplicationCommandIndex() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let type = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c2 = 0;
-    return (async (arg0, value) => {
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+const require = fn;
+let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
+  let type = arg0;
+  closure_1 = arg1;
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c2 = 2;
-          let tmp3 = c3;
-          let num2 = 0;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              let obj3 = { value, done: true };
-              return obj3;
-            } else {
-              function retry() {
-                return obj(...arguments);
-              }
-              obj = function _retry() {
-                let target;
-                obj = closure_2_3(function* (arg0) {
-                  if (c3 === 2) {
-                    c3 = 3;
-                    throw new TypeError("Generator functions may not be called on executing generators");
-                  } else if (tmp3 === 3) {
-                    if (arg0 === 1) {
-                      throw value;
-                    } else if (arg0 === 2) {
-                      const obj2 = { value, done: true };
-                      return obj2;
-                    } else {
-                      return { value: "IconComponent", done: null };
-                    }
-                  } else {
-                    try {
-                      let dispatchResult;
-                      c3 = 2;
-                      if (0 === c2) {
-                        if (arg0 === 1) {
-                          c3 = 3;
-                          throw value;
-                        } else if (arg0 === 2) {
-                          c3 = 3;
-                          const obj4 = { value, done: true };
-                          return obj4;
-                        } else if (closure_2_4 >= 3) {
-                          failure_statuses.push(1002);
-                          end({ error: true });
-                          const obj5 = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
-                          const obj3 = tmp(c2[2]);
-                          dispatchResult = obj3.dispatch(obj5);
-                        } else {
-                          const self = this;
-                          const self2 = this;
-                          const promise = new Promise((arg0) => setTimeout(arg0, closure_0));
-                          c2 = 1;
-                          c3 = 1;
-                          const obj6 = { value: promise, done: false };
-                          return obj6;
-                        }
-                      } else if (arg0 === 1) {
-                        c3 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c3 = 3;
-                        obj = { value, done: true };
-                        return obj;
-                      } else {
-                        dispatchResult = closure_129_8();
-                      }
-                      c3 = 3;
-                      const obj7 = { value: dispatchResult, done: true };
-                      return obj7;
-                    } catch (tmp18) {
-                      c3 = 3;
-                      throw tmp18;
-                    }
-                  }
-                });
-                return obj(...arguments);
-              };
-              function end(error) {
-                let channelId;
-                error = error.error;
-                const diff = performance.now() - closure_3;
-                const tmp3 = closure_2_1(closure_2_2[5]);
-                const track = tmp3.track;
-                const APPLICATION_COMMAND_PERFORMANCE = constants.APPLICATION_COMMAND_PERFORMANCE;
-                type = closure_0.type;
-                obj = {
-                  duration_ms: diff,
-                  error,
-                  aborted: closure_1.signal.aborted,
-                  include_applications: true,
-                  retries: Math.max(c4 - 1, 0),
-                  kind: null,
-                  command_type: null,
-                  url,
-                  target_type: closure_0.type,
-                  target_id: channelId,
-                  failure_statuses,
-                };
-                if ("channel" === type) {
-                  channelId = closure_0.channelId;
-                } else if ("guild" === type) {
-                  channelId = closure_0.guildId;
-                } else {
-                  channelId = null;
-                  if ("user" !== type) {
-                    if ("application" === type) {
-                      channelId = closure_0.applicationId;
-                    } else {
-                      const obj2 = closure_2_0(closure_2_2[6]);
-                      obj2.assertNever(closure_0);
-                    }
-                  }
-                }
-                track(APPLICATION_COMMAND_PERFORMANCE, obj);
-              }
-              const _performance = performance;
-              let closure_3 = performance.now();
-              let c4 = 0;
-              let closure_5 = [];
-              type = type.type;
-              if ("channel" === type) {
-                let closure_2 = closure_2_5.APPLICATION_COMMAND_INDEX_CHANNEL(tmp12.channelId);
-              } else if ("guild" === type) {
-                closure_2 = closure_2_5.APPLICATION_COMMAND_INDEX_GUILD(tmp12.guildId);
-              } else if ("user" === type) {
-                closure_2 = closure_2_5.APPLICATION_COMMAND_INDEX_USER;
-              } else if ("application" === type) {
-                closure_2 = closure_2_5.APPLICATION_COMMAND_INDEX_APPLICATION(tmp12.applicationId);
-              }
-              function fetch() {
-                let target;
-                const HTTP = type(closure_2_2[3]).HTTP;
-                obj = {
-                  url,
-                  retries: 3 - c4 - 1,
-                  signal: closure_1.signal,
-                  onRequestCreated() {
-                    closure_4 = tmp + 1;
-                    return +closure_4;
-                  },
-                  rejectWithError: false,
-                };
-                const value = HTTP.get(obj);
-                return value.then(
-                  (status) => {
-                    let dispatchResult;
-                    if (202 === status.status) {
-                      failure_statuses.push(202);
-                      dispatchResult = retry(5000);
-                    } else {
-                      end({ error: false });
-                      const obj2 = { type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target, index: status.body };
-                      obj = closure_1(url[2]);
-                      dispatchResult = obj.dispatch(obj2);
-                    }
-                    return dispatchResult;
-                  },
-                  (status) => {
-                    let dispatchResult;
-                    if (closure_1_1.signal.aborted) {
-                      failure_statuses.push(1001);
-                      end({ error: true });
-                    } else if (429 === status.status) {
-                      failure_statuses.push(429);
-                      dispatchResult = retry(status.body.retry_after * closure_1(url[4]).Millis.SECOND);
-                    } else {
-                      let num2 = status.status;
-                      const push = failure_statuses.push;
-                      if (num2 == null) {
-                        num2 = 1000;
-                      }
-                      push(num2);
-                      end({ error: true });
-                      const obj2 = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
-                      obj = closure_1(url[2]);
-                      dispatchResult = obj.dispatch(obj2);
-                    }
-                    return dispatchResult;
-                  },
-                );
-              }
-              c3 = 1;
-              c2 = 1;
-              let obj4 = { value: fetch(), done: false };
-              return obj4;
-            }
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
             c2 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
-            c2 = 3;
-            return { value: "IconComponent", done: null };
+            function retry() {
+              const self = this;
+              const apply = closure_7.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            }
+            closure_7 = function _retry() {
+              const self = this;
+              const tmp = c3(function* (arg0) {
+                if (c3 === 2) {
+                  c3 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp4 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    const obj2 = { value, done: true };
+                    return obj2;
+                  } else {
+                    return { value: "IconComponent", done: null };
+                  }
+                } else {
+                  try {
+                    c3 = 2;
+                    if (0 === dependencyMap) {
+                      if (arg0 === 1) {
+                        c3 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c3 = 3;
+                        const obj4 = { value, done: true };
+                        return obj4;
+                      } else if (closure_2_4 >= 3) {
+                        failure_statuses.push(1002);
+                        end({ error: true });
+                        const obj5 = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
+                        tmp2(dependencyMap[2]).dispatch(obj5);
+                        c3 = 3;
+                        const obj3 = tmp2(dependencyMap[2]);
+                      } else {
+                        const promise = new Promise((arg0) => setTimeout(arg0, closure_0));
+                        dependencyMap = 1;
+                        c3 = 1;
+                        const obj6 = { value: promise, done: false };
+                        return obj6;
+                      }
+                    } else if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 !== 2) {
+                      closure_129_8();
+                    }
+                    c3 = 3;
+                    const obj = { value, done: true };
+                    return obj;
+                  } catch (tmp22) {
+                    c3 = tmp;
+                    throw tmp22;
+                  }
+                }
+              });
+              closure_7 = tmp;
+              const apply = tmp.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            };
+            function end(error) {
+              const diff = performance.now() - closure_3;
+              const obj2 = {
+                duration_ms: diff,
+                error: error.error,
+                aborted: closure_1.signal.aborted,
+                include_applications: true,
+                retries: Math.max(c4 - 1, 0),
+                kind: null,
+                command_type: null,
+                url,
+                target_type: closure_0.type,
+                target_id: null,
+                failure_statuses: null,
+              };
+              type = closure_0.type;
+              if ("channel" === type) {
+                let channelId = closure_0.channelId;
+              } else if ("guild" === type) {
+                channelId = closure_0.guildId;
+              } else {
+                channelId = null;
+                if ("user" !== type) {
+                  if ("application" === type) {
+                    channelId = closure_0.applicationId;
+                  } else {
+                    closure_0(url[6]).assertNever(closure_0);
+                    const obj3 = closure_0(url[6]);
+                  }
+                }
+              }
+              obj2.target_id = channelId;
+              obj2.failure_statuses = failure_statuses;
+              closure_1(url[5]).track(constants.APPLICATION_COMMAND_PERFORMANCE, obj2);
+              const obj = closure_1(url[5]);
+            }
+            const _performance = performance;
+            closure_3 = performance.now();
+            c4 = 0;
+            const failure_statuses = [];
+            type = type.type;
+            if ("channel" === type) {
+              let url = closure_2_5.APPLICATION_COMMAND_INDEX_CHANNEL(tmp15.channelId);
+            } else {
+              if ("guild" === type) {
+                url = closure_2_5.APPLICATION_COMMAND_INDEX_GUILD(tmp15.guildId);
+              } else if ("user" !== type) {
+                if ("application" === type) {
+                  url = closure_2_5.APPLICATION_COMMAND_INDEX_APPLICATION(tmp15.applicationId);
+                }
+              }
+              url = closure_2_5.APPLICATION_COMMAND_INDEX_USER;
+            }
+            function fetch() {
+              const HTTP = target(url[3]).HTTP;
+              value = HTTP.get({
+                url,
+                retries: 3 - c4 - 1,
+                signal: closure_1.signal,
+                onRequestCreated() {
+                  closure_4 = tmp + 1;
+                  return +closure_4;
+                },
+                rejectWithError: false,
+              });
+              return value.then(
+                (status) => {
+                  if (202 === status.status) {
+                    failure_statuses.push(202);
+                    let dispatchResult = retry(5000);
+                  } else {
+                    end({ error: false });
+                    const obj2 = { type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target, index: status.body };
+                    dispatchResult = closure_1(584).dispatch(obj2);
+                    const obj = closure_1(584);
+                  }
+                  return dispatchResult;
+                },
+                (status) => {
+                  if (closure_1_1.signal.aborted) {
+                    failure_statuses.push(1001);
+                    end({ error: true });
+                  } else if (429 === status.status) {
+                    failure_statuses.push(429);
+                    let dispatchResult = retry(status.body.retry_after * closure_1(1102).Millis.SECOND);
+                  } else {
+                    let num2 = status.status;
+                    if (num2 == null) {
+                      num2 = 1000;
+                    }
+                    failure_statuses.push(num2);
+                    end({ error: true });
+                    const obj2 = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target };
+                    dispatchResult = closure_1(584).dispatch(obj2);
+                    const obj = closure_1(584);
+                  }
+                  return dispatchResult;
+                },
+              );
+            }
+            const response = fetch();
+            c3 = 1;
+            c2 = 1;
           }
-        } catch (tmp8) {
+        } else if (arg0 === 1) {
           c2 = 3;
-          throw tmp8;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          c2 = 3;
+          return { value: "IconComponent", done: null };
         }
+      } catch (tmp10) {
+        c2 = tmp;
+        throw tmp10;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, Endpoints: hasOwnProperty } = Constants);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandIndexActionCreators.tsx");
 
 export const fetchApplicationCommandIndex = function fetchApplicationCommandIndex() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const requestApplicationCommandIndex = function requestApplicationCommandIndex(target) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target });
 };

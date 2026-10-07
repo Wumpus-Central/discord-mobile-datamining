@@ -3,8 +3,9 @@ import TopEmojisActionCreators from "TopEmojisActionCreators.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import EmojiStore from "../EmojiStore.tsx";
 import TopEmojiStore from "TopEmojiStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
 
 export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(guildId) {
@@ -18,8 +19,7 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
         }
       }
       if (!TopEmojiStore.getIsFetching(guildId)) {
-        const obj = TopEmojisActionCreators;
-        const topEmojis = obj.fetchTopEmojis(guildId);
+        const topEmojis = TopEmojisActionCreators.fetchTopEmojis(guildId);
       }
     }
   }

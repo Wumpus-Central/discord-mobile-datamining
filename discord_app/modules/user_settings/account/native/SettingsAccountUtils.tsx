@@ -1,20 +1,15 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountUtils.tsx
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import react from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let currentUser;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      let tmp5;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function s() {
@@ -35,13 +30,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = useStateFromStores;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
   : () => {
       const items = [UserStore];
-      const obj = useStateFromStores;
-      return obj.useStateFromStores(items, () => {
+      return useStateFromStores.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();
         let flag;
         if (currentUser != null) {
@@ -53,13 +46,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      let tmp5;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
         const fn = function s() {
@@ -72,21 +62,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = useStateFromStores;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
   : () => {
       const items = [AuthenticationStore];
-      const obj = useStateFromStores;
-      return obj.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
+      return useStateFromStores.useStateFromStores(items, () => AuthenticationStore.hasTOTPEnabled());
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
+
+export const useIs2FAEnabled = tmp2;
+export const useIsTOTPEnabled = tmp3;
+export const useIsUserVerified = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      let tmp5;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function s() {
@@ -107,13 +96,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = useStateFromStores;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return useStateFromStores.useStateFromStores(tmp4, tmp5);
     }
   : () => {
       const items = [UserStore];
-      const obj = useStateFromStores;
-      return obj.useStateFromStores(items, () => {
+      return useStateFromStores.useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();
         let flag;
         if (currentUser != null) {
@@ -125,8 +112,3 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       });
     };
-const result = size.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
-
-export const useIs2FAEnabled = tmp2;
-export const useIsTOTPEnabled = tmp3;
-export const useIsUserVerified = tmp4;

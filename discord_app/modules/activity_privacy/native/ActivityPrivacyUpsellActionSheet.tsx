@@ -1,36 +1,28 @@
 // discord_app/modules/activity_privacy/native/ActivityPrivacyUpsellActionSheet.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import ActivityPrivacyUpsellUtils from "../ActivityPrivacyUpsellUtils.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let direction;
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activity_privacy/native/ActivityPrivacyUpsellActionSheet.tsx");
 
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (direction) => {
-      let confirmText;
-      let subtitle;
-      let title;
-      let toastContent;
-      let obj = direction(576);
-      const cResult = obj.c(14);
-      const tmp = direction;
+      const cResult = direction(576).c(14);
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
       const settingName = direction.settingName;
       const tmp4 = direction === direction(14675).ChangeDirection.RESTRICTING;
       if (cResult[0] === tmp4) {
-        let tmp5;
         if (cResult[1] === settingName) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         ({ title, subtitle, confirmText, toastContent } = tmp5);
         if (cResult[3] === affectedGuildIds) {
-          let tmp7;
           if (cResult[4] === direction) {
-            tmp7 = cResult[5];
+            let tmp7 = cResult[5];
           }
           if (cResult[6] === affectedGuildIds) {
             if (cResult[7] === confirmText) {
@@ -38,9 +30,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[9] === tmp7) {
                   if (cResult[10] === subtitle) {
                     if (cResult[11] === title) {
-                      let tmp8;
                       if (cResult[12] === toastContent) {
-                        tmp8 = cResult[13];
+                        let tmp8 = cResult[13];
                       }
                       return tmp8;
                     }
@@ -49,6 +40,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
+          const obj2 = {
+            direction,
+            affectedGuildIds: null,
+            title: null,
+            subtitle: null,
+            confirmText: null,
+            toastContent: null,
+            onConfirm: null,
+          };
           class C {
             constructor() {
               obj = closure_0(closure_2[4]);
@@ -56,14 +56,19 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
+          obj2.title = title;
+          obj2.subtitle = subtitle;
+          obj2.confirmText = confirmText;
+          obj2.toastContent = toastContent;
+          obj2.onConfirm = tmp7;
           const tmp11 = jsx(affectedGuildIds(14677), {
             direction,
             affectedGuildIds: null,
-            title,
-            subtitle,
-            confirmText,
-            toastContent,
-            onConfirm: tmp7,
+            title: null,
+            subtitle: null,
+            confirmText: null,
+            toastContent: null,
+            onConfirm: null,
           });
           cResult[6] = affectedGuildIds;
           cResult[7] = confirmText;
@@ -87,29 +92,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = C;
         tmp7 = C;
       }
-      const tmpResult = tmp(14675);
-      const upsellStrings = tmpResult.getUpsellStrings(tmp4, settingName);
+      const obj = direction(576);
+      const upsellStrings = direction(14675).getUpsellStrings(tmp4, settingName);
       cResult[0] = tmp4;
       cResult[1] = settingName;
       cResult[2] = upsellStrings;
       tmp5 = upsellStrings;
+      const tmpResult = direction(14675);
     }
   : (direction) => {
-      let confirmText;
-      let subtitle;
-      let title;
-      let toastContent;
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
-      const settingName = direction.settingName;
-      const RESTRICTING = direction(14675).ChangeDirection.RESTRICTING;
-      let obj = direction(14675);
-      const upsellStrings = obj.getUpsellStrings(direction === RESTRICTING, settingName);
+      const upsellStrings = direction(14675).getUpsellStrings(
+        direction === direction(14675).ChangeDirection.RESTRICTING,
+        direction.settingName,
+      );
       const items = [direction, affectedGuildIds];
       ({ title, subtitle, confirmText, toastContent } = upsellStrings);
-      const onConfirm = react.useCallback(() => {
-        const obj = ActivityPrivacyUpsellUtils;
-        const result = obj.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
+      const onConfirm = noop.useCallback(() => {
+        const result = ActivityPrivacyUpsellUtils.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
       }, items);
       return jsx(affectedGuildIds(14677), {
         direction,
@@ -121,6 +122,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         onConfirm,
       });
     };
-let result = size.fileFinishedImporting("modules/activity_privacy/native/ActivityPrivacyUpsellActionSheet.tsx");
-
-export default tmp2;

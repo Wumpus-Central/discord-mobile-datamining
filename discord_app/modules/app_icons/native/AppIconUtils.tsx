@@ -1,218 +1,150 @@
 // discord_app/modules/app_icons/native/AppIconUtils.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import react2 from "../../../../_runtime/00576_react.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppIconModule.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../_runtime/00019_react.js";
-import AppIconConstants from "AppIconConstants.tsx";
-import Constants from "../../../Constants.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import NativeAppIconModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppIconModule.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let APP_ICON_UPDATED, _require, c2, closure_4, dependencyMap, importDefault;
 
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
 function fetchCurrentAppIcon() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_14.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _fetchCurrentAppIcon() {
-  obj = _asyncToGenerator(async () => {
-    let obj4;
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
+let closure_14 = async function _fetchCurrentAppIcon() {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp3;
+          closure_0 = tmp7;
+          c3 = 1;
+          c4 = 2;
+          c5 = 1;
+          const obj5 = { value: NativeAppIconModuleDefault.getCurrentIcon(), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp7) {
+        c3 = 0;
+        closure_128_0 = closure_2;
+        const _HermesInternal = HermesInternal;
+        closure_129_12.warn("Error fetching current app icon: " + closure_128_0);
+        c5 = 3;
+        const obj6 = { value: closure_129_0(closure_129_2[8]).FreemiumAppIconIds.DEFAULT, done: true };
+        return obj6;
+      } else if (arg0 === 1) {
+        c5 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c3 = 0;
+        c5 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
-        return { value: "IconComponent", done: null };
+        c3 = 0;
+        c5 = 3;
+        const obj = { value: value.id, done: true };
+        return obj;
       }
-    } else {
-      let c3;
-      try {
-        let closure_0;
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_1 = tmp;
-            closure_0 = tmp4;
-            c3 = 1;
-            c4 = 2;
-            c5 = 1;
-            const obj5 = { value: obj4.getCurrentIcon(), done: false };
-            obj4 = react_nativeDefault;
-            return obj5;
-          }
-        } else if (1 === c4) {
-          c3 = 0;
-          closure_0 = closure_2;
-          const _HermesInternal = HermesInternal;
-          closure_129_12.warn("Error fetching current app icon: " + closure_0);
-          c5 = 3;
-          const obj6 = { value: closure_129_0(closure_129_2[8]).FreemiumAppIconIds.DEFAULT, done: true };
-          return obj6;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 0;
-          c5 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          c3 = 0;
-          c5 = 3;
-          obj = { value: value.id, done: true };
-          return obj;
-        }
-      } catch (tmp16) {
-        closure_2 = tmp16;
-        if (0 === c3) {
-          c5 = 3;
-          throw tmp16;
-        } else {
-          c4 = 1;
-        }
+    } catch (tmp19) {
+      closure_2 = tmp19;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp19;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
-obj = function _setAppIcon() {
-  obj = _asyncToGenerator(async (icon_id, user_premium_tier) => {
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      let TIER_2;
-      let intl;
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp;
-              c5 = 1;
-              const obj3 = react_nativeDefault;
-              APP_ICON_UPDATED = obj3.setIcon(icon_id);
-              c6 = 2;
-              c7 = 1;
-              return { value: APP_ICON_UPDATED, done: false };
-            }
-          } else {
-            if (1 === tmp4) {
-              c5 = 0;
-              let closure_2 = closure_4;
-              const obj6 = {
-                key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC",
-                content: intl.string(closure_131_0(closure_131_2[15]).t["c76eo/"]),
-              };
-              const open = closure_131_1(closure_131_2[14]).open;
-              closure_131_1(closure_131_2[14]);
-              intl = closure_131_0(closure_131_2[15]).intl;
-              open(obj6);
-              const _HermesInternal = HermesInternal;
-              closure_131_12.warn("Error changing users app icon: " + closure_2);
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              return { value, done: true };
-            } else {
-              const obj7 = closure_131_1(closure_131_2[11]);
-              obj7.dispatch({ type: "APP_ICON_UPDATED" });
-              APP_ICON_UPDATED = closure_131_9.APP_ICON_UPDATED;
-              const obj8 = { icon_id, user_premium_tier, icon_premium_tier: TIER_2 };
-              const track = closure_131_1(closure_131_2[13]).track;
-              TIER_2 = null;
-              closure_131_1(closure_131_2[13]);
-              if (icon_id !== closure_131_0(closure_131_2[8]).FreemiumAppIconIds.DEFAULT) {
-                TIER_2 = closure_131_11.TIER_2;
-              }
-              track(APP_ICON_UPDATED, obj8);
-              c5 = 0;
-            }
-            c7 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp28) {
-          closure_4 = tmp28;
-          if (0 === c5) {
-            c7 = 3;
-            throw tmp28;
-          } else {
-            c6 = 1;
-          }
-        }
-      }
-    })();
-  });
-  return obj(...arguments);
+let closure_16 = async function _setAppIcon(arg0) {
+  closure_3 = tmp3;
+  closure_2 = tmp5;
+  closure_130_0 = closure_0;
+  closure_130_1 = closure_1;
+  await NativeAppIconModuleDefault.setIcon(closure_0);
+  if (1 === tmp8) {
+    c5 = 0;
+    closure_130_2 = closure_4;
+    const obj7 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+    const intl = closure_131_0(closure_131_2[15]).intl;
+    obj7.content = intl.string(closure_131_0(closure_131_2[15]).t["c76eo/"]);
+    closure_131_1(closure_131_2[14]).open(obj7);
+    const _HermesInternal = HermesInternal;
+    closure_131_12.warn("Error changing users app icon: " + closure_130_2);
+    c7 = 3;
+    closure_131_1(closure_131_2[14]);
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    closure_131_1(closure_131_2[11]).dispatch({ type: "APP_ICON_UPDATED" });
+    closure_131_1(closure_131_2[11]);
+    const obj10 = { icon_id: closure_130_0, user_premium_tier: closure_130_1, icon_premium_tier: null };
+    let TIER_2 = null;
+    if (closure_130_0 !== closure_131_0(closure_131_2[8]).FreemiumAppIconIds.DEFAULT) {
+      TIER_2 = closure_131_11.TIER_2;
+    }
+    obj10.icon_premium_tier = TIER_2;
+    closure_131_1(closure_131_2[13]).track(closure_131_9.APP_ICON_UPDATED, obj10);
+    c5 = 0;
+    closure_131_1(closure_131_2[13]);
+  }
+  return value;
 };
+const AppIconConstants = fn(8858);
 ({
   getDefaultIcon: metroRequire,
-  getOfficialAlternateIcons: metroImportDefault,
-  getLimitedAlternateIcons: metroImportAll,
+  getOfficialAlternateIcons: closure_7,
+  getLimitedAlternateIcons: closure_8,
 } = AppIconConstants);
-({ AnalyticEvents: c9, UserSettingsSections: c10 } = Constants);
-const PremiumTypes = PremiumConstants.PremiumTypes;
-const tmp4 = new LoggerDefault("AppIconUtils");
-let closure_12 = tmp4;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const Constants = fn(1085);
+({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
+const PremiumTypes = fn(1379).PremiumTypes;
+let closure_12 = new LoggerDefault("AppIconUtils");
+let ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_0;
-      let first;
-      let first1;
-      obj = require("react");
-      const cResult = obj.c(2);
-      [first, _require] = react.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT);
+      const cResult = require("c").c(2);
+      const tmp3 = _slicedToArray(noop.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT), 2);
+      _require = tmp3[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        _require = _asyncToGenerator(async () => {
+        _require = asyncGeneratorStep(async () => {
           if (c3 === 2) {
             c3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -223,7 +155,6 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
           } else {
             try {
-              let tmp;
               c3 = 2;
               if (0 === c2) {
                 if (arg0 === 1) {
@@ -234,8 +165,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  let closure_1 = tmp4;
-                  tmp = undefined;
+                  closure_1 = tmp5;
+                  closure_128_0 = undefined;
                   c2 = 1;
                   c3 = 1;
                   const obj4 = { value: fetchCurrentAppIcon(), done: false };
@@ -246,27 +177,34 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
-                tmp = value;
-                tmp(tmp);
+                closure_128_0 = value;
+                tmp2(closure_128_0);
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp11) {
-              c3 = 3;
-              throw tmp11;
+            } catch (tmp12) {
+              c3 = tmp;
+              throw tmp12;
             }
           }
         });
         const fn = function () {
-          return closure_0(...arguments);
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         };
         cResult[0] = fn;
-        first1 = fn;
+        let first = fn;
       } else {
-        first1 = cResult[0];
+        first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         class A {
@@ -275,8 +213,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_1(closure_2[11]);
             subscription = obj.subscribe("APP_ICON_UPDATED", closure_1);
             return () => {
-              obj = first1(dependencyMap[11]);
-              obj.unsubscribe("APP_ICON_UPDATED", closure_1_1);
+              first(dependencyMap[11]).unsubscribe("APP_ICON_UPDATED", closure_1_1);
             };
           }
         }
@@ -288,24 +225,23 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_1(closure_2[11]);
             subscription = obj.subscribe("APP_ICON_UPDATED", closure_1);
             return () => {
-              obj = first1(dependencyMap[11]);
-              obj.unsubscribe("APP_ICON_UPDATED", closure_1_1);
+              first(dependencyMap[11]).unsubscribe("APP_ICON_UPDATED", closure_1_1);
             };
           }
         }
       }
-      first1(5597)(A);
-      return first;
+      first(5597)(A);
+      return tmp3[0];
     }
   : () => {
-      let first;
-      [first, _require] = react.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT);
-      importDefault = react.useCallback(
-        _asyncToGenerator(async () => {
+      const tmp = _slicedToArray(noop.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT), 2);
+      _require = tmp[1];
+      importDefault = noop.useCallback(
+        asyncGeneratorStep(async () => {
           if (c3 === 2) {
             c3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -326,8 +262,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  closure_1 = tmp4;
-                  closure_0 = undefined;
+                  closure_1 = tmp5;
+                  closure_0 = tmp2;
+                  closure_128_0 = undefined;
                   c2 = 1;
                   c3 = 1;
                   const obj4 = { value: fetchCurrentAppIcon(), done: false };
@@ -338,161 +275,116 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               } else {
-                closure_0 = value;
-                closure_129_0(closure_0);
+                closure_128_0 = value;
+                closure_129_0(closure_128_0);
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp11) {
-              c3 = 3;
-              throw tmp11;
+            } catch (tmp12) {
+              c3 = tmp;
+              throw tmp12;
             }
           }
         }),
         [],
       );
-      const tmp3 = useMountEffectDefault(() => {
+      useMountEffectDefault(() => {
         closure_1();
-        obj = DispatcherDefault;
-        const subscription = obj.subscribe("APP_ICON_UPDATED", closure_1);
+        const subscription = DispatcherDefault.subscribe("APP_ICON_UPDATED", closure_1);
         return () => {
-          obj = closure_1(dependencyMap[11]);
-          obj.unsubscribe("APP_ICON_UPDATED", closure_1_1);
+          closure_1(dependencyMap[11]).unsubscribe("APP_ICON_UPDATED", closure_1_1);
         };
       });
-      return first;
+      return tmp[0];
     };
 let closure_15 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const tmp4 = new LoggerDefault("AppIconUtils");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");
+
+export { fetchCurrentAppIcon };
+export const useCurrentAppIcon = tmp5;
+export const setAppIcon = function setAppIcon() {
+  const self = this;
+  const apply = closure_16.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const useAppIcons = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let require;
-      let tmp10;
-      let tmp11;
-      let tmp7;
-      let tmp8;
-      const tmp = dependencyMap;
-      obj = react2;
-      const cResult = obj.c(8);
+      const cResult = require("c").c(8);
       const tmp3 = closure_15();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
-      [tmp7, require] = _slicedToArray(react.useState(first), 2);
-      const tmp6 = _slicedToArray(react.useState(first), 2);
+      const obj = require("c");
+      [tmp7, closure_0] = noop.useState(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [];
         cResult[1] = items1;
-        tmp8 = items1;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[1];
       }
-      [tmp10, importDefault] = react.useState(tmp8);
-      _slicedToArray(react.useState(tmp8), 2);
+      const tmp6 = _slicedToArray(noop.useState(first), 2);
+      [tmp10, importDefault] = noop.useState(tmp8);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let closure_0 = _asyncToGenerator(async () => {
-          let intl;
-          let obj3;
-          if (c6 === 2) {
+        _require = asyncGeneratorStep(async () => {
+          await require("NativeAppIconModule").getAvailableIcons();
+          if (1 === tmp7) {
+            c4 = 0;
+            closure_129_3 = closure_3;
+            const obj7 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+            const intl = closure_0(tmp3[15]).intl;
+            obj7.content = intl.string(closure_0(tmp3[15]).t["c76eo/"]);
+            require("ToastActionCreators").open(obj7);
+            const _HermesInternal = HermesInternal;
+            logger.warn("Error fetching available app icons: " + closure_129_3);
             c6 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let c4;
-            let closure_3;
-            try {
-              let closure_1;
-              c6 = 2;
-              if (0 === c5) {
-                if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  closure_0 = undefined;
-                  closure_1 = undefined;
-                  closure_2 = undefined;
-                  closure_3 = undefined;
-                  c4 = 1;
-                  c5 = 2;
-                  c6 = 1;
-                  const obj5 = { value: obj3.getAvailableIcons(), done: false };
-                  obj3 = require("react-native");
-                  return obj5;
-                }
-              } else {
-                if (1 === c5) {
-                  c4 = 0;
-                  const obj6 = {
-                    key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC",
-                    content: intl.string(closure_0(closure_2_2[15]).t["c76eo/"]),
-                  };
-                  const open = require("ToastActionCreators").open;
-                  const tmp12 = require("ToastActionCreators");
-                  intl = closure_0(closure_2_2[15]).intl;
-                  open(obj6);
-                  const _HermesInternal = HermesInternal;
-                  logger.warn("Error fetching available app icons: " + closure_3);
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 0;
-                  c6 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  value.map((id) => id.id);
-                  const arr = closure_2_7();
-                  closure_1 = arr.filter((id) => closure_1_0.includes(id.id));
-                  const arr2 = closure_2_8();
-                  closure_2 = arr2.filter((id) => closure_1_0.includes(id.id));
-                  closure_1(closure_2);
-                  closure_0 = 0;
-                  const items = [closure_2_6()];
-                  const sum = closure_0 + 1;
-                  closure_0 = HermesBuiltin.arraySpread(items, closure_1, sum);
-                  closure_0(items);
-                  c4 = 0;
-                }
-                c6 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp22) {
-              closure_3 = tmp22;
-              if (0 === c4) {
-                c6 = 3;
-                throw tmp22;
-              } else {
-                c5 = 1;
-              }
-            }
+            require("ToastActionCreators");
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_0 = value.map((id) => id.id);
+            closure_129_1 = React5().filter((id) => closure_1_0.includes(id.id));
+            React5();
+            closure_129_2 = closure_2_8().filter((id) => closure_1_0.includes(id.id));
+            closure_1(closure_129_2);
+            closure_0 = 0;
+            const items = [timestampProducer()];
+            const sum = closure_0 + 1;
+            closure_0 = HermesBuiltin.arraySpread(closure_129_1, sum);
+            closure_0(items);
+            c4 = 0;
+            closure_2_8();
           }
+          return value;
         });
         const fn = function () {
-          return closure_0(...arguments);
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         };
         cResult[2] = fn;
-        tmp11 = fn;
+        let tmp11 = fn;
       } else {
         tmp11 = cResult[2];
       }
@@ -500,12 +392,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class D {
           constructor() {
-            closure_2();
-            obj = DispatcherDefault;
-            const subscription = obj.subscribe("APP_ICON_UPDATED", closure_2);
+            tmp = closure_2();
+            obj = closure_1(closure_2[11]);
+            subscription = obj.subscribe("APP_ICON_UPDATED", closure_2);
             return () => {
-              obj = require("Dispatcher");
-              obj.unsubscribe("APP_ICON_UPDATED", closure_1_2);
+              require("Dispatcher").unsubscribe("APP_ICON_UPDATED", closure_1_2);
             };
           }
         }
@@ -513,12 +404,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class D {
           constructor() {
-            closure_2();
-            obj = DispatcherDefault;
-            const subscription = obj.subscribe("APP_ICON_UPDATED", closure_2);
+            tmp = closure_2();
+            obj = closure_1(closure_2[11]);
+            subscription = obj.subscribe("APP_ICON_UPDATED", closure_2);
             return () => {
-              obj = require("Dispatcher");
-              obj.unsubscribe("APP_ICON_UPDATED", closure_1_2);
+              require("Dispatcher").unsubscribe("APP_ICON_UPDATED", closure_1_2);
             };
           }
         }
@@ -527,147 +417,74 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] === tmp3) {
         class D {
           constructor() {
-            closure_2();
-            obj = DispatcherDefault;
-            const subscription = obj.subscribe("APP_ICON_UPDATED", closure_2);
+            tmp = closure_2();
+            obj = closure_1(closure_2[11]);
+            subscription = obj.subscribe("APP_ICON_UPDATED", closure_2);
             return () => {
-              obj = require("Dispatcher");
-              obj.unsubscribe("APP_ICON_UPDATED", closure_1_2);
+              require("Dispatcher").unsubscribe("APP_ICON_UPDATED", closure_1_2);
             };
           }
         }
       }
-      let obj3 = { officialAppIcons: tmp7, limitedTimeAppIcons: tmp10, currentAppIcon: tmp3 };
       cResult[4] = tmp3;
       cResult[5] = tmp10;
       cResult[6] = tmp7;
-      cResult[7] = obj3;
+      cResult[7] = { officialAppIcons: tmp7, limitedTimeAppIcons: tmp10, currentAppIcon: tmp3 };
+      const obj3 = { officialAppIcons: tmp7, limitedTimeAppIcons: tmp10, currentAppIcon: tmp3 };
+      const tmp5Result = _slicedToArray(noop.useState(tmp8), 2);
     }
   : () => {
-      let limitedTimeAppIcons;
-      let require;
-      let tmp3;
       const currentAppIcon = closure_15();
-      [tmp3, require] = react.useState([]);
-      _slicedToArray(react.useState([]), 2);
-      [limitedTimeAppIcons, importDefault] = react.useState([]);
-      dependencyMap = react.useCallback(
-        _asyncToGenerator(async () => {
-          let intl;
-          let obj3;
-          let v3;
-          if (v3 === 2) {
+      [tmp3, require] = noop.useState([]);
+      const limitedTimeAppIcons = _slicedToArray(noop.useState([]), 2);
+      importDefault = limitedTimeAppIcons[1];
+      dependencyMap = noop.useCallback(
+        asyncGeneratorStep(async () => {
+          await closure_1(tmp3[7]).getAvailableIcons();
+          if (1 === tmp7) {
+            c4 = 0;
+            closure_129_3 = closure_3;
+            const obj7 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+            const intl = closure_0(tmp3[15]).intl;
+            obj7.content = intl.string(closure_0(tmp3[15]).t["c76eo/"]);
+            closure_1(tmp3[14]).open(obj7);
+            const _HermesInternal = HermesInternal;
+            logger.warn("Error fetching available app icons: " + closure_129_3);
+            let v3 = 3;
+            closure_1(tmp3[14]);
+          } else if (arg0 === 1) {
             v3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let c4;
-            try {
-              let closure_0;
-              v3 = 2;
-              if (0 === c5) {
-                if (arg0 === 1) {
-                  v3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  v3 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  closure_0 = undefined;
-                  closure_1 = undefined;
-                  closure_2 = undefined;
-                  c4 = 1;
-                  c5 = 2;
-                  v3 = 1;
-                  const obj5 = { value: obj3.getAvailableIcons(), done: false };
-                  obj3 = closure_1(closure_2[7]);
-                  return obj5;
-                }
-              } else {
-                if (1 === c5) {
-                  c4 = 0;
-                  const obj6 = {
-                    key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC",
-                    content: intl.string(closure_0(closure_2[15]).t["c76eo/"]),
-                  };
-                  const open = closure_1(closure_2[14]).open;
-                  const tmp12 = closure_1(closure_2[14]);
-                  intl = closure_0(closure_2[15]).intl;
-                  open(obj6);
-                  const _HermesInternal = HermesInternal;
-                  logger.warn("Error fetching available app icons: " + closure_3);
-                } else if (arg0 === 1) {
-                  v3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 0;
-                  v3 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  value.map((id) => id.id);
-                  const arr = closure_1_7();
-                  closure_1 = arr.filter((id) => closure_1_0.includes(id.id));
-                  const arr2 = closure_1_8();
-                  closure_2 = arr2.filter((id) => closure_1_0.includes(id.id));
-                  closure_130_1(closure_2);
-                  closure_0 = 0;
-                  const items = [v3()];
-                  const sum = closure_0 + 1;
-                  closure_0 = HermesBuiltin.arraySpread(items, closure_1, sum);
-                  closure_130_0(items);
-                  c4 = 0;
-                }
-                v3 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp22) {
-              closure_3 = tmp22;
-              if (0 === c4) {
-                v3 = 3;
-                throw tmp22;
-              } else {
-                c5 = 1;
-              }
-            }
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_0 = value.map((id) => id.id);
+            closure_129_1 = closure_1_7().filter((id) => closure_1_0.includes(id.id));
+            closure_1_7();
+            closure_129_2 = closure_1_8().filter((id) => closure_1_0.includes(id.id));
+            closure_130_1(closure_129_2);
+            closure_0 = 0;
+            const items = [v3()];
+            const sum = closure_0 + 1;
+            closure_0 = HermesBuiltin.arraySpread(closure_129_1, sum);
+            closure_130_0(items);
+            c4 = 0;
+            closure_1_8();
           }
+          return value;
         }),
         [],
       );
       useMountEffectDefault(() => {
         closure_2();
-        obj = DispatcherDefault;
-        const subscription = obj.subscribe("APP_ICON_UPDATED", closure_2);
+        const subscription = DispatcherDefault.subscribe("APP_ICON_UPDATED", closure_2);
         return () => {
-          obj = closure_1(closure_2[11]);
-          obj.unsubscribe("APP_ICON_UPDATED", closure_1_2);
+          closure_1(closure_2[11]).unsubscribe("APP_ICON_UPDATED", closure_1_2);
         };
       });
-      return { officialAppIcons, limitedTimeAppIcons, currentAppIcon };
+      return { officialAppIcons, limitedTimeAppIcons: limitedTimeAppIcons[0], currentAppIcon };
     };
-const result = size.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");
-
-export { fetchCurrentAppIcon };
-export const useCurrentAppIcon = tmp5;
-export const setAppIcon = function setAppIcon() {
-  return obj(...arguments);
-};
-export const useAppIcons = tmp6;
 export const navigateToAppIconSettings = function navigateToAppIconSettings() {
-  obj = openUserSettings;
-  const obj2 = { screen: constants.APP_ICONS };
-  obj.openUserSettings(obj2);
+  openUserSettings.openUserSettings({ screen: constants.APP_ICONS });
 };
 export const isAppIconsSupported = function isAppIconsSupported() {
-  obj = MetaQuestUtils;
-  return !obj.isMetaQuest();
+  return !MetaQuestUtils.isMetaQuest();
 };

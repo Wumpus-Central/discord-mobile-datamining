@@ -1,30 +1,22 @@
 // discord_app/modules/app_channels/getCannotSwapApplicationText.tsx
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
+const require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/getCannotSwapApplicationText.tsx");
 
 export default function getCannotSwapApplicationText(arg0) {
-  let closure_0;
   _require = arg0;
   const prop = require("AppChannelPermissions").SWAP_APP_CHANNEL_APPLICATION_PERMISSION_LIST;
   const found = prop.filter((item) => !PermissionStore.can(item, closure_0));
   if (0 !== found.length) {
     const _Intl = Intl;
-    const self = this;
-    const self2 = this;
     const listFormat = new Intl.ListFormat(LocaleStore.locale);
     const intl = tmp(1126).intl;
-    const formatToPlainString = intl.formatToPlainString;
-    const obj = {
-      permissions: listFormat.format(found.map(require("permissions").getPermissionName)),
-      count: found.length,
-    };
-    const na1rJc = tmp(1126).t.na1rJc;
-    return formatToPlainString(na1rJc, obj);
+    const obj = { permissions: listFormat.format(found.map(tmp(8762).getPermissionName)), count: found.length };
+    return intl.formatToPlainString(tmp(1126).t.na1rJc, obj);
   }
 }

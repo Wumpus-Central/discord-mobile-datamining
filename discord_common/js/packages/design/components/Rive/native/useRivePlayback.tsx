@@ -1,32 +1,29 @@
 // discord_common/js/packages/design/components/Rive/native/useRivePlayback.tsx
-import react_native from "../../../../../../../_runtime/00017_react-native.js";
-import react from "../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, closure_12, ref;
 
-const AppState = react_native.AppState;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const AppState = fn(17).AppState;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/useRivePlayback.tsx",
+);
+
+export const useRivePlayback = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, isReady) => {
-      let ref2;
-      let tmp2;
-      let tmp3;
-      let tmp5;
-      let tmp6;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(32);
+      const cResult = require("c").c(32);
       isReady = isReady.isReady;
       const appStatePlaybackEnabled = isReady.appStatePlaybackEnabled;
       const shouldShortLoopForReducedMotion = isReady.shouldShortLoopForReducedMotion;
-      let closure_4 = appStatePlaybackEnabled.useRef(false);
-      let closure_5 = appStatePlaybackEnabled.useRef("background" === shouldShortLoopForReducedMotion.currentState);
-      let closure_6 = appStatePlaybackEnabled.useRef(false);
+      closure_4 = appStatePlaybackEnabled.useRef(false);
+      closure_5 = appStatePlaybackEnabled.useRef("background" === shouldShortLoopForReducedMotion.currentState);
+      closure_6 = appStatePlaybackEnabled.useRef(false);
       appStatePlaybackEnabled.useRef(null);
-      ref = appStatePlaybackEnabled.useRef(false);
-      let closure_9 = appStatePlaybackEnabled.useRef(true);
+      appStatePlaybackEnabled.useRef(false);
+      closure_9 = appStatePlaybackEnabled.useRef(true);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
           closure_9.current = true;
@@ -52,11 +49,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         };
         cResult[2] = fn2;
-        tmp5 = fn2;
+        let tmp5 = fn2;
       } else {
         tmp5 = cResult[2];
       }
-      let closure_10 = tmp5;
+      closure_10 = tmp5;
       if (cResult[3] !== arg0) {
         const fn3 = function _() {
           closure_10();
@@ -67,41 +64,43 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = arg0;
         cResult[4] = fn3;
-        tmp6 = fn3;
+        let tmp6 = fn3;
       } else {
         tmp6 = cResult[4];
       }
-      let closure_11 = tmp6;
+      closure_11 = tmp6;
       if (cResult[5] === tmp6) {
-        let tmp7;
         if (cResult[6] === shouldShortLoopForReducedMotion) {
-          tmp7 = cResult[7];
+          let tmp7 = cResult[7];
         }
         closure_12 = tmp7;
         if (cResult[8] === tmp7) {
-          let tmp8;
           if (cResult[9] === arg0) {
-            tmp8 = cResult[10];
+            let tmp8 = cResult[10];
           }
-          let closure_13 = tmp8;
+          closure_13 = tmp8;
           if (cResult[11] === appStatePlaybackEnabled) {
             if (cResult[12] === tmp7) {
-              let tmp11;
               if (cResult[15] !== isReady) {
                 class F {
                   constructor() {
                     if (isReady) {
+                      tmp = closure_4;
+                      flag = true;
                       closure_4.current = true;
                     }
+                    return;
                   }
                 }
                 const items1 = [isReady];
                 class N {
                   constructor() {
-                    if (!ref2.current) {
+                    if (!closure_8.current) {
+                      flag = true;
                       tmp.current = true;
-                      const _queueMicrotask = queueMicrotask;
-                      queueMicrotask(() => {
+                      tmp2 = globalThis;
+                      _queueMicrotask = queueMicrotask;
+                      queueMicrotaskResult = queueMicrotask(() => {
                         closure_1_8.current = false;
                         if (ref2.current) {
                           if (appStatePlaybackEnabled) {
@@ -117,18 +116,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       });
                     }
+                    return;
                   }
                 }
                 cResult[15] = isReady;
                 cResult[16] = F;
                 cResult[17] = items1;
-                tmp11 = items1;
+                let tmp11 = items1;
               } else {
                 class F {
                   constructor() {
                     if (isReady) {
+                      tmp = closure_4;
+                      flag = true;
                       closure_4.current = true;
                     }
+                    return;
                   }
                 }
                 tmp11 = cResult[17];
@@ -136,10 +139,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               const effect1 = obj2.useEffect(F, tmp11);
               class N {
                 constructor() {
-                  if (!ref2.current) {
+                  if (!closure_8.current) {
+                    flag = true;
                     tmp.current = true;
-                    const _queueMicrotask = queueMicrotask;
-                    queueMicrotask(() => {
+                    tmp2 = globalThis;
+                    _queueMicrotask = queueMicrotask;
+                    queueMicrotaskResult = queueMicrotask(() => {
                       closure_1_8.current = false;
                       if (ref2.current) {
                         if (appStatePlaybackEnabled) {
@@ -155,6 +160,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     });
                   }
+                  return;
                 }
               }
               const fn4 = function q() {
@@ -172,10 +178,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           class N {
             constructor() {
-              if (!ref2.current) {
+              if (!closure_8.current) {
+                flag = true;
                 tmp.current = true;
-                const _queueMicrotask = queueMicrotask;
-                queueMicrotask(() => {
+                tmp2 = globalThis;
+                _queueMicrotask = queueMicrotask;
+                queueMicrotaskResult = queueMicrotask(() => {
                   closure_1_8.current = false;
                   if (ref2.current) {
                     if (appStatePlaybackEnabled) {
@@ -191,6 +199,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 });
               }
+              return;
             }
           }
           cResult[11] = appStatePlaybackEnabled;
@@ -200,11 +209,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         class P {
           constructor() {
+            obj = closure_0;
             if (closure_0 != null) {
-              closure_0.play();
+              playResult = obj.play();
             }
             closure_4.current = true;
-            closure_12();
+            tmp2 = closure_12();
+            return;
           }
         }
         cResult[8] = tmp7;
@@ -214,29 +225,34 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class I {
         constructor() {
-          closure_10();
-          if (shouldShortLoopForReducedMotion) {
-            const _setTimeout = setTimeout;
-            ref.current = setTimeout(() => closure_1_11(), 5000);
+          tmp = closure_10();
+          if (closure_3) {
+            tmp2 = closure_7;
+            tmp3 = globalThis;
+            _setTimeout = setTimeout;
+            num = 5000;
+            closure_7.current = setTimeout(() => closure_1_11(), 5000);
           }
+          return;
         }
       }
       cResult[5] = tmp6;
       cResult[6] = shouldShortLoopForReducedMotion;
       cResult[7] = I;
       tmp7 = I;
+      const obj = require("c");
     }
   : (arg0, isReady) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       isReady = isReady.isReady;
       const appStatePlaybackEnabled = isReady.appStatePlaybackEnabled;
       const shouldShortLoopForReducedMotion = isReady.shouldShortLoopForReducedMotion;
-      let closure_4 = appStatePlaybackEnabled.useRef(false);
-      let closure_5 = appStatePlaybackEnabled.useRef("background" === shouldShortLoopForReducedMotion.currentState);
-      let closure_6 = appStatePlaybackEnabled.useRef(false);
-      ref = appStatePlaybackEnabled.useRef(null);
-      const ref2 = appStatePlaybackEnabled.useRef(false);
-      let closure_9 = appStatePlaybackEnabled.useRef(true);
+      closure_4 = appStatePlaybackEnabled.useRef(false);
+      closure_5 = appStatePlaybackEnabled.useRef("background" === shouldShortLoopForReducedMotion.currentState);
+      closure_6 = appStatePlaybackEnabled.useRef(false);
+      appStatePlaybackEnabled.useRef(null);
+      appStatePlaybackEnabled.useRef(false);
+      closure_9 = appStatePlaybackEnabled.useRef(true);
       const effect = appStatePlaybackEnabled.useEffect(() => {
         closure_9.current = true;
         return () => {
@@ -263,7 +279,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         callback();
         if (shouldShortLoopForReducedMotion) {
           const _setTimeout = setTimeout;
-          ref.current = setTimeout(() => pause(), 5000);
+          closure_7.current = setTimeout(() => pause(), 5000);
         }
       }, items1);
       const items2 = [arg0, callback2];
@@ -315,14 +331,20 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           closure_0 = shouldShortLoopForReducedMotion.addEventListener("change", (event) => {
             if ("background" === event) {
               closure_1_5.current = true;
-              const current2 = isReady && ref.current;
+              let current2 = isReady;
+              if (isReady) {
+                current2 = ref.current;
+              }
               if (current2) {
                 ref2.current = true;
                 pause();
               }
             } else if ("active" === event) {
               closure_1_5.current = false;
-              const current = isReady && ref2.current;
+              let current = isReady;
+              if (isReady) {
+                current = ref2.current;
+              }
               if (current) {
                 ref2.current = false;
                 play();
@@ -334,8 +356,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items6);
       return { play, pause, playIfNeeded };
     };
-const result = size.fileFinishedImporting(
-  "../discord_common/js/packages/design/components/Rive/native/useRivePlayback.tsx",
-);
-
-export const useRivePlayback = tmp2;

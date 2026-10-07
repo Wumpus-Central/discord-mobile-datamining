@@ -1,79 +1,54 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Server from "../../../../../flow/Server.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/10156_AssetRegistry.js";
+import _modDef10156 from "../../../../../../_runtime/metro/10156__.js";
 import AppLauncherCommandOptionDefault from "../../options/AppLauncherCommandOption.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
-let onPressAttachmentOption;
-
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  Server.ApplicationCommandOptionType.STRING,
-  Server.ApplicationCommandOptionType.INTEGER,
-  Server.ApplicationCommandOptionType.ATTACHMENT,
-  Server.ApplicationCommandOptionType.BOOLEAN,
-  Server.ApplicationCommandOptionType.MENTIONABLE,
-  Server.ApplicationCommandOptionType.USER,
-  Server.ApplicationCommandOptionType.ROLE,
-  Server.ApplicationCommandOptionType.CHANNEL,
-  Server.ApplicationCommandOptionType.NUMBER,
+  fn(1985).ApplicationCommandOptionType.STRING,
+  fn(1985).ApplicationCommandOptionType.INTEGER,
+  fn(1985).ApplicationCommandOptionType.ATTACHMENT,
+  fn(1985).ApplicationCommandOptionType.BOOLEAN,
+  fn(1985).ApplicationCommandOptionType.MENTIONABLE,
+  fn(1985).ApplicationCommandOptionType.USER,
+  fn(1985).ApplicationCommandOptionType.ROLE,
+  fn(1985).ApplicationCommandOptionType.CHANNEL,
+  fn(1985).ApplicationCommandOptionType.NUMBER,
 ];
 const set = new Set(items);
-let obj = {
+const createStyles = fn(4896);
+let obj2 = {
   optionDescription: { marginTop: 4 },
   optionErrorContainer: { flexDirection: "row", alignItems: "center", marginTop: 4 },
-  optionErrorIcon: obj2,
+  optionErrorIcon: { marginRight: 4, tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, alignItems: "center" },
   labelText: { marginBottom: 8 },
 };
-obj2 = { marginRight: 4, tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, alignItems: "center" };
-let closure_8 = createStyles.createStyles(obj);
+let closure_8 = createStyles.createStyles(obj2);
 let items1 = [
-  Server.ApplicationCommandOptionType.STRING,
-  Server.ApplicationCommandOptionType.INTEGER,
-  Server.ApplicationCommandOptionType.NUMBER,
+  fn(1985).ApplicationCommandOptionType.STRING,
+  fn(1985).ApplicationCommandOptionType.INTEGER,
+  fn(1985).ApplicationCommandOptionType.NUMBER,
 ];
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj3 = { marginRight: 4, tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, alignItems: "center" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/command_view/CommandOptionView.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onPressAttachmentOption) => {
-      let EnteringAnimation;
-      let autoFocusType;
-      let channel;
-      let command;
-      let editedOptions;
-      let onDismiss;
-      let onEndEditing;
-      let onOptionValueChange;
-      let onOptionViewLayout;
-      let onPressOption;
-      let onStartEditing;
-      let option;
-      let optionValidationResults;
-      let optionValues;
-      let registerAnimationCompleteCallback;
-      let setFocusedOption;
-      let style;
-      let tmp5;
-      let tmp6;
-      const obj = option(onPressOption[8]);
-      const cResult = obj.c(72);
+      const cResult = option(onPressOption[8]).c(72);
       ({ style, option } = onPressAttachmentOption);
       ({ autoFocusType, onDismiss, editedOptions, onOptionViewLayout } = onPressAttachmentOption);
       ({ onStartEditing, onEndEditing, onOptionValueChange, onPressOption } = onPressAttachmentOption);
       onPressAttachmentOption = onPressAttachmentOption.onPressAttachmentOption;
       ({ channel, optionValidationResults, setFocusedOption } = onPressAttachmentOption);
       ({ command, optionValues } = onPressAttachmentOption);
-      const isPreSelectedOption = onPressAttachmentOption.isPreSelectedOption;
       closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [setFocusedOption];
@@ -88,12 +63,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const tmpResult = option(onPressOption[9]);
-      const stateFromStores = tmpResult.useStateFromStores(tmp5, E);
+      const obj = option(onPressOption[8]);
+      const stateFromStores = option(onPressOption[9]).useStateFromStores(tmp5, E);
       const ReduceMotion = option(onPressOption[10]).ReduceMotion;
       const tmp9 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
-      const tmpResult2 = option(onPressOption[11]);
-      const optionEnteringAnimation = tmpResult2.useOptionEnteringAnimation();
+      const tmpResult = option(onPressOption[9]);
+      const optionEnteringAnimation = option(onPressOption[11]).useOptionEnteringAnimation();
       ({ EnteringAnimation, registerAnimationCompleteCallback } = optionEnteringAnimation);
       if (set.has(option.type)) {
         if (cResult[2] === registerAnimationCompleteCallback) {
@@ -109,17 +84,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[7] !== tmp9) {
             const FadeInUp = option(onPressOption[10]).FadeInUp;
-            const obj2 = { transform: items1 };
+            const obj2 = { transform: null };
             items1 = [];
             class E {
               constructor() {
                 return setFocusedOption.useReducedMotion;
               }
             }
-            const withInitialValuesResult = FadeInUp.withInitialValues(obj2);
+            obj2.transform = items1;
+            const reduceMotionResult1 = FadeInUp.withInitialValues(obj2).reduceMotion(tmp9);
             cResult[7] = tmp9;
-            cResult[8] = withInitialValuesResult.reduceMotion(tmp9);
-            const reduceMotionResult1 = withInitialValuesResult.reduceMotion(tmp9);
+            cResult[8] = reduceMotionResult1;
+            const withInitialValuesResult = FadeInUp.withInitialValues(obj2);
           }
           class E {
             constructor() {
@@ -146,32 +122,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[2] = registerAnimationCompleteCallback;
-        cResult[3] = option.required || isPreSelectedOption;
+        cResult[3] = option.required || onPressAttachmentOption.isPreSelectedOption;
         cResult[4] = registerAnimationCompleteCallback;
       } else {
         return null;
       }
+      const tmpResult2 = option(onPressOption[11]);
     }
   : (option) => {
-      let AwaitAnimationContext;
-      let autoFocusType;
-      let channel;
-      let command;
-      let editedOptions;
-      let isPreSelectedOption;
-      let items2;
-      let items3;
-      let obj4;
-      let obj5;
-      let obj6;
-      let onDismiss;
-      let onEndEditing;
-      let onOptionValueChange;
-      let onStartEditing;
-      let optionValidationResults;
-      let optionValues;
-      let style;
-      let tmp20;
       option = option.option;
       ({
         editedOptions,
@@ -195,25 +153,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } = option);
       const tmp = closure_8();
       const items = [AccessibilityStore];
-      const obj = option(504);
-      const stateFromStores = obj.useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
+      const stateFromStores = option(504).useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
       const ReduceMotion = option(4618).ReduceMotion;
       const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
-      const tmp2Result = option(11799);
-      const optionEnteringAnimation = tmp2Result.useOptionEnteringAnimation();
+      const obj = option(504);
+      const optionEnteringAnimation = option(11799).useOptionEnteringAnimation();
       let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
-      const EnteringAnimation = optionEnteringAnimation.EnteringAnimation;
       if (set.has(option.type)) {
         if (option.required || isPreSelectedOption) {
           fn = (fn) => fn();
         }
         const FadeOut = tmp2(4618).FadeOut;
-        const reduceMotionResult = FadeOut.reduceMotion(tmp5);
         const FadeInUp = tmp2(4618).FadeInUp;
-        const obj2 = { transform: items1 };
+        const obj2 = { transform: null };
         items1 = [{ translateY: -10 }];
+        obj2.transform = items1;
+        const reduceMotionResult = FadeOut.reduceMotion(tmp5);
         const withInitialValuesResult = FadeInUp.withInitialValues(obj2);
-        const reduceMotionResult1 = withInitialValuesResult.reduceMotion(tmp5);
         let hasItem = editedOptions.has(option.name);
         if (hasItem) {
           let error;
@@ -223,27 +179,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           hasItem = null != error;
         }
         const hasItem1 = items1.includes(option.type);
-        const obj3 = {
-          skipEntering: option.required || isPreSelectedOption,
-          children: closure_5(AwaitAnimationContext, obj4),
-        };
-        const LayoutAnimationConfig = tmp2(4618).LayoutAnimationConfig;
-        obj4 = { handleQueuedCallback: fn, children: closure_5(View, obj5) };
-        AwaitAnimationContext = tmp2(11807).AwaitAnimationContext;
-        obj5 = {
+        const obj3 = { skipEntering: option.required || isPreSelectedOption, children: null };
+        const obj4 = { handleQueuedCallback: fn, children: null };
+        const obj5 = {
           collapsable: false,
-          entering: EnteringAnimation,
-          exiting: option(11799).ExitingAnimation,
-          layout: option(11799).LayoutAnimation,
+          entering: optionEnteringAnimation.EnteringAnimation,
+          exiting: tmp2(11799).ExitingAnimation,
+          layout: tmp2(11799).LayoutAnimation,
           onLayout(arg0) {
             importDefault(arg0, option);
           },
-          children: closure_6(tmp20, obj6),
+          children: null,
         };
-        View = ReanimatedRexportDefault.View;
+        const obj6 = { collapsable: false, style, children: null };
         let tmp17Result = hasItem1;
-        obj6 = { collapsable: false, style, children: items2 };
-        tmp20 = View;
         if (hasItem1) {
           const obj7 = {
             style: tmp.labelText,
@@ -253,7 +202,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           };
           tmp17Result = closure_5(tmp2(4892).Text, obj7);
         }
-        items2 = [tmp17Result, , ,];
+        const items2 = [tmp17Result, , ,];
         const obj8 = {
           option,
           onStartEditing,
@@ -282,37 +231,38 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: option.displayDescription,
         };
-        items2[2] = closure_5(option(4892).Text, obj9);
+        items2[2] = closure_5(tmp2(4892).Text, obj9);
         if (hasItem) {
           const obj10 = {
             collapsable: false,
             entering: reduceMotionResult1,
             exiting: reduceMotionResult,
             style: tmp.optionErrorContainer,
-            children: items3,
+            children: null,
           };
-          const View2 = ReanimatedRexportDefault.View;
           const obj11 = {
             style: tmp.optionErrorIcon,
-            source: AssetRegistryDefault,
-            size: option(1188).IconSizes.REFRESH_SMALL_16,
+            source: _modDef10156,
+            size: tmp2(1188).IconSizes.REFRESH_SMALL_16,
           };
-          const Icon = tmp2(1188).Icon;
-          items3 = [closure_5(Icon, obj11)];
+          const items3 = [closure_5(tmp2(1188).Icon, obj11)];
           const obj12 = {
             variant: "text-xs/medium",
             color: "text-feedback-critical",
             children: optionValidationResults[option.name].error,
           };
-          items3[1] = closure_5(option(4892).Text, obj12);
-          hasItem = closure_6(View2, obj10);
+          items3[1] = closure_5(tmp2(4892).Text, obj12);
+          obj10.children = items3;
+          hasItem = closure_6(ReanimatedRexportDefault.View, obj10);
         }
         items2[3] = hasItem;
-        return closure_5(LayoutAnimationConfig, obj3);
+        obj6.children = items2;
+        obj5.children = closure_6(View, obj6);
+        obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
+        obj3.children = closure_5(tmp2(11807).AwaitAnimationContext, obj4);
+        return closure_5(tmp2(4618).LayoutAnimationConfig, obj3);
       } else {
         return null;
       }
+      const tmp2Result = option(11799);
     };
-const result = size.fileFinishedImporting("modules/app_launcher/native/screens/command_view/CommandOptionView.tsx");
-
-export default tmp5;

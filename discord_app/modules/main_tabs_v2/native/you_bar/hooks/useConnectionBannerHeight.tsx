@@ -1,33 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx
-import get_initialized from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import react from "../../../../../../_runtime/00576_react.js";
-import ConnectivityIndicatorStateStore2 from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
+import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../../_runtime/00576_c.js";
 import ConnectionIndicatorExperimentDefault from "../../ConnectionIndicatorExperiment.tsx";
-import YouBarConstants from "../YouBarConstants.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import ConnectivityIndicatorStateStore from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 
-const ConnectivityIndicatorStateStore = ConnectivityIndicatorStateStore2;
+require = fn;
+const constants = fn(13513).ConnectivityIndicatorState;
+const CONNECTION_BANNER_HEIGHT = fn(14915).CONNECTION_BANNER_HEIGHT;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
 
-const constants = ConnectivityIndicatorStateStore2.ConnectivityIndicatorState;
-const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export const useConnectionBannerHeight = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let hidden;
-      let state;
-      let timeoutMs;
-      const obj = react;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "useConnectionBannerHeight" };
         cResult[0] = obj2;
-        first = obj2;
+        let first = obj2;
       } else {
         first = cResult[0];
       }
-      const obj3 = ConnectionIndicatorExperimentDefault;
-      const config = obj3.useConfig(first);
+      const config = ConnectionIndicatorExperimentDefault.useConfig(first);
       ({ timeoutMs, hidden } = config);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectivityIndicatorStateStore];
@@ -37,7 +31,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = items;
         cResult[2] = fn;
       }
-      get_initialized;
+      initialize;
       let num4 = 0;
       if (null != timeoutMs) {
         num4 = 0;
@@ -51,13 +45,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return num4;
     }
   : () => {
-      let hidden;
-      let state;
-      let timeoutMs;
-      const obj = ConnectionIndicatorExperimentDefault;
-      const config = obj.useConfig({ location: "useConnectionBannerHeight" });
+      const config = ConnectionIndicatorExperimentDefault.useConfig({ location: "useConnectionBannerHeight" });
       ({ timeoutMs, hidden } = config);
-      get_initialized;
+      initialize;
       [][0] = ConnectivityIndicatorStateStore;
       let num = 0;
       if (null != timeoutMs) {
@@ -71,6 +61,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return num;
     };
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
-
-export const useConnectionBannerHeight = tmp2;

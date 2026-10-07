@@ -24,9 +24,7 @@ import conjureVoiceDefault from "conjureVoice.tsx";
 import activitiesDefault from "activities.tsx";
 import questsDefault from "quests.tsx";
 import voiceChannelChatDefault from "voiceChannelChat.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = {};
 const application = Object.assign(applicationDefault);
 const certifiedDevices = Object.assign(certifiedDevicesDefault);
 const channels = Object.assign(channelsDefault);
@@ -52,6 +50,7 @@ const conjureVoice = Object.assign(conjureVoiceDefault);
 const activities = Object.assign(activitiesDefault);
 const quests = Object.assign(questsDefault);
 const voiceChannelChat = Object.assign(voiceChannelChatDefault);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/crossPlatformRPCCommands.tsx");
 
-export const crossPlatformCommands = obj;
+export const crossPlatformCommands = {};

@@ -1,150 +1,90 @@
 // discord_app/modules/stage_channels/native/channel_permissions/AddModeratorsActionSheet.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ChannelPermissionsConstants from "../../../channel_permissions/ChannelPermissionsConstants.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let BottomSheet, c4, c5, closure_0, closure_1, closure_2, id, row;
-
-let obj2;
-const View = react_native.View;
-const RowType = ChannelPermissionsConstants.RowType;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-let closure_10 = createStyles.createStyles(obj);
+const require = fn;
+const View = fn(17).View;
+const RowType = fn(8110).RowType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 } };
+let closure_10 = createStyles.createStyles(obj2);
+const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/stage_channels/native/channel_permissions/AddModeratorsActionSheet.tsx",
 );
 
 export default function AddModeratorsActionSheet(channel) {
-  let intl;
-  let intl2;
-  let intl3;
-  let pendingAdditions;
-  let tmp4;
   channel = channel.channel;
-  pendingAdditions = undefined;
-  let obj = function _handleAddModeratorsPressed() {
-    obj = _asyncToGenerator(async () => {
-      let obj7;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+  dependencyMap = function _handleAddModeratorsPressed() {
+    const self = this;
+    const tmp = asyncGeneratorStep(async () => {
+      closure_128_0 = 0;
+      closure_128_1 = 0;
+      const _Object = Object;
+      const values = Object.values(pendingAdditions);
+      const found = values.filter((row) => null != row.row.id);
+      const mapped = found.map((row) => {
+        row = row.row;
+        if (row.rowType === constants.ROLE) {
+          closure_1 = closure_1 + 1;
+          let moderatorOverwrite = channel(5579).createModeratorOverwrite(
+            row.id,
+            channel(1985).PermissionOverwriteType.ROLE,
+            closure_0,
+          );
+          const obj2 = channel(5579);
         } else {
-          return { value: "IconComponent", done: null };
+          closure_0 = closure_0 + 1;
+          moderatorOverwrite = channel(5579).createModeratorOverwrite(
+            row.id,
+            channel(1985).PermissionOverwriteType.MEMBER,
+            closure_0,
+          );
+          const obj = channel(5579);
         }
-      } else {
-        let c3;
-        try {
-          let c0;
-          let c1;
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              id = tmp4;
-              c0 = 0;
-              c1 = 0;
-              const _Object = Object;
-              const values = Object.values(pendingAdditions);
-              const found = values.filter((row) => null != row.row.id);
-              c3 = 1;
-              const mapped = found.map((row) => {
-                let moderatorOverwrite;
-                row = row.row;
-                if (row.rowType === constants.ROLE) {
-                  closure_1 = closure_1 + 1;
-                  const obj2 = closure_0(closure_2[11]);
-                  moderatorOverwrite = obj2.createModeratorOverwrite(
-                    row.id,
-                    closure_0(closure_2[12]).PermissionOverwriteType.ROLE,
-                    closure_2_0,
-                  );
-                } else {
-                  closure_0 = closure_0 + 1;
-                  obj = closure_0(closure_2[11]);
-                  moderatorOverwrite = obj.createModeratorOverwrite(
-                    row.id,
-                    closure_0(closure_2[12]).PermissionOverwriteType.MEMBER,
-                    closure_2_0,
-                  );
-                }
-                return moderatorOverwrite;
-              });
-              c4 = 2;
-              c5 = 1;
-              const obj5 = { value: obj7.savePermissionUpdates(id.id, mapped), done: false };
-              obj7 = id(closure_2[13]);
-              return obj5;
-            }
-          } else {
-            if (1 === c4) {
-              c3 = 0;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              c5 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              obj = id(closure_2[14]);
-              const result = obj.memberOrRoleAddedToast(c1, c0);
-              let obj2 = tmp(closure_2[15]);
-              obj2.hideActionSheet();
-              c3 = 0;
-            }
-            c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp16) {
-          closure_2 = tmp16;
-          if (0 === c3) {
-            c5 = 3;
-            throw tmp16;
-          } else {
-            c4 = 1;
-          }
-        }
+        return moderatorOverwrite;
+      });
+      await closure_0(tmp19[13]).savePermissionUpdates(channel.id, mapped);
+      if (1 === tmp7) {
+        c3 = 0;
+        c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        const result = closure_0(tmp19[14]).memberOrRoleAddedToast(closure_128_1, closure_128_0);
+        closure_0(tmp19[14]);
+        tmp3(tmp19[15]).hideActionSheet();
+        c3 = 0;
+        tmp3(tmp19[15]);
       }
+      return value;
     });
-    return obj(...arguments);
+    dependencyMap = tmp;
+    const apply = tmp.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
   };
-  const canSkip = channel.canSkip;
-  const tmp = closure_10();
-  [pendingAdditions, tmp4] = react.useState({});
-  obj = channel(obj[9]);
+  const tmp2 = _slicedToArray(noop.useState({}), 2);
+  const pendingAdditions = tmp2[0];
+  let tmp = closure_10();
   const items = [GuildStore];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = channel(504).useStateFromStores(items, () => {
     let guildId;
-    const getGuild = GuildStore.getGuild;
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    return getGuild(guildId);
+    return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(obj[10])(channel, true);
-  const tmp8 = pendingAdditions;
+  let str = pendingAdditions(5049)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -152,51 +92,58 @@ export default function AddModeratorsActionSheet(channel) {
     return null;
   } else {
     let _Object = Object;
-    let num = 0;
-    const tmp12 = 0 === Object.keys(pendingAdditions).length;
-    BottomSheet = tmp5(tmp6[16]).BottomSheet;
-    let obj2 = { title: intl3.string(tmp5(tmp6[18]).t.n3bcy8), subtitle: str, trailing: null };
-    const BottomSheetTitleHeader = tmp5(tmp6[17]).BottomSheetTitleHeader;
-    intl3 = tmp5(tmp6[18]).intl;
-    if (canSkip) {
-      let obj7;
-      if (tmp12) {
-        let obj3 = {
-          size: "sm",
-          text: intl2.string(tmp5(tmp6[18]).t["5Wxrcd"]),
-          onPress: function handleSkip() {
-            obj = first(obj[15]);
-            obj.hideActionSheet();
-          },
+    const tmp11 = 0 === Object.keys(pendingAdditions).length;
+    let obj2 = { title: null, subtitle: null, trailing: null };
+    const intl3 = tmp4(1126).intl;
+    obj2.title = intl3.string(tmp4(1126).t.n3bcy8);
+    obj2.subtitle = str;
+    if (channel.canSkip) {
+      if (tmp11) {
+        const obj3 = { size: "sm", text: null, onPress: null };
+        const intl2 = tmp4(1126).intl;
+        obj3.text = intl2.string(tmp4(1126).t["5Wxrcd"]);
+        obj3.onPress = function handleSkip() {
+          first(closure_2[15]).hideActionSheet();
         };
-        intl2 = tmp5(tmp6[18]).intl;
-        obj7 = obj3;
+        let obj7 = obj3;
       }
-      obj2.trailing = <tmp14 {...obj7} />;
-      let obj5 = { style: tmp.container, children: null };
-      let obj6 = {
+      const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
+      obj2.trailing = <tmp13 {...obj7} />;
+      obj4.header = jsx(tmp4(6651).BottomSheetTitleHeader, obj2);
+      const obj5 = { style: tmp.container, children: null };
+      const obj6 = {
         inActionSheet: true,
         channel,
         guild: stateFromStores,
-        permission: tmp5(tmp6[21]).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+        permission: tmp4(2060).MODERATE_STAGE_CHANNEL_PERMISSIONS,
         pendingAdditions,
-        setPendingAdditions: tmp4,
+        setPendingAdditions: tmp2[1],
       };
-      tmp8(obj[20]);
-      return (
-        <BottomSheet scrollable header={null} startExpanded>
-          {null}
-        </BottomSheet>
-      );
+      obj5.children = jsx(tmp7(9279), {
+        inActionSheet: true,
+        channel,
+        guild: stateFromStores,
+        permission: tmp4(2060).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+        pendingAdditions,
+        setPendingAdditions: tmp2[1],
+      });
+      obj4.children = <View style={tmp.container}>{null}</View>;
+      return jsx(tmp4(6652).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }
-    obj7 = {
-      size: "sm",
-      disabled: tmp12,
-      text: intl.string(tmp5(tmp6[18]).t.OYkgVk),
-      onPress: function handleAddModeratorsPressed() {
-        return obj(...arguments);
-      },
+    obj7 = { size: "sm", disabled: tmp11, text: null, onPress: null };
+    const intl = tmp4(1126).intl;
+    obj7.text = intl.string(tmp4(1126).t.OYkgVk);
+    obj7.onPress = function handleAddModeratorsPressed() {
+      const self = this;
+      const apply = closure_2.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    intl = tmp5(tmp6[18]).intl;
   }
+  let obj = channel(504);
+  tmp7 = pendingAdditions;
 }

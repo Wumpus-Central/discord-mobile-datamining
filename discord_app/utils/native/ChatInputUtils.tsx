@@ -7,14 +7,6 @@ import useKeyboardType from "../../modules/keyboard/native/useKeyboardType.tsx";
 import PortalKeyboardUIStore from "../../modules/keyboard/native/PortalKeyboardUIStore.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f89369 = (item) => {
-  let tmp = typeof item === "number";
-  if (typeof item === "number") {
-    const obj = ScreenIndexFrozen;
-    tmp = !obj.isScreenIndexFrozen(item);
-  }
-  return tmp;
-};
 function getBestActiveInput() {
   let str;
   if (0 !== map1.size) {
@@ -27,21 +19,27 @@ function getBestActiveInput() {
           str = "conjure-preview";
           if (!map1.has("conjure-preview")) {
             const _Array = Array;
-            const arr = Array.from(map1.keys());
-            const found = arr.filter(f89369);
+            const found = Array.from(map1.keys()).filter((item) => {
+              let tmp = typeof item === "number";
+              if (typeof item === "number") {
+                tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
+              }
+              return tmp;
+            });
             if (0 !== found.length) {
               const _Math = Math;
               const items = [];
-              HermesBuiltin.arraySpread(items, found, 0);
+              HermesBuiltin.arraySpread(found, 0);
               const _Math2 = Math;
-              str = HermesBuiltin.apply(max, items, Math);
+              str = HermesBuiltin.apply(items, Math);
             }
+            const arr = Array.from(map1.keys());
           }
         }
       }
     }
   }
-  let value;
+  value = undefined;
   if (null != str) {
     value = map1.get(str);
   }
@@ -56,38 +54,36 @@ const map1 = new Map();
 let result = size.fileFinishedImporting("utils/native/ChatInputUtils.tsx");
 
 export function createInputRefTracker(id, screenIndex) {
-  let closure_0 = screenIndex;
+  closure_0 = screenIndex;
   let obj = { current: id };
   return {
     handleRef(current, id) {
       obj.current = id;
       if (null == current) {
         if (null != obj) {
-          const value = map.get(id);
+          value = map.get(id);
           if (null != value) {
-            value.delete(screenIndex);
+            value.delete(closure_0);
             if (0 === value.size) {
               map.delete(id);
             }
-            map1.delete(screenIndex);
+            map1.delete(closure_0);
           }
           obj = null;
         }
       } else if (null == obj) {
         obj = { current };
-        let value2 = map.get(id);
+        value2 = map.get(id);
         if (value2 == null) {
           const _Map = Map;
-          const self = this;
-          const self2 = this;
           value2 = new Map();
         }
-        const result = value2.set(screenIndex, obj);
+        const result = value2.set(closure_0, obj);
         const result1 = map.set(id, value2);
-        const result2 = map1.set(screenIndex, obj);
+        const result2 = map1.set(closure_0, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
-          const hasItem = map1.has(screenIndex);
+          const hasItem = map1.has(closure_0);
         }
       } else {
         obj.current = current;
@@ -96,41 +92,39 @@ export function createInputRefTracker(id, screenIndex) {
     register() {
       if (null != obj) {
         const current2 = obj.current;
-        const value = map.get(current2);
+        value = map.get(current2);
         if (null != value) {
-          value.delete(screenIndex);
+          value.delete(closure_0);
           if (0 === value.size) {
             map.delete(current2);
           }
-          map1.delete(screenIndex);
+          map1.delete(closure_0);
         }
         const current = obj.current;
-        let value2 = map.get(current);
+        value2 = map.get(current);
         if (value2 == null) {
           const _Map = Map;
-          const self = this;
-          const self2 = this;
           value2 = new Map();
         }
-        const result = value2.set(screenIndex, obj);
+        const result = value2.set(closure_0, obj);
         const result1 = map.set(current, value2);
-        const result2 = map1.set(screenIndex, obj);
+        const result2 = map1.set(closure_0, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
-          const hasItem = map1.has(screenIndex);
+          const hasItem = map1.has(closure_0);
         }
       }
     },
     unregister() {
       if (null != map) {
         const current = map.current;
-        const value = map.get(current);
+        value = map.get(current);
         if (null != value) {
-          value.delete(screenIndex);
+          value.delete(closure_0);
           if (0 === value.size) {
             map.delete(current);
           }
-          map1.delete(screenIndex);
+          map1.delete(closure_0);
         }
       }
     },
@@ -152,24 +146,30 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
       return "conjure-preview";
     } else {
       const _Array = Array;
-      const arr = Array.from(obj.keys());
-      const found = arr.filter(f89369);
+      const found = Array.from(obj.keys()).filter((item) => {
+        let tmp = typeof item === "number";
+        if (typeof item === "number") {
+          tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
+        }
+        return tmp;
+      });
       if (0 !== found.length) {
         const _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(items, found, 0);
+        HermesBuiltin.arraySpread(found, 0);
         const _Math2 = Math;
-        return HermesBuiltin.apply(max, items, Math);
+        return HermesBuiltin.apply(items, Math);
       }
+      const arr = Array.from(obj.keys());
     }
   }
 };
 export const getChatInputRef = function getChatInputRef(id, screenIndex) {
   if (null != id) {
-    const value = map.get(id);
+    value = map.get(id);
     let current;
     if (value != null) {
-      const value2 = value.get(screenIndex);
+      value2 = value.get(screenIndex);
       if (value2 != null) {
         current = value2.current;
       }
@@ -179,7 +179,7 @@ export const getChatInputRef = function getChatInputRef(id, screenIndex) {
 };
 export const getBestActiveInputForChannelId = function getBestActiveInputForChannelId(id) {
   if (null != id) {
-    const value = map.get(id);
+    value = map.get(id);
     if (null != value) {
       let obj2 = value;
       if (value === undefined) {
@@ -196,21 +196,27 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
               str = "conjure-preview";
               if (!obj2.has("conjure-preview")) {
                 const _Array = Array;
-                const arr = Array.from(obj2.keys());
-                const found = arr.filter(f89369);
+                const found = Array.from(obj2.keys()).filter((item) => {
+                  let tmp = typeof item === "number";
+                  if (typeof item === "number") {
+                    tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
+                  }
+                  return tmp;
+                });
                 if (0 !== found.length) {
                   const _Math = Math;
                   const items = [];
-                  HermesBuiltin.arraySpread(items, found, 0);
+                  HermesBuiltin.arraySpread(found, 0);
                   const _Math2 = Math;
-                  str = HermesBuiltin.apply(max, items, Math);
+                  str = HermesBuiltin.apply(items, Math);
                 }
+                const arr = Array.from(obj2.keys());
               }
             }
           }
         }
       }
-      let value2;
+      value2 = undefined;
       if (null != str) {
         value2 = value.get(str);
       }
@@ -224,20 +230,18 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
 };
 export { getBestActiveInput };
 export const dismissKeyboard = function dismissKeyboard() {
-  const obj = KeyboardManagerUtils;
-  const result = obj.dismissGlobalKeyboard();
+  const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   const obj2 = getBestActiveInput();
   if (null != obj2) {
     obj2.closeCustomKeyboard();
   }
-  const tmpResult = useKeyboardType;
-  const keyboardType = tmpResult.getKeyboardType();
+  const keyboardType = useKeyboardType.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     const obj3 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-    const setKeyboardType = KeyboardUIStore.setKeyboardType;
-    KeyboardUIStore;
-    setKeyboardType(obj3);
+    KeyboardUIStore.setKeyboardType(obj3);
+    const tmpResult3 = KeyboardUIStore;
   }
+  const tmpResult = useKeyboardType;
+  const result1 = PortalKeyboardUIStore.closePortalKeyboardRequest();
   const tmpResult4 = PortalKeyboardUIStore;
-  const result1 = tmpResult4.closePortalKeyboardRequest();
 };

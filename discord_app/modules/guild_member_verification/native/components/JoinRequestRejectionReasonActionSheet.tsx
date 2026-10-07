@@ -1,59 +1,41 @@
 // discord_app/modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let BottomSheet, c4;
-
-let metroImportDefault;
-let metroRequire;
+const require = fn;
 class JoinRequestRejectionReasonActionSheet {
-  constructor(onDismiss) {
-    let SafeAreaPaddingView;
-    let bottomSheetClose;
-    let bottomSheetRef;
-    let c5;
-    let intl;
-    let intl2;
-    let intl3;
-    let items1;
-    let items2;
-    let joinRequest;
-    let obj3;
-    let onError;
-    let tmp7;
-    ({ joinRequest, onError } = onDismiss);
-    let value;
-    react = undefined;
-    onDismiss = onDismiss.onDismiss;
-    const tmp = closure_8();
-    const userId = joinRequest.userId;
-    let guildId = joinRequest.guildId;
-    const joinRequestId = joinRequest.joinRequestId;
-    const tmp2 = value(react.useState(), 2);
-    value = tmp2[0];
-    const tmp4 = tmp2[1];
-    let obj = onError(guildId[5]);
-    const bottomSheetRef1 = obj.useBottomSheetRef();
+  constructor(arg0) {
+    ({ joinRequest, onError } = global);
+    userId = undefined;
+    guildId = undefined;
+    joinRequestId = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    tmp = closure_8();
+    userId = joinRequest.userId;
+    guildId = joinRequest.guildId;
+    joinRequestId = joinRequest.joinRequestId;
+    tmp2 = closure_4(closure_5.useState(), 2);
+    first = tmp2[0];
+    closure_4 = first;
+    obj = onError(guildId[5]);
+    bottomSheetRef1 = obj.useBottomSheetRef();
     ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
-    [tmp7, c5] = value(react.useState(false), 2);
-    const items = [guildId, joinRequestId, onError, value, userId];
-    value(react.useState(false), 2);
-    const callback = react.useCallback(
+    tmp5 = closure_4(closure_5.useState(false), 2);
+    [tmp6, closure_5] = tmp5;
+    items = [, , , ,];
+    items[0] = guildId;
+    items[1] = joinRequestId;
+    items[2] = onError;
+    items[3] = first;
+    items[4] = userId;
+    callback = closure_5.useCallback(
       joinRequestId(function* () {
-        let closure_0;
-        let closure_1;
-        let closure_2;
-        let intl;
-        let intl2;
-        let v3;
         if (v3 === 2) {
           v3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp7 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -63,7 +45,6 @@ class JoinRequestRejectionReasonActionSheet {
             return { value: "IconComponent", done: null };
           }
         } else {
-          let c3;
           try {
             v3 = 2;
             if (0 === c4) {
@@ -75,136 +56,122 @@ class JoinRequestRejectionReasonActionSheet {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
+                let tmp42 = tmp4;
                 v3(true);
                 c3 = 2;
-                const obj9 = tmp(guildId[6]);
+                const obj11 = tmp42(tmp45[6]);
                 c4 = 3;
                 v3 = 1;
-                const obj5 = {
-                  value: obj9.updateGuildJoinRequest(
+                const obj6 = {
+                  value: obj11.updateGuildJoinRequest(
                     guildId,
                     userId,
                     joinRequestId,
-                    tmp(guildId[7]).GuildJoinRequestApplicationStatuses.REJECTED,
+                    tmp4(tmp45[7]).GuildJoinRequestApplicationStatuses.REJECTED,
                     first,
                   ),
                   done: false,
                 };
-                return obj5;
+                return obj6;
               }
-            } else if (1 === c4) {
+            } else if (1 === tmp8) {
+              tmp42 = tmp45;
               c3 = 0;
               closure_129_5(false);
-              throw guildId;
+              throw tmp45;
             } else {
-              if (2 === c4) {
+              if (2 === tmp8) {
                 c3 = 1;
                 closure_129_0();
-              } else if (arg0 === 1) {
-                v3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
                 c3 = 0;
                 closure_129_5(false);
                 v3 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
-              } else {
-                const obj8 = tmp(guildId[8]);
-                if (obj8.getDesignSystemsNotificationComponents("JoinRequestRejectionReasonActionSheet")) {
-                  const obj7 = { text: intl2.string(tmp(guildId[10]).t["TQY/Rd"]), variant: "critical" };
-                  const openMana = tmp(guildId[9]).openMana;
-                  const tmp18 = tmp(guildId[9]);
-                  intl2 = tmp(guildId[10]).intl;
-                  openMana("JOIN_REQUEST_REJECT", obj7);
+              } else if (arg0 === 1) {
+                v3 = 3;
+                throw value;
+              } else if (arg0 !== 2) {
+                if (obj10.getDesignSystemsNotificationComponents("JoinRequestRejectionReasonActionSheet")) {
+                  const obj7 = { text: null, variant: "critical" };
+                  const intl2 = tmp4(tmp45[10]).intl;
+                  obj7.text = intl2.string(tmp4(tmp45[10]).t["TQY/Rd"]);
+                  tmp42(tmp45[9]).openMana("JOIN_REQUEST_REJECT", obj7);
+                  const obj3 = tmp42(tmp45[9]);
                 } else {
-                  let obj = {
-                    key: "JOIN_REQUEST_REJECT",
-                    content: intl.string(tmp(guildId[10]).t["TQY/Rd"]),
-                    icon() {
-                      const obj = {
-                        color: closure_1_1(closure_1_2[12]).colors.BACKGROUND_FEEDBACK_CRITICAL,
-                        secondaryColor: closure_1_1(closure_1_2[12]).colors.ICON_FEEDBACK_CRITICAL,
-                      };
-                      const CircleXIcon = closure_1_0(closure_1_2[11]).CircleXIcon;
-                      return closure_1_6(CircleXIcon, obj);
-                    },
+                  const obj8 = { key: "JOIN_REQUEST_REJECT", content: null, icon: null };
+                  const intl = tmp4(tmp45[10]).intl;
+                  obj8.content = intl.string(tmp4(tmp45[10]).t["TQY/Rd"]);
+                  obj8.icon = function icon() {
+                    return closure_1_6(closure_1_0(4803).CircleXIcon, {
+                      color: closure_1_1(587).colors.BACKGROUND_FEEDBACK_CRITICAL,
+                      secondaryColor: closure_1_1(587).colors.ICON_FEEDBACK_CRITICAL,
+                    });
                   };
-                  const open = tmp(guildId[9]).open;
-                  const tmp9 = tmp(guildId[9]);
-                  intl = tmp(guildId[10]).intl;
-                  open(obj);
+                  tmp42(tmp45[9]).open(obj8);
+                  const obj = tmp42(tmp45[9]);
                 }
-                const obj3 = tmp(guildId[13]);
-                obj3.hideAllActionSheets();
+                obj10 = tmp4(tmp45[8]);
+                tmp42(tmp45[13]).hideAllActionSheets();
                 c3 = 1;
+                const obj5 = tmp42(tmp45[13]);
               }
               c3 = 0;
               closure_129_5(false);
               v3 = 3;
-              return { value: "IconComponent", done: null };
+              const obj9 = { value, done: true };
+              return obj9;
             }
-          } catch (tmp43) {
-            guildId = tmp43;
-            if (0 === c3) {
-              v3 = 3;
-              throw tmp43;
-            } else if (1 === tmp45) {
-              c4 = 1;
+          } catch (tmp45) {
+            if (tmp5 === c3) {
+              v3 = tmp3;
+              throw tmp45;
+            } else if (tmp2 === tmp47) {
+              c4 = tmp2;
             } else {
-              c4 = 2;
+              c4 = tmp;
             }
           }
         }
       }),
       items,
     );
-    let obj2 = {
-      bodyStyles: tmp.container,
-      onDismiss,
-      ref: bottomSheetRef,
-      children: closure_7(SafeAreaPaddingView, obj3),
-    };
-    BottomSheet = onError(guildId[14]).BottomSheet;
-    obj3 = { bottom: true, children: items1 };
-    SafeAreaPaddingView = onError(guildId[15]).SafeAreaPaddingView;
-    let obj4 = { label: intl.string(onError(guildId[10]).t["mFP/qw"]), maxLength: 160, onChange: tmp4, value };
-    const TextArea = onError(guildId[16]).TextArea;
+    obj1 = { bodyStyles: tmp.container, onDismiss: global.onDismiss, ref: bottomSheetRef, children: null };
+    obj8 = { bottom: true, children: null };
+    obj9 = { label: null, maxLength: 160, onChange: null, value: null };
     intl = onError(guildId[10]).intl;
-    items1 = [closure_6(TextArea, obj4)];
-    let obj5 = { direction: "horizontal", style: tmp.buttonGroup, children: items2 };
-    const ButtonGroup = onError(guildId[17]).ButtonGroup;
-    let obj6 = {
-      grow: true,
-      variant: "secondary",
-      text: intl2.string(onError(guildId[10]).t["ETE/oC"]),
-      onPress: bottomSheetClose,
-      disabled: tmp7,
-    };
-    const Button = onError(guildId[18]).Button;
+    obj9.label = intl.string(onError(guildId[10]).t["mFP/qw"]);
+    obj9.onChange = tmp2[1];
+    obj9.value = first;
+    items1 = [,];
+    items1[0] = jsx(onError(guildId[16]).TextArea, obj9);
+    obj10 = { direction: "horizontal", style: tmp.buttonGroup, children: null };
+    obj11 = { grow: true, variant: "secondary", text: null, onPress: null, disabled: null };
     intl2 = onError(guildId[10]).intl;
-    items2 = [closure_6(Button, obj6)];
-    let obj7 = {
-      grow: true,
-      variant: "destructive",
-      text: intl3.string(onError(guildId[10]).t.hDtbsz),
-      onPress: callback,
-      disabled: tmp7,
-    };
-    const Button2 = onError(guildId[18]).Button;
+    obj11.text = intl2.string(onError(guildId[10]).t["ETE/oC"]);
+    obj11.onPress = bottomSheetClose;
+    obj11.disabled = tmp6;
+    items2 = [,];
+    items2[0] = jsx(onError(guildId[18]).Button, obj11);
+    obj12 = { grow: true, variant: "destructive", text: null, onPress: null, disabled: null };
     intl3 = onError(guildId[10]).intl;
-    items2[1] = closure_6(Button2, obj7);
-    items1[1] = closure_7(ButtonGroup, obj5);
-    return closure_6(BottomSheet, obj2);
+    obj12.text = intl3.string(onError(guildId[10]).t.hDtbsz);
+    obj12.onPress = callback;
+    obj12.disabled = tmp6;
+    items2[1] = jsx(onError(guildId[18]).Button, obj12);
+    obj10.children = items2;
+    items1[1] = jsxs(onError(guildId[17]).ButtonGroup, obj10);
+    obj8.children = items1;
+    obj1.children = jsxs(onError(guildId[15]).SafeAreaPaddingView, obj8);
+    return jsx(onError(guildId[14]).BottomSheet, obj1);
   }
 }
-let react = react_mod;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-const metroImportAll = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
-const memoResult = react.memo(JoinRequestRejectionReasonActionSheet);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let closure_8 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx",
 );
 
-export default memoResult;
+export default noop.memo(JoinRequestRejectionReasonActionSheet);
 export { JoinRequestRejectionReasonActionSheet };

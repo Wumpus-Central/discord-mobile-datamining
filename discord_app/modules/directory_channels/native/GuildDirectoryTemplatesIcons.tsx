@@ -1,22 +1,21 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx
-import AssetRegistryDefault from "../../../../_runtime/11967_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/11968_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/11969_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/11970_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/11971_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/11972_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/11973_AssetRegistry.js";
+import _modDef11967 from "../../../../_runtime/metro/11967__.js";
+import _modDef11968 from "../../../../_runtime/metro/11968__.js";
+import _modDef11969 from "../../../../_runtime/metro/11969__.js";
+import _modDef11970 from "../../../../_runtime/metro/11970__.js";
+import _modDef11971 from "../../../../_runtime/metro/11971__.js";
+import _modDef11972 from "../../../../_runtime/metro/11972__.js";
+import _modDef11973 from "../../../../_runtime/metro/11973__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
-  CREATE: AssetRegistryDefault,
-  HUB_SCHOOL_CLUB: AssetRegistryDefault2,
-  HUB_STUDY: AssetRegistryDefault3,
-  HUB_CLASS: AssetRegistryDefault4,
-  HUB_SOCIAL: AssetRegistryDefault5,
-  HUB_MAJOR: AssetRegistryDefault6,
-  HUB_DORM: AssetRegistryDefault7,
-};
 const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx");
 
-export const GUILD_TEMPLATE_ICONS = obj;
+export const GUILD_TEMPLATE_ICONS = {
+  CREATE: _modDef11967,
+  HUB_SCHOOL_CLUB: _modDef11968,
+  HUB_STUDY: _modDef11969,
+  HUB_CLASS: _modDef11970,
+  HUB_SOCIAL: _modDef11971,
+  HUB_MAJOR: _modDef11972,
+  HUB_DORM: _modDef11973,
+};

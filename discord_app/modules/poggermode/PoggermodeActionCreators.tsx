@@ -4,48 +4,40 @@ import trackPoggermodeSettingsUpdatedDefault from "trackPoggermodeSettingsUpdate
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import PoggermodeSettingsStore from "PoggermodeSettingsStore.tsx";
 import PoggermodeStore from "PoggermodeStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 
 export const updatePoggermodeSettings = function updatePoggermodeSettings(settings) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "POGGERMODE_SETTINGS_UPDATE", settings };
-  obj.dispatch(obj2);
-  const obj3 = {};
+  DispatcherDefault.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings });
   const merged = Object.assign(PoggermodeSettingsStore.getState());
   const merged1 = Object.assign(settings);
-  trackPoggermodeSettingsUpdatedDefault(obj3);
+  trackPoggermodeSettingsUpdatedDefault({});
 };
 export const updateCombo = function updateCombo(arg0) {
-  const dispatch = DispatcherDefault.dispatch;
-  const obj = { type: "POGGERMODE_UPDATE_COMBO" };
-  DispatcherDefault;
   const merged = Object.assign(arg0);
-  dispatch(obj);
+  DispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO" });
 };
 export const clearMessageCombo = function clearMessageCombo(arg0) {
-  let obj2;
-  const obj = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: obj2 };
-  obj2 = { displayed: true };
-  const dispatch = DispatcherDefault.dispatch;
-  DispatcherDefault;
+  const obj2 = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
+  const obj3 = {};
   const merged = Object.assign(arg0);
-  dispatch(obj);
+  obj3.displayed = true;
+  obj2.comboMessage = obj3;
+  DispatcherDefault.dispatch(obj2);
 };
 export const updateComboOnMessageSend = function updateComboOnMessageSend(channelId, id) {
-  let obj3;
   id = AuthenticationStore.getId();
   const iter = PoggermodeStore.getUserCombo(id, channelId);
   if (null != iter) {
-    const obj2 = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: obj3 };
-    obj3 = { combo: iter, channelId, messageId: id, displayed: false };
-    const obj = DispatcherDefault;
-    obj.dispatch(obj2);
+    const obj2 = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
+    const obj3 = { combo: iter, channelId, messageId: id, displayed: false };
+    obj2.comboMessage = obj3;
+    DispatcherDefault.dispatch(obj2);
   }
   let num = 1;
   if (null != iter) {
-    let value;
+    value = undefined;
     if (iter != null) {
       value = iter.value;
     }
@@ -61,7 +53,6 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(channe
       num = num3 + 1;
     }
   }
-  const obj4 = DispatcherDefault;
+  DispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId, userId: id, multiplier: num, value: 0 });
   const obj5 = { type: "POGGERMODE_UPDATE_COMBO", channelId, userId: id, multiplier: num, value: 0 };
-  obj4.dispatch(obj5);
 };

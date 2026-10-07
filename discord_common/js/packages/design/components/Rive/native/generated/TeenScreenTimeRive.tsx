@@ -1,17 +1,15 @@
 // discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx
-import Fragment from "../../../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../../../_runtime/00576_react.js";
-import BaseRive2 from "../BaseRive.tsx";
-import RiveErrorBoundary2 from "../RiveErrorBoundary.tsx";
+import c from "../../../../../../../../_runtime/00576_c.js";
+import BaseRive from "../BaseRive.tsx";
+import RiveErrorBoundary from "../RiveErrorBoundary.tsx";
 import _modDef4697 from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
 import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance"];
 let closure_4 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance"];
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 const artboardProperties = {
   "Teen Screen Time Illo": {},
   "Gradient Vertical": {},
@@ -24,20 +22,11 @@ const artboardViewModelInstances = {
   "RAW ILLO (Do not deploy)": [],
   "Gradient Horizontal": [],
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_9 = react.forwardRef(
+let ReactCompilerGating = fn(558);
+let closure_9 = noop.forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0, ref) => {
-        let artboard;
-        let defaultViewModelInstance;
-        let fallback;
-        let stateMachine;
-        let tmp4;
-        let tmp5;
-        let tmp6;
-        let tmp7;
-        const obj = react2;
-        const cResult = obj.c(11);
+        const cResult = c.c(11);
         if (cResult[0] !== arg0) {
           ({ fallback, artboard, stateMachine, defaultViewModelInstance } = arg0);
           const tmp10 = _objectWithoutProperties(arg0, closure_3);
@@ -46,10 +35,10 @@ let closure_9 = react.forwardRef(
           cResult[2] = stateMachine;
           cResult[3] = artboard;
           cResult[4] = defaultViewModelInstance;
-          tmp7 = defaultViewModelInstance;
-          tmp6 = artboard;
-          tmp5 = stateMachine;
-          tmp4 = tmp10;
+          let tmp7 = defaultViewModelInstance;
+          let tmp6 = artboard;
+          let tmp5 = stateMachine;
+          let tmp4 = tmp10;
         } else {
           tmp4 = cResult[1];
           tmp5 = cResult[2];
@@ -68,28 +57,24 @@ let closure_9 = react.forwardRef(
           if (cResult[6] === tmp11) {
             if (cResult[7] === ref) {
               if (cResult[8] === tmp4) {
-                let tmp12;
                 if (cResult[9] === tmp5) {
-                  tmp12 = cResult[10];
+                  let tmp12 = cResult[10];
                 }
                 return tmp12;
               }
             }
           }
         }
-        const BaseRive = BaseRive2.BaseRive;
         const merged = Object.assign(tmp4);
-        const tmp14 = (
-          <BaseRive
-            ref={ref}
-            src={_modDef4697}
-            artboard={str}
-            artboardProperties={artboardProperties}
-            artboardViewModelInstances={artboardViewModelInstances}
-            defaultViewModelInstance={tmp11}
-            stateMachine={tmp5}
-          />
-        );
+        const tmp14 = jsx(BaseRive.BaseRive, {
+          ref,
+          src: _modDef4697,
+          artboard: str,
+          artboardProperties,
+          artboardViewModelInstances,
+          defaultViewModelInstance: tmp11,
+          stateMachine: tmp5,
+        });
         cResult[5] = str;
         cResult[6] = tmp11;
         cResult[7] = ref;
@@ -97,10 +82,17 @@ let closure_9 = react.forwardRef(
         cResult[9] = tmp5;
         cResult[10] = tmp14;
         tmp12 = tmp14;
+        const obj2 = {
+          ref,
+          src: _modDef4697,
+          artboard: str,
+          artboardProperties,
+          artboardViewModelInstances,
+          defaultViewModelInstance: tmp11,
+          stateMachine: tmp5,
+        };
       }
     : (defaultViewModelInstance, ref) => {
-        let artboard;
-        let fallback;
         ({ fallback, artboard } = defaultViewModelInstance);
         let str = "Teen Screen Time Illo";
         if (undefined !== artboard) {
@@ -108,45 +100,44 @@ let closure_9 = react.forwardRef(
         }
         defaultViewModelInstance = defaultViewModelInstance.defaultViewModelInstance;
         let tmp;
-        const stateMachine = defaultViewModelInstance.stateMachine;
         if (undefined !== defaultViewModelInstance) {
           tmp = defaultViewModelInstance;
         }
         const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_4);
-        const BaseRive = BaseRive2.BaseRive;
         const merged = Object.assign(tmp2);
-        return (
-          <BaseRive
-            ref={ref}
-            src={_modDef4697}
-            artboard={str}
-            artboardProperties={artboardProperties}
-            artboardViewModelInstances={artboardViewModelInstances}
-            defaultViewModelInstance={tmp}
-            stateMachine={stateMachine}
-          />
-        );
+        return jsx(BaseRive.BaseRive, {
+          ref,
+          src: _modDef4697,
+          artboard: str,
+          artboardProperties,
+          artboardViewModelInstances,
+          defaultViewModelInstance: tmp,
+          stateMachine: defaultViewModelInstance.stateMachine,
+        });
       },
 );
-ReactCompilerGating = ReactCompilerGating_mod;
-const forwardRefResult = react.forwardRef(
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx",
+);
+
+export const TeenScreenTimeRive = noop.forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (fallback, ref) => {
-        const obj = react2;
-        const cResult = obj.c(6);
+        const cResult = c.c(6);
         if (cResult[0] === fallback) {
-          let tmp4;
           if (cResult[1] === ref) {
-            tmp4 = cResult[2];
+            let tmp4 = cResult[2];
           }
           if (cResult[3] === fallback.fallback) {
-            let tmp7;
             if (cResult[4] === tmp4) {
-              tmp7 = cResult[5];
+              let tmp7 = cResult[5];
             }
             return tmp7;
           }
-          const tmp9 = jsx(RiveErrorBoundary2.RiveErrorBoundary, { fallback: fallback.fallback, children: tmp4 });
+          const obj2 = { fallback: fallback.fallback, children: tmp4 };
+          const tmp9 = jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: tmp4 });
           cResult[3] = fallback.fallback;
           cResult[4] = tmp4;
           cResult[5] = tmp9;
@@ -158,15 +149,12 @@ const forwardRefResult = react.forwardRef(
         cResult[1] = ref;
         cResult[2] = tmp6;
         tmp4 = tmp6;
+        const obj3 = { ref };
       }
     : (fallback, ref) => {
-        const RiveErrorBoundary = RiveErrorBoundary2.RiveErrorBoundary;
+        const obj = { fallback: fallback.fallback, children: null };
         const merged = Object.assign(fallback);
-        return <RiveErrorBoundary fallback={fallback.fallback}>{null}</RiveErrorBoundary>;
+        obj.children = <closure_9 ref={ref} />;
+        return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
       },
 );
-const result = size.fileFinishedImporting(
-  "../discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx",
-);
-
-export const TeenScreenTimeRive = forwardRefResult;

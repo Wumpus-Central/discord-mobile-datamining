@@ -1,34 +1,32 @@
 // discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx
-import ExperimentCacher from "../../mobile/js/index.tsx";
+import LIBDISCORE_JSI from "../../mobile/js/index.tsx";
 import initLibdiscore from "initLibdiscore.native.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {
-  const BlockedDomainsStore = ExperimentCacher.BlockedDomainsStore;
+  const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
   return BlockedDomainsStore.isBlockedDomain(arg0);
 };
 export const startFetchingBlockedDomains = function startFetchingBlockedDomains(combined) {
-  const BlockedDomainsStore = ExperimentCacher.BlockedDomainsStore;
+  const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
   const result = BlockedDomainsStore.startFetchingBlockedDomains(combined);
 };
 export const consumeLogs = function consumeLogs() {
-  const obj = ExperimentCacher;
-  return obj.consumeLogs();
+  return LIBDISCORE_JSI.consumeLogs();
 };
 export function isUnsupportedBrowser() {
   return false;
 }
 export const getExperimentCacher = function getExperimentCacher() {
-  return ExperimentCacher.ExperimentCacher;
+  return LIBDISCORE_JSI.ExperimentCacher;
 };
 export const getHttpClientAPI = function getHttpClientAPI() {
-  const obj = ExperimentCacher;
-  return obj.getHttpClientAPI();
+  return LIBDISCORE_JSI.getHttpClientAPI();
 };
-export const rustMultiply = ExperimentCacher.rustMultiply;
-export const crash = ExperimentCacher.crash;
-export const generateLaunchSignature = ExperimentCacher.generateLaunchSignature;
-export const getFluxApi = ExperimentCacher.getFluxApi;
+export const rustMultiply = LIBDISCORE_JSI.rustMultiply;
+export const crash = LIBDISCORE_JSI.crash;
+export const generateLaunchSignature = LIBDISCORE_JSI.generateLaunchSignature;
+export const getFluxApi = LIBDISCORE_JSI.getFluxApi;
 export const isLibdiscoreInitialized = initLibdiscore.isLibdiscoreInitialized;

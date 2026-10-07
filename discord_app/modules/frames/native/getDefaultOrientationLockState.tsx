@@ -8,12 +8,10 @@ const result = size.fileFinishedImporting("modules/frames/native/getDefaultOrien
 export const setOrientationLockState = function setOrientationLockState(frameId, application, arg2) {
   let defaultOrientationLockState = arg2;
   if (arg2 == null) {
-    const obj = getDefaultOrientationLockState;
-    defaultOrientationLockState = obj.getDefaultOrientationLockState(application);
+    defaultOrientationLockState = getDefaultOrientationLockState.getDefaultOrientationLockState(application);
   }
   if (null != defaultOrientationLockState) {
     const obj3 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId, lockState: defaultOrientationLockState };
-    const obj2 = DispatcherDefault;
-    obj2.dispatch(obj3);
+    DispatcherDefault.dispatch(obj3);
   }
 };

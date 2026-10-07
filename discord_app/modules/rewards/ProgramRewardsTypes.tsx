@@ -4,8 +4,6 @@ import ProgramCurrentState from "../../../discord_common/js/shared/shared-consta
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsTypes.tsx");
-const RewardProgram_export = RewardProgram.RewardProgram;
-const ProgramCurrentState_export = ProgramCurrentState.ProgramCurrentState;
 
-export { RewardProgram_export as RewardProgram };
-export { ProgramCurrentState_export as ProgramCurrentState };
+export const RewardProgram = RewardProgram.RewardProgram;
+export const ProgramCurrentState = ProgramCurrentState.ProgramCurrentState;

@@ -1,26 +1,23 @@
 // discord_app/modules/quests/native/BountiesModal/useBountyAppStoreOverlayPlayback.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay.tsx";
 import useBountiesModalTiming from "useBountiesModalTiming.tsx";
 import useBountyPauseAppStoreSheet from "useBountyPauseAppStoreSheet.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let handleVideoPaused, tmp, tmp3;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyAppStoreOverlayPlayback.tsx");
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export const getBountyVideoEndMode = function getBountyVideoEndMode(bounty) {
+  const result = useBountyVideoEndAppStoreOverlay.canUseBountyVideoEndAppStoreOverlay(bounty);
+  const BountyVideoEndMode = useBountiesModalTiming.BountyVideoEndMode;
+  return result ? BountyVideoEndMode.APP_STORE_LOOP : BountyVideoEndMode.END_CARD;
+};
+export const useBountyAppStoreOverlayPlayback = ReactCompilerGating.isReactCompilerEnabled()
   ? (handleVideoPaused) => {
-      let bounty;
-      let endMode;
-      let handleVideoEnd;
-      let isActive;
-      let onPaused;
-      let playerRef;
-      let showEndCard;
-      let sourceQuestContent;
-      const obj = react2;
-      const cResult = obj.c(26);
+      const cResult = c.c(26);
       ({ bounty, sourceQuestContent, isActive, endMode, playerRef, handleVideoEnd } = handleVideoPaused);
       handleVideoPaused = handleVideoPaused.handleVideoPaused;
       const handleVideoResumed = handleVideoPaused.handleVideoResumed;
@@ -29,14 +26,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === endMode) {
           if (cResult[2] === isActive) {
             if (cResult[3] === showEndCard) {
-              let tmp4;
               if (cResult[4] === sourceQuestContent) {
-                tmp4 = cResult[5];
+                let tmp4 = cResult[5];
               }
+              const onVideoEndForAppStore =
+                useBountyVideoEndAppStoreOverlay.useBountyVideoEndAppStoreOverlay(tmp4).onVideoEndForAppStore;
               const tmpResult = useBountyVideoEndAppStoreOverlay;
-              const onVideoEndForAppStore = tmpResult.useBountyVideoEndAppStoreOverlay(tmp4).onVideoEndForAppStore;
-              const tmpResult3 = useBountyVideoEndAppStoreOverlay;
-              const bountyVideoEndAppStoreContext = tmpResult3.useBountyVideoEndAppStoreContext();
+              const bountyVideoEndAppStoreContext = useBountyVideoEndAppStoreOverlay.useBountyVideoEndAppStoreContext();
               let flag;
               if (bountyVideoEndAppStoreContext != null) {
                 flag = bountyVideoEndAppStoreContext.isVideoEndAppStoreOverlayVisible;
@@ -47,18 +43,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[6] === bounty) {
                 if (cResult[7] === isActive) {
                   if (cResult[8] === playerRef) {
-                    let tmp7;
                     if (cResult[9] === sourceQuestContent) {
-                      tmp7 = cResult[10];
+                      let tmp7 = cResult[10];
                     }
-                    const tmpResult4 = useBountyPauseAppStoreSheet;
                     const handleVideoPausedForAppStore =
-                      tmpResult4.useBountyPauseAppStoreSheet(tmp7).handleVideoPausedForAppStore;
+                      useBountyPauseAppStoreSheet.useBountyPauseAppStoreSheet(tmp7).handleVideoPausedForAppStore;
                     if (cResult[11] === handleVideoPaused) {
                       if (cResult[12] === handleVideoPausedForAppStore) {
-                        let tmp8;
                         if (cResult[13] === onPaused) {
-                          tmp8 = cResult[14];
+                          let tmp8 = cResult[14];
                         }
                         if (cResult[15] !== handleVideoResumed) {
                           class B {
@@ -101,7 +94,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                               return;
                             }
                           }
-                          const tmp11 = endMode === useBountiesModalTiming.BountyVideoEndMode.APP_STORE_LOOP;
                           if (cResult[20] === tmp8) {
                             class B {
                               constructor(arg0) {
@@ -135,8 +127,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                           cResult[21] = tmp9;
                           cResult[22] = R;
                           cResult[23] = flag;
-                          cResult[24] = tmp11;
+                          cResult[24] = endMode === useBountiesModalTiming.BountyVideoEndMode.APP_STORE_LOOP;
                           cResult[25] = tmp13;
+                          const tmp11 = endMode === useBountiesModalTiming.BountyVideoEndMode.APP_STORE_LOOP;
                         }
                         class R {
                           constructor() {
@@ -174,6 +167,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     cResult[13] = onPaused;
                     cResult[14] = O;
                     tmp8 = O;
+                    const tmpResult4 = useBountyPauseAppStoreSheet;
                   }
                 }
               }
@@ -184,6 +178,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[9] = sourceQuestContent;
               cResult[10] = obj2;
               tmp7 = obj2;
+              const tmpResult3 = useBountyVideoEndAppStoreOverlay;
             }
           }
         }
@@ -198,30 +193,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = obj3;
     }
   : (handleVideoPaused) => {
-      let bounty;
-      let callback2;
-      let endMode;
-      let handleVideoEnd;
-      let isActive;
-      let playerRef;
-      let showEndCard;
-      let sourceQuestContent;
       ({ bounty, sourceQuestContent, isActive, endMode, handleVideoEnd } = handleVideoPaused);
       handleVideoPaused = handleVideoPaused.handleVideoPaused;
       const handleVideoResumed = handleVideoPaused.handleVideoResumed;
       const onPaused = handleVideoPaused.onPaused;
       let handleVideoPausedForAppStore;
       ({ playerRef, showEndCard } = handleVideoPaused);
-      const obj = useBountyVideoEndAppStoreOverlay;
-      const onVideoEndForAppStore = obj.useBountyVideoEndAppStoreOverlay({
+      const onVideoEndForAppStore = useBountyVideoEndAppStoreOverlay.useBountyVideoEndAppStoreOverlay({
         bounty,
         sourceQuestContent,
         isActive,
         endMode,
         onOverlayUnavailable: showEndCard,
       }).onVideoEndForAppStore;
-      const obj2 = useBountyVideoEndAppStoreOverlay;
-      const bountyVideoEndAppStoreContext = obj2.useBountyVideoEndAppStoreContext();
+      const bountyVideoEndAppStoreContext = useBountyVideoEndAppStoreOverlay.useBountyVideoEndAppStoreContext();
       let flag;
       if (bountyVideoEndAppStoreContext != null) {
         flag = bountyVideoEndAppStoreContext.isVideoEndAppStoreOverlayVisible;
@@ -229,8 +214,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag == null) {
         flag = false;
       }
-      const tmpResult = useBountyPauseAppStoreSheet;
-      handleVideoPausedForAppStore = tmpResult.useBountyPauseAppStoreSheet({
+      handleVideoPausedForAppStore = useBountyPauseAppStoreSheet.useBountyPauseAppStoreSheet({
         bounty,
         sourceQuestContent,
         isActive,
@@ -238,7 +222,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }).handleVideoPausedForAppStore;
       const items = [handleVideoPaused, handleVideoPausedForAppStore, onPaused];
       const items1 = [handleVideoResumed];
-      const callback = react.useCallback((arg0) => {
+      const callback = noop.useCallback((arg0) => {
         handleVideoPaused(arg0);
         if (onPaused != null) {
           onPaused();
@@ -246,28 +230,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         handleVideoPausedForAppStore(arg0);
       }, items);
       const items2 = [handleVideoEnd, onVideoEndForAppStore];
-      const callback1 = react.useCallback((arg0) => {
+      const callback1 = noop.useCallback((arg0) => {
         handleVideoResumed(arg0);
       }, items1);
       const obj3 = {
         isVideoEndAppStoreOverlayVisible: flag,
-        shouldRepeatVideo: endMode === useBountiesModalTiming.BountyVideoEndMode.APP_STORE_LOOP,
-        handlePaused: callback,
-        handleResumed: callback1,
-        handleVideoEndWithAppStore: callback2,
+        shouldRepeatVideo: null,
+        handlePaused: null,
+        handleResumed: null,
+        handleVideoEndWithAppStore: null,
       };
-      callback2 = react.useCallback(() => {
+      const callback2 = noop.useCallback(() => {
         handleVideoEnd();
         onVideoEndForAppStore();
       }, items2);
+      obj3.shouldRepeatVideo = endMode === useBountiesModalTiming.BountyVideoEndMode.APP_STORE_LOOP;
+      obj3.handlePaused = callback;
+      obj3.handleResumed = callback1;
+      obj3.handleVideoEndWithAppStore = callback2;
       return obj3;
     };
-let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyAppStoreOverlayPlayback.tsx");
-
-export const getBountyVideoEndMode = function getBountyVideoEndMode(bounty) {
-  const obj = useBountyVideoEndAppStoreOverlay;
-  const result = obj.canUseBountyVideoEndAppStoreOverlay(bounty);
-  const BountyVideoEndMode = useBountiesModalTiming.BountyVideoEndMode;
-  return result ? BountyVideoEndMode.APP_STORE_LOOP : BountyVideoEndMode.END_CARD;
-};
-export const useBountyAppStoreOverlayPlayback = tmp2;

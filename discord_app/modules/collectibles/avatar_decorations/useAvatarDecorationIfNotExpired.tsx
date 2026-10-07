@@ -1,54 +1,42 @@
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx
-import Constants from "../../../Constants.tsx";
 import AvatarDecorationUtils from "AvatarDecorationUtils.tsx";
 import Timers from "../../../../discord_common/js/packages/timers/Timers.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let react = react_mod;
-const MAX_TIMEOUT_MS = Constants.MAX_TIMEOUT_MS;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const MAX_TIMEOUT_MS = fn(1085).MAX_TIMEOUT_MS;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let closure_2;
-      let first;
-      let ref;
-      let tmp4;
-      let tmp5;
-      let tmp7;
-      let tmp8;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(6);
-      [first, _slicedToArray] = react.useState(false);
-      react = react.useRef(null);
+      const cResult = require("c").c(6);
+      [first, _slicedToArray] = noop.useState(false);
+      noop = noop.useRef(null);
       if (cResult[0] !== arg0) {
         const fn = function s() {
           function maybeScheduleExpirationCheck() {
             if (null != maybeScheduleExpirationCheck) {
               if ("expiresAt" in maybeScheduleExpirationCheck) {
                 if (null != maybeScheduleExpirationCheck.expiresAt) {
-                  const obj = AvatarDecorationUtils;
-                  const result = obj.isAvatarDecorationExpired(maybeScheduleExpirationCheck);
+                  const result = AvatarDecorationUtils.isAvatarDecorationExpired(maybeScheduleExpirationCheck);
                   closure_2(result);
                   const _Date = Date;
                   const result1 = 1000 * maybeScheduleExpirationCheck.expiresAt;
                   const diff = result1 - Date.now();
                   if (!result) {
                     if (0 < diff) {
-                      const self = this;
-                      const self2 = this;
                       const timeout = new Timers.Timeout();
                       const _Math = Math;
                       timeout.start(Math.min(MAX_TIMEOUT_MS, diff), () => {
                         maybeScheduleExpirationCheck();
                       });
-                      ref.current = timeout;
+                      closure_3.current = timeout;
                     }
                   }
                 }
@@ -70,8 +58,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = arg0;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp5 = items;
-        tmp4 = fn;
+        let tmp5 = items;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -90,8 +78,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = first;
         cResult[4] = fn2;
         cResult[5] = items1;
-        tmp8 = items1;
-        tmp7 = fn2;
+        let tmp8 = items1;
+        let tmp7 = fn2;
       } else {
         tmp7 = cResult[4];
         tmp8 = cResult[5];
@@ -104,34 +92,28 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp10;
     }
   : (arg0) => {
-      let closure_2;
-      let first;
-      let ref;
-      let closure_0 = arg0;
-      [first, _slicedToArray] = react.useState(false);
-      react = react.useRef(null);
+      closure_0 = arg0;
+      [first, _slicedToArray] = noop.useState(false);
+      noop = noop.useRef(null);
       const items = [arg0];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         function maybeScheduleExpirationCheck() {
           if (null != maybeScheduleExpirationCheck) {
             if ("expiresAt" in maybeScheduleExpirationCheck) {
               if (null != maybeScheduleExpirationCheck.expiresAt) {
-                const obj = AvatarDecorationUtils;
-                const result = obj.isAvatarDecorationExpired(maybeScheduleExpirationCheck);
+                const result = AvatarDecorationUtils.isAvatarDecorationExpired(maybeScheduleExpirationCheck);
                 closure_2(result);
                 const _Date = Date;
                 const result1 = 1000 * maybeScheduleExpirationCheck.expiresAt;
                 const diff = result1 - Date.now();
                 if (!result) {
                   if (0 < diff) {
-                    const self = this;
-                    const self2 = this;
                     const timeout = new Timers.Timeout();
                     const _Math = Math;
                     timeout.start(Math.min(MAX_TIMEOUT_MS, diff), () => {
                       maybeScheduleExpirationCheck();
                     });
-                    ref.current = timeout;
+                    closure_3.current = timeout;
                   }
                 }
               }
@@ -150,7 +132,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items);
       const items1 = [first];
-      const effect1 = react.useEffect(() => {
+      const effect1 = noop.useEffect(() => {
         if (first) {
           const current = ref.current;
           if (current != null) {
@@ -164,6 +146,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     };
-let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
-
-export default tmp2;

@@ -1,30 +1,18 @@
 // discord_app/modules/collectibles/native/DebugLogView.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import react_mod from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import DevSettingsStore from "../../devtools/dev_settings/DevSettingsStore.tsx";
-import CollectiblesDebugStore from "../CollectiblesDebugStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let dependencyMap;
-
-let c10;
-let c3;
-let c9;
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let react = react_mod;
-({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = react_native);
-({ useCollectiblesDebugStore: metroImportDefault, addDebugLog: metroImportAll } = CollectiblesDebugStore);
-({ jsxs: c9, jsx: c10 } = Fragment);
-let obj = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
+const CollectiblesDebugStore = fn(7080);
+({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
+const jsxProd = fn(21);
+({ jsxs: closure_9, jsx: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   debugLogContainer: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     padding: 10,
@@ -40,31 +28,34 @@ let obj = {
   },
   debugLogHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 5 },
   debugLogText: { color: "#00ff00", fontSize: 12, marginBottom: 2, fontFamily: "monospace" },
-  clearButton: obj2,
+  clearButton: {
+    backgroundColor: "#ff0000",
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: nativeDefault.radii.xs,
+  },
   clearButtonText: { color: "#ffffff", fontSize: 10, fontWeight: "bold" },
 };
-obj2 = { backgroundColor: "#ff0000", paddingHorizontal: 8, paddingVertical: 2, borderRadius: nativeDefault.radii.xs };
-let closure_11 = createStyles.createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_11 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {
+  backgroundColor: "#ff0000",
+  paddingHorizontal: 8,
+  paddingVertical: 2,
+  borderRadius: nativeDefault.radii.xs,
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/DebugLogView.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let arr;
-      let closure_1;
-      let debugLogText;
-      let first;
-      let items1;
-      let items2;
-      let tmp10;
-      let tmp6;
-      let tmp9;
-      let tmp = arr;
-      let obj = arr(576);
-      const cResult = obj.c(47);
+      const cResult = arr(576).c(47);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o(logs) {
           return logs.logs;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -74,14 +65,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           return clearLogs.clearLogs;
         };
         cResult[1] = fn2;
-        tmp6 = fn2;
+        let tmp6 = fn2;
       } else {
         tmp6 = cResult[1];
       }
       const tmp5Result = closure_7(tmp6);
       dependencyMap = tmp5Result;
       const tmp8 = closure_11();
-      react = tmp8;
+      noop = tmp8;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
         const fn3 = function p() {
@@ -89,22 +80,20 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items;
         cResult[3] = fn3;
-        tmp10 = fn3;
-        tmp9 = items;
+        let tmp10 = fn3;
+        let tmp9 = items;
       } else {
         tmp9 = cResult[2];
         tmp10 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(tmp9, tmp10);
+      const obj = arr(576);
+      const stateFromStores = arr(504).useStateFromStores(tmp9, tmp10);
       if (cResult[4] === arr.length) {
-        let tmp13;
-        let tmp14;
         if (cResult[5] === stateFromStores) {
-          tmp13 = cResult[6];
-          tmp14 = cResult[7];
+          let tmp13 = cResult[6];
+          let tmp14 = cResult[7];
         }
-        const effect = react.useEffect(tmp13, tmp14);
+        const effect = noop.useEffect(tmp13, tmp14);
         if (stateFromStores) {
           if (0 !== arr.length) {
             if (cResult[8] === tmp5Result) {
@@ -113,38 +102,39 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[11] === tmp8.clearButtonText) {
                     if (cResult[12] === tmp8.debugLogContainer) {
                       if (cResult[13] === tmp8.debugLogHeader) {
-                        if (cResult[39] === tmp17) {
-                          let tmp38;
-                          if (cResult[40] === tmp19) {
-                            tmp38 = cResult[41];
-                          }
-                          if (cResult[42] === tmp18) {
-                            if (cResult[43] === tmp20) {
-                              if (cResult[44] === tmp21) {
-                                let tmp41;
-                                if (cResult[45] === tmp38) {
-                                  tmp41 = cResult[46];
+                        if (cResult[14] === tmp8.debugLogText) {
+                          if (cResult[39] === cResult[15]) {
+                            if (cResult[40] === tmp19) {
+                              let tmp38 = cResult[41];
+                            }
+                            if (cResult[42] === tmp18) {
+                              if (cResult[43] === tmp20) {
+                                if (cResult[44] === tmp21) {
+                                  if (cResult[45] === tmp38) {
+                                    let tmp41 = cResult[46];
+                                  }
+                                  return tmp41;
                                 }
-                                return tmp41;
                               }
                             }
+                            const obj2 = { style: tmp20, children: null };
+                            const items1 = [tmp21, tmp38];
+                            obj2.children = items1;
+                            const tmp43 = closure_9(tmp18, obj2);
+                            cResult[42] = tmp18;
+                            cResult[43] = tmp20;
+                            cResult[44] = tmp21;
+                            cResult[45] = tmp38;
+                            cResult[46] = tmp43;
+                            tmp41 = tmp43;
                           }
-                          const obj2 = { style: tmp20, children: items1 };
-                          items1 = [tmp21, tmp38];
-                          const tmp43 = closure_9(tmp18, obj2);
-                          cResult[42] = tmp18;
-                          cResult[43] = tmp20;
-                          cResult[44] = tmp21;
-                          cResult[45] = tmp38;
-                          cResult[46] = tmp43;
-                          tmp41 = tmp43;
+                          const obj3 = { children: cResult[17] };
+                          const tmp40 = closure_10(cResult[15], obj3);
+                          cResult[39] = cResult[15];
+                          cResult[40] = cResult[17];
+                          cResult[41] = tmp40;
+                          tmp38 = tmp40;
                         }
-                        const obj3 = { children: tmp19 };
-                        const tmp40 = closure_10(tmp17, obj3);
-                        cResult[39] = tmp17;
-                        cResult[40] = tmp19;
-                        cResult[41] = tmp40;
-                        tmp38 = tmp40;
                       }
                     }
                   }
@@ -156,7 +146,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[20] !== tmp5Result) {
               class I {
                 constructor() {
-                  closure_1();
+                  tmp = closure_1();
+                  return;
                 }
               }
               cResult[20] = tmp5Result;
@@ -164,7 +155,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               class I {
                 constructor() {
-                  closure_1();
+                  tmp = closure_1();
+                  return;
                 }
               }
             }
@@ -172,7 +164,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[22] !== tmp8.debugLogText) {
               class I {
                 constructor() {
-                  closure_1();
+                  tmp = closure_1();
+                  return;
                 }
               }
               const merged = Object.assign(tmp8.debugLogText);
@@ -182,63 +175,72 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               class I {
                 constructor() {
-                  closure_1();
+                  tmp = closure_1();
+                  return;
                 }
               }
             }
             if (cResult[24] === arr.length) {
               class I {
                 constructor() {
-                  closure_1();
+                  tmp = closure_1();
+                  return;
                 }
               }
               if (cResult[27] !== tmp8.clearButtonText) {
                 class I {
                   constructor() {
-                    closure_1();
+                    tmp = closure_1();
+                    return;
                   }
                 }
                 const obj4 = { variant: "text-xs/bold", style: tmp8.clearButtonText, children: "Clear" };
-                cResult[27] = tmp8.clearButtonText;
-                cResult[28] = closure_10(tmp(4892).Text, obj4);
                 const tmp33 = closure_10(tmp(4892).Text, obj4);
+                cResult[27] = tmp8.clearButtonText;
+                cResult[28] = tmp33;
               } else {
                 class I {
                   constructor() {
-                    closure_1();
+                    tmp = closure_1();
+                    return;
                   }
                 }
               }
               if (cResult[29] === I) {
                 class I {
                   constructor() {
-                    closure_1();
+                    tmp = closure_1();
+                    return;
                   }
                 }
               }
               const obj5 = { onPress: I, style: tmp8.clearButton, children: tmp32 };
+              const tmp37 = closure_10(closure_5, obj5);
               cResult[29] = I;
               cResult[30] = tmp8.clearButton;
               cResult[31] = tmp32;
-              cResult[32] = closure_10(closure_5, obj5);
-              const tmp37 = closure_10(closure_5, obj5);
+              cResult[32] = tmp37;
             }
-            const obj6 = { variant: "text-xs/normal", style: tmp26, children: items2 };
-            items2 = ["Debug Log (", arr.length, " entries)"];
+            const obj6 = { variant: "text-xs/normal", style: tmp26, children: null };
+            const items2 = ["Debug Log (", arr.length, " entries)"];
+            obj6.children = items2;
+            const tmp31 = closure_9(tmp(4892).Text, obj6);
             cResult[24] = arr.length;
             cResult[25] = tmp26;
-            cResult[26] = closure_9(tmp(4892).Text, obj6);
-            const tmp31 = closure_9(tmp(4892).Text, obj6);
+            cResult[26] = tmp31;
           }
         }
         return null;
       }
       class C {
         constructor() {
-          const tmp = 0 === arr.length && stateFromStores;
+          tmp = 0 === closure_0.length && closure_3;
           if (tmp) {
-            metroImportAll("Debug log initialized");
+            tmp2 = addDebugLog;
+            str = "Debug log initialized";
+            tmp3 = addDebugLog("Debug log initialized");
           }
+          return;
         }
       }
       const items3 = [arr.length, stateFromStores];
@@ -248,63 +250,57 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items3;
       tmp14 = items3;
       tmp13 = C;
+      const tmpResult = arr(504);
     }
   : () => {
-      let closure_1;
-      let debugLogText;
-      let items2;
-      let items3;
-      let items4;
-      let obj5;
-      let obj7;
       const arr = closure_7((logs) => logs.logs);
       dependencyMap = closure_7((clearLogs) => clearLogs.clearLogs);
       let tmp = closure_11();
-      react = tmp;
-      let obj = arr(504);
+      noop = tmp;
       const items = [DevSettingsStore];
-      const stateFromStores = obj.useStateFromStores(items, () => DevSettingsStore.get("shop_show_debug_overlay"));
+      const stateFromStores = arr(504).useStateFromStores(items, () => DevSettingsStore.get("shop_show_debug_overlay"));
       const items1 = [arr.length, stateFromStores];
-      const effect = react.useEffect(() => {
-        const tmp = 0 === arr.length && stateFromStores;
+      const effect = noop.useEffect(() => {
         if (tmp) {
-          metroImportAll("Debug log initialized");
+          closure_2_8("Debug log initialized");
         }
+        tmp = 0 === arr.length && stateFromStores;
       }, items1);
       if (stateFromStores) {
         if (0 !== arr.length) {
           const _Math = Math;
           const substr = arr.slice(Math.max(0, arr.length - 10));
-          const obj4 = { variant: "text-xs/normal", style: obj5, children: items2 };
-          const obj2 = { style: tmp.debugLogContainer, children: items4 };
-          const obj3 = { style: tmp.debugLogHeader, children: items3 };
-          obj5 = { color: "#ffffff" };
-          const Text = tmp2(4892).Text;
+          const obj2 = { style: tmp.debugLogContainer, children: null };
+          const obj3 = { style: tmp.debugLogHeader, children: null };
+          const obj4 = { variant: "text-xs/normal", style: null, children: null };
+          const obj5 = {};
           const merged = Object.assign(tmp.debugLogText);
-          items2 = ["Debug Log (", arr.length, " entries)"];
-          items3 = [closure_9(Text, obj4)];
+          obj5.color = "#ffffff";
+          obj4.style = obj5;
+          const items2 = ["Debug Log (", arr.length, " entries)"];
+          obj4.children = items2;
+          const items3 = [closure_9(tmp2(4892).Text, obj4)];
           const obj6 = {
             onPress() {
               closure_1();
             },
             style: tmp.clearButton,
-            children: closure_10(arr(4892).Text, obj7),
+            children: null,
           };
-          obj7 = { variant: "text-xs/bold", style: tmp.clearButtonText, children: "Clear" };
+          const obj7 = { variant: "text-xs/bold", style: tmp.clearButtonText, children: "Clear" };
+          obj6.children = closure_10(tmp2(4892).Text, obj7);
           items3[1] = closure_10(closure_5, obj6);
-          items4 = [closure_9(stateFromStores, obj3)];
+          obj3.children = items3;
+          const items4 = [closure_9(stateFromStores, obj3)];
           const obj8 = {
-            children: substr.map((children, index) => {
-              const obj = { variant: "text-xs/normal", style: debugLogText.debugLogText, children };
-              return authStore(Text_Text.Text, obj, index);
-            }),
+            children: substr.map((children, index) =>
+              v65535(Text_Text.Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children }, index),
+            ),
           };
           items4[1] = closure_10(closure_4, obj8);
+          obj2.children = items4;
           return closure_9(stateFromStores, obj2);
         }
       }
       return null;
     };
-const result = size.fileFinishedImporting("modules/collectibles/native/DebugLogView.tsx");
-
-export default tmp5;

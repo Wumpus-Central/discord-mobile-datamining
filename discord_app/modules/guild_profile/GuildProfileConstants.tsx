@@ -12,17 +12,17 @@ const obj = {
   ZEPHYR: "Zephyr",
   RISING: "Rising",
 };
-let items = [, , , , , , , ,];
-const obj2 = { name: obj.SOUL, color: "#ff1c90" };
-items[0] = obj2;
-items[1] = { name: obj.VOLCANO, color: "#e81d1e" };
-items[2] = { name: obj.MARSH, color: "#e86e1d" };
-items[3] = { name: obj.THUNDER, color: "#e8c02f" };
-items[4] = { name: obj.RISING, color: "#71368a" };
-items[5] = { name: obj.ZEPHYR, color: "#029FFC" };
-items[6] = { name: obj.CASCADE, color: "#4fe2ca" };
-items[7] = { name: obj.EARTH, color: "#406601" };
-items[8] = { name: obj.BOULDER, color: "#272727" };
+let items = [
+  { name: obj.SOUL, color: "#ff1c90" },
+  { name: obj.VOLCANO, color: "#e81d1e" },
+  { name: obj.MARSH, color: "#e86e1d" },
+  { name: obj.THUNDER, color: "#e8c02f" },
+  { name: obj.RISING, color: "#71368a" },
+  { name: obj.ZEPHYR, color: "#029FFC" },
+  { name: obj.CASCADE, color: "#4fe2ca" },
+  { name: obj.EARTH, color: "#406601" },
+  { name: obj.BOULDER, color: "#272727" },
+];
 const items1 = [
   "363445589247131668",
   "700136079562375258",
@@ -127,16 +127,15 @@ const items1 = [
   "1272842103910699040",
   "1276737795012165766",
 ];
-const map = new Map(
-  items1.map((item, index, arg2) => {
-    const items = [item, arg2.length - index];
-    return items;
-  }),
-);
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileConstants.tsx");
 
 export const BannerPalettePresets = obj;
 export const BANNER_PALETTE_PRESETS = items;
 export const INVALID_ACCESS_ERROR_CODE = 50001;
 export const HOISTED_SEARCH_GAME_IDS = items1;
-export const HOISTED_SEARCH_GAME_IDS_BY_PRIORITY = map;
+export const HOISTED_SEARCH_GAME_IDS_BY_PRIORITY = new Map(
+  items1.map((item, index, arg2) => {
+    const items = [item, arg2.length - index];
+    return items;
+  }),
+);

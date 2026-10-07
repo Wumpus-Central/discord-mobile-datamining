@@ -5,8 +5,9 @@ import MemberVerificationAlertActionCreators from "native/MemberVerificationAler
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/transitionToMemberVerification.native.tsx");
 
 export const transitionToMemberVerification = function transitionToMemberVerification(guildId) {
@@ -17,21 +18,20 @@ export const transitionToMemberVerification = function transitionToMemberVerific
       applicationStatus = request.applicationStatus;
     }
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+      const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(guildId);
       const tmp7Result = MemberVerificationAlertActionCreators;
-      const result = tmp7Result.openMemberVerificationPendingAlert(guildId);
     } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
       const obj2 = { guildId, canWithdraw: true };
+      const result1 = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert(obj2);
       const tmp7Result4 = MemberVerificationAlertActionCreators;
-      const result1 = tmp7Result4.openMemberVerificationRejectedAlert(obj2);
     } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
+      router_utils.transitionToGuild(guildId);
       const tmp7Result5 = router_utils;
-      tmp7Result5.transitionToGuild(guildId);
     } else {
+      const result2 = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
       const tmp7Result6 = MemberVerificationModalActionCreators;
-      const result2 = tmp7Result6.openMemberVerificationModal(guildId);
     }
   } else {
-    const obj = router_utils;
-    obj.transitionToGuild(guildId);
+    router_utils.transitionToGuild(guildId);
   }
 };

@@ -1,121 +1,99 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import PremiumConstants from "../../premium/PremiumConstants.tsx";
-import PremiumGuildSubscribeConstants from "../../../components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx";
 import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import GuildBoostSlotStore from "../../../stores/billing/GuildBoostSlotStore.tsx";
-import Constants from "../../../Constants.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_3, guild, navigation;
-
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
+require = fn;
 function handleBoostPress() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_15.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let location = function _handleBoostPress() {
-  let obj = _asyncToGenerator(async (analyticsLocations, guildId, section) => {
-    let c4 = 0;
-    let c5 = 0;
-    return (async (arg0, value, arg2) => {
-      let obj5;
-      let obj6;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_15 = async function _handleBoostPress() {
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp;
-              const obj4 = {
-                source: obj5,
-                analyticsLocations,
-                guildId,
-                onBack() {
-                  const arr = guildId(section[9]);
-                  return arr.pop();
-                },
-              };
-              c4 = 1;
-              c5 = 1;
-              obj5 = {
-                page: constants3.PREMIUM_GUILD_USER_MODAL,
-                section,
-                object: constants.BUTTON_CTA,
-                objectType: constants2.BUY,
-              };
-              const obj7 = { value: obj6.launchGuildBoostFlowOrAlert(obj4), done: false };
-              obj6 = GuildBoostPurchasingUtils;
-              return obj7;
-            }
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            return { value, done: true };
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            const obj = closure_131_0(closure_131_2[10]);
-            obj.closeApplyBoostModal();
-            c5 = 3;
-            return { value: "IconComponent", done: null };
+            closure_3 = tmp2;
+            const obj4 = { source: null, analyticsLocations: null, guildId: null, onBack: null };
+            const obj5 = {
+              page: constants3.PREMIUM_GUILD_USER_MODAL,
+              section,
+              object: constants.BUTTON_CTA,
+              objectType: constants2.BUY,
+            };
+            obj4.source = obj5;
+            obj4.analyticsLocations = analyticsLocations;
+            obj4.guildId = guildId;
+            obj4.onBack = function onBack() {
+              return guildId(section[9]).pop();
+            };
+            c4 = 1;
+            c5 = 1;
+            const obj7 = { value: GuildBoostPurchasingUtils.launchGuildBoostFlowOrAlert(obj4), done: false };
+            return obj7;
           }
-        } catch (tmp9) {
+        } else if (arg0 === 1) {
           c5 = 3;
-          throw tmp9;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          closure_131_0(closure_131_2[10]).closeApplyBoostModal();
+          c5 = 3;
+          return { value: "IconComponent", done: null };
         }
+      } catch (tmp10) {
+        c5 = tmp;
+        throw tmp10;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-let View = react_native.View;
-({
-  AnalyticsObjects: metroImportDefault,
-  AnalyticsObjectTypes: metroImportAll,
-  AnalyticsPages: c9,
-  NOOP: c10,
-} = Constants);
-let closure_11 = PremiumGuildSubscribeConstants.PremiumGuildSubscribeModalScenes;
-const FractionalPremiumStates = PremiumConstants.FractionalPremiumStates;
-let jsx = Fragment.jsx;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let View = fn(17).View;
+const Constants = fn(1085);
+({ AnalyticsObjects: closure_7, AnalyticsObjectTypes: closure_8, AnalyticsPages: closure_9, NOOP: c10 } = Constants);
+let closure_11 = fn(5621).PremiumGuildSubscribeModalScenes;
+const FractionalPremiumStates = fn(1379).FractionalPremiumStates;
+let jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {
-      let analyticsSection;
-      let closure_13;
-      let fractionalPremiumState;
-      let handleMobileWebRedirectCheckout;
-      let premiumGroupRole;
-      let styles;
-      let tmp7;
-      let tmp8;
-      let useShortenedCTA;
-      let tmp = guild;
-      const obj = guild(analyticsSection[12]);
-      const cResult = obj.c(33);
+      const cResult = guild(analyticsSection[12]).c(33);
       guild = guild.guild;
       const previousGuildSubscriptionSlot = guild.previousGuildSubscriptionSlot;
       ({ useShortenedCTA, styles, analyticsSection } = guild);
@@ -123,22 +101,21 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const intent = guild.intent;
       View = onResult;
       ({ fractionalPremiumState, premiumGroupRole } = guild);
-      const tmp4 = previousGuildSubscriptionSlot;
       const tmp5 = previousGuildSubscriptionSlot(analyticsSection[13])();
       const boostSlots = tmp5;
-      let obj2 = guild(analyticsSection[14]);
-      navigation = obj2.useNavigation();
+      let obj = guild(analyticsSection[12]);
+      const tmp4 = previousGuildSubscriptionSlot;
+      const navigation = guild(analyticsSection[14]).useNavigation();
       const analyticsLocations = previousGuildSubscriptionSlot(analyticsSection[15])().analyticsLocations;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [boostSlots];
         const fn = function n() {
           const keys = Object.keys(boostSlots.boostSlots);
-          return keys.some((item) => {
-            const tmp =
+          return keys.some(
+            (item) =>
               null == boostSlots.boostSlots[item].premiumGuildSubscription &&
-              !boostSlots.boostSlots[item].isOnCooldown();
-            return tmp;
-          });
+              !boostSlots.boostSlots[item].isOnCooldown(),
+          );
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -147,23 +124,23 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp7, tmp8] = cResult;
       }
-      const tmpResult = tmp(analyticsSection[16]);
-      const stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
+      let obj2 = guild(analyticsSection[14]);
+      const stateFromStores = guild(analyticsSection[16]).useStateFromStores(tmp7, tmp8);
       if (cResult[2] === onAvailableSlotPress) {
         if (cResult[3] === analyticsSection) {
           if (cResult[4] === intent) {
             if (cResult[5] === navigation) {
-              let tmp11;
-              if (cResult[6] === guild.onResult) {
-                tmp11 = cResult[7];
+              if (cResult[6] === onResult) {
+                let tmp11 = cResult[7];
               }
-              let closure_10 = tmp11;
+              closure_10 = tmp11;
               let tmp12 = !stateFromStores;
-              if (tmp12) {
+              if (!stateFromStores) {
                 tmp12 =
                   fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE ||
                   premiumGroupRole === tmp(analyticsSection[17]).PremiumSubscriptionGroupRole.MEMBER;
-                fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE ||
+                const tmp14 =
+                  fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE ||
                   premiumGroupRole === tmp(analyticsSection[17]).PremiumSubscriptionGroupRole.MEMBER;
               }
               const tmp15 = tmp4(analyticsSection[18])("guild_boost_subscribe_button");
@@ -177,9 +154,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                         if (cResult[13] === tmp5) {
                           if (cResult[14] === tmp11) {
                             if (cResult[15] === previousGuildSubscriptionSlot) {
-                              let tmp16;
                               if (cResult[16] === shouldUseMobileWebRedirectCheckout) {
-                                tmp16 = cResult[17];
+                                let tmp16 = cResult[17];
                               }
                               jsx = tmp16;
                               if (cResult[18] !== tmp16) {
@@ -203,14 +179,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                                     return closure_13();
                                   }
                                 }
-                                const string = tmp19.string;
-                                const t = tmp(analyticsSection[19]).t;
                                 if (useShortenedCTA) {
                                   class D {
                                     constructor() {
                                       return closure_13();
                                     }
                                   }
+                                  const stringResult = obj4.string(tmp(analyticsSection[19]).t);
                                 } else {
                                   class D {
                                     constructor() {
@@ -219,84 +194,100 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                 }
                                 cResult[20] = useShortenedCTA;
-                                cResult[21] = tmp20;
+                                cResult[21] = stringResult;
                               } else {
                                 class D {
                                   constructor() {
                                     return closure_13();
                                   }
                                 }
-                              }
-                              if (cResult[22] !== tmp12) {
-                                let tmp22;
-                                class D {
-                                  constructor() {
-                                    return closure_13();
-                                  }
-                                }
-                                if (tmp12) {
+                                if (cResult[22] !== tmp12) {
                                   class D {
                                     constructor() {
                                       return closure_13();
                                     }
                                   }
-                                  tmp22 = jsx(tmp(analyticsSection[20]).LockIcon, { size: "xs", color: "white" });
-                                }
-                                cResult[22] = tmp12;
-                                cResult[23] = tmp22;
-                              } else {
-                                class D {
-                                  constructor() {
-                                    return closure_13();
-                                  }
-                                }
-                              }
-                              if (cResult[24] === tmp5) {
-                                class D {
-                                  constructor() {
-                                    return closure_13();
-                                  }
-                                }
-                              }
-                              class E {
-                                constructor() {
-                                  let tmp10;
-                                  if (boostSlots) {
-                                    tmp10 = authStore;
-                                  } else if (stateFromStores) {
-                                    tmp10 = c10(guild.id, previousGuildSubscriptionSlot);
-                                  } else {
-                                    if (shouldUseMobileWebRedirectCheckout) {
-                                      if (null != guild.id) {
-                                        tmp10 = handleMobileWebRedirectCheckout(analyticsLocations, tmp4.id);
+                                  if (tmp12) {
+                                    class D {
+                                      constructor() {
+                                        return closure_13();
                                       }
                                     }
-                                    tmp10 = handleBoostPress(analyticsLocations, guild.id, analyticsSection);
+                                    const tmp22 = jsx(tmp(analyticsSection[20]).LockIcon, {
+                                      size: "xs",
+                                      color: "white",
+                                    });
                                   }
-                                  return tmp10;
+                                  cResult[22] = tmp12;
+                                  cResult[23] = tmp22;
+                                } else {
+                                  class D {
+                                    constructor() {
+                                      return closure_13();
+                                    }
+                                  }
                                 }
+                                if (cResult[24] === tmp5) {
+                                  class D {
+                                    constructor() {
+                                      return closure_13();
+                                    }
+                                  }
+                                }
+                                const obj3 = {
+                                  loading: tmp5,
+                                  variant: "primary",
+                                  onPress: D,
+                                  disabled: tmp12,
+                                  text: tmp18,
+                                  icon: tmp21,
+                                };
+                                const tmp25 = jsx(tmp(analyticsSection[21]).Button, {
+                                  loading: tmp5,
+                                  variant: "primary",
+                                  onPress: D,
+                                  disabled: tmp12,
+                                  text: tmp18,
+                                  icon: tmp21,
+                                });
+                                class E {
+                                  constructor() {
+                                    if (closure_6) {
+                                      tmp9 = NOOP;
+                                    } else {
+                                      tmp = closure_9;
+                                      if (closure_9) {
+                                        tmp12 = closure_10;
+                                        tmp13 = guild;
+                                        tmp14 = closure_1;
+                                        tmp9 = closure_10(guild.id, closure_1);
+                                      } else {
+                                        tmp2 = closure_11;
+                                        if (closure_11) {
+                                          tmp4 = null;
+                                          if (null != guild.id) {
+                                            tmp10 = closure_12;
+                                            tmp11 = analyticsLocations;
+                                            tmp9 = closure_12(analyticsLocations, tmp3.id);
+                                          }
+                                        }
+                                        tmp5 = handleBoostPress;
+                                        tmp6 = analyticsLocations;
+                                        tmp7 = guild;
+                                        tmp8 = analyticsSection;
+                                        tmp9 = handleBoostPress(analyticsLocations, guild.id, analyticsSection);
+                                      }
+                                    }
+                                    return tmp9;
+                                  }
+                                }
+                                cResult[24] = tmp5;
+                                cResult[25] = tmp12;
+                                cResult[26] = D;
+                                cResult[27] = tmp18;
+                                cResult[28] = tmp21;
+                                cResult[29] = tmp25;
                               }
-                              cResult[24] = tmp5;
-                              cResult[25] = tmp12;
-                              cResult[26] = D;
-                              cResult[27] = tmp20;
-                              cResult[28] = tmp21;
-                              cResult[29] = jsx(tmp(analyticsSection[21]).Button, {
-                                loading: tmp5,
-                                variant: "primary",
-                                onPress: D,
-                                disabled: tmp12,
-                                text: null,
-                                icon: tmp21,
-                              });
-                              const tmp25 = jsx(tmp(analyticsSection[21]).Button, {
-                                loading: tmp5,
-                                variant: "primary",
-                                onPress: D,
-                                disabled: tmp12,
-                                text: null,
-                                icon: tmp21,
-                              });
                             }
                           }
                         }
@@ -307,20 +298,33 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
               class E {
                 constructor() {
-                  let tmp10;
-                  if (boostSlots) {
-                    tmp10 = authStore;
-                  } else if (stateFromStores) {
-                    tmp10 = c10(guild.id, previousGuildSubscriptionSlot);
+                  if (closure_6) {
+                    tmp9 = NOOP;
                   } else {
-                    if (shouldUseMobileWebRedirectCheckout) {
-                      if (null != guild.id) {
-                        tmp10 = handleMobileWebRedirectCheckout(analyticsLocations, tmp4.id);
+                    tmp = closure_9;
+                    if (closure_9) {
+                      tmp12 = closure_10;
+                      tmp13 = guild;
+                      tmp14 = closure_1;
+                      tmp9 = closure_10(guild.id, closure_1);
+                    } else {
+                      tmp2 = closure_11;
+                      if (closure_11) {
+                        tmp4 = null;
+                        if (null != guild.id) {
+                          tmp10 = closure_12;
+                          tmp11 = analyticsLocations;
+                          tmp9 = closure_12(analyticsLocations, tmp3.id);
+                        }
                       }
+                      tmp5 = handleBoostPress;
+                      tmp6 = analyticsLocations;
+                      tmp7 = guild;
+                      tmp8 = analyticsSection;
+                      tmp9 = handleBoostPress(analyticsLocations, guild.id, analyticsSection);
                     }
-                    tmp10 = handleBoostPress(analyticsLocations, guild.id, analyticsSection);
                   }
-                  return tmp10;
+                  return tmp9;
                 }
               }
               cResult[8] = analyticsLocations;
@@ -339,25 +343,26 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn2 = function j(guildId, arg1) {
-        let tmp2;
         if (null != onAvailableSlotPress) {
           return tmp(guildId, arg1);
         } else {
-          const obj2 = { guildId, guildBoostSlots: tmp2, location, intent, onResult: View };
-          tmp2 = undefined;
-          const push = navigation.push;
-          const CONFIRMATION = shouldUseMobileWebRedirectCheckout.CONFIRMATION;
+          const obj2 = { guildId, guildBoostSlots: null, location: null, intent: null, onResult: null };
+          let tmp2;
           if (null != arg1) {
             const items = [arg1];
             tmp2 = items;
           }
-          location = {
-            page: stateFromStores.PREMIUM_GUILD_USER_MODAL,
+          obj2.guildBoostSlots = tmp2;
+          const obj = {
+            page: constants3.PREMIUM_GUILD_USER_MODAL,
             section: analyticsSection,
-            object: metroImportDefault.BUTTON_CTA,
-            objectType: metroImportAll.BUY,
+            object: constants.BUTTON_CTA,
+            objectType: constants2.BUY,
           };
-          push(CONFIRMATION, obj2);
+          obj2.location = obj;
+          obj2.intent = intent;
+          obj2.onResult = onResult;
+          navigation.push(shouldUseMobileWebRedirectCheckout.CONFIRMATION, obj2);
         }
       };
       cResult[2] = onAvailableSlotPress;
@@ -367,75 +372,64 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = guild.onResult;
       cResult[7] = fn2;
       tmp11 = fn2;
+      const tmpResult = guild(analyticsSection[16]);
     }
   : (guild) => {
-      let Button;
-      let closure_13;
-      let fractionalPremiumState;
-      let handleMobileWebRedirectCheckout;
-      let obj5;
-      let premiumGroupRole;
-      let stringResult;
-      let styles;
-      let tmp12Result;
-      let useShortenedCTA;
       guild = guild.guild;
       const previousGuildSubscriptionSlot = guild.previousGuildSubscriptionSlot;
       const analyticsSection = guild.analyticsSection;
       const onAvailableSlotPress = guild.onAvailableSlotPress;
       const intent = guild.intent;
       View = onResult;
-      let tmp2 = analyticsSection;
       ({ useShortenedCTA, styles, fractionalPremiumState, premiumGroupRole } = guild);
-      let tmp = previousGuildSubscriptionSlot;
       const tmp3 = previousGuildSubscriptionSlot(analyticsSection[13])();
       const boostSlots = tmp3;
-      const tmp4 = guild;
-      const obj = guild(analyticsSection[14]);
-      navigation = obj.useNavigation();
+      const navigation = guild(analyticsSection[14]).useNavigation();
       const analyticsLocations = previousGuildSubscriptionSlot(analyticsSection[15])().analyticsLocations;
-      let obj2 = guild(analyticsSection[16]);
+      let obj = guild(analyticsSection[14]);
+      const tmp = previousGuildSubscriptionSlot;
       let items = [boostSlots];
-      const stateFromStores = obj2.useStateFromStores(items, () => {
+      const stateFromStores = guild(analyticsSection[16]).useStateFromStores(items, () => {
         const keys = Object.keys(boostSlots.boostSlots);
-        return keys.some((item) => {
-          const tmp =
-            null == boostSlots.boostSlots[item].premiumGuildSubscription && !boostSlots.boostSlots[item].isOnCooldown();
-          return tmp;
-        });
+        return keys.some(
+          (item) =>
+            null == boostSlots.boostSlots[item].premiumGuildSubscription && !boostSlots.boostSlots[item].isOnCooldown(),
+        );
       });
       const items1 = [navigation, analyticsSection, onAvailableSlotPress, intent, guild.onResult];
       const callback = intent.useCallback((guildId, arg1) => {
-        let tmp2;
         if (null != onAvailableSlotPress) {
           return tmp(guildId, arg1);
         } else {
-          const obj2 = { guildId, guildBoostSlots: tmp2, location, intent, onResult: View };
-          tmp2 = undefined;
-          const push = navigation.push;
-          const CONFIRMATION = shouldUseMobileWebRedirectCheckout.CONFIRMATION;
+          const obj2 = { guildId, guildBoostSlots: null, location: null, intent: null, onResult: null };
+          let tmp2;
           if (null != arg1) {
             const items = [arg1];
             tmp2 = items;
           }
-          location = {
-            page: stateFromStores.PREMIUM_GUILD_USER_MODAL,
+          obj2.guildBoostSlots = tmp2;
+          const obj = {
+            page: constants3.PREMIUM_GUILD_USER_MODAL,
             section: analyticsSection,
-            object: metroImportDefault.BUTTON_CTA,
-            objectType: metroImportAll.BUY,
+            object: constants.BUTTON_CTA,
+            objectType: constants2.BUY,
           };
-          push(CONFIRMATION, obj2);
+          obj2.location = obj;
+          obj2.intent = intent;
+          obj2.onResult = onResult;
+          navigation.push(shouldUseMobileWebRedirectCheckout.CONFIRMATION, obj2);
         }
       }, items1);
       let tmp8 = !stateFromStores;
-      const obj3 = intent;
-      if (tmp8) {
-        let tmp10 =
+      if (!stateFromStores) {
+        tmp8 =
           fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE ||
           premiumGroupRole === tmp4(tmp2[17]).PremiumSubscriptionGroupRole.MEMBER;
-        tmp8 = tmp10;
+        const tmp10 =
+          fractionalPremiumState !== handleMobileWebRedirectCheckout.NONE ||
+          premiumGroupRole === tmp4(tmp2[17]).PremiumSubscriptionGroupRole.MEMBER;
       }
-      const tmp11 = tmp(tmp2[18])("guild_boost_subscribe_button");
+      const tmp11 = tmp(analyticsSection[18])("guild_boost_subscribe_button");
       const shouldUseMobileWebRedirectCheckout = tmp11.shouldUseMobileWebRedirectCheckout;
       handleMobileWebRedirectCheckout = tmp11.handleMobileWebRedirectCheckout;
       const items2 = [
@@ -449,49 +443,46 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         analyticsLocations,
         callback,
       ];
-      jsx = obj3.useCallback(() => {
-        let tmp10;
-        if (boostSlots) {
-          tmp10 = authStore;
+      jsx = intent.useCallback(() => {
+        if (closure_6) {
+          let tmp9 = v65535;
         } else if (stateFromStores) {
-          tmp10 = callback(guild.id, previousGuildSubscriptionSlot);
+          tmp9 = callback(guild.id, previousGuildSubscriptionSlot);
         } else {
           if (shouldUseMobileWebRedirectCheckout) {
             if (null != guild.id) {
-              tmp10 = handleMobileWebRedirectCheckout(analyticsLocations, tmp4.id);
+              tmp9 = handleMobileWebRedirectCheckout(analyticsLocations, tmp3.id);
             }
           }
-          tmp10 = handleBoostPress(analyticsLocations, guild.id, analyticsSection);
+          tmp9 = handleBoostPress(analyticsLocations, guild.id, analyticsSection);
         }
-        return tmp10;
+        return tmp9;
       }, items2);
-      const obj4 = { style: styles, children: jsx(Button, obj5) };
-      obj5 = {
+      const obj4 = { style: styles, children: null };
+      const obj5 = {
         loading: tmp3,
         variant: "primary",
         onPress() {
           return closure_13();
         },
         disabled: tmp8,
-        text: stringResult,
-        icon: tmp12Result,
+        text: null,
+        icon: null,
       };
-      Button = tmp4(tmp2[21]).Button;
       const intl = tmp4(tmp2[19]).intl;
       const string = intl.string;
       const t = tmp4(tmp2[19]).t;
-      const tmp13 = View;
       if (useShortenedCTA) {
-        stringResult = string(t.Uj0md3);
+        let stringResult = string(t.Uj0md3);
       } else {
         stringResult = string(t.gKmQ1G);
       }
-      tmp12Result = undefined;
+      obj5.text = stringResult;
+      let tmp12Result;
       if (tmp8) {
         tmp12Result = tmp12(tmp4(tmp2[20]).LockIcon, { size: "xs", color: "white" });
       }
-      return jsx(tmp13, obj4);
+      obj5.icon = tmp12Result;
+      obj4.children = jsx(guild(analyticsSection[21]).Button, obj5);
+      return jsx(View, obj4);
     };
-const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
-
-export default tmp3;

@@ -5,7 +5,6 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 
 export const sortRolesByVerification = function sortRolesByVerification(tags, tags2) {
-  let num;
   tags = tags.tags;
   let guild_connections;
   if (tags != null) {
@@ -17,14 +16,12 @@ export const sortRolesByVerification = function sortRolesByVerification(tags, ta
     guild_connections1 = tags2.guild_connections;
   }
   if (undefined === guild_connections) {
-    let num2;
-    if (undefined !== guild_connections) {
-      const obj = GuildRoleUtils;
-      num2 = obj.compareGuildRoles(tags, tags2);
+    if (tmp3) {
+      let num2 = GuildRoleUtils.compareGuildRoles(tags, tags2);
     } else {
       num2 = -1;
     }
-    num = num2;
+    let num = num2;
   } else {
     num = 1;
   }

@@ -3,136 +3,249 @@ import openURLDefault from "../../../lib/openURL.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
-import captureAdUserAction3 from "../../ads/analytics/captureAdUserAction.tsx";
+import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let _require, c4, closure_12, isClaimingReward;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+fn(558);
+let ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (quest) => {
+      const cResult = quest(questContent[4]).c(8);
+      quest = quest.quest;
+      const redemptionLink = quest.redemptionLink;
+      questContent = quest.questContent;
+      const questContentPosition = quest.questContentPosition;
+      const sourceQuestContent = quest.sourceQuestContent;
+      let obj = quest(questContent[4]);
+      const trackQuestContentClickedWithImpression = quest(questContent[7]).useTrackQuestContentClickedWithImpression();
+      let obj2 = quest(questContent[7]);
+      const getQuestImpressionId = quest(questContent[8]).useGetQuestImpressionId();
+      if (cResult[0] === getQuestImpressionId) {
+        if (cResult[1] === quest.id) {
+          if (cResult[2] === questContent) {
+            if (cResult[3] === questContentPosition) {
+              if (cResult[4] === redemptionLink) {
+                if (cResult[5] === sourceQuestContent) {
+                  if (cResult[6] === trackQuestContentClickedWithImpression) {
+                    let tmp4 = cResult[7];
+                  }
+                  return tmp4;
+                }
+              }
+            }
+          }
+        }
+      }
+      const fn = function n() {
+        if (null != redemptionLink) {
+          if (
+            obj7.shouldMigrateToAdAnalyticsInterface(
+              AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+              "quest_reward_code_redemption_link",
+            )
+          ) {
+            const obj2 = {
+              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+              adCreativeId: quest.id,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
+              surfaceId: questContent,
+              sourceQuestContent,
+              impressionId: getQuestImpressionId(),
+              questContentPosition,
+            };
+            captureAdUserAction.captureAdUserAction(obj2);
+            const tmp18Result = captureAdUserAction;
+            const obj3 = {
+              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+              adCreativeId: quest.id,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
+              surfaceId: questContent,
+              sourceQuestContent,
+              impressionId: getQuestImpressionId(),
+              questContentPosition,
+            };
+            captureAdUserAction.captureAdUserAction(obj3);
+            const tmp18Result2 = captureAdUserAction;
+          } else {
+            const obj = {
+              questId: quest.id,
+              questContent,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
+              questContentPosition,
+              sourceQuestContent,
+            };
+            trackQuestContentClickedWithImpression(obj);
+            const obj4 = {
+              questId: quest.id,
+              questContent,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
+              questContentPosition,
+              sourceQuestContent,
+            };
+            trackQuestContentClickedWithImpression(obj4);
+          }
+          openURLDefault(tmp);
+          obj7 = AdAnalyticsInterfaceExperiment;
+        }
+      };
+      cResult[0] = getQuestImpressionId;
+      cResult[1] = quest.id;
+      cResult[2] = questContent;
+      cResult[3] = questContentPosition;
+      cResult[4] = redemptionLink;
+      cResult[5] = sourceQuestContent;
+      cResult[6] = trackQuestContentClickedWithImpression;
+      cResult[7] = fn;
+      tmp4 = fn;
+    }
+  : (quest) => {
+      quest = quest.quest;
+      const redemptionLink = quest.redemptionLink;
+      const questContent = quest.questContent;
+      const questContentPosition = quest.questContentPosition;
+      const sourceQuestContent = quest.sourceQuestContent;
+      const trackQuestContentClickedWithImpression = quest(questContent[7]).useTrackQuestContentClickedWithImpression();
+      let obj = quest(questContent[7]);
+      const getQuestImpressionId = quest(questContent[8]).useGetQuestImpressionId();
+      const items = [
+        quest.id,
+        questContent,
+        questContentPosition,
+        sourceQuestContent,
+        trackQuestContentClickedWithImpression,
+        getQuestImpressionId,
+        redemptionLink,
+      ];
+      return trackQuestContentClickedWithImpression.useCallback(() => {
+        if (null != redemptionLink) {
+          if (
+            obj7.shouldMigrateToAdAnalyticsInterface(
+              AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+              "quest_reward_code_redemption_link",
+            )
+          ) {
+            const obj2 = {
+              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+              adCreativeId: quest.id,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
+              surfaceId: questContent,
+              sourceQuestContent,
+              impressionId: getQuestImpressionId(),
+              questContentPosition,
+            };
+            captureAdUserAction.captureAdUserAction(obj2);
+            const tmp18Result = captureAdUserAction;
+            const obj3 = {
+              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+              adCreativeId: quest.id,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
+              surfaceId: questContent,
+              sourceQuestContent,
+              impressionId: getQuestImpressionId(),
+              questContentPosition,
+            };
+            captureAdUserAction.captureAdUserAction(obj3);
+            const tmp18Result2 = captureAdUserAction;
+          } else {
+            const obj = {
+              questId: quest.id,
+              questContent,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
+              questContentPosition,
+              sourceQuestContent,
+            };
+            trackQuestContentClickedWithImpression(obj);
+            const obj4 = {
+              questId: quest.id,
+              questContent,
+              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
+              questContentPosition,
+              sourceQuestContent,
+            };
+            trackQuestContentClickedWithImpression(obj4);
+          }
+          openURLDefault(tmp);
+          obj7 = AdAnalyticsInterfaceExperiment;
+        }
+      }, items);
+    };
+let closure_6 = tmp3;
+ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isClaimingReward) => {
-      let first2;
-      let questContent;
-      let tmp9;
-      let obj = isClaimingReward(questContent[4]);
-      const cResult = obj.c(14);
+      const cResult = require("c").c(14);
       isClaimingReward = isClaimingReward.isClaimingReward;
+      _require = isClaimingReward;
       const isFetchingRewardCode = isClaimingReward.isFetchingRewardCode;
       questContent = isClaimingReward.questContent;
       const quest = isClaimingReward.quest;
       const rewardCode = isClaimingReward.rewardCode;
       const preview = isClaimingReward.preview;
-      let obj2 = preview;
       const tmp2 = rewardCode(preview.useState(false), 2);
       const hasError = tmp2[0];
-      const tmp4 = tmp2[1];
-      let closure_7 = tmp4;
+      closure_7 = tmp4;
       const tmp5 = rewardCode(preview.useState(false), 2);
       const first1 = tmp5[0];
-      let closure_9 = tmp5[1];
+      closure_9 = tmp5[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         _require = quest(function* (arg0, arg1, arg2) {
-          let obj2;
-          let v3;
-          closure_0 = arg0;
-          let closure_1 = arg1;
-          let closure_2 = arg2;
-          if (v3 === 2) {
+          closure_3 = tmp3;
+          closure_1_9(true);
+          yield closure_0(questContent[5]).claimQuestReward(closure_0, closure_1, closure_2);
+          if (1 === tmp7) {
+            c6 = 0;
+            v3(true);
+            closure_1_9(false);
             v3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let c6;
-            try {
-              v3 = 2;
-              if (0 === c4) {
-                if (arg0 === 1) {
-                  v3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  v3 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  let closure_3 = tmp;
-                  c6 = 1;
-                  closure_1_9(true);
-                  c4 = 2;
-                  v3 = 1;
-                  const obj5 = { value: obj2.claimQuestReward(closure_0, closure_1, closure_2), done: false };
-                  obj2 = closure_0(questContent[5]);
-                  return obj5;
-                }
-              } else {
-                if (1 === tmp4) {
-                  c6 = 0;
-                  v3(true);
-                  closure_1_9(false);
-                } else if (arg0 === 1) {
-                  v3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c6 = 0;
-                  v3 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  v3(false);
-                  closure_1_9(false);
-                  c6 = 0;
-                }
-                v3 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp23) {
-              let closure_5 = tmp23;
-              if (0 === c6) {
-                v3 = 3;
-                throw tmp23;
-              } else {
-                c4 = 1;
-              }
-            }
+          } else if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            v3(false);
+            closure_1_9(false);
+            c6 = 0;
           }
+          return value;
         });
         const fn = function () {
-          return closure_0(...arguments);
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         };
         cResult[0] = fn;
-        first2 = fn;
+        let first2 = fn;
       } else {
         first2 = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v(arg0) {
           try {
-            const obj = QuestActionCreators;
-            const questRewardCode = obj.fetchQuestRewardCode(arg0);
+            const questRewardCode = QuestActionCreators.fetchQuestRewardCode(arg0);
           } catch (err) {
             closure_7(true);
           }
         };
         cResult[1] = fn2;
-        tmp9 = fn2;
+        let tmp9 = fn2;
       } else {
         tmp9 = cResult[1];
       }
-      let closure_11 = tmp9;
+      closure_11 = tmp9;
       if (cResult[2] === first1) {
         if (cResult[3] === hasError) {
           if (cResult[4] === isClaimingReward) {
@@ -140,19 +253,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[6] === preview) {
                 if (cResult[7] === quest) {
                   if (cResult[8] === questContent) {
-                    let tmp10;
-                    let tmp11;
-                    let tmp13;
                     if (cResult[9] === rewardCode) {
-                      tmp10 = cResult[10];
-                      tmp11 = cResult[11];
+                      let tmp10 = cResult[10];
+                      let tmp11 = cResult[11];
                     }
-                    const effect = obj2.useEffect(tmp10, tmp11);
+                    const effect = preview.useEffect(tmp10, tmp11);
                     if (cResult[12] !== hasError) {
-                      let obj3 = { claimCode: first2, fetchCode: tmp9, hasError, setHasError: tmp4 };
+                      const obj3 = { claimCode: first2, fetchCode: tmp9, hasError, setHasError: tmp4 };
                       cResult[12] = hasError;
                       cResult[13] = obj3;
-                      tmp13 = obj3;
+                      let tmp13 = obj3;
                     } else {
                       tmp13 = cResult[13];
                     }
@@ -166,28 +276,58 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class L {
         constructor() {
-          const tmp =
-            true === preview || null != rewardCode || first || isClaimingReward || first1 || isFetchingRewardCode;
+          tmp = true === preview;
           if (!tmp) {
-            closure_7(false);
-            const userStatus = quest.userStatus;
-            let claimedAt;
+            tmp2 = rewardCode;
+            tmp3 = null;
+            tmp = null != rewardCode;
+          }
+          if (!tmp) {
+            tmp = closure_6;
+          }
+          if (!tmp) {
+            tmp = closure_0;
+          }
+          if (!tmp) {
+            tmp = closure_8;
+          }
+          if (!tmp) {
+            tmp = isFetchingRewardCode;
+          }
+          if (!tmp) {
+            tmp4 = closure_7;
+            flag = false;
+            tmp5 = closure_7(false);
+            tmp6 = quest;
+            userStatus = quest.userStatus;
+            tmp7 = null;
+            claimedAt = undefined;
             if (userStatus != null) {
               claimedAt = userStatus.claimedAt;
             }
             if (null == claimedAt) {
-              first2(quest.id, QuestTypes.QuestRewardCodePlatforms.CROSS_PLATFORM, questContent);
+              tmp12 = closure_10;
+              tmp13 = closure_0;
+              tmp14 = closure_2;
+              tmp15 = questContent;
+              tmp16 = closure_10(
+                tmp6.id,
+                closure_0(closure_2[6]).QuestRewardCodePlatforms.CROSS_PLATFORM,
+                questContent,
+              );
             } else {
-              const userStatus2 = quest.userStatus;
-              let claimedAt1;
+              userStatus2 = tmp6.userStatus;
+              claimedAt1 = undefined;
               if (userStatus2 != null) {
                 claimedAt1 = userStatus2.claimedAt;
               }
               if (null != claimedAt1) {
-                closure_11(quest.id);
+                tmp10 = closure_11;
+                tmp11 = closure_11(tmp6.id);
               }
             }
           }
+          return;
         }
       }
       const items = [
@@ -227,87 +367,39 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const setHasError = tmp[1];
       const tmp4 = rewardCode(preview.useState(false), 2);
       const first1 = tmp4[0];
-      let closure_9 = tmp4[1];
-      const useCallback = preview.useCallback;
-      let closure_0 = quest(function* (arg0, arg1, arg2) {
-        let obj2;
-        let v3;
-        closure_0 = arg0;
-        let closure_1 = arg1;
-        let closure_2 = arg2;
-        if (v3 === 2) {
+      closure_9 = tmp4[1];
+      closure_0 = quest(function* (arg0, arg1, arg2) {
+        closure_3 = tmp3;
+        closure_1_9(true);
+        yield closure_0(questContent[5]).claimQuestReward(closure_0, closure_1, closure_2);
+        if (1 === tmp7) {
+          c6 = 0;
+          v3(true);
+          closure_1_9(false);
           v3 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          let c6;
-          try {
-            v3 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                v3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                v3 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
-              } else {
-                let closure_3 = tmp;
-                c6 = 1;
-                closure_1_9(true);
-                c4 = 2;
-                v3 = 1;
-                const obj5 = { value: obj2.claimQuestReward(closure_0, closure_1, closure_2), done: false };
-                obj2 = closure_0(questContent[5]);
-                return obj5;
-              }
-            } else {
-              if (1 === tmp4) {
-                c6 = 0;
-                v3(true);
-                closure_1_9(false);
-              } else if (arg0 === 1) {
-                v3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                v3 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                v3(false);
-                closure_1_9(false);
-                c6 = 0;
-              }
-              v3 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          } catch (tmp23) {
-            let closure_5 = tmp23;
-            if (0 === c6) {
-              v3 = 3;
-              throw tmp23;
-            } else {
-              c4 = 1;
-            }
-          }
+        } else if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          v3(false);
+          closure_1_9(false);
+          c6 = 0;
         }
+        return value;
       });
-      const claimCode = useCallback(function () {
-        return closure_0(...arguments);
+      const claimCode = preview.useCallback(function () {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       }, []);
       const fetchCode = preview.useCallback((arg0) => {
         try {
-          const obj = QuestActionCreators;
-          const questRewardCode = obj.fetchQuestRewardCode(arg0);
+          const questRewardCode = QuestActionCreators.fetchQuestRewardCode(arg0);
         } catch (err) {
           setHasError(true);
         }
@@ -325,8 +417,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         preview,
       ];
       const effect = preview.useEffect(() => {
-        const tmp =
-          true === preview || null != rewardCode || hasError || isClaimingReward || first1 || isFetchingRewardCode;
+        let tmp = true === preview;
+        if (!tmp) {
+          tmp = null != rewardCode;
+        }
+        if (!tmp) {
+          tmp = hasError;
+        }
+        if (!tmp) {
+          tmp = closure_0;
+        }
+        if (!tmp) {
+          tmp = first1;
+        }
+        if (!tmp) {
+          tmp = isFetchingRewardCode;
+        }
         if (!tmp) {
           setHasError(false);
           const userStatus = quest.userStatus;
@@ -350,190 +456,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       return { claimCode, fetchCode, hasError, setHasError };
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (quest) => {
-      let questContent;
-      let obj = quest(questContent[4]);
-      const cResult = obj.c(8);
-      quest = quest.quest;
-      const redemptionLink = quest.redemptionLink;
-      questContent = quest.questContent;
-      const questContentPosition = quest.questContentPosition;
-      const sourceQuestContent = quest.sourceQuestContent;
-      let obj2 = quest(questContent[7]);
-      const trackQuestContentClickedWithImpression = obj2.useTrackQuestContentClickedWithImpression();
-      let obj3 = quest(questContent[8]);
-      const getQuestImpressionId = obj3.useGetQuestImpressionId();
-      if (cResult[0] === getQuestImpressionId) {
-        if (cResult[1] === quest.id) {
-          if (cResult[2] === questContent) {
-            if (cResult[3] === questContentPosition) {
-              if (cResult[4] === redemptionLink) {
-                if (cResult[5] === sourceQuestContent) {
-                  let tmp4;
-                  if (cResult[6] === trackQuestContentClickedWithImpression) {
-                    tmp4 = cResult[7];
-                  }
-                  return tmp4;
-                }
-              }
-            }
-          }
-        }
-      }
-      const fn = function n() {
-        if (null != redemptionLink) {
-          const obj5 = AdAnalyticsInterfaceExperiment;
-          if (
-            obj5.shouldMigrateToAdAnalyticsInterface(
-              AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
-              "quest_reward_code_redemption_link",
-            )
-          ) {
-            const obj2 = {
-              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-              adCreativeId: quest.id,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
-              surfaceId: questContent,
-              sourceQuestContent,
-              impressionId: getQuestImpressionId(),
-              questContentPosition,
-            };
-            const captureAdUserAction = captureAdUserAction3.captureAdUserAction;
-            captureAdUserAction3;
-            captureAdUserAction(obj2);
-            const obj3 = {
-              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-              adCreativeId: quest.id,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
-              surfaceId: questContent,
-              sourceQuestContent,
-              impressionId: getQuestImpressionId(),
-              questContentPosition,
-            };
-            const captureAdUserAction2 = captureAdUserAction3.captureAdUserAction;
-            captureAdUserAction3;
-            captureAdUserAction2(obj3);
-          } else {
-            const obj = {
-              questId: quest.id,
-              questContent,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
-              questContentPosition,
-              sourceQuestContent,
-            };
-            trackQuestContentClickedWithImpression(obj);
-            const obj4 = {
-              questId: quest.id,
-              questContent,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
-              questContentPosition,
-              sourceQuestContent,
-            };
-            trackQuestContentClickedWithImpression(obj4);
-          }
-          openURLDefault(tmp);
-        }
-      };
-      cResult[0] = getQuestImpressionId;
-      cResult[1] = quest.id;
-      cResult[2] = questContent;
-      cResult[3] = questContentPosition;
-      cResult[4] = redemptionLink;
-      cResult[5] = sourceQuestContent;
-      cResult[6] = trackQuestContentClickedWithImpression;
-      cResult[7] = fn;
-      tmp4 = fn;
-    }
-  : (quest) => {
-      quest = quest.quest;
-      const redemptionLink = quest.redemptionLink;
-      const questContent = quest.questContent;
-      const questContentPosition = quest.questContentPosition;
-      const sourceQuestContent = quest.sourceQuestContent;
-      let obj = quest(questContent[7]);
-      const trackQuestContentClickedWithImpression = obj.useTrackQuestContentClickedWithImpression();
-      let obj2 = quest(questContent[8]);
-      const getQuestImpressionId = obj2.useGetQuestImpressionId();
-      const items = [
-        quest.id,
-        questContent,
-        questContentPosition,
-        sourceQuestContent,
-        trackQuestContentClickedWithImpression,
-        getQuestImpressionId,
-        redemptionLink,
-      ];
-      return trackQuestContentClickedWithImpression.useCallback(() => {
-        if (null != redemptionLink) {
-          const obj5 = AdAnalyticsInterfaceExperiment;
-          if (
-            obj5.shouldMigrateToAdAnalyticsInterface(
-              AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
-              "quest_reward_code_redemption_link",
-            )
-          ) {
-            const obj2 = {
-              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-              adCreativeId: quest.id,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
-              surfaceId: questContent,
-              sourceQuestContent,
-              impressionId: getQuestImpressionId(),
-              questContentPosition,
-            };
-            const captureAdUserAction = captureAdUserAction3.captureAdUserAction;
-            captureAdUserAction3;
-            captureAdUserAction(obj2);
-            const obj3 = {
-              type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
-              adCreativeType: AdCreativeType.AdCreativeType.QUEST,
-              adCreativeId: quest.id,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
-              surfaceId: questContent,
-              sourceQuestContent,
-              impressionId: getQuestImpressionId(),
-              questContentPosition,
-            };
-            const captureAdUserAction2 = captureAdUserAction3.captureAdUserAction;
-            captureAdUserAction3;
-            captureAdUserAction2(obj3);
-          } else {
-            const obj = {
-              questId: quest.id,
-              questContent,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.REDEEM_REWARD,
-              questContentPosition,
-              sourceQuestContent,
-            };
-            trackQuestContentClickedWithImpression(obj);
-            const obj4 = {
-              questId: quest.id,
-              questContent,
-              questContentCTA: AnalyticsTypes.QuestContentCTA.VISIT_REDEMPTION_LINK,
-              questContentPosition,
-              sourceQuestContent,
-            };
-            trackQuestContentClickedWithImpression(obj4);
-          }
-          openURLDefault(tmp);
-        }
-      }, items);
-    };
-let closure_6 = tmp3;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/hooks/RewardCodeClaimHooks.tsx");
+
+export const useClaimOrFetchRewardCode = tmp2;
+export const useHandleRedemptionLinkClick = tmp3;
+export const useClaimRewardCodePrimaryCtaClickHandler = ReactCompilerGating.isReactCompilerEnabled()
   ? (claimCode) => {
-      let hasError;
-      let questContentCTA;
-      let questContentPosition;
-      let userStatus2;
-      let obj = claimCode(hasError[4]);
-      const cResult = obj.c(15);
+      const cResult = claimCode(hasError[4]).c(15);
       claimCode = claimCode.claimCode;
       const fetchCode = claimCode.fetchCode;
       hasError = claimCode.hasError;
@@ -546,10 +476,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (undefined === questContentCTA) {
         questContentCTA = tmp(tmp2[13]).QuestContentCTA.GET_REWARD_CODE;
       }
+      let obj = claimCode(hasError[4]);
+      const trackQuestContentClickedWithImpression = claimCode(hasError[7]).useTrackQuestContentClickedWithImpression();
       const tmpResult = claimCode(hasError[7]);
-      const trackQuestContentClickedWithImpression = tmpResult.useTrackQuestContentClickedWithImpression();
-      const tmpResult2 = claimCode(hasError[8]);
-      const getQuestImpressionId = tmpResult2.useGetQuestImpressionId();
+      const getQuestImpressionId = claimCode(hasError[8]).useGetQuestImpressionId();
       const tmp6 = questContentPosition(claimCode);
       closure_12 = tmp6;
       if (cResult[0] === claimCode) {
@@ -561,22 +491,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[6] === quest.id) {
                     let userStatus = quest.userStatus;
                     let claimedAt;
-                    const tmp7 = cResult[7];
                     if (userStatus != null) {
                       claimedAt = userStatus.claimedAt;
                     }
-                    if (tmp7 === claimedAt) {
+                    if (cResult[7] === claimedAt) {
                       if (cResult[8] === questContent) {
                         if (cResult[9] === questContentCTA) {
                           if (cResult[10] === questContentPosition) {
                             if (cResult[11] === redemptionLink) {
                               if (cResult[12] === sourceQuestContent) {
-                                let tmp10;
                                 if (cResult[13] === trackQuestContentClickedWithImpression) {
-                                  tmp10 = cResult[14];
+                                  let tmp9 = cResult[14];
                                 }
                                 const userStatus3 = quest.userStatus;
-                                return tmp10;
+                                return tmp9;
                               }
                             }
                           }
@@ -612,9 +540,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             fetchCode(quest.id);
           } else {
             claimCode(quest.id, QuestTypes.QuestRewardCodePlatforms.CROSS_PLATFORM, questContent);
-            const obj3 = AdAnalyticsInterfaceExperiment;
             if (
-              obj3.shouldMigrateToAdAnalyticsInterface(
+              obj4.shouldMigrateToAdAnalyticsInterface(
                 AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
                 "quest_reward_code_primary_cta",
               )
@@ -629,9 +556,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 impressionId: getQuestImpressionId(),
                 questContentPosition,
               };
-              const captureAdUserAction = captureAdUserAction3.captureAdUserAction;
-              captureAdUserAction3;
-              captureAdUserAction(obj2);
+              captureAdUserAction.captureAdUserAction(obj2);
+              const tmp23Result = captureAdUserAction;
             } else {
               const obj = {
                 questId: quest.id,
@@ -642,6 +568,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               };
               trackQuestContentClickedWithImpression(obj);
             }
+            obj4 = AdAnalyticsInterfaceExperiment;
           }
         } else {
           if (null != redemptionLink) {
@@ -658,10 +585,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = sourceQuestContent;
       cResult[13] = trackQuestContentClickedWithImpression;
       cResult[14] = fn;
-      tmp10 = fn;
+      tmp9 = fn;
     }
   : (claimCode) => {
-      let userStatus;
       claimCode = claimCode.claimCode;
       const fetchCode = claimCode.fetchCode;
       const hasError = claimCode.hasError;
@@ -675,16 +601,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const questContentPosition = claimCode.questContentPosition;
       const redemptionLink = claimCode.redemptionLink;
       const sourceQuestContent = claimCode.sourceQuestContent;
+      const trackQuestContentClickedWithImpression = claimCode(hasError[7]).useTrackQuestContentClickedWithImpression();
       let obj = claimCode(hasError[7]);
-      const trackQuestContentClickedWithImpression = obj.useTrackQuestContentClickedWithImpression();
-      let obj2 = claimCode(hasError[8]);
-      const getQuestImpressionId = obj2.useGetQuestImpressionId();
+      const getQuestImpressionId = claimCode(hasError[8]).useGetQuestImpressionId();
       const tmp5 = GET_REWARD_CODE(claimCode);
       closure_12 = tmp5;
       const items = [claimCode, fetchCode, hasError, onDismiss, , , , , , , , , ,];
       ({ id: arr[4], userStatus } = quest);
       let claimedAt;
-      const useCallback = questContent.useCallback;
       if (userStatus != null) {
         claimedAt = userStatus.claimedAt;
       }
@@ -697,7 +621,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items[11] = redemptionLink;
       items[12] = sourceQuestContent;
       items[13] = tmp5;
-      return useCallback(() => {
+      return questContent.useCallback(() => {
         if (hasError) {
           const userStatus = quest.userStatus;
           let claimedAt;
@@ -708,9 +632,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             fetchCode(quest.id);
           } else {
             claimCode(quest.id, QuestTypes.QuestRewardCodePlatforms.CROSS_PLATFORM, questContent);
-            const obj3 = AdAnalyticsInterfaceExperiment;
             if (
-              obj3.shouldMigrateToAdAnalyticsInterface(
+              obj4.shouldMigrateToAdAnalyticsInterface(
                 AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
                 "quest_reward_code_primary_cta",
               )
@@ -725,9 +648,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 impressionId: getQuestImpressionId(),
                 questContentPosition,
               };
-              const captureAdUserAction = captureAdUserAction3.captureAdUserAction;
-              captureAdUserAction3;
-              captureAdUserAction(obj2);
+              captureAdUserAction.captureAdUserAction(obj2);
+              const tmp23Result = captureAdUserAction;
             } else {
               const obj = {
                 questId: quest.id,
@@ -738,6 +660,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               };
               trackQuestContentClickedWithImpression(obj);
             }
+            obj4 = AdAnalyticsInterfaceExperiment;
           }
         } else {
           if (null != redemptionLink) {
@@ -747,8 +670,3 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-const result = size.fileFinishedImporting("modules/quests/hooks/RewardCodeClaimHooks.tsx");
-
-export const useClaimOrFetchRewardCode = tmp2;
-export const useHandleRedemptionLinkClick = tmp3;
-export const useClaimRewardCodePrimaryCtaClickHandler = tmp4;

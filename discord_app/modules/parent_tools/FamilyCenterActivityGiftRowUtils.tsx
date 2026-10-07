@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx
-import intl3 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import _modDef2521 from "FamilyCenter.messages.js";
 import _mod4110 from "../../../_runtime/metro/04110__.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
@@ -19,62 +19,42 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
   };
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
-  const dateTimeFormat = new Intl.DateTimeFormat(intl3.intl.currentLocale, { month: "short", day: "numeric" });
-  const format = dateTimeFormat.format;
-  const obj = _mod4110;
-  return format(obj.parseISO(claimedAt));
+  const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
+  return dateTimeFormat.format(_mod4110.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
-  let claimedAt;
-  let format;
-  let format2;
-  let formatToPlainStringResult;
-  let gifterName;
-  let offeredAt;
-  let price;
-  let tmp8Result;
-  let tmp8Result2;
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
   let formatPriceResult = null;
-  claimed = claimed.claimed;
   if (null != price) {
-    const obj = PriceUtils;
-    formatPriceResult = obj.formatPrice(price.amount, price.currency);
+    formatPriceResult = PriceUtils.formatPrice(price.amount, price.currency);
   }
   if (null != formatPriceResult) {
-    let formatToPlainStringResult1;
     if (null != gifterName) {
-      const intl = intl3.intl;
+      const intl = util.intl;
       const obj2 = { price: formatPriceResult, username: gifterName };
-      formatToPlainStringResult = intl.formatToPlainString(_modDef2521["o44n/1"], obj2);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef2521["o44n/1"], obj2);
     }
     const items = [formatToPlainStringResult];
-    const intl2 = intl3.intl;
+    const intl2 = util.intl;
     const formatToPlainString = intl2.formatToPlainString;
     const tmp11 = _modDef2521;
-    if (claimed) {
-      const kDyllq = tmp11.kDyllq;
+    if (claimed.claimed) {
       if (claimedAt == null) {
         claimedAt = offeredAt;
       }
+      const obj3 = { date: null };
       const _Intl2 = Intl;
-      const self3 = this;
-      const self4 = this;
-      const obj3 = { date: format2(tmp8Result.parseISO(claimedAt)) };
-      const dateTimeFormat = new Intl.DateTimeFormat(intl3.intl.currentLocale, { month: "short", day: "numeric" });
-      format2 = dateTimeFormat.format;
-      tmp8Result = _mod4110;
-      formatToPlainStringResult1 = formatToPlainString(kDyllq, obj3);
+      const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
+      obj3.date = dateTimeFormat.format(_mod4110.parseISO(claimedAt));
+      let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj3);
+      const tmp8Result = _mod4110;
     } else {
+      const obj4 = { date: null };
       const _Intl = Intl;
-      const gAG45y = tmp11.gAG45y;
-      const self = this;
-      const self2 = this;
-      const obj4 = { date: format(tmp8Result2.parseISO(offeredAt)) };
-      const dateTimeFormat1 = new Intl.DateTimeFormat(intl3.intl.currentLocale, { month: "short", day: "numeric" });
-      format = dateTimeFormat1.format;
-      tmp8Result2 = _mod4110;
-      formatToPlainStringResult1 = formatToPlainString(gAG45y, obj4);
+      const dateTimeFormat1 = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
+      obj4.date = dateTimeFormat1.format(_mod4110.parseISO(offeredAt));
+      formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj4);
+      const tmp8Result2 = _mod4110;
     }
     items[1] = formatToPlainStringResult1;
     const _Boolean = Boolean;

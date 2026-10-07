@@ -1,26 +1,18 @@
 // discord_app/design/components/Modal/native/ModalFloatingAction.native.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-let _require, importDefault, isVisible, set;
-
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
 let closure_3 = ["isVisible", "floatingBackgroundColor"];
-({ StyleSheet: metroRequire, View: metroImportDefault } = react_native);
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+get_ActivityIndicator = fn(17);
+({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
 let closure_10 = createStyles.createStyles({
   floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 },
   spacer: { height: 96 },
@@ -31,317 +23,283 @@ const __initData = {
 const __initData2 = {
   code: "function ModalFloatingActionNativeTsx2(){const{interpolate,sharedValue,floatingBackgroundColor,useReducedMotion}=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};}",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isVisible) => {
-      let borderBottomColor;
-      let closure_1;
-      let enabled;
-      let items1;
-      let sharedValue;
-      let tmp4;
-      const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(29);
+      const cResult = require("c").c(29);
       if (cResult[0] !== isVisible) {
         isVisible = isVisible.isVisible;
         importDefault = isVisible;
         const floatingBackgroundColor = isVisible.floatingBackgroundColor;
         _require = floatingBackgroundColor;
         const tmp9 = _objectWithoutProperties(isVisible, enabled);
-        let num = 0;
         cResult[0] = isVisible;
         cResult[1] = tmp9;
         cResult[2] = floatingBackgroundColor;
         cResult[3] = isVisible;
-        tmp4 = tmp9;
+        let tmp4 = tmp9;
       } else {
         tmp4 = cResult[1];
         _require = cResult[2];
         importDefault = cResult[3];
       }
       const tmp10 = closure_10();
+      let obj = require("c");
       let num5 = 0;
-      const useSharedValue = tmp(sharedValue[7]).useSharedValue;
-      tmp(sharedValue[7]);
       if (tmp6) {
         num5 = 1;
       }
-      sharedValue = useSharedValue(num5);
-      enabled = react.useContext(tmp(tmp2[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
-      const tmp14 = require("useSafeAreaInsets")();
+      sharedValue = require("ReanimatedRexport").useSharedValue(num5);
+      enabled = noop.useContext(tmp(tmp2[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
+      const tmp13 = require("useSafeAreaInsets")();
       if (cResult[4] === tmp6) {
-        let tmp15;
-        let tmp16;
-        let tmp21;
         if (cResult[5] === sharedValue) {
-          tmp15 = cResult[6];
-          tmp16 = cResult[7];
+          let tmp14 = cResult[6];
+          let tmp15 = cResult[7];
         }
-        const effect = react.useEffect(tmp15, tmp16);
+        const effect = noop.useEffect(tmp14, tmp15);
         const fn2 = function x() {
-          let items;
-          let items1;
-          let obj2;
           const obj = {
-            opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0, 1]),
+            opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]),
             borderBottomColor,
             borderBottomWidth: 16,
-            transform: items1,
+            transform: null,
           };
-          obj2 = ReanimatedRexport;
-          const interpolate = ReanimatedRexport.interpolate;
           let num = 0;
-          ReanimatedRexport;
-          const value = sharedValue.get();
+          value = sharedValue.get();
           if (enabled) {
             num = 0.999999;
           }
-          const obj3 = { translateY: interpolate(value, items, [32, 0]) };
-          items = [num, 1];
-          items1 = [obj3];
+          const obj4 = { translateY: null };
+          const items = [num, 1];
+          obj4.translateY = ReanimatedRexport.interpolate(value, items, [32, 0]);
+          const items1 = [obj4];
+          obj.transform = items1;
           return obj;
         };
-        let obj3 = {
-          interpolate: tmp(sharedValue[7]).interpolate,
+        let obj2 = {
+          interpolate: tmp(tmp2[7]).interpolate,
           sharedValue,
           floatingBackgroundColor: tmp5,
           useReducedMotion: enabled,
         };
-        const useAnimatedStyle = tmp(sharedValue[7]).useAnimatedStyle;
-        tmp(sharedValue[7]);
-        fn2.__closure = obj3;
+        fn2.__closure = obj2;
         fn2.__workletHash = 1679390676673;
         fn2.__initData = __initData;
-        const animatedStyle = useAnimatedStyle(fn2);
-        if (cResult[8] !== tmp14.bottom) {
-          const obj4 = { paddingBottom: tmp14.bottom };
-          cResult[8] = tmp14.bottom;
+        const animatedStyle = tmp(tmp2[7]).useAnimatedStyle(fn2);
+        if (cResult[8] !== tmp13.bottom) {
+          let obj4 = { paddingBottom: tmp13.bottom };
+          cResult[8] = tmp13.bottom;
           cResult[9] = obj4;
-          tmp21 = obj4;
+          let tmp19 = obj4;
         } else {
-          tmp21 = cResult[9];
+          tmp19 = cResult[9];
         }
         if (cResult[10] === animatedStyle) {
           if (cResult[11] === tmp10.floating) {
-            let tmp22;
-            let tmp23;
-            if (cResult[12] === tmp21) {
-              tmp22 = cResult[13];
+            if (cResult[12] === tmp19) {
+              let tmp20 = cResult[13];
             }
             let str = "none";
             if (tmp6) {
               str = "auto";
             }
             if (cResult[14] !== tmp5) {
-              const obj5 = require("../../../../../_runtime/metro/00683__.js")(tmp5);
-              const alphaResult = obj5.alpha(0);
-              const hexResult = alphaResult.hex();
+              const obj7 = tmp12(tmp2[12])(tmp5);
+              const hexResult = tmp12(tmp2[12])(tmp5).alpha(0).hex();
               cResult[14] = tmp5;
               cResult[15] = hexResult;
-              tmp23 = hexResult;
+              let tmp21 = hexResult;
+              const alphaResult = tmp12(tmp2[12])(tmp5).alpha(0);
             } else {
-              tmp23 = cResult[15];
+              tmp21 = cResult[15];
             }
             if (cResult[16] === tmp5) {
-              let tmp25;
-              let tmp27;
-              let tmp28;
-              let tmp32;
-              if (cResult[17] === tmp23) {
-                tmp25 = cResult[18];
+              if (cResult[17] === tmp21) {
+                let tmp23 = cResult[18];
               }
               const _Symbol = Symbol;
               if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
                 let items = [0, 0.5];
                 cResult[19] = items;
-                tmp27 = items;
+                let tmp25 = items;
               } else {
-                tmp27 = cResult[19];
+                tmp25 = cResult[19];
               }
-              if (cResult[20] !== tmp25) {
-                const obj6 = { colors: tmp25, locations: tmp27, style: closure_6.absoluteFill };
-                const tmp31 = closure_8(require("LinearGradient"), obj6);
-                cResult[20] = tmp25;
-                cResult[21] = tmp31;
-                tmp28 = tmp31;
+              if (cResult[20] !== tmp23) {
+                const obj5 = { colors: tmp23, locations: tmp25, style: closure_6.absoluteFill };
+                const tmp29 = closure_8(tmp12(tmp2[13]), obj5);
+                cResult[20] = tmp23;
+                cResult[21] = tmp29;
+                let tmp26 = tmp29;
               } else {
-                tmp28 = cResult[21];
+                tmp26 = cResult[21];
               }
               if (cResult[22] !== tmp4) {
-                const obj7 = { variant: "primary" };
-                const ModalActionButton = tmp(tmp2[14]).ModalActionButton;
+                const obj6 = {};
                 const merged = Object.assign(tmp4);
-                const tmp37 = closure_8(ModalActionButton, obj7);
+                obj6.variant = "primary";
+                const tmp35 = closure_8(tmp(tmp2[14]).ModalActionButton, obj6);
                 cResult[22] = tmp4;
-                cResult[23] = tmp37;
-                tmp32 = tmp37;
+                cResult[23] = tmp35;
+                let tmp30 = tmp35;
               } else {
-                tmp32 = cResult[23];
+                tmp30 = cResult[23];
               }
-              if (cResult[24] === tmp28) {
-                if (cResult[25] === tmp32) {
-                  if (cResult[26] === tmp22) {
-                    let tmp38;
+              if (cResult[24] === tmp26) {
+                if (cResult[25] === tmp30) {
+                  if (cResult[26] === tmp20) {
                     if (cResult[27] === str) {
-                      tmp38 = cResult[28];
+                      let tmp36 = cResult[28];
                     }
-                    return tmp38;
+                    return tmp36;
                   }
                 }
               }
-              const obj8 = { style: tmp22, pointerEvents: str, children: items1 };
-              items1 = [tmp28, tmp32];
-              const tmp40 = closure_9(require("ReanimatedRexport").View, obj8);
-              cResult[24] = tmp28;
-              cResult[25] = tmp32;
-              cResult[26] = tmp22;
+              const obj8 = { style: tmp20, pointerEvents: str, children: null };
+              let items1 = [tmp26, tmp30];
+              obj8.children = items1;
+              const tmp38 = closure_9(tmp12(tmp2[7]).View, obj8);
+              cResult[24] = tmp26;
+              cResult[25] = tmp30;
+              cResult[26] = tmp20;
               cResult[27] = str;
-              cResult[28] = tmp40;
-              tmp38 = tmp40;
+              cResult[28] = tmp38;
+              tmp36 = tmp38;
             }
-            const items2 = [tmp23, tmp5];
+            const items2 = [tmp21, tmp5];
             cResult[16] = tmp5;
-            cResult[17] = tmp23;
+            cResult[17] = tmp21;
             cResult[18] = items2;
-            tmp25 = items2;
+            tmp23 = items2;
           }
         }
-        const items3 = [animatedStyle, tmp10.floating, tmp21];
+        const items3 = [animatedStyle, tmp10.floating, tmp19];
         cResult[10] = animatedStyle;
         cResult[11] = tmp10.floating;
-        cResult[12] = tmp21;
+        cResult[12] = tmp19;
         cResult[13] = items3;
-        tmp22 = items3;
+        tmp20 = items3;
+        const tmpResult2 = tmp(tmp2[7]);
       }
       const fn = function y() {
         let num = 0;
-        set = sharedValue.set;
-        const withSpring = spring.withSpring;
-        spring;
         if (closure_1) {
           num = 1;
         }
-        const result = set(withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
+        const result = sharedValue.set(spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
       };
       const items4 = [tmp6, sharedValue];
       cResult[4] = tmp6;
       cResult[5] = sharedValue;
       cResult[6] = fn;
       cResult[7] = items4;
-      tmp16 = items4;
-      tmp15 = fn;
+      tmp15 = items4;
+      tmp14 = fn;
+      const tmpResult = require("ReanimatedRexport");
     }
   : (isVisible) => {
-      let items1;
-      let items2;
-      let items3;
-      let str;
       isVisible = isVisible.isVisible;
       const floatingBackgroundColor = isVisible.floatingBackgroundColor;
       const merged = Object.assign(isVisible, Object.assign({ isVisible: 0, floatingBackgroundColor: 0 }));
       let sharedValue;
       let enabled;
-      const tmp4 = sharedValue;
-      let num = 0;
       const tmp2 = closure_10();
-      const useSharedValue = isVisible(sharedValue[7]).useSharedValue;
-      isVisible(sharedValue[7]);
+      let num = 0;
       if (isVisible) {
         num = 1;
       }
-      sharedValue = useSharedValue(num);
-      enabled = react.useContext(tmp3(tmp4[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
+      sharedValue = isVisible(sharedValue[7]).useSharedValue(num);
+      enabled = noop.useContext(tmp3(tmp4[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
       let items = [isVisible, sharedValue];
-      const tmp8 = floatingBackgroundColor(tmp4[9])();
-      const effect = react.useEffect(() => {
+      let obj = isVisible(sharedValue[7]);
+      const effect = noop.useEffect(() => {
         let num = 0;
-        set = sharedValue.set;
-        const withSpring = spring.withSpring;
-        spring;
         if (isVisible) {
           num = 1;
         }
-        const result = set(withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
+        const result = sharedValue.set(spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
       }, items);
+      const tmp7 = floatingBackgroundColor(sharedValue[9])();
       const fn = function y() {
-        let items;
-        let items1;
-        let obj2;
         const obj = {
-          opacity: obj2.interpolate(sharedValue.get(), [0, 1], [0, 1]),
+          opacity: ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], [0, 1]),
           borderBottomColor: floatingBackgroundColor,
           borderBottomWidth: 16,
-          transform: items1,
+          transform: null,
         };
-        obj2 = ReanimatedRexport;
-        const interpolate = ReanimatedRexport.interpolate;
         let num = 0;
-        ReanimatedRexport;
-        const value = sharedValue.get();
+        value = sharedValue.get();
         if (enabled) {
           num = 0.999999;
         }
-        const obj3 = { translateY: interpolate(value, items, [32, 0]) };
-        items = [num, 1];
-        items1 = [obj3];
+        const obj4 = { translateY: null };
+        const items = [num, 1];
+        obj4.translateY = ReanimatedRexport.interpolate(value, items, [32, 0]);
+        const items1 = [obj4];
+        obj.transform = items1;
         return obj;
       };
-      const tmp3Result = isVisible(tmp4[7]);
-      let obj = {
-        interpolate: tmp3(tmp4[7]).interpolate,
+      const tmp3Result = isVisible(sharedValue[7]);
+      fn.__closure = {
+        interpolate: isVisible(sharedValue[7]).interpolate,
         sharedValue,
         floatingBackgroundColor,
         useReducedMotion: enabled,
       };
-      fn.__closure = obj;
       fn.__workletHash = 14144713836194;
       fn.__initData = __initData2;
       const animatedStyle = tmp3Result.useAnimatedStyle(fn);
-      let obj2 = { style: items1, pointerEvents: str, children: items3 };
-      items1 = [animatedStyle, tmp2.floating, { paddingBottom: tmp8.bottom }];
-      str = "none";
-      const View = floatingBackgroundColor(tmp4[7]).View;
+      const obj3 = { style: null, pointerEvents: null, children: null };
+      let items1 = [animatedStyle, tmp2.floating, { paddingBottom: tmp7.bottom }];
+      obj3.style = items1;
+      let str = "none";
       if (isVisible) {
         str = "auto";
       }
-      let obj3 = { colors: items2, locations: [0, 0.5], style: closure_6.absoluteFill };
-      const tmp7Result = floatingBackgroundColor(tmp4[13]);
-      items2 = [,];
-      const obj5 = floatingBackgroundColor(tmp4[12])(floatingBackgroundColor);
-      const alphaResult = obj5.alpha(0);
-      items2[0] = alphaResult.hex();
-      items2[1] = floatingBackgroundColor;
-      items3 = [closure_8(tmp7Result, obj3)];
-      const obj4 = { variant: "primary" };
-      const ModalActionButton = tmp3(tmp4[14]).ModalActionButton;
+      obj3.pointerEvents = str;
+      let obj4 = { colors: null, locations: null, style: null };
+      let obj2 = {
+        interpolate: isVisible(sharedValue[7]).interpolate,
+        sharedValue,
+        floatingBackgroundColor,
+        useReducedMotion: enabled,
+      };
+      const tmp6Result = floatingBackgroundColor(sharedValue[13]);
+      const obj6 = floatingBackgroundColor(sharedValue[12])(floatingBackgroundColor);
+      const items2 = [
+        floatingBackgroundColor(sharedValue[12])(floatingBackgroundColor).alpha(0).hex(),
+        floatingBackgroundColor,
+      ];
+      obj4.colors = items2;
+      obj4.locations = [0, 0.5];
+      obj4.style = closure_6.absoluteFill;
+      const items3 = [closure_8(tmp6Result, obj4)];
+      const obj5 = {};
       const merged1 = Object.assign(merged);
-      items3[1] = closure_8(ModalActionButton, obj4);
-      return closure_9(View, obj2);
+      obj5.variant = "primary";
+      items3[1] = closure_8(isVisible(sharedValue[14]).ModalActionButton, obj5);
+      obj3.children = items3;
+      return closure_9(floatingBackgroundColor(sharedValue[7]).View, obj3);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
+
+export const ModalFloatingAction = tmp4;
+export const ModalFloatingActionSpacer = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp3;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       const tmp2 = closure_10();
       if (cResult[0] !== tmp2.spacer) {
         const obj2 = { style: tmp2.spacer };
-        const tmp6 = metroImportAll(metroImportDefault, obj2);
+        const tmp6 = closure_1_8(React5, obj2);
         cResult[0] = tmp2.spacer;
         cResult[1] = tmp6;
-        tmp3 = tmp6;
+        let tmp3 = tmp6;
       } else {
         tmp3 = cResult[1];
       }
       return tmp3;
     }
-  : () => {
-      const obj = { style: closure_10().spacer };
-      return metroImportAll(metroImportDefault, obj);
-    };
-let result = size.fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
-
-export const ModalFloatingAction = tmp4;
-export const ModalFloatingActionSpacer = tmp5;
+  : () => closure_1_8(React5, { style: closure_10().spacer });

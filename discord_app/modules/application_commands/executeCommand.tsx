@@ -1,5 +1,4 @@
 // discord_app/modules/application_commands/executeCommand.tsx
-import MessageConstants from "../messages/MessageConstants.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import UploadUtils from "../../utils/UploadUtils.tsx";
 import FileUtils from "../../utils/FileUtils.tsx";
@@ -8,42 +7,30 @@ import MessageQueue from "../../lib/MessageQueue.tsx";
 import InteractionActionCreatorsAll from "../interactions/InteractionActionCreators.tsx";
 import UserActionCreatorsAll from "../../actions/UserActionCreators.tsx";
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import ApplicationCommandStore from "ApplicationCommandStore.tsx";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const MessageQueueDefault = MessageQueue;
-let c15, c16, ok;
 
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-let obj = function _executeCommand() {
-  obj = _asyncToGenerator(async function (command) {
-    let c0;
-    let c1;
-    let c2;
-    let c3;
-    let c4;
-    let c6;
-    let commandOrigin;
-    let interactionLifecycleOptionsFactory;
-    let untranslatedName;
-    let value;
+require = fn;
+let closure_16 = async function _executeCommand(arg0) {
+  let source = arg0;
+  c15 = 0;
+  c16 = 0;
+  c13 = 0;
+  let iter = (async (arg0) => {
     if (c16 === 2) {
       c16 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
-      if (command === 1) {
+      if (arg0 === 1) {
         throw value;
-      } else if (command === 2) {
+      } else if (arg0 === 2) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
@@ -51,726 +38,750 @@ let obj = function _executeCommand() {
       }
     } else {
       while (true) {
-        let attachments;
-        let context;
-        let target_id;
-        let maxSizeCallback;
-        let sectionName;
-        let source;
-        let items;
-        let commandAttachmentDraftType;
-        let user;
-        let focused;
-        let closure_18;
-        let closure_19;
-        let closure_20;
-        let closure_21;
-        let closure_22;
-        let closure_23;
-        let closure_24;
-        let upload;
-        let length;
-        let closure_27;
-        let closure_28;
-        let closure_29;
-        let name2;
-        let obj25;
         c16 = 2;
         let tmp4 = c15;
         if (0 === c15) {
-          if (command === 1) {
+          if (arg0 === 1) {
             c16 = 3;
             throw value;
-          } else if (command === 2) {
+          } else if (arg0 === 2) {
             c16 = 3;
             let obj5 = { value, done: true };
             return obj5;
           } else {
-            attachments = tmp;
-            let closure_11 = tmp4;
-            command = undefined;
-            c1 = undefined;
-            context = undefined;
-            target_id = undefined;
-            maxSizeCallback = undefined;
-            commandOrigin = undefined;
-            sectionName = undefined;
-            interactionLifecycleOptionsFactory = undefined;
-            source = undefined;
+            closure_12 = tmp;
+            closure_11 = tmp4;
+            closure_139_0 = undefined;
+            closure_139_1 = undefined;
+            closure_139_2 = undefined;
+            closure_139_3 = undefined;
+            closure_139_4 = undefined;
+            closure_139_5 = undefined;
+            closure_139_6 = undefined;
+            closure_139_7 = undefined;
+            let source2;
             ({
-              command: c0,
-              optionValues: c1,
-              context: c2,
-              commandTargetId: c3,
-              maxSizeCallback: c4,
+              command: closure_139_0,
+              optionValues: closure_139_1,
+              context: closure_139_2,
+              commandTargetId: closure_139_3,
+              maxSizeCallback: closure_139_4,
               commandOrigin,
-            } = command);
+            } = source);
             if (commandOrigin === undefined) {
               commandOrigin = ApplicationCommandTypes.CommandOrigin.CHAT;
             }
-            ({ sectionName: c6, interactionLifecycleOptionsFactory } = command);
+            closure_139_5 = commandOrigin;
+            ({ sectionName: closure_139_6, interactionLifecycleOptionsFactory } = source);
             if (interactionLifecycleOptionsFactory === undefined) {
               interactionLifecycleOptionsFactory = displayInteractionLifecycleInChat;
             }
-            source = undefined;
-            commandOrigin = undefined;
-            items = undefined;
-            attachments = undefined;
-            commandAttachmentDraftType = undefined;
-            user = undefined;
-            focused = undefined;
-            value = undefined;
-            closure_18 = undefined;
-            closure_19 = undefined;
-            closure_20 = undefined;
-            closure_21 = undefined;
-            closure_22 = undefined;
-            closure_23 = undefined;
-            closure_24 = undefined;
-            upload = undefined;
-            length = undefined;
-            closure_27 = undefined;
-            closure_28 = undefined;
-            closure_29 = undefined;
-            name2 = undefined;
-            obj25 = undefined;
+            closure_139_7 = interactionLifecycleOptionsFactory;
+            source2 = source.source;
+            closure_139_9 = undefined;
+            closure_139_10 = undefined;
+            closure_139_11 = undefined;
+            closure_139_12 = undefined;
+            let commandAttachmentDraftType;
+            closure_139_14 = undefined;
+            closure_139_15 = undefined;
+            let channelId;
+            closure_139_17 = undefined;
+            closure_139_18 = undefined;
+            closure_139_19 = undefined;
+            closure_139_20 = undefined;
+            closure_139_21 = undefined;
+            closure_139_22 = undefined;
+            closure_139_23 = undefined;
+            closure_139_24 = undefined;
+            let upload;
+            closure_139_26 = undefined;
+            closure_139_27 = undefined;
+            closure_139_28 = undefined;
+            closure_139_29 = undefined;
+            let name2;
+            closure_139_31 = undefined;
             c15 = 1;
             c16 = 1;
             return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp4) {
-            if (command === 1) {
+            if (arg0 === 1) {
               c16 = 3;
               throw value;
-            } else if (command === 2) {
+            } else if (arg0 === 2) {
               c16 = 3;
-              let obj12 = { value, done: true };
-              return obj12;
-            } else if (null != context.channel) {
-              source = closure_140_10.getSource(context.channel.id);
-              let closure_1 = source;
+              let obj16 = { value, done: true };
+              return obj16;
+            } else if (null != closure_139_2.channel) {
+              source = closure_140_10.getSource(closure_139_2.channel.id);
+              closure_1 = source;
               if (source == null) {
-                closure_1 = source;
+                closure_1 = source2;
               }
-              source = closure_1;
-              let commandOrigin1 = closure_140_10.getCommandOrigin(context.channel.id);
-              let closure_2 = commandOrigin1;
+              closure_139_9 = closure_1;
+              let commandOrigin1 = closure_140_10.getCommandOrigin(closure_139_2.channel.id);
+              closure_2 = commandOrigin1;
               if (commandOrigin1 == null) {
-                closure_2 = commandOrigin;
+                closure_2 = closure_139_5;
               }
-              commandOrigin = closure_2;
-              if (null == context.autocomplete) {
-                let obj19 = closure_140_1(closure_140_3[10]);
-                let obj13 = { type: "APPLICATION_COMMAND_USED", context, command, commandOrigin };
-                let dispatchResult = obj19.dispatch(obj13);
+              closure_139_10 = closure_2;
+              if (null == closure_139_2.autocomplete) {
+                let obj24 = closure_140_1(closure_140_3[10]);
+                let obj17 = { type: "APPLICATION_COMMAND_USED", context: null, command: null, commandOrigin: null };
+                obj17.context = closure_139_2;
+                obj17.command = closure_139_0;
+                obj17.commandOrigin = closure_139_10;
+                let dispatchResult = obj24.dispatch(obj17);
               }
-              let obj21 = closure_140_1(closure_140_3[11]);
+              let obj26 = closure_140_1(closure_140_3[11]);
               c15 = 2;
               c16 = 1;
-              let obj14 = { value: obj21.unarchiveThreadIfNecessary(context.channel.id), done: false };
-              return obj14;
+              let obj18 = { value: obj26.unarchiveThreadIfNecessary(closure_139_2.channel.id), done: false };
+              return obj18;
+            } else {
+              c16 = 3;
             }
-          } else {
-            let obj34;
-            if (2 === tmp4) {
-              if (command === 1) {
-                c16 = 3;
-                throw value;
-              } else if (command === 2) {
-                c16 = 3;
-                let obj16 = { value, done: true };
-                return obj16;
-              } else {
-                let id2;
-                items = [];
-                attachments = [];
-                let obj26 = closure_140_0(closure_140_3[12]);
-                commandAttachmentDraftType = obj26.getCommandAttachmentDraftType(commandOrigin);
-                if (null != command.options) {
-                  let options = command.options;
-                  target_id = options[Symbol.iterator]();
-                  while (target_id !== undefined) {
-                    let c13 = 1;
-                    user = tmp13;
-                    if (user.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND) {
-                      if (
-                        user.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND_GROUP
-                      ) {
-                        if (user.name in c1) {
-                          let autocomplete = context.autocomplete;
-                          let name;
-                          if (autocomplete != null) {
-                            name = autocomplete.name;
-                          }
-                          let tmp19 = name === user.name || undefined;
-                          focused = tmp19;
-                          value = undefined;
-                          if (user.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.STRING) {
-                            if (
-                              user.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ATTACHMENT
-                            ) {
-                              let obj6 = closure_140_2(closure_140_3[14]);
-                              length = obj6.filterEmpty(c1[user.name]);
-                              let tmp102 = null != context.autocomplete;
-                              let tmp100 = closure_140_1(closure_140_3[16]);
-                              if (!tmp102) {
-                                tmp102 = 1 === length.length;
+          } else if (2 === tmp4) {
+            if (arg0 === 1) {
+              c16 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c16 = 3;
+              let obj21 = { value, done: true };
+              return obj21;
+            } else {
+              closure_139_11 = [];
+              closure_139_12 = [];
+              let obj31 = closure_140_0(closure_140_3[12]);
+              commandAttachmentDraftType = obj31.getCommandAttachmentDraftType(closure_139_10);
+              if (null != closure_139_0.options) {
+                options = closure_139_0.options;
+                dependencyMap = options[Symbol.iterator]();
+                while (dependencyMap !== undefined) {
+                  c13 = 1;
+                  closure_139_14 = tmp13;
+                  if (
+                    closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND
+                  ) {
+                    if (
+                      closure_139_14.type !==
+                      closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND_GROUP
+                    ) {
+                      if (closure_139_14.name in closure_139_1) {
+                        let autocomplete = closure_139_2.autocomplete;
+                        let name;
+                        if (autocomplete != null) {
+                          name = autocomplete.name;
+                        }
+                        let tmp19 = name === closure_139_14.name || undefined;
+                        closure_139_15 = tmp19;
+                        channelId = undefined;
+                        if (
+                          closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.STRING
+                        ) {
+                          if (
+                            closure_139_14.type !==
+                            closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ATTACHMENT
+                          ) {
+                            let obj6 = closure_140_2(closure_140_3[14]);
+                            closure_139_17 = obj6.filterEmpty(closure_139_1[closure_139_14.name]);
+                            let tmp102 = null != closure_139_2.autocomplete;
+                            let tmp100 = closure_140_1(closure_140_3[16]);
+                            if (!tmp102) {
+                              tmp102 = 1 === closure_139_17.length;
+                            }
+                            let _HermesInternal2 = HermesInternal;
+                            let tmp100Result = tmp100(
+                              tmp102,
+                              'Option "' + closure_139_14.name + '" expects a single option type',
+                            );
+                            if (null != closure_139_17[0]) {
+                              let first = closure_139_17[0];
+                              closure_6 = first;
+                              if (first == null) {
+                                closure_6 = { type: "text", text: "" };
                               }
-                              let _HermesInternal2 = HermesInternal;
-                              let tmp100Result = tmp100(
-                                tmp102,
-                                'Option "' + user.name + '" expects a single option type',
-                              );
-                              if (null != length[0]) {
-                                let first = length[0];
-                                let closure_6 = first;
-                                if (first == null) {
-                                  closure_6 = { type: "text", text: "" };
+                              closure_139_18 = closure_6;
+                              let type = closure_139_14.type;
+                              if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.CHANNEL === type) {
+                                if ("channelMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.channelId;
+                                } else if ("text" === closure_139_18.type) {
+                                  let obj38 = closure_140_0(closure_140_3[12]);
+                                  if (obj38.isSnowflake(closure_139_18.text)) {
+                                    let str4 = closure_139_18.text;
+                                    channelId = str4.trim();
+                                  } else {
+                                    let obj15 = closure_140_0(closure_140_3[17]);
+                                    let guild7 = closure_139_2.guild;
+                                    id = undefined;
+                                    if (guild7 != null) {
+                                      id = guild7.id;
+                                    }
+                                    closure_139_19 = obj15.resolveApplicationCommandOption(
+                                      closure_139_18.text,
+                                      id,
+                                      closure_139_2.channel.id,
+                                    );
+                                    let type1;
+                                    let tmp297 = closure_140_1(closure_140_3[16]);
+                                    if (closure_139_19 != null) {
+                                      type1 = closure_139_19.type;
+                                    }
+                                    let _HermesInternal7 = HermesInternal;
+                                    let tmp297Result = tmp297(
+                                      "channelMention" === type1,
+                                      "Failed to resolve " + closure_139_18.text,
+                                    );
+                                    channelId = closure_139_19.channelId;
+                                  }
                                 }
-                                closure_18 = closure_6;
-                                let type = user.type;
-                                if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.CHANNEL === type) {
-                                  if ("channelMention" === closure_18.type) {
-                                    value = closure_18.channelId;
-                                  } else if ("text" === closure_18.type) {
-                                    let obj33 = closure_140_0(closure_140_3[12]);
-                                    if (obj33.isSnowflake(closure_18.text)) {
-                                      let str4 = closure_18.text;
-                                      value = str4.trim();
-                                    } else {
-                                      let tmp290 = closure_140_0(closure_140_3[17]);
-                                      let guild7 = context.guild;
-                                      let id;
-                                      let resolveApplicationCommandOption4 = tmp290.resolveApplicationCommandOption;
-                                      let text4 = closure_18.text;
-                                      if (guild7 != null) {
-                                        id = guild7.id;
-                                      }
-                                      closure_19 = resolveApplicationCommandOption4(text4, id, context.channel.id);
-                                      let type1;
-                                      let tmp299 = closure_140_1(closure_140_3[16]);
-                                      if (closure_19 != null) {
-                                        type1 = closure_19.type;
-                                      }
-                                      let _HermesInternal7 = HermesInternal;
-                                      let tmp299Result = tmp299(
-                                        "channelMention" === type1,
-                                        "Failed to resolve " + closure_18.text,
-                                      );
-                                      value = closure_19.channelId;
-                                    }
-                                  }
-                                } else if (
-                                  closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ROLE === type
-                                ) {
-                                  if ("roleMention" === closure_18.type) {
-                                    value = closure_18.roleId;
-                                  } else if ("text" === closure_18.type) {
-                                    let obj11 = closure_140_0(closure_140_3[12]);
-                                    if (obj11.isSnowflake(closure_18.text)) {
-                                      let str3 = closure_18.text;
-                                      value = str3.trim();
-                                    } else {
-                                      let tmp264 = closure_140_0(closure_140_3[17]);
-                                      let text3 = closure_18.text;
-                                      let guild6 = context.guild;
-                                      let id1;
-                                      let resolveApplicationCommandOption3 = tmp264.resolveApplicationCommandOption;
-                                      if (guild6 != null) {
-                                        id1 = guild6.id;
-                                      }
-                                      closure_20 = resolveApplicationCommandOption3(text3, id1, context.channel.id, {
-                                        allowUsers: false,
-                                      });
-                                      let type2;
-                                      let tmp276 = closure_140_1(closure_140_3[16]);
-                                      if (closure_20 != null) {
-                                        type2 = closure_20.type;
-                                      }
-                                      let _HermesInternal6 = HermesInternal;
-                                      let tmp276Result = tmp276(
-                                        "roleMention" === type2,
-                                        "Failed to resolve " + closure_18.text,
-                                      );
-                                      value = closure_20.roleId;
-                                    }
+                              } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ROLE === type) {
+                                if ("roleMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.roleId;
+                                } else if ("text" === closure_139_18.type) {
+                                  let obj13 = closure_140_0(closure_140_3[12]);
+                                  if (obj13.isSnowflake(closure_139_18.text)) {
+                                    let str3 = closure_139_18.text;
+                                    channelId = str3.trim();
                                   } else {
-                                    let tmp248 = "textMention" === closure_18.type;
-                                    if (tmp248) {
-                                      tmp248 = "@everyone" === closure_18.text;
+                                    let obj14 = closure_140_0(closure_140_3[17]);
+                                    let text2 = closure_139_18.text;
+                                    let guild6 = closure_139_2.guild;
+                                    let id1;
+                                    if (guild6 != null) {
+                                      id1 = guild6.id;
                                     }
-                                    if (tmp248) {
-                                      let guild5 = context.guild;
-                                      id2 = undefined;
-                                      if (guild5 != null) {
-                                        id2 = guild5.id;
-                                      }
-                                      value = id2;
+                                    closure_139_20 = obj14.resolveApplicationCommandOption(
+                                      text2,
+                                      id1,
+                                      closure_139_2.channel.id,
+                                      { allowUsers: false },
+                                    );
+                                    let type2;
+                                    let tmp275 = closure_140_1(closure_140_3[16]);
+                                    if (closure_139_20 != null) {
+                                      type2 = closure_139_20.type;
                                     }
-                                  }
-                                } else if (
-                                  closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.USER === type
-                                ) {
-                                  if ("userMention" === closure_18.type) {
-                                    value = closure_18.userId;
-                                  } else if ("text" === closure_18.type) {
-                                    let obj32 = closure_140_0(closure_140_3[12]);
-                                    if (obj32.isSnowflake(closure_18.text)) {
-                                      let str2 = closure_18.text;
-                                      value = str2.trim();
-                                    } else {
-                                      let tmp223 = closure_140_0(closure_140_3[17]);
-                                      let text2 = closure_18.text;
-                                      let guild4 = context.guild;
-                                      let id3;
-                                      let resolveApplicationCommandOption2 = tmp223.resolveApplicationCommandOption;
-                                      if (guild4 != null) {
-                                        id3 = guild4.id;
-                                      }
-                                      closure_21 = resolveApplicationCommandOption2(text2, id3, context.channel.id, {
-                                        allowRoles: false,
-                                      });
-                                      let type3;
-                                      let tmp235 = closure_140_1(closure_140_3[16]);
-                                      if (closure_21 != null) {
-                                        type3 = closure_21.type;
-                                      }
-                                      let _HermesInternal5 = HermesInternal;
-                                      let tmp235Result = tmp235(
-                                        "userMention" === type3,
-                                        "Failed to resolve " + closure_18.text,
-                                      );
-                                      value = closure_21.userId;
-                                    }
-                                  }
-                                } else if (
-                                  closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.MENTIONABLE === type
-                                ) {
-                                  if ("userMention" === closure_18.type) {
-                                    value = closure_18.userId;
-                                  } else if ("roleMention" === closure_18.type) {
-                                    value = closure_18.roleId;
-                                  } else {
-                                    if ("textMention" === closure_18.type) {
-                                      if ("@everyone" === closure_18.text) {
-                                        let guild3 = context.guild;
-                                        let id4;
-                                        if (guild3 != null) {
-                                          id4 = guild3.id;
-                                        }
-                                        value = id4;
-                                      }
-                                    }
-                                    if ("text" === closure_18.type) {
-                                      let obj31 = closure_140_0(closure_140_3[12]);
-                                      if (obj31.isSnowflake(closure_18.text)) {
-                                        let str = closure_18.text;
-                                        value = str.trim();
-                                      } else {
-                                        let tmp183 = closure_140_0(closure_140_3[17]);
-                                        let guild = context.guild;
-                                        let id5;
-                                        let resolveApplicationCommandOption = tmp183.resolveApplicationCommandOption;
-                                        let text = closure_18.text;
-                                        if (guild != null) {
-                                          id5 = guild.id;
-                                        }
-                                        closure_22 = resolveApplicationCommandOption(text, id5, context.channel.id);
-                                        let type4;
-                                        if (closure_22 != null) {
-                                          type4 = closure_22.type;
-                                        }
-                                        if ("userMention" === type4) {
-                                          value = closure_22.userId;
-                                        } else {
-                                          let type5;
-                                          if (closure_22 != null) {
-                                            type5 = closure_22.type;
-                                          }
-                                          if ("roleMention" === type5) {
-                                            value = closure_22.roleId;
-                                          } else {
-                                            let type6;
-                                            if (closure_22 != null) {
-                                              type6 = closure_22.type;
-                                            }
-                                            if ("textMention" === type6) {
-                                              if ("@everyone" === closure_22.text) {
-                                                let guild2 = context.guild;
-                                                let id6;
-                                                if (guild2 != null) {
-                                                  id6 = guild2.id;
-                                                }
-                                                value = id6;
-                                              }
-                                            }
-                                            let _HermesInternal4 = HermesInternal;
-                                            let tmp198 = closure_140_1(closure_140_3[16]);
-                                            let tmp198Result = tmp198(false, "Failed to resolve " + closure_18.text);
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                } else if (
-                                  closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.BOOLEAN === type
-                                ) {
-                                  if ("text" === closure_18.type) {
-                                    let obj30 = closure_140_0(closure_140_3[15]);
-                                    let str23 = closure_18.text;
-                                    value = obj30.toChoiceBooleanValue(str23.trim());
-                                  }
-                                } else if (
-                                  closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.INTEGER === type
-                                ) {
-                                  if ("text" === closure_18.type) {
-                                    let str22 = closure_18.text;
-                                    closure_23 = str22.trim();
-                                    if (null != user.choices) {
-                                      let obj10 = closure_140_0(closure_140_3[15]);
-                                      value = obj10.findChoiceNumberValue(user.choices, closure_23);
-                                    } else if (user.autocomplete) {
-                                      if (null != context.autocomplete) {
-                                        let tmp153 = focused;
-                                        if (tmp153) {
-                                          value = context.autocomplete.query;
-                                        }
-                                      }
-                                      let obj9 = closure_140_0(closure_140_3[15]);
-                                      let result = obj9.findAutocompleteChoiceNumberValue(
-                                        context.channel.id,
-                                        user.name,
-                                        closure_23,
-                                      );
-                                    }
-                                    if (null == value) {
-                                      let _Number2 = Number;
-                                      let obj29 = closure_140_2(closure_140_3[14]);
-                                      value = Number(obj29.normalizeNumericString(closure_140_6.locale, closure_23));
-                                    }
-                                  }
-                                } else if (
-                                  closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.NUMBER === type
-                                ) {
-                                  if ("text" === closure_18.type) {
-                                    let str21 = closure_18.text;
-                                    closure_24 = str21.trim();
-                                    if (null != user.choices) {
-                                      let obj8 = closure_140_0(closure_140_3[15]);
-                                      value = obj8.findChoiceNumberValue(user.choices, closure_24);
-                                    } else if (user.autocomplete) {
-                                      if (null != context.autocomplete) {
-                                        let tmp129 = focused;
-                                        if (tmp129) {
-                                          value = context.autocomplete.query;
-                                        }
-                                      }
-                                      let obj7 = closure_140_0(closure_140_3[15]);
-                                      let result1 = obj7.findAutocompleteChoiceNumberValue(
-                                        context.channel.id,
-                                        user.name,
-                                        closure_24,
-                                      );
-                                    }
-                                    if (null == value) {
-                                      let _Number = Number;
-                                      let obj28 = closure_140_2(closure_140_3[14]);
-                                      value = Number(obj28.normalizeNumericString(closure_140_6.locale, closure_24));
-                                    }
+                                    let _HermesInternal6 = HermesInternal;
+                                    let tmp275Result = tmp275(
+                                      "roleMention" === type2,
+                                      "Failed to resolve " + closure_139_18.text,
+                                    );
+                                    channelId = closure_139_20.roleId;
                                   }
                                 } else {
-                                  let _Error = Error;
-                                  let _HermesInternal3 = HermesInternal;
-                                  let self = this;
-                                  let self2 = this;
-                                  let error = new Error("Unsupported option type: " + user.type);
-                                  throw error;
-                                }
-                                let tmp310 = "" !== value;
-                                if (!tmp310) {
-                                  tmp310 = null == context.autocomplete;
-                                }
-                                if (!tmp310) {
-                                  tmp310 = focused;
-                                }
-                                if (tmp310) {
-                                  let tmp319 = null != context.autocomplete;
-                                  let tmp317 = closure_140_1(closure_140_3[16]);
-                                  if (!tmp319) {
-                                    tmp319 = null != value;
+                                  let tmp248 = "textMention" === closure_139_18.type;
+                                  if (tmp248) {
+                                    tmp248 = "@everyone" === closure_139_18.text;
                                   }
-                                  let _HermesInternal8 = HermesInternal;
-                                  let tmp317Result = tmp317(tmp319, 'Unexpected value for option "' + user.name + '"');
-                                  if (null != value) {
-                                    let obj17 = { type: user.type, name: user.name, value, focused };
-                                    let arr = items.push(obj17);
+                                  if (tmp248) {
+                                    let guild5 = closure_139_2.guild;
+                                    let id2;
+                                    if (guild5 != null) {
+                                      id2 = guild5.id;
+                                    }
+                                    channelId = id2;
                                   }
+                                }
+                              } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.USER === type) {
+                                if ("userMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.userId;
+                                } else if ("text" === closure_139_18.type) {
+                                  let obj37 = closure_140_0(closure_140_3[12]);
+                                  if (obj37.isSnowflake(closure_139_18.text)) {
+                                    let str2 = closure_139_18.text;
+                                    channelId = str2.trim();
+                                  } else {
+                                    let obj12 = closure_140_0(closure_140_3[17]);
+                                    let text = closure_139_18.text;
+                                    let guild4 = closure_139_2.guild;
+                                    let id3;
+                                    if (guild4 != null) {
+                                      id3 = guild4.id;
+                                    }
+                                    closure_139_21 = obj12.resolveApplicationCommandOption(
+                                      text,
+                                      id3,
+                                      closure_139_2.channel.id,
+                                      { allowRoles: false },
+                                    );
+                                    let type3;
+                                    let tmp235 = closure_140_1(closure_140_3[16]);
+                                    if (closure_139_21 != null) {
+                                      type3 = closure_139_21.type;
+                                    }
+                                    let _HermesInternal5 = HermesInternal;
+                                    let tmp235Result = tmp235(
+                                      "userMention" === type3,
+                                      "Failed to resolve " + closure_139_18.text,
+                                    );
+                                    channelId = closure_139_21.userId;
+                                  }
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.MENTIONABLE === type
+                              ) {
+                                if ("userMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.userId;
+                                } else if ("roleMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.roleId;
+                                } else {
+                                  if ("textMention" === closure_139_18.type) {
+                                    if ("@everyone" === closure_139_18.text) {
+                                      let guild3 = closure_139_2.guild;
+                                      let id4;
+                                      if (guild3 != null) {
+                                        id4 = guild3.id;
+                                      }
+                                      channelId = id4;
+                                    }
+                                  }
+                                  if ("text" === closure_139_18.type) {
+                                    let obj36 = closure_140_0(closure_140_3[12]);
+                                    if (obj36.isSnowflake(closure_139_18.text)) {
+                                      let str = closure_139_18.text;
+                                      channelId = str.trim();
+                                    } else {
+                                      let obj11 = closure_140_0(closure_140_3[17]);
+                                      guild = closure_139_2.guild;
+                                      let id5;
+                                      if (guild != null) {
+                                        id5 = guild.id;
+                                      }
+                                      closure_139_22 = obj11.resolveApplicationCommandOption(
+                                        closure_139_18.text,
+                                        id5,
+                                        closure_139_2.channel.id,
+                                      );
+                                      let type4;
+                                      if (closure_139_22 != null) {
+                                        type4 = closure_139_22.type;
+                                      }
+                                      if ("userMention" === type4) {
+                                        channelId = closure_139_22.userId;
+                                      } else {
+                                        let type5;
+                                        if (closure_139_22 != null) {
+                                          type5 = closure_139_22.type;
+                                        }
+                                        if ("roleMention" === type5) {
+                                          channelId = closure_139_22.roleId;
+                                        } else {
+                                          let type6;
+                                          if (closure_139_22 != null) {
+                                            type6 = closure_139_22.type;
+                                          }
+                                          if ("textMention" === type6) {
+                                            if ("@everyone" === closure_139_22.text) {
+                                              let guild2 = closure_139_2.guild;
+                                              let id6;
+                                              if (guild2 != null) {
+                                                id6 = guild2.id;
+                                              }
+                                              channelId = id6;
+                                            }
+                                          }
+                                          let _HermesInternal4 = HermesInternal;
+                                          let tmp199 = closure_140_1(closure_140_3[16]);
+                                          let tmp199Result = tmp199(false, "Failed to resolve " + closure_139_18.text);
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.BOOLEAN === type
+                              ) {
+                                if ("text" === closure_139_18.type) {
+                                  let obj35 = closure_140_0(closure_140_3[15]);
+                                  let str23 = closure_139_18.text;
+                                  channelId = obj35.toChoiceBooleanValue(str23.trim());
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.INTEGER === type
+                              ) {
+                                if ("text" === closure_139_18.type) {
+                                  let str22 = closure_139_18.text;
+                                  closure_139_23 = str22.trim();
+                                  if (null != closure_139_14.choices) {
+                                    let obj10 = closure_140_0(closure_140_3[15]);
+                                    channelId = obj10.findChoiceNumberValue(closure_139_14.choices, closure_139_23);
+                                  } else if (closure_139_14.autocomplete) {
+                                    if (null != closure_139_2.autocomplete) {
+                                      if (closure_139_15) {
+                                        channelId = closure_139_2.autocomplete.query;
+                                      }
+                                    }
+                                    let obj9 = closure_140_0(closure_140_3[15]);
+                                    let result = obj9.findAutocompleteChoiceNumberValue(
+                                      closure_139_2.channel.id,
+                                      closure_139_14.name,
+                                      closure_139_23,
+                                    );
+                                  }
+                                  if (null == channelId) {
+                                    let _Number2 = Number;
+                                    let obj34 = closure_140_2(closure_140_3[14]);
+                                    channelId = Number(
+                                      obj34.normalizeNumericString(closure_140_6.locale, closure_139_23),
+                                    );
+                                  }
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.NUMBER === type
+                              ) {
+                                if ("text" === closure_139_18.type) {
+                                  let str21 = closure_139_18.text;
+                                  closure_139_24 = str21.trim();
+                                  if (null != closure_139_14.choices) {
+                                    let obj8 = closure_140_0(closure_140_3[15]);
+                                    channelId = obj8.findChoiceNumberValue(closure_139_14.choices, closure_139_24);
+                                  } else if (closure_139_14.autocomplete) {
+                                    if (null != closure_139_2.autocomplete) {
+                                      if (closure_139_15) {
+                                        channelId = closure_139_2.autocomplete.query;
+                                      }
+                                    }
+                                    let obj7 = closure_140_0(closure_140_3[15]);
+                                    let result1 = obj7.findAutocompleteChoiceNumberValue(
+                                      closure_139_2.channel.id,
+                                      closure_139_14.name,
+                                      closure_139_24,
+                                    );
+                                  }
+                                  if (null == channelId) {
+                                    let _Number = Number;
+                                    let obj33 = closure_140_2(closure_140_3[14]);
+                                    channelId = Number(
+                                      obj33.normalizeNumericString(closure_140_6.locale, closure_139_24),
+                                    );
+                                  }
+                                }
+                              } else {
+                                let _Error = Error;
+                                let _HermesInternal3 = HermesInternal;
+                                let tmp122 = new.target;
+                                let tmp123 = new.target;
+                                let error = new Error("Unsupported option type: " + closure_139_14.type);
+                                throw error;
+                              }
+                              let tmp308 = "" !== channelId;
+                              if (!tmp308) {
+                                tmp308 = null == closure_139_2.autocomplete;
+                              }
+                              if (!tmp308) {
+                                tmp308 = closure_139_15;
+                              }
+                              if (tmp308) {
+                                let tmp317 = null != closure_139_2.autocomplete;
+                                let tmp315 = closure_140_1(closure_140_3[16]);
+                                if (!tmp317) {
+                                  tmp317 = null != channelId;
+                                }
+                                let _HermesInternal8 = HermesInternal;
+                                let tmp315Result = tmp315(
+                                  tmp317,
+                                  'Unexpected value for option "' + closure_139_14.name + '"',
+                                );
+                                if (null != channelId) {
+                                  let obj22 = { type: null, name: null, value: null, focused: null };
+                                  obj22.type = closure_139_14.type;
+                                  obj22.name = closure_139_14.name;
+                                  obj22.value = channelId;
+                                  obj22.focused = closure_139_15;
+                                  let arr = closure_139_11.push(obj22);
                                 }
                               }
+                            }
+                          } else {
+                            if (null != closure_139_2.autocomplete) {
+                              c13 = 0;
+                              continue;
                             } else {
-                              if (null != context.autocomplete) {
+                              upload = closure_140_8.getUpload(
+                                closure_139_2.channel.id,
+                                closure_139_14.name,
+                                commandAttachmentDraftType,
+                              );
+                              if (null == upload) {
                                 c13 = 0;
                                 continue;
                               } else {
-                                upload = closure_140_8.getUpload(
-                                  context.channel.id,
-                                  user.name,
-                                  commandAttachmentDraftType,
-                                );
-                                if (null == upload) {
-                                  c13 = 0;
-                                  continue;
-                                } else {
-                                  length = attachments.length;
-                                  let arr5 = attachments.push(upload);
-                                  let obj18 = { type: user.type, name: user.name, value: length, focused };
-                                  let arr6 = items.push(obj18);
-                                }
+                                closure_139_26 = closure_139_12.length;
+                                let arr5 = closure_139_12.push(upload);
+                                let obj23 = { type: null, name: null, value: null, focused: null };
+                                obj23.type = closure_139_14.type;
+                                obj23.name = closure_139_14.name;
+                                obj23.value = closure_139_26;
+                                obj23.focused = closure_139_15;
+                                let arr6 = closure_139_11.push(obj23);
+                              }
+                            }
+                            continue;
+                          }
+                          continue;
+                        } else {
+                          let obj32 = closure_140_2(closure_140_3[14]);
+                          let str20 = obj32.getOptionalString(closure_139_1, closure_139_14.name);
+                          let trimmed;
+                          if (str20 != null) {
+                            trimmed = str20.trim();
+                          }
+                          c5 = trimmed;
+                          if (trimmed == null) {
+                            c5 = "";
+                          }
+                          closure_139_27 = c5;
+                          if (null != closure_139_14.choices) {
+                            let obj3 = closure_140_0(closure_140_3[15]);
+                            channelId = obj3.findChoiceStringValue(closure_139_14.choices, closure_139_27);
+                          } else if (closure_139_14.autocomplete) {
+                            if (null != closure_139_2.autocomplete) {
+                              if (closure_139_15) {
+                                channelId = closure_139_2.autocomplete.query;
+                              }
+                            }
+                            let obj2 = closure_140_0(closure_140_3[15]);
+                            let result2 = obj2.findAutocompleteChoiceStringValue(
+                              closure_139_2.channel.id,
+                              closure_139_14.name,
+                              closure_139_27,
+                            );
+                          }
+                          if (null == channelId) {
+                            channelId = closure_139_27;
+                          }
+                          if ("" === channelId) {
+                            if (null != closure_139_2.autocomplete) {
+                              if (!closure_139_15) {
+                                c13 = 0;
+                                continue;
                               }
                               continue;
                             }
-                            continue;
-                          } else {
-                            let obj27 = closure_140_2(closure_140_3[14]);
-                            let str20 = obj27.getOptionalString(c1, user.name);
-                            let trimmed;
-                            if (str20 != null) {
-                              trimmed = str20.trim();
-                            }
-                            let c5 = trimmed;
-                            if (trimmed == null) {
-                              c5 = "";
-                            }
-                            closure_27 = c5;
-                            if (null != user.choices) {
-                              let obj3 = closure_140_0(closure_140_3[15]);
-                              value = obj3.findChoiceStringValue(user.choices, closure_27);
-                            } else if (user.autocomplete) {
-                              if (null != context.autocomplete) {
-                                let tmp32 = focused;
-                                if (tmp32) {
-                                  value = context.autocomplete.query;
-                                }
-                              }
-                              let obj2 = closure_140_0(closure_140_3[15]);
-                              let result2 = obj2.findAutocompleteChoiceStringValue(
-                                context.channel.id,
-                                user.name,
-                                closure_27,
-                              );
-                            }
-                            if (null == value) {
-                              value = closure_27;
-                            }
-                            if ("" === value) {
-                              if (null != context.autocomplete) {
-                                let tmp57 = focused;
-                                if (!tmp57) {
-                                  c13 = 0;
-                                  continue;
-                                }
-                                continue;
-                              }
-                            }
-                            let tmp64 = null != context.autocomplete;
-                            let tmp62 = closure_140_1(closure_140_3[16]);
-                            if (!tmp64) {
-                              tmp64 = null != value;
-                            }
-                            let _HermesInternal = HermesInternal;
-                            let tmp62Result = tmp62(tmp64, 'Option "' + user.name + '" expects a value');
-                            let obj20 = { type: user.type, name: user.name, value, focused };
-                            let arr7 = items.push(obj20);
                           }
+                          let tmp64 = null != closure_139_2.autocomplete;
+                          let tmp62 = closure_140_1(closure_140_3[16]);
+                          if (!tmp64) {
+                            tmp64 = null != channelId;
+                          }
+                          let _HermesInternal = HermesInternal;
+                          let tmp62Result = tmp62(tmp64, 'Option "' + closure_139_14.name + '" expects a value');
+                          let obj25 = { type: null, name: null, value: null, focused: null };
+                          obj25.type = closure_139_14.type;
+                          obj25.name = closure_139_14.name;
+                          obj25.value = channelId;
+                          obj25.focused = closure_139_15;
+                          let arr7 = closure_139_11.push(obj25);
                         }
-                        continue;
                       }
+                      continue;
                     }
-                    c13 = 0;
-                    continue;
                   }
+                  c13 = 0;
+                  continue;
                 }
-                if (null != command.subCommandPath) {
-                  closure_28 = command.subCommandPath.length - 1;
-                  if (closure_28 >= 0) {
-                    do {
-                      closure_29 = command.subCommandPath[closure_28];
-                      name2 = closure_29.name;
-                      let obj22 = { type: closure_29.type, name: name2, options: items };
-                      items = [obj22];
-                      closure_28 = closure_28 - 1;
-                    } while (closure_28 >= 0);
-                  }
+              }
+              if (null != closure_139_0.subCommandPath) {
+                closure_139_28 = closure_139_0.subCommandPath.length - 1;
+                if (closure_139_28 >= 0) {
+                  do {
+                    closure_139_29 = closure_139_0.subCommandPath[closure_139_28];
+                    name2 = closure_139_29.name;
+                    let obj27 = { type: null, name: null, options: null };
+                    obj27.type = closure_139_29.type;
+                    obj27.name = name2;
+                    obj27.options = closure_139_11;
+                    let items = [obj27];
+                    closure_139_11 = items;
+                    closure_139_28 = closure_139_28 - 1;
+                  } while (closure_139_28 >= 0);
                 }
-                if (null != command.execute) {
-                  let tmp380 = closure_140_1(closure_140_3[18]);
-                  let obj23 = {
-                    command_id: command.id,
-                    application_id: command.applicationId,
-                    command_type: command.type,
-                    location: closure_140_21(commandOrigin),
-                    source,
-                  };
-                  let trackWithMetadata = tmp380.trackWithMetadata;
-                  let APPLICATION_COMMAND_USED = closure_140_12.APPLICATION_COMMAND_USED;
-                  let trackWithMetadataResult = trackWithMetadata(APPLICATION_COMMAND_USED, obj23);
-                  c16 = 3;
-                  let obj24 = { value: command.execute(items, context), done: true };
-                  return obj24;
-                } else if (command.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN) {
-                  if (command.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_TEXT) {
-                    if (
-                      command.inputType !==
-                      closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION
-                    ) {
-                      obj25 = {
-                        version: command.version,
-                        id: id2,
-                        guild_id: command.guildId,
-                        name: untranslatedName,
-                        type: command.type,
-                        options: items,
-                        application_command: command.rootCommand,
-                      };
-                      let rootCommand2 = command.rootCommand;
-                      let id7;
-                      if (rootCommand2 != null) {
-                        id7 = rootCommand2.id;
-                      }
-                      id2 = id7;
-                      if (id7 == null) {
-                        id2 = command.id;
-                      }
-                      let rootCommand = command.rootCommand;
-                      let name1;
-                      if (rootCommand != null) {
-                        name1 = rootCommand.name;
-                      }
-                      untranslatedName = name1;
-                      if (name1 == null) {
-                        untranslatedName = command.untranslatedName;
-                      }
-                      if (null != target_id) {
-                        obj25.target_id = target_id;
-                      }
-                      if (null != context.autocomplete) {
-                        let obj15 = closure_140_0(closure_140_3[19]);
-                        let performAutocompleteResult = obj15.performAutocomplete(command, context, obj25);
-                      } else {
-                        let obj35 = closure_140_1(closure_140_3[20]);
-                        let clearAllResult = obj35.clearAll(context.channel.id, commandAttachmentDraftType);
-                        commandOrigin = closure_140_18;
-                        obj34 = {
-                          applicationId: command.applicationId,
-                          data: obj25,
-                          context,
-                          attachments,
-                          maxSizeCallback,
-                          onMessageSuccess() {
-                            const values = Object.values(closure_1_1);
-                            const flatMapResult = values.flatMap((arr) => {
-                              let customEmojiById;
-                              const mapped = arr.map(function (type) {
-                                let emoji;
-                                let items;
-                                if ("emoji" === type.type) {
-                                  const name = type.name;
-                                  obj = { names: items, surrogates: "", unicodeVersion: 6 };
-                                  const Emoji = closure_1_0(closure_1_3[21]).Emoji;
-                                  items = [name.replaceAll(":", "")];
-                                  const self = this;
-                                  const self2 = this;
-                                  emoji = new Emoji(obj);
-                                } else {
-                                  emoji = null;
-                                  if ("customEmoji" === type.type) {
-                                    emoji = customEmojiById.getCustomEmojiById(type.emojiId);
-                                  }
-                                }
-                                return emoji;
-                              });
-                              return mapped.filter(closure_1_0(closure_1_3[22]).isNotNullish);
-                            });
-                            if (flatMapResult.length > 0) {
-                              obj = { type: "EMOJI_TRACK_USAGE", emojiUsed: flatMapResult };
-                              const obj2 = closure_1(target_id[10]);
-                              obj2.dispatch(obj);
+              }
+              if (null != closure_139_0.execute) {
+                let obj20 = closure_140_1(closure_140_3[18]);
+                let obj28 = {
+                  command_id: null,
+                  application_id: null,
+                  command_type: null,
+                  location: null,
+                  source: null,
+                };
+                obj28.command_id = closure_139_0.id;
+                obj28.application_id = closure_139_0.applicationId;
+                obj28.command_type = closure_139_0.type;
+                obj28.location = closure_140_21(closure_139_10);
+                obj28.source = closure_139_9;
+                let trackWithMetadataResult = obj20.trackWithMetadata(closure_140_12.APPLICATION_COMMAND_USED, obj28);
+                c16 = 3;
+                let obj29 = { value: closure_139_0.execute(closure_139_11, closure_139_2), done: true };
+                return obj29;
+              } else if (
+                closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN
+              ) {
+                if (
+                  closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_TEXT
+                ) {
+                  if (
+                    closure_139_0.inputType !==
+                    closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION
+                  ) {
+                    let obj30 = {
+                      version: null,
+                      id: null,
+                      guild_id: null,
+                      name: null,
+                      type: null,
+                      options: null,
+                      application_command: null,
+                    };
+                    obj30.version = closure_139_0.version;
+                    let rootCommand2 = closure_139_0.rootCommand;
+                    let id7;
+                    if (rootCommand2 != null) {
+                      id7 = rootCommand2.id;
+                    }
+                    id = id7;
+                    if (id7 == null) {
+                      id = closure_139_0.id;
+                    }
+                    obj30.id = id;
+                    obj30.guild_id = closure_139_0.guildId;
+                    let rootCommand = closure_139_0.rootCommand;
+                    let name1;
+                    if (rootCommand != null) {
+                      name1 = rootCommand.name;
+                    }
+                    untranslatedName = name1;
+                    if (name1 == null) {
+                      untranslatedName = closure_139_0.untranslatedName;
+                    }
+                    obj30.name = untranslatedName;
+                    obj30.type = closure_139_0.type;
+                    obj30.options = closure_139_11;
+                    obj30.application_command = closure_139_0.rootCommand;
+                    closure_139_31 = obj30;
+                    if (null != closure_139_3) {
+                      closure_139_31.target_id = closure_139_3;
+                    }
+                    if (null != closure_139_2.autocomplete) {
+                      let obj19 = closure_140_0(closure_140_3[19]);
+                      let performAutocompleteResult = obj19.performAutocomplete(
+                        closure_139_0,
+                        closure_139_2,
+                        closure_139_31,
+                      );
+                    } else {
+                      let obj40 = closure_140_1(closure_140_3[20]);
+                      let clearAllResult = obj40.clearAll(closure_139_2.channel.id, commandAttachmentDraftType);
+                      closure_10 = closure_140_18;
+                      obj39 = {};
+                      obj39.applicationId = closure_139_0.applicationId;
+                      obj39.data = closure_139_31;
+                      obj39.context = closure_139_2;
+                      obj39.attachments = closure_139_12;
+                      obj39.maxSizeCallback = closure_139_4;
+                      obj39.onMessageSuccess = function onMessageSuccess() {
+                        const values = Object.values(closure_1_1);
+                        const flatMapResult = values.flatMap((arr) => {
+                          const mapped = arr.map((type) => {
+                            if ("emoji" === type.type) {
+                              const obj = { names: null, surrogates: "", unicodeVersion: 6 };
+                              const name = type.name;
+                              const items = [name.replaceAll(":", "")];
+                              obj.names = items;
+                              let emoji = new closure_1_0(closure_1_3[21]).Emoji(obj);
+                            } else {
+                              emoji = null;
+                              if ("customEmoji" === type.type) {
+                                emoji = customEmojiById.getCustomEmojiById(type.emojiId);
+                              }
                             }
-                          },
-                          analytics_location: closure_140_21(commandOrigin),
-                          sectionName,
-                          source,
-                        };
-                        c15 = 4;
-                        c16 = 1;
-                        let obj36 = { value: interactionLifecycleOptionsFactory(command, context, obj25), done: false };
-                        return obj36;
-                      }
+                            return emoji;
+                          });
+                          return mapped.filter(closure_1_0(dependencyMap[22]).isNotNullish);
+                        });
+                        if (flatMapResult.length > 0) {
+                          let obj = { type: "EMOJI_TRACK_USAGE", emojiUsed: flatMapResult };
+                          closure_1(dependencyMap[10]).dispatch(obj);
+                          const obj2 = closure_1(dependencyMap[10]);
+                        }
+                      };
+                      obj39.analytics_location = closure_140_21(closure_139_10);
+                      obj39.sectionName = closure_139_6;
+                      obj39.source = closure_139_9;
+                      c15 = 4;
+                      c16 = 1;
+                      let obj41 = { value: closure_139_7(closure_139_0, closure_139_2, closure_139_31), done: false };
+                      return obj41;
                     }
                   }
                 }
               }
-            } else if (3 === tmp4) {
-              c13 = 0;
-              target_id.return();
-              throw closure_1_14;
-            } else if (command === 1) {
-              c16 = 3;
-              throw value;
-            } else if (command === 2) {
-              c16 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              obj34.interactionLifecycleOptions = value;
-              let tmp7 = commandOrigin(obj34);
             }
+          } else if (3 === tmp4) {
+            c13 = 0;
+            dependencyMap.return();
+            throw closure_1_14;
+          } else if (arg0 === 1) {
+            c16 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            obj39.interactionLifecycleOptions = value;
+            let tmp7 = closure_10(obj39);
           }
           c16 = 3;
-          return { value: "IconComponent", done: null };
+          let obj = { value, done: true };
+          return obj;
         }
       }
     }
-  });
-  return obj(...arguments);
+  })();
+  iter.next();
+  return iter;
 };
-obj = function _retryCommandMessage() {
-  obj = _asyncToGenerator(async (arg0, channel, arg2) => {
-    const commandType = arg0;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
-    return (async (arg0, value, arg2) => {
-      if (c6 === 2) {
-        c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_17 = async function _retryCommandMessage(arg0) {
+  let commandType = arg0;
+  closure_2 = arg2;
+  c5 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
-            } else if (commandType.isCommandType()) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            if (commandType.isCommandType()) {
               if (null != commandType.interactionData) {
                 if (null != closure_2.command) {
-                  const obj4 = { channel, guild };
+                  const obj4 = { channel, guild: null };
                   guild = null;
                   if (null != channel.guild_id) {
                     guild = guild.getGuild(channel.guild_id);
                   }
+                  obj4.guild = guild;
                   closure_4 = enqueueCommandInteraction;
                   obj5 = {
                     applicationId: closure_2.command.applicationId,
@@ -787,44 +798,31 @@ obj = function _retryCommandMessage() {
                 }
               }
             }
-          } else if (arg0 === 1) {
             c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            return { value, done: true };
-          } else {
-            obj5.interactionLifecycleOptions = value;
-            closure_4(obj5);
           }
+        } else if (arg0 === 1) {
           c6 = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp12) {
-          c6 = 3;
-          throw tmp12;
+          throw value;
+        } else if (arg0 !== 2) {
+          obj5.interactionLifecycleOptions = value;
+          closure_4(obj5);
         }
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp13) {
+        c6 = tmp;
+        throw tmp13;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
 function enqueueCommandInteraction(interactionLifecycleOptions) {
-  let applicationId;
-  let attachments;
-  let context;
-  let maxSizeCallback;
-  let nonce;
-  let obj5;
-  let onMessageSuccess;
-  let tmp;
-  function stageAttachments() {
-    return obj(...arguments);
-  }
   ({ applicationId, context, attachments, maxSizeCallback, onMessageSuccess } = interactionLifecycleOptions);
   interactionLifecycleOptions = interactionLifecycleOptions.interactionLifecycleOptions;
   let message;
   if (null != context.channel) {
-    const guild = context.guild;
+    guild = context.guild;
     const id = context.channel.id;
     let id1;
     if (guild != null) {
@@ -835,257 +833,296 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       channelId: id,
       guildId: id1,
       data: tmp,
-      nonce,
-      attachments,
-      maxSizeCallback,
-      analytics_location: tmp2,
-      sectionName: tmp3,
-      source: tmp4,
+      nonce: null,
+      attachments: null,
+      maxSizeCallback: null,
+      analytics_location: null,
+      sectionName: null,
+      source: null,
     };
-    nonce = interactionLifecycleOptions.nonce;
+    let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      const obj2 = onMessageSuccess(7262);
-      nonce = obj2.createNonce();
+      nonce = onMessageSuccess(7262).createNonce();
+      let obj2 = onMessageSuccess(7262);
     }
-    const obj4 = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: obj5 };
+    message.nonce = nonce;
+    message.attachments = attachments;
+    message.maxSizeCallback = maxSizeCallback;
+    message.analytics_location = tmp2;
+    message.sectionName = tmp3;
+    message.source = tmp4;
+    const obj5 = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
     ({
-      messageId: obj3.messageId,
-      onCreate: obj3.onCreate,
-      onSuccess: obj3.onSuccess,
-      onFailure: obj3.onFailure,
+      messageId: obj4.messageId,
+      onCreate: obj4.onCreate,
+      onSuccess: obj4.onSuccess,
+      onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
-    obj5 = {
+    const obj7 = {
       interactionType: onMessageSuccess(5126).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
-    const addQueued = InteractionActionCreatorsAll.addQueued;
-    const nonce2 = message.nonce;
-    InteractionActionCreatorsAll;
-    addQueued(nonce2, obj4);
+    obj5.data = obj7;
+    InteractionActionCreatorsAll.addQueued(message.nonce, obj5);
     if (null != attachments) {
       if (attachments.length > 0) {
-        const promise = stageAttachments(attachments, message.nonce, id1, maxSizeCallback);
-        promise.then((result) => {
-          const tmp = result;
-          if (tmp) {
-            let closure_0 = message;
-            let closure_1 = onMessageSuccess;
-            message = { type: MessageQueue.MessageDataType.COMMAND, message };
-            const enqueue = MessageQueueDefault.enqueue;
-            MessageQueueDefault;
-            enqueue(message, (ok) => {
-              let applicationId;
-              let channelId;
-              let guildId;
-              let nonce;
+        (function stageAttachments() {
+          const self = this;
+          const apply = closure_1_24.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })(attachments, message.nonce, id1, maxSizeCallback).then((result) => {
+          if (result) {
+            closure_0 = message;
+            closure_1 = onMessageSuccess;
+            message = MessageQueueDefault;
+            const obj2 = { type: MessageQueue.MessageDataType.COMMAND, message };
+            message.enqueue(obj2, (ok) => {
               ({ nonce, applicationId, channelId, guildId } = closure_0);
-              const handleInteractionResponse = onMessageSuccess(closure_2_3[27]).handleInteractionResponse;
-              onMessageSuccess(closure_2_3[27]);
               if (guildId == null) {
                 guildId = null;
               }
-              const result = handleInteractionResponse(nonce, ok, applicationId, channelId, guildId);
-              ok = ok.ok && null != closure_1;
+              const result = onMessageSuccess(dependencyMap[27]).handleInteractionResponse(
+                nonce,
+                ok,
+                applicationId,
+                channelId,
+                guildId,
+              );
+              ok = ok.ok;
+              if (ok) {
+                ok = null != closure_1;
+              }
               if (ok) {
                 closure_1();
               }
+              const obj = onMessageSuccess(dependencyMap[27]);
             });
           }
         });
+        const promise = (function stageAttachments() {
+          const self = this;
+          const apply = closure_1_24.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        })(attachments, message.nonce, id1, maxSizeCallback);
       }
     }
-    const obj8 = { type: onMessageSuccess(7473).MessageDataType.COMMAND, message };
-    let enqueue = message(7473).enqueue;
-    message(7473);
-    enqueue(obj8, (ok) => {
-      let applicationId;
-      let channelId;
-      let guildId;
-      let nonce;
+    closure_129_0 = message;
+    closure_129_1 = onMessageSuccess;
+    const obj10 = { type: onMessageSuccess(7473).MessageDataType.COMMAND, message };
+    message(7473).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
-      const handleInteractionResponse = onMessageSuccess(closure_2_3[27]).handleInteractionResponse;
-      onMessageSuccess(closure_2_3[27]);
       if (guildId == null) {
         guildId = null;
       }
-      const result = handleInteractionResponse(nonce, ok, applicationId, channelId, guildId);
-      ok = ok.ok && null != closure_1;
+      const result = onMessageSuccess(dependencyMap[27]).handleInteractionResponse(
+        nonce,
+        ok,
+        applicationId,
+        channelId,
+        guildId,
+      );
+      ok = ok.ok;
+      if (ok) {
+        ok = null != closure_1;
+      }
       if (ok) {
         closure_1();
       }
+      const obj = onMessageSuccess(dependencyMap[27]);
     });
+    const obj6 = message(7473);
   }
 }
 function displayInteractionLifecycleInChat() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_20.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-obj = function _displayInteractionLifecycleInChat() {
-  obj = _asyncToGenerator(async (command, arg1, interaction_data) => {
-    let closure_5;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
-    return (async (arg0, value, arg2) => {
-      let obj13;
-      let obj7;
-      let tmp59Result;
-      if (c8 === 2) {
-        c8 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  let channel = arg1;
+  closure_2 = arg2;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          let user;
-          let cachedApplicationSection;
-          let bot;
-          let obj12;
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            let obj3 = { value, done: true };
+            return obj3;
+          } else {
+            const user = tmp3;
+            closure_4 = tmp5;
+            closure_132_0 = closure_0;
+            closure_132_1 = channel;
+            closure_132_2 = closure_2;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            closure_132_5 = undefined;
+            if (null == channel.channel) {
               c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              let obj3 = { value, done: true };
-              return obj3;
+              let obj4 = { value: {}, done: true };
+              return obj4;
             } else {
-              user = tmp;
-              cachedApplicationSection = undefined;
-              bot = undefined;
-              obj12 = undefined;
-              if (null == closure_1.channel) {
+              const obj5 = { channel: tmp63.channel, type: "channel" };
+              const cachedApplicationSection = ApplicationCommandQueryApiAll.getCachedApplicationSection(
+                obj5,
+                tmp64.type,
+                tmp62.applicationId,
+              );
+              closure_132_3 = cachedApplicationSection;
+              if (null == cachedApplicationSection) {
                 c8 = 3;
-                let obj4 = { value: {}, done: true };
-                return obj4;
+                const obj8 = { value: {}, done: true };
+                return obj8;
               } else {
-                const obj5 = { channel: tmp57.channel, type: "channel" };
-                const obj17 = ApplicationCommandQueryApiAll;
-                cachedApplicationSection = obj17.getCachedApplicationSection(obj5, tmp58.type, tmp56.applicationId);
-                if (null == cachedApplicationSection) {
-                  c8 = 3;
-                  return { value: {}, done: true };
-                } else {
-                  const application = cachedApplicationSection.application;
-                  bot = undefined;
-                  if (application != null) {
-                    bot = application.bot;
-                  }
-                  if (null == bot) {
-                    if (null != cachedApplicationSection.botId) {
-                      c6 = 1;
-                      c7 = 2;
-                      c8 = 1;
-                      const obj9 = { value: tmp59Result.getUser(cachedApplicationSection.botId), done: false };
-                      tmp59Result = UserActionCreatorsAll;
-                      return obj9;
-                    }
+                const application = cachedApplicationSection.application;
+                let bot;
+                if (application != null) {
+                  bot = application.bot;
+                }
+                closure_132_4 = bot;
+                if (null == bot) {
+                  if (null != cachedApplicationSection.botId) {
+                    c6 = 1;
+                    c7 = 2;
+                    c8 = 1;
+                    const obj9 = { value: UserActionCreatorsAll.getUser(cachedApplicationSection.botId), done: false };
+                    return obj9;
                   }
                 }
               }
             }
-          } else if (1 === tmp4) {
-            c6 = 0;
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            c6 = 0;
           }
-          let tmp7 = user;
-          const obj10 = { channelId: closure_1.channel.id, content: "", type, author: obj11 };
-          type = interaction_data.type;
-          const tmp10 = closure_133_1(closure_133_3[30]);
-          if (type === closure_133_0(closure_133_3[13]).ApplicationCommandType.CHAT) {
-            type = closure_133_13.CHAT_INPUT_COMMAND;
-          } else {
-            type = closure_133_13.CONTEXT_MENU_COMMAND;
-          }
-          obj11 = bot;
-          if (bot == null) {
-            obj11 = {
-              id: cachedApplicationSection.id,
-              username: cachedApplicationSection.name,
-              discriminator: closure_133_14,
-              avatar: null,
-              bot: true,
-            };
-            type = closure_133_14;
-          }
-          obj12 = { application: cachedApplicationSection.application, interaction: obj13, interaction_data };
-          const merged = Object.assign(tmp10(obj10));
-          obj13 = {
-            id: interaction_data.id,
-            name: interaction_data.name,
-            name_localized: command.displayName,
-            type: closure_133_0(closure_133_3[25]).InteractionTypes.APPLICATION_COMMAND,
-            user: obj7.userRecordToServer(closure_133_9.getCurrentUser()),
-          };
-          obj7 = closure_133_0(closure_133_3[30]);
-          const obj14 = { applicationId: command.applicationId, command };
-          const obj8 = closure_133_1(closure_133_3[31]);
-          obj8.receiveMessage(closure_1.channel.id, obj12, true, obj14);
-          type = {
-            onCreate(id) {
-              if (null != user.interaction) {
-                user.interaction.id = id;
-              }
-            },
-            onSuccess() {},
-            onFailure(code, arg1, arg2, reason) {
-              if (null != closure_1_1.channel) {
-                let result = arg1;
-                const tmp2 = null == arg1 && null != code;
-                if (tmp2) {
-                  obj = closure_1(obj11[31]);
-                  obj.sendClydeError(closure_1_1.channel.id, code);
-                }
-                const tmp7 = null == result && null != reason;
-                if (tmp7) {
-                  const obj2 = closure_0(obj11[27]);
-                  result = obj2.interactionCallbackErrorReason(reason, closure_1_0.applicationId);
-                }
-                const obj4 = {
-                  type: "MESSAGE_SEND_FAILED",
-                  messageId: user.id,
-                  channelId: closure_1_1.channel.id,
-                  reason: result,
-                };
-                const obj3 = closure_1(obj11[10]);
-                obj3.dispatch(obj4);
-              }
-            },
-          };
-          Object.defineProperty(type, "messageId", { get: () => user.id, set: undefined });
-          Object.defineProperty(type, "nonce", { get: () => user.id, set: undefined });
+        } else if (1 === tmp8) {
+          c6 = 0;
+        } else if (arg0 === 1) {
           c8 = 3;
-          return { value: type, done: true };
-        } catch (tmp50) {
-          if (0 === c6) {
-            c8 = 3;
-            throw tmp50;
-          } else {
-            c7 = 1;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          c6 = 0;
+        }
+        const obj10 = { channelId: closure_132_1.channel.id, content: "", type: null, author: null };
+        if (closure_132_2.type === closure_133_0(closure_133_3[13]).ApplicationCommandType.CHAT) {
+          let CONTEXT_MENU_COMMAND = closure_133_13.CHAT_INPUT_COMMAND;
+        } else {
+          CONTEXT_MENU_COMMAND = closure_133_13.CONTEXT_MENU_COMMAND;
+        }
+        obj10.type = CONTEXT_MENU_COMMAND;
+        obj11 = closure_132_4;
+        if (closure_132_4 == null) {
+          obj11 = {
+            id: closure_132_3.id,
+            username: closure_132_3.name,
+            discriminator: closure_133_14,
+            avatar: null,
+            bot: true,
+          };
+        }
+        const obj12 = {};
+        obj10.author = obj11;
+        const merged = Object.assign(closure_133_1(closure_133_3[30])(obj10));
+        obj12.application = closure_132_3.application;
+        const obj13 = {
+          id: closure_132_2.id,
+          name: closure_132_2.name,
+          name_localized: closure_132_0.displayName,
+          type: closure_133_0(closure_133_3[25]).InteractionTypes.APPLICATION_COMMAND,
+          user: null,
+        };
+        const tmp14 = closure_133_1(closure_133_3[30]);
+        obj13.user = closure_133_0(closure_133_3[30]).userRecordToServer(closure_133_9.getCurrentUser());
+        obj12.interaction = obj13;
+        obj12.interaction_data = closure_132_2;
+        closure_132_5 = obj12;
+        const obj7 = closure_133_1(closure_133_3[31]);
+        const obj14 = { applicationId: closure_132_0.applicationId, command: closure_132_0 };
+        obj7.receiveMessage(closure_132_1.channel.id, closure_132_5, true, obj14);
+        const obj15 = {};
+        Object.defineProperty(obj15, "messageId", { get: () => user.id, set: undefined });
+        Object.defineProperty(obj15, "nonce", { get: () => user.id, set: undefined });
+        obj15.onCreate = function onCreate(id) {
+          if (null != user.interaction) {
+            user.interaction.id = id;
           }
+        };
+        obj15.onSuccess = function onSuccess() {};
+        obj15.onFailure = function onFailure(code, arg1, arg2, reason) {
+          if (null != channel.channel) {
+            let result = arg1;
+            if (tmp2) {
+              closure_1(obj11[31]).sendClydeError(channel.channel.id, code);
+              const obj = closure_1(obj11[31]);
+            }
+            if (tmp7) {
+              result = closure_0(obj11[27]).interactionCallbackErrorReason(reason, closure_1_0.applicationId);
+              const obj2 = closure_0(obj11[27]);
+            }
+            const obj4 = {
+              type: "MESSAGE_SEND_FAILED",
+              messageId: user.id,
+              channelId: channel.channel.id,
+              reason: result,
+            };
+            closure_1(obj11[10]).dispatch(obj4);
+            const obj3 = closure_1(obj11[10]);
+            tmp2 = null == arg1 && null != code;
+            tmp7 = null == result && null != reason;
+          }
+        };
+        c8 = 3;
+        const obj16 = { value: obj15, done: true };
+        return obj16;
+      } catch (tmp55) {
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp55;
+        } else {
+          c7 = tmp;
         }
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
 function getAnalyticsLocationFromCommandOrigin(arg0) {
   if (ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
@@ -1111,212 +1148,281 @@ function getAnalyticsLocationFromCommandOrigin(arg0) {
   }
 }
 function getMaxAndTotalFileSize() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_23.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-obj = function _getMaxAndTotalFileSize() {
-  obj = _asyncToGenerator(async (arg0, totalSize) => {
-    let closure_0 = arg0;
-    let c9 = 0;
-    let c10 = 0;
-    let c8 = 0;
-    return (async (arg0, value) => {
-      if (c10 === 2) {
-        c10 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
+  dependencyMap = arg0;
+  closure_1 = arg1;
+  c9 = 0;
+  c10 = 0;
+  c8 = 0;
+  return (async (arg0, value) => {
+    if (c10 === 2) {
+      c10 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        while (true) {
-          let closure_4;
-          c10 = 2;
-          if (0 === c9) {
-            if (arg0 === 1) {
-              c10 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c10 = 3;
-              let obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_5 = tmp;
-              closure_0 = totalSize;
-              let c3;
-              closure_4 = undefined;
-              totalSize = 0;
-              closure_3 = closure_0;
-              largestUploadedFileSize = closure_0[Symbol.iterator]();
-              if (largestUploadedFileSize === undefined) {
-                let obj4 = { totalSize, largestUploadedFileSize };
-                c10 = 3;
-                let obj5 = { value: obj4, done: true };
-                return obj5;
-              } else {
-                c8 = 1;
-                c3 = tmp11;
-                let obj7 = c3;
-                if (closure_0) {
-                  let currentSize = obj7.currentSize;
-                  c4 = currentSize;
-                  if (currentSize == null) {
-                    c4 = 0;
-                  }
-                  closure_6 = c4;
-                } else {
-                  c9 = 2;
-                  c10 = 1;
-                  let obj6 = { value: obj7.getSize(), done: false };
-                  return obj6;
-                }
-              }
-            }
-          } else if (1 === tmp4) {
-            c8 = 0;
-            largestUploadedFileSize.return();
-            throw closure_1_7;
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      while (true) {
+        c10 = 2;
+        if (0 === c9) {
+          if (arg0 === 1) {
             c10 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c8 = 0;
-            largestUploadedFileSize.return();
             c10 = 3;
-            obj = { value, done: true };
-            return obj;
+            let obj3 = { value, done: true };
+            return obj3;
           } else {
-            closure_6 = value;
+            closure_5 = tmp;
+            closure_133_0 = closure_1;
+            closure_133_3 = undefined;
+            closure_133_4 = undefined;
+            closure_133_1 = 0;
+            closure_133_2 = 0;
+            closure_3 = dependencyMap;
+            closure_2 = dependencyMap[Symbol.iterator]();
+            if (closure_2 === undefined) {
+              let obj4 = { totalSize: null, largestUploadedFileSize: null };
+              obj4.totalSize = closure_133_1;
+              obj4.largestUploadedFileSize = closure_133_2;
+              c10 = 3;
+              let obj5 = { value: obj4, done: true };
+              return obj5;
+            } else {
+              c8 = 1;
+              closure_133_3 = tmp11;
+              let obj7 = closure_133_3;
+              if (closure_133_0) {
+                let currentSize = obj7.currentSize;
+                c4 = currentSize;
+                if (currentSize == null) {
+                  c4 = 0;
+                }
+                closure_6 = c4;
+              } else {
+                c9 = 2;
+                c10 = 1;
+                let obj6 = { value: obj7.getSize(), done: false };
+                return obj6;
+              }
+            }
           }
-          closure_4 = closure_6;
-          if (closure_4 > largestUploadedFileSize) {
-            largestUploadedFileSize = closure_4;
-          }
-          totalSize = totalSize + closure_4;
+        } else if (1 === tmp4) {
           c8 = 0;
+          closure_2.return();
+          throw closure_1_7;
+        } else if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 0;
+          closure_2.return();
+          c10 = 3;
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          closure_6 = value;
         }
+        closure_133_4 = closure_6;
+        if (closure_133_4 > closure_133_2) {
+          closure_133_2 = closure_133_4;
+        }
+        closure_133_1 = closure_133_1 + closure_133_4;
+        c8 = 0;
       }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _stageAttachments() {
-  obj = _asyncToGenerator(async (arg0, arg1, arg2, arg3) => {
-    let closure_5;
-    let largestUploadedFileSize;
-    let setFailed;
-    let totalSize;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_3 = arg3;
-    let closure_2 = closure_3;
-    function handleUploadsTooLarge(largestUploadedFileSize) {
-      let obj2;
-      if (closure_2 != null) {
-        tmp(closure_3, largestUploadedFileSize);
-      }
-      setFailed = closure_2_2(closure_2_3[24]).setFailed;
-      const ENTITY_TOO_LARGE = constants.ENTITY_TOO_LARGE;
-      closure_2_2(closure_2_3[24]);
-      const intl = closure_2_0(closure_2_3[35]).intl;
-      const formatToPlainString = intl.formatToPlainString;
-      obj = { maxSize: obj2.sizeString(closure_3) };
-      const fxEKdS = closure_2_0(closure_2_3[35]).t.fxEKdS;
-      obj2 = closure_2_0(closure_2_3[33]);
-      setFailed(closure_1, ENTITY_TOO_LARGE, formatToPlainString(fxEKdS, obj));
     }
-    const getEffectiveUploadLimit = UploadLimits.getEffectiveUploadLimit;
-    const obj11 = FileUtils;
-    closure_3 = getEffectiveUploadLimit(obj11.maxFileSize(closure_2));
-    const obj12 = UploadUtils;
-    const maxTotalAttachmentSize = obj12.getMaxTotalAttachmentSize({ location: "executeCommand.stageAttachments" });
-    await getMaxAndTotalFileSize(closure_0, false);
-    if (2 === c7) {
-      let c6 = 0;
-      setFailed = closure_133_2(closure_133_3[24]).setFailed;
-      const tmp15 = closure_133_2(closure_133_3[24]);
-      let intl = closure_133_0(closure_133_3[35]).intl;
-      const obj7 = { count: closure_0.length };
-      const setFailedResult = setFailed(
-        closure_1,
-        undefined,
-        intl.formatToPlainString(closure_133_0(closure_133_3[35]).t["9h1/1p"], obj7),
-      );
-    } else if (3 === c7) {
-      if (arg0 === 1) {
-        let c8 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c8 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        let closure_9 = value;
-        totalSize = closure_9.totalSize;
-        largestUploadedFileSize = closure_9.largestUploadedFileSize;
-        setFailed = closure_0;
-        let someResult = closure_0.some((error) => error.error === constants.ENTITY_TOO_LARGE);
-        if (!someResult) {
-          setFailed = totalSize;
-          someResult = totalSize > maxTotalAttachmentSize;
-        }
-        let flag = !someResult;
-        if (!flag) {
-          setFailed = handleUploadsTooLarge;
-          handleUploadsTooLarge(largestUploadedFileSize);
-          flag = false;
-        }
-        c8 = 3;
-        const obj9 = { value: flag, done: true };
-        return obj9;
-      }
-    } else if (arg0 === 1) {
-      c8 = 3;
+  })();
+};
+let closure_24 = async function _stageAttachments(arg0) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      c6 = 0;
-      c8 = 3;
-      obj = { value, done: true };
-      return obj;
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
-      c6 = 0;
+      return { value: "IconComponent", done: null };
     }
-    await closure_133_22(closure_0, true);
-    let closure_6 = value;
-    totalSize = closure_6.totalSize;
-    largestUploadedFileSize = closure_6.largestUploadedFileSize;
-    const _Math = Math;
-    setFailed = closure_3;
-    if (largestUploadedFileSize <= Math.max(closure_3, closure_133_15)) {
-      if (totalSize <= maxTotalAttachmentSize) {
-        c6 = 1;
-        setFailed = closure_133_1;
-        c7 = 4;
-        c8 = 1;
-        const obj6 = { value: closure_133_1(closure_133_3[36])(closure_0), done: false };
-        return obj6;
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          let obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp5;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_1;
+          closure_132_2 = dependencyMap;
+          let effectiveUploadLimit;
+          let maxTotalAttachmentSize;
+          closure_132_6 = undefined;
+          let totalSize;
+          closure_132_8 = undefined;
+          closure_132_9 = undefined;
+          closure_132_5 = function handleUploadsTooLarge(arg0) {
+            if (closure_1_2 != null) {
+              tmp(dependencyMap, arg0);
+            }
+            const intl = closure_0(1126).intl;
+            const obj2 = { maxSize: null };
+            const obj = closure_2(7811);
+            obj2.maxSize = closure_0(7283).sizeString(dependencyMap);
+            obj.setFailed(
+              closure_1_1,
+              constants.ENTITY_TOO_LARGE,
+              intl.formatToPlainString(closure_0(1126).t.fxEKdS, obj2),
+            );
+            const obj3 = closure_0(7283);
+          };
+          const obj11 = UploadLimits;
+          effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
+          maxTotalAttachmentSize = UploadUtils.getMaxTotalAttachmentSize({
+            location: "executeCommand.stageAttachments",
+          });
+          c7 = 1;
+          c8 = 1;
+          const obj5 = { value: getMaxAndTotalFileSize(closure_0, false), done: false };
+          return obj5;
+        }
+      } else if (1 === tmp8) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_132_6 = value;
+          totalSize = closure_132_6.totalSize;
+          closure_132_8 = closure_132_6.largestUploadedFileSize;
+          const _Math = Math;
+          if (closure_132_8 <= Math.max(effectiveUploadLimit, closure_133_15)) {
+            if (totalSize <= maxTotalAttachmentSize) {
+              c6 = 1;
+              c7 = 4;
+              c8 = 1;
+              const obj7 = { value: closure_133_1(closure_133_3[36])(closure_132_0), done: false };
+              return obj7;
+            }
+          }
+          closure_132_5(closure_132_8);
+          c8 = 3;
+          return { value: false, done: true };
+        }
+      } else {
+        if (2 === tmp8) {
+          c6 = 0;
+          let intl = closure_133_0(closure_133_3[35]).intl;
+          const obj8 = { count: closure_132_0.length };
+          closure_133_2(closure_133_3[24]).setFailed(
+            closure_132_1,
+            undefined,
+            intl.formatToPlainString(closure_133_0(closure_133_3[35]).t["9h1/1p"], obj8),
+          );
+          closure_133_22(closure_132_0, true);
+          c7 = 3;
+          c8 = 1;
+          const obj4 = closure_133_2(closure_133_3[24]);
+        } else if (3 === tmp8) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            closure_132_9 = value;
+            totalSize = closure_132_9.totalSize;
+            closure_132_8 = closure_132_9.largestUploadedFileSize;
+            let someResult = closure_132_0.some((error) => error.error === constants.ENTITY_TOO_LARGE);
+            if (!someResult) {
+              someResult = totalSize > maxTotalAttachmentSize;
+            }
+            let flag = !someResult;
+            if (someResult) {
+              closure_132_5(closure_132_8);
+              flag = false;
+            }
+            c8 = 3;
+            const obj10 = { value: flag, done: true };
+            return obj10;
+          }
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          c6 = 0;
+        }
+        c6 = 0;
+        c8 = 3;
+        let obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp45) {
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp45;
+      } else {
+        c7 = tmp;
       }
     }
-    handleUploadsTooLarge(largestUploadedFileSize);
-    return false;
-  });
-  return obj(...arguments);
+  }
 };
+const Constants = fn(1085);
 ({
-  AbortCodes: unpackModuleId,
+  AbortCodes: closure_11,
   AnalyticEvents: closure_12,
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = MessageConstants.DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4889).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 
 export default function executeCommand() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_16.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
 export const retryCommandMessage = function retryCommandMessage() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_17.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

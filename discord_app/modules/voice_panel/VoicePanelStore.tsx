@@ -1,200 +1,196 @@
 // discord_app/modules/voice_panel/VoicePanelStore.tsx
-import 01254__ from "../../../_runtime/metro/01254__.js";
+import identity from "../../../_runtime/metro/01254__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let set, set2;
-
-const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
-  let set1;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
+  closure_0 = arg0;
+  dependencyMap = arg1;
   let obj = {
-    channels: set,
+    channels: new Set(),
     isActivityFocused: false,
     isVoicePanelFullscreen() {
-      return closure_1().voicePanelsFullscreen.size > 0;
+      return dependencyMap().voicePanelsFullscreen.size > 0;
     },
     isAnyVoicePanelOpen() {
-      return closure_1().voicePanelsOpened.size > 0;
+      return dependencyMap().voicePanelsOpened.size > 0;
     },
-    voicePanelsFullscreen: set1,
-    voicePanelsOpened: set2,
-    voicePanelsPIP: new Set(),
-    openChannel(arg0) {
-      closure_0 = arg0;
-      const channels = closure_1().channels;
-      if (!channels.has(arg0)) {
-        let obj = closure_0(closure_1[1]);
-        obj.batchUpdates(() => {
-          closure_0((channels) => {
-            let items;
-            let items1;
-            const obj = { channels: new Set(items), voicePanelsOpened: new Set(items1) };
-            const merged = Object.assign(channels);
-            items = [closure_1_0, ...Array.from(channels.channels)];
-            items1 = [closure_1_0, ...Array.from(channels.voicePanelsOpened)];
-            new Set(items);
-            new Set(items1);
-            return obj;
-          });
-        });
-      }
-    },
-    closeChannel(channelId) {
-      let obj = channelId(closure_1[1]);
-      obj.batchUpdates(() => {
-        channelId(function(arg0) {
-          let channels;
-          let voicePanelsFullscreen;
-          let voicePanelsOpened;
-          ({ channels, voicePanelsFullscreen, voicePanelsOpened } = arg0);
-          if (!channels.has(channelId)) {
-            let tmp2;
-            if (!voicePanelsFullscreen.has(channelId)) {
-              tmp2 = arg0;
-            }
-            return tmp2;
-          }
-          let tmp3 = channels;
-          if (channels.has(channelId)) {
-            const _Set = Set;
-            const self = this;
-            const self2 = this;
-            set = new Set(channels);
-            set.delete(channelId);
-            tmp3 = set;
-          }
-          let tmp8 = voicePanelsFullscreen;
-          if (voicePanelsFullscreen.has(channelId)) {
-            const _Set2 = Set;
-            const self3 = this;
-            const self4 = this;
-            const set1 = new Set(voicePanelsFullscreen);
-            set1.delete(channelId);
-            tmp8 = set1;
-          }
-          let tmp13 = voicePanelsOpened;
-          if (voicePanelsOpened.has(channelId)) {
-            const _Set3 = Set;
-            const self5 = this;
-            const self6 = this;
-            set2 = new Set(voicePanelsOpened);
-            set2.delete(channelId);
-            tmp13 = set2;
-          }
-          const obj = { channels: tmp3, voicePanelsFullscreen: tmp8, voicePanelsOpened: tmp13 };
-          const merged = Object.assign(arg0);
-          tmp2 = obj;
-        });
-      });
-    },
-    isMounted(arg0) {
-      const channels = closure_1().channels;
-      return channels.has(arg0);
-    },
-    setIsActivityFocused(connectedValue) {
-      let obj = connectedValue(closure_1[1]);
-      obj.batchUpdates(() => {
-        const tmp = connectedValue((isActivityFocused) => {
-          let tmp2 = isActivityFocused;
-          if (isActivityFocused.isActivityFocused !== connectedValue) {
-            const obj = { isActivityFocused: tmp };
-            const merged = Object.assign(isActivityFocused);
-            tmp2 = obj;
-          }
-          return tmp2;
-        });
-      });
-    },
-    setChannelPanelFullscreen(channelId, lockEnabled) {
-      closure_1 = lockEnabled;
-      let obj = channelId(closure_1[1]);
-      obj.batchUpdates(() => {
-        channelId((voicePanelsFullscreen) => {
-          set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
-          const hasItem = set.has(channelId);
-          if (lockEnabled) {
-            if (hasItem) {
-              return voicePanelsFullscreen;
-            } else {
-              set.add(channelId);
-            }
-          } else if (hasItem) {
-            set.delete(channelId);
-          } else {
-            return voicePanelsFullscreen;
-          }
-          const obj = { voicePanelsFullscreen: set };
-          const merged = Object.assign(voicePanelsFullscreen);
+    voicePanelsFullscreen: null,
+    voicePanelsOpened: null,
+    voicePanelsPIP: null,
+    openChannel: null,
+    closeChannel: null,
+    isMounted: null,
+    setIsActivityFocused: null,
+    setChannelPanelFullscreen: null,
+    setChannelPanelOpen: null,
+    isChannelOpen: null,
+    setChannelPanelPIP: null,
+  };
+  let set = new Set();
+  obj.voicePanelsFullscreen = new Set();
+  let set1 = new Set();
+  obj.voicePanelsOpened = new Set();
+  let set2 = new Set();
+  obj.voicePanelsPIP = new Set();
+  obj.openChannel = function openChannel(arg0) {
+    closure_0 = arg0;
+    const channels = dependencyMap().channels;
+    if (!channels.has(arg0)) {
+      closure_0(1259).batchUpdates(() => {
+        closure_0((channels) => {
+          const obj = {};
+          const merged = Object.assign(channels);
+          const items = [closure_1_0, ...Array.from(channels.channels)];
+          obj.channels = new Set(items);
+          const items1 = [closure_1_0, ...Array.from(channels.voicePanelsOpened)];
+          const set = new Set(items);
+          obj.voicePanelsOpened = new Set(items1);
           return obj;
         });
       });
-    },
-    setChannelPanelOpen(channelId, arg1) {
-      closure_1 = arg1;
-      let obj = channelId(closure_1[1]);
-      obj.batchUpdates(() => {
-        channelId(function(channels) {
-          channels = channels.channels;
-          if (channels.has(channelId)) {
-            const _Set = Set;
-            const self = this;
-            const self2 = this;
-            set = new Set(channels.voicePanelsOpened);
-            const hasItem = set.has(channelId);
-            if (closure_1_1) {
-              if (hasItem) {
-                return channels;
-              } else {
-                set.add(channelId);
-              }
-            } else if (hasItem) {
-              set.delete(channelId);
-            } else {
-              return channels;
-            }
-            const obj = { voicePanelsOpened: set };
-            const merged = Object.assign(channels);
-            return obj;
-          } else {
-            return channels;
+      let obj = closure_0(1259);
+    }
+  };
+  obj.closeChannel = function closeChannel(channelId) {
+    channelId(1259).batchUpdates(() => {
+      channelId((arg0) => {
+        ({ channels, voicePanelsFullscreen, voicePanelsOpened } = arg0);
+        if (!channels.has(channelId)) {
+          if (!voicePanelsFullscreen.has(channelId)) {
+            let tmp2 = arg0;
           }
-        });
+          return tmp2;
+        }
+        let tmp3 = channels;
+        if (channels.has(channelId)) {
+          const _Set = Set;
+          const set = new Set(channels);
+          set.delete(channelId);
+          tmp3 = set;
+        }
+        let tmp10 = voicePanelsFullscreen;
+        if (voicePanelsFullscreen.has(channelId)) {
+          const _Set2 = Set;
+          const set1 = new Set(voicePanelsFullscreen);
+          set1.delete(channelId);
+          tmp10 = set1;
+        }
+        let tmp17 = voicePanelsOpened;
+        if (voicePanelsOpened.has(channelId)) {
+          const _Set3 = Set;
+          const set2 = new Set(voicePanelsOpened);
+          set2.delete(channelId);
+          tmp17 = set2;
+        }
+        const obj = {};
+        const merged = Object.assign(arg0);
+        obj.channels = tmp3;
+        obj.voicePanelsFullscreen = tmp10;
+        obj.voicePanelsOpened = tmp17;
+        tmp2 = obj;
       });
-    },
-    isChannelOpen(arg0) {
-      const voicePanelsOpened = closure_1().voicePanelsOpened;
-      return voicePanelsOpened.has(arg0);
-    },
-    setChannelPanelPIP(channelId, arg1) {
-      closure_1 = arg1;
-      let obj = channelId(closure_1[1]);
-      obj.batchUpdates(() => {
-        channelId((voicePanelsPIP) => {
-          set = new Set(voicePanelsPIP.voicePanelsPIP);
+    });
+  };
+  obj.isMounted = function isMounted(arg0) {
+    const channels = dependencyMap().channels;
+    return channels.has(arg0);
+  };
+  obj.setIsActivityFocused = function setIsActivityFocused(connectedValue) {
+    connectedValue(1259).batchUpdates(() => {
+      connectedValue((isActivityFocused) => {
+        let tmp2 = isActivityFocused;
+        if (isActivityFocused.isActivityFocused !== connectedValue) {
+          const obj = {};
+          const merged = Object.assign(isActivityFocused);
+          obj.isActivityFocused = tmp;
+          tmp2 = obj;
+        }
+        return tmp2;
+      });
+    });
+  };
+  obj.setChannelPanelFullscreen = function setChannelPanelFullscreen(channelId, lockEnabled) {
+    dependencyMap = lockEnabled;
+    channelId(1259).batchUpdates(() => {
+      channelId((voicePanelsFullscreen) => {
+        const set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
+        const hasItem = set.has(channelId);
+        if (lockEnabled) {
+          if (hasItem) {
+            return voicePanelsFullscreen;
+          } else {
+            set.add(channelId);
+          }
+        } else if (hasItem) {
+          set.delete(channelId);
+        } else {
+          return voicePanelsFullscreen;
+        }
+        const obj = {};
+        const merged = Object.assign(voicePanelsFullscreen);
+        obj.voicePanelsFullscreen = set;
+        return obj;
+      });
+    });
+  };
+  obj.setChannelPanelOpen = function setChannelPanelOpen(channelId, arg1) {
+    dependencyMap = arg1;
+    channelId(1259).batchUpdates(() => {
+      channelId((channels) => {
+        channels = channels.channels;
+        if (channels.has(channelId)) {
+          const _Set = Set;
+          const set = new Set(channels.voicePanelsOpened);
           const hasItem = set.has(channelId);
           if (closure_1_1) {
             if (hasItem) {
-              return voicePanelsPIP;
+              return channels;
             } else {
               set.add(channelId);
             }
           } else if (hasItem) {
             set.delete(channelId);
           } else {
-            return voicePanelsPIP;
+            return channels;
           }
-          const obj = { voicePanelsPIP: set };
-          const merged = Object.assign(voicePanelsPIP);
+          const obj = {};
+          const merged = Object.assign(channels);
+          obj.voicePanelsOpened = set;
           return obj;
-        });
+        } else {
+          return channels;
+        }
       });
-    }
+    });
   };
-  set = new Set();
-  set1 = new Set();
-  set2 = new Set();
-  new Set();
+  obj.isChannelOpen = function isChannelOpen(arg0) {
+    const voicePanelsOpened = dependencyMap().voicePanelsOpened;
+    return voicePanelsOpened.has(arg0);
+  };
+  obj.setChannelPanelPIP = function setChannelPanelPIP(channelId, arg1) {
+    dependencyMap = arg1;
+    channelId(1259).batchUpdates(() => {
+      channelId((voicePanelsPIP) => {
+        const set = new Set(voicePanelsPIP.voicePanelsPIP);
+        const hasItem = set.has(channelId);
+        if (closure_1_1) {
+          if (hasItem) {
+            return voicePanelsPIP;
+          } else {
+            set.add(channelId);
+          }
+        } else if (hasItem) {
+          set.delete(channelId);
+        } else {
+          return voicePanelsPIP;
+        }
+        const obj = {};
+        const merged = Object.assign(voicePanelsPIP);
+        obj.voicePanelsPIP = set;
+        return obj;
+      });
+    });
+  };
   return obj;
 });
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelStore.tsx");

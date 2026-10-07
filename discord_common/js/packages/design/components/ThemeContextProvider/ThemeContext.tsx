@@ -1,38 +1,26 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx
-import react2 from "../../../../../../_runtime/00576_react.js";
-import Constants from "../../../../shared/Constants.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating_mod from "../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../../_runtime/00576_c.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let children;
-
-let c3;
-let closure_4;
-let json;
-const ThemeTypes = Constants.ThemeTypes;
-({ Fragment: c3, jsx: closure_4 } = Fragment);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const jsxProd = fn(21);
+({ Fragment: c3, jsx: closure_4 } = jsxProd);
+let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function () {
-      context = react.useContext(context);
+  ? () => {
+      context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
-        const self = this;
-        const self2 = this;
         const error = new Error("useThemeContext must be used within a ThemeContext.Provider");
         throw error;
       } else {
         return context;
       }
     }
-  : function () {
-      context = react.useContext(context);
+  : () => {
+      context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
-        const self = this;
-        const self2 = this;
         const error = new Error("useThemeContext must be used within a ThemeContext.Provider");
         throw error;
       } else {
@@ -41,7 +29,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let closure_5 = tmp3;
 let obj = {
-  theme: ThemeTypes.LIGHT,
+  theme: fn(1096).ThemeTypes.LIGHT,
   primaryColor: null,
   secondaryColor: null,
   gradient: null,
@@ -52,36 +40,43 @@ let obj = {
   disableAdaptiveTheme: false,
   reduceAdaptiveTheme: false,
 };
-let obj2 = { key: json };
-json = JSON.stringify(obj);
+const obj3 = {};
+let json = JSON.stringify(obj);
 let merged = Object.assign(obj);
-let context = react.createContext(obj2);
-ReactCompilerGating = ReactCompilerGating_mod;
+obj3.key = json;
+let context = noop.createContext(obj3);
+ReactCompilerGating = fn(558);
 function createThemedContext(arg0) {
-  let json;
-  const obj = { key: json };
-  json = JSON.stringify(arg0);
+  const obj = {};
+  const json = JSON.stringify(arg0);
   const merged = Object.assign(arg0);
+  obj.key = json;
   return obj;
 }
-const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx",
+);
+
+export { createThemedContext };
+export const useThemeContext = tmp3;
+export const FALLBACK_THEME_CONTEXT_VALUE = obj3;
+export const ThemeContext = context;
+export const UseThemeContext = ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const obj = react2;
-      const cResult = obj.c(5);
+      const cResult = c.c(5);
       children = children.children;
       const tmp2 = closure_5();
       if (cResult[0] === children) {
-        let tmp3;
-        let tmp5;
         if (cResult[1] === tmp2) {
-          tmp3 = cResult[2];
+          let tmp3 = cResult[2];
         }
         if (cResult[3] !== tmp3) {
           const obj2 = { children: tmp3 };
-          const tmp8 = React3(_false, obj2);
+          const tmp8 = React4(React3, obj2);
           cResult[3] = tmp3;
           cResult[4] = tmp8;
-          tmp5 = tmp8;
+          let tmp5 = tmp8;
         } else {
           tmp5 = cResult[4];
         }
@@ -93,16 +88,4 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = childrenResult;
       tmp3 = childrenResult;
     }
-  : (children) => {
-      const obj = { children: children.children(closure_5()) };
-      return React3(_false, obj);
-    };
-const result = size.fileFinishedImporting(
-  "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx",
-);
-
-export { createThemedContext };
-export const useThemeContext = tmp3;
-export const FALLBACK_THEME_CONTEXT_VALUE = obj2;
-export const ThemeContext = context;
-export const UseThemeContext = tmp7;
+  : (children) => React4(React3, { children: children.children(closure_5()) });

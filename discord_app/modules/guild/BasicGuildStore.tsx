@@ -1,31 +1,37 @@
 // discord_app/modules/guild/BasicGuildStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 let closure_0 = 0;
-const Store = get_initializedDefault.Store;
-class BasicGuildStore extends Store {
-  getGuild(arg0) {
-    if (null != closure_1[arg0]) {
-      if (!("type" in closure_1[arg0])) {
-        return closure_1[arg0];
-      }
+const dependencyMap = {};
+const Store = initializeDefault.Store;
+class BasicGuildStore extends Store {}
+const prototype = BasicGuildStore.prototype;
+prototype["getGuild"] = function getGuild(arg0) {
+  if (null != dependencyMap[arg0]) {
+    if (!("type" in tmp)) {
+      return tmp;
     }
   }
-  isGuildFetching(arg0) {
-    return null != tmp && "type" in tmp && "loading" === tmp.type;
+};
+prototype["isGuildFetching"] = function isGuildFetching(arg0) {
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    tmp2 = "type" in tmp;
   }
-  getGuildOrStatus(guild_id) {
-    return closure_1[guild_id];
+  if (tmp2) {
+    tmp2 = "loading" === tmp.type;
   }
-  getVersion() {
-    return closure_0;
-  }
-}
-const prototype = BasicGuildStore.prototype;
+  return tmp2;
+};
+prototype["getGuildOrStatus"] = function getGuildOrStatus(guild_id) {
+  return dependencyMap[guild_id];
+};
+prototype["getVersion"] = function getVersion() {
+  return closure_0;
+};
 BasicGuildStore.displayName = "BasicGuildStore";
-const obj = {
+const basicGuildStore = new BasicGuildStore(DispatcherDefault, {
   BASIC_GUILD_FETCH: function handleBasicGuildFetch(guildId) {
     closure_1[guildId.guildId] = { type: "loading" };
     return false;
@@ -38,8 +44,8 @@ const obj = {
     closure_1[guildId.guildId] = { type: "failed" };
     return false;
   },
-};
-const basicGuildStore = new BasicGuildStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/BasicGuildStore.tsx");
 
 export default basicGuildStore;

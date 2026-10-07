@@ -8,8 +8,6 @@ import PastVcActivityMessagesExperimentDefault from "../../voice_calls/PastVcAct
 import VoiceCallTriggerPointExperimentDefault from "../../voice_calls/VoiceCallTriggerPointExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const CommonTriggerPoints = ExperimentConstants.CommonTriggerPoints;
-const CommonTriggerPointConfiguration = Helpers.CommonTriggerPointConfiguration;
 const items = [
   VoiceChannelHoistingExperiment.VoiceChannelHoistingExperiment,
   HangoutWindowExperiment.HangoutWindowExperiment,
@@ -17,9 +15,11 @@ const items = [
   VoiceCallTriggerPointExperimentDefault,
   VoiceChannelBadgeExperiment.VoiceChannelBadgeExperiment,
 ];
-const commonTriggerPointConfiguration = new CommonTriggerPointConfiguration(items, CommonTriggerPoints.VOICE_CALL, {
-  location: "voice call initiated",
-});
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(
+  items,
+  ExperimentConstants.CommonTriggerPoints.VOICE_CALL,
+  { location: "voice call initiated" },
+);
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/VoiceCallTriggerPoint.tsx");
 
 export const VoiceCallTriggerPoint = commonTriggerPointConfiguration;

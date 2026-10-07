@@ -3,8 +3,6 @@ import Constants from "../../Constants.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let CDN_HOST;
-
 const DEFAULT_CDN_HOST = Constants.DEFAULT_CDN_HOST;
 const result = size.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");
 

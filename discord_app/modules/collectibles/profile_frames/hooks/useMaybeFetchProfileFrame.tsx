@@ -2,31 +2,28 @@
 import CollectiblesActionCreators from "../../CollectiblesActionCreators.tsx";
 import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame.native.tsx";
 import useProfileFrameDefault from "useProfileFrame.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let closure_1;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(4);
+      const cResult = require("c").c(4);
       let tmp2 = useFramePreviewOverrideFrameDefault();
       const tmp3 = useProfileFrameDefault(arg0);
       importDefault = tmp4;
       if (cResult[0] === (null == tmp2 && null != arg0 && null == tmp3)) {
-        let tmp5;
-        let tmp6;
         if (cResult[1] === arg0) {
-          tmp5 = cResult[2];
-          tmp6 = cResult[3];
+          let tmp5 = cResult[2];
+          let tmp6 = cResult[3];
         }
-        const effect = react.useEffect(tmp5, tmp6);
+        const effect = noop.useEffect(tmp5, tmp6);
         if (tmp2 == null) {
           tmp2 = tmp3;
         }
@@ -34,8 +31,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function u() {
         if (closure_1) {
-          const obj = CollectiblesActionCreators;
-          const result = obj.maybeFetchCollectiblesProduct(closure_0);
+          const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);
         }
       };
       const items = [null == tmp2 && null != arg0 && null == tmp3, arg0];
@@ -45,18 +41,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp6 = items;
       tmp5 = fn;
+      let obj = require("c");
     }
   : (arg0) => {
-      let closure_1;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       let tmp = useFramePreviewOverrideFrameDefault();
       const tmp2 = useProfileFrameDefault(arg0);
       importDefault = tmp3;
       const items = [null == tmp && null != arg0 && null == tmp2, arg0];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (closure_1) {
-          const obj = CollectiblesActionCreators;
-          const result = obj.maybeFetchCollectiblesProduct(closure_0);
+          const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);
         }
       }, items);
       if (tmp == null) {
@@ -64,6 +59,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp;
     };
-let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
-
-export default tmp2;

@@ -1,42 +1,37 @@
 // discord_app/modules/interaction_components/LocalInteractionComponentStateStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import LimitedMapDefault from "../../lib/LimitedMap.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let map;
-
-const React = new LimitedMapDefault(196606);
+let closure_0 = new LimitedMapDefault(196606);
 let closure_1 = 0;
 const tmp2 = new LimitedMapDefault(196606);
 let closure_2 = new LimitedMapDefault(196606);
 const tmp3 = new LimitedMapDefault(196606);
 let closure_3 = new LimitedMapDefault(196606);
-new LimitedMapDefault(196606);
-const Store = get_initializedDefault.Store;
-class LocalInteractionComponentStateStore extends Store {
-  getInteractionComponentStates() {
-    return closure_0;
-  }
-  getInteractionComponentStateVersion() {
-    return closure_1;
-  }
-  getInteractionComponentState(customId, id) {
-    const value = closure_0.get(customId);
-    let tmp = null;
-    if (null != value) {
-      let value2 = value.get(id);
-      if (value2 == null) {
-        value2 = null;
-      }
-      tmp = value2;
-    }
-    return tmp;
-  }
-}
+const Store = initializeDefault.Store;
+class LocalInteractionComponentStateStore extends Store {}
 const prototype = LocalInteractionComponentStateStore.prototype;
+prototype["getInteractionComponentStates"] = function getInteractionComponentStates() {
+  return closure_0;
+};
+prototype["getInteractionComponentStateVersion"] = function getInteractionComponentStateVersion() {
+  return closure_1;
+};
+prototype["getInteractionComponentState"] = function getInteractionComponentState(customId, id) {
+  value = closure_0.get(customId);
+  let tmp = null;
+  if (null != value) {
+    value2 = value.get(id);
+    if (value2 == null) {
+      value2 = null;
+    }
+    tmp = value2;
+  }
+  return tmp;
+};
 LocalInteractionComponentStateStore.displayName = "LocalInteractionComponentStateStore";
-const obj = {
+const localInteractionComponentStateStore = new LocalInteractionComponentStateStore(DispatcherDefault, {
   LOGOUT: function handleInit() {
     closure_0.clear();
     closure_2.clear();
@@ -44,34 +39,24 @@ const obj = {
     closure_1 = closure_1 + 1;
   },
   QUEUE_INTERACTION_COMPONENT_STATE: function handleQueueActionComponentState(state) {
-    let componentId;
-    let messageId;
-    let nonce;
     ({ messageId, nonce, componentId } = state);
-    state = state.state;
     const result = closure_2.set(messageId, nonce);
     const result1 = closure_3.set(nonce, { messageId, componentId });
-    map = closure_0.get(messageId);
+    let map = closure_0.get(messageId);
     if (map == null) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map();
     }
-    const result2 = map.set(componentId, state);
+    const result2 = map.set(componentId, state.state);
     const result3 = closure_0.set(messageId, map);
     closure_1 = closure_1 + 1;
   },
   SET_INTERACTION_COMPONENT_STATE: function handleSetInteractionComponentState(rootContainerId) {
-    let componentId;
-    let state;
     rootContainerId = rootContainerId.rootContainerId;
     ({ componentId, state } = rootContainerId);
-    map = closure_0.get(rootContainerId);
+    let map = closure_0.get(rootContainerId);
     if (map == null) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
       map = new Map();
     }
     const result = map.set(componentId, state);
@@ -81,7 +66,7 @@ const obj = {
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
     if (closure_0.has(id)) {
-      const value = closure_2.get(id);
+      value = closure_2.get(id);
       if (null != value) {
         closure_3.delete(value);
       }
@@ -97,7 +82,7 @@ const obj = {
     if (null != message.id) {
       if (closure_0.has(message.id)) {
         const id = message.id;
-        const value = closure_2.get(id);
+        value = closure_2.get(id);
         if (null != value) {
           closure_3.delete(value);
         }
@@ -113,7 +98,7 @@ const obj = {
     if (null == nonce) {
       return false;
     } else {
-      const value = closure_3.get(nonce);
+      value = closure_3.get(nonce);
       if (null == value) {
         return false;
       } else {
@@ -124,18 +109,16 @@ const obj = {
     }
   },
   INTERACTION_FAILURE: function handleInteractionFailure(nonce) {
-    let componentId;
-    let messageId;
     nonce = nonce.nonce;
     if (null == nonce) {
       return false;
     } else {
-      const value = closure_3.get(nonce);
+      value = closure_3.get(nonce);
       if (null == value) {
         return false;
       } else {
         ({ componentId, messageId } = value);
-        const value2 = closure_0.get(messageId);
+        value2 = closure_0.get(messageId);
         if (null != value2) {
           if (value2.has(componentId)) {
             value2.delete(componentId);
@@ -152,8 +135,8 @@ const obj = {
     closure_0.delete(customId.customId);
     closure_1 = closure_1 + 1;
   },
-};
-const localInteractionComponentStateStore = new LocalInteractionComponentStateStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/LocalInteractionComponentStateStore.tsx");
 
 export default localInteractionComponentStateStore;

@@ -6,22 +6,19 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "";
   },
-  parent: MobileUserSettings.AUTHORIZED_APPS,
+  parent: SettingsConstants.MobileUserSettings.AUTHORIZED_APPS,
   unsearchable: true,
   screen: {
-    route: UserSettingsSections.AUTHORIZED_APP,
+    route: Constants.UserSettingsSections.AUTHORIZED_APP,
     getComponent() {
       return require("AuthorizedAppScreen").default;
     },
   },
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppSetting.tsx");
 
 export default route;

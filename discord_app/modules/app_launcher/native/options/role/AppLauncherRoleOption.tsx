@@ -1,28 +1,19 @@
 // discord_app/modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import asyncRequire from "../../../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
 
 export default function AppLauncherRoleOption(option) {
-  let autoFocus;
-  let channel;
-  let closure_8;
-  let first;
-  let hasError;
-  let name;
-  let onActionSheetDismiss;
-  let onRolePress;
-  let style;
   option = option.option;
   ({ initialValue: importDefault, onRolePress } = option);
   ({ onActionSheetDismiss: _slicedToArray, channel } = option);
@@ -41,11 +32,8 @@ export default function AppLauncherRoleOption(option) {
     }
     return roleId;
   });
-  const tmp3 = option;
-  let tmp4 = onRolePress;
-  let obj = option(onRolePress[4]);
   const items = [onPress];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = option(onRolePress[4]).useStateFromStores(items, () => {
     if (null != first) {
       let role;
       if (null != guild_id) {
@@ -56,7 +44,10 @@ export default function AppLauncherRoleOption(option) {
   });
   const items1 = [onRolePress, option.name, stateFromStores, first];
   const effect = channel.useEffect(() => {
-    const tmp = null != first && null == stateFromStores;
+    let tmp = null != first;
+    if (tmp) {
+      tmp = null == stateFromStores;
+    }
     if (tmp) {
       onRolePress({ role: null });
     }
@@ -66,14 +57,28 @@ export default function AppLauncherRoleOption(option) {
     option,
     hasError,
     selected: null != stateFromStores,
-    selectedItemName: name,
-    onPress() {
-      if (onPress != null) {
-        tmp();
-      }
-      const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-      ActionSheetActionCreatorsDefault;
-      const obj = {
+    selectedItemName: null,
+    onPress: null,
+    leading: null,
+    autoFocus: null,
+  };
+  let name;
+  let obj = option(onRolePress[4]);
+  const tmp3 = option;
+  const tmp4 = onRolePress;
+  if (null != stateFromStores) {
+    name = stateFromStores.name;
+  }
+  obj2.selectedItemName = name;
+  obj2.onPress = function onPress() {
+    if (onPress != null) {
+      tmp();
+    }
+    const obj = ActionSheetActionCreatorsDefault;
+    obj.openLazy(
+      asyncRequireImpl(11819, dependencyMap.paths),
+      AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
+      {
         option,
         channel,
         onRolePress(role) {
@@ -81,18 +86,11 @@ export default function AppLauncherRoleOption(option) {
           closure_1_8(role.id);
           onRolePress({ role });
         },
-        onActionSheetDismiss: _slicedToArray,
-      };
-      const tmp4 = asyncRequire(11819, dependencyMap.paths);
-      openLazy(tmp4, AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, obj);
-    },
-    leading: guild_id(tmp3(tmp4[9]).RoleIcon, { role: stateFromStores }),
-    autoFocus,
+        onActionSheetDismiss,
+      },
+    );
   };
-  name = undefined;
-  const tmp8 = require("AppLauncherSelectOptionFormRow");
-  if (null != stateFromStores) {
-    name = stateFromStores.name;
-  }
-  return guild_id(tmp8, obj2);
+  obj2.leading = guild_id(tmp3(tmp4[9]).RoleIcon, { role: stateFromStores });
+  obj2.autoFocus = autoFocus;
+  return guild_id(require("AppLauncherSelectOptionFormRow"), obj2);
 }

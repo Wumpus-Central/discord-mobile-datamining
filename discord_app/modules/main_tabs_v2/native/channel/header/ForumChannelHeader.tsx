@@ -1,19 +1,25 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
-import react_native2 from "../../shared_components/MainTabsV2Constants.tsx";
+import c from "../../../../../../_runtime/00576_c.js";
 import ForumChannelSearch from "../../../../forums/native/ForumChannelSearch.tsx";
 import useIsForumChannelSearchActive from "../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx";
 import GuildChannelHeaderDefault from "GuildChannelHeader.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const View = react_native.View;
-const MIN_HEADER_HEIGHT = react_native2.MIN_HEADER_HEIGHT;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let closure_5 = createStyles.createStyles({
+  search: {
+    flex: 1,
+    flexShrink: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingStart: 4,
+    height: fn(7510).MIN_HEADER_HEIGHT,
+  },
+});
+const ReactCompilerGating = fn(558);
 let obj = {
   search: {
     flex: 1,
@@ -21,24 +27,16 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: MIN_HEADER_HEIGHT,
+    height: fn(7510).MIN_HEADER_HEIGHT,
   },
 };
-let closure_5 = createStyles.createStyles(obj);
-const memo = react.memo;
-const memoResult = memo(
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let channelId;
-        let guildId;
-        let isGuildMemberCountVisible;
-        let isNavigationScreen;
-        let pressable;
-        let screenIndex;
-        let searchPlaceholder;
-        let tmp5;
-        const obj = react2;
-        const cResult = obj.c(14);
+        const cResult = c.c(14);
         ({
           channelId,
           screenIndex,
@@ -48,30 +46,25 @@ const memoResult = memo(
           isNavigationScreen,
           searchPlaceholder,
         } = arg0);
-        const tmp4 = closure_5();
-        const obj2 = useIsForumChannelSearchActive;
+        let search = closure_5();
         if (obj2.useIsForumChannelSearchActive(channelId)) {
           if (cResult[0] === channelId) {
             if (cResult[1] === guildId) {
-              let tmp9;
               if (cResult[2] === searchPlaceholder) {
-                tmp9 = cResult[3];
+                let tmp8 = cResult[3];
               }
-              if (cResult[4] === tmp4.search) {
-                let tmp12;
-                if (cResult[5] === tmp9) {
-                  tmp12 = cResult[6];
-                }
-                tmp5 = tmp12;
+              if (cResult[4] === search.search) {
               }
-              const tmp15 = <View style={tmp4.search}>{tmp9}</View>;
-              cResult[4] = tmp4.search;
-              cResult[5] = tmp9;
-              cResult[6] = tmp15;
-              tmp12 = tmp15;
+              const obj3 = { style: search.search, children: tmp8 };
+              const tmp14 = <View style={search.search}>{tmp8}</View>;
+              search = search.search;
+              cResult[4] = search;
+              cResult[5] = tmp8;
+              cResult[6] = tmp14;
             }
           }
-          const tmp11 = jsx(ForumChannelSearch.ForumChannelSearchInput, {
+          const obj4 = { channelId, guildId, placeholder: searchPlaceholder };
+          const tmp10 = jsx(ForumChannelSearch.ForumChannelSearchInput, {
             channelId,
             guildId,
             placeholder: searchPlaceholder,
@@ -79,8 +72,8 @@ const memoResult = memo(
           cResult[0] = channelId;
           cResult[1] = guildId;
           cResult[2] = searchPlaceholder;
-          cResult[3] = tmp11;
-          tmp9 = tmp11;
+          cResult[3] = tmp10;
+          tmp8 = tmp10;
         } else {
           if (cResult[7] === channelId) {
             if (cResult[8] === guildId) {
@@ -88,14 +81,16 @@ const memoResult = memo(
                 if (cResult[10] === isNavigationScreen) {
                   if (cResult[11] === pressable) {
                     if (cResult[12] === screenIndex) {
-                      tmp5 = cResult[13];
+                      let tmp4 = cResult[13];
                     }
+                    return tmp4;
                   }
                 }
               }
             }
           }
-          const tmp8 = jsx(GuildChannelHeaderDefault, {
+          const obj5 = { channelId, guildId, pressable, isGuildMemberCountVisible, isNavigationScreen, screenIndex };
+          const tmp7 = jsx(GuildChannelHeaderDefault, {
             channelId,
             guildId,
             pressable,
@@ -109,27 +104,26 @@ const memoResult = memo(
           cResult[10] = isNavigationScreen;
           cResult[11] = pressable;
           cResult[12] = screenIndex;
-          cResult[13] = tmp8;
-          tmp5 = tmp8;
+          cResult[13] = tmp7;
+          tmp4 = tmp7;
         }
-        return tmp5;
+        obj2 = useIsForumChannelSearchActive;
       }
     : (arg0) => {
-        let channelId;
-        let guildId;
-        let isGuildMemberCountVisible;
-        let isNavigationScreen;
-        let pressable;
-        let screenIndex;
-        let searchPlaceholder;
-        let tmp4Result;
         ({ channelId, guildId } = arg0);
         ({ screenIndex, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
         const tmp = closure_5();
-        const obj = useIsForumChannelSearchActive;
         if (obj.useIsForumChannelSearchActive(channelId)) {
-          tmp4Result = <View style={tmp.search}>{null}</View>;
+          const obj2 = { style: tmp.search, children: null };
+          const obj3 = { channelId, guildId, placeholder: searchPlaceholder };
+          obj2.children = jsx(ForumChannelSearch.ForumChannelSearchInput, {
+            channelId,
+            guildId,
+            placeholder: searchPlaceholder,
+          });
+          let tmp4Result = <View style={tmp.search}>{null}</View>;
         } else {
+          const obj4 = { channelId, guildId, pressable, isGuildMemberCountVisible, isNavigationScreen, screenIndex };
           tmp4Result = jsx(GuildChannelHeaderDefault, {
             channelId,
             guildId,
@@ -142,6 +136,3 @@ const memoResult = memo(
         return tmp4Result;
       },
 );
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
-
-export default memoResult;

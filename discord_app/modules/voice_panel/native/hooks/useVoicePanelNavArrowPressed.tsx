@@ -1,18 +1,15 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx
-import VoicePanelControlsConstants from "../controls/VoicePanelControlsConstants.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const VoicePanelControlsModes = VoicePanelControlsConstants.VoicePanelControlsModes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const VoicePanelControlsModes = fn(11914).VoicePanelControlsModes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let controlsSpecs;
-      let dismissPanel;
-      let focused;
-      let setFocused;
-      const obj = focused(dismissPanel[3]);
-      const cResult = obj.c(5);
+      const cResult = focused(dismissPanel[3]).c(5);
       const context = controlsSpecs.useContext(setFocused(dismissPanel[4]));
       focused = context.focused;
       setFocused = context.setFocused;
@@ -21,25 +18,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === controlsSpecs) {
         if (cResult[1] === dismissPanel) {
           if (cResult[2] === focused) {
-            let tmp3;
             if (cResult[3] === setFocused) {
-              tmp3 = cResult[4];
+              let tmp3 = cResult[4];
             }
             return tmp3;
           }
         }
       }
       const fn = function n() {
-        const value = focused.get();
+        value = focused.get();
         let id;
         if (value != null) {
           id = value.id;
         }
         if (null != id) {
-          let flag;
           if (controlsSpecs.get().mode !== VoicePanelControlsModes.DRAWER) {
             setFocused(null);
-            flag = true;
+            let flag = true;
           }
           return flag;
         }
@@ -53,9 +48,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
     }
   : () => {
-      let controlsSpecs;
-      let dismissPanel;
-      let setFocused;
       const context = controlsSpecs.useContext(setFocused(dismissPanel[4]));
       const focused = context.focused;
       setFocused = context.setFocused;
@@ -63,22 +55,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       controlsSpecs = context.controlsSpecs;
       const items = [focused, controlsSpecs, dismissPanel, setFocused];
       return controlsSpecs.useCallback(() => {
-        const value = focused.get();
+        value = focused.get();
         let id;
         if (value != null) {
           id = value.id;
         }
         if (null != id) {
-          let flag;
           if (controlsSpecs.get().mode !== VoicePanelControlsModes.DRAWER) {
             setFocused(null);
-            flag = true;
+            let flag = true;
           }
           return flag;
         }
         flag = dismissPanel();
       }, items);
     };
-const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
-
-export default tmp2;

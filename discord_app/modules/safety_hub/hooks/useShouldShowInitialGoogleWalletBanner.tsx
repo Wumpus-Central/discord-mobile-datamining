@@ -1,53 +1,49 @@
 // discord_app/modules/safety_hub/hooks/useShouldShowInitialGoogleWalletBanner.tsx
-import SafetyHubConstants from "../SafetyHubConstants.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let c3, c4;
 
-const AgeCheckStatus = SafetyHubConstants.AgeCheckStatus;
+const require = fn;
+const AgeCheckStatus = fn(8126).AgeCheckStatus;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useShouldShowInitialGoogleWalletBanner.tsx");
 
 export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInitialGoogleWalletBanner() {
-  let stateFromStores;
-  let tmp6;
-  let obj = require("get initialized");
   const items = [SafetyHubStore];
-  stateFromStores = obj.useStateFromStores(items, () => SafetyHubStore.getAgeCheckStatus() === constants.NONE);
-  let obj2 = require("get initialized");
+  stateFromStores = require("initialize").useStateFromStores(
+    items,
+    () => SafetyHubStore.getAgeCheckStatus() === constants.NONE,
+  );
+  let obj = require("initialize");
   const items1 = [SafetyHubStore];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => SafetyHubStore.getIsManualReviewFallbackEnabled());
-  let tmp5 = _slicedToArray(react.useState(false), 2);
-  [tmp6, require] = tmp5;
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
+    SafetyHubStore.getIsManualReviewFallbackEnabled(),
+  );
+  const obj2 = require("initialize");
+  [tmp6, require] = noop.useState(false);
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }
   if (stateFromStores) {
+    stateFromStores = require("PlatformUtils").isAndroid();
     const tmpResult = require("PlatformUtils");
-    stateFromStores = tmpResult.isAndroid();
   }
   if (stateFromStores) {
+    stateFromStores = require("SafetyHubUtils").isCurrentUserSuspended();
     const tmpResult2 = require("SafetyHubUtils");
-    stateFromStores = tmpResult2.isCurrentUserSuspended();
   }
   const items2 = [stateFromStores];
-  const effect = react.useEffect(() => {
-    let _true;
-    function resolveGoogleWalletOnly() {
-      return obj(...arguments);
-    }
-    let obj = function _resolveGoogleWalletOnly() {
-      obj = _asyncToGenerator(async () => {
-        let obj2;
-        let obj5;
+  const effect = noop.useEffect(() => {
+    closure_1 = function _resolveGoogleWalletOnly() {
+      const self = this;
+      const tmp = asyncGeneratorStep(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
+        } else if (tmp6 === 3) {
           if (arg0 === 1) {
             throw value;
           } else if (arg0 === 2) {
@@ -57,11 +53,7 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
             return { value: "IconComponent", done: null };
           }
         } else {
-          let c2;
           try {
-            let closure_0;
-            let methods;
-            let closure_1;
             c4 = 2;
             if (0 === c3) {
               if (arg0 === 1) {
@@ -72,25 +64,25 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                closure_0 = tmp4;
-                methods = undefined;
-                closure_1 = undefined;
+                closure_1 = tmp3;
+                closure_0 = tmp7;
+                let methods;
+                closure_128_1 = undefined;
                 c2 = 1;
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: obj5.fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
-                obj5 = _true(closure_2_1[8]);
+                const obj6 = { value: _true(8146).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
                 return obj6;
               }
             } else {
-              if (1 === c3) {
+              if (1 === tmp7) {
                 c2 = 0;
                 if (!closure_129_0) {
                   closure_0(false);
                 }
+                c4 = 3;
               } else {
-                let tmp5;
-                if (2 === c3) {
+                if (2 === tmp7) {
                   if (arg0 === 1) {
                     c4 = 3;
                     throw value;
@@ -101,58 +93,70 @@ export const useShouldShowInitialGoogleWalletBanner = function useShouldShowInit
                     return obj7;
                   } else {
                     methods = value.methods;
-                    const everyResult =
-                      methods.length > 0 &&
-                      methods.every(
+                    let everyResult = methods.length > 0;
+                    if (everyResult) {
+                      everyResult = methods.every(
                         (method) => method.method === closure_1_0(closure_1_1[9]).AgeAssuranceMethod.GOOGLE_WALLET,
                       );
-                    tmp5 = everyResult;
-                    if (tmp5) {
-                      c3 = 3;
-                      c4 = 1;
-                      const obj8 = { value: obj2.checkGoogleWalletAvailable(), done: false };
-                      obj2 = _true(closure_2_1[10]);
-                      return obj8;
                     }
+                    let tmp8 = everyResult;
                   }
                 } else if (arg0 === 1) {
                   c4 = 3;
                   throw value;
                 } else {
-                  tmp5 = value;
+                  tmp8 = value;
                   if (arg0 === 2) {
                     c2 = 0;
                     c4 = 3;
-                    obj = { value, done: true };
+                    const obj = { value, done: true };
                     return obj;
                   }
                 }
-                closure_1 = tmp5;
+                closure_128_1 = tmp8;
                 if (!closure_129_0) {
-                  closure_0(closure_1);
+                  closure_0(closure_128_1);
                 }
                 c2 = 0;
               }
-              c4 = 3;
-              return { value: "IconComponent", done: null };
+              c3 = 3;
+              c4 = 1;
+              const obj8 = { value: _true(8149).checkGoogleWalletAvailable(), done: false };
+              return obj8;
             }
-          } catch (tmp24) {
-            if (0 === c2) {
-              c4 = 3;
-              throw tmp24;
+          } catch (tmp27) {
+            if (tmp4 === c2) {
+              c4 = tmp2;
+              throw tmp27;
             } else {
-              c3 = 1;
+              c3 = tmp;
             }
           }
         }
       });
-      return obj(...arguments);
+      dependencyMap = tmp;
+      const apply = tmp.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    if (obj) {
-      let c0 = false;
-      const tmp = resolveGoogleWalletOnly();
+    if (closure_1) {
+      c0 = false;
+      (function resolveGoogleWalletOnly() {
+        const self = this;
+        const apply = closure_1.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
       return () => {
-        let c0 = true;
+        c0 = true;
       };
     }
   }, items2);

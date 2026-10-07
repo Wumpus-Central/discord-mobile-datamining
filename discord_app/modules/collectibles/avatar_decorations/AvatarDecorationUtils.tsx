@@ -8,21 +8,17 @@ let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {
     if (null != avatar_decoration_data) {
-      const obj = mappers;
-      const result = obj.parseSkuIdFromServerData(avatar_decoration_data);
+      const result = mappers.parseSkuIdFromServerData(avatar_decoration_data);
       if (null == result) {
         return null;
       } else {
         const obj2 = { skuId: result };
-        const tmp = "asset" in avatar_decoration_data && typeof avatar_decoration_data.asset === "string";
         if (tmp) {
           obj2.asset = avatar_decoration_data.asset;
         }
-        const tmp2 = "expires_at" in avatar_decoration_data && typeof avatar_decoration_data.expires_at === "number";
         if (tmp2) {
           obj2.expiresAt = avatar_decoration_data.expires_at;
         }
-        const tmp3 = "expiresAt" in avatar_decoration_data && typeof avatar_decoration_data.expiresAt === "number";
         if (tmp3) {
           obj2.expiresAt = avatar_decoration_data.expiresAt;
         }
@@ -47,63 +43,60 @@ export const isAvatarDecorationExpired = function isAvatarDecorationExpired(avat
 };
 export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDecoration, asset2) {
   if (null != avatarDecoration) {
-    let isEqualResult;
     if (null != asset2) {
       let tmp2 = null;
-      const isEqual = _mod12.isEqual;
-      _mod12;
       if (typeof avatarDecoration === "object") {
         tmp2 = null;
         if (null != avatarDecoration) {
-          const tmp12Result = mappers;
-          const result = tmp12Result.parseSkuIdFromServerData(avatarDecoration);
+          const result = mappers.parseSkuIdFromServerData(avatarDecoration);
           tmp2 = null;
           if (null != result) {
             const obj = { skuId: result };
-            const tmp3 = "asset" in avatarDecoration && typeof avatarDecoration.asset === "string";
             if (tmp3) {
               obj.asset = avatarDecoration.asset;
             }
-            const tmp4 = "expires_at" in avatarDecoration && typeof avatarDecoration.expires_at === "number";
             if (tmp4) {
               obj.expiresAt = avatarDecoration.expires_at;
             }
             tmp2 = obj;
-            const tmp5 = "expiresAt" in avatarDecoration && typeof avatarDecoration.expiresAt === "number";
             if (tmp5) {
               obj.expiresAt = avatarDecoration.expiresAt;
               tmp2 = obj;
             }
+            tmp3 = "asset" in avatarDecoration && typeof avatarDecoration.asset === "string";
+            tmp4 = "expires_at" in avatarDecoration && typeof avatarDecoration.expires_at === "number";
+            tmp5 = "expiresAt" in avatarDecoration && typeof avatarDecoration.expiresAt === "number";
           }
+          const tmp12Result = mappers;
         }
       }
       let tmp6 = null;
       if (typeof asset2 === "object") {
         tmp6 = null;
         if (null != asset2) {
-          const tmp12Result2 = mappers;
-          const result1 = tmp12Result2.parseSkuIdFromServerData(asset2);
+          const result1 = mappers.parseSkuIdFromServerData(asset2);
           tmp6 = null;
           if (null != result1) {
             const obj2 = { skuId: result1 };
-            const tmp8 = "asset" in asset2 && typeof asset2.asset === "string";
             if (tmp8) {
               obj2.asset = asset2.asset;
             }
-            const tmp9 = "expires_at" in asset2 && typeof asset2.expires_at === "number";
             if (tmp9) {
               obj2.expiresAt = asset2.expires_at;
             }
             tmp6 = obj2;
-            const tmp10 = "expiresAt" in asset2 && typeof asset2.expiresAt === "number";
             if (tmp10) {
               obj2.expiresAt = asset2.expiresAt;
               tmp6 = obj2;
             }
+            tmp10 = "expiresAt" in asset2 && typeof asset2.expiresAt === "number";
+            tmp8 = "asset" in asset2 && typeof asset2.asset === "string";
+            tmp9 = "expires_at" in asset2 && typeof asset2.expires_at === "number";
           }
+          const tmp12Result2 = mappers;
         }
       }
-      isEqualResult = isEqual(tmp2, tmp6);
+      let isEqualResult = _mod12.isEqual(tmp2, tmp6);
     }
     return isEqualResult;
   }

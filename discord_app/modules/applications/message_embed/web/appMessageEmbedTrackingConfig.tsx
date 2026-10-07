@@ -1,22 +1,11 @@
 // discord_app/modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx
-import MessageEmbedConstants from "../MessageEmbedConstants.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const LinkType = MessageEmbedConstants.LinkType;
+const LinkType = fn(7186).LinkType;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 
 export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id) {
-  let activityCustomId;
-  let appEmbedState;
-  let channelId;
-  let flag;
-  let guildId;
-  let linkType;
-  let messageId;
-  let onLinkCopied;
-  let onView;
-  let referrerId;
   let str;
   if (id != null) {
     str = id.id;
@@ -26,65 +15,75 @@ export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id
   }
   const obj = {
     id: str,
-    linkType,
-    referrerId,
-    activityCustomId,
-    onView,
-    onLinkCopied,
-    guildId,
-    channelId,
-    messageId,
-    isDeadEnd: flag,
-    appEmbedState,
+    linkType: null,
+    referrerId: null,
+    activityCustomId: null,
+    onView: null,
+    onLinkCopied: null,
+    guildId: null,
+    channelId: null,
+    messageId: null,
+    isDeadEnd: null,
+    appEmbedState: null,
   };
-  linkType = undefined;
+  let linkType;
   if (id != null) {
     linkType = id.linkType;
   }
   if (linkType == null) {
     linkType = LinkType.UNKNOWN;
   }
-  referrerId = undefined;
+  obj.linkType = linkType;
+  let referrerId;
   if (id != null) {
     referrerId = id.referrerId;
   }
   if (referrerId == null) {
     referrerId = AuthenticationStore.getId();
   }
-  activityCustomId = undefined;
+  obj.referrerId = referrerId;
+  let activityCustomId;
   if (id != null) {
     activityCustomId = id.activityCustomId;
   }
-  onView = undefined;
+  obj.activityCustomId = activityCustomId;
+  let onView;
   if (id != null) {
     onView = id.onView;
   }
-  onLinkCopied = undefined;
+  obj.onView = onView;
+  let onLinkCopied;
   if (id != null) {
     onLinkCopied = id.onLinkCopied;
   }
-  guildId = undefined;
+  obj.onLinkCopied = onLinkCopied;
+  let guildId;
   if (id != null) {
     guildId = id.guildId;
   }
-  channelId = undefined;
+  obj.guildId = guildId;
+  let channelId;
   if (id != null) {
     channelId = id.channelId;
   }
-  messageId = undefined;
+  obj.channelId = channelId;
+  let messageId;
   if (id != null) {
     messageId = id.messageId;
   }
-  flag = undefined;
+  obj.messageId = messageId;
+  let flag;
   if (id != null) {
     flag = id.isDeadEnd;
   }
   if (flag == null) {
     flag = false;
   }
-  appEmbedState = undefined;
+  obj.isDeadEnd = flag;
+  let appEmbedState;
   if (id != null) {
     appEmbedState = id.appEmbedState;
   }
+  obj.appEmbedState = appEmbedState;
   return obj;
 };

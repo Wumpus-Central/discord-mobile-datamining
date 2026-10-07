@@ -1,11 +1,11 @@
 // discord_app/modules/conjure/chat/ConjureComposerDraftStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import 00012__ from "../../../../_runtime/metro/00012__.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import apply from "../../../../_runtime/metro/00012__.js";
 
+require = fn;
 function readStoredDrafts() {
   const Storage = Storage2.Storage;
   let obj = Storage.get(VibegrationsComposerDrafts);
@@ -16,48 +16,44 @@ function readStoredDrafts() {
 }
 const VibegrationsComposerDrafts = "VibegrationsComposerDrafts";
 const map = new Map();
-let closure_6 = module_12.throttle(() => {
-  let tmp7;
-  let tmp8;
+let closure_6 = apply.throttle(() => {
   if (0 !== map.size) {
-    const tmp19 = readStoredDrafts();
-    const tmp21 = map[Symbol.iterator]();
-    while (tmp21 !== undefined) {
-      let tmp6 = _slicedToArray(tmp3, 2);
-      [tmp7, tmp8] = tmp6;
-      if ("" === tmp8) {
-        delete tmp19[tmp7];
+    const tmp22 = readStoredDrafts();
+    const tmp24 = map[Symbol.iterator]();
+    while (tmp24 !== undefined) {
+      let tmp8 = _slicedToArray(tmp5, 2);
+      [tmp9, tmp10] = tmp8;
+      if ("" === tmp10) {
+        delete tmp[tmp2];
       } else {
-        tmp19[tmp7] = tmp9;
+        tmp22[tmp9] = tmp11;
       }
       continue;
     }
     map.clear();
     const Storage = Storage2.Storage;
-    const result = Storage.set(VibegrationsComposerDrafts, tmp19);
+    const result = Storage.set(VibegrationsComposerDrafts, tmp22);
   }
 }, 1000);
-const Store = get_initializedDefault.Store;
-class ConjureComposerDraftStore extends Store {
-  getDraft(arg0) {
-    let value = map.get(arg0);
-    if (null == value) {
-      const Storage = Storage2.Storage;
-      let value2 = Storage.get(VibegrationsComposerDrafts);
-      if (value2 == null) {
-        value2 = {};
-      }
-      let str = value2[arg0];
-      if (str == null) {
-        str = "";
-      }
-      value = str;
+const Store = initializeDefault.Store;
+class ConjureComposerDraftStore extends Store {}
+ConjureComposerDraftStore.prototype["getDraft"] = function getDraft(arg0) {
+  value = map.get(arg0);
+  if (null == value) {
+    const Storage = Storage2.Storage;
+    value2 = Storage.get(VibegrationsComposerDrafts);
+    if (value2 == null) {
+      value2 = {};
     }
-    return value;
+    let str = value2[arg0];
+    if (str == null) {
+      str = "";
+    }
+    value = str;
   }
-}
-const prototype = ConjureComposerDraftStore.prototype;
-let obj = {
+  return value;
+};
+const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     map.clear();
     closure_6.cancel();
@@ -73,9 +69,9 @@ let obj = {
       closure_6.flush();
     }
     return false;
-  }
-};
-const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefault, obj);
+  },
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/ConjureComposerDraftStore.tsx");
 
 export default conjureComposerDraftStore;

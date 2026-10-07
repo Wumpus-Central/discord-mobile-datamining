@@ -1,41 +1,34 @@
 // discord_app/modules/multi_account/useMultiAccount.tsx
-import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../_runtime/00576_react.js";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../_runtime/00576_c.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import MultiAccountStore2 from "MultiAccountStore.tsx";
-import react from "../../../_runtime/00019_react.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import UserStore from "../../stores/UserStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import MultiAccountStore from "MultiAccountStore.tsx";
 
-const MultiAccountStore = MultiAccountStore2;
-let currentUser, users;
+require = fn;
+const MultiAccountTokenStatus = fn(12071).MultiAccountTokenStatus;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
 
-const MultiAccountTokenStatus = MultiAccountStore2.MultiAccountTokenStatus;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export const useMultiAccountUsers = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp10;
-      let tmp4;
-      let tmp5;
-      let tmp9;
-      let obj = react2;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [MultiAccountStore, UserStore];
         const fn = function c() {
-          let items;
           users = users.getUsers();
           currentUser = currentUser.getCurrentUser();
           if (null != currentUser) {
-            let obj2;
             if (!users.some((id) => id.id === currentUser.id)) {
-              obj2 = { isLoading: users.getIsValidatingUsers(), multiAccountUsers: items };
+              let obj2 = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: null };
               const obj3 = {
                 id: null,
                 avatar: null,
                 username: null,
                 discriminator: null,
-                tokenStatus: constants.VALID,
+                tokenStatus: null,
                 pushSyncToken: null,
               };
               ({
@@ -44,13 +37,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 username: obj4.username,
                 discriminator: obj4.discriminator,
               } = currentUser);
-              items = [obj3];
-              HermesBuiltin.arraySpread(items, users, 1);
+              obj3.tokenStatus = constants.VALID;
+              const items = [obj3];
+              HermesBuiltin.arraySpread(users, 1);
+              obj2.multiAccountUsers = items;
             }
             return obj2;
           }
           obj2 = { isLoading: users.getIsValidatingUsers(), multiAccountUsers: users };
-          ({ isLoading: users.getIsValidatingUsers(), multiAccountUsers: users });
+          const obj5 = { isLoading: users.getIsValidatingUsers(), multiAccountUsers: users };
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -59,45 +54,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
+      const stateFromStoresObject = initialize.useStateFromStoresObject(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v() {
-          let obj = DispatcherDefault;
-          obj.wait(() => {
-            const obj = closure_1_2(closure_1_3[7]);
-            const result = obj.validateMultiAccountTokens();
+          DispatcherDefault.wait(() => {
+            const result = closure_1_2(closure_1_3[7]).validateMultiAccountTokens();
           });
         };
         const items1 = [];
         cResult[2] = fn2;
         cResult[3] = items1;
-        tmp10 = items1;
-        tmp9 = fn2;
+        let tmp10 = items1;
+        let tmp9 = fn2;
       } else {
         tmp9 = cResult[2];
         tmp10 = cResult[3];
       }
-      const effect = react.useEffect(tmp9, tmp10);
+      const effect = noop.useEffect(tmp9, tmp10);
       return stateFromStoresObject;
     }
   : () => {
-      let obj = get_initialized;
       let items = [MultiAccountStore, UserStore];
-      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-        let items;
+      const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
         users = users.getUsers();
         currentUser = currentUser.getCurrentUser();
         if (null != currentUser) {
-          let obj2;
           if (!users.some((id) => id.id === currentUser.id)) {
-            obj2 = { isLoading: users.getIsValidatingUsers(), multiAccountUsers: items };
+            let obj2 = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: null };
             const obj3 = {
               id: null,
               avatar: null,
               username: null,
               discriminator: null,
-              tokenStatus: constants.VALID,
+              tokenStatus: null,
               pushSyncToken: null,
             };
             ({
@@ -106,23 +95,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               username: obj4.username,
               discriminator: obj4.discriminator,
             } = currentUser);
-            items = [obj3];
-            HermesBuiltin.arraySpread(items, users, 1);
+            obj3.tokenStatus = constants.VALID;
+            const items = [obj3];
+            HermesBuiltin.arraySpread(users, 1);
+            obj2.multiAccountUsers = items;
           }
           return obj2;
         }
         obj2 = { isLoading: users.getIsValidatingUsers(), multiAccountUsers: users };
-        ({ isLoading: users.getIsValidatingUsers(), multiAccountUsers: users });
+        const obj5 = { isLoading: users.getIsValidatingUsers(), multiAccountUsers: users };
       });
-      const effect = react.useEffect(() => {
-        let obj = DispatcherDefault;
-        obj.wait(() => {
-          const obj = closure_1_2(closure_1_3[7]);
-          const result = obj.validateMultiAccountTokens();
+      const effect = noop.useEffect(() => {
+        DispatcherDefault.wait(() => {
+          const result = closure_1_2(closure_1_3[7]).validateMultiAccountTokens();
         });
       }, []);
       return stateFromStoresObject;
     };
-let result = size.fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
-
-export const useMultiAccountUsers = tmp2;

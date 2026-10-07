@@ -4,18 +4,20 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const VoicePanelModes = { DISMISSED: "dismissed", PIP: "pip", PANEL: "panel" };
 const obj2 = { mass: 0.5, damping: 80, stiffness: 200 };
-const obj3 = { overshootClamping: true };
+const obj3 = {};
 const merged = Object.assign(obj2);
-const obj4 = { overshootClamping: true };
+obj3.overshootClamping = true;
+const obj4 = {};
 const merged1 = Object.assign(obj2);
-const obj5 = { mass: 0.3 };
+obj4.overshootClamping = true;
+const obj5 = {};
 const merged2 = Object.assign(obj2);
+obj5.mass = 0.3;
 const obj6 = { NO_VIDEO_PARTICIPANTS: "no_video_participants", CALLER_DISCONNECTED: "caller_disconnected" };
 const obj7 = { [obj6.NO_VIDEO_PARTICIPANTS]: { width: 2, height: 1 } };
-const set = new Set(Object.keys(obj7));
 let PlatformUtils = PlatformUtils_mod;
 PlatformUtils.isAndroid();
-PlatformUtils = PlatformUtils_mod;
+let PlatformUtils = PlatformUtils_mod;
 PlatformUtils = PlatformUtils.isIOS();
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelConstants.tsx");
 
@@ -53,7 +55,7 @@ export const GridItemTypes = { USER: "USER", STREAM: "STREAM", ACTIVITY: "ACTIVI
 export const BASE_TARGET_CARD_SIZE = 165;
 export const VoicePanelCTACard = obj6;
 export const VoicePanelCTACardDimensions = obj7;
-export const VoicePanelCTACardDimensionKeys = set;
+export const VoicePanelCTACardDimensionKeys = new Set(Object.keys(obj7));
 export const VoicePanelCardItemType = { PARTICIPANT: "participant", CTA: "cta" };
 export const IS_ANDROID = PlatformUtils;
 export const IS_IOS = PlatformUtils;

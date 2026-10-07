@@ -1,52 +1,46 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/Elements.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16538_AssetRegistry.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _modDef16538 from "../../../../../_runtime/metro/16538__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, lineClamp;
 
-let c9;
-let closure_12;
-let metroImportAll;
-let obj2;
-let obj3;
-let obj4;
-let unpackModuleId;
+require = fn;
 let closure_4 = ["lineClamp"];
-({ TouchableOpacity: metroImportAll, View: c9 } = react_native);
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  toggleTruncateButton: obj2,
-  arrowButton: obj3,
-  arrowButtonText: { flexGrow: 1, flexShrink: 1 },
-  arrowButtonIcon: obj4,
+get_ActivityIndicator = fn(17);
+({ TouchableOpacity: closure_8, View: closure_9 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  toggleTruncateButton: {
+    alignSelf: "flex-start",
+    borderBottomWidth: 0.8,
+    borderColor: nativeDefault.colors.TEXT_DEFAULT,
+    marginTop: 2,
+  },
+  arrowButton: null,
+  arrowButtonText: null,
+  arrowButtonIcon: null,
 };
-obj2 = {
+let obj3 = {
   alignSelf: "flex-start",
   borderBottomWidth: 0.8,
   borderColor: nativeDefault.colors.TEXT_DEFAULT,
   marginTop: 2,
 };
-createStyles = createStyles.createStyles;
-obj3 = {
+obj2.arrowButton = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 16,
@@ -54,28 +48,31 @@ obj3 = {
   borderRadius: nativeDefault.radii.sm,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj4 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let closure_13 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.arrowButtonText = { flexGrow: 1, flexShrink: 1 };
+let obj4 = {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingHorizontal: 16,
+  height: 40,
+  borderRadius: nativeDefault.radii.sm,
+  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+};
+obj2.arrowButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let closure_13 = createStyles.createStyles(obj2);
+fn(558);
+const obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (lineClamp) => {
-      let Text;
-      let closure_129_1;
-      let first;
-      let obj4;
-      let tmp11;
-      let tmp4;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(20);
+      const cResult = c.c(20);
       if (cResult[0] !== lineClamp) {
         lineClamp = lineClamp.lineClamp;
-        const tmp8 = _objectWithoutProperties(lineClamp, closure_4);
+        const tmp8 = _objectWithoutProperties(lineClamp, ref);
         cResult[0] = lineClamp;
         cResult[1] = tmp8;
         cResult[2] = lineClamp;
-        tmp5 = lineClamp;
-        tmp4 = tmp8;
+        let tmp5 = lineClamp;
+        let tmp4 = tmp8;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -85,13 +82,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         num4 = tmp5;
       }
       const tmp9 = closure_13();
-      [tmp11, closure_129_1] = react.useState(false);
-      _slicedToArray(react.useState(false), 2);
-      [first, dependencyMap] = react.useState(false);
-      closure_4 = react.useRef(false);
+      [tmp11, importDefault] = noop.useState(false);
+      [first, dependencyMap] = noop.useState(false);
+      ref = noop.useRef(false);
       if (cResult[3] !== first) {
         const fn = function f() {
-          const tmp = first && closure_1_1((arg0) => !arg0);
+          let tmp = first;
+          if (first) {
+            tmp = importDefault((arg0) => !arg0);
+          }
           return tmp;
         };
         cResult[3] = first;
@@ -107,96 +106,133 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[9] !== num4) {
             class O {
-              constructor(nativeEvent) {
-                if (!ref.current) {
+              constructor(arg0) {
+                if (!closure_4.current) {
+                  tmp2 = lineClamp;
+                  flag = true;
                   tmp.current = true;
-                  closure_3(nativeEvent.nativeEvent.lines.length > num4);
+                  tmp3 = closure_3;
+                  tmp4 = closure_0;
+                  tmp5 = closure_3(lineClamp.nativeEvent.lines.length > closure_0);
                 }
+                return;
               }
             }
             cResult[9] = num4;
             cResult[10] = O;
           } else {
             class O {
-              constructor(nativeEvent) {
-                if (!ref.current) {
+              constructor(arg0) {
+                if (!closure_4.current) {
+                  tmp2 = lineClamp;
+                  flag = true;
                   tmp.current = true;
-                  closure_3(nativeEvent.nativeEvent.lines.length > num4);
+                  tmp3 = closure_3;
+                  tmp4 = closure_0;
+                  tmp5 = closure_3(lineClamp.nativeEvent.lines.length > closure_0);
                 }
+                return;
               }
             }
           }
           if (cResult[11] === tmp4) {
             class O {
-              constructor(nativeEvent) {
-                if (!ref.current) {
+              constructor(arg0) {
+                if (!closure_4.current) {
+                  tmp2 = lineClamp;
+                  flag = true;
                   tmp.current = true;
-                  closure_3(nativeEvent.nativeEvent.lines.length > num4);
+                  tmp3 = closure_3;
+                  tmp4 = closure_0;
+                  tmp5 = closure_3(lineClamp.nativeEvent.lines.length > closure_0);
                 }
+                return;
               }
             }
           }
-          const obj2 = { lineClamp: tmp20, onTextLayout: O };
-          const Text2 = Text_Text.Text;
+          const obj2 = {};
           const merged = Object.assign(tmp4);
+          obj2.lineClamp = tmp20;
+          obj2.onTextLayout = O;
+          const tmp27 = closure_1_11(Text_Text.Text, obj2);
           cResult[11] = tmp4;
           cResult[12] = tmp20;
           cResult[13] = O;
-          cResult[14] = unpackModuleId(Text2, obj2);
-          const tmp27 = unpackModuleId(Text2, obj2);
+          cResult[14] = tmp27;
         }
       }
-      let tmp17Result = first;
-      if (tmp17Result) {
+      if (!first) {
         class O {
-          constructor(nativeEvent) {
-            if (!ref.current) {
+          constructor(arg0) {
+            if (!closure_4.current) {
+              tmp2 = lineClamp;
+              flag = true;
               tmp.current = true;
-              closure_3(nativeEvent.nativeEvent.lines.length > num4);
+              tmp3 = closure_3;
+              tmp4 = closure_0;
+              tmp5 = closure_3(lineClamp.nativeEvent.lines.length > closure_0);
             }
+            return;
           }
         }
-        const obj3 = { style: tmp9.toggleTruncateButton, children: tmp17(Text, obj4) };
-        Text = Text_Text.Text;
-        const string = intl2.intl.string;
-        const t = intl2.t;
+        cResult[5] = tmp11;
+        cResult[6] = first;
+        cResult[7] = tmp9;
+        cResult[8] = first;
+      } else {
+        class O {
+          constructor(arg0) {
+            if (!closure_4.current) {
+              tmp2 = lineClamp;
+              flag = true;
+              tmp.current = true;
+              tmp3 = closure_3;
+              tmp4 = closure_0;
+              tmp5 = closure_3(lineClamp.nativeEvent.lines.length > closure_0);
+            }
+            return;
+          }
+        }
+        const obj3 = { style: tmp9.toggleTruncateButton, children: null };
+        const string = util.intl.string;
+        let t = util.t;
         if (tmp11) {
           class O {
-            constructor(nativeEvent) {
-              if (!ref.current) {
+            constructor(arg0) {
+              if (!closure_4.current) {
+                tmp2 = lineClamp;
+                flag = true;
                 tmp.current = true;
-                closure_3(nativeEvent.nativeEvent.lines.length > num4);
+                tmp3 = closure_3;
+                tmp4 = closure_0;
+                tmp5 = closure_3(lineClamp.nativeEvent.lines.length > closure_0);
               }
+              return;
             }
           }
         } else {
           class O {
-            constructor(nativeEvent) {
-              if (!ref.current) {
+            constructor(arg0) {
+              if (!closure_4.current) {
+                tmp2 = lineClamp;
+                flag = true;
                 tmp.current = true;
-                closure_3(nativeEvent.nativeEvent.lines.length > num4);
+                tmp3 = closure_3;
+                tmp4 = closure_0;
+                tmp5 = closure_3(lineClamp.nativeEvent.lines.length > closure_0);
               }
+              return;
             }
           }
         }
-        obj4 = { variant: "text-sm/medium", color: "text-default", children: tmp19 };
-        tmp17Result = tmp17(React4, obj3);
+        const obj4 = { variant: "text-sm/medium", color: "text-default", children: tmp18 };
+        t = tmp16(Text_Text.Text, obj4);
+        obj3.children = t;
+        tmp16(options, obj3);
       }
-      cResult[5] = tmp11;
-      cResult[6] = first;
-      cResult[7] = tmp9;
-      cResult[8] = tmp17Result;
+      const tmp10 = _slicedToArray(noop.useState(false), 2);
     }
   : (lineClamp) => {
-      let Text;
-      let c1;
-      let closure_3;
-      let first;
-      let items;
-      let num2;
-      let obj2;
-      let tmp17;
-      let tmp4;
       let num = lineClamp.lineClamp;
       if (num === undefined) {
         num = 8;
@@ -206,99 +242,95 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       first = undefined;
       closure_3 = undefined;
       const tmp2 = closure_13();
-      [tmp4, c1] = react.useState(false);
-      _slicedToArray(react.useState(false), 2);
-      [first, closure_3] = react.useState(false);
-      closure_4 = react.useRef(false);
-      let tmp8Result = first;
-      if (tmp8Result) {
-        let stringResult;
-        const obj = { style: tmp2.toggleTruncateButton, children: unpackModuleId(Text, obj2) };
-        Text = Text_Text.Text;
-        const intl = intl2.intl;
-        const string = intl.string;
-        const t = intl2.t;
-        if (tmp4) {
-          stringResult = string(t["JQX/Pb"]);
-        } else {
-          stringResult = string(t.Fbrd8J);
+      [tmp4, c1] = noop.useState(false);
+      [first, closure_3] = noop.useState(false);
+      noop.useRef(false);
+      if (!first) {
+        const obj2 = {
+          onPress() {
+            let tmp = first;
+            if (first) {
+              tmp = _undefined((arg0) => !arg0);
+            }
+            return tmp;
+          },
+          accessibilityRole: "togglebutton",
+          activeOpacity: null,
+          children: null,
+        };
+        let num2 = 1;
+        if (first) {
+          num2 = 0.8;
         }
-        obj2 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
-        tmp8Result = unpackModuleId(React4, obj);
-      }
-      const obj3 = {
-        onPress() {
-          const tmp = first && _undefined((arg0) => !arg0);
-          return tmp;
-        },
-        accessibilityRole: "togglebutton",
-        activeOpacity: num2,
-        children: items,
-      };
-      num2 = 1;
-      if (first) {
-        num2 = 0.8;
-      }
-      const obj4 = {
-        lineClamp: tmp17,
-        onTextLayout(nativeEvent) {
+        obj2.activeOpacity = num2;
+        const obj3 = {};
+        const merged1 = Object.assign(merged);
+        let tmp21;
+        if (first) {
+          if (!tmp4) {
+            tmp21 = num;
+          }
+        }
+        obj3.lineClamp = tmp21;
+        obj3.onTextLayout = function onTextLayout(nativeEvent) {
           if (!ref.current) {
             tmp.current = true;
             closure_3(nativeEvent.nativeEvent.lines.length > num);
           }
-        },
-      };
-      const Text2 = Text_Text.Text;
-      const merged1 = Object.assign(merged);
-      tmp17 = undefined;
-      if (first) {
-        if (!tmp4) {
-          tmp17 = num;
+        };
+        const items = [closure_1_11(Text_Text.Text, obj3), first];
+        obj2.children = items;
+        return __initData(closure_1_8, obj2);
+      } else {
+        const obj = { style: tmp2.toggleTruncateButton, children: null };
+        const intl = util.intl;
+        const string = intl.string;
+        let t = util.t;
+        if (tmp4) {
+          let stringResult = string(t["JQX/Pb"]);
+        } else {
+          stringResult = string(t.Fbrd8J);
         }
+        const obj4 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
+        t = closure_1_11(Text_Text.Text, obj4);
+        obj.children = t;
+        closure_1_11(options, obj);
       }
-      items = [unpackModuleId(Text2, obj4), tmp8Result];
-      return closure_12(metroImportAll, obj3);
+      const tmp3 = _slicedToArray(noop.useState(false), 2);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let items;
-      let onPress;
-      let text;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       ({ text, onPress } = arg0);
       const tmp4 = closure_13();
       if (cResult[0] === tmp4.arrowButtonText) {
-        let tmp5;
-        let tmp7;
         if (cResult[1] === text) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.arrowButtonIcon) {
-          const obj2 = { size: native.Icon.Sizes.SMALL, source: AssetRegistryDefault, style: tmp4.arrowButtonIcon };
-          const Icon = native.Icon;
-          const tmp10 = unpackModuleId(Icon, obj2);
+          const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef16538, style: tmp4.arrowButtonIcon };
+          const tmp10 = closure_1_11(native.Icon, obj2);
           cResult[3] = tmp4.arrowButtonIcon;
           cResult[4] = tmp10;
-          tmp7 = tmp10;
+          let tmp7 = tmp10;
         } else {
           tmp7 = cResult[4];
         }
         if (cResult[5] === onPress) {
           if (cResult[6] === tmp4.arrowButton) {
             if (cResult[7] === tmp5) {
-              let tmp11;
               if (cResult[8] === tmp7) {
-                tmp11 = cResult[9];
+                let tmp11 = cResult[9];
               }
               return tmp11;
             }
           }
         }
-        const obj3 = { accessibilityRole: "button", style: tmp4.arrowButton, onPress, children: items };
-        items = [tmp5, tmp7];
-        const tmp13 = closure_12(Pressables.PressableOpacity, obj3);
+        const obj3 = { accessibilityRole: "button", style: tmp4.arrowButton, onPress, children: null };
+        const items = [tmp5, tmp7];
+        obj3.children = items;
+        const tmp13 = __initData(Pressables.PressableOpacity, obj3);
         cResult[5] = onPress;
         cResult[6] = tmp4.arrowButton;
         cResult[7] = tmp5;
@@ -306,101 +338,102 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp13;
         tmp11 = tmp13;
       }
-      const obj4 = { variant: "text-md/semibold", color: "text-default", style: tmp4.arrowButtonText, children: text };
-      const tmp6 = unpackModuleId(Text_Text.Text, obj4);
+      const tmp6 = closure_1_11(Text_Text.Text, {
+        variant: "text-md/semibold",
+        color: "text-default",
+        style: tmp4.arrowButtonText,
+        children: text,
+      });
       cResult[0] = tmp4.arrowButtonText;
       cResult[1] = text;
       cResult[2] = tmp6;
       tmp5 = tmp6;
+      const obj4 = { variant: "text-md/semibold", color: "text-default", style: tmp4.arrowButtonText, children: text };
     }
   : (arg0) => {
-      let items;
-      let onPress;
-      let text;
       ({ text, onPress } = arg0);
       const tmp = closure_13();
-      const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: items };
-      const PressableOpacity = Pressables.PressableOpacity;
-      items = [,];
-      const obj2 = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
-      items[0] = unpackModuleId(Text_Text.Text, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: AssetRegistryDefault, style: tmp.arrowButtonIcon };
-      const Icon = native.Icon;
-      items[1] = unpackModuleId(Icon, obj3);
-      return closure_12(PressableOpacity, obj);
+      const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
+      const items = [
+        closure_1_11(Text_Text.Text, {
+          variant: "text-md/semibold",
+          color: "text-default",
+          style: tmp.arrowButtonText,
+          children: text,
+        }),
+        closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef16538, style: tmp.arrowButtonIcon }),
+      ];
+      obj.children = items;
+      return __initData(Pressables.PressableOpacity, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/Elements.tsx");
+
+export const TruncatedText = tmp4;
+export const ArrowButton = tmp5;
+export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      let first1;
-      let tmp9;
+      let amount = first;
+      let concat = first(576).c(6);
       const obj = first(576);
-      const cResult = obj.c(6);
-      const obj2 = NativePaymentHooksDefault;
-      const mobileStoreFront = obj2.useMobileStoreFront();
-      const obj3 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      first = _slicedToArray(obj3.useSubscriptionPlan(arg0), 1)[0];
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();
+      first = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useSubscriptionPlan(arg0), 1)[0];
+      let str2 = globalThis;
+      if (concat[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SubscriptionPlanStore];
-        cResult[0] = items;
-        first1 = items;
+        concat[0] = items;
+        let first1 = items;
       } else {
-        first1 = cResult[0];
+        first1 = concat[0];
       }
-      if (cResult[1] !== first.id) {
+      if (concat[1] !== first.id) {
         const fn = function n() {
           return SubscriptionPlanStore.get(first.id);
         };
-        cResult[1] = first.id;
-        cResult[2] = fn;
-        tmp9 = fn;
+        concat[1] = first.id;
+        concat[2] = fn;
+        let tmp6 = fn;
       } else {
-        tmp9 = cResult[2];
+        tmp6 = concat[2];
       }
-      const tmpResult = first(573);
-      const stateFromStores = tmpResult.useStateFromStores(first1, tmp9);
-      const price = useStoreFrontPriceDefault(stateFromStores, mobileStoreFront).price;
-      let str = "No Price Available";
-      if (null != price) {
-        if (cResult[3] === price.amount) {
-          let tmp11;
-          if (cResult[4] === price.currency) {
-            tmp11 = cResult[5];
+      const stateFromStores = amount(573).useStateFromStores(first1, tmp6);
+      let currency = useStoreFrontPriceDefault(stateFromStores, mobileStoreFront).price;
+      if (null == currency) {
+        return "No Price Available";
+      } else {
+        if (concat[3] === currency.amount) {
+          if (concat[4] === currency.currency) {
+            let tmp8 = concat[5];
           }
-          const _HermesInternal = HermesInternal;
-          str = "" + tmp11 + "/mo.";
+          concat = str2.HermesInternal.concat;
+          str2 = "";
+          const combined = concat(tmp8, "/mo.");
         }
-        const tmpResult2 = first(6750);
-        const formatPriceResult = tmpResult2.formatPrice(price.amount, price.currency);
-        cResult[3] = price.amount;
-        cResult[4] = price.currency;
-        cResult[5] = formatPriceResult;
-        tmp11 = formatPriceResult;
+        const formatPriceResult = amount(6750).formatPrice(currency.amount, currency.currency);
+        amount = currency.amount;
+        concat[3] = amount;
+        currency = currency.currency;
+        concat[4] = currency;
+        concat[5] = formatPriceResult;
+        tmp8 = formatPriceResult;
+        const amountResult1 = amount(6750);
       }
-      return str;
+      const amountResult = amount(573);
     }
   : (arg0) => {
-      let id;
-      const obj = NativePaymentHooksDefault;
-      const mobileStoreFront = obj.useMobileStoreFront();
-      const obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      _require = _slicedToArray(obj2.useSubscriptionPlan(arg0), 1)[0];
+      const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();
+      _require = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useSubscriptionPlan(arg0), 1)[0];
+      const tmp3 = _require;
       const items = [SubscriptionPlanStore];
-      const obj3 = require("useStateFromStores");
-      const stateFromStores = obj3.useStateFromStores(items, () => SubscriptionPlanStore.get(id.id));
+      const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
+        SubscriptionPlanStore.get(id.id),
+      );
       const price = useStoreFrontPriceDefault(stateFromStores, mobileStoreFront).price;
       let str = "No Price Available";
-      const tmp3 = _require;
       if (null != price) {
         const _HermesInternal = HermesInternal;
+        str = "" + tmp3(6750).formatPrice(price.amount, price.currency) + "/mo.";
         const tmp3Result = tmp3(6750);
-        str = "" + tmp3Result.formatPrice(price.amount, price.currency) + "/mo.";
       }
       return str;
     };
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/Elements.tsx");
-
-export const TruncatedText = tmp5;
-export const ArrowButton = tmp6;
-export const useFormattedSubscriptionPlan = tmp7;

@@ -1,10 +1,7 @@
 // discord_app/modules/conjure/debug/ConjureTraceUtils.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-let NEGATIVE_INFINITY, POSITIVE_INFINITY;
-
 function traceCategory(entry) {
-  let str2;
   let str = "model";
   if ("model" === entry.kind) {
     let str4 = "context";
@@ -14,7 +11,7 @@ function traceCategory(entry) {
       }
       str4 = str;
     }
-    str2 = str4;
+    let str2 = str4;
   } else {
     str2 = "tool";
     if ("subagent" === entry.agent) {
@@ -54,10 +51,6 @@ function groupSpanMs(entries) {
   return bound;
 }
 function traceSearchText(kind) {
-  let items1;
-  let stopReason;
-  let str4;
-  let summary;
   let str = "model";
   if ("model" === kind.kind) {
     items = [, , ,];
@@ -71,7 +64,7 @@ function traceSearchText(kind) {
       str3 = "";
     }
     items[3] = str3;
-    items1 = items;
+    let items1 = items;
   } else {
     items1 = [, , ,];
     ({ tool: arr[0], agent: arr[1], summary } = kind);
@@ -85,7 +78,6 @@ function traceSearchText(kind) {
     }
     items1[3] = str2;
   }
-  const push = items1.push;
   if (str === kind.kind) {
     let str6 = "context";
     if ("compaction" !== kind.agent) {
@@ -94,16 +86,15 @@ function traceSearchText(kind) {
       }
       str6 = str;
     }
-    str4 = str6;
+    let str4 = str6;
   } else {
     str4 = "tool";
     if ("subagent" === kind.agent) {
       str4 = "delegated";
     }
   }
-  push(str4);
-  const str9 = items1.join(" ");
-  return str9.toLowerCase();
+  items1.push(str4);
+  return items1.join(" ").toLowerCase();
 }
 let items = ["model", "tool", "subagent", "delegated", "context"];
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureTraceUtils.tsx");
@@ -119,11 +110,10 @@ export const traceCategoryTotals = function traceCategoryTotals(entries) {
     let tmp3 = traceCategory(nextResult);
     let tmp4 = tmp3;
     let num = nextResult.durationMs;
-    let tmp5 = obj[tmp3];
     if (num == null) {
       num = 0;
     }
-    obj[tmp3] = tmp5 + num;
+    obj[tmp3] = obj[tmp3] + num;
     obj2[tmp4] = obj2[tmp4] + 1;
     continue;
   }
@@ -149,9 +139,12 @@ export const groupTraceByTurn = function groupTraceByTurn(stateFromStoresArray) 
       tmp7 = tmp.turnId === tmp5;
     }
     if (!tmp7) {
-      let obj = { turnId: tmp5, entries: [] };
+      let obj = { turnId: null, entries: null };
+      obj.turnId = tmp5;
+      obj.entries = [];
       tmp = obj;
-      let obj2 = { turnId: tmp5, entries: obj.entries, startedAt: tmp3.startedAt, spanMs: null };
+      let obj2 = { turnId: tmp5, entries: obj.entries, startedAt: null, spanMs: null };
+      obj2.startedAt = tmp3.startedAt;
       let arr = items.push(obj2);
     }
     let entries = tmp.entries;
@@ -159,33 +152,36 @@ export const groupTraceByTurn = function groupTraceByTurn(stateFromStoresArray) 
     continue;
   }
   return items.map((item) => {
-    const obj = { spanMs: groupSpanMs(item.entries) };
+    const obj = {};
     const merged = Object.assign(item);
+    obj.spanMs = groupSpanMs(item.entries);
     return obj;
   });
 };
 export { traceSearchText };
 export const filterTrace = function filterTrace(entries, first1) {
-  const str = first1.trim();
-  const formatted = str.toLowerCase();
+  const formatted = first1.trim().toLowerCase();
   let found = entries;
   if ("" !== formatted) {
-    found = entries.filter((item) => {
-      const obj = traceSearchText(item);
-      return obj.includes(formatted);
-    });
+    found = entries.filter((item) => traceSearchText(item).includes(formatted));
   }
   return found;
 };
 export const traceChildren = function traceChildren(stateFromStoresArray, id) {
-  let closure_0 = id;
-  return stateFromStoresArray.filter((kind) => "tool" === kind.kind && kind.parentId === id);
+  closure_0 = id;
+  return stateFromStoresArray.filter((kind) => {
+    let tmp = "tool" === kind.kind;
+    if (tmp) {
+      tmp = kind.parentId === closure_0;
+    }
+    return tmp;
+  });
 };
 export const findTraceEntry = function findTraceEntry(stateFromStoresArray, entryId) {
-  let closure_0 = entryId;
+  closure_0 = entryId;
   let tmp = null;
   if (null != entryId) {
-    let found = stateFromStoresArray.find((id) => id.id === entryId);
+    let found = stateFromStoresArray.find((id) => id.id === closure_0);
     if (found == null) {
       found = null;
     }
@@ -194,15 +190,18 @@ export const findTraceEntry = function findTraceEntry(stateFromStoresArray, entr
   return tmp;
 };
 export const traceExportPayload = function traceExportPayload(projectId, stateFromStoresArray, date) {
-  const obj = {
-    kind: "vibegrations.trace",
-    version: 1,
-    project_id: projectId,
-    exported_at: date,
-    note: 'Redacted developer trace. Tool arguments, results and prompts are reported as sizes and allowlisted technical values only; token counts marked "estimated" are a chars/4 heuristic measured before sending.',
-    entries: stateFromStoresArray,
-  };
-  return JSON.stringify(obj, null, 2);
+  return JSON.stringify(
+    {
+      kind: "vibegrations.trace",
+      version: 1,
+      project_id: projectId,
+      exported_at: date,
+      note: 'Redacted developer trace. Tool arguments, results and prompts are reported as sizes and allowlisted technical values only; token counts marked "estimated" are a chars/4 heuristic measured before sending.',
+      entries: stateFromStoresArray,
+    },
+    null,
+    2,
+  );
 };
 export const isToolEntry = function isToolEntry(kind) {
   return "tool" === kind.kind;

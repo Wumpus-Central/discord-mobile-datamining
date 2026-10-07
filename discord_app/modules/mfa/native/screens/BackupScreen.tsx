@@ -1,86 +1,68 @@
 // discord_app/modules/mfa/native/screens/BackupScreen.tsx
-import intl6 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
 import MFA from "../../../../../discord_common/js/shared/MFA.tsx";
 import ClipboardCopyInputDefault from "../components/ClipboardCopyInput.tsx";
-import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let c6, c7, closure_3, importDefault;
 
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
 function removeDashes(str) {
   return str.replace(/-/g, "");
 }
 function isValidClipboardCode(arg0) {
-  const tmp3 = arg0.length >= MFA.BACKUP_CODE_MIN_LENGTH && arg0.length <= MFA.BACKUP_CODE_MAX_LENGTH;
+  let tmp3 = arg0.length >= MFA.BACKUP_CODE_MIN_LENGTH;
+  if (tmp3) {
+    tmp3 = arg0.length <= MFA.BACKUP_CODE_MAX_LENGTH;
+  }
   return tmp3;
 }
 function getFormattedExplainer(first1) {
-  let items;
-  let items1;
-  let obj3;
-  const Text = Text_Text.Text;
   if (first1 > 0) {
-    const obj = { variant: "text-md/normal", children: items };
-    const intl = intl6.intl;
-    items = [intl.string(intl6.t.RRtlLg)];
-    const intl2 = intl6.intl;
+    const obj = { variant: "text-md/normal", children: null };
+    const intl = util.intl;
+    const items = [intl.string(util.t.RRtlLg)];
+    const intl2 = util.intl;
     const obj2 = { countdown: first1 };
-    items[1] = intl2.format(intl6.t.tsWkAE, obj2);
-    obj3 = obj;
+    items[1] = intl2.format(util.t.tsWkAE, obj2);
+    obj.children = items;
+    let obj3 = obj;
   } else {
-    obj3 = { variant: "text-md/normal", children: items1 };
-    const intl3 = intl6.intl;
-    items1 = [intl3.string(intl6.t.RRtlLg)];
-    const intl4 = intl6.intl;
-    items1[1] = intl4.string(intl6.t.v3a6Pd);
+    obj3 = { variant: "text-md/normal", children: null };
+    const intl3 = util.intl;
+    const items1 = [intl3.string(util.t.RRtlLg)];
+    const intl4 = util.intl;
+    items1[1] = intl4.string(util.t.v3a6Pd);
+    obj3.children = items1;
   }
-  return metroRequire(Text, obj3);
+  return timestampProducer(Text_Text.Text, obj3);
 }
-let _asyncToGenerator = _asyncToGenerator_mod;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-({ jsxs: metroRequire, jsx: metroImportDefault, Fragment: metroImportAll } = Fragment);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const jsxProd = fn(21);
+({ jsxs: metroRequire, jsx: closure_7, Fragment: closure_8 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_7;
-      let finish;
-      let first;
-      let mfaChallenge;
-      let obj3;
-      let obj4;
-      let tmp10;
-      let tmp12;
-      let tmp15;
-      let tmp16;
-      let tmp19;
-      let tmp26;
-      let tmp27;
-      let tmp7;
-      let obj = finish(576);
-      const cResult = obj.c(34);
+      const cResult = require("c").c(34);
       ({ mfaChallenge, finish } = arg0);
+      _require = finish;
+      const obj = require("c");
       const tmp5 = useWideAuthViewDefault();
-      [tmp7, importDefault] = _slicedToArray(react.useState(false), 2);
-      const tmp6 = _slicedToArray(react.useState(false), 2);
-      [dependencyMap, _asyncToGenerator] = react.useState("");
-      const tmp9 = _slicedToArray(react.useState(undefined), 2);
-      [tmp10, _slicedToArray] = tmp9;
-      const tmp11 = _slicedToArray(react.useState(false), 2);
-      [tmp12, react] = tmp11;
-      [first, closure_7] = react.useState(10);
+      [tmp7, importDefault] = noop.useState(false);
+      [dependencyMap, asyncGeneratorStep] = noop.useState("");
+      const tmp6 = _slicedToArray(noop.useState(false), 2);
+      [tmp10, _slicedToArray] = noop.useState(undefined);
+      const tmp9 = _slicedToArray(noop.useState(undefined), 2);
+      [r10038, noop] = noop.useState(false);
+      [first, closure_7] = noop.useState(10);
       if (cResult[0] !== first) {
         const fn = function f() {
-          let closure_0;
           if (first > 0) {
             const _setTimeout = setTimeout;
             const timeout = setTimeout(() => {
@@ -93,263 +75,222 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = first;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp16 = items;
-        tmp15 = fn;
+        let tmp15 = items;
+        let tmp14 = fn;
       } else {
-        tmp15 = cResult[1];
-        tmp16 = cResult[2];
+        tmp14 = cResult[1];
+        tmp15 = cResult[2];
       }
-      const effect = react.useEffect(tmp15, tmp16);
+      const effect = noop.useEffect(tmp14, tmp15);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
         cResult[3] = C;
       } else {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
       }
       if (cResult[4] !== finish) {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
-        let closure_0 = _asyncToGenerator(async (arg0) => {
-          let closure_4;
-          let message2;
-          closure_0 = arg0;
-          if (c7 === 2) {
+        _require = asyncGeneratorStep(async (arg0) => {
+          closure_3 = tmp3;
+          tmp31(undefined);
+          message(true);
+          let v0 = 1;
+          await closure_0({ mfaType: "backup", data: removeDashes(closure_0) });
+          if (1 === tmp7) {
+            v0 = 0;
+            closure_130_0 = tmp31;
+            message = undefined;
+            if (closure_130_0 != null) {
+              const body = closure_130_0.body;
+              if (body != null) {
+                message = body.message;
+              }
+            }
+            if (message == null) {
+              message = closure_130_0.message;
+            }
+            tmp31(message);
+            message(false);
             c7 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            let v0;
-            try {
-              c7 = 2;
-              if (0 === c6) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_3 = tmp;
-                  closure_2 = tmp4;
-                  closure_0 = undefined;
-                  tmp28(undefined);
-                  message2(true);
-                  v0 = 1;
-                  const obj4 = { mfaType: "backup", data: removeDashes(closure_0) };
-                  c6 = 2;
-                  c7 = 1;
-                  const obj5 = { value: closure_0(obj4), done: false };
-                  return obj5;
-                }
-              } else {
-                if (1 === c6) {
-                  v0 = 0;
-                  closure_0 = tmp28;
-                  let message;
-                  if (closure_0 != null) {
-                    const body = closure_0.body;
-                    if (body != null) {
-                      message = body.message;
-                    }
-                  }
-                  message2 = message;
-                  if (message == null) {
-                    message2 = closure_0.message;
-                  }
-                  tmp28(message2);
-                } else if (arg0 === 1) {
-                  c7 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  v0 = 0;
-                  c7 = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  v0(true);
-                  v0 = 0;
-                }
-                message2(false);
-                c7 = 3;
-                return { value: "IconComponent", done: null };
-              }
-            } catch (tmp28) {
-              if (0 === v0) {
-                c7 = 3;
-                throw tmp28;
-              } else {
-                c6 = 1;
-              }
-            }
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            v0(true);
+            v0 = 0;
           }
+          v0 = 0;
+          return value;
         });
         let fn2 = function () {
-          return closure_0(...arguments);
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
         };
         cResult[4] = finish;
         cResult[5] = fn2;
-        tmp19 = fn2;
+        const tmp18 = fn2;
       } else {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
       }
-      fn2 = tmp19;
+      fn2 = tmp18;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
-        const stringResult = obj3.string(finish(1126).t.B2T1HD);
-        const intl = finish(1126).intl;
-        const stringResult1 = intl.string(finish(1126).t.c5J7O0);
+        const stringResult = obj3.string(tmp(1126).t.B2T1HD);
+        const intl = tmp(1126).intl;
+        const stringResult1 = intl.string(tmp(1126).t.c5J7O0);
         cResult[6] = stringResult;
         cResult[7] = stringResult1;
       } else {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
       }
       if (cResult[8] !== first) {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
-        const tmp25 = getFormattedExplainer(first);
+        const tmp24 = getFormattedExplainer(first);
         cResult[8] = first;
-        cResult[9] = tmp25;
+        cResult[9] = tmp24;
       } else {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
       }
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
-        const stringResult2 = obj4.string(finish(1126).t["C/ZAw/"]);
-        const intl2 = finish(1126).intl;
-        const stringResult3 = intl2.string(finish(1126).t.fZSi1D);
+        const stringResult2 = obj4.string(tmp(1126).t["C/ZAw/"]);
+        const intl2 = tmp(1126).intl;
+        const stringResult3 = intl2.string(tmp(1126).t.fZSi1D);
         cResult[10] = stringResult2;
         cResult[11] = stringResult3;
-        tmp27 = stringResult3;
-        tmp26 = stringResult2;
+        let tmp26 = stringResult3;
+        const tmp25 = stringResult2;
       } else {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
-        tmp27 = cResult[11];
+        tmp26 = cResult[11];
+      }
+      if (!tmp7) {
+        class C {
+          constructor(arg0) {
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
+          }
+        }
       }
       if (cResult[12] === tmp10) {
         class C {
           constructor(arg0) {
-            closure_3(arg0);
-            _slicedToArray(undefined);
+            tmp = closure_3(arg0);
+            tmp2 = closure_4(undefined);
+            return;
           }
         }
       }
-      let obj5 = {
-        label: tmp26,
-        placeholder: tmp27,
+      const obj5 = {
+        label: tmp25,
+        placeholder: tmp26,
         isValidClipboardCode,
-        maxLength: finish(15524).BACKUP_CODE_MAX_LENGTH,
-        onChangeCode: C,
-        error: tmp10,
-        isDisabled: tmp30,
-        autoFocus: tmp31,
+        maxLength: null,
+        onChangeCode: null,
+        error: null,
+        isDisabled: null,
+        autoFocus: null,
       };
+      const tmp11 = _slicedToArray(noop.useState(false), 2);
+      obj5.maxLength = require("MFA").BACKUP_CODE_MAX_LENGTH;
+      obj5.onChangeCode = C;
+      obj5.error = tmp10;
+      obj5.isDisabled = tmp7;
+      obj5.autoFocus = !tmp5;
       const tmp4Result = ClipboardCopyInputDefault;
       cResult[12] = tmp10;
-      cResult[13] = tmp7 || tmp12;
+      cResult[13] = tmp7;
       cResult[14] = !tmp5;
-      cResult[15] = closure_7(tmp4Result, obj5);
-      closure_7(tmp4Result, obj5);
+      cResult[15] = closure_7(ClipboardCopyInputDefault, obj5);
+      const tmp32 = closure_7(ClipboardCopyInputDefault, obj5);
     }
   : (finish) => {
-      let _undefined;
-      let c1;
-      let c4;
-      let c5;
-      let closure_7;
-      let first;
-      let first1;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let intl5;
-      let obj3;
-      let obj4;
-      let tmp10;
-      let tmp18;
-      let tmp20;
-      let tmp5;
-      let tmp8;
-      let tmpResult;
       finish = finish.finish;
       importDefault = undefined;
       first = undefined;
-      _asyncToGenerator = undefined;
+      asyncGeneratorStep = undefined;
       _slicedToArray = undefined;
-      react = undefined;
+      noop = undefined;
       first1 = undefined;
       closure_7 = undefined;
-      const mfaChallenge = finish.mfaChallenge;
       const tmp = importDefault;
       const tmp3 = require("useWideAuthView")();
-      const tmp4 = _slicedToArray(react.useState(false), 2);
-      [tmp5, c1] = tmp4;
-      [first, _asyncToGenerator] = react.useState("");
-      [tmp8, c4] = _slicedToArray(react.useState(undefined), 2);
-      const tmp7 = _slicedToArray(react.useState(undefined), 2);
-      [tmp10, c5] = _slicedToArray(react.useState(false), 2);
-      const tmp9 = _slicedToArray(react.useState(false), 2);
-      [first1, closure_7] = react.useState(10);
+      [tmp5, c1] = noop.useState(false);
+      [first, asyncGeneratorStep] = noop.useState("");
+      const tmp4 = _slicedToArray(noop.useState(false), 2);
+      [tmp8, c4] = noop.useState(undefined);
+      const tmp7 = _slicedToArray(noop.useState(undefined), 2);
+      [tmp10, c5] = noop.useState(false);
+      [first1, closure_7] = noop.useState(10);
       const items = [first1];
-      const effect = react.useEffect(() => {
-        let closure_0;
+      const effect = noop.useEffect(() => {
         if (first1 > 0) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
@@ -358,136 +299,109 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return () => clearTimeout(closure_0);
         }
       }, items);
-      const useCallback = react.useCallback;
-      let closure_0 = _asyncToGenerator(async (arg0) => {
-        let closure_4;
-        let message2;
-        closure_0 = arg0;
-        if (c7 === 2) {
+      _require = asyncGeneratorStep(async (arg0) => {
+        closure_3 = tmp3;
+        tmp31(undefined);
+        message(true);
+        let v0 = 1;
+        await closure_0({ mfaType: "backup", data: removeDashes(closure_0) });
+        if (1 === tmp7) {
+          v0 = 0;
+          closure_130_0 = tmp31;
+          message = undefined;
+          if (closure_130_0 != null) {
+            const body = closure_130_0.body;
+            if (body != null) {
+              message = body.message;
+            }
+          }
+          if (message == null) {
+            message = closure_130_0.message;
+          }
+          tmp31(message);
+          message(false);
           c7 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          let v0;
-          try {
-            c7 = 2;
-            if (0 === c6) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_3 = tmp;
-                let closure_2 = tmp4;
-                tmp28(undefined);
-                message2(true);
-                v0 = 1;
-                const obj4 = { mfaType: "backup", data: removeDashes(closure_0) };
-                c6 = 2;
-                c7 = 1;
-                const obj5 = { value: closure_0(obj4), done: false };
-                return obj5;
-              }
-            } else {
-              if (1 === c6) {
-                v0 = 0;
-                closure_0 = tmp28;
-                let message;
-                if (closure_0 != null) {
-                  const body = closure_0.body;
-                  if (body != null) {
-                    message = body.message;
-                  }
-                }
-                message2 = message;
-                if (message == null) {
-                  message2 = closure_0.message;
-                }
-                tmp28(message2);
-              } else if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                v0 = 0;
-                c7 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                v0(true);
-                v0 = 0;
-              }
-              message2(false);
-              c7 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          } catch (tmp28) {
-            if (0 === v0) {
-              c7 = 3;
-              throw tmp28;
-            } else {
-              c6 = 1;
-            }
-          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          v0(true);
+          v0 = 0;
         }
+        v0 = 0;
+        return value;
       });
       const items1 = [finish];
-      let closure_8 = useCallback(function () {
-        return closure_0(...arguments);
+      closure_8 = noop.useCallback(function () {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       }, items1);
-      let obj = {
-        headerText: intl.string(finish(first[6]).t.B2T1HD),
-        subtitle: intl2.string(finish(first[6]).t.c5J7O0),
-        input: first1(tmp18, obj3),
-        submit: tmp14(tmpResult, obj4),
-        screenProps: { mfaChallenge, finish },
+      const obj = {
+        headerText: null,
+        subtitle: null,
+        input: null,
+        submit: null,
+        screenProps: null,
         mfaMethod: "backup",
       };
-      const tmp15 = require("MfaOptionScreen");
-      intl = finish(first[6]).intl;
-      intl2 = finish(first[6]).intl;
+      const tmp9 = _slicedToArray(noop.useState(false), 2);
+      const intl = require("util").intl;
+      obj.headerText = intl.string(require("util").t.B2T1HD);
+      const intl2 = require("util").intl;
+      obj.subtitle = intl2.string(require("util").t.c5J7O0);
       const items2 = [getFormattedExplainer(first1)];
-      let obj2 = {
-        label: intl3.string(finish(first[6]).t["C/ZAw/"]),
-        placeholder: intl4.string(finish(first[6]).t.fZSi1D),
-        isValidClipboardCode,
-        maxLength: finish(first[4]).BACKUP_CODE_MAX_LENGTH,
-        onChangeCode(arg0) {
-          closure_3(arg0);
-          _undefined(undefined);
-        },
-        error: tmp8,
-        isDisabled: tmp20,
-        autoFocus: !tmp3,
+      const obj2 = {
+        label: null,
+        placeholder: null,
+        isValidClipboardCode: null,
+        maxLength: null,
+        onChangeCode: null,
+        error: null,
+        isDisabled: null,
+        autoFocus: null,
       };
+      const tmp15 = require("MfaOptionScreen");
+      const tmp17 = first1;
+      const tmp18 = closure_8;
+      const intl3 = require("util").intl;
+      obj2.label = intl3.string(require("util").t["C/ZAw/"]);
+      const intl4 = require("util").intl;
+      obj2.placeholder = intl4.string(require("util").t.fZSi1D);
+      obj2.isValidClipboardCode = isValidClipboardCode;
+      obj2.maxLength = require("MFA").BACKUP_CODE_MAX_LENGTH;
+      obj2.onChangeCode = function onChangeCode(arg0) {
+        closure_3(arg0);
+        _undefined(undefined);
+      };
+      obj2.error = tmp8;
+      let tmp20 = tmp5;
+      if (!tmp5) {
+        tmp20 = tmp10;
+      }
+      const obj3 = { children: null };
+      obj2.isDisabled = tmp20;
+      obj2.autoFocus = !tmp3;
+      items2[1] = closure_7(require("ClipboardCopyInput"), obj2);
+      obj3.children = items2;
+      obj.input = tmp17(tmp18, obj3);
+      const obj4 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
       const tmp19 = require("ClipboardCopyInput");
-      intl3 = finish(first[6]).intl;
-      intl4 = finish(first[6]).intl;
-      obj3 = { children: items2 };
-      tmp20 = tmp5 || tmp10;
-      items2[1] = closure_7(tmp19, obj2);
-      obj4 = {
-        variant: "primary",
-        text: intl5.string(tmp16(tmp2[6]).t.geKm7t),
-        loading: tmp5 || tmp10,
-        onPress() {
-          return closure_8(first);
-        },
-        disabled: tmp5,
+      const intl5 = tmp16(tmp2[6]).intl;
+      obj4.text = intl5.string(require("util").t.geKm7t);
+      let tmp22 = tmp5;
+      if (!tmp5) {
+        tmp22 = tmp10;
+      }
+      obj4.loading = tmp22;
+      obj4.onPress = function onPress() {
+        return closure_8(first);
       };
-      tmpResult = tmp(first[11]);
-      intl5 = tmp16(tmp2[6]).intl;
-      tmp18 = closure_8;
       if (!tmp5) {
         tmp5 = tmp10;
       }
@@ -497,8 +411,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (!tmp5) {
         tmp5 = first1 > 0;
       }
+      obj4.disabled = tmp5;
+      obj.submit = closure_7(tmp(first[11]), obj4);
+      obj.screenProps = { mfaChallenge: finish.mfaChallenge, finish };
       return closure_7(tmp15, obj);
     };
-const result = size.fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
-
-export default tmp3;

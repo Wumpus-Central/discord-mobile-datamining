@@ -1,45 +1,38 @@
 // discord_app/modules/design/DesignSystemsNotificationComponentsExperiment.tsx
-import react from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj2;
-let obj = {
+const obj = {
   name: "2026-09-design-systems-notification-components",
   kind: "user",
   defaultConfig: { enabled: false },
-  variations: obj2,
+  variations: null,
 };
-obj2 = { 1: null };
+let obj2 = { 1: null };
 obj2[1] = { enabled: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/design/DesignSystemsNotificationComponentsExperiment.tsx");
+
+export default apexExperiment;
+export const useDesignSystemsNotificationComponents = ReactCompilerGating.isReactCompilerEnabled()
   ? (location) => {
-      let tmp2;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
         cResult[0] = location;
         cResult[1] = obj2;
-        tmp2 = obj2;
+        let tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => {
-      const obj = { location };
-      return apexExperiment.useConfig(obj).enabled;
-    };
-const result = size.fileFinishedImporting("modules/design/DesignSystemsNotificationComponentsExperiment.tsx");
-
-export default apexExperiment;
-export const useDesignSystemsNotificationComponents = tmp3;
+  : (location) => apexExperiment.useConfig({ location }).enabled;
 export const getDesignSystemsNotificationComponents = function getDesignSystemsNotificationComponents(
   DevToolsInAppNotificationTestingScreen,
 ) {
-  const obj = { location: DevToolsInAppNotificationTestingScreen };
-  return apexExperiment.getConfig(obj).enabled;
+  return apexExperiment.getConfig({ location: DevToolsInAppNotificationTestingScreen }).enabled;
 };

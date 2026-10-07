@@ -1,33 +1,29 @@
 // discord_app/modules/forums/native/composer/hooks/useBackspaceHandler.tsx
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let selection;
-
+const require = fn;
 const re3 =
   /((\ud83c[\udde6-\uddff]){2}|([#*0-9]\u20e3)|(\u00a9|\u00ae|[\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])((\ud83c[\udffb-\udfff])?(\ud83e[\uddb0-\uddb3])?(\ufe0f?\u200d([\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])\ufe0f?)?)*)/g;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/useBackspaceHandler.tsx");
+
+export const useBackspaceHandler = ReactCompilerGating.isReactCompilerEnabled()
   ? (selection) => {
-      let draftContent;
-      const obj = selection(draftContent[2]);
-      const cResult = obj.c(4);
+      const cResult = selection(draftContent[2]).c(4);
       selection = selection.selection;
       draftContent = selection.draftContent;
       const handleTextChange = selection.handleTextChange;
       if (cResult[0] === draftContent) {
         if (cResult[1] === handleTextChange) {
-          let tmp2;
           if (cResult[2] === selection) {
-            tmp2 = cResult[3];
+            let tmp2 = cResult[3];
           }
           return tmp2;
         }
       }
       const fn = function t() {
-        let end;
         let num2;
-        let start;
         ({ start, end } = selection);
         if (0 !== start) {
           let num = 1;
@@ -78,9 +74,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const handleTextChange = selection.handleTextChange;
       const items = [selection, draftContent, handleTextChange];
       return handleTextChange.useCallback(() => {
-        let end;
         let num2;
-        let start;
         ({ start, end } = selection);
         if (0 !== start) {
           let num = 1;
@@ -120,6 +114,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/useBackspaceHandler.tsx");
-
-export const useBackspaceHandler = tmp2;

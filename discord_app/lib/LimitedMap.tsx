@@ -2,19 +2,18 @@
 import size from "../../_runtime/metro/00002__.js";
 
 class LimitedMap extends Map {
-  constructor(maxSize) {
-    const tmp = new LimitedMap(new.target);
-    tmp.maxSize = maxSize;
+  constructor(arg0) {
+    tmp = new LimitedMap(new.target);
+    tmp.maxSize = global;
     return tmp;
   }
   set(arg0, arg1) {
-    const self = this;
+    self = this;
     if (this.size >= this.maxSize) {
-      const _delete = self.delete;
-      const iter = self.keys();
-      _delete(iter.next().value);
+      iter = self.keys();
+      deleteResult = self.delete(iter.next().value);
     }
-    return super.set(arg0, arg1);
+    return super.set(global, require);
   }
 }
 let closure_0 = LimitedMap.prototype;

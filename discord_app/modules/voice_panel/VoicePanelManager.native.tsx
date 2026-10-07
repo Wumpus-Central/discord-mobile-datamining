@@ -3,55 +3,54 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import VoicePanelStore from "VoicePanelStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-class VoicePanelManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    applyArgumentsResult.actions = {
-      VOICE_CHANNEL_SELECT() {
-        const channelId = RTCConnectionStore.getChannelId();
-        if (null != channelId) {
-          const state = VoicePanelStore.getState();
-          const channel = ChannelStore.getChannel(channelId);
-          let isGuildStageVoiceResult;
-          if (channel != null) {
-            isGuildStageVoiceResult = channel.isGuildStageVoice();
-          }
-          if (isGuildStageVoiceResult) {
-            state.closeChannel(channelId);
-          } else {
-            const channels = state.channels;
-            if (!channels.has(channelId)) {
-              state.openChannel(channelId);
-            }
+const prototype = function VoicePanelManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  applyArgumentsResult.actions = {
+    VOICE_CHANNEL_SELECT() {
+      const channelId = RTCConnectionStore.getChannelId();
+      if (null != channelId) {
+        state = VoicePanelStore.getState();
+        const channel = ChannelStore.getChannel(channelId);
+        let isGuildStageVoiceResult;
+        if (channel != null) {
+          isGuildStageVoiceResult = channel.isGuildStageVoice();
+        }
+        if (isGuildStageVoiceResult) {
+          state.closeChannel(channelId);
+        } else {
+          const channels = state.channels;
+          if (!channels.has(channelId)) {
+            state.openChannel(channelId);
           }
         }
-      },
-      RTC_CONNECTION_STATE() {
-        const channelId = RTCConnectionStore.getChannelId();
-        if (null != channelId) {
-          const state = VoicePanelStore.getState();
-          const channel = ChannelStore.getChannel(channelId);
-          let isGuildStageVoiceResult;
-          if (channel != null) {
-            isGuildStageVoiceResult = channel.isGuildStageVoice();
-          }
-          if (isGuildStageVoiceResult) {
-            state.closeChannel(channelId);
-          } else {
-            const channels = state.channels;
-            if (!channels.has(channelId)) {
-              state.openChannel(channelId);
-            }
+      }
+    },
+    RTC_CONNECTION_STATE() {
+      const channelId = RTCConnectionStore.getChannelId();
+      if (null != channelId) {
+        state = VoicePanelStore.getState();
+        const channel = ChannelStore.getChannel(channelId);
+        let isGuildStageVoiceResult;
+        if (channel != null) {
+          isGuildStageVoiceResult = channel.isGuildStageVoice();
+        }
+        if (isGuildStageVoiceResult) {
+          state.closeChannel(channelId);
+        } else {
+          const channels = state.channels;
+          if (!channels.has(channelId)) {
+            state.openChannel(channelId);
           }
         }
-      },
-    };
-    return applyArgumentsResult;
-  }
-}
-const voicePanelManager = new VoicePanelManager();
+      }
+    },
+  };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp2 {}
+const prototype1 = new prototype();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
 
-export default voicePanelManager;
+export default prototype1;

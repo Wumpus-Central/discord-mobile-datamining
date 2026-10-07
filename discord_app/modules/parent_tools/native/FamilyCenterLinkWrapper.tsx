@@ -1,18 +1,24 @@
 // discord_app/modules/parent_tools/native/FamilyCenterLinkWrapper.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let userId;
-
-let obj2;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = {
+const require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  container: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    paddingTop: 14,
+    paddingBottom: nativeDefault.space.PX_12,
+    paddingHorizontal: nativeDefault.space.PX_12,
+  },
+};
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj3 = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -20,13 +26,12 @@ obj2 = {
   paddingBottom: nativeDefault.space.PX_12,
   paddingHorizontal: nativeDefault.space.PX_12,
 };
-let closure_4 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkWrapper.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (userId) => {
-      let analyticsLocations;
-      let obj = userId(576);
-      const cResult = obj.c(7);
-      const tmp = userId;
+      const cResult = userId(576).c(7);
       userId = userId.userId;
       const children = userId.children;
       const tmp4 = closure_4();
@@ -35,19 +40,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         if (cResult[0] === analyticsLocations) {
-          let tmp5;
           if (cResult[1] === userId) {
-            tmp5 = cResult[2];
+            let tmp5 = cResult[2];
           }
           if (cResult[3] === children) {
             if (cResult[4] === tmp5) {
-              let tmp6;
               if (cResult[5] === tmp4.container) {
-                tmp6 = cResult[6];
+                let tmp6 = cResult[6];
               }
               return tmp6;
             }
           }
+          const obj2 = { style: tmp4.container, onPress: tmp5, children };
           const tmp8 = jsx(tmp(5916).PressableOpacity, { style: tmp4.container, onPress: tmp5, children });
           cResult[3] = children;
           cResult[4] = tmp5;
@@ -56,44 +60,51 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp6 = tmp8;
         }
         const fn = function l() {
-          const obj = {
+          showUserProfileActionSheetDefault({
             userId,
             disableCalls: true,
             disableMessage: true,
             sourceAnalyticsLocations: analyticsLocations,
-          };
-          showUserProfileActionSheetDefault(obj);
+          });
         };
         cResult[0] = analyticsLocations;
         cResult[1] = userId;
         cResult[2] = fn;
         tmp5 = fn;
       }
+      const obj = userId(576);
+      tmp = userId;
     }
   : (userId) => {
       userId = userId.userId;
       let analyticsLocations;
-      const children = userId.children;
-      const tmp = closure_4();
       analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       let tmp3 = null;
       if (undefined !== userId) {
-        tmp3 = jsx(userId(5916).PressableOpacity, {
+        const obj = {
           style: tmp.container,
           onPress() {
-            const obj = {
+            showUserProfileActionSheetDefault({
               userId,
               disableCalls: true,
               disableMessage: true,
               sourceAnalyticsLocations: analyticsLocations,
-            };
-            showUserProfileActionSheetDefault(obj);
+            });
           },
-          children,
+          children: userId.children,
+        };
+        tmp3 = jsx(userId(5916).PressableOpacity, {
+          style: tmp.container,
+          onPress() {
+            showUserProfileActionSheetDefault({
+              userId,
+              disableCalls: true,
+              disableMessage: true,
+              sourceAnalyticsLocations: analyticsLocations,
+            });
+          },
+          children: userId.children,
         });
       }
       return tmp3;
     };
-const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkWrapper.tsx");
-
-export default tmp3;

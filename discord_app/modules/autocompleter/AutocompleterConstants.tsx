@@ -3,12 +3,12 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
 
-export function HeaderRecord(id) {
+export const HeaderRecord = function HeaderRecord(id) {
   const obj = Object.create(new.target.prototype);
   obj.id = id;
   obj.text = id;
   return obj;
-}
+}.prototype;
 export const FindResultDirections = { UP: "UP", DOWN: "DOWN" };
 export const AutocompleterResultTypes = {
   GUILD: "GUILD",

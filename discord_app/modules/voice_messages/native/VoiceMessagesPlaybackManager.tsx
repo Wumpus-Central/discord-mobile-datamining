@@ -1,158 +1,140 @@
 // discord_app/modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
-import react_nativeDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
+import NativeAudioPlayerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
-({ AppState: c3, NativeModules: closure_4 } = react_native);
-class VoiceMessagesPlaybackManager extends LifecycleManager {
+({ AppState: c3, NativeModules: closure_4 } = get_ActivityIndicator);
+class VoiceMessagesPlaybackManager extends tmp3 {
   constructor() {
-    let currentlySelectedChannelId;
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
-    applyArgumentsResult.appState = currentState.currentState;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    applyArgumentsResult.appState = AppState.currentState;
     applyArgumentsResult.handleSetPrefersReducedMotion = function handleSetPrefersReducedMotion(prefersReducedMotion) {
-      const obj = react_nativeDefault;
-      const result = obj.handleSetPrefersReducedMotion(prefersReducedMotion.prefersReducedMotion);
+      const result = NativeDeviceAccessibilityModuleDefault.handleSetPrefersReducedMotion(
+        prefersReducedMotion.prefersReducedMotion,
+      );
     };
     applyArgumentsResult.handleMessageDelete = function handleMessageDelete(id) {
       id = id.id;
       if (id.channelId === currentlySelectedChannelId.getCurrentlySelectedChannelId()) {
-        const obj = PlatformUtils;
         if (obj.isAndroid()) {
-          const obj2 = react_nativeDefault2;
-          const result = obj2.handleVoiceMessageDeleted(id);
+          const result = NativeAudioPlayerModuleDefault.handleVoiceMessageDeleted(id);
         } else {
           const DCDAudioPlayerManager = closure_1_4.DCDAudioPlayerManager;
           if (DCDAudioPlayerManager != null) {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
+        obj = applyArgumentsResult(1369);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
-      const obj = PlatformUtils;
       if (obj.isAndroid()) {
-        const obj2 = react_nativeDefault2;
-        obj2.pauseCurrentPlayer(false);
+        NativeAudioPlayerModuleDefault.pauseCurrentPlayer(false);
       } else {
         const DCDAudioPlayerManager = closure_1_4.DCDAudioPlayerManager;
         if (DCDAudioPlayerManager != null) {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
+      obj = applyArgumentsResult(1369);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;
-      const obj = PlatformUtils;
       if (obj.isAndroid()) {
-        const appState = require.appState;
-        require.appState = state;
+        const appState = applyArgumentsResult.appState;
+        applyArgumentsResult.appState = state;
         if ("active" === state) {
           if ("active" !== appState) {
-            const tmpResult = PlatformUtils;
             if (tmpResult.isAndroid()) {
-              const obj5 = react_nativeDefault2;
-              const result = obj5.maybePlayCurrentPlayer();
+              const result = NativeAudioPlayerModuleDefault.maybePlayCurrentPlayer();
             } else {
-              const DCDAudioPlayerManager2 = React3.DCDAudioPlayerManager;
+              const DCDAudioPlayerManager2 = React4.DCDAudioPlayerManager;
               if (DCDAudioPlayerManager2 != null) {
                 const result1 = DCDAudioPlayerManager2.maybePlayCurrentPlayer();
               }
             }
+            tmpResult = PlatformUtils;
           }
         }
-        const tmp4 = "active" !== state && "active" === appState;
         if (tmp4) {
-          const tmpResult2 = PlatformUtils;
           if (tmpResult2.isAndroid()) {
-            const obj3 = react_nativeDefault2;
-            obj3.pauseCurrentPlayer(true);
+            NativeAudioPlayerModuleDefault.pauseCurrentPlayer(true);
           } else {
-            const DCDAudioPlayerManager = React3.DCDAudioPlayerManager;
+            const DCDAudioPlayerManager = React4.DCDAudioPlayerManager;
             if (DCDAudioPlayerManager != null) {
               DCDAudioPlayerManager.pauseCurrentPlayer(true);
             }
           }
+          tmpResult2 = PlatformUtils;
         }
+        tmp4 = "active" !== state && "active" === appState;
       }
+      obj = PlatformUtils;
     };
     return applyArgumentsResult;
   }
-  _terminate() {
-    const obj = DispatcherDefault;
-    obj.unsubscribe("LOGOUT", this.handleLogout);
-    const obj2 = DispatcherDefault;
-    obj2.unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
-    const obj3 = DispatcherDefault;
-    obj3.unsubscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
-    const obj4 = DispatcherDefault;
-    obj4.unsubscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
-  }
-  _initialize() {
-    const obj = DispatcherDefault;
-    const subscription = obj.subscribe("LOGOUT", this.handleLogout);
-    const obj2 = DispatcherDefault;
-    const subscription1 = obj2.subscribe("MESSAGE_DELETE", this.handleMessageDelete);
-    const obj3 = DispatcherDefault;
-    const subscription2 = obj3.subscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
-    const obj4 = DispatcherDefault;
-    const subscription3 = obj4.subscribe(
-      "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
-      this.handleSetPrefersReducedMotion,
-    );
-    const obj5 = {
-      type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
-      prefersReducedMotion: AccessibilityStore.rawPrefersReducedMotion,
-    };
-    const result = this.handleSetPrefersReducedMotion(obj5);
-  }
 }
 const prototype = VoiceMessagesPlaybackManager.prototype;
+prototype["_terminate"] = function _terminate() {
+  DispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
+  DispatcherDefault.unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  DispatcherDefault.unsubscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
+  DispatcherDefault.unsubscribe("ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", this.handleSetPrefersReducedMotion);
+};
+prototype["_initialize"] = function _initialize() {
+  const subscription = DispatcherDefault.subscribe("LOGOUT", this.handleLogout);
+  const subscription1 = DispatcherDefault.subscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const subscription2 = DispatcherDefault.subscribe("APP_STATE_UPDATE", this.handleAppStateChanged);
+  const subscription3 = DispatcherDefault.subscribe(
+    "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
+    this.handleSetPrefersReducedMotion,
+  );
+  const result = this.handleSetPrefersReducedMotion({
+    type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
+    prefersReducedMotion: AccessibilityStore.rawPrefersReducedMotion,
+  });
+};
 const voiceMessagesPlaybackManager = new VoiceMessagesPlaybackManager();
 let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx");
 
 export default voiceMessagesPlaybackManager;
 export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
-  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    const obj2 = react_nativeDefault2;
-    obj2.pauseCurrentPlayer(arg0);
+    NativeAudioPlayerModuleDefault.pauseCurrentPlayer(arg0);
   } else {
-    const DCDAudioPlayerManager = React3.DCDAudioPlayerManager;
+    const DCDAudioPlayerManager = React4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
       DCDAudioPlayerManager.pauseCurrentPlayer(arg0);
     }
   }
+  obj = PlatformUtils;
 };
 export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
-  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    const obj2 = react_nativeDefault2;
-    const result = obj2.maybePlayCurrentPlayer();
+    const result = NativeAudioPlayerModuleDefault.maybePlayCurrentPlayer();
   } else {
-    const DCDAudioPlayerManager = React3.DCDAudioPlayerManager;
+    const DCDAudioPlayerManager = React4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
       const result1 = DCDAudioPlayerManager.maybePlayCurrentPlayer();
     }
   }
+  obj = PlatformUtils;
 };
 export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
-  const obj = PlatformUtils;
   if (obj.isAndroid()) {
-    const obj2 = react_nativeDefault2;
-    const result = obj2.handleVoiceMessageDeleted(id);
+    const result = NativeAudioPlayerModuleDefault.handleVoiceMessageDeleted(id);
   } else {
-    const DCDAudioPlayerManager = React3.DCDAudioPlayerManager;
+    const DCDAudioPlayerManager = React4.DCDAudioPlayerManager;
     if (DCDAudioPlayerManager != null) {
       const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
     }
   }
+  obj = PlatformUtils;
 };

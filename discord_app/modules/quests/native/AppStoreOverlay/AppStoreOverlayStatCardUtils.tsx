@@ -17,7 +17,7 @@ export const getAppStoreStarFillAmounts = function getAppStoreStarFillAmounts(ra
     num = 5;
   }
   const length = Math.max(1, num);
-  let closure_0 = Math.max(0, Math.min(rating, length));
+  closure_0 = Math.max(0, Math.min(rating, length));
   return Array.from({ length }, (arg0, arg1) => Math.min(1, Math.max(0, closure_0 - arg1)));
 };
 export const formatAppStoreChartRank = function formatAppStoreChartRank(rank) {

@@ -1,55 +1,45 @@
 // discord_app/modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _mod8629 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
-import UserApplicationIdentityStore2 from "../../user_application_identity/UserApplicationIdentityStore.tsx";
+import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import ApplicationAssetV2Utils from "../../application_assets_v2/ApplicationAssetV2Utils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationAssetsV2Store from "../../application_assets_v2/ApplicationAssetsV2Store.tsx";
+import UserApplicationIdentityStore from "../../user_application_identity/UserApplicationIdentityStore.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-const UserApplicationIdentityStore = UserApplicationIdentityStore2;
-let _require, importDefault;
 
-const FetchState = UserApplicationIdentityStore2.FetchState;
+require = fn;
+const FetchState = fn(8726).FetchState;
 const localizedStrings = [];
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let first;
-      let locale;
-      let stateFromStores;
       _require = arg0;
       importDefault = arg1;
-      const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(34);
-      const obj2 = require("UserApplicationIdentityActionCreators");
-      const userApplicationIdentities = obj2.useUserApplicationIdentities(arg0);
+      const cResult = require("c").c(34);
+      const obj = require("c");
+      const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(
+        arg0,
+      );
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserApplicationIdentityStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg1) {
-        let tmp7;
-        let tmp10;
-        let tmp9;
-        let tmp13;
-        let tmp20;
-        let tmp22;
-        let tmp26;
         if (cResult[2] === arg0) {
-          tmp7 = cResult[3];
+          let tmp7 = cResult[3];
         }
-        const tmpResult = tmp(stateFromStores[8]);
-        stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+        stateFromStores = tmp(tmp2[8]).useStateFromStores(first, tmp7);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [LocaleStore];
@@ -60,14 +50,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[4] = items1;
           cResult[5] = F;
-          tmp10 = F;
-          tmp9 = items1;
+          let tmp10 = F;
+          let tmp9 = items1;
         } else {
           tmp9 = cResult[4];
           tmp10 = cResult[5];
         }
-        const tmpResult4 = tmp(stateFromStores[8]);
-        const stateFromStores1 = tmpResult4.useStateFromStores(tmp9, tmp10);
+        const tmpResult = tmp(tmp2[8]);
+        const stateFromStores1 = tmp(tmp2[8]).useStateFromStores(tmp9, tmp10);
         if (cResult[6] !== arg1) {
           const items2 = [arg1];
           class F {
@@ -76,7 +66,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[7] = items2;
-          tmp13 = items2;
+          let tmp13 = items2;
         } else {
           tmp13 = cResult[7];
         }
@@ -98,7 +88,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[11] = tmp19Result;
-          tmp20 = tmp19Result;
+          let tmp20 = tmp19Result;
         } else {
           tmp20 = cResult[11];
         }
@@ -111,7 +101,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[12] = items3;
-          tmp22 = items3;
+          let tmp22 = items3;
         } else {
           tmp22 = cResult[12];
         }
@@ -135,8 +125,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmpResult5 = tmp(stateFromStores[8]);
-        const stateFromStores2 = tmpResult5.useStateFromStores(tmp22, N);
+        const tmpResult4 = tmp(tmp2[8]);
+        const stateFromStores2 = tmp(tmp2[8]).useStateFromStores(tmp22, N);
         const _Symbol3 = Symbol;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
           class N {
@@ -151,7 +141,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[15] = items4;
-          tmp26 = items4;
+          const tmp26 = items4;
         } else {
           class N {
             constructor() {
@@ -179,22 +169,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmpResult6 = tmp(stateFromStores[8]);
-        const stateFromStores3 = tmpResult6.useStateFromStores(tmp26, tmp28);
+        const tmpResult5 = tmp(tmp2[8]);
+        const stateFromStores3 = tmp(tmp2[8]).useStateFromStores(tmp26, tmp28);
         if (cResult[18] !== stateFromStores3) {
           class N {
             constructor() {
               return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
             }
           }
-          const _Object = Object;
           class F {
             constructor() {
               return closure_1_8.locale;
             }
           }
-          const values2 = values(tmp31);
-          const found = values2.filter(tmp(tmp2[11]).isNotNullish);
+          const values = Object.values(tmp31);
+          const found = values.filter(tmp(tmp2[11]).isNotNullish);
           cResult[18] = stateFromStores3;
           cResult[19] = found;
         } else {
@@ -224,7 +213,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmp35 = cResult[22];
         if (first1 != null) {
           class N {
             constructor() {
@@ -232,7 +220,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        if (tmp35 !== undefined) {
+        if (cResult[22] !== undefined) {
           class N {
             constructor() {
               return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
@@ -245,7 +233,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          if (tmp38 == null) {
+          if (tmp37 == null) {
             class N {
               constructor() {
                 return closure_6.getFetchState(closure_0) !== FetchState.FETCHED;
@@ -264,8 +252,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          cResult[22] = tmp39;
-          cResult[23] = tmp38;
+          cResult[22] = tmp38;
+          cResult[23] = tmp37;
         } else {
           class N {
             constructor() {
@@ -285,6 +273,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[25] = tmp34;
         cResult[26] = tmp20;
         cResult[27] = obj3;
+        const tmpResult6 = tmp(tmp2[8]);
       }
       class S {
         constructor() {
@@ -295,91 +284,89 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = arg0;
       cResult[3] = S;
       tmp7 = S;
+      const obj2 = require("UserApplicationIdentityActionCreators");
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let locale;
-      let stateFromStores;
-      let stateFromStores3;
-      let surfaces;
       _require = arg0;
       importDefault = arg1;
-      const tmp = _require;
+      const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(
+        arg0,
+      );
       let obj = require("UserApplicationIdentityActionCreators");
-      const userApplicationIdentities = obj.useUserApplicationIdentities(arg0);
       let items = [UserApplicationIdentityStore];
-      const obj2 = require("get initialized");
-      stateFromStores = obj2.useStateFromStores(items, () =>
+      stateFromStores = require("initialize").useStateFromStores(items, () =>
         UserApplicationIdentityStore.getUserIdentityByApplication(closure_0, closure_1),
       );
+      const obj2 = require("initialize");
       const items1 = [LocaleStore];
       const items2 = [arg1];
-      const obj3 = require("get initialized");
-      const stateFromStores1 = obj3.useStateFromStores(items1, () => locale.locale);
-      const memo = react.useMemo(() => {
+      const stateFromStores1 = require("initialize").useStateFromStores(items1, () => locale.locale);
+      const memo = noop.useMemo(() => {
         const items = [closure_1];
         return items;
       }, items2);
       const first = stateFromStores3(require("useApplicationWidgetConfigs")(memo), 1)[0];
       let profile;
-      const useMemo = react.useMemo;
       if (stateFromStores != null) {
         profile = stateFromStores.profile;
       }
       const items3 = [profile];
-      const memo1 = useMemo(() => {
+      const memo1 = noop.useMemo(() => {
         let profile;
-        const resolvedValuesFromUserApplicationIdentityProfile =
-          _mod8629.resolvedValuesFromUserApplicationIdentityProfile;
-        _mod8629;
         if (stateFromStores != null) {
           profile = stateFromStores.profile;
         }
-        return resolvedValuesFromUserApplicationIdentityProfile(profile);
+        return resolvedValuesFromUserApplicationIdentityProfile.resolvedValuesFromUserApplicationIdentityProfile(
+          profile,
+        );
       }, items3);
+      const obj3 = require("initialize");
       const items4 = [UserApplicationIdentityStore];
-      const tmpResult = tmp(stateFromStores[8]);
-      const stateFromStores2 = tmpResult.useStateFromStores(
+      const stateFromStores2 = require("initialize").useStateFromStores(
         items4,
         () => UserApplicationIdentityStore.getFetchState(closure_0) !== FetchState.FETCHED,
       );
+      const tmpResult = require("initialize");
       const items5 = [ApplicationAssetsV2Store];
-      const tmpResult2 = tmp(stateFromStores[8]);
-      stateFromStores3 = tmpResult2.useStateFromStores(items5, () => ApplicationAssetsV2Store.getAssets(closure_1));
+      stateFromStores3 = require("initialize").useStateFromStores(items5, () =>
+        ApplicationAssetsV2Store.getAssets(closure_1),
+      );
       const items6 = [stateFromStores3];
       const items7 = [arg1];
-      const memo2 = react.useMemo(() => {
+      const memo2 = noop.useMemo(() => {
         let obj = stateFromStores3;
-        const _Object = Object;
         if (stateFromStores3 == null) {
           obj = {};
         }
-        const values2 = values(obj);
-        return values2.filter(GlobalUtils.isNotNullish);
+        const values = Object.values(obj);
+        return values.filter(GlobalUtils.isNotNullish);
       }, items6);
       const obj5 = {
         locale: stateFromStores1,
-        surfaceConfigs: surfaces,
-        isLoading: stateFromStores2,
-        hasIdentity: null != stateFromStores,
-        resolutionContext: obj6,
+        surfaceConfigs: null,
+        isLoading: null,
+        hasIdentity: null,
+        resolutionContext: null,
       };
-      surfaces = undefined;
-      const callback = react.useCallback((metadata) => {
-        const obj = ApplicationAssetV2Utils;
-        return obj.getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width);
-      }, items7);
+      let surfaces;
+      const callback = noop.useCallback(
+        (metadata) => ApplicationAssetV2Utils.getApplicationAssetUrl(closure_1, metadata, metadata.metadata.width),
+        items7,
+      );
       if (first != null) {
         surfaces = first.surfaces;
       }
       if (surfaces == null) {
         surfaces = {};
       }
+      obj5.surfaceConfigs = surfaces;
+      obj5.isLoading = stateFromStores2;
+      obj5.hasIdentity = null != stateFromStores;
+      obj5.resolutionContext = {
+        data: memo1,
+        applicationAssets: memo2,
+        getApplicationAssetUrl: callback,
+        localizedStrings,
+      };
       return obj5;
     };
-const result = size.fileFinishedImporting(
-  "modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx",
-);
-
-export default tmp2;

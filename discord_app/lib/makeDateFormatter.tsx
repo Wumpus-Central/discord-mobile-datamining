@@ -4,13 +4,12 @@ import SystemDateFormatter from "../modules/system_date_format/SystemDateFormatt
 import size from "../../_runtime/metro/00002__.js";
 
 function defaultMeridiem(arg0, arg1, arg2) {
-  let str;
   if (arg0 < 12) {
     let str2 = "AM";
     if (arg2) {
       str2 = "am";
     }
-    str = str2;
+    let str = str2;
   } else {
     str = "PM";
     if (arg2) {
@@ -20,28 +19,7 @@ function defaultMeridiem(arg0, arg1, arg2) {
   return str;
 }
 function getLocaleData() {
-  let fn;
-  let fn2;
-  let fn3;
-  let fn4;
-  let fn5;
-  let longDateFormat;
-  let meridiem;
-  let months;
-  let monthsShort;
-  let ordinal;
-  let week;
-  let weekdays;
-  let weekdaysMin;
-  let weekdaysShort;
-  const f89070 = (arg0, arg1) => {
-    let closure_0 = arg0;
-    const obj = { [closure_1_0]: () => closure_0 };
-    return closure_2(obj, arg1);
-  };
-  const f89071 = (arg0) => weekdaysMin[arg0];
-  let obj = _modDef4467;
-  const _config = obj.localeData()._config;
+  const _config = _modDef4467.localeData()._config;
   ({ months, monthsShort, weekdays, weekdaysShort, weekdaysMin, meridiem } = _config);
   if (undefined === meridiem) {
     meridiem = defaultMeridiem;
@@ -50,91 +28,119 @@ function getLocaleData() {
   if (undefined === week) {
     week = { dow: 0, doy: 6 };
   }
-  let month = "month";
+  ordinal = "month";
+  let format5 = months;
   if (typeof months === "function") {
+    closure_2 = months.bind(_modDef4467.localeData());
+    let fn = (arg0, arg1) => {
+      closure_0 = arg0;
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
+    };
     const tmpResult = _modDef4467;
-    let closure_2 = months.bind(tmpResult.localeData());
-    fn = f89070;
   } else {
     const _Array = Array;
     let format = months;
     if (!Array.isArray(months)) {
       format = months.format;
     }
-    months = format;
-    fn = f89071;
+    format5 = format;
+    fn = (arg0) => format5[arg0];
   }
-  month = "month";
   const obj2 = {
     months: fn,
-    monthsShort: fn2,
-    weekdays: fn3,
-    weekdaysShort: fn4,
-    weekdaysMin: fn5,
-    meridiem,
-    ordinal,
-    longDateFormat,
-    longFormatters: [],
-    week,
+    monthsShort: null,
+    weekdays: null,
+    weekdaysShort: null,
+    weekdaysMin: null,
+    meridiem: null,
+    ordinal: null,
+    longDateFormat: null,
+    longFormatters: null,
+    week: null,
   };
+  ordinal = "month";
+  format5 = monthsShort;
   if (typeof monthsShort === "function") {
+    closure_2 = monthsShort.bind(_modDef4467.localeData());
+    let fn2 = (arg0, arg1) => {
+      closure_0 = arg0;
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
+    };
     const tmpResult5 = _modDef4467;
-    closure_2 = monthsShort.bind(tmpResult5.localeData());
-    fn2 = f89070;
   } else {
     const _Array2 = Array;
     let format2 = monthsShort;
     if (!Array.isArray(monthsShort)) {
       format2 = monthsShort.format;
     }
-    monthsShort = format2;
-    fn2 = f89071;
+    format5 = format2;
+    fn2 = (arg0) => format5[arg0];
   }
-  let day = "day";
+  obj2.monthsShort = fn2;
+  ordinal = "day";
+  format5 = weekdays;
   if (typeof weekdays === "function") {
+    closure_2 = weekdays.bind(_modDef4467.localeData());
+    let fn3 = (arg0, arg1) => {
+      closure_0 = arg0;
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
+    };
     const tmpResult6 = _modDef4467;
-    closure_2 = weekdays.bind(tmpResult6.localeData());
-    fn3 = f89070;
   } else {
     const _Array3 = Array;
     let format3 = weekdays;
     if (!Array.isArray(weekdays)) {
       format3 = weekdays.format;
     }
-    weekdays = format3;
-    fn3 = f89071;
+    format5 = format3;
+    fn3 = (arg0) => format5[arg0];
   }
-  day = "day";
+  obj2.weekdays = fn3;
+  ordinal = "day";
+  format5 = weekdaysShort;
   if (typeof weekdaysShort === "function") {
+    closure_2 = weekdaysShort.bind(_modDef4467.localeData());
+    let fn4 = (arg0, arg1) => {
+      closure_0 = arg0;
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
+    };
     const tmpResult7 = _modDef4467;
-    closure_2 = weekdaysShort.bind(tmpResult7.localeData());
-    fn4 = f89070;
   } else {
     const _Array4 = Array;
     let format4 = weekdaysShort;
     if (!Array.isArray(weekdaysShort)) {
       format4 = weekdaysShort.format;
     }
-    weekdaysShort = format4;
-    fn4 = f89071;
+    format5 = format4;
+    fn4 = (arg0) => format5[arg0];
   }
-  day = "day";
+  obj2.weekdaysShort = fn4;
+  ordinal = "day";
+  format5 = weekdaysMin;
   if (typeof weekdaysMin === "function") {
+    closure_2 = weekdaysMin.bind(_modDef4467.localeData());
+    let fn5 = (arg0, arg1) => {
+      closure_0 = arg0;
+      return closure_2({ [closure_1_0]: () => closure_0 }, arg1);
+    };
     const tmpResult8 = _modDef4467;
-    closure_2 = weekdaysMin.bind(tmpResult8.localeData());
-    fn5 = f89070;
   } else {
     const _Array5 = Array;
-    let format5 = weekdaysMin;
+    format5 = weekdaysMin;
     if (!Array.isArray(weekdaysMin)) {
       format5 = weekdaysMin.format;
     }
-    weekdaysMin = format5;
-    fn5 = f89071;
+    fn5 = (arg0) => format5[arg0];
   }
+  obj2.weekdaysMin = fn5;
+  obj2.meridiem = meridiem;
   if (typeof ordinal === "string") {
     ordinal = (arg0) => ordinal.replace("%d", "" + arg0);
   }
+  obj2.ordinal = ordinal;
+  obj2.longDateFormat = longDateFormat;
+  obj2.longFormatters = [];
+  obj2.week = week;
   return obj2;
 }
 let result = size.fileFinishedImporting("lib/makeDateFormatter.tsx");
@@ -144,63 +150,63 @@ export default function makeFormatter(str, arg1) {
   if (arg2 === undefined) {
     flag = false;
   }
-  let closure_0;
+  str = undefined;
   let _function;
   let tmp = arg1;
   if (arg1 == null) {
     tmp = getLocaleData();
   }
-  closure_0 = tmp;
-  let result = undefined === arg1 && !flag && undefined !== SystemDateFormatter.makeFormatter;
+  str = tmp;
+  let result = undefined === arg1 && !flag;
   if (result) {
-    let obj = SystemDateFormatter;
-    result = obj.supportsSystemDateFormatter();
+    result = undefined !== SystemDateFormatter.makeFormatter;
+  }
+  if (result) {
+    result = SystemDateFormatter.supportsSystemDateFormatter();
   }
   let replaced = str;
   if (!result) {
-    closure_0 = str;
-    let closure_1 = tmp;
+    _function = tmp;
     replaced = str.replace(/L[L|T|S]{0,3}/g, (arr, arg1) => {
-      let LLLL;
-      const obj = /^LLLL/;
       if (obj.test(arr)) {
-        LLLL = closure_1.longDateFormat.LLLL;
+        let LLLL = _function.longDateFormat.LLLL;
       } else {
-        const obj2 = /^LLL/;
         if (obj2.test(arr)) {
-          LLLL = closure_1.longDateFormat.LLL + arr.slice(3);
+          LLLL = _function.longDateFormat.LLL + arr.slice(3);
         } else {
-          const obj3 = /^LL/;
           if (obj3.test(arr)) {
-            LLLL = closure_1.longDateFormat.LL + arr.slice(2);
+            LLLL = _function.longDateFormat.LL + arr.slice(2);
           } else {
-            const obj4 = /^LTS/;
             if (obj4.test(arr)) {
-              LLLL = closure_1.longDateFormat.LTS + arr.slice(3);
+              LLLL = _function.longDateFormat.LTS + arr.slice(3);
             } else {
-              const obj5 = /^LT/;
               if (obj5.test(arr)) {
-                LLLL = closure_1.longDateFormat.LT + arr.slice(2);
+                LLLL = _function.longDateFormat.LT + arr.slice(2);
               } else {
                 LLLL = arr;
-                const obj6 = /^L/;
                 if (obj6.test(arr)) {
                   LLLL = arr;
-                  if ("[" !== closure_0[arg1 - 1]) {
-                    LLLL = closure_1.longDateFormat.L + arr.slice(1);
+                  if ("[" !== "["[arg1 - 1]) {
+                    LLLL = _function.longDateFormat.L + arr.slice(1);
                   }
                 }
+                obj6 = /^L/;
               }
+              obj5 = /^LT/;
             }
+            obj4 = /^LTS/;
           }
+          obj3 = /^LL/;
         }
+        obj2 = /^LLL/;
       }
       return LLLL;
     });
   }
   const items = [];
+  str = replaced;
   if (replaced.length > 0) {
-    replaced.charAt(0);
+    str.charAt(0);
   }
   // // eliminated: always false
   // // eliminated: always false

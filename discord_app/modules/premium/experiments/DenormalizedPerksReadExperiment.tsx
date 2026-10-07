@@ -10,13 +10,12 @@ const obj = {
   DUAL_READ_RETURN_NEW: 2,
   [2]: "DUAL_READ_RETURN_NEW",
 };
-const obj2 = {
+const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-03-denormalized-perks-access-read",
   kind: "user",
   defaultConfig: obj.CONTROL,
   variations: { 0: obj.CONTROL, 1: obj.DUAL_READ_RETURN_OLD, 2: obj.DUAL_READ_RETURN_NEW },
-};
-const apexExperiment = ApexExperiment.createApexExperiment(obj2);
+});
 const result = size.fileFinishedImporting("modules/premium/experiments/DenormalizedPerksReadExperiment.tsx");
 
 export default apexExperiment;

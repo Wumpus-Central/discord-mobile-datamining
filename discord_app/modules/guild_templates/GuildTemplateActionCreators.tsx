@@ -5,187 +5,275 @@ import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let c3;
-let closure_4;
 ({ Endpoints: c3, AnalyticEvents: closure_4 } = Constants);
 const map = new Map();
-let obj = {
+let result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateActionCreators.tsx");
+
+export default {
   resolveGuildTemplate(code) {
-    const f93516 = () => {
-      let nextPromise;
-      let obj = DispatcherDefault;
-      if (obj.isDispatching()) {
-        const resolved = Promise.resolve();
-        nextPromise = resolved.then(f93516);
-      } else {
-        nextPromise = map.get(code);
-        if (null == nextPromise) {
-          let obj3 = { type: "GUILD_TEMPLATE_RESOLVE", code };
-          const tmp2Result = DispatcherDefault;
-          tmp2Result.dispatch(obj3);
-          const HTTP = HTTPUtils.HTTP;
-          let obj4 = { url: _false.UNRESOLVED_GUILD_TEMPLATE(code), oldFormErrors: true, rejectWithError: true };
-          const get = HTTP.get;
-          const value = get(obj4);
-          const nextPromise1 = value.then(f93517, f93518);
-          const cleanupPromise = nextPromise1.finally(f93519);
-          const result = map.set(code, cleanupPromise);
-          nextPromise = cleanupPromise;
-        }
-      }
-      return nextPromise;
-    };
-    const f93517 = (body) => {
-      body = body.body;
-      const obj = closure_2_1(closure_2_2[3]);
-      const obj2 = {
-        resolved: true,
-        guild_template_code: code,
-        guild_template_name: body.name,
-        guild_template_description: body.description,
-        guild_template_guild_id: body.source_guild_id,
-      };
-      obj.track(constants.GUILD_TEMPLATE_RESOLVED, obj2);
-      const obj3 = closure_2_1(closure_2_2[1]);
-      const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
-      obj3.dispatch(obj4);
-      const obj5 = { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
-      return obj5;
-    };
-    const f93518 = () => {
-      const obj = closure_2_1(closure_2_2[3]);
-      const obj2 = { resolved: false, guild_template_code: code };
-      obj.track(constants.GUILD_TEMPLATE_RESOLVED, obj2);
-      const obj3 = closure_2_1(closure_2_2[1]);
-      const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code };
-      obj3.dispatch(obj4);
-      return { guildTemplate: null, code };
-    };
-    const f93519 = () => {
-      set.delete(closure_0);
-    };
     _require = code;
-    let obj = DispatcherDefault;
     if (obj.isDispatching()) {
-      let resolved = Promise.resolve();
-      return resolved.then(f93516);
+      const resolved = Promise.resolve();
+      return resolved.then(() => {
+        closure_0 = closure_1_0;
+        if (obj.isDispatching()) {
+          let resolved = Promise.resolve();
+          let nextPromise = resolved.then(() => {
+            closure_0 = closure_1_0;
+            if (obj.isDispatching()) {
+              let resolved = Promise.resolve();
+              let nextPromise = resolved.then(() => {
+                closure_0 = closure_1_0;
+                if (obj.isDispatching()) {
+                  let resolved = Promise.resolve();
+                  let nextPromise = resolved.then(() => {
+                    closure_0 = closure_1_0;
+                    if (obj.isDispatching()) {
+                      let resolved = Promise.resolve();
+                      let nextPromise = resolved.then(() => { ... });
+                    } else {
+                      nextPromise = closure_2_5.get(closure_1_0);
+                      if (null == nextPromise) {
+                        let obj3 = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+                        closure_2_1(closure_2_2[1]).dispatch(obj3);
+                        let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+                        let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
+                        let value = HTTP.get(obj4);
+                        let tmp2Result = closure_2_1(closure_2_2[1]);
+                        let cleanupPromise = value.then(() => { ... }, () => { ... }).finally(() => { ... });
+                        let result = closure_2_5.set(closure_1_0, cleanupPromise);
+                        nextPromise = cleanupPromise;
+                        let nextPromise1 = value.then(() => { ... }, () => { ... });
+                      }
+                    }
+                    return nextPromise;
+                  });
+                } else {
+                  nextPromise = closure_2_5.get(closure_1_0);
+                  if (null == nextPromise) {
+                    let obj3 = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+                    closure_2_1(closure_2_2[1]).dispatch(obj3);
+                    let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+                    let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
+                    let value = HTTP.get(obj4);
+                    let tmp2Result = closure_2_1(closure_2_2[1]);
+                    let cleanupPromise = value.then((body) => {
+                      body = body.body;
+                      closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id });
+                      const obj = closure_2_1(closure_2_2[3]);
+                      const obj2 = { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id };
+                      closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code });
+                      const obj3 = closure_2_1(closure_2_2[1]);
+                      const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
+                      return { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
+                    }, () => {
+                      closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: false, guild_template_code: code });
+                      const obj = closure_2_1(closure_2_2[3]);
+                      const obj2 = { resolved: false, guild_template_code: code };
+                      closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code });
+                      return { guildTemplate: null, code };
+                    }).finally(() => {
+                      closure_2_5.delete(closure_0);
+                    });
+                    let result = closure_2_5.set(closure_1_0, cleanupPromise);
+                    nextPromise = cleanupPromise;
+                    let nextPromise1 = value.then((body) => {
+                      body = body.body;
+                      closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id });
+                      const obj = closure_2_1(closure_2_2[3]);
+                      const obj2 = { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id };
+                      closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code });
+                      const obj3 = closure_2_1(closure_2_2[1]);
+                      const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
+                      return { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
+                    }, () => {
+                      closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: false, guild_template_code: code });
+                      const obj = closure_2_1(closure_2_2[3]);
+                      const obj2 = { resolved: false, guild_template_code: code };
+                      closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code });
+                      return { guildTemplate: null, code };
+                    });
+                  }
+                }
+                return nextPromise;
+              });
+            } else {
+              nextPromise = closure_2_5.get(closure_1_0);
+              if (null == nextPromise) {
+                let obj3 = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+                closure_2_1(closure_2_2[1]).dispatch(obj3);
+                let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+                let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
+                let value = HTTP.get(obj4);
+                let tmp2Result = closure_2_1(closure_2_2[1]);
+                let cleanupPromise = value.then((body) => {
+                  body = body.body;
+                  closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id });
+                  const obj = closure_2_1(closure_2_2[3]);
+                  const obj2 = { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id };
+                  closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code });
+                  const obj3 = closure_2_1(closure_2_2[1]);
+                  const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
+                  return { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
+                }, () => {
+                  closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: false, guild_template_code: code });
+                  const obj = closure_2_1(closure_2_2[3]);
+                  const obj2 = { resolved: false, guild_template_code: code };
+                  closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code });
+                  return { guildTemplate: null, code };
+                }).finally(() => {
+                  closure_2_5.delete(closure_0);
+                });
+                let result = closure_2_5.set(closure_1_0, cleanupPromise);
+                nextPromise = cleanupPromise;
+                let nextPromise1 = value.then((body) => {
+                  body = body.body;
+                  closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id });
+                  const obj = closure_2_1(closure_2_2[3]);
+                  const obj2 = { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id };
+                  closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code });
+                  const obj3 = closure_2_1(closure_2_2[1]);
+                  const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
+                  return { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
+                }, () => {
+                  closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: false, guild_template_code: code });
+                  const obj = closure_2_1(closure_2_2[3]);
+                  const obj2 = { resolved: false, guild_template_code: code };
+                  closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code });
+                  return { guildTemplate: null, code };
+                });
+              }
+            }
+            return nextPromise;
+          });
+        } else {
+          nextPromise = closure_2_5.get(closure_1_0);
+          if (null == nextPromise) {
+            let obj3 = { type: "GUILD_TEMPLATE_RESOLVE", code: closure_1_0 };
+            closure_2_1(closure_2_2[1]).dispatch(obj3);
+            let HTTP = closure_2_0(closure_2_2[2]).HTTP;
+            let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
+            let value = HTTP.get(obj4);
+            let tmp2Result = closure_2_1(closure_2_2[1]);
+            let cleanupPromise = value.then((body) => {
+              body = body.body;
+              closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id });
+              const obj = closure_2_1(closure_2_2[3]);
+              const obj2 = { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id };
+              closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code });
+              const obj3 = closure_2_1(closure_2_2[1]);
+              const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
+              return { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
+            }, () => {
+              closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: false, guild_template_code: code });
+              const obj = closure_2_1(closure_2_2[3]);
+              const obj2 = { resolved: false, guild_template_code: code };
+              closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code });
+              return { guildTemplate: null, code };
+            }).finally(() => {
+              closure_2_5.delete(closure_0);
+            });
+            let result = closure_2_5.set(closure_1_0, cleanupPromise);
+            nextPromise = cleanupPromise;
+            let nextPromise1 = value.then((body) => {
+              body = body.body;
+              closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id });
+              const obj = closure_2_1(closure_2_2[3]);
+              const obj2 = { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id };
+              closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code });
+              const obj3 = closure_2_1(closure_2_2[1]);
+              const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
+              return { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
+            }, () => {
+              closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: false, guild_template_code: code });
+              const obj = closure_2_1(closure_2_2[3]);
+              const obj2 = { resolved: false, guild_template_code: code };
+              closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code });
+              return { guildTemplate: null, code };
+            });
+          }
+        }
+        return nextPromise;
+      });
     } else {
-      let value = map.get(code);
+      value = map.get(code);
       if (null != value) {
         return value;
       } else {
-        let obj3 = { type: "GUILD_TEMPLATE_RESOLVE", code };
+        const obj3 = { type: "GUILD_TEMPLATE_RESOLVE", code };
+        DispatcherDefault.dispatch(obj3);
+        const HTTP = require("HTTPUtils").HTTP;
+        const obj4 = { url: closure_3.UNRESOLVED_GUILD_TEMPLATE(code), oldFormErrors: true, rejectWithError: true };
+        value2 = HTTP.get(obj4);
         const tmpResult = DispatcherDefault;
-        const dispatchResult = tmpResult.dispatch(obj3);
-        let HTTP = require("HTTPUtils").HTTP;
-        let obj4 = { url: closure_3.UNRESOLVED_GUILD_TEMPLATE(code), oldFormErrors: true, rejectWithError: true };
-        let get = HTTP.get;
-        const value2 = get(obj4);
-        let nextPromise = value2.then(f93517, f93518);
-        let cleanupPromise = nextPromise.finally(f93519);
-        let result = map.set(code, cleanupPromise);
+        const cleanupPromise = value2.then((body) => {
+          body = body.body;
+          closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id });
+          const obj = closure_2_1(closure_2_2[3]);
+          const obj2 = { resolved: true, guild_template_code: code, guild_template_name: body.name, guild_template_description: body.description, guild_template_guild_id: body.source_guild_id };
+          closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code });
+          const obj3 = closure_2_1(closure_2_2[1]);
+          const obj4 = { type: "GUILD_TEMPLATE_RESOLVE_SUCCESS", guildTemplate: body, code };
+          return { guildTemplate: closure_2_1(closure_2_2[4])(body), code };
+        }, () => {
+          closure_2_1(closure_2_2[3]).track(closure_2_4.GUILD_TEMPLATE_RESOLVED, { resolved: false, guild_template_code: code });
+          const obj = closure_2_1(closure_2_2[3]);
+          const obj2 = { resolved: false, guild_template_code: code };
+          closure_2_1(closure_2_2[1]).dispatch({ type: "GUILD_TEMPLATE_RESOLVE_FAILURE", code });
+          return { guildTemplate: null, code };
+        }).finally(() => {
+          closure_2_5.delete(closure_0);
+        });
+        const result = map.set(code, cleanupPromise);
         return cleanupPromise;
       }
     }
+    obj = DispatcherDefault;
   },
   loadTemplatesForGuild(guildId) {
-    let obj2;
     const HTTP = HTTPUtils.HTTP;
-    let obj = {
-      url: _false.GUILD_TEMPLATES(guildId),
-      oldFormErrors: true,
-      rejectWithError: obj2.rejectWithMigratedError(),
-    };
-    const get = HTTP.get;
-    obj2 = HTTPUtils;
-    const value = get(obj);
+    const obj = { url: React3.GUILD_TEMPLATES(guildId), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    value = HTTP.get(obj);
     return value.then((body) => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS", guildTemplates: body.body };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS", guildTemplates: body.body });
       return body;
     });
   },
   createGuildTemplate(guildId, name, description) {
-    let obj;
-    let obj3;
     const HTTP = HTTPUtils.HTTP;
-    const request = {
-      url: _false.GUILD_TEMPLATES(guildId),
-      body: obj,
-      oldFormErrors: true,
-      rejectWithError: obj3.rejectWithMigratedError(),
-    };
-    const post = HTTP.post;
-    obj = { name, description };
-    obj3 = HTTPUtils;
-    const postResult = post(request);
-    return postResult.then((body) => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "GUILD_TEMPLATE_CREATE_SUCCESS", guildTemplate: body.body, code: body.body.code };
-      obj.dispatch(obj2);
+    const request = { url: React3.GUILD_TEMPLATES(guildId), body: { name, description }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { name, description };
+    return HTTP.post(request).then((body) => {
+      DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_CREATE_SUCCESS", guildTemplate: body.body, code: body.body.code });
     });
   },
   syncGuildTemplate(arg0, code) {
-    let obj2;
     _require = code;
     const HTTP = require("HTTPUtils").HTTP;
-    let obj = {
-      url: closure_3.GUILD_TEMPLATE(arg0, code),
-      oldFormErrors: true,
-      rejectWithError: obj2.rejectWithMigratedError(),
-    };
-    const put = HTTP.put;
-    obj2 = require("HTTPUtils");
-    const putResult = put(obj);
-    return putResult.then((body) => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code };
-      obj.dispatch(obj2);
+    const obj = { url: closure_3.GUILD_TEMPLATE(arg0, code), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj2 = require("HTTPUtils");
+    return HTTP.put(obj).then((body) => {
+      DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code });
     });
   },
   updateGuildTemplate(arg0, code, name, description) {
-    let obj;
-    let obj3;
     _require = code;
     const HTTP = require("HTTPUtils").HTTP;
-    const request = {
-      url: closure_3.GUILD_TEMPLATE(arg0, code),
-      body: obj,
-      oldFormErrors: true,
-      rejectWithError: obj3.rejectWithMigratedError(),
-    };
-    const patch = HTTP.patch;
-    obj = { name, description };
-    obj3 = require("HTTPUtils");
-    const patchResult = patch(request);
-    return patchResult.then((body) => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code };
-      obj.dispatch(obj2);
+    const request = { url: closure_3.GUILD_TEMPLATE(arg0, code), body: { name, description }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj = { name, description };
+    const obj3 = require("HTTPUtils");
+    return HTTP.patch(request).then((body) => {
+      DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code });
     });
   },
   deleteGuildTemplate(guildId, code) {
-    let obj2;
     _require = guildId;
     const HTTP = require("HTTPUtils").HTTP;
-    let obj = {
-      url: closure_3.GUILD_TEMPLATE(guildId, code),
-      oldFormErrors: true,
-      rejectWithError: obj2.rejectWithMigratedError(),
-    };
-    const del = HTTP.del;
-    obj2 = require("HTTPUtils");
-    const delResult = del(obj);
-    return delResult.then(() => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "GUILD_TEMPLATE_DELETE_SUCCESS", guildId, code };
-      obj.dispatch(obj2);
+    const obj = { url: closure_3.GUILD_TEMPLATE(guildId, code), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj2 = require("HTTPUtils");
+    return HTTP.del(obj).then(() => {
+      DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_DELETE_SUCCESS", guildId, code });
     });
-  },
+  }
 };
-let result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateActionCreators.tsx");
-
-export default obj;

@@ -1,5 +1,5 @@
 // discord_app/stores/NetworkStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import NetworkUtilsDefault from "../utils/NetworkUtils.tsx";
 import Constants from "../Constants.tsx";
@@ -23,26 +23,23 @@ const NetworkConnectionSpeeds = Constants.NetworkConnectionSpeeds;
 let UNKNOWN = NetworkConnectionTypes.UNKNOWN;
 let UNKNOWN2 = NetworkConnectionSpeeds.UNKNOWN;
 let serviceProvider = null;
-const Store = get_initializedDefault.Store;
-class NetworkStoreClass extends Store {
-  initialize() {
-    const obj = NetworkUtilsDefault;
-    const networkInformation = obj.getNetworkInformation();
-    networkInformation.then(handleConnectionInfoChange);
-    const obj2 = NetworkUtilsDefault;
-    obj2.addChangeCallback(handleConnectionInfoChange);
-  }
-  getType() {
-    return UNKNOWN;
-  }
-  getEffectiveConnectionSpeed() {
-    return UNKNOWN2;
-  }
-  getServiceProvider() {
-    return serviceProvider;
-  }
-}
+const Store = initializeDefault.Store;
+class NetworkStoreClass extends Store {}
 const prototype = NetworkStoreClass.prototype;
+prototype["initialize"] = function initialize() {
+  const networkInformation = NetworkUtilsDefault.getNetworkInformation();
+  networkInformation.then(handleConnectionInfoChange);
+  NetworkUtilsDefault.addChangeCallback(handleConnectionInfoChange);
+};
+prototype["getType"] = function getType() {
+  return UNKNOWN;
+};
+prototype["getEffectiveConnectionSpeed"] = function getEffectiveConnectionSpeed() {
+  return UNKNOWN2;
+};
+prototype["getServiceProvider"] = function getServiceProvider() {
+  return serviceProvider;
+};
 NetworkStoreClass.displayName = "NetworkStore";
 const networkStoreClass = new NetworkStoreClass(DispatcherDefault, {});
 const result = size.fileFinishedImporting("stores/NetworkStore.tsx");

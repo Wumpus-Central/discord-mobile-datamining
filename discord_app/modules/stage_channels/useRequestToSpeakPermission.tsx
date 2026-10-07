@@ -1,33 +1,25 @@
 // discord_app/modules/stage_channels/useRequestToSpeakPermission.tsx
-import Constants from "../../Constants.tsx";
 import StageChannelActionCreators from "StageChannelActionCreators.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, tmp3, tmp6;
 
-const Permissions = Constants.Permissions;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const Permissions = fn(1085).Permissions;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
+
+export const useRequestToSpeakPermission = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let closure_2;
-      let first;
-      let items2;
-      let tmp13;
-      let tmp14;
-      let tmp7;
       _require = arg0;
-      const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(11);
+      const cResult = require("c").c(11);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -41,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = E;
         cResult[3] = items1;
-        tmp7 = items1;
+        let tmp7 = items1;
       } else {
         class E {
           constructor() {
@@ -50,18 +42,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, E, tmp7);
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, E, tmp7);
       if (cResult[4] !== stateFromStores) {
         class E {
           constructor() {
             return closure_5.getChannel(closure_0);
           }
         }
-        const obj3 = stateFromStores(4520);
+        const canEveryoneRoleResult = stateFromStores(4520).canEveryoneRole(
+          Permissions.REQUEST_TO_SPEAK,
+          stateFromStores,
+        );
         cResult[4] = stateFromStores;
-        cResult[5] = obj3.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-        const canEveryoneRoleResult = obj3.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+        cResult[5] = canEveryoneRoleResult;
+        const obj3 = stateFromStores(4520);
       } else {
         class E {
           constructor() {
@@ -69,9 +64,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      [tmp13, tmp14] = react.useState(tmp9);
+      const tmpResult = require("initialize");
+      [tmp13, tmp14] = noop.useState(tmp9);
       dependencyMap = tmp14;
-      _slicedToArray(react.useState(tmp9), 2);
       if (tmp9 !== tmp13) {
         class E {
           constructor() {
@@ -136,22 +131,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp13;
       cResult[9] = R;
       cResult[10] = items2;
+      const tmp12 = _slicedToArray(noop.useState(tmp9), 2);
     }
   : (arg0) => {
-      let closure_0;
-      let closure_2;
-      let tmp4;
-      let tmp5;
       _require = arg0;
-      let obj = require("get initialized");
       const items = [ChannelStore];
       const items1 = [arg0];
-      const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
+      const stateFromStores = require("initialize").useStateFromStores(
+        items,
+        () => ChannelStore.getChannel(closure_0),
+        items1,
+      );
+      let obj = require("initialize");
+      const canEveryoneRoleResult = stateFromStores(4520).canEveryoneRole(
+        Permissions.REQUEST_TO_SPEAK,
+        stateFromStores,
+      );
       const obj2 = stateFromStores(4520);
-      const canEveryoneRoleResult = obj2.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-      [tmp4, tmp5] = react.useState(canEveryoneRoleResult);
+      [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
       dependencyMap = tmp5;
-      _slicedToArray(react.useState(canEveryoneRoleResult), 2);
       if (canEveryoneRoleResult !== tmp4) {
         tmp5(canEveryoneRoleResult);
       }
@@ -160,13 +158,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         (arg0) => {
           if (null != stateFromStores) {
             require(arg0);
-            const obj = StageChannelActionCreators;
-            const result = obj.setEveryoneRolePermissionAllowed(tmp, Permissions.REQUEST_TO_SPEAK, arg0);
+            const result = StageChannelActionCreators.setEveryoneRolePermissionAllowed(
+              tmp,
+              Permissions.REQUEST_TO_SPEAK,
+              arg0,
+            );
           }
         },
       ];
       return items2;
     };
-let result = size.fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
-
-export const useRequestToSpeakPermission = tmp2;

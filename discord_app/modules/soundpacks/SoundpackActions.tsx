@@ -1,18 +1,18 @@
 // discord_app/modules/soundpacks/SoundpackActions.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import SoundpackStore from "SoundpackStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 
 export const setSoundpack = function setSoundpack(CLASSIC, name) {
   const obj = AnalyticsUtilsDefault;
+  obj.track(AnalyticEvents.SOUNDPACK_UPDATED, {
+    soundpack: CLASSIC,
+    previous_soundpack: SoundpackStore.getSoundpack(),
+  });
   const obj2 = { soundpack: CLASSIC, previous_soundpack: SoundpackStore.getSoundpack() };
-  obj.track(AnalyticEvents.SOUNDPACK_UPDATED, obj2);
-  const obj3 = DispatcherDefault;
-  const obj4 = { type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name };
-  obj3.dispatch(obj4);
+  DispatcherDefault.dispatch({ type: "SET_SOUNDPACK", soundpack: CLASSIC, forExperimentId: name });
 };

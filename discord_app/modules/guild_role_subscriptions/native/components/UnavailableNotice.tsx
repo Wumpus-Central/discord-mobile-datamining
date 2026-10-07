@@ -1,58 +1,51 @@
 // discord_app/modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16212_AssetRegistry.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _modDef16212 from "../../../../../_runtime/metro/16212__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-let obj3;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  container: obj2,
-  brightTitle: obj3,
-  unavailableContainer: { justifyContent: "center" },
-  unavailableInfo: { alignItems: "center", justifyContent: "center" },
-  unavailableDescription: { marginTop: 8, marginHorizontal: 16, textAlign: "center" },
-  joinCtaTitle: { alignSelf: "center", marginTop: 16, paddingHorizontal: 24, textAlign: "center" },
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
+  brightTitle: null,
+  unavailableContainer: null,
+  unavailableInfo: null,
+  unavailableDescription: null,
+  joinCtaTitle: null,
 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles = createStyles.createStyles;
-obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let closure_6 = createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.brightTitle = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.unavailableContainer = { justifyContent: "center" };
+obj2.unavailableInfo = { alignItems: "center", justifyContent: "center" };
+obj2.unavailableDescription = { marginTop: 8, marginHorizontal: 16, textAlign: "center" };
+obj2.joinCtaTitle = { alignSelf: "center", marginTop: 16, paddingHorizontal: 24, textAlign: "center" };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let brightTitle;
-      let description;
-      let items;
-      let title;
-      const obj = react2;
-      const cResult = obj.c(20);
+      const cResult = c.c(20);
       ({ title, description, brightTitle } = arg0);
       const tmp4 = closure_6();
       if (cResult[0] === tmp4.container) {
-        let tmp5;
-        let tmp7;
         if (cResult[1] === tmp4.unavailableContainer) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: AssetRegistryDefault };
-          const tmp10 = FastImageDefault;
-          const tmp11 = React3(tmp10, obj2);
+          const obj2 = { source: _modDef16212 };
+          const tmp11 = React4(FastImageDefault, obj2);
           cResult[3] = tmp11;
-          tmp7 = tmp11;
+          let tmp7 = tmp11;
         } else {
           tmp7 = cResult[3];
         }
@@ -60,43 +53,39 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           brightTitle = tmp4.brightTitle;
         }
         if (cResult[4] === tmp4.joinCtaTitle) {
-          let tmp12;
           if (cResult[5] === brightTitle) {
-            tmp12 = cResult[6];
+            let tmp12 = cResult[6];
           }
           if (cResult[7] === tmp12) {
-            let tmp13;
             if (cResult[8] === title) {
-              tmp13 = cResult[9];
+              let tmp13 = cResult[9];
             }
             if (cResult[10] === description) {
-              let tmp16;
               if (cResult[11] === tmp4.unavailableDescription) {
-                tmp16 = cResult[12];
+                let tmp16 = cResult[12];
               }
               if (cResult[13] === tmp4.unavailableInfo) {
                 if (cResult[14] === tmp13) {
-                  let tmp19;
                   if (cResult[15] === tmp16) {
-                    tmp19 = cResult[16];
+                    let tmp19 = cResult[16];
                   }
                   if (cResult[17] === tmp5) {
-                    let tmp23;
                     if (cResult[18] === tmp19) {
-                      tmp23 = cResult[19];
+                      let tmp23 = cResult[19];
                     }
                     return tmp23;
                   }
                   const obj3 = { style: tmp5, children: tmp19 };
-                  const tmp26 = React3(View, obj3);
+                  const tmp26 = React4(View, obj3);
                   cResult[17] = tmp5;
                   cResult[18] = tmp19;
                   cResult[19] = tmp26;
                   tmp23 = tmp26;
                 }
               }
-              const obj4 = { style: tmp4.unavailableInfo, children: items };
-              items = [tmp7, tmp13, tmp16];
+              const obj4 = { style: tmp4.unavailableInfo, children: null };
+              const items = [tmp7, tmp13, tmp16];
+              obj4.children = items;
               const tmp22 = hasOwnProperty(View, obj4);
               cResult[13] = tmp4.unavailableInfo;
               cResult[14] = tmp13;
@@ -110,14 +99,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               children: description,
             };
-            const tmp18 = React3(Text_Text.Text, obj5);
+            const tmp18 = React4(Text_Text.Text, obj5);
             cResult[10] = description;
             cResult[11] = tmp4.unavailableDescription;
             cResult[12] = tmp18;
             tmp16 = tmp18;
           }
           const obj6 = { variant: "heading-lg/extrabold", color: "text-default", style: tmp12, children: title };
-          const tmp15 = React3(Text_Text.Text, obj6);
+          const tmp15 = React4(Text_Text.Text, obj6);
           cResult[7] = tmp12;
           cResult[8] = title;
           cResult[9] = tmp15;
@@ -137,42 +126,34 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items2;
     }
   : (brightTitle) => {
-      let description;
-      let items;
-      let items1;
-      let obj2;
-      let title;
       brightTitle = brightTitle.brightTitle;
       ({ title, description } = brightTitle);
       const tmp = closure_6();
-      const obj = { style: items, children: hasOwnProperty(View, obj2) };
-      items = [,];
+      const obj = { style: null, children: null };
+      const items = [,];
       ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
-      obj2 = { style: tmp.unavailableInfo, children: items1 };
-      const obj3 = { source: AssetRegistryDefault };
-      const tmp6 = FastImageDefault;
-      items1 = [React3(tmp6, obj3), ,];
+      obj.style = items;
+      const obj2 = { style: tmp.unavailableInfo, children: null };
+      const obj3 = { source: _modDef16212 };
+      const items1 = [React4(FastImageDefault, obj3), ,];
       const items2 = [tmp.joinCtaTitle];
-      const Text = Text_Text.Text;
       if (brightTitle) {
         brightTitle = tmp.brightTitle;
       }
       items2[1] = brightTitle;
-      items1[1] = React3(Text, {
+      items1[1] = React4(Text_Text.Text, {
         variant: "heading-lg/extrabold",
         color: "text-default",
         style: items2,
         children: title,
       });
-      const obj4 = {
+      items1[2] = React4(Text_Text.Text, {
         style: tmp.unavailableDescription,
         variant: "text-sm/medium",
         color: "text-default",
         children: description,
-      };
-      items1[2] = React3(Text_Text.Text, obj4);
-      return React3(View, obj);
+      });
+      obj2.children = items1;
+      obj.children = hasOwnProperty(View, obj2);
+      return React4(View, obj);
     };
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx");
-
-export default tmp5;

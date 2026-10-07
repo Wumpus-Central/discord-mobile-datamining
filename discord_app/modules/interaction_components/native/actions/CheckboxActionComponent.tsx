@@ -1,31 +1,29 @@
 // discord_app/modules/interaction_components/native/actions/CheckboxActionComponent.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import Server from "../../../../flow/Server.tsx";
 import ComponentStateContext from "../../ComponentStateContext.tsx";
 import Checkbox from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let type;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
 
-const jsx = Fragment.jsx;
-const memoResult = react.memo((type) => {
+export default noop.memo((type) => {
   type = type.type;
-  let obj = ComponentStateContext;
-  const componentStateContext = obj.useComponentStateContext();
+  const componentStateContext = ComponentStateContext.useComponentStateContext();
   _modDef38(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
   let tmp5;
-  const useComponentState = componentStateContext.useComponentState;
   if (null != type.default) {
-    tmp5 = { type, value: type.default };
-    const obj2 = { type, value: type.default };
+    const obj2 = { type, value: _default };
+    tmp5 = obj2;
   }
-  const componentState = useComponentState(type, tmp5);
-  const state = componentState.state;
+  const componentState = componentStateContext.useComponentState(type, tmp5);
+  state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items = [state, type];
-  const memo = react.useMemo(() => {
+  const memo = noop.useMemo(() => {
     type = undefined;
     if (state != null) {
       type = state.type;
@@ -51,11 +49,7 @@ const memoResult = react.memo((type) => {
     description: tmp11.description,
     checked: memo,
     onToggle(value) {
-      const obj = { type, value };
-      executeStateUpdate(obj);
+      executeStateUpdate({ type, value });
     },
   });
 });
-const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
-
-export default memoResult;

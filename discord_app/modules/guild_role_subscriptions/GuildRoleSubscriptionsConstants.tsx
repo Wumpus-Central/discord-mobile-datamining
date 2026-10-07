@@ -4,10 +4,10 @@ import PremiumConstants from "../premium/PremiumConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
-const items = [,];
-const obj = { interval: SubscriptionIntervalTypes.DAY, interval_count: 1 };
-items[0] = obj;
-items[1] = { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 };
+const items = [
+  { interval: SubscriptionIntervalTypes.DAY, interval_count: 1 },
+  { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 },
+];
 const combined = "https://" + Constants.PRIMARY_DOMAIN + "/creators";
 const frozen = Object.freeze({
   MUST_READ_ARTICLES: "https://discord.com/creators/5-must-read-articles-for-beginners",

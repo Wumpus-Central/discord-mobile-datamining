@@ -2,15 +2,12 @@
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UrlHostUtils from "../core/UrlHostUtils.tsx";
-import size_mod from "../../../_runtime/metro/00002__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getSizedImageProxyURL(value, size) {
-  let format;
-  let keepAspectRatio;
-  const obj = URLUtilsDefault;
-  const str = obj.toURLSafe(value);
+  const str = URLUtilsDefault.toURLSafe(value);
   if (null != str) {
-    let startsWithResult = _Set1.has(str.hostname);
+    let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
       const pathname = str.pathname;
       startsWithResult = pathname.startsWith("/external/");
@@ -18,11 +15,8 @@ function getSizedImageProxyURL(value, size) {
     if (startsWithResult) {
       if (null != size.size) {
         const _String = String;
-        size = size.size;
-        const getBestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize;
-        ImageLoaderUtils;
         const obj2 = ImageLoaderUtils;
-        const StringResult = String(getBestMediaProxySize(size * obj2.getDevicePixelRatio()));
+        const StringResult = String(obj2.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio()));
         const searchParams = str.searchParams;
         const result = searchParams.set("width", StringResult);
         const searchParams2 = str.searchParams;
@@ -43,17 +37,15 @@ function getSizedImageProxyURL(value, size) {
   }
   return value;
 }
-let str = window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS;
 let parts;
-const _Set = Set;
-if (str != null) {
+if (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS != null) {
   parts = str.split(",");
 }
 if (parts == null) {
   parts = [];
 }
 function isImageProxyURL(hostname) {
-  let startsWithResult = _Set1.has(hostname.hostname);
+  let startsWithResult = set.has(hostname.hostname);
   if (startsWithResult) {
     const pathname = hostname.pathname;
     startsWithResult = pathname.startsWith("/external/");
@@ -62,19 +54,17 @@ function isImageProxyURL(hostname) {
 }
 const mapped = parts.map((item) => item.substring(2));
 const mapped1 = mapped.map(UrlHostUtils.getHostWithoutPort);
-const _Set1 = new _Set(mapped1.filter(Boolean));
-let size = size_mod;
+const set = new Set(mapped1.filter(Boolean));
 let result = size.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
 
 export { isImageProxyURL };
 export { getSizedImageProxyURL };
 export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size) {
-  const obj = URLUtilsDefault;
-  const str = obj.toURLSafe(value);
+  const str = URLUtilsDefault.toURLSafe(value);
   if (null == str) {
     return value;
   } else {
-    let startsWithResult = _Set1.has(str.hostname);
+    let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
       const pathname = str.pathname;
       startsWithResult = pathname.startsWith("/external/");
@@ -82,15 +72,11 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
     if (startsWithResult) {
       return getSizedImageProxyURL(value, size);
     } else {
-      const tmpResult = URLUtilsDefault;
       if (tmpResult.isDiscordCdnUrl(value)) {
         if (null != size.size) {
           const _String = String;
-          size = size.size;
-          const getBestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize;
-          ImageLoaderUtils;
           const obj3 = ImageLoaderUtils;
-          const StringResult = String(getBestMediaProxySize(size * obj3.getDevicePixelRatio()));
+          const StringResult = String(obj3.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio()));
           const _Number2 = Number;
           const searchParams2 = str.searchParams;
           const NumberResult = Number(searchParams2.get("size"));
@@ -107,6 +93,7 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
       } else {
         return value;
       }
+      tmpResult = URLUtilsDefault;
     }
   }
 };

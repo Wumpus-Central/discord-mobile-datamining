@@ -6,12 +6,11 @@ const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_
 function getMaxPanelWidth(windowWidth) {
   windowWidth = windowWidth.windowWidth;
   let bound = windowWidth;
-  const _Math = Math;
   if (!windowWidth.connected) {
-    const _Math2 = Math;
+    const _Math = Math;
     bound = Math.min(VOICE_PANEL_DRAWER_MAX_WIDTH, windowWidth - tmp - tmp2);
   }
-  return min(windowWidth, bound);
+  return Math.min(windowWidth, bound);
 }
 getMaxPanelWidth.__closure = { VOICE_PANEL_DRAWER_MAX_WIDTH };
 getMaxPanelWidth.__workletHash = 6813992446153;

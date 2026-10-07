@@ -1,28 +1,20 @@
 // discord_app/modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import c from "../../../../_runtime/00576_c.js";
+import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import useCustomKeyboardHeightDefault from "../../keyboard/native/useCustomKeyboardHeight.tsx";
-import LayerScope2 from "../../../design/components/Layers/native/LayerScope.native.tsx";
+import LayerScope from "../../../design/components/Layers/native/LayerScope.native.tsx";
 import useChannelSafeAreaBottomStylesDefault from "../../main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx";
 import useChatViewPointerEventsDefault from "useChatViewPointerEvents.android.tsx";
-import StickyWrapper2 from "../../../design/components/Sticky/native/StickyWrapper.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import StickyWrapper from "../../../design/components/Sticky/native/StickyWrapper.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = ReanimatedRexport;
-
-let bezierResult;
-let hasOwnProperty;
-let metroRequire;
-let View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-const Easing = ReanimatedRexport.Easing;
-let obj = { duration: timingPresets.timingStandardDuration, easing: bezierResult };
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const Easing = fn(4618).Easing;
+let obj = { duration: fn(4900).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 const __initData = {
   code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}",
 };
@@ -47,18 +39,14 @@ const __initData6 = {
 let closure_15 = {
   code: "function ChatViewWrapperAnimatedKeyboardTsx8(finished){const{animatedAdjustedMarginPending,animatedAdjustedMargin}=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}}",
 };
-bezierResult = Easing.bezier(0.2, 0, 0, 1);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let sharedValue;
-      let sharedValue1;
       const INSET_ANIMATION_CONFIG2 = sharedValue(sharedValue1[6])();
+      sharedValue = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(INSET_ANIMATION_CONFIG2.get());
       let obj2 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
-      sharedValue = obj2.useSharedValue(INSET_ANIMATION_CONFIG2.get());
-      let obj3 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
-      sharedValue1 = obj3.useSharedValue(-1);
-      let obj4 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
+      sharedValue1 = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(-1);
+      const obj3 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
       let fn = function n() {
         return obj.get();
       };
@@ -78,26 +66,27 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { animatedAdjustedMargin: sharedValue, animatedAdjustedMarginPending: sharedValue1 };
       fn2.__workletHash = 15141457454312;
       fn2.__initData = __initData2;
-      const animatedReaction = obj4.useAnimatedReaction(fn, fn2);
+      const animatedReaction = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useAnimatedReaction(fn, fn2);
+      const obj4 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
       const fn3 = function s() {
-        let fn;
-        let items;
-        let obj3;
-        obj = { flex: 1, marginTop: sharedValue.get(), transform: items };
-        const obj2 = { translateY: obj3.withTiming(-obj.get(), obj, "respect-motion-settings", fn) };
-        fn = function t(arg0) {
-          const tmp = arg0 && -1 !== sharedValue1.get();
+        obj = { flex: 1, marginTop: sharedValue.get(), transform: null };
+        const obj2 = { translateY: null };
+        const fn = function t(arg0) {
+          let tmp = arg0;
+          if (arg0) {
+            tmp = -1 !== sharedValue1.get();
+          }
           if (tmp) {
             const result = sharedValue.set(sharedValue1.get());
             const result1 = sharedValue1.set(-1);
           }
         };
-        const obj4 = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
-        fn.__closure = obj4;
+        fn.__closure = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
         fn.__workletHash = 16224255032954;
         fn.__initData = __initData;
-        items = [obj2];
-        obj3 = timing;
+        obj2.translateY = timing.withTiming(-obj.get(), obj, "respect-motion-settings", fn);
+        const items = [obj2];
+        obj.transform = items;
         return obj;
       };
       const obj5 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
@@ -110,24 +99,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn3.__workletHash = 10909217889027;
       fn3.__initData = __initData3;
-      ({
-        animatedAdjustedMargin: sharedValue,
-        withTiming: INSET_ANIMATION_CONFIG2(sharedValue1[7]).withTiming,
-        animatedHeight: INSET_ANIMATION_CONFIG2,
-        INSET_ANIMATION_CONFIG2,
-        animatedAdjustedMarginPending: sharedValue1,
-      });
       return obj5.useAnimatedStyle(fn3);
     }
   : () => {
-      let sharedValue;
-      let sharedValue1;
       const INSET_ANIMATION_CONFIG2 = sharedValue(sharedValue1[6])();
+      sharedValue = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(INSET_ANIMATION_CONFIG2.get());
       let obj2 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
-      sharedValue = obj2.useSharedValue(INSET_ANIMATION_CONFIG2.get());
-      let obj3 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
-      sharedValue1 = obj3.useSharedValue(-1);
-      let obj4 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
+      sharedValue1 = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useSharedValue(-1);
+      const obj3 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
       let fn = function n() {
         return obj.get();
       };
@@ -147,26 +126,27 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { animatedAdjustedMargin: sharedValue, animatedAdjustedMarginPending: sharedValue1 };
       fn2.__workletHash = 11887946519660;
       fn2.__initData = __initData5;
-      const animatedReaction = obj4.useAnimatedReaction(fn, fn2);
+      const animatedReaction = INSET_ANIMATION_CONFIG2(sharedValue1[3]).useAnimatedReaction(fn, fn2);
+      const obj4 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
       const fn3 = function s() {
-        let fn;
-        let items;
-        let obj3;
-        obj = { flex: 1, marginTop: sharedValue.get(), transform: items };
-        const obj2 = { translateY: obj3.withTiming(-obj.get(), obj, "respect-motion-settings", fn) };
-        fn = function t(arg0) {
-          const tmp = arg0 && -1 !== sharedValue1.get();
+        obj = { flex: 1, marginTop: sharedValue.get(), transform: null };
+        const obj2 = { translateY: null };
+        const fn = function t(arg0) {
+          let tmp = arg0;
+          if (arg0) {
+            tmp = -1 !== sharedValue1.get();
+          }
           if (tmp) {
             const result = sharedValue.set(sharedValue1.get());
             const result1 = sharedValue1.set(-1);
           }
         };
-        const obj4 = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
-        fn.__closure = obj4;
+        fn.__closure = { animatedAdjustedMarginPending: sharedValue1, animatedAdjustedMargin: sharedValue };
         fn.__workletHash = 153738036470;
         fn.__initData = __initData;
-        items = [obj2];
-        obj3 = timing;
+        obj2.translateY = timing.withTiming(-obj.get(), obj, "respect-motion-settings", fn);
+        const items = [obj2];
+        obj.transform = items;
         return obj;
       };
       const obj5 = INSET_ANIMATION_CONFIG2(sharedValue1[3]);
@@ -179,40 +159,28 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn3.__workletHash = 3956429727687;
       fn3.__initData = __initData6;
-      ({
-        animatedAdjustedMargin: sharedValue,
-        withTiming: INSET_ANIMATION_CONFIG2(sharedValue1[7]).withTiming,
-        animatedHeight: INSET_ANIMATION_CONFIG2,
-        INSET_ANIMATION_CONFIG2,
-        animatedAdjustedMarginPending: sharedValue1,
-      });
       return obj5.useAnimatedStyle(fn3);
     };
-const memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_17 = memo(
+ReactCompilerGating = fn(558);
+let closure_17 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channelId) => {
-        let items;
-        obj = react2;
-        const cResult = obj.c(6);
-        channelId = channelId.channelId;
+        const cResult = c.c(6);
         const tmp2 = useCustomKeyboardHeightDefault();
-        const tmp3 = useChannelSafeAreaBottomStylesDefault(channelId);
+        const tmp3 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
         if (cResult[0] === tmp2) {
-          let tmp5;
-          if (cResult[1] === -tmp2) {
-            tmp5 = cResult[2];
+          if (cResult[1] === tmp4) {
+            let tmp5 = cResult[2];
           }
           if (cResult[3] === tmp3) {
-            let tmp6;
             if (cResult[4] === tmp5) {
-              tmp6 = cResult[5];
+              let tmp6 = cResult[5];
             }
             return tmp6;
           }
-          const obj2 = { style: items };
-          items = [tmp3, tmp5];
+          const obj2 = { style: null };
+          const items = [tmp3, tmp5];
+          obj2.style = items;
           const tmp9 = hasOwnProperty(View, obj2);
           cResult[3] = tmp3;
           cResult[4] = tmp5;
@@ -226,71 +194,64 @@ let closure_17 = memo(
         tmp5 = rect;
       }
     : (channelId) => {
-        let items1;
-        channelId = channelId.channelId;
         const tmp = useCustomKeyboardHeightDefault();
-        let closure_0 = tmp;
+        const height = tmp;
         const items = [tmp];
-        obj = { style: items1 };
-        items1 = [useChannelSafeAreaBottomStylesDefault(channelId)];
-        useChannelSafeAreaBottomStylesDefault(channelId);
-        items1[1] = react.useMemo(() => {
-          const rect = { position: "absolute", bottom: -height, height, right: 0, left: 0 };
-          return rect;
-        }, items);
+        obj = { style: null };
+        const items1 = [
+          useChannelSafeAreaBottomStylesDefault(channelId.channelId),
+          noop.useMemo(() => {
+            const rect = { position: "absolute", bottom: -height, height, right: 0, left: 0 };
+            return rect;
+          }, items),
+        ];
+        obj.style = items1;
         return hasOwnProperty(View, obj);
       },
 );
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const bezierResult = Easing.bezier(0.2, 0, 0, 1);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let channelId;
-      let children;
-      let items;
-      let obj4;
-      let stickyHeader;
-      let style;
-      obj = react2;
-      const cResult = obj.c(14);
+      const cResult = c.c(14);
       ({ channelId, children, stickyHeader, style } = arg0);
       const tmp5 = useChatViewPointerEventsDefault(channelId);
       const tmp6 = closure_16();
       if (cResult[0] === children) {
-        let tmp7;
-        let tmp9;
         if (cResult[1] === style) {
-          tmp7 = cResult[2];
+          let tmp7 = cResult[2];
         }
         if (cResult[3] !== channelId) {
           const obj2 = { channelId };
           const tmp12 = hasOwnProperty(closure_17, obj2);
           cResult[3] = channelId;
           cResult[4] = tmp12;
-          tmp9 = tmp12;
+          let tmp9 = tmp12;
         } else {
           tmp9 = cResult[4];
         }
         if (cResult[5] === tmp6) {
           if (cResult[6] === tmp7) {
-            let tmp13;
             if (cResult[7] === tmp9) {
-              tmp13 = cResult[8];
+              let tmp13 = cResult[8];
             }
             if (cResult[9] === tmp5) {
               if (cResult[10] === stickyHeader) {
                 if (cResult[11] === style) {
-                  let tmp16;
                   if (cResult[12] === tmp13) {
-                    tmp16 = cResult[13];
+                    let tmp16 = cResult[13];
                   }
                   return tmp16;
                 }
               }
             }
-            const obj3 = { children: hasOwnProperty(StickyWrapper2.StickyWrapper, obj4) };
-            const LayerScope = LayerScope2.LayerScope;
-            obj4 = { header: stickyHeader, style, pointerEvents: tmp5, children: tmp13 };
-            const tmp18 = hasOwnProperty(LayerScope, obj3);
+            const obj3 = { children: null };
+            const obj4 = { header: stickyHeader, style, pointerEvents: tmp5, children: tmp13 };
+            obj3.children = hasOwnProperty(StickyWrapper.StickyWrapper, obj4);
+            const tmp18 = hasOwnProperty(LayerScope.LayerScope, obj3);
             cResult[9] = tmp5;
             cResult[10] = stickyHeader;
             cResult[11] = style;
@@ -299,9 +260,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp16 = tmp18;
           }
         }
-        const obj5 = { style: tmp6, children: items };
-        items = [tmp7, tmp9];
-        const tmp15 = metroRequire(ReanimatedRexportDefault.View, obj5);
+        const obj5 = { style: tmp6, children: null };
+        const items = [tmp7, tmp9];
+        obj5.children = items;
+        const tmp15 = timestampProducer(ReanimatedRexportDefault.View, obj5);
         cResult[5] = tmp6;
         cResult[6] = tmp7;
         cResult[7] = tmp9;
@@ -315,27 +277,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = tmp8;
     }
   : (arg0) => {
-      let StickyWrapper;
-      let channelId;
-      let children;
-      let items;
-      let obj2;
-      let obj3;
-      let stickyHeader;
-      let style;
       ({ channelId, style } = arg0);
       ({ children, stickyHeader } = arg0);
       const tmp = useChatViewPointerEventsDefault(channelId);
-      obj = { children: hasOwnProperty(StickyWrapper, obj2) };
-      const tmp2 = closure_16();
-      const LayerScope = LayerScope2.LayerScope;
-      obj2 = { header: stickyHeader, style, pointerEvents: tmp, children: metroRequire(View, obj3) };
-      obj3 = { style: tmp2, children: items };
-      StickyWrapper = StickyWrapper2.StickyWrapper;
-      View = ReanimatedRexportDefault.View;
-      items = [hasOwnProperty(View, { style, children }), hasOwnProperty(closure_17, { channelId })];
-      return hasOwnProperty(LayerScope, obj);
+      obj = { children: null };
+      const obj2 = { header: stickyHeader, style, pointerEvents: tmp, children: null };
+      const obj3 = { style: closure_16(), children: null };
+      const items = [hasOwnProperty(View, { style, children }), hasOwnProperty(closure_17, { channelId })];
+      obj3.children = items;
+      obj2.children = timestampProducer(ReanimatedRexportDefault.View, obj3);
+      obj.children = hasOwnProperty(StickyWrapper.StickyWrapper, obj2);
+      return hasOwnProperty(LayerScope.LayerScope, obj);
     };
-let result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx");
-
-export default tmp5;

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
@@ -12,15 +12,13 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = useAdPersonalizationTogglesDisabled;
-      let adPersonalizationTogglesDisabled = obj.useAdPersonalizationTogglesDisabled();
+      let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
       const DropsOptedOut = UserSettings.DropsOptedOut;
       const setting = DropsOptedOut.useSetting();
-      const obj2 = useParentalControlSettings;
-      const isParentallyControlled = obj2.useIsParentallyControlled();
+      const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
       if (!adPersonalizationTogglesDisabled) {
         adPersonalizationTogglesDisabled = setting;
       }
@@ -30,12 +28,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return adPersonalizationTogglesDisabled;
     }
   : () => {
-      const obj = useAdPersonalizationTogglesDisabled;
-      let adPersonalizationTogglesDisabled = obj.useAdPersonalizationTogglesDisabled();
+      let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
       const DropsOptedOut = UserSettings.DropsOptedOut;
       const setting = DropsOptedOut.useSetting();
-      const obj2 = useParentalControlSettings;
-      const isParentallyControlled = obj2.useIsParentallyControlled();
+      const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
       if (!adPersonalizationTogglesDisabled) {
         adPersonalizationTogglesDisabled = setting;
       }
@@ -53,34 +49,31 @@ const fn = () => {
   return !Quests3PDataOptedOut.useSetting();
 };
 let SettingBuilders = SettingBuilders_mod;
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.CyLYKZ);
+    const intl = util.intl;
+    return intl.string(util.t.CyLYKZ);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {
-    const obj = AdTopicOptOutClientExperiment;
-    return !obj.useIsAdTopicOptOutClientEnabled();
+    return !AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled();
   },
   useValue: fn,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
   useIsDisabled: tmp3,
-};
-const toggle = SettingBuilders.createToggle(obj);
-SettingBuilders = SettingBuilders_mod;
-let obj2 = {
+});
+let SettingBuilders = SettingBuilders_mod;
+const toggle1 = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.CyLYKZ);
+    const intl = util.intl;
+    return intl.string(util.t.CyLYKZ);
   },
   parent: MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
   usePredicate: AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled,
   useValue: fn,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
   useIsDisabled: tmp3,
-};
-const toggle1 = SettingBuilders.createToggle(obj2);
+});
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
 
 export default toggle;

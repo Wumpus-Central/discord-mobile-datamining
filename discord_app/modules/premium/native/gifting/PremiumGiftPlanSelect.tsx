@@ -1,90 +1,93 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftPlanSelect.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
-import Constants from "../../../../Constants.tsx";
 import native from "../../../../design/void/native.tsx";
-import PremiumConstants from "../../PremiumConstants.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import BadgeDirectoryStore_mod from "../../../badges/BadgeDirectoryStore.tsx";
-import PromotionsStore_mod from "../../promotions/PromotionsStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
+import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 
-let navigation, state, v16;
-
-let closure_12;
-let closure_14;
-let hasOwnProperty;
-let map1;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
+get_ActivityIndicator = fn(17);
 ({
   ActivityIndicator: hasOwnProperty,
   Pressable: metroRequire,
-  View: metroImportDefault,
-  ScrollView: metroImportAll,
-} = react_native);
-let BadgeDirectoryStore = BadgeDirectoryStore_mod;
-let PromotionsStore = PromotionsStore_mod;
-const PremiumTypes = PremiumConstants.PremiumTypes;
-let VerticalGradient = Constants.VerticalGradient;
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = Fragment);
+  View: closure_7,
+  ScrollView: closure_8,
+} = get_ActivityIndicator);
+let VerticalGradient = fn(1085).VerticalGradient;
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let items = [,];
-({ TIER_2: arr[0], TIER_0: arr[1] } = PremiumTypes);
+({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1379).PremiumTypes);
 let c16 = 16;
+const createStyles = fn(4896);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
-  let alphaResult;
-  let obj4;
-  let space;
-  let space2;
-  let space3;
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
-    headerBackground: size,
-    headerBackgroundColor: { color: nativeDefault.colors.BACKGROUND_BASE_LOW },
-    headerImageContainer: { position: "absolute", width, height: arg1 / 1.75 },
-    headerImage: { width },
-    headerOverlay: obj4,
-    avatar: { alignSelf: "center" },
-    title: {
-      textAlign: "center",
-      marginTop: arg2 ? space.PX_16 : space.PX_12,
-      marginHorizontal: nativeDefault.space.PX_24,
-    },
-    description: {
-      textAlign: "center",
-      marginTop: arg2 ? space2.PX_16 : space2.PX_12,
-      marginHorizontal: nativeDefault.space.PX_24,
-    },
-    carousel: { marginTop: arg2 ? space3.PX_16 : space3.PX_32 },
-    dmGiftingContent: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 },
-    loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
-    closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 1 },
-    closeButton: { padding: nativeDefault.space.PX_16 },
-    closeButtonIcon: { width: 24, height: 24, tintColor: "white" },
-    badgeBanner: { marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16 },
+    headerBackground: null,
+    headerBackgroundColor: null,
+    headerImageContainer: null,
+    headerImage: null,
+    headerOverlay: null,
+    avatar: null,
+    title: null,
+    description: null,
+    carousel: null,
+    dmGiftingContent: null,
+    loadingContainer: null,
+    closeButtonContainer: null,
+    closeButton: null,
+    closeButtonIcon: null,
+    badgeBanner: null,
   };
-  size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
-  ({ flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW });
-  obj4 = { width, backgroundColor: alphaResult.hex() };
-  ({ color: nativeDefault.colors.BACKGROUND_BASE_LOW });
+  const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
+  obj.headerBackground = size;
+  const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  obj.headerBackgroundColor = { color: nativeDefault.colors.BACKGROUND_BASE_LOW };
+  obj.headerImageContainer = { position: "absolute", width, height: arg1 / 1.75 };
+  obj.headerImage = { width };
+  const obj4 = { width, backgroundColor: null };
+  const obj3 = { color: nativeDefault.colors.BACKGROUND_BASE_LOW };
   const obj6 = _modDef683("#000000");
-  alphaResult = obj6.alpha(0.8);
-  space = nativeDefault.space;
-  ({ textAlign: "center", marginTop: arg2 ? space.PX_16 : space.PX_12, marginHorizontal: nativeDefault.space.PX_24 });
-  space2 = nativeDefault.space;
-  ({ textAlign: "center", marginTop: arg2 ? space2.PX_16 : space2.PX_12, marginHorizontal: nativeDefault.space.PX_24 });
-  space3 = nativeDefault.space;
-  ({ paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 });
-  ({ padding: nativeDefault.space.PX_16 });
-  ({ marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16 });
+  obj4.backgroundColor = _modDef683("#000000").alpha(0.8).hex();
+  obj.headerOverlay = obj4;
+  obj.avatar = { alignSelf: "center" };
+  const space = nativeDefault.space;
+  const alphaResult = _modDef683("#000000").alpha(0.8);
+  obj.title = {
+    textAlign: "center",
+    marginTop: arg2 ? space.PX_16 : space.PX_12,
+    marginHorizontal: nativeDefault.space.PX_24,
+  };
+  const space2 = nativeDefault.space;
+  const obj5 = {
+    textAlign: "center",
+    marginTop: arg2 ? space.PX_16 : space.PX_12,
+    marginHorizontal: nativeDefault.space.PX_24,
+  };
+  obj.description = {
+    textAlign: "center",
+    marginTop: arg2 ? space2.PX_16 : space2.PX_12,
+    marginHorizontal: nativeDefault.space.PX_24,
+  };
+  const space3 = nativeDefault.space;
+  obj.carousel = { marginTop: arg2 ? space3.PX_16 : space3.PX_32 };
+  const obj7 = {
+    textAlign: "center",
+    marginTop: arg2 ? space2.PX_16 : space2.PX_12,
+    marginHorizontal: nativeDefault.space.PX_24,
+  };
+  obj.dmGiftingContent = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 };
+  obj.loadingContainer = { flex: 1, alignItems: "center", justifyContent: "center" };
+  obj.closeButtonContainer = { position: "absolute", top: 0, left: 0, zIndex: 1 };
+  const obj8 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_48 };
+  obj.closeButton = { padding: nativeDefault.space.PX_16 };
+  obj.closeButtonIcon = { width: 24, height: 24, tintColor: "white" };
+  const obj9 = { padding: nativeDefault.space.PX_16 };
+  obj.badgeBanner = { marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16 };
   return obj;
 });
 let closure_18 = {
@@ -99,320 +102,335 @@ const __initData = {
 const __initData2 = {
   code: "function PremiumGiftPlanSelectTsx4(value,index_0){const{lastItemIndex,leftOffset,centerOffset,rightOffset,carouselStep}=this.__closure;const activeIndex=index_0-value;const leftT=Math.max(0,Math.min(1,activeIndex));const rightT=Math.max(0,Math.min(1,activeIndex-(lastItemIndex-1)));const offset=leftOffset+leftT*(centerOffset-leftOffset)+rightT*(rightOffset-centerOffset);return{transform:[{translateX:value*carouselStep+offset}]};}",
 };
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelect.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let bottom;
-      let claimableRewards;
-      let closure_6;
-      let giftPromotionRewardSkuIds;
-      let giftsToNextTier;
-      let height;
-      let isLoadingWishlist;
-      let items3;
-      let nextTier;
-      let onClose;
-      let recipientUser;
-      let ref;
-      let shouldUseDMWishlistGiftingDesign;
-      let tmp11;
-      let tmp13;
-      let tmp14;
-      let tmp18;
-      let tmp19;
-      let tmp20;
-      let tmp33;
-      let top;
-      let width;
-      const tmp2 = onClose;
-      let obj = navigation(onClose[12]);
-      const cResult = obj.c(162);
+      const cResult = navigation(onClose[12]).c(162);
       ({ shouldUseDMWishlistGiftingDesign, isLoadingWishlist } = arg0);
-      const obj2 = navigation(onClose[13]);
-      navigation = obj2.useNavigation();
+      let obj = navigation(onClose[12]);
+      navigation = navigation(onClose[13]).useNavigation();
+      let obj2 = navigation(onClose[13]);
       ({ top, bottom } = claimableRewards(onClose[14])());
-      const tmp6 = claimableRewards(onClose[14])();
       const sum = top + navigation(onClose[15]).NAV_BAR_HEIGHT;
+      const tmp6 = claimableRewards(onClose[14])();
       ({ width, height } = claimableRewards(onClose[16])());
-      claimableRewards(onClose[16])();
-      let obj3 = navigation(onClose[17]);
-      const nativeGiftContext = obj3.useNativeGiftContext();
+      const tmp8 = claimableRewards(onClose[16])();
+      const nativeGiftContext = navigation(onClose[17]).useNativeGiftContext();
       ({ recipientUser, claimableRewards } = nativeGiftContext);
       onClose = nativeGiftContext.onClose;
-      const obj4 = navigation(onClose[18]);
-      const isScreenReaderEnabled = obj4.useIsScreenReaderEnabled();
+      let obj3 = navigation(onClose[17]);
+      const isScreenReaderEnabled = navigation(onClose[18]).useIsScreenReaderEnabled();
       if (cResult[0] !== onClose) {
         let fn = function f() {
           onClose();
           return true;
         };
-        let num = 0;
         cResult[0] = onClose;
-        let num2 = 1;
         cResult[1] = fn;
-        tmp11 = fn;
+        let tmp11 = fn;
       } else {
         tmp11 = cResult[1];
       }
-      const tmpResult = tmp(tmp2[19]);
-      tmpResult.useNavigatorBackPressHandler(tmp11);
+      let obj4 = navigation(onClose[18]);
+      navigation(onClose[19]).useNavigatorBackPressHandler(tmp11);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         items = [PromotionsStore];
         class A {
           constructor() {
-            return PromotionsStore.getGiftPromotionRewardSkuIds();
+            return closure_10.getGiftPromotionRewardSkuIds();
           }
         }
         cResult[2] = items;
         cResult[3] = A;
-        tmp14 = A;
-        tmp13 = items;
+        let tmp14 = A;
+        let tmp13 = items;
       } else {
         tmp13 = cResult[2];
         tmp14 = cResult[3];
       }
-      const tmpResult5 = navigation(tmp2[20]);
-      const stateFromStoresArray = tmpResult5.useStateFromStoresArray(tmp13, tmp14);
-      const tmpResult6 = navigation(tmp2[21]);
-      const selectPremiumGift = tmpResult6.useSelectPremiumGift("PremiumGiftPlanSelect");
+      let tmpResult = navigation(onClose[19]);
+      const stateFromStoresArray = navigation(onClose[20]).useStateFromStoresArray(tmp13, tmp14);
+      const tmpResult5 = navigation(onClose[20]);
+      const selectPremiumGift = navigation(onClose[21]).useSelectPremiumGift("PremiumGiftPlanSelect");
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { location: "PremiumGiftPlanSelect" };
-        cResult[4] = obj5;
+        cResult[4] = { location: "PremiumGiftPlanSelect" };
         class A {
           constructor() {
-            return PromotionsStore.getGiftPromotionRewardSkuIds();
+            return closure_10.getGiftPromotionRewardSkuIds();
           }
         }
+        const obj5 = { location: "PremiumGiftPlanSelect" };
       } else {
-        tmp18 = cResult[4];
+        const tmp18 = cResult[4];
       }
-      const tmp5Result = claimableRewards(tmp2[22]);
-      let enabled = tmp5Result.useConfig(tmp18).enabled;
+      const tmpResult6 = navigation(onClose[21]);
+      let enabled = claimableRewards(onClose[22]).useConfig(tmp18).enabled;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [BadgeDirectoryStore];
         class A {
           constructor() {
-            return PromotionsStore.getGiftPromotionRewardSkuIds();
+            return closure_10.getGiftPromotionRewardSkuIds();
           }
         }
         cResult[5] = items1;
         cResult[6] = tmp22;
-        tmp20 = tmp22;
-        tmp19 = items1;
+        let tmp20 = tmp22;
+        let tmp19 = items1;
       } else {
         tmp19 = cResult[5];
         tmp20 = cResult[6];
       }
-      const tmpResult7 = navigation(tmp2[20]);
-      const stateFromStoresObject = tmpResult7.useStateFromStoresObject(tmp19, tmp20);
+      const tmp5Result = claimableRewards(onClose[22]);
+      const stateFromStoresObject = navigation(onClose[20]).useStateFromStoresObject(tmp19, tmp20);
       ({ nextTier, giftsToNextTier } = stateFromStoresObject);
       if (enabled) {
         enabled = null != nextTier;
       }
+      const tmpResult7 = navigation(onClose[20]);
       let str = "-DISABLED";
-      const useIsGiftingBadgeComplexArtEnabled = tmp(tmp2[24]).useIsGiftingBadgeComplexArtEnabled;
-      navigation(tmp2[24]);
       if (enabled) {
         str = "";
       }
-      const isGiftingBadgeComplexArtEnabled = useIsGiftingBadgeComplexArtEnabled(`PremiumGiftPlanSelect${str}`);
+      const isGiftingBadgeComplexArtEnabled = navigation(onClose[24]).useIsGiftingBadgeComplexArtEnabled(
+        `PremiumGiftPlanSelect${str}`,
+      );
       closure_17(width, height, enabled);
+      const tmp27 = selectPremiumGift;
+      const tmpResult8 = navigation(onClose[24]);
       const first = selectPremiumGift(enabled.useState(0), 2)[0];
-      selectPremiumGift(enabled.useState(0), 2);
+      const tmp28 = selectPremiumGift(enabled.useState(0), 2);
       [r10123, closure_6] = selectPremiumGift(enabled.useState(false), 2);
-      selectPremiumGift(enabled.useState(false), 2);
-      const tmp28 = selectPremiumGift;
       if (cResult[7] !== navigation) {
         class K {
           constructor() {
-            navigation = navigation.addListener("state", () => {
+            closure_0 = closure_0.addListener("state", () => {
               state = state.getState();
               closure_1_6(state.routes[state.index].name === navigation(onClose[25]).PremiumGiftScreens.PLAN_SELECT);
             });
             return () => {
-              navigation.removeListener("state", state);
+              navigation.removeListener("state", closure_0);
             };
           }
         }
         const items2 = [navigation];
         class A {
           constructor() {
-            return PromotionsStore.getGiftPromotionRewardSkuIds();
+            return closure_10.getGiftPromotionRewardSkuIds();
           }
         }
         cResult[7] = navigation;
         cResult[8] = K;
         cResult[9] = items2;
-        tmp33 = items2;
+        let tmp32 = items2;
       } else {
         class K {
           constructor() {
-            navigation = navigation.addListener("state", () => {
+            closure_0 = closure_0.addListener("state", () => {
               state = state.getState();
               closure_1_6(state.routes[state.index].name === navigation(onClose[25]).PremiumGiftScreens.PLAN_SELECT);
             });
             return () => {
-              navigation.removeListener("state", state);
+              navigation.removeListener("state", closure_0);
             };
           }
         }
-        tmp33 = cResult[9];
+        tmp32 = cResult[9];
       }
-      const effect = obj11.useEffect(K, tmp33);
-      const tmp28Result = tmp28(enabled.useState(null), 2);
-      const first1 = tmp28Result[0];
-      let closure_8 = tmp28Result[1];
+      const effect = obj12.useEffect(K, tmp32);
+      const tmp27Result = tmp27(enabled.useState(null), 2);
+      const first1 = tmp27Result[0];
+      closure_8 = tmp27Result[1];
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         class K {
           constructor() {
-            navigation = navigation.addListener("state", () => {
+            closure_0 = closure_0.addListener("state", () => {
               state = state.getState();
               closure_1_6(state.routes[state.index].name === navigation(onClose[25]).PremiumGiftScreens.PLAN_SELECT);
             });
             return () => {
-              navigation.removeListener("state", state);
+              navigation.removeListener("state", closure_0);
             };
           }
         }
-        cResult[10] = tmp38;
+        cResult[10] = tmp37;
         class A {
           constructor() {
-            return PromotionsStore.getGiftPromotionRewardSkuIds();
+            return closure_10.getGiftPromotionRewardSkuIds();
           }
         }
       } else {
         class K {
           constructor() {
-            navigation = navigation.addListener("state", () => {
+            closure_0 = closure_0.addListener("state", () => {
               state = state.getState();
               closure_1_6(state.routes[state.index].name === navigation(onClose[25]).PremiumGiftScreens.PLAN_SELECT);
             });
             return () => {
-              navigation.removeListener("state", state);
+              navigation.removeListener("state", closure_0);
             };
           }
         }
       }
-      BadgeDirectoryStore = obj11.useRef(tmp37);
+      BadgeDirectoryStore = obj12.useRef(tmp36);
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         class Se {
           constructor() {
-            ref.current = [];
-            closure_8(null);
+            closure_9.current = [];
+            tmp = closure_8(null);
+            return;
           }
         }
         cResult[11] = Se;
         class A {
           constructor() {
-            return PromotionsStore.getGiftPromotionRewardSkuIds();
+            return closure_10.getGiftPromotionRewardSkuIds();
           }
         }
       } else {
         class Se {
           constructor() {
-            ref.current = [];
-            closure_8(null);
+            closure_9.current = [];
+            tmp = closure_8(null);
+            return;
           }
         }
       }
       if (claimableRewards != null) {
         class Se {
           constructor() {
-            ref.current = [];
-            closure_8(null);
+            closure_9.current = [];
+            tmp = closure_8(null);
+            return;
           }
         }
       }
       if (cResult[12] === shouldUseDMWishlistGiftingDesign) {
         class Se {
           constructor() {
-            ref.current = [];
-            closure_8(null);
+            closure_9.current = [];
+            tmp = closure_8(null);
+            return;
           }
         }
-        const effect1 = obj11.useEffect(tmp39, items3);
+        const effect1 = obj12.useEffect(tmp38, items3);
         const _Symbol = Symbol;
         class A {
           constructor() {
-            return PromotionsStore.getGiftPromotionRewardSkuIds();
+            return closure_10.getGiftPromotionRewardSkuIds();
           }
         }
-        if (tmp42 === Symbol.for("react.memo_cache_sentinel")) {
+        if (tmp41 === Symbol.for("react.memo_cache_sentinel")) {
           class Ie {
             constructor() {
-              if (ref.current.length >= items.length) {
-                const _Math = Math;
+              if (closure_9.current.length >= closure_15.length) {
+                tmp2 = globalThis;
+                _Math = Math;
+                max = Math.max;
                 items = [];
-                HermesBuiltin.arraySpread(items, tmp2.current, 0);
-                const _Math2 = Math;
-                const applyResult = HermesBuiltin.apply(max, items, Math);
-                const _Number = Number;
+                num = 0;
+                tmp3 = items;
+                arraySpreadResult = HermesBuiltin.arraySpread(tmp.current, 0);
+                tmp5 = max;
+                tmp6 = items;
+                _Math2 = Math;
+                applyResult = HermesBuiltin.apply(items, Math);
+                _Number = Number;
                 if (!Number.isNaN(applyResult)) {
-                  closure_8(applyResult);
+                  tmp8 = closure_8;
+                  tmp9 = closure_8(applyResult);
                 }
               }
+              return;
             }
           }
           cResult[15] = Ie;
           class A {
             constructor() {
-              return PromotionsStore.getGiftPromotionRewardSkuIds();
+              return closure_10.getGiftPromotionRewardSkuIds();
             }
           }
         } else {
           class Ie {
             constructor() {
-              if (ref.current.length >= items.length) {
-                const _Math = Math;
+              if (closure_9.current.length >= closure_15.length) {
+                tmp2 = globalThis;
+                _Math = Math;
+                max = Math.max;
                 items = [];
-                HermesBuiltin.arraySpread(items, tmp2.current, 0);
-                const _Math2 = Math;
-                const applyResult = HermesBuiltin.apply(max, items, Math);
-                const _Number = Number;
+                num = 0;
+                tmp3 = items;
+                arraySpreadResult = HermesBuiltin.arraySpread(tmp.current, 0);
+                tmp5 = max;
+                tmp6 = items;
+                _Math2 = Math;
+                applyResult = HermesBuiltin.apply(items, Math);
+                _Number = Number;
                 if (!Number.isNaN(applyResult)) {
-                  closure_8(applyResult);
+                  tmp8 = closure_8;
+                  tmp9 = closure_8(applyResult);
                 }
               }
+              return;
             }
           }
         }
-        PromotionsStore = tmp43;
+        PromotionsStore = tmp42;
         const _Symbol2 = Symbol;
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
           class Ie {
             constructor() {
-              if (ref.current.length >= items.length) {
-                const _Math = Math;
+              if (closure_9.current.length >= closure_15.length) {
+                tmp2 = globalThis;
+                _Math = Math;
+                max = Math.max;
                 items = [];
-                HermesBuiltin.arraySpread(items, tmp2.current, 0);
-                const _Math2 = Math;
-                const applyResult = HermesBuiltin.apply(max, items, Math);
-                const _Number = Number;
+                num = 0;
+                tmp3 = items;
+                arraySpreadResult = HermesBuiltin.arraySpread(tmp.current, 0);
+                tmp5 = max;
+                tmp6 = items;
+                _Math2 = Math;
+                applyResult = HermesBuiltin.apply(items, Math);
+                _Number = Number;
                 if (!Number.isNaN(applyResult)) {
-                  closure_8(applyResult);
+                  tmp8 = closure_8;
+                  tmp9 = closure_8(applyResult);
                 }
               }
+              return;
             }
           }
-          cResult[16] = tmp44;
+          cResult[16] = tmp43;
           class A {
             constructor() {
-              return PromotionsStore.getGiftPromotionRewardSkuIds();
+              return closure_10.getGiftPromotionRewardSkuIds();
             }
           }
         } else {
           class Ie {
             constructor() {
-              if (ref.current.length >= items.length) {
-                const _Math = Math;
+              if (closure_9.current.length >= closure_15.length) {
+                tmp2 = globalThis;
+                _Math = Math;
+                max = Math.max;
                 items = [];
-                HermesBuiltin.arraySpread(items, tmp2.current, 0);
-                const _Math2 = Math;
-                const applyResult = HermesBuiltin.apply(max, items, Math);
-                const _Number = Number;
+                num = 0;
+                tmp3 = items;
+                arraySpreadResult = HermesBuiltin.arraySpread(tmp.current, 0);
+                tmp5 = max;
+                tmp6 = items;
+                _Math2 = Math;
+                applyResult = HermesBuiltin.apply(items, Math);
+                _Number = Number;
                 if (!Number.isNaN(applyResult)) {
-                  closure_8(applyResult);
+                  tmp8 = closure_8;
+                  tmp9 = closure_8(applyResult);
                 }
               }
+              return;
             }
           }
         }
@@ -421,17 +439,25 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[17] === first1) {
           class Ie {
             constructor() {
-              if (ref.current.length >= items.length) {
-                const _Math = Math;
+              if (closure_9.current.length >= closure_15.length) {
+                tmp2 = globalThis;
+                _Math = Math;
+                max = Math.max;
                 items = [];
-                HermesBuiltin.arraySpread(items, tmp2.current, 0);
-                const _Math2 = Math;
-                const applyResult = HermesBuiltin.apply(max, items, Math);
-                const _Number = Number;
+                num = 0;
+                tmp3 = items;
+                arraySpreadResult = HermesBuiltin.arraySpread(tmp.current, 0);
+                tmp5 = max;
+                tmp6 = items;
+                _Math2 = Math;
+                applyResult = HermesBuiltin.apply(items, Math);
+                _Number = Number;
                 if (!Number.isNaN(applyResult)) {
-                  closure_8(applyResult);
+                  tmp8 = closure_8;
+                  tmp9 = closure_8(applyResult);
                 }
               }
+              return;
             }
           }
         }
@@ -442,60 +468,61 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const forScreenReader = obj.forScreenReader;
           return (item) => {
-            let fn;
-            let obj3;
-            let str;
-            let str2;
-            let tmp5;
             item = item.item;
             const index = item.index;
-            const tmp3 = forScreenReader ? metroRequire : metroImportDefault;
             const obj = {
               accessible: forScreenReader,
-              accessibilityRole: str,
-              onPress: fn,
-              style: { paddingVertical: nativeDefault.space.PX_8 },
-              children: closure_12(tmp5, obj3, index),
+              accessibilityRole: null,
+              onPress: null,
+              style: null,
+              children: null,
             };
-            str = undefined;
+            let str;
             if (forScreenReader) {
               str = "button";
             }
-            fn = undefined;
+            obj.accessibilityRole = str;
+            let fn;
             if (forScreenReader) {
-              fn = () => closure_2_3(item);
+              fn = () => selectPremiumGift(item);
             }
-            obj3 = {
+            obj.onPress = fn;
+            obj.style = { paddingVertical: nativeDefault.space.PX_8 };
+            const obj3 = {
               premiumType: item,
               variant,
               onPress() {
-                return closure_2_3(item);
+                return selectPremiumGift(item);
               },
-              style: size,
-              onLayout(nativeEvent) {
-                const height = nativeEvent.nativeEvent.layout.height;
-                if (height > 0) {
-                  let num = ref.current[index];
-                  const current = ref.current;
-                  const _Math = Math;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  current[index] = max(height, num);
-                  closure_2_10();
-                }
-              },
-              claimableRewards,
-              isSelected: first === index,
+              style: null,
+              onLayout: null,
+              claimableRewards: null,
+              isSelected: null,
             };
-            ({ paddingVertical: nativeDefault.space.PX_8 });
-            size = { height: first1, width: VerticalGradient, alignSelf: str2 };
-            str2 = undefined;
-            tmp5 = PremiumGiftFeaturesCardDefault;
+            const obj2 = { paddingVertical: nativeDefault.space.PX_8 };
+            const tmp3 = forScreenReader ? timestampProducer : React5;
+            const size = { height: first1, width: result, alignSelf: null };
+            let str2;
             if ("default" === variant) {
               str2 = "center";
             }
-            return closure_12(tmp3, obj);
+            size.alignSelf = str2;
+            obj3.style = size;
+            obj3.onLayout = function onLayout(nativeEvent) {
+              const height = nativeEvent.nativeEvent.layout.height;
+              if (height > 0) {
+                let num = ref.current[index];
+                if (num == null) {
+                  num = 0;
+                }
+                ref.current[index] = Math.max(height, num);
+                closure_2_10();
+              }
+            };
+            obj3.claimableRewards = claimableRewards;
+            obj3.isSelected = first === index;
+            obj.children = __initData(PremiumGiftFeaturesCardDefault, obj3, index);
+            return __initData(tmp3, obj);
           };
         }
         cResult[17] = first1;
@@ -509,241 +536,190 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = shouldUseDMWishlistGiftingDesign;
       cResult[13] = undefined;
       cResult[14] = items3;
+      const tmp30 = selectPremiumGift(enabled.useState(false), 2);
     }
   : (shouldUseDMWishlistGiftingDesign) => {
-      let AvatarSizes;
-      let bottom;
-      let c16;
-      let c7;
-      let claimableRewards;
-      let formatToPlainStringResult;
-      let giftsToNextTier;
-      let height;
-      let intl;
-      let intl4;
-      let items11;
-      let items12;
-      let items14;
-      let items15;
-      let items16;
-      let items17;
-      let items18;
-      let items19;
-      let items20;
-      let nextTier;
-      let obj13;
-      let obj14;
-      let obj16;
-      let obj17;
-      let obj21;
-      let obj25;
-      let obj26;
-      let obj31;
-      let obj32;
-      let obj39;
-      let obj41;
-      let recipientUser;
-      let str3;
-      let str4;
-      let str5;
-      let sum1;
-      let tmp20;
-      let tmp4Result;
-      let tmp4Result7;
-      let tmp50;
-      let tmp61;
-      let tmp64Result6;
-      let tmp66;
-      let tmp69;
-      let tmp71;
-      let tmpResult10;
-      let tmpResult9;
-      let top;
-      let width;
       shouldUseDMWishlistGiftingDesign = shouldUseDMWishlistGiftingDesign.shouldUseDMWishlistGiftingDesign;
-      navigation = undefined;
+      let navigation;
       claimableRewards = undefined;
       let onClose;
-      let closure_5;
+      closure_5 = undefined;
       let currentIndex;
       c7 = undefined;
       let num;
-      let closure_9;
+      closure_9 = undefined;
       let ref;
       let callback;
-      let c12;
+      c12 = undefined;
       let callback2;
       let str2;
       let sharedValue;
-      v16 = undefined;
-      let c17;
+      c16 = undefined;
+      c17 = undefined;
       let result1;
       let diff1;
-      const tmp2 = onClose;
-      const isLoadingWishlist = shouldUseDMWishlistGiftingDesign.isLoadingWishlist;
+      navigation = navigation(onClose[13]).useNavigation();
       let obj = navigation(onClose[13]);
-      navigation = obj.useNavigation();
-      let tmp5 = claimableRewards(onClose[14])();
-      ({ top, bottom } = tmp5);
+      ({ top, bottom } = claimableRewards(onClose[14])());
+      const tmp5 = claimableRewards(onClose[14])();
       ({ width, height } = claimableRewards(onClose[16])());
       const tmp6 = claimableRewards(onClose[16])();
-      const obj2 = navigation(onClose[17]);
-      const nativeGiftContext = obj2.useNativeGiftContext();
+      const nativeGiftContext = navigation(onClose[17]).useNativeGiftContext();
       ({ recipientUser, claimableRewards } = nativeGiftContext);
       onClose = nativeGiftContext.onClose;
+      let obj2 = navigation(onClose[17]);
+      const isScreenReaderEnabled = navigation(onClose[18]).useIsScreenReaderEnabled();
       let obj3 = navigation(onClose[18]);
-      const isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
-      const obj4 = navigation(onClose[19]);
-      obj4.useNavigatorBackPressHandler(() => {
+      navigation(onClose[19]).useNavigatorBackPressHandler(() => {
         onClose();
         return true;
       });
+      let obj4 = navigation(onClose[19]);
       items = [ref];
+      const stateFromStoresArray = navigation(onClose[20]).useStateFromStoresArray(items, () =>
+        ref.getGiftPromotionRewardSkuIds(),
+      );
       const obj5 = navigation(onClose[20]);
-      const stateFromStoresArray = obj5.useStateFromStoresArray(items, () => ref.getGiftPromotionRewardSkuIds());
+      const selectPremiumGift = navigation(onClose[21]).useSelectPremiumGift("PremiumGiftPlanSelect");
       const obj6 = navigation(onClose[21]);
-      const selectPremiumGift = obj6.useSelectPremiumGift("PremiumGiftPlanSelect");
+      let enabled = claimableRewards(onClose[22]).useConfig({ location: "PremiumGiftPlanSelect" }).enabled;
       const obj7 = claimableRewards(onClose[22]);
-      let enabled = obj7.useConfig({ location: "PremiumGiftPlanSelect" }).enabled;
       const items1 = [closure_9];
-      const obj8 = navigation(onClose[20]);
-      const stateFromStoresObject = obj8.useStateFromStoresObject(items1, () => {
-        const obj = {
-          nextTier: closure_9.getNextTier(navigation(onClose[23]).BadgeId.GIFTING),
-          giftsToNextTier: closure_9.getRemainingToNextTier(navigation(onClose[23]).BadgeId.GIFTING),
-        };
-        return obj;
-      });
+      const stateFromStoresObject = navigation(onClose[20]).useStateFromStoresObject(items1, () => ({
+        nextTier: closure_9.getNextTier(navigation(onClose[23]).BadgeId.GIFTING),
+        giftsToNextTier: closure_9.getRemainingToNextTier(navigation(onClose[23]).BadgeId.GIFTING),
+      }));
       ({ nextTier, giftsToNextTier } = stateFromStoresObject);
       if (enabled) {
         enabled = null != nextTier;
       }
-      const tmpResult = tmp(tmp2[24]);
+      const obj8 = navigation(onClose[20]);
       let str = "-DISABLED";
-      const useIsGiftingBadgeComplexArtEnabled = tmpResult.useIsGiftingBadgeComplexArtEnabled;
       if (enabled) {
         str = "";
       }
-      const isGiftingBadgeComplexArtEnabled = useIsGiftingBadgeComplexArtEnabled(`PremiumGiftPlanSelect${str}`);
-      const tmp15 = c17(width, height, enabled);
-      closure_5 = tmp15;
-      const tmp16 = selectPremiumGift(enabled.useState(0), 2);
-      currentIndex = tmp16[0];
-      [tmp20, c7] = selectPremiumGift(enabled.useState(false), 2);
+      const isGiftingBadgeComplexArtEnabled = navigation(onClose[24]).useIsGiftingBadgeComplexArtEnabled(
+        `PremiumGiftPlanSelect${str}`,
+      );
+      const tmp14 = c17(width, height, enabled);
+      closure_5 = tmp14;
+      const tmp15 = selectPremiumGift(enabled.useState(0), 2);
+      currentIndex = tmp15[0];
+      let tmpResult = navigation(onClose[24]);
+      [tmp19, c7] = selectPremiumGift(enabled.useState(false), 2);
       const items2 = [navigation];
-      selectPremiumGift(enabled.useState(false), 2);
       const effect = enabled.useEffect(() => {
         navigation = navigation.addListener("state", () => {
           state = state.getState();
           closure_1_7(state.routes[state.index].name === navigation(onClose[25]).PremiumGiftScreens.PLAN_SELECT);
         });
         return () => {
-          navigation.removeListener("state", state);
+          navigation.removeListener("state", closure_0);
         };
       }, items2);
-      const tmp22 = selectPremiumGift(enabled.useState(null), 2);
-      num = tmp22[0];
-      closure_9 = tmp23;
+      const tmp21 = selectPremiumGift(enabled.useState(null), 2);
+      num = tmp21[0];
+      closure_9 = tmp22;
       ref = enabled.useRef([]);
       const items3 = [shouldUseDMWishlistGiftingDesign];
       let length;
-      const useEffect = enabled.useEffect;
       if (claimableRewards != null) {
         length = claimableRewards.length;
       }
       items3[1] = length;
-      const effect1 = useEffect(() => {
+      const effect1 = enabled.useEffect(() => {
         ref.current = [];
         closure_9(null);
       }, items3);
-      const items4 = [tmp22[1]];
-      callback = obj9.useCallback(() => {
+      const items4 = [tmp21[1]];
+      callback = obj10.useCallback(() => {
         if (ref.current.length >= items.length) {
           const _Math = Math;
           items = [];
-          HermesBuiltin.arraySpread(items, tmp2.current, 0);
+          HermesBuiltin.arraySpread(tmp.current, 0);
           const _Math2 = Math;
-          const applyResult = HermesBuiltin.apply(max, items, Math);
+          const applyResult = HermesBuiltin.apply(items, Math);
           const _Number = Number;
           if (!Number.isNaN(applyResult)) {
             closure_9(applyResult);
           }
         }
       }, items4);
-      const callback1 = obj9.useCallback(() => {
+      const callback1 = obj10.useCallback(() => {
         claimableRewards(onClose[26])();
       }, []);
       let result = 0.86 * width;
       c12 = result;
       const items5 = [selectPremiumGift, result, ref, callback, num, currentIndex, claimableRewards];
-      callback2 = obj9.useCallback((variant) => {
-        let width;
+      callback2 = obj10.useCallback((variant) => {
         let obj = arg1;
         if (arg1 === undefined) {
           obj = { forScreenReader: false };
         }
         const forScreenReader = obj.forScreenReader;
         return (item) => {
-          let fn;
-          let obj3;
-          let str;
-          let tmp5;
           item = item.item;
           const index = item.index;
-          const tmp3 = forScreenReader ? metroRequire : metroImportDefault;
           const obj = {
             accessible: forScreenReader,
-            accessibilityRole: str,
-            onPress: fn,
-            style: { paddingVertical: nativeDefault.space.PX_8 },
-            children: width(tmp5, obj3, index),
+            accessibilityRole: null,
+            onPress: null,
+            style: null,
+            children: null,
           };
-          str = undefined;
+          let str;
           if (forScreenReader) {
             str = "button";
           }
-          fn = undefined;
+          obj.accessibilityRole = str;
+          let fn;
           if (forScreenReader) {
-            fn = () => closure_2_3(item);
+            fn = () => selectPremiumGift(item);
           }
-          obj3 = {
+          obj.onPress = fn;
+          obj.style = { paddingVertical: nativeDefault.space.PX_8 };
+          const obj3 = {
             premiumType: item,
             variant,
             onPress() {
-              return closure_2_3(item);
+              return selectPremiumGift(item);
             },
-            style: size,
-            onLayout(nativeEvent) {
-              const height = nativeEvent.nativeEvent.layout.height;
-              if (height > 0) {
-                num = ref.current[index];
-                const current = ref.current;
-                const _Math = Math;
-                if (num == null) {
-                  num = 0;
-                }
-                current[index] = max(height, num);
-                closure_2_11();
-              }
-            },
-            claimableRewards,
-            isSelected: first === index,
+            style: null,
+            onLayout: null,
+            claimableRewards: null,
+            isSelected: null,
           };
-          ({ paddingVertical: nativeDefault.space.PX_8 });
-          size = { height: num, width, alignSelf: str2 };
+          const obj2 = { paddingVertical: nativeDefault.space.PX_8 };
+          const tmp3 = forScreenReader ? timestampProducer : React5;
+          const size = { height: num, width, alignSelf: null };
           str2 = undefined;
-          tmp5 = PremiumGiftFeaturesCardDefault;
           if ("default" === variant) {
             str2 = "center";
           }
-          return width(tmp3, obj);
+          size.alignSelf = str2;
+          obj3.style = size;
+          obj3.onLayout = function onLayout(nativeEvent) {
+            const height = nativeEvent.nativeEvent.layout.height;
+            if (height > 0) {
+              num = ref.current[index];
+              if (num == null) {
+                num = 0;
+              }
+              ref.current[index] = Math.max(height, num);
+              callback();
+            }
+          };
+          obj3.claimableRewards = claimableRewards;
+          obj3.isSelected = first === index;
+          obj.children = __initData(PremiumGiftFeaturesCardDefault, obj3, index);
+          return __initData(tmp3, obj);
         };
       }, items5);
-      let tmp32 = null != claimableRewards;
-      const tmpResult6 = navigation(tmp2[28]);
-      const isWindowSmall = tmpResult6.useIsWindowSmall();
-      if (tmp32) {
-        tmp32 = claimableRewards.length > 0;
+      const tmp18 = selectPremiumGift(enabled.useState(false), 2);
+      let tmp31 = null != claimableRewards;
+      const isWindowSmall = navigation(onClose[28]).useIsWindowSmall();
+      if (tmp31) {
+        tmp31 = claimableRewards.length > 0;
       }
       if (isWindowSmall) {
         str2 = "smallCompact";
@@ -751,72 +727,63 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         str2 = "compact";
       }
       const items6 = [callback2, str2];
-      const memo = obj9.useMemo(() => callback2(str2), items6);
+      const memo = obj10.useMemo(() => callback2(str2), items6);
       const items7 = [callback2];
-      let memo1 = obj9.useMemo(() => callback2("default"), items7);
-      const tmpResult7 = navigation(tmp2[29]);
-      sharedValue = tmpResult7.useSharedValue(false);
+      let memo1 = obj10.useMemo(() => callback2("default"), items7);
+      const tmpResult6 = navigation(onClose[28]);
+      sharedValue = navigation(onClose[29]).useSharedValue(false);
       const items8 = [sharedValue, num];
-      const effect2 = obj9.useEffect(() => {
+      const effect2 = obj10.useEffect(() => {
         const result = sharedValue.set(null != num);
       }, items8);
+      const tmpResult7 = navigation(onClose[29]);
       function fe() {
         const obj = { easing: native.STANDARD_EASING, duration: 500 };
-        const withTiming = timing.withTiming;
         num = 0;
-        timing;
         if (sharedValue.get()) {
           num = 1;
         }
-        const obj3 = { opacity: withTiming(num, obj), transform: items };
-        const withTiming2 = timing.withTiming;
+        const obj4 = { opacity: timing.withTiming(num, obj), transform: null };
         let num2 = 100;
-        timing;
         if (sharedValue.get()) {
           num2 = 0;
         }
-        items = [{ translateY: withTiming2(num2, obj) }];
-        ({ translateY: withTiming2(num2, obj) });
-        return obj3;
+        const tmpResult = timing;
+        items = [{ translateY: timing.withTiming(num2, obj) }];
+        obj4.transform = items;
+        return obj4;
       }
-      const tmpResult8 = navigation(tmp2[29]);
+      const tmpResult8 = navigation(onClose[29]);
       fe.__closure = {
-        STANDARD_EASING: navigation(tmp2[30]).STANDARD_EASING,
-        withTiming: navigation(tmp2[31]).withTiming,
+        STANDARD_EASING: navigation(onClose[30]).STANDARD_EASING,
+        withTiming: navigation(onClose[31]).withTiming,
         carouselVisibility: sharedValue,
       };
       fe.__workletHash = 15067339177991;
       fe.__initData = __initData;
-      ({
-        STANDARD_EASING: navigation(tmp2[30]).STANDARD_EASING,
-        withTiming: navigation(tmp2[31]).withTiming,
-        carouselVisibility: sharedValue,
-      });
       const animatedStyle = tmpResult8.useAnimatedStyle(fe);
-      const items9 = [tmp15];
-      const sum = result + v16;
-      v16 = sum;
+      const items9 = [tmp14];
+      const sum = result + c16;
+      c16 = sum;
       let diff = sharedValue.length - 1;
       c17 = diff;
       result1 = (width - result) / 2;
-      diff1 = width - result - v16;
+      diff1 = width - result - c16;
       class Se {
         constructor(arg0, arg1) {
-          const diff = arg1 - arg0;
-          const bound = Math.max(0, Math.min(1, diff));
-          const obj = { transform: items };
-          items = [
-            {
-              translateX:
-                arg0 * c16 +
-                (16 + bound * (result1 - 16) + Math.max(0, Math.min(1, diff - (c17 - 1))) * (diff1 - result1)),
-            },
-          ];
-          ({
+          diff = arg1 - shouldUseDMWishlistGiftingDesign;
+          bound = Math.max(0, Math.min(1, diff));
+          obj = { transform: null };
+          obj1 = {
             translateX:
-              arg0 * c16 +
-              (16 + bound * (result1 - 16) + Math.max(0, Math.min(1, diff - (c17 - 1))) * (diff1 - result1)),
-          });
+              shouldUseDMWishlistGiftingDesign * closure_16 +
+              (16 +
+                bound * (closure_18 - 16) +
+                Math.max(0, Math.min(1, diff - (closure_17 - 1))) * (closure_19 - closure_18)),
+          };
+          items = [];
+          items[0] = obj1;
+          obj.transform = items;
           return obj;
         }
       }
@@ -830,273 +797,280 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       Se.__workletHash = 15752257370037;
       Se.__initData = __initData2;
       const items10 = [sum, diff, 16, result1, diff1];
-      const memo2 = obj9.useMemo(() => {
-        items = [,];
+      const memo2 = obj10.useMemo(() => {
         const obj = _modDef683(closure_5.headerBackgroundColor.color);
-        const alphaResult = obj.alpha(0);
-        items[0] = alphaResult.hex();
+        items = [_modDef683(closure_5.headerBackgroundColor.color).alpha(0).hex()];
+        const alphaResult = _modDef683(closure_5.headerBackgroundColor.color).alpha(0);
         const obj3 = _modDef683(closure_5.headerBackgroundColor.color);
-        const alphaResult1 = obj3.alpha(1);
-        items[1] = alphaResult1.hex();
+        items[1] = _modDef683(closure_5.headerBackgroundColor.color).alpha(1).hex();
         return items;
       }, items9);
-      const callback3 = obj9.useCallback(Se, items10);
-      if (isLoadingWishlist) {
-        const obj11 = { style: items11, children: c12(closure_5, { size: "large" }) };
-        items11 = [,];
-        ({ container: arr23[0], loadingContainer: arr23[1] } = tmp15);
-        tmp64Result6 = c12(c7, obj11);
+      const callback3 = obj10.useCallback(Se, items10);
+      if (shouldUseDMWishlistGiftingDesign.isLoadingWishlist) {
+        const obj11 = { style: null, children: null };
+        const items11 = [,];
+        ({ container: arr23[0], loadingContainer: arr23[1] } = tmp14);
+        obj11.style = items11;
+        obj11.children = c12(closure_5, { size: "large" });
+        let tmp65Result5 = c12(c7, obj11);
       } else if (shouldUseDMWishlistGiftingDesign) {
-        const obj12 = { style: tmp15.container, children: tmp66(num, obj13) };
-        obj13 = { contentContainerStyle: obj14, children: items12 };
-        let tmp64Result = enabled;
-        obj14 = { paddingBottom: bottom };
-        tmp66 = callback2;
+        const obj12 = { style: tmp14.container, children: null };
+        const obj13 = { contentContainerStyle: null, children: null };
+        const obj14 = { paddingBottom: bottom };
+        obj13.contentContainerStyle = obj14;
+        let tmp65Result = enabled;
         if (enabled) {
-          const obj15 = { style: tmp15.badgeBanner, children: c12(tmp69, obj16) };
-          obj16 = { onPress: callback1, accessibilityRole: "button", children: c12(tmp4Result, obj17) };
-          obj17 = {
-            giftsToNextTier,
-            nextTierName: str5,
-            nextTierIcon: tmpResult9.getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled),
-            analyticsLocation: claimableRewards(tmp2[33]).PREMIUM_GIFT_PLAN_SELECTION,
-          };
-          str5 = nextTier.name;
-          tmp4Result = claimableRewards(tmp2[32]);
-          tmp69 = currentIndex;
+          const obj15 = { style: tmp14.badgeBanner, children: null };
+          const obj16 = { onPress: callback1, accessibilityRole: "button", children: null };
+          const obj17 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
+          let str5 = nextTier.name;
           if (str5 == null) {
             str5 = "";
           }
-          tmpResult9 = navigation(tmp2[24]);
-          tmp64Result = tmp64(tmp65, obj15);
+          obj17.nextTierName = str5;
+          const tmp4Result = tmp4(tmp2[32]);
+          const tmp70 = currentIndex;
+          obj17.nextTierIcon = tmp(tmp2[24]).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+          obj17.analyticsLocation = tmp4(tmp2[33]).PREMIUM_GIFT_PLAN_SELECTION;
+          obj16.children = tmp65(tmp4Result, obj17);
+          obj15.children = tmp65(tmp70, obj16);
+          tmp65Result = tmp65(tmp66, obj15);
+          const tmpResult9 = tmp(tmp2[24]);
         }
-        items12 = [tmp64Result, ,];
-        const obj18 = { style: tmp15.dmGiftingContent, children: tmp71 };
-        if (0 === stateFromStoresArray.length) {
-          let tmp64Result4;
-          if (isScreenReaderEnabled) {
-            const obj19 = {
-              horizontal: true,
-              showsHorizontalScrollIndicator: false,
-              contentContainerStyle: obj21,
-              children: sharedValue.map((item, index) => {
-                const obj = { item, index };
-                return callback2(str2, { forScreenReader: true })(obj);
-              }),
-            };
-            obj21 = { gap: v16, paddingHorizontal: v16 };
-            tmp64Result4 = tmp64(tmp67, obj19);
-          } else {
-            size = {
-              style: animatedStyle,
-              data: sharedValue,
-              renderItem: memo,
-              width,
-              windowSize: sharedValue.length,
-              height: num + 2 * tmp4(tmp2[9]).space.PX_8,
-              onConfigurePanGesture(activeOffsetX) {
-                activeOffsetX.activeOffsetX([-10, 10]);
-              },
-              loop: false,
-              scrollAnimationDuration: 200,
-              customAnimation: callback3,
-              onSnapToItem: tmp16[1],
-            };
-            const tmp4Result5 = claimableRewards(tmp2[34]);
-            if (num == null) {
-              num = 1;
+        const items12 = [tmp65Result, ,];
+        const obj18 = { style: tmp14.dmGiftingContent, children: null };
+        if (0 !== stateFromStoresArray.length) {
+          if (undefined === claimableRewards) {
+            obj18.children = null;
+            items12[1] = tmp65(tmp66, obj18);
+            let tmp65Result4 = null != recipientUser;
+            if (tmp65Result4) {
+              const obj19 = { giftRecipient: recipientUser };
+              tmp65Result4 = tmp65(tmp(tmp2[35]).PremiumGiftWishlistBanner, obj19);
             }
-            tmp64Result4 = tmp64(tmp4Result5, size);
+            items12[2] = tmp65Result4;
+            obj13.children = items12;
+            obj12.children = tmp67(tmp68, obj13);
+            tmp65Result5 = tmp65(tmp66, obj12);
           }
-          tmp71 = tmp64Result4;
+        }
+        if (isScreenReaderEnabled) {
+          const obj20 = {
+            horizontal: true,
+            showsHorizontalScrollIndicator: false,
+            contentContainerStyle: null,
+            children: null,
+          };
+          const obj22 = { gap: tmp38, paddingHorizontal: tmp38 };
+          obj20.contentContainerStyle = obj22;
+          obj20.children = arr12.map((item, index) => callback2(str2, { forScreenReader: true })({ item, index }));
+          let tmp65Result6 = tmp65(tmp68, obj20);
         } else {
-          tmp71 = null;
+          let size = {
+            style: animatedStyle,
+            data: arr12,
+            renderItem: memo,
+            width,
+            windowSize: arr12.length,
+            height: null,
+            onConfigurePanGesture: null,
+            loop: false,
+            scrollAnimationDuration: 200,
+            customAnimation: null,
+            onSnapToItem: null,
+          };
+          if (num == null) {
+            num = 1;
+          }
+          size.height = num + 2 * tmp4(tmp2[9]).space.PX_8;
+          size.onConfigurePanGesture = function onConfigurePanGesture(activeOffsetX) {
+            activeOffsetX.activeOffsetX([-10, 10]);
+          };
+          size.customAnimation = callback3;
+          size.onSnapToItem = tmp17;
+          tmp65Result6 = tmp65(tmp4(tmp2[34]), size);
+          const tmp4Result5 = tmp4(tmp2[34]);
         }
-        items12[1] = c12(c7, obj18);
-        let tmp64Result5 = null != recipientUser;
-        if (tmp64Result5) {
-          const obj22 = { giftRecipient: recipientUser };
-          tmp64Result5 = tmp64(tmp(tmp2[35]).PremiumGiftWishlistBanner, obj22);
-        }
-        items12[2] = tmp64Result5;
-        tmp64Result6 = tmp64(tmp65, obj12);
+        tmp67 = callback2;
       } else {
-        let tmp58;
-        if (tmp20) {
-          tmp20 = c12(claimableRewards(tmp2[36]), { animated: true, barStyle: "light-content" });
+        if (tmp19) {
+          tmp19 = c12(tmp4(tmp2[36]), { animated: true, barStyle: "light-content" });
         }
-        const items13 = [tmp20, , , , ,];
+        const items13 = [tmp19, , , , ,];
         const obj23 = {
-          style: items14,
-          onPress: onClose,
+          style: null,
+          onPress: null,
           accessibilityRole: "button",
-          accessibilityLabel: intl.string(navigation(tmp2[37]).t.cpT0Cq),
-          children: c12(c7, obj25),
+          accessibilityLabel: null,
+          children: null,
         };
-        items14 = [tmp15.closeButtonContainer];
+        const items14 = [tmp14.closeButtonContainer];
         const obj24 = { paddingTop: top };
         items14[1] = obj24;
-        intl = tmp(tmp2[37]).intl;
-        obj25 = { style: tmp15.closeButton, children: c12(navigation(tmp2[38]).XSmallIcon, obj26) };
-        obj26 = { size: "md", style: tmp15.closeButtonIcon };
+        obj23.style = items14;
+        obj23.onPress = onClose;
+        const intl = tmp(tmp2[37]).intl;
+        obj23.accessibilityLabel = intl.string(tmp(tmp2[37]).t.cpT0Cq);
+        const obj25 = { style: tmp14.closeButton, children: null };
+        const obj26 = { size: "md", style: tmp14.closeButtonIcon };
+        obj25.children = c12(tmp(tmp2[38]).XSmallIcon, obj26);
+        obj23.children = c12(c7, obj25);
         items13[1] = c12(currentIndex, obj23);
-        const obj27 = { resizeMode: "cover", style: items15, source: claimableRewards(tmp2[40]) };
-        items15 = [,];
-        ({ headerImageContainer: arr16[0], headerImage: arr16[1] } = tmp15);
-        const tmp4Result6 = claimableRewards(tmp2[39]);
-        items13[2] = c12(tmp4Result6, obj27);
-        const obj28 = { style: items16 };
-        items16 = [,];
-        ({ headerImageContainer: arr17[0], headerOverlay: arr17[1] } = tmp15);
+        const obj27 = { resizeMode: "cover", style: null, source: null };
+        const items15 = [,];
+        ({ headerImageContainer: arr16[0], headerImage: arr16[1] } = tmp14);
+        obj27.style = items15;
+        obj27.source = tmp4(tmp2[40]);
+        items13[2] = c12(tmp4(tmp2[39]), obj27);
+        const obj28 = { style: null };
+        const items16 = [,];
+        ({ headerImageContainer: arr17[0], headerOverlay: arr17[1] } = tmp14);
+        obj28.style = items16;
         items13[3] = c12(c7, obj28);
-        const obj29 = { style: tmp15.headerBackground, start: null, end: null, colors: memo2 };
-        ({ START: obj20.start, END: obj20.end } = callback);
-        items13[4] = c12(claimableRewards(tmp2[41]), obj29);
-        const obj30 = { contentContainerStyle: obj31, children: callback2(tmp50, obj32) };
-        obj31 = { paddingBottom: bottom };
-        obj32 = { style: items17, children: items18 };
-        items17 = [{ paddingTop: top + navigation(tmp2[15]).NAV_BAR_HEIGHT }];
-        let tmp48Result = null != recipientUser;
-        const obj33 = { paddingTop: top + navigation(tmp2[15]).NAV_BAR_HEIGHT };
-        const tmp49 = currentIndex;
-        tmp50 = c7;
-        if (tmp48Result) {
-          const obj34 = {
-            style: tmp15.avatar,
-            guildId: "r",
-            size: enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE,
-            user: recipientUser,
-          };
-          const Avatar = tmp(tmp2[30]).Avatar;
-          AvatarSizes = tmp(tmp2[30]).AvatarSizes;
-          tmp48Result = tmp48(Avatar, obj34);
-        }
-        items18 = [tmp48Result, , , ,];
-        const obj35 = {
-          style: tmp15.title,
-          variant: str3,
-          color: "text-overlay-light",
-          children: formatToPlainStringResult,
-        };
-        str3 = "heading-xxl/extrabold";
-        const Text = tmp(tmp2[42]).Text;
-        if (null != recipientUser) {
-          str3 = "heading-xl/extrabold";
-        }
-        if (null != recipientUser) {
-          const intl3 = tmp(tmp2[37]).intl;
-          const formatToPlainString = intl3.formatToPlainString;
-          let username = recipientUser.globalName;
-          const m5ggvH = tmp(tmp2[37]).t.m5ggvH;
-          if (username == null) {
-            username = recipientUser.username;
+        const obj29 = { style: tmp14.headerBackground, start: null, end: null, colors: null };
+        ({ START: obj21.start, END: obj21.end } = callback);
+        obj29.colors = memo2;
+        items13[4] = c12(tmp4(tmp2[41]), obj29);
+        const obj30 = { contentContainerStyle: null, children: null };
+        const obj31 = { paddingBottom: bottom };
+        obj30.contentContainerStyle = obj31;
+        const obj32 = { style: null, children: null };
+        const obj33 = { paddingTop: top + tmp(tmp2[15]).NAV_BAR_HEIGHT };
+        const items17 = [obj33];
+        obj32.style = items17;
+        if (null == recipientUser) {
+          const items18 = [tmp53, , , ,];
+          const obj34 = { style: tmp14.title, variant: null, color: "text-overlay-light", children: null };
+          let str3 = "heading-xxl/extrabold";
+          if (null != recipientUser) {
+            str3 = "heading-xl/extrabold";
           }
-          const obj36 = { username };
-          formatToPlainStringResult = formatToPlainString(m5ggvH, obj36);
-        } else {
-          const intl2 = tmp(tmp2[37]).intl;
-          formatToPlainStringResult = intl2.string(tmp(tmp2[37]).t.dqQgZv);
-        }
-        items18[1] = c12(Text, obj35);
-        const obj37 = {
-          style: tmp15.description,
-          variant: "heading-sm/medium",
-          color: "text-overlay-light",
-          children: intl4.string(navigation(tmp2[37]).t["30qzrd"]),
-        };
-        const Text2 = tmp(tmp2[42]).Text;
-        intl4 = tmp(tmp2[37]).intl;
-        items18[2] = c12(Text2, obj37);
-        let tmp48Result3 = enabled;
-        if (tmp48Result3) {
-          const obj38 = {
-            style: tmp15.badgeBanner,
-            onPress: callback1,
-            accessibilityRole: "button",
-            children: c12(tmp4Result7, obj39),
-          };
-          obj39 = {
-            giftsToNextTier,
-            nextTierName: str4,
-            nextTierIcon: tmpResult10.getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled),
-            analyticsLocation: claimableRewards(tmp2[33]).PREMIUM_GIFT_PLAN_SELECTION,
-          };
-          str4 = nextTier.name;
-          tmp4Result7 = claimableRewards(tmp2[32]);
-          if (str4 == null) {
-            str4 = "";
+          obj34.variant = str3;
+          if (null != recipientUser) {
+            const intl3 = tmp(tmp2[37]).intl;
+            let username = recipientUser.globalName;
+            if (username == null) {
+              username = recipientUser.username;
+            }
+            const obj35 = { username };
+            let formatToPlainStringResult = intl3.formatToPlainString(tmp(tmp2[37]).t.m5ggvH, obj35);
+          } else {
+            const intl2 = tmp(tmp2[37]).intl;
+            formatToPlainStringResult = intl2.string(tmp(tmp2[37]).t.dqQgZv);
           }
-          tmpResult10 = navigation(tmp2[24]);
-          tmp48Result3 = tmp48(tmp49, obj38);
-        }
-        items18[3] = tmp48Result3;
-        if (0 === stateFromStoresArray.length) {
-          let tmp48Result4;
+          obj34.children = formatToPlainStringResult;
+          items18[1] = tmp47(tmp(tmp2[42]).Text, obj34);
+          const obj36 = {
+            style: tmp14.description,
+            variant: "heading-sm/medium",
+            color: "text-overlay-light",
+            children: null,
+          };
+          const intl4 = tmp(tmp2[37]).intl;
+          obj36.children = intl4.string(tmp(tmp2[37]).t["30qzrd"]);
+          items18[2] = tmp47(tmp(tmp2[42]).Text, obj36);
+          let tmp47Result = enabled;
+          if (enabled) {
+            const obj37 = { style: tmp14.badgeBanner, onPress: callback1, accessibilityRole: "button", children: null };
+            const obj38 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
+            let str4 = nextTier.name;
+            if (str4 == null) {
+              str4 = "";
+            }
+            obj38.nextTierName = str4;
+            const tmp4Result7 = tmp4(tmp2[32]);
+            obj38.nextTierIcon = tmp(tmp2[24]).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+            obj38.analyticsLocation = tmp4(tmp2[33]).PREMIUM_GIFT_PLAN_SELECTION;
+            obj37.children = tmp47(tmp4Result7, obj38);
+            tmp47Result = tmp47(tmp48, obj37);
+            const tmpResult10 = tmp(tmp2[24]);
+          }
+          items18[3] = tmp47Result;
+          if (0 !== stateFromStoresArray.length) {
+            if (undefined === claimableRewards) {
+              const obj39 = { children: null };
+              items18[4] = null;
+              obj32.children = items18;
+              obj30.children = tmp44(tmp49, obj32);
+              items13[5] = tmp47(tmp52, obj30);
+              obj39.children = items13;
+              tmp65Result5 = tmp44(tmp45, obj39);
+            }
+          }
           if (isScreenReaderEnabled) {
             const obj40 = {
               horizontal: true,
               showsHorizontalScrollIndicator: false,
-              style: tmp15.carousel,
-              contentContainerStyle: obj41,
-              children: sharedValue.map((item, index) => {
-                let str = "default";
-                if (enabled) {
-                  str = str2;
-                }
-                const obj = { item, index };
-                return callback2(str, { forScreenReader: true })(obj);
-              }),
+              style: tmp14.carousel,
+              contentContainerStyle: null,
+              children: null,
             };
-            obj41 = { gap: v16, paddingHorizontal: v16 };
-            tmp48Result4 = tmp48(tmp53, obj40);
+            const obj41 = { gap: tmp38, paddingHorizontal: tmp38 };
+            obj40.contentContainerStyle = obj41;
+            obj40.children = arr12.map((item, index) => {
+              let str = "default";
+              if (enabled) {
+                str = str2;
+              }
+              return callback2(str, { forScreenReader: true })({ item, index });
+            });
+            let tmp47Result3 = tmp47(tmp52, obj40);
           } else {
             const size1 = {
-              style: items19,
-              data: sharedValue,
-              renderItem: memo1,
-              width,
-              height: sum1,
-              onConfigurePanGesture(activeOffsetX) {
-                activeOffsetX.activeOffsetX([-10, 10]);
-              },
+              style: null,
+              data: null,
+              renderItem: null,
+              width: null,
+              height: null,
+              onConfigurePanGesture: null,
               loop: false,
               scrollAnimationDuration: 200,
-              customAnimation: tmp61,
+              customAnimation: null,
               mode: "parallax",
-              modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 40 },
-              onSnapToItem: tmp16[1],
+              modeConfig: null,
+              onSnapToItem: null,
             };
-            items19 = [tmp15.carousel, animatedStyle];
-            const tmp4Result8 = claimableRewards(tmp2[34]);
+            const items19 = [tmp14.carousel, animatedStyle];
+            size1.style = items19;
+            size1.data = arr12;
             if (enabled) {
               memo1 = memo;
             }
-            sum1 = undefined;
+            size1.renderItem = memo1;
+            size1.width = width;
+            let sum1;
             if (null != num) {
               sum1 = num + 2 * tmp4(tmp2[9]).space.PX_8;
             }
-            tmp61 = undefined;
+            size1.height = sum1;
+            size1.onConfigurePanGesture = function onConfigurePanGesture(activeOffsetX) {
+              activeOffsetX.activeOffsetX([-10, 10]);
+            };
+            let tmp61;
             if (enabled) {
               tmp61 = callback3;
             }
-            const obj42 = { children: items20 };
-            items20 = [c12(tmp4Result8, size1)];
-            const obj43 = { numberOfItems: sharedValue.length, currentIndex };
-            items20[1] = c12(navigation(tmp2[30]).CarouselPagination, obj43);
-            tmp48Result4 = tmp45(tmp46, obj42);
+            const obj42 = { children: null };
+            size1.customAnimation = tmp61;
+            size1.modeConfig = { parallaxScrollingScale: 1, parallaxScrollingOffset: 40 };
+            size1.onSnapToItem = tmp17;
+            const items20 = [tmp47(tmp4(tmp2[34]), size1)];
+            const obj43 = { numberOfItems: arr12.length, currentIndex };
+            items20[1] = tmp47(tmp(tmp2[30]).CarouselPagination, obj43);
+            obj42.children = items20;
+            tmp47Result3 = tmp44(tmp45, obj42);
+            const tmp4Result8 = tmp4(tmp2[34]);
           }
-          tmp58 = tmp48Result4;
         } else {
-          tmp58 = null;
+          const obj44 = { style: tmp14.avatar, guildId: "r", size: "Reflect", user: null };
+          const AvatarSizes = tmp(tmp2[30]).AvatarSizes;
+          obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
+          obj44.user = recipientUser;
+          tmp47(tmp(tmp2[30]).Avatar, obj44);
         }
-        const obj44 = { children: items13 };
-        items18[4] = tmp58;
-        items13[5] = c12(num, obj30);
-        tmp64Result6 = tmp45(tmp46, obj44);
+        tmp48 = currentIndex;
+        tmp49 = c7;
+        const tmp4Result6 = tmp4(tmp2[39]);
       }
-      return tmp64Result6;
+      return tmp65Result5;
     };
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelect.tsx");
-
-export default tmp4;

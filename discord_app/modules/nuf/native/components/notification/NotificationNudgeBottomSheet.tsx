@@ -1,51 +1,44 @@
 // discord_app/modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import DismissibleContentConstants from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import NotificationPermissionConstants from "NotificationPermissionConstants.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let BottomSheet;
-
-let c10;
-let c9;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-const View = react_native.View;
+require = fn;
+const View = fn(17).View;
+const NotificationPermissionConstants = fn(12068);
 ({ EventActionType: hasOwnProperty, NotificationNudgeAnalyticsAction: metroRequire } = NotificationPermissionConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-({ jsx: c9, jsxs: c10 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, illustration: obj3, title: { textAlign: "center" }, body: obj4, buttonsContainer: obj5 };
-obj2 = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
-createStyles = createStyles.createStyles;
-obj3 = { marginVertical: nativeDefault.space.PX_24 };
-obj4 = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
-obj5 = { marginTop: nativeDefault.space.PX_8, width: "100%" };
-let closure_11 = createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" },
+  illustration: null,
+  title: null,
+  body: null,
+  buttonsContainer: null,
+};
+const obj3 = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
+obj2.illustration = { marginVertical: nativeDefault.space.PX_24 };
+obj2.title = { textAlign: "center" };
+const obj4 = { marginVertical: nativeDefault.space.PX_24 };
+obj2.body = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
+const obj5 = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
+obj2.buttonsContainer = { marginTop: nativeDefault.space.PX_8, width: "100%" };
+let closure_11 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj6 = { marginTop: nativeDefault.space.PX_8, width: "100%" };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (surface) => {
-      let actionLocation;
-      let body;
-      let markAsDismissed;
-      let title;
-      let tmp3;
-      let tmp4;
-      let obj = actionLocation(markAsDismissed[9]);
-      const cResult = obj.c(41);
+      const cResult = actionLocation(markAsDismissed[9]).c(41);
       ({ title, body, actionLocation } = surface);
       surface = surface.surface;
       markAsDismissed = surface.markAsDismissed;
@@ -53,16 +46,17 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       closure_11();
       if (cResult[0] !== surface) {
         const fn = function _() {
-          const obj = AnalyticsUtilsDefault;
-          const obj2 = { action: metroRequire.IMPRESSION, prompt_type: surface };
-          obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj2);
+          AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
+            action: constants2.IMPRESSION,
+            prompt_type: surface,
+          });
         };
         const items = [surface];
         cResult[0] = surface;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp4 = items;
-        tmp3 = fn;
+        let tmp4 = items;
+        let tmp3 = fn;
       } else {
         tmp3 = cResult[1];
         tmp4 = cResult[2];
@@ -71,11 +65,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== onHide) {
         class I {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            obj.hideActionSheet();
+            obj = closure_1(closure_2[11]);
+            hideActionSheetResult = obj.hideActionSheet();
             if (onHide != null) {
-              onHide();
+              tmp2 = onHide();
             }
+            return;
           }
         }
         cResult[3] = onHide;
@@ -83,11 +78,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class I {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            obj.hideActionSheet();
+            obj = closure_1(closure_2[11]);
+            hideActionSheetResult = obj.hideActionSheet();
             if (onHide != null) {
-              onHide();
+              tmp2 = onHide();
             }
+            return;
           }
         }
       }
@@ -95,24 +91,26 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] === actionLocation) {
         class I {
           constructor() {
-            const obj = ActionSheetActionCreatorsDefault;
-            obj.hideActionSheet();
+            obj = closure_1(closure_2[11]);
+            hideActionSheetResult = obj.hideActionSheet();
             if (onHide != null) {
-              onHide();
+              tmp2 = onHide();
             }
+            return;
           }
         }
       }
       const fn2 = function x() {
-        const obj = AnalyticsUtilsDefault;
-        const obj2 = { action: metroRequire.ACCEPT, prompt_type: surface };
-        obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj2);
+        AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
+          action: constants2.ACCEPT,
+          prompt_type: surface,
+        });
         markAsDismissed(ContentDismissActionType.USER_DISMISS);
-        const obj3 = NotificationPermissionUtil;
-        const pushNotificationPermission = obj3.requestPushNotificationPermission(
-          hasOwnProperty.ALLOW_TO_REQUEST,
+        const obj2 = { action: constants2.ACCEPT, prompt_type: surface };
+        const pushNotificationPermission = NotificationPermissionUtil.requestPushNotificationPermission(
+          constants.ALLOW_TO_REQUEST,
           actionLocation,
-          I,
+          closure_4,
         );
       };
       cResult[5] = actionLocation;
@@ -122,15 +120,6 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = fn2;
     }
   : (actionLocation) => {
-      let ButtonGroup;
-      let body;
-      let intl;
-      let intl2;
-      let items4;
-      let items5;
-      let obj2;
-      let obj7;
-      let title;
       actionLocation = actionLocation.actionLocation;
       const surface = actionLocation.surface;
       const markAsDismissed = actionLocation.markAsDismissed;
@@ -139,14 +128,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       const items = [surface];
       const effect = onHide.useEffect(() => {
-        const obj = AnalyticsUtilsDefault;
-        const obj2 = { action: metroRequire.IMPRESSION, prompt_type: surface };
-        obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj2);
+        AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
+          action: constants2.IMPRESSION,
+          prompt_type: surface,
+        });
       }, items);
       const items1 = [onHide];
       const callback = onHide.useCallback(() => {
-        const obj = ActionSheetActionCreatorsDefault;
-        obj.hideActionSheet();
+        ActionSheetActionCreatorsDefault.hideActionSheet();
         if (onHide != null) {
           onHide();
         }
@@ -154,56 +143,62 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [surface, actionLocation, callback, markAsDismissed];
       const items3 = [surface, callback, markAsDismissed];
       const callback1 = onHide.useCallback(() => {
-        const obj = AnalyticsUtilsDefault;
-        const obj2 = { action: metroRequire.ACCEPT, prompt_type: surface };
-        obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj2);
+        AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
+          action: constants2.ACCEPT,
+          prompt_type: surface,
+        });
         markAsDismissed(ContentDismissActionType.USER_DISMISS);
-        const obj3 = NotificationPermissionUtil;
-        const pushNotificationPermission = obj3.requestPushNotificationPermission(
-          hasOwnProperty.ALLOW_TO_REQUEST,
+        const obj2 = { action: constants2.ACCEPT, prompt_type: surface };
+        const pushNotificationPermission = NotificationPermissionUtil.requestPushNotificationPermission(
+          constants.ALLOW_TO_REQUEST,
           actionLocation,
           callback,
         );
       }, items2);
       const callback2 = onHide.useCallback(() => {
-        const obj = AnalyticsUtilsDefault;
-        const obj2 = { action: metroRequire.DISMISS, prompt_type: surface };
-        obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj2);
+        AnalyticsUtilsDefault.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, {
+          action: constants2.DISMISS,
+          prompt_type: surface,
+        });
         markAsDismissed(ContentDismissActionType.USER_DISMISS);
         callback();
       }, items3);
-      let obj = { children: closure_10(callback, obj2) };
-      obj2 = { style: tmp.container, children: items4 };
-      let obj3 = {
-        style: tmp.illustration,
-        children: closure_9(actionLocation(markAsDismissed[13]).BellSpotIllustration, { scale: 0.8 }),
-      };
-      BottomSheet = actionLocation(markAsDismissed[18]).BottomSheet;
-      items4 = [closure_9(callback, obj3), , ,];
-      const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: title };
-      items4[1] = closure_9(actionLocation(markAsDismissed[14]).Text, obj4);
-      const obj5 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: body };
-      items4[2] = closure_9(actionLocation(markAsDismissed[14]).Text, obj5);
-      const obj6 = { style: tmp.buttonsContainer, children: closure_10(ButtonGroup, obj7) };
-      obj7 = { children: items5 };
-      ButtonGroup = actionLocation(markAsDismissed[17]).ButtonGroup;
-      const obj8 = { text: intl.string(actionLocation(markAsDismissed[15]).t["+7MDbQ"]), onPress: callback1 };
-      const Button = actionLocation(markAsDismissed[16]).Button;
-      intl = actionLocation(markAsDismissed[15]).intl;
-      items5 = [closure_9(Button, obj8)];
-      const obj9 = {
-        text: intl2.string(actionLocation(markAsDismissed[15]).t.L5eIZ2),
-        onPress: callback2,
-        variant: "secondary",
-      };
-      const Button2 = actionLocation(markAsDismissed[16]).Button;
-      intl2 = actionLocation(markAsDismissed[15]).intl;
-      items5[1] = closure_9(Button2, obj9);
+      let obj = { children: null };
+      let obj2 = { style: tmp.container, children: null };
+      const items4 = [
+        closure_9(callback, {
+          style: tmp.illustration,
+          children: closure_9(actionLocation(markAsDismissed[13]).BellSpotIllustration, { scale: 0.8 }),
+        }),
+        closure_9(actionLocation(markAsDismissed[14]).Text, {
+          style: tmp.title,
+          variant: "heading-xl/bold",
+          accessibilityRole: "header",
+          children: title,
+        }),
+        closure_9(actionLocation(markAsDismissed[14]).Text, {
+          style: tmp.body,
+          variant: "text-sm/medium",
+          color: "text-default",
+          children: body,
+        }),
+      ];
+      const obj6 = { style: tmp.buttonsContainer, children: null };
+      const obj7 = { children: null };
+      const obj8 = { text: null, onPress: null };
+      const intl = actionLocation(markAsDismissed[15]).intl;
+      obj8.text = intl.string(actionLocation(markAsDismissed[15]).t["+7MDbQ"]);
+      obj8.onPress = callback1;
+      const items5 = [closure_9(actionLocation(markAsDismissed[16]).Button, obj8)];
+      const obj9 = { text: null, onPress: null, variant: "secondary" };
+      const intl2 = actionLocation(markAsDismissed[15]).intl;
+      obj9.text = intl2.string(actionLocation(markAsDismissed[15]).t.L5eIZ2);
+      obj9.onPress = callback2;
+      items5[1] = closure_9(actionLocation(markAsDismissed[16]).Button, obj9);
+      obj7.children = items5;
+      obj6.children = closure_10(actionLocation(markAsDismissed[17]).ButtonGroup, obj7);
       items4[3] = closure_9(callback, obj6);
-      return closure_9(BottomSheet, obj);
+      obj2.children = items4;
+      obj.children = closure_10(callback, obj2);
+      return closure_9(actionLocation(markAsDismissed[18]).BottomSheet, obj);
     };
-const result = size.fileFinishedImporting(
-  "modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx",
-);
-
-export default tmp5;

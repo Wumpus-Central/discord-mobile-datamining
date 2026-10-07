@@ -1,189 +1,162 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl3 from "../../../../intl/index.native.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import SecureFramesUtils from "../../../rtc/SecureFramesUtils.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let dependencyMap, navigation;
-
+require = fn;
 function VerificationListItem(verification) {
-  let end;
-  let end2;
-  let index;
-  let index2;
-  let start;
-  let start2;
-  let tmp8;
-  let userId;
-  let userId2;
   if (closure_9) {
-    const obj4 = userId(576);
-    const cResult = obj4.c(16);
+    let TableRow = userId;
+    let tmp7 = dependencyMap;
+    const cResult = userId(576).c(16);
     ({ index: index2, userId: userId2 } = verification);
+    closure_129_0 = userId2;
     const verification2 = verification.verification;
+    closure_129_1 = verification2;
     ({ start: start2, end: end2 } = verification);
     if (cResult[0] === userId2) {
-      let tmp12;
-      let tmp13;
-      let tmp15;
-      let tmp18;
-      let tmp21;
       if (cResult[1] === verification2.verifiedKey) {
-        tmp12 = cResult[2];
+        let tmp9 = cResult[2];
       }
       if (cResult[3] !== verification2.timestamp) {
-        const tmp9Result = userId(9378);
-        const secureFramesUserVerifiedTimestamp = tmp9Result.getSecureFramesUserVerifiedTimestamp(
+        const secureFramesUserVerifiedTimestamp = TableRow(9378).getSecureFramesUserVerifiedTimestamp(
           verification2.timestamp,
         );
         cResult[3] = verification2.timestamp;
         cResult[4] = secureFramesUserVerifiedTimestamp;
-        tmp13 = secureFramesUserVerifiedTimestamp;
+        let tmp10 = secureFramesUserVerifiedTimestamp;
+        const TableRowResult = TableRow(9378);
       } else {
-        tmp13 = cResult[4];
+        tmp10 = cResult[4];
       }
       if (cResult[5] !== index2) {
-        const intl2 = tmp9(1126).intl;
+        const intl2 = TableRow(1126).intl;
         const obj2 = { index: index2 };
-        const formatToPlainStringResult = intl2.formatToPlainString(userId(1126).t.N4qBBO, obj2);
+        const formatToPlainStringResult = intl2.formatToPlainString(TableRow(1126).t.N4qBBO, obj2);
         cResult[5] = index2;
         cResult[6] = formatToPlainStringResult;
-        tmp15 = formatToPlainStringResult;
+        let tmp12 = formatToPlainStringResult;
       } else {
-        tmp15 = cResult[6];
+        tmp12 = cResult[6];
       }
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp20 = jsx(userId(6024).XSmallIcon, {});
-        cResult[7] = tmp20;
-        tmp18 = tmp20;
+        const tmp17 = jsx(TableRow(6024).XSmallIcon, {});
+        cResult[7] = tmp17;
+        let tmp15 = tmp17;
       } else {
-        tmp18 = cResult[7];
+        tmp15 = cResult[7];
       }
-      if (cResult[8] !== tmp12) {
-        const tmp23 = jsx(userId(5916).PressableHighlight, { onPress: tmp12, children: tmp18 });
-        cResult[8] = tmp12;
-        cResult[9] = tmp23;
-        tmp21 = tmp23;
+      if (cResult[8] !== tmp9) {
+        const obj3 = { onPress: tmp9, children: tmp15 };
+        const tmp20 = jsx(TableRow(5916).PressableHighlight, { onPress: tmp9, children: tmp15 });
+        cResult[8] = tmp9;
+        cResult[9] = tmp20;
+        let tmp18 = tmp20;
       } else {
-        tmp21 = cResult[9];
+        tmp18 = cResult[9];
       }
       if (cResult[10] === end2) {
         if (cResult[11] === start2) {
-          if (cResult[12] === tmp13) {
-            if (cResult[13] === tmp15) {
-              let tmp24;
-              if (cResult[14] === tmp21) {
-                tmp24 = cResult[15];
-              }
-              tmp8 = tmp24;
+          if (cResult[12] === tmp10) {
+            if (cResult[13] === tmp12) {
             }
           }
         }
       }
-      const tmp26 = jsx(userId(6000).TableRow, {
-        label: tmp15,
-        subLabel: tmp13,
-        start: start2,
-        end: end2,
-        trailing: tmp21,
-      });
+      TableRow = TableRow(6000).TableRow;
+      const obj5 = { label: tmp12, subLabel: tmp10, start: start2, end: end2, trailing: tmp18 };
+      tmp7 = <TableRow label={tmp12} subLabel={tmp10} start={start2} end={end2} trailing={tmp18} />;
       cResult[10] = end2;
       cResult[11] = start2;
-      cResult[12] = tmp13;
-      cResult[13] = tmp15;
-      cResult[14] = tmp21;
-      cResult[15] = tmp26;
-      tmp24 = tmp26;
+      cResult[12] = tmp10;
+      cResult[13] = tmp12;
+      cResult[14] = tmp18;
+      cResult[15] = tmp7;
     }
     const fn = function n() {
-      const obj = userId(dependencyMap[7]);
-      const result = obj.deletePersistentVerification(userId2, verification2.verifiedKey);
+      const result = SecureFramesUtils.deletePersistentVerification(userId, verification.verifiedKey);
     };
     cResult[0] = userId2;
     cResult[1] = verification2.verifiedKey;
     cResult[2] = fn;
-    tmp12 = fn;
+    tmp9 = fn;
+    const obj4 = userId(576);
   } else {
     userId = verification.userId;
     verification = verification.verification;
     const items = [userId, verification.verifiedKey];
     ({ index, start, end } = verification);
     const items1 = [verification.timestamp];
-    const callback = react.useCallback(() => {
-      const obj = SecureFramesUtils;
-      const result = obj.deletePersistentVerification(userId, verification.verifiedKey);
+    const callback = noop.useCallback(() => {
+      const result = SecureFramesUtils.deletePersistentVerification(userId, verification.verifiedKey);
     }, items);
-    const memo = react.useMemo(() => {
-      const obj = SecureFramesUtils;
-      return obj.getSecureFramesUserVerifiedTimestamp(verification.timestamp);
-    }, items1);
-    const TableRow = userId(6000).TableRow;
+    const memo = noop.useMemo(
+      () => SecureFramesUtils.getSecureFramesUserVerifiedTimestamp(verification.timestamp),
+      items1,
+    );
+    const obj = { label: null, subLabel: null, start: null, end: null, trailing: null };
     const intl = userId(1126).intl;
     const obj6 = { index };
-    const PressableHighlight = userId(5916).PressableHighlight;
-    tmp8 = (
-      <TableRow
-        label={intl.formatToPlainString(userId(1126).t.N4qBBO, obj6)}
-        subLabel={memo}
-        start={start}
-        end={end}
-        trailing={null}
-      />
-    );
+    obj.label = intl.formatToPlainString(userId(1126).t.N4qBBO, obj6);
+    obj.subLabel = memo;
+    obj.start = start;
+    obj.end = end;
+    const obj7 = { onPress: callback, children: jsx(userId(6024).XSmallIcon, {}) };
+    obj.trailing = jsx(userId(5916).PressableHighlight, {
+      onPress: callback,
+      children: jsx(userId(6024).XSmallIcon, {}),
+    });
+    return jsx(userId(6000).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
   }
-  return tmp8;
 }
 function SectionListItem(title) {
-  let tmp7;
   if (closure_11) {
-    const obj2 = react2;
-    const cResult = obj2.c(3);
-    const title2 = title.title;
-    const tmp12 = closure_7();
-    if (cResult[0] === tmp12.section) {
-      let tmp13;
-      if (cResult[1] === title2) {
-        tmp13 = cResult[2];
-      }
-      tmp7 = tmp13;
-    }
-    const tmp15 = jsx(Text_Text.Text, {
-      style: tmp12.section,
-      variant: "text-sm/semibold",
-      color: "text-default",
-      children: title2,
-    });
-    cResult[0] = tmp12.section;
-    cResult[1] = title2;
-    cResult[2] = tmp15;
-    tmp13 = tmp15;
-  } else {
+    let Text = require;
+    let tmp6 = dependencyMap;
+    const cResult = c.c(3);
     title = title.title;
-    closure_7();
-    tmp7 = jsx(Text_Text.Text, {
+    let section = closure_7();
+    if (cResult[0] === section.section) {
+    }
+    Text = Text(4892).Text;
+    const obj3 = { style: section.section, variant: "text-sm/semibold", color: "text-default", children: title };
+    tmp6 = (
+      <Text style={section.section} variant="text-sm/semibold" color="text-default">
+        {title}
+      </Text>
+    );
+    section = section.section;
+    cResult[0] = section;
+    cResult[1] = title;
+    cResult[2] = tmp6;
+  } else {
+    const obj = {
       style: closure_7().section,
       variant: "text-sm/semibold",
       color: "text-default",
-      children: title,
+      children: title.title,
+    };
+    return jsx(Text_Text.Text, {
+      style: closure_7().section,
+      variant: "text-sm/semibold",
+      color: "text-default",
+      children: title.title,
     });
   }
-  return tmp7;
 }
 function renderItem(item) {
   item = item.item;
   const type = item.type;
   if (constants.VERIFICATION === type) {
+    const obj2 = {};
     const merged = Object.assign(item);
     return <VerificationListItem />;
   } else if (tmp.SECTION === type) {
+    const obj = {};
     const merged1 = Object.assign(item);
     return <SectionListItem />;
   }
@@ -199,8 +172,9 @@ function keyExtractor(type) {
     return tmp.SECTION === type ? type.title : undefined;
   }
 }
-const View = react_native.View;
-const jsx = Fragment.jsx;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({
   list: { flexGrow: 1 },
   listContent: { paddingVertical: 32, paddingHorizontal: 16 },
@@ -208,117 +182,100 @@ let closure_7 = createStyles.createStyles({
   section: { marginBottom: 8 },
 });
 const constants = { VERIFICATION: "VERIFICATION", SECTION: "SECTION" };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (userId) => {
-      let tmp11;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      let obj = userId(576);
-      const cResult = obj.c(6);
+      const cResult = userId(576).c(6);
       userId = userId.userId;
       if (cResult[0] !== userId) {
         const fn = function n() {
-          const obj = SecureFramesUtils;
-          const result = obj.deleteUserPersistentVerifications(userId);
+          const result = SecureFramesUtils.deleteUserPersistentVerifications(userId);
         };
         cResult[0] = userId;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const Text = tmp(4892).Text;
+        const obj2 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
         const intl = tmp(1126).intl;
-        const tmp7 = (
-          <Text variant="text-md/semibold" color="text-feedback-critical">
-            {intl.string(userId(1126).t["2xL5lu"])}
-          </Text>
-        );
+        obj2.children = intl.string(tmp(1126).t["2xL5lu"]);
+        const tmp7 = jsx(tmp(4892).Text, {
+          variant: "text-md/semibold",
+          color: "text-feedback-critical",
+          children: null,
+        });
         cResult[2] = tmp7;
-        tmp5 = tmp7;
+        let tmp5 = tmp7;
       } else {
         tmp5 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const Text2 = tmp(4892).Text;
+        const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
         const intl2 = tmp(1126).intl;
-        const tmp10 = (
-          <Text2 variant="text-xs/medium" color="text-subtle">
-            {intl2.string(userId(1126).t.kgAfXN)}
-          </Text2>
-        );
+        obj3.children = intl2.string(tmp(1126).t.kgAfXN);
+        const tmp10 = jsx(tmp(4892).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
         cResult[3] = tmp10;
-        tmp8 = tmp10;
+        let tmp8 = tmp10;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] !== tmp4) {
-        const tmp13 = jsx(userId(6000).TableRow, {
-          label: tmp5,
-          subLabel: tmp8,
-          onPress: tmp4,
-          start: true,
-          end: true,
-        });
+        const obj4 = { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true };
+        const tmp13 = jsx(tmp(6000).TableRow, { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true });
         cResult[4] = tmp4;
         cResult[5] = tmp13;
-        tmp11 = tmp13;
+        let tmp11 = tmp13;
       } else {
         tmp11 = cResult[5];
       }
       return tmp11;
     }
   : (userId) => {
-      let intl;
-      let intl2;
       userId = userId.userId;
       const items = [userId];
-      const callback = react.useCallback(() => {
-        const obj = SecureFramesUtils;
-        const result = obj.deleteUserPersistentVerifications(userId);
+      const callback = noop.useCallback(() => {
+        const result = SecureFramesUtils.deleteUserPersistentVerifications(userId);
       }, items);
-      const TableRow = userId(6000).TableRow;
-      ({
+      const obj = { label: null, subLabel: null, onPress: null, start: true, end: true };
+      const obj2 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
+      const intl = userId(1126).intl;
+      obj2.children = intl.string(userId(1126).t["2xL5lu"]);
+      obj.label = jsx(userId(4892).Text, {
         variant: "text-md/semibold",
         color: "text-feedback-critical",
-        children: intl.string(userId(1126).t["2xL5lu"]),
+        children: null,
       });
-      const Text = userId(4892).Text;
-      intl = userId(1126).intl;
-      ({ variant: "text-xs/medium", color: "text-subtle", children: intl2.string(userId(1126).t.kgAfXN) });
-      const Text2 = userId(4892).Text;
-      intl2 = userId(1126).intl;
-      return <TableRow label={null} subLabel={null} onPress={callback} start end />;
+      const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
+      const intl2 = userId(1126).intl;
+      obj3.children = intl2.string(userId(1126).t.kgAfXN);
+      obj.subLabel = jsx(userId(4892).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
+      obj.onPress = callback;
+      return jsx(userId(6000).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/user_settings/privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_2;
-      let first;
-      let intl;
-      let items1;
-      let obj10;
-      let tmp10;
-      let tmp8;
-      let userId;
-      let obj = userId(576);
-      const cResult = obj.c(29);
+      const cResult = userId(576).c(29);
       const tmp4 = closure_7();
+      let obj = userId(576);
+      userId = userId(6497).useSettingNavigationRoute().params.userId;
       const obj2 = userId(6497);
-      userId = obj2.useSettingNavigationRoute().params.userId;
-      const obj3 = userId(1490);
-      navigation = obj3.useNavigation();
+      const navigation = userId(1490).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -328,78 +285,75 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = userId;
         cResult[2] = fn;
-        tmp8 = fn;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[2];
       }
-      const tmpResult = userId(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
+      const obj3 = userId(1490);
+      const stateFromStores = userId(504).useStateFromStores(first, tmp8);
       if (cResult[3] !== stateFromStores) {
-        const obj5 = navigation(4728);
-        const formattedName = obj5.getFormattedName(stateFromStores, false);
+        const formattedName = navigation(4728).getFormattedName(stateFromStores, false);
         cResult[3] = stateFromStores;
         cResult[4] = formattedName;
-        tmp10 = formattedName;
+        let tmp10 = formattedName;
+        const obj5 = navigation(4728);
       } else {
         tmp10 = cResult[4];
       }
       dependencyMap = tmp10;
       if (cResult[5] === navigation) {
-        let tmp13;
         if (cResult[6] === tmp10) {
-          tmp13 = cResult[7];
+          let tmp13 = cResult[7];
         }
         const layoutEffect = items1.useLayoutEffect(tmp13);
-        const tmpResult2 = userId(15796);
-        const secureFramesUserVerifiedKeys = tmpResult2.useSecureFramesUserVerifiedKeys(userId);
-        const obj6 = items1;
+        const secureFramesUserVerifiedKeys = tmp(15796).useSecureFramesUserVerifiedKeys(userId);
         if (cResult[8] === userId) {
           if (cResult[9] === secureFramesUserVerifiedKeys) {
             items1 = cResult[10];
           }
           if (cResult[11] === navigation) {
-            let tmp19;
             if (cResult[12] === secureFramesUserVerifiedKeys.length) {
-              tmp19 = cResult[13];
+              let tmp19 = cResult[13];
             }
             if (cResult[14] === navigation) {
-              let tmp20;
               if (cResult[15] === secureFramesUserVerifiedKeys) {
-                tmp20 = cResult[16];
+                let tmp20 = cResult[16];
               }
               const effect = obj6.useEffect(tmp19, tmp20);
               class E {
                 constructor() {
-                  if (0 === secureFramesUserVerifiedKeys.length) {
-                    navigation.pop();
+                  if (0 === closure_4.length) {
+                    tmp = closure_1;
+                    arr = closure_1.pop();
                   }
+                  return;
                 }
               }
               if (cResult[19] === tmp4.listFooter) {
-                let tmp24;
                 if (cResult[20] === tmp23) {
-                  tmp24 = cResult[21];
+                  let tmp24 = cResult[21];
                 }
                 if (cResult[22] === tmp15) {
                   if (cResult[23] === tmp4.listContent) {
-                    let tmp28;
                     if (cResult[24] === tmp24) {
-                      tmp28 = cResult[25];
+                      let tmp28 = cResult[25];
                     }
                     if (cResult[26] === tmp4.list) {
-                      let tmp33;
                       if (cResult[27] === tmp28) {
-                        tmp33 = cResult[28];
+                        let tmp33 = cResult[28];
                       }
                       return tmp33;
                     }
                     class E {
                       constructor() {
-                        if (0 === secureFramesUserVerifiedKeys.length) {
-                          navigation.pop();
+                        if (0 === closure_4.length) {
+                          tmp = closure_1;
+                          arr = closure_1.pop();
                         }
+                        return;
                       }
                     }
+                    const obj4 = { style: tmp4.list, children: tmp28 };
                     const tmp35 = (
                       <secureFramesUserVerifiedKeys style={tmp4.list}>{tmp28}</secureFramesUserVerifiedKeys>
                     );
@@ -411,12 +365,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 class E {
                   constructor() {
-                    if (0 === secureFramesUserVerifiedKeys.length) {
-                      navigation.pop();
+                    if (0 === closure_4.length) {
+                      tmp = closure_1;
+                      arr = closure_1.pop();
                     }
+                    return;
                   }
                 }
-                const tmp32 = jsx(userId(8404).FlashList, {
+                const obj7 = {
+                  keyExtractor,
+                  getItemType,
+                  renderItem,
+                  data: tmp15,
+                  contentContainerStyle: tmp4.listContent,
+                  ListFooterComponent: tmp24,
+                };
+                const tmp32 = jsx(tmp(8404).FlashList, {
                   keyExtractor,
                   getItemType,
                   renderItem,
@@ -430,6 +394,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[25] = tmp32;
                 tmp28 = tmp32;
               }
+              const obj8 = { style: tmp4.listFooter, children: tmp23 };
               const tmp27 = (
                 <secureFramesUserVerifiedKeys style={tmp4.listFooter}>{tmp23}</secureFramesUserVerifiedKeys>
               );
@@ -440,9 +405,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             class E {
               constructor() {
-                if (0 === secureFramesUserVerifiedKeys.length) {
-                  navigation.pop();
+                if (0 === closure_4.length) {
+                  tmp = closure_1;
+                  arr = closure_1.pop();
                 }
+                return;
               }
             }
             tmp21[0] = navigation;
@@ -454,9 +421,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           class E {
             constructor() {
-              if (0 === secureFramesUserVerifiedKeys.length) {
-                navigation.pop();
+              if (0 === closure_4.length) {
+                tmp = closure_1;
+                arr = closure_1.pop();
               }
+              return;
             }
           }
           cResult[11] = navigation;
@@ -465,96 +434,88 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp19 = E;
         }
         items1 = [];
-        const push = items1.push;
-        const obj9 = { type: constants.SECTION, title: intl.formatToPlainString(userId(1126).t["/MBjYF"], obj10) };
-        intl = tmp(1126).intl;
-        obj10 = { count: secureFramesUserVerifiedKeys.length };
-        push(obj9);
+        const obj9 = { type: constants.SECTION, title: null };
+        let intl = tmp(1126).intl;
+        const obj10 = { count: secureFramesUserVerifiedKeys.length };
+        obj9.title = intl.formatToPlainString(tmp(1126).t["/MBjYF"], obj10);
+        items1.push(obj9);
         const item = secureFramesUserVerifiedKeys.forEach((verification, index) => {
-          const obj = {
+          items1.push({
             type: constants.VERIFICATION,
             verification,
             index: index + 1,
             userId,
             start: 0 === index,
             end: index === secureFramesUserVerifiedKeys.length - 1,
-          };
-          items1.push(obj);
+          });
         });
         cResult[8] = userId;
         cResult[9] = secureFramesUserVerifiedKeys;
         cResult[10] = items1;
+        obj6 = items1;
+        const tmpResult2 = tmp(15796);
       }
       const fn2 = function x() {
-        let intl;
-        const setOptions = navigation.setOptions;
-        const obj = {
-          title: "" + intl.string(intl3.t["5b3FNI"]) + " (" + subtitle + ")",
-          headerTitle() {
-            const GenericHeaderTitle = userId(subtitle[17]).GenericHeaderTitle;
-            const intl = userId(subtitle[8]).intl;
-            return <GenericHeaderTitle title={intl.string(userId(subtitle[8]).t["5b3FNI"])} subtitle={subtitle} />;
-          },
+        let obj = { title: null, headerTitle: null };
+        let intl = util.intl;
+        obj.title = "" + intl.string(util.t["5b3FNI"]) + " (" + subtitle + ")";
+        obj.headerTitle = function headerTitle() {
+          const obj = { title: null, subtitle: null };
+          const intl = userId(subtitle[8]).intl;
+          obj.title = intl.string(userId(subtitle[8]).t["5b3FNI"]);
+          obj.subtitle = subtitle;
+          return jsx(userId(subtitle[17]).GenericHeaderTitle, { title: null, subtitle: null });
         };
-        intl = intl3.intl;
-        setOptions(obj);
+        navigation.setOptions(obj);
       };
       cResult[5] = navigation;
       cResult[6] = tmp10;
       cResult[7] = fn2;
       tmp13 = fn2;
+      const tmpResult = userId(504);
     }
   : () => {
-      let closure_2;
-      let secureFramesUserVerifiedKeys;
-      let userId;
       const tmp = closure_7();
+      userId = userId(6497).useSettingNavigationRoute().params.userId;
       let obj = userId(6497);
-      userId = obj.useSettingNavigationRoute().params.userId;
-      let obj2 = userId(1490);
-      navigation = obj2.useNavigation();
+      const navigation = userId(1490).useNavigation();
+      const obj2 = userId(1490);
       let items = [UserStore];
+      const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
       const obj3 = userId(504);
-      const stateFromStores = obj3.useStateFromStores(items, () => UserStore.getUser(userId));
-      const obj4 = navigation(4728);
-      dependencyMap = obj4.getFormattedName(stateFromStores, false);
+      dependencyMap = navigation(4728).getFormattedName(stateFromStores, false);
       const layoutEffect = secureFramesUserVerifiedKeys.useLayoutEffect(() => {
-        let intl;
-        const setOptions = navigation.setOptions;
-        const obj = {
-          title: "" + intl.string(intl3.t["5b3FNI"]) + " (" + subtitle + ")",
-          headerTitle() {
-            const GenericHeaderTitle = userId(subtitle[17]).GenericHeaderTitle;
-            const intl = userId(subtitle[8]).intl;
-            return <GenericHeaderTitle title={intl.string(userId(subtitle[8]).t["5b3FNI"])} subtitle={subtitle} />;
-          },
+        let obj = { title: null, headerTitle: null };
+        let intl = util.intl;
+        obj.title = "" + intl.string(util.t["5b3FNI"]) + " (" + subtitle + ")";
+        obj.headerTitle = function headerTitle() {
+          const obj = { title: null, subtitle: null };
+          const intl = userId(subtitle[8]).intl;
+          obj.title = intl.string(userId(subtitle[8]).t["5b3FNI"]);
+          obj.subtitle = subtitle;
+          return jsx(userId(subtitle[17]).GenericHeaderTitle, { title: null, subtitle: null });
         };
-        intl = intl3.intl;
-        setOptions(obj);
+        navigation.setOptions(obj);
       });
-      const obj5 = userId(15796);
-      secureFramesUserVerifiedKeys = obj5.useSecureFramesUserVerifiedKeys(userId);
+      const obj4 = navigation(4728);
+      secureFramesUserVerifiedKeys = userId(15796).useSecureFramesUserVerifiedKeys(userId);
       const items1 = [userId, secureFramesUserVerifiedKeys];
       const items2 = [navigation, secureFramesUserVerifiedKeys];
       const memo = secureFramesUserVerifiedKeys.useMemo(() => {
-        let intl;
-        let obj2;
         const items = [];
-        let obj = { type: constants.SECTION, title: intl.formatToPlainString(userId(closure_2[8]).t["/MBjYF"], obj2) };
-        const push = items.push;
-        intl = userId(closure_2[8]).intl;
-        obj2 = { count: secureFramesUserVerifiedKeys.length };
-        push(obj);
+        const obj = { type: constants.SECTION, title: null };
+        const intl = userId(1126).intl;
+        obj.title = intl.formatToPlainString(userId(1126).t["/MBjYF"], { count: secureFramesUserVerifiedKeys.length });
+        items.push(obj);
         const item = secureFramesUserVerifiedKeys.forEach((verification, index) => {
-          const obj = {
+          items.push({
             type: constants.VERIFICATION,
             verification,
             index: index + 1,
             userId,
             start: 0 === index,
             end: index === secureFramesUserVerifiedKeys.length - 1,
-          };
-          items.push(obj);
+          });
         });
         return items;
       }, items1);
@@ -563,11 +524,28 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           navigation.pop();
         }
       }, items2);
-      const FlashList = userId(8404).FlashList;
+      const obj6 = { style: tmp.list, children: null };
+      const obj7 = {
+        keyExtractor,
+        getItemType,
+        renderItem,
+        data: memo,
+        contentContainerStyle: tmp.listContent,
+        ListFooterComponent: null,
+      };
+      const obj5 = userId(15796);
+      obj7.ListFooterComponent = (
+        <View style={tmp.listFooter}>
+          <closure_16 userId={userId} />
+        </View>
+      );
+      obj6.children = jsx(userId(8404).FlashList, {
+        keyExtractor,
+        getItemType,
+        renderItem,
+        data: memo,
+        contentContainerStyle: tmp.listContent,
+        ListFooterComponent: null,
+      });
       return <View style={tmp.list}>{null}</View>;
     };
-let result = size.fileFinishedImporting(
-  "modules/user_settings/privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx",
-);
-
-export default tmp2;

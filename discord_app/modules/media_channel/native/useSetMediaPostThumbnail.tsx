@@ -1,32 +1,26 @@
 // discord_app/modules/media_channel/native/useSetMediaPostThumbnail.tsx
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import DraftStore from "../../../stores/DraftStore.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, item;
 
-const DraftType = DraftStore.DraftType;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const DraftType = fn(7044).DraftType;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, id) => {
-      let closure_0;
-      let first;
-      let stateFromStores;
-      let tmp6;
       _require = arg0;
       const user = id;
-      let tmp2 = stateFromStores;
-      let obj = require("react");
-      const cResult = obj.c(8);
-      const tmp = _require;
+      const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UploadAttachmentStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -41,8 +35,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 platform = item.platform;
               }
             }
-            const tmp2 =
-              platform === closure_1_0(stateFromStores[5]).UploadPlatform.REACT_NATIVE && true === item.isThumbnail;
+            let tmp2 = platform === closure_1_0(stateFromStores[5]).UploadPlatform.REACT_NATIVE;
+            if (tmp2) {
+              tmp2 = true === item.isThumbnail;
+            }
             return tmp2;
           });
           if (found == null) {
@@ -52,30 +48,27 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(tmp2[6]);
-      stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      let obj = require("c");
+      stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
       if (cResult[3] === arg0) {
         if (cResult[4] === stateFromStores) {
           id = undefined;
-          const tmp8 = cResult[5];
           if (id != null) {
             id = id.id;
           }
-          if (tmp8 === id) {
-            let tmp13;
+          if (cResult[5] === id) {
             let isThumbnail;
-            const tmp11 = cResult[6];
             if (id != null) {
               isThumbnail = id.isThumbnail;
             }
-            if (tmp11 === isThumbnail) {
-              tmp13 = cResult[7];
+            if (cResult[6] === isThumbnail) {
+              let tmp11 = cResult[7];
             }
-            return tmp13;
+            return tmp11;
           }
         }
       }
@@ -91,19 +84,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         isThumbnail1 = id.isThumbnail;
       }
       const fn2 = function f() {
-        let id1;
+        let id;
         if (user != null) {
-          id1 = user.id;
+          id = user.id;
         }
-        if (null != id1) {
+        if (null != id) {
           let tmp4 = null != stateFromStores;
           if (tmp4) {
-            let id2;
-            const id = stateFromStores.id;
+            let id1;
             if (user != null) {
-              id2 = user.id;
+              id1 = user.id;
             }
-            tmp4 = id !== id2;
+            tmp4 = stateFromStores.id !== id1;
           }
           if (tmp4) {
             const obj = UploadAttachmentActionCreatorsDefault;
@@ -116,29 +108,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (flag == null) {
             flag = false;
           }
-          let id3;
-          const update = UploadAttachmentActionCreatorsDefault.update;
+          const obj2 = UploadAttachmentActionCreatorsDefault;
+          let id2;
           if (user != null) {
-            id3 = user.id;
+            id2 = user.id;
           }
-          const obj2 = { thumbnail: !flag, spoiler: false };
-          update(closure_0, id3, DraftType.ChannelMessage, obj2);
-          const obj3 = ActionSheetActionCreatorsDefault;
-          obj3.hideActionSheet();
+          const obj3 = { thumbnail: !flag, spoiler: false };
+          obj2.update(closure_0, id2, DraftType.ChannelMessage, obj3);
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         }
       };
       cResult[6] = isThumbnail1;
       cResult[7] = fn2;
-      tmp13 = fn2;
+      tmp11 = fn2;
+      const tmpResult = require("useStateFromStores");
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let stateFromStores;
       _require = arg0;
       const user = arg1;
-      let obj = require("useStateFromStores");
       const items = [UploadAttachmentStore];
-      stateFromStores = obj.useStateFromStores(items, () => {
+      stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
         const uploads = UploadAttachmentStore.getUploads(closure_0, DraftType.ChannelMessage);
         let found = uploads.find((item) => {
           let platform;
@@ -148,8 +137,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               platform = item.platform;
             }
           }
-          const tmp2 =
-            platform === closure_1_0(stateFromStores[5]).UploadPlatform.REACT_NATIVE && true === item.isThumbnail;
+          let tmp2 = platform === closure_1_0(stateFromStores[5]).UploadPlatform.REACT_NATIVE;
+          if (tmp2) {
+            tmp2 = true === item.isThumbnail;
+          }
           return tmp2;
         });
         if (found == null) {
@@ -158,20 +149,19 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return found;
       });
       const items1 = [stateFromStores, arg0, arg1];
-      return react.useCallback(() => {
-        let id1;
+      return noop.useCallback(() => {
+        let id;
         if (user != null) {
-          id1 = user.id;
+          id = user.id;
         }
-        if (null != id1) {
+        if (null != id) {
           let tmp4 = null != stateFromStores;
           if (tmp4) {
-            let id2;
-            const id = stateFromStores.id;
+            let id1;
             if (user != null) {
-              id2 = user.id;
+              id1 = user.id;
             }
-            tmp4 = id !== id2;
+            tmp4 = stateFromStores.id !== id1;
           }
           if (tmp4) {
             const obj = UploadAttachmentActionCreatorsDefault;
@@ -184,18 +174,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (flag == null) {
             flag = false;
           }
-          let id3;
-          const update = UploadAttachmentActionCreatorsDefault.update;
+          const obj2 = UploadAttachmentActionCreatorsDefault;
+          let id2;
           if (user != null) {
-            id3 = user.id;
+            id2 = user.id;
           }
-          const obj2 = { thumbnail: !flag, spoiler: false };
-          update(closure_0, id3, DraftType.ChannelMessage, obj2);
-          const obj3 = ActionSheetActionCreatorsDefault;
-          obj3.hideActionSheet();
+          const obj3 = { thumbnail: !flag, spoiler: false };
+          obj2.update(closure_0, id2, DraftType.ChannelMessage, obj3);
+          ActionSheetActionCreatorsDefault.hideActionSheet();
         }
       }, items1);
     };
-const result = size.fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");
-
-export default tmp2;

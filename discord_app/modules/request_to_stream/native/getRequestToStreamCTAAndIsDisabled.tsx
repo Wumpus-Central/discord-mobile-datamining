@@ -1,57 +1,52 @@
 // discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import intl8 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef3007 from "../RequestToStream.messages.js";
 import isInviteActive from "../../activities/utils/isInviteActive.tsx";
 import useCanFulfillStreamRequest from "../useCanFulfillStreamRequest.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
-  let isDisabled;
-  let text;
-  const obj = useCanFulfillStreamRequest;
-  const tmp3 = _slicedToArray(obj.canFulfillStreamRequest(id, true), 2);
-  const first = tmp3[0];
+  const tmp3 = _slicedToArray(useCanFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
   id = AuthenticationStore.getId();
-  const obj2 = SnowflakeUtilsDefault;
-  const extractTimestampResult = obj2.extractTimestamp(id.id);
-  const sum = extractTimestampResult + isInviteActive.EMBED_LIFETIME;
-  const tmp10 = sum < Date.now();
-  const intl = intl8.intl;
+  const sum = SnowflakeUtilsDefault.extractTimestamp(id.id) + isInviteActive.EMBED_LIFETIME;
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id.id);
+  const intl = util.intl;
   const stringResult = intl.string(_modDef3007["5+172e"]);
-  if (tmp10) {
-    const intl6 = intl8.intl;
-    text = intl6.string(_modDef3007.u4QmWl);
-    isDisabled = true;
+  if (tmp9) {
+    const intl6 = util.intl;
+    let text = intl6.string(_modDef3007.u4QmWl);
+    let isDisabled = true;
   } else if (id.author.id === id) {
-    const intl5 = intl8.intl;
+    const intl5 = util.intl;
     text = intl5.string(_modDef3007["8HU1M2"]);
     isDisabled = true;
   } else {
     isDisabled = false;
     text = stringResult;
-    if (!first) {
-      if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp3[1]) {
-        const intl4 = intl8.intl;
+    if (!tmp3[0]) {
+      if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
+        const intl4 = util.intl;
         text = intl4.string(_modDef3007.P0wwmM);
         isDisabled = true;
-      } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp3[1]) {
-        const intl3 = intl8.intl;
+      } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
+        const intl3 = util.intl;
         text = intl3.string(_modDef3007["43zohO"]);
         isDisabled = true;
-      } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp3[1]) {
-        const intl2 = intl8.intl;
+      } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
+        const intl2 = util.intl;
         text = intl2.string(_modDef3007.qRXats);
         isDisabled = true;
       } else {
         isDisabled = false;
         text = stringResult;
-        if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NO_PERMISSION === tmp3[1]) {
-          const intl7 = intl8.intl;
+        if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
+          const intl7 = util.intl;
           text = intl7.string(_modDef3007["fac+eE"]);
           isDisabled = true;
         }

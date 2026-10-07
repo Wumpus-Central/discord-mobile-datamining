@@ -1,29 +1,19 @@
 // discord_app/modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import SafetyHubConstants from "../SafetyHubConstants.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
-import Constants from "../../../Constants.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let metroImportDefault;
-let metroRequire;
-let closure_5 = SafetyHubConstants.SafetyHubAnalyticsActionSource;
-({ EMPTY_STRING_SNOWFLAKE_ID: metroRequire, AnalyticEvents: metroImportDefault } = Constants);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+let closure_5 = fn(8126).SafetyHubAnalyticsActionSource;
+const Constants = fn(1085);
+({ EMPTY_STRING_SNOWFLAKE_ID: metroRequire, AnalyticEvents: closure_7 } = Constants);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
+
+export const useEmitAppealIngestionEvent = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let AppealIngestion;
-      let safetyHubAccountStanding;
-      let stateFromStores;
-      let tmp12;
-      let tmp13;
-      let tmp4;
-      let tmp5;
-      const tmp = stateFromStores;
-      const tmp2 = safetyHubAccountStanding;
-      let obj = stateFromStores(safetyHubAccountStanding[5]);
-      const cResult = obj.c(9);
+      const cResult = stateFromStores(safetyHubAccountStanding[5]).c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [SafetyHubStore];
         const fn = function o() {
@@ -36,117 +26,110 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = tmp(tmp2[6]);
-      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      let tmp9 = stateFromStores;
-      const useSafetyHubClassification = tmp(tmp2[7]).useSafetyHubClassification;
-      tmp(tmp2[7]);
+      const obj = stateFromStores(safetyHubAccountStanding[5]);
+      stateFromStores = stateFromStores(safetyHubAccountStanding[6]).useStateFromStores(tmp4, tmp5);
+      const tmpResult = stateFromStores(safetyHubAccountStanding[6]);
+      let tmp8 = stateFromStores;
       if (stateFromStores == null) {
-        tmp9 = closure_6;
+        tmp8 = closure_6;
       }
-      const safetyHubClassification = useSafetyHubClassification(tmp9);
-      const tmpResult5 = tmp(tmp2[8]);
-      safetyHubAccountStanding = tmpResult5.useSafetyHubAccountStanding();
+      const safetyHubClassification = stateFromStores(safetyHubAccountStanding[7]).useSafetyHubClassification(tmp8);
+      const tmpResult4 = stateFromStores(safetyHubAccountStanding[7]);
+      safetyHubAccountStanding = stateFromStores(safetyHubAccountStanding[8]).useSafetyHubAccountStanding();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [SafetyHubStore];
         class S {
           constructor() {
-            return SafetyHubStore.getIsDsaEligible();
+            return closure_1_4.getIsDsaEligible();
           }
         }
         cResult[2] = items1;
         cResult[3] = S;
-        tmp13 = S;
-        tmp12 = items1;
+        let tmp12 = S;
+        let tmp11 = items1;
       } else {
-        tmp12 = cResult[2];
-        tmp13 = cResult[3];
+        tmp11 = cResult[2];
+        tmp12 = cResult[3];
       }
-      const tmpResult6 = tmp(tmp2[6]);
-      const stateFromStores1 = tmpResult6.useStateFromStores(tmp12, tmp13);
+      const tmpResult5 = stateFromStores(safetyHubAccountStanding[8]);
+      const stateFromStores1 = stateFromStores(safetyHubAccountStanding[6]).useStateFromStores(tmp11, tmp12);
       if (cResult[4] === safetyHubAccountStanding.state) {
         if (cResult[5] === stateFromStores) {
           if (cResult[6] === safetyHubClassification.violationType) {
-            let tmp16;
             if (cResult[7] === stateFromStores1) {
-              tmp16 = cResult[8];
+              let tmp15 = cResult[8];
             }
-            return tmp16;
+            return tmp15;
           }
         }
       }
       const fn2 = function y(action) {
-        let tmp3;
-        const obj = {
+        const obj2 = {
           action,
           account_standing: safetyHubAccountStanding.state,
-          classification_ids: tmp3,
-          source: AppealIngestion.AppealIngestion,
-          is_dsa_eligible: stateFromStores1,
-          violation_type: safetyHubClassification.violationType,
+          classification_ids: null,
+          source: null,
+          is_dsa_eligible: null,
+          violation_type: null,
         };
-        tmp3 = null;
-        const track = AnalyticsUtilsDefault.track;
-        const SAFETY_HUB_ACTION = metroImportDefault.SAFETY_HUB_ACTION;
-        AnalyticsUtilsDefault;
+        let tmp2 = null;
         if (null != stateFromStores) {
           const _Number = Number;
-          const items = [Number(tmp2)];
-          tmp3 = items;
+          const items = [Number(tmp)];
+          tmp2 = items;
         }
-        track(SAFETY_HUB_ACTION, obj);
+        obj2.classification_ids = tmp2;
+        obj2.source = AppealIngestion.AppealIngestion;
+        obj2.is_dsa_eligible = stateFromStores1;
+        obj2.violation_type = safetyHubClassification.violationType;
+        AnalyticsUtilsDefault.track(constants.SAFETY_HUB_ACTION, obj2);
       };
       cResult[4] = safetyHubAccountStanding.state;
       cResult[5] = stateFromStores;
       cResult[6] = safetyHubClassification.violationType;
       cResult[7] = stateFromStores1;
       cResult[8] = fn2;
-      tmp16 = fn2;
+      tmp15 = fn2;
+      const tmpResult6 = stateFromStores(safetyHubAccountStanding[6]);
     }
   : () => {
-      let AppealIngestion;
-      let safetyHubAccountStanding;
-      let stateFromStores;
-      const tmp = stateFromStores;
-      const tmp2 = safetyHubAccountStanding;
-      let obj = stateFromStores(safetyHubAccountStanding[6]);
       let items = [SafetyHubStore];
-      stateFromStores = obj.useStateFromStores(items, () => SafetyHubStore.getAppealClassificationId());
-      let tmp6 = stateFromStores;
-      const useSafetyHubClassification = stateFromStores(safetyHubAccountStanding[7]).useSafetyHubClassification;
-      stateFromStores(safetyHubAccountStanding[7]);
+      stateFromStores = stateFromStores(safetyHubAccountStanding[6]).useStateFromStores(items, () =>
+        SafetyHubStore.getAppealClassificationId(),
+      );
+      const obj = stateFromStores(safetyHubAccountStanding[6]);
+      let tmp5 = stateFromStores;
       if (stateFromStores == null) {
-        tmp6 = closure_6;
+        tmp5 = closure_6;
       }
-      const safetyHubClassification = useSafetyHubClassification(tmp6);
-      const tmpResult = tmp(tmp2[8]);
-      safetyHubAccountStanding = tmpResult.useSafetyHubAccountStanding();
+      const safetyHubClassification = stateFromStores(safetyHubAccountStanding[7]).useSafetyHubClassification(tmp5);
+      let obj2 = stateFromStores(safetyHubAccountStanding[7]);
+      safetyHubAccountStanding = stateFromStores(safetyHubAccountStanding[8]).useSafetyHubAccountStanding();
+      const tmpResult = stateFromStores(safetyHubAccountStanding[8]);
       const items1 = [SafetyHubStore];
-      const tmpResult2 = tmp(tmp2[6]);
-      const stateFromStores1 = tmpResult2.useStateFromStores(items1, () => SafetyHubStore.getIsDsaEligible());
+      const stateFromStores1 = stateFromStores(safetyHubAccountStanding[6]).useStateFromStores(items1, () =>
+        SafetyHubStore.getIsDsaEligible(),
+      );
       const items2 = [safetyHubAccountStanding.state, stateFromStores, safetyHubClassification, stateFromStores1];
       return stateFromStores1.useCallback((action) => {
-        let tmp3;
-        const obj = {
+        const obj2 = {
           action,
           account_standing: safetyHubAccountStanding.state,
-          classification_ids: tmp3,
-          source: AppealIngestion.AppealIngestion,
-          is_dsa_eligible: stateFromStores1,
-          violation_type: safetyHubClassification.violationType,
+          classification_ids: null,
+          source: null,
+          is_dsa_eligible: null,
+          violation_type: null,
         };
-        tmp3 = null;
-        const track = AnalyticsUtilsDefault.track;
-        const SAFETY_HUB_ACTION = metroImportDefault.SAFETY_HUB_ACTION;
-        AnalyticsUtilsDefault;
+        let tmp2 = null;
         if (null != stateFromStores) {
           const _Number = Number;
-          const items = [Number(tmp2)];
-          tmp3 = items;
+          const items = [Number(tmp)];
+          tmp2 = items;
         }
-        track(SAFETY_HUB_ACTION, obj);
+        obj2.classification_ids = tmp2;
+        obj2.source = AppealIngestion.AppealIngestion;
+        obj2.is_dsa_eligible = stateFromStores1;
+        obj2.violation_type = safetyHubClassification.violationType;
+        AnalyticsUtilsDefault.track(constants.SAFETY_HUB_ACTION, obj2);
       }, items2);
     };
-const result = size.fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
-
-export const useEmitAppealIngestionEvent = tmp3;

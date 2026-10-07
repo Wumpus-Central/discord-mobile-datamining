@@ -21,7 +21,6 @@ const items = [, , , , , , , , , , , , ,];
   MANAGE_OFFICIAL_MESSAGES: arr[13],
 } = Constants.Permissions);
 const items1 = [...items];
-const applyResult = BigFlagUtils.combine.apply(items1);
 const result = size.fileFinishedImporting("modules/public_guilds/PublicGuildsConstants.tsx");
 
 export const PUBLIC_SUCCESS_MODAL_SEEN_KEY = "publicSuccessModalSeen";
@@ -29,7 +28,7 @@ export const PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID = "667560445975986187";
 export const PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID = "669627189624307712";
 export const CREATE_NEW_CHANNEL_VALUE = "1";
 export const MODERATOR_PERMISSIONS = items;
-export const MODERATOR_PERMISSIONS_FLAG = applyResult;
+export const MODERATOR_PERMISSIONS_FLAG = BigFlagUtils.combine.apply(items1);
 export const COMMUNITY_UPSELL_MINIMUM_GUILD_SIZE = 1000;
 export const ENABLE_COMMUNITY_FLOW_MODAL_KEY = "Enable Community Modal";
 export const EnableCommunityModalSteps = {

@@ -1,55 +1,49 @@
 // discord_app/design/components/LottieIcon/native/generated/SpendEarnOrbsLightThemeLottie.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
-import LottieIcon2 from "../LottieIcon.tsx";
-import AssetRegistry from "../../../../../../_runtime/11018_AssetRegistry.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../../_runtime/00576_c.js";
+import LottieIcon from "../LottieIcon.tsx";
+import _mod11018 from "../../../../../../_runtime/metro/11018__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 const layers = ["Orbs-Spend_LightTheme", "Orbs-Earn_LightTheme"];
 const items = [
   { name: "earn", start: 0, duration: 180 },
   { name: "spend", start: 240, duration: 180 },
 ];
-const forwardRef = react.forwardRef;
-const forwardRefResult = forwardRef(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? (arg0, ref) => {
-        let first;
-        const obj = react2;
-        const cResult = obj.c(4);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmpResult = AssetRegistry;
-          cResult[0] = tmpResult;
-          first = tmpResult;
-        } else {
-          first = cResult[0];
-        }
-        if (cResult[1] === arg0) {
-          let tmp6;
-          if (cResult[2] === ref) {
-            tmp6 = cResult[3];
-          }
-          return tmp6;
-        }
-        const LottieIcon = LottieIcon2.LottieIcon;
-        const merged = Object.assign(arg0);
-        const tmp8 = <LottieIcon dotLottie={first} ref={ref} layers={layers} markers={items} />;
-        cResult[1] = arg0;
-        cResult[2] = ref;
-        cResult[3] = tmp8;
-        tmp6 = tmp8;
-      }
-    : (arg0, ref) => {
-        const LottieIcon = LottieIcon2.LottieIcon;
-        const merged = Object.assign(arg0);
-        return <LottieIcon dotLottie={AssetRegistry} ref={ref} layers={layers} markers={items} />;
-      },
-);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/LottieIcon/native/generated/SpendEarnOrbsLightThemeLottie.tsx",
 );
 
-export const SpendEarnOrbsLightThemeLottie = forwardRefResult;
+export const SpendEarnOrbsLightThemeLottie = noop.forwardRef(
+  ReactCompilerGating.isReactCompilerEnabled()
+    ? (arg0, ref) => {
+        const cResult = c.c(4);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmpResult = _mod11018;
+          cResult[0] = tmpResult;
+          let first = tmpResult;
+        } else {
+          first = cResult[0];
+        }
+        if (cResult[1] === arg0) {
+          if (cResult[2] === ref) {
+            let tmp6 = cResult[3];
+          }
+          return tmp6;
+        }
+        const merged = Object.assign(arg0);
+        const tmp8 = jsx(LottieIcon.LottieIcon, { dotLottie: first, ref, layers, markers: items });
+        cResult[1] = arg0;
+        cResult[2] = ref;
+        cResult[3] = tmp8;
+        tmp6 = tmp8;
+        const obj2 = { dotLottie: first, ref, layers, markers: items };
+      }
+    : (arg0, ref) => {
+        const merged = Object.assign(arg0);
+        return jsx(LottieIcon.LottieIcon, { dotLottie: _mod11018, ref, layers, markers: items });
+      },
+);

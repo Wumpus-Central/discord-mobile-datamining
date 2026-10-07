@@ -1,28 +1,28 @@
 // discord_app/modules/user_settings/UserSettingsOverridesStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserSettingsProtoStore from "UserSettingsProtoStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let closure_3;
-
+require = fn;
 function updateExistingSettings() {
   const settings = UserSettingsProtoStore.settings;
   const textAndImages = settings.textAndImages;
-  let value;
+  value = undefined;
   if (textAndImages != null) {
     if (textAndImages.gifAutoPlay != null) {
       value = iter.value;
     }
   }
+  obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
   const textAndImages2 = settings.textAndImages;
-  let value3;
+  value3 = undefined;
   if (textAndImages2 != null) {
     if (textAndImages2.animateEmoji != null) {
       value3 = iter2.value;
     }
   }
+  obj.animateEmoji = value3;
   const textAndImages3 = settings.textAndImages;
   let value4;
   if (textAndImages3 != null) {
@@ -30,36 +30,36 @@ function updateExistingSettings() {
       value4 = iter3.value;
     }
   }
+  obj.animateStickers = value4;
   return false;
 }
-const _false = {};
+const dependencyMap = {};
 let obj = {};
-const PersistedStore = get_initializedDefault.PersistedStore;
-class UserSettingsOverridesStore extends PersistedStore {
-  initialize(arg0) {
-    obj = arg0;
-    if (arg0 == null) {
-      obj = {};
-    }
-    closure_3 = obj;
-    const items = [UserSettingsProtoStore];
-    this.syncWith(items, updateExistingSettings);
-  }
-  getState() {
-    return closure_3;
-  }
-  getAppliedOverrideReasonKey(animateEmoji) {
-    let reasonKey;
-    if (closure_3[animateEmoji] != null) {
-      reasonKey = tmp.reasonKey;
-    }
-    return reasonKey;
-  }
-  getOverride(arg0) {
-    return closure_3[arg0];
-  }
-}
+const PersistedStore = initializeDefault.PersistedStore;
+class UserSettingsOverridesStore extends PersistedStore {}
 const prototype = UserSettingsOverridesStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
+  closure_3 = obj;
+  const items = [UserSettingsProtoStore];
+  this.syncWith(items, updateExistingSettings);
+};
+prototype["getState"] = function getState() {
+  return closure_3;
+};
+prototype["getAppliedOverrideReasonKey"] = function getAppliedOverrideReasonKey(animateEmoji) {
+  let reasonKey;
+  if (dependencyMap[animateEmoji] != null) {
+    reasonKey = tmp.reasonKey;
+  }
+  return reasonKey;
+};
+prototype["getOverride"] = function getOverride(arg0) {
+  return dependencyMap[arg0];
+};
 UserSettingsOverridesStore.displayName = "UserSettingsOverridesStore";
 UserSettingsOverridesStore.persistKey = "UserSettingsOverridesStore";
 let items = [
@@ -77,17 +77,15 @@ let items = [
 UserSettingsOverridesStore.migrations = items;
 obj = {
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate() {
-    let value3;
-    let value4;
     const settings = UserSettingsProtoStore.settings;
     const textAndImages = settings.textAndImages;
-    let value;
+    value = undefined;
     if (textAndImages != null) {
       if (textAndImages.gifAutoPlay != null) {
         value = iter.value;
       }
     }
-    obj = { gifAutoPlay: value, animateEmoji: value3, animateStickers: value4 };
+    obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
     const textAndImages2 = settings.textAndImages;
     value3 = undefined;
     if (textAndImages2 != null) {
@@ -95,23 +93,25 @@ obj = {
         value3 = iter2.value;
       }
     }
+    obj.animateEmoji = value3;
     const textAndImages3 = settings.textAndImages;
-    value4 = undefined;
+    let value4;
     if (textAndImages3 != null) {
       if (textAndImages3.animateStickers != null) {
         value4 = iter3.value;
       }
     }
+    obj.animateStickers = value4;
     let flag = false;
     let flag2 = false;
     const keys = Object.keys();
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        if (obj[tmp7] === obj[tmp7]) {
+        if (obj[tmp9] === obj[tmp9]) {
           continue;
         } else {
-          delete closure_3[tmp8];
+          delete tmp2[tmp3];
           flag = true;
           continue;
         }
@@ -121,16 +121,13 @@ obj = {
     return flag2;
   },
   USER_SETTINGS_OVERRIDE_APPLY: function handleApplySettingsOverride(settings) {
-    settings = settings.settings;
-    obj = {};
     const merged = Object.assign(closure_3);
-    const merged1 = Object.assign(settings);
-    closure_3 = obj;
+    const merged1 = Object.assign(settings.settings);
+    closure_3 = {};
   },
-  USER_SETTINGS_OVERRIDE_CLEAR: function handleClearSettingsOverride(settings) {
-    settings = settings.settings;
-    for (const item10006 of settings) {
-      delete closure_3[item10006];
+  USER_SETTINGS_OVERRIDE_CLEAR: function handleClearSettingsOverride(arg0) {
+    for (const item10006 of tmp3) {
+      delete tmp[tmp2];
       continue;
     }
   },
@@ -142,6 +139,7 @@ obj = {
   },
 };
 const userSettingsOverridesStore = new UserSettingsOverridesStore(DispatcherDefault, obj);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsOverridesStore.tsx");
 
 export default userSettingsOverridesStore;

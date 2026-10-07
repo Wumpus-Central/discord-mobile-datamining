@@ -1,210 +1,181 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPill.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../intl/index.native.tsx";
-import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useVirtualCurrencyBalanceAnimationData from "../hooks/native/useVirtualCurrencyBalanceAnimationData.tsx";
 import OrbLottieAnimation from "OrbLottieAnimation.tsx";
-import BalanceCounter2 from "BalanceCounter.tsx";
+import BalanceCounter from "BalanceCounter.tsx";
 import AnimationUtils from "../shared/AnimationUtils.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-let num;
-let obj2;
-let obj3;
-const View = react_native.View;
-({ jsx: c3, jsxs: closure_4 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  container: obj2,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: {
+    minHeight: fn(5607).SMALL_BUTTON_HEIGHT,
+    borderRadius: nativeDefault.radii.round,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingHorizontal: nativeDefault.space.PX_12,
+    paddingVertical: nativeDefault.space.PX_4,
+    backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
+    gap: 4,
+  },
   orbsLottieContainer: { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" },
   balanceCounterContainer: { justifyContent: "center", alignItems: "flex-end" },
-  balanceText: obj3,
+  balanceText: null,
 };
-obj2 = {
-  minHeight: ButtonConstants.SMALL_BUTTON_HEIGHT,
-  borderRadius: nativeDefault.radii.round,
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "row",
-  paddingHorizontal: nativeDefault.space.PX_12,
-  paddingVertical: nativeDefault.space.PX_4,
-  backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
-  gap: 4,
-};
-createStyles = createStyles.createStyles;
-obj3 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: num };
-num = undefined;
+let obj4 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
+const PlatformUtils = fn(1369);
+let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-let closure_5 = createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+obj4.lineHeight = num;
+obj2.balanceText = obj4;
+let closure_5 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let balance;
-      let currentAnimationType;
-      let initialRenderedBalance;
-      let items;
-      let lottieRef;
-      let onValueChange;
-      let onValueReached;
-      let style;
-      const obj = react2;
-      const cResult = obj.c(31);
+      const cResult = c.c(31);
       ({ initialRenderedBalance, balance, style } = arg0);
       let tmp4 = null;
       if (undefined !== initialRenderedBalance) {
         tmp4 = initialRenderedBalance;
       }
       if (cResult[0] === balance) {
-        let tmp6;
         if (cResult[1] === tmp4) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
-        const tmpResult = useVirtualCurrencyBalanceAnimationData;
-        const virtualCurrencyBalanceAnimationData = tmpResult.useVirtualCurrencyBalanceAnimationData(tmp6);
+        const virtualCurrencyBalanceAnimationData =
+          useVirtualCurrencyBalanceAnimationData.useVirtualCurrencyBalanceAnimationData(tmp6);
         ({ onValueChange, onValueReached, currentAnimationType, lottieRef } = virtualCurrencyBalanceAnimationData);
-        const showInitialRenderedBalance = virtualCurrencyBalanceAnimationData.showInitialRenderedBalance;
         const tmp9 = closure_5();
         if (cResult[3] === style) {
-          let tmp10;
-          let stringResult;
           if (cResult[4] === tmp9.container) {
-            tmp10 = cResult[5];
+            let tmp10 = cResult[5];
           }
           if (cResult[6] === balance) {
-            let tmp11;
-            let tmp13;
-            if (cResult[7] === (null === tmp4 && null === balance)) {
-              tmp11 = cResult[8];
-            }
-            if (cResult[9] !== (null === tmp4 && null === balance)) {
-              const obj2 = { busy: null === tmp4 && null === balance };
-              cResult[9] = null === tmp4 && null === balance;
-              cResult[10] = obj2;
-              tmp13 = obj2;
-            } else {
-              tmp13 = cResult[10];
-            }
-            if (cResult[11] === currentAnimationType) {
-              let tmp14;
-              if (cResult[12] === lottieRef) {
-                tmp14 = cResult[13];
+            if (cResult[7] === tmp5) {
+              if (cResult[9] !== tmp5) {
+                const obj2 = { busy: tmp5 };
+                cResult[9] = tmp5;
+                cResult[10] = obj2;
+                let tmp14 = obj2;
+              } else {
+                tmp14 = cResult[10];
               }
-              if (cResult[14] === tmp9.orbsLottieContainer) {
-                let tmp17;
-                if (cResult[15] === tmp14) {
-                  tmp17 = cResult[16];
+              if (cResult[11] === currentAnimationType) {
+                if (cResult[12] === lottieRef) {
+                  let tmp15 = cResult[13];
                 }
-                if (showInitialRenderedBalance) {
-                  balance = tmp4;
-                }
-                if (cResult[17] === onValueChange) {
-                  if (cResult[18] === onValueReached) {
-                    if (cResult[19] === tmp9.balanceText) {
-                      let tmp21;
-                      if (cResult[20] === balance) {
-                        tmp21 = cResult[21];
-                      }
-                      if (cResult[22] === tmp9.balanceCounterContainer) {
-                        let tmp24;
-                        if (cResult[23] === tmp21) {
-                          tmp24 = cResult[24];
+                if (cResult[14] === tmp9.orbsLottieContainer) {
+                  if (cResult[15] === tmp15) {
+                    let tmp18 = cResult[16];
+                  }
+                  if (virtualCurrencyBalanceAnimationData.showInitialRenderedBalance) {
+                    balance = tmp4;
+                  }
+                  if (cResult[17] === onValueChange) {
+                    if (cResult[18] === onValueReached) {
+                      if (cResult[19] === tmp9.balanceText) {
+                        if (cResult[20] === balance) {
+                          let tmp22 = cResult[21];
                         }
-                        if (cResult[25] === tmp24) {
-                          if (cResult[26] === tmp10) {
-                            if (cResult[27] === tmp11) {
-                              if (cResult[28] === tmp13) {
-                                let tmp28;
-                                if (cResult[29] === tmp17) {
-                                  tmp28 = cResult[30];
+                        if (cResult[22] === tmp9.balanceCounterContainer) {
+                          if (cResult[23] === tmp22) {
+                            let tmp25 = cResult[24];
+                          }
+                          if (cResult[25] === tmp25) {
+                            if (cResult[26] === tmp10) {
+                              if (cResult[27] === tmp11) {
+                                if (cResult[28] === tmp14) {
+                                  if (cResult[29] === tmp18) {
+                                    let tmp29 = cResult[30];
+                                  }
+                                  return tmp29;
                                 }
-                                return tmp28;
                               }
                             }
                           }
+                          const obj3 = {
+                            style: tmp10,
+                            accessibilityLabel: tmp11,
+                            accessibilityState: tmp14,
+                            accessible: true,
+                            children: null,
+                          };
+                          const items = [tmp18, tmp25];
+                          obj3.children = items;
+                          const tmp32 = React4(View, obj3);
+                          cResult[25] = tmp25;
+                          cResult[26] = tmp10;
+                          cResult[27] = tmp11;
+                          cResult[28] = tmp14;
+                          cResult[29] = tmp18;
+                          cResult[30] = tmp32;
+                          tmp29 = tmp32;
                         }
-                        const obj3 = {
-                          style: tmp10,
-                          accessibilityLabel: tmp11,
-                          accessibilityState: tmp13,
-                          accessible: true,
-                          children: items,
-                        };
-                        items = [tmp17, tmp24];
-                        const tmp31 = React3(View, obj3);
-                        cResult[25] = tmp24;
-                        cResult[26] = tmp10;
-                        cResult[27] = tmp11;
-                        cResult[28] = tmp13;
-                        cResult[29] = tmp17;
-                        cResult[30] = tmp31;
-                        tmp28 = tmp31;
+                        const obj4 = { style: tmp9.balanceCounterContainer, children: tmp22 };
+                        const tmp28 = React3(View, obj4);
+                        cResult[22] = tmp9.balanceCounterContainer;
+                        cResult[23] = tmp22;
+                        cResult[24] = tmp28;
+                        tmp25 = tmp28;
                       }
-                      const obj4 = { style: tmp9.balanceCounterContainer, children: tmp21 };
-                      const tmp27 = _false(View, obj4);
-                      cResult[22] = tmp9.balanceCounterContainer;
-                      cResult[23] = tmp21;
-                      cResult[24] = tmp27;
-                      tmp24 = tmp27;
                     }
                   }
+                  const obj5 = {
+                    value: balance,
+                    onValueChange,
+                    onValueReached,
+                    targetTotalCounterTime: AnimationUtils.EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS,
+                    style: tmp9.balanceText,
+                  };
+                  const tmp24 = React3(BalanceCounter.BalanceCounter, obj5);
+                  cResult[17] = onValueChange;
+                  cResult[18] = onValueReached;
+                  cResult[19] = tmp9.balanceText;
+                  cResult[20] = balance;
+                  cResult[21] = tmp24;
+                  tmp22 = tmp24;
                 }
-                const obj5 = {
-                  value: balance,
-                  onValueChange,
-                  onValueReached,
-                  targetTotalCounterTime: AnimationUtils.EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS,
-                  style: tmp9.balanceText,
-                };
-                const BalanceCounter = BalanceCounter2.BalanceCounter;
-                const tmp23 = _false(BalanceCounter, obj5);
-                cResult[17] = onValueChange;
-                cResult[18] = onValueReached;
-                cResult[19] = tmp9.balanceText;
-                cResult[20] = balance;
-                cResult[21] = tmp23;
-                tmp21 = tmp23;
+                const obj6 = { style: tmp9.orbsLottieContainer, children: tmp15 };
+                const tmp21 = React3(View, obj6);
+                cResult[14] = tmp9.orbsLottieContainer;
+                cResult[15] = tmp15;
+                cResult[16] = tmp21;
+                tmp18 = tmp21;
               }
-              const obj6 = { style: tmp9.orbsLottieContainer, children: tmp14 };
-              const tmp20 = _false(View, obj6);
-              cResult[14] = tmp9.orbsLottieContainer;
-              cResult[15] = tmp14;
-              cResult[16] = tmp20;
-              tmp17 = tmp20;
+              const obj7 = { ref: lottieRef, animationType: currentAnimationType };
+              const tmp17 = React3(OrbLottieAnimation.OrbLottieAnimation, obj7);
+              cResult[11] = currentAnimationType;
+              cResult[12] = lottieRef;
+              cResult[13] = tmp17;
+              tmp15 = tmp17;
             }
-            const obj7 = { ref: lottieRef, animationType: currentAnimationType };
-            const tmp16 = _false(OrbLottieAnimation.OrbLottieAnimation, obj7);
-            cResult[11] = currentAnimationType;
-            cResult[12] = lottieRef;
-            cResult[13] = tmp16;
-            tmp14 = tmp16;
           }
-          const intl = intl2.intl;
-          if (null === tmp4 && null === balance) {
-            stringResult = intl.string(intl2.t.y0WGqP);
+          const intl = util.intl;
+          if (tmp5) {
+            let stringResult = intl.string(util.t.y0WGqP);
           } else {
             const obj8 = { balance };
-            stringResult = intl.formatToPlainString(intl2.t.zPaLL9, obj8);
+            stringResult = intl.formatToPlainString(util.t.zPaLL9, obj8);
           }
           cResult[6] = balance;
-          cResult[7] = null === tmp4 && null === balance;
+          cResult[7] = tmp5;
           cResult[8] = stringResult;
-          tmp11 = stringResult;
         }
         const items1 = [tmp9.container, style];
         cResult[3] = style;
         cResult[4] = tmp9.container;
         cResult[5] = items1;
         tmp10 = items1;
+        const tmpResult = useVirtualCurrencyBalanceAnimationData;
       }
       const obj9 = { initialRenderedBalance: tmp4, balance };
       cResult[0] = balance;
@@ -213,75 +184,75 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = obj9;
     }
   : (initialRenderedBalance) => {
-      let BalanceCounter;
-      let currentAnimationType;
-      let items;
-      let items1;
-      let lottieRef;
-      let obj6;
-      let onValueChange;
-      let onValueReached;
-      let showInitialRenderedBalance;
-      let stringResult;
       let prop = initialRenderedBalance.initialRenderedBalance;
       if (prop === undefined) {
         prop = null;
       }
       let balance = initialRenderedBalance.balance;
       let tmp2 = null === prop;
-      const style = initialRenderedBalance.style;
       if (tmp2) {
         tmp2 = null === balance;
       }
-      const obj = useVirtualCurrencyBalanceAnimationData;
-      const virtualCurrencyBalanceAnimationData = obj.useVirtualCurrencyBalanceAnimationData({
-        initialRenderedBalance: prop,
-        balance,
-      });
+      const virtualCurrencyBalanceAnimationData =
+        useVirtualCurrencyBalanceAnimationData.useVirtualCurrencyBalanceAnimationData({
+          initialRenderedBalance: prop,
+          balance,
+        });
       ({ onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef } =
         virtualCurrencyBalanceAnimationData);
       const tmp6 = closure_5();
       const obj2 = {
-        style: items,
-        accessibilityLabel: stringResult,
-        accessibilityState: { busy: tmp2 },
+        style: null,
+        accessibilityLabel: null,
+        accessibilityState: null,
         accessible: true,
-        children: items1,
+        children: null,
       };
-      items = [tmp6.container, style];
-      const intl = intl2.intl;
+      const items = [tmp6.container, initialRenderedBalance.style];
+      obj2.style = items;
+      const intl = util.intl;
       if (tmp2) {
-        stringResult = intl.string(intl2.t.y0WGqP);
+        let stringResult = intl.string(util.t.y0WGqP);
       } else {
         const obj3 = { balance };
-        stringResult = intl.formatToPlainString(intl2.t.zPaLL9, obj3);
+        stringResult = intl.formatToPlainString(util.t.zPaLL9, obj3);
       }
-      items1 = [,];
+      obj2.accessibilityLabel = stringResult;
+      obj2.accessibilityState = { busy: tmp2 };
+      const items1 = [
+        React3(View, {
+          style: tmp6.orbsLottieContainer,
+          children: React3(OrbLottieAnimation.OrbLottieAnimation, {
+            ref: lottieRef,
+            animationType: currentAnimationType,
+          }),
+        }),
+      ];
+      const obj5 = { style: tmp6.balanceCounterContainer, children: null };
+      if (showInitialRenderedBalance) {
+        balance = prop;
+      }
       const obj4 = {
         style: tmp6.orbsLottieContainer,
-        children: _false(OrbLottieAnimation.OrbLottieAnimation, {
+        children: React3(OrbLottieAnimation.OrbLottieAnimation, {
           ref: lottieRef,
           animationType: currentAnimationType,
         }),
       };
-      items1[0] = _false(View, obj4);
-      const obj5 = { style: tmp6.balanceCounterContainer, children: _false(BalanceCounter, obj6) };
-      BalanceCounter = BalanceCounter2.BalanceCounter;
-      if (showInitialRenderedBalance) {
-        balance = prop;
-      }
-      obj6 = {
+      obj5.children = React3(BalanceCounter.BalanceCounter, {
         value: balance,
         onValueChange,
         onValueReached,
         targetTotalCounterTime: AnimationUtils.EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS,
         style: tmp6.balanceText,
-      };
-      items1[1] = _false(View, obj5);
-      return React3(View, obj2);
+      });
+      items1[1] = React3(View, obj5);
+      obj2.children = items1;
+      return React4(View, obj2);
     };
-tmp5.displayName = "BalanceWidgetPill";
+tmp4.displayName = "BalanceWidgetPill";
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPill.tsx");
 
-export default tmp5;
-export const BalanceWidgetPill = tmp5;
+export default tmp4;
+export const BalanceWidgetPill = tmp4;

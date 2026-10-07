@@ -1,16 +1,14 @@
 // discord_app/modules/system_date_format/SystemDateFormatter.native.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import react_nativeDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDateFormatUtilsModule.tsx";
+import NativeDateFormatUtilsModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDateFormatUtilsModule.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let __DiscordCreateDateFormatter;
 if (null != global.__DiscordCreateDateFormatter) {
-  __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;
+  let __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;
 } else {
-  let DateFormatUtils;
   const _module = PlatformUtils;
   if (_module.isAndroid()) {
-    DateFormatUtils = react_nativeDefault;
+    let DateFormatUtils = NativeDateFormatUtilsModuleDefault;
   } else {
     DateFormatUtils = tmp2.DateFormatUtils;
   }
@@ -31,6 +29,5 @@ const result = size.fileFinishedImporting("modules/system_date_format/SystemDate
 
 export const makeFormatter = __DiscordCreateDateFormatter;
 export const supportsSystemDateFormatter = function supportsSystemDateFormatter() {
-  const obj = PlatformUtils;
-  return obj.isIOS();
+  return PlatformUtils.isIOS();
 };

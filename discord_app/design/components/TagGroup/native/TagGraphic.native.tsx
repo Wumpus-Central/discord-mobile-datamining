@@ -1,23 +1,19 @@
 // discord_app/design/components/TagGroup/native/TagGraphic.native.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import TagGroupTypes from "TagGroupTypes.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-({ Image: c3, View: closure_4 } = react_native);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles((width, backgroundColor) => {
-  let size1;
-  const obj = { image: { width, height: width }, avatar: size, roleDot: size1 };
-  size = { width, height: width, borderRadius: nativeDefault.radii.round, overflow: "hidden" };
-  size1 = {
+  const obj = { image: { width, height: width }, avatar: null, roleDot: null };
+  const size = { width, height: width, borderRadius: nativeDefault.radii.round, overflow: "hidden" };
+  obj.avatar = size;
+  const size1 = {
     width,
     height: width,
     borderRadius: nativeDefault.radii.round,
@@ -25,15 +21,16 @@ let closure_6 = createStyles.createStyles((width, backgroundColor) => {
     borderColor: nativeDefault.colors.TEXT_STRONG,
     backgroundColor,
   };
+  obj.roleDot = size1;
   return obj;
 });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/TagGroup/native/TagGraphic.native.tsx");
+
+export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let graphic;
-      let tmp5;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       ({ graphic, size } = arg0);
       let color;
       if ("type" in graphic) {
@@ -42,11 +39,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[0] !== size) {
-        const tmpResult = TagGroupTypes;
-        const tagGraphicDimension = tmpResult.getTagGraphicDimension(size);
+        const tagGraphicDimension = TagGroupTypes.getTagGraphicDimension(size);
         cResult[0] = size;
         cResult[1] = tagGraphicDimension;
-        tmp5 = tagGraphicDimension;
+        let tmp5 = tagGraphicDimension;
+        const tmpResult = TagGroupTypes;
       } else {
         tmp5 = cResult[1];
       }
@@ -54,38 +51,38 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if ("type" in graphic) {
         const type = graphic.type;
         if ("role" === type) {
-          let tmp20;
           if (cResult[2] !== tmp7.roleDot) {
-            const tmp23 = <React3 style={tmp7.roleDot} accessible={false} />;
+            const obj2 = { style: tmp7.roleDot, accessible: false };
+            const tmp23 = <React4 style={tmp7.roleDot} accessible={false} />;
             cResult[2] = tmp7.roleDot;
             cResult[3] = tmp23;
-            tmp20 = tmp23;
+            let tmp20 = tmp23;
           } else {
             tmp20 = cResult[3];
           }
           return tmp20;
         } else if ("avatar" === type) {
           if (cResult[4] === graphic.source) {
-            let tmp16;
             if (cResult[5] === tmp7.avatar) {
-              tmp16 = cResult[6];
+              let tmp16 = cResult[6];
             }
             return tmp16;
           }
-          const tmp19 = <_false source={graphic.source} style={tmp7.avatar} resizeMode="cover" accessible={false} />;
+          const obj3 = { source: graphic.source, style: tmp7.avatar, resizeMode: "cover", accessible: false };
+          const tmp19 = <React3 source={graphic.source} style={tmp7.avatar} resizeMode="cover" accessible={false} />;
           cResult[4] = graphic.source;
           cResult[5] = tmp7.avatar;
           cResult[6] = tmp19;
           tmp16 = tmp19;
         } else if ("image" === type) {
           if (cResult[7] === graphic.source) {
-            let tmp12;
             if (cResult[8] === tmp7.image) {
-              tmp12 = cResult[9];
+              let tmp12 = cResult[9];
             }
             return tmp12;
           }
-          const tmp15 = <_false source={graphic.source} style={tmp7.image} resizeMode="contain" accessible={false} />;
+          const obj4 = { source: graphic.source, style: tmp7.image, resizeMode: "contain", accessible: false };
+          const tmp15 = <React3 source={graphic.source} style={tmp7.image} resizeMode="contain" accessible={false} />;
           cResult[7] = graphic.source;
           cResult[8] = tmp7.image;
           cResult[9] = tmp15;
@@ -93,18 +90,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[10] !== size) {
-        const tmpResult2 = TagGroupTypes;
-        const tagIconSize = tmpResult2.getTagIconSize(size);
+        const tagIconSize = TagGroupTypes.getTagIconSize(size);
         cResult[10] = size;
         cResult[11] = tagIconSize;
-        tmp8 = tagIconSize;
+        let tmp8 = tagIconSize;
+        const tmpResult2 = TagGroupTypes;
       } else {
         tmp8 = cResult[11];
       }
       if (cResult[12] === graphic) {
-        let tmp10;
         if (cResult[13] === tmp8) {
-          tmp10 = cResult[14];
+          let tmp10 = cResult[14];
         }
         return tmp10;
       }
@@ -115,9 +111,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp8;
       cResult[14] = tmp11;
       tmp10 = tmp11;
+      const obj5 = { size: tmp8, color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, accessible: false };
     }
   : (arg0) => {
-      let graphic;
       ({ graphic, size } = arg0);
       let color;
       if ("type" in graphic) {
@@ -125,28 +121,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color = graphic.color;
         }
       }
-      const obj = TagGroupTypes;
-      const tmp4 = closure_6(obj.getTagGraphicDimension(size), color);
+      const tmp4 = closure_6(TagGroupTypes.getTagGraphicDimension(size), color);
       if ("type" in graphic) {
         const type = graphic.type;
         if ("role" === type) {
-          return <React3 style={tmp4.roleDot} accessible={false} />;
+          const obj2 = { style: tmp4.roleDot, accessible: false };
+          return <React4 style={tmp4.roleDot} accessible={false} />;
         } else if ("avatar" === type) {
-          return <_false source={graphic.source} style={tmp4.avatar} resizeMode="cover" accessible={false} />;
+          const obj3 = { source: graphic.source, style: tmp4.avatar, resizeMode: "cover", accessible: false };
+          return <React3 source={graphic.source} style={tmp4.avatar} resizeMode="cover" accessible={false} />;
         } else if ("image" === type) {
-          return <_false source={graphic.source} style={tmp4.image} resizeMode="contain" accessible={false} />;
+          const obj4 = { source: graphic.source, style: tmp4.image, resizeMode: "contain", accessible: false };
+          return <React3 source={graphic.source} style={tmp4.image} resizeMode="contain" accessible={false} />;
         }
       }
-      const tmp2Result = TagGroupTypes;
-      return (
-        <graphic
-          size={tmp2Result.getTagIconSize(size)}
-          color={nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT}
-          accessible={false}
-        />
-      );
+      const obj5 = { size: null, color: null, accessible: false };
+      obj5.size = TagGroupTypes.getTagIconSize(size);
+      obj5.color = nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+      return <graphic size={null} color={null} accessible={false} />;
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("design/components/TagGroup/native/TagGraphic.native.tsx");
-
-export const TagGraphic = tmp4;

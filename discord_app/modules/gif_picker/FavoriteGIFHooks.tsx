@@ -1,18 +1,15 @@
 // discord_app/modules/gif_picker/FavoriteGIFHooks.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import react2 from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import FrecencyUserSettingsHooks from "../user_settings/FrecencyUserSettingsHooks.tsx";
-import react from "../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
+require = fn;
 let closure_4 = {};
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const tmp = undefined === arg0 || arg0;
-      const obj = FrecencyUserSettingsHooks;
-      const favoriteGifs = obj.useFrecencySettings(tmp).favoriteGifs;
+      const favoriteGifs = FrecencyUserSettingsHooks.useFrecencySettings(undefined === arg0 || arg0).favoriteGifs;
       let gifs;
       if (favoriteGifs != null) {
         gifs = favoriteGifs.gifs;
@@ -27,8 +24,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg0 === undefined) {
         flag = true;
       }
-      const obj = FrecencyUserSettingsHooks;
-      const favoriteGifs = obj.useFrecencySettings(flag).favoriteGifs;
+      const favoriteGifs = FrecencyUserSettingsHooks.useFrecencySettings(flag).favoriteGifs;
       let gifs;
       if (favoriteGifs != null) {
         gifs = favoriteGifs.gifs;
@@ -39,25 +35,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return gifs;
     };
 let closure_5 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp5;
-      let closure_0 = arg0;
-      let obj = react2;
-      const cResult = obj.c(5);
+      closure_0 = arg0;
+      let valueResult = dependencyMap;
+      const cResult = c.c(5);
       const tmp3 = closure_5();
       if (cResult[0] === tmp3) {
-        let tmp4;
         if (cResult[1] === arg0) {
-          tmp4 = cResult[2];
+          return cResult[2];
         }
-        return tmp4;
       }
       if (cResult[3] !== arg0) {
         const fn = function s(src, url) {
-          const obj = { url, src };
+          const obj = {};
           const merged = Object.assign(src);
+          obj.url = url;
           src = undefined;
           if (closure_0 != null) {
             src = tmp2(src.src, url);
@@ -65,34 +60,33 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (src == null) {
             src = src.src;
           }
+          obj.src = src;
           return obj;
         };
         cResult[3] = arg0;
         cResult[4] = fn;
-        tmp5 = fn;
+        let tmp4 = fn;
       } else {
-        tmp5 = cResult[4];
+        tmp4 = cResult[4];
       }
+      const mapped = _modDef12(tmp3).map(tmp4);
       const arr = _modDef12(tmp3);
-      const mapped = arr.map(tmp5);
       const sortByResult = mapped.sortBy("order");
-      const iter = sortByResult.reverse();
-      const valueResult = iter.value();
+      valueResult = mapped.sortBy("order").reverse().value();
       cResult[0] = tmp3;
       cResult[1] = arg0;
       cResult[2] = valueResult;
-      tmp4 = valueResult;
     }
   : (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const tmp = closure_5();
-      let closure_1 = tmp;
+      closure_1 = tmp;
       const items = [tmp, arg0];
-      return react.useMemo(() => {
-        const arr = _modDef12(closure_1);
-        const mapped = arr.map((src, url) => {
-          const obj = { url, src };
+      return noop.useMemo(() => {
+        const mapped = _modDef12(closure_1).map((src, url) => {
+          const obj = {};
           const merged = Object.assign(src);
+          obj.url = url;
           src = undefined;
           if (closure_1_0 != null) {
             src = tmp2(src.src, url);
@@ -100,18 +94,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (src == null) {
             src = src.src;
           }
+          obj.src = src;
           return obj;
         });
+        const arr = _modDef12(closure_1);
         const sortByResult = mapped.sortBy("order");
-        const iter = sortByResult.reverse();
-        return iter.value();
+        return mapped.sortBy("order").reverse().value();
       }, items);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = FrecencyUserSettingsHooks;
-      const favoriteGifs = obj.useFrecencySettings().favoriteGifs;
+      const favoriteGifs = FrecencyUserSettingsHooks.useFrecencySettings().favoriteGifs;
       let flag;
       if (favoriteGifs != null) {
         flag = favoriteGifs.hideTooltip;
@@ -122,8 +116,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return flag;
     }
   : () => {
-      const obj = FrecencyUserSettingsHooks;
-      const favoriteGifs = obj.useFrecencySettings().favoriteGifs;
+      const favoriteGifs = FrecencyUserSettingsHooks.useFrecencySettings().favoriteGifs;
       let flag;
       if (favoriteGifs != null) {
         flag = favoriteGifs.hideTooltip;
@@ -133,10 +126,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return flag;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
+
+export const useFavoriteGIFs = tmp2;
+export const useSortedFavoriteGIFs = tmp3;
+export const useShouldShowTooltipOnFavorite = tmp4;
+export const useIsFavoriteGIF = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      const tmp2 = undefined === arg1 || arg1;
+      let tmp2 = undefined === arg1;
+      if (!tmp2) {
+        tmp2 = arg1;
+      }
       return null != closure_5(tmp2)[arg0];
     }
   : (arg0) => {
@@ -146,9 +147,3 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return null != closure_5(flag)[arg0];
     };
-const result = size.fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
-
-export const useFavoriteGIFs = tmp2;
-export const useSortedFavoriteGIFs = tmp3;
-export const useShouldShowTooltipOnFavorite = tmp4;
-export const useIsFavoriteGIF = tmp5;

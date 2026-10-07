@@ -1,15 +1,12 @@
 // discord_app/modules/conjure/preview/conjurePreviewControlLease.tsx
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
+const require = fn;
 function emit() {
   const items = [...set];
   const iter = items[Symbol.iterator]();
-  iter.next();
   if (iter !== undefined) {
     try {
       tmp2();
@@ -19,7 +16,6 @@ function emit() {
 function emitReleased(projectId) {
   const items = [...set1];
   const iter = items[Symbol.iterator]();
-  iter.next();
   if (iter !== undefined) {
     try {
       tmp2(projectId);
@@ -27,7 +23,7 @@ function emitReleased(projectId) {
   }
 }
 function subscribeConjureControl(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   set.add(arg0);
   return () => {
     set.delete(closure_0);
@@ -37,142 +33,88 @@ const map = new Map();
 let set = new Set();
 let set1 = new Set();
 const map1 = new Map();
-let set2 = new Set();
-let ReactCompilerGating = ReactCompilerGating_mod;
+const set2 = new Set();
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let tmp2;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(2);
+      const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
         const fn = function t() {
-          const hasItem = null != closure_0 && set2.has(tmp);
+          let hasItem = null != closure_0;
+          if (hasItem) {
+            hasItem = set2.has(tmp);
+          }
           return hasItem;
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        tmp2 = fn;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
-      return react.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
+      return noop.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
     }
   : (arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const items = [arg0];
-      const callback = react.useCallback(() => {
-        const hasItem = null != closure_0 && set2.has(tmp);
+      const callback = noop.useCallback(() => {
+        let hasItem = null != closure_0;
+        if (hasItem) {
+          hasItem = set2.has(tmp);
+        }
         return hasItem;
       }, items);
-      return react.useSyncExternalStore(subscribeConjureControl, callback, callback);
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let closure_0;
-      let tmp2;
-      _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(2);
-      if (cResult[0] !== arg0) {
-        const fn = function t() {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            const value = map.get(tmp);
-            let num;
-            if (value != null) {
-              num = value.holders;
-            }
-            if (num == null) {
-              num = 0;
-            }
-            tmp2 = num > 0;
-          }
-          return tmp2;
-        };
-        let num = 0;
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return react.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
-    }
-  : (arg0) => {
-      let closure_0 = arg0;
-      const items = [arg0];
-      const callback = react.useCallback(() => {
-        let tmp2 = null != closure_0;
-        if (tmp2) {
-          const value = map.get(tmp);
-          let num;
-          if (value != null) {
-            num = value.holders;
-          }
-          if (num == null) {
-            num = 0;
-          }
-          tmp2 = num > 0;
-        }
-        return tmp2;
-      }, items);
-      return react.useSyncExternalStore(subscribeConjureControl, callback, callback);
+      return noop.useSyncExternalStore(subscribeConjureControl, callback, callback);
     };
 function acquireConjureControlLease(arg0) {
-  let timerId;
-  let closure_0 = arg0;
-  let value = timerId.get(arg0);
-  const obj = timerId;
+  closure_0 = arg0;
+  value = timerId.get(arg0);
   if (value == null) {
+    const obj2 = { holders: 0, timers: null };
     const _Set = Set;
-    const self = this;
-    const self2 = this;
-    const obj2 = { holders: 0, timers: set };
-    value = obj2;
     set = new Set();
+    obj2.timers = set;
+    value = obj2;
   }
   dependencyMap = value;
   value.holders = value.holders + 1;
   function release() {
-    const tmp = c2;
-    if (!tmp) {
+    if (!c2) {
       c2 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(timerId1);
-      if (map.get(closure_0) === value3) {
-        const timers = value3.timers;
-        timers.delete(timerId1);
-        value3.holders = value3.holders - 1;
-        if (value3.holders <= 0) {
+      clearTimeout(closure_1_3);
+      if (map.get(closure_0) === dependencyMap) {
+        const timers = dependencyMap.timers;
+        timers.delete(closure_1_3);
+        dependencyMap.holders = dependencyMap.holders - 1;
+        if (dependencyMap.holders <= 0) {
           map.delete(closure_0);
         }
         emit();
-        if (value3.holders <= 0) {
+        if (dependencyMap.holders <= 0) {
           emitReleased(closure_0);
         }
       }
     }
   }
-  const result = obj.set(arg0, value);
-  let c2 = false;
+  const result = timerId.set(arg0, value);
+  c2 = false;
   timerId = setTimeout(() => {
-    const tmp = c2;
-    if (!tmp) {
+    if (!c2) {
       c2 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(timerId1);
-      if (map.get(closure_0) === value3) {
-        const timers = value3.timers;
-        timers.delete(timerId1);
-        value3.holders = value3.holders - 1;
-        if (value3.holders <= 0) {
+      clearTimeout(closure_1_3);
+      if (map.get(closure_0) === dependencyMap) {
+        const timers = dependencyMap.timers;
+        timers.delete(closure_1_3);
+        dependencyMap.holders = dependencyMap.holders - 1;
+        if (dependencyMap.holders <= 0) {
           map.delete(closure_0);
         }
         emit();
-        if (value3.holders <= 0) {
+        if (dependencyMap.holders <= 0) {
           emitReleased(closure_0);
         }
       }
@@ -184,7 +126,7 @@ function acquireConjureControlLease(arg0) {
   return release;
 }
 function endConjureControlOperation(openResult) {
-  const value = map1.get(openResult);
+  value = map1.get(openResult);
   if (null != value) {
     map1.delete(openResult);
     const _clearTimeout = clearTimeout;
@@ -193,7 +135,7 @@ function endConjureControlOperation(openResult) {
   }
 }
 function isConjureControlActive(openResult) {
-  const value = map.get(openResult);
+  value = map.get(openResult);
   let num;
   if (value != null) {
     num = value.holders;
@@ -203,18 +145,18 @@ function isConjureControlActive(openResult) {
   }
   return num > 0;
 }
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewControlLease.tsx");
 
 export { acquireConjureControlLease };
 export const CONTROL_OPERATION_IDLE_MS = 20000;
-export const beginConjureControlOperation = function beginConjureControlOperation(Stack2) {
-  let release;
-  let closure_0 = Stack2;
-  let value = map1.get(Stack2);
+export const beginConjureControlOperation = function beginConjureControlOperation(TableRowGroup) {
+  closure_0 = TableRowGroup;
+  value = map1.get(TableRowGroup);
   const timerId = setTimeout(() => {
-    const value = map1.get(Stack2);
+    value = map1.get(closure_0);
     if (null != value) {
-      map1.delete(Stack2);
+      map1.delete(closure_0);
       const _clearTimeout = clearTimeout;
       clearTimeout(value.timer);
       value.release();
@@ -223,143 +165,144 @@ export const beginConjureControlOperation = function beginConjureControlOperatio
   if (null != value) {
     let _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
-    closure_0 = Stack2;
-    let c2;
-    let timerId1;
-    let value3 = map.get(Stack2);
+    closure_130_0 = TableRowGroup;
+    closure_130_1 = undefined;
+    closure_130_2 = undefined;
+    closure_130_3 = undefined;
+    value3 = map.get(TableRowGroup);
     if (value3 == null) {
+      const obj2 = { holders: 0, timers: null };
       const _Set2 = Set;
-      const self3 = this;
-      const self4 = this;
-      const obj2 = { holders: 0, timers: set1 };
+      set = new Set();
+      obj2.timers = set;
       value3 = obj2;
-      set1 = new Set();
     }
+    closure_130_1 = value3;
     value3.holders = value3.holders + 1;
     const release2 = function release() {
-      const tmp = c2;
-      if (!tmp) {
+      if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(timerId1);
-        if (map.get(closure_0) === value3) {
-          const timers = value3.timers;
-          timers.delete(timerId1);
-          value3.holders = value3.holders - 1;
-          if (value3.holders <= 0) {
+        clearTimeout(closure_1_3);
+        if (map.get(closure_0) === dependencyMap) {
+          const timers = dependencyMap.timers;
+          timers.delete(closure_1_3);
+          dependencyMap.holders = dependencyMap.holders - 1;
+          if (dependencyMap.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (value3.holders <= 0) {
+          if (dependencyMap.holders <= 0) {
             emitReleased(closure_0);
           }
         }
       }
     };
-    const result = map.set(Stack2, value3);
-    c2 = false;
+    const result = map.set(TableRowGroup, value3);
+    closure_130_2 = false;
     const _setTimeout2 = setTimeout;
-    timerId1 = setTimeout(() => {
-      const tmp = c2;
-      if (!tmp) {
+    const timerId1 = setTimeout(() => {
+      if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(timerId1);
-        if (map.get(closure_0) === value3) {
-          const timers = value3.timers;
-          timers.delete(timerId1);
-          value3.holders = value3.holders - 1;
-          if (value3.holders <= 0) {
+        clearTimeout(closure_1_3);
+        if (map.get(closure_0) === dependencyMap) {
+          const timers = dependencyMap.timers;
+          timers.delete(closure_1_3);
+          dependencyMap.holders = dependencyMap.holders - 1;
+          if (dependencyMap.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (value3.holders <= 0) {
+          if (dependencyMap.holders <= 0) {
             emitReleased(closure_0);
           }
         }
       }
     }, 35000);
+    closure_130_3 = timerId1;
     const timers2 = value3.timers;
     timers2.add(timerId1);
     emit();
     value.release();
     const obj3 = { release: release2, timer: timerId };
-    const result1 = map1.set(Stack2, obj3);
+    const result1 = map1.set(TableRowGroup, obj3);
   } else {
-    closure_0 = Stack2;
-    c2 = undefined;
-    let timerId2;
-    set = map1.set;
-    let value4 = map.get(Stack2);
+    closure_129_0 = TableRowGroup;
+    closure_129_1 = undefined;
+    closure_129_2 = undefined;
+    closure_129_3 = undefined;
+    let value4 = map.get(TableRowGroup);
     if (value4 == null) {
+      const obj4 = { holders: 0, timers: null };
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      const obj4 = { holders: 0, timers: set2 };
-      set2 = new Set();
+      set1 = new Set();
+      obj4.timers = set1;
       value4 = obj4;
     }
-    const obj6 = { release, timer: timerId };
+    const obj6 = { release: null, timer: null };
+    closure_129_1 = value4;
     value4.holders = value4.holders + 1;
-    release = function release() {
-      const tmp = c2;
-      if (!tmp) {
+    function release() {
+      if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(timerId1);
-        if (map.get(closure_0) === value3) {
-          const timers = value3.timers;
-          timers.delete(timerId1);
-          value3.holders = value3.holders - 1;
-          if (value3.holders <= 0) {
+        clearTimeout(closure_1_3);
+        if (map.get(closure_0) === dependencyMap) {
+          const timers = dependencyMap.timers;
+          timers.delete(closure_1_3);
+          dependencyMap.holders = dependencyMap.holders - 1;
+          if (dependencyMap.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (value3.holders <= 0) {
+          if (dependencyMap.holders <= 0) {
             emitReleased(closure_0);
           }
         }
       }
-    };
-    const result2 = map.set(Stack2, value4);
-    c2 = false;
+    }
+    const result2 = map.set(TableRowGroup, value4);
+    closure_129_2 = false;
     const _setTimeout = setTimeout;
-    timerId2 = setTimeout(() => {
-      const tmp = c2;
-      if (!tmp) {
+    const timerId2 = setTimeout(() => {
+      if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(timerId1);
-        if (map.get(closure_0) === value3) {
-          const timers = value3.timers;
-          timers.delete(timerId1);
-          value3.holders = value3.holders - 1;
-          if (value3.holders <= 0) {
+        clearTimeout(closure_1_3);
+        if (map.get(closure_0) === dependencyMap) {
+          const timers = dependencyMap.timers;
+          timers.delete(closure_1_3);
+          dependencyMap.holders = dependencyMap.holders - 1;
+          if (dependencyMap.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (value3.holders <= 0) {
+          if (dependencyMap.holders <= 0) {
             emitReleased(closure_0);
           }
         }
       }
     }, 35000);
+    closure_129_3 = timerId2;
     let timers = value4.timers;
     timers.add(timerId2);
     emit();
-    const result3 = set(Stack2, obj6);
+    obj6.release = release;
+    obj6.timer = timerId;
+    const result3 = map1.set(TableRowGroup, obj6);
   }
 };
 export { endConjureControlOperation };
 export const releaseConjureControlLeases = function releaseConjureControlLeases(projectId) {
   set2.delete(projectId);
-  const value = map1.get(projectId);
+  value = map1.get(projectId);
   if (null != value) {
     map1.delete(projectId);
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
   }
-  const value2 = map.get(projectId);
+  value2 = map.get(projectId);
   if (null != value2) {
     const timers = value2.timers;
     const tmp8 = timers[Symbol.iterator]();
@@ -391,10 +334,57 @@ export const getConjureControlActiveProjectIds = function getConjureControlActiv
 };
 export { subscribeConjureControl };
 export const subscribeConjureControlReleased = function subscribeConjureControlReleased(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   set1.add(arg0);
   return () => {
     set1.delete(closure_0);
   };
 };
-export const useConjureControlActive = tmp8;
+export const useConjureControlActive = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(2);
+      if (cResult[0] !== arg0) {
+        const fn = function t() {
+          let tmp2 = null != closure_0;
+          if (tmp2) {
+            value = map.get(tmp);
+            let num;
+            if (value != null) {
+              num = value.holders;
+            }
+            if (num == null) {
+              num = 0;
+            }
+            tmp2 = num > 0;
+          }
+          return tmp2;
+        };
+        cResult[0] = arg0;
+        cResult[1] = fn;
+        let tmp2 = fn;
+      } else {
+        tmp2 = cResult[1];
+      }
+      return noop.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
+    }
+  : (arg0) => {
+      closure_0 = arg0;
+      const items = [arg0];
+      const callback = noop.useCallback(() => {
+        let tmp2 = null != closure_0;
+        if (tmp2) {
+          value = map.get(tmp);
+          let num;
+          if (value != null) {
+            num = value.holders;
+          }
+          if (num == null) {
+            num = 0;
+          }
+          tmp2 = num > 0;
+        }
+        return tmp2;
+      }, items);
+      return noop.useSyncExternalStore(subscribeConjureControl, callback, callback);
+    };

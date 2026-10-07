@@ -1,21 +1,16 @@
 // discord_app/modules/native_permissions/NativePermissionUtils.tsx
-import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
-import nativePermissionDesktopNullUtils from "NativePermissionUtils.null.tsx";
-import NativePermissionBaseUtils from "NativePermissionBaseUtils.tsx";
-import mobile_NativePermissionUtils from "mobile/NativePermissionUtils.native.tsx";
 import NativePermissionManager_mod from "NativePermissionManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let _default;
 let NativePermissionManager = NativePermissionManager_mod;
 NativePermissionManager = NativePermissionManager.initialize();
-const ProcessArgs = ProcessArgs2.ProcessArgs;
+const ProcessArgs = fn(6721).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {
-  _default = nativePermissionDesktopNullUtils.default;
+  let _default = fn(7290).default;
 } else {
-  _default = mobile_NativePermissionUtils.default;
+  _default = fn(7294).default;
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
 
 export default _default;
-export const NativePermissionsRequestOptions = NativePermissionBaseUtils.NativePermissionsRequestOptions;
+export const NativePermissionsRequestOptions = fn(7291).NativePermissionsRequestOptions;

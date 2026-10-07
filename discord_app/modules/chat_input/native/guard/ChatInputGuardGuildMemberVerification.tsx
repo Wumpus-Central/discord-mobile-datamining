@@ -1,60 +1,44 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../../Constants.tsx";
-import intl5 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import MemberVerificationAlertActionCreators from "../../../guild_member_verification/native/MemberVerificationAlertActionCreators.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
-import ChatInputConstants from "../ChatInputConstants.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12128_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/12129_AssetRegistry.js";
+import _modDef12128 from "../../../../../_runtime/metro/12128__.js";
+import _modDef12129 from "../../../../../_runtime/metro/12129__.js";
 import _mod12130 from "../../../../../_runtime/metro/12130__.js";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let guildId, importDefault;
-
-const Image = react_native.Image;
-const TextAreaCta = ChatInputConstants.TextAreaCta;
-const AnalyticEvents = Constants.AnalyticEvents;
-const jsx = Fragment.jsx;
+require = fn;
+const Image = fn(17).Image;
+const TextAreaCta = fn(11589).TextAreaCta;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles({
   noticeIcon: { height: 36, width: 36, resizeMode: "contain" },
   lottieAnimation: { height: 36, width: 36 },
 });
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (guildId) => {
-        let fn3;
-        let lottieAnimation;
-        let stateFromStores;
-        let tmp11;
-        let tmp27;
-        let tmp28;
-        let useReducedMotion;
-        const tmp = guildId;
-        const tmp2 = stateFromStores;
-        let obj = guildId(stateFromStores[8]);
-        const cResult = obj.c(25);
+        const cResult = guildId(stateFromStores[8]).c(25);
         guildId = guildId.guildId;
-        const tmp4 = closure_8();
-        importDefault = tmp4;
-        let obj2 = guildId(stateFromStores[9]);
-        const currentUserGuildJoinRequest = obj2.useCurrentUserGuildJoinRequest(guildId);
+        let noticeIcon = closure_8();
+        let obj = guildId(stateFromStores[8]);
+        const currentUserGuildJoinRequest = guildId(stateFromStores[9]).useCurrentUserGuildJoinRequest(guildId);
         let applicationStatus;
         if (currentUserGuildJoinRequest != null) {
           applicationStatus = currentUserGuildJoinRequest.applicationStatus;
         }
-        if (tmp(tmp2[10]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+        if (guildId(stateFromStores[10]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
           const _Symbol3 = Symbol;
-          const tmp22 = require("AssetRegistry");
           if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
             const intl3 = tmp(tmp2[12]).intl;
             const stringResult = intl3.string(tmp(tmp2[12]).t.lk30cY);
@@ -65,281 +49,302 @@ const memoResult = react.memo(
           }
           if (cResult[1] !== guildId) {
             const fn2 = function y() {
-              const obj = AppAnalyticsUtilsDefault;
+              AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, {
+                cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED,
+              });
               const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationAlertActionCreators;
-              const obj4 = { guildId, canWithdraw: false };
-              const result = obj3.openMemberVerificationRejectedAlert(obj4);
+              const result = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert({
+                guildId,
+                canWithdraw: false,
+              });
             };
             cResult[1] = guildId;
             cResult[2] = fn2;
           }
-          tmp11 = tmp22;
-        } else if (tmp(tmp2[10]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-          const _Symbol = Symbol;
-          const tmp13 = require("AssetRegistry");
-          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp17 = jsx(tmp(tmp2[16]).XSmallIcon, {});
-            cResult[3] = tmp17;
-          }
-          const _Symbol2 = Symbol;
-          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = tmp(tmp2[12]).intl;
-            const stringResult1 = intl2.string(tmp(tmp2[12]).t["5iLvSx"]);
-            cResult[4] = stringResult1;
-          }
-          if (cResult[5] !== guildId) {
-            const fn = function v() {
-              let intl;
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = { guildId, subtitleText: intl.string(intl5.t["13tjTU"]) };
-              const openMemberVerificationCancelPendingAlert =
-                MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
-              MemberVerificationAlertActionCreators;
-              intl = intl5.intl;
-              const result = openMemberVerificationCancelPendingAlert(obj3);
-            };
-            cResult[5] = guildId;
-            cResult[6] = fn;
-          }
-          tmp11 = tmp13;
+          const tmp21 = noticeIcon(tmp2[11]);
         } else {
-          const _Symbol4 = Symbol;
-          if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            let intl = tmp(tmp2[12]).intl;
-            cResult[7] = intl.string(tmp(tmp2[12]).t.rEBKvg);
-            const stringResult2 = intl.string(tmp(tmp2[12]).t.rEBKvg);
-          }
-          if (cResult[8] !== guildId) {
-            class V {
-              constructor() {
-                const obj = AppAnalyticsUtilsDefault;
-                const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-                obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-                const obj3 = MemberVerificationModalActionCreators;
-                const result = obj3.openMemberVerificationModal(guildId);
+          if (tmp(tmp2[10]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+            const _Symbol = Symbol;
+            if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+              const tmp16 = jsx(tmp(tmp2[16]).XSmallIcon, {});
+              cResult[3] = tmp16;
+            }
+            const _Symbol2 = Symbol;
+            if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl2 = tmp(tmp2[12]).intl;
+              const stringResult1 = intl2.string(tmp(tmp2[12]).t["5iLvSx"]);
+              cResult[4] = stringResult1;
+            }
+            if (cResult[5] !== guildId) {
+              const fn = function v() {
+                AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, {
+                  cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED,
+                });
+                const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED };
+                const obj4 = { guildId, subtitleText: null };
+                const intl = util.intl;
+                obj4.subtitleText = intl.string(util.t["13tjTU"]);
+                const result = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert(obj4);
+              };
+              cResult[5] = guildId;
+              cResult[6] = fn;
+            }
+            const tmp10 = noticeIcon(tmp2[15]);
+            const tmp12 = noticeIcon(tmp2[15]);
+          } else {
+            const _Symbol5 = Symbol;
+            if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+              let intl = tmp(tmp2[12]).intl;
+              const stringResult2 = intl.string(tmp(tmp2[12]).t.rEBKvg);
+              cResult[7] = stringResult2;
+            }
+            if (cResult[8] !== guildId) {
+              class V {
+                constructor() {
+                  obj = closure_1(closure_2[13]);
+                  obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj3 = closure_0(closure_2[17]);
+                  result = obj3.openMemberVerificationModal(guildId);
+                  return;
+                }
+              }
+              cResult[8] = guildId;
+              cResult[9] = V;
+            } else {
+              class V {
+                constructor() {
+                  obj = closure_1(closure_2[13]);
+                  obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj3 = closure_0(closure_2[17]);
+                  result = obj3.openMemberVerificationModal(guildId);
+                  return;
+                }
               }
             }
-            cResult[8] = guildId;
-            cResult[9] = V;
+          }
+          const _Symbol4 = Symbol;
+          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+            class V {
+              constructor() {
+                obj = closure_1(closure_2[13]);
+                obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                obj3 = closure_0(closure_2[17]);
+                result = obj3.openMemberVerificationModal(guildId);
+                return;
+              }
+            }
+            const items = [AccessibilityStore];
+            class T {
+              constructor() {
+                return closure_1_4.useReducedMotion;
+              }
+            }
+            cResult[10] = items;
+            cResult[11] = T;
+            let tmp31 = T;
+            const tmp30 = items;
           } else {
             class V {
               constructor() {
-                const obj = AppAnalyticsUtilsDefault;
-                const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-                obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-                const obj3 = MemberVerificationModalActionCreators;
-                const result = obj3.openMemberVerificationModal(guildId);
+                obj = closure_1(closure_2[13]);
+                obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                obj3 = closure_0(closure_2[17]);
+                result = obj3.openMemberVerificationModal(guildId);
+                return;
               }
             }
+            tmp31 = cResult[11];
           }
-        }
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class V {
-            constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationModalActionCreators;
-              const result = obj3.openMemberVerificationModal(guildId);
-            }
-          }
-          const items = [AccessibilityStore];
-          class T {
-            constructor() {
-              return useReducedMotion.useReducedMotion;
-            }
-          }
-          cResult[10] = items;
-          cResult[11] = T;
-          tmp28 = T;
-          tmp27 = items;
-        } else {
-          class V {
-            constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationModalActionCreators;
-              const result = obj3.openMemberVerificationModal(guildId);
-            }
-          }
-          tmp28 = cResult[11];
-        }
-        const tmpResult = tmp(tmp2[18]);
-        stateFromStores = tmpResult.useStateFromStores(tmp27, tmp28);
-        if (cResult[12] === tmp4.lottieAnimation) {
-          let tmp31;
-          class V {
-            constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationModalActionCreators;
-              const result = obj3.openMemberVerificationModal(guildId);
-            }
-          }
-          if (cResult[15] === tmp11) {
+          stateFromStores = tmp(tmp2[18]).useStateFromStores(tmp30, tmp31);
+          if (cResult[12] === noticeIcon.lottieAnimation) {
             class V {
               constructor() {
-                const obj = AppAnalyticsUtilsDefault;
-                const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-                obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-                const obj3 = MemberVerificationModalActionCreators;
-                const result = obj3.openMemberVerificationModal(guildId);
+                obj = closure_1(closure_2[13]);
+                obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                obj3 = closure_0(closure_2[17]);
+                result = obj3.openMemberVerificationModal(guildId);
+                return;
               }
             }
-          }
-          if (null != tmp11) {
-            class V {
-              constructor() {
-                const obj = AppAnalyticsUtilsDefault;
-                const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-                obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-                const obj3 = MemberVerificationModalActionCreators;
-                const result = obj3.openMemberVerificationModal(guildId);
+            if (cResult[15] === tmp10) {
+              class V {
+                constructor() {
+                  obj = closure_1(closure_2[13]);
+                  obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj3 = closure_0(closure_2[17]);
+                  result = obj3.openMemberVerificationModal(guildId);
+                  return;
+                }
+              }
+            }
+            if (null != tmp10) {
+              class V {
+                constructor() {
+                  obj = closure_1(closure_2[13]);
+                  obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj3 = closure_0(closure_2[17]);
+                  result = obj3.openMemberVerificationModal(guildId);
+                  return;
+                }
+              }
+              const obj3 = { style: null, source: null };
+              class T {
+                constructor() {
+                  return closure_1_4.useReducedMotion;
+                }
+              }
+              obj3.source = tmp10;
+              const tmp34 = <Image style={null} source={null} />;
+            } else {
+              class V {
+                constructor() {
+                  obj = closure_1(closure_2[13]);
+                  obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj3 = closure_0(closure_2[17]);
+                  result = obj3.openMemberVerificationModal(guildId);
+                  return;
+                }
               }
             }
             class T {
               constructor() {
-                return useReducedMotion.useReducedMotion;
+                return closure_1_4.useReducedMotion;
               }
             }
-            tmp31 = <Image style={null} source={tmp11} />;
-          } else {
-            class V {
-              constructor() {
-                const obj = AppAnalyticsUtilsDefault;
-                const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-                obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-                const obj3 = MemberVerificationModalActionCreators;
-                const result = obj3.openMemberVerificationModal(guildId);
-              }
-            }
+            cResult[15] = tmp10;
+            cResult[16] = tmp33;
+            noticeIcon = noticeIcon.noticeIcon;
+            cResult[17] = noticeIcon;
+            cResult[18] = tmp34;
           }
-          class T {
-            constructor() {
-              return useReducedMotion.useReducedMotion;
-            }
-          }
-          cResult[15] = tmp11;
-          cResult[16] = fn3;
-          cResult[17] = tmp4.noticeIcon;
-          cResult[18] = tmp31;
+          const fn3 = function k() {
+            const obj = { style: noticeIcon.lottieAnimation, source: _mod12130, autoPlay: !stateFromStores };
+            return jsx(LottieAnimationViewDefault, {
+              style: noticeIcon.lottieAnimation,
+              source: _mod12130,
+              autoPlay: !stateFromStores,
+            });
+          };
+          cResult[12] = noticeIcon.lottieAnimation;
+          cResult[13] = stateFromStores;
+          cResult[14] = fn3;
+          tmp33 = fn3;
+          const tmpResult = tmp(tmp2[18]);
         }
-        fn3 = function k() {
-          LottieAnimationViewDefault;
-          return <tmp style={lottieAnimation.lottieAnimation} source={_mod12130} autoPlay={!stateFromStores} />;
-        };
-        cResult[12] = tmp4.lottieAnimation;
-        cResult[13] = stateFromStores;
-        cResult[14] = fn3;
+        let obj2 = guildId(stateFromStores[9]);
       }
     : (guildId) => {
-        let stringResult;
-        let tmp14Result;
-        let tmp7;
-        let tmp8;
-        let useReducedMotion;
         guildId = guildId.guildId;
         const tmp = closure_8();
-        const tmp2 = guildId;
-        let obj = guildId(5942);
-        const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
+        const currentUserGuildJoinRequest = guildId(5942).useCurrentUserGuildJoinRequest(guildId);
         let applicationStatus;
         if (currentUserGuildJoinRequest != null) {
           applicationStatus = currentUserGuildJoinRequest.applicationStatus;
         }
-        if (tmp2(4708).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-          tmp8 = AssetRegistryDefault;
-          const intl3 = tmp2(1126).intl;
-          stringResult = intl3.string(tmp2(1126).t.lk30cY);
+        if (guildId(4708).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+          let tmp8 = _modDef12128;
+          const intl2 = tmp2(1126).intl;
+          let stringResult = intl2.string(tmp2(1126).t.lk30cY);
           class I {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationAlertActionCreators;
-              const obj4 = { guildId, canWithdraw: false };
-              const result = obj3.openMemberVerificationRejectedAlert(obj4);
+              obj = closure_1(closure_2[13]);
+              obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[14]);
+              obj5 = { guildId, canWithdraw: false };
+              result = obj3.openMemberVerificationRejectedAlert(obj5);
+              return;
             }
           }
         } else if (tmp2(4708).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-          tmp8 = AssetRegistryDefault2;
-          tmp7 = jsx(tmp2(6024).XSmallIcon, {});
-          const intl2 = tmp2(1126).intl;
+          tmp8 = _modDef12129;
           class I {
             constructor() {
-              let intl;
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = { guildId, subtitleText: intl.string(intl5.t["13tjTU"]) };
-              const openMemberVerificationCancelPendingAlert =
-                MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert;
-              MemberVerificationAlertActionCreators;
-              intl = intl5.intl;
-              const result = openMemberVerificationCancelPendingAlert(obj3);
+              obj = closure_1(closure_2[13]);
+              obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_CONFIRMED };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[14]);
+              obj5 = { guildId, subtitleText: null };
+              intl = closure_0(closure_2[12]).intl;
+              obj5.subtitleText = intl.string(closure_0(closure_2[12]).t["13tjTU"]);
+              result = obj3.openMemberVerificationCancelPendingAlert(obj5);
+              return;
             }
           }
           stringResult = tmp11(tmp2(1126).t["5iLvSx"]);
+          const tmp7 = jsx(tmp2(6024).XSmallIcon, {});
         } else {
           let intl = tmp2(1126).intl;
           stringResult = intl.string(tmp2(1126).t.rEBKvg);
           class I {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationModalActionCreators;
-              const result = obj3.openMemberVerificationModal(guildId);
+              obj = closure_1(closure_2[13]);
+              obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[17]);
+              result = obj3.openMemberVerificationModal(guildId);
+              return;
             }
           }
         }
+        let obj = guildId(5942);
         const items = [AccessibilityStore];
-        const tmp2Result = tmp2(504);
-        const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-        ChatInputGuardDefault;
+        const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+        const tmp2Result = guildId(504);
         if (null != tmp8) {
+          let obj2 = { style: tmp.noticeIcon, source: null };
           class I {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationModalActionCreators;
-              const result = obj3.openMemberVerificationModal(guildId);
+              obj = closure_1(closure_2[13]);
+              obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[17]);
+              result = obj3.openMemberVerificationModal(guildId);
+              return;
             }
           }
-          tmp14Result = <Image style={tmp.noticeIcon} source={null} />;
+          const tmp14Result = <Image style={tmp.noticeIcon} source={null} />;
         } else {
-          let obj3 = { style: tmp.lottieAnimation, source: null, autoPlay: !stateFromStores };
+          const obj3 = { style: tmp.lottieAnimation, source: null, autoPlay: null };
           LottieAnimationViewDefault;
           class I {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
-              obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj2);
-              const obj3 = MemberVerificationModalActionCreators;
-              const result = obj3.openMemberVerificationModal(guildId);
+              obj = closure_1(closure_2[13]);
+              obj1 = { cta_type: TextAreaCta.MEMBER_VERIFICATION };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+              obj3 = closure_0(closure_2[17]);
+              result = obj3.openMemberVerificationModal(guildId);
+              return;
             }
           }
+          obj3.autoPlay = !stateFromStores;
         }
-        const intl4 = tmp2(1126).intl;
-        return (
-          <tmp16
-            type="simple-action"
-            icon={tmp14Result}
-            message={stringResult}
-            actionIcon={tmp7}
-            actionLabel={intl4.string(tmp2(1126).t["r8/DT+"])}
-            actionOnPress={I}
-          />
-        );
+        let obj4 = {
+          type: "simple-action",
+          icon: tmp14Result,
+          message: stringResult,
+          actionIcon: tmp7,
+          actionLabel: null,
+          actionOnPress: null,
+        };
+        const intl3 = tmp2(1126).intl;
+        obj4.actionLabel = intl3.string(guildId(1126).t["r8/DT+"]);
+        obj4.actionOnPress = I;
+        return jsx(ChatInputGuardDefault, {
+          type: "simple-action",
+          icon: tmp14Result,
+          message: stringResult,
+          actionIcon: tmp7,
+          actionLabel: null,
+          actionOnPress: null,
+        });
       },
 );
-let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
-
-export default memoResult;

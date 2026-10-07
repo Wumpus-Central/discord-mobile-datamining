@@ -1,15 +1,12 @@
 // discord_app/modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx
 import Server from "../../../../flow/Server.tsx";
 import ApplicationCommandTypes from "../../../application_commands/ApplicationCommandTypes.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 
+require = fn;
 function commandPermissions(arg0, items) {
-  let tmp6;
-  let tmp7;
   const obj = {};
   const entries = Object.entries(arg0);
-  const tmp2 = entries[Symbol.iterator]();
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
@@ -20,6 +17,7 @@ function commandPermissions(arg0, items) {
   }
   return obj;
 }
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx",
 );

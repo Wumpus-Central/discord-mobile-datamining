@@ -1,28 +1,22 @@
 // discord_app/modules/user_profile/native/UserProfileVoiceActivityIcon.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import isRoleRequiredDefault from "../../channel/isRoleRequired.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, channel;
 
+const require = fn;
 let closure_3 = ["channel"];
-const Permissions = Constants.Permissions;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const Permissions = fn(1096).Permissions;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let _private;
-      let tmp10;
-      let tmp4;
-      let tmp45;
-      let tmp8;
-      const obj = require("react");
-      const cResult = obj.c(18);
+      const cResult = require("c").c(18);
       if (cResult[0] !== channel) {
         channel = channel.channel;
         _require = channel;
@@ -30,7 +24,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = channel;
         cResult[1] = channel;
         cResult[2] = tmp7;
-        tmp4 = tmp7;
+        let tmp4 = tmp7;
       } else {
         _require = cResult[1];
         tmp4 = cResult[2];
@@ -38,26 +32,28 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
         cResult[3] = items;
-        tmp8 = items;
+        let tmp8 = items;
       } else {
         tmp8 = cResult[3];
       }
       if (cResult[4] !== obj2) {
         const fn = function v() {
-          const isPrivateResult = _private.isPrivate() || PermissionStore.can(Permissions.CONNECT, _private);
+          let isPrivateResult = _private.isPrivate();
+          if (!isPrivateResult) {
+            isPrivateResult = PermissionStore.can(Permissions.CONNECT, _private);
+          }
           return isPrivateResult;
         };
         cResult[4] = obj2;
         cResult[5] = fn;
-        tmp10 = fn;
+        let tmp10 = fn;
       } else {
         tmp10 = cResult[5];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(tmp8, tmp10);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp8, tmp10);
       if (!obj2.isDM()) {
         if (!obj2.isGroupDM()) {
-          let tmp15;
           const isGuildStageVoiceResult = obj2.isGuildStageVoice();
           let tmp13 = !stateFromStores;
           if (stateFromStores) {
@@ -65,96 +61,79 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (isGuildStageVoiceResult) {
             if (tmp13) {
-              let tmp39;
               if (cResult[8] !== tmp4) {
-                const StageLockIcon = tmp(5887).StageLockIcon;
+                const obj3 = {};
                 const merged = Object.assign(tmp4);
-                const tmp44 = <StageLockIcon />;
+                const tmp47 = jsx(tmp(5887).StageLockIcon, {});
                 cResult[8] = tmp4;
-                cResult[9] = tmp44;
-                tmp39 = tmp44;
-              } else {
-                tmp39 = cResult[9];
+                cResult[9] = tmp47;
               }
-              tmp15 = tmp39;
             }
-            return tmp15;
           }
           if (isGuildStageVoiceResult) {
-            let tmp33;
             if (cResult[10] !== tmp4) {
-              const StageIcon = tmp(5888).StageIcon;
+              const obj4 = {};
               const merged1 = Object.assign(tmp4);
-              const tmp38 = <StageIcon />;
+              const tmp40 = jsx(tmp(5888).StageIcon, {});
               cResult[10] = tmp4;
-              cResult[11] = tmp38;
-              tmp33 = tmp38;
-            } else {
-              tmp33 = cResult[11];
+              cResult[11] = tmp40;
             }
-            tmp15 = tmp33;
           } else if (obj2.isNSFW()) {
-            let tmp27;
             if (cResult[12] !== tmp4) {
-              const VoiceWarningIcon = tmp(5890).VoiceWarningIcon;
+              const obj5 = {};
               const merged2 = Object.assign(tmp4);
-              const tmp32 = <VoiceWarningIcon />;
+              const tmp33 = jsx(tmp(5890).VoiceWarningIcon, {});
               cResult[12] = tmp4;
-              cResult[13] = tmp32;
-              tmp27 = tmp32;
-            } else {
-              tmp27 = cResult[13];
+              cResult[13] = tmp33;
             }
-            tmp15 = tmp27;
           } else if (tmp13) {
-            let tmp21;
             if (cResult[14] !== tmp4) {
-              const VoiceLockIcon = tmp(5889).VoiceLockIcon;
+              const obj6 = {};
               const merged3 = Object.assign(tmp4);
-              const tmp26 = <VoiceLockIcon />;
+              const tmp26 = jsx(tmp(5889).VoiceLockIcon, {});
               cResult[14] = tmp4;
               cResult[15] = tmp26;
-              tmp21 = tmp26;
-            } else {
-              tmp21 = cResult[15];
             }
-            tmp15 = tmp21;
-          } else if (cResult[16] !== tmp4) {
-            const VoiceNormalIcon = tmp(5892).VoiceNormalIcon;
-            const merged4 = Object.assign(tmp4);
-            const tmp20 = <VoiceNormalIcon />;
-            cResult[16] = tmp4;
-            cResult[17] = tmp20;
-            tmp15 = tmp20;
           } else {
-            tmp15 = cResult[17];
+            if (cResult[16] !== tmp4) {
+              const obj7 = {};
+              const merged4 = Object.assign(tmp4);
+              const tmp20 = jsx(tmp(5892).VoiceNormalIcon, {});
+              cResult[16] = tmp4;
+              cResult[17] = tmp20;
+              let tmp15 = tmp20;
+            } else {
+              tmp15 = cResult[17];
+            }
+            return tmp15;
           }
         }
       }
       if (cResult[6] !== tmp4) {
-        const PhoneCallIcon = tmp(7534).PhoneCallIcon;
+        const obj8 = {};
         const merged5 = Object.assign(tmp4);
-        const tmp50 = <PhoneCallIcon />;
+        const tmp54 = jsx(tmp(7534).PhoneCallIcon, {});
         cResult[6] = tmp4;
-        cResult[7] = tmp50;
-        tmp45 = tmp50;
+        cResult[7] = tmp54;
+        let tmp49 = tmp54;
       } else {
-        tmp45 = cResult[7];
+        tmp49 = cResult[7];
       }
-      return tmp45;
+      return tmp49;
     }
   : (channel) => {
       channel = channel.channel;
       const merged = Object.assign(channel, Object.assign({ channel: 0 }));
       const items = [PermissionStore];
-      const obj = channel(504);
-      const stateFromStores = obj.useStateFromStores(items, () => {
-        const isPrivateResult = channel.isPrivate() || PermissionStore.can(Permissions.CONNECT, channel);
+      const stateFromStores = channel(504).useStateFromStores(items, () => {
+        let isPrivateResult = channel.isPrivate();
+        if (!isPrivateResult) {
+          isPrivateResult = PermissionStore.can(Permissions.CONNECT, channel);
+        }
         return isPrivateResult;
       });
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
-          let tmp8Result;
           const isGuildStageVoiceResult = channel.isGuildStageVoice();
           let tmp6 = !stateFromStores;
           if (stateFromStores) {
@@ -162,35 +141,32 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (isGuildStageVoiceResult) {
             if (tmp6) {
-              const StageLockIcon = tmp2(5887).StageLockIcon;
+              const obj2 = {};
               const merged1 = Object.assign(merged);
-              tmp8Result = <StageLockIcon />;
+              let tmp8Result = jsx(tmp2(5887).StageLockIcon, {});
             }
             return tmp8Result;
           }
           if (isGuildStageVoiceResult) {
-            const StageIcon = tmp2(5888).StageIcon;
+            const obj3 = {};
             const merged2 = Object.assign(merged);
-            tmp8Result = <StageIcon />;
+            tmp8Result = jsx(tmp2(5888).StageIcon, {});
           } else if (channel.isNSFW()) {
-            const VoiceWarningIcon = tmp2(5890).VoiceWarningIcon;
+            const obj4 = {};
             const merged3 = Object.assign(merged);
-            tmp8Result = <VoiceWarningIcon />;
+            tmp8Result = jsx(tmp2(5890).VoiceWarningIcon, {});
           } else {
             if (tmp6) {
               let VoiceNormalIcon = tmp2(5889).VoiceLockIcon;
             } else {
               VoiceNormalIcon = tmp2(5892).VoiceNormalIcon;
             }
+            const obj5 = {};
             const merged4 = Object.assign(merged);
             tmp8Result = <VoiceNormalIcon />;
           }
         }
       }
-      const PhoneCallIcon = tmp2(7534).PhoneCallIcon;
       const merged5 = Object.assign(merged);
-      return <PhoneCallIcon />;
+      return jsx(channel(7534).PhoneCallIcon, {});
     };
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
-
-export default tmp3;

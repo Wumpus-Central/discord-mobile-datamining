@@ -6,7 +6,7 @@ import DevToolsScreens from "../../../devtools/native/components/DevToolsScreens
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = {
+const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Show Dev Tools";
   },
@@ -15,14 +15,14 @@ const obj = {
   onPress: DevToolsNavigator.navigateToDevTools,
   usePredicate: useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    let values2;
-    const items = [...values(DevToolsScreens.DevToolsScreens), ...values2(DevToolsScreens.PerformanceTestingScreens)];
-    values2 = Object.values;
+    const items = [
+      ...Object.values(DevToolsScreens.DevToolsScreens),
+      ...Object.values(DevToolsScreens.PerformanceTestingScreens),
+    ];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true,
-};
-const pressable = SettingBuilders.createPressable(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevToolsSetting.tsx");
 
 export default pressable;

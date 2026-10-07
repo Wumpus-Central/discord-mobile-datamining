@@ -1,86 +1,72 @@
 // discord_app/modules/auth/native/components/AuthFormView.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
-import react3 from "WideAuthScrollContext.tsx";
+import WideAuthScrollContext from "WideAuthScrollContext.tsx";
 import AuthHeaderDefault from "atoms/AuthHeader.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import AuthNavbarPlaceholderDefault from "atoms/AuthNavbarPlaceholder.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-({ View: closure_4, ScrollView: hasOwnProperty } = react_native);
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles((arg0) => {
-  let num2;
-  let num3;
-  let num4;
-  let num5;
-  let obj3;
-  let num = 0;
   const obj = {
     container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
     flex: { flex: 1 },
-    content: obj3,
-    subHeader: { marginTop: 8, alignItems: "center" },
+    content: null,
+    subHeader: null,
   };
-  ({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 });
+  let num = 0;
   if (arg0) {
     num = 12;
   }
-  obj3 = { paddingTop: num, paddingRight: num2, paddingLeft: num3, paddingBottom: num4, flex: num5 };
-  num2 = 16;
+  const obj3 = { paddingTop: num, paddingRight: null, paddingLeft: null, paddingBottom: null, flex: null };
+  let num2 = 16;
   if (arg0) {
     num2 = 24;
   }
-  num3 = 16;
+  obj3.paddingRight = num2;
+  let num3 = 16;
   if (arg0) {
     num3 = 24;
   }
-  num4 = 0;
+  obj3.paddingLeft = num3;
+  let num4 = 0;
   if (arg0) {
     num4 = 16;
   }
-  num5 = 1;
+  obj3.paddingBottom = num4;
+  let num5 = 1;
   if (arg0) {
     num5 = 0;
   }
+  obj3.flex = num5;
+  obj.content = obj3;
+  obj.subHeader = { marginTop: 8, alignItems: "center" };
   return obj;
 });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let backgroundImageCover;
-      let backgroundImageSource;
-      let children;
-      let contentStyle;
-      let headerText;
-      let items;
-      let items2;
-      let items3;
-      let subHeader;
-      let tmp28;
-      const obj = react2;
-      const cResult = obj.c(45);
+      const cResult = c.c(45);
       ({ children, headerText, subHeader, contentStyle, backgroundImageSource, backgroundImageCover } = arg0);
       const tmp4 = useWideAuthViewDefault();
-      const tmp5 = closure_8(tmp4);
-      const context = react.useContext(react3.WideAuthScrollContext);
+      let container = closure_8(tmp4);
+      const context = noop.useContext(WideAuthScrollContext.WideAuthScrollContext);
       if (tmp4) {
-        let first;
-        let tmp34;
         const _Symbol3 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { top: 0 };
           cResult[0] = obj2;
-          first = obj2;
+          let first = obj2;
         } else {
           first = cResult[0];
         }
@@ -90,43 +76,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           };
           cResult[1] = context;
           cResult[2] = fn;
-          tmp34 = fn;
+          let tmp32 = fn;
         } else {
-          tmp34 = cResult[2];
+          tmp32 = cResult[2];
         }
         if (cResult[3] === contentStyle) {
-          let tmp35;
-          let tmp36;
-          if (cResult[4] === tmp5.content) {
-            tmp35 = cResult[5];
+          if (cResult[4] === container.content) {
+            let tmp33 = cResult[5];
           }
           if (cResult[6] !== headerText) {
-            let tmp37 = null;
+            let tmp35 = null;
             if (null != headerText) {
               const obj3 = { children: headerText };
-              tmp37 = metroRequire(AuthHeaderDefault, obj3);
+              tmp35 = timestampProducer(AuthHeaderDefault, obj3);
             }
             cResult[6] = headerText;
-            cResult[7] = tmp37;
-            tmp36 = tmp37;
+            cResult[7] = tmp35;
+            let tmp34 = tmp35;
           } else {
-            tmp36 = cResult[7];
+            tmp34 = cResult[7];
           }
-          if (cResult[8] === tmp5.subHeader) {
-            let tmp39;
+          if (cResult[8] === container.subHeader) {
             if (cResult[9] === subHeader) {
-              tmp39 = cResult[10];
+              let tmp37 = cResult[10];
             }
             if (cResult[11] === children) {
-              if (cResult[12] === tmp5.container) {
-                if (cResult[13] === tmp34) {
-                  if (cResult[14] === tmp35) {
-                    if (cResult[15] === tmp36) {
-                      let tmp43;
-                      if (cResult[16] === tmp39) {
-                        tmp43 = cResult[17];
-                      }
-                      tmp28 = tmp43;
+              if (cResult[12] === container.container) {
+                if (cResult[13] === tmp32) {
+                  if (cResult[14] === tmp33) {
+                    if (cResult[15] === tmp34) {
                     }
                   }
                 }
@@ -138,191 +116,173 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               keyboardShouldPersistTaps: "handled",
               alwaysBounceVertical: false,
               scrollEventThrottle: 16,
-              onScroll: tmp34,
-              style: tmp5.container,
-              contentContainerStyle: tmp35,
-              children: items,
+              onScroll: tmp32,
+              style: container.container,
+              contentContainerStyle: tmp33,
+              children: null,
             };
-            items = [tmp36, tmp39, children];
-            const tmp46 = metroImportDefault(hasOwnProperty, obj4);
+            first = [tmp34, tmp37, children];
+            obj4.children = first;
+            const tmp44 = React5(hasOwnProperty, obj4);
             cResult[11] = children;
-            cResult[12] = tmp5.container;
-            cResult[13] = tmp34;
-            cResult[14] = tmp35;
-            cResult[15] = tmp36;
-            cResult[16] = tmp39;
-            cResult[17] = tmp46;
-            tmp43 = tmp46;
+            container = container.container;
+            cResult[12] = container;
+            cResult[13] = tmp32;
+            cResult[14] = tmp33;
+            cResult[15] = tmp34;
+            cResult[16] = tmp37;
+            cResult[17] = tmp44;
           }
-          let tmp40 = null;
+          let tmp38 = null;
           if (null != subHeader) {
-            const obj5 = { style: tmp5.subHeader, children: subHeader };
-            tmp40 = metroRequire(React3, obj5);
+            const obj5 = { style: container.subHeader, children: subHeader };
+            tmp38 = timestampProducer(React4, obj5);
           }
-          cResult[8] = tmp5.subHeader;
+          cResult[8] = container.subHeader;
           cResult[9] = subHeader;
-          cResult[10] = tmp40;
-          tmp39 = tmp40;
+          cResult[10] = tmp38;
+          tmp37 = tmp38;
         }
-        const items1 = [tmp5.content, contentStyle];
+        const items = [container.content, contentStyle];
         cResult[3] = contentStyle;
-        cResult[4] = tmp5.content;
-        cResult[5] = items1;
-        tmp35 = items1;
+        cResult[4] = container.content;
+        cResult[5] = items;
+        tmp33 = items;
       } else {
-        if (cResult[18] === tmp5.container) {
-          let tmp7;
-          if (cResult[19] === tmp5.flex) {
-            tmp7 = cResult[20];
+        if (cResult[18] === container.container) {
+          if (cResult[19] === container.flex) {
+            let tmp6 = cResult[20];
           }
           if (cResult[21] === backgroundImageCover) {
-            let tmp8;
-            let tmp12;
-            let tmp15;
             if (cResult[22] === backgroundImageSource) {
-              tmp8 = cResult[23];
+              let tmp7 = cResult[23];
             }
             const _Symbol = Symbol;
             if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp14 = metroRequire(AuthNavbarPlaceholderDefault, {});
-              cResult[24] = tmp14;
-              tmp12 = tmp14;
+              const tmp13 = timestampProducer(AuthNavbarPlaceholderDefault, {});
+              cResult[24] = tmp13;
+              let tmp11 = tmp13;
             } else {
-              tmp12 = cResult[24];
+              tmp11 = cResult[24];
             }
             const _Symbol2 = Symbol;
             if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
               const obj6 = { top: 0 };
               cResult[25] = obj6;
-              tmp15 = obj6;
+              let tmp14 = obj6;
             } else {
-              tmp15 = cResult[25];
+              tmp14 = cResult[25];
             }
             if (cResult[26] === contentStyle) {
-              if (cResult[27] === tmp5.content) {
-                let tmp16;
-                let tmp17;
-                if (cResult[28] === tmp5.flex) {
-                  tmp16 = cResult[29];
+              if (cResult[27] === container.content) {
+                if (cResult[28] === container.flex) {
+                  let tmp15 = cResult[29];
                 }
                 if (cResult[30] !== headerText) {
-                  let tmp18 = null;
+                  let tmp17 = null;
                   if (null != headerText) {
                     const obj7 = { children: headerText };
-                    tmp18 = metroRequire(AuthHeaderDefault, obj7);
+                    tmp17 = timestampProducer(AuthHeaderDefault, obj7);
                   }
                   cResult[30] = headerText;
-                  cResult[31] = tmp18;
-                  tmp17 = tmp18;
+                  cResult[31] = tmp17;
+                  let tmp16 = tmp17;
                 } else {
-                  tmp17 = cResult[31];
+                  tmp16 = cResult[31];
                 }
-                if (cResult[32] === tmp5.subHeader) {
-                  let tmp20;
+                if (cResult[32] === container.subHeader) {
                   if (cResult[33] === subHeader) {
-                    tmp20 = cResult[34];
+                    let tmp19 = cResult[34];
                   }
                   if (cResult[35] === children) {
-                    if (cResult[36] === tmp5.flex) {
-                      if (cResult[37] === tmp16) {
-                        if (cResult[38] === tmp17) {
-                          let tmp24;
-                          if (cResult[39] === tmp20) {
-                            tmp24 = cResult[40];
+                    if (cResult[36] === container.flex) {
+                      if (cResult[37] === tmp15) {
+                        if (cResult[38] === tmp16) {
+                          if (cResult[39] === tmp19) {
+                            let tmp23 = cResult[40];
                           }
-                          if (cResult[41] === tmp7) {
-                            if (cResult[42] === tmp8) {
-                              if (cResult[43] === tmp24) {
-                                tmp28 = cResult[44];
+                          if (cResult[41] === tmp6) {
+                            if (cResult[42] === tmp7) {
+                              if (cResult[43] === tmp23) {
+                                let tmp27 = cResult[44];
                               }
+                              return tmp27;
                             }
                           }
-                          const obj8 = { style: tmp7, children: items2 };
-                          items2 = [tmp8, tmp12, tmp24];
-                          const tmp31 = metroImportDefault(React3, obj8);
-                          cResult[41] = tmp7;
-                          cResult[42] = tmp8;
-                          cResult[43] = tmp24;
-                          cResult[44] = tmp31;
-                          tmp28 = tmp31;
+                          const obj8 = { style: tmp6, children: null };
+                          const items1 = [tmp7, tmp11, tmp23];
+                          obj8.children = items1;
+                          const tmp30 = React5(React4, obj8);
+                          cResult[41] = tmp6;
+                          cResult[42] = tmp7;
+                          cResult[43] = tmp23;
+                          cResult[44] = tmp30;
+                          tmp27 = tmp30;
                         }
                       }
                     }
                   }
                   const obj9 = {
-                    contentInset: tmp15,
+                    contentInset: tmp14,
                     automaticallyAdjustContentInsets: false,
                     keyboardShouldPersistTaps: "handled",
                     alwaysBounceVertical: false,
-                    style: tmp5.flex,
-                    contentContainerStyle: tmp16,
-                    children: items3,
+                    style: container.flex,
+                    contentContainerStyle: tmp15,
+                    children: null,
                   };
-                  items3 = [tmp17, tmp20, children];
-                  const tmp27 = metroImportDefault(hasOwnProperty, obj9);
+                  const items2 = [tmp16, tmp19, children];
+                  obj9.children = items2;
+                  const tmp26 = React5(hasOwnProperty, obj9);
                   cResult[35] = children;
-                  cResult[36] = tmp5.flex;
-                  cResult[37] = tmp16;
-                  cResult[38] = tmp17;
-                  cResult[39] = tmp20;
-                  cResult[40] = tmp27;
-                  tmp24 = tmp27;
+                  cResult[36] = container.flex;
+                  cResult[37] = tmp15;
+                  cResult[38] = tmp16;
+                  cResult[39] = tmp19;
+                  cResult[40] = tmp26;
+                  tmp23 = tmp26;
                 }
-                let tmp21 = null;
+                let tmp20 = null;
                 if (null != subHeader) {
-                  const obj10 = { style: tmp5.subHeader, children: subHeader };
-                  tmp21 = metroRequire(React3, obj10);
+                  const obj10 = { style: container.subHeader, children: subHeader };
+                  tmp20 = timestampProducer(React4, obj10);
                 }
-                cResult[32] = tmp5.subHeader;
+                cResult[32] = container.subHeader;
                 cResult[33] = subHeader;
-                cResult[34] = tmp21;
-                tmp20 = tmp21;
+                cResult[34] = tmp20;
+                tmp19 = tmp20;
               }
             }
-            const items4 = [, ,];
-            ({ content: arr2[0], flex: arr2[1] } = tmp5);
-            items4[2] = contentStyle;
+            const items3 = [, ,];
+            ({ content: arr2[0], flex: arr2[1] } = container);
+            items3[2] = contentStyle;
             cResult[26] = contentStyle;
-            cResult[27] = tmp5.content;
-            cResult[28] = tmp5.flex;
-            cResult[29] = items4;
-            tmp16 = items4;
+            cResult[27] = container.content;
+            cResult[28] = container.flex;
+            cResult[29] = items3;
+            tmp15 = items3;
           }
           const obj11 = { backgroundImageSource, backgroundImageCover };
-          const tmp10 = metroRequire(BackgroundImageDefault, obj11);
+          const tmp9 = timestampProducer(BackgroundImageDefault, obj11);
           cResult[21] = backgroundImageCover;
           cResult[22] = backgroundImageSource;
-          cResult[23] = tmp10;
-          tmp8 = tmp10;
+          cResult[23] = tmp9;
+          tmp7 = tmp9;
         }
-        const items5 = [,];
-        ({ container: arr[0], flex: arr[1] } = tmp5);
-        cResult[18] = tmp5.container;
-        cResult[19] = tmp5.flex;
-        cResult[20] = items5;
-        tmp7 = items5;
+        const items4 = [,];
+        ({ container: arr[0], flex: arr[1] } = container);
+        cResult[18] = container.container;
+        cResult[19] = container.flex;
+        cResult[20] = items4;
+        tmp6 = items4;
       }
-      return tmp28;
     }
   : (arg0) => {
-      let backgroundImageCover;
-      let backgroundImageSource;
-      let children;
-      let contentStyle;
-      let headerText;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let subHeader;
-      let tmp5Result;
       ({ children, headerText, subHeader, contentStyle } = arg0);
       ({ backgroundImageSource, backgroundImageCover } = arg0);
       const tmp3 = useWideAuthViewDefault();
       const tmp4 = closure_8(tmp3);
-      let closure_0 = react.useContext(react3.WideAuthScrollContext);
+      closure_0 = noop.useContext(WideAuthScrollContext.WideAuthScrollContext);
       if (tmp3) {
         const obj2 = {
           contentInset: { top: 0 },
@@ -334,60 +294,66 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_0(nativeEvent.nativeEvent.contentOffset.y > 0);
           },
           style: tmp4.container,
-          contentContainerStyle: items,
-          children: items1,
+          contentContainerStyle: null,
+          children: null,
         };
-        items = [tmp4.content, contentStyle];
+        const items = [tmp4.content, contentStyle];
+        obj2.contentContainerStyle = items;
         let tmp15 = null;
         if (null != headerText) {
           const obj3 = { children: headerText };
-          tmp15 = metroRequire(AuthHeaderDefault, obj3);
+          tmp15 = timestampProducer(AuthHeaderDefault, obj3);
         }
-        items1 = [tmp15, ,];
+        const items1 = [tmp15, ,];
         let tmp17 = null;
         if (null != subHeader) {
           const obj4 = { style: tmp4.subHeader, children: subHeader };
-          tmp17 = metroRequire(React3, obj4);
+          tmp17 = timestampProducer(React4, obj4);
         }
         items1[1] = tmp17;
         items1[2] = children;
-        tmp5Result = metroImportDefault(hasOwnProperty, obj2);
+        obj2.children = items1;
+        let tmp5Result = React5(hasOwnProperty, obj2);
       } else {
-        const obj = { style: items2, children: items3 };
-        items2 = [,];
+        const obj = { style: null, children: null };
+        const items2 = [,];
         ({ container: arr[0], flex: arr[1] } = tmp4);
+        obj.style = items2;
         const obj5 = { backgroundImageSource, backgroundImageCover };
-        items3 = [metroRequire(BackgroundImageDefault, obj5), metroRequire(AuthNavbarPlaceholderDefault, {})];
+        const items3 = [
+          timestampProducer(BackgroundImageDefault, obj5),
+          timestampProducer(AuthNavbarPlaceholderDefault, {}),
+        ];
         const obj6 = {
           contentInset: { top: 0 },
           automaticallyAdjustContentInsets: false,
           keyboardShouldPersistTaps: "handled",
           alwaysBounceVertical: false,
           style: tmp4.flex,
-          contentContainerStyle: items4,
-          children: items5,
+          contentContainerStyle: null,
+          children: null,
         };
-        items4 = [, ,];
+        const items4 = [, ,];
         ({ content: arr3[0], flex: arr3[1] } = tmp4);
         items4[2] = contentStyle;
+        obj6.contentContainerStyle = items4;
         let tmp7Result = null;
         if (null != headerText) {
           const obj7 = { children: headerText };
-          tmp7Result = metroRequire(AuthHeaderDefault, obj7);
+          tmp7Result = timestampProducer(AuthHeaderDefault, obj7);
         }
-        items5 = [tmp7Result, ,];
+        const items5 = [tmp7Result, ,];
         let tmp7Result2 = null;
         if (null != subHeader) {
           const obj8 = { style: tmp4.subHeader, children: subHeader };
-          tmp7Result2 = metroRequire(React3, obj8);
+          tmp7Result2 = timestampProducer(React4, obj8);
         }
         items5[1] = tmp7Result2;
         items5[2] = children;
-        items3[2] = metroImportDefault(hasOwnProperty, obj6);
-        tmp5Result = metroImportDefault(React3, obj);
+        obj6.children = items5;
+        items3[2] = React5(hasOwnProperty, obj6);
+        obj.children = items3;
+        tmp5Result = React5(React4, obj);
       }
       return tmp5Result;
     };
-const result = size.fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
-
-export default tmp4;

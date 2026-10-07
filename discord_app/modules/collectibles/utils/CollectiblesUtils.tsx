@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import StreamSettingsConstants from "../../go_live/StreamSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
@@ -9,65 +9,13 @@ import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      let first;
-      let tmp6;
-      const obj = react;
-      const cResult = obj.c(7);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { forceFetch: true };
-        cResult[0] = obj2;
-        first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      const tmp5 = useFractionalPremiumInfoDefault(first);
-      if (cResult[1] !== tmp5.endsAt) {
-        const tmpResult = DateUtils;
-        const dateFormatResult = tmpResult.dateFormat(tmp5.endsAt, "L");
-        cResult[1] = tmp5.endsAt;
-        cResult[2] = dateFormatResult;
-        tmp6 = dateFormatResult;
-      } else {
-        tmp6 = cResult[2];
-      }
-      if (cResult[3] === tmp6) {
-        if (cResult[4] === tmp5.isFractionalPremiumActive) {
-          let tmp9;
-          if (cResult[5] === !tmp5.fetched) {
-            tmp9 = cResult[6];
-          }
-          return tmp9;
-        }
-      }
-      const obj3 = {
-        isLoading: !tmp5.fetched,
-        isFractionalPremiumActive: tmp5.isFractionalPremiumActive,
-        expiresAt: tmp6,
-      };
-      cResult[3] = tmp6;
-      cResult[4] = tmp5.isFractionalPremiumActive;
-      cResult[5] = !tmp5.fetched;
-      cResult[6] = obj3;
-      tmp9 = obj3;
-    }
-  : () => {
-      const tmp = useFractionalPremiumInfoDefault({ forceFetch: true });
-      const obj = DateUtils;
-      const obj2 = {
-        isLoading: !tmp.fetched,
-        isFractionalPremiumActive: tmp.isFractionalPremiumActive,
-        expiresAt: obj.dateFormat(tmp.endsAt, "L"),
-      };
-      return obj2;
-    };
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
 export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
-  let obj2;
-  const obj = { qualityOptions: obj2, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
-  obj2 = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate };
+  const obj = {
+    qualityOptions: { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate },
+    context: BaseConnectionEvent.MediaEngineContextTypes.STREAM,
+  };
   if (null != desktopSource) {
     if (null != desktopSource.desktopSource) {
       const obj3 = { sourceId: desktopSource.desktopSource.id, sound: true };
@@ -101,7 +49,10 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
     if (true === noCache.includeDynamicBlocks) {
       obj.include_dynamic_blocks = true;
     }
-    const tmp = null != noCache.countryCode && "" !== noCache.countryCode;
+    let tmp = null != noCache.countryCode;
+    if (tmp) {
+      tmp = "" !== noCache.countryCode;
+    }
     if (tmp) {
       obj.country_code = noCache.countryCode;
     }
@@ -126,4 +77,50 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
     return "" + arg0 + "?width=100&height=195";
   }
 };
-export const useFetchFractionalPremiumInfo = tmp2;
+export const useFetchFractionalPremiumInfo = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(7);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { forceFetch: true };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      const tmp5 = useFractionalPremiumInfoDefault(first);
+      if (cResult[1] !== tmp5.endsAt) {
+        const dateFormatResult = DateUtils.dateFormat(tmp5.endsAt, "L");
+        cResult[1] = tmp5.endsAt;
+        cResult[2] = dateFormatResult;
+        let tmp6 = dateFormatResult;
+        const tmpResult = DateUtils;
+      } else {
+        tmp6 = cResult[2];
+      }
+      if (cResult[3] === tmp6) {
+        if (cResult[4] === tmp5.isFractionalPremiumActive) {
+          if (cResult[5] === tmp8) {
+            let tmp9 = cResult[6];
+          }
+          return tmp9;
+        }
+      }
+      const obj3 = {
+        isLoading: !tmp5.fetched,
+        isFractionalPremiumActive: tmp5.isFractionalPremiumActive,
+        expiresAt: tmp6,
+      };
+      cResult[3] = tmp6;
+      cResult[4] = tmp5.isFractionalPremiumActive;
+      cResult[5] = !tmp5.fetched;
+      cResult[6] = obj3;
+      tmp9 = obj3;
+    }
+  : () => {
+      const tmp = useFractionalPremiumInfoDefault({ forceFetch: true });
+      return {
+        isLoading: !tmp.fetched,
+        isFractionalPremiumActive: tmp.isFractionalPremiumActive,
+        expiresAt: DateUtils.dateFormat(tmp.endsAt, "L"),
+      };
+    };

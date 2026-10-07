@@ -1,13 +1,12 @@
 // discord_app/modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../../design/void/native.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const PX_24 = nativeDefault.space.PX_24;
-const tmp2 = native.AVATAR_SIZE_MAP[native.AvatarSizes.NORMAL];
+const tmp2 = fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL];
 let closure_1 = tmp2;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx");
 
 export default function getChatPlaceholderRowHeight(arg0) {

@@ -1,36 +1,33 @@
 // discord_app/modules/payments/native/hooks/useOrderContext.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../_runtime/00576_c.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let order;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export const useOrderContext = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let first;
-      let tmp3;
-      let tmp4;
-      let obj = react2;
-      const cResult = obj.c(6);
-      [tmp3, tmp4] = _slicedToArray(react.useState(arg0), 2);
-      let closure_0 = tmp4;
-      const tmp2 = _slicedToArray(react.useState(arg0), 2);
+      const cResult = c.c(6);
+      [tmp3, tmp4] = noop.useState(arg0);
+      require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function u(arg0) {
-          let tmp = arg0((arg0) => {
+        const fn = function u(revision) {
+          revision((arg0) => {
             let tmp = arg0;
             if (null != arg0) {
-              const obj = { revision };
+              const obj = {};
               const merged = Object.assign(arg0);
+              obj.revision = revision;
               tmp = obj;
             }
             return tmp;
           });
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -55,9 +52,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === tmp3) {
         if (cResult[2] === id) {
           if (cResult[3] === id1) {
-            let tmp10;
             if (cResult[4] === revision) {
-              tmp10 = cResult[5];
+              let tmp10 = cResult[5];
             }
             return tmp10;
           }
@@ -72,33 +68,30 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = obj2;
     }
   : (arg0) => {
-      let first;
-      let tmp3;
-      [first, tmp3] = react.useState(arg0);
-      let closure_1 = tmp3;
-      const callback = react.useCallback((arg0) => {
-        let closure_0 = arg0;
-        let tmp = setOrder((arg0) => {
+      let tmp = _slicedToArray(noop.useState(arg0), 2);
+      let order = tmp[0];
+      const setOrder = tmp3;
+      const setRevision = noop.useCallback((revision) => {
+        setOrder((arg0) => {
           let tmp = arg0;
           if (null != arg0) {
-            const obj = { revision };
+            const obj = {};
             const merged = Object.assign(arg0);
+            obj.revision = revision;
             tmp = obj;
           }
           return tmp;
         });
       }, []);
-      const items = [first, tmp3, callback];
-      return react.useMemo(() => {
+      const items = [order, tmp[1], setRevision];
+      return noop.useMemo(() => {
+        const obj = { order, setOrder, setRevision, orderId: null, orderLineItemId: null, revision: null };
         let id;
-        let id1;
-        let revision;
-        const obj = { order, setOrder, setRevision, orderId: id, orderLineItemId: id1, revision };
-        id = undefined;
         if (order != null) {
           id = tmp.id;
         }
-        id1 = undefined;
+        obj.orderId = id;
+        let id1;
         if (order != null) {
           const order_line_items = tmp.order_line_items;
           if (order_line_items != null) {
@@ -108,13 +101,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        revision = undefined;
+        obj.orderLineItemId = id1;
+        let revision;
         if (order != null) {
           revision = tmp.revision;
         }
+        obj.revision = revision;
         return obj;
       }, items);
     };
-const result = size.fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
-
-export const useOrderContext = tmp2;

@@ -3,8 +3,6 @@ import isOnXboxDefault from "isOnXbox.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
 ({ ActivityTypes: c2, ActivityGamePlatforms: c3 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");
 
@@ -15,15 +13,13 @@ export default function getGamePlatform(type) {
     if (null != type.type) {
       tmp = null;
       if (type.type === constants.PLAYING) {
-        let DESKTOP;
         if (isOnXboxDefault(type)) {
-          DESKTOP = constants2.XBOX;
+          let DESKTOP = constants2.XBOX;
         } else if (null != type.platform) {
           DESKTOP = type.platform;
         } else {
           DESKTOP = constants2.DESKTOP;
         }
-        tmp = DESKTOP;
       }
     }
   }

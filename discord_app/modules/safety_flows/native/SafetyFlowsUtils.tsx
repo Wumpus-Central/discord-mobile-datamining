@@ -1,109 +1,58 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef2815 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04811_AssetRegistry.js";
+import _modDef4811 from "../../../../_runtime/metro/04811__.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import types from "../types.tsx";
 import constants from "../constants.tsx";
-import SafetyFlowsActionCreators from "../SafetyFlowsActionCreators.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let c2, closure_1, closure_2, data, navigation;
+const require = globalThis.__r;
 
+require = fn;
 function fetchAndUpdateTask() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _fetchAndUpdateTask() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj3;
-    let value;
-    let closure_0 = arg0;
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            value = undefined;
-            c2 = 1;
-            c3 = 1;
-            const obj5 = { value: obj3.getCurrentTask(), done: false };
-            obj3 = SafetyFlowsActionCreators;
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          if (null != value) {
-            closure_0(value);
-          }
-          c3 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
-      } catch (tmp16) {
-        c3 = 3;
-        throw tmp16;
-      }
-    }
-  });
-  return obj(...arguments);
+let closure_7 = async function _fetchAndUpdateTask() {
+  closure_1 = tmp2;
+  closure_129_0 = closure_0;
+  await require("SafetyFlowsActionCreators").getCurrentTask();
+  closure_129_1 = value;
+  if (null != closure_129_1) {
+    closure_129_0(closure_129_1);
+  }
+  return closure_129_1;
 };
 function navigateToScreenForTask(arr, task_type) {
-  let intl;
   if (null == task_type) {
-    obj = ModalActionCreatorsDefault;
-    obj.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj2 = {
-      key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS",
-      icon: AssetRegistryDefault,
-      content: intl.string(_modDef2815["/fHz9S"]),
-    };
-    const open = ToastActionCreatorsDefault.open;
-    ToastActionCreatorsDefault;
-    intl = intl2.intl;
-    open(obj2);
+    ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef4811, content: null };
+    const intl = util.intl;
+    obj3.content = intl.string(_modDef2815["/fHz9S"]);
+    ToastActionCreatorsDefault.open(obj3);
   } else {
     task_type = task_type.task_type;
-    const tmp17 = types.TASK_TYPE_TO_SCREENS[task_type];
+    const tmp16 = types.TASK_TYPE_TO_SCREENS[task_type];
     let tmp5 = null;
-    if (null != tmp17) {
-      let tmp = tmp17;
+    if (null != tmp16) {
+      let tmp = tmp16;
       if (task_type === types.TaskType.EMAIL_VERIFICATION) {
         const currentUser = UserStore.getCurrentUser();
         let email;
         if (currentUser != null) {
           email = currentUser.email;
         }
-        tmp = tmp17;
+        tmp = tmp16;
         if (null != email) {
           const items = [types.SafetyFlowScreens.VERIFY_EMAIL];
           tmp = items;
@@ -118,6 +67,7 @@ function navigateToScreenForTask(arr, task_type) {
     }
   }
 }
+const ReactCompilerGating = fn(558);
 function getScreensForTaskType(task_type) {
   const tmp3 = types.TASK_TYPE_TO_SCREENS[task_type];
   let tmp4 = null;
@@ -139,41 +89,45 @@ function getScreensForTaskType(task_type) {
   }
   return tmp4;
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
+
+export { getScreensForTaskType };
+export { fetchAndUpdateTask };
+export { navigateToScreenForTask };
+export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let setTask;
-      obj = navigation(setTask[12]);
-      const cResult = obj.c(5);
-      const obj2 = navigation(setTask[13]);
-      navigation = obj2.useNavigation();
-      const obj3 = navigation(setTask[14]);
-      const safetyFlowTask = obj3.useSafetyFlowTask();
+      const cResult = require("c").c(5);
+      let obj = require("c");
+      const navigation = require("useNavigation").useNavigation();
+      _require = navigation;
+      let obj2 = require("useNavigation");
+      const safetyFlowTask = require("SafetyFlowsTaskContext").useSafetyFlowTask();
       const task = safetyFlowTask.task;
       setTask = safetyFlowTask.setTask;
       if (cResult[0] === navigation) {
         if (cResult[1] === setTask) {
           if (cResult[2] === task.flow_context.flow_id) {
-            let tmp4;
             if (cResult[3] === task.task_id) {
-              tmp4 = cResult[4];
+              let tmp4 = cResult[4];
             }
             return tmp4;
           }
         }
       }
-      let closure_0 = _asyncToGenerator(async (data) => {
-        let c3 = 0;
-        let c4 = 0;
+      _require = asyncGeneratorStep(async (data) => {
+        c3 = 0;
+        c4 = 0;
         return (async (arg0) => {
-          let obj7;
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              return { value, done: true };
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "IconComponent", done: null };
             }
@@ -186,29 +140,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  return { value, done: true };
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
-                  closure_2 = tmp;
-                  closure_1 = tmp4;
-                  data = undefined;
+                  closure_2 = tmp2;
+                  closure_1 = tmp5;
+                  closure_129_0 = undefined;
+                  const obj4 = { task_id: closure_1.task_id, flow_id: closure_1.flow_context.flow_id, data };
                   c3 = 1;
                   c4 = 1;
-                  const obj4 = { task_id: closure_1.task_id, flow_id: closure_1.flow_context.flow_id, data };
-                  const obj5 = { value: obj7.completeTask(obj4), done: false };
-                  obj7 = data(setTask[4]);
+                  const obj5 = { value: data(setTask[4]).completeTask(obj4), done: false };
                   return obj5;
                 }
-              } else if (1 === c3) {
+              } else if (1 === tmp5) {
                 if (arg0 === 1) {
                   c4 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  return { value, done: true };
+                  const obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   c3 = 2;
                   c4 = 1;
-                  const obj8 = { value: closure_2_6(closure_2), done: false };
+                  const obj8 = { value: fetchAndUpdateTask(closure_2), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -216,22 +171,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                return { value, done: true };
+                const obj = { value, done: true };
+                return obj;
               } else {
-                data = value;
-                closure_2_8(data, data);
+                closure_129_0 = value;
+                navigateToScreenForTask(data, closure_129_0);
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp14) {
-              c4 = 3;
-              throw tmp14;
+            } catch (tmp15) {
+              c4 = tmp;
+              throw tmp15;
             }
           }
         })();
       });
       const fn = function () {
-        return closure_0(...arguments);
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       };
       cResult[0] = navigation;
       cResult[1] = setTask;
@@ -241,27 +204,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
     }
   : () => {
-      let setTask;
-      obj = navigation(setTask[13]);
-      navigation = obj.useNavigation();
-      const obj2 = navigation(setTask[14]);
-      const safetyFlowTask = obj2.useSafetyFlowTask();
+      const navigation = require("useNavigation").useNavigation();
+      _require = navigation;
+      let obj = require("useNavigation");
+      const safetyFlowTask = require("SafetyFlowsTaskContext").useSafetyFlowTask();
       const task = safetyFlowTask.task;
       setTask = safetyFlowTask.setTask;
-      const useCallback = react.useCallback;
-      let closure_0 = _asyncToGenerator(async (data) => {
-        let c3 = 0;
-        let c4 = 0;
+      _require = asyncGeneratorStep(async (data) => {
+        c3 = 0;
+        c4 = 0;
         return (async (arg0) => {
-          let obj7;
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
-              return { value, done: true };
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
               return { value: "IconComponent", done: null };
             }
@@ -274,29 +235,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  return { value, done: true };
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
-                  closure_2 = tmp;
-                  closure_1 = tmp4;
-                  data = undefined;
+                  closure_2 = tmp2;
+                  closure_1 = tmp5;
+                  closure_129_0 = undefined;
+                  const obj4 = { task_id: closure_1.task_id, flow_id: closure_1.flow_context.flow_id, data };
                   c3 = 1;
                   c4 = 1;
-                  const obj4 = { task_id: closure_1.task_id, flow_id: closure_1.flow_context.flow_id, data };
-                  const obj5 = { value: obj7.completeTask(obj4), done: false };
-                  obj7 = data(setTask[4]);
+                  const obj5 = { value: data(setTask[4]).completeTask(obj4), done: false };
                   return obj5;
                 }
-              } else if (1 === c3) {
+              } else if (1 === tmp5) {
                 if (arg0 === 1) {
                   c4 = 3;
                   throw value;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  return { value, done: true };
+                  const obj6 = { value, done: true };
+                  return obj6;
                 } else {
                   c3 = 2;
                   c4 = 1;
-                  const obj8 = { value: closure_2_6(closure_2), done: false };
+                  const obj8 = { value: fetchAndUpdateTask(closure_2), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -304,28 +266,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 === 2) {
                 c4 = 3;
-                return { value, done: true };
+                const obj = { value, done: true };
+                return obj;
               } else {
-                data = value;
-                closure_2_8(data, data);
+                closure_129_0 = value;
+                navigateToScreenForTask(data, closure_129_0);
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
-            } catch (tmp14) {
-              c4 = 3;
-              throw tmp14;
+            } catch (tmp15) {
+              c4 = tmp;
+              throw tmp15;
             }
           }
         })();
       });
       const items = [navigation, task, setTask];
-      return useCallback(function () {
-        return closure_0(...arguments);
+      return noop.useCallback(function () {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       }, items);
     };
-const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
-
-export { getScreensForTaskType };
-export { fetchAndUpdateTask };
-export { navigateToScreenForTask };
-export const useOnTaskComplete = tmp2;

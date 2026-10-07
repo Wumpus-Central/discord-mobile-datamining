@@ -1,42 +1,30 @@
 // discord_app/modules/launchpad/native/useLaunchPadPullTabMinimized.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import VoicePanelUtils from "../../voice_panel/VoicePanelUtils.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let isScrollingOrDragging;
-
-let tmp3;
-const DCDScrollTracker = react_native.NativeModules.DCDScrollTracker;
+require = fn;
+get_ActivityIndicator = fn(17);
+const DCDScrollTracker = get_ActivityIndicator.NativeModules.DCDScrollTracker;
 let tmp32;
 if (DCDScrollTracker) {
-  const self = this;
-  const self2 = this;
   tmp32 = new tmp3(DCDScrollTracker);
 }
 let closure_3 = tmp32;
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let sharedValue;
-      let tmp3;
-      let tmp4;
+      const cResult = sharedValue(576).c(3);
       const obj = sharedValue(576);
-      const cResult = obj.c(3);
-      const obj2 = sharedValue(4618);
-      sharedValue = obj2.useSharedValue(false);
+      sharedValue = sharedValue(4618).useSharedValue(false);
       if (cResult[0] !== sharedValue) {
         const fn = function t() {
-          let closure_0 = -1;
+          closure_0 = -1;
           let addListenerResult;
           if (closure_1_3 != null) {
             addListenerResult = closure_1_3.addListener("isScrollingOrDragging", (isScrollingOrDragging) => {
-              let timeout;
-              isScrollingOrDragging = isScrollingOrDragging.isScrollingOrDragging;
               clearTimeout(timeout);
-              if (isScrollingOrDragging) {
+              if (isScrollingOrDragging.isScrollingOrDragging) {
                 let result = sharedValue.set(true);
               } else {
                 const _setTimeout = setTimeout;
@@ -46,6 +34,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
               }
             });
           }
+          closure_1 = addListenerResult;
           return () => {
             clearTimeout(closure_0);
             if (addListenerResult != null) {
@@ -57,29 +46,25 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = sharedValue;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp4 = items;
-        tmp3 = fn;
+        let tmp4 = items;
+        let tmp3 = fn;
       } else {
         tmp3 = cResult[1];
         tmp4 = cResult[2];
       }
-      const effect = react.useEffect(tmp3, tmp4);
+      const effect = noop.useEffect(tmp3, tmp4);
       return sharedValue;
     }
   : () => {
-      let sharedValue;
-      const obj = sharedValue(4618);
-      sharedValue = obj.useSharedValue(false);
+      sharedValue = sharedValue(4618).useSharedValue(false);
       const items = [sharedValue];
-      const effect = react.useEffect(() => {
-        let closure_0 = -1;
+      const effect = noop.useEffect(() => {
+        closure_0 = -1;
         let addListenerResult;
         if (closure_1_3 != null) {
           addListenerResult = closure_1_3.addListener("isScrollingOrDragging", (isScrollingOrDragging) => {
-            let timeout;
-            isScrollingOrDragging = isScrollingOrDragging.isScrollingOrDragging;
             clearTimeout(timeout);
-            if (isScrollingOrDragging) {
+            if (isScrollingOrDragging.isScrollingOrDragging) {
               let result = sharedValue.set(true);
             } else {
               const _setTimeout = setTimeout;
@@ -89,6 +74,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           });
         }
+        closure_1 = addListenerResult;
         return () => {
           clearTimeout(closure_0);
           if (addListenerResult != null) {
@@ -104,19 +90,25 @@ const __initData = {
 const __initData2 = {
   code: "function useLaunchPadPullTabMinimizedTsx2(){const{launchPadPullTabState,isVoicePanelOpen,launchPadSharedState,isMinimizedDuringScroll}=this.__closure;const isMinimized=(launchPadPullTabState.get().minimized||isVoicePanelOpen)&&launchPadSharedState.get()<=0;return isMinimized||isMinimizedDuringScroll.get();}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadPullTabMinimized.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (launchPadSharedState) => {
       launchPadSharedState = launchPadSharedState.launchPadSharedState;
       const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
-      const obj = VoicePanelUtils;
-      const isVoicePanelFullscreen = obj.useIsVoicePanelFullscreen();
+      const isVoicePanelFullscreen = VoicePanelUtils.useIsVoicePanelFullscreen();
       const tmp2 = closure_4();
       closure_3 = tmp2;
       const fn = function t() {
-        const value =
-          ((launchPadPullTabState.get().minimized || isVoicePanelFullscreen) && launchPadSharedState.get() <= 0) ||
-          closure_3.get();
+        value = launchPadPullTabState.get().minimized || isVoicePanelFullscreen;
+        if (value) {
+          value = launchPadSharedState.get() <= 0;
+        }
+        if (!value) {
+          value = closure_3.get();
+        }
         return value;
       };
       fn.__closure = {
@@ -127,20 +119,22 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__workletHash = 14263056934448;
       fn.__initData = __initData;
-      const obj2 = ReanimatedRexport;
-      return obj2.useDerivedValue(fn);
+      return ReanimatedRexport.useDerivedValue(fn);
     }
   : (launchPadSharedState) => {
       launchPadSharedState = launchPadSharedState.launchPadSharedState;
       const launchPadPullTabState = launchPadSharedState.launchPadPullTabState;
-      const obj = VoicePanelUtils;
-      const isVoicePanelFullscreen = obj.useIsVoicePanelFullscreen();
+      const isVoicePanelFullscreen = VoicePanelUtils.useIsVoicePanelFullscreen();
       const tmp2 = closure_4();
       closure_3 = tmp2;
       const fn = function l() {
-        const value =
-          ((launchPadPullTabState.get().minimized || isVoicePanelFullscreen) && launchPadSharedState.get() <= 0) ||
-          closure_3.get();
+        value = launchPadPullTabState.get().minimized || isVoicePanelFullscreen;
+        if (value) {
+          value = launchPadSharedState.get() <= 0;
+        }
+        if (!value) {
+          value = closure_3.get();
+        }
         return value;
       };
       fn.__closure = {
@@ -151,9 +145,5 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__workletHash = 12013643918259;
       fn.__initData = __initData2;
-      const obj2 = ReanimatedRexport;
-      return obj2.useDerivedValue(fn);
+      return ReanimatedRexport.useDerivedValue(fn);
     };
-let result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadPullTabMinimized.tsx");
-
-export default tmp6;

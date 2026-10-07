@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/utils/getSoundshareAnalyticsContext.tsx
 import RunningGameStore from "../../game_detection/RunningGameStore.native.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getSoundshareAnalyticsContext.tsx");
 
 export default function getSoundshareAnalyticsContext(sourcePid) {
@@ -24,6 +24,7 @@ export default function getSoundshareAnalyticsContext(sourcePid) {
       tmp = id;
       tmp2 = name;
     }
-    return { soundshare_session: sourcePid.soundshareSession, share_game_name: tmp2, share_game_id: tmp };
+    const obj = { soundshare_session: sourcePid.soundshareSession, share_game_name: tmp2, share_game_id: tmp };
+    return obj;
   }
 }

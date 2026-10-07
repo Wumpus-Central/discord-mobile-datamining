@@ -1,21 +1,20 @@
 // discord_app/modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationCommandFrecencyStore from "../../application_commands/ApplicationCommandFrecencyStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+const require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx");
 
 export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   commands = commands.commands;
   let length = commands.limit;
-  const context = commands.context;
   if (length === undefined) {
     length = commands.length;
   }
+  const commandContext = commands(length[2]).useCommandContext(commands.context);
   const obj = commands(length[2]);
-  const commandContext = obj.useCommandContext(context);
-  const obj2 = commands(length[3]);
-  const topCommands = obj2.useTopCommands(commandContext);
+  const topCommands = commands(length[3]).useTopCommands(commandContext);
   const items = [commands];
   const memo = commandContext.useMemo(
     () =>

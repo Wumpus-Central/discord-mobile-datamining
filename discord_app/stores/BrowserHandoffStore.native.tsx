@@ -1,16 +1,15 @@
 // discord_app/stores/BrowserHandoffStore.native.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-const Store = get_initializedDefault.Store;
-class BrowserHandoffStore extends Store {
-  initialize() {}
-  isHandoffAvailable() {
-    return false;
-  }
-}
-Object.defineProperty(BrowserHandoffStore.prototype, "key", {
+const Store = initializeDefault.Store;
+class BrowserHandoffStore extends Store {}
+const prototype = BrowserHandoffStore.prototype;
+prototype["initialize"] = function initialize() {};
+prototype["isHandoffAvailable"] = function isHandoffAvailable() {
+  return false;
+};
+Object.defineProperty(prototype, "key", {
   get: function key() {
     return null;
   },
@@ -18,6 +17,7 @@ Object.defineProperty(BrowserHandoffStore.prototype, "key", {
 });
 BrowserHandoffStore.displayName = "BrowserHandoffStore";
 const browserHandoffStore = new BrowserHandoffStore(DispatcherDefault, {});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/BrowserHandoffStore.native.tsx");
 
 export default browserHandoffStore;

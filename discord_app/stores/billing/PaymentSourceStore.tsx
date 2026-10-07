@@ -1,10 +1,7 @@
 // discord_app/stores/billing/PaymentSourceStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PaymentSourceRecord from "../../records/PaymentSourceRecord.tsx";
-import size from "../../../_runtime/metro/00002__.js";
-
-let closure_1;
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;
@@ -21,23 +18,12 @@ function handlePaymentSourceUpdate(paymentSource) {
     const id = paymentSource.id;
   }
 }
+const dependencyMap = {};
 let c2 = null;
 let c3 = false;
 let c4 = false;
-const Store = get_initializedDefault.Store;
-class PaymentSourceStore extends Store {
-  getDefaultBillingCountryCode() {
-    const defaultPaymentSource = this.defaultPaymentSource;
-    let paymentMethodCountry = null;
-    if (null != defaultPaymentSource) {
-      paymentMethodCountry = defaultPaymentSource.paymentMethodCountry;
-    }
-    return paymentMethodCountry;
-  }
-  getPaymentSource(paymentSourceId) {
-    return closure_1[paymentSourceId];
-  }
-}
+const Store = initializeDefault.Store;
+class PaymentSourceStore extends Store {}
 const prototype = PaymentSourceStore.prototype;
 Object.defineProperty(prototype, "paymentSources", {
   get: function paymentSources() {
@@ -61,7 +47,7 @@ Object.defineProperty(prototype, "defaultPaymentSource", {
   get: function defaultPaymentSource() {
     let tmp = null;
     if (null != c2) {
-      tmp = closure_1[c2];
+      tmp = dependencyMap[c2];
     }
     return tmp;
   },
@@ -79,8 +65,19 @@ Object.defineProperty(prototype, "paymentSourceFetchError", {
   },
   set: undefined,
 });
+prototype["getDefaultBillingCountryCode"] = function getDefaultBillingCountryCode() {
+  const defaultPaymentSource = this.defaultPaymentSource;
+  let paymentMethodCountry = null;
+  if (null != defaultPaymentSource) {
+    paymentMethodCountry = defaultPaymentSource.paymentMethodCountry;
+  }
+  return paymentMethodCountry;
+};
+prototype["getPaymentSource"] = function getPaymentSource(paymentSourceId) {
+  return dependencyMap[paymentSourceId];
+};
 PaymentSourceStore.displayName = "PaymentSourceStore";
-let obj = {
+const paymentSourceStore = new PaymentSourceStore(DispatcherDefault, {
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: handlePaymentSourceUpdate,
   BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: handlePaymentSourceUpdate,
   BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: handlePaymentSourceUpdate,
@@ -95,7 +92,10 @@ let obj = {
       }
       continue;
     }
-    const tmp5 = null == id && paymentSources.length > 0;
+    let tmp5 = null == id;
+    if (tmp5) {
+      tmp5 = paymentSources.length > 0;
+    }
     if (tmp5) {
       id = paymentSources[0].id;
     }
@@ -106,12 +106,10 @@ let obj = {
     c4 = true;
   },
   BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: function handlePaymentSourceRemove(id) {
-    id = id.id;
-    const obj = {};
     const merged = Object.assign(closure_1);
-    closure_1 = obj;
-    delete obj[id];
-    if (c2 === id) {
+    closure_1 = {};
+    delete tmp[tmp2];
+    if (c2 === id.id) {
       const _Object = Object;
       const keys = Object.keys(closure_1);
       let first = null;
@@ -127,8 +125,8 @@ let obj = {
     c3 = false;
     c4 = false;
   },
-};
-const paymentSourceStore = new PaymentSourceStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
 
 export default paymentSourceStore;

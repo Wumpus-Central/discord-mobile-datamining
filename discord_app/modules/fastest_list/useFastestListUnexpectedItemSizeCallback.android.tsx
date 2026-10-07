@@ -1,24 +1,20 @@
 // discord_app/modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx
 import FastestListLogger from "utils/FastestListLogger.native.tsx";
-import react from "../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let ref;
-      let tmp2;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(2);
+      const cResult = require("c").c(2);
       if (cResult[0] !== arg0) {
         const fn = function n(nativeEvent) {
-          let element;
-          let props;
-          let str;
           nativeEvent = nativeEvent.nativeEvent;
           const current = ref.current;
           if (nativeEvent.isSectionHeader) {
@@ -27,7 +23,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             if (renderSectionHeader != null) {
               renderSectionHeaderResult = renderSectionHeader(nativeEvent.section);
             }
-            element = renderSectionHeaderResult;
+            let element = renderSectionHeaderResult;
           } else if (nativeEvent.isSectionFooter) {
             const renderSectionFooter = current.renderSectionFooter;
             let renderSectionFooterResult;
@@ -39,16 +35,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             element = current.renderItem(nativeEvent.section, nativeEvent.item);
           }
           if (element != null) {
-            props = element.props;
+            const props = element.props;
           }
           let type;
           if (element != null) {
             type = element.type;
           }
           if (typeof type === "function") {
-            let combined;
             if (type.name.length > 0) {
-              str = type.name;
+              let str = type.name;
             }
             let joined;
             if (null == str) {
@@ -58,7 +53,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (nativeEvent.isSectionHeader) {
               const _HermesInternal3 = HermesInternal;
-              combined = "Section header at section " + nativeEvent.section + ".";
+              let combined = "Section header at section " + nativeEvent.section + ".";
             } else {
               const section = nativeEvent.section;
               if (nativeEvent.isSectionFooter) {
@@ -69,19 +64,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 combined = "Item at section " + section + " and index " + nativeEvent.item + ".";
               }
             }
+            const obj = { detailMessage: null, itemPosition: null, itemName: null, itemProps: null, listId: null };
             const _HermesInternal4 = HermesInternal;
-            const obj = {
-              detailMessage: "Expected item size " + nativeEvent.sizeExpected + ", but got " + nativeEvent.size + ".",
-              itemPosition: combined,
-              itemName: str,
-              itemProps: joined,
-              listId: ref.current.listId,
-            };
+            obj.detailMessage =
+              "Expected item size " + nativeEvent.sizeExpected + ", but got " + nativeEvent.size + ".";
+            obj.itemPosition = combined;
             if (str == null) {
               str = "Unknown component.";
             }
-            const obj3 = FastestListLogger;
-            obj3.logFastestListError("Expected item size mismatch.", obj);
+            obj.itemName = str;
+            obj.itemProps = joined;
+            obj.listId = ref.current.listId;
+            FastestListLogger.logFastestListError("Expected item size mismatch.", obj);
           }
           let type1;
           if (type != null) {
@@ -95,19 +89,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        tmp2 = fn;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
       return tmp2;
     }
   : (arg0) => {
-      const ref = arg0;
       const items = [arg0];
-      return react.useCallback((nativeEvent) => {
-        let element;
-        let props;
-        let str;
+      return noop.useCallback((nativeEvent) => {
         nativeEvent = nativeEvent.nativeEvent;
         const current = ref.current;
         if (nativeEvent.isSectionHeader) {
@@ -116,7 +106,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (renderSectionHeader != null) {
             renderSectionHeaderResult = renderSectionHeader(nativeEvent.section);
           }
-          element = renderSectionHeaderResult;
+          let element = renderSectionHeaderResult;
         } else if (nativeEvent.isSectionFooter) {
           const renderSectionFooter = current.renderSectionFooter;
           let renderSectionFooterResult;
@@ -128,16 +118,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           element = current.renderItem(nativeEvent.section, nativeEvent.item);
         }
         if (element != null) {
-          props = element.props;
+          const props = element.props;
         }
         let type;
         if (element != null) {
           type = element.type;
         }
         if (typeof type === "function") {
-          let combined;
           if (type.name.length > 0) {
-            str = type.name;
+            let str = type.name;
           }
           let joined;
           if (null == str) {
@@ -147,7 +136,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (nativeEvent.isSectionHeader) {
             const _HermesInternal3 = HermesInternal;
-            combined = "Section header at section " + nativeEvent.section + ".";
+            let combined = "Section header at section " + nativeEvent.section + ".";
           } else {
             const section = nativeEvent.section;
             if (nativeEvent.isSectionFooter) {
@@ -158,19 +147,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               combined = "Item at section " + section + " and index " + nativeEvent.item + ".";
             }
           }
+          const obj = { detailMessage: null, itemPosition: null, itemName: null, itemProps: null, listId: null };
           const _HermesInternal4 = HermesInternal;
-          const obj = {
-            detailMessage: "Expected item size " + nativeEvent.sizeExpected + ", but got " + nativeEvent.size + ".",
-            itemPosition: combined,
-            itemName: str,
-            itemProps: joined,
-            listId: ref.current.listId,
-          };
+          obj.detailMessage = "Expected item size " + nativeEvent.sizeExpected + ", but got " + nativeEvent.size + ".";
+          obj.itemPosition = combined;
           if (str == null) {
             str = "Unknown component.";
           }
-          const obj3 = FastestListLogger;
-          obj3.logFastestListError("Expected item size mismatch.", obj);
+          obj.itemName = str;
+          obj.itemProps = joined;
+          obj.listId = ref.current.listId;
+          FastestListLogger.logFastestListError("Expected item size mismatch.", obj);
         }
         let type1;
         if (type != null) {
@@ -183,6 +170,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-const result = size.fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
-
-export default tmp2;

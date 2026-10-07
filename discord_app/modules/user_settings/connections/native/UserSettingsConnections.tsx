@@ -1,97 +1,74 @@
 // discord_app/modules/user_settings/connections/native/UserSettingsConnections.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../Constants.tsx";
-import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import AuthorizedAppsStore2 from "../../../oauth2/AuthorizedAppsStore.tsx";
 import AuthorizedAppsActionCreatorsDefault from "../../../oauth2/AuthorizedAppsActionCreators.tsx";
 import authorizeConnectionDefault from "../../../connections/authorizeConnection.native.tsx";
 import useConnectionFilteredAppIdentitiesDefault from "../../../user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx";
 import ConnectedApplicationIdentityDefault from "ConnectedApplicationIdentity.tsx";
 import ConnectedAccountDefault from "ConnectedAccount.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 import LocaleStore from "../../LocaleStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const AuthorizedAppsStore = AuthorizedAppsStore2;
-let dependencyMap, importDefault;
-
-let closure_12;
-let obj2;
-let tmp2;
-let unpackModuleId;
 const ConnectionsEmptyStateUpsellDefault = tmp2(14783);
-const ActivityIndicator = react_native.ActivityIndicator;
-const FetchState = AuthorizedAppsStore2.FetchState;
-const AnalyticsLocations = Constants.AnalyticsLocations;
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let obj = { flex: { flex: 1 }, form: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 };
-let closure_13 = createStyles.createStyles(obj);
+require = fn;
+const ActivityIndicator = fn(17).ActivityIndicator;
+const FetchState = fn(6609).FetchState;
+const AnalyticsLocations = fn(1085).AnalyticsLocations;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  flex: { flex: 1 },
+  form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 },
+};
+let closure_13 = createStyles.createStyles(obj2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/UserSettingsConnections.tsx");
 
 export const ADD_CONNECTIONS_SHEET_SENTINEL = -1;
 export const UserSettingsConnections = function UserSettingsConnections(selectedPlatformType) {
-  let Stack;
-  let accounts;
-  let fetching;
-  let items5;
-  let locale;
-  let locale2;
-  let obj5;
-  let theme;
   selectedPlatformType = selectedPlatformType.selectedPlatformType;
-  importDefault = undefined;
-  let tmp = closure_13();
+  const tmp = closure_13();
   importDefault = useThemeDefault();
-  let obj = selectedPlatformType(504);
   const items = [LocaleStore];
-  dependencyMap = obj.useStateFromStores(items, () => locale2.locale);
-  let obj2 = selectedPlatformType(504);
+  dependencyMap = selectedPlatformType(504).useStateFromStores(items, () => locale2.locale);
+  let obj = selectedPlatformType(504);
   const items1 = [ConnectedAccountsStore];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => {
-    const obj = { fetching: ConnectedAccountsStore.isFetching(), accounts: ConnectedAccountsStore.getAccounts() };
-    return obj;
-  });
+  const stateFromStoresObject = selectedPlatformType(504).useStateFromStoresObject(items1, () => ({
+    fetching: ConnectedAccountsStore.isFetching(),
+    accounts: ConnectedAccountsStore.getAccounts(),
+  }));
   ({ accounts, fetching } = stateFromStoresObject);
+  let obj2 = selectedPlatformType(504);
   const items2 = [AuthorizedAppsStore];
-  const obj3 = selectedPlatformType(504);
-  const stateFromStoresObject1 = obj3.useStateFromStoresObject(items2, () => {
-    const obj = {
-      authorizedAppsFetchState: authStore.getFetchState(),
-      authorizedApps: authStore.getNewestTokensForNonChildrenApplications(),
-    };
-    return obj;
-  });
+  const stateFromStoresObject1 = selectedPlatformType(504).useStateFromStoresObject(items2, () => ({
+    authorizedAppsFetchState: authStore.getFetchState(),
+    authorizedApps: authStore.getNewestTokensForNonChildrenApplications(),
+  }));
   const authorizedAppsFetchState = stateFromStoresObject1.authorizedAppsFetchState;
   const authorizedApps = stateFromStoresObject1.authorizedApps;
-  const tmp7 = useConnectionFilteredAppIdentitiesDefault;
-  const tmp7Result = tmp7(AuthenticationStore.getId(), { includeHidden: true });
+  const obj3 = selectedPlatformType(504);
+  const tmp7Result = useConnectionFilteredAppIdentitiesDefault(AuthenticationStore.getId(), { includeHidden: true });
   const prop = tmp7Result.filteredAppIdentities;
   const items3 = [authorizedAppsFetchState];
-  const isLoading = tmp7Result.isLoading;
   const effect = authorizedAppsFetchState.useEffect(() => {
     if (authorizedAppsFetchState === FetchState.NOT_FETCHED) {
-      const obj = AuthorizedAppsActionCreatorsDefault;
-      const response = obj.fetch();
+      const response = AuthorizedAppsActionCreatorsDefault.fetch();
     }
   }, items3);
   const effect1 = authorizedAppsFetchState.useEffect(() => {
-    const obj = theme(locale[14]);
-    const response = obj.fetch();
+    const response = theme(locale[14]).fetch();
   }, []);
   const items4 = [selectedPlatformType];
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
       if (-1 === selectedPlatformType) {
-        const obj2 = ActionSheetActionCreatorsDefault;
-        obj2.openLazy(asyncRequire(14781, dependencyMap.paths), "AddConnection");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14781, dependencyMap.paths), "AddConnection");
       } else {
         const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);
@@ -99,36 +76,34 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
     }
   }, items4);
   if (!fetching) {
-    let tmp14;
-    if (!isLoading) {
+    if (!tmp7Result.isLoading) {
       if (0 === accounts.length) {
         if (0 === prop.length) {
-          tmp14 = closure_11(ConnectionsEmptyStateUpsellDefault, {});
+          let tmp14 = closure_11(ConnectionsEmptyStateUpsellDefault, {});
         }
       }
-      const obj4 = { style: tmp.form, children: closure_12(Stack, obj5) };
-      const Form = tmp4(8924).Form;
-      obj5 = { spacing: 16, children: items5 };
-      Stack = tmp4(5600).Stack;
-      items5 = [
+      const obj4 = { style: tmp.form, children: null };
+      const obj5 = { spacing: 16, children: null };
+      const items5 = [
         prop.map((identity) => {
-          let closure_0 = identity;
           const obj = {
             identity,
-            token: authorizedApps.find((application) => application.application.id === application_id.application_id),
+            token: authorizedApps.find((application) => application.application.id === identity.application_id),
           };
-          const tmp = ConnectedApplicationIdentityDefault;
-          return unpackModuleId(tmp, obj, "" + identity.application_id + "-" + identity.provider_issued_user_id);
+          return closure_2_11(
+            ConnectedApplicationIdentityDefault,
+            obj,
+            "" + identity.application_id + "-" + identity.provider_issued_user_id,
+          );
         }),
-        accounts.map((account) => {
-          const obj = { theme, locale, account };
-          return unpackModuleId(ConnectedAccountDefault, obj, account.id);
-        }),
+        accounts.map((account) => closure_2_11(ConnectedAccountDefault, { theme, locale, account }, account.id)),
       ];
-      tmp14 = closure_11(Form, obj4);
+      obj5.children = items5;
+      obj4.children = closure_12(tmp4(5600).Stack, obj5);
+      tmp14 = closure_11(tmp4(8924).Form, obj4);
     }
     return tmp14;
   }
+  tmp14 = closure_11(authorizedApps, { style: tmp.flex, size: "large" });
   const obj6 = { style: tmp.flex, size: "large" };
-  tmp14 = closure_11(authorizedApps, obj6);
 };

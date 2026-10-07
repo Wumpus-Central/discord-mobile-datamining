@@ -7,6 +7,5 @@ const result = size.fileFinishedImporting(
 );
 
 export const getSystemVersion = function getSystemVersion() {
-  const obj = DeviceUtils;
-  return obj.getSystemVersion();
+  return DeviceUtils.getSystemVersion();
 };

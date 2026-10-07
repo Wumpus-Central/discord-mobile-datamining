@@ -33,9 +33,8 @@ const result = size.fileFinishedImporting("modules/premium/native/utils/GiftAnim
 
 export { LottieType };
 export const getLottieType = function getLottieType(giftStyle) {
-  let _JSON;
   if (giftStyle === PremiumGiftStyles.NITROWEEN_STANDARD) {
-    _JSON = obj.LOTTIE;
+    let _JSON = obj.LOTTIE;
   } else {
     _JSON = obj.JSON;
   }

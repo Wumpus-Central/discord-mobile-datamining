@@ -1,140 +1,103 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import LRUCacheDefault from "../../../../_runtime/01444_LRUCache.js";
+import privDefault from "../../../../_runtime/01444_priv.js";
 import SearchAppsRequestSource from "../../../../discord_common/js/shared/shared-constants/SearchAppsRequestSource.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let set;
-
+require = fn;
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
-const _false = new LRUCacheDefault({ max: 20 });
+let closure_3 = new privDefault({ max: 20 });
 obj = {};
-new LRUCacheDefault({ max: 20 });
-const Store = get_initializedDefault.Store;
-class ApplicationDirectorySearchStore extends Store {
-  getSearchResults(arg0) {
-    let categoryId;
-    let excludeAppsWithCustomInstallUrl;
-    let excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand;
-    let excludeNonEmbeddedApps;
-    let guildId;
-    let integrationType;
-    let minUserInstallCommandCount;
-    let page;
-    let pageSize;
-    let query;
-    let source;
-    ({
-      query,
-      guildId,
-      page,
-      pageSize,
-      categoryId,
-      integrationType,
-      minUserInstallCommandCount,
-      excludeAppsWithCustomInstallUrl,
-      excludeNonEmbeddedApps,
-      excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand,
-      source,
-    } = arg0);
-    if (source === undefined) {
-      source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
-    }
-    return closure_3.get(
-      "query:'" +
-        query +
-        "' guildId:" +
-        guildId +
-        " page:" +
-        page +
-        " pageSize:" +
-        pageSize +
-        " categoryId:" +
-        categoryId +
-        " integrationType:" +
-        integrationType +
-        " minUserInstallCommandCount:" +
-        minUserInstallCommandCount +
-        " excludeAppsWithCustomInstallUrl:" +
-        excludeAppsWithCustomInstallUrl +
-        " excludeNonEmbeddedApps:" +
-        excludeNonEmbeddedApps +
-        " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" +
-        excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand +
-        " source:" +
-        source,
-    );
-  }
-  getFetchState(arg0) {
-    let categoryId;
-    let excludeAppsWithCustomInstallUrl;
-    let excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand;
-    let excludeNonEmbeddedApps;
-    let guildId;
-    let integrationType;
-    let minUserInstallCommandCount;
-    let page;
-    let pageSize;
-    let query;
-    let source;
-    ({
-      query,
-      guildId,
-      page,
-      pageSize,
-      categoryId,
-      integrationType,
-      minUserInstallCommandCount,
-      excludeAppsWithCustomInstallUrl,
-      excludeNonEmbeddedApps,
-      excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand,
-      source,
-    } = arg0);
-    if (source === undefined) {
-      source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
-    }
-    return obj[
-      "query:'" +
-        query +
-        "' guildId:" +
-        guildId +
-        " page:" +
-        page +
-        " pageSize:" +
-        pageSize +
-        " categoryId:" +
-        categoryId +
-        " integrationType:" +
-        integrationType +
-        " minUserInstallCommandCount:" +
-        minUserInstallCommandCount +
-        " excludeAppsWithCustomInstallUrl:" +
-        excludeAppsWithCustomInstallUrl +
-        " excludeNonEmbeddedApps:" +
-        excludeNonEmbeddedApps +
-        " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" +
-        excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand +
-        " source:" +
-        source
-    ];
-  }
-}
+const Store = initializeDefault.Store;
+class ApplicationDirectorySearchStore extends Store {}
 const prototype = ApplicationDirectorySearchStore.prototype;
+prototype["getSearchResults"] = function getSearchResults(arg0) {
+  ({
+    query,
+    guildId,
+    page,
+    pageSize,
+    categoryId,
+    integrationType,
+    minUserInstallCommandCount,
+    excludeAppsWithCustomInstallUrl,
+    excludeNonEmbeddedApps,
+    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand,
+    source,
+  } = arg0);
+  if (source === undefined) {
+    source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
+  }
+  return closure_3.get(
+    "query:'" +
+      query +
+      "' guildId:" +
+      guildId +
+      " page:" +
+      page +
+      " pageSize:" +
+      pageSize +
+      " categoryId:" +
+      categoryId +
+      " integrationType:" +
+      integrationType +
+      " minUserInstallCommandCount:" +
+      minUserInstallCommandCount +
+      " excludeAppsWithCustomInstallUrl:" +
+      excludeAppsWithCustomInstallUrl +
+      " excludeNonEmbeddedApps:" +
+      excludeNonEmbeddedApps +
+      " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" +
+      excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand +
+      " source:" +
+      source,
+  );
+};
+prototype["getFetchState"] = function getFetchState(arg0) {
+  ({
+    query,
+    guildId,
+    page,
+    pageSize,
+    categoryId,
+    integrationType,
+    minUserInstallCommandCount,
+    excludeAppsWithCustomInstallUrl,
+    excludeNonEmbeddedApps,
+    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand,
+    source,
+  } = arg0);
+  if (source === undefined) {
+    source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
+  }
+  return obj[
+    "query:'" +
+      query +
+      "' guildId:" +
+      guildId +
+      " page:" +
+      page +
+      " pageSize:" +
+      pageSize +
+      " categoryId:" +
+      categoryId +
+      " integrationType:" +
+      integrationType +
+      " minUserInstallCommandCount:" +
+      minUserInstallCommandCount +
+      " excludeAppsWithCustomInstallUrl:" +
+      excludeAppsWithCustomInstallUrl +
+      " excludeNonEmbeddedApps:" +
+      excludeNonEmbeddedApps +
+      " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" +
+      excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand +
+      " source:" +
+      source
+  ];
+};
 ApplicationDirectorySearchStore.displayName = "ApplicationDirectorySearchStore";
-let obj2 = {
+const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(DispatcherDefault, {
   APPLICATION_DIRECTORY_FETCH_SEARCH: function handleSearchFetch(arg0) {
-    let categoryId;
-    let excludeAppsWithCustomInstallUrl;
-    let excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand;
-    let excludeNonEmbeddedApps;
-    let guildId;
-    let integrationType;
-    let minUserInstallCommandCount;
-    let page;
-    let pageSize;
-    let query;
-    let source;
     ({
       query,
       guildId,
@@ -179,18 +142,6 @@ let obj2 = {
     obj[combined] = obj.FETCHING;
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS: function handleSearchFetchSuccess(arg0) {
-    let categoryId;
-    let excludeAppsWithCustomInstallUrl;
-    let excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand;
-    let excludeNonEmbeddedApps;
-    let guildId;
-    let integrationType;
-    let minUserInstallCommandCount;
-    let page;
-    let pageSize;
-    let query;
-    let result;
-    let source;
     ({
       query,
       guildId,
@@ -232,26 +183,14 @@ let obj2 = {
       " source:" +
       source;
     obj = { lastFetchTimeMs: Date.now() };
-    set = closure_3.set;
     const merged = Object.assign(result);
-    const result1 = set(combined, obj);
+    const result1 = closure_3.set(combined, obj);
     const obj2 = {};
     const merged1 = Object.assign(obj);
     obj2[combined] = obj.FETCHED;
     obj = obj2;
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function handleSearchFetchFailure(arg0) {
-    let categoryId;
-    let excludeAppsWithCustomInstallUrl;
-    let excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand;
-    let excludeNonEmbeddedApps;
-    let guildId;
-    let integrationType;
-    let minUserInstallCommandCount;
-    let page;
-    let pageSize;
-    let query;
-    let source;
     ({
       query,
       guildId,
@@ -295,8 +234,8 @@ let obj2 = {
     const merged = Object.assign(obj);
     obj[combined] = obj.ERROR;
   },
-};
-const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx");
 
 export default applicationDirectorySearchStore;

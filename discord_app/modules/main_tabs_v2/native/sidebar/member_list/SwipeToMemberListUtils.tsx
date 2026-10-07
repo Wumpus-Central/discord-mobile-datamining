@@ -11,12 +11,10 @@ const result1 = size.fileFinishedImporting(
 );
 
 export const useIsSwipeToMemberListEnabled = () => {
-  const obj = ChatGestureSettings;
-  const swipeToReplySettingValue = obj.useSwipeToReplySettingValue();
+  const swipeToReplySettingValue = ChatGestureSettings.useSwipeToReplySettingValue();
   return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
 };
 export const isSwipeToMemberListEnabled = function isSwipeToMemberListEnabled() {
-  const obj = ChatGestureSettings;
-  const swipeToReplySettingValue = obj.getSwipeToReplySettingValue();
+  const swipeToReplySettingValue = ChatGestureSettings.getSwipeToReplySettingValue();
   return swipeToReplySettingValue === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS;
 };

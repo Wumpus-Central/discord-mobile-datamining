@@ -1,9 +1,9 @@
 // discord_common/js/shared/i18n/index.native.tsx
-import I18NDefault from "../../packages/i18n/index.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import i18nDefault from "../../packages/i18n/index.tsx";
 
 const require = globalThis.__r;
 
+const require = fn;
 let closure_2 = {
   bg() {
     return require("../../../../_runtime/metro/01939__.js");
@@ -20,10 +20,10 @@ let closure_2 = {
   el() {
     return require("../../../../_runtime/metro/01943__.js");
   },
-  "en-GB": () => require("../../../../_runtime/metro/01944__.js"),
-  "en-US": () => require("../../../../_runtime/metro/01945__.js"),
-  "es-419": () => require("../../../../_runtime/metro/01946__.js"),
-  "es-ES": () => require("../../../../_runtime/metro/01947__.js"),
+  () => require("../../../../_runtime/metro/01944__.js"),
+  () => require("../../../../_runtime/metro/01945__.js"),
+  () => require("../../../../_runtime/metro/01946__.js"),
+  () => require("../../../../_runtime/metro/01947__.js"),
   fi() {
     return require("../../../../_runtime/metro/01948__.js");
   },
@@ -63,14 +63,14 @@ let closure_2 = {
   pl() {
     return require("../../../../_runtime/metro/01960__.js");
   },
-  "pt-BR": () => require("../../../../_runtime/metro/01961__.js"),
+  () => require("../../../../_runtime/metro/01961__.js"),
   ro() {
     return require("../../../../_runtime/metro/01962__.js");
   },
   ru() {
     return require("../../../../_runtime/metro/01963__.js");
   },
-  "sv-SE": () => require("../../../../_runtime/metro/01964__.js"),
+  () => require("../../../../_runtime/metro/01964__.js"),
   th() {
     return require("../../../../_runtime/metro/01965__.js");
   },
@@ -83,27 +83,24 @@ let closure_2 = {
   vi() {
     return require("../../../../_runtime/metro/01968__.js");
   },
-  "zh-CN": () => require("../../../../_runtime/metro/01969__.js"),
-  "zh-TW": () => require("../../../../_runtime/metro/01970__.js"),
+  () => require("../../../../_runtime/metro/01969__.js"),
+  () => require("../../../../_runtime/metro/01970__.js")
 };
-const obj = {
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/shared/i18n/index.native.tsx");
+
+export default new i18nDefault({
   getMessages(arg0) {
     if (null == closure_2[arg0]) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const self = this;
-      const self2 = this;
       const error = new Error("Unsupported locale: " + arg0);
       throw error;
     } else {
-      return closure_2[arg0]();
+      return tmp();
     }
   },
   getLanguages() {
     return require("../../../../_runtime/metro/01971__.js");
-  },
-};
-const tmp2 = new I18NDefault(obj);
-const result = size.fileFinishedImporting("../discord_common/js/shared/i18n/index.native.tsx");
-
-export default tmp2;
+  }
+});

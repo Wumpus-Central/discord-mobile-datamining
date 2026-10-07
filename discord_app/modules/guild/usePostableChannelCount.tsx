@@ -1,31 +1,25 @@
 // discord_app/modules/guild/usePostableChannelCount.tsx
-import Constants from "../../Constants.tsx";
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import GuildChannelStore2 from "../../stores/GuildChannelStore.tsx";
+import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-const GuildChannelStore = GuildChannelStore2;
-let _require, can;
 
-let closure_4 = GuildChannelStore2.GUILD_SELECTABLE_CHANNELS_KEY;
-const Permissions = Constants.Permissions;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+let closure_4 = fn(4513).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1085).Permissions;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp7;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(7);
-      const tmp = _require;
+      const cResult = require("c").c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [GuildChannelStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -41,50 +35,43 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
       if (0 === stateFromStores.length) {
         return 0;
-      } else {
-        let arr4;
-        if (cResult[4] !== stateFromStores) {
-          let tmp8;
-          const _Symbol = Symbol;
-          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn2 = function h(channel) {
-              channel = channel.channel;
-              can = can.can;
-              const obj = BigFlagUtilsAll;
-              return can(obj.combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL), channel);
-            };
-            cResult[6] = fn2;
-            tmp8 = fn2;
-          } else {
-            tmp8 = cResult[6];
-          }
-          const found = stateFromStores.filter(tmp8);
-          cResult[4] = stateFromStores;
-          cResult[5] = found;
-          arr4 = found;
+      } else if (cResult[4] !== stateFromStores) {
+        const _Symbol = Symbol;
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn2 = function h(channel) {
+            return PermissionStore.can(
+              BigFlagUtilsAll.combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL),
+              channel.channel,
+            );
+          };
+          cResult[6] = fn2;
+          let tmp8 = fn2;
         } else {
-          arr4 = cResult[5];
+          tmp8 = cResult[6];
         }
-        return arr4.length;
+        const found = stateFromStores.filter(tmp8);
+        cResult[4] = stateFromStores;
+        cResult[5] = found;
+      } else {
+        return cResult[5].length;
       }
+      const tmpResult = require("initialize");
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("get initialized");
       let items = [GuildChannelStore];
       const items1 = [arg0];
-      const stateFromStores = obj.useStateFromStores(
+      const stateFromStores = require("initialize").useStateFromStores(
         items,
         () => {
           let items = GuildChannelStore.getChannels(closure_0)[closure_4];
@@ -97,15 +84,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let num = 0;
       if (0 !== stateFromStores.length) {
-        num = stateFromStores.filter((channel) => {
-          channel = channel.channel;
-          can = can.can;
-          const obj = BigFlagUtilsAll;
-          return can(obj.combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL), channel);
-        }).length;
+        num = stateFromStores.filter((channel) =>
+          PermissionStore.can(
+            BigFlagUtilsAll.combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL),
+            channel.channel,
+          ),
+        ).length;
       }
       return num;
     };
-const result = size.fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");
-
-export default tmp2;

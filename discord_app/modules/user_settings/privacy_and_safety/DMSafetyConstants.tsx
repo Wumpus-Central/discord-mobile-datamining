@@ -16,7 +16,6 @@ const items2 = [obj.NON_FRIENDS, preloaded_user_settings.DmSpamFilterV2.NON_FRIE
 items1[1] = items2;
 const items3 = [obj.FRIENDS_AND_NON_FRIENDS, preloaded_user_settings.DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS];
 items1[2] = items3;
-const map = new Map(items1);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/DMSafetyConstants.tsx");
 
 export const DMSafetyCoachmarkActions = {
@@ -36,4 +35,4 @@ export const DmSpamFilterTypes = {
   [2]: "FRIENDS_AND_NON_FRIENDS",
 };
 export const ExplicitContentFilterTypes = obj;
-export const ExplicitContentFilterToDmSpamFilterV2 = map;
+export const ExplicitContentFilterToDmSpamFilterV2 = new Map(items1);

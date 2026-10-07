@@ -1,21 +1,17 @@
 // discord_app/modules/group_dm/getGroupDMRecipientLimit.tsx
-import PremiumConstants from "../premium/PremiumConstants.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
-import GroupDMConstants from "GroupDMConstants.tsx";
 import GroupDMNitroCapExperiment from "GroupDMNitroCapExperiment.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let closure_4;
-let hasOwnProperty;
-let closure_3 = GroupDMConstants.MAX_GROUP_DM_NITRO_PARTICIPANTS;
+require = fn;
+let closure_3 = fn(11228).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const Constants = fn(1085);
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_4, MAX_GROUP_DM_STAFF_PARTICIPANTS: hasOwnProperty } = Constants);
-const PremiumTypes = PremiumConstants.PremiumTypes;
+const PremiumTypes = fn(1379).PremiumTypes;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/getGroupDMRecipientLimit.tsx");
 
 export default function getGroupDMRecipientLimit() {
-  let tmp5;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -30,18 +26,18 @@ export default function getGroupDMRecipientLimit() {
     isStaffResult = currentUser.isStaff();
   }
   if (isStaffResult) {
-    tmp5 = hasOwnProperty;
+    let tmp5 = hasOwnProperty;
   } else {
     if (flag) {
-      const obj3 = PremiumTypeUtils;
       if (obj3.isPremium(currentUser, PremiumTypes.TIER_2)) {
-        const tmp2Result = GroupDMNitroCapExperiment;
         if (tmp2Result.getGroupDMNitroCapConfig("getGroupDMRecipientLimit").enabled) {
           tmp5 = closure_3;
         }
+        tmp2Result = GroupDMNitroCapExperiment;
       }
+      obj3 = PremiumTypeUtils;
     }
-    tmp5 = React3;
+    tmp5 = React4;
   }
   return tmp5;
 }

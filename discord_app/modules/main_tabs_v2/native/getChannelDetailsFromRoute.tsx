@@ -9,15 +9,12 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj = NavigationRouteUtils;
-  const coerceChannelRouteResult = obj.coerceChannelRoute(currentRoute);
+  const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
     const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
   } else if (flag) {
-    let items2;
-    const tmpResult = NavigationRouteUtils;
-    const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(currentRoute);
+    const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);
     if (null != coerceGuildsRouteResult) {
       const params = coerceGuildsRouteResult.params;
       let guildId;
@@ -31,7 +28,7 @@ export default function getChannelDetailsFromRoute(currentRoute) {
         channelId = params2.channelId;
       }
       items1[1] = channelId;
-      items2 = items1;
+      let items2 = items1;
     } else {
       items2 = [undefined, undefined];
     }

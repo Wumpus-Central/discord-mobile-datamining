@@ -1,15 +1,15 @@
 // discord_common/js/packages/flux/ChangeListeners.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-let set;
-
 const result = size.fileFinishedImporting("../discord_common/js/packages/flux/ChangeListeners.tsx");
 class ChangeListeners {
   constructor() {
-    const obj = Object.create(new.target.prototype);
+    obj = Object.create(new.target.prototype);
+    closure_0 = obj;
     set = new Set();
     obj.listeners = set;
-    obj.conditionalListeners = new Set();
+    set1 = new Set();
+    obj.conditionalListeners = set1;
     obj.add = function add(arg0) {
       const listeners = obj.listeners;
       listeners.add(arg0);
@@ -21,6 +21,7 @@ class ChangeListeners {
       conditionalListeners.delete(arg0);
     };
     obj.addConditional = function addConditional(fn) {
+      closure_0 = fn;
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
@@ -28,12 +29,12 @@ class ChangeListeners {
       let conditionalCallback;
       if (!flag) {
         conditionalCallback = function conditionalCallback() {
-          if (false === fn()) {
+          if (false === closure_0()) {
             obj.remove(conditionalCallback);
           }
         };
-        fn.add(conditionalCallback);
-        const conditionalListeners = set.conditionalListeners;
+        closure_0.add(conditionalCallback);
+        const conditionalListeners = closure_0.conditionalListeners;
         conditionalListeners.add(conditionalCallback);
       }
     };
@@ -46,21 +47,20 @@ class ChangeListeners {
       const conditionalListeners = obj.conditionalListeners;
       conditionalListeners.clear();
     };
-    new Set();
     return obj;
-  }
-  has(arg0) {
-    const listeners = this.listeners;
-    return listeners.has(arg0);
-  }
-  hasAny() {
-    return this.listeners.size > 0;
-  }
-  invokeAll() {
-    const listeners = this.listeners;
-    const item = listeners.forEach((fn) => fn());
   }
 }
 const prototype = ChangeListeners.prototype;
+prototype["has"] = function has(arg0) {
+  const listeners = this.listeners;
+  return listeners.has(arg0);
+};
+prototype["hasAny"] = function hasAny() {
+  return this.listeners.size > 0;
+};
+prototype["invokeAll"] = function invokeAll() {
+  const listeners = this.listeners;
+  const item = listeners.forEach((fn) => fn());
+};
 
 export { ChangeListeners };

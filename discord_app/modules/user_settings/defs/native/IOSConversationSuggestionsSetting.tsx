@@ -1,110 +1,119 @@
 // discord_app/modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl2 from "../../../../intl/index.native.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/04498__slicedToArray.js";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import 01254__ from "../../../../../_runtime/metro/01254__.js";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _mod4498 from "../../../../../_runtime/metro/04498__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let conversationSuggestionsEnabled;
-
-const NativeModules = react_native.NativeModules;
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-let closure_4 = module_1254.createWithEqualityFn(() => ({ isEnabled: true }));
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let first;
-  const obj = react2;
-  const cResult = obj.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function n(isEnabled) {
-      return isEnabled.isEnabled;
-    };
-    cResult[0] = fn;
-    first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return closure_4(first, _slicedToArray.shallow);
-}) : (() => closure_4((isEnabled) => isEnabled.isEnabled, _slicedToArray.shallow));
-const IntentsHandler = NativeModules.IntentsHandler;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  let tmp2;
-  let tmp3;
-  let obj = react2;
-  const cResult = obj.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
-      conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
-      conversationSuggestionsEnabled.then((result) => {
-        let closure_0 = result;
-        const obj = closure_0(closure_2[4]);
-        obj.batchUpdates(() => {
-          const obj = { isEnabled };
-          return state.setState(obj);
+require = fn;
+const identity = fn(1254);
+let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
+let ReactCompilerGating = fn(558);
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function n(isEnabled) {
+          return isEnabled.isEnabled;
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      return closure_4(first, _mod4498.shallow);
+    }
+  : () => closure_4((isEnabled) => isEnabled.isEnabled, _mod4498.shallow);
+fn(17).NativeModules.IntentsHandler;
+ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11142);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function t() {
+          conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
+          conversationSuggestionsEnabled.then((result) => {
+            closure_0 = result;
+            closure_0(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
+          });
+        };
+        const items = [];
+        cResult[0] = fn;
+        cResult[1] = items;
+        tmp2 = fn;
+        tmp3 = items;
+      } else {
+        [tmp2, tmp3] = cResult;
+      }
+      const effect = noop.useEffect(tmp2, tmp3);
+      return closure_5();
+    }
+  : () => {
+      const effect = noop.useEffect(() => {
+        conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
+        conversationSuggestionsEnabled.then((result) => {
+          const isEnabled = result;
+          isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
         });
-      });
+      }, []);
+      return closure_5();
     };
-    const items = [];
-    cResult[0] = fn;
-    cResult[1] = items;
-    tmp2 = fn;
-    tmp3 = items;
-  } else {
-    [tmp2, tmp3] = cResult;
-  }
-  const effect = react.useEffect(tmp2, tmp3);
-  return closure_5();
-}) : (() => {
-  const effect = react.useEffect(() => {
-    let state;
-    conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
-    conversationSuggestionsEnabled.then((result) => {
-      const isEnabled = result;
-      let obj = isEnabled(closure_2[4]);
-      obj.batchUpdates(() => {
-        const obj = { isEnabled };
-        return state.setState(obj);
-      });
-    });
-  }, []);
-  return closure_5();
-});
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.J8foZq);
+    const intl = util.intl;
+    return intl.string(util.t.J8foZq);
   },
-  parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: tmp2,
+  parent: fn(7645).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn = function t() {
+            conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
+            conversationSuggestionsEnabled.then((result) => {
+              closure_0 = result;
+              closure_0(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
+            });
+          };
+          const items = [];
+          cResult[0] = fn;
+          cResult[1] = items;
+          tmp2 = fn;
+          tmp3 = items;
+        } else {
+          [tmp2, tmp3] = cResult;
+        }
+        const effect = noop.useEffect(tmp2, tmp3);
+        return closure_5();
+      }
+    : () => {
+        const effect = noop.useEffect(() => {
+          conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
+          conversationSuggestionsEnabled.then((result) => {
+            const isEnabled = result;
+            isEnabled(closure_2[4]).batchUpdates(() => state.setState({ isEnabled }));
+          });
+        }, []);
+        return closure_5();
+      },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
-    const nextPromise = result.then((result) => {
-      let closure_0 = result;
-      const obj = closure_0(closure_2[4]);
-      obj.batchUpdates(() => {
-        const obj = { isEnabled };
-        return state.setState(obj);
+    result
+      .then((result) => {
+        closure_0 = result;
+        closure_0(1259).batchUpdates(() => state.setState({ isEnabled }));
+      })
+      .catch((error) => {
+        new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);
       });
-    });
-    nextPromise.catch((error) => {
-      const obj = new LoggerDefault("ConversationSuggestions");
-      obj.error("Error suggesting conversations", error);
-    });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
-    const obj = PlatformUtils;
-    return !obj.isAndroid();
-  }
-};
-const toggle = SettingBuilders.createToggle(obj);
+    return !PlatformUtils.isAndroid();
+  },
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
 
 export default toggle;

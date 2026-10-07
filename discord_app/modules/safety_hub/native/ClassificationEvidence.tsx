@@ -1,139 +1,121 @@
 // discord_app/modules/safety_hub/native/ClassificationEvidence.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ClassificationMessageEvidenceDefault from "ClassificationMessageEvidence.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import native_mod from "../../../design/void/native.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let flaggedContent;
-
-let closure_4;
-let hasOwnProperty;
-let native;
-let obj2;
-let obj3;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  cardShadow: native.generateBoxShadowStyle(native.FOUR_DP_ELEVATION_SHADOW_PARAMS),
-  flaggedContent: obj2,
-  sectionContainer: obj3,
-};
-createStyles = createStyles.createStyles;
-native = native_mod;
-obj2 = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
+const native = fn(1188);
+obj2.cardShadow = native.generateBoxShadowStyle(fn(1188).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+obj2.flaggedContent = {
   borderWidth: 1,
   borderRadius: nativeDefault.radii.sm,
   borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND,
   padding: 20,
 };
-obj3 = { display: "flex", gap: nativeDefault.space.PX_8 };
-let closure_6 = createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let obj4 = {
+  borderWidth: 1,
+  borderRadius: nativeDefault.radii.sm,
+  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  backgroundColor: nativeDefault.colors.CHANNELTEXTAREA_BACKGROUND,
+  padding: 20,
+};
+obj2.sectionContainer = { display: "flex", gap: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { display: "flex", gap: nativeDefault.space.PX_8 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (flaggedContent) => {
-      let intl;
-      let items;
-      const obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       flaggedContent = flaggedContent.flaggedContent;
-      const tmp4 = closure_6();
-      let tmp5 = null;
-      if (0 !== flaggedContent.length) {
-        let first;
+      let sectionContainer = closure_6();
+      if (0 === flaggedContent.length) {
+        return null;
+      } else {
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { variant: "eyebrow", color: "text-default", children: intl.string(intl2.t.s64CMg) };
-          const Text = Text_Text.Text;
-          intl = intl2.intl;
-          const tmp8 = React3(Text, obj2);
-          cResult[0] = tmp8;
-          first = tmp8;
+          const obj2 = { variant: "eyebrow", color: "text-default", children: null };
+          const intl = util.intl;
+          obj2.children = intl.string(util.t.s64CMg);
+          const tmp6 = React4(Text_Text.Text, obj2);
+          cResult[0] = tmp6;
+          let first = tmp6;
         } else {
           first = cResult[0];
         }
-        if (cResult[1] === tmp4.cardShadow) {
-          let tmp9;
-          let tmp10;
-          if (cResult[2] === tmp4.flaggedContent) {
-            tmp9 = cResult[3];
+        if (cResult[1] === sectionContainer.cardShadow) {
+          if (cResult[2] === sectionContainer.flaggedContent) {
+            let tmp7 = cResult[3];
           }
           if (cResult[4] !== flaggedContent) {
             const obj3 = { flaggedContent };
-            const tmp13 = React3(ClassificationMessageEvidenceDefault, obj3);
+            const tmp11 = React4(ClassificationMessageEvidenceDefault, obj3);
             cResult[4] = flaggedContent;
-            cResult[5] = tmp13;
-            tmp10 = tmp13;
+            cResult[5] = tmp11;
+            let tmp8 = tmp11;
           } else {
-            tmp10 = cResult[5];
+            tmp8 = cResult[5];
           }
-          if (cResult[6] === tmp9) {
-            let tmp14;
-            if (cResult[7] === tmp10) {
-              tmp14 = cResult[8];
+          if (cResult[6] === tmp7) {
+            if (cResult[7] === tmp8) {
+              let tmp12 = cResult[8];
             }
-            if (cResult[9] === tmp4.sectionContainer) {
-              let tmp18;
-              if (cResult[10] === tmp14) {
-                tmp18 = cResult[11];
-              }
-              tmp5 = tmp18;
+            if (cResult[9] === sectionContainer.sectionContainer) {
             }
-            const obj4 = { style: tmp4.sectionContainer, children: items };
-            items = [first, tmp14];
-            const tmp21 = hasOwnProperty(View, obj4);
-            cResult[9] = tmp4.sectionContainer;
-            cResult[10] = tmp14;
-            cResult[11] = tmp21;
-            tmp18 = tmp21;
+            const obj4 = { style: sectionContainer.sectionContainer, children: null };
+            const items = [first, tmp12];
+            obj4.children = items;
+            const tmp19 = hasOwnProperty(View, obj4);
+            sectionContainer = sectionContainer.sectionContainer;
+            cResult[9] = sectionContainer;
+            cResult[10] = tmp12;
+            cResult[11] = tmp19;
           }
-          const obj5 = { style: tmp9, children: tmp10 };
-          const tmp17 = React3(View, obj5);
-          cResult[6] = tmp9;
-          cResult[7] = tmp10;
-          cResult[8] = tmp17;
-          tmp14 = tmp17;
+          const obj5 = { style: tmp7, children: tmp8 };
+          const tmp15 = React4(View, obj5);
+          cResult[6] = tmp7;
+          cResult[7] = tmp8;
+          cResult[8] = tmp15;
+          tmp12 = tmp15;
         }
         const items1 = [,];
-        ({ flaggedContent: arr2[0], cardShadow: arr2[1] } = tmp4);
-        cResult[1] = tmp4.cardShadow;
-        cResult[2] = tmp4.flaggedContent;
+        ({ flaggedContent: arr2[0], cardShadow: arr2[1] } = sectionContainer);
+        cResult[1] = sectionContainer.cardShadow;
+        cResult[2] = sectionContainer.flaggedContent;
         cResult[3] = items1;
-        tmp9 = items1;
+        tmp7 = items1;
       }
-      return tmp5;
     }
   : (flaggedContent) => {
-      let intl;
-      let items;
-      let items1;
-      let obj4;
       flaggedContent = flaggedContent.flaggedContent;
       const tmp = closure_6();
       let tmp2 = null;
       if (0 !== flaggedContent.length) {
-        const obj = { style: tmp.sectionContainer, children: items };
-        const obj2 = { variant: "eyebrow", color: "text-default", children: intl.string(intl2.t.s64CMg) };
-        const Text = Text_Text.Text;
-        intl = intl2.intl;
-        items = [React3(Text, obj2)];
-        const obj3 = { style: items1, children: React3(ClassificationMessageEvidenceDefault, obj4) };
-        items1 = [,];
+        const obj = { style: tmp.sectionContainer, children: null };
+        const obj2 = { variant: "eyebrow", color: "text-default", children: null };
+        const intl = util.intl;
+        obj2.children = intl.string(util.t.s64CMg);
+        const items = [React4(Text_Text.Text, obj2)];
+        const obj3 = { style: null, children: null };
+        const items1 = [,];
         ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);
-        obj4 = { flaggedContent };
-        items[1] = React3(View, obj3);
+        obj3.style = items1;
+        const obj4 = { flaggedContent };
+        obj3.children = React4(ClassificationMessageEvidenceDefault, obj4);
+        items[1] = React4(View, obj3);
+        obj.children = items;
         tmp2 = hasOwnProperty(View, obj);
       }
       return tmp2;
     };
-const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationEvidence.tsx");
-
-export default tmp5;

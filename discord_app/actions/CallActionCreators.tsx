@@ -1,34 +1,29 @@
 // discord_app/actions/CallActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import intl5 from "../intl/index.native.tsx";
+import util from "../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
 import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
 import useCanRing from "../modules/calls/useCanRing.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
-import RelationshipStore_mod from "../stores/RelationshipStore.tsx";
-import UserStore_mod from "../stores/UserStore.tsx";
-import Constants from "../Constants.tsx";
-import size from "../../_runtime/metro/00002__.js";
+import RelationshipStore from "../stores/RelationshipStore.tsx";
+import UserStore from "../stores/UserStore.tsx";
 
 const require = globalThis.__r;
-let _require, dependencyMap, importDefault;
 
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let RelationshipStore = RelationshipStore_mod;
-let UserStore = UserStore_mod;
-({ Endpoints: metroRequire, AnalyticEvents: metroImportDefault, ChannelTypesSets: metroImportAll } = Constants);
-let obj = {
+require = fn;
+const Constants = fn(1085);
+({ Endpoints: metroRequire, AnalyticEvents: closure_7, ChannelTypesSets: closure_8 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/CallActionCreators.tsx");
+
+export default {
   call(id, MediaEngineStore, arg2, arg3, fn) {
-    let closure_4;
-    let user;
     const self = this;
     importDefault = id;
     dependencyMap = MediaEngineStore;
-    let closure_3 = arg2;
+    closure_3 = arg2;
     RelationshipStore = arg3;
     UserStore = fn;
     if (null != arg3) {
@@ -36,60 +31,45 @@ let obj = {
         _require = UserStore.getUser(arg3);
         const HTTP = require("HTTPUtils").HTTP;
         let obj2 = { url: self.CALL(id), oldFormErrors: true, rejectWithError: true };
-        const get = HTTP.get;
-        const value = get(obj2);
+        value = HTTP.get(obj2);
         value.then(
           (body) => {
-            const ringable = closure_3 && body.body.ringable;
-            const obj = SelectedChannelActionCreatorsDefault;
-            const voiceChannel = obj.selectVoiceChannel(id, MediaEngineStore);
-            if (ringable) {
-              self.ring(id);
+            let ringable = closure_3;
+            if (closure_3) {
+              ringable = body.body.ringable;
             }
-            if (fn != null) {
-              fn(id);
+            const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(closure_1, closure_2);
+            if (ringable) {
+              self.ring(closure_1);
+            }
+            if (closure_5 != null) {
+              closure_5(closure_1);
             }
           },
           () => {
-            let IdKo2z;
-            let format;
-            let intl;
-            let intl3;
-            let intl4;
-            let str;
-            let userId;
-            let obj = AnalyticsUtilsDefault;
-            obj.track(metroImportDefault.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
-            let obj2 = {
-              title: intl.string(intl5.t.My50nf),
-              body: format(IdKo2z, { username: str }),
-              confirmText: intl3.string(intl5.t["PMsq/b"]),
-              cancelText: intl4.string(intl5.t.BddRzS),
-              onConfirm() {
-                const obj = id(MediaEngineStore[9]);
-                const obj2 = { userId, context: { location: "Call" } };
-                obj.addRelationship(obj2);
-              },
-            };
-            const show = AlertActionCreatorsDefault.show;
-            AlertActionCreatorsDefault;
-            intl = intl5.intl;
-            const intl2 = intl5.intl;
-            format = intl2.format;
-            str = "";
-            IdKo2z = intl5.t.IdKo2z;
+            AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
+            const obj3 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+            const intl = util.intl;
+            obj3.title = intl.string(util.t.My50nf);
+            const intl2 = util.intl;
+            let str = "";
             if (null != user) {
               str = user.username;
             }
-            intl3 = intl5.intl;
-            intl4 = intl5.intl;
-            show(obj2);
+            obj3.body = intl2.format(util.t.IdKo2z, { username: str });
+            const intl3 = util.intl;
+            obj3.confirmText = intl3.string(util.t["PMsq/b"]);
+            const intl4 = util.intl;
+            obj3.cancelText = intl4.string(util.t.BddRzS);
+            obj3.onConfirm = function onConfirm() {
+              closure_1(closure_2[9]).addRelationship({ userId, context: { location: "Call" } });
+            };
+            AlertActionCreatorsDefault.show(obj3);
           },
         );
       }
     } else {
-      let obj = SelectedChannelActionCreatorsDefault;
-      let voiceChannel = obj.selectVoiceChannel(id, MediaEngineStore);
+      let voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(id, MediaEngineStore);
       if (arg2) {
         self.ring(id);
       }
@@ -99,43 +79,35 @@ let obj = {
     }
   },
   ring(channelId, items, voice_panel_floating_cta) {
-    let obj2;
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
-      const CALLABLE = metroImportAll.CALLABLE;
-      const obj5 = useCanRing;
-      const result = obj5.canRingUsersInChannel(channel);
+      const CALLABLE = constants2.CALLABLE;
+      const result = useCanRing.canRingUsersInChannel(channel);
       if (result) {
         const HTTP = HTTPUtils.HTTP;
         const request = {
-          url: metroRequire.CALL_RING(channelId),
-          body: obj2,
+          url: timestampProducer.CALL_RING(channelId),
+          body: null,
           oldFormErrors: true,
           rejectWithError: true,
         };
-        const post = HTTP.post;
-        obj2 = { recipients: items, analytics_location: voice_panel_floating_cta };
-        post(request);
+        const obj2 = { recipients: items, analytics_location: voice_panel_floating_cta };
+        request.body = obj2;
+        HTTP.post(request);
       } else if (tmp12) {
         const obj3 = { type: "CALL_ENQUEUE_RING", channelId, recipients: items };
-        const obj = DispatcherDefault;
-        obj.dispatch(obj3);
+        DispatcherDefault.dispatch(obj3);
       }
     }
   },
   stopRinging(channelId, items) {
-    let obj;
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: metroRequire.CALL_STOP_RINGING(channelId),
-      body: obj,
+      url: timestampProducer.CALL_STOP_RINGING(channelId),
+      body: { recipients: items },
       oldFormErrors: true,
       rejectWithError: true,
     };
-    obj = { recipients: items };
     return HTTP.post(request);
   },
 };
-let result = size.fileFinishedImporting("actions/CallActionCreators.tsx");
-
-export default obj;

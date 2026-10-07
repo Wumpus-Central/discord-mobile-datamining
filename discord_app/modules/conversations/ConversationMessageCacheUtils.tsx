@@ -3,17 +3,12 @@ import ReactionUtils from "../reactions/ReactionUtils.tsx";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationMessageCacheUtils.tsx");
 
 export const applyHydratedMessages = function applyHydratedMessages(arg0) {
-  let fullyHydrated;
-  let messageReferences;
-  let messages;
-  let meta;
-  let upsertMessage;
-  let upsertReference;
   ({ meta, messages, fullyHydrated, messageReferences } = arg0);
   if (messageReferences === undefined) {
     messageReferences = [];
@@ -42,14 +37,14 @@ export const applyHydratedMessages = function applyHydratedMessages(arg0) {
   return true;
 };
 export const replaceHydratedMessage = function replaceHydratedMessage(peekResult, messageId, addReactionBatchResult) {
-  let closure_0 = messageId;
+  closure_0 = messageId;
   let hydratedMessages1;
   if (peekResult != null) {
     hydratedMessages1 = peekResult.hydratedMessages;
   }
   if (null != hydratedMessages1) {
     const hydratedMessages = peekResult.hydratedMessages;
-    const findIndexResult = hydratedMessages.findIndex((id) => id.id === messageId);
+    const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
     if (-1 !== findIndexResult) {
       const hydratedMessages2 = peekResult.hydratedMessages;
       const substr = hydratedMessages2.slice();
@@ -59,7 +54,7 @@ export const replaceHydratedMessage = function replaceHydratedMessage(peekResult
   }
 };
 export const removeHydratedMessage = function removeHydratedMessage(peekResult, id) {
-  let closure_0 = id;
+  closure_0 = id;
   let hydratedMessages;
   if (peekResult != null) {
     hydratedMessages = peekResult.hydratedMessages;
@@ -70,26 +65,23 @@ export const removeHydratedMessage = function removeHydratedMessage(peekResult, 
   }
 };
 export const applyRelationshipFlags = function applyRelationshipFlags(message) {
-  let result1;
   const isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message);
   const isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message);
   if (message.blocked !== isBlockedForMessageResult) {
     const result = message.set("blocked", isBlockedForMessageResult);
-    result1 = result.set("ignored", isIgnoredForMessageResult);
+    let result1 = result.set("ignored", isIgnoredForMessageResult);
   } else {
     result1 = null;
   }
   return result1;
 };
 export const applyReaction = function applyReaction(userId, message) {
-  const obj = ReactionUtils;
   if (obj.shouldApplyReaction(userId)) {
-    let addReactionResult;
     const tmp4 = AuthenticationStore.getId() === userId.userId;
     if ("MESSAGE_REACTION_ADD" === userId.type) {
-      const obj3 = { colors: null, reactionType: null };
       ({ colors: obj2.colors, reactionType: obj2.reactionType } = userId);
-      addReactionResult = message.addReaction(userId.emoji, tmp4, obj3);
+      let addReactionResult = message.addReaction(userId.emoji, tmp4, { colors: null, reactionType: null });
+      const obj3 = { colors: null, reactionType: null };
     } else {
       addReactionResult = message.removeReaction(userId.emoji, tmp4, userId.reactionType);
     }
@@ -97,4 +89,5 @@ export const applyReaction = function applyReaction(userId, message) {
   } else {
     return null;
   }
+  obj = ReactionUtils;
 };

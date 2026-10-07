@@ -1,22 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import chunkDefault from "../../../../../../_runtime/09964_chunk.js";
 import LayoutUtils from "../LayoutUtils.tsx";
 import EmojiIconDefault from "../EmojiIcon.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const View = react_native.View;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (maxPerRow) => {
-      let emojiIds;
-      let guildId;
-      let tmp8;
-      const obj = guildId(576);
-      const cResult = obj.c(16);
+      const cResult = guildId(576).c(16);
       ({ emojiIds, guildId } = maxPerRow);
       maxPerRow = maxPerRow.maxPerRow;
       let num = 9;
@@ -25,101 +24,97 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === emojiIds) {
         if (cResult[1] === guildId) {
-          let tmp4;
-          let tmp5;
-          let num2;
-          let tmp6;
           if (cResult[2] === num) {
-            tmp4 = cResult[3];
-            tmp5 = cResult[4];
-            num2 = cResult[5];
-            tmp6 = cResult[6];
-          }
-          if (cResult[9] === tmp4) {
-            if (cResult[10] === num2) {
-              let tmp10;
-              if (cResult[11] === tmp6) {
-                tmp10 = cResult[12];
-              }
-              if (cResult[13] === tmp5) {
-                let tmp13;
-                if (cResult[14] === tmp10) {
-                  tmp13 = cResult[15];
+            if (cResult[9] === cResult[3]) {
+              if (cResult[10] === tmp6) {
+                if (cResult[11] === tmp7) {
+                  let tmp11 = cResult[12];
                 }
-                return tmp13;
+                if (cResult[13] === tmp5) {
+                  if (cResult[14] === tmp11) {
+                    let tmp14 = cResult[15];
+                  }
+                  return tmp14;
+                }
+                const obj2 = { children: tmp11 };
+                const tmp16 = <tmp5>{tmp11}</tmp5>;
+                cResult[13] = tmp5;
+                cResult[14] = tmp11;
+                cResult[15] = tmp16;
+                tmp14 = tmp16;
               }
-              const tmp15 = <tmp5>{tmp10}</tmp5>;
-              cResult[13] = tmp5;
-              cResult[14] = tmp10;
-              cResult[15] = tmp15;
-              tmp13 = tmp15;
             }
+            const obj3 = { gap: cResult[5], children: cResult[6] };
+            const tmp13 = jsx(cResult[3], { gap: cResult[5], children: cResult[6] });
+            cResult[9] = cResult[3];
+            cResult[10] = cResult[5];
+            cResult[11] = cResult[6];
+            cResult[12] = tmp13;
+            tmp11 = tmp13;
           }
-          const tmp12 = <tmp4 gap={num2}>{tmp6}</tmp4>;
-          cResult[9] = tmp4;
-          cResult[10] = num2;
-          cResult[11] = tmp6;
-          cResult[12] = tmp12;
-          tmp10 = tmp12;
         }
       }
-      const arr = chunkDefault(emojiIds, num);
-      let GappedList = guildId(9966).GappedList;
+      let obj = guildId(576);
       if (cResult[7] !== guildId) {
         const fn = function x(arr, key) {
-          ({ gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
-          const GappedList = LayoutUtils.GappedList;
+          const obj = {
+            style: { flexDirection: "row" },
+            children: jsx(LayoutUtils.GappedList, {
+              gap: 16,
+              children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
+            }),
+          };
           return (
             <View key={key} style={{ flexDirection: "row" }}>
-              {null}
+              {jsx(LayoutUtils.GappedList, {
+                gap: 16,
+                children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
+              })}
             </View>
           );
         };
         cResult[7] = guildId;
         cResult[8] = fn;
-        tmp8 = fn;
+        let tmp9 = fn;
       } else {
-        tmp8 = cResult[8];
+        tmp9 = cResult[8];
       }
-      const mapped = arr.map(tmp8);
+      const mapped = chunkDefault(emojiIds, num).map(tmp9);
       cResult[0] = emojiIds;
       cResult[1] = guildId;
       cResult[2] = num;
-      cResult[3] = GappedList;
+      cResult[3] = guildId(9966).GappedList;
       cResult[4] = View;
       cResult[5] = 8;
       cResult[6] = mapped;
-      tmp6 = mapped;
-      num2 = 8;
-      tmp5 = View;
-      tmp4 = GappedList;
+      const arr = chunkDefault(emojiIds, num);
     }
   : (emojiIds) => {
-      let maxPerRow;
       ({ guildId: require, maxPerRow } = emojiIds);
-      emojiIds = emojiIds.emojiIds;
       if (maxPerRow === undefined) {
         maxPerRow = 9;
       }
-      const arr = chunkDefault(emojiIds, maxPerRow);
-      const obj2 = {
+      let obj = { children: null };
+      const arr = chunkDefault(emojiIds.emojiIds, maxPerRow);
+      obj.children = jsx(LayoutUtils.GappedList, {
         gap: 8,
-        children: arr.map((arr, index) => {
-          let guildId;
-          ({ gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
-          const GappedList = LayoutUtils.GappedList;
+        children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
+          const obj = {
+            style: { flexDirection: "row" },
+            children: jsx(LayoutUtils.GappedList, {
+              gap: 16,
+              children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
+            }),
+          };
           return (
             <View key={index} style={{ flexDirection: "row" }}>
-              {null}
+              {jsx(LayoutUtils.GappedList, {
+                gap: 16,
+                children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
+              })}
             </View>
           );
         }),
-      };
-      let GappedList = LayoutUtils.GappedList;
+      });
       return <View>{null}</View>;
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx",
-);
-
-export default tmp3;

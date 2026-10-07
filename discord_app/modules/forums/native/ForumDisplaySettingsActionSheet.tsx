@@ -1,39 +1,26 @@
 // discord_app/modules/forums/native/ForumDisplaySettingsActionSheet.tsx
 import tracking_Tracking from "../tracking/Tracking.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
-import ForumChannelStore from "../ForumChannelStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let channelId, closure_6;
+require = fn;
+const ForumChannelStore = fn(11629);
+({ useForumChannelStoreApi: metroRequire, useForumChannelStore: closure_7 } = ForumChannelStore);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/native/ForumDisplaySettingsActionSheet.tsx");
 
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let react = react_mod;
-({ useForumChannelStoreApi: metroRequire, useForumChannelStore: metroImportDefault } = ForumChannelStore);
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (channelId) => {
-      let closure_4;
-      let first;
-      let first1;
-      let first2;
-      let sortOrder;
-      let tmp6;
-      let obj = channelId(sortOrder[10]);
-      const cResult = obj.c(40);
-      const tmp = channelId;
+      const cResult = channelId(sortOrder[10]).c(40);
       channelId = channelId.channelId;
-      const tmp2 = sortOrder;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [first1];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -43,30 +30,29 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = channelId;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(tmp2[11]);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      let obj = channelId(sortOrder[10]);
+      const stateFromStores = channelId(sortOrder[11]).useStateFromStores(first, tmp6);
       const tmp8 = first2(channelId);
       sortOrder = tmp8.sortOrder;
       const layoutType = tmp8.layoutType;
-      const tagSetting = tmp8.tagSetting;
       const tmp9 = closure_6();
-      react = tmp9;
-      const tmp10 = layoutType(react.useState(sortOrder), 2);
+      noop = tmp9;
+      const tmp10 = layoutType(noop.useState(sortOrder), 2);
       first1 = tmp10[0];
       closure_6 = tmp10[1];
-      const tmp12 = layoutType(react.useState(layoutType), 2);
+      const tmp12 = layoutType(noop.useState(layoutType), 2);
       first2 = tmp12[0];
-      let closure_8 = tmp12[1];
-      const tmp14 = layoutType(react.useState(tagSetting), 2);
+      closure_8 = tmp12[1];
+      const tmp14 = layoutType(noop.useState(tmp8.tagSetting), 2);
       const first3 = tmp14[0];
-      let closure_10 = tmp14[1];
-      const ref = react.useRef(null);
-      const ref1 = react.useRef(null);
-      const ref2 = react.useRef(null);
+      closure_10 = tmp14[1];
+      noop.useRef(null);
+      noop.useRef(null);
+      noop.useRef(null);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function p(arg0) {
           closure_6(arg0);
@@ -76,60 +62,80 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class B {
           constructor(arg0) {
-            closure_8(arg0);
+            tmp = closure_8(channelId);
+            return;
           }
         }
         cResult[4] = B;
       } else {
         class B {
           constructor(arg0) {
-            closure_8(arg0);
+            tmp = closure_8(channelId);
+            return;
           }
         }
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class B {
           constructor(arg0) {
-            closure_8(arg0);
+            tmp = closure_8(channelId);
+            return;
           }
         }
         cResult[5] = tmp22;
       } else {
         class B {
           constructor(arg0) {
-            closure_8(arg0);
+            tmp = closure_8(channelId);
+            return;
           }
         }
       }
       if (cResult[6] === stateFromStores) {
         class B {
           constructor(arg0) {
-            closure_8(arg0);
+            tmp = closure_8(channelId);
+            return;
           }
         }
       }
       class X {
         constructor() {
-          if (null != stateFromStores) {
-            if (sortOrder !== first1) {
-              const obj5 = { guildId: null, channelId: null, sortOrder: first1 };
-              ({ guild_id: obj2.guildId, id: obj2.channelId } = stateFromStores);
-              const obj = tracking_Tracking;
-              const result = obj.trackForumSortOrderUpdated(obj5);
+          tmp = closure_1;
+          if (null != closure_1) {
+            tmp16 = sortOrder;
+            tmp17 = closure_5;
+            if (sortOrder !== closure_5) {
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[12]);
+              obj1 = { guildId: null, channelId: null, sortOrder: null };
+              ({ guild_id: obj2.guildId, id: obj2.channelId } = tmp);
+              obj1.sortOrder = tmp17;
+              result = obj.trackForumSortOrderUpdated(obj1);
             }
-            if (layoutType !== first2) {
-              const obj6 = { guildId: null, channelId: null, forumLayout: first2 };
-              ({ guild_id: obj4.guildId, id: obj4.channelId } = stateFromStores);
-              const obj3 = tracking_Tracking;
-              const result1 = obj3.trackForumLayoutUpdated(obj6);
+            tmp5 = layoutType;
+            tmp6 = closure_7;
+            if (layoutType !== closure_7) {
+              tmp7 = closure_0;
+              tmp8 = closure_2;
+              obj3 = closure_0(closure_2[12]);
+              obj8 = { guildId: null, channelId: null, forumLayout: null };
+              ({ guild_id: obj4.guildId, id: obj4.channelId } = tmp);
+              obj8.forumLayout = tmp6;
+              result1 = obj3.trackForumLayoutUpdated(obj8);
             }
-            const state = closure_4.getState();
-            state.setLayoutType(channelId, first2);
-            const state1 = closure_4.getState();
-            state1.setSortOrder(channelId, first1);
-            const state2 = closure_4.getState();
-            state2.setTagSetting(channelId, first3);
+            tmp10 = closure_4;
+            state = closure_4.getState();
+            tmp11 = channelId;
+            setLayoutTypeResult = state.setLayoutType(channelId, tmp6);
+            state1 = closure_4.getState();
+            setSortOrderResult = state1.setSortOrder(channelId, tmp17);
+            state2 = closure_4.getState();
+            tmp14 = closure_9;
+            setTagSettingResult = state2.setTagSetting(channelId, closure_9);
           }
+          return;
         }
       }
       cResult[6] = stateFromStores;
@@ -141,43 +147,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = sortOrder;
       cResult[13] = tmp9;
       cResult[14] = X;
+      const tmpResult = channelId(sortOrder[11]);
     }
   : (channelId) => {
-      let ActionSheetHeaderPressableText;
-      let BottomSheetScrollView;
-      let BottomSheetTitleHeader;
-      let _undefined;
-      let _undefined2;
-      let _undefined3;
-      let c10;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
-      let c9;
-      let closure_4;
-      let forumLayout;
-      let intl;
-      let intl10;
-      let intl11;
-      let intl12;
-      let intl13;
-      let intl14;
-      let intl2;
-      let intl3;
-      let intl4;
-      let intl5;
-      let intl6;
-      let intl7;
-      let intl8;
-      let intl9;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let obj16;
-      let obj4;
-      let obj5;
       channelId = channelId.channelId;
       let sortOrder;
       c5 = undefined;
@@ -186,39 +158,40 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       c8 = undefined;
       c9 = undefined;
       c10 = undefined;
-      let obj = channelId(sortOrder[11]);
       const items = [c5];
-      const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+      const stateFromStores = channelId(sortOrder[11]).useStateFromStores(items, () =>
+        ChannelStore.getChannel(channelId),
+      );
       const tmp3 = c7(channelId);
       sortOrder = tmp3.sortOrder;
       const layoutType = tmp3.layoutType;
       const tagSetting = tmp3.tagSetting;
-      react = c6();
-      [c5, c6] = layoutType(react.useState(sortOrder), 2);
-      layoutType(react.useState(sortOrder), 2);
-      [c7, c8] = layoutType(react.useState(layoutType), 2);
-      layoutType(react.useState(layoutType), 2);
-      [c9, c10] = layoutType(react.useState(tagSetting), 2);
-      layoutType(react.useState(tagSetting), 2);
-      const ref = react.useRef(null);
-      const ref1 = react.useRef(null);
-      const ref2 = react.useRef(null);
-      let obj3 = channelId(sortOrder[13]);
-      const unmountEffect = obj3.useUnmountEffect(() => {
+      noop = c6();
+      let obj = channelId(sortOrder[11]);
+      [c5, c6] = layoutType(noop.useState(sortOrder), 2);
+      const tmp4 = layoutType(noop.useState(sortOrder), 2);
+      [c7, c8] = layoutType(noop.useState(layoutType), 2);
+      const tmp5 = layoutType(noop.useState(layoutType), 2);
+      [c9, c10] = layoutType(noop.useState(tagSetting), 2);
+      const ref = noop.useRef(null);
+      const ref1 = noop.useRef(null);
+      const ref2 = noop.useRef(null);
+      const tmp6 = layoutType(noop.useState(tagSetting), 2);
+      const unmountEffect = channelId(sortOrder[13]).useUnmountEffect(() => {
         if (null != stateFromStores) {
           if (sortOrder !== sortOrder) {
-            const obj5 = { guildId: null, channelId: null, sortOrder };
+            const obj5 = { guildId: null, channelId: null, sortOrder: null };
             ({ guild_id: obj2.guildId, id: obj2.channelId } = stateFromStores);
-            const obj = tracking_Tracking;
-            const result = obj.trackForumSortOrderUpdated(obj5);
+            obj5.sortOrder = sortOrder;
+            const result = tracking_Tracking.trackForumSortOrderUpdated(obj5);
           }
           if (layoutType !== forumLayout) {
-            const obj6 = { guildId: null, channelId: null, forumLayout };
+            const obj6 = { guildId: null, channelId: null, forumLayout: null };
             ({ guild_id: obj4.guildId, id: obj4.channelId } = stateFromStores);
-            const obj3 = tracking_Tracking;
-            const result1 = obj3.trackForumLayoutUpdated(obj6);
+            obj6.forumLayout = forumLayout;
+            const result1 = tracking_Tracking.trackForumLayoutUpdated(obj6);
           }
-          const state = closure_4.getState();
+          state = closure_4.getState();
           state.setLayoutType(channelId, forumLayout);
           const state1 = closure_4.getState();
           state1.setSortOrder(channelId, sortOrder);
@@ -230,22 +203,20 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == stateFromStores) {
         return null;
       } else {
-        const tmp12 = null != stateFromStores.availableTags && stateFromStores.availableTags.length > 0;
-        const obj2 = {
-          scrollable: true,
-          header: c8(BottomSheetTitleHeader, obj4),
-          children: c8(BottomSheetScrollView, obj16),
-        };
-        const ActionSheet = tmp(tmp2[21]).ActionSheet;
-        obj4 = { title: intl.string(tmp(sortOrder[5]).t.xyYt8A), leading: c8(ActionSheetHeaderPressableText, obj5) };
-        BottomSheetTitleHeader = tmp(tmp2[14]).BottomSheetTitleHeader;
-        intl = tmp(tmp2[5]).intl;
-        obj5 = { onPress: tmp11, label: intl2.string(tmp(sortOrder[5]).t.yBZMsQ) };
-        ActionSheetHeaderPressableText = tmp(tmp2[15]).ActionSheetHeaderPressableText;
-        intl2 = tmp(tmp2[5]).intl;
-        BottomSheetScrollView = tmp(tmp2[18]).BottomSheetScrollView;
-        let obj6 = { direction: "vertical", spacing: stateFromStores(sortOrder[20]).space.PX_16, children: items2 };
-        const Stack = tmp(tmp2[19]).Stack;
+        let tmp12 = null != stateFromStores.availableTags;
+        if (tmp12) {
+          tmp12 = stateFromStores.availableTags.length > 0;
+        }
+        const obj2 = { scrollable: true, header: null, children: null };
+        const obj4 = { title: null, leading: null };
+        const intl = tmp(tmp2[5]).intl;
+        obj4.title = intl.string(tmp(tmp2[5]).t.xyYt8A);
+        let obj5 = { onPress: tmp11, label: null };
+        const intl2 = tmp(tmp2[5]).intl;
+        obj5.label = intl2.string(tmp(tmp2[5]).t.yBZMsQ);
+        obj4.leading = c8(tmp(tmp2[15]).ActionSheetHeaderPressableText, obj5);
+        obj2.header = c8(tmp(tmp2[14]).BottomSheetTitleHeader, obj4);
+        let obj6 = { direction: "vertical", spacing: stateFromStores(tmp2[20]).space.PX_16, children: null };
         const obj7 = {
           groupRef: ref,
           hasIcons: false,
@@ -253,31 +224,30 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           onChange(arg0) {
             _undefined(arg0);
           },
-          title: intl3.string(channelId(sortOrder[5]).t.f8wNDl),
-          accessibilityLabel: intl4.string(channelId(sortOrder[5]).t.f8wNDl),
-          children: items1.map((label) => {
-            const value = label.value;
-            return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
-          }),
+          title: null,
+          accessibilityLabel: null,
+          children: null,
         };
-        const TableRadioGroup = tmp(tmp2[17]).TableRadioGroup;
-        intl3 = tmp(tmp2[5]).intl;
-        intl4 = tmp(tmp2[5]).intl;
-        const obj8 = {
-          label: intl5.string(channelId(sortOrder[5]).t.jOPmcI),
-          value: channelId(sortOrder[6]).ThreadSortOrder.LATEST_ACTIVITY,
-        };
-        intl5 = tmp(tmp2[5]).intl;
-        items1 = [obj8];
-        const obj9 = {
-          label: intl6.string(channelId(sortOrder[5]).t.UIltXd),
-          value: channelId(sortOrder[6]).ThreadSortOrder.CREATION_DATE,
-        };
-        intl6 = tmp(tmp2[5]).intl;
+        const intl3 = tmp(tmp2[5]).intl;
+        obj7.title = intl3.string(tmp(tmp2[5]).t.f8wNDl);
+        const intl4 = tmp(tmp2[5]).intl;
+        obj7.accessibilityLabel = intl4.string(tmp(tmp2[5]).t.f8wNDl);
+        const obj8 = { label: null, value: null };
+        const intl5 = tmp(tmp2[5]).intl;
+        obj8.label = intl5.string(tmp(tmp2[5]).t.jOPmcI);
+        obj8.value = tmp(tmp2[6]).ThreadSortOrder.LATEST_ACTIVITY;
+        const items1 = [obj8];
+        const obj9 = { label: null, value: null };
+        const intl6 = tmp(tmp2[5]).intl;
+        obj9.label = intl6.string(tmp(tmp2[5]).t.UIltXd);
+        obj9.value = tmp(tmp2[6]).ThreadSortOrder.CREATION_DATE;
         items1[1] = obj9;
-        items2 = [c8(TableRadioGroup, obj7), ,];
+        obj7.children = items1.map((label) => {
+          value = label.value;
+          return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
+        });
+        const items2 = [c8(tmp(tmp2[17]).TableRadioGroup, obj7), ,];
         let tmp13Result = null;
-        const tmp14 = c9;
         if (stateFromStores.isForumChannel()) {
           tmp13Result = null;
           if (!stateFromStores.isGameInvitesChannel()) {
@@ -288,29 +258,29 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               onChange(arg0) {
                 _undefined2(arg0);
               },
-              title: intl7.string(channelId(sortOrder[5]).t.mFMDSq),
-              accessibilityLabel: intl8.string(channelId(sortOrder[5]).t.h850Ss),
-              children: items3.map((label) => {
-                const value = label.value;
-                return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
-              }),
+              title: null,
+              accessibilityLabel: null,
+              children: null,
             };
-            const TableRadioGroup2 = tmp(tmp2[17]).TableRadioGroup;
-            intl7 = tmp(tmp2[5]).intl;
-            intl8 = tmp(tmp2[5]).intl;
-            const obj11 = {
-              label: intl9.string(channelId(sortOrder[5]).t["NJFr+g"]),
-              value: channelId(sortOrder[7]).ForumLayout.LIST,
-            };
-            intl9 = tmp(tmp2[5]).intl;
-            items3 = [obj11];
-            const obj12 = {
-              label: intl10.string(channelId(sortOrder[5]).t.wKeggb),
-              value: channelId(sortOrder[7]).ForumLayout.GRID,
-            };
-            intl10 = tmp(tmp2[5]).intl;
+            const intl7 = tmp(tmp2[5]).intl;
+            obj10.title = intl7.string(tmp(tmp2[5]).t.mFMDSq);
+            const intl8 = tmp(tmp2[5]).intl;
+            obj10.accessibilityLabel = intl8.string(tmp(tmp2[5]).t.h850Ss);
+            const obj11 = { label: null, value: null };
+            const intl9 = tmp(tmp2[5]).intl;
+            obj11.label = intl9.string(tmp(tmp2[5]).t["NJFr+g"]);
+            obj11.value = tmp(tmp2[7]).ForumLayout.LIST;
+            const items3 = [obj11];
+            const obj12 = { label: null, value: null };
+            const intl10 = tmp(tmp2[5]).intl;
+            obj12.label = intl10.string(tmp(tmp2[5]).t.wKeggb);
+            obj12.value = tmp(tmp2[7]).ForumLayout.GRID;
             items3[1] = obj12;
-            tmp13Result = tmp13(TableRadioGroup2, obj10);
+            obj10.children = items3.map((label) => {
+              value = label.value;
+              return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
+            });
+            tmp13Result = tmp13(tmp(tmp2[17]).TableRadioGroup, obj10);
           }
         }
         items2[1] = tmp13Result;
@@ -323,35 +293,36 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             onChange(arg0) {
               _undefined3(arg0);
             },
-            title: intl11.string(channelId(sortOrder[5]).t.Paxaug),
-            accessibilityLabel: intl12.string(channelId(sortOrder[5]).t.f8wNDl),
-            children: items4.map((label) => {
-              const value = label.value;
-              return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
-            }),
+            title: null,
+            accessibilityLabel: null,
+            children: null,
           };
-          const TableRadioGroup3 = tmp(tmp2[17]).TableRadioGroup;
-          intl11 = tmp(tmp2[5]).intl;
-          intl12 = tmp(tmp2[5]).intl;
-          const obj14 = {
-            label: intl13.string(channelId(sortOrder[5]).t.rQ0ctQ),
-            value: channelId(sortOrder[8]).ThreadSearchTagSetting.MATCH_SOME,
-          };
-          intl13 = tmp(tmp2[5]).intl;
-          items4 = [obj14];
-          const obj15 = {
-            label: intl14.string(channelId(sortOrder[5]).t.FCXUu0),
-            value: channelId(sortOrder[8]).ThreadSearchTagSetting.MATCH_ALL,
-          };
-          intl14 = tmp(tmp2[5]).intl;
+          const intl11 = tmp(tmp2[5]).intl;
+          obj13.title = intl11.string(tmp(tmp2[5]).t.Paxaug);
+          const intl12 = tmp(tmp2[5]).intl;
+          obj13.accessibilityLabel = intl12.string(tmp(tmp2[5]).t.f8wNDl);
+          const obj14 = { label: null, value: null };
+          const intl13 = tmp(tmp2[5]).intl;
+          obj14.label = intl13.string(tmp(tmp2[5]).t.rQ0ctQ);
+          obj14.value = tmp(tmp2[8]).ThreadSearchTagSetting.MATCH_SOME;
+          const items4 = [obj14];
+          const obj15 = { label: null, value: null };
+          const intl14 = tmp(tmp2[5]).intl;
+          obj15.label = intl14.string(tmp(tmp2[5]).t.FCXUu0);
+          obj15.value = tmp(tmp2[8]).ThreadSearchTagSetting.MATCH_ALL;
           items4[1] = obj15;
-          tmp13Result2 = tmp13(TableRadioGroup3, obj13);
+          obj13.children = items4.map((label) => {
+            value = label.value;
+            return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
+          });
+          tmp13Result2 = tmp13(tmp(tmp2[17]).TableRadioGroup, obj13);
         }
+        const obj16 = { children: null };
         items2[2] = tmp13Result2;
-        obj16 = { children: tmp14(Stack, obj6) };
-        return c8(ActionSheet, obj2);
+        obj6.children = items2;
+        obj16.children = c9(tmp(tmp2[19]).Stack, obj6);
+        obj2.children = c8(tmp(tmp2[18]).BottomSheetScrollView, obj16);
+        return c8(tmp(tmp2[21]).ActionSheet, obj2);
       }
+      let obj3 = channelId(sortOrder[13]);
     };
-let result = size.fileFinishedImporting("modules/forums/native/ForumDisplaySettingsActionSheet.tsx");
-
-export default tmp4;

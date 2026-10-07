@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx
-import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import discord_common_shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
@@ -10,7 +10,7 @@ export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJo
 ) {
   if (null != streamingMembers) {
     if (null != arg1) {
-      if (shallowEqualDefault(streamingMembers, arg1, ["streamingMembers"])) {
+      if (discord_common_shallowEqualDefault(streamingMembers, arg1, ["streamingMembers"])) {
         let num = 0;
         streamingMembers = streamingMembers.streamingMembers;
         for (const item10013 of streamingMembers) {

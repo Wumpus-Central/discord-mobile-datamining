@@ -1,40 +1,31 @@
 // discord_app/modules/badges/native/BadgeDirectoryScreen.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import NavigatorConstants from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import openBadgeDirectoryScreen from "openBadgeDirectoryScreen.tsx";
 import BadgeDirectoryViewDefault from "BadgeDirectoryView.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let currentUser, dependencyMap, targetUserId;
-
-let obj2;
-let obj3;
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-let createStyles = createStyles_mod;
-let obj = { sheetHeader: obj2, view: obj3 };
-obj2 = { height: NavigatorConstants.NAV_BAR_HEIGHT };
-createStyles = createStyles.createStyles;
-obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_7 = createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const createStyles = fn(4896);
+let obj2 = { sheetHeader: { height: fn(6075).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(6075).NAV_BAR_HEIGHT };
+obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (targetUserId) => {
-      let tmp11;
-      let tmp14;
-      let tmp5;
-      let tmp6;
-      let tmp9;
-      const tmp = targetUserId;
-      const obj = targetUserId(576);
-      const cResult = obj.c(20);
+      let Navigator = targetUserId;
+      let tmp = dependencyMap;
+      const cResult = targetUserId(576).c(20);
       targetUserId = targetUserId.targetUserId;
-      const tmp4 = closure_7();
+      let view = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function c() {
@@ -47,19 +38,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp5 = items;
-        tmp6 = fn;
+        tmp3 = items;
+        tmp4 = fn;
       } else {
-        [tmp5, tmp6] = cResult;
+        [tmp3, tmp4] = cResult;
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      const obj = targetUserId(576);
+      const stateFromStores = Navigator(504).useStateFromStores(tmp3, tmp4);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
         cResult[2] = items1;
-        tmp9 = items1;
+        let tmp7 = items1;
       } else {
-        tmp9 = cResult[2];
+        tmp7 = cResult[2];
       }
       if (cResult[3] !== targetUserId) {
         const fn2 = function f() {
@@ -81,110 +72,111 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = targetUserId;
         cResult[4] = fn2;
-        tmp11 = fn2;
+        let tmp9 = fn2;
       } else {
-        tmp11 = cResult[4];
+        tmp9 = cResult[4];
       }
-      const tmpResult4 = tmp(504);
-      const stateFromStores1 = tmpResult4.useStateFromStores(tmp9, tmp11);
+      const NavigatorResult = Navigator(504);
+      const stateFromStores1 = Navigator(504).useStateFromStores(tmp7, tmp9);
       if (cResult[5] === (null != targetUserId && targetUserId !== stateFromStores)) {
-        let tmp16;
         if (cResult[6] === stateFromStores1) {
-          tmp14 = cResult[7];
-        }
-        const _Symbol = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmpResult5 = tmp(6017);
-          const headerCloseButton = tmpResult5.getHeaderCloseButton(tmp(10899).closeBadgeDirectoryScreen);
-          cResult[8] = headerCloseButton;
-          tmp16 = headerCloseButton;
-        } else {
-          tmp16 = cResult[8];
-        }
-        if (cResult[9] === targetUserId) {
-          if (cResult[10] === stateFromStores1) {
-            let tmp18;
-            let tmp20;
-            if (cResult[11] === tmp14) {
-              tmp18 = cResult[12];
-            }
-            const tmpResult6 = tmp(10899);
-            if (tmpResult6.isBadgeDirectoryIOSPageSheet()) {
-              if (cResult[13] === tmp18) {
-                if (cResult[14] === tmp4.sheetHeader) {
-                  let tmp24;
-                  if (cResult[15] === tmp4.view) {
-                    tmp24 = cResult[16];
-                  }
-                  tmp20 = tmp24;
-                }
-              }
-              ({ sheetHeader: obj10.headerStyle, view: obj10.viewStyle } = tmp4);
-              const tmp27 = jsx(tmp(6503).Navigator, {
-                screens: tmp18,
-                initialRouteName,
-                headerStatusBarHeight: 0,
-                headerStyle: null,
-                viewStyle: null,
-              });
-              cResult[13] = tmp18;
-              cResult[14] = tmp4.sheetHeader;
-              cResult[15] = tmp4.view;
-              cResult[16] = tmp27;
-              tmp24 = tmp27;
-            } else {
-              if (cResult[17] === tmp18) {
-                if (cResult[18] === tmp4.view) {
-                  tmp20 = cResult[19];
-                }
-              }
-              const tmp23 = jsx(tmp(10989).Modal, { screens: tmp18, initialRouteName, viewStyle: tmp4.view });
-              cResult[17] = tmp18;
-              cResult[18] = tmp4.view;
-              cResult[19] = tmp23;
-              tmp20 = tmp23;
-            }
-            return tmp20;
+          const _Symbol = Symbol;
+          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+            const headerCloseButton = Navigator(6017).getHeaderCloseButton(Navigator(10899).closeBadgeDirectoryScreen);
+            cResult[8] = headerCloseButton;
+            let tmp15 = headerCloseButton;
+            const NavigatorResult2 = Navigator(6017);
+          } else {
+            tmp15 = cResult[8];
           }
+          if (cResult[9] === targetUserId) {
+            if (cResult[10] === stateFromStores1) {
+              if (cResult[11] === tmp12) {
+                let sheetHeader = cResult[12];
+              }
+              if (NavigatorResult3.isBadgeDirectoryIOSPageSheet()) {
+                if (cResult[13] === sheetHeader) {
+                  if (cResult[14] === view.sheetHeader) {
+                  }
+                }
+                Navigator = Navigator(6503).Navigator;
+                const obj2 = {
+                  screens: sheetHeader,
+                  initialRouteName,
+                  headerStatusBarHeight: 0,
+                  headerStyle: null,
+                  viewStyle: null,
+                };
+                ({ sheetHeader: obj9.headerStyle, view: obj9.viewStyle } = view);
+                tmp = (
+                  <Navigator
+                    screens={sheetHeader}
+                    initialRouteName={initialRouteName}
+                    headerStatusBarHeight={0}
+                    headerStyle={null}
+                    viewStyle={null}
+                  />
+                );
+                cResult[13] = sheetHeader;
+                sheetHeader = view.sheetHeader;
+                cResult[14] = sheetHeader;
+                view = view.view;
+                cResult[15] = view;
+                cResult[16] = tmp;
+              } else {
+                if (cResult[17] === sheetHeader) {
+                  if (cResult[18] === view.view) {
+                    let tmp18 = cResult[19];
+                  }
+                  return tmp18;
+                }
+                const obj3 = { screens: sheetHeader, initialRouteName, viewStyle: view.view };
+                const tmp21 = jsx(Navigator(10989).Modal, {
+                  screens: sheetHeader,
+                  initialRouteName,
+                  viewStyle: view.view,
+                });
+                cResult[17] = sheetHeader;
+                cResult[18] = view.view;
+                cResult[19] = tmp21;
+                tmp18 = tmp21;
+              }
+              NavigatorResult3 = Navigator(10899);
+            }
+          }
+          const obj4 = {};
+          const obj5 = {
+            title: cResult[7],
+            headerLeft: tmp15,
+            render() {
+              return jsx(BadgeDirectoryViewDefault, { targetUserId, targetUsername: stateFromStores1 });
+            },
+          };
+          obj4[initialRouteName] = obj5;
+          cResult[9] = targetUserId;
+          cResult[10] = stateFromStores1;
+          cResult[11] = cResult[7];
+          cResult[12] = obj4;
+          sheetHeader = obj4;
         }
-        const obj4 = {};
-        const obj5 = {
-          title: tmp14,
-          headerLeft: tmp16,
-          render() {
-            return jsx(BadgeDirectoryViewDefault, { targetUserId, targetUsername: stateFromStores1 });
-          },
-        };
-        obj4[initialRouteName] = obj5;
-        cResult[9] = targetUserId;
-        cResult[10] = stateFromStores1;
-        cResult[11] = tmp14;
-        cResult[12] = obj4;
-        tmp18 = obj4;
       }
-      if (null != targetUserId && targetUserId !== stateFromStores) {
-        let formatToPlainStringResult;
-        if (null != stateFromStores1) {
-          const intl2 = tmp(1126).intl;
-          const obj6 = { username: stateFromStores1 };
-          formatToPlainStringResult = intl2.formatToPlainString(tmp(1126).t.EIcwoe, obj6);
-        }
-        cResult[5] = null != targetUserId && targetUserId !== stateFromStores;
+      if (!(null != targetUserId && targetUserId !== stateFromStores)) {
+        const intl = Navigator(1126).intl;
+        let stringResult = intl.string(Navigator(1126).t.UqnlQF);
+        cResult[5] = tmp11;
         cResult[6] = stateFromStores1;
-        cResult[7] = formatToPlainStringResult;
-        tmp14 = formatToPlainStringResult;
+        cResult[7] = stringResult;
       }
-      const intl = tmp(1126).intl;
-      formatToPlainStringResult = intl.string(tmp(1126).t.UqnlQF);
+      const intl2 = Navigator(1126).intl;
+      stringResult = intl2.formatToPlainString(Navigator(1126).t.EIcwoe, { username: stateFromStores1 });
+      const NavigatorResult1 = Navigator(504);
     }
   : (targetUserId) => {
-      let title;
       targetUserId = targetUserId.targetUserId;
       dependencyMap = undefined;
       const tmp = closure_7();
-      let obj = targetUserId(504);
       const items = [UserStore];
-      const stateFromStores = obj.useStateFromStores(items, () => {
+      const stateFromStores = targetUserId(504).useStateFromStores(items, () => {
         currentUser = currentUser.getCurrentUser();
         let id;
         if (currentUser != null) {
@@ -192,9 +184,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return id;
       });
-      let obj2 = targetUserId(504);
+      let obj = targetUserId(504);
       const items1 = [UserStore];
-      const stateFromStores1 = obj2.useStateFromStores(items1, () => {
+      const stateFromStores1 = targetUserId(504).useStateFromStores(items1, () => {
         if (null != targetUserId) {
           const user = UserStore.getUser(tmp);
           let globalName;
@@ -213,34 +205,35 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       });
       if (null != targetUserId) {
         if (targetUserId !== stateFromStores) {
-          let formatToPlainStringResult;
-          let tmp9Result;
           if (null != stateFromStores1) {
             const intl2 = tmp2(1126).intl;
-            let obj3 = { username: stateFromStores1 };
-            formatToPlainStringResult = intl2.formatToPlainString(tmp2(1126).t.EIcwoe, obj3);
+            const obj3 = { username: stateFromStores1 };
+            let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1126).t.EIcwoe, obj3);
           }
           dependencyMap = formatToPlainStringResult;
           const items2 = [formatToPlainStringResult, targetUserId, stateFromStores1];
-          const memo = react.useMemo(() => {
-            let obj3;
-            let targetUsername;
+          const memo = noop.useMemo(() => {
             const obj = {};
             const obj2 = {
               title,
-              headerLeft: obj3.getHeaderCloseButton(openBadgeDirectoryScreen.closeBadgeDirectoryScreen),
+              headerLeft: NavigatorHeader.getHeaderCloseButton(openBadgeDirectoryScreen.closeBadgeDirectoryScreen),
               render() {
                 return jsx(stateFromStores1(c2[12]), { targetUserId, targetUsername });
               },
             };
             obj[c6] = obj2;
-            obj3 = NavigatorHeader;
             return obj;
           }, items2);
-          const tmp2Result = targetUserId(10899);
           if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
+            const obj4 = {
+              screens: memo,
+              initialRouteName,
+              headerStatusBarHeight: 0,
+              headerStyle: null,
+              viewStyle: null,
+            };
             ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-            tmp9Result = jsx(tmp2(6503).Navigator, {
+            let tmp9Result = jsx(tmp2(6503).Navigator, {
               screens: memo,
               initialRouteName,
               headerStatusBarHeight: 0,
@@ -248,6 +241,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               viewStyle: null,
             });
           } else {
+            const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
             tmp9Result = jsx(tmp2(10989).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
           }
           return tmp9Result;
@@ -255,7 +249,5 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const intl = tmp2(1126).intl;
       formatToPlainStringResult = intl.string(tmp2(1126).t.UqnlQF);
+      let obj2 = targetUserId(504);
     };
-const result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryScreen.tsx");
-
-export default tmp3;

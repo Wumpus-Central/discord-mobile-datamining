@@ -1,95 +1,66 @@
 // discord_app/modules/message_request/native/MessageRequestRowSenderDetails.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../design/void/native.tsx";
 import utils_AvatarUtilsDefault from "../../../utils/native/AvatarUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import MessageRequestPreviewDefault from "MessageRequestPreview.tsx";
 import MessageRequestMutualServersDefault from "MessageRequestMutualServers.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let nickname;
-
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-const View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  avatar: obj2,
+const require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+const obj2 = {
+  avatar: {
+    borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2,
+    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  },
   avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" },
   detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 },
   messageDetails: { flexDirection: "row", alignItems: "center" },
-  username: obj3,
-  timestampSeparator: { marginHorizontal: 6 },
-  messagePreview: { marginTop: 2 },
-  usernameTextContainer: { flexShrink: 1 },
+  username: null,
+  timestampSeparator: null,
+  messagePreview: null,
+  usernameTextContainer: null,
 };
-obj2 = {
-  borderRadius: native.AVATAR_SIZE_MAP[native.AvatarSizes.NORMAL] / 2,
+let obj3 = {
+  borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-createStyles = createStyles.createStyles;
-obj3 = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let closure_8 = createStyles(obj);
+obj2.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.timestampSeparator = { marginHorizontal: 6 };
+obj2.messagePreview = { marginTop: 2 };
+obj2.usernameTextContainer = { flexShrink: 1 };
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/MessageRequestRowSenderDetails.tsx");
 
 export default function MessageRequestRowSenderDetails(isRestricted) {
-  let Avatar;
-  let avatarDecoration;
-  let avatarDecoration1;
-  let channel;
-  let channel2;
-  let intl2;
-  let intl4;
-  let items1;
-  let items10;
-  let items11;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let items8;
-  let items9;
-  let obj19;
-  let otherUser;
-  let otherUser2;
-  let stringResult1;
-  let tmp14Result2;
   if (closure_9) {
-    let first;
-    let tmp35;
-    let obj15;
-    const obj17 = otherUser(576);
-    const cResult = obj17.c(47);
+    const cResult = otherUser(576).c(47);
     ({ channel: channel2, otherUser: otherUser2 } = isRestricted);
+    closure_129_0 = otherUser2;
     isRestricted = isRestricted.isRestricted;
-    const tmp31 = closure_8();
+    const tmp28 = closure_8();
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [RelationshipStore];
       cResult[0] = items;
-      first = items;
+      let first = items;
     } else {
       first = cResult[0];
     }
     if (cResult[1] !== otherUser2) {
       const fn = function v() {
         let tmp2 = null;
-        if (null != otherUser2) {
-          nickname = nickname.getNickname(otherUser2.id);
+        if (null != otherUser) {
+          let nickname = RelationshipStore.getNickname(otherUser.id);
           if (nickname == null) {
-            const obj = UserUtilsDefault;
-            nickname = obj.getGlobalName(otherUser2);
+            nickname = UserUtilsDefault.getGlobalName(otherUser);
           }
           tmp2 = nickname;
         }
@@ -97,337 +68,318 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
       };
       cResult[1] = otherUser2;
       cResult[2] = fn;
-      tmp35 = fn;
+      let tmp32 = fn;
     } else {
-      tmp35 = cResult[2];
+      tmp32 = cResult[2];
     }
-    const tmp26Result = otherUser(504);
-    const stateFromStores = tmp26Result.useStateFromStores(first, tmp35);
-    const tmp26Result3 = otherUser(17083);
-    const messageRequestRelativeTimestampText = tmp26Result3.useMessageRequestRelativeTimestampText(channel2);
+    const obj17 = otherUser(576);
+    const stateFromStores = otherUser(504).useStateFromStores(first, tmp32);
+    const tmp23Result = otherUser(504);
+    const messageRequestRelativeTimestampText = otherUser(17083).useMessageRequestRelativeTimestampText(channel2);
     const _Math3 = Math;
     const _Math4 = Math;
-    const floor2 = Math.floor;
     const random = Math.random();
-    const floor2Result = floor2(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
-    const tmp41 = utils_AvatarUtilsDefault.DEFAULT_AVATARS[floor2Result];
+    const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
     if (cResult[3] === otherUser2) {
-      let tmp42;
-      if (cResult[4] === tmp31.avatar) {
-        tmp42 = cResult[5];
-      }
-      if (cResult[6] === tmp31.avatarContainer) {
-        let tmp47;
-        if (cResult[7] === tmp42) {
-          tmp47 = cResult[8];
-        }
-        let username;
-        const tmp51 = cResult[9];
-        if (otherUser2 != null) {
-          username = otherUser2.username;
-        }
-        if (tmp51 === username) {
-          let tmp54;
-          if (cResult[10] === stateFromStores) {
-            tmp54 = cResult[11];
+      if (cResult[4] === tmp28.avatar) {
+        if (cResult[6] === tmp28.avatarContainer) {
+          if (cResult[7] === tmp38) {
+            let tmp44 = cResult[8];
           }
-          if (cResult[12] === tmp31.username) {
-            let tmp58;
-            if (cResult[13] === tmp54) {
-              tmp58 = cResult[14];
+          let username;
+          if (otherUser2 != null) {
+            username = otherUser2.username;
+          }
+          if (cResult[9] === username) {
+            if (cResult[10] === stateFromStores) {
+              let tmp50 = cResult[11];
             }
-            if (cResult[15] === otherUser2) {
-              let tmp61;
-              if (cResult[16] === stateFromStores) {
-                tmp61 = cResult[17];
+            if (cResult[12] === tmp28.username) {
+              if (cResult[13] === tmp50) {
+                let tmp54 = cResult[14];
               }
-              if (cResult[18] === tmp31.usernameTextContainer) {
-                if (cResult[19] === tmp58) {
-                  let tmp64;
-                  let tmp67;
-                  let tmp70;
-                  if (cResult[20] === tmp61) {
-                    tmp64 = cResult[21];
-                  }
-                  if (cResult[22] !== tmp31.timestampSeparator) {
-                    const obj3 = {
-                      style: tmp31.timestampSeparator,
-                      variant: "text-xs/medium",
-                      color: "text-muted",
-                      children: "\u00B7",
-                    };
-                    const tmp69 = closure_5(otherUser(4892).Text, obj3);
-                    cResult[22] = tmp31.timestampSeparator;
-                    cResult[23] = tmp69;
-                    tmp67 = tmp69;
-                  } else {
-                    tmp67 = cResult[23];
-                  }
-                  if (cResult[24] !== messageRequestRelativeTimestampText) {
-                    const obj4 = {
-                      variant: "text-xs/semibold",
-                      color: "text-muted",
-                      children: messageRequestRelativeTimestampText,
-                    };
-                    const tmp72 = closure_5(otherUser(4892).Text, obj4);
-                    cResult[24] = messageRequestRelativeTimestampText;
-                    cResult[25] = tmp72;
-                    tmp70 = tmp72;
-                  } else {
-                    tmp70 = cResult[25];
-                  }
-                  if (cResult[26] === tmp31.messageDetails) {
-                    if (cResult[27] === tmp67) {
-                      if (cResult[28] === tmp70) {
-                        let tmp73;
-                        if (cResult[29] === tmp64) {
-                          tmp73 = cResult[30];
-                        }
-                        if (cResult[31] === channel2) {
-                          if (cResult[32] === (undefined !== isRestricted && isRestricted)) {
-                            let tmp77;
-                            if (cResult[33] === tmp31.messagePreview) {
-                              tmp77 = cResult[34];
-                            }
-                            if (cResult[35] === (undefined !== isRestricted && isRestricted)) {
-                              if (cResult[36] === otherUser2) {
-                                let tmp80;
-                                if (cResult[37] === tmp31.messagePreview) {
-                                  tmp80 = cResult[38];
-                                }
-                                if (cResult[39] === tmp31.detailsContainer) {
-                                  if (cResult[40] === tmp73) {
-                                    if (cResult[41] === tmp77) {
-                                      let tmp84;
-                                      if (cResult[42] === tmp80) {
-                                        tmp84 = cResult[43];
-                                      }
-                                      if (cResult[44] === tmp84) {
-                                        let tmp88;
-                                        if (cResult[45] === tmp47) {
-                                          tmp88 = cResult[46];
+              if (cResult[15] === otherUser2) {
+                if (cResult[16] === stateFromStores) {
+                  let tmp57 = cResult[17];
+                }
+                if (cResult[18] === tmp28.usernameTextContainer) {
+                  if (cResult[19] === tmp54) {
+                    if (cResult[20] === tmp57) {
+                      let tmp60 = cResult[21];
+                    }
+                    if (cResult[22] !== tmp28.timestampSeparator) {
+                      const obj3 = {
+                        style: tmp28.timestampSeparator,
+                        variant: "text-xs/medium",
+                        color: "text-muted",
+                        children: "\u00B7",
+                      };
+                      const tmp65 = closure_5(otherUser(4892).Text, obj3);
+                      cResult[22] = tmp28.timestampSeparator;
+                      cResult[23] = tmp65;
+                      let tmp63 = tmp65;
+                    } else {
+                      tmp63 = cResult[23];
+                    }
+                    if (cResult[24] !== messageRequestRelativeTimestampText) {
+                      const obj4 = {
+                        variant: "text-xs/semibold",
+                        color: "text-muted",
+                        children: messageRequestRelativeTimestampText,
+                      };
+                      const tmp68 = closure_5(otherUser(4892).Text, obj4);
+                      cResult[24] = messageRequestRelativeTimestampText;
+                      cResult[25] = tmp68;
+                      let tmp66 = tmp68;
+                    } else {
+                      tmp66 = cResult[25];
+                    }
+                    if (cResult[26] === tmp28.messageDetails) {
+                      if (cResult[27] === tmp63) {
+                        if (cResult[28] === tmp66) {
+                          if (cResult[29] === tmp60) {
+                            let tmp69 = cResult[30];
+                          }
+                          if (cResult[31] === channel2) {
+                            if (cResult[32] === tmp26) {
+                              if (cResult[33] === tmp28.messagePreview) {
+                                let tmp73 = cResult[34];
+                              }
+                              if (cResult[35] === tmp26) {
+                                if (cResult[36] === otherUser2) {
+                                  if (cResult[37] === tmp28.messagePreview) {
+                                    let tmp76 = cResult[38];
+                                  }
+                                  if (cResult[39] === tmp28.detailsContainer) {
+                                    if (cResult[40] === tmp69) {
+                                      if (cResult[41] === tmp73) {
+                                        if (cResult[42] === tmp76) {
+                                          let tmp80 = cResult[43];
                                         }
-                                        tmp14Result2 = tmp88;
+                                        if (cResult[44] === tmp80) {
+                                        }
+                                        const obj5 = { children: null };
+                                        const items1 = [tmp44, tmp80];
+                                        obj5.children = items1;
+                                        const tmp87 = closure_6(closure_7, obj5);
+                                        cResult[44] = tmp80;
+                                        cResult[45] = tmp44;
+                                        cResult[46] = tmp87;
                                       }
-                                      const obj5 = { children: items1 };
-                                      items1 = [tmp47, tmp84];
-                                      const tmp91 = closure_6(closure_7, obj5);
-                                      cResult[44] = tmp84;
-                                      cResult[45] = tmp47;
-                                      cResult[46] = tmp91;
-                                      tmp88 = tmp91;
                                     }
                                   }
+                                  const obj6 = { style: tmp28.detailsContainer, children: null };
+                                  const items2 = [tmp69, tmp73, tmp76];
+                                  obj6.children = items2;
+                                  const tmp83 = closure_6(View, obj6);
+                                  cResult[39] = tmp28.detailsContainer;
+                                  cResult[40] = tmp69;
+                                  cResult[41] = tmp73;
+                                  cResult[42] = tmp76;
+                                  cResult[43] = tmp83;
+                                  tmp80 = tmp83;
                                 }
-                                const obj6 = { style: tmp31.detailsContainer, children: items2 };
-                                items2 = [tmp73, tmp77, tmp80];
-                                const tmp87 = closure_6(View, obj6);
-                                cResult[39] = tmp31.detailsContainer;
-                                cResult[40] = tmp73;
-                                cResult[41] = tmp77;
-                                cResult[42] = tmp80;
-                                cResult[43] = tmp87;
-                                tmp84 = tmp87;
                               }
+                              let tmp77 = tmp26;
+                              if (tmp26) {
+                                tmp77 = null != otherUser2;
+                              }
+                              if (tmp77) {
+                                const obj7 = { style: tmp28.messagePreview, userId: otherUser2.id, suffix: null };
+                                const intl4 = otherUser(1126).intl;
+                                obj7.suffix = intl4.string(otherUser(1126).t.hTltPn);
+                                tmp77 = closure_5(MessageRequestMutualServersDefault, obj7);
+                                const tmp36Result = MessageRequestMutualServersDefault;
+                              }
+                              cResult[35] = tmp26;
+                              cResult[36] = otherUser2;
+                              cResult[37] = tmp28.messagePreview;
+                              cResult[38] = tmp77;
+                              tmp76 = tmp77;
                             }
-                            let tmp81 = tmp29 && null != otherUser2;
-                            if (tmp81) {
-                              const obj7 = {
-                                style: tmp31.messagePreview,
-                                userId: otherUser2.id,
-                                suffix: intl4.string(otherUser(1126).t.hTltPn),
-                              };
-                              const tmp39Result = MessageRequestMutualServersDefault;
-                              intl4 = otherUser(1126).intl;
-                              tmp81 = closure_5(tmp39Result, obj7);
-                            }
-                            cResult[35] = undefined !== isRestricted && isRestricted;
-                            cResult[36] = otherUser2;
-                            cResult[37] = tmp31.messagePreview;
-                            cResult[38] = tmp81;
-                            tmp80 = tmp81;
                           }
+                          let tmp74 = !tmp26;
+                          if (!tmp26) {
+                            const obj8 = { style: tmp28.messagePreview, channel: channel2 };
+                            tmp74 = closure_5(MessageRequestPreviewDefault, obj8);
+                          }
+                          cResult[31] = channel2;
+                          cResult[32] = tmp26;
+                          cResult[33] = tmp28.messagePreview;
+                          cResult[34] = tmp74;
+                          tmp73 = tmp74;
                         }
-                        let tmp78 = !tmp29;
-                        if (tmp78) {
-                          const obj8 = { style: tmp31.messagePreview, channel: channel2 };
-                          tmp78 = closure_5(MessageRequestPreviewDefault, obj8);
-                        }
-                        cResult[31] = channel2;
-                        cResult[32] = undefined !== isRestricted && isRestricted;
-                        cResult[33] = tmp31.messagePreview;
-                        cResult[34] = tmp78;
-                        tmp77 = tmp78;
                       }
                     }
+                    const obj9 = { style: tmp28.messageDetails, children: null };
+                    const items3 = [tmp60, tmp63, tmp66];
+                    obj9.children = items3;
+                    const tmp72 = closure_6(View, obj9);
+                    cResult[26] = tmp28.messageDetails;
+                    cResult[27] = tmp63;
+                    cResult[28] = tmp66;
+                    cResult[29] = tmp60;
+                    cResult[30] = tmp72;
+                    tmp69 = tmp72;
                   }
-                  const obj9 = { style: tmp31.messageDetails, children: items3 };
-                  items3 = [tmp64, tmp67, tmp70];
-                  const tmp76 = closure_6(View, obj9);
-                  cResult[26] = tmp31.messageDetails;
-                  cResult[27] = tmp67;
-                  cResult[28] = tmp70;
-                  cResult[29] = tmp64;
-                  cResult[30] = tmp76;
-                  tmp73 = tmp76;
                 }
+                const obj10 = {
+                  lineClamp: 1,
+                  variant: "text-md/semibold",
+                  color: "mobile-text-heading-primary",
+                  style: tmp28.usernameTextContainer,
+                  children: null,
+                };
+                const items4 = [tmp54, tmp57];
+                obj10.children = items4;
+                const tmp62 = closure_6(otherUser(4892).Text, obj10);
+                cResult[18] = tmp28.usernameTextContainer;
+                cResult[19] = tmp54;
+                cResult[20] = tmp57;
+                cResult[21] = tmp62;
+                tmp60 = tmp62;
               }
-              const obj10 = {
-                lineClamp: 1,
-                variant: "text-md/semibold",
-                color: "mobile-text-heading-primary",
-                style: tmp31.usernameTextContainer,
-                children: items4,
-              };
-              items4 = [tmp58, tmp61];
-              const tmp66 = closure_6(otherUser(4892).Text, obj10);
-              cResult[18] = tmp31.usernameTextContainer;
-              cResult[19] = tmp58;
-              cResult[20] = tmp61;
-              cResult[21] = tmp66;
-              tmp64 = tmp66;
+              let tmp58 = null != stateFromStores;
+              if (tmp58) {
+                const obj11 = { variant: "text-md/medium", color: "text-muted", children: null };
+                const items5 = [" ", otherUser(4728).getUserTag(otherUser2)];
+                obj11.children = items5;
+                tmp58 = closure_6(otherUser(4892).Text, obj11);
+                const tmp23Result4 = otherUser(4728);
+              }
+              cResult[15] = otherUser2;
+              cResult[16] = stateFromStores;
+              cResult[17] = tmp58;
+              tmp57 = tmp58;
             }
-            let tmp62 = null != stateFromStores;
-            if (tmp62) {
-              const obj11 = { variant: "text-md/medium", color: "text-muted", children: items5 };
-              const Text4 = otherUser(4892).Text;
-              items5 = [" "];
-              const tmp26Result4 = otherUser(4728);
-              items5[1] = tmp26Result4.getUserTag(otherUser2);
-              tmp62 = closure_6(Text4, obj11);
-            }
-            cResult[15] = otherUser2;
-            cResult[16] = stateFromStores;
-            cResult[17] = tmp62;
-            tmp61 = tmp62;
+            const obj12 = {
+              variant: "text-md/semibold",
+              color: "mobile-text-heading-primary",
+              style: tmp28.username,
+              children: tmp50,
+            };
+            const tmp56 = closure_5(otherUser(4892).Text, obj12);
+            cResult[12] = tmp28.username;
+            cResult[13] = tmp50;
+            cResult[14] = tmp56;
+            tmp54 = tmp56;
           }
-          const obj12 = {
-            variant: "text-md/semibold",
-            color: "mobile-text-heading-primary",
-            style: tmp31.username,
-            children: tmp54,
-          };
-          const tmp60 = closure_5(otherUser(4892).Text, obj12);
-          cResult[12] = tmp31.username;
-          cResult[13] = tmp54;
-          cResult[14] = tmp60;
-          tmp58 = tmp60;
-        }
-        let stringResult = stateFromStores;
-        if (stateFromStores == null) {
-          let username1;
+          let stringResult = stateFromStores;
+          if (stateFromStores == null) {
+            let username1;
+            if (otherUser2 != null) {
+              username1 = otherUser2.username;
+            }
+            stringResult = username1;
+          }
+          if (stringResult == null) {
+            const intl3 = otherUser(1126).intl;
+            stringResult = intl3.string(otherUser(1126).t["30mdIx"]);
+          }
+          let username2;
           if (otherUser2 != null) {
-            username1 = otherUser2.username;
+            username2 = otherUser2.username;
           }
-          stringResult = username1;
+          cResult[9] = username2;
+          cResult[10] = stateFromStores;
+          cResult[11] = stringResult;
+          tmp50 = stringResult;
         }
-        if (stringResult == null) {
-          const intl3 = otherUser(1126).intl;
-          stringResult = intl3.string(otherUser(1126).t["30mdIx"]);
-        }
-        let username2;
-        if (otherUser2 != null) {
-          username2 = otherUser2.username;
-        }
-        cResult[9] = username2;
-        cResult[10] = stateFromStores;
-        cResult[11] = stringResult;
-        tmp54 = stringResult;
+        const obj13 = { style: tmp28.avatarContainer, children: cResult[5] };
+        const tmp47 = closure_5(View, obj13);
+        cResult[6] = tmp28.avatarContainer;
+        cResult[7] = cResult[5];
+        cResult[8] = tmp47;
+        tmp44 = tmp47;
       }
-      const obj13 = { style: tmp31.avatarContainer, children: tmp42 };
-      const tmp50 = closure_5(View, obj13);
-      cResult[6] = tmp31.avatarContainer;
-      cResult[7] = tmp42;
-      cResult[8] = tmp50;
-      tmp47 = tmp50;
     }
-    const Avatar2 = otherUser(1188).Avatar;
+    let avatar = otherUser(1188).Avatar;
+    let tmp40 = null;
     if (null != otherUser2) {
       const obj14 = {
-        avatarStyle: tmp31.avatar,
+        avatarStyle: tmp28.avatar,
         user: otherUser2,
         guildId: "IconComponent",
         disablePlaceholder: null,
-        avatarDecoration,
+        avatarDecoration: "Warning",
       };
-      avatarDecoration = undefined;
-      if (otherUser2 != null) {
+      tmp40 = otherUser2 == tmp40;
+      let avatarDecoration;
+      if (!tmp40) {
         avatarDecoration = otherUser2.avatarDecoration;
       }
-      obj15 = obj14;
+      obj14.avatarDecoration = avatarDecoration;
+      let obj15 = obj14;
     } else {
-      obj15 = { avatarStyle: tmp31.avatar, source: tmp41 };
+      obj15 = { avatarStyle: tmp28.avatar, source: utils_AvatarUtilsDefault.DEFAULT_AVATARS[rounded] };
     }
-    const tmp43Result = closure_5(Avatar2, obj15);
+    const tmp39Result = closure_5(avatar, obj15);
     cResult[3] = otherUser2;
-    cResult[4] = tmp31.avatar;
-    cResult[5] = tmp43Result;
-    tmp42 = tmp43Result;
+    avatar = tmp28.avatar;
+    cResult[4] = avatar;
+    cResult[5] = tmp39Result;
+    const tmp23Result3 = otherUser(17083);
   } else {
     ({ channel, otherUser } = isRestricted);
     let flag = isRestricted.isRestricted;
     if (flag === undefined) {
       flag = false;
     }
-    const tmp3 = closure_8();
-    let obj = otherUser(504);
+    let tmp2 = closure_8();
     const items6 = [RelationshipStore];
-    const stateFromStores1 = obj.useStateFromStores(items6, () => {
+    const stateFromStores1 = otherUser(504).useStateFromStores(items6, () => {
       let tmp2 = null;
       if (null != otherUser) {
-        nickname = RelationshipStore.getNickname(otherUser.id);
+        let nickname = RelationshipStore.getNickname(otherUser.id);
         if (nickname == null) {
-          const obj = UserUtilsDefault;
-          nickname = obj.getGlobalName(otherUser);
+          nickname = UserUtilsDefault.getGlobalName(otherUser);
         }
         tmp2 = nickname;
       }
       return tmp2;
     });
+    let obj = otherUser(504);
     const _Math = Math;
     const _Math2 = Math;
-    const obj2 = otherUser(17083);
-    const messageRequestRelativeTimestampText1 = obj2.useMessageRequestRelativeTimestampText(channel);
+    const messageRequestRelativeTimestampText1 = otherUser(17083).useMessageRequestRelativeTimestampText(channel);
     const random1 = Math.random();
-    const obj16 = { style: tmp3.avatarContainer, children: closure_5(Avatar, obj19) };
-    const floorResult = floor(random1 * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
-    const tmp13 = utils_AvatarUtilsDefault.DEFAULT_AVATARS[floorResult];
-    Avatar = otherUser(1188).Avatar;
+    const rounded1 = Math.floor(random1 * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
+    const obj16 = { style: tmp2.avatarContainer, children: null };
     if (null != otherUser) {
       const obj18 = {
-        avatarStyle: tmp3.avatar,
+        avatarStyle: tmp2.avatar,
         user: otherUser,
         guildId: "IconComponent",
         disablePlaceholder: null,
-        avatarDecoration: avatarDecoration1,
+        avatarDecoration: "Warning",
       };
-      avatarDecoration1 = undefined;
+      let avatarDecoration1;
       if (otherUser != null) {
         avatarDecoration1 = otherUser.avatarDecoration;
       }
-      obj19 = obj18;
+      obj18.avatarDecoration = avatarDecoration1;
+      let obj19 = obj18;
     } else {
-      obj19 = { avatarStyle: tmp3.avatar, source: tmp13 };
+      obj19 = { avatarStyle: tmp2.avatar, source: utils_AvatarUtilsDefault.DEFAULT_AVATARS[rounded1] };
     }
+    obj16.children = closure_5(otherUser(1188).Avatar, obj19);
     const items7 = [closure_5(View, obj16)];
-    const obj20 = { style: tmp3.detailsContainer, children: items11 };
-    const obj21 = { style: tmp3.messageDetails, children: items10 };
+    const obj20 = { style: tmp2.detailsContainer, children: null };
+    const obj21 = { style: tmp2.messageDetails, children: null };
     const obj22 = {
       lineClamp: 1,
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
-      style: tmp3.usernameTextContainer,
-      children: items8,
+      style: tmp2.usernameTextContainer,
+      children: null,
     };
-    const Text = otherUser(4892).Text;
     const obj23 = {
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
-      style: tmp3.username,
-      children: stringResult1,
+      style: tmp2.username,
+      children: null,
     };
-    stringResult1 = stateFromStores1;
-    const Text2 = otherUser(4892).Text;
+    let stringResult1 = stateFromStores1;
     if (stateFromStores1 == null) {
       let username3;
       if (otherUser != null) {
@@ -439,20 +391,21 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
       const intl = otherUser(1126).intl;
       stringResult1 = intl.string(otherUser(1126).t["30mdIx"]);
     }
-    items8 = [closure_5(Text2, obj23)];
-    let tmp14Result = null != stateFromStores1;
-    if (tmp14Result) {
-      const obj24 = { variant: "text-md/medium", color: "text-muted", children: items9 };
-      const Text3 = otherUser(4892).Text;
-      items9 = [" "];
-      const tmp4Result = otherUser(4728);
-      items9[1] = tmp4Result.getUserTag(otherUser);
-      tmp14Result = closure_6(Text3, obj24);
+    obj23.children = stringResult1;
+    const items8 = [closure_5(otherUser(4892).Text, obj23)];
+    let tmp12Result = null != stateFromStores1;
+    if (tmp12Result) {
+      const obj24 = { variant: "text-md/medium", color: "text-muted", children: null };
+      const items9 = [" ", otherUser(4728).getUserTag(otherUser)];
+      obj24.children = items9;
+      tmp12Result = closure_6(otherUser(4892).Text, obj24);
+      const tmp3Result = otherUser(4728);
     }
-    items8[1] = tmp14Result;
-    items10 = [closure_6(Text, obj22), ,];
+    items8[1] = tmp12Result;
+    obj22.children = items8;
+    const items10 = [closure_6(otherUser(4892).Text, obj22), ,];
     const obj25 = {
-      style: tmp3.timestampSeparator,
+      style: tmp2.timestampSeparator,
       variant: "text-xs/medium",
       color: "text-muted",
       children: "\u00B7",
@@ -460,30 +413,29 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     items10[1] = closure_5(otherUser(4892).Text, obj25);
     const obj26 = { variant: "text-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText1 };
     items10[2] = closure_5(otherUser(4892).Text, obj26);
-    items11 = [closure_6(View, obj21), ,];
-    let tmp16Result = !flag;
-    if (tmp16Result) {
-      const obj27 = { style: tmp3.messagePreview, channel };
-      tmp16Result = closure_5(MessageRequestPreviewDefault, obj27);
+    obj21.children = items10;
+    const items11 = [closure_6(View, obj21), ,];
+    let tmp14Result = !flag;
+    if (!flag) {
+      const obj27 = { style: tmp2.messagePreview, channel };
+      tmp14Result = closure_5(MessageRequestPreviewDefault, obj27);
     }
-    items11[1] = tmp16Result;
+    items11[1] = tmp14Result;
     if (flag) {
       flag = null != otherUser;
     }
     if (flag) {
-      const obj28 = {
-        style: tmp3.messagePreview,
-        userId: otherUser.id,
-        suffix: intl2.string(otherUser(1126).t.hTltPn),
-      };
-      const tmp11Result = MessageRequestMutualServersDefault;
-      intl2 = otherUser(1126).intl;
-      flag = closure_5(tmp11Result, obj28);
+      const obj28 = { style: tmp2.messagePreview, userId: otherUser.id, suffix: null };
+      const intl2 = otherUser(1126).intl;
+      obj28.suffix = intl2.string(otherUser(1126).t.hTltPn);
+      flag = closure_5(MessageRequestMutualServersDefault, obj28);
+      const tmp10Result = MessageRequestMutualServersDefault;
     }
-    const obj29 = { children: items7 };
+    const obj29 = { children: null };
     items11[2] = flag;
+    obj20.children = items11;
     items7[1] = closure_6(View, obj20);
-    tmp14Result2 = closure_6(closure_7, obj29);
+    obj29.children = items7;
+    return closure_6(closure_7, obj29);
   }
-  return tmp14Result2;
 }

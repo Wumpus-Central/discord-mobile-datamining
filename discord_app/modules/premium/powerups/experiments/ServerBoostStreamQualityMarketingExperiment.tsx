@@ -1,18 +1,18 @@
 // discord_app/modules/premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx
 import apex_ApexExperimentDefault from "../../../experiments/apex/ApexExperiment.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj2;
-let obj = {
+const obj = {
   name: "2026-04-server-boost-copy-1440p",
   kind: "user",
   defaultConfig: { streamQualityMarketingResolution: "1080p" },
-  variations: obj2,
+  variations: null,
 };
-obj2 = { 1: null };
+const obj2 = { 1: null };
 obj2[1] = { streamQualityMarketingResolution: "1440p" };
+obj.variations = obj2;
 const tmp2 = apex_ApexExperimentDefault(obj);
 const config = tmp2;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx",
 );
@@ -22,6 +22,5 @@ export const CONTROL_RESOLUTION = "1080p";
 export const getServerBoostStreamQualityMarketingResolution = function getServerBoostStreamQualityMarketingResolution(
   GuildBoostingMarketingTierCards,
 ) {
-  const obj = { location: GuildBoostingMarketingTierCards };
-  return config.getConfig(obj).streamQualityMarketingResolution;
+  return config.getConfig({ location: GuildBoostingMarketingTierCards }).streamQualityMarketingResolution;
 };

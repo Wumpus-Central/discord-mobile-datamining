@@ -10,6 +10,8 @@ import NsfwServerInviteWarningAlert from "components/NsfwServerInviteWarningAler
 import GuildStore from "../../../stores/GuildStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
+
 const isGuildLurker = GuildRecord.isGuildLurker;
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
 let closure_5 = TinyBroncoConstants.TINY_BRONCO_NSFW_SERVER_LOCATION;
@@ -20,7 +22,6 @@ let result = size.fileFinishedImporting("modules/age_gate/native/handleNSFWGuild
 
 export const isNSFWInvite = function isNSFWInvite(guild) {
   let nsfw_level;
-  const has = set.has;
   if (guild != null) {
     guild = guild.guild;
     if (guild != null) {
@@ -30,22 +31,18 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
   if (nsfw_level == null) {
     nsfw_level = GuildNSFWContentLevel.DEFAULT;
   }
-  return has(nsfw_level);
+  return set.has(nsfw_level);
 };
 export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1) {
-  let closure_129_0;
-  let id;
-  let onCancel;
-  ({ onConfirm: closure_129_0, onCancel } = arg1);
-  let c2;
+  ({ onConfirm: require, onCancel } = arg1);
+  c2 = undefined;
   if (invite != null) {
-    const guild = invite.guild;
+    guild = invite.guild;
     if (guild != null) {
-      id = guild.id;
+      const id = guild.id;
     }
   }
   let nsfw_level;
-  const has = set.has;
   if (invite != null) {
     const guild2 = invite.guild;
     if (guild2 != null) {
@@ -55,53 +52,55 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
   if (nsfw_level == null) {
     nsfw_level = GuildNSFWContentLevel.DEFAULT;
   }
-  if (has(nsfw_level)) {
+  if (set.has(nsfw_level)) {
     const guild1 = GuildStore.getGuild(id);
-    const obj = PlatformUtils;
     if (obj.isIOS()) {
-      let flag6 = !(null != guild1 && !isGuildLurker(guild1));
-      const tmp10 = null != guild1 && !isGuildLurker(guild1);
-      if (flag6) {
-        const tmp6Result = NsfwGateGuildAlert;
-        const result = tmp6Result.showNsfwGateGuildAlert(id);
+      let tmp10 = null != guild1;
+      if (tmp10) {
+        tmp10 = !isGuildLurker(guild1);
+      }
+      let flag6 = !tmp10;
+      if (!tmp10) {
+        const result = NsfwGateGuildAlert.showNsfwGateGuildAlert(id);
         flag6 = true;
         if (onCancel != null) {
           onCancel();
           flag6 = true;
         }
+        const tmp6Result = NsfwGateGuildAlert;
       }
       return flag6;
     } else if (null != guild1) {
       return false;
     } else {
-      const tmp6Result4 = RegionalFeatureConfigUtils;
       if (tmp6Result4.hasAgeGatedFeatures()) {
-        const tmp6Result5 = TinyBroncoExperiment;
         if (tmp6Result5.isTinyBroncoEnabled(closure_5)) {
           c2 = false;
           const obj2 = {
             onConfirm() {
               c2 = true;
-              closure_1_0();
+              require();
             },
             onDismiss() {
               if (!c2) {
                 if (onCancel != null) {
-                  tmp2();
+                  tmp();
                 }
               }
             },
           };
-          const tmp6Result6 = NsfwServerInviteWarningAlert;
-          const result1 = tmp6Result6.showNsfwServerInviteWarningAlert(obj2);
+          const result1 = NsfwServerInviteWarningAlert.showNsfwServerInviteWarningAlert(obj2);
           return true;
         } else {
           return false;
         }
+        tmp6Result5 = TinyBroncoExperiment;
       } else {
         return false;
       }
+      tmp6Result4 = RegionalFeatureConfigUtils;
     }
+    obj = PlatformUtils;
   } else {
     return false;
   }

@@ -1,57 +1,47 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx
 import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let estimatedListSize;
+require = fn;
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx");
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (estimatedListSize) => {
-      let horizontal;
-      let obj = estimatedListSize(horizontal[3]);
-      const cResult = obj.c(3);
+      const cResult = estimatedListSize(horizontal[3]).c(3);
       estimatedListSize = estimatedListSize.estimatedListSize;
       horizontal = estimatedListSize.horizontal;
       if (cResult[0] === estimatedListSize) {
-        let tmp2;
         if (cResult[1] === horizontal) {
-          tmp2 = cResult[2];
+          let tmp2 = cResult[2];
         }
-        return _slicedToArray(react.useState(tmp2), 1)[0];
+        return _slicedToArray(noop.useState(tmp2), 1)[0];
       }
       const fn = function o() {
-        let tmp = estimatedListSize;
-        if ("windowSize" === estimatedListSize) {
-          const obj = useWindowDimensions;
-          size = obj.getWindowDimensions();
-          tmp = horizontal ? size.width : size.height;
+        if ("windowSize" !== estimatedListSize) {
+          return estimatedListSize;
+        } else {
+          const size = useWindowDimensions.getWindowDimensions();
         }
-        return tmp;
       };
       cResult[0] = estimatedListSize;
       cResult[1] = horizontal;
       cResult[2] = fn;
       tmp2 = fn;
+      let obj = estimatedListSize(horizontal[3]);
     }
   : (arg0) => {
       ({ estimatedListSize: require, horizontal: dependencyMap } = arg0);
-      let tmp = _slicedToArray(
-        react.useState(() => {
-          let tmp = require;
-          if ("windowSize" === require) {
-            const obj = useWindowDimensions;
-            size = obj.getWindowDimensions();
-            tmp = dependencyMap ? size.width : size.height;
+      return _slicedToArray(
+        noop.useState(() => {
+          if ("windowSize" !== closure_1_0) {
+            return closure_1_0;
+          } else {
+            const size = useWindowDimensions.getWindowDimensions();
           }
-          return tmp;
         }),
         2,
-      );
-      return tmp[0];
+      )[0];
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsEstimatedListSize.native.tsx");
-
-export default tmp2;

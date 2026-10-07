@@ -4,20 +4,10 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import GuildDirectoryConstants from "GuildDirectoryConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f109946 = (approximateMemberCount) => approximateMemberCount.approximateMemberCount;
-const f109947 = (createdAt) => createdAt.createdAt;
 const DirectoryEntryTypes = GuildDirectoryConstants.DirectoryEntryTypes;
 const result = size.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
 
 export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromServer(entry) {
-  let _Set1;
-  let guild;
-  let icon;
-  let name;
-  let prop;
-  let prop1;
-  let prop2;
-  let splash;
   if (entry.type === DirectoryEntryTypes.GUILD) {
     const obj = {
       channelId: null,
@@ -27,13 +17,13 @@ export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromSer
       createdAt: null,
       description: null,
       primaryCategoryId: null,
-      name,
-      icon,
-      splash,
-      features: _Set1,
-      approximateMemberCount: prop,
-      approximatePresenceCount: prop1,
-      featurableInDirectory: prop2,
+      name: null,
+      icon: null,
+      splash: null,
+      features: null,
+      approximateMemberCount: null,
+      approximatePresenceCount: null,
+      featurableInDirectory: null,
     };
     ({
       directory_channel_id: obj.channelId,
@@ -45,44 +35,48 @@ export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromSer
       primary_category_id: obj.primaryCategoryId,
       guild,
     } = entry);
-    name = undefined;
+    let name;
     if (guild != null) {
       name = guild.name;
     }
+    obj.name = name;
     const guild2 = entry.guild;
-    icon = undefined;
+    let icon;
     if (guild2 != null) {
       icon = guild2.icon;
     }
+    obj.icon = icon;
     const guild3 = entry.guild;
-    splash = undefined;
+    let splash;
     if (guild3 != null) {
       splash = guild3.splash;
     }
+    obj.splash = splash;
     const guild4 = entry.guild;
     let features;
-    const _Set = Set;
     if (guild4 != null) {
       features = guild4.features;
     }
-    const self = this;
-    const self2 = this;
-    _Set1 = new _Set(features);
+    const set = new Set(features);
+    obj.features = set;
     const guild5 = entry.guild;
-    prop = undefined;
+    let prop;
     if (guild5 != null) {
       prop = guild5.approximate_member_count;
     }
+    obj.approximateMemberCount = prop;
     const guild6 = entry.guild;
-    prop1 = undefined;
+    let prop1;
     if (guild6 != null) {
       prop1 = guild6.approximate_presence_count;
     }
+    obj.approximatePresenceCount = prop1;
     const guild7 = entry.guild;
-    prop2 = undefined;
+    let prop2;
     if (guild7 != null) {
       prop2 = guild7.featurable_in_directory;
     }
+    obj.featurableInDirectory = prop2;
     return obj;
   } else {
     const type = entry.type;
@@ -91,24 +85,19 @@ export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromSer
 };
 export const MAX_CATEGORY_SERVERS = 5;
 export const orderByTotalMemberCount = function orderByTotalMemberCount(found) {
-  const items = [f109946];
-  const obj = _modDef12;
-  return obj.orderBy(found, items, ["desc"]);
+  const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
+  return _modDef12.orderBy(found, items, ["desc"]);
 };
 export const orderByDateAdded = function orderByDateAdded(items) {
-  items = [f109947];
-  const obj = _modDef12;
-  return obj.orderBy(items, items, ["desc"]);
+  items = [(createdAt) => createdAt.createdAt];
+  return _modDef12.orderBy(items, items, ["desc"]);
 };
 export const rankByDateAdded = function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
-  const items = [f109947];
-  const obj = _modDef12;
-  const orderByResult = obj.orderBy(found, items, ["desc"]);
-  return orderByResult.slice(0, 5);
+  const items = [(createdAt) => createdAt.createdAt];
+  return _modDef12.orderBy(found, items, ["desc"]).slice(0, 5);
 };
 export const rankGuildEntries = function rankGuildEntries(arr) {
-  const items = [f109946];
-  const obj = _modDef12;
-  return obj.orderBy(arr, items, ["desc"]);
+  const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
+  return _modDef12.orderBy(arr, items, ["desc"]);
 };

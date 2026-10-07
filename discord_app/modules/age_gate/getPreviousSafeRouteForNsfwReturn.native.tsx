@@ -7,12 +7,9 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
-let closure_4;
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 ({ CHANNEL_PREFIX: c2, GUILD_PREFIX: c3, getIdFromHistoryItem: closure_4 } = NavigationHistoryStore);
-NavigationHistoryStore = NavigationHistoryStore_mod;
+let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ME = Constants.ME;
 const result = size.fileFinishedImporting("modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx");
 
@@ -24,7 +21,7 @@ export default function getPreviousSafeRouteForNsfwReturn() {
   if (0 <= diff) {
     while (true) {
       let obj = history[diff];
-      tmp3 = React3(obj);
+      tmp3 = React4(obj);
       if (obj.startsWith(React2)) {
         let channel = ChannelStore.getChannel(tmp3);
         if (null != channel) {
@@ -41,7 +38,7 @@ export default function getPreviousSafeRouteForNsfwReturn() {
             }
           }
         }
-      } else if (obj.startsWith(_false)) {
+      } else if (obj.startsWith(React3)) {
         defaultChannel = GuildChannelStore.getDefaultChannel(tmp3);
         if (null != defaultChannel) {
           let obj7 = AgeGateUtils;
@@ -55,7 +52,8 @@ export default function getPreviousSafeRouteForNsfwReturn() {
       }
       diff = diff - 1;
     }
-    return { guildId: tmp3, channelId: defaultChannel.id };
+    const obj3 = { guildId: tmp3, channelId: defaultChannel.id };
+    return obj3;
   }
   return null;
 }

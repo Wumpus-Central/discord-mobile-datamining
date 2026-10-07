@@ -1,31 +1,23 @@
 // discord_app/components_native/common/MessagePreview.tsx
-import Fragment from "../../../_runtime/react/00021_Fragment.js";
-import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../_runtime/00576_react.js";
-import intl2 from "../../intl/index.native.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../_runtime/00576_c.js";
+import util from "../../intl/index.native.tsx";
 import ChatPreview from "ChatPreview.tsx";
-import react from "../../../_runtime/00019_react.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import MessagePreviewStore from "../../stores/native/MessagePreviewStore.tsx";
-import Constants from "../../Constants.tsx";
-import ReactCompilerGating from "../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let AnalyticsObjects;
-let AnalyticsSections;
+require = fn;
+const Constants = fn(1085);
 ({ AnalyticsSections, AnalyticsObjects } = Constants);
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 const analyticsLocation = { section: AnalyticsSections.CHANNEL_SEARCH, object: AnalyticsObjects.CHANNEL_SEARCH };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/MessagePreview.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let channelId;
-      let jumpTargetId;
-      let messages;
-      let onBeforeJumpToMessage;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      let obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       ({ channelId, onBeforeJumpToMessage } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessagePreviewStore];
@@ -39,103 +31,94 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
+      const stateFromStoresObject = initialize.useStateFromStoresObject(tmp4, tmp5);
       ({ messages, jumpTargetId } = stateFromStoresObject);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl2.intl;
-        const stringResult = intl.string(intl2.t["+TSRGD"]);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t["+TSRGD"]);
         cResult[2] = stringResult;
-        tmp8 = stringResult;
+        let tmp8 = stringResult;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] === jumpTargetId) {
-        let tmp10;
-        let tmp12;
         if (cResult[4] === onBeforeJumpToMessage) {
-          tmp10 = cResult[5];
+          let tmp10 = cResult[5];
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class C {
             constructor() {
               return () => {
-                const obj = closure_1_1(closure_1_2[8]);
-                obj.clearMessages();
+                closure_1_1(closure_1_2[8]).clearMessages();
               };
             }
           }
           const items1 = [];
           cResult[6] = C;
           cResult[7] = items1;
-          tmp12 = items1;
+          let tmp12 = items1;
         } else {
           class C {
             constructor() {
               return () => {
-                const obj = closure_1_1(closure_1_2[8]);
-                obj.clearMessages();
+                closure_1_1(closure_1_2[8]).clearMessages();
               };
             }
           }
           tmp12 = cResult[7];
         }
-        const effect = react.useEffect(C, tmp12);
+        const effect = noop.useEffect(C, tmp12);
         if (cResult[8] === channelId) {
           class C {
             constructor() {
               return () => {
-                const obj = closure_1_1(closure_1_2[8]);
-                obj.clearMessages();
+                closure_1_1(closure_1_2[8]).clearMessages();
               };
             }
           }
         }
+        const obj2 = { channelId, messages, jumpToChatProps: tmp10, analyticsLocation };
+        const tmp18 = jsx(ChatPreview.ChatPreview, { channelId, messages, jumpToChatProps: tmp10, analyticsLocation });
         cResult[8] = channelId;
         cResult[9] = tmp10;
         cResult[10] = messages;
-        cResult[11] = jsx(ChatPreview.ChatPreview, { channelId, messages, jumpToChatProps: tmp10, analyticsLocation });
-        const tmp18 = jsx(ChatPreview.ChatPreview, { channelId, messages, jumpToChatProps: tmp10, analyticsLocation });
+        cResult[11] = tmp18;
       }
       const obj3 = { jumpToChatText: tmp8, jumpTargetId, onBeforeJumpToMessage };
       cResult[3] = jumpTargetId;
       cResult[4] = onBeforeJumpToMessage;
       cResult[5] = obj3;
       tmp10 = obj3;
+      const tmpResult = initialize;
     }
-  : (onBeforeJumpToMessage) => {
-      onBeforeJumpToMessage = onBeforeJumpToMessage.onBeforeJumpToMessage;
-      const channelId = onBeforeJumpToMessage.channelId;
-      let obj = onBeforeJumpToMessage(504);
+  : (channelId) => {
+      const onBeforeJumpToMessage = channelId.onBeforeJumpToMessage;
       const items = [MessagePreviewStore];
-      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({
+      const stateFromStoresObject = onBeforeJumpToMessage(504).useStateFromStoresObject(items, () => ({
         messages: MessagePreviewStore.messages,
         jumpTargetId: MessagePreviewStore.jumpTargetId,
       }));
       const jumpTargetId = stateFromStoresObject.jumpTargetId;
       const items1 = [jumpTargetId, onBeforeJumpToMessage];
-      const messages = stateFromStoresObject.messages;
-      const memo = react.useMemo(() => {
-        let intl;
-        const obj = { jumpToChatText: intl.string(intl2.t["+TSRGD"]), jumpTargetId, onBeforeJumpToMessage };
-        intl = intl2.intl;
+      const memo = noop.useMemo(() => {
+        const obj = { jumpToChatText: null, jumpTargetId: null, onBeforeJumpToMessage: null };
+        const intl = util.intl;
+        obj.jumpToChatText = intl.string(util.t["+TSRGD"]);
+        obj.jumpTargetId = jumpTargetId;
+        obj.onBeforeJumpToMessage = onBeforeJumpToMessage;
         return obj;
       }, items1);
-      const effect = react.useEffect(
+      const effect = noop.useEffect(
         () => () => {
-          const obj = jumpTargetId(closure_1_2[8]);
-          obj.clearMessages();
+          jumpTargetId(closure_1_2[8]).clearMessages();
         },
         [],
       );
       return jsx(onBeforeJumpToMessage(13112).ChatPreview, {
-        channelId,
-        messages,
+        channelId: channelId.channelId,
+        messages: stateFromStoresObject.messages,
         jumpToChatProps: memo,
         analyticsLocation,
       });
     };
-const result = size.fileFinishedImporting("components_native/common/MessagePreview.tsx");
-
-export default tmp3;

@@ -1,486 +1,337 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../Constants.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let emojiCount,
-  num2,
-  num3,
-  num4,
-  num5,
-  num6,
-  obj1,
-  obj14,
-  obj15,
-  obj16,
-  obj17,
-  obj18,
-  set,
-  set2,
-  set2Result,
-  set3,
-  set3Result,
-  tmp10,
-  tmp14,
-  tmp19,
-  tmp28,
-  tmp3,
-  tmp32,
-  tmp5,
-  tmp7,
-  tmp9,
-  tmp9Result,
-  tmp9Result1,
-  tmp9Result10,
-  tmp9Result11,
-  tmp9Result12,
-  tmp9Result13,
-  tmp9Result14,
-  tmp9Result2,
-  tmp9Result3,
-  tmp9Result4,
-  tmp9Result5,
-  tmp9Result6,
-  tmp9Result7,
-  tmp9Result8,
-  tmp9Result9;
-
-const AppStates = Constants.AppStates;
-const jsx = Fragment.jsx;
+require = fn;
+const AppStates = fn(1085).AppStates;
+const jsx = fn(21).jsx;
 let c8 = 320;
 let c9 = 0.0625;
-let closure_10 = createStyles.createStyles((fontSize) => ({
-  textEmoji: { fontSize },
-  imageEmoji: { width: fontSize, height: fontSize },
-}));
-let closure_11 = {
-  code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}",
-};
-const __initData = {
-  code: "function CustomTypingIndicatorAnimatedEmojiTsx2(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}",
-};
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (emojiCount) => {
-      let animation;
-      let duration;
-      let emoji;
-      let enabled;
-      let index;
-      let tmp11;
-      let tmp12;
-      let obj = index(animation[7]);
-      const cResult = obj.c(31);
-      ({ emoji, index } = emojiCount);
-      emojiCount = emojiCount.emojiCount;
-      ({ size, animation } = emojiCount);
-      let num = 16;
-      if (undefined !== size) {
-        num = size;
-      }
-      closure_10(num);
-      let obj2 = enabled;
-      enabled = enabled.useContext(index(animation[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
-      let name = emoji.id;
-      if (name == null) {
-        name = emoji.name;
-      }
-      [r10033, AppStates] = num(obj2.useState(null), 2);
-      num(obj2.useState(null), 2);
-      if (cResult[0] !== name) {
-        class A {
-          constructor() {
-            tmp = closure_6(name);
-            return;
-          }
-        }
-        cResult[0] = name;
-        cResult[1] = A;
-      } else {
-        class A {
-          constructor() {
-            tmp = closure_6(name);
-            return;
-          }
-        }
-      }
-      emojiCount(animation[9])();
-      const tmpResult = index(animation[10]);
-      const sharedValue = tmpResult.useSharedValue(1);
-      const tmpResult4 = index(animation[10]);
-      const sharedValue1 = tmpResult4.useSharedValue(0);
-      const tmpResult5 = index(animation[10]);
-      const sharedValue2 = tmpResult5.useSharedValue(0);
-      closure_10 = num * sharedValue2;
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        class A {
-          constructor() {
-            tmp = closure_6(name);
-            return;
-          }
-        }
-        let items = [name];
-        class Y {
-          constructor() {
-            return name.getState() === closure_6.ACTIVE;
-          }
-        }
-        cResult[2] = items;
-        cResult[3] = Y;
-        tmp12 = Y;
-        tmp11 = items;
-      } else {
-        class A {
-          constructor() {
-            tmp = closure_6(name);
-            return;
-          }
-        }
-        tmp12 = cResult[3];
-      }
-      const tmpResult6 = index(animation[11]);
-      const stateFromStores = tmpResult6.useStateFromStores(tmp11, tmp12);
-      if (cResult[4] === sharedValue1) {
-        class A {
-          constructor() {
-            tmp = closure_6(name);
-            return;
-          }
-        }
-      }
-      class L {
-        constructor() {
-          tmp = closure_7;
-          result = closure_7.set(1);
-          tmp3 = closure_8;
-          result1 = closure_8.set(0);
-          tmp5 = closure_9;
-          result2 = closure_9.set(0);
-          tmp7 = enabled;
-          if (!tmp7) {
-            tmp8 = animation;
-            tmp9 = closure_0;
-            tmp10 = closure_2;
-            if (animation !== closure_0(closure_2[12]).TypingIndicatorAnimation.UNSPECIFIED) {
-              tmp28 = closure_11;
-              if (tmp28) {
-                tmp11 = index;
-                tmp12 = c8;
-                result3 = index * c8;
-                tmp14 = emojiCount;
-                result4 = c8 * (emojiCount - 1);
-                if (tmp9(tmp10[12]).TypingIndicatorAnimation.PULSE === tmp8) {
-                  set2 = tmp.set;
-                  tmp9Result = tmp9(tmp10[10]);
-                  withDelay2 = tmp9Result.withDelay;
-                  tmp9Result1 = tmp9(tmp10[10]);
-                  withRepeat2 = tmp9Result1.withRepeat;
-                  tmp9Result2 = tmp9(tmp10[10]);
-                  withSequence = tmp9Result2.withSequence;
-                  tmp9Result3 = tmp9(tmp10[13]);
-                  obj1 = { duration: null };
-                  obj1.duration = tmp12;
-                  num3 = 1.16;
-                  withTimingResult = tmp9Result3.withTiming(1.16, obj1);
-                  tmp9Result4 = tmp9(tmp10[13]);
-                  obj14 = { duration: null };
-                  obj14.duration = tmp12;
-                  withTimingResult1 = tmp9Result4.withTiming(1, obj14);
-                  tmp9Result5 = tmp9(tmp10[13]);
-                  obj15 = { duration: null };
-                  obj15.duration = result4;
-                  num4 = -1;
-                  set2Result = set2(
-                    withDelay2(
-                      result3,
-                      withRepeat2(
-                        withSequence(withTimingResult, withTimingResult1, tmp9Result5.withTiming(1, obj15)),
-                        -1,
-                      ),
-                    ),
-                  );
-                } else if (tmp9(tmp10[12]).TypingIndicatorAnimation.RING === tmp8) {
-                  set = tmp3.set;
-                  tmp9Result6 = tmp9(tmp10[10]);
-                  withDelay = tmp9Result6.withDelay;
-                  tmp9Result7 = tmp9(tmp10[10]);
-                  withRepeat = tmp9Result7.withRepeat;
-                  tmp9Result8 = tmp9(tmp10[13]);
-                  tmp19 = globalThis;
-                  _Math = Math;
-                  num = 2;
-                  obj = { duration: 1600, easing: null };
-                  withTiming = tmp9Result8.withTiming;
-                  result5 = 2 * Math.PI;
-                  obj.easing = tmp9(tmp10[10]).Easing.linear;
-                  num2 = -1;
-                  result6 = set(withDelay(result3, withRepeat(withTiming(result5, obj), -1)));
-                } else if (tmp9(tmp10[12]).TypingIndicatorAnimation.WAVE === tmp8) {
-                  set3 = tmp5.set;
-                  tmp9Result9 = tmp9(tmp10[10]);
-                  withDelay3 = tmp9Result9.withDelay;
-                  tmp9Result10 = tmp9(tmp10[10]);
-                  withRepeat3 = tmp9Result10.withRepeat;
-                  tmp9Result11 = tmp9(tmp10[10]);
-                  withSequence2 = tmp9Result11.withSequence;
-                  tmp9Result12 = tmp9(tmp10[13]);
-                  tmp32 = size;
-                  num5 = -0.12;
-                  obj16 = { duration: null };
-                  obj16.duration = tmp12;
-                  withTimingResult2 = tmp9Result12.withTiming(-0.12 * size, obj16);
-                  tmp9Result13 = tmp9(tmp10[13]);
-                  obj17 = { duration: null };
-                  obj17.duration = tmp12;
-                  withTimingResult3 = tmp9Result13.withTiming(0, obj17);
-                  tmp9Result14 = tmp9(tmp10[13]);
-                  obj18 = { duration: null };
-                  obj18.duration = result4;
-                  num6 = -1;
-                  set3Result = set3(
-                    withDelay3(
-                      result3,
-                      withRepeat3(
-                        withSequence2(withTimingResult2, withTimingResult3, tmp9Result14.withTiming(0, obj18)),
-                        -1,
-                      ),
-                    ),
-                  );
-                }
-                return () => {
-                  /* body not rendered: F141722 */
-                };
-              }
-            }
-          }
-          return;
-        }
-      }
-      const items1 = [
-        animation,
-        index,
-        emojiCount,
-        enabled,
-        stateFromStores,
-        sharedValue1,
-        sharedValue,
-        sharedValue2,
-        num,
-      ];
-      cResult[4] = sharedValue1;
-      cResult[5] = animation;
-      cResult[6] = emojiCount;
-      cResult[7] = index;
-      cResult[8] = stateFromStores;
-      cResult[9] = enabled;
-      cResult[10] = sharedValue;
-      cResult[11] = num;
-      cResult[12] = sharedValue2;
-      cResult[13] = L;
-      cResult[14] = items1;
-    }
-  : (emojiCount) => {
-      let animated;
-      let duration;
-      let emoji;
-      let emojiURL;
-      let index;
-      let obj3;
-      let tmp17;
-      ({ emoji, index } = emojiCount);
-      emojiCount = emojiCount.emojiCount;
-      let num = emojiCount.size;
-      if (num === undefined) {
-        num = 16;
-      }
-      const animation = emojiCount.animation;
-      let enabled;
-      let closure_6;
-      let sharedValue;
-      let sharedValue1;
-      let sharedValue2;
-      let c10;
-      let stateFromStores;
-      let obj = enabled;
-      const tmp = c10(num);
-      enabled = enabled.useContext(index(num[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
-      let name = emoji.id;
-      if (name == null) {
-        name = emoji.name;
-      }
-      const tmp4 = animation(obj.useState(null), 2);
-      closure_6 = tmp4[1];
-      let items = [name];
-      const callback = obj.useCallback(() => {
-        closure_6(name);
-      }, items);
-      const tmp8 = emojiCount(num[9])();
-      const tmp2Result = index(num[10]);
-      sharedValue = tmp2Result.useSharedValue(1);
-      const tmp2Result5 = index(num[10]);
-      sharedValue1 = tmp2Result5.useSharedValue(0);
-      const tmp2Result6 = index(num[10]);
-      sharedValue2 = tmp2Result6.useSharedValue(0);
-      let result = num * sharedValue2;
-      c10 = result;
-      const items1 = [name];
-      const tmp2Result7 = index(num[11]);
-      stateFromStores = tmp2Result7.useStateFromStores(items1, () => name.getState() === closure_6.ACTIVE);
-      const items2 = [
-        animation,
-        index,
-        emojiCount,
-        enabled,
-        stateFromStores,
-        sharedValue1,
-        sharedValue,
-        sharedValue2,
-        num,
-      ];
-      const effect = obj.useEffect(() => {
-        const result = sharedValue.set(1);
-        const result1 = sharedValue1.set(0);
-        const result2 = sharedValue2.set(0);
-        if (!enabled) {
-          if (animation !== user.TypingIndicatorAnimation.UNSPECIFIED) {
-            if (stateFromStores) {
-              const result3 = index * duration;
-              const result4 = duration * (emojiCount - 1);
-              if (user.TypingIndicatorAnimation.PULSE === animation) {
-                set2 = sharedValue.set;
-                const withDelay2 = ReanimatedRexport.withDelay;
-                ReanimatedRexport;
-                const withRepeat2 = ReanimatedRexport.withRepeat;
-                ReanimatedRexport;
-                const withSequence = ReanimatedRexport.withSequence;
-                ReanimatedRexport;
-                let obj2 = { duration };
-                const tmp9Result17 = timing;
-                let obj3 = { duration };
-                const withTimingResult = tmp9Result17.withTiming(1.16, obj2);
-                const tmp9Result18 = timing;
-                const obj4 = { duration: result4 };
-                const withTimingResult1 = tmp9Result18.withTiming(1, obj3);
-                const tmp9Result19 = timing;
-                set2(
-                  withDelay2(
-                    result3,
-                    withRepeat2(
-                      withSequence(withTimingResult, withTimingResult1, tmp9Result19.withTiming(1, obj4)),
-                      -1,
-                    ),
-                  ),
-                );
-              } else if (user.TypingIndicatorAnimation.RING === animation) {
-                set = sharedValue1.set;
-                const withDelay = ReanimatedRexport.withDelay;
-                ReanimatedRexport;
-                const withRepeat = ReanimatedRexport.withRepeat;
-                ReanimatedRexport;
-                const _Math = Math;
-                num = 2;
-                let obj = { duration: 1600, easing: ReanimatedRexport.Easing.linear };
-                const withTiming = timing.withTiming;
-                const result5 = 2 * Math.PI;
-                timing;
-                const result6 = set(withDelay(result3, withRepeat(withTiming(result5, obj), -1)));
-              } else if (user.TypingIndicatorAnimation.WAVE === animation) {
-                set3 = sharedValue2.set;
-                const withDelay3 = ReanimatedRexport.withDelay;
-                ReanimatedRexport;
-                const withRepeat3 = ReanimatedRexport.withRepeat;
-                ReanimatedRexport;
-                const withSequence2 = ReanimatedRexport.withSequence;
-                ReanimatedRexport;
-                const obj5 = { duration };
-                const tmp9Result26 = timing;
-                const obj6 = { duration };
-                const withTimingResult2 = tmp9Result26.withTiming(-0.12 * num, obj5);
-                const tmp9Result27 = timing;
-                const obj7 = { duration: result4 };
-                const withTimingResult3 = tmp9Result27.withTiming(0, obj6);
-                const tmp9Result28 = timing;
-                set3(
-                  withDelay3(
-                    result3,
-                    withRepeat3(
-                      withSequence2(withTimingResult2, withTimingResult3, tmp9Result28.withTiming(0, obj7)),
-                      -1,
-                    ),
-                  ),
-                );
-              }
-              return () => {
-                const obj = index(num[10]);
-                obj.cancelAnimation(sharedValue);
-                const obj2 = index(num[10]);
-                obj2.cancelAnimation(sharedValue1);
-                const obj3 = index(num[10]);
-                obj3.cancelAnimation(sharedValue2);
-              };
-            }
-          }
-        }
-      }, items2);
-      const fn = function k() {
-        let items;
-        let value2;
-        const value = sharedValue1.get();
-        const obj = { transform: items };
-        items = [{ scale: sharedValue.get() }, ,];
-        ({ scale: sharedValue.get() });
-        items[1] = { translateX: -c10 * Math.sin(value) };
-        const obj4 = { translateY: value2 + c10 * (Math.cos(value) - 1) };
-        ({ translateX: -c10 * Math.sin(value) });
-        value2 = sharedValue2.get();
-        items[2] = obj4;
-        return obj;
-      };
-      fn.__closure = { angle: sharedValue1, scale: sharedValue, ringRadius: result, translateY: sharedValue2 };
-      fn.__workletHash = 1424307486721;
-      fn.__initData = __initData;
-      const tmp2Result8 = index(num[10]);
-      const animatedStyle = tmp2Result8.useAnimatedStyle(fn);
-      let obj2 = { style: animatedStyle, children: sharedValue(tmp17, obj3, name) };
-      const View = emojiCount(tmp3[10]).View;
-      let str = "\u{1F615}";
-      tmp17 = emojiCount(num[15]);
-      if (tmp4[0] !== name) {
-        let str2 = "";
-        if (null == emoji.id) {
-          str2 = emoji.name;
-        }
-        str = str2;
-      }
-      obj3 = { name: str, src: emojiURL, fastImageStyle: null, textEmojiStyle: null, onError: callback };
-      emojiURL = undefined;
-      if (tmp4[0] !== name) {
-        if (null != emoji.id) {
-          let obj4 = { id: null, animated, size: num };
-          ({ id: obj9.id, animated } = emoji);
-          const getEmojiURL = tmp7(num[14]).getEmojiURL;
-          emojiCount(num[14]);
-          if (animated == null) {
-            animated = false;
-          }
-          if (animated) {
-            animated = tmp8;
-          }
-          emojiURL = getEmojiURL(obj4);
-        }
-      }
-      ({ imageEmoji: obj8.fastImageStyle, textEmoji: obj8.textEmojiStyle } = tmp);
-      return sharedValue(View, obj2);
-    };
-let result = size.fileFinishedImporting(
-  "modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx",
-);
+const createStyles = fn(4896);
+let closure_10 = createStyles.createStyles((fontSize) => ({ textEmoji: { fontSize }, imageEmoji: { width: fontSize, height: fontSize } }));
+let closure_11 = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}" };
+const __initData = { code: "function CustomTypingIndicatorAnimatedEmojiTsx2(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}" };
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx");
 
-export default tmp2;
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiCount) => {
+  const cResult = index(animation[7]).c(31);
+  ({ emoji, index } = emojiCount);
+  emojiCount = emojiCount.emojiCount;
+  ({ size, animation } = emojiCount);
+  let num = 16;
+  if (undefined !== size) {
+    num = size;
+  }
+  closure_10(num);
+  enabled = enabled.useContext(index(animation[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  let name = emoji.id;
+  if (name == null) {
+    name = emoji.name;
+  }
+  let obj = index(animation[7]);
+  [r10033, AppStates] = num(enabled.useState(null), 2);
+  if (cResult[0] !== name) {
+    class A {
+      constructor() {
+        tmp = closure_6(name);
+        return;
+      }
+    }
+    cResult[0] = name;
+    cResult[1] = A;
+  } else {
+    class A {
+      constructor() {
+        tmp = closure_6(name);
+        return;
+      }
+    }
+  }
+  emojiCount(animation[9])();
+  const tmp5 = num(enabled.useState(null), 2);
+  const sharedValue = index(animation[10]).useSharedValue(1);
+  const tmpResult = index(animation[10]);
+  const sharedValue1 = index(animation[10]).useSharedValue(0);
+  const tmpResult4 = index(animation[10]);
+  const sharedValue2 = index(animation[10]).useSharedValue(0);
+  closure_10 = num * sharedValue2;
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    class A {
+      constructor() {
+        tmp = closure_6(name);
+        return;
+      }
+    }
+    let items = [name];
+    class Y {
+      constructor() {
+        return name.getState() === closure_6.ACTIVE;
+      }
+    }
+    cResult[2] = items;
+    cResult[3] = Y;
+    let tmp12 = Y;
+    const tmp11 = items;
+  } else {
+    class A {
+      constructor() {
+        tmp = closure_6(name);
+        return;
+      }
+    }
+    tmp12 = cResult[3];
+  }
+  const tmpResult5 = index(animation[10]);
+  const stateFromStores = index(animation[11]).useStateFromStores(tmp11, tmp12);
+  if (cResult[4] === sharedValue1) {
+    class A {
+      constructor() {
+        tmp = closure_6(name);
+        return;
+      }
+    }
+  }
+  class L {
+    constructor() {
+      obj = closure_7;
+      result = closure_7.set(1);
+      obj2 = closure_8;
+      result1 = closure_8.set(0);
+      obj3 = closure_9;
+      result2 = closure_9.set(0);
+      if (!enabled) {
+        tmp4 = animation;
+        tmp5 = closure_0;
+        tmp6 = closure_2;
+        if (animation !== closure_0(closure_2[12]).TypingIndicatorAnimation.UNSPECIFIED) {
+          tmp18 = closure_11;
+          if (closure_11) {
+            tmp7 = index;
+            tmp8 = c8;
+            result3 = index * c8;
+            tmp10 = emojiCount;
+            result4 = c8 * (emojiCount - 1);
+            if (tmp5(tmp6[12]).TypingIndicatorAnimation.PULSE === tmp4) {
+              tmp5Result = tmp5(tmp6[10]);
+              tmp5Result1 = tmp5(tmp6[10]);
+              tmp5Result2 = tmp5(tmp6[10]);
+              tmp5Result3 = tmp5(tmp6[13]);
+              obj1 = { duration: null };
+              obj1.duration = tmp8;
+              num3 = 1.16;
+              withTimingResult = tmp5Result3.withTiming(1.16, obj1);
+              tmp5Result4 = tmp5(tmp6[13]);
+              obj26 = { duration: null };
+              obj26.duration = tmp8;
+              withTimingResult1 = tmp5Result4.withTiming(1, obj26);
+              tmp5Result5 = tmp5(tmp6[13]);
+              obj27 = { duration: null };
+              obj27.duration = result4;
+              num4 = -1;
+              result5 = obj.set(tmp5Result.withDelay(result3, tmp5Result1.withRepeat(tmp5Result2.withSequence(withTimingResult, withTimingResult1, tmp5Result5.withTiming(1, obj27)), -1)));
+            } else if (tmp5(tmp6[12]).TypingIndicatorAnimation.RING === tmp4) {
+              tmp5Result6 = tmp5(tmp6[10]);
+              tmp5Result7 = tmp5(tmp6[10]);
+              tmp5Result8 = tmp5(tmp6[13]);
+              tmp12 = globalThis;
+              _Math = Math;
+              num = 2;
+              obj28 = { duration: 1600, easing: null };
+              result6 = 2 * Math.PI;
+              obj28.easing = tmp5(tmp6[10]).Easing.linear;
+              num2 = -1;
+              result7 = obj2.set(tmp5Result6.withDelay(result3, tmp5Result7.withRepeat(tmp5Result8.withTiming(result6, obj28), -1)));
+            } else if (tmp5(tmp6[12]).TypingIndicatorAnimation.WAVE === tmp4) {
+              tmp5Result9 = tmp5(tmp6[10]);
+              tmp5Result10 = tmp5(tmp6[10]);
+              tmp5Result11 = tmp5(tmp6[10]);
+              tmp5Result12 = tmp5(tmp6[13]);
+              tmp19 = size;
+              num5 = -0.12;
+              obj29 = { duration: null };
+              obj29.duration = tmp8;
+              withTimingResult2 = tmp5Result12.withTiming(-0.12 * size, obj29);
+              tmp5Result13 = tmp5(tmp6[13]);
+              obj30 = { duration: null };
+              obj30.duration = tmp8;
+              withTimingResult3 = tmp5Result13.withTiming(0, obj30);
+              tmp5Result14 = tmp5(tmp6[13]);
+              obj31 = { duration: null };
+              obj31.duration = result4;
+              num6 = -1;
+              result8 = obj3.set(tmp5Result9.withDelay(result3, tmp5Result10.withRepeat(tmp5Result11.withSequence(withTimingResult2, withTimingResult3, tmp5Result14.withTiming(0, obj31)), -1)));
+            }
+            return () => { ... };
+          }
+        }
+      }
+      return;
+    }
+  }
+  const items1 = [animation, index, emojiCount, enabled, stateFromStores, sharedValue1, sharedValue, sharedValue2, num];
+  cResult[4] = sharedValue1;
+  cResult[5] = animation;
+  cResult[6] = emojiCount;
+  cResult[7] = index;
+  cResult[8] = stateFromStores;
+  cResult[9] = enabled;
+  cResult[10] = sharedValue;
+  cResult[11] = num;
+  cResult[12] = sharedValue2;
+  cResult[13] = L;
+  cResult[14] = items1;
+  const tmpResult6 = index(animation[11]);
+}) : ((emojiCount) => {
+  ({ emoji, index } = emojiCount);
+  emojiCount = emojiCount.emojiCount;
+  let num = emojiCount.size;
+  if (num === undefined) {
+    num = 16;
+  }
+  const animation = emojiCount.animation;
+  let enabled;
+  closure_6 = undefined;
+  let sharedValue;
+  let sharedValue1;
+  let sharedValue2;
+  c10 = undefined;
+  let stateFromStores;
+  enabled = enabled.useContext(index(num[8]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  let name = emoji.id;
+  if (name == null) {
+    name = emoji.name;
+  }
+  const tmp4 = animation(enabled.useState(null), 2);
+  closure_6 = tmp4[1];
+  let items = [name];
+  const callback = obj.useCallback(() => {
+    closure_6(name);
+  }, items);
+  const tmp = c10(num);
+  const tmp7 = emojiCount;
+  const tmp8 = emojiCount(num[9])();
+  sharedValue = index(num[10]).useSharedValue(1);
+  const tmp2Result = index(num[10]);
+  sharedValue1 = index(num[10]).useSharedValue(0);
+  const tmp2Result5 = index(num[10]);
+  sharedValue2 = index(num[10]).useSharedValue(0);
+  let result = num * sharedValue2;
+  c10 = result;
+  const tmp2Result6 = index(num[10]);
+  const items1 = [name];
+  stateFromStores = index(num[11]).useStateFromStores(items1, () => name.getState() === closure_6.ACTIVE);
+  const items2 = [animation, index, emojiCount, enabled, stateFromStores, sharedValue1, sharedValue, sharedValue2, num];
+  const effect = obj.useEffect(() => {
+    const result = sharedValue.set(1);
+    const result1 = sharedValue1.set(0);
+    const result2 = sharedValue2.set(0);
+    if (!enabled) {
+      if (animation !== user.TypingIndicatorAnimation.UNSPECIFIED) {
+        if (stateFromStores) {
+          const result3 = index * duration;
+          const result4 = duration * (emojiCount - 1);
+          if (user.TypingIndicatorAnimation.PULSE === animation) {
+            const tmp5Result = ReanimatedRexport;
+            const tmp5Result15 = ReanimatedRexport;
+            const tmp5Result16 = ReanimatedRexport;
+            const obj4 = { duration };
+            const tmp5Result17 = timing;
+            const withTimingResult = timing.withTiming(1.16, obj4);
+            const obj5 = { duration };
+            const tmp5Result18 = timing;
+            const withTimingResult1 = timing.withTiming(1, obj5);
+            const obj6 = { duration: result4 };
+            const result5 = sharedValue.set(tmp5Result.withDelay(result3, tmp5Result15.withRepeat(tmp5Result16.withSequence(withTimingResult, withTimingResult1, timing.withTiming(1, obj6)), -1)));
+            const tmp5Result19 = timing;
+          } else if (user.TypingIndicatorAnimation.RING === animation) {
+            const tmp5Result20 = ReanimatedRexport;
+            const tmp5Result21 = ReanimatedRexport;
+            const _Math = Math;
+            const obj7 = { duration: 1600, easing: null };
+            const result6 = 2 * Math.PI;
+            obj7.easing = ReanimatedRexport.Easing.linear;
+            const result7 = sharedValue1.set(tmp5Result20.withDelay(result3, tmp5Result21.withRepeat(timing.withTiming(result6, obj7), -1)));
+            const tmp5Result22 = timing;
+          } else if (user.TypingIndicatorAnimation.WAVE === animation) {
+            const tmp5Result23 = ReanimatedRexport;
+            const tmp5Result24 = ReanimatedRexport;
+            const tmp5Result25 = ReanimatedRexport;
+            const obj8 = { duration };
+            const tmp5Result26 = timing;
+            const withTimingResult2 = timing.withTiming(-0.12 * num, obj8);
+            const obj9 = { duration };
+            const tmp5Result27 = timing;
+            const withTimingResult3 = timing.withTiming(0, obj9);
+            const obj10 = { duration: result4 };
+            const result8 = sharedValue2.set(tmp5Result23.withDelay(result3, tmp5Result24.withRepeat(tmp5Result25.withSequence(withTimingResult2, withTimingResult3, timing.withTiming(0, obj10)), -1)));
+            const tmp5Result28 = timing;
+          }
+          return () => {
+            index(num[10]).cancelAnimation(sharedValue);
+            const obj = index(num[10]);
+            index(num[10]).cancelAnimation(sharedValue1);
+            const obj2 = index(num[10]);
+            index(num[10]).cancelAnimation(sharedValue2);
+          };
+        }
+      }
+    }
+  }, items2);
+  const tmp2Result7 = index(num[11]);
+  const fn = function k() {
+    value = sharedValue1.get();
+    const obj = { transform: null };
+    const items = [{ scale: sharedValue.get() }, , ];
+    const obj2 = { scale: sharedValue.get() };
+    items[1] = { translateX: -c10 * Math.sin(value) };
+    const obj4 = { translateY: null };
+    value2 = sharedValue2.get();
+    obj4.translateY = value2 + c10 * (Math.cos(value) - 1);
+    items[2] = obj4;
+    obj.transform = items;
+    return obj;
+  };
+  fn.__closure = { angle: sharedValue1, scale: sharedValue, ringRadius: result, translateY: sharedValue2 };
+  fn.__workletHash = 1424307486721;
+  fn.__initData = __initData;
+  const animatedStyle = index(num[10]).useAnimatedStyle(fn);
+  let obj2 = { style: animatedStyle, children: null };
+  let str = "\u{1F615}";
+  const tmp2Result8 = index(num[10]);
+  if (tmp4[0] !== name) {
+    let str2 = "";
+    if (null == emoji.id) {
+      str2 = emoji.name;
+    }
+    str = str2;
+  }
+  const obj3 = { name: str, src: null, fastImageStyle: null, textEmojiStyle: null, onError: null };
+  let emojiURL;
+  if (tmp4[0] !== name) {
+    if (null != emoji.id) {
+      let obj4 = { id: null, animated: null, size: null };
+      ({ id: obj10.id, animated } = emoji);
+      if (animated == null) {
+        animated = false;
+      }
+      if (animated) {
+        animated = tmp8;
+      }
+      obj4.animated = animated;
+      obj4.size = num;
+      emojiURL = tmp7(tmp3[14]).getEmojiURL(obj4);
+      const tmp7Result = tmp7(tmp3[14]);
+    }
+  }
+  obj3.src = emojiURL;
+  ({ imageEmoji: obj8.fastImageStyle, textEmoji: obj8.textEmojiStyle } = tmp);
+  obj3.onError = callback;
+  obj2.children = sharedValue(emojiCount(num[15]), obj3, name);
+  return sharedValue(emojiCount(num[10]).View, obj2);
+});

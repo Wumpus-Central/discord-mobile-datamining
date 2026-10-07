@@ -5,21 +5,17 @@ import AdPlacement from "../../../discord_common/js/shared/shared-constants/AdPl
 import size from "../../../_runtime/metro/00002__.js";
 
 const values = Object.values(QuestRewardCodePlatforms.QuestRewardCodePlatforms);
-const set = new Set(values.filter((item) => typeof item === "number"));
 const result = size.fileFinishedImporting("modules/quests/QuestTypes.tsx");
-const QuestRewardCodePlatforms_export = QuestRewardCodePlatforms.QuestRewardCodePlatforms;
-const QuestContent_export = QuestContent.QuestContent;
-const AdPlacement_export = AdPlacement.AdPlacement;
 
 export const QuestsVisibleMessagesChangedSource = {
   FIRST_LAYOUT: "FIRST_LAYOUT",
   SCROLL: "SCROLL",
   VISIBILITY_CHANGED: "VISIBILITY_CHANGED",
 };
-export const QUEST_REWARD_CODE_PLATFORMS_SET = set;
-export { QuestRewardCodePlatforms_export as QuestRewardCodePlatforms };
-export { QuestContent_export as QuestContent };
-export { AdPlacement_export as AdPlacement };
+export const QUEST_REWARD_CODE_PLATFORMS_SET = new Set(values.filter((item) => typeof item === "number"));
+export const QuestRewardCodePlatforms = QuestRewardCodePlatforms.QuestRewardCodePlatforms;
+export const QuestContent = QuestContent.QuestContent;
+export const AdPlacement = AdPlacement.AdPlacement;
 export const QuestConsoleStartErrorLocal = { GENERIC: "generic", RATE_LIMITED: "rate_limited" };
 export const TaskPlatformScreen = { DESKTOP: "desktop", CONSOLE: "console", SELECT: "select" };
 export const VideoPauseReason = {

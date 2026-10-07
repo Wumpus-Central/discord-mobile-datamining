@@ -10,72 +10,48 @@ import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnab
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import _modDef7963 from "../../../../../_runtime/metro/07963__.js";
 import PaginationDefault from "../../../../../_runtime/10504_Pagination.js";
-import AssetRegistryDefault from "../../../../../_runtime/11194_AssetRegistry.js";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import _modDef11194 from "../../../../../_runtime/metro/11194__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
-import GuildSettingsRoleConstants from "../GuildSettingsRoleConstants.tsx";
-import Constants from "../../../../Constants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let onSelect, title, tmp3;
+const require = globalThis.__r;
 
-let Dimensions;
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let hasOwnProperty;
-let map1;
-let metroRequire;
-let obj2;
-let obj3;
-let unpackModuleId;
-let _slicedToArray = _slicedToArray_mod;
-({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = react_native);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
+const GuildSettingsRoleConstants = fn(17826);
 ({
-  PermissionTemplateTypes: c9,
+  PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
-  DEFAULT_TEMPLATE_TYPE: unpackModuleId,
+  DEFAULT_TEMPLATE_TYPE: closure_11,
 } = GuildSettingsRoleConstants);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
-({ jsx: closure_14, jsxs: closure_15 } = Fragment);
+const jsxProd = fn(21);
+({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
 let c17 = 300;
-let createStyles = createStyles_mod;
-let obj = {
-  container: obj2,
+const createStyles = fn(4896);
+let obj2 = {
+  container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   carousel: { flex: 1 },
   cardWrapper: { width: 300, alignSelf: "center", paddingHorizontal: 10, flex: 1 },
-  card: obj3,
-  templateTitle: { alignItems: "center", textAlign: "center", paddingBottom: 16 },
-  templateSubtitle: { paddingBottom: 16 },
-  templateContentWrapper: { flex: 1, justifyContent: "flex-start" },
-  templateContent: { alignItems: "center", flexDirection: "row", paddingBottom: 8 },
-  templateContentText: { flex: 1, marginLeft: 12 },
-  templateButton: { justifyContent: "flex-end", flexGrow: 0, paddingTop: 16 },
-  sliderContainer: { alignItems: "center" },
-  slider: { marginTop: 8, width: 300, maxWidth: "72%" },
-  sliderLabels: {
-    alignItems: "center",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 16,
-    textAlign: "center",
-    width: 380,
-    maxWidth: "85%",
-  },
-  sliderLabel: { marginHorizontal: 0, width: "25%", textAlign: "center", alignItems: "center" },
+  card: null,
+  templateTitle: null,
+  templateSubtitle: null,
+  templateContentWrapper: null,
+  templateContent: null,
+  templateContentText: null,
+  templateButton: null,
+  sliderContainer: null,
+  slider: null,
+  sliderLabels: null,
+  sliderLabel: null,
 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+obj2.card = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.sm,
@@ -87,45 +63,66 @@ obj3 = {
   padding: 16,
   paddingTop: 20,
 };
-let closure_18 = createStyles(obj);
+obj2.templateTitle = { alignItems: "center", textAlign: "center", paddingBottom: 16 };
+obj2.templateSubtitle = { paddingBottom: 16 };
+obj2.templateContentWrapper = { flex: 1, justifyContent: "flex-start" };
+obj2.templateContent = { alignItems: "center", flexDirection: "row", paddingBottom: 8 };
+obj2.templateContentText = { flex: 1, marginLeft: 12 };
+obj2.templateButton = { justifyContent: "flex-end", flexGrow: 0, paddingTop: 16 };
+obj2.sliderContainer = { alignItems: "center" };
+obj2.slider = { marginTop: 8, width: 300, maxWidth: "72%" };
+obj2.sliderLabels = {
+  alignItems: "center",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  marginBottom: 16,
+  textAlign: "center",
+  width: 380,
+  maxWidth: "85%",
+};
+obj2.sliderLabel = { marginHorizontal: 0, width: "25%", textAlign: "center", alignItems: "center" };
+let closure_18 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function GuildSettingsRoleTemplateTsx1(value){const{interpolate,sheetWidth,parallaxScrollingOffset,Extrapolation,inactiveOpacity}=this.__closure;const translate=interpolate(value,[-1,0,1],[-sheetWidth+parallaxScrollingOffset,0,sheetWidth-parallaxScrollingOffset]);const zIndex=Math.round(interpolate(value,[-1,0,1],[0,sheetWidth,0],Extrapolation.CLAMP));return{transform:[{translateX:translate}],opacity:interpolate(value,[-1,0,1],[inactiveOpacity,1,inactiveOpacity],Extrapolation.CLAMP),zIndex:zIndex};}",
 };
 const __initData2 = {
   code: "function GuildSettingsRoleTemplateTsx2(value){const{interpolate,sheetWidth,parallaxScrollingOffset,Extrapolation,inactiveOpacity}=this.__closure;const translate=interpolate(value,[-1,0,1],[-sheetWidth+parallaxScrollingOffset,0,sheetWidth-parallaxScrollingOffset]);const zIndex=Math.round(interpolate(value,[-1,0,1],[0,sheetWidth,0],Extrapolation.CLAMP));return{transform:[{translateX:translate}],opacity:interpolate(value,[-1,0,1],[inactiveOpacity,1,inactiveOpacity],Extrapolation.CLAMP),zIndex:zIndex};}",
 };
-const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj4 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderRadius: nativeDefault.radii.sm,
+  borderStyle: "solid",
+  borderWidth: 1,
+  flex: 1,
+  flexDirection: "column",
+  marginVertical: 16,
+  padding: 16,
+  paddingTop: 20,
+};
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onSelect) => {
-      let bound;
-      let closure_3;
-      let closure_6;
-      let closure_7;
-      let closure_9;
-      let guildId;
-      let height;
-      let items;
-      let ref;
-      let sheetWidth;
-      let tmp = onSelect;
-      let tmp2 = guildId;
-      let obj = onSelect(guildId[11]);
-      const cResult = obj.c(83);
+      const cResult = onSelect(guildId[11]).c(83);
       onSelect = onSelect.onSelect;
       const location = onSelect.location;
       guildId = onSelect.guildId;
+      let obj = onSelect(guildId[11]);
       _slicedToArray = closure_18();
       const tmp4 = closure_18();
       const tmp5 = location(guildId[12])();
-      const tmp6 = location(guildId[13])();
-      ({ width, height } = tmp6);
-      let obj2 = ref;
+      ({ width, height } = location(guildId[13])());
       ref = ref.useRef(null);
-      const ref1 = ref.useRef(null);
+      ref.useRef(null);
       [closure_6, closure_7] = ref.useState(bound);
       [sheetWidth, closure_9] = ref.useState(width);
-      let obj3 = onSelect(guildId[14]);
+      let obj2 = ref;
+      let tmp6 = location(guildId[13])();
       let num = 0.7;
-      const isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
+      const isScreenReaderEnabled = onSelect(guildId[14]).useIsScreenReaderEnabled();
       if (tmp5) {
         num = 0.3;
       }
@@ -245,24 +242,18 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const fn = function q(arg0) {
-          let items2;
-          let items3;
-          let obj4;
-          let roundResult;
           const items = [-first + bound, 0, first - bound];
-          const obj = ReanimatedRexport;
+          const interpolateResult = ReanimatedRexport.interpolate(arg0, [-1, 0, 1], items);
           const items1 = [0, first, 0];
-          const interpolateResult = obj.interpolate(arg0, [-1, 0, 1], items);
-          const obj3 = {
-            transform: items2,
-            opacity: obj4.interpolate(arg0, [-1, 0, 1], items3, ReanimatedRexport.Extrapolation.CLAMP),
-            zIndex: roundResult,
-          };
-          items2 = [{ translateX: interpolateResult }];
-          const obj2 = ReanimatedRexport;
-          items3 = [num, 1, num];
-          roundResult = round(obj2.interpolate(arg0, [-1, 0, 1], items1, ReanimatedRexport.Extrapolation.CLAMP));
-          obj4 = ReanimatedRexport;
+          const obj3 = { transform: null, opacity: null, zIndex: null };
+          const items2 = [{ translateX: interpolateResult }];
+          obj3.transform = items2;
+          const rounded = Math.round(
+            ReanimatedRexport.interpolate(arg0, [-1, 0, 1], items1, ReanimatedRexport.Extrapolation.CLAMP),
+          );
+          const items3 = [num, 1, num];
+          obj3.opacity = ReanimatedRexport.interpolate(arg0, [-1, 0, 1], items3, ReanimatedRexport.Extrapolation.CLAMP);
+          obj3.zIndex = rounded;
           return obj3;
         };
         let obj4 = {
@@ -284,20 +275,9 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = height;
       cResult[4] = width;
       cResult[5] = items;
+      let obj3 = onSelect(guildId[14]);
     }
   : (arg0) => {
-      let closure_3;
-      let closure_7;
-      let closure_9;
-      let first1;
-      let items2;
-      let items3;
-      let items4;
-      let location_page;
-      let obj10;
-      let obj7;
-      let require;
-      let value;
       ({ onSelect: require, location: importDefault, guildId: dependencyMap } = arg0);
       let ref;
       value = undefined;
@@ -307,18 +287,15 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let bound;
       let tmp = closure_18();
       _slicedToArray = tmp;
-      const tmp4 = useIsWindowLargeDefault();
-      size = useWindowDimensionsDefault();
+      const size = useWindowDimensionsDefault();
       const height = size.height;
-      let obj = ref;
-      width = size.width;
       ref = ref.useRef(null);
       const ref1 = ref.useRef(null);
       [value, closure_7] = ref.useState(bound);
       [first1, closure_9] = ref.useState(width);
-      let obj2 = useIsScreenReaderEnabled;
+      const tmp4 = useIsWindowLargeDefault();
       let num = 0.7;
-      const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
+      const isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
       if (tmp4) {
         num = 0.3;
       }
@@ -332,7 +309,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       bound = Math.max(first1 - c17, 0);
-      let items = [width, height];
+      let items = [size.width, height];
       let rounded = Math.round(0.45 * height);
       const layoutEffect = obj.useLayoutEffect(() => {
         const current = ref.current;
@@ -340,7 +317,10 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         if (current != null) {
           width = current.getBoundingClientRect().width;
         }
-        const tmp2 = null != width && width > 0;
+        let tmp2 = null != width;
+        if (tmp2) {
+          tmp2 = width > 0;
+        }
         if (tmp2) {
           closure_9((arg0) => {
             let tmp = arg0;
@@ -353,27 +333,65 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       class X {
         constructor(arg0) {
-          let items2;
-          let items3;
-          let obj4;
-          let roundResult;
-          const items = [-first1 + bound, 0, first1 - bound];
-          const obj = ReanimatedRexport;
-          const items1 = [0, first1, 0];
-          const interpolateResult = obj.interpolate(arg0, [-1, 0, 1], items);
-          const obj3 = {
-            transform: items2,
-            opacity: obj4.interpolate(arg0, [-1, 0, 1], items3, ReanimatedRexport.Extrapolation.CLAMP),
-            zIndex: roundResult,
-          };
-          items2 = [{ translateX: interpolateResult }];
-          const obj2 = ReanimatedRexport;
-          items3 = [num, 1, num];
-          roundResult = round(obj2.interpolate(arg0, [-1, 0, 1], items1, ReanimatedRexport.Extrapolation.CLAMP));
-          obj4 = ReanimatedRexport;
-          return obj3;
+          obj = closure_0(closure_2[15]);
+          items = [, ,];
+          items[0] = -closure_8 + closure_11;
+          items[1] = 0;
+          items[2] = closure_8 - closure_11;
+          interpolateResult = obj.interpolate(arg0, [-1, 0, 1], items);
+          obj2 = closure_0(closure_2[15]);
+          items1 = [0];
+          items1[1] = closure_8;
+          items1[2] = 0;
+          obj1 = { transform: null, opacity: null, zIndex: null };
+          items2 = [];
+          items2[0] = { translateX: interpolateResult };
+          obj1.transform = items2;
+          rounded = Math.round(
+            obj2.interpolate(arg0, [-1, 0, 1], items1, closure_0(closure_2[15]).Extrapolation.CLAMP),
+          );
+          obj4 = closure_0(closure_2[15]);
+          items3 = [, ,];
+          items3[0] = c10;
+          items3[1] = 1;
+          items3[2] = c10;
+          obj1.opacity = obj4.interpolate(arg0, [-1, 0, 1], items3, closure_0(closure_2[15]).Extrapolation.CLAMP);
+          obj1.zIndex = rounded;
+          return obj1;
         }
       }
+      X.__closure = {
+        interpolate: ReanimatedRexport.interpolate,
+        sheetWidth: first1,
+        parallaxScrollingOffset: bound,
+        Extrapolation: ReanimatedRexport.Extrapolation,
+        inactiveOpacity: num,
+      };
+      X.__workletHash = 989185039823;
+      X.__initData = __initData2;
+      let items1 = [first1, bound, num];
+      const callback = obj.useCallback(X, items1);
+      const values = Object.values(num);
+      let obj4 = { ref, style: tmp.container, children: null };
+      let obj5 = { style: tmp.sliderContainer, children: null };
+      let obj6 = {
+        accessible: false,
+        accessibilityElementsHidden: true,
+        importantForAccessibility: "no-hide-descendants",
+        children: closure_14(_modDef7963, {
+          maximumValue: values.length - 1,
+          minimumTrackTintColor: values[value].color,
+          minimumValue: closure_9.COSMETIC,
+          onSlidingComplete: updateLevel,
+          style: tmp.slider,
+          thumbTintColor: values[value].color,
+          value,
+          accessible: false,
+          accessibilityElementsHidden: true,
+          importantForAccessibility: "no",
+        }),
+      };
+      let items2 = [closure_14(ref1, obj6)];
       let obj3 = {
         interpolate: ReanimatedRexport.interpolate,
         sheetWidth: first1,
@@ -381,21 +399,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         Extrapolation: ReanimatedRexport.Extrapolation,
         inactiveOpacity: num,
       };
-      X.__closure = obj3;
-      X.__workletHash = 989185039823;
-      X.__initData = __initData2;
-      let items1 = [first1, bound, num];
-      const callback = obj.useCallback(X, items1);
-      const values = Object.values(num);
-      let obj4 = { ref, style: tmp.container, children: items3 };
-      let obj5 = { style: tmp.sliderContainer, children: items2 };
-      let obj6 = {
-        accessible: false,
-        accessibilityElementsHidden: true,
-        importantForAccessibility: "no-hide-descendants",
-        children: closure_14(_modDef7963, obj7),
-      };
-      obj7 = {
+      let obj7 = {
         maximumValue: values.length - 1,
         minimumTrackTintColor: values[value].color,
         minimumValue: closure_9.COSMETIC,
@@ -407,23 +411,17 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityElementsHidden: true,
         importantForAccessibility: "no",
       };
-      items2 = [closure_14(ref1, obj6)];
-      let obj8 = {
+      items2[1] = closure_14(ref1, {
         style: tmp.sliderLabels,
         children: values.map((title, index) => {
-          let PressableOpacity;
-          let Text;
-          let obj2;
-          let obj3;
-          let obj4;
           title = title.title;
-          const require = index;
-          let obj = { style: closure_3.sliderLabel, children: closure_1_14(PressableOpacity, obj2) };
-          obj2 = {
+          closure_0 = index;
+          let obj = { style: closure_3.sliderLabel, children: null };
+          const obj2 = {
             accessibilityRole: "button",
-            accessibilityState: obj3,
+            accessibilityState: { selected: first === index },
             onPress() {
-              const rounded = Math.round(index);
+              const rounded = Math.round(closure_0);
               closure_7(rounded);
               const current = ref1.current;
               if (current != null) {
@@ -431,137 +429,130 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 current.scrollTo(obj);
               }
             },
-            children: closure_1_14(Text, obj4),
+            children: closure_1_14(require("Text/Text").Text, { variant: "text-sm/medium", children: title() }),
           };
-          obj3 = { selected: first === index };
-          PressableOpacity = require("Pressables").PressableOpacity;
-          obj4 = { variant: "text-sm/medium", children: title() };
-          Text = require("Text/Text").Text;
+          obj.children = closure_1_14(require("Pressables").PressableOpacity, obj2);
           return closure_1_14(ref1, obj, title());
         }),
-      };
-      items2[1] = closure_14(ref1, obj8);
-      items3 = [closure_15(ref1, obj5)];
-      let obj9 = { style: items4, children: closure_14(PaginationDefault, obj10) };
-      items4 = [tmp.carousel, { minHeight: rounded }];
-      obj10 = {
-        ref: ref1,
-        data: values,
-        renderItem(item) {
-          let Button;
-          let contentsResult;
-          let intl;
-          let items1;
-          let items2;
-          let obj10;
-          let obj2;
-          let str;
-          item = item.item;
-          const tmp = item.index === first;
-          const contentPrefaceResult = item.contentPreface();
-          let obj = {
-            accessible: !!tmp && undefined,
-            accessibilityElementsHidden: tmp5,
-            importantForAccessibility: str,
-            style: closure_3.cardWrapper,
-            children: closure_1_15(ref1, obj2),
-          };
-          str = "no-hide-descendants";
-          if (tmp) {
-            str = "yes";
-          }
-          obj2 = { style: closure_3.card, children: items2 };
-          let obj3 = { style: closure_3.templateTitle, variant: "heading-lg/extrabold", children: item.title() };
-          const Text = require("Text/Text").Text;
-          let items = [closure_1_14(Text, obj3), ,];
-          const obj4 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
-          const Text2 = require("Text/Text").Text;
-          items[1] = closure_1_14(Text2, obj4);
-          let tmp3Result = null;
-          const obj5 = { style: closure_3.templateContentWrapper, children: items1 };
-          if (null != contentPrefaceResult) {
-            tmp3Result = null;
-            if ("" !== contentPrefaceResult) {
-              const obj6 = {
-                style: closure_3.templateSubtitle,
-                variant: "text-sm/medium",
-                children: item.contentPreface(),
-              };
-              const Text3 = require("Text/Text").Text;
-              tmp3Result = closure_1_14(Text3, obj6);
+      });
+      obj5.children = items2;
+      let items3 = [closure_15(ref1, obj5)];
+      let obj9 = {
+        style: null,
+        children: closure_14(PaginationDefault, {
+          ref: ref1,
+          data: values,
+          renderItem(item) {
+            item = item.item;
+            const contentPrefaceResult = item.contentPreface();
+            let obj = {
+              accessible: !item.index !== first && undefined,
+              accessibilityElementsHidden: item.index !== first,
+              importantForAccessibility: null,
+              style: null,
+              children: null,
+            };
+            let str = "no-hide-descendants";
+            if (item.index === first) {
+              str = "yes";
             }
-          }
-          items1 = [tmp3Result];
-          const obj7 = { children: items };
-          const obj8 = {
-            accessibilityRole: "list",
-            children: contentsResult.map((children, index) => {
-              let items;
-              const obj = { style: closure_3.templateContent, children: items };
-              const obj2 = {
-                source: AssetRegistryDefault,
-                size: native.IconSizes.MEDIUM,
-                color: nativeDefault.unsafe_rawColors.GREEN_360,
-              };
-              const Icon = native.Icon;
-              items = [authStore2(Icon, obj2)];
-              const obj3 = { style: closure_3.templateContentText, variant: "text-sm/medium", children };
-              items[1] = authStore2(Text_Text.Text, obj3);
-              return closure_15(hasOwnProperty, obj, "" + item.key + "_content_" + index);
-            }),
-          };
-          contentsResult = item.contents();
-          items1[1] = closure_1_14(ref1, obj8);
-          items[2] = closure_1_15(ref1, obj5);
-          items2 = [closure_1_15(first, obj7)];
-          const obj9 = { style: closure_3.templateButton, children: closure_1_14(Button, obj10) };
-          obj10 = {
-            text: intl.string(require("intl").t.mQS8Is),
-            onPress() {
-              let key;
-              let permissions;
+            obj.importantForAccessibility = str;
+            obj.style = closure_3.cardWrapper;
+            let obj2 = { style: closure_3.card, children: null };
+            let items = [
+              closure_1_14(require("Text/Text").Text, {
+                style: closure_3.templateTitle,
+                variant: "heading-lg/extrabold",
+                children: item.title(),
+              }),
+              ,
+            ];
+            let obj3 = { style: closure_3.templateTitle, variant: "heading-lg/extrabold", children: item.title() };
+            const tmp6 = !item.index !== first && undefined;
+            items[1] = closure_1_14(require("Text/Text").Text, {
+              style: closure_3.templateSubtitle,
+              variant: "text-sm/medium",
+              children: item.description(),
+            });
+            const obj5 = { style: closure_3.templateContentWrapper, children: null };
+            let tmp3Result = null;
+            if (null != contentPrefaceResult) {
+              tmp3Result = null;
+              if ("" !== contentPrefaceResult) {
+                const obj6 = {
+                  style: closure_3.templateSubtitle,
+                  variant: "text-sm/medium",
+                  children: item.contentPreface(),
+                };
+                tmp3Result = closure_1_14(require("Text/Text").Text, obj6);
+              }
+            }
+            const obj7 = { children: null };
+            const items1 = [tmp3Result];
+            const obj8 = { accessibilityRole: "list", children: null };
+            const obj4 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
+            obj8.children = item.contents().map((children, index) => {
+              const obj = { style: closure_3.templateContent, children: null };
+              const items = [
+                state(native.Icon, {
+                  source: _modDef11194,
+                  size: native.IconSizes.MEDIUM,
+                  color: nativeDefault.unsafe_rawColors.GREEN_360,
+                }),
+                state(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children }),
+              ];
+              obj.children = items;
+              return closure_3_15(hasOwnProperty, obj, "" + item.key + "_content_" + index);
+            });
+            items1[1] = closure_1_14(ref1, obj8);
+            obj5.children = items1;
+            items[2] = closure_1_15(ref1, obj5);
+            obj7.children = items;
+            const items2 = [closure_1_15(first, obj7)];
+            const obj9 = { style: closure_3.templateButton, children: null };
+            const obj10 = { text: null, onPress: null };
+            const intl = require("util").intl;
+            obj10.text = intl.string(require("util").t.mQS8Is);
+            obj10.onPress = function onPress() {
               const communityPermissions = item.communityPermissions;
               ({ permissions, key } = item);
-              const track = AnalyticsUtilsDefault.track;
-              const ROLE_TEMPLATE_SELECTED = constants.ROLE_TEMPLATE_SELECTED;
-              const obj = { location_page: importDefault, template_name: key };
-              AnalyticsUtilsDefault;
-              const obj2 = AppAnalyticsUtils;
-              const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(dependencyMap));
-              track(ROLE_TEMPLATE_SELECTED, obj);
-              const guild = GuildStore.getGuild(dependencyMap);
+              const obj = AnalyticsUtilsDefault;
+              const obj2 = { location_page, template_name: key };
+              const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(dependencyMap));
+              obj.track(constants.ROLE_TEMPLATE_SELECTED, obj2);
+              guild = GuildStore.getGuild(dependencyMap);
               if (null != guild) {
                 const features = guild.features;
-                if (features.has(map1.COMMUNITY)) {
+                if (features.has(constants2.COMMUNITY)) {
                   if (null != communityPermissions) {
                     _require(communityPermissions);
                   }
                 }
                 _require(permissions);
               }
-            },
-          };
-          Button = require("components/Button/Button").Button;
-          intl = require("intl").intl;
-          items2[1] = closure_1_14(ref1, obj9);
-          return closure_1_14(ref1, obj);
-        },
-        width: first1,
-        loop: false,
-        enabled: !isScreenReaderEnabled,
-        scrollAnimationDuration: 200,
-        customAnimation: callback,
-        onSnapToItem(result) {
-          closure_7(result);
-        },
-        onConfigurePanGesture(activeOffsetX) {
-          activeOffsetX.activeOffsetX([-10, 10]);
-        },
+            };
+            obj9.children = closure_1_14(require("components/Button/Button").Button, obj10);
+            items2[1] = closure_1_14(ref1, obj9);
+            obj2.children = items2;
+            obj.children = closure_1_15(ref1, obj2);
+            return closure_1_14(ref1, obj);
+          },
+          width: first1,
+          loop: false,
+          enabled: !isScreenReaderEnabled,
+          scrollAnimationDuration: 200,
+          customAnimation: callback,
+          onSnapToItem(result) {
+            closure_7(result);
+          },
+          onConfigurePanGesture(activeOffsetX) {
+            activeOffsetX.activeOffsetX([-10, 10]);
+          },
+        }),
       };
+      const items4 = [tmp.carousel, { minHeight: rounded }];
+      obj9.style = items4;
       items3[1] = closure_14(ref1, obj9);
+      obj4.children = items3;
       return closure_15(ref1, obj4);
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx");
-
-export default tmp7;

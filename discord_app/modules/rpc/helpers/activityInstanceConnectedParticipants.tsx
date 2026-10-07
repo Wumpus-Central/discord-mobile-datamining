@@ -2,51 +2,88 @@
 import transformUserDefault from "transformUser.tsx";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
-import Constants from "../Constants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, user;
 
-let items;
+const require = fn;
+const Constants = fn(5323);
 let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
 items = [Constants.RPC_AUTHENTICATED_SCOPE];
-let obj2 = {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
+
+export const activityInstanceConnectedParticipants = function activityInstanceConnectedParticipants() {
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
+  if (null == currentEmbeddedActivity) {
+    const obj = { participants: [] };
+    return obj;
+  } else {
+    _require = require("embeddedActivityLocationUtils").getEmbeddedActivityLocationGuildId(
+      currentEmbeddedActivity.location,
+    );
+    const obj2 = require("embeddedActivityLocationUtils");
+    const embeddedActivityLocationChannelId =
+      require("embeddedActivityLocationUtils").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    const obj4 = { participants: null };
+    const _Array = Array;
+    const obj3 = require("embeddedActivityLocationUtils");
+    obj4.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+      user = user.getUser(arg0);
+      if (null != user) {
+        const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
+        const obj2 = {};
+        const merged = Object.assign(transformUserDefault(user));
+        obj2.nickname = nickname;
+        return obj2;
+      }
+    }).filter(require("GlobalUtils").isNotNullish);
+    return obj4;
+  }
+};
+export const activityInstanceConnectedParticipantsScope = obj;
+export const activityInstanceConnectedParticipantsUpdateEvent = {
   scope: obj,
   handler() {
     return (arg0) => {
-      let arr;
-      let closure_0;
-      let closure_1;
-      let dispatch;
-      let obj2;
-      let prevState;
       let embeddedActivityLocationGuildId;
       let embeddedActivityLocationChannelId;
       ({ prevState, dispatch } = arg0);
       currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
       if (null == currentEmbeddedActivity) {
-        let obj = { participants: [] };
-        obj2 = obj;
+        const obj = { participants: [] };
+        let obj2 = obj;
       } else {
-        const obj4 = embeddedActivityLocationGuildId(closure_2[3]);
-        embeddedActivityLocationGuildId = obj4.getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj5 = embeddedActivityLocationGuildId(closure_2[3]);
-        embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
-        obj2 = { participants: arr.filter(embeddedActivityLocationGuildId(closure_2[6]).isNotNullish) };
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4504).getEmbeddedActivityLocationGuildId(
+          currentEmbeddedActivity.location,
+        );
+        const obj4 = embeddedActivityLocationGuildId(4504);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4504).getEmbeddedActivityLocationChannelId(
+          currentEmbeddedActivity.location,
+        );
+        obj2 = { participants: null };
         const _Array = Array;
-        arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+        const obj5 = embeddedActivityLocationGuildId(4504);
+        obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {
-            const obj = require("NicknameUtils");
-            const nickname = obj.getNickname(closure_0, closure_1, user);
-            const obj2 = { nickname };
+            const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
+            const obj2 = {};
             const merged = Object.assign(transformUserDefault(user));
+            obj2.nickname = nickname;
+            return obj2;
+          }
+        }).filter(embeddedActivityLocationGuildId(1375).isNotNullish);
+        const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
+          user = user.getUser(arg0);
+          if (null != user) {
+            const nickname = require("NicknameUtils").getNickname(closure_0, closure_1, user);
+            const obj2 = {};
+            const merged = Object.assign(transformUserDefault(user));
+            obj2.nickname = nickname;
             return obj2;
           }
         });
       }
-      const obj3 = embeddedActivityLocationChannelId(closure_2[7]);
       if (!obj3.isEqual(obj2, prevState)) {
         dispatch(obj2);
       }
@@ -54,36 +91,3 @@ let obj2 = {
     };
   },
 };
-const result = size.fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
-
-export const activityInstanceConnectedParticipants = function activityInstanceConnectedParticipants() {
-  let arr;
-  let closure_0;
-  let closure_1;
-  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-  if (null == currentEmbeddedActivity) {
-    return { participants: [] };
-  } else {
-    const obj2 = require("embeddedActivityLocationUtils");
-    _require = obj2.getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-    const obj3 = require("embeddedActivityLocationUtils");
-    const embeddedActivityLocationChannelId = obj3.getEmbeddedActivityLocationChannelId(
-      currentEmbeddedActivity.location,
-    );
-    const _Array = Array;
-    const obj4 = { participants: arr.filter(require("GlobalUtils").isNotNullish) };
-    arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-      user = user.getUser(arg0);
-      if (null != user) {
-        const obj = require("NicknameUtils");
-        const nickname = obj.getNickname(closure_0, closure_1, user);
-        const obj2 = { nickname };
-        const merged = Object.assign(transformUserDefault(user));
-        return obj2;
-      }
-    });
-    return obj4;
-  }
-};
-export const activityInstanceConnectedParticipantsScope = obj;
-export const activityInstanceConnectedParticipantsUpdateEvent = obj2;

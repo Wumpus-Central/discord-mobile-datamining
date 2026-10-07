@@ -2,7 +2,7 @@
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let closure_2 = {
+const dependencyMap = {
   "image/avif": "avif",
   "image/gif": "gif",
   "image/heic": "heic",
@@ -18,10 +18,9 @@ const result = size.fileFinishedImporting("modules/media/FileExtensionUtils.tsx"
 export const getExtensionFromContentType = function getExtensionFromContentType(str) {
   if (null != str) {
     str = str.toLowerCase();
-    const obj = /^(image|video)\//;
     if (obj.test(str)) {
-      if (null != closure_2[str]) {
-        return closure_2[str];
+      if (null != dependencyMap[str]) {
+        return tmp2;
       } else {
         const tmp3 = str.split("/")[1];
         let str3 = "jpg";
@@ -35,6 +34,7 @@ export const getExtensionFromContentType = function getExtensionFromContentType(
         return str3;
       }
     }
+    obj = /^(image|video)\//;
   }
 };
 export const decideFileExtension = function decideFileExtension(uri, contentType, arg2) {
@@ -44,8 +44,7 @@ export const decideFileExtension = function decideFileExtension(uri, contentType
   }
   let tmp;
   if (flag) {
-    const obj = URLUtilsDefault;
-    const toURLSafeResult = obj.toURLSafe(uri);
+    const toURLSafeResult = URLUtilsDefault.toURLSafe(uri);
     let formatted;
     if (toURLSafeResult != null) {
       const searchParams = toURLSafeResult.searchParams;
@@ -70,9 +69,8 @@ export const decideFileExtension = function decideFileExtension(uri, contentType
     let tmp9;
     if (null != contentType) {
       const str6 = contentType.toLowerCase();
-      const obj2 = /^(image|video)\//;
       if (obj2.test(str6)) {
-        tmp9 = closure_2[str6];
+        tmp9 = dependencyMap[str6];
         if (null == tmp9) {
           const tmp11 = str6.split("/")[1];
           let str8 = "jpg";
@@ -86,12 +84,12 @@ export const decideFileExtension = function decideFileExtension(uri, contentType
           tmp9 = str8;
         }
       }
+      obj2 = /^(image|video)\//;
     }
     tmp = tmp9;
   }
   if (tmp == null) {
-    const obj3 = URLUtilsDefault;
-    const toURLSafeResult1 = obj3.toURLSafe(uri);
+    const toURLSafeResult1 = URLUtilsDefault.toURLSafe(uri);
     let tmp15;
     if (null != toURLSafeResult1) {
       let formatted1;

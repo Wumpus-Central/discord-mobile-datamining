@@ -1,86 +1,69 @@
 // discord_app/modules/games/hooks/useResolveGame.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import useGame from "useGame.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let applicationId;
-      let data;
-      let gameId;
-      let isLoading;
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       ({ applicationId, gameId } = arg0);
-      let tmp5;
-      const useGetOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication;
-      useGetOrFetchApplications;
+      let tmp4;
       if (null == gameId) {
-        tmp5 = applicationId;
+        tmp4 = applicationId;
       }
-      const getOrFetchApplication = useGetOrFetchApplication(tmp5);
-      let tmp6 = gameId;
+      const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp4);
+      let tmp5 = gameId;
       if (null == gameId) {
-        tmp6 = null;
+        tmp5 = null;
         if (null != getOrFetchApplication) {
-          let tmp7;
           if (cResult[0] !== getOrFetchApplication) {
             const canonicalGameId = getOrFetchApplication.getCanonicalGameId();
             cResult[0] = getOrFetchApplication;
             cResult[1] = canonicalGameId;
-            tmp7 = canonicalGameId;
-          } else {
-            tmp7 = cResult[1];
           }
-          tmp6 = tmp7;
         }
       }
-      const tmpResult = useGame;
-      const game = tmpResult.useGame(tmp6);
+      const game = useGame.useGame(tmp5);
       ({ data, isLoading } = game);
       if (data == null) {
         data = null;
       }
-      if (cResult[2] === tmp6) {
+      if (cResult[2] === tmp5) {
         if (cResult[3] === data) {
-          let tmp11;
-          if (
-            cResult[4] === ((null == gameId && null != applicationId && null == getOrFetchApplication) || isLoading)
-          ) {
-            tmp11 = cResult[5];
+          if (cResult[4] === tmp10) {
+            let tmp11 = cResult[5];
           }
           return tmp11;
         }
       }
-      const obj2 = {
-        gameId: tmp6,
+      const obj3 = {
+        gameId: tmp5,
         gameRecord: data,
         isLoading: (null == gameId && null != applicationId && null == getOrFetchApplication) || isLoading,
       };
-      cResult[2] = tmp6;
+      cResult[2] = tmp5;
       cResult[3] = data;
       cResult[4] = (null == gameId && null != applicationId && null == getOrFetchApplication) || isLoading;
-      cResult[5] = obj2;
-      tmp11 = obj2;
+      cResult[5] = obj3;
+      tmp11 = obj3;
+      const tmpResult = useGame;
     }
   : (arg0) => {
-      let applicationId;
-      let gameId;
-      let isLoading;
       ({ applicationId, gameId } = arg0);
       let getOrFetchApplication;
-      let tmp4;
-      const useGetOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication;
-      useGetOrFetchApplications;
+      let tmp3;
       if (null == gameId) {
-        tmp4 = applicationId;
+        tmp3 = applicationId;
       }
-      getOrFetchApplication = useGetOrFetchApplication(tmp4);
+      getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp3);
       const items = [gameId, getOrFetchApplication];
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         let tmp = gameId;
         if (null == gameId) {
           let canonicalGameId = null;
@@ -91,20 +74,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp;
       }, items);
-      const tmpResult = useGame;
-      const game = tmpResult.useGame(memo);
+      const game = useGame.useGame(memo);
       let data = game.data;
-      const obj = {
-        gameId: memo,
-        gameRecord: data,
-        isLoading: (null == gameId && null != applicationId && null == getOrFetchApplication) || isLoading,
-      };
-      isLoading = game.isLoading;
+      const obj2 = { gameId: memo, gameRecord: null, isLoading: null };
       if (data == null) {
         data = null;
       }
-      return obj;
+      obj2.gameRecord = data;
+      obj2.isLoading = (null == gameId && null != applicationId && null == getOrFetchApplication) || game.isLoading;
+      return obj2;
     };
-const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
-
-export default tmp2;

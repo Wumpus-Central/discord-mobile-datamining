@@ -1,42 +1,36 @@
 // discord_app/modules/game_profile/native/hooks/useInAppBrowserReturn.tsx
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import GameProfileActionCreatorsDefault from "../../GameProfileActionCreators.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GameProfileStore from "../../GameProfileStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let c0, gameId;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (gameId) => {
-      let obj = gameId(576);
-      const cResult = obj.c(4);
+      const cResult = gameId(576).c(4);
       gameId = gameId.gameId;
       const scrollY = gameId.scrollY;
       if (cResult[0] === gameId) {
-        let tmp2;
-        let tmp3;
         if (cResult[1] === scrollY) {
-          tmp2 = cResult[2];
-          tmp3 = cResult[3];
+          let tmp2 = cResult[2];
+          let tmp3 = cResult[3];
         }
-        const effect = react.useEffect(tmp2, tmp3);
+        const effect = noop.useEffect(tmp2, tmp3);
       }
       const fn = function s() {
         if (null != c0) {
-          let obj = gameId(dependencyMap[4]);
           if (obj.isIOS()) {
             c0 = false;
-            const tmpResult = gameId(dependencyMap[5]);
-            let closure_1 = tmpResult.subscribeToIsInAppBrowserOpen((arg0, arg1) => {
-              const tmp = arg1;
-              if (!tmp) {
+            closure_1 = gameId(dependencyMap[5]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
+              if (!arg1) {
                 if (arg0) {
                   c0 = true;
-                  const obj = { gameId, initialScrollOffset: scrollY.get() };
-                  const setGameProfilePendingReturn = GameProfileActionCreatorsDefault.setGameProfilePendingReturn;
-                  const result = setGameProfilePendingReturn(obj);
+                  const obj2 = { gameId, initialScrollOffset: scrollY.get() };
+                  const result = GameProfileActionCreatorsDefault.setGameProfilePendingReturn(obj2);
                 }
               }
               if (arg1) {
@@ -45,14 +39,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   c0 = false;
                   const pendingReturn = GameProfileStore.getPendingReturn();
                   if (null != pendingReturn) {
-                    const obj2 = {
+                    const obj4 = {
                       gameId: pendingReturn.gameId,
                       source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn,
                       initialScrollOffset: pendingReturn.initialScrollOffset,
                     };
-                    const returnToGameProfile = GameProfileActionCreatorsDefault.returnToGameProfile;
-                    GameProfileActionCreatorsDefault;
-                    returnToGameProfile(obj2);
+                    GameProfileActionCreatorsDefault.returnToGameProfile(obj4);
                   }
                 }
               }
@@ -63,6 +55,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
             };
           }
+          obj = gameId(dependencyMap[4]);
         }
       };
       const items = [gameId, scrollY];
@@ -72,25 +65,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp3 = items;
       tmp2 = fn;
+      let obj = gameId(576);
     }
   : (gameId) => {
       gameId = gameId.gameId;
       const scrollY = gameId.scrollY;
       const items = [gameId, scrollY];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (null != c0) {
-          let obj = gameId(dependencyMap[4]);
           if (obj.isIOS()) {
             c0 = false;
-            const tmpResult = gameId(dependencyMap[5]);
-            let closure_1 = tmpResult.subscribeToIsInAppBrowserOpen((arg0, arg1) => {
-              const tmp = arg1;
-              if (!tmp) {
+            closure_1 = gameId(dependencyMap[5]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
+              if (!arg1) {
                 if (arg0) {
                   c0 = true;
-                  const obj = { gameId, initialScrollOffset: scrollY.get() };
-                  const setGameProfilePendingReturn = GameProfileActionCreatorsDefault.setGameProfilePendingReturn;
-                  const result = setGameProfilePendingReturn(obj);
+                  const obj2 = { gameId, initialScrollOffset: scrollY.get() };
+                  const result = GameProfileActionCreatorsDefault.setGameProfilePendingReturn(obj2);
                 }
               }
               if (arg1) {
@@ -99,14 +89,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   c0 = false;
                   const pendingReturn = GameProfileStore.getPendingReturn();
                   if (null != pendingReturn) {
-                    const obj2 = {
+                    const obj4 = {
                       gameId: pendingReturn.gameId,
                       source: GameProfileAnalyticUtils.GameProfileSources.InAppBrowserReturn,
                       initialScrollOffset: pendingReturn.initialScrollOffset,
                     };
-                    const returnToGameProfile = GameProfileActionCreatorsDefault.returnToGameProfile;
-                    GameProfileActionCreatorsDefault;
-                    returnToGameProfile(obj2);
+                    GameProfileActionCreatorsDefault.returnToGameProfile(obj4);
                   }
                 }
               }
@@ -117,9 +105,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
             };
           }
+          obj = gameId(dependencyMap[4]);
         }
       }, items);
     };
-let result = size.fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
-
-export default tmp2;

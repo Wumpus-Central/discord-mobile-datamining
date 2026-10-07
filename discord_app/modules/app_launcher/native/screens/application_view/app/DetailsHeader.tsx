@@ -1,55 +1,20 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx
-import react2 from "../../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import BioMarkupUtils from "../../../../../markup/BioMarkupUtils.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-let dependencyMap,
-  flag,
-  num,
-  obj1,
-  ref2,
-  set,
-  set2,
-  set2Result,
-  tmp10,
-  tmp13,
-  tmp14,
-  tmp15,
-  tmp19,
-  tmp2,
-  tmp20,
-  tmp21,
-  tmp22,
-  tmp24,
-  tmp25,
-  tmp3,
-  tmp5,
-  tmp6,
-  tmp8;
-
-let c10;
-let c9;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let react = react_mod;
-({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet: metroImportDefault } = react_native);
-({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Pressable: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let colors = ["black", "transparent"];
-let createStyles = createStyles_mod;
+const createStyles = fn(4896);
 let obj = {
   animatedViewContainer: { overflow: "hidden" },
   container: { position: "relative", width: "100%" },
@@ -60,42 +25,36 @@ let obj = {
   maskLastLine: { flexDirection: "row" },
   maskFade: { width: 32 },
   collapseDescriptionCTA: { marginTop: 4 },
-  nameContainer: obj2,
+  nameContainer: { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, overflow: "hidden" },
   nameText: { flexShrink: 1 },
-  partnerLabelWrapper: obj3,
+  partnerLabelWrapper: null,
 };
-obj2 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, overflow: "hidden" };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_4, overflow: "hidden" };
+obj.partnerLabelWrapper = {
   justifyContent: "center",
   paddingVertical: 2,
   paddingHorizontal: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
   borderRadius: nativeDefault.radii.lg,
 };
-let ref = createStyles(obj);
+createStyles.createStyles(obj);
 let __initData = { code: "function DetailsHeaderTsx1(){const{height}=this.__closure;return{height:height.get()};}" };
 __initData = { code: "function DetailsHeaderTsx2(){const{height}=this.__closure;return{height:height.get()};}" };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let obj = react2;
-      const cResult = obj.c(3);
-      const obj2 = ReanimatedRexport;
-      const sharedValue = obj2.useSharedValue(null);
+      const cResult = c.c(3);
+      const sharedValue = ReanimatedRexport.useSharedValue(null);
       const fn = function t() {
-        const obj = { height: sharedValue.get() };
-        return obj;
+        return { height: sharedValue.get() };
       };
       fn.__closure = { height: sharedValue };
       fn.__workletHash = 23826674246;
       fn.__initData = __initData;
-      const obj3 = ReanimatedRexport;
-      const animatedStyle = obj3.useAnimatedStyle(fn);
+      const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
       if (cResult[0] === sharedValue) {
-        let tmp4;
         if (cResult[1] === animatedStyle) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
         return tmp4;
       }
@@ -106,19 +65,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = obj4;
     }
   : () => {
-      let fn;
-      let obj3;
-      let obj = ReanimatedRexport;
-      const sharedValue = obj.useSharedValue(null);
-      const obj2 = { containerStyle: obj3.useAnimatedStyle(fn), containerHeight: sharedValue };
-      fn = function t() {
-        const obj = { height: sharedValue.get() };
-        return obj;
+      const sharedValue = ReanimatedRexport.useSharedValue(null);
+      const obj2 = { containerStyle: null, containerHeight: null };
+      const fn = function t() {
+        return { height: sharedValue.get() };
       };
       fn.__closure = { height: sharedValue };
       fn.__workletHash = 873669633445;
       fn.__initData = __initData;
-      obj3 = ReanimatedRexport;
+      obj2.containerStyle = ReanimatedRexport.useAnimatedStyle(fn);
+      obj2.containerHeight = sharedValue;
       return obj2;
     };
 const __initData2 = {
@@ -127,444 +83,452 @@ const __initData2 = {
 let closure_17 = {
   code: "function DetailsHeaderTsx4(){const{runOnJS,setShouldLineClamp}=this.__closure;runOnJS(setShouldLineClamp)(true);}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
+ReactCompilerGating = fn(558);
+let obj4 = {
+  justifyContent: "center",
+  paddingVertical: 2,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE,
+  borderRadius: nativeDefault.radii.lg,
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let application;
-        let closure_13;
-        let closure_2;
-        let closure_4;
-        let containerHeight;
-        let containerStyle;
-        let first1;
-        let hideName;
-        let mainContainerStyle;
-        let tmp16;
-        let viewContainerStyle;
-        let tmp = ref;
-        let obj = ref(576);
-        const cResult = obj.c(81);
+        const cResult = ref(576).c(81);
         ({ application, viewContainerStyle, mainContainerStyle, hideName } = arg0);
         ref();
         if (cResult[0] !== application) {
-          const tmpResult = tmp(8826);
-          const isPartnerApplicationResult = tmpResult.isPartnerApplication(application);
+          const isPartnerApplicationResult = tmp(8826).isPartnerApplication(application);
           cResult[0] = application;
           cResult[1] = isPartnerApplicationResult;
+          const tmpResult = tmp(8826);
         }
-        ref = react.useRef(null);
-        const tmp9 = first1(react.useState(false), 2);
+        ref = noop.useRef(null);
+        const tmp9 = first1(noop.useState(false), 2);
         const first = tmp9[0];
         dependencyMap = tmp9[1];
-        const tmp11 = first1(react.useState(false), 2);
+        const tmp11 = first1(noop.useState(false), 2);
         first1 = tmp11[0];
-        react = tmp11[1];
-        let closure_5 = react.useRef(true);
+        noop = tmp11[1];
+        closure_5 = noop.useRef(true);
+        let obj = ref(576);
         ({ containerStyle, containerHeight } = closure_15());
-        closure_15();
         if (cResult[2] !== application) {
-          const tmpResult5 = tmp(8826);
-          const sectionName = tmpResult5.getSectionName(application);
+          const sectionName = tmp(8826).getSectionName(application);
           cResult[2] = application;
           cResult[3] = sectionName;
+          const tmpResult4 = tmp(8826);
         }
         if (cResult[4] !== application) {
-          const tmpResult6 = tmp(8826);
-          const str = tmpResult6.getSectionDescription(application);
+          const str = tmp(8826).getSectionDescription(application);
+          let tmp18 = null != str;
+          if (tmp18) {
+            tmp18 = str.trim().length > 0;
+          }
           cResult[4] = application;
           cResult[5] = str;
-          cResult[6] = null != str && str.trim().length > 0;
-          tmp16 = str;
-          const tmp18 = null != str && str.trim().length > 0;
+          cResult[6] = tmp18;
+          let tmp16 = str;
+          const tmpResult5 = tmp(8826);
         } else {
           tmp16 = cResult[5];
         }
-        const tmp8Result = first1(react.useState(null), 2);
-        let closure_7 = tmp8Result[0];
-        let closure_8 = tmp8Result[1];
-        const tmp8Result4 = first1(react.useState(null), 2);
+        const tmp8Result = first1(noop.useState(null), 2);
+        closure_7 = tmp8Result[0];
+        closure_8 = tmp8Result[1];
+        const tmp8Result4 = first1(noop.useState(null), 2);
         const first2 = tmp8Result4[0];
-        let closure_10 = tmp8Result4[1];
-        colors = obj3.useRef(0);
+        closure_10 = tmp8Result4[1];
+        const colors = obj3.useRef(0);
         ref = obj3.useRef(0);
-        [r10087, closure_13] = first1(react.useState(false), 2);
-        first1(react.useState(false), 2);
-        const tmp8Result6 = first1(react.useState(false), 2);
+        const tmp13 = closure_15();
+        [r10087, closure_13] = first1(noop.useState(false), 2);
+        const tmp8Result6 = first1(noop.useState(false), 2);
         const first3 = tmp8Result6[0];
         closure_15 = tmp8Result6[1];
-        if (null != tmp16) {
-          if (cResult[7] !== tmp16) {
-            const tmpResult7 = tmp(8971);
-            let result = tmpResult7.parseBioReactWithCachedAST(tmp16);
-            cResult[7] = tmp16;
-            cResult[8] = result;
-          }
-        }
-        const tmpResult8 = tmp(5919);
-        const isScreenLandscape = tmpResult8.useIsScreenLandscape();
-        const tmp29 = first(7957)(isScreenLandscape);
-        closure_17 = tmp29;
-        if (cResult[9] === isScreenLandscape) {
-          let tmp30;
-          let tmp31;
-          if (cResult[10] === tmp29) {
-            tmp30 = cResult[11];
-            tmp31 = cResult[12];
-          }
-          const effect = obj3.useEffect(tmp30, tmp31);
-          const _Symbol = Symbol;
-          if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            function pe(nativeEvent) {
-              ref2.current = nativeEvent.nativeEvent.layout.height;
-              const tmp = ref2.current > 0 && ref.current > 0;
-              if (tmp) {
-                closure_15(true);
-              }
+        if (null == tmp16) {
+          const isScreenLandscape = tmp(5919).useIsScreenLandscape();
+          const tmp29 = first(7957)(isScreenLandscape);
+          closure_17 = tmp29;
+          if (cResult[9] === isScreenLandscape) {
+            if (cResult[10] === tmp29) {
+              let tmp30 = cResult[11];
+              let tmp31 = cResult[12];
             }
-            cResult[13] = pe;
-          }
-          if (cResult[14] === containerHeight) {
-            if (cResult[17] !== first2) {
-              class Se {
-                constructor(nativeEvent) {
-                  const lines = nativeEvent.nativeEvent.lines;
-                  const tmp = null == first2 && null != lines[0];
-                  if (tmp) {
-                    closure_10(lines[0].height);
+            const effect = obj3.useEffect(tmp30, tmp31);
+            const _Symbol = Symbol;
+            if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+              function pe(nativeEvent) {
+                ref2.current = nativeEvent.nativeEvent.layout.height;
+                let tmp = ref2.current > 0;
+                if (tmp) {
+                  tmp = ref.current > 0;
+                }
+                if (tmp) {
+                  closure_15(true);
+                }
+              }
+              cResult[13] = pe;
+            }
+            if (cResult[14] === containerHeight) {
+              if (cResult[17] !== first2) {
+                class Se {
+                  constructor(arg0) {
+                    lines = arg0.nativeEvent.lines;
+                    length = lines.length;
+                    tmp = null == closure_9 && null != lines[0];
+                    if (tmp) {
+                      tmp2 = closure_10;
+                      tmp3 = closure_10(lines[0].height);
+                    }
+                    if (null == closure_0.current) {
+                      closure_0.current = length;
+                    }
+                    if (length > 3) {
+                      tmp4 = closure_13;
+                      flag = true;
+                      tmp5 = closure_13(true);
+                      tmp6 = closure_2;
+                      tmp7 = closure_2(true);
+                    }
+                    return;
                   }
-                  if (null == ref.current) {
-                    ref.current = lines.length;
+                }
+                cResult[17] = first2;
+                class Te {
+                  constructor() {
+                    if (!closure_1) {
+                      return;
+                    } else {
+                      tmp = closure_5;
+                      flag = false;
+                      closure_5.current = false;
+                      tmp2 = closure_3;
+                      if (closure_3) {
+                        tmp12 = containerHeight;
+                        tmp13 = closure_0;
+                        tmp14 = closure_2;
+                        obj2 = closure_0(closure_2[13]);
+                        tmp15 = closure_11;
+                        current = closure_11.current;
+                        tmp16 = closure_0;
+                        tmp17 = closure_2;
+                        fn = function t() {
+                          ref(closure_2[8]).runOnJS(setShouldLineClamp)(true);
+                        };
+                        obj1 = { runOnJS: null, setShouldLineClamp: null };
+                        tmp18 = closure_0;
+                        tmp19 = closure_2;
+                        obj1.runOnJS = closure_0(closure_2[8]).runOnJS;
+                        tmp20 = closure_13;
+                        obj1.setShouldLineClamp = closure_13;
+                        fn.__closure = obj1;
+                        num = 10020568053710;
+                        fn.__workletHash = 10020568053710;
+                        tmp21 = closure_16;
+                        fn.__initData = closure_16;
+                        str = "respect-motion-settings";
+                        tmp22 = obj2;
+                        tmp23 = current;
+                        tmp24 = fn;
+                        result = containerHeight.set(
+                          obj2.withTiming(
+                            current,
+                            closure_0(closure_2[14]).timingStandard,
+                            "respect-motion-settings",
+                            fn,
+                          ),
+                        );
+                      } else {
+                        tmp3 = closure_13;
+                        tmp4 = closure_13(false);
+                        tmp5 = containerHeight;
+                        tmp6 = closure_0;
+                        tmp7 = closure_2;
+                        obj = closure_0(closure_2[13]);
+                        tmp8 = closure_12;
+                        tmp9 = closure_0;
+                        tmp10 = closure_2;
+                        result1 = containerHeight.set(
+                          obj.withTiming(closure_12.current, closure_0(closure_2[14]).timingStandard),
+                        );
+                      }
+                      tmp26 = closure_4;
+                      tmp27 = closure_4(!tmp2);
+                    }
+                    return;
                   }
-                  if (lines.length > 3) {
-                    setShouldLineClamp(true);
-                    closure_2(true);
+                }
+                cResult[18] = Se;
+              } else {
+                class Se {
+                  constructor(arg0) {
+                    lines = arg0.nativeEvent.lines;
+                    length = lines.length;
+                    tmp = null == closure_9 && null != lines[0];
+                    if (tmp) {
+                      tmp2 = closure_10;
+                      tmp3 = closure_10(lines[0].height);
+                    }
+                    if (null == closure_0.current) {
+                      closure_0.current = length;
+                    }
+                    if (length > 3) {
+                      tmp4 = closure_13;
+                      flag = true;
+                      tmp5 = closure_13(true);
+                      tmp6 = closure_2;
+                      tmp7 = closure_2(true);
+                    }
+                    return;
                   }
                 }
               }
-              cResult[17] = first2;
+              if (cResult[19] === containerHeight) {
+                class Se {
+                  constructor(arg0) {
+                    lines = arg0.nativeEvent.lines;
+                    length = lines.length;
+                    tmp = null == closure_9 && null != lines[0];
+                    if (tmp) {
+                      tmp2 = closure_10;
+                      tmp3 = closure_10(lines[0].height);
+                    }
+                    if (null == closure_0.current) {
+                      closure_0.current = length;
+                    }
+                    if (length > 3) {
+                      tmp4 = closure_13;
+                      flag = true;
+                      tmp5 = closure_13(true);
+                      tmp6 = closure_2;
+                      tmp7 = closure_2(true);
+                    }
+                    return;
+                  }
+                }
+              }
               class Te {
                 constructor() {
-                  tmp = closure_1;
-                  if (tmp) {
-                    tmp2 = closure_5;
+                  if (!closure_1) {
+                    return;
+                  } else {
+                    tmp = closure_5;
                     flag = false;
                     closure_5.current = false;
-                    tmp3 = closure_3;
-                    if (tmp3) {
-                      tmp13 = containerHeight;
-                      tmp14 = closure_0;
-                      tmp15 = closure_2;
-                      set2 = containerHeight.set;
-                      tmp16 = closure_0(closure_2[13]);
-                      tmp17 = closure_11;
+                    tmp2 = closure_3;
+                    if (closure_3) {
+                      tmp12 = containerHeight;
+                      tmp13 = closure_0;
+                      tmp14 = closure_2;
+                      obj2 = closure_0(closure_2[13]);
+                      tmp15 = closure_11;
                       current = closure_11.current;
-                      tmp18 = closure_0;
-                      tmp19 = closure_2;
-                      withTiming = tmp16.withTiming;
+                      tmp16 = closure_0;
+                      tmp17 = closure_2;
                       fn = function t() {
-                        const obj = ref(closure_2[8]);
-                        obj.runOnJS(setShouldLineClamp)(true);
+                        ref(closure_2[8]).runOnJS(setShouldLineClamp)(true);
                       };
                       obj1 = { runOnJS: null, setShouldLineClamp: null };
-                      tmp20 = closure_0;
-                      tmp21 = closure_2;
-                      timingStandard = closure_0(closure_2[14]).timingStandard;
+                      tmp18 = closure_0;
+                      tmp19 = closure_2;
                       obj1.runOnJS = closure_0(closure_2[8]).runOnJS;
-                      tmp22 = closure_13;
+                      tmp20 = closure_13;
                       obj1.setShouldLineClamp = closure_13;
                       fn.__closure = obj1;
                       num = 10020568053710;
                       fn.__workletHash = 10020568053710;
-                      tmp23 = closure_16;
+                      tmp21 = closure_16;
                       fn.__initData = closure_16;
                       str = "respect-motion-settings";
-                      tmp24 = tmp16;
-                      tmp25 = current;
-                      tmp26 = fn;
-                      set2Result = set2(withTiming(current, timingStandard, "respect-motion-settings", fn));
+                      tmp22 = obj2;
+                      tmp23 = current;
+                      tmp24 = fn;
+                      result = containerHeight.set(
+                        obj2.withTiming(
+                          current,
+                          closure_0(closure_2[14]).timingStandard,
+                          "respect-motion-settings",
+                          fn,
+                        ),
+                      );
                     } else {
-                      tmp4 = closure_13;
-                      tmp5 = closure_13(false);
-                      tmp6 = containerHeight;
-                      tmp7 = closure_0;
-                      tmp8 = closure_2;
-                      set = containerHeight.set;
+                      tmp3 = closure_13;
+                      tmp4 = closure_13(false);
+                      tmp5 = containerHeight;
+                      tmp6 = closure_0;
+                      tmp7 = closure_2;
                       obj = closure_0(closure_2[13]);
-                      tmp9 = closure_12;
-                      tmp10 = closure_0;
-                      tmp11 = closure_2;
-                      result = set(obj.withTiming(closure_12.current, closure_0(closure_2[14]).timingStandard));
+                      tmp8 = closure_12;
+                      tmp9 = closure_0;
+                      tmp10 = closure_2;
+                      result1 = containerHeight.set(
+                        obj.withTiming(closure_12.current, closure_0(closure_2[14]).timingStandard),
+                      );
                     }
-                    tmp28 = closure_4;
-                    tmp29 = closure_4(!tmp3);
+                    tmp26 = closure_4;
+                    tmp27 = closure_4(!tmp2);
                   }
                   return;
                 }
               }
-              cResult[18] = Se;
-            } else {
-              class Se {
-                constructor(nativeEvent) {
-                  const lines = nativeEvent.nativeEvent.lines;
-                  const tmp = null == first2 && null != lines[0];
-                  if (tmp) {
-                    closure_10(lines[0].height);
-                  }
-                  if (null == ref.current) {
-                    ref.current = lines.length;
-                  }
-                  if (lines.length > 3) {
-                    setShouldLineClamp(true);
-                    closure_2(true);
-                  }
+              cResult[19] = containerHeight;
+              cResult[20] = first1;
+              cResult[21] = first;
+              cResult[22] = Te;
+            }
+            function xe(nativeEvent) {
+              if (!first3) {
+                ref.current = nativeEvent.nativeEvent.layout.height;
+                const result = containerHeight.set(ref.current);
+                if (tmp6) {
+                  closure_15(true);
                 }
+                tmp6 = ref2.current > 0 && ref.current > 0;
               }
             }
-            if (cResult[19] === containerHeight) {
-              class Se {
-                constructor(nativeEvent) {
-                  const lines = nativeEvent.nativeEvent.lines;
-                  const tmp = null == first2 && null != lines[0];
-                  if (tmp) {
-                    closure_10(lines[0].height);
-                  }
-                  if (null == ref.current) {
-                    ref.current = lines.length;
-                  }
-                  if (lines.length > 3) {
-                    setShouldLineClamp(true);
-                    closure_2(true);
-                  }
-                }
-              }
-            }
-            class Te {
-              constructor() {
-                tmp = closure_1;
-                if (tmp) {
-                  tmp2 = closure_5;
-                  flag = false;
-                  closure_5.current = false;
-                  tmp3 = closure_3;
-                  if (tmp3) {
-                    tmp13 = containerHeight;
-                    tmp14 = closure_0;
-                    tmp15 = closure_2;
-                    set2 = containerHeight.set;
-                    tmp16 = closure_0(closure_2[13]);
-                    tmp17 = closure_11;
-                    current = closure_11.current;
-                    tmp18 = closure_0;
-                    tmp19 = closure_2;
-                    withTiming = tmp16.withTiming;
-                    fn = function t() {
-                      const obj = ref(closure_2[8]);
-                      obj.runOnJS(setShouldLineClamp)(true);
-                    };
-                    obj1 = { runOnJS: null, setShouldLineClamp: null };
-                    tmp20 = closure_0;
-                    tmp21 = closure_2;
-                    timingStandard = closure_0(closure_2[14]).timingStandard;
-                    obj1.runOnJS = closure_0(closure_2[8]).runOnJS;
-                    tmp22 = closure_13;
-                    obj1.setShouldLineClamp = closure_13;
-                    fn.__closure = obj1;
-                    num = 10020568053710;
-                    fn.__workletHash = 10020568053710;
-                    tmp23 = closure_16;
-                    fn.__initData = closure_16;
-                    str = "respect-motion-settings";
-                    tmp24 = tmp16;
-                    tmp25 = current;
-                    tmp26 = fn;
-                    set2Result = set2(withTiming(current, timingStandard, "respect-motion-settings", fn));
-                  } else {
-                    tmp4 = closure_13;
-                    tmp5 = closure_13(false);
-                    tmp6 = containerHeight;
-                    tmp7 = closure_0;
-                    tmp8 = closure_2;
-                    set = containerHeight.set;
-                    obj = closure_0(closure_2[13]);
-                    tmp9 = closure_12;
-                    tmp10 = closure_0;
-                    tmp11 = closure_2;
-                    result = set(obj.withTiming(closure_12.current, closure_0(closure_2[14]).timingStandard));
-                  }
-                  tmp28 = closure_4;
-                  tmp29 = closure_4(!tmp3);
-                }
-                return;
-              }
-            }
-            cResult[19] = containerHeight;
-            cResult[20] = first1;
-            cResult[21] = first;
-            cResult[22] = Te;
+            cResult[14] = containerHeight;
+            cResult[15] = first3;
+            cResult[16] = xe;
           }
-          function xe(nativeEvent) {
-            if (!first3) {
-              ref.current = nativeEvent.nativeEvent.layout.height;
-              const result = containerHeight.set(ref.current);
-              const tmp7 = ref2.current > 0 && ref.current > 0;
-              if (tmp7) {
-                closure_15(true);
-              }
+          function he() {
+            if (isScreenLandscape !== closure_17) {
+              closure_15(false);
+              closure_12.current = 0;
+              closure_11.current = 0;
             }
           }
-          cResult[14] = containerHeight;
-          cResult[15] = first3;
-          cResult[16] = xe;
-        }
-        function he() {
-          if (isScreenLandscape !== closure_17) {
-            closure_15(false);
-            ref2.current = 0;
-            ref.current = 0;
+          const items = [isScreenLandscape, tmp29];
+          cResult[9] = isScreenLandscape;
+          cResult[10] = tmp29;
+          cResult[11] = he;
+          cResult[12] = items;
+          tmp31 = items;
+          tmp30 = he;
+          const tmpResult6 = tmp(5919);
+        } else {
+          class Se {
+            constructor(arg0) {
+              lines = arg0.nativeEvent.lines;
+              length = lines.length;
+              tmp = null == closure_9 && null != lines[0];
+              if (tmp) {
+                tmp2 = closure_10;
+                tmp3 = closure_10(lines[0].height);
+              }
+              if (null == closure_0.current) {
+                closure_0.current = length;
+              }
+              if (length > 3) {
+                tmp4 = closure_13;
+                flag = true;
+                tmp5 = closure_13(true);
+                tmp6 = closure_2;
+                tmp7 = closure_2(true);
+              }
+              return;
+            }
           }
         }
-        const items = [isScreenLandscape, tmp29];
-        cResult[9] = isScreenLandscape;
-        cResult[10] = tmp29;
-        cResult[11] = he;
-        cResult[12] = items;
-        tmp31 = items;
-        tmp30 = he;
+        const tmp8Result5 = first1(noop.useState(false), 2);
       }
     : (viewContainerStyle) => {
-        let Text;
-        let Text2;
-        let Text3;
-        let _undefined;
-        let application;
-        let c14;
-        let c6;
-        let closure_11;
-        let closure_2;
-        let closure_4;
-        let containerStyle;
-        let hideName;
-        let intl;
-        let intl3;
-        let intl4;
-        let items10;
-        let items11;
-        let items13;
-        let items14;
-        let items15;
-        let items2;
-        let items3;
-        let items4;
-        let items5;
-        let items6;
-        let items8;
-        let mainContainerStyle;
-        let obj10;
-        let obj19;
-        let obj21;
-        let obj23;
-        let obj6;
-        let tmp17;
-        let tmp44;
         ({ application, mainContainerStyle, hideName } = viewContainerStyle);
         let first1;
-        react = undefined;
+        noop = undefined;
         c6 = undefined;
         let num2;
-        let closure_9;
+        closure_9 = undefined;
         let num3;
-        colors = undefined;
+        let colors;
         ref = undefined;
-        ref2 = undefined;
         c14 = undefined;
         let first2;
-        let closure_16;
+        closure_16 = undefined;
         let isScreenLandscape;
-        let closure_18;
-        viewContainerStyle = viewContainerStyle.viewContainerStyle;
+        closure_18 = undefined;
         let tmp = ref();
         let obj = ref(8826);
-        let obj2 = react;
-        const isPartnerApplicationResult = obj.isPartnerApplication(application);
-        ref = react.useRef(null);
-        let tmp7 = first1(react.useState(false), 2);
+        ref = noop.useRef(null);
+        const tmp7 = first1(noop.useState(false), 2);
         const first = tmp7[0];
         dependencyMap = tmp7[1];
-        const tmp9 = first1(react.useState(false), 2);
+        const tmp9 = first1(noop.useState(false), 2);
         first1 = tmp9[0];
-        react = tmp9[1];
-        let closure_5 = react.useRef(true);
+        noop = tmp9[1];
+        closure_5 = noop.useRef(true);
+        const isPartnerApplicationResult = ref(8826).isPartnerApplication(application);
         ({ containerHeight: c6, containerStyle } = first2());
-        first2();
-        const obj3 = ref(8826);
-        const sectionName = obj3.getSectionName(application);
-        const obj4 = ref(8826);
-        const str = obj4.getSectionDescription(application);
+        const tmp11 = first2();
+        const sectionName = ref(8826).getSectionName(application);
+        let obj3 = ref(8826);
+        const str = ref(8826).getSectionDescription(application);
         let tmp27Result5 = null != str;
         if (tmp27Result5) {
           tmp27Result5 = str.trim().length > 0;
         }
-        const tmp6Result = first1(obj2.useState(null), 2);
+        const tmp6Result = first1(noop.useState(null), 2);
         num2 = tmp6Result[0];
         closure_9 = tmp6Result[1];
-        const tmp6Result4 = first1(obj2.useState(null), 2);
+        const tmp6Result4 = first1(noop.useState(null), 2);
         num3 = tmp6Result4[0];
         colors = tmp6Result4[1];
         ref = obj2.useRef(0);
-        ref2 = obj2.useRef(0);
-        [tmp17, c14] = first1(obj2.useState(false), 2);
-        first1(obj2.useState(false), 2);
-        const tmp6Result6 = first1(obj2.useState(false), 2);
+        noop.useRef(0);
+        const obj4 = ref(8826);
+        [tmp17, c14] = first1(noop.useState(false), 2);
+        const tmp6Result6 = first1(noop.useState(false), 2);
         first2 = tmp6Result6[0];
         closure_16 = tmp6Result6[1];
         const items = [str];
         const memo = obj2.useMemo(() => {
           let result = null;
           if (null != str) {
-            const obj = BioMarkupUtils;
-            result = obj.parseBioReactWithCachedAST(tmp);
+            result = BioMarkupUtils.parseBioReactWithCachedAST(tmp);
           }
           return result;
         }, items);
-        const tmp2Result = ref(5919);
-        isScreenLandscape = tmp2Result.useIsScreenLandscape();
+        const tmp6Result5 = first1(noop.useState(false), 2);
+        isScreenLandscape = ref(5919).useIsScreenLandscape();
         const tmp23 = first(7957)(isScreenLandscape);
         closure_18 = tmp23;
         const items1 = [isScreenLandscape, tmp23];
         const effect = obj2.useEffect(() => {
           if (isScreenLandscape !== closure_18) {
             closure_16(false);
-            ref2.current = 0;
-            ref.current = 0;
+            closure_13.current = 0;
+            closure_12.current = 0;
           }
         }, items1);
         let tmp26 = first;
-        first(5980)(ref);
+        const tmp2Result = ref(5919);
         if (first) {
           tmp26 = !first1;
         }
-        const obj5 = { style: items2, children: closure_9(closure_5, obj6) };
-        items2 = [tmp.animatedViewContainer, containerStyle, viewContainerStyle];
-        obj6 = {
-          style: items3,
+        const obj5 = { style: null, children: null };
+        const items2 = [tmp.animatedViewContainer, containerStyle, viewContainerStyle.viewContainerStyle];
+        obj5.style = items2;
+        const obj6 = {
+          style: null,
           onLayout(nativeEvent) {
             if (!first2) {
               ref.current = nativeEvent.nativeEvent.layout.height;
               const result = _undefined.set(ref.current);
-              const tmp7 = ref2.current > 0 && ref.current > 0;
-              if (tmp7) {
+              if (tmp6) {
                 closure_16(true);
               }
+              tmp6 = ref2.current > 0 && ref.current > 0;
             }
           },
-          children: items5,
+          children: null,
         };
-        items3 = [tmp.container, mainContainerStyle];
+        const items3 = [tmp.container, mainContainerStyle];
+        obj6.style = items3;
+        const obj7 = { style: tmp.nameContainer, children: null };
         let tmp29Result = !hideName;
-        const obj7 = { style: tmp.nameContainer, children: items4 };
-        const View = tmp22(4618).View;
-        const tmp28 = num3;
         if (!hideName) {
           const obj8 = {
             style: tmp.nameText,
@@ -575,101 +539,101 @@ const memoResult = react.memo(
           };
           tmp29Result = tmp29(tmp2(4892).Heading, obj8);
         }
-        items4 = [tmp29Result];
+        const items4 = [tmp29Result];
         let tmp29Result5 = null;
         if (isPartnerApplicationResult) {
-          const obj9 = { style: tmp.partnerLabelWrapper, children: num2(Text, obj10) };
-          obj10 = { variant: "text-xs/medium", color: "text-default", children: intl.string(ref(1126).t.LO4f0P) };
-          Text = tmp2(4892).Text;
-          intl = tmp2(1126).intl;
+          const obj9 = { style: tmp.partnerLabelWrapper, children: null };
+          const obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
+          const intl = tmp2(1126).intl;
+          obj10.children = intl.string(tmp2(1126).t.LO4f0P);
+          obj9.children = tmp29(tmp2(4892).Text, obj10);
           tmp29Result5 = tmp29(tmp30, obj9);
         }
         items4[1] = tmp29Result5;
-        items5 = [closure_9(closure_5, obj7)];
+        obj7.children = items4;
+        const items5 = [closure_9(closure_5, obj7)];
         let tmp27Result4 = tmp27Result5;
-        if (tmp27Result4) {
-          let tmp29Result6;
+        if (tmp27Result5) {
           let descriptionContainer = !hideName;
-          const tmp34 = c6;
           if (!hideName) {
             descriptionContainer = tmp.descriptionContainer;
           }
-          const obj12 = { style: null };
-          const absoluteFill = str.absoluteFill;
           const obj11 = {
             style: descriptionContainer,
             onPress() {
               if (first) {
                 closure_5.current = false;
                 if (first1) {
-                  set2 = _undefined.set;
+                  const obj2 = timing;
                   const current = ref.current;
-                  const withTiming = timing.withTiming;
                   const fn = function t() {
-                    const obj = ref(closure_2[8]);
-                    obj.runOnJS(setShouldLineClamp)(true);
+                    ref(closure_2[8]).runOnJS(setShouldLineClamp)(true);
                   };
-                  const obj2 = { runOnJS: ReanimatedRexport.runOnJS, setShouldLineClamp };
-                  const timingStandard = timingPresets.timingStandard;
-                  fn.__closure = obj2;
+                  const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setShouldLineClamp };
+                  fn.__closure = obj3;
                   fn.__workletHash = 2433505176233;
                   fn.__initData = __initData;
-                  set2(withTiming(current, timingStandard, "respect-motion-settings", fn));
+                  const result = _undefined.set(
+                    obj2.withTiming(current, timingPresets.timingStandard, "respect-motion-settings", fn),
+                  );
                 } else {
                   setShouldLineClamp(false);
-                  set = _undefined.set;
-                  let obj = timing;
-                  const result = set(obj.withTiming(ref2.current, timingPresets.timingStandard));
+                  const result1 = _undefined.set(timing.withTiming(ref2.current, timingPresets.timingStandard));
                 }
                 closure_4(!first1);
               }
             },
             accessibilityRole: "button",
-            children: items10,
+            children: null,
           };
-          const tmp22Result = first(6059);
+          const obj12 = { style: null };
+          const absoluteFill = str.absoluteFill;
           if (tmp26) {
-            const obj13 = { style: absoluteFill, children: items6 };
+            const obj13 = { style: absoluteFill, children: null };
             obj12.style = tmp.maskFill;
-            items6 = [tmp29(closure_5, obj12)];
+            const items6 = [tmp29(tmp30, obj12)];
             const items7 = [tmp.maskLastLine];
             if (num3 == null) {
               num3 = 0;
             }
-            const obj14 = { style: items7, children: items8 };
+            const obj14 = { style: null, children: null };
             const obj15 = { height: num3 };
             items7[1] = obj15;
+            obj14.style = items7;
             const obj16 = { style: tmp.maskFill };
-            items8 = [tmp29(closure_5, obj16), ,];
+            const items8 = [tmp29(tmp30, obj16), ,];
             const obj17 = {
-              start: ref(1105).HorizontalGradient.START,
-              end: ref(1105).HorizontalGradient.END,
+              start: tmp2(1105).HorizontalGradient.START,
+              end: tmp2(1105).HorizontalGradient.END,
               colors,
               style: tmp.maskFade,
             };
-            const tmp22Result2 = first(5612);
-            items8[1] = num2(tmp22Result2, obj17);
+            items8[1] = tmp29(tmp22(5612), obj17);
             if (num2 == null) {
               num2 = 0;
             }
-            const obj18 = { style: obj19 };
-            obj19 = { width: num2 };
-            items8[2] = num2(closure_5, obj18);
-            items6[1] = closure_9(closure_5, obj14);
-            tmp29Result6 = tmp27(tmp30, obj13);
+            const obj18 = { style: null };
+            const obj19 = { width: num2 };
+            obj18.style = obj19;
+            items8[2] = tmp29(tmp30, obj18);
+            obj14.children = items8;
+            items6[1] = tmp27(tmp30, obj14);
+            obj13.children = items6;
+            let tmp29Result6 = tmp27(tmp30, obj13);
+            const tmp22Result2 = tmp22(5612);
           } else {
             const items9 = [absoluteFill, tmp.maskFill];
             obj12.style = items9;
             tmp29Result6 = tmp29(tmp30, obj12);
           }
-          const obj20 = { maskElement: tmp29Result6, children: num2(Text2, obj21) };
-          Text2 = tmp2(4892).Text;
-          obj21 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
-          items10 = [tmp29(tmp22Result, obj20), ,];
+          const obj20 = { maskElement: tmp29Result6, children: null };
+          const obj21 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
+          obj20.children = tmp29(tmp2(4892).Text, obj21);
+          const items10 = [tmp29(tmp22(6059), obj20), ,];
           let tmp29Result7 = null;
           if (tmp26) {
-            const obj22 = { style: tmp.viewMoreCTA, children: closure_9(Text3, obj23) };
-            obj23 = {
+            const obj22 = { style: tmp.viewMoreCTA, children: null };
+            const obj23 = {
               onLayout(nativeEvent) {
                 if (null == num2) {
                   closure_9(nativeEvent.nativeEvent.layout.width);
@@ -677,11 +641,12 @@ const memoResult = react.memo(
               },
               variant: "text-sm/medium",
               color: "text-brand",
-              children: items11,
+              children: null,
             };
-            Text3 = tmp2(4892).Text;
             const intl2 = tmp2(1126).intl;
-            items11 = ["\u2026 ", intl2.string(tmp2(1126).t["OBCR+p"])];
+            const items11 = ["\u2026 ", intl2.string(tmp2(1126).t["OBCR+p"])];
+            obj23.children = items11;
+            obj22.children = tmp27(tmp2(4892).Text, obj23);
             tmp29Result7 = tmp29(tmp30, obj22);
           }
           items10[1] = tmp29Result7;
@@ -693,79 +658,86 @@ const memoResult = react.memo(
                 variant: "text-sm/medium",
                 color: "text-brand",
                 style: tmp.collapseDescriptionCTA,
-                children: intl3.string(ref(1126).t.D5xGUK),
+                children: null,
               };
-              const Text4 = tmp2(4892).Text;
-              intl3 = tmp2(1126).intl;
-              tmp29Result8 = tmp29(Text4, obj24);
+              const intl3 = tmp2(1126).intl;
+              obj24.children = intl3.string(tmp2(1126).t.D5xGUK);
+              tmp29Result8 = tmp29(tmp2(4892).Text, obj24);
             }
           }
           items10[2] = tmp29Result8;
-          tmp27Result4 = tmp27(tmp34, obj11);
+          obj11.children = items10;
+          tmp27Result4 = tmp27(c6, obj11);
+          const tmp22Result = tmp22(6059);
         }
         items5[1] = tmp27Result4;
-        const children = [tmp29(View, obj5)];
+        obj6.children = items5;
+        obj5.children = closure_9(closure_5, obj6);
+        const children = [num2(first(4618).View, obj5)];
         let tmp27Result6 = !first2;
-        if (tmp27Result6) {
-          const obj25 = {
-            style: items13,
-            onLayout(nativeEvent) {
-              ref2.current = nativeEvent.nativeEvent.layout.height;
-              const tmp = ref2.current > 0 && ref.current > 0;
-              if (tmp) {
-                closure_16(true);
-              }
-            },
-            children: items14,
+        if (!first2) {
+          const obj25 = { style: null, onLayout: null, children: null };
+          const items13 = [mainContainerStyle, tmp.measuringContainer, { opacity: 0, pointerEvents: "none" }];
+          obj25.style = items13;
+          obj25.onLayout = function onLayout(nativeEvent) {
+            ref2.current = nativeEvent.nativeEvent.layout.height;
+            let tmp = ref2.current > 0;
+            if (tmp) {
+              tmp = ref.current > 0;
+            }
+            if (tmp) {
+              closure_16(true);
+            }
           };
-          items13 = [mainContainerStyle, tmp.measuringContainer, { opacity: 0, pointerEvents: "none" }];
           let tmp29Result9 = !hideName;
-          if (tmp29Result9) {
+          if (!hideName) {
             const obj26 = { variant: "heading-lg/bold", color: "text-default", children: sectionName };
             tmp29Result9 = tmp29(tmp2(4892).Heading, obj26);
           }
-          items14 = [tmp29Result9];
+          const items14 = [tmp29Result9];
           if (tmp27Result5) {
-            const obj27 = { style: tmp44, children: items15 };
+            let descriptionContainer2 = !hideName;
+            if (!hideName) {
+              descriptionContainer2 = tmp.descriptionContainer;
+            }
+            const obj27 = { style: descriptionContainer2, children: null };
             const obj28 = {
               variant: "text-sm/medium",
               color: "text-default",
               onTextLayout(nativeEvent) {
                 const lines = nativeEvent.nativeEvent.lines;
-                const tmp = null == num3 && null != lines[0];
                 if (tmp) {
                   closure_11(lines[0].height);
                 }
                 if (null == ref.current) {
-                  ref.current = lines.length;
+                  ref.current = length;
                 }
                 if (lines.length > 3) {
                   setShouldLineClamp(true);
                   closure_2(true);
                 }
+                tmp = null == num3 && null != lines[0];
               },
               children: memo,
             };
-            tmp44 = !hideName && tmp.descriptionContainer;
-            items15 = [tmp29(tmp2(4892).Text, obj28)];
+            const items15 = [tmp29(tmp2(4892).Text, obj28)];
             const obj29 = {
               variant: "text-sm/medium",
               color: "text-brand",
               style: tmp.collapseDescriptionCTA,
-              children: intl4.string(ref(1126).t.D5xGUK),
+              children: null,
             };
-            const Text5 = tmp2(4892).Text;
-            intl4 = tmp2(1126).intl;
-            items15[1] = num2(Text5, obj29);
+            const intl4 = tmp2(1126).intl;
+            obj29.children = intl4.string(tmp2(1126).t.D5xGUK);
+            items15[1] = tmp29(tmp2(4892).Text, obj29);
+            obj27.children = items15;
             tmp27Result5 = tmp27(tmp30, obj27);
           }
           items14[1] = tmp27Result5;
+          obj25.children = items14;
           tmp27Result6 = tmp27(tmp30, obj25);
         }
         children[1] = tmp27Result6;
-        return closure_9(tmp28, { children });
+        return closure_9(num3, { children });
       },
 );
-let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx");
-
-export default memoResult;

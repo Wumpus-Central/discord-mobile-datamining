@@ -1,27 +1,19 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildSpaceSystemMessage.tsx
-import intl3 from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import _modDef2425 from "../../../../guild_space/GuildSpace.messages.js";
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildSpaceSystemMessage.tsx",
 );
 
 export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMessage(message) {
-  let guildSpaceLeaderboardSystemMessage;
-  let obj3;
-  let roleStyle;
-  let tmp19;
-  let tmp20;
-  let tmp9;
-  let user;
   const guildSpaceData = message.message.guildSpaceData;
   let whiteboard_busy;
   if (guildSpaceData != null) {
@@ -31,58 +23,60 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
     ({ message, roleStyle } = message);
     const sampled_user_ids = whiteboard_busy.sampled_user_ids;
     const mapped = sampled_user_ids.map((item) => user.getUser(item));
+    let string = require;
+    let merged = dependencyMap;
     const found = mapped.filter(GlobalUtils.isNotNullish);
     const substr = found.slice(0, 2);
     const diff = whiteboard_busy.connected_user_count - substr.length;
     if (0 !== substr.length) {
-      let tmp12;
-      let formatToPartsResult;
       if (diff > 0) {
         const channel = ChannelStore.getChannel(message.channel_id);
-        [tmp19, tmp20] = substr;
-        _slicedToArray(substr, 2);
-        const tmp6Result = useAuthorWithProcessedColor;
-        const userAuthorWithProcessedColor = tmp6Result.getUserAuthorWithProcessedColor(tmp19, channel);
-        const tmp6Result2 = useAuthorWithProcessedColor;
-        const userAuthorWithProcessedColor1 = tmp6Result2.getUserAuthorWithProcessedColor(tmp20, channel);
-        const intl2 = intl3.intl;
-        tmp12 = importDefault;
-        const formatToParts = intl2.formatToParts;
+        [tmp18, tmp19] = substr;
+        const tmp17 = _slicedToArray(substr, 2);
+        const userAuthorWithProcessedColor = string(7630).getUserAuthorWithProcessedColor(tmp18, channel);
+        const stringResult = string(7630);
+        const userAuthorWithProcessedColor1 = string(7630).getUserAuthorWithProcessedColor(tmp19, channel);
+        const intl2 = string(1126).intl;
+        let tmp11 = importDefault;
         const obj2 = {
           displayCount: substr.length,
           username: userAuthorWithProcessedColor.nick,
-          usernameOnClick: formatUsernameOnClickDefault(obj3),
-          username2: userAuthorWithProcessedColor1.nick,
-          username2OnClick: tmp9,
-          additionalCount: diff,
+          usernameOnClick: null,
+          username2: null,
+          username2OnClick: null,
+          additionalCount: null,
         };
-        const zUiZPF = _modDef2425.zUiZPF;
-        tmp9 = undefined;
-        obj3 = { userId: tmp19.id, message, author: userAuthorWithProcessedColor, roleStyle };
-        if (null != tmp20) {
-          const obj4 = { userId: tmp20.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp9 = tmp12(7632)(obj4);
+        const obj3 = { userId: tmp18.id, message, author: userAuthorWithProcessedColor, roleStyle };
+        obj2.usernameOnClick = formatUsernameOnClickDefault(obj3);
+        obj2.username2 = userAuthorWithProcessedColor1.nick;
+        let tmp8;
+        if (null != tmp19) {
+          const obj4 = { userId: tmp19.id, message, author: userAuthorWithProcessedColor1, roleStyle };
+          tmp8 = tmp11(7632)(obj4);
         }
-        formatToPartsResult = formatToParts(zUiZPF, obj2);
+        obj2.username2OnClick = tmp8;
+        obj2.additionalCount = diff;
+        let formatToPartsResult = intl2.formatToParts(_modDef2425.zUiZPF, obj2);
+        const stringResult1 = string(7630);
       }
       const obj5 = { content: formatToPartsResult };
-      const merged = Object.assign(tmp12(7634)(message));
-      guildSpaceLeaderboardSystemMessage = obj5;
+      merged = Object.assign(tmp11(7634)(message));
     }
-    const intl = intl3.intl;
-    formatToPartsResult = intl.string(_modDef2425.Sxxqdx);
-    tmp12 = importDefault;
+    const intl = string(1126).intl;
+    string = intl.string;
+    formatToPartsResult = string(_modDef2425.Sxxqdx);
+    tmp11 = importDefault;
   } else {
     const guildSpaceData2 = message.message.guildSpaceData;
     let leaderboard;
     if (guildSpaceData2 != null) {
       leaderboard = guildSpaceData2.leaderboard;
     }
-    guildSpaceLeaderboardSystemMessage = null;
+    let guildSpaceLeaderboardSystemMessage = null;
     if (null != leaderboard) {
-      const obj = GuildSpaceLeaderboardSystemMessage;
-      guildSpaceLeaderboardSystemMessage = obj.createGuildSpaceLeaderboardSystemMessage(message);
+      guildSpaceLeaderboardSystemMessage =
+        GuildSpaceLeaderboardSystemMessage.createGuildSpaceLeaderboardSystemMessage(message);
     }
+    return guildSpaceLeaderboardSystemMessage;
   }
-  return guildSpaceLeaderboardSystemMessage;
 };

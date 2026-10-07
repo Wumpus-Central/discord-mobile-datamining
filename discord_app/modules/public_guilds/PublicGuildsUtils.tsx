@@ -8,9 +8,6 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-let c3;
-let closure_4;
-let hasOwnProperty;
 ({
   PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3,
   PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: closure_4,
@@ -20,22 +17,25 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/public_guilds/PublicGuildsUtils.tsx");
 
 export const isPublicSystemMessage = function isPublicSystemMessage(message) {
-  let tmp = isCrosspostDefault(message) && message.messageReference.guild_id === _false;
+  let tmp = isCrosspostDefault(message);
+  if (tmp) {
+    tmp = message.messageReference.guild_id === React3;
+  }
   if (!tmp) {
-    tmp = null != message.author && message.author.id === React3;
-    const tmp4 = null != message.author && message.author.id === React3;
+    let tmp4 = null != message.author;
+    if (tmp4) {
+      tmp4 = message.author.id === React4;
+    }
+    tmp = tmp4;
   }
   return tmp;
 };
 export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvatar() {
-  return require("AssetRegistry");
+  return require("../../../_runtime/metro/07719__.js");
 };
 export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
-  const track = AnalyticsUtilsDefault.track;
-  const USER_FLOW_TRANSITION = AnalyticEvents.USER_FLOW_TRANSITION;
-  const obj = { flow_type: hasOwnProperty, from_step: fromStep.fromStep, to_step: fromStep.toStep };
-  AnalyticsUtilsDefault;
-  const obj2 = AppAnalyticsUtils;
-  const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(fromStep.guildId));
-  track(USER_FLOW_TRANSITION, obj);
+  const obj = AnalyticsUtilsDefault;
+  const obj2 = { flow_type, from_step: fromStep.fromStep, to_step: fromStep.toStep };
+  const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(fromStep.guildId));
+  obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj2);
 };

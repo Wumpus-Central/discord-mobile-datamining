@@ -2,18 +2,17 @@
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import DatabaseManagerDefault from "../../../app_database/system/DatabaseManager.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx",
 );
 
 export default function useNativeAndroidEmojiPickerEnabled() {
-  const obj = PlatformUtils;
-  let isAndroidResult = obj.isAndroid();
+  let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
-    const obj2 = DatabaseManagerDefault;
-    isAndroidResult = null != obj2.database(AuthenticationStore.getId());
+    isAndroidResult = null != DatabaseManagerDefault.database(AuthenticationStore.getId());
   }
   return isAndroidResult;
 }

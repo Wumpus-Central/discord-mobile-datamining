@@ -1,61 +1,59 @@
 // discord_app/modules/app_icons/native/SettingsItemAppIcon.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import AppIconConstants from "AppIconConstants.tsx";
-import AppIconTypes from "../AppIconTypes.tsx";
-import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
-import AppIconUtils from "AppIconUtils.tsx";
 import AppIconDefault from "AppIcon.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let obj2;
-const getIconById = AppIconConstants.getIconById;
-const jsx = Fragment.jsx;
-let obj = { icon: obj2 };
-obj2 = { borderRadius: nativeDefault.radii.round };
-let closure_5 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const AppIconTypes = ClydeIcon(8859);
+const ClydeIcon2 = ClydeIcon(10560);
+const AppIconUtils = ClydeIcon(13280);
+require = fn;
+const getIconById = fn(8858).getIconById;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { icon: { borderRadius: nativeDefault.radii.round } };
+let closure_5 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { borderRadius: nativeDefault.radii.round };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (color) => {
-      let tmp13;
-      const obj = react2;
-      const cResult = obj.c(5);
+      let ClydeIcon = require;
+      let tmp = dependencyMap;
+      const cResult = c.c(5);
       let INTERACTIVE_ICON_DEFAULT = color.color;
       if (undefined === INTERACTIVE_ICON_DEFAULT) {
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
-      const tmp5 = closure_5();
-      const tmpResult = AppIconUtils;
-      const currentAppIcon = tmpResult.useCurrentAppIcon();
-      const tmp7 = getIconById(currentAppIcon);
+      const tmp4 = closure_5();
+      const currentAppIcon = AppIconUtils.useCurrentAppIcon();
+      const ClydeIconResult = AppIconUtils;
       if (currentAppIcon !== AppIconTypes.FreemiumAppIconIds.DEFAULT) {
-        let tmp9;
-        if (null != tmp7) {
+        if (null != tmp6) {
           if (cResult[2] === currentAppIcon) {
-            if (cResult[3] === tmp5.icon) {
-              tmp9 = cResult[4];
+            if (cResult[3] === tmp4.icon) {
+              let tmp8 = cResult[4];
             }
+            return tmp8;
           }
-          const tmp12 = jsx(AppIconDefault, { style: tmp5.icon, id: currentAppIcon, size: 32 });
+          const obj2 = { style: tmp4.icon, id: currentAppIcon, size: 32 };
+          const tmp11 = jsx(AppIconDefault, { style: tmp4.icon, id: currentAppIcon, size: 32 });
           cResult[2] = currentAppIcon;
-          cResult[3] = tmp5.icon;
-          cResult[4] = tmp12;
-          tmp9 = tmp12;
+          cResult[3] = tmp4.icon;
+          cResult[4] = tmp11;
+          tmp8 = tmp11;
         }
-        return tmp9;
       }
       if (cResult[0] !== INTERACTIVE_ICON_DEFAULT) {
-        const tmp15 = jsx(ClydeIcon.ClydeIcon, { color: INTERACTIVE_ICON_DEFAULT });
+        ClydeIcon = ClydeIcon2.ClydeIcon;
+        const obj3 = { color: INTERACTIVE_ICON_DEFAULT };
+        tmp = <ClydeIcon color={INTERACTIVE_ICON_DEFAULT} />;
         cResult[0] = INTERACTIVE_ICON_DEFAULT;
-        cResult[1] = tmp15;
-        tmp13 = tmp15;
-      } else {
-        tmp13 = cResult[1];
+        cResult[1] = tmp;
       }
-      tmp9 = tmp13;
+      tmp6 = getIconById(currentAppIcon);
     }
   : (color) => {
       let INTERACTIVE_ICON_DEFAULT = color.color;
@@ -63,18 +61,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       const tmp3 = closure_5();
-      const obj = AppIconUtils;
-      const currentAppIcon = obj.useCurrentAppIcon();
-      const tmp7 = getIconById(currentAppIcon);
+      const currentAppIcon = AppIconUtils.useCurrentAppIcon();
       if (currentAppIcon !== AppIconTypes.FreemiumAppIconIds.DEFAULT) {
-        let tmp11;
         if (null != tmp7) {
-          tmp11 = jsx(AppIconDefault, { style: tmp3.icon, id: currentAppIcon, size: 32 });
+          const obj2 = { style: tmp3.icon, id: currentAppIcon, size: 32 };
+          let tmp11 = jsx(AppIconDefault, { style: tmp3.icon, id: currentAppIcon, size: 32 });
         }
         return tmp11;
       }
-      tmp11 = jsx(ClydeIcon.ClydeIcon, { color: INTERACTIVE_ICON_DEFAULT });
+      tmp11 = jsx(ClydeIcon2.ClydeIcon, { color: INTERACTIVE_ICON_DEFAULT });
+      tmp7 = getIconById(currentAppIcon);
     };
-const result = size.fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
-
-export default tmp3;

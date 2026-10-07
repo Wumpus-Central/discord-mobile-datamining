@@ -11,11 +11,9 @@ const result = size.fileFinishedImporting("modules/rpc/helpers/validateTransport
 export const validateTransportType = function validateTransportType(transport) {
   if (TransportTypes.IPC !== transport) {
     if (TransportTypes.POST_MESSAGE !== transport) {
-      const self = this;
-      const self2 = this;
       const obj = { errorCode: RPCErrors.INVALID_COMMAND };
-      const tmp5 = new RPCErrorDefault(obj, "Invalid transport.");
-      throw tmp5;
+      const tmp7 = new RPCErrorDefault(obj, "Invalid transport.");
+      throw tmp7;
     }
   }
 };

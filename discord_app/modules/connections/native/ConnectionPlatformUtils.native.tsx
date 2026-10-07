@@ -3,25 +3,6 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let BATTLENET;
-let BUNGIE;
-let CRUNCHYROLL;
-let FACEBOOK;
-let GITHUB;
-let LEAGUE_OF_LEGENDS;
-let PLAYSTATION;
-let PLAYSTATION_STAGING;
-let REDDIT;
-let SAMSUNG;
-let SKYPE;
-let SPOTIFY;
-let STEAM;
-let TWITCH;
-let TWITTER;
-let TWITTER_LEGACY;
-let XBOX;
-let YOUTUBE;
-const PlatformTypes = Constants.PlatformTypes;
 const obj = {
   [CRUNCHYROLL]: nativeDefault.unsafe_rawColors.PLATFORM_CRUNCHYROLL,
   [PLAYSTATION_STAGING]: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION,
@@ -61,7 +42,7 @@ const obj = {
   BATTLENET,
   YOUTUBE,
   TWITCH,
-} = PlatformTypes);
+} = Constants.PlatformTypes);
 const result = size.fileFinishedImporting("modules/connections/native/ConnectionPlatformUtils.native.tsx");
 
 export const getConnectionBackgroundColor = function getConnectionBackgroundColor(type) {

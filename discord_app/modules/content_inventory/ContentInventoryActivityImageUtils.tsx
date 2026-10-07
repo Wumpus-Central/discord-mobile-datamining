@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/ContentInventoryActivityImageUtils.tsx
-import react from "../../../_runtime/00019_react.js";
-import react2 from "../../../_runtime/00576_react.js";
-import intl5 from "../../intl/index.native.tsx";
+import _mod19 from "../../../_runtime/metro/00019__.js";
+import c from "../../../_runtime/00576_c.js";
+import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import Constants2 from "../activities/Constants.tsx";
@@ -19,367 +19,152 @@ import isOnXboxDefault from "../activities/utils/isOnXbox.tsx";
 import isOnPlayStationDefault from "../activities/utils/isOnPlayStation.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 import Constants from "../../Constants.tsx";
+import "ReactCompilerGating";
 import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let hasOwnProperty;
-let metroRequire;
 function getMediaImage(entry) {
-  let tmp3;
-  let tmpResult3;
-  const obj = ContentInventoryTypes;
   if (obj.isListenedSessionEntry(entry)) {
     if (entry.extra.entries.length > 0) {
-      tmp3 = { src: entry.extra.entries[0].media.image_url };
       const obj2 = { src: entry.extra.entries[0].media.image_url };
+      let tmp3 = obj2;
     }
     return tmp3;
   }
-  const tmpResult = ContentInventoryTypes;
+  obj = ContentInventoryTypes;
   if (tmpResult.isWatchedMediaEntry(entry)) {
     const obj3 = {
-      src: tmpResult3.getAssetImage(entry.extra.application_id, entry.extra.media_assets_large_image, ImageSizes.LARGE),
+      src: ApplicationAssetUtils.getAssetImage(
+        entry.extra.application_id,
+        entry.extra.media_assets_large_image,
+        ImageSizes.LARGE,
+      ),
       alt: entry.extra.media_title,
     };
     tmp3 = obj3;
-    tmpResult3 = ApplicationAssetUtils;
+    const tmpResult3 = ApplicationAssetUtils;
   } else {
-    const tmpResult4 = ContentInventoryTypes;
     if (tmpResult4.isTopArtistEntry(entry)) {
-      tmp3 = { src: entry.extra.media.image_url };
       const obj4 = { src: entry.extra.media.image_url };
+      tmp3 = obj4;
     }
+    tmpResult4 = ContentInventoryTypes;
   }
+  tmpResult = ContentInventoryTypes;
 }
 function computeImageForActivity(arg0) {
-  let activity;
-  let application;
-  let intl3;
-  let intl4;
-  let largeImage;
-  let name1;
-  let obj6;
-  let obj8;
-  let smallImage;
-  let small_image;
-  let stringResult;
-  let tmp2Result;
-  let tmp2Result2;
   ({ activity, application, largeImage, smallImage } = arg0);
   if (null != largeImage) {
-    return { largeImage, smallImage };
+    const obj = { largeImage, smallImage };
+    return obj;
   } else {
-    const obj19 = StageChannelRichPresenceUtils;
-    if (obj19.isStageActivity(activity)) {
-      const tmp17Result = StageChannelRichPresenceUtils;
-      const result = tmp17Result.unpackStageChannelParty(activity);
+    if (obj20.isStageActivity(activity)) {
+      const result = StageChannelRichPresenceUtils.unpackStageChannelParty(activity);
       let guildIconURL;
       if (null != result) {
-        const obj2 = { id: result.guildId, icon: small_image, size: ImageSizes.SMALL };
-        small_image = undefined;
-        const getGuildIconURL = AvatarUtilsDefault.getGuildIconURL;
-        AvatarUtilsDefault;
+        const obj2 = { id: result.guildId, icon: null, size: null };
+        let small_image;
         if (activity != null) {
           const assets = activity.assets;
           if (assets != null) {
             small_image = assets.small_image;
           }
         }
-        guildIconURL = getGuildIconURL(obj2);
+        obj2.icon = small_image;
+        obj2.size = ImageSizes.SMALL;
+        guildIconURL = AvatarUtilsDefault.getGuildIconURL(obj2);
       }
-      let tmp16;
+      let tmp15;
       if (null != guildIconURL) {
-        tmp16 = { src: guildIconURL };
         const obj3 = { src: guildIconURL };
+        tmp15 = obj3;
       }
-      return { largeImage: tmp16, smallImage: "Array" };
+      const obj4 = { largeImage: tmp15, smallImage: "Array" };
+      return obj4;
     } else if (isOnXboxDefault(activity)) {
-      const obj5 = { largeImage: obj6, smallImage: "Array" };
-      obj6 = { src: tmp2Result.get(metroRequire.XBOX).icon.customPNG, alt: intl4.string(intl5.t.Nfvo72) };
-      tmp2Result = PlatformsDefault;
-      intl4 = intl5.intl;
+      const obj5 = { largeImage: null, smallImage: "Array" };
+      const obj6 = { src: PlatformsDefault.get(constants2.XBOX).icon.customPNG, alt: null };
+      const intl4 = util.intl;
+      obj6.alt = intl4.string(util.t.Nfvo72);
+      obj5.largeImage = obj6;
       return obj5;
     } else {
       if (null == smallImage) {
         if (isOnPlayStationDefault(activity)) {
-          const obj7 = { largeImage: obj8, smallImage: "Array" };
-          obj8 = { src: tmp2Result2.get(metroRequire.PLAYSTATION).icon.lightPNG, alt: intl3.string(intl5.t.fFl4jo) };
-          tmp2Result2 = PlatformsDefault;
-          intl3 = intl5.intl;
+          const obj7 = { largeImage: null, smallImage: "Array" };
+          const obj8 = { src: PlatformsDefault.get(constants2.PLAYSTATION).icon.lightPNG, alt: null };
+          const intl3 = util.intl;
+          obj8.alt = intl3.string(util.t.fFl4jo);
+          obj7.largeImage = obj8;
           return obj7;
         }
       }
-      const tmp17Result2 = conjurePresenceActivity;
-      if (tmp17Result2.isConjurePresenceActivity(activity)) {
-        const obj9 = { src: tmp, alt: name1 };
-        name1 = undefined;
+      if (tmp16Result2.isConjurePresenceActivity(activity)) {
+        const obj9 = { src: tmp, alt: null };
+        let name1;
         if (activity != null) {
           name1 = activity.name;
         }
-        return { largeImage: obj9, smallImage: "Array" };
+        const obj10 = { largeImage: null, smallImage: "Array" };
+        obj9.alt = name1;
+        obj10.largeImage = obj9;
+        return obj10;
       } else {
-        let name;
-        let obj14;
         let iconURL;
         if (application != null) {
           iconURL = application.getIconURL(ImageSizes.LARGE);
         }
         if (application != null) {
-          name = application.name;
+          const name = application.name;
         }
-        let tmp5;
-        if (null != iconURL) {
-          const obj11 = { src: iconURL, alt: stringResult };
-          if (null == name) {
-            const intl2 = intl5.intl;
-            stringResult = intl2.string(intl5.t["2B/phM"]);
+        if (null == iconURL) {
+          if (null != undefined) {
+            const obj11 = { largeImage: undefined, smallImage };
+            let obj12 = obj11;
           } else {
-            const intl = intl5.intl;
-            const obj12 = { applicationName: name };
-            stringResult = intl.formatToPlainString(intl5.t.tiKyYg, obj12);
+            obj12 = { largeImage: smallImage, smallImage: "Array" };
           }
-          tmp5 = obj11;
-        }
-        if (null != tmp5) {
-          obj14 = { largeImage: tmp5, smallImage };
-          const obj13 = { largeImage: tmp5, smallImage };
+          return obj12;
         } else {
-          obj14 = { largeImage: smallImage, smallImage: "Array" };
+          const obj13 = { src: iconURL, alt: null };
+          if (null == name) {
+            const intl2 = util.intl;
+            let stringResult = intl2.string(util.t["2B/phM"]);
+          } else {
+            const intl = util.intl;
+            const obj14 = { applicationName: name };
+            stringResult = intl.formatToPlainString(util.t.tiKyYg, obj14);
+          }
+          obj13.alt = stringResult;
         }
-        return obj14;
       }
+      tmp16Result2 = conjurePresenceActivity;
     }
+    obj20 = StageChannelRichPresenceUtils;
   }
 }
-let useEffect = react.useEffect;
+let useEffect = _mod19.useEffect;
 ({ AnalyticEvents: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const ImageSizes = Constants2.ImageSizes;
 let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let activity;
-      let activityApplication;
-      let entry;
-      let fallbackApplication;
-      let largeImage;
-      let obj6;
-      let showCoverImage;
-      let smallImage;
-      let tmp11;
-      let tmp14;
-      let tmp7;
-      let tmp9;
-      let trackingSource;
-      const obj = react2;
-      const cResult = obj.c(20);
-      ({ entry, showCoverImage, trackingSource } = arg0);
-      const tmp4 = undefined === showCoverImage || showCoverImage;
-      ({ activity, activityApplication, fallbackApplication } = useEntryActivityAndApplicationDefault(entry));
-      let obj2 = fallbackApplication;
-      useEntryActivityAndApplicationDefault(entry);
-      if (fallbackApplication == null) {
-        obj2 = activityApplication;
-      }
-      ({ largeImage, smallImage } = closure_12(activity, activityApplication));
-      closure_12(activity, activityApplication);
-      const largeImage2 = closure_9(activity, obj2).largeImage;
-      if (cResult[0] !== obj2) {
-        let canonicalGameId;
-        if (obj2 != null) {
-          canonicalGameId = obj2.getCanonicalGameId();
-        }
-        cResult[0] = obj2;
-        cResult[1] = canonicalGameId;
-        tmp7 = canonicalGameId;
-      } else {
-        tmp7 = cResult[1];
-      }
-      const tmpResult = useGame;
-      const data = tmpResult.useGame(tmp7).data;
-      if (cResult[2] !== data) {
-        let coverURL;
-        if (data != null) {
-          coverURL = data.getCoverURL();
-        }
-        cResult[2] = data;
-        cResult[3] = coverURL;
-        tmp9 = coverURL;
-      } else {
-        tmp9 = cResult[3];
-      }
-      if (cResult[4] !== entry) {
-        const tmp13 = getMediaImage(entry);
-        cResult[4] = entry;
-        cResult[5] = tmp13;
-        tmp11 = tmp13;
-      } else {
-        tmp11 = cResult[5];
-      }
-      if (null != largeImage) {
-        if (cResult[6] === largeImage) {
-          let tmp17;
-          if (cResult[7] === smallImage) {
-            tmp17 = cResult[8];
-          }
-          tmp14 = tmp17;
-        }
-        const obj3 = { largeImage, smallImage };
-        cResult[6] = largeImage;
-        cResult[7] = smallImage;
-        cResult[8] = obj3;
-        tmp17 = obj3;
-      } else if (null != tmp11) {
-        let tmp16;
-        if (cResult[9] !== tmp11) {
-          const obj4 = { largeImage: tmp11, smallImage: "Array" };
-          cResult[9] = tmp11;
-          cResult[10] = obj4;
-          tmp16 = obj4;
-        } else {
-          tmp16 = cResult[10];
-        }
-        tmp14 = tmp16;
-      } else {
-        if (null != tmp9) {
-          if (tmp4) {
-            let tmp15;
-            if (cResult[11] !== tmp9) {
-              const obj5 = { largeImage: obj6, smallImage: "Array" };
-              obj6 = { src: tmp9 };
-              cResult[11] = tmp9;
-              cResult[12] = obj5;
-              tmp15 = obj5;
-            } else {
-              tmp15 = cResult[12];
-            }
-            tmp14 = tmp15;
-          }
-        }
-        if (cResult[13] !== largeImage2) {
-          const obj7 = { largeImage: largeImage2, smallImage: "Array" };
-          cResult[13] = largeImage2;
-          cResult[14] = obj7;
-          tmp14 = obj7;
-        } else {
-          tmp14 = cResult[14];
-        }
-      }
-      if (fallbackApplication == null) {
-        fallbackApplication = activityApplication;
-      }
-      const largeImage3 = tmp14.largeImage;
-      let src;
-      if (largeImage3 != null) {
-        src = largeImage3.src;
-      }
-      if (cResult[15] === activity) {
-        if (cResult[16] === fallbackApplication) {
-          if (cResult[17] === src) {
-            let tmp19;
-            if (cResult[18] === trackingSource) {
-              tmp19 = cResult[19];
-            }
-            closure_11(tmp19);
-            return tmp14;
-          }
-        }
-      }
-      const obj8 = { activity, application: fallbackApplication, largeImageSrc: src, trackingSource };
-      cResult[15] = activity;
-      cResult[16] = fallbackApplication;
-      cResult[17] = src;
-      cResult[18] = trackingSource;
-      cResult[19] = obj8;
-      tmp19 = obj8;
-    }
-  : (trackingSource) => {
-      let activity;
-      let activityApplication;
-      let coverURL;
-      let entry;
-      let fallbackApplication;
-      let obj6;
-      let obj7;
-      let showCoverImage;
-      let src;
-      ({ entry, showCoverImage } = trackingSource);
-      if (showCoverImage === undefined) {
-        showCoverImage = true;
-      }
-      trackingSource = trackingSource.trackingSource;
-      ({ activity, activityApplication, fallbackApplication } = useEntryActivityAndApplicationDefault(entry));
-      let obj = fallbackApplication;
-      useEntryActivityAndApplicationDefault(entry);
-      if (fallbackApplication == null) {
-        obj = activityApplication;
-      }
-      const tmp3 = closure_12(activity, activityApplication);
-      const largeImage = tmp3.largeImage;
-      const smallImage = tmp3.smallImage;
-      let canonicalGameId;
-      const largeImage2 = closure_9(activity, obj).largeImage;
-      if (obj != null) {
-        canonicalGameId = obj.getCanonicalGameId();
-      }
-      const obj2 = useGame;
-      const data = obj2.useGame(canonicalGameId).data;
-      if (data != null) {
-        coverURL = data.getCoverURL();
-      }
-      const tmp6 = getMediaImage(entry);
-      if (null != largeImage) {
-        obj7 = { largeImage, smallImage };
-        const obj3 = { largeImage, smallImage };
-      } else if (null != tmp6) {
-        obj7 = { largeImage: tmp6, smallImage: "Array" };
-        const obj4 = { largeImage: tmp6, smallImage: "Array" };
-      } else {
-        if (null != coverURL) {
-          if (showCoverImage) {
-            const obj5 = { largeImage: obj6, smallImage: "Array" };
-            obj7 = obj5;
-            obj6 = { src: coverURL };
-          }
-        }
-        obj7 = { largeImage: largeImage2, smallImage: "Array" };
-      }
-      const obj8 = { activity, application: fallbackApplication, largeImageSrc: src, trackingSource };
-      if (fallbackApplication == null) {
-        fallbackApplication = activityApplication;
-      }
-      const largeImage3 = obj7.largeImage;
-      src = undefined;
-      if (largeImage3 != null) {
-        src = largeImage3.src;
-      }
-      closure_11(obj8);
-      return obj7;
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (activity, application) => {
-      let largeImage;
-      let smallImage;
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       ({ largeImage, smallImage } = closure_12(activity, application));
-      closure_12(activity, application);
       const tmp3 = useConjurePresenceActivityImageDefault();
       if (cResult[0] === activity) {
         if (cResult[1] === application) {
           if (cResult[2] === tmp3) {
             if (cResult[3] === largeImage) {
-              let tmp4;
               if (cResult[4] === smallImage) {
-                tmp4 = cResult[5];
+                let tmp4 = cResult[5];
               }
               return tmp4;
             }
           }
         }
       }
-      const obj2 = { activity, application, largeImage, smallImage, conjureImage: tmp3 };
-      const tmp5 = computeImageForActivity(obj2);
+      const tmp5 = computeImageForActivity({ activity, application, largeImage, smallImage, conjureImage: tmp3 });
       cResult[0] = activity;
       cResult[1] = application;
       cResult[2] = tmp3;
@@ -390,101 +175,222 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (activity, application) => {
       const tmp = closure_12(activity, application);
-      const obj = {
+      return computeImageForActivity({
         activity,
         application,
         largeImage: tmp.largeImage,
         smallImage: tmp.smallImage,
         conjureImage: useConjurePresenceActivityImageDefault(),
-      };
-      return computeImageForActivity(obj);
+      });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (activity, application, trackingSource) => {
-      const obj = react2;
-      const cResult = obj.c(5);
-      const tmp2 = closure_9(activity, application);
-      const largeImage = tmp2.largeImage;
-      let src;
-      if (largeImage != null) {
-        src = largeImage.src;
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(20);
+      ({ entry, showCoverImage, trackingSource } = arg0);
+      const tmp4 = undefined === showCoverImage || showCoverImage;
+      ({ activity, activityApplication, fallbackApplication } = useEntryActivityAndApplicationDefault(entry));
+      let obj2 = fallbackApplication;
+      if (fallbackApplication == null) {
+        obj2 = activityApplication;
       }
-      if (cResult[0] === activity) {
-        if (cResult[1] === application) {
-          if (cResult[2] === src) {
-            let tmp4;
-            if (cResult[3] === trackingSource) {
-              tmp4 = cResult[4];
+      const tmp5 = useEntryActivityAndApplicationDefault(entry);
+      ({ largeImage, smallImage } = closure_12(activity, activityApplication));
+      const largeImage2 = closure_9(activity, obj2).largeImage;
+      if (cResult[0] !== obj2) {
+        let canonicalGameId;
+        if (obj2 != null) {
+          canonicalGameId = obj2.getCanonicalGameId();
+        }
+        cResult[0] = obj2;
+        cResult[1] = canonicalGameId;
+        let tmp7 = canonicalGameId;
+      } else {
+        tmp7 = cResult[1];
+      }
+      const tmp6 = closure_12(activity, activityApplication);
+      const data = useGame.useGame(tmp7).data;
+      if (cResult[2] !== data) {
+        let coverURL;
+        if (data != null) {
+          coverURL = data.getCoverURL();
+        }
+        cResult[2] = data;
+        cResult[3] = coverURL;
+        let tmp9 = coverURL;
+      } else {
+        tmp9 = cResult[3];
+      }
+      if (cResult[4] !== entry) {
+        const tmp13 = getMediaImage(entry);
+        cResult[4] = entry;
+        cResult[5] = tmp13;
+        let tmp11 = tmp13;
+      } else {
+        tmp11 = cResult[5];
+      }
+      if (null != largeImage) {
+        if (cResult[6] === largeImage) {
+        }
+        const obj3 = { largeImage, smallImage };
+        cResult[6] = largeImage;
+        cResult[7] = smallImage;
+        cResult[8] = obj3;
+      } else {
+        if (null != tmp11) {
+          if (cResult[9] !== tmp11) {
+            const obj4 = { largeImage: tmp11, smallImage: "Array" };
+            cResult[9] = tmp11;
+            cResult[10] = obj4;
+            let tmp16 = obj4;
+          } else {
+            tmp16 = cResult[10];
+          }
+          let tmp14 = tmp16;
+        } else {
+          if (null != tmp9) {
+            if (tmp4) {
+              if (cResult[11] !== tmp9) {
+                const obj5 = { largeImage: null, smallImage: "Array" };
+                const obj6 = { src: tmp9 };
+                obj5.largeImage = obj6;
+                cResult[11] = tmp9;
+                cResult[12] = obj5;
+                let tmp15 = obj5;
+              } else {
+                tmp15 = cResult[12];
+              }
+              tmp14 = tmp15;
             }
-            closure_11(tmp4);
-            return tmp2;
+          }
+          if (cResult[13] !== largeImage2) {
+            const obj7 = { largeImage: largeImage2, smallImage: "Array" };
+            cResult[13] = largeImage2;
+            cResult[14] = obj7;
+            tmp14 = obj7;
+          } else {
+            tmp14 = cResult[14];
           }
         }
+        if (fallbackApplication == null) {
+          fallbackApplication = activityApplication;
+        }
+        const largeImage3 = tmp14.largeImage;
+        let src;
+        if (largeImage3 != null) {
+          src = largeImage3.src;
+        }
+        if (cResult[15] === activity) {
+          if (cResult[16] === fallbackApplication) {
+            if (cResult[17] === src) {
+              if (cResult[18] === trackingSource) {
+                let tmp20 = cResult[19];
+              }
+              closure_11(tmp20);
+              return tmp14;
+            }
+          }
+        }
+        const obj8 = { activity, application: fallbackApplication, largeImageSrc: src, trackingSource };
+        cResult[15] = activity;
+        cResult[16] = fallbackApplication;
+        cResult[17] = src;
+        cResult[18] = trackingSource;
+        cResult[19] = obj8;
+        tmp20 = obj8;
       }
-      const obj2 = { activity, application, largeImageSrc: src, trackingSource };
-      cResult[0] = activity;
-      cResult[1] = application;
-      cResult[2] = src;
-      cResult[3] = trackingSource;
-      cResult[4] = obj2;
-      tmp4 = obj2;
+      const tmpResult = useGame;
     }
-  : (activity, application, trackingSource) => {
-      let src;
-      const tmp = closure_9(activity, application);
-      const largeImage = tmp.largeImage;
-      const obj = { activity, application, largeImageSrc: src, trackingSource };
-      src = undefined;
-      if (largeImage != null) {
-        src = largeImage.src;
+  : (trackingSource) => {
+      ({ entry, showCoverImage } = trackingSource);
+      if (showCoverImage === undefined) {
+        showCoverImage = true;
       }
-      closure_11(obj);
-      return tmp;
+      ({ activity, activityApplication, fallbackApplication } = useEntryActivityAndApplicationDefault(entry));
+      let obj = fallbackApplication;
+      if (fallbackApplication == null) {
+        obj = activityApplication;
+      }
+      const tmp3 = closure_12(activity, activityApplication);
+      const largeImage = tmp3.largeImage;
+      let canonicalGameId;
+      if (obj != null) {
+        canonicalGameId = obj.getCanonicalGameId();
+      }
+      const tmp2 = useEntryActivityAndApplicationDefault(entry);
+      const data = useGame.useGame(canonicalGameId).data;
+      if (data != null) {
+        const coverURL = data.getCoverURL();
+      }
+      const tmp6 = getMediaImage(entry);
+      if (null != largeImage) {
+        const obj3 = { largeImage, smallImage: tmp3.smallImage };
+        let obj7 = obj3;
+      } else if (null != tmp6) {
+        const obj4 = { largeImage: tmp6, smallImage: "Array" };
+        obj7 = obj4;
+      } else {
+        if (null != coverURL) {
+          if (showCoverImage) {
+            const obj5 = { largeImage: null, smallImage: "Array" };
+            const obj6 = { src: coverURL };
+            obj5.largeImage = obj6;
+            obj7 = obj5;
+          }
+        }
+        obj7 = { largeImage: closure_9(activity, obj).largeImage, smallImage: "Array" };
+      }
+      const obj8 = { activity, application: null, largeImageSrc: null, trackingSource: null };
+      if (fallbackApplication == null) {
+        fallbackApplication = activityApplication;
+      }
+      obj8.application = fallbackApplication;
+      const largeImage2 = obj7.largeImage;
+      let src;
+      if (largeImage2 != null) {
+        src = largeImage2.src;
+      }
+      obj8.largeImageSrc = src;
+      obj8.trackingSource = trackingSource.trackingSource;
+      closure_11(obj8);
+      return obj7;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let activity;
-      let application;
-      let application_found;
-      let first;
-      let largeImageSrc;
-      let stateFromStores;
-      let tmp8;
-      let trackingSource;
-      let tmp = trackingSource;
-      let obj = trackingSource(stateFromStores[8]);
-      const cResult = obj.c(15);
+      const cResult = trackingSource(stateFromStores[8]).c(15);
       ({ activity, trackingSource } = arg0);
       let application_id;
       ({ application, largeImageSrc } = arg0);
       if (activity != null) {
         application_id = activity.application_id;
       }
-      const tmpResult = tmp(stateFromStores[18]);
-      const getOrFetchApplication = tmpResult.useGetOrFetchApplication(application_id);
+      let obj = trackingSource(stateFromStores[8]);
+      const getOrFetchApplication = trackingSource(stateFromStores[18]).useGetOrFetchApplication(application_id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [closure_4];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== application_id) {
         const fn = function o() {
-          const result = null != application_id && ApplicationStore.didFetchingApplicationFail(tmp);
+          let result = null != application_id;
+          if (result) {
+            result = ApplicationStore.didFetchingApplicationFail(tmp);
+          }
           return result;
         };
         cResult[1] = application_id;
         cResult[2] = fn;
-        tmp8 = fn;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[2];
       }
+      const tmpResult = trackingSource(stateFromStores[18]);
       let tmp10 = null == application_id;
-      const tmpResult2 = tmp(stateFromStores[19]);
-      stateFromStores = tmpResult2.useStateFromStores(first, tmp8);
+      stateFromStores = trackingSource(stateFromStores[19]).useStateFromStores(first, tmp8);
       if (!tmp10) {
         tmp10 = null != getOrFetchApplication;
       }
@@ -528,18 +434,16 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       closure_9 = tmp19;
       if (cResult[3] === name) {
         if (cResult[4] === type) {
-          if (cResult[5] === (null != getOrFetchApplication || null != application)) {
+          if (cResult[5] === tmp11) {
             if (cResult[6] === application_id) {
-              if ((cResult[7] === null) != activity) {
+              if (cResult[7] === tmp19) {
                 if (cResult[8] === tmp17) {
                   if (cResult[9] === tmp10) {
                     if (cResult[10] === session_id) {
-                      if ((cResult[11] === null) == largeImageSrc) {
-                        let tmp20;
-                        let tmp21;
+                      if (cResult[11] === tmp12) {
                         if (cResult[12] === trackingSource) {
-                          tmp20 = cResult[13];
-                          tmp21 = cResult[14];
+                          let tmp20 = cResult[13];
+                          let tmp21 = cResult[14];
                         }
                         useEffect(tmp20, tmp21);
                       }
@@ -552,7 +456,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn2 = function f() {
-        const tmp = closure_9 && stateFromStores && closure_4;
+        let tmp = closure_9;
+        if (closure_9) {
+          tmp = stateFromStores;
+        }
+        if (tmp) {
+          tmp = closure_4;
+        }
         if (tmp) {
           const obj2 = {
             source: trackingSource,
@@ -563,8 +473,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             application_found,
             has_rich_assets,
           };
-          const obj = AnalyticsUtilsDefault;
-          obj.track(hasOwnProperty.ACTIVITY_DEFAULT_ICON_SHOWN, obj2);
+          AnalyticsUtilsDefault.track(constants.ACTIVITY_DEFAULT_ICON_SHOWN, obj2);
         }
       };
       const items1 = [
@@ -595,15 +504,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = fn2;
     }
   : (arg0) => {
-      let activity;
-      let application;
-      let application_found;
-      let largeImageSrc;
-      let trackingSource;
       ({ activity, trackingSource } = arg0);
       let stateFromStores;
       useEffect = undefined;
-      let closure_4;
+      closure_4 = undefined;
       let name;
       let type;
       let session_id;
@@ -614,13 +518,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (activity != null) {
         application_id = activity.application_id;
       }
+      const getOrFetchApplication = trackingSource(stateFromStores[18]).useGetOrFetchApplication(application_id);
       let obj = trackingSource(stateFromStores[18]);
-      const getOrFetchApplication = obj.useGetOrFetchApplication(application_id);
-      let obj2 = trackingSource(stateFromStores[19]);
       const items = [closure_4];
       let tmp4 = null == application_id;
-      stateFromStores = obj2.useStateFromStores(items, () => {
-        const result = null != application_id && ApplicationStore.didFetchingApplicationFail(tmp);
+      stateFromStores = trackingSource(stateFromStores[19]).useStateFromStores(items, () => {
+        let result = null != application_id;
+        if (result) {
+          result = ApplicationStore.didFetchingApplicationFail(tmp);
+        }
         return result;
       });
       if (!tmp4) {
@@ -677,7 +583,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11,
       ];
       useEffect(() => {
-        const tmp = closure_9 && stateFromStores && closure_4;
+        let tmp = closure_9;
+        if (closure_9) {
+          tmp = stateFromStores;
+        }
+        if (tmp) {
+          tmp = closure_4;
+        }
         if (tmp) {
           const obj2 = {
             source: trackingSource,
@@ -688,39 +600,26 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             application_found,
             has_rich_assets,
           };
-          const obj = AnalyticsUtilsDefault;
-          obj.track(hasOwnProperty.ACTIVITY_DEFAULT_ICON_SHOWN, obj2);
+          AnalyticsUtilsDefault.track(constants.ACTIVITY_DEFAULT_ICON_SHOWN, obj2);
         }
       }, items1);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (application_id, arg1) => {
-      let items;
-      let items1;
-      let large_url;
-      let small_url;
-      let stringResult;
-      let tmpResult;
-      let tmpResult2;
-      let trimmed;
-      let trimmed1;
-      const obj = react2;
-      const cResult = obj.c(14);
+      let prop = dependencyMap;
+      const cResult = c.c(14);
       application_id = undefined;
-      const useGetOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication;
-      useGetOrFetchApplications;
       if (application_id != null) {
         application_id = application_id.application_id;
       }
-      const getOrFetchApplication = useGetOrFetchApplication(application_id);
+      const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(application_id);
       if (null == application_id) {
-        let first;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { largeImage: "start", smallImage: "unicodeVersion" };
-          cResult[0] = obj2;
-          first = obj2;
+          const obj3 = { largeImage: "start", smallImage: "unicodeVersion" };
+          cResult[0] = obj3;
+          let first = obj3;
         } else {
           first = cResult[0];
         }
@@ -734,11 +633,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[1] === application_id) {
-          let tmp8;
           if (cResult[2] === large_image) {
-            tmp8 = cResult[3];
+            let tmp7 = cResult[3];
           }
-          let tmp14;
+          let tmp13;
           if (!isCrunchyrollActivityDefault(application_id)) {
             let small_image;
             if (application_id != null) {
@@ -747,137 +645,121 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 small_image = assets4.small_image;
               }
             }
-            tmp14 = small_image;
+            tmp13 = small_image;
           }
           if (cResult[4] === application_id) {
-            let tmp16;
-            if (cResult[5] === tmp14) {
-              tmp16 = cResult[6];
+            if (cResult[5] === tmp13) {
+              let tmp15 = cResult[6];
             }
             if (cResult[7] === getOrFetchApplication) {
               if (cResult[8] === arg1) {
-                let tmp22;
-                if (cResult[9] === tmp8) {
-                  tmp22 = cResult[10];
+                if (cResult[9] === tmp7) {
+                  let tmp21 = cResult[10];
                 }
-                if (cResult[11] === tmp16) {
-                  let tmp28;
-                  if (cResult[12] === tmp22) {
-                    tmp28 = cResult[13];
+                if (cResult[11] === tmp15) {
+                  if (cResult[12] === tmp21) {
+                    let tmp27 = cResult[13];
                   }
-                  return tmp28;
+                  return tmp27;
                 }
-                const obj3 = { largeImage: tmp22, smallImage: tmp16 };
-                cResult[11] = tmp16;
-                cResult[12] = tmp22;
-                cResult[13] = obj3;
-                tmp28 = obj3;
+                const obj4 = { largeImage: tmp21, smallImage: tmp15 };
+                cResult[11] = tmp15;
+                cResult[12] = tmp21;
+                cResult[13] = obj4;
+                tmp27 = obj4;
               }
             }
-            let tmp23 = tmp8;
-            if (tmp8 == null) {
-              let name;
-              let obj6 = arg1;
+            if (tmp7 == null) {
+              let obj7 = arg1;
               if (arg1 == null) {
-                obj6 = getOrFetchApplication;
+                obj7 = getOrFetchApplication;
               }
               let iconURL;
-              if (obj6 != null) {
-                iconURL = obj6.getIconURL(ImageSizes.LARGE);
+              if (obj7 != null) {
+                iconURL = obj7.getIconURL(ImageSizes.LARGE);
               }
-              if (obj6 != null) {
-                name = obj6.name;
+              if (obj7 != null) {
+                const name = obj7.name;
               }
-              let tmp26;
               if (null != iconURL) {
-                const obj4 = { src: iconURL, alt: stringResult };
+                const obj5 = { src: iconURL, alt: null };
                 if (null == name) {
-                  const intl2 = intl5.intl;
-                  stringResult = intl2.string(intl5.t["2B/phM"]);
+                  const intl2 = util.intl;
+                  prop = util.t["2B/phM"];
+                  let stringResult = intl2.string(prop);
                 } else {
-                  const intl = intl5.intl;
-                  const obj5 = { applicationName: name };
-                  stringResult = intl.formatToPlainString(intl5.t.tiKyYg, obj5);
+                  const intl = util.intl;
+                  const obj6 = { applicationName: name };
+                  stringResult = intl.formatToPlainString(util.t.tiKyYg, obj6);
                 }
-                tmp26 = obj4;
+                obj5.alt = stringResult;
               }
-              tmp23 = tmp26;
             }
             cResult[7] = getOrFetchApplication;
             cResult[8] = arg1;
-            cResult[9] = tmp8;
-            cResult[10] = tmp23;
-            tmp22 = tmp23;
+            cResult[9] = tmp7;
+            cResult[10] = tmp7;
+            tmp21 = tmp22;
           }
-          let tmp17;
-          if (null != tmp14) {
-            const obj7 = {
-              src: tmpResult.getAssetImage(application_id.application_id, tmp14, items),
-              text: trimmed,
-              url: small_url,
-            };
-            items = [,];
+          let tmp16;
+          if (null != tmp13) {
+            const obj8 = { src: null, text: null, url: null };
+            const items = [,];
             ({ LARGE: arr2[0], LARGE: arr2[1] } = ImageSizes);
+            obj8.src = ApplicationAssetUtils.getAssetImage(application_id.application_id, tmp13, items);
             const assets5 = application_id.assets;
-            trimmed = undefined;
-            tmpResult = ApplicationAssetUtils;
+            let trimmed;
             if (assets5 != null) {
               if (assets5.small_text != null) {
                 trimmed = str2.trim();
               }
             }
+            obj8.text = trimmed;
             const assets6 = application_id.assets;
-            small_url = undefined;
+            let small_url;
             if (assets6 != null) {
               small_url = assets6.small_url;
             }
-            tmp17 = obj7;
+            obj8.url = small_url;
+            tmp16 = obj8;
+            const tmpResult = ApplicationAssetUtils;
           }
           cResult[4] = application_id;
-          cResult[5] = tmp14;
-          cResult[6] = tmp17;
-          tmp16 = tmp17;
+          cResult[5] = tmp13;
+          cResult[6] = tmp16;
+          tmp15 = tmp16;
         }
-        let tmp9;
+        let tmp8;
         if (null != large_image) {
-          const obj8 = {
-            src: tmpResult2.getAssetImage(application_id.application_id, large_image, items1),
-            text: trimmed1,
-            url: large_url,
-          };
-          items1 = [,];
+          const obj9 = { src: null, text: null, url: null };
+          const items1 = [,];
           ({ LARGE: arr[0], LARGE: arr[1] } = ImageSizes);
+          obj9.src = ApplicationAssetUtils.getAssetImage(application_id.application_id, large_image, items1);
           const assets2 = application_id.assets;
-          trimmed1 = undefined;
-          tmpResult2 = ApplicationAssetUtils;
+          let trimmed1;
           if (assets2 != null) {
             if (assets2.large_text != null) {
               trimmed1 = str.trim();
             }
           }
+          obj9.text = trimmed1;
           const assets3 = application_id.assets;
-          large_url = undefined;
+          let large_url;
           if (assets3 != null) {
             large_url = assets3.large_url;
           }
-          tmp9 = obj8;
+          obj9.url = large_url;
+          tmp8 = obj9;
+          const tmpResult2 = ApplicationAssetUtils;
         }
         cResult[1] = application_id;
         cResult[2] = large_image;
-        cResult[3] = tmp9;
-        tmp8 = tmp9;
+        cResult[3] = tmp8;
+        tmp7 = tmp8;
       }
     }
   : (application_id, arg1) => {
-      let items;
-      let items1;
-      let large_url;
-      let small_url;
-      let stringResult;
-      let tmpResult;
-      let tmpResult2;
-      let trimmed;
-      let trimmed1;
+      let prop = dependencyMap;
       useGetOrFetchApplications;
       if (application_id != null) {
         application_id = application_id.application_id;
@@ -894,27 +776,26 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp6;
         if (null != large_image) {
-          const obj = {
-            src: tmpResult.getAssetImage(application_id.application_id, large_image, items),
-            text: trimmed,
-            url: large_url,
-          };
-          items = [,];
+          const obj = { src: null, text: null, url: null };
+          const items = [,];
           ({ LARGE: arr[0], LARGE: arr[1] } = ImageSizes);
+          obj.src = ApplicationAssetUtils.getAssetImage(application_id.application_id, large_image, items);
           const assets2 = application_id.assets;
-          trimmed = undefined;
-          tmpResult = ApplicationAssetUtils;
+          let trimmed;
           if (assets2 != null) {
             if (assets2.large_text != null) {
               trimmed = str.trim();
             }
           }
+          obj.text = trimmed;
           const assets3 = application_id.assets;
-          large_url = undefined;
+          let large_url;
           if (assets3 != null) {
             large_url = assets3.large_url;
           }
+          obj.url = large_url;
           tmp6 = obj;
+          const tmpResult = ApplicationAssetUtils;
         }
         let tmp11;
         if (!isCrunchyrollActivityDefault(application_id)) {
@@ -929,30 +810,28 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp13;
         if (null != tmp11) {
-          const obj2 = {
-            src: tmpResult2.getAssetImage(application_id.application_id, tmp11, items1),
-            text: trimmed1,
-            url: small_url,
-          };
-          items1 = [,];
+          const obj2 = { src: null, text: null, url: null };
+          const items1 = [,];
           ({ LARGE: arr2[0], LARGE: arr2[1] } = ImageSizes);
+          obj2.src = ApplicationAssetUtils.getAssetImage(application_id.application_id, tmp11, items1);
           const assets5 = application_id.assets;
-          trimmed1 = undefined;
-          tmpResult2 = ApplicationAssetUtils;
+          let trimmed1;
           if (assets5 != null) {
             if (assets5.small_text != null) {
               trimmed1 = str2.trim();
             }
           }
+          obj2.text = trimmed1;
           const assets6 = application_id.assets;
-          small_url = undefined;
+          let small_url;
           if (assets6 != null) {
             small_url = assets6.small_url;
           }
+          obj2.url = small_url;
           tmp13 = obj2;
+          const tmpResult2 = ApplicationAssetUtils;
         }
         if (tmp6 == null) {
-          let name;
           let obj5 = arg1;
           if (arg1 == null) {
             obj5 = tmp4;
@@ -962,47 +841,46 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             iconURL = obj5.getIconURL(ImageSizes.LARGE);
           }
           if (obj5 != null) {
-            name = obj5.name;
+            const name = obj5.name;
           }
-          let tmp19;
           if (null != iconURL) {
-            const obj3 = { src: iconURL, alt: stringResult };
+            const obj3 = { src: iconURL, alt: null };
             if (null == name) {
-              const intl2 = intl5.intl;
-              stringResult = intl2.string(intl5.t["2B/phM"]);
+              const intl2 = util.intl;
+              prop = util.t["2B/phM"];
+              let stringResult = intl2.string(prop);
             } else {
-              const intl = intl5.intl;
+              const intl = util.intl;
               const obj4 = { applicationName: name };
-              stringResult = intl.formatToPlainString(intl5.t.tiKyYg, obj4);
+              stringResult = intl.formatToPlainString(util.t.tiKyYg, obj4);
             }
-            tmp19 = obj3;
+            obj3.alt = stringResult;
           }
-          tmp6 = tmp19;
         }
-        return { largeImage: tmp6, smallImage: tmp13 };
+        const obj6 = { largeImage: tmp6, smallImage: tmp13 };
+        return obj6;
       }
     };
 let closure_12 = tmp5;
 function getApplicationImage(getIconURL) {
-  let name;
-  let stringResult;
   let iconURL;
   if (getIconURL != null) {
     iconURL = getIconURL.getIconURL(ImageSizes.LARGE);
   }
   if (getIconURL != null) {
-    name = getIconURL.name;
+    const name = getIconURL.name;
   }
   if (null != iconURL) {
-    const obj = { src: iconURL, alt: stringResult };
+    const obj = { src: iconURL, alt: null };
     if (null == name) {
-      const intl2 = intl5.intl;
-      stringResult = intl2.string(intl5.t["2B/phM"]);
+      const intl2 = util.intl;
+      let stringResult = intl2.string(util.t["2B/phM"]);
     } else {
-      const intl = intl5.intl;
+      const intl = util.intl;
       const obj2 = { applicationName: name };
-      stringResult = intl.formatToPlainString(intl5.t.tiKyYg, obj2);
+      stringResult = intl.formatToPlainString(util.t.tiKyYg, obj2);
     }
+    obj.alt = stringResult;
     return obj;
   }
 }
@@ -1010,5 +888,45 @@ let result = size.fileFinishedImporting("modules/content_inventory/ContentInvent
 
 export { getApplicationImage };
 export const useImageForContentEntry = tmp3;
-export const useImageForActivity = tmp4;
+export const useImageForActivity = ReactCompilerGating.isReactCompilerEnabled()
+  ? (activity, application, trackingSource) => {
+      const cResult = c.c(5);
+      const tmp2 = closure_9(activity, application);
+      const largeImage = tmp2.largeImage;
+      let src;
+      if (largeImage != null) {
+        src = largeImage.src;
+      }
+      if (cResult[0] === activity) {
+        if (cResult[1] === application) {
+          if (cResult[2] === src) {
+            if (cResult[3] === trackingSource) {
+              let tmp4 = cResult[4];
+            }
+            closure_11(tmp4);
+            return tmp2;
+          }
+        }
+      }
+      const obj2 = { activity, application, largeImageSrc: src, trackingSource };
+      cResult[0] = activity;
+      cResult[1] = application;
+      cResult[2] = src;
+      cResult[3] = trackingSource;
+      cResult[4] = obj2;
+      tmp4 = obj2;
+    }
+  : (activity, application, trackingSource) => {
+      const tmp = closure_9(activity, application);
+      const obj = { activity, application, largeImageSrc: null, trackingSource: null };
+      const largeImage = tmp.largeImage;
+      let src;
+      if (largeImage != null) {
+        src = largeImage.src;
+      }
+      obj.largeImageSrc = src;
+      obj.trackingSource = trackingSource;
+      closure_11(obj);
+      return tmp;
+    };
 export const useRichImageForActivity = tmp5;

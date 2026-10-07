@@ -1,161 +1,127 @@
 // discord_app/modules/parent_tools/native/FamilyCenterModalDecline.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let otherUser;
-
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-function headerTitle() {
-  return null;
-}
-const View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { header: obj2, headerText: obj3, body: obj4, noticeHeader: obj5 };
-obj2 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
-obj4 = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  header: { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 },
+  headerText: null,
+  body: null,
+  noticeHeader: null,
+};
+let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: nativeDefault.space.PX_16 };
+obj2.headerText = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+let obj4 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+obj2.body = {
   padding: nativeDefault.space.PX_24,
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj5 = { marginBottom: nativeDefault.space.PX_4 };
-let closure_7 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let obj5 = {
+  padding: nativeDefault.space.PX_24,
+  borderRadius: nativeDefault.radii.md,
+  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+};
+obj2.noticeHeader = { marginBottom: nativeDefault.space.PX_4 };
+let closure_7 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (otherUser) => {
-      let body;
-      let declineLinkRequest;
-      let first;
-      let intl3;
-      let intl5;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let noticeHeader;
-      let obj10;
-      let tmp8;
-      let tmp9;
-      const tmp = otherUser;
-      const obj = otherUser(576);
-      const cResult = obj.c(38);
+      const cResult = otherUser(576).c(38);
       otherUser = otherUser.otherUser;
       const tmp4 = closure_7();
-      const tmp6 = declineLinkRequest(8329)();
+      const obj = otherUser(576);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          const arr = declineLinkRequest(dependencyMap[8]);
-          arr.pop();
+          declineLinkRequest(5099).pop();
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function p() {
-          const presentFailedToast = otherUser(dependencyMap[9]).presentFailedToast;
-          otherUser(dependencyMap[9]);
-          const intl = otherUser(dependencyMap[10]).intl;
-          presentFailedToast(intl.string(otherUser(dependencyMap[10]).t.R0RpRX));
+          const intl = otherUser(1126).intl;
+          otherUser(4573).presentFailedToast(intl.string(otherUser(1126).t.R0RpRX));
         };
         cResult[1] = fn2;
-        tmp8 = fn2;
+        let tmp8 = fn2;
       } else {
         tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { onSuccess: first, onError: tmp8 };
         cResult[2] = obj2;
-        tmp9 = obj2;
+        let tmp9 = obj2;
       } else {
         tmp9 = cResult[2];
       }
-      const tmpResult = tmp(11541);
-      const familyCenterActions = tmpResult.useFamilyCenterActions(tmp9);
+      const tmp6 = declineLinkRequest(8329)();
+      const familyCenterActions = otherUser(11541).useFamilyCenterActions(tmp9);
       declineLinkRequest = familyCenterActions.declineLinkRequest;
       const isDeclineLoading = familyCenterActions.isDeclineLoading;
       if (cResult[3] === declineLinkRequest) {
-        let tmp11;
-        let tmp13;
-        let tmp17;
-        let tmp19;
-        let tmp22;
         if (cResult[4] === otherUser.id) {
-          tmp11 = cResult[5];
+          let tmp11 = cResult[5];
         }
-        declineLinkRequest(38)(!tmp6, "FamilyCenterDeclineLinkModal should only be rendered for teens.");
-        const header = tmp4.header;
+        tmp5(38)(!tmp6, "FamilyCenterDeclineLinkModal should only be rendered for teens.");
         if (cResult[6] !== otherUser) {
-          const obj3 = { otherUser, iconSrc: declineLinkRequest(4815) };
-          const tmp5Result = declineLinkRequest(14746);
-          const tmp16 = closure_5(tmp5Result, obj3);
+          const obj3 = { otherUser, iconSrc: tmp5(4815) };
+          const tmp16 = closure_5(tmp5(14746), obj3);
           cResult[6] = otherUser;
           cResult[7] = tmp16;
-          tmp13 = tmp16;
+          let tmp13 = tmp16;
+          const tmp5Result = tmp5(14746);
         } else {
           tmp13 = cResult[7];
         }
         const _Symbol = Symbol;
-        const headerText = tmp4.headerText;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           let intl = tmp(1126).intl;
-          const stringResult = intl.string(declineLinkRequest(2521).teIRCR);
+          const stringResult = intl.string(tmp5(2521).teIRCR);
           cResult[8] = stringResult;
-          tmp17 = stringResult;
+          let tmp17 = stringResult;
         } else {
           tmp17 = cResult[8];
         }
         if (cResult[9] !== tmp4.headerText) {
-          const obj4 = { style: headerText, variant: "text-lg/bold", children: tmp17 };
+          const obj4 = { style: tmp4.headerText, variant: "text-lg/bold", children: tmp17 };
           const tmp21 = closure_5(tmp(4892).Text, obj4);
           cResult[9] = tmp4.headerText;
           cResult[10] = tmp21;
-          tmp19 = tmp21;
+          let tmp19 = tmp21;
         } else {
           tmp19 = cResult[10];
         }
         if (cResult[11] !== otherUser) {
           const obj5 = { user: otherUser };
-          const tmp24 = closure_5(declineLinkRequest(14716), obj5);
+          const tmp24 = closure_5(tmp5(14716), obj5);
           cResult[11] = otherUser;
           cResult[12] = tmp24;
-          tmp22 = tmp24;
+          let tmp22 = tmp24;
         } else {
           tmp22 = cResult[12];
         }
         if (cResult[13] === tmp4.header) {
           if (cResult[14] === tmp22) {
             if (cResult[15] === tmp13) {
-              let tmp25;
-              let tmp29;
-              let tmp31;
-              let tmp34;
               if (cResult[16] === tmp19) {
-                tmp25 = cResult[17];
+                let tmp25 = cResult[17];
               }
               const _Symbol2 = Symbol;
               ({ body, noticeHeader } = tmp4);
               if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl2 = tmp(1126).intl;
-                const stringResult1 = intl2.string(declineLinkRequest(2521).cXgKMD);
+                const stringResult1 = intl2.string(tmp5(2521).cXgKMD);
                 cResult[18] = stringResult1;
-                tmp29 = stringResult1;
+                let tmp29 = stringResult1;
               } else {
                 tmp29 = cResult[18];
               }
@@ -169,88 +135,76 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                 const tmp33 = closure_5(tmp(4892).Text, obj6);
                 cResult[19] = tmp4.noticeHeader;
                 cResult[20] = tmp33;
-                tmp31 = tmp33;
+                let tmp31 = tmp33;
               } else {
                 tmp31 = cResult[20];
               }
               const _Symbol3 = Symbol;
               if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj7 = {
-                  variant: "text-sm/normal",
-                  color: "text-default",
-                  children: intl3.string(declineLinkRequest(2521).LcM8BS),
-                };
-                const Text = tmp(4892).Text;
-                intl3 = tmp(1126).intl;
-                const tmp36 = closure_5(Text, obj7);
+                const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
+                const intl3 = tmp(1126).intl;
+                obj7.children = intl3.string(tmp5(2521).LcM8BS);
+                const tmp36 = closure_5(tmp(4892).Text, obj7);
                 cResult[21] = tmp36;
-                tmp34 = tmp36;
+                let tmp34 = tmp36;
               } else {
                 tmp34 = cResult[21];
               }
               if (cResult[22] === tmp4.body) {
-                let tmp37;
                 if (cResult[23] === tmp31) {
-                  tmp37 = cResult[24];
+                  let tmp37 = cResult[24];
                 }
                 if (cResult[25] === tmp25) {
-                  let tmp41;
-                  let tmp44;
                   if (cResult[26] === tmp37) {
-                    tmp41 = cResult[27];
+                    let tmp41 = cResult[27];
                   }
                   const _Symbol4 = Symbol;
                   if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl4 = tmp(1126).intl;
-                    const stringResult2 = intl4.string(declineLinkRequest(2521).dKxFcn);
+                    const stringResult2 = intl4.string(tmp5(2521).dKxFcn);
                     cResult[28] = stringResult2;
-                    tmp44 = stringResult2;
+                    let tmp44 = stringResult2;
                   } else {
                     tmp44 = cResult[28];
                   }
                   if (cResult[29] === tmp11) {
-                    let tmp46;
-                    let tmp49;
-                    let tmp52;
                     if (cResult[30] === isDeclineLoading) {
-                      tmp46 = cResult[31];
+                      let tmp46 = cResult[31];
                     }
                     const _Symbol5 = Symbol;
                     if (cResult[32] === Symbol.for("react.memo_cache_sentinel")) {
-                      const obj8 = {
-                        variant: "tertiary",
-                        text: intl5.string(tmp(1126).t["ETE/oC"]),
-                        onPress: declineLinkRequest(5099).pop,
-                      };
-                      const Button = tmp(5601).Button;
-                      intl5 = tmp(1126).intl;
-                      const tmp51 = closure_5(Button, obj8);
+                      const obj8 = { variant: "tertiary", text: null, onPress: null };
+                      const intl5 = tmp(1126).intl;
+                      obj8.text = intl5.string(tmp(1126).t["ETE/oC"]);
+                      obj8.onPress = tmp5(5099).pop;
+                      const tmp51 = closure_5(tmp(5601).Button, obj8);
                       cResult[32] = tmp51;
-                      tmp49 = tmp51;
+                      let tmp49 = tmp51;
                     } else {
                       tmp49 = cResult[32];
                     }
                     if (cResult[33] !== tmp46) {
-                      const obj9 = { children: closure_6(tmp(5599).ButtonGroup, obj10) };
-                      const ModalFooter = tmp(11549).ModalFooter;
-                      obj10 = { children: items };
-                      items = [tmp46, tmp49];
-                      const tmp55 = closure_5(ModalFooter, obj9);
+                      const obj9 = { children: null };
+                      const obj10 = { children: null };
+                      const items = [tmp46, tmp49];
+                      obj10.children = items;
+                      obj9.children = closure_6(tmp(5599).ButtonGroup, obj10);
+                      const tmp55 = closure_5(tmp(11549).ModalFooter, obj9);
                       cResult[33] = tmp46;
                       cResult[34] = tmp55;
-                      tmp52 = tmp55;
+                      let tmp52 = tmp55;
                     } else {
                       tmp52 = cResult[34];
                     }
                     if (cResult[35] === tmp41) {
-                      let tmp56;
                       if (cResult[36] === tmp52) {
-                        tmp56 = cResult[37];
+                        let tmp56 = cResult[37];
                       }
                       return tmp56;
                     }
-                    const obj11 = { children: items1 };
-                    items1 = [tmp41, tmp52];
+                    const obj11 = { children: null };
+                    const items1 = [tmp41, tmp52];
+                    obj11.children = items1;
                     const tmp58 = closure_6(tmp(8128).ModalScreen, obj11);
                     cResult[35] = tmp41;
                     cResult[36] = tmp52;
@@ -270,16 +224,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[31] = tmp48;
                   tmp46 = tmp48;
                 }
-                const obj13 = { children: items2 };
-                items2 = [tmp25, tmp37];
+                const obj13 = { children: null };
+                const items2 = [tmp25, tmp37];
+                obj13.children = items2;
                 const tmp43 = closure_6(tmp(8129).ModalContent, obj13);
                 cResult[25] = tmp25;
                 cResult[26] = tmp37;
                 cResult[27] = tmp43;
                 tmp41 = tmp43;
               }
-              const obj14 = { style: body, children: items3 };
-              items3 = [tmp31, tmp34];
+              const obj14 = { style: body, children: null };
+              const items3 = [tmp31, tmp34];
+              obj14.children = items3;
               const tmp40 = closure_6(View, obj14);
               cResult[22] = tmp4.body;
               cResult[23] = tmp31;
@@ -288,8 +244,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj15 = { style: header, children: items4 };
-        items4 = [tmp13, tmp19, tmp22];
+        const obj15 = { style: tmp4.header, children: null };
+        const items4 = [tmp13, tmp19, tmp22];
+        obj15.children = items4;
         const tmp28 = closure_6(View, obj15);
         cResult[13] = tmp4.header;
         cResult[14] = tmp22;
@@ -305,184 +262,152 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = otherUser.id;
       cResult[5] = fn3;
       tmp11 = fn3;
+      const tmpResult = otherUser(11541);
     }
   : (otherUser) => {
-      let ButtonGroup;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let intl5;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let obj11;
       otherUser = otherUser.otherUser;
       let declineLinkRequest;
       const tmp = closure_7();
+      const callback = noop.useCallback(() => {
+        declineLinkRequest(5099).pop();
+      }, []);
+      const callback1 = noop.useCallback(() => {
+        const intl = otherUser(1126).intl;
+        otherUser(4573).presentFailedToast(intl.string(otherUser(1126).t.R0RpRX));
+      }, []);
       const tmp2 = declineLinkRequest(8329)();
-      const callback = react.useCallback(() => {
-        const arr = declineLinkRequest(dependencyMap[8]);
-        arr.pop();
-      }, []);
-      const callback1 = react.useCallback(() => {
-        const presentFailedToast = otherUser(dependencyMap[9]).presentFailedToast;
-        otherUser(dependencyMap[9]);
-        const intl = otherUser(dependencyMap[10]).intl;
-        presentFailedToast(intl.string(otherUser(dependencyMap[10]).t.R0RpRX));
-      }, []);
-      const obj = otherUser(11541);
-      const familyCenterActions = obj.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+      const familyCenterActions = otherUser(11541).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
       declineLinkRequest = familyCenterActions.declineLinkRequest;
       const isDeclineLoading = familyCenterActions.isDeclineLoading;
       const items = [declineLinkRequest, otherUser.id];
-      const callback2 = react.useCallback(() => {
+      const callback2 = noop.useCallback(() => {
         declineLinkRequest(otherUser.id);
       }, items);
       declineLinkRequest(38)(!tmp2, "FamilyCenterDeclineLinkModal should only be rendered for teens.");
-      const obj2 = { children: items4 };
-      const ModalScreen = otherUser(8128).ModalScreen;
-      const obj3 = { children: items2 };
-      const obj4 = { style: tmp.header, children: items1 };
-      const ModalContent = otherUser(8129).ModalContent;
-      const obj5 = { otherUser, iconSrc: declineLinkRequest(4815) };
-      const tmp8 = declineLinkRequest(14746);
-      items1 = [closure_5(tmp8, obj5), ,];
-      const obj6 = {
-        style: tmp.headerText,
-        variant: "text-lg/bold",
-        children: intl.string(declineLinkRequest(2521).teIRCR),
-      };
-      const Text = otherUser(4892).Text;
-      intl = otherUser(1126).intl;
-      items1[1] = closure_5(Text, obj6);
+      const obj2 = { children: null };
+      const obj3 = { children: null };
+      const obj4 = { style: tmp.header, children: null };
+      const obj5 = { otherUser, iconSrc: null };
+      const obj = otherUser(11541);
+      obj5.iconSrc = declineLinkRequest(4815);
+      const items1 = [closure_5(declineLinkRequest(14746), obj5), ,];
+      const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
+      let intl = otherUser(1126).intl;
+      obj6.children = intl.string(declineLinkRequest(2521).teIRCR);
+      items1[1] = closure_5(otherUser(4892).Text, obj6);
       items1[2] = closure_5(declineLinkRequest(14716), { user: otherUser });
-      items2 = [closure_6(View, obj4)];
-      const obj7 = { style: tmp.body, children: items3 };
+      obj4.children = items1;
+      const items2 = [closure_6(View, obj4)];
+      const obj7 = { style: tmp.body, children: null };
       const obj8 = {
         style: tmp.noticeHeader,
         variant: "eyebrow",
         color: "mobile-text-heading-primary",
-        children: intl2.string(declineLinkRequest(2521).cXgKMD),
+        children: null,
       };
-      const Text2 = otherUser(4892).Text;
-      intl2 = otherUser(1126).intl;
-      items3 = [closure_5(Text2, obj8)];
-      const obj9 = {
-        variant: "text-sm/normal",
-        color: "text-default",
-        children: intl3.string(declineLinkRequest(2521).LcM8BS),
-      };
-      const Text3 = otherUser(4892).Text;
-      intl3 = otherUser(1126).intl;
-      items3[1] = closure_5(Text3, obj9);
+      const intl2 = otherUser(1126).intl;
+      obj8.children = intl2.string(declineLinkRequest(2521).cXgKMD);
+      const items3 = [closure_5(otherUser(4892).Text, obj8)];
+      const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
+      const intl3 = otherUser(1126).intl;
+      obj9.children = intl3.string(declineLinkRequest(2521).LcM8BS);
+      items3[1] = closure_5(otherUser(4892).Text, obj9);
+      obj7.children = items3;
       items2[1] = closure_6(View, obj7);
-      items4 = [closure_6(ModalContent, obj3)];
-      const obj10 = { children: closure_6(ButtonGroup, obj11) };
-      const ModalFooter = otherUser(11549).ModalFooter;
-      obj11 = { children: items5 };
-      ButtonGroup = otherUser(5599).ButtonGroup;
+      obj3.children = items2;
+      const items4 = [closure_6(otherUser(8129).ModalContent, obj3)];
+      const obj10 = { children: null };
+      const obj11 = { children: null };
       const obj12 = {
         variant: "destructive",
         disabled: isDeclineLoading,
         loading: isDeclineLoading,
-        text: intl4.string(declineLinkRequest(2521).dKxFcn),
-        onPress: callback2,
+        text: null,
+        onPress: null,
       };
-      const Button = otherUser(5601).Button;
-      intl4 = otherUser(1126).intl;
-      items5 = [closure_5(Button, obj12)];
-      const obj13 = {
-        variant: "tertiary",
-        text: intl5.string(otherUser(1126).t["ETE/oC"]),
-        onPress: declineLinkRequest(5099).pop,
-      };
-      const Button2 = otherUser(5601).Button;
-      intl5 = otherUser(1126).intl;
-      items5[1] = closure_5(Button2, obj13);
-      items4[1] = closure_5(ModalFooter, obj10);
-      return closure_6(ModalScreen, obj2);
+      const intl4 = otherUser(1126).intl;
+      obj12.text = intl4.string(declineLinkRequest(2521).dKxFcn);
+      obj12.onPress = callback2;
+      const items5 = [closure_5(otherUser(5601).Button, obj12)];
+      const obj13 = { variant: "tertiary", text: null, onPress: null };
+      const intl5 = otherUser(1126).intl;
+      obj13.text = intl5.string(otherUser(1126).t["ETE/oC"]);
+      obj13.onPress = declineLinkRequest(5099).pop;
+      items5[1] = closure_5(otherUser(5601).Button, obj13);
+      obj11.children = items5;
+      obj10.children = closure_6(otherUser(5599).ButtonGroup, obj11);
+      items4[1] = closure_5(otherUser(11549).ModalFooter, obj10);
+      obj2.children = items4;
+      return closure_6(otherUser(8128).ModalScreen, obj2);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj6 = { marginBottom: nativeDefault.space.PX_4 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDecline.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (otherUser) => {
-      let obj3;
-      let tmp4;
-      let tmp6;
-      let tmp8;
-      let tmpResult;
-      const obj = otherUser(576);
-      const cResult = obj.c(5);
+      const cResult = otherUser(576).c(5);
       otherUser = otherUser.otherUser;
       if (cResult[0] !== otherUser) {
-        const obj2 = { DECLINE: obj3 };
-        obj3 = {
+        const obj2 = { DECLINE: null };
+        const obj3 = {
           headerShown: true,
-          headerLeft: tmpResult.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
-          headerTitle,
+          headerLeft: tmp(6017).getHeaderCloseButton(ModalActionCreatorsDefault.pop),
+          headerTitle() {
+            return null;
+          },
           render() {
-            const obj = { otherUser };
-            return closure_2_5(closure_2_8, obj);
+            return closure_2_5(closure_2_8, { otherUser });
           },
         };
+        obj2.DECLINE = obj3;
         cResult[0] = otherUser;
         cResult[1] = obj2;
-        tmp4 = obj2;
-        tmpResult = otherUser(6017);
+        let tmp4 = obj2;
+        const tmpResult = tmp(6017);
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(otherUser(1126).t["13/7kX"]);
+        const stringResult = intl.string(tmp(1126).t["13/7kX"]);
         cResult[2] = stringResult;
-        tmp6 = stringResult;
+        let tmp6 = stringResult;
       } else {
         tmp6 = cResult[2];
       }
       if (cResult[3] !== tmp4) {
         const obj4 = { initialRouteName: "DECLINE", screens: tmp4, headerBackTitle: tmp6 };
-        const tmp10 = closure_5(otherUser(10989).Modal, obj4);
+        const tmp10 = closure_5(tmp(10989).Modal, obj4);
         cResult[3] = tmp4;
         cResult[4] = tmp10;
-        tmp8 = tmp10;
+        let tmp8 = tmp10;
       } else {
         tmp8 = cResult[4];
       }
       return tmp8;
     }
   : (otherUser) => {
-      let intl;
       otherUser = otherUser.otherUser;
       const items = [otherUser];
-      const memo = react.useMemo(() => {
-        let obj2;
-        let obj3;
-        let closure_0 = otherUser;
-        let obj = { DECLINE: obj2 };
-        obj2 = {
+      const memo = noop.useMemo(() => {
+        const obj = { DECLINE: null };
+        const obj2 = {
           headerShown: true,
-          headerLeft: obj3.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
-          headerTitle,
+          headerLeft: NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop),
+          headerTitle() {
+            return null;
+          },
           render() {
-            const obj = { otherUser };
-            return closure_2_5(closure_2_8, obj);
+            return closure_2_5(closure_2_8, { otherUser });
           },
         };
-        obj3 = NavigatorHeader;
+        obj.DECLINE = obj2;
         return obj;
       }, items);
-      let obj = {
-        initialRouteName: "DECLINE",
-        screens: memo,
-        headerBackTitle: intl.string(otherUser(1126).t["13/7kX"]),
-      };
-      const Modal = otherUser(10989).Modal;
-      intl = otherUser(1126).intl;
-      return closure_5(Modal, obj);
+      let obj = { initialRouteName: "DECLINE", screens: memo, headerBackTitle: null };
+      const intl = otherUser(1126).intl;
+      obj.headerBackTitle = intl.string(otherUser(1126).t["13/7kX"]);
+      return closure_5(otherUser(10989).Modal, obj);
     };
-const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDecline.tsx");
-
-export default tmp4;

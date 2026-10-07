@@ -1,14 +1,11 @@
 // discord_app/modules/quests/native/QuestDock/useIsQuestDockModeActiveOrExiting.tsx
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import QuestDockConstants from "QuestDockConstants.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, set;
 
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS;
+require = fn;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(14912).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const __initData = {
   code: "function useIsQuestDockModeActiveOrExitingTsx1(){const{activeQuestDockMode,mode}=this.__closure;return activeQuestDockMode.get()===mode;}",
 };
@@ -27,35 +24,43 @@ const __initData4 = {
 let closure_10 = {
   code: "function useIsQuestDockModeActiveOrExitingTsx6(finished){const{activeQuestDockMode,mode,isActiveOrExiting}=this.__closure;if(finished===true&&activeQuestDockMode.get()!==mode){isActiveOrExiting.set(false);}}",
 };
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockModeActiveOrExiting.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (mode) => {
-      let sharedValue;
-      let sharedValue1;
       _require = mode;
       const activeQuestDockMode = sharedValue1.useContext(
         require("QuestDockGestureContext").QuestDockGestureContext,
       ).activeQuestDockMode;
+      sharedValue = require("ReanimatedRexport").useSharedValue(activeQuestDockMode.get() === mode);
       let obj = require("ReanimatedRexport");
-      sharedValue = obj.useSharedValue(activeQuestDockMode.get() === mode);
+      sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
       let obj2 = require("ReanimatedRexport");
-      sharedValue1 = obj2.useSharedValue(0);
       let fn = function v() {
-        return activeQuestDockMode.get() === mode;
+        return activeQuestDockMode.get() === closure_0;
       };
       fn.__closure = { activeQuestDockMode, mode };
       fn.__workletHash = 8976243706695;
       fn.__initData = __initData;
       const fn2 = function _(arg0, arg1) {
         if (arg0 !== arg1) {
-          const tmp2 = null == arg1 && sharedValue.get() === arg0;
+          let tmp2 = null == arg1;
+          if (tmp2) {
+            tmp2 = sharedValue.get() === arg0;
+          }
           if (!tmp2) {
             if (arg0) {
               let result = sharedValue.set(true);
             } else {
               const result1 = sharedValue1.set(0);
-              set = sharedValue1.set;
+              const obj = spring;
               const fn = function c(arg0) {
-                const tmp = true === arg0 && activeQuestDockMode.get() !== mode;
+                let tmp = true === arg0;
+                if (tmp) {
+                  tmp = activeQuestDockMode.get() !== mode;
+                }
                 if (tmp) {
                   const result = sharedValue.set(false);
                 }
@@ -64,8 +69,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               fn.__closure = obj2;
               fn.__workletHash = 403164900460;
               fn.__initData = __initData;
-              const obj = spring;
-              const result2 = set(obj.withSpring(1, QUEST_DOCK_MODE_CHANGE_PHYSICS, "respect-motion-settings", fn));
+              const result2 = sharedValue1.set(obj.withSpring(1, closure_4, "respect-motion-settings", fn));
             }
           }
         }
@@ -81,45 +85,41 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn2.__workletHash = 10677920060222;
       fn2.__initData = __initData2;
-      ({
-        isActiveOrExiting: sharedValue,
-        transitionProgress: sharedValue1,
-        withSpring: require("spring").withSpring,
-        QUEST_DOCK_MODE_CHANGE_PHYSICS,
-        activeQuestDockMode,
-        mode,
-      });
       const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
       return activeQuestDockMode(sharedValue[6])(sharedValue);
     }
   : (mode) => {
-      let sharedValue;
-      let sharedValue1;
       _require = mode;
       const activeQuestDockMode = sharedValue1.useContext(
         require("QuestDockGestureContext").QuestDockGestureContext,
       ).activeQuestDockMode;
+      sharedValue = require("ReanimatedRexport").useSharedValue(activeQuestDockMode.get() === mode);
       let obj = require("ReanimatedRexport");
-      sharedValue = obj.useSharedValue(activeQuestDockMode.get() === mode);
+      sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
       let obj2 = require("ReanimatedRexport");
-      sharedValue1 = obj2.useSharedValue(0);
       let fn = function n() {
-        return activeQuestDockMode.get() === mode;
+        return activeQuestDockMode.get() === closure_0;
       };
       fn.__closure = { activeQuestDockMode, mode };
       fn.__workletHash = 12800411599906;
       fn.__initData = __initData3;
       const fn2 = function c(arg0, arg1) {
         if (arg0 !== arg1) {
-          const tmp2 = null == arg1 && sharedValue.get() === arg0;
+          let tmp2 = null == arg1;
+          if (tmp2) {
+            tmp2 = sharedValue.get() === arg0;
+          }
           if (!tmp2) {
             if (arg0) {
               let result = sharedValue.set(true);
             } else {
               const result1 = sharedValue1.set(0);
-              set = sharedValue1.set;
+              const obj = spring;
               const fn = function n(arg0) {
-                const tmp = true === arg0 && activeQuestDockMode.get() !== mode;
+                let tmp = true === arg0;
+                if (tmp) {
+                  tmp = activeQuestDockMode.get() !== mode;
+                }
                 if (tmp) {
                   const result = sharedValue.set(false);
                 }
@@ -128,8 +128,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               fn.__closure = obj2;
               fn.__workletHash = 6554254521481;
               fn.__initData = __initData;
-              const obj = spring;
-              const result2 = set(obj.withSpring(1, QUEST_DOCK_MODE_CHANGE_PHYSICS, "respect-motion-settings", fn));
+              const result2 = sharedValue1.set(obj.withSpring(1, closure_4, "respect-motion-settings", fn));
             }
           }
         }
@@ -145,17 +144,6 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn2.__workletHash = 11410512079513;
       fn2.__initData = __initData4;
-      ({
-        isActiveOrExiting: sharedValue,
-        transitionProgress: sharedValue1,
-        withSpring: require("spring").withSpring,
-        QUEST_DOCK_MODE_CHANGE_PHYSICS,
-        activeQuestDockMode,
-        mode,
-      });
       const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
       return activeQuestDockMode(sharedValue[6])(sharedValue);
     };
-let result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQuestDockModeActiveOrExiting.tsx");
-
-export default tmp2;

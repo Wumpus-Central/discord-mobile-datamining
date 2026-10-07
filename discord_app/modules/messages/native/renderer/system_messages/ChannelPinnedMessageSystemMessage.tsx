@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx
-import intl5 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
@@ -10,57 +10,51 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx",
 );
 
-export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(message) {
-  let formatToPartsResult;
-  let intl3;
-  let intl4;
-  let obj5;
-  message = message.message;
-  const roleStyle = message.roleStyle;
-  const obj = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
+export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
+  const message = roleStyle.message;
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj2 = {
     username: messageAuthorWithProcessedColor.nick,
-    usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
     pinsOnClick: { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true },
   };
   const messageReference = message.messageReference;
   if (null != messageReference) {
-    const intl2 = intl5.intl;
-    const formatToParts = intl2.formatToParts;
-    const obj3 = { messageOnClick: obj5 };
-    const v7mvRNF = intl5.t["7mvRNF"];
+    const intl2 = util.intl;
+    const obj3 = {};
     const merged = Object.assign(obj2);
-    obj5 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
     ({ channel_id: obj4.targetChannelId, message_id: obj4.targetMessageId } = messageReference);
-    formatToPartsResult = formatToParts(v7mvRNF, obj3);
+    obj3.messageOnClick = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
+    let formatToPartsResult = intl2.formatToParts(util.t["7mvRNF"], obj3);
+    const obj5 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
   } else {
-    const intl = intl5.intl;
-    formatToPartsResult = intl.formatToParts(intl5.t["6TrHq2"], obj2);
+    const intl = util.intl;
+    formatToPartsResult = intl.formatToParts(util.t["6TrHq2"], obj2);
   }
-  const tmp10 = createCommonMessageDefault(message);
-  let accessibilityActions = tmp10.accessibilityActions;
+  const tmp9 = createCommonMessageDefault(roleStyle);
+  let accessibilityActions = tmp9.accessibilityActions;
   if (accessibilityActions == null) {
     accessibilityActions = [];
   }
   const items = [...accessibilityActions];
-  const push = items.push;
-  const obj6 = {
-    label: intl3.string(intl5.t["mp1N/2"]),
-    name: MessageAccessibilityActions.MessageAccessibilityAction.OPEN_PINS,
-  };
-  intl3 = intl5.intl;
-  push(obj6);
+  const obj6 = { label: null, name: null };
+  const intl3 = util.intl;
+  obj6.label = intl3.string(util.t["mp1N/2"]);
+  obj6.name = MessageAccessibilityActions.MessageAccessibilityAction.OPEN_PINS;
+  items.push(obj6);
   if (null != messageReference) {
-    const push2 = items.push;
-    const obj7 = {
-      label: intl4.string(intl5.t["+TSRGD"]),
-      name: MessageAccessibilityActions.MessageAccessibilityAction.JUMP_TO_MESSAGE,
-    };
-    intl4 = intl5.intl;
-    push2(obj7);
+    const obj7 = { label: null, name: null };
+    const intl4 = util.intl;
+    obj7.label = intl4.string(util.t["+TSRGD"]);
+    obj7.name = MessageAccessibilityActions.MessageAccessibilityAction.JUMP_TO_MESSAGE;
+    items.push(obj7);
   }
-  const obj13 = { content: formatToPartsResult, accessibilityActions: items };
-  const merged1 = Object.assign(tmp10);
+  const obj13 = { content: formatToPartsResult };
+  const merged1 = Object.assign(tmp9);
+  obj13.accessibilityActions = items;
   return obj13;
 };

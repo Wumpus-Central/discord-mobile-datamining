@@ -15,10 +15,8 @@ export const GUILD_ITEM_HIT_SLOP = { top: 4, left: 12, bottom: 4, right: 12 };
 export const GUILD_ITEM_BADGE_SIZE = 16;
 export const GUILD_ITEM_INSET_LEFT = 12;
 export const useGuildWrapperSize = () => {
-  const obj = useToken;
-  const token = obj.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const obj2 = useToken;
-  return token + 2 * obj2.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  return token + 2 * useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN);
 };
 export const FastListRenderSections = {
   MESSAGES: 0,

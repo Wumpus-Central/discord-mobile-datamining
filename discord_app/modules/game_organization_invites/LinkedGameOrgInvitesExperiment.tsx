@@ -1,43 +1,36 @@
 // discord_app/modules/game_organization_invites/LinkedGameOrgInvitesExperiment.tsx
-import react from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj2;
-let obj = {
+const obj = {
   kind: "user",
   name: "2026-09-linked-game-org-invites-dev",
   defaultConfig: { enabled: false },
-  variations: obj2,
+  variations: null,
 };
-obj2 = { 1: null };
+let obj2 = { 1: null };
 obj2[1] = { enabled: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/game_organization_invites/LinkedGameOrgInvitesExperiment.tsx");
+
+export const LinkedGameOrgInvitesExperiment = apexExperiment;
+export const useLinkedGameOrgInvitesEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? (location) => {
-      let tmp2;
-      const obj = react;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
         cResult[0] = location;
         cResult[1] = obj2;
-        tmp2 = obj2;
+        let tmp2 = obj2;
       } else {
         tmp2 = cResult[1];
       }
       return apexExperiment.useConfig(tmp2).enabled;
     }
-  : (location) => {
-      const obj = { location };
-      return apexExperiment.useConfig(obj).enabled;
-    };
-const result = size.fileFinishedImporting("modules/game_organization_invites/LinkedGameOrgInvitesExperiment.tsx");
-
-export const LinkedGameOrgInvitesExperiment = apexExperiment;
-export const useLinkedGameOrgInvitesEnabled = tmp3;
+  : (location) => apexExperiment.useConfig({ location }).enabled;
 export const getLinkedGameOrgInvitesEnabled = function getLinkedGameOrgInvitesEnabled(MessageCodedLinkManager) {
-  const obj = { location: MessageCodedLinkManager };
-  return apexExperiment.getConfig(obj).enabled;
+  return apexExperiment.getConfig({ location: MessageCodedLinkManager }).enabled;
 };

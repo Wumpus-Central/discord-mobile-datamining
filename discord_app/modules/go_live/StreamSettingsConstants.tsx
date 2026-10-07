@@ -1,20 +1,9 @@
 // discord_app/modules/go_live/StreamSettingsConstants.tsx
 import Constants from "../../Constants.tsx";
-import intl3 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f89884 = () => {
-  let StringResult;
-  if (null != f33248) {
-    StringResult = tmp();
-  } else {
-    const _String = String;
-    StringResult = String(FPS_602);
-  }
-  return StringResult;
-};
-const f89885 = () => {};
 const BoostedGuildTiers = Constants.BoostedGuildTiers;
 const StreamQualities = PremiumConstants.StreamQualities;
 const ApplicationStreamResolutions = {
@@ -55,256 +44,522 @@ const obj3 = {
   PRESET_MOBILE_HIGH_QUALITY: 7,
   [7]: "PRESET_MOBILE_HIGH_QUALITY",
 };
-const items = [, , , , , , , , , , , , , , , , ,];
-const obj4 = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE,
-  fps: obj2.FPS_60,
-  quality: StreamQualities.HIGH_STREAMING_QUALITY,
-};
-items[0] = obj4;
-items[1] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE,
-  fps: obj2.FPS_30,
-  quality: StreamQualities.HIGH_STREAMING_QUALITY,
-};
-items[2] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE,
-  fps: obj2.FPS_15,
-  quality: StreamQualities.HIGH_STREAMING_QUALITY,
-};
-items[3] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE,
-  fps: obj2.FPS_5,
-  preset: obj3.PRESET_DOCUMENTS,
-};
-items[4] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_1440,
-  fps: obj2.FPS_60,
-  guildPremiumTier: BoostedGuildTiers.TIER_2,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[5] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_1440,
-  fps: obj2.FPS_30,
-  guildPremiumTier: BoostedGuildTiers.TIER_2,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[6] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_1440,
-  fps: obj2.FPS_15,
-  guildPremiumTier: BoostedGuildTiers.TIER_2,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[7] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_1080,
-  fps: obj2.FPS_60,
-  guildPremiumTier: BoostedGuildTiers.TIER_2,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[8] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_1080,
-  fps: obj2.FPS_30,
-  guildPremiumTier: BoostedGuildTiers.TIER_2,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[9] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_1080,
-  fps: obj2.FPS_15,
-  guildPremiumTier: BoostedGuildTiers.TIER_2,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[10] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_720,
-  fps: obj2.FPS_60,
-  guildPremiumTier: BoostedGuildTiers.TIER_1,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[11] = { resolution: ApplicationStreamResolutions.RESOLUTION_720, fps: obj2.FPS_30 };
-items[12] = { resolution: ApplicationStreamResolutions.RESOLUTION_720, fps: obj2.FPS_15 };
-items[13] = { resolution: ApplicationStreamResolutions.RESOLUTION_720, fps: obj2.FPS_5 };
-items[14] = {
-  resolution: ApplicationStreamResolutions.RESOLUTION_480,
-  fps: obj2.FPS_60,
-  guildPremiumTier: BoostedGuildTiers.TIER_1,
-  quality: StreamQualities.MID_STREAMING_QUALITY,
-};
-items[15] = { resolution: ApplicationStreamResolutions.RESOLUTION_480, fps: obj2.FPS_30 };
-items[16] = { resolution: ApplicationStreamResolutions.RESOLUTION_480, fps: obj2.FPS_15 };
-items[17] = { resolution: ApplicationStreamResolutions.RESOLUTION_480, fps: obj2.FPS_5 };
+const items = [
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE,
+    fps: obj2.FPS_60,
+    quality: StreamQualities.HIGH_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE,
+    fps: obj2.FPS_30,
+    quality: StreamQualities.HIGH_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE,
+    fps: obj2.FPS_15,
+    quality: StreamQualities.HIGH_STREAMING_QUALITY,
+  },
+  { resolution: ApplicationStreamResolutions.RESOLUTION_SOURCE, fps: obj2.FPS_5, preset: obj3.PRESET_DOCUMENTS },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_1440,
+    fps: obj2.FPS_60,
+    guildPremiumTier: BoostedGuildTiers.TIER_2,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_1440,
+    fps: obj2.FPS_30,
+    guildPremiumTier: BoostedGuildTiers.TIER_2,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_1440,
+    fps: obj2.FPS_15,
+    guildPremiumTier: BoostedGuildTiers.TIER_2,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_1080,
+    fps: obj2.FPS_60,
+    guildPremiumTier: BoostedGuildTiers.TIER_2,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_1080,
+    fps: obj2.FPS_30,
+    guildPremiumTier: BoostedGuildTiers.TIER_2,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_1080,
+    fps: obj2.FPS_15,
+    guildPremiumTier: BoostedGuildTiers.TIER_2,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_720,
+    fps: obj2.FPS_60,
+    guildPremiumTier: BoostedGuildTiers.TIER_1,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  { resolution: ApplicationStreamResolutions.RESOLUTION_720, fps: obj2.FPS_30 },
+  { resolution: ApplicationStreamResolutions.RESOLUTION_720, fps: obj2.FPS_15 },
+  { resolution: ApplicationStreamResolutions.RESOLUTION_720, fps: obj2.FPS_5 },
+  {
+    resolution: ApplicationStreamResolutions.RESOLUTION_480,
+    fps: obj2.FPS_60,
+    guildPremiumTier: BoostedGuildTiers.TIER_1,
+    quality: StreamQualities.MID_STREAMING_QUALITY,
+  },
+  { resolution: ApplicationStreamResolutions.RESOLUTION_480, fps: obj2.FPS_30 },
+  { resolution: ApplicationStreamResolutions.RESOLUTION_480, fps: obj2.FPS_15 },
+  { resolution: ApplicationStreamResolutions.RESOLUTION_480, fps: obj2.FPS_5 },
+];
 let RESOLUTION_720 = ApplicationStreamResolutions.RESOLUTION_720;
+let closure_129_0 = RESOLUTION_720;
+let closure_129_1;
 const obj5 = { value: RESOLUTION_720 };
-Object.defineProperty(obj5, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj5, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj5, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj5, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 const items1 = [obj5, , ,];
 let RESOLUTION_1080 = ApplicationStreamResolutions.RESOLUTION_1080;
+let closure_130_0 = RESOLUTION_1080;
+let closure_130_1;
 const obj6 = { value: RESOLUTION_1080 };
-Object.defineProperty(obj6, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj6, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj6, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj6, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items1[1] = obj6;
 let RESOLUTION_1440 = ApplicationStreamResolutions.RESOLUTION_1440;
+let closure_131_0 = RESOLUTION_1440;
+let closure_131_1;
 const obj7 = { value: RESOLUTION_1440 };
-Object.defineProperty(obj7, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj7, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj7, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj7, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items1[2] = obj7;
 let RESOLUTION_SOURCE = ApplicationStreamResolutions.RESOLUTION_SOURCE;
-const f33240 = () => {
-  const intl = RESOLUTION_SOURCE(f33240[2]).intl;
-  return intl.string(RESOLUTION_SOURCE(f33240[2]).t.XjXqzh);
+let closure_132_0 = RESOLUTION_SOURCE;
+let closure_132_1 = () => {
+  const intl = util.intl;
+  return intl.string(util.t.XjXqzh);
 };
 const obj8 = { value: RESOLUTION_SOURCE };
-Object.defineProperty(obj8, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj8, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj8, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj8, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items1[3] = obj8;
 const RESOLUTION_7202 = ApplicationStreamResolutions.RESOLUTION_720;
+let closure_133_0 = RESOLUTION_7202;
+let closure_133_1;
 const obj9 = { value: RESOLUTION_7202 };
-Object.defineProperty(obj9, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj9, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj9, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj9, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 const items2 = [obj9, ,];
 const RESOLUTION_10802 = ApplicationStreamResolutions.RESOLUTION_1080;
+let closure_134_0 = RESOLUTION_10802;
+let closure_134_1;
 const obj10 = { value: RESOLUTION_10802 };
-Object.defineProperty(obj10, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj10, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj10, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj10, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items2[1] = obj10;
 const RESOLUTION_14402 = ApplicationStreamResolutions.RESOLUTION_1440;
+let closure_135_0 = RESOLUTION_14402;
+let closure_135_1;
 const obj11 = { value: RESOLUTION_14402 };
-Object.defineProperty(obj11, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj11, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj11, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj11, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items2[2] = obj11;
 let RESOLUTION_480 = ApplicationStreamResolutions.RESOLUTION_480;
-const f33241 = () => {
-  let stringResult;
-  RESOLUTION_480 = ApplicationStreamResolutions.RESOLUTION_480;
-  if (RESOLUTION_480 === ApplicationStreamResolutions.RESOLUTION_SOURCE) {
-    const intl2 = RESOLUTION_480(f33241[2]).intl;
-    stringResult = intl2.string(RESOLUTION_480(f33241[2]).t.XjXqzh);
+let closure_136_0 = RESOLUTION_480;
+let closure_136_1 = () => {
+  const RESOLUTION_480 = obj.RESOLUTION_480;
+  if (RESOLUTION_480 === obj.RESOLUTION_SOURCE) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.XjXqzh);
   } else {
-    const intl = RESOLUTION_480(f33241[2]).intl;
-    const obj = { resolution: RESOLUTION_480 };
-    stringResult = intl.formatToPlainString(RESOLUTION_480(f33241[2]).t.TEOC0I, obj);
+    const intl = util.intl;
+    obj = { resolution: RESOLUTION_480 };
+    stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
 };
 const obj12 = { value: RESOLUTION_480 };
-Object.defineProperty(obj12, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj12, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj12, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj12, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 const items3 = [obj12, , , ,];
 const RESOLUTION_7203 = ApplicationStreamResolutions.RESOLUTION_720;
-const f33242 = () => {
-  let stringResult;
-  const RESOLUTION_720 = ApplicationStreamResolutions.RESOLUTION_720;
-  if (RESOLUTION_720 === ApplicationStreamResolutions.RESOLUTION_SOURCE) {
-    const intl2 = RESOLUTION_7203(f33242[2]).intl;
-    stringResult = intl2.string(RESOLUTION_7203(f33242[2]).t.XjXqzh);
+let closure_137_0 = RESOLUTION_7203;
+let closure_137_1 = () => {
+  const RESOLUTION_720 = obj.RESOLUTION_720;
+  if (RESOLUTION_720 === obj.RESOLUTION_SOURCE) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.XjXqzh);
   } else {
-    const intl = RESOLUTION_7203(f33242[2]).intl;
-    const obj = { resolution: RESOLUTION_720 };
-    stringResult = intl.formatToPlainString(RESOLUTION_7203(f33242[2]).t.TEOC0I, obj);
+    const intl = util.intl;
+    obj = { resolution: RESOLUTION_720 };
+    stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
 };
 const obj13 = { value: RESOLUTION_7203 };
-Object.defineProperty(obj13, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj13, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj13, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj13, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items3[1] = obj13;
 const RESOLUTION_10803 = ApplicationStreamResolutions.RESOLUTION_1080;
-const f33243 = () => {
-  let stringResult;
-  const RESOLUTION_1080 = ApplicationStreamResolutions.RESOLUTION_1080;
-  if (RESOLUTION_1080 === ApplicationStreamResolutions.RESOLUTION_SOURCE) {
-    const intl2 = RESOLUTION_10803(f33243[2]).intl;
-    stringResult = intl2.string(RESOLUTION_10803(f33243[2]).t.XjXqzh);
+let closure_138_0 = RESOLUTION_10803;
+let closure_138_1 = () => {
+  const RESOLUTION_1080 = obj.RESOLUTION_1080;
+  if (RESOLUTION_1080 === obj.RESOLUTION_SOURCE) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.XjXqzh);
   } else {
-    const intl = RESOLUTION_10803(f33243[2]).intl;
-    const obj = { resolution: RESOLUTION_1080 };
-    stringResult = intl.formatToPlainString(RESOLUTION_10803(f33243[2]).t.TEOC0I, obj);
+    const intl = util.intl;
+    obj = { resolution: RESOLUTION_1080 };
+    stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
 };
 const obj14 = { value: RESOLUTION_10803 };
-Object.defineProperty(obj14, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj14, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj14, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj14, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items3[2] = obj14;
 const RESOLUTION_14403 = ApplicationStreamResolutions.RESOLUTION_1440;
-const f33244 = () => {
-  let stringResult;
-  const RESOLUTION_1440 = ApplicationStreamResolutions.RESOLUTION_1440;
-  if (RESOLUTION_1440 === ApplicationStreamResolutions.RESOLUTION_SOURCE) {
-    const intl2 = RESOLUTION_14403(f33244[2]).intl;
-    stringResult = intl2.string(RESOLUTION_14403(f33244[2]).t.XjXqzh);
+let closure_139_0 = RESOLUTION_14403;
+let closure_139_1 = () => {
+  const RESOLUTION_1440 = obj.RESOLUTION_1440;
+  if (RESOLUTION_1440 === obj.RESOLUTION_SOURCE) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.XjXqzh);
   } else {
-    const intl = RESOLUTION_14403(f33244[2]).intl;
-    const obj = { resolution: RESOLUTION_1440 };
-    stringResult = intl.formatToPlainString(RESOLUTION_14403(f33244[2]).t.TEOC0I, obj);
+    const intl = util.intl;
+    obj = { resolution: RESOLUTION_1440 };
+    stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
 };
 const obj15 = { value: RESOLUTION_14403 };
-Object.defineProperty(obj15, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj15, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj15, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj15, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items3[3] = obj15;
 const RESOLUTION_SOURCE2 = ApplicationStreamResolutions.RESOLUTION_SOURCE;
-const f33245 = () => {
-  let stringResult;
-  const RESOLUTION_SOURCE = constants.RESOLUTION_SOURCE;
-  if (RESOLUTION_SOURCE === constants.RESOLUTION_SOURCE) {
-    const intl2 = RESOLUTION_SOURCE2(f33245[2]).intl;
-    stringResult = intl2.string(RESOLUTION_SOURCE2(f33245[2]).t.XjXqzh);
+let closure_140_0 = RESOLUTION_SOURCE2;
+let closure_140_1 = () => {
+  const RESOLUTION_SOURCE = obj.RESOLUTION_SOURCE;
+  if (RESOLUTION_SOURCE === obj.RESOLUTION_SOURCE) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.XjXqzh);
   } else {
-    const intl = RESOLUTION_SOURCE2(f33245[2]).intl;
-    const obj = { resolution: RESOLUTION_SOURCE };
-    stringResult = intl.formatToPlainString(RESOLUTION_SOURCE2(f33245[2]).t.TEOC0I, obj);
+    const intl = util.intl;
+    obj = { resolution: RESOLUTION_SOURCE };
+    stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
 };
 const obj16 = { value: RESOLUTION_SOURCE2 };
-Object.defineProperty(obj16, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj16, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj16, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj16, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items3[4] = obj16;
 const FPS_15 = obj2.FPS_15;
+let closure_141_0 = FPS_15;
+let closure_141_1;
 const obj17 = { value: FPS_15 };
-Object.defineProperty(obj17, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj17, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj17, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj17, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 const items4 = [obj17, ,];
 const FPS_30 = obj2.FPS_30;
+let closure_142_0 = FPS_30;
+let closure_142_1;
 const obj18 = { value: FPS_30 };
-Object.defineProperty(obj18, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj18, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj18, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj18, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items4[1] = obj18;
 const FPS_60 = obj2.FPS_60;
-let c1;
+let closure_143_0 = FPS_60;
+let closure_143_1;
 const obj19 = { value: FPS_60 };
-Object.defineProperty(obj19, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj19, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj19, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj19, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items4[2] = obj19;
 const FPS_152 = obj2.FPS_15;
-const f33246 = () => {
-  const intl = FPS_152(f33246[2]).intl;
-  const obj = { value: FPS_15.FPS_15 };
-  return intl.formatToPlainString(FPS_152(f33246[2]).t["bW+JCW"], obj);
+let closure_144_0 = FPS_152;
+let closure_144_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["bW+JCW"], { value: obj2.FPS_15 });
 };
 const obj20 = { value: FPS_152 };
-Object.defineProperty(obj20, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj20, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj20, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj20, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 const items5 = [obj20, ,];
 const FPS_302 = obj2.FPS_30;
-const f33247 = () => {
-  const intl = FPS_302(f33247[2]).intl;
-  const obj = { value: FPS_30.FPS_30 };
-  return intl.formatToPlainString(FPS_302(f33247[2]).t["bW+JCW"], obj);
+let closure_145_0 = FPS_302;
+let closure_145_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["bW+JCW"], { value: obj2.FPS_30 });
 };
 const obj21 = { value: FPS_302 };
-Object.defineProperty(obj21, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj21, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj21, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj21, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items5[1] = obj21;
 const FPS_602 = obj2.FPS_60;
-const f33248 = () => {
-  const intl = FPS_602(f33248[2]).intl;
-  const obj = { value: FPS_60.FPS_60 };
-  return intl.formatToPlainString(FPS_602(f33248[2]).t["bW+JCW"], obj);
+let closure_146_0 = FPS_602;
+let closure_146_1 = () => {
+  const intl = util.intl;
+  return intl.formatToPlainString(util.t["bW+JCW"], { value: obj2.FPS_60 });
 };
 const obj22 = { value: FPS_602 };
-Object.defineProperty(obj22, "label", { get: f89884, set: undefined });
-Object.defineProperty(obj22, "subtext", { get: f89885, set: undefined });
+Object.defineProperty(obj22, "label", {
+  get: () => {
+    if (null != dependencyMap) {
+      let StringResult = tmp();
+    } else {
+      const _String = String;
+      StringResult = String(require);
+    }
+    return StringResult;
+  },
+  set: undefined,
+});
+Object.defineProperty(obj22, "subtext", {
+  get: () => {},
+  set: undefined,
+});
 items5[2] = obj22;
 const result = size.fileFinishedImporting("modules/go_live/StreamSettingsConstants.tsx");
 
@@ -323,8 +578,6 @@ export const getApplicationResolution = function getApplicationResolution(arg0) 
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const self = this;
-    const self2 = this;
     const error = new Error("Unknown resolution: " + arg0);
     throw error;
   }
@@ -343,8 +596,6 @@ export const getApplicationFramerate = function getApplicationFramerate(arg0) {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const self = this;
-    const self2 = this;
     const error = new Error("Unknown frame rate: " + arg0);
     throw error;
   }
@@ -353,15 +604,13 @@ export const ApplicationStreamSettingRequirements = items;
 export const ApplicationStreamResolutionButtons = items1;
 export const GoLiveDeviceResolutionButtons = items2;
 export const makeResolutionLabel = function makeResolutionLabel(resolution) {
-  let obj;
-  let stringResult;
   if (resolution === obj.RESOLUTION_SOURCE) {
-    const intl2 = intl3.intl;
-    stringResult = intl2.string(intl3.t.XjXqzh);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.XjXqzh);
   } else {
-    const intl = intl3.intl;
+    const intl = util.intl;
     obj = { resolution };
-    stringResult = intl.formatToPlainString(intl3.t.TEOC0I, obj);
+    stringResult = intl.formatToPlainString(util.t.TEOC0I, obj);
   }
   return stringResult;
 };

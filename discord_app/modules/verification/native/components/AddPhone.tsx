@@ -1,194 +1,158 @@
 // discord_app/modules/verification/native/components/AddPhone.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../Constants.tsx";
-import Constants2 from "../../../../../discord_common/js/shared/Constants.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import PhoneStore from "../../../phone/PhoneStore.tsx";
 import UserRequiredActionStore from "../../../../stores/UserRequiredActionStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let c4, c5, closure_12, closure_2;
 
-let closure_14;
-let map1;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-({ View: metroRequire, ScrollView: metroImportDefault } = react_native);
-const UserFlags = Constants.UserFlags;
-const NOOP_NULL = Constants2.NOOP_NULL;
-({ jsx: map1, jsxs: closure_14 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  background: obj2,
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const UserFlags = fn(1085).UserFlags;
+const NOOP_NULL = fn(1096).NOOP_NULL;
+const jsxProd = fn(21);
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { padding: 16, flex: 1 },
   title: { textAlign: "center" },
   input: { marginTop: 24 },
-  redesignInput: obj3,
-  button: { marginTop: 8 },
+  redesignInput: null,
+  button: null,
 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles = createStyles.createStyles;
-obj3 = { borderRadius: nativeDefault.radii.lg };
-let closure_15 = createStyles(obj);
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
+obj2.button = { marginTop: 8 };
+let closure_15 = createStyles.createStyles(obj2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/AddPhone.tsx");
 
 export default function AddPhone(reason) {
-  let Button;
-  let Button2;
-  let header;
-  let intl5;
-  let intl6;
-  let items4;
-  let obj10;
-  let obj12;
-  let onDeletePhone;
-  let str3;
-  let tmp13;
-  let tmp14;
   ({ header, onComplete: require, onDeletePhone } = reason);
   reason = reason.reason;
   _slicedToArray = undefined;
-  react = undefined;
-  let first;
-  let closure_7;
-  let first1;
-  let action;
+  noop = undefined;
+  first = undefined;
+  closure_7 = undefined;
+  first1 = undefined;
+  action = undefined;
   let currentUser;
-  let ref;
   closure_12 = undefined;
-  let obj = function _handleSubmit() {
-    obj = _asyncToGenerator(async function () {
-      let closure_1;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  closure_13 = async function _handleSubmit() {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        let c3;
-        try {
-          let closure_0;
-          let aPIError;
-          let combined;
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_0 = tmp8;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            const _HermesInternal = HermesInternal;
+            const combined = "" + first + first1;
+            closure_128_0 = combined;
+            NOOP_NULL(true);
+            c3 = 2;
+            const obj7 = tmp4(tmp44[14]);
+            if (_slicedToArray) {
+              c4 = 4;
+              c5 = 1;
+              const obj4 = { value: obj7.beginReverifyPhone(combined, reason), done: false };
+              return obj4;
+            } else {
+              c4 = 3;
+              c5 = 1;
+              const obj5 = { value: obj7.beginAddPhone(combined, reason), done: false };
+              return obj5;
+            }
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_129_12(false);
+          throw tmp44;
+        } else {
+          if (2 === tmp8) {
+            c3 = 1;
+            closure_128_2 = tmp44;
+            const aPIError = new closure_0(tmp44[15]).APIError(closure_128_2);
+            closure_128_1 = aPIError;
+            closure_129_10(closure_128_1.getAnyErrorMessage());
+            c3 = 0;
+            closure_129_12(false);
+            c5 = 3;
+          } else {
+            if (3 === tmp8) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              }
+            } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 === 2) {
+              c3 = 0;
+              closure_129_12(false);
               c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_0 = tmp4;
-              aPIError = undefined;
-              const _HermesInternal = HermesInternal;
-              combined = "" + first + first1;
-              closure_2_12(true);
-              c3 = 2;
-              const obj7 = tmp(closure_2[14]);
-              if (closure_2_4) {
-                c4 = 4;
-                c5 = 1;
-                const obj4 = { value: obj7.beginReverifyPhone(combined, reason), done: false };
-                return obj4;
-              } else {
-                c4 = 3;
-                c5 = 1;
-                const obj5 = { value: obj7.beginAddPhone(combined, reason), done: false };
-                return obj5;
-              }
+              const obj = { value, done: true };
+              return obj;
             }
-          } else if (1 === c4) {
-            c3 = 0;
-            closure_129_12(false);
-            throw closure_2;
-          } else {
-            if (2 === c4) {
-              c3 = 1;
-              const self = this;
-              const self2 = this;
-              aPIError = new closure_0(closure_2[15]).APIError(closure_2);
-              closure_129_10(aPIError.getAnyErrorMessage());
-            } else {
-              if (3 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  closure_129_12(false);
-                  c5 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                }
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 0;
-                closure_129_12(false);
-                c5 = 3;
-                obj = { value, done: true };
-                return obj;
-              }
-              closure_129_0(combined);
-              c3 = 1;
-            }
-            c3 = 0;
-            closure_129_12(false);
-            c5 = 3;
-            return { value: "IconComponent", done: null };
+            closure_129_0(closure_128_0);
+            c3 = 1;
           }
-        } catch (tmp38) {
-          closure_2 = tmp38;
-          if (0 === c3) {
-            c5 = 3;
-            throw tmp38;
-          } else if (1 === tmp40) {
-            c4 = 1;
-          } else {
-            c4 = 2;
-          }
+          c3 = 0;
+          closure_129_12(false);
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        }
+      } catch (tmp44) {
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp44;
+        } else if (tmp2 === tmp46) {
+          c4 = tmp2;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    return obj(...arguments);
+    }
   };
-  const style = reason.style;
   const tmp = closure_15();
-  const tmp3 = reason;
-  obj = require("get initialized");
   const items = [currentUser];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = require("get initialized");
+  const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = require("initialize");
   const items1 = [action];
   let phone;
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => action.getAction());
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => action.getAction());
   if (stateFromStores != null) {
     phone = stateFromStores.phone;
   }
-  let obj3 = onDeletePhone(tmp3[13]);
-  const result = obj3.isPhoneReverification(stateFromStores, stateFromStores1);
+  let obj2 = require("initialize");
+  const result = onDeletePhone(reason[13]).isPhoneReverification(stateFromStores, stateFromStores1);
   _slicedToArray = result;
   let tmp8 = null != onDeletePhone && null != phone;
   if (tmp8) {
@@ -201,41 +165,32 @@ export default function AddPhone(reason) {
   if (tmp8) {
     tmp8 = !result;
   }
+  let obj3 = onDeletePhone(reason[13]);
   const items2 = [first1];
-  const tmp2Result = require("get initialized");
-  const stateFromStores2 = tmp2Result.useStateFromStores(items2, () => first1.getCountryCode());
-  let str = stateFromStores2.code;
-  [tmp13, tmp14] = _slicedToArray(str.split(" "), 2);
-  react = tmp14;
-  let obj5 = react;
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => first1.getCountryCode());
+  const tmp2Result = require("initialize");
+  [tmp13, tmp14] = stateFromStores2.code.split(" ");
+  noop = tmp14;
   let str2 = tmp13;
-  const useState = react.useState;
-  const tmp12 = _slicedToArray(str.split(" "), 2);
   if (tmp13 == null) {
     str2 = "";
   }
-  const tmp11Result = _slicedToArray(useState(str2), 2);
-  first = tmp11Result[0];
-  closure_7 = tmp11Result[1];
+  [first, closure_7] = noop.useState(str2);
   if (null != phone) {
-    str3 = phone.replace(first, "");
+    let str3 = phone.replace(first, "");
   } else {
     str3 = tmp14;
     if (tmp14 == null) {
       str3 = "";
     }
   }
-  const tmp11Result4 = _slicedToArray(obj5.useState(str3), 2);
-  first1 = tmp11Result4[0];
-  action = tmp11Result4[1];
-  const tmp11Result5 = _slicedToArray(obj5.useState(null), 2);
+  [first1, action] = noop.useState(str3);
+  const tmp11Result5 = _slicedToArray(noop.useState(null), 2);
   currentUser = tmp11Result5[1];
-  const first2 = tmp11Result5[0];
-  ref = obj5.useRef(true);
-  const tmp11Result6 = _slicedToArray(obj5.useState(false), 2);
+  noop.useRef(true);
+  const tmp11Result6 = _slicedToArray(noop.useState(false), 2);
   closure_12 = tmp11Result6[1];
   const items3 = [tmp14];
-  const first3 = tmp11Result6[0];
   const effect = obj5.useEffect(() => {
     if (ref.current) {
       tmp.current = false;
@@ -247,12 +202,115 @@ export default function AddPhone(reason) {
       action(str);
     }
   }, items3);
-  let obj4 = { style: items4, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-  items4 = [tmp.background, style];
+  let obj4 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+  const items4 = [tmp.background, reason.style];
+  obj4.style = items4;
   let obj6 = { style: tmp.container, children: null };
-  const tmp25 = closure_7;
-  if (header == null) {
+  if (header != null) {
+    const items5 = [header, , ,];
     let obj7 = {
+      style: null,
+      textInputStyle: null,
+      label: null,
+      alpha2: null,
+      countryCode: null,
+      value: null,
+      onChangeText: null,
+      forceMode: null,
+      returnKeyType: "done",
+      onSubmitEditing: null,
+      error: null,
+      onPressCountrySelector: null,
+      autoFocus: true,
+    };
+    ({ input: obj8.style, redesignInput: obj8.textInputStyle } = tmp);
+    if (null != phone) {
+      if (!result) {
+        const intl3 = require("util").intl;
+        let stringResult = intl3.string(require("util").t.K6R0UP);
+      }
+      function handleSubmit() {
+        const self = this;
+        const apply = closure_13.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }
+      obj7.label = stringResult;
+      obj7.alpha2 = stateFromStores2.alpha2;
+      obj7.countryCode = tmp13;
+      obj7.value = first1;
+      obj7.onChangeText = function onChangeText(arg0, arg1) {
+        action(arg0);
+        closure_7(arg1);
+      };
+      obj7.forceMode = require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE;
+      obj7.onSubmitEditing = handleSubmit;
+      obj7.error = tmp11Result5[0];
+      obj7.onPressCountrySelector = function onPressCountrySelector() {
+        return onDeletePhone(reason[20]).pushLazy(require("asyncRequireImpl")(reason[21], reason.paths));
+      };
+      items5[1] = tmp22(tmp28, obj7);
+      const obj9 = { style: tmp.button, children: null };
+      let str5 = "lg";
+      if (tmp8) {
+        str5 = "md";
+      }
+      const obj10 = { variant: "primary", size: str5, text: null, onPress: null, loading: null };
+      const intl5 = require("util").intl;
+      obj10.text = intl5.string(require("util").t.PDTjLN);
+      obj10.onPress = handleSubmit;
+      obj10.loading = tmp11Result6[0];
+      obj9.children = tmp22(require("components/Button/Button").Button, obj10);
+      items5[2] = tmp22(tmp25, obj9);
+      let tmp22Result = null;
+      if (tmp8) {
+        const obj11 = { style: tmp.button, children: null };
+        const obj12 = { variant: "secondary", size: "md", text: null, onPress: null };
+        const intl6 = require("util").intl;
+        obj12.text = intl6.string(require("util").t.kYvzoQ);
+        obj12.onPress = function onPress() {
+          if (null != stateFromStores) {
+            if (stateFromStores.hasFlag(UserFlags.MFA_SMS)) {
+              const obj3 = {
+                importer() {
+                  return require("asyncRequireImpl")(reason[25], reason.paths).then((result) => {
+                    closure_0 = result.default;
+                    return (arg0) => {
+                      const obj = {};
+                      const merged = Object.assign(arg0);
+                      let tmp4 = closure_2_1;
+                      if (closure_2_1 == null) {
+                        tmp4 = closure_3_12;
+                      }
+                      obj.onConfirm = tmp4;
+                      return closure_3_13(closure_0, obj);
+                    };
+                  });
+                },
+                isDismissable: false,
+              };
+              actions_AlertActionCreatorsDefault.openLazy(obj3);
+            } else if (onDeletePhone != null) {
+              tmp2();
+            }
+          }
+        };
+        obj11.children = tmp22(require("components/Button/Button").Button, obj12);
+        tmp22Result = tmp22(tmp25, obj11);
+      }
+      items5[3] = tmp22Result;
+      obj6.children = items5;
+      obj4.children = tmp24(tmp25, obj6);
+      return tmp22(tmp23, obj4);
+    }
+    const intl4 = require("util").intl;
+    stringResult = intl4.string(require("util").t["64bX0M"]);
+  } else {
+    const obj13 = {
       style: tmp.title,
       accessibilityRole: "header",
       variant: "heading-xl/extrabold",
@@ -260,119 +318,15 @@ export default function AddPhone(reason) {
       children: null,
     };
     if (null != phone) {
-      let stringResult;
       if (!result) {
-        const intl = require("intl").intl;
-        stringResult = intl.string(require("intl").t.WO0zBE);
+        const intl = require("util").intl;
+        let stringResult1 = intl.string(require("util").t.WO0zBE);
       }
-      obj7.children = stringResult;
-      header = tmp24(tmp32, obj7);
+      obj13.children = stringResult1;
+      tmp22(tmp31, obj13);
     }
-    const intl2 = require("intl").intl;
-    stringResult = intl2.string(require("intl").t.hY8QTR);
+    const intl2 = require("util").intl;
+    stringResult1 = intl2.string(require("util").t.hY8QTR);
   }
-  const items5 = [header, , ,];
-  const obj8 = {
-    style: tmp.input,
-    textInputStyle: tmp.redesignInput,
-    label: null,
-    alpha2: null,
-    countryCode: null,
-    value: null,
-    onChangeText: null,
-    forceMode: null,
-    returnKeyType: "done",
-    onSubmitEditing: null,
-    error: null,
-    onPressCountrySelector: null,
-    autoFocus: true,
-  };
-  if (null != phone) {
-    let stringResult1;
-    if (!result) {
-      const intl3 = require("intl").intl;
-      stringResult1 = intl3.string(require("intl").t.K6R0UP);
-    }
-    function handleSubmit() {
-      return obj(...arguments);
-    }
-    obj8.label = stringResult1;
-    obj8.alpha2 = stateFromStores2.alpha2;
-    obj8.countryCode = tmp13;
-    obj8.value = first1;
-    obj8.onChangeText = function onChangeText(arg0, arg1) {
-      action(arg0);
-      closure_7(arg1);
-    };
-    obj8.forceMode = require("PhoneOrEmailUtils").PhoneOrEmailSelectorForceMode.PHONE;
-    obj8.onSubmitEditing = handleSubmit;
-    obj8.error = first2;
-    obj8.onPressCountrySelector = function onPressCountrySelector() {
-      obj = onDeletePhone(reason[20]);
-      return obj.pushLazy(require("asyncRequire")(reason[21], reason.paths));
-    };
-    items5[1] = obj(tmp29, obj8);
-    let str5 = "lg";
-    const obj9 = { style: tmp.button, children: obj(Button, obj10) };
-    Button = require("components/Button/Button").Button;
-    if (tmp8) {
-      str5 = "md";
-    }
-    obj10 = {
-      variant: "primary",
-      size: str5,
-      text: intl5.string(require("intl").t.PDTjLN),
-      onPress: handleSubmit,
-      loading: first3,
-    };
-    intl5 = require("intl").intl;
-    items5[2] = obj(first, obj9);
-    let tmp24Result = null;
-    if (tmp8) {
-      const obj11 = { style: tmp.button, children: obj(Button2, obj12) };
-      obj12 = {
-        variant: "secondary",
-        size: "md",
-        text: intl6.string(require("intl").t.kYvzoQ),
-        onPress() {
-          if (null != stateFromStores) {
-            if (stateFromStores.hasFlag(UserFlags.MFA_SMS)) {
-              const obj3 = {
-                importer() {
-                  const promise = require("asyncRequire")(reason[25], reason.paths);
-                  return promise.then((result) => {
-                    let closure_0 = result.default;
-                    return (arg0) => {
-                      let tmp4;
-                      obj = { onConfirm: tmp4 };
-                      const merged = Object.assign(arg0);
-                      tmp4 = closure_2_1;
-                      if (closure_2_1 == null) {
-                        tmp4 = closure_3_12;
-                      }
-                      return closure_3_13(closure_0, obj);
-                    };
-                  });
-                },
-                isDismissable: false,
-              };
-              const obj2 = actions_AlertActionCreatorsDefault;
-              obj2.openLazy(obj3);
-            } else if (onDeletePhone != null) {
-              tmp2();
-            }
-          }
-        },
-      };
-      Button2 = require("components/Button/Button").Button;
-      intl6 = require("intl").intl;
-      tmp24Result = tmp24(tmp27, obj11);
-    }
-    items5[3] = tmp24Result;
-    obj6.children = items5;
-    obj4.children = closure_14(first, obj6);
-    return obj(tmp25, obj4);
-  }
-  const intl4 = require("intl").intl;
-  stringResult1 = intl4.string(require("intl").t["64bX0M"]);
+  const tmp12 = _slicedToArray(stateFromStores2.code.split(" "), 2);
 }

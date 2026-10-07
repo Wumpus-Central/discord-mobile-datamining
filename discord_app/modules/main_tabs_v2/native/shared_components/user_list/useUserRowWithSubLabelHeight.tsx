@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useUserRowWithSubLabelHeight.tsx
-import react from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import useFontScale from "../../../../screen/native/useFontScale.tsx";
@@ -15,38 +15,42 @@ function getUserRowWithSubLabelHeight(rowHeight) {
     2 * rowHeight.rowPadding + rowHeight.labelLineHeight + rowHeight.subLabelLines * rowHeight.subLabelLineHeight,
   );
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+let result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/shared_components/user_list/useUserRowWithSubLabelHeight.tsx",
+);
+
+export { getUserRowWithSubLabelHeight };
+export const useUserRowWithSubLabelHeight = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const obj = react;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       let num = 1;
       if (undefined !== arg0) {
         num = arg0;
       }
+      const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
       const tmpResult = useToken;
-      const token = tmpResult.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
+      const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
       const tmpResult4 = useToken;
-      const token1 = tmpResult4.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+      const scaledTextLineHeight = useScaledTextLineHeight.useScaledTextLineHeight("text-md/semibold");
       const tmpResult5 = useScaledTextLineHeight;
-      const scaledTextLineHeight = tmpResult5.useScaledTextLineHeight("text-md/semibold");
-      const tmpResult6 = useFontScale;
-      const fontScale = tmpResult6.useFontScale();
+      const fontScale = useFontScale.useFontScale();
       const result = ActionStatusSubLabel.ACTION_STATUS_SUB_LABEL_LINE_HEIGHT * fontScale;
       if (cResult[0] === scaledTextLineHeight) {
         if (cResult[1] === token) {
           if (cResult[2] === token1) {
             if (cResult[3] === result) {
-              let tmp10;
               if (cResult[4] === num) {
-                tmp10 = cResult[5];
+                let tmp10 = cResult[5];
               }
               return tmp10;
             }
           }
         }
       }
-      const tmp4Result = roundToNearestPixelDefault;
-      const tmp4ResultResult = tmp4Result(Math.max(token, 2 * token1 + scaledTextLineHeight + num * result));
+      const tmpResult6 = useFontScale;
+      const tmp4ResultResult = roundToNearestPixelDefault(
+        Math.max(token, 2 * token1 + scaledTextLineHeight + num * result),
+      );
       cResult[0] = scaledTextLineHeight;
       cResult[1] = token;
       cResult[2] = token1;
@@ -54,22 +58,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = num;
       cResult[5] = tmp4ResultResult;
       tmp10 = tmp4ResultResult;
+      const tmp4Result = roundToNearestPixelDefault;
     }
   : () => {
       let num = arg0;
       if (arg0 === undefined) {
         num = 1;
       }
-      const obj = useToken;
-      const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
-      const obj2 = useToken;
-      const token1 = obj2.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
-      const obj3 = useScaledTextLineHeight;
-      const scaledTextLineHeight = obj3.useScaledTextLineHeight("text-md/semibold");
-      const obj4 = useFontScale;
-      const fontScale = obj4.useFontScale();
-      const tmp5 = roundToNearestPixelDefault;
-      return tmp5(
+      const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT);
+      const token1 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+      const scaledTextLineHeight = useScaledTextLineHeight.useScaledTextLineHeight("text-md/semibold");
+      const fontScale = useFontScale.useFontScale();
+      return roundToNearestPixelDefault(
         Math.max(
           token,
           2 * token1 +
@@ -78,9 +78,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         ),
       );
     };
-let result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/shared_components/user_list/useUserRowWithSubLabelHeight.tsx",
-);
-
-export { getUserRowWithSubLabelHeight };
-export const useUserRowWithSubLabelHeight = tmp2;

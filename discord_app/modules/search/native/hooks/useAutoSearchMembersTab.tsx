@@ -1,63 +1,52 @@
 // discord_app/modules/search/native/hooks/useAutoSearchMembersTab.tsx
 import _mod12 from "../../../../../_runtime/metro/00012__.js";
-import Constants from "../../../../Constants.tsx";
 import SearchPlatformUtilsDefault from "../SearchPlatformUtils.tsx";
-import SearchPlatformConstants from "../SearchPlatformConstants.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let closure_5 = SearchPlatformConstants.SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
-const SearchTypes = Constants.SearchTypes;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+let closure_5 = fn(11996).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+const SearchTypes = fn(1085).SearchTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");
+
+export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let autocompleteVisible;
-      let closure_0;
       _require = arg0;
-      let closure_1 = arg1;
-      let obj = require("react");
-      const cResult = obj.c(7);
+      closure_1 = arg1;
+      const cResult = require("c").c(7);
       if (cResult[0] === arg1) {
-        let tmp2;
-        let tmp3;
-        let tmp6;
-        let tmp5;
         if (cResult[1] === arg0) {
-          tmp2 = cResult[2];
-          tmp3 = cResult[3];
+          let tmp2 = cResult[2];
+          let tmp3 = cResult[3];
         }
-        const effect = react.useEffect(tmp2, tmp3);
+        const effect = noop.useEffect(tmp2, tmp3);
         if (cResult[4] !== arg0) {
           const fn2 = function h() {
             return () => {
-              const obj = closure_1(dependencyMap[8]);
-              const result = obj.cleanupGuildMemberTab(closure_1_0);
+              const result = closure_1(12005).cleanupGuildMemberTab(closure_1_0);
             };
           };
           const items = [arg0];
           cResult[4] = arg0;
           cResult[5] = fn2;
           cResult[6] = items;
-          tmp6 = items;
-          tmp5 = fn2;
+          let tmp6 = items;
+          let tmp5 = fn2;
         } else {
           tmp5 = cResult[5];
           tmp6 = cResult[6];
         }
-        const effect1 = react.useEffect(tmp5, tmp6);
+        const effect1 = noop.useEffect(tmp5, tmp6);
       }
       const fn = function o() {
         if (!closure_1) {
-          const obj = _mod12;
-          const debounceResult = obj.debounce((searchQueryString) => {
-            let tmp13;
+          const debounceResult = _mod12.debounce((searchQueryString) => {
             if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-              const obj2 = searchContext(dependencyMap[7]);
-              const guildIdFromSearchContext = obj2.getGuildIdFromSearchContext(searchContext);
+              const guildIdFromSearchContext = searchContext(11987).getGuildIdFromSearchContext(searchContext);
               if (null != guildIdFromSearchContext) {
                 const channelIds = autocompleteVisible.getChannelIds(searchContext);
                 let tmp8 = null;
@@ -69,25 +58,25 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   tmp8 = first;
                 }
-                const obj3 = {
+                const obj4 = {
                   searchContext,
                   searchQueryString,
                   guildId: guildIdFromSearchContext,
                   channelId: tmp8,
-                  threadId: tmp13,
+                  threadId: null,
                 };
-                tmp13 = null;
-                const searchGuildMemberTab = closure_1(dependencyMap[8]).searchGuildMemberTab;
-                closure_1(dependencyMap[8]);
+                let tmp12 = null;
                 if (searchContext.type === constants.THREAD) {
-                  tmp13 = tmp8;
+                  tmp12 = tmp8;
                 }
-                searchGuildMemberTab(obj3);
+                obj4.threadId = tmp12;
+                closure_1(12005).searchGuildMemberTab(obj4);
+                const obj3 = closure_1(12005);
               }
+              const obj2 = searchContext(11987);
             }
           }, closure_5);
-          let obj2 = SearchPlatformUtilsDefault;
-          return obj2.subscribeTextInputValue(searchContext, debounceResult);
+          return SearchPlatformUtilsDefault.subscribeTextInputValue(searchContext, debounceResult);
         }
       };
       const items1 = [arg1, arg0];
@@ -97,20 +86,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items1;
       tmp3 = items1;
       tmp2 = fn;
+      let obj = require("c");
     }
   : (arg0, arg1) => {
-      let autocompleteVisible;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       const items = [arg1, arg0];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (!closure_1) {
-          const obj = _mod12;
-          const debounceResult = obj.debounce((searchQueryString) => {
-            let tmp13;
+          const debounceResult = _mod12.debounce((searchQueryString) => {
             if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-              const obj2 = searchContext(dependencyMap[7]);
-              const guildIdFromSearchContext = obj2.getGuildIdFromSearchContext(searchContext);
+              const guildIdFromSearchContext = searchContext(11987).getGuildIdFromSearchContext(searchContext);
               if (null != guildIdFromSearchContext) {
                 const channelIds = autocompleteVisible.getChannelIds(searchContext);
                 let tmp8 = null;
@@ -122,36 +108,32 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   tmp8 = first;
                 }
-                const obj3 = {
+                const obj4 = {
                   searchContext,
                   searchQueryString,
                   guildId: guildIdFromSearchContext,
                   channelId: tmp8,
-                  threadId: tmp13,
+                  threadId: null,
                 };
-                tmp13 = null;
-                const searchGuildMemberTab = closure_1(dependencyMap[8]).searchGuildMemberTab;
-                closure_1(dependencyMap[8]);
+                let tmp12 = null;
                 if (searchContext.type === constants.THREAD) {
-                  tmp13 = tmp8;
+                  tmp12 = tmp8;
                 }
-                searchGuildMemberTab(obj3);
+                obj4.threadId = tmp12;
+                closure_1(12005).searchGuildMemberTab(obj4);
+                const obj3 = closure_1(12005);
               }
+              const obj2 = searchContext(11987);
             }
           }, closure_5);
-          let obj2 = SearchPlatformUtilsDefault;
-          return obj2.subscribeTextInputValue(searchContext, debounceResult);
+          return SearchPlatformUtilsDefault.subscribeTextInputValue(searchContext, debounceResult);
         }
       }, items);
       const items1 = [arg0];
-      const effect1 = react.useEffect(
+      const effect1 = noop.useEffect(
         () => () => {
-          const obj = closure_1(dependencyMap[8]);
-          const result = obj.cleanupGuildMemberTab(closure_1_0);
+          const result = closure_1(12005).cleanupGuildMemberTab(closure_1_0);
         },
         items1,
       );
     };
-let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchMembersTab.tsx");
-
-export const useAutoSearchMembersTab = tmp2;

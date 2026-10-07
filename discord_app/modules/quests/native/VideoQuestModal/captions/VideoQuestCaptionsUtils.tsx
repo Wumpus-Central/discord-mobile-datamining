@@ -9,7 +9,6 @@ export const findActiveCaption = function findActiveCaption(captions, currentTim
   let num = 0;
   if (0 <= diff) {
     while (true) {
-      let sum;
       let _Math = Math;
       let rounded = Math.floor((num + diff) / 2);
       tmp3 = captions[rounded];
@@ -21,7 +20,7 @@ export const findActiveCaption = function findActiveCaption(captions, currentTim
       }
       if (currentTime < tmp3.start) {
         diff1 = rounded - 1;
-        sum = num;
+        let sum = num;
       } else {
         sum = rounded + 1;
       }

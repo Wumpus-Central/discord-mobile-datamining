@@ -1,60 +1,49 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx
 import SnowflakeUtilsDefault from "../../../../../../../utils/SnowflakeUtils.tsx";
-import react_native from "../../../../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../../../../../design/void/native.tsx";
 import _modDef4467 from "../../../../../../../../_runtime/metro/04467__.js";
 import useThemeDefault from "../../../../../../../hooks/useTheme.tsx";
 import useChannelNameDefault from "../../../../../../channel/useChannelName.tsx";
-import ReadStateConstants from "../../../../../../read_states/ReadStateConstants.tsx";
-import AssetRegistryDefault from "../../../../../../../../_runtime/06464_AssetRegistry.js";
+import _modDef6464 from "../../../../../../../../_runtime/metro/06464__.js";
 import isChangelogChannelDefault from "../../../../../../changelog/utils/isChangelogChannel.tsx";
-import AssetRegistryDefault2 from "../../../../../../../../_runtime/07600_AssetRegistry.js";
+import _modDef7600 from "../../../../../../../../_runtime/metro/07600__.js";
 import BotTagDefault from "../../../../../../applications/native/BotTag.tsx";
 import GuildTagDefault from "../../../../../../guild_tag/native/GuildTag.tsx";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import AssetRegistryDefault3 from "../../../../../../../../_runtime/10706_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../../../../../_runtime/11078_AssetRegistry.js";
+import _modDef10706 from "../../../../../../../../_runtime/metro/10706__.js";
+import _modDef11078 from "../../../../../../../../_runtime/metro/11078__.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
-import react from "../../../../../../../../_runtime/00019_react.js";
+import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import ReadStateStore from "../../../../../../../stores/ReadStateStore.tsx";
-import Fragment from "../../../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../../_runtime/metro/00002__.js";
 
-let channel;
-
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-const View = react_native.View;
-const UnreadSetting = ReadStateConstants.UnreadSetting;
-({ jsx: metroRequire, jsxs: metroImportDefault, Fragment: metroImportAll } = Fragment);
-let createStyles = createStyles_mod;
+const native = channelMutedIcon(1188);
+require = fn;
+const View = fn(17).View;
+const UnreadSetting = fn(5078).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+let createStyles = fn(4896);
 let obj = {
   content: { flex: 1 },
   channelIcon: { alignSelf: "center" },
   channelNameAndAccessories: { flexDirection: "row", alignItems: "center", width: "100%" },
   channelIcons: { flexDirection: "row", alignItems: "center" },
-  channelAccessoriesContainer: obj2,
-  channelAccessories: obj3,
-  channelNameAndBadge: obj4,
-  botTag: obj5,
-  contentPadded: obj6,
+  channelAccessoriesContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginLeft: nativeDefault.space.PX_4,
+  },
+  channelAccessories: null,
+  channelNameAndBadge: null,
+  botTag: null,
+  contentPadded: null,
 };
-obj2 = { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 };
+obj.channelAccessories = {
   flexDirection: "row",
   justifyContent: "flex-end",
   alignItems: "center",
@@ -62,221 +51,195 @@ obj3 = {
   paddingHorizontal: nativeDefault.space.PX_4,
   paddingVertical: 1,
 };
-obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flex: 1, minWidth: 0 };
-obj5 = { marginRight: nativeDefault.space.PX_4 };
-obj6 = { paddingRight: nativeDefault.space.PX_40 };
-let closure_9 = createStyles(obj);
-createStyles = createStyles_mod;
+let obj4 = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  borderRadius: nativeDefault.radii.xs,
+  paddingHorizontal: nativeDefault.space.PX_4,
+  paddingVertical: 1,
+};
+obj.channelNameAndBadge = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: nativeDefault.space.PX_4,
+  flex: 1,
+  minWidth: 0,
+};
+let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flex: 1, minWidth: 0 };
+obj.botTag = { marginRight: nativeDefault.space.PX_4 };
+let obj6 = { marginRight: nativeDefault.space.PX_4 };
+obj.contentPadded = { paddingRight: nativeDefault.space.PX_40 };
+let closure_9 = createStyles.createStyles(obj);
+createStyles = fn(4896);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
-  let MOBILE_TEXT_HEADING_PRIMARY;
-  let tmp6;
-  const tmp = arg2;
-  if (tmp) {
-    MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.TEXT_MUTED;
-    tmp6 = importDefault;
+  if (arg2) {
+    let MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.TEXT_MUTED;
+    let tmp5 = importDefault;
   } else {
-    const tmp2 = arg0;
-    if (!tmp2) {
-      const tmp3 = arg1;
-      if (!tmp3) {
+    if (!arg0) {
+      if (!arg1) {
         MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.MESSAGES_ITEM_CHANNEL_TEXT_DEFAULT;
-        tmp6 = importDefault;
+        tmp5 = importDefault;
       }
     }
     MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    tmp6 = importDefault;
+    tmp5 = importDefault;
   }
   const obj = {
     channelText: { color: MOBILE_TEXT_HEADING_PRIMARY },
     channelName: { flexShrink: 1 },
-    timestamp: { color: tmp6(587).colors.TEXT_SUBTLE },
+    timestamp: { color: tmp5(587).colors.TEXT_SUBTLE },
   };
-  ({ color: tmp6(587).colors.TEXT_SUBTLE });
   return obj;
 });
-createStyles = createStyles_mod;
+createStyles = fn(4896);
 let closure_11 = createStyles.createStyles((arg0) => {
-  let colors;
-  let colors2;
-  let colors3;
   const obj = {
     channelIcon: { marginRight: nativeDefault.space.PX_4 },
-    channelMutedIcon: { tintColor: arg0 ? colors.ICON_SUBTLE : colors.ICON_MUTED },
-    channelFavoriteIcon: { tintColor: arg0 ? colors2.ICON_SUBTLE : colors2.ICON_MUTED },
-    channelIgnoredIcon: { tintColor: arg0 ? colors3.ICON_SUBTLE : colors3.ICON_MUTED },
+    channelMutedIcon: null,
+    channelFavoriteIcon: null,
+    channelIgnoredIcon: null,
   };
-  ({ marginRight: nativeDefault.space.PX_4 });
-  colors = nativeDefault.colors;
-  colors2 = nativeDefault.colors;
-  colors3 = nativeDefault.colors;
+  const colors = nativeDefault.colors;
+  obj.channelMutedIcon = { tintColor: arg0 ? colors.ICON_SUBTLE : colors.ICON_MUTED };
+  const colors2 = nativeDefault.colors;
+  obj.channelFavoriteIcon = { tintColor: arg0 ? colors2.ICON_SUBTLE : colors2.ICON_MUTED };
+  const colors3 = nativeDefault.colors;
+  obj.channelIgnoredIcon = { tintColor: arg0 ? colors3.ICON_SUBTLE : colors3.ICON_MUTED };
   return obj;
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (selected) => {
-      let blocked;
-      let favorite;
-      let ignored;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let muted;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(12);
+      channelMutedIcon = require;
+      let items = dependencyMap;
+      const cResult = c.c(12);
       ({ muted, favorite, ignored, blocked } = selected);
-      const tmp4 = closure_11(selected.selected);
+      channelMutedIcon2 = closure_11(selected.selected);
       if (blocked) {
-        if (cResult[0] === tmp4.channelIcon) {
-          let tmp18;
-          if (cResult[1] === tmp4.channelMutedIcon) {
-            tmp18 = cResult[2];
-          }
-          tmp5 = tmp18;
+        if (cResult[0] === channelMutedIcon2.channelIcon) {
         }
-        const obj2 = { source: AssetRegistryDefault2, size: native.Icon.Sizes.EXTRA_SMALL, style: items };
-        const Icon4 = native.Icon;
+        const obj2 = { source: _modDef7600, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         items = [,];
-        ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp4);
-        const tmp21 = metroRequire(Icon4, obj2);
-        cResult[0] = tmp4.channelIcon;
-        cResult[1] = tmp4.channelMutedIcon;
+        ({ channelIcon: arr[0], channelMutedIcon } = channelMutedIcon2);
+        items[1] = channelMutedIcon;
+        obj2.style = items;
+        const tmp21 = timestampProducer(native.Icon, obj2);
+        ({ channelIcon: tmp[0], channelMutedIcon: channelMutedIcon2 } = channelMutedIcon2);
+        cResult[1] = channelMutedIcon2;
         cResult[2] = tmp21;
-        tmp18 = tmp21;
       } else if (ignored) {
-        if (cResult[3] === tmp4.channelIcon) {
-          let tmp14;
-          if (cResult[4] === tmp4.channelIgnoredIcon) {
-            tmp14 = cResult[5];
-          }
-          tmp5 = tmp14;
+        if (cResult[3] === channelMutedIcon2.channelIcon) {
         }
-        const obj3 = { source: AssetRegistryDefault, size: native.Icon.Sizes.EXTRA_SMALL, style: items1 };
-        const Icon3 = native.Icon;
-        items1 = [,];
-        ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp4);
-        const tmp17 = metroRequire(Icon3, obj3);
-        cResult[3] = tmp4.channelIcon;
-        cResult[4] = tmp4.channelIgnoredIcon;
-        cResult[5] = tmp17;
-        tmp14 = tmp17;
+        const obj3 = { source: _modDef6464, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const items1 = [,];
+        ({ channelIcon: arr4[0], channelIgnoredIcon: arr4[1] } = channelMutedIcon2);
+        obj3.style = items1;
+        const tmp16 = timestampProducer(native.Icon, obj3);
+        cResult[3] = channelMutedIcon2.channelIcon;
+        cResult[4] = channelMutedIcon2.channelIgnoredIcon;
+        cResult[5] = tmp16;
       } else if (muted) {
-        if (cResult[6] === tmp4.channelIcon) {
-          let tmp10;
-          if (cResult[7] === tmp4.channelMutedIcon) {
-            tmp10 = cResult[8];
-          }
-          tmp5 = tmp10;
+        if (cResult[6] === channelMutedIcon2.channelIcon) {
         }
-        const obj4 = { source: AssetRegistryDefault4, size: native.Icon.Sizes.EXTRA_SMALL, style: items2 };
-        const Icon2 = native.Icon;
-        items2 = [,];
-        ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp4);
-        const tmp13 = metroRequire(Icon2, obj4);
-        cResult[6] = tmp4.channelIcon;
-        cResult[7] = tmp4.channelMutedIcon;
-        cResult[8] = tmp13;
-        tmp10 = tmp13;
+        const obj4 = { source: _modDef11078, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const items2 = [,];
+        ({ channelIcon: arr3[0], channelMutedIcon: arr3[1] } = channelMutedIcon2);
+        obj4.style = items2;
+        const tmp11 = timestampProducer(native.Icon, obj4);
+        cResult[6] = channelMutedIcon2.channelIcon;
+        cResult[7] = channelMutedIcon2.channelMutedIcon;
+        cResult[8] = tmp11;
+      } else if (!favorite) {
+        return null;
       } else {
-        tmp5 = null;
-        if (favorite) {
-          if (cResult[9] === tmp4.channelFavoriteIcon) {
-            let tmp6;
-            if (cResult[10] === tmp4.channelIcon) {
-              tmp6 = cResult[11];
-            }
-            tmp5 = tmp6;
-          }
-          const obj5 = { source: AssetRegistryDefault3, size: native.Icon.Sizes.EXTRA_SMALL, style: items3 };
-          const Icon = native.Icon;
-          items3 = [,];
-          ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp4);
-          const tmp9 = metroRequire(Icon, obj5);
-          cResult[9] = tmp4.channelFavoriteIcon;
-          cResult[10] = tmp4.channelIcon;
-          cResult[11] = tmp9;
-          tmp6 = tmp9;
+        if (cResult[9] === channelMutedIcon2.channelFavoriteIcon) {
         }
+        const obj5 = { source: _modDef10706, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const items3 = [,];
+        ({ channelIcon: arr2[0], channelFavoriteIcon: arr2[1] } = channelMutedIcon2);
+        obj5.style = items3;
+        const tmp6 = timestampProducer(native.Icon, obj5);
+        cResult[9] = channelMutedIcon2.channelFavoriteIcon;
+        cResult[10] = channelMutedIcon2.channelIcon;
+        cResult[11] = tmp6;
       }
-      return tmp5;
     }
   : (selected) => {
-      let blocked;
-      let favorite;
-      let ignored;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let muted;
-      let tmp2;
       ({ muted, favorite, ignored, blocked } = selected);
       const tmp = closure_11(selected.selected);
       if (blocked) {
-        const obj2 = { source: AssetRegistryDefault2, size: native.Icon.Sizes.EXTRA_SMALL, style: items };
-        const Icon4 = native.Icon;
-        items = [,];
+        const obj2 = { source: _modDef7600, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const items = [,];
         ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
-        tmp2 = metroRequire(Icon4, obj2);
+        obj2.style = items;
+        let tmp2 = timestampProducer(native.Icon, obj2);
       } else if (ignored) {
-        const obj3 = { source: AssetRegistryDefault, size: native.Icon.Sizes.EXTRA_SMALL, style: items1 };
-        const Icon3 = native.Icon;
-        items1 = [,];
+        const obj3 = { source: _modDef6464, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const items1 = [,];
         ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
-        tmp2 = metroRequire(Icon3, obj3);
+        obj3.style = items1;
+        tmp2 = timestampProducer(native.Icon, obj3);
       } else if (muted) {
-        const obj4 = { source: AssetRegistryDefault4, size: native.Icon.Sizes.EXTRA_SMALL, style: items2 };
-        const Icon2 = native.Icon;
-        items2 = [,];
+        const obj4 = { source: _modDef11078, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const items2 = [,];
         ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
-        tmp2 = metroRequire(Icon2, obj4);
+        obj4.style = items2;
+        tmp2 = timestampProducer(native.Icon, obj4);
       } else {
         tmp2 = null;
         if (favorite) {
-          const obj = { source: AssetRegistryDefault3, size: native.Icon.Sizes.EXTRA_SMALL, style: items3 };
-          const Icon = native.Icon;
-          items3 = [,];
+          const obj = { source: _modDef10706, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+          const items3 = [,];
           ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
-          tmp2 = metroRequire(Icon, obj);
+          obj.style = items3;
+          tmp2 = timestampProducer(native.Icon, obj);
         }
       }
       return tmp2;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
+ReactCompilerGating = fn(558);
+let obj7 = { paddingRight: nativeDefault.space.PX_40 };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx",
+);
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        let blocked;
-        let channelSelected;
-        let favorite;
-        let hasActivity;
-        let hasNameplate;
-        let hasUnreadMessages;
-        let ignored;
-        let muted;
-        let tmp13;
-        const obj = channel(576);
-        const cResult = obj.c(104);
+        const cResult = channel(576).c(104);
         channel = channel.channel;
         ({ channelSelected, favorite, muted, ignored, blocked, hasActivity, hasUnreadMessages, hasNameplate } =
           channel);
-        const resolvedUnreadSetting = channel.resolvedUnreadSetting;
         const tmp5 = useThemeDefault();
         if (cResult[0] !== tmp5) {
-          const tmpResult = channel(4593);
+          const isThemeLightResult = tmp(4593).isThemeLight(tmp5);
           cResult[0] = tmp5;
-          cResult[1] = tmpResult.isThemeLight(tmp5);
-          const isThemeLightResult = tmpResult.isThemeLight(tmp5);
+          cResult[1] = isThemeLightResult;
+          const tmpResult = tmp(4593);
         }
-        const tmp10 = (muted || ignored || blocked) && !channelSelected;
-        const tmp8 = hasUnreadMessages && resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
+        let tmp8 = hasUnreadMessages;
+        if (hasUnreadMessages) {
+          tmp8 = channel.resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
+        }
+        let tmp10 = muted;
+        if (!muted) {
+          tmp10 = ignored;
+        }
+        if (!tmp10) {
+          tmp10 = blocked;
+        }
+        if (tmp10) {
+          tmp10 = !channelSelected;
+        }
         closure_9();
         closure_10(channelSelected, tmp8, tmp10);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ReadStateStore];
           cResult[2] = items;
-          tmp13 = items;
+          let tmp13 = items;
         } else {
           tmp13 = cResult[2];
         }
@@ -295,8 +258,8 @@ const memoResult = react.memo(
             }
           }
         }
-        const tmpResult2 = channel(504);
-        const stateFromStores = tmpResult2.useStateFromStores(tmp13, D);
+        const obj = channel(576);
+        const stateFromStores = channel(504).useStateFromStores(tmp13, D);
         if (cResult[5] !== hasUnreadMessages) {
           class D {
             constructor() {
@@ -329,7 +292,7 @@ const memoResult = react.memo(
             }
           }
           tmp20 = obj4.diff(tmp19.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
-          obj4.diff(tmp19.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+          const tmp21 = obj4.diff(tmp19.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
         }
         if (tmp20) {
           class D {
@@ -343,238 +306,208 @@ const memoResult = react.memo(
         cResult[9] = hasUnreadMessages;
         cResult[10] = tmp19;
         cResult[11] = tmp20;
+        const tmpResult2 = channel(504);
       }
     : (channel) => {
-        let EffectDisplayType;
-        let blocked;
-        let channelSelected;
-        let favorite;
-        let guild_id;
-        let hasActivity;
-        let hasNameplate;
-        let hasUnreadMessages;
-        let ignored;
-        let intl;
-        let items1;
-        let items6;
-        let items7;
-        let muted;
-        let obj15;
-        let obj17;
-        let resolvedUnreadSetting;
-        let str7;
-        let tmp22Result7;
-        let tmpResult4;
         channel = channel.channel;
         ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
         ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
         let tmp5 = hasUnreadMessages;
         const obj = channel(4593);
-        const isThemeLightResult = obj.isThemeLight(useThemeDefault());
         if (hasUnreadMessages) {
           tmp5 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
         }
+        let tmp7 = muted;
+        if (!muted) {
+          tmp7 = ignored;
+        }
+        if (!tmp7) {
+          tmp7 = blocked;
+        }
+        if (tmp7) {
+          tmp7 = !channelSelected;
+        }
         const tmp8 = closure_9();
-        const tmp9 = closure_10(channelSelected, tmp5, (muted || ignored || blocked) && !channelSelected);
+        const tmp9 = closure_10(channelSelected, tmp5, tmp7);
+        const isThemeLightResult = channel(4593).isThemeLight(useThemeDefault());
         const items = [ReadStateStore];
-        const tmpResult = channel(504);
-        const stateFromStores = tmpResult.useStateFromStores(items, () => ReadStateStore.lastMessageId(channel.id));
+        const stateFromStores = channel(504).useStateFromStores(items, () => ReadStateStore.lastMessageId(channel.id));
         const tmp11 = useMessagePreviewsDefault(channel, { unread: hasUnreadMessages });
         let tmp12 = null != tmp11;
         if (tmp12) {
           const obj3 = _modDef4467();
-          tmp12 = obj3.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
-          obj3.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+          tmp12 = _modDef4467().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+          const tmp13 = _modDef4467().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
         }
         if (tmp12) {
           tmp12 = !isChangelogChannelDefault(channel.id);
         }
-        const useRelativeTimestamp = channel(16002).useRelativeTimestamp;
-        channel(16002);
+        const tmpResult = channel(504);
+        const tmpResult3 = channel(16002);
         let id = stateFromStores;
-        const extractTimestamp = SnowflakeUtilsDefault.extractTimestamp;
-        SnowflakeUtilsDefault;
         if (stateFromStores == null) {
           id = channel.id;
         }
-        const obj2 = { timestamp: extractTimestamp(id) };
-        const relativeTimestamp = useRelativeTimestamp(obj2);
-        const tmp17 =
-          channel.isPrivate() &&
-          !channel.isMultiUserDM() &&
-          null != channel.recipients &&
-          channel.recipients.length > 0;
-        const tmp18 = useChannelNameDefault(channel);
-        const tmp19 = usePrivateChannelWaveDefault(channel, stateFromStores);
-        const waveShouldShow = tmp19.waveShouldShow;
-        const obj4 = {
-          variant: tmpResult4.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE),
-          style: items1,
-          lineClamp: 1,
-          ellipsizeMode: "tail",
-        };
-        const wavePressed = tmp19.wavePressed;
-        items1 = [,];
+        const tmp3Result = SnowflakeUtilsDefault;
+        const relativeTimestamp = tmpResult3.useRelativeTimestamp({
+          timestamp: SnowflakeUtilsDefault.extractTimestamp(id),
+        });
+        let tmp15 = channel.isPrivate() && !channel.isMultiUserDM() && null != channel.recipients;
+        if (tmp15) {
+          tmp15 = channel.recipients.length > 0;
+        }
+        const tmp16 = useChannelNameDefault(channel);
+        const tmp17 = usePrivateChannelWaveDefault(channel, stateFromStores);
+        const waveShouldShow = tmp17.waveShouldShow;
+        let obj4 = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
+        const obj2 = { timestamp: SnowflakeUtilsDefault.extractTimestamp(id) };
+        obj4.variant = channel(4586).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+        const items1 = [,];
         ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
+        obj4.style = items1;
         const obj5 = { style: tmp8.content, children: null };
         const obj6 = { style: tmp8.channelNameAndAccessories, children: null };
         const obj7 = { style: tmp8.channelNameAndBadge, children: null };
-        tmpResult4 = channel(4586);
         if (channel.isDM()) {
           if (null != channel.recipients) {
-            let tmp25Result;
-            let tmp22;
             if (channel.recipients.length > 0) {
-              const obj8 = {
-                userId: channel.recipients[0],
-                userName: tmp18,
-                effectDisplayType: channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN,
-              };
+              const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
+              const EffectDisplayType = tmp(10647).EffectDisplayType;
+              obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
+              obj4 = Object.assign(obj4);
+              closure_6(UsernameWithEffectsDefault, obj8);
               const tmp3Result4 = UsernameWithEffectsDefault;
-              EffectDisplayType = tmp(10647).EffectDisplayType;
-              const merged = Object.assign(obj4);
-              tmp25Result = closure_6(tmp3Result4, obj8);
-              tmp22 = closure_6;
             }
-            const items2 = [tmp25Result, ,];
-            let tmp22Result = null;
-            if (tmp17) {
-              const obj9 = { userId: channel.recipients[0], disabledTooltip: true };
-              tmp22Result = tmp22(GuildTagDefault, obj9);
-            }
-            items2[1] = tmp22Result;
-            let tmp22Result5 = null;
-            if (channel.isSystemDM()) {
-              const obj10 = { style: tmp8.botTag, type: BotTagDefault.Types.SYSTEM_DM, verified: true };
-              const tmp3Result5 = BotTagDefault;
-              tmp22Result5 = tmp22(tmp3Result5, obj10);
-            }
-            items2[2] = tmp22Result5;
-            obj7.children = items2;
-            const items3 = [closure_7(View, obj7)];
-            const items4 = [tmp8.channelAccessoriesContainer];
-            let num4 = 0;
-            if (hasNameplate) {
-              num4 = 0;
-              if (!waveShouldShow) {
-                num4 = 40;
-              }
-            }
-            const obj12 = { minWidth: num4 };
-            items4[1] = obj12;
-            const items5 = [tmp8.channelAccessories, ,];
-            let obj13;
-            const obj11 = { style: items4, children: closure_7(View, obj15) };
-            if (waveShouldShow) {
-              obj13 = { paddingVertical: 0 };
-            }
-            items5[1] = obj13;
-            let tmp33;
-            if (hasNameplate) {
-              let combined;
-              if (isThemeLightResult) {
-                let num6 = 0.3;
-                if (channelSelected) {
-                  num6 = 0.6;
-                }
-                const _HermesInternal2 = HermesInternal;
-                combined = "rgba(255, 255, 255, " + num6 + ")";
-              } else {
-                let num5 = 0.25;
-                if (channelSelected) {
-                  num5 = 0.7;
-                }
-                const _HermesInternal = HermesInternal;
-                combined = "rgba(0, 0, 0, " + num5 + ")";
-              }
-              tmp33 = { backgroundColor: combined };
-              const obj14 = { backgroundColor: combined };
-            }
-            obj15 = { style: items5, children: items6 };
-            items5[2] = tmp33;
-            const obj16 = { style: tmp8.channelIcons, children: tmp22(closure_12, obj17) };
-            obj17 = { muted, favorite, ignored, blocked, selected: channelSelected };
-            items6 = [tmp22(View, obj16)];
-            let tmp22Result6 = !waveShouldShow;
-            if (tmp22Result6) {
-              const obj18 = { style: items7, variant: "text-xs/medium", lineClamp: 1, children: relativeTimestamp };
-              items7 = [,];
-              ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
-              tmp22Result6 = tmp22(tmp(4892).Text, obj18);
-            }
-            items6[1] = tmp22Result6;
-            items3[1] = tmp22(View, obj11);
-            obj6.children = items3;
-            const items8 = [closure_7(View, obj6)];
-            let contentPadded;
-            if (hasNameplate) {
-              if (!waveShouldShow) {
-                contentPadded = tmp8.contentPadded;
-              }
-            }
-            const obj19 = { style: contentPadded, children: tmp22Result7 };
-            if (tmp12) {
-              let str6 = "text-muted";
-              const obj20 = {
-                message: tmp11,
-                channel,
-                color: str7,
-                layout: channel(7525).ChannelListLayoutTypes.COZY_DRAWER_SMOL,
-                muted,
-              };
-              str7 = "text-muted";
-              const ChannelRowPreview = tmp(12503).ChannelRowPreview;
-              if (!((muted || ignored || blocked) && !channelSelected)) {
-                if (channelSelected) {
-                  str6 = "mobile-text-heading-primary";
-                }
-                str7 = str6;
-              }
-              tmp22Result7 = tmp22(ChannelRowPreview, obj20);
-            } else if (channel.isDM()) {
-              const obj21 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: guild_id };
-              guild_id = undefined;
-              const tmp3Result6 = ActivityStatusDefault;
-              if (channel != null) {
-                guild_id = channel.guild_id;
-              }
-              tmp22Result7 = tmp22(tmp3Result6, obj21);
-            } else {
-              tmp22Result7 = null;
-              if (isChangelogChannelDefault(channel.id)) {
-                const obj22 = {
-                  variant: "text-xs/medium",
-                  style: tmp9.channelText,
-                  lineClamp: 1,
-                  children: intl.string(channel(1126).t.FL5T01),
-                };
-                const Text2 = tmp(4892).Text;
-                intl = tmp(1126).intl;
-                tmp22Result7 = tmp22(Text2, obj22);
-              }
-            }
-            items8[1] = tmp22(View, obj19);
-            obj5.children = items8;
-            const items9 = [closure_7(View, obj5)];
-            let tmp22Result8 = null;
-            if (waveShouldShow) {
-              const obj23 = { wavePressed, hasNameplate };
-              tmp22Result8 = tmp22(MessagesItemChannelWaveDefault, obj23);
-            }
-            const obj24 = { children: items9 };
-            items9[1] = tmp22Result8;
-            return closure_7(closure_8, obj24);
           }
         }
-        tmp22 = closure_6;
-        const obj25 = { children: tmp18 };
-        const Text = tmp(4892).Text;
-        const merged1 = Object.assign(obj4);
-        tmp25Result = closure_6(Text, obj25);
+        const obj9 = {};
+        const merged = Object.assign(obj4);
+        obj9.children = tmp16;
+        const items2 = [closure_6(channel(4892).Text, obj9), ,];
+        let tmp20Result = null;
+        if (tmp15) {
+          const obj10 = { userId: channel.recipients[0], disabledTooltip: true };
+          tmp20Result = closure_6(GuildTagDefault, obj10);
+        }
+        items2[1] = tmp20Result;
+        let tmp20Result5 = null;
+        if (channel.isSystemDM()) {
+          const obj11 = { style: tmp8.botTag, type: BotTagDefault.Types.SYSTEM_DM, verified: true };
+          tmp20Result5 = closure_6(BotTagDefault, obj11);
+          const tmp3Result5 = BotTagDefault;
+        }
+        items2[2] = tmp20Result5;
+        obj7.children = items2;
+        const items3 = [closure_7(View, obj7)];
+        const items4 = [tmp8.channelAccessoriesContainer];
+        let num4 = 0;
+        if (hasNameplate) {
+          num4 = 0;
+          if (!waveShouldShow) {
+            num4 = 40;
+          }
+        }
+        const obj12 = { style: items4, children: null };
+        items4[1] = { minWidth: num4 };
+        const items5 = [tmp8.channelAccessories, ,];
+        let obj13;
+        if (waveShouldShow) {
+          obj13 = { paddingVertical: 0 };
+        }
+        items5[1] = obj13;
+        if (!hasNameplate) {
+          const obj14 = { style: null, children: null };
+          items5[2] = undefined;
+          obj14.style = items5;
+          const obj15 = { style: tmp8.channelIcons, children: null };
+          const obj16 = { muted, favorite, ignored, blocked, selected: channelSelected };
+          obj15.children = closure_6(closure_12, obj16);
+          const items6 = [closure_6(View, obj15)];
+          let tmp20Result6 = !waveShouldShow;
+          if (!waveShouldShow) {
+            const obj17 = { style: null, variant: "text-xs/medium", lineClamp: 1, children: null };
+            const items7 = [,];
+            ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
+            obj17.style = items7;
+            obj17.children = relativeTimestamp;
+            tmp20Result6 = closure_6(tmp(4892).Text, obj17);
+          }
+          items6[1] = tmp20Result6;
+          obj14.children = items6;
+          obj12.children = closure_7(View, obj14);
+          items3[1] = closure_6(View, obj12);
+          obj6.children = items3;
+          const items8 = [closure_7(View, obj6)];
+          let contentPadded;
+          if (hasNameplate) {
+            if (!waveShouldShow) {
+              contentPadded = tmp8.contentPadded;
+            }
+          }
+          const obj18 = { style: contentPadded, children: null };
+          if (tmp12) {
+            const obj19 = { message: tmp11, channel, color: null, layout: null, muted: null };
+            let str6 = "text-muted";
+            let str7 = "text-muted";
+            if (!tmp7) {
+              if (channelSelected) {
+                str6 = "mobile-text-heading-primary";
+              }
+              str7 = str6;
+            }
+            obj19.color = str7;
+            obj19.layout = tmp(7525).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+            obj19.muted = muted;
+            let tmp20Result7 = closure_6(tmp(12503).ChannelRowPreview, obj19);
+          } else if (channel.isDM()) {
+            const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
+            let guild_id;
+            if (channel != null) {
+              guild_id = channel.guild_id;
+            }
+            obj20.guildId = guild_id;
+            tmp20Result7 = closure_6(ActivityStatusDefault, obj20);
+            const tmp3Result6 = ActivityStatusDefault;
+          } else {
+            tmp20Result7 = null;
+            if (isChangelogChannelDefault(channel.id)) {
+              const obj21 = { variant: "text-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
+              const intl = tmp(1126).intl;
+              obj21.children = intl.string(tmp(1126).t.FL5T01);
+              tmp20Result7 = closure_6(tmp(4892).Text, obj21);
+            }
+          }
+          obj18.children = tmp20Result7;
+          items8[1] = closure_6(View, obj18);
+          obj5.children = items8;
+          const items9 = [closure_7(View, obj5)];
+          let tmp20Result8 = null;
+          if (waveShouldShow) {
+            const obj22 = { wavePressed: tmp17.wavePressed, hasNameplate };
+            tmp20Result8 = closure_6(MessagesItemChannelWaveDefault, obj22);
+          }
+          const obj23 = { children: null };
+          items9[1] = tmp20Result8;
+          obj23.children = items9;
+          return closure_7(closure_8, obj23);
+        } else {
+          if (isThemeLightResult) {
+            let num6 = 0.3;
+            if (channelSelected) {
+              num6 = 0.6;
+            }
+            const _HermesInternal2 = HermesInternal;
+            let combined = "rgba(255, 255, 255, " + num6 + ")";
+          } else {
+            let num5 = 0.25;
+            if (channelSelected) {
+              num5 = 0.7;
+            }
+            const _HermesInternal = HermesInternal;
+            combined = "rgba(0, 0, 0, " + num5 + ")";
+          }
+          const obj24 = { backgroundColor: combined };
+        }
+        const tmpResult4 = channel(4586);
       },
 );
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx",
-);
-
-export default memoResult;

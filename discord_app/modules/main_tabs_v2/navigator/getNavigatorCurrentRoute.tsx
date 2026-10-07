@@ -7,8 +7,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/getNav
 export default function getNavigatorCurrentRoute() {
   let rootNavigationRef = arg0;
   if (arg0 === undefined) {
-    const obj2 = RootNavigationRef;
-    rootNavigationRef = obj2.getRootNavigationRef();
+    rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   }
   let isReadyResult;
   if (rootNavigationRef != null) {

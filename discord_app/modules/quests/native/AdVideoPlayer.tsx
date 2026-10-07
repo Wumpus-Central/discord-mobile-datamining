@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/AdVideoPlayer.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
@@ -7,58 +7,44 @@ import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
-import TextTrackTypeDefault from "../../../../_runtime/07994_TextTrackType.js";
+import _modDef7994 from "../../../../_runtime/metro/07994__.js";
 import AdsVideoTypes from "AdsVideoTypes.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
-import Constants from "../../../Constants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import 00683__ from "../../../../_runtime/metro/00683__.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import n from "../../../../_runtime/metro/00683__.js";
 
-let duration, initialProgress;
-
-let StyleSheet;
-let alphaResult;
-let c10;
-let c9;
-let closure_12;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj10;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
-let rect1;
-let rect2;
-let unpackModuleId;
-({ View: hasOwnProperty, StyleSheet, Pressable: metroRequire, ActivityIndicator: metroImportDefault } = react_native);
-({ AppStates: c9, ComponentActions: c10 } = Constants);
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let rect = { left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, bottom: nativeDefault.space.PX_16 };
-const TextTrackType = react.memo(TextTrackTypeDefault);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet, Pressable: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
+const Constants = fn(1085);
+({ AppStates: closure_9, ComponentActions: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+let rect = {
+  left: nativeDefault.space.PX_16,
+  right: nativeDefault.space.PX_16,
+  top: nativeDefault.space.PX_16,
+  bottom: nativeDefault.space.PX_16,
+};
+const _isNativeReflectConstruct = noop.memo(_modDef7994);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }
 hasVideoEnded.__closure = {};
 hasVideoEnded.__workletHash = 8992945176371;
-hasVideoEnded.__initData = { code: "function hasVideoEnded_AdVideoPlayerTsx1(currentTime,videoDuration){return currentTime>=videoDuration-1;}" };
+hasVideoEnded.__initData = {
+  code: "function hasVideoEnded_AdVideoPlayerTsx1(currentTime,videoDuration){return currentTime>=videoDuration-1;}",
+};
 function canSeekForward(arg0, arg1, arg2, arg3) {
   if (typeof hasVideoEnded === "function") {
-    let tmp4 = arg0 < arg2 - 1;
-    if (tmp4) {
-      tmp4 = arg3 || arg0 <= arg1 - 1;
-      const tmp5 = arg3 || arg0 <= arg1 - 1;
+    let tmp4 = !tmp3;
+    if (arg0 < arg2 - 1) {
+      let tmp5 = arg3;
+      if (!arg3) {
+        tmp5 = arg0 <= arg1 - 1;
+      }
+      tmp4 = tmp5;
     }
     return tmp4;
   } else {
@@ -67,143 +53,184 @@ function canSeekForward(arg0, arg1, arg2, arg3) {
 }
 canSeekForward.__closure = { hasVideoEnded };
 canSeekForward.__workletHash = 14098132092693;
-canSeekForward.__initData = { code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}" };
-let createStyles = createStyles_mod;
-let obj = { container: obj2, loadingContainer: obj3, bufferingSpinner: { position: "absolute" }, bufferingSpinnerCentered: obj4, video: { height: "100%", width: "100%" }, videoContainer: { position: "relative", height: "100%", width: "100%" }, controls: obj5, controlsTopBottom: rect1, controlsMiddle: obj6, controlsTop: { top: 0 }, controlsBottom: { bottom: 0 }, progressContainer: rect2, progress: obj7, icon: obj8, iconDisabled: obj9, controlButton: obj10 };
-obj2 = {};
-createStyles = createStyles.createStyles;
+canSeekForward.__initData = {
+  code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}",
+};
+const createStyles = fn(4896);
+let obj = {
+  container: null,
+  loadingContainer: null,
+  bufferingSpinner: null,
+  bufferingSpinnerCentered: null,
+  video: null,
+  videoContainer: null,
+  controls: null,
+  controlsTopBottom: null,
+  controlsMiddle: null,
+  controlsTop: null,
+  controlsBottom: null,
+  progressContainer: null,
+  progress: null,
+  icon: null,
+  iconDisabled: null,
+  controlButton: null,
+};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center" };
+obj.container = {};
+let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj4 = { justifyContent: "center", alignItems: "center" };
+obj4.backgroundColor = nativeDefault.colors.BACKGROUND_BASE_LOWEST;
+obj4.justifyContent = "center";
+obj4.alignItems = "center";
+obj.loadingContainer = obj4;
+obj.bufferingSpinner = { position: "absolute" };
+let obj5 = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
-obj5 = { backgroundColor: alphaResult.hex(), justifyContent: "center", alignItems: "center", flexDirection: "column" };
+obj5.justifyContent = "center";
+obj5.alignItems = "center";
+obj.bufferingSpinnerCentered = obj5;
+obj.video = { height: "100%", width: "100%" };
+obj.videoContainer = { position: "relative", height: "100%", width: "100%" };
+let obj6 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
-const importDefaultResultResult = module_683(nativeDefault.unsafe_rawColors.BLACK);
-alphaResult = importDefaultResultResult.alpha(0.5);
-rect1 = { flexDirection: "row", justifyContent: "flex-end", padding: nativeDefault.space.PX_8, position: "absolute", left: 0, right: 0 };
-obj6 = { justifyContent: "center", alignItems: "center", flexGrow: 1, flexDirection: "row", gap: nativeDefault.space.PX_24, pointerEvents: "box-none" };
-rect2 = { position: "absolute", bottom: 0, right: 0, left: 0, justifyContent: "flex-end", height: nativeDefault.space.PX_16, overflow: "hidden" };
-obj7 = { height: 1, backgroundColor: nativeDefault.colors.WHITE, shadowOffset: { width: 0, height: 0 }, shadowRadius: 6, shadowOpacity: 1, elevation: 5, shadowColor: nativeDefault.colors.WHITE };
-obj8 = { color: nativeDefault.colors.TEXT_DEFAULT };
-obj9 = { color: nativeDefault.colors.TEXT_SUBTLE };
-obj10 = { padding: nativeDefault.space.PX_8 };
-let closure_17 = createStyles(obj);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((onBuffer) => {
-  let closure_129_2;
-  let tmp3;
-  let tmp4;
-  const obj = react2;
-  const cResult = obj.c(5);
-  onBuffer = onBuffer.onBuffer;
-  let closure_1 = react.useRef(false);
-  [tmp3, closure_129_2] = _slicedToArray(react.useState(false), 2);
-  const tmp2 = _slicedToArray(react.useState(false), 2);
-  if (cResult[0] !== onBuffer) {
-    const fn = function s(current) {
-      closure_1_2(current);
-      if (current !== ref.current) {
-        ref.current = current;
-        if (onBuffer != null) {
-          onBuffer(current);
-        }
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
+let obj2 = {};
+obj6.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
+obj6.justifyContent = "center";
+obj6.alignItems = "center";
+obj6.flexDirection = "column";
+obj.controls = obj6;
+let rect1 = {
+  flexDirection: "row",
+  justifyContent: "flex-end",
+  padding: nativeDefault.space.PX_8,
+  position: "absolute",
+  left: 0,
+  right: 0,
+};
+obj.controlsTopBottom = rect1;
+const alphaResult = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5);
+obj.controlsMiddle = {
+  justifyContent: "center",
+  alignItems: "center",
+  flexGrow: 1,
+  flexDirection: "row",
+  gap: nativeDefault.space.PX_24,
+  pointerEvents: "box-none",
+};
+obj.controlsTop = { top: 0 };
+obj.controlsBottom = { bottom: 0 };
+const rect2 = {
+  position: "absolute",
+  bottom: 0,
+  right: 0,
+  left: 0,
+  justifyContent: "flex-end",
+  height: nativeDefault.space.PX_16,
+  overflow: "hidden",
+};
+obj.progressContainer = rect2;
+let obj7 = {
+  justifyContent: "center",
+  alignItems: "center",
+  flexGrow: 1,
+  flexDirection: "row",
+  gap: nativeDefault.space.PX_24,
+  pointerEvents: "box-none",
+};
+obj.progress = {
+  height: 1,
+  backgroundColor: nativeDefault.colors.WHITE,
+  shadowOffset: { width: 0, height: 0 },
+  shadowRadius: 6,
+  shadowOpacity: 1,
+  elevation: 5,
+  shadowColor: nativeDefault.colors.WHITE,
+};
+let obj8 = {
+  height: 1,
+  backgroundColor: nativeDefault.colors.WHITE,
+  shadowOffset: { width: 0, height: 0 },
+  shadowRadius: 6,
+  shadowOpacity: 1,
+  elevation: 5,
+  shadowColor: nativeDefault.colors.WHITE,
+};
+obj.icon = { color: nativeDefault.colors.TEXT_DEFAULT };
+let obj9 = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj.iconDisabled = { color: nativeDefault.colors.TEXT_SUBTLE };
+let obj10 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj.controlButton = { padding: nativeDefault.space.PX_8 };
+let closure_17 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (onBuffer) => {
+      const cResult = c.c(5);
+      onBuffer = onBuffer.onBuffer;
+      noop.useRef(false);
+      [tmp3, dependencyMap] = noop.useState(false);
+      if (cResult[0] !== onBuffer) {
+        const fn = function s(current) {
+          dependencyMap(current);
+          if (current !== ref.current) {
+            ref.current = current;
+            if (onBuffer != null) {
+              onBuffer(current);
+            }
+          }
+        };
+        cResult[0] = onBuffer;
+        cResult[1] = fn;
+        let tmp4 = fn;
+      } else {
+        tmp4 = cResult[1];
       }
-    };
-    cResult[0] = onBuffer;
-    cResult[1] = fn;
-    tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-  }
-  if (cResult[2] === tmp3) {
-    let tmp5;
-    if (cResult[3] === tmp4) {
-      tmp5 = cResult[4];
+      if (cResult[2] === tmp3) {
+        if (cResult[3] === tmp4) {
+          let tmp5 = cResult[4];
+        }
+        return tmp5;
+      }
+      const obj2 = { isBuffering: tmp3, toggleBuffering: tmp4 };
+      cResult[2] = tmp3;
+      cResult[3] = tmp4;
+      cResult[4] = obj2;
+      tmp5 = obj2;
     }
-    return tmp5;
-  }
-  const obj2 = { isBuffering: tmp3, toggleBuffering: tmp4 };
-  cResult[2] = tmp3;
-  cResult[3] = tmp4;
-  cResult[4] = obj2;
-  tmp5 = obj2;
-}) : ((onBuffer) => {
-  let items;
-  onBuffer = onBuffer.onBuffer;
-  let closure_1 = react.useRef(false);
-  const tmp = _slicedToArray(react.useState(false), 2);
-  let closure_2 = tmp[1];
-  const obj = {
-    isBuffering: tmp[0],
-    toggleBuffering: react.useCallback((current) => {
-      closure_2(current);
-      if (current !== ref.current) {
-        ref.current = current;
-        if (onBuffer != null) {
-          onBuffer(current);
+  : (onBuffer) => {
+      onBuffer = onBuffer.onBuffer;
+      noop.useRef(false);
+      const tmp = _slicedToArray(noop.useState(false), 2);
+      closure_2 = tmp[1];
+      const obj = { isBuffering: tmp[0], toggleBuffering: null };
+      const items = [onBuffer];
+      obj.toggleBuffering = noop.useCallback((current) => {
+        closure_2(current);
+        if (current !== ref.current) {
+          ref.current = current;
+          if (onBuffer != null) {
+            onBuffer(current);
+          }
         }
-      }
-    }, items)
-  };
-  items = [onBuffer];
-  return obj;
-});
-let closure_19 = { code: "function shouldShowControls_AdVideoPlayerTsx3(){const{hasLoaded,hideControls,showControls,playerState,PlayerState,isVideoEnded}=this.__closure;return hasLoaded&&!hideControls&&(showControls.get()||playerState===PlayerState.PAUSED||playerState===PlayerState.ENDED||playerState===PlayerState.ERRORED||isVideoEnded);}" };
-let __initData = { code: "function AdVideoPlayerTsx4(){const{shouldShowControls,withSpring,SUBTLE_SPRING}=this.__closure;const show=shouldShowControls();return{opacity:withSpring(show?1:0,SUBTLE_SPRING),pointerEvents:show?'auto':'none'};}" };
-let closure_21 = { code: "function AdVideoPlayerTsx5(){const{withTiming,progressSharedValue,timingFast}=this.__closure;return{width:withTiming(progressSharedValue.get()*100+\"%\",timingFast,'animate-always')};}" };
-const memoResult = react.memo((initialProgress) => {
-  let ClosedCaptionsOutlineIcon;
-  let PressableOpacity3;
-  let _undefined;
-  let automaticallyWaitsToMinimizeStalling;
-  let bufferConfig;
-  let bufferingSpinnerPlacement;
-  let c35;
-  let captionsEnabled;
-  let closure_20;
-  let contentInsets;
-  let externallyPaused;
-  let httpEngine;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl6;
-  let intl7;
-  let isBuffering;
-  let isFullscreen;
-  let items24;
-  let items25;
-  let items28;
-  let items29;
-  let items30;
-  let items33;
-  let items34;
-  let maxBitRate;
-  let num5;
-  let obj15;
-  let obj17;
-  let obj23;
-  let obj25;
-  let onBuffer;
-  let onLoadStart;
-  let onOpenTranscript;
-  let onToggleCaptions;
-  let onToggleFullscreen;
-  let onVideoLayout;
-  let onVideoTracks;
-  let preferredForwardBufferDuration;
-  let renderCaptions;
-  let repeat;
-  let size1;
-  let string;
-  let style;
-  let t;
-  let tmp27;
-  let toggleBuffering;
-  let videoRef;
+      }, items);
+      return obj;
+    };
+let closure_19 = {
+  code: "function shouldShowControls_AdVideoPlayerTsx3(){const{hasLoaded,hideControls,showControls,playerState,PlayerState,isVideoEnded}=this.__closure;return hasLoaded&&!hideControls&&(showControls.get()||playerState===PlayerState.PAUSED||playerState===PlayerState.ENDED||playerState===PlayerState.ERRORED||isVideoEnded);}",
+};
+let __initData = {
+  code: "function AdVideoPlayerTsx4(){const{shouldShowControls,withSpring,SUBTLE_SPRING}=this.__closure;const show=shouldShowControls();return{opacity:withSpring(show?1:0,SUBTLE_SPRING),pointerEvents:show?'auto':'none'};}",
+};
+let closure_21 = {
+  code: "function AdVideoPlayerTsx5(){const{withTiming,progressSharedValue,timingFast}=this.__closure;return{width:withTiming(progressSharedValue.get()*100+\"%\",timingFast,'animate-always')};}",
+};
+let obj11 = { padding: nativeDefault.space.PX_8 };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/AdVideoPlayer.tsx");
+
+export const AdVideoPlayer = noop.memo((initialProgress) => {
   initialProgress = initialProgress.initialProgress;
   let num = initialProgress.contentDuration;
-  const source = initialProgress.source;
   if (num === undefined) {
     num = 0;
   }
@@ -230,7 +257,16 @@ const memoResult = react.memo((initialProgress) => {
   const onPlayerStateChange = initialProgress.onPlayerStateChange;
   const onPausePlayback = initialProgress.onPausePlayback;
   const onResumePlayback = initialProgress.onResumePlayback;
-  ({ videoRef, bufferingSpinnerPlacement, onToggleCaptions, onOpenTranscript, onToggleFullscreen, onBuffer, onVideoTracks, onVideoLayout } = initialProgress);
+  ({
+    videoRef,
+    bufferingSpinnerPlacement,
+    onToggleCaptions,
+    onOpenTranscript,
+    onToggleFullscreen,
+    onBuffer,
+    onVideoTracks,
+    onVideoLayout,
+  } = initialProgress);
   if (bufferingSpinnerPlacement === undefined) {
     bufferingSpinnerPlacement = "top-left";
   }
@@ -258,7 +294,14 @@ const memoResult = react.memo((initialProgress) => {
   if (flag8 === undefined) {
     flag8 = false;
   }
-  ({ repeat, httpEngine, automaticallyWaitsToMinimizeStalling, maxBitRate, bufferConfig, preferredForwardBufferDuration } = initialProgress);
+  ({
+    repeat,
+    httpEngine,
+    automaticallyWaitsToMinimizeStalling,
+    maxBitRate,
+    bufferConfig,
+    preferredForwardBufferDuration,
+  } = initialProgress);
   if (repeat === undefined) {
     repeat = false;
   }
@@ -268,53 +311,44 @@ const memoResult = react.memo((initialProgress) => {
   let first1;
   __initData = undefined;
   let first2;
-  let closure_22;
+  closure_22 = undefined;
   let first3;
-  let closure_24;
-  let ref2;
-  let ref3;
+  closure_24 = undefined;
   let callback;
-  let closure_29;
+  closure_29 = undefined;
   let sharedValue;
   let shouldShowControls;
   let sharedValue1;
-  let closure_33;
+  closure_33 = undefined;
   let callback2;
   c35 = undefined;
   let callback4;
   let callback6;
-  let ref4;
   let callback8;
   let callback9;
-  let closure_41;
+  closure_41 = undefined;
   toggleBuffering = undefined;
-  let ref = initialProgress.ref;
   let tmp = first();
-  let obj = onLoad;
   if (videoRef == null) {
     videoRef = onLoad.useRef(null);
   }
-  const tmp2 = onLoadStart;
-  const tmp3 = onLoadStart(obj.useState(num), 2);
+  const tmp3 = onLoadStart(onLoad.useState(num), 2);
   first = tmp3[0];
   closure_18 = tmp3[1];
-  let obj2 = {};
-  const useState = obj.useState;
   let merged = Object.assign(initialProgress);
-  const tmp6 = onLoadStart(useState(obj2), 2);
+  const tmp6 = onLoadStart(onLoad.useState({}), 2);
   first1 = tmp6[0];
   __initData = tmp6[1];
-  const tmp8 = initialProgress;
   const tmp9 = flag2;
-  const tmp10 = onLoadStart(obj.useState(initialProgress(flag2[12]).PlayerState.LOADING), 2);
+  const tmp10 = onLoadStart(onLoad.useState(initialProgress(flag2[12]).PlayerState.LOADING), 2);
   first2 = tmp10[0];
   closure_22 = tmp10[1];
-  const tmp12 = onLoadStart(obj.useState(false), 2);
+  const tmp12 = onLoadStart(onLoad.useState(false), 2);
   first3 = tmp12[0];
   closure_24 = tmp12[1];
-  ref = obj.useRef(null);
-  ref2 = obj.useRef(0);
-  ref3 = obj.useRef([]);
+  onLoad.useRef(null);
+  onLoad.useRef(0);
+  onLoad.useRef([]);
   let items = [onPlayerStateChange];
   callback = obj.useCallback((arg0) => {
     closure_22(arg0);
@@ -322,9 +356,11 @@ const memoResult = react.memo((initialProgress) => {
       onPlayerStateChange(arg0);
     }
   }, items);
-  let tmp15 = first3 && first2 === tmp8(tmp9[12]).PlayerState.ENDED;
+  let tmp15 = first3;
+  if (first3) {
+    tmp15 = first2 === tmp8(tmp9[12]).PlayerState.ENDED;
+  }
   if (tmp15) {
-    const tmp16 = repeat;
     if (typeof repeat === "function") {
       tmp15 = tmp17 >= tmp18 - 1;
     } else {
@@ -332,63 +368,101 @@ const memoResult = react.memo((initialProgress) => {
     }
   }
   closure_29 = tmp15;
-  const tmp8Result = tmp8(tmp9[13]);
-  sharedValue = tmp8Result.useSharedValue(false);
+  sharedValue = initialProgress(tmp9[13]).useSharedValue(false);
   shouldShowControls = function shouldShowControls() {
-    let tmp = first3 && !flag8;
+    let tmp = first3;
+    if (first3) {
+      tmp = !flag8;
+    }
     if (tmp) {
-      const value = sharedValue.get() || first2 === AdsVideoTypes.PlayerState.PAUSED || first2 === AdsVideoTypes.PlayerState.ENDED || first2 === AdsVideoTypes.PlayerState.ERRORED || closure_29;
+      value = sharedValue.get();
+      if (!value) {
+        value = first2 === AdsVideoTypes.PlayerState.PAUSED;
+      }
+      if (!value) {
+        value = first2 === AdsVideoTypes.PlayerState.ENDED;
+      }
+      if (!value) {
+        value = first2 === AdsVideoTypes.PlayerState.ERRORED;
+      }
+      if (!value) {
+        value = closure_29;
+      }
       tmp = value;
     }
     return tmp;
   };
-  shouldShowControls.__closure = { hasLoaded: first3, hideControls: flag8, showControls: sharedValue, playerState: first2, PlayerState: tmp8(tmp9[12]).PlayerState, isVideoEnded: tmp15 };
+  let obj2 = {};
+  const tmp2 = onLoadStart;
+  const tmp8Result = initialProgress(tmp9[13]);
+  shouldShowControls.__closure = {
+    hasLoaded: first3,
+    hideControls: flag8,
+    showControls: sharedValue,
+    playerState: first2,
+    PlayerState: initialProgress(tmp9[12]).PlayerState,
+    isVideoEnded: tmp15,
+  };
   shouldShowControls.__workletHash = 8094403036162;
   shouldShowControls.__initData = first1;
-  ({ hasLoaded: first3, hideControls: flag8, showControls: sharedValue, playerState: first2, PlayerState: tmp8(tmp9[12]).PlayerState, isVideoEnded: tmp15 });
+  const obj3 = {
+    hasLoaded: first3,
+    hideControls: flag8,
+    showControls: sharedValue,
+    playerState: first2,
+    PlayerState: initialProgress(tmp9[12]).PlayerState,
+    isVideoEnded: tmp15,
+  };
   function ye() {
-    let str;
     const tmp = shouldShowControls();
     let num = 0;
-    const withSpring = spring.withSpring;
-    spring;
     if (tmp) {
       num = 1;
     }
-    const obj = { opacity: withSpring(num, springPresets.SUBTLE_SPRING), pointerEvents: str };
-    str = "none";
+    const obj2 = { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING), pointerEvents: null };
+    let str = "none";
     if (tmp) {
       str = "auto";
     }
-    return obj;
+    obj2.pointerEvents = str;
+    return obj2;
   }
-  const tmp8Result5 = tmp8(tmp9[13]);
-  ye.__closure = { shouldShowControls, withSpring: tmp8(tmp9[14]).withSpring, SUBTLE_SPRING: tmp8(tmp9[15]).SUBTLE_SPRING };
+  const tmp8Result5 = initialProgress(tmp9[13]);
+  ye.__closure = {
+    shouldShowControls,
+    withSpring: initialProgress(tmp9[14]).withSpring,
+    SUBTLE_SPRING: initialProgress(tmp9[15]).SUBTLE_SPRING,
+  };
   ye.__workletHash = 311315682972;
   ye.__initData = __initData;
-  ({ shouldShowControls, withSpring: tmp8(tmp9[14]).withSpring, SUBTLE_SPRING: tmp8(tmp9[15]).SUBTLE_SPRING });
   const animatedStyle = tmp8Result5.useAnimatedStyle(ye);
+  const obj4 = {
+    shouldShowControls,
+    withSpring: initialProgress(tmp9[14]).withSpring,
+    SUBTLE_SPRING: initialProgress(tmp9[15]).SUBTLE_SPRING,
+  };
   const shouldShowControlsResult = shouldShowControls();
-  const tmp8Result6 = tmp8(tmp9[13]);
-  sharedValue1 = tmp8Result6.useSharedValue(0);
+  sharedValue1 = initialProgress(tmp9[13]).useSharedValue(0);
+  const tmp8Result6 = initialProgress(tmp9[13]);
   function ge() {
-    let withTiming;
-    const obj = { width: withTiming(`${tmp2}%`, timingPresets.timingFast, "animate-always") };
-    withTiming = timing.withTiming;
-    timing;
+    const obj = { width: null };
     const result = 100 * sharedValue1.get();
+    obj.width = timing.withTiming(`${tmp}%`, timingPresets.timingFast, "animate-always");
     return obj;
   }
-  const tmp8Result7 = tmp8(tmp9[13]);
-  ge.__closure = { withTiming: tmp8(tmp9[16]).withTiming, progressSharedValue: sharedValue1, timingFast: tmp8(tmp9[17]).timingFast };
+  const tmp8Result7 = initialProgress(tmp9[13]);
+  ge.__closure = {
+    withTiming: initialProgress(tmp9[16]).withTiming,
+    progressSharedValue: sharedValue1,
+    timingFast: initialProgress(tmp9[17]).timingFast,
+  };
   ge.__workletHash = 11793601648786;
   ge.__initData = first2;
-  ({ withTiming: tmp8(tmp9[16]).withTiming, progressSharedValue: sharedValue1, timingFast: tmp8(tmp9[17]).timingFast });
   const animatedStyle1 = tmp8Result7.useAnimatedStyle(ge);
   closure_33 = obj.useRef(-1);
   let items1 = [sharedValue];
   const callback1 = obj.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return () => {
       const items = [...arguments];
       clearTimeout(ref.current);
@@ -398,26 +472,29 @@ const memoResult = react.memo((initialProgress) => {
       }, 2000);
       if (null != closure_0) {
         const items1 = [];
-        HermesBuiltin.arraySpread(items1, items, 0);
-        return HermesBuiltin.apply(closure_0, items1, undefined);
+        HermesBuiltin.arraySpread(items, 0);
+        return HermesBuiltin.apply(items1, undefined);
       }
     };
   }, items1);
-  callback2 = obj.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    closure_20((maxTimestampSec) => {
-      const obj = { timestampSec, maxTimestampSec: Math.max(maxTimestampSec.maxTimestampSec, Math.floor(timestampSec)), duration };
-      return obj;
-    });
+  callback2 = obj.useCallback((timestampSec, duration) => {
+    closure_20((maxTimestampSec) => ({
+      timestampSec,
+      maxTimestampSec: Math.max(maxTimestampSec.maxTimestampSec, Math.floor(timestampSec)),
+      duration,
+    }));
   }, []);
-  [tmp27, c35] = tmp2(obj.useState(false), 2);
+  const obj5 = {
+    withTiming: initialProgress(tmp9[16]).withTiming,
+    progressSharedValue: sharedValue1,
+    timingFast: initialProgress(tmp9[17]).timingFast,
+  };
+  [tmp27, c35] = tmp2(onLoad.useState(false), 2);
   const items2 = [onReadyForDisplay];
-  const items3 = [flag, , , , ];
+  const items3 = [flag, , , ,];
   ({ duration: arr4[1], maxTimestampSec: arr4[2] } = first1);
   items3[3] = videoRef;
   items3[4] = onSeekStart;
-  const tmp2Result = tmp2(obj.useState(false), 2);
   const callback3 = obj.useCallback(() => {
     if (onReadyForDisplay != null) {
       tmp();
@@ -435,39 +512,43 @@ const memoResult = react.memo((initialProgress) => {
       }
       const current = tmp.current;
       current.seek(bound + 0.0001 * ref2.current);
-      ref.current = bound;
+      closure_25.current = bound;
     }
   }, items3);
   const items4 = [callback4, first2, callback, onResumePlayback, onPausePlayback];
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({
-    seekToStart() {
-      if (first2 !== initialProgress(flag2[12]).PlayerState.ERRORED) {
-        callback4(0);
-        if (first2 === initialProgress(flag2[12]).PlayerState.ENDED) {
-          callback(initialProgress(flag2[12]).PlayerState.PLAYING);
-          if (onResumePlayback != null) {
-            tmp8(initialProgress(flag2[12]).PlaybackTriggerSource.IMPERATIVE_API);
+  const imperativeHandle = obj.useImperativeHandle(
+    initialProgress.ref,
+    () => ({
+      seekToStart() {
+        if (first2 !== initialProgress(flag2[12]).PlayerState.ERRORED) {
+          callback4(0);
+          if (first2 === initialProgress(flag2[12]).PlayerState.ENDED) {
+            callback(initialProgress(flag2[12]).PlayerState.PLAYING);
+            if (onResumePlayback != null) {
+              tmp8(initialProgress(flag2[12]).PlaybackTriggerSource.IMPERATIVE_API);
+            }
           }
         }
-      }
-    },
-    play() {
-      if (first2 === initialProgress(flag2[12]).PlayerState.PAUSED) {
-        callback(initialProgress(flag2[12]).PlayerState.PLAYING);
-        if (onResumePlayback != null) {
-          tmp5(initialProgress(flag2[12]).PlaybackTriggerSource.IMPERATIVE_API);
+      },
+      play() {
+        if (first2 === initialProgress(flag2[12]).PlayerState.PAUSED) {
+          callback(initialProgress(flag2[12]).PlayerState.PLAYING);
+          if (onResumePlayback != null) {
+            tmp5(initialProgress(flag2[12]).PlaybackTriggerSource.IMPERATIVE_API);
+          }
         }
-      }
-    },
-    pause() {
-      if (first2 === initialProgress(flag2[12]).PlayerState.PLAYING) {
-        callback(initialProgress(flag2[12]).PlayerState.PAUSED);
-        if (onPausePlayback != null) {
-          tmp5(initialProgress(flag2[12]).PlaybackTriggerSource.IMPERATIVE_API);
+      },
+      pause() {
+        if (first2 === initialProgress(flag2[12]).PlayerState.PLAYING) {
+          callback(initialProgress(flag2[12]).PlayerState.PAUSED);
+          if (onPausePlayback != null) {
+            tmp5(initialProgress(flag2[12]).PlaybackTriggerSource.IMPERATIVE_API);
+          }
         }
-      }
-    }
-  }), items4);
+      },
+    }),
+    items4,
+  );
   const items5 = [videoRef, initialProgress.timestampSec, flag2, callback, onLoad, callback4];
   const items6 = [first2, onPausePlayback, onResumePlayback, tmp15, callback, callback4];
   const callback5 = obj.useCallback((duration) => {
@@ -476,7 +557,13 @@ const memoResult = react.memo((initialProgress) => {
     closure_24(true);
     if (null != videoRef.current) {
       const timestampSec = initialProgress.timestampSec;
-      const tmp5 = !flag2 && timestampSec > 5 && timestampSec < duration - 3;
+      let tmp5 = !flag2;
+      if (!flag2) {
+        tmp5 = timestampSec > 5;
+      }
+      if (tmp5) {
+        tmp5 = timestampSec < duration - 3;
+      }
       if (tmp5) {
         callback4(timestampSec - 1);
       }
@@ -519,12 +606,12 @@ const memoResult = react.memo((initialProgress) => {
   }, items6);
   const items7 = [callback6];
   const callback7 = obj.useCallback(() => callback6(), items7);
-  ref4 = obj.useRef(false);
+  onLoad.useRef(false);
   const items8 = [first2, callback, onPausePlayback];
   callback8 = obj.useCallback(() => {
-    ref4.current = false;
+    closure_38.current = false;
     if (first2 === AdsVideoTypes.PlayerState.PLAYING) {
-      ref4.current = true;
+      closure_38.current = true;
       callback(AdsVideoTypes.PlayerState.PAUSED);
       if (onPausePlayback != null) {
         tmp6(AdsVideoTypes.PlaybackTriggerSource.SYSTEM_INITIATED);
@@ -546,9 +633,9 @@ const memoResult = react.memo((initialProgress) => {
   const items10 = [callback8, callback9];
   const effect = obj.useEffect(() => {
     let ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-    const subscription = ComponentDispatch.subscribe(onEnd.QUEST_GAME_LINK_OPENED, callback8);
+    const subscription = ComponentDispatch.subscribe(constants.QUEST_GAME_LINK_OPENED, callback8);
     let ComponentDispatch2 = ComponentDispatchUtils.ComponentDispatch;
-    const subscription1 = ComponentDispatch2.subscribe(onEnd.QUEST_APP_STORE_OVERLAY_FINISHED, callback9);
+    const subscription1 = ComponentDispatch2.subscribe(constants.QUEST_APP_STORE_OVERLAY_FINISHED, callback9);
     return () => {
       const ComponentDispatch = initialProgress(flag2[18]).ComponentDispatch;
       ComponentDispatch.unsubscribe(onEnd.QUEST_GAME_LINK_OPENED, callback8);
@@ -571,14 +658,15 @@ const memoResult = react.memo((initialProgress) => {
       arr = null;
     }
     if (null != videoRef.current) {
-      ref.current = null;
+      closure_25.current = null;
       if (first > 0) {
         const result = sharedValue1.set(currentTime.currentTime / first);
         callback2(currentTime.currentTime, first);
       }
       if (onSeek != null) {
-        const obj = { fromTimeSec: arr };
+        const obj = {};
         const merged = Object.assign(currentTime);
+        obj.fromTimeSec = arr;
         tmp9(obj);
       }
     }
@@ -588,8 +676,8 @@ const memoResult = react.memo((initialProgress) => {
     let timestampSec = first1.timestampSec;
     if (typeof videoRef === "function") {
       if (typeof repeat === "function") {
-        let tmp45 = timestampSec < tmp42 - 1;
-        if (tmp45) {
+        let tmp45 = !tmp44;
+        if (timestampSec < tmp42 - 1) {
           if (!flag) {
             flag = timestampSec <= tmp41 - 1;
           }
@@ -617,21 +705,23 @@ const memoResult = react.memo((initialProgress) => {
       callback4(current + 10);
     }
   }, items13);
+  const tmp2Result = tmp2(onLoad.useState(false), 2);
   const items15 = [sharedValue1, callback2, onProgress];
+  const callback1Result = callback1(
+    onLoad.useCallback(() => {
+      let current = ref.current;
+      if (current == null) {
+        current = sharedValue1.get() * first;
+      }
+      const current1 = ref3.current;
+      current1.push(current);
+      callback4(current - 10);
+      if (first2 === AdsVideoTypes.PlayerState.ENDED) {
+        callback(AdsVideoTypes.PlayerState.PLAYING);
+      }
+    }, items14),
+  );
   const items16 = [callback, onEnd, repeat];
-  const callback1Result = callback1(obj.useCallback(() => {
-    let current = ref.current;
-    if (current == null) {
-      current = sharedValue1.get() * first;
-    }
-    const current1 = ref3.current;
-    current1.push(current);
-    callback4(current - 10);
-    if (first2 === AdsVideoTypes.PlayerState.ENDED) {
-      callback(AdsVideoTypes.PlayerState.PLAYING);
-    }
-  }, items14));
-  const callback1Result1 = callback1(callback12);
   const callback13 = obj.useCallback((seekableDuration) => {
     let num = 0;
     if (0 !== seekableDuration.seekableDuration) {
@@ -640,8 +730,9 @@ const memoResult = react.memo((initialProgress) => {
     callback2(seekableDuration.currentTime, seekableDuration.seekableDuration);
     const result = sharedValue1.set(num);
     if (onProgress != null) {
-      const obj = { currentTime: null, seekableDuration: null, progress: num };
+      const obj = { currentTime: null, seekableDuration: null, progress: null };
       ({ currentTime: obj.currentTime, seekableDuration: obj.seekableDuration } = seekableDuration);
+      obj.progress = num;
       tmp3(obj);
     }
   }, items15);
@@ -651,7 +742,7 @@ const memoResult = react.memo((initialProgress) => {
       callback(AdsVideoTypes.PlayerState.ENDED);
     }
     if (onEnd != null) {
-      tmp6();
+      tmp5();
     }
   }, items16);
   const items18 = [callback, onError];
@@ -667,12 +758,11 @@ const memoResult = react.memo((initialProgress) => {
       tmp2(arg0);
     }
   }, items18);
+  const callback1Result1 = callback1(callback12);
   const items19 = [onSeek];
-  const tmp8Result8 = tmp8(tmp9[19]);
-  const tmp53 = tmp8Result8.useStateFromStores(items19, () => onSeek.getState()) === onError.ACTIVE;
+  const tmp53 = initialProgress(tmp9[19]).useStateFromStores(items19, () => onSeek.getState()) === onError.ACTIVE;
   const items20 = [videoRef];
   const layoutEffect = obj.useLayoutEffect(() => {
-    let obj = PlatformUtils;
     if (obj.isAndroid()) {
       const current = videoRef.current;
       return () => {
@@ -685,11 +775,12 @@ const memoResult = react.memo((initialProgress) => {
             }
           }
         } catch (tmp4) {
+          flag(flag2[21]).captureException(tmp4);
           const obj2 = flag(flag2[21]);
-          obj2.captureException(tmp4);
         }
       };
     }
+    obj = PlatformUtils;
   }, items20);
   let tmp55 = !tmp53;
   if (tmp53) {
@@ -701,10 +792,10 @@ const memoResult = react.memo((initialProgress) => {
   if (!tmp55) {
     tmp55 = externallyPaused;
   }
+  const tmp8Result8 = initialProgress(tmp9[19]);
   ({ isBuffering, toggleBuffering } = closure_18({ onBuffer }));
   const items21 = [toggleBuffering, first2];
   const items22 = [toggleBuffering];
-  closure_18({ onBuffer });
   const callback17 = obj.useCallback((isBuffering) => {
     isBuffering = isBuffering.isBuffering;
     if (!isBuffering) {
@@ -720,49 +811,250 @@ const memoResult = react.memo((initialProgress) => {
   }, items21);
   const items23 = [toggleBuffering];
   const callback18 = obj.useCallback(() => {
-    const obj = PlatformUtils;
     if (obj.isIOS()) {
       toggleBuffering(true);
     }
+    obj = PlatformUtils;
   }, items22);
   const callback19 = obj.useCallback(() => {
-    const obj = PlatformUtils;
     if (obj.isIOS()) {
       toggleBuffering(false);
     }
+    obj = PlatformUtils;
   }, items23);
   rect = flag(tmp9[22])();
-  let tmp61 = isFullscreen && null != rect;
-  if (tmp61) {
-    let _Math = Math;
-    let _Math2 = Math;
-    tmp61 = { paddingRight: Math.max(rect.right, onResumePlayback.right), paddingLeft: Math.max(rect.left, onResumePlayback.left) };
-    const obj6 = { paddingRight: Math.max(rect.right, onResumePlayback.right), paddingLeft: Math.max(rect.left, onResumePlayback.left) };
+  let tmp61 = isFullscreen;
+  if (isFullscreen) {
+    tmp61 = null != rect;
   }
-  const obj7 = { style: items24, accessible: false, children: null };
-  items24 = [tmp.container, style];
-  const obj8 = { style: items25, onPress: callback10, accessible: !shouldShowControlsResult, accessibilityLabel: string(tmp55 ? t.R3aFPe : t.fTMEUi), children: null };
-  items25 = [tmp.videoContainer];
+  if (tmp61) {
+    const obj6 = { paddingRight: null, paddingLeft: null };
+    let _Math = Math;
+    obj6.paddingRight = Math.max(rect.right, onResumePlayback.right);
+    let _Math2 = Math;
+    obj6.paddingLeft = Math.max(rect.left, onResumePlayback.left);
+    tmp61 = obj6;
+  }
+  const obj7 = { style: null, accessible: false, children: null };
+  const items24 = [tmp.container, style];
+  obj7.style = items24;
+  const obj8 = {
+    style: null,
+    onPress: callback10,
+    accessible: !shouldShowControlsResult,
+    accessibilityLabel: null,
+    children: null,
+  };
+  const items25 = [tmp.videoContainer];
+  obj8.style = items25;
   const intl = tmp8(tmp9[23]).intl;
-  string = intl.string;
-  t = tmp8(tmp9[23]).t;
+  const t = tmp8(tmp9[23]).t;
+  obj8.accessibilityLabel = intl.string(tmp55 ? t.R3aFPe : t.fTMEUi);
   let tmp64Result = first2 !== tmp8(tmp9[12]).PlayerState.ERRORED;
-  const tmp67 = onProgress;
   if (tmp64Result) {
-    const obj9 = { mixWithOthers: "inherit", httpEngine, automaticallyWaitsToMinimizeStalling, maxBitRate, bufferConfig, preferredForwardBufferDuration, ref: videoRef, accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", style: tmp.video, paused: tmp55, repeat, source, onBuffer: callback17, onPlaybackStalled: callback18, onPlaybackResume: callback19, onLoad: callback5, onSeek: callback11, onProgress: callback13, onLoadStart: callback15, onEnd: callback14, onError: callback16, onReadyForDisplay: callback3, onVideoTracks, onLayout: onVideoLayout, resizeMode: "contain" };
+    const obj9 = {
+      mixWithOthers: "inherit",
+      httpEngine,
+      automaticallyWaitsToMinimizeStalling,
+      maxBitRate,
+      bufferConfig,
+      preferredForwardBufferDuration,
+      ref: videoRef,
+      accessible: false,
+      importantForAccessibility: "no-hide-descendants",
+      accessibilityRole: "none",
+      style: tmp.video,
+      paused: tmp55,
+      repeat,
+      source: initialProgress.source,
+      onBuffer: callback17,
+      onPlaybackStalled: callback18,
+      onPlaybackResume: callback19,
+      onLoad: callback5,
+      onSeek: callback11,
+      onProgress: callback13,
+      onLoadStart: callback15,
+      onEnd: callback14,
+      onError: callback16,
+      onReadyForDisplay: callback3,
+      onVideoTracks,
+      onLayout: onVideoLayout,
+      resizeMode: "contain",
+    };
     tmp64Result = tmp64(flag8, obj9);
   }
-  const items26 = [tmp64Result, , , , , ];
+  const items26 = [tmp64Result, , , , ,];
   let renderCaptionsResult;
   if (renderCaptions != null) {
     renderCaptionsResult = renderCaptions(first1.timestampSec);
   }
   items26[1] = renderCaptionsResult;
-  if (isBuffering) {
-    const items27 = [tmp.bufferingSpinner, ];
+  if (!isBuffering) {
+    items26[2] = isBuffering;
+    let tmp64Result6 = !tmp27;
+    if (!tmp27) {
+      const obj10 = { style: tmp.loadingContainer, children: tmp64(onSeekStart, { animating: true }) };
+      tmp64Result6 = tmp64(tmp65, obj10);
+    }
+    items26[3] = tmp64Result6;
+    const obj11 = { style: null, accessible: false, children: null };
+    const items27 = [tmp.controls, animatedStyle];
+    obj11.style = items27;
+    let tmp66Result = flag3;
+    if (!flag3) {
+      tmp66Result = flag4;
+    }
+    if (tmp66Result) {
+      const obj12 = { style: null, children: null };
+      const items28 = [, ,];
+      ({ controlsTopBottom: arr30[0], controlsTop: arr30[1] } = tmp);
+      items28[2] = tmp61;
+      obj12.style = items28;
+      if (!flag3) {
+        const items29 = [flag3];
+        if (flag4) {
+          const obj13 = {
+            accessibilityRole: "button",
+            accessibilityLabel: null,
+            onPress: null,
+            style: null,
+            children: null,
+          };
+          const intl3 = tmp8(tmp9[23]).intl;
+          obj13.accessibilityLabel = intl3.string(tmp8(tmp9[23]).t.KCzjTi);
+          obj13.onPress = onOpenTranscript;
+          obj13.style = tmp.controlButton;
+          const obj14 = { color: tmp.iconDisabled.color };
+          obj13.children = tmp64(tmp8(tmp9[26]).TranscriptOutlineIcon, obj14);
+          flag4 = tmp64(tmp8(tmp9[24]).PressableOpacity, obj13);
+        }
+        items29[1] = flag4;
+        obj12.children = items29;
+        tmp66Result = tmp66(tmp65, obj12);
+      } else {
+        const obj15 = {
+          accessibilityRole: "button",
+          accessibilityLabel: null,
+          onPress: null,
+          style: null,
+          children: null,
+        };
+        const intl2 = tmp8(tmp9[23]).intl;
+        obj15.accessibilityLabel = intl2.string(tmp8(tmp9[23]).t.bDSZO1);
+        obj15.onPress = onToggleCaptions;
+        obj15.style = tmp.controlButton;
+        if (captionsEnabled) {
+          let color = tmp.icon.color;
+        } else {
+          color = tmp.iconDisabled.color;
+        }
+        const obj16 = { color };
+        obj15.children = tmp64(tmp8(tmp9[25]).ClosedCaptionsOutlineIcon, obj16);
+        tmp64(tmp8(tmp9[24]).PressableOpacity, obj15);
+      }
+    }
+    const items30 = [tmp66Result, ,];
+    const obj17 = { style: tmp.controlsMiddle, children: null };
+    let tmp64Result8 = flag7;
+    if (flag7) {
+      const obj18 = {
+        disabled: first2 === tmp8(tmp9[12]).PlayerState.ERRORED,
+        accessibilityRole: "button",
+        accessibilityLabel: null,
+        onPress: null,
+        children: null,
+      };
+      const intl4 = tmp8(tmp9[23]).intl;
+      obj18.accessibilityLabel = intl4.string(tmp8(tmp9[23]).t.r9s3Uv);
+      obj18.onPress = callback1Result;
+      const size = { color: tmp.icon.color, width: 16, height: 16 };
+      obj18.children = tmp64(tmp8(tmp9[28]).SkipBackwardIcon, size);
+      tmp64Result8 = tmp64(tmp8(tmp9[27]).VideoQuestPlayerControlButton, obj18);
+    }
+    const items31 = [tmp64Result8, ,];
+    if (!tmp15) {
+      if (first2 !== tmp8(tmp9[12]).PlayerState.ERRORED) {
+        const t2 = tmp8(tmp9[23]).t;
+        let K0e7M9 = tmp55 ? t2.R3aFPe : t2.fTMEUi;
+      }
+      const obj19 = {
+        accessibilityRole: "button",
+        accessibilityLabel: tmp78(K0e7M9),
+        onPress: callback7,
+        children: null,
+      };
+      if (!tmp15) {
+        if (first2 !== tmp8(tmp9[12]).PlayerState.ERRORED) {
+          if (tmp55) {
+            let PauseIcon = tmp8(tmp9[30]).PlayIcon;
+          } else {
+            PauseIcon = tmp8(tmp9[31]).PauseIcon;
+          }
+          let tmp64Result9 = tmp64(PauseIcon, { size: "lg" });
+        }
+        obj19.children = tmp64Result9;
+        items31[1] = tmp64(tmp8(tmp9[27]).VideoQuestPlayerControlButton, obj19);
+        if (flag7) {
+          const obj20 = {
+            disabled: tmp39,
+            accessibilityRole: "button",
+            accessibilityLabel: null,
+            onPress: null,
+            children: null,
+          };
+          const intl5 = tmp8(tmp9[23]).intl;
+          obj20.accessibilityLabel = intl5.string(tmp8(tmp9[23]).t.zWDcNP);
+          obj20.onPress = callback1Result1;
+          const size1 = { color: tmp.icon.color, width: 16, height: 16 };
+          obj20.children = tmp64(tmp8(tmp9[32]).SkipForwardIcon, size1);
+          flag7 = tmp64(tmp8(tmp9[27]).VideoQuestPlayerControlButton, obj20);
+        }
+        items31[2] = flag7;
+        obj17.children = items31;
+        items30[1] = tmp66(tmp65, obj17);
+        if (flag5) {
+          const obj21 = { style: null, children: null };
+          const items32 = [, ,];
+          ({ controlsTopBottom: arr34[0], controlsBottom: arr34[1] } = tmp);
+          items32[2] = tmp61;
+          obj21.style = items32;
+          const obj22 = {
+            accessibilityRole: "button",
+            accessibilityLabel: null,
+            onPress: null,
+            style: null,
+            children: null,
+          };
+          const intl6 = tmp8(tmp9[23]).intl;
+          obj22.accessibilityLabel = intl6.string(tmp8(tmp9[23]).t.vKZT5t);
+          obj22.onPress = onToggleFullscreen;
+          obj22.style = tmp.controlButton;
+          obj22.children = tmp64(tmp8(tmp9[33]).FullscreenEnterIcon, {});
+          obj21.children = tmp64(tmp8(tmp9[24]).PressableOpacity, obj22);
+          flag5 = tmp64(tmp65, obj21);
+        }
+        items30[2] = flag5;
+        obj11.children = items30;
+        items26[4] = tmp66(tmp60(tmp9[13]).View, obj11);
+        if (flag6) {
+          const obj23 = { style: tmp.progressContainer, children: null };
+          const obj24 = { style: null };
+          const items33 = [tmp.progress, animatedStyle1];
+          obj24.style = items33;
+          obj23.children = tmp64(tmp60(tmp9[13]).View, obj24);
+          flag6 = tmp64(tmp65, obj23);
+        }
+        items26[5] = flag6;
+        obj8.children = items26;
+        obj7.children = tmp66(onProgress, obj8);
+        return tmp64(tmp65, obj7);
+      }
+      tmp64Result9 = tmp64(tmp8(tmp9[29]).RetryIcon, { size: "lg" });
+    }
+    K0e7M9 = tmp8(tmp9[23]).t.K0e7M9;
+  } else {
+    let items34 = [tmp.bufferingSpinner];
     if (!isFullscreen) {
-      let rect1;
-      let str = "center";
       if ("center" !== bufferingSpinnerPlacement) {
         let num4;
         if (contentInsets != null) {
@@ -771,137 +1063,23 @@ const memoResult = react.memo((initialProgress) => {
         if (num4 == null) {
           num4 = 0;
         }
-        rect1 = { top: num4, left: num5 };
-        num5 = undefined;
+        let rect1 = { top: num4, left: null };
+        let num5;
         if (contentInsets != null) {
           num5 = contentInsets.left;
         }
         if (num5 == null) {
           num5 = 0;
         }
+        rect1.left = num5;
       }
-      items27[1] = rect1;
-      const obj10 = { animating: true, style: items27, color: flag(tmp9[6]).unsafe_rawColors.WHITE };
-      isBuffering = tmp64(tmp71, obj10);
+      const obj25 = { animating: true, style: null, color: null };
+      items34[1] = rect1;
+      obj25.style = items34;
+      items34 = tmp60(tmp9[6]).unsafe_rawColors.WHITE;
+      obj25.color = items34;
+      tmp64(tmp71, obj25);
     }
     rect1 = tmp.bufferingSpinnerCentered;
   }
-  items26[2] = isBuffering;
-  let tmp64Result4 = !tmp27;
-  if (tmp64Result4) {
-    const obj11 = { style: tmp.loadingContainer, children: onPlayerStateChange(onSeekStart, { animating: true }) };
-    tmp64Result4 = tmp64(tmp65, obj11);
-  }
-  items26[3] = tmp64Result4;
-  const obj12 = { style: items28, accessible: false, children: null };
-  items28 = [tmp.controls, animatedStyle];
-  let tmp66Result = flag3;
-  const View = tmp60(tmp9[13]).View;
-  if (!flag3) {
-    tmp66Result = flag4;
-  }
-  if (tmp66Result) {
-    const obj13 = { style: items29, children: items30 };
-    items29 = [, , ];
-    ({ controlsTopBottom: arr30[0], controlsTop: arr30[1] } = tmp);
-    items29[2] = tmp61;
-    if (flag3) {
-      let color;
-      const obj14 = { accessibilityRole: "button", accessibilityLabel: intl2.string(tmp8(tmp9[23]).t.bDSZO1), onPress: onToggleCaptions, style: tmp.controlButton, children: onPlayerStateChange(ClosedCaptionsOutlineIcon, obj15) };
-      const PressableOpacity = tmp8(tmp9[24]).PressableOpacity;
-      intl2 = tmp8(tmp9[23]).intl;
-      ClosedCaptionsOutlineIcon = tmp8(tmp9[25]).ClosedCaptionsOutlineIcon;
-      if (captionsEnabled) {
-        color = tmp.icon.color;
-      } else {
-        color = tmp.iconDisabled.color;
-      }
-      obj15 = { color };
-      flag3 = tmp64(PressableOpacity, obj14);
-    }
-    items30 = [flag3, ];
-    if (flag4) {
-      const obj16 = { accessibilityRole: "button", accessibilityLabel: intl3.string(tmp8(tmp9[23]).t.KCzjTi), onPress: onOpenTranscript, style: tmp.controlButton, children: onPlayerStateChange(tmp8(tmp9[26]).TranscriptOutlineIcon, obj17) };
-      const PressableOpacity2 = tmp8(tmp9[24]).PressableOpacity;
-      intl3 = tmp8(tmp9[23]).intl;
-      obj17 = { color: tmp.iconDisabled.color };
-      flag4 = tmp64(PressableOpacity2, obj16);
-    }
-    items30[1] = flag4;
-    tmp66Result = tmp66(tmp65, obj13);
-  }
-  const items31 = [tmp66Result, , ];
-  const obj18 = { style: tmp.controlsMiddle, children: null };
-  let tmp64Result5 = flag7;
-  if (tmp64Result5) {
-    const obj19 = { disabled: first2 === tmp8(tmp9[12]).PlayerState.ERRORED, accessibilityRole: "button", accessibilityLabel: intl4.string(tmp8(tmp9[23]).t.r9s3Uv), onPress: callback1Result, children: onPlayerStateChange(tmp8(tmp9[28]).SkipBackwardIcon, size) };
-    const VideoQuestPlayerControlButton = tmp8(tmp9[27]).VideoQuestPlayerControlButton;
-    intl4 = tmp8(tmp9[23]).intl;
-    size = { color: tmp.icon.color, width: 16, height: 16 };
-    tmp64Result5 = tmp64(VideoQuestPlayerControlButton, obj19);
-  }
-  const items32 = [tmp64Result5, , ];
-  const VideoQuestPlayerControlButton2 = tmp8(tmp9[27]).VideoQuestPlayerControlButton;
-  const intl5 = tmp8(tmp9[23]).intl;
-  if (!tmp15) {
-    let K0e7M9;
-    if (first2 !== tmp8(tmp9[12]).PlayerState.ERRORED) {
-      const t2 = tmp8(tmp9[23]).t;
-      K0e7M9 = tmp55 ? t2.R3aFPe : t2.fTMEUi;
-    }
-    const obj20 = { accessibilityRole: "button", accessibilityLabel: tmp76(K0e7M9), onPress: callback7, children: null };
-    if (!tmp15) {
-      let tmp64Result6;
-      if (first2 !== tmp8(tmp9[12]).PlayerState.ERRORED) {
-        let PauseIcon;
-        if (tmp55) {
-          PauseIcon = tmp8(tmp9[30]).PlayIcon;
-        } else {
-          PauseIcon = tmp8(tmp9[31]).PauseIcon;
-        }
-        tmp64Result6 = tmp64(PauseIcon, { size: "lg" });
-      }
-      obj20.children = tmp64Result6;
-      items32[1] = onPlayerStateChange(VideoQuestPlayerControlButton2, obj20);
-      if (flag7) {
-        const obj21 = { disabled: tmp39, accessibilityRole: "button", accessibilityLabel: intl6.string(tmp8(tmp9[23]).t.zWDcNP), onPress: callback1Result1, children: onPlayerStateChange(tmp8(tmp9[32]).SkipForwardIcon, size1) };
-        const VideoQuestPlayerControlButton3 = tmp8(tmp9[27]).VideoQuestPlayerControlButton;
-        intl6 = tmp8(tmp9[23]).intl;
-        size1 = { color: tmp.icon.color, width: 16, height: 16 };
-        flag7 = tmp64(VideoQuestPlayerControlButton3, obj21);
-      }
-      items32[2] = flag7;
-      obj18.children = items32;
-      items31[1] = onPausePlayback(onReadyForDisplay, obj18);
-      if (flag5) {
-        const obj22 = { style: items33, children: onPlayerStateChange(PressableOpacity3, obj23) };
-        items33 = [, , ];
-        ({ controlsTopBottom: arr34[0], controlsBottom: arr34[1] } = tmp);
-        items33[2] = tmp61;
-        obj23 = { accessibilityRole: "button", accessibilityLabel: intl7.string(tmp8(tmp9[23]).t.vKZT5t), onPress: onToggleFullscreen, style: tmp.controlButton, children: onPlayerStateChange(tmp8(tmp9[33]).FullscreenEnterIcon, {}) };
-        PressableOpacity3 = tmp8(tmp9[24]).PressableOpacity;
-        intl7 = tmp8(tmp9[23]).intl;
-        flag5 = tmp64(tmp65, obj22);
-      }
-      items31[2] = flag5;
-      obj12.children = items31;
-      items26[4] = onPausePlayback(View, obj12);
-      if (flag6) {
-        const obj24 = { style: tmp.progressContainer, children: onPlayerStateChange(flag(tmp9[13]).View, obj25) };
-        obj25 = { style: items34 };
-        items34 = [tmp.progress, animatedStyle1];
-        flag6 = tmp64(tmp65, obj24);
-      }
-      items26[5] = flag6;
-      obj8.children = items26;
-      obj7.children = onPausePlayback(tmp67, obj8);
-      return onPlayerStateChange(onReadyForDisplay, obj7);
-    }
-    tmp64Result6 = tmp64(tmp8(tmp9[29]).RetryIcon, { size: "lg" });
-  }
-  K0e7M9 = tmp8(tmp9[23]).t.K0e7M9;
 });
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/quests/native/AdVideoPlayer.tsx");
-
-export const AdVideoPlayer = memoResult;

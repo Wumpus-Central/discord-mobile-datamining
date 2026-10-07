@@ -1,25 +1,15 @@
 // discord_app/modules/messages/AttachmentUrlUtils.tsx
-import Constants from "../../Constants.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import ImageProxyUtils from "../image_proxy/ImageProxyUtils.tsx";
-import UrlHostUtils from "../core/UrlHostUtils.tsx";
-import AttachmentUrlConstants from "AttachmentUrlConstants.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let hostname;
-
-const f95112 = (item) => {
-  pathname = pathname.pathname;
-  return pathname.startsWith(item);
-};
+require = fn;
 function isRefreshableAttachmentUrl(toURLSafeResult) {
-  let closure_0 = toURLSafeResult;
   let tmp2 =
     closure_7.some((arr) => {
-      hostname = hostname.hostname;
+      const hostname = toURLSafeResult.hostname;
       let flag = true;
       if (hostname !== arr) {
         const _HermesInternal2 = HermesInternal;
@@ -38,7 +28,7 @@ function isRefreshableAttachmentUrl(toURLSafeResult) {
                 const _HermesInternal = HermesInternal;
                 const combined = "" + arr.substring(0, index) + "-";
                 flag = substr1.startsWith(combined) && substr1.length > combined.length;
-                substr1.startsWith(combined) && substr1.length > combined.length;
+                const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
               }
             }
           }
@@ -46,49 +36,23 @@ function isRefreshableAttachmentUrl(toURLSafeResult) {
       }
       return flag;
     }) || false;
-  closure_7.some((arr) => {
-    hostname = hostname.hostname;
-    let flag = true;
-    if (hostname !== arr) {
-      const _HermesInternal2 = HermesInternal;
-      flag = true;
-      if (!hostname.endsWith("." + arr)) {
-        const index = arr.indexOf(".");
-        const index1 = hostname.indexOf(".");
-        flag = false;
-        if (-1 !== index) {
-          flag = false;
-          if (-1 !== index1) {
-            const substr = hostname.substring(index1 + 1);
-            flag = false;
-            if (substr === arr.substring(index + 1)) {
-              const substr1 = hostname.substring(0, index1);
-              const _HermesInternal = HermesInternal;
-              const combined = "" + arr.substring(0, index) + "-";
-              flag = substr1.startsWith(combined) && substr1.length > combined.length;
-              substr1.startsWith(combined) && substr1.length > combined.length;
-            }
-          }
-        }
-      }
-    }
-    return flag;
-  }) || false;
   if (tmp2) {
     let pathname = toURLSafeResult.pathname;
-    let tmp4 = !pathname.startsWith("/external/");
-    pathname.startsWith("/external/");
-    if (tmp4) {
+    const startsWithResult = pathname.startsWith("/external/");
+    let tmp4 = !startsWithResult;
+    if (!startsWithResult) {
       const searchParams = toURLSafeResult.searchParams;
       let hasItem = searchParams.has("ex");
       if (!hasItem) {
         const _Array = Array;
         const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
-        closure_0 = toURLSafeResult;
-        const someResult = arr.some(f95112);
+        const someResult = Array.from(ATTACHMENT_PATH_PREFIXES).some((item) => {
+          const pathname = toURLSafeResult.pathname;
+          return pathname.startsWith(item);
+        });
         hasItem =
           (closure_7.some((arr) => {
-            hostname = hostname.hostname;
+            const hostname = toURLSafeResult.hostname;
             let flag = true;
             if (hostname !== arr) {
               const _HermesInternal2 = HermesInternal;
@@ -107,7 +71,7 @@ function isRefreshableAttachmentUrl(toURLSafeResult) {
                       const _HermesInternal = HermesInternal;
                       const combined = "" + arr.substring(0, index) + "-";
                       flag = substr1.startsWith(combined) && substr1.length > combined.length;
-                      substr1.startsWith(combined) && substr1.length > combined.length;
+                      const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
                     }
                   }
                 }
@@ -116,37 +80,44 @@ function isRefreshableAttachmentUrl(toURLSafeResult) {
             return flag;
           }) ||
             false) &&
-          someResult;
-        (closure_7.some((arr) => {
-          hostname = hostname.hostname;
-          let flag = true;
-          if (hostname !== arr) {
-            const _HermesInternal2 = HermesInternal;
-            flag = true;
-            if (!hostname.endsWith("." + arr)) {
-              const index = arr.indexOf(".");
-              const index1 = hostname.indexOf(".");
-              flag = false;
-              if (-1 !== index) {
+          Array.from(ATTACHMENT_PATH_PREFIXES).some((item) => {
+            const pathname = toURLSafeResult.pathname;
+            return pathname.startsWith(item);
+          });
+        const tmp9 =
+          (closure_7.some((arr) => {
+            const hostname = toURLSafeResult.hostname;
+            let flag = true;
+            if (hostname !== arr) {
+              const _HermesInternal2 = HermesInternal;
+              flag = true;
+              if (!hostname.endsWith("." + arr)) {
+                const index = arr.indexOf(".");
+                const index1 = hostname.indexOf(".");
                 flag = false;
-                if (-1 !== index1) {
-                  const substr = hostname.substring(index1 + 1);
+                if (-1 !== index) {
                   flag = false;
-                  if (substr === arr.substring(index + 1)) {
-                    const substr1 = hostname.substring(0, index1);
-                    const _HermesInternal = HermesInternal;
-                    const combined = "" + arr.substring(0, index) + "-";
-                    flag = substr1.startsWith(combined) && substr1.length > combined.length;
-                    substr1.startsWith(combined) && substr1.length > combined.length;
+                  if (-1 !== index1) {
+                    const substr = hostname.substring(index1 + 1);
+                    flag = false;
+                    if (substr === arr.substring(index + 1)) {
+                      const substr1 = hostname.substring(0, index1);
+                      const _HermesInternal = HermesInternal;
+                      const combined = "" + arr.substring(0, index) + "-";
+                      flag = substr1.startsWith(combined) && substr1.length > combined.length;
+                      const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
+                    }
                   }
                 }
               }
             }
-          }
-          return flag;
-        }) ||
-          false) &&
-          someResult;
+            return flag;
+          }) ||
+            false) &&
+          Array.from(ATTACHMENT_PATH_PREFIXES).some((item) => {
+            const pathname = toURLSafeResult.pathname;
+            return pathname.startsWith(item);
+          });
       }
       tmp4 = hasItem;
     }
@@ -157,14 +128,13 @@ function isRefreshableAttachmentUrl(toURLSafeResult) {
 function shouldRefreshAttachmentUrl(searchParams) {
   searchParams = searchParams.searchParams;
   let str = searchParams.get("ex");
-  const _parseInt = parseInt;
   if (str == null) {
     str = "";
   }
-  const _parseIntResult = _parseInt(str, 16);
+  const parsed = parseInt(str, 16);
   let result;
-  if (!isNaN(_parseIntResult)) {
-    result = _parseIntResult * DurationsDefault.Millis.SECOND;
+  if (!isNaN(parsed)) {
+    result = parsed * DurationsDefault.Millis.SECOND;
   }
   let tmp5 = null == result;
   if (!tmp5) {
@@ -174,21 +144,19 @@ function shouldRefreshAttachmentUrl(searchParams) {
   return tmp5;
 }
 function isAttachmentExpired(url) {
-  obj = URLUtilsDefault;
-  const toURLSafeResult = obj.toURLSafe(url.url);
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(url.url);
   let tmp4 = null != toURLSafeResult;
   if (tmp4) {
     const searchParams = toURLSafeResult.searchParams;
     let str2 = searchParams.get("ex");
-    const _parseInt = parseInt;
     if (str2 == null) {
       str2 = "";
     }
-    const _parseIntResult = _parseInt(str2, 16);
+    const parsed = parseInt(str2, 16);
     const _isNaN = isNaN;
     let result;
-    if (!isNaN(_parseIntResult)) {
-      result = _parseIntResult * DurationsDefault.Millis.SECOND;
+    if (!isNaN(parsed)) {
+      result = parsed * DurationsDefault.Millis.SECOND;
     }
     let tmp8 = null == result;
     if (!tmp8) {
@@ -203,23 +171,21 @@ function isEmbedMediaExpiredAttachment(image) {
   if (null == image) {
     return false;
   } else {
-    obj = URLUtilsDefault;
-    const toURLSafeResult = obj.toURLSafe(image.url);
+    const toURLSafeResult = URLUtilsDefault.toURLSafe(image.url);
     let tmp8 = null != toURLSafeResult;
     if (tmp8) {
       let tmp2 = isRefreshableAttachmentUrl(toURLSafeResult);
       if (tmp2) {
         const searchParams = toURLSafeResult.searchParams;
         let str2 = searchParams.get("ex");
-        const _parseInt = parseInt;
         if (str2 == null) {
           str2 = "";
         }
-        const _parseIntResult = _parseInt(str2, 16);
+        const parsed = parseInt(str2, 16);
         const _isNaN = isNaN;
         let result;
-        if (!isNaN(_parseIntResult)) {
-          result = _parseIntResult * DurationsDefault.Millis.SECOND;
+        if (!isNaN(parsed)) {
+          result = parsed * DurationsDefault.Millis.SECOND;
         }
         let tmp6 = null == result;
         if (!tmp6) {
@@ -248,69 +214,122 @@ function embedHasExpiredAttachmentUrl(image) {
   }
   return tmpResult;
 }
-let obj = function _refreshAttachmentUrl() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c1;
-    let c2;
-    let items;
-    let obj4;
-    let obj8;
-    let closure_0 = arg0;
-    const HTTP = HTTPUtils.HTTP;
-    const request = {
-      url: constants.ATTACHMENTS_REFRESH_URLS,
-      body: obj4,
-      rejectWithError: obj8.rejectWithMigratedError(),
-    };
-    obj4 = { attachment_urls: items };
-    items = [closure_0];
-    const post = HTTP.post;
-    obj8 = HTTPUtils;
-    await post(request);
-    return value.body.refreshed_urls[0].refreshed;
-  });
-  return obj(...arguments);
+let closure_13 = async function _refreshAttachmentUrl() {
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: constants.ATTACHMENTS_REFRESH_URLS,
+    body: null,
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  };
+  const obj4 = { attachment_urls: null };
+  const items = [closure_0];
+  obj4.attachment_urls = items;
+  request.body = obj4;
+  await HTTP.post(request);
+  return value.body.refreshed_urls[0].refreshed;
 };
-obj = function _maybeRefreshAttachmentUrl() {
-  obj = _asyncToGenerator(async (value) => {
-    let closure_2;
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      function refreshAttachmentUrl() {
-        return closure_1_13(...arguments);
+let closure_14 = async function _maybeRefreshAttachmentUrl() {
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
       }
-      const obj8 = URLUtilsDefault;
-      const toURLSafeResult = obj8.toURLSafe(value);
-      if (null == toURLSafeResult) {
-        return value;
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp2;
+            closure_130_0 = value;
+            closure_130_1 = undefined;
+            const toURLSafeResult = URLUtilsDefault.toURLSafe(value);
+            if (null == toURLSafeResult) {
+              c4 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else if (shouldRefreshAttachmentUrl(toURLSafeResult)) {
+              c3 = 1;
+              c4 = 1;
+              const obj5 = {
+                value: (function refreshAttachmentUrl() {
+                  const self = this;
+                  const apply = closure_1_13.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(value),
+                done: false,
+              };
+              return obj5;
+            } else {
+              c4 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            }
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          closure_130_1 = value;
+          value = closure_130_1;
+          if (closure_130_1 == null) {
+            value = closure_130_0;
+          }
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp12) {
+        c4 = tmp;
+        throw tmp12;
       }
-      if (!shouldRefreshAttachmentUrl(toURLSafeResult)) {
-        return value;
-      }
-      await refreshAttachmentUrl(value);
-      return value;
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-const ATTACHMENT_PATH_PREFIXES = AttachmentUrlConstants.ATTACHMENT_PATH_PREFIXES;
-const Endpoints = Constants.Endpoints;
+const ATTACHMENT_PATH_PREFIXES = fn(5807).ATTACHMENT_PATH_PREFIXES;
+const Endpoints = fn(1085).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST];
-let str = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 let substr;
-if (str != null) {
+if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
   substr = str.substring(2);
 }
 items[1] = substr;
 function isAttachmentPathUrl(toURLSafeResult) {
-  let closure_0 = toURLSafeResult;
+  closure_0 = toURLSafeResult;
   const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
-  const someResult = arr.some(f95112);
-  const tmp2 =
+  const someResult = Array.from(ATTACHMENT_PATH_PREFIXES).some((item) => {
+    const pathname = toURLSafeResult.pathname;
+    return pathname.startsWith(item);
+  });
+  return (
     (closure_7.some((arr) => {
-      hostname = hostname.hostname;
+      const hostname = toURLSafeResult.hostname;
       let flag = true;
       if (hostname !== arr) {
         const _HermesInternal2 = HermesInternal;
@@ -329,7 +348,7 @@ function isAttachmentPathUrl(toURLSafeResult) {
                 const _HermesInternal = HermesInternal;
                 const combined = "" + arr.substring(0, index) + "-";
                 flag = substr1.startsWith(combined) && substr1.length > combined.length;
-                substr1.startsWith(combined) && substr1.length > combined.length;
+                const tmp3 = substr1.startsWith(combined) && substr1.length > combined.length;
               }
             }
           }
@@ -338,36 +357,43 @@ function isAttachmentPathUrl(toURLSafeResult) {
       return flag;
     }) ||
       false) &&
-    someResult;
-  return tmp2;
+    Array.from(ATTACHMENT_PATH_PREFIXES).some((item) => {
+      const pathname = toURLSafeResult.pathname;
+      return pathname.startsWith(item);
+    })
+  );
 }
 function getSignedAttachmentExpiration(searchParams) {
   searchParams = searchParams.searchParams;
   let str = searchParams.get("ex");
-  const _parseInt = parseInt;
   if (str == null) {
     str = "";
   }
-  const _parseIntResult = _parseInt(str, 16);
+  const parsed = parseInt(str, 16);
   let result;
-  if (!isNaN(_parseIntResult)) {
-    result = _parseIntResult * DurationsDefault.Millis.SECOND;
+  if (!isNaN(parsed)) {
+    result = parsed * DurationsDefault.Millis.SECOND;
   }
   return result;
 }
-const mapped = items.map(UrlHostUtils.getHostWithoutPort);
-let closure_7 = mapped.filter((item) => null != item && "" !== item);
+const mapped = items.map(fn(2023).getHostWithoutPort);
+let closure_7 = mapped.filter((item) => {
+  let tmp = null != item;
+  if (tmp) {
+    tmp = "" !== item;
+  }
+  return tmp;
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/AttachmentUrlUtils.tsx");
 
 export { isAttachmentPathUrl };
 export { isRefreshableAttachmentUrl };
 export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachmentUrl(toURLSafeResult) {
-  obj = ImageProxyUtils;
-  return obj.isImageProxyURL(toURLSafeResult);
+  return ImageProxyUtils.isImageProxyURL(toURLSafeResult);
 };
 export const removeSignedUrlParameters = function removeSignedUrlParameters(toURLSafeResult) {
-  obj = URLUtilsDefault;
-  toURLSafeResult = obj.toURLSafe(toURLSafeResult);
+  toURLSafeResult = URLUtilsDefault.toURLSafe(toURLSafeResult);
   if (null == toURLSafeResult) {
     return toURLSafeResult;
   } else {
@@ -391,5 +417,12 @@ export const messageHasExpiredAttachmentUrl = function messageHasExpiredAttachme
   return someResult;
 };
 export const maybeRefreshAttachmentUrl = function maybeRefreshAttachmentUrl() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_14.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

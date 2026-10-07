@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/QuestHomeSetting.tsx
 import Constants from "../../../../Constants.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import utils_QuestUtils from "../../../quests/utils/QuestUtils.tsx";
 import QuestsEligibility from "../../../quests/lib/QuestsEligibility.tsx";
@@ -10,20 +10,18 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const UserSettingsSections = Constants.UserSettingsSections;
-let obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.JALI2K);
+    const intl = util.intl;
+    return intl.string(util.t.JALI2K);
   },
   usePredicate() {
-    const obj = QuestsEligibility;
-    return obj.getIsEligibleForQuests();
+    return QuestsEligibility.getIsEligibleForQuests();
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
   screen: {
-    route: UserSettingsSections.QUESTS,
+    route: Constants.UserSettingsSections.QUESTS,
     getComponent() {
       return require("QuestHomeSetting").default;
     },
@@ -31,13 +29,11 @@ let obj = {
   usePreNavigationAction() {
     return () => {
       const obj = utils_QuestUtils;
-      const obj2 = { fromContent: QuestContent.QuestContent.USER_SETTINGS };
-      const result = obj.setQuestHomeUtmContext(obj2);
+      const result = obj.setQuestHomeUtmContext({ fromContent: QuestContent.QuestContent.USER_SETTINGS });
       return true;
     };
   },
-};
-const route = SettingBuilders.createRoute(obj);
+});
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");
 
 export default route;

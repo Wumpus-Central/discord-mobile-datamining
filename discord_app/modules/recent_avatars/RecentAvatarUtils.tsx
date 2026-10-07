@@ -1,22 +1,14 @@
 // discord_app/modules/recent_avatars/RecentAvatarUtils.tsx
 import Constants from "../../Constants.tsx";
-import intl3 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import _modDef1478 from "../../../_runtime/metro/01478__.js";
 import ProfilePendingImageTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
-import size_mod from "../../../_runtime/metro/00002__.js";
+import size from "../../../_runtime/metro/00002__.js";
 
 function getArchivedAvatarURL(allowWebp) {
-  let avatarId;
-  let canAnimate;
-  let combined;
-  let getBestMediaProxySize;
-  let obj3;
-  let storageHash;
-  let str2;
-  let userId;
   ({ userId, avatarId, storageHash, canAnimate } = allowWebp);
   if (canAnimate === undefined) {
     canAnimate = false;
@@ -25,10 +17,9 @@ function getArchivedAvatarURL(allowWebp) {
   if (flag === undefined) {
     flag = true;
   }
-  size = allowWebp.size;
   if (null != CDN_HOST) {
     const _HermesInternal = HermesInternal;
-    combined = "https://" + CDN_HOST;
+    let combined = "https://" + CDN_HOST;
   } else {
     const _location = location;
     const _window = window;
@@ -42,7 +33,6 @@ function getArchivedAvatarURL(allowWebp) {
     flag = true;
   }
   if (flag2) {
-    const obj = AvatarUtils;
     if (obj.isAnimatedIconHash(storageHash)) {
       let str6 = "gif";
       if (flag) {
@@ -51,24 +41,23 @@ function getArchivedAvatarURL(allowWebp) {
           str6 = "webp";
         }
       }
-      str2 = str6;
+      let str2 = str6;
     }
-    const obj2 = { size: getBestMediaProxySize(size * obj3.getDevicePixelRatio()) };
-    getBestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize;
-    ImageLoaderUtils;
+    const obj2 = { size: null };
+    obj = AvatarUtils;
+    const obj3 = ImageLoaderUtils;
+    obj2.size = obj3.getBestMediaProxySize(allowWebp.size * ImageLoaderUtils.getDevicePixelRatio());
     let isAnimatedIconHashResult = "webp" === str2 && canAnimate;
-    obj3 = ImageLoaderUtils;
     if (isAnimatedIconHashResult) {
+      isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(storageHash);
       const tmp6Result = AvatarUtils;
-      isAnimatedIconHashResult = tmp6Result.isAnimatedIconHash(storageHash);
     }
     if (isAnimatedIconHashResult) {
       obj2.animated = true;
     }
-    const _HermesInternal2 = HermesInternal;
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
-    const obj5 = _modDef1478;
-    return "" + combined + ARCHIVED_AVATARResult + "?" + obj5.stringify(obj2);
+    const _HermesInternal2 = HermesInternal;
+    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1478.stringify(obj2);
   }
   str2 = "jpg";
   if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -83,13 +72,10 @@ function getArchivedAvatarURL(allowWebp) {
   }
 }
 const Endpoints = Constants.Endpoints;
-let size = size_mod;
 const result = size.fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
 
 export const getImageFormat = function getImageFormat(canAnimate) {
-  let str;
   let flag = canAnimate.canAnimate;
-  const storageHash = canAnimate.storageHash;
   if (flag === undefined) {
     flag = false;
   }
@@ -98,8 +84,7 @@ export const getImageFormat = function getImageFormat(canAnimate) {
     flag2 = true;
   }
   if (flag) {
-    const obj = AvatarUtils;
-    if (obj.isAnimatedIconHash(storageHash)) {
+    if (obj.isAnimatedIconHash(canAnimate.storageHash)) {
       let str5 = "gif";
       if (flag2) {
         str5 = "gif";
@@ -107,7 +92,7 @@ export const getImageFormat = function getImageFormat(canAnimate) {
           str5 = "webp";
         }
       }
-      str = str5;
+      let str = str5;
     }
     return str;
   }
@@ -125,8 +110,6 @@ export const getImageFormat = function getImageFormat(canAnimate) {
 };
 export { getArchivedAvatarURL };
 export const generateAvatarDescription = function generateAvatarDescription(arg0) {
-  let assetOrigin;
-  let filename;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
@@ -136,42 +119,36 @@ export const generateAvatarDescription = function generateAvatarDescription(arg0
     assetOrigin = ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET;
   }
   if (assetOrigin !== ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
-    let DYil93;
     if (filename == null) {
-      const intl = intl3.intl;
-      filename = intl.string(intl3.t.lqaIxI);
+      const intl = util.intl;
+      filename = intl.string(util.t.lqaIxI);
     }
     const _Date = Date;
-    const self = this;
-    const self2 = this;
     const date = new Date();
-    const toLocaleStringResult = date.toLocaleString(intl3.intl.currentLocale, {
-      year: "numeric",
-      day: "numeric",
-      month: "long",
-      hour: "numeric",
-      minute: "numeric",
-    });
-    const intl2 = intl3.intl;
-    const formatToPlainString = intl2.formatToPlainString;
+    const intl2 = util.intl;
     if (assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
-      DYil93 = intl3.t.eC2sZi;
+      let DYil93 = util.t.eC2sZi;
     } else {
-      DYil93 = intl3.t.DYil93;
+      DYil93 = util.t.DYil93;
     }
-    const obj2 = { name: filename, dateTime: toLocaleStringResult };
-    return formatToPlainString(DYil93, obj2);
+    const obj2 = {
+      name: filename,
+      dateTime: date.toLocaleString(util.intl.currentLocale, {
+        year: "numeric",
+        day: "numeric",
+        month: "long",
+        hour: "numeric",
+        minute: "numeric",
+      }),
+    };
+    return intl2.formatToPlainString(DYil93, obj2);
   }
 };
 export const generateRecentAvatarFileDetails = function generateRecentAvatarFileDetails(storageHash, arg1) {
-  let str;
-  let str9;
-  let stringResult;
   let flag = AvatarUtils.SUPPORTS_WEBP;
   if (flag === undefined) {
     flag = true;
   }
-  const tmpResult = AvatarUtils;
   if (tmpResult.isAnimatedIconHash(storageHash)) {
     let str5 = "gif";
     if (flag) {
@@ -180,7 +157,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
         str5 = "webp";
       }
     }
-    str = str5;
+    let str = str5;
   } else {
     const _window = window;
     str = "jpg";
@@ -196,14 +173,14 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
     }
   }
   if (null == arg1) {
-    const intl = intl3.intl;
-    stringResult = intl.string(intl3.t.lqaIxI);
+    const intl = util.intl;
+    let stringResult = intl.string(util.t.lqaIxI);
   } else {
     stringResult = arg1.split(",")[0];
   }
-  const obj = { filename: "" + stringResult + "." + str, type: str9 };
+  const obj = { filename: "" + stringResult + "." + str, type: null };
   if ("gif" === str) {
-    str9 = "image/gif";
+    let str9 = "image/gif";
   } else if ("png" === str) {
     str9 = "image/png";
   } else if ("jpg" === str) {
@@ -211,20 +188,19 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   } else {
     str9 = "image/webp";
     if ("webp" !== str) {
+      GlobalUtils.assertNever(str);
       const tmpResult2 = GlobalUtils;
-      tmpResult2.assertNever(str);
     }
   }
+  obj.type = str9;
   return obj;
 };
-export const getPendingAvatarSrc = function getPendingAvatarSrc(userId) {
-  let image;
-  ({ image, size } = userId);
-  userId = userId.userId;
+export const getPendingAvatarSrc = function getPendingAvatarSrc(canAnimate) {
+  ({ userId, image, size } = canAnimate);
   if (size === undefined) {
     size = 80;
   }
-  let flag = userId.canAnimate;
+  let flag = canAnimate.canAnimate;
   if (flag === undefined) {
     flag = true;
   }
@@ -232,16 +208,15 @@ export const getPendingAvatarSrc = function getPendingAvatarSrc(userId) {
   if (null != image) {
     tmp = image;
     if (typeof image !== "string") {
-      let imageUri;
       if (image.assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
-        const obj = {
-          userId,
-          avatarId: image.originalAsset.id,
-          storageHash: image.originalAsset.storageHash,
-          size,
-          canAnimate: flag,
-        };
-        imageUri = getArchivedAvatarURL(obj);
+        const obj = { userId, avatarId: null, storageHash: null, size: null, canAnimate: null };
+        userId = image.originalAsset.id;
+        obj.avatarId = userId;
+        image = image.originalAsset.storageHash;
+        obj.storageHash = image;
+        obj.size = size;
+        obj.canAnimate = flag;
+        let imageUri = getArchivedAvatarURL(obj);
       } else if (flag) {
         imageUri = image.imageUri;
       } else {
@@ -250,7 +225,6 @@ export const getPendingAvatarSrc = function getPendingAvatarSrc(userId) {
           imageUri = image.imageUri;
         }
       }
-      tmp = imageUri;
     }
   }
   return tmp;

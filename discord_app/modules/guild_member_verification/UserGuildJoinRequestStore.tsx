@@ -1,16 +1,12 @@
 // discord_app/modules/guild_member_verification/UserGuildJoinRequestStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import GuildJoinRequestUtils from "GuildJoinRequestUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let closure_4, closure_6, guild_id;
-
+require = fn;
 function handleGatewayJoinRequestUpdate(arg0) {
-  let guildId;
-  let request;
   ({ guildId, request } = arg0);
   if (null != request) {
     const obj3 = {
@@ -47,60 +43,59 @@ function handleGatewayJoinRequestUpdate(arg0) {
         return false;
       }
     }
-    const obj = GuildJoinRequestUtils;
     if (obj.isApprovedAndAcked(obj3)) {
-      delete closure_4[guildId];
+      delete tmp[tmp2];
       if (c3 === guildId) {
         c3 = null;
       }
     } else {
-      closure_4[guildId] = obj3;
+      tmp5[guildId] = obj3;
     }
+    obj = GuildJoinRequestUtils;
   }
 }
 let c3 = null;
-const React3 = {};
+let closure_4 = {};
 let c5 = false;
-const metroRequire = {};
-const Store = get_initializedDefault.Store;
-class UserGuildJoinRequestStore extends Store {
-  initialize() {
-    this.waitFor(UserStore);
-  }
-  getRequest(arg0) {
-    return closure_4[arg0];
-  }
-  computeGuildIds() {
-    const values = Object.values(closure_4);
-    const mapped = values.map((guildId) => {
-      guildId = undefined;
-      if (guildId != null) {
-        guildId = guildId.guildId;
-      }
-      return guildId;
-    });
-    return mapped.filter((item) => null != item);
-  }
-  getJoinRequestGuild(guildId) {
-    let fromGuildBasicResult = null;
-    if (null != closure_6[guildId]) {
-      const obj = GuildRecordUtils;
-      fromGuildBasicResult = obj.fromGuildBasic(closure_6[guildId]);
+const dependencyMap = {};
+const Store = initializeDefault.Store;
+class UserGuildJoinRequestStore extends Store {}
+const prototype = UserGuildJoinRequestStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(UserStore);
+};
+prototype["getRequest"] = function getRequest(arg0) {
+  return closure_4[arg0];
+};
+prototype["computeGuildIds"] = function computeGuildIds() {
+  const values = Object.values(closure_4);
+  const mapped = values.map((guildId) => {
+    guildId = undefined;
+    if (guildId != null) {
+      guildId = guildId.guildId;
     }
-    return fromGuildBasicResult;
+    return guildId;
+  });
+  return mapped.filter((item) => null != item);
+};
+prototype["getJoinRequestGuild"] = function getJoinRequestGuild(guildId) {
+  let fromGuildBasicResult = null;
+  if (null != dependencyMap[guildId]) {
+    fromGuildBasicResult = GuildRecordUtils.fromGuildBasic(dependencyMap[guildId]);
   }
-  hasJoinRequestCoackmark() {
-    return null != c3;
-  }
-}
-Object.defineProperty(UserGuildJoinRequestStore.prototype, "hasFetchedRequestToJoinGuilds", {
+  return fromGuildBasicResult;
+};
+Object.defineProperty(prototype, "hasFetchedRequestToJoinGuilds", {
   get: function hasFetchedRequestToJoinGuilds() {
     return c5;
   },
   set: undefined,
 });
+prototype["hasJoinRequestCoackmark"] = function hasJoinRequestCoackmark() {
+  return null != c3;
+};
 UserGuildJoinRequestStore.displayName = "UserGuildJoinRequestStore";
-let obj = {
+const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guildJoinRequests) {
     guildJoinRequests = guildJoinRequests.guildJoinRequests;
     c5 = false;
@@ -144,15 +139,12 @@ let obj = {
   GUILD_JOIN_REQUEST_UPDATE: handleGatewayJoinRequestUpdate,
   GUILD_JOIN_REQUEST_CREATE: handleGatewayJoinRequestUpdate,
   GUILD_JOIN_REQUEST_DELETE: function handleRemoveJoinRequest(guildId) {
-    guildId = guildId.guildId;
-    delete closure_4[guildId];
-    if (c3 === guildId) {
+    delete tmp[tmp2];
+    if (c3 === guildId.guildId) {
       c3 = null;
     }
   },
   USER_GUILD_JOIN_REQUEST_UPDATE: function handleJoinRequestUpdate(arg0) {
-    let guildId;
-    let request;
     ({ request, guildId } = arg0);
     if (null != request) {
       const obj = {
@@ -183,26 +175,25 @@ let obj = {
         last_seen: obj.lastSeen,
         interview_channel_id: obj.interviewChannelId,
       } = request);
-      const obj2 = GuildJoinRequestUtils;
       if (obj2.isApprovedAndAcked(obj)) {
-        delete closure_4[guildId];
+        delete tmp[tmp2];
         if (c3 === guildId) {
           c3 = null;
         }
       } else {
-        closure_4[guildId] = obj;
+        tmp8[guildId] = obj;
       }
+      obj2 = GuildJoinRequestUtils;
     } else {
-      delete closure_4[guildId];
+      delete tmp3[tmp2];
       if (c3 === guildId) {
         c3 = null;
       }
     }
   },
   GUILD_DELETE: function handleGuildLeave(guild) {
-    const id = guild.guild.id;
-    delete closure_4[id];
-    if (c3 === id) {
+    delete tmp[tmp2];
+    if (c3 === guild.guild.id) {
       c3 = null;
     }
   },
@@ -211,34 +202,29 @@ let obj = {
     c5 = true;
     const item = guilds.forEach((id) => {
       id = id.id;
-      closure_1_6[id] = { id, name: id.name, features: id.features, icon: id.icon, splash: id.splash };
+      dependencyMap[id] = { id, name: id.name, features: id.features, icon: id.icon, splash: id.splash };
     });
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function handleVerificationFormUpdate(form) {
-    let splash;
     form = form.form;
     let guild1;
-    const guildId = form.guildId;
     if (form != null) {
       guild1 = form.guild;
     }
     if (null != guild1) {
-      const guild = form.guild;
+      guild = form.guild;
       let features = guild.features;
-      const obj = { id: null, name: null, icon: null, features, splash };
+      const obj = { id: null, name: null, icon: null, features: null, splash: null };
       ({ id: obj.id, name: obj.name, icon: obj.icon, splash } = guild);
       if (features == null) {
         features = [];
       }
-      closure_6[guildId] = obj;
+      obj.features = features;
+      obj.splash = splash;
+      closure_6[form.guildId] = obj;
     }
   },
   INVITE_ACCEPT_SUCCESS: function handleInviteSuccess(invite) {
-    let features;
-    let guild;
-    let id;
-    let join_request;
-    let splash;
     ({ guild, join_request } = invite.invite);
     if (null != guild) {
       if (null != join_request) {
@@ -272,19 +258,20 @@ let obj = {
         } = join_request);
         closure_4[join_request.guild_id] = obj;
         ({ id, features } = guild);
-        const obj3 = { id, name: null, icon: null, features, splash };
+        const obj3 = { id, name: null, icon: null, features: null, splash: null };
         ({ name: obj2.name, icon: obj2.icon, splash } = guild);
         if (features == null) {
           features = [];
         }
+        obj3.features = features;
+        obj3.splash = splash;
         closure_6[id] = obj3;
       }
     }
   },
   ACK_APPROVED_GUILD_JOIN_REQUEST: function handleAckApprovedGuildJoinRequest(guildId) {
-    guildId = guildId.guildId;
-    delete closure_4[guildId];
-    if (c3 === guildId) {
+    delete tmp[tmp2];
+    if (c3 === guildId.guildId) {
       c3 = null;
     }
   },
@@ -294,8 +281,8 @@ let obj = {
   USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: function handleClearCoachmark() {
     c3 = null;
   },
-};
-const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/UserGuildJoinRequestStore.tsx");
 
 export default userGuildJoinRequestStore;

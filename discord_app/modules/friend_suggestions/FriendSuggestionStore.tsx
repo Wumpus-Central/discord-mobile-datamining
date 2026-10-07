@@ -1,89 +1,55 @@
 // discord_app/modules/friend_suggestions/FriendSuggestionStore.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators.tsx";
 import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions.tsx";
 import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let closure_4;
-
-const f94552 = function (contact_names) {
-  let name;
-  let tmp7;
-  if (null != contact_names.contact_names) {
-    if (contact_names.contact_names.length >= 2) {
-      contact_names = contact_names.contact_names;
-      const substr = contact_names.slice(0, 2);
-    }
-    const obj = {
-      key: contact_names.suggested_user.id,
-      name,
-      user: tmp7,
-      mutualFriendsCount: contact_names.mutual_friends_count,
-      contactNames: [],
-    };
-    const obj2 = _modDef12;
-    const firstResult = obj2.first(contact_names.reasons);
-    name = undefined;
-    if (firstResult != null) {
-      name = firstResult.name;
-    }
-    const self = this;
-    const self2 = this;
-    tmp7 = new UserRecord(contact_names.suggested_user);
-    return obj;
-  }
-};
-const f94553 = (key) => key.key;
-const React3 = {};
-let friendSuggestionCount = 0;
+let dependencyMap = {};
 let c6 = false;
 let c7 = false;
-const Store = get_initializedDefault.Store;
-class FriendSuggestionStore extends Store {
-  initialize() {
-    this.waitFor(UserStore);
-  }
-  getSuggestionCount() {
-    return friendSuggestionCount;
-  }
-  getSuggestions() {
-    const entries = Object.entries(closure_4);
-    return entries.map((item) => {
-      let tmp;
-      [, tmp] = item;
-      return tmp;
-    });
-  }
-  getSuggestion(id) {
-    return closure_4[id];
-  }
-}
+const Store = initializeDefault.Store;
+class FriendSuggestionStore extends Store {}
 const prototype = FriendSuggestionStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(UserStore);
+};
+prototype["getSuggestionCount"] = function getSuggestionCount() {
+  return length;
+};
+prototype["getSuggestions"] = function getSuggestions() {
+  const entries = Object.entries(closure_4);
+  return entries.map((item) => {
+    [, tmp] = item;
+    return tmp;
+  });
+};
+prototype["getSuggestion"] = function getSuggestion(id) {
+  return dependencyMap[id];
+};
 FriendSuggestionStore.displayName = "FriendSuggestionStore";
-let obj = {
+const friendSuggestionStore = new FriendSuggestionStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(friendSuggestionCount) {
     closure_4 = {};
     friendSuggestionCount = friendSuggestionCount.friendSuggestionCount;
     if (friendSuggestionCount > 0) {
       c7 = true;
-      const tmp5 = !c6 && true;
-      if (tmp5) {
+      let flag2 = !c6;
+      if (!c6) {
+        flag2 = true;
+      }
+      if (flag2) {
         c6 = true;
         c7 = false;
-        const obj = FriendSuggestionActionCreatorsDefault;
-        const response = obj.fetch();
+        const response = FriendSuggestionActionCreatorsDefault.fetch();
       }
     } else {
       maybeDispatchDevOnlyDummyFriendSuggestionsDefault();
     }
   },
   FRIEND_SUGGESTION_CREATE: function handleFriendSuggestionCreate(suggestion) {
-    let name;
-    let tmp7;
     suggestion = suggestion.suggestion;
     if (null != suggestion.contact_names) {
       if (suggestion.contact_names.length >= 2) {
@@ -92,60 +58,105 @@ let obj = {
       }
       const obj = {
         key: suggestion.suggested_user.id,
-        name,
-        user: tmp7,
-        mutualFriendsCount: suggestion.mutual_friends_count,
-        contactNames: [],
+        name: null,
+        user: null,
+        mutualFriendsCount: null,
+        contactNames: null,
       };
-      const obj2 = _modDef12;
-      const firstResult = obj2.first(suggestion.reasons);
-      name = undefined;
+      const firstResult = _modDef12.first(suggestion.reasons);
+      let name;
       if (firstResult != null) {
         name = firstResult.name;
       }
-      const self = this;
-      const self2 = this;
-      tmp7 = new UserRecord(suggestion.suggested_user);
-      if (null != closure_4[obj.key]) {
+      obj.name = name;
+      const tmp9 = new UserRecord(suggestion.suggested_user);
+      obj.user = tmp9;
+      obj.mutualFriendsCount = suggestion.mutual_friends_count;
+      obj.contactNames = [];
+      if (null != dependencyMap[obj.key]) {
         return false;
       } else {
-        friendSuggestionCount = friendSuggestionCount + 1;
         const obj3 = {};
-        const merged = Object.assign(closure_4);
+        const merged = Object.assign(dependencyMap);
         obj3[obj.key] = obj;
-        closure_4 = obj3;
+        dependencyMap = obj3;
       }
     }
   },
   FRIEND_SUGGESTION_DELETE: function handleFriendSuggestionDelete(arg0) {
-    const diff = friendSuggestionCount - 1;
-    friendSuggestionCount = Math.max(0, diff);
-    delete closure_4[arg0.suggestedUserId];
+    const diff = length - 1;
+    length = Math.max(0, diff);
+    delete tmp2[tmp];
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function handleLoadFriendSuggestionsSuccess(suggestions) {
     c6 = false;
-    suggestions = suggestions.suggestions;
-    let obj = _modDef12;
-    const chainResult = obj.chain(suggestions);
-    const mapped = chainResult.map(f94552);
-    const iter = mapped.keyBy(f94553);
-    closure_4 = iter.value();
-    const obj3 = _modDef12;
-    friendSuggestionCount = obj3.keys(closure_4).length;
+    const mapped = _modDef12.chain(suggestions.suggestions).map((contact_names) => {
+      if (null != contact_names.contact_names) {
+        if (contact_names.contact_names.length >= 2) {
+          contact_names = contact_names.contact_names;
+          const substr = contact_names.slice(0, 2);
+        }
+        const obj = {
+          key: contact_names.suggested_user.id,
+          name: null,
+          user: null,
+          mutualFriendsCount: null,
+          contactNames: null,
+        };
+        const firstResult = _modDef12.first(contact_names.reasons);
+        let name;
+        if (firstResult != null) {
+          name = firstResult.name;
+        }
+        obj.name = name;
+        const tmp9 = new UserRecord(contact_names.suggested_user);
+        obj.user = tmp9;
+        obj.mutualFriendsCount = contact_names.mutual_friends_count;
+        obj.contactNames = [];
+        return obj;
+      }
+    });
+    const chainResult = _modDef12.chain(suggestions.suggestions);
+    closure_4 = mapped.keyBy((key) => key.key).value();
+    const iter = mapped.keyBy((key) => key.key);
+    _modDef12.keys(closure_4).length;
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function handleLoadFriendSuggestionsFailure() {
     c6 = false;
     closure_4 = {};
   },
-};
-const friendSuggestionStore = new FriendSuggestionStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionStore.tsx");
 
 export default friendSuggestionStore;
 export const transformFriendSuggestions = function transformFriendSuggestions(arg0) {
-  const obj = _modDef12;
-  const chainResult = obj.chain(arg0);
-  const mapped = chainResult.map(f94552);
-  const iter = mapped.keyBy(f94553);
-  return iter.value();
+  const mapped = _modDef12.chain(arg0).map((contact_names) => {
+    if (null != contact_names.contact_names) {
+      if (contact_names.contact_names.length >= 2) {
+        contact_names = contact_names.contact_names;
+        const substr = contact_names.slice(0, 2);
+      }
+      const obj = {
+        key: contact_names.suggested_user.id,
+        name: null,
+        user: null,
+        mutualFriendsCount: null,
+        contactNames: null,
+      };
+      const firstResult = _modDef12.first(contact_names.reasons);
+      let name;
+      if (firstResult != null) {
+        name = firstResult.name;
+      }
+      obj.name = name;
+      const tmp9 = new UserRecord(contact_names.suggested_user);
+      obj.user = tmp9;
+      obj.mutualFriendsCount = contact_names.mutual_friends_count;
+      obj.contactNames = [];
+      return obj;
+    }
+  });
+  const chainResult = _modDef12.chain(arg0);
+  return mapped.keyBy((key) => key.key).value();
 };

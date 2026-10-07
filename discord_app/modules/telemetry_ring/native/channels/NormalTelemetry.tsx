@@ -1,21 +1,24 @@
 // discord_app/modules/telemetry_ring/native/channels/NormalTelemetry.tsx
 import TelemetryRingNative2 from "../TelemetryRingNative.android.tsx";
 import BaseTelemetryChannel from "BaseTelemetryChannel.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const TelemetryRingNative = TelemetryRingNative2;
 
-class NormalTelemetryImpl extends BaseTelemetryChannel {
+require = fn;
+class NormalTelemetryImpl extends tmp3 {
   constructor() {
-    const items = [];
-    const tmp2 = TelemetryRingNative;
-    items[0] = TelemetryRingNative2.TelemetryChannel.NORMAL;
-    const tmp3 = new tmp(tmp2, items, importDefault, new.target);
-    return tmp3;
+    tmp2 = closure_1(closure_2[1]);
+    items = [];
+    items[0] = closure_0(closure_2[1]).TelemetryChannel.NORMAL;
+    tmp1 = new tmp(tmp2, items, closure_1, new.target);
+    return tmp1;
   }
 }
-let items = [TelemetryRingNative2.TelemetryChannel.NORMAL];
-const importDefaultResult2 = new BaseTelemetryChannel(
+let items = [fn(1994).TelemetryChannel.NORMAL];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
+
+export default new BaseTelemetryChannel(
   TelemetryRingNative,
   items,
   tmp,
@@ -24,6 +27,3 @@ const importDefaultResult2 = new BaseTelemetryChannel(
   BaseTelemetryChannel,
   TelemetryRingNative,
 );
-const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
-
-export default importDefaultResult2;

@@ -1,72 +1,66 @@
 // discord_app/modules/channel_list_v2/native/items/UnknownChannel.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
-import ReadStateConstants from "../../../read_states/ReadStateConstants.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
-import RedesignChannelListConstants from "../RedesignChannelListConstants.tsx";
 import ChannelItemDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let channel;
-
-let obj2;
+require = fn;
 function handlePress() {
-  let intl;
-  const obj = {
-    key: "UNKNOWN_CHANNEL_UPDATE_DISCORD",
-    content: intl.string(intl2.t["/ZjyYE"]),
-    IconComponent: CircleInformationIcon.CircleInformationIcon,
-  };
-  const open = ToastActionCreatorsDefault.open;
-  ToastActionCreatorsDefault;
-  intl = intl2.intl;
-  open(obj);
+  const obj2 = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, IconComponent: null };
+  const intl = util.intl;
+  obj2.content = intl.string(util.t["/ZjyYE"]);
+  obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
+  ToastActionCreatorsDefault.open(obj2);
 }
-const CHANNEL_MARGIN_VERTICAL = RedesignChannelListConstants.CHANNEL_MARGIN_VERTICAL;
-const UnreadSetting = ReadStateConstants.UnreadSetting;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+const UnreadSetting = fn(5078).UnreadSetting;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = {
+  container: {
+    marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+    marginHorizontal: 8,
+    borderRadius: nativeDefault.radii.md,
+  },
+};
 let closure_6 = createStyles.createStyles(obj);
-const memo = react.memo;
-const memoResult = memo(
+const ReactCompilerGating = fn(558);
+let obj3 = {
+  marginVertical: fn(11711).CHANNEL_MARGIN_VERTICAL,
+  marginHorizontal: 8,
+  borderRadius: nativeDefault.radii.md,
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        let tmp10;
-        let tmp7;
-        let tmp8;
-        let obj = channel(576);
-        const cResult = obj.c(13);
+        const cResult = channel(576).c(13);
         channel = channel.channel;
         const selected = channel.selected;
         const tmp4 = closure_6();
         const tmp6 = useChannelNameDefault(channel);
         if (cResult[0] !== channel.id) {
           const fn = function t() {
-            const obj = openChannelLongPressActionSheet;
-            const result = obj.openChannelLongPressActionSheet(channel.id);
+            const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
           };
           cResult[0] = channel.id;
           cResult[1] = fn;
-          tmp7 = fn;
+          let tmp7 = fn;
         } else {
           tmp7 = cResult[1];
         }
-        const container = tmp4.container;
         if (cResult[2] !== tmp6) {
           const intl = tmp(1126).intl;
           const obj2 = { channelName: tmp6 };
-          const formatToPlainStringResult = intl.formatToPlainString(channel(1126).t.yjQ9P8, obj2);
+          const formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t.yjQ9P8, obj2);
           cResult[2] = tmp6;
           cResult[3] = formatToPlainStringResult;
-          tmp8 = formatToPlainStringResult;
+          let tmp8 = formatToPlainStringResult;
         } else {
           tmp8 = cResult[3];
         }
@@ -74,7 +68,7 @@ const memoResult = memo(
           const obj3 = { selected };
           cResult[4] = selected;
           cResult[5] = obj3;
-          tmp10 = obj3;
+          let tmp10 = obj3;
         } else {
           tmp10 = cResult[5];
         }
@@ -83,9 +77,8 @@ const memoResult = memo(
             if (cResult[8] === selected) {
               if (cResult[9] === tmp4.container) {
                 if (cResult[10] === tmp8) {
-                  let tmp11;
                   if (cResult[11] === tmp10) {
-                    tmp11 = cResult[12];
+                    let tmp11 = cResult[12];
                   }
                   return tmp11;
                 }
@@ -96,7 +89,7 @@ const memoResult = memo(
         const tmp12 = jsx(ChannelItemDefault, {
           onPress: handlePress,
           onLongPress: tmp7,
-          style: container,
+          style: tmp4.container,
           accessible: true,
           accessibilityLabel: tmp8,
           accessibilityState: tmp10,
@@ -112,34 +105,55 @@ const memoResult = memo(
         cResult[11] = tmp10;
         cResult[12] = tmp12;
         tmp11 = tmp12;
+        const obj = channel(576);
+        const obj4 = {
+          onPress: handlePress,
+          onLongPress: tmp7,
+          style: tmp4.container,
+          accessible: true,
+          accessibilityLabel: tmp8,
+          accessibilityState: tmp10,
+          channel,
+          selected,
+          resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
+        };
       }
     : (channel) => {
         channel = channel.channel;
         const selected = channel.selected;
         const items = [channel.id];
         const tmp = closure_6();
-        const tmp2 = useChannelNameDefault(channel);
-        const callback = react.useCallback(() => {
-          const obj = openChannelLongPressActionSheet;
-          const result = obj.openChannelLongPressActionSheet(channel.id);
+        const callback = noop.useCallback(() => {
+          const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
         }, items);
-        ChannelItemDefault;
+        const obj = {
+          onPress: handlePress,
+          onLongPress: callback,
+          style: tmp.container,
+          accessible: true,
+          accessibilityLabel: null,
+          accessibilityState: null,
+          channel: null,
+          selected: null,
+          resolvedUnreadSetting: null,
+        };
+        const tmp2 = useChannelNameDefault(channel);
         const intl = channel(1126).intl;
-        return (
-          <tmp4
-            onPress={handlePress}
-            onLongPress={callback}
-            style={tmp.container}
-            accessible
-            accessibilityLabel={intl.formatToPlainString(channel(1126).t.yjQ9P8, { channelName: tmp2 })}
-            accessibilityState={{ selected }}
-            channel={channel}
-            selected={selected}
-            resolvedUnreadSetting={UnreadSetting.ONLY_MENTIONS}
-          />
-        );
+        obj.accessibilityLabel = intl.formatToPlainString(channel(1126).t.yjQ9P8, { channelName: tmp2 });
+        obj.accessibilityState = { selected };
+        obj.channel = channel;
+        obj.selected = selected;
+        obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
+        return jsx(ChannelItemDefault, {
+          onPress: handlePress,
+          onLongPress: callback,
+          style: tmp.container,
+          accessible: true,
+          accessibilityLabel: null,
+          accessibilityState: null,
+          channel: null,
+          selected: null,
+          resolvedUnreadSetting: null,
+        });
       },
 );
-let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
-
-export default memoResult;

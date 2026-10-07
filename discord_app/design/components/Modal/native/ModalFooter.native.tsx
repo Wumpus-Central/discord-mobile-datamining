@@ -1,29 +1,26 @@
 // discord_app/design/components/Modal/native/ModalFooter.native.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../_runtime/00576_c.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let children;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_4 = createStyles.createStyles({
   footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 },
 });
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
+
+export const ModalFooter = ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       children = children.children;
       const tmp2 = closure_4();
       if (cResult[0] === children) {
-        let tmp3;
         if (cResult[1] === tmp2.footer) {
-          tmp3 = cResult[2];
+          let tmp3 = cResult[2];
         }
         return tmp3;
       }
@@ -34,6 +31,3 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = tmp4;
     }
   : (children) => <View style={closure_4().footer}>{children.children}</View>;
-const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
-
-export const ModalFooter = tmp3;

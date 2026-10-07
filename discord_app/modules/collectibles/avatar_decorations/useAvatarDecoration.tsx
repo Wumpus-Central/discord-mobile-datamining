@@ -1,12 +1,11 @@
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecoration.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
+const require = fn;
+const ReactCompilerGating = fn(558);
 function getAvatarDecoration(user, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
@@ -34,30 +33,26 @@ function getAvatarDecoration(user, guildId) {
   }
   return avatarDecoration;
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
+
+export const useAvatarDecoration = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let first;
       _require = arg0;
       dependencyMap = arg1;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      const tmp = _require;
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [GuildMemberStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg1) {
-        let tmp6;
         if (cResult[2] === arg0) {
-          tmp6 = cResult[3];
+          let tmp6 = cResult[3];
         }
-        const tmpResult = tmp(573);
-        return tmpResult.useStateFromStores(first, tmp6);
+        return tmp(573).useStateFromStores(first, tmp6);
       }
       const fn = function u() {
         const items = [GuildMemberStore];
@@ -86,15 +81,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = arg0;
       cResult[3] = fn;
       tmp6 = fn;
+      const obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
       _require = arg0;
       dependencyMap = arg1;
       let items = [GuildMemberStore];
-      const obj = require("useStateFromStores");
-      return obj.useStateFromStores(items, () => {
+      return require("useStateFromStores").useStateFromStores(items, () => {
         const items = [GuildMemberStore];
         const first = _slicedToArray(items, 1)[0];
         let member = null;
@@ -118,7 +112,4 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return avatarDecoration;
       });
     };
-const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
-
-export const useAvatarDecoration = tmp2;
 export { getAvatarDecoration };

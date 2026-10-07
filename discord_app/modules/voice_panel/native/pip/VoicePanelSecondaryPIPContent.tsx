@@ -1,25 +1,18 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../activities/Constants.tsx";
-import ActivityPanelConstants from "../../../activities/panel/ActivityPanelConstants.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
 import getActivityContainerPIPStylesSpecDefault from "../../../activities/panel/native/pip/getActivityContainerPIPStylesSpec.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
-import FramesConstants from "../../../frames/FramesConstants.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let c10;
-let c9;
-let unpackModuleId;
-const ActivityLayoutMode = Constants.ActivityLayoutMode;
-const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
-({ asLaunched: c9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: unpackModuleId } = FramesConstants);
-const jsx = Fragment.jsx;
+const require = fn;
+const ActivityLayoutMode = fn(2011).ActivityLayoutMode;
+const ActivityPanelModes = fn(9001).ActivityPanelModes;
+const FramesConstants = fn(8738);
+({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_13 = createStyles.createStyles({
   activityContainer: { flex: 1 },
   wrapper: { position: "absolute", left: "50%", top: "50%" },
@@ -36,37 +29,23 @@ const __initData3 = {
 const __initData4 = {
   code: "function VoicePanelSecondaryPIPContentTsx4(){const{pipState,getActivityContainerPipStylesSpec,activePipOrientationLockState,windowDimensions}=this.__closure;const scale_0=pipState.scale.get();const{width:width_0,height:height_0,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width*scale_0,pipHeight:pipState.height*scale_0,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width_0,height:height_0,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};}",
 };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let connectedEmbeddedActivity;
-      let connectedEmbeddedActivityChannelId;
-      let framePanelMode;
-      let framePipOrientationLockState;
-      let mainFrame;
-      let pIPState;
-      let panelMode;
-      let pipOrientationLockState;
-      let tmp11;
-      let tmp12;
-      let tmp15;
-      let tmp7;
-      let tmp8;
-      let windowDimensions;
-      let tmp = windowDimensions;
-      let tmp2 = connectedEmbeddedActivityChannelId;
-      let obj = windowDimensions(connectedEmbeddedActivityChannelId[10]);
-      const cResult = obj.c(23);
+      let PIP = windowDimensions;
+      const cResult = windowDimensions(connectedEmbeddedActivityChannelId[10]).c(23);
       windowDimensions = pipOrientationLockState.useContext(
         pIPState(connectedEmbeddedActivityChannelId[11]),
       ).windowDimensions;
-      let obj2 = windowDimensions(connectedEmbeddedActivityChannelId[12]);
-      pIPState = obj2.usePIPState();
-      const tmp6 = closure_13();
+      let obj = windowDimensions(connectedEmbeddedActivityChannelId[10]);
+      pIPState = windowDimensions(connectedEmbeddedActivityChannelId[12]).usePIPState();
+      const tmp5 = closure_13();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmbeddedActivitiesStore];
         const fn = function w() {
-          let obj3;
-          let pipOrientationLockStateForApp;
           const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
           const selfEmbeddedActivityForLocation =
             EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
@@ -75,27 +54,30 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             applicationId = selfEmbeddedActivityForLocation.applicationId;
           }
           const obj2 = {
-            connectedEmbeddedActivityChannelId: obj3.getEmbeddedActivityLocationChannelId(connectedActivityLocation),
+            connectedEmbeddedActivityChannelId: windowDimensions(
+              connectedEmbeddedActivityChannelId[13],
+            ).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
             connectedEmbeddedActivity: selfEmbeddedActivityForLocation,
-            pipOrientationLockState: pipOrientationLockStateForApp,
-            panelMode: EmbeddedActivitiesStore.getActivityPanelMode(),
+            pipOrientationLockState: null,
+            panelMode: null,
           };
-          pipOrientationLockStateForApp = undefined;
-          obj3 = windowDimensions(connectedEmbeddedActivityChannelId[13]);
+          let pipOrientationLockStateForApp;
           if (null != applicationId) {
             pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(applicationId);
           }
+          obj2.pipOrientationLockState = pipOrientationLockStateForApp;
+          obj2.panelMode = EmbeddedActivitiesStore.getActivityPanelMode();
           return obj2;
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp7 = items;
-        tmp8 = fn;
+        tmp6 = items;
+        tmp7 = fn;
       } else {
-        [tmp7, tmp8] = cResult;
+        [tmp6, tmp7] = cResult;
       }
-      const tmpResult = tmp(tmp2[14]);
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp7, tmp8);
+      let obj2 = windowDimensions(connectedEmbeddedActivityChannelId[12]);
+      const stateFromStoresObject = PIP(connectedEmbeddedActivityChannelId[14]).useStateFromStoresObject(tmp6, tmp7);
       connectedEmbeddedActivityChannelId = stateFromStoresObject.connectedEmbeddedActivityChannelId;
       pipOrientationLockState = stateFromStoresObject.pipOrientationLockState;
       ({ connectedEmbeddedActivity, panelMode } = stateFromStoresObject);
@@ -103,96 +85,90 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [FramesStore];
         class T {
           constructor() {
-            let activityPanelMode;
-            const tmp = closure_1_9(mainFrame.getMainFrame());
-            let id;
+            tmp = closure_1_9(closure_1_5.getMainFrame());
+            id = undefined;
             if (tmp != null) {
               id = tmp.id;
             }
-            const obj = {
-              mainFrameId: id,
-              framePanelMode: activityPanelMode,
-              framePipOrientationLockState: closure_1_11(tmp),
-            };
+            obj = { mainFrameId: id, framePanelMode: null, framePipOrientationLockState: null };
             activityPanelMode = undefined;
             if (tmp != null) {
               activityPanelMode = tmp.data.activityPanelMode;
             }
             if (activityPanelMode == null) {
-              activityPanelMode = constants.DISCONNECTED;
+              tmp4 = closure_1_8;
+              activityPanelMode = closure_1_8.DISCONNECTED;
             }
+            obj.framePanelMode = activityPanelMode;
+            obj.framePipOrientationLockState = closure_1_11(tmp);
             return obj;
           }
         }
         cResult[2] = items1;
         cResult[3] = T;
-        tmp12 = T;
-        tmp11 = items1;
+        let tmp11 = T;
+        let tmp10 = items1;
       } else {
-        tmp11 = cResult[2];
-        tmp12 = cResult[3];
+        tmp10 = cResult[2];
+        tmp11 = cResult[3];
       }
-      const tmpResult5 = tmp(tmp2[14]);
-      const stateFromStoresObject1 = tmpResult5.useStateFromStoresObject(tmp11, tmp12);
+      const PIPResult = PIP(connectedEmbeddedActivityChannelId[14]);
+      const stateFromStoresObject1 = PIP(connectedEmbeddedActivityChannelId[14]).useStateFromStoresObject(tmp10, tmp11);
       const mainFrameId = stateFromStoresObject1.mainFrameId;
       ({ framePanelMode, framePipOrientationLockState } = stateFromStoresObject1);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ChannelStore];
         class T {
           constructor() {
-            let activityPanelMode;
-            const tmp = closure_1_9(mainFrame.getMainFrame());
-            let id;
+            tmp = closure_1_9(closure_1_5.getMainFrame());
+            id = undefined;
             if (tmp != null) {
               id = tmp.id;
             }
-            const obj = {
-              mainFrameId: id,
-              framePanelMode: activityPanelMode,
-              framePipOrientationLockState: closure_1_11(tmp),
-            };
+            obj = { mainFrameId: id, framePanelMode: null, framePipOrientationLockState: null };
             activityPanelMode = undefined;
             if (tmp != null) {
               activityPanelMode = tmp.data.activityPanelMode;
             }
             if (activityPanelMode == null) {
-              activityPanelMode = constants.DISCONNECTED;
+              tmp4 = closure_1_8;
+              activityPanelMode = closure_1_8.DISCONNECTED;
             }
+            obj.framePanelMode = activityPanelMode;
+            obj.framePipOrientationLockState = closure_1_11(tmp);
             return obj;
           }
         }
         cResult[4] = items2;
-        tmp15 = items2;
+        let tmp14 = items2;
       } else {
-        tmp15 = cResult[4];
+        tmp14 = cResult[4];
       }
       if (cResult[5] !== connectedEmbeddedActivityChannelId) {
         class E {
           constructor() {
-            return ChannelStore.getChannel(connectedEmbeddedActivityChannelId);
+            return closure_6.getChannel(closure_2);
           }
         }
         cResult[5] = connectedEmbeddedActivityChannelId;
         class T {
           constructor() {
-            let activityPanelMode;
-            const tmp = closure_1_9(mainFrame.getMainFrame());
-            let id;
+            tmp = closure_1_9(closure_1_5.getMainFrame());
+            id = undefined;
             if (tmp != null) {
               id = tmp.id;
             }
-            const obj = {
-              mainFrameId: id,
-              framePanelMode: activityPanelMode,
-              framePipOrientationLockState: closure_1_11(tmp),
-            };
+            obj = { mainFrameId: id, framePanelMode: null, framePipOrientationLockState: null };
             activityPanelMode = undefined;
             if (tmp != null) {
               activityPanelMode = tmp.data.activityPanelMode;
             }
             if (activityPanelMode == null) {
-              activityPanelMode = constants.DISCONNECTED;
+              tmp4 = closure_1_8;
+              activityPanelMode = closure_1_8.DISCONNECTED;
             }
+            obj.framePanelMode = activityPanelMode;
+            obj.framePipOrientationLockState = closure_1_11(tmp);
             return obj;
           }
         }
@@ -200,18 +176,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class E {
           constructor() {
-            return ChannelStore.getChannel(connectedEmbeddedActivityChannelId);
+            return closure_6.getChannel(closure_2);
           }
         }
       }
-      const tmpResult6 = tmp(tmp2[14]);
-      const stateFromStores = tmpResult6.useStateFromStores(tmp15, E);
+      const PIPResult1 = PIP(connectedEmbeddedActivityChannelId[14]);
+      const stateFromStores = PIP(connectedEmbeddedActivityChannelId[14]).useStateFromStores(tmp14, E);
+      const PIPResult2 = PIP(connectedEmbeddedActivityChannelId[14]);
       const fn2 = function z() {
         const scale = pIPState.scale;
-        const value = scale.get();
+        value = scale.get();
         const result = pIPState.width * value;
         const result1 = pIPState.height * value;
-        size = {
+        const size = {
           width: result,
           height: result1,
           marginLeft: -1 * roundToNearestPixelDefault(result / 2),
@@ -219,211 +196,302 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         return size;
       };
-      const tmpResult7 = tmp(tmp2[15]);
-      let obj3 = { pipState: pIPState, roundToNearestPixel: tmp4(tmp2[16]) };
-      fn2.__closure = obj3;
+      const PIPResult3 = PIP(connectedEmbeddedActivityChannelId[15]);
+      fn2.__closure = { pipState: pIPState, roundToNearestPixel: pIPState(connectedEmbeddedActivityChannelId[16]) };
       fn2.__workletHash = 12892763508939;
       fn2.__initData = __initData;
-      const animatedStyle = tmpResult7.useAnimatedStyle(fn2);
-      let tmp20 = null != connectedEmbeddedActivity && !tmp4(tmp2[17])(connectedEmbeddedActivityChannelId);
+      const animatedStyle = PIPResult3.useAnimatedStyle(fn2);
+      let tmp19 = null != connectedEmbeddedActivity && !tmp3(tmp[17])(connectedEmbeddedActivityChannelId);
+      if (tmp19) {
+        class E {
+          constructor() {
+            return closure_6.getChannel(closure_2);
+          }
+        }
+        tmp19 = panelMode === ActivityPanelModes.PIP;
+      }
+      let tmp20 = null != mainFrameId;
       if (tmp20) {
         class E {
           constructor() {
-            return ChannelStore.getChannel(connectedEmbeddedActivityChannelId);
+            return closure_6.getChannel(closure_2);
           }
         }
-        tmp20 = panelMode === ActivityPanelModes.PIP;
+        tmp20 = framePanelMode === ActivityPanelModes.PIP;
       }
-      let tmp21 = null != mainFrameId;
-      if (tmp21) {
+      if (tmp20) {
         class E {
           constructor() {
-            return ChannelStore.getChannel(connectedEmbeddedActivityChannelId);
-          }
-        }
-        tmp21 = framePanelMode === ActivityPanelModes.PIP;
-      }
-      if (tmp21) {
-        class E {
-          constructor() {
-            return ChannelStore.getChannel(connectedEmbeddedActivityChannelId);
+            return closure_6.getChannel(closure_2);
           }
         }
       }
+      const obj3 = { pipState: pIPState, roundToNearestPixel: pIPState(connectedEmbeddedActivityChannelId[16]) };
       const fn3 = function j() {
-        let str;
-        let str2;
         const scale = pIPState.scale;
-        const value = scale.get();
+        value = scale.get();
         const obj = {
           pipWidth: pIPState.width * value,
           pipHeight: pIPState.height * value,
           pipOrientationLockState,
           isLandscape: windowDimensions.get().landscape,
         };
-        const tmp2 = getActivityContainerPIPStylesSpecDefault;
-        size = tmp2(obj);
+        const size = getActivityContainerPIPStylesSpecDefault(obj);
         const size1 = {
           width: size.width,
           height: size.height,
-          left: str2,
-          top: str,
+          left: null,
+          top: null,
           marginLeft: null,
           marginTop: null,
         };
-        str = "0%";
-        str2 = "0%";
-        const shouldVerticallyCenter = size.shouldVerticallyCenter;
+        let str = "0%";
+        let str2 = "0%";
         if (size.shouldHorizontallyCenter) {
           str2 = "50%";
         }
-        if (shouldVerticallyCenter) {
+        size1.left = str2;
+        if (size.shouldVerticallyCenter) {
           str = "50%";
         }
+        size1.top = str;
         ({ marginLeft: obj2.marginLeft, marginTop: obj2.marginTop } = size);
         return size1;
       };
-      const tmpResult8 = tmp(tmp2[15]);
+      const PIPResult4 = PIP(connectedEmbeddedActivityChannelId[15]);
       fn3.__closure = {
         pipState: pIPState,
-        getActivityContainerPipStylesSpec: pIPState(tmp2[18]),
+        getActivityContainerPipStylesSpec: pIPState(connectedEmbeddedActivityChannelId[18]),
         activePipOrientationLockState: pipOrientationLockState,
         windowDimensions,
       };
       fn3.__workletHash = 10060457878293;
       fn3.__initData = __initData2;
-      ({
-        pipState: pIPState,
-        getActivityContainerPipStylesSpec: pIPState(tmp2[18]),
-        activePipOrientationLockState: pipOrientationLockState,
-        windowDimensions,
-      });
-      const animatedStyle1 = tmpResult8.useAnimatedStyle(fn3);
-      if (tmp20) {
+      const animatedStyle1 = PIPResult4.useAnimatedStyle(fn3);
+      if (!tmp19) {
         class E {
           constructor() {
-            return ChannelStore.getChannel(connectedEmbeddedActivityChannelId);
+            return closure_6.getChannel(closure_2);
           }
         }
-        const items3 = [tmp6.wrapper];
+        if (!tmp20) {
+          class E {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
+          }
+        }
+      }
+      if (cResult[7] === tmp5.wrapper) {
+        class E {
+          constructor() {
+            return closure_6.getChannel(closure_2);
+          }
+        }
+        if (cResult[10] === animatedStyle1) {
+          class E {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
+          }
+          if (cResult[13] === stateFromStores) {
+            class E {
+              constructor() {
+                return closure_6.getChannel(closure_2);
+              }
+            }
+          }
+          if (!tmp20) {
+            class E {
+              constructor() {
+                return closure_6.getChannel(closure_2);
+              }
+            }
+            const obj5 = { channel: stateFromStores, layoutMode: null };
+            class T {
+              constructor() {
+                tmp = closure_1_9(closure_1_5.getMainFrame());
+                id = undefined;
+                if (tmp != null) {
+                  id = tmp.id;
+                }
+                obj = { mainFrameId: id, framePanelMode: null, framePipOrientationLockState: null };
+                activityPanelMode = undefined;
+                if (tmp != null) {
+                  activityPanelMode = tmp.data.activityPanelMode;
+                }
+                if (activityPanelMode == null) {
+                  tmp4 = closure_1_8;
+                  activityPanelMode = closure_1_8.DISCONNECTED;
+                }
+                obj.framePanelMode = activityPanelMode;
+                obj.framePipOrientationLockState = closure_1_11(tmp);
+                return obj;
+              }
+            }
+            obj5.layoutMode = ActivityLayoutMode.PIP;
+            let tmp23 = jsx(tmp3(tmp[21]), { channel: stateFromStores, layoutMode: null });
+            cResult[13] = stateFromStores;
+            cResult[14] = tmp20;
+            cResult[15] = mainFrameId;
+            cResult[16] = tmp23;
+          } else {
+            class E {
+              constructor() {
+                return closure_6.getChannel(closure_2);
+              }
+            }
+          }
+          class T {
+            constructor() {
+              tmp = closure_1_9(closure_1_5.getMainFrame());
+              id = undefined;
+              if (tmp != null) {
+                id = tmp.id;
+              }
+              obj = { mainFrameId: id, framePanelMode: null, framePipOrientationLockState: null };
+              activityPanelMode = undefined;
+              if (tmp != null) {
+                activityPanelMode = tmp.data.activityPanelMode;
+              }
+              if (activityPanelMode == null) {
+                tmp4 = closure_1_8;
+                activityPanelMode = closure_1_8.DISCONNECTED;
+              }
+              obj.framePanelMode = activityPanelMode;
+              obj.framePipOrientationLockState = closure_1_11(tmp);
+              return obj;
+            }
+          }
+          const obj6 = {
+            frameId: mainFrameId,
+            level: PIP(tmp[20]).FrameStackLevel.AboveAppContent,
+            presentation: null,
+          };
+          const obj7 = { layoutMode: null };
+          PIP = constants.PIP;
+          obj7.layoutMode = PIP;
+          obj6.presentation = obj7;
+          tmp23 = jsx(tmp3(tmp[19]), {
+            frameId: mainFrameId,
+            level: PIP(tmp[20]).FrameStackLevel.AboveAppContent,
+            presentation: null,
+          });
+          const tmp3Result = tmp3(tmp[19]);
+        }
+        const items3 = [,];
         class T {
           constructor() {
-            let activityPanelMode;
-            const tmp = closure_1_9(mainFrame.getMainFrame());
-            let id;
+            tmp = closure_1_9(closure_1_5.getMainFrame());
+            id = undefined;
             if (tmp != null) {
               id = tmp.id;
             }
-            const obj = {
-              mainFrameId: id,
-              framePanelMode: activityPanelMode,
-              framePipOrientationLockState: closure_1_11(tmp),
-            };
+            obj = { mainFrameId: id, framePanelMode: null, framePipOrientationLockState: null };
             activityPanelMode = undefined;
             if (tmp != null) {
               activityPanelMode = tmp.data.activityPanelMode;
             }
             if (activityPanelMode == null) {
-              activityPanelMode = constants.DISCONNECTED;
+              tmp4 = closure_1_8;
+              activityPanelMode = closure_1_8.DISCONNECTED;
             }
+            obj.framePanelMode = activityPanelMode;
+            obj.framePipOrientationLockState = closure_1_11(tmp);
             return obj;
           }
         }
-        cResult[7] = tmp6.wrapper;
-        cResult[8] = animatedStyle;
-        cResult[9] = items3;
-      } else {
-        class E {
-          constructor() {
-            return ChannelStore.getChannel(connectedEmbeddedActivityChannelId);
-          }
-        }
+        items3[1] = animatedStyle1;
+        cResult[10] = animatedStyle1;
+        cResult[11] = tmp5.activityContainer;
+        cResult[12] = items3;
       }
-      return tmp23;
+      const items4 = [tmp5.wrapper, animatedStyle];
+      cResult[7] = tmp5.wrapper;
+      cResult[8] = animatedStyle;
+      cResult[9] = items4;
+      const obj4 = {
+        pipState: pIPState,
+        getActivityContainerPipStylesSpec: pIPState(connectedEmbeddedActivityChannelId[18]),
+        activePipOrientationLockState: pipOrientationLockState,
+        windowDimensions,
+      };
     }
   : () => {
-      let connectedEmbeddedActivity;
-      let connectedEmbeddedActivityChannelId;
-      let framePanelMode;
-      let framePipOrientationLockState;
-      let items3;
-      let items4;
-      let mainFrame;
-      let mainFrameId;
-      let pIPState;
-      let panelMode;
-      let pipOrientationLockState;
-      let tmp17Result2;
       let tmp = pIPState;
-      let tmp2 = connectedEmbeddedActivityChannelId;
+      let obj = connectedEmbeddedActivityChannelId;
       const windowDimensions = pipOrientationLockState.useContext(
         pIPState(connectedEmbeddedActivityChannelId[11]),
       ).windowDimensions;
-      let obj = windowDimensions(connectedEmbeddedActivityChannelId[12]);
-      pIPState = obj.usePIPState();
-      const tmp5 = closure_13();
-      let obj2 = windowDimensions(connectedEmbeddedActivityChannelId[14]);
+      pIPState = windowDimensions(connectedEmbeddedActivityChannelId[12]).usePIPState();
+      const tmp4 = closure_13();
+      let obj2 = windowDimensions(connectedEmbeddedActivityChannelId[12]);
       const items = [EmbeddedActivitiesStore];
-      const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
-        let obj3;
-        let pipOrientationLockStateForApp;
-        const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-        const selfEmbeddedActivityForLocation =
-          EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-        let applicationId;
-        if (selfEmbeddedActivityForLocation != null) {
-          applicationId = selfEmbeddedActivityForLocation.applicationId;
-        }
-        const obj2 = {
-          connectedEmbeddedActivityChannelId: obj3.getEmbeddedActivityLocationChannelId(connectedActivityLocation),
-          connectedEmbeddedActivity: selfEmbeddedActivityForLocation,
-          pipOrientationLockState: pipOrientationLockStateForApp,
-          panelMode: EmbeddedActivitiesStore.getActivityPanelMode(),
-        };
-        pipOrientationLockStateForApp = undefined;
-        obj3 = windowDimensions(connectedEmbeddedActivityChannelId[13]);
-        if (null != applicationId) {
-          pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(applicationId);
-        }
-        return obj2;
-      });
+      const stateFromStoresObject = windowDimensions(connectedEmbeddedActivityChannelId[14]).useStateFromStoresObject(
+        items,
+        () => {
+          const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
+          const selfEmbeddedActivityForLocation =
+            EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+          let applicationId;
+          if (selfEmbeddedActivityForLocation != null) {
+            applicationId = selfEmbeddedActivityForLocation.applicationId;
+          }
+          const obj2 = {
+            connectedEmbeddedActivityChannelId: windowDimensions(
+              connectedEmbeddedActivityChannelId[13],
+            ).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
+            connectedEmbeddedActivity: selfEmbeddedActivityForLocation,
+            pipOrientationLockState: null,
+            panelMode: null,
+          };
+          let pipOrientationLockStateForApp;
+          if (null != applicationId) {
+            pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(applicationId);
+          }
+          obj2.pipOrientationLockState = pipOrientationLockStateForApp;
+          obj2.panelMode = EmbeddedActivitiesStore.getActivityPanelMode();
+          return obj2;
+        },
+      );
       connectedEmbeddedActivityChannelId = stateFromStoresObject.connectedEmbeddedActivityChannelId;
       ({ pipOrientationLockState, connectedEmbeddedActivity, panelMode } = stateFromStoresObject);
-      let obj3 = windowDimensions(connectedEmbeddedActivityChannelId[14]);
+      const obj3 = windowDimensions(connectedEmbeddedActivityChannelId[14]);
       const items1 = [FramesStore];
-      const stateFromStoresObject1 = obj3.useStateFromStoresObject(items1, () => {
-        let activityPanelMode;
-        const tmp = closure_1_9(mainFrame.getMainFrame());
-        let id;
-        if (tmp != null) {
-          id = tmp.id;
-        }
-        const obj = {
-          mainFrameId: id,
-          framePanelMode: activityPanelMode,
-          framePipOrientationLockState: closure_1_11(tmp),
-        };
-        activityPanelMode = undefined;
-        if (tmp != null) {
-          activityPanelMode = tmp.data.activityPanelMode;
-        }
-        if (activityPanelMode == null) {
-          activityPanelMode = constants.DISCONNECTED;
-        }
-        return obj;
-      });
+      const stateFromStoresObject1 = windowDimensions(connectedEmbeddedActivityChannelId[14]).useStateFromStoresObject(
+        items1,
+        () => {
+          const tmp = closure_1_9(mainFrame.getMainFrame());
+          let id;
+          if (tmp != null) {
+            id = tmp.id;
+          }
+          const obj = { mainFrameId: id, framePanelMode: null, framePipOrientationLockState: null };
+          let activityPanelMode;
+          if (tmp != null) {
+            activityPanelMode = tmp.data.activityPanelMode;
+          }
+          if (activityPanelMode == null) {
+            activityPanelMode = constants.DISCONNECTED;
+          }
+          obj.framePanelMode = activityPanelMode;
+          obj.framePipOrientationLockState = closure_1_11(tmp);
+          return obj;
+        },
+      );
       ({ mainFrameId, framePanelMode, framePipOrientationLockState } = stateFromStoresObject1);
-      const items2 = [ChannelStore];
       const obj4 = windowDimensions(connectedEmbeddedActivityChannelId[14]);
-      const stateFromStores = obj4.useStateFromStores(items2, () =>
+      const items2 = [ChannelStore];
+      const stateFromStores = windowDimensions(connectedEmbeddedActivityChannelId[14]).useStateFromStores(items2, () =>
         ChannelStore.getChannel(connectedEmbeddedActivityChannelId),
       );
+      const obj5 = windowDimensions(connectedEmbeddedActivityChannelId[14]);
       const fn = function s() {
         const scale = pIPState.scale;
-        const value = scale.get();
+        value = scale.get();
         const result = pIPState.width * value;
         const result1 = pIPState.height * value;
-        size = {
+        const size = {
           width: result,
           height: result1,
           marginLeft: -1 * roundToNearestPixelDefault(result / 2),
@@ -431,100 +499,106 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         return size;
       };
-      const obj5 = windowDimensions(connectedEmbeddedActivityChannelId[15]);
+      const obj6 = windowDimensions(connectedEmbeddedActivityChannelId[15]);
       fn.__closure = { pipState: pIPState, roundToNearestPixel: pIPState(connectedEmbeddedActivityChannelId[16]) };
       fn.__workletHash = 14750544060809;
       fn.__initData = __initData3;
-      let tmp10 = null != connectedEmbeddedActivity;
-      ({ pipState: pIPState, roundToNearestPixel: pIPState(connectedEmbeddedActivityChannelId[16]) });
-      const animatedStyle = obj5.useAnimatedStyle(fn);
-      if (tmp10) {
-        tmp10 = !tmp(tmp2[17])(connectedEmbeddedActivityChannelId);
+      let tmp9 = null != connectedEmbeddedActivity;
+      const animatedStyle = obj6.useAnimatedStyle(fn);
+      if (tmp9) {
+        tmp9 = !tmp(obj[17])(connectedEmbeddedActivityChannelId);
       }
-      if (tmp10) {
-        tmp10 = panelMode === ActivityPanelModes.PIP;
+      if (tmp9) {
+        tmp9 = panelMode === ActivityPanelModes.PIP;
       }
-      if (null != mainFrameId && framePanelMode === ActivityPanelModes.PIP) {
+      let tmp11 = null != mainFrameId;
+      if (tmp11) {
+        tmp11 = framePanelMode === ActivityPanelModes.PIP;
+      }
+      if (tmp11) {
         pipOrientationLockState = framePipOrientationLockState;
       }
-      windowDimensions(tmp2[15]);
+      const obj7 = { pipState: pIPState, roundToNearestPixel: pIPState(connectedEmbeddedActivityChannelId[16]) };
       const fn2 = function v() {
-        let str;
-        let str2;
         const scale = pIPState.scale;
-        const value = scale.get();
+        value = scale.get();
         const obj = {
           pipWidth: pIPState.width * value,
           pipHeight: pIPState.height * value,
           pipOrientationLockState,
           isLandscape: windowDimensions.get().landscape,
         };
-        const tmp2 = getActivityContainerPIPStylesSpecDefault;
-        size = tmp2(obj);
+        const size = getActivityContainerPIPStylesSpecDefault(obj);
         const size1 = {
           width: size.width,
           height: size.height,
-          left: str2,
-          top: str,
+          left: null,
+          top: null,
           marginLeft: null,
           marginTop: null,
         };
-        str = "0%";
-        str2 = "0%";
-        const shouldVerticallyCenter = size.shouldVerticallyCenter;
+        let str = "0%";
+        let str2 = "0%";
         if (size.shouldHorizontallyCenter) {
           str2 = "50%";
         }
-        if (shouldVerticallyCenter) {
+        size1.left = str2;
+        if (size.shouldVerticallyCenter) {
           str = "50%";
         }
+        size1.top = str;
         ({ marginLeft: obj2.marginLeft, marginTop: obj2.marginTop } = size);
         return size1;
       };
+      const tmp2Result = windowDimensions(obj[15]);
       fn2.__closure = {
         pipState: pIPState,
-        getActivityContainerPipStylesSpec: tmp(tmp2[18]),
+        getActivityContainerPipStylesSpec: tmp(obj[18]),
         activePipOrientationLockState: pipOrientationLockState,
         windowDimensions,
       };
       fn2.__workletHash = 3704190236691;
       fn2.__initData = __initData4;
-      ({
+      const animatedStyle1 = tmp2Result.useAnimatedStyle(fn2);
+      if (!tmp9) {
+        if (!tmp11) {
+          return null;
+        }
+      }
+      const obj9 = { style: null, pointerEvents: "none", children: null };
+      const items3 = [tmp4.wrapper, animatedStyle];
+      obj9.style = items3;
+      const obj8 = {
         pipState: pIPState,
-        getActivityContainerPipStylesSpec: tmp(tmp2[18]),
+        getActivityContainerPipStylesSpec: tmp(obj[18]),
         activePipOrientationLockState: pipOrientationLockState,
         windowDimensions,
-      });
-      if (tmp10) {
-        const obj8 = { style: items3, pointerEvents: "none", children: null };
-        items3 = [tmp5.wrapper, animatedStyle];
-        const obj9 = { style: items4, children: null };
-        items4 = [tmp5.activityContainer, tmp15];
-        tmp(tmp2[22]);
-        if (null != mainFrameId && framePanelMode === ActivityPanelModes.PIP) {
-          let tmp17Result;
-          if (null != mainFrameId) {
-            tmp(tmp2[19]);
-            const obj11 = { layoutMode: constants.PIP };
-            tmp17Result = (
-              <tmpResult2
-                frameId={mainFrameId}
-                level={windowDimensions(tmp2[20]).FrameStackLevel.AboveAppContent}
-                presentation={obj11}
-              />
-            );
-          }
-          obj9.children = tmp17Result;
-          obj8.children = <tmp19 {...obj9} />;
-          tmp17Result2 = <tmpResult {...obj8} />;
-        }
-        tmp17Result = jsx(tmp(tmp2[21]), { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP });
-      } else {
-        tmp17Result2 = null;
+      };
+      let obj10 = { style: null, children: null };
+      const items4 = [tmp4.activityContainer, animatedStyle1];
+      obj10.style = items4;
+      if (!tmp11) {
+        const obj11 = { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP };
+        let tmp15Result = jsx(tmp(obj[21]), { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP });
+        obj10.children = tmp15Result;
+        obj10 = <tmp17 {...obj10} />;
+        obj9.children = obj10;
+        <tmpResult {...obj9} />;
       }
-      return tmp17Result2;
+      tmp = tmp(obj[19]);
+      const obj12 = {
+        frameId: mainFrameId,
+        level: windowDimensions(obj[20]).FrameStackLevel.AboveAppContent,
+        presentation: null,
+      };
+      obj = { layoutMode: constants.PIP };
+      obj12.presentation = obj;
+      tmp15Result = (
+        <tmp
+          frameId={mainFrameId}
+          level={windowDimensions(obj[20]).FrameStackLevel.AboveAppContent}
+          presentation={null}
+        />
+      );
+      const tmpResult = tmp(obj[22]);
     };
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx");
-
-export default tmp3;

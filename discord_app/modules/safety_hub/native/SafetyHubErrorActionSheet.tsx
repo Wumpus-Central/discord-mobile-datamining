@@ -1,41 +1,34 @@
 // discord_app/modules/safety_hub/native/SafetyHubErrorActionSheet.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../../intl/index.native.tsx";
-import CircleXIcon2 from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import util from "../../../intl/index.native.tsx";
+import CircleXIcon from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SafetyHubActionCreatorsAll from "../SafetyHubActionCreators.tsx";
 import useSafetyHubLoadingDefault from "../hooks/useSafetyHubLoading.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let BottomSheet;
-
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let size;
-const View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { errorContainer: obj2, redesignErrorIconContainer: size, redesignErrorIcon: { height: 50, width: 50 } };
-obj2 = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  paddingTop: nativeDefault.space.PX_8,
-  paddingBottom: nativeDefault.space.PX_24,
-  gap: nativeDefault.space.PX_16,
-  minHeight: 120,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  errorContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: nativeDefault.space.PX_8,
+    paddingBottom: nativeDefault.space.PX_24,
+    gap: nativeDefault.space.PX_16,
+    minHeight: 120,
+  },
+  redesignErrorIconContainer: null,
+  redesignErrorIcon: null,
 };
-createStyles = createStyles.createStyles;
-size = {
+let size = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -44,25 +37,32 @@ size = {
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.WHITE,
 };
-let closure_7 = createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.redesignErrorIconContainer = size;
+obj2.redesignErrorIcon = { height: 50, width: 50 };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_24,
+  gap: nativeDefault.space.PX_16,
+  minHeight: 120,
+};
+size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let intl;
-      let items2;
-      let items3;
-      let items4;
-      let tmp7;
-      let tmp8;
-      let tmp9;
-      let obj = react2;
-      const cResult = obj.c(20);
+      const cResult = c.c(20);
       const tmp4 = closure_7();
       const tmp6 = useSafetyHubLoadingDefault();
       if (cResult[0] !== tmp4.errorContainer) {
         const items = [tmp4.errorContainer];
         cResult[0] = tmp4.errorContainer;
         cResult[1] = items;
-        tmp7 = items;
+        let tmp7 = items;
       } else {
         tmp7 = cResult[1];
       }
@@ -70,7 +70,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [tmp4.redesignErrorIconContainer];
         cResult[2] = tmp4.redesignErrorIconContainer;
         cResult[3] = items1;
-        tmp8 = items1;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[3];
       }
@@ -78,54 +78,47 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           size: "custom",
           color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
-          style: items2,
+          style: null,
         };
-        const CircleXIcon = CircleXIcon2.CircleXIcon;
-        items2 = [tmp4.redesignErrorIcon];
-        const tmp11 = hasOwnProperty(CircleXIcon, obj2);
+        const items2 = [tmp4.redesignErrorIcon];
+        obj2.style = items2;
+        const tmp11 = hasOwnProperty(CircleXIcon.CircleXIcon, obj2);
         cResult[4] = tmp4.redesignErrorIcon;
         cResult[5] = tmp11;
-        tmp9 = tmp11;
+        let tmp9 = tmp11;
       } else {
         tmp9 = cResult[5];
       }
       if (cResult[6] === tmp8) {
-        let tmp12;
-        let tmp15;
         if (cResult[7] === tmp9) {
-          tmp12 = cResult[8];
+          let tmp12 = cResult[8];
         }
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { variant: "heading-lg/normal", children: intl.string(intl3.t.TDRvqs) };
-          const Text = Text_Text.Text;
-          intl = intl3.intl;
-          const tmp17 = hasOwnProperty(Text, obj3);
+          const obj3 = { variant: "heading-lg/normal", children: null };
+          const intl = util.intl;
+          obj3.children = intl.string(util.t.TDRvqs);
+          const tmp17 = hasOwnProperty(Text_Text.Text, obj3);
           cResult[9] = tmp17;
-          tmp15 = tmp17;
+          let tmp15 = tmp17;
         } else {
           tmp15 = cResult[9];
         }
         if (cResult[10] === tmp7) {
-          let tmp18;
-          let tmp23;
-          let tmp22;
-          let tmp25;
           if (cResult[11] === tmp12) {
-            tmp18 = cResult[12];
+            let tmp18 = cResult[12];
           }
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const fn = function _() {
-              const obj = SafetyHubActionCreatorsAll;
-              return obj.getSafetyHubData();
+              return SafetyHubActionCreatorsAll.getSafetyHubData();
             };
-            const intl2 = intl3.intl;
-            const stringResult = intl2.string(intl3.t.R1AN4F);
+            const intl2 = util.intl;
+            const stringResult = intl2.string(util.t.R1AN4F);
             cResult[13] = fn;
             cResult[14] = stringResult;
-            tmp23 = stringResult;
-            tmp22 = fn;
+            let tmp23 = stringResult;
+            let tmp22 = fn;
           } else {
             tmp22 = cResult[13];
             tmp23 = cResult[14];
@@ -135,28 +128,29 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp27 = hasOwnProperty(components_Button_Button.Button, obj4);
             cResult[15] = tmp6;
             cResult[16] = tmp27;
-            tmp25 = tmp27;
+            let tmp25 = tmp27;
           } else {
             tmp25 = cResult[16];
           }
           if (cResult[17] === tmp18) {
-            let tmp28;
             if (cResult[18] === tmp25) {
-              tmp28 = cResult[19];
+              let tmp28 = cResult[19];
             }
             return tmp28;
           }
-          const obj5 = { children: items3 };
-          items3 = [tmp18, tmp25];
-          const tmp30 = metroRequire(Sheet_BottomSheet.BottomSheet, obj5);
+          const obj5 = { children: null };
+          const items3 = [tmp18, tmp25];
+          obj5.children = items3;
+          const tmp30 = timestampProducer(Sheet_BottomSheet.BottomSheet, obj5);
           cResult[17] = tmp18;
           cResult[18] = tmp25;
           cResult[19] = tmp30;
           tmp28 = tmp30;
         }
-        const obj6 = { style: tmp7, children: items4 };
-        items4 = [tmp12, tmp15];
-        const tmp21 = metroRequire(View, obj6);
+        const obj6 = { style: tmp7, children: null };
+        const items4 = [tmp12, tmp15];
+        obj6.children = items4;
+        const tmp21 = timestampProducer(View, obj6);
         cResult[10] = tmp7;
         cResult[11] = tmp12;
         cResult[12] = tmp21;
@@ -169,55 +163,47 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp12 = tmp13;
     }
   : (arg0) => {
-      let CircleXIcon;
-      let intl;
-      let intl2;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let obj4;
       if (arg0 == null) {
         throw new TypeError("Cannot destructure 'undefined' or 'null'.");
       } else {
         const tmp2 = closure_7();
         const tmp5 = useSafetyHubLoadingDefault();
-        let obj = { children: items4 };
-        const obj2 = { style: items, children: items3 };
-        items = [tmp2.errorContainer];
-        const obj3 = { style: items1, children: hasOwnProperty(CircleXIcon, obj4) };
-        items1 = [tmp2.redesignErrorIconContainer];
-        BottomSheet = Sheet_BottomSheet.BottomSheet;
-        obj4 = {
+        const obj = { children: null };
+        const obj2 = { style: null, children: null };
+        const items = [tmp2.errorContainer];
+        obj2.style = items;
+        const obj3 = { style: null, children: null };
+        const items1 = [tmp2.redesignErrorIconContainer];
+        obj3.style = items1;
+        const obj4 = {
           size: "custom",
           color: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT,
-          style: items2,
+          style: null,
         };
-        CircleXIcon = CircleXIcon2.CircleXIcon;
-        items2 = [tmp2.redesignErrorIcon];
-        items3 = [hasOwnProperty(View, obj3)];
-        const obj5 = { variant: "heading-lg/normal", children: intl.string(intl3.t.TDRvqs) };
-        const Text = Text_Text.Text;
-        intl = intl3.intl;
-        items3[1] = hasOwnProperty(Text, obj5);
-        items4 = [metroRequire(View, obj2)];
+        const items2 = [tmp2.redesignErrorIcon];
+        obj4.style = items2;
+        obj3.children = hasOwnProperty(CircleXIcon.CircleXIcon, obj4);
+        const items3 = [hasOwnProperty(View, obj3)];
+        const obj5 = { variant: "heading-lg/normal", children: null };
+        const intl = util.intl;
+        obj5.children = intl.string(util.t.TDRvqs);
+        items3[1] = hasOwnProperty(Text_Text.Text, obj5);
+        obj2.children = items3;
+        const items4 = [timestampProducer(View, obj2)];
         const obj6 = {
           onPress() {
-            const obj = SafetyHubActionCreatorsAll;
-            return obj.getSafetyHubData();
+            return SafetyHubActionCreatorsAll.getSafetyHubData();
           },
-          text: intl2.string(intl3.t.R1AN4F),
-          loading: tmp5,
-          disabled: tmp5,
+          text: null,
+          loading: null,
+          disabled: null,
         };
-        const Button = components_Button_Button.Button;
-        intl2 = intl3.intl;
-        items4[1] = hasOwnProperty(Button, obj6);
-        return metroRequire(BottomSheet, obj);
+        const intl2 = util.intl;
+        obj6.text = intl2.string(util.t.R1AN4F);
+        obj6.loading = tmp5;
+        obj6.disabled = tmp5;
+        items4[1] = hasOwnProperty(components_Button_Button.Button, obj6);
+        obj.children = items4;
+        return timestampProducer(Sheet_BottomSheet.BottomSheet, obj);
       }
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
-
-export default tmp5;

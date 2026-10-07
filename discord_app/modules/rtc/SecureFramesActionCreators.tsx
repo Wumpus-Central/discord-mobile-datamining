@@ -2,42 +2,32 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = {
-  clearUploadedKeyVersions() {
-    const obj = DispatcherDefault;
-    obj.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
-  },
-  addUploadedKeyVersion(keyVersion) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion };
-    obj.dispatch(obj2);
-  },
-  createSecureFramesVerifiedKey(userId, key) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key };
-    obj.dispatch(obj2);
-  },
-  deleteSecureFramesVerifiedKey(userId, serializeKeyResult) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "SECURE_FRAMES_VERIFIED_KEY_DELETE", userId, serializedKey: serializeKeyResult };
-    obj.dispatch(obj2);
-  },
-  deleteSecureFramesUserVerifiedKeys(userId) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId };
-    obj.dispatch(obj2);
-  },
-  createSecureFramesTransientKey(userId, key) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key };
-    obj.dispatch(obj2);
-  },
-  deleteSecureFramesTransientKey(userId) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId };
-    obj.dispatch(obj2);
-  },
-};
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");
 
-export default obj;
+export default {
+  clearUploadedKeyVersions() {
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
+  },
+  addUploadedKeyVersion(keyVersion) {
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion });
+  },
+  createSecureFramesVerifiedKey(userId, key) {
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key });
+  },
+  deleteSecureFramesVerifiedKey(userId, serializeKeyResult) {
+    DispatcherDefault.dispatch({
+      type: "SECURE_FRAMES_VERIFIED_KEY_DELETE",
+      userId,
+      serializedKey: serializeKeyResult,
+    });
+  },
+  deleteSecureFramesUserVerifiedKeys(userId) {
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId });
+  },
+  createSecureFramesTransientKey(userId, key) {
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key });
+  },
+  deleteSecureFramesTransientKey(userId) {
+    DispatcherDefault.dispatch({ type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId });
+  },
+};

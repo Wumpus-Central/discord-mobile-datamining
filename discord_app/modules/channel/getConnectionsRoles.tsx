@@ -1,12 +1,9 @@
 // discord_app/modules/channel/getConnectionsRoles.tsx
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
-import Constants from "../../Constants.tsx";
 import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let ChannelTypes;
-let Permissions;
+const Constants = fn(1085);
 ({ ChannelTypes, Permissions } = Constants);
 let items = [, , , , , ,];
 ({
@@ -19,12 +16,13 @@ let items = [, , , , , ,];
   PRIVATE_THREAD: arr[6],
 } = ChannelTypes);
 let closure_5 = BigFlagUtils.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getConnectionsRoles.tsx");
 
 export default function getConnectionsRoles(type) {
   if (null != type) {
     if (items.includes(type.type)) {
-      const guild = GuildStore.getGuild(type.guild_id);
+      guild = GuildStore.getGuild(type.guild_id);
       if (null == guild) {
         items = [];
       } else {
@@ -44,8 +42,7 @@ export default function getConnectionsRoles(type) {
             tmp = null === guild_connections;
           }
           if (tmp) {
-            const obj = BigFlagUtils;
-            tmp = !obj.hasAny(type.deny, closure_5);
+            tmp = !BigFlagUtils.hasAny(type.deny, closure_5);
           }
           return tmp;
         });

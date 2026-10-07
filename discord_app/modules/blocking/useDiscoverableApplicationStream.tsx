@@ -1,18 +1,11 @@
 // discord_app/modules/blocking/useDiscoverableApplicationStream.tsx
-import Constants from "../../Constants.tsx";
 import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
+const require = fn;
 function getDiscoverableApplicationStream(userId) {
-  let NONE;
-  let items;
-  let obj;
-  let obj2;
   let tmp = items;
   if (items === undefined) {
     items = [ApplicationStreamingStore, RelationshipStore];
@@ -20,7 +13,7 @@ function getDiscoverableApplicationStream(userId) {
   }
   [obj, obj2] = tmp;
   if (null != userId) {
-    NONE = obj2.getRelationshipType(userId);
+    let NONE = obj2.getRelationshipType(userId);
   } else {
     NONE = RelationshipTypes.NONE;
   }
@@ -37,21 +30,19 @@ function getDiscoverableApplicationStream(userId) {
   }
   return tmp6;
 }
-const RelationshipTypes = Constants.RelationshipTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const RelationshipTypes = fn(1085).RelationshipTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp7;
-      let tmp8;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      const tmp = _require;
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [ApplicationStreamingStore, RelationshipStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -64,22 +55,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp8 = items1;
-        tmp7 = fn;
+        let tmp8 = items1;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp7, tmp8);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       let items = [ApplicationStreamingStore, RelationshipStore];
       const items1 = [arg0];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(
+      return require("initialize").useStateFromStores(
         items,
         () => {
           const items = [ApplicationStreamingStore, RelationshipStore];
@@ -88,7 +77,4 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
-
-export default tmp2;
 export { getDiscoverableApplicationStream };

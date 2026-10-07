@@ -1,21 +1,21 @@
 // discord_app/modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+let result = size.fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");
+
+export const useAvatarDecorationPreviewSizes = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = react;
-      const cResult = obj.c(3);
-      size = useWindowDimensionsDefault();
+      const cResult = c.c(3);
+      const size = useWindowDimensionsDefault();
       const result = (2 * Math.min(size.width, size.height)) / 3;
       const result1 = result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio;
       if (cResult[0] === result) {
-        let tmp4;
         if (cResult[1] === result1) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
         return tmp4;
       }
@@ -26,15 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = obj2;
     }
   : () => {
-      size = useWindowDimensionsDefault();
+      const size = useWindowDimensionsDefault();
       const result = (2 * Math.min(size.width, size.height)) / 3;
-      const obj = {
-        avatarDecorationSize: result,
-        avatarSize: result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio,
-      };
-      return obj;
+      return { avatarDecorationSize: result, avatarSize: result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio };
     };
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");
-
-export const useAvatarDecorationPreviewSizes = tmp2;

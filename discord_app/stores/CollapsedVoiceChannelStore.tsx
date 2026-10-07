@@ -1,55 +1,51 @@
 // discord_app/stores/CollapsedVoiceChannelStore.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import ChannelStore from "ChannelStore.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
 function handleConnectionOpen() {
-  let channel;
   obj = SnowflakeUtilsDefault;
   const keys = obj.keys(obj);
   const item = keys.forEach((item) => {
-    const tmp = item;
     if (null == channel.getChannel(item)) {
-      delete obj[tmp];
+      delete tmp[tmp2];
     }
   });
 }
 let obj = {};
-const PersistedStore = get_initializedDefault.PersistedStore;
-class CollapsedVoiceChannelStore extends PersistedStore {
-  initialize(arg0) {
-    this.waitFor(ChannelStore);
-  }
-  getState() {
-    return obj;
-  }
-  getCollapsed() {
-    return obj;
-  }
-  isCollapsed(arg0) {
-    return obj[arg0] || false;
-  }
-}
+const PersistedStore = initializeDefault.PersistedStore;
+class CollapsedVoiceChannelStore extends PersistedStore {}
 const prototype = CollapsedVoiceChannelStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  this.waitFor(ChannelStore);
+};
+prototype["getState"] = function getState() {
+  return obj;
+};
+prototype["getCollapsed"] = function getCollapsed() {
+  return obj;
+};
+prototype["isCollapsed"] = function isCollapsed(arg0) {
+  return obj[arg0] || false;
+};
 CollapsedVoiceChannelStore.displayName = "CollapsedVoiceChannelStore";
 CollapsedVoiceChannelStore.persistKey = "collapsedChannels";
-const obj2 = {
+const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   CHANNEL_COLLAPSE: function handleChannelCollapse(channelId) {
     channelId = channelId.channelId;
     if (obj[channelId]) {
-      delete obj[channelId];
+      delete tmp[tmp2];
     } else {
-      obj[channelId] = true;
+      tmp3[channelId] = true;
     }
     obj = {};
     const merged = Object.assign(obj);
   },
-};
-const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
 
 export default collapsedVoiceChannelStore;

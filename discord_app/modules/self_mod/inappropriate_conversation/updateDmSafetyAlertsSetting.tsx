@@ -3,7 +3,6 @@ import wrappers from "../../../../discord_common/js/packages/protos/google/proto
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx",
@@ -17,8 +16,7 @@ export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(
     "privacy",
     async (arg0) => {
       const BoolValue = wrappers.BoolValue;
-      const obj = { value };
-      arg0.inappropriateConversationWarnings = BoolValue.create(obj);
+      arg0.inappropriateConversationWarnings = BoolValue.create({ value });
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );

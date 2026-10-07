@@ -1,12 +1,10 @@
 // discord_app/modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../Constants.tsx";
-import intl10 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import SensitiveMediaGoreRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
@@ -15,103 +13,49 @@ import TinyBroncoSettingsNoticesLazy from "../../../tiny_bronco/native/TinyBronc
 import SafetyGuildSettingGuildSelect from "../../defs/native/SafetyGuildSettingGuildSelect.tsx";
 import useUserSafetySettingsSelectedGuildId from "../../privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx";
 import useAuthorizedSlayerApplicationsDefault from "../../authorized_apps/useAuthorizedSlayerApplications.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
-let route;
 
-let c10;
-let c9;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-let unpackModuleId;
+require = fn;
 function getContentCategory(TIGGER_PAWTECT_LEARN_MORE) {
-  let RvjRRI;
-  let dliU4j;
-  let format;
-  let format2;
-  let format3;
-  let intl3;
-  let intl5;
-  let intl6;
-  let items;
-  let items2;
-  let items3;
-  let items4;
-  let lunaRv;
-  let obj2;
-  let obj3;
-  let obj5;
-  let obj6;
-  let obj8;
-  let obj9;
-  const obj = { settings: items, subLabel: format(dliU4j, obj2) };
-  items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
-  const intl = intl10.intl;
-  format = intl.format;
-  obj2 = { learnMoreLink: obj3.getArticleURL(TIGGER_PAWTECT_LEARN_MORE) };
-  dliU4j = intl10.t.dliU4j;
+  const obj = { settings: null, subLabel: null };
+  const items = [MobileUserSettings.SENSITIVE_CONTENT_FILTERS];
+  obj.settings = items;
+  const intl = util.intl;
+  const obj2 = { learnMoreLink: HelpdeskUtilsDefault.getArticleURL(TIGGER_PAWTECT_LEARN_MORE) };
+  obj.subLabel = intl.format(util.t.dliU4j, obj2);
   const items1 = [obj, , ,];
-  obj3 = HelpdeskUtilsDefault;
-  const obj4 = { settings: items2, subLabel: format2(RvjRRI, obj5) };
-  items2 = [MobileUserSettings.DIRECT_MESSAGE_SPAM_FILTER];
-  const intl2 = intl10.intl;
-  format2 = intl2.format;
-  obj5 = { appealLink: obj6.getArticleURL(HelpdeskArticles.SAFE_DIRECT_MESSAGING) };
-  RvjRRI = intl10.t.RvjRRI;
+  const obj4 = { settings: null, subLabel: null };
+  const items2 = [MobileUserSettings.DIRECT_MESSAGE_SPAM_FILTER];
+  obj4.settings = items2;
+  const intl2 = util.intl;
+  const obj5 = { appealLink: null };
+  obj5.appealLink = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SAFE_DIRECT_MESSAGING);
+  obj4.subLabel = intl2.format(util.t.RvjRRI, obj5);
   items1[1] = obj4;
-  obj6 = HelpdeskUtilsDefault;
-  const obj7 = { label: intl3.string(intl10.t.MDqARb), settings: items3, subLabel: format3(lunaRv, obj8) };
-  intl3 = intl10.intl;
-  items3 = [MobileUserSettings.DIRECT_MESSAGE_SAFETY_ALERTS];
-  const intl4 = intl10.intl;
-  format3 = intl4.format;
-  obj8 = { learnMoreLink: obj9.getArticleURL(HelpdeskArticles.SAFETY_ALERTS) };
-  lunaRv = intl10.t.lunaRv;
+  const obj7 = { label: null, settings: null, subLabel: null };
+  const intl3 = util.intl;
+  obj7.label = intl3.string(util.t.MDqARb);
+  const items3 = [MobileUserSettings.DIRECT_MESSAGE_SAFETY_ALERTS];
+  obj7.settings = items3;
+  const intl4 = util.intl;
+  const obj8 = { learnMoreLink: null };
+  obj8.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SAFETY_ALERTS);
+  obj7.subLabel = intl4.format(util.t.lunaRv, obj8);
   items1[2] = obj7;
-  obj9 = HelpdeskUtilsDefault;
-  const obj10 = { label: intl5.string(intl10.t.wCFGLE), settings: items4, subLabel: intl6.string(intl10.t.R9fXyS) };
-  intl5 = intl10.intl;
-  items4 = [MobileUserSettings.ANDROID_VIEW_NSFW_DM_COMMANDS_V2];
-  intl6 = intl10.intl;
+  const obj10 = { label: null, settings: null, subLabel: null };
+  const intl5 = util.intl;
+  obj10.label = intl5.string(util.t.wCFGLE);
+  const items4 = [MobileUserSettings.ANDROID_VIEW_NSFW_DM_COMMANDS_V2];
+  obj10.settings = items4;
+  const intl6 = util.intl;
+  obj10.subLabel = intl6.string(util.t.R9fXyS);
   items1[3] = obj10;
   return items1;
 }
 function getSocialPermissions(allServersSelected) {
-  let format;
-  let format2;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl6;
-  let intl8;
-  let intl9;
-  let items1;
-  let items10;
-  let items11;
-  let items12;
-  let items3;
-  let items4;
-  let items5;
-  let items7;
-  let items8;
-  let items9;
-  let obj10;
-  let obj12;
-  let obj9;
-  let prop;
-  let tmp11;
-  let tmp5;
-  let v0aNQo9;
   allServersSelected = allServersSelected.allServersSelected;
   const items = [, ,];
   ({
@@ -119,148 +63,165 @@ function getSocialPermissions(allServersSelected) {
     SAFETY_GUILD_SETTING_DIRECT_MESSAGES: arr[1],
     SAFETY_GUILD_SETTING_MESSAGE_REQUESTS: arr[2],
   } = MobileUserSettings);
-  const showMessageRequestsNotice = allServersSelected.showMessageRequestsNotice;
-  const obj = { label: intl.string(intl10.t["6x5uWQ"]), settings: items1 };
-  intl = intl10.intl;
-  items1 = [MobileUserSettings.ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY];
+  const obj = { label: null, settings: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t["6x5uWQ"]);
+  const items1 = [MobileUserSettings.ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY];
+  obj.settings = items1;
   const items2 = [obj, , , , , , , , , ,];
-  const obj2 = { settings: items3 };
-  items3 = [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING];
+  const obj2 = { settings: null };
+  const items3 = [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING];
+  obj2.settings = items3;
   items2[1] = obj2;
-  const obj3 = { settings: items4 };
-  items4 = [MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE];
+  const obj3 = { settings: null };
+  const items4 = [MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE];
+  obj3.settings = items4;
   items2[2] = obj3;
-  const obj4 = { settings: items5 };
-  items5 = [MobileUserSettings.NOTIFY_SERVER_MEMBERS_ON_GO_LIVE];
+  const obj4 = { settings: null };
+  const items5 = [MobileUserSettings.NOTIFY_SERVER_MEMBERS_ON_GO_LIVE];
+  obj4.settings = items5;
   items2[3] = obj4;
-  const obj5 = { label: intl2.string(intl10.t.MeYuqs), settings: tmp5, subLabel: tmp11 };
-  intl2 = intl10.intl;
-  tmp5 = items;
+  const obj5 = { label: null, settings: null, subLabel: null };
+  const intl2 = util.intl;
+  obj5.label = intl2.string(util.t.MeYuqs);
+  let tmp4 = items;
   if (!allServersSelected) {
     const items6 = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(items6, items, 0);
-    HermesBuiltin.arraySpread(items6, SafetyGuildSettingGuildSelect.GUILD_SPECIFIC_SETTINGS, arraySpreadResult);
-    tmp5 = items6;
+    HermesBuiltin.arraySpread(
+      SafetyGuildSettingGuildSelect.GUILD_SPECIFIC_SETTINGS,
+      HermesBuiltin.arraySpread(items, 0),
+    );
+    tmp4 = items6;
+    const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
   }
-  tmp11 = undefined;
+  obj5.settings = tmp4;
+  let tmp10;
   if (allServersSelected) {
-    if (showMessageRequestsNotice) {
-      tmp11 = React4(TinyBroncoSettingsNoticesLazy.MessageRequestsNotice, {});
+    if (allServersSelected.showMessageRequestsNotice) {
+      tmp10 = options(TinyBroncoSettingsNoticesLazy.MessageRequestsNotice, {});
     }
   }
+  obj5.subLabel = tmp10;
   items2[4] = obj5;
-  const obj6 = { label: intl3.string(intl10.t.XlGG9c), settings: items7 };
-  intl3 = intl10.intl;
-  items7 = [, ,];
+  const obj6 = { label: null, settings: null };
+  const intl3 = util.intl;
+  obj6.label = intl3.string(util.t.XlGG9c);
+  const items7 = [, ,];
   ({
     SAFETY_SEND_FRIEND_REQUESTS_EVERYONE: arr8[0],
     SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_FRIENDS: arr8[1],
     SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_GUILDS: arr8[2],
   } = MobileUserSettings);
+  obj6.settings = items7;
   items2[5] = obj6;
-  const obj7 = { settings: items8 };
-  items8 = [MobileUserSettings.FRIEND_REQUEST_NOTES];
+  const obj7 = { settings: null };
+  const items8 = [MobileUserSettings.FRIEND_REQUEST_NOTES];
+  obj7.settings = items8;
   items2[6] = obj7;
-  const obj8 = { label: intl4.string(intl10.t["3wRort"]), settings: items9, subLabel: format(v0aNQo9, obj9) };
-  intl4 = intl10.intl;
-  items9 = [,];
+  const obj8 = { label: null, settings: null, subLabel: null };
+  const intl4 = util.intl;
+  obj8.label = intl4.string(util.t["3wRort"]);
+  const items9 = [,];
   ({ ACCOUNT_BLOCKED_USERS_V2: arr10[0], ACCOUNT_IGNORED_USERS: arr10[1] } = MobileUserSettings);
-  const intl5 = intl10.intl;
-  format = intl5.format;
-  obj9 = { helpArticle: obj10.getArticleURL(HelpdeskArticles.STEALTH_REMEDIATION_FEATURE_GUIDE) };
-  v0aNQo9 = intl10.t["0aNQo9"];
+  obj8.settings = items9;
+  const intl5 = util.intl;
+  const obj9 = { helpArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STEALTH_REMEDIATION_FEATURE_GUIDE) };
+  obj8.subLabel = intl5.format(util.t["0aNQo9"], obj9);
   items2[7] = obj8;
-  obj10 = HelpdeskUtilsDefault;
-  const obj11 = { label: intl6.string(intl10.t.bGSsnc), settings: items10, subLabel: format2(prop, obj12) };
-  intl6 = intl10.intl;
-  items10 = [, ,];
+  const obj11 = { label: null, settings: null, subLabel: null };
+  const intl6 = util.intl;
+  obj11.label = intl6.string(util.t.bGSsnc);
+  const items10 = [, ,];
   ({
     SYNC_CONTACTS: arr11[0],
     SYNC_CONTACTS_NAME: arr11[1],
     STAFF_ONLY_FIND_YOUR_FRIENDS_DELETION: arr11[2],
   } = MobileUserSettings);
-  const intl7 = intl10.intl;
-  format2 = intl7.format;
-  obj12 = { onClick: ContactSyncUtils.handleOpenLearnMoreLink };
-  prop = intl10.t["TWz/S+"];
+  obj11.settings = items10;
+  const intl7 = util.intl;
+  obj11.subLabel = intl7.format(util.t["TWz/S+"], { onClick: ContactSyncUtils.handleOpenLearnMoreLink });
   items2[8] = obj11;
-  const obj13 = { label: intl8.string(intl10.t["aBZ/oQ"]), settings: items11 };
-  intl8 = intl10.intl;
-  items11 = [,];
+  const obj13 = { label: null, settings: null };
+  const intl8 = util.intl;
+  obj13.label = intl8.string(util.t["aBZ/oQ"]);
+  const items11 = [,];
   ({ DISCOVERY_BY_PHONE: arr12[0], DISCOVERY_BY_EMAIL: arr12[1] } = MobileUserSettings);
+  obj13.settings = items11;
   items2[9] = obj13;
-  const obj14 = { label: intl9.string(intl10.t["+KNdnt"]), settings: items12 };
-  intl9 = intl10.intl;
-  items12 = [MobileUserSettings.IOS_CONVERSATION_SUGGESTIONS];
+  const obj14 = { label: null, settings: null };
+  const intl9 = util.intl;
+  obj14.label = intl9.string(util.t["+KNdnt"]);
+  const items12 = [MobileUserSettings.IOS_CONVERSATION_SUGGESTIONS];
+  obj14.settings = items12;
   items2[10] = obj14;
   return items2;
 }
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = react_native);
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const HelpdeskArticles = Constants.HelpdeskArticles;
-({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { loadingIndicator: obj2, emptyContainer: obj3 };
-obj2 = { marginTop: nativeDefault.space.PX_32 };
-createStyles = createStyles.createStyles;
-obj3 = {
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const MobileUserSettings = fn(7645).MobileUserSettings;
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const jsxProd = fn(21);
+({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
+let obj3 = { marginTop: nativeDefault.space.PX_32 };
+obj2.emptyContainer = {
   flex: 1,
   gap: nativeDefault.space.PX_4,
   marginTop: nativeDefault.space.PX_24,
   paddingHorizontal: nativeDefault.space.PX_16,
 };
-let closure_12 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_12 = createStyles.createStyles(obj2);
+fn(558);
+let obj4 = {
+  flex: 1,
+  gap: nativeDefault.space.PX_4,
+  marginTop: nativeDefault.space.PX_24,
+  paddingHorizontal: nativeDefault.space.PX_16,
+};
+let ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let items;
-      let obj9;
-      const obj = react2;
-      const cResult = obj.c(9);
-      const obj2 = useUserSafetySettingsSelectedGuildId;
-      const allServersOptionSelected = obj2.useAllServersOptionSelected();
-      const obj3 = SensitiveMediaGoreRedactionSettingsUtils;
-      const sensitiveContentFilterHelpArticle = obj3.useSensitiveContentFilterHelpArticle();
-      const obj4 = TinyBroncoSettingsNoticesLazy;
-      const tinyBroncoMessageRequestsNoticeVariant = obj4.useTinyBroncoMessageRequestsNoticeVariant();
+      const cResult = c.c(9);
+      const allServersOptionSelected = useUserSafetySettingsSelectedGuildId.useAllServersOptionSelected();
+      const sensitiveContentFilterHelpArticle =
+        SensitiveMediaGoreRedactionSettingsUtils.useSensitiveContentFilterHelpArticle();
+      const tinyBroncoMessageRequestsNoticeVariant =
+        TinyBroncoSettingsNoticesLazy.useTinyBroncoMessageRequestsNoticeVariant();
       if (cResult[0] === allServersOptionSelected) {
         if (cResult[1] === sensitiveContentFilterHelpArticle) {
-          let tmp7;
-          let tmp8;
-          let tmp11;
-          let tmp16;
           if (cResult[2] === tinyBroncoMessageRequestsNoticeVariant) {
-            tmp7 = cResult[3];
+            let tmp7 = cResult[3];
           }
           if (cResult[4] !== tmp7) {
             const obj5 = { sections: tmp7 };
-            const tmpResult = SettingBuilders;
-            const list = tmpResult.createList(obj5);
+            const list = SettingBuilders.createList(obj5);
             cResult[4] = tmp7;
             cResult[5] = list;
-            tmp8 = list;
+            let tmp8 = list;
+            const tmpResult = SettingBuilders;
           } else {
             tmp8 = cResult[5];
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const obj6 = { screen: SettingsScreenNotices.SettingsScreen.CONTENT_AND_SOCIAL };
-            const tmp14 = SettingsScreenNoticesDefault;
-            const tmp15 = React4(tmp14, obj6);
+            const tmp15 = options(SettingsScreenNoticesDefault, obj6);
             cResult[6] = tmp15;
-            tmp11 = tmp15;
+            let tmp11 = tmp15;
           } else {
             tmp11 = cResult[6];
           }
           if (cResult[7] !== tmp8) {
-            const obj7 = { children: items };
-            items = [tmp11];
+            const obj7 = { children: null };
+            const items = [tmp11];
             const obj8 = { node: tmp8 };
-            items[1] = React4(SettingLayoutDefault, obj8);
-            const tmp21 = unpackModuleId(authStore, obj7);
+            items[1] = options(SettingLayoutDefault, obj8);
+            obj7.children = items;
+            const tmp21 = closure_1_11(v65535, obj7);
             cResult[7] = tmp8;
             cResult[8] = tmp21;
-            tmp16 = tmp21;
+            let tmp16 = tmp21;
           } else {
             tmp16 = cResult[8];
           }
@@ -268,235 +229,186 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const items1 = [...getContentCategory(sensitiveContentFilterHelpArticle), ...getSocialPermissions(obj9)];
-      obj9 = {
-        allServersSelected: allServersOptionSelected,
-        showMessageRequestsNotice: null != tinyBroncoMessageRequestsNoticeVariant,
-      };
       cResult[0] = allServersOptionSelected;
       cResult[1] = sensitiveContentFilterHelpArticle;
       cResult[2] = tinyBroncoMessageRequestsNoticeVariant;
       cResult[3] = items1;
       tmp7 = items1;
+      obj9 = {
+        allServersSelected: allServersOptionSelected,
+        showMessageRequestsNotice: null != tinyBroncoMessageRequestsNoticeVariant,
+      };
     }
   : () => {
-      let allServersOptionSelected;
-      let items2;
-      let tinyBroncoMessageRequestsNoticeVariant;
-      let obj = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[15]);
-      allServersOptionSelected = obj.useAllServersOptionSelected();
-      let obj2 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[16]);
-      const sensitiveContentFilterHelpArticle = obj2.useSensitiveContentFilterHelpArticle();
-      const obj3 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[11]);
-      tinyBroncoMessageRequestsNoticeVariant = obj3.useTinyBroncoMessageRequestsNoticeVariant();
+      allServersOptionSelected = allServersOptionSelected(
+        tinyBroncoMessageRequestsNoticeVariant[15],
+      ).useAllServersOptionSelected();
+      const obj = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[15]);
+      const sensitiveContentFilterHelpArticle = allServersOptionSelected(
+        tinyBroncoMessageRequestsNoticeVariant[16],
+      ).useSensitiveContentFilterHelpArticle();
+      const obj2 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[16]);
+      tinyBroncoMessageRequestsNoticeVariant = allServersOptionSelected(
+        tinyBroncoMessageRequestsNoticeVariant[11],
+      ).useTinyBroncoMessageRequestsNoticeVariant();
       let items = [allServersOptionSelected, sensitiveContentFilterHelpArticle, tinyBroncoMessageRequestsNoticeVariant];
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         const items = [...getContentCategory(sensitiveContentFilterHelpArticle), ...getSocialPermissions(obj)];
         return items;
       }, items);
       const items1 = [memo];
-      const obj4 = { children: items2 };
-      const memo1 = react.useMemo(() => {
-        const obj = SettingBuilders;
-        const obj2 = { sections: memo };
-        return obj.createList(obj2);
-      }, items1);
-      const obj5 = {
-        screen: allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[18]).SettingsScreen.CONTENT_AND_SOCIAL,
-      };
-      const tmp6 = sensitiveContentFilterHelpArticle(tinyBroncoMessageRequestsNoticeVariant[18]);
-      items2 = [
-        closure_9(tmp6, obj5),
+      const obj4 = { children: null };
+      const memo1 = noop.useMemo(() => SettingBuilders.createList({ sections: memo }), items1);
+      const obj5 = { screen: null };
+      const obj3 = allServersOptionSelected(tinyBroncoMessageRequestsNoticeVariant[11]);
+      obj5.screen = allServersOptionSelected(
+        tinyBroncoMessageRequestsNoticeVariant[18],
+      ).SettingsScreen.CONTENT_AND_SOCIAL;
+      const items2 = [
+        closure_9(sensitiveContentFilterHelpArticle(tinyBroncoMessageRequestsNoticeVariant[18]), obj5),
         closure_9(sensitiveContentFilterHelpArticle(tinyBroncoMessageRequestsNoticeVariant[19]), { node: memo1 }),
       ];
+      obj4.children = items2;
       return closure_11(closure_10, obj4);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let V8wClM;
-      let first;
-      let format;
-      let format2;
-      let intl2;
-      let intl3;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let oZsHTD;
-      let obj4;
-      let obj9;
-      let showLoadingIndicator;
-      let slayerSdkApplications;
-      let tmp12;
-      let tmp5Result;
-      let tmp5Result2;
-      const obj = react2;
-      const cResult = obj.c(9);
-      const tmp4 = closure_12();
+      const cResult = c.c(9);
+      let loadingIndicator = closure_12();
       ({ showLoadingIndicator, slayerSdkApplications } = useAuthorizedSlayerApplicationsDefault());
-      useAuthorizedSlayerApplicationsDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { sections: items1 };
-        const obj3 = { settings: items, subLabel: format(oZsHTD, obj4) };
-        items = [MobileUserSettings.ALLOW_GAME_FRIEND_DMS];
-        const createList = SettingBuilders.createList;
-        SettingBuilders;
-        const intl = intl10.intl;
-        format = intl.format;
-        obj4 = { helpdeskArticle: tmp5Result.getArticleURL(HelpdeskArticles.SLAYER_GAME_FRIENDS) };
-        oZsHTD = intl10.t.oZsHTD;
-        items1 = [obj3];
-        tmp5Result = HelpdeskUtilsDefault;
-        const obj5 = { settings: items2, subLabel: intl2.string(intl10.t["4NN4+/"]) };
-        items2 = [MobileUserSettings.IN_GAME_DMS];
-        intl2 = intl10.intl;
+        const obj2 = { sections: null };
+        const obj3 = { settings: null, subLabel: null };
+        const items = [MobileUserSettings.ALLOW_GAME_FRIEND_DMS];
+        obj3.settings = items;
+        const intl = util.intl;
+        const obj4 = { helpdeskArticle: null };
+        const tmpResult = SettingBuilders;
+        obj4.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SLAYER_GAME_FRIENDS);
+        obj3.subLabel = intl.format(util.t.oZsHTD, obj4);
+        const items1 = [obj3];
+        const obj5 = { settings: null, subLabel: null };
+        const items2 = [MobileUserSettings.IN_GAME_DMS];
+        obj5.settings = items2;
+        const intl2 = util.intl;
+        obj5.subLabel = intl2.string(util.t["4NN4+/"]);
         items1[1] = obj5;
-        const list = createList(obj2);
+        obj2.sections = items1;
+        const list = tmpResult.createList(obj2);
         cResult[0] = list;
-        first = list;
+        let first = list;
+        const tmp4Result = HelpdeskUtilsDefault;
       } else {
         first = cResult[0];
       }
       if (showLoadingIndicator) {
-        let tmp26;
-        if (cResult[1] !== tmp4.loadingIndicator) {
-          const obj6 = { style: tmp4.loadingIndicator };
-          const tmp29 = React4(hasOwnProperty, obj6);
-          cResult[1] = tmp4.loadingIndicator;
-          cResult[2] = tmp29;
-          tmp26 = tmp29;
-        } else {
-          tmp26 = cResult[2];
+        if (cResult[1] !== loadingIndicator.loadingIndicator) {
+          const obj6 = { style: loadingIndicator.loadingIndicator };
+          const tmp28 = options(hasOwnProperty, obj6);
+          loadingIndicator = loadingIndicator.loadingIndicator;
+          cResult[1] = loadingIndicator;
+          cResult[2] = tmp28;
         }
-        tmp12 = tmp26;
       } else if (0 === slayerSdkApplications.length) {
-        let tmp15;
-        let tmp18;
         const _Symbol2 = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj7 = {
-            variant: "text-md/semibold",
-            color: "text-strong",
-            children: intl3.string(intl10.t["+0U77d"]),
-          };
-          const Text = Text_Text.Text;
-          intl3 = intl10.intl;
-          const tmp17 = React4(Text, obj7);
-          cResult[3] = tmp17;
-          tmp15 = tmp17;
+          const obj7 = { variant: "text-md/semibold", color: "text-strong", children: null };
+          const intl3 = util.intl;
+          obj7.children = intl3.string(util.t["+0U77d"]);
+          const tmp15 = options(Text_Text.Text, obj7);
+          cResult[3] = tmp15;
+          let tmp13 = tmp15;
         } else {
-          tmp15 = cResult[3];
+          tmp13 = cResult[3];
         }
         const _Symbol3 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj8 = { variant: "text-sm/normal", color: "text-muted", children: format2(V8wClM, obj9) };
-          const Text2 = Text_Text.Text;
-          const intl4 = intl10.intl;
-          format2 = intl4.format;
-          obj9 = { helpdeskArticle: tmp5Result2.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
-          V8wClM = intl10.t.V8wClM;
-          tmp5Result2 = HelpdeskUtilsDefault;
-          const tmp21 = React4(Text2, obj8);
-          cResult[4] = tmp21;
-          tmp18 = tmp21;
+          const obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
+          const intl4 = util.intl;
+          const obj9 = {
+            helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS),
+          };
+          obj8.children = intl4.format(util.t.V8wClM, obj9);
+          const tmp19 = options(Text_Text.Text, obj8);
+          cResult[4] = tmp19;
+          let tmp16 = tmp19;
+          const tmp4Result2 = HelpdeskUtilsDefault;
         } else {
-          tmp18 = cResult[4];
+          tmp16 = cResult[4];
         }
-        if (cResult[5] === tmp4.emptyContainer) {
-          let tmp22;
-          if (cResult[6] === tmp18) {
-            tmp22 = cResult[7];
-          }
-          tmp12 = tmp22;
+        if (cResult[5] === loadingIndicator.emptyContainer) {
         }
-        const obj10 = { style: tmp4.emptyContainer, children: items3 };
-        items3 = [tmp15, tmp18];
-        const tmp25 = unpackModuleId(metroRequire, obj10);
-        cResult[5] = tmp4.emptyContainer;
-        cResult[6] = tmp18;
-        cResult[7] = tmp25;
-        tmp22 = tmp25;
+        const obj10 = { style: loadingIndicator.emptyContainer, children: null };
+        const items3 = [tmp13, tmp16];
+        obj10.children = items3;
+        const tmp23 = closure_1_11(timestampProducer, obj10);
+        cResult[5] = loadingIndicator.emptyContainer;
+        cResult[6] = tmp16;
+        cResult[7] = tmp23;
       } else {
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const obj11 = { node: first };
-          const tmp14 = React4(SettingLayoutDefault, obj11);
-          cResult[8] = tmp14;
-          tmp12 = tmp14;
+          const tmp12 = options(SettingLayoutDefault, obj11);
+          cResult[8] = tmp12;
+          let tmp10 = tmp12;
         } else {
-          tmp12 = cResult[8];
+          tmp10 = cResult[8];
         }
+        return tmp10;
       }
-      return tmp12;
+      const tmp5 = useAuthorizedSlayerApplicationsDefault();
     }
   : () => {
-      let V8wClM;
-      let constants2;
-      let format;
-      let intl;
-      let items;
-      let obj6;
-      let showLoadingIndicator;
-      let slayerSdkApplications;
-      let tmp2Result;
-      let tmp7;
       const tmp = closure_12();
       ({ showLoadingIndicator, slayerSdkApplications } = useAuthorizedSlayerApplicationsDefault());
-      useAuthorizedSlayerApplicationsDefault();
       if (showLoadingIndicator) {
         let obj2 = { style: tmp.loadingIndicator };
-        tmp7 = React4(hasOwnProperty, obj2);
+        let tmp7 = options(hasOwnProperty, obj2);
       } else if (0 === slayerSdkApplications.length) {
-        let obj3 = { style: tmp.emptyContainer, children: items };
-        let obj4 = { variant: "text-md/semibold", color: "text-strong", children: intl.string(intl10.t["+0U77d"]) };
-        const Text = Text_Text.Text;
-        intl = intl10.intl;
-        items = [React4(Text, obj4)];
-        let obj5 = { variant: "text-sm/normal", color: "text-muted", children: format(V8wClM, obj6) };
-        const Text2 = Text_Text.Text;
-        let intl2 = intl10.intl;
-        format = intl2.format;
-        obj6 = { helpdeskArticle: tmp2Result.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
-        V8wClM = intl10.t.V8wClM;
-        tmp2Result = HelpdeskUtilsDefault;
-        items[1] = React4(Text2, obj5);
-        tmp7 = unpackModuleId(metroRequire, obj3);
+        let obj3 = { style: tmp.emptyContainer, children: null };
+        let obj4 = { variant: "text-md/semibold", color: "text-strong", children: null };
+        let intl = util.intl;
+        obj4.children = intl.string(util.t["+0U77d"]);
+        let items = [options(Text_Text.Text, obj4)];
+        const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
+        let intl2 = util.intl;
+        let obj6 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
+        obj5.children = intl2.format(util.t.V8wClM, obj6);
+        items[1] = options(Text_Text.Text, obj5);
+        obj3.children = items;
+        tmp7 = closure_1_11(timestampProducer, obj3);
+        const tmp2Result = HelpdeskUtilsDefault;
       } else {
         let obj = { node: tmp5 };
-        tmp7 = React4(SettingLayoutDefault, obj);
+        tmp7 = options(SettingLayoutDefault, obj);
       }
       return tmp7;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (route) => {
-      let first;
-      let tmp11;
-      let tmp13;
-      let tmp8;
-      const obj = route(576);
-      const cResult = obj.c(7);
-      const tmp = route;
+      const cResult = route(576).c(7);
       route = route.route;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [,];
         ({ CONTENT_AND_SOCIAL_DISCORD: arr[0], CONNECTED_GAMES: arr[1] } = MobileUserSettings);
-        let num = 0;
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       let tab;
-      const tmp6 = cResult[1];
       if (route != null) {
         let params = route.params;
         if (params != null) {
           tab = params.tab;
         }
       }
-      if (tmp6 !== tab) {
+      if (cResult[1] !== tab) {
         let tab1;
         if (route != null) {
           const params2 = route.params;
@@ -520,65 +432,59 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = tab1;
         cResult[2] = fn;
-        tmp8 = fn;
+        let tmp7 = fn;
       } else {
-        tmp8 = cResult[2];
+        tmp7 = cResult[2];
       }
-      const first1 = _slicedToArray(react.useState(tmp8), 1)[0];
+      const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
       if (cResult[3] !== first1) {
         const obj2 = { defaultIndex: first1, settings: first };
-        const tmpResult = tmp(11142);
-        const segmentedControl = tmpResult.createSegmentedControl(obj2);
+        const segmentedControl = route(11142).createSegmentedControl(obj2);
         cResult[3] = first1;
         cResult[4] = segmentedControl;
-        tmp11 = segmentedControl;
+        let tmp10 = segmentedControl;
+        const tmpResult = route(11142);
       } else {
-        tmp11 = cResult[4];
+        tmp10 = cResult[4];
       }
-      if (cResult[5] !== tmp11) {
-        const obj3 = { node: tmp11 };
-        const tmp16 = closure_9(SettingLayoutDefault, obj3);
-        cResult[5] = tmp11;
-        cResult[6] = tmp16;
-        tmp13 = tmp16;
+      if (cResult[5] !== tmp10) {
+        const obj3 = { node: tmp10 };
+        const tmp15 = closure_9(SettingLayoutDefault, obj3);
+        cResult[5] = tmp10;
+        cResult[6] = tmp15;
+        let tmp12 = tmp15;
       } else {
-        tmp13 = cResult[6];
+        tmp12 = cResult[6];
       }
-      return tmp13;
+      return tmp12;
     }
   : (route) => {
-      const f121716 = () => {
-        let tab;
-        if (route != null) {
-          const params = route.params;
-          if (params != null) {
-            tab = params.tab;
-          }
-        }
-        let num = 0;
-        if (tab === MobileUserSettings.CONNECTED_GAMES) {
-          num = 1;
-        }
-        return num;
-      };
       route = route.route;
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         const items = [,];
         ({ CONTENT_AND_SOCIAL_DISCORD: arr[0], CONNECTED_GAMES: arr[1] } = MobileUserSettings);
         return items;
       }, []);
-      const defaultIndex = _slicedToArray(react.useState(f121716), 2)[0];
+      const defaultIndex = _slicedToArray(
+        noop.useState(() => {
+          let tab;
+          if (route != null) {
+            const params = route.params;
+            if (params != null) {
+              tab = params.tab;
+            }
+          }
+          let num = 0;
+          if (tab === MobileUserSettings.CONNECTED_GAMES) {
+            num = 1;
+          }
+          return num;
+        }),
+        2,
+      )[0];
       let items = [defaultIndex, memo];
-      _slicedToArray(react.useState(f121716), 2);
-      const node = react.useMemo(() => {
-        const obj = SettingBuilders;
-        const obj2 = { defaultIndex, settings: memo };
-        return obj.createSegmentedControl(obj2);
-      }, items);
+      const node = noop.useMemo(() => SettingBuilders.createSegmentedControl({ defaultIndex, settings: memo }), items);
       return closure_9(memo(defaultIndex[19]), { node });
     };
-const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx");
-
-export default tmp7;
-export const DiscordPermissionsPage = tmp5;
-export const ConnectedGamesPage = tmp6;
+export const DiscordPermissionsPage = tmp4;
+export const ConnectedGamesPage = tmp5;

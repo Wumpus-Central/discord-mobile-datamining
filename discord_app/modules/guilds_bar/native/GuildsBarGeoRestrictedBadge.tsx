@@ -1,25 +1,16 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04816_AssetRegistry.js";
-import LegacyTokens from "../../../design/migrations/native/LegacyTokens.tsx";
+import _modDef4816 from "../../../../_runtime/metro/04816__.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let style;
-
-let size;
-let size1;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { badgeImageContainer: size, badgeImage: size1 };
-size = {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = { badgeImageContainer: null, badgeImage: null };
+let size = {
   position: "absolute",
   bottom: -3,
   right: -3,
@@ -33,38 +24,40 @@ size = {
   alignItems: "center",
   overflow: "hidden",
 };
-createStyles = createStyles.createStyles;
-size1 = { height: 16, width: 16, opacity: LegacyTokens.DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
-let closure_5 = createStyles(obj);
-const memoResult = react.memo(
+obj.badgeImageContainer = size;
+const size1 = { height: 16, width: 16, opacity: fn(5627).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+obj.badgeImage = size1;
+let closure_5 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (style) => {
-        const obj = react2;
-        const cResult = obj.c(8);
+        const cResult = c.c(8);
         style = style.style;
         const tmp3 = closure_5();
         if (cResult[0] === style) {
-          let tmp4;
-          let tmp5;
           if (cResult[1] === tmp3.badgeImageContainer) {
-            tmp4 = cResult[2];
+            let tmp4 = cResult[2];
           }
           if (cResult[3] !== tmp3.badgeImage) {
-            FastImageDefault;
-            const tmp9 = <tmp8 source={AssetRegistryDefault} style={tmp3.badgeImage} />;
+            const obj2 = { source: _modDef4816, style: tmp3.badgeImage };
+            const tmp9 = jsx(FastImageDefault, { source: _modDef4816, style: tmp3.badgeImage });
             cResult[3] = tmp3.badgeImage;
             cResult[4] = tmp9;
-            tmp5 = tmp9;
+            let tmp5 = tmp9;
           } else {
             tmp5 = cResult[4];
           }
           if (cResult[5] === tmp4) {
-            let tmp10;
             if (cResult[6] === tmp5) {
-              tmp10 = cResult[7];
+              let tmp10 = cResult[7];
             }
             return tmp10;
           }
+          const obj3 = { style: tmp4, pointerEvents: "none", children: tmp5 };
           const tmp13 = (
             <View style={tmp4} pointerEvents="none">
               {tmp5}
@@ -82,19 +75,16 @@ const memoResult = react.memo(
         tmp4 = items;
       }
     : (style) => {
-        style = style.style;
         const tmp = closure_5();
-        const items = [tmp.badgeImageContainer, style];
-        ({ source: AssetRegistryDefault, style: tmp.badgeImage });
-        FastImageDefault;
+        const obj = { style: null, pointerEvents: "none", children: null };
+        const items = [tmp.badgeImageContainer, style.style];
+        obj.style = items;
+        const obj2 = { source: _modDef4816, style: tmp.badgeImage };
+        obj.children = jsx(FastImageDefault, { source: _modDef4816, style: tmp.badgeImage });
         return (
-          <View style={items} pointerEvents="none">
+          <View style={null} pointerEvents="none">
             {null}
           </View>
         );
       },
 );
-size = size_mod;
-const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx");
-
-export default memoResult;

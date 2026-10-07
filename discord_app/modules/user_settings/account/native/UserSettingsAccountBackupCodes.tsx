@@ -1,45 +1,32 @@
 // discord_app/modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
 import MFAActionCreatorsDefault from "../../../../actions/MFAActionCreators.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import MFAStore from "../../../../stores/MFAStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let code;
-
-let metroImportDefault;
-let metroRequire;
-let obj2;
-const ScrollView = react_native.ScrollView;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let obj = { generateCode: obj2 };
-obj2 = { color: nativeDefault.colors.TEXT_BRAND };
-let closure_8 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { generateCode: { color: nativeDefault.colors.TEXT_BRAND } };
+let closure_8 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (code) => {
-      let tmp4;
-      let tmp6;
-      let obj = code(576);
-      const cResult = obj.c(8);
+      const cResult = code(576).c(8);
       code = code.code;
       const showCheckMark = code.showCheckMark;
       if (cResult[0] !== code) {
         const fn = function t() {
-          const obj = ClipboardUtils;
-          obj.copy(code.replace(/[^a-zA-Z0-9]/g, ""));
-          const obj2 = ToastUtils;
-          const result = obj2.presentCopiedToClipboard();
+          ClipboardUtils.copy(code.replace(/[^a-zA-Z0-9]/g, ""));
+          const result = ToastUtils.presentCopiedToClipboard();
         };
         cResult[0] = code;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
@@ -50,21 +37,19 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== showCheckMark) {
         let tmp7 = null;
         if (showCheckMark) {
-          let obj2 = { color: nativeDefault.colors.TEXT_BRAND };
-          const CheckmarkSmallIcon = tmp(6635).CheckmarkSmallIcon;
-          tmp7 = closure_6(CheckmarkSmallIcon, obj2);
+          const obj2 = { color: nativeDefault.colors.TEXT_BRAND };
+          tmp7 = closure_6(tmp(6635).CheckmarkSmallIcon, obj2);
         }
         cResult[2] = showCheckMark;
         cResult[3] = tmp7;
-        tmp6 = tmp7;
+        let tmp6 = tmp7;
       } else {
         tmp6 = cResult[3];
       }
       if (cResult[4] === code) {
         if (cResult[5] === tmp5) {
-          let tmp10;
           if (cResult[6] === tmp6) {
-            tmp10 = cResult[7];
+            let tmp10 = cResult[7];
           }
           return tmp10;
         }
@@ -75,59 +60,37 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = tmp6;
       cResult[7] = tmp11;
       tmp10 = tmp11;
+      let obj = code(576);
     }
   : (code) => {
-      let tmp2Result;
       code = code.code;
       const showCheckMark = code.showCheckMark;
       const items = [code];
-      const callback = react.useCallback(() => {
-        const obj = ClipboardUtils;
-        obj.copy(code.replace(/[^a-zA-Z0-9]/g, ""));
-        const obj2 = ToastUtils;
-        const result = obj2.presentCopiedToClipboard();
+      const callback = noop.useCallback(() => {
+        ClipboardUtils.copy(code.replace(/[^a-zA-Z0-9]/g, ""));
+        const result = ToastUtils.presentCopiedToClipboard();
       }, items);
       let tmp5;
-      const TableRow = code(6000).TableRow;
-      const tmp3 = code;
       if (!showCheckMark) {
         tmp5 = callback;
       }
-      let obj = { onPress: tmp5, label: code, trailing: tmp2Result };
-      tmp2Result = null;
+      let obj = { onPress: tmp5, label: code, trailing: null };
+      let tmp2Result = null;
       if (showCheckMark) {
-        let obj2 = { color: nativeDefault.colors.TEXT_BRAND };
-        const CheckmarkSmallIcon = tmp3(6635).CheckmarkSmallIcon;
-        tmp2Result = closure_6(CheckmarkSmallIcon, obj2);
+        const obj2 = { color: nativeDefault.colors.TEXT_BRAND };
+        tmp2Result = closure_6(code(6635).CheckmarkSmallIcon, obj2);
       }
-      return closure_6(TableRow, obj);
+      obj.trailing = tmp2Result;
+      return closure_6(code(6000).TableRow, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj3 = { color: nativeDefault.colors.TEXT_BRAND };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let Stack;
-      let TableRow;
-      let Text;
-      let arr;
-      let headerLabel;
-      let intl2;
-      let intl3;
-      let intl4;
-      let items1;
-      let items2;
-      let items4;
-      let obj6;
-      let obj8;
-      let obj9;
-      let onGenerate;
-      let tmp11;
-      let tmp14;
-      let tmp8;
-      let tmp9;
-      let unusedCodes;
-      let usedCodes;
-      let obj = items1(576);
-      const cResult = obj.c(26);
+      const cResult = items1(576).c(26);
       ({ onGenerate, headerLabel } = arg0);
       if (cResult[0] !== headerLabel) {
         let formatResult = headerLabel;
@@ -137,12 +100,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = headerLabel;
         cResult[1] = formatResult;
-        arr = formatResult;
+        let arr = formatResult;
       } else {
         arr = cResult[1];
       }
-      const tmpResult = items1(4586);
-      const token = tmpResult.useToken(items2(587).modules.mobile.TABLE_ROW_PADDING);
+      const obj = items1(576);
+      const token = items1(4586).useToken(items2(587).modules.mobile.TABLE_ROW_PADDING);
       const tmp7 = closure_8();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MFAStore];
@@ -151,21 +114,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items;
         cResult[3] = fn;
-        tmp9 = fn;
-        tmp8 = items;
+        let tmp9 = fn;
+        let tmp8 = items;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult2 = items1(504);
-      const stateFromStores = tmpResult2.useStateFromStores(tmp8, tmp9);
+      const tmpResult = items1(4586);
+      const stateFromStores = items1(504).useStateFromStores(tmp8, tmp9);
       if (cResult[4] !== stateFromStores) {
         items1 = [];
         items2 = [];
         const item = stateFromStores.forEach((consumed) => {
-          let arr;
           if (consumed.consumed) {
-            arr = items1.push(consumed);
+            let arr = items1.push(consumed);
           } else {
             arr = items2.push(consumed);
           }
@@ -174,7 +136,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { usedCodes: items1, unusedCodes: items2 };
         cResult[4] = stateFromStores;
         cResult[5] = obj2;
-        tmp11 = obj2;
+        let tmp11 = obj2;
       } else {
         tmp11 = cResult[5];
       }
@@ -183,46 +145,42 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         class B {
           constructor() {
             return () => {
-              const obj = items2(closure_1_2[15]);
-              obj.clearBackupCodes();
+              items2(dependencyMap[15]).clearBackupCodes();
             };
           }
         }
         const items3 = [];
         cResult[6] = B;
         cResult[7] = items3;
-        tmp14 = items3;
+        let tmp14 = items3;
       } else {
         class B {
           constructor() {
             return () => {
-              const obj = items2(closure_1_2[15]);
-              obj.clearBackupCodes();
+              items2(dependencyMap[15]).clearBackupCodes();
             };
           }
         }
         tmp14 = cResult[7];
       }
-      const effect = react.useEffect(B, tmp14);
+      const effect = noop.useEffect(B, tmp14);
       if (cResult[8] !== token) {
         class B {
           constructor() {
             return () => {
-              const obj = items2(closure_1_2[15]);
-              obj.clearBackupCodes();
+              items2(dependencyMap[15]).clearBackupCodes();
             };
           }
         }
         tmp17[0] = token;
-        tmp17[1] = items2(587).space.PX_16;
+        tmp17[1] = tmp5(587).space.PX_16;
         cResult[8] = token;
         cResult[9] = tmp17;
       } else {
         class B {
           constructor() {
             return () => {
-              const obj = items2(closure_1_2[15]);
-              obj.clearBackupCodes();
+              items2(dependencyMap[15]).clearBackupCodes();
             };
           }
         }
@@ -231,24 +189,23 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         class B {
           constructor() {
             return () => {
-              const obj = items2(closure_1_2[15]);
-              obj.clearBackupCodes();
+              items2(dependencyMap[15]).clearBackupCodes();
             };
           }
         }
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           class F {
-            constructor(children, arg1) {
-              const obj = { variant: "text-sm/medium", children };
-              return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
             }
           }
           cResult[12] = F;
         } else {
           class F {
-            constructor(children, arg1) {
-              const obj = { variant: "text-sm/medium", children };
-              return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
             }
           }
         }
@@ -257,174 +214,151 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = mapped;
       } else {
         class F {
-          constructor(children, arg1) {
-            const obj = { variant: "text-sm/medium", children };
-            return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
+          constructor(arg0, arg1) {
+            obj = { variant: "text-sm/medium", children: arg0 };
+            return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
           }
         }
-      }
-      if (cResult[13] !== unusedCodes) {
-        class F {
-          constructor(children, arg1) {
-            const obj = { variant: "text-sm/medium", children };
-            return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
-          }
-        }
-        let tmp22 = unusedCodes.length > 0;
-        if (tmp22) {
+        if (cResult[13] !== unusedCodes) {
           class F {
-            constructor(children, arg1) {
-              const obj = { variant: "text-sm/medium", children };
-              return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
             }
           }
-          const obj3 = {
-            title: intl2.string(items1(1126).t.zdzyFo),
-            hasIcons: false,
-            children: unusedCodes.map((code, index) => {
-              const obj = { code: code.code, showCheckMark: false };
-              return closure_1_6(closure_1_9, obj, index);
-            }),
-          };
-          const TableRowGroup = tmp(6081).TableRowGroup;
-          intl2 = tmp(1126).intl;
-          tmp22 = closure_6(TableRowGroup, obj3);
-        }
-        cResult[13] = unusedCodes;
-        cResult[14] = tmp22;
-      } else {
-        class F {
-          constructor(children, arg1) {
-            const obj = { variant: "text-sm/medium", children };
-            return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
-          }
-        }
-      }
-      if (cResult[15] !== usedCodes) {
-        class F {
-          constructor(children, arg1) {
-            const obj = { variant: "text-sm/medium", children };
-            return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
-          }
-        }
-        let tmp24 = usedCodes.length > 0;
-        if (tmp24) {
-          class F {
-            constructor(children, arg1) {
-              const obj = { variant: "text-sm/medium", children };
-              return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
+          let tmp23 = unusedCodes.length > 0;
+          if (tmp23) {
+            class F {
+              constructor(arg0, arg1) {
+                obj = { variant: "text-sm/medium", children: arg0 };
+                return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
+              }
             }
+            const obj3 = { title: null, hasIcons: false, children: null };
+            const intl2 = tmp(1126).intl;
+            obj3.title = intl2.string(tmp(1126).t.zdzyFo);
+            obj3.children = unusedCodes.map((code, index) =>
+              closure_1_6(closure_1_9, { code: code.code, showCheckMark: false }, index),
+            );
+            tmp23 = closure_6(tmp(6081).TableRowGroup, obj3);
           }
-          const obj4 = {
-            title: intl3.string(items1(1126).t.FkFLDN),
-            hasIcons: false,
-            children: usedCodes.map((code, index) => {
-              const obj = { code: code.code, showCheckMark: true };
-              return closure_1_6(closure_1_9, obj, index);
-            }),
-          };
-          const TableRowGroup2 = tmp(6081).TableRowGroup;
-          intl3 = tmp(1126).intl;
-          tmp24 = closure_6(TableRowGroup2, obj4);
-        }
-        cResult[15] = usedCodes;
-        cResult[16] = tmp24;
-      } else {
-        class F {
-          constructor(children, arg1) {
-            const obj = { variant: "text-sm/medium", children };
-            return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
-          }
-        }
-      }
-      if (cResult[17] === onGenerate) {
-        class F {
-          constructor(children, arg1) {
-            const obj = { variant: "text-sm/medium", children };
-            return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
-          }
-        }
-        if (cResult[20] === tmp21) {
+          cResult[13] = unusedCodes;
+          cResult[14] = tmp23;
+        } else {
           class F {
-            constructor(children, arg1) {
-              const obj = { variant: "text-sm/medium", children };
-              return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
             }
           }
         }
-        const obj5 = { children: closure_7(Stack, obj6) };
-        obj6 = { spacing: items2(587).space.PX_24, style: tmp17, children: items4 };
-        Stack = tmp(5600).Stack;
-        items4 = [tmp18, tmp21, tmp23, tmp25];
-        cResult[20] = tmp21;
-        cResult[21] = tmp23;
-        cResult[22] = tmp25;
-        cResult[23] = tmp17;
-        cResult[24] = tmp18;
-        cResult[25] = closure_6(ScrollView, obj5);
-        const tmp31 = closure_6(ScrollView, obj5);
-      }
-      let tmp26 = null !== onGenerate;
-      if (tmp26) {
-        class F {
-          constructor(children, arg1) {
-            const obj = { variant: "text-sm/medium", children };
-            return closure_1_6(items1(dependencyMap[16]).Text, obj, arg1);
+        if (cResult[15] !== usedCodes) {
+          class F {
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
+            }
+          }
+          let tmp25 = usedCodes.length > 0;
+          if (tmp25) {
+            class F {
+              constructor(arg0, arg1) {
+                obj = { variant: "text-sm/medium", children: arg0 };
+                return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
+              }
+            }
+            const obj4 = { title: null, hasIcons: false, children: null };
+            const intl3 = tmp(1126).intl;
+            obj4.title = intl3.string(tmp(1126).t.FkFLDN);
+            obj4.children = usedCodes.map((code, index) =>
+              closure_1_6(closure_1_9, { code: code.code, showCheckMark: true }, index),
+            );
+            tmp25 = closure_6(tmp(6081).TableRowGroup, obj4);
+          }
+          cResult[15] = usedCodes;
+          cResult[16] = tmp25;
+        } else {
+          class F {
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
+            }
           }
         }
-        const obj7 = { hasIcons: false, children: closure_6(TableRow, obj8) };
-        const TableRowGroup3 = tmp(6081).TableRowGroup;
-        obj8 = {
-          label: closure_6(Text, obj9),
-          onPress() {
+        if (cResult[17] === onGenerate) {
+          class F {
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
+            }
+          }
+          if (cResult[20] === tmp22) {
+            class F {
+              constructor(arg0, arg1) {
+                obj = { variant: "text-sm/medium", children: arg0 };
+                return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
+              }
+            }
+          }
+          const obj5 = { children: null };
+          const obj6 = { spacing: tmp5(587).space.PX_24, style: tmp17, children: null };
+          const items4 = [tmp18, tmp22, tmp24, tmp26];
+          obj6.children = items4;
+          obj5.children = closure_7(tmp(5600).Stack, obj6);
+          const tmp33 = closure_6(ScrollView, obj5);
+          cResult[20] = tmp22;
+          cResult[21] = tmp24;
+          cResult[22] = tmp26;
+          cResult[23] = tmp17;
+          cResult[24] = tmp18;
+          cResult[25] = tmp33;
+        }
+        let tmp28 = null !== onGenerate;
+        if (tmp28) {
+          class F {
+            constructor(arg0, arg1) {
+              obj = { variant: "text-sm/medium", children: arg0 };
+              return closure_1_6(closure_0(closure_1_2[16]).Text, obj, arg1);
+            }
+          }
+          const obj7 = { hasIcons: false, children: null };
+          const obj8 = { label: null, onPress: null };
+          const obj9 = { variant: "text-md/semibold", style: tmp7.generateCode, children: null };
+          const intl4 = tmp(1126).intl;
+          obj9.children = intl4.string(tmp(1126).t.RIThUu);
+          obj8.label = closure_6(tmp(4892).Text, obj9);
+          obj8.onPress = function onPress() {
             const verificationKey = MFAStore.getVerificationKey();
-            const obj = items2(dependencyMap[15]);
-            const result = obj.confirmViewBackupCodes(verificationKey, true);
-          },
-        };
-        TableRow = tmp(6000).TableRow;
-        obj9 = { variant: "text-md/semibold", style: tmp7.generateCode, children: intl4.string(items1(1126).t.RIThUu) };
-        Text = tmp(4892).Text;
-        intl4 = tmp(1126).intl;
-        tmp26 = closure_6(TableRowGroup3, obj7);
+            const result = items2(14591).confirmViewBackupCodes(verificationKey, true);
+          };
+          obj7.children = closure_6(tmp(6000).TableRow, obj8);
+          tmp28 = closure_6(tmp(6081).TableRowGroup, obj7);
+        }
+        cResult[17] = onGenerate;
+        cResult[18] = tmp7;
+        cResult[19] = tmp28;
       }
-      cResult[17] = onGenerate;
-      cResult[18] = tmp7;
-      cResult[19] = tmp26;
+      const tmpResult2 = items1(504);
     }
   : (headerLabel) => {
-      let TableRow;
-      let Text;
-      let intl2;
-      let intl3;
-      let intl4;
-      let items2;
-      let obj8;
-      let obj9;
-      let stateFromStores;
-      let unusedCodes;
-      let usedCodes;
       headerLabel = headerLabel.headerLabel;
-      const onGenerate = headerLabel.onGenerate;
       if (headerLabel === undefined) {
         const intl = stateFromStores(1126).intl;
         headerLabel = intl.format(stateFromStores(1126).t.OhmvYt, {});
       }
       stateFromStores = undefined;
-      let obj = stateFromStores(4586);
-      const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
-      const items = [MFAStore];
+      const token = stateFromStores(4586).useToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+      const obj = stateFromStores(4586);
       const tmp6 = closure_8();
-      const obj2 = stateFromStores(504);
-      stateFromStores = obj2.useStateFromStores(items, () => MFAStore.getBackupCodes());
+      const items = [MFAStore];
+      stateFromStores = stateFromStores(504).useStateFromStores(items, () => MFAStore.getBackupCodes());
       const items1 = [stateFromStores];
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         const usedCodes = [];
         const unusedCodes = [];
         const item = stateFromStores.forEach((consumed) => {
-          let arr;
           if (consumed.consumed) {
-            arr = usedCodes.push(consumed);
+            let arr = usedCodes.push(consumed);
           } else {
             arr = unusedCodes.push(consumed);
           }
@@ -433,81 +367,61 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return { usedCodes, unusedCodes };
       }, items1);
       ({ usedCodes, unusedCodes } = memo);
-      const effect = react.useEffect(
+      const effect = noop.useEffect(
         () => () => {
-          const obj = closure_1_1(closure_1_2[15]);
-          obj.clearBackupCodes();
+          closure_1_1(dependencyMap[15]).clearBackupCodes();
         },
         [],
       );
-      const obj3 = {
-        spacing: nativeDefault.space.PX_24,
-        style: { paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 },
-        children: items2,
-      };
-      const Stack = stateFromStores(5600).Stack;
-      items2 = [, , ,];
-      ({ paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 });
-      items2[0] = headerLabel.map((children, index) => {
-        const obj = { variant: "text-sm/medium", children };
-        return closure_1_6(stateFromStores(dependencyMap[16]).Text, obj, index);
-      });
+      const obj3 = { spacing: nativeDefault.space.PX_24, style: null, children: null };
+      const obj2 = stateFromStores(504);
+      obj3.style = { paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 };
+      const items2 = [
+        headerLabel.map((children, index) =>
+          closure_1_6(stateFromStores(4892).Text, { variant: "text-sm/medium", children }, index),
+        ),
+        ,
+        ,
+      ];
       let tmp10Result = unusedCodes.length > 0;
       if (tmp10Result) {
-        const obj5 = {
-          title: intl2.string(stateFromStores(1126).t.zdzyFo),
-          hasIcons: false,
-          children: unusedCodes.map((code, index) => {
-            const obj = { code: code.code, showCheckMark: false };
-            return closure_1_6(closure_1_9, obj, index);
-          }),
-        };
-        const TableRowGroup = tmp3(6081).TableRowGroup;
-        intl2 = tmp3(1126).intl;
-        tmp10Result = closure_6(TableRowGroup, obj5);
+        const obj5 = { title: null, hasIcons: false, children: null };
+        const intl2 = tmp3(1126).intl;
+        obj5.title = intl2.string(tmp3(1126).t.zdzyFo);
+        obj5.children = unusedCodes.map((code, index) =>
+          closure_1_6(closure_1_9, { code: code.code, showCheckMark: false }, index),
+        );
+        tmp10Result = closure_6(tmp3(6081).TableRowGroup, obj5);
       }
       items2[1] = tmp10Result;
       let tmp10Result3 = usedCodes.length > 0;
       if (tmp10Result3) {
-        const obj6 = {
-          title: intl3.string(stateFromStores(1126).t.FkFLDN),
-          hasIcons: false,
-          children: usedCodes.map((code, index) => {
-            const obj = { code: code.code, showCheckMark: true };
-            return closure_1_6(closure_1_9, obj, index);
-          }),
-        };
-        const TableRowGroup2 = tmp3(6081).TableRowGroup;
-        intl3 = tmp3(1126).intl;
-        tmp10Result3 = closure_6(TableRowGroup2, obj6);
+        const obj6 = { title: null, hasIcons: false, children: null };
+        const intl3 = tmp3(1126).intl;
+        obj6.title = intl3.string(tmp3(1126).t.FkFLDN);
+        obj6.children = usedCodes.map((code, index) =>
+          closure_1_6(closure_1_9, { code: code.code, showCheckMark: true }, index),
+        );
+        tmp10Result3 = closure_6(tmp3(6081).TableRowGroup, obj6);
       }
       items2[2] = tmp10Result3;
-      let tmp10Result4 = null !== onGenerate;
+      let tmp10Result4 = null !== headerLabel.onGenerate;
       if (tmp10Result4) {
-        const obj7 = { hasIcons: false, children: closure_6(TableRow, obj8) };
-        const TableRowGroup3 = tmp3(6081).TableRowGroup;
-        obj8 = {
-          label: closure_6(Text, obj9),
-          onPress() {
-            const verificationKey = MFAStore.getVerificationKey();
-            const obj = MFAActionCreatorsDefault;
-            const result = obj.confirmViewBackupCodes(verificationKey, true);
-          },
+        const obj7 = { hasIcons: false, children: null };
+        const obj8 = { label: null, onPress: null };
+        const obj9 = { variant: "text-md/semibold", style: tmp6.generateCode, children: null };
+        const intl4 = tmp3(1126).intl;
+        obj9.children = intl4.string(tmp3(1126).t.RIThUu);
+        obj8.label = closure_6(tmp3(4892).Text, obj9);
+        obj8.onPress = function onPress() {
+          const verificationKey = MFAStore.getVerificationKey();
+          const result = MFAActionCreatorsDefault.confirmViewBackupCodes(verificationKey, true);
         };
-        TableRow = tmp3(6000).TableRow;
-        obj9 = {
-          variant: "text-md/semibold",
-          style: tmp6.generateCode,
-          children: intl4.string(stateFromStores(1126).t.RIThUu),
-        };
-        Text = tmp3(4892).Text;
-        intl4 = tmp3(1126).intl;
-        tmp10Result4 = closure_6(TableRowGroup3, obj7);
+        obj7.children = closure_6(tmp3(6000).TableRow, obj8);
+        tmp10Result4 = closure_6(tmp3(6081).TableRowGroup, obj7);
       }
+      const obj4 = { paddingHorizontal: token, paddingTop: nativeDefault.space.PX_16 };
       items2[3] = tmp10Result4;
-      const obj10 = { children: closure_7(Stack, obj3) };
-      return closure_6(ScrollView, obj10);
+      obj3.children = items2;
+      return closure_6(ScrollView, { children: closure_7(stateFromStores(5600).Stack, obj3) });
     };
-let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx");
-
-export default tmp3;

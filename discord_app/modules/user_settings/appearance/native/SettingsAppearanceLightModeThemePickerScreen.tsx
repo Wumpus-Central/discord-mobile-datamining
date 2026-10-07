@@ -1,38 +1,44 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl2 from "../../../../intl/index.native.tsx";
-import ThemeConstants from "../../ThemeConstants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const SystemTheme = ThemeConstants.SystemTheme;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const SystemTheme = fn(1196).SystemTheme;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      const obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        SettingsAppearanceThemePickerScreenDefault;
-        const intl = intl2.intl;
-        const tmp9 = <tmp7 mode={SystemTheme.LIGHT} themeSelector="nitro" headerTitle={intl.string(intl2.t.NoFvjZ)} />;
+        const obj2 = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };
+        const intl = util.intl;
+        obj2.headerTitle = intl.string(util.t.NoFvjZ);
+        const tmp9 = jsx(SettingsAppearanceThemePickerScreenDefault, {
+          mode: SystemTheme.LIGHT,
+          themeSelector: "nitro",
+          headerTitle: null,
+        });
         cResult[0] = tmp9;
-        first = tmp9;
+        let first = tmp9;
       } else {
         first = cResult[0];
       }
       return first;
     }
   : () => {
-      SettingsAppearanceThemePickerScreenDefault;
-      const intl = intl2.intl;
-      return <tmp mode={SystemTheme.LIGHT} themeSelector="nitro" headerTitle={intl.string(intl2.t.NoFvjZ)} />;
+      const obj = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };
+      const intl = util.intl;
+      obj.headerTitle = intl.string(util.t.NoFvjZ);
+      return jsx(SettingsAppearanceThemePickerScreenDefault, {
+        mode: SystemTheme.LIGHT,
+        themeSelector: "nitro",
+        headerTitle: null,
+      });
     };
-const result = size.fileFinishedImporting(
-  "modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx",
-);
-
-export default tmp3;

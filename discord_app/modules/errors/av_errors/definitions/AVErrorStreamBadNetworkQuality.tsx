@@ -1,22 +1,22 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx
-import Constants from "../../../../Constants.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import AVError from "../AVError.tsx";
 import AVErrorContext from "../AVErrorContext.tsx";
 import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const RTCConnectionQuality = Constants.RTCConnectionQuality;
-let obj = {
+require = fn;
+const RTCConnectionQuality = fn(1085).RTCConnectionQuality;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
+
+export const AVErrorStreamBadNetworkQualityDefinition = {
   getActiveErrors() {
-    let quality;
     const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
     const mapped = allActiveStreamKeys.map((item) => {
       let tmp = null;
       if (quality.getQuality(item) === constants.BAD) {
         const obj = { type: AVError.AVError.STREAM_BAD_NETWORK_QUALITY };
-        const obj2 = AVErrorContext;
-        const merged = Object.assign(obj2.getStreamErrorContext(item));
+        const merged = Object.assign(AVErrorContext.getStreamErrorContext(item));
         tmp = obj;
       }
       return tmp;
@@ -27,6 +27,3 @@ let obj = {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
   },
 };
-const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
-
-export const AVErrorStreamBadNetworkQualityDefinition = obj;

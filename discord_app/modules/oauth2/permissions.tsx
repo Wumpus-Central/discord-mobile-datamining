@@ -1,62 +1,9 @@
 // discord_app/modules/oauth2/permissions.tsx
 import Constants from "../../Constants.tsx";
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import intl2 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let ADD_REACTIONS;
-let ADMINISTRATOR;
-let ATTACH_FILES;
-let BAN_MEMBERS;
-let BYPASS_SLOWMODE;
-let CHANGE_NICKNAME;
-let CONNECT;
-let CREATE_EVENTS;
-let CREATE_GUILD_EXPRESSIONS;
-let CREATE_INSTANT_INVITE;
-let CREATE_PRIVATE_THREADS;
-let CREATE_PUBLIC_THREADS;
-let DEAFEN_MEMBERS;
-let EMBED_LINKS;
-let KICK_MEMBERS;
-let MANAGE_CHANNELS;
-let MANAGE_EVENTS;
-let MANAGE_GUILD;
-let MANAGE_GUILD_EXPRESSIONS;
-let MANAGE_MESSAGES;
-let MANAGE_NICKNAMES;
-let MANAGE_OFFICIAL_MESSAGES;
-let MANAGE_ROLES;
-let MANAGE_THREADS;
-let MANAGE_WEBHOOKS;
-let MENTION_EVERYONE;
-let MODERATE_MEMBERS;
-let MOVE_MEMBERS;
-let MUTE_MEMBERS;
-let PIN_MESSAGES;
-let PRIORITY_SPEAKER;
-let READ_MESSAGE_HISTORY;
-let REQUEST_TO_SPEAK;
-let SEND_MESSAGES;
-let SEND_MESSAGES_IN_THREADS;
-let SEND_POLLS;
-let SEND_TTS_MESSAGES;
-let SEND_VOICE_MESSAGES;
-let SET_VOICE_CHANNEL_STATUS;
-let SPEAK;
-let STREAM;
-let USE_APPLICATION_COMMANDS;
-let USE_EMBEDDED_ACTIVITIES;
-let USE_EXTERNAL_APPS;
-let USE_EXTERNAL_EMOJIS;
-let USE_EXTERNAL_SOUNDS;
-let USE_EXTERNAL_STICKERS;
-let USE_SOUNDBOARD;
-let USE_VAD;
-let VIEW_AUDIT_LOG;
-let VIEW_CHANNEL;
-let VIEW_CREATOR_MONETIZATION_ANALYTICS;
-let VIEW_GUILD_ANALYTICS;
 const Permissions = Constants.Permissions;
 const items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
 ({
@@ -114,218 +61,218 @@ const items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,
   USE_EXTERNAL_SOUNDS: arr[51],
   SET_VOICE_CHANNEL_STATUS: arr[52],
 } = Permissions);
-let obj = {
+const obj = {
   [ADMINISTRATOR.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.PGvZqX);
+    const intl = util.intl;
+    return intl.string(util.t.PGvZqX);
   },
   [MANAGE_GUILD.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.QZRcfO);
+    const intl = util.intl;
+    return intl.string(util.t.QZRcfO);
   },
   [MANAGE_ROLES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["C8d+oG"]);
+    const intl = util.intl;
+    return intl.string(util.t["C8d+oG"]);
   },
   [MANAGE_CHANNELS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["9qLtWs"]);
+    const intl = util.intl;
+    return intl.string(util.t["9qLtWs"]);
   },
   [KICK_MEMBERS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.pBNv6i);
+    const intl = util.intl;
+    return intl.string(util.t.pBNv6i);
   },
   [BAN_MEMBERS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.oTBA7N);
+    const intl = util.intl;
+    return intl.string(util.t.oTBA7N);
   },
   [CREATE_INSTANT_INVITE.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.zJrgTG);
+    const intl = util.intl;
+    return intl.string(util.t.zJrgTG);
   },
   [MANAGE_NICKNAMES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["t+Ct5x"]);
+    const intl = util.intl;
+    return intl.string(util.t["t+Ct5x"]);
   },
   [CHANGE_NICKNAME.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.dilOF6);
+    const intl = util.intl;
+    return intl.string(util.t.dilOF6);
   },
   [MANAGE_GUILD_EXPRESSIONS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.bbuXIn);
+    const intl = util.intl;
+    return intl.string(util.t.bbuXIn);
   },
   [CREATE_GUILD_EXPRESSIONS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.HarVuP);
+    const intl = util.intl;
+    return intl.string(util.t.HarVuP);
   },
   [MANAGE_WEBHOOKS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["/ADKmM"]);
+    const intl = util.intl;
+    return intl.string(util.t["/ADKmM"]);
   },
   [VIEW_AUDIT_LOG.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.fZgLpA);
+    const intl = util.intl;
+    return intl.string(util.t.fZgLpA);
   },
   [VIEW_CHANNEL.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.uV83yi);
+    const intl = util.intl;
+    return intl.string(util.t.uV83yi);
   },
   [SEND_MESSAGES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.T32rkC);
+    const intl = util.intl;
+    return intl.string(util.t.T32rkC);
   },
   [SEND_TTS_MESSAGES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.Mg7bku);
+    const intl = util.intl;
+    return intl.string(util.t.Mg7bku);
   },
   [MANAGE_MESSAGES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["6lU9xM"]);
+    const intl = util.intl;
+    return intl.string(util.t["6lU9xM"]);
   },
   [EMBED_LINKS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["969dEL"]);
+    const intl = util.intl;
+    return intl.string(util.t["969dEL"]);
   },
   [ATTACH_FILES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["3AS4UM"]);
+    const intl = util.intl;
+    return intl.string(util.t["3AS4UM"]);
   },
   [READ_MESSAGE_HISTORY.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.l9ufaR);
+    const intl = util.intl;
+    return intl.string(util.t.l9ufaR);
   },
   [MENTION_EVERYONE.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.Y78KGC);
+    const intl = util.intl;
+    return intl.string(util.t.Y78KGC);
   },
   [ADD_REACTIONS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.yEoJAr);
+    const intl = util.intl;
+    return intl.string(util.t.yEoJAr);
   },
   [USE_EXTERNAL_EMOJIS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.BpBGZU);
+    const intl = util.intl;
+    return intl.string(util.t.BpBGZU);
   },
   [USE_EXTERNAL_STICKERS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["UeRs+b"]);
+    const intl = util.intl;
+    return intl.string(util.t["UeRs+b"]);
   },
   [USE_APPLICATION_COMMANDS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.shbR1a);
+    const intl = util.intl;
+    return intl.string(util.t.shbR1a);
   },
   [SEND_VOICE_MESSAGES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["+8GStU"]);
+    const intl = util.intl;
+    return intl.string(util.t["+8GStU"]);
   },
   [CONNECT.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.S0W8Z5);
+    const intl = util.intl;
+    return intl.string(util.t.S0W8Z5);
   },
   [SPEAK.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["8w1tIR"]);
+    const intl = util.intl;
+    return intl.string(util.t["8w1tIR"]);
   },
   [MUTE_MEMBERS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["8EI30/"]);
+    const intl = util.intl;
+    return intl.string(util.t["8EI30/"]);
   },
   [DEAFEN_MEMBERS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["9L47Fr"]);
+    const intl = util.intl;
+    return intl.string(util.t["9L47Fr"]);
   },
   [MOVE_MEMBERS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.YtjJPQ);
+    const intl = util.intl;
+    return intl.string(util.t.YtjJPQ);
   },
   [USE_VAD.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["08zAV7"]);
+    const intl = util.intl;
+    return intl.string(util.t["08zAV7"]);
   },
   [PRIORITY_SPEAKER.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.BVK71i);
+    const intl = util.intl;
+    return intl.string(util.t.BVK71i);
   },
   [CREATE_PUBLIC_THREADS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["25rKnX"]);
+    const intl = util.intl;
+    return intl.string(util.t["25rKnX"]);
   },
   [CREATE_PRIVATE_THREADS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.QwbTSa);
+    const intl = util.intl;
+    return intl.string(util.t.QwbTSa);
   },
   [SEND_MESSAGES_IN_THREADS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.fTE74g);
+    const intl = util.intl;
+    return intl.string(util.t.fTE74g);
   },
   [MANAGE_THREADS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.kEqgr7);
+    const intl = util.intl;
+    return intl.string(util.t.kEqgr7);
   },
   [MANAGE_EVENTS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.HIgA5a);
+    const intl = util.intl;
+    return intl.string(util.t.HIgA5a);
   },
   [CREATE_EVENTS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.qyjZua);
+    const intl = util.intl;
+    return intl.string(util.t.qyjZua);
   },
   [MODERATE_MEMBERS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["7DgVBr"]);
+    const intl = util.intl;
+    return intl.string(util.t["7DgVBr"]);
   },
   [REQUEST_TO_SPEAK.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["5kicT2"]);
+    const intl = util.intl;
+    return intl.string(util.t["5kicT2"]);
   },
   [VIEW_GUILD_ANALYTICS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["rQJBE/"]);
+    const intl = util.intl;
+    return intl.string(util.t["rQJBE/"]);
   },
   [VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t["0lTLTv"]);
+    const intl = util.intl;
+    return intl.string(util.t["0lTLTv"]);
   },
   [STREAM.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.FlNoSV);
+    const intl = util.intl;
+    return intl.string(util.t.FlNoSV);
   },
   [USE_EMBEDDED_ACTIVITIES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.rLSGeh);
+    const intl = util.intl;
+    return intl.string(util.t.rLSGeh);
   },
   [USE_SOUNDBOARD.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.Bco7NG);
+    const intl = util.intl;
+    return intl.string(util.t.Bco7NG);
   },
   [USE_EXTERNAL_SOUNDS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.pwaVJ6);
+    const intl = util.intl;
+    return intl.string(util.t.pwaVJ6);
   },
   [SET_VOICE_CHANNEL_STATUS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.VBwkUf);
+    const intl = util.intl;
+    return intl.string(util.t.VBwkUf);
   },
   [SEND_POLLS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.UMQ7Ww);
+    const intl = util.intl;
+    return intl.string(util.t.UMQ7Ww);
   },
   [USE_EXTERNAL_APPS.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.TtA5rK);
+    const intl = util.intl;
+    return intl.string(util.t.TtA5rK);
   },
   [PIN_MESSAGES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.Y5BI39);
+    const intl = util.intl;
+    return intl.string(util.t.Y5BI39);
   },
   [BYPASS_SLOWMODE.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.kqcjeV);
+    const intl = util.intl;
+    return intl.string(util.t.kqcjeV);
   },
   [MANAGE_OFFICIAL_MESSAGES.toString()]: () => {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.Aj9ruN);
+    const intl = util.intl;
+    return intl.string(util.t.Aj9ruN);
   },
 };
 ({
@@ -387,11 +334,13 @@ const result = size.fileFinishedImporting("modules/oauth2/permissions.tsx");
 
 export const OrderedPermissions = items;
 export const containsDisallowedPermission = function containsDisallowedPermission(memo4) {
-  let closure_0 = memo4;
+  closure_0 = memo4;
   const values = Object.values(Permissions);
   return values.some((item) => {
-    obj = BigFlagUtilsAll;
-    const hasItem = obj.has(memo4, item) && !items.includes(item);
+    let hasItem = BigFlagUtilsAll.has(closure_0, item);
+    if (hasItem) {
+      hasItem = !items.includes(item);
+    }
     return hasItem;
   });
 };
@@ -400,8 +349,6 @@ export const getPermissionName = function getPermissionName(item) {
   if (null == tmp) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const self = this;
-    const self2 = this;
     const error = new Error("Unknown permission. Did you provide a _single_ bit flag? Perm: " + item);
     throw error;
   } else {

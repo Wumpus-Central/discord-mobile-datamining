@@ -1,41 +1,34 @@
 // discord_app/design/components/Illustration/native/redesign/generated/InvalidLink.tsx
-import react_native from "../../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../shared.tsx";
 import _mod7916 from "../../index.tsx";
-import react from "../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
-function dark() {
-  return require("AssetRegistry");
-}
-function darker() {
-  return require("AssetRegistry");
-}
-function light() {
-  return require("AssetRegistry");
-}
-const Image = react_native.Image;
-const jsx = Fragment.jsx;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp4;
-      const obj = react2;
-      const cResult = obj.c(2);
-      const obj2 = shared;
-      const theme = obj2.useThemeContext().theme;
+      const cResult = c.c(2);
+      const theme = shared.useThemeContext().theme;
       if (cResult[0] !== theme) {
-        const obj3 = { dark, darker, light };
-        const tmpResult = _mod7916;
-        const illustrationSource = tmpResult.getIllustrationSource(theme, obj3);
+        const obj3 = {
+          dark() {
+            return require("../../../../../../../_runtime/metro/11126__.js");
+          },
+          darker() {
+            return require("../../../../../../../_runtime/metro/11421__.js");
+          },
+          light() {
+            return require("../../../../../../../_runtime/metro/11127__.js");
+          },
+        };
+        const illustrationSource = _mod7916.getIllustrationSource(theme, obj3);
         cResult[0] = theme;
         cResult[1] = illustrationSource;
-        tmp4 = illustrationSource;
+        let tmp4 = illustrationSource;
+        const tmpResult = _mod7916;
       } else {
         tmp4 = cResult[1];
       }
@@ -43,44 +36,60 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const obj = shared;
-      const theme = obj.useThemeContext().theme;
-      const obj2 = _mod7916;
-      const obj3 = { dark, darker, light };
-      return obj2.getIllustrationSource(theme, obj3);
+      return _mod7916.getIllustrationSource(obj.useThemeContext().theme, {
+        dark() {
+          return require("../../../../../../../_runtime/metro/11126__.js");
+        },
+        darker() {
+          return require("../../../../../../../_runtime/metro/11421__.js");
+        },
+        light() {
+          return require("../../../../../../../_runtime/metro/11127__.js");
+        },
+      });
     };
 let closure_4 = tmp3;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+function getInvalidLinkSource(theme) {
+  return _mod7916.getIllustrationSource(theme, {
+    dark() {
+      return require("../../../../../../../_runtime/metro/11126__.js");
+    },
+    darker() {
+      return require("../../../../../../../_runtime/metro/11421__.js");
+    },
+    light() {
+      return require("../../../../../../../_runtime/metro/11127__.js");
+    },
+  });
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/InvalidLink.tsx");
+
+export { getInvalidLinkSource };
+export const useInvalidLinkSource = tmp3;
+export const InvalidLink = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      const obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       const tmp2 = closure_4();
       if (cResult[0] === arg0) {
-        let tmp3;
         if (cResult[1] === tmp2) {
-          tmp3 = cResult[2];
+          let tmp3 = cResult[2];
         }
         return tmp3;
       }
+      const obj2 = {};
       const merged = Object.assign(arg0);
-      const tmp5 = <Image source={tmp2} />;
+      obj2.source = tmp2;
+      const tmp5 = <Image />;
       cResult[0] = arg0;
       cResult[1] = tmp2;
       cResult[2] = tmp5;
       tmp3 = tmp5;
     }
   : (arg0) => {
-      const tmp = closure_4();
+      const obj = {};
       const merged = Object.assign(arg0);
-      return <Image source={tmp} />;
+      obj.source = closure_4();
+      return <Image />;
     };
-function getInvalidLinkSource(theme) {
-  const obj = _mod7916;
-  const obj2 = { dark, darker, light };
-  return obj.getIllustrationSource(theme, obj2);
-}
-const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/InvalidLink.tsx");
-
-export { getInvalidLinkSource };
-export const useInvalidLinkSource = tmp3;
-export const InvalidLink = tmp4;

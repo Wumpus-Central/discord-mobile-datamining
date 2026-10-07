@@ -4,15 +4,13 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
-import react_native from "SessionForegroundUtils.native.tsx";
+import SessionForegroundUtils from "SessionForegroundUtils.native.tsx";
 import SessionAdGenerator from "SessionAdGenerator.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
-import Constants from "../../Constants.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let closure_4;
-let hasOwnProperty;
+require = fn;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, AppStates: hasOwnProperty } = Constants);
 const ad = "ad";
 let token = AuthenticationStore.getToken();
@@ -22,31 +20,30 @@ let closure_8 = {
   WINDOW_FOCUS: "WINDOW_FOCUS",
   APP_STATE_UPDATE: "APP_STATE_UPDATE",
 };
-class SessionAdManager extends LifecycleManager {
+class SessionAdManager extends tmp3 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    require = applyArgumentsResult;
-    let obj = react_native;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
+    obj = closure_0(closure_2[3]);
     applyArgumentsResult.focusedOrForegrounded = obj.isForegrounded();
-    const interval = new Timers.Interval();
+    interval = new closure_0(closure_2[4]).Interval();
     applyArgumentsResult.heartbeatInterval = interval;
     applyArgumentsResult.schedulerStarted = false;
     applyArgumentsResult.lastHeartbeatTimestamp = 0;
     applyArgumentsResult.maybeStartHeartbeat = function maybeStartHeartbeat() {
-      const heartbeatInterval = require.heartbeatInterval;
+      const heartbeatInterval = applyArgumentsResult.heartbeatInterval;
       if (!heartbeatInterval.isStarted()) {
-        require.trackHeartbeat();
-        const heartbeatInterval2 = require.heartbeatInterval;
-        heartbeatInterval2.start(5 * DurationsDefault.Millis.MINUTE, require.trackHeartbeat);
+        applyArgumentsResult.trackHeartbeat();
+        const heartbeatInterval2 = applyArgumentsResult.heartbeatInterval;
+        heartbeatInterval2.start(5 * DurationsDefault.Millis.MINUTE, applyArgumentsResult.trackHeartbeat);
       }
     };
     applyArgumentsResult.startAnalyticHeartbeat = function startAnalyticHeartbeat() {
-      if (!require.schedulerStarted) {
-        require.schedulerStarted = true;
+      if (!applyArgumentsResult.schedulerStarted) {
+        applyArgumentsResult.schedulerStarted = true;
         const obj3 = { category: ad, message: "Starting ad session heartbeat" };
-        const obj2 = SentryUtilsDefault;
-        obj2.addBreadcrumb(obj3);
-        require.maybeStartHeartbeat();
+        SentryUtilsDefault.addBreadcrumb(obj3);
+        applyArgumentsResult.maybeStartHeartbeat();
       }
     };
     applyArgumentsResult.trackHeartbeat = function trackHeartbeat() {
@@ -54,127 +51,111 @@ class SessionAdManager extends LifecycleManager {
       if (arg0 === undefined) {
         flag = false;
       }
-      if (!require.schedulerStarted) {
+      if (!applyArgumentsResult.schedulerStarted) {
         if (!flag) {
           const obj2 = { category: ad, message: "Ad heartbeat called but scheduler not started" };
-          const obj = SentryUtilsDefault;
-          obj.addBreadcrumb(obj2);
-          const heartbeatInterval = require.heartbeatInterval;
+          SentryUtilsDefault.addBreadcrumb(obj2);
+          const heartbeatInterval = applyArgumentsResult.heartbeatInterval;
           heartbeatInterval.stop();
         }
       }
       const nowResult = performance.now();
-      const diff = nowResult - require.lastHeartbeatTimestamp;
-      const obj3 = SessionAdGenerator;
-      const orRefreshAdSession = obj3.getOrRefreshAdSession();
-      const obj4 = AnalyticsUtilsDefault;
+      const diff = nowResult - applyArgumentsResult.lastHeartbeatTimestamp;
+      const orRefreshAdSession = SessionAdGenerator.getOrRefreshAdSession();
+      AnalyticsUtilsDefault.track(constants.CLIENT_AD_HEARTBEAT, {
+        client_ad_session_id: orRefreshAdSession.uuid,
+        client_heartbeat_initialization_timestamp: orRefreshAdSession.createdAtTimestamp,
+        client_heartbeat_version: 3,
+      });
+      applyArgumentsResult.lastHeartbeatTimestamp = nowResult;
       const obj5 = {
         client_ad_session_id: orRefreshAdSession.uuid,
         client_heartbeat_initialization_timestamp: orRefreshAdSession.createdAtTimestamp,
         client_heartbeat_version: 3,
       };
-      obj4.track(constants.CLIENT_AD_HEARTBEAT, obj5);
-      require.lastHeartbeatTimestamp = nowResult;
     };
     applyArgumentsResult.stopAnalyticHeartbeat = function stopAnalyticHeartbeat() {
-      let DEFAULT;
       if (DEFAULT === undefined) {
         DEFAULT = constants.DEFAULT;
       }
-      if (require.schedulerStarted) {
-        require.schedulerStarted = false;
-        require.lastHeartbeatTimestamp = 0;
+      if (applyArgumentsResult.schedulerStarted) {
+        applyArgumentsResult.schedulerStarted = false;
+        applyArgumentsResult.lastHeartbeatTimestamp = 0;
+        const obj2 = { category: ad, message: null };
         const _HermesInternal = HermesInternal;
-        const obj = { category: ad, message: "Stopping ad session heartbeat: " + DEFAULT };
-        const addBreadcrumb = SentryUtilsDefault.addBreadcrumb;
-        SentryUtilsDefault;
-        addBreadcrumb(obj);
-        const heartbeatInterval = require.heartbeatInterval;
+        obj2.message = "Stopping ad session heartbeat: " + DEFAULT;
+        SentryUtilsDefault.addBreadcrumb(obj2);
+        const heartbeatInterval = applyArgumentsResult.heartbeatInterval;
         heartbeatInterval.stop();
       }
     };
     applyArgumentsResult.scheduleHeartbeatTracking = function scheduleHeartbeatTracking() {
-      let DEFAULT;
       if (DEFAULT === undefined) {
         DEFAULT = constants.DEFAULT;
       }
-      if (require.focusedOrForegrounded) {
+      if (applyArgumentsResult.focusedOrForegrounded) {
         if (null != token) {
           try {
-            const result = require.startAnalyticHeartbeat();
-          } catch (tmp6) {
-            const obj2 = SentryUtilsDefault;
-            obj2.captureException(tmp6);
+            const result = applyArgumentsResult.startAnalyticHeartbeat();
+          } catch (tmp7) {
+            SentryUtilsDefault.captureException(tmp7);
           }
         }
       }
-      const result1 = require.stopAnalyticHeartbeat(DEFAULT);
+      const result1 = applyArgumentsResult.stopAnalyticHeartbeat(DEFAULT);
     };
     applyArgumentsResult.handleLogin = function handleLogin() {
-      const result = require.scheduleHeartbeatTracking();
-      require.trackHeartbeat(true);
+      const result = applyArgumentsResult.scheduleHeartbeatTracking();
+      applyArgumentsResult.trackHeartbeat(true);
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
-      const result = require.stopAnalyticHeartbeat(constants.USER_LOGOUT);
-      const obj = SessionAdGenerator;
-      obj.clearAdSession();
+      const result = applyArgumentsResult.stopAnalyticHeartbeat(constants.USER_LOGOUT);
+      SessionAdGenerator.clearAdSession();
     };
     applyArgumentsResult.handleEnrollmentSuccess = function handleEnrollmentSuccess() {
-      const obj = SessionAdGenerator;
-      const orRefreshAdSession = obj.getOrRefreshAdSession(true);
+      const orRefreshAdSession = applyArgumentsResult(dependencyMap[8]).getOrRefreshAdSession(true);
     };
     applyArgumentsResult.handleWindowFocus = function handleWindowFocus(focused) {
-      require.focusedOrForegrounded = focused.focused;
-      const result = require.scheduleHeartbeatTracking(constants.WINDOW_FOCUS);
+      applyArgumentsResult.focusedOrForegrounded = focused.focused;
+      const result = applyArgumentsResult.scheduleHeartbeatTracking(constants.WINDOW_FOCUS);
     };
     applyArgumentsResult.handleAppStateUpdate = function handleAppStateUpdate(state) {
-      require.focusedOrForegrounded = state.state === hasOwnProperty.ACTIVE;
-      const result = require.scheduleHeartbeatTracking(constants.APP_STATE_UPDATE);
+      applyArgumentsResult.focusedOrForegrounded = state.state === constants2.ACTIVE;
+      const result = applyArgumentsResult.scheduleHeartbeatTracking(constants.APP_STATE_UPDATE);
     };
     applyArgumentsResult.handleAuthenticationChange = function handleAuthenticationChange() {
       token = AuthenticationStore.getToken();
       if (token !== token) {
-        const obj = SessionAdGenerator;
-        obj.clearAdSession();
-        const result = require.stopAnalyticHeartbeat();
+        SessionAdGenerator.clearAdSession();
+        const result = applyArgumentsResult.stopAnalyticHeartbeat();
       }
-      const result1 = require.scheduleHeartbeatTracking();
+      const result1 = applyArgumentsResult.scheduleHeartbeatTracking();
     };
     return applyArgumentsResult;
   }
-  _initialize() {
-    const obj = react_native;
-    this.focusedOrForegrounded = obj.isForegrounded();
-    AuthenticationStore.addChangeListener(this.handleAuthenticationChange);
-    const obj2 = DispatcherDefault;
-    const subscription = obj2.subscribe("WINDOW_FOCUS", this.handleWindowFocus);
-    const obj3 = DispatcherDefault;
-    const subscription1 = obj3.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
-    const obj4 = DispatcherDefault;
-    const subscription2 = obj4.subscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
-    const obj5 = DispatcherDefault;
-    const subscription3 = obj5.subscribe("LOGIN_SUCCESS", this.handleLogin);
-    const obj6 = DispatcherDefault;
-    const subscription4 = obj6.subscribe("LOGOUT", this.handleLogout);
-    const result = this.scheduleHeartbeatTracking();
-  }
-  _terminate() {
-    const result = this.stopAnalyticHeartbeat();
-    AuthenticationStore.removeChangeListener(this.handleAuthenticationChange);
-    const obj = DispatcherDefault;
-    obj.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus);
-    const obj2 = DispatcherDefault;
-    obj2.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
-    const obj3 = DispatcherDefault;
-    obj3.unsubscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
-    const obj4 = DispatcherDefault;
-    obj4.unsubscribe("LOGIN_SUCCESS", this.handleLogin);
-    const obj5 = DispatcherDefault;
-    obj5.unsubscribe("LOGOUT", this.handleLogout);
-  }
 }
 const prototype = SessionAdManager.prototype;
+prototype["_initialize"] = function _initialize() {
+  this.focusedOrForegrounded = SessionForegroundUtils.isForegrounded();
+  AuthenticationStore.addChangeListener(this.handleAuthenticationChange);
+  const subscription = DispatcherDefault.subscribe("WINDOW_FOCUS", this.handleWindowFocus);
+  const subscription1 = DispatcherDefault.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
+  const subscription2 = DispatcherDefault.subscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
+  const subscription3 = DispatcherDefault.subscribe("LOGIN_SUCCESS", this.handleLogin);
+  const subscription4 = DispatcherDefault.subscribe("LOGOUT", this.handleLogout);
+  const result = this.scheduleHeartbeatTracking();
+};
+prototype["_terminate"] = function _terminate() {
+  const result = this.stopAnalyticHeartbeat();
+  AuthenticationStore.removeChangeListener(this.handleAuthenticationChange);
+  DispatcherDefault.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus);
+  DispatcherDefault.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
+  DispatcherDefault.unsubscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
+  DispatcherDefault.unsubscribe("LOGIN_SUCCESS", this.handleLogin);
+  DispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
+};
 const sessionAdManager = new SessionAdManager();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/analytics_sessions/SessionAdManager.tsx");
 
 export default sessionAdManager;

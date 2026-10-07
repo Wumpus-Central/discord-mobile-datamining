@@ -1,46 +1,23 @@
 // discord_app/modules/media_uploads/native/VideoUploadUtils.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsStore.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import size from "../../../../_runtime/metro/00002__.js";
 
 const VideoCompressionQuality = UnsyncedUserSettingsStore.VideoCompressionQuality;
 const logger = new LoggerDefault("VideoUploadUtils.tsx");
-const tmp2 = new LoggerDefault("VideoUploadUtils.tsx");
+let VideoQualityTarget;
 class VideoQualityTarget {
-  constructor(value, targetResolution, targetBitrate) {
-    const obj = Object.create(new.target.prototype);
-    obj.value = value;
-    obj.targetResolution = targetResolution;
-    obj.targetBitrate = targetBitrate;
+  constructor(arg0, arg1, arg2) {
+    obj = Object.create(new.target.prototype);
+    obj.value = global;
+    obj.targetResolution = require;
+    obj.targetBitrate = importDefault;
     return obj;
   }
-  toString() {
-    return this.value;
-  }
-  static fromCompressionQuality(videoQualitySetting) {
-    let VERY_HIGH;
-    if (VideoCompressionQuality.VERY_LOW === videoQualitySetting) {
-      VERY_HIGH = VideoQualityTarget.VERY_LOW;
-    } else if (VideoCompressionQuality.LOW === videoQualitySetting) {
-      VERY_HIGH = VideoQualityTarget.LOW;
-    } else if (VideoCompressionQuality.MEDIUM === videoQualitySetting) {
-      VERY_HIGH = VideoQualityTarget.MEDIUM;
-    } else if (VideoCompressionQuality.HIGH === videoQualitySetting) {
-      VERY_HIGH = VideoQualityTarget.HIGH;
-    } else if (VideoCompressionQuality.VERY_HIGH === videoQualitySetting) {
-      VERY_HIGH = VideoQualityTarget.VERY_HIGH;
-    } else {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const self = this;
-      const self2 = this;
-      const error = new Error("Unknown compression quality: " + videoQualitySetting);
-      throw error;
-    }
-    return VERY_HIGH;
-  }
 }
-const prototype = VideoQualityTarget.prototype;
+VideoQualityTarget.prototype["toString"] = function toString() {
+  return this.value;
+};
 const obj2 = Object.create(VideoQualityTarget.prototype);
 obj2.value = "very_low";
 obj2.targetResolution = 360;
@@ -66,7 +43,29 @@ obj10.value = "very_high";
 obj10.targetResolution = 1080;
 obj10.targetBitrate = 7000000;
 VideoQualityTarget.VERY_HIGH = obj10;
-let obj = {
+VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(videoQualitySetting) {
+  if (VideoCompressionQuality.VERY_LOW === videoQualitySetting) {
+    let VERY_HIGH = VideoQualityTarget.VERY_LOW;
+  } else if (VideoCompressionQuality.LOW === videoQualitySetting) {
+    VERY_HIGH = VideoQualityTarget.LOW;
+  } else if (VideoCompressionQuality.MEDIUM === videoQualitySetting) {
+    VERY_HIGH = VideoQualityTarget.MEDIUM;
+  } else if (VideoCompressionQuality.HIGH === videoQualitySetting) {
+    VERY_HIGH = VideoQualityTarget.HIGH;
+  } else if (VideoCompressionQuality.VERY_HIGH === videoQualitySetting) {
+    VERY_HIGH = VideoQualityTarget.VERY_HIGH;
+  } else {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("Unknown compression quality: " + videoQualitySetting);
+    throw error;
+  }
+  return VERY_HIGH;
+};
+let result = size.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
+
+export { VideoQualityTarget };
+export const DEFAULT_VIDEO_ENCODING_CONFIG = {
   bitrateFloor: 300000,
   createHDR: false,
   frameRate: 30,
@@ -81,22 +80,14 @@ let obj = {
   transmuxLivePhotos: true,
   progressUpdateGranularity: 10,
 };
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
-
-export { VideoQualityTarget };
-export const DEFAULT_VIDEO_ENCODING_CONFIG = obj;
 export const calculateTargetDimensions = function calculateTargetDimensions(videoMetadata, targetResolution) {
-  let rounded;
-  let rounded1;
-  let sum1;
   const result = videoMetadata.width / videoMetadata.height;
   if (videoMetadata.width > videoMetadata.height) {
     const _Math3 = Math;
     const bound = Math.min(targetResolution, videoMetadata.height);
     const _Math4 = Math;
-    rounded = Math.round(bound * result);
-    rounded1 = bound;
+    let rounded = Math.round(bound * result);
+    let rounded1 = bound;
   } else {
     const _Math = Math;
     rounded = Math.min(targetResolution, videoMetadata.width);
@@ -107,11 +98,12 @@ export const calculateTargetDimensions = function calculateTargetDimensions(vide
   if (rounded % 2 !== 0) {
     sum = rounded + 1;
   }
-  size = { width: sum, height: sum1 };
-  sum1 = rounded1;
+  const size = { width: sum, height: null };
+  let sum1 = rounded1;
   if (rounded1 % 2 !== 0) {
     sum1 = rounded1 + 1;
   }
+  size.height = sum1;
   return size;
 };
 export const canSkipVideoTranscode = function canSkipVideoTranscode(
@@ -120,8 +112,6 @@ export const canSkipVideoTranscode = function canSkipVideoTranscode(
   fileSize,
   effectiveUploadLimit,
 ) {
-  let rounded;
-  let rounded1;
   if (null != fileSize) {
     if (null != effectiveUploadLimit) {
       if (fileSize > effectiveUploadLimit) {
@@ -135,8 +125,8 @@ export const canSkipVideoTranscode = function canSkipVideoTranscode(
     const _Math3 = Math;
     const bound = Math.min(targetResolution, videoMetadata.height);
     const _Math4 = Math;
-    rounded = Math.round(bound * result);
-    rounded1 = bound;
+    let rounded = Math.round(bound * result);
+    let rounded1 = bound;
   } else {
     const _Math = Math;
     rounded = Math.min(targetResolution, videoMetadata.width);
@@ -161,8 +151,7 @@ export const canSkipVideoTranscode = function canSkipVideoTranscode(
     tmp12 = null == videoMetadata.format;
   }
   if (!tmp12) {
-    const str = videoMetadata.format;
-    tmp12 = null === str.match(/(avc1|hvc1|video\/(avc|hevc))/i);
+    tmp12 = null === videoMetadata.format.match(/(avc1|hvc1|video\/(avc|hevc))/i);
   }
   return !tmp12;
 };
@@ -181,11 +170,10 @@ export const logSourceMetadata = function logSourceMetadata(format) {
   logger.info("- Bitrate: " + format.bitRate + " bps");
   logger.info("- Frame Rate: " + format.frameRate + " fps");
   let str2 = "No";
-  const info = logger.info;
   if (format.isHDRContent) {
     str2 = "Yes";
   }
-  info(`- HDR: ${str2}`);
+  logger.info(`- HDR: ${str2}`);
   logger.info("- Rotation Degrees: " + format.rotationDegrees);
   logger.info("- Profile: " + format.sourceProfile);
   logger.info("- Level: " + format.sourceLevel);
@@ -194,31 +182,28 @@ export const logSourceMetadata = function logSourceMetadata(format) {
 export const logEncoderSettings = function logEncoderSettings(videoQuality) {
   logger.info("Encoder Video Quality Settings:");
   let str1;
-  const info = logger.info;
   if (videoQuality.videoQuality != null) {
     str1 = str.toString();
   }
-  info("- Compression Quality: " + str1);
+  logger.info("- Compression Quality: " + str1);
   videoQuality = videoQuality.videoQuality;
   let targetResolution;
-  const info2 = logger.info;
   if (videoQuality != null) {
     targetResolution = videoQuality.targetResolution;
   }
-  info2("- Compression Quality Target Resolution: " + targetResolution + "p");
+  logger.info("- Compression Quality Target Resolution: " + targetResolution + "p");
   const videoQuality2 = videoQuality.videoQuality;
   let targetBitrate;
-  const info3 = logger.info;
   if (videoQuality2 != null) {
     targetBitrate = videoQuality2.targetBitrate;
   }
-  info3("- Compression Quality Max Bitrate: " + targetBitrate + " bps");
+  logger.info("- Compression Quality Max Bitrate: " + targetBitrate + " bps");
   logger.info("Encoder Video Transcoding Settings:");
-  const info4 = logger.info;
+  const info = logger.info;
   if (videoQuality.skipVideoTranscode) {
-    info4("- Skip Video Transcode: Yes");
+    info("- Skip Video Transcode: Yes");
   } else {
-    info4("- Codec: avc1 (H.264)");
+    info("- Codec: avc1 (H.264)");
     const _HermesInternal = HermesInternal;
     logger.info("- Dimensions: " + videoQuality.targetWidth + "x" + videoQuality.targetHeight);
     const _HermesInternal2 = HermesInternal;
@@ -228,11 +213,10 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
     const _HermesInternal4 = HermesInternal;
     logger.info("- Key Frame Interval: " + videoQuality.keyFrameIntervalSeconds + " seconds");
     let str10 = "No";
-    const info5 = logger.info;
     if (videoQuality.createHDR) {
       str10 = "Yes";
     }
-    info5(`- Create HDR: ${str10}`);
+    logger.info(`- Create HDR: ${str10}`);
     const _HermesInternal5 = HermesInternal;
     logger.info("- Rotation Degrees: " + videoQuality.rotationDegrees);
     const _HermesInternal6 = HermesInternal;

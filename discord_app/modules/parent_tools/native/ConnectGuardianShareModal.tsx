@@ -1,99 +1,67 @@
 // discord_app/modules/parent_tools/native/ConnectGuardianShareModal.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl4 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef2521 from "../FamilyCenter.messages.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import Modal2 from "../../../design/components/Modal/native/Modal.native.tsx";
+import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
 import useOnNewPendingRequestDefault from "../hooks/useOnNewPendingRequest.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
-function headerTitle() {
-  return null;
-}
-function render() {
-  return closure_1_6(closure_1_9, {});
-}
+require = fn;
 function ConnectGuardianShareScreen() {
-  let getLinkCode;
-  let intl;
-  let intl2;
-  let intl3;
-  let items2;
-  let obj13;
   const tmp = closure_8();
-  const obj = getLinkCode(1126);
-  const syncMessages = obj.useSyncMessages(getLinkCode(2521).messagesLoader);
-  const callback = react.useCallback(() => {
-    const presentFailedToast = getLinkCode(dependencyMap[8]).presentFailedToast;
-    getLinkCode(dependencyMap[8]);
-    const intl = getLinkCode(dependencyMap[6]).intl;
-    presentFailedToast(intl.string(getLinkCode(dependencyMap[6]).t.R0RpRX));
-    const arr = ModalActionCreatorsDefault;
-    arr.pop();
+  const syncMessages = getLinkCode(1126).useSyncMessages(getLinkCode(2521).messagesLoader);
+  const callback = noop.useCallback(() => {
+    const intl = getLinkCode(1126).intl;
+    getLinkCode(4573).presentFailedToast(intl.string(getLinkCode(1126).t.R0RpRX));
+    const obj = getLinkCode(4573);
+    ModalActionCreatorsDefault.pop();
   }, []);
+  let obj = getLinkCode(1126);
+  getLinkCode = getLinkCode(11541).useFamilyCenterActions({ onError: callback }).getLinkCode;
   const obj2 = getLinkCode(11541);
-  getLinkCode = obj2.useFamilyCenterActions({ onError: callback }).getLinkCode;
   const items = [FamilyCenterStore];
+  const stateFromStores = getLinkCode(573).useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const obj3 = getLinkCode(573);
-  const stateFromStores = obj3.useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const items1 = [FamilyCenterStore];
-  const obj4 = getLinkCode(573);
-  const stateFromStores1 = obj4.useStateFromStores(items1, () => FamilyCenterStore.getLinkCodeExpiresAt());
-  const effect = react.useEffect(() => {
+  const stateFromStores1 = getLinkCode(573).useStateFromStores(items1, () => FamilyCenterStore.getLinkCodeExpiresAt());
+  const effect = noop.useEffect(() => {
     getLinkCode();
   }, []);
-  const tmp9 = useOnNewPendingRequestDefault;
-  tmp9(ModalActionCreatorsDefault.pop);
-  const ModalScreen = getLinkCode(8128).ModalScreen;
-  const ModalContent = getLinkCode(8129).ModalContent;
+  const obj4 = getLinkCode(573);
+  useOnNewPendingRequestDefault(ModalActionCreatorsDefault.pop);
   const obj5 = { spacing: nativeDefault.space.PX_40, children: null };
-  const Stack = getLinkCode(5600).Stack;
-  const obj6 = { spacing: nativeDefault.space.PX_8, children: items2 };
-  const Stack2 = getLinkCode(5600).Stack;
+  const obj6 = { spacing: nativeDefault.space.PX_8, children: null };
   const obj7 = {
     style: tmp.title,
     variant: "heading-xl/bold",
     color: "mobile-text-heading-primary",
     accessibilityRole: "header",
-    children: intl.string(_modDef2521.ITlV6p),
+    children: null,
   };
-  const Text = getLinkCode(4892).Text;
-  intl = getLinkCode(1126).intl;
-  items2 = [closure_6(Text, obj7)];
-  const obj8 = {
-    style: tmp.body,
-    variant: "text-sm/medium",
-    color: "text-muted",
-    children: intl2.format(_modDef2521.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" }),
-  };
-  const Text2 = getLinkCode(4892).Text;
-  intl2 = getLinkCode(1126).intl;
-  items2[1] = closure_6(Text2, obj8);
-  const items3 = [closure_7(Stack2, obj6)];
+  let intl = getLinkCode(1126).intl;
+  obj7.children = intl.string(_modDef2521.ITlV6p);
+  const items2 = [closure_6(getLinkCode(4892).Text, obj7)];
+  const obj8 = { style: tmp.body, variant: "text-sm/medium", color: "text-muted", children: null };
+  const intl2 = getLinkCode(1126).intl;
+  obj8.children = intl2.format(_modDef2521.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+  items2[1] = closure_6(getLinkCode(4892).Text, obj8);
+  obj6.children = items2;
+  const items3 = [closure_7(getLinkCode(5600).Stack, obj6)];
   const obj9 = { spacing: nativeDefault.space.PX_24, style: tmp.cardSection, children: null };
-  const Stack3 = getLinkCode(5600).Stack;
   const obj10 = {
     style: tmp.qrLabel,
     variant: "text-md/semibold",
     color: "mobile-text-heading-primary",
-    children: intl3.string(_modDef2521.pojgfk),
+    children: null,
   };
-  const Text3 = getLinkCode(4892).Text;
-  intl3 = getLinkCode(1126).intl;
-  const items4 = [closure_6(Text3, obj10)];
+  const intl3 = getLinkCode(1126).intl;
+  obj10.children = intl3.string(_modDef2521.pojgfk);
+  const items4 = [closure_6(getLinkCode(4892).Text, obj10)];
   if (null != stateFromStores) {
-    let tmp11Result;
     if (null != stateFromStores1) {
       const obj11 = {
         shareActions: "full",
@@ -101,93 +69,90 @@ function ConnectGuardianShareScreen() {
         expiresAt: stateFromStores1,
         onRefresh: getLinkCode,
       };
-      tmp11Result = closure_6(tmp2(14705).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(14705).ConnectGuardianCard, obj11);
     }
-    const obj12 = { children: closure_6(ModalContent, obj13) };
+    const obj12 = { children: null };
+    const obj13 = { children: null };
     items4[1] = tmp11Result;
     obj9.children = items4;
-    obj13 = { children: closure_7(Stack, obj5) };
-    items3[1] = closure_7(Stack3, obj9);
+    items3[1] = closure_7(getLinkCode(5600).Stack, obj9);
     obj5.children = items3;
-    return closure_6(ModalScreen, obj12);
+    obj13.children = closure_7(getLinkCode(5600).Stack, obj5);
+    obj12.children = closure_6(getLinkCode(8129).ModalContent, obj13);
+    return closure_6(getLinkCode(8128).ModalScreen, obj12);
   }
+  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(5975).ActivityIndicator, {}) });
   const obj14 = { style: tmp.loading, children: closure_6(getLinkCode(5975).ActivityIndicator, {}) };
-  tmp11Result = closure_6(View, obj14);
 }
-const View = react_native.View;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let obj = {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   title: { textAlign: "center" },
   body: { textAlign: "center" },
   qrLabel: { textAlign: "center" },
   cardSection: { alignItems: "center" },
-  loading: obj2,
+  loading: { alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_24 },
 };
-obj2 = { alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_24 };
-let closure_8 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { alignItems: "center", justifyContent: "center", paddingVertical: nativeDefault.space.PX_24 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/ConnectGuardianShareModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let intl;
-      let obj3;
-      let tmp6;
-      let tmpResult;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { CONNECT_GUARDIAN_SHARE: obj3 };
-        obj3 = {
+        const obj2 = { CONNECT_GUARDIAN_SHARE: null };
+        const obj3 = {
           headerShown: true,
-          headerLeft: tmpResult.getHeaderBackButton(ModalActionCreatorsDefault.pop),
-          headerTitle,
-          render,
+          headerLeft: NavigatorHeader.getHeaderBackButton(ModalActionCreatorsDefault.pop),
+          headerTitle() {
+            return null;
+          },
+          render() {
+            return closure_1_6(closure_1_9, {});
+          },
         };
+        obj2.CONNECT_GUARDIAN_SHARE = obj3;
         cResult[0] = obj2;
-        first = obj2;
-        tmpResult = NavigatorHeader;
+        let first = obj2;
+        const tmpResult = NavigatorHeader;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = {
-          initialRouteName: "CONNECT_GUARDIAN_SHARE",
-          screens: first,
-          headerBackTitle: intl.string(intl4.t["13/7kX"]),
-        };
-        const Modal = Modal2.Modal;
-        intl = intl4.intl;
-        const tmp8 = metroRequire(Modal, obj4);
+        const obj4 = { initialRouteName: "CONNECT_GUARDIAN_SHARE", screens: first, headerBackTitle: null };
+        const intl = util.intl;
+        obj4.headerBackTitle = intl.string(util.t["13/7kX"]);
+        const tmp8 = timestampProducer(Modal.Modal, obj4);
         cResult[1] = tmp8;
-        tmp6 = tmp8;
+        let tmp6 = tmp8;
       } else {
         tmp6 = cResult[1];
       }
       return tmp6;
     }
   : () => {
-      let intl;
-      const memo = react.useMemo(() => {
-        let obj2;
-        let obj3;
-        const obj = { CONNECT_GUARDIAN_SHARE: obj2 };
-        obj2 = {
+      const memo = noop.useMemo(() => {
+        const obj = { CONNECT_GUARDIAN_SHARE: null };
+        const obj2 = {
           headerShown: true,
-          headerLeft: obj3.getHeaderBackButton(ModalActionCreatorsDefault.pop),
-          headerTitle,
-          render,
+          headerLeft: NavigatorHeader.getHeaderBackButton(ModalActionCreatorsDefault.pop),
+          headerTitle() {
+            return null;
+          },
+          render() {
+            return closure_1_6(closure_1_9, {});
+          },
         };
-        obj3 = NavigatorHeader;
+        obj.CONNECT_GUARDIAN_SHARE = obj2;
         return obj;
       }, []);
-      let obj = {
-        initialRouteName: "CONNECT_GUARDIAN_SHARE",
-        screens: memo,
-        headerBackTitle: intl.string(intl4.t["13/7kX"]),
-      };
-      const Modal = Modal2.Modal;
-      intl = intl4.intl;
-      return metroRequire(Modal, obj);
+      let obj = { initialRouteName: "CONNECT_GUARDIAN_SHARE", screens: memo, headerBackTitle: null };
+      const intl = util.intl;
+      obj.headerBackTitle = intl.string(util.t["13/7kX"]);
+      return timestampProducer(Modal.Modal, obj);
     };
-const result = size.fileFinishedImporting("modules/parent_tools/native/ConnectGuardianShareModal.tsx");
-
-export default tmp3;

@@ -1,75 +1,31 @@
 // discord_app/intl/util.tsx
-import react2 from "../../_runtime/00576_react.js";
+import c from "../../_runtime/00576_c.js";
 import _mod1165 from "../../_runtime/metro/01165__.js";
-import react from "../../_runtime/00019_react.js";
-import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../_runtime/metro/00002__.js";
+import noop from "../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, code;
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
-      let tmp2;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      const obj = react2;
-      const cResult = obj.c(5);
-      if (cResult[0] !== arg0) {
-        const fn = function l(arg0) {
-          return closure_0.onChange(arg0);
-        };
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      if (cResult[2] === arg1) {
-        let tmp3;
-        if (cResult[3] === arg0) {
-          tmp3 = cResult[4];
-        }
-        const syncExternalStore = react.useSyncExternalStore(tmp2, tmp3);
-      }
-      const fn2 = function o() {
-        return closure_0.isLocaleLoaded(currentLocale.currentLocale);
-      };
-      cResult[2] = arg1;
-      cResult[3] = arg0;
-      cResult[4] = fn2;
-      tmp3 = fn2;
-    }
-  : (arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      const syncExternalStore = react.useSyncExternalStore(
-        (arg0) => closure_0.onChange(arg0),
-        () => closure_0.isLocaleLoaded(currentLocale.currentLocale),
-      );
-    };
+require = fn;
+const ReactCompilerGating = fn(558);
 function getLanguages() {
   return require("../../_runtime/metro/01187__.js");
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
-  let closure_0;
   _require = require("messages/en-US.messages.js").default;
-  const arr = require("../../_runtime/metro/01187__.js");
-  const found = arr.filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01187__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
-    let obj2;
     code = code.code;
-    const obj = { value: code, name: code.name, localizedName: closure_0[obj2.runtimeHashMessageKey(obj2, code)] };
-    obj2 = _mod1165;
+    const obj = { value: code, name: code.name, localizedName: null };
+    const obj2 = _mod1165;
+    obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
   return mapped.sort((name, name2) => {
-    const str = name.name;
-    const str2 = name2.name;
-    const formatted = str.toLowerCase();
-    const formatted1 = str2.toLowerCase();
+    const formatted = name.name.toLowerCase();
+    const formatted1 = name2.name.toLowerCase();
     let num = -1;
     if (formatted >= formatted1) {
       let num2 = 0;
@@ -83,17 +39,15 @@ export const getAvailableLocales = function getAvailableLocales() {
 };
 export { getLanguages };
 export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
-  const arr = require("../../_runtime/metro/01187__.js");
-  const found = arr.filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01187__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
   } else {
-    let found2;
     const parts = Language.split("-");
     const first = parts[0];
     if (mapped.includes(parts[0])) {
-      found2 = first;
+      let found2 = first;
     } else {
       if ("zh" === first) {
         if (parts.length > 1) {
@@ -113,5 +67,42 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
     }
     return found2;
   }
+  const arr = require("../../_runtime/metro/01187__.js");
 };
-export const useSyncMessages = tmp2;
+export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      closure_0 = arg0;
+      const currentLocale = arg1;
+      const cResult = c.c(5);
+      if (cResult[0] !== arg0) {
+        const fn = function l(arg0) {
+          return closure_0.onChange(arg0);
+        };
+        cResult[0] = arg0;
+        cResult[1] = fn;
+        let tmp2 = fn;
+      } else {
+        tmp2 = cResult[1];
+      }
+      if (cResult[2] === arg1) {
+        if (cResult[3] === arg0) {
+          let tmp3 = cResult[4];
+        }
+        const syncExternalStore = noop.useSyncExternalStore(tmp2, tmp3);
+      }
+      const fn2 = function o() {
+        return closure_0.isLocaleLoaded(currentLocale.currentLocale);
+      };
+      cResult[2] = arg1;
+      cResult[3] = arg0;
+      cResult[4] = fn2;
+      tmp3 = fn2;
+    }
+  : (arg0, arg1) => {
+      closure_0 = arg0;
+      const currentLocale = arg1;
+      const syncExternalStore = noop.useSyncExternalStore(
+        (arg0) => closure_0.onChange(arg0),
+        () => closure_0.isLocaleLoaded(currentLocale.currentLocale),
+      );
+    };

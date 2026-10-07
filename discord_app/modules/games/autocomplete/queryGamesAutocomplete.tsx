@@ -4,32 +4,29 @@ import useGameAutocomplete2 from "useGameAutocomplete.tsx";
 import GameSearchSession from "GameSearchSession.tsx";
 import GameAutocompleteStore from "GameAutocompleteStore.tsx";
 import debounce from "../../../../_runtime/00551_debounce.js";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { leading: true, maxWait: useGameAutocomplete2.GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS };
-const GAME_AUTOCOMPLETE_DEBOUNCE_MS = useGameAutocomplete2.GAME_AUTOCOMPLETE_DEBOUNCE_MS;
+require = fn;
 let closure_3 = debounce(
   (arg0) => {
     const useGameAutocomplete = useGameAutocomplete2.useGameAutocomplete;
     const items = [arg0];
     const many = useGameAutocomplete.fetchMany(items);
   },
-  GAME_AUTOCOMPLETE_DEBOUNCE_MS,
-  obj,
+  fn(8598).GAME_AUTOCOMPLETE_DEBOUNCE_MS,
+  { leading: true, maxWait: fn(8598).GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS },
 );
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 
 export const queryGamesAutocomplete = function queryGamesAutocomplete(query, CHAT_MENTION) {
   let gameSearchSession = null;
   if (null != CHAT_MENTION) {
-    const obj = GameSearchSession;
-    gameSearchSession = obj.getGameSearchSession(CHAT_MENTION);
+    gameSearchSession = GameSearchSession.getGameSearchSession(CHAT_MENTION);
   }
   if (gameSearchSession != null) {
     gameSearchSession.onQuery(query);
   }
-  const obj2 = GameAutocompleteUtils;
-  const result = obj2.normalizeGameAutocompleteQuery(query);
+  const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(query);
   if (null == result) {
     return null;
   } else {

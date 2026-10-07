@@ -3,20 +3,20 @@ import StickerSendability from "StickerSendability.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
 const result = size.fileFinishedImporting("modules/stickers/StickerCategoryUtils.tsx");
 
 export const isStickerCategoryNitroLocked = function isStickerCategoryNitroLocked(type, stateFromStores, arg2) {
-  let closure_1;
   _require = stateFromStores;
   dependencyMap = arg2;
-  let everyResult = type.type === require("StickersTypes").StickerCategoryTypes.GUILD && 0 !== type.stickers.length;
+  let everyResult = type.type === require("StickersTypes").StickerCategoryTypes.GUILD;
+  if (everyResult) {
+    everyResult = 0 !== type.stickers.length;
+  }
   if (everyResult) {
     const stickers = type.stickers;
     everyResult = stickers.every((item) => {
-      const obj = StickerSendability;
-      const stickerSendability = obj.getStickerSendability(item, stateFromStores, closure_1);
+      const stickerSendability = StickerSendability.getStickerSendability(item, closure_0, closure_1);
       return stickerSendability === StickerSendability.StickerSendability.SENDABLE_WITH_PREMIUM;
     });
   }

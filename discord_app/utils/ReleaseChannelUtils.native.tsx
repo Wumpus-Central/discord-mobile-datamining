@@ -1,17 +1,25 @@
 // discord_app/utils/ReleaseChannelUtils.native.tsx
-import react_native from "native/ClientInfoUtils.tsx";
-import PlatformUtils_mod from "PlatformUtils.tsx";
-import size from "../../_runtime/metro/00002__.js";
+import ClientInfoUtils from "native/ClientInfoUtils.tsx";
 
-const ReleaseChannel = react_native.getConstants().ReleaseChannel;
-let PlatformUtils = PlatformUtils_mod;
-PlatformUtils =
-  PlatformUtils.isAndroid() && -1 === ReleaseChannel.indexOf("canary") && -1 === ReleaseChannel.indexOf("beta");
-let tmp4 = !(-1 !== ReleaseChannel.indexOf("debug") || -1 !== ReleaseChannel.indexOf("developer"));
-const tmp3 = -1 !== ReleaseChannel.indexOf("debug") || -1 !== ReleaseChannel.indexOf("developer");
-if (tmp4) {
-  tmp4 = "stable" === ReleaseChannel || PlatformUtils;
+const ReleaseChannel = ClientInfoUtils.getConstants().ReleaseChannel;
+let PlatformUtils = fn(1369);
+PlatformUtils = PlatformUtils.isAndroid();
+if (PlatformUtils) {
+  PlatformUtils = -1 === ReleaseChannel.indexOf("canary");
 }
+if (PlatformUtils) {
+  PlatformUtils = -1 === ReleaseChannel.indexOf("beta");
+}
+let tmp3 = -1 !== ReleaseChannel.indexOf("debug");
+if (!tmp3) {
+  tmp3 = -1 !== ReleaseChannel.indexOf("developer");
+}
+let tmp4 = !tmp3;
+if (!tmp3) {
+  tmp4 = "stable" === ReleaseChannel || PlatformUtils;
+  const tmp5 = "stable" === ReleaseChannel || PlatformUtils;
+}
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/ReleaseChannelUtils.native.tsx");
 
 export const isStable = tmp4;

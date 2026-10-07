@@ -1,24 +1,18 @@
 // discord_app/modules/game_organization_invites/useGameOrganizationInviteFetch.tsx
-import Constants from "../../Constants.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants.tsx";
 import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GameOrganizationInviteStore from "GameOrganizationInviteStore.tsx";
-import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let c1, c2;
-
-const constants = GameOrganizationInviteConstants.GameOrganizationInviteStates;
-const QueryIds = Constants.QueryIds;
-let obj = {
-  getQueryId: QueryIds.GAME_ORGANIZATION_INVITE,
+const constants = fn(11097).GameOrganizationInviteStates;
+const initialize = fn(504);
+const obj2 = {
+  getQueryId: fn(1085).QueryIds.GAME_ORGANIZATION_INVITE,
   staleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   get(arg0) {
     const invite = GameOrganizationInviteStore.getInvite(arg0);
-    let state;
+    state = undefined;
     if (invite != null) {
       state = invite.state;
     }
@@ -28,18 +22,13 @@ let obj = {
     }
     return tmp3;
   },
-  load: function () {
-    return closure_2(...arguments);
-  },
+  load: null,
 };
-const createFetchStore = get_initialized.createFetchStore;
-let closure_2 = _asyncToGenerator(async (arg0) => {
-  let obj2;
-  let closure_0 = arg0;
+let closure_2 = asyncGeneratorStep(async (arg0) => {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp2 === 3) {
+  } else if (tmp3 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -62,8 +51,10 @@ let closure_2 = _asyncToGenerator(async (arg0) => {
         } else {
           c2 = 1;
           c1 = 1;
-          const obj5 = { value: obj2.resolveGameOrganizationInvite(closure_0), done: false };
-          obj2 = GameOrganizationInviteActionCreatorsDefault;
+          const obj5 = {
+            value: GameOrganizationInviteActionCreatorsDefault.resolveGameOrganizationInvite(closure_0),
+            done: false,
+          };
           return obj5;
         }
       } else if (arg0 === 1) {
@@ -77,13 +68,24 @@ let closure_2 = _asyncToGenerator(async (arg0) => {
         c1 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp7) {
-      c1 = 3;
-      throw tmp7;
+    } catch (tmp8) {
+      c1 = tmp;
+      throw tmp8;
     }
   }
 });
-const fetchStore = createFetchStore(GameOrganizationInviteStore, obj);
+obj2.load = function () {
+  const self = this;
+  const apply = closure_2.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+const fetchStore = initialize.createFetchStore(GameOrganizationInviteStore, obj2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/useGameOrganizationInviteFetch.tsx");
 
 export const useGameOrganizationInviteFetch = fetchStore;

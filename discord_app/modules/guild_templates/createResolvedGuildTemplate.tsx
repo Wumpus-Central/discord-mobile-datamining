@@ -6,12 +6,11 @@ const GuildTemplateStates = GuildTemplatesConstants.GuildTemplateStates;
 const result = size.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");
 
 export default function createResolvedGuildTemplate(code) {
-  let str;
   const obj = {
     code: code.code,
     state: GuildTemplateStates.RESOLVED,
     name: code.name,
-    description: str,
+    description: null,
     creatorId: null,
     creator: null,
     createdAt: null,
@@ -21,10 +20,11 @@ export default function createResolvedGuildTemplate(code) {
     usageCount: null,
     isDirty: null,
   };
-  str = code.description;
+  let str = code.description;
   if (str == null) {
     str = "";
   }
+  obj.description = str;
   ({
     creator_id: obj.creatorId,
     creator: obj.creator,

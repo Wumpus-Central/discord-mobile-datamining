@@ -1,40 +1,36 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx
-import clampDefault from "../../../../_runtime/05021_clamp.js";
+import _modDef5021 from "../../../../_runtime/metro/05021__.js";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function fadeIn() {
-  let closure_5;
-  let interval;
   if (null != interval) {
     const _clearInterval = clearInterval;
     clearInterval(interval);
   }
   closure_2.loop();
   c4 = 0.5;
-  let closure_0 = 0.2 * (0.5 - closure_3);
+  closure_0 = 0.2 * (0.5 - closure_3);
   interval = setInterval(() => {
     const rounded = Math.round(100 * closure_0);
     const rounded1 = Math.round(100 * c4);
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = clampDefault(closure_3, 0, 0.5);
+      closure_2.volume = _modDef5021(closure_3, 0, 0.5);
     }
     clearInterval(c5);
-    const tmp9 = 0 === rounded1 && false;
     if (tmp9) {
       undefined();
     }
+    tmp9 = 0 === rounded1 && false;
   }, 100);
 }
 function handlePauseMusic() {
-  let closure_5;
-  let interval;
   const pause = closure_2.pause;
-  let closure_0 = pause.bind(closure_2);
-  let closure_1;
+  closure_0 = pause.bind(closure_2);
+  closure_1 = undefined;
   if (null != interval) {
     const _clearInterval = clearInterval;
     clearInterval(interval);
@@ -47,21 +43,22 @@ function handlePauseMusic() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = clampDefault(closure_3, 0, 0.5);
+      closure_2.volume = _modDef5021(closure_3, 0, 0.5);
     }
     clearInterval(c5);
-    const tmp10 = 0 === rounded1 && null != closure_0;
+    let tmp10 = 0 === rounded1;
+    if (tmp10) {
+      tmp10 = null != closure_0;
+    }
     if (tmp10) {
       closure_0();
     }
   }, 100);
 }
 function handleStopMusic() {
-  let closure_5;
-  let interval;
   const stop = closure_2.stop;
-  let closure_0 = stop.bind(closure_2);
-  let closure_1;
+  closure_0 = stop.bind(closure_2);
+  closure_1 = undefined;
   if (null != interval) {
     const _clearInterval = clearInterval;
     clearInterval(interval);
@@ -74,10 +71,13 @@ function handleStopMusic() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = clampDefault(closure_3, 0, 0.5);
+      closure_2.volume = _modDef5021(closure_3, 0, 0.5);
     }
     clearInterval(c5);
-    const tmp10 = 0 === rounded1 && null != closure_0;
+    let tmp10 = 0 === rounded1;
+    if (tmp10) {
+      tmp10 = null != closure_0;
+    }
     if (tmp10) {
       closure_0();
     }
@@ -87,21 +87,19 @@ let closure_2 = SoundUtils.createSound("vibing_wumpus", "vibing_wumpus", 0);
 let closure_3 = 0;
 let c4 = 0;
 let c5 = null;
-class InappropriateConversationsManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const obj = {
-      VIBING_WUMPUS_PLAY_MUSIC: fadeIn,
-      VIBING_WUMPUS_STOP_MUSIC: handleStopMusic,
-      VIBING_WUMPUS_PAUSE_MUSIC: handlePauseMusic,
-    };
-    applyArgumentsResult.actions = obj;
-    return applyArgumentsResult;
-  }
-}
-const inappropriateConversationsManager = new InappropriateConversationsManager();
+const prototype = function InappropriateConversationsManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  applyArgumentsResult.actions = {
+    VIBING_WUMPUS_PLAY_MUSIC: fadeIn,
+    VIBING_WUMPUS_STOP_MUSIC: handleStopMusic,
+    VIBING_WUMPUS_PAUSE_MUSIC: handlePauseMusic,
+  };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp2 {}
+const prototype1 = new prototype();
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx",
 );
 
-export default inappropriateConversationsManager;
+export default prototype1;

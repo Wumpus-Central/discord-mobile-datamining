@@ -1,28 +1,19 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import ThemeContext from "ThemeContext.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx",
+);
+
+export const ThemeContextProvider = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let contrast;
-      let density;
-      let disableAdaptiveTheme;
-      let enabledExperiments;
-      let flags;
-      let gradient;
-      let primaryColor;
-      let reduceAdaptiveTheme;
-      let saturation;
-      let secondaryColor;
-      let theme;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       ({
         children,
         theme,
@@ -37,7 +28,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         disableAdaptiveTheme,
         reduceAdaptiveTheme,
       } = arg0);
-      const context = react.useContext(ThemeContext.ThemeContext);
+      const context = noop.useContext(ThemeContext.ThemeContext);
       const FALLBACK_THEME_CONTEXT_VALUE = ThemeContext.FALLBACK_THEME_CONTEXT_VALUE;
       if (theme == null) {
         theme = context.theme;
@@ -82,17 +73,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[7] === contrast) {
                       if (cResult[8] === saturation) {
                         if (cResult[9] === enabledExperiments) {
-                          let tmp5;
                           if (cResult[10] === density) {
-                            tmp5 = cResult[11];
+                            let tmp5 = cResult[11];
                           }
                           if (cResult[12] === children) {
-                            let tmp7;
                             if (cResult[13] === tmp5) {
-                              tmp7 = cResult[14];
+                              let tmp7 = cResult[14];
                             }
                             return tmp7;
                           }
+                          const obj2 = { value: tmp5, children };
                           const tmp9 = jsx(ThemeContext.ThemeContext.Provider, { value: tmp5, children });
                           cResult[12] = children;
                           cResult[13] = tmp5;
@@ -108,8 +98,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = ThemeContext;
-      const themedContext = tmpResult.createThemedContext({
+      const themedContext = ThemeContext.createThemedContext({
         theme,
         primaryColor,
         secondaryColor,
@@ -135,20 +124,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = density;
       cResult[11] = themedContext;
       tmp5 = themedContext;
+      const tmpResult = ThemeContext;
     }
-  : (theme) => {
-      theme = theme.theme;
-      let primaryColor = theme.primaryColor;
-      let secondaryColor = theme.secondaryColor;
-      let gradient = theme.gradient;
-      let flags = theme.flags;
-      let contrast = theme.contrast;
-      let saturation = theme.saturation;
-      let enabledExperiments = theme.enabledExperiments;
-      let density = theme.density;
-      let disableAdaptiveTheme = theme.disableAdaptiveTheme;
-      let reduceAdaptiveTheme = theme.reduceAdaptiveTheme;
-      const children = theme.children;
+  : (children) => {
+      let theme = children.theme;
+      let primaryColor = children.primaryColor;
+      let secondaryColor = children.secondaryColor;
+      let gradient = children.gradient;
+      let flags = children.flags;
+      let contrast = children.contrast;
+      let saturation = children.saturation;
+      let enabledExperiments = children.enabledExperiments;
+      let density = children.density;
+      let disableAdaptiveTheme = children.disableAdaptiveTheme;
+      let reduceAdaptiveTheme = children.reduceAdaptiveTheme;
       const context = secondaryColor.useContext(theme(primaryColor[4]).ThemeContext);
       const FALLBACK_THEME_CONTEXT_VALUE = theme(primaryColor[4]).FALLBACK_THEME_CONTEXT_VALUE;
       const items = [theme, , , , , , , , , , , , , , , , , , , , ,];
@@ -175,61 +164,64 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       items[19] = density;
       items[20] = disableAdaptiveTheme;
       items[21] = reduceAdaptiveTheme;
-      const value = secondaryColor.useMemo(() => {
-        const createThemedContext = ThemeContext.createThemedContext;
-        ThemeContext;
+      value = secondaryColor.useMemo(() => {
         if (theme == null) {
           theme = context.theme;
         }
-        const obj = {
+        const obj2 = {
           theme,
-          primaryColor,
-          secondaryColor,
-          gradient,
-          flags,
-          contrast,
-          saturation,
-          enabledExperiments,
-          density,
-          disableAdaptiveTheme,
-          reduceAdaptiveTheme,
+          primaryColor: null,
+          secondaryColor: null,
+          gradient: null,
+          flags: null,
+          contrast: null,
+          saturation: null,
+          enabledExperiments: null,
+          density: null,
+          disableAdaptiveTheme: null,
+          reduceAdaptiveTheme: null,
         };
         if (primaryColor == null) {
           primaryColor = context.primaryColor;
         }
+        obj2.primaryColor = primaryColor;
         if (secondaryColor == null) {
           secondaryColor = context.secondaryColor;
         }
+        obj2.secondaryColor = secondaryColor;
         if (gradient == null) {
           gradient = context.gradient;
         }
+        obj2.gradient = gradient;
         if (flags == null) {
           flags = context.flags;
         }
+        obj2.flags = flags;
         if (contrast == null) {
           contrast = context.contrast;
         }
+        obj2.contrast = contrast;
         if (saturation == null) {
           saturation = context.saturation;
         }
+        obj2.saturation = saturation;
         if (enabledExperiments == null) {
           enabledExperiments = context.enabledExperiments;
         }
+        obj2.enabledExperiments = enabledExperiments;
         if (density == null) {
           density = context.density;
         }
+        obj2.density = density;
         if (disableAdaptiveTheme == null) {
           disableAdaptiveTheme = context.disableAdaptiveTheme;
         }
+        obj2.disableAdaptiveTheme = disableAdaptiveTheme;
         if (reduceAdaptiveTheme == null) {
           reduceAdaptiveTheme = context.reduceAdaptiveTheme;
         }
-        return createThemedContext(obj);
+        obj2.reduceAdaptiveTheme = reduceAdaptiveTheme;
+        return ThemeContext.createThemedContext(obj2);
       }, items);
-      return gradient(theme(primaryColor[4]).ThemeContext.Provider, { value, children });
+      return gradient(theme(primaryColor[4]).ThemeContext.Provider, { value, children: children.children });
     };
-const result = size.fileFinishedImporting(
-  "../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx",
-);
-
-export const ThemeContextProvider = tmp2;

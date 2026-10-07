@@ -1,12 +1,9 @@
 // discord_app/modules/game_profile/native/components/GameProfileView.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useAnalyticsLocations from "../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import GameProfileConstants from "../../GameProfileConstants.tsx";
 import useGameProfileInvite from "../../hooks/useGameProfileInvite.tsx";
-import GameProfileHeaderDefault from "GameProfileHeader.tsx";
 import GameProfileMediaDefault from "GameProfileMedia.tsx";
 import GameProfileStoreLinksDefault from "GameProfileStoreLinks.tsx";
 import GameProfileReviewsDefault from "GameProfileReviews.tsx";
@@ -19,58 +16,58 @@ import GameProfileSimilarGamesDefault from "GameProfileSimilarGames.tsx";
 import GameProfileDetailsDefault from "GameProfileDetails.tsx";
 import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta.tsx";
 import GameProfileReportButtonDefault from "GameProfileReportButton.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
-let dependencyMap, importDefault, tmp2Result;
 
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
-const MOBILE_GAME_PROFILE_MAX_WIDTH = GameProfileConstants.MOBILE_GAME_PROFILE_MAX_WIDTH;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { container: obj2, body: obj3, buttonsContainer: obj4 };
-obj2 = {
+const GameProfileHeaderDefault = tmp5(8393);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: {
+    flex: 1,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    paddingBottom: nativeDefault.space.PX_16,
+  },
+  body: null,
+  buttonsContainer: null,
+};
+let obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   paddingBottom: nativeDefault.space.PX_16,
 };
-createStyles = createStyles.createStyles;
-obj3 = {
+obj2.body = {
   flexDirection: "column",
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8391).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
-obj4 = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
-let closure_7 = createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let obj4 = {
+  flexDirection: "column",
+  paddingVertical: nativeDefault.space.PX_16,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  gap: nativeDefault.space.PX_32,
+  maxWidth: fn(8391).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  alignSelf: "center",
+  width: "100%",
+};
+obj2.buttonsContainer = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileView.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onHeaderHeightMeasured) => {
-      let closeModal;
-      let game;
-      let invite;
-      let onGuildInviteResolved;
-      let onStoreLinksMeasured;
-      let scrollY;
-      let source;
-      let tmp9;
-      let trackAction;
-      let viewId;
-      let websiteButtons;
-      const tmp2 = dependencyMap;
-      const obj = react2;
-      const cResult = obj.c(87);
+      const cResult = c.c(87);
       ({
         game,
         invite,
@@ -85,15 +82,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } = onHeaderHeightMeasured);
       onHeaderHeightMeasured = onHeaderHeightMeasured.onHeaderHeightMeasured;
       closure_7();
-      importDefault = react.useRef(null);
-      dependencyMap = react.useRef(null);
-      const tmp6 = useAnalyticsLocationsDefault;
-      const analyticsLocations = tmp6(AnalyticsLocationDefault.GAME_PROFILE).analyticsLocations;
+      importDefault = noop.useRef(null);
+      dependencyMap = noop.useRef(null);
+      const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GAME_PROFILE).analyticsLocations;
       if (cResult[0] !== game) {
-        const tmpResult = useGameProfileInvite;
-        const result = tmpResult.hasGameProfileDiscordWebsite(game);
+        const result = useGameProfileInvite.hasGameProfileDiscordWebsite(game);
         cResult[0] = game;
         cResult[1] = result;
+        const tmpResult = useGameProfileInvite;
       }
       if (cResult[2] !== onStoreLinksMeasured) {
         class R {
@@ -111,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[2] = onStoreLinksMeasured;
         cResult[3] = R;
-        tmp9 = R;
+        const tmp9 = R;
       } else {
         class R {
           constructor() {
@@ -151,69 +147,67 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         scrollY,
         onHeightMeasured: onHeaderHeightMeasured,
       });
-      hasOwnProperty(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured });
+      const tmp10 = hasOwnProperty(GameProfileHeaderDefault, {
+        game,
+        scrollY,
+        onHeightMeasured: onHeaderHeightMeasured,
+      });
     }
   : (arg0) => {
-      let closeModal;
-      let game;
-      let invite;
-      let items1;
-      let items2;
-      let items3;
-      let obj3;
-      let obj6;
-      let onGuildInviteResolved;
-      let onHeaderHeightMeasured;
-      let onStoreLinksMeasured;
-      let scrollY;
-      let source;
-      let trackAction;
-      let viewId;
-      let websiteButtons;
       ({ game, viewId, source, trackAction, closeModal, scrollY, websiteButtons, onStoreLinksMeasured } = arg0);
       ({ invite, onGuildInviteResolved, onHeaderHeightMeasured } = arg0);
-      let tmp = closure_7();
-      let closure_1 = react.useRef(null);
-      let closure_2 = react.useRef(null);
-      const tmp4 = useAnalyticsLocationsDefault;
-      const analyticsLocations = tmp4(AnalyticsLocationDefault.GAME_PROFILE).analyticsLocations;
+      const tmp = closure_7();
+      noop.useRef(null);
+      noop.useRef(null);
+      const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GAME_PROFILE).analyticsLocations;
       const items = [onStoreLinksMeasured];
-      const obj = useGameProfileInvite;
-      const result = obj.hasGameProfileDiscordWebsite(game);
-      let closure_3 = react.useCallback(() => {
+      const result = useGameProfileInvite.hasGameProfileDiscordWebsite(game);
+      closure_3 = noop.useCallback(() => {
         const current = ref.current;
         const current2 = ref2.current;
-        const tmp = null != current && null != current2;
         if (tmp) {
           if (onStoreLinksMeasured != null) {
             tmp2(current + current2);
           }
         }
       }, items);
-      const obj2 = { value: analyticsLocations, children: metroRequire(View, obj3) };
-      obj3 = { style: tmp.container, children: items1 };
-      const AnalyticsLocationProvider = useAnalyticsLocations.AnalyticsLocationProvider;
-      items1 = [hasOwnProperty(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured })];
+      const obj2 = { value: analyticsLocations, children: null };
+      const obj3 = { style: tmp.container, children: null };
+      const items1 = [
+        hasOwnProperty(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }),
+      ];
       const obj4 = {
         style: tmp.body,
         onLayout(nativeEvent) {
-          ref.current = nativeEvent.nativeEvent.layout.y;
+          closure_1.current = nativeEvent.nativeEvent.layout.y;
           closure_3();
         },
-        children: items2,
+        children: null,
       };
-      items2 = [hasOwnProperty(GameProfileMediaDefault, { game, viewId, source, trackAction }), , , , , , , , , ,];
+      const items2 = [
+        hasOwnProperty(GameProfileMediaDefault, { game, viewId, source, trackAction }),
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+      ];
       let tmp6Result = websiteButtons.length > 0;
       if (tmp6Result) {
         const obj5 = {
           onLayout(nativeEvent) {
             const layout = nativeEvent.nativeEvent.layout;
-            ref2.current = layout.y + layout.height;
+            closure_2.current = layout.y + layout.height;
             closure_3();
           },
-          children: hasOwnProperty(GameProfileStoreLinksDefault, obj6),
+          children: null,
         };
-        obj6 = { game, websiteButtons, trackAction };
+        const obj6 = { game, websiteButtons, trackAction };
+        obj5.children = hasOwnProperty(GameProfileStoreLinksDefault, obj6);
         tmp6Result = hasOwnProperty(View, obj5);
       }
       items2[1] = tmp6Result;
@@ -226,20 +220,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         onInviteResolved: onGuildInviteResolved,
         trackAction,
       });
-      const obj7 = { gameId: game.id, hasDiscordWebsite: result, invite, closeModal, trackAction, scrollY };
-      items2[6] = hasOwnProperty(GameProfileAnnouncementsDefault, obj7);
+      items2[6] = hasOwnProperty(GameProfileAnnouncementsDefault, {
+        gameId: game.id,
+        hasDiscordWebsite: result,
+        invite,
+        closeModal,
+        trackAction,
+        scrollY,
+      });
       items2[7] = hasOwnProperty(GameProfileShopCarouselDefault, { game, closeModal, trackAction });
-      const obj8 = { gameId: game.id, trackAction };
-      items2[8] = hasOwnProperty(GameProfileSimilarGamesDefault, obj8);
+      items2[8] = hasOwnProperty(GameProfileSimilarGamesDefault, { gameId: game.id, trackAction });
       items2[9] = hasOwnProperty(GameProfileDetailsDefault, { game, viewId, source, trackAction });
-      const obj9 = { style: tmp.buttonsContainer, children: items3 };
-      items3 = [hasOwnProperty(GameProfileGameClaimCtaDefault, { game, trackAction })];
-      const obj10 = { applicationId: game.id, trackAction };
-      items3[1] = hasOwnProperty(GameProfileReportButtonDefault, obj10);
-      items2[10] = metroRequire(View, obj9);
-      items1[1] = metroRequire(View, obj4);
-      return hasOwnProperty(AnalyticsLocationProvider, obj2);
+      const obj9 = { style: tmp.buttonsContainer, children: null };
+      const items3 = [
+        hasOwnProperty(GameProfileGameClaimCtaDefault, { game, trackAction }),
+        hasOwnProperty(GameProfileReportButtonDefault, { applicationId: game.id, trackAction }),
+      ];
+      obj9.children = items3;
+      items2[10] = timestampProducer(View, obj9);
+      obj4.children = items2;
+      items1[1] = timestampProducer(View, obj4);
+      obj3.children = items1;
+      obj2.children = timestampProducer(View, obj3);
+      return hasOwnProperty(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
     };
-let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileView.tsx");
-
-export default tmp4;

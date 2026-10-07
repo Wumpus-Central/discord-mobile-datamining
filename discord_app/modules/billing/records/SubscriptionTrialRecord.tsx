@@ -1,37 +1,38 @@
 // discord_app/modules/billing/records/SubscriptionTrialRecord.tsx
 import Record from "../../../lib/Record.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-class SubscriptionTrialRecord extends Record {
+let SubscriptionTrialRecord;
+class SubscriptionTrialRecord extends tmp2 {
   constructor(arg0) {
-    const tmp = new SubscriptionTrialRecord(new.target, this);
-    ({ id: tmp.id, interval: tmp.interval, intervalCount: tmp.intervalCount, skuId: tmp.skuId } = arg0);
+    tmp = new SubscriptionTrialRecord(new.target, new.target);
+    ({ id: tmp.id, interval: tmp.interval, intervalCount: tmp.intervalCount, skuId: tmp.skuId } = global);
     return tmp;
   }
-  static createFromServer(arg0) {
-    let id;
-    let interval;
-    ({ id, interval } = arg0);
-    if (typeof SubscriptionTrialRecord === "function") {
-      const self = this;
-      const self2 = this;
-      const tmp6 = new SubscriptionTrialRecord(tmp, tmp2, this, id, interval);
-      tmp6.id = id;
-      tmp6.interval = interval;
-      tmp6.intervalCount = tmp3;
-      tmp6.skuId = tmp4;
-      return tmp6;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
 }
+SubscriptionTrialRecord["createFromServer"] = function createFromServer(arg0) {
+  ({ id, interval } = arg0);
+  if (typeof SubscriptionTrialRecord === "function") {
+    const tmp8 = new SubscriptionTrialRecord(tmp, tmp2, new.target, id, interval);
+    tmp8.id = id;
+    tmp8.interval = interval;
+    tmp8.intervalCount = tmp3;
+    tmp8.skuId = tmp4;
+    return tmp8;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
 Object.defineProperty(SubscriptionTrialRecord.prototype, "isMultiInterval", {
   get: function isMultiInterval() {
-    return null != this.intervalCount && this.intervalCount > 1;
+    let tmp = null != this.intervalCount;
+    if (tmp) {
+      tmp = this.intervalCount > 1;
+    }
+    return tmp;
   },
   set: undefined,
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/records/SubscriptionTrialRecord.tsx");
 
 export default SubscriptionTrialRecord;

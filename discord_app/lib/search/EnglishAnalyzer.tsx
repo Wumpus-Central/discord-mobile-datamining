@@ -4,7 +4,6 @@ import snowballStemmer from "snowballStemmer.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let importDefault;
 
 function stripPossessive(item) {
   return item.replace(/('|\u2019|\uFF07)(s|S)$/, "");
@@ -18,15 +17,18 @@ function isStopWord(arg0) {
 function isBlank(arg0) {
   return 0 === arg0.length;
 }
-function shouldHighlight(item, set) {
+function shouldHighlight(item, set, arg2) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
   const tmp = lowercase(stripPossessive(item));
   if (isBlank(tmp)) {
     return false;
   } else if (isStopWord(tmp)) {
     return false;
   } else {
-    const obj = snowballStemmer;
-    const snowballStemResult = obj.snowballStem(tmp);
+    const snowballStemResult = snowballStemmer.snowballStem(tmp);
     if (flag) {
       const values = set.values();
       for (const item10025 of values) {
@@ -43,17 +45,17 @@ function shouldHighlight(item, set) {
   }
 }
 function highlightAST(content, set, flag) {
-  let closure_0 = set;
-  let closure_1 = flag;
+  closure_0 = set;
+  closure_1 = flag;
   if (Array.isArray(content)) {
     const item = content.forEach((item) => {
-      highlightAST(item, set, flag);
+      highlightAST(item, closure_0, closure_1);
       return item;
     });
   } else if ("list" === content.type) {
     const items = content.items;
     const item1 = items.forEach((item) => {
-      highlightAST(item, set, flag);
+      highlightAST(item, closure_0, closure_1);
       return item;
     });
   } else {
@@ -61,11 +63,10 @@ function highlightAST(content, set, flag) {
       if ("codeBlock" !== content.type) {
         const items1 = [];
         content = "";
-        const str3 = content.content;
-        const parts = str3.split(/(\W+)/g);
+        const parts = content.content.split(/(\W+)/g);
         const item2 = parts.forEach((content) => {
-          if (shouldHighlight(content, set, flag)) {
-            if (content.length > 0) {
+          if (shouldHighlight(content, closure_0, closure_1)) {
+            if (arr.length > 0) {
               const obj = { type: "text", content };
               items1.push(obj);
             }
@@ -79,7 +80,7 @@ function highlightAST(content, set, flag) {
         if (items1.length > 0) {
           if (content.length > 0) {
             let obj = { type: "text", content };
-            const arr = items1.push(obj);
+            items1.push(obj);
           }
           if ("text" === content.type) {
             content.content = items1;
@@ -135,38 +136,39 @@ let set = new Set([
 const result = size.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
 export const analyze = function analyze(str) {
-  const tmp = _modDef12;
-  const tmpResult = tmp(str.split(/\W+/));
-  const mapped = tmpResult.map(stripPossessive);
+  const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
+  const tmpResult = _modDef12(str.split(/\W+/));
+  const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
-  const mapped1 = rejectResult.map(lowercase);
   const rejectResult1 = mapped1.reject(isStopWord);
-  const iter = rejectResult1.map(snowballStemmer.snowballStem);
-  return iter.value();
+  return mapped1.reject(isStopWord).map(snowballStemmer.snowballStem).value();
 };
 export { shouldHighlight };
 export { highlightAST };
 export const createASTHighlighter = function createASTHighlighter(str) {
-  let closure_1;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  set = undefined;
-  let tmp3 =
-    str.length >= flag(set[2]).SEARCH_PARTIAL_NAME_MATCH_MIN_QUERY_LENGTH &&
-    str.length <= tmp(tmp2[2]).SEARCH_PARTIAL_NAME_MATCH_MAX_QUERY_LENGTH;
+  importDefault = undefined;
+  let set;
+  let tmp3 = str.length >= flag(set[2]).SEARCH_PARTIAL_NAME_MATCH_MIN_QUERY_LENGTH;
+  if (tmp3) {
+    tmp3 = str.length <= tmp(tmp2[2]).SEARCH_PARTIAL_NAME_MATCH_MAX_QUERY_LENGTH;
+  }
   importDefault = tmp3;
   const tmp4 = require("../../../_runtime/metro/00012__.js");
-  const tmp4Result = tmp4(str.split(/\W+/));
-  const mapped = tmp4Result.map(stripPossessive);
+  const mapped = require("../../../_runtime/metro/00012__.js")(str.split(/\W+/)).map(stripPossessive);
+  const tmp4Result = require("../../../_runtime/metro/00012__.js")(str.split(/\W+/));
+  const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
-  const mapped1 = rejectResult.map(lowercase);
   const rejectResult1 = mapped1.reject(isStopWord);
-  const iter = rejectResult1.map(flag(set[1]).snowballStem);
-  set = new Set(iter.value());
+  set = new Set(mapped1.reject(isStopWord).map(flag(set[1]).snowballStem).value());
   return (content) => {
-    const tmp3 = closure_1 && flag;
+    let tmp3 = closure_1;
+    if (closure_1) {
+      tmp3 = flag;
+    }
     highlightAST(content, set, tmp3);
     return content;
   };

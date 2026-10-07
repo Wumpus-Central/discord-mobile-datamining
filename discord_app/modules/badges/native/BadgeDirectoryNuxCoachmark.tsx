@@ -1,84 +1,78 @@
 // discord_app/modules/badges/native/BadgeDirectoryNuxCoachmark.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import BadgeArtImageDefault from "BadgeArtImage.tsx";
 import openBadgeDirectoryScreen from "openBadgeDirectoryScreen.tsx";
 import GameTimeTier9LargeBadge from "../../../design/components/mana-assets/native/generated/GameTimeTier9LargeBadge.native.tsx";
 import StreamingTier10LargeBadge from "../../../design/components/mana-assets/native/generated/StreamingTier10LargeBadge.native.tsx";
 import GameDiversityTier8LargeBadge from "../../../design/components/mana-assets/native/generated/GameDiversityTier8LargeBadge.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-let _require, badgeIconUrls, userId;
-
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-const View = react_native.View;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let closure_8 = { single: [60], pair: [48, 48], trio: [42, 60, 42] };
-let createStyles = createStyles_mod;
-let obj = { graphicRow: obj2, noProgressGraphicRow: obj3 };
-obj2 = {
+require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const dependencyMap2 = { single: [60], pair: [48, 48], trio: [42, 60, 42] };
+const createStyles = fn(4896);
+let obj2 = {
+  graphicRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    height: 60,
+    gap: nativeDefault.space.PX_8,
+  },
+  noProgressGraphicRow: null,
+};
+let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   height: 60,
   gap: nativeDefault.space.PX_8,
 };
-createStyles = createStyles.createStyles;
-obj3 = { gap: nativeDefault.space.PX_12 };
-let closure_9 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj2.noProgressGraphicRow = { gap: nativeDefault.space.PX_12 };
+let closure_9 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let items;
-      const obj = react2;
-      const cResult = obj.c(8);
+      const cResult = c.c(8);
       const tmp4 = closure_9();
       if (cResult[0] === tmp4.graphicRow) {
-        let tmp5;
-        let tmp9;
-        let tmp8;
-        let tmp7;
-        let tmp14;
         if (cResult[1] === tmp4.noProgressGraphicRow) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp11 = metroRequire(GameTimeTier9LargeBadge.GameTimeTier9LargeBadge, { width: 40, height: 40 });
-          const tmp12 = metroRequire(StreamingTier10LargeBadge.StreamingTier10LargeBadge, { width: 50, height: 50 });
-          const tmp13 = metroRequire(GameDiversityTier8LargeBadge.GameDiversityTier8LargeBadge, {
+          const tmp11 = timestampProducer(GameTimeTier9LargeBadge.GameTimeTier9LargeBadge, { width: 40, height: 40 });
+          const tmp12 = timestampProducer(StreamingTier10LargeBadge.StreamingTier10LargeBadge, {
+            width: 50,
+            height: 50,
+          });
+          const tmp13 = timestampProducer(GameDiversityTier8LargeBadge.GameDiversityTier8LargeBadge, {
             width: 40,
             height: 40,
           });
           cResult[3] = tmp11;
           cResult[4] = tmp12;
           cResult[5] = tmp13;
-          tmp9 = tmp13;
-          tmp8 = tmp12;
-          tmp7 = tmp11;
+          let tmp9 = tmp13;
+          let tmp8 = tmp12;
+          let tmp7 = tmp11;
         } else {
           tmp7 = cResult[3];
           tmp8 = cResult[4];
           tmp9 = cResult[5];
         }
         if (cResult[6] !== tmp5) {
-          const obj2 = { style: tmp5, children: items };
-          items = [tmp7, tmp8, tmp9];
-          const tmp17 = metroImportDefault(View, obj2);
+          const obj2 = { style: tmp5, children: null };
+          const items = [tmp7, tmp8, tmp9];
+          obj2.children = items;
+          const tmp17 = React5(View, obj2);
           cResult[6] = tmp5;
           cResult[7] = tmp17;
-          tmp14 = tmp17;
+          let tmp14 = tmp17;
         } else {
           tmp14 = cResult[7];
         }
@@ -92,335 +86,256 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items1;
     }
   : () => {
-      let items;
-      let items1;
-      const obj = { style: items, children: items1 };
-      items = [,];
+      const obj = { style: null, children: null };
+      const items = [,];
       ({ graphicRow: arr[0], noProgressGraphicRow: arr[1] } = closure_9());
-      items1 = [, ,];
-      closure_9();
-      items1[0] = metroRequire(GameTimeTier9LargeBadge.GameTimeTier9LargeBadge, { width: 40, height: 40 });
-      items1[1] = metroRequire(StreamingTier10LargeBadge.StreamingTier10LargeBadge, { width: 50, height: 50 });
-      items1[2] = metroRequire(GameDiversityTier8LargeBadge.GameDiversityTier8LargeBadge, { width: 40, height: 40 });
-      return metroImportDefault(View, obj);
+      obj.style = items;
+      const items1 = [
+        timestampProducer(GameTimeTier9LargeBadge.GameTimeTier9LargeBadge, { width: 40, height: 40 }),
+        timestampProducer(StreamingTier10LargeBadge.StreamingTier10LargeBadge, { width: 50, height: 50 }),
+        timestampProducer(GameDiversityTier8LargeBadge.GameDiversityTier8LargeBadge, { width: 40, height: 40 }),
+      ];
+      obj.children = items1;
+      return React5(View, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (badgeIconUrls) => {
-      let closure_0;
-      let items;
-      let mapped;
-      let tmp17;
-      let obj = require("react");
-      const cResult = obj.c(17);
+      const cResult = require("c").c(17);
       badgeIconUrls = badgeIconUrls.badgeIconUrls;
-      const tmp4 = closure_9();
+      let graphicRow = closure_9();
       if (cResult[0] === badgeIconUrls) {
-        let tmp5;
-        let tmp6;
-        let tmp7;
-        let tmp8;
-        if (cResult[1] === tmp4.graphicRow) {
-          tmp5 = cResult[2];
-          tmp6 = cResult[3];
-          tmp7 = cResult[4];
-          tmp8 = cResult[5];
-        }
-        const _Symbol = Symbol;
-        if (tmp8 === Symbol.for("react.early_return_sentinel")) {
-          if (cResult[13] === tmp5) {
-            if (cResult[14] === tmp6) {
-              let tmp28;
-              if (cResult[15] === tmp7) {
-                tmp28 = cResult[16];
+        if (cResult[1] === graphicRow.graphicRow) {
+          const _Symbol = Symbol;
+          if (cResult[5] !== Symbol.for("react.early_return_sentinel")) {
+            return tmp7;
+          } else {
+            if (cResult[13] === tmp4) {
+              if (cResult[14] === tmp5) {
               }
-              tmp8 = tmp28;
             }
+            const obj2 = { style: tmp5, children: tmp6 };
+            const tmp28 = closure_6(tmp4, obj2);
+            cResult[13] = tmp4;
+            cResult[14] = tmp5;
+            cResult[15] = tmp6;
+            cResult[16] = tmp28;
           }
-          const obj2 = { style: tmp6, children: tmp7 };
-          const tmp30 = closure_6(tmp5, obj2);
-          cResult[13] = tmp5;
-          cResult[14] = tmp6;
-          cResult[15] = tmp7;
-          cResult[16] = tmp30;
-          tmp28 = tmp30;
         }
-        return tmp8;
       }
-      const forResult = Symbol.for("react.early_return_sentinel");
-      const tmpResult = require("BadgeDirectoryNuxGraphicUtils");
-      const badgeDirectoryNuxGraphicLayout = tmpResult.getBadgeDirectoryNuxGraphicLayout(badgeIconUrls);
-      if ("fallback" !== badgeDirectoryNuxGraphicLayout.type) {
-        _require = tmp24;
-        const graphicRow = tmp4.graphicRow;
-        if (cResult[11] !== closure_8[badgeDirectoryNuxGraphicLayout.type]) {
-          class B {
-            constructor(arg0, arg1) {
-              obj = { url: badgeIconUrls, height: closure_0[arg1] };
-              return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
-            }
-          }
-          cResult[11] = closure_8[badgeDirectoryNuxGraphicLayout.type];
-          cResult[12] = B;
+      Symbol.for("react.early_return_sentinel");
+      const obj = require("c");
+      let map = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(badgeIconUrls);
+      if ("fallback" === map.type) {
+        const _Symbol2 = Symbol;
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp13 = closure_6(tmp(12915).GameDiversityTier9LargeBadge, { width: 42, height: 42 });
+          const tmp14 = closure_6(tmp(12917).GameDiversityTier10LargeBadge, { width: 60, height: 60 });
+          const tmp15 = closure_6(tmp(12913).GameDiversityTier8LargeBadge, { width: 42, height: 42 });
+          cResult[6] = tmp13;
+          cResult[7] = tmp14;
+          cResult[8] = tmp15;
+          let tmp11 = tmp15;
+          let tmp10 = tmp14;
+          let tmp9 = tmp13;
         } else {
-          class B {
-            constructor(arg0, arg1) {
-              obj = { url: badgeIconUrls, height: closure_0[arg1] };
-              return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
-            }
-          }
+          tmp9 = cResult[6];
+          tmp10 = cResult[7];
+          tmp11 = cResult[8];
         }
-        const iconUrls = badgeDirectoryNuxGraphicLayout.iconUrls;
-        mapped = iconUrls.map(B);
-        tmp17 = forResult;
-      } else {
-        let tmp13;
-        let tmp12;
-        let tmp11;
+        if (cResult[9] !== graphicRow.graphicRow) {
+          const obj3 = { style: graphicRow.graphicRow, children: null };
+          const items = [tmp9, tmp10, tmp11];
+          obj3.children = items;
+          const tmp19 = closure_7(View, obj3);
+          cResult[9] = graphicRow.graphicRow;
+          cResult[10] = tmp19;
+          let tmp16 = tmp19;
+        } else {
+          tmp16 = cResult[10];
+        }
+        cResult[0] = badgeIconUrls;
+        graphicRow = graphicRow.graphicRow;
+        cResult[1] = graphicRow;
+        cResult[2] = undefined;
+        cResult[3] = undefined;
+        cResult[4] = undefined;
+        cResult[5] = tmp16;
+      }
+      _require = tmp20;
+      const graphicRow2 = graphicRow.graphicRow;
+      if (cResult[11] !== dependencyMap2[map.type]) {
         class B {
           constructor(arg0, arg1) {
             obj = { url: badgeIconUrls, height: closure_0[arg1] };
             return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
           }
         }
-        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class B {
-            constructor(arg0, arg1) {
-              obj = { url: badgeIconUrls, height: closure_0[arg1] };
-              return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
-            }
-          }
-          const tmp14 = closure_6(require("GameDiversityTier9LargeBadge").GameDiversityTier9LargeBadge, {
-            width: 42,
-            height: 42,
-          });
-          const tmp15 = closure_6(require("GameDiversityTier10LargeBadge").GameDiversityTier10LargeBadge, {
-            width: 60,
-            height: 60,
-          });
-          const tmp16 = closure_6(require("GameDiversityTier8LargeBadge").GameDiversityTier8LargeBadge, {
-            width: 42,
-            height: 42,
-          });
-          cResult[6] = tmp14;
-          cResult[7] = tmp15;
-          cResult[8] = tmp16;
-          tmp13 = tmp16;
-          tmp12 = tmp15;
-          tmp11 = tmp14;
-        } else {
-          class B {
-            constructor(arg0, arg1) {
-              obj = { url: badgeIconUrls, height: closure_0[arg1] };
-              return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
-            }
-          }
-          tmp12 = cResult[7];
-          tmp13 = cResult[8];
-        }
-        if (cResult[9] !== tmp4.graphicRow) {
-          class B {
-            constructor(arg0, arg1) {
-              obj = { url: badgeIconUrls, height: closure_0[arg1] };
-              return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
-            }
-          }
-          const obj3 = { style: tmp4.graphicRow, children: items };
-          items = [tmp11, tmp12, tmp13];
-          const tmp19 = closure_7(View, obj3);
-          cResult[9] = tmp4.graphicRow;
-          cResult[10] = tmp19;
-          tmp17 = tmp19;
-        } else {
-          class B {
-            constructor(arg0, arg1) {
-              obj = { url: badgeIconUrls, height: closure_0[arg1] };
-              return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
-            }
+        cResult[11] = tmp20;
+        cResult[12] = B;
+      } else {
+        class B {
+          constructor(arg0, arg1) {
+            obj = { url: badgeIconUrls, height: closure_0[arg1] };
+            return jsx(closure_1(closure_2[14]), obj, badgeIconUrls);
           }
         }
       }
-      cResult[0] = badgeIconUrls;
-      cResult[1] = tmp4.graphicRow;
-      cResult[2] = View;
-      cResult[3] = tmp21;
-      cResult[4] = mapped;
-      cResult[5] = tmp17;
-      tmp8 = tmp17;
-      tmp7 = mapped;
-      tmp6 = tmp21;
-      tmp5 = View;
+      const iconUrls = map.iconUrls;
+      map = iconUrls.map;
+      const mapped = map(B);
+      const tmpResult = require("BadgeDirectoryNuxGraphicUtils");
     }
   : (badgeIconUrls) => {
-      let closure_0;
-      let iconUrls;
-      let items;
-      _require = undefined;
-      badgeIconUrls = badgeIconUrls.badgeIconUrls;
+      let _require;
       const tmp = closure_9();
-      let obj = require("BadgeDirectoryNuxGraphicUtils");
-      const badgeDirectoryNuxGraphicLayout = obj.getBadgeDirectoryNuxGraphicLayout(badgeIconUrls);
+      const badgeDirectoryNuxGraphicLayout = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(
+        badgeIconUrls.badgeIconUrls,
+      );
       if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
-        const obj2 = { style: tmp.graphicRow, children: items };
-        items = [
-          closure_6(require("GameDiversityTier9LargeBadge").GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
-          closure_6(require("GameDiversityTier10LargeBadge").GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
-          closure_6(require("GameDiversityTier8LargeBadge").GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
+        const obj2 = { style: tmp.graphicRow, children: null };
+        const items = [
+          closure_6(tmp2(12915).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
+          closure_6(tmp2(12917).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
+          closure_6(tmp2(12913).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
         ];
+        obj2.children = items;
         return closure_7(View, obj2);
       } else {
-        _require = closure_8[badgeDirectoryNuxGraphicLayout.type];
-        const obj3 = {
-          style: tmp.graphicRow,
-          children: iconUrls.map((url, index) => {
-            const obj = { url, height: closure_0[index] };
-            return metroRequire(BadgeArtImageDefault, obj, url);
-          }),
-        };
-        iconUrls = badgeDirectoryNuxGraphicLayout.iconUrls;
+        _require = dependencyMap2[badgeDirectoryNuxGraphicLayout.type];
+        const obj3 = { style: tmp.graphicRow, children: null };
+        const iconUrls = badgeDirectoryNuxGraphicLayout.iconUrls;
+        obj3.children = iconUrls.map((url, index) =>
+          timestampProducer(BadgeArtImageDefault, { url, height: closure_0[index] }, url),
+        );
         return closure_6(View, obj3);
       }
+      const obj = require("BadgeDirectoryNuxGraphicUtils");
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const obj4 = { gap: nativeDefault.space.PX_12 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryNuxCoachmark.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (userId) => {
-      let formatToPlainStringResult;
-      let markAsDismissed;
-      let tmp5;
-      let visible;
-      let obj = userId(markAsDismissed[7]);
-      const cResult = obj.c(21);
+      const cResult = userId(markAsDismissed[7]).c(21);
       userId = userId.userId;
       const variantProps = userId.variantProps;
       ({ visible, markAsDismissed } = userId);
-      let closure_3 = tmp4;
-      const targetRef = userId.targetRef;
+      closure_3 = tmp5;
       if (cResult[0] !== ("progress" === variantProps.variant)) {
-        let stringResult;
         const intl = tmp(tmp2[15]).intl;
         const string = intl.string;
-        const t = tmp(tmp2[15]).t;
-        if ("progress" === variantProps.variant) {
-          stringResult = string(t.uwDBSq);
+        let uwDBSq = tmp(tmp2[15]).t;
+        if (tmp5) {
+          uwDBSq = uwDBSq.uwDBSq;
+          let stringResult = string(uwDBSq);
         } else {
-          stringResult = string(t["5GD53o"]);
+          stringResult = string(uwDBSq["5GD53o"]);
         }
-        cResult[0] = "progress" === variantProps.variant;
+        cResult[0] = tmp5;
         cResult[1] = stringResult;
-        tmp5 = stringResult;
       } else {
-        tmp5 = cResult[1];
-      }
-      if ((cResult[2] === "progress") === variantProps.variant) {
-        let tmp7;
-        if (cResult[3] === variantProps.newBadgeCount) {
-          tmp7 = cResult[4];
-        }
-        if ((cResult[5] === "progress") === variantProps.variant) {
-          let tmp9;
-          let tmp10;
-          let tmp12;
-          if (cResult[6] === variantProps.badgeIconUrls) {
-            tmp9 = cResult[7];
-          }
-          if (cResult[8] !== markAsDismissed) {
-            const fn2 = function h() {
-              return markAsDismissed(ContentDismissActionType.USER_DISMISS);
-            };
-            cResult[8] = markAsDismissed;
-            cResult[9] = fn2;
-            tmp10 = fn2;
-          } else {
-            tmp10 = cResult[9];
-          }
-          const _Symbol = Symbol;
-          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = tmp(tmp2[15]).intl;
-            const stringResult1 = intl3.string(userId(markAsDismissed[15]).t.pHo9tZ);
-            cResult[10] = stringResult1;
-            tmp12 = stringResult1;
-          } else {
-            tmp12 = cResult[10];
-          }
-          if (cResult[11] === markAsDismissed) {
-            let tmp14;
-            if (cResult[12] === userId) {
-              tmp14 = cResult[13];
-            }
-            if (cResult[14] === tmp5) {
-              if (cResult[15] === tmp7) {
-                if (cResult[16] === tmp9) {
-                  if (cResult[17] === tmp10) {
-                    if (cResult[18] === tmp14) {
-                      let tmp15;
-                      if (cResult[19] === visible) {
-                        tmp15 = cResult[20];
+        if (cResult[2] === tmp5) {
+          if (cResult[3] === variantProps.newBadgeCount) {
+            if (cResult[5] === tmp5) {
+              if (cResult[6] === variantProps.badgeIconUrls) {
+                let tmp12 = cResult[7];
+              }
+              if (cResult[8] !== markAsDismissed) {
+                const fn2 = function h() {
+                  return markAsDismissed(ContentDismissActionType.USER_DISMISS);
+                };
+                cResult[8] = markAsDismissed;
+                cResult[9] = fn2;
+                let tmp13 = fn2;
+              } else {
+                tmp13 = cResult[9];
+              }
+              const _Symbol = Symbol;
+              if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl3 = tmp(tmp2[15]).intl;
+                const stringResult1 = intl3.string(tmp(tmp2[15]).t.pHo9tZ);
+                cResult[10] = stringResult1;
+                let tmp15 = stringResult1;
+              } else {
+                tmp15 = cResult[10];
+              }
+              if (cResult[11] === markAsDismissed) {
+                if (cResult[12] === userId) {
+                  let tmp17 = cResult[13];
+                }
+                if (cResult[14] === tmp6) {
+                  if (cResult[15] === tmp9) {
+                    if (cResult[16] === tmp12) {
+                      if (cResult[17] === tmp13) {
+                        if (cResult[18] === tmp17) {
+                          if (cResult[19] === visible) {
+                            let tmp18 = cResult[20];
+                          }
+                          const coachmark = tmp(tmp2[17]).useCoachmark(tmp4, tmp18);
+                          return null;
+                        }
                       }
-                      let tmpResult = tmp(tmp2[17]);
-                      const coachmark = tmpResult.useCoachmark(targetRef, tmp15);
-                      return null;
                     }
                   }
                 }
+                const obj2 = {
+                  title: tmp6,
+                  description: tmp9,
+                  visible,
+                  position: "bottom",
+                  renderImgComponent: tmp12,
+                  onDismiss: tmp13,
+                  buttonLabel: tmp15,
+                  buttonVariant: "primary",
+                  onButtonPress: tmp17,
+                };
+                cResult[14] = tmp6;
+                cResult[15] = tmp9;
+                cResult[16] = tmp12;
+                cResult[17] = tmp13;
+                cResult[18] = tmp17;
+                cResult[19] = visible;
+                cResult[20] = obj2;
+                tmp18 = obj2;
               }
+              const fn3 = function y() {
+                markAsDismissed(ContentDismissActionType.TAKE_ACTION);
+                const result = openBadgeDirectoryScreen.openBadgeDirectoryScreen({ targetUserId: userId });
+              };
+              cResult[11] = markAsDismissed;
+              cResult[12] = userId;
+              cResult[13] = fn3;
+              tmp17 = fn3;
             }
-            let obj2 = {
-              title: tmp5,
-              description: tmp7,
-              visible,
-              position: "bottom",
-              renderImgComponent: tmp9,
-              onDismiss: tmp10,
-              buttonLabel: tmp12,
-              buttonVariant: "primary",
-              onButtonPress: tmp14,
+            const fn = function l() {
+              if (closure_3) {
+                const obj = { badgeIconUrls: variantProps.badgeIconUrls };
+                let tmpResult = timestampProducer(closure_11, obj);
+              } else {
+                tmpResult = timestampProducer(closure_10, {});
+              }
+              return tmpResult;
             };
-            cResult[14] = tmp5;
-            cResult[15] = tmp7;
-            cResult[16] = tmp9;
-            cResult[17] = tmp10;
-            cResult[18] = tmp14;
-            cResult[19] = visible;
-            cResult[20] = obj2;
-            tmp15 = obj2;
+            cResult[5] = tmp5;
+            cResult[6] = variantProps.badgeIconUrls;
+            cResult[7] = fn;
+            tmp12 = fn;
           }
-          const fn3 = function y() {
-            markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-            const obj = openBadgeDirectoryScreen;
-            const obj2 = { targetUserId: userId };
-            const result = obj.openBadgeDirectoryScreen(obj2);
-          };
-          cResult[11] = markAsDismissed;
-          cResult[12] = userId;
-          cResult[13] = fn3;
-          tmp14 = fn3;
         }
-        const fn = function l() {
-          let tmpResult;
-          if (closure_3) {
-            const obj = { badgeIconUrls: variantProps.badgeIconUrls };
-            tmpResult = metroRequire(closure_11, obj);
-          } else {
-            tmpResult = metroRequire(closure_10, {});
-          }
-          return tmpResult;
-        };
-        cResult[5] = "progress" === variantProps.variant;
-        cResult[6] = variantProps.badgeIconUrls;
-        cResult[7] = fn;
-        tmp9 = fn;
+        const intl2 = tmp(tmp2[15]).intl;
+        if (tmp5) {
+          const obj3 = { count: variantProps.newBadgeCount };
+          let formatToPlainStringResult = intl2.formatToPlainString(tmp(tmp2[15]).t.Mk5nzZ, obj3);
+        } else {
+          formatToPlainStringResult = intl2.string(tmp(tmp2[15]).t["2Rb7tE"]);
+        }
+        cResult[2] = tmp5;
+        cResult[3] = variantProps.newBadgeCount;
+        cResult[4] = formatToPlainStringResult;
       }
-      const intl2 = tmp(tmp2[15]).intl;
-      if ("progress" === variantProps.variant) {
-        const obj3 = { count: variantProps.newBadgeCount };
-        formatToPlainStringResult = intl2.formatToPlainString(tmp(tmp2[15]).t.Mk5nzZ, obj3);
-      } else {
-        formatToPlainStringResult = intl2.string(tmp(tmp2[15]).t["2Rb7tE"]);
-      }
-      cResult[2] = "progress" === variantProps.variant;
-      cResult[3] = variantProps.newBadgeCount;
-      cResult[4] = formatToPlainStringResult;
-      tmp7 = formatToPlainStringResult;
     }
   : (userId) => {
       userId = userId.userId;
@@ -428,61 +343,56 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const visible = userId.visible;
       const markAsDismissed = userId.markAsDismissed;
       const items = [variantProps, visible, markAsDismissed, userId];
-      const targetRef = userId.targetRef;
       const memo = markAsDismissed.useMemo(() => {
-        let formatToPlainStringResult;
-        let intl3;
-        let stringResult;
         const targetUserId = tmp2;
         const intl = userId(visible[15]).intl;
         const string = intl.string;
         const t = userId(visible[15]).t;
         if ("progress" === variantProps.variant) {
-          stringResult = string(t.uwDBSq);
+          let stringResult = string(t.uwDBSq);
         } else {
           stringResult = string(t["5GD53o"]);
         }
         let obj = {
           title: stringResult,
-          description: formatToPlainStringResult,
-          visible,
+          description: null,
+          visible: null,
           position: "bottom",
-          renderImgComponent() {
-            let tmpResult;
-            if (targetUserId) {
-              const obj = { badgeIconUrls: variantProps.badgeIconUrls };
-              tmpResult = metroRequire(closure_11, obj);
-            } else {
-              tmpResult = metroRequire(closure_10, {});
-            }
-            return tmpResult;
-          },
-          onDismiss() {
-            return markAsDismissed(constants.USER_DISMISS);
-          },
-          buttonLabel: intl3.string(userId(visible[15]).t.pHo9tZ),
+          renderImgComponent: null,
+          onDismiss: null,
+          buttonLabel: null,
           buttonVariant: "primary",
-          onButtonPress() {
-            markAsDismissed(constants.TAKE_ACTION);
-            const obj = userId(visible[16]);
-            const obj2 = { targetUserId };
-            const result = obj.openBadgeDirectoryScreen(obj2);
-          },
+          onButtonPress: null,
         };
         const intl2 = userId(visible[15]).intl;
         if ("progress" === variantProps.variant) {
-          let obj2 = { count: variantProps.newBadgeCount };
-          formatToPlainStringResult = intl2.formatToPlainString(userId(visible[15]).t.Mk5nzZ, obj2);
+          const obj2 = { count: variantProps.newBadgeCount };
+          let formatToPlainStringResult = intl2.formatToPlainString(userId(visible[15]).t.Mk5nzZ, obj2);
         } else {
           formatToPlainStringResult = intl2.string(userId(visible[15]).t["2Rb7tE"]);
         }
-        intl3 = userId(visible[15]).intl;
+        obj.description = formatToPlainStringResult;
+        obj.visible = visible;
+        obj.renderImgComponent = function renderImgComponent() {
+          if (closure_0) {
+            const obj = { badgeIconUrls: variantProps.badgeIconUrls };
+            let tmpResult = timestampProducer(closure_11, obj);
+          } else {
+            tmpResult = timestampProducer(closure_10, {});
+          }
+          return tmpResult;
+        };
+        obj.onDismiss = function onDismiss() {
+          return markAsDismissed(constants.USER_DISMISS);
+        };
+        const intl3 = userId(visible[15]).intl;
+        obj.buttonLabel = intl3.string(userId(visible[15]).t.pHo9tZ);
+        obj.onButtonPress = function onButtonPress() {
+          markAsDismissed(constants.TAKE_ACTION);
+          const result = userId(visible[16]).openBadgeDirectoryScreen({ targetUserId });
+        };
         return obj;
       }, items);
-      let obj = userId(visible[17]);
-      const coachmark = obj.useCoachmark(targetRef, memo);
+      const coachmark = userId(visible[17]).useCoachmark(userId.targetRef, memo);
       return null;
     };
-let result = size.fileFinishedImporting("modules/badges/native/BadgeDirectoryNuxCoachmark.tsx");
-
-export default tmp4;

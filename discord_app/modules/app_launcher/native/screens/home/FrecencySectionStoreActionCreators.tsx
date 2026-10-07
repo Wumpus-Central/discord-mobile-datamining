@@ -7,7 +7,5 @@ const result = size.fileFinishedImporting(
 );
 
 export const setFrecencySectionSelection = function setFrecencySectionSelection(APPS) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "FRECENCY_SECTION_SET_SELECTION", selection: APPS };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "FRECENCY_SECTION_SET_SELECTION", selection: APPS });
 };

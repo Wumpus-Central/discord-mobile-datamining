@@ -3,8 +3,6 @@ import helpers from "helpers.tsx";
 import contextMenuIcons from "contextMenuIcons.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let closure_1, dependencyMap;
-
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
 export const CONTEXT_MENU_ICON_NAMES = contextMenuIcons.CONTEXT_MENU_ICON_NAMES;
@@ -21,8 +19,7 @@ export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   if (null != request) {
     obj.validation = (object) => {
       if (null == closure_1) {
-        const obj = helpers;
-        closure_1 = obj.joiReqObj(object.object(request(object)));
+        closure_1 = helpers.joiReqObj(object.object(request(object)));
       }
       return closure_1;
     };

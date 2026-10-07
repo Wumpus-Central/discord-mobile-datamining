@@ -1,19 +1,16 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/17360_AssetRegistry.js";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import _modDef17360 from "../../../../../_runtime/metro/17360__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let size;
-const jsx = Fragment.jsx;
-let obj = { container: size, icon: {} };
-size = {
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { container: null, icon: null };
+let size = {
   alignItems: "center",
   justifyContent: "center",
   alignSelf: "center",
@@ -22,26 +19,29 @@ size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.round,
 };
-let closure_4 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.container = size;
+obj2.icon = {};
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(5);
+      const cResult = c.c(5);
       const tmp4 = closure_4();
       if (cResult[0] !== tmp4.icon) {
-        const Icon = native.Icon;
-        const tmp8 = <Icon style={tmp4.icon} source={AssetRegistryDefault} size={native.IconSizes.LARGE} />;
+        const obj2 = { style: tmp4.icon, source: _modDef17360, size: native.IconSizes.LARGE };
+        const tmp8 = jsx(native.Icon, { style: tmp4.icon, source: _modDef17360, size: native.IconSizes.LARGE });
         cResult[0] = tmp4.icon;
         cResult[1] = tmp8;
-        tmp5 = tmp8;
+        let tmp5 = tmp8;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp4.container) {
-        let tmp9;
         if (cResult[3] === tmp5) {
-          tmp9 = cResult[4];
+          let tmp9 = cResult[4];
         }
         return tmp9;
       }
@@ -50,15 +50,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       cResult[4] = tmp10;
       tmp9 = tmp10;
+      const obj3 = { style: tmp4.container, children: tmp5 };
     }
   : () => {
       const tmp = closure_4();
-      ({ style: tmp.icon, source: AssetRegistryDefault, size: native.IconSizes.LARGE });
-      NativeViewDefault;
-      const Icon = native.Icon;
+      const obj = { style: tmp.container, children: null };
+      obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17360, size: native.IconSizes.LARGE });
       return <tmp2 style={tmp.container}>{null}</tmp2>;
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
-
-export default tmp3;

@@ -1,84 +1,81 @@
 // discord_app/modules/app_channels/useAppChannelApplicationOptions.tsx
-import react2 from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import ApplicationActionCreators from "../applications/ApplicationActionCreators.tsx";
 import EmbeddedSurfaceType from "../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
-import useGuildEmbeddedApplications2 from "../applications/useGuildEmbeddedApplications.tsx";
-import react from "../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import useGuildEmbeddedApplications from "../applications/useGuildEmbeddedApplications.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 
+require = fn;
 function compareOptions(status, status2) {
-  let localeCompareResult;
   if (status.status.supported !== status2.status.supported) {
     let num = 1;
     if (status.status.supported) {
       num = -1;
     }
-    localeCompareResult = num;
+    let localeCompareResult = num;
   } else {
     const name = status.application.name;
     localeCompareResult = name.localeCompare(status2.application.name);
   }
   return localeCompareResult;
 }
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
+
+export const useAppChannelApplicationOptions = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2, arg3) => {
-      let data;
-      let isLoading;
-      const obj = react2;
-      const cResult = obj.c(8);
+      const cResult = c.c(8);
       const tmp4 = undefined !== arg3 && arg3;
-      const useGuildEmbeddedApplications = useGuildEmbeddedApplications2.useGuildEmbeddedApplications;
-      let tmp6;
-      useGuildEmbeddedApplications2;
-      const APP_CHANNEL = EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;
+      let tmp5;
       if (!tmp4) {
-        tmp6 = arg0;
+        tmp5 = arg0;
       }
-      const guildEmbeddedApplications = useGuildEmbeddedApplications(APP_CHANNEL, tmp6, arg1);
+      const guildEmbeddedApplications = useGuildEmbeddedApplications.useGuildEmbeddedApplications(
+        EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL,
+        tmp5,
+        arg1,
+      );
       ({ data, isLoading } = guildEmbeddedApplications);
-      const tmpResult2 = ApplicationActionCreators;
-      const application = tmpResult2.useApplication(arg2, true);
+      const tmpResult = useGuildEmbeddedApplications;
+      const application = ApplicationActionCreators.useApplication(arg2, true);
       const data2 = application.data;
       if (cResult[0] === data) {
-        let tmp10;
         if (cResult[1] === data2) {
-          tmp10 = cResult[2];
+          let tmp9 = cResult[2];
         }
         if (!isLoading) {
-          isLoading = tmp9;
+          isLoading = tmp8;
         }
-        if (cResult[3] === tmp10) {
+        let tmp14 = null != data;
+        if (tmp14) {
+          tmp14 = 0 === data.length;
+        }
+        if (cResult[3] === tmp9) {
           if (cResult[4] === data2) {
             if (cResult[5] === isLoading) {
-              let tmp16;
-              if (cResult[6] === (null != data && 0 === data.length)) {
-                tmp16 = cResult[7];
+              if (cResult[6] === tmp14) {
+                let tmp15 = cResult[7];
               }
-              return tmp16;
+              return tmp15;
             }
           }
         }
-        const obj2 = {
-          options: tmp10,
-          selectedApplication: data2,
-          isLoading,
-          hasNoApplications: null != data && 0 === data.length,
-        };
-        cResult[3] = tmp10;
+        const obj2 = { options: tmp9, selectedApplication: data2, isLoading, hasNoApplications: tmp14 };
+        cResult[3] = tmp9;
         cResult[4] = data2;
         cResult[5] = isLoading;
-        cResult[6] = null != data && 0 === data.length;
+        cResult[6] = tmp14;
         cResult[7] = obj2;
-        tmp16 = obj2;
+        tmp15 = obj2;
       }
       let items = data;
       if (data == null) {
         items = [];
       }
       const items1 = [...items];
-      const tmp11 = null == data2 || items1.some((application) => application.application.id === data2.id);
-      if (!tmp11) {
+      const tmpResult2 = ApplicationActionCreators;
+      if (!tmp10) {
         const obj3 = { application: data2, status: { supported: true } };
         items1.push(obj3);
       }
@@ -86,57 +83,56 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[0] = data;
       cResult[1] = data2;
       cResult[2] = sorted;
-      tmp10 = sorted;
+      tmp9 = sorted;
+      tmp10 = null == data2 || items1.some((application) => application.application.id === data2.id);
     }
   : (arg0, arg1, arg2) => {
-      let items;
       let flag = arg3;
       if (arg3 === undefined) {
         flag = false;
       }
       let data1;
       let data;
-      const useGuildEmbeddedApplications = data1(data[3]).useGuildEmbeddedApplications;
-      let tmp4;
-      data1(data[3]);
-      const APP_CHANNEL = data1(data[4]).EmbeddedSurfaceType.APP_CHANNEL;
-      const tmp = data1;
-      const tmp2 = data;
+      let tmp3;
       if (!flag) {
-        tmp4 = arg0;
+        tmp3 = arg0;
       }
-      const guildEmbeddedApplications = useGuildEmbeddedApplications(APP_CHANNEL, tmp4, arg1);
+      const guildEmbeddedApplications = data1(data[3]).useGuildEmbeddedApplications(
+        data1(data[4]).EmbeddedSurfaceType.APP_CHANNEL,
+        tmp3,
+        arg1,
+      );
       data1 = guildEmbeddedApplications.data;
       let isLoading = guildEmbeddedApplications.isLoading;
-      const tmpResult = tmp(tmp2[5]);
-      const application = tmpResult.useApplication(arg2, true);
+      let obj = data1(data[3]);
+      const application = data1(data[5]).useApplication(arg2, true);
       data = application.data;
-      let obj = {
-        options: react.useMemo(() => {
-          let id;
-          let items = data1;
-          if (data1 == null) {
-            items = [];
-          }
-          const items1 = [...items];
-          const someResult = null == data || items1.some((application) => application.application.id === id.id);
-          if (!someResult) {
-            const obj = { application: data, status: { supported: true } };
-            items1.push(obj);
-          }
-          return items1.sort(compareOptions);
-        }, items),
-        selectedApplication: data,
-        isLoading,
-        hasNoApplications: tmp7,
-      };
-      items = [data1, data];
-      const isLoading2 = application.isLoading;
+      const obj2 = { options: null, selectedApplication: data, isLoading: null, hasNoApplications: null };
+      let items = [data1, data];
+      obj2.options = noop.useMemo(() => {
+        let items = data1;
+        if (data1 == null) {
+          items = [];
+        }
+        const items1 = [...items];
+        let someResult = null == data;
+        if (!someResult) {
+          someResult = items1.some((application) => application.application.id === id.id);
+        }
+        if (!someResult) {
+          const obj = { application: data, status: { supported: true } };
+          items1.push(obj);
+        }
+        return items1.sort(compareOptions);
+      }, items);
       if (!isLoading) {
-        isLoading = isLoading2;
+        isLoading = application.isLoading;
       }
-      return obj;
+      obj2.isLoading = isLoading;
+      let tmp6 = null != data1;
+      if (tmp6) {
+        tmp6 = 0 === data1.length;
+      }
+      obj2.hasNoApplications = tmp6;
+      return obj2;
     };
-const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
-
-export const useAppChannelApplicationOptions = tmp2;

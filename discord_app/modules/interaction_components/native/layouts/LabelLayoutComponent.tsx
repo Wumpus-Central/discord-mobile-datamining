@@ -1,32 +1,26 @@
 // discord_app/modules/interaction_components/native/layouts/LabelLayoutComponent.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import Server from "../../../../flow/Server.tsx";
-import Input2 from "../../../../design/components/Input/native/Input.native.tsx";
+import Input from "../../../../design/components/Input/native/Input.native.tsx";
 import ComponentStateContext from "../../ComponentStateContext.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const View = react_native.View;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let component;
-      let description;
-      let label;
-      let renderComponent;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       ({ label, description, component, renderComponent } = arg0);
-      const obj2 = ComponentStateContext;
-      const componentError = obj2.useComponentError(component);
+      const componentError = ComponentStateContext.useComponentError(component);
       if (component.type === Server.ComponentType.CHECKBOX) {
         if (cResult[0] === component) {
-          let tmp15;
           if (cResult[1] === renderComponent) {
-            tmp15 = cResult[2];
+            let tmp15 = cResult[2];
           }
           return tmp15;
         }
@@ -36,27 +30,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = renderComponentResult;
         tmp15 = renderComponentResult;
       } else {
-        let tmp5;
         const _Symbol = Symbol;
-        const required = component.required;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { width: "100%" };
           cResult[3] = obj3;
-          tmp5 = obj3;
+          let tmp5 = obj3;
         } else {
           tmp5 = cResult[3];
         }
         if (cResult[4] === component) {
-          let tmp6;
-          let tmp8;
           if (cResult[5] === renderComponent) {
-            tmp6 = cResult[6];
+            let tmp6 = cResult[6];
           }
           if (cResult[7] !== tmp6) {
+            const obj4 = { style: tmp5, children: tmp6 };
             const tmp11 = <View style={tmp5}>{tmp6}</View>;
             cResult[7] = tmp6;
             cResult[8] = tmp11;
-            tmp8 = tmp11;
+            let tmp8 = tmp11;
           } else {
             tmp8 = cResult[8];
           }
@@ -64,19 +55,25 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[10] === description) {
               if (cResult[11] === componentError) {
                 if (cResult[12] === label) {
-                  let tmp12;
                   if (cResult[13] === tmp8) {
-                    tmp12 = cResult[14];
+                    let tmp12 = cResult[14];
                   }
                   return tmp12;
                 }
               }
             }
           }
-          const tmp14 = jsx(Input2.Input, {
+          const obj5 = {
             label,
             description,
-            required,
+            required: component.required,
+            errorMessage: componentError,
+            children: tmp8,
+          };
+          const tmp14 = jsx(Input.Input, {
+            label,
+            description,
+            required: component.required,
             errorMessage: componentError,
             children: tmp8,
           });
@@ -96,28 +93,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (arg0) => {
-      let component;
-      let description;
-      let label;
-      let renderComponent;
-      let renderComponentResult;
       ({ component, renderComponent } = arg0);
       ({ label, description } = arg0);
-      const obj = ComponentStateContext;
-      const componentError = obj.useComponentError(component);
+      const componentError = ComponentStateContext.useComponentError(component);
       if (component.type === Server.ComponentType.CHECKBOX) {
-        renderComponentResult = renderComponent(component, "label-child");
+        let renderComponentResult = renderComponent(component, "label-child");
       } else {
-        ({ style: { width: "100%" }, children: renderComponent(component, "label-child") });
-        const Input = Input2.Input;
-        renderComponentResult = (
-          <Input label={label} description={description} required={component.required} errorMessage={componentError}>
-            {null}
-          </Input>
-        );
+        const obj2 = { label, description, required: component.required, errorMessage: componentError, children: null };
+        const obj3 = { style: { width: "100%" }, children: renderComponent(component, "label-child") };
+        obj2.children = <View style={{ width: "100%" }}>{renderComponent(component, "label-child")}</View>;
+        renderComponentResult = jsx(Input.Input, {
+          label,
+          description,
+          required: component.required,
+          errorMessage: componentError,
+          children: null,
+        });
       }
       return renderComponentResult;
     };
-const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
-
-export default tmp3;

@@ -1,65 +1,70 @@
 // discord_app/modules/billing/native/PaymentFlowWarningMessage.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LegacyTokens from "../../../design/migrations/native/LegacyTokens.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let obj = { container: obj2, icon: { marginRight: 10 }, text: { flexShrink: 1 } };
-obj2 = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: {
+    padding: 10,
+    marginVertical: 5,
+    borderRadius: nativeDefault.radii.xs,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  },
+  icon: { marginRight: 10 },
+  text: { flexShrink: 1 },
+};
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {
   padding: 10,
   marginVertical: 5,
   borderRadius: nativeDefault.radii.xs,
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  backgroundColor: LegacyTokens.DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  backgroundColor: fn(5627).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
 };
-let closure_6 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      let items;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       const tmp4 = closure_6();
       if (cResult[0] !== tmp4.icon) {
-        size = { style: tmp4.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
-        const WarningCircle = native.WarningCircle;
-        const tmp8 = React3(WarningCircle, size);
+        const size = { style: tmp4.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
+        const tmp8 = React4(native.WarningCircle, size);
         cResult[0] = tmp4.icon;
         cResult[1] = tmp8;
-        tmp5 = tmp8;
+        let tmp5 = tmp8;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === children.message) {
-        let tmp9;
         if (cResult[3] === tmp4.text) {
-          tmp9 = cResult[4];
+          let tmp9 = cResult[4];
         }
         if (cResult[5] === tmp4.container) {
           if (cResult[6] === tmp5) {
-            let tmp11;
             if (cResult[7] === tmp9) {
-              tmp11 = cResult[8];
+              let tmp11 = cResult[8];
             }
             return tmp11;
           }
         }
-        const obj2 = { style: tmp4.container, children: items };
-        items = [tmp5, tmp9];
+        const obj2 = { style: tmp4.container, children: null };
+        const items = [tmp5, tmp9];
+        obj2.children = items;
         const tmp14 = hasOwnProperty(View, obj2);
         cResult[5] = tmp4.container;
         cResult[6] = tmp5;
@@ -67,25 +72,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = tmp14;
         tmp11 = tmp14;
       }
-      const obj3 = { variant: "text-sm/medium", style: tmp4.text, children: children.message };
-      const tmp10 = React3(Text_Text.Text, obj3);
+      const tmp10 = React4(Text_Text.Text, { variant: "text-sm/medium", style: tmp4.text, children: children.message });
       cResult[2] = children.message;
       cResult[3] = tmp4.text;
       cResult[4] = tmp10;
       tmp9 = tmp10;
+      const obj3 = { variant: "text-sm/medium", style: tmp4.text, children: children.message };
     }
   : (children) => {
-      let items;
       const tmp = closure_6();
-      const obj = { style: tmp.container, children: items };
-      size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
-      const WarningCircle = native.WarningCircle;
-      items = [React3(WarningCircle, size)];
-      const obj2 = { variant: "text-sm/medium", style: tmp.text, children: children.message };
-      items[1] = React3(Text_Text.Text, obj2);
+      const obj = { style: tmp.container, children: null };
+      const size = { style: tmp.icon, color: nativeDefault.unsafe_rawColors.YELLOW_300, width: 16, height: 16 };
+      const items = [
+        React4(native.WarningCircle, size),
+        React4(Text_Text.Text, { variant: "text-sm/medium", style: tmp.text, children: children.message }),
+      ];
+      obj.children = items;
       return hasOwnProperty(View, obj);
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");
-
-export default tmp4;

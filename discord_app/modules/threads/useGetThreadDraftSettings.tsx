@@ -1,26 +1,20 @@
 // discord_app/modules/threads/useGetThreadDraftSettings.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DraftStore from "../../stores/DraftStore.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+const require = fn;
+fn(558);
+const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(3);
-      const tmp = _require;
+      const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DraftStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -30,9 +24,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != closure_0) {
             let threadSettings = DraftStore.getThreadSettings(closure_0);
             if (threadSettings == null) {
-              const getThreadDraftWithParentMessageId = DraftStore.getThreadDraftWithParentMessageId;
-              const obj = SnowflakeUtilsDefault;
-              threadSettings = getThreadDraftWithParentMessageId(obj.castChannelIdAsMessageId(closure_0));
+              threadSettings = DraftStore.getThreadDraftWithParentMessageId(
+                SnowflakeUtilsDefault.castChannelIdAsMessageId(closure_0),
+              );
             }
             tmp2 = threadSettings;
           }
@@ -40,46 +34,42 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("get initialized");
       const items = [DraftStore];
-      return obj.useStateFromStores(items, () => {
+      return require("initialize").useStateFromStores(items, () => {
         let tmp2 = null;
         if (null != closure_0) {
           let threadSettings = DraftStore.getThreadSettings(closure_0);
           if (threadSettings == null) {
-            const getThreadDraftWithParentMessageId = DraftStore.getThreadDraftWithParentMessageId;
-            const obj = SnowflakeUtilsDefault;
-            threadSettings = getThreadDraftWithParentMessageId(obj.castChannelIdAsMessageId(closure_0));
+            threadSettings = DraftStore.getThreadDraftWithParentMessageId(
+              SnowflakeUtilsDefault.castChannelIdAsMessageId(closure_0),
+            );
           }
           tmp2 = threadSettings;
         }
         return tmp2;
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
+
+export default tmp2;
+export const useHasThreadDraft = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(3);
-      const tmp = _require;
+      const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DraftStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -89,9 +79,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (tmp2) {
             let threadSettings = DraftStore.getThreadSettings(closure_0);
             if (threadSettings == null) {
-              const getThreadDraftWithParentMessageId = DraftStore.getThreadDraftWithParentMessageId;
-              const obj = SnowflakeUtilsDefault;
-              threadSettings = getThreadDraftWithParentMessageId(obj.castChannelIdAsMessageId(closure_0));
+              threadSettings = DraftStore.getThreadDraftWithParentMessageId(
+                SnowflakeUtilsDefault.castChannelIdAsMessageId(closure_0),
+              );
             }
             tmp2 = null != threadSettings;
           }
@@ -99,33 +89,27 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("get initialized");
       const items = [DraftStore];
-      return obj.useStateFromStores(items, () => {
+      return require("initialize").useStateFromStores(items, () => {
         let tmp2 = null != closure_0;
         if (tmp2) {
           let threadSettings = DraftStore.getThreadSettings(closure_0);
           if (threadSettings == null) {
-            const getThreadDraftWithParentMessageId = DraftStore.getThreadDraftWithParentMessageId;
-            const obj = SnowflakeUtilsDefault;
-            threadSettings = getThreadDraftWithParentMessageId(obj.castChannelIdAsMessageId(closure_0));
+            threadSettings = DraftStore.getThreadDraftWithParentMessageId(
+              SnowflakeUtilsDefault.castChannelIdAsMessageId(closure_0),
+            );
           }
           tmp2 = null != threadSettings;
         }
         return tmp2;
       });
     };
-const result = size.fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
-
-export default tmp2;
-export const useHasThreadDraft = tmp3;

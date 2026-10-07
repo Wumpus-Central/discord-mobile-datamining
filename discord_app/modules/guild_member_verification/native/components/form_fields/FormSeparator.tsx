@@ -1,38 +1,41 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { separator: obj2 };
-obj2 = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 };
-let closure_4 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  separator: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 },
+};
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj3 = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (style) => {
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       const tmp2 = closure_4();
       if (cResult[0] === style.style) {
-        let tmp3;
         if (cResult[1] === tmp2.separator) {
-          tmp3 = cResult[2];
+          let tmp3 = cResult[2];
         }
         if (cResult[3] === style) {
-          let tmp4;
           if (cResult[4] === tmp3) {
-            tmp4 = cResult[5];
+            let tmp4 = cResult[5];
           }
           return tmp4;
         }
+        const obj2 = {};
         const merged = Object.assign(style);
-        const tmp10 = <View style={tmp3} />;
+        obj2.style = tmp3;
+        const tmp10 = <View />;
         cResult[3] = style;
         cResult[4] = tmp3;
         cResult[5] = tmp10;
@@ -45,13 +48,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = items;
     }
   : (style) => {
-      const tmp = closure_4();
+      const obj = {};
       const merged = Object.assign(style);
-      const items = [tmp.separator, style.style];
-      return <View style={items} />;
+      const items = [closure_4().separator, style.style];
+      obj.style = items;
+      return <View />;
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_member_verification/native/components/form_fields/FormSeparator.tsx",
-);
-
-export default tmp3;

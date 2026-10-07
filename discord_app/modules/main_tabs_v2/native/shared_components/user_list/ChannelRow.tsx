@@ -1,73 +1,49 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4467 from "../../../../../../_runtime/metro/04467__.js";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import ReadStateConstants from "../../../../read_states/ReadStateConstants.tsx";
 import TextIcon2 from "../../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import ForumIcon from "../../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
-import UserRowConstants from "UserRowConstants.tsx";
 import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
-import GuildIconWithChannelType2 from "../../../../guild/native/GuildIconWithChannelType.tsx";
-import _objectWithoutProperties_mod from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../../_runtime/00019_react.js";
+import GuildIconWithChannelType from "../../../../guild/native/GuildIconWithChannelType.tsx";
+import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 import ReadStateStore from "../../../../../stores/ReadStateStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 const useChannelNameDefault = useChannelName;
-let _require, channel, dependencyMap, importDefault, tmp4, tmp5;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let obj2;
+require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
-let _objectWithoutProperties = _objectWithoutProperties_mod;
-const View = react_native.View;
-const UserRowModes = UserRowConstants.UserRowModes;
-const ReadStateTypes = ReadStateConstants.ReadStateTypes;
-({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = Fragment);
+const View = fn(17).View;
+const UserRowModes = fn(10605).UserRowModes;
+const ReadStateTypes = fn(5078).ReadStateTypes;
+const jsxProd = fn(21);
+({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
+const createStyles = fn(4896);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
   subLabelIcon: { width: 12, height: 12, marginRight: 2 },
-  subLabelSeparator: obj2,
+  subLabelSeparator: { marginHorizontal: nativeDefault.space.PX_4 },
   threadName: { flexShrink: 1 },
 };
-obj2 = { marginHorizontal: nativeDefault.space.PX_4 };
 let closure_17 = createStyles.createStyles(obj);
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+let obj3 = { marginHorizontal: nativeDefault.space.PX_4 };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        let NONE;
-        let closure_1;
-        let closure_2;
-        let closure_4;
-        let disabled;
-        let mode;
-        let onPress;
-        let selected;
-        let stateFromStores2;
-        let subLabel;
-        let thread;
-        let tmp18;
-        let tmp23;
-        let tmp29;
-        let tmp6;
-        let trailing;
-        const tmp = _require;
-        let obj = require("react");
-        const cResult = obj.c(58);
+        const cResult = require("c").c(58);
         if (cResult[0] !== channel) {
           channel = channel.channel;
           _require = channel;
@@ -78,7 +54,6 @@ const memoResult = react.memo(
           ({ trailing, subLabel } = channel);
           closure_3 = subLabel;
           const label = channel.label;
-          const tmp14 = closure_3;
           const tmp15 = _objectWithoutProperties(channel, closure_3);
           cResult[0] = channel;
           cResult[1] = channel;
@@ -100,8 +75,8 @@ const memoResult = react.memo(
               return;
             }
           }
-          NONE = mode;
-          tmp6 = onLongPress;
+          let NONE = mode;
+          const tmp6 = onLongPress;
         } else {
           _require = cResult[1];
           importDefault = cResult[3];
@@ -117,7 +92,7 @@ const memoResult = react.memo(
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [GuildStore];
           cResult[11] = items;
-          tmp18 = items;
+          let tmp18 = items;
         } else {
           tmp18 = cResult[11];
         }
@@ -136,8 +111,8 @@ const memoResult = react.memo(
             }
           }
         }
-        const tmpResult = tmp(504);
-        const stateFromStores = tmpResult.useStateFromStores(tmp18, R);
+        let obj = require("c");
+        const stateFromStores = require("initialize").useStateFromStores(tmp18, R);
         useChannelNameDefault(tmp4);
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
           class R {
@@ -147,7 +122,7 @@ const memoResult = react.memo(
           }
           let items1 = [stateFromStores2, UserStore, RelationshipStore];
           cResult[14] = items1;
-          tmp23 = items1;
+          const tmp23 = items1;
         } else {
           class R {
             constructor() {
@@ -170,8 +145,8 @@ const memoResult = react.memo(
             }
           }
         }
-        const tmpResult3 = tmp(504);
-        const stateFromStores1 = tmpResult3.useStateFromStores(tmp23, tmp27);
+        const tmpResult = require("initialize");
+        const stateFromStores1 = require("initialize").useStateFromStores(tmp23, tmp27);
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
           class R {
             constructor() {
@@ -180,7 +155,7 @@ const memoResult = react.memo(
           }
           const items2 = [ReadStateStore];
           cResult[17] = items2;
-          tmp29 = items2;
+          const tmp29 = items2;
         } else {
           class R {
             constructor() {
@@ -203,8 +178,8 @@ const memoResult = react.memo(
             }
           }
         }
-        const tmpResult4 = tmp(504);
-        stateFromStores2 = tmpResult4.useStateFromStores(tmp29, B);
+        const tmpResult3 = require("initialize");
+        stateFromStores2 = require("initialize").useStateFromStores(tmp29, B);
         if (cResult[20] === tmp4) {
           class B {
             constructor() {
@@ -212,7 +187,6 @@ const memoResult = react.memo(
             }
           }
           if (cResult[23] === tmp4) {
-            let tmp34;
             class B {
               constructor() {
                 return closure_9.lastMessageTimestamp(closure_0.id, ReadStateTypes.CHANNEL);
@@ -246,13 +220,7 @@ const memoResult = react.memo(
                   return closure_9.lastMessageTimestamp(closure_0.id, ReadStateTypes.CHANNEL);
                 }
               }
-              let obj2 = {
-                "aria-label": "",
-                style: null,
-                guild: stateFromStores,
-                channel: tmp4,
-                size: tmp(10751).GuildIconWithChannelTypeSizes.SMALL_32,
-              };
+              let obj2 = { "aria-label": "", style: null, guild: null, channel: null, size: null };
               class J {
                 constructor() {
                   if (null == closure_1) {
@@ -268,8 +236,10 @@ const memoResult = react.memo(
                   return;
                 }
               }
-              const GuildIconWithChannelType = tmp(10751).GuildIconWithChannelType;
-              tmp34 = closure_14(GuildIconWithChannelType, obj2);
+              obj2.guild = stateFromStores;
+              obj2.channel = tmp4;
+              obj2.size = tmp(10751).GuildIconWithChannelTypeSizes.SMALL_32;
+              const tmp34 = closure_14(tmp(10751).GuildIconWithChannelType, obj2);
             }
             cResult[26] = tmp4;
             cResult[27] = stateFromStores;
@@ -307,10 +277,9 @@ const memoResult = react.memo(
         cResult[20] = tmp4;
         cResult[21] = onPress;
         cResult[22] = V;
+        const tmpResult4 = require("initialize");
       }
     : (channel) => {
-        let tmp17Result;
-        let tmp18;
         channel = channel.channel;
         let NONE = channel.mode;
         if (NONE === undefined) {
@@ -347,15 +316,14 @@ const memoResult = react.memo(
         let stateFromStores1;
         let stateFromStores2;
         let tmp3 = closure_17();
-        let closure_7 = tmp3;
-        let obj = channel(onPress[15]);
+        closure_7 = tmp3;
         let items = [stateFromStores];
-        stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
+        stateFromStores = channel(onPress[15]).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
         const tmp7 = flag2(onPress[16])(channel);
-        let closure_9 = tmp7;
-        let obj2 = channel(onPress[15]);
+        closure_9 = tmp7;
+        let obj = channel(onPress[15]);
         let items1 = [closure_7, stateFromStores2, stateFromStores1];
-        stateFromStores1 = obj2.useStateFromStores(items1, () => {
+        stateFromStores1 = channel(onPress[15]).useStateFromStores(items1, () => {
           channel = ChannelStore.getChannel(channel.parent_id);
           let channelName = null;
           if (null != channel) {
@@ -364,12 +332,11 @@ const memoResult = react.memo(
           }
           return channelName;
         });
-        let obj3 = channel(onPress[15]);
+        let obj2 = channel(onPress[15]);
         const items2 = [closure_9];
-        stateFromStores2 = obj3.useStateFromStores(items2, () =>
+        stateFromStores2 = channel(onPress[15]).useStateFromStores(items2, () =>
           ReadStateStore.lastMessageTimestamp(channel.id, ReadStateTypes.CHANNEL),
         );
-        let obj4 = subLabel;
         const items3 = [channel, onPress];
         const items4 = [channel, onLongPress];
         const callback = subLabel.useCallback(() => {
@@ -380,8 +347,7 @@ const memoResult = react.memo(
         const items5 = [channel, stateFromStores, tmp3.guildIcon];
         const callback1 = subLabel.useCallback(() => {
           if (null == onLongPress) {
-            const obj = openChannelLongPressActionSheet;
-            const result = obj.openChannelLongPressActionSheet(channel.id);
+            const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
           } else {
             tmp(channel);
           }
@@ -395,10 +361,9 @@ const memoResult = react.memo(
               style: closure_7.guildIcon,
               guild: tmp,
               channel,
-              size: GuildIconWithChannelType2.GuildIconWithChannelTypeSizes.SMALL_32,
+              size: GuildIconWithChannelType.GuildIconWithChannelTypeSizes.SMALL_32,
             };
-            const GuildIconWithChannelType = GuildIconWithChannelType2.GuildIconWithChannelType;
-            tmp2 = authStore2(GuildIconWithChannelType, obj);
+            tmp2 = state(GuildIconWithChannelType.GuildIconWithChannelType, obj);
           }
           return tmp2;
         }, items5);
@@ -411,7 +376,6 @@ const memoResult = react.memo(
           }
           return tmp;
         }, items6);
-        const useMemo = subLabel.useMemo;
         if (stateFromStores != null) {
           name = stateFromStores.name;
         }
@@ -421,14 +385,10 @@ const memoResult = react.memo(
         ({ subLabel: arr8[4], subLabelIcon: arr8[5], subLabelSeparator: arr8[6], threadName: arr8[7] } = tmp3);
         items7[8] = subLabel;
         const items8 = [trailing, flag2];
-        const memo2 = useMemo(() => {
-          let items;
-          let items1;
-          let obj7;
+        const memo2 = subLabel.useMemo(() => {
           if (undefined !== subLabel) {
             return subLabel;
           } else {
-            let TextIcon;
             if (!channel.isThread()) {
               if (!channel.isForumPost()) {
                 let name;
@@ -439,13 +399,13 @@ const memoResult = react.memo(
               }
             }
             if (channel.isForumPost()) {
-              TextIcon = ForumIcon.ForumIcon;
+              let TextIcon = ForumIcon.ForumIcon;
             } else {
               TextIcon = TextIcon2.TextIcon;
             }
-            const obj = { style: closure_7.subLabel, children: items };
+            const obj = { style: closure_7.subLabel, children: null };
             const obj2 = { color: nativeDefault.colors.TEXT_SUBTLE, style: closure_7.subLabelIcon };
-            items = [authStore2(TextIcon, obj2), ,];
+            const items = [state(TextIcon, obj2), ,];
             const obj3 = {
               style: closure_7.threadName,
               variant: "text-xs/medium",
@@ -454,32 +414,32 @@ const memoResult = react.memo(
               ellipsizeMode: "tail",
               children: stateFromStores1,
             };
-            items[1] = authStore2(Text_Text.Text, obj3);
+            items[1] = state(Text_Text.Text, obj3);
             let tmp5Result = null;
             if (null != stateFromStores2) {
-              const obj4 = { children: items1 };
+              const obj4 = { children: null };
               const obj5 = {
                 style: closure_7.subLabelSeparator,
                 variant: "text-xs/medium",
                 color: "text-subtle",
                 children: "\u2022",
               };
-              items1 = [authStore2(Text_Text.Text, obj5)];
+              const items1 = [state(Text_Text.Text, obj5)];
               const obj6 = {
                 variant: "text-xs/medium",
                 color: "text-subtle",
-                children: obj7.calendarFormatCompact(_modDef4467(tmp14)),
+                children: DateUtils.calendarFormatCompact(_modDef4467(tmp14)),
               };
-              const Text = Text_Text.Text;
-              obj7 = DateUtils;
-              items1[1] = authStore2(Text, obj6);
-              tmp5Result = authStore3(closure_15, obj4);
+              items1[1] = state(Text_Text.Text, obj6);
+              obj4.children = items1;
+              tmp5Result = value2(closure_2_15, obj4);
             }
             items[2] = tmp5Result;
-            return authStore3(View, obj);
+            obj.children = items;
+            return value2(View, obj);
           }
         }, items7);
-        const memo3 = obj4.useMemo(() => {
+        const memo3 = subLabel.useMemo(() => {
           let tmp = trailing;
           if (null == trailing) {
             let tmp3;
@@ -490,35 +450,33 @@ const memoResult = react.memo(
           }
           return tmp;
         }, items8);
-        let obj5 = {
-          disabled: flag2,
-          icon: memo,
-          onPress: callback,
-          onLongPress: callback1,
-          label: tmp18,
-          subLabel: memo2,
-        };
-        tmp18 = closure_14(channel(onPress[21]).Text, {
+        let obj5 = {};
+        let obj3 = channel(onPress[15]);
+        const merged1 = Object.assign(merged);
+        obj5.disabled = flag2;
+        obj5.icon = memo;
+        obj5.onPress = callback;
+        obj5.onLongPress = callback1;
+        obj5.label = closure_14(channel(onPress[21]).Text, {
           lineClamp: 1,
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
           children: memo1,
         });
-        const merged1 = Object.assign(merged);
+        obj5.subLabel = memo2;
         if (NONE === UserRowModes.TOGGLE) {
-          let obj6 = { height: "100%", checked: flag };
-          const TableCheckboxRow = tmp4(tmp5[24]).TableCheckboxRow;
+          let obj6 = {};
           const merged2 = Object.assign(obj5);
-          tmp17Result = closure_14(TableCheckboxRow, obj6);
+          obj6.height = "100%";
+          obj6.checked = flag;
+          let tmp17Result = closure_14(tmp4(tmp5[24]).TableCheckboxRow, obj6);
         } else {
-          let obj7 = { height: "100%", trailing: memo3 };
-          const TableRow = tmp4(tmp5[25]).TableRow;
+          let obj7 = {};
           const merged3 = Object.assign(obj5);
-          tmp17Result = closure_14(TableRow, obj7);
+          obj7.height = "100%";
+          obj7.trailing = memo3;
+          tmp17Result = closure_14(tmp4(tmp5[25]).TableRow, obj7);
         }
         return tmp17Result;
       },
 );
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx");
-
-export default memoResult;

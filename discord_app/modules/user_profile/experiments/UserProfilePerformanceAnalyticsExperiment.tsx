@@ -2,13 +2,12 @@
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = {
+const config = ApexExperiment.createApexExperiment({
   kind: "user",
   name: "2026-04-user-profile-performance-analytics",
   defaultConfig: { performanceAnalyticsEnabled: false },
   variations: { 0: { performanceAnalyticsEnabled: false }, 1: { performanceAnalyticsEnabled: true } },
-};
-const config = ApexExperiment.createApexExperiment(obj);
+});
 const result = size.fileFinishedImporting(
   "modules/user_profile/experiments/UserProfilePerformanceAnalyticsExperiment.tsx",
 );
@@ -16,6 +15,5 @@ const result = size.fileFinishedImporting(
 export const isUserProfilePerformanceAnalyticsEnabled = function isUserProfilePerformanceAnalyticsEnabled(
   UserProfileAnalyticsUtils,
 ) {
-  const obj = { location: UserProfileAnalyticsUtils };
-  return config.getConfig(obj).performanceAnalyticsEnabled;
+  return config.getConfig({ location: UserProfileAnalyticsUtils }).performanceAnalyticsEnabled;
 };

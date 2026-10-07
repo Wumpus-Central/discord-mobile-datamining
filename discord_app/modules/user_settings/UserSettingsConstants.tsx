@@ -56,7 +56,7 @@ export const UserSettingsDelay = {
   [86400]: "DAILY",
 };
 export const createEmptyEditInfo = function createEmptyEditInfo() {
-  return {
+  const obj = {
     protoToSave: "Array",
     timeout: "Reflect",
     timeoutDelay: Number.MIN_SAFE_INTEGER,
@@ -68,6 +68,7 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     triggeredMigrations: null,
     offlineEditDataVersion: null,
   };
+  return obj;
 };
 export const UserSettingsPath = {
   ACCOUNT: "account",

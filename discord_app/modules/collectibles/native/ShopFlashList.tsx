@@ -1,55 +1,94 @@
 // discord_app/modules/collectibles/native/ShopFlashList.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import defaultMVCPConfig from "../../../../discord_common/js/packages/flash-list/index.js";
-import useScrollToInitialIndexOnce2 from "hooks/useScrollToInitialIndexOnce.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _mod8404 from "../../../../discord_common/js/packages/flash-list/index.js";
+import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let obj2;
-const jsx = Fragment.jsx;
-let obj = { contentContainer: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-let closure_4 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
+let closure_4 = createStyles.createStyles(obj2);
+fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+const ReactCompilerGating = fn(558);
+const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { marginTop: 42 };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj3 = { style: first, Illustration: generated_NoResults.NoResults, body: null };
+        const intl = util.intl;
+        obj3.body = intl.string(util.t.eAn6z2);
+        const tmp7 = jsx(native.EmptyState, { style: first, Illustration: generated_NoResults.NoResults, body: null });
+        cResult[1] = tmp7;
+        let tmp5 = tmp7;
+      } else {
+        tmp5 = cResult[1];
+      }
+      return tmp5;
+    }
+  : () => {
+      const obj = { style: { marginTop: 42 }, Illustration: generated_NoResults.NoResults, body: null };
+      const intl = util.intl;
+      obj.body = intl.string(util.t.eAn6z2);
+      return jsx(native.EmptyState, {
+        style: { marginTop: 42 },
+        Illustration: generated_NoResults.NoResults,
+        body: null,
+      });
+    };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let data;
-      let getItemType;
-      let initialScrollIndex;
-      let renderItem;
-      const obj = react2;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       ({ data, renderItem, initialScrollIndex, getItemType } = arg0);
-      const ref = react.useRef(null);
+      const ref = noop.useRef(null);
       const tmp5 = closure_4();
+      let tmp6 = null != initialScrollIndex;
+      if (tmp6) {
+        tmp6 = initialScrollIndex > 0;
+      }
       if (cResult[0] === initialScrollIndex) {
-        let tmp7;
-        if (cResult[1] === (null != initialScrollIndex && initialScrollIndex > 0)) {
-          tmp7 = cResult[2];
+        if (cResult[1] === tmp6) {
+          let tmp7 = cResult[2];
         }
-        const tmpResult = useScrollToInitialIndexOnce2;
-        const scrollToInitialIndexOnce = tmpResult.useScrollToInitialIndexOnce(tmp7);
+        const scrollToInitialIndexOnce = useScrollToInitialIndexOnce.useScrollToInitialIndexOnce(tmp7);
         if (cResult[3] === data) {
           if (cResult[4] === getItemType) {
             if (cResult[5] === initialScrollIndex) {
               if (cResult[6] === renderItem) {
-                let tmp9;
                 if (cResult[7] === tmp5.contentContainer) {
-                  tmp9 = cResult[8];
+                  let tmp9 = cResult[8];
                 }
                 return tmp9;
               }
             }
           }
         }
-        const tmp12 = jsx(defaultMVCPConfig.FlashList, {
+        const obj2 = {
+          ref,
+          data,
+          renderItem,
+          showsVerticalScrollIndicator: false,
+          ListEmptyComponent,
+          initialScrollIndex,
+          getItemType,
+          contentContainerStyle: tmp5.contentContainer,
+        };
+        const tmp12 = jsx(_mod8404.FlashList, {
           ref,
           data,
           renderItem,
@@ -66,40 +105,36 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp5.contentContainer;
         cResult[8] = tmp12;
         tmp9 = tmp12;
+        const tmpResult = useScrollToInitialIndexOnce;
       }
       const obj3 = {
-        shouldScroll: null != initialScrollIndex && initialScrollIndex > 0,
+        shouldScroll: tmp6,
         initialScrollIndex,
         flashListRef: ref,
-        afterMs: useScrollToInitialIndexOnce2.INITIAL_SCROLL_DELAY_MS,
+        afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
       };
       cResult[0] = initialScrollIndex;
-      cResult[1] = null != initialScrollIndex && initialScrollIndex > 0;
+      cResult[1] = tmp6;
       cResult[2] = obj3;
       tmp7 = obj3;
     }
   : (initialScrollIndex) => {
-      let data;
-      let getItemType;
-      let renderItem;
       initialScrollIndex = initialScrollIndex.initialScrollIndex;
       ({ data, renderItem, getItemType } = initialScrollIndex);
-      const ref = react.useRef(null);
-      let tmp6 = null != initialScrollIndex;
+      const ref = noop.useRef(null);
       const tmp2 = closure_4();
-      const useScrollToInitialIndexOnce = useScrollToInitialIndexOnce2.useScrollToInitialIndexOnce;
-      useScrollToInitialIndexOnce2;
-      if (tmp6) {
-        tmp6 = initialScrollIndex > 0;
+      let tmp5 = null != initialScrollIndex;
+      if (tmp5) {
+        tmp5 = initialScrollIndex > 0;
       }
-      const obj = {
-        shouldScroll: tmp6,
+      const obj = useScrollToInitialIndexOnce;
+      const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce({
+        shouldScroll: tmp5,
         initialScrollIndex,
         flashListRef: ref,
-        afterMs: useScrollToInitialIndexOnce2.INITIAL_SCROLL_DELAY_MS,
-      };
-      const scrollToInitialIndexOnce = useScrollToInitialIndexOnce(obj);
-      return jsx(defaultMVCPConfig.FlashList, {
+        afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
+      });
+      return jsx(_mod8404.FlashList, {
         ref,
         data,
         renderItem,
@@ -110,44 +145,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         contentContainerStyle: tmp2.contentContainer,
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      let first;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { marginTop: 42 };
-        cResult[0] = obj2;
-        first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const EmptyState = native.EmptyState;
-        const intl = intl2.intl;
-        const tmp7 = (
-          <EmptyState style={first} Illustration={generated_NoResults.NoResults} body={intl.string(intl2.t.eAn6z2)} />
-        );
-        cResult[1] = tmp7;
-        tmp5 = tmp7;
-      } else {
-        tmp5 = cResult[1];
-      }
-      return tmp5;
-    }
-  : () => {
-      const EmptyState = native.EmptyState;
-      const intl = intl2.intl;
-      return (
-        <EmptyState
-          style={{ marginTop: 42 }}
-          Illustration={generated_NoResults.NoResults}
-          body={intl.string(intl2.t.eAn6z2)}
-        />
-      );
-    };
-const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlashList.tsx");
-
-export default tmp2;

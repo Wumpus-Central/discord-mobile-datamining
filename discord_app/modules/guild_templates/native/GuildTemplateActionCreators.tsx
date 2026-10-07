@@ -1,36 +1,32 @@
 // discord_app/modules/guild_templates/native/GuildTemplateActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import GuildTemplateActionCreatorsDefault from "../GuildTemplateActionCreators.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
 const GUILD_TEMPLATE_MODAL_KEY = "GUILD_TEMPLATE_MODAL_KEY";
-let obj = {
-  showModal(code) {
-    let flag = arg1;
-    if (arg1 === undefined) {
-      flag = true;
-    }
-    const obj = ModalActionCreatorsDefault;
-    const obj2 = { code };
-    obj.pushLazy(asyncRequire(11416, dependencyMap.paths), obj2, GUILD_TEMPLATE_MODAL_KEY);
-    const obj3 = DispatcherDefault;
-    const obj4 = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
-    obj3.dispatch(obj4);
-    if (flag) {
-      const tmpResult = GuildTemplateActionCreatorsDefault;
-      const guildTemplate = tmpResult.resolveGuildTemplate(code);
-    }
-  },
-  hideModal() {
-    const obj = ModalActionCreatorsDefault;
-    obj.popWithKey(GUILD_TEMPLATE_MODAL_KEY);
-    const obj2 = DispatcherDefault;
-    obj2.dispatch({ type: "GUILD_TEMPLATE_MODAL_HIDE" });
-  },
-};
+let obj = {};
 const GuildTemplateActionCreators = Object.assign(GuildTemplateActionCreatorsDefault);
+obj.showModal = function showModal(code) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11416, dependencyMap.paths), { code }, GUILD_TEMPLATE_MODAL_KEY);
+  const obj2 = { code };
+  DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_MODAL_SHOW", code });
+  if (flag) {
+    const guildTemplate = GuildTemplateActionCreatorsDefault.resolveGuildTemplate(code);
+    const tmpResult = GuildTemplateActionCreatorsDefault;
+  }
+  const obj4 = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
+};
+obj.hideModal = function hideModal() {
+  ModalActionCreatorsDefault.popWithKey(GUILD_TEMPLATE_MODAL_KEY);
+  DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_MODAL_HIDE" });
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/native/GuildTemplateActionCreators.tsx");
 
 export default obj;

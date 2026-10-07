@@ -1,39 +1,16 @@
 // discord_app/utils/native/ImageUtils.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
-import react_native from "../../../_runtime/00017_react-native.js";
-import Constants from "../../Constants.tsx";
 import AvatarUtils from "../AvatarUtils.tsx";
 import utils_AvatarUtils from "AvatarUtils.tsx";
 import AttachmentImageLadderExperiment from "../../modules/image_upload/AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "../../modules/image_upload/AttachmentImageLadder.tsx";
 import _modDef1478 from "../../../_runtime/metro/01478__.js";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
-import react_nativeDefault from "../getDevicePixelRatio.native.tsx";
-import react_nativeDefault2 from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import size_mod from "../../../_runtime/metro/00002__.js";
+import getDevicePixelRatioDefault from "../getDevicePixelRatio.native.tsx";
+import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
+require = fn;
 function getSrcWithWidthAndHeight(animated) {
-  let format;
-  let obj3;
-  let src;
-  let targetHeight;
-  let targetWidth;
-  let tmp6;
-  let tmp7;
-  function getAttachmentLadderConfig(arg0) {
-    try {
-      const obj = { location: "native/ImageUtils.getSrcWithWidthAndHeight" };
-      const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
-      let tmp5 = null;
-      if (true === attachmentImageLadderConfig.enabled) {
-        tmp5 = attachmentImageLadderConfig;
-      }
-      return tmp5;
-    } catch (err) {
-      return null;
-    }
-  }
   ({ src, sourceWidth, sourceHeight, targetWidth, targetHeight, format } = animated);
   if (format === undefined) {
     format = null;
@@ -43,16 +20,12 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = _slicedToArray(src.split("?"), 2);
-  const items = [tmp[0]];
-  const tmp2 = tmp[1];
-  let obj = _modDef1478;
-  items[1] = obj.parse(tmp2);
-  let tmp5 = _slicedToArray(items, 2);
-  [tmp6, tmp7] = tmp5;
-  if (re7.test(tmp6)) {
-    tmp7.format = "webp";
+  const items = [tmp[0], _modDef1478.parse(tmp[1])];
+  [tmp5, tmp6] = items;
+  if (re7.test(tmp5)) {
+    tmp6.format = "webp";
   } else if (null != format) {
-    tmp7.format = format;
+    tmp6.format = format;
   }
   if (targetWidth > closure_5) {
     targetWidth = closure_5;
@@ -61,35 +34,40 @@ function getSrcWithWidthAndHeight(animated) {
     targetHeight = closure_5;
   }
   if (targetWidth !== sourceWidth) {
-    const tmp10 = getAttachmentLadderConfig("native/ImageUtils.getSrcWithWidthAndHeight");
-    size = { width: targetWidth, height: targetHeight };
-    if (null != tmp10) {
-      const obj2 = {
-        targetWidth,
-        targetHeight,
-        sourceWidth,
-        sourceHeight,
-        maxUpscale: obj3.getSnapDownMaxUpscale(tmp10, react_nativeDefault()),
-      };
-      const snapAttachmentDimensions = AttachmentImageLadder.snapAttachmentDimensions;
-      AttachmentImageLadder;
-      obj3 = AttachmentImageLadder;
-      size = snapAttachmentDimensions(obj2);
+    const tmp9 = (function getAttachmentLadderConfig(arg0) {
+      try {
+        const obj = { location: "native/ImageUtils.getSrcWithWidthAndHeight" };
+        const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
+        let tmp5 = null;
+        if (true === attachmentImageLadderConfig.enabled) {
+          tmp5 = attachmentImageLadderConfig;
+        }
+        return tmp5;
+      } catch (err) {
+        return null;
+      }
+    })("native/ImageUtils.getSrcWithWidthAndHeight");
+    let size = { width: targetWidth, height: targetHeight };
+    if (null != tmp9) {
+      const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null };
+      const obj2 = AttachmentImageLadder;
+      obj3.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
+      size = obj2.snapAttachmentDimensions(obj3);
     }
-    const tmp14 = size.width === sourceWidth && size.height === sourceHeight;
-    if (!tmp14) {
-      tmp7.width = size.width | 0;
-      tmp7.height = size.height | 0;
+    if (!tmp12) {
+      tmp6.width = size.width | 0;
+      tmp6.height = size.height | 0;
     }
+    tmp12 = size.width === sourceWidth && size.height === sourceHeight;
   }
   if (flag) {
-    tmp7.animated = true;
+    tmp6.animated = true;
   }
-  let text = tmp6;
-  const tmp3Result = _modDef12;
-  if (!tmp3Result.isEmpty(tmp7)) {
+  const tmp4 = _slicedToArray(items, 2);
+  let text = tmp5;
+  if (!tmp2Result.isEmpty(tmp6)) {
     _modDef1478;
-    text = `${tmp6}?${obj5.stringify(tmp7)}`;
+    text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;
 }
@@ -102,8 +80,7 @@ function getMobileOptimizedSrc(proxy_url, c7, c72) {
   if (re6.test(proxy_url)) {
     num = 0.3;
   }
-  const obj = useWindowDimensions;
-  size = obj.getWindowDimensions();
+  const size = useWindowDimensions.getWindowDimensions();
   const result = PixelRatio.getPixelSizeForLayoutSize(size.width) * num;
   const bound = Math.min(
     sourceWidth > sourceHeight
@@ -119,24 +96,27 @@ function getMobileOptimizedSrc(proxy_url, c7, c72) {
     const _Math2 = Math;
     rounded1 = Math.ceil(sourceHeight * bound);
   }
-  const obj2 = { src: proxy_url, sourceWidth, sourceHeight, targetWidth: rounded, targetHeight: rounded1, format: tmp };
-  return getSrcWithWidthAndHeight(obj2);
+  return getSrcWithWidthAndHeight({
+    src: proxy_url,
+    sourceWidth,
+    sourceHeight,
+    targetWidth: rounded,
+    targetHeight: rounded1,
+    format: tmp,
+  });
 }
 function getPaletteForAvatarMobile(src) {
-  const ensureAvatarSource = utils_AvatarUtils.ensureAvatarSource;
-  utils_AvatarUtils;
-  const obj = AvatarUtils;
-  const ensureAvatarSourceResult = ensureAvatarSource(obj.makeSource(src));
-  const obj2 = react_nativeDefault2;
-  return obj2.getDominantColors(ensureAvatarSourceResult);
+  const obj = utils_AvatarUtils;
+  const ensureAvatarSourceResult = obj.ensureAvatarSource(AvatarUtils.makeSource(src));
+  return NativeImageManagerModuleDefault.getDominantColors(ensureAvatarSourceResult);
 }
-const PixelRatio = react_native.PixelRatio;
-let closure_5 = Constants.MEDIA_PROXY_MAX_TARGET_RESOLUTION;
-let tmp2 = /\.(gif)$/i;
+const PixelRatio = fn(17).PixelRatio;
+let closure_5 = fn(1085).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
+const tmp2 = /\.(gif)$/i;
 const re6 = tmp2;
 const tmp3 = /\.(avif)$/i;
 const re7 = tmp3;
-let size = size_mod;
+let size = fn(2);
 let result = size.fileFinishedImporting("utils/native/ImageUtils.tsx");
 
 export default { getMobileOptimizedSrc, getPaletteForAvatarMobile };

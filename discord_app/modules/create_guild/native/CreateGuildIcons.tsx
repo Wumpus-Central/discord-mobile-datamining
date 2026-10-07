@@ -1,11 +1,11 @@
 // discord_app/modules/create_guild/native/CreateGuildIcons.tsx
-import AssetRegistryDefault from "../../../../_runtime/11967_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/11968_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/11969_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/11970_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/11971_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/11972_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/11973_AssetRegistry.js";
+import _modDef11967 from "../../../../_runtime/metro/11967__.js";
+import _modDef11968 from "../../../../_runtime/metro/11968__.js";
+import _modDef11969 from "../../../../_runtime/metro/11969__.js";
+import _modDef11970 from "../../../../_runtime/metro/11970__.js";
+import _modDef11971 from "../../../../_runtime/metro/11971__.js";
+import _modDef11972 from "../../../../_runtime/metro/11972__.js";
+import _modDef11973 from "../../../../_runtime/metro/11973__.js";
 import PencilIllocon from "../../../design/components/mana-assets/native/generated/PencilIllocon.native.tsx";
 import ControllerIllocon from "../../../design/components/mana-assets/native/generated/ControllerIllocon.native.tsx";
 import HeartIllocon from "../../../design/components/mana-assets/native/generated/HeartIllocon.native.tsx";
@@ -16,16 +16,19 @@ import LeafIllocon from "../../../design/components/mana-assets/native/generated
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
-  CREATE: AssetRegistryDefault,
-  GAMING: AssetRegistryDefault5,
-  FRIENDS: AssetRegistryDefault3,
-  STUDY: AssetRegistryDefault4,
-  CLUBS: AssetRegistryDefault6,
-  CREATORS: AssetRegistryDefault7,
-  LOCAL_COMMUNITY: AssetRegistryDefault2,
-  SCHOOL_CLUB: AssetRegistryDefault6,
+  CREATE: _modDef11967,
+  GAMING: _modDef11971,
+  FRIENDS: _modDef11969,
+  STUDY: _modDef11970,
+  CLUBS: _modDef11972,
+  CREATORS: _modDef11973,
+  LOCAL_COMMUNITY: _modDef11968,
+  SCHOOL_CLUB: _modDef11972,
 };
-const obj2 = {
+const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
+
+export const GUILD_TEMPLATE_ICONS = obj;
+export const GUILD_TEMPLATE_ICON_COMPONENTS = {
   CREATE: PencilIllocon.PencilIllocon,
   GAMING: ControllerIllocon.ControllerIllocon,
   FRIENDS: HeartIllocon.HeartIllocon,
@@ -35,7 +38,3 @@ const obj2 = {
   LOCAL_COMMUNITY: LeafIllocon.LeafIllocon,
   SCHOOL_CLUB: BookIllocon.BookIllocon,
 };
-const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
-
-export const GUILD_TEMPLATE_ICONS = obj;
-export const GUILD_TEMPLATE_ICON_COMPONENTS = obj2;

@@ -1,146 +1,139 @@
 // discord_app/modules/application_commands/getPrimaryAppCommand.tsx
-import react2 from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import Server from "../../flow/Server.tsx";
 import ApplicationIntegrationType from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
 import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators.tsx";
 import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, botUserId, channel, closure_3;
-
-let hasOwnProperty;
-let metroRequire;
-let obj = function _getPrimaryAppCommand() {
-  obj = _asyncToGenerator(async (arg0, applicationId) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    return (async function (arg0, value) {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+require = fn;
+let closure_10 = async function _getPrimaryAppCommand(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp4;
-              closure_0 = applicationId;
-              channel = undefined;
-              channel = channel.getChannel(closure_0);
-              value = undefined;
-              let tmp12 = null != channel;
-              if (tmp12) {
-                const obj4 = { channel, type: "channel" };
-                const tmp11 = queryForPrimaryAppCommand(obj4, applicationId);
-                value = tmp11;
-                tmp12 = null == tmp11;
-              }
-              if (tmp12) {
-                c4 = 1;
-                c5 = 1;
-                const obj5 = { type: "application", applicationId };
-                const obj6 = { value: closure_2_5(obj5), done: false };
-                return obj6;
-              }
-            }
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
             c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            return { value, done: true };
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            obj = { channel, type: "channel" };
-            value = closure_131_11(obj, closure_0);
+            closure_3 = tmp5;
+            closure_2 = tmp2;
+            closure_130_0 = applicationId;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            channel = channel.getChannel(closure_0);
+            closure_130_1 = channel;
+            closure_130_2 = undefined;
+            let tmp13 = null != channel;
+            if (tmp13) {
+              const obj4 = { channel, type: "channel" };
+              const tmp12 = queryForPrimaryAppCommand(obj4, applicationId);
+              closure_130_2 = tmp12;
+              tmp13 = null == tmp12;
+            }
+            if (tmp13) {
+              const obj5 = { type: "application", applicationId };
+              c4 = 1;
+              c5 = 1;
+              const obj6 = { value: closure_2_5(obj5), done: false };
+              return obj6;
+            }
           }
-          if (null != value) {
-            c5 = 3;
-            return { value, done: true };
-          } else {
-            const _Error = Error;
-            const self = this;
-            const self2 = this;
-            const error = new Error(closure_131_8);
-            throw error;
-          }
-        } catch (tmp23) {
+        } else if (arg0 === 1) {
           c5 = 3;
-          throw tmp23;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj7 = { value, done: true };
+          return obj7;
+        } else {
+          const obj = { channel: closure_130_1, type: "channel" };
+          closure_130_2 = closure_131_11(obj, closure_130_0);
         }
+        if (null != closure_130_2) {
+          c5 = 3;
+          const obj8 = { value: closure_130_2, done: true };
+          return obj8;
+        } else {
+          const _Error = Error;
+          const error = new Error(closure_131_8);
+          throw error;
+        }
+      } catch (tmp26) {
+        c5 = tmp;
+        throw tmp26;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
 function queryForPrimaryAppCommand(context, id) {
-  const query = ApplicationCommandIndexStore.query;
-  obj = { commandTypes: items };
+  const obj = { commandTypes: null };
   items = [Server.ApplicationCommandType.PRIMARY_ENTRY_POINT];
-  const obj2 = {
+  obj.commandTypes = items;
+  return ApplicationCommandIndexStore.query(context, obj, {
     placeholderCount: 1,
     scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY,
     applicationId: id,
     allowFetch: false,
     allowApplicationState: true,
-  };
-  return query(context, obj, obj2).commands[0];
+  }).commands[0];
 }
-let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
+let ApplicationCommandIndexStore = fn(8827);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
-ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
+let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [Server.ApplicationCommandType.PRIMARY_ENTRY_POINT];
-let ReactCompilerGating = ReactCompilerGating_mod;
+let items = [fn(1985).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, applicationId) => {
-      let loading;
       _require = applicationId;
-      obj = require("react");
-      const cResult = obj.c(5);
+      const cResult = require("c").c(5);
       const tmp2 = closure_13(arg0, applicationId);
       loading = tmp2.loading;
       const first = tmp2.commands[0];
-      let closure_2 = tmp4;
+      closure_2 = tmp4;
       if (cResult[0] === applicationId) {
-        if ((cResult[1] === null) != first) {
-          let tmp5;
-          let tmp6;
+        if (cResult[1] === tmp4) {
           if (cResult[2] === loading) {
-            tmp5 = cResult[3];
-            tmp6 = cResult[4];
+            let tmp5 = cResult[3];
+            let tmp6 = cResult[4];
           }
-          const effect = react.useEffect(tmp5, tmp6);
+          const effect = noop.useEffect(tmp5, tmp6);
           return first;
         }
       }
       const fn = function p() {
-        const tmp = closure_2 || loading;
+        let tmp = closure_2;
+        if (!closure_2) {
+          tmp = loading;
+        }
         if (!tmp) {
           const obj2 = { type: "application", applicationId };
-          obj = ApplicationCommandIndexActionCreators;
-          const applicationCommandIndex = obj.requestApplicationCommandIndex(obj2);
+          const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
         }
       };
       items = [applicationId, null != first, loading];
@@ -151,35 +144,35 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp6 = items;
       tmp5 = fn;
+      let obj = require("c");
     }
   : (arg0, applicationId) => {
       let tmp = closure_13(arg0, applicationId);
       const loading = tmp.loading;
       const first = tmp.commands[0];
-      let closure_2 = tmp3;
+      closure_2 = tmp3;
       items = [applicationId, null != first, loading];
-      const effect = react.useEffect(() => {
-        const tmp = closure_2 || loading;
+      const effect = noop.useEffect(() => {
+        let tmp = closure_2;
+        if (!closure_2) {
+          tmp = loading;
+        }
         if (!tmp) {
           const obj2 = { type: "application", applicationId };
-          obj = ApplicationCommandIndexActionCreators;
-          const applicationCommandIndex = obj.requestApplicationCommandIndex(obj2);
+          const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
         }
       }, items);
       return first;
     };
 let closure_12 = tmp3;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (View, applicationId) => {
-      let first;
-      let tmp6;
-      obj = react2;
-      const cResult = obj.c(3);
+ReactCompilerGating = fn(558);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, applicationId) => {
+      const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { commandTypes: items };
         cResult[0] = obj2;
-        first = obj2;
+        let first = obj2;
       } else {
         first = cResult[0];
       }
@@ -193,74 +186,106 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = applicationId;
         cResult[2] = obj3;
-        tmp6 = obj3;
+        let tmp6 = obj3;
       } else {
         tmp6 = cResult[2];
       }
-      return metroRequire(View, first, tmp6);
+      return timestampProducer(arg0, first, tmp6);
     }
-  : (View, applicationId) => {
-      obj = { commandTypes: items };
-      const obj2 = {
-        placeholderCount: 1,
-        scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY,
-        applicationId,
-        allowFetch: false,
-        allowApplicationState: true,
-      };
-      return metroRequire(View, obj, obj2);
-    };
+  : (arg0, applicationId) =>
+      timestampProducer(
+        arg0,
+        { commandTypes: items },
+        {
+          placeholderCount: 1,
+          scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY,
+          applicationId,
+          allowFetch: false,
+          allowApplicationState: true,
+        },
+      );
 let closure_13 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+function isPrimaryAppCommandUsableInAppDM(integration_types) {
+  if (null == integration_types) {
+    return false;
+  } else {
+    let hasItem = null != integration_types.integration_types;
+    if (hasItem) {
+      integration_types = integration_types.integration_types;
+      hasItem = integration_types.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL);
+    }
+    let hasItem1 = null != integration_types.contexts;
+    if (hasItem1) {
+      const contexts = integration_types.contexts;
+      hasItem1 = contexts.includes(Server.InteractionContextType.BOT_DM);
+    }
+    if (hasItem) {
+      hasItem = hasItem1;
+    }
+    return hasItem;
+  }
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
+
+export default function getPrimaryAppCommand() {
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export const NO_PRIMARY_APP_COMMAND_ERROR = "no primary app command for application";
+export { queryForPrimaryAppCommand };
+export const useGetPrimaryAppCommand = tmp3;
+export const useQueryForPrimaryAppCommand = tmp4;
+export const useIsPrimaryAppCommandUsableInAppDM = ReactCompilerGating.isReactCompilerEnabled()
   ? (botUserId) => {
-      obj = react2;
-      const cResult = obj.c(3);
+      let BOT_DM = dependencyMap;
+      const cResult = c.c(3);
       botUserId = botUserId.botUserId;
-      const tmp4 = closure_12(botUserId.context, botUserId.applicationId);
-      let tmp5 = null != tmp4;
-      if (tmp5) {
+      const tmp3 = closure_12(botUserId.context, botUserId.applicationId);
+      if (null == tmp3) {
+        return tmp4;
+      } else {
         if (cResult[0] === botUserId) {
-          let tmp6;
-          if (cResult[1] === tmp4) {
-            tmp6 = cResult[2];
-          }
-          tmp5 = tmp6;
         }
-        let tmp7 = null != botUserId;
-        if (tmp7) {
+        let tmp6 = null != botUserId;
+        if (tmp6) {
           let flag = false;
-          if (null != tmp4) {
-            let hasItem = null != tmp4.integration_types;
+          if (null != tmp3) {
+            let hasItem = null != tmp3.integration_types;
             if (hasItem) {
-              const integration_types = tmp4.integration_types;
+              const integration_types = tmp3.integration_types;
               hasItem = integration_types.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL);
             }
-            let hasItem1 = null != tmp4.contexts;
+            let hasItem1 = null != tmp3.contexts;
             if (hasItem1) {
-              const contexts = tmp4.contexts;
-              hasItem1 = contexts.includes(Server.InteractionContextType.BOT_DM);
+              const contexts = tmp3.contexts;
+              BOT_DM = Server.InteractionContextType.BOT_DM;
+              hasItem1 = contexts.includes(BOT_DM);
             }
             if (hasItem) {
               hasItem = hasItem1;
             }
             flag = hasItem;
           }
-          tmp7 = flag;
+          tmp6 = flag;
         }
         cResult[0] = botUserId;
-        cResult[1] = tmp4;
-        cResult[2] = tmp7;
-        tmp6 = tmp7;
+        cResult[1] = tmp3;
+        cResult[2] = tmp6;
       }
-      return tmp5;
     }
-  : (botUserId) => {
-      botUserId = botUserId.botUserId;
-      const tmp = closure_12(botUserId.context, botUserId.applicationId);
+  : (context) => {
+      const tmp = closure_12(context.context, context.applicationId);
       let tmp2 = null != tmp;
       if (tmp2) {
-        let tmp3 = null != botUserId;
+        let tmp3 = null != context.botUserId;
         if (tmp3) {
           let flag = false;
           if (null != tmp) {
@@ -285,34 +310,4 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp2;
     };
-function isPrimaryAppCommandUsableInAppDM(integration_types) {
-  if (null == integration_types) {
-    return false;
-  } else {
-    let hasItem = null != integration_types.integration_types;
-    if (hasItem) {
-      integration_types = integration_types.integration_types;
-      hasItem = integration_types.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL);
-    }
-    let hasItem1 = null != integration_types.contexts;
-    if (hasItem1) {
-      const contexts = integration_types.contexts;
-      hasItem1 = contexts.includes(Server.InteractionContextType.BOT_DM);
-    }
-    if (hasItem) {
-      hasItem = hasItem1;
-    }
-    return hasItem;
-  }
-}
-const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
-
-export default function getPrimaryAppCommand() {
-  return obj(...arguments);
-}
-export const NO_PRIMARY_APP_COMMAND_ERROR = "no primary app command for application";
-export { queryForPrimaryAppCommand };
-export const useGetPrimaryAppCommand = tmp3;
-export const useQueryForPrimaryAppCommand = tmp4;
-export const useIsPrimaryAppCommandUsableInAppDM = tmp5;
 export { isPrimaryAppCommandUsableInAppDM };

@@ -1,21 +1,22 @@
 // discord_app/hooks/useForwardedRef.tsx
-import react from "../../_runtime/00019_react.js";
-import size from "../../_runtime/metro/00002__.js";
+import noop from "../../_runtime/metro/00019__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useForwardedRef.tsx");
 
 export default function useForwardedRef(arg0) {
-  let closure_0 = arg0;
-  const ref = react.useRef(null);
+  closure_0 = arg0;
+  const ref = noop.useRef(null);
   const items = [arg0];
   const items1 = [
     ref,
-    react.useCallback((current) => {
+    noop.useCallback((current) => {
+      let tmp = closure_0;
       if (null != closure_0) {
-        if (typeof closure_0 === "function") {
-          closure_0(current);
+        if (typeof tmp === "function") {
+          tmp = tmp(current);
         } else {
-          closure_0.current = current;
+          tmp.current = current;
         }
         ref.current = current;
       }

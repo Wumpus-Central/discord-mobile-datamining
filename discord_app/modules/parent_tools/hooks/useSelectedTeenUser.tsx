@@ -3,27 +3,19 @@ import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettingsStore.tsx";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+const require = fn;
+fn(558);
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_0;
-      let first;
-      let tmp8;
-      const obj = require("react");
-      const cResult = obj.c(3);
+      const cResult = require("c").c(3);
       const tmp4 = useIsInAdultAgeGroupDefault();
-      const tmp = _require;
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore, UserStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -42,19 +34,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = tmp4;
         cResult[2] = fn;
-        tmp8 = fn;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[2];
       }
-      const tmpResult = tmp(573);
-      return tmpResult.useStateFromStores(first, tmp8);
+      const obj = require("c");
+      return require("useStateFromStores").useStateFromStores(first, tmp8);
     }
   : () => {
-      let closure_0;
       _require = useIsInAdultAgeGroupDefault();
       const items = [FamilyCenterStore, UserStore];
-      const obj = require("useStateFromStores");
-      return obj.useStateFromStores(items, () => {
+      return require("useStateFromStores").useStateFromStores(items, () => {
         if (true !== closure_0) {
           return UserStore.getCurrentUser();
         } else {
@@ -67,20 +57,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(3);
-      const tmp = _require;
+      const cResult = require("c").c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -91,32 +76,29 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(573);
-      return tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      return require("useStateFromStores").useStateFromStores(first, tmp6);
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       const items = [UserStore];
-      const obj = require("useStateFromStores");
-      return obj.useStateFromStores(items, () => {
+      return require("useStateFromStores").useStateFromStores(items, () => {
         const user = UserStore.getUser(closure_0);
         return null != user ? user : undefined;
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
+
+export const useSelectedTeenUser = tmp2;
+export const useTeenUserForId = tmp3;
+export const useShouldLoadSettingsForSelectedTeenUser = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let tmp7;
-      let tmp8;
-      const tmp = first;
-      const obj = first(576);
-      const cResult = obj.c(3);
+      const cResult = first(576).c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
         cResult[0] = selectedTeenId;
@@ -127,7 +109,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterControlledSettingsStore];
         const fn = function l() {
-          const hasSettingsForUserResult = null != first && FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
+          let hasSettingsForUserResult = null != first;
+          if (hasSettingsForUserResult) {
+            hasSettingsForUserResult = FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
+          }
           return {
             hasLoadedSettings: hasSettingsForUserResult,
             isLoading: FamilyCenterControlledSettingsStore.isLoading,
@@ -135,28 +120,33 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = items;
         cResult[2] = fn;
-        tmp8 = fn;
-        tmp7 = items;
+        let tmp8 = fn;
+        let tmp7 = items;
       } else {
         tmp7 = cResult[1];
         tmp8 = cResult[2];
       }
-      const tmpResult = tmp(573);
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp7, tmp8);
+      const obj = first(576);
+      const stateFromStoresObject = first(573).useStateFromStoresObject(tmp7, tmp8);
       const hasLoadedSettings = stateFromStoresObject.hasLoadedSettings;
       let tmp12 = null !== first;
       if (tmp12) {
-        tmp12 = !hasLoadedSettings && !tmp11;
+        let tmp13 = !hasLoadedSettings;
+        if (!hasLoadedSettings) {
+          tmp13 = !tmp11;
+        }
+        tmp12 = tmp13;
       }
       return tmp12;
     }
   : () => {
       const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
       const items = [FamilyCenterControlledSettingsStore];
-      const obj = selectedTeenId(573);
-      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-        const hasSettingsForUserResult =
-          null != selectedTeenId && FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
+      const stateFromStoresObject = selectedTeenId(573).useStateFromStoresObject(items, () => {
+        let hasSettingsForUserResult = null != selectedTeenId;
+        if (hasSettingsForUserResult) {
+          hasSettingsForUserResult = FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
+        }
         return {
           hasLoadedSettings: hasSettingsForUserResult,
           isLoading: FamilyCenterControlledSettingsStore.isLoading,
@@ -165,12 +155,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const hasLoadedSettings = stateFromStoresObject.hasLoadedSettings;
       let tmp4 = null !== selectedTeenId;
       if (tmp4) {
-        tmp4 = !hasLoadedSettings && !tmp3;
+        let tmp5 = !hasLoadedSettings;
+        if (!hasLoadedSettings) {
+          tmp5 = !tmp3;
+        }
+        tmp4 = tmp5;
       }
       return tmp4;
     };
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
-
-export const useSelectedTeenUser = tmp2;
-export const useTeenUserForId = tmp3;
-export const useShouldLoadSettingsForSelectedTeenUser = tmp4;

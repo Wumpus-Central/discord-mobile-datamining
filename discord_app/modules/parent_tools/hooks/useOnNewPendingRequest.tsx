@@ -1,30 +1,21 @@
 // discord_app/modules/parent_tools/hooks/useOnNewPendingRequest.tsx
-import react_mod from "../../../../_runtime/00019_react.js";
-import FamilyCenterStore_mod from "../FamilyCenterStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 const require = globalThis.__r;
-let _require;
 
-let react = react_mod;
-let FamilyCenterStore = FamilyCenterStore_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (current) => {
-      let ref;
-      let ref2;
-      let stateFromStores;
-      let tmp11;
-      let tmp12;
-      let tmp5;
-      let tmp6;
-      let tmp9;
       _require = current;
-      let obj = require("react");
-      const cResult = obj.c(10);
-      const obj2 = require("useUserLinks");
-      const pendingRequestCount = obj2.usePendingRequestCount();
+      const cResult = require("c").c(10);
+      let obj = require("c");
       const tmp = _require;
+      const pendingRequestCount = require("useUserLinks").usePendingRequestCount();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [FamilyCenterStore];
         const fn = function c() {
@@ -37,33 +28,33 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const tmpResult = tmp(stateFromStores[5]);
-      stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      const obj2 = require("useUserLinks");
+      stateFromStores = tmp(stateFromStores[5]).useStateFromStores(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function l() {
           if (!ref2.getAreLinkedUsersProcessed()) {
-            const obj = pendingRequestCount(stateFromStores[6]);
-            const linkedUsers = obj.fetchLinkedUsers();
+            const linkedUsers = pendingRequestCount(stateFromStores[6]).fetchLinkedUsers();
             linkedUsers.catch(() => {});
+            const obj = pendingRequestCount(stateFromStores[6]);
           }
         };
         cResult[2] = fn2;
-        tmp9 = fn2;
+        let tmp9 = fn2;
       } else {
         tmp9 = cResult[2];
       }
       pendingRequestCount(stateFromStores[7])(tmp9);
-      react = react.useRef(current);
+      noop = noop.useRef(current);
       if (cResult[3] !== current) {
         const fn3 = function _() {
-          ref.current = current;
+          closure_3.current = current;
         };
         const items1 = [current];
         cResult[3] = current;
         cResult[4] = fn3;
         cResult[5] = items1;
-        tmp12 = items1;
-        tmp11 = fn3;
+        let tmp12 = items1;
+        let tmp11 = fn3;
       } else {
         tmp11 = cResult[4];
         tmp12 = cResult[5];
@@ -71,26 +62,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = obj4.useEffect(tmp11, tmp12);
       FamilyCenterStore = obj4.useRef(null);
       if (cResult[6] === stateFromStores) {
-        let tmp14;
-        let tmp15;
         if (cResult[7] === pendingRequestCount) {
-          tmp14 = cResult[8];
-          tmp15 = cResult[9];
+          let tmp14 = cResult[8];
+          let tmp15 = cResult[9];
         }
         const effect1 = obj4.useEffect(tmp14, tmp15);
       }
       class R {
         constructor() {
-          if (stateFromStores) {
-            if (null != ref2.current) {
-              ref2.current = pendingRequestCount;
-              if (pendingRequestCount > ref2.current) {
-                ref.current();
+          if (closure_2) {
+            tmp = closure_4;
+            tmp2 = null;
+            if (null != closure_4.current) {
+              tmp4 = closure_1;
+              tmp.current = closure_1;
+              if (closure_1 > tmp.current) {
+                tmp5 = closure_3;
+                currentResult = closure_3.current();
               }
             } else {
-              ref2.current = pendingRequestCount;
+              tmp3 = closure_1;
+              tmp.current = closure_1;
             }
           }
+          return;
         }
       }
       const items2 = [stateFromStores, pendingRequestCount];
@@ -102,30 +97,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp14 = R;
     }
   : (current) => {
-      let ref;
-      let ref2;
-      let stateFromStores;
       _require = current;
+      const pendingRequestCount = require("useUserLinks").usePendingRequestCount();
       let obj = require("useUserLinks");
-      const pendingRequestCount = obj.usePendingRequestCount();
       const items = [ref2];
-      const obj2 = require("get initialized");
-      stateFromStores = obj2.useStateFromStores(items, () => ref2.getAreLinkedUsersProcessed());
+      stateFromStores = require("initialize").useStateFromStores(items, () => ref2.getAreLinkedUsersProcessed());
       pendingRequestCount(stateFromStores[7])(() => {
         if (!ref2.getAreLinkedUsersProcessed()) {
-          const obj = pendingRequestCount(stateFromStores[6]);
-          const linkedUsers = obj.fetchLinkedUsers();
+          const linkedUsers = pendingRequestCount(stateFromStores[6]).fetchLinkedUsers();
           linkedUsers.catch(() => {});
+          const obj = pendingRequestCount(stateFromStores[6]);
         }
       });
-      react = react.useRef(current);
+      noop = noop.useRef(current);
       const items1 = [current];
-      const effect = react.useEffect(() => {
-        ref.current = current;
+      const effect = noop.useEffect(() => {
+        closure_3.current = current;
       }, items1);
-      ref2 = react.useRef(null);
+      const obj2 = require("initialize");
       const items2 = [stateFromStores, pendingRequestCount];
-      const effect1 = react.useEffect(() => {
+      const effect1 = noop.useEffect(() => {
         if (stateFromStores) {
           if (null != ref2.current) {
             ref2.current = pendingRequestCount;
@@ -138,6 +129,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
     };
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
-
-export default tmp2;

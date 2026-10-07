@@ -1,42 +1,25 @@
 // discord_app/modules/rtc/native/SecureFramesCode.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import react_mod from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-let _require;
-
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let react = react_mod;
-({ ActivityIndicator: c3, View: closure_4 } = react_native);
-const Fonts = Constants.Fonts;
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  codeText: { fontFamily: Fonts.CODE_NORMAL },
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  codeText: { fontFamily: fn(1096).Fonts.CODE_NORMAL },
   row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 },
-  divider: obj2,
-  codeHeader: obj3,
-  code: obj4,
-  loading: { minHeight: 126 },
+  divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE },
+  codeHeader: null,
+  code: null,
+  loading: null,
 };
-obj2 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.codeHeader = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderTopRightRadius: nativeDefault.radii.lg,
   borderTopLeftRadius: nativeDefault.radii.lg,
@@ -46,24 +29,29 @@ obj3 = {
   alignItems: "center",
   flexDirection: "row",
 };
-obj4 = {
+let obj4 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderTopRightRadius: nativeDefault.radii.lg,
+  borderTopLeftRadius: nativeDefault.radii.lg,
+  paddingVertical: 10,
+  paddingHorizontal: 16,
+  justifyContent: "space-between",
+  alignItems: "center",
+  flexDirection: "row",
+};
+obj2.code = {
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   paddingVertical: 8,
   paddingHorizontal: 16,
   borderBottomRightRadius: nativeDefault.radii.lg,
   borderBottomLeftRadius: nativeDefault.radii.lg,
 };
-let closure_8 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj2.loading = { minHeight: 126 };
+let closure_8 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let arr;
-      let chunks;
-      let columns;
-      let num;
-      let row;
-      let obj = require("react");
-      const cResult = obj.c(6);
+      const cResult = require("c").c(6);
       ({ chunks, columns } = arg0);
       const tmp2 = closure_8();
       _require = tmp2;
@@ -72,29 +60,32 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           arr = cResult[2];
         }
         if (cResult[3] === arr) {
-          let tmp7;
           if (cResult[4] === tmp2) {
-            tmp7 = cResult[5];
+            let tmp7 = cResult[5];
           }
           return tmp7;
         }
         let obj2 = {
           children: arr.map((join, index) => {
-            let obj = {
-              style: row.row,
-              children: join.map((children, index) => {
-                const obj = { style: closure_1_0.codeText, variant: "text-md/normal", color: "text-default", children };
-                return closure_2_5(closure_0(arr[8]).Text, obj, "" + children + "-" + index);
+            const children = [
+              hasOwnProperty(React4, {
+                style: row.row,
+                children: join.map((children, index) =>
+                  closure_2_5(
+                    closure_0(arr[8]).Text,
+                    { style: row.codeText, variant: "text-md/normal", color: "text-default", children },
+                    "" + children + "-" + index,
+                  ),
+                ),
               }),
-            };
-            const children = [hasOwnProperty(React3, obj)];
+            ];
             let tmp3Result = index < arr.length - 1;
             if (tmp3Result) {
               const obj2 = { style: row.divider };
-              tmp3Result = hasOwnProperty(React3, obj2);
+              tmp3Result = hasOwnProperty(React4, obj2);
             }
             children[1] = tmp3Result;
-            return metroRequire(React3, { children }, "" + join.join(" ") + "-" + index);
+            return timestampProducer(React4, { children }, "" + join.join(" ") + "-" + index);
           }),
         };
         const tmp10 = closure_5(closure_7, obj2);
@@ -106,7 +97,6 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [];
       const rounded = Math.ceil(chunks.length / columns);
       for (let num = 0; num < rounded; num = num + 1) {
-        let num2;
         let items1 = [];
         for (let num2 = 0; num2 < columns; num2 = num2 + 1) {
           let arr2 = items1.push(chunks[num * columns + num2]);
@@ -117,19 +107,17 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = columns;
       cResult[2] = items;
       arr = items;
+      const obj = require("c");
     }
   : (chunks) => {
-      let row;
       chunks = chunks.chunks;
       const columns = chunks.columns;
-      react = closure_8();
+      noop = closure_8();
       let items = [chunks, columns];
-      const memo = react.useMemo(() => {
-        let num;
+      const memo = noop.useMemo(() => {
         const items = [];
         const rounded = Math.ceil(chunks.length / columns);
         for (let num = 0; num < rounded; num = num + 1) {
-          let num2;
           let items1 = [];
           for (let num2 = 0; num2 < columns; num2 = num2 + 1) {
             let arr = items1.push(chunks[num * columns + num2]);
@@ -138,40 +126,44 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return items;
       }, items);
-      let obj = {
+      return closure_5(closure_7, {
         children: memo.map((join, index) => {
-          let codeText;
-          let obj = {
-            style: row.row,
-            children: join.map((children, index) => {
-              const obj = { style: codeText.codeText, variant: "text-md/normal", color: "text-default", children };
-              return closure_2_5(chunks(columns[8]).Text, obj, "" + children + "-" + index);
+          const children = [
+            hasOwnProperty(React4, {
+              style: row.row,
+              children: join.map((children, index) =>
+                closure_2_5(
+                  chunks(columns[8]).Text,
+                  { style: codeText.codeText, variant: "text-md/normal", color: "text-default", children },
+                  "" + children + "-" + index,
+                ),
+              ),
             }),
-          };
-          const children = [hasOwnProperty(React3, obj)];
+          ];
           let tmp3Result = index < memo.length - 1;
           if (tmp3Result) {
             const obj2 = { style: row.divider };
-            tmp3Result = hasOwnProperty(React3, obj2);
+            tmp3Result = hasOwnProperty(React4, obj2);
           }
           children[1] = tmp3Result;
-          return metroRequire(React3, { children }, "" + join.join(" ") + "-" + index);
+          return timestampProducer(React4, { children }, "" + join.join(" ") + "-" + index);
         }),
-      };
-      return closure_5(closure_7, obj);
+      });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj5 = {
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+  paddingVertical: 8,
+  paddingHorizontal: 16,
+  borderBottomRightRadius: nativeDefault.radii.lg,
+  borderBottomLeftRadius: nativeDefault.radii.lg,
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCode.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let chunks;
-      let columns;
-      let items;
-      let items1;
-      let title;
-      let tmp5;
-      let trailing;
-      const obj = react2;
-      const cResult = obj.c(16);
+      const cResult = c.c(16);
       ({ title, trailing, chunks, columns } = arg0);
       const tmp4 = closure_8();
       if (cResult[0] !== title) {
@@ -179,68 +171,64 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp7 = hasOwnProperty(Text_Text.Text, obj2);
         cResult[0] = title;
         cResult[1] = tmp7;
-        tmp5 = tmp7;
+        let tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === tmp4.codeHeader) {
         if (cResult[3] === tmp5) {
-          let tmp8;
-          let tmp14;
           if (cResult[4] === trailing) {
-            tmp8 = cResult[5];
+            let tmp8 = cResult[5];
           }
           if (cResult[6] === chunks) {
             if (cResult[7] === columns) {
-              let tmp10;
               if (cResult[8] === tmp4.loading) {
-                tmp10 = cResult[9];
-              }
-              if (cResult[10] === tmp4.code) {
-                let tmp17;
-                if (cResult[11] === tmp10) {
-                  tmp17 = cResult[12];
-                }
-                if (cResult[13] === tmp8) {
-                  let tmp21;
-                  if (cResult[14] === tmp17) {
-                    tmp21 = cResult[15];
+                if (cResult[10] === tmp4.code) {
+                  if (cResult[11] === tmp10) {
+                    let tmp18 = cResult[12];
                   }
-                  return tmp21;
+                  if (cResult[13] === tmp8) {
+                    if (cResult[14] === tmp18) {
+                      let tmp22 = cResult[15];
+                    }
+                    return tmp22;
+                  }
+                  const obj3 = { children: null };
+                  const items = [tmp8, tmp18];
+                  obj3.children = items;
+                  const tmp25 = timestampProducer(React5, obj3);
+                  cResult[13] = tmp8;
+                  cResult[14] = tmp18;
+                  cResult[15] = tmp25;
+                  tmp22 = tmp25;
                 }
-                const obj3 = { children: items };
-                items = [tmp8, tmp17];
-                const tmp24 = metroRequire(metroImportDefault, obj3);
-                cResult[13] = tmp8;
-                cResult[14] = tmp17;
-                cResult[15] = tmp24;
-                tmp21 = tmp24;
+                const obj4 = { style: tmp4.code, children: cResult[9] };
+                const tmp21 = hasOwnProperty(React4, obj4);
+                cResult[10] = tmp4.code;
+                cResult[11] = cResult[9];
+                cResult[12] = tmp21;
+                tmp18 = tmp21;
               }
-              const obj4 = { style: tmp4.code, children: tmp10 };
-              const tmp20 = hasOwnProperty(React3, obj4);
-              cResult[10] = tmp4.code;
-              cResult[11] = tmp10;
-              cResult[12] = tmp20;
-              tmp17 = tmp20;
             }
           }
           if (null != chunks) {
             const obj5 = { chunks, columns };
-            tmp14 = hasOwnProperty(closure_9, obj5);
+            let tmp14 = hasOwnProperty(closure_9, obj5);
           } else {
             const obj6 = { style: tmp4.loading };
-            tmp14 = hasOwnProperty(_false, obj6);
+            tmp14 = hasOwnProperty(React3, obj6);
           }
           cResult[6] = chunks;
           cResult[7] = columns;
-          cResult[8] = tmp4.loading;
+          columns = tmp4.loading;
+          cResult[8] = columns;
           cResult[9] = tmp14;
-          tmp10 = tmp14;
         }
       }
-      const obj7 = { style: tmp4.codeHeader, children: items1 };
-      items1 = [tmp5, trailing];
-      const tmp9 = metroRequire(React3, obj7);
+      const obj7 = { style: tmp4.codeHeader, children: null };
+      const items1 = [tmp5, trailing];
+      obj7.children = items1;
+      const tmp9 = timestampProducer(React4, obj7);
       cResult[2] = tmp4.codeHeader;
       cResult[3] = tmp5;
       cResult[4] = trailing;
@@ -248,16 +236,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
     }
   : (chunks) => {
-      let columns;
-      let items;
-      let title;
-      let tmp5Result;
-      let trailing;
       chunks = chunks.chunks;
       ({ title, trailing, columns } = chunks);
       const tmp = closure_8();
-      const obj = { style: tmp.codeHeader, children: items };
-      items = [
+      const obj = { style: tmp.codeHeader, children: null };
+      const items = [
         hasOwnProperty(Text_Text.Text, {
           color: "mobile-text-heading-primary",
           variant: "heading-md/semibold",
@@ -265,19 +248,19 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }),
         trailing,
       ];
-      const items1 = [metroRequire(React3, obj)];
-      const obj2 = { style: tmp.code, children: tmp5Result };
+      obj.children = items;
+      const items1 = [timestampProducer(React4, obj)];
+      const obj2 = { style: tmp.code, children: null };
       if (null != chunks) {
         const obj3 = { chunks, columns };
-        tmp5Result = hasOwnProperty(closure_9, obj3);
+        let tmp5Result = hasOwnProperty(closure_9, obj3);
       } else {
         const obj4 = { style: tmp.loading };
-        tmp5Result = hasOwnProperty(_false, obj4);
+        tmp5Result = hasOwnProperty(React3, obj4);
       }
-      const obj5 = { children: items1 };
-      items1[1] = hasOwnProperty(React3, obj2);
-      return metroRequire(metroImportDefault, obj5);
+      const obj5 = { children: null };
+      obj2.children = tmp5Result;
+      items1[1] = hasOwnProperty(React4, obj2);
+      obj5.children = items1;
+      return timestampProducer(React5, obj5);
     };
-const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCode.tsx");
-
-export default tmp5;

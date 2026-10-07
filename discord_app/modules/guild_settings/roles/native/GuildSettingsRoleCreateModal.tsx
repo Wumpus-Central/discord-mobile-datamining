@@ -1,334 +1,218 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
-import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../../_runtime/00576_react.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl9 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
-import GuildRecord from "../../../../records/GuildRecord.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import PermissionUtilsAll from "../../../../utils/PermissionUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import react_native from "../../../a11y/native/setAccessibilityFocus.android.tsx";
+import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native2 from "../../../../../_runtime/00017_react-native.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
-import GuildSettingsRoleConstants from "../GuildSettingsRoleConstants.tsx";
-import Constants from "../../../../Constants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, c4, dependencyMap, importDefault, navigation, step;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let map1;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
+require = fn;
 function RoleCreateScene() {
-  let Button;
-  let TableRow;
-  let closure_1;
-  let closure_4;
-  let color;
-  let constants4;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  let intl8;
-  let items3;
-  let items4;
-  let items5;
-  let obj10;
-  let obj12;
-  let obj7;
-  let onSelect;
-  let str;
-  let tmp11;
-  let tmp7;
-  let tmp = closure_24();
-  const tmp2 = navigation;
-  const tmp3 = color;
-  let obj = navigation(color[24]);
-  navigation = obj.useNavigation();
+  const tmp = closure_24();
+  navigation = navigation(color[24]).useNavigation();
   const tmp5 = closure_28();
   importDefault = tmp5;
-  const useState = onSelect.useState;
   const intl = navigation(color[18]).intl;
-  [str, tmp7] = useState(intl.string(navigation(color[18]).t.QBMHvB));
-  [color, _asyncToGenerator] = onSelect.useState(closure_17);
-  const tmp10 = _slicedToArray(onSelect.useState(false), 2);
-  [tmp11, _slicedToArray] = tmp10;
+  const tmp6 = _slicedToArray(onSelect.useState(intl.string(navigation(color[18]).t.QBMHvB)), 2);
+  [color, asyncGeneratorStep] = onSelect.useState(closure_17);
+  let obj = navigation(color[24]);
+  [tmp10, _slicedToArray] = onSelect.useState(false);
   let nextButtonFloating = require("useKeyboardIsOpen")();
   const items = [navigation, tmp5];
   const layoutEffect = onSelect.useLayoutEffect(() => {
-    let obj2;
     let obj = {
-      headerLeft: obj2.getHeaderCloseButton(() => {
-        const id = closure_1_1.id;
-        const FLOW_DISMISSED = constants4.FLOW_DISMISSED;
-        const tmp = constants4[constants3.STEP_DISPLAY];
-        const track = closure_1(first[14]).track;
-        const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-        const obj = {
+      headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
+        const obj = closure_1(first[14]);
+        const obj2 = {
           flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-          from_step: tmp,
-          to_step: FLOW_DISMISSED,
+          from_step: constants4[constants3.STEP_DISPLAY],
+          to_step: constants4.FLOW_DISMISSED,
           skip: false,
         };
-        closure_1(first[14]);
-        const obj2 = navigation(first[15]);
-        const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(id));
-        track(USER_FLOW_TRANSITION, obj);
-        const obj3 = closure_1(first[20]);
-        obj3.close();
+        const merged = Object.assign(navigation(first[15]).collectGuildAnalyticsMetadata(closure_1_1.id));
+        obj.track(constants.USER_FLOW_TRANSITION, obj2);
+        const obj3 = navigation(first[15]);
+        closure_1(first[20]).close();
       }),
       headerTitle() {
-        const obj = { step: constants.STEP_DISPLAY };
-        return closure_1_21(closure_1_27, obj);
+        return closure_1_21(closure_1_27, { step: constants.STEP_DISPLAY });
       },
     };
-    const setOptions = navigation.setOptions;
-    obj2 = NavigatorHeader;
-    setOptions(obj);
+    navigation.setOptions(obj);
   }, items);
   onSelect = onSelect.useCallback((arg0) => {
     closure_4(arg0);
   }, []);
-  const items1 = [color, tmp5.id, str, navigation];
+  const items1 = [color, tmp5.id, tmp6[0], navigation];
   const items2 = [color, onSelect];
   const callback1 = onSelect.useCallback(
-    _asyncToGenerator(async () => {
-      let c3;
-      let closure_0;
-      let tmp4;
-      if (c4 === 2) {
-        c4 = 3;
-        str = "Generator functions may not be called on executing generators";
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else {
-        const flag = true;
-        const flag2 = false;
-        if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            let obj4 = { value, done: true };
-            return obj4;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
-        } else {
-          let c2;
-          try {
-            c4 = 2;
-            if (0 === color) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                let obj5 = { value, done: true };
-                return obj5;
-              } else {
-                c2 = 1;
-                _slicedToArray(true);
-                let num5 = first;
-                if (first === closure_1_17) {
-                  num5 = 0;
-                }
-                let obj3 = tmp(color[27]);
-                color = 2;
-                c4 = 1;
-                obj6 = { value: obj3.createRole(tmp.id, str, num5), done: false };
-                return obj6;
-              }
-            } else {
-              if (1 === tmp4) {
-                c2 = 0;
-                closure_129_5(false);
-                let obj2 = tmp(color[28]);
-                const result = obj2.roleCreateFailedToast();
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c2 = 0;
-                c4 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                const result1 = GuildSettingsStore.addConditionalChangeListener(() => {
-                  let guild;
-                  let selectedRoleId;
-                  const props = closure_2_12.getProps();
-                  ({ guild, selectedRoleId } = props);
-                  if (null != guild) {
-                    if (null != selectedRoleId) {
-                      role = role.getRole(guild.id, selectedRoleId);
-                    }
-                  }
-                  if (null != selectedRoleId) {
-                    if (null != role) {
-                      if (null != guild) {
-                        const obj4 = navigation(c3[28]);
-                        obj4.roleCreatedToast();
-                        const obj5 = navigation(c3[29]);
-                        obj5.setRoleJustCreated(true);
-                        let STEP_MEMBERS = constants4.STEP_PERMISSIONS;
-                        const guild2 = closure_2_12.getProps().guild;
-                        closure_1(c3[22])(null != guild2, "shouldSkipPermissions: Guild cannot be null");
-                        currentUser = currentUser.getCurrentUser();
-                        const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild2 };
-                        const tmp26 = closure_2_9(guild2, currentUser);
-                        obj6 = c2(c3[23]);
-                        const tmp4 = !tmp26 && !obj6.can(obj2);
-                        if (tmp4) {
-                          STEP_MEMBERS = constants4.STEP_MEMBERS;
-                        }
-                        closure_1_0.push(STEP_MEMBERS);
-                        const id = guild.id;
-                        const obj3 = {
-                          flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-                          from_step: closure_2_26[constants4.STEP_DISPLAY],
-                          to_step: closure_2_26[STEP_MEMBERS],
-                          skip: false,
-                        };
-                        const track = closure_1(c3[14]).track;
-                        const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-                        closure_1(c3[14]);
-                        const tmp16Result = navigation(c3[15]);
-                        const merged = Object.assign(tmp16Result.collectGuildAnalyticsMetadata(id));
-                        track(USER_FLOW_TRANSITION, obj3);
-                        return false;
-                      }
-                    }
-                  }
-                  return true;
-                });
-                c2 = 0;
-              }
-              c4 = 3;
-              return { value: "IconComponent", done: null };
-            }
-          } catch (tmp22) {
-            if (0 === c2) {
-              c4 = 3;
-              throw tmp22;
-            } else {
-              color = 1;
-            }
-          }
-        }
+    asyncGeneratorStep(async () => {
+      _slicedToArray(true);
+      let num5 = first;
+      if (first === closure_1_17) {
+        num5 = 0;
       }
+      await tmp3(5712).createRole(tmp3.id, str, num5);
+      if (1 === tmp7) {
+        c2 = 0;
+        closure_129_5(false);
+        const result = tmp3(4573).roleCreateFailedToast();
+        c4 = 3;
+        tmp3(4573);
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        const result1 = GuildSettingsStore.addConditionalChangeListener(() => {
+          const props = closure_2_12.getProps();
+          ({ guild, selectedRoleId } = props);
+          if (null != guild) {
+            if (null != selectedRoleId) {
+              role = role.getRole(guild.id, selectedRoleId);
+            }
+          }
+          if (null != selectedRoleId) {
+            if (null != role) {
+              if (null != guild) {
+                closure_0(4573).roleCreatedToast();
+                const obj5 = closure_0(4573);
+                closure_0(17823).setRoleJustCreated(true);
+                let STEP_MEMBERS = constants4.STEP_PERMISSIONS;
+                const guild2 = closure_2_12.getProps().guild;
+                closure_1(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
+                currentUser = currentUser.getCurrentUser();
+                const tmp23 = closure_2_9(guild2, currentUser);
+                const obj6 = closure_0(17823);
+                const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild2 };
+                let tmp4 = !tmp23;
+                if (!tmp23) {
+                  tmp4 = !obj7.can(obj2);
+                }
+                if (tmp4) {
+                  STEP_MEMBERS = constants4.STEP_MEMBERS;
+                }
+                closure_1_0.push(STEP_MEMBERS);
+                obj7 = c2(4520);
+                const obj3 = {
+                  flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
+                  from_step: dependencyMap2[constants4.STEP_DISPLAY],
+                  to_step: dependencyMap2[STEP_MEMBERS],
+                  skip: false,
+                };
+                const tmp18Result = closure_1(1252);
+                const merged = Object.assign(closure_0(5076).collectGuildAnalyticsMetadata(guild.id));
+                tmp18Result.track(constants.USER_FLOW_TRANSITION, obj3);
+                return false;
+              }
+            }
+          }
+          return true;
+        });
+        c2 = 0;
+      }
+      return value;
     }),
     items1,
   );
-  let obj2 = {
-    title: intl2.string(navigation(color[18]).t["8pxAPp"]),
-    subtitle: intl3.string(navigation(color[18]).t["JubQz/"]),
-    children: items5,
-  };
+  let obj2 = { title: null, subtitle: null, children: null };
   const callback2 = onSelect.useCallback(() => {
-    metroImportAll.dismiss();
-    const obj = ActionSheetActionCreatorsDefault;
-    const obj2 = { color, onSelect };
-    obj.openLazy(asyncRequire(16271, dependencyMap.paths), "RoleColorPicker", obj2);
+    closure_2_8.dismiss();
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16271, dependencyMap.paths), "RoleColorPicker", {
+      color,
+      onSelect,
+    });
   }, items2);
-  intl2 = navigation(color[18]).intl;
-  intl3 = navigation(color[18]).intl;
-  let obj3 = { spacing: require("native").space.PX_24, style: tmp.sceneInner, children: items3 };
-  const Stack = navigation(color[33]).Stack;
-  let obj4 = {
-    label: intl4.string(navigation(color[18]).t.dLbkBk),
-    description: intl5.string(navigation(color[18]).t.m4j44b),
+  const intl2 = navigation(color[18]).intl;
+  obj2.title = intl2.string(navigation(color[18]).t["8pxAPp"]);
+  const intl3 = navigation(color[18]).intl;
+  obj2.subtitle = intl3.string(navigation(color[18]).t["JubQz/"]);
+  let obj3 = { spacing: require("native").space.PX_24, style: tmp.sceneInner, children: null };
+  const obj4 = {
+    label: null,
+    description: null,
     required: true,
-    value: str,
-    onChange: tmp7,
-    maxLength,
+    value: null,
+    onChange: null,
+    maxLength: null,
     autoFocus: true,
     autoComplete: "off",
   };
-  const TextInput = navigation(color[34]).TextInput;
-  intl4 = navigation(color[18]).intl;
-  intl5 = navigation(color[18]).intl;
-  items3 = [closure_21(TextInput, obj4)];
-  let obj5 = {
-    helperText: intl6.string(navigation(color[18]).t["9TMIgc"]),
-    hasIcons: false,
-    children: closure_21(TableRow, obj6),
-  };
-  const TableRowGroup = navigation(color[35]).TableRowGroup;
-  intl6 = navigation(color[18]).intl;
-  obj6 = {
-    label: intl7.string(navigation(color[18]).t["5NC5YW"]),
-    onPress: callback2,
-    arrow: true,
-    trailing: closure_22(closure_7, obj7),
-  };
-  TableRow = navigation(color[36]).TableRow;
-  intl7 = navigation(color[18]).intl;
-  obj7 = { style: tmp.colorTrailing, children: items4 };
-  items4 = [,];
+  const intl4 = navigation(color[18]).intl;
+  obj4.label = intl4.string(navigation(color[18]).t.dLbkBk);
+  const intl5 = navigation(color[18]).intl;
+  obj4.description = intl5.string(navigation(color[18]).t.m4j44b);
+  obj4.value = tmp6[0];
+  obj4.onChange = tmp6[1];
+  obj4.maxLength = maxLength;
+  const items3 = [closure_21(navigation(color[34]).TextInput, obj4)];
+  let obj5 = { helperText: null, hasIcons: false, children: null };
+  const intl6 = navigation(color[18]).intl;
+  obj5.helperText = intl6.string(navigation(color[18]).t["9TMIgc"]);
+  let obj6 = { label: null, onPress: null, arrow: true, trailing: null };
+  const intl7 = navigation(color[18]).intl;
+  obj6.label = intl7.string(navigation(color[18]).t["5NC5YW"]);
+  obj6.onPress = callback2;
+  obj7 = { style: tmp.colorTrailing, children: null };
+  const items4 = [closure_21(require("ColorBlock"), { color, style: tmp.colorBlock })];
+  const obj9 = { variant: "text-sm/medium", children: null };
   const obj8 = { color, style: tmp.colorBlock };
-  items4[0] = closure_21(require("ColorBlock"), obj8);
-  const obj9 = { variant: "text-sm/medium", children: obj10.int2hex(color) };
-  const Text = navigation(color[19]).Text;
-  obj10 = navigation(color[38]);
-  items4[1] = closure_21(Text, obj9);
-  items3[1] = closure_21(TableRowGroup, obj5);
-  items5 = [closure_22(Stack, obj3)];
+  const tmp9 = _slicedToArray(onSelect.useState(false), 2);
+  obj9.children = navigation(color[38]).int2hex(color);
+  items4[1] = closure_21(navigation(color[19]).Text, obj9);
+  obj7.children = items4;
+  obj6.trailing = closure_22(closure_7, obj7);
+  obj5.children = closure_21(navigation(color[36]).TableRow, obj6);
+  items3[1] = closure_21(navigation(color[35]).TableRowGroup, obj5);
+  obj3.children = items3;
+  const items5 = [closure_22(navigation(color[33]).Stack, obj3)];
   const items6 = [tmp.nextButton];
   if (nextButtonFloating) {
     nextButtonFloating = tmp.nextButtonFloating;
   }
+  const obj11 = { style: items6, children: null };
   items6[1] = nextButtonFloating;
-  const obj11 = { style: items6, children: closure_21(Button, obj12) };
-  obj12 = { loading: tmp11, disabled: tmp11, text: intl8.string(tmp2(tmp3[18]).t.CumH4u), onPress: callback1 };
-  Button = tmp2(tmp3[39]).Button;
-  if (!tmp11) {
-    tmp11 = "" === str.trim();
+  const obj12 = { loading: tmp10, disabled: null, text: null, onPress: null };
+  if (!tmp10) {
+    tmp10 = "" === str.trim();
   }
-  intl8 = tmp2(tmp3[18]).intl;
+  obj12.disabled = tmp10;
+  const intl8 = tmp2(tmp3[18]).intl;
+  obj12.text = intl8.string(navigation(color[18]).t.CumH4u);
+  obj12.onPress = callback1;
+  obj11.children = closure_21(navigation(color[39]).Button, obj12);
   items5[1] = closure_21(closure_7, obj11);
+  obj2.children = items5;
   return closure_22(closure_33, obj2);
 }
-({ View: metroImportDefault, Keyboard: metroImportAll } = react_native2);
-const isGuildOwner = GuildRecord.isGuildOwner;
+get_ActivityIndicator = fn(17);
+({ View: closure_7, Keyboard: closure_8 } = get_ActivityIndicator);
+const isGuildOwner = fn(2070).isGuildOwner;
+const GuildSettingsRoleConstants = fn(17826);
 ({
   PermissionTemplates: map1,
   DEFAULT_TEMPLATE_TYPE: closure_14,
   MAX_BULK_ROLE_MEMBERS_ADD: closure_15,
 } = GuildSettingsRoleConstants);
+const Constants = fn(1085);
 ({
   MAX_ROLE_LENGTH: closure_16,
   DEFAULT_ROLE_COLOR: closure_17,
@@ -336,118 +220,112 @@ const isGuildOwner = GuildRecord.isGuildOwner;
   AnalyticsSections: closure_19,
   Permissions: closure_20,
 } = Constants);
-({ jsx: closure_21, jsxs: closure_22 } = Fragment);
+const jsxProd = fn(21);
+({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let closure_23 = {
   titleContainer: { flexDirection: "row", justifyContent: "center", alignContent: "center", width: "100%" },
   title: { textAlign: "center", flex: 1 },
 };
-let createStyles = createStyles_mod;
+const createStyles = fn(4896);
 let obj = {
-  container: obj2,
+  container: { marginTop: fn(6075).NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: nativeDefault.space.PX_16 },
   sceneHeader: { alignItems: "center", marginBottom: 8, marginHorizontal: 16 },
   sceneSubtitle: { textAlign: "center", paddingTop: 8, maxWidth: 400 },
   sceneContent: { flex: 1 },
-  sceneInner: obj3,
-  colorTrailing: { flexDirection: "row", alignItems: "center" },
-  colorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 },
-  sceneFooter: obj4,
-  nextButton: { width: "100%", paddingHorizontal: 16, paddingVertical: 16 },
-  nextButtonFloating: obj5,
+  sceneInner: null,
+  colorTrailing: null,
+  colorBlock: null,
+  sceneFooter: null,
+  nextButton: null,
+  nextButtonFloating: null,
 };
-obj2 = { marginTop: NavigatorConstants.NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: nativeDefault.space.PX_16 };
-createStyles = createStyles.createStyles;
-obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
-obj4 = { paddingBottom: 8, paddingHorizontal: nativeDefault.space.PX_16 };
-obj5 = { paddingVertical: 0, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-let closure_24 = createStyles(obj);
-let obj6 = { STEP_DISPLAY: "STEP_DISPLAY", STEP_PERMISSIONS: "STEP_PERMISSIONS", STEP_MEMBERS: "STEP_MEMBERS" };
+let obj3 = { marginTop: fn(6075).NAV_BAR_HEIGHT, flexGrow: 1, paddingBottom: nativeDefault.space.PX_16 };
+obj.sceneInner = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
+obj.colorTrailing = { flexDirection: "row", alignItems: "center" };
+obj.colorBlock = { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 };
+let obj4 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
+obj.sceneFooter = { paddingBottom: 8, paddingHorizontal: nativeDefault.space.PX_16 };
+obj.nextButton = { width: "100%", paddingHorizontal: 16, paddingVertical: 16 };
+let obj5 = { paddingBottom: 8, paddingHorizontal: nativeDefault.space.PX_16 };
+obj.nextButtonFloating = {
+  paddingVertical: 0,
+  paddingTop: 16,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
+};
+let closure_24 = createStyles.createStyles(obj);
+let obj7 = { STEP_DISPLAY: "STEP_DISPLAY", STEP_PERMISSIONS: "STEP_PERMISSIONS", STEP_MEMBERS: "STEP_MEMBERS" };
 let closure_26 = {
-  [obj6.STEP_DISPLAY]: "Role Display",
-  [obj6.STEP_PERMISSIONS]: "Role Permissions",
-  [obj6.STEP_MEMBERS]: "Role Members",
+  [obj7.STEP_DISPLAY]: "Role Display",
+  [obj7.STEP_PERMISSIONS]: "Role Permissions",
+  [obj7.STEP_MEMBERS]: "Role Members",
   FLOW_INITIALIZED: "Flow Initialized",
   FLOW_DISMISSED: "Flow Dismissed",
   FLOW_COMPLETED: "Flow Completed",
 };
-let memo = react.memo;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_27 = memo(
+let ReactCompilerGating = fn(558);
+let closure_27 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (step) => {
-        let first;
-        let obj4;
-        let tmp7;
-        let tmp9;
-        const obj = react2;
-        const cResult = obj.c(5);
-        step = step.step;
+        const cResult = c.c(5);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const _Object = Object;
-          const keys = Object.keys(obj6);
+          const keys = Object.keys(obj7);
           cResult[0] = keys;
-          first = keys;
+          let first = keys;
         } else {
           first = cResult[0];
         }
-        const length = first.length;
-        const sum = first.indexOf(step) + 1;
+        const sum = first.indexOf(step.step) + 1;
         if (cResult[1] !== sum) {
-          const intl = intl9.intl;
-          const obj2 = { number: sum, total: length };
-          const formatResult = intl.format(intl9.t["8v/u0i"], obj2);
+          const intl = util.intl;
+          const obj2 = { number: sum, total: first.length };
+          const formatResult = intl.format(util.t["8v/u0i"], obj2);
           cResult[1] = sum;
           cResult[2] = formatResult;
-          tmp7 = formatResult;
+          let tmp7 = formatResult;
         } else {
           tmp7 = cResult[2];
         }
         if (cResult[3] !== tmp7) {
-          const obj3 = { style: closure_23.titleContainer, children: closure_21(Text_Text.Text, obj4) };
-          obj4 = {
+          const obj3 = { style: closure_23.titleContainer, children: null };
+          const obj4 = {
             style: closure_23.title,
             accessibilityRole: "header",
             variant: "heading-md/extrabold",
             color: "mobile-text-heading-primary",
             children: tmp7,
           };
-          const tmp13 = closure_21(metroImportDefault, obj3);
+          obj3.children = guild(Text_Text.Text, obj4);
+          const tmp13 = guild(React5, obj3);
           cResult[3] = tmp7;
           cResult[4] = tmp13;
-          tmp9 = tmp13;
+          let tmp9 = tmp13;
         } else {
           tmp9 = cResult[4];
         }
         return tmp9;
       }
     : (step) => {
-        let Text;
-        let intl;
-        let obj2;
-        step = step.step;
-        const keys = Object.keys(obj6);
-        const length = keys.length;
-        const obj = { style: closure_23.titleContainer, children: closure_21(Text, obj2) };
-        const sum = keys.indexOf(step) + 1;
-        obj2 = {
+        const keys = Object.keys(obj7);
+        const obj = { style: closure_23.titleContainer, children: null };
+        const sum = keys.indexOf(step.step) + 1;
+        const obj2 = {
           style: closure_23.title,
           accessibilityRole: "header",
           variant: "heading-md/extrabold",
           color: "mobile-text-heading-primary",
-          children: intl.format(intl9.t["8v/u0i"], { number: sum, total: length }),
+          children: null,
         };
-        Text = Text_Text.Text;
-        intl = intl9.intl;
-        return closure_21(metroImportDefault, obj);
+        const intl = util.intl;
+        obj2.children = intl.format(util.t["8v/u0i"], { number: sum, total: keys.length });
+        obj.children = guild(Text_Text.Text, obj2);
+        return guild(React5, obj);
       },
 );
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let props;
-      let tmp4;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildSettingsStore];
         const fn = function n() {
@@ -460,30 +338,20 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       _modDef38(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
       return stateFromStores;
     }
   : () => {
-      let props;
       const items = [GuildSettingsStore];
-      const obj = get_initialized;
-      const stateFromStores = obj.useStateFromStores(items, () => props.getProps().guild);
+      const stateFromStores = initialize.useStateFromStores(items, () => props.getProps().guild);
       _modDef38(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
       return stateFromStores;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let guild;
-      let props;
-      let tmp10;
-      let tmp4;
-      let tmp5;
-      const tmp = guild;
-      const obj = guild(576);
-      const cResult = obj.c(9);
+      const cResult = guild(576).c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildSettingsStore];
         const fn = function n() {
@@ -496,31 +364,27 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = tmp(504);
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
+      const obj = guild(576);
+      const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp4, tmp5);
       guild = stateFromStoresObject.guild;
       const selectedRoleId = stateFromStoresObject.selectedRoleId;
       selectedRoleId(38)(null != guild, "useGuildSettingsStoreGuildWithRole: Guild cannot be null");
-      const tmp8 = selectedRoleId;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [GuildRoleStore];
         cResult[2] = items1;
-        tmp10 = items1;
+        let tmp10 = items1;
       } else {
         tmp10 = cResult[2];
       }
       if (cResult[3] === guild) {
-        let tmp12;
         if (cResult[4] === selectedRoleId) {
-          tmp12 = cResult[5];
+          let tmp12 = cResult[5];
         }
-        const tmpResult2 = tmp(504);
-        const stateFromStores = tmpResult2.useStateFromStores(tmp10, tmp12);
+        const stateFromStores = tmp(504).useStateFromStores(tmp10, tmp12);
         tmp8(38)(null != stateFromStores, "useGuildSettingsStoreGuildWithRole: Role cannot be null");
         if (cResult[6] === guild) {
-          let tmp15;
           if (cResult[7] === stateFromStores) {
-            tmp15 = cResult[8];
+            let tmp15 = cResult[8];
           }
           return tmp15;
         }
@@ -529,6 +393,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = stateFromStores;
         cResult[8] = obj2;
         tmp15 = obj2;
+        const tmpResult2 = tmp(504);
       }
       const fn2 = function s() {
         let role;
@@ -541,19 +406,18 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = selectedRoleId;
       cResult[5] = fn2;
       tmp12 = fn2;
+      tmp8 = selectedRoleId;
+      const tmpResult = guild(504);
     }
   : () => {
-      let guild;
-      let props;
       const items = [GuildSettingsStore];
-      const obj = guild(504);
-      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => props.getProps());
+      const stateFromStoresObject = guild(504).useStateFromStoresObject(items, () => props.getProps());
       guild = stateFromStoresObject.guild;
       const selectedRoleId = stateFromStoresObject.selectedRoleId;
       selectedRoleId(38)(null != guild, "useGuildSettingsStoreGuildWithRole: Guild cannot be null");
+      const obj = guild(504);
       const items1 = [GuildRoleStore];
-      const obj2 = guild(504);
-      let role = obj2.useStateFromStores(items1, () => {
+      let role = guild(504).useStateFromStores(items1, () => {
         let role;
         if (null != selectedRoleId) {
           role = GuildRoleStore.getRole(guild.id, tmp);
@@ -563,44 +427,33 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       selectedRoleId(38)(null != role, "useGuildSettingsStoreGuildWithRole: Role cannot be null");
       return { guild, role };
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_3;
-      let constants4;
-      let items;
-      let obj3;
-      let tmp31;
-      let tmp = navigation;
+      const cResult = navigation(576).c(24);
+      const tmp4 = closure_24();
       let obj = navigation(576);
-      const cResult = obj.c(24);
-      let tmp4 = closure_24();
-      let obj2 = navigation(1490);
-      navigation = obj2.useNavigation();
+      navigation = navigation(1490).useNavigation();
       const tmp6 = closure_29();
       const role = tmp6.role;
-      const guild = tmp6.guild;
+      guild = tmp6.guild;
       if (cResult[0] === guild.id) {
-        let tmp7;
-        let tmp8;
         if (cResult[1] === navigation) {
-          tmp7 = cResult[2];
-          tmp8 = cResult[3];
+          let tmp7 = cResult[2];
+          let tmp8 = cResult[3];
         }
-        const layoutEffect = react.useLayoutEffect(tmp7, tmp8);
+        const layoutEffect = noop.useLayoutEffect(tmp7, tmp8);
         if (cResult[4] === guild.id) {
           if (cResult[5] === navigation) {
-            let tmp11;
-            let tmp15;
-            let tmp14;
             if (cResult[6] === role.id) {
-              tmp11 = cResult[7];
+              let tmp11 = cResult[7];
             }
             dependencyMap = tmp11;
             if (cResult[8] !== tmp11) {
               class M {
                 constructor() {
-                  closure_3(map1[authStore2].permissions);
+                  tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                  return;
                 }
               }
               cResult[8] = tmp11;
@@ -608,7 +461,8 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               class M {
                 constructor() {
-                  closure_3(map1[authStore2].permissions);
+                  tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                  return;
                 }
               }
             }
@@ -616,7 +470,8 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
               class M {
                 constructor() {
-                  closure_3(map1[authStore2].permissions);
+                  tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                  return;
                 }
               }
               const stringResult = obj3.string(tmp(1126).t.p0IwNA);
@@ -624,107 +479,112 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
               const stringResult1 = intl.string(tmp(1126).t.G529Hk);
               cResult[10] = stringResult;
               cResult[11] = stringResult1;
-              tmp15 = stringResult1;
-              tmp14 = stringResult;
+              let tmp15 = stringResult1;
+              const tmp14 = stringResult;
             } else {
               class M {
                 constructor() {
-                  closure_3(map1[authStore2].permissions);
+                  tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                  return;
                 }
               }
               tmp15 = cResult[11];
             }
             if (cResult[12] === guild.id) {
-              let tmp23;
               class M {
                 constructor() {
-                  closure_3(map1[authStore2].permissions);
+                  tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                  return;
                 }
               }
               const _Symbol2 = Symbol;
-              const sceneFooter = tmp4.sceneFooter;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                 class M {
                   constructor() {
-                    closure_3(map1[authStore2].permissions);
+                    tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                    return;
                   }
                 }
                 const stringResult2 = obj5.string(tmp(1126).t.CJm5V5);
                 cResult[15] = stringResult2;
-                tmp23 = stringResult2;
+                const tmp23 = stringResult2;
               } else {
                 class M {
                   constructor() {
-                    closure_3(map1[authStore2].permissions);
+                    tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                    return;
                   }
                 }
               }
               if (cResult[16] !== M) {
                 class M {
                   constructor() {
-                    closure_3(map1[authStore2].permissions);
+                    tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                    return;
                   }
                 }
                 const obj4 = { text: tmp23, onPress: M };
-                cResult[16] = M;
-                cResult[17] = closure_21(tmp(5601).Button, obj4);
                 const tmp26 = closure_21(tmp(5601).Button, obj4);
+                cResult[16] = M;
+                cResult[17] = tmp26;
               } else {
                 class M {
                   constructor() {
-                    closure_3(map1[authStore2].permissions);
+                    tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                    return;
                   }
                 }
               }
               if (cResult[18] === tmp4.sceneFooter) {
                 class M {
                   constructor() {
-                    closure_3(map1[authStore2].permissions);
+                    tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                    return;
                   }
                 }
                 if (cResult[21] === tmp27) {
                   class M {
                     constructor() {
-                      closure_3(map1[authStore2].permissions);
+                      tmp = closure_3(PermissionTemplates[DEFAULT_TEMPLATE_TYPE].permissions);
+                      return;
                     }
                   }
                   return tmp31;
                 }
-                obj6 = { hasSkipButton: false, title: tmp14, subtitle: tmp15, children: items };
-                items = [tmp18, tmp27];
+                const obj6 = { hasSkipButton: false, title: tmp14, subtitle: tmp15, children: null };
+                const items = [tmp18, tmp27];
+                obj6.children = items;
                 const tmp34 = closure_22(closure_33, obj6);
                 cResult[21] = tmp27;
                 cResult[22] = tmp18;
                 cResult[23] = tmp34;
                 tmp31 = tmp34;
               }
-              const obj7 = { style: sceneFooter, children: tmp25 };
+              obj7 = { style: tmp4.sceneFooter, children: tmp25 };
+              const tmp30 = closure_21(closure_7, obj7);
               cResult[18] = tmp4.sceneFooter;
               cResult[19] = tmp25;
-              cResult[20] = closure_21(closure_7, obj7);
-              const tmp30 = closure_21(closure_7, obj7);
+              cResult[20] = tmp30;
             }
             const obj8 = { onSelect: tmp11, location: constants2.GUILD_ROLE_CREATION_MODAL, guildId: guild.id };
+            const tmp22 = closure_21(role(17830), obj8);
             cResult[12] = guild.id;
             cResult[13] = tmp11;
-            cResult[14] = closure_21(role(17830), obj8);
-            const tmp22 = closure_21(role(17830), obj8);
+            cResult[14] = tmp22;
           }
         }
         const fn2 = function o(arg0) {
-          const obj = GuildActionCreatorsDefault;
-          const result = obj.updateRolePermissions(guild.id, role.id, arg0);
-          navigation.push(obj6.STEP_MEMBERS);
-          const id = guild.id;
-          const tmp3 = constants4[obj6.STEP_PERMISSIONS];
-          const tmp4 = constants4[obj6.STEP_MEMBERS];
-          const track = AnalyticsUtilsDefault.track;
-          const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-          const obj2 = { flow_type: constants2.GUILD_ROLE_CREATION_MODAL, from_step: tmp3, to_step: tmp4, skip: false };
-          AnalyticsUtilsDefault;
-          const obj3 = AppAnalyticsUtils;
-          const merged = Object.assign(obj3.collectGuildAnalyticsMetadata(id));
-          track(USER_FLOW_TRANSITION, obj2);
+          const result = GuildActionCreatorsDefault.updateRolePermissions(guild.id, role.id, arg0);
+          navigation.push(obj7.STEP_MEMBERS);
+          const obj2 = AnalyticsUtilsDefault;
+          const obj3 = {
+            flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
+            from_step: constants4[obj7.STEP_PERMISSIONS],
+            to_step: constants4[obj7.STEP_MEMBERS],
+            skip: false,
+          };
+          const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild.id));
+          obj2.track(constants.USER_FLOW_TRANSITION, obj3);
         };
         cResult[4] = guild.id;
         cResult[5] = navigation;
@@ -733,35 +593,25 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = fn2;
       }
       const fn = function t() {
-        let obj2;
         let obj = {
-          headerLeft: obj2.getHeaderCloseButton(() => {
-            id = id.id;
-            const FLOW_DISMISSED = constants4.FLOW_DISMISSED;
-            const tmp = constants4[constants3.STEP_PERMISSIONS];
-            const track = role(closure_3[14]).track;
-            const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-            const obj = {
+          headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
+            const obj = role(1252);
+            const obj2 = {
               flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-              from_step: tmp,
-              to_step: FLOW_DISMISSED,
+              from_step: constants4[constants3.STEP_PERMISSIONS],
+              to_step: constants4.FLOW_DISMISSED,
               skip: false,
             };
-            role(closure_3[14]);
-            const obj2 = navigation(closure_3[15]);
-            const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(id));
-            track(USER_FLOW_TRANSITION, obj);
-            const obj3 = role(closure_3[20]);
-            obj3.close();
+            const merged = Object.assign(navigation(5076).collectGuildAnalyticsMetadata(id.id));
+            obj.track(constants.USER_FLOW_TRANSITION, obj2);
+            const obj3 = navigation(5076);
+            role(17824).close();
           }),
           headerTitle() {
-            const obj = { step: constants.STEP_PERMISSIONS };
-            return closure_1_21(closure_1_27, obj);
+            return closure_1_21(closure_1_27, { step: constants.STEP_PERMISSIONS });
           },
         };
-        const setOptions = navigation.setOptions;
-        obj2 = NavigatorHeader;
-        setOptions(obj);
+        navigation.setOptions(obj);
       };
       const items1 = [navigation, guild.id];
       cResult[0] = guild.id;
@@ -770,121 +620,95 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items1;
       tmp8 = items1;
       tmp7 = fn;
+      let obj2 = navigation(1490);
     }
   : () => {
-      let Button;
-      let constants4;
-      let intl;
-      let intl2;
-      let intl3;
-      let items3;
-      let obj5;
-      let onSelect;
-      let tmp = closure_24();
-      let obj = navigation(onSelect[24]);
-      navigation = obj.useNavigation();
-      let tmp3 = closure_29();
+      const tmp = closure_24();
+      navigation = navigation(onSelect[24]).useNavigation();
+      const tmp3 = closure_29();
       const role = tmp3.role;
-      const guild = tmp3.guild;
+      guild = tmp3.guild;
       const items = [navigation, guild.id];
-      const layoutEffect = react.useLayoutEffect(() => {
-        let obj2;
+      const layoutEffect = noop.useLayoutEffect(() => {
         let obj = {
-          headerLeft: obj2.getHeaderCloseButton(() => {
-            id = id.id;
-            const FLOW_DISMISSED = constants4.FLOW_DISMISSED;
-            const tmp = constants4[constants3.STEP_PERMISSIONS];
-            const track = role(callback[14]).track;
-            const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-            const obj = {
+          headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
+            const obj = role(callback[14]);
+            const obj2 = {
               flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-              from_step: tmp,
-              to_step: FLOW_DISMISSED,
+              from_step: constants4[constants3.STEP_PERMISSIONS],
+              to_step: constants4.FLOW_DISMISSED,
               skip: false,
             };
-            role(callback[14]);
-            const obj2 = navigation(callback[15]);
-            const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(id));
-            track(USER_FLOW_TRANSITION, obj);
-            const obj3 = role(callback[20]);
-            obj3.close();
+            const merged = Object.assign(navigation(callback[15]).collectGuildAnalyticsMetadata(id.id));
+            obj.track(constants.USER_FLOW_TRANSITION, obj2);
+            const obj3 = navigation(callback[15]);
+            role(callback[20]).close();
           }),
           headerTitle() {
-            const obj = { step: constants.STEP_PERMISSIONS };
-            return closure_1_21(closure_1_27, obj);
+            return closure_1_21(closure_1_27, { step: constants.STEP_PERMISSIONS });
           },
         };
-        const setOptions = navigation.setOptions;
-        obj2 = NavigatorHeader;
-        setOptions(obj);
+        navigation.setOptions(obj);
       }, items);
       const items1 = [guild.id, navigation, role.id];
-      onSelect = react.useCallback((arg0) => {
-        const obj = GuildActionCreatorsDefault;
-        const result = obj.updateRolePermissions(guild.id, role.id, arg0);
-        navigation.push(obj6.STEP_MEMBERS);
-        const id = guild.id;
-        const tmp3 = constants4[obj6.STEP_PERMISSIONS];
-        const tmp4 = constants4[obj6.STEP_MEMBERS];
-        const track = AnalyticsUtilsDefault.track;
-        const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-        const obj2 = { flow_type: constants2.GUILD_ROLE_CREATION_MODAL, from_step: tmp3, to_step: tmp4, skip: false };
-        AnalyticsUtilsDefault;
-        const obj3 = AppAnalyticsUtils;
-        const merged = Object.assign(obj3.collectGuildAnalyticsMetadata(id));
-        track(USER_FLOW_TRANSITION, obj2);
+      onSelect = noop.useCallback((arg0) => {
+        const result = GuildActionCreatorsDefault.updateRolePermissions(guild.id, role.id, arg0);
+        navigation.push(obj7.STEP_MEMBERS);
+        const obj2 = AnalyticsUtilsDefault;
+        const obj3 = {
+          flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
+          from_step: constants4[obj7.STEP_PERMISSIONS],
+          to_step: constants4[obj7.STEP_MEMBERS],
+          skip: false,
+        };
+        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild.id));
+        obj2.track(constants.USER_FLOW_TRANSITION, obj3);
       }, items1);
       const items2 = [onSelect];
-      let obj2 = {
-        hasSkipButton: false,
-        title: intl.string(navigation(onSelect[18]).t.p0IwNA),
-        subtitle: intl2.string(navigation(onSelect[18]).t.G529Hk),
-        children: items3,
-      };
-      const callback1 = react.useCallback(() => {
-        callback(map1[authStore2].permissions);
+      let obj2 = { hasSkipButton: false, title: null, subtitle: null, children: null };
+      const callback1 = noop.useCallback(() => {
+        callback(dependencyMap2[state].permissions);
       }, items2);
-      intl = navigation(onSelect[18]).intl;
-      intl2 = navigation(onSelect[18]).intl;
-      let obj3 = { onSelect, location: constants2.GUILD_ROLE_CREATION_MODAL, guildId: guild.id };
-      items3 = [closure_21(role(onSelect[40]), obj3)];
-      const obj4 = { style: tmp.sceneFooter, children: closure_21(Button, obj5) };
-      obj5 = { text: intl3.string(navigation(onSelect[18]).t.CJm5V5), onPress: callback1 };
-      Button = navigation(onSelect[39]).Button;
-      intl3 = navigation(onSelect[18]).intl;
+      const intl = navigation(onSelect[18]).intl;
+      obj2.title = intl.string(navigation(onSelect[18]).t.p0IwNA);
+      const intl2 = navigation(onSelect[18]).intl;
+      obj2.subtitle = intl2.string(navigation(onSelect[18]).t.G529Hk);
+      const items3 = [
+        closure_21(role(onSelect[40]), { onSelect, location: constants2.GUILD_ROLE_CREATION_MODAL, guildId: guild.id }),
+      ];
+      const obj4 = { style: tmp.sceneFooter, children: null };
+      const obj5 = { text: null, onPress: null };
+      const intl3 = navigation(onSelect[18]).intl;
+      obj5.text = intl3.string(navigation(onSelect[18]).t.CJm5V5);
+      obj5.onPress = callback1;
+      obj4.children = closure_21(navigation(onSelect[39]).Button, obj5);
       items3[1] = closure_21(closure_7, obj4);
+      obj2.children = items3;
       return closure_22(closure_33, obj2);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let constants4;
-      let first;
-      let tmp = navigation;
-      const tmp2 = first;
-      let obj = navigation(first[17]);
-      const cResult = obj.c(35);
+      const cResult = navigation(first[17]).c(35);
       closure_24();
-      let obj2 = navigation(first[24]);
-      navigation = obj2.useNavigation();
+      let obj = navigation(first[17]);
+      const tmp = navigation;
+      navigation = navigation(first[24]).useNavigation();
       const tmp6 = closure_29();
       const role = tmp6.role;
-      const guild = tmp6.guild;
+      guild = tmp6.guild;
       role(first[22])(null != role, "Role cannot be null");
-      const tmp7 = role;
       if (cResult[0] === guild.id) {
-        let tmp9;
-        let tmp10;
         if (cResult[1] === navigation) {
-          tmp9 = cResult[2];
-          tmp10 = cResult[3];
+          let tmp9 = cResult[2];
+          let tmp10 = cResult[3];
         }
-        const layoutEffect = react.useLayoutEffect(tmp9, tmp10);
+        const layoutEffect = noop.useLayoutEffect(tmp9, tmp10);
         tmp7(tmp2[25])();
         if (cResult[4] !== role.id) {
           class T {
-            constructor(roles) {
-              roles = roles.roles;
+            constructor(arg0) {
+              roles = arg0.roles;
               return !roles.includes(role.id);
             }
           }
@@ -892,38 +716,37 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[5] = T;
         } else {
           class T {
-            constructor(roles) {
-              roles = roles.roles;
+            constructor(arg0) {
+              roles = arg0.roles;
               return !roles.includes(role.id);
             }
           }
         }
-        const tmpResult = tmp(tmp2[41]);
-        const guildMembers = tmpResult.useGuildMembers(guild.id, T);
+        const guildMembers = tmp(tmp2[41]).useGuildMembers(guild.id, T);
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class T {
-            constructor(roles) {
-              roles = roles.roles;
+            constructor(arg0) {
+              roles = arg0.roles;
               return !roles.includes(role.id);
             }
           }
           cResult[6] = tmp17;
         } else {
           class T {
-            constructor(roles) {
-              roles = roles.roles;
+            constructor(arg0) {
+              roles = arg0.roles;
               return !roles.includes(role.id);
             }
           }
         }
-        [first] = react.useState(tmp17);
-        [r10076, _asyncToGenerator] = react.useState(false);
-        _slicedToArray(react.useState(false), 2);
+        [first] = noop.useState(tmp17);
+        const tmpResult = tmp(tmp2[41]);
+        [r10076, asyncGeneratorStep] = noop.useState(false);
         if (cResult[7] === guild.id) {
           class T {
-            constructor(roles) {
-              roles = roles.roles;
+            constructor(arg0) {
+              roles = arg0.roles;
               return !roles.includes(role.id);
             }
           }
@@ -931,64 +754,47 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         const fn2 = function b() {
           const keys = Object.keys(first);
           if (keys.length > 0) {
-            _asyncToGenerator(true);
-            const obj = GuildSettingsActionCreatorsDefault;
-            obj.bulkAddMemberRoles(guild.id, role.id, keys);
-            _asyncToGenerator(false);
+            asyncGeneratorStep(true);
+            GuildSettingsActionCreatorsDefault.bulkAddMemberRoles(guild.id, role.id, keys);
+            asyncGeneratorStep(false);
           }
-          const FLOW_COMPLETED = constants4.FLOW_COMPLETED;
-          const id = guild.id;
-          const tmp9 = constants4[obj6.STEP_MEMBERS];
-          const track = AnalyticsUtilsDefault.track;
-          const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-          const obj2 = {
+          const obj2 = AnalyticsUtilsDefault;
+          const obj3 = {
             flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-            from_step: tmp9,
-            to_step: FLOW_COMPLETED,
+            from_step: constants4[obj7.STEP_MEMBERS],
+            to_step: constants4.FLOW_COMPLETED,
             skip: false,
           };
-          AnalyticsUtilsDefault;
-          const obj3 = AppAnalyticsUtils;
-          const merged = Object.assign(obj3.collectGuildAnalyticsMetadata(id));
-          track(USER_FLOW_TRANSITION, obj2);
-          const obj4 = GuildSettingsRoleCreateModalActionCreatorsDefault;
-          obj4.close();
+          const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild.id));
+          obj2.track(constants.USER_FLOW_TRANSITION, obj3);
+          GuildSettingsRoleCreateModalActionCreatorsDefault.close();
         };
         cResult[7] = guild.id;
         cResult[8] = first;
         cResult[9] = role.id;
         cResult[10] = fn2;
+        const tmp22 = _slicedToArray(noop.useState(false), 2);
       }
       const fn = function t() {
-        let obj2;
         let obj = {
-          headerLeft: obj2.getHeaderCloseButton(() => {
-            id = id.id;
-            const FLOW_DISMISSED = constants4.FLOW_DISMISSED;
-            const tmp = constants4[constants3.STEP_MEMBERS];
-            const track = role(first[14]).track;
-            const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-            const obj = {
+          headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
+            const obj = role(first[14]);
+            const obj2 = {
               flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-              from_step: tmp,
-              to_step: FLOW_DISMISSED,
+              from_step: constants4[constants3.STEP_MEMBERS],
+              to_step: constants4.FLOW_DISMISSED,
               skip: false,
             };
-            role(first[14]);
-            const obj2 = navigation(first[15]);
-            const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(id));
-            track(USER_FLOW_TRANSITION, obj);
-            const obj3 = role(first[20]);
-            obj3.close();
+            const merged = Object.assign(navigation(first[15]).collectGuildAnalyticsMetadata(id.id));
+            obj.track(constants.USER_FLOW_TRANSITION, obj2);
+            const obj3 = navigation(first[15]);
+            role(first[20]).close();
           }),
           headerTitle() {
-            const obj = { step: constants.STEP_MEMBERS };
-            return closure_1_21(closure_1_27, obj);
+            return closure_1_21(closure_1_27, { step: constants.STEP_MEMBERS });
           },
         };
-        const setOptions = navigation.setOptions;
-        obj2 = NavigatorHeader;
-        return setOptions(obj);
+        return navigation.setOptions(obj);
       };
       const items = [navigation, guild.id];
       cResult[0] = guild.id;
@@ -997,198 +803,150 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp10 = items;
       tmp9 = fn;
+      let obj2 = navigation(first[24]);
+      tmp7 = role;
     }
   : () => {
-      let Button;
-      let constants4;
-      let intl;
-      let intl2;
-      let intl3;
-      let items4;
-      let obj4;
-      let obj7;
-      let pendingAdditions;
-      let tmp12;
-      let tmp = closure_24();
-      const tmp2 = navigation;
-      let obj = navigation(pendingAdditions[24]);
-      navigation = obj.useNavigation();
+      const tmp = closure_24();
+      navigation = navigation(pendingAdditions[24]).useNavigation();
       const tmp5 = closure_29();
       const role = tmp5.role;
-      const guild = tmp5.guild;
+      guild = tmp5.guild;
       role(pendingAdditions[22])(null != role, "Role cannot be null");
       const items = [navigation, guild.id];
-      const layoutEffect = react.useLayoutEffect(() => {
-        let obj2;
+      const layoutEffect = noop.useLayoutEffect(() => {
         let obj = {
-          headerLeft: obj2.getHeaderCloseButton(() => {
-            id = id.id;
-            const FLOW_DISMISSED = constants4.FLOW_DISMISSED;
-            const tmp = constants4[constants3.STEP_MEMBERS];
-            const track = role(first[14]).track;
-            const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-            const obj = {
+          headerLeft: NavigatorHeader.getHeaderCloseButton(() => {
+            const obj = role(first[14]);
+            const obj2 = {
               flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-              from_step: tmp,
-              to_step: FLOW_DISMISSED,
+              from_step: constants4[constants3.STEP_MEMBERS],
+              to_step: constants4.FLOW_DISMISSED,
               skip: false,
             };
-            role(first[14]);
-            const obj2 = navigation(first[15]);
-            const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(id));
-            track(USER_FLOW_TRANSITION, obj);
-            const obj3 = role(first[20]);
-            obj3.close();
+            const merged = Object.assign(navigation(first[15]).collectGuildAnalyticsMetadata(id.id));
+            obj.track(constants.USER_FLOW_TRANSITION, obj2);
+            const obj3 = navigation(first[15]);
+            role(first[20]).close();
           }),
           headerTitle() {
-            const obj = { step: constants.STEP_MEMBERS };
-            return closure_1_21(closure_1_27, obj);
+            return closure_1_21(closure_1_27, { step: constants.STEP_MEMBERS });
           },
         };
-        const setOptions = navigation.setOptions;
-        obj2 = NavigatorHeader;
-        return setOptions(obj);
+        return navigation.setOptions(obj);
       }, items);
       let nextButtonFloating = role(pendingAdditions[25])();
       const items1 = [role.id];
-      const callback = react.useCallback((roles) => {
+      const callback = noop.useCallback((roles) => {
         roles = roles.roles;
         return !roles.includes(role.id);
       }, items1);
-      let obj2 = navigation(pendingAdditions[41]);
-      const guildMembers = obj2.useGuildMembers(guild.id, callback);
-      [pendingAdditions, tmp12] = react.useState({});
-      const tmp13 = _slicedToArray(react.useState(false), 2);
-      let closure_4 = tmp15;
-      const items2 = [tmp13[1], guild.id, role.id, pendingAdditions];
-      const first1 = tmp13[0];
+      let obj = navigation(pendingAdditions[24]);
+      const guildMembers = navigation(pendingAdditions[41]).useGuildMembers(guild.id, callback);
+      const tmp10 = _slicedToArray(noop.useState({}), 2);
+      pendingAdditions = tmp10[0];
+      const tmp12 = _slicedToArray(noop.useState(false), 2);
+      closure_4 = tmp13;
+      const items2 = [tmp12[1], guild.id, role.id, pendingAdditions];
       const items3 = [pendingAdditions];
-      const callback1 = react.useCallback(() => {
+      const callback1 = noop.useCallback(() => {
         const keys = Object.keys(first);
         if (keys.length > 0) {
           closure_4(true);
-          const obj = GuildSettingsActionCreatorsDefault;
-          obj.bulkAddMemberRoles(guild.id, role.id, keys);
+          GuildSettingsActionCreatorsDefault.bulkAddMemberRoles(guild.id, role.id, keys);
           closure_4(false);
         }
-        const FLOW_COMPLETED = constants4.FLOW_COMPLETED;
-        const id = guild.id;
-        const tmp9 = constants4[obj6.STEP_MEMBERS];
-        const track = AnalyticsUtilsDefault.track;
-        const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-        const obj2 = {
+        const obj2 = AnalyticsUtilsDefault;
+        const obj3 = {
           flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-          from_step: tmp9,
-          to_step: FLOW_COMPLETED,
+          from_step: constants4[obj7.STEP_MEMBERS],
+          to_step: constants4.FLOW_COMPLETED,
           skip: false,
         };
-        AnalyticsUtilsDefault;
-        const obj3 = AppAnalyticsUtils;
-        const merged = Object.assign(obj3.collectGuildAnalyticsMetadata(id));
-        track(USER_FLOW_TRANSITION, obj2);
-        const obj4 = GuildSettingsRoleCreateModalActionCreatorsDefault;
-        obj4.close();
+        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild.id));
+        obj2.track(constants.USER_FLOW_TRANSITION, obj3);
+        GuildSettingsRoleCreateModalActionCreatorsDefault.close();
       }, items2);
-      const memo = react.useMemo(() => Object.keys(first).length, items3);
-      let obj3 = {
-        hasSkipButton: !nextButtonFloating,
-        title: intl.string(navigation(pendingAdditions[18]).t["+gWHtA"]),
-        subtitle: intl2.formatToPlainString(navigation(pendingAdditions[18]).t.yZW3oh, obj4),
-        children: items4,
-      };
-      intl = navigation(pendingAdditions[18]).intl;
-      intl2 = navigation(pendingAdditions[18]).intl;
-      obj4 = { numMembers: maxCount };
-      items4 = [,];
-      const obj5 = {
-        autoFocusSearch: false,
-        guild,
-        members: guildMembers,
-        pendingAdditions,
-        role,
-        setPendingAdditions: tmp12,
-        maxCount,
-      };
-      items4[0] = closure_21(navigation(pendingAdditions[43]).AddMembersBody, obj5);
+      const memo = noop.useMemo(() => Object.keys(first).length, items3);
+      let obj3 = { hasSkipButton: !nextButtonFloating, title: null, subtitle: null, children: null };
+      const intl = navigation(pendingAdditions[18]).intl;
+      obj3.title = intl.string(navigation(pendingAdditions[18]).t["+gWHtA"]);
+      const intl2 = navigation(pendingAdditions[18]).intl;
+      obj3.subtitle = intl2.formatToPlainString(navigation(pendingAdditions[18]).t.yZW3oh, { numMembers: maxCount });
+      const items4 = [
+        closure_21(navigation(pendingAdditions[43]).AddMembersBody, {
+          autoFocusSearch: false,
+          guild,
+          members: guildMembers,
+          pendingAdditions,
+          role,
+          setPendingAdditions: tmp10[1],
+          maxCount,
+        }),
+      ];
       const items5 = [tmp.nextButton];
       if (nextButtonFloating) {
         nextButtonFloating = tmp.nextButtonFloating;
       }
-      obj6 = { style: items5, children: closure_21(Button, obj7) };
+      const obj6 = { style: items5, children: null };
       items5[1] = nextButtonFloating;
-      obj7 = {
-        loading: first1,
-        text: intl3.string(tmp2(pendingAdditions[18]).t.XcPHfw),
-        onPress: callback1,
-        disabled: 0 === memo || memo > maxCount,
-      };
-      Button = tmp2(tmp3[39]).Button;
-      intl3 = tmp2(tmp3[18]).intl;
+      obj7 = { loading: tmp12[0], text: null, onPress: null, disabled: null };
+      const intl3 = tmp2(tmp3[18]).intl;
+      obj7.text = intl3.string(navigation(pendingAdditions[18]).t.XcPHfw);
+      obj7.onPress = callback1;
+      obj7.disabled = 0 === memo || memo > maxCount;
+      obj6.children = closure_21(navigation(pendingAdditions[39]).Button, obj7);
       items4[1] = closure_21(closure_7, obj6);
+      obj3.children = items4;
       return closure_22(closure_33, obj3);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let Button;
-      let children;
-      let hasSkipButton;
-      let intl;
-      let items1;
-      let items2;
-      let obj8;
-      let ref;
-      let subtitle;
-      let title;
-      let tmp10;
-      let tmp9;
-      let tmp = navigation;
-      let obj = navigation(ref[17]);
-      const cResult = obj.c(32);
+      const cResult = navigation(ref[17]).c(32);
       ({ children, hasSkipButton, title, subtitle } = arg0);
       const tmp4 = closure_24();
       const insets = require("useSafeAreaInsetsKeyboardAware")().insets;
-      let obj2 = navigation(ref[24]);
-      navigation = obj2.useNavigation();
+      let obj = navigation(ref[17]);
+      navigation = navigation(ref[24]).useNavigation();
       const tmp6 = closure_28();
       importDefault = tmp6;
-      let obj3 = navigation(ref[45]);
-      const isScreenReaderEnabled = obj3.useIsScreenReaderEnabled();
-      ref = react.useRef(null);
+      let obj2 = navigation(ref[24]);
+      const isScreenReaderEnabled = navigation(ref[45]).useIsScreenReaderEnabled();
+      ref = noop.useRef(null);
       if (cResult[0] !== isScreenReaderEnabled) {
         const fn = function n() {
-          const tmp = isScreenReaderEnabled && null != ref.current;
+          let tmp = isScreenReaderEnabled;
+          if (isScreenReaderEnabled) {
+            tmp = null != ref.current;
+          }
           if (tmp) {
             const obj2 = { ref, delay: 100 };
-            const obj = react_native;
-            const result = obj.setAccessibilityFocus(obj2);
+            const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
           }
         };
         const items = [isScreenReaderEnabled];
         cResult[0] = isScreenReaderEnabled;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp10 = items;
-        tmp9 = fn;
+        let tmp10 = items;
+        let tmp9 = fn;
       } else {
         tmp9 = cResult[1];
         tmp10 = cResult[2];
       }
-      const effect = react.useEffect(tmp9, tmp10);
+      const effect = noop.useEffect(tmp9, tmp10);
       if (cResult[3] === tmp6.id) {
-        let tmp12;
         if (cResult[4] === navigation) {
-          tmp12 = cResult[5];
+          let tmp12 = cResult[5];
         }
-        const tmp13 = globalThis;
         const _navigator = navigator;
         if (null == navigator) {
-          let tmp39;
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp41 = closure_21(tmp(ref[47]).SceneLoadingIndicator, {});
+            const tmp41 = closure_21(tmp(tmp2[47]).SceneLoadingIndicator, {});
             cResult[6] = tmp41;
-            tmp39 = tmp41;
+            let tmp39 = tmp41;
           } else {
             tmp39 = cResult[6];
           }
@@ -1197,10 +955,8 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
           const sum = tmp4.container.paddingBottom + insets.bottom;
           if (cResult[7] === insets.top) {
             if (cResult[8] === tmp4.container) {
-              let tmp14;
-              let tmp17;
               if (cResult[9] === sum) {
-                tmp14 = cResult[10];
+                let tmp14 = cResult[10];
               }
               if (cResult[11] !== title) {
                 let obj5 = {
@@ -1209,48 +965,44 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "mobile-text-heading-primary",
                   children: title,
                 };
-                const tmp19 = closure_21(tmp(ref[19]).Heading, obj5);
+                const tmp19 = closure_21(tmp(tmp2[19]).Heading, obj5);
                 cResult[11] = title;
                 cResult[12] = tmp19;
-                tmp17 = tmp19;
+                let tmp17 = tmp19;
               } else {
                 tmp17 = cResult[12];
               }
               if (cResult[13] === tmp4.sceneSubtitle) {
-                let tmp20;
                 if (cResult[14] === subtitle) {
-                  tmp20 = cResult[15];
+                  let tmp20 = cResult[15];
                 }
                 if (cResult[16] === tmp4.sceneHeader) {
                   if (cResult[17] === tmp17) {
-                    let tmp23;
                     if (cResult[18] === tmp20) {
-                      tmp23 = cResult[19];
+                      let tmp23 = cResult[19];
                     }
                     if (cResult[20] === children) {
-                      let tmp27;
                       if (cResult[21] === tmp4.sceneContent) {
-                        tmp27 = cResult[22];
+                        let tmp27 = cResult[22];
                       }
                       if (cResult[23] === tmp12) {
                         if (cResult[24] === hasSkipButton) {
-                          let tmp31;
                           if (cResult[25] === tmp4.sceneFooter) {
-                            tmp31 = cResult[26];
+                            let tmp31 = cResult[26];
                           }
                           if (cResult[27] === tmp31) {
                             if (cResult[28] === tmp14) {
                               if (cResult[29] === tmp23) {
-                                let tmp35;
                                 if (cResult[30] === tmp27) {
-                                  tmp35 = cResult[31];
+                                  let tmp35 = cResult[31];
                                 }
                                 return tmp35;
                               }
                             }
                           }
-                          obj6 = { style: tmp14, children: items1 };
-                          items1 = [tmp23, tmp27, tmp31];
+                          let obj6 = { style: tmp14, children: null };
+                          const items1 = [tmp23, tmp27, tmp31];
+                          obj6.children = items1;
                           const tmp38 = closure_22(closure_7, obj6);
                           cResult[27] = tmp31;
                           cResult[28] = tmp14;
@@ -1261,11 +1013,13 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       let tmp32 = hasSkipButton;
-                      if (tmp32) {
-                        let obj7 = { style: tmp4.sceneFooter, children: closure_21(Button, obj8) };
-                        obj8 = { text: intl.string(tmp(ref[18]).t.CJm5V5), onPress: tmp12 };
-                        Button = tmp(tmp2[39]).Button;
-                        intl = tmp(tmp2[18]).intl;
+                      if (hasSkipButton) {
+                        obj7 = { style: tmp4.sceneFooter, children: null };
+                        let obj8 = { text: null, onPress: null };
+                        const intl = tmp(tmp2[18]).intl;
+                        obj8.text = intl.string(tmp(tmp2[18]).t.CJm5V5);
+                        obj8.onPress = tmp12;
+                        obj7.children = closure_21(tmp(tmp2[39]).Button, obj8);
                         tmp32 = closure_21(closure_7, obj7);
                       }
                       cResult[23] = tmp12;
@@ -1282,8 +1036,9 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp27 = tmp30;
                   }
                 }
-                const obj10 = { style: tmp4.sceneHeader, children: items2 };
-                items2 = [tmp17, tmp20];
+                const obj10 = { style: tmp4.sceneHeader, children: null };
+                const items2 = [tmp17, tmp20];
+                obj10.children = items2;
                 const tmp26 = closure_22(closure_7, obj10);
                 cResult[16] = tmp4.sceneHeader;
                 cResult[17] = tmp17;
@@ -1304,8 +1059,10 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
               tmp20 = tmp22;
             }
           }
-          const obj12 = { paddingTop: insets.top, paddingBottom: sum };
+          const obj12 = {};
           let merged = Object.assign(tmp4.container);
+          obj12.paddingTop = insets.top;
+          obj12.paddingBottom = sum;
           cResult[7] = insets.top;
           cResult[8] = tmp4.container;
           cResult[9] = sum;
@@ -1314,179 +1071,185 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn2 = function u() {
-        let FLOW_DISMISSED;
-        let tmp3;
         const routes = navigation.getState().routes;
-        if (routes[routes.length - 1].key === obj6.STEP_DISPLAY) {
-          const guild = GuildSettingsStore.getProps().guild;
+        if (routes[routes.length - 1].key === obj7.STEP_DISPLAY) {
+          guild = GuildSettingsStore.getProps().guild;
           _modDef38(null != guild, "shouldSkipPermissions: Guild cannot be null");
           const currentUser = UserStore.getCurrentUser();
-          const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild };
           const tmp22 = isGuildOwner(guild, currentUser);
-          const obj4 = PermissionUtilsAll;
-          const tmp25 = !tmp22 && !obj4.can(obj2);
+          const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild };
+          let tmp25 = !tmp22;
+          if (!tmp22) {
+            tmp25 = !obj4.can(obj2);
+          }
           if (tmp25) {
-            FLOW_DISMISSED = constants[tmp.STEP_MEMBERS];
-            navigation.push(obj6.STEP_MEMBERS);
-            tmp3 = tmp13;
+            let FLOW_DISMISSED = constants[tmp.STEP_MEMBERS];
+            navigation.push(tmp.STEP_MEMBERS);
+            let tmp3 = tmp13;
           } else {
             FLOW_DISMISSED = constants[tmp.STEP_PERMISSIONS];
-            navigation.push(obj6.STEP_PERMISSIONS);
+            navigation.push(tmp.STEP_PERMISSIONS);
             tmp3 = tmp13;
           }
-        } else if (routes[routes.length - 1].key === obj6.STEP_PERMISSIONS) {
+          obj4 = PermissionUtilsAll;
+        } else if (key === tmp.STEP_PERMISSIONS) {
           tmp3 = constants[tmp.STEP_PERMISSIONS];
           FLOW_DISMISSED = constants[tmp.STEP_MEMBERS];
-          navigation.push(obj6.STEP_MEMBERS);
+          navigation.push(tmp.STEP_MEMBERS);
         } else {
           tmp3 = constants[tmp.STEP_MEMBERS];
           FLOW_DISMISSED = constants.FLOW_DISMISSED;
           const obj5 = { type: constants2.GUILD_ROLE_CREATION_MODAL };
-          const obj = AnalyticsUtilsDefault;
-          obj.track(constants.MODAL_DISMISSED, obj5);
-          const obj3 = GuildSettingsRoleCreateModalActionCreatorsDefault;
-          obj3.close();
+          AnalyticsUtilsDefault.track(constants.MODAL_DISMISSED, obj5);
+          GuildSettingsRoleCreateModalActionCreatorsDefault.close();
         }
-        id = id.id;
-        obj6 = {
+        obj7 = {
           flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
           from_step: tmp3,
           to_step: FLOW_DISMISSED,
           skip: true,
         };
-        const track = AnalyticsUtilsDefault.track;
-        const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-        AnalyticsUtilsDefault;
-        const obj7 = AppAnalyticsUtils;
-        const merged = Object.assign(obj7.collectGuildAnalyticsMetadata(id));
-        track(USER_FLOW_TRANSITION, obj6);
+        const obj6 = AnalyticsUtilsDefault;
+        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(id.id));
+        obj6.track(constants.USER_FLOW_TRANSITION, obj7);
       };
       cResult[3] = tmp6.id;
       cResult[4] = navigation;
       cResult[5] = fn2;
       tmp12 = fn2;
+      let obj3 = navigation(ref[45]);
     }
   : (hasSkipButton) => {
-      let Button;
-      let children;
-      let intl;
-      let items2;
-      let items3;
-      let obj10;
-      let obj4;
-      let subtitle;
-      let title;
-      let tmp12Result;
       hasSkipButton = hasSkipButton.hasSkipButton;
-      navigation = undefined;
+      let navigation;
       importDefault = undefined;
       let ref;
       ({ children, title, subtitle } = hasSkipButton);
       let tmp = closure_24();
       const insets = require("useSafeAreaInsetsKeyboardAware")().insets;
-      let tmp3 = navigation;
-      let obj = navigation(ref[24]);
-      navigation = obj.useNavigation();
+      navigation = navigation(ref[24]).useNavigation();
       const tmp5 = closure_28();
       importDefault = tmp5;
-      let obj2 = navigation(ref[45]);
-      const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
-      ref = react.useRef(null);
+      let obj = navigation(ref[24]);
+      const isScreenReaderEnabled = navigation(ref[45]).useIsScreenReaderEnabled();
+      ref = noop.useRef(null);
       const items = [isScreenReaderEnabled];
-      const effect = react.useEffect(() => {
-        const tmp = isScreenReaderEnabled && null != ref.current;
+      const effect = noop.useEffect(() => {
+        let tmp = isScreenReaderEnabled;
+        if (isScreenReaderEnabled) {
+          tmp = null != ref.current;
+        }
         if (tmp) {
           const obj2 = { ref, delay: 100 };
-          const obj = react_native;
-          const result = obj.setAccessibilityFocus(obj2);
+          const result = setAccessibilityFocus.setAccessibilityFocus(obj2);
         }
       }, items);
       const items1 = [navigation, tmp5.id];
       if (null == navigator) {
-        tmp12Result = closure_21(tmp3(tmp2[47]).SceneLoadingIndicator, {});
+        let tmp12Result = closure_21(tmp3(tmp2[47]).SceneLoadingIndicator, {});
       } else {
-        let obj3 = { style: obj4, children: items3 };
-        obj4 = { paddingTop: insets.top, paddingBottom: tmp.container.paddingBottom + insets.bottom };
+        let obj3 = { style: null, children: null };
+        let obj4 = {};
         let merged = Object.assign(tmp.container);
-        let obj5 = { style: tmp.sceneHeader, children: items2 };
-        obj6 = { ref, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-        items2 = [closure_21(tmp3(ref[19]).Heading, obj6)];
-        let obj7 = { style: tmp.sceneSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
-        items2[1] = closure_21(tmp3(ref[19]).Text, obj7);
-        items3 = [closure_22(closure_7, obj5), ,];
-        const obj8 = { style: tmp.sceneContent, children };
+        obj4.paddingTop = insets.top;
+        obj4.paddingBottom = tmp.container.paddingBottom + insets.bottom;
+        obj3.style = obj4;
+        let obj5 = { style: tmp.sceneHeader, children: null };
+        let obj6 = { ref, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
+        const items2 = [closure_21(tmp3(tmp2[19]).Heading, obj6)];
+        obj7 = { style: tmp.sceneSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
+        items2[1] = closure_21(tmp3(tmp2[19]).Text, obj7);
+        obj5.children = items2;
+        const items3 = [closure_22(closure_7, obj5), ,];
+        let obj8 = { style: tmp.sceneContent, children };
         items3[1] = closure_21(closure_7, obj8);
         if (hasSkipButton) {
-          const obj9 = { style: tmp.sceneFooter, children: closure_21(Button, obj10) };
-          obj10 = { text: intl.string(tmp3(ref[18]).t.CJm5V5), onPress: tmp9 };
-          Button = tmp3(tmp2[39]).Button;
-          intl = tmp3(tmp2[18]).intl;
+          const obj9 = { style: tmp.sceneFooter, children: null };
+          const obj10 = { text: null, onPress: null };
+          const intl = tmp3(tmp2[18]).intl;
+          obj10.text = intl.string(tmp3(tmp2[18]).t.CJm5V5);
+          obj10.onPress = tmp9;
+          obj9.children = closure_21(tmp3(tmp2[39]).Button, obj10);
           hasSkipButton = closure_21(closure_7, obj9);
         }
         items3[2] = hasSkipButton;
+        obj3.children = items3;
         tmp12Result = closure_22(closure_7, obj3);
       }
       return tmp12Result;
     };
-let obj7 = {
-  fullscreen: true,
-  render() {
-    return closure_21(RoleCreateScene, {});
+const screens = {
+  [obj7.STEP_DISPLAY]: {
+    fullscreen: true,
+    render() {
+      return guild(RoleCreateScene, {});
+    },
+  },
+  [obj7.STEP_PERMISSIONS]: {
+    fullscreen: true,
+    render() {
+      return guild(closure_31, {});
+    },
+  },
+  [obj7.STEP_MEMBERS]: {
+    fullscreen: true,
+    render() {
+      return guild(closure_32, {});
+    },
   },
 };
+ReactCompilerGating = fn(558);
+const obj15 = {
+  fullscreen: true,
+  render() {
+    return guild(closure_31, {});
+  },
+};
+const obj16 = {
+  fullscreen: true,
+  render() {
+    return guild(closure_32, {});
+  },
+};
+let obj6 = { paddingVertical: 0, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj8 = {
   fullscreen: true,
   render() {
-    return closure_21(closure_31, {});
+    return guild(RoleCreateScene, {});
   },
 };
-let obj9 = {
-  fullscreen: true,
-  render() {
-    return closure_21(closure_32, {});
-  },
-};
-const screens = { [obj6.STEP_DISPLAY]: obj7, [obj6.STEP_PERMISSIONS]: obj8, [obj6.STEP_MEMBERS]: obj9 };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let tmp5;
-      let tmp7;
-      let tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(3);
+      const cResult = require("c").c(3);
       const tmp4 = closure_28();
       _require = tmp4;
       if (cResult[0] !== tmp4.id) {
         const fn = function t() {
-          const FLOW_INITIALIZED = constants.FLOW_INITIALIZED;
-          id = id.id;
-          const tmp = constants[obj6.STEP_DISPLAY];
-          const track = AnalyticsUtilsDefault.track;
-          const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-          const obj = {
+          const obj = AnalyticsUtilsDefault;
+          const obj2 = {
             flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-            from_step: FLOW_INITIALIZED,
-            to_step: tmp,
+            from_step: constants.FLOW_INITIALIZED,
+            to_step: constants[obj7.STEP_DISPLAY],
             skip: false,
           };
-          AnalyticsUtilsDefault;
-          const obj2 = AppAnalyticsUtils;
-          const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(id));
-          track(USER_FLOW_TRANSITION, obj);
+          const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(id.id));
+          obj.track(constants.USER_FLOW_TRANSITION, obj2);
         };
         cResult[0] = tmp4.id;
         cResult[1] = fn;
-        tmp5 = fn;
+        let tmp5 = fn;
       } else {
         tmp5 = cResult[1];
       }
       useMountEffectDefault(tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { screens, initialRouteName: obj6.STEP_DISPLAY };
-        const tmp11 = closure_21(tmp(6503).Navigator, obj2);
+        let obj2 = { screens, initialRouteName: obj7.STEP_DISPLAY };
+        const tmp11 = closure_21(require("Navigator").Navigator, obj2);
         cResult[2] = tmp11;
-        tmp7 = tmp11;
+        let tmp7 = tmp11;
       } else {
         tmp7 = cResult[2];
       }
@@ -1494,26 +1257,16 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       _require = closure_28();
-      let tmp = useMountEffectDefault(() => {
-        const FLOW_INITIALIZED = constants.FLOW_INITIALIZED;
-        id = id.id;
-        const tmp = constants[obj6.STEP_DISPLAY];
-        const track = AnalyticsUtilsDefault.track;
-        const USER_FLOW_TRANSITION = constants.USER_FLOW_TRANSITION;
-        const obj = {
+      useMountEffectDefault(() => {
+        const obj = AnalyticsUtilsDefault;
+        const obj2 = {
           flow_type: constants2.GUILD_ROLE_CREATION_MODAL,
-          from_step: FLOW_INITIALIZED,
-          to_step: tmp,
+          from_step: constants.FLOW_INITIALIZED,
+          to_step: constants[obj7.STEP_DISPLAY],
           skip: false,
         };
-        AnalyticsUtilsDefault;
-        const obj2 = AppAnalyticsUtils;
-        const merged = Object.assign(obj2.collectGuildAnalyticsMetadata(id));
-        track(USER_FLOW_TRANSITION, obj);
+        const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(id.id));
+        obj.track(constants.USER_FLOW_TRANSITION, obj2);
       });
-      let obj = { screens, initialRouteName: obj6.STEP_DISPLAY };
-      return closure_21(require("Navigator").Navigator, obj);
+      return closure_21(require("Navigator").Navigator, { screens, initialRouteName: obj7.STEP_DISPLAY });
     };
-let result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx");
-
-export default tmp8;

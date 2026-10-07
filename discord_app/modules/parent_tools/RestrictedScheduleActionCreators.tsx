@@ -1,139 +1,147 @@
 // discord_app/modules/parent_tools/RestrictedScheduleActionCreators.tsx
-import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let obj = function _addRestrictedScheduleRule() {
-  obj = _asyncToGenerator(async (userId, body) => {
-    let closure_2;
-    let closure_3;
-    let c4 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      let obj9;
-      const HTTP = HTTPUtils.HTTP;
-      const request = {
-        url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULE(userId),
-        body,
-        rejectWithError: obj9.rejectWithMigratedError(),
-      };
-      const post = HTTP.post;
-      obj9 = HTTPUtils;
-      await post(request);
-      body = value.body;
-      const obj6 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId, restrictedSchedule: body };
-      obj = closure_131_1(closure_131_2[3]);
-      obj.dispatch(obj6);
-      return body;
-    })();
-  });
-  return obj(...arguments);
+require = fn;
+let closure_5 = async function _addRestrictedScheduleRule(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_3 = tmp2;
+    closure_2 = tmp5;
+    closure_130_0 = closure_0;
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULE(closure_0),
+      body,
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
+    await HTTP.post(request);
+    const body2 = value.body;
+    closure_131_1(closure_131_2[3]).dispatch({
+      type: "USER_RESTRICTED_SCHEDULE_UPDATE",
+      userId: closure_130_0,
+      restrictedSchedule: body2,
+    });
+    return body2;
+  })();
 };
-obj = function _updateRestrictedScheduleRule() {
-  obj = _asyncToGenerator(async (userId, arg1, body) => {
-    let closure_3;
-    let closure_4;
-    let closure_1 = arg1;
-    let c5 = 0;
-    let c6 = 0;
-    return (async (arg0, value, arg2) => {
-      let obj9;
-      const HTTP = HTTPUtils.HTTP;
-      const request = {
-        url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(userId, closure_1),
-        body,
-        rejectWithError: obj9.rejectWithMigratedError(),
-      };
-      const patch = HTTP.patch;
-      obj9 = HTTPUtils;
-      await patch(request);
-      body = value.body;
-      const obj6 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId, restrictedSchedule: body };
-      obj = closure_132_1(closure_132_2[3]);
-      obj.dispatch(obj6);
-      return body;
-    })();
-  });
-  return obj(...arguments);
+let closure_6 = async function _updateRestrictedScheduleRule(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c5 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    closure_4 = tmp2;
+    closure_3 = tmp5;
+    closure_131_0 = closure_0;
+    const HTTP = HTTPUtils.HTTP;
+    const request = {
+      url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(closure_0, closure_1),
+      body,
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
+    };
+    await HTTP.patch(request);
+    const body2 = value.body;
+    closure_132_1(closure_132_2[3]).dispatch({
+      type: "USER_RESTRICTED_SCHEDULE_UPDATE",
+      userId: closure_131_0,
+      restrictedSchedule: body2,
+    });
+    return body2;
+  })();
 };
-obj = function _deleteRestrictedScheduleRule() {
-  obj = _asyncToGenerator(async (userId, arg1) => {
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      let obj8;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
+          c5 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let body;
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp;
-              closure_2 = tmp4;
-              body = undefined;
-              const HTTP = HTTPUtils.HTTP;
-              const del = HTTP.del;
-              const obj4 = {
-                url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(userId, closure_1),
-                rejectWithError: obj8.rejectWithMigratedError(),
-              };
-              c4 = 1;
-              c5 = 1;
-              obj8 = HTTPUtils;
-              const obj5 = { value: del(obj4), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            return { value, done: true };
-          } else {
-            body = value.body;
-            const obj7 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId, restrictedSchedule: body };
-            obj = closure_131_1(closure_131_2[3]);
-            obj.dispatch(obj7);
-            c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp12) {
           c5 = 3;
-          throw tmp12;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp2;
+          closure_2 = tmp5;
+          closure_130_0 = closure_0;
+          let body;
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = {
+            url: Endpoints.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(closure_0, closure_1),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c4 = 1;
+          c5 = 1;
+          const obj5 = { value: HTTP.del(obj4), done: false };
+          return obj5;
         }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        body = value.body;
+        const obj7 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_130_0, restrictedSchedule: body };
+        closure_131_1(closure_131_2[3]).dispatch(obj7);
+        c5 = 3;
+        return { value: "IconComponent", done: null };
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp13) {
+      c5 = tmp;
+      throw tmp13;
+    }
+  }
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/RestrictedScheduleActionCreators.tsx");
 
 export const addRestrictedScheduleRule = function addRestrictedScheduleRule() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const updateRestrictedScheduleRule = function updateRestrictedScheduleRule() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const deleteRestrictedScheduleRule = function deleteRestrictedScheduleRule() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

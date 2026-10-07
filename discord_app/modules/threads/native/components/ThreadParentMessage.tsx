@@ -1,21 +1,16 @@
 // discord_app/modules/threads/native/components/ThreadParentMessage.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import router_utils from "../../../routing/router_utils.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import ReferencedMessageStore2 from "../../../replies/ReferencedMessageStore.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import ChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
+import ReferencedMessageStore from "../../../replies/ReferencedMessageStore.tsx";
 import MessageStore from "../../../../stores/MessageStore.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const ReferencedMessageStore = ReferencedMessageStore2;
-let guildId;
-
-const ReferencedMessageState = ReferencedMessageStore2.ReferencedMessageState;
-const jsx = Fragment.jsx;
+require = fn;
+const ReferencedMessageState = fn(7115).ReferencedMessageState;
+const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({
   renderCodedLinks: false,
@@ -30,82 +25,82 @@ rowGenerator.setOptions({
   renderReplies: true,
   renderThreadEmbeds: false,
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+const ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let channelId;
-      let first;
-      let obj = guildId(channelId[6]);
-      const cResult = obj.c(13);
+      let PressableOpacity = guildId;
+      let tmp = channelId;
+      const cResult = guildId(channelId[6]).c(13);
       guildId = guildId.guildId;
       const messageId = guildId.messageId;
       channelId = guildId.channelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReferencedMessageStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channelId) {
-        let tmp6;
         if (cResult[2] === messageId) {
-          tmp6 = cResult[3];
+          let tmp5 = cResult[3];
         }
-        const tmpResult = guildId(channelId[7]);
-        const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-        let state;
+        const stateFromStores = PressableOpacity(tmp[7]).useStateFromStores(first, tmp5);
+        state = undefined;
         if (stateFromStores != null) {
           state = stateFromStores.state;
         }
-        if (state === ReferencedMessageState.LOADED) {
+        if (state !== ReferencedMessageState.LOADED) {
+          return null;
+        } else {
           if (cResult[4] === channelId) {
             if (cResult[5] === guildId) {
-              let tmp12;
               if (cResult[6] === messageId) {
-                tmp12 = cResult[7];
+                let tmp11 = cResult[7];
               }
               class S {
                 constructor() {
-                  const obj = router_utils;
-                  obj.transitionToGuild(guildId, channelId, messageId);
+                  obj = closure_0(closure_2[8]);
+                  transitionToGuildResult = obj.transitionToGuild(guildId, channelId, messageId);
+                  return;
                 }
               }
-              if (cResult[10] === tmp12) {
+              if (cResult[10] === tmp11) {
                 class S {
                   constructor() {
-                    const obj = router_utils;
-                    obj.transitionToGuild(guildId, channelId, messageId);
+                    obj = closure_0(closure_2[8]);
+                    transitionToGuildResult = obj.transitionToGuild(guildId, channelId, messageId);
+                    return;
                   }
                 }
               }
-              cResult[10] = tmp12;
-              cResult[11] = tmp13;
-              cResult[12] = jsx(guildId(channelId[10]).PressableOpacity, {
-                accessibilityRole: "button",
-                onPress: tmp12,
-                children: tmp13,
-              });
-              const tmp16 = jsx(guildId(channelId[10]).PressableOpacity, {
-                accessibilityRole: "button",
-                onPress: tmp12,
-                children: tmp13,
-              });
+              PressableOpacity = PressableOpacity(tmp[10]).PressableOpacity;
+              const obj2 = { accessibilityRole: "button", onPress: tmp11, children: tmp12 };
+              tmp = (
+                <PressableOpacity accessibilityRole="button" onPress={tmp11}>
+                  {tmp12}
+                </PressableOpacity>
+              );
+              cResult[10] = tmp11;
+              cResult[11] = tmp12;
+              cResult[12] = tmp;
             }
           }
           class S {
             constructor() {
-              const obj = router_utils;
-              obj.transitionToGuild(guildId, channelId, messageId);
+              obj = closure_0(closure_2[8]);
+              transitionToGuildResult = obj.transitionToGuild(guildId, channelId, messageId);
+              return;
             }
           }
           cResult[4] = channelId;
           cResult[5] = guildId;
           cResult[6] = messageId;
           cResult[7] = S;
-          tmp12 = S;
+          tmp11 = S;
         }
-        return null;
+        const PressableOpacityResult = PressableOpacity(tmp[7]);
       }
       const fn = function u() {
         return ReferencedMessageStore.getMessage(channelId, messageId);
@@ -113,88 +108,83 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = channelId;
       cResult[2] = messageId;
       cResult[3] = fn;
-      tmp6 = fn;
+      tmp5 = fn;
+      const obj = guildId(channelId[6]);
     }
   : (arg0) => {
-      let require;
       ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
-      rowGenerator = get_initialized;
+      rowGenerator = initialize;
       const items = [ReferencedMessageStore];
       const stateFromStores = rowGenerator.useStateFromStores(items, () =>
         ReferencedMessageStore.getMessage(dependencyMap, importDefault),
       );
-      let state;
+      state = undefined;
       if (stateFromStores != null) {
         state = stateFromStores.state;
       }
       let tmp5 = null;
       if (state === ReferencedMessageState.LOADED) {
-        const PressableOpacity = Pressables.PressableOpacity;
-        tmp5 = (
-          <PressableOpacity
-            accessibilityRole="button"
-            onPress={function onPress() {
-              const obj = router_utils;
-              obj.transitionToGuild(_require, dependencyMap, importDefault);
-            }}
-          >
-            {null}
-          </PressableOpacity>
-        );
+        const obj2 = {
+          accessibilityRole: "button",
+          onPress() {
+            router_utils.transitionToGuild(_require, dependencyMap, importDefault);
+          },
+          children: null,
+        };
+        const obj3 = { rowGenerator, message: stateFromStores.message, pointerEvents: "none" };
+        obj2.children = jsx(ChatItemDefault, { rowGenerator, message: stateFromStores.message, pointerEvents: "none" });
+        tmp5 = jsx(Pressables.PressableOpacity, {
+          accessibilityRole: "button",
+          onPress() {
+            router_utils.transitionToGuild(_require, dependencyMap, importDefault);
+          },
+          children: null,
+        });
       }
       return tmp5;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
+
+export const ThreadChannelStarterMessage = tmp4;
+export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerEnabled()
   ? (messageId) => {
-      let first;
+      let tmp2 = dependencyMap;
       rowGenerator = messageId(576);
       const cResult = rowGenerator.c(7);
-      const tmp = messageId;
       messageId = messageId.messageId;
       const channelId = messageId.channelId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channelId) {
-        let tmp6;
         if (cResult[2] === messageId) {
-          tmp6 = cResult[3];
+          let tmp6 = cResult[3];
         }
-        const tmpResult = tmp(504);
-        const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-        let tmp8 = null;
-        if (null != stateFromStores) {
-          let tmp9;
-          let tmp10;
+        const stateFromStores = tmp(504).useStateFromStores(first, tmp6);
+        if (null == stateFromStores) {
+          return null;
+        } else {
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { overflow: "visible" };
             cResult[4] = obj2;
-            tmp9 = obj2;
+            let tmp9 = obj2;
           } else {
             tmp9 = cResult[4];
           }
           if (cResult[5] !== stateFromStores) {
-            const tmp14 = jsx(channelId(8336), {
-              rowGenerator,
-              message: stateFromStores,
-              style: tmp9,
-              pointerEvents: "none",
-            });
+            const obj3 = { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" };
+            tmp2 = jsx(channelId(8336), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
             cResult[5] = stateFromStores;
-            cResult[6] = tmp14;
-            tmp10 = tmp14;
-          } else {
-            tmp10 = cResult[6];
+            cResult[6] = tmp2;
           }
-          tmp8 = tmp10;
         }
-        return tmp8;
+        const tmpResult = tmp(504);
       }
       const fn = function c() {
         return MessageStore.getMessage(channelId, messageId);
@@ -203,17 +193,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = messageId;
       cResult[3] = fn;
       tmp6 = fn;
+      tmp = messageId;
     }
   : (arg0) => {
-      let require;
       ({ messageId: require, channelId: importDefault } = arg0);
-      rowGenerator = get_initialized;
+      rowGenerator = initialize;
       const items = [MessageStore];
       const stateFromStores = rowGenerator.useStateFromStores(items, () =>
         MessageStore.getMessage(importDefault, _require),
       );
       let tmp3 = null;
       if (null != stateFromStores) {
+        const obj2 = { rowGenerator, message: stateFromStores, style: { overflow: "visible" }, pointerEvents: "none" };
         tmp3 = jsx(ChatItemDefault, {
           rowGenerator,
           message: stateFromStores,
@@ -223,7 +214,3 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     };
-const result = size.fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
-
-export const ThreadChannelStarterMessage = tmp4;
-export const ThreadCreationStarterMessage = tmp5;

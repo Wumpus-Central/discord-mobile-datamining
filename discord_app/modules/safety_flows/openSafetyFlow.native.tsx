@@ -1,146 +1,186 @@
 // discord_app/modules/safety_flows/openSafetyFlow.native.tsx
-import Constants from "../../Constants.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserRequiredActionStore from "../../stores/UserRequiredActionStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let c6;
-
-let obj = function _openSafetyFlow() {
-  obj = _asyncToGenerator(async () => {
-    let closure_3;
-    let closure_4;
-    let obj11;
-    let obj2;
-    let obj6;
-    let requiredAction;
-    let task;
-    function getInitialScreenForTask(task_type) {
-      let UPDATE_APP;
-      if (task_type.task_type === closure_1_0(initialScreen[3]).TaskType.AGE_VERIFICATION) {
-        UPDATE_APP = closure_1_0(initialScreen[3]).SafetyFlowScreens.AGE_VERIFICATION;
-      } else if (task_type.task_type === closure_1_0(initialScreen[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
-        UPDATE_APP = closure_1_0(initialScreen[3]).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION;
-      } else if (task_type.task_type === closure_1_0(initialScreen[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
-        UPDATE_APP = closure_1_0(initialScreen[3]).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION;
-      } else if (null != closure_1_0(initialScreen[3]).TASK_TYPE_TO_SCREENS[task_type.task_type]) {
-        UPDATE_APP = closure_1_0(initialScreen[3]).SafetyFlowScreens.OVERVIEW;
-      } else {
-        UPDATE_APP = closure_1_0(initialScreen[3]).SafetyFlowScreens.UPDATE_APP;
-      }
-      return UPDATE_APP;
-    }
-    let closure_0 = arg0;
-    if (1 === c6) {
-      if (arg0 === 1) {
-        let c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        task = requiredAction;
-        if (requiredAction == null) {
-          task = closure_131_4.getAction();
-        }
-        if (task === closure_131_5.REQUIRE_SAFETY_FLOWS) {
-          let c5 = 1;
-          c6 = 3;
-          c7 = 1;
-          const obj8 = { value: obj11.getCurrentTask(), done: false };
-          obj11 = closure_131_0(closure_131_2[6]);
-          return obj8;
-        } else {
-          const obj10 = closure_131_1(closure_131_2[4]);
-          obj10.popWithKey(closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
-        }
-      }
-    } else if (2 === c6) {
-      c5 = 0;
-      const pushLazy2 = closure_131_1(closure_131_2[4]).pushLazy;
-      const obj9 = { task: null, initialScreen: closure_131_0(closure_131_2[3]).SafetyFlowScreens.ERROR };
-      const tmp32 = closure_131_1(closure_131_2[4]);
-      const tmp37 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
-      pushLazy2(tmp37, obj9, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
+const require = fn;
+let closure_6 = async function _openSafetyFlow() {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      if (3 === c6) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 0;
           c7 = 3;
-          const obj12 = { value, done: true };
-          return obj12;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          task = value;
-          if (null == task) {
-            c5 = 0;
-            c7 = 3;
-            return { value: "IconComponent", done: null };
-          } else if (task.task_type === closure_131_0(closure_131_2[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
-            c6 = 4;
-            c7 = 1;
-            const obj13 = { value: obj6.settleAppStoreAgeSignalReport(), done: false };
-            obj6 = closure_131_0(closure_131_2[7]);
-            return obj13;
+          closure_3 = tmp3;
+          dependencyMap = tmp7;
+          let requiredAction;
+          let obj6 = closure_0;
+          if (closure_0 === undefined) {
+            obj6 = {};
           }
-        }
-      } else if (4 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
-        } else {
-          c6 = 5;
+          requiredAction = obj6.requiredAction;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          c6 = 1;
           c7 = 1;
-          const obj15 = { value: obj2.getCurrentTask(), done: false };
-          obj2 = closure_131_0(closure_131_2[6]);
-          return obj15;
+          return { value: "Reflect", done: true };
         }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 0;
-        c7 = 3;
-        obj = { value, done: true };
-        return obj;
       } else {
-        task = value;
-        if (null == value) {
-          c5 = 0;
-          c7 = 3;
-          return { value: "IconComponent", done: null };
+        if (1 === tmp7) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            let action = requiredAction;
+            if (requiredAction == null) {
+              action = closure_131_4.getAction();
+            }
+            if (action === closure_131_5.REQUIRE_SAFETY_FLOWS) {
+              c5 = 1;
+              c6 = 3;
+              c7 = 1;
+              const obj9 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
+              return obj9;
+            } else {
+              closure_131_1(closure_131_2[4]).popWithKey(closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
+              const obj12 = closure_131_1(closure_131_2[4]);
+            }
+          }
+        } else {
+          if (2 === tmp7) {
+            c5 = 0;
+            const obj11 = { task: null, initialScreen: null };
+            const obj10 = closure_131_1(closure_131_2[4]);
+            obj11.initialScreen = closure_131_0(closure_131_2[3]).SafetyFlowScreens.ERROR;
+            obj10.pushLazy(
+              closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths),
+              obj11,
+              closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY,
+            );
+            const tmp38 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
+          } else {
+            if (3 === tmp7) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                c7 = 3;
+                const obj14 = { value, done: true };
+                return obj14;
+              } else {
+                closure_130_1 = value;
+                if (null == closure_130_1) {
+                  c5 = 0;
+                  c7 = 3;
+                  return { value: "IconComponent", done: null };
+                }
+              }
+            } else if (4 === tmp7) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                c7 = 3;
+                const obj15 = { value, done: true };
+                return obj15;
+              } else {
+                c6 = 5;
+                c7 = 1;
+                const obj16 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
+                return obj16;
+              }
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              c7 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              closure_130_1 = value;
+              if (null == value) {
+                c5 = 0;
+                c7 = 3;
+                return { value: "IconComponent", done: null };
+              }
+            }
+            closure_130_2 = (function getInitialScreenForTask(task_type) {
+              if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.AGE_VERIFICATION) {
+                let UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.AGE_VERIFICATION;
+              } else if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION;
+              } else if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION;
+              } else if (null != closure_1_0(dependencyMap[3]).TASK_TYPE_TO_SCREENS[task_type.task_type]) {
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.OVERVIEW;
+              } else {
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.UPDATE_APP;
+              }
+              return UPDATE_APP;
+            })(closure_130_1);
+            const obj17 = { task: closure_130_1, initialScreen: closure_130_2 };
+            const obj5 = closure_131_1(closure_131_2[4]);
+            obj5.pushLazy(
+              closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths),
+              obj17,
+              closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY,
+            );
+            c5 = 0;
+            const tmp21 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
+          }
+          c6 = 4;
+          c7 = 1;
+          const obj18 = { value: closure_131_0(closure_131_2[7]).settleAppStoreAgeSignalReport(), done: false };
+          return obj18;
         }
+        c7 = 3;
       }
-      let initialScreen = getInitialScreenForTask(task);
-      const pushLazy = closure_131_1(closure_131_2[4]).pushLazy;
-      const obj16 = { task, initialScreen };
-      const tmp14 = closure_131_1(closure_131_2[4]);
-      const tmp19 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
-      pushLazy(tmp19, obj16, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
-      c5 = 0;
+    } catch (tmp58) {
+      closure_4 = tmp58;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp58;
+      } else {
+        c6 = tmp;
+      }
     }
-    await "IconComponent";
-    initialScreen = tmp4;
-    let obj5 = closure_0;
-    if (closure_0 === undefined) {
-      obj5 = {};
-    }
-    requiredAction = obj5.requiredAction;
-    return "Reflect";
-  });
-  return obj(...arguments);
+  }
 };
-const UserRequiredActions = Constants.UserRequiredActions;
+const UserRequiredActions = fn(1085).UserRequiredActions;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
 
 export const openSafetyFlow = function openSafetyFlow() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

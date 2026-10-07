@@ -1,56 +1,42 @@
 // discord_app/modules/search/native/components/layout/SearchScreenLayout.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import AppFreezerDefault from "../../../../panels/morphable/native/AppFreezer.tsx";
 import SearchTabsLayoutDefault from "../tabs/SearchTabsLayout.tsx";
 import AutocompleteScreenDefault from "autocomplete/AutocompleteScreen.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../stores/SearchQueryStore.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
-let searchContext;
-
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-const View = react_native.View;
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let containerStyle;
-      let visible;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       ({ visible, children, containerStyle } = arg0);
       const tmp3 = closure_8();
       const tmp5 = visible ? tmp3.visible : tmp3.hidden;
       if (cResult[0] === containerStyle) {
-        let tmp6;
         if (cResult[1] === tmp5) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
         if (cResult[3] === children) {
           if (cResult[4] === tmp6) {
-            let tmp8;
-            if (cResult[5] === !visible) {
-              tmp8 = cResult[6];
+            if (cResult[5] === tmp7) {
+              let tmp8 = cResult[6];
             }
-            if (cResult[7] === !visible) {
-              let tmp12;
+            if (cResult[7] === tmp4) {
               if (cResult[8] === tmp8) {
-                tmp12 = cResult[9];
+                let tmp12 = cResult[9];
               }
               return tmp12;
             }
-            const obj2 = { manualFreeze: !visible, placeholder: null, children: tmp8 };
+            const obj2 = { manualFreeze: tmp4, placeholder: null, children: tmp8 };
             const tmp15 = hasOwnProperty(AppFreezerDefault, obj2);
-            cResult[7] = !visible;
+            cResult[7] = tmp4;
             cResult[8] = tmp8;
             cResult[9] = tmp15;
             tmp12 = tmp15;
@@ -71,39 +57,28 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
     }
   : (visible) => {
-      let children;
-      let containerStyle;
-      let obj2;
       visible = visible.visible;
       ({ children, containerStyle } = visible);
       const tmp = closure_8();
-      const items = [containerStyle];
-      const obj = { manualFreeze: !visible, placeholder: null, children: hasOwnProperty(View, obj2) };
-      obj2 = { style: items, "aria-hidden": !visible, children };
-      items[1] = visible ? tmp.visible : tmp.hidden;
-      const tmp3 = AppFreezerDefault;
-      return hasOwnProperty(tmp3, obj);
+      const obj = { manualFreeze: !visible, placeholder: null, children: null };
+      const items = [containerStyle, visible ? tmp.visible : tmp.hidden];
+      obj.children = hasOwnProperty(View, { style: items, "aria-hidden": !visible, children });
+      return hasOwnProperty(AppFreezerDefault, obj);
     };
-const memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenLayout.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (searchContext) => {
-        let containerStyle;
-        let first;
-        let items2;
-        let tmp6;
-        let tmp7;
-        let width;
-        const obj = searchContext(576);
-        const cResult = obj.c(20);
-        const tmp = searchContext;
+        const cResult = searchContext(576).c(20);
         searchContext = searchContext.searchContext;
         ({ containerStyle, width } = searchContext);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SearchQueryStore];
           cResult[0] = items;
-          first = items;
+          let first = items;
         } else {
           first = cResult[0];
         }
@@ -115,50 +90,46 @@ const memoResult = memo(
           cResult[1] = searchContext;
           cResult[2] = fn;
           cResult[3] = items1;
-          tmp7 = items1;
-          tmp6 = fn;
+          let tmp7 = items1;
+          let tmp6 = fn;
         } else {
           tmp6 = cResult[2];
           tmp7 = cResult[3];
         }
-        const tmpResult = tmp(504);
-        const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
+        const obj = searchContext(576);
+        const stateFromStores = searchContext(504).useStateFromStores(first, tmp6, tmp7);
         if (cResult[4] === searchContext) {
-          let tmp10;
           if (cResult[5] === width) {
-            tmp10 = cResult[6];
+            let tmp10 = cResult[6];
           }
           if (cResult[7] === containerStyle) {
-            if (cResult[8] === !stateFromStores) {
-              let tmp12;
-              let tmp16;
+            if (cResult[8] === tmp9) {
               if (cResult[9] === tmp10) {
-                tmp12 = cResult[10];
+                let tmp12 = cResult[10];
               }
               if (cResult[11] !== searchContext) {
                 const obj2 = { searchContext };
                 const tmp19 = closure_5(AutocompleteScreenDefault, obj2);
                 cResult[11] = searchContext;
                 cResult[12] = tmp19;
-                tmp16 = tmp19;
+                let tmp16 = tmp19;
               } else {
                 tmp16 = cResult[12];
               }
               if (cResult[13] === containerStyle) {
                 if (cResult[14] === stateFromStores) {
-                  let tmp20;
                   if (cResult[15] === tmp16) {
-                    tmp20 = cResult[16];
+                    let tmp20 = cResult[16];
                   }
                   if (cResult[17] === tmp12) {
-                    let tmp24;
                     if (cResult[18] === tmp20) {
-                      tmp24 = cResult[19];
+                      let tmp24 = cResult[19];
                     }
                     return tmp24;
                   }
-                  const obj3 = { children: items2 };
-                  items2 = [tmp12, tmp20];
+                  const obj3 = { children: null };
+                  const items2 = [tmp12, tmp20];
+                  obj3.children = items2;
                   const tmp27 = closure_7(closure_6, obj3);
                   cResult[17] = tmp12;
                   cResult[18] = tmp20;
@@ -175,10 +146,10 @@ const memoResult = memo(
               tmp20 = tmp23;
             }
           }
-          const obj5 = { visible: !stateFromStores, containerStyle, children: tmp10 };
+          const obj5 = { visible: tmp9, containerStyle, children: tmp10 };
           const tmp15 = closure_5(closure_9, obj5);
           cResult[7] = containerStyle;
-          cResult[8] = !stateFromStores;
+          cResult[8] = tmp9;
           cResult[9] = tmp10;
           cResult[10] = tmp15;
           tmp12 = tmp15;
@@ -188,37 +159,38 @@ const memoResult = memo(
         cResult[5] = width;
         cResult[6] = tmp11;
         tmp10 = tmp11;
+        const tmpResult = searchContext(504);
       }
-    : (searchContext) => {
-        let items2;
-        searchContext = searchContext.searchContext;
-        const containerStyle = searchContext.containerStyle;
-        const width = searchContext.width;
+    : (width) => {
+        const searchContext = width.searchContext;
+        const containerStyle = width.containerStyle;
         const items = [SearchQueryStore];
         const items1 = [searchContext];
-        const obj = searchContext(504);
-        const stateFromStores = obj.useStateFromStores(
+        const stateFromStores = searchContext(504).useStateFromStores(
           items,
           () => SearchQueryStore.isAutocompleteVisible(searchContext),
           items1,
         );
-        const obj2 = { children: items2 };
-        items2 = [,];
+        const obj2 = { children: null };
+        const obj = searchContext(504);
+        const items2 = [
+          closure_5(closure_9, {
+            visible: !stateFromStores,
+            containerStyle,
+            children: closure_5(SearchTabsLayoutDefault, { searchContext, width: width.width }),
+          }),
+        ];
         const obj3 = {
           visible: !stateFromStores,
           containerStyle,
-          children: closure_5(SearchTabsLayoutDefault, { searchContext, width }),
+          children: closure_5(SearchTabsLayoutDefault, { searchContext, width: width.width }),
         };
-        items2[0] = closure_5(closure_9, obj3);
-        const obj4 = {
+        items2[1] = closure_5(closure_9, {
           visible: stateFromStores,
           containerStyle,
           children: closure_5(AutocompleteScreenDefault, { searchContext }),
-        };
-        items2[1] = closure_5(closure_9, obj4);
+        });
+        obj2.children = items2;
         return closure_7(closure_6, obj2);
       },
 );
-const result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenLayout.tsx");
-
-export default memoResult;

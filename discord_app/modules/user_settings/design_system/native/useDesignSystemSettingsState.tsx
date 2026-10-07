@@ -2,7 +2,6 @@
 import 00570__ from "../../../../../_runtime/metro/00570__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const obj = module_570.create(() => ({ buttonSize: "md", buttonScale: 8, enableLoadingState: false, iconPosition: "start", showIcon: false, showDisabled: false }));
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemSettingsState.tsx");
 
-export default obj;
+export default module_570.create(() => ({ buttonSize: "md", buttonScale: 8, enableLoadingState: false, iconPosition: "start", showIcon: false, showDisabled: false }));

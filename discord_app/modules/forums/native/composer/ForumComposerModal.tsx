@@ -1,121 +1,76 @@
 // discord_app/modules/forums/native/composer/ForumComposerModal.tsx
 import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl5 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import KeyboardUIStore from "../../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
-import DraftStore2 from "../../../../stores/DraftStore.tsx";
 import DraftActionCreatorsDefault from "../../../../actions/DraftActionCreators.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../../actions/UploadAttachmentActionCreators.tsx";
 import ForumComposerModalActionCreators from "ForumComposerModalActionCreators.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import NativeMenuStore from "../../../native_menu/native/NativeMenuStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
+import DraftStore from "../../../../stores/DraftStore.tsx";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 import ForumPostMessagesStore from "../../ForumPostMessagesStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const DraftStore = DraftStore2;
-let clearAllResult,
-  clearAllResult1,
-  clearDraftResult,
-  clearDraftResult1,
-  clearDraftResult2,
-  clearDraftResult3,
-  num,
-  obj1,
-  parentChannelId,
-  setKeyboardTypeResult,
-  tmp11,
-  tmp13,
-  tmp14,
-  tmp16,
-  tmp17,
-  tmp19,
-  tmp2,
-  tmp20,
-  tmp21,
-  tmp26,
-  tmp27,
-  tmp28,
-  tmp29,
-  tmp33,
-  tmp34,
-  tmp35,
-  tmp5,
-  tmp7;
-
-let obj2;
+require = fn;
 function showForumComposerCloseAlert(arg0) {
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let onCancel;
-  let onConfirm;
   ({ onConfirm, onCancel } = arg0);
-  const obj = KeyboardManagerUtilsAll;
-  const result = obj.dismissGlobalKeyboard();
-  const obj2 = {
-    title: intl.string(intl5.t.Fz1512),
-    body: intl2.string(intl5.t.YBgepz),
-    confirmText: intl3.string(intl5.t.Rnli6C),
-    cancelText: intl4.string(intl5.t["3NnH6V"]),
-    onConfirm,
-    onCancel,
+  const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
+  const obj3 = {
+    title: null,
+    body: null,
+    confirmText: null,
+    cancelText: null,
+    onConfirm: null,
+    onCancel: null,
     hideActionSheet: true,
     isDismissable: true,
   };
-  const show = actions_AlertActionCreatorsDefault.show;
-  actions_AlertActionCreatorsDefault;
-  intl = intl5.intl;
-  intl2 = intl5.intl;
-  intl3 = intl5.intl;
-  intl4 = intl5.intl;
-  show(obj2);
+  const intl = util.intl;
+  obj3.title = intl.string(util.t.Fz1512);
+  const intl2 = util.intl;
+  obj3.body = intl2.string(util.t.YBgepz);
+  const intl3 = util.intl;
+  obj3.confirmText = intl3.string(util.t.Rnli6C);
+  const intl4 = util.intl;
+  obj3.cancelText = intl4.string(util.t["3NnH6V"]);
+  obj3.onConfirm = onConfirm;
+  obj3.onCancel = onCancel;
+  actions_AlertActionCreatorsDefault.show(obj3);
 }
-const View = react_native.View;
-const DraftType = DraftStore2.DraftType;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let closure_12 = createStyles.createStyles(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const View = fn(17).View;
+const DraftType = fn(7044).DraftType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
+let closure_12 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModal.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (parentChannelId) => {
-      let first;
-      let isEdit;
-      let open;
-      let tmp10;
-      let tmp12;
-      let tmp15;
-      let tmp18;
-      let tmp9;
-      const tmp = parentChannelId;
-      let obj = parentChannelId(isEdit[16]);
-      const cResult = obj.c(34);
+      const cResult = parentChannelId(isEdit[16]).c(34);
       parentChannelId = parentChannelId.parentChannelId;
       const threadId = parentChannelId.threadId;
       const messageId = parentChannelId.messageId;
       isEdit = parentChannelId.isEdit;
       let tmp4 = undefined !== isEdit;
-      const analyticsLocations = parentChannelId.analyticsLocations;
       if (tmp4) {
         tmp4 = isEdit;
       }
       isEdit = tmp4;
       closure_12();
-      const analyticsLocations2 = threadId(tmp2[17])(analyticsLocations).analyticsLocations;
-      const tmp6 = threadId;
+      const analyticsLocations = threadId(tmp2[17])(parentChannelId.analyticsLocations).analyticsLocations;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -127,78 +82,78 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = parentChannelId;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp10 = items1;
-        tmp9 = fn;
+        let tmp10 = items1;
+        let tmp9 = fn;
       } else {
         tmp9 = cResult[2];
         tmp10 = cResult[3];
       }
-      const tmpResult = tmp(isEdit[18]);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp9, tmp10);
+      let obj = parentChannelId(isEdit[16]);
+      const tmp6 = threadId;
+      const stateFromStores = parentChannelId(isEdit[18]).useStateFromStores(first, tmp9, tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ChannelStore];
         cResult[4] = items2;
-        tmp12 = items2;
+        let tmp12 = items2;
       } else {
         tmp12 = cResult[4];
       }
       if (cResult[5] !== threadId) {
         class L {
           constructor() {
-            return ChannelStore.getChannel(threadId);
+            return closure_6.getChannel(threadId);
           }
         }
         const items3 = [threadId];
         cResult[5] = threadId;
         cResult[6] = L;
         cResult[7] = items3;
-        tmp15 = items3;
+        let tmp15 = items3;
       } else {
         class L {
           constructor() {
-            return ChannelStore.getChannel(threadId);
+            return closure_6.getChannel(threadId);
           }
         }
         tmp15 = cResult[7];
       }
-      const tmpResult4 = tmp(isEdit[18]);
-      const stateFromStores1 = tmpResult4.useStateFromStores(tmp12, L, tmp15);
+      const tmpResult = parentChannelId(isEdit[18]);
+      const stateFromStores1 = parentChannelId(isEdit[18]).useStateFromStores(tmp12, L, tmp15);
       tmp6(isEdit[19])(parentChannelId);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class L {
           constructor() {
-            return ChannelStore.getChannel(threadId);
+            return closure_6.getChannel(threadId);
           }
         }
         const items4 = [ForumPostMessagesStore];
         cResult[8] = items4;
-        tmp18 = items4;
+        const tmp18 = items4;
       } else {
         class L {
           constructor() {
-            return ChannelStore.getChannel(threadId);
+            return closure_6.getChannel(threadId);
           }
         }
       }
       if (cResult[9] === messageId) {
         class L {
           constructor() {
-            return ChannelStore.getChannel(threadId);
+            return closure_6.getChannel(threadId);
           }
         }
-        const tmpResult5 = tmp(isEdit[18]);
-        const stateFromStores2 = tmpResult5.useStateFromStores(tmp18, K);
+        const stateFromStores2 = tmp(tmp2[18]).useStateFromStores(tmp18, K);
         const _Symbol = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           class L {
             constructor() {
-              return ChannelStore.getChannel(threadId);
+              return closure_6.getChannel(threadId);
             }
           }
           const items5 = [NativeMenuStore];
           class O {
             constructor() {
-              return open.isOpen();
+              return closure_5.isOpen();
             }
           }
           cResult[12] = items5;
@@ -206,59 +161,57 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           class R {
             constructor(arg0) {
               if (null != closure_4) {
-                tmp33 = parentChannelId;
-                tmp34 = closure_0;
-                tmp35 = closure_3;
+                tmp31 = parentChannelId;
+                tmp32 = closure_0;
+                tmp33 = closure_3;
                 if (parentChannelId) {
-                  tmp34Result = tmp34(tmp35[20]);
-                  result = tmp34Result.closeCreateForumPostModal();
-                  tmp26 = parentChannelId;
-                  tmp27 = closure_1;
-                  tmp28 = closure_3;
-                  obj9 = closure_1(closure_3[13]);
-                  tmp29 = DraftType;
-                  clearDraftResult = obj9.clearDraft(parentChannelId, DraftType.ThreadSettings);
-                  obj10 = closure_1(closure_3[13]);
-                  clearDraftResult1 = obj10.clearDraft(parentChannelId, DraftType.ChannelMessage);
-                  obj11 = closure_1(closure_3[14]);
-                  clearAllResult = obj11.clearAll(parentChannelId, DraftType.ChannelMessage);
+                  tmp32Result = tmp32(tmp33[20]);
+                  result = tmp32Result.closeCreateForumPostModal();
+                  tmp24 = parentChannelId;
+                  tmp25 = closure_1;
+                  tmp26 = closure_3;
+                  obj11 = closure_1(closure_3[13]);
+                  tmp27 = DraftType;
+                  clearDraftResult = obj11.clearDraft(parentChannelId, DraftType.ThreadSettings);
+                  obj12 = closure_1(closure_3[13]);
+                  clearDraftResult1 = obj12.clearDraft(parentChannelId, DraftType.ChannelMessage);
+                  obj13 = closure_1(closure_3[14]);
+                  clearAllResult = obj13.clearAll(parentChannelId, DraftType.ChannelMessage);
                 } else {
-                  tmp = tmp34(tmp35[21]);
-                  obj = { type: null };
-                  tmp2 = closure_0;
-                  tmp3 = closure_3;
-                  setKeyboardType = tmp.setKeyboardType;
-                  obj.type = closure_0(closure_3[22]).KeyboardTypes.SYSTEM;
-                  setKeyboardTypeResult = setKeyboardType(obj);
-                  tmp5 = closure_7;
-                  tmp6 = parentChannelId;
-                  tmp7 = DraftType;
+                  tmp32Result1 = tmp32(tmp33[21]);
+                  obj1 = { type: null };
+                  tmp = closure_0;
+                  tmp2 = closure_3;
+                  obj1.type = closure_0(closure_3[22]).KeyboardTypes.SYSTEM;
+                  setKeyboardTypeResult = tmp32Result1.setKeyboardType(obj1);
+                  obj3 = closure_7;
+                  tmp4 = parentChannelId;
+                  tmp5 = DraftType;
                   draft = closure_7.getDraft(parentChannelId, DraftType.ChannelMessage);
                   threadSettings = closure_7.getThreadSettings(parentChannelId);
                   if (threadSettings == null) {
-                    tmp9 = closure_1;
-                    tmp10 = closure_3;
-                    getThreadDraftWithParentMessageId = tmp5.getThreadDraftWithParentMessageId;
-                    obj2 = closure_1(closure_3[23]);
-                    threadSettings = getThreadDraftWithParentMessageId(obj2.castChannelIdAsMessageId(tmp6));
+                    tmp7 = closure_1;
+                    tmp8 = closure_3;
+                    obj4 = closure_1(closure_3[23]);
+                    threadSettings = obj3.getThreadDraftWithParentMessageId(obj4.castChannelIdAsMessageId(tmp4));
                   }
-                  tmp11 = closure_9;
-                  tmp12 = DraftType;
-                  tmp13 = isEdit;
-                  if (tmp13) {
-                    tmp16 = closure_0;
-                    tmp17 = closure_3;
-                    obj4 = closure_0(closure_3[20]);
-                    result1 = obj4.closeCreateForumPostModal();
-                    tmp19 = closure_1;
-                    tmp20 = closure_3;
-                    obj5 = closure_1(closure_3[13]);
-                    tmp21 = DraftType;
-                    clearDraftResult2 = obj5.clearDraft(tmp6, DraftType.ThreadSettings);
-                    obj6 = closure_1(closure_3[13]);
-                    clearDraftResult3 = obj6.clearDraft(tmp6, DraftType.ChannelMessage);
-                    obj7 = closure_1(closure_3[14]);
-                    clearAllResult1 = obj7.clearAll(tmp6, DraftType.ChannelMessage);
+                  tmp9 = closure_9;
+                  tmp10 = DraftType;
+                  tmp11 = isEdit;
+                  if (isEdit) {
+                    tmp14 = closure_0;
+                    tmp15 = closure_3;
+                    obj6 = closure_0(closure_3[20]);
+                    result1 = obj6.closeCreateForumPostModal();
+                    tmp17 = closure_1;
+                    tmp18 = closure_3;
+                    obj7 = closure_1(closure_3[13]);
+                    tmp19 = DraftType;
+                    clearDraftResult2 = obj7.clearDraft(tmp4, DraftType.ThreadSettings);
+                    obj8 = closure_1(closure_3[13]);
+                    clearDraftResult3 = obj8.clearDraft(tmp4, DraftType.ChannelMessage);
+                    obj9 = closure_1(closure_3[14]);
+                    clearAllResult1 = obj9.clearAll(tmp4, DraftType.ChannelMessage);
                   } else {
                     num = 0;
                     if (draft.length <= 0) {
@@ -272,26 +225,27 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                     }
-                    tmp14 = showForumComposerCloseAlert;
-                    obj1 = { onConfirm: null, onCancel: null };
-                    obj1.onConfirm = function onConfirm() {
+                    tmp12 = showForumComposerCloseAlert;
+                    obj14 = { onConfirm: null, onCancel: null };
+                    obj14.onConfirm = function onConfirm() {
+                      const result = parentChannelId(isEdit[24]).maybeTrackForumNewPostDraftCreated({
+                        guildId: stateFromStores.guild_id,
+                        channelId: stateFromStores.id,
+                      });
                       const obj = parentChannelId(isEdit[24]);
                       const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-                      const result = obj.maybeTrackForumNewPostDraftCreated(obj2);
-                      const obj3 = parentChannelId(isEdit[20]);
-                      const result1 = obj3.closeCreateForumPostModal();
+                      const result1 = parentChannelId(isEdit[20]).closeCreateForumPostModal();
                     };
-                    obj1.onCancel = function onCancel() {
+                    obj14.onCancel = function onCancel() {
+                      const result = parentChannelId(isEdit[20]).closeCreateForumPostModal();
                       const obj = parentChannelId(isEdit[20]);
-                      const result = obj.closeCreateForumPostModal();
+                      threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ThreadSettings);
                       const obj2 = threadId(isEdit[13]);
-                      obj2.clearDraft(closure_1_0, DraftType.ThreadSettings);
+                      threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ChannelMessage);
                       const obj3 = threadId(isEdit[13]);
-                      obj3.clearDraft(closure_1_0, DraftType.ChannelMessage);
-                      const obj4 = threadId(isEdit[14]);
-                      obj4.clearAll(closure_1_0, DraftType.ChannelMessage);
+                      threadId(isEdit[14]).clearAll(closure_1_0, DraftType.ChannelMessage);
                     };
-                    tmp15 = showForumComposerCloseAlert(obj1);
+                    tmp13 = showForumComposerCloseAlert(obj14);
                   }
                 }
               }
@@ -301,74 +255,72 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class L {
             constructor() {
-              return ChannelStore.getChannel(threadId);
+              return closure_6.getChannel(threadId);
             }
           }
         }
-        tmp(isEdit[18]);
+        tmp(tmp2[18]);
         if (cResult[14] === tmp4) {
           class L {
             constructor() {
-              return ChannelStore.getChannel(threadId);
+              return closure_6.getChannel(threadId);
             }
           }
         }
         class R {
           constructor(arg0) {
             if (null != closure_4) {
-              tmp33 = parentChannelId;
-              tmp34 = closure_0;
-              tmp35 = closure_3;
+              tmp31 = parentChannelId;
+              tmp32 = closure_0;
+              tmp33 = closure_3;
               if (parentChannelId) {
-                tmp34Result = tmp34(tmp35[20]);
-                result = tmp34Result.closeCreateForumPostModal();
-                tmp26 = parentChannelId;
-                tmp27 = closure_1;
-                tmp28 = closure_3;
-                obj9 = closure_1(closure_3[13]);
-                tmp29 = DraftType;
-                clearDraftResult = obj9.clearDraft(parentChannelId, DraftType.ThreadSettings);
-                obj10 = closure_1(closure_3[13]);
-                clearDraftResult1 = obj10.clearDraft(parentChannelId, DraftType.ChannelMessage);
-                obj11 = closure_1(closure_3[14]);
-                clearAllResult = obj11.clearAll(parentChannelId, DraftType.ChannelMessage);
+                tmp32Result = tmp32(tmp33[20]);
+                result = tmp32Result.closeCreateForumPostModal();
+                tmp24 = parentChannelId;
+                tmp25 = closure_1;
+                tmp26 = closure_3;
+                obj11 = closure_1(closure_3[13]);
+                tmp27 = DraftType;
+                clearDraftResult = obj11.clearDraft(parentChannelId, DraftType.ThreadSettings);
+                obj12 = closure_1(closure_3[13]);
+                clearDraftResult1 = obj12.clearDraft(parentChannelId, DraftType.ChannelMessage);
+                obj13 = closure_1(closure_3[14]);
+                clearAllResult = obj13.clearAll(parentChannelId, DraftType.ChannelMessage);
               } else {
-                tmp = tmp34(tmp35[21]);
-                obj = { type: null };
-                tmp2 = closure_0;
-                tmp3 = closure_3;
-                setKeyboardType = tmp.setKeyboardType;
-                obj.type = closure_0(closure_3[22]).KeyboardTypes.SYSTEM;
-                setKeyboardTypeResult = setKeyboardType(obj);
-                tmp5 = closure_7;
-                tmp6 = parentChannelId;
-                tmp7 = DraftType;
+                tmp32Result1 = tmp32(tmp33[21]);
+                obj1 = { type: null };
+                tmp = closure_0;
+                tmp2 = closure_3;
+                obj1.type = closure_0(closure_3[22]).KeyboardTypes.SYSTEM;
+                setKeyboardTypeResult = tmp32Result1.setKeyboardType(obj1);
+                obj3 = closure_7;
+                tmp4 = parentChannelId;
+                tmp5 = DraftType;
                 draft = closure_7.getDraft(parentChannelId, DraftType.ChannelMessage);
                 threadSettings = closure_7.getThreadSettings(parentChannelId);
                 if (threadSettings == null) {
-                  tmp9 = closure_1;
-                  tmp10 = closure_3;
-                  getThreadDraftWithParentMessageId = tmp5.getThreadDraftWithParentMessageId;
-                  obj2 = closure_1(closure_3[23]);
-                  threadSettings = getThreadDraftWithParentMessageId(obj2.castChannelIdAsMessageId(tmp6));
+                  tmp7 = closure_1;
+                  tmp8 = closure_3;
+                  obj4 = closure_1(closure_3[23]);
+                  threadSettings = obj3.getThreadDraftWithParentMessageId(obj4.castChannelIdAsMessageId(tmp4));
                 }
-                tmp11 = closure_9;
-                tmp12 = DraftType;
-                tmp13 = isEdit;
-                if (tmp13) {
-                  tmp16 = closure_0;
-                  tmp17 = closure_3;
-                  obj4 = closure_0(closure_3[20]);
-                  result1 = obj4.closeCreateForumPostModal();
-                  tmp19 = closure_1;
-                  tmp20 = closure_3;
-                  obj5 = closure_1(closure_3[13]);
-                  tmp21 = DraftType;
-                  clearDraftResult2 = obj5.clearDraft(tmp6, DraftType.ThreadSettings);
-                  obj6 = closure_1(closure_3[13]);
-                  clearDraftResult3 = obj6.clearDraft(tmp6, DraftType.ChannelMessage);
-                  obj7 = closure_1(closure_3[14]);
-                  clearAllResult1 = obj7.clearAll(tmp6, DraftType.ChannelMessage);
+                tmp9 = closure_9;
+                tmp10 = DraftType;
+                tmp11 = isEdit;
+                if (isEdit) {
+                  tmp14 = closure_0;
+                  tmp15 = closure_3;
+                  obj6 = closure_0(closure_3[20]);
+                  result1 = obj6.closeCreateForumPostModal();
+                  tmp17 = closure_1;
+                  tmp18 = closure_3;
+                  obj7 = closure_1(closure_3[13]);
+                  tmp19 = DraftType;
+                  clearDraftResult2 = obj7.clearDraft(tmp4, DraftType.ThreadSettings);
+                  obj8 = closure_1(closure_3[13]);
+                  clearDraftResult3 = obj8.clearDraft(tmp4, DraftType.ChannelMessage);
+                  obj9 = closure_1(closure_3[14]);
+                  clearAllResult1 = obj9.clearAll(tmp4, DraftType.ChannelMessage);
                 } else {
                   num = 0;
                   if (draft.length <= 0) {
@@ -382,26 +334,27 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  tmp14 = showForumComposerCloseAlert;
-                  obj1 = { onConfirm: null, onCancel: null };
-                  obj1.onConfirm = function onConfirm() {
+                  tmp12 = showForumComposerCloseAlert;
+                  obj14 = { onConfirm: null, onCancel: null };
+                  obj14.onConfirm = function onConfirm() {
+                    const result = parentChannelId(isEdit[24]).maybeTrackForumNewPostDraftCreated({
+                      guildId: stateFromStores.guild_id,
+                      channelId: stateFromStores.id,
+                    });
                     const obj = parentChannelId(isEdit[24]);
                     const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-                    const result = obj.maybeTrackForumNewPostDraftCreated(obj2);
-                    const obj3 = parentChannelId(isEdit[20]);
-                    const result1 = obj3.closeCreateForumPostModal();
+                    const result1 = parentChannelId(isEdit[20]).closeCreateForumPostModal();
                   };
-                  obj1.onCancel = function onCancel() {
+                  obj14.onCancel = function onCancel() {
+                    const result = parentChannelId(isEdit[20]).closeCreateForumPostModal();
                     const obj = parentChannelId(isEdit[20]);
-                    const result = obj.closeCreateForumPostModal();
+                    threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ThreadSettings);
                     const obj2 = threadId(isEdit[13]);
-                    obj2.clearDraft(closure_1_0, DraftType.ThreadSettings);
+                    threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ChannelMessage);
                     const obj3 = threadId(isEdit[13]);
-                    obj3.clearDraft(closure_1_0, DraftType.ChannelMessage);
-                    const obj4 = threadId(isEdit[14]);
-                    obj4.clearAll(closure_1_0, DraftType.ChannelMessage);
+                    threadId(isEdit[14]).clearAll(closure_1_0, DraftType.ChannelMessage);
                   };
-                  tmp15 = showForumComposerCloseAlert(obj1);
+                  tmp13 = showForumComposerCloseAlert(obj14);
                 }
               }
             }
@@ -412,14 +365,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = stateFromStores;
         cResult[16] = parentChannelId;
         cResult[17] = R;
+        const tmpResult5 = tmp(tmp2[18]);
       }
       class K {
         constructor() {
-          let firstMessage = null;
+          firstMessage = null;
           if (null != threadId) {
+            tmp3 = messageId;
             firstMessage = null;
             if (null != messageId) {
-              firstMessage = ForumPostMessagesStore.getMessage(tmp).firstMessage;
+              tmp4 = closure_10;
+              firstMessage = closure_10.getMessage(tmp).firstMessage;
             }
           }
           return firstMessage;
@@ -428,10 +384,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = messageId;
       cResult[10] = threadId;
       cResult[11] = K;
+      const tmpResult4 = parentChannelId(isEdit[18]);
     }
   : (parentChannelId) => {
-      let isEdit;
-      let str;
       parentChannelId = parentChannelId.parentChannelId;
       const threadId = parentChannelId.threadId;
       ({ messageId: importAll, isEdit } = parentChannelId);
@@ -441,35 +396,26 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       function handleClose(arg0) {
         if (null != stateFromStores) {
           if (arg0) {
-            const tmp34Result = ForumComposerModalActionCreators;
-            let result = tmp34Result.closeCreateForumPostModal();
-            const obj9 = DraftActionCreatorsDefault;
-            obj9.clearDraft(parentChannelId, DraftType.ThreadSettings);
-            const obj10 = DraftActionCreatorsDefault;
-            obj10.clearDraft(parentChannelId, DraftType.ChannelMessage);
-            const obj11 = UploadAttachmentActionCreatorsDefault;
-            obj11.clearAll(parentChannelId, DraftType.ChannelMessage);
+            let result = ForumComposerModalActionCreators.closeCreateForumPostModal();
+            const tmp32Result = ForumComposerModalActionCreators;
+            DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
+            DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
+            UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
           } else {
             let obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-            const setKeyboardType = KeyboardUIStore.setKeyboardType;
-            KeyboardUIStore;
-            setKeyboardType(obj);
+            KeyboardUIStore.setKeyboardType(obj);
             const draft = DraftStore.getDraft(parentChannelId, DraftType.ChannelMessage);
             let threadSettings = DraftStore.getThreadSettings(parentChannelId);
             if (threadSettings == null) {
-              const getThreadDraftWithParentMessageId = DraftStore.getThreadDraftWithParentMessageId;
-              let obj2 = SnowflakeUtilsDefault;
-              threadSettings = getThreadDraftWithParentMessageId(obj2.castChannelIdAsMessageId(parentChannelId));
+              threadSettings = DraftStore.getThreadDraftWithParentMessageId(
+                SnowflakeUtilsDefault.castChannelIdAsMessageId(parentChannelId),
+              );
             }
             if (isEdit) {
-              let obj4 = ForumComposerModalActionCreators;
-              let result1 = obj4.closeCreateForumPostModal();
-              const obj5 = DraftActionCreatorsDefault;
-              obj5.clearDraft(parentChannelId, DraftType.ThreadSettings);
-              const obj6 = DraftActionCreatorsDefault;
-              obj6.clearDraft(parentChannelId, DraftType.ChannelMessage);
-              const obj7 = UploadAttachmentActionCreatorsDefault;
-              obj7.clearAll(parentChannelId, DraftType.ChannelMessage);
+              let result1 = ForumComposerModalActionCreators.closeCreateForumPostModal();
+              DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
+              DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
+              UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
             } else {
               if (draft.length <= 0) {
                 if (arr2.length <= 0) {
@@ -482,45 +428,54 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              let obj3 = {
+              let obj2 = {
                 onConfirm() {
+                  const result = parentChannelId(isEdit[24]).maybeTrackForumNewPostDraftCreated({
+                    guildId: stateFromStores.guild_id,
+                    channelId: stateFromStores.id,
+                  });
                   const obj = parentChannelId(isEdit[24]);
                   const obj2 = { guildId: stateFromStores.guild_id, channelId: stateFromStores.id };
-                  const result = obj.maybeTrackForumNewPostDraftCreated(obj2);
-                  const obj3 = parentChannelId(isEdit[20]);
-                  const result1 = obj3.closeCreateForumPostModal();
+                  const result1 = parentChannelId(isEdit[20]).closeCreateForumPostModal();
                 },
                 onCancel() {
+                  const result = parentChannelId(isEdit[20]).closeCreateForumPostModal();
                   const obj = parentChannelId(isEdit[20]);
-                  const result = obj.closeCreateForumPostModal();
+                  threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ThreadSettings);
                   const obj2 = threadId(isEdit[13]);
-                  obj2.clearDraft(closure_1_0, DraftType.ThreadSettings);
+                  threadId(isEdit[13]).clearDraft(closure_1_0, DraftType.ChannelMessage);
                   const obj3 = threadId(isEdit[13]);
-                  obj3.clearDraft(closure_1_0, DraftType.ChannelMessage);
-                  const obj4 = threadId(isEdit[14]);
-                  obj4.clearAll(closure_1_0, DraftType.ChannelMessage);
+                  threadId(isEdit[14]).clearAll(closure_1_0, DraftType.ChannelMessage);
                 },
               };
-              showForumComposerCloseAlert(obj3);
+              showForumComposerCloseAlert(obj2);
             }
+            const tmp32Result2 = KeyboardUIStore;
           }
         }
       }
-      const analyticsLocations = parentChannelId.analyticsLocations;
       const tmp = closure_12();
-      const analyticsLocations2 = threadId(isEdit[17])(analyticsLocations).analyticsLocations;
-      let obj = parentChannelId(isEdit[18]);
+      const tmp2 = threadId;
+      const tmp4 = parentChannelId;
       const items = [ChannelStore];
       const items1 = [parentChannelId];
-      const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(parentChannelId), items1);
-      let obj3 = parentChannelId(isEdit[18]);
+      const stateFromStores = parentChannelId(isEdit[18]).useStateFromStores(
+        items,
+        () => ChannelStore.getChannel(parentChannelId),
+        items1,
+      );
+      let obj = parentChannelId(isEdit[18]);
       const items2 = [ChannelStore];
       const items3 = [threadId];
-      const stateFromStores1 = obj3.useStateFromStores(items2, () => ChannelStore.getChannel(threadId), items3);
+      const stateFromStores1 = parentChannelId(isEdit[18]).useStateFromStores(
+        items2,
+        () => ChannelStore.getChannel(threadId),
+        items3,
+      );
+      let obj3 = parentChannelId(isEdit[18]);
       const tmp6 = threadId(isEdit[19])(parentChannelId);
-      let obj4 = parentChannelId(isEdit[18]);
       const items4 = [ForumPostMessagesStore];
-      const stateFromStores2 = obj4.useStateFromStores(items4, () => {
+      const stateFromStores2 = parentChannelId(isEdit[18]).useStateFromStores(items4, () => {
         let firstMessage = null;
         if (null != threadId) {
           firstMessage = null;
@@ -530,28 +485,55 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return firstMessage;
       });
-      let obj5 = parentChannelId(isEdit[18]);
+      let obj4 = parentChannelId(isEdit[18]);
       const items5 = [handleClose];
-      const stateFromStores3 = obj5.useStateFromStores(items5, () => handleClose.isOpen());
-      let obj6 = parentChannelId(isEdit[25]);
-      obj6.useNavigatorBackPressHandler(() => {
+      const stateFromStores3 = parentChannelId(isEdit[18]).useStateFromStores(items5, () => handleClose.isOpen());
+      const obj5 = parentChannelId(isEdit[18]);
+      parentChannelId(isEdit[25]).useNavigatorBackPressHandler(() => {
         handleClose(false);
         return true;
       });
       let tmp11Result = null;
-      const tmp4 = parentChannelId;
       if (null != stateFromStores) {
         tmp11Result = null;
         if (stateFromStores.isForumLikeChannel()) {
           if (isEdit) {
             if (!isEdit) {
-              let obj7 = { style: tmp.container, importantForAccessibility: str, children: null };
-              str = undefined;
-              const AnalyticsLocationProvider = tmp4(tmp3[17]).AnalyticsLocationProvider;
+              let obj2 = {
+                value: threadId(isEdit[17])(parentChannelId.analyticsLocations).analyticsLocations,
+                children: null,
+              };
+              let obj7 = { style: tmp.container, importantForAccessibility: null, children: null };
+              let str;
               if (stateFromStores3) {
                 str = "no-hide-descendants";
               }
-              tmp11Result = <AnalyticsLocationProvider value={analyticsLocations2}>{null}</AnalyticsLocationProvider>;
+              obj7.importantForAccessibility = str;
+              let obj8 = {
+                parentChannel: stateFromStores,
+                thread: stateFromStores1,
+                message: stateFromStores2,
+                threadSettingsDraft: tmp6,
+                onClose: handleClose,
+                isEdit,
+              };
+              obj7.children = jsx(tmp2(tmp3[26]), {
+                parentChannel: stateFromStores,
+                thread: stateFromStores1,
+                message: stateFromStores2,
+                threadSettingsDraft: tmp6,
+                onClose: handleClose,
+                isEdit,
+              });
+              obj2.children = (
+                <stateFromStores style={tmp.container} importantForAccessibility={null}>
+                  {null}
+                </stateFromStores>
+              );
+              tmp11Result = jsx(tmp4(tmp3[17]).AnalyticsLocationProvider, {
+                value: threadId(isEdit[17])(parentChannelId.analyticsLocations).analyticsLocations,
+                children: null,
+              });
             } else {
               tmp11Result = null;
             }
@@ -562,6 +544,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11Result;
     };
-let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerModal.tsx");
-
-export default tmp3;

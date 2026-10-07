@@ -18,9 +18,8 @@ const items = [, , ,];
 const items1 = [, ,];
 ({ EXPLICIT_CONTENT: arr2[0], GORE_CONTENT: arr2[1], SELF_HARM_CONTENT: arr2[2] } = obj);
 const set = new Set(items);
-const set1 = new Set(items1);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ObscureMediaModels.tsx");
 
 export const ObscureReason = obj;
 export const SENSITIVE_CONTENT_OBSCURABLE_REASONS = set;
-export const AGE_VERIFICATION_OBSCURABLE_REASONS = set1;
+export const AGE_VERIFICATION_OBSCURABLE_REASONS = new Set(items1);

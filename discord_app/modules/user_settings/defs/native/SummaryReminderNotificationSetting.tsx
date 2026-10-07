@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SummaryReminderNotificationExperiment from "../../../notifications/summary_reminder/SummaryReminderNotificationExperiment.tsx";
@@ -8,27 +8,23 @@ import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-let obj = {
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.xEqC6q);
+    const intl = util.intl;
+    return intl.string(util.t.xEqC6q);
   },
   useDescription() {
-    const intl = intl2.intl;
-    return intl.string(intl2.t.KmVXll);
+    const intl = util.intl;
+    return intl.string(util.t.KmVXll);
   },
-  parent: MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: UserSettings.EnableSummaryReminderNotifications.useSetting,
   onValueChange: SummaryReminderNotificationUtils.onSummaryReminderNotificationSettingsChanged,
-  usePredicate: () => {
-    const obj = SummaryReminderNotificationExperiment;
-    return obj.useSummaryReminderNotificationExperiment("tabsV2Settings").showSettingsToggle;
-  },
-};
-const toggle = SettingBuilders.createToggle(obj);
+  usePredicate: () =>
+    SummaryReminderNotificationExperiment.useSummaryReminderNotificationExperiment("tabsV2Settings").showSettingsToggle,
+});
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
 
 export default toggle;

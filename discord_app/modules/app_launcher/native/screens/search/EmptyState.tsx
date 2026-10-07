@@ -1,50 +1,43 @@
 // discord_app/modules/app_launcher/native/screens/search/EmptyState.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import intl2 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let showsGenericMessage;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_5 = createStyles.createStyles({
   container: { position: "relative", justifyContent: "center", alignItems: "center" },
   textContainer: { justifyContent: "center", width: "100%" },
   text: { marginTop: 16, textAlign: "center" },
 });
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/EmptyState.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (showsGenericMessage) => {
-      let tmp10;
-      let tmp7;
-      let tmp8;
-      const obj = showsGenericMessage(576);
-      const cResult = obj.c(14);
+      const cResult = showsGenericMessage(576).c(14);
       showsGenericMessage = showsGenericMessage.showsGenericMessage;
       let tmp4 = undefined !== showsGenericMessage;
-      const query = showsGenericMessage.query;
       if (tmp4) {
         tmp4 = showsGenericMessage;
       }
       showsGenericMessage = tmp4;
       const tmp5 = closure_5();
-      const tmpResult = showsGenericMessage(11679);
-      const logAppLauncherEmptyStateView = tmpResult.useLogAppLauncherEmptyStateView(
+      const obj = showsGenericMessage(576);
+      const logAppLauncherEmptyStateView = showsGenericMessage(11679).useLogAppLauncherEmptyStateView(
         tmp(8961).AppLauncherEmptyStateType.SEARCH_EMPTY,
-        query,
+        showsGenericMessage.query,
       );
       if (cResult[0] !== tmp4) {
         const fn = function o() {
-          let stringResult;
-          const intl = intl2.intl;
+          const intl = util.intl;
           const string = intl.string;
-          const t = intl2.t;
+          const t = util.t;
           if (showsGenericMessage) {
-            stringResult = string(t.aOkFv8);
+            let stringResult = string(t.aOkFv8);
           } else {
             stringResult = string(t.LSNOYf);
           }
@@ -55,96 +48,94 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = tmp4;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp8 = items;
-        tmp7 = fn;
+        let tmp8 = items;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[1];
         tmp8 = cResult[2];
       }
-      const effect = react.useEffect(tmp7, tmp8);
+      const effect = noop.useEffect(tmp7, tmp8);
       if (cResult[3] !== tmp4) {
-        let stringResult;
         let intl = tmp(1126).intl;
         let string = intl.string;
-        let t = tmp(1126).t;
+        let aOkFv8 = tmp(1126).t;
         if (tmp4) {
-          stringResult = string(t.aOkFv8);
+          aOkFv8 = aOkFv8.aOkFv8;
+          let stringResult = string(aOkFv8);
         } else {
-          stringResult = string(t.LSNOYf);
+          stringResult = string(aOkFv8.LSNOYf);
         }
         cResult[3] = tmp4;
         cResult[4] = stringResult;
-        tmp10 = stringResult;
       } else {
-        tmp10 = cResult[4];
-      }
-      if (cResult[5] === tmp5.text) {
-        let tmp12;
-        if (cResult[6] === tmp10) {
-          tmp12 = cResult[7];
-        }
-        if (cResult[8] === tmp5.textContainer) {
-          let tmp14;
-          if (cResult[9] === tmp12) {
-            tmp14 = cResult[10];
+        if (cResult[5] === tmp5.text) {
+          if (cResult[6] === tmp10) {
+            let tmp13 = cResult[7];
           }
-          if (cResult[11] === tmp5.container) {
-            let tmp18;
-            if (cResult[12] === tmp14) {
-              tmp18 = cResult[13];
+          if (cResult[8] === tmp5.textContainer) {
+            if (cResult[9] === tmp13) {
+              let tmp16 = cResult[10];
             }
-            return tmp18;
+            if (cResult[11] === tmp5.container) {
+              if (cResult[12] === tmp16) {
+                let tmp20 = cResult[13];
+              }
+              return tmp20;
+            }
+            const obj2 = { style: tmp5.container, children: tmp16 };
+            const tmp23 = <View style={tmp5.container}>{tmp16}</View>;
+            cResult[11] = tmp5.container;
+            cResult[12] = tmp16;
+            cResult[13] = tmp23;
+            tmp20 = tmp23;
           }
-          const tmp21 = <View style={tmp5.container}>{tmp14}</View>;
-          cResult[11] = tmp5.container;
-          cResult[12] = tmp14;
-          cResult[13] = tmp21;
-          tmp18 = tmp21;
+          const obj3 = { style: tmp5.textContainer, children: tmp13 };
+          const tmp19 = <View style={tmp5.textContainer}>{tmp13}</View>;
+          cResult[8] = tmp5.textContainer;
+          cResult[9] = tmp13;
+          cResult[10] = tmp19;
+          tmp16 = tmp19;
         }
-        const tmp17 = <View style={tmp5.textContainer}>{tmp12}</View>;
-        cResult[8] = tmp5.textContainer;
-        cResult[9] = tmp12;
-        cResult[10] = tmp17;
-        tmp14 = tmp17;
+        const obj4 = { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] };
+        const tmp15 = jsx(tmp(4892).Text, {
+          style: tmp5.text,
+          variant: "text-sm/medium",
+          color: "text-default",
+          children: cResult[4],
+        });
+        cResult[5] = tmp5.text;
+        cResult[6] = cResult[4];
+        cResult[7] = tmp15;
+        tmp13 = tmp15;
       }
-      const tmp13 = jsx(showsGenericMessage(4892).Text, {
-        style: tmp5.text,
-        variant: "text-sm/medium",
-        color: "text-default",
-        children: tmp10,
-      });
-      cResult[5] = tmp5.text;
-      cResult[6] = tmp10;
-      cResult[7] = tmp13;
-      tmp12 = tmp13;
+      const tmpResult = showsGenericMessage(11679);
     }
   : (showsGenericMessage) => {
       let flag = showsGenericMessage.showsGenericMessage;
-      const query = showsGenericMessage.query;
       if (flag === undefined) {
         flag = false;
       }
       const tmp = closure_5();
-      const obj = flag(11679);
-      const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(
+      const logAppLauncherEmptyStateView = flag(11679).useLogAppLauncherEmptyStateView(
         flag(8961).AppLauncherEmptyStateType.SEARCH_EMPTY,
-        query,
+        showsGenericMessage.query,
       );
       const items = [flag];
-      const effect = react.useEffect(() => {
-        let stringResult;
-        const intl = intl2.intl;
+      const effect = noop.useEffect(() => {
+        const intl = util.intl;
         const string = intl.string;
-        const t = intl2.t;
+        const t = util.t;
         if (flag) {
-          stringResult = string(t.aOkFv8);
+          let stringResult = string(t.aOkFv8);
         } else {
           stringResult = string(t.LSNOYf);
         }
         const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(stringResult, "polite");
       }, items);
-      const Text = flag(4892).Text;
+      const obj2 = { style: tmp.container, children: null };
+      const obj3 = { style: tmp.textContainer, children: null };
+      const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
       let intl = flag(1126).intl;
       let string = intl.string;
       let t = flag(1126).t;
@@ -153,8 +144,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         stringResult = string(t.LSNOYf);
       }
+      obj4.children = stringResult;
+      obj3.children = jsx(flag(4892).Text, {
+        style: tmp.text,
+        variant: "text-sm/medium",
+        color: "text-default",
+        children: null,
+      });
+      obj2.children = <View style={tmp.textContainer}>{null}</View>;
       return <View style={tmp.container}>{null}</View>;
     };
-const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/EmptyState.tsx");
-
-export default tmp2;

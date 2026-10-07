@@ -1,37 +1,26 @@
 // discord_app/modules/activities/useDeveloperActivityShelfItems.tsx
-import Constants from "Constants.tsx";
-import react from "../../../_runtime/00019_react.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let closure_4 = Constants.DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+let closure_4 = fn(2011).DEFAULT_EMBEDDED_ACTIVITY_CONFIG;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
+
+export const useDeveloperActivityShelfItems = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let lastUsedObject;
-      let tmp10;
-      let tmp11;
-      let tmp13;
-      let tmp4;
-      let tmp5;
-      let tmp6;
-      let tmp9;
-      const tmp = lastUsedObject;
-      let obj = lastUsedObject(576);
-      const cResult = obj.c(13);
+      const cResult = lastUsedObject(576).c(13);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DeveloperActivityShelfStore];
         const fn = function s() {
-          const obj = {
+          return {
             isEnabled: DeveloperActivityShelfStore.getIsEnabled(),
             lastUsedObject: DeveloperActivityShelfStore.getLastUsedObject(),
           };
-          return obj;
         };
         const items1 = [];
-        let num = 0;
         cResult[0] = items;
-        let num2 = 1;
         cResult[1] = fn;
         cResult[2] = items1;
         tmp4 = items;
@@ -40,10 +29,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5, tmp6] = cResult;
       }
-      const tmpResult = tmp(504);
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5, tmp6);
+      let obj = lastUsedObject(576);
+      const stateFromStoresObject = lastUsedObject(504).useStateFromStoresObject(tmp4, tmp5, tmp6);
       lastUsedObject = stateFromStoresObject.lastUsedObject;
-      const isEnabled = stateFromStoresObject.isEnabled;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [DeveloperActivityShelfStore];
         const fn2 = function p() {
@@ -53,45 +41,41 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = items2;
         cResult[4] = fn2;
         cResult[5] = items3;
-        tmp11 = items3;
-        tmp10 = fn2;
-        tmp9 = items2;
+        let tmp11 = items3;
+        let tmp10 = fn2;
+        let tmp9 = items2;
       } else {
         tmp9 = cResult[3];
         tmp10 = cResult[4];
         tmp11 = cResult[5];
       }
-      const tmpResult2 = tmp(504);
-      const stateFromStoresArray = tmpResult2.useStateFromStoresArray(tmp9, tmp10, tmp11);
-      if (isEnabled) {
-        if (cResult[7] === stateFromStoresArray) {
-          let tmp15;
-          if (cResult[8] === lastUsedObject) {
-            tmp15 = cResult[9];
-          }
-          tmp13 = tmp15;
-        }
+      const tmpResult = lastUsedObject(504);
+      const stateFromStoresArray = lastUsedObject(504).useStateFromStoresArray(tmp9, tmp10, tmp11);
+      if (stateFromStoresObject.isEnabled) {
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
-            constructor(application) {
-              let obj2;
-              const obj = { application, activity: obj2 };
-              obj2 = { application_id: application.id };
-              const merged = Object.assign(closure_1_4);
-              const merged1 = Object.assign(application.embeddedActivityConfig);
+            constructor(arg0) {
+              obj = { application: arg0, activity: null };
+              obj1 = {};
+              merged = Object.assign(closure_1_4);
+              merged1 = Object.assign(arg0.embeddedActivityConfig);
+              obj1.application_id = arg0.id;
+              obj.activity = obj1;
               return obj;
             }
           }
           cResult[10] = E;
+          let mapped = E;
         } else {
           class E {
-            constructor(application) {
-              let obj2;
-              const obj = { application, activity: obj2 };
-              obj2 = { application_id: application.id };
-              const merged = Object.assign(closure_1_4);
-              const merged1 = Object.assign(application.embeddedActivityConfig);
+            constructor(arg0) {
+              obj = { application: arg0, activity: null };
+              obj1 = {};
+              merged = Object.assign(closure_1_4);
+              merged1 = Object.assign(arg0.embeddedActivityConfig);
+              obj1.application_id = arg0.id;
+              obj.activity = obj1;
               return obj;
             }
           }
@@ -99,10 +83,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] !== lastUsedObject) {
           class I {
             constructor(arg0, arg1) {
-              let num = 1;
-              if (null != lastUsedObject[arg0.application.id]) {
-                let num2 = -1;
-                if (null != lastUsedObject[arg1.application.id]) {
+              tmp = lastUsedObject[arg0.application.id];
+              tmp2 = lastUsedObject[arg1.application.id];
+              num = 1;
+              if (null != tmp) {
+                num2 = -1;
+                if (null != tmp2) {
                   num2 = tmp2 - tmp;
                 }
                 num = num2;
@@ -115,10 +101,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class I {
             constructor(arg0, arg1) {
-              let num = 1;
-              if (null != lastUsedObject[arg0.application.id]) {
-                let num2 = -1;
-                if (null != lastUsedObject[arg1.application.id]) {
+              tmp = lastUsedObject[arg0.application.id];
+              tmp2 = lastUsedObject[arg1.application.id];
+              num = 1;
+              if (null != tmp) {
+                num2 = -1;
+                if (null != tmp2) {
                   num2 = tmp2 - tmp;
                 }
                 num = num2;
@@ -127,19 +115,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const mapped = stateFromStoresArray.map(E);
+        mapped = stateFromStoresArray.map(mapped);
         const sorted = mapped.sort(I);
         cResult[7] = stateFromStoresArray;
         cResult[8] = lastUsedObject;
         cResult[9] = sorted;
-        tmp15 = sorted;
       } else {
         class I {
           constructor(arg0, arg1) {
-            let num = 1;
-            if (null != lastUsedObject[arg0.application.id]) {
-              let num2 = -1;
-              if (null != lastUsedObject[arg1.application.id]) {
+            tmp = lastUsedObject[arg0.application.id];
+            tmp2 = lastUsedObject[arg1.application.id];
+            num = 1;
+            if (null != tmp) {
+              num2 = -1;
+              if (null != tmp2) {
                 num2 = tmp2 - tmp;
               }
               num = num2;
@@ -150,10 +139,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
             constructor(arg0, arg1) {
-              let num = 1;
-              if (null != lastUsedObject[arg0.application.id]) {
-                let num2 = -1;
-                if (null != lastUsedObject[arg1.application.id]) {
+              tmp = lastUsedObject[arg0.application.id];
+              tmp2 = lastUsedObject[arg1.application.id];
+              num = 1;
+              if (null != tmp) {
+                num2 = -1;
+                if (null != tmp2) {
                   num2 = tmp2 - tmp;
                 }
                 num = num2;
@@ -162,14 +153,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[6] = tmp14;
-          tmp13 = tmp14;
         } else {
           class I {
             constructor(arg0, arg1) {
-              let num = 1;
-              if (null != lastUsedObject[arg0.application.id]) {
-                let num2 = -1;
-                if (null != lastUsedObject[arg1.application.id]) {
+              tmp = lastUsedObject[arg0.application.id];
+              tmp2 = lastUsedObject[arg1.application.id];
+              num = 1;
+              if (null != tmp) {
+                num2 = -1;
+                if (null != tmp2) {
                   num2 = tmp2 - tmp;
                 }
                 num = num2;
@@ -178,47 +170,46 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
+        return tmp14;
       }
-      return tmp13;
+      const tmpResult2 = lastUsedObject(504);
     }
   : () => {
-      let isEnabled;
-      let lastUsedObject;
-      let obj = isEnabled(lastUsedObject[5]);
       const items = [DeveloperActivityShelfStore];
-      const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-        const obj = {
+      const stateFromStoresObject = isEnabled(lastUsedObject[5]).useStateFromStoresObject(
+        items,
+        () => ({
           isEnabled: DeveloperActivityShelfStore.getIsEnabled(),
           lastUsedObject: DeveloperActivityShelfStore.getLastUsedObject(),
-        };
-        return obj;
-      }, []);
+        }),
+        [],
+      );
       isEnabled = stateFromStoresObject.isEnabled;
       lastUsedObject = stateFromStoresObject.lastUsedObject;
-      let obj2 = isEnabled(lastUsedObject[5]);
+      let obj = isEnabled(lastUsedObject[5]);
       const items1 = [DeveloperActivityShelfStore];
-      const stateFromStoresArray = obj2.useStateFromStoresArray(
+      const stateFromStoresArray = isEnabled(lastUsedObject[5]).useStateFromStoresArray(
         items1,
         () => DeveloperActivityShelfStore.getDeveloperShelfItems(),
         [],
       );
       const items2 = [stateFromStoresArray, isEnabled, lastUsedObject];
       return stateFromStoresArray.useMemo(() => {
-        let sorted;
         if (isEnabled) {
           const mapped = stateFromStoresArray.map((application) => {
-            let obj2;
-            const obj = { application, activity: obj2 };
-            obj2 = { application_id: application.id };
+            const obj = { application, activity: null };
+            const obj2 = {};
             const merged = Object.assign(closure_1_4);
             const merged1 = Object.assign(application.embeddedActivityConfig);
+            obj2.application_id = application.id;
+            obj.activity = obj2;
             return obj;
           });
-          sorted = mapped.sort((arg0, arg1) => {
+          let sorted = mapped.sort((arg0, arg1) => {
             let num = 1;
-            if (null != lastUsedObject[arg0.application.id]) {
+            if (null != dependencyMap[arg0.application.id]) {
               let num2 = -1;
-              if (null != lastUsedObject[arg1.application.id]) {
+              if (null != tmp2) {
                 num2 = tmp2 - tmp;
               }
               num = num2;
@@ -231,6 +222,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return sorted;
       }, items2);
     };
-const result = size.fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
-
-export const useDeveloperActivityShelfItems = tmp2;

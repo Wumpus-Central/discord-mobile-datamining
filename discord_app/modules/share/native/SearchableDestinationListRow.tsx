@@ -1,30 +1,22 @@
 // discord_app/modules/share/native/SearchableDestinationListRow.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import UserSearchUtils from "../../main_tabs_v2/UserSearchUtils.tsx";
-import _mod9509 from "../../autocompleter/index.tsx";
+import sortByMatchScore from "../../autocompleter/index.tsx";
 import UserRowDefault from "../../main_tabs_v2/native/shared_components/user_list/UserRow.tsx";
 import GroupDMRowDefault from "../../main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx";
 import ChannelRowDefault from "../../main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx";
 import formatResults from "../formatResults.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let _require, importDefault;
-
+require = fn;
 let closure_3 = ["result", "onPressDestination"];
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListRow.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (result) => {
-      let closure_0;
-      let closure_1;
-      let record;
-      let tmp5;
-      let type;
-      let obj = require("react");
-      const cResult = obj.c(24);
+      const cResult = require("c").c(24);
       if (cResult[0] !== result) {
         result = result.result;
         importDefault = result;
@@ -35,80 +27,80 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = onPressDestination;
         cResult[2] = tmp9;
         cResult[3] = result;
-        tmp5 = tmp9;
+        let tmp5 = tmp9;
       } else {
         _require = cResult[1];
         tmp5 = cResult[2];
         importDefault = cResult[3];
       }
       ({ type, record } = tmp6);
-      if (type === require("../../autocompleter/index.tsx").AutocompleterResultTypes.HEADER) {
+      if (type === require("sortByMatchScore").AutocompleterResultTypes.HEADER) {
         return null;
       } else {
         if (cResult[4] === tmp4) {
-          let tmp10;
           if (cResult[5] === tmp6) {
-            tmp10 = cResult[6];
+            let tmp10 = cResult[6];
           }
-          if (require("../../autocompleter/index.tsx").AutocompleterResultTypes.USER === type) {
-            let tmp30;
+          if (tmp(9509).AutocompleterResultTypes.USER === type) {
             if (cResult[7] !== record.id) {
-              const tmpResult = require("UserSearchUtils");
-              const relationshipType = tmpResult.getRelationshipType(record.id);
+              const relationshipType = tmp(7158).getRelationshipType(record.id);
               cResult[7] = record.id;
               cResult[8] = relationshipType;
-              tmp30 = relationshipType;
+              let tmp30 = relationshipType;
+              const tmpResult = tmp(7158);
             } else {
               tmp30 = cResult[8];
             }
             if (cResult[9] === tmp10) {
               if (cResult[10] === tmp5) {
                 if (cResult[11] === record) {
-                  let tmp32;
                   if (cResult[12] === tmp30) {
-                    tmp32 = cResult[13];
+                    let tmp32 = cResult[13];
                   }
                   return tmp32;
                 }
               }
             }
-            UserRowDefault;
+            const obj2 = {};
             const merged = Object.assign(tmp5);
-            const tmp39 = <tmp35 user={record} type={tmp30} onPress={tmp10} />;
+            obj2.user = record;
+            obj2.type = tmp30;
+            obj2.onPress = tmp10;
+            const tmp39 = jsx(UserRowDefault, {});
             cResult[9] = tmp10;
             cResult[10] = tmp5;
             cResult[11] = record;
             cResult[12] = tmp30;
             cResult[13] = tmp39;
             tmp32 = tmp39;
-          } else if (require("../../autocompleter/index.tsx").AutocompleterResultTypes.GROUP_DM === type) {
+          } else if (tmp(9509).AutocompleterResultTypes.GROUP_DM === type) {
             if (cResult[14] === tmp10) {
               if (cResult[15] === tmp5) {
-                let tmp22;
                 if (cResult[16] === record) {
-                  tmp22 = cResult[17];
+                  let tmp22 = cResult[17];
                 }
                 return tmp22;
               }
             }
-            GroupDMRowDefault;
+            const obj3 = {};
             const merged1 = Object.assign(tmp5);
-            const tmp29 = <tmp25 channel={record} onPress={tmp10} />;
+            obj3.channel = record;
+            obj3.onPress = tmp10;
+            const tmp29 = jsx(GroupDMRowDefault, {});
             cResult[14] = tmp10;
             cResult[15] = tmp5;
             cResult[16] = record;
             cResult[17] = tmp29;
             tmp22 = tmp29;
           } else {
-            if (require("../../autocompleter/index.tsx").AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-              if (require("../../autocompleter/index.tsx").AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-                let tmp12;
+            if (tmp(9509).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+              if (tmp(9509).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
                 if (cResult[22] !== type) {
-                  const tmpResult2 = require("GlobalUtils");
-                  const assertNeverResult = tmpResult2.assertNever(type);
+                  const assertNeverResult = tmp(1375).assertNever(type);
                   cResult[22] = type;
                   cResult[23] = assertNeverResult;
-                  tmp12 = assertNeverResult;
+                  let tmp12 = assertNeverResult;
+                  const tmpResult2 = tmp(1375);
                 } else {
                   tmp12 = cResult[23];
                 }
@@ -117,16 +109,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[18] === tmp10) {
               if (cResult[19] === tmp5) {
-                let tmp14;
                 if (cResult[20] === record) {
-                  tmp14 = cResult[21];
+                  let tmp14 = cResult[21];
                 }
                 return tmp14;
               }
             }
-            ChannelRowDefault;
+            const obj4 = {};
             const merged2 = Object.assign(tmp5);
-            const tmp21 = <tmp17 channel={record} onPress={tmp10} />;
+            obj4.channel = record;
+            obj4.onPress = tmp10;
+            const tmp21 = jsx(ChannelRowDefault, {});
             cResult[18] = tmp10;
             cResult[19] = tmp5;
             cResult[20] = record;
@@ -136,57 +129,52 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let fn;
         if (null != tmp4) {
-          fn = () => {
-            const obj = formatResults;
-            return closure_0(obj.getDestinationIdFromResult(closure_1));
-          };
+          fn = () => closure_0(formatResults.getDestinationIdFromResult(closure_1));
         }
         cResult[4] = tmp4;
         cResult[5] = tmp6;
         cResult[6] = fn;
         tmp10 = fn;
       }
+      const obj = require("c");
     }
   : (result) => {
-      let record;
-      let type;
       result = result.result;
       const require = result;
       const onPressDestination = result.onPressDestination;
       const merged = Object.assign(result, Object.assign({ result: 0, onPressDestination: 0 }));
       ({ type, record } = result);
-      if (type === _mod9509.AutocompleterResultTypes.HEADER) {
+      if (type === sortByMatchScore.AutocompleterResultTypes.HEADER) {
         return null;
       } else {
-        let fn;
         if (null != onPressDestination) {
-          fn = () => {
-            const obj = formatResults;
-            return onPressDestination(obj.getDestinationIdFromResult(require));
-          };
+          const fn = () => onPressDestination(formatResults.getDestinationIdFromResult(result));
         }
-        if (_mod9509.AutocompleterResultTypes.USER === type) {
-          onPressDestination(10615);
+        if (tmp2(9509).AutocompleterResultTypes.USER === type) {
+          const obj = {};
           const merged1 = Object.assign(merged);
-          const tmp2Result = UserSearchUtils;
-          return <tmp18 user={record} type={tmp2Result.getRelationshipType(record.id)} onPress={fn} />;
-        } else if (_mod9509.AutocompleterResultTypes.GROUP_DM === type) {
-          onPressDestination(10660);
+          obj.user = record;
+          const tmp18 = onPressDestination(10615);
+          obj.type = tmp2(7158).getRelationshipType(record.id);
+          obj.onPress = fn;
+          return <tmp18 />;
+        } else if (tmp2(9509).AutocompleterResultTypes.GROUP_DM === type) {
+          const obj2 = {};
           const merged2 = Object.assign(merged);
-          return <tmp12 channel={record} onPress={fn} />;
+          obj2.channel = record;
+          obj2.onPress = fn;
+          return jsx(onPressDestination(10660), {});
         } else {
-          if (_mod9509.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-            if (_mod9509.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-              const tmp2Result2 = GlobalUtils;
-              return tmp2Result2.assertNever(type);
+          if (tmp2(9509).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+            if (tmp2(9509).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+              return tmp2(1375).assertNever(type);
             }
           }
-          onPressDestination(10663);
+          const obj3 = {};
           const merged3 = Object.assign(merged);
-          return <tmp6 channel={record} onPress={fn} />;
+          obj3.channel = record;
+          obj3.onPress = fn;
+          return jsx(onPressDestination(10663), {});
         }
       }
     };
-let result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListRow.tsx");
-
-export default tmp3;

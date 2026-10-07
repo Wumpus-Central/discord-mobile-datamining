@@ -8,7 +8,7 @@ export const isConjurePublishCtaVisible = function isConjurePublishCtaVisible(pu
   let tmp = null != publish;
   if (tmp) {
     const status = publish.status;
-    let state;
+    state = undefined;
     if (status != null) {
       state = status.state;
     }
@@ -42,7 +42,11 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
   }
 };
 export const showsOutdatedNotice = function showsOutdatedNotice(publish) {
-  return null != publish && publish.isUpdate && null == publish.disabledReason && true !== publish.publishing;
+  let tmp = null != publish && publish.isUpdate && null == publish.disabledReason;
+  if (tmp) {
+    tmp = true !== publish.publishing;
+  }
+  return tmp;
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice) {
   if (notice.update) {
@@ -74,14 +78,23 @@ export const withLivePublishCard = function withLivePublishCard(stateFromStores1
     }
   }
   let mapped = stateFromStores1;
-  if (!stateFromStores1.every((publishCta) => null == publishCta.publishCta || publishCta.id === id)) {
+  if (
+    !stateFromStores1.every((publishCta) => {
+      let tmp = null == publishCta.publishCta;
+      if (!tmp) {
+        tmp = publishCta.id === id;
+      }
+      return tmp;
+    })
+  ) {
     mapped = stateFromStores1.map((publishCta) => {
       let tmp = publishCta;
       if (null != publishCta.publishCta) {
         tmp = publishCta;
         if (publishCta.id !== id) {
-          const obj = { publishCta: null };
+          const obj = {};
           const merged = Object.assign(publishCta);
+          obj.publishCta = null;
           tmp = obj;
         }
       }

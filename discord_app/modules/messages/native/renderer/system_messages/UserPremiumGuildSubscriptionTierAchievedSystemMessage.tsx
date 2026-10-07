@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx
-import intl3 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
@@ -8,61 +8,51 @@ import getNumSubscriptionsPurchasedFromSystemMessageDefault from "../../../../pr
 import GuildBoostingUtils from "../../../../../utils/GuildBoostingUtils.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx",
 );
 
 export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage =
   function createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, TIER_1) {
-    let tmp14Result;
-    let tmp14Result2;
     message = message.message;
-    const roleStyle = message.roleStyle;
     const channel = ChannelStore.getChannel(message.getChannelId());
     if (null == channel) {
-      const obj8 = UserPremiumGuildSubscriptionSystemMessage;
-      return obj8.createUserPremiumGuildSubscriptionSystemMessage(message);
+      return UserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
     } else {
-      const guild = GuildStore.getGuild(channel.getGuildId());
+      guild = GuildStore.getGuild(channel.getGuildId());
       if (null == guild) {
-        const obj7 = UserPremiumGuildSubscriptionSystemMessage;
-        return obj7.createUserPremiumGuildSubscriptionSystemMessage(message);
+        return UserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
       } else {
-        let formatToParts2Result;
         const tmp13 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
-        const obj9 = useAuthorWithProcessedColor;
-        const messageAuthorWithProcessedColor = obj9.getMessageAuthorWithProcessedColor(message);
-        const obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
+        const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+        const obj = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
         const tmp16 = formatUsernameOnClickDefault(obj);
         if (tmp13 > 1) {
-          const intl2 = intl3.intl;
-          const formatToParts2 = intl2.formatToParts;
+          const intl2 = util.intl;
           const obj2 = {
             username: messageAuthorWithProcessedColor.nick,
             usernameOnClick: tmp16,
             guildName: guild.name,
-            newTierName: tmp14Result.getTierName(TIER_1),
+            newTierName: GuildBoostingUtils.getTierName(TIER_1),
             numSubscriptions: tmp13,
           };
-          const GjNvr7 = intl3.t.GjNvr7;
-          tmp14Result = GuildBoostingUtils;
-          formatToParts2Result = formatToParts2(GjNvr7, obj2);
+          let formatToPartsResult = intl2.formatToParts(util.t.GjNvr7, obj2);
+          const tmp14Result = GuildBoostingUtils;
         } else {
-          const intl = intl3.intl;
-          const formatToParts = intl.formatToParts;
+          const intl = util.intl;
           const obj3 = {
             username: messageAuthorWithProcessedColor.nick,
             usernameOnClick: tmp16,
             guildName: guild.name,
-            newTierName: tmp14Result2.getTierName(TIER_1),
+            newTierName: GuildBoostingUtils.getTierName(TIER_1),
           };
-          const oAYAP7 = intl3.t.oAYAP7;
-          tmp14Result2 = GuildBoostingUtils;
-          formatToParts2Result = formatToParts(oAYAP7, obj3);
+          formatToPartsResult = intl.formatToParts(util.t.oAYAP7, obj3);
+          const tmp14Result2 = GuildBoostingUtils;
         }
-        const obj4 = { content: formatToParts2Result };
+        const obj4 = { content: formatToPartsResult };
         const merged = Object.assign(createCommonMessageDefault(message));
         return obj4;
       }

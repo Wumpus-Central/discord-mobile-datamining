@@ -29,7 +29,6 @@ const obj2 = {
   MIDNIGHT_PRISM: "MidnightPrismIcon",
 };
 const obj3 = { DRIP: "DripIcon", SLIMY: "SlimyIcon", ZOMBIE: "ZombieIcon", CLYDE_STEIN: "ClydeSteinIcon" };
-const obj4 = {};
 const merged = Object.assign(obj);
 const merged1 = Object.assign(obj2);
 const merged2 = Object.assign(obj3);
@@ -38,4 +37,4 @@ const result = size.fileFinishedImporting("modules/app_icons/AppIconTypes.tsx");
 export const FreemiumAppIconIds = obj;
 export const PremiumAppIconIds = obj2;
 export const LimitedTimeAppIconIds = obj3;
-export const MasterAppIconIds = obj4;
+export const MasterAppIconIds = {};

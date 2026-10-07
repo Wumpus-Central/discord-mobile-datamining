@@ -1,33 +1,16 @@
 // discord_app/modules/user_settings/quests/native/MobileSearchableSelect.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_12, dependencyMap, options;
-
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let rect;
-let react = react_mod;
-({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = react_native);
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  dropdownContainer: rect,
-  dropdownItem: obj2,
-  dropdownItemLast: { borderBottomWidth: 0 },
-  dropdownItemText: { fontSize: 14 },
-};
-rect = {
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
+const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   borderRadius: nativeDefault.radii.md,
   marginTop: nativeDefault.space.PX_4,
@@ -43,26 +26,21 @@ rect = {
   shadowRadius: 8,
   maxHeight: 250,
 };
-createStyles = createStyles.createStyles;
-obj2 = {
+obj2.dropdownContainer = rect;
+obj2.dropdownItem = {
   padding: nativeDefault.space.PX_12,
   borderBottomWidth: 1,
   borderBottomColor: nativeDefault.colors.BORDER_MUTED,
 };
-let closure_9 = createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.dropdownItemLast = { borderBottomWidth: 0 };
+obj2.dropdownItemText = { fontSize: 14 };
+let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (options) => {
-      let allowCustomValue;
-      let closure_7;
-      let disabled;
-      let isDisabled;
-      let placeholder;
-      let tmp4;
-      let tmp2 = dependencyMap;
-      let obj = options(576);
-      const cResult = obj.c(45);
+      const cResult = options(576).c(45);
       options = options.options;
-      const value = options.value;
+      value = options.value;
       dependencyMap = value;
       const onChange = options.onChange;
       ({ placeholder, allowCustomValue, isDisabled } = options);
@@ -74,41 +52,35 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = placeholder;
         cResult[1] = stringResult;
-        tmp4 = stringResult;
+        let tmp4 = stringResult;
       } else {
         tmp4 = cResult[1];
       }
-      react = tmp7;
+      noop = tmp7;
+      let obj = options(576);
       const tmp6 = undefined !== allowCustomValue && allowCustomValue;
       const dropdownItem = closure_9();
-      let obj2 = react;
       let str = value;
-      const useState = react.useState;
-      closure_9();
       if (value == null) {
         str = "";
       }
-      const tmp9 = onChange(useState(str), 2);
-      const str2 = tmp9[0];
-      let closure_6 = tmp9[1];
-      [r10046, closure_7] = onChange(obj2.useState(false), 2);
-      onChange(obj2.useState(false), 2);
-      const tmp11 = onChange(obj2.useState(false), 2);
+      const tmp9 = onChange(noop.useState(str), 2);
+      closure_6 = tmp9[1];
+      const tmp8 = closure_9();
+      [r10046, closure_7] = onChange(noop.useState(false), 2);
+      const tmp11 = onChange(noop.useState(false), 2);
       const first = tmp11[0];
       closure_9 = tmp11[1];
       if (cResult[2] === first) {
         if (cResult[3] === str2) {
-          let tmp13;
-          let tmp14;
           if (cResult[4] === value) {
-            tmp13 = cResult[5];
-            tmp14 = cResult[6];
+            let tmp13 = cResult[5];
+            let tmp14 = cResult[6];
           }
           const effect = obj2.useEffect(tmp13, tmp14);
           if (cResult[7] === options) {
-            let arr3;
             if (cResult[8] === str2) {
-              arr3 = cResult[9];
+              let arr3 = cResult[9];
             }
             let tmp17 = arr3;
             if (tmp6) {
@@ -116,13 +88,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               if (0 === arr3.length) {
                 tmp17 = arr3;
                 if ("" !== str2.trim()) {
-                  let tmp18;
-                  let tmp20;
                   if (cResult[10] !== str2) {
                     const trimmed = str2.trim();
                     cResult[10] = str2;
                     cResult[11] = trimmed;
-                    tmp18 = trimmed;
+                    let tmp18 = trimmed;
                   } else {
                     tmp18 = cResult[11];
                   }
@@ -130,43 +100,49 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     const trimmed1 = str2.trim();
                     cResult[12] = str2;
                     cResult[13] = trimmed1;
-                    tmp20 = trimmed1;
+                    let tmp20 = trimmed1;
                   } else {
                     tmp20 = cResult[13];
                   }
                   if (cResult[14] === tmp20) {
-                    let tmp22;
-                    if (cResult[15] === tmp18) {
-                      tmp22 = cResult[16];
-                    }
-                    tmp17 = tmp22;
                   }
                   const obj3 = { label: tmp18, value: tmp20 };
                   class J {
                     constructor() {
-                      if ("" !== str2.trim()) {
-                        onChange(str2);
-                        closure_9(false);
-                        closure_7(false);
+                      tmp = closure_5;
+                      if ("" !== closure_5.trim()) {
+                        tmp2 = onChange;
+                        tmp3 = onChange(tmp);
+                        tmp4 = closure_9;
+                        flag = false;
+                        tmp5 = closure_9(false);
+                        tmp6 = closure_7;
+                        tmp7 = closure_7(false);
                       }
+                      return;
                     }
                   }
                   tmp23[0] = obj3;
                   cResult[14] = tmp20;
                   cResult[15] = tmp18;
                   cResult[16] = tmp23;
-                  tmp22 = tmp23;
                 }
               }
             }
-            const length = tmp17;
+            arr3 = tmp17;
             if (cResult[17] !== options.length) {
               class A {
                 constructor(arg0) {
-                  closure_9(true);
-                  closure_6(arg0);
-                  const tmp4 = arg0.length > 0 || options.length > 0;
-                  closure_7(tmp4);
+                  tmp = closure_9(true);
+                  tmp2 = closure_6(options);
+                  tmp4 = options.length > 0;
+                  tmp3 = closure_7;
+                  if (!tmp4) {
+                    tmp5 = closure_0;
+                    tmp4 = closure_0.length > 0;
+                  }
+                  tmp3Result = tmp3(tmp4);
+                  return;
                 }
               }
               cResult[17] = options.length;
@@ -174,112 +150,136 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               class A {
                 constructor(arg0) {
-                  closure_9(true);
-                  closure_6(arg0);
-                  const tmp4 = arg0.length > 0 || options.length > 0;
-                  closure_7(tmp4);
+                  tmp = closure_9(true);
+                  tmp2 = closure_6(options);
+                  tmp4 = options.length > 0;
+                  tmp3 = closure_7;
+                  if (!tmp4) {
+                    tmp5 = closure_0;
+                    tmp4 = closure_0.length > 0;
+                  }
+                  tmp3Result = tmp3(tmp4);
+                  return;
                 }
               }
             }
             if (cResult[19] === onChange) {
-              let tmp26;
               class A {
                 constructor(arg0) {
-                  closure_9(true);
-                  closure_6(arg0);
-                  const tmp4 = arg0.length > 0 || options.length > 0;
-                  closure_7(tmp4);
+                  tmp = closure_9(true);
+                  tmp2 = closure_6(options);
+                  tmp4 = options.length > 0;
+                  tmp3 = closure_7;
+                  if (!tmp4) {
+                    tmp5 = closure_0;
+                    tmp4 = closure_0.length > 0;
+                  }
+                  tmp3Result = tmp3(tmp4);
+                  return;
                 }
               }
               if (cResult[22] !== onChange) {
                 class Y {
                   constructor(arg0) {
-                    closure_6(arg0);
-                    onChange(arg0);
-                    closure_9(false);
-                    closure_7(false);
+                    tmp = closure_6(options);
+                    tmp2 = onChange(options);
+                    tmp3 = closure_9(false);
+                    tmp4 = closure_7(false);
+                    return;
                   }
                 }
                 cResult[22] = onChange;
                 cResult[23] = Y;
-                tmp26 = Y;
               } else {
                 class Y {
                   constructor(arg0) {
-                    closure_6(arg0);
-                    onChange(arg0);
-                    closure_9(false);
-                    closure_7(false);
+                    tmp = closure_6(options);
+                    tmp2 = onChange(options);
+                    tmp3 = closure_9(false);
+                    tmp4 = closure_7(false);
+                    return;
                   }
                 }
               }
-              Y = tmp26;
+              closure_11 = Y;
               if (cResult[24] === options.length) {
                 class Y {
                   constructor(arg0) {
-                    closure_6(arg0);
-                    onChange(arg0);
-                    closure_9(false);
-                    closure_7(false);
+                    tmp = closure_6(options);
+                    tmp2 = onChange(options);
+                    tmp3 = closure_9(false);
+                    tmp4 = closure_7(false);
+                    return;
                   }
                 }
                 const _Symbol = Symbol;
                 if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
                   class Y {
                     constructor(arg0) {
-                      closure_6(arg0);
-                      onChange(arg0);
-                      closure_9(false);
-                      closure_7(false);
+                      tmp = closure_6(options);
+                      tmp2 = onChange(options);
+                      tmp3 = closure_9(false);
+                      tmp4 = closure_7(false);
+                      return;
                     }
                   }
-                  cResult[27] = tmp30;
+                  cResult[27] = tmp31;
                 } else {
                   class Y {
                     constructor(arg0) {
-                      closure_6(arg0);
-                      onChange(arg0);
-                      closure_9(false);
-                      closure_7(false);
+                      tmp = closure_6(options);
+                      tmp2 = onChange(options);
+                      tmp3 = closure_9(false);
+                      tmp4 = closure_7(false);
+                      return;
                     }
                   }
                 }
                 class J {
                   constructor() {
-                    if ("" !== str2.trim()) {
-                      onChange(str2);
-                      closure_9(false);
-                      closure_7(false);
+                    tmp = closure_5;
+                    if ("" !== closure_5.trim()) {
+                      tmp2 = onChange;
+                      tmp3 = onChange(tmp);
+                      tmp4 = closure_9;
+                      flag = false;
+                      tmp5 = closure_9(false);
+                      tmp6 = closure_7;
+                      tmp7 = closure_7(false);
                     }
+                    return;
                   }
                 }
                 if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
                   class Y {
                     constructor(arg0) {
-                      closure_6(arg0);
-                      onChange(arg0);
-                      closure_9(false);
-                      closure_7(false);
+                      tmp = closure_6(options);
+                      tmp2 = onChange(options);
+                      tmp3 = closure_9(false);
+                      tmp4 = closure_7(false);
+                      return;
                     }
                   }
-                  cResult[28] = tmp32;
+                  cResult[28] = tmp33;
                 } else {
                   class Y {
                     constructor(arg0) {
-                      closure_6(arg0);
-                      onChange(arg0);
-                      closure_9(false);
-                      closure_7(false);
+                      tmp = closure_6(options);
+                      tmp2 = onChange(options);
+                      tmp3 = closure_9(false);
+                      tmp4 = closure_7(false);
+                      return;
                     }
                   }
                 }
                 if (cResult[29] === A) {
                   class Y {
                     constructor(arg0) {
-                      closure_6(arg0);
-                      onChange(arg0);
-                      closure_9(false);
-                      closure_7(false);
+                      tmp = closure_6(options);
+                      tmp2 = onChange(options);
+                      tmp3 = closure_9(false);
+                      tmp4 = closure_7(false);
+                      return;
                     }
                   }
                 }
@@ -288,37 +288,45 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   value: str2,
                   onChange: A,
                   onSubmitEditing: J,
-                  onFocus: tmp27,
-                  onBlur: tmp30,
-                  leadingIcon: options(6555).MagnifyingGlassIcon,
+                  onFocus: tmp28,
+                  onBlur: tmp31,
+                  leadingIcon: tmp(6555).MagnifyingGlassIcon,
                   clearable: true,
                   returnKeyType: "search",
                   accessibilityRole: "search",
                   autoCorrect: false,
                   autoCapitalize: "none",
-                  disabled: undefined !== isDisabled && isDisabled,
+                  disabled: tmp7,
                 };
-                const TextField = tmp(6107).TextField;
+                const tmp36 = closure_7(tmp(6107).TextField, obj4);
                 cResult[29] = A;
-                cResult[30] = tmp27;
+                cResult[30] = tmp28;
                 cResult[31] = J;
-                cResult[32] = undefined !== isDisabled && isDisabled;
+                cResult[32] = tmp7;
                 cResult[33] = tmp4;
                 cResult[34] = str2;
-                cResult[35] = closure_7(TextField, obj4);
-                const tmp35 = closure_7(TextField, obj4);
+                cResult[35] = tmp36;
               }
               function ee() {
-                const tmp2 = str2.length > 0 || options.length > 0;
-                closure_7(tmp2);
+                let tmp2 = str2.length > 0;
+                if (!tmp2) {
+                  tmp2 = options.length > 0;
+                }
+                closure_1_7(tmp2);
               }
               class J {
                 constructor() {
-                  if ("" !== str2.trim()) {
-                    onChange(str2);
-                    closure_9(false);
-                    closure_7(false);
+                  tmp = closure_5;
+                  if ("" !== closure_5.trim()) {
+                    tmp2 = onChange;
+                    tmp3 = onChange(tmp);
+                    tmp4 = closure_9;
+                    flag = false;
+                    tmp5 = closure_9(false);
+                    tmp6 = closure_7;
+                    tmp7 = closure_7(false);
                   }
+                  return;
                 }
               }
               cResult[25] = str2.length;
@@ -326,11 +334,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             class J {
               constructor() {
-                if ("" !== str2.trim()) {
-                  onChange(str2);
-                  closure_9(false);
-                  closure_7(false);
+                tmp = closure_5;
+                if ("" !== closure_5.trim()) {
+                  tmp2 = onChange;
+                  tmp3 = onChange(tmp);
+                  tmp4 = closure_9;
+                  flag = false;
+                  tmp5 = closure_9(false);
+                  tmp6 = closure_7;
+                  tmp7 = closure_7(false);
                 }
+                return;
               }
             }
             cResult[19] = onChange;
@@ -341,19 +355,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if ("" !== str2.trim()) {
             class Y {
               constructor(arg0) {
-                closure_6(arg0);
-                onChange(arg0);
-                closure_9(false);
-                closure_7(false);
+                tmp = closure_6(options);
+                tmp2 = onChange(options);
+                tmp3 = closure_9(false);
+                tmp4 = closure_7(false);
+                return;
               }
             }
             found = options.filter((label) => {
-              const str = label.label;
-              const formatted = str.toLowerCase();
+              const formatted = label.label.toLowerCase();
               let hasItem = formatted.includes(closure_0);
               if (!hasItem) {
-                const str2 = label.value;
-                const formatted1 = str2.toLowerCase();
+                const formatted1 = label.value.toLowerCase();
                 hasItem = formatted1.includes(closure_0);
               }
               return hasItem;
@@ -366,35 +379,34 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function x() {
-        const tmp2 = null == dependencyMap || dependencyMap === str2 || first;
+        let tmp2 = null == value;
         if (!tmp2) {
-          closure_6(dependencyMap);
+          tmp2 = value === str2;
+        }
+        if (!tmp2) {
+          tmp2 = first;
+        }
+        if (!tmp2) {
+          closure_6(value);
         }
       };
-      let items = [value, str2, first];
+      let items = [value, tmp9[0], first];
       cResult[2] = first;
-      cResult[3] = str2;
+      cResult[3] = tmp9[0];
       cResult[4] = value;
       cResult[5] = fn;
       cResult[6] = items;
       tmp14 = items;
       tmp13 = fn;
+      const tmp10 = onChange(noop.useState(false), 2);
     }
   : (options) => {
-      let _undefined;
-      let c8;
-      let items6;
-      let obj5;
-      let tmp16Result;
-      let tmp6;
       options = options.options;
-      let value = options.value;
+      value = options.value;
       dependencyMap = value;
       const onChange = options.onChange;
       let placeholder = options.placeholder;
       if (placeholder === undefined) {
-        let tmp = options;
-        let tmp2 = dependencyMap;
         const intl = options(1126).intl;
         placeholder = intl.string(options(1126).t.XqMe3N);
       }
@@ -407,47 +419,48 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         flag2 = false;
       }
       value = undefined;
-      let closure_7;
+      closure_7 = undefined;
       c8 = undefined;
       let first1;
-      let closure_10;
+      closure_10 = undefined;
       let memo;
       closure_12 = undefined;
       const tmp3 = first1();
       const dropdownItem = tmp3;
-      let obj = flag;
       let str = value;
-      const useState = flag.useState;
       if (value == null) {
         str = "";
       }
-      let tmp4 = onChange(useState(str), 2);
+      let tmp4 = onChange(flag.useState(str), 2);
       value = tmp4[0];
       closure_7 = tmp4[1];
-      [tmp6, c8] = onChange(obj.useState(false), 2);
-      const tmp5 = onChange(obj.useState(false), 2);
-      const tmp7 = onChange(obj.useState(false), 2);
+      [tmp6, c8] = onChange(flag.useState(false), 2);
+      const tmp7 = onChange(flag.useState(false), 2);
       first1 = tmp7[0];
       closure_10 = tmp7[1];
       let items = [value, value, first1];
       const effect = obj.useEffect(() => {
-        const tmp2 = null == dependencyMap || dependencyMap === first || first1;
+        let tmp2 = null == value;
         if (!tmp2) {
-          closure_7(dependencyMap);
+          tmp2 = value === first;
+        }
+        if (!tmp2) {
+          tmp2 = first1;
+        }
+        if (!tmp2) {
+          closure_7(value);
         }
       }, items);
       const items1 = [options, value, flag];
       memo = obj.useMemo(() => {
         let found = options;
         if ("" !== first.trim()) {
-          let closure_0 = first.toLowerCase();
+          closure_0 = first.toLowerCase();
           found = options.filter((label) => {
-            const str = label.label;
-            const formatted = str.toLowerCase();
+            const formatted = label.label.toLowerCase();
             let hasItem = formatted.includes(closure_0);
             if (!hasItem) {
-              const str2 = label.value;
-              const formatted1 = str2.toLowerCase();
+              const formatted1 = label.value.toLowerCase();
               hasItem = formatted1.includes(closure_0);
             }
             return hasItem;
@@ -459,9 +472,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if (0 === found.length) {
             tmp = found;
             if ("" !== first.trim()) {
-              const items = [{ label: first.trim(), value: first.trim() }];
-              tmp = items;
               const obj = { label: first.trim(), value: first.trim() };
+              const items = [obj];
+              tmp = items;
             }
           }
         }
@@ -472,7 +485,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = obj.useCallback((arg0) => {
         closure_10(true);
         closure_7(arg0);
-        const tmp4 = arg0.length > 0 || options.length > 0;
+        let tmp4 = arg0.length > 0;
+        if (!tmp4) {
+          tmp4 = options.length > 0;
+        }
         _undefined(tmp4);
       }, items2);
       const items4 = [onChange];
@@ -491,70 +507,79 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       const items5 = [value.length, options.length];
       const callback2 = obj.useCallback(() => {
-        const tmp2 = first.length > 0 || options.length > 0;
+        let tmp2 = first.length > 0;
+        if (!tmp2) {
+          tmp2 = options.length > 0;
+        }
         _undefined(tmp2);
       }, items5);
-      let obj2 = { style: { position: "relative", zIndex: 100, overflow: "visible" }, children: items6 };
+      const obj2 = { style: { position: "relative", zIndex: 100, overflow: "visible" }, children: null };
       const callback3 = obj.useCallback(() => {
         _undefined(false);
         closure_10(false);
       }, []);
-      const obj3 = {
-        placeholder,
-        value,
-        onChange: callback,
-        onSubmitEditing: callback1,
-        onFocus: callback2,
-        onBlur: callback3,
-        leadingIcon: options(6555).MagnifyingGlassIcon,
-        clearable: true,
-        returnKeyType: "search",
-        accessibilityRole: "search",
-        autoCorrect: false,
-        autoCapitalize: "none",
-        disabled: flag2,
-      };
-      const TextField = options(6107).TextField;
-      items6 = [closure_7(TextField, obj3)];
       const tmp14 = c8;
+      const tmp5 = onChange(flag.useState(false), 2);
+      const items6 = [
+        closure_7(options(6107).TextField, {
+          placeholder,
+          value,
+          onChange: callback,
+          onSubmitEditing: callback1,
+          onFocus: callback2,
+          onBlur: callback3,
+          leadingIcon: options(6555).MagnifyingGlassIcon,
+          clearable: true,
+          returnKeyType: "search",
+          accessibilityRole: "search",
+          autoCorrect: false,
+          autoCapitalize: "none",
+          disabled: flag2,
+        }),
+      ];
       if (tmp16Result) {
         tmp16Result = memo.length > 0;
       }
       if (tmp16Result) {
-        const obj4 = { style: tmp3.dropdownContainer, children: closure_7(dropdownItem, obj5) };
-        obj5 = {
+        const obj4 = { style: tmp3.dropdownContainer, children: null };
+        const obj5 = {
           nestedScrollEnabled: true,
           showsVerticalScrollIndicator: false,
           keyboardShouldPersistTaps: "handled",
           children: memo.map((children, index) => {
-            let obj2;
+            value = children;
             const items = [dropdownItem.dropdownItem];
-            const dropdownItemLast = index === memo.length - 1 && dropdownItem.dropdownItemLast;
-            items[1] = dropdownItemLast;
+            let dropdownItemLast = index === memo.length - 1;
+            if (dropdownItemLast) {
+              dropdownItemLast = dropdownItem.dropdownItemLast;
+            }
             const obj = {
               style: items,
               activeOpacity: 0.7,
               onPress() {
-                closure_12(children.value);
+                closure_12(value.value);
               },
               disabled: flag2,
-              children: closure_7(options(dependencyMap[11]).Text, obj2),
+              children: closure_7(options(value[11]).Text, {
+                variant: "text-sm/medium",
+                color: "text-default",
+                style: dropdownItem.dropdownItemText,
+                children: children.label,
+              }),
             };
-            obj2 = {
-              variant: "text-sm/medium",
-              color: "text-default",
-              style: dropdownItem.dropdownItemText,
-              children: children.label,
-            };
+            items[1] = dropdownItemLast;
             return closure_7(first, obj, "option-" + children.value + "-" + index);
           }),
         };
+        obj4.children = tmp16(dropdownItem, obj5);
         tmp16Result = tmp16(tmp15, obj4);
       }
       items6[1] = tmp16Result;
+      obj2.children = items6;
       return tmp14(flag2, obj2);
     };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileSearchableSelect.tsx");
 
-export default tmp5;
-export const MobileSearchableSelect = tmp5;
+export default tmp4;
+export const MobileSearchableSelect = tmp4;

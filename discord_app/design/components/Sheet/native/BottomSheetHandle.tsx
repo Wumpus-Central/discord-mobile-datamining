@@ -1,16 +1,16 @@
 // discord_app/design/components/Sheet/native/BottomSheetHandle.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../_runtime/00576_c.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
+
+export const useBottomSheetImperativeHandle = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let tmp2;
-      let tmp3;
-      let closure_0 = arg1;
-      const obj = react2;
-      const cResult = obj.c(3);
+      closure_0 = arg1;
+      const cResult = c.c(3);
       if (cResult[0] !== arg1) {
         const fn = function c() {
           return {
@@ -55,18 +55,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = arg1;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp3 = items;
-        tmp2 = fn;
+        let tmp3 = items;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
       }
-      const imperativeHandle = react.useImperativeHandle(arg0, tmp2, tmp3);
+      const imperativeHandle = noop.useImperativeHandle(arg0, tmp2, tmp3);
     }
   : (arg0, arg1) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       const items = [arg1];
-      const imperativeHandle = react.useImperativeHandle(
+      const imperativeHandle = noop.useImperativeHandle(
         arg0,
         () => ({
           expandActionSheet() {
@@ -108,6 +108,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
     };
-const result = size.fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
-
-export const useBottomSheetImperativeHandle = tmp2;

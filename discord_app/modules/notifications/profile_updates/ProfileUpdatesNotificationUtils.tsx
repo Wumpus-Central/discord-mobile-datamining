@@ -14,7 +14,8 @@ export const onProfileUpdatesNotificationSettingsChanged = function onProfileUpd
 ) {
   const EnableProfileUpdatesNotifications = UserSettings.EnableProfileUpdatesNotifications;
   EnableProfileUpdatesNotifications.updateSetting(profile_updates_notifications);
-  const obj = AnalyticsUtilsDefault;
-  const obj2 = { update_type: constants.ACCOUNT, profile_updates_notifications };
-  obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj2);
+  AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    profile_updates_notifications,
+  });
 };

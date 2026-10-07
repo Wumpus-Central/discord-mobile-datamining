@@ -4,7 +4,9 @@ import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.t
 import size from "../../../_runtime/metro/00002__.js";
 
 const Permissions = Constants.Permissions;
-const combineResult = BigFlagUtils.combine(
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyConstants.tsx");
+
+export const MemberSafetyPagePermissions = BigFlagUtils.combine(
   Permissions.ADMINISTRATOR,
   Permissions.MANAGE_GUILD,
   Permissions.BAN_MEMBERS,
@@ -13,6 +15,3 @@ const combineResult = BigFlagUtils.combine(
   Permissions.MANAGE_ROLES,
   Permissions.MANAGE_NICKNAMES,
 );
-const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyConstants.tsx");
-
-export const MemberSafetyPagePermissions = combineResult;

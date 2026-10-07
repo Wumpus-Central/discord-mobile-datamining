@@ -1,37 +1,32 @@
 // discord_app/modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import useGameServerPerkDefault from "../../../game_server/hooks/useGameServerPerk.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
-import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, importDefault;
 
+require = fn;
+const GuildPowerupsConstants = fn(4774);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
-const GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET = GuildPowerupsConstants.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET;
 let items = [
-  ...Array.from(_module.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET),
-  ...Array.from(GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET),
-  Powerups.VANITY_URL_POWERUP_SKU_ID,
+  ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET),
+  ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET),
+  fn(4777).VANITY_URL_POWERUP_SKU_ID,
 ];
 let set = new Set(items);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function (arg0) {
-      let closure_0;
-      let first;
-      let tmp10;
-      let tmp14;
-      let tmp6;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(13);
+      const cResult = require("c").c(13);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildPowerupsStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -49,26 +44,27 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       const tmp8 = useGameServerPerkDefault(arg0);
-      const tmpResult2 = require("ServerThemeExperiment");
-      const serverThemeRollbackEnabled = tmpResult2.useServerThemeRollbackEnabled(arg0, "useMarketablePowerupPerks");
+      const tmpResult = require("initialize");
+      const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(
+        arg0,
+        "useMarketablePowerupPerks",
+      );
       if (cResult[3] !== serverThemeRollbackEnabled) {
         const _Set = Set;
-        const self2 = this;
-        const self = this;
         set = new Set(set);
         if (serverThemeRollbackEnabled) {
-          set.add(require("Powerups").GUILD_POWERUP_GUILD_THEME_SKU_ID);
+          set.add(tmp(4777).GUILD_POWERUP_GUILD_THEME_SKU_ID);
         }
         cResult[3] = serverThemeRollbackEnabled;
         cResult[4] = set;
-        tmp10 = set;
+        let tmp10 = set;
       } else {
         tmp10 = cResult[4];
       }
@@ -80,45 +76,40 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[5] = stateFromStores;
         cResult[6] = items1;
-        tmp14 = items1;
+        let tmp16 = items1;
       } else {
-        tmp14 = cResult[6];
+        tmp16 = cResult[6];
       }
       if (cResult[7] === tmp8) {
-        let arr3;
-        if (cResult[8] === tmp14) {
-          arr3 = cResult[9];
+        if (cResult[8] === tmp16) {
+          let arr3 = cResult[9];
         }
         if (cResult[10] === arr3) {
-          let tmp17;
           if (cResult[11] === tmp10) {
-            tmp17 = cResult[12];
+            let tmp19 = cResult[12];
           }
-          return tmp17;
+          return tmp19;
         }
         const found = arr3.filter((skuId) => !set.has(skuId.skuId));
         cResult[10] = arr3;
         cResult[11] = tmp10;
         cResult[12] = found;
-        tmp17 = found;
+        tmp19 = found;
       }
-      const items2 = [...tmp14];
+      const items2 = [...tmp16];
       if (null != tmp8) {
         items2.push(tmp8);
       }
       cResult[7] = tmp8;
-      cResult[8] = tmp14;
+      cResult[8] = tmp16;
       cResult[9] = items2;
       arr3 = items2;
+      const tmpResult2 = require("ServerThemeExperiment");
     }
   : (arg0) => {
-      let closure_0;
-      let closure_2;
-      let memo;
       _require = arg0;
       let items = [memo];
-      const obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(items, () => {
+      const stateFromStores = require("initialize").useStateFromStores(items, () => {
         const stateForGuild = GuildPowerupsStore.getStateForGuild(closure_0);
         let tmp2;
         if (stateForGuild != null) {
@@ -131,8 +122,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       });
       let tmp2 = stateFromStores(12250)(arg0);
       dependencyMap = tmp2;
-      const obj2 = require("ServerThemeExperiment");
-      const serverThemeRollbackEnabled = obj2.useServerThemeRollbackEnabled(arg0, "useMarketablePowerupPerks");
+      const obj = require("initialize");
+      const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(
+        arg0,
+        "useMarketablePowerupPerks",
+      );
       let items1 = [serverThemeRollbackEnabled];
       memo = serverThemeRollbackEnabled.useMemo(() => {
         set = new Set(set);
@@ -154,6 +148,3 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return items1.filter((skuId) => !set.has(skuId.skuId));
       }, items2);
     };
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
-
-export default tmp4;

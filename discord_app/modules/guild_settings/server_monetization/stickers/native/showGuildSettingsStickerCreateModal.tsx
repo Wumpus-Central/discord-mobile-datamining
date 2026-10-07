@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/showGuildSettingsStickerCreateModal.tsx
-import asyncRequire from "../../../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
@@ -9,10 +9,11 @@ const result = size.fileFinishedImporting(
 );
 
 export default function showGuildSettingsStickerCreateModal(merged) {
-  const obj = ActionSheetActionCreatorsDefault;
-  obj.hideActionSheet();
-  const obj2 = ModalActionCreatorsDefault;
-  obj2.pushLazy(asyncRequire(17796, dependencyMap.paths), merged, "guild-settings-sticker-create", {
-    presentation: "modal",
-  });
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  ModalActionCreatorsDefault.pushLazy(
+    asyncRequireImpl(17796, dependencyMap.paths),
+    merged,
+    "guild-settings-sticker-create",
+    { presentation: "modal" },
+  );
 }

@@ -4,18 +4,17 @@ import SpotifyConstants from "../../spotify/SpotifyConstants.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
 ({ ActivityTypes: c2, PlatformTypes: c3 } = Constants);
 const isSpotifyParty = SpotifyConstants.isSpotifyParty;
 const result = size.fileFinishedImporting("modules/activities/utils/isListeningOnSpotify.tsx");
 
 export default function isListeningOnSpotify(type) {
-  let tmp = null != type && type.type === constants.LISTENING;
+  let tmp = null != type;
   if (tmp) {
-    const name = type.name;
-    const obj = PlatformsDefault;
-    tmp = name === obj.get(constants2.SPOTIFY).name;
+    tmp = type.type === constants.LISTENING;
+  }
+  if (tmp) {
+    tmp = type.name === PlatformsDefault.get(constants2.SPOTIFY).name;
   }
   if (tmp) {
     tmp = null != type.party;

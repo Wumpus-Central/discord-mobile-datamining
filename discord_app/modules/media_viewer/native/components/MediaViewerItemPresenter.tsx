@@ -1,38 +1,19 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItemPresenter.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
-({ View: closure_4, StyleSheet: hasOwnProperty } = react_native);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
 let closure_8 = {
   code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,0]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}",
 };
-let size = size_mod;
+let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
 
 export default function MediaViewerItemPresenter(windowHeight) {
-  let handleError;
-  let handleLoad;
-  let handleLoadStart;
-  let index;
-  let items2;
-  let loads;
-  let obj8;
-  let obj9;
-  let originLayout;
-  let panGestureConfig;
-  let renderMedia;
-  let source;
-  let str5;
-  let tmp18;
-  let tmp19;
-  let windowWidth;
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
   windowHeight = windowHeight.windowHeight;
   const entranceAnimationDriver = windowHeight.entranceAnimationDriver;
@@ -42,75 +23,99 @@ export default function MediaViewerItemPresenter(windowHeight) {
   let diff3;
   let width2;
   let height2;
-  const useItemVisible = windowHeight.useItemVisible;
-  let obj = windowWidth(entranceAnimationDriver[3]);
-  const entranceAnimation = obj.useEntranceAnimation(entranceAnimationDriver);
+  const entranceAnimation = windowWidth(entranceAnimationDriver[3]).useEntranceAnimation(entranceAnimationDriver);
   ({ loads, handleLoad, handleError, handleLoadStart } = entranceAnimation);
-  let obj2 = windowWidth(entranceAnimationDriver[4]);
-  const mediaItemHasSpoiler = obj2.useMediaItemHasSpoiler(index);
-  size = windowHeight(entranceAnimationDriver[5])(windowWidth, windowHeight, source);
+  let obj = windowWidth(entranceAnimationDriver[3]);
+  const mediaItemHasSpoiler = windowWidth(entranceAnimationDriver[4]).useMediaItemHasSpoiler(index);
+  let size = windowHeight(entranceAnimationDriver[5])(windowWidth, windowHeight, source);
   const width = size.width;
   const height = size.height;
-  const itemVisible = useItemVisible(index);
+  const itemVisible = windowHeight.useItemVisible(index);
   let items = [];
-  const tmp5 = windowHeight;
   if (Array.isArray(source)) {
     if (loads <= 1) {
       let obj3 = {
-        key: "0:" + index + ":" + source[0].uri,
-        onLoadStart: handleLoadStart,
-        onLoad: handleLoad,
-        onError: handleError,
-        source: source[0],
-        style: diff3.platformStyles,
-        index,
-        hasSpoiler: mediaItemHasSpoiler,
-        visible: itemVisible,
-        panGestureConfig,
+        key: null,
+        onLoadStart: null,
+        onLoad: null,
+        onError: null,
+        source: null,
+        style: null,
+        index: null,
+        hasSpoiler: null,
+        visible: null,
+        panGestureConfig: null,
       };
       const _HermesInternal2 = HermesInternal;
-      const push2 = items.push;
-      push2(renderMedia(obj3));
+      obj3.key = "0:" + index + ":" + source[0].uri;
+      obj3.onLoadStart = handleLoadStart;
+      obj3.onLoad = handleLoad;
+      obj3.onError = handleError;
+      obj3.source = source[0];
+      obj3.style = diff3.platformStyles;
+      obj3.index = index;
+      obj3.hasSpoiler = mediaItemHasSpoiler;
+      obj3.visible = itemVisible;
+      obj3.panGestureConfig = panGestureConfig;
+      items.push(renderMedia(obj3));
     }
     if (loads >= 1) {
       let obj4 = {
-        key: "1:" + index + ":" + source[0].uri,
-        source: source[1],
-        style: diff3.platformStyles,
-        onLoad: handleLoad,
-        onError: handleError,
-        pointerEvents: str5,
+        key: null,
+        source: null,
+        style: null,
+        onLoad: null,
+        onError: null,
+        pointerEvents: null,
         fadeDuration: 0,
         fade: false,
-        index,
-        hasSpoiler: mediaItemHasSpoiler,
-        visible: itemVisible,
-        panGestureConfig,
+        index: null,
+        hasSpoiler: null,
+        visible: null,
+        panGestureConfig: null,
       };
       const _HermesInternal3 = HermesInternal;
-      const push3 = items.push;
-      str5 = "auto";
-      if (loads <= 1) {
+      obj4.key = "1:" + index + ":" + source[0].uri;
+      obj4.source = source[1];
+      obj4.style = diff3.platformStyles;
+      obj4.onLoad = handleLoad;
+      obj4.onError = handleError;
+      let str5 = "auto";
+      if (tmp9) {
         str5 = "none";
       }
-      push3(renderMedia(obj4));
+      obj4.pointerEvents = str5;
+      obj4.index = index;
+      obj4.hasSpoiler = mediaItemHasSpoiler;
+      obj4.visible = itemVisible;
+      obj4.panGestureConfig = panGestureConfig;
+      items.push(renderMedia(obj4));
     }
   } else {
     let obj5 = {
-      key: "0:" + index + ":" + source.uri,
-      onLoadStart: handleLoadStart,
-      onLoad: handleLoad,
-      onError: handleError,
-      source,
-      style: diff3.platformStyles,
-      index,
-      hasSpoiler: mediaItemHasSpoiler,
-      visible: itemVisible,
-      panGestureConfig,
+      key: null,
+      onLoadStart: null,
+      onLoad: null,
+      onError: null,
+      source: null,
+      style: null,
+      index: null,
+      hasSpoiler: null,
+      visible: null,
+      panGestureConfig: null,
     };
     const _HermesInternal = HermesInternal;
-    const push = items.push;
-    push(renderMedia(obj5));
+    obj5.key = "0:" + index + ":" + source.uri;
+    obj5.onLoadStart = handleLoadStart;
+    obj5.onLoad = handleLoad;
+    obj5.onError = handleError;
+    obj5.source = source;
+    obj5.style = diff3.platformStyles;
+    obj5.index = index;
+    obj5.hasSpoiler = mediaItemHasSpoiler;
+    obj5.visible = itemVisible;
+    obj5.panGestureConfig = panGestureConfig;
+    items.push(renderMedia(obj5));
   }
   const result = width / height;
   let diff = originLayout.x - (width - originLayout.width) / 2 - (windowWidth - width) / 2;
@@ -125,8 +130,8 @@ export default function MediaViewerItemPresenter(windowHeight) {
     height2 = originLayout.height;
     diff2 = originLayout.x - (windowWidth - width) / 2;
     diff3 = originLayout.y - result1;
-    tmp18 = height2;
-    tmp19 = width2;
+    let tmp18 = height2;
+    let tmp19 = width2;
     diff1 = diff3;
     diff = diff2;
     num3 = 1;
@@ -139,50 +144,51 @@ export default function MediaViewerItemPresenter(windowHeight) {
     tmp18 = height;
     tmp19 = width;
   }
-  const tmpResult = windowWidth(entranceAnimationDriver[6]);
+  let obj2 = windowWidth(entranceAnimationDriver[4]);
+  const tmp5 = windowHeight;
   class F {
     constructor() {
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let items5;
-      let obj2;
-      let obj3;
-      let obj4;
-      let obj5;
-      let obj6;
-      let obj8;
-      const value = entranceAnimationDriver.get();
-      size = {
-        height: obj2.interpolate(value, [0, 1], items, ReanimatedRexport.Extrapolation.CLAMP),
-        width: obj3.interpolate(value, [0, 1], items1, ReanimatedRexport.Extrapolation.CLAMP),
-        top: obj4.interpolate(value, [0, 1], items2, ReanimatedRexport.Extrapolation.CLAMP),
-        left: obj5.interpolate(value, [0, 1], items3, ReanimatedRexport.Extrapolation.CLAMP),
-        borderRadius: obj6.interpolate(value, [0, 0.25], [16, 0], ReanimatedRexport.Extrapolation.CLAMP),
-        transform: items5,
-      };
-      items = [height2, height];
-      items1 = [width2, width];
-      obj2 = ReanimatedRexport;
-      items2 = [diff3, 0];
-      obj3 = ReanimatedRexport;
-      items3 = [diff2, 0];
-      obj4 = ReanimatedRexport;
-      obj5 = ReanimatedRexport;
-      obj6 = ReanimatedRexport;
-      const obj = { scale: obj8.interpolate(value, [0, 1], items4, ReanimatedRexport.Extrapolation.CLAMP) };
-      items4 = [num3, 1];
-      items5 = [obj];
-      obj8 = ReanimatedRexport;
+      value = entranceAnimationDriver.get();
+      size = { height: null, width: null, top: null, left: null, borderRadius: null, transform: null };
+      items = [,];
+      items[0] = height;
+      items[1] = height;
+      obj2 = closure_0(closure_2[6]);
+      size.height = obj2.interpolate(value, [0, 1], items, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      items1 = [,];
+      items1[0] = width;
+      items1[1] = width;
+      obj3 = closure_0(closure_2[6]);
+      size.width = obj3.interpolate(value, [0, 1], items1, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      items2 = [,];
+      items2[0] = closure_7;
+      items2[1] = 0;
+      obj4 = closure_0(closure_2[6]);
+      size.top = obj4.interpolate(value, [0, 1], items2, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      items3 = [,];
+      items3[0] = closure_6;
+      items3[1] = 0;
+      obj5 = closure_0(closure_2[6]);
+      size.left = obj5.interpolate(value, [0, 1], items3, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      obj6 = closure_0(closure_2[6]);
+      size.borderRadius = obj6.interpolate(value, [0, 0.25], [16, 0], closure_0(closure_2[6]).Extrapolation.CLAMP);
+      obj1 = { scale: null };
+      items4 = [,];
+      items4[0] = closure_5;
+      items4[1] = 1;
+      obj8 = closure_0(closure_2[6]);
+      obj1.scale = obj8.interpolate(value, [0, 1], items4, closure_0(closure_2[6]).Extrapolation.CLAMP);
+      items5 = [];
+      items5[0] = obj1;
+      size.transform = items5;
       return size;
     }
   }
-  let obj6 = {
+  const tmpResult = windowWidth(entranceAnimationDriver[6]);
+  F.__closure = {
     entranceAnimationDriver,
-    interpolate: tmp(tmp2[6]).interpolate,
-    Extrapolation: tmp(tmp2[6]).Extrapolation,
+    interpolate: windowWidth(entranceAnimationDriver[6]).interpolate,
+    Extrapolation: windowWidth(entranceAnimationDriver[6]).Extrapolation,
     startHeight: tmp18,
     sourceHeight: height,
     startWidth: tmp19,
@@ -191,21 +197,24 @@ export default function MediaViewerItemPresenter(windowHeight) {
     startTranslateX: diff,
     startScale: num3,
   };
-  F.__closure = obj6;
   F.__workletHash = 15052076990644;
   F.__initData = width2;
   let items1 = [windowWidth, windowHeight, width, height];
   const animatedStyle = tmpResult.useAnimatedStyle(F);
   const memo = width.useMemo(() => {
-    let size1;
-    const obj = { container: size, child: size1, presenter: { position: "relative", overflow: "hidden", opacity: 1 } };
-    size = { width: windowWidth, height: windowHeight, alignItems: "center", justifyContent: "center" };
-    size1 = { width, height };
+    const obj = { container: null, child: null, presenter: { position: "relative", overflow: "hidden", opacity: 1 } };
+    const size = { width: windowWidth, height: windowHeight, alignItems: "center", justifyContent: "center" };
+    obj.container = size;
+    const size1 = { width, height };
+    obj.child = size1;
     return hasOwnProperty.create(obj);
   }, items1);
-  const obj7 = { collapsable: false, style: memo.container, children: diff2(height, obj8) };
-  obj8 = { style: memo.child, children: diff2(tmp5(entranceAnimationDriver[7]), obj9) };
-  obj9 = { style: items2, children: items };
-  items2 = [memo.presenter, animatedStyle];
+  const obj7 = { collapsable: false, style: memo.container, children: null };
+  const obj8 = { style: memo.child, children: null };
+  const obj9 = { style: null, children: items };
+  let items2 = [memo.presenter, animatedStyle];
+  obj9.style = items2;
+  obj8.children = diff2(tmp5(entranceAnimationDriver[7]), obj9);
+  obj7.children = diff2(height, obj8);
   return diff2(height, obj7);
 }

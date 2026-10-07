@@ -1,445 +1,280 @@
 // discord_app/modules/activities/utils/confirmActivityLaunchChecks.tsx
-import Constants from "../../../Constants.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let c5, c7, c8, closure_5, selfEmbeddedActivities;
-
+const require = fn;
 function getOrFetchApplicationForLaunch() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _getOrFetchApplicationForLaunch() {
-  obj = _asyncToGenerator(async function (applicationId) {
-    let aPIError;
-    let c0;
-    let c1;
-    let c2;
-    if (c8 === 2) {
-      c8 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (applicationId === 1) {
-        throw value;
-      } else if (applicationId === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      let c6;
-      try {
-        let closure_4;
-        let channelId;
-        let guildId;
-        let PRIVATE_CHANNEL;
-        c8 = 2;
-        if (0 === c7) {
-          if (applicationId === 1) {
-            c8 = 3;
-            throw value;
-          } else if (applicationId === 2) {
-            c8 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_4 = tmp;
-            let closure_3 = tmp4;
-            applicationId = undefined;
-            channelId = undefined;
-            guildId = undefined;
-            ({ applicationId: c0, channelId: c1, guildId: c2 } = closure_0);
-            PRIVATE_CHANNEL = undefined;
-            c7 = 1;
-            c8 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === c7) {
-          if (applicationId === 1) {
-            c8 = 3;
-            throw value;
-          } else if (applicationId === 2) {
-            c8 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            c6 = 1;
-            c7 = 3;
-            c8 = 1;
-            const obj5 = { value: closure_132_1(closure_132_2[4])(applicationId, channelId), done: false };
-            return obj5;
-          }
-        } else if (2 === c7) {
-          c6 = 0;
-          closure_4 = closure_5;
-          if (null != guildId) {
-            PRIVATE_CHANNEL = closure_132_0(closure_132_2[5]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
-          } else {
-            PRIVATE_CHANNEL = closure_132_0(closure_132_2[5]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
-          }
-          const obj6 = {
-            type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-            nonce: "",
-            applicationId,
-            channelId,
-            guildId,
-            error: aPIError,
-            locationKind: PRIVATE_CHANNEL,
-          };
-          const dispatch = closure_132_1(closure_132_2[6]).dispatch;
-          const tmp19 = closure_132_1(closure_132_2[6]);
-          if (channelId == null) {
-            channelId = null;
-          }
-          if (guildId == null) {
-            guildId = null;
-          }
-          const self = this;
-          const self2 = this;
-          aPIError = new closure_132_0(closure_132_2[7]).APIError(closure_4);
-          dispatch(obj6);
-          c8 = 3;
-          return { value: "IconComponent", done: null };
-        } else if (applicationId === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
           c8 = 3;
           throw value;
-        } else if (applicationId === 2) {
-          c6 = 0;
+        } else if (arg0 === 2) {
           c8 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          c6 = 0;
-          c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          ({ applicationId: closure_131_0, channelId: closure_131_1, guildId: closure_131_2 } = closure_0);
+          closure_131_3 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp42) {
-        closure_5 = tmp42;
-        if (0 === c6) {
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
           c8 = 3;
-          throw tmp42;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          c7 = 2;
+          c6 = 1;
+          c7 = 3;
+          c8 = 1;
+          const obj6 = { value: closure_132_1(closure_132_2[4])(closure_131_0, closure_131_1), done: false };
+          return obj6;
         }
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _confirmActivityChange() {
-  obj = _asyncToGenerator(async function (arg0) {
-    let c0;
-    let c1;
-    let c2;
-    let closure_1;
-    let value;
-    let closure_0 = arg0;
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
+      } else if (2 === tmp7) {
+        c6 = 0;
+        closure_131_4 = closure_5;
+        if (null != closure_131_2) {
+          let PRIVATE_CHANNEL = closure_132_0(closure_132_2[5]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+        } else {
+          PRIVATE_CHANNEL = closure_132_0(closure_132_2[5]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+        }
+        closure_131_3 = PRIVATE_CHANNEL;
+        const obj7 = {
+          type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+          nonce: "",
+          applicationId: closure_131_0,
+          channelId: null,
+          guildId: null,
+          error: null,
+          locationKind: null,
+        };
+        let channelId = closure_131_1;
+        if (closure_131_1 == null) {
+          channelId = null;
+        }
+        obj7.channelId = channelId;
+        let guildId = closure_131_2;
+        if (closure_131_2 == null) {
+          guildId = null;
+        }
+        obj7.guildId = guildId;
+        const aPIError = new closure_132_0(closure_132_2[7]).APIError(closure_131_4);
+        obj7.error = aPIError;
+        obj7.locationKind = closure_131_3;
+        closure_132_1(closure_132_2[6]).dispatch(obj7);
+        c8 = 3;
+        return { value: "IconComponent", done: null };
+      } else if (arg0 === 1) {
+        c8 = 3;
         throw value;
       } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
+        c6 = 0;
+        c8 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
-        return { value: "IconComponent", done: null };
+        c6 = 0;
+        c8 = 3;
+        const obj = { value, done: true };
+        return obj;
       }
+    } catch (tmp46) {
+      closure_5 = tmp46;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp46;
+      } else {
+        c7 = tmp;
+      }
+    }
+  }
+};
+let closure_9 = async function _confirmActivityChange(arg0) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const shouldClosePopout = tmp;
-            c0 = undefined;
-            c1 = undefined;
-            ({
-              currentEmbeddedApplication: c0,
-              shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1,
-              onConfirmActivityLaunchChecksAlertOpen: c2,
-            } = closure_0);
-            c2 = 1;
-            c3 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else {
-          if (1 === tmp4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else if (null != c0) {
-              const self = this;
-              const self2 = this;
-              const promise = new Promise((fn) => {
-                closure_0 = fn;
-                selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
-                const value = selfEmbeddedActivities.get(closure_0.id);
-                let _location;
-                const getEmbeddedActivityLocationChannelId = closure_1_0(
-                  closure_1_2[8],
-                ).getEmbeddedActivityLocationChannelId;
-                closure_1_0(closure_1_2[8]);
-                if (value != null) {
-                  _location = value.location;
-                }
-                channel = channel.getChannel(getEmbeddedActivityLocationChannelId(_location));
-                if (null != value) {
-                  if (null != channel) {
-                    if (closure_2 != null) {
-                      closure_2();
-                    }
-                    shouldClosePopout(closure_1_2[9])(
-                      closure_0,
-                      channel,
-                      () => {
-                        obj = value(c2[10])();
-                        const obj2 = { location: value.location, applicationId: closure_2_0.id, shouldClosePopout };
-                        obj.leaveActivity(obj2);
-                        fn(true);
-                      },
-                      () => fn(false),
-                    );
-                  }
-                }
-                fn(true);
-              });
-              c2 = 2;
-              c3 = 1;
-              const obj5 = { value: promise, done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else if (!value) {
-            c3 = 3;
-            return { value: false, done: true };
-          }
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c3 = 3;
-          return { value: true, done: true };
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          const shouldClosePopout = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({
+            currentEmbeddedApplication: closure_129_0,
+            shouldClosePopoutOnLeaveCurrentEmbeddedApplication: closure_129_1,
+            onConfirmActivityLaunchChecksAlertOpen: closure_129_2,
+          } = closure_0);
+          c2 = 1;
+          c3 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp13) {
-        c3 = 3;
-        throw tmp13;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _confirmActivityAgeGate() {
-  obj = _asyncToGenerator(async function (arg0) {
-    let c0;
-    let c1;
-    let c2;
-    let c3;
-    let c4;
-    let id;
-    let tmp3;
-    let closure_0 = arg0;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let applicationId;
-        let guildId;
-        let nsfwAllowed;
-        let application;
-        c6 = 2;
-        if (0 === c5) {
+        if (1 === tmp5) {
           if (arg0 === 1) {
-            c6 = 3;
+            c3 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let closure_4 = tmp4;
-            let closure_3 = tmp;
-            c0 = undefined;
-            applicationId = undefined;
-            guildId = undefined;
-            nsfwAllowed = undefined;
-            c4 = undefined;
-            ({
-              application: c0,
-              applicationId: c1,
-              channel: c2,
-              user: c3,
-              onConfirmActivityLaunchChecksAlertOpen: c4,
-            } = closure_0);
-            application = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else {
-          let closure_1;
-          if (1 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              if (null == nsfwAllowed.nsfwAllowed) {
-                closure_1 = c0;
-                if (c0 == null) {
-                  const obj6 = { applicationId, channelId: id, guildId };
-                  id = undefined;
-                  if (guildId != null) {
-                    id = guildId.id;
+            c3 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else if (null != closure_129_0) {
+            const promise = new Promise((fn) => {
+              closure_0 = fn;
+              selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
+              value = selfEmbeddedActivities.get(closure_0.id);
+              let _location;
+              if (value != null) {
+                _location = value.location;
+              }
+              channel = channel.getChannel(closure_1_0(4504).getEmbeddedActivityLocationChannelId(_location));
+              if (null != value) {
+                if (null != channel) {
+                  if (dependencyMap != null) {
+                    dependencyMap();
                   }
-                  const obj5 = guildId;
-                  guildId = undefined;
-                  if (guildId != null) {
-                    guildId = obj5.getGuildId();
-                  }
-                  if (guildId == null) {
-                    guildId = undefined;
-                  }
-                  c5 = 2;
-                  c6 = 1;
-                  const obj7 = { value: closure_132_7(obj6), done: false };
-                  return obj7;
+                  shouldClosePopout(9039)(
+                    tmp,
+                    channel,
+                    () => {
+                      value(c2[10])().leaveActivity({
+                        location: value.location,
+                        applicationId: closure_2_0.id,
+                        shouldClosePopout,
+                      });
+                      closure_0(true);
+                    },
+                    () => closure_0(false),
+                  );
                 }
               }
-              c6 = 3;
-              return { value: true, done: true };
-            }
-          } else if (2 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
-            } else {
-              closure_1 = value;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else if (!value) {
-            c6 = 3;
-            return { value: false, done: true };
+              fn(true);
+              const obj2 = closure_1_0(4504);
+            });
+            c2 = 2;
+            c3 = 1;
+            const obj5 = { value: promise, done: false };
+            return obj5;
           }
-          application = closure_1;
-          if (null == application) {
-            c6 = 3;
-            return { value: false, done: true };
-          } else {
-            const embeddedActivityConfig = application.embeddedActivityConfig;
-            let requires_age_gate;
-            if (embeddedActivityConfig != null) {
-              requires_age_gate = embeddedActivityConfig.requires_age_gate;
-            }
-            if (requires_age_gate != null) {
-              if (requires_age_gate) {
-                const self = this;
-                const self2 = this;
-                const promise = new Promise((arg0) => {
-                  closure_0 = arg0;
-                  if (closure_1_4 != null) {
-                    tmp();
-                  }
-                  obj = {
-                    application,
-                    channelId: id,
-                    onAgree() {
-                      return closure_0(true);
-                    },
-                    onDisagree() {
-                      return closure_0(false);
-                    },
-                  };
-                  const tmp3 = closure_0(id[11]);
-                  id = undefined;
-                  const confirmActivityAgeGateAlert = tmp3.confirmActivityAgeGateAlert;
-                  if (id != null) {
-                    id = id.id;
-                  }
-                  const result = confirmActivityAgeGateAlert(obj);
-                });
-                c5 = 3;
-                c6 = 1;
-                const obj9 = { value: promise, done: false };
-                return obj9;
-              }
-            }
-          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else if (!value) {
+          c3 = 3;
+          return { value: false, done: true };
         }
-      } catch (tmp25) {
-        c6 = 3;
-        throw tmp25;
+        c3 = 3;
+        return { value: true, done: true };
       }
+    } catch (tmp16) {
+      c3 = tmp;
+      throw tmp16;
     }
-  });
-  return obj(...arguments);
+  }
 };
-obj = function _confirmExternalAppLaunch() {
-  obj = _asyncToGenerator(async function (arg0) {
-    let c0;
-    let c1;
-    let c2;
-    let c3;
-    let id;
-    let closure_0 = arg0;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_10 = async function _confirmActivityAgeGate(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let applicationId;
-        let guildId;
-        let isVerified;
-        c6 = 2;
-        if (0 === c5) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          ({
+            application: closure_131_0,
+            applicationId: closure_131_1,
+            channel: closure_131_2,
+            user: closure_131_3,
+            onConfirmActivityLaunchChecksAlertOpen: closure_131_4,
+          } = closure_0);
+          closure_131_5 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else {
+        if (1 === tmp5) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -448,153 +283,293 @@ obj = function _confirmExternalAppLaunch() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            let closure_3 = tmp;
-            c0 = undefined;
-            applicationId = undefined;
-            guildId = undefined;
-            c3 = undefined;
-            ({
-              application: c0,
-              applicationId: c1,
-              channel: c2,
-              onConfirmActivityLaunchChecksAlertOpen: c3,
-            } = closure_0);
-            isVerified = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else {
-          let closure_1;
-          if (1 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              closure_1 = c0;
-              if (c0 == null) {
-                const obj7 = { applicationId, channelId: id, guildId };
-                id = undefined;
-                if (guildId != null) {
-                  id = guildId.id;
+            if (null == closure_131_3.nsfwAllowed) {
+              closure_1 = closure_131_0;
+              if (closure_131_0 == null) {
+                const obj6 = { applicationId: closure_131_1, channelId: null, guildId: null };
+                let id;
+                if (closure_131_2 != null) {
+                  id = closure_131_2.id;
                 }
-                const obj5 = guildId;
-                guildId = undefined;
-                if (guildId != null) {
-                  guildId = obj5.getGuildId();
+                obj6.channelId = id;
+                let guildId;
+                if (closure_131_2 != null) {
+                  guildId = closure_131_2.getGuildId();
                 }
                 if (guildId == null) {
                   guildId = undefined;
                 }
+                obj6.guildId = guildId;
                 c5 = 2;
                 c6 = 1;
-                const obj8 = { value: closure_132_7(obj7), done: false };
-                return obj8;
+                const obj7 = { value: closure_132_7(obj6), done: false };
+                return obj7;
               }
             }
-          } else if (arg0 === 1) {
+            c6 = 3;
+            return { value: true, done: true };
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj8 = { value, done: true };
+            return obj8;
           } else {
             closure_1 = value;
           }
-          isVerified = closure_1;
-          let tmp9 = null != isVerified;
-          if (tmp9) {
-            let obj2 = closure_132_0(closure_132_2[12]);
-            const hasApplicationFlagResult = obj2.hasApplicationFlag(isVerified, closure_132_6.EMBEDDED_RELEASED);
-            const tmp17 = !hasApplicationFlagResult && !isVerified.isVerified;
-            let tmp20 = !tmp17;
-            if (!tmp20) {
-              let result = closure_132_5.hasActivityEverBeenLaunched(applicationId);
-              if (!result) {
-                const self = this;
-                const self2 = this;
-                result = new Promise((arg0) => {
-                  closure_0 = arg0;
-                  if (closure_1_3 != null) {
-                    tmp();
-                  }
-                  obj = closure_0(c2[13]);
-                  const obj2 = {
-                    application,
-                    onConfirm() {
-                      return closure_0(true);
-                    },
-                    onCancel() {
-                      return closure_0(false);
-                    },
-                  };
-                  const result = obj.confirmExternalAppLaunchAlert(obj2);
-                });
-              }
-              tmp20 = result;
-            }
-            tmp9 = tmp20;
-          }
+        } else if (arg0 === 1) {
           c6 = 3;
-          const obj9 = { value: tmp9, done: true };
-          return obj9;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else if (!value) {
+          c6 = 3;
+          return { value: false, done: true };
         }
-      } catch (tmp37) {
-        c6 = 3;
-        throw tmp37;
+        closure_131_5 = closure_1;
+        if (null == closure_131_5) {
+          c6 = 3;
+          return { value: false, done: true };
+        } else {
+          const embeddedActivityConfig = closure_131_5.embeddedActivityConfig;
+          let requires_age_gate;
+          if (embeddedActivityConfig != null) {
+            requires_age_gate = embeddedActivityConfig.requires_age_gate;
+          }
+          if (requires_age_gate != null) {
+            if (requires_age_gate) {
+              const promise = new Promise((arg0) => {
+                closure_0 = arg0;
+                if (closure_1_4 != null) {
+                  tmp();
+                }
+                const obj2 = { application, channelId: null, onAgree: null, onDisagree: null };
+                id = undefined;
+                if (id != null) {
+                  id = id.id;
+                }
+                obj2.channelId = id;
+                obj2.onAgree = function onAgree() {
+                  return closure_0(true);
+                };
+                obj2.onDisagree = function onDisagree() {
+                  return closure_0(false);
+                };
+                const result = closure_0(id[11]).confirmActivityAgeGateAlert(obj2);
+              });
+              c5 = 3;
+              c6 = 1;
+              const obj9 = { value: promise, done: false };
+              return obj9;
+            }
+          }
+        }
       }
+    } catch (tmp28) {
+      c6 = tmp;
+      throw tmp28;
     }
-  });
-  return obj(...arguments);
+  }
 };
-obj = function _confirmActivityLaunchChecks() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c2;
-    function confirmActivityChange() {
-      return closure_1_9(...arguments);
+let closure_11 = async function _confirmExternalAppLaunch(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "IconComponent", done: null };
     }
-    function confirmActivityAgeGate() {
-      return closure_1_10(...arguments);
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const application = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          ({
+            application: closure_131_0,
+            applicationId: closure_131_1,
+            channel: closure_131_2,
+            onConfirmActivityLaunchChecksAlertOpen: closure_131_3,
+          } = closure_0);
+          closure_131_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_1 = closure_131_0;
+            if (closure_131_0 == null) {
+              const obj7 = { applicationId: closure_131_1, channelId: null, guildId: null };
+              let id;
+              if (closure_131_2 != null) {
+                id = closure_131_2.id;
+              }
+              obj7.channelId = id;
+              let guildId;
+              if (closure_131_2 != null) {
+                guildId = closure_131_2.getGuildId();
+              }
+              if (guildId == null) {
+                guildId = undefined;
+              }
+              obj7.guildId = guildId;
+              c5 = 2;
+              c6 = 1;
+              const obj8 = { value: closure_132_7(obj7), done: false };
+              return obj8;
+            }
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = value;
+        }
+        closure_131_4 = closure_1;
+        let tmp10 = null != closure_131_4;
+        if (tmp10) {
+          const hasApplicationFlagResult = closure_132_0(closure_132_2[12]).hasApplicationFlag(
+            closure_131_4,
+            closure_132_6.EMBEDDED_RELEASED,
+          );
+          let tmp18 = !hasApplicationFlagResult;
+          if (!hasApplicationFlagResult) {
+            tmp18 = !closure_131_4.isVerified;
+          }
+          let tmp21 = !tmp18;
+          if (tmp18) {
+            let result = closure_132_5.hasActivityEverBeenLaunched(closure_131_1);
+            if (!result) {
+              result = new Promise((arg0) => {
+                closure_0 = arg0;
+                if (closure_1_3 != null) {
+                  tmp();
+                }
+                const result = closure_0(c2[13]).confirmExternalAppLaunchAlert({
+                  application,
+                  onConfirm() {
+                    return closure_0(true);
+                  },
+                  onCancel() {
+                    return closure_0(false);
+                  },
+                });
+              });
+            }
+            tmp21 = result;
+          }
+          tmp10 = tmp21;
+          const obj2 = closure_132_0(closure_132_2[12]);
+        }
+        c6 = 3;
+        const obj9 = { value: tmp10, done: true };
+        return obj9;
+      }
+    } catch (tmp40) {
+      c6 = tmp;
+      throw tmp40;
     }
-    function confirmExternalAppLaunch() {
-      return closure_1_11(...arguments);
-    }
-    let closure_0 = arg0;
-    const obj4 = {
-      currentEmbeddedApplication: null,
-      shouldClosePopoutOnLeaveCurrentEmbeddedApplication: null,
-      onConfirmActivityLaunchChecksAlertOpen: null,
-    };
-    ({
-      currentEmbeddedApplication: obj7.currentEmbeddedApplication,
-      shouldClosePopoutOnLeaveCurrentEmbeddedApplication: obj7.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
-      onConfirmActivityLaunchChecksAlertOpen: obj7.onConfirmActivityLaunchChecksAlertOpen,
-    } = closure_0);
-    await confirmActivityChange(obj4);
-    let closure_1 = value;
-    const tmp11 = closure_1;
-    if (!tmp11) {
-      return false;
-    }
-    await confirmActivityAgeGate(closure_0);
-    let closure_2 = value;
-    const tmp8 = closure_2;
-    if (!tmp8) {
-      return false;
-    }
-    await confirmExternalAppLaunch(closure_0);
-    return value;
-  });
-  return obj(...arguments);
+  }
 };
-const ApplicationFlags = Constants.ApplicationFlags;
+let closure_12 = async function _confirmActivityLaunchChecks() {
+  closure_1 = tmp2;
+  closure_129_0 = closure_0;
+  ({
+    currentEmbeddedApplication: obj7.currentEmbeddedApplication,
+    shouldClosePopoutOnLeaveCurrentEmbeddedApplication: obj7.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
+    onConfirmActivityLaunchChecksAlertOpen: obj7.onConfirmActivityLaunchChecksAlertOpen,
+  } = closure_0);
+  await (function confirmActivityChange() {
+    const self = this;
+    const apply = closure_1_9.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })({
+    currentEmbeddedApplication: null,
+    shouldClosePopoutOnLeaveCurrentEmbeddedApplication: null,
+    onConfirmActivityLaunchChecksAlertOpen: null,
+  });
+  closure_129_1 = value;
+  if (!closure_129_1) {
+    return false;
+  }
+  await (function confirmActivityAgeGate() {
+    const self = this;
+    const apply = closure_1_10.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(closure_129_0);
+  closure_129_2 = value;
+  if (!closure_129_2) {
+    return false;
+  }
+  await (function confirmExternalAppLaunch() {
+    const self = this;
+    const apply = closure_1_11.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(closure_129_0);
+  closure_129_3 = value;
+  return closure_129_3;
+};
+const ApplicationFlags = fn(1085).ApplicationFlags;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/confirmActivityLaunchChecks.tsx");
 
 export const confirmActivityLaunchChecks = function confirmActivityLaunchChecks() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_12.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

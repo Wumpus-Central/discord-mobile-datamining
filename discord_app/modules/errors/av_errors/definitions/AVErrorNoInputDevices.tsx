@@ -4,9 +4,12 @@ import AVErrorContext from "../AVErrorContext.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let obj = {
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
+
+export const AVErrorNoInputDevicesDefinition = {
   getActiveErrors(voiceState) {
     voiceState = voiceState.voiceState;
     const channel = ChannelStore.getChannel(voiceState.voiceChannelId);
@@ -26,8 +29,7 @@ let obj = {
         if (null != RTCConnectionStore.getMediaSessionId()) {
           if (!isGuildStageVoiceResult) {
             const obj = { type: AVError.AVError.NO_INPUT_DEVICES };
-            const obj3 = AVErrorContext;
-            const merged = Object.assign(obj3.getVoiceChannelErrorContext());
+            const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
             const items = [obj];
             return items;
           }
@@ -39,6 +41,3 @@ let obj = {
     return "" + mediaSessionId.mediaSessionId;
   },
 };
-const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
-
-export const AVErrorNoInputDevicesDefinition = obj;

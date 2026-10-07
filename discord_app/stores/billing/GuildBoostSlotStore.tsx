@@ -1,10 +1,7 @@
 // discord_app/stores/billing/GuildBoostSlotStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import SubscriptionStore from "SubscriptionStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
-
-let closure_3;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;
@@ -25,18 +22,14 @@ function handleSubscriptionStoreUpdate() {
 }
 let c1 = false;
 let c2 = false;
-const _false = {};
-const Store = get_initializedDefault.Store;
-class GuildBoostSlotStore extends Store {
-  initialize() {
-    const items = [SubscriptionStore];
-    this.syncWith(items, handleSubscriptionStoreUpdate);
-  }
-  getGuildBoostSlot(arg0) {
-    return closure_3[arg0];
-  }
-}
+let closure_3 = {};
+const Store = initializeDefault.Store;
+class GuildBoostSlotStore extends Store {}
 const prototype = GuildBoostSlotStore.prototype;
+prototype["initialize"] = function initialize() {
+  const items = [SubscriptionStore];
+  this.syncWith(items, handleSubscriptionStoreUpdate);
+};
 Object.defineProperty(prototype, "hasFetched", {
   get: function hasFetched() {
     return c1;
@@ -55,8 +48,11 @@ Object.defineProperty(prototype, "boostSlots", {
   },
   set: undefined,
 });
+prototype["getGuildBoostSlot"] = function getGuildBoostSlot(arg0) {
+  return closure_3[arg0];
+};
 GuildBoostSlotStore.displayName = "GuildBoostSlotStore";
-let obj = {
+const guildBoostSlotStore = new GuildBoostSlotStore(DispatcherDefault, {
   GUILD_BOOST_SLOTS_FETCH: function handleGuildBoostsFetch() {
     c2 = true;
   },
@@ -77,8 +73,8 @@ let obj = {
     c1 = false;
     c2 = false;
   },
-};
-const guildBoostSlotStore = new GuildBoostSlotStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("stores/billing/GuildBoostSlotStore.tsx");
 
 export default guildBoostSlotStore;

@@ -1,41 +1,33 @@
 // discord_app/modules/devtools/native/components/screens/performance/useFrameMonitor.tsx
 import startFrameMonitor from "startFrameMonitor.tsx";
-import _slicedToArray_mod from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, current;
 
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (current) => {
-      let ref;
-      let ref2;
-      let tmp10;
-      let tmp3;
-      let tmp4;
-      let tmp5;
-      let tmp7;
       _require = current;
-      let obj = require("react");
-      const cResult = obj.c(9);
-      [tmp3, dependencyMap] = react.useState(false);
-      _slicedToArray(react.useState(false), 2);
-      _slicedToArray = react.useRef(null);
-      react = react.useRef(current);
+      const cResult = require("c").c(9);
+      let obj = require("c");
+      [tmp3, dependencyMap] = noop.useState(false);
+      _slicedToArray = noop.useRef(null);
+      noop = noop.useRef(current);
       if (cResult[0] !== current) {
         const fn = function c() {
-          ref2.current = current;
+          closure_3.current = current;
         };
         const items = [current];
         cResult[0] = current;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp5 = items;
-        tmp4 = fn;
+        let tmp5 = items;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -47,67 +39,82 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (current != null) {
             current.stop();
           }
-          const obj = startFrameMonitor;
-          ref.current = obj.startFrameMonitor();
+          ref.current = startFrameMonitor.startFrameMonitor();
           dependencyMap(true);
         };
         cResult[3] = fn2;
-        tmp7 = fn2;
+        let tmp7 = fn2;
       } else {
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
           constructor() {
-            current = ref.current;
+            current = closure_2.current;
             if (null != current) {
-              ref.current = null;
-              const stopResult = current.stop();
-              dependencyMap(false);
-              ref2.current(stopResult);
+              closure_2.current = null;
+              tmp2 = closure_1;
+              flag = false;
+              stopResult = current.stop();
+              tmp3 = closure_1(false);
+              tmp4 = closure_3;
+              currentResult = closure_3.current(stopResult);
             }
+            return;
           }
         }
         cResult[4] = R;
       } else {
         class R {
           constructor() {
-            current = ref.current;
+            current = closure_2.current;
             if (null != current) {
-              ref.current = null;
-              const stopResult = current.stop();
-              dependencyMap(false);
-              ref2.current(stopResult);
+              closure_2.current = null;
+              tmp2 = closure_1;
+              flag = false;
+              stopResult = current.stop();
+              tmp3 = closure_1(false);
+              tmp4 = closure_3;
+              currentResult = closure_3.current(stopResult);
             }
+            return;
           }
         }
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
           constructor() {
-            current = ref.current;
+            current = closure_2.current;
             if (null != current) {
-              ref.current = null;
-              const stopResult = current.stop();
-              dependencyMap(false);
-              ref2.current(stopResult);
+              closure_2.current = null;
+              tmp2 = closure_1;
+              flag = false;
+              stopResult = current.stop();
+              tmp3 = closure_1(false);
+              tmp4 = closure_3;
+              currentResult = closure_3.current(stopResult);
             }
+            return;
           }
         }
         const items1 = [];
         cResult[5] = tmp11;
         cResult[6] = items1;
-        tmp10 = items1;
+        let tmp10 = items1;
       } else {
         class R {
           constructor() {
-            current = ref.current;
+            current = closure_2.current;
             if (null != current) {
-              ref.current = null;
-              const stopResult = current.stop();
-              dependencyMap(false);
-              ref2.current(stopResult);
+              closure_2.current = null;
+              tmp2 = closure_1;
+              flag = false;
+              stopResult = current.stop();
+              tmp3 = closure_1(false);
+              tmp4 = closure_3;
+              currentResult = closure_3.current(stopResult);
             }
+            return;
           }
         }
         tmp10 = cResult[6];
@@ -116,13 +123,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[7] !== tmp3) {
         class R {
           constructor() {
-            current = ref.current;
+            current = closure_2.current;
             if (null != current) {
-              ref.current = null;
-              const stopResult = current.stop();
-              dependencyMap(false);
-              ref2.current(stopResult);
+              closure_2.current = null;
+              tmp2 = closure_1;
+              flag = false;
+              stopResult = current.stop();
+              tmp3 = closure_1(false);
+              tmp4 = closure_3;
+              currentResult = closure_3.current(stopResult);
             }
+            return;
           }
         }
         tmp14[0] = tmp3;
@@ -133,49 +144,49 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class R {
           constructor() {
-            current = ref.current;
+            current = closure_2.current;
             if (null != current) {
-              ref.current = null;
-              const stopResult = current.stop();
-              dependencyMap(false);
-              ref2.current(stopResult);
+              closure_2.current = null;
+              tmp2 = closure_1;
+              flag = false;
+              stopResult = current.stop();
+              tmp3 = closure_1(false);
+              tmp4 = closure_3;
+              currentResult = closure_3.current(stopResult);
             }
+            return;
           }
         }
       }
       return tmp14;
     }
   : (current) => {
-      let closure_1;
-      let monitoring;
-      let ref;
-      let ref2;
-      [monitoring, closure_1] = react.useState(false);
-      _slicedToArray = react.useRef(null);
-      react = react.useRef(current);
+      const monitoring = _slicedToArray(noop.useState(false), 2);
+      closure_1 = monitoring[1];
+      _slicedToArray = noop.useRef(null);
+      noop = noop.useRef(current);
       const items = [current];
-      const effect = react.useEffect(() => {
-        ref2.current = current;
+      const effect = noop.useEffect(() => {
+        closure_3.current = current;
       }, items);
-      const start = react.useCallback(() => {
+      const start = noop.useCallback(() => {
         current = ref.current;
         if (current != null) {
           current.stop();
         }
-        const obj = startFrameMonitor;
-        ref.current = obj.startFrameMonitor();
+        ref.current = startFrameMonitor.startFrameMonitor();
         closure_1(true);
       }, []);
-      const stop = react.useCallback(() => {
+      const stop = noop.useCallback(() => {
         current = ref.current;
         if (null != current) {
           ref.current = null;
-          const stopResult = current.stop();
           closure_1(false);
-          ref2.current(stopResult);
+          ref2.current(current.stop());
+          const stopResult = current.stop();
         }
       }, []);
-      const effect1 = react.useEffect(
+      const effect1 = noop.useEffect(
         () => () => {
           current = ref.current;
           if (current != null) {
@@ -185,8 +196,5 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      return { monitoring, start, stop };
+      return { monitoring: monitoring[0], start, stop };
     };
-const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
-
-export default tmp2;

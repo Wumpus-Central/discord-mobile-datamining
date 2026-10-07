@@ -1,50 +1,38 @@
 // discord_app/modules/applications/useGetOrFetchApplications.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import react2 from "../../../_runtime/00576_react.js";
+import discord_common_shallowEqual from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import c from "../../../_runtime/00576_c.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators.tsx";
-import react from "../../../_runtime/00019_react.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "ApplicationStore.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, application, dependencyMap;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (current, arg1) => {
-      let first;
-      let ref;
       _require = current;
-      let tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(8);
-      let closure_1 = tmp4;
+      const cResult = require("c").c(8);
+      closure_1 = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
-      dependencyMap = react.useRef(first);
+      dependencyMap = noop.useRef(first);
       if (cResult[1] === current) {
-        let tmp6;
-        let tmp7;
-        let tmp9;
-        let tmp11;
-        if (cResult[2] === (undefined === arg1 || arg1)) {
-          tmp6 = cResult[3];
-          tmp7 = cResult[4];
+        if (cResult[2] === tmp4) {
+          let tmp6 = cResult[3];
+          let tmp7 = cResult[4];
         }
-        const effect = react.useEffect(tmp6, tmp7);
+        const effect = noop.useEffect(tmp6, tmp7);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [ApplicationStore];
           cResult[5] = items1;
-          tmp9 = items1;
+          let tmp9 = items1;
         } else {
           tmp9 = cResult[5];
         }
@@ -60,27 +48,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           };
           cResult[6] = current;
           cResult[7] = fn2;
-          tmp11 = fn2;
+          let tmp11 = fn2;
         } else {
           tmp11 = cResult[7];
         }
-        const tmpResult = tmp(504);
-        return tmpResult.useStateFromStoresArray(tmp9, tmp11);
+        return tmp(504).useStateFromStoresArray(tmp9, tmp11);
       }
       const fn = function f() {
         let tmp = closure_1;
-        if (tmp) {
-          const obj = shallowEqual;
-          tmp = !obj.areArraysShallowEqual(current, ref.current);
+        if (closure_1) {
+          tmp = !discord_common_shallowEqual.areArraysShallowEqual(current, ref.current);
         }
         if (tmp) {
-          const fetchApplications = ApplicationActionCreatorsDefault.fetchApplications;
-          ApplicationActionCreatorsDefault;
+          const obj2 = ApplicationActionCreatorsDefault;
+          const found = _modDef12(current).filter(GlobalUtils.isNotNullish);
           const arr = _modDef12(current);
-          const found = arr.filter(GlobalUtils.isNotNullish);
-          const iter = found.uniq();
-          const applications = fetchApplications(iter.value(), false);
+          const applications = obj2.fetchApplications(found.uniq().value(), false);
           ref.current = current;
+          const iter = found.uniq();
         }
       };
       const items2 = [current, undefined === arg1 || arg1];
@@ -90,35 +75,33 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp7 = items2;
       tmp6 = fn;
+      let obj = require("c");
+      tmp = _require;
     }
   : (current) => {
-      let ref;
       _require = current;
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
       }
-      dependencyMap = react.useRef([]);
+      dependencyMap = noop.useRef([]);
       const items = [current, flag];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         let tmp = flag;
-        if (tmp) {
-          const obj = shallowEqual;
-          tmp = !obj.areArraysShallowEqual(current, ref.current);
+        if (flag) {
+          tmp = !discord_common_shallowEqual.areArraysShallowEqual(current, ref.current);
         }
         if (tmp) {
-          const fetchApplications = ApplicationActionCreatorsDefault.fetchApplications;
-          ApplicationActionCreatorsDefault;
+          const obj2 = ApplicationActionCreatorsDefault;
+          const found = _modDef12(current).filter(GlobalUtils.isNotNullish);
           const arr = _modDef12(current);
-          const found = arr.filter(GlobalUtils.isNotNullish);
-          const iter = found.uniq();
-          const applications = fetchApplications(iter.value(), false);
+          const applications = obj2.fetchApplications(found.uniq().value(), false);
           ref.current = current;
+          const iter = found.uniq();
         }
       }, items);
-      let obj = require("get initialized");
       const items1 = [ApplicationStore];
-      return obj.useStateFromStoresArray(items1, () =>
+      return require("initialize").useStateFromStoresArray(items1, () =>
         current.map((item) => {
           application = undefined;
           if (null != item) {
@@ -129,44 +112,38 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 let closure_5 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
+
+export default tmp2;
+export const useGetOrFetchApplication = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let tmp3;
-      const obj = react2;
-      const cResult = obj.c(2);
-      const tmp2 = undefined === arg1 || arg1;
+      const cResult = c.c(2);
       if (cResult[0] !== arg0) {
-        let items1;
         if (null != arg0) {
           const items = [arg0];
-          items1 = items;
+          let items1 = items;
         } else {
           items1 = [];
         }
         cResult[0] = arg0;
         cResult[1] = items1;
-        tmp3 = items1;
       } else {
-        tmp3 = cResult[1];
+        return closure_5(cResult[1], tmp2)[0];
       }
-      return closure_5(tmp3, tmp2)[0];
+      tmp2 = undefined === arg1 || arg1;
     }
   : (arg0) => {
-      let items1;
       let flag = arg1;
       if (arg1 === undefined) {
         flag = true;
       }
       if (null != arg0) {
         const items = [arg0];
-        items1 = items;
+        let items1 = items;
       } else {
         items1 = [];
       }
       return closure_5(items1, flag)[0];
     };
-const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
-
-export default tmp2;
-export const useGetOrFetchApplication = tmp3;

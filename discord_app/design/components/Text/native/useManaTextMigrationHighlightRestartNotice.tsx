@@ -1,23 +1,20 @@
 // discord_app/design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import DevSettingsStore from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx",
+);
+
+export const useManaTextMigrationHighlightRestartNotice = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let ref;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      let tmp9;
-      const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(5);
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [DevSettingsStore];
         const fn = function s() {
@@ -30,23 +27,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      _require = react.useRef(true);
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+      _require = noop.useRef(true);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function h() {
           if (ref.current) {
             tmp.current = false;
           } else {
-            const obj = actions_AlertActionCreatorsDefault;
-            obj.show({
+            actions_AlertActionCreatorsDefault.show({
               title: "Mana Text Migration Highlighter",
               body: "Restart the app (force quit and reopen) to see the change.",
             });
           }
         };
         cResult[2] = fn2;
-        tmp8 = fn2;
+        let tmp8 = fn2;
       } else {
         tmp8 = cResult[2];
       }
@@ -54,33 +50,28 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [stateFromStores];
         cResult[3] = stateFromStores;
         cResult[4] = items1;
-        tmp9 = items1;
+        let tmp9 = items1;
       } else {
         tmp9 = cResult[4];
       }
-      const effect = react.useEffect(tmp8, tmp9);
+      const effect = noop.useEffect(tmp8, tmp9);
+      const tmpResult = require("initialize");
     }
   : () => {
-      let ref;
-      let obj = require("get initialized");
       const items = [DevSettingsStore];
-      const stateFromStores = obj.useStateFromStores(items, () => DevSettingsStore.get("highlight_mana_text"));
-      _require = react.useRef(true);
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        DevSettingsStore.get("highlight_mana_text"),
+      );
+      _require = noop.useRef(true);
       const items1 = [stateFromStores];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (ref.current) {
           tmp.current = false;
         } else {
-          const obj = actions_AlertActionCreatorsDefault;
-          obj.show({
+          actions_AlertActionCreatorsDefault.show({
             title: "Mana Text Migration Highlighter",
             body: "Restart the app (force quit and reopen) to see the change.",
           });
         }
       }, items1);
     };
-const result = size.fileFinishedImporting(
-  "design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx",
-);
-
-export const useManaTextMigrationHighlightRestartNotice = tmp2;

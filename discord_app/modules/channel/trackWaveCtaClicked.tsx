@@ -1,10 +1,9 @@
 // discord_app/modules/channel/trackWaveCtaClicked.tsx
-import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticEvents = Constants.AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/trackWaveCtaClicked.tsx");
 
 export const getDmHasMessageHistory = function getDmHasMessageHistory(arg0) {
@@ -16,19 +15,12 @@ export const getDmHasMessageHistory = function getDmHasMessageHistory(arg0) {
   return null != lastMessageId;
 };
 export const trackWaveCtaClicked = function trackWaveCtaClicked(channelId) {
-  let lastMessageId;
-  const obj = {
-    channel_id: channelId.channelId,
-    source: channelId.source,
-    dm_has_message_history: null != lastMessageId,
-  };
-  const track = AnalyticsUtilsDefault.track;
-  const WAVE_CTA_CLICKED = AnalyticEvents.WAVE_CTA_CLICKED;
-  AnalyticsUtilsDefault;
+  const obj2 = { channel_id: channelId.channelId, source: channelId.source, dm_has_message_history: null };
   const channel = ChannelStore.getChannel(channelId.channelId);
-  lastMessageId = undefined;
+  let lastMessageId;
   if (channel != null) {
     lastMessageId = channel.lastMessageId;
   }
-  track(WAVE_CTA_CLICKED, obj);
+  obj2.dm_has_message_history = null != lastMessageId;
+  AnalyticsUtilsDefault.track(AnalyticEvents.WAVE_CTA_CLICKED, obj2);
 };

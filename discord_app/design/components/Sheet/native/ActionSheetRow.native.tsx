@@ -1,34 +1,21 @@
 // discord_app/design/components/Sheet/native/ActionSheetRow.native.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import TableRow2 from "../../TableRow/native/TableRow.native.tsx";
-import TableRowIcon2 from "../../TableRow/native/TableRowIcon.native.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import TableRow from "../../TableRow/native/TableRow.native.tsx";
+import TableRowIcon from "../../TableRow/native/TableRowIcon.native.tsx";
 import TableRowGroup from "../../TableRow/native/TableRowGroup.native.tsx";
-import TableSwitchRow2 from "../../TableRow/native/TableSwitchRow.native.tsx";
+import TableSwitchRow from "../../TableRow/native/TableSwitchRow.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
+require = fn;
 let closure_2 = ["label", "variant", "arrow", "icon"];
-const View = react_native.View;
-const jsx = Fragment.jsx;
-const redux = react.createContext("default");
-let ReactCompilerGating = ReactCompilerGating_mod;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const redux = noop.createContext("default");
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let arrow;
-      let icon;
-      let label;
-      let tmp4;
-      let tmp5;
-      let tmp6;
-      let tmp7;
-      let tmp8;
-      let variant;
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       if (cResult[0] !== arg0) {
         ({ label, variant, arrow, icon } = arg0);
         const tmp11 = _objectWithoutProperties(arg0, closure_2);
@@ -38,11 +25,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = label;
         cResult[4] = tmp11;
         cResult[5] = variant;
-        tmp8 = variant;
-        tmp7 = tmp11;
-        tmp6 = label;
-        tmp5 = icon;
-        tmp4 = arrow;
+        let tmp8 = variant;
+        let tmp7 = tmp11;
+        let tmp6 = label;
+        let tmp5 = icon;
+        let tmp4 = arrow;
       } else {
         tmp4 = cResult[1];
         tmp5 = cResult[2];
@@ -58,17 +45,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] === tmp5) {
           if (cResult[8] === tmp6) {
             if (cResult[9] === tmp7) {
-              let tmp12;
               if (cResult[10] === str) {
-                tmp12 = cResult[11];
+                let tmp12 = cResult[11];
               }
               if (cResult[12] === tmp12) {
-                let tmp15;
                 if (cResult[13] === str) {
-                  tmp15 = cResult[14];
+                  let tmp15 = cResult[14];
                 }
                 return tmp15;
               }
+              const obj2 = { value: str, children: tmp12 };
               const tmp18 = <redux.Provider value={str}>{tmp12}</redux.Provider>;
               cResult[12] = tmp12;
               cResult[13] = str;
@@ -78,9 +64,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const TableRow = TableRow2.TableRow;
       const merged = Object.assign(tmp7);
-      const tmp14 = <TableRow variant={str} label={tmp6} arrow={tmp4} icon={tmp5} />;
+      const tmp14 = jsx(TableRow.TableRow, { variant: str, label: tmp6, arrow: tmp4, icon: tmp5 });
       cResult[6] = tmp4;
       cResult[7] = tmp5;
       cResult[8] = tmp6;
@@ -88,41 +73,35 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = str;
       cResult[11] = tmp14;
       tmp12 = tmp14;
+      const obj3 = { variant: str, label: tmp6, arrow: tmp4, icon: tmp5 };
     }
-  : (variant) => {
-      let arrow;
-      let icon;
-      let str = variant.variant;
-      const label = variant.label;
+  : (label) => {
+      let str = label.variant;
       if (str === undefined) {
         str = "default";
       }
-      ({ arrow, icon } = variant);
-      const merged = Object.assign(variant, Object.assign({ label: 0, variant: 0, arrow: 0, icon: 0 }));
-      const Provider = redux.Provider;
-      const TableRow = TableRow2.TableRow;
+      ({ arrow, icon } = label);
+      const obj = { value: str, children: null };
+      const merged = Object.assign(label, Object.assign({ label: 0, variant: 0, arrow: 0, icon: 0 }));
       const merged1 = Object.assign(merged);
-      return <Provider value={str}>{null}</Provider>;
+      obj.children = jsx(TableRow.TableRow, { variant: str, label: label.label, arrow, icon });
+      return <redux.Provider value={str}>{null}</redux.Provider>;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let IconComponent;
-      let source;
-      const obj = react2;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       ({ source, IconComponent } = arg0);
-      const context = react.useContext(redux);
+      const context = noop.useContext(closure_7);
       if (cResult[0] === source) {
         if (cResult[1] === IconComponent) {
-          let tmp5;
           if (cResult[2] === context) {
-            tmp5 = cResult[3];
+            let tmp5 = cResult[3];
           }
           return tmp5;
         }
       }
-      const tmp6 = jsx(TableRowIcon2.TableRowIcon, { source, IconComponent, variant: context });
+      const tmp6 = jsx(TableRowIcon.TableRowIcon, { source, IconComponent, variant: context });
       cResult[0] = source;
       cResult[1] = IconComponent;
       cResult[2] = context;
@@ -131,25 +110,19 @@ tmp2.Icon = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (IconComponent) => {
       IconComponent = IconComponent.IconComponent;
-      const source = IconComponent.source;
-      const context = react.useContext(redux);
-      const TableRowIcon = TableRowIcon2.TableRowIcon;
-      return <TableRowIcon source={source} IconComponent={IconComponent} variant={context} />;
+      const context = noop.useContext(closure_7);
+      const obj = { source: IconComponent.source, IconComponent, variant: context };
+      return jsx(TableRowIcon.TableRowIcon, { source: IconComponent.source, IconComponent, variant: context });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 tmp2.Group = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let hasIcons;
-      let title;
-      const obj = react2;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       ({ children, title, hasIcons } = arg0);
       if (cResult[0] === children) {
         if (cResult[1] === hasIcons) {
-          let tmp4;
           if (cResult[2] === title) {
-            tmp4 = cResult[3];
+            let tmp4 = cResult[3];
           }
           return tmp4;
         }
@@ -160,38 +133,33 @@ tmp2.Group = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = title;
       cResult[3] = tmp5;
       tmp4 = tmp5;
+      const obj2 = { children: jsx(TableRowGroup.TableRowGroup, { hasIcons, title, children }) };
     }
   : (arg0) => {
-      let children;
-      let hasIcons;
-      let title;
       ({ children, title, hasIcons } = arg0);
       return <View>{jsx(TableRowGroup.TableRowGroup, { hasIcons, title, children })}</View>;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetRow.native.tsx");
+
+export const ActionSheetRow = tmp2;
+export const ActionSheetSwitchRow = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp4;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] !== arg0) {
-        const TableSwitchRow = TableSwitchRow2.TableSwitchRow;
+        const obj2 = {};
         const merged = Object.assign(arg0);
-        const tmp9 = <TableSwitchRow />;
+        const tmp9 = jsx(TableSwitchRow.TableSwitchRow, {});
         cResult[0] = arg0;
         cResult[1] = tmp9;
-        tmp4 = tmp9;
+        let tmp4 = tmp9;
       } else {
         tmp4 = cResult[1];
       }
       return tmp4;
     }
   : (arg0) => {
-      const TableSwitchRow = TableSwitchRow2.TableSwitchRow;
       const merged = Object.assign(arg0);
-      return <TableSwitchRow />;
+      return jsx(TableSwitchRow.TableSwitchRow, {});
     };
-const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetRow.native.tsx");
-
-export const ActionSheetRow = tmp2;
-export const ActionSheetSwitchRow = tmp3;

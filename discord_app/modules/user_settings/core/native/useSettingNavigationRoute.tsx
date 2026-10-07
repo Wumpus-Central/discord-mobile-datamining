@@ -7,7 +7,4 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/user_settings/core/native/useSettingNavigationRoute.tsx");
 
-export const useSettingNavigationRoute = () => {
-  const obj = Link;
-  return obj.useRoute();
-};
+export const useSettingNavigationRoute = () => Link.useRoute();

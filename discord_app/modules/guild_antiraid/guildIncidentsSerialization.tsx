@@ -4,10 +4,6 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/guild_antiraid/guildIncidentsSerialization.tsx");
 
 export const fromServerGuildIncidentsData = function fromServerGuildIncidentsData(incidents_data) {
-  let dm_spam_detected_at;
-  let dms_disabled_until;
-  let prop;
-  let prop1;
   if (null != incidents_data) {
     const _Object = Object;
     if (0 !== Object.keys(incidents_data).length) {
@@ -17,34 +13,32 @@ export const fromServerGuildIncidentsData = function fromServerGuildIncidentsDat
       }
       const obj = {
         raidDetectedAt: raid_detected_at,
-        dmSpamDetectedAt: dm_spam_detected_at,
-        dmsDisabledUntil: dms_disabled_until,
-        invitesDisabledUntil: prop,
-        lockdownDurationHours: prop1,
+        dmSpamDetectedAt: null,
+        dmsDisabledUntil: null,
+        invitesDisabledUntil: null,
+        lockdownDurationHours: null,
       };
-      dm_spam_detected_at = incidents_data.dm_spam_detected_at;
+      let dm_spam_detected_at = incidents_data.dm_spam_detected_at;
       if (dm_spam_detected_at == null) {
         dm_spam_detected_at = null;
       }
-      dms_disabled_until = incidents_data.dms_disabled_until;
+      obj.dmSpamDetectedAt = dm_spam_detected_at;
+      let dms_disabled_until = incidents_data.dms_disabled_until;
       if (dms_disabled_until == null) {
         dms_disabled_until = null;
       }
-      prop = incidents_data.invites_disabled_until;
+      obj.dmsDisabledUntil = dms_disabled_until;
+      let prop = incidents_data.invites_disabled_until;
       if (prop == null) {
         prop = null;
       }
-      prop1 = incidents_data.lockdown_duration_hours;
+      obj.invitesDisabledUntil = prop;
+      let prop1 = incidents_data.lockdown_duration_hours;
       if (prop1 == null) {
         prop1 = null;
       }
+      obj.lockdownDurationHours = prop1;
       let tmp7 = null;
-      const tmp6 =
-        null == obj.raidDetectedAt &&
-        null == obj.dmSpamDetectedAt &&
-        null == obj.dmsDisabledUntil &&
-        null == obj.invitesDisabledUntil &&
-        null == obj.lockdownDurationHours;
       if (!tmp6) {
         tmp7 = obj;
       }
@@ -54,19 +48,9 @@ export const fromServerGuildIncidentsData = function fromServerGuildIncidentsDat
   return null;
 };
 export const toServerGuildIncidentsData = function toServerGuildIncidentsData(incidentsData) {
-  let dmSpamDetectedAt;
-  let dmsDisabledUntil;
-  let invitesDisabledUntil;
-  let prop;
   let tmp = null;
   if (null != incidentsData) {
     tmp = null;
-    const tmp2 =
-      null == incidentsData.raidDetectedAt &&
-      null == incidentsData.dmSpamDetectedAt &&
-      null == incidentsData.dmsDisabledUntil &&
-      null == incidentsData.invitesDisabledUntil &&
-      null == incidentsData.lockdownDurationHours;
     if (!tmp2) {
       let raidDetectedAt = incidentsData.raidDetectedAt;
       if (raidDetectedAt == null) {
@@ -74,29 +58,39 @@ export const toServerGuildIncidentsData = function toServerGuildIncidentsData(in
       }
       const obj = {
         raid_detected_at: raidDetectedAt,
-        dm_spam_detected_at: dmSpamDetectedAt,
-        dms_disabled_until: dmsDisabledUntil,
-        invites_disabled_until: invitesDisabledUntil,
-        lockdown_duration_hours: prop,
+        dm_spam_detected_at: null,
+        dms_disabled_until: null,
+        invites_disabled_until: null,
+        lockdown_duration_hours: null,
       };
-      dmSpamDetectedAt = incidentsData.dmSpamDetectedAt;
+      let dmSpamDetectedAt = incidentsData.dmSpamDetectedAt;
       if (dmSpamDetectedAt == null) {
         dmSpamDetectedAt = null;
       }
-      dmsDisabledUntil = incidentsData.dmsDisabledUntil;
+      obj.dm_spam_detected_at = dmSpamDetectedAt;
+      let dmsDisabledUntil = incidentsData.dmsDisabledUntil;
       if (dmsDisabledUntil == null) {
         dmsDisabledUntil = null;
       }
-      invitesDisabledUntil = incidentsData.invitesDisabledUntil;
+      obj.dms_disabled_until = dmsDisabledUntil;
+      let invitesDisabledUntil = incidentsData.invitesDisabledUntil;
       if (invitesDisabledUntil == null) {
         invitesDisabledUntil = null;
       }
-      prop = incidentsData.lockdownDurationHours;
+      obj.invites_disabled_until = invitesDisabledUntil;
+      let prop = incidentsData.lockdownDurationHours;
       if (prop == null) {
         prop = null;
       }
+      obj.lockdown_duration_hours = prop;
       tmp = obj;
     }
+    tmp2 =
+      null == incidentsData.raidDetectedAt &&
+      null == incidentsData.dmSpamDetectedAt &&
+      null == incidentsData.dmsDisabledUntil &&
+      null == incidentsData.invitesDisabledUntil &&
+      null == incidentsData.lockdownDurationHours;
   }
   return tmp;
 };

@@ -5,11 +5,10 @@ import ExperimentConstants from "../ExperimentConstants.tsx";
 import Helpers from "Helpers.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const CommonTriggerPoints = ExperimentConstants.CommonTriggerPoints;
 const AnalyticEvents = Constants.AnalyticEvents;
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(
   [],
-  CommonTriggerPoints.PAYMENT_FLOW_STARTED,
+  ExperimentConstants.CommonTriggerPoints.PAYMENT_FLOW_STARTED,
   { location: "payment flow started" },
 );
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx");
@@ -22,7 +21,6 @@ export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowS
   if (arg1 === undefined) {
     obj = {};
   }
-  const obj2 = AnalyticsUtilsDefault;
-  obj2.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
+  AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
   commonTriggerPointConfiguration.trigger();
 };

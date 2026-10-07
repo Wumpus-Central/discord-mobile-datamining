@@ -1,50 +1,49 @@
 // discord_app/modules/icymi/ICYMIUnreadStateStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ICYMITypes from "ICYMITypes.tsx";
 import isItemUnreadInChannel from "isItemUnreadInChannel.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 let closure_2 = 7 * DurationsDefault.Millis.DAY;
-const _false = { readIdToTimestampMap: {} };
-const DeviceSettingsStore = get_initializedDefault.DeviceSettingsStore;
-class ICYMIUnreadStateStore extends DeviceSettingsStore {
-  initialize(readIdToTimestampMap) {
-    if (null != readIdToTimestampMap) {
-      readIdToTimestampMap = { readIdToTimestampMap: {} };
-      const _Date = Date;
-      let closure_0 = Date.now() - closure_2;
-      const _Object = Object;
-      const keys = Object.keys(readIdToTimestampMap.readIdToTimestampMap);
-      const found = keys.filter((item) => readIdToTimestampMap.readIdToTimestampMap[item] < closure_0);
-      for (const item10025 of found) {
-        delete readIdToTimestampMap.readIdToTimestampMap[item10025];
-        continue;
-      }
-    }
-  }
-  getReadTimestamp(id) {
-    return closure_3.readIdToTimestampMap[id];
-  }
-  getState() {
-    return closure_3;
-  }
-  getUserAgnosticState() {
-    return closure_3;
-  }
-}
+let closure_3 = { readIdToTimestampMap: {} };
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
+class ICYMIUnreadStateStore extends DeviceSettingsStore {}
 const prototype = ICYMIUnreadStateStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  let tmp = arg0;
+  if (null == arg0) {
+    let obj = { readIdToTimestampMap: {} };
+    const _Date = Date;
+    closure_0 = Date.now() - closure_2;
+    const _Object = Object;
+    const keys = Object.keys(obj.readIdToTimestampMap);
+    const found = keys.filter((item) => closure_3.readIdToTimestampMap[item] < closure_0);
+    tmp = found[Symbol.iterator]();
+  }
+  obj = { readIdToTimestampMap: tmp.readIdToTimestampMap };
+  const obj2 = { readIdToTimestampMap: tmp.readIdToTimestampMap };
+};
+prototype["getReadTimestamp"] = function getReadTimestamp(id) {
+  return closure_3.readIdToTimestampMap[id];
+};
+prototype["getState"] = function getState() {
+  return closure_3;
+};
+prototype["getUserAgnosticState"] = function getUserAgnosticState() {
+  return closure_3;
+};
 ICYMIUnreadStateStore.displayName = "ICYMIUnreadStateStore";
 ICYMIUnreadStateStore.persistKey = "ICYMIUnreadStateStore";
-const obj = {
+const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, {
   ICYMI_ACK_ITEMS: function handleTabAck(arg0) {
-    let items;
     ({ items, override: require } = arg0);
     const item = items.forEach((id) => {
       let tmp = null != id;
       if (tmp) {
         tmp = null == closure_3.readIdToTimestampMap[id.id] || require;
+        const tmp3 = null == closure_3.readIdToTimestampMap[id.id] || require;
       }
       if (tmp) {
         closure_3.readIdToTimestampMap[id.id] = id.timestamp;
@@ -80,8 +79,8 @@ const obj = {
   CLEAR_ICYMI_READ_STATES: function handleClearReadStates() {
     closure_3.readIdToTimestampMap = {};
   },
-};
-const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/ICYMIUnreadStateStore.tsx");
 
 export default iCYMIUnreadStateStore;

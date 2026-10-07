@@ -9,32 +9,26 @@ import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import ActiveChannelsStore from "ActiveChannelsStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let set;
-
 const isTextChannel = ChannelRecord.isTextChannel;
 const Permissions = Constants.Permissions;
 const ChannelFlags = ChannelConstants.ChannelFlags;
 const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
 
 export const getActiveTextChannels = function getActiveTextChannels(guildId) {
-  let arr;
-  let obj;
-  let obj2;
-  let tmp = items5;
-  if (items5 === undefined) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
     const items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
     tmp = items;
   }
   [, , obj, obj2] = tmp;
-  set = undefined;
   const activeChannelIds = obj.getActiveChannelIds(guildId);
   if (null != activeChannelIds) {
     const _Array = Array;
-    arr = Array.from(activeChannelIds);
+    let arr = Array.from(activeChannelIds);
   } else {
     arr = [];
   }
-  set = obj2.getMutedChannels(guildId);
+  obj2.getMutedChannels(guildId);
   const mapped = arr.map((item) => require.getChannel(item));
   const found = mapped.filter(GlobalUtils.isNotNullish);
   return found.filter((hasFlag) => {

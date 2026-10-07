@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/LaunchpadSetting.tsx
-import intl9 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
@@ -8,14 +8,13 @@ import useLaunchPadTypeDefault from "../../../launchpad/native/useLaunchPadType.
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
-let obj = {
+const radio = SettingBuilders.createRadio({
   useTitle() {
-    const intl = intl9.intl;
-    return intl.string(intl9.t.JqV7IC);
+    const intl = util.intl;
+    return intl.string(util.t.JqV7IC);
   },
-  parent: MobileUserSettings.ADVANCED,
+  parent: SettingsConstants.MobileUserSettings.ADVANCED,
   useValue: useLaunchPadTypeDefault,
   onValueChange: function onLaunchpadSettingValueChange(arg0) {
     if (LaunchPadTypes.GESTURE_FULL === arg0) {
@@ -33,50 +32,37 @@ let obj = {
     }
   },
   useOptions: function useLaunchpadSettingOptions() {
-    let intl;
-    let intl2;
-    let intl3;
-    let intl4;
-    let intl5;
-    let intl6;
-    let intl7;
-    let intl8;
-    const obj = {
-      label: intl.string(intl9.t.Q3abNB),
-      subLabel: intl2.string(intl9.t["/gdTGA"]),
-      value: LaunchPadTypes.GESTURE_FULL,
-    };
-    intl = intl9.intl;
-    intl2 = intl9.intl;
+    const obj = { label: null, subLabel: null, value: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t.Q3abNB);
+    const intl2 = util.intl;
+    obj.subLabel = intl2.string(util.t["/gdTGA"]);
+    obj.value = LaunchPadTypes.GESTURE_FULL;
     const items = [obj, , ,];
-    const obj2 = {
-      label: intl3.string(intl9.t.dQN6qS),
-      subLabel: intl4.string(intl9.t["W+cPjG"]),
-      value: LaunchPadTypes.GESTURE_EDGE,
-    };
-    intl3 = intl9.intl;
-    intl4 = intl9.intl;
+    const obj2 = { label: null, subLabel: null, value: null };
+    const intl3 = util.intl;
+    obj2.label = intl3.string(util.t.dQN6qS);
+    const intl4 = util.intl;
+    obj2.subLabel = intl4.string(util.t["W+cPjG"]);
+    obj2.value = LaunchPadTypes.GESTURE_EDGE;
     items[1] = obj2;
-    const obj3 = {
-      label: intl5.string(intl9.t["PgDGl+"]),
-      subLabel: intl6.string(intl9.t.uVc5MG),
-      value: LaunchPadTypes.PULL_TAB,
-    };
-    intl5 = intl9.intl;
-    intl6 = intl9.intl;
+    const obj3 = { label: null, subLabel: null, value: null };
+    const intl5 = util.intl;
+    obj3.label = intl5.string(util.t["PgDGl+"]);
+    const intl6 = util.intl;
+    obj3.subLabel = intl6.string(util.t.uVc5MG);
+    obj3.value = LaunchPadTypes.PULL_TAB;
     items[2] = obj3;
-    const obj4 = {
-      label: intl7.string(intl9.t.HnzBCZ),
-      subLabel: intl8.string(intl9.t.It18o2),
-      value: LaunchPadTypes.DISABLED,
-    };
-    intl7 = intl9.intl;
-    intl8 = intl9.intl;
+    const obj4 = { label: null, subLabel: null, value: null };
+    const intl7 = util.intl;
+    obj4.label = intl7.string(util.t.HnzBCZ);
+    const intl8 = util.intl;
+    obj4.subLabel = intl8.string(util.t.It18o2);
+    obj4.value = LaunchPadTypes.DISABLED;
     items[3] = obj4;
     return items;
   },
-};
-const radio = SettingBuilders.createRadio(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/LaunchpadSetting.tsx");
 
 export default radio;

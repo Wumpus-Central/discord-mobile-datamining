@@ -1,41 +1,36 @@
 // discord_app/modules/friends/OnlineFriendsStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import SetUtils from "../../../discord_common/js/shared/utils/SetUtils.tsx";
 import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment.tsx";
 import PresenceStore from "../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 function isEnabled() {
-  const obj = FriendsSidebarExperimentDefault;
-  return obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled;
+  return FriendsSidebarExperimentDefault.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled;
 }
 function upsert(id) {
   if (RelationshipStore.isFriend(id)) {
-    let deleteResult;
     if (PresenceStore.getStatus(id) !== StatusTypes.OFFLINE) {
       const hasItem = set.has(id);
       let flag = !hasItem;
-      if (flag) {
+      if (!hasItem) {
         set.add(id);
         flag = true;
       }
-      deleteResult = flag;
+      let deleteResult = flag;
     }
     return deleteResult;
   }
   deleteResult = set.delete(id);
 }
 function rebuild() {
-  closure_7 = isEnabled();
   const tmp = isEnabled();
-  if (closure_7) {
+  closure_7 = tmp;
+  if (tmp) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
     set = new Set();
     const friendIDs = RelationshipStore.getFriendIDs();
     for (const item10019 of friendIDs) {
@@ -44,37 +39,37 @@ function rebuild() {
       }
       continue;
     }
-    const obj2 = SetUtils;
-    return !obj2.areSetsEqual(set, set);
+    return !SetUtils.areSetsEqual(set, set);
   } else {
     return clear();
   }
 }
 function handleExperimentChange() {
-  const obj = FriendsSidebarExperimentDefault;
-  const tmp = obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled !== closure_7 && rebuild();
+  let tmp =
+    FriendsSidebarExperimentDefault.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled !== closure_7;
+  if (tmp) {
+    tmp = rebuild();
+  }
   return tmp;
 }
 function clear() {
-  const tmp = set.size > 0;
   set = new Set();
-  return tmp;
+  return set.size > 0;
 }
-const StatusTypes = Constants.StatusTypes;
+const StatusTypes = fn(1085).StatusTypes;
 let set = new Set();
 let closure_7 = false;
-const Store = get_initializedDefault.Store;
-class OnlineFriendsStore extends Store {
-  initialize() {
-    this.waitFor(ApexExperiment.ApexExperimentStore, PresenceStore, RelationshipStore);
-  }
-  getOnlineFriendCount() {
-    return set.size;
-  }
-}
+const Store = initializeDefault.Store;
+class OnlineFriendsStore extends Store {}
 const prototype = OnlineFriendsStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ApexExperiment.ApexExperimentStore, PresenceStore, RelationshipStore);
+};
+prototype["getOnlineFriendCount"] = function getOnlineFriendCount() {
+  return set.size;
+};
 OnlineFriendsStore.displayName = "OnlineFriendsStore";
-let obj = {
+const onlineFriendsStore = new OnlineFriendsStore(DispatcherDefault, {
   CONNECTION_OPEN: rebuild,
   CONNECTION_OPEN_SUPPLEMENTAL: rebuild,
   OVERLAY_INITIALIZE: rebuild,
@@ -82,34 +77,34 @@ let obj = {
   GUILD_CREATE: rebuild,
   GUILD_DELETE: rebuild,
   GUILD_MEMBER_REMOVE: function handleGuildMemberRemove(user) {
-    user = user.user;
-    const obj = FriendsSidebarExperimentDefault;
-    let appBarToggleEnabled = obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled;
-    if (appBarToggleEnabled) {
-      const id = user.id;
-      if (RelationshipStore.isFriend(id)) {
-        let deleteResult;
-        if (PresenceStore.getStatus(id) !== StatusTypes.OFFLINE) {
-          const hasItem = set.has(id);
-          let flag = !hasItem;
-          if (flag) {
-            set.add(id);
-            flag = true;
-          }
-          deleteResult = flag;
-        }
-        appBarToggleEnabled = deleteResult;
+    const appBarToggleEnabled = FriendsSidebarExperimentDefault.getConfig({
+      location: "OnlineFriendsStore",
+    }).appBarToggleEnabled;
+    if (!appBarToggleEnabled) {
+      return appBarToggleEnabled;
+    } else {
+      const id = user.user.id;
+      if (!RelationshipStore.isFriend(id)) {
+        let deleteResult = set.delete(id);
       }
-      deleteResult = set.delete(id);
+      const hasItem = set.has(id);
+      let flag = !hasItem;
+      if (!hasItem) {
+        set.add(id);
+        flag = true;
+      }
+      deleteResult = flag;
     }
-    return appBarToggleEnabled;
   },
   PRESENCE_UPDATES: function handlePresenceUpdates(updates) {
     updates = updates.updates;
     if (isEnabled()) {
       let flag = false;
       for (const item10012 of updates) {
-        let tmp4 = upsert(item10012.user.id) || flag;
+        let tmp4 = upsert(item10012.user.id);
+        if (!tmp4) {
+          tmp4 = flag;
+        }
         flag = tmp4;
         continue;
       }
@@ -119,80 +114,74 @@ let obj = {
     }
   },
   RELATIONSHIP_ADD: function handleRelationshipAdd(relationship) {
-    relationship = relationship.relationship;
-    const obj = FriendsSidebarExperimentDefault;
-    let appBarToggleEnabled = obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled;
-    if (appBarToggleEnabled) {
-      const id = relationship.id;
-      if (RelationshipStore.isFriend(id)) {
-        let deleteResult;
-        if (PresenceStore.getStatus(id) !== StatusTypes.OFFLINE) {
-          const hasItem = set.has(id);
-          let flag = !hasItem;
-          if (flag) {
-            set.add(id);
-            flag = true;
-          }
-          deleteResult = flag;
-        }
-        appBarToggleEnabled = deleteResult;
+    const appBarToggleEnabled = FriendsSidebarExperimentDefault.getConfig({
+      location: "OnlineFriendsStore",
+    }).appBarToggleEnabled;
+    if (!appBarToggleEnabled) {
+      return appBarToggleEnabled;
+    } else {
+      const id = relationship.relationship.id;
+      if (!RelationshipStore.isFriend(id)) {
+        let deleteResult = set.delete(id);
       }
-      deleteResult = set.delete(id);
+      const hasItem = set.has(id);
+      let flag = !hasItem;
+      if (!hasItem) {
+        set.add(id);
+        flag = true;
+      }
+      deleteResult = flag;
     }
-    return appBarToggleEnabled;
   },
   RELATIONSHIP_REMOVE: function handleRelationshipRemove(relationship) {
-    relationship = relationship.relationship;
-    const obj = FriendsSidebarExperimentDefault;
-    let appBarToggleEnabled = obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled;
-    if (appBarToggleEnabled) {
-      const id = relationship.id;
-      if (RelationshipStore.isFriend(id)) {
-        let deleteResult;
-        if (PresenceStore.getStatus(id) !== StatusTypes.OFFLINE) {
-          const hasItem = set.has(id);
-          let flag = !hasItem;
-          if (flag) {
-            set.add(id);
-            flag = true;
-          }
-          deleteResult = flag;
-        }
-        appBarToggleEnabled = deleteResult;
+    const appBarToggleEnabled = FriendsSidebarExperimentDefault.getConfig({
+      location: "OnlineFriendsStore",
+    }).appBarToggleEnabled;
+    if (!appBarToggleEnabled) {
+      return appBarToggleEnabled;
+    } else {
+      const id = relationship.relationship.id;
+      if (!RelationshipStore.isFriend(id)) {
+        let deleteResult = set.delete(id);
       }
-      deleteResult = set.delete(id);
+      const hasItem = set.has(id);
+      let flag = !hasItem;
+      if (!hasItem) {
+        set.add(id);
+        flag = true;
+      }
+      deleteResult = flag;
     }
-    return appBarToggleEnabled;
   },
   RELATIONSHIP_UPDATE: function handleRelationshipUpdate(relationship) {
-    relationship = relationship.relationship;
-    const obj = FriendsSidebarExperimentDefault;
-    let appBarToggleEnabled = obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled;
-    if (appBarToggleEnabled) {
-      const id = relationship.id;
-      if (RelationshipStore.isFriend(id)) {
-        let deleteResult;
-        if (PresenceStore.getStatus(id) !== StatusTypes.OFFLINE) {
-          const hasItem = set.has(id);
-          let flag = !hasItem;
-          if (flag) {
-            set.add(id);
-            flag = true;
-          }
-          deleteResult = flag;
-        }
-        appBarToggleEnabled = deleteResult;
+    const appBarToggleEnabled = FriendsSidebarExperimentDefault.getConfig({
+      location: "OnlineFriendsStore",
+    }).appBarToggleEnabled;
+    if (!appBarToggleEnabled) {
+      return appBarToggleEnabled;
+    } else {
+      const id = relationship.relationship.id;
+      if (!RelationshipStore.isFriend(id)) {
+        let deleteResult = set.delete(id);
       }
-      deleteResult = set.delete(id);
+      const hasItem = set.has(id);
+      let flag = !hasItem;
+      if (!hasItem) {
+        set.add(id);
+        flag = true;
+      }
+      deleteResult = flag;
     }
-    return appBarToggleEnabled;
   },
   CONNECTION_OPEN_STATE_UPDATE: function handleConnectionOpenStateUpdate(apexExperiments) {
     let tmp = null != apexExperiments.apexExperiments;
     if (tmp) {
-      const obj = FriendsSidebarExperimentDefault;
-      tmp = obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled !== closure_7 && rebuild();
-      const tmp5 = obj.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled !== closure_7 && rebuild();
+      let tmp5 =
+        FriendsSidebarExperimentDefault.getConfig({ location: "OnlineFriendsStore" }).appBarToggleEnabled !== closure_7;
+      if (tmp5) {
+        tmp5 = rebuild();
+      }
+      tmp = tmp5;
     }
     return tmp;
   },
@@ -203,8 +192,8 @@ let obj = {
   APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE: handleExperimentChange,
   APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE: handleExperimentChange,
   LOGOUT: clear,
-};
-const onlineFriendsStore = new OnlineFriendsStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/friends/OnlineFriendsStore.tsx");
 
 export default onlineFriendsStore;

@@ -2,9 +2,10 @@
 import DurationsDefault from "../../utils/Durations.tsx";
 import ContentInventoryHttpApi from "ContentInventoryHttpApi.tsx";
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 const MINUTE = DurationsDefault.Millis.MINUTE;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/maybeFetchContentInventoryOutbox.tsx");
 
 export default function maybeFetchContentInventoryOutbox(id, arg1) {
@@ -19,8 +20,7 @@ export default function maybeFetchContentInventoryOutbox(id, arg1) {
     }
     const _Date = Date;
     if (Date.now() - num >= MINUTE) {
-      const obj2 = ContentInventoryHttpApi;
-      return obj2.getContentInventoryOutbox(id, arg1);
+      return ContentInventoryHttpApi.getContentInventoryOutbox(id, arg1);
     }
   }
 }

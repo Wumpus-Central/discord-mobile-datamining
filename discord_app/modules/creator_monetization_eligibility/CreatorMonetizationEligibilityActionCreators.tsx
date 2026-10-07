@@ -1,434 +1,364 @@
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx
-import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import ApplicationConstants from "../applications/ApplicationConstants.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let c3;
-
-let obj = function _createCreatorMonetizationEnableRequest() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj6;
-    let closure_0 = arg0;
-    if (c1 === 2) {
-      c1 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+require = fn;
+let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c1 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const HTTP = HTTPUtils.HTTP;
-            const obj4 = {
-              url: Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(closure_0),
-              rejectWithError: obj6.rejectWithMigratedError(),
-            };
-            const post = HTTP.post;
-            obj6 = HTTPUtils;
-            c2 = 1;
-            c1 = 1;
-            const obj5 = { value: post(obj4), done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          c1 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      } catch (tmp4) {
-        c1 = 3;
-        throw tmp4;
-      }
+      return { value: "IconComponent", done: null };
     }
-  });
-  return obj(...arguments);
-};
-obj = function _getCreatorMonetizationEligibility() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c1;
-    let c2;
-    let obj7;
-    let closure_0 = arg0;
-    const HTTP = HTTPUtils.HTTP;
-    const obj4 = {
-      url: Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(closure_0),
-      rejectWithError: obj7.rejectWithMigratedError(),
-    };
-    const get = HTTP.get;
-    obj7 = HTTPUtils;
-    await get(obj4);
-    return value.body;
-  });
-  return obj(...arguments);
-};
-obj = function _acceptCreatorMonetizationTerms() {
-  obj = _asyncToGenerator(async (arg0, arg1) => {
-    let obj6;
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    if (c2 === 2) {
-      c2 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = {
+            url: Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(closure_0),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c2 = 1;
+          c1 = 1;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c1 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
+        c1 = 3;
         return { value: "IconComponent", done: null };
       }
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
+    }
+  }
+};
+let closure_7 = async function _getCreatorMonetizationEligibility() {
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({
+    url: Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(closure_0),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  });
+  return value.body;
+};
+let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c2 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const HTTP = HTTPUtils.HTTP;
-            const obj4 = {
-              url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(closure_0, closure_1),
-              rejectWithError: obj6.rejectWithMigratedError(),
-            };
-            const post = HTTP.post;
-            obj6 = HTTPUtils;
-            c3 = 1;
-            c2 = 1;
-            const obj5 = { value: post(obj4), done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c2 = 3;
           throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          c2 = 3;
-          return { value: "IconComponent", done: null };
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = {
+            url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(closure_0, closure_1),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c3 = 1;
+          c2 = 1;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
-      } catch (tmp4) {
+      } else if (arg0 === 1) {
         c2 = 3;
-        throw tmp4;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _acceptCreatorMonetizationTermsV() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj6;
-    let closure_0 = arg0;
-    if (c1 === 2) {
-      c1 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c2 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
+        c2 = 3;
         return { value: "IconComponent", done: null };
       }
+    } catch (tmp5) {
+      c2 = tmp;
+      throw tmp5;
+    }
+  }
+};
+let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c1 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const HTTP = HTTPUtils.HTTP;
-            const obj4 = {
-              url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(closure_0),
-              rejectWithError: obj6.rejectWithMigratedError(),
-            };
-            const post = HTTP.post;
-            obj6 = HTTPUtils;
-            c2 = 1;
-            c1 = 1;
-            const obj5 = { value: post(obj4), done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          c1 = 3;
-          return { value: "IconComponent", done: null };
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = {
+            url: Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(closure_0),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c2 = 1;
+          c1 = 1;
+          const obj5 = { value: HTTP.post(obj4), done: false };
+          return obj5;
         }
-      } catch (tmp4) {
+      } else if (arg0 === 1) {
         c1 = 3;
-        throw tmp4;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        c1 = 3;
+        return { value: "IconComponent", done: null };
       }
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
     }
-  });
-  return obj(...arguments);
+  }
 };
-obj = function _getCreatorMonetizationOnboardingMarketing() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c1;
-    let c2;
-    let obj7;
-    let closure_0 = arg0;
+let closure_10 = async function _getCreatorMonetizationOnboardingMarketing() {
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({
+    url: Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(closure_0),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  });
+  return value.body;
+};
+let closure_11 = async function _ownershipTransferOnboard(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_3 = tmp2;
+    closure_2 = tmp5;
     const HTTP = HTTPUtils.HTTP;
-    const obj4 = {
-      url: Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(closure_0),
-      rejectWithError: obj7.rejectWithMigratedError(),
+    const request = {
+      url: Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(closure_0),
+      body: { team_id },
+      rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
-    const get = HTTP.get;
-    obj7 = HTTPUtils;
-    await get(obj4);
-    return value.body;
-  });
-  return obj(...arguments);
+    await HTTP.post(request);
+    const body = value.body;
+    if (null != body.application) {
+      closure_131_1(closure_131_2[4]).dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: body.application });
+      closure_131_1(closure_131_2[4]);
+    }
+    return body;
+  })();
 };
-obj = function _ownershipTransferOnboard() {
-  obj = _asyncToGenerator(async (arg0, team_id) => {
-    let closure_2;
-    let closure_3;
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      let obj10;
-      let obj4;
-      const HTTP = HTTPUtils.HTTP;
-      const request = {
-        url: Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(closure_0),
-        body: obj4,
-        rejectWithError: obj10.rejectWithMigratedError(),
-      };
-      const post = HTTP.post;
-      obj4 = { team_id };
-      obj10 = HTTPUtils;
-      await post(request);
-      const body = value.body;
-      if (null != body.application) {
-        const obj7 = { type: "APPLICATION_FETCH_SUCCESS", application: body.application };
-        obj = closure_131_1(closure_131_2[4]);
-        obj.dispatch(obj7);
-      }
-      return body;
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _requestRemoveMonetization() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj6;
-    let closure_0 = arg0;
-    if (c1 === 2) {
-      c1 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_12 = async function _requestRemoveMonetization(arg0) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        c1 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            const HTTP = HTTPUtils.HTTP;
-            const request = {
-              url: Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(closure_0),
-              body: {},
-              rejectWithError: obj6.rejectWithMigratedError(),
-            };
-            const post = HTTP.post;
-            obj6 = HTTPUtils;
-            c2 = 1;
-            c1 = 1;
-            const obj4 = { value: post(request), done: false };
-            return obj4;
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
           c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          c1 = 3;
-          return { value: "IconComponent", done: null };
+          const HTTP = HTTPUtils.HTTP;
+          const request = {
+            url: Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(closure_0),
+            body: {},
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c2 = 1;
+          c1 = 1;
+          const obj4 = { value: HTTP.post(request), done: false };
+          return obj4;
         }
-      } catch (tmp4) {
+      } else if (arg0 === 1) {
         c1 = 3;
-        throw tmp4;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _removeMonetization() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let obj3;
-    function requestRemoveMonetization() {
-      return closure_1_12(...arguments);
-    }
-    let closure_0 = arg0;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c1 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
+        c1 = 3;
         return { value: "IconComponent", done: null };
       }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_2 = tmp4;
-            let closure_1 = tmp;
-            c3 = 1;
-            c4 = 1;
-            const obj5 = { value: requestRemoveMonetization(closure_0), done: false };
-            return obj5;
-          }
-        } else if (1 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            const obj7 = { type: closure_130_5.GUILD_ROLE_SUBSCRIPTIONS, includeTeam: true };
-            c3 = 2;
-            c4 = 1;
-            const obj8 = { value: obj3.getApplicationsForGuild(closure_0, obj7), done: false };
-            obj3 = closure_130_1(closure_130_2[5]);
-            return obj8;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
-        } else {
-          c4 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
-      } catch (tmp12) {
-        c4 = 3;
-        throw tmp12;
-      }
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
     }
-  });
-  return obj(...arguments);
+  }
 };
-const Endpoints = Constants.Endpoints;
-const ApplicationTypes = ApplicationConstants.ApplicationTypes;
+let closure_13 = async function _removeMonetization() {
+  closure_1 = tmp2;
+  closure_129_0 = closure_0;
+  await (function requestRemoveMonetization() {
+    const self = this;
+    const apply = closure_1_12.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })(closure_0);
+  await closure_130_1(closure_130_2[5]).getApplicationsForGuild(closure_129_0, {
+    type: closure_130_5.GUILD_ROLE_SUBSCRIPTIONS,
+    includeTeam: true,
+  });
+  return value;
+};
+const Endpoints = fn(1085).Endpoints;
+const ApplicationTypes = fn(1360).ApplicationTypes;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx",
 );
 
 export const createCreatorMonetizationEnableRequest = function createCreatorMonetizationEnableRequest() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const getCreatorMonetizationEligibility = function getCreatorMonetizationEligibility() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const getCreatorMonetizationOnboardingMarketing = function getCreatorMonetizationOnboardingMarketing() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_10.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const ownershipTransferOnboard = function ownershipTransferOnboard() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_11.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const acceptNewTerms = function acceptNewTerms(arg0) {
-  let obj2;
   const HTTP = HTTPUtils.HTTP;
-  const post = HTTP.post;
-  obj = { url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0), rejectWithError: obj2.rejectWithMigratedError() };
-  obj2 = HTTPUtils;
-  return post(obj);
+  const obj = {
+    url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
+  };
+  return HTTP.post(obj);
 };
 export const acceptNewTermsDemonetized = function acceptNewTermsDemonetized(arg0) {
-  let obj2;
   const HTTP = HTTPUtils.HTTP;
-  const post = HTTP.post;
-  obj = {
+  const obj = {
     url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(arg0),
-    rejectWithError: obj2.rejectWithMigratedError(),
+    rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
-  obj2 = HTTPUtils;
-  return post(obj);
+  return HTTP.post(obj);
 };
 export const removeMonetization = function removeMonetization() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

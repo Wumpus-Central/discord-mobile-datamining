@@ -1,97 +1,74 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import intl2 from "../../../../intl/index.native.tsx";
-import ApplicationConstants from "../../../applications/ApplicationConstants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let _require, c1, c2, closure_12, guildId, navigation;
-
-let c10;
-let c9;
-let _slicedToArray = _slicedToArray_mod;
-const ScrollView = react_native.ScrollView;
-const ApplicationTypes = ApplicationConstants.ApplicationTypes;
-({ jsx: c9, jsxs: c10 } = Fragment);
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const ApplicationTypes = fn(1360).ApplicationTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let closure_5;
-      let first;
-      let first1;
-      let first3;
-      let isFullServerGating;
-      let items1;
-      let loading;
-      let tmp10;
-      const tmp = guildId;
-      let obj = guildId(isFullServerGating[7]);
-      const cResult = obj.c(33);
+      const cResult = require("c").c(33);
       guildId = guildId.guildId;
-      let obj2 = guildId(isFullServerGating[8]);
-      navigation = obj2.useNavigation();
-      let obj3 = guildId(isFullServerGating[9]);
-      const subscriptionsSettings = obj3.useSubscriptionsSettings(guildId);
+      _require = guildId;
+      let obj = require("c");
+      const navigation = require("useNavigation").useNavigation();
+      let obj2 = require("useNavigation");
+      const subscriptionsSettings = require("GuildRoleSubscriptionsHooks").useSubscriptionsSettings(guildId);
       isFullServerGating = navigation(isFullServerGating[10])(guildId).isFullServerGating;
       const application = navigation(isFullServerGating[11])(guildId, loading.GUILD_ROLE_SUBSCRIPTIONS).application;
-      let obj4 = first1;
-      [first, tmp10] = first1.useState(null);
+      [first] = first1.useState(null);
       _slicedToArray = tmp10;
       let description;
-      const useState = first1.useState;
       if (subscriptionsSettings != null) {
         description = subscriptionsSettings.description;
       }
-      const tmp7Result = _slicedToArray(useState(description), 2);
+      const tmp7Result = _slicedToArray(first1.useState(description), 2);
       first1 = tmp7Result[0];
-      const tmp13 = tmp7Result[1];
-      const tmp7Result2 = _slicedToArray(obj4.useState(isFullServerGating), 2);
+      const tmp7Result2 = _slicedToArray(first1.useState(isFullServerGating), 2);
       const first2 = tmp7Result2[0];
-      const tmp16 = tmp7Result2[1];
-      const tmpResult = tmp(isFullServerGating[9]);
-      const updateSubscriptionsSettings1 = tmpResult.useUpdateSubscriptionsSettings();
+      let obj3 = require("GuildRoleSubscriptionsHooks");
+      const updateSubscriptionsSettings1 = require("GuildRoleSubscriptionsHooks").useUpdateSubscriptionsSettings();
       loading = updateSubscriptionsSettings1.loading;
       const updateSubscriptionsSettings = updateSubscriptionsSettings1.updateSubscriptionsSettings;
       const error = updateSubscriptionsSettings1.error;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj5 = {};
         cResult[0] = obj5;
-        first3 = obj5;
+        let first3 = obj5;
       } else {
         first3 = cResult[0];
       }
-      let tmp19 = null != first;
-      const insets = tmp6(tmp2[12])(first3).insets;
-      if (!tmp19) {
-        let tmp20 = null != first1;
-        if (tmp20) {
+      let tmp17 = null != first;
+      if (!tmp17) {
+        let tmp18 = null != first1;
+        if (tmp18) {
           let description1;
           if (subscriptionsSettings != null) {
             description1 = subscriptionsSettings.description;
           }
-          tmp20 = first1 !== description1;
+          tmp18 = first1 !== description1;
         }
-        if (tmp20) {
-          tmp20 = 0 !== first1.length;
+        if (tmp18) {
+          tmp18 = 0 !== first1.length;
         }
-        tmp19 = tmp20;
+        tmp17 = tmp18;
       }
-      if (!tmp19) {
-        tmp19 = isFullServerGating !== first2;
+      if (!tmp17) {
+        tmp17 = isFullServerGating !== first2;
       }
-      closure_11 = tmp19;
+      closure_11 = tmp17;
       if (cResult[1] === application) {
         if (cResult[2] === first) {
-          let tmp22;
           if (cResult[3] === subscriptionsSettings) {
-            tmp22 = cResult[4];
+            let tmp20 = cResult[4];
           }
           if (cResult[5] === first) {
             if (cResult[6] === first1) {
@@ -99,260 +76,297 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[8] === first2) {
                   if (cResult[9] === isFullServerGating) {
                     let description2;
-                    const tmp26 = cResult[10];
                     if (subscriptionsSettings != null) {
                       description2 = subscriptionsSettings.description;
                     }
-                    if (tmp26 === description2) {
-                      let tmp28;
+                    if (cResult[10] === description2) {
                       if (cResult[11] === updateSubscriptionsSettings) {
-                        tmp28 = cResult[12];
+                        let tmp25 = cResult[12];
                       }
-                      closure_12 = tmp28;
-                      if (cResult[13] === tmp28) {
-                        if (cResult[14] === tmp19) {
+                      closure_12 = tmp25;
+                      if (cResult[13] === tmp25) {
+                        if (cResult[14] === tmp17) {
                           if (cResult[15] === loading) {
-                            let tmp31;
-                            let tmp32;
-                            let tmp35;
                             if (cResult[16] === navigation) {
-                              tmp31 = cResult[17];
-                              tmp32 = cResult[18];
+                              let tmp28 = cResult[17];
+                              let tmp29 = cResult[18];
                             }
-                            const layoutEffect = obj4.useLayoutEffect(tmp31, tmp32);
+                            const layoutEffect = obj4.useLayoutEffect(tmp28, tmp29);
                             if (cResult[19] !== error) {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
                               const items = [error];
                               cResult[19] = error;
                               cResult[20] = V;
                               cResult[21] = items;
-                              tmp35 = items;
+                              let tmp32 = items;
                             } else {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
-                              tmp35 = cResult[21];
+                              tmp32 = cResult[21];
                             }
-                            const effect = obj4.useEffect(V, tmp35);
-                            const sum = insets.bottom + tmp6(tmp2[19]).space.PX_16;
+                            const effect = obj4.useEffect(V, tmp32);
+                            const sum = tmp6(tmp2[12])(first3).insets.bottom + tmp6(tmp2[19]).space.PX_16;
                             if (cResult[22] !== sum) {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
-                              tmp39[0] = sum;
+                              tmp36[0] = sum;
                               cResult[22] = sum;
-                              cResult[23] = tmp39;
+                              cResult[23] = tmp36;
                             } else {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
                             }
                             if (cResult[24] !== first2) {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
-                              let obj6 = { isFullServerGating: first2, onChange: tmp16 };
+                              let obj6 = { isFullServerGating: first2, onChange: tmp7Result2[1] };
+                              const tmp38 = updateSubscriptionsSettings(tmp6(tmp2[20]), obj6);
                               cResult[24] = first2;
-                              cResult[25] = updateSubscriptionsSettings(navigation(isFullServerGating[20]), obj6);
-                              const tmp41 = updateSubscriptionsSettings(navigation(isFullServerGating[20]), obj6);
+                              cResult[25] = tmp38;
                             } else {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
                             }
                             if (first1 == null) {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
                               if (subscriptionsSettings != null) {
                                 class V {
                                   constructor() {
+                                    obj = error;
                                     if (null != error) {
-                                      const presentError = ToastUtils.presentError;
-                                      ToastUtils;
-                                      let anyErrorMessage = error.getAnyErrorMessage();
+                                      tmp = closure_0;
+                                      tmp2 = closure_3;
+                                      obj2 = closure_0(closure_3[18]);
+                                      anyErrorMessage = obj.getAnyErrorMessage();
                                       if (anyErrorMessage == null) {
-                                        const intl = intl2.intl;
-                                        anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                        intl = tmp(tmp2[17]).intl;
+                                        anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                       }
-                                      presentError(anyErrorMessage);
+                                      presentErrorResult = obj2.presentError(anyErrorMessage);
                                     }
+                                    return;
                                   }
                                 }
                               }
-                              first1 = tmp42;
+                              first1 = tmp39;
                             }
                             if (first1 == null) {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
                             }
-                            if (cResult[26] === tmp22) {
+                            if (cResult[26] === tmp20) {
                               class V {
                                 constructor() {
+                                  obj = error;
                                   if (null != error) {
-                                    const presentError = ToastUtils.presentError;
-                                    ToastUtils;
-                                    let anyErrorMessage = error.getAnyErrorMessage();
+                                    tmp = closure_0;
+                                    tmp2 = closure_3;
+                                    obj2 = closure_0(closure_3[18]);
+                                    anyErrorMessage = obj.getAnyErrorMessage();
                                     if (anyErrorMessage == null) {
-                                      const intl = intl2.intl;
-                                      anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                      intl = tmp(tmp2[17]).intl;
+                                      anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                     }
-                                    presentError(anyErrorMessage);
+                                    presentErrorResult = obj2.presentError(anyErrorMessage);
                                   }
+                                  return;
                                 }
                               }
-                              if (cResult[29] === tmp40) {
+                              if (cResult[29] === tmp37) {
                                 class V {
                                   constructor() {
+                                    obj = error;
                                     if (null != error) {
-                                      const presentError = ToastUtils.presentError;
-                                      ToastUtils;
-                                      let anyErrorMessage = error.getAnyErrorMessage();
+                                      tmp = closure_0;
+                                      tmp2 = closure_3;
+                                      obj2 = closure_0(closure_3[18]);
+                                      anyErrorMessage = obj.getAnyErrorMessage();
                                       if (anyErrorMessage == null) {
-                                        const intl = intl2.intl;
-                                        anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                                        intl = tmp(tmp2[17]).intl;
+                                        anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                                       }
-                                      presentError(anyErrorMessage);
+                                      presentErrorResult = obj2.presentError(anyErrorMessage);
                                     }
+                                    return;
                                   }
                                 }
                               }
-                              const obj8 = { contentContainerStyle: tmp39, children: items1 };
-                              items1 = [tmp40, tmp43];
-                              cResult[29] = tmp40;
-                              cResult[30] = tmp43;
-                              cResult[31] = tmp39;
-                              cResult[32] = error(first2, obj8);
-                              const tmp49 = error(first2, obj8);
+                              const obj8 = { contentContainerStyle: tmp36, children: null };
+                              const items1 = [tmp37, tmp40];
+                              obj8.children = items1;
+                              const tmp46 = error(first2, obj8);
+                              cResult[29] = tmp37;
+                              cResult[30] = tmp40;
+                              cResult[31] = tmp36;
+                              cResult[32] = tmp46;
                             }
-                            const obj9 = { cover: tmp22, setCover: tmp10, description: first1, setDescription: tmp13 };
-                            cResult[26] = tmp22;
+                            const obj9 = {
+                              cover: tmp20,
+                              setCover: tmp10,
+                              description: first1,
+                              setDescription: tmp7Result[1],
+                            };
+                            const tmp42 = updateSubscriptionsSettings(tmp(tmp2[21]).Content, obj9);
+                            cResult[26] = tmp20;
                             cResult[27] = first1;
-                            cResult[28] = updateSubscriptionsSettings(tmp(isFullServerGating[21]).Content, obj9);
-                            const tmp45 = updateSubscriptionsSettings(tmp(isFullServerGating[21]).Content, obj9);
+                            cResult[28] = tmp42;
                           }
                         }
                       }
                       const fn2 = function k() {
-                        let fn;
-                        let onPress;
-                        const setOptions = navigation.setOptions;
                         if (loading) {
-                          fn = () =>
-                            updateSubscriptionsSettings(guildId(isFullServerGating[15]).HeaderSubmittingIndicator, {});
+                          let fn = () =>
+                            updateSubscriptionsSettings(
+                              closure_1_0(isFullServerGating[15]).HeaderSubmittingIndicator,
+                              {},
+                            );
                         } else if (closure_11) {
                           fn = () => {
-                            let intl;
-                            const obj = { text: intl.string(guildId(isFullServerGating[17]).t["R3BPH+"]), onPress };
-                            const HeaderActionButton = guildId(isFullServerGating[16]).HeaderActionButton;
-                            intl = guildId(isFullServerGating[17]).intl;
-                            return updateSubscriptionsSettings(HeaderActionButton, obj);
+                            const obj = { text: null, onPress: null };
+                            const intl = closure_0(isFullServerGating[17]).intl;
+                            obj.text = intl.string(closure_0(isFullServerGating[17]).t["R3BPH+"]);
+                            obj.onPress = onPress;
+                            return updateSubscriptionsSettings(
+                              closure_0(isFullServerGating[16]).HeaderActionButton,
+                              obj,
+                            );
                           };
                         } else {
                           fn = () => null;
                         }
-                        setOptions({ headerRight: fn });
+                        navigation.setOptions({ headerRight: fn });
                       };
-                      const items2 = [navigation, tmp19, loading, tmp28];
-                      cResult[13] = tmp28;
-                      cResult[14] = tmp19;
+                      const items2 = [navigation, tmp17, loading, tmp25];
+                      cResult[13] = tmp25;
+                      cResult[14] = tmp17;
                       cResult[15] = loading;
                       cResult[16] = navigation;
                       cResult[17] = fn2;
                       cResult[18] = items2;
-                      tmp32 = items2;
-                      tmp31 = fn2;
+                      tmp29 = items2;
+                      tmp28 = fn2;
                     }
                   }
                 }
@@ -360,11 +374,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           _require = first(function* () {
-            let description;
             if (description === 2) {
               description = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
+            } else if (tmp4 === 3) {
               if (arg0 === 1) {
                 throw value;
               } else if (arg0 === 2) {
@@ -385,21 +398,21 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj4 = { value, done: true };
                     return obj4;
                   } else {
-                    closure_0 = tmp;
-                    let tmp10 = null != description2;
-                    if (tmp10) {
+                    closure_0 = tmp2;
+                    let tmp11 = null != first1;
+                    if (tmp11) {
                       description = undefined;
                       if (description != null) {
                         description = description.description;
                       }
-                      tmp10 = description2 !== description;
+                      tmp11 = first1 !== description;
                     }
-                    if (tmp10) {
-                      tmp10 = 0 !== description2.length;
+                    if (tmp11) {
+                      tmp11 = 0 !== first1.length;
                     }
                     const obj5 = {};
-                    if (tmp10) {
-                      obj5.description = description2;
+                    if (tmp11) {
+                      obj5.description = first1;
                     }
                     if (null != uri) {
                       obj5.cover_image = uri.uri;
@@ -407,29 +420,28 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     if (closure_1_3 !== full_server_gate) {
                       obj5.full_server_gate = full_server_gate;
                     }
-                    const obj3 = navigation(isFullServerGating[14]);
-                    if (!obj3.isEmpty(obj5)) {
+                    if (obj3.isEmpty(obj5)) {
+                      description = 3;
+                    } else {
                       c1 = 1;
                       description = 1;
                       const obj6 = { value: updateSubscriptionsSettings(closure_0, obj5), done: false };
                       return obj6;
                     }
+                    obj3 = navigation(isFullServerGating[14]);
                   }
                 } else if (arg0 === 1) {
                   description = 3;
                   throw value;
-                } else if (arg0 === 2) {
-                  description = 3;
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
+                } else if (arg0 !== 2) {
                   closure_1_5(null);
                 }
                 description = 3;
-                return { value: "IconComponent", done: null };
-              } catch (tmp16) {
-                description = 3;
-                throw tmp16;
+                const obj = { value, done: true };
+                return obj;
+              } catch (tmp17) {
+                description = tmp;
+                throw tmp17;
               }
             }
           });
@@ -441,165 +453,178 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           if (subscriptionsSettings != null) {
             class V {
               constructor() {
+                obj = error;
                 if (null != error) {
-                  const presentError = ToastUtils.presentError;
-                  ToastUtils;
-                  let anyErrorMessage = error.getAnyErrorMessage();
+                  tmp = closure_0;
+                  tmp2 = closure_3;
+                  obj2 = closure_0(closure_3[18]);
+                  anyErrorMessage = obj.getAnyErrorMessage();
                   if (anyErrorMessage == null) {
-                    const intl = intl2.intl;
-                    anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                    intl = tmp(tmp2[17]).intl;
+                    anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                   }
-                  presentError(anyErrorMessage);
+                  presentErrorResult = obj2.presentError(anyErrorMessage);
                 }
+                return;
               }
             }
           }
           let fn = function () {
-            return closure_0(...arguments);
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
           };
           cResult[10] = undefined;
           cResult[11] = updateSubscriptionsSettings;
           cResult[12] = fn;
-          tmp28 = fn;
+          tmp25 = fn;
         }
       }
-      let tmp23 = first;
+      let tmp21 = first;
       if (first == null) {
         class V {
           constructor() {
+            obj = error;
             if (null != error) {
-              const presentError = ToastUtils.presentError;
-              ToastUtils;
-              let anyErrorMessage = error.getAnyErrorMessage();
+              tmp = closure_0;
+              tmp2 = closure_3;
+              obj2 = closure_0(closure_3[18]);
+              anyErrorMessage = obj.getAnyErrorMessage();
               if (anyErrorMessage == null) {
-                const intl = intl2.intl;
-                anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                intl = tmp(tmp2[17]).intl;
+                anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
               }
-              presentError(anyErrorMessage);
+              presentErrorResult = obj2.presentError(anyErrorMessage);
             }
+            return;
           }
         }
         if (subscriptionsSettings != null) {
           class V {
             constructor() {
+              obj = error;
               if (null != error) {
-                const presentError = ToastUtils.presentError;
-                ToastUtils;
-                let anyErrorMessage = error.getAnyErrorMessage();
+                tmp = closure_0;
+                tmp2 = closure_3;
+                obj2 = closure_0(closure_3[18]);
+                anyErrorMessage = obj.getAnyErrorMessage();
                 if (anyErrorMessage == null) {
-                  const intl = intl2.intl;
-                  anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                  intl = tmp(tmp2[17]).intl;
+                  anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                 }
-                presentError(anyErrorMessage);
+                presentErrorResult = obj2.presentError(anyErrorMessage);
               }
+              return;
             }
           }
         }
         let source = null;
-        if (null != tmp24) {
+        if (null != tmp22) {
           class V {
             constructor() {
+              obj = error;
               if (null != error) {
-                const presentError = ToastUtils.presentError;
-                ToastUtils;
-                let anyErrorMessage = error.getAnyErrorMessage();
+                tmp = closure_0;
+                tmp2 = closure_3;
+                obj2 = closure_0(closure_3[18]);
+                anyErrorMessage = obj.getAnyErrorMessage();
                 if (anyErrorMessage == null) {
-                  const intl = intl2.intl;
-                  anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                  intl = tmp(tmp2[17]).intl;
+                  anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                 }
-                presentError(anyErrorMessage);
+                presentErrorResult = obj2.presentError(anyErrorMessage);
               }
+              return;
             }
           }
           if (null != application) {
             class V {
               constructor() {
+                obj = error;
                 if (null != error) {
-                  const presentError = ToastUtils.presentError;
-                  ToastUtils;
-                  let anyErrorMessage = error.getAnyErrorMessage();
+                  tmp = closure_0;
+                  tmp2 = closure_3;
+                  obj2 = closure_0(closure_3[18]);
+                  anyErrorMessage = obj.getAnyErrorMessage();
                   if (anyErrorMessage == null) {
-                    const intl = intl2.intl;
-                    anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+                    intl = tmp(tmp2[17]).intl;
+                    anyErrorMessage = intl.string(tmp(tmp2[17]).t.ZUEGFn);
                   }
-                  presentError(anyErrorMessage);
+                  presentErrorResult = obj2.presentError(anyErrorMessage);
                 }
+                return;
               }
             }
             const obj10 = { application_id: application.id, image_asset: subscriptionsSettings.cover_image_asset };
-            const obj7 = subscriptionsSettings(isFullServerGating[13]);
-            source = obj7.getSource(obj10);
+            source = subscriptionsSettings(tmp2[13]).getSource(obj10);
+            const obj7 = subscriptionsSettings(tmp2[13]);
           }
         }
-        tmp23 = source;
+        tmp21 = source;
       }
       cResult[1] = application;
       cResult[2] = first;
       cResult[3] = subscriptionsSettings;
-      cResult[4] = tmp23;
-      tmp22 = tmp23;
+      cResult[4] = tmp21;
+      tmp20 = tmp21;
+      const tmpResult = require("GuildRoleSubscriptionsHooks");
     }
   : (guildId) => {
-      let closure_5;
-      let first1;
-      let items3;
-      let str;
-      let tmp12;
-      let tmp15;
       guildId = guildId.guildId;
       let isFullServerGating;
       _slicedToArray = undefined;
       str = undefined;
-      first1 = undefined;
+      let first1;
       let loading;
       let updateSubscriptionsSettings;
       let error;
       closure_11 = undefined;
       let callback;
-      const tmp = guildId;
+      const navigation = guildId(isFullServerGating[8]).useNavigation();
       let obj = guildId(isFullServerGating[8]);
-      navigation = obj.useNavigation();
-      let obj2 = guildId(isFullServerGating[9]);
-      const subscriptionsSettings = obj2.useSubscriptionsSettings(guildId);
+      const subscriptionsSettings = guildId(isFullServerGating[9]).useSubscriptionsSettings(guildId);
       isFullServerGating = navigation(isFullServerGating[10])(guildId).isFullServerGating;
       const application = navigation(isFullServerGating[11])(guildId, loading.GUILD_ROLE_SUBSCRIPTIONS).application;
-      let obj3 = str;
       const tmp7 = _slicedToArray(str.useState(null), 2);
       const first = tmp7[0];
       _slicedToArray = tmp9;
       let description;
-      const useState = str.useState;
       if (subscriptionsSettings != null) {
         description = subscriptionsSettings.description;
       }
-      [str, tmp12] = useState(description);
-      [first1, tmp15] = obj3.useState(isFullServerGating);
-      const tmpResult = tmp(isFullServerGating[9]);
-      const updateSubscriptionsSettings1 = tmpResult.useUpdateSubscriptionsSettings();
+      [str, obj8.setDescription] = str.useState(description);
+      const tmp6Result2 = _slicedToArray(str.useState(isFullServerGating), 2);
+      first1 = tmp6Result2[0];
+      let obj2 = guildId(isFullServerGating[9]);
+      const updateSubscriptionsSettings1 = guildId(isFullServerGating[9]).useUpdateSubscriptionsSettings();
       loading = updateSubscriptionsSettings1.loading;
       updateSubscriptionsSettings = updateSubscriptionsSettings1.updateSubscriptionsSettings;
       error = updateSubscriptionsSettings1.error;
-      let tmp17 = null != first;
-      const insets = tmp5(tmp2[12])({}).insets;
-      if (!tmp17) {
-        let tmp18 = null != str;
-        if (tmp18) {
+      let tmp15 = null != first;
+      if (!tmp15) {
+        let tmp16 = null != str;
+        if (tmp16) {
           let description1;
           if (subscriptionsSettings != null) {
             description1 = subscriptionsSettings.description;
           }
-          tmp18 = str !== description1;
+          tmp16 = str !== description1;
         }
-        if (tmp18) {
-          tmp18 = 0 !== str.length;
+        if (tmp16) {
+          tmp16 = 0 !== str.length;
         }
-        tmp17 = tmp18;
+        tmp15 = tmp16;
       }
-      if (!tmp17) {
-        tmp17 = isFullServerGating !== first1;
+      if (!tmp15) {
+        tmp15 = isFullServerGating !== first1;
       }
-      closure_11 = tmp17;
-      let tmp20 = first;
+      closure_11 = tmp15;
+      let tmp18 = first;
       if (first == null) {
         let cover_image_asset;
         if (subscriptionsSettings != null) {
@@ -609,12 +634,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != cover_image_asset) {
           source = null;
           if (null != application) {
-            let obj5 = subscriptionsSettings(tmp2[13]);
             let obj4 = { application_id: application.id, image_asset: subscriptionsSettings.cover_image_asset };
-            source = obj5.getSource(obj4);
+            source = subscriptionsSettings(tmp2[13]).getSource(obj4);
+            let obj5 = subscriptionsSettings(tmp2[13]);
           }
         }
-        tmp20 = source;
+        tmp18 = source;
       }
       const items = [
         str,
@@ -627,11 +652,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       ];
       callback = obj3.useCallback(
         first(function* () {
-          let v1;
           if (c2 === 2) {
             c2 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
               throw value;
             } else if (arg0 === 2) {
@@ -652,21 +676,21 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  let closure_0 = tmp;
-                  let tmp10 = null != str;
-                  if (tmp10) {
+                  closure_0 = tmp2;
+                  let tmp11 = null != str;
+                  if (tmp11) {
                     let description;
                     if (subscriptionsSettings != null) {
                       description = subscriptionsSettings.description;
                     }
-                    tmp10 = arr !== description;
+                    tmp11 = arr !== description;
                   }
-                  if (tmp10) {
-                    tmp10 = 0 !== arr.length;
+                  if (tmp11) {
+                    tmp11 = 0 !== arr.length;
                   }
                   const obj5 = {};
-                  if (tmp10) {
-                    obj5.description = str;
+                  if (tmp11) {
+                    obj5.description = arr;
                   }
                   if (null != first) {
                     obj5.cover_image = first.uri;
@@ -674,82 +698,74 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   if (isFullServerGating !== first1) {
                     obj5.full_server_gate = first1;
                   }
-                  const obj3 = v1(isFullServerGating[14]);
-                  if (!obj3.isEmpty(obj5)) {
+                  if (obj3.isEmpty(obj5)) {
+                    c2 = 3;
+                  } else {
                     v1 = 1;
                     c2 = 1;
                     const obj6 = { value: updateSubscriptionsSettings(guildId, obj5), done: false };
                     return obj6;
                   }
+                  obj3 = v1(isFullServerGating[14]);
                 }
               } else if (arg0 === 1) {
                 c2 = 3;
                 throw value;
-              } else if (arg0 === 2) {
-                c2 = 3;
-                const obj = { value, done: true };
-                return obj;
-              } else {
+              } else if (arg0 !== 2) {
                 closure_128_5(null);
               }
               c2 = 3;
-              return { value: "IconComponent", done: null };
-            } catch (tmp16) {
-              c2 = 3;
-              throw tmp16;
+              const obj = { value, done: true };
+              return obj;
+            } catch (tmp17) {
+              c2 = tmp;
+              throw tmp17;
             }
           }
         }),
         items,
       );
-      const items1 = [navigation, tmp17, loading, callback];
+      const items1 = [navigation, tmp15, loading, callback];
       const layoutEffect = obj3.useLayoutEffect(() => {
-        let fn;
-        let onPress;
-        const setOptions = navigation.setOptions;
         if (loading) {
-          fn = () => updateSubscriptionsSettings(guildId(isFullServerGating[15]).HeaderSubmittingIndicator, {});
+          let fn = () => updateSubscriptionsSettings(guildId(isFullServerGating[15]).HeaderSubmittingIndicator, {});
         } else if (closure_11) {
           fn = () => {
-            let intl;
-            const obj = { text: intl.string(guildId(isFullServerGating[17]).t["R3BPH+"]), onPress };
-            const HeaderActionButton = guildId(isFullServerGating[16]).HeaderActionButton;
-            intl = guildId(isFullServerGating[17]).intl;
-            return updateSubscriptionsSettings(HeaderActionButton, obj);
+            const obj = { text: null, onPress: null };
+            const intl = guildId(isFullServerGating[17]).intl;
+            obj.text = intl.string(guildId(isFullServerGating[17]).t["R3BPH+"]);
+            obj.onPress = onPress;
+            return updateSubscriptionsSettings(guildId(isFullServerGating[16]).HeaderActionButton, obj);
           };
         } else {
           fn = () => null;
         }
-        setOptions({ headerRight: fn });
+        navigation.setOptions({ headerRight: fn });
       }, items1);
       const items2 = [error];
       const effect = obj3.useEffect(() => {
         if (null != error) {
-          const presentError = ToastUtils.presentError;
-          ToastUtils;
           let anyErrorMessage = error.getAnyErrorMessage();
           if (anyErrorMessage == null) {
-            const intl = intl2.intl;
-            anyErrorMessage = intl.string(intl2.t.ZUEGFn);
+            const intl = util.intl;
+            anyErrorMessage = intl.string(util.t.ZUEGFn);
           }
-          presentError(anyErrorMessage);
+          ToastUtils.presentError(anyErrorMessage);
         }
       }, items2);
-      let obj6 = {
-        contentContainerStyle: { paddingBottom: insets.bottom + tmp5(isFullServerGating[19]).space.PX_16 },
-        children: items3,
+      let obj6 = { contentContainerStyle: null, children: null };
+      const tmpResult = guildId(isFullServerGating[9]);
+      obj6.contentContainerStyle = {
+        paddingBottom:
+          navigation(isFullServerGating[12])({}).insets.bottom + navigation(isFullServerGating[19]).space.PX_16,
       };
-      items3 = [,];
-      ({ paddingBottom: insets.bottom + navigation(isFullServerGating[19]).space.PX_16 });
-      items3[0] = updateSubscriptionsSettings(navigation(isFullServerGating[20]), {
-        isFullServerGating: first1,
-        onChange: tmp15,
-      });
-      const obj8 = { cover: tmp20, setCover: tmp7[1], description: str, setDescription: tmp12 };
-      const Content = tmp(tmp2[21]).Content;
-      const tmp27 = error;
-      const tmp28 = first1;
-      const tmp29 = updateSubscriptionsSettings;
+      const items3 = [
+        updateSubscriptionsSettings(navigation(isFullServerGating[20]), {
+          isFullServerGating: first1,
+          onChange: tmp6Result2[1],
+        }),
+      ];
+      const obj8 = { cover: tmp18, setCover: tmp7[1], description: null, setDescription: null };
       if (str == null) {
         let description2;
         if (subscriptionsSettings != null) {
@@ -760,33 +776,37 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      items3[1] = tmp29(Content, obj8);
-      return tmp27(tmp28, obj6);
+      obj8.description = str;
+      items3[1] = updateSubscriptionsSettings(guildId(isFullServerGating[21]).Content, obj8);
+      obj6.children = items3;
+      return error(first1, obj6);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let tmp3;
-      const obj = react2;
-      const cResult = obj.c(5);
+      const cResult = c.c(5);
       guildId = guildId.guildId;
       if (cResult[0] !== guildId) {
         const obj2 = { guildId };
-        const tmp6 = React4(closure_11, obj2);
+        const tmp6 = options(closure_11, obj2);
         cResult[0] = guildId;
         cResult[1] = tmp6;
-        tmp3 = tmp6;
+        let tmp3 = tmp6;
       } else {
         tmp3 = cResult[1];
       }
       if (cResult[2] === guildId) {
-        let tmp7;
         if (cResult[3] === tmp3) {
-          tmp7 = cResult[4];
+          let tmp7 = cResult[4];
         }
         return tmp7;
       }
-      const tmp8 = React4(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
+      const tmp8 = options(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
       cResult[2] = guildId;
       cResult[3] = tmp3;
       cResult[4] = tmp8;
@@ -794,12 +814,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (guildId) => {
       guildId = guildId.guildId;
-      const obj = { guildId, children: React4(closure_11, { guildId }) };
-      const tmp = GuildSettingsRoleSubscriptionContainerDefault;
-      return React4(tmp, obj);
+      const obj = { guildId, children: options(closure_11, { guildId }) };
+      return options(GuildSettingsRoleSubscriptionContainerDefault, obj);
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx",
-);
-
-export default tmp3;

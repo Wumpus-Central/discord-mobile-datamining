@@ -1,31 +1,31 @@
 // discord_app/modules/reanimated/native/REAWorkaroundView.tsx
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import _mod19 from "../../../../_runtime/metro/00019__.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import c from "../../../../_runtime/00576_c.js";
 import ReanimatedViewNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx";
-import cancelAnimation from "../../../../_runtime/metro/01643__.js";
+import cancelAnimation from "../../../../_runtime/01643_cancelAnimation.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const forwardRef = react.forwardRef;
-const jsx = Fragment.jsx;
+const jsx = jsxProd.jsx;
 const ReanimatedViewNativeComponent = cancelAnimation.createAnimatedComponent(ReanimatedViewNativeComponentDefault);
-const forwardRefResult = forwardRef(
+const forwardRefResult = _mod19.forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (entering, ref) => {
-        const obj = react2;
-        const cResult = obj.c(4);
+        const cResult = c.c(4);
         if ((cResult[0] === null) != entering.entering) {
           if (cResult[1] === entering) {
-            let tmp3;
             if (cResult[2] === ref) {
-              tmp3 = cResult[3];
+              let tmp3 = cResult[3];
             }
             return tmp3;
           }
         }
+        const obj2 = {};
         const merged = Object.assign(entering);
-        const tmp5 = <ReanimatedViewNativeComponent hasEnteringAnimation={null != entering.entering} ref={ref} />;
+        obj2.hasEnteringAnimation = null != entering.entering;
+        obj2.ref = ref;
+        const tmp5 = <ReanimatedViewNativeComponent />;
         cResult[0] = null != entering.entering;
         cResult[1] = entering;
         cResult[2] = ref;
@@ -33,9 +33,11 @@ const forwardRefResult = forwardRef(
         tmp3 = tmp5;
       }
     : (entering, ref) => {
-        const tmp = null != entering.entering;
+        const obj = {};
         const merged = Object.assign(entering);
-        return <ReanimatedViewNativeComponent hasEnteringAnimation={tmp} ref={ref} />;
+        obj.hasEnteringAnimation = null != entering.entering;
+        obj.ref = ref;
+        return <ReanimatedViewNativeComponent />;
       },
 );
 forwardRefResult.displayName = "REAWorkaroundView";

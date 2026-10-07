@@ -1,52 +1,44 @@
 // discord_app/modules/games/native/GameActivityIcon.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import UnknownGameIcon2 from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let style;
-
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { icon: obj2 };
-obj2 = { borderRadius: nativeDefault.radii.xs };
+const AvatarUtils = UnknownGameIcon(1402);
+const shared = UnknownGameIcon(4735);
+const UnknownGameIcon2 = UnknownGameIcon(8281);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+let obj3 = { borderRadius: nativeDefault.radii.xs };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/native/GameActivityIcon.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (style) => {
-        let game;
-        let onShown;
-        let tmp12;
-        let tmp6;
-        const obj = react2;
-        const cResult = obj.c(14);
+        let UnknownGameIcon = require;
+        let tmp = dependencyMap;
+        const cResult = c.c(14);
         ({ game, size, onShown } = style);
         style = style.style;
-        const fallback = style.fallback;
-        const tmp4 = closure_6();
-        const obj2 = native;
-        const theme = obj2.useThemeContext().theme;
+        const tmp3 = closure_6();
         const iconURL = game.getIconURL(size);
         if (cResult[0] !== size) {
           const size1 = { width: size, height: size };
           cResult[0] = size;
           cResult[1] = size1;
-          tmp6 = size1;
+          let tmp5 = size1;
         } else {
-          tmp6 = cResult[1];
+          tmp5 = cResult[1];
         }
         const items = [iconURL, onShown];
-        const effect = react.useEffect(() => {
+        const effect = noop.useEffect(() => {
           if (null != iconURL) {
             if (onShown != null) {
               tmp();
@@ -54,84 +46,74 @@ const memoResult = react.memo(
           }
         }, items);
         if (null == iconURL) {
-          if ("none" === fallback) {
+          if ("none" === style.fallback) {
             return null;
           } else {
-            if (cResult[2] === tmp6) {
-              let tmp13;
-              if (cResult[3] === tmp4.icon) {
-                tmp13 = cResult[4];
+            if (cResult[2] === tmp5) {
+              if (cResult[3] === tmp3.icon) {
+                let tmp12 = cResult[4];
               }
-              const tmpResult = shared;
-              const isThemeDarkResult = tmpResult.isThemeDark(theme);
+              const UnknownGameIconResult = shared;
               const colors = nativeDefault.colors;
-              const tmp16 = isThemeDarkResult ? colors.WHITE : colors.BLACK;
-              if (cResult[5] === tmp13) {
-                let tmp17;
-                if (cResult[6] === tmp16) {
-                  tmp17 = cResult[7];
-                }
-                tmp12 = tmp17;
+              const tmp15 = shared.isThemeDark(obj2.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
+              if (cResult[5] === tmp12) {
               }
-              const tmp19 = jsx(UnknownGameIcon2.UnknownGameIcon, { size: "custom", style: tmp13, color: tmp16 });
-              cResult[5] = tmp13;
-              cResult[6] = tmp16;
-              cResult[7] = tmp19;
-              tmp17 = tmp19;
+              UnknownGameIcon = UnknownGameIcon2.UnknownGameIcon;
+              const obj3 = { size: "custom", style: tmp12, color: tmp15 };
+              tmp = <UnknownGameIcon size="custom" style={tmp12} color={tmp15} />;
+              cResult[5] = tmp12;
+              cResult[6] = tmp15;
+              cResult[7] = tmp;
+              const isThemeDarkResult = shared.isThemeDark(obj2.useThemeContext().theme);
             }
-            const items1 = [tmp4.icon, tmp6];
-            cResult[2] = tmp6;
-            cResult[3] = tmp4.icon;
+            const items1 = [tmp3.icon, tmp5];
+            cResult[2] = tmp5;
+            cResult[3] = tmp3.icon;
             cResult[4] = items1;
-            tmp13 = items1;
+            tmp12 = items1;
           }
         } else {
-          if (cResult[8] === tmp6) {
-            let tmp8;
-            if (cResult[9] === tmp4.icon) {
-              tmp8 = cResult[10];
+          if (cResult[8] === tmp5) {
+            if (cResult[9] === tmp3.icon) {
+              let tmp7 = cResult[10];
             }
-            FastImageDefault;
-            tmp12 = <tmp11 source={AvatarUtils.makeSource(iconURL)} style={tmp8} />;
-            const tmpResult2 = AvatarUtils;
+            const obj4 = { source: null, style: null };
+            obj4.source = AvatarUtils.makeSource(iconURL);
+            obj4.style = tmp7;
+            const tmp11 = <tmp10 source={null} style={null} />;
+            if (cResult[11] === tmp11) {
+              if (cResult[12] === style) {
+                let tmp19 = cResult[13];
+              }
+              return tmp19;
+            }
+            let tmp20 = tmp11;
+            if (null != style) {
+              const obj5 = { style, children: tmp11 };
+              tmp20 = <View style={style}>{tmp11}</View>;
+            }
+            cResult[11] = tmp11;
+            cResult[12] = style;
+            cResult[13] = tmp20;
+            tmp19 = tmp20;
+            const UnknownGameIconResult1 = AvatarUtils;
           }
-          const items2 = [tmp4.icon, tmp6];
-          cResult[8] = tmp6;
-          cResult[9] = tmp4.icon;
+          const items2 = [tmp3.icon, tmp5];
+          cResult[8] = tmp5;
+          cResult[9] = tmp3.icon;
           cResult[10] = items2;
-          tmp8 = items2;
+          tmp7 = items2;
         }
-        if (cResult[11] === tmp12) {
-          let tmp20;
-          if (cResult[12] === style) {
-            tmp20 = cResult[13];
-          }
-          return tmp20;
-        }
-        let tmp21 = tmp12;
-        if (null != style) {
-          tmp21 = <View style={style}>{tmp12}</View>;
-        }
-        cResult[11] = tmp12;
-        cResult[12] = style;
-        cResult[13] = tmp21;
-        tmp20 = tmp21;
+        obj2 = native;
       }
     : (style) => {
-        let game;
-        let onShown;
-        let tmp10;
-        let tmp13Result;
         ({ game, size, onShown } = style);
         style = style.style;
-        const fallback = style.fallback;
         const tmp = closure_6();
-        const obj = native;
-        const theme = obj.useThemeContext().theme;
         const iconURL = game.getIconURL(size);
         const size1 = { width: size, height: size };
         const items = [iconURL, onShown];
-        const effect = react.useEffect(() => {
+        const effect = noop.useEffect(() => {
           if (null != iconURL) {
             if (onShown != null) {
               tmp();
@@ -139,34 +121,31 @@ const memoResult = react.memo(
           }
         }, items);
         if (null == iconURL) {
-          if ("none" === fallback) {
+          if ("none" === style.fallback) {
             return null;
           } else {
+            const obj2 = { size: "custom", style: null, color: null };
             const items1 = [tmp.icon, size1];
-            const UnknownGameIcon = UnknownGameIcon2.UnknownGameIcon;
+            obj2.style = items1;
             const tmp2Result = shared;
-            const isThemeDarkResult = tmp2Result.isThemeDark(theme);
             const colors = nativeDefault.colors;
-            tmp13Result = (
-              <UnknownGameIcon size="custom" style={items1} color={isThemeDarkResult ? colors.WHITE : colors.BLACK} />
-            );
-            tmp10 = jsx;
+            obj2.color = shared.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
+            jsx(UnknownGameIcon2.UnknownGameIcon, { size: "custom", style: null, color: null });
+            const isThemeDarkResult = shared.isThemeDark(obj.useThemeContext().theme);
           }
         } else {
-          FastImageDefault;
+          const obj3 = { source: null, style: null };
+          obj3.source = AvatarUtils.makeSource(iconURL);
           const items2 = [tmp.icon, size1];
-          tmp13Result = <tmp8 source={AvatarUtils.makeSource(iconURL)} style={items2} />;
-          tmp10 = jsx;
-          const tmp2Result2 = AvatarUtils;
+          obj3.style = items2;
+          const tmp9 = <tmp8 source={null} style={null} />;
+          let tmp6Result = tmp9;
+          if (null != style) {
+            const obj4 = { style, children: tmp9 };
+            tmp6Result = <View style={style}>{tmp9}</View>;
+          }
+          return tmp6Result;
         }
-        let tmp10Result = tmp13Result;
-        if (null != style) {
-          const obj4 = { style, children: tmp13Result };
-          tmp10Result = tmp10(View, obj4);
-        }
-        return tmp10Result;
+        obj = native;
       },
 );
-const result = size.fileFinishedImporting("modules/games/native/GameActivityIcon.tsx");
-
-export default memoResult;

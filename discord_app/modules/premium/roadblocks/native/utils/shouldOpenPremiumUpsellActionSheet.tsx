@@ -36,8 +36,9 @@ export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
     openPremiumUpsellActionSheetDefault(ANIMATED_EMOJIS, undefined, undefined, undefined, initialUpsellKey.appEntryKey);
     return true;
   } else if (ConstantsIOS.UpsellTypes.GLOBAL_STICKER === initialUpsellKey) {
-    const tmpResult = MobileStickerPickerUpsellRestyleExperiment;
-    let flag4 = tmpResult.getMobileStickerPickerUpsellRestyleEnabled("native.shouldOpenPremiumUpsellActionSheet");
+    let flag4 = MobileStickerPickerUpsellRestyleExperiment.getMobileStickerPickerUpsellRestyleEnabled(
+      "native.shouldOpenPremiumUpsellActionSheet",
+    );
     if (flag4) {
       const STICKERS_EVERYWHERE = EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
       openPremiumUpsellActionSheetDefault(

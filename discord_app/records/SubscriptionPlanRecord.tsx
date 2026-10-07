@@ -1,15 +1,12 @@
 // discord_app/records/SubscriptionPlanRecord.tsx
 import Record from "../lib/Record.tsx";
-import PremiumConstants from "../modules/premium/PremiumConstants.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-let _window;
-let c2;
-let map;
-({ PremiumSubscriptionSKUs: _window, PremiumTypes: map, SubscriptionPlans: c2 } = PremiumConstants);
-class SubscriptionPlanRecord extends Record {
+const PremiumConstants = fn(1379);
+({ PremiumSubscriptionSKUs: closure_0, PremiumTypes: closure_1, SubscriptionPlans: c2 } = PremiumConstants);
+let SubscriptionPlanRecord;
+class SubscriptionPlanRecord extends tmp2 {
   constructor(arg0) {
-    const tmp = new SubscriptionPlanRecord(new.target, this);
+    tmp = new SubscriptionPlanRecord(new.target, new.target);
     ({
       id: tmp.id,
       name: tmp.name,
@@ -20,137 +17,121 @@ class SubscriptionPlanRecord extends Record {
       currency: tmp.currency,
       price: tmp.price,
       prices: tmp.prices,
-    } = arg0);
+    } = global);
     return tmp;
   }
-  static createFromServer(prices) {
-    let currency;
-    let id;
-    let interval;
-    let interval_count;
-    let name;
-    let sku_id;
-    let tax_inclusive;
-    let closure_0 = prices;
-    if (null != prices.prices) {
-      let _Object = Object;
-      const keys = Object.keys(prices.prices);
-      const reduced = keys.reduce((acc, item) => {
-        let entries;
-        let obj2;
-        let tax_inclusive;
-        if (null == prices.prices) {
-          return acc;
-        } else {
-          const obj = {
-            countryPrices: obj2,
-            paymentSourcePrices: entries.reduce((acc, item) => {
-              let arr;
-              let tmp;
-              [tmp, arr] = item;
-              acc[tmp] = arr.map((amount) => ({
-                amount: amount.amount,
-                currency: amount.currency,
-                tax: 0,
-                taxInclusive: tax_inclusive.tax_inclusive,
-              }));
-              return acc;
-            }, {}),
-          };
-          obj2 = {
-            countryCode: tmp.prices[item].country_prices.country_code,
-            prices: prices.map((amount) => ({
-              amount: amount.amount,
-              currency: amount.currency,
-              tax: 0,
-              taxInclusive: tax_inclusive.tax_inclusive,
-            })),
-          };
-          prices = tmp3.country_prices.prices;
-          const _Object = Object;
-          entries = Object.entries(tmp3.payment_source_prices);
-          acc[item] = obj;
-          return acc;
-        }
-      }, {});
-    }
-    ({ id, name, interval, interval_count, tax_inclusive, sku_id, currency } = prices);
-    if (typeof SubscriptionPlanRecord === "function") {
-      const self = this;
-      const self2 = this;
-      const tmp8 = new SubscriptionPlanRecord(
-        tmp2,
-        tmp,
-        tmp6,
-        this,
-        id,
-        name,
-        interval,
-        interval_count,
-        tax_inclusive,
-        sku_id,
-        currency,
-      );
-      tmp8.id = id;
-      tmp8.name = name;
-      tmp8.interval = interval;
-      tmp8.intervalCount = interval_count;
-      tmp8.taxInclusive = tax_inclusive;
-      tmp8.skuId = sku_id;
-      tmp8.currency = currency;
-      tmp8.price = tmp5;
-      tmp8.prices = {};
-      return tmp8;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  toServerData() {
-    const self = this;
-    const prices = {};
-    const keys = Object.keys(this.prices);
-    const item = keys.forEach((item) => {
-      const obj = {
-        country_prices: {
-          country_code: self.prices[item].countryPrices.countryCode,
-          prices: self.prices[item].countryPrices.prices,
-        },
-        payment_source_prices: self.prices[item].paymentSourcePrices,
-      };
-      obj[item] = obj;
-    });
-    return {
-      id: this.id,
-      name: this.name,
-      sku_id: this.skuId,
-      interval: this.interval,
-      interval_count: this.intervalCount,
-      tax_inclusive: this.taxInclusive,
-      currency: this.currency,
-      price: this.price,
-      prices,
-      price_tier: this.price,
-    };
-  }
 }
-Object.defineProperty(SubscriptionPlanRecord.prototype, "premiumSubscriptionType", {
+const prototype = SubscriptionPlanRecord.prototype;
+SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
+  if (null != prices.prices) {
+    let _Object = Object;
+    const keys = Object.keys(prices.prices);
+    const reduced = keys.reduce((acc, item) => {
+      if (null == prices.prices) {
+        return acc;
+      } else {
+        const obj = { countryPrices: null, paymentSourcePrices: null };
+        const obj2 = { countryCode: tmp.prices[item].country_prices.country_code, prices: null };
+        prices = tmp3.country_prices.prices;
+        obj2.prices = prices.map((amount) => ({
+          amount: amount.amount,
+          currency: amount.currency,
+          tax: 0,
+          taxInclusive: tax_inclusive.tax_inclusive,
+        }));
+        obj.countryPrices = obj2;
+        const _Object = Object;
+        const entries = Object.entries(tmp3.payment_source_prices);
+        obj.paymentSourcePrices = entries.reduce((acc, item) => {
+          [tmp, arr] = item;
+          acc[tmp] = arr.map((amount) => ({
+            amount: amount.amount,
+            currency: amount.currency,
+            tax: 0,
+            taxInclusive: tax_inclusive.tax_inclusive,
+          }));
+          return acc;
+        }, {});
+        acc[item] = obj;
+        return acc;
+      }
+    }, {});
+  }
+  ({ id, name, interval, interval_count, tax_inclusive, sku_id, currency } = prices);
+  if (typeof SubscriptionPlanRecord === "function") {
+    const tmp10 = new SubscriptionPlanRecord(
+      tmp2,
+      tmp,
+      tmp6,
+      new.target,
+      id,
+      name,
+      interval,
+      interval_count,
+      tax_inclusive,
+      sku_id,
+      currency,
+    );
+    tmp10.id = id;
+    tmp10.name = name;
+    tmp10.interval = interval;
+    tmp10.intervalCount = interval_count;
+    tmp10.taxInclusive = tax_inclusive;
+    tmp10.skuId = sku_id;
+    tmp10.currency = currency;
+    tmp10.price = tmp5;
+    tmp10.prices = {};
+    return tmp10;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+Object.defineProperty(prototype, "premiumSubscriptionType", {
   get: function premiumSubscriptionType() {
     const skuId = this.skuId;
-    if (_window.LEGACY !== skuId) {
-      if (_window.TIER_2 !== skuId) {
-        if (_window.TIER_1 === skuId) {
-          return map.TIER_1;
-        } else if (_window.TIER_0 === skuId) {
-          return map.TIER_0;
+    if (constants.LEGACY !== skuId) {
+      if (constants.TIER_2 !== skuId) {
+        if (constants.TIER_1 === skuId) {
+          return framebus.TIER_1;
+        } else if (constants.TIER_0 === skuId) {
+          return framebus.TIER_0;
         } else {
           return null;
         }
       }
     }
-    return map.TIER_2;
+    return framebus.TIER_2;
   },
   set: undefined,
 });
+prototype["toServerData"] = function toServerData() {
+  const self = this;
+  const prices = {};
+  const keys = Object.keys(this.prices);
+  const item = keys.forEach((item) => {
+    const obj = {
+      country_prices: {
+        country_code: self.prices[item].countryPrices.countryCode,
+        prices: self.prices[item].countryPrices.prices,
+      },
+      payment_source_prices: self.prices[item].paymentSourcePrices,
+    };
+    obj[item] = obj;
+  });
+  return {
+    id: this.id,
+    name: this.name,
+    sku_id: this.skuId,
+    interval: this.interval,
+    interval_count: this.intervalCount,
+    tax_inclusive: this.taxInclusive,
+    currency: this.currency,
+    price: this.price,
+    prices,
+    price_tier: this.price,
+  };
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("records/SubscriptionPlanRecord.tsx");
 
 export default SubscriptionPlanRecord;

@@ -1,46 +1,46 @@
 // discord_app/stores/PermissionSpeakStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import ChannelStore from "ChannelStore.tsx";
 import GuildStore from "GuildStore.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-let c2, c3, channelId, suppress;
-
+require = fn;
 const hideSuppressWarning = "hideSuppressWarning";
 let c7 = false;
 let c8 = true;
 let c9 = false;
-const Store = get_initializedDefault.Store;
-class PermissionSpeakStore extends Store {
-  initialize() {
-    this.waitFor(ChannelStore, GuildStore);
-    const Storage = Storage2.Storage;
-    const tmp2 = Storage.get(hideSuppressWarning) || c9;
-    c9 = tmp2;
-  }
-  isAFKChannel() {
-    const channel = ChannelStore.getChannel(c3);
-    if (null == channel) {
-      return false;
-    } else {
-      const guild = GuildStore.getGuild(channel.getGuildId());
-      return null != guild && channel.id === guild.afkChannelId;
-    }
-  }
-  shouldShowWarning() {
-    const channel = ChannelStore.getChannel(c3);
-    let isGuildStageVoiceResult;
-    if (channel != null) {
-      isGuildStageVoiceResult = channel.isGuildStageVoice();
-    }
-    return !isGuildStageVoiceResult && !c8;
-  }
-}
+const Store = initializeDefault.Store;
+class PermissionSpeakStore extends Store {}
 const prototype = PermissionSpeakStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ChannelStore, GuildStore);
+  const Storage = Storage2.Storage;
+  c9 = Storage.get(hideSuppressWarning) || c9;
+};
+prototype["isAFKChannel"] = function isAFKChannel() {
+  const channel = ChannelStore.getChannel(c3);
+  if (null == channel) {
+    return false;
+  } else {
+    guild = GuildStore.getGuild(channel.getGuildId());
+    return null != guild && channel.id === guild.afkChannelId;
+  }
+};
+prototype["shouldShowWarning"] = function shouldShowWarning() {
+  const channel = ChannelStore.getChannel(c3);
+  let isGuildStageVoiceResult;
+  if (channel != null) {
+    isGuildStageVoiceResult = channel.isGuildStageVoice();
+  }
+  let tmp2 = !isGuildStageVoiceResult;
+  if (!isGuildStageVoiceResult) {
+    tmp2 = !c8;
+  }
+  return tmp2;
+};
 PermissionSpeakStore.displayName = "PermissionSpeakStore";
-const obj = {
+const permissionSpeakStore = new PermissionSpeakStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
     sessionId = sessionId.sessionId;
     c7 = false;
@@ -63,8 +63,11 @@ const obj = {
           channelId = sessionId.channelId;
           c8 = !suppress;
         }
+        let tmp4 = closure_1_9;
+        if (!closure_1_9) {
+          tmp4 = null == sessionId.channelId;
+        }
         flag = true;
-        const tmp4 = closure_1_9 || null == sessionId.channelId;
         if (tmp4) {
           c8 = true;
           flag = true;
@@ -81,8 +84,8 @@ const obj = {
       const result = Storage.set(hideSuppressWarning, c9);
     }
   },
-};
-const permissionSpeakStore = new PermissionSpeakStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/PermissionSpeakStore.tsx");
 
 export default permissionSpeakStore;

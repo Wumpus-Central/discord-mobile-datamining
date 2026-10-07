@@ -1,57 +1,49 @@
 // discord_app/components_native/MemberRolesList.tsx
-import react_native from "../../_runtime/00017_react-native.js";
-import Fragment from "../../_runtime/react/00021_Fragment.js";
 import RolePillDefault from "common/RolePill.tsx";
-import react from "../../_runtime/00019_react.js";
+import noop from "../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../stores/GuildRoleStore.tsx";
-import createStyles from "../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-let tags, userRoles;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({
   wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" },
 });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/MemberRolesList.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (userRoles) => {
-      let first;
-      let tmp7;
-      let tmp8;
-      const obj = userRoles(576);
-      const cResult = obj.c(19);
-      const tmp = userRoles;
+      const cResult = userRoles(576).c(19);
       userRoles = userRoles.userRoles;
-      const guild = userRoles.guild;
+      let id = userRoles.guild;
       const style = userRoles.style;
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildRoleStore];
-        let num = 0;
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
-      if (cResult[1] !== guild.id) {
+      if (cResult[1] !== id.id) {
         const fn = function u() {
-          return GuildRoleStore.getSortedRoles(guild.id);
+          return GuildRoleStore.getSortedRoles(id.id);
         };
-        let num2 = 1;
-        cResult[1] = guild.id;
+        cResult[1] = id.id;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+      const obj = userRoles(576);
+      const stateFromStores = userRoles(504).useStateFromStores(first, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp11 = <View />;
         cResult[3] = tmp11;
-        tmp8 = tmp11;
+        let tmp8 = tmp11;
       } else {
         tmp8 = cResult[3];
       }
@@ -59,111 +51,100 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != userRoles) {
         tmp12 = tmp8;
         if (userRoles.length > 0) {
-          if (cResult[4] === guild.id) {
+          if (cResult[4] === id.id) {
             if (cResult[5] === stateFromStores) {
-              let tmp13;
               if (cResult[6] === userRoles) {
-                tmp13 = cResult[7];
-              }
-              if (cResult[13] === style) {
-                let tmp20;
-                if (cResult[14] === tmp4.wrapper) {
-                  tmp20 = cResult[15];
-                }
-                if (cResult[16] === tmp13) {
-                  let tmp21;
-                  if (cResult[17] === tmp20) {
-                    tmp21 = cResult[18];
+                if (cResult[13] === style) {
+                  if (cResult[14] === tmp4.wrapper) {
+                    let tmp20 = cResult[15];
                   }
-                  tmp12 = tmp21;
+                  if (cResult[16] === tmp13) {
+                  }
+                  const obj2 = { style: tmp20, children: tmp13 };
+                  const tmp24 = <View style={tmp20}>{tmp13}</View>;
+                  cResult[16] = tmp13;
+                  cResult[17] = tmp20;
+                  cResult[18] = tmp24;
                 }
-                const tmp24 = <View style={tmp20}>{tmp13}</View>;
-                cResult[16] = tmp13;
-                cResult[17] = tmp20;
-                cResult[18] = tmp24;
-                tmp21 = tmp24;
+                const items1 = [tmp4.wrapper, style];
+                cResult[13] = style;
+                cResult[14] = tmp4.wrapper;
+                cResult[15] = items1;
+                tmp20 = items1;
               }
-              const items1 = [tmp4.wrapper, style];
-              cResult[13] = style;
-              cResult[14] = tmp4.wrapper;
-              cResult[15] = items1;
-              tmp20 = items1;
             }
           }
           if (cResult[8] !== userRoles) {
             class R {
-              constructor(id) {
-                return userRoles.includes(id.id);
+              constructor(arg0) {
+                return userRoles.includes(userRoles.id);
               }
             }
             cResult[8] = userRoles;
             cResult[9] = R;
+            let sorted = R;
           } else {
             class R {
-              constructor(id) {
-                return userRoles.includes(id.id);
+              constructor(arg0) {
+                return userRoles.includes(userRoles.id);
               }
             }
           }
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             class R {
-              constructor(id) {
-                return userRoles.includes(id.id);
+              constructor(arg0) {
+                return userRoles.includes(userRoles.id);
               }
             }
-            cResult[10] = tmp16;
+            cResult[10] = tmp15;
           } else {
             class R {
-              constructor(id) {
-                return userRoles.includes(id.id);
+              constructor(arg0) {
+                return userRoles.includes(userRoles.id);
               }
             }
           }
-          if (cResult[11] !== guild.id) {
+          if (cResult[11] !== id.id) {
             class R {
-              constructor(id) {
-                return userRoles.includes(id.id);
+              constructor(arg0) {
+                return userRoles.includes(userRoles.id);
               }
             }
-            cResult[11] = guild.id;
-            cResult[12] = tmp18;
+            cResult[11] = id.id;
+            cResult[12] = tmp17;
           } else {
             class R {
-              constructor(id) {
-                return userRoles.includes(id.id);
+              constructor(arg0) {
+                return userRoles.includes(userRoles.id);
               }
             }
           }
-          const found = stateFromStores.filter(R);
-          const sorted = found.sort(tmp16);
-          const mapped = sorted.map(tmp18);
-          cResult[4] = guild.id;
+          const found = stateFromStores.filter(sorted);
+          sorted = found.sort(tmp15);
+          const mapped = sorted.map(tmp17);
+          id = id.id;
+          cResult[4] = id;
           cResult[5] = stateFromStores;
           cResult[6] = userRoles;
           cResult[7] = mapped;
-          tmp13 = mapped;
         }
       }
       return tmp12;
     }
   : (userRoles) => {
       userRoles = userRoles.userRoles;
-      const guild = userRoles.guild;
-      const style = userRoles.style;
+      guild = userRoles.guild;
       const tmp = closure_6();
       const items = [GuildRoleStore];
-      const obj = userRoles(504);
-      const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
+      const stateFromStores = userRoles(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
       const tmp4 = <View />;
       let tmp2Result = tmp4;
       if (null != userRoles) {
-        let num = 0;
         tmp2Result = tmp4;
         if (userRoles.length > 0) {
           const found = stateFromStores.filter((id) => userRoles.includes(id.id));
           const sorted = found.sort((tags, tags2) => {
-            let num;
             tags = tags.tags;
             let guild_connections;
             if (tags != null) {
@@ -176,28 +157,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (null === guild_connections) {
               let num2 = 0;
-              if (null === guild_connections) {
+              if (!tmp3) {
                 num2 = 0;
-                if (null !== guild_connections1) {
+                if (tmp4) {
                   num2 = -1;
                 }
               }
-              num = num2;
+              let num = num2;
             } else {
               num = 1;
             }
             return num;
           });
-          const items1 = [tmp.wrapper, style];
-          tmp2Result = (
-            <View style={items1}>
-              {sorted.map((role) => jsx(RolePillDefault, { role, guildId: guild.id }, role.id))}
-            </View>
-          );
+          const obj2 = { style: null, children: null };
+          const items1 = [tmp.wrapper, userRoles.style];
+          obj2.style = items1;
+          obj2.children = sorted.map((role) => jsx(RolePillDefault, { role, guildId: guild.id }, role.id));
+          tmp2Result = <View style={null}>{null}</View>;
         }
       }
       return tmp2Result;
     };
-const result = size.fileFinishedImporting("components_native/MemberRolesList.tsx");
-
-export default tmp3;

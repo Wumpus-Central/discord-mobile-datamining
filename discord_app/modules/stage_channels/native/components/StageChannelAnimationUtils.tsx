@@ -5,11 +5,10 @@ import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-let Easing;
-let obj = { duration: 250, easing: Easing.bezier(0.66, 0, 0.2, 1) };
-Easing = ReanimatedRexport.Easing;
+let obj = { duration: 250, easing: null };
+const Easing = ReanimatedRexport.Easing;
+obj.easing = Easing.bezier(0.66, 0, 0.2, 1);
 let closure_4 = {
   code: "function StageChannelAnimationUtilsTsx1(){const{isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding}=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;}",
 };
@@ -22,25 +21,25 @@ const __initData2 = {
 const __initData3 = {
   code: "function StageChannelAnimationUtilsTsx4(){const{withTiming,paddingTop,TIMING_CONFIG}=this.__closure;return{paddingTop:withTiming(paddingTop.get(),TIMING_CONFIG)};}",
 };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelAnimationUtils.tsx");
+
+export const useStageActionBarAnimation = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, controlPadding) => {
-      let closure_1;
-      let derivedValue;
-      let getActionBarHeight;
       _require = controlPadding;
       const tmp = require("useIsInvitedToSpeak")();
       importDefault = tmp;
-      obj = require("StageChannelHeightHooks");
-      getActionBarHeight = obj.useGetActionBarHeight(arg0);
+      getActionBarHeight = require("StageChannelHeightHooks").useGetActionBarHeight(arg0);
       const top = require("useSafeAreaInsets")().top;
-      let obj2 = require("ReanimatedRexport");
+      obj = require("StageChannelHeightHooks");
       class A {
         constructor() {
-          let sum;
           if (closure_1) {
-            sum = getActionBarHeight + 10 + top;
+            tmp2 = closure_2;
+            num = 10;
+            tmp3 = top;
+            sum = closure_2 + 10 + top;
           } else {
-            sum = controlPadding;
+            sum = closure_0;
           }
           return sum;
         }
@@ -54,37 +53,34 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       };
       A.__workletHash = 2568370943746;
       A.__initData = derivedValue;
-      derivedValue = obj2.useDerivedValue(A);
+      derivedValue = require("ReanimatedRexport").useDerivedValue(A);
+      const obj2 = require("ReanimatedRexport");
       const fn = function c() {
-        let obj2;
-        obj = { paddingTop: obj2.withTiming(derivedValue.get(), obj) };
-        obj2 = timing;
+        obj = { paddingTop: timing.withTiming(derivedValue.get(), obj) };
         return obj;
       };
       const obj3 = require("ReanimatedRexport");
       fn.__closure = { withTiming: require("timing").withTiming, paddingTop: derivedValue, TIMING_CONFIG: top };
       fn.__workletHash = 16816216105718;
       fn.__initData = __initData;
-      ({ withTiming: require("timing").withTiming, paddingTop: derivedValue, TIMING_CONFIG: top });
       return obj3.useAnimatedStyle(fn);
     }
   : (arg0, controlPadding) => {
-      let closure_1;
-      let getActionBarHeight;
       _require = controlPadding;
       const tmp = require("useIsInvitedToSpeak")();
       importDefault = tmp;
-      obj = require("StageChannelHeightHooks");
-      getActionBarHeight = obj.useGetActionBarHeight(arg0);
+      getActionBarHeight = require("StageChannelHeightHooks").useGetActionBarHeight(arg0);
       const top = require("useSafeAreaInsets")().top;
-      let obj2 = require("ReanimatedRexport");
+      obj = require("StageChannelHeightHooks");
       class A {
         constructor() {
-          let sum;
           if (closure_1) {
-            sum = getActionBarHeight + 10 + top;
+            tmp2 = closure_2;
+            num = 10;
+            tmp3 = top;
+            sum = closure_2 + 10 + top;
           } else {
-            sum = controlPadding;
+            sum = closure_0;
           }
           return sum;
         }
@@ -98,20 +94,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       };
       A.__workletHash = 15838290149504;
       A.__initData = __initData2;
-      const derivedValue = obj2.useDerivedValue(A);
+      const derivedValue = require("ReanimatedRexport").useDerivedValue(A);
+      const obj2 = require("ReanimatedRexport");
       const fn = function c() {
-        let obj2;
-        obj = { paddingTop: obj2.withTiming(derivedValue.get(), obj) };
-        obj2 = timing;
+        obj = { paddingTop: timing.withTiming(derivedValue.get(), obj) };
         return obj;
       };
       const obj3 = require("ReanimatedRexport");
       fn.__closure = { withTiming: require("timing").withTiming, paddingTop: derivedValue, TIMING_CONFIG: top };
       fn.__workletHash = 14135510825328;
       fn.__initData = __initData3;
-      ({ withTiming: require("timing").withTiming, paddingTop: derivedValue, TIMING_CONFIG: top });
       return obj3.useAnimatedStyle(fn);
     };
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelAnimationUtils.tsx");
-
-export const useStageActionBarAnimation = tmp2;

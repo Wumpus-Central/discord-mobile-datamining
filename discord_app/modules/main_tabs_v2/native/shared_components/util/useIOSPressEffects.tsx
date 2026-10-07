@@ -2,13 +2,11 @@
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, importDefault;
 
+require = fn;
 const SPRING_CONFIG = {
   overshootClamping: true,
   damping: 35,
@@ -22,48 +20,51 @@ const __initData = {
 const __initData2 = {
   code: "function useIOSPressEffectsTsx2(){const{withSpring,interpolate,sharedPressState,sharedWidthScale,SPRING_CONFIG,withOpacity}=this.__closure;const scale=withSpring(interpolate(sharedPressState.get(),[0,1],[1,sharedWidthScale.get()]),SPRING_CONFIG);if(withOpacity){return{transform:[{scale:scale}],opacity:withSpring(interpolate(sharedPressState.get(),[0,1],[1,0.5]),SPRING_CONFIG)};}else{return{transform:[{scale:scale}]};}}",
 };
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx");
+
+export { SPRING_CONFIG };
+export const useIOSPressEffects = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let width;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(14);
-      const tmp4 = undefined !== arg1 && arg1;
+      const cResult = require("c").c(14);
       importDefault = tmp4;
       width = require("useWindowDimensions")().width;
-      const tmpResult = tmp(tmp2[4]);
-      const sharedValue = tmpResult.useSharedValue(1 - arg0 / width);
+      let obj = require("c");
+      const sharedValue = require("ReanimatedRexport").useSharedValue(1 - arg0 / width);
       if (cResult[0] === sharedValue) {
         if (cResult[1] === width) {
-          let tmp6;
-          let tmp7;
-          let tmp11;
           if (cResult[2] === arg0) {
-            tmp6 = cResult[3];
-            tmp7 = cResult[4];
+            let tmp6 = cResult[3];
+            let tmp7 = cResult[4];
           }
           const effect = sharedValue.useEffect(tmp6, tmp7);
-          const tmpResult3 = require("ReanimatedRexport");
-          const sharedValue1 = tmpResult3.useSharedValue(0);
+          const sharedValue1 = tmp(tmp2[4]).useSharedValue(0);
           if (cResult[5] !== sharedValue1) {
             const fn2 = function _() {
-              const obj = PlatformUtils;
-              const isIOSResult = obj.isIOS() && sharedValue1.set(1);
+              let isIOSResult = PlatformUtils.isIOS();
+              if (isIOSResult) {
+                isIOSResult = sharedValue1.set(1);
+              }
               return isIOSResult;
             };
             cResult[5] = sharedValue1;
             cResult[6] = fn2;
-            tmp11 = fn2;
+            let tmp11 = fn2;
           } else {
             tmp11 = cResult[6];
           }
           if (cResult[7] !== sharedValue1) {
             class P {
               constructor() {
-                const obj = PlatformUtils;
-                const isIOSResult = obj.isIOS() && sharedValue1.set(0);
+                obj = closure_0(closure_2[5]);
+                isIOSResult = obj.isIOS();
+                if (isIOSResult) {
+                  tmp2 = closure_4;
+                  num = 0;
+                  isIOSResult = closure_4.set(0);
+                }
                 return isIOSResult;
               }
             }
@@ -72,67 +73,70 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class P {
               constructor() {
-                const obj = PlatformUtils;
-                const isIOSResult = obj.isIOS() && sharedValue1.set(0);
+                obj = closure_0(closure_2[5]);
+                isIOSResult = obj.isIOS();
+                if (isIOSResult) {
+                  tmp2 = closure_4;
+                  num = 0;
+                  isIOSResult = closure_4.set(0);
+                }
                 return isIOSResult;
               }
             }
           }
+          const tmpResult3 = tmp(tmp2[4]);
           const fn3 = function w() {
-            let items1;
-            let items2;
-            let obj4;
-            let tmpResult2;
-            let withSpring2;
-            const withSpring = spring.withSpring;
-            spring;
-            const interpolate = ReanimatedRexport.interpolate;
-            ReanimatedRexport;
-            const value = sharedValue1.get();
+            const obj = spring;
+            value = sharedValue1.get();
             const items = [1, sharedValue.get()];
-            const withSpringResult = withSpring(interpolate(value, [0, 1], items), sharedValue1);
+            const withSpringResult = obj.withSpring(ReanimatedRexport.interpolate(value, [0, 1], items), obj);
             if (closure_1) {
-              const obj2 = {
-                transform: items1,
-                opacity: withSpring2(tmpResult2.interpolate(sharedValue1.get(), [0, 1], [1, 0.5]), sharedValue1),
-              };
-              items1 = [{ scale: withSpringResult }];
-              const obj3 = { scale: withSpringResult };
-              withSpring2 = spring.withSpring;
-              spring;
-              obj4 = obj2;
-              tmpResult2 = ReanimatedRexport;
-            } else {
-              obj4 = { transform: items2 };
-              items2 = [{ scale: withSpringResult }];
+              const obj4 = { transform: null, opacity: null };
               const obj5 = { scale: withSpringResult };
+              const items1 = [obj5];
+              obj4.transform = items1;
+              const tmpResult = spring;
+              obj4.opacity = tmpResult.withSpring(
+                ReanimatedRexport.interpolate(sharedValue1.get(), [0, 1], [1, 0.5]),
+                obj,
+              );
+              let obj6 = obj4;
+              const tmpResult2 = ReanimatedRexport;
+            } else {
+              obj6 = { transform: null };
+              const obj7 = { scale: withSpringResult };
+              const items2 = [obj7];
+              obj6.transform = items2;
             }
-            return obj4;
+            return obj6;
           };
-          let obj2 = {
-            withSpring: require("spring").withSpring,
-            interpolate: require("ReanimatedRexport").interpolate,
+          const obj2 = {
+            withSpring: tmp(tmp2[6]).withSpring,
+            interpolate: tmp(tmp2[4]).interpolate,
             sharedPressState: sharedValue1,
             sharedWidthScale: sharedValue,
             SPRING_CONFIG: sharedValue1,
             withOpacity: tmp4,
           };
-          const useAnimatedStyle = require("ReanimatedRexport").useAnimatedStyle;
-          require("ReanimatedRexport");
           fn3.__closure = obj2;
           fn3.__workletHash = 1305898392151;
           fn3.__initData = __initData;
-          const animatedStyle = useAnimatedStyle(fn3);
+          const animatedStyle = tmp(tmp2[4]).useAnimatedStyle(fn3);
           if (cResult[9] === tmp11) {
             class P {
               constructor() {
-                const obj = PlatformUtils;
-                const isIOSResult = obj.isIOS() && sharedValue1.set(0);
+                obj = closure_0(closure_2[5]);
+                isIOSResult = obj.isIOS();
+                if (isIOSResult) {
+                  tmp2 = closure_4;
+                  num = 0;
+                  isIOSResult = closure_4.set(0);
+                }
                 return isIOSResult;
               }
             }
           }
-          let obj3 = {
+          const obj3 = {
             sharedPressState: sharedValue1,
             onPressOut: P,
             onPressIn: tmp11,
@@ -143,6 +147,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = animatedStyle;
           cResult[12] = sharedValue1;
           cResult[13] = obj3;
+          const tmpResult4 = tmp(tmp2[4]);
         }
       }
       const fn = function o() {
@@ -156,9 +161,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items;
       tmp7 = items;
       tmp6 = fn;
+      let tmpResult = require("ReanimatedRexport");
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       let flag = arg1;
       if (arg1 === undefined) {
@@ -166,60 +171,75 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let width;
       width = flag(width[3])().width;
-      let obj = require("ReanimatedRexport");
-      const sharedValue = obj.useSharedValue(1 - arg0 / width);
+      const sharedValue = require("ReanimatedRexport").useSharedValue(1 - arg0 / width);
       let items = [width, arg0, sharedValue];
       const effect = sharedValue.useEffect(() => {
         const result = sharedValue.set(1 - closure_0 / width);
       }, items);
-      let obj2 = require("ReanimatedRexport");
-      const sharedValue1 = obj2.useSharedValue(0);
+      let obj = require("ReanimatedRexport");
+      const sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
       let items1 = [sharedValue1];
       let items2 = [sharedValue1];
       const callback = sharedValue.useCallback(() => {
-        const obj = PlatformUtils;
-        const isIOSResult = obj.isIOS() && sharedValue1.set(1);
+        let isIOSResult = PlatformUtils.isIOS();
+        if (isIOSResult) {
+          isIOSResult = sharedValue1.set(1);
+        }
         return isIOSResult;
       }, items1);
       const callback1 = sharedValue.useCallback(() => {
-        const obj = PlatformUtils;
-        const isIOSResult = obj.isIOS() && sharedValue1.set(0);
+        let isIOSResult = PlatformUtils.isIOS();
+        if (isIOSResult) {
+          isIOSResult = sharedValue1.set(0);
+        }
         return isIOSResult;
       }, items2);
-      let obj3 = require("ReanimatedRexport");
+      const obj2 = require("ReanimatedRexport");
       class S {
         constructor() {
-          let items1;
-          let items2;
-          let obj4;
-          let tmpResult2;
-          let withSpring2;
-          const withSpring = spring.withSpring;
-          spring;
-          const interpolate = ReanimatedRexport.interpolate;
-          ReanimatedRexport;
-          const value = sharedValue1.get();
-          const items = [1, sharedValue.get()];
-          const withSpringResult = withSpring(interpolate(value, [0, 1], items), sharedValue1);
-          if (flag) {
-            const obj2 = {
-              transform: items1,
-              opacity: withSpring2(tmpResult2.interpolate(sharedValue1.get(), [0, 1], [1, 0.5]), sharedValue1),
-            };
-            items1 = [{ scale: withSpringResult }];
-            const obj3 = { scale: withSpringResult };
-            withSpring2 = spring.withSpring;
-            spring;
-            obj4 = obj2;
-            tmpResult2 = ReanimatedRexport;
+          tmp = closure_0;
+          tmp2 = closure_2;
+          obj = closure_0(closure_2[6]);
+          obj2 = closure_0(closure_2[4]);
+          obj3 = closure_4;
+          value = closure_4.get();
+          items = [1];
+          items[1] = closure_3.get();
+          tmp4 = closure_4;
+          withSpringResult = obj.withSpring(obj2.interpolate(value, [0, 1], items), closure_4);
+          if (c1) {
+            obj1 = { transform: null, opacity: null };
+            obj10 = { scale: null };
+            obj10.scale = withSpringResult;
+            items1 = [];
+            items1[0] = obj10;
+            obj1.transform = items1;
+            tmpResult = tmp(tmp2[6]);
+            tmpResult1 = tmp(tmp2[4]);
+            obj1.opacity = tmpResult.withSpring(tmpResult1.interpolate(obj3.get(), [0, 1], [1, 0.5]), tmp4);
+            obj11 = obj1;
           } else {
-            obj4 = { transform: items2 };
-            items2 = [{ scale: withSpringResult }];
-            const obj5 = { scale: withSpringResult };
+            obj11 = { transform: null };
+            obj12 = { scale: null };
+            obj12.scale = withSpringResult;
+            items2 = [];
+            items2[0] = obj12;
+            obj11.transform = items2;
           }
-          return obj4;
+          return obj11;
         }
       }
+      const obj3 = require("ReanimatedRexport");
+      S.__closure = {
+        withSpring: require("spring").withSpring,
+        interpolate: require("ReanimatedRexport").interpolate,
+        sharedPressState: sharedValue1,
+        sharedWidthScale: sharedValue,
+        SPRING_CONFIG: sharedValue1,
+        withOpacity: flag,
+      };
+      S.__workletHash = 1415647611988;
+      S.__initData = __initData2;
       let obj4 = {
         withSpring: require("spring").withSpring,
         interpolate: require("ReanimatedRexport").interpolate,
@@ -228,18 +248,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         SPRING_CONFIG: sharedValue1,
         withOpacity: flag,
       };
-      S.__closure = obj4;
-      S.__workletHash = 1415647611988;
-      S.__initData = __initData2;
-      let obj5 = {
+      return {
         sharedPressState: sharedValue1,
         onPressOut: callback1,
         onPressIn: callback,
         pressableStyles: obj3.useAnimatedStyle(S),
       };
-      return obj5;
     };
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx");
-
-export { SPRING_CONFIG };
-export const useIOSPressEffects = tmp2;

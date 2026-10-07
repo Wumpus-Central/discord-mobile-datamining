@@ -1,55 +1,45 @@
 // discord_app/modules/app_analytics/ImpressionStore.tsx
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import 01254__ from "../../../_runtime/metro/01254__.js";
+import identity from "../../../_runtime/metro/01254__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
-const withEqualityFn = module_1254.createWithEqualityFn(() => closure_2);
+const withEqualityFn = identity.createWithEqualityFn(() => closure_2);
 const result = size.fileFinishedImporting("modules/app_analytics/ImpressionStore.tsx");
 
 export const setCurrentImpression = function setCurrentImpression(arg0) {
-  let closure_0;
   _require = arg0;
-  let obj = require("react-native");
-  obj.batchUpdates(() => {
+  require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState((impressions) => {
-      let items;
-      const obj = { impressions: items };
-      items = [];
-      items[HermesBuiltin.arraySpread(items, impressions.impressions, 0)] = closure_1_0;
+      const obj = { impressions: null };
+      const items = [];
+      items[HermesBuiltin.arraySpread(impressions.impressions, 0)] = closure_1_0;
+      obj.impressions = items;
       return obj;
     });
   });
 };
 export const cleanupImpression = function cleanupImpression(arg0) {
-  let closure_0;
   _require = arg0;
-  let obj = require("react-native");
-  obj.batchUpdates(() => {
+  require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState((impressions) => {
-      let sequenceId;
-      const obj = { impressions: impressions.filter((sequenceId) => sequenceId.sequenceId !== sequenceId.sequenceId) };
+      const obj = { impressions: null };
       impressions = impressions.impressions;
+      obj.impressions = impressions.filter((sequenceId) => sequenceId.sequenceId !== sequenceId.sequenceId);
       return obj;
     });
   });
 };
 export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
-  let closure_0;
-  let closure_1;
   _require = arg0;
   dependencyMap = arg1;
-  let obj = require("react-native");
-  obj.batchUpdates(() => {
-    let name;
+  require("ReactBatchUpdates").batchUpdates(() => {
     withEqualityFn.setState(() => {
-      let obj2;
-      const obj = { debugTrackedData: obj2 };
-      obj2 = { name };
+      const obj = { debugTrackedData: null };
       const merged = Object.assign(closure_1_1);
+      obj.debugTrackedData = { name };
       return obj;
     });
   });

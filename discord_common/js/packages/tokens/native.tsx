@@ -18,70 +18,81 @@ function sanitizeTheme(theme) {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const self = this;
-    const self2 = this;
     const error = new Error("Invalid theme: " + theme);
     throw error;
   }
 }
-const Themes = ThemeTypes._private.Themes;
 const SemanticColors = _mod589._private.SemanticColors;
 const SemanticColorExperiments = _mod590._private.SemanticColorExperiments;
 const RawColors = _mod591._private.RawColors;
-const Modules = _mod592._private.Modules;
 const Shadows = _mod593._private.Shadows;
 let closure_6 = Symbol("semanticColor");
-const set = new Set(Object.values(Themes));
-let obj = {
+const set = new Set(Object.values(ThemeTypes._private.Themes));
+let result = size.fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");
+
+export default {
   themes: ThemeTypes.ThemeTypes,
   colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_1_6]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: mapValuesDefault(Shadows, (arg0) => {
-    function resolve(isAndroid) {
-      return f81659(closure_0[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
-    }
-    let closure_0 = arg0;
-    const f81655 = (shadowOffset, arg1) => {
+    let f81659 = (shadowOffset, arg1) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
       }
       return shadowOffset;
     };
-    const f81656 = (shadowColorAndroid, arg1) =>
+    f81659 = (shadowColorAndroid, arg1) =>
       arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
-    const f81657 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    const f81658 = (shadowRadius) => shadowRadius.shadowRadius;
-    const f81659 = (elevation) => elevation.elevation;
+    f81659 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f81659 = (shadowRadius) => shadowRadius.shadowRadius;
+    f81659 = (elevation) => elevation.elevation;
     return {
-      shadowOffset: { resolve },
-      shadowColor: { resolve },
-      shadowOpacity: { resolve },
-      shadowRadius: { resolve },
-      elevation: { resolve },
+      shadowOffset: {
+        resolve(isAndroid) {
+          return f81659(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        },
+      },
+      shadowColor: {
+        resolve(isAndroid) {
+          return f81659(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        },
+      },
+      shadowOpacity: {
+        resolve(isAndroid) {
+          return f81659(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        },
+      },
+      shadowRadius: {
+        resolve(isAndroid) {
+          return f81659(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        },
+      },
+      elevation: {
+        resolve(isAndroid) {
+          return f81659(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        },
+      },
     };
   }),
   radii: Radius.Radius,
-  modules: mapValuesDefault(Modules, (arg0) =>
+  modules: mapValuesDefault(_mod592._private.Modules, (arg0) =>
     mapValuesDefault(arg0, (arg0) => {
-      let resolve = arg0;
-      let obj = {
+      closure_0 = arg0;
+      return {
         resolve(arg0) {
-          let density;
-          let enabledExperiments;
           ({ enabledExperiments, density } = arg0);
-          resolve = resolve.resolve;
           if (enabledExperiments == null) {
             enabledExperiments = [];
           }
-          const obj = { enabledExperiments, density };
+          const obj = { enabledExperiments, density: null };
           if (density == null) {
             density = "compact";
           }
-          return resolve(obj);
+          obj.density = density;
+          return closure_0.resolve(obj);
         },
       };
-      return obj;
     }),
   ),
   space: Layout.SpacePx,
@@ -117,7 +128,7 @@ let obj = {
               if (tmp8 != null) {
                 let tmp14 = tmp8[tmp11];
                 if (tmp14 != null) {
-                  tmp12 = tmp14[theme];
+                  tmp12 = tmp14[arg0];
                 }
               }
               if (null != tmp12) {
@@ -136,10 +147,8 @@ let obj = {
         isProfileTheme = semanticColorContextFromThemeContext.isProfileTheme;
       }
       if (isProfileTheme) {
-        let hexResult;
-        if ("userProfileThemes" in SemanticColors[TEXT_FEEDBACK_CRITICAL[closure_6]]) {
+        if ("userProfileThemes" in tmp3) {
           theme = undefined;
-          const userProfileThemes = tmp3.userProfileThemes;
           if (semanticColorContextFromThemeContext != null) {
             const gradient = semanticColorContextFromThemeContext.gradient;
             if (gradient != null) {
@@ -148,7 +157,7 @@ let obj = {
           }
           let tmp41 = null;
           if (null != theme) {
-            tmp41 = userProfileThemes[theme];
+            tmp41 = tmp3.userProfileThemes[theme];
           }
           if (null != tmp41) {
             result = RawColors[tmp41.raw];
@@ -170,19 +179,18 @@ let obj = {
           num3 = 1;
         }
         if (num3 < 1) {
-          const obj6 = transforms;
-          result = obj6.transformColorForReducedSaturation(result, category, num3);
+          result = transforms.transformColorForReducedSaturation(result, category, num3);
         }
         if (1 !== num2) {
           const obj7 = transforms;
           result = obj7.transformColorContrast(result, category, theme, num2);
         }
         if (1 === opacity) {
-          hexResult = result;
+          let hexResult = result;
         } else {
           const obj8 = _modDef683(result);
-          const alphaResult = obj8.alpha(opacity);
-          hexResult = alphaResult.hex();
+          hexResult = _modDef683(result).alpha(opacity).hex();
+          const alphaResult = _modDef683(result).alpha(opacity);
         }
         return hexResult;
       }
@@ -192,7 +200,7 @@ let obj = {
       }
       if (null != gradient1) {
         let gradient2 = null;
-        if ("gradient" in SemanticColors[TEXT_FEEDBACK_CRITICAL[closure_6]]) {
+        if ("gradient" in tmp3) {
           gradient2 = tmp3.gradient;
         }
         let tmp22 = gradient2;
@@ -231,14 +239,12 @@ let obj = {
           tmp36 = tmp22[theme1];
         }
         if (null != tmp36) {
-          let tmp38;
-          const tmp61 = _modDef683;
           if (tmp36.color in RawColors) {
-            tmp38 = tmp62[tmp36.color];
+            let tmp38 = tmp62[tmp36.color];
           } else if (semanticColorContextFromThemeContext != null) {
             tmp38 = semanticColorContextFromThemeContext.gradient.colors[tmp36.color];
           }
-          const tmp61Result = tmp61(tmp38);
+          const tmp61Result = _modDef683(tmp38);
           let result1 = tmp61Result;
           if ("saturation" in tmp36) {
             result1 = tmp61Result.set("hsl.s", tmp36.saturation);
@@ -257,27 +263,21 @@ let obj = {
       }
     },
     adjustColorSaturation(result, saturation, generic) {
-      const obj = transforms;
-      return obj.transformColorForReducedSaturation(result, generic, saturation);
+      return transforms.transformColorForReducedSaturation(result, generic, saturation);
     },
     adjustColorContrast(result, contrast, category, theme) {
-      const transformColorContrast = transforms.transformColorContrast;
+      const obj = transforms;
       if (set.has(theme)) {
-        return transformColorContrast(result, category, theme, contrast);
+        return obj.transformColorContrast(result, category, theme, contrast);
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const self = this;
-        const self2 = this;
         const error = new Error("Invalid theme: " + theme);
         throw error;
       }
     },
   },
 };
-let result = size.fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");
-
-export default obj;
 export const Theme = ThemeTypes.ThemeTypes;
 export const RawColor = RawColors;
 export const SemanticColor = SemanticColors;

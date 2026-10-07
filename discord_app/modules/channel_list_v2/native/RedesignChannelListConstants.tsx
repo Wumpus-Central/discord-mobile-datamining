@@ -1,18 +1,17 @@
 // discord_app/modules/channel_list_v2/native/RedesignChannelListConstants.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _mod17 from "../../../../_runtime/metro/00017__.js";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let c2 = "text-xs/medium";
-const StyleSheet = react_native.StyleSheet;
 let num = 20;
 if (PlatformUtils.isIOS()) {
   num = 22;
 }
 let c4 = "text-sm/semibold";
 let c5 = "text-sm/semibold";
-const hairlineWidth = StyleSheet.hairlineWidth;
+const hairlineWidth = _mod17.StyleSheet.hairlineWidth;
 const frozen = Object.freeze({ waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 25 });
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
 
@@ -43,20 +42,16 @@ export const CATEGORY_MARGIN_TOP = 12;
 export const CATEGORY_MARGIN_BOTTOM = 4;
 export const CATEGORY_VERTICAL_PADDING = 4;
 export const getScaledChannelSubtitleHeight = function getScaledChannelSubtitleHeight(fontScale) {
-  const obj = useScaledTextLineHeight;
-  return obj.scaleTextLineHeight(c2, fontScale);
+  return useScaledTextLineHeight.scaleTextLineHeight(c2, fontScale);
 };
 export const getScaledCategoryRowHeight = function getScaledCategoryRowHeight(fontScale) {
-  const obj = useScaledTextLineHeight;
-  return obj.scaleTextLineHeight(c5, fontScale) + 8 + 4;
+  return useScaledTextLineHeight.scaleTextLineHeight(c5, fontScale) + 8 + 4;
 };
 export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0) {
   const sum = 8 + hairlineWidth;
-  const obj = useScaledTextLineHeight;
-  return 2 * sum + obj.scaleLineHeight(num, arg0);
+  return 2 * sum + useScaledTextLineHeight.scaleLineHeight(num, arg0);
 };
 export const getScaledSearchBarHeight = function getScaledSearchBarHeight(fontScale) {
-  const obj = useScaledTextLineHeight;
-  return 24 + obj.scaleTextLineHeight(c4, fontScale);
+  return 24 + useScaledTextLineHeight.scaleTextLineHeight(c4, fontScale);
 };
 export const VIEWABILITY_CONFIG = frozen;

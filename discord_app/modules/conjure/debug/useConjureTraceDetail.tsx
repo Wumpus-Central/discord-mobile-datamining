@@ -1,85 +1,73 @@
 // discord_app/modules/conjure/debug/useConjureTraceDetail.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/debug/useConjureTraceDetail.tsx");
+
+export const useConjureTraceDetail = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, detailId) => {
-      let closure_0;
-      let tmp5;
       _require = arg0;
       dependencyMap = detailId;
-      let obj = require("react");
-      const cResult = obj.c(11);
-      const tmp4 = _slicedToArray(react.useState(null), 2);
-      [tmp5, _slicedToArray] = tmp4;
+      const cResult = require("c").c(11);
+      let obj = require("c");
       const tmp = _require;
+      [tmp5, _slicedToArray] = noop.useState(null);
       if (cResult[0] === detailId) {
-        let tmp6;
-        let tmp7;
         if (cResult[1] === arg0) {
-          tmp6 = cResult[2];
-          tmp7 = cResult[3];
+          let tmp6 = cResult[2];
+          let tmp7 = cResult[3];
         }
-        const effect = react.useEffect(tmp6, tmp7);
+        const effect = noop.useEffect(tmp6, tmp7);
         if (null == detailId) {
           return null;
         } else {
-          let tmp9;
-          let tmp11;
           if (cResult[4] !== detailId) {
-            const tmpResult = tmp(16785);
-            const cachedTraceDetailResult = tmpResult.cachedTraceDetail(detailId);
+            const cachedTraceDetailResult = tmp(16785).cachedTraceDetail(detailId);
             cResult[4] = detailId;
             cResult[5] = cachedTraceDetailResult;
-            tmp9 = cachedTraceDetailResult;
+            let tmp9 = cachedTraceDetailResult;
+            const tmpResult = tmp(16785);
           } else {
             tmp9 = cResult[5];
           }
           if (null != tmp9) {
-            let tmp14;
             if (cResult[6] !== tmp9) {
               const obj3 = { status: "loaded", rich: tmp9 };
               cResult[6] = tmp9;
               cResult[7] = obj3;
-              tmp14 = obj3;
-            } else {
-              tmp14 = cResult[7];
             }
-            tmp11 = tmp14;
           } else {
             if (cResult[8] === detailId) {
               if (cResult[9] === tmp5) {
-                tmp11 = cResult[10];
+                return cResult[10];
               }
             }
             detailId = undefined;
             if (tmp5 != null) {
               detailId = tmp5.detailId;
             }
-            const tmp13 = detailId === detailId ? tmp5.detail : { status: "loading" };
+            const tmp12 = detailId === detailId ? tmp5.detail : { status: "loading" };
             cResult[8] = detailId;
             cResult[9] = tmp5;
-            cResult[10] = tmp13;
-            tmp11 = tmp13;
+            cResult[10] = tmp12;
           }
-          return tmp11;
         }
       }
       const fn = function c() {
         if (null != detailId) {
-          let obj = closure_0(detailId[4]);
           if (null == obj.cachedTraceDetail(detailId)) {
             const _AbortController = AbortController;
-            const self = this;
-            const self2 = this;
             const abortController = new AbortController();
-            const tmp2Result = closure_0(detailId[4]);
-            const traceDetail = tmp2Result.fetchTraceDetail(abortController, detailId, abortController.signal);
+            const traceDetail = closure_0(detailId[4]).fetchTraceDetail(
+              abortController,
+              detailId,
+              abortController.signal,
+            );
             traceDetail.then((detail) => {
               if (!abortController.signal.aborted) {
                 const obj = { detailId, detail };
@@ -88,6 +76,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             });
             return () => abortController.abort();
           }
+          obj = closure_0(detailId[4]);
         }
       };
       const items = [arg0, detailId];
@@ -97,25 +86,23 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp7 = items;
       tmp6 = fn;
+      const tmp4 = _slicedToArray(noop.useState(null), 2);
     }
   : (arg0, detailId) => {
-      let closure_0;
-      let tmp2;
       _require = arg0;
       dependencyMap = detailId;
-      const tmp = _slicedToArray(react.useState(null), 2);
-      [tmp2, _slicedToArray] = tmp;
+      [tmp2, _slicedToArray] = noop.useState(null);
       const items = [arg0, detailId];
-      const effect = react.useEffect(function () {
+      const effect = noop.useEffect(() => {
         if (null != detailId) {
-          let obj = closure_0(detailId[4]);
           if (null == obj.cachedTraceDetail(detailId)) {
             const _AbortController = AbortController;
-            const self = this;
-            const self2 = this;
             const abortController = new AbortController();
-            const tmp2Result = closure_0(detailId[4]);
-            const traceDetail = tmp2Result.fetchTraceDetail(abortController, detailId, abortController.signal);
+            const traceDetail = closure_0(detailId[4]).fetchTraceDetail(
+              abortController,
+              detailId,
+              abortController.signal,
+            );
             traceDetail.then((detail) => {
               if (!abortController.signal.aborted) {
                 const obj = { detailId, detail };
@@ -124,17 +111,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             });
             return () => abortController.abort();
           }
+          obj = closure_0(detailId[4]);
         }
       }, items);
       if (null == detailId) {
         return null;
       } else {
-        let tmp8;
-        let obj = require("ConjureTraceDetail");
-        const cachedTraceDetailResult = obj.cachedTraceDetail(detailId);
+        const cachedTraceDetailResult = require("ConjureTraceDetail").cachedTraceDetail(detailId);
         if (null != cachedTraceDetailResult) {
-          tmp8 = { status: "loaded", rich: cachedTraceDetailResult };
           const obj2 = { status: "loaded", rich: cachedTraceDetailResult };
+          let tmp8 = obj2;
         } else {
           detailId = undefined;
           if (tmp2 != null) {
@@ -144,7 +130,5 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
+      const tmp = _slicedToArray(noop.useState(null), 2);
     };
-const result = size.fileFinishedImporting("modules/conjure/debug/useConjureTraceDetail.tsx");
-
-export const useConjureTraceDetail = tmp2;

@@ -1,62 +1,52 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import FormSwitch from "../../../../design/components/Forms/native/FormSwitch.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import VEVOOStore from "VEVOOStore.tsx";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let dependencyMap;
 
-let hasOwnProperty;
-let metroRequire;
-let _slicedToArray = _slicedToArray_mod;
+require = fn;
+const VEVOOStore = fn(5781);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
-        let closure_2;
-        let closure_3;
-        let first;
-        let tmp13;
-        let tmp14;
-        let tmp17;
-        let tmp7;
-        let obj = react2;
-        const cResult = obj.c(18);
+        const cResult = c.c(18);
         const tmp4 = closure_8();
-        [tmp7, require] = react.useState(false);
-        _slicedToArray(react.useState(false), 2);
         const tmp5 = _slicedToArray;
+        [tmp7, require] = noop.useState(false);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp10 = closure_5();
           cResult[0] = tmp10;
-          first = tmp10;
+          let first = tmp10;
         } else {
           first = cResult[0];
         }
-        const tmp5Result = tmp5(react.useState(first.blurAmountOverride), 2);
+        const tmp5Result = tmp5(noop.useState(first.blurAmountOverride), 2);
         const first1 = tmp5Result[0];
         dependencyMap = tmp5Result[1];
-        const ref = react.useRef(first1);
+        const tmp6 = _slicedToArray(noop.useState(false), 2);
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function w(blurAmountOverride) {
             if (null != blurAmountOverride) {
               closure_2(blurAmountOverride);
             }
-            const obj = { blurAmountOverride };
+            const obj = {};
             const merged = Object.assign(hasOwnProperty());
-            metroRequire(obj);
+            obj.blurAmountOverride = blurAmountOverride;
+            timestampProducer(obj);
           };
           cResult[1] = fn;
-          tmp13 = fn;
+          let tmp13 = fn;
         } else {
           tmp13 = cResult[1];
         }
@@ -71,7 +61,7 @@ const memoResult = react.memo(
           }
           cResult[2] = first1;
           cResult[3] = str;
-          tmp14 = str;
+          let tmp14 = str;
         } else {
           tmp14 = cResult[3];
         }
@@ -87,33 +77,37 @@ const memoResult = react.memo(
           };
           cResult[4] = first1;
           cResult[5] = fn2;
-          tmp17 = fn2;
+          let tmp17 = fn2;
         } else {
           tmp17 = cResult[5];
         }
         if (cResult[6] === tmp7) {
-          let tmp18;
           if (cResult[7] === tmp17) {
-            tmp18 = cResult[8];
+            let tmp18 = cResult[8];
           }
           if (cResult[9] === !tmp7) {
-            let tmp22;
-            if (cResult[10] === !tmp7) {
-              tmp22 = cResult[11];
+            if (cResult[10] === tmp21) {
+              let tmp22 = cResult[11];
             }
             if (cResult[12] === tmp4.enabledSwitchStyle) {
               if (cResult[13] === combined) {
                 if (cResult[14] === tmp18) {
                   if (cResult[15] === tmp22) {
-                    let tmp27;
-                    if (cResult[16] === !tmp7) {
-                      tmp27 = cResult[17];
+                    if (cResult[16] === tmp26) {
+                      let tmp27 = cResult[17];
                     }
                     return tmp27;
                   }
                 }
               }
             }
+            const obj3 = {
+              label: combined,
+              leadingStyle: tmp4.enabledSwitchStyle,
+              leading: tmp18,
+              subLabel: tmp22,
+              disabled: !tmp7,
+            };
             const tmp29 = jsx(Form.FormRow, {
               label: combined,
               leadingStyle: tmp4.enabledSwitchStyle,
@@ -129,6 +123,7 @@ const memoResult = react.memo(
             cResult[17] = tmp29;
             tmp27 = tmp29;
           }
+          const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 };
           const tmp25 = jsx(first1(15882), {
             disabled: !tmp7,
             disabledOpacity: !tmp7,
@@ -145,45 +140,82 @@ const memoResult = react.memo(
         cResult[7] = tmp17;
         cResult[8] = tmp19;
         tmp18 = tmp19;
+        ref = noop.useRef(first1);
       }
     : () => {
-        let closure_2;
-        let onValueChange;
-        let tmp3;
         const tmp = closure_8();
-        [tmp3, require] = onValueChange(react.useState(false), 2);
-        const tmp2 = onValueChange(react.useState(false), 2);
-        const tmp4 = onValueChange(react.useState(closure_5().blurAmountOverride), 2);
+        [tmp3, require] = onValueChange(noop.useState(false), 2);
+        const tmp4 = onValueChange(noop.useState(closure_5().blurAmountOverride), 2);
         const first = tmp4[0];
         dependencyMap = tmp4[1];
-        const ref = react.useRef(first);
-        onValueChange = react.useCallback((blurAmountOverride) => {
+        const tmp2 = onValueChange(noop.useState(false), 2);
+        onValueChange = noop.useCallback((blurAmountOverride) => {
           if (null != blurAmountOverride) {
             closure_2(blurAmountOverride);
           }
-          const obj = { blurAmountOverride };
+          const obj = {};
           const merged = Object.assign(hasOwnProperty());
-          metroRequire(obj);
+          obj.blurAmountOverride = blurAmountOverride;
+          timestampProducer(obj);
         }, []);
         let str;
-        const FormRow = Form.FormRow;
         if (first != null) {
           str = first.toFixed(3);
         }
         if (str == null) {
           str = "";
         }
-        return (
-          <FormRow
-            label={"Blur Amount " + str}
-            leadingStyle={tmp.enabledSwitchStyle}
-            leading={null}
-            subLabel={null}
-            disabled={!tmp3}
-          />
-        );
+        let obj = {
+          label: "Blur Amount " + str,
+          leadingStyle: tmp.enabledSwitchStyle,
+          leading: jsx(FormSwitch.FormSwitch, {
+            value: tmp3,
+            onValueChange(arg0) {
+              require(arg0);
+              let tmp3;
+              if (arg0) {
+                tmp3 = first;
+              }
+              callback(tmp3);
+            },
+          }),
+          subLabel: null,
+          disabled: !tmp3,
+        };
+        const obj2 = {
+          value: tmp3,
+          onValueChange(arg0) {
+            require(arg0);
+            let tmp3;
+            if (arg0) {
+              tmp3 = first;
+            }
+            callback(tmp3);
+          },
+        };
+        const ref = noop.useRef(first);
+        obj.subLabel = jsx(first(15882), {
+          disabled: !tmp3,
+          disabledOpacity: !tmp3,
+          initialValue: noop.useRef(first),
+          onValueChange,
+        });
+        return jsx(Form.FormRow, {
+          label: "Blur Amount " + str,
+          leadingStyle: tmp.enabledSwitchStyle,
+          leading: jsx(FormSwitch.FormSwitch, {
+            value: tmp3,
+            onValueChange(arg0) {
+              require(arg0);
+              let tmp3;
+              if (arg0) {
+                tmp3 = first;
+              }
+              callback(tmp3);
+            },
+          }),
+          subLabel: null,
+          disabled: !tmp3,
+        });
       },
 );
-const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx");
-
-export default memoResult;

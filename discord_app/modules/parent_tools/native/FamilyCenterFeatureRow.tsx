@@ -1,59 +1,41 @@
 // discord_app/modules/parent_tools/native/FamilyCenterFeatureRow.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl11 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef2521 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import TableRowGroup2 from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09535_AssetRegistry.js";
-import useAgeSpecificText4 from "../hooks/useAgeSpecificText.tsx";
-import AssetRegistryDefault2 from "../../../../_runtime/12028_AssetRegistry.js";
+import _modDef9535 from "../../../../_runtime/metro/09535__.js";
+import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
+import _modDef12028 from "../../../../_runtime/metro/12028__.js";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import AssetRegistryDefault3 from "../../../../_runtime/14710_AssetRegistry.js";
+import _modDef14710 from "../../../../_runtime/metro/14710__.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let header;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { tableGroup: { marginTop: 20, marginBottom: nativeDefault.space.PX_24 } };
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { marginTop: 20, marginBottom: nativeDefault.space.PX_24 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let obj = { tableGroup: obj2 };
-obj2 = { marginTop: 20, marginBottom: nativeDefault.space.PX_24 };
-let closure_6 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let intl10;
-      let items;
-      let tmp11;
-      let tmp12;
-      let tmp17;
-      let tmp18;
-      let tmp23;
-      let tmp26;
-      let tmp28;
-      let tmp31;
-      let tmp33;
-      let tmp36;
-      let tmp5;
-      let tmp6;
-      let obj = react2;
-      const cResult = obj.c(25);
+      const cResult = c.c(25);
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl11.intl;
+        const intl = util.intl;
         const stringResult = intl.string(_modDef2521.qITXhY);
-        const intl2 = intl11.intl;
+        const intl2 = util.intl;
         const stringResult1 = intl2.string(_modDef2521.bmhCnL);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
@@ -62,108 +44,104 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const tmpResult = useAgeSpecificText4;
-      const ageSpecificText = tmpResult.useAgeSpecificText(tmp5, tmp6);
+      const ageSpecificText = useAgeSpecificText.useAgeSpecificText(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = intl11.intl;
+        const intl3 = util.intl;
         const stringResult2 = intl3.string(_modDef2521.t7SkFy);
-        const intl4 = intl11.intl;
+        const intl4 = util.intl;
         const stringResult3 = intl4.string(_modDef2521["68zfxD"]);
         cResult[2] = stringResult2;
         cResult[3] = stringResult3;
-        tmp12 = stringResult3;
-        tmp11 = stringResult2;
+        let tmp12 = stringResult3;
+        let tmp11 = stringResult2;
       } else {
         tmp11 = cResult[2];
         tmp12 = cResult[3];
       }
-      const tmpResult3 = useAgeSpecificText4;
-      const ageSpecificText1 = tmpResult3.useAgeSpecificText(tmp11, tmp12);
+      const tmpResult = useAgeSpecificText;
+      const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp11, tmp12);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl5 = intl11.intl;
+        const intl5 = util.intl;
         const stringResult4 = intl5.string(_modDef2521["+pi4Yt"]);
-        const intl6 = intl11.intl;
+        const intl6 = util.intl;
         const stringResult5 = intl6.string(_modDef2521["1xPTwE"]);
         cResult[4] = stringResult4;
         cResult[5] = stringResult5;
-        tmp18 = stringResult5;
-        tmp17 = stringResult4;
+        let tmp18 = stringResult5;
+        let tmp17 = stringResult4;
       } else {
         tmp17 = cResult[4];
         tmp18 = cResult[5];
       }
-      const tmpResult4 = useAgeSpecificText4;
-      const ageSpecificText2 = tmpResult4.useAgeSpecificText(tmp17, tmp18);
+      const tmpResult3 = useAgeSpecificText;
+      const ageSpecificText2 = useAgeSpecificText.useAgeSpecificText(tmp17, tmp18);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl7 = intl11.intl;
+        const intl7 = util.intl;
         const stringResult6 = intl7.string(_modDef2521["001l3m"]);
         cResult[6] = stringResult6;
-        tmp23 = stringResult6;
+        let tmp23 = stringResult6;
       } else {
         tmp23 = cResult[6];
       }
       if (cResult[7] !== ageSpecificText) {
         const obj2 = {
-          icon: AssetRegistryDefault3,
+          icon: _modDef14710,
           IconComponent: ChatCheckIcon.ChatCheckIcon,
           header: tmp23,
           description: ageSpecificText,
         };
         cResult[7] = ageSpecificText;
         cResult[8] = obj2;
-        tmp26 = obj2;
+        let tmp26 = obj2;
       } else {
         tmp26 = cResult[8];
       }
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl8 = intl11.intl;
+        const intl8 = util.intl;
         const stringResult7 = intl8.string(_modDef2521.yipAeP);
         cResult[9] = stringResult7;
-        tmp28 = stringResult7;
+        let tmp28 = stringResult7;
       } else {
         tmp28 = cResult[9];
       }
       if (cResult[10] !== ageSpecificText1) {
         const obj3 = {
-          icon: AssetRegistryDefault2,
+          icon: _modDef12028,
           IconComponent: EyeIcon.EyeIcon,
           header: tmp28,
           description: ageSpecificText1,
         };
         cResult[10] = ageSpecificText1;
         cResult[11] = obj3;
-        tmp31 = obj3;
+        let tmp31 = obj3;
       } else {
         tmp31 = cResult[11];
       }
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl9 = intl11.intl;
+        const intl9 = util.intl;
         const stringResult8 = intl9.string(_modDef2521.hhOuMe);
         cResult[12] = stringResult8;
-        tmp33 = stringResult8;
+        let tmp33 = stringResult8;
       } else {
         tmp33 = cResult[12];
       }
       if (cResult[13] !== ageSpecificText2) {
         const obj4 = {
-          icon: AssetRegistryDefault,
+          icon: _modDef9535,
           IconComponent: QrCodeIcon.QrCodeIcon,
           header: tmp33,
           description: ageSpecificText2,
         };
         cResult[13] = ageSpecificText2;
         cResult[14] = obj4;
-        tmp36 = obj4;
+        let tmp36 = obj4;
       } else {
         tmp36 = cResult[14];
       }
       if (cResult[15] === tmp36) {
         if (cResult[16] === tmp26) {
-          let arr;
-          let tmp38;
-          let tmp42;
           if (cResult[17] === tmp31) {
-            arr = cResult[18];
+            let arr = cResult[18];
           }
           const _Symbol = Symbol;
           if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
@@ -171,55 +149,52 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               accessibilityRole: "header",
               variant: "text-sm/semibold",
               color: "text-muted",
-              children: intl10.string(_modDef2521["6JkHSg"]),
+              children: null,
             };
-            const Text = Text_Text.Text;
-            intl10 = intl11.intl;
-            const tmp41 = React3(Text, obj5);
+            const intl10 = util.intl;
+            obj5.children = intl10.string(_modDef2521["6JkHSg"]);
+            const tmp41 = React4(Text_Text.Text, obj5);
             cResult[19] = tmp41;
-            tmp38 = tmp41;
+            let tmp38 = tmp41;
           } else {
             tmp38 = cResult[19];
           }
           if (cResult[20] !== arr) {
-            const obj6 = { spacing: 8, children: items };
-            items = [tmp38];
-            const Stack = Stack_Stack.Stack;
+            const obj6 = { spacing: 8, children: null };
+            const items = [tmp38];
             const obj7 = {
               hasIcons: true,
               children: arr.map((header) => {
-                let IconComponent;
-                let description;
-                let icon;
                 header = header.header;
                 ({ description, icon, IconComponent } = header);
-                const obj = {
-                  label: header,
-                  subLabel: description,
-                  icon: closure_1_4(TableRow2.TableRow.Icon, { source: icon, IconComponent }),
-                };
-                const TableRow = TableRow2.TableRow;
-                return closure_1_4(TableRow, obj, header);
+                return closure_1_4(
+                  TableRow.TableRow,
+                  {
+                    label: header,
+                    subLabel: description,
+                    icon: closure_1_4(TableRow.TableRow.Icon, { source: icon, IconComponent }),
+                  },
+                  header,
+                );
               }),
             };
-            const TableRowGroup = TableRowGroup2.TableRowGroup;
-            items[1] = React3(TableRowGroup, obj7);
-            const tmp45 = hasOwnProperty(Stack, obj6);
+            items[1] = React4(TableRowGroup.TableRowGroup, obj7);
+            obj6.children = items;
+            const tmp45 = hasOwnProperty(Stack_Stack.Stack, obj6);
             cResult[20] = arr;
             cResult[21] = tmp45;
-            tmp42 = tmp45;
+            let tmp42 = tmp45;
           } else {
             tmp42 = cResult[21];
           }
           if (cResult[22] === tmp4.tableGroup) {
-            let tmp46;
             if (cResult[23] === tmp42) {
-              tmp46 = cResult[24];
+              let tmp46 = cResult[24];
             }
             return tmp46;
           }
           const obj8 = { style: tmp4.tableGroup, children: tmp42 };
-          const tmp49 = React3(View, obj8);
+          const tmp49 = React4(View, obj8);
           cResult[22] = tmp4.tableGroup;
           cResult[23] = tmp42;
           cResult[24] = tmp49;
@@ -232,91 +207,71 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[17] = tmp31;
       cResult[18] = items1;
       arr = items1;
+      const tmpResult4 = useAgeSpecificText;
     }
   : () => {
-      let Stack;
-      let intl10;
-      let intl7;
-      let intl8;
-      let intl9;
-      let items1;
-      let obj5;
       const tmp = closure_6();
-      const useAgeSpecificText = useAgeSpecificText4.useAgeSpecificText;
-      useAgeSpecificText4;
-      const intl = intl11.intl;
+      const intl = util.intl;
+      const obj = useAgeSpecificText;
+      const intl2 = util.intl;
+      const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2521.qITXhY), intl2.string(_modDef2521.bmhCnL));
       const stringResult = intl.string(_modDef2521.qITXhY);
-      const intl2 = intl11.intl;
-      const ageSpecificText = useAgeSpecificText(stringResult, intl2.string(_modDef2521.bmhCnL));
-      const useAgeSpecificText2 = useAgeSpecificText4.useAgeSpecificText;
-      useAgeSpecificText4;
-      const intl3 = intl11.intl;
+      const intl3 = util.intl;
+      const obj2 = useAgeSpecificText;
+      const intl4 = util.intl;
+      const ageSpecificText1 = obj2.useAgeSpecificText(
+        intl3.string(_modDef2521.t7SkFy),
+        intl4.string(_modDef2521["68zfxD"]),
+      );
       const stringResult1 = intl3.string(_modDef2521.t7SkFy);
-      const intl4 = intl11.intl;
-      const ageSpecificText2 = useAgeSpecificText2(stringResult1, intl4.string(_modDef2521["68zfxD"]));
-      const useAgeSpecificText3 = useAgeSpecificText4.useAgeSpecificText;
-      useAgeSpecificText4;
-      const intl5 = intl11.intl;
+      const intl5 = util.intl;
+      const obj3 = useAgeSpecificText;
+      const intl6 = util.intl;
+      const obj4 = { icon: null, IconComponent: null, header: null, description: null };
+      const ageSpecificText2 = obj3.useAgeSpecificText(
+        intl5.string(_modDef2521["+pi4Yt"]),
+        intl6.string(_modDef2521["1xPTwE"]),
+      );
+      obj4.icon = _modDef14710;
+      obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
+      const intl7 = util.intl;
+      obj4.header = intl7.string(_modDef2521["001l3m"]);
+      obj4.description = ageSpecificText;
+      const items = [obj4, ,];
+      const obj5 = { icon: _modDef12028, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+      const intl8 = util.intl;
+      obj5.header = intl8.string(_modDef2521.yipAeP);
+      obj5.description = ageSpecificText1;
+      items[1] = obj5;
+      const obj6 = { icon: _modDef9535, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+      const intl9 = util.intl;
+      obj6.header = intl9.string(_modDef2521.hhOuMe);
+      obj6.description = ageSpecificText2;
+      items[2] = obj6;
+      const obj7 = { style: tmp.tableGroup, children: null };
+      const obj8 = { spacing: 8, children: null };
+      const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
+      const intl10 = util.intl;
+      obj9.children = intl10.string(_modDef2521["6JkHSg"]);
+      const items1 = [React4(Text_Text.Text, obj9)];
       const stringResult2 = intl5.string(_modDef2521["+pi4Yt"]);
-      const intl6 = intl11.intl;
-      let obj = {
-        icon: AssetRegistryDefault3,
-        IconComponent: ChatCheckIcon.ChatCheckIcon,
-        header: intl7.string(_modDef2521["001l3m"]),
-        description: ageSpecificText,
-      };
-      const ageSpecificText3 = useAgeSpecificText3(stringResult2, intl6.string(_modDef2521["1xPTwE"]));
-      intl7 = intl11.intl;
-      const items = [obj, ,];
-      const obj2 = {
-        icon: AssetRegistryDefault2,
-        IconComponent: EyeIcon.EyeIcon,
-        header: intl8.string(_modDef2521.yipAeP),
-        description: ageSpecificText2,
-      };
-      intl8 = intl11.intl;
-      items[1] = obj2;
-      const obj3 = {
-        icon: AssetRegistryDefault,
-        IconComponent: QrCodeIcon.QrCodeIcon,
-        header: intl9.string(_modDef2521.hhOuMe),
-        description: ageSpecificText3,
-      };
-      intl9 = intl11.intl;
-      items[2] = obj3;
-      const obj4 = { style: tmp.tableGroup, children: hasOwnProperty(Stack, obj5) };
-      obj5 = { spacing: 8, children: items1 };
-      Stack = Stack_Stack.Stack;
-      const obj6 = {
-        accessibilityRole: "header",
-        variant: "text-sm/semibold",
-        color: "text-muted",
-        children: intl10.string(_modDef2521["6JkHSg"]),
-      };
-      const Text = Text_Text.Text;
-      intl10 = intl11.intl;
-      items1 = [React3(Text, obj6)];
-      const obj7 = {
+      items1[1] = React4(TableRowGroup.TableRowGroup, {
         hasIcons: true,
         children: items.map((header) => {
-          let IconComponent;
-          let description;
-          let icon;
           header = header.header;
           ({ description, icon, IconComponent } = header);
-          const obj = {
-            label: header,
-            subLabel: description,
-            icon: closure_1_4(TableRow2.TableRow.Icon, { source: icon, IconComponent }),
-          };
-          const TableRow = TableRow2.TableRow;
-          return closure_1_4(TableRow, obj, header);
+          return closure_1_4(
+            TableRow.TableRow,
+            {
+              label: header,
+              subLabel: description,
+              icon: closure_1_4(TableRow.TableRow.Icon, { source: icon, IconComponent }),
+            },
+            header,
+          );
         }),
-      };
-      const TableRowGroup = TableRowGroup2.TableRowGroup;
-      items1[1] = React3(TableRowGroup, obj7);
-      return React3(View, obj4);
+      });
+      obj8.children = items1;
+      obj7.children = hasOwnProperty(Stack_Stack.Stack, obj8);
+      return React4(View, obj7);
     };
-const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
-
-export default tmp4;

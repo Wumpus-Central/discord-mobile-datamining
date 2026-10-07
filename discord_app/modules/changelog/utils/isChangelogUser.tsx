@@ -6,5 +6,9 @@ const SYSTEM_UPDATES_USER_ID = ChangelogConstants.SYSTEM_UPDATES_USER_ID;
 const result = size.fileFinishedImporting("modules/changelog/utils/isChangelogUser.tsx");
 
 export default function isChangelogUser(arg0) {
-  return null != arg0 && arg0 === SYSTEM_UPDATES_USER_ID;
+  let tmp = null != arg0;
+  if (tmp) {
+    tmp = arg0 === SYSTEM_UPDATES_USER_ID;
+  }
+  return tmp;
 }

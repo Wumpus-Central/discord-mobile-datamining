@@ -3,15 +3,10 @@ import Constants from "../../Constants.tsx";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let filename;
-
 const MessageReferenceTypes = Constants.MessageReferenceTypes;
 const result = size.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
 
 export const getInlineForwardOptions = function getInlineForwardOptions(message, nativeSyntheticEventData) {
-  let embedIndex;
-  let items;
-  let targetKind;
   ({ targetKind, embedIndex } = nativeSyntheticEventData);
   if ("media" === targetKind) {
     const messageReference = message.messageReference;
@@ -33,24 +28,24 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
       const attachments = tmp6.attachments;
       const found = attachments.filter((filename) => {
         filename = filename.filename;
-        const obj = MediaFormatTesters;
-        let isImageFileResult = obj.isImageFile(filename);
+        let isImageFileResult = MediaFormatTesters.isImageFile(filename);
         if (!isImageFileResult) {
+          isImageFileResult = MediaFormatTesters.isVideoFile(filename);
           const tmpResult = MediaFormatTesters;
-          isImageFileResult = tmpResult.isVideoFile(filename);
         }
         return isImageFileResult;
       });
       mapped = found.map((id) => id.id);
     }
-    return { onlyAttachmentIds: mapped };
+    const obj2 = { onlyAttachmentIds: mapped };
+    return obj2;
   } else {
-    let obj;
     if ("embed" === targetKind) {
       if (null != embedIndex) {
-        const obj3 = { onlyEmbedIndices: items };
-        items = [embedIndex];
-        obj = obj3;
+        const obj3 = { onlyEmbedIndices: null };
+        const items = [embedIndex];
+        obj3.onlyEmbedIndices = items;
+        let obj = obj3;
       }
       return obj;
     }

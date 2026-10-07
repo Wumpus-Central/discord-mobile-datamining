@@ -1,32 +1,28 @@
 // discord_app/modules/checkpoint/native/components/CheckpointScreen.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import CheckpointConstants from "../../CheckpointConstants.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let children;
-
-let closure_4;
-let hasOwnProperty;
-({ ScrollView: closure_4, View: hasOwnProperty } = react_native);
-const CHECKPOINT_NAV_HEIGHT = CheckpointConstants.CHECKPOINT_NAV_HEIGHT;
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const CHECKPOINT_NAV_HEIGHT = fn(5121).CHECKPOINT_NAV_HEIGHT;
+const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },
   scrollContent: { flexGrow: 1 },
 });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const obj = react2;
-      const cResult = obj.c(15);
+      const cResult = c.c(15);
       children = children.children;
       const tmp2 = closure_9();
       const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
@@ -37,28 +33,25 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === sum) {
         if (cResult[1] === sum1) {
           if (cResult[2] === sum2) {
-            let tmp7;
             if (cResult[3] === sum3) {
-              tmp7 = cResult[4];
+              let tmp7 = cResult[4];
             }
             if (cResult[5] === tmp7) {
-              let tmp8;
               if (cResult[6] === tmp2.scrollContent) {
-                tmp8 = cResult[7];
+                let tmp8 = cResult[7];
               }
               if (cResult[8] === children) {
                 if (cResult[9] === tmp2.scroll) {
-                  let tmp9;
                   if (cResult[10] === tmp8) {
-                    tmp9 = cResult[11];
+                    let tmp9 = cResult[11];
                   }
                   if (cResult[12] === tmp2.container) {
-                    let tmp13;
                     if (cResult[13] === tmp9) {
-                      tmp13 = cResult[14];
+                      let tmp13 = cResult[14];
                     }
                     return tmp13;
                   }
+                  const obj2 = { style: tmp2.container, children: tmp9 };
                   const tmp16 = <hasOwnProperty style={tmp2.container}>{tmp9}</hasOwnProperty>;
                   cResult[12] = tmp2.container;
                   cResult[13] = tmp9;
@@ -66,10 +59,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp13 = tmp16;
                 }
               }
+              const obj3 = {
+                style: tmp2.scroll,
+                contentContainerStyle: tmp8,
+                showsVerticalScrollIndicator: false,
+                children,
+              };
               const tmp12 = (
-                <React3 style={tmp2.scroll} contentContainerStyle={tmp8} showsVerticalScrollIndicator={false}>
+                <React4 style={tmp2.scroll} contentContainerStyle={tmp8} showsVerticalScrollIndicator={false}>
                   {children}
-                </React3>
+                </React4>
               );
               cResult[8] = children;
               cResult[9] = tmp2.scroll;
@@ -94,25 +93,35 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj4;
     }
   : (children) => {
-      children = children.children;
       const tmp = closure_9();
       const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
       const items = [, , ,];
       ({ bottom: arr[0], left: arr[1], right: arr[2], top: arr[3] } = insets);
+      const obj = { style: tmp.container, children: null };
+      const obj2 = {
+        style: tmp.scroll,
+        contentContainerStyle: null,
+        showsVerticalScrollIndicator: false,
+        children: null,
+      };
       const items1 = [
         tmp.scrollContent,
-        react.useMemo(() => {
-          const obj = {
+        noop.useMemo(
+          () => ({
             paddingLeft: insets.left + PX_24,
             paddingRight: insets.right + PX_24,
             paddingBottom: insets.bottom + nativeDefault.space.PX_24,
             paddingTop: insets.top + CHECKPOINT_NAV_HEIGHT,
-          };
-          return obj;
-        }, items),
+          }),
+          items,
+        ),
       ];
+      obj2.contentContainerStyle = items1;
+      obj2.children = children.children;
+      obj.children = (
+        <closure_4 style={tmp.scroll} contentContainerStyle={null} showsVerticalScrollIndicator={false}>
+          {null}
+        </closure_4>
+      );
       return <closure_5 style={tmp.container}>{null}</closure_5>;
     };
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");
-
-export default tmp3;

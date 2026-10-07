@@ -1,46 +1,44 @@
 // discord_app/modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GameIcon from "../../game_detection/native/GameIcon.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const GameIconDefault = GameIcon;
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let obj = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 },
-  overflowContainer: obj2,
+  overflowContainer: {
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: nativeDefault.radii.xs,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   container: { display: "flex", flexDirection: "row" },
   modeMuted: { opacity: 0.3 },
 };
-obj2 = {
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.xs,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 };
-let closure_6 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let Text;
-      let embeddedApps;
-      let items;
-      let items1;
-      let muted;
-      let obj8;
-      const obj = react2;
-      const cResult = obj.c(20);
+      const cResult = c.c(20);
       ({ embeddedApps, size, muted } = arg0);
       if (undefined === size) {
         size = GameIcon.GameIconSizes.SIZE_24;
@@ -54,67 +52,61 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[0] === embeddedApps[0].application) {
           if (cResult[1] === size) {
-            let tmp18;
             if (cResult[2] === muted) {
-              tmp18 = cResult[3];
+              let tmp19 = cResult[3];
             }
-            return tmp18;
+            return tmp19;
           }
         }
         const obj2 = { game: embeddedApps[0].application, size, style: muted };
-        const tmp21 = React3(GameIconDefault, obj2);
+        const tmp22 = React4(GameIconDefault, obj2);
         cResult[0] = embeddedApps[0].application;
         cResult[1] = size;
         cResult[2] = muted;
-        cResult[3] = tmp21;
-        tmp18 = tmp21;
+        cResult[3] = tmp22;
+        tmp19 = tmp22;
       } else {
-        let tmp5;
         const application = embeddedApps[0].application;
-        const application2 = embeddedApps[1].application;
+        overflowContainer = embeddedApps[1].application;
         const diff = embeddedApps.length - 1;
-        const tmp24 = GameIcon.GameIconImageSize[size];
+        const tmp25 = GameIcon.GameIconImageSize[size];
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { marginRight: 4 };
           cResult[4] = obj3;
-          tmp5 = obj3;
+          let tmp5 = obj3;
         } else {
           tmp5 = cResult[4];
         }
         if (cResult[5] === application) {
-          let tmp6;
-          let tmp13;
           if (cResult[6] === size) {
-            tmp6 = cResult[7];
+            let tmp6 = cResult[7];
           }
           if (cResult[8] === embeddedApps.length) {
             if (cResult[9] === diff) {
-              if (cResult[10] === tmp24) {
-                if (cResult[11] === application2) {
+              if (cResult[10] === tmp25) {
+                if (cResult[11] === overflowContainer) {
                   if (cResult[12] === size) {
                     if (cResult[13] === tmp4.overflow) {
-                      let tmp10;
                       if (cResult[14] === tmp4.overflowContainer) {
-                        tmp10 = cResult[15];
-                      }
-                      if (cResult[16] === tmp4.container) {
-                        if (cResult[17] === tmp6) {
-                          let tmp14;
-                          if (cResult[18] === tmp10) {
-                            tmp14 = cResult[19];
+                        if (cResult[16] === tmp4.container) {
+                          if (cResult[17] === tmp6) {
+                            if (cResult[18] === tmp10) {
+                              let tmp15 = cResult[19];
+                            }
+                            return tmp15;
                           }
-                          return tmp14;
                         }
+                        const obj4 = { style: tmp4.container, children: null };
+                        const items = [tmp6, cResult[15]];
+                        obj4.children = items;
+                        const tmp18 = hasOwnProperty(View, obj4);
+                        cResult[16] = tmp4.container;
+                        cResult[17] = tmp6;
+                        cResult[18] = cResult[15];
+                        cResult[19] = tmp18;
+                        tmp15 = tmp18;
                       }
-                      const obj4 = { style: tmp4.container, children: items };
-                      items = [tmp6, tmp10];
-                      const tmp17 = hasOwnProperty(View, obj4);
-                      cResult[16] = tmp4.container;
-                      cResult[17] = tmp6;
-                      cResult[18] = tmp10;
-                      cResult[19] = tmp17;
-                      tmp14 = tmp17;
                     }
                   }
                 }
@@ -122,30 +114,31 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (2 === embeddedApps.length) {
-            const obj5 = { game: application2, size };
-            tmp13 = React3(GameIconDefault, obj5);
+            const obj5 = { game: overflowContainer, size };
+            let tmp13 = React4(GameIconDefault, obj5);
           } else {
-            const obj6 = { style: items1, children: React3(Text, obj8) };
-            items1 = [tmp4.overflowContainer];
-            const obj7 = { height: tmp24, minWidth: tmp24 };
+            const obj6 = { style: null, children: null };
+            const items1 = [tmp4.overflowContainer];
+            const obj7 = { height: tmp25, minWidth: tmp25 };
             items1[1] = obj7;
+            obj6.style = items1;
+            const obj8 = { style: tmp4.overflow, variant: "text-xs/bold", children: null };
             const _HermesInternal = HermesInternal;
-            obj8 = { style: tmp4.overflow, variant: "text-xs/bold", children: "+" + diff };
-            Text = Text_Text.Text;
-            tmp13 = React3(View, obj6);
+            obj8.children = "+" + diff;
+            obj6.children = React4(Text_Text.Text, obj8);
+            tmp13 = React4(View, obj6);
           }
           cResult[8] = embeddedApps.length;
           cResult[9] = diff;
-          cResult[10] = tmp24;
-          cResult[11] = application2;
+          cResult[10] = tmp25;
+          cResult[11] = overflowContainer;
           cResult[12] = size;
-          cResult[13] = tmp4.overflow;
-          cResult[14] = tmp4.overflowContainer;
+          ({ overflow: tmp3[13], overflowContainer } = tmp4);
+          cResult[14] = overflowContainer;
           cResult[15] = tmp13;
-          tmp10 = tmp13;
         }
         const obj9 = { game: application, size, style: tmp5 };
-        const tmp9 = React3(GameIconDefault, obj9);
+        const tmp9 = React4(GameIconDefault, obj9);
         cResult[5] = application;
         cResult[6] = size;
         cResult[7] = tmp9;
@@ -153,11 +146,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (muted) => {
-      let Text;
-      let embeddedApps;
-      let items;
-      let items1;
-      let obj7;
       ({ embeddedApps, size } = muted);
       if (size === undefined) {
         size = GameIcon.GameIconSizes.SIZE_24;
@@ -167,39 +155,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (embeddedApps.length <= 0) {
         return null;
       } else if (1 === embeddedApps.length) {
-        const obj2 = { game: embeddedApps[0].application, size, style: modeMuted };
-        const tmp8 = GameIconDefault;
+        const obj2 = { game: embeddedApps[0].application, size, style: null };
         if (modeMuted) {
           modeMuted = tmp3.modeMuted;
         }
-        return React3(tmp8, obj2);
+        obj2.style = modeMuted;
+        return React4(GameIconDefault, obj2);
       } else {
-        let tmp16Result;
-        const application = embeddedApps[0].application;
-        const application2 = embeddedApps[1].application;
         const diff = embeddedApps.length - 1;
         const tmp13 = GameIcon.GameIconImageSize[size];
-        const obj3 = { style: tmp3.container, children: items };
-        const obj4 = { game: application, size, style: { marginRight: 4 } };
-        items = [React3(GameIconDefault, obj4)];
+        const obj3 = { style: tmp3.container, children: null };
+        const obj4 = { game: embeddedApps[0].application, size, style: { marginRight: 4 } };
+        const items = [React4(GameIconDefault, obj4)];
         if (2 === embeddedApps.length) {
-          const obj = { game: application2, size };
-          tmp16Result = React3(GameIconDefault, obj);
+          const obj = { game: embeddedApps[1].application, size };
+          let tmp16Result = React4(GameIconDefault, obj);
         } else {
-          const obj5 = { style: items1, children: React3(Text, obj7) };
-          items1 = [tmp3.overflowContainer];
+          const obj5 = { style: null, children: null };
+          const items1 = [tmp3.overflowContainer];
           const obj6 = { height: tmp13, minWidth: tmp13 };
           items1[1] = obj6;
+          obj5.style = items1;
+          const obj7 = { style: tmp3.overflow, variant: "text-xs/bold", children: null };
           const _HermesInternal = HermesInternal;
-          obj7 = { style: tmp3.overflow, variant: "text-xs/bold", children: "+" + diff };
-          Text = Text_Text.Text;
-          tmp16Result = React3(View, obj5);
+          obj7.children = "+" + diff;
+          obj5.children = React4(Text_Text.Text, obj7);
+          tmp16Result = React4(View, obj5);
         }
         items[1] = tmp16Result;
+        obj3.children = items;
         return hasOwnProperty(View, obj3);
       }
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx");
-
-export default tmp4;

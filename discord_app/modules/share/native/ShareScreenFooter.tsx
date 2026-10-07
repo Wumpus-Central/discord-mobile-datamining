@@ -1,41 +1,30 @@
 // discord_app/modules/share/native/ShareScreenFooter.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import useShareChatInputActions from "useShareChatInputActions.tsx";
 import ShareChatInputDefault from "ShareChatInput.tsx";
 import ShareFooterLayoutDefault from "ShareFooterLayout.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (appEntryKey) => {
-      let canSend;
-      let disabled;
-      let handleMessageBlur;
-      let handleMessageFocus;
-      let handlePressEmoji;
-      let handleSelectionChange;
-      let isInputFocused;
-      let isSending;
-      let onSend;
-      let preview;
-      let sendLabel;
-      let setText;
-      let text;
-      let textInputRef;
-      const obj = react2;
-      const cResult = obj.c(20);
+      const cResult = c.c(20);
       ({ text, setText, preview, sendLabel, canSend, isSending, onSend, disabled } = appEntryKey);
       let tmp4 = undefined !== disabled;
-      appEntryKey = appEntryKey.appEntryKey;
       if (tmp4) {
         tmp4 = disabled;
       }
-      const tmpResult = useShareChatInputActions;
-      const shareChatInputActions = tmpResult.useShareChatInputActions(setText, undefined, appEntryKey);
+      const shareChatInputActions = useShareChatInputActions.useShareChatInputActions(
+        setText,
+        undefined,
+        appEntryKey.appEntryKey,
+      );
       ({
         textInputRef,
         isInputFocused,
@@ -55,9 +44,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === isSending) {
         if (cResult[1] === sendLabel) {
           if (cResult[2] === tmp6) {
-            let tmp8;
             if (cResult[3] === tmp7) {
-              tmp8 = cResult[4];
+              let tmp8 = cResult[4];
             }
             if (cResult[5] === tmp4) {
               if (cResult[6] === handleMessageBlur) {
@@ -67,21 +55,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[10] === onSend) {
                         if (cResult[11] === setText) {
                           if (cResult[12] === text) {
-                            let tmp10;
                             if (cResult[13] === textInputRef) {
-                              tmp10 = cResult[14];
+                              let tmp10 = cResult[14];
                             }
                             if (cResult[15] === isInputFocused) {
                               if (cResult[16] === preview) {
                                 if (cResult[17] === tmp8) {
-                                  let tmp14;
                                   if (cResult[18] === tmp10) {
-                                    tmp14 = cResult[19];
+                                    let tmp14 = cResult[19];
                                   }
                                   return tmp14;
                                 }
                               }
                             }
+                            const obj2 = { preview, sendButton: tmp8, chatInput: tmp10, avoidKeyboard: isInputFocused };
                             const tmp17 = jsx(ShareFooterLayoutDefault, {
                               preview,
                               sendButton: tmp8,
@@ -102,6 +89,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
+            const obj3 = {
+              inputRef: textInputRef,
+              text,
+              onChange: setText,
+              onSelectionChange: handleSelectionChange,
+              onFocus: handleMessageFocus,
+              onBlur: handleMessageBlur,
+              onPressEmoji: handlePressEmoji,
+              onSend,
+              disabled: tmp4,
+            };
             const tmp13 = jsx(ShareChatInputDefault, {
               inputRef: textInputRef,
               text,
@@ -141,30 +139,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp7;
       cResult[4] = tmp9;
       tmp8 = tmp9;
+      const tmpResult = useShareChatInputActions;
     }
   : (arg0) => {
-      let appEntryKey;
-      let canSend;
-      let disabled;
-      let handleMessageBlur;
-      let handleMessageFocus;
-      let handlePressEmoji;
-      let handleSelectionChange;
-      let isInputFocused;
-      let isSending;
-      let onSend;
-      let preview;
-      let sendLabel;
-      let setText;
-      let text;
-      let textInputRef;
       ({ setText, canSend, isSending, onSend, disabled } = arg0);
       ({ text, preview, sendLabel, appEntryKey } = arg0);
       if (disabled === undefined) {
         disabled = false;
       }
-      const obj = useShareChatInputActions;
-      const shareChatInputActions = obj.useShareChatInputActions(setText, undefined, appEntryKey);
+      const shareChatInputActions = useShareChatInputActions.useShareChatInputActions(setText, undefined, appEntryKey);
       ({
         textInputRef,
         isInputFocused,
@@ -173,11 +156,38 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         handleMessageBlur,
         handlePressEmoji,
       } = shareChatInputActions);
-      const tmp6 = !canSend;
-      ShareFooterLayoutDefault;
-      const Button = components_Button_Button.Button;
-      return <tmp5 preview={preview} sendButton={null} chatInput={null} avoidKeyboard={isInputFocused} />;
+      const obj2 = { preview, sendButton: null, chatInput: null, avoidKeyboard: null };
+      const obj3 = { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null };
+      let tmp6 = !canSend;
+      if (canSend) {
+        tmp6 = disabled;
+      }
+      obj3.disabled = tmp6;
+      let tmp7;
+      if (!isSending) {
+        tmp7 = onSend;
+      }
+      obj3.onPress = tmp7;
+      obj3.loading = isSending;
+      obj2.sendButton = jsx(components_Button_Button.Button, {
+        variant: "primary",
+        size: "md",
+        text: sendLabel,
+        disabled: null,
+        onPress: null,
+        loading: null,
+      });
+      obj2.chatInput = jsx(ShareChatInputDefault, {
+        inputRef: textInputRef,
+        text,
+        onChange: setText,
+        onSelectionChange: handleSelectionChange,
+        onFocus: handleMessageFocus,
+        onBlur: handleMessageBlur,
+        onPressEmoji: handlePressEmoji,
+        onSend,
+        disabled,
+      });
+      obj2.avoidKeyboard = isInputFocused;
+      return jsx(ShareFooterLayoutDefault, { preview, sendButton: null, chatInput: null, avoidKeyboard: null });
     };
-const result = size.fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");
-
-export default tmp3;

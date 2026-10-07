@@ -1,51 +1,34 @@
 // discord_app/modules/forums/native/posts/ForumPostAppliedTags.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import AppliedForumTag2 from "../AppliedForumTag.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import AppliedForumTag from "../AppliedForumTag.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let dependencyMap;
-
-let c3;
-let closure_4;
-let hasOwnProperty;
-let obj2;
-let size;
-const View = react_native.View;
-({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
-  tag: obj2,
+  tag: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   tagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
-  dot: size,
+  dot: null,
 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-createStyles = createStyles.createStyles;
-size = {
+let size = {
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   height: 4,
   width: 4,
   borderRadius: 10,
   marginHorizontal: 8,
 };
-let closure_6 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.dot = size;
+let closure_6 = createStyles.createStyles(obj2);
+fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let additionalTagsCount;
-      let appliedTags;
-      let containerStyle;
-      let hasUnreads;
-      let items;
-      let obj4;
-      let tag;
-      let obj = hasUnreads(576);
-      const cResult = obj.c(18);
+      const cResult = hasUnreads(576).c(18);
       ({ appliedTags, hasUnreads } = arg0);
       ({ additionalTagsCount, containerStyle } = arg0);
       let num = 0;
@@ -55,71 +38,68 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       dependencyMap = tmp4;
       if (cResult[0] === containerStyle) {
-        let tmp5;
-        let tmp6;
         if (cResult[1] === tmp4.pillTagsContainer) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         if (cResult[3] === appliedTags) {
           if (cResult[4] === hasUnreads) {
             if (cResult[5] === tmp4.tag) {
-              tmp6 = cResult[6];
-            }
-            if (cResult[10] === num) {
-              if (cResult[11] === hasUnreads) {
-                let tmp9;
-                if (cResult[12] === tmp4.tag) {
-                  tmp9 = cResult[13];
-                }
-                if (cResult[14] === tmp5) {
-                  if (cResult[15] === tmp6) {
-                    let tmp13;
-                    if (cResult[16] === tmp9) {
-                      tmp13 = cResult[17];
-                    }
-                    return tmp13;
+              if (cResult[10] === num) {
+                if (cResult[11] === hasUnreads) {
+                  if (cResult[12] === tmp4.tag) {
+                    let tmp10 = cResult[13];
                   }
+                  if (cResult[14] === tmp5) {
+                    if (cResult[15] === tmp6) {
+                      if (cResult[16] === tmp10) {
+                        let tmp14 = cResult[17];
+                      }
+                      return tmp14;
+                    }
+                  }
+                  const obj2 = { style: tmp5, children: null };
+                  const items = [tmp6, tmp10];
+                  obj2.children = items;
+                  const tmp17 = closure_4(View, obj2);
+                  cResult[14] = tmp5;
+                  cResult[15] = tmp6;
+                  cResult[16] = tmp10;
+                  cResult[17] = tmp17;
+                  tmp14 = tmp17;
                 }
-                const obj2 = { style: tmp5, children: items };
-                items = [tmp6, tmp9];
-                const tmp16 = closure_4(View, obj2);
-                cResult[14] = tmp5;
-                cResult[15] = tmp6;
-                cResult[16] = tmp9;
-                cResult[17] = tmp16;
-                tmp13 = tmp16;
               }
+              let tmp11 = num > 0;
+              if (tmp11) {
+                const obj3 = { tag: null, containerStyle: null, hasUnreads: null };
+                const obj4 = { id: "-1", name: null };
+                const _HermesInternal = HermesInternal;
+                obj4.name = "+" + num;
+                obj3.tag = obj4;
+                obj3.containerStyle = tmp4.tag;
+                obj3.hasUnreads = hasUnreads;
+                tmp11 = closure_3(hasUnreads(10369).AppliedForumTagPill, obj3);
+              }
+              cResult[10] = num;
+              cResult[11] = hasUnreads;
+              cResult[12] = tmp4.tag;
+              cResult[13] = tmp11;
+              tmp10 = tmp11;
             }
-            let tmp10 = num > 0;
-            if (tmp10) {
-              const obj3 = { tag: obj4, containerStyle: tmp4.tag, hasUnreads };
-              const _HermesInternal = HermesInternal;
-              obj4 = { id: "-1", name: "+" + num };
-              const AppliedForumTagPill = hasUnreads(10369).AppliedForumTagPill;
-              tmp10 = closure_3(AppliedForumTagPill, obj3);
-            }
-            cResult[10] = num;
-            cResult[11] = hasUnreads;
-            cResult[12] = tmp4.tag;
-            cResult[13] = tmp10;
-            tmp9 = tmp10;
           }
         }
         if (cResult[7] === hasUnreads) {
-          let tmp7;
           if (cResult[8] === tmp4.tag) {
-            tmp7 = cResult[9];
+            let tmp7 = cResult[9];
           }
           const mapped = appliedTags.map(tmp7);
           cResult[3] = appliedTags;
           cResult[4] = hasUnreads;
-          cResult[5] = tmp4.tag;
+          appliedTags = tmp4.tag;
+          cResult[5] = appliedTags;
           cResult[6] = mapped;
-          tmp6 = mapped;
         }
         const fn = function u(tag) {
-          const obj = { tag, containerStyle: tag.tag, hasUnreads };
-          return _false(AppliedForumTag2.AppliedForumTagPill, obj, tag.id);
+          return React3(AppliedForumTag.AppliedForumTagPill, { tag, containerStyle: tag.tag, hasUnreads }, tag.id);
         };
         cResult[7] = hasUnreads;
         cResult[8] = tmp4.tag;
@@ -131,55 +111,47 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = tmp4.pillTagsContainer;
       cResult[2] = items1;
       tmp5 = items1;
+      const obj = hasUnreads(576);
     }
   : (additionalTagsCount) => {
-      let appliedTags;
-      let hasUnreads;
-      let items;
-      let items1;
-      let obj3;
-      let tag;
       ({ appliedTags, hasUnreads } = additionalTagsCount);
       let num = additionalTagsCount.additionalTagsCount;
       if (num === undefined) {
         num = 0;
       }
-      const containerStyle = additionalTagsCount.containerStyle;
       const tmp = closure_6();
       dependencyMap = tmp;
-      let obj = { style: items, children: items1 };
-      items = [containerStyle, tmp.pillTagsContainer];
-      items1 = [
-        appliedTags.map((tag) => {
-          const obj = { tag, containerStyle: tag.tag, hasUnreads };
-          return _false(AppliedForumTag2.AppliedForumTagPill, obj, tag.id);
-        }),
+      const obj = { style: null, children: null };
+      const items = [additionalTagsCount.containerStyle, tmp.pillTagsContainer];
+      obj.style = items;
+      const items1 = [
+        appliedTags.map((tag) =>
+          React3(AppliedForumTag.AppliedForumTagPill, { tag, containerStyle: tag.tag, hasUnreads }, tag.id),
+        ),
       ];
       let tmp4 = num > 0;
       if (tmp4) {
-        const obj2 = { tag: obj3, containerStyle: tmp.tag, hasUnreads };
+        const obj2 = { tag: null, containerStyle: null, hasUnreads: null };
+        const obj3 = { id: "-1", name: null };
         const _HermesInternal = HermesInternal;
-        obj3 = { id: "-1", name: "+" + num };
-        const AppliedForumTagPill = hasUnreads(10369).AppliedForumTagPill;
-        tmp4 = closure_3(AppliedForumTagPill, obj2);
+        obj3.name = "+" + num;
+        obj2.tag = obj3;
+        obj2.containerStyle = tmp.tag;
+        obj2.hasUnreads = hasUnreads;
+        tmp4 = closure_3(hasUnreads(10369).AppliedForumTagPill, obj2);
       }
       items1[1] = tmp4;
+      obj.children = items1;
       return closure_4(View, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostAppliedTags.tsx");
+
+export const ForumPostAppliedTagPills = tmp4;
+export const ForumPostAppliedTags = ReactCompilerGating.isReactCompilerEnabled()
   ? (appliedTags) => {
-      let additionalTagsCount;
-      let containerStyle;
-      let hasUnreads;
-      let items;
-      let items1;
-      let obj6;
-      let obj = appliedTags(hasUnreads[6]);
-      const cResult = obj.c(19);
-      const tmp = appliedTags;
+      const cResult = appliedTags(hasUnreads[6]).c(19);
       appliedTags = appliedTags.appliedTags;
-      const tmp2 = hasUnreads;
       hasUnreads = appliedTags.hasUnreads;
       ({ additionalTagsCount, containerStyle } = appliedTags);
       let num = 0;
@@ -189,85 +161,81 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       const dot = tmp4;
       if (cResult[0] === containerStyle) {
-        let tmp5;
-        let tmp6;
         if (cResult[1] === tmp4.tagsContainer) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         if (cResult[3] === appliedTags) {
           if (cResult[4] === hasUnreads) {
             if (cResult[5] === tmp4.dot) {
-              tmp6 = cResult[6];
-            }
-            if (cResult[11] === num) {
-              if (cResult[12] === hasUnreads) {
-                let tmp9;
-                if (cResult[13] === tmp4.dot) {
-                  tmp9 = cResult[14];
-                }
-                if (cResult[15] === tmp5) {
-                  if (cResult[16] === tmp6) {
-                    let tmp16;
-                    if (cResult[17] === tmp9) {
-                      tmp16 = cResult[18];
-                    }
-                    return tmp16;
+              if (cResult[11] === num) {
+                if (cResult[12] === hasUnreads) {
+                  if (cResult[13] === tmp4.dot) {
+                    let tmp10 = cResult[14];
                   }
+                  if (cResult[15] === tmp5) {
+                    if (cResult[16] === tmp6) {
+                      if (cResult[17] === tmp10) {
+                        let tmp17 = cResult[18];
+                      }
+                      return tmp17;
+                    }
+                  }
+                  let obj2 = { style: tmp5, children: null };
+                  const items = [tmp6, tmp10];
+                  obj2.children = items;
+                  const tmp20 = closure_4(dot, obj2);
+                  cResult[15] = tmp5;
+                  cResult[16] = tmp6;
+                  cResult[17] = tmp10;
+                  cResult[18] = tmp20;
+                  tmp17 = tmp20;
                 }
-                let obj2 = { style: tmp5, children: items };
-                items = [tmp6, tmp9];
-                const tmp19 = closure_4(dot, obj2);
-                cResult[15] = tmp5;
-                cResult[16] = tmp6;
-                cResult[17] = tmp9;
-                cResult[18] = tmp19;
-                tmp16 = tmp19;
               }
+              let tmp11 = num > 0;
+              if (tmp11) {
+                const obj3 = { children: null };
+                const obj4 = { style: tmp4.dot };
+                const items1 = [closure_3(dot, obj4)];
+                const obj5 = { tag: null, hasUnreads: null };
+                const obj6 = { id: "-1", name: null };
+                const _HermesInternal = HermesInternal;
+                obj6.name = "+" + num;
+                obj5.tag = obj6;
+                obj5.hasUnreads = hasUnreads;
+                items1[1] = closure_3(tmp(tmp2[7]).AppliedForumTag, obj5);
+                obj3.children = items1;
+                tmp11 = closure_4(closure_5, obj3);
+              }
+              cResult[11] = num;
+              cResult[12] = hasUnreads;
+              cResult[13] = tmp4.dot;
+              cResult[14] = tmp11;
+              tmp10 = tmp11;
             }
-            let tmp10 = num > 0;
-            if (tmp10) {
-              const obj3 = { children: items1 };
-              const obj4 = { style: tmp4.dot };
-              items1 = [closure_3(dot, obj4)];
-              const obj5 = { tag: obj6, hasUnreads };
-              const _HermesInternal = HermesInternal;
-              obj6 = { id: "-1", name: "+" + num };
-              const AppliedForumTag = tmp(tmp2[7]).AppliedForumTag;
-              items1[1] = closure_3(AppliedForumTag, obj5);
-              tmp10 = closure_4(closure_5, obj3);
-            }
-            cResult[11] = num;
-            cResult[12] = hasUnreads;
-            cResult[13] = tmp4.dot;
-            cResult[14] = tmp10;
-            tmp9 = tmp10;
           }
         }
         if (cResult[7] === appliedTags.length) {
           if (cResult[8] === hasUnreads) {
-            let tmp7;
             if (cResult[9] === tmp4.dot) {
-              tmp7 = cResult[10];
+              let tmp7 = cResult[10];
             }
             const mapped = appliedTags.map(tmp7);
             cResult[3] = appliedTags;
             cResult[4] = hasUnreads;
-            cResult[5] = tmp4.dot;
+            appliedTags = tmp4.dot;
+            cResult[5] = appliedTags;
             cResult[6] = mapped;
-            tmp6 = mapped;
           }
         }
         const fn = function h(tag, arg1) {
-          const children = [,];
-          const obj = { tag, hasUnreads };
-          children[0] = _false(AppliedForumTag2.AppliedForumTag, obj, tag.id);
+          const children = [React3(AppliedForumTag.AppliedForumTag, { tag, hasUnreads }, tag.id)];
           let tmp3Result = arg1 !== appliedTags.length - 1;
           if (tmp3Result) {
             const obj2 = { style: dot.dot };
-            tmp3Result = _false(View, obj2);
+            tmp3Result = React3(View, obj2);
           }
           children[1] = tmp3Result;
-          return React3(hasOwnProperty, { children });
+          return React4(hasOwnProperty, { children });
         };
         cResult[7] = appliedTags.length;
         cResult[8] = hasUnreads;
@@ -280,54 +248,50 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = tmp4.tagsContainer;
       cResult[2] = items2;
       tmp5 = items2;
+      const obj = appliedTags(hasUnreads[6]);
+      tmp = appliedTags;
+      tmp2 = hasUnreads;
     }
   : (appliedTags) => {
-      let items;
-      let items1;
-      let items2;
-      let obj5;
       appliedTags = appliedTags.appliedTags;
       const hasUnreads = appliedTags.hasUnreads;
       let num = appliedTags.additionalTagsCount;
       if (num === undefined) {
         num = 0;
       }
-      const containerStyle = appliedTags.containerStyle;
       const tmp = closure_6();
       const dot = tmp;
-      let obj = { style: items, children: items1 };
-      items = [containerStyle, tmp.tagsContainer];
-      items1 = [
+      const obj = { style: null, children: null };
+      const items = [appliedTags.containerStyle, tmp.tagsContainer];
+      obj.style = items;
+      const items1 = [
         appliedTags.map((tag, index) => {
-          const children = [,];
-          const obj = { tag, hasUnreads };
-          children[0] = _false(AppliedForumTag2.AppliedForumTag, obj, tag.id);
+          const children = [React3(AppliedForumTag.AppliedForumTag, { tag, hasUnreads }, tag.id)];
           let tmp3Result = index !== appliedTags.length - 1;
           if (tmp3Result) {
             const obj2 = { style: dot.dot };
-            tmp3Result = _false(View, obj2);
+            tmp3Result = React3(View, obj2);
           }
           children[1] = tmp3Result;
-          return React3(hasOwnProperty, { children });
+          return React4(hasOwnProperty, { children });
         }),
       ];
       let tmp2Result = num > 0;
       if (tmp2Result) {
-        let obj2 = { children: items2 };
+        let obj2 = { children: null };
         const obj3 = { style: tmp.dot };
-        items2 = [closure_3(dot, obj3)];
-        const obj4 = { tag: obj5, hasUnreads };
+        const items2 = [closure_3(tmp3, obj3)];
+        const obj4 = { tag: null, hasUnreads: null };
+        const obj5 = { id: "-1", name: null };
         const _HermesInternal = HermesInternal;
-        obj5 = { id: "-1", name: "+" + num };
-        const AppliedForumTag = appliedTags(hasUnreads[7]).AppliedForumTag;
-        items2[1] = closure_3(AppliedForumTag, obj4);
+        obj5.name = "+" + num;
+        obj4.tag = obj5;
+        obj4.hasUnreads = hasUnreads;
+        items2[1] = closure_3(appliedTags(hasUnreads[7]).AppliedForumTag, obj4);
+        obj2.children = items2;
         tmp2Result = closure_4(closure_5, obj2);
       }
       items1[1] = tmp2Result;
+      obj.children = items1;
       return closure_4(dot, obj);
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostAppliedTags.tsx");
-
-export const ForumPostAppliedTagPills = tmp5;
-export const ForumPostAppliedTags = tmp6;

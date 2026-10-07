@@ -1,10 +1,9 @@
 // discord_app/modules/welcome_screen/WelcomeScreenStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 function handleInviteData(invite) {
-  const guild = invite.invite.guild;
+  guild = invite.invite.guild;
   let welcome_screen;
   if (guild != null) {
     welcome_screen = guild.welcome_screen;
@@ -18,58 +17,56 @@ function handleInviteData(invite) {
 }
 function handleWelcomeScreenUpdate(welcomeScreen) {
   welcomeScreen = welcomeScreen.welcomeScreen;
-  const guildId = welcomeScreen.guildId;
   if (welcomeScreen == null) {
     welcomeScreen = obj;
   }
-  closure_1[guildId] = welcomeScreen;
+  closure_1[welcomeScreen.guildId] = welcomeScreen;
 }
 const NO_WELCOME_SCREEN = {};
-const React2 = {};
+const dependencyMap = {};
+let closure_2 = {};
 let c3 = false;
 let c4 = false;
 let c5 = false;
-const Store = get_initializedDefault.Store;
-class WelcomeScreenStore extends Store {
-  get(arg0) {
-    if (null != arg0) {
-      return closure_1[arg0];
-    }
-  }
-  isFetching() {
-    return c4;
-  }
-  hasError() {
-    return c5;
-  }
-  hasSeen(arg0) {
-    let flag = arg1;
-    if (arg1 === undefined) {
-      flag = false;
-    }
-    let tmp = null != arg0;
-    if (tmp) {
-      let tmp3;
-      if (flag) {
-        tmp3 = c3;
-      } else {
-        tmp3 = closure_2[arg0] || false;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  }
-  isEmpty(arg0) {
-    if (null == arg0) {
-      return true;
-    } else {
-      return null == tmp2 || 0 === tmp2.welcome_channels.length;
-    }
-  }
-}
+const Store = initializeDefault.Store;
+class WelcomeScreenStore extends Store {}
 const prototype = WelcomeScreenStore.prototype;
+prototype["get"] = function get(arg0) {
+  if (null != arg0) {
+    return dependencyMap[arg0];
+  }
+};
+prototype["isFetching"] = function isFetching() {
+  return c4;
+};
+prototype["hasError"] = function hasError() {
+  return c5;
+};
+prototype["hasSeen"] = function hasSeen(arg0) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  if (null == arg0) {
+    return tmp;
+  } else if (flag) {
+  } else {
+    const tmp3 = closure_2[arg0] || false;
+  }
+};
+prototype["isEmpty"] = function isEmpty(arg0) {
+  if (null == arg0) {
+    return true;
+  } else {
+    let tmp3 = null == tmp2;
+    if (!tmp3) {
+      tmp3 = 0 === tmp2.welcome_channels.length;
+    }
+    return tmp3;
+  }
+};
 WelcomeScreenStore.displayName = "WelcomeScreenStore";
-const obj2 = {
+const welcomeScreenStore = new WelcomeScreenStore(DispatcherDefault, {
   INVITE_RESOLVE_SUCCESS: handleInviteData,
   INVITE_ACCEPT_SUCCESS: handleInviteData,
   WELCOME_SCREEN_SUBMIT_SUCCESS: handleWelcomeScreenUpdate,
@@ -94,18 +91,17 @@ const obj2 = {
     c4 = false;
     c5 = false;
     welcomeScreen = welcomeScreen.welcomeScreen;
-    const guildId = welcomeScreen.guildId;
     if (welcomeScreen == null) {
       welcomeScreen = obj;
     }
-    closure_1[guildId] = welcomeScreen;
+    closure_1[welcomeScreen.guildId] = welcomeScreen;
   },
   WELCOME_SCREEN_FETCH_FAIL: function handleFetchWelcomeScreenFail() {
     c4 = false;
     c5 = true;
   },
-};
-const welcomeScreenStore = new WelcomeScreenStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");
 
 export default welcomeScreenStore;

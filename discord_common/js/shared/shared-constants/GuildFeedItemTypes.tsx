@@ -2,7 +2,6 @@
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = { ALL: new Set(["conversation", "forum_post", "message", "message_bundle"]) };
-new Set(["conversation", "forum_post", "message", "message_bundle"]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildFeedItemTypes.tsx");
 
 export const GuildFeedItemTypes = {

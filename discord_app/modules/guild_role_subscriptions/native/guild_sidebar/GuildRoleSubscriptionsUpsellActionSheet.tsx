@@ -1,54 +1,40 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Constants from "../../../../Constants.tsx";
-import intl5 from "../../../../intl/index.native.tsx";
-import DismissibleContentConstants from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16212_AssetRegistry.js";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _modDef16212 from "../../../../../_runtime/metro/16212__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let BottomSheet, guildId;
-
-let metroImportDefault;
-let metroRequire;
-const View = react_native.View;
-const GuildSettingsSections = Constants.GuildSettingsSections;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+const View = fn(17).View;
+const GuildSettingsSections = fn(1085).GuildSettingsSections;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
 let closure_8 = createStyles.createStyles({
   title: { marginTop: 24, textAlign: "center" },
   description: { marginTop: 8, marginBottom: 24, textAlign: "center" },
   dismissButton: { marginTop: 4 },
 });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let items;
-      let obj = guildId(576);
-      const cResult = obj.c(29);
+      const cResult = guildId(576).c(29);
       guildId = guildId.guildId;
       const markAsDismissed = guildId.markAsDismissed;
       const tmp4 = closure_8();
       if (cResult[0] === guildId) {
-        let tmp5;
-        let tmp6;
-        let tmp8;
-        let tmp13;
-        let tmp15;
-        let tmp18;
-        let tmp20;
-        let tmp23;
-        let tmp25;
-        let tmp29;
         if (cResult[1] === markAsDismissed) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         if (cResult[3] !== markAsDismissed) {
           const fn2 = function _() {
@@ -56,83 +42,80 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           };
           cResult[3] = markAsDismissed;
           cResult[4] = fn2;
-          tmp6 = fn2;
+          let tmp6 = fn2;
         } else {
           tmp6 = cResult[4];
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { source: markAsDismissed(16212) };
-          const tmp11 = markAsDismissed(5981);
-          const tmp12 = closure_6(tmp11, obj2);
+          const tmp12 = closure_6(markAsDismissed(5981), obj2);
           cResult[5] = tmp12;
-          tmp8 = tmp12;
+          let tmp8 = tmp12;
+          const tmp11 = markAsDismissed(5981);
         } else {
           tmp8 = cResult[5];
         }
         const _Symbol2 = Symbol;
-        const title = tmp4.title;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
-          const stringResult = intl.string(guildId(1126).t.C0m4rQ);
+          const stringResult = intl.string(tmp(1126).t.C0m4rQ);
           cResult[6] = stringResult;
-          tmp13 = stringResult;
+          let tmp13 = stringResult;
         } else {
           tmp13 = cResult[6];
         }
         if (cResult[7] !== tmp4.title) {
           const obj3 = {
-            style: title,
+            style: tmp4.title,
             accessibilityRole: "header",
             variant: "heading-xl/extrabold",
             color: "mobile-text-heading-primary",
             children: tmp13,
           };
-          const tmp17 = closure_6(guildId(4892).Text, obj3);
+          const tmp17 = closure_6(tmp(4892).Text, obj3);
           cResult[7] = tmp4.title;
           cResult[8] = tmp17;
-          tmp15 = tmp17;
+          let tmp15 = tmp17;
         } else {
           tmp15 = cResult[8];
         }
         const _Symbol3 = Symbol;
-        const description = tmp4.description;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(1126).intl;
-          const stringResult1 = intl2.string(guildId(1126).t.zOHfEX);
+          const stringResult1 = intl2.string(tmp(1126).t.zOHfEX);
           cResult[9] = stringResult1;
-          tmp18 = stringResult1;
+          let tmp18 = stringResult1;
         } else {
           tmp18 = cResult[9];
         }
         if (cResult[10] !== tmp4.description) {
-          const obj4 = { style: description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
-          const tmp22 = closure_6(guildId(4892).Text, obj4);
+          const obj4 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
+          const tmp22 = closure_6(tmp(4892).Text, obj4);
           cResult[10] = tmp4.description;
           cResult[11] = tmp22;
-          tmp20 = tmp22;
+          let tmp20 = tmp22;
         } else {
           tmp20 = cResult[11];
         }
         const _Symbol4 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = tmp(1126).intl;
-          const stringResult2 = intl3.string(guildId(1126).t.OgQQbG);
+          const stringResult2 = intl3.string(tmp(1126).t.OgQQbG);
           cResult[12] = stringResult2;
-          tmp23 = stringResult2;
+          let tmp23 = stringResult2;
         } else {
           tmp23 = cResult[12];
         }
         if (cResult[13] !== tmp5) {
           const obj5 = { onPress: tmp5, text: tmp23 };
-          const tmp27 = closure_6(guildId(5601).Button, obj5);
+          const tmp27 = closure_6(tmp(5601).Button, obj5);
           cResult[13] = tmp5;
           cResult[14] = tmp27;
-          tmp25 = tmp27;
+          let tmp25 = tmp27;
         } else {
           tmp25 = cResult[14];
         }
-        const dismissButton = tmp4.dismissButton;
         if (cResult[15] !== markAsDismissed) {
           class R {
             constructor() {
@@ -155,9 +138,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const stringResult3 = obj6.string(guildId(1126).t.WAI6xu);
+          const stringResult3 = obj6.string(tmp(1126).t.WAI6xu);
           cResult[17] = stringResult3;
-          tmp29 = stringResult3;
+          const tmp29 = stringResult3;
         } else {
           class R {
             constructor() {
@@ -172,9 +155,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj7 = { onPress: R, text: tmp29, variant: "secondary" };
+          const tmp32 = closure_6(tmp(5601).Button, obj7);
           cResult[18] = R;
-          cResult[19] = closure_6(guildId(5601).Button, obj7);
-          const tmp32 = closure_6(guildId(5601).Button, obj7);
+          cResult[19] = tmp32;
         } else {
           class R {
             constructor() {
@@ -195,98 +178,81 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj8 = { startExpanded: true, onDismiss: tmp6, children: items };
-          items = [tmp8, tmp15, tmp20, tmp25, tmp33];
+          const obj8 = { startExpanded: true, onDismiss: tmp6, children: null };
+          const items = [tmp8, tmp15, tmp20, tmp25, tmp33];
+          obj8.children = items;
+          const tmp39 = closure_7(tmp(6652).BottomSheet, obj8);
           cResult[23] = tmp25;
           cResult[24] = tmp33;
           cResult[25] = tmp6;
           cResult[26] = tmp15;
           cResult[27] = tmp20;
-          cResult[28] = closure_7(guildId(6652).BottomSheet, obj8);
-          const tmp39 = closure_7(guildId(6652).BottomSheet, obj8);
+          cResult[28] = tmp39;
         }
-        const obj9 = { style: dismissButton, children: tmp31 };
+        const obj9 = { style: tmp4.dismissButton, children: tmp31 };
+        const tmp36 = closure_6(View, obj9);
         cResult[20] = tmp4.dismissButton;
         cResult[21] = tmp31;
-        cResult[22] = closure_6(View, obj9);
-        const tmp36 = closure_6(View, obj9);
+        cResult[22] = tmp36;
       }
       const fn = function x() {
         markAsDismissed(ContentDismissActionType.UNKNOWN);
-        const obj = GuildSettingsActionCreatorsDefault;
-        obj.open(guildId, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
+        GuildSettingsActionCreatorsDefault.open(guildId, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
       };
       cResult[0] = guildId;
       cResult[1] = markAsDismissed;
       cResult[2] = fn;
       tmp5 = fn;
+      const obj = guildId(576);
     }
   : (arg0) => {
-      let Button2;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let items;
-      let obj7;
       ({ guildId: require, markAsDismissed: importDefault } = arg0);
       const tmp = closure_8();
-      let obj = {
+      const obj = {
         startExpanded: true,
         onDismiss() {
           return importDefault(ContentDismissActionType.UNKNOWN);
         },
-        children: items,
+        children: null,
       };
-      BottomSheet = Sheet_BottomSheet.BottomSheet;
-      const obj2 = { source: AssetRegistryDefault };
-      const tmp2 = FastImageDefault;
-      items = [closure_6(tmp2, obj2), , , ,];
+      const obj2 = { source: _modDef16212 };
+      const items = [closure_6(FastImageDefault, obj2), , , ,];
       const obj3 = {
         style: tmp.title,
         accessibilityRole: "header",
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
-        children: intl.string(intl5.t.C0m4rQ),
+        children: null,
       };
-      const Text = Text_Text.Text;
-      intl = intl5.intl;
-      items[1] = closure_6(Text, obj3);
-      const obj4 = {
-        style: tmp.description,
-        variant: "text-sm/medium",
-        color: "text-default",
-        children: intl2.string(intl5.t.zOHfEX),
-      };
-      const Text2 = Text_Text.Text;
-      intl2 = intl5.intl;
-      items[2] = closure_6(Text2, obj4);
+      const intl = util.intl;
+      obj3.children = intl.string(util.t.C0m4rQ);
+      items[1] = closure_6(Text_Text.Text, obj3);
+      const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+      const intl2 = util.intl;
+      obj4.children = intl2.string(util.t.zOHfEX);
+      items[2] = closure_6(Text_Text.Text, obj4);
       const obj5 = {
         onPress() {
-          importDefault(ContentDismissActionType.UNKNOWN);
-          const obj = GuildSettingsActionCreatorsDefault;
-          obj.open(require, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
+          closure_1_1(ContentDismissActionType.UNKNOWN);
+          GuildSettingsActionCreatorsDefault.open(require, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
         },
-        text: intl3.string(intl5.t.OgQQbG),
+        text: null,
       };
-      const Button = components_Button_Button.Button;
-      intl3 = intl5.intl;
-      items[3] = closure_6(Button, obj5);
-      const obj6 = { style: tmp.dismissButton, children: closure_6(Button2, obj7) };
-      obj7 = {
+      const intl3 = util.intl;
+      obj5.text = intl3.string(util.t.OgQQbG);
+      items[3] = closure_6(components_Button_Button.Button, obj5);
+      const obj6 = { style: tmp.dismissButton, children: null };
+      const obj7 = {
         onPress() {
           return importDefault(ContentDismissActionType.UNKNOWN);
         },
-        text: intl4.string(intl5.t.WAI6xu),
+        text: null,
         variant: "secondary",
       };
-      Button2 = components_Button_Button.Button;
-      intl4 = intl5.intl;
+      const intl4 = util.intl;
+      obj7.text = intl4.string(util.t.WAI6xu);
+      obj6.children = closure_6(components_Button_Button.Button, obj7);
       items[4] = closure_6(View, obj6);
-      return closure_7(BottomSheet, obj);
+      obj.children = items;
+      return closure_7(Sheet_BottomSheet.BottomSheet, obj);
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx",
-);
-
-export default tmp4;

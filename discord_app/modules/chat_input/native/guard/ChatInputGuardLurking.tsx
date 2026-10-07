@@ -1,64 +1,35 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardLurking.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import JoinGuildRefusedError from "../../../guild/JoinGuildRefusedError.tsx";
 import GuildDiscoveryUtilsAll from "../../../../utils/GuildDiscoveryUtils.tsx";
 import HubProgressActionCreators from "../../../hub/HubProgressActionCreators.tsx";
-import ChatInputConstants from "../ChatInputConstants.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
 import showChannelFollowingActionSheet from "../../../channel_following/native/showChannelFollowingActionSheet.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let catchPromise,
-  channel,
-  goBackResult,
-  importDefault,
-  obj1,
-  obj7,
-  tmp11,
-  tmp13,
-  tmp14,
-  tmp15,
-  tmp19,
-  tmp2,
-  tmp3,
-  tmp5,
-  tmp7,
-  tmp8,
-  trackWithMetadataResult;
+require = fn;
+const TextAreaCta = fn(11589).TextAreaCta;
+const Constants = fn(1085);
+({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardLurking.tsx");
 
-let c9;
-let metroImportAll;
-const TextAreaCta = ChatInputConstants.TextAreaCta;
-({ AnalyticEvents: metroImportAll, JoinGuildSources: c9 } = Constants);
-const jsx = Fragment.jsx;
-const memoResult = react.memo(
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        let closure_1;
-        let isLurking;
-        let lurkingSource;
-        let obj3;
-        let obj4;
-        let tmp4;
-        let tmp6;
-        let tmp9;
-        const tmp = channel;
-        let obj = channel(576);
-        const cResult = obj.c(29);
+        const cResult = channel(576).c(29);
         channel = channel.channel;
         if (cResult[0] !== channel) {
           let guildId = channel.getGuildId();
           cResult[0] = channel;
           cResult[1] = guildId;
-          tmp4 = guildId;
+          let tmp4 = guildId;
         } else {
           tmp4 = cResult[1];
         }
@@ -66,7 +37,7 @@ const memoResult = react.memo(
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [LurkingStore];
           cResult[2] = items;
-          tmp6 = items;
+          let tmp6 = items;
         } else {
           tmp6 = cResult[2];
         }
@@ -87,7 +58,7 @@ const memoResult = react.memo(
           cResult[3] = tmp4;
           cResult[4] = T;
           cResult[5] = items1;
-          tmp9 = items1;
+          let tmp9 = items1;
         } else {
           class T {
             constructor() {
@@ -103,8 +74,8 @@ const memoResult = react.memo(
           }
           tmp9 = cResult[5];
         }
-        const tmpResult = tmp(504);
-        const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp6, T, tmp9);
+        let obj = channel(576);
+        const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp6, T, tmp9);
         ({ isLurking, lurkingSource } = stateFromStoresObject);
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class G {
@@ -140,7 +111,7 @@ const memoResult = react.memo(
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
-                  tmp19 = closure_5;
+                  tmp18 = closure_5;
                   lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                   type = undefined;
                   if (lurkingSourceForGuild != null) {
@@ -153,31 +124,30 @@ const memoResult = react.memo(
                     if (null != channel) {
                       tmp5 = closure_0;
                       tmp6 = closure_3;
-                      tmp7 = closure_0(closure_3[12]);
-                      setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                      obj2 = closure_0(closure_3[12]);
                       guildId = channel.getGuildId();
-                      result = setHubProgressActionComplete(
+                      result = obj2.setHubProgressActionComplete(
                         guildId,
                         closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                       );
                     }
                   }
-                  tmp10 = closure_2;
-                  tmp11 = closure_3;
-                  obj2 = closure_2(closure_3[14]);
-                  result1 = obj2.trackGuildJoinClicked(tmp);
-                  tmp13 = closure_1;
-                  obj3 = closure_1(closure_3[10]);
-                  tmp14 = AnalyticEvents;
+                  tmp9 = closure_2;
+                  tmp10 = closure_3;
+                  obj3 = closure_2(closure_3[14]);
+                  result1 = obj3.trackGuildJoinClicked(tmp);
+                  tmp12 = closure_1;
+                  obj4 = closure_1(closure_3[10]);
+                  tmp13 = AnalyticEvents;
                   obj1 = { cta_type: null };
-                  tmp15 = TextAreaCta;
+                  tmp14 = TextAreaCta;
                   obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                  trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                  obj5 = closure_1(closure_3[15]);
-                  obj7 = { source: null };
-                  obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                  joinGuildResult = obj5.joinGuild(tmp, obj7);
-                  tmp17 = closure_0;
+                  trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj6 = closure_1(closure_3[15]);
+                  obj8 = { source: null };
+                  obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                  joinGuildResult = obj6.joinGuild(tmp, obj8);
+                  tmp16 = closure_0;
                   catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                 }
                 return;
@@ -190,7 +160,7 @@ const memoResult = react.memo(
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
-                  tmp19 = closure_5;
+                  tmp18 = closure_5;
                   lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                   type = undefined;
                   if (lurkingSourceForGuild != null) {
@@ -203,31 +173,30 @@ const memoResult = react.memo(
                     if (null != channel) {
                       tmp5 = closure_0;
                       tmp6 = closure_3;
-                      tmp7 = closure_0(closure_3[12]);
-                      setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                      obj2 = closure_0(closure_3[12]);
                       guildId = channel.getGuildId();
-                      result = setHubProgressActionComplete(
+                      result = obj2.setHubProgressActionComplete(
                         guildId,
                         closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                       );
                     }
                   }
-                  tmp10 = closure_2;
-                  tmp11 = closure_3;
-                  obj2 = closure_2(closure_3[14]);
-                  result1 = obj2.trackGuildJoinClicked(tmp);
-                  tmp13 = closure_1;
-                  obj3 = closure_1(closure_3[10]);
-                  tmp14 = AnalyticEvents;
+                  tmp9 = closure_2;
+                  tmp10 = closure_3;
+                  obj3 = closure_2(closure_3[14]);
+                  result1 = obj3.trackGuildJoinClicked(tmp);
+                  tmp12 = closure_1;
+                  obj4 = closure_1(closure_3[10]);
+                  tmp13 = AnalyticEvents;
                   obj1 = { cta_type: null };
-                  tmp15 = TextAreaCta;
+                  tmp14 = TextAreaCta;
                   obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                  trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                  obj5 = closure_1(closure_3[15]);
-                  obj7 = { source: null };
-                  obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                  joinGuildResult = obj5.joinGuild(tmp, obj7);
-                  tmp17 = closure_0;
+                  trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj6 = closure_1(closure_3[15]);
+                  obj8 = { source: null };
+                  obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                  joinGuildResult = obj6.joinGuild(tmp, obj8);
+                  tmp16 = closure_0;
                   catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                 }
                 return;
@@ -239,7 +208,7 @@ const memoResult = react.memo(
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
-                  tmp19 = closure_5;
+                  tmp18 = closure_5;
                   lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                   type = undefined;
                   if (lurkingSourceForGuild != null) {
@@ -252,31 +221,30 @@ const memoResult = react.memo(
                     if (null != channel) {
                       tmp5 = closure_0;
                       tmp6 = closure_3;
-                      tmp7 = closure_0(closure_3[12]);
-                      setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                      obj2 = closure_0(closure_3[12]);
                       guildId = channel.getGuildId();
-                      result = setHubProgressActionComplete(
+                      result = obj2.setHubProgressActionComplete(
                         guildId,
                         closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                       );
                     }
                   }
-                  tmp10 = closure_2;
-                  tmp11 = closure_3;
-                  obj2 = closure_2(closure_3[14]);
-                  result1 = obj2.trackGuildJoinClicked(tmp);
-                  tmp13 = closure_1;
-                  obj3 = closure_1(closure_3[10]);
-                  tmp14 = AnalyticEvents;
+                  tmp9 = closure_2;
+                  tmp10 = closure_3;
+                  obj3 = closure_2(closure_3[14]);
+                  result1 = obj3.trackGuildJoinClicked(tmp);
+                  tmp12 = closure_1;
+                  obj4 = closure_1(closure_3[10]);
+                  tmp13 = AnalyticEvents;
                   obj1 = { cta_type: null };
-                  tmp15 = TextAreaCta;
+                  tmp14 = TextAreaCta;
                   obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                  trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                  obj5 = closure_1(closure_3[15]);
-                  obj7 = { source: null };
-                  obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                  joinGuildResult = obj5.joinGuild(tmp, obj7);
-                  tmp17 = closure_0;
+                  trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj6 = closure_1(closure_3[15]);
+                  obj8 = { source: null };
+                  obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                  joinGuildResult = obj6.joinGuild(tmp, obj8);
+                  tmp16 = closure_0;
                   catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                 }
                 return;
@@ -284,15 +252,11 @@ const memoResult = react.memo(
             }
           }
           if (undefined === constants2.DIRECTORY_ENTRY) {
-            let tmp17;
-            let tmp16;
-            let tmp20;
-            let tmp22;
             class I {
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
-                  tmp19 = closure_5;
+                  tmp18 = closure_5;
                   lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                   type = undefined;
                   if (lurkingSourceForGuild != null) {
@@ -305,31 +269,30 @@ const memoResult = react.memo(
                     if (null != channel) {
                       tmp5 = closure_0;
                       tmp6 = closure_3;
-                      tmp7 = closure_0(closure_3[12]);
-                      setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                      obj2 = closure_0(closure_3[12]);
                       guildId = channel.getGuildId();
-                      result = setHubProgressActionComplete(
+                      result = obj2.setHubProgressActionComplete(
                         guildId,
                         closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                       );
                     }
                   }
-                  tmp10 = closure_2;
-                  tmp11 = closure_3;
-                  obj2 = closure_2(closure_3[14]);
-                  result1 = obj2.trackGuildJoinClicked(tmp);
-                  tmp13 = closure_1;
-                  obj3 = closure_1(closure_3[10]);
-                  tmp14 = AnalyticEvents;
+                  tmp9 = closure_2;
+                  tmp10 = closure_3;
+                  obj3 = closure_2(closure_3[14]);
+                  result1 = obj3.trackGuildJoinClicked(tmp);
+                  tmp12 = closure_1;
+                  obj4 = closure_1(closure_3[10]);
+                  tmp13 = AnalyticEvents;
                   obj1 = { cta_type: null };
-                  tmp15 = TextAreaCta;
+                  tmp14 = TextAreaCta;
                   obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                  trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                  obj5 = closure_1(closure_3[15]);
-                  obj7 = { source: null };
-                  obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                  joinGuildResult = obj5.joinGuild(tmp, obj7);
-                  tmp17 = closure_0;
+                  trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj6 = closure_1(closure_3[15]);
+                  obj8 = { source: null };
+                  obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                  joinGuildResult = obj6.joinGuild(tmp, obj8);
+                  tmp16 = closure_0;
                   catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                 }
                 return;
@@ -340,7 +303,7 @@ const memoResult = react.memo(
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
-                    tmp19 = closure_5;
+                    tmp18 = closure_5;
                     lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                     type = undefined;
                     if (lurkingSourceForGuild != null) {
@@ -353,31 +316,30 @@ const memoResult = react.memo(
                       if (null != channel) {
                         tmp5 = closure_0;
                         tmp6 = closure_3;
-                        tmp7 = closure_0(closure_3[12]);
-                        setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                        obj2 = closure_0(closure_3[12]);
                         guildId = channel.getGuildId();
-                        result = setHubProgressActionComplete(
+                        result = obj2.setHubProgressActionComplete(
                           guildId,
                           closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                         );
                       }
                     }
-                    tmp10 = closure_2;
-                    tmp11 = closure_3;
-                    obj2 = closure_2(closure_3[14]);
-                    result1 = obj2.trackGuildJoinClicked(tmp);
-                    tmp13 = closure_1;
-                    obj3 = closure_1(closure_3[10]);
-                    tmp14 = AnalyticEvents;
+                    tmp9 = closure_2;
+                    tmp10 = closure_3;
+                    obj3 = closure_2(closure_3[14]);
+                    result1 = obj3.trackGuildJoinClicked(tmp);
+                    tmp12 = closure_1;
+                    obj4 = closure_1(closure_3[10]);
+                    tmp13 = AnalyticEvents;
                     obj1 = { cta_type: null };
-                    tmp15 = TextAreaCta;
+                    tmp14 = TextAreaCta;
                     obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                    trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                    obj5 = closure_1(closure_3[15]);
-                    obj7 = { source: null };
-                    obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                    joinGuildResult = obj5.joinGuild(tmp, obj7);
-                    tmp17 = closure_0;
+                    trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                    obj6 = closure_1(closure_3[15]);
+                    obj8 = { source: null };
+                    obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                    joinGuildResult = obj6.joinGuild(tmp, obj8);
+                    tmp16 = closure_0;
                     catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                   }
                   return;
@@ -388,14 +350,14 @@ const memoResult = react.memo(
               const stringResult1 = intl.string(tmp(1126).t.GlKb5i);
               cResult[12] = stringResult;
               cResult[13] = stringResult1;
-              tmp17 = stringResult1;
-              tmp16 = stringResult;
+              let tmp17 = stringResult1;
+              const tmp16 = stringResult;
             } else {
               class I {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
-                    tmp19 = closure_5;
+                    tmp18 = closure_5;
                     lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                     type = undefined;
                     if (lurkingSourceForGuild != null) {
@@ -408,31 +370,30 @@ const memoResult = react.memo(
                       if (null != channel) {
                         tmp5 = closure_0;
                         tmp6 = closure_3;
-                        tmp7 = closure_0(closure_3[12]);
-                        setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                        obj2 = closure_0(closure_3[12]);
                         guildId = channel.getGuildId();
-                        result = setHubProgressActionComplete(
+                        result = obj2.setHubProgressActionComplete(
                           guildId,
                           closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                         );
                       }
                     }
-                    tmp10 = closure_2;
-                    tmp11 = closure_3;
-                    obj2 = closure_2(closure_3[14]);
-                    result1 = obj2.trackGuildJoinClicked(tmp);
-                    tmp13 = closure_1;
-                    obj3 = closure_1(closure_3[10]);
-                    tmp14 = AnalyticEvents;
+                    tmp9 = closure_2;
+                    tmp10 = closure_3;
+                    obj3 = closure_2(closure_3[14]);
+                    result1 = obj3.trackGuildJoinClicked(tmp);
+                    tmp12 = closure_1;
+                    obj4 = closure_1(closure_3[10]);
+                    tmp13 = AnalyticEvents;
                     obj1 = { cta_type: null };
-                    tmp15 = TextAreaCta;
+                    tmp14 = TextAreaCta;
                     obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                    trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                    obj5 = closure_1(closure_3[15]);
-                    obj7 = { source: null };
-                    obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                    joinGuildResult = obj5.joinGuild(tmp, obj7);
-                    tmp17 = closure_0;
+                    trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                    obj6 = closure_1(closure_3[15]);
+                    obj8 = { source: null };
+                    obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                    joinGuildResult = obj6.joinGuild(tmp, obj8);
+                    tmp16 = closure_0;
                     catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                   }
                   return;
@@ -446,7 +407,7 @@ const memoResult = react.memo(
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
-                    tmp19 = closure_5;
+                    tmp18 = closure_5;
                     lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                     type = undefined;
                     if (lurkingSourceForGuild != null) {
@@ -459,31 +420,30 @@ const memoResult = react.memo(
                       if (null != channel) {
                         tmp5 = closure_0;
                         tmp6 = closure_3;
-                        tmp7 = closure_0(closure_3[12]);
-                        setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                        obj2 = closure_0(closure_3[12]);
                         guildId = channel.getGuildId();
-                        result = setHubProgressActionComplete(
+                        result = obj2.setHubProgressActionComplete(
                           guildId,
                           closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                         );
                       }
                     }
-                    tmp10 = closure_2;
-                    tmp11 = closure_3;
-                    obj2 = closure_2(closure_3[14]);
-                    result1 = obj2.trackGuildJoinClicked(tmp);
-                    tmp13 = closure_1;
-                    obj3 = closure_1(closure_3[10]);
-                    tmp14 = AnalyticEvents;
+                    tmp9 = closure_2;
+                    tmp10 = closure_3;
+                    obj3 = closure_2(closure_3[14]);
+                    result1 = obj3.trackGuildJoinClicked(tmp);
+                    tmp12 = closure_1;
+                    obj4 = closure_1(closure_3[10]);
+                    tmp13 = AnalyticEvents;
                     obj1 = { cta_type: null };
-                    tmp15 = TextAreaCta;
+                    tmp14 = TextAreaCta;
                     obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                    trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                    obj5 = closure_1(closure_3[15]);
-                    obj7 = { source: null };
-                    obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                    joinGuildResult = obj5.joinGuild(tmp, obj7);
-                    tmp17 = closure_0;
+                    trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                    obj6 = closure_1(closure_3[15]);
+                    obj8 = { source: null };
+                    obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                    joinGuildResult = obj6.joinGuild(tmp, obj8);
+                    tmp16 = closure_0;
                     catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                   }
                   return;
@@ -491,13 +451,13 @@ const memoResult = react.memo(
               }
               const stringResult2 = obj4.string(tmp(1126).t.RLch70);
               cResult[14] = stringResult2;
-              tmp20 = stringResult2;
+              const tmp20 = stringResult2;
             } else {
               class I {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
-                    tmp19 = closure_5;
+                    tmp18 = closure_5;
                     lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                     type = undefined;
                     if (lurkingSourceForGuild != null) {
@@ -510,31 +470,30 @@ const memoResult = react.memo(
                       if (null != channel) {
                         tmp5 = closure_0;
                         tmp6 = closure_3;
-                        tmp7 = closure_0(closure_3[12]);
-                        setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                        obj2 = closure_0(closure_3[12]);
                         guildId = channel.getGuildId();
-                        result = setHubProgressActionComplete(
+                        result = obj2.setHubProgressActionComplete(
                           guildId,
                           closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                         );
                       }
                     }
-                    tmp10 = closure_2;
-                    tmp11 = closure_3;
-                    obj2 = closure_2(closure_3[14]);
-                    result1 = obj2.trackGuildJoinClicked(tmp);
-                    tmp13 = closure_1;
-                    obj3 = closure_1(closure_3[10]);
-                    tmp14 = AnalyticEvents;
+                    tmp9 = closure_2;
+                    tmp10 = closure_3;
+                    obj3 = closure_2(closure_3[14]);
+                    result1 = obj3.trackGuildJoinClicked(tmp);
+                    tmp12 = closure_1;
+                    obj4 = closure_1(closure_3[10]);
+                    tmp13 = AnalyticEvents;
                     obj1 = { cta_type: null };
-                    tmp15 = TextAreaCta;
+                    tmp14 = TextAreaCta;
                     obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                    trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                    obj5 = closure_1(closure_3[15]);
-                    obj7 = { source: null };
-                    obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                    joinGuildResult = obj5.joinGuild(tmp, obj7);
-                    tmp17 = closure_0;
+                    trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                    obj6 = closure_1(closure_3[15]);
+                    obj8 = { source: null };
+                    obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                    joinGuildResult = obj6.joinGuild(tmp, obj8);
+                    tmp16 = closure_0;
                     catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                   }
                   return;
@@ -546,7 +505,7 @@ const memoResult = react.memo(
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
-                    tmp19 = closure_5;
+                    tmp18 = closure_5;
                     lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                     type = undefined;
                     if (lurkingSourceForGuild != null) {
@@ -559,36 +518,43 @@ const memoResult = react.memo(
                       if (null != channel) {
                         tmp5 = closure_0;
                         tmp6 = closure_3;
-                        tmp7 = closure_0(closure_3[12]);
-                        setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                        obj2 = closure_0(closure_3[12]);
                         guildId = channel.getGuildId();
-                        result = setHubProgressActionComplete(
+                        result = obj2.setHubProgressActionComplete(
                           guildId,
                           closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                         );
                       }
                     }
-                    tmp10 = closure_2;
-                    tmp11 = closure_3;
-                    obj2 = closure_2(closure_3[14]);
-                    result1 = obj2.trackGuildJoinClicked(tmp);
-                    tmp13 = closure_1;
-                    obj3 = closure_1(closure_3[10]);
-                    tmp14 = AnalyticEvents;
+                    tmp9 = closure_2;
+                    tmp10 = closure_3;
+                    obj3 = closure_2(closure_3[14]);
+                    result1 = obj3.trackGuildJoinClicked(tmp);
+                    tmp12 = closure_1;
+                    obj4 = closure_1(closure_3[10]);
+                    tmp13 = AnalyticEvents;
                     obj1 = { cta_type: null };
-                    tmp15 = TextAreaCta;
+                    tmp14 = TextAreaCta;
                     obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                    trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                    obj5 = closure_1(closure_3[15]);
-                    obj7 = { source: null };
-                    obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                    joinGuildResult = obj5.joinGuild(tmp, obj7);
-                    tmp17 = closure_0;
+                    trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                    obj6 = closure_1(closure_3[15]);
+                    obj8 = { source: null };
+                    obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                    joinGuildResult = obj6.joinGuild(tmp, obj8);
+                    tmp16 = closure_0;
                     catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                   }
                   return;
                 }
               }
+              let obj2 = {
+                type: "button-action",
+                message: tmp16,
+                buttonSecondaryText: tmp17,
+                buttonSecondaryOnPress: G,
+                buttonPrimaryText: tmp20,
+                buttonPrimaryOnPress: I,
+              };
               const tmp24 = jsx(ChatInputGuardDefault, {
                 type: "button-action",
                 message: tmp16,
@@ -599,13 +565,13 @@ const memoResult = react.memo(
               });
               cResult[15] = I;
               cResult[16] = tmp24;
-              tmp22 = tmp24;
+              const tmp22 = tmp24;
             } else {
               class I {
                 constructor() {
                   tmp = closure_1;
                   if (null != closure_1) {
-                    tmp19 = closure_5;
+                    tmp18 = closure_5;
                     lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                     type = undefined;
                     if (lurkingSourceForGuild != null) {
@@ -618,31 +584,30 @@ const memoResult = react.memo(
                       if (null != channel) {
                         tmp5 = closure_0;
                         tmp6 = closure_3;
-                        tmp7 = closure_0(closure_3[12]);
-                        setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                        obj2 = closure_0(closure_3[12]);
                         guildId = channel.getGuildId();
-                        result = setHubProgressActionComplete(
+                        result = obj2.setHubProgressActionComplete(
                           guildId,
                           closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                         );
                       }
                     }
-                    tmp10 = closure_2;
-                    tmp11 = closure_3;
-                    obj2 = closure_2(closure_3[14]);
-                    result1 = obj2.trackGuildJoinClicked(tmp);
-                    tmp13 = closure_1;
-                    obj3 = closure_1(closure_3[10]);
-                    tmp14 = AnalyticEvents;
+                    tmp9 = closure_2;
+                    tmp10 = closure_3;
+                    obj3 = closure_2(closure_3[14]);
+                    result1 = obj3.trackGuildJoinClicked(tmp);
+                    tmp12 = closure_1;
+                    obj4 = closure_1(closure_3[10]);
+                    tmp13 = AnalyticEvents;
                     obj1 = { cta_type: null };
-                    tmp15 = TextAreaCta;
+                    tmp14 = TextAreaCta;
                     obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                    trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                    obj5 = closure_1(closure_3[15]);
-                    obj7 = { source: null };
-                    obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                    joinGuildResult = obj5.joinGuild(tmp, obj7);
-                    tmp17 = closure_0;
+                    trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                    obj6 = closure_1(closure_3[15]);
+                    obj8 = { source: null };
+                    obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                    joinGuildResult = obj6.joinGuild(tmp, obj8);
+                    tmp16 = closure_0;
                     catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                   }
                   return;
@@ -655,7 +620,7 @@ const memoResult = react.memo(
               constructor() {
                 tmp = closure_1;
                 if (null != closure_1) {
-                  tmp19 = closure_5;
+                  tmp18 = closure_5;
                   lurkingSourceForGuild = closure_5.getLurkingSourceForGuild(tmp);
                   type = undefined;
                   if (lurkingSourceForGuild != null) {
@@ -668,31 +633,30 @@ const memoResult = react.memo(
                     if (null != channel) {
                       tmp5 = closure_0;
                       tmp6 = closure_3;
-                      tmp7 = closure_0(closure_3[12]);
-                      setHubProgressActionComplete = tmp7.setHubProgressActionComplete;
+                      obj2 = closure_0(closure_3[12]);
                       guildId = channel.getGuildId();
-                      result = setHubProgressActionComplete(
+                      result = obj2.setHubProgressActionComplete(
                         guildId,
                         closure_0(closure_3[13]).HubProgressStep.JOIN_GUILD,
                       );
                     }
                   }
-                  tmp10 = closure_2;
-                  tmp11 = closure_3;
-                  obj2 = closure_2(closure_3[14]);
-                  result1 = obj2.trackGuildJoinClicked(tmp);
-                  tmp13 = closure_1;
-                  obj3 = closure_1(closure_3[10]);
-                  tmp14 = AnalyticEvents;
+                  tmp9 = closure_2;
+                  tmp10 = closure_3;
+                  obj3 = closure_2(closure_3[14]);
+                  result1 = obj3.trackGuildJoinClicked(tmp);
+                  tmp12 = closure_1;
+                  obj4 = closure_1(closure_3[10]);
+                  tmp13 = AnalyticEvents;
                   obj1 = { cta_type: null };
-                  tmp15 = TextAreaCta;
+                  tmp14 = TextAreaCta;
                   obj1.cta_type = TextAreaCta.JOIN_GUILD;
-                  trackWithMetadataResult = obj3.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
-                  obj5 = closure_1(closure_3[15]);
-                  obj7 = { source: null };
-                  obj7.source = tmp3.CHAT_INPUT_BLOCKER;
-                  joinGuildResult = obj5.joinGuild(tmp, obj7);
-                  tmp17 = closure_0;
+                  trackWithMetadataResult = obj4.trackWithMetadata(AnalyticEvents.TEXT_AREA_CTA_CLICKED, obj1);
+                  obj6 = closure_1(closure_3[15]);
+                  obj8 = { source: null };
+                  obj8.source = tmp3.CHAT_INPUT_BLOCKER;
+                  joinGuildResult = obj6.joinGuild(tmp, obj8);
+                  tmp16 = closure_0;
                   catchPromise = joinGuildResult.catch(closure_0(closure_3[16]).ignoreJoinGuildRefused);
                 }
                 return;
@@ -722,77 +686,61 @@ const memoResult = react.memo(
         cResult[7] = channel.id;
         cResult[8] = tmp4;
         cResult[9] = E;
+        const tmpResult = channel(504);
       }
     : (channel) => {
-        let intl;
-        let intl2;
-        let intl3;
-        let intl5;
-        let isLurking;
-        let lurkingSource;
-        let stringResult;
-        let tmp10;
-        let tmp15Result;
         channel = channel.channel;
-        const isReadonlyAnnouncementsChannel = channel.isReadonlyAnnouncementsChannel;
         let guildId = channel.getGuildId();
-        let obj = channel(504);
         const items = [LurkingStore];
         const items1 = [guildId];
-        const stateFromStoresObject = obj.useStateFromStoresObject(
+        const stateFromStoresObject = channel(504).useStateFromStoresObject(
           items,
           () => {
-            const isLurkingResult = null != guildId && LurkingStore.isLurking(guildId);
-            const obj = { isLurking: isLurkingResult, lurkingSource: LurkingStore.getLurkingSourceForGuild(guildId) };
-            return obj;
+            let isLurkingResult = null != guildId;
+            if (isLurkingResult) {
+              isLurkingResult = LurkingStore.isLurking(guildId);
+            }
+            return { isLurking: isLurkingResult, lurkingSource: LurkingStore.getLurkingSourceForGuild(guildId) };
           },
           items1,
         );
         ({ isLurking, lurkingSource } = stateFromStoresObject);
         const items2 = [guildId, channel.id];
-        const callback = react.useCallback(() => {
-          const obj = channel(dependencyMap[9]);
-          const history = obj.getHistory();
+        const callback = noop.useCallback(() => {
+          const history = channel(dependencyMap[9]).getHistory();
           history.goBack();
         }, []);
         const items3 = [guildId];
-        const callback1 = react.useCallback(() => {
+        const callback1 = noop.useCallback(() => {
           if (null != guildId) {
             const obj2 = { cta_type: TextAreaCta.FOLLOW_ANNOUNCEMENT };
-            const obj = AppAnalyticsUtilsDefault;
-            obj.trackWithMetadata(metroImportAll.TEXT_AREA_CTA_CLICKED, obj2);
-            const obj3 = showChannelFollowingActionSheet;
-            const result = obj3.showChannelFollowingActionSheet(channel.id, tmp);
+            AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj2);
+            const result = showChannelFollowingActionSheet.showChannelFollowingActionSheet(channel.id, tmp);
           }
         }, items2);
-        const callback2 = react.useCallback(() => {
+        const callback2 = noop.useCallback(() => {
           if (null != guildId) {
             const lurkingSourceForGuild = LurkingStore.getLurkingSourceForGuild(tmp);
             let type;
             if (lurkingSourceForGuild != null) {
               type = lurkingSourceForGuild.type;
             }
-            if (type === constants.DIRECTORY_ENTRY) {
+            if (type === constants2.DIRECTORY_ENTRY) {
               channel = ChannelStore.getChannel(lurkingSourceForGuild.directoryChannelId);
               if (null != channel) {
-                const setHubProgressActionComplete = HubProgressActionCreators.setHubProgressActionComplete;
-                HubProgressActionCreators;
                 guildId = channel.getGuildId();
-                const result = setHubProgressActionComplete(
+                const result = HubProgressActionCreators.setHubProgressActionComplete(
                   guildId,
                   preloaded_user_settings.HubProgressStep.JOIN_GUILD,
                 );
               }
             }
-            const obj2 = GuildDiscoveryUtilsAll;
-            const result1 = obj2.trackGuildJoinClicked(tmp);
+            const result1 = GuildDiscoveryUtilsAll.trackGuildJoinClicked(tmp);
             const obj = { cta_type: TextAreaCta.JOIN_GUILD };
-            const obj3 = AppAnalyticsUtilsDefault;
-            obj3.trackWithMetadata(metroImportAll.TEXT_AREA_CTA_CLICKED, obj);
-            const obj4 = { source: constants.CHAT_INPUT_BLOCKER };
-            const obj5 = GuildActionCreatorsDefault;
-            const joinGuildResult = obj5.joinGuild(guildId, obj4);
-            joinGuildResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
+            AppAnalyticsUtilsDefault.trackWithMetadata(constants.TEXT_AREA_CTA_CLICKED, obj);
+            const obj5 = { source: constants2.CHAT_INPUT_BLOCKER };
+            GuildActionCreatorsDefault.joinGuild(tmp, obj5).catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
+            const joinGuildResult = GuildActionCreatorsDefault.joinGuild(tmp, obj5);
           }
         }, items3);
         let type;
@@ -800,59 +748,69 @@ const memoResult = react.memo(
           type = lurkingSource.type;
         }
         if (type === constants2.DIRECTORY_ENTRY) {
-          guildId(12105);
+          let obj2 = {
+            type: "button-action",
+            message: null,
+            buttonSecondaryText: null,
+            buttonSecondaryOnPress: null,
+            buttonPrimaryText: null,
+            buttonPrimaryOnPress: null,
+          };
           const intl6 = tmp2(1126).intl;
+          obj2.message = intl6.string(tmp2(1126).t.G42YmG);
           const intl7 = tmp2(1126).intl;
+          obj2.buttonSecondaryText = intl7.string(tmp2(1126).t.GlKb5i);
+          obj2.buttonSecondaryOnPress = callback;
           const intl8 = tmp2(1126).intl;
-          tmp15Result = (
-            <tmp14
-              type="button-action"
-              message={intl6.string(channel(1126).t.G42YmG)}
-              buttonSecondaryText={intl7.string(channel(1126).t.GlKb5i)}
-              buttonSecondaryOnPress={callback}
-              buttonPrimaryText={intl8.string(channel(1126).t.RLch70)}
-              buttonPrimaryOnPress={callback2}
-            />
-          );
+          obj2.buttonPrimaryText = intl8.string(tmp2(1126).t.RLch70);
+          obj2.buttonPrimaryOnPress = callback2;
+          let tmp15Result = jsx(guildId(12105), {
+            type: "button-action",
+            message: null,
+            buttonSecondaryText: null,
+            buttonSecondaryOnPress: null,
+            buttonPrimaryText: null,
+            buttonPrimaryOnPress: null,
+          });
+          const tmp14 = guildId(12105);
         } else {
-          let obj4;
-          guildId(12105);
-          if (isReadonlyAnnouncementsChannel) {
+          if (channel.isReadonlyAnnouncementsChannel) {
             let obj3 = {
               type: "button-action",
-              message: intl3.string(channel(1126).t.Hl0Mqh),
-              buttonSecondaryText: stringResult,
-              buttonSecondaryOnPress: tmp10,
-              buttonPrimaryText: intl5.string(channel(1126).t["3aOv+h"]),
-              buttonPrimaryOnPress: callback1,
+              message: null,
+              buttonSecondaryText: null,
+              buttonSecondaryOnPress: null,
+              buttonPrimaryText: null,
+              buttonPrimaryOnPress: null,
             };
-            intl3 = tmp2(1126).intl;
-            stringResult = undefined;
+            const intl3 = tmp2(1126).intl;
+            obj3.message = intl3.string(tmp2(1126).t.Hl0Mqh);
+            let stringResult;
             if (isLurking) {
               const intl4 = tmp2(1126).intl;
               stringResult = intl4.string(tmp2(1126).t.VJlc0S);
             }
-            tmp10 = undefined;
+            obj3.buttonSecondaryText = stringResult;
+            let tmp10;
             if (isLurking) {
               tmp10 = callback2;
             }
-            intl5 = tmp2(1126).intl;
-            obj4 = obj3;
+            obj3.buttonSecondaryOnPress = tmp10;
+            const intl5 = tmp2(1126).intl;
+            obj3.buttonPrimaryText = intl5.string(tmp2(1126).t["3aOv+h"]);
+            obj3.buttonPrimaryOnPress = callback1;
+            let obj4 = obj3;
           } else {
-            obj4 = {
-              type: "button-action",
-              message: intl.string(channel(1126).t.G42YmG),
-              buttonPrimaryText: intl2.string(channel(1126).t.RLch70),
-              buttonPrimaryOnPress: callback2,
-            };
-            intl = tmp2(1126).intl;
-            intl2 = tmp2(1126).intl;
+            obj4 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+            const intl = tmp2(1126).intl;
+            obj4.message = intl.string(tmp2(1126).t.G42YmG);
+            const intl2 = tmp2(1126).intl;
+            obj4.buttonPrimaryText = intl2.string(tmp2(1126).t.RLch70);
+            obj4.buttonPrimaryOnPress = callback2;
           }
-          tmp15Result = <tmp17 {...obj4} />;
+          tmp15Result = jsx(guildId(12105), obj4);
+          const tmp17 = guildId(12105);
         }
         return tmp15Result;
       },
 );
-let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardLurking.tsx");
-
-export default memoResult;

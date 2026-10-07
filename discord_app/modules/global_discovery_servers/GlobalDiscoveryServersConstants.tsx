@@ -1,8 +1,8 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
-import intl2 from "../../intl/index.native.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import util from "../../intl/index.native.tsx";
 
+require = fn;
 let obj = {
   FEATURED: "featured",
   GAMING: "gaming",
@@ -34,8 +34,8 @@ const obj2 = {
 const items1 = [, , , ,];
 ({ Activity: arr2[0], Music: arr2[1], Television: arr2[2], Science: arr2[3], Education: arr2[4] } = obj2);
 let closure_2 = ["en-GB"];
-const set = new Set(items);
 const result = 10 * DurationsDefault.Millis.MINUTE;
+const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx");
 
 export const DEFAULT_DISCOVERY_CATEGORY_ID = 0;
@@ -52,7 +52,7 @@ export const GlobalDiscoveryServerEntrypoint = {
   GAME_LINK: "game_link",
   EMBED: "embed",
 };
-export const SEARCH_DISABLED_SERVER_TABS = set;
+export const SEARCH_DISABLED_SERVER_TABS = new Set(items);
 export const EMPTY_GUILD_IDS = [];
 export const SEARCH_RESULTS_FEATURED_PREFIX = "f";
 export const SEARCH_RESULTS_QUERY_PREFIX = "q";
@@ -63,16 +63,15 @@ export const FEATURED_GUILDS_SEARCH_OPTIONS = { categoryId: -1 };
 export const CategoryId = obj2;
 export const DISCOVERY_SIDEBAR_CATEGORIES = items1;
 export const getLanguageOptions = function getLanguageOptions() {
-  let obj = intl2;
-  const languages = obj.getLanguages();
+  const languages = util.getLanguages();
   const found = languages.filter((code) => !closure_1_2.includes(code.code));
   return found.map((code) => {
-    let intl;
     let tmp = code;
     if ("en-US" === code.code) {
-      const obj = { name: intl.string(intl2.t.LQLMGP) };
+      const obj = {};
       const merged = Object.assign(code);
-      intl = intl2.intl;
+      const intl = util.intl;
+      obj.name = intl.string(util.t.LQLMGP);
       tmp = obj;
     }
     return tmp;

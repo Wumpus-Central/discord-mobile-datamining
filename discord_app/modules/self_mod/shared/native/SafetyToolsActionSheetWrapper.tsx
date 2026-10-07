@@ -1,34 +1,22 @@
 // discord_app/modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let BottomSheet;
+const require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx");
 
-const jsx = Fragment.jsx;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let channelId;
-      let children;
-      let first;
-      let hasHeaderBack;
-      let headerTitle;
-      let onClose;
-      let recipientId;
-      let stateFromStores;
-      let tmp6;
-      let warningId;
-      let warningType;
-      const obj = channelId(stateFromStores[4]);
-      const cResult = obj.c(16);
+      const cResult = channelId(stateFromStores[4]).c(16);
       ({ headerTitle, hasHeaderBack, channelId } = arg0);
       ({ warningId, warningType, recipientId, children, onClose } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -38,20 +26,18 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = channelId;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = channelId(stateFromStores[5]);
-      stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const obj = channelId(stateFromStores[4]);
+      stateFromStores = channelId(stateFromStores[5]).useStateFromStores(first, tmp6);
       if (cResult[3] === stateFromStores) {
-        let tmp8;
-        let tmp9;
         if (cResult[4] === onClose) {
-          tmp8 = cResult[5];
-          tmp9 = cResult[6];
+          let tmp8 = cResult[5];
+          let tmp9 = cResult[6];
         }
-        const effect = react.useEffect(tmp8, tmp9);
+        const effect = noop.useEffect(tmp8, tmp9);
         if (cResult[7] === stateFromStores) {
           if (cResult[8] === channelId) {
             if (cResult[9] === children) {
@@ -59,9 +45,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[11] === headerTitle) {
                   if (cResult[12] === recipientId) {
                     if (cResult[13] === warningId) {
-                      let tmp12;
                       if (cResult[14] === warningType) {
-                        tmp12 = cResult[15];
+                        let tmp12 = cResult[15];
                       }
                       return tmp12;
                     }
@@ -73,12 +58,30 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp13 = null;
         if (null != stateFromStores) {
-          BottomSheet = channelId(tmp2[6]).BottomSheet;
-          tmp13 = (
-            <BottomSheet showGradient startExpanded header={null}>
-              {children}
-            </BottomSheet>
-          );
+          const obj2 = { showGradient: true, startExpanded: true, header: null, children: null };
+          const obj3 = {
+            recipientId,
+            warningId,
+            warningType,
+            hasBackButton: hasHeaderBack,
+            title: headerTitle,
+            channelId,
+          };
+          obj2.header = jsx(onClose(tmp2[7]), {
+            recipientId,
+            warningId,
+            warningType,
+            hasBackButton: hasHeaderBack,
+            title: headerTitle,
+            channelId,
+          });
+          obj2.children = children;
+          tmp13 = jsx(channelId(tmp2[6]).BottomSheet, {
+            showGradient: true,
+            startExpanded: true,
+            header: null,
+            children: null,
+          });
         }
         cResult[7] = stateFromStores;
         cResult[8] = channelId;
@@ -93,9 +96,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class T {
         constructor() {
-          if (null == stateFromStores) {
-            onClose();
+          if (null == closure_2) {
+            tmp = onClose;
+            tmp2 = onClose();
           }
+          return;
         }
       }
       const items1 = [stateFromStores, onClose];
@@ -105,40 +110,49 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items1;
       tmp9 = items1;
       tmp8 = T;
+      const tmpResult = channelId(stateFromStores[5]);
     }
   : (channelId) => {
-      let children;
-      let hasHeaderBack;
-      let headerTitle;
-      let recipientId;
-      let warningId;
-      let warningType;
       channelId = channelId.channelId;
       const onClose = channelId.onClose;
       let stateFromStores;
       ({ headerTitle, hasHeaderBack, warningId, warningType, recipientId, children } = channelId);
       const items = [ChannelStore];
-      const obj = channelId(stateFromStores[5]);
-      const tmp2 = stateFromStores;
-      stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+      stateFromStores = channelId(stateFromStores[5]).useStateFromStores(items, () =>
+        ChannelStore.getChannel(channelId),
+      );
       const items1 = [stateFromStores, onClose];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (null == stateFromStores) {
           onClose();
         }
       }, items1);
       let tmp5 = null;
-      const tmp = channelId;
       if (null != stateFromStores) {
-        BottomSheet = tmp(tmp2[6]).BottomSheet;
-        tmp5 = (
-          <BottomSheet showGradient startExpanded header={null}>
-            {children}
-          </BottomSheet>
-        );
+        const obj2 = { showGradient: true, startExpanded: true, header: null, children: null };
+        const obj3 = {
+          recipientId,
+          warningId,
+          warningType,
+          hasBackButton: hasHeaderBack,
+          title: headerTitle,
+          channelId,
+        };
+        obj2.header = jsx(onClose(tmp2[7]), {
+          recipientId,
+          warningId,
+          warningType,
+          hasBackButton: hasHeaderBack,
+          title: headerTitle,
+          channelId,
+        });
+        obj2.children = children;
+        tmp5 = jsx(channelId(tmp2[6]).BottomSheet, {
+          showGradient: true,
+          startExpanded: true,
+          header: null,
+          children: null,
+        });
       }
       return tmp5;
     };
-const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx");
-
-export default tmp2;

@@ -6,21 +6,18 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Segmented Control";
   },
-  parent: MobileUserSettings.DESIGN_SYSTEMS,
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
   screen: {
-    route: UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
     getComponent() {
       return require("UserSettingsDesignSystemSegmentedControl").default;
     },
   },
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemSegmentedControlSetting.tsx");
 
 export default route;

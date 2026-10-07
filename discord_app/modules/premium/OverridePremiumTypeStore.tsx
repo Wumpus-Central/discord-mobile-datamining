@@ -1,5 +1,5 @@
 // discord_app/modules/premium/OverridePremiumTypeStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PerksStateUtils from "perks_state/PerksStateUtils.tsx";
 import UserStoreUtils from "../user/UserStoreUtils.tsx";
@@ -9,8 +9,7 @@ import size from "../../../_runtime/metro/00002__.js";
 function setActualFromUser(user) {
   user = user.user;
   if ("CURRENT_USER_UPDATE" !== user.type) {
-    const obj = UserStoreUtils;
-    closure_4.premiumTypeActual = obj.getPremiumTypeFromRawValue(user.premium_type);
+    closure_4.premiumTypeActual = UserStoreUtils.getPremiumTypeFromRawValue(user.premium_type);
   }
   const user2 = user.user;
   if ("CURRENT_USER_UPDATE" !== user.type) {
@@ -19,8 +18,7 @@ function setActualFromUser(user) {
     if (null != perks) {
       let parseServerPerksResult = perks;
       if (!("activePerksBitmask" in perks)) {
-        const obj2 = PerksStateUtils;
-        parseServerPerksResult = obj2.parseServerPerks(perks);
+        parseServerPerksResult = PerksStateUtils.parseServerPerks(perks);
       }
       tmp5 = parseServerPerksResult;
     }
@@ -34,65 +32,63 @@ function setActualFromUser(user) {
 }
 const UNSELECTED_CREATED_AT_DATE = PremiumConstants.UNSELECTED_CREATED_AT_DATE;
 const UNSELECTED_PREMIUM_TYPE_OVERRIDE = PremiumConstants.UNSELECTED_PREMIUM_TYPE_OVERRIDE;
-const React3 = {
+let closure_4 = {
   premiumTypeOverride: UNSELECTED_PREMIUM_TYPE_OVERRIDE,
   premiumTypeActual: UNSELECTED_PREMIUM_TYPE_OVERRIDE,
   createdAtOverride: UNSELECTED_CREATED_AT_DATE,
   perksActual: null,
 };
-const PersistedStore = get_initializedDefault.PersistedStore;
-class OverridePremiumTypeStore extends PersistedStore {
-  initialize(premiumTypeActual) {
-    if (null != premiumTypeActual) {
-      premiumTypeActual = undefined;
-      if (premiumTypeActual != null) {
-        premiumTypeActual = premiumTypeActual.premiumTypeActual;
-      }
-      closure_4.premiumTypeActual = premiumTypeActual;
-      let premiumTypeOverride;
-      if (premiumTypeActual != null) {
-        premiumTypeOverride = premiumTypeActual.premiumTypeOverride;
-      }
-      closure_4.premiumTypeOverride = premiumTypeOverride;
-      let perksActual;
-      if (premiumTypeActual != null) {
-        perksActual = premiumTypeActual.perksActual;
-      }
-      if (perksActual == null) {
-        perksActual = null;
-      }
-      closure_4.perksActual = perksActual;
-      if (null != premiumTypeActual.createdAtOverride) {
-        const _Date = Date;
-        const self = this;
-        const self2 = this;
-        closure_4.createdAtOverride = new Date(premiumTypeActual.createdAtOverride);
-        const date = new Date(premiumTypeActual.createdAtOverride);
-      } else {
-        closure_4.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
-      }
+const PersistedStore = initializeDefault.PersistedStore;
+class OverridePremiumTypeStore extends PersistedStore {}
+const prototype = OverridePremiumTypeStore.prototype;
+prototype["initialize"] = function initialize(premiumTypeActual) {
+  if (null != premiumTypeActual) {
+    premiumTypeActual = undefined;
+    if (premiumTypeActual != null) {
+      premiumTypeActual = premiumTypeActual.premiumTypeActual;
+    }
+    closure_4.premiumTypeActual = premiumTypeActual;
+    let premiumTypeOverride;
+    if (premiumTypeActual != null) {
+      premiumTypeOverride = premiumTypeActual.premiumTypeOverride;
+    }
+    closure_4.premiumTypeOverride = premiumTypeOverride;
+    let perksActual;
+    if (premiumTypeActual != null) {
+      perksActual = premiumTypeActual.perksActual;
+    }
+    if (perksActual == null) {
+      perksActual = null;
+    }
+    closure_4.perksActual = perksActual;
+    if (null != premiumTypeActual.createdAtOverride) {
+      const _Date = Date;
+      const date = new Date(premiumTypeActual.createdAtOverride);
+      closure_4.createdAtOverride = date;
     } else {
-      closure_4.premiumTypeOverride = UNSELECTED_PREMIUM_TYPE_OVERRIDE;
       closure_4.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
     }
+  } else {
+    closure_4.premiumTypeOverride = UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+    closure_4.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
   }
-  getPremiumTypeOverride() {
-    return closure_4.premiumTypeOverride;
-  }
-  getPremiumTypeActual() {
-    return closure_4.premiumTypeActual;
-  }
-  getPerksActual() {
-    return closure_4.perksActual;
-  }
-  getCreatedAtOverride() {
-    return closure_4.createdAtOverride;
-  }
-  getState() {
-    return closure_4;
-  }
-}
-Object.defineProperty(OverridePremiumTypeStore.prototype, "premiumType", {
+};
+prototype["getPremiumTypeOverride"] = function getPremiumTypeOverride() {
+  return closure_4.premiumTypeOverride;
+};
+prototype["getPremiumTypeActual"] = function getPremiumTypeActual() {
+  return closure_4.premiumTypeActual;
+};
+prototype["getPerksActual"] = function getPerksActual() {
+  return closure_4.perksActual;
+};
+prototype["getCreatedAtOverride"] = function getCreatedAtOverride() {
+  return closure_4.createdAtOverride;
+};
+prototype["getState"] = function getState() {
+  return closure_4;
+};
+Object.defineProperty(prototype, "premiumType", {
   get: function premiumType() {
     return closure_4.premiumTypeOverride;
   },
@@ -107,14 +103,15 @@ const items = [
       createdAtOverride = createdAtOverride.createdAtOverride;
     }
     if (null == createdAtOverride) {
-      const obj = { createdAtOverride: UNSELECTED_CREATED_AT_DATE };
+      const obj = {};
       const merged = Object.assign(createdAtOverride);
+      obj.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
       return obj;
     }
   },
 ];
 OverridePremiumTypeStore.migrations = items;
-let obj = {
+const overridePremiumTypeStore = new OverridePremiumTypeStore(DispatcherDefault, {
   SET_PREMIUM_TYPE_OVERRIDE: function setPremiumTypeOverride(premiumType) {
     closure_4.premiumTypeOverride = premiumType.premiumType;
   },
@@ -123,8 +120,7 @@ let obj = {
   },
   CURRENT_USER_UPDATE: setActualFromUser,
   CONNECTION_OPEN: setActualFromUser,
-};
-const overridePremiumTypeStore = new OverridePremiumTypeStore(DispatcherDefault, obj);
+});
 const result = size.fileFinishedImporting("modules/premium/OverridePremiumTypeStore.tsx");
 
 export default overridePremiumTypeStore;

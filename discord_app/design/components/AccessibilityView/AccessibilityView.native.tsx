@@ -1,32 +1,19 @@
 // discord_app/design/components/AccessibilityView/AccessibilityView.native.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle.native.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../modules/react_compiler/ReactCompilerGating.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../modules/reanimated/ReanimatedRexport.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
 let closure_3 = ["accessibilityViewIsModal", "nativeID", "collapsable", "onAccessibilityEscape"];
-const View = react_native.View;
-const jsx = Fragment.jsx;
-const forwardRef = react.forwardRef;
-const forwardRefResult = forwardRef(
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const forwardRefResult = noop.forwardRef(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? function (arg0, ref) {
-        let accessibilityViewIsModal;
-        let collapsable;
-        let nativeID;
-        let onAccessibilityEscape;
-        let tmp3;
-        let tmp4;
-        let tmp5;
-        let tmp6;
-        let tmp7;
-        const obj = react2;
-        const cResult = obj.c(16);
+    ? (arg0, ref) => {
+        const cResult = c.c(16);
         if (cResult[0] !== arg0) {
           ({ accessibilityViewIsModal, nativeID, collapsable, onAccessibilityEscape } = arg0);
           const tmp10 = _objectWithoutProperties(arg0, closure_3);
@@ -36,11 +23,11 @@ const forwardRefResult = forwardRef(
           cResult[3] = onAccessibilityEscape;
           cResult[4] = tmp10;
           cResult[5] = accessibilityViewIsModal;
-          tmp7 = accessibilityViewIsModal;
-          tmp6 = tmp10;
-          tmp5 = onAccessibilityEscape;
-          tmp4 = nativeID;
-          tmp3 = collapsable;
+          let tmp7 = accessibilityViewIsModal;
+          let tmp6 = tmp10;
+          let tmp5 = onAccessibilityEscape;
+          let tmp4 = nativeID;
+          let tmp3 = collapsable;
         } else {
           tmp3 = cResult[1];
           tmp4 = cResult[2];
@@ -51,8 +38,6 @@ const forwardRefResult = forwardRef(
         if (undefined !== tmp7 && tmp7) {
           if (null == tmp5) {
             const _Error = Error;
-            const self = this;
-            const self2 = this;
             const error = new Error(
               "Must have a onAccessibilityEscape callback when accessibilityViewIsModal is enabled.",
             );
@@ -60,19 +45,17 @@ const forwardRefResult = forwardRef(
           }
         }
         if (cResult[6] === (undefined !== tmp7 && tmp7)) {
-          let tmp13;
           if (cResult[7] === tmp4) {
-            tmp13 = cResult[8];
+            let tmp13 = cResult[8];
           }
           useAccessibilityViewIsModalToggleDefault(tmp13);
-          if (cResult[9] === (undefined !== tmp7 && tmp7)) {
+          if (cResult[9] === tmp11) {
             if (cResult[10] === tmp4) {
               if (cResult[11] === tmp5) {
                 if (cResult[12] === tmp6) {
                   if (cResult[13] === ref) {
-                    let tmp19;
-                    if (cResult[14] === (null == tmp4 && tmp3)) {
-                      tmp19 = cResult[15];
+                    if (cResult[14] === tmp17) {
+                      let tmp19 = cResult[15];
                     }
                     return tmp19;
                   }
@@ -80,6 +63,13 @@ const forwardRefResult = forwardRef(
               }
             }
           }
+          const obj2 = {
+            ref,
+            nativeID: tmp4,
+            collapsable: null == tmp4 && tmp3,
+            onAccessibilityEscape: tmp5,
+            accessibilityViewIsModal: tmp11,
+          };
           const merged = Object.assign(tmp6);
           const tmp25 = (
             <View
@@ -87,10 +77,10 @@ const forwardRefResult = forwardRef(
               nativeID={tmp4}
               collapsable={null == tmp4 && tmp3}
               onAccessibilityEscape={tmp5}
-              accessibilityViewIsModal={undefined !== tmp7 && tmp7}
+              accessibilityViewIsModal={tmp11}
             />
           );
-          cResult[9] = undefined !== tmp7 && tmp7;
+          cResult[9] = tmp11;
           cResult[10] = tmp4;
           cResult[11] = tmp5;
           cResult[12] = tmp6;
@@ -105,15 +95,12 @@ const forwardRefResult = forwardRef(
         cResult[8] = obj3;
         tmp13 = obj3;
       }
-    : function (accessibilityViewIsModal, ref) {
-        let nativeID;
-        let onAccessibilityEscape;
+    : (accessibilityViewIsModal, ref) => {
         let flag = accessibilityViewIsModal.accessibilityViewIsModal;
         if (flag === undefined) {
           flag = false;
         }
         ({ nativeID, onAccessibilityEscape } = accessibilityViewIsModal);
-        const collapsable = accessibilityViewIsModal.collapsable;
         const merged = Object.assign(
           accessibilityViewIsModal,
           Object.assign({ accessibilityViewIsModal: 0, nativeID: 0, collapsable: 0, onAccessibilityEscape: 0 }),
@@ -121,8 +108,6 @@ const forwardRefResult = forwardRef(
         if (flag) {
           if (null == onAccessibilityEscape) {
             const _Error = Error;
-            const self = this;
-            const self2 = this;
             const error = new Error(
               "Must have a onAccessibilityEscape callback when accessibilityViewIsModal is enabled.",
             );
@@ -130,20 +115,28 @@ const forwardRefResult = forwardRef(
           }
         }
         useAccessibilityViewIsModalToggleDefault({ accessibilityViewIsModal: flag, nativeID });
-        const tmp5 = null == nativeID && collapsable;
+        const obj = { ref, nativeID, collapsable: null, onAccessibilityEscape: null, accessibilityViewIsModal: null };
+        let collapsable = null == nativeID;
+        if (collapsable) {
+          collapsable = accessibilityViewIsModal.collapsable;
+        }
+        obj.collapsable = collapsable;
+        obj.onAccessibilityEscape = onAccessibilityEscape;
+        obj.accessibilityViewIsModal = flag;
         const merged1 = Object.assign(merged);
         return (
           <View
             ref={ref}
             nativeID={nativeID}
-            collapsable={tmp5}
-            onAccessibilityEscape={onAccessibilityEscape}
-            accessibilityViewIsModal={flag}
+            collapsable={null}
+            onAccessibilityEscape={null}
+            accessibilityViewIsModal={null}
           />
         );
       },
 );
 const animatedComponent = ReanimatedRexport.createAnimatedComponent(forwardRefResult);
+const size = fn(2);
 const result = size.fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
 
 export const AccessibilityView = forwardRefResult;

@@ -3,49 +3,42 @@ import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
 ({ TENURE_BADGES: c2, TIERED_TENURE_BADGE_ORDER: c3 } = PremiumConstants);
 const result = size.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
 
 export const getTieredTenureBadgeData = function getTieredTenureBadgeData(tieredTenureBadge) {
-  return React2[tieredTenureBadge];
+  return dependencyMap[tieredTenureBadge];
 };
 export const getTieredTenureBadge = function getTieredTenureBadge(badgeId) {
   let tmp = null;
-  if (null != React2[badgeId]) {
+  if (null != dependencyMap[badgeId]) {
     tmp = badgeId;
   }
   return tmp;
 };
-export const getEarnedOnDate = function getEarnedOnDate(earnedTenureBadge, premiumSince) {
+export const getEarnedOnDate = function getEarnedOnDate(earnedOnDate2, premiumSince) {
   if (null == premiumSince) {
     return null;
-  } else if (null == React2[earnedTenureBadge]) {
+  } else if (null == dependencyMap[earnedOnDate2]) {
     return null;
   } else {
     const obj = _modDef4467(premiumSince);
-    obj.add(React2[earnedTenureBadge].tenureReqNumMonths, "months");
+    obj.add(tmp3.tenureReqNumMonths, "months");
     obj.add(1, "days");
     return obj.toDate();
   }
 };
 export const getEarnedTenureBadge = function getEarnedTenureBadge(premiumSince) {
-  let tmp2;
   if (null == premiumSince) {
     return null;
   } else {
     const _Date = Date;
-    const self = this;
-    const self2 = this;
     let diff = length.length - 1;
-    new Date();
     if (0 <= diff) {
       while (true) {
-        tmp2 = length[diff];
         let toDateResult = null;
         if (null != premiumSince) {
-          let tmp6 = React2[tmp2];
+          let tmp6 = dependencyMap[length[diff]];
           toDateResult = null;
           if (null != tmp6) {
             let obj = _modDef4467(premiumSince);
@@ -55,7 +48,7 @@ export const getEarnedTenureBadge = function getEarnedTenureBadge(premiumSince) 
           }
         }
         if (null != toDateResult) {
-          if (tmp15 >= toDateResult.getTime()) {
+          if (tmp17 >= toDateResult.getTime()) {
             break;
           }
         }

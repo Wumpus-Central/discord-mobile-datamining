@@ -1,36 +1,29 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FastAssetImage.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import StoreUtils from "../../../../utils/StoreUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let applicationId;
+const require = globalThis.__r;
 
-let _slicedToArray = _slicedToArray_mod;
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FastAssetImage.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (applicationId) => {
-      let asset;
-      let closure_129_0;
-      let first;
-      let style;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       ({ asset, style } = applicationId);
-      applicationId = applicationId.applicationId;
-      [tmp5, closure_129_0] = react.useState();
-      _slicedToArray(react.useState(), 2);
+      [tmp5, require] = noop.useState();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function u(nativeEvent) {
-          closure_1_0(nativeEvent.nativeEvent.layout.width);
+          require(nativeEvent.nativeEvent.layout.width);
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -39,30 +32,28 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         application_id = asset.application_id;
       }
       if (application_id == null) {
-        application_id = applicationId;
+        application_id = applicationId.applicationId;
       }
       if (cResult[1] === application_id) {
         if (cResult[2] === asset) {
-          let tmp8;
-          let tmp9;
           if (cResult[3] === tmp5) {
-            tmp8 = cResult[4];
+            let tmp8 = cResult[4];
           }
           if (cResult[5] !== tmp8) {
             const obj2 = { uri: tmp8 };
             cResult[5] = tmp8;
             cResult[6] = obj2;
-            tmp9 = obj2;
+            let tmp9 = obj2;
           } else {
             tmp9 = cResult[6];
           }
           if (cResult[7] === tmp9) {
-            let tmp10;
             if (cResult[8] === style) {
-              tmp10 = cResult[9];
+              let tmp10 = cResult[9];
             }
             return tmp10;
           }
+          const obj3 = { style, onLayout: first, source: tmp9 };
           const tmp13 = jsx(FastImageDefault, { style, onLayout: first, source: tmp9 });
           cResult[7] = tmp9;
           cResult[8] = style;
@@ -76,8 +67,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != application_id) {
           str = "";
           if (null != tmp5) {
+            str = StoreUtils.getAssetURL(application_id, asset, tmp5);
             const tmpResult = StoreUtils;
-            str = tmpResult.getAssetURL(application_id, asset, tmp5);
           }
         }
       }
@@ -86,23 +77,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       cResult[4] = str;
       tmp8 = str;
+      const tmp4 = _slicedToArray(noop.useState(), 2);
     }
-  : (applicationId) => {
-      let closure_3;
-      let first;
-      let tmp3;
-      applicationId = applicationId.applicationId;
-      const asset = applicationId.asset;
-      first = undefined;
-      const style = applicationId.style;
-      [first, tmp3] = react.useState();
+  : (style) => {
+      const applicationId = style.applicationId;
+      const asset = style.asset;
+      _slicedToArray = undefined;
+      const tmp = _slicedToArray(noop.useState(), 2);
+      const first = tmp[0];
       _slicedToArray = tmp3;
-      const items = [tmp3];
+      const items = [tmp[1]];
       const items1 = [applicationId, asset, first];
-      const onLayout = react.useCallback((nativeEvent) => {
+      const onLayout = noop.useCallback((nativeEvent) => {
         closure_3(nativeEvent.nativeEvent.layout.width);
       }, items);
-      const source = react.useMemo(() => {
+      const source = noop.useMemo(() => {
         let application_id;
         if (asset != null) {
           application_id = asset.application_id;
@@ -116,15 +105,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != application_id) {
             uri = "";
             if (null != first) {
-              const obj = StoreUtils;
-              uri = obj.getAssetURL(application_id, asset, tmp3);
+              uri = StoreUtils.getAssetURL(application_id, asset, tmp3);
             }
           }
         }
         return { uri };
       }, items1);
-      return jsx(asset(first[6]), { style, onLayout, source });
+      return jsx(asset(first[6]), { style: style.style, onLayout, source });
     };
-const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FastAssetImage.tsx");
-
-export default tmp2;

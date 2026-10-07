@@ -19,5 +19,5 @@ export default function getInviteURL() {
     const _HermesInternal = HermesInternal;
     str2 = "" + location.protocol + "//";
   }
-  return "" + str2 + INVITE_HOST + combined;
+  return "" + str2 + window.GLOBAL_ENV.INVITE_HOST + combined;
 }

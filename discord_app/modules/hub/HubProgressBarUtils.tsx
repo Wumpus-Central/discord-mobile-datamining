@@ -1,42 +1,32 @@
 // discord_app/modules/hub/HubProgressBarUtils.tsx
-import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../_runtime/00576_react.js";
-import Constants from "../../Constants.tsx";
-import intl4 from "../../intl/index.native.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../_runtime/00576_c.js";
+import util from "../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import HubProgressBarConstants from "HubProgressBarConstants.tsx";
-import react from "../../../_runtime/00019_react.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, set;
-
+require = fn;
 function convertHubProgressFlagSetToSet(stateFromStores) {
-  set = new Set();
+  const set = new Set();
   for (const item10013 of HUB_PROGRESS_STEP_ORDER) {
     let obj2 = FlagUtils;
-    if (obj2.hasFlag(stateFromStores, item10013)) {
+    if (obj2.hasFlag(arg0, item10013)) {
       let addResult = set.add(item10013);
     }
     continue;
   }
   return set;
 }
-const HUB_PROGRESS_STEP_ORDER = HubProgressBarConstants.HUB_PROGRESS_STEP_ORDER;
-const PlatformTypes = Constants.PlatformTypes;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const HUB_PROGRESS_STEP_ORDER = fn(9505).HUB_PROGRESS_STEP_ORDER;
+const PlatformTypes = fn(1085).PlatformTypes;
+let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let localAccount;
-      let tmp4;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
         const fn = function s() {
@@ -49,31 +39,21 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return initialize.useStateFromStores(tmp4, tmp5);
     }
   : () => {
-      let localAccount;
       const items = [ConnectedAccountsStore];
-      const obj = get_initialized;
-      return obj.useStateFromStores(items, () => null != localAccount.getLocalAccount(constants.CONTACTS));
+      return initialize.useStateFromStores(items, () => null != localAccount.getLocalAccount(constants.CONTACTS));
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp8;
       _require = arg0;
-      const tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(5);
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserSettingsProtoStore];
-        let num = 0;
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -95,32 +75,28 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return num;
         };
-        let num2 = 1;
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if (cResult[3] !== stateFromStores) {
         const tmp10 = convertHubProgressFlagSetToSet(stateFromStores);
         cResult[3] = stateFromStores;
         cResult[4] = tmp10;
-        tmp8 = tmp10;
+        let tmp8 = tmp10;
       } else {
         tmp8 = cResult[4];
       }
       return tmp8;
     }
   : (arg0) => {
-      let closure_0;
-      let stateFromStores;
       _require = arg0;
       const items = [UserSettingsProtoStore];
-      const obj = require("get initialized");
-      stateFromStores = obj.useStateFromStores(items, () => {
+      stateFromStores = require("initialize").useStateFromStores(items, () => {
         let num = 0;
         if (null != closure_0) {
           const guilds = UserSettingsProtoStore.settings.guilds;
@@ -138,36 +114,46 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         return num;
       });
       const items1 = [stateFromStores];
-      return react.useMemo(() => convertHubProgressFlagSetToSet(stateFromStores), items1);
+      return noop.useMemo(() => convertHubProgressFlagSetToSet(stateFromStores), items1);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function (id) {
-      const obj = react2;
-      const cResult = obj.c(2);
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
+
+export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
+  if (preloaded_user_settings.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.iNR25n);
+  } else if (preloaded_user_settings.HubProgressStep.INVITE_USER === nextHubProgressStep) {
+    const intl2 = util.intl;
+    return intl2.string(util.t["3NlTYU"]);
+  } else if (preloaded_user_settings.HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
+    const intl = util.intl;
+    return intl.string(util.t.HFvFte);
+  } else if (preloaded_user_settings.HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
+    return null;
+  } else {
+    GlobalUtils.assertNever(nextHubProgressStep);
+    const tmpResult = GlobalUtils;
+  }
+};
+export const useHubProgressBarCompletedSteps = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id) => {
+      const cResult = c.c(2);
       id = undefined;
       if (id != null) {
         id = id.id;
       }
       const tmp4Result = closure_9(id);
-      let tmp7 = tmp4Result;
-      if (closure_7()) {
-        let tmp8;
-        if (cResult[0] !== tmp4Result) {
-          const _Set = Set;
-          const self = this;
-          const self2 = this;
-          set = new Set(tmp4Result);
-          set.add(preloaded_user_settings.HubProgressStep.CONTACT_SYNC);
-          cResult[0] = tmp4Result;
-          cResult[1] = set;
-          tmp8 = set;
-        } else {
-          tmp8 = cResult[1];
-        }
-        tmp7 = tmp8;
+      if (!closure_7()) {
+        return tmp4Result;
+      } else if (cResult[0] !== tmp4Result) {
+        const _Set = Set;
+        const set = new Set(tmp4Result);
+        set.add(preloaded_user_settings.HubProgressStep.CONTACT_SYNC);
+        cResult[0] = tmp4Result;
+        cResult[1] = set;
       }
-      return tmp7;
     }
   : (id) => {
       id = undefined;
@@ -175,16 +161,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         id = id.id;
       }
       const tmpResult = closure_9(id);
-      let closure_0 = tmpResult;
+      closure_0 = tmpResult;
       const tmp4 = closure_7();
-      let closure_1 = tmp4;
+      closure_1 = tmp4;
       const items = [tmpResult, tmp4];
-      return react.useMemo(function () {
+      return noop.useMemo(() => {
         if (closure_1) {
           const _Set = Set;
-          const self = this;
-          const self2 = this;
-          set = new Set(closure_0);
+          const set = new Set(closure_0);
           set.add(preloaded_user_settings.HubProgressStep.CONTACT_SYNC);
           return set;
         } else {
@@ -192,29 +176,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
-
-export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
-  if (preloaded_user_settings.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
-    const intl3 = intl4.intl;
-    return intl3.string(intl4.t.iNR25n);
-  } else if (preloaded_user_settings.HubProgressStep.INVITE_USER === nextHubProgressStep) {
-    const intl2 = intl4.intl;
-    return intl2.string(intl4.t["3NlTYU"]);
-  } else if (preloaded_user_settings.HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
-    const intl = intl4.intl;
-    return intl.string(intl4.t.HFvFte);
-  } else if (preloaded_user_settings.HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
-    return null;
-  } else {
-    const tmpResult = GlobalUtils;
-    tmpResult.assertNever(nextHubProgressStep);
-  }
-};
-export const useHubProgressBarCompletedSteps = tmp2;
 export const getNextHubProgressStep = function getNextHubProgressStep(hubProgressBarCompletedSteps) {
   for (const item10007 of HUB_PROGRESS_STEP_ORDER) {
-    if (hubProgressBarCompletedSteps.has(item10007)) {
+    if (arg0.has(item10007)) {
       continue;
     } else {
       obj.return();

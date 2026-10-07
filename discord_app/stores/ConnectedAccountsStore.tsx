@@ -1,84 +1,80 @@
 // discord_app/stores/ConnectedAccountsStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import Constants from "../Constants.tsx";
 import PlatformsDefault from "../lib/Platforms.tsx";
 import fetchConnectedAccounts from "../modules/connections/fetchConnectedAccounts.tsx";
 import postConnectionCallback from "../modules/connections/postConnectionCallback.tsx";
 import ConnectedAccountRecord from "../records/ConnectedAccountRecord.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-let closure_6, closure_7, integrations;
-
-const f90570 = (type) => {
-  const hasItem = set.has(type.type);
-  let isSupportedResult = !hasItem;
-  if (isSupportedResult) {
-    const obj = PlatformsDefault;
-    isSupportedResult = obj.isSupported(type.type);
-  }
-  return isSupportedResult;
-};
-const f90571 = (type) => set.has(type.type);
-const items = [Constants.PlatformTypes.CONTACTS];
+require = fn;
+const items = [fn(1085).PlatformTypes.CONTACTS];
 const set = new Set(items);
 let c5 = true;
-const metroRequire = [];
-const metroImportDefault = [];
-const metroImportAll = {};
+let closure_6 = [];
+let closure_7 = [];
+let closure_8 = {};
 const set1 = new Set();
-const authStore = {};
-const unpackModuleId = {};
-const Store = get_initializedDefault.Store;
-class ConnectedAccountsStore extends Store {
-  isJoining(id) {
-    return closure_8[id] || false;
-  }
-  joinErrorMessage(arg0) {
-    return closure_11[arg0];
-  }
-  isFetching() {
-    return c5;
-  }
-  getAccounts() {
-    return closure_6;
-  }
-  getLocalAccounts() {
-    return closure_7;
-  }
-  getAccount(accountId, provider_id) {
-    let closure_0 = accountId;
-    let closure_1 = provider_id;
-    return closure_6.find((id) => (null == closure_0 || id.id === tmp) && id.type === closure_1);
-  }
-  getLocalAccount(CONTACTS) {
-    let closure_0 = CONTACTS;
-    return closure_7.find((type) => type.type === closure_0);
-  }
-  isSuggestedAccountType(arg0) {
-    return closure_10[arg0] || false;
-  }
-  addPendingAuthorizedState(state) {
-    set1.add(state);
-  }
-  deletePendingAuthorizedState(arg0) {
-    set1.delete(arg0);
-  }
-  hasPendingAuthorizedState(arg0) {
-    return set1.has(arg0);
-  }
-}
+let closure_10 = {};
+let closure_11 = {};
+const Store = initializeDefault.Store;
+class ConnectedAccountsStore extends Store {}
 const prototype = ConnectedAccountsStore.prototype;
+prototype["isJoining"] = function isJoining(id) {
+  return closure_8[id] || false;
+};
+prototype["joinErrorMessage"] = function joinErrorMessage(arg0) {
+  return closure_11[arg0];
+};
+prototype["isFetching"] = function isFetching() {
+  return c5;
+};
+prototype["getAccounts"] = function getAccounts() {
+  return closure_6;
+};
+prototype["getLocalAccounts"] = function getLocalAccounts() {
+  return closure_7;
+};
+prototype["getAccount"] = function getAccount(accountId, provider_id) {
+  closure_0 = accountId;
+  closure_1 = provider_id;
+  return closure_6.find((id) => {
+    let tmp2 = null == closure_0 || id.id === tmp;
+    if (tmp2) {
+      tmp2 = id.type === closure_1;
+    }
+    return tmp2;
+  });
+};
+prototype["getLocalAccount"] = function getLocalAccount(CONTACTS) {
+  closure_0 = CONTACTS;
+  return closure_7.find((type) => type.type === closure_0);
+};
+prototype["isSuggestedAccountType"] = function isSuggestedAccountType(arg0) {
+  return closure_10[arg0] || false;
+};
+prototype["addPendingAuthorizedState"] = function addPendingAuthorizedState(state) {
+  set1.add(state);
+};
+prototype["deletePendingAuthorizedState"] = function deletePendingAuthorizedState(arg0) {
+  set1.delete(arg0);
+};
+prototype["hasPendingAuthorizedState"] = function hasPendingAuthorizedState(arg0) {
+  return set1.has(arg0);
+};
 ConnectedAccountsStore.displayName = "ConnectedAccountsStore";
-let obj = {
+const connectedAccountsStore = new ConnectedAccountsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(connectedAccounts) {
     connectedAccounts = connectedAccounts.connectedAccounts;
-    const mapped = connectedAccounts.map((item) => {
-      const tmp = new ConnectedAccountRecord(item);
-      return tmp;
+    const mapped = connectedAccounts.map((item) => new ConnectedAccountRecord(item));
+    closure_6 = mapped.filter((type) => {
+      const hasItem = set.has(type.type);
+      let isSupportedResult = !hasItem;
+      if (!hasItem) {
+        isSupportedResult = PlatformsDefault.isSupported(type.type);
+      }
+      return isSupportedResult;
     });
-    closure_6 = mapped.filter(f90570);
-    closure_7 = mapped.filter(f90571);
+    closure_7 = mapped.filter((type) => set.has(type.type));
     c5 = false;
   },
   USER_CONNECTIONS_UPDATE: function handleConnectionsUpdate(local) {
@@ -86,43 +82,46 @@ let obj = {
       if (null != local.accounts) {
         const accounts = local.accounts;
         const mapped = accounts.map((integrations) => {
-          let obj = {
-            integrations: integrations.map((guild) => {
-              let fromGuildBasic;
-              let obj2;
-              const obj = { guild: fromGuildBasic(obj2) };
-              const merged = Object.assign(guild);
-              obj2 = { features: [] };
-              fromGuildBasic = closure_1_0(closure_1_2[3]).fromGuildBasic;
-              closure_1_0(closure_1_2[3]);
-              const merged1 = Object.assign(guild.guild);
-              return obj;
-            }),
-          };
+          let obj = {};
           let merged = Object.assign(integrations);
           integrations = integrations.integrations;
-          const tmp2 = new ConnectedAccountRecord(obj);
-          return tmp2;
+          obj.integrations = integrations.map((guild) => {
+            const obj = {};
+            const merged = Object.assign(guild);
+            const obj3 = {};
+            const merged1 = Object.assign(guild.guild);
+            obj3.features = [];
+            obj.guild = closure_1_0(closure_1_2[3]).fromGuildBasic(obj3);
+            return obj;
+          });
+          return new ConnectedAccountRecord(obj);
         });
-        closure_6 = mapped.filter(f90570);
-        closure_7 = mapped.filter(f90571);
+        closure_6 = mapped.filter((type) => {
+          const hasItem = set.has(type.type);
+          let isSupportedResult = !hasItem;
+          if (!hasItem) {
+            isSupportedResult = PlatformsDefault.isSupported(type.type);
+          }
+          return isSupportedResult;
+        });
+        closure_7 = mapped.filter((type) => set.has(type.type));
         c5 = false;
       }
     }
-    let obj = fetchConnectedAccounts;
-    const connectedAccounts = obj.fetchConnectedAccounts();
+    const connectedAccounts = fetchConnectedAccounts.fetchConnectedAccounts();
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function handleJoining(integrationId) {
     closure_8[integrationId.integrationId] = integrationId.joining;
   },
   USER_CONNECTION_UPDATE: function handleUserConnectionUpdate(arg0) {
-    let accessToken;
-    let closure_129_0;
-    let closure_129_1;
-    let revoked;
-    let showActivity;
-    ({ platformType: closure_129_0, id: closure_129_1, revoked, accessToken, showActivity } = arg0);
-    const found = closure_6.find((id) => id.id === closure_1_1 && id.type === closure_1_0);
+    ({ platformType: require, id: importDefault, revoked, accessToken, showActivity } = arg0);
+    const found = closure_6.find((id) => {
+      let tmp = id.id === importDefault;
+      if (tmp) {
+        tmp = id.type === require;
+      }
+      return tmp;
+    });
     if (null == found) {
       return false;
     } else {
@@ -137,25 +136,19 @@ let obj = {
       }
     }
   },
-  USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function handleJoiningError(integrationId) {
+  USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function handleJoiningError(error) {
     let str = "";
-    integrationId = integrationId.integrationId;
-    if (undefined !== integrationId.error) {
-      str = integrationId.error;
+    if (undefined !== error.error) {
+      str = error.error;
     }
-    closure_11[integrationId] = str;
+    closure_11[error.integrationId] = str;
   },
   USER_CONNECTIONS_CALLBACK: function handleUserConnectionsCallback(arg0) {
-    let code;
-    let openid_params;
-    let provider;
-    let state;
     ({ code, state, openid_params, provider } = arg0);
-    const obj = postConnectionCallback;
-    const result = obj.postConnectionCallback(provider, { code, state, openid_params });
+    const result = postConnectionCallback.postConnectionCallback(provider, { code, state, openid_params });
   },
-};
-const connectedAccountsStore = new ConnectedAccountsStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
 
 export default connectedAccountsStore;

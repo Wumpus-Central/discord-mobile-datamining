@@ -4,7 +4,7 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
 class SoundshareStatsAggregator {
   constructor() {
-    const obj = Object.create(new.target.prototype);
+    obj = Object.create(new.target.prototype);
     obj._report = {
       soundshare_attach_requested_count: 0,
       soundshare_capturing_count: 0,
@@ -34,51 +34,51 @@ class SoundshareStatsAggregator {
       soundshare_first_session: null,
       soundshare_last_session: null,
     };
-    obj._pids = new Set();
-    new Set();
-    return obj;
-  }
-  traceEvent(soundshareSession, type) {
-    let combined;
-    const _report = this._report;
-    if ("soundshare_state_transition" === type.type) {
-      const _HermesInternal2 = HermesInternal;
-      combined =
-        "soundshare_state_transition_" +
-        ["detached", "waiting", "attached", "started", "playing", "silence"][type.newState] +
-        "_count";
-    } else {
-      const _HermesInternal = HermesInternal;
-      combined = "" + type.type + "_count";
-    }
-    if (undefined !== _report[combined]) {
-      if (_report[combined] < 32767) {
-        _report[combined] = _report[combined] + 1;
-      }
-    } else {
-      _report.soundshare_unknown_event_count = _report.soundshare_unknown_event_count + 1;
-    }
-    if ("pid" in type) {
-      if (0 === _report.soundshare_first_pid) {
-        _report.soundshare_first_pid = type.pid;
-      }
-      _report.soundshare_last_pid = type.pid;
-      const _pids = this._pids;
-      _pids.add(type.pid);
-    }
-    if (null != soundshareSession) {
-      if (null == _report.soundshare_first_session) {
-        _report.soundshare_first_session = soundshareSession;
-      }
-      _report.soundshare_last_session = soundshareSession;
-    }
-  }
-  getStats() {
-    const obj = { soundshare_unique_pids: this._pids.size };
-    const merged = Object.assign(this._report);
+    set = new Set();
+    obj._pids = set;
     return obj;
   }
 }
 const prototype = SoundshareStatsAggregator.prototype;
+prototype["traceEvent"] = function traceEvent(soundshareSession, type) {
+  const _report = this._report;
+  if ("soundshare_state_transition" === type.type) {
+    const _HermesInternal2 = HermesInternal;
+    let combined =
+      "soundshare_state_transition_" +
+      ["detached", "waiting", "attached", "started", "playing", "silence"][type.newState] +
+      "_count";
+  } else {
+    const _HermesInternal = HermesInternal;
+    combined = "" + type.type + "_count";
+  }
+  if (undefined !== _report[combined]) {
+    if (_report[combined] < 32767) {
+      _report[combined] = _report[combined] + 1;
+    }
+  } else {
+    _report.soundshare_unknown_event_count = _report.soundshare_unknown_event_count + 1;
+  }
+  if ("pid" in type) {
+    if (0 === _report.soundshare_first_pid) {
+      _report.soundshare_first_pid = type.pid;
+    }
+    _report.soundshare_last_pid = type.pid;
+    const _pids = this._pids;
+    _pids.add(type.pid);
+  }
+  if (null != soundshareSession) {
+    if (null == _report.soundshare_first_session) {
+      _report.soundshare_first_session = soundshareSession;
+    }
+    _report.soundshare_last_session = soundshareSession;
+  }
+};
+prototype["getStats"] = function getStats() {
+  const obj = {};
+  const merged = Object.assign(this._report);
+  obj.soundshare_unique_pids = this._pids.size;
+  return obj;
+};
 
 export default SoundshareStatsAggregator;

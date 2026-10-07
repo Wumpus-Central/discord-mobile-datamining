@@ -1,96 +1,81 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx
-import react from "../../../../../_runtime/00576_react.js";
-import intl3 from "../../../../intl/index.native.tsx";
-import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCenterControlledSettingsUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const ExplicitMediaRedactionUtils = obj(7122);
+require = fn;
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = react;
-      const cResult = obj.c(2);
-      const obj2 = useParentalControlSettings;
-      const parentalControlledExplicitContentSettings = obj2.useParentalControlledExplicitContentSettings();
+      let obj = require;
+      let tmp = dependencyMap;
+      const cResult = c.c(2);
+      const parentalControlledExplicitContentSettings =
+        useParentalControlSettings.useParentalControlledExplicitContentSettings();
       let prop;
       if (parentalControlledExplicitContentSettings != null) {
         prop = parentalControlledExplicitContentSettings.explicitContentNonFriendDm;
       }
-      let tmp6 = null;
-      if (null != prop) {
-        let tmp7;
-        if (cResult[0] !== prop) {
-          const tmpResult = ExplicitMediaRedactionUtils;
-          const tmp8 = tmpResult.redactionSettingToRenderedString(prop)();
-          cResult[0] = prop;
-          cResult[1] = tmp8;
-          tmp7 = tmp8;
-        } else {
-          tmp7 = cResult[1];
-        }
-        tmp6 = tmp7;
+      if (null == prop) {
+        return null;
+      } else if (cResult[0] !== prop) {
+        obj = ExplicitMediaRedactionUtils;
+        tmp = obj.redactionSettingToRenderedString(prop)();
+        cResult[0] = prop;
+        cResult[1] = tmp;
       }
-      return tmp6;
     }
   : () => {
-      const obj = useParentalControlSettings;
-      const parentalControlledExplicitContentSettings = obj.useParentalControlledExplicitContentSettings();
+      const parentalControlledExplicitContentSettings =
+        useParentalControlSettings.useParentalControlledExplicitContentSettings();
       let prop;
       if (parentalControlledExplicitContentSettings != null) {
         prop = parentalControlledExplicitContentSettings.explicitContentNonFriendDm;
       }
       let tmp5 = null;
       if (null != prop) {
+        tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(prop)();
         const tmpResult = ExplicitMediaRedactionUtils;
-        tmp5 = tmpResult.redactionSettingToRenderedString(prop)();
       }
       return tmp5;
     };
 function onObscuredContentNonFriendsDmOnPress() {
-  let intl2;
-  let items;
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14645);
-    const explicitContentNonFriendDm =
-      obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
     const intl = selectedTeenId(1126).intl;
+    const obj = selectedTeenId(14645);
     const stringResult = intl.string(selectedTeenId(1126).t.GYpoAq);
-    let obj2 = {
-      title: stringResult,
-      subtitle: intl2.string(selectedTeenId(1126).t["Yh+HX1"]),
-      excluded: items,
-      handlePress(explicitContentNonFriendDm) {
-        const obj = FamilyCenterControlledSettingsUtils;
-        const obj2 = { explicitContentNonFriendDm };
-        const result = obj.updateExplicitContentSetting(selectedTeenId, obj2);
-      },
-      currentValue: explicitContentNonFriendDm,
+    const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
+    const intl2 = selectedTeenId(1126).intl;
+    obj3.subtitle = intl2.string(selectedTeenId(1126).t["Yh+HX1"]);
+    const items = [selectedTeenId(1197).ExplicitContentRedaction.SHOW];
+    obj3.excluded = items;
+    obj3.handlePress = function handlePress(explicitContentNonFriendDm) {
+      const result = FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, {
+        explicitContentNonFriendDm,
+      });
     };
-    const handleSensitiveMediaFilterPress = selectedTeenId(14650).handleSensitiveMediaFilterPress;
-    selectedTeenId(14650);
-    intl2 = selectedTeenId(1126).intl;
-    items = [selectedTeenId(1197).ExplicitContentRedaction.SHOW];
-    let result = handleSensitiveMediaFilterPress(obj2);
+    obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
+    let result = selectedTeenId(14650).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(14650);
   }
 }
 function getTitle() {
-  const intl = intl3.intl;
-  return intl.string(intl3.t["Yh+HX1"]);
+  const intl = util.intl;
+  return intl.string(util.t["Yh+HX1"]);
 }
-let obj = {
+const SettingBuilders = fn(11142);
+const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(7645).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: tmp2,
   onPress: onObscuredContentNonFriendsDmOnPress,
   unsearchable: true,
-};
-const pressable = SettingBuilders.createPressable(obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx",
 );

@@ -1,28 +1,22 @@
 // discord_app/modules/collectibles/native/AvatarDecorationSampleV2.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import AssetRegistryDefault from "../../../../_runtime/08500_AssetRegistry.js";
+import _modDef8500 from "../../../../_runtime/metro/08500__.js";
 import CutoutableAvatarDecorationDefault from "components/CutoutableAvatarDecoration.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-({ Image: c3, View: closure_4 } = react_native);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.8333333333333334;
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles((arg0) => {
-  const obj = { avatar: size, solidAvatar: { opacity: 1 }, avatarDecoration: { position: "absolute" } };
-  size = {
+  const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
+  const size = {
     position: "absolute",
     height: arg0 * c8,
     width: arg0 * c8,
@@ -30,57 +24,62 @@ let closure_9 = createStyles.createStyles((arg0) => {
     opacity: 0.8,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   };
+  obj.avatar = size;
+  obj.solidAvatar = { opacity: 1 };
+  obj.avatarDecoration = { position: "absolute" };
   return obj;
 });
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationSampleV2.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (threeTierBundle) => {
-      let animate;
-      let avatarSource;
-      let item;
-      let items;
-      const obj = react2;
-      const cResult = obj.c(17);
+      const cResult = c.c(17);
       ({ item, size, avatarSource, animate } = threeTierBundle);
-      threeTierBundle = threeTierBundle.threeTierBundle;
       const tmp3 = closure_9(size);
-      const tmp5 = _modDef38;
-      tmp5(item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
-      const solidAvatar = (null != avatarSource || true === threeTierBundle) && tmp3.solidAvatar;
+      _modDef38(
+        item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION,
+        "Item must be Avatar Decoration",
+      );
+      let solidAvatar = null != avatarSource;
+      if (!solidAvatar) {
+        solidAvatar = true === threeTierBundle.threeTierBundle;
+      }
+      if (solidAvatar) {
+        solidAvatar = tmp3.solidAvatar;
+      }
       if (cResult[0] === tmp3.avatar) {
-        let tmp7;
         if (cResult[1] === solidAvatar) {
-          tmp7 = cResult[2];
+          let tmp7 = cResult[2];
         }
         if (null == avatarSource) {
-          avatarSource = AssetRegistryDefault;
+          avatarSource = _modDef8500;
         }
         if (cResult[3] === tmp7) {
-          let tmp8;
           if (cResult[4] === avatarSource) {
-            tmp8 = cResult[5];
+            let tmp8 = cResult[5];
           }
           if (cResult[6] === animate) {
             if (cResult[7] === item) {
-              let tmp12;
               if (cResult[8] === size) {
-                tmp12 = cResult[9];
+                let tmp12 = cResult[9];
               }
               if (cResult[10] === item.label) {
                 if (cResult[11] === tmp3.avatarDecoration) {
-                  let tmp15;
                   if (cResult[12] === tmp12) {
-                    tmp15 = cResult[13];
+                    let tmp15 = cResult[13];
                   }
                   if (cResult[14] === tmp8) {
-                    let tmp19;
                     if (cResult[15] === tmp15) {
-                      tmp19 = cResult[16];
+                      let tmp19 = cResult[16];
                     }
                     return tmp19;
                   }
-                  const obj2 = { children: items };
-                  items = [tmp8, tmp15];
-                  const tmp22 = metroImportDefault(metroRequire, obj2);
+                  const obj2 = { children: null };
+                  const items = [tmp8, tmp15];
+                  obj2.children = items;
+                  const tmp22 = React5(timestampProducer, obj2);
                   cResult[14] = tmp8;
                   cResult[15] = tmp15;
                   cResult[16] = tmp22;
@@ -88,7 +87,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj3 = { style: tmp3.avatarDecoration, accessibilityLabel: item.label, children: tmp12 };
-              const tmp18 = hasOwnProperty(React3, obj3);
+              const tmp18 = hasOwnProperty(React4, obj3);
               cResult[10] = item.label;
               cResult[11] = tmp3.avatarDecoration;
               cResult[12] = tmp12;
@@ -105,7 +104,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = tmp14;
         }
         const obj5 = { style: tmp7, resizeMode: "contain", source: avatarSource, accessible: false };
-        const tmp11 = hasOwnProperty(_false, obj5);
+        const tmp11 = hasOwnProperty(React3, obj5);
         cResult[3] = tmp7;
         cResult[4] = avatarSource;
         cResult[5] = tmp11;
@@ -118,35 +117,35 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = items1;
     }
   : (arg0) => {
-      let animate;
-      let avatarSource;
-      let item;
-      let items1;
-      let threeTierBundle;
       ({ item, size, avatarSource } = arg0);
       ({ animate, threeTierBundle } = arg0);
       const tmp = closure_9(size);
-      const tmp4 = _modDef38;
-      tmp4(item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
+      _modDef38(
+        item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION,
+        "Item must be Avatar Decoration",
+      );
       const items = [tmp.avatar];
-      const solidAvatar = (null != avatarSource || true === threeTierBundle) && tmp.solidAvatar;
-      const obj = { style: items, resizeMode: "contain", source: avatarSource, accessible: false };
+      let solidAvatar = null != avatarSource;
+      if (!solidAvatar) {
+        solidAvatar = true === threeTierBundle;
+      }
+      if (solidAvatar) {
+        solidAvatar = tmp.solidAvatar;
+      }
+      const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
       items[1] = solidAvatar;
       if (null == avatarSource) {
-        avatarSource = AssetRegistryDefault;
+        avatarSource = _modDef8500;
       }
-      const obj2 = { children: items1 };
-      items1 = [hasOwnProperty(_false, obj)];
-      const obj3 = {
+      const obj2 = { children: null };
+      obj.source = avatarSource;
+      const items1 = [hasOwnProperty(React3, obj)];
+      items1[1] = hasOwnProperty(React4, {
         style: tmp.avatarDecoration,
         accessibilityLabel: item.label,
         children: hasOwnProperty(CutoutableAvatarDecorationDefault, { avatarDecoration: item, size, animate }),
-      };
-      items1[1] = hasOwnProperty(React3, obj3);
-      return metroImportDefault(metroRequire, obj2);
+      });
+      obj2.children = items1;
+      return React5(timestampProducer, obj2);
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationSampleV2.tsx");
-
-export default tmp5;
 export const avatarPlaceholderSizeRatio = 0.8333333333333334;

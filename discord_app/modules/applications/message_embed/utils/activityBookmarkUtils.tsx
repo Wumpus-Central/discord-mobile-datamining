@@ -5,25 +5,24 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
-  let value3;
-  let value4;
-  const obj = URLUtilsDefault;
-  const toURLSafeResult = obj.toURLSafe(url);
-  let value;
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
+  value = undefined;
   if (toURLSafeResult != null) {
     const searchParams = toURLSafeResult.searchParams;
     value = searchParams.get("referrer_id");
   }
-  const obj2 = { referrerId: value, customId: value3, linkId: value4 };
+  const obj2 = { referrerId: value, customId: null, linkId: null };
   value3 = undefined;
   if (toURLSafeResult != null) {
     const searchParams2 = toURLSafeResult.searchParams;
     value3 = searchParams2.get("custom_id");
   }
-  value4 = undefined;
+  obj2.customId = value3;
+  let value4;
   if (toURLSafeResult != null) {
     const searchParams3 = toURLSafeResult.searchParams;
     value4 = searchParams3.get("link_id");
   }
+  obj2.linkId = value4;
   return obj2;
 };

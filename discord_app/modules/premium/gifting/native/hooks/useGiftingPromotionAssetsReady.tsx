@@ -1,40 +1,31 @@
 // discord_app/modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx
-import react2 from "../../../../../../_runtime/00576_react.js";
-import react_nativeDefault from "../../../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import c from "../../../../../../_runtime/00576_c.js";
+import NativeImageManagerModuleDefault from "../../../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-let asset, c0;
-
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let themeAndReducedMotionAwareAssetUrl;
-      let tmp4;
-      let tmp5;
-      let tmp6;
+      const cResult = themeAndReducedMotionAwareAssetUrl(576).c(3);
       let obj = themeAndReducedMotionAwareAssetUrl(576);
-      const cResult = obj.c(3);
+      themeAndReducedMotionAwareAssetUrl =
+        themeAndReducedMotionAwareAssetUrl(10498).useThemeAndReducedMotionAwareAssetUrl(arg0);
       let obj2 = themeAndReducedMotionAwareAssetUrl(10498);
-      themeAndReducedMotionAwareAssetUrl = obj2.useThemeAndReducedMotionAwareAssetUrl(arg0);
-      [tmp4, importDefault] = react.useState(null);
-      _slicedToArray(react.useState(null), 2);
+      [tmp4, importDefault] = noop.useState(null);
       if (cResult[0] !== themeAndReducedMotionAwareAssetUrl) {
         const fn = function u() {
           if (null != c0) {
             c0 = true;
             const obj2 = { uri: tmp };
-            const obj = react_nativeDefault;
-            const preloadResult = obj.preload(obj2);
-            preloadResult.then((result) => {
+            NativeImageManagerModuleDefault.preload(obj2).then((result) => {
               if (c0) {
-                let tmp4 = null;
+                let tmp3 = null;
                 if (result) {
-                  tmp4 = themeAndReducedMotionAwareAssetUrl;
+                  tmp3 = themeAndReducedMotionAwareAssetUrl;
                 }
-                importDefault(tmp4);
+                importDefault(tmp3);
               }
             });
             return () => {
@@ -46,50 +37,51 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = themeAndReducedMotionAwareAssetUrl;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp6 = items;
-        tmp5 = fn;
+        let tmp6 = items;
+        let tmp5 = fn;
       } else {
         tmp5 = cResult[1];
         tmp6 = cResult[2];
       }
-      const effect = react.useEffect(tmp5, tmp6);
+      const effect = noop.useEffect(tmp5, tmp6);
       return null == themeAndReducedMotionAwareAssetUrl || tmp4 === themeAndReducedMotionAwareAssetUrl;
     }
   : (arg0) => {
-      let closure_1;
-      let first;
-      let themeAndReducedMotionAwareAssetUrl;
-      let obj = themeAndReducedMotionAwareAssetUrl(10498);
-      themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(arg0);
-      [first, closure_1] = react.useState(null);
+      themeAndReducedMotionAwareAssetUrl =
+        themeAndReducedMotionAwareAssetUrl(10498).useThemeAndReducedMotionAwareAssetUrl(arg0);
+      const tmp2 = _slicedToArray(noop.useState(null), 2);
+      closure_1 = tmp2[1];
       const items = [themeAndReducedMotionAwareAssetUrl];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (null != c0) {
           c0 = true;
           const obj2 = { uri: tmp };
           const obj = closure_1(dependencyMap[5]);
-          const preloadResult = obj.preload(obj2);
-          preloadResult.then((result) => {
-            if (c0) {
-              let tmp4 = null;
-              if (result) {
-                tmp4 = themeAndReducedMotionAwareAssetUrl;
+          closure_1(dependencyMap[5])
+            .preload(obj2)
+            .then((result) => {
+              if (c0) {
+                let tmp3 = null;
+                if (result) {
+                  tmp3 = themeAndReducedMotionAwareAssetUrl;
+                }
+                closure_1(tmp3);
               }
-              closure_1(tmp4);
-            }
-          });
+            });
           return () => {
             c0 = false;
           };
         }
       }, items);
-      return null == themeAndReducedMotionAwareAssetUrl || first === themeAndReducedMotionAwareAssetUrl;
+      return null == themeAndReducedMotionAwareAssetUrl || tmp2[0] === themeAndReducedMotionAwareAssetUrl;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (asset, asset2) => {
-      const obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       asset = undefined;
       if (asset != null) {
         asset = asset.asset;
@@ -101,9 +93,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp2Result2 = closure_5(asset1);
       if (cResult[0] === tmp2Result) {
-        let tmp7;
         if (cResult[1] === tmp2Result2) {
-          tmp7 = cResult[2];
+          let tmp7 = cResult[2];
         }
         return tmp7;
       }
@@ -114,18 +105,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj2;
     }
   : (asset, asset2) => {
-      let asset1;
       asset = undefined;
       if (asset != null) {
         asset = asset.asset;
       }
-      const obj = { isGiftCoachmarkAssetReady: closure_5(asset), isGiftReminderAssetReady: closure_5(asset1) };
-      asset1 = undefined;
+      const obj = { isGiftCoachmarkAssetReady: closure_5(asset), isGiftReminderAssetReady: null };
+      let asset1;
       if (asset2 != null) {
         asset1 = asset2.asset;
       }
+      obj.isGiftReminderAssetReady = closure_5(asset1);
       return obj;
     };
-const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
-
-export default tmp2;

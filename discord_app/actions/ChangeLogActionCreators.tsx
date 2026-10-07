@@ -1,70 +1,59 @@
 // discord_app/actions/ChangeLogActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import Constants from "../Constants.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
-import ChangelogConstants from "../modules/changelog/ChangelogConstants.tsx";
-import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChangelogStore from "../modules/changelog/ChangelogStore.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-let c2, c3;
-
+require = fn;
 function cacheBustParam() {
-  const date = new Date();
-  return "x=" + Math.floor(date.getMinutes() / 5);
+  return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
-const Endpoints = Constants.Endpoints;
-const ChangelogPlatforms = ChangelogConstants.ChangelogPlatforms;
-let obj = {
+const Endpoints = fn(1085).Endpoints;
+const ChangelogPlatforms = fn(2102).ChangelogPlatforms;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
+
+export default {
   lockChangeLog(key) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANGE_LOG_LOCK", key };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_LOCK", key });
   },
   unlockChangeLog(key) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANGE_LOG_UNLOCK", key };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_UNLOCK", key });
   },
   markChangelogAsSeen(id, date) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date });
     const LastReceivedChangelogId = UserSettings.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(id);
   },
   setChangelogOverride(id) {
-    const obj = DispatcherDefault;
-    const obj2 = { type: "CHANGE_LOG_SET_OVERRIDE", id };
-    obj.dispatch(obj2);
+    DispatcherDefault.dispatch({ type: "CHANGE_LOG_SET_OVERRIDE", id });
     if (null != id) {
       const self = this;
       this.sendChangelogMessage(id);
     }
   },
   sendChangelogMessage(changelog_id) {
-    let obj;
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.CHANGELOG_MESSAGES, body: obj, rejectWithError: true };
-    obj = { changelog_id };
+    const request = { url: Endpoints.CHANGELOG_MESSAGES, body: { changelog_id }, rejectWithError: true };
     HTTP.post(request);
   },
   fetchChangelogConfig() {
-    let date;
-    const MOBILE = ChangelogPlatforms.MOBILE;
     const HTTP = HTTPUtils.HTTP;
-    const get = HTTP.get;
     const obj = {
       url:
-        "https://cdn.discordapp.com/changelogs/config_" + MOBILE + ".json?" + "x=" + Math.floor(date.getMinutes() / 5),
+        "https://cdn.discordapp.com/changelogs/config_" +
+        ChangelogPlatforms.MOBILE +
+        ".json?" +
+        "x=" +
+        Math.floor(new Date().getMinutes() / 5),
       rejectWithError: true,
     };
-    date = new Date();
-    return get(obj);
+    return HTTP.get(obj);
   },
-  fetchChangelog(id, stateFromStores, arg2) {
-    let closure_1 = stateFromStores;
+  fetchChangelog(arg0, stateFromStores, arg2) {
+    closure_0 = arg0;
+    closure_1 = stateFromStores;
     let flag = arg2;
     if (arg2 === undefined) {
       flag = false;
@@ -75,17 +64,11 @@ let obj = {
     }
     const self = this;
     return flag2(function* () {
-      let MOBILE;
-      let changelog;
-      let closure_0;
-      let closure_1;
-      let tmp5;
-      id = tmp4;
-      if (null != changelog.getChangelog(id, tmp)) {
+      if (null != changelog.getChangelog(closure_0, tmp3)) {
         return null;
       }
       if (flag) {
-        MOBILE = constants.DESKTOP;
+        let MOBILE = constants.DESKTOP;
       } else {
         MOBILE = constants.MOBILE;
       }
@@ -94,60 +77,48 @@ let obj = {
         const _HermesInternal = HermesInternal;
         str = "?" + cacheBustParam();
       }
-      const HTTP = id(c2[6]).HTTP;
-      const obj5 = {
-        url: "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + id + "/" + tmp + ".json" + str,
-        rejectWithError: true,
-      };
+      const HTTP = closure_0(1282).HTTP;
       const _HermesInternal2 = HermesInternal;
-      const get = HTTP.get;
-      yield get(obj5);
-      if (1 === c3) {
-        c2 = 0;
-        const obj8 = { type: "CHANGE_LOG_FETCH_FAILED", id: closure_129_0, locale: closure_129_1 };
-        const obj6 = tmp(c2[4]);
-        obj6.dispatch(obj8);
-        tmp5 = null;
+      yield HTTP.get({
+        url: "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_0 + "/" + tmp3 + ".json" + str,
+        rejectWithError: true,
+      });
+      if (1 === tmp7) {
+        dependencyMap = 0;
+        tmp3(584).dispatch({ type: "CHANGE_LOG_FETCH_FAILED", id: closure_129_0, locale: closure_129_1 });
+        let tmp8 = null;
         if ("en-US" !== closure_129_1) {
           c3 = 3;
           changelog = 1;
-          const obj9 = { value: closure_129_4.fetchChangelog(closure_129_0, "en-US"), done: false };
-          return obj9;
+          return { value: closure_129_4.fetchChangelog(closure_129_0, "en-US"), done: false };
         }
-      } else if (2 === c3) {
+        tmp3(584);
+      } else if (2 === tmp7) {
         if (arg0 === 1) {
           changelog = 3;
           throw value;
         } else if (arg0 === 2) {
-          c2 = 0;
+          dependencyMap = 0;
           changelog = 3;
-          const obj10 = { value, done: true };
-          return obj10;
+          return { value, done: true };
         } else {
-          id = value;
-          const obj11 = { type: "CHANGE_LOG_FETCH_SUCCESS", id: closure_129_0, changelog: id.body };
-          const obj2 = tmp(c2[4]);
-          obj2.dispatch(obj11);
-          c2 = 0;
+          closure_128_0 = value;
+          tmp3(584).dispatch({ type: "CHANGE_LOG_FETCH_SUCCESS", id: closure_129_0, changelog: closure_128_0.body });
+          dependencyMap = 0;
           changelog = 3;
-          const obj12 = { value: id.body, done: true };
-          return obj12;
+          return { value: closure_128_0.body, done: true };
         }
       } else if (arg0 === 1) {
         changelog = 3;
         throw value;
       } else {
-        tmp5 = value;
+        tmp8 = value;
         if (arg0 === 2) {
           changelog = 3;
-          const obj = { value, done: true };
-          return obj;
+          return { value, done: true };
         }
       }
-      return tmp5;
+      return tmp8;
     })();
   },
 };
-const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
-
-export default obj;

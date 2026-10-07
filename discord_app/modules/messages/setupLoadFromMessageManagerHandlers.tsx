@@ -2,11 +2,9 @@
 import DurationsDefault from "../../utils/Durations.tsx";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
-
-let map, map1, set;
 
 let closure_2 = 5 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
 
 export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
@@ -19,13 +17,13 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
     channelId = channelId.channelId;
     if (null != channelId) {
       set.add(channelId);
-      const value = map1.get(channelId);
+      value = map1.get(channelId);
       if (null != value) {
         const _clearTimeout = clearTimeout;
         clearTimeout(value);
         map1.delete(channelId);
       }
-      const value2 = map.get(channelId);
+      value2 = map.get(channelId);
       if (null != value2) {
         map.delete(channelId);
         if (set.has(channelId)) {
@@ -38,8 +36,6 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
     }
   }
   function handleMessage(message) {
-    let channel_id;
-    let id;
     message = message.message;
     ({ id, channel_id } = message);
     if (null != id) {
@@ -48,23 +44,21 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
           const channelId = onBeforeBatch.getChannelId();
           let tmp3 = null != channelId;
           if (tmp3) {
-            tmp3 =
-              channelId === channel_id || currentSidebarChannelId.getCurrentSidebarChannelId(channelId) === channel_id;
-            const tmp4 =
-              channelId === channel_id || currentSidebarChannelId.getCurrentSidebarChannelId(channelId) === channel_id;
+            let tmp4 = channelId === channel_id;
+            if (!tmp4) {
+              tmp4 = currentSidebarChannelId.getCurrentSidebarChannelId(channelId) === channel_id;
+            }
+            tmp3 = tmp4;
           }
           if (tmp3) {
             if (onBeforeBatch != null) {
-              tmp14();
+              tmp16();
             }
             channel_id(message);
           } else {
-            let value = map.get(channel_id);
-            const obj = map;
+            value = map.get(channel_id);
             if (null == value) {
               const _Map = Map;
-              const self = this;
-              const self2 = this;
               map = new Map();
               const result = obj.set(channel_id, map);
               value = map;
@@ -79,13 +73,13 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
                 setTimeout(
                   () => {
                     map1.delete(channel_id);
-                    const value = map1.get(channel_id);
+                    value = map1.get(channel_id);
                     if (null != value) {
                       const _clearTimeout = clearTimeout;
                       clearTimeout(value);
                       map1.delete(channel_id);
                     }
-                    const value2 = map.get(channel_id);
+                    value2 = map.get(channel_id);
                     if (null != value2) {
                       map.delete(channel_id);
                       if (set.has(channel_id)) {
@@ -100,6 +94,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
                 ),
               );
             }
+            obj = map;
           }
         }
       }
@@ -112,7 +107,10 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
       tmp2();
     }
     const item = messages.forEach((channel_id) => {
-      const hasItem = null != channel_id.channel_id && set.has(channel_id.channel_id);
+      let hasItem = null != channel_id.channel_id;
+      if (hasItem) {
+        hasItem = set.has(channel_id.channel_id);
+      }
       if (hasItem) {
         currentSidebarChannelId(channel_id);
       }
@@ -131,39 +129,38 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
     });
   }
   const onBeforeBatch = obj.onBeforeBatch;
-  set = new Set();
-  map = new Map();
-  map1 = new Map();
-  const obj2 = {
-    POST_CONNECTION_OPEN() {
-      set.clear();
-      const item = map1.forEach((item) => clearTimeout(item));
-      map1.clear();
-      map.clear();
-    },
-    MESSAGE_CREATE: { callback: handleMessage, autoSubscribe: false },
-    MESSAGE_UPDATE: handleMessage,
-    LOAD_MESSAGES_SUCCESS: handleLoadMessages,
-    LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
-    LOAD_RECENT_MENTIONS_SUCCESS(messages) {
-      messages = messages.messages;
-      if (onBeforeBatch != null) {
-        tmp();
-      }
-      const item = messages.forEach((item) => currentSidebarChannelId(item));
-    },
-    LOAD_PINNED_MESSAGES_SUCCESS(pins) {
-      pins = pins.pins;
-      if (onBeforeBatch != null) {
-        tmp();
-      }
-      const item = pins.forEach((message) => currentSidebarChannelId(message.message));
-    },
-    SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
-    CHANNEL_SELECT: { callback: handleChannelSelect, autoSubscribe: false },
-    SIDEBAR_VIEW_CHANNEL: { callback: handleChannelSelect, autoSubscribe: false },
-  };
+  const set = new Set();
+  let map = new Map();
+  const map1 = new Map();
+  const obj2 = {};
   const merged = Object.assign(actions.actions);
+  obj2.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {
+    set.clear();
+    const item = map1.forEach((item) => clearTimeout(item));
+    map1.clear();
+    map.clear();
+  };
+  obj2.MESSAGE_CREATE = { callback: handleMessage, autoSubscribe: false };
+  obj2.MESSAGE_UPDATE = handleMessage;
+  obj2.LOAD_MESSAGES_SUCCESS = handleLoadMessages;
+  obj2.LOAD_MESSAGES_AROUND_SUCCESS = handleLoadMessages;
+  obj2.LOAD_RECENT_MENTIONS_SUCCESS = function LOAD_RECENT_MENTIONS_SUCCESS(messages) {
+    messages = messages.messages;
+    if (onBeforeBatch != null) {
+      tmp();
+    }
+    const item = messages.forEach((item) => currentSidebarChannelId(item));
+  };
+  obj2.LOAD_PINNED_MESSAGES_SUCCESS = function LOAD_PINNED_MESSAGES_SUCCESS(pins) {
+    pins = pins.pins;
+    if (onBeforeBatch != null) {
+      tmp();
+    }
+    const item = pins.forEach((message) => currentSidebarChannelId(message.message));
+  };
+  obj2.SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
+  obj2.MOD_VIEW_SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
+  obj2.CHANNEL_SELECT = { callback: handleChannelSelect, autoSubscribe: false };
+  obj2.SIDEBAR_VIEW_CHANNEL = { callback: handleChannelSelect, autoSubscribe: false };
   actions.actions = obj2;
 }

@@ -13,14 +13,12 @@ export default function trackVoiceAndVideoDebuggingSettingsUpdated(
   location_stack,
 ) {
   let StringResult;
-  const track = AnalyticsUtilsDefault.track;
-  const VOICE_AND_VIDEO_SETTINGS_UPDATED = AnalyticEvents.VOICE_AND_VIDEO_SETTINGS_UPDATED;
-  AnalyticsUtilsDefault;
   if (null != RTCDebugStore) {
     const _String = String;
     StringResult = String(RTCDebugStore);
   }
-  const obj = { previous_setting_value: StringResult, location_stack };
-  obj[active_input_profile] = enabled;
-  return track(VOICE_AND_VIDEO_SETTINGS_UPDATED, obj);
+  const obj2 = { previous_setting_value: StringResult };
+  obj2[active_input_profile] = enabled;
+  obj2.location_stack = location_stack;
+  return AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_AND_VIDEO_SETTINGS_UPDATED, obj2);
 }

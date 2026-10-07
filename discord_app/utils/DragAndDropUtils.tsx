@@ -1,14 +1,8 @@
 // discord_app/utils/DragAndDropUtils.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
-import size from "../../_runtime/metro/00002__.js";
 
 function calculatePositionDeltas(arg0) {
-  let ascending;
-  let existingPositionGetter;
-  let idGetter;
-  let newOrdering;
-  let oldOrdering;
   ({ oldOrdering, newOrdering, idGetter, existingPositionGetter, ascending } = arg0);
   if (ascending === undefined) {
     ascending = true;
@@ -27,8 +21,6 @@ function calculatePositionDeltas(arg0) {
       logger.warn("Object IDs in the old ordering and the new ordering are not the same.", joined, joined1);
       return [];
     } else {
-      let num;
-      let num2;
       const obj2 = {};
       for (let num = 0; num < length; num = num + 1) {
         let idGetterResult = idGetter(oldOrdering[num]);
@@ -56,19 +48,11 @@ function calculatePositionDeltas(arg0) {
 }
 function moveItemFromTo(c9, arg1, to) {
   const items = [...c9];
-  const tmp = c9[arg1];
   items.splice(arg1, 1);
-  items.splice(to, 0, tmp);
+  items.splice(to, 0, c9[arg1]);
   return items;
 }
 function getPositionUpdates(arg0) {
-  let ascending;
-  let existingPositionGetter;
-  let fromPosition;
-  let idGetter;
-  let items;
-  let objectArray;
-  let toPosition;
   ({ objectArray, fromPosition, ascending } = arg0);
   ({ toPosition, idGetter, existingPositionGetter } = arg0);
   if (ascending === undefined) {
@@ -76,18 +60,26 @@ function getPositionUpdates(arg0) {
   }
   let values = objectArray;
   if (!Array.isArray(objectArray)) {
-    const obj = _modDef12;
-    values = obj.values(objectArray);
+    values = _modDef12.values(objectArray);
   }
-  const obj2 = { oldOrdering: values, newOrdering: items, idGetter, existingPositionGetter, ascending };
-  items = [...values];
-  const tmp4 = values[fromPosition];
+  const obj2 = {
+    oldOrdering: values,
+    newOrdering: null,
+    idGetter: null,
+    existingPositionGetter: null,
+    ascending: null,
+  };
+  const items = [...values];
   items.splice(fromPosition, 1);
-  items.splice(toPosition, 0, tmp4);
+  items.splice(toPosition, 0, values[fromPosition]);
+  obj2.newOrdering = items;
+  obj2.idGetter = idGetter;
+  obj2.existingPositionGetter = existingPositionGetter;
+  obj2.ascending = ascending;
   return calculatePositionDeltas(obj2);
 }
 const logger = new LoggerDefault("DragAndDropUtils");
-new LoggerDefault("DragAndDropUtils");
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/DragAndDropUtils.tsx");
 
 export default { moveItemFromTo, calculatePositionDeltas, getPositionUpdates };

@@ -1,51 +1,38 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../../Constants.tsx";
 import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import RelationshipActionCreatorsDefault from "../../../../actions/RelationshipActionCreators.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let user;
+const require = fn;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
 
-const AnalyticEvents = Constants.AnalyticEvents;
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (user) => {
-      let first;
-      let reportId;
-      let tmp11;
-      let tmp12;
-      let tmp6;
-      let tmp7;
-      let tmp9;
-      let obj = user(reportId[6]);
-      const cResult = obj.c(28);
+      const cResult = user(reportId[6]).c(28);
       user = user.user;
       const channelId = user.channelId;
       reportId = user.reportId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== user.id) {
         const fn = function _() {
-          const obj = {
-            isIgnored: RelationshipStore.isIgnored(user.id),
-            isBlocked: RelationshipStore.isBlocked(user.id),
-          };
-          return obj;
+          return { isIgnored: RelationshipStore.isIgnored(user.id), isBlocked: RelationshipStore.isBlocked(user.id) };
         };
         cResult[1] = user.id;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
@@ -53,18 +40,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [user];
         cResult[3] = user;
         cResult[4] = items1;
-        tmp7 = items1;
+        let tmp7 = items1;
       } else {
         tmp7 = cResult[4];
       }
-      const tmpResult = user(reportId[7]);
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp6, tmp7);
-      let isIgnored = stateFromStoresObject.isIgnored;
-      const isBlocked = stateFromStoresObject.isBlocked;
+      let obj = user(reportId[6]);
+      const stateFromStoresObject = user(reportId[7]).useStateFromStoresObject(first, tmp6, tmp7);
+      let isBlocked = stateFromStoresObject.isIgnored;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ChannelStore];
         cResult[5] = items2;
-        tmp9 = items2;
+        let tmp9 = items2;
       } else {
         tmp9 = cResult[5];
       }
@@ -76,175 +62,192 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = channelId;
         cResult[7] = fn2;
         cResult[8] = items3;
-        tmp12 = items3;
-        tmp11 = fn2;
+        let tmp12 = items3;
+        let tmp11 = fn2;
       } else {
         tmp11 = cResult[7];
         tmp12 = cResult[8];
       }
-      const tmpResult2 = user(reportId[7]);
-      const stateFromStores = tmpResult2.useStateFromStores(tmp9, tmp11, tmp12);
+      const tmpResult = user(reportId[7]);
+      const stateFromStores = user(reportId[7]).useStateFromStores(tmp9, tmp11, tmp12);
       let guild_id;
-      const tmp14 = cResult[9];
       if (stateFromStores != null) {
         guild_id = stateFromStores.guild_id;
       }
-      if (tmp14 === guild_id) {
+      if (cResult[9] === guild_id) {
         let id;
-        const tmp16 = cResult[10];
         if (stateFromStores != null) {
           id = stateFromStores.id;
         }
-        if (tmp16 === id) {
-          let tmp18;
+        if (cResult[10] === id) {
           if (cResult[11] === user) {
-            tmp18 = cResult[12];
+            let tmp16 = cResult[12];
           }
           if (cResult[13] === channelId) {
             if (cResult[14] === reportId) {
-              let tmp25;
               if (cResult[15] === user.id) {
-                tmp25 = cResult[16];
+                let tmp22 = cResult[16];
               }
               if (null == user) {
                 return null;
               } else {
-                let tmp26;
-                let tmp29;
-                let tmp32;
-                let tmp34;
-                if (cResult[17] !== tmp18) {
+                if (cResult[17] !== tmp16) {
                   const intl = tmp(tmp2[11]).intl;
-                  const formatToPlainString = intl.formatToPlainString;
                   class B {
                     constructor() {
-                      const obj = AppAnalyticsUtilsDefault;
-                      const obj2 = { other_user_id: user.id, report_id: reportId };
-                      obj.trackWithMetadata(AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED, obj2);
-                      const obj3 = RelationshipActionCreatorsDefault;
-                      obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      obj = closure_1(closure_2[9]);
+                      obj1 = { other_user_id: user.id, report_id: reportId };
+                      trackWithMetadataResult = obj.trackWithMetadata(
+                        AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED,
+                        obj1,
+                      );
+                      obj3 = closure_1(closure_2[10]);
+                      ignoreUserResult = obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      return;
                     }
                   }
-                  tmp27[0] = tmp18;
-                  const formatToPlainStringResult = formatToPlainString(user(reportId[11]).t.U3yyFs, tmp27);
-                  cResult[17] = tmp18;
+                  tmp24[0] = tmp16;
+                  const formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[11]).t.U3yyFs, tmp24);
+                  cResult[17] = tmp16;
                   cResult[18] = formatToPlainStringResult;
-                  tmp26 = formatToPlainStringResult;
+                  let tmp23 = formatToPlainStringResult;
                 } else {
-                  tmp26 = cResult[18];
+                  tmp23 = cResult[18];
                 }
-                if (cResult[19] !== tmp18) {
+                if (cResult[19] !== tmp16) {
                   const intl2 = tmp(tmp2[11]).intl;
-                  const formatToPlainString2 = intl2.formatToPlainString;
                   class B {
                     constructor() {
-                      const obj = AppAnalyticsUtilsDefault;
-                      const obj2 = { other_user_id: user.id, report_id: reportId };
-                      obj.trackWithMetadata(AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED, obj2);
-                      const obj3 = RelationshipActionCreatorsDefault;
-                      obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      obj = closure_1(closure_2[9]);
+                      obj1 = { other_user_id: user.id, report_id: reportId };
+                      trackWithMetadataResult = obj.trackWithMetadata(
+                        AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED,
+                        obj1,
+                      );
+                      obj3 = closure_1(closure_2[10]);
+                      ignoreUserResult = obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      return;
                     }
                   }
-                  tmp30[0] = tmp18;
-                  const formatToPlainString2Result = formatToPlainString2(user(reportId[11]).t["264qVM"], tmp30);
-                  cResult[19] = tmp18;
-                  cResult[20] = formatToPlainString2Result;
-                  tmp29 = formatToPlainString2Result;
+                  tmp27[0] = tmp16;
+                  const formatToPlainStringResult1 = intl2.formatToPlainString(tmp(tmp2[11]).t["264qVM"], tmp27);
+                  cResult[19] = tmp16;
+                  cResult[20] = formatToPlainStringResult1;
+                  let tmp26 = formatToPlainStringResult1;
                 } else {
-                  tmp29 = cResult[20];
+                  tmp26 = cResult[20];
                 }
                 class B {
                   constructor() {
-                    const obj = AppAnalyticsUtilsDefault;
-                    const obj2 = { other_user_id: user.id, report_id: reportId };
-                    obj.trackWithMetadata(AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED, obj2);
-                    const obj3 = RelationshipActionCreatorsDefault;
-                    obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                    obj = closure_1(closure_2[9]);
+                    obj1 = { other_user_id: user.id, report_id: reportId };
+                    trackWithMetadataResult = obj.trackWithMetadata(
+                      AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED,
+                      obj1,
+                    );
+                    obj3 = closure_1(closure_2[10]);
+                    ignoreUserResult = obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                    return;
                   }
                 }
                 if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                   const string = tmp(tmp2[11]).intl.string;
                   class B {
                     constructor() {
-                      const obj = AppAnalyticsUtilsDefault;
-                      const obj2 = { other_user_id: user.id, report_id: reportId };
-                      obj.trackWithMetadata(AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED, obj2);
-                      const obj3 = RelationshipActionCreatorsDefault;
-                      obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      obj = closure_1(closure_2[9]);
+                      obj1 = { other_user_id: user.id, report_id: reportId };
+                      trackWithMetadataResult = obj.trackWithMetadata(
+                        AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED,
+                        obj1,
+                      );
+                      obj3 = closure_1(closure_2[10]);
+                      ignoreUserResult = obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      return;
                     }
                   }
-                  cResult[21] = tmp33;
-                  tmp32 = tmp33;
+                  cResult[21] = tmp30;
+                  let tmp29 = tmp30;
                 } else {
-                  tmp32 = cResult[21];
+                  tmp29 = cResult[21];
                 }
-                if (!isIgnored) {
-                  isIgnored = isBlocked;
+                if (!isBlocked) {
+                  isBlocked = stateFromStoresObject.isBlocked;
                 }
                 const _Symbol = Symbol;
                 if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp36 = jsx(user(reportId[12]).EyeSlashIcon, {});
+                  const tmp33 = jsx(tmp(tmp2[12]).EyeSlashIcon, {});
                   class B {
                     constructor() {
-                      const obj = AppAnalyticsUtilsDefault;
-                      const obj2 = { other_user_id: user.id, report_id: reportId };
-                      obj.trackWithMetadata(AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED, obj2);
-                      const obj3 = RelationshipActionCreatorsDefault;
-                      obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      obj = closure_1(closure_2[9]);
+                      obj1 = { other_user_id: user.id, report_id: reportId };
+                      trackWithMetadataResult = obj.trackWithMetadata(
+                        AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED,
+                        obj1,
+                      );
+                      obj3 = closure_1(closure_2[10]);
+                      ignoreUserResult = obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+                      return;
                     }
                   }
-                  cResult[22] = tmp36;
-                  tmp34 = tmp36;
+                  cResult[22] = tmp33;
+                  let tmp31 = tmp33;
                 } else {
-                  tmp34 = cResult[22];
+                  tmp31 = cResult[22];
                 }
-                if (cResult[23] === tmp25) {
-                  if (cResult[24] === tmp29) {
-                    if (cResult[25] === isIgnored) {
-                      let tmp37;
-                      if (cResult[26] === tmp26) {
-                        tmp37 = cResult[27];
+                if (cResult[23] === tmp22) {
+                  if (cResult[24] === tmp26) {
+                    if (cResult[25] === isBlocked) {
+                      if (cResult[26] === tmp23) {
+                        let tmp34 = cResult[27];
                       }
-                      return tmp37;
+                      return tmp34;
                     }
                   }
                 }
-                const tmp40 = jsx(channelId(reportId[13]), {
-                  title: tmp26,
-                  disabledTitle: tmp29,
-                  description: tmp32,
-                  disabled: isIgnored,
-                  onPress: tmp25,
-                  icon: tmp34,
+                let obj2 = {
+                  title: tmp23,
+                  disabledTitle: tmp26,
+                  description: tmp29,
+                  disabled: isBlocked,
+                  onPress: tmp22,
+                  icon: tmp31,
+                };
+                const tmp37 = jsx(channelId(tmp2[13]), {
+                  title: tmp23,
+                  disabledTitle: tmp26,
+                  description: tmp29,
+                  disabled: isBlocked,
+                  onPress: tmp22,
+                  icon: tmp31,
                 });
-                cResult[23] = tmp25;
-                cResult[24] = tmp29;
-                cResult[25] = isIgnored;
-                cResult[26] = tmp26;
-                cResult[27] = tmp40;
-                tmp37 = tmp40;
+                cResult[23] = tmp22;
+                cResult[24] = tmp26;
+                cResult[25] = isBlocked;
+                cResult[26] = tmp23;
+                cResult[27] = tmp37;
+                tmp34 = tmp37;
               }
             }
           }
           class B {
             constructor() {
-              const obj = AppAnalyticsUtilsDefault;
-              const obj2 = { other_user_id: user.id, report_id: reportId };
-              obj.trackWithMetadata(AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED, obj2);
-              const obj3 = RelationshipActionCreatorsDefault;
-              obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+              obj = closure_1(closure_2[9]);
+              obj1 = { other_user_id: user.id, report_id: reportId };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.IAR_IGNORE_USER_BUTTON_CLICKED, obj1);
+              obj3 = closure_1(closure_2[10]);
+              ignoreUserResult = obj3.ignoreUser(user.id, "mobile_iar_ignore_user_element", channelId);
+              return;
             }
           }
           cResult[13] = channelId;
           cResult[14] = reportId;
           cResult[15] = user.id;
           cResult[16] = B;
-          tmp25 = B;
+          tmp22 = B;
         }
       }
+      const tmpResult2 = user(reportId[7]);
       let guild_id1;
-      const getName = channelId(reportId[8]).getName;
-      channelId(reportId[8]);
       if (stateFromStores != null) {
         guild_id1 = stateFromStores.guild_id;
       }
@@ -252,7 +255,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         id1 = stateFromStores.id;
       }
-      const name = getName(guild_id1, id1, user);
+      const name = channelId(reportId[8]).getName(guild_id1, id1, user);
       let guild_id2;
       if (stateFromStores != null) {
         guild_id2 = stateFromStores.guild_id;
@@ -265,39 +268,32 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = id2;
       cResult[11] = user;
       cResult[12] = name;
-      tmp18 = name;
+      tmp16 = name;
+      const obj4 = channelId(reportId[8]);
     }
   : (user) => {
-      let isBlocked;
-      let isIgnored;
       user = user.user;
       const channelId = user.channelId;
       const reportId = user.reportId;
-      const tmp = user;
-      let obj = user(reportId[7]);
       const items = [RelationshipStore];
       const items1 = [user];
-      const stateFromStoresObject = obj.useStateFromStoresObject(
+      const stateFromStoresObject = user(reportId[7]).useStateFromStoresObject(
         items,
-        () => {
-          const obj = {
-            isIgnored: RelationshipStore.isIgnored(user.id),
-            isBlocked: RelationshipStore.isBlocked(user.id),
-          };
-          return obj;
-        },
+        () => ({ isIgnored: RelationshipStore.isIgnored(user.id), isBlocked: RelationshipStore.isBlocked(user.id) }),
         items1,
       );
       ({ isIgnored, isBlocked } = stateFromStoresObject);
-      let obj2 = user(reportId[7]);
+      let obj = user(reportId[7]);
       const items2 = [ChannelStore];
       const items3 = [channelId];
-      const stateFromStores = obj2.useStateFromStores(items2, () => ChannelStore.getChannel(channelId), items3);
+      const stateFromStores = user(reportId[7]).useStateFromStores(
+        items2,
+        () => ChannelStore.getChannel(channelId),
+        items3,
+      );
       const items4 = [stateFromStores, user];
       const memo = stateFromStores.useMemo(() => {
         let guild_id;
-        const getName = NicknameUtilsDefault.getName;
-        NicknameUtilsDefault;
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
@@ -305,33 +301,35 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           id = stateFromStores.id;
         }
-        return getName(guild_id, id, user);
+        return NicknameUtilsDefault.getName(guild_id, id, user);
       }, items4);
       const items5 = [user, reportId, channelId];
       let tmp8Result = null;
       if (null != user) {
-        channelId(reportId[13]);
+        const obj3 = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
         const intl = tmp(tmp2[11]).intl;
         const obj4 = { username: memo };
+        obj3.title = intl.formatToPlainString(tmp(tmp2[11]).t.U3yyFs, obj4);
         const intl2 = tmp(tmp2[11]).intl;
         const obj5 = { username: memo };
+        obj3.disabledTitle = intl2.formatToPlainString(tmp(tmp2[11]).t["264qVM"], obj5);
         const intl3 = tmp(tmp2[11]).intl;
+        obj3.description = intl3.string(tmp(tmp2[11]).t.naWE6W);
         if (!isIgnored) {
           isIgnored = isBlocked;
         }
-        tmp8Result = (
-          <tmp10
-            title={intl.formatToPlainString(tmp(reportId[11]).t.U3yyFs, obj4)}
-            disabledTitle={intl2.formatToPlainString(tmp(reportId[11]).t["264qVM"], obj5)}
-            description={intl3.string(tmp(reportId[11]).t.naWE6W)}
-            disabled={isIgnored}
-            onPress={tmp6}
-            icon={null}
-          />
-        );
+        obj3.disabled = isIgnored;
+        obj3.onPress = tmp6;
+        obj3.icon = jsx(tmp(tmp2[12]).EyeSlashIcon, {});
+        tmp8Result = jsx(channelId(tmp2[13]), {
+          title: null,
+          disabledTitle: null,
+          description: null,
+          disabled: null,
+          onPress: null,
+          icon: null,
+        });
+        const tmp10 = channelId(tmp2[13]);
       }
       return tmp8Result;
     };
-const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
-
-export default tmp2;

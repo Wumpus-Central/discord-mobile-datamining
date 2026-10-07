@@ -4,13 +4,6 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");
 
 export default function getFastestListVisibleItemsDefault(arg0) {
-  let estimatedListSize;
-  let itemSizes;
-  let listHeaderSize;
-  let sectionFooterSizes;
-  let sectionHeaderSizes;
-  let sections;
-  let sectionsVersioned;
   ({ estimatedListSize, sectionsVersioned } = arg0);
   ({ itemSizes, listHeaderSize, sections, sectionFooterSizes, sectionHeaderSizes } = sectionsVersioned);
   const obj = { sectionsId: sectionsVersioned.sectionsId, sectionStart: 0, sectionEnd: 0, itemStart: 0, itemEnd: -1 };
@@ -33,10 +26,9 @@ export default function getFastestListVisibleItemsDefault(arg0) {
             let tmp9 = sum;
             if (0 < sections[num2]) {
               while (true) {
-                let first;
                 obj.itemEnd = num;
                 if (tmp) {
-                  first = itemSizes[0].sizes[0];
+                  let first = itemSizes[0].sizes[0];
                 } else {
                   first = itemSizes[num2].sizes[num];
                 }

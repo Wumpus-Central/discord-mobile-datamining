@@ -1,41 +1,41 @@
 // discord_app/modules/stage_channels/native/components/ModeratorStartStageHeader.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
-import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import StageActionHeader from "StageActionHeader.tsx";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let channel;
-
-let closure_4;
-let hasOwnProperty;
-let obj2;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let obj = { header: obj2 };
-obj2 = {
-  height: NavigatorConstants.NAV_BAR_HEIGHT,
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj = {
+  header: {
+    height: fn(6075).NAV_BAR_HEIGHT,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 8,
+    marginTop: 4,
+    overflow: "visible",
+  },
+};
+let closure_6 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let obj3 = {
+  height: fn(6075).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,
   marginTop: 4,
   overflow: "visible",
 };
-let closure_6 = createStyles.createStyles(obj);
-const memo = react.memo;
-const memoResult = memo(
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (channel) => {
-        let items;
-        let tmp7;
-        let tmp8;
-        const obj = react2;
-        const cResult = obj.c(14);
+        const cResult = c.c(14);
         channel = channel.channel;
         const tmp4 = closure_6();
         const tmp5 = useMyCurrentStageChannelRoleDefault(channel.id);
@@ -45,30 +45,28 @@ const memoResult = memo(
         }
         if (cResult[0] !== channel) {
           const obj2 = { channel };
-          const tmp10 = React3(StageActionHeader.HideStageChannelCallIcon, obj2);
+          const tmp10 = React4(StageActionHeader.HideStageChannelCallIcon, obj2);
           const obj3 = { channel };
-          const tmp11 = React3(StageActionHeader.StageChannelCallHeader, obj3);
+          const tmp11 = React4(StageActionHeader.StageChannelCallHeader, obj3);
           cResult[0] = channel;
           cResult[1] = tmp10;
           cResult[2] = tmp11;
-          tmp8 = tmp11;
-          tmp7 = tmp10;
+          let tmp8 = tmp11;
+          let tmp7 = tmp10;
         } else {
           tmp7 = cResult[1];
           tmp8 = cResult[2];
         }
         if (cResult[3] === channel.id) {
-          let tmp12;
-          let tmp15;
           if (cResult[4] === speaker) {
-            tmp12 = cResult[5];
+            let tmp12 = cResult[5];
           }
           if (cResult[6] !== channel.id) {
             const obj4 = { channelId: channel.id };
-            const tmp17 = React3(StageActionHeader.StageInviteButton, obj4);
+            const tmp17 = React4(StageActionHeader.StageInviteButton, obj4);
             cResult[6] = channel.id;
             cResult[7] = tmp17;
-            tmp15 = tmp17;
+            let tmp15 = tmp17;
           } else {
             tmp15 = cResult[7];
           }
@@ -76,17 +74,17 @@ const memoResult = memo(
             if (cResult[9] === tmp7) {
               if (cResult[10] === tmp8) {
                 if (cResult[11] === tmp12) {
-                  let tmp18;
                   if (cResult[12] === tmp15) {
-                    tmp18 = cResult[13];
+                    let tmp18 = cResult[13];
                   }
                   return tmp18;
                 }
               }
             }
           }
-          const obj5 = { style: tmp4.header, pointerEvents: "box-none", children: items };
-          items = [tmp7, tmp8, tmp12, tmp15];
+          const obj5 = { style: tmp4.header, pointerEvents: "box-none", children: null };
+          const items = [tmp7, tmp8, tmp12, tmp15];
+          obj5.children = items;
           const tmp21 = hasOwnProperty(View, obj5);
           cResult[8] = tmp4.header;
           cResult[9] = tmp7;
@@ -97,9 +95,9 @@ const memoResult = memo(
           tmp18 = tmp21;
         }
         let tmp13 = speaker;
-        if (tmp13) {
+        if (speaker) {
           const obj6 = { channelId: channel.id };
-          tmp13 = React3(StageActionHeader.MusicMuteButton, obj6);
+          tmp13 = React4(StageActionHeader.MusicMuteButton, obj6);
         }
         cResult[3] = channel.id;
         cResult[4] = speaker;
@@ -107,30 +105,25 @@ const memoResult = memo(
         tmp12 = tmp13;
       }
     : (channel) => {
-        let items;
         channel = channel.channel;
-        const tmp = closure_6();
         const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
         let speaker;
         if (tmp3 != null) {
           speaker = tmp3.speaker;
         }
-        const obj = { style: tmp.header, pointerEvents: "box-none", children: items };
-        items = [
-          React3(StageActionHeader.HideStageChannelCallIcon, { channel }),
-          React3(StageActionHeader.StageChannelCallHeader, { channel }),
+        const obj = { style: closure_6().header, pointerEvents: "box-none", children: null };
+        const items = [
+          React4(StageActionHeader.HideStageChannelCallIcon, { channel }),
+          React4(StageActionHeader.StageChannelCallHeader, { channel }),
           ,
         ];
         if (speaker) {
           const obj2 = { channelId: channel.id };
-          speaker = React3(StageActionHeader.MusicMuteButton, obj2);
+          speaker = React4(StageActionHeader.MusicMuteButton, obj2);
         }
         items[2] = speaker;
-        const obj3 = { channelId: channel.id };
-        items[3] = React3(StageActionHeader.StageInviteButton, obj3);
+        items[3] = React4(StageActionHeader.StageInviteButton, { channelId: channel.id });
+        obj.children = items;
         return hasOwnProperty(View, obj);
       },
 );
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
-
-export default memoResult;

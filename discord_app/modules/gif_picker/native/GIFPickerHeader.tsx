@@ -1,61 +1,47 @@
 // discord_app/modules/gif_picker/native/GIFPickerHeader.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../Constants.tsx";
-import intl6 from "../../../intl/index.native.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import InputTypes from "../../../design/components/Input/native/InputTypes.native.tsx";
-import SearchField from "../../../design/components/TextField/native/SearchField.native.tsx";
-import GifProvider from "../GifProvider.tsx";
-import gif_picker_GIFPickerUtils from "GIFPickerUtils.tsx";
-import ChevronLargeLeftIcon2 from "../../../design/components/Icon/native/redesign/generated/ChevronLargeLeftIcon.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let set;
-
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
-let react = react_mod;
-let View = react_native.View;
-const GIFPickerResultTypes = Constants.GIFPickerResultTypes;
-({ jsx: metroImportDefault, Fragment: metroImportAll, jsxs: c9 } = Fragment);
-let createStyles = createStyles_mod;
+const util = SearchField(1126);
+const Text_Text = SearchField(4892);
+const Pressables = SearchField(5916);
+const SearchField2 = SearchField(6554);
+const GifProvider = SearchField(10104);
+const ChevronLargeLeftIcon = SearchField(10112);
+require = fn;
+const View = fn(17).View;
+fn(1085).GIFPickerResultTypes;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4896);
 let obj = {
-  container: obj2,
-  headerContainer: obj3,
-  header: obj4,
-  favoritesSearch: { position: "absolute", top: 0, end: 0, overflow: "hidden" },
+  container: { paddingVertical: nativeDefault.space.PX_8 },
+  headerContainer: null,
+  header: null,
+  favoritesSearch: null,
 };
-obj2 = { paddingVertical: nativeDefault.space.PX_8 };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
+obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10106).GIF_PICKER_GUTTER_SPACING,
 };
-obj4 = {
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10106).GIF_PICKER_GUTTER_SPACING };
+obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: InputTypes.InputHeights.MD,
+  height: fn(6113).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
 };
-let closure_10 = createStyles(obj);
+obj.favoritesSearch = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
+let closure_10 = createStyles.createStyles(obj);
 const __initData = {
   code: "function GIFPickerHeaderTsx1(){const{progress}=this.__closure;return{opacity:1-progress.get()};}",
 };
@@ -68,56 +54,43 @@ const __initData3 = {
 const __initData4 = {
   code: "function GIFPickerHeaderTsx4(){const{progress,columnWidth}=this.__closure;return{width:progress.get()*columnWidth,opacity:progress.get()};}",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (columnWidth) => {
-      let accessibilityElementsHidden;
-      let closure_4;
-      let intl;
-      let ref;
-      const tmp = columnWidth;
-      let obj = columnWidth(ref[10]);
-      const cResult = obj.c(29);
+      const cResult = columnWidth(ref[10]).c(29);
       columnWidth = columnWidth.columnWidth;
       const onQueryChange = columnWidth.onQueryChange;
-      const tmp4 = closure_10();
-      ref = react.useRef(null);
-      const tmp6 = accessibilityElementsHidden(react.useState(false), 2);
+      closure_10();
+      ref = noop.useRef(null);
+      const tmp6 = accessibilityElementsHidden(noop.useState(false), 2);
       accessibilityElementsHidden = tmp6[0];
-      const obj2 = react;
-      react = tmp6[1];
-      const obj3 = columnWidth(ref[11]);
-      const sharedValue = obj3.useSharedValue(0);
+      noop = tmp6[1];
+      let obj = columnWidth(ref[10]);
+      const obj2 = noop;
+      const sharedValue = columnWidth(ref[11]).useSharedValue(0);
       if (cResult[0] === accessibilityElementsHidden) {
-        let tmp9;
-        let tmp10;
-        let tmp19;
         if (cResult[1] === sharedValue) {
-          tmp9 = cResult[2];
-          tmp10 = cResult[3];
+          let tmp9 = cResult[2];
+          let tmp10 = cResult[3];
         }
         const effect = obj2.useEffect(tmp9, tmp10);
-        let tmpResult = tmp(tmp2[11]);
         const fn2 = function w() {
-          const obj = { opacity: 1 - sharedValue.get() };
-          return obj;
+          return { opacity: 1 - sharedValue.get() };
         };
         const obj4 = { progress: sharedValue };
         fn2.__closure = obj4;
-        let num = 11452628946352;
         fn2.__workletHash = 11452628946352;
         fn2.__initData = __initData;
-        const animatedStyle = tmpResult.useAnimatedStyle(fn2);
+        const animatedStyle = tmp(tmp2[11]).useAnimatedStyle(fn2);
+        let tmpResult = tmp(tmp2[11]);
         const fn3 = function x() {
-          const obj = { width: sharedValue.get() * columnWidth, opacity: sharedValue.get() };
-          return obj;
+          return { width: sharedValue.get() * columnWidth, opacity: sharedValue.get() };
         };
         const obj5 = { progress: sharedValue, columnWidth };
         fn3.__closure = obj5;
         fn3.__workletHash = 12592656871997;
         fn3.__initData = __initData2;
-        const tmpResult2 = tmp(ref[11]);
-        const animatedStyle1 = tmpResult2.useAnimatedStyle(fn3);
+        const animatedStyle1 = tmp(tmp2[11]).useAnimatedStyle(fn3);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           class R {
@@ -137,56 +110,68 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           class H {
             constructor() {
-              const current = ref.current;
-              let text;
+              current = closure_2.current;
+              text = undefined;
               if (current != null) {
                 text = current.getText();
               }
               if ("" === text) {
-                closure_4(false);
+                tmp2 = closure_4;
+                flag = false;
+                tmp3 = closure_4(false);
               }
+              return;
             }
           }
           cResult[5] = H;
         } else {
           class H {
             constructor() {
-              const current = ref.current;
-              let text;
+              current = closure_2.current;
+              text = undefined;
               if (current != null) {
                 text = current.getText();
               }
               if ("" === text) {
-                closure_4(false);
+                tmp2 = closure_4;
+                flag = false;
+                tmp3 = closure_4(false);
               }
+              return;
             }
           }
         }
         if (accessibilityElementsHidden) {
           class H {
             constructor() {
-              const current = ref.current;
-              let text;
+              current = closure_2.current;
+              text = undefined;
               if (current != null) {
                 text = current.getText();
               }
               if ("" === text) {
-                closure_4(false);
+                tmp2 = closure_4;
+                flag = false;
+                tmp3 = closure_4(false);
               }
+              return;
             }
           }
         }
         if (accessibilityElementsHidden) {
           class H {
             constructor() {
-              const current = ref.current;
-              let text;
+              current = closure_2.current;
+              text = undefined;
               if (current != null) {
                 text = current.getText();
               }
               if ("" === text) {
-                closure_4(false);
+                tmp2 = closure_4;
+                flag = false;
+                tmp3 = closure_4(false);
               }
+              return;
             }
           }
         }
@@ -194,53 +179,63 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class H {
             constructor() {
-              const current = ref.current;
-              let text;
+              current = closure_2.current;
+              text = undefined;
               if (current != null) {
                 text = current.getText();
               }
               if ("" === text) {
-                closure_4(false);
+                tmp2 = closure_4;
+                flag = false;
+                tmp3 = closure_4(false);
               }
+              return;
             }
           }
           const obj6 = {
             variant: "icon-only",
             size: "md",
-            icon: onQueryChange(ref[15]),
-            accessibilityLabel: intl.string(tmp(ref[16]).t["+Kakw+"]),
-            onPress: R,
+            icon: onQueryChange(tmp2[15]),
+            accessibilityLabel: null,
+            onPress: null,
           };
-          const IconButton = tmp(tmp2[14]).IconButton;
-          intl = tmp(tmp2[16]).intl;
-          const tmp21 = closure_7(IconButton, obj6);
+          const intl = tmp(tmp2[16]).intl;
+          obj6.accessibilityLabel = intl.string(tmp(tmp2[16]).t["+Kakw+"]);
+          obj6.onPress = R;
+          const tmp21 = closure_7(tmp(tmp2[14]).IconButton, obj6);
           cResult[6] = tmp21;
-          tmp19 = tmp21;
+          const tmp19 = tmp21;
         } else {
           class H {
             constructor() {
-              const current = ref.current;
-              let text;
+              current = closure_2.current;
+              text = undefined;
               if (current != null) {
                 text = current.getText();
               }
               if ("" === text) {
-                closure_4(false);
+                tmp2 = closure_4;
+                flag = false;
+                tmp3 = closure_4(false);
               }
+              return;
             }
           }
         }
         if (cResult[7] === animatedStyle) {
           class H {
             constructor() {
-              const current = ref.current;
-              let text;
+              current = closure_2.current;
+              text = undefined;
               if (current != null) {
                 text = current.getText();
               }
               if ("" === text) {
-                closure_4(false);
+                tmp2 = closure_4;
+                flag = false;
+                tmp3 = closure_4(false);
               }
+              return;
             }
           }
         }
@@ -251,22 +246,20 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           importantForAccessibility: "auto",
           children: tmp19,
         };
+        const tmp25 = closure_7(onQueryChange(tmp2[11]).View, obj7);
         cResult[7] = animatedStyle;
         cResult[8] = accessibilityElementsHidden;
         cResult[9] = "auto";
         cResult[10] = "auto";
-        cResult[11] = closure_7(onQueryChange(ref[11]).View, obj7);
-        const tmp25 = closure_7(onQueryChange(ref[11]).View, obj7);
+        cResult[11] = tmp25;
+        const tmpResult2 = tmp(tmp2[11]);
       }
       const fn = function s() {
         let num = 0;
-        set = sharedValue.set;
-        const withTiming = timing.withTiming;
-        timing;
         if (first) {
           num = 1;
         }
-        const result = set(withTiming(num, timingPresets.timingFast));
+        const result = sharedValue.set(timing.withTiming(num, timingPresets.timingFast));
         if (first) {
           const current = ref.current;
           if (current != null) {
@@ -281,39 +274,26 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp10 = items;
       tmp9 = fn;
+      const obj3 = columnWidth(ref[11]);
     }
   : (columnWidth) => {
-      let IconButton;
-      let closure_4;
-      let intl;
-      let items2;
-      let obj5;
-      let obj8;
-      let str;
-      let str2;
-      let str3;
-      let str4;
       columnWidth = columnWidth.columnWidth;
       const onQueryChange = columnWidth.onQueryChange;
       let accessibilityElementsHidden;
-      react = undefined;
-      const tmp = closure_10();
-      const ref = react.useRef(null);
-      const tmp3 = accessibilityElementsHidden(react.useState(false), 2);
+      noop = undefined;
+      const ref = noop.useRef(null);
+      const tmp3 = accessibilityElementsHidden(noop.useState(false), 2);
       accessibilityElementsHidden = tmp3[0];
-      react = tmp3[1];
-      let obj = columnWidth(ref[11]);
-      const sharedValue = obj.useSharedValue(0);
+      noop = tmp3[1];
+      const tmp = closure_10();
+      const sharedValue = columnWidth(ref[11]).useSharedValue(0);
       const items = [accessibilityElementsHidden, sharedValue];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         let num = 0;
-        set = sharedValue.set;
-        const withTiming = timing.withTiming;
-        timing;
         if (first) {
           num = 1;
         }
-        const result = set(withTiming(num, timingPresets.timingFast));
+        const result = sharedValue.set(timing.withTiming(num, timingPresets.timingFast));
         if (first) {
           const current = ref.current;
           if (current != null) {
@@ -321,28 +301,27 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      const obj2 = columnWidth(ref[11]);
+      let obj = columnWidth(ref[11]);
       class I {
         constructor() {
-          const obj = { opacity: 1 - sharedValue.get() };
+          obj = { opacity: 1 - closure_5.get() };
           return obj;
         }
       }
       I.__closure = { progress: sharedValue };
       I.__workletHash = 1563139253234;
       I.__initData = __initData3;
-      const animatedStyle = obj2.useAnimatedStyle(I);
+      const animatedStyle = columnWidth(ref[11]).useAnimatedStyle(I);
+      const obj2 = columnWidth(ref[11]);
       const fn = function v() {
-        const obj = { width: sharedValue.get() * columnWidth, opacity: sharedValue.get() };
-        return obj;
+        return { width: sharedValue.get() * columnWidth, opacity: sharedValue.get() };
       };
       fn.__closure = { progress: sharedValue, columnWidth };
       fn.__workletHash = 7861705308411;
       fn.__initData = __initData4;
-      const obj3 = columnWidth(ref[11]);
-      const animatedStyle1 = obj3.useAnimatedStyle(fn);
-      const callback = react.useCallback(() => closure_4(true), []);
-      const callback1 = react.useCallback(() => {
+      const animatedStyle1 = columnWidth(ref[11]).useAnimatedStyle(fn);
+      const callback = noop.useCallback(() => closure_4(true), []);
+      const callback1 = noop.useCallback(() => {
         const current = ref.current;
         let text;
         if (current != null) {
@@ -354,49 +333,56 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj4 = {
         style: animatedStyle,
-        pointerEvents: str,
-        accessibilityElementsHidden,
-        importantForAccessibility: str2,
-        children: closure_7(IconButton, obj5),
+        pointerEvents: null,
+        accessibilityElementsHidden: null,
+        importantForAccessibility: null,
+        children: null,
       };
-      str = "auto";
-      View = onQueryChange(ref[11]).View;
+      let str = "auto";
       if (accessibilityElementsHidden) {
         str = "none";
       }
-      str2 = "auto";
+      obj4.pointerEvents = str;
+      obj4.accessibilityElementsHidden = accessibilityElementsHidden;
+      let str2 = "auto";
       if (accessibilityElementsHidden) {
         str2 = "no-hide-descendants";
       }
-      obj5 = {
+      obj4.importantForAccessibility = str2;
+      const obj5 = {
         variant: "icon-only",
         size: "md",
         icon: onQueryChange(ref[15]),
-        accessibilityLabel: intl.string(columnWidth(ref[16]).t["+Kakw+"]),
-        onPress: callback,
+        accessibilityLabel: null,
+        onPress: null,
       };
-      IconButton = tmp5(tmp6[14]).IconButton;
-      intl = tmp5(tmp6[16]).intl;
-      const items1 = [closure_7(View, obj4)];
+      const intl = tmp5(tmp6[16]).intl;
+      obj5.accessibilityLabel = intl.string(columnWidth(ref[16]).t["+Kakw+"]);
+      obj5.onPress = callback;
+      obj4.children = closure_7(columnWidth(ref[14]).IconButton, obj5);
+      const items1 = [closure_7(onQueryChange(ref[11]).View, obj4)];
       const obj6 = {
-        style: items2,
-        pointerEvents: str3,
-        accessibilityElementsHidden: !accessibilityElementsHidden,
-        importantForAccessibility: str4,
-        children: closure_7(columnWidth(ref[17]).SearchField, obj8),
+        style: null,
+        pointerEvents: null,
+        accessibilityElementsHidden: null,
+        importantForAccessibility: null,
+        children: null,
       };
-      items2 = [tmp.favoritesSearch, animatedStyle1];
-      str3 = "none";
-      const View2 = tmp16(tmp6[11]).View;
+      const items2 = [tmp.favoritesSearch, animatedStyle1];
+      obj6.style = items2;
+      let str3 = "none";
       if (accessibilityElementsHidden) {
         str3 = "auto";
       }
-      str4 = "no-hide-descendants";
+      obj6.pointerEvents = str3;
+      obj6.accessibilityElementsHidden = !accessibilityElementsHidden;
+      let str4 = "no-hide-descendants";
       if (accessibilityElementsHidden) {
         str4 = "auto";
       }
-      const obj7 = { children: items1 };
-      obj8 = {
+      const obj7 = { children: null };
+      obj6.importantForAccessibility = str4;
+      obj6.children = closure_7(columnWidth(ref[17]).SearchField, {
         ref,
         size: "md",
         onChange: onQueryChange,
@@ -408,37 +394,44 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return tmpResult;
         },
         onBlur: callback1,
-      };
-      items1[1] = closure_7(View2, obj6);
+      });
+      items1[1] = closure_7(onQueryChange(ref[11]).View, obj6);
+      obj7.children = items1;
       return closure_9(closure_8, obj7);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
+ReactCompilerGating = fn(558);
+let obj5 = {
+  borderWidth: 1,
+  borderColor: "transparent",
+  paddingHorizontal: nativeDefault.space.PX_8,
+  height: fn(6113).InputHeights.MD,
+  flexDirection: "row",
+  alignItems: "center",
+  gap: nativeDefault.space.PX_8,
+};
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let UTypEu;
-        let categoryType;
-        let columnWidth;
-        let first;
-        let formatToPlainString;
-        let intl5;
-        let items;
-        let items1;
-        let obj6;
-        let onFavoritesQueryChange;
-        let onQueryChange;
-        let onQueryClear;
-        let searchInputRef;
-        let tmp18Result;
-        const obj = react2;
-        const cResult = obj.c(13);
-        ({ categoryType, columnWidth, onQueryClear, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
-        const tmp4 = closure_10();
+        let SearchField = require;
+        let obj = dependencyMap;
+        const cResult = c.c(13);
+        ({
+          categoryType,
+          columnWidth,
+          onQueryClear,
+          onQueryChange,
+          onFavoritesQueryChange,
+          searchInputRef: headerContainer,
+        } = arg0);
+        const tmp2 = closure_10();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmpResult = GifProvider;
-          const searchPlaceholder = tmpResult.getSearchPlaceholder();
+          const searchPlaceholder = GifProvider.getSearchPlaceholder();
           cResult[0] = searchPlaceholder;
-          first = searchPlaceholder;
+          let first = searchPlaceholder;
+          const SearchFieldResult = GifProvider;
         } else {
           first = cResult[0];
         }
@@ -447,25 +440,22 @@ const memoResult = react.memo(
             if (cResult[3] === onFavoritesQueryChange) {
               if (cResult[4] === onQueryChange) {
                 if (cResult[5] === onQueryClear) {
-                  if (cResult[6] === searchInputRef) {
-                    if (cResult[7] === tmp4.header) {
-                      let tmp7;
-                      if (cResult[8] === tmp4.headerContainer) {
-                        tmp7 = cResult[9];
-                      }
-                      if (cResult[10] === tmp4.container) {
-                        let tmp14;
-                        if (cResult[11] === tmp7) {
-                          tmp14 = cResult[12];
+                  if (cResult[6] === headerContainer) {
+                    if (cResult[7] === tmp2.header) {
+                      if (cResult[8] === tmp2.headerContainer) {
+                        if (cResult[10] === tmp2.container) {
+                          if (cResult[11] === tmp5) {
+                            let tmp12 = cResult[12];
+                          }
+                          return tmp12;
                         }
-                        return tmp14;
+                        const obj3 = { style: tmp2.container, children: cResult[9] };
+                        const tmp15 = React5(View, obj3);
+                        cResult[10] = tmp2.container;
+                        cResult[11] = cResult[9];
+                        cResult[12] = tmp15;
+                        tmp12 = tmp15;
                       }
-                      const obj2 = { style: tmp4.container, children: tmp7 };
-                      const tmp17 = metroImportDefault(View, obj2);
-                      cResult[10] = tmp4.container;
-                      cResult[11] = tmp7;
-                      cResult[12] = tmp17;
-                      tmp14 = tmp17;
                     }
                   }
                 }
@@ -474,44 +464,41 @@ const memoResult = react.memo(
           }
         }
         if (categoryType === GIFPickerResultTypes.SEARCH) {
-          const obj3 = {
+          SearchField = SearchField2.SearchField;
+          obj = {
             size: "md",
             onChange: onQueryChange,
             placeholder: first,
             onClear: onQueryClear,
-            ref: searchInputRef,
+            ref: headerContainer,
             round: true,
           };
-          tmp18Result = metroImportDefault(SearchField.SearchField, obj3);
+          let tmp16Result = React5(SearchField, obj);
         } else {
-          let stringResult;
-          const obj4 = { style: tmp4.headerContainer, children: items1 };
+          const obj4 = { style: tmp2.headerContainer, children: null };
           const obj5 = {
-            style: tmp4.header,
+            style: tmp2.header,
             accessibilityRole: "button",
             onPress: onQueryClear,
-            accessibilityLabel: formatToPlainString(UTypEu, obj6),
-            children: items,
+            accessibilityLabel: null,
+            children: null,
           };
-          const PressableOpacity = Pressables.PressableOpacity;
-          const intl4 = intl6.intl;
-          formatToPlainString = intl4.formatToPlainString;
-          obj6 = { destination: intl5.string(intl6.t.ffgJrs) };
-          UTypEu = intl6.t.UTypEu;
-          intl5 = intl6.intl;
+          const intl4 = util.intl;
+          const obj6 = { destination: null };
+          const intl5 = util.intl;
+          obj6.destination = intl5.string(util.t.ffgJrs);
+          obj5.accessibilityLabel = intl4.formatToPlainString(util.t.UTypEu, obj6);
           const obj7 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm" };
-          const ChevronLargeLeftIcon = ChevronLargeLeftIcon2.ChevronLargeLeftIcon;
-          items = [metroImportDefault(ChevronLargeLeftIcon, obj7)];
-          const Text = Text_Text.Text;
+          const items = [React5(ChevronLargeLeftIcon.ChevronLargeLeftIcon, obj7)];
           if (categoryType === GIFPickerResultTypes.TRENDING_GIFS) {
-            const intl3 = intl6.intl;
-            stringResult = intl3.string(intl6.t.TsWCdW);
+            const intl3 = util.intl;
+            let stringResult = intl3.string(util.t.TsWCdW);
           } else if (categoryType === GIFPickerResultTypes.FAVORITES) {
-            const intl2 = intl6.intl;
-            stringResult = intl2.string(intl6.t.k8fFjp);
+            const intl2 = util.intl;
+            stringResult = intl2.string(util.t.k8fFjp);
           } else {
-            const intl = intl6.intl;
-            stringResult = intl.string(intl6.t["5h0QOP"]);
+            const intl = util.intl;
+            stringResult = intl.string(util.t["5h0QOP"]);
           }
           const obj8 = {
             variant: "text-sm/semibold",
@@ -519,46 +506,34 @@ const memoResult = react.memo(
             maxFontSizeMultiplier: 2,
             children: stringResult,
           };
-          items[1] = metroImportDefault(Text, obj8);
-          items1 = [React4(PressableOpacity, obj5)];
-          let tmp20Result = categoryType === GIFPickerResultTypes.FAVORITES;
-          if (tmp20Result) {
+          items[1] = React5(Text_Text.Text, obj8);
+          obj5.children = items;
+          const items1 = [options(Pressables.PressableOpacity, obj5)];
+          let tmp18Result = categoryType === GIFPickerResultTypes.FAVORITES;
+          if (tmp18Result) {
             const obj9 = { columnWidth, onQueryChange: onFavoritesQueryChange };
-            tmp20Result = metroImportDefault(closure_15, obj9);
+            tmp18Result = React5(closure_15, obj9);
           }
-          items1[1] = tmp20Result;
-          tmp18Result = React4(View, obj4);
+          items1[1] = tmp18Result;
+          obj4.children = items1;
+          tmp16Result = options(View, obj4);
         }
         cResult[1] = categoryType;
         cResult[2] = columnWidth;
         cResult[3] = onFavoritesQueryChange;
         cResult[4] = onQueryChange;
         cResult[5] = onQueryClear;
-        cResult[6] = searchInputRef;
-        cResult[7] = tmp4.header;
-        cResult[8] = tmp4.headerContainer;
-        cResult[9] = tmp18Result;
-        tmp7 = tmp18Result;
+        cResult[6] = headerContainer;
+        ({ header: tmp[7], headerContainer } = tmp2);
+        cResult[8] = headerContainer;
+        cResult[9] = tmp16Result;
       }
     : (arg0) => {
-        let UTypEu;
-        let categoryType;
-        let columnWidth;
-        let formatToPlainString;
-        let intl5;
-        let items;
-        let items1;
-        let obj5;
-        let onFavoritesQueryChange;
-        let onQueryChange;
-        let onQueryClear;
-        let searchInputRef;
-        let tmp13Result;
         ({ categoryType, onQueryClear } = arg0);
         ({ columnWidth, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
         const tmp = closure_10();
         GifProvider;
-        const obj = { style: tmp.container, children: tmp13Result };
+        const obj = { style: tmp.container, children: null };
         if (categoryType === GIFPickerResultTypes.SEARCH) {
           const obj2 = {
             size: "md",
@@ -568,36 +543,32 @@ const memoResult = react.memo(
             ref: searchInputRef,
             round: true,
           };
-          tmp13Result = metroImportDefault(SearchField.SearchField, obj2);
+          let tmp13Result = React5(SearchField2.SearchField, obj2);
         } else {
-          let stringResult;
-          const obj3 = { style: tmp.headerContainer, children: items1 };
+          const obj3 = { style: tmp.headerContainer, children: null };
           const obj4 = {
             style: tmp.header,
             accessibilityRole: "button",
             onPress: onQueryClear,
-            accessibilityLabel: formatToPlainString(UTypEu, obj5),
-            children: items,
+            accessibilityLabel: null,
+            children: null,
           };
-          const PressableOpacity = Pressables.PressableOpacity;
-          const intl4 = intl6.intl;
-          formatToPlainString = intl4.formatToPlainString;
-          obj5 = { destination: intl5.string(intl6.t.ffgJrs) };
-          UTypEu = intl6.t.UTypEu;
-          intl5 = intl6.intl;
+          const intl4 = util.intl;
+          const obj5 = { destination: null };
+          const intl5 = util.intl;
+          obj5.destination = intl5.string(util.t.ffgJrs);
+          obj4.accessibilityLabel = intl4.formatToPlainString(util.t.UTypEu, obj5);
           const obj6 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm" };
-          const ChevronLargeLeftIcon = ChevronLargeLeftIcon2.ChevronLargeLeftIcon;
-          items = [metroImportDefault(ChevronLargeLeftIcon, obj6)];
-          const Text = Text_Text.Text;
+          const items = [React5(ChevronLargeLeftIcon.ChevronLargeLeftIcon, obj6)];
           if (categoryType === GIFPickerResultTypes.TRENDING_GIFS) {
-            const intl3 = intl6.intl;
-            stringResult = intl3.string(intl6.t.TsWCdW);
+            const intl3 = util.intl;
+            let stringResult = intl3.string(util.t.TsWCdW);
           } else if (categoryType === GIFPickerResultTypes.FAVORITES) {
-            const intl2 = intl6.intl;
-            stringResult = intl2.string(intl6.t.k8fFjp);
+            const intl2 = util.intl;
+            stringResult = intl2.string(util.t.k8fFjp);
           } else {
-            const intl = intl6.intl;
-            stringResult = intl.string(intl6.t["5h0QOP"]);
+            const intl = util.intl;
+            stringResult = intl.string(util.t["5h0QOP"]);
           }
           const obj7 = {
             variant: "text-sm/semibold",
@@ -605,19 +576,19 @@ const memoResult = react.memo(
             maxFontSizeMultiplier: 2,
             children: stringResult,
           };
-          items[1] = metroImportDefault(Text, obj7);
-          items1 = [React4(PressableOpacity, obj4)];
+          items[1] = React5(Text_Text.Text, obj7);
+          obj4.children = items;
+          const items1 = [options(Pressables.PressableOpacity, obj4)];
           let tmp6Result2 = categoryType === GIFPickerResultTypes.FAVORITES;
           if (tmp6Result2) {
             const obj8 = { columnWidth, onQueryChange: onFavoritesQueryChange };
-            tmp6Result2 = metroImportDefault(closure_15, obj8);
+            tmp6Result2 = React5(closure_15, obj8);
           }
           items1[1] = tmp6Result2;
-          tmp13Result = React4(View, obj3);
+          obj3.children = items1;
+          tmp13Result = options(View, obj3);
         }
-        return metroImportDefault(View, obj);
+        obj.children = tmp13Result;
+        return React5(View, obj);
       },
 );
-let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
-
-export default memoResult;

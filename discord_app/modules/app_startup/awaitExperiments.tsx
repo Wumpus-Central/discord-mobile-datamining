@@ -2,8 +2,6 @@
 import Future from "../../../discord_common/js/shared/utils/Future.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c1;
-
 const future = new Future.Future();
 let closure_1 = null;
 const result = size.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");

@@ -1,91 +1,91 @@
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import Constants from "../../../Constants.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_1, closure_2;
-
-let obj = function _getTemplates() {
-  obj = _asyncToGenerator(async (guildId) => {
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let obj8;
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+require = fn;
+let closure_5 = async function _getTemplates(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let body;
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              return { value, done: true };
-            } else {
-              closure_2 = tmp;
-              closure_1 = tmp4;
-              body = undefined;
-              const HTTP = HTTPUtils.HTTP;
-              const get = HTTP.get;
-              const obj4 = {
-                url: Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(guildId),
-                rejectWithError: obj8.rejectWithMigratedError(),
-              };
-              c3 = 1;
-              c4 = 1;
-              obj8 = HTTPUtils;
-              const obj5 = { value: get(obj4), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            return { value, done: true };
-          } else {
-            body = value.body;
-            if (null != body.templates) {
-              const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES", templates: body.templates, guildId };
-              obj = closure_130_1(closure_130_2[2]);
-              obj.dispatch(obj7);
-            }
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp15) {
           c4 = 3;
-          throw tmp15;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp2;
+          closure_1 = tmp5;
+          closure_129_0 = closure_0;
+          let body;
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = {
+            url: Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(closure_0),
+            rejectWithError: HTTPUtils.rejectWithMigratedError(),
+          };
+          c3 = 1;
+          c4 = 1;
+          const obj5 = { value: HTTP.get(obj4), done: false };
+          return obj5;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        body = value.body;
+        if (null != body.templates) {
+          const obj7 = {
+            type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES",
+            templates: body.templates,
+            guildId: closure_129_0,
+          };
+          closure_130_1(closure_130_2[2]).dispatch(obj7);
+          const obj = closure_130_1(closure_130_2[2]);
+        }
+        c4 = 3;
+        return { value: "IconComponent", done: null };
       }
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp16) {
+      c4 = tmp;
+      throw tmp16;
+    }
+  }
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx",
 );
 
 export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
-  obj = DispatcherDefault;
-  const obj2 = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId });
 };
 export const getTemplates = function getTemplates() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

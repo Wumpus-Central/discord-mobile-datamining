@@ -1,57 +1,49 @@
 // discord_app/modules/premium/useIsPremiumSubscriber.tsx
-import PremiumConstants from "PremiumConstants.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const PremiumTypes = PremiumConstants.PremiumTypes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const PremiumTypes = fn(1379).PremiumTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");
+
+export const useIsPremiumSubscriber = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      let tmp7;
       let TIER_2 = arg0;
-      let obj = TIER_2(576);
-      const cResult = obj.c(3);
-      const tmp = TIER_2;
+      const cResult = TIER_2(576).c(3);
       if (undefined === arg0) {
         TIER_2 = PremiumTypes.TIER_2;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== TIER_2) {
         const fn = function o() {
           const currentUser = UserStore.getCurrentUser();
-          const obj = PremiumTypeUtils;
-          return obj.isPremiumExactly(currentUser, TIER_2);
+          return PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2);
         };
         cResult[1] = TIER_2;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStores(first, tmp7);
+      const obj = TIER_2(576);
+      return TIER_2(504).useStateFromStores(first, tmp7);
     }
   : () => {
       let TIER_2 = arg0;
       if (arg0 === undefined) {
         TIER_2 = PremiumTypes.TIER_2;
       }
-      let obj = TIER_2(504);
       const items = [UserStore];
-      return obj.useStateFromStores(items, () => {
+      return TIER_2(504).useStateFromStores(items, () => {
         const currentUser = UserStore.getCurrentUser();
-        const obj = PremiumTypeUtils;
-        return obj.isPremiumExactly(currentUser, TIER_2);
+        return PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2);
       });
     };
-const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");
-
-export const useIsPremiumSubscriber = tmp2;

@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx
-import Constants from "../../../../../Constants.tsx";
 import ThreadHooks from "../../../../threads/ThreadHooks.tsx";
 import GuildMemberStore from "../../../../../stores/GuildMemberStore.tsx";
 import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
-const Permissions = Constants.Permissions;
+require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx",
 );
@@ -22,10 +22,8 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     }
     tmp2 = isPending;
   }
-  const obj = ThreadHooks;
-  const isReadOnlyThread = obj.computeIsReadOnlyThread(channel);
+  const isReadOnlyThread = ThreadHooks.computeIsReadOnlyThread(channel);
   let canResult = PermissionStore.can(Permissions.SEND_MESSAGES, channel);
-  const bot = message.author.bot;
   if (canResult) {
     canResult = !isReadOnlyThread;
   }
@@ -33,7 +31,7 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     canResult = !tmp2;
   }
   if (canResult) {
-    canResult = !bot;
+    canResult = !message.author.bot;
   }
   if (canResult) {
     canResult = arg3;

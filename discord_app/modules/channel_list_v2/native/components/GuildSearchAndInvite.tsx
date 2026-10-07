@@ -1,62 +1,49 @@
 // discord_app/modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl6 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import useStableCallbackDefault from "../../../../hooks/useStableCallback.tsx";
-import IconButton4 from "../../../../design/components/Button/native/IconButton.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09311_AssetRegistry.js";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import _modDef9311 from "../../../../../_runtime/metro/09311__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import utils_InstantInviteUtils from "../../../../utils/native/InstantInviteUtils.tsx";
-import AssetRegistryDefault2 from "../../../../../_runtime/09728_AssetRegistry.js";
-import RedesignChannelListConstants from "../RedesignChannelListConstants.tsx";
+import _modDef9728 from "../../../../../_runtime/metro/09728__.js";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import SearchPlatformUtilsDefault from "../../../search/native/SearchPlatformUtils.tsx";
 import useCanSeeEventsInChannelListDefault from "../../../guild_scheduled_events/useCanSeeEventsInChannelList.tsx";
 import useEventsButtonPropsDefault from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../../stores/GuildChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let guildId, navigation;
-
-let c10;
-let closure_12;
-let map1;
-let unpackModuleId;
+require = fn;
 function handleInviteDisabledPress() {
-  let paths;
-  const lazyResult = react.lazy(() => require("asyncRequire")(paths[11], paths.paths));
-  const obj = useAlertStore;
-  obj.openAlert("invites-disabled", closure_12(lazyResult, {}));
+  const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[11], paths.paths));
+  useAlertStore.openAlert("invites-disabled", __initData(lazyResult, {}));
 }
-let View = react_native.View;
-const SEARCH_BAR_MARGIN_BOTTOM = RedesignChannelListConstants.SEARCH_BAR_MARGIN_BOTTOM;
-({ GuildFeatures: c10, InstantInviteSources: unpackModuleId } = Constants);
-({ jsx: closure_12, jsxs: map1 } = Fragment);
+const View = fn(17).View;
+const SEARCH_BAR_MARGIN_BOTTOM = fn(11711).SEARCH_BAR_MARGIN_BOTTOM;
+const Constants = fn(1085);
+({ GuildFeatures: c10, InstantInviteSources: closure_11 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(4896);
 let closure_14 = createStyles.createStyles((arg0) => {
-  let num;
   const obj = {
     paddingHorizontal: nativeDefault.space.PX_16,
     marginBottom: SEARCH_BAR_MARGIN_BOTTOM,
     flexDirection: "row",
-    gap: num,
+    gap: null,
   };
-  num = 10;
-  const tmp3 = arg0;
-  if (tmp3) {
+  let num = 10;
+  if (arg0) {
     num = nativeDefault.space.PX_12;
   }
-  const obj2 = { container: obj, search: { flex: 1 }, badge: size };
-  size = {
+  const obj2 = { container: obj, search: { flex: 1 }, badge: null };
+  obj.gap = num;
+  const size = {
     position: "absolute",
     right: 0,
     top: 0,
@@ -65,30 +52,13 @@ let closure_14 = createStyles.createStyles((arg0) => {
     borderRadius: nativeDefault.radii.round,
     backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   };
+  obj2.badge = size;
   return obj2;
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let canInvite;
-      let guildSearchContext;
-      let hasUnreadEvents;
-      let intl;
-      let intl3;
-      let intl4;
-      let invitesDisabled;
-      let items;
-      let items1;
-      let onEventsPress;
-      let onInvitePress;
-      let onPressIn;
-      let onPressOut;
-      let pressableStyles;
-      let str2;
-      let useButtonComponent;
-      let useEventsButton;
-      let obj = guildId(guildSearchContext[15]);
-      const cResult = obj.c(39);
+      const cResult = guildId(guildSearchContext[15]).c(39);
       guildId = guildId.guildId;
       ({
         canInvite,
@@ -100,43 +70,36 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         useButtonComponent,
       } = guildId);
       const tmp4 = closure_14(useButtonComponent);
+      let obj = guildId(guildSearchContext[15]);
+      const navigation = guildId(guildSearchContext[16]).useNavigation();
       let obj2 = guildId(guildSearchContext[16]);
-      navigation = obj2.useNavigation();
-      let obj3 = guildId(guildSearchContext[17]);
-      guildSearchContext = obj3.useGuildSearchContext(guildId);
+      guildSearchContext = guildId(guildSearchContext[17]).useGuildSearchContext(guildId);
       if (cResult[0] === guildId) {
         if (cResult[1] === navigation) {
-          let tmp7;
           if (cResult[2] === guildSearchContext) {
-            tmp7 = cResult[3];
+            let tmp7 = cResult[3];
           }
-          const tmp9 = navigation(guildSearchContext[20])(tmp7);
-          const tmpResult = guildId(guildSearchContext[21]);
-          const iOSPressEffects = tmpResult.useIOSPressEffects(4);
+          const tmp9 = navigation(tmp2[20])(tmp7);
+          const iOSPressEffects = tmp(tmp2[21]).useIOSPressEffects(4);
           ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
           if (cResult[4] === canInvite) {
             if (cResult[5] === invitesDisabled) {
-              let tmp11;
               if (cResult[6] === onInvitePress) {
-                tmp11 = cResult[7];
+                let tmp11 = cResult[7];
               }
               if (cResult[8] === hasUnreadEvents) {
                 if (cResult[9] === onEventsPress) {
                   if (cResult[10] === tmp4.badge) {
-                    let tmp15;
                     if (cResult[11] === useEventsButton) {
-                      tmp15 = cResult[12];
+                      let tmp15 = cResult[12];
                     }
                     if (useButtonComponent) {
-                      let tmp38;
-                      let tmp40;
                       const _Symbol = Symbol;
-                      const container = tmp4.container;
                       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                         const intl5 = tmp(tmp2[24]).intl;
-                        const stringResult = intl5.string(guildId(guildSearchContext[24]).t["5h0QOP"]);
+                        const stringResult = intl5.string(tmp(tmp2[24]).t["5h0QOP"]);
                         cResult[13] = stringResult;
-                        tmp38 = stringResult;
+                        let tmp38 = stringResult;
                       } else {
                         tmp38 = cResult[13];
                       }
@@ -146,32 +109,31 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                           grow: true,
                           shrink: true,
                           size: "sm",
-                          icon: navigation(guildSearchContext[27]),
+                          icon: tmp8(tmp2[27]),
                           onPress: tmp9,
                           text: tmp38,
                           maxFontSizeMultiplier: 2,
                         };
-                        const Button = tmp(tmp2[26]).Button;
-                        const tmp42 = closure_12(Button, obj4);
+                        const tmp42 = closure_12(tmp(tmp2[26]).Button, obj4);
                         cResult[14] = tmp9;
                         cResult[15] = tmp42;
-                        tmp40 = tmp42;
+                        let tmp40 = tmp42;
                       } else {
                         tmp40 = cResult[15];
                       }
                       if (cResult[16] === tmp15) {
                         if (cResult[17] === tmp11) {
                           if (cResult[18] === tmp4.container) {
-                            let tmp43;
                             if (cResult[19] === tmp40) {
-                              tmp43 = cResult[20];
+                              let tmp43 = cResult[20];
                             }
                             return tmp43;
                           }
                         }
                       }
-                      const obj5 = { style: container, children: items };
-                      items = [tmp40, tmp11, tmp15];
+                      const obj5 = { style: tmp4.container, children: null };
+                      const items = [tmp40, tmp11, tmp15];
+                      obj5.children = items;
                       const tmp46 = closure_13(View, obj5);
                       cResult[16] = tmp15;
                       cResult[17] = tmp11;
@@ -181,38 +143,34 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp43 = tmp46;
                     } else {
                       if (cResult[21] === pressableStyles) {
-                        let tmp22;
                         if (cResult[22] === tmp4.search) {
-                          tmp22 = cResult[23];
+                          let tmp22 = cResult[23];
                         }
                         if (cResult[24] === tmp9) {
                           if (cResult[25] === onPressIn) {
-                            let tmp23;
                             if (cResult[26] === onPressOut) {
-                              tmp23 = cResult[27];
+                              let tmp23 = cResult[27];
                             }
                             if (cResult[28] === tmp22) {
-                              let tmp26;
                               if (cResult[29] === tmp23) {
-                                tmp26 = cResult[30];
+                                let tmp26 = cResult[30];
                               }
                               if (cResult[31] === canInvite) {
                                 if (cResult[32] === invitesDisabled) {
-                                  let tmp29;
                                   if (cResult[33] === onInvitePress) {
-                                    tmp29 = cResult[34];
+                                    let tmp29 = cResult[34];
                                   }
                                   if (cResult[35] === tmp4.container) {
                                     if (cResult[36] === tmp26) {
-                                      let tmp33;
                                       if (cResult[37] === tmp29) {
-                                        tmp33 = cResult[38];
+                                        let tmp33 = cResult[38];
                                       }
                                       return tmp33;
                                     }
                                   }
-                                  const obj6 = { style: tmp4.container, children: items1 };
-                                  items1 = [tmp26, tmp29];
+                                  const obj6 = { style: tmp4.container, children: null };
+                                  const items1 = [tmp26, tmp29];
+                                  obj6.children = items1;
                                   const tmp36 = closure_13(View, obj6);
                                   cResult[35] = tmp4.container;
                                   cResult[36] = tmp26;
@@ -225,15 +183,16 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                               if (canInvite) {
                                 const obj7 = {
                                   variant: "tertiary",
-                                  icon: navigation(guildSearchContext[23]),
+                                  icon: tmp8(tmp2[23]),
                                   onPress: onInvitePress,
                                   onPressDisabled: handleInviteDisabledPress,
-                                  accessibilityLabel: intl4.string(guildId(guildSearchContext[24]).t.VINpSK),
-                                  disabled: invitesDisabled,
+                                  accessibilityLabel: null,
+                                  disabled: null,
                                 };
-                                const IconButton3 = tmp(tmp2[22]).IconButton;
-                                intl4 = tmp(tmp2[24]).intl;
-                                tmp30 = closure_12(IconButton3, obj7);
+                                const intl4 = tmp(tmp2[24]).intl;
+                                obj7.accessibilityLabel = intl4.string(tmp(tmp2[24]).t.VINpSK);
+                                obj7.disabled = invitesDisabled;
+                                tmp30 = closure_12(tmp(tmp2[22]).IconButton, obj7);
                               }
                               cResult[31] = canInvite;
                               cResult[32] = invitesDisabled;
@@ -242,7 +201,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                               tmp29 = tmp30;
                             }
                             const obj8 = { style: tmp22, children: tmp23 };
-                            const tmp28 = closure_12(navigation(guildSearchContext[29]).View, obj8);
+                            const tmp28 = closure_12(tmp8(tmp2[29]).View, obj8);
                             cResult[28] = tmp22;
                             cResult[29] = tmp23;
                             cResult[30] = tmp28;
@@ -250,7 +209,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                         const obj9 = { onPress: tmp9, onPressIn, onPressOut };
-                        const tmp25 = closure_12(guildId(guildSearchContext[28]).SearchButtonContent, obj9);
+                        const tmp25 = closure_12(tmp(tmp2[28]).SearchButtonContent, obj9);
                         cResult[24] = tmp9;
                         cResult[25] = onPressIn;
                         cResult[26] = onPressOut;
@@ -271,22 +230,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj10 = {
                   variant: "secondary",
                   size: "sm",
-                  icon: navigation(guildSearchContext[25]),
-                  accessibilityLabel: str2 + intl3.string(guildId(guildSearchContext[24]).t.tlopTM),
-                  onPress: onEventsPress,
+                  icon: tmp8(tmp2[25]),
+                  accessibilityLabel: null,
+                  onPress: null,
                   maxFontSizeMultiplier: 2,
                 };
-                const IconButton2 = tmp(tmp2[22]).IconButton;
-                str2 = "";
+                let str2 = "";
                 if (hasUnreadEvents) {
                   const intl2 = tmp(tmp2[24]).intl;
                   const _HermesInternal = HermesInternal;
                   str2 = "" + intl2.string(tmp(tmp2[24]).t.hcaVYl) + ", ";
                 }
-                intl3 = tmp(tmp2[24]).intl;
-                const items3 = [closure_12(IconButton2, obj10)];
+                const intl3 = tmp(tmp2[24]).intl;
+                obj10.accessibilityLabel = str2 + intl3.string(tmp(tmp2[24]).t.tlopTM);
+                obj10.onPress = onEventsPress;
+                const items3 = [closure_12(tmp(tmp2[22]).IconButton, obj10)];
                 let tmp19Result = hasUnreadEvents;
-                if (tmp19Result) {
+                if (hasUnreadEvents) {
                   const obj11 = {
                     style: tmp4.badge,
                     importantForAccessibility: "no-hide-descendants",
@@ -294,8 +254,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   tmp19Result = closure_12(View, obj11);
                 }
-                const obj12 = { children: items3 };
+                const obj12 = { children: null };
                 items3[1] = tmp19Result;
+                obj12.children = items3;
                 tmp17Result = closure_13(View, obj12);
               }
               cResult[8] = hasUnreadEvents;
@@ -311,34 +272,35 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             const obj13 = {
               variant: "secondary",
               size: "sm",
-              icon: navigation(guildSearchContext[23]),
+              icon: tmp8(tmp2[23]),
               onPress: onInvitePress,
               onPressDisabled: handleInviteDisabledPress,
-              accessibilityLabel: intl.string(guildId(guildSearchContext[24]).t.VINpSK),
-              disabled: invitesDisabled,
+              accessibilityLabel: null,
+              disabled: null,
               maxFontSizeMultiplier: 2,
             };
-            const IconButton = tmp(tmp2[22]).IconButton;
-            intl = tmp(tmp2[24]).intl;
-            tmp12 = closure_12(IconButton, obj13);
+            const intl = tmp(tmp2[24]).intl;
+            obj13.accessibilityLabel = intl.string(tmp(tmp2[24]).t.VINpSK);
+            obj13.disabled = invitesDisabled;
+            tmp12 = closure_12(tmp(tmp2[22]).IconButton, obj13);
           }
           cResult[4] = canInvite;
           cResult[5] = invitesDisabled;
           cResult[6] = onInvitePress;
           cResult[7] = tmp12;
           tmp11 = tmp12;
+          const tmpResult = tmp(tmp2[21]);
         }
       }
       const fn = function c() {
-        let directoryChannelIds;
-        const guild = GuildStore.getGuild(guildId);
+        guild = GuildStore.getGuild(guildId);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
           hasItem = features.has(constants.HUB);
         }
         if (hasItem) {
-          directoryChannelIds = GuildChannelStore.getDirectoryChannelIds(guildId);
+          let directoryChannelIds = GuildChannelStore.getDirectoryChannelIds(guildId);
         } else {
           directoryChannelIds = [];
         }
@@ -348,11 +310,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != channel) {
           const obj3 = { channel };
-          const obj2 = GuildDirectorySearchModalActionCreatorsDefault;
-          obj2.open(obj3);
+          GuildDirectorySearchModalActionCreatorsDefault.open(obj3);
         } else {
-          const obj = SearchPlatformUtilsDefault;
-          const result = obj.navigateToSearchWithPrefetch(navigation, guildSearchContext);
+          const result = SearchPlatformUtilsDefault.navigateToSearchWithPrefetch(navigation, guildSearchContext);
         }
       };
       cResult[0] = guildId;
@@ -360,16 +320,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = guildSearchContext;
       cResult[3] = fn;
       tmp7 = fn;
+      let obj3 = guildId(guildSearchContext[17]);
     }
   : (guildId) => {
-      let intl;
-      let intl2;
-      let items3;
-      let obj7;
-      let onPressIn;
-      let onPressOut;
-      let pressableStyles;
-      let tmp14;
       guildId = guildId.guildId;
       const canInvite = guildId.canInvite;
       const invitesDisabled = guildId.invitesDisabled;
@@ -380,20 +333,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const useButtonComponent = guildId.useButtonComponent;
       let tmp = closure_14(useButtonComponent);
       const badge = tmp;
+      closure_8 = guildId(invitesDisabled[16]).useNavigation();
       let obj = guildId(invitesDisabled[16]);
-      let closure_8 = obj.useNavigation();
-      let obj2 = guildId(invitesDisabled[17]);
-      let closure_9 = obj2.useGuildSearchContext(guildId);
+      closure_9 = guildId(invitesDisabled[17]).useGuildSearchContext(guildId);
       const tmp5 = canInvite(invitesDisabled[20])(() => {
-        let directoryChannelIds;
-        const guild = GuildStore.getGuild(guildId);
+        guild = GuildStore.getGuild(guildId);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
           hasItem = features.has(constants.HUB);
         }
         if (hasItem) {
-          directoryChannelIds = GuildChannelStore.getDirectoryChannelIds(guildId);
+          let directoryChannelIds = GuildChannelStore.getDirectoryChannelIds(guildId);
         } else {
           directoryChannelIds = [];
         }
@@ -403,130 +354,123 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != channel) {
           const obj3 = { channel };
-          const obj2 = GuildDirectorySearchModalActionCreatorsDefault;
-          obj2.open(obj3);
+          GuildDirectorySearchModalActionCreatorsDefault.open(obj3);
         } else {
-          const obj = SearchPlatformUtilsDefault;
-          const result = obj.navigateToSearchWithPrefetch(closure_8, closure_9);
+          const result = SearchPlatformUtilsDefault.navigateToSearchWithPrefetch(closure_8, closure_9);
         }
       });
-      let obj3 = guildId(invitesDisabled[21]);
-      const iOSPressEffects = obj3.useIOSPressEffects(4);
+      let obj2 = guildId(invitesDisabled[17]);
+      const iOSPressEffects = guildId(invitesDisabled[21]).useIOSPressEffects(4);
       let items = [canInvite, invitesDisabled, onInvitePress];
       ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
       const items1 = [useEventsButton, onEventsPress, hasUnreadEvents, tmp.badge];
       const memo = onInvitePress.useMemo(() => {
-        let intl;
         let tmp = null;
         if (canInvite) {
           const obj = {
             variant: "secondary",
             size: "sm",
-            icon: AssetRegistryDefault2,
+            icon: _modDef9728,
             onPress: onInvitePress,
             onPressDisabled: handleInviteDisabledPress,
-            accessibilityLabel: intl.string(intl6.t.VINpSK),
-            disabled: invitesDisabled,
+            accessibilityLabel: null,
+            disabled: null,
             maxFontSizeMultiplier: 2,
           };
-          const IconButton = IconButton4.IconButton;
-          intl = intl6.intl;
-          tmp = closure_12(IconButton, obj);
+          const intl = util.intl;
+          obj.accessibilityLabel = intl.string(util.t.VINpSK);
+          obj.disabled = invitesDisabled;
+          tmp = __initData(IconButton.IconButton, obj);
         }
         return tmp;
       }, items);
       const obj4 = { style: tmp.container, children: null };
-      const tmp10 = onEventsPress;
       if (useButtonComponent) {
         const obj5 = {
           variant: "secondary",
           grow: true,
           shrink: true,
           size: "sm",
-          icon: canInvite(invitesDisabled[27]),
+          icon: tmp4(tmp3[27]),
           onPress: tmp5,
-          text: intl2.string(guildId(invitesDisabled[24]).t["5h0QOP"]),
+          text: null,
           maxFontSizeMultiplier: 2,
         };
-        const Button = tmp2(tmp3[26]).Button;
-        intl2 = tmp2(tmp3[24]).intl;
-        const items2 = [closure_12(Button, obj5), memo, tmp8];
+        let intl2 = tmp2(tmp3[24]).intl;
+        obj5.text = intl2.string(tmp2(tmp3[24]).t["5h0QOP"]);
+        const items2 = [closure_12(tmp2(tmp3[26]).Button, obj5), memo, tmp8];
         obj4.children = items2;
-        tmp14 = obj4;
+        let tmp14 = obj4;
       } else {
-        const obj6 = { style: items3, children: closure_12(guildId(invitesDisabled[28]).SearchButtonContent, obj7) };
-        items3 = [tmp.search, pressableStyles];
-        View = tmp4(tmp3[29]).View;
-        obj7 = { onPress: tmp5, onPressIn, onPressOut };
-        const items4 = [closure_12(View, obj6)];
+        const obj6 = { style: null, children: null };
+        const items3 = [tmp.search, pressableStyles];
+        obj6.style = items3;
+        const obj7 = { onPress: tmp5, onPressIn, onPressOut };
+        obj6.children = closure_12(tmp2(tmp3[28]).SearchButtonContent, obj7);
+        const items4 = [closure_12(tmp4(tmp3[29]).View, obj6)];
         let tmp11Result = null;
         if (canInvite) {
           const obj8 = {
             variant: "tertiary",
-            icon: canInvite(invitesDisabled[23]),
+            icon: tmp4(tmp3[23]),
             onPress: onInvitePress,
             onPressDisabled: handleInviteDisabledPress,
-            accessibilityLabel: intl.string(guildId(invitesDisabled[24]).t.VINpSK),
-            disabled: invitesDisabled,
+            accessibilityLabel: null,
+            disabled: null,
           };
-          let IconButton = tmp2(tmp3[22]).IconButton;
-          intl = tmp2(tmp3[24]).intl;
-          tmp11Result = closure_12(IconButton, obj8);
+          let intl = tmp2(tmp3[24]).intl;
+          obj8.accessibilityLabel = intl.string(tmp2(tmp3[24]).t.VINpSK);
+          obj8.disabled = invitesDisabled;
+          tmp11Result = closure_12(tmp2(tmp3[22]).IconButton, obj8);
         }
         items4[1] = tmp11Result;
         obj4.children = items4;
         tmp14 = obj4;
       }
-      return closure_13(tmp10, tmp14);
+      return closure_13(onEventsPress, tmp14);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = react.memo(
+ReactCompilerGating = fn(558);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (guild) => {
-        let first;
-        let handleLongPress;
-        let handlePress;
-        let hasUnread;
-        let tmp8;
-        let tmp9;
-        let useButtonComponent;
-        let useEventsButton;
-        let obj = guild(576);
-        const cResult = obj.c(16);
+        const cResult = guild(576).c(16);
         guild = guild.guild;
         ({ useButtonComponent, useEventsButton } = guild);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GuildChannelStore];
           cResult[0] = items;
-          first = items;
+          let first = items;
         } else {
           first = cResult[0];
         }
         if (cResult[1] !== guild) {
           const fn = function s() {
             const channels = GuildChannelStore.getChannels(guild.id);
-            const obj = utils_InstantInviteUtils;
-            return obj.shouldRenderInvite(channels, guild);
+            return utils_InstantInviteUtils.shouldRenderInvite(channels, guild);
           };
           const items1 = [guild];
           cResult[1] = guild;
           cResult[2] = fn;
           cResult[3] = items1;
-          tmp9 = items1;
-          tmp8 = fn;
+          let tmp9 = items1;
+          let tmp8 = fn;
         } else {
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        const tmpResult = guild(504);
-        const stateFromStores = tmpResult.useStateFromStores(first, tmp8, tmp9);
+        const obj = guild(576);
+        const stateFromStores = guild(504).useStateFromStores(first, tmp8, tmp9);
         if (cResult[4] !== guild) {
           class B {
             constructor() {
-              const channelId = SelectedChannelStore.getChannelId(guild.id);
-              const channels = GuildChannelStore.getChannels(guild.id);
-              const obj = instant_invite_InstantInviteUtils;
-              const result = obj.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.GUILD_HEADER);
+              channelId = closure_8.getChannelId(guild.id);
+              channels = closure_6.getChannels(guild.id);
+              obj = closure_0(closure_2[32]);
+              result = obj.handleOpenInviteActionsheet(guild, channelId, channels, InstantInviteSources.GUILD_HEADER);
+              return;
             }
           }
           cResult[4] = guild;
@@ -534,36 +478,39 @@ const memoResult = react.memo(
         } else {
           class B {
             constructor() {
-              const channelId = SelectedChannelStore.getChannelId(guild.id);
-              const channels = GuildChannelStore.getChannels(guild.id);
-              const obj = instant_invite_InstantInviteUtils;
-              const result = obj.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.GUILD_HEADER);
+              channelId = closure_8.getChannelId(guild.id);
+              channels = closure_6.getChannels(guild.id);
+              obj = closure_0(closure_2[32]);
+              result = obj.handleOpenInviteActionsheet(guild, channelId, channels, InstantInviteSources.GUILD_HEADER);
+              return;
             }
           }
         }
         const tmp12 = useStableCallbackDefault(B);
-        const tmpResult2 = guild(12023);
-        const shouldShowInvitesDisabledNotif = tmpResult2.useShouldShowInvitesDisabledNotif(guild);
+        const tmpResult = guild(504);
+        const shouldShowInvitesDisabledNotif = guild(12023).useShouldShowInvitesDisabledNotif(guild);
         useCanSeeEventsInChannelListDefault(guild.id);
+        const tmpResult2 = guild(12023);
         ({ hasUnread, handlePress, handleLongPress } = useEventsButtonPropsDefault(guild));
-        useEventsButtonPropsDefault(guild);
         if (undefined !== useEventsButton && useEventsButton) {
           class B {
             constructor() {
-              const channelId = SelectedChannelStore.getChannelId(guild.id);
-              const channels = GuildChannelStore.getChannels(guild.id);
-              const obj = instant_invite_InstantInviteUtils;
-              const result = obj.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.GUILD_HEADER);
+              channelId = closure_8.getChannelId(guild.id);
+              channels = closure_6.getChannels(guild.id);
+              obj = closure_0(closure_2[32]);
+              result = obj.handleOpenInviteActionsheet(guild, channelId, channels, InstantInviteSources.GUILD_HEADER);
+              return;
             }
           }
         }
         if (cResult[6] === guild.id) {
           class B {
             constructor() {
-              const channelId = SelectedChannelStore.getChannelId(guild.id);
-              const channels = GuildChannelStore.getChannels(guild.id);
-              const obj = instant_invite_InstantInviteUtils;
-              const result = obj.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.GUILD_HEADER);
+              channelId = closure_8.getChannelId(guild.id);
+              channels = closure_6.getChannels(guild.id);
+              obj = closure_0(closure_2[32]);
+              result = obj.handleOpenInviteActionsheet(guild, channelId, channels, InstantInviteSources.GUILD_HEADER);
+              return;
             }
           }
         }
@@ -578,6 +525,7 @@ const memoResult = react.memo(
           useEventsButton: undefined !== useEventsButton && useEventsButton,
           useButtonComponent: undefined !== useButtonComponent && useButtonComponent,
         };
+        const tmp15 = useEventsButtonPropsDefault(guild);
         cResult[6] = guild.id;
         cResult[7] = handleLongPress;
         cResult[8] = handlePress;
@@ -587,8 +535,28 @@ const memoResult = react.memo(
         cResult[12] = shouldShowInvitesDisabledNotif;
         cResult[13] = undefined !== useEventsButton && useEventsButton;
         cResult[14] = undefined !== useButtonComponent && useButtonComponent;
-        cResult[15] = closure_12(closure_16, obj2);
-        closure_12(closure_16, obj2);
+        cResult[15] = closure_12(closure_16, {
+          guildId: guild.id,
+          canInvite: stateFromStores,
+          invitesDisabled: shouldShowInvitesDisabledNotif,
+          onInvitePress: tmp12,
+          onEventsPress: handlePress,
+          onEventsLongPress: handleLongPress,
+          hasUnreadEvents: hasUnread,
+          useEventsButton: undefined !== useEventsButton && useEventsButton,
+          useButtonComponent: undefined !== useButtonComponent && useButtonComponent,
+        });
+        const tmp16 = closure_12(closure_16, {
+          guildId: guild.id,
+          canInvite: stateFromStores,
+          invitesDisabled: shouldShowInvitesDisabledNotif,
+          onInvitePress: tmp12,
+          onEventsPress: handlePress,
+          onEventsLongPress: handleLongPress,
+          hasUnreadEvents: hasUnread,
+          useEventsButton: undefined !== useEventsButton && useEventsButton,
+          useButtonComponent: undefined !== useButtonComponent && useButtonComponent,
+        });
       }
     : (guild) => {
         guild = guild.guild;
@@ -600,27 +568,29 @@ const memoResult = react.memo(
         if (flag2 === undefined) {
           flag2 = false;
         }
-        let obj = guild(504);
         const items = [GuildChannelStore];
         const items1 = [guild];
-        const stateFromStores = obj.useStateFromStores(
+        const stateFromStores = guild(504).useStateFromStores(
           items,
           () => {
             const channels = GuildChannelStore.getChannels(guild.id);
-            const obj = utils_InstantInviteUtils;
-            return obj.shouldRenderInvite(channels, guild);
+            return utils_InstantInviteUtils.shouldRenderInvite(channels, guild);
           },
           items1,
         );
+        const obj = guild(504);
         const tmp2 = useStableCallbackDefault(() => {
           const channelId = SelectedChannelStore.getChannelId(guild.id);
           const channels = GuildChannelStore.getChannels(guild.id);
-          const obj = instant_invite_InstantInviteUtils;
-          const result = obj.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.GUILD_HEADER);
+          const result = instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(
+            guild,
+            channelId,
+            channels,
+            constants2.GUILD_HEADER,
+          );
         });
+        const shouldShowInvitesDisabledNotif = guild(12023).useShouldShowInvitesDisabledNotif(guild);
         const obj2 = guild(12023);
-        const shouldShowInvitesDisabledNotif = obj2.useShouldShowInvitesDisabledNotif(guild);
-        const tmp4 = useCanSeeEventsInChannelListDefault(guild.id);
         const tmp5 = useEventsButtonPropsDefault(guild);
         const obj3 = {
           guildId: guild.id,
@@ -630,16 +600,14 @@ const memoResult = react.memo(
           onEventsPress: tmp5.handlePress,
           onEventsLongPress: tmp5.handleLongPress,
           hasUnreadEvents: tmp5.hasUnread,
-          useEventsButton: flag2,
-          useButtonComponent: flag,
+          useEventsButton: null,
+          useButtonComponent: null,
         };
         if (flag2) {
           flag2 = tmp4;
         }
+        obj3.useEventsButton = flag2;
+        obj3.useButtonComponent = flag;
         return closure_12(closure_16, obj3);
       },
 );
-let size = size_mod;
-let result = size.fileFinishedImporting("modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx");
-
-export default memoResult;

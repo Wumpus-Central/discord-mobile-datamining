@@ -6,20 +6,22 @@ import ExperimentEmbedUtils from "../../modules/experiments/ExperimentEmbedUtils
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let invites;
-
-let c2;
-let c3;
 ({ InviteStates: c2, MessageEmbedTypes: c3 } = Constants);
 const GuildTemplateStates = GuildTemplatesConstants.GuildTemplateStates;
-let obj = {
+const result = size.fileFinishedImporting("utils/native/MessagesUtils.tsx");
+
+export default {
   messageAuthorActivitiesChanged(activity, props, messageAuthorActivities2) {
-    return (
-      props.messageAuthorActivities !== messageAuthorActivities2.messageAuthorActivities &&
-      null != activity.activity &&
-      props.messageAuthorActivities[activity.author.id] !==
-        messageAuthorActivities2.messageAuthorActivities[activity.author.id]
-    );
+    let tmp = props.messageAuthorActivities !== messageAuthorActivities2.messageAuthorActivities;
+    if (tmp) {
+      tmp = null != activity.activity;
+    }
+    if (tmp) {
+      tmp =
+        props.messageAuthorActivities[activity.author.id] !==
+        messageAuthorActivities2.messageAuthorActivities[activity.author.id];
+    }
+    return tmp;
   },
   codedLinksChanged(codedLinks, props, invites2) {
     let tmp = 0 !== codedLinks.codedLinks.length;
@@ -41,77 +43,72 @@ let obj = {
       if (someResult) {
         codedLinks = codedLinks.codedLinks;
         someResult = codedLinks.some((item) => {
-          let code;
-          let type;
           ({ type, code } = item);
           if (CodedLink.CodedLinkType.BUILD_OVERRIDE !== type) {
             if (CodedLink.CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (CodedLink.CodedLinkType.EXPERIMENT === type) {
-                const tmpResult = ExperimentEmbedUtils;
-                const experimentFromEmbedURL = tmpResult.getExperimentFromEmbedURL(code);
-                let tmp55 = null != experimentFromEmbedURL;
-                if (tmp55) {
+                const experimentFromEmbedURL = ExperimentEmbedUtils.getExperimentFromEmbedURL(code);
+                let tmp51 = null != experimentFromEmbedURL;
+                if (tmp51) {
                   const legacyExperiments = props.experimentEmbeds.legacyExperiments;
-                  let tmp57;
+                  let tmp53;
                   if (legacyExperiments != null) {
-                    tmp57 = legacyExperiments[experimentFromEmbedURL];
+                    tmp53 = legacyExperiments[experimentFromEmbedURL];
                   }
                   const legacyExperiments2 = invites2.experimentEmbeds.legacyExperiments;
-                  let tmp59;
+                  let tmp55;
                   if (legacyExperiments2 != null) {
-                    tmp59 = legacyExperiments2[experimentFromEmbedURL];
+                    tmp55 = legacyExperiments2[experimentFromEmbedURL];
                   }
-                  let tmp60 = tmp57 !== tmp59;
-                  if (!tmp60) {
+                  let tmp56 = tmp53 !== tmp55;
+                  if (!tmp56) {
                     const legacyOverridesInfo = props.experimentEmbeds.legacyOverridesInfo;
-                    let tmp61;
+                    let tmp57;
                     if (legacyOverridesInfo != null) {
-                      tmp61 = legacyOverridesInfo[experimentFromEmbedURL];
+                      tmp57 = legacyOverridesInfo[experimentFromEmbedURL];
                     }
-                    const legacyOverridesInfo2 = tmp58.experimentEmbeds.legacyOverridesInfo;
-                    let tmp62;
+                    const legacyOverridesInfo2 = tmp54.experimentEmbeds.legacyOverridesInfo;
+                    let tmp58;
                     if (legacyOverridesInfo2 != null) {
-                      tmp62 = legacyOverridesInfo2[experimentFromEmbedURL];
+                      tmp58 = legacyOverridesInfo2[experimentFromEmbedURL];
                     }
-                    tmp60 = tmp61 !== tmp62;
+                    tmp56 = tmp57 !== tmp58;
                   }
-                  if (!tmp60) {
+                  if (!tmp56) {
                     const apexExperiments = props.experimentEmbeds.apexExperiments;
-                    let tmp63;
+                    let tmp59;
                     if (apexExperiments != null) {
-                      tmp63 = apexExperiments[experimentFromEmbedURL];
+                      tmp59 = apexExperiments[experimentFromEmbedURL];
                     }
-                    const apexExperiments2 = tmp58.experimentEmbeds.apexExperiments;
-                    let tmp64;
+                    const apexExperiments2 = tmp54.experimentEmbeds.apexExperiments;
+                    let tmp60;
                     if (apexExperiments2 != null) {
-                      tmp64 = apexExperiments2[experimentFromEmbedURL];
+                      tmp60 = apexExperiments2[experimentFromEmbedURL];
                     }
-                    tmp60 = tmp63 !== tmp64;
+                    tmp56 = tmp59 !== tmp60;
                   }
-                  if (!tmp60) {
+                  if (!tmp56) {
                     const apexOverridesInfo = props.experimentEmbeds.apexOverridesInfo;
-                    let tmp65;
+                    let tmp61;
                     if (apexOverridesInfo != null) {
-                      tmp65 = apexOverridesInfo[experimentFromEmbedURL];
+                      tmp61 = apexOverridesInfo[experimentFromEmbedURL];
                     }
-                    const apexOverridesInfo2 = tmp58.experimentEmbeds.apexOverridesInfo;
-                    let tmp66;
+                    const apexOverridesInfo2 = tmp54.experimentEmbeds.apexOverridesInfo;
+                    let tmp62;
                     if (apexOverridesInfo2 != null) {
-                      tmp66 = apexOverridesInfo2[experimentFromEmbedURL];
+                      tmp62 = apexOverridesInfo2[experimentFromEmbedURL];
                     }
-                    tmp60 = tmp65 !== tmp66;
+                    tmp56 = tmp61 !== tmp62;
                   }
-                  tmp55 = tmp60;
+                  tmp51 = tmp56;
                 }
-                return tmp55;
+                return tmp51;
               } else if (CodedLink.CodedLinkType.INVITE === type) {
                 const invites3 = props.invites;
-                const value = invites3.get(code);
+                value = invites3.get(code);
                 const invites4 = invites2.invites;
                 const value7 = invites4.get(code);
-                let state;
-                const applicationAssetFetchingIds = props.applicationAssetFetchingIds;
-                const applicationAssetFetchingIds2 = invites2.applicationAssetFetchingIds;
+                state = undefined;
                 if (value != null) {
                   state = value.state;
                 }
@@ -119,18 +116,18 @@ let obj = {
                 if (value7 != null) {
                   state1 = value7.state;
                 }
-                let tmp50 = state !== state1;
-                if (tmp50) {
+                let tmp46 = state !== state1;
+                if (tmp46) {
                   let state2;
                   if (value7 != null) {
                     state2 = value7.state;
                   }
-                  tmp50 = state2 !== constants.RESOLVING;
+                  tmp46 = state2 !== constants.RESOLVING;
                 }
-                if (!tmp50) {
-                  tmp50 = applicationAssetFetchingIds !== applicationAssetFetchingIds2;
+                if (!tmp46) {
+                  tmp46 = props.applicationAssetFetchingIds !== invites2.applicationAssetFetchingIds;
                 }
-                return tmp50;
+                return tmp46;
               } else if (CodedLink.CodedLinkType.TEMPLATE === type) {
                 const guildTemplates = props.guildTemplates;
                 const value8 = guildTemplates.get(code);
@@ -144,34 +141,33 @@ let obj = {
                 if (value9 != null) {
                   state4 = value9.state;
                 }
-                let tmp40 = state3 !== state4;
-                if (tmp40) {
+                let tmp36 = state3 !== state4;
+                if (tmp36) {
                   let state5;
                   if (value9 != null) {
                     state5 = value9.state;
                   }
-                  tmp40 = state5 !== GuildTemplateStates.RESOLVING;
+                  tmp36 = state5 !== GuildTemplateStates.RESOLVING;
                 }
-                return tmp40;
+                return tmp36;
               } else {
                 if (CodedLink.CodedLinkType.EVENT !== type) {
                   if (CodedLink.CodedLinkType.CHANNEL_LINK !== type) {
                     if (CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE === type) {
                       const invalidAppDirectoryEmbedApplicationIds = props.invalidAppDirectoryEmbedApplicationIds;
                       const invalidAppDirectoryEmbedApplicationIds2 = invites2.invalidAppDirectoryEmbedApplicationIds;
-                      const tmp26 = props.appDirectoryEmbedApplications[code];
-                      const tmp28 = invites2.appDirectoryEmbedApplications[code];
                       const hasItem = invalidAppDirectoryEmbedApplicationIds.has(code);
-                      let tmp32 = tmp26 !== tmp28;
-                      const tmp30 = props.appDirectoryEmbedApplicationFetchStates[code];
-                      const tmp31 = invites2.appDirectoryEmbedApplicationFetchStates[code];
-                      if (!tmp32) {
-                        tmp32 = hasItem !== invalidAppDirectoryEmbedApplicationIds2.has(code);
+                      let tmp28 =
+                        props.appDirectoryEmbedApplications[code] !== invites2.appDirectoryEmbedApplications[code];
+                      if (!tmp28) {
+                        tmp28 = hasItem !== invalidAppDirectoryEmbedApplicationIds2.has(code);
                       }
-                      if (!tmp32) {
-                        tmp32 = tmp30 !== tmp31;
+                      if (!tmp28) {
+                        tmp28 =
+                          props.appDirectoryEmbedApplicationFetchStates[code] !==
+                          invites2.appDirectoryEmbedApplicationFetchStates[code];
                       }
-                      return tmp32;
+                      return tmp28;
                     } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
                       return (
                         props.activityParticipants !== invites2.activityParticipants ||
@@ -179,7 +175,7 @@ let obj = {
                         props.applicationAssetFetchingIds !== invites2.applicationAssetFetchingIds
                       );
                     } else if (CodedLink.CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
-                      invites = props.invites;
+                      const invites = props.invites;
                       const value10 = invites.get(code);
                       invites2 = invites2.invites;
                       const value11 = invites2.get(code);
@@ -264,11 +260,11 @@ let obj = {
           }
           let state9;
           if (props.buildOverrides[code] != null) {
-            state9 = tmp67.state;
+            state9 = tmp63.state;
           }
           let state10;
           if (invites2.buildOverrides[code] != null) {
-            state10 = tmp68.state;
+            state10 = tmp64.state;
           }
           return state9 !== state10;
         });
@@ -278,7 +274,7 @@ let obj = {
     return tmp;
   },
   giftCodesChanged(giftCodes, props, arg2) {
-    let closure_1 = arg2;
+    closure_1 = arg2;
     let someResult = 0 !== giftCodes.giftCodes.length;
     if (someResult) {
       giftCodes = giftCodes.giftCodes;
@@ -302,20 +298,18 @@ let obj = {
   mediaPostPreviewEmbedsChanged(embeds, props, props2) {
     embeds = embeds.embeds;
     const found = embeds.filter((type) => type.type === constants.POST_PREVIEW);
-    const tmp =
+    return (
       0 !== found.length &&
       found.some((url) => {
-        const obj = MediaPostEmbedUtils;
-        const mediaPostEmbedChannelId = obj.getMediaPostEmbedChannelId(url.url);
-        return (
-          null != mediaPostEmbedChannelId &&
-          props.mediaPostPreviewEmbeds[mediaPostEmbedChannelId] !==
-            props2.mediaPostPreviewEmbeds[mediaPostEmbedChannelId]
-        );
-      });
-    return tmp;
+        const mediaPostEmbedChannelId = MediaPostEmbedUtils.getMediaPostEmbedChannelId(url.url);
+        let tmp2 = null != mediaPostEmbedChannelId;
+        if (tmp2) {
+          tmp2 =
+            props.mediaPostPreviewEmbeds[mediaPostEmbedChannelId] !==
+            props2.mediaPostPreviewEmbeds[mediaPostEmbedChannelId];
+        }
+        return tmp2;
+      })
+    );
   },
 };
-const result = size.fileFinishedImporting("utils/native/MessagesUtils.tsx");
-
-export default obj;

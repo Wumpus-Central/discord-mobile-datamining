@@ -6,5 +6,9 @@ const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");
 
 export default function isGameActivity(type) {
-  return null != type && type.type === ActivityTypes.PLAYING;
+  let tmp = null != type;
+  if (tmp) {
+    tmp = type.type === ActivityTypes.PLAYING;
+  }
+  return tmp;
 }

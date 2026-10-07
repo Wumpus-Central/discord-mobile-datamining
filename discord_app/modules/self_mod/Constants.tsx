@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/Constants.tsx
-import intl4 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/self_mod/Constants.tsx");
@@ -30,21 +30,21 @@ export const getSafetyToolsActionSheetKey = function getSafetyToolsActionSheetKe
   return "SAFETY_TOOLS_ACTION_SHEET_" + arg0;
 };
 export const getStrangerDangerSafetyTips = function getStrangerDangerSafetyTips() {
-  const intl = intl4.intl;
-  const items = [intl.string(intl4.t["26fDv4"]), ,];
-  const intl2 = intl4.intl;
-  items[1] = intl2.string(intl4.t.togDfk);
-  const intl3 = intl4.intl;
-  items[2] = intl3.string(intl4.t.O4Ljca);
+  const intl = util.intl;
+  const items = [intl.string(util.t["26fDv4"]), ,];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t.togDfk);
+  const intl3 = util.intl;
+  items[2] = intl3.string(util.t.O4Ljca);
   return items;
 };
 export const getInappropriateConversationsSafetyTips = function getInappropriateConversationsSafetyTips() {
-  const intl = intl4.intl;
-  const items = [intl.string(intl4.t.bCWw8l), ,];
-  const intl2 = intl4.intl;
-  items[1] = intl2.string(intl4.t.mzSucz);
-  const intl3 = intl4.intl;
-  items[2] = intl3.string(intl4.t.ZkmC7s);
+  const intl = util.intl;
+  const items = [intl.string(util.t.bCWw8l), ,];
+  const intl2 = util.intl;
+  items[1] = intl2.string(util.t.mzSucz);
+  const intl3 = util.intl;
+  items[2] = intl3.string(util.t.ZkmC7s);
   return items;
 };
 export const SAFETY_TOOLS_IGNORED_USER_TOAST_KEY = "SAFETY_TOOLS_IGNORED_USER_CONFIRMED";

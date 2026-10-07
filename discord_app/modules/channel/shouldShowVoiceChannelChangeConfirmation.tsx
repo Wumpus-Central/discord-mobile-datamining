@@ -4,8 +4,8 @@ import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStor
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
 export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
@@ -19,13 +19,12 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
       if (VoiceStateStore.isInChannel(id.id)) {
         return false;
       } else {
-        const guild = GuildStore.getGuild(id.getGuildId());
+        guild = GuildStore.getGuild(id.getGuildId());
         let afkChannelId;
         if (guild != null) {
           afkChannelId = guild.afkChannelId;
         }
-        const tmp9 = null == afkChannelId || !VoiceStateStore.isInChannel(guild.afkChannelId);
-        return tmp9;
+        return null == afkChannelId || !VoiceStateStore.isInChannel(guild.afkChannelId);
       }
     } else {
       return false;

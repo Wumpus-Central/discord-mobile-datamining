@@ -1,50 +1,49 @@
 // discord_app/modules/conjure/shared/native/ConjureNativeCollapsibleSection.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ChevronSmallRightIcon2 from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import ChevronSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
-let obj2;
-let obj3;
-let obj4;
-const View = react_native.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = Fragment);
-let createStyles = createStyles_mod;
-let obj = { root: obj2, header: obj3, headerTrailing: obj4 };
-obj2 = { gap: nativeDefault.space.PX_8 };
-createStyles = createStyles.createStyles;
-obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
-obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let closure_6 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { root: { gap: nativeDefault.space.PX_8 }, header: null, headerTrailing: null };
+let obj3 = { gap: nativeDefault.space.PX_8 };
+obj2.header = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: nativeDefault.space.PX_8,
+};
+let obj4 = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: nativeDefault.space.PX_8,
+};
+obj2.headerTrailing = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_6 = createStyles.createStyles(obj2);
+fn(558);
+let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+const ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let accessibilityLabel;
-      let accessibilityLiveRegion;
-      let children;
-      const obj = react2;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       ({ children, accessibilityLabel, accessibilityLiveRegion } = arg0);
       if (cResult[0] === accessibilityLabel) {
         if (cResult[1] === accessibilityLiveRegion) {
-          let tmp4;
           if (cResult[2] === children) {
-            tmp4 = cResult[3];
+            let tmp4 = cResult[3];
           }
           return tmp4;
         }
       }
-      const tmp5 = React3(Text_Text.Text, {
+      const tmp5 = React4(Text_Text.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
         accessibilityLabel,
@@ -58,11 +57,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = tmp5;
     }
   : (arg0) => {
-      let accessibilityLabel;
-      let accessibilityLiveRegion;
-      let children;
       ({ children, accessibilityLabel, accessibilityLiveRegion } = arg0);
-      return React3(Text_Text.Text, {
+      return React4(Text_Text.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
         accessibilityLabel,
@@ -70,40 +66,25 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         children,
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/shared/native/ConjureNativeCollapsibleSection.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      let ChevronSmallRightIcon;
-      let expanded;
-      let hideLabel;
-      let items;
-      let items1;
-      let items2;
-      let meta;
-      let obj7;
-      let obj8;
-      let onToggleExpanded;
-      let showHeader;
-      let showLabel;
-      let superseded;
-      let title;
-      let tmp14;
-      const obj = react2;
-      const cResult = obj.c(16);
+      const cResult = c.c(16);
       ({ title, meta, showHeader, superseded, expanded, onToggleExpanded, showLabel, hideLabel } = children);
       let tmp4 = undefined === showHeader;
-      children = children.children;
       if (!tmp4) {
         tmp4 = showHeader;
       }
       const tmp7 = closure_6();
       if (undefined === expanded || expanded) {
-        ChevronSmallRightIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
+        let ChevronSmallRightIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
       } else {
         ChevronSmallRightIcon = ChevronSmallRightIcon2.ChevronSmallRightIcon;
       }
       if (cResult[0] === ChevronSmallRightIcon) {
-        if (cResult[1] === (undefined === expanded || expanded)) {
+        if (cResult[1] === tmp6) {
           if (cResult[2] === hideLabel) {
             if (cResult[3] === meta) {
               if (cResult[4] === onToggleExpanded) {
@@ -111,30 +92,29 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[6] === showLabel) {
                     if (cResult[7] === tmp7.header) {
                       if (cResult[8] === tmp7.headerTrailing) {
-                        if (cResult[9] === (undefined !== superseded && superseded)) {
-                          let tmp8;
+                        if (cResult[9] === tmp5) {
                           if (cResult[10] === title) {
-                            tmp8 = cResult[11];
+                            let tmp8 = cResult[11];
                           }
-                          let tmp16 = null;
-                          if (undefined === expanded || expanded) {
-                            tmp16 = children;
+                          children = null;
+                          if (tmp6) {
+                            children = children.children;
                           }
                           if (cResult[12] === tmp7.root) {
                             if (cResult[13] === tmp8) {
-                              let tmp17;
-                              if (cResult[14] === tmp16) {
-                                tmp17 = cResult[15];
+                              if (cResult[14] === children) {
+                                let tmp17 = cResult[15];
                               }
                               return tmp17;
                             }
                           }
-                          const obj2 = { style: tmp7.root, children: items };
-                          items = [tmp8, tmp16];
+                          const obj2 = { style: tmp7.root, children: null };
+                          const items = [tmp8, children];
+                          obj2.children = items;
                           const tmp20 = hasOwnProperty(View, obj2);
                           cResult[12] = tmp7.root;
                           cResult[13] = tmp8;
-                          cResult[14] = tmp16;
+                          cResult[14] = children;
                           cResult[15] = tmp20;
                           tmp17 = tmp20;
                         }
@@ -149,35 +129,40 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp10Result = null;
       if (tmp4) {
-        const obj3 = { style: tmp7.header, children: items1 };
+        const obj3 = { style: tmp7.header, children: null };
         const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: title };
-        items1 = [React3(Text_Text.Text, obj4)];
-        const obj5 = { style: tmp7.headerTrailing, children: items2 };
-        items2 = [meta];
+        const items1 = [React4(Text_Text.Text, obj4)];
+        const obj5 = { style: tmp7.headerTrailing, children: null };
+        const items2 = [meta];
         let tmp12Result = null;
-        if (undefined !== superseded && superseded) {
+        if (tmp5) {
           tmp12Result = null;
           if (null != onToggleExpanded) {
             const obj6 = {
               accessibilityRole: "button",
-              accessibilityState: obj7,
-              accessibilityLabel: tmp14,
+              accessibilityState: null,
+              accessibilityLabel: null,
               hitSlop: 8,
-              onPress: onToggleExpanded,
-              children: React3(ChevronSmallRightIcon, obj8),
+              onPress: null,
+              children: null,
             };
-            tmp14 = showLabel;
-            obj7 = { expanded: undefined === expanded || expanded };
-            const PressableOpacity = Pressables.PressableOpacity;
-            if (undefined === expanded || expanded) {
+            const obj7 = { expanded: tmp6 };
+            obj6.accessibilityState = obj7;
+            let tmp14 = showLabel;
+            if (tmp6) {
               tmp14 = hideLabel;
             }
-            obj8 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-            tmp12Result = React3(PressableOpacity, obj6);
+            obj6.accessibilityLabel = tmp14;
+            obj6.onPress = onToggleExpanded;
+            const obj8 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
+            obj6.children = React4(ChevronSmallRightIcon, obj8);
+            tmp12Result = React4(Pressables.PressableOpacity, obj6);
           }
         }
         items2[1] = tmp12Result;
+        obj5.children = items2;
         items1[1] = hasOwnProperty(View, obj5);
+        obj3.children = items1;
         tmp10Result = hasOwnProperty(View, obj3);
       }
       cResult[0] = ChevronSmallRightIcon;
@@ -195,19 +180,6 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp10Result;
     }
   : (showHeader) => {
-      let ChevronSmallRightIcon;
-      let children;
-      let hideLabel;
-      let items;
-      let items1;
-      let items2;
-      let meta;
-      let obj6;
-      let obj7;
-      let onToggleExpanded;
-      let showLabel;
-      let title;
-      let tmp4;
       let flag = showHeader.showHeader;
       ({ title, meta } = showHeader);
       if (flag === undefined) {
@@ -225,54 +197,57 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       ({ hideLabel, children } = showHeader);
       const tmp = closure_6();
       if (flag3) {
-        ChevronSmallRightIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
-        tmp4 = require;
+        let ChevronSmallRightIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
+        let tmp4 = require;
       } else {
         ChevronSmallRightIcon = ChevronSmallRightIcon2.ChevronSmallRightIcon;
         tmp4 = require;
       }
+      const obj = { style: tmp.root, children: null };
       let tmp6Result = null;
-      const obj = { style: tmp.root, children: items2 };
       if (flag) {
-        const obj2 = { style: tmp.header, children: items };
+        const obj2 = { style: tmp.header, children: null };
         const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: title };
-        items = [React3(tmp4(4892).Text, obj3)];
-        const obj4 = { style: tmp.headerTrailing, children: items1 };
-        items1 = [meta];
+        const items = [React4(tmp4(4892).Text, obj3)];
+        const obj4 = { style: tmp.headerTrailing, children: null };
+        const items1 = [meta];
         let tmp9Result = null;
         if (flag2) {
           tmp9Result = null;
           if (null != onToggleExpanded) {
             const obj5 = {
               accessibilityRole: "button",
-              accessibilityState: obj6,
-              accessibilityLabel: showLabel,
+              accessibilityState: null,
+              accessibilityLabel: null,
               hitSlop: 8,
-              onPress: onToggleExpanded,
-              children: React3(ChevronSmallRightIcon, obj7),
+              onPress: null,
+              children: null,
             };
-            obj6 = { expanded: flag3 };
-            const PressableOpacity = tmp4(5916).PressableOpacity;
+            const obj6 = { expanded: flag3 };
+            obj5.accessibilityState = obj6;
             if (flag3) {
               showLabel = hideLabel;
             }
-            obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-            tmp9Result = React3(PressableOpacity, obj5);
+            obj5.accessibilityLabel = showLabel;
+            obj5.onPress = onToggleExpanded;
+            const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
+            obj5.children = React4(ChevronSmallRightIcon, obj7);
+            tmp9Result = React4(tmp4(5916).PressableOpacity, obj5);
           }
         }
         items1[1] = tmp9Result;
+        obj4.children = items1;
         items[1] = hasOwnProperty(View, obj4);
+        obj2.children = items;
         tmp6Result = hasOwnProperty(View, obj2);
       }
-      items2 = [tmp6Result];
+      const items2 = [tmp6Result];
       let tmp12 = null;
       if (flag3) {
         tmp12 = children;
       }
       items2[1] = tmp12;
+      obj.children = items2;
       return hasOwnProperty(View, obj);
     };
-const result = size.fileFinishedImporting("modules/conjure/shared/native/ConjureNativeCollapsibleSection.tsx");
-
-export default tmp6;
-export const ConjureNativeCollapsibleMeta = tmp5;
+export const ConjureNativeCollapsibleMeta = tmp4;

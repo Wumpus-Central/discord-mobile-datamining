@@ -1,27 +1,23 @@
 // discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import Constants from "../../Constants.tsx";
-import ChannelConstants from "ChannelConstants.tsx";
 import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import MessageStore from "../../stores/MessageStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let importDefault;
 
-const ChannelFlags = ChannelConstants.ChannelFlags;
-const MessageTypes = Constants.MessageTypes;
+const require = fn;
+const ChannelFlags = fn(2058).ChannelFlags;
+const MessageTypes = fn(1085).MessageTypes;
 let c7 = 1814400000;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
+
+export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompilerEnabled()
   ? (isDM, arg1) => {
-      let closure_1;
-      let tmp4;
       const _require = isDM;
-      let tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(21);
+      const cResult = require("c").c(21);
       if (cResult[0] !== isDM) {
         let tmp5 = isDM.isDM() && !isDM.isSystemDM();
         if (tmp5) {
@@ -30,32 +26,31 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = isDM;
         cResult[1] = tmp5;
-        tmp4 = tmp5;
+        let tmp4 = tmp5;
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] === isDM) {
-        let tmp6;
-        let tmp9;
-        let tmp13;
-        let tmp17;
-        let tmp22;
         if (cResult[3] === tmp4) {
-          tmp6 = cResult[4];
+          let tmp6 = cResult[4];
         }
         importDefault = tmp6;
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [RelationshipStore];
           cResult[5] = items;
-          tmp9 = items;
+          let tmp9 = items;
         } else {
           tmp9 = cResult[5];
         }
         if (cResult[6] !== tmp6) {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
@@ -64,28 +59,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
         }
         const _Symbol2 = Symbol;
-        const tmpResult = tmp(504);
-        const stateFromStores = tmpResult.useStateFromStores(tmp9, F);
+        const stateFromStores = tmp(504).useStateFromStores(tmp9, F);
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
           const items1 = [RelationshipStore];
           cResult[8] = items1;
-          tmp13 = items1;
+          const tmp13 = items1;
         } else {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
@@ -93,7 +99,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[9] !== tmp6) {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
@@ -102,28 +112,40 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
         }
+        const tmpResult = tmp(504);
         const _Symbol3 = Symbol;
-        const tmpResult6 = tmp(504);
-        const stateFromStores1 = tmpResult6.useStateFromStores(tmp13, tmp15);
+        const stateFromStores1 = tmp(504).useStateFromStores(tmp13, tmp15);
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
           const items2 = [MessageStore];
           cResult[11] = items2;
-          tmp17 = items2;
+          const tmp17 = items2;
         } else {
           class F {
             constructor() {
-              const isFriendResult = null != closure_1 && RelationshipStore.isFriend(tmp);
+              isFriendResult = null != closure_1;
+              if (isFriendResult) {
+                tmp3 = closure_4;
+                isFriendResult = closure_4.isFriend(tmp);
+              }
               return isFriendResult;
             }
           }
@@ -131,14 +153,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[12] !== isDM.id) {
           class C {
             constructor() {
-              const messages = MessageStore.getMessages(isDM.id);
-              let tmp = 1 === messages.length;
+              messages = closure_3.getMessages(closure_0.id);
+              tmp = 1 === messages.length;
               if (tmp) {
-                const firstResult = messages.first();
-                let type;
+                firstResult = messages.first();
+                tmp3 = null;
+                type = undefined;
                 if (firstResult != null) {
                   type = firstResult.type;
                 }
+                tmp5 = MessageTypes;
                 tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
               }
               return tmp;
@@ -149,52 +173,58 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class C {
             constructor() {
-              const messages = MessageStore.getMessages(isDM.id);
-              let tmp = 1 === messages.length;
+              messages = closure_3.getMessages(closure_0.id);
+              tmp = 1 === messages.length;
               if (tmp) {
-                const firstResult = messages.first();
-                let type;
+                firstResult = messages.first();
+                tmp3 = null;
+                type = undefined;
                 if (firstResult != null) {
                   type = firstResult.type;
                 }
+                tmp5 = MessageTypes;
                 tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
               }
               return tmp;
             }
           }
         }
-        const tmpResult7 = tmp(504);
-        const stateFromStores2 = tmpResult7.useStateFromStores(tmp17, C);
+        const tmpResult6 = tmp(504);
+        const stateFromStores2 = tmp(504).useStateFromStores(tmp17, C);
         if (cResult[14] !== isDM) {
           class C {
             constructor() {
-              const messages = MessageStore.getMessages(isDM.id);
-              let tmp = 1 === messages.length;
+              messages = closure_3.getMessages(closure_0.id);
+              tmp = 1 === messages.length;
               if (tmp) {
-                const firstResult = messages.first();
-                let type;
+                firstResult = messages.first();
+                tmp3 = null;
+                type = undefined;
                 if (firstResult != null) {
                   type = firstResult.type;
                 }
+                tmp5 = MessageTypes;
                 tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
               }
               return tmp;
             }
           }
-          cResult[14] = isDM;
-          cResult[15] = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
           const hasFlagResult = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
+          cResult[14] = isDM;
+          cResult[15] = hasFlagResult;
         } else {
           class C {
             constructor() {
-              const messages = MessageStore.getMessages(isDM.id);
-              let tmp = 1 === messages.length;
+              messages = closure_3.getMessages(closure_0.id);
+              tmp = 1 === messages.length;
               if (tmp) {
-                const firstResult = messages.first();
-                let type;
+                firstResult = messages.first();
+                tmp3 = null;
+                type = undefined;
                 if (firstResult != null) {
                   type = firstResult.type;
                 }
+                tmp5 = MessageTypes;
                 tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
               }
               return tmp;
@@ -205,14 +235,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
           class C {
             constructor() {
-              const messages = MessageStore.getMessages(isDM.id);
-              let tmp = 1 === messages.length;
+              messages = closure_3.getMessages(closure_0.id);
+              tmp = 1 === messages.length;
               if (tmp) {
-                const firstResult = messages.first();
-                let type;
+                firstResult = messages.first();
+                tmp3 = null;
+                type = undefined;
                 if (firstResult != null) {
                   type = firstResult.type;
                 }
+                tmp5 = MessageTypes;
                 tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
               }
               return tmp;
@@ -220,18 +252,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const items3 = [MessageStore];
           cResult[16] = items3;
-          tmp22 = items3;
+          const tmp22 = items3;
         } else {
           class C {
             constructor() {
-              const messages = MessageStore.getMessages(isDM.id);
-              let tmp = 1 === messages.length;
+              messages = closure_3.getMessages(closure_0.id);
+              tmp = 1 === messages.length;
               if (tmp) {
-                const firstResult = messages.first();
-                let type;
+                firstResult = messages.first();
+                tmp3 = null;
+                type = undefined;
                 if (firstResult != null) {
                   type = firstResult.type;
                 }
+                tmp5 = MessageTypes;
                 tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
               }
               return tmp;
@@ -241,7 +275,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[17] !== isDM.id) {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
           cResult[17] = isDM.id;
@@ -249,59 +283,61 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
+            }
+          }
+        }
+        const tmpResult7 = tmp(504);
+        const stateFromStores3 = tmp(504).useStateFromStores(tmp22, W);
+        if (cResult[19] !== isDM.id) {
+          class W {
+            constructor() {
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
+            }
+          }
+          const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(isDM.id);
+          const tmpResult9 = tmp(4558);
+          const isWithinIntervalResult = tmpResult9.isWithinInterval(
+            _modDef4467(),
+            _modDef4467(extractTimestampResult),
+            c7,
+          );
+          cResult[19] = isDM.id;
+          cResult[20] = isWithinIntervalResult;
+          const tmp27 = _modDef4467();
+        } else {
+          class W {
+            constructor() {
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         const tmpResult8 = tmp(504);
-        const stateFromStores3 = tmpResult8.useStateFromStores(tmp22, W);
-        if (cResult[19] !== isDM.id) {
-          class W {
-            constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
-            }
-          }
-          const obj6 = SnowflakeUtilsDefault;
-          const extractTimestampResult = obj6.extractTimestamp(isDM.id);
-          const isWithinInterval = tmp(4558).isWithinInterval;
-          tmp(4558);
-          const tmp28 = _modDef4467();
-          cResult[19] = isDM.id;
-          cResult[20] = isWithinInterval(tmp28, _modDef4467(extractTimestampResult), c7);
-          const isWithinIntervalResult = isWithinInterval(tmp28, _modDef4467(extractTimestampResult), c7);
-        } else {
-          class W {
-            constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
-            }
-          }
-        }
-        const tmpResult10 = tmp(9798);
-        const strangerDangerWarning = tmpResult10.useStrangerDangerWarning(isDM.id);
+        const strangerDangerWarning = tmp(9798).useStrangerDangerWarning(isDM.id);
         if (tmp4) {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
           if (!tmp20) {
             class W {
               constructor() {
-                return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+                return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
               }
             }
           }
@@ -310,21 +346,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp4) {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
         }
         if (tmp4) {
           class W {
             constructor() {
-              return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+              return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
             }
           }
           tmp4 = null == strangerDangerWarning;
@@ -334,7 +370,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp4) {
         class W {
           constructor() {
-            return MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id);
+            return closure_3.hasCurrentUserSentWaveBlockingMessage(closure_0.id);
           }
         }
       }
@@ -342,6 +378,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4;
       cResult[4] = null;
       tmp6 = tmp7;
+      const obj = require("c");
     }
   : (isDM, arg1) => {
       const _require = isDM;
@@ -355,20 +392,25 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         recipientId = isDM.getRecipientId();
       }
       const items = [RelationshipStore];
-      const obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(items, () => {
-        const isFriendResult = null != recipientId && RelationshipStore.isFriend(tmp);
+      const stateFromStores = require("initialize").useStateFromStores(items, () => {
+        let isFriendResult = null != recipientId;
+        if (isFriendResult) {
+          isFriendResult = RelationshipStore.isFriend(tmp);
+        }
         return isFriendResult;
       });
+      const obj = require("initialize");
       const items1 = [RelationshipStore];
-      const obj2 = require("get initialized");
-      const stateFromStores1 = obj2.useStateFromStores(items1, () => {
-        const isIgnoredResult = null != recipientId && RelationshipStore.isIgnored(tmp);
+      const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+        let isIgnoredResult = null != recipientId;
+        if (isIgnoredResult) {
+          isIgnoredResult = RelationshipStore.isIgnored(tmp);
+        }
         return isIgnoredResult;
       });
+      const obj2 = require("initialize");
       const items2 = [MessageStore];
-      const obj3 = require("get initialized");
-      const stateFromStores2 = obj3.useStateFromStores(items2, () => {
+      const stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
         const messages = MessageStore.getMessages(isDM.id);
         let tmp = 1 === messages.length;
         if (tmp) {
@@ -382,19 +424,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp;
       });
       let hasFlagResult = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
+      const obj3 = require("initialize");
       const items3 = [MessageStore];
-      const obj4 = require("get initialized");
-      const stateFromStores3 = obj4.useStateFromStores(items3, () =>
+      const stateFromStores3 = require("initialize").useStateFromStores(items3, () =>
         MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id),
       );
+      const obj4 = require("initialize");
       const obj5 = recipientId(11);
-      const extractTimestampResult = obj5.extractTimestamp(isDM.id);
-      const isWithinInterval = require("DateUtils").isWithinInterval;
-      require("DateUtils");
-      const tmp10 = recipientId(4467)();
-      const isWithinIntervalResult = isWithinInterval(tmp10, recipientId(4467)(extractTimestampResult), c7);
-      const obj6 = require("useStrangerDangerWarning");
-      const strangerDangerWarning = obj6.useStrangerDangerWarning(isDM.id);
+      const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
+      const obj6 = require("DateUtils");
+      const tmp9 = recipientId(4467)();
+      const isWithinIntervalResult = obj6.isWithinInterval(
+        recipientId(4467)(),
+        recipientId(4467)(extractTimestampResult),
+        c7,
+      );
+      const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);
       if (tmp) {
         tmp = stateFromStores;
       }
@@ -421,6 +466,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp;
     };
-const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
-
-export const usePrivateChannelWaveEligible = tmp2;

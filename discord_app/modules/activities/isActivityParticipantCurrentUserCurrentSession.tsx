@@ -1,7 +1,7 @@
 // discord_app/modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
 
 export const isActivityParticipantCurrentUserCurrentSession = function isActivityParticipantCurrentUserCurrentSession(
@@ -15,6 +15,7 @@ export const isActivityParticipantCurrentUserCurrentSession = function isActivit
   let tmp3 = userId.userId === id;
   if (tmp3) {
     tmp3 = null == userId.sessionId || undefined === userId.sessionId || userId.sessionId === tmp2;
+    const tmp5 = null == userId.sessionId || undefined === userId.sessionId || userId.sessionId === tmp2;
   }
   return tmp3;
 };

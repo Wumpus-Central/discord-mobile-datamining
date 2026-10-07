@@ -1,22 +1,16 @@
 // discord_app/modules/user_profile/hooks/native/useCardGridLayout.tsx
-import react from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import Constants from "../../native/Constants.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const PROFILE_SIDE_PADDING = Constants.PROFILE_SIDE_PADDING;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let containerWidth;
-      let gap;
-      let maxCardSize;
-      let maxWidth;
-      let minCardSize;
-      let sidePadding;
-      let tmp3;
-      const obj = react;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       if (cResult[0] !== arg0) {
         let obj2 = arg0;
         if (undefined === arg0) {
@@ -24,7 +18,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[0] = arg0;
         cResult[1] = obj2;
-        tmp3 = obj2;
+        let tmp3 = obj2;
       } else {
         tmp3 = cResult[1];
       }
@@ -44,19 +38,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (undefined === sidePadding) {
         sidePadding = PROFILE_SIDE_PADDING;
       }
-      const _Math = Math;
       if (containerWidth == null) {
         containerWidth = useWindowDimensionsDefault().width;
       }
       if (maxWidth == null) {
         maxWidth = Infinity;
       }
-      const diff = min(containerWidth, maxWidth) - 2 * sidePadding;
+      const diff = Math.min(containerWidth, maxWidth) - 2 * sidePadding;
       const bound = Math.max(1, Math.floor((diff + num5) / (num3 + num5)));
       if (cResult[2] === diff) {
-        let tmp6;
         if (cResult[3] === num5) {
-          tmp6 = cResult[4];
+          let tmp6 = cResult[4];
         }
         let tmp8 = tmp6;
         let num6 = 1;
@@ -79,17 +71,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
+        const _Math = Math;
         const _Math2 = Math;
-        const _Math3 = Math;
         const bound1 = Math.min(Math.max(tmp8, num3), num4);
         const diff1 = num6 - 1;
         if (diff < bound1 * num6 + num5 * diff1) {
-          let tmp15;
           if (cResult[5] !== num5) {
             const obj3 = { columns: 1, cardWidth: "Array", rowWidth: "apply", gap: num5 };
             cResult[5] = num5;
             cResult[6] = obj3;
-            tmp15 = obj3;
+            let tmp15 = obj3;
           } else {
             tmp15 = cResult[6];
           }
@@ -99,9 +90,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[7] === bound1) {
             if (cResult[8] === num6) {
               if (cResult[9] === num5) {
-                let tmp14;
                 if (cResult[10] === sum1) {
-                  tmp14 = cResult[11];
+                  let tmp14 = cResult[11];
                 }
                 return tmp14;
               }
@@ -123,10 +113,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = diff2;
     }
   : () => {
-      let containerWidth;
-      let maxWidth;
-      let obj3;
-      let sidePadding;
       let obj = arg0;
       if (arg0 === undefined) {
         obj = {};
@@ -147,14 +133,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (sidePadding === undefined) {
         sidePadding = PROFILE_SIDE_PADDING;
       }
-      const _Math = Math;
       if (containerWidth == null) {
         containerWidth = useWindowDimensionsDefault().width;
       }
       if (maxWidth == null) {
         maxWidth = Infinity;
       }
-      const diff = min(containerWidth, maxWidth) - 2 * sidePadding;
+      const diff = Math.min(containerWidth, maxWidth) - 2 * sidePadding;
       const bound = Math.max(1, Math.floor((diff + num3) / (num + num3)));
       const diff1 = diff;
       let tmp4 = diff1;
@@ -181,13 +166,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const bound1 = Math.min(Math.max(tmp4, num), num2);
       const diff2 = num4 - 1;
       if (diff < bound1 * num4 + num3 * diff2) {
-        obj3 = { columns: 1, cardWidth: "Array", rowWidth: "apply", gap: num3 };
         const obj2 = { columns: 1, cardWidth: "Array", rowWidth: "apply", gap: num3 };
+        let obj3 = obj2;
       } else {
         obj3 = { columns: num4, cardWidth: bound1, rowWidth: bound1 * num4 + num3 * diff2, gap: num3 };
       }
       return obj3;
     };
-let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
-
-export default tmp2;

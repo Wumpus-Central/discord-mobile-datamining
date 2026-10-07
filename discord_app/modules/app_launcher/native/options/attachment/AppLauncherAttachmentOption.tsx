@@ -1,27 +1,18 @@
 // discord_app/modules/app_launcher/native/options/attachment/AppLauncherAttachmentOption.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import DraftStore from "../../../../../stores/DraftStore.tsx";
 import AttachmentPreviewDefault from "../../../../media/native/AttachmentPreview.tsx";
 import FileIcon from "../../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../../stores/UploadAttachmentStore.tsx";
-import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
-let option;
-
-let size;
-let size1;
-let View = react_native.View;
-const DraftType = DraftStore.DraftType;
-const jsx = Fragment.jsx;
-let createStyles = createStyles_mod;
-let obj = { imageIconWrapper: size, selectedImage: size1 };
-size = {
+require = fn;
+let View = fn(17).View;
+const DraftType = fn(7044).DraftType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = { imageIconWrapper: null, selectedImage: null };
+let size = {
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -29,27 +20,21 @@ size = {
   height: 32,
   borderRadius: nativeDefault.radii.lg,
 };
-createStyles = createStyles.createStyles;
-size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
-let closure_8 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj2.imageIconWrapper = size;
+const size1 = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
+obj2.selectedImage = size1;
+let closure_8 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      let height;
-      let isImage;
-      let isVideo;
-      let uri;
-      let width;
-      const obj = react2;
-      const cResult = obj.c(8);
+      const cResult = c.c(8);
       ({ uri, isImage, isVideo } = arg0);
       const tmp4 = closure_8();
       ({ width, height } = tmp4.selectedImage);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp7 = jsx(FileIcon.FileIcon, { size: "sm" });
         cResult[0] = tmp7;
-        first = tmp7;
+        let first = tmp7;
       } else {
         first = cResult[0];
       }
@@ -58,9 +43,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] === isVideo) {
             if (cResult[4] === tmp4.selectedImage) {
               if (cResult[5] === uri) {
-                let tmp8;
                 if (cResult[6] === width) {
-                  tmp8 = cResult[7];
+                  let tmp8 = cResult[7];
                 }
                 return tmp8;
               }
@@ -68,6 +52,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
+      const size = { uri, isImage, isVideo, width, height, style: tmp4.selectedImage, defaultPreview: first };
       const tmp9 = jsx(AttachmentPreviewDefault, {
         uri,
         isImage,
@@ -87,39 +72,37 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = tmp9;
     }
   : (arg0) => {
-      let height;
-      let isImage;
-      let isVideo;
-      let uri;
-      let width;
       ({ uri, isImage, isVideo } = arg0);
       const tmp = closure_8();
       ({ width, height } = tmp.selectedImage);
-      AttachmentPreviewDefault;
-      return (
-        <tmp2
-          uri={uri}
-          isImage={isImage}
-          isVideo={isVideo}
-          width={width}
-          height={height}
-          style={tmp.selectedImage}
-          defaultPreview={null}
-        />
-      );
+      const size = {
+        uri,
+        isImage,
+        isVideo,
+        width,
+        height,
+        style: tmp.selectedImage,
+        defaultPreview: jsx(FileIcon.FileIcon, { size: "sm" }),
+      };
+      return jsx(AttachmentPreviewDefault, {
+        uri,
+        isImage,
+        isVideo,
+        width,
+        height,
+        style: tmp.selectedImage,
+        defaultPreview: jsx(FileIcon.FileIcon, { size: "sm" }),
+      });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/app_launcher/native/options/attachment/AppLauncherAttachmentOption.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (option) => {
-      let autoFocus;
-      let first;
-      let hasError;
-      let onPress;
-      let onSelectAttachment;
-      let ref;
-      let style;
-      let obj = option(onSelectAttachment[8]);
-      const cResult = obj.c(29);
+      const cResult = option(onSelectAttachment[8]).c(29);
       option = option.option;
       const channel = option.channel;
       ({ style, autoFocus, hasError, onPress, onSelectAttachment } = option);
@@ -128,35 +111,32 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (option.type === option(onSelectAttachment[11]).ApplicationCommandOptionType.ATTACHMENT) {
         fileTypes = option.fileTypes;
       }
-      const tmpResult = option(onSelectAttachment[12]);
-      const fileTypesFormattedString = tmpResult.useFileTypesFormattedString(fileTypes);
+      const obj = option(onSelectAttachment[8]);
+      const fileTypesFormattedString = option(onSelectAttachment[12]).useFileTypesFormattedString(fileTypes);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UploadAttachmentStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === channel.id) {
-        let tmp9;
         if (cResult[2] === option.name) {
-          tmp9 = cResult[3];
+          let tmp9 = cResult[3];
         }
-        const tmpResult2 = option(onSelectAttachment[13]);
-        const stateFromStores = tmpResult2.useStateFromStores(first, tmp9);
+        const stateFromStores = tmp(onSelectAttachment[13]).useStateFromStores(first, tmp9);
         if (cResult[4] === channel.id) {
-          let tmp11;
-          let tmp12;
           if (cResult[5] === option.name) {
-            tmp11 = cResult[6];
-            tmp12 = cResult[7];
+            let tmp11 = cResult[6];
+            let tmp12 = cResult[7];
           }
           const effect = stateFromStores.useEffect(tmp11, tmp12);
           View = stateFromStores.useRef(onSelectAttachment);
           if (cResult[8] !== onSelectAttachment) {
             class N {
               constructor() {
-                ref.current = onSelectAttachment;
+                closure_4.current = onSelectAttachment;
+                return;
               }
             }
             cResult[8] = onSelectAttachment;
@@ -164,7 +144,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class N {
               constructor() {
-                ref.current = onSelectAttachment;
+                closure_4.current = onSelectAttachment;
+                return;
               }
             }
           }
@@ -172,16 +153,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] !== stateFromStores) {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
             cResult[10] = stateFromStores;
@@ -189,66 +172,74 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
           }
           if (stateFromStores != null) {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
           }
           if (cResult[12] !== undefined) {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
-            tmp20[0] = undefined;
-            cResult[12] = undefined;
+            tmp20[0] = tmp18;
+            cResult[12] = tmp18;
             cResult[13] = tmp20;
           } else {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
           }
@@ -256,185 +247,152 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != stateFromStores) {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
           }
           if (cResult[14] !== fileTypesFormattedString) {
-            let formatResult;
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
             if (null != fileTypesFormattedString) {
               class P {
                 constructor() {
-                  let filename;
-                  if (stateFromStores != null) {
-                    filename = stateFromStores.filename;
+                  tmp = closure_3;
+                  filename = undefined;
+                  if (closure_3 != null) {
+                    filename = tmp.filename;
                   }
                   if (null != filename) {
-                    const current = ref.current;
+                    current = closure_4.current;
                     if (current != null) {
-                      current(stateFromStores.filename);
+                      currentResult = current(tmp.filename);
                     }
                   }
+                  return;
                 }
               }
               const obj2 = { types: fileTypesFormattedString };
-              formatResult = obj5.format(option(onSelectAttachment[15]).t.NRRxmz, obj2);
+              const formatResult = obj5.format(tmp(onSelectAttachment[15]).t.NRRxmz, obj2);
             }
             cResult[14] = fileTypesFormattedString;
             cResult[15] = formatResult;
           } else {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
           }
           if (cResult[16] === stateFromStores) {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
-            if (cResult[19] === autoFocus) {
-              class P {
-                constructor() {
-                  let filename;
-                  if (stateFromStores != null) {
-                    filename = stateFromStores.filename;
-                  }
-                  if (null != filename) {
-                    const current = ref.current;
-                    if (current != null) {
-                      current(stateFromStores.filename);
-                    }
-                  }
-                }
-              }
-            }
-            cResult[19] = autoFocus;
-            cResult[20] = hasError;
-            cResult[21] = onPress;
-            cResult[22] = option;
-            cResult[23] = style;
-            cResult[24] = tmp23;
-            cResult[25] = tmp24;
-            cResult[26] = tmp26;
-            cResult[27] = null != stateFromStores;
-            cResult[28] = jsx(channel(onSelectAttachment[18]), {
-              style,
-              hasError,
-              option,
-              selected: null != stateFromStores,
-              selectedItemName: tmp23,
-              unselectedSubLabel: tmp24,
-              leading: tmp26,
-              onPress,
-              autoFocus,
-            });
-            const tmp35 = jsx(channel(onSelectAttachment[18]), {
-              style,
-              hasError,
-              option,
-              selected: null != stateFromStores,
-              selectedItemName: tmp23,
-              unselectedSubLabel: tmp24,
-              leading: tmp26,
-              onPress,
-              autoFocus,
-            });
           }
-          if (null != stateFromStores) {
-            let tmp30;
+          if (null == stateFromStores) {
             class P {
               constructor() {
-                let filename;
-                if (stateFromStores != null) {
-                  filename = stateFromStores.filename;
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
                 }
                 if (null != filename) {
-                  const current = ref.current;
+                  current = closure_4.current;
                   if (current != null) {
-                    current(stateFromStores.filename);
+                    currentResult = current(tmp.filename);
                   }
                 }
+                return;
               }
             }
-            if (tmp27 === option(onSelectAttachment[16]).UploadPlatform.REACT_NATIVE) {
-              class P {
-                constructor() {
-                  let filename;
-                  if (stateFromStores != null) {
-                    filename = stateFromStores.filename;
-                  }
-                  if (null != filename) {
-                    const current = ref.current;
-                    if (current != null) {
-                      current(stateFromStores.filename);
-                    }
-                  }
-                }
-              }
-              ({ isImage: obj8.isImage, isVideo: obj8.isVideo } = stateFromStores);
-              tmp30 = <closure_9 uri={stateFromStores.item.uri} isImage={null} isVideo={null} />;
-            }
+            const obj3 = {
+              style: tmp4.imageIconWrapper,
+              children: jsx(tmp(onSelectAttachment[17]).ImageFileIcon, {
+                size: "sm",
+                color: "interactive-text-default",
+              }),
+            };
+            let tmp27 = (
+              <View style={tmp4.imageIconWrapper}>
+                {jsx(tmp(onSelectAttachment[17]).ImageFileIcon, { size: "sm", color: "interactive-text-default" })}
+              </View>
+            );
             cResult[16] = stateFromStores;
             cResult[17] = tmp4;
-            cResult[18] = tmp30;
+            cResult[18] = tmp27;
+          } else {
+            class P {
+              constructor() {
+                tmp = closure_3;
+                filename = undefined;
+                if (closure_3 != null) {
+                  filename = tmp.filename;
+                }
+                if (null != filename) {
+                  current = closure_4.current;
+                  if (current != null) {
+                    currentResult = current(tmp.filename);
+                  }
+                }
+                return;
+              }
+            }
           }
-          tmp30 = (
-            <View style={tmp4.imageIconWrapper}>
-              {jsx(option(onSelectAttachment[17]).ImageFileIcon, { size: "sm", color: "interactive-text-default" })}
-            </View>
-          );
+          const obj6 = { uri: stateFromStores.item.uri, isImage: null, isVideo: null };
+          ({ isImage: obj8.isImage, isVideo: obj8.isVideo } = stateFromStores);
+          tmp27 = <closure_9 uri={stateFromStores.item.uri} isImage={null} isVideo={null} />;
         }
         const fn2 = function b() {
-          let id;
-          let name;
-          return () => {
-            const obj = channel(onSelectAttachment[14]);
-            return obj.remove(id.id, name.name, DraftType.ApplicationLauncherCommand);
-          };
+          return () => channel(onSelectAttachment[14]).remove(id.id, name.name, DraftType.ApplicationLauncherCommand);
         };
         const items1 = [channel.id, option.name];
         cResult[4] = channel.id;
@@ -443,6 +401,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = items1;
         tmp12 = items1;
         tmp11 = fn2;
+        const tmpResult2 = tmp(onSelectAttachment[13]);
       }
       const fn = function h() {
         return UploadAttachmentStore.getUpload(channel.id, option.name, DraftType.ApplicationLauncherCommand);
@@ -451,14 +410,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = option.name;
       cResult[3] = fn;
       tmp9 = fn;
+      const tmpResult = option(onSelectAttachment[12]);
     }
   : (option) => {
-      let autoFocus;
-      let filename1;
-      let formatResult;
-      let hasError;
-      let onPress;
-      let style;
       option = option.option;
       const channel = option.channel;
       const onSelectAttachment = option.onSelectAttachment;
@@ -466,37 +420,31 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let ref;
       ({ style, autoFocus, hasError, onPress } = option);
       let fileTypes;
-      const tmp = closure_8();
       if (option.type === option(onSelectAttachment[11]).ApplicationCommandOptionType.ATTACHMENT) {
         fileTypes = option.fileTypes;
       }
+      const tmp = closure_8();
+      const fileTypesFormattedString = option(onSelectAttachment[12]).useFileTypesFormattedString(fileTypes);
       const tmp2Result = option(onSelectAttachment[12]);
-      const fileTypesFormattedString = tmp2Result.useFileTypesFormattedString(fileTypes);
       const items = [UploadAttachmentStore];
-      const tmp2Result2 = option(onSelectAttachment[13]);
-      stateFromStores = tmp2Result2.useStateFromStores(items, () =>
+      stateFromStores = option(onSelectAttachment[13]).useStateFromStores(items, () =>
         UploadAttachmentStore.getUpload(channel.id, option.name, DraftType.ApplicationLauncherCommand),
       );
       const items1 = [channel.id, option.name];
-      const effect = stateFromStores.useEffect(() => {
-        let id;
-        let name;
-        return () => {
-          const obj = channel(onSelectAttachment[14]);
-          return obj.remove(id.id, name.name, DraftType.ApplicationLauncherCommand);
-        };
-      }, items1);
+      const effect = stateFromStores.useEffect(
+        () => () => channel(onSelectAttachment[14]).remove(id.id, name.name, DraftType.ApplicationLauncherCommand),
+        items1,
+      );
       ref = stateFromStores.useRef(onSelectAttachment);
       const effect1 = stateFromStores.useEffect(() => {
-        ref.current = onSelectAttachment;
+        closure_4.current = onSelectAttachment;
       });
       let filename;
-      const useEffect = stateFromStores.useEffect;
       if (stateFromStores != null) {
         filename = stateFromStores.filename;
       }
       const items2 = [filename];
-      const effect2 = useEffect(() => {
+      const effect2 = stateFromStores.useEffect(() => {
         let filename;
         if (stateFromStores != null) {
           filename = stateFromStores.filename;
@@ -508,48 +456,49 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items2);
-      let obj = {
+      const obj = {
         style,
         hasError,
         option,
         selected: null != stateFromStores,
-        selectedItemName: filename1,
-        unselectedSubLabel: formatResult,
+        selectedItemName: null,
+        unselectedSubLabel: null,
         leading: null,
         onPress: null,
         autoFocus: null,
       };
-      filename1 = undefined;
-      channel(onSelectAttachment[18]);
+      let filename1;
+      const tmp2Result2 = option(onSelectAttachment[13]);
       if (null != stateFromStores) {
         filename1 = stateFromStores.filename;
       }
-      formatResult = undefined;
+      obj.selectedItemName = filename1;
+      let formatResult;
       if (null != fileTypesFormattedString) {
         const intl = tmp2(tmp3[15]).intl;
         const obj2 = { types: fileTypesFormattedString };
         formatResult = intl.format(tmp2(tmp3[15]).t.NRRxmz, obj2);
       }
+      obj.unselectedSubLabel = formatResult;
       if (null != stateFromStores) {
-        let tmp12Result;
-        if (stateFromStores.item.platform === option(onSelectAttachment[16]).UploadPlatform.REACT_NATIVE) {
+        if (stateFromStores.item.platform === tmp2(tmp3[16]).UploadPlatform.REACT_NATIVE) {
+          const obj3 = { uri: stateFromStores.item.uri, isImage: null, isVideo: null };
           ({ isImage: obj6.isImage, isVideo: obj6.isVideo } = stateFromStores);
-          tmp12Result = <closure_9 uri={stateFromStores.item.uri} isImage={null} isVideo={null} />;
+          let tmp12Result = <closure_9 uri={stateFromStores.item.uri} isImage={null} isVideo={null} />;
         }
         obj.leading = tmp12Result;
         obj.onPress = onPress;
         obj.autoFocus = autoFocus;
         return <tmp13 {...obj} />;
       }
+      const tmp13 = channel(onSelectAttachment[18]);
       tmp12Result = (
         <ref style={tmp.imageIconWrapper}>
           {jsx(option(onSelectAttachment[17]).ImageFileIcon, { size: "sm", color: "interactive-text-default" })}
         </ref>
       );
+      const obj4 = {
+        style: tmp.imageIconWrapper,
+        children: jsx(option(onSelectAttachment[17]).ImageFileIcon, { size: "sm", color: "interactive-text-default" }),
+      };
     };
-size = size_mod;
-const result = size.fileFinishedImporting(
-  "modules/app_launcher/native/options/attachment/AppLauncherAttachmentOption.tsx",
-);
-
-export default tmp3;

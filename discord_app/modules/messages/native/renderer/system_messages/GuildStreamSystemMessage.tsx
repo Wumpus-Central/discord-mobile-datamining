@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
-import intl2 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import Constants from "../../../../go_live/Constants.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
@@ -12,43 +12,43 @@ const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx",
 );
 
-export const createGuildStreamSystemMessage = function createGuildStreamSystemMessage(message) {
-  let channel_id;
-  let formatToPartsResult;
-  let guild_id;
-  let obj4;
-  message = message.message;
+export const createGuildStreamSystemMessage = function createGuildStreamSystemMessage(roleStyle) {
+  const message = roleStyle.message;
   let messageReference = message.messageReference;
-  const roleStyle = message.roleStyle;
-  const author = message.author;
   if (messageReference == null) {
     messageReference = {};
   }
   ({ channel_id, guild_id } = messageReference);
   const tmp3 = getHumanizedCallDurationDefault(message);
-  const obj2 = useAuthorWithProcessedColor;
-  const messageAuthorWithProcessedColor = obj2.getMessageAuthorWithProcessedColor(message);
+  const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   const obj = {
     username: messageAuthorWithProcessedColor.nick,
-    usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
+    usernameOnClick: formatUsernameOnClickDefault({
+      message,
+      author: messageAuthorWithProcessedColor,
+      roleStyle: roleStyle.roleStyle,
+    }),
   };
-  const obj3 = { action: "bindJoinStream", stream: obj4 };
-  obj4 = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: author.id, guildId: guild_id };
-  const obj5 = { ended: null != tmp3, content: formatToPartsResult };
-  const intl = intl2.intl;
+  const obj3 = {
+    action: "bindJoinStream",
+    stream: { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id },
+  };
+  const obj5 = { ended: null != tmp3, content: null };
+  const intl = util.intl;
   const formatToParts = intl.formatToParts;
-  const t = intl2.t;
+  const t = util.t;
   if (null != tmp3) {
-    const FP7rUI = t.FP7rUI;
-    const obj6 = { duration: tmp3 };
+    const obj6 = {};
     const merged = Object.assign(obj);
-    formatToPartsResult = formatToParts(FP7rUI, obj6);
+    obj6.duration = tmp3;
+    let formatToPartsResult = formatToParts(t.FP7rUI, obj6);
   } else {
-    const dMmbGk = t.dMmbGk;
-    const obj7 = { onJoinStream: obj3 };
+    const obj7 = {};
     const merged1 = Object.assign(obj);
-    formatToPartsResult = formatToParts(dMmbGk, obj7);
+    obj7.onJoinStream = obj3;
+    formatToPartsResult = formatToParts(t.dMmbGk, obj7);
   }
-  const merged2 = Object.assign(createCommonMessageDefault(message));
+  obj5.content = formatToPartsResult;
+  const merged2 = Object.assign(createCommonMessageDefault(roleStyle));
   return obj5;
 };

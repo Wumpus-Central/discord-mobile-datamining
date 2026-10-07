@@ -1,75 +1,124 @@
 // discord_app/modules/auth_sessions/AuthSessionsActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let obj = function _fetchAuthSessions() {
-  obj = _asyncToGenerator(async () => {
-    let c2;
-    let c3;
-    let closure_1;
-    let user_sessions;
-    const value = tmp4;
-    const HTTP = HTTPUtils.HTTP;
-    const obj4 = { url: constants.AUTH_SESSIONS, rejectWithError: false };
-    await HTTP.get(obj4);
-    const body = value.body;
-    if (body != null) {
-      user_sessions = body.user_sessions;
-    }
-    if (null != user_sessions) {
-      const obj7 = { type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: value.body.user_sessions };
-      obj = closure_129_1(closure_129_2[3]);
-      obj.dispatch(obj7);
-    }
-    return value;
-  });
-  return obj(...arguments);
+require = fn;
+let closure_5 = async function _fetchAuthSessions() {
+  closure_1 = tmp2;
+  closure_0 = tmp5;
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({ url: constants.AUTH_SESSIONS, rejectWithError: false });
+  closure_128_0 = value;
+  const body = closure_128_0.body;
+  if (body != null) {
+    const user_sessions = body.user_sessions;
+  }
+  if (null != user_sessions) {
+    closure_129_1(closure_129_2[3]).dispatch({
+      type: "FETCH_AUTH_SESSIONS_SUCCESS",
+      sessions: closure_128_0.body.user_sessions,
+    });
+    closure_129_1(closure_129_2[3]);
+  }
+  return closure_128_0;
 };
-obj = function _logOutSessions() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_2;
-    const length = arg0;
-    let c3 = 0;
-    let c4 = 0;
-    return (async (arg0) => {
-      let obj4;
-      value = tmp;
-      let items = length;
-      const _Array = Array;
-      if (Array.isArray(length)) {
-        items = length;
-        if (0 === length.length) {
+let closure_6 = async function _logOutSessions(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      let num2 = 0;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp2;
+          closure_129_0 = length;
+          let HTTP;
+          closure_129_1 = undefined;
+          const _Array = Array;
+          if (Array.isArray(length)) {
+            let items = length;
+            if (num2 === length.length) {
+              c4 = 3;
+              return { value: "IconComponent", done: null };
+            }
+          } else {
+            items = [length];
+            closure_129_0 = items;
+          }
+          HTTP = HTTPUtils.HTTP;
+          num2 = HTTP.post;
+          const request = { url: constants.AUTH_SESSIONS_LOGOUT, body: null, rejectWithError: false };
+          const obj4 = { session_id_hashes: items };
+          request.body = obj4;
+          num2(request);
+          c3 = 1;
+          c4 = 1;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
-        items = [length];
+        closure_129_1 = value;
+        const obj6 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: closure_129_0 };
+        closure_130_1(closure_130_2[3]).dispatch(obj6);
+        c4 = 3;
+        const obj7 = { value: closure_129_1, done: true };
+        return obj7;
       }
-      const HTTP = HTTPUtils.HTTP;
-      const request = { url: constants.AUTH_SESSIONS_LOGOUT, body: obj4, rejectWithError: false };
-      obj4 = { session_id_hashes: items };
-      await HTTP.post(request);
-      const obj7 = { type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: items };
-      obj = closure_130_1(closure_130_2[3]);
-      obj.dispatch(obj7);
-      return value;
-    })();
-  });
-  return obj(...arguments);
+    } catch (tmp18) {
+      c4 = tmp;
+      throw tmp18;
+    }
+  }
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
 
 export const fetchAuthSessions = function fetchAuthSessions() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const clearAuthSessions = function clearAuthSessions() {
-  obj = DispatcherDefault;
-  obj.dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
+  DispatcherDefault.dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
 };
 export const logOutSessions = function logOutSessions() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

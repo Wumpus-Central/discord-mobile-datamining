@@ -2,10 +2,10 @@
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const obj = {
+const frozen = Object.freeze({
   getItem(arg0) {
     const Storage = Storage2.Storage;
-    let value = Storage.get(arg0);
+    value = Storage.get(arg0);
     if (value == null) {
       value = null;
     }
@@ -19,8 +19,7 @@ const obj = {
     const Storage = Storage2.Storage;
     return Storage.remove(arg0);
   },
-};
-const frozen = Object.freeze(obj);
+});
 const result = size.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
 
 export default frozen;

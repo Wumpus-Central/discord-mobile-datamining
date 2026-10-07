@@ -1,33 +1,19 @@
 // discord_app/modules/guild_profile/native/components/GameIcon.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
-import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import ClanGameplayActivity from "../../../../../discord_common/js/shared/shared-constants/ClanGameplayActivity.tsx";
-import FireIcon3 from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let size;
-let size1;
-({ View: closure_4, Image: hasOwnProperty } = react_native);
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  gameIcon: { width: 32, height: 32 },
-  gameIconImage: size,
-  gameIconMask: size1,
-  fireIcon: { marginTop: -1, width: 14, height: 14 },
-};
-size = {
+const Pressables = PressableHighlight(5916);
+const FireIcon2 = PressableHighlight(9421);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
+let size = {
   width: 32,
   height: 32,
   borderRadius: nativeDefault.radii.xs,
@@ -35,8 +21,8 @@ size = {
   borderStyle: "solid",
   borderColor: nativeDefault.colors.BORDER_STRONG,
 };
-createStyles = createStyles.createStyles;
-size1 = {
+obj2.gameIconImage = size;
+const size1 = {
   position: "absolute",
   top: -4,
   right: -4,
@@ -49,178 +35,154 @@ size1 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   borderRadius: nativeDefault.radii.sm,
 };
-const styles = createStyles(obj);
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.gameIconMask = size1;
+obj2.fireIcon = { marginTop: -1, width: 14, height: 14 };
+const styles = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let FireIcon;
-      let FireIcon2;
-      let activityLevel;
-      let game;
-      let items;
-      let items2;
-      let obj5;
-      let obj9;
-      let onPress;
-      let style;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(34);
+      let PressableHighlight = require;
+      let tmp = dependencyMap;
+      const cResult = c.c(34);
       ({ style, game } = arg0);
       ({ activityLevel, onPress } = arg0);
-      const tmp4 = styles();
+      const tmp3 = styles();
       if (cResult[0] !== game) {
         const iconURL = game.getIconURL(24);
         let source = null;
         if (null != iconURL) {
-          const obj2 = AvatarUtilsDefault;
-          source = obj2.makeSource(iconURL);
+          source = AvatarUtilsDefault.makeSource(iconURL);
         }
         cResult[0] = game;
         cResult[1] = source;
-        tmp5 = source;
+        let tmp4 = source;
       } else {
-        tmp5 = cResult[1];
+        tmp4 = cResult[1];
       }
       if (cResult[2] === game) {
-        let tmp9;
-        let level;
         if (cResult[3] === onPress) {
-          tmp9 = cResult[4];
+          let tmp8 = cResult[4];
         }
         if (activityLevel != null) {
-          level = activityLevel.level;
+          const level = activityLevel.level;
         }
-        let tmp11 = null;
-        if (null != tmp5) {
-          let tmp23;
-          const tmp12 = level === ClanGameplayActivity.ClanGameplayActivity.HIGH;
-          if (null != onPress) {
-            if (cResult[5] === style) {
-              let tmp27;
-              if (cResult[6] === tmp4.gameIcon) {
-                tmp27 = cResult[7];
-              }
-              if (cResult[8] === tmp5) {
-                let tmp28;
-                if (cResult[9] === tmp4.gameIconImage) {
-                  tmp28 = cResult[10];
-                }
-                if (cResult[11] === tmp12) {
-                  if (cResult[12] === tmp4.fireIcon) {
-                    let tmp32;
-                    if (cResult[13] === tmp4.gameIconMask) {
-                      tmp32 = cResult[14];
-                    }
-                    if (cResult[15] === tmp9) {
-                      if (cResult[16] === tmp27) {
-                        if (cResult[17] === tmp28) {
-                          let tmp37;
-                          if (cResult[18] === tmp32) {
-                            tmp37 = cResult[19];
-                          }
-                          tmp23 = tmp37;
-                        }
-                      }
-                    }
-                    const obj3 = { style: tmp27, onPress: tmp9, children: items };
-                    items = [tmp28, tmp32];
-                    const tmp39 = metroImportDefault(Pressables.PressableHighlight, obj3);
-                    cResult[15] = tmp9;
-                    cResult[16] = tmp27;
-                    cResult[17] = tmp28;
-                    cResult[18] = tmp32;
-                    cResult[19] = tmp39;
-                    tmp37 = tmp39;
-                  }
-                }
-                let tmp33 = tmp12;
-                if (tmp33) {
-                  const obj4 = { style: tmp4.gameIconMask, children: metroRequire(FireIcon2, obj5) };
-                  obj5 = { style: tmp4.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_260 };
-                  FireIcon2 = FireIcon3.FireIcon;
-                  tmp33 = metroRequire(React3, obj4);
-                }
-                cResult[11] = tmp12;
-                cResult[12] = tmp4.fireIcon;
-                cResult[13] = tmp4.gameIconMask;
-                cResult[14] = tmp33;
-                tmp32 = tmp33;
-              }
-              const obj6 = { style: tmp4.gameIconImage, source: tmp5 };
-              const tmp31 = metroRequire(hasOwnProperty, obj6);
-              cResult[8] = tmp5;
-              cResult[9] = tmp4.gameIconImage;
-              cResult[10] = tmp31;
-              tmp28 = tmp31;
-            }
-            const items1 = [style, tmp4.gameIcon];
-            cResult[5] = style;
-            cResult[6] = tmp4.gameIcon;
-            cResult[7] = items1;
-            tmp27 = items1;
-          } else {
+        if (null == tmp4) {
+          return null;
+        } else {
+          if (null == onPress) {
             if (cResult[20] === style) {
-              let tmp13;
-              if (cResult[21] === tmp4.gameIcon) {
-                tmp13 = cResult[22];
+              if (cResult[21] === tmp3.gameIcon) {
+                let tmp13 = cResult[22];
               }
-              if (cResult[23] === tmp5) {
-                let tmp14;
-                if (cResult[24] === tmp4.gameIconImage) {
-                  tmp14 = cResult[25];
+              if (cResult[23] === tmp4) {
+                if (cResult[24] === tmp3.gameIconImage) {
+                  let tmp14 = cResult[25];
                 }
                 if (cResult[26] === tmp12) {
-                  if (cResult[27] === tmp4.fireIcon) {
-                    let tmp18;
-                    if (cResult[28] === tmp4.gameIconMask) {
-                      tmp18 = cResult[29];
+                  if (cResult[27] === tmp3.fireIcon) {
+                    if (cResult[28] === tmp3.gameIconMask) {
+                      let tmp18 = cResult[29];
                     }
                     if (cResult[30] === tmp13) {
                       if (cResult[31] === tmp14) {
-                        if (cResult[32] === tmp18) {
-                          tmp23 = cResult[33];
-                        }
                       }
                     }
-                    const obj7 = { style: tmp13, children: items2 };
-                    items2 = [tmp14, tmp18];
-                    const tmp26 = metroImportDefault(React3, obj7);
+                    const obj3 = { style: tmp13, children: null };
+                    const items = [tmp14, tmp18];
+                    obj3.children = items;
+                    const tmp26 = React5(React4, obj3);
                     cResult[30] = tmp13;
                     cResult[31] = tmp14;
                     cResult[32] = tmp18;
                     cResult[33] = tmp26;
-                    tmp23 = tmp26;
                   }
                 }
                 let tmp19 = tmp12;
-                if (tmp19) {
-                  const obj8 = { style: tmp4.gameIconMask, children: metroRequire(FireIcon, obj9) };
-                  obj9 = { style: tmp4.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
-                  FireIcon = FireIcon3.FireIcon;
-                  tmp19 = metroRequire(React3, obj8);
+                if (tmp12) {
+                  const obj4 = { style: tmp3.gameIconMask, children: null };
+                  const obj5 = { style: tmp3.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
+                  obj4.children = timestampProducer(FireIcon2.FireIcon, obj5);
+                  tmp19 = timestampProducer(React4, obj4);
                 }
                 cResult[26] = tmp12;
-                cResult[27] = tmp4.fireIcon;
-                cResult[28] = tmp4.gameIconMask;
+                cResult[27] = tmp3.fireIcon;
+                cResult[28] = tmp3.gameIconMask;
                 cResult[29] = tmp19;
                 tmp18 = tmp19;
               }
-              const obj10 = { style: tmp4.gameIconImage, source: tmp5 };
-              const tmp17 = metroRequire(hasOwnProperty, obj10);
-              cResult[23] = tmp5;
-              cResult[24] = tmp4.gameIconImage;
+              const obj6 = { style: tmp3.gameIconImage, source: tmp4 };
+              const tmp17 = timestampProducer(hasOwnProperty, obj6);
+              cResult[23] = tmp4;
+              cResult[24] = tmp3.gameIconImage;
               cResult[25] = tmp17;
               tmp14 = tmp17;
             }
-            const items3 = [style, tmp4.gameIcon];
+            const items1 = [style, tmp3.gameIcon];
             cResult[20] = style;
-            cResult[21] = tmp4.gameIcon;
-            cResult[22] = items3;
-            tmp13 = items3;
+            cResult[21] = tmp3.gameIcon;
+            cResult[22] = items1;
+            tmp13 = items1;
           }
-          tmp11 = tmp23;
+          if (cResult[5] === style) {
+            if (cResult[6] === tmp3.gameIcon) {
+              let tmp27 = cResult[7];
+            }
+            if (cResult[8] === tmp4) {
+              if (cResult[9] === tmp3.gameIconImage) {
+                let tmp28 = cResult[10];
+              }
+              if (cResult[11] === tmp12) {
+                if (cResult[12] === tmp3.fireIcon) {
+                  if (cResult[13] === tmp3.gameIconMask) {
+                    let tmp32 = cResult[14];
+                  }
+                  if (cResult[15] === tmp8) {
+                    if (cResult[16] === tmp27) {
+                      if (cResult[17] === tmp28) {
+                      }
+                    }
+                  }
+                  PressableHighlight = Pressables.PressableHighlight;
+                  const obj7 = { style: tmp27, onPress: tmp8, children: null };
+                  const items2 = [tmp28, tmp32];
+                  obj7.children = items2;
+                  tmp = React5(PressableHighlight, obj7);
+                  cResult[15] = tmp8;
+                  cResult[16] = tmp27;
+                  cResult[17] = tmp28;
+                  cResult[18] = tmp32;
+                  cResult[19] = tmp;
+                }
+              }
+              let tmp33 = tmp12;
+              if (tmp12) {
+                const obj8 = { style: tmp3.gameIconMask, children: null };
+                const obj9 = { style: tmp3.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_260 };
+                obj8.children = timestampProducer(FireIcon2.FireIcon, obj9);
+                tmp33 = timestampProducer(React4, obj8);
+              }
+              cResult[11] = tmp12;
+              cResult[12] = tmp3.fireIcon;
+              cResult[13] = tmp3.gameIconMask;
+              cResult[14] = tmp33;
+              tmp32 = tmp33;
+            }
+            const obj10 = { style: tmp3.gameIconImage, source: tmp4 };
+            const tmp31 = timestampProducer(hasOwnProperty, obj10);
+            cResult[8] = tmp4;
+            cResult[9] = tmp3.gameIconImage;
+            cResult[10] = tmp31;
+            tmp28 = tmp31;
+          }
+          const items3 = [style, tmp3.gameIcon];
+          cResult[5] = style;
+          cResult[6] = tmp3.gameIcon;
+          cResult[7] = items3;
+          tmp27 = items3;
         }
-        return tmp11;
       }
       const fn = function k() {
         if (onPress != null) {
@@ -230,79 +192,72 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = game;
       cResult[3] = onPress;
       cResult[4] = fn;
-      tmp9 = fn;
+      tmp8 = fn;
     }
   : (arg0) => {
-      let FireIcon;
-      let FireIcon2;
-      let activityLevel;
-      let game;
-      let items1;
-      let items2;
-      let items3;
-      let items4;
-      let level;
-      let obj5;
-      let obj9;
-      let onPress;
-      let style;
       ({ style, game } = arg0);
       ({ activityLevel, onPress } = arg0);
-      const tmp = styles();
+      let fireIcon = styles();
       const iconURL = game.getIconURL(24);
       let source = null;
       if (null != iconURL) {
-        const obj = AvatarUtilsDefault;
-        source = obj.makeSource(iconURL);
+        source = AvatarUtilsDefault.makeSource(iconURL);
       }
       const items = [game, onPress];
-      const callback = react.useCallback(() => {
+      let callback = noop.useCallback(() => {
         if (onPress != null) {
           tmp(game);
         }
       }, items);
       if (activityLevel != null) {
-        level = activityLevel.level;
+        const level = activityLevel.level;
       }
-      let tmp9 = null;
-      if (null != source) {
-        let tmp19Result;
-        let tmp15Result = level === ClanGameplayActivity.ClanGameplayActivity.HIGH;
+      let FireIcon = require;
+      let ORANGE_260 = dependencyMap;
+      if (null == source) {
+        return null;
+      } else {
+        let style1 = level === tmp5;
         if (null != onPress) {
-          const obj2 = { style: items1, onPress: callback, children: items2 };
-          items1 = [style, tmp.gameIcon];
-          const obj3 = { style: tmp.gameIconImage, source };
-          const PressableHighlight = Pressables.PressableHighlight;
-          items2 = [metroRequire(hasOwnProperty, obj3)];
-          if (tmp15Result) {
-            const obj4 = { style: tmp.gameIconMask, children: metroRequire(FireIcon2, obj5) };
-            obj5 = { style: tmp.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_260 };
-            FireIcon2 = FireIcon3.FireIcon;
-            tmp15Result = metroRequire(React3, obj4);
+          const obj2 = { style: null, onPress: null, children: null };
+          const items1 = [style, fireIcon.gameIcon];
+          obj2.style = items1;
+          obj2.onPress = callback;
+          style = timestampProducer;
+          const obj3 = { style: fireIcon.gameIconImage, source };
+          callback = [timestampProducer(hasOwnProperty, obj3)];
+          if (style1) {
+            source = React4;
+            const obj4 = { style: fireIcon.gameIconMask, children: null };
+            FireIcon = FireIcon2.FireIcon;
+            const obj5 = { style: null, color: null };
+            fireIcon = fireIcon.fireIcon;
+            obj5.style = fireIcon;
+            ORANGE_260 = nativeDefault.unsafe_rawColors.ORANGE_260;
+            obj5.color = ORANGE_260;
+            obj4.children = style(FireIcon, obj5);
+            style1 = style(React4, obj4);
           }
-          items2[1] = tmp15Result;
-          tmp19Result = metroImportDefault(PressableHighlight, obj2);
+          callback[1] = style1;
+          obj2.children = callback;
+          let tmp14Result = React5(Pressables.PressableHighlight, obj2);
         } else {
-          const obj6 = { style: items3, children: items4 };
-          items3 = [style, tmp.gameIcon];
-          const obj7 = { style: tmp.gameIconImage, source };
-          items4 = [metroRequire(hasOwnProperty, obj7)];
-          let tmp21Result = tmp15Result;
-          if (tmp21Result) {
-            const obj8 = { style: tmp.gameIconMask, children: metroRequire(FireIcon, obj9) };
-            obj9 = { style: tmp.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
-            FireIcon = FireIcon3.FireIcon;
-            tmp21Result = metroRequire(React3, obj8);
+          const obj6 = { style: null, children: null };
+          const items2 = [style, fireIcon.gameIcon];
+          obj6.style = items2;
+          const obj7 = { style: fireIcon.gameIconImage, source };
+          const items3 = [timestampProducer(hasOwnProperty, obj7)];
+          let tmp16Result = style1;
+          if (style1) {
+            const obj8 = { style: fireIcon.gameIconMask, children: null };
+            const obj9 = { style: fireIcon.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
+            obj8.children = timestampProducer(FireIcon2.FireIcon, obj9);
+            tmp16Result = timestampProducer(React4, obj8);
           }
-          items4[1] = tmp21Result;
-          tmp19Result = metroImportDefault(React3, obj6);
+          items3[1] = tmp16Result;
+          obj6.children = items3;
+          tmp14Result = React5(React4, obj6);
         }
-        tmp9 = tmp19Result;
       }
-      return tmp9;
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
-
-export default tmp6;
 export const useStyles = styles;

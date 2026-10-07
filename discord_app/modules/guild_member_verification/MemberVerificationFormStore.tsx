@@ -1,85 +1,78 @@
 // discord_app/modules/guild_member_verification/MemberVerificationFormStore.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import MemberVerificationTypes from "MemberVerificationTypes.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 const NO_MEMBER_VERIFICATION_FORM = { version: "", description: "", formFields: [] };
-const React3 = {};
-const Store = get_initializedDefault.Store;
-class MemberVerificationFormStore extends Store {
-  get(arg0) {
-    if (null != arg0) {
-      return closure_4[arg0];
-    }
-  }
-  getRulesPrompt(guildId) {
-    let formFields;
-    const find = _modDef12.find;
-    _modDef12;
-    if (closure_4[guildId] != null) {
-      formFields = tmp2.formFields;
-    }
-    return find(formFields, MemberVerificationTypes.isTermsFormField);
-  }
-}
+const dependencyMap = {};
+const Store = initializeDefault.Store;
+class MemberVerificationFormStore extends Store {}
 const prototype = MemberVerificationFormStore.prototype;
+prototype["get"] = function get(arg0) {
+  if (null != arg0) {
+    return dependencyMap[arg0];
+  }
+};
+prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
+  let formFields;
+  if (dependencyMap[guildId] != null) {
+    formFields = tmp2.formFields;
+  }
+  return _modDef12.find(formFields, MemberVerificationTypes.isTermsFormField);
+};
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
-const obj2 = {
+const memberVerificationFormStore = new MemberVerificationFormStore(DispatcherDefault, {
   INVITE_ACCEPT_SUCCESS: function handleInviteData(invite) {
-    let description;
-    let guild;
-    let member_verification_form;
     ({ member_verification_form, guild } = invite.invite);
     let flag = null != guild && null != member_verification_form;
     if (flag) {
-      const obj = { version: null, description, formFields: member_verification_form.form_fields, guild };
+      const obj = { version: null, description: null, formFields: null, guild: null };
       ({ version: obj.version, description } = member_verification_form);
-      const id = guild.id;
       if (description == null) {
         description = "";
       }
-      closure_4[id] = obj;
+      obj.description = description;
+      obj.formFields = member_verification_form.form_fields;
+      obj.guild = guild;
+      closure_4[guild.id] = obj;
       flag = true;
     }
     return flag;
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function handleVerificationFormUpdate(arg0) {
-    let form;
-    let guildId;
-    let obj;
     ({ form, guildId } = arg0);
     if (null == form) {
-      closure_4[guildId] = obj;
+      dependencyMap[guildId] = obj;
     } else {
-      let tmp2 = closure_4[guildId];
+      let tmp2 = dependencyMap[guildId];
       if (tmp2 == null) {
         tmp2 = obj;
       }
       obj = {};
       const merged = Object.assign(tmp2);
       const merged1 = Object.assign(form);
-      closure_4[guildId] = obj;
+      dependencyMap[guildId] = obj;
     }
   },
   MEMBER_VERIFICATION_FORM_FETCH_FAIL: function handleVerificationFormFetchFail(guildId) {
     guildId = guildId.guildId;
-    let tmp2 = closure_4[guildId];
+    let tmp2 = dependencyMap[guildId];
     if (tmp2 == null) {
       tmp2 = obj;
     }
-    closure_4[guildId] = tmp2;
+    dependencyMap[guildId] = tmp2;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
     if (guild != null) {
       const id = guild.id;
     }
-    delete closure_4[id];
+    delete tmp2[tmp];
   },
-};
-const memberVerificationFormStore = new MemberVerificationFormStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationFormStore.tsx");
 
 export default memberVerificationFormStore;

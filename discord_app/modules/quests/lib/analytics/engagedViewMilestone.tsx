@@ -9,8 +9,6 @@ export const resetEngagedViewMilestoneStateForTests = function resetEngagedViewM
   set.clear();
 };
 export const createEngagedViewEmitter = function createEngagedViewEmitter(thresholdSeconds) {
-  let closure_1;
-  let initialWatchedSeconds;
   ({ getImpressionId: set, onEmit: closure_1, initialWatchedSeconds } = thresholdSeconds);
   if (initialWatchedSeconds === undefined) {
     initialWatchedSeconds = 0;
@@ -20,15 +18,11 @@ export const createEngagedViewEmitter = function createEngagedViewEmitter(thresh
     num = 5;
   }
   let video_watch_seconds = Math.max(0, initialWatchedSeconds);
-  let c4 = null;
-  let c5 = null;
-  let c6 = false;
+  c4 = null;
+  c5 = null;
+  c6 = false;
   return {
     onProgress(positionSeconds) {
-      let arr;
-      let closure_3;
-      let durationSeconds;
-      let isPlaying;
       positionSeconds = positionSeconds.positionSeconds;
       ({ durationSeconds, isPlaying } = positionSeconds);
       arr = arr();
@@ -40,19 +34,24 @@ export const createEngagedViewEmitter = function createEngagedViewEmitter(thresh
         }
       }
       if (null != tmp) {
-        const tmp3 = null != arr && arr !== tmp;
+        let tmp3 = null != arr;
+        if (tmp3) {
+          tmp3 = arr !== tmp;
+        }
         if (tmp3) {
           video_watch_seconds = 0;
           c4 = null;
         }
         arr = tmp;
         if (!set.has(tmp)) {
-          const tmp5 = c6;
-          if (!tmp5) {
+          if (!c6) {
             if (isPlaying) {
               if (null != c4) {
                 const diff = positionSeconds - c4;
-                const tmp9 = diff > 0 && diff <= 1.5;
+                let tmp9 = diff > 0;
+                if (tmp9) {
+                  tmp9 = diff <= 1.5;
+                }
                 if (tmp9) {
                   video_watch_seconds = video_watch_seconds + diff;
                 }
@@ -61,8 +60,7 @@ export const createEngagedViewEmitter = function createEngagedViewEmitter(thresh
               arr = tmp;
               if (video_watch_seconds >= num) {
                 if (!set.has(tmp)) {
-                  const tmp13 = c6;
-                  if (!tmp13) {
+                  if (!c6) {
                     c6 = true;
                     const obj2 = {
                       video_watch_seconds,
@@ -73,10 +71,19 @@ export const createEngagedViewEmitter = function createEngagedViewEmitter(thresh
                     const nextPromise = resolved.then(() => {
                       set.add(arr);
                     });
-                    const catchPromise = nextPromise.catch(() => {});
-                    catchPromise.finally(() => {
-                      c6 = false;
-                    });
+                    resolved
+                      .then(() => {
+                        set.add(arr);
+                      })
+                      .catch(() => {})
+                      .finally(() => {
+                        c6 = false;
+                      });
+                    const catchPromise = resolved
+                      .then(() => {
+                        set.add(arr);
+                      })
+                      .catch(() => {});
                   }
                 }
               }
@@ -93,7 +100,7 @@ export const createEngagedViewEmitter = function createEngagedViewEmitter(thresh
       c4 = null;
     },
     getWatchedSeconds() {
-      return video_watch_seconds;
+      return closure_3;
     },
     hasEmitted() {
       const arr = set();
@@ -105,8 +112,11 @@ export const createEngagedViewEmitter = function createEngagedViewEmitter(thresh
         }
       }
       let tmp2 = c6;
-      if (!tmp2) {
-        const hasItem = null != tmp && set.has(tmp);
+      if (!c6) {
+        let hasItem = null != tmp;
+        if (hasItem) {
+          hasItem = set.has(tmp);
+        }
         tmp2 = hasItem;
       }
       return tmp2;

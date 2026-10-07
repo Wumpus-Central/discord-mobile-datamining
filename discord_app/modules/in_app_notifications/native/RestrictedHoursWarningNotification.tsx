@@ -1,28 +1,19 @@
 // discord_app/modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import InAppNotificationConstants from "InAppNotificationConstants.tsx";
 import InAppNotificationActionCreatorsDefault from "../../../actions/native/InAppNotificationActionCreators.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Constants from "../../../Constants.tsx";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let notification;
-
-let metroImportDefault;
-let metroRequire;
-let size;
-const View = react_native.View;
-const lineClamp = InAppNotificationConstants.NOTIFICATION_PREVIEW_LINE_CLAMP;
-({ InAppNotificationTypes: metroRequire, UserSettingsSections: metroImportDefault } = Constants);
-const jsx = Fragment.jsx;
-let obj = { iconContainer: size };
-size = {
+require = fn;
+const View = fn(17).View;
+const lineClamp = fn(12493).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const Constants = fn(1085);
+({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj = { iconContainer: null };
+let size = {
   width: 48,
   height: 48,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -30,34 +21,33 @@ size = {
   alignItems: "center",
   justifyContent: "center",
 };
+obj.iconContainer = size;
 let closure_9 = createStyles.createStyles(obj);
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (notification) => {
-        let first;
-        let tmp13;
-        let tmp14;
-        let tmp15;
-        let tmp9;
-        let type;
-        let obj = type(576);
-        const cResult = obj.c(15);
+        const cResult = type(576).c(15);
         notification = notification.notification;
         const tmp4 = closure_9();
         type = notification.type;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const ThemeDarkIcon = tmp(12559).ThemeDarkIcon;
-          const tmp8 = <ThemeDarkIcon size="sm" color={nativeDefault.colors.WHITE} />;
+          let obj2 = { size: "sm", color: nativeDefault.colors.WHITE };
+          const tmp8 = jsx(tmp(12559).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
           cResult[0] = tmp8;
-          first = tmp8;
+          let first = tmp8;
         } else {
           first = cResult[0];
         }
         if (cResult[1] !== tmp4.iconContainer) {
+          let obj3 = { style: tmp4.iconContainer, children: first };
           const tmp12 = <View style={tmp4.iconContainer}>{first}</View>;
           cResult[1] = tmp4.iconContainer;
           cResult[2] = tmp12;
-          tmp9 = tmp12;
+          let tmp9 = tmp12;
         } else {
           tmp9 = cResult[2];
         }
@@ -65,30 +55,33 @@ const memoResult = react.memo(
           let obj4 = { type: "simple", text: notification.title };
           cResult[3] = notification.title;
           cResult[4] = obj4;
-          tmp13 = obj4;
+          let tmp13 = obj4;
         } else {
           tmp13 = cResult[4];
         }
         if (cResult[5] !== type) {
           const fn = function b() {
-            if (type === metroRequire.RESTRICTED_SCHEDULE_UPDATED) {
-              const obj = ModalActionCreatorsDefault;
-              obj.popAll();
-              const obj2 = InAppNotificationActionCreatorsDefault;
-              obj2.clearNotification();
+            if (type === constants.RESTRICTED_SCHEDULE_UPDATED) {
+              ModalActionCreatorsDefault.popAll();
+              InAppNotificationActionCreatorsDefault.clearNotification();
             }
-            const obj3 = openUserSettings;
-            const obj4 = { screen: metroImportDefault.FAMILY_CENTER };
-            obj3.openUserSettings(obj4);
+            openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
+            const obj4 = { screen: constants2.FAMILY_CENTER };
           };
           cResult[5] = type;
           cResult[6] = fn;
-          tmp14 = fn;
+          let tmp14 = fn;
         } else {
           tmp14 = cResult[6];
         }
         if (cResult[7] !== notification.subtitle) {
-          const tmp18 = jsx(type(4892).Text, {
+          const obj5 = {
+            variant: "redesign/message-preview/medium",
+            color: "text-subtle",
+            lineClamp,
+            children: notification.subtitle,
+          };
+          const tmp18 = jsx(tmp(4892).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,
@@ -96,7 +89,7 @@ const memoResult = react.memo(
           });
           cResult[7] = notification.subtitle;
           cResult[8] = tmp18;
-          tmp15 = tmp18;
+          let tmp15 = tmp18;
         } else {
           tmp15 = cResult[8];
         }
@@ -104,9 +97,8 @@ const memoResult = react.memo(
           if (cResult[10] === tmp9) {
             if (cResult[11] === notification) {
               if (cResult[12] === tmp14) {
-                let tmp19;
                 if (cResult[13] === tmp15) {
-                  tmp19 = cResult[14];
+                  let tmp19 = cResult[14];
                 }
                 return tmp19;
               }
@@ -127,42 +119,58 @@ const memoResult = react.memo(
         cResult[13] = tmp15;
         cResult[14] = tmp20;
         tmp19 = tmp20;
+        let obj = type(576);
       }
     : (notification) => {
         notification = notification.notification;
         const type = notification.type;
-        let obj2 = { size: "sm", color: type(587).colors.WHITE };
-        const ThemeDarkIcon = notification(12559).ThemeDarkIcon;
-        const items = [notification.title];
-        const items1 = [type];
-        const tmp = <View style={closure_9().iconContainer}>{null}</View>;
-        const memo = react.useMemo(() => ({ type: "simple", text: notification.title }), items);
-        const callback = react.useCallback(() => {
-          if (type === metroRequire.RESTRICTED_SCHEDULE_UPDATED) {
-            const obj = ModalActionCreatorsDefault;
-            obj.popAll();
-            const obj2 = InAppNotificationActionCreatorsDefault;
-            obj2.clearNotification();
-          }
-          const obj3 = openUserSettings;
-          const obj4 = { screen: metroImportDefault.FAMILY_CENTER };
-          obj3.openUserSettings(obj4);
-        }, items1);
-        const NotificationPressable = notification(12531).NotificationPressable;
-        let obj4 = {
-          variant: "redesign/message-preview/medium",
-          color: "text-subtle",
-          lineClamp,
-          children: notification.subtitle,
+        let obj = {
+          style: closure_9().iconContainer,
+          children: jsx(notification(12559).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }),
         };
-        return (
-          <NotificationPressable icon={tmp} header={memo} onPress={callback} notification={notification}>
-            {null}
-          </NotificationPressable>
-        );
+        const items = [notification.title];
+        let obj2 = { size: "sm", color: type(587).colors.WHITE };
+        const items1 = [type];
+        const memo = noop.useMemo(() => ({ type: "simple", text: notification.title }), items);
+        const callback = noop.useCallback(() => {
+          if (type === constants.RESTRICTED_SCHEDULE_UPDATED) {
+            ModalActionCreatorsDefault.popAll();
+            InAppNotificationActionCreatorsDefault.clearNotification();
+          }
+          openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
+          const obj4 = { screen: constants2.FAMILY_CENTER };
+        }, items1);
+        let obj3 = {
+          icon: (
+            <View style={closure_9().iconContainer}>
+              {jsx(notification(12559).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+            </View>
+          ),
+          header: memo,
+          children: jsx(notification(4892).Text, {
+            variant: "redesign/message-preview/medium",
+            color: "text-subtle",
+            lineClamp,
+            children: notification.subtitle,
+          }),
+          onPress: callback,
+          notification,
+        };
+        return jsx(notification(12531).NotificationPressable, {
+          icon: (
+            <View style={closure_9().iconContainer}>
+              {jsx(notification(12559).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+            </View>
+          ),
+          header: memo,
+          children: jsx(notification(4892).Text, {
+            variant: "redesign/message-preview/medium",
+            color: "text-subtle",
+            lineClamp,
+            children: notification.subtitle,
+          }),
+          onPress: callback,
+          notification,
+        });
       },
 );
-size = size_mod;
-const result = size.fileFinishedImporting("modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx");
-
-export default memoResult;

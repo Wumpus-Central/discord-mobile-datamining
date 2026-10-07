@@ -1,31 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-({ StyleSheet: c3, View: closure_4 } = react_native);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, top: 0 } });
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (arg0) => {
-        let baseColor;
-        let minHeight;
-        let tmp12;
-        let tmp9;
-        const obj = react2;
-        const cResult = obj.c(17);
+        const cResult = c.c(17);
         ({ baseColor, minHeight } = arg0);
         if (undefined === baseColor) {
           baseColor = nativeDefault.colors.BACKGROUND_BASE_LOWEST;
@@ -36,17 +31,16 @@ const memoResult = react.memo(
         }
         const tmp5 = closure_6();
         const tmp7 = useSafeAreaInsetsDefault();
-        const tmpResult = useToken;
-        const token = tmpResult.useToken(baseColor);
+        const token = useToken.useToken(baseColor);
         if (cResult[0] !== token) {
-          const tmpResult2 = utils_ColorUtils;
-          let str = tmpResult2.hex2rgb(token, 0);
+          let str = utils_ColorUtils.hex2rgb(token, 0);
           if (str == null) {
             str = "transparent";
           }
           cResult[0] = token;
           cResult[1] = str;
-          tmp9 = str;
+          let tmp9 = str;
+          const tmpResult2 = utils_ColorUtils;
         } else {
           tmp9 = cResult[1];
         }
@@ -55,22 +49,17 @@ const memoResult = react.memo(
           const obj2 = { height: bound };
           cResult[2] = bound;
           cResult[3] = obj2;
-          tmp12 = obj2;
+          let tmp12 = obj2;
         } else {
           tmp12 = cResult[3];
         }
         if (cResult[4] === tmp5.container) {
-          let tmp13;
           if (cResult[5] === tmp12) {
-            tmp13 = cResult[6];
+            let tmp13 = cResult[6];
           }
           if (cResult[7] === token) {
-            let tmp14;
-            let tmp16;
-            let tmp15;
-            let tmp17;
             if (cResult[8] === tmp9) {
-              tmp14 = cResult[9];
+              let tmp14 = cResult[9];
             }
             const _Symbol = Symbol;
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
@@ -78,36 +67,37 @@ const memoResult = react.memo(
               const point1 = { x: 0, y: 1 };
               cResult[10] = point;
               cResult[11] = point1;
-              tmp16 = point1;
-              tmp15 = point;
+              let tmp16 = point1;
+              let tmp15 = point;
             } else {
               tmp15 = cResult[10];
               tmp16 = cResult[11];
             }
             if (cResult[12] !== tmp14) {
+              const obj3 = { style: React3.absoluteFill, colors: tmp14, start: tmp15, end: tmp16 };
               const tmp20 = jsx(LinearGradientDefault, {
-                style: _false.absoluteFill,
+                style: React3.absoluteFill,
                 colors: tmp14,
                 start: tmp15,
                 end: tmp16,
               });
               cResult[12] = tmp14;
               cResult[13] = tmp20;
-              tmp17 = tmp20;
+              let tmp17 = tmp20;
             } else {
               tmp17 = cResult[13];
             }
             if (cResult[14] === tmp13) {
-              let tmp21;
               if (cResult[15] === tmp17) {
-                tmp21 = cResult[16];
+                let tmp21 = cResult[16];
               }
               return tmp21;
             }
+            const obj4 = { style: tmp13, pointerEvents: "none", children: tmp17 };
             const tmp24 = (
-              <React3 style={tmp13} pointerEvents="none">
+              <React4 style={tmp13} pointerEvents="none">
                 {tmp17}
-              </React3>
+              </React4>
             );
             cResult[14] = tmp13;
             cResult[15] = tmp17;
@@ -125,6 +115,7 @@ const memoResult = react.memo(
         cResult[5] = tmp12;
         cResult[6] = items1;
         tmp13 = items1;
+        const tmpResult = useToken;
       }
     : (baseColor) => {
         let BACKGROUND_BASE_LOWEST = baseColor.baseColor;
@@ -137,23 +128,28 @@ const memoResult = react.memo(
         }
         const tmp3 = closure_6();
         const tmp6 = useSafeAreaInsetsDefault();
-        const obj = useToken;
-        const token = obj.useToken(BACKGROUND_BASE_LOWEST);
-        const obj2 = utils_ColorUtils;
-        let str = obj2.hex2rgb(token, 0);
+        const token = useToken.useToken(BACKGROUND_BASE_LOWEST);
+        let str = utils_ColorUtils.hex2rgb(token, 0);
         if (str == null) {
           str = "transparent";
         }
-        const items = [tmp3.container, { height: Math.max(tmp6.top, num) }];
+        const obj3 = { style: null, pointerEvents: "none", children: null };
+        const items = [tmp3.container];
+        items[1] = { height: Math.max(tmp6.top, num) };
+        obj3.style = items;
+        const obj5 = { style: React3.absoluteFill, colors: null, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } };
         const items1 = [token, str];
-        ({ height: Math.max(tmp6.top, num) });
+        obj5.colors = items1;
+        obj3.children = jsx(LinearGradientDefault, {
+          style: React3.absoluteFill,
+          colors: null,
+          start: { x: 0, y: 0 },
+          end: { x: 0, y: 1 },
+        });
         return (
-          <React3 style={items} pointerEvents="none">
+          <React4 style={null} pointerEvents="none">
             {null}
-          </React3>
+          </React4>
         );
       },
 );
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");
-
-export default memoResult;

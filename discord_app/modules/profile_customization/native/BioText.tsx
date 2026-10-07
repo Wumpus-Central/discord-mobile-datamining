@@ -1,27 +1,19 @@
 // discord_app/modules/profile_customization/native/BioText.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import react2 from "../../../../_runtime/00576_react.js";
-import Constants from "../../../Constants.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
-import ChangelogConstants from "../../changelog/ChangelogConstants.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import BioMarkupUtils from "../../markup/BioMarkupUtils.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let c9;
-let metroImportAll;
-let metroImportDefault;
-const Pressable = react_native.Pressable;
-const AnalyticEvents = Constants.AnalyticEvents;
-const CHANGELOG_URL = ChangelogConstants.CHANGELOG_URL;
-({ jsxs: metroImportDefault, jsx: metroImportAll, Fragment: c9 } = Fragment);
+require = fn;
+const Pressable = fn(17).Pressable;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const CHANGELOG_URL = fn(2102).CHANGELOG_URL;
+const jsxProd = fn(21);
+({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4896);
 let closure_10 = createStyles.createStyles({
   text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
   span: {
@@ -41,55 +33,45 @@ let closure_10 = createStyles.createStyles({
     position: "relative",
   },
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      let items;
-      let lineClamp;
-      let target;
-      let text;
-      let obj = react2;
-      const cResult = obj.c(8);
+      const cResult = c.c(8);
       ({ lineClamp, text } = arg0);
       const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
-          const obj = LinkingDefault;
-          obj.openURL(target);
-          const obj2 = AnalyticsUtilsDefault;
-          const obj3 = { cta_type: "profile_bio", target };
-          obj2.track(constants.CHANGE_LOG_CTA_CLICKED, obj3);
+          LinkingDefault.openURL(target);
+          AnalyticsUtilsDefault.track(constants.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target });
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === lineClamp) {
         if (cResult[2] === tmp4.link) {
-          let tmp6;
           if (cResult[3] === text) {
-            tmp6 = cResult[4];
+            let tmp6 = cResult[4];
           }
           if (cResult[5] === tmp4.link) {
-            let tmp8;
             if (cResult[6] === tmp6) {
-              tmp8 = cResult[7];
+              let tmp8 = cResult[7];
             }
             return tmp8;
           }
-          let obj2 = { onPress: first, style: tmp4.link, children: tmp6 };
-          const tmp11 = metroImportAll(Pressable, obj2);
+          const obj2 = { onPress: first, style: tmp4.link, children: tmp6 };
+          const tmp11 = closure_1_8(Pressable, obj2);
           cResult[5] = tmp4.link;
           cResult[6] = tmp6;
           cResult[7] = tmp11;
           tmp8 = tmp11;
         }
       }
-      let obj3 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp4.link, children: items };
-      items = ["\n", text];
-      const tmp7 = metroImportDefault(Text_Text.Text, obj3);
+      const obj3 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp4.link, children: null };
+      const items = ["\n", text];
+      obj3.children = items;
+      const tmp7 = React5(Text_Text.Text, obj3);
       cResult[1] = lineClamp;
       cResult[2] = tmp4.link;
       cResult[3] = text;
@@ -97,41 +79,29 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = tmp7;
     }
   : (arg0) => {
-      let items;
-      let lineClamp;
-      let obj2;
-      let target;
-      let text;
       ({ lineClamp, text } = arg0);
       const tmp = closure_10();
       let obj = {
         onPress() {
-          const obj = LinkingDefault;
-          obj.openURL(target);
-          const obj2 = AnalyticsUtilsDefault;
-          const obj3 = { cta_type: "profile_bio", target };
-          obj2.track(constants.CHANGE_LOG_CTA_CLICKED, obj3);
+          LinkingDefault.openURL(target);
+          AnalyticsUtilsDefault.track(constants.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target });
         },
         style: tmp.link,
-        children: metroImportDefault(Text_Text.Text, obj2),
+        children: null,
       };
-      obj2 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: items };
-      items = ["\n", text];
-      return metroImportAll(Pressable, obj);
+      const obj2 = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: null };
+      const items = ["\n", text];
+      obj2.children = items;
+      obj.children = React5(Text_Text.Text, obj2);
+      return closure_1_8(Pressable, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let bio;
-      let items;
-      let items1;
-      let lineClamp;
-      let num;
-      let placeholder;
-      let textVariant;
-      let userId;
-      let obj = lineClamp(576);
-      const cResult = obj.c(26);
+      const cResult = lineClamp(576).c(26);
       ({ placeholder, bio, lineClamp } = arg0);
       ({ userId, textVariant } = arg0);
       let str = "text-md/normal";
@@ -140,164 +110,150 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp4 = closure_10();
       if (cResult[0] === bio) {
-        let tmp5;
         if (cResult[1] === str) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
-        const tmp8 = 0 === bio.length && !isChangelogUserDefault(userId);
+        let tmp7 = 0 === bio.length;
+        if (tmp7) {
+          tmp7 = !isChangelogUserDefault(userId);
+        }
         if (isChangelogUserDefault(userId)) {
-          let tmp16;
           let str3 = "text-default";
           let str4 = "text-default";
-          if (tmp8) {
+          if (tmp7) {
             str4 = "text-muted";
           }
           const _Symbol = Symbol;
-          const text = tmp4.text;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = lineClamp(1126).intl;
             const stringResult = intl.string(lineClamp(1126).t.OJmNR9);
             cResult[3] = stringResult;
-            tmp16 = stringResult;
+            let tmp15 = stringResult;
           } else {
-            tmp16 = cResult[3];
+            tmp15 = cResult[3];
           }
           if (cResult[4] === lineClamp) {
             if (cResult[5] === tmp4.text) {
               if (cResult[6] === str4) {
-                let tmp18;
-                let tmp21;
                 if (cResult[7] === str) {
-                  tmp18 = cResult[8];
+                  let tmp17 = cResult[8];
                 }
-                if (tmp8) {
+                if (tmp7) {
                   str3 = "text-muted";
                 }
-                const span = tmp4.span;
                 if (cResult[9] !== lineClamp) {
                   const intl2 = lineClamp(1126).intl;
                   const obj2 = {
-                    blogHook(text, id) {
-                      const obj = { lineClamp, text };
-                      return metroImportAll(closure_11, obj, id);
+                    blogHook(text, arg1) {
+                      return closure_2_8(closure_11, { lineClamp, text }, arg1);
                     },
                   };
                   const formatResult = intl2.format(lineClamp(1126).t.RCYeBL, obj2);
                   cResult[9] = lineClamp;
                   cResult[10] = formatResult;
-                  tmp21 = formatResult;
+                  let tmp20 = formatResult;
                 } else {
-                  tmp21 = cResult[10];
+                  tmp20 = cResult[10];
                 }
                 if (cResult[11] === lineClamp) {
                   if (cResult[12] === tmp4.span) {
                     if (cResult[13] === str3) {
-                      if (cResult[14] === tmp21) {
-                        let tmp23;
+                      if (cResult[14] === tmp20) {
                         if (cResult[15] === str) {
-                          tmp23 = cResult[16];
+                          let tmp22 = cResult[16];
                         }
-                        if (cResult[17] === tmp23) {
-                          let tmp26;
-                          if (cResult[18] === tmp18) {
-                            tmp26 = cResult[19];
+                        if (cResult[17] === tmp22) {
+                          if (cResult[18] === tmp17) {
+                            let tmp25 = cResult[19];
                           }
-                          return tmp26;
+                          return tmp25;
                         }
-                        const obj3 = { children: items };
-                        items = [tmp18, tmp23];
-                        const tmp29 = closure_7(closure_9, obj3);
-                        cResult[17] = tmp23;
-                        cResult[18] = tmp18;
-                        cResult[19] = tmp29;
-                        tmp26 = tmp29;
+                        const obj3 = { children: null };
+                        const items = [tmp17, tmp22];
+                        obj3.children = items;
+                        const tmp28 = closure_7(closure_9, obj3);
+                        cResult[17] = tmp22;
+                        cResult[18] = tmp17;
+                        cResult[19] = tmp28;
+                        tmp25 = tmp28;
                       }
                     }
                   }
                 }
-                const obj4 = { variant: str, color: str3, lineClamp, style: span, children: tmp21 };
-                const tmp25 = closure_8(lineClamp(4892).Text, obj4, "changelog-cta");
+                const obj4 = { variant: str, color: str3, lineClamp, style: tmp4.span, children: tmp20 };
+                const tmp24 = closure_8(lineClamp(4892).Text, obj4, "changelog-cta");
                 cResult[11] = lineClamp;
                 cResult[12] = tmp4.span;
                 cResult[13] = str3;
-                cResult[14] = tmp21;
+                cResult[14] = tmp20;
                 cResult[15] = str;
-                cResult[16] = tmp25;
-                tmp23 = tmp25;
+                cResult[16] = tmp24;
+                tmp22 = tmp24;
               }
             }
           }
-          const obj5 = { variant: str, color: str4, lineClamp, style: text, children: items1 };
-          items1 = [tmp16, "\n"];
-          const tmp20 = closure_7(lineClamp(4892).Text, obj5, "changelog-bio");
+          const obj5 = { variant: str, color: str4, lineClamp, style: tmp4.text, children: null };
+          const items1 = [tmp15, "\n"];
+          obj5.children = items1;
+          const tmp19 = closure_7(lineClamp(4892).Text, obj5, "changelog-bio");
           cResult[4] = lineClamp;
           cResult[5] = tmp4.text;
           cResult[6] = str4;
           cResult[7] = str;
-          cResult[8] = tmp20;
-          tmp18 = tmp20;
+          cResult[8] = tmp19;
+          tmp17 = tmp19;
         } else {
-          if (tmp8) {
+          if (tmp7) {
             if (null == placeholder) {
               return null;
             }
           }
           let str2 = "text-default";
-          if (tmp8) {
+          if (tmp7) {
             str2 = "text-muted";
           }
-          if (tmp8) {
+          if (tmp7) {
             tmp5 = placeholder;
           }
           if (cResult[20] === lineClamp) {
             if (cResult[21] === tmp4.text) {
               if (cResult[22] === str2) {
                 if (cResult[23] === tmp5) {
-                  let tmp12;
                   if (cResult[24] === str) {
-                    tmp12 = cResult[25];
+                    let tmp11 = cResult[25];
                   }
-                  return tmp12;
+                  return tmp11;
                 }
               }
             }
           }
           const obj6 = { variant: str, color: str2, lineClamp, style: tmp4.text, children: tmp5 };
-          const tmp14 = closure_8(lineClamp(4892).Text, obj6);
+          const tmp13 = closure_8(lineClamp(4892).Text, obj6);
           cResult[20] = lineClamp;
           cResult[21] = tmp4.text;
           cResult[22] = str2;
           cResult[23] = tmp5;
           cResult[24] = str;
-          cResult[25] = tmp14;
-          tmp12 = tmp14;
+          cResult[25] = tmp13;
+          tmp11 = tmp13;
         }
       }
-      const obj7 = { linkVariant: str, textVariant: str, customEmojiOffsetY: num };
-      const parseBioReact = lineClamp(8971).parseBioReact;
-      lineClamp(8971);
-      num = undefined;
-      const tmpResult2 = lineClamp(1369);
+      const obj = lineClamp(576);
+      const obj7 = { linkVariant: str, textVariant: str, customEmojiOffsetY: null };
+      const tmpResult = lineClamp(8971);
+      let num;
       if (tmpResult2.isAndroid()) {
         num = 3;
       }
-      const parseBioReactResult = parseBioReact(bio, undefined, obj7);
+      obj7.customEmojiOffsetY = num;
+      const parseBioReactResult = tmpResult.parseBioReact(bio, undefined, obj7);
       cResult[0] = bio;
       cResult[1] = str;
       cResult[2] = parseBioReactResult;
       tmp5 = parseBioReactResult;
+      tmpResult2 = lineClamp(1369);
     }
   : (lineClamp) => {
-      let bio;
-      let intl2;
-      let items1;
-      let obj5;
-      let placeholder;
-      let str;
-      let str3;
-      let textVariant;
-      let tmp8Result;
-      let userId;
       ({ placeholder, bio } = lineClamp);
       lineClamp = lineClamp.lineClamp;
       ({ userId, textVariant } = lineClamp);
@@ -306,67 +262,68 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_10();
       const items = [bio, textVariant];
-      let memo = react.useMemo(() => {
+      let memo = noop.useMemo(() => {
+        const obj2 = { linkVariant: textVariant, textVariant, customEmojiOffsetY: null };
+        const obj = BioMarkupUtils;
         let num;
-        const obj = { linkVariant: textVariant, textVariant, customEmojiOffsetY: num };
-        const parseBioReact = BioMarkupUtils.parseBioReact;
-        BioMarkupUtils;
-        num = undefined;
-        const obj2 = PlatformUtils;
-        if (obj2.isAndroid()) {
+        if (obj3.isAndroid()) {
           num = 3;
         }
-        return parseBioReact(bio, undefined, obj);
+        obj2.customEmojiOffsetY = num;
+        return obj.parseBioReact(bio, undefined, obj2);
       }, items);
-      const tmp3 = 0 === bio.length && !lineClamp(textVariant[13])(userId);
+      let tmp3 = 0 === bio.length;
+      if (tmp3) {
+        tmp3 = !lineClamp(textVariant[13])(userId);
+      }
       if (lineClamp(textVariant[13])(userId)) {
-        let obj2 = { variant: textVariant, color: str3, lineClamp, style: tmp.text, children: items1 };
+        let obj2 = { variant: textVariant, color: null, lineClamp: null, style: null, children: null };
         let str2 = "text-default";
-        str3 = "text-default";
-        const Text2 = bio(tmp6[10]).Text;
+        let str3 = "text-default";
         if (tmp3) {
           str3 = "text-muted";
         }
+        obj2.color = str3;
+        obj2.lineClamp = lineClamp;
+        obj2.style = tmp.text;
         const intl = bio(tmp6[14]).intl;
-        items1 = [intl.string(bio(textVariant[14]).t.OJmNR9), "\n"];
-        const items2 = [closure_7(Text2, obj2, "changelog-bio")];
-        const obj3 = {
-          variant: textVariant,
-          color: str2,
-          lineClamp,
-          style: tmp.span,
-          children: intl2.format(bio(textVariant[14]).t.RCYeBL, obj5),
-        };
-        const Text3 = bio(tmp6[10]).Text;
+        const items1 = [intl.string(bio(tmp6[14]).t.OJmNR9), "\n"];
+        obj2.children = items1;
+        const items2 = [closure_7(bio(tmp6[10]).Text, obj2, "changelog-bio")];
+        const obj3 = { variant: textVariant, color: null, lineClamp: null, style: null, children: null };
         if (tmp3) {
           str2 = "text-muted";
         }
-        const obj4 = { children: items2 };
-        intl2 = bio(tmp6[14]).intl;
-        obj5 = {
-          blogHook(text, id) {
-            const obj = { lineClamp, text };
-            return metroImportAll(closure_11, obj, id);
+        const obj4 = { children: null };
+        obj3.color = str2;
+        obj3.lineClamp = lineClamp;
+        obj3.style = tmp.span;
+        const intl2 = bio(tmp6[14]).intl;
+        const obj5 = {
+          blogHook(text, arg1) {
+            return closure_2_8(closure_11, { lineClamp, text }, arg1);
           },
         };
-        items2[1] = closure_8(Text3, obj3, "changelog-cta");
-        tmp8Result = closure_7(closure_9, obj4);
+        obj3.children = intl2.format(bio(tmp6[14]).t.RCYeBL, obj5);
+        items2[1] = closure_8(bio(tmp6[10]).Text, obj3, "changelog-cta");
+        obj4.children = items2;
+        let tmp8Result = closure_7(closure_9, obj4);
       } else if (!tmp3) {
-        let obj = { variant: textVariant, color: str, lineClamp, style: tmp.text, children: memo };
-        str = "text-default";
-        const Text = bio(tmp6[10]).Text;
+        let obj = { variant: textVariant, color: null, lineClamp: null, style: null, children: null };
+        let str = "text-default";
         if (tmp3) {
           str = "text-muted";
         }
+        obj.color = str;
+        obj.lineClamp = lineClamp;
+        obj.style = tmp.text;
         if (tmp3) {
           memo = placeholder;
         }
-        tmp8Result = closure_8(Text, obj);
+        obj.children = memo;
+        tmp8Result = closure_8(bio(tmp6[10]).Text, obj);
       } else {
         tmp8Result = null;
       }
       return tmp8Result;
     };
-const result = size.fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
-
-export default tmp3;

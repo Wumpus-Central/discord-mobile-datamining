@@ -1,25 +1,18 @@
 // discord_app/hooks/useInterval.tsx
-import react from "../../_runtime/00019_react.js";
+import noop from "../../_runtime/metro/00019__.js";
 import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let c3;
-let closure_4;
-({ useEffect: c3, useRef: closure_4 } = react);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+({ useEffect: c3, useRef: closure_4 } = noop);
+const result = size.fileFinishedImporting("hooks/useInterval.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (current, arg1) => {
-      let closure_2;
-      let tmp2;
-      let tmp3;
-      let tmp6;
-      let tmp7;
       _require = current;
-      let closure_1 = arg1;
-      const obj = require("react");
-      const cResult = obj.c(6);
+      closure_1 = arg1;
+      const cResult = require("c").c(6);
       dependencyMap = closure_4(current);
       const ref = closure_4(null);
       if (cResult[0] !== current) {
@@ -30,17 +23,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = current;
         cResult[1] = fn;
         cResult[2] = items;
-        tmp3 = items;
-        tmp2 = fn;
+        let tmp3 = items;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
         tmp3 = cResult[2];
       }
       ref(tmp2, tmp3);
-      const tmp4 = ref;
       if (cResult[3] !== arg1) {
         const fn2 = function f() {
-          let ref2;
           if (null !== closure_1) {
             const _setInterval = setInterval;
             ref.current = setInterval(() => {
@@ -58,25 +49,24 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = arg1;
         cResult[4] = fn2;
         cResult[5] = items1;
-        tmp7 = items1;
-        tmp6 = fn2;
+        let tmp7 = items1;
+        let tmp6 = fn2;
       } else {
         tmp6 = cResult[4];
         tmp7 = cResult[5];
       }
-      tmp4(tmp6, tmp7);
+      ref(tmp6, tmp7);
     }
   : (current, arg1) => {
-      let closure_1 = arg1;
-      let closure_2 = closure_4(current);
+      closure_1 = arg1;
+      closure_2 = closure_4(current);
       const ref = closure_4(null);
       const items = [current];
-      const tmp = ref(() => {
+      ref(() => {
         closure_2.current = current;
       }, items);
       const items1 = [arg1];
       ref(() => {
-        let ref2;
         if (null !== closure_1) {
           const _setInterval = setInterval;
           ref.current = setInterval(() => {
@@ -91,6 +81,3 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
     };
-const result = size.fileFinishedImporting("hooks/useInterval.tsx");
-
-export default tmp3;

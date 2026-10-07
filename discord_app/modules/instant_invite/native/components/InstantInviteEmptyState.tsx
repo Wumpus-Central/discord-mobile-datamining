@@ -1,23 +1,18 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteEmptyState.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl6 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09528_AssetRegistry.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _modDef9528 from "../../../../../_runtime/metro/09528__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
 
-let hasOwnProperty;
-let metroRequire;
-let size;
-const View = react_native.View;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let obj = {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   container: { padding: 16 },
   emptyStateContainer: { padding: 0, marginBottom: 16 },
   emptyStateArt: { marginBottom: 16 },
@@ -25,9 +20,9 @@ let obj = {
   linkContainer: { maxWidth: "100%", flexDirection: "row", marginBottom: 8, gap: 8 },
   inviteInput: { flexShrink: 1 },
   expireCaption: { marginBottom: 16 },
-  settingsButton: size,
+  settingsButton: null,
 };
-size = {
+let size = {
   width: 48,
   height: 48,
   justifyContent: "center",
@@ -35,28 +30,15 @@ size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.xs,
 };
-let closure_7 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+obj2.settingsButton = size;
+let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let container;
-      let emptyStateArt;
-      let emptyStateContainer;
-      let emptyStateTitle;
-      let inviteSettings;
-      let items1;
-      let items2;
-      let link;
-      let onCopy;
-      let onPressSettings;
-      let onShare;
-      let stateFromStores;
-      let tmp10;
-      let tmp11;
-      let tmp5;
-      let tmp6;
-      let tmp9;
-      let obj = stateFromStores(576);
-      const cResult = obj.c(37);
+      const cResult = stateFromStores(576).c(37);
       ({ link, onCopy, onShare, onPressSettings } = arg0);
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,18 +53,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const tmpResult = stateFromStores(504);
-      stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
+      let obj = stateFromStores(576);
+      stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
       if (cResult[2] !== stateFromStores) {
         const fn2 = function h() {
-          let maxUses;
           if (null == stateFromStores) {
             return null;
           } else {
-            let dqPWMN;
-            let tmp3;
-            const obj2 = InstantInviteUtilsDefault;
-            const maxAgeOptionByValue = obj2.getMaxAgeOptionByValue(stateFromStores.maxAge);
+            const maxAgeOptionByValue = InstantInviteUtilsDefault.getMaxAgeOptionByValue(stateFromStores.maxAge);
             let str2 = "";
             let str = "";
             if (null != maxAgeOptionByValue) {
@@ -98,11 +76,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               str2 = found.descriptiveLabel;
             }
             if (0 === stateFromStores.maxAge) {
-              dqPWMN = intl6.t["99ISmn"];
-              tmp3 = require;
+              let dqPWMN = util.t["99ISmn"];
+              let tmp3 = require;
             } else {
               tmp3 = require;
-              dqPWMN = intl6.t.dqPWMN;
+              dqPWMN = util.t.dqPWMN;
             }
             const intl = tmp3(1126).intl;
             const obj = { maxAge: str, maxUses: str2 };
@@ -111,102 +89,90 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = stateFromStores;
         cResult[3] = fn2;
-        tmp9 = fn2;
+        let tmp9 = fn2;
       } else {
         tmp9 = cResult[3];
       }
       ({ container, emptyStateContainer, emptyStateArt, emptyStateTitle } = tmp4);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = tmp(1126).intl;
-        const stringResult = intl.string(stateFromStores(1126).t.tQc0l8);
+        const stringResult = intl.string(tmp(1126).t.tQc0l8);
         const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(stateFromStores(1126).t.DXgdcD);
+        const stringResult1 = intl2.string(tmp(1126).t.DXgdcD);
         cResult[4] = stringResult;
         cResult[5] = stringResult1;
-        tmp11 = stringResult1;
-        tmp10 = stringResult;
+        let tmp11 = stringResult1;
+        let tmp10 = stringResult;
       } else {
         tmp10 = cResult[4];
         tmp11 = cResult[5];
       }
       if (cResult[6] === tmp4.emptyStateArt) {
         if (cResult[7] === tmp4.emptyStateContainer) {
-          let tmp14;
           if (cResult[8] === tmp4.emptyStateTitle) {
-            tmp14 = cResult[9];
+            let tmp14 = cResult[9];
           }
-          const linkContainer = tmp4.linkContainer;
           if (link == null) {
             link = "";
           }
           if (cResult[10] === onCopy) {
             if (cResult[11] === tmp4.inviteInput) {
-              let tmp17;
-              let tmp22;
-              let tmp24;
               if (cResult[12] === link) {
-                tmp17 = cResult[13];
+                let tmp17 = cResult[13];
               }
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl3 = tmp(1126).intl;
-                const stringResult2 = intl3.string(stateFromStores(1126).t["3D5yo/"]);
+                const stringResult2 = intl3.string(tmp(1126).t["3D5yo/"]);
                 cResult[14] = stringResult2;
-                tmp22 = stringResult2;
+                let tmp22 = stringResult2;
               } else {
                 tmp22 = cResult[14];
               }
               const _Symbol2 = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp26 = closure_5(stateFromStores(6893).SettingsIcon, {});
+                const tmp26 = closure_5(tmp(6893).SettingsIcon, {});
                 cResult[15] = tmp26;
-                tmp24 = tmp26;
+                let tmp24 = tmp26;
               } else {
                 tmp24 = cResult[15];
               }
               if (cResult[16] === onPressSettings) {
-                let tmp27;
                 if (cResult[17] === tmp4.settingsButton) {
-                  tmp27 = cResult[18];
+                  let tmp27 = cResult[18];
                 }
                 if (cResult[19] === tmp4.linkContainer) {
                   if (cResult[20] === tmp17) {
-                    let tmp30;
-                    let tmp34;
                     if (cResult[21] === tmp27) {
-                      tmp30 = cResult[22];
+                      let tmp30 = cResult[22];
                     }
-                    const expireCaption = tmp4.expireCaption;
                     if (cResult[23] !== tmp9) {
                       const tmp9Result = tmp9();
                       cResult[23] = tmp9;
                       cResult[24] = tmp9Result;
-                      tmp34 = tmp9Result;
+                      let tmp34 = tmp9Result;
                     } else {
                       tmp34 = cResult[24];
                     }
                     if (cResult[25] === tmp4.expireCaption) {
-                      let tmp36;
-                      let tmp39;
-                      let tmp41;
                       if (cResult[26] === tmp34) {
-                        tmp36 = cResult[27];
+                        let tmp36 = cResult[27];
                       }
                       const _Symbol3 = Symbol;
                       if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
                         const intl4 = tmp(1126).intl;
-                        const stringResult3 = intl4.string(stateFromStores(1126).t.Ej3B3Y);
+                        const stringResult3 = intl4.string(tmp(1126).t.Ej3B3Y);
                         cResult[28] = stringResult3;
-                        tmp39 = stringResult3;
+                        let tmp39 = stringResult3;
                       } else {
                         tmp39 = cResult[28];
                       }
                       if (cResult[29] !== onShare) {
-                        let obj2 = { text: tmp39, onPress: onShare };
-                        const tmp43 = closure_5(stateFromStores(5601).Button, obj2);
+                        const obj2 = { text: tmp39, onPress: onShare };
+                        const tmp43 = closure_5(tmp(5601).Button, obj2);
                         cResult[29] = onShare;
                         cResult[30] = tmp43;
-                        tmp41 = tmp43;
+                        let tmp41 = tmp43;
                       } else {
                         tmp41 = cResult[30];
                       }
@@ -214,17 +180,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         if (cResult[32] === tmp14) {
                           if (cResult[33] === tmp30) {
                             if (cResult[34] === tmp36) {
-                              let tmp44;
                               if (cResult[35] === tmp41) {
-                                tmp44 = cResult[36];
+                                let tmp44 = cResult[36];
                               }
                               return tmp44;
                             }
                           }
                         }
                       }
-                      const obj3 = { style: container, children: items1 };
-                      items1 = [tmp14, tmp30, tmp36, tmp41];
+                      const obj3 = { style: container, children: null };
+                      const items1 = [tmp14, tmp30, tmp36, tmp41];
+                      obj3.children = items1;
                       const tmp47 = closure_6(View, obj3);
                       cResult[31] = tmp4.container;
                       cResult[32] = tmp14;
@@ -235,20 +201,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp44 = tmp47;
                     }
                     const obj4 = {
-                      style: expireCaption,
+                      style: tmp4.expireCaption,
                       variant: "text-xs/medium",
                       color: "text-muted",
                       children: tmp34,
                     };
-                    const tmp38 = closure_5(stateFromStores(4892).Text, obj4);
+                    const tmp38 = closure_5(tmp(4892).Text, obj4);
                     cResult[25] = tmp4.expireCaption;
                     cResult[26] = tmp34;
                     cResult[27] = tmp38;
                     tmp36 = tmp38;
                   }
                 }
-                const obj5 = { style: linkContainer, children: items2 };
-                items2 = [tmp17, tmp27];
+                const obj5 = { style: tmp4.linkContainer, children: null };
+                const items2 = [tmp17, tmp27];
+                obj5.children = items2;
                 const tmp33 = closure_6(View, obj5);
                 cResult[19] = tmp4.linkContainer;
                 cResult[20] = tmp17;
@@ -263,7 +230,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp4.settingsButton,
                 children: tmp24,
               };
-              const tmp29 = closure_5(stateFromStores(5916).PressableOpacity, obj6);
+              const tmp29 = closure_5(tmp(5916).PressableOpacity, obj6);
               cResult[16] = onPressSettings;
               cResult[17] = tmp4.settingsButton;
               cResult[18] = tmp29;
@@ -277,10 +244,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             value: link,
             style: tmp4.inviteInput,
             forceAccessibleContainer: true,
-            clearButtonVisibility: stateFromStores(1188).ClearButtonVisibility.NEVER,
+            clearButtonVisibility: tmp(1188).ClearButtonVisibility.NEVER,
           };
-          const tmp20 = FreeFormTextInputDefault;
-          const tmp21 = closure_5(tmp20, obj7);
+          const tmp21 = closure_5(FreeFormTextInputDefault, obj7);
           cResult[10] = onCopy;
           cResult[11] = tmp4.inviteInput;
           cResult[12] = link;
@@ -288,87 +254,96 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp17 = tmp21;
         }
       }
-      const obj8 = {
+      const tmpResult = stateFromStores(504);
+      const tmp15 = closure_5(stateFromStores(1188).RefreshEmptyState, {
         containerStyle: emptyStateContainer,
         imageStyle: emptyStateArt,
         titleStyle: emptyStateTitle,
-        source: AssetRegistryDefault,
+        source: _modDef9528,
         title: tmp10,
         body: tmp11,
-      };
-      const RefreshEmptyState = tmp(1188).RefreshEmptyState;
-      const tmp15 = closure_5(RefreshEmptyState, obj8);
+      });
       cResult[6] = tmp4.emptyStateArt;
       cResult[7] = tmp4.emptyStateContainer;
       cResult[8] = tmp4.emptyStateTitle;
       cResult[9] = tmp15;
       tmp14 = tmp15;
+      const obj8 = {
+        containerStyle: emptyStateContainer,
+        imageStyle: emptyStateArt,
+        titleStyle: emptyStateTitle,
+        source: _modDef9528,
+        title: tmp10,
+        body: tmp11,
+      };
     }
   : (link) => {
-      let formatResult;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl5;
-      let inviteSettings;
-      let items1;
-      let items2;
-      let onCopy;
-      let onPressSettings;
-      let onShare;
       let str = link.link;
       let stateFromStores;
       ({ onCopy, onShare, onPressSettings } = link);
       const tmp = closure_7();
       const items = [CreateInviteModalStore];
-      const obj = stateFromStores(504);
-      stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
-      const obj2 = { style: tmp.container, children: items1 };
+      stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
+      const obj2 = { style: tmp.container, children: null };
       const obj3 = {
         containerStyle: tmp.emptyStateContainer,
         imageStyle: tmp.emptyStateArt,
         titleStyle: tmp.emptyStateTitle,
-        source: AssetRegistryDefault,
-        title: intl.string(stateFromStores(1126).t.tQc0l8),
-        body: intl2.string(stateFromStores(1126).t.DXgdcD),
+        source: _modDef9528,
+        title: null,
+        body: null,
       };
-      const RefreshEmptyState = stateFromStores(1188).RefreshEmptyState;
-      intl = stateFromStores(1126).intl;
-      intl2 = stateFromStores(1126).intl;
-      items1 = [closure_5(RefreshEmptyState, obj3), , ,];
-      const obj4 = { style: tmp.linkContainer, children: items2 };
+      const intl = stateFromStores(1126).intl;
+      obj3.title = intl.string(stateFromStores(1126).t.tQc0l8);
+      const intl2 = stateFromStores(1126).intl;
+      obj3.body = intl2.string(stateFromStores(1126).t.DXgdcD);
+      const items1 = [closure_5(stateFromStores(1188).RefreshEmptyState, obj3), , ,];
+      const obj4 = { style: tmp.linkContainer, children: null };
       const obj5 = {
         accessibilityRole: "button",
         onPress: onCopy,
         editable: false,
-        value: str,
-        style: tmp.inviteInput,
+        value: null,
+        style: null,
         forceAccessibleContainer: true,
-        clearButtonVisibility: stateFromStores(1188).ClearButtonVisibility.NEVER,
+        clearButtonVisibility: null,
       };
-      const tmp9 = FreeFormTextInputDefault;
+      const obj = stateFromStores(504);
       if (str == null) {
         str = "";
       }
-      items2 = [closure_5(tmp9, obj5)];
+      obj5.value = str;
+      obj5.style = tmp.inviteInput;
+      obj5.clearButtonVisibility = stateFromStores(1188).ClearButtonVisibility.NEVER;
+      const items2 = [closure_5(FreeFormTextInputDefault, obj5)];
       const obj6 = {
-        accessibilityLabel: intl3.string(stateFromStores(1126).t["3D5yo/"]),
+        accessibilityLabel: null,
         accessibilityRole: "button",
-        onPress: onPressSettings,
-        style: tmp.settingsButton,
-        children: closure_5(stateFromStores(6893).SettingsIcon, {}),
+        onPress: null,
+        style: null,
+        children: null,
       };
-      const PressableOpacity = tmp2(5916).PressableOpacity;
-      intl3 = tmp2(1126).intl;
-      items2[1] = closure_5(PressableOpacity, obj6);
+      const intl3 = tmp2(1126).intl;
+      obj6.accessibilityLabel = intl3.string(stateFromStores(1126).t["3D5yo/"]);
+      obj6.onPress = onPressSettings;
+      obj6.style = tmp.settingsButton;
+      obj6.children = closure_5(stateFromStores(6893).SettingsIcon, {});
+      items2[1] = closure_5(stateFromStores(5916).PressableOpacity, obj6);
+      obj4.children = items2;
       items1[1] = closure_6(View, obj4);
-      const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: formatResult };
-      formatResult = null;
-      const Text = tmp2(4892).Text;
-      if (null != stateFromStores) {
-        let dqPWMN;
-        const tmp8Result = InstantInviteUtilsDefault;
-        const maxAgeOptionByValue = tmp8Result.getMaxAgeOptionByValue(stateFromStores.maxAge);
+      const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
+      if (null == stateFromStores) {
+        obj7.children = null;
+        items1[2] = closure_5(tmp10, obj7);
+        const obj8 = { text: null, onPress: null };
+        const intl5 = tmp2(1126).intl;
+        obj8.text = intl5.string(tmp2(1126).t.Ej3B3Y);
+        obj8.onPress = onShare;
+        items1[3] = closure_5(tmp2(5601).Button, obj8);
+        obj2.children = items1;
+        return closure_6(View, obj2);
+      } else {
+        const maxAgeOptionByValue = InstantInviteUtilsDefault.getMaxAgeOptionByValue(stateFromStores.maxAge);
         let str2 = "";
         let str3 = "";
         if (null != maxAgeOptionByValue) {
@@ -384,22 +359,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           str2 = found.descriptiveLabel;
         }
         if (0 === stateFromStores.maxAge) {
-          dqPWMN = tmp2(1126).t["99ISmn"];
+          let dqPWMN = tmp2(1126).t["99ISmn"];
         } else {
           dqPWMN = tmp2(1126).t.dqPWMN;
         }
         const intl4 = tmp2(1126).intl;
-        const obj8 = { maxAge: str3, maxUses: str2 };
-        formatResult = intl4.format(dqPWMN, obj8);
+        const obj9 = { maxAge: str3, maxUses: str2 };
+        intl4.format(dqPWMN, obj9);
+        const tmp8Result = InstantInviteUtilsDefault;
       }
-      items1[2] = closure_5(Text, obj7);
-      const obj9 = { text: intl5.string(stateFromStores(1126).t.Ej3B3Y), onPress: onShare };
-      const Button = tmp2(5601).Button;
-      intl5 = tmp2(1126).intl;
-      items1[3] = closure_5(Button, obj9);
-      return closure_6(View, obj2);
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
-
-export default tmp4;

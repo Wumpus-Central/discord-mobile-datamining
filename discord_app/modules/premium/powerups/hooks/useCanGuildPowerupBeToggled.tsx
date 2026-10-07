@@ -1,31 +1,27 @@
 // discord_app/modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx
-import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, closure_4, dependencyMap, importDefault, sku;
 
-const PowerupActiveStatusType = GuildPowerupsConstants.PowerupActiveStatusType;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, dependencies, arg2) => {
-      let allPowerups;
-      let closure_0;
-      let first;
-      let tmp10;
-      let tmp6;
-      let unlockedPowerups;
+const require = fn;
+const PowerupActiveStatusType = fn(4774).PowerupActiveStatusType;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1, arg2) => {
       _require = arg0;
-      importDefault = dependencies;
-      const obj = require("react");
-      const cResult = obj.c(17);
+      skuId = arg1;
+      importDefault = arg1;
+      const cResult = require("c").c(17);
+      let found = globalThis;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildPowerupsStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -35,129 +31,116 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp7 = fn;
       } else {
-        tmp6 = cResult[2];
+        tmp7 = cResult[2];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-      const tmp9 = require("usePowerupActiveStatus")(arg0, dependencies);
-      const tmp8 = importDefault;
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
+      const tmp10 = require("usePowerupActiveStatus")(arg0, skuId);
       if (null != stateFromStores) {
-        let tmp12;
-        if (tmp9.type !== PowerupActiveStatusType.LEVEL_ACTIVATED) {
-          if (tmp9.type !== tmp11.TIER_OVERRIDE_ACTIVATED) {
-            let found1;
+        if (tmp10.type !== PowerupActiveStatusType.LEVEL_ACTIVATED) {
+          if (tmp10.type !== tmp12.TIER_OVERRIDE_ACTIVATED) {
             ({ allPowerups, unlockedPowerups } = stateFromStores);
             if (cResult[5] === arg2) {
-              if (cResult[6] === dependencies.dependencies) {
-                if (cResult[7] === dependencies.skuId) {
-                  let tmp14;
+              if (cResult[6] === skuId.dependencies) {
+                if (cResult[7] === skuId.skuId) {
                   if (cResult[8] === unlockedPowerups) {
-                    tmp14 = cResult[9];
-                  }
-                  if (cResult[10] === allPowerups) {
-                    if (cResult[11] === arg2) {
-                      let tmp19;
-                      if (cResult[12] === tmp14) {
-                        tmp19 = cResult[13];
-                      }
-                      if ((cResult[14] === null) != tmp14) {
-                        let tmp25;
-                        if (cResult[15] === tmp19) {
-                          tmp25 = cResult[16];
+                    if (cResult[10] === allPowerups) {
+                      if (cResult[11] === arg2) {
+                        if (cResult[12] === tmp15) {
+                          let tmp20 = cResult[13];
                         }
-                        tmp10 = tmp25;
+                        if (cResult[14] === tmp19) {
+                        }
+                        const obj2 = { disabled: tmp19, reason: tmp20 };
+                        cResult[14] = tmp19;
+                        cResult[15] = tmp20;
+                        cResult[16] = obj2;
                       }
-                      const obj2 = { disabled: null != tmp14, reason: tmp19 };
-                      cResult[14] = null != tmp14;
-                      cResult[15] = tmp19;
-                      cResult[16] = obj2;
-                      tmp25 = obj2;
                     }
-                  }
-                  let formatToPlainStringResult;
-                  if (null != tmp14) {
-                    if (null != allPowerups[tmp14]) {
-                      const intl = tmp(unlockedPowerups[7]).intl;
-                      const formatToPlainString = intl.formatToPlainString;
-                      const tmp8Result = tmp8(unlockedPowerups[8]);
-                      let title;
-                      const tmp22 = arg2 ? tmp8Result.vCEBiS : tmp8Result["1B8AZr"];
-                      if (allPowerups[tmp14] != null) {
-                        title = tmp23.title;
+                    let formatToPlainStringResult;
+                    if (null != cResult[9]) {
+                      if (null != allPowerups[tmp15]) {
+                        const intl = tmp(unlockedPowerups[7]).intl;
+                        const tmp9Result = require("../GuildPowerups.messages.js");
+                        let title;
+                        if (allPowerups[tmp15] != null) {
+                          title = tmp24.title;
+                        }
+                        const obj3 = { perk: title };
+                        formatToPlainStringResult = intl.formatToPlainString(
+                          arg2 ? tmp9Result.vCEBiS : tmp9Result["1B8AZr"],
+                          obj3,
+                        );
+                        const tmp23 = arg2 ? tmp9Result.vCEBiS : tmp9Result["1B8AZr"];
                       }
-                      const obj3 = { perk: title };
-                      formatToPlainStringResult = formatToPlainString(tmp22, obj3);
                     }
+                    cResult[10] = allPowerups;
+                    cResult[11] = arg2;
+                    cResult[12] = cResult[9];
+                    cResult[13] = formatToPlainStringResult;
+                    tmp20 = formatToPlainStringResult;
                   }
-                  cResult[10] = allPowerups;
-                  cResult[11] = arg2;
-                  cResult[12] = tmp14;
-                  cResult[13] = formatToPlainStringResult;
-                  tmp19 = formatToPlainStringResult;
                 }
               }
             }
             if (arg2) {
-              const _Object = Object;
-              const values = Object.values(unlockedPowerups);
-              const found = values.find((sku) => {
+              const _Object = found.Object;
+              const values = _Object.values(unlockedPowerups);
+              found = values.find((sku) => {
                 sku = sku.sku;
                 let dependent_sku_id;
                 if (sku != null) {
                   dependent_sku_id = sku.dependent_sku_id;
                 }
-                return dependent_sku_id === dependencies.skuId;
+                return dependent_sku_id === skuId.skuId;
               });
               let sku_id;
               if (found != null) {
                 sku_id = found.sku_id;
               }
-              found1 = sku_id;
+              let found1 = sku_id;
             } else {
-              dependencies = dependencies.dependencies;
+              const dependencies = skuId.dependencies;
               found1 = dependencies.find((item) => null == unlockedPowerups[item]);
             }
             cResult[5] = arg2;
-            cResult[6] = dependencies.dependencies;
-            cResult[7] = dependencies.skuId;
+            ({ dependencies: tmp3[6], skuId } = skuId);
+            cResult[7] = skuId;
             cResult[8] = unlockedPowerups;
             cResult[9] = found1;
-            tmp14 = found1;
           }
         }
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { disabled: true, reason: "a" };
           cResult[4] = obj4;
-          tmp12 = obj4;
+          let tmp13 = obj4;
         } else {
-          tmp12 = cResult[4];
+          tmp13 = cResult[4];
         }
-        tmp10 = tmp12;
+        let tmp11 = tmp13;
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj5 = { disabled: true, reason: "a" };
           cResult[3] = obj5;
-          tmp10 = obj5;
+          tmp11 = obj5;
         } else {
-          tmp10 = cResult[3];
+          tmp11 = cResult[3];
         }
       }
-      return tmp10;
+      return tmp11;
     }
   : (arg0, arg1, arg2) => {
-      let closure_0;
-      let closure_1;
-      let closure_2;
       _require = arg0;
       importDefault = arg1;
       dependencyMap = arg2;
-      let obj = require("get initialized");
       const items = [closure_4];
-      const stateFromStores = obj.useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        GuildPowerupsStore.getStateForGuild(closure_0),
+      );
       const tmp2 = usePowerupActiveStatusDefault(arg0, arg1);
       closure_4 = tmp2;
       const items1 = [stateFromStores, , , ,];
@@ -165,17 +148,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       items1[3] = arg2;
       items1[4] = tmp2.type;
       return stateFromStores.useMemo(() => {
-        let allPowerups;
-        let formatToPlainStringResult;
-        let unlockedPowerups;
         if (null == stateFromStores) {
           return { disabled: true, reason: "a" };
         } else {
           if (closure_4.type !== constants.LEVEL_ACTIVATED) {
             if (closure_4.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
-              let found1;
               ({ allPowerups, unlockedPowerups } = stateFromStores);
-              if (closure_2) {
+              if (dependencyMap) {
                 const _Object = Object;
                 const values = Object.values(unlockedPowerups);
                 const found = values.find((sku) => {
@@ -190,27 +169,30 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 if (found != null) {
                   sku_id = found.sku_id;
                 }
-                found1 = sku_id;
+                let found1 = sku_id;
               } else {
                 const dependencies = skuId.dependencies;
                 found1 = dependencies.find((item) => null == unlockedPowerups[item]);
               }
-              const obj = { disabled: null != found1, reason: formatToPlainStringResult };
-              formatToPlainStringResult = undefined;
+              const obj = { disabled: null != found1, reason: null };
+              let formatToPlainStringResult;
               if (null != found1) {
                 if (null != allPowerups[found1]) {
-                  const intl = closure_0(closure_2[7]).intl;
-                  const formatToPlainString = intl.formatToPlainString;
-                  const tmp11 = skuId(closure_2[8]);
+                  const intl = closure_0(1126).intl;
+                  const tmp11 = skuId(2553);
                   let title;
-                  const tmp12 = closure_2 ? tmp11.vCEBiS : tmp11["1B8AZr"];
                   if (allPowerups[found1] != null) {
                     title = tmp13.title;
                   }
                   const obj2 = { perk: title };
-                  formatToPlainStringResult = formatToPlainString(tmp12, obj2);
+                  formatToPlainStringResult = intl.formatToPlainString(
+                    dependencyMap ? tmp11.vCEBiS : tmp11["1B8AZr"],
+                    obj2,
+                  );
+                  const tmp12 = dependencyMap ? tmp11.vCEBiS : tmp11["1B8AZr"];
                 }
               }
+              obj.reason = formatToPlainStringResult;
               return obj;
             }
           }
@@ -218,6 +200,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
     };
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
-
-export default tmp2;

@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/2025/native/Checkpoint2025ForwardPreview.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react from "../../../../../_runtime/00576_react.js";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import c from "../../../../../_runtime/00576_c.js";
 import CheckpointUtils from "../CheckpointUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import checkpoint_CheckpointConstants from "../CheckpointConstants.tsx";
@@ -9,14 +9,12 @@ import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const CheckpointPersonas = checkpoint_CheckpointConstants.CheckpointPersonas;
-const jsx = Fragment.jsx;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const jsx = jsxProd.jsx;
+const result = size.fileFinishedImporting("modules/checkpoint/2025/native/Checkpoint2025ForwardPreview.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (checkpointData) => {
-      let tmp6;
-      let tmp7;
-      let tmp9;
-      const obj = react;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       let num = checkpointData.checkpointData.cardId;
       if (num == null) {
         num = 0;
@@ -31,16 +29,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { backgroundColor: tmp5.primaryColor };
         cResult[0] = tmp5.primaryColor;
         cResult[1] = obj2;
-        tmp6 = obj2;
+        let tmp6 = obj2;
       } else {
         tmp6 = cResult[1];
       }
       if (cResult[2] !== num) {
-        const tmpResult = CheckpointUtils;
-        const cardAssetUrl = tmpResult.getCardAssetUrl(num);
+        const cardAssetUrl = CheckpointUtils.getCardAssetUrl(num);
         cResult[2] = num;
         cResult[3] = cardAssetUrl;
-        tmp7 = cardAssetUrl;
+        let tmp7 = cardAssetUrl;
+        const tmpResult = CheckpointUtils;
       } else {
         tmp7 = cResult[3];
       }
@@ -48,14 +46,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { uri: tmp7 };
         cResult[4] = tmp7;
         cResult[5] = obj3;
-        tmp9 = obj3;
+        let tmp9 = obj3;
       } else {
         tmp9 = cResult[5];
       }
       if (cResult[6] === tmp6) {
-        let tmp10;
         if (cResult[7] === tmp9) {
-          tmp10 = cResult[8];
+          let tmp10 = cResult[8];
         }
         return tmp10;
       }
@@ -66,7 +63,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp10 = tmp11;
     }
   : (checkpointData) => {
-      let obj4;
       let num = checkpointData.checkpointData.cardId;
       if (num == null) {
         num = 0;
@@ -76,12 +72,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (typeof NINE !== "number") {
         NINE = CheckpointPersonas.NINE;
       }
+      const size = { style: null, width: 56, height: 56, source: null };
       const obj = { backgroundColor: CheckpointColors.CHECKPOINT_PERSONA_COLORS[NINE].primaryColor };
-      FastImageDefault;
-      const obj2 = { uri: obj4.getCardAssetUrl(num) };
-      obj4 = CheckpointUtils;
-      return <tmp2 style={obj} width={56} height={56} source={obj2} />;
+      size.style = obj;
+      const obj2 = { uri: null };
+      obj2.uri = CheckpointUtils.getCardAssetUrl(num);
+      size.source = obj2;
+      return <tmp2 style={null} width={56} height={56} source={null} />;
     };
-const result = size.fileFinishedImporting("modules/checkpoint/2025/native/Checkpoint2025ForwardPreview.tsx");
-
-export default tmp2;

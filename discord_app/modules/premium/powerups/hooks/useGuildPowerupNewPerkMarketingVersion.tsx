@@ -1,54 +1,50 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import GuildSettingsServerTagUtils from "../../../guild_settings/GuildSettingsServerTagUtils.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
-import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
-import Constants from "../../../../Constants.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
+require = fn;
+const GuildPowerupsConstants = fn(4774);
 ({
   GuildPowerupNewPerkMarketingVersion: hasOwnProperty,
   NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire,
 } = GuildPowerupsConstants);
-({ GuildFeatures: metroImportDefault, Permissions: metroImportAll } = Constants);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const Constants = fn(1085);
+({ GuildFeatures: closure_7, Permissions: closure_8 } = Constants);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let first;
-      let tmp12;
       _require = arg0;
       dependencyMap = arg1;
-      let tmp = _require;
-      const obj = require("react");
-      const cResult = obj.c(6);
-      const obj2 = require("GameServerExperiment");
-      const gameServerEnabled = obj2.useGameServerEnabled(arg0, "useGuildPowerupNewPerkMarketingVersion");
+      const cResult = require("c").c(6);
+      const obj = require("c");
+      const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(
+        arg0,
+        "useGuildPowerupNewPerkMarketingVersion",
+      );
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -58,50 +54,58 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
         }
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, U);
-      const tmpResult5 = tmp(4779);
-      const serverThemeEnabled = tmpResult5.useServerThemeEnabled(arg0, "useGuildPowerupNewPerkMarketingVersion");
-      const tmpResult6 = tmp(4778);
-      const serverThemeUserEnabled = tmpResult6.useServerThemeUserEnabled("useGuildPowerupNewPerkMarketingVersion");
-      const tmpResult7 = tmp(4779);
-      const serverThemeRollbackEnabled = tmpResult7.useServerThemeRollbackEnabled(
+      const obj2 = require("GameServerExperiment");
+      const stateFromStores = require("initialize").useStateFromStores(first, U);
+      const tmpResult = require("initialize");
+      const serverThemeEnabled = require("ServerThemeExperiment").useServerThemeEnabled(
+        arg0,
+        "useGuildPowerupNewPerkMarketingVersion",
+      );
+      const tmpResult5 = require("ServerThemeExperiment");
+      const serverThemeUserEnabled = require("ServerThemeUserExperiment").useServerThemeUserEnabled(
+        "useGuildPowerupNewPerkMarketingVersion",
+      );
+      const tmpResult6 = require("ServerThemeUserExperiment");
+      const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(
         arg0,
         "useGuildPowerupNewPerkMarketingVersion",
       );
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
         }
         const items1 = [PermissionStore, GuildStore];
         cResult[3] = items1;
-        tmp12 = items1;
+        const tmp12 = items1;
       } else {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -110,11 +114,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== arg0) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -124,26 +129,28 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
         }
       }
-      const tmpResult8 = tmp(504);
-      const stateFromStores1 = tmpResult8.useStateFromStores(tmp12, tmp15);
+      const tmpResult7 = require("ServerThemeExperiment");
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp12, tmp15);
       if (arg1 != null) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -151,26 +158,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp18 != null) {
           class U {
             constructor() {
-              const guild = GuildStore.getGuild(closure_0);
-              let hasItem;
+              guild = closure_3.getGuild(closure_0);
+              hasItem = undefined;
               if (guild != null) {
-                const features = guild.features;
-                hasItem = features.has(metroImportDefault.GAME_SERVERS);
+                features = guild.features;
+                tmp3 = GuildFeatures;
+                hasItem = features.has(GuildFeatures.GAME_SERVERS);
               }
               return hasItem;
             }
           }
         }
       }
-      const tmp19 = null != undefined;
       if (arg1 != null) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -178,11 +186,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp20 != null) {
           class U {
             constructor() {
-              const guild = GuildStore.getGuild(closure_0);
-              let hasItem;
+              guild = closure_3.getGuild(closure_0);
+              hasItem = undefined;
               if (guild != null) {
-                const features = guild.features;
-                hasItem = features.has(metroImportDefault.GAME_SERVERS);
+                features = guild.features;
+                tmp3 = GuildFeatures;
+                hasItem = features.has(GuildFeatures.GAME_SERVERS);
               }
               return hasItem;
             }
@@ -192,11 +201,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp19) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -205,11 +215,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg1 != null) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -217,11 +228,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp22 != null) {
           class U {
             constructor() {
-              const guild = GuildStore.getGuild(closure_0);
-              let hasItem;
+              guild = closure_3.getGuild(closure_0);
+              hasItem = undefined;
               if (guild != null) {
-                const features = guild.features;
-                hasItem = features.has(metroImportDefault.GAME_SERVERS);
+                features = guild.features;
+                tmp3 = GuildFeatures;
+                hasItem = features.has(GuildFeatures.GAME_SERVERS);
               }
               return hasItem;
             }
@@ -231,11 +243,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg1 != null) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -243,11 +256,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp23 != null) {
           class U {
             constructor() {
-              const guild = GuildStore.getGuild(closure_0);
-              let hasItem;
+              guild = closure_3.getGuild(closure_0);
+              hasItem = undefined;
               if (guild != null) {
-                const features = guild.features;
-                hasItem = features.has(metroImportDefault.GAME_SERVERS);
+                features = guild.features;
+                tmp3 = GuildFeatures;
+                hasItem = features.has(GuildFeatures.GAME_SERVERS);
               }
               return hasItem;
             }
@@ -257,11 +271,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (serverThemeEnabled) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -270,11 +285,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg1 != null) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -282,26 +298,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp25 != null) {
           class U {
             constructor() {
-              const guild = GuildStore.getGuild(closure_0);
-              let hasItem;
+              guild = closure_3.getGuild(closure_0);
+              hasItem = undefined;
               if (guild != null) {
-                const features = guild.features;
-                hasItem = features.has(metroImportDefault.GAME_SERVERS);
+                features = guild.features;
+                tmp3 = GuildFeatures;
+                hasItem = features.has(GuildFeatures.GAME_SERVERS);
               }
               return hasItem;
             }
           }
         }
       }
-      const tmp26 = null != undefined;
       if (arg1 != null) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
@@ -309,11 +326,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp27 != null) {
           class U {
             constructor() {
-              const guild = GuildStore.getGuild(closure_0);
-              let hasItem;
+              guild = closure_3.getGuild(closure_0);
+              hasItem = undefined;
               if (guild != null) {
-                const features = guild.features;
-                hasItem = features.has(metroImportDefault.GAME_SERVERS);
+                features = guild.features;
+                tmp3 = GuildFeatures;
+                hasItem = features.has(GuildFeatures.GAME_SERVERS);
               }
               return hasItem;
             }
@@ -323,17 +341,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp26) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
         }
       }
-      const arr = Array.from(closure_6[constants.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
+      tmp19 = null != undefined;
+      tmp26 = null != undefined;
+      const tmpResult8 = require("initialize");
       if (
         arr.some((item) => {
           let tmp;
@@ -348,17 +369,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ) {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
         }
         const _Array = Array;
-        const arr2 = Array.from(closure_6[constants.GUILD_TAG_BADGE_PACKS_WAVE_ONE]);
         if (
           !arr2.some((item) => {
             let tmp;
@@ -373,58 +394,65 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         ) {
           class U {
             constructor() {
-              const guild = GuildStore.getGuild(closure_0);
-              let hasItem;
+              guild = closure_3.getGuild(closure_0);
+              hasItem = undefined;
               if (guild != null) {
-                const features = guild.features;
-                hasItem = features.has(metroImportDefault.GAME_SERVERS);
+                features = guild.features;
+                tmp3 = GuildFeatures;
+                hasItem = features.has(GuildFeatures.GAME_SERVERS);
               }
               return hasItem;
             }
           }
         }
+        arr2 = Array.from(dependencyMap2[constants.GUILD_TAG_BADGE_PACKS_WAVE_ONE]);
       } else {
         class U {
           constructor() {
-            const guild = GuildStore.getGuild(closure_0);
-            let hasItem;
+            guild = closure_3.getGuild(closure_0);
+            hasItem = undefined;
             if (guild != null) {
-              const features = guild.features;
-              hasItem = features.has(metroImportDefault.GAME_SERVERS);
+              features = guild.features;
+              tmp3 = GuildFeatures;
+              hasItem = features.has(GuildFeatures.GAME_SERVERS);
             }
             return hasItem;
           }
         }
       }
+      arr = Array.from(dependencyMap2[constants.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let stateFromStores;
       _require = arg0;
       dependencyMap = arg1;
-      let tmp = _require;
-      let tmp2 = dependencyMap;
+      const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(
+        arg0,
+        "useGuildPowerupNewPerkMarketingVersion",
+      );
       let obj = require("GameServerExperiment");
-      const gameServerEnabled = obj.useGameServerEnabled(arg0, "useGuildPowerupNewPerkMarketingVersion");
+      let tmp = _require;
       const items = [stateFromStores];
-      const obj2 = require("get initialized");
-      const tmp4 = stateFromStores;
-      stateFromStores = obj2.useStateFromStores(items, () => {
-        const guild = GuildStore.getGuild(closure_0);
+      stateFromStores = require("initialize").useStateFromStores(items, () => {
+        guild = GuildStore.getGuild(closure_0);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
-          hasItem = features.has(metroImportDefault.GAME_SERVERS);
+          hasItem = features.has(constants.GAME_SERVERS);
         }
         return hasItem;
       });
+      const obj2 = require("initialize");
+      const tmp4 = stateFromStores;
+      let serverThemeEnabled = require("ServerThemeExperiment").useServerThemeEnabled(
+        arg0,
+        "useGuildPowerupNewPerkMarketingVersion",
+      );
       const obj3 = require("ServerThemeExperiment");
-      let serverThemeEnabled = obj3.useServerThemeEnabled(arg0, "useGuildPowerupNewPerkMarketingVersion");
+      const serverThemeUserEnabled = require("ServerThemeUserExperiment").useServerThemeUserEnabled(
+        "useGuildPowerupNewPerkMarketingVersion",
+      );
       const obj4 = require("ServerThemeUserExperiment");
-      const serverThemeUserEnabled = obj4.useServerThemeUserEnabled("useGuildPowerupNewPerkMarketingVersion");
-      const obj5 = require("ServerThemeExperiment");
-      const serverThemeRollbackEnabled = obj5.useServerThemeRollbackEnabled(
+      const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(
         arg0,
         "useGuildPowerupNewPerkMarketingVersion",
       );
@@ -434,17 +462,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (serverThemeEnabled) {
         serverThemeEnabled = !serverThemeRollbackEnabled;
       }
+      const obj5 = require("ServerThemeExperiment");
       const items1 = [serverThemeEnabled, tmp4];
-      const tmpResult = tmp(504);
-      const stateFromStores1 = tmpResult.useStateFromStores(items1, () =>
-        PermissionStore.can(metroImportAll.MANAGE_GUILD, GuildStore.getGuild(closure_0)),
+      const stateFromStores1 = tmp(504).useStateFromStores(items1, () =>
+        PermissionStore.can(constants2.MANAGE_GUILD, GuildStore.getGuild(closure_0)),
       );
       const items2 = [arg1, gameServerEnabled, stateFromStores, serverThemeEnabled, arg0, stateFromStores1];
       return gameServerEnabled.useMemo(() => {
-        let GUILD_TAG_BADGE_PACKS_WAVE_TWO;
-        let tmp18;
-        let tmp27;
-        let tmp6;
         let tmp2;
         if (closure_1 != null) {
           const allPowerups = closure_1.allPowerups;
@@ -452,20 +476,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             tmp2 = allPowerups[Powerups.GUILD_POWERUP_TAG_SKU_ID];
           }
         }
-        const tmp5 = null != tmp2;
         if (closure_1 != null) {
           let unlockedPowerups = closure_1.unlockedPowerups;
           if (unlockedPowerups != null) {
-            tmp6 = unlockedPowerups[Powerups.GUILD_POWERUP_TAG_SKU_ID];
+            const tmp6 = unlockedPowerups[Powerups.GUILD_POWERUP_TAG_SKU_ID];
           }
         }
         if (tmp5) {
           if (null == tmp6) {
             if (stateFromStores1) {
-              const obj = GuildSettingsServerTagUtils;
               if (obj.canUseMobileServerTagSettings(closure_0)) {
                 return hasOwnProperty.GUILD_TAG;
               }
+              obj = GuildSettingsServerTagUtils;
             }
           }
         }
@@ -476,11 +499,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             tmp14 = allPowerups2[Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
           }
         }
-        const tmp17 = null != tmp14;
         if (closure_1 != null) {
           const unlockedPowerups2 = closure_1.unlockedPowerups;
           if (unlockedPowerups2 != null) {
-            tmp18 = unlockedPowerups2[Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
+            const tmp18 = unlockedPowerups2[Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID];
           }
         }
         if (serverThemeEnabled) {
@@ -490,30 +512,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        let tmp23;
+        let tmp22;
         if (closure_1 != null) {
           const allPowerups3 = closure_1.allPowerups;
           if (allPowerups3 != null) {
-            tmp23 = allPowerups3[Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+            tmp22 = allPowerups3[Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
           }
         }
-        const tmp26 = null != tmp23;
         if (closure_1 != null) {
           const unlockedPowerups3 = closure_1.unlockedPowerups;
           if (unlockedPowerups3 != null) {
-            tmp27 = unlockedPowerups3[Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+            const tmp26 = unlockedPowerups3[Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
           }
         }
-        if (tmp26) {
-          let FILE_UPLOAD_250_MB;
-          if (null == tmp27) {
-            FILE_UPLOAD_250_MB = hasOwnProperty.FILE_UPLOAD_250_MB;
+        if (tmp25) {
+          if (null == tmp26) {
+            return hasOwnProperty.FILE_UPLOAD_250_MB;
           }
-          return FILE_UPLOAD_250_MB;
         }
-        const arr = Array.from(metroRequire[hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
+        let someResult = globalThis;
         if (
-          arr.some((item) => {
+          !arr.some((item) => {
             let tmp;
             if (closure_1_1 != null) {
               const unlockedPowerups = closure_1_1.unlockedPowerups;
@@ -524,37 +543,33 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return null != tmp;
           })
         ) {
-          if (gameServerEnabled) {
-            let GAME_SERVER_HOSTING;
-            if (!stateFromStores) {
-              GAME_SERVER_HOSTING = hasOwnProperty.GAME_SERVER_HOSTING;
-            }
-            GUILD_TAG_BADGE_PACKS_WAVE_TWO = GAME_SERVER_HOSTING;
-          }
-          const _Array = Array;
-          let num = 0;
-          const arr2 = Array.from(metroRequire[hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_ONE]);
-          if (
-            !arr2.some((item) => {
-              let tmp;
-              if (closure_1_1 != null) {
-                const unlockedPowerups = closure_1_1.unlockedPowerups;
-                if (unlockedPowerups != null) {
-                  tmp = unlockedPowerups[item];
-                }
-              }
-              return null != tmp;
-            })
-          ) {
-            num = hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_ONE;
-          }
-          GAME_SERVER_HOSTING = num;
-        } else {
-          GUILD_TAG_BADGE_PACKS_WAVE_TWO = hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_TWO;
+          const GUILD_TAG_BADGE_PACKS_WAVE_TWO = hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_TWO;
         }
-        FILE_UPLOAD_250_MB = GUILD_TAG_BADGE_PACKS_WAVE_TWO;
+        if (gameServerEnabled) {
+          if (!stateFromStores) {
+            let GAME_SERVER_HOSTING = hasOwnProperty.GAME_SERVER_HOSTING;
+          }
+        }
+        const _Array = someResult.Array;
+        arr = Array.from(dependencyMap2[hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
+        tmp17 = null != tmp14;
+        tmp25 = null != tmp22;
+        tmp5 = null != tmp2;
+        someResult = _Array.from(dependencyMap2[hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_ONE]).some((item) => {
+          let tmp;
+          if (closure_1_1 != null) {
+            const unlockedPowerups = closure_1_1.unlockedPowerups;
+            if (unlockedPowerups != null) {
+              tmp = unlockedPowerups[item];
+            }
+          }
+          return null != tmp;
+        });
+        let num = 0;
+        if (!someResult) {
+          num = hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_ONE;
+        }
+        GAME_SERVER_HOSTING = num;
+        const fromResult = _Array.from(dependencyMap2[hasOwnProperty.GUILD_TAG_BADGE_PACKS_WAVE_ONE]);
       }, items2);
     };
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
-
-export default tmp4;

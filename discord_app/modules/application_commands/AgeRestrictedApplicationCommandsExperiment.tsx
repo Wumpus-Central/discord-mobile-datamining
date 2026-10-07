@@ -1,19 +1,18 @@
 // discord_app/modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx
 import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let obj2;
 const obj = {
   kind: "user",
   name: "2026-05-age-restricted-application-commands",
   defaultConfig: { enabled: false },
-  variations: obj2,
+  variations: null,
 };
-obj2 = { 1: null };
+const obj2 = { 1: null };
 obj2[1] = { enabled: true };
-const tmp2 = apex_ApexExperimentDefault(obj);
+obj.variations = obj2;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx",
 );
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

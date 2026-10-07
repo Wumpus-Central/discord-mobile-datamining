@@ -1,28 +1,22 @@
 // discord_app/modules/application_widget/hooks/useApplicationWidgetRefresh.tsx
 import refreshApplicationWidget from "../refreshApplicationWidget.tsx";
 import presentApplicationWidgetRefreshOutcomeDefault from "../presentApplicationWidgetRefreshOutcome.native.tsx";
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let _slicedToArray = _slicedToArray_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetRefresh.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let closure_2;
-      let closure_3;
-      let pending;
-      let tmp4;
-      let tmp5;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(8);
-      [pending, dependencyMap] = react.useState(false);
-      _slicedToArray = react.useRef(true);
+      const cResult = require("c").c(8);
+      [pending, dependencyMap] = noop.useState(false);
+      _slicedToArray = noop.useRef(true);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
           closure_3.current = true;
@@ -38,16 +32,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const effect = react.useEffect(tmp4, tmp5);
+      const effect = noop.useEffect(tmp4, tmp5);
       if (cResult[2] === arg0) {
-        let tmp7;
         if (cResult[3] === pending) {
-          tmp7 = cResult[4];
+          let tmp7 = cResult[4];
         }
         if (cResult[5] === pending) {
-          let tmp8;
           if (cResult[6] === tmp7) {
-            tmp8 = cResult[7];
+            let tmp8 = cResult[7];
           }
           return tmp8;
         }
@@ -58,59 +50,55 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = obj3;
       }
       const fn2 = function s() {
-        let ref;
-        const tmp = first || null == closure_0;
+        let tmp = first;
+        if (!first) {
+          tmp = null == closure_0;
+        }
         if (!tmp) {
           closure_2(true);
-          const obj = refreshApplicationWidget;
-          const result = obj.refreshApplicationWidget(closure_0);
-          const nextPromise = result.then(presentApplicationWidgetRefreshOutcomeDefault);
-          nextPromise.finally(() => {
+          const result = refreshApplicationWidget.refreshApplicationWidget(closure_0);
+          result.then(presentApplicationWidgetRefreshOutcomeDefault).finally(() => {
             if (ref.current) {
               closure_1_2(false);
             }
           });
+          const nextPromise = result.then(presentApplicationWidgetRefreshOutcomeDefault);
         }
       };
       cResult[2] = arg0;
       cResult[3] = pending;
       cResult[4] = fn2;
       tmp7 = fn2;
+      let obj = require("c");
     }
   : (arg0) => {
-      let closure_2;
-      let closure_3;
-      let pending;
-      let closure_0 = arg0;
-      [pending, closure_2] = react.useState(false);
-      _slicedToArray = react.useRef(true);
-      const effect = react.useEffect(() => {
+      closure_0 = arg0;
+      [pending, closure_2] = noop.useState(false);
+      _slicedToArray = noop.useRef(true);
+      const effect = noop.useEffect(() => {
         closure_3.current = true;
         return () => {
           closure_1_3.current = false;
         };
       }, []);
       const items = [arg0, pending];
-      let obj = {
+      return {
         pending,
-        refresh: react.useCallback(() => {
-          let ref;
-          const tmp = first || null == closure_0;
+        refresh: noop.useCallback(() => {
+          let tmp = first;
+          if (!first) {
+            tmp = null == closure_0;
+          }
           if (!tmp) {
             closure_2(true);
-            const obj = refreshApplicationWidget;
-            const result = obj.refreshApplicationWidget(closure_0);
-            const nextPromise = result.then(presentApplicationWidgetRefreshOutcomeDefault);
-            nextPromise.finally(() => {
+            const result = refreshApplicationWidget.refreshApplicationWidget(closure_0);
+            result.then(presentApplicationWidgetRefreshOutcomeDefault).finally(() => {
               if (ref.current) {
                 closure_1_2(false);
               }
             });
+            const nextPromise = result.then(presentApplicationWidgetRefreshOutcomeDefault);
           }
         }, items),
       };
-      return obj;
     };
-let result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetRefresh.tsx");
-
-export default tmp2;

@@ -2,34 +2,25 @@
 import useIsHubRealNamePromptShowingDefault from "../../hub/useIsHubRealNamePromptShowing.tsx";
 import WelcomeScreenUtils from "../../../utils/native/WelcomeScreenUtils.tsx";
 import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "../../directory_channels/native/components/GuildDirectoryNicknameUpsellModalActionCreators.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let dependencyMap, guildId, importDefault;
-
+require = fn;
+const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId) => {
-      let closure_2;
-      let ref;
-      let showWelcomeModal;
-      let obj = guildId(576);
-      const cResult = obj.c(5);
+      const cResult = guildId(576).c(5);
       guildId = guildId.guildId;
-      let obj2 = showWelcomeModal;
-      const channelId = guildId.channelId;
       importDefault = showWelcomeModal.useRef(false);
       const tmp2 = useIsHubRealNamePromptShowingDefault(guildId);
       dependencyMap = tmp2;
-      let obj3 = guildId(12463);
-      showWelcomeModal = obj3.useShowWelcomeModal(guildId, channelId);
+      let obj = guildId(576);
+      let obj2 = showWelcomeModal;
+      showWelcomeModal = guildId(12463).useShowWelcomeModal(guildId, guildId.channelId);
       if (cResult[0] === guildId) {
         if (cResult[1] === tmp2) {
-          let tmp4;
-          let tmp5;
           if (cResult[2] === showWelcomeModal) {
-            tmp4 = cResult[3];
-            tmp5 = cResult[4];
+            let tmp4 = cResult[3];
+            let tmp5 = cResult[4];
           }
           const effect = obj2.useEffect(tmp4, tmp5);
           return null;
@@ -45,8 +36,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return false;
               },
             };
-            const obj3 = GuildDirectoryNicknameUpsellModalActionCreatorsDefault;
-            obj3.open(obj2);
+            GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj2);
             ref.current = true;
           } else if (showWelcomeModal) {
             const obj4 = {
@@ -56,8 +46,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return false;
               },
             };
-            const obj = WelcomeScreenUtils;
-            const result = obj.openWelcomeActionSheet(obj4);
+            const result = WelcomeScreenUtils.openWelcomeActionSheet(obj4);
             ref.current = true;
           }
         }
@@ -72,16 +61,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
     }
   : (guildId) => {
-      let closure_2;
-      let ref;
       guildId = guildId.guildId;
       let showWelcomeModal;
-      const channelId = guildId.channelId;
       importDefault = showWelcomeModal.useRef(false);
       const tmp = useIsHubRealNamePromptShowingDefault(guildId);
       dependencyMap = tmp;
-      let obj = guildId(12463);
-      showWelcomeModal = obj.useShowWelcomeModal(guildId, channelId);
+      showWelcomeModal = guildId(12463).useShowWelcomeModal(guildId, guildId.channelId);
       const items = [guildId, showWelcomeModal, tmp];
       const effect = showWelcomeModal.useEffect(() => {
         if (!ref.current) {
@@ -93,8 +78,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return false;
               },
             };
-            const obj3 = GuildDirectoryNicknameUpsellModalActionCreatorsDefault;
-            obj3.open(obj2);
+            GuildDirectoryNicknameUpsellModalActionCreatorsDefault.open(obj2);
             ref.current = true;
           } else if (showWelcomeModal) {
             const obj4 = {
@@ -104,16 +88,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return false;
               },
             };
-            const obj = WelcomeScreenUtils;
-            const result = obj.openWelcomeActionSheet(obj4);
+            const result = WelcomeScreenUtils.openWelcomeActionSheet(obj4);
             ref.current = true;
           }
         }
       }, items);
       return null;
     };
-const memoResult = react.memo(tmp2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat/native/ChatViewPopups.tsx");
 
-export default memoResult;
+export default noop.memo(tmp2);
 export const ChatViewPopups = tmp2;

@@ -1,69 +1,61 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import ColorConstants from "../../colors/native/ColorConstants.tsx";
-import AssetRegistryDefault from "../../../../_runtime/06952_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/06953_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/06954_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/06955_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/06956_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/06957_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/06958_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../_runtime/06959_AssetRegistry.js";
+import _modDef6952 from "../../../../_runtime/metro/06952__.js";
+import _modDef6953 from "../../../../_runtime/metro/06953__.js";
+import _modDef6954 from "../../../../_runtime/metro/06954__.js";
+import _modDef6955 from "../../../../_runtime/metro/06955__.js";
+import _modDef6956 from "../../../../_runtime/metro/06956__.js";
+import _modDef6957 from "../../../../_runtime/metro/06957__.js";
+import _modDef6958 from "../../../../_runtime/metro/06958__.js";
+import _modDef6959 from "../../../../_runtime/metro/06959__.js";
 import PremiumPill from "../../user_settings/premium/native/PremiumPill.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import PremiumConstants from "../PremiumConstants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const PremiumUtilsDefault = PremiumUtils;
-let importDefault;
 
-let closure_4;
-let hasOwnProperty;
-let items;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-const View = react_native.View;
+require = fn;
+const View = fn(17).View;
+const PremiumConstants = fn(1379);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
-const getPremiumGradientColor = ColorConstants.getPremiumGradientColor;
-({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let obj = {
+const getPremiumGradientColor = fn(6951).getPremiumGradientColor;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   header: { height: 112, justifyContent: "center", alignItems: "center" },
   logoContainer: { position: "absolute", top: 16, left: 16 },
   imgWumpus: { position: "absolute", height: 90 },
-  imgWumpusRight: obj2,
+  imgWumpusRight: null,
   imgWumpusBottom: { bottom: 0 },
   discountPill: { marginTop: 10 },
 };
-obj2 = { transform: items };
-items = [{ scaleX: -1 }];
-let closure_9 = createStyles.createStyles(obj);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let obj3 = { transform: null };
+let items = [{ scaleX: -1 }];
+obj3.transform = items;
+obj2.imgWumpusRight = obj3;
+let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanActionSheetHeader.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (premiumType) => {
-      let closure_1;
-      let discountOffer;
-      let trialOffer;
-      const obj = premiumType(576);
-      const cResult = obj.c(58);
+      const cResult = premiumType(576).c(58);
       premiumType = premiumType.premiumType;
       ({ trialOffer, discountOffer } = premiumType);
       const tmp2 = closure_9();
       importDefault = tmp2;
       if (cResult[0] !== premiumType) {
         const fn = function o() {
-          if (React3.TIER_0 === premiumType) {
-            return AssetRegistryDefault;
-          } else if (React3.TIER_1 === premiumType) {
-            return AssetRegistryDefault2;
-          } else if (React3.TIER_2 === premiumType) {
-            return AssetRegistryDefault3;
+          if (React4.TIER_0 === premiumType) {
+            return _modDef6952;
+          } else if (React4.TIER_1 === premiumType) {
+            return _modDef6953;
+          } else if (React4.TIER_2 === premiumType) {
+            return _modDef6954;
           }
         };
         cResult[0] = premiumType;
@@ -72,12 +64,22 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== premiumType) {
         class P {
           constructor() {
-            if (React3.TIER_0 === premiumType) {
-              return AssetRegistryDefault4;
-            } else if (React3.TIER_1 === premiumType) {
-              return AssetRegistryDefault5;
-            } else if (React3.TIER_2 === premiumType) {
-              return AssetRegistryDefault6;
+            tmp = premiumType;
+            tmp2 = PremiumTypes;
+            if (PremiumTypes.TIER_0 === premiumType) {
+              tmp7 = closure_1;
+              tmp8 = closure_2;
+              return closure_1(closure_2[11]);
+            } else if (tmp2.TIER_1 === tmp) {
+              tmp5 = closure_1;
+              tmp6 = closure_2;
+              return closure_1(closure_2[12]);
+            } else if (tmp2.TIER_2 === tmp) {
+              tmp3 = closure_1;
+              tmp4 = closure_2;
+              return closure_1(closure_2[13]);
+            } else {
+              return;
             }
           }
         }
@@ -86,12 +88,22 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class P {
           constructor() {
-            if (React3.TIER_0 === premiumType) {
-              return AssetRegistryDefault4;
-            } else if (React3.TIER_1 === premiumType) {
-              return AssetRegistryDefault5;
-            } else if (React3.TIER_2 === premiumType) {
-              return AssetRegistryDefault6;
+            tmp = premiumType;
+            tmp2 = PremiumTypes;
+            if (PremiumTypes.TIER_0 === premiumType) {
+              tmp7 = closure_1;
+              tmp8 = closure_2;
+              return closure_1(closure_2[11]);
+            } else if (tmp2.TIER_1 === tmp) {
+              tmp5 = closure_1;
+              tmp6 = closure_2;
+              return closure_1(closure_2[12]);
+            } else if (tmp2.TIER_2 === tmp) {
+              tmp3 = closure_1;
+              tmp4 = closure_2;
+              return closure_1(closure_2[13]);
+            } else {
+              return;
             }
           }
         }
@@ -99,22 +111,37 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] === premiumType) {
         class P {
           constructor() {
-            if (React3.TIER_0 === premiumType) {
-              return AssetRegistryDefault4;
-            } else if (React3.TIER_1 === premiumType) {
-              return AssetRegistryDefault5;
-            } else if (React3.TIER_2 === premiumType) {
-              return AssetRegistryDefault6;
+            tmp = premiumType;
+            tmp2 = PremiumTypes;
+            if (PremiumTypes.TIER_0 === premiumType) {
+              tmp7 = closure_1;
+              tmp8 = closure_2;
+              return closure_1(closure_2[11]);
+            } else if (tmp2.TIER_1 === tmp) {
+              tmp5 = closure_1;
+              tmp6 = closure_2;
+              return closure_1(closure_2[12]);
+            } else if (tmp2.TIER_2 === tmp) {
+              tmp3 = closure_1;
+              tmp4 = closure_2;
+              return closure_1(closure_2[13]);
+            } else {
+              return;
             }
           }
         }
       }
       class E {
         constructor() {
-          if (React3.TIER_0 !== premiumType) {
-            if (React3.TIER_1 !== premiumType) {
-              if (React3.TIER_2 === premiumType) {
+          tmp = premiumType;
+          tmp2 = PremiumTypes;
+          if (PremiumTypes.TIER_0 !== premiumType) {
+            if (tmp2.TIER_1 !== tmp) {
+              if (tmp2.TIER_2 === tmp) {
+                tmp3 = closure_1;
                 return closure_1.imgWumpusRight;
+              } else {
+                return;
               }
             }
           }
@@ -125,16 +152,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp2.imgWumpusBottom;
       cResult[6] = tmp2.imgWumpusRight;
       cResult[7] = E;
+      const obj = premiumType(576);
     }
   : (arg0) => {
-      let discountOffer;
-      let items1;
-      let premiumType;
-      let tmp13Result10;
-      let tmp13Result12;
-      let tmp17Result;
-      let tmp6Result;
-      let trialOffer;
       ({ premiumType, trialOffer, discountOffer } = arg0);
       const tmp = closure_9();
       let tmp2 = null != trialOffer;
@@ -144,8 +164,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (subscriptionTrial != null) {
           skuId = subscriptionTrial.skuId;
         }
-        const obj = PremiumUtilsDefault;
-        tmp2 = skuId === obj.getSkuIdForPremiumType(premiumType);
+        tmp2 = skuId === PremiumUtilsDefault.getSkuIdForPremiumType(premiumType);
       }
       PremiumUtils;
       let tmp10 = null != discountOffer;
@@ -165,98 +184,97 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         end: ConstantsIOS.HorizontalGradient.END,
         accessible: true,
         accessibilityRole: "header",
-        accessibilityLabel: tmp6Result.getPremiumTypeDisplayName(premiumType),
+        accessibilityLabel: null,
         children: null,
       };
       const tmp14 = LinearGradientDefault;
-      tmp6Result = PremiumUtils;
-      if (React3.TIER_0 === premiumType) {
-        tmp17Result = AssetRegistryDefault7;
+      obj2.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
+      if (React4.TIER_0 === premiumType) {
+        let tmp13Result = _modDef6958;
       } else {
-        tmp17Result = null;
-        if (React3.TIER_1 !== premiumType) {
-          if (React3.TIER_2 === premiumType) {
-            tmp17Result = AssetRegistryDefault8;
+        tmp13Result = null;
+        if (React4.TIER_1 !== premiumType) {
+          if (React4.TIER_2 === premiumType) {
+            tmp13Result = _modDef6959;
           }
         }
       }
-      if (tmp17Result) {
-        let tmp13Result8;
+      if (!tmp13Result) {
+        const items = [tmp13Result, ,];
+        const obj3 = { style: tmp.logoContainer, children: null };
+        if (React4.TIER_0 === premiumType) {
+          let tmp13Result8 = _modDef6952;
+        } else if (React4.TIER_1 === premiumType) {
+          tmp13Result8 = _modDef6953;
+        } else if (React4.TIER_2 === premiumType) {
+          tmp13Result8 = _modDef6954;
+        }
+        const obj4 = { source: tmp13Result8, resizeMode: "contain" };
+        const items1 = [React5(FastImageDefault, obj4), ,];
+        let tmp22Result = null;
+        if (tmp2) {
+          const obj5 = {
+            style: tmp.discountPill,
+            trialOffer,
+            premiumType,
+            useWhiteBackground: true,
+            hideTrialCountdown: true,
+          };
+          tmp22Result = React5(PremiumPill.PremiumPill, obj5);
+        }
+        items1[1] = tmp22Result;
+        let tmp22Result2 = null;
+        if (tmp10) {
+          const obj6 = {
+            style: tmp.discountPill,
+            discountOffer,
+            premiumType,
+            shouldShowDiscountUpsell: true,
+            useWhiteBackground: true,
+          };
+          tmp22Result2 = React5(PremiumPill.PremiumPill, obj6);
+        }
+        items1[2] = tmp22Result2;
+        obj3.children = items1;
+        items[1] = closure_1_8(View, obj3);
         const tmp13Result7 = FastImageDefault;
-        if (React3.TIER_0 === premiumType) {
-          tmp13Result8 = AssetRegistryDefault7;
+        if (React4.TIER_0 === premiumType) {
+          let tmp13Result10 = _modDef6955;
+        } else if (React4.TIER_1 === premiumType) {
+          tmp13Result10 = _modDef6956;
+        } else if (React4.TIER_2 === premiumType) {
+          tmp13Result10 = _modDef6957;
+        }
+        const obj7 = { source: tmp13Result10, style: null, resizeMode: "contain" };
+        const items2 = [tmp.imgWumpus];
+        if (React4.TIER_0 !== premiumType) {
+          if (React4.TIER_1 !== premiumType) {
+            if (React4.TIER_2 === premiumType) {
+              let imgWumpusBottom = tmp.imgWumpusRight;
+            }
+          }
+          items2[1] = imgWumpusBottom;
+          obj7.style = items2;
+          items[2] = React5(tmp13Result9, obj7);
+          obj2.children = items;
+          return closure_1_8(tmp14, obj2);
+        }
+        imgWumpusBottom = tmp.imgWumpusBottom;
+        tmp13Result9 = FastImageDefault;
+      } else {
+        if (React4.TIER_0 === premiumType) {
+          let tmp13Result12 = _modDef6958;
         } else {
-          tmp13Result8 = null;
-          if (React3.TIER_1 !== premiumType) {
-            if (React3.TIER_2 === premiumType) {
-              tmp13Result8 = AssetRegistryDefault8;
+          tmp13Result12 = null;
+          if (React4.TIER_1 !== premiumType) {
+            if (React4.TIER_2 === premiumType) {
+              tmp13Result12 = _modDef6959;
             }
           }
         }
-        const obj3 = { source: tmp13Result8 };
-        tmp17Result = metroImportDefault(tmp13Result7, obj3);
+        const obj8 = { source: tmp13Result12 };
+        React5(FastImageDefault, obj8);
+        const tmp13Result11 = FastImageDefault;
       }
-      const items = [tmp17Result, ,];
-      const obj4 = { style: tmp.logoContainer, children: items1 };
-      const tmp13Result9 = FastImageDefault;
-      if (React3.TIER_0 === premiumType) {
-        tmp13Result10 = AssetRegistryDefault;
-      } else if (React3.TIER_1 === premiumType) {
-        tmp13Result10 = AssetRegistryDefault2;
-      } else if (React3.TIER_2 === premiumType) {
-        tmp13Result10 = AssetRegistryDefault3;
-      }
-      items1 = [metroImportDefault(tmp13Result9, { source: tmp13Result10, resizeMode: "contain" }), ,];
-      let tmp21Result = null;
-      if (tmp2) {
-        const obj5 = {
-          style: tmp.discountPill,
-          trialOffer,
-          premiumType,
-          useWhiteBackground: true,
-          hideTrialCountdown: true,
-        };
-        tmp21Result = metroImportDefault(PremiumPill.PremiumPill, obj5);
-      }
-      items1[1] = tmp21Result;
-      let tmp21Result2 = null;
-      if (tmp10) {
-        const obj6 = {
-          style: tmp.discountPill,
-          discountOffer,
-          premiumType,
-          shouldShowDiscountUpsell: true,
-          useWhiteBackground: true,
-        };
-        tmp21Result2 = metroImportDefault(PremiumPill.PremiumPill, obj6);
-      }
-      items1[2] = tmp21Result2;
-      items[1] = metroImportAll(View, obj4);
-      const tmp13Result11 = FastImageDefault;
-      if (React3.TIER_0 === premiumType) {
-        tmp13Result12 = AssetRegistryDefault4;
-      } else if (React3.TIER_1 === premiumType) {
-        tmp13Result12 = AssetRegistryDefault5;
-      } else if (React3.TIER_2 === premiumType) {
-        tmp13Result12 = AssetRegistryDefault6;
-      }
-      const obj7 = { source: tmp13Result12, style: null, resizeMode: "contain" };
-      const items2 = [tmp.imgWumpus];
-      if (React3.TIER_0 !== premiumType) {
-        let imgWumpusBottom;
-        if (React3.TIER_1 !== premiumType) {
-          if (React3.TIER_2 === premiumType) {
-            imgWumpusBottom = tmp.imgWumpusRight;
-          }
-        }
-        items2[1] = imgWumpusBottom;
-        obj7.style = items2;
-        items[2] = metroImportDefault(tmp13Result11, obj7);
-        obj2.children = items;
-        return metroImportAll(tmp14, obj2);
-      }
-      imgWumpusBottom = tmp.imgWumpusBottom;
+      const tmp6Result = PremiumUtils;
     };
-const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanActionSheetHeader.tsx");
-
-export default tmp5;

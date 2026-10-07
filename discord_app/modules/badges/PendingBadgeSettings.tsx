@@ -2,13 +2,11 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
 import BadgeUtils from "BadgeUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import BadgeDirectoryStore from "BadgeDirectoryStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let map, owned, set;
-
+require = fn;
 function getSavedBadgeSettings() {
   const currentUser = UserStore.getCurrentUser();
   let id;
@@ -19,9 +17,7 @@ function getSavedBadgeSettings() {
     if (BadgeDirectoryStore.hasCatalogFor(id)) {
       const items = [];
       const _Set = Set;
-      const self = this;
-      const self2 = this;
-      set = new Set();
+      const set = new Set();
       const badges = BadgeDirectoryStore.getBadges(id);
       for (const item10020 of badges) {
         let obj2 = BadgeUtils;
@@ -36,43 +32,38 @@ function getSavedBadgeSettings() {
         }
         continue;
       }
-      return { displayOrder: items, hiddenBadges: set };
+      const obj = { displayOrder: items, hiddenBadges: set };
+      return obj;
     }
   }
   return null;
 }
 function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
-  let found;
-  let pendingBadgeDisplayOrder;
-  let pendingBadgeHiddenBadges;
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);
-  set = undefined;
+  let set;
   if (null == pendingBadgeDisplayOrder) {
     if (null == pendingBadgeHiddenBadges) {
       items = [];
-      HermesBuiltin.arraySpread(items, items, 0);
+      HermesBuiltin.arraySpread(items, 0);
       return items;
     }
   }
   set = null;
   if (null != pendingBadgeHiddenBadges) {
     const _Set = Set;
-    const self2 = this;
-    const self = this;
     set = new Set(pendingBadgeHiddenBadges);
   }
   if (null == set) {
     const items1 = [];
-    HermesBuiltin.arraySpread(items1, items, 0);
-    found = items1;
+    HermesBuiltin.arraySpread(items, 0);
+    let found = items1;
   } else {
     found = items.filter((id) => {
-      const obj = BadgeIdResolution;
-      const profileBadgeId = obj.resolveProfileBadgeId(id.id);
+      const profileBadgeId = BadgeIdResolution.resolveProfileBadgeId(id.id);
       let isPinnedBadgeResult = null == profileBadgeId;
       if (!isPinnedBadgeResult) {
+        isPinnedBadgeResult = BadgeUtils.isPinnedBadge(profileBadgeId);
         const tmpResult = BadgeUtils;
-        isPinnedBadgeResult = tmpResult.isPinnedBadge(profileBadgeId);
       }
       if (!isPinnedBadgeResult) {
         isPinnedBadgeResult = !set.has(profileBadgeId);
@@ -85,19 +76,17 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
   } else {
     const items2 = [];
     const _Map = Map;
-    const self3 = this;
-    const self4 = this;
-    map = new Map();
+    const map = new Map();
     for (const item10027 of found) {
-      let tmp11 = set;
+      let tmp12 = set;
       let obj = set(7875);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
-      let tmp14 = profileBadgeId;
+      let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp11Result = tmp11(10902);
-        if (!tmp11Result.isPinnedBadge(tmp14)) {
-          if (!map.has(tmp14)) {
-            let result = map.set(tmp14, item10027);
+        let tmp12Result = tmp12(10902);
+        if (!tmp12Result.isPinnedBadge(tmp15)) {
+          if (!map.has(tmp15)) {
+            let result = map.set(tmp15, item10027);
           }
           continue;
         }
@@ -106,16 +95,15 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
     }
     const items3 = [];
     for (const item10058 of pendingBadgeDisplayOrder) {
-      let value = map.get(item10058);
+      value = map.get(item10058);
       if (null != value) {
-        let arr2 = items3.push(tmp26);
+        let arr2 = items3.push(tmp27);
         let deleteResult = map.delete(item10058);
       }
       continue;
     }
     const items4 = [];
-    const arraySpreadResult5 = HermesBuiltin.arraySpread(items4, items3, HermesBuiltin.arraySpread(items4, items2, 0));
-    HermesBuiltin.arraySpread(items4, map.values(), arraySpreadResult5);
+    HermesBuiltin.arraySpread(map.values(), HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(items2, 0)));
     return items4;
   }
 }
@@ -124,7 +112,7 @@ function moveBadgeInDisplayOrder(value, index, clampResult) {
     if (index >= 0) {
       if (index < value.length) {
         const items = [];
-        HermesBuiltin.arraySpread(items, value, 0);
+        HermesBuiltin.arraySpread(value, 0);
         const _Math = Math;
         const _Math2 = Math;
         items.splice(Math.min(Math.max(clampResult, 0), items.length), 0, _slicedToArray(items.splice(index, 1), 1)[0]);
@@ -139,105 +127,94 @@ moveBadgeInDisplayOrder.__workletHash = 15133920248237;
 moveBadgeInDisplayOrder.__initData = {
   code: "function moveBadgeInDisplayOrder_PendingBadgeSettingsTsx1(badgeIds,fromIndex,toIndex){if(fromIndex===toIndex||fromIndex<0||fromIndex>=badgeIds.length){return badgeIds;}const next=[...badgeIds];const[moved]=next.splice(fromIndex,1);next.splice(Math.min(Math.max(toIndex,0),next.length),0,moved);return next;}",
 };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/PendingBadgeSettings.tsx");
 
 export const setPendingBadgeDisplayOrder = function setPendingBadgeDisplayOrder(arr) {
-  const tmp2 = getSavedBadgeSettings();
-  let tmp3 = null != tmp2;
-  if (tmp3) {
-    const displayOrder = tmp2.displayOrder;
-    tmp3 = arr.length === displayOrder.length && arr.every((item, index) => item === displayOrder[index]);
-    arr.length === displayOrder.length && arr.every((item, index) => item === displayOrder[index]);
+  const tmp = getSavedBadgeSettings();
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    const displayOrder = tmp.displayOrder;
+    tmp2 = arr.length === displayOrder.length && arr.every((item, index) => item === hiddenBadges[index]);
+    const tmp3 = arr.length === displayOrder.length && arr.every((item, index) => item === hiddenBadges[index]);
   }
-  let tmp6;
-  const dispatch = DispatcherDefault.dispatch;
-  DispatcherDefault;
-  if (!tmp3) {
+  let tmp4;
+  if (!tmp2) {
     const items = [];
-    HermesBuiltin.arraySpread(items, arr, 0);
-    tmp6 = items;
+    HermesBuiltin.arraySpread(arr, 0);
+    tmp4 = items;
   }
-  dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: tmp6 });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: tmp4 });
 };
 export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(arr) {
-  const tmp2 = getSavedBadgeSettings();
-  let tmp3 = null != tmp2;
-  if (tmp3) {
-    const hiddenBadges = tmp2.hiddenBadges;
-    tmp3 = arr.length === hiddenBadges.size && arr.every((item) => hiddenBadges.has(item));
-    arr.length === hiddenBadges.size && arr.every((item) => hiddenBadges.has(item));
+  const tmp = getSavedBadgeSettings();
+  let tmp2 = null != tmp;
+  if (tmp2) {
+    const hiddenBadges = tmp.hiddenBadges;
+    tmp2 = arr.length === hiddenBadges.size && arr.every((item) => hiddenBadges.has(item));
+    const tmp3 = arr.length === hiddenBadges.size && arr.every((item) => hiddenBadges.has(item));
   }
-  let tmp6;
-  const dispatch = DispatcherDefault.dispatch;
-  DispatcherDefault;
-  if (!tmp3) {
+  let tmp4;
+  if (!tmp2) {
     const items = [];
-    HermesBuiltin.arraySpread(items, arr, 0);
-    tmp6 = items;
+    HermesBuiltin.arraySpread(arr, 0);
+    tmp4 = items;
   }
-  dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp6 });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const setPendingBadgeVisibility = function setPendingBadgeVisibility(badgeId) {
-  let found1;
-  let hidden;
-  let hiddenBadgeIds;
-  let reorderableBadgeIds;
   badgeId = badgeId.badgeId;
+  let hiddenBadges = badgeId;
   ({ hidden, reorderableBadgeIds, hiddenBadgeIds } = badgeId);
   if (badgeId.canReorder) {
-    let found;
     if (hidden) {
-      found = reorderableBadgeIds.filter((item) => item !== badgeId);
+      let found = reorderableBadgeIds.filter((item) => item !== hiddenBadges);
     } else {
       const items = [];
-      items[HermesBuiltin.arraySpread(items, reorderableBadgeIds, 0)] = badgeId;
+      items[HermesBuiltin.arraySpread(reorderableBadgeIds, 0)] = badgeId;
       found = items;
     }
-    const tmp5 = getSavedBadgeSettings();
-    let tmp7 = null != tmp5;
-    if (tmp7) {
-      const displayOrder = tmp5.displayOrder;
-      tmp7 = found.length === displayOrder.length && found.every((item, index) => item === displayOrder[index]);
-      found.length === displayOrder.length && found.every((item, index) => item === displayOrder[index]);
+    const tmp4 = getSavedBadgeSettings();
+    let tmp6 = null != tmp4;
+    if (tmp6) {
+      const displayOrder = tmp4.displayOrder;
+      hiddenBadges = displayOrder;
+      tmp6 = found.length === displayOrder.length && found.every((item, index) => item === hiddenBadges[index]);
+      const tmp7 = found.length === displayOrder.length && found.every((item, index) => item === hiddenBadges[index]);
     }
-    let tmp12;
-    const dispatch = DispatcherDefault.dispatch;
-    DispatcherDefault;
-    if (!tmp7) {
+    let tmp10;
+    if (!tmp6) {
       const items1 = [];
-      HermesBuiltin.arraySpread(items1, found, 0);
-      tmp12 = items1;
+      HermesBuiltin.arraySpread(found, 0);
+      tmp10 = items1;
     }
-    const obj = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: tmp12 };
-    dispatch(obj);
+    const obj2 = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: tmp10 };
+    DispatcherDefault.dispatch(obj2);
   }
   if (hidden) {
     const items2 = [];
-    items2[HermesBuiltin.arraySpread(items2, hiddenBadgeIds, 0)] = badgeId;
-    found1 = items2;
+    items2[HermesBuiltin.arraySpread(hiddenBadgeIds, 0)] = badgeId;
+    let found1 = items2;
   } else {
-    found1 = hiddenBadgeIds.filter((item) => item !== badgeId);
+    found1 = hiddenBadgeIds.filter((item) => item !== hiddenBadges);
   }
-  const tmp19 = getSavedBadgeSettings();
-  let tmp20 = null != tmp19;
-  if (tmp20) {
-    const hiddenBadges = tmp19.hiddenBadges;
-    tmp20 = found1.length === hiddenBadges.size && found1.every((item) => hiddenBadges.has(item));
-    found1.length === hiddenBadges.size && found1.every((item) => hiddenBadges.has(item));
+  const tmp17 = getSavedBadgeSettings();
+  let tmp18 = null != tmp17;
+  if (tmp18) {
+    hiddenBadges = tmp17.hiddenBadges;
+    tmp18 = found1.length === hiddenBadges.size && found1.every((item) => hiddenBadges.has(item));
+    const tmp19 = found1.length === hiddenBadges.size && found1.every((item) => hiddenBadges.has(item));
   }
-  let tmp23;
-  const dispatch2 = DispatcherDefault.dispatch;
-  DispatcherDefault;
-  if (!tmp20) {
+  let tmp20;
+  if (!tmp18) {
     const items3 = [];
-    HermesBuiltin.arraySpread(items3, found1, 0);
-    tmp23 = items3;
+    HermesBuiltin.arraySpread(found1, 0);
+    tmp20 = items3;
   }
-  dispatch2({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp23 });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp20 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  const obj = DispatcherDefault;
-  obj.dispatch({
+  DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
     pendingBadgeDisplayOrder: "unicodeVersion",
     pendingBadgeHiddenBadges: "Error",
@@ -250,28 +227,23 @@ export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingB
   );
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
-  let mapped;
-  let pendingBadgeDisplayOrder;
-  let pendingBadgeHiddenBadges;
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);
-  set = null;
+  let set = null;
   if (null != pendingBadgeHiddenBadges) {
     const _Set = Set;
-    const self2 = this;
-    const self = this;
     set = new Set(pendingBadgeHiddenBadges);
   }
   if (null == set) {
     const items = [];
-    HermesBuiltin.arraySpread(items, stateFromStoresArray, 0);
-    mapped = items;
+    HermesBuiltin.arraySpread(stateFromStoresArray, 0);
+    let mapped = items;
   } else {
     mapped = stateFromStoresArray.map((badge_id) => {
       let tmp = badge_id;
-      const obj = BadgeUtils;
       if (!obj.isPinnedBadge(badge_id.badge_id)) {
-        const obj2 = { hidden: set.has(badge_id.badge_id) };
+        const obj2 = {};
         const merged = Object.assign(badge_id);
+        obj2.hidden = set.has(badge_id.badge_id);
         tmp = obj2;
       }
       return tmp;
@@ -282,9 +254,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
   } else {
     const items1 = [];
     const _Map = Map;
-    const self3 = this;
-    const self4 = this;
-    map = new Map();
+    const map = new Map();
     for (const item10026 of mapped) {
       let obj = set(10902);
       if (obj.isPinnedBadge(item10026.badge_id)) {
@@ -296,46 +266,30 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     }
     const items2 = [];
     for (const item10048 of pendingBadgeDisplayOrder) {
-      let value = map.get(item10048);
+      value = map.get(item10048);
       if (null != value) {
-        let arr2 = items2.push(tmp20);
+        let arr2 = items2.push(tmp22);
         let deleteResult = map.delete(item10048);
       }
       continue;
     }
     const items3 = [];
-    const arraySpreadResult3 = HermesBuiltin.arraySpread(items3, items2, HermesBuiltin.arraySpread(items3, items1, 0));
-    HermesBuiltin.arraySpread(items3, map.values(), arraySpreadResult3);
+    HermesBuiltin.arraySpread(map.values(), HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items1, 0)));
     return items3;
   }
 };
 export const getPendingProfileBadges = function getPendingProfileBadges(arr, stateFromStoresArray, arg2) {
-  let pendingBadgeDisplayOrder;
-  let pendingBadgeHiddenBadges;
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg2);
   if (null == pendingBadgeHiddenBadges) {
     return applyPendingBadgeSettingsToProfileBadges(arr, arg2);
   } else {
     const _Set = Set;
-    const self3 = this;
-    const self4 = this;
-    set = new Set(
-      arr.map((id) => {
-        const obj = set(_Set31[5]);
-        return obj.resolveProfileBadgeId(id.id);
-      }),
-    );
     const _Set2 = Set;
-    const self5 = this;
-    const self6 = this;
-    const set1 = new Set(pendingBadgeHiddenBadges);
-    const _Set3 = Set;
+    const set = new Set(arr.map((id) => set(set2[5]).resolveProfileBadgeId(id.id)));
     if (pendingBadgeDisplayOrder == null) {
       pendingBadgeDisplayOrder = [];
     }
-    const self = this;
-    const self2 = this;
-    const _Set31 = new _Set3(pendingBadgeDisplayOrder);
+    const set1 = new Set(pendingBadgeHiddenBadges);
     const found = stateFromStoresArray.filter((owned) => {
       owned = owned.owned;
       if (owned) {
@@ -344,7 +298,7 @@ export const getPendingProfileBadges = function getPendingProfileBadges(arr, sta
           flag = false;
         }
         if (!flag) {
-          flag = _Set31.has(owned.badge_id);
+          flag = set2.has(owned.badge_id);
         }
         owned = flag;
       }
@@ -357,12 +311,11 @@ export const getPendingProfileBadges = function getPendingProfileBadges(arr, sta
       return owned;
     });
     const mapped = found.map((badge_id) => {
-      const obj = set(_Set31[5]);
-      const result = obj.toProfileBadgeLegacyId(badge_id.badge_id);
+      const result = set(set2[5]).toProfileBadgeLegacyId(badge_id.badge_id);
       return { id: result, icon: result, iconSrc: badge_id.simple_icon_raster_url, description: badge_id.name };
     });
     const items = [];
-    HermesBuiltin.arraySpread(items, mapped, HermesBuiltin.arraySpread(items, arr, 0));
+    HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(arr, 0));
     return applyPendingBadgeSettingsToProfileBadges(items, arg2);
   }
 };

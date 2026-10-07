@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx
-import intl5 from "../../../../../../intl/index.native.tsx";
+import util from "../../../../../../intl/index.native.tsx";
 import InteractionUtils from "../../../../../interactions/InteractionUtils.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
@@ -16,31 +16,36 @@ const result = size.fileFinishedImporting(
 );
 
 export const createInteractionStatus = function createInteractionStatus(message, interaction) {
-  let intl2;
-  let intl3;
-  let intl4;
-  const obj = InteractionUtils;
-  const interactionStatusViewState = obj.getInteractionStatusViewState(message, interaction);
+  const interactionStatusViewState = InteractionUtils.getInteractionStatusViewState(message, interaction);
   if (InteractionUtils.InteractionStatusViewState.SENDING === interactionStatusViewState) {
-    const obj2 = { text: intl4.string(intl5.t.RiLfBY), state: constants.LOADING };
-    intl4 = intl5.intl;
+    const obj2 = { text: null, state: null };
+    const intl4 = util.intl;
+    obj2.text = intl4.string(util.t.RiLfBY);
+    obj2.state = constants.LOADING;
     return obj2;
   } else if (InteractionUtils.InteractionStatusViewState.CREATED === interactionStatusViewState) {
-    const obj3 = { text: intl3.formatToPlainString(intl5.t["7ePV4t"], obj4), state: constants.LOADING };
-    intl3 = intl5.intl;
+    const obj3 = { text: null, state: null };
+    const intl3 = util.intl;
+    const obj4 = { applicationName: message.author.username };
+    obj3.text = intl3.formatToPlainString(util.t["7ePV4t"], obj4);
+    obj3.state = constants.LOADING;
     return obj3;
   } else if (InteractionUtils.InteractionStatusViewState.TIMED_OUT === interactionStatusViewState) {
-    const obj5 = { text: intl2.string(intl5.t.h8hzPd), state: constants.FAILED };
-    intl2 = intl5.intl;
+    const obj5 = { text: null, state: null };
+    const intl2 = util.intl;
+    obj5.text = intl2.string(util.t.h8hzPd);
+    obj5.state = constants.FAILED;
     return obj5;
   } else if (InteractionUtils.InteractionStatusViewState.FAILED === interactionStatusViewState) {
     let interactionError = message.interactionError;
     if (interactionError == null) {
-      const intl = intl5.intl;
-      interactionError = intl.string(intl5.t.VCsUJu);
+      const intl = util.intl;
+      interactionError = intl.string(util.t.VCsUJu);
     }
-    return { text: interactionError, state: constants.FAILED };
+    const obj6 = { text: interactionError, state: constants.FAILED };
+    return obj6;
   } else if (InteractionUtils.InteractionStatusViewState.EPHEMERAL_SUCCESS === interactionStatusViewState) {
-    return { text: "", state: constants.EPHEMERAL_SUCCESS };
+    const obj7 = { text: "", state: constants.EPHEMERAL_SUCCESS };
+    return obj7;
   }
 };

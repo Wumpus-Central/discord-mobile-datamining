@@ -1,24 +1,20 @@
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import AgeGateUtils from "../AgeGateUtils.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
-import AgeGateConstants from "../AgeGateConstants.tsx";
-import Constants from "../../../Constants.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-({ EXISTING_USER_AGE_GATE_MODAL_KEY: metroImportDefault, AgeGateSource: metroImportAll } = AgeGateConstants);
-({ ChannelTypes: c9, GuildNSFWContentLevel: c10 } = Constants);
-class AgeGateManager extends AutomaticLifecycleManager {
+require = fn;
+const AgeGateConstants = fn(1110);
+({ EXISTING_USER_AGE_GATE_MODAL_KEY: closure_7, AgeGateSource: closure_8 } = AgeGateConstants);
+const Constants = fn(1085);
+({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
+class AgeGateManager extends tmp4 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.actions = {
       POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen,
       CHANNEL_SELECT: applyArgumentsResult.handleChannelSelect,
@@ -28,68 +24,63 @@ class AgeGateManager extends AutomaticLifecycleManager {
     };
     return applyArgumentsResult;
   }
-  handlePostConnectionOpen() {
-    const guildId = SelectedGuildStore.getGuildId();
-    const channelId = SelectedChannelStore.getChannelId();
-    const obj = AgeGateUtils;
-    obj.maybeShowAgeGate(guildId, channelId);
-  }
-  handleChannelSelect(arg0) {
-    let channelId;
-    let guildId;
-    ({ guildId, channelId } = arg0);
-    const channel = ChannelStore.getChannel(channelId);
-    let tmp2 = null != guildId;
-    if (tmp2) {
-      let type;
-      if (channel != null) {
-        type = channel.type;
-      }
-      tmp2 = type !== constants.GUILD_VOICE;
-    }
-    if (tmp2) {
-      const obj = AgeGateUtils;
-      obj.maybeShowAgeGate(guildId, channelId);
-    }
-  }
-  handleAgeGateModalOpen(source) {
-    source = source.source;
-    const channelId = source.channelId;
-    let obj = ModalActionCreatorsDefault;
-    obj.pushLazy(
-      _asyncToGenerator(async () => {
-        let c3;
-        let closure_1;
-        let value = tmp;
-        await value(paths[10])(paths[9], paths.paths);
-        value = value.default;
-        if (closure_129_0 === constants.AUTH) {
-          const obj = { animation: value(paths[11]).ModalAnimation.SLIDE_IN_OUT };
-          value.modalConfig = obj;
-        }
-        return value;
-      }),
-      { source, channelId },
-      closure_7,
-    );
-  }
-  handleAgeGateModalClose() {
-    const obj = ModalActionCreatorsDefault;
-    obj.popWithKey(metroImportDefault);
-  }
-  handleGuildUpdate(guild) {
-    guild = guild.guild;
-    const guildId = SelectedGuildStore.getGuildId();
-    const tmp2 =
-      null != guildId && guild.id === guildId && guild.owner_configured_content_level === constants2.AGE_RESTRICTED;
-    if (tmp2) {
-      const obj = AgeGateUtils;
-      obj.maybeShowAgeGate(guild.id, null);
-    }
-  }
 }
 const prototype = AgeGateManager.prototype;
+prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
+  const guildId = SelectedGuildStore.getGuildId();
+  const channelId = SelectedChannelStore.getChannelId();
+  AgeGateUtils.maybeShowAgeGate(guildId, channelId);
+};
+prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
+  ({ guildId, channelId } = arg0);
+  const channel = ChannelStore.getChannel(channelId);
+  let tmp2 = null != guildId;
+  if (tmp2) {
+    let type;
+    if (channel != null) {
+      type = channel.type;
+    }
+    tmp2 = type !== constants.GUILD_VOICE;
+  }
+  if (tmp2) {
+    AgeGateUtils.maybeShowAgeGate(guildId, channelId);
+  }
+};
+prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
+  const source = channelId.source;
+  ModalActionCreatorsDefault.pushLazy(
+    asyncGeneratorStep(async () => {
+      closure_1 = tmp5;
+      await tmp2(paths[10])(paths[9], paths.paths);
+      closure_128_0 = value.default;
+      if (closure_129_0 === constants.AUTH) {
+        closure_128_0.modalConfig = { animation: tmp2(paths[11]).ModalAnimation.SLIDE_IN_OUT };
+        {
+          animation: tmp2(paths[11]).ModalAnimation.SLIDE_IN_OUT;
+        }
+      }
+      return closure_128_0;
+    }),
+    { source, channelId: channelId.channelId },
+    closure_7,
+  );
+};
+prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {
+  ModalActionCreatorsDefault.popWithKey(React5);
+};
+prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
+  guild = guild.guild;
+  const guildId = SelectedGuildStore.getGuildId();
+  let tmp2 = null != guildId && guild.id === guildId;
+  if (tmp2) {
+    tmp2 = guild.owner_configured_content_level === constants2.AGE_RESTRICTED;
+  }
+  if (tmp2) {
+    AgeGateUtils.maybeShowAgeGate(guild.id, null);
+  }
+};
 const ageGateManager = new AgeGateManager();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateManager.tsx");
 
 export default ageGateManager;

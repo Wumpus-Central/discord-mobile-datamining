@@ -1,45 +1,41 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx
-import Constants from "../../../Constants.tsx";
 import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import openFavoritesGuildAddChannelModalDefault from "../utils/openFavoritesGuildAddChannelModal.native.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const ChannelTypes = Constants.ChannelTypes;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ChannelTypes = fn(1085).ChannelTypes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (id) => {
-      let tmp4;
       _require = id;
-      let obj = require("react");
-      const cResult = obj.c(5);
+      const cResult = require("c").c(5);
       if (cResult[0] !== id.id) {
         const fn = function l() {
-          const obj = { parentId: id.id, source: "favorites_add_to_category" };
-          openFavoritesGuildAddChannelModalDefault(obj);
+          openFavoritesGuildAddChannelModalDefault({ parentId: id.id, source: "favorites_add_to_category" });
         };
         cResult[0] = id.id;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
+      const obj = require("c");
       let tmp5 = null;
-      const tmpResult = require("FavoritesUtils");
       if (tmpResult.isFavoritesGuildId(id.getGuildId())) {
         tmp5 = null;
         if (id.type === ChannelTypes.GUILD_CATEGORY) {
-          let tmp7;
-          let tmp10;
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(1126).intl;
             const stringResult = intl.string(_modDef3395["1QJmIL"]);
             cResult[2] = stringResult;
-            tmp7 = stringResult;
+            let tmp7 = stringResult;
           } else {
             tmp7 = cResult[2];
           }
@@ -47,36 +43,27 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { label: tmp7, perform: tmp4 };
             cResult[3] = tmp4;
             cResult[4] = obj2;
-            tmp10 = obj2;
-          } else {
-            tmp10 = cResult[4];
           }
-          tmp5 = tmp10;
         }
       }
       return tmp5;
     }
   : (id) => {
-      let intl;
       _require = id;
       const items = [id.id];
-      const callback = react.useCallback(() => {
-        const obj = { parentId: id.id, source: "favorites_add_to_category" };
-        openFavoritesGuildAddChannelModalDefault(obj);
+      const callback = noop.useCallback(() => {
+        openFavoritesGuildAddChannelModalDefault({ parentId: id.id, source: "favorites_add_to_category" });
       }, items);
-      let obj = require("FavoritesUtils");
       let tmp4 = null;
-      const tmp2 = _require;
       if (obj.isFavoritesGuildId(id.getGuildId())) {
         tmp4 = null;
         if (id.type === ChannelTypes.GUILD_CATEGORY) {
-          const obj2 = { label: intl.string(_modDef3395["1QJmIL"]), perform: callback };
-          intl = tmp2(1126).intl;
+          const obj2 = { label: null, perform: null };
+          const intl = require("util").intl;
+          obj2.label = intl.string(_modDef3395["1QJmIL"]);
+          obj2.perform = callback;
           tmp4 = obj2;
         }
       }
       return tmp4;
     };
-const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx");
-
-export default tmp2;

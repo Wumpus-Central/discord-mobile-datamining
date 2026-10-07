@@ -2,100 +2,71 @@
 import matchPathCompat from "matchPathCompat.tsx";
 import RouteUtils from "RouteUtils.tsx";
 import Constants from "../../Constants.tsx";
-import 01254__ from "../../../_runtime/metro/01254__.js";
+import identity from "../../../_runtime/metro/01254__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
 function getMatchData(pathname) {
-  let CHANNEL;
-  let GUILD_BOOSTING_MARKETING;
-  let RouteParam2;
-  let RouteParam3;
-  let channelId;
-  let guildId;
-  let guildIdResult;
   let str = pathname;
   let str2 = pathname;
-  const matchPath = matchPathCompat.matchPath;
-  matchPathCompat;
   if (pathname == null) {
     str2 = "";
   }
-  const obj = { path: CHANNEL(guildIdResult, RouteParam2.channelId({ optional: true }), ":messageId?") };
-  CHANNEL = constants.CHANNEL;
+  const obj2 = { path: null };
   const RouteParam = RouteUtils.RouteParam;
-  guildIdResult = RouteParam.guildId();
-  RouteParam2 = RouteUtils.RouteParam;
-  const matchPathResult = matchPath(str2, obj);
+  const obj = matchPathCompat;
+  const RouteParam2 = RouteUtils.RouteParam;
+  obj2.path = React2.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
+  const matchPathResult = obj.matchPath(str2, obj2);
   if (null != matchPathResult) {
     ({ guildId, channelId } = matchPathResult.params);
-    let tmp10 = null;
-    if (guildId !== _false) {
-      tmp10 = guildId;
+    let tmp7 = null;
+    if (guildId !== React3) {
+      tmp7 = guildId;
     }
-    const obj2 = { guildId: tmp10, channelId };
+    const obj4 = { guildId: tmp7, channelId: null };
     if (channelId == null) {
       channelId = null;
     }
-    return obj2;
+    obj4.channelId = channelId;
+    return obj4;
   } else {
-    let obj5;
-    const matchPath2 = matchPathCompat.matchPath;
-    matchPathCompat;
     if (str == null) {
       str = "";
     }
-    const obj3 = { path: GUILD_BOOSTING_MARKETING(RouteParam3.guildId()) };
-    GUILD_BOOSTING_MARKETING = constants.GUILD_BOOSTING_MARKETING;
-    RouteParam3 = RouteUtils.RouteParam;
-    const matchPath2Result = matchPath2(str, obj3);
-    if (null != matchPath2Result) {
-      obj5 = { guildId: matchPath2Result.params.guildId, channelId: null };
-      const obj4 = { guildId: matchPath2Result.params.guildId, channelId: null };
+    const obj5 = { path: null };
+    const RouteParam3 = RouteUtils.RouteParam;
+    obj5.path = React2.GUILD_BOOSTING_MARKETING(RouteParam3.guildId());
+    const matchPathResult1 = matchPathCompat.matchPath(str, obj5);
+    if (null != matchPathResult1) {
+      const obj6 = { guildId: matchPathResult1.params.guildId, channelId: null };
+      let obj7 = obj6;
     } else {
-      obj5 = { guildId: null, channelId: null };
+      obj7 = { guildId: null, channelId: null };
     }
-    return obj5;
+    return obj7;
   }
+  const guildIdResult = RouteParam.guildId();
 }
 ({ Routes: c2, ME: c3 } = Constants);
-const withEqualityFn = module_1254.createWithEqualityFn((arg0) => {
-  let closure_0 = arg0;
-  let obj = {
+const withEqualityFn = identity.createWithEqualityFn((arg0) => {
+  closure_0 = arg0;
+  return {
     path: null,
     basePath: "/",
     guildId: null,
     channelId: null,
     updatePath(path) {
-      let channelId;
-      let closure_1;
-      let closure_2;
-      let guildId;
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(path));
-      getMatchData(path);
-      let obj = path(dependencyMap[4]);
-      obj.batchUpdates(() => {
-        const obj = { path, guildId, channelId };
-        return path(obj);
-      });
+      const tmp = getMatchData(path);
+      path(1259).batchUpdates(() => path({ path, guildId, channelId }));
     },
     resetPath(pathname) {
-      let channelId;
-      let closure_1;
-      let closure_2;
-      let guildId;
       const basePath = pathname;
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(pathname));
-      getMatchData(pathname);
-      let obj = basePath(dependencyMap[4]);
-      obj.batchUpdates(() => {
-        const obj = { path: null, guildId, channelId, basePath };
-        return basePath(obj);
-      });
-    }
+      const tmp = getMatchData(pathname);
+      basePath(1259).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
+    },
   };
-  return obj;
 });
 const result = size.fileFinishedImporting("modules/routing/KeybindRouterStore.tsx");
 

@@ -12,20 +12,6 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
 
 export default function setCustomStatus(arg0) {
-  let _String2;
-  let _prompt;
-  let analyticsContext;
-  let analyticsLocations;
-  let clearAfter;
-  let combined;
-  let createdAtMs;
-  let emojiInfo;
-  let str2;
-  let str4;
-  let str5;
-  let text;
-  let tmp12;
-  let value;
   ({ text, emojiInfo, clearAfter, analyticsContext, createdAtMs, prompt: _prompt, analyticsLocations } = arg0);
   const trimmed = text.trim();
   if (trimmed.length <= 0) {
@@ -36,72 +22,76 @@ export default function setCustomStatus(arg0) {
   }
   const CustomStatusSetting2 = UserSettings.CustomStatusSetting;
   let str = "";
-  const updateSetting = CustomStatusSetting2.updateSetting;
   if (trimmed.length > 0) {
     str = trimmed;
   }
-  const obj = { text: str, expiresAtMs: str2, emojiId: str4, emojiName: str5, createdAtMs: _String2(createdAtMs) };
-  str2 = "0";
+  const obj = { text: str, expiresAtMs: null, emojiId: null, emojiName: null, createdAtMs: null };
+  let str2 = "0";
   if (null != clearAfter) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
       const obj2 = _modDef4467();
-      const addResult = obj2.add(getClearAfterDurationDefault(clearAfter), "ms");
-      const toDateResult = addResult.toDate();
-      str2 = String(toDateResult.getTime());
+      const addResult = _modDef4467().add(getClearAfterDurationDefault(clearAfter), "ms");
+      str2 = String(_modDef4467().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
+      const toDateResult = _modDef4467().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
     }
   }
-  str4 = "0";
+  obj.expiresAtMs = str2;
+  let str4 = "0";
   if (null != emojiInfo) {
     str4 = "0";
     if (null != emojiInfo.id) {
       str4 = emojiInfo.id;
     }
   }
-  str5 = "";
+  obj.emojiId = str4;
+  let str5 = "";
   if (null != emojiInfo) {
     str5 = emojiInfo.name;
   }
-  _String2 = String;
+  obj.emojiName = str5;
   if (createdAtMs == null) {
     const obj5 = _modDef4467();
-    const toDateResult1 = obj5.toDate();
-    createdAtMs = toDateResult1.getTime();
+    createdAtMs = _modDef4467().toDate().getTime();
+    const toDateResult1 = _modDef4467().toDate();
   }
+  obj.createdAtMs = String(createdAtMs);
+  const updateSettingResult = CustomStatusSetting2.updateSetting(obj);
   let _location = null;
-  const updateSettingResult = updateSetting(obj);
-  const track = AnalyticsUtilsDefault.track;
-  const CUSTOM_STATUS_UPDATED = AnalyticEvents.CUSTOM_STATUS_UPDATED;
-  AnalyticsUtilsDefault;
   if (null != analyticsContext) {
     _location = analyticsContext.location;
   }
   const obj3 = {
     location: _location,
-    emoji_type: tmp12,
-    text_len: trimmed.length,
-    clear_after: combined,
-    prompt_type: value,
-    location_stack: analyticsLocations,
+    emoji_type: null,
+    text_len: null,
+    clear_after: null,
+    prompt_type: null,
+    location_stack: null,
   };
-  tmp12 = null;
+  let tmp11 = null;
   if (null != emojiInfo) {
     let str6 = "unicode";
     if (null != emojiInfo.id) {
       str6 = "custom";
     }
-    tmp12 = str6;
+    tmp11 = str6;
   }
-  combined = null;
+  obj3.emoji_type = tmp11;
+  obj3.text_len = trimmed.length;
+  let combined = null;
   if (null != clearAfter) {
     const _HermesInternal = HermesInternal;
     combined = "" + clearAfter;
   }
+  obj3.clear_after = combined;
   value = undefined;
   if (_prompt != null) {
     value = _prompt.value;
   }
-  track(CUSTOM_STATUS_UPDATED, obj3);
+  obj3.prompt_type = value;
+  obj3.location_stack = analyticsLocations;
+  AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj3);
   return updateSettingResult;
 }

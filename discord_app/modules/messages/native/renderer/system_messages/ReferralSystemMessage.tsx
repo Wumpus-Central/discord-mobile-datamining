@@ -2,22 +2,22 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07733_AssetRegistry.js";
+import _modDef7733 from "../../../../../../_runtime/metro/07733__.js";
 import ReferralTrialEmbedRedesign from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
 import ReferralTrialEmbed from "../row_data/embeds/ReferralTrialEmbed.tsx";
 import ReferralTrialStore from "../../../../premium/ReferralTrialStore.tsx";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
-let obj = { iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG };
-let closure_5 = createStyles.createNativeStyleProperties(obj);
+require = fn;
+const createStyles = fn(4896);
+let closure_5 = createStyles.createNativeStyleProperties({
+  iconTintColor: nativeDefault.colors.ICON_STRONG,
+  iconDividerColor: nativeDefault.colors.ICON_STRONG,
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx");
 
 export const createReferralSystemMessage = function createReferralSystemMessage(message) {
-  let theme;
-  let tmp23Result;
-  let tmp8Result;
   ({ message, theme } = message);
   const id = AuthenticationStore.getId();
   const referralTrialOfferId = message.referralTrialOfferId;
@@ -40,14 +40,12 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       if (null == referralTrialEmbedRedeemable) {
         return null;
       } else {
-        const obj2 = {
-          referralTrialOfferInfo: referralTrialEmbedRedeemable,
-          iconUrl: tmp8Result.getAssetUriForEmbed(AssetRegistryDefault),
-        };
-        const tmp17 = closure_5(theme);
+        const obj2 = {};
         const merged = Object.assign(createCommonMessageDefault(message));
+        obj2.referralTrialOfferInfo = referralTrialEmbedRedeemable;
+        const tmp17 = closure_5(theme);
+        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7733);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
-        tmp8Result = renderer_EmbedUtils;
         return obj2;
       }
     } else {
@@ -61,15 +59,13 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       if (null == referralTrialEmbedRedesign) {
         return null;
       } else {
-        const obj = {
-          referralTrialOfferInfoRedesign: referralTrialEmbedRedesign,
-          iconUrl: tmp23Result.getAssetUriForEmbed(AssetRegistryDefault),
-          timestamp: undefined,
-        };
-        const tmp4 = closure_5(theme);
+        const obj = {};
         const merged1 = Object.assign(createCommonMessageDefault(message));
+        obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
+        const tmp4 = closure_5(theme);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7733);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
-        tmp23Result = renderer_EmbedUtils;
+        obj.timestamp = undefined;
         return obj;
       }
     }

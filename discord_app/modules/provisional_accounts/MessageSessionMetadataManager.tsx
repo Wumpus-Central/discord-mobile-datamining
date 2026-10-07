@@ -5,9 +5,10 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;
-class MessageSessionMetadataManager extends AutomaticLifecycleManager {
+class MessageSessionMetadataManager extends tmp2 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(arg0) {
         return applyArgumentsResult.handleMessageCreate(arg0);
@@ -18,43 +19,35 @@ class MessageSessionMetadataManager extends AutomaticLifecycleManager {
     };
     return applyArgumentsResult;
   }
-  handleMessageCreate(message) {
-    const result = this._trackIfSessionMetadataExists(message.message);
-  }
-  handleMessageUpdate(message) {
-    const result = this._trackIfSessionMetadataExists(message.message);
-  }
-  _getAuthorizedApplicationIds(session_metadata) {
-    try {
-      return session_metadata.authorized_application_ids;
-    } catch (err) {
-      return null;
-    }
-  }
-  _trackIfSessionMetadataExists(message) {
-    let author;
-    let id;
-    if (null != message.session_metadata) {
-      const obj = {
-        message_id: null,
-        channel_id: null,
-        author_id: id,
-        authorized_application_ids: this._getAuthorizedApplicationIds(message.session_metadata),
-      };
-      ({ id: obj.message_id, channel_id: obj.channel_id, author } = message);
-      id = undefined;
-      const track = AnalyticsUtilsDefault.track;
-      const MESSAGE_DISPATCH_SESSION_METADATA_FOUND = AnalyticEvents.MESSAGE_DISPATCH_SESSION_METADATA_FOUND;
-      AnalyticsUtilsDefault;
-      if (author != null) {
-        id = author.id;
-      }
-      const self = this;
-      track(MESSAGE_DISPATCH_SESSION_METADATA_FOUND, obj);
-    }
-  }
 }
 const prototype = MessageSessionMetadataManager.prototype;
+prototype["handleMessageCreate"] = function handleMessageCreate(message) {
+  const result = this._trackIfSessionMetadataExists(message.message);
+};
+prototype["handleMessageUpdate"] = function handleMessageUpdate(message) {
+  const result = this._trackIfSessionMetadataExists(message.message);
+};
+prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationIds(session_metadata) {
+  try {
+    return session_metadata.authorized_application_ids;
+  } catch (err) {
+    return null;
+  }
+};
+prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
+  if (null != message.session_metadata) {
+    const obj3 = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
+    ({ id: obj2.message_id, channel_id: obj2.channel_id, author } = message);
+    let id;
+    if (author != null) {
+      id = author.id;
+    }
+    const self = this;
+    obj3.author_id = id;
+    obj3.authorized_application_ids = this._getAuthorizedApplicationIds(message.session_metadata);
+    AnalyticsUtilsDefault.track(AnalyticEvents.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, obj3);
+  }
+};
 const messageSessionMetadataManager = new MessageSessionMetadataManager();
 let result = size.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
 

@@ -1,13 +1,8 @@
 // discord_app/modules/spotify/SpotifyConstants.tsx
-import Constants from "../../Constants.tsx";
 import Platforms from "../../lib/Platforms.tsx";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let str;
 const spotify = "spotify";
 let c1 = "spotify:";
-const PlatformTypes = Constants.PlatformTypes;
 const SpotifyResourceTypes = {
   TRACK: "track",
   ARTIST: "artist",
@@ -30,12 +25,11 @@ const obj2 = {
       str = "desktop";
     }
     const encodeURIComponentResult = encodeURIComponent(ALBUM);
-    const encodeURIComponentResult1 = encodeURIComponent(album_id);
     return (
       "https://open.spotify.com/" +
       encodeURIComponentResult +
       "/" +
-      encodeURIComponentResult1 +
+      encodeURIComponent(album_id) +
       "?utm_source=discord&utm_medium=" +
       str
     );
@@ -59,37 +53,40 @@ const obj2 = {
     if (mobile === undefined) {
       str = "desktop";
     }
-    let str2 = "";
     const encodeURIComponentResult = encodeURIComponent(TRACK);
-    const encodeURIComponentResult1 = encodeURIComponent(sync_id);
+    let str2 = "";
     if (flag) {
       const _HermesInternal = HermesInternal;
       str2 = "?utm_source=discord&utm_medium=" + str;
     }
-    return "" + spotify + ":" + encodeURIComponentResult + ":" + encodeURIComponentResult1 + str2;
+    return "" + spotify + ":" + encodeURIComponentResult + ":" + encodeURIComponent(sync_id) + str2;
   },
   WEB_HOME: "https://open.spotify.com/" + "?utm_source=discord&utm_medium=" + "desktop",
   PREMIUM_SITE: "https://www.spotify.com/premium/" + "?utm_source=discord&utm_medium=" + "desktop",
   INSTALL_ATTRIBUTION(Identifier) {
     return "https://app.adjust.com/bdyga9?campaign=" + Identifier;
   },
-  APP_STORE: str,
+  APP_STORE: null,
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
 };
-const name = Platforms.get(PlatformTypes.SPOTIFY).name;
-const _Object = Object;
-str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
+const PlatformUtils = fn(1369);
+let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
 if (PlatformUtils.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";
 }
-const freezeResult = freeze(obj2);
+obj2.APP_STORE = str;
+const frozen = Object.freeze(obj2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx");
 
 export const SPOTIFY_APP_PROTOCOL = "spotify";
 export const SPOTIFY_PARTY_PREFIX = "spotify:";
-export const SPOTIFY_PLATFORM_NAME = name;
+export const SPOTIFY_PLATFORM_NAME = Platforms.get(fn(1085).PlatformTypes.SPOTIFY).name;
 export const isSpotifyParty = function isSpotifyParty(id) {
-  const startsWithResult = null != id && id.startsWith(c1);
+  let startsWithResult = null != id;
+  if (startsWithResult) {
+    startsWithResult = id.startsWith(c1);
+  }
   return startsWithResult;
 };
 export { SpotifyResourceTypes };
@@ -99,7 +96,7 @@ export const SpotifyActionTypes = {
   EMBED_SYNC: "embed_sync",
 };
 export const SPOTIFY_HOSTNAMES = ["open.spotify.com", "www.spotify.com"];
-export const SpotifyEndpoints = freezeResult;
+export const SpotifyEndpoints = frozen;
 export const getSpotifyResourceType = function getSpotifyResourceType(str) {
   if (typeof str !== "string") {
     return null;
@@ -107,13 +104,13 @@ export const getSpotifyResourceType = function getSpotifyResourceType(str) {
     return obj.TRACK;
   } else if ("artist" === "artist") {
     return obj.ARTIST;
-  } else if ("album" === "artist") {
+  } else if ("album" === str) {
     return obj.ALBUM;
-  } else if ("playlist" === "artist") {
+  } else if ("playlist" === str) {
     return obj.PLAYLIST;
-  } else if ("episode" === "artist") {
+  } else if ("episode" === str) {
     return obj.EPISODE;
-  } else if ("show" === "artist") {
+  } else if ("show" === str) {
     return obj.SHOW;
   } else {
     return null;

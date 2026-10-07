@@ -2,25 +2,24 @@
 import ChannelStore from "../stores/ChannelStore.tsx";
 import PermissionStore from "../stores/PermissionStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
-import Constants from "../Constants.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
-let hasOwnProperty;
+const Constants = fn(1085);
 ({ ChannelTypes: c3, Permissions: closure_4, MessageTypesSets: hasOwnProperty } = Constants);
+const size = fn(2);
 let result = size.fileFinishedImporting("utils/ReportUtils.tsx");
 
 export const canReportUser = function canReportUser(user) {
   if (null == user) {
     return false;
   } else {
-    const id = user.id;
     const currentUser = UserStore.getCurrentUser();
     let tmp3 = null != currentUser;
     if (tmp3) {
-      tmp3 = currentUser.id !== id && true !== user.system;
-      const tmp4 = currentUser.id !== id && true !== user.system;
+      let tmp4 = currentUser.id !== user.id;
+      if (tmp4) {
+        tmp4 = true !== user.system;
+      }
+      tmp3 = tmp4;
     }
     return tmp3;
   }
@@ -28,19 +27,21 @@ export const canReportUser = function canReportUser(user) {
 export const canReportMessage = function canReportMessage(message) {
   let tmp = null != message;
   if (tmp) {
-    const NON_REPORTABLE = hasOwnProperty.NON_REPORTABLE;
+    const NON_REPORTABLE = constants3.NON_REPORTABLE;
     tmp = !NON_REPORTABLE.has(message.type);
   }
   if (tmp) {
     const author = message.author;
     let flag = false;
     if (null != author) {
-      const id = author.id;
       const currentUser = UserStore.getCurrentUser();
       let tmp5 = null != currentUser;
       if (tmp5) {
-        tmp5 = currentUser.id !== id && true !== author.system;
-        const tmp6 = currentUser.id !== id && true !== author.system;
+        let tmp6 = currentUser.id !== author.id;
+        if (tmp6) {
+          tmp6 = true !== author.system;
+        }
+        tmp5 = tmp6;
       }
       flag = tmp5;
     }
@@ -66,19 +67,21 @@ export const canDeleteAndReportMessage = function canDeleteAndReportMessage(type
   if (tmp) {
     let tmp2 = null != type;
     if (tmp2) {
-      const NON_REPORTABLE = hasOwnProperty.NON_REPORTABLE;
+      const NON_REPORTABLE = constants3.NON_REPORTABLE;
       tmp2 = !NON_REPORTABLE.has(type.type);
     }
     if (tmp2) {
       const author = type.author;
       let flag = false;
       if (null != author) {
-        const id = author.id;
         const currentUser = UserStore.getCurrentUser();
         let tmp6 = null != currentUser;
         if (tmp6) {
-          tmp6 = currentUser.id !== id && true !== author.system;
-          const tmp7 = currentUser.id !== id && true !== author.system;
+          let tmp7 = currentUser.id !== author.id;
+          if (tmp7) {
+            tmp7 = true !== author.system;
+          }
+          tmp6 = tmp7;
         }
         flag = tmp6;
       }

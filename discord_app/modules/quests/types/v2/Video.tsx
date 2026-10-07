@@ -1,11 +1,10 @@
 // discord_app/modules/quests/types/v2/Video.tsx
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-let size = size_mod;
 const result = size.fileFinishedImporting("modules/quests/types/v2/Video.tsx");
 
 export const videoAssetFromServer = function videoAssetFromServer(url) {
-  size = {
+  const size = {
     url: url.url,
     width: url.width,
     height: url.height,
@@ -16,20 +15,18 @@ export const videoAssetFromServer = function videoAssetFromServer(url) {
   return size;
 };
 export const desktopVideoAssetsFromServer = function desktopVideoAssetsFromServer(assets) {
-  let video;
-  const obj = {
-    video: {
-      url: video.url,
-      width: video.width,
-      height: video.height,
-      thumbnail: video.thumbnail,
-      caption: video.caption,
-      transcript: video.transcript,
-    },
+  const obj = { video: null };
+  const video = assets.video;
+  obj.video = {
+    url: video.url,
+    width: video.width,
+    height: video.height,
+    thumbnail: video.thumbnail,
+    caption: video.caption,
+    transcript: video.transcript,
   };
-  video = assets.video;
   if (null != assets.video_low_res) {
-    size = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
+    const size = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
     ({
       url: obj2.url,
       width: obj2.width,
@@ -58,20 +55,18 @@ export const desktopVideoMessagesFromServer = function desktopVideoMessagesFromS
   return { videoTitle: messages.video_title };
 };
 export const mobileVideoAssetsFromServer = function mobileVideoAssetsFromServer(assets) {
-  let video;
-  const obj = {
-    video: {
-      url: video.url,
-      width: video.width,
-      height: video.height,
-      thumbnail: video.thumbnail,
-      caption: video.caption,
-      transcript: video.transcript,
-    },
+  const obj = { video: null };
+  const video = assets.video;
+  obj.video = {
+    url: video.url,
+    width: video.width,
+    height: video.height,
+    thumbnail: video.thumbnail,
+    caption: video.caption,
+    transcript: video.transcript,
   };
-  video = assets.video;
   if (null != assets.video_low_res) {
-    size = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
+    const size = { url: null, width: null, height: null, thumbnail: null, caption: null, transcript: null };
     ({
       url: obj2.url,
       width: obj2.width,

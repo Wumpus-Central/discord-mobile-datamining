@@ -1,34 +1,43 @@
 // discord_app/modules/game_server/GameServerExperiment.tsx
-import react from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import createExperiment from "../experiments/index.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let items;
 let obj = {
   kind: "guild",
   id: "2025-08_portkey_enabled",
   label: "GameServer Enabled",
   defaultConfig: { enabled: false },
-  treatments: items,
+  treatments: null,
 };
-items = [{ id: 1, label: "Enable GameServer", config: { enabled: true } }];
+const items = [{ id: 1, label: "Enable GameServer", config: { enabled: true } }];
+obj.treatments = items;
 const experiment = createExperiment.createExperiment(obj);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/game_server/GameServerExperiment.tsx");
+
+export const GameServerExperiment = experiment;
+export const getGameServerEnabled = function getGameServerEnabled(
+  guildId,
+  maybeGetGameServerHostingGuildEligiblePopoutDCF,
+) {
+  return experiment.getCurrentConfig(
+    { guildId, location: maybeGetGameServerHostingGuildEligiblePopoutDCF },
+    { autoTrackExposure: false },
+  ).enabled;
+};
+export const useGameServerEnabled = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId, location) => {
-      const obj = react;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       if (cResult[0] === guildId) {
-        let tmp2;
-        let tmp4;
         if (cResult[1] === location) {
-          tmp2 = cResult[2];
+          let tmp2 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { autoTrackExposure: false };
           cResult[3] = obj2;
-          tmp4 = obj2;
+          let tmp4 = obj2;
         } else {
           tmp4 = cResult[3];
         }
@@ -40,15 +49,4 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = obj3;
       tmp2 = obj3;
     }
-  : (guildId, location) => {
-      const obj = { guildId, location };
-      return experiment.useExperiment(obj, { autoTrackExposure: false }).enabled;
-    };
-const result = size.fileFinishedImporting("modules/game_server/GameServerExperiment.tsx");
-
-export const GameServerExperiment = experiment;
-export const getGameServerEnabled = function getGameServerEnabled(c0, maybeGetGameServerHostingGuildEligiblePopoutDCF) {
-  const obj = { guildId: _require, location: maybeGetGameServerHostingGuildEligiblePopoutDCF };
-  return experiment.getCurrentConfig(obj, { autoTrackExposure: false }).enabled;
-};
-export const useGameServerEnabled = tmp3;
+  : (guildId, location) => experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;

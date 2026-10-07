@@ -1,47 +1,40 @@
 // discord_app/modules/devtools/native/components/screens/performance/MountMeasure.tsx
-import react_native from "../../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../../_runtime/00576_c.js";
 import useMountEffect from "../../../../../../hooks/useMountEffect.tsx";
-import react from "../../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-let batchKey;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
 
-const View = react_native.View;
-const jsx = Fragment.jsx;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (batchKey) => {
-      let children;
-      let style;
-      const obj = react2;
-      const cResult = obj.c(10);
+      const cResult = c.c(10);
       batchKey = batchKey.batchKey;
       const onMeasure = batchKey.onMeasure;
       const onCancel = batchKey.onCancel;
       ({ style, children } = batchKey);
       if (cResult[0] === batchKey) {
-        let tmp4;
         if (cResult[1] === onCancel) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
-        const tmpResult = useMountEffect;
-        const unmountEffect = tmpResult.useUnmountEffect(tmp4);
+        const unmountEffect = useMountEffect.useUnmountEffect(tmp4);
         if (cResult[3] === batchKey) {
-          let tmp6;
           if (cResult[4] === onMeasure) {
-            tmp6 = cResult[5];
+            let tmp6 = cResult[5];
           }
           if (cResult[6] === children) {
             if (cResult[7] === style) {
-              let tmp7;
               if (cResult[8] === tmp6) {
-                tmp7 = cResult[9];
+                let tmp7 = cResult[9];
               }
               return tmp7;
             }
           }
+          const obj2 = { style, onLayout: tmp6, children };
           const tmp10 = (
             <View style={style} onLayout={tmp6}>
               {children}
@@ -60,6 +53,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = onMeasure;
         cResult[5] = fn2;
         tmp6 = fn2;
+        const tmpResult = useMountEffect;
       }
       const fn = function s() {
         return onCancel(batchKey);
@@ -70,26 +64,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp4 = fn;
     }
   : (arg0) => {
-      let children;
-      let closure_129_0;
-      let closure_129_1;
-      let closure_129_2;
-      let style;
-      ({ batchKey: closure_129_0, onMeasure: closure_129_1, onCancel: closure_129_2 } = arg0);
+      ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);
       ({ style, children } = arg0);
-      const obj = useMountEffect;
-      const unmountEffect = obj.useUnmountEffect(() => closure_1_2(closure_1_0));
+      const unmountEffect = useMountEffect.useUnmountEffect(() => View(require));
       return (
         <View
           style={style}
           onLayout={function onLayout() {
-            return closure_1_1(closure_1_0);
+            return dependencyMap(require);
           }}
         >
           {children}
         </View>
       );
     };
-const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
-
-export default tmp3;

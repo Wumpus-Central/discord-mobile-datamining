@@ -2,15 +2,15 @@
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj2;
 let obj = {
   name: "2026-04-voice-gateway-protocol-version",
   kind: "user",
   defaultConfig: { enabled: false },
-  variations: obj2,
+  variations: null,
 };
-obj2 = { 1: null };
+const obj2 = { 1: null };
 obj2[1] = { enabled: true };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx");
 
@@ -18,8 +18,8 @@ export default apexExperiment;
 export const getVoiceGatewayProtocolVersion = function getVoiceGatewayProtocolVersion(supportsSfuUpdate) {
   let num = 9;
   if (supportsSfuUpdate.supportsSfuUpdate) {
-    num = 9;
     const obj = { location: tmp };
+    num = 9;
     if (apexExperiment.getConfig(obj).enabled) {
       num = 10;
     }

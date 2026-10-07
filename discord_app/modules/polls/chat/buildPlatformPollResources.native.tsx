@@ -1,24 +1,17 @@
 // discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/05999_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/06647_AssetRegistry.js";
+import _modDef5999 from "../../../../_runtime/metro/05999__.js";
+import _modDef6647 from "../../../../_runtime/metro/06647__.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
-import PollStyles from "native/PollStyles.tsx";
-import 00012__ from "../../../../_runtime/metro/00012__.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import apply from "../../../../_runtime/metro/00012__.js";
 
-const require = globalThis.__r;
-let _require;
-
-let closure_3 = module_12.mapValues(PollStyles.pollStyleSets, (arg0) => {
-  let closure_0;
+require = fn;
+let closure_3 = apply.mapValues(fn(11362).pollStyleSets, (arg0) => {
   _require = arg0;
-  let obj = require("createStyles");
-  let closure_1 = obj.createNativeStyleProperties((arg0) => {
+  closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);
-    const obj = module_12;
-    return obj.pickBy(tmp, (num) => {
+    return apply.pickBy(tmp, (num) => {
       let tmp = typeof num !== "number";
       if (typeof num !== "number") {
         tmp = typeof num !== "boolean";
@@ -27,30 +20,35 @@ let closure_3 = module_12.mapValues(PollStyles.pollStyleSets, (arg0) => {
     });
   });
   return (arg0, arg1) => {
-    const tmp = closure_0(nativeDefault, arg1);
-    const obj = module_12;
-    const obj2 = {};
-    const pickByResult = obj.pickBy(tmp, (num) => typeof num === "number" || typeof num === "boolean");
+    let tmp = closure_0(nativeDefault, arg1);
     const merged = Object.assign(closure_1(arg0, arg1));
-    const merged1 = Object.assign(pickByResult);
-    return obj2;
+    const merged1 = Object.assign(
+      apply.pickBy(tmp, (num) => {
+        let tmp = typeof num === "number";
+        if (typeof num !== "number") {
+          tmp = typeof num === "boolean";
+        }
+        return tmp;
+      }),
+    );
+    return {};
   };
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/chat/buildPlatformPollResources.native.tsx");
 
 export const buildPlatformPollResources = function buildPlatformPollResources(theme, layoutType) {
-  let obj2;
-  let obj3;
-  let obj4;
-  let closure_0 = theme;
-  let closure_1 = layoutType;
-  const obj = { styles: obj2.mapValues(closure_3, (fn) => fn(closure_0, closure_1)), selectedIcon: obj3.getAssetUriForEmbed(AssetRegistryDefault2), checkmarkIcon: obj4.getAssetUriForEmbed(AssetRegistryDefault) };
-  obj2 = module_12;
-  obj3 = renderer_EmbedUtils;
-  obj4 = renderer_EmbedUtils;
+  closure_0 = theme;
+  closure_1 = layoutType;
+  const obj = {
+    styles: apply.mapValues(closure_3, (fn) => fn(closure_0, closure_1)),
+    selectedIcon: null,
+    checkmarkIcon: null,
+  };
+  obj.selectedIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef6647);
+  obj.checkmarkIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef5999);
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {
-  const obj = utils_AvatarUtils;
-  return obj.ensureAvatarSource(currentUser.getAvatarSource(guildId, false)).uri;
+  return utils_AvatarUtils.ensureAvatarSource(currentUser.getAvatarSource(guildId, false)).uri;
 };

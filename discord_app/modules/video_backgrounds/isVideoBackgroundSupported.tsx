@@ -1,9 +1,8 @@
 // discord_app/modules/video_backgrounds/isVideoBackgroundSupported.tsx
-import Constants from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const Features = Constants.Features;
+const Features = fn(4921).Features;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 
 export default function isVideoBackgroundSupported() {

@@ -1,5 +1,5 @@
 // discord_app/stores/MaskedLinkStore.tsx
-import get_initializedDefault from "../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
@@ -8,107 +8,86 @@ import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional.n
 import size from "../../_runtime/metro/00002__.js";
 
 const SPOTIFY_HOSTNAMES = SpotifyConstants.SPOTIFY_HOSTNAMES;
-const MaskedLinkStore_str = "MaskedLinkStore";
+const MaskedLinkStore = "MaskedLinkStore";
 let set = new Set();
-let _Set1 = set;
-let _Set21 = new Set();
 let replaced;
-new Set();
 if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
   replaced = str.replace("//", "");
 }
-const Store = get_initializedDefault.Store;
-class MaskedLinkStore extends Store {
-  initialize() {
-    let trustedDomains;
-    let trustedProtocols;
-    const Storage = Storage2.Storage;
-    let obj = Storage.get(MaskedLinkStore_str);
-    if (obj == null) {
-      obj = {};
-    }
-    if (Array.isArray(obj)) {
-      let arr = null;
-      const _Set3 = Set;
-      if (null != obj) {
-        const _Array3 = Array;
-        arr = Array.from(obj);
-      }
-      const self5 = this;
-      const self6 = this;
-      const _Set31 = new _Set3(arr);
-      _Set1 = _Set31;
-      const _Set4 = Set;
-      const self7 = this;
-      const self8 = this;
-      _Set21 = new Set();
-      set = new Set();
-    } else {
-      ({ trustedDomains, trustedProtocols } = obj);
-      let arr3 = null;
-      const _Set = Set;
-      if (null != trustedDomains) {
-        const _Array = Array;
-        arr3 = Array.from(trustedDomains);
-      }
-      const self = this;
-      const self2 = this;
-      _Set1 = new _Set(arr3);
-      let arr4 = null;
-      const _Set2 = Set;
-      if (null != trustedProtocols) {
-        const _Array2 = Array;
-        arr4 = Array.from(trustedProtocols);
-      }
-      const self3 = this;
-      const self4 = this;
-      _Set21 = new _Set2(arr4);
-    }
+const Store = initializeDefault.Store;
+class MaskedLinkStore extends Store {}
+const prototype = MaskedLinkStore.prototype;
+prototype["initialize"] = function initialize() {
+  const Storage = Storage2.Storage;
+  let obj = Storage.get(MaskedLinkStore);
+  if (obj == null) {
+    obj = {};
   }
-  isTrustedDomain(url) {
-    const obj = MaskedLinkStoreMethodsAdditional;
-    const hostname = obj.getHostname(url);
-    let flag = true;
-    if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
-      const _window2 = window;
+  if (Array.isArray(obj)) {
+    let arr = null;
+    if (null != obj) {
+      const _Array3 = Array;
+      arr = Array.from(obj);
+    }
+    const set = new Set(arr);
+    set2 = set;
+    const _Set = Set;
+    const set1 = new Set();
+    set3 = set1;
+  } else {
+    ({ trustedDomains, trustedProtocols } = obj);
+    let arr3 = null;
+    if (null != trustedDomains) {
+      const _Array = Array;
+      arr3 = Array.from(trustedDomains);
+    }
+    set2 = new Set(arr3);
+    let arr4 = null;
+    if (null != trustedProtocols) {
+      const _Array2 = Array;
+      arr4 = Array.from(trustedProtocols);
+    }
+    set3 = new Set(arr4);
+  }
+};
+prototype["isTrustedDomain"] = function isTrustedDomain(url) {
+  const hostname = MaskedLinkStoreMethodsAdditional.getHostname(url);
+  let flag = true;
+  if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
+    const _window2 = window;
+    flag = true;
+    if (window.GLOBAL_ENV.GIFT_CODE_HOST !== hostname) {
+      const _window = window;
       flag = true;
-      if (window.GLOBAL_ENV.GIFT_CODE_HOST !== hostname) {
-        const _window = window;
+      if (window.GLOBAL_ENV.GUILD_TEMPLATE_HOST !== hostname) {
         flag = true;
-        if (window.GLOBAL_ENV.GUILD_TEMPLATE_HOST !== hostname) {
+        if (replaced !== hostname) {
+          const _location = location;
           flag = true;
-          if (replaced !== hostname) {
-            const _location = location;
-            flag = true;
-            if (location.hostname !== hostname) {
-              let hasItem = SPOTIFY_HOSTNAMES.includes(hostname);
-              if (!hasItem) {
-                const obj2 = URLUtilsDefault;
-                hasItem = obj2.isDiscordHostname(hostname);
-              }
-              if (!hasItem) {
-                hasItem = _Set1.has(hostname);
-              }
-              flag = hasItem;
+          if (location.hostname !== hostname) {
+            let hasItem = SPOTIFY_HOSTNAMES.includes(hostname);
+            if (!hasItem) {
+              hasItem = URLUtilsDefault.isDiscordHostname(hostname);
             }
+            if (!hasItem) {
+              hasItem = set2.has(hostname);
+            }
+            flag = hasItem;
           }
         }
       }
     }
-    return flag;
   }
-  isTrustedProtocol(url) {
-    const obj = MaskedLinkStoreMethodsAdditional;
-    return _Set21.has(obj.getProtocol(url));
-  }
-}
-const prototype = MaskedLinkStore.prototype;
+  return flag;
+};
+prototype["isTrustedProtocol"] = function isTrustedProtocol(url) {
+  return set3.has(MaskedLinkStoreMethodsAdditional.getProtocol(url));
+};
 MaskedLinkStore.displayName = "MaskedLinkStore";
-let obj = {
+const maskedLinkStore = new MaskedLinkStore(DispatcherDefault, {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function handleAddTrustedDomain(url) {
     url = url.url;
-    const obj = MaskedLinkStoreMethodsAdditional;
-    const hostname = obj.getHostname(url);
+    const hostname = MaskedLinkStoreMethodsAdditional.getHostname(url);
     let flag = true;
     if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
       const _window2 = window;
@@ -124,11 +103,10 @@ let obj = {
             if (location.hostname !== hostname) {
               let hasItem = SPOTIFY_HOSTNAMES.includes(hostname);
               if (!hasItem) {
-                const obj2 = URLUtilsDefault;
-                hasItem = obj2.isDiscordHostname(hostname);
+                hasItem = URLUtilsDefault.isDiscordHostname(hostname);
               }
               if (!hasItem) {
-                hasItem = _Set1.has(hostname);
+                hasItem = set2.has(hostname);
               }
               flag = hasItem;
             }
@@ -139,30 +117,27 @@ let obj = {
     if (flag) {
       return false;
     } else {
-      const add = _Set1.add;
-      const tmpResult = MaskedLinkStoreMethodsAdditional;
-      add(tmpResult.getHostname(url));
+      set2.add(MaskedLinkStoreMethodsAdditional.getHostname(url));
       const Storage = Storage2.Storage;
-      const obj3 = { trustedDomains: _Set1, trustedProtocols: _Set21 };
-      const result = Storage.set(MaskedLinkStore_str, obj3);
+      const obj3 = { trustedDomains: set2, trustedProtocols: set3 };
+      const result = Storage.set(MaskedLinkStore, obj3);
+      const tmpResult = MaskedLinkStoreMethodsAdditional;
     }
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function handleAddTrustedProtocol(url) {
     url = url.url;
-    const obj = MaskedLinkStoreMethodsAdditional;
-    if (_Set21.has(obj.getProtocol(url))) {
+    if (set3.has(obj.getProtocol(url))) {
       return false;
     } else {
-      const add = _Set21.add;
-      const tmpResult = MaskedLinkStoreMethodsAdditional;
-      add(tmpResult.getProtocol(url));
+      set3.add(MaskedLinkStoreMethodsAdditional.getProtocol(url));
       const Storage = Storage2.Storage;
-      const obj2 = { trustedDomains: _Set1, trustedProtocols: _Set21 };
-      const result = Storage.set(MaskedLinkStore_str, obj2);
+      const obj2 = { trustedDomains: set2, trustedProtocols: set3 };
+      const result = Storage.set(MaskedLinkStore, obj2);
+      const tmpResult = MaskedLinkStoreMethodsAdditional;
     }
+    obj = MaskedLinkStoreMethodsAdditional;
   },
-};
-const maskedLinkStore = new MaskedLinkStore(DispatcherDefault, obj);
+});
 let result = size.fileFinishedImporting("stores/MaskedLinkStore.tsx");
 
 export default maskedLinkStore;

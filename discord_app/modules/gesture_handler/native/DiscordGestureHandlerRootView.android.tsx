@@ -1,46 +1,42 @@
 // discord_app/modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
+import LegacyBaseButton from "../../../../_runtime/06147_LegacyBaseButton.js";
 import DiscordGestureHandlerRootViewNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let StyleSheet;
-let TurboModuleRegistry;
-({ StyleSheet, TurboModuleRegistry } = react_native);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, TurboModuleRegistry } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const enforcing = TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
 const styles = StyleSheet.create({ flex: { flex: 1 } });
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let style;
-      const obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       ({ children, style } = arg0);
       if (cResult[0] === children) {
-        let tmp4;
         if (cResult[1] === style) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
         return tmp4;
       }
-      DiscordGestureHandlerRootViewNativeComponentDefault;
-      const tmp6 = <tmp5 style={styles.flex}>{null}</tmp5>;
+      const obj2 = { style: styles.flex, children: null };
+      obj2.children = jsx(LegacyBaseButton.GestureHandlerRootView, { style, children });
+      const tmp6 = jsx(DiscordGestureHandlerRootViewNativeComponentDefault, { style: styles.flex, children: null });
       cResult[0] = children;
       cResult[1] = style;
       cResult[2] = tmp6;
       tmp4 = tmp6;
     }
   : (arg0) => {
-      let children;
-      let style;
       ({ children, style } = arg0);
-      DiscordGestureHandlerRootViewNativeComponentDefault;
-      return <tmp style={styles.flex}>{null}</tmp>;
+      const obj = { style: styles.flex, children: jsx(LegacyBaseButton.GestureHandlerRootView, { style, children }) };
+      return jsx(DiscordGestureHandlerRootViewNativeComponentDefault, {
+        style: styles.flex,
+        children: jsx(LegacyBaseButton.GestureHandlerRootView, { style, children }),
+      });
     };
-const result = size.fileFinishedImporting("modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx");
-
-export default tmp5;

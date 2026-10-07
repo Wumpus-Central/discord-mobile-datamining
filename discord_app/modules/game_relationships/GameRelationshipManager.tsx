@@ -1,45 +1,38 @@
 // discord_app/modules/game_relationships/GameRelationshipManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import GameRelationshipStore from "GameRelationshipStore.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let gameRelationships, set;
-
-const RelationshipTypes = Constants.RelationshipTypes;
-class GameRelationshipManager extends LifecycleManager {
+const RelationshipTypes = fn(1085).RelationshipTypes;
+class GameRelationshipManager extends tmp2 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       gameRelationships = gameRelationships.getGameRelationships();
-      set = new Set();
+      const set = new Set();
       const values = gameRelationships.values();
       const item = values.forEach((type) => {
         if (type.type === constants.PENDING_INCOMING) {
           set.add(type.applicationId);
         }
       });
-      const obj2 = set(closure_1[4]);
-      const applications = obj2.fetchApplications(Array.from(set));
+      const applications = set(closure_1[4]).fetchApplications(Array.from(set));
     };
     return applyArgumentsResult;
   }
-  _initialize() {
-    const obj = DispatcherDefault;
-    const subscription = obj.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-  }
-  _terminate() {
-    const obj = DispatcherDefault;
-    obj.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-  }
-  destroy() {
-    const obj = DispatcherDefault;
-    obj.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
-  }
 }
 const prototype = GameRelationshipManager.prototype;
+prototype["_initialize"] = function _initialize() {
+  const subscription = DispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+};
+prototype["_terminate"] = function _terminate() {
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+};
+prototype["destroy"] = function destroy() {
+  DispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+};
 const gameRelationshipManager = new GameRelationshipManager();
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipManager.tsx");
 
 export default gameRelationshipManager;

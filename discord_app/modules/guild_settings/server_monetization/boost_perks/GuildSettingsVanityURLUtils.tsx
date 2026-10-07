@@ -1,10 +1,8 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx
-import intl8 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Constants from "../../../../Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
 ({ AbortCodes: c2, GuildFeatures: c3 } = Constants);
 const result = size.fileFinishedImporting(
   "modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx",
@@ -12,26 +10,26 @@ const result = size.fileFinishedImporting(
 
 export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCode(code) {
   if (constants.UNKNOWN_CHANNEL === code) {
-    const intl7 = intl8.intl;
-    return intl7.string(intl8.t.ETCmRa);
+    const intl7 = util.intl;
+    return intl7.string(util.t.ETCmRa);
   } else if (constants.INVALID_PERMISSIONS === code) {
-    const intl6 = intl8.intl;
-    return intl6.string(intl8.t.lXtut1);
+    const intl6 = util.intl;
+    return intl6.string(util.t.lXtut1);
   } else if (constants.INVALID_ACCESS === code) {
-    const intl5 = intl8.intl;
-    return intl5.string(intl8.t.TAXOKw);
+    const intl5 = util.intl;
+    return intl5.string(util.t.TAXOKw);
   } else if (constants.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS === code) {
-    const intl4 = intl8.intl;
-    return intl4.string(intl8.t.ZpuxVs);
+    const intl4 = util.intl;
+    return intl4.string(util.t.ZpuxVs);
   } else if (constants.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED === code) {
-    const intl3 = intl8.intl;
-    return intl3.string(intl8.t.tSBmIv);
+    const intl3 = util.intl;
+    return intl3.string(util.t.tSBmIv);
   } else if (constants.VANITY_URL_REQUIREMENTS_NOT_MET === code) {
-    const intl2 = intl8.intl;
-    return intl2.string(intl8.t["w+yGQT"]);
+    const intl2 = util.intl;
+    return intl2.string(util.t["w+yGQT"]);
   } else {
-    const intl = intl8.intl;
-    return intl.string(intl8.t.ckQidX);
+    const intl = util.intl;
+    return intl.string(util.t.ckQidX);
   }
 };
 export const canSeeVanityUrlSettings = function canSeeVanityUrlSettings(guild) {
@@ -39,7 +37,10 @@ export const canSeeVanityUrlSettings = function canSeeVanityUrlSettings(guild) {
   let hasItem = features.has(constants2.VANITY_URL);
   if (!hasItem) {
     const features2 = guild.features;
-    const hasItem1 = features2.has(constants2.GUILD_WEB_PAGE_VANITY_URL) && null != guild.vanityURLCode;
+    let hasItem1 = features2.has(constants2.GUILD_WEB_PAGE_VANITY_URL);
+    if (hasItem1) {
+      hasItem1 = null != guild.vanityURLCode;
+    }
     hasItem = hasItem1;
   }
   return hasItem;

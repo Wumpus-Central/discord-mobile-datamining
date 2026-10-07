@@ -1,12 +1,10 @@
 // discord_app/modules/badges/BadgeUtils.tsx
-import intl2 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
 import Constants from "../user_profile/Constants.tsx";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
 import size from "../../../_runtime/metro/00002__.js";
-
-let map;
 
 function isPinnedBadge(badge_id) {
   return badge_id === BadgeId.BadgeId.STAFF;
@@ -44,7 +42,7 @@ export const getDisplayTier = function getDisplayTier(badge) {
   if (null != tiers) {
     if (0 !== tiers.length) {
       const tmp = badge.owned ? badge.current_tier : badge.next_tier;
-      let closure_0 = tmp;
+      closure_0 = tmp;
       let found;
       if (null != tmp) {
         found = tiers.find((key) => key.key === closure_0);
@@ -57,11 +55,10 @@ export const getDisplayTier = function getDisplayTier(badge) {
   }
 };
 export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
-  let nPQVxb;
   if (badge_id === BadgeId.BadgeId.STAFF) {
-    nPQVxb = intl2.t.t3udZb;
+    let nPQVxb = util.t.t3udZb;
   } else {
-    nPQVxb = intl2.t.nPQVxb;
+    nPQVxb = util.t.nPQVxb;
   }
   return nPQVxb;
 };
@@ -82,19 +79,13 @@ export const getDirectoryBadges = function getDirectoryBadges(badges) {
   return { earnable, owned };
 };
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
-  let _Set1;
   const _Set = Set;
-  tenureBadgeHideable = tenureBadgeHideable.tenureBadgeHideable;
   const STAFF = BadgeId.BadgeId.STAFF;
-  if (tenureBadgeHideable) {
+  if (tenureBadgeHideable.tenureBadgeHideable) {
     const items = [STAFF];
-    const self3 = this;
-    const self4 = this;
-    _Set1 = new _Set(items);
+    let _Set1 = new _Set(items);
   } else {
     const items1 = [STAFF, BadgeId.BadgeId.PREMIUM_TENURE];
-    const self = this;
-    const self2 = this;
     _Set1 = new _Set(items1);
   }
   return _Set1;
@@ -126,7 +117,6 @@ export const getProfileBadgeLabel = function getProfileBadgeLabel(description, i
     info_label = info_label.info_label;
   }
   if (null != info_label) {
-    const obj = BadgeIdResolution;
     if (!obj.isLegacyBadgeId(info_label.badge_id)) {
       StringUtils;
     }
@@ -146,7 +136,7 @@ export const getProfileBadgeLabel = function getProfileBadgeLabel(description, i
   info_label = str;
 };
 export const getLegacyDescriptionByBadgeId = function getLegacyDescriptionByBadgeId(badges) {
-  map = new Map();
+  const map = new Map();
   const iter = badges[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -166,7 +156,7 @@ export const getLegacyDescriptionByBadgeId = function getLegacyDescriptionByBadg
   return map;
 };
 export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badges) {
-  map = new Map();
+  const map = new Map();
   const iter = badges[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -186,27 +176,25 @@ export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badg
   return map;
 };
 export const findTier = function findTier(viewerBadge, next_tier) {
-  let closure_0 = next_tier;
+  closure_0 = next_tier;
   let found;
   if (null != next_tier) {
     const tiers = viewerBadge.tiers;
-    found = tiers.find((key) => key.key === next_tier);
+    found = tiers.find((key) => key.key === closure_0);
   }
   return found;
 };
-export const getTierRowSubtitle = function getTierRowSubtitle(tier) {
-  tier = tier.tier;
-  if (!tier.isUnlocked) {
-    if (tier.isViewerOnUpgradeableNitro) {
-      let stringResult;
-      if (!tier.isViewingOtherUser) {
-        const intl = intl2.intl;
-        stringResult = intl.string(intl2.t.VPu695);
+export const getTierRowSubtitle = function getTierRowSubtitle(isUnlocked) {
+  if (!isUnlocked.isUnlocked) {
+    if (isUnlocked.isViewerOnUpgradeableNitro) {
+      if (!isUnlocked.isViewingOtherUser) {
+        const intl = util.intl;
+        let stringResult = intl.string(util.t.VPu695);
       }
       return stringResult;
     }
   }
-  let str = tier.milestone_text;
+  let str = isUnlocked.tier.milestone_text;
   if (str == null) {
     str = "";
   }

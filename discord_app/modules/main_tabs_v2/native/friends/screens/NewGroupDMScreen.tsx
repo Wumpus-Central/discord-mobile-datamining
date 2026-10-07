@@ -1,305 +1,241 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/NewGroupDMScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl4 from "../../../../../intl/index.native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
-import UserRowConstants from "../../shared_components/user_list/UserRowConstants.tsx";
 import openGroupDMNitroCapLimitSheetDefault from "../../../../group_dm/native/openGroupDMNitroCapLimitSheet.tsx";
 import GroupDMRecipientLimitTitleDefault from "../../../../group_dm/native/GroupDMRecipientLimitTitle.tsx";
-import _slicedToArray_mod from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../../_runtime/00017_react-native.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import PrivateChannelRecipientsInviteStore from "../../../../../stores/PrivateChannelRecipientsInviteStore.tsx";
 import RTCConnectionStore from "../../../../../stores/RTCConnectionStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
-import Constants from "../../../../../Constants.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";
-import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let c2, c6, nativeEvent, set;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let map1;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let size;
+require = fn;
 function handleOneRecipientInDM() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_21.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _handleOneRecipientInDM() {
-  obj = _asyncToGenerator(async (arg0, onBeforeTransition) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    return (async (arg0, value) => {
-      let obj3;
-      let obj6;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+let closure_21 = async function _handleOneRecipientInDM(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_2 = tmp2;
+    closure_130_0 = closure_0;
+    await ChannelActionCreatorsDefault.openPrivateChannel({
+      recipientIds: [],
+      location: "New Group DM",
+      onBeforeTransition,
+    });
+    closure_130_1 = value;
+    await closure_131_1(closure_131_2[13]).addRecipients(closure_130_1, closure_130_0, undefined);
+    closure_130_1 = value;
+    return value;
+  })();
+};
+let closure_22 = async function _handleInviteUsers(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          return { value, done: true };
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              return { value, done: true };
-            } else {
-              closure_3 = tmp4;
-              closure_2 = tmp;
-              onBeforeTransition = undefined;
-              c4 = 1;
-              c5 = 1;
-              const obj5 = { recipientIds: [], location: "New Group DM", onBeforeTransition };
-              const obj7 = { value: obj6.openPrivateChannel(obj5), done: false };
-              obj6 = ChannelActionCreatorsDefault;
-              return obj7;
-            }
-          } else if (1 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              return { value, done: true };
-            } else {
-              onBeforeTransition = value;
-              c4 = 2;
-              c5 = 1;
-              const obj9 = { value: obj3.addRecipients(onBeforeTransition, closure_0, undefined), done: false };
-              obj3 = closure_131_1(closure_131_2[13]);
-              return obj9;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            return { value, done: true };
-          } else {
-            onBeforeTransition = value;
-            c5 = 3;
-            return { value, done: true };
+          closure_4 = tmp2;
+          closure_3 = tmp5;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_0 = id;
+          let arr = length;
+          if (length === undefined) {
+            const _Array = Array;
+            arr = Array.from(selectedUsers.getSelectedUsers());
           }
-        } catch (tmp16) {
-          c5 = 3;
-          throw tmp16;
+          closure_131_1 = arr;
+          closure_131_2 = closure_2;
+          closure_131_3 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
         }
-      }
-    })();
-  });
-  return obj(...arguments);
-};
-obj = function _handleInviteUsers() {
-  let selectedUsers;
-  obj = _asyncToGenerator(async (arg0) => {
-    let closure_0;
-    let closure_1;
-    let id;
-    let value;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
       } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let onBeforeTransition;
-        let arr;
-        c6 = 2;
-        const tmp4 = c5;
-        if (0 === c5) {
+        if (1 === tmp5) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj3 = { value, done: true };
-            return obj3;
+            let obj4 = { value, done: true };
+            return obj4;
           } else {
-            let closure_4 = tmp;
-            value = tmp4;
-            onBeforeTransition = undefined;
-            arr = length;
-            if (length === undefined) {
-              const _Array = Array;
-              arr = Array.from(selectedUsers.getSelectedUsers());
+            if (null != closure_131_0) {
+              if (closure_132_10.getChannelId() !== closure_131_0.id) {
+                if (closure_131_0.isDM()) {
+                  if (1 === closure_131_1.length) {
+                    c5 = 3;
+                    c6 = 1;
+                    let obj5 = { value: closure_132_20(closure_131_1, closure_131_2), done: false };
+                    return obj5;
+                  }
+                }
+                const obj13 = closure_132_1(closure_132_2[13]);
+                c5 = 2;
+                c6 = 1;
+                let obj7 = {
+                  value: obj13.addRecipients(closure_131_0.id, closure_131_1, undefined, closure_131_2),
+                  done: false,
+                };
+                return obj7;
+              }
             }
-            value = undefined;
-            c5 = 1;
+            if (null != closure_131_0) {
+              if (closure_132_10.getChannelId() === closure_131_0.id) {
+                if (closure_131_0.isDM()) {
+                  closure_132_0(closure_132_2[14]).showGuardCallAlert(
+                    closure_132_4(async () => {
+                      if (dependencyMap === 2) {
+                        dependencyMap = 3;
+                        throw new TypeError("Generator functions may not be called on executing generators");
+                      } else if (tmp3 === 3) {
+                        if (arg0 === 1) {
+                          throw value;
+                        } else if (arg0 === 2) {
+                          const obj2 = { value, done: true };
+                          return obj2;
+                        } else {
+                          return { value: "IconComponent", done: null };
+                        }
+                      } else {
+                        try {
+                          dependencyMap = 2;
+                          if (0 === v3) {
+                            if (arg0 === 1) {
+                              dependencyMap = 3;
+                              throw value;
+                            } else if (arg0 === 2) {
+                              dependencyMap = 3;
+                              const obj4 = { value, done: true };
+                              return obj4;
+                            } else {
+                              id = tmp4;
+                              if (1 === length.length) {
+                                v3 = 2;
+                                dependencyMap = 1;
+                                const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
+                                return obj5;
+                              } else {
+                                const obj6 = v3(4909);
+                                v3 = 1;
+                                dependencyMap = 1;
+                                const obj7 = {
+                                  value: obj6.addRecipients(id.id, length, undefined, closure_2_2),
+                                  done: false,
+                                };
+                                return obj7;
+                              }
+                            }
+                          } else {
+                            if (1 === tmp4) {
+                              if (arg0 === 1) {
+                                dependencyMap = 3;
+                                throw value;
+                              } else if (arg0 === 2) {
+                                dependencyMap = 3;
+                                const obj8 = { value, done: true };
+                                return obj8;
+                              }
+                            } else if (2 === tmp4) {
+                              if (arg0 === 1) {
+                                dependencyMap = 3;
+                                throw value;
+                              } else if (arg0 === 2) {
+                                dependencyMap = 3;
+                                const obj9 = { value, done: true };
+                                return obj9;
+                              }
+                            } else if (arg0 === 1) {
+                              dependencyMap = 3;
+                              throw value;
+                            } else if (arg0 === 2) {
+                              dependencyMap = 3;
+                              const obj = { value, done: true };
+                              return obj;
+                            } else {
+                              const tmp8 = v3(9446);
+                              const call = tmp8.call;
+                              if (typeof call === "unknown") {
+                                tmp8(false, true);
+                              } else {
+                                call(tmp9, false, true);
+                              }
+                              v3(12710)(closure_128_3);
+                              dependencyMap = 3;
+                              tmp9 = closure_128_3;
+                            }
+                            closure_128_3 = value;
+                            v3 = 3;
+                            dependencyMap = 1;
+                            const obj10 = { value: id(5103).monkeyPatchCall(), done: false };
+                            return obj10;
+                          }
+                        } catch (tmp26) {
+                          dependencyMap = tmp;
+                          throw tmp26;
+                        }
+                      }
+                    }),
+                  );
+                  const obj11 = closure_132_0(closure_132_2[14]);
+                } else if (closure_131_0.isGroupDM()) {
+                  let obj9 = closure_132_1(closure_132_2[13]);
+                  c5 = 5;
+                  c6 = 1;
+                  let obj8 = {
+                    value: obj9.addRecipients(closure_131_0.id, closure_131_1, undefined, closure_131_2),
+                    done: false,
+                  };
+                  return obj8;
+                }
+              }
+            }
+            let obj10 = { recipientIds: closure_131_1, location: "New Group DM", onBeforeTransition: closure_131_2 };
+            c5 = 4;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            const obj14 = { value: closure_132_1(closure_132_2[13]).openPrivateChannel(obj10), done: false };
+            return obj14;
           }
         } else {
-          if (1 === tmp4) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              let obj4 = { value, done: true };
-              return obj4;
-            } else {
-              if (null != id) {
-                if (closure_132_10.getChannelId() !== id.id) {
-                  if (id.isDM()) {
-                    if (1 === arr.length) {
-                      c5 = 3;
-                      c6 = 1;
-                      let obj5 = { value: closure_132_20(arr, onBeforeTransition), done: false };
-                      return obj5;
-                    }
-                  }
-                  const obj14 = closure_132_1(closure_132_2[13]);
-                  c5 = 2;
-                  c6 = 1;
-                  let obj7 = { value: obj14.addRecipients(id.id, arr, undefined, onBeforeTransition), done: false };
-                  return obj7;
-                }
-              }
-              if (null != id) {
-                if (closure_132_10.getChannelId() === id.id) {
-                  if (id.isDM()) {
-                    let obj11 = closure_132_0(closure_132_2[14]);
-                    obj11.showGuardCallAlert(
-                      closure_132_4(async () => {
-                        let v3;
-                        if (c2 === 2) {
-                          c2 = 3;
-                          throw new TypeError("Generator functions may not be called on executing generators");
-                        } else if (tmp2 === 3) {
-                          if (arg0 === 1) {
-                            throw value;
-                          } else if (arg0 === 2) {
-                            const obj2 = { value, done: true };
-                            return obj2;
-                          } else {
-                            return { value: "IconComponent", done: null };
-                          }
-                        } else {
-                          try {
-                            c2 = 2;
-                            if (0 === v3) {
-                              if (arg0 === 1) {
-                                c2 = 3;
-                                throw value;
-                              } else if (arg0 === 2) {
-                                c2 = 3;
-                                const obj3 = { value, done: true };
-                                return obj3;
-                              } else {
-                                id = tmp3;
-                                if (1 === length.length) {
-                                  v3 = 2;
-                                  c2 = 1;
-                                  const obj5 = { value: closure_1_20(length, onBeforeTransition), done: false };
-                                  return obj5;
-                                } else {
-                                  const obj7 = v3(c2[13]);
-                                  v3 = 1;
-                                  c2 = 1;
-                                  const obj6 = {
-                                    value: obj7.addRecipients(id.id, length, undefined, onBeforeTransition),
-                                    done: false,
-                                  };
-                                  return obj6;
-                                }
-                              }
-                            } else {
-                              if (1 === v3) {
-                                if (arg0 === 1) {
-                                  c2 = 3;
-                                  throw value;
-                                } else if (arg0 === 2) {
-                                  c2 = 3;
-                                  const obj8 = { value, done: true };
-                                  return obj8;
-                                }
-                              } else if (2 === v3) {
-                                if (arg0 === 1) {
-                                  c2 = 3;
-                                  throw value;
-                                } else if (arg0 === 2) {
-                                  c2 = 3;
-                                  const obj9 = { value, done: true };
-                                  return obj9;
-                                }
-                              } else if (arg0 === 1) {
-                                c2 = 3;
-                                throw value;
-                              } else if (arg0 === 2) {
-                                c2 = 3;
-                                const obj10 = { value, done: true };
-                                return obj10;
-                              } else {
-                                obj = v3(c2[15]);
-                                obj.call(closure_3, false, true);
-                                v3(c2[16])(closure_3);
-                                c2 = 3;
-                                return { value: "IconComponent", done: null };
-                              }
-                              closure_3 = value;
-                              v3 = 3;
-                              const obj4 = id(c2[14]);
-                              c2 = 1;
-                              const obj11 = { value: obj4.monkeyPatchCall(), done: false };
-                              return obj11;
-                            }
-                          } catch (tmp22) {
-                            c2 = 3;
-                            throw tmp22;
-                          }
-                        }
-                      }),
-                    );
-                  } else if (id.isGroupDM()) {
-                    let obj9 = closure_132_1(closure_132_2[13]);
-                    c5 = 5;
-                    c6 = 1;
-                    let obj8 = { value: obj9.addRecipients(id.id, arr, undefined, onBeforeTransition), done: false };
-                    return obj8;
-                  }
-                }
-              }
-              let obj6 = closure_132_1(closure_132_2[13]);
-              let obj10 = { recipientIds: arr, location: "New Group DM", onBeforeTransition };
-              c5 = 4;
-              c6 = 1;
-              const obj13 = { value: obj6.openPrivateChannel(obj10), done: false };
-              return obj13;
-            }
-          } else if (2 === tmp4) {
+          if (2 === tmp5) {
             if (arg0 === 1) {
               c6 = 3;
               throw value;
@@ -308,101 +244,84 @@ obj = function _handleInviteUsers() {
               const obj15 = { value, done: true };
               return obj15;
             }
-          } else if (3 === tmp4) {
-            if (arg0 === 1) {
+          } else {
+            if (3 === tmp5) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                const obj16 = { value, done: true };
+                return obj16;
+              }
+            } else if (4 === tmp5) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                const obj17 = { value, done: true };
+                return obj17;
+              } else {
+                closure_131_3 = value;
+              }
+            } else if (arg0 === 1) {
               c6 = 3;
               throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj16 = { value, done: true };
-              return obj16;
+            } else if (arg0 !== 2) {
+              closure_131_3 = value;
+              closure_132_1(closure_132_2[15]).ring(closure_131_3, closure_131_1, "gdm_invite");
+              let obj = closure_132_1(closure_132_2[15]);
             }
-          } else if (4 === tmp4) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj17 = { value, done: true };
-              return obj17;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
             c6 = 3;
             const obj18 = { value, done: true };
             return obj18;
-          } else {
-            obj = closure_132_1(closure_132_2[15]);
-            const str = "gdm_invite";
-            obj.ring(value, arr, "gdm_invite");
           }
-          const obj12 = closure_132_1(closure_132_2[17]);
-          obj12.hideActionSheet(closure_132_16);
-          c6 = 3;
-          const obj19 = { value, done: true };
-          return obj19;
+          closure_131_3 = value;
         }
-      } catch (tmp75) {
+        closure_132_1(closure_132_2[17]).hideActionSheet(closure_132_16);
         c6 = 3;
-        throw tmp75;
+        const obj12 = closure_132_1(closure_132_2[17]);
       }
+    } catch (tmp77) {
+      c6 = tmp;
+      throw tmp77;
     }
-  });
-  return obj(...arguments);
+  }
 };
-let _slicedToArray = _slicedToArray_mod;
-({ ActivityIndicator: metroRequire, View: metroImportDefault } = react_native);
-const UserRowModes = UserRowConstants.UserRowModes;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const UserRowModes = fn(10605).UserRowModes;
+const Constants = fn(1085);
 ({
   InstantInviteSources: map1,
   AnalyticEvents: closure_14,
   AnalyticsSections: closure_15,
   NEW_GROUP_DM_POPOUT_ID: closure_16,
 } = Constants);
-({ jsx: closure_17, jsxs: closure_18 } = Fragment);
-let createStyles = createStyles_mod;
-obj = {
-  button: obj2,
+const jsxProd = fn(21);
+({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  button: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE },
   container: { height: "100%", display: "flex" },
-  instantInviteView: obj3,
-  nameInputContainer: obj4,
-  nameInput: size,
+  instantInviteView: null,
+  nameInputContainer: null,
+  nameInput: null,
 };
-obj2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-createStyles = createStyles.createStyles;
-obj3 = { flexShrink: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj4 = { paddingHorizontal: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
-let closure_19 = createStyles(obj);
-size = size_mod;
+let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+obj2.instantInviteView = { flexShrink: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj4 = { flexShrink: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj2.nameInputContainer = { paddingHorizontal: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
+obj2.nameInput = size;
+let closure_19 = createStyles.createStyles(obj2);
+size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/NewGroupDMScreen.tsx");
 
 export default function NewGroupDMScreen(navigation) {
-  let TextInput;
-  let _undefined;
-  let c13;
-  let c24;
-  let c25;
-  let closure_3;
-  let closure_7;
-  let currentUser;
-  let first1;
-  let first2;
-  let intl;
-  let items11;
-  let locationPage;
-  let numMembers;
-  let obj10;
-  let obj8;
-  let selectedUserIds;
-  let tmp13;
-  let tmp14Result;
-  let tmp16;
-  let tmp17;
-  let tmp19;
   navigation = navigation.navigation;
+  _require = navigation;
   const params = navigation.route.params;
   ({ channelId: importDefault, locationPage } = params);
   let flag = params.allowNameEdit;
@@ -414,38 +333,35 @@ export default function NewGroupDMScreen(navigation) {
   let ref;
   first1 = undefined;
   currentUser = undefined;
-  first2 = undefined;
   c13 = undefined;
   closure_19 = undefined;
   let callback1;
   c24 = undefined;
   c25 = undefined;
   let callback3;
-  let tmp = closure_19();
+  const tmp = closure_19();
   _slicedToArray = tmp;
-  let tmp2 = navigation;
-  obj = navigation(locationPage[18]);
   let items = [ref];
-  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
-  let obj3 = navigation(locationPage[18]);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
+  let obj = require("initialize");
   const items1 = [currentUser];
-  const stateFromStores1 = obj3.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  let obj4 = stateFromStores1;
-  let tmp5 = _slicedToArray;
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => currentUser.getCurrentUser());
   [selectedUserIds, closure_7] = stateFromStores1.useState([]);
   ref = stateFromStores1.useRef([]);
   const callback = stateFromStores1.useCallback((current) => {
-    ref.current = current;
+    closure_8.current = current;
     closure_7(current);
   }, []);
   [first1, currentUser] = stateFromStores1.useState(false);
-  [first2, tmp13] = stateFromStores1.useState("");
-  [tmp16, tmp17] = _slicedToArray(stateFromStores1.useState(require("native").space.PX_12), 2);
-  const tmp15 = _slicedToArray(stateFromStores1.useState(require("native").space.PX_12), 2);
-  [tmp19, c13] = _slicedToArray(stateFromStores1.useState(false), 2);
-  const tmp18 = _slicedToArray(stateFromStores1.useState(false), 2);
-  const ref2 = stateFromStores1.useRef(false);
-  let closure_15 = stateFromStores1.useRef({ offsetY: 0 });
+  const tmp11 = _slicedToArray(stateFromStores1.useState(""), 2);
+  const first2 = tmp11[0];
+  let obj3 = require("initialize");
+  let tmp5 = _slicedToArray;
+  [tmp15, tmp16] = stateFromStores1.useState(require("native").space.PX_12);
+  let tmp14 = _slicedToArray(stateFromStores1.useState(require("native").space.PX_12), 2);
+  [tmp18, c13] = stateFromStores1.useState(false);
+  stateFromStores1.useRef(false);
+  closure_15 = stateFromStores1.useRef({ offsetY: 0 });
   const items2 = [stateFromStores];
   const memo = stateFromStores1.useMemo(() => {
     let recipients;
@@ -458,49 +374,36 @@ export default function NewGroupDMScreen(navigation) {
     return recipients;
   }, items2);
   const items3 = [...first];
+  const tmp17 = _slicedToArray(stateFromStores1.useState(false), 2);
   let sum = new Set(items3).size + 1;
-  let c17 = sum;
-  set = new Set(items3);
-  const tmp23 = require("getGroupDMRecipientLimit")({ useNitroCapExperiment: true });
-  const maxMemberLimit = tmp23;
-  closure_19 = tmp24;
+  c17 = sum;
+  const tmp22 = require("getGroupDMRecipientLimit")({ useNitroCapExperiment: true });
+  const maxMemberLimit = tmp22;
+  closure_19 = tmp23;
+  const set = new Set(items3);
+  const config = require("GroupDMNitroCapExperiment").useConfig({ location: "NewGroupDMScreen" });
   let obj5 = require("GroupDMNitroCapExperiment");
-  const config = obj5.useConfig({ location: "NewGroupDMScreen" });
-  let obj6 = navigation(locationPage[21]);
-  let result = obj6.shouldUseGroupDMParticipantLimitUI(config.enabled, tmp23);
-  let c20 = result;
-  let tmp27 = sum >= tmp23;
-  let closure_21 = tmp27;
-  navigation(locationPage[21]);
+  let result = require("GroupDMNitroUpsellModel").shouldUseGroupDMParticipantLimitUI(config.enabled, tmp22);
+  c20 = result;
+  closure_21 = tmp26;
+  require("GroupDMNitroUpsellModel");
   let enabled = config.enabled;
   if (enabled) {
+    enabled = tmp2(locationPage[21]).isGroupDMNitroUpsellAudience(tmp28);
     const tmp2Result = tmp2(locationPage[21]);
-    enabled = tmp2Result.isGroupDMNitroUpsellAudience(tmp29);
   }
   const items4 = [locationPage];
   const effect = obj4.useEffect(() => {
-    let obj3;
-    const obj2 = { type: closure_15.DM_INVITE, location: obj3 };
-    obj3 = { page: locationPage };
-    obj = AnalyticsUtilsDefault;
-    obj.track(ref2.OPEN_POPOUT, obj2);
+    const obj2 = { type: constants2.DM_INVITE, location: { page: locationPage } };
+    AnalyticsUtilsDefault.track(constants.OPEN_POPOUT, obj2);
   }, items4);
   const items5 = [stateFromStores, navigation, memo, selectedUserIds, first2];
   callback1 = obj4.useCallback(
     stateFromStores(function* () {
-      let closure_0;
-      let closure_1;
-      let closure_2;
-      let intl;
-      let obj2;
-      let tmp;
-      function handleInviteUsers() {
-        return closure_1_22(...arguments);
-      }
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
+      } else if (tmp7 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -510,9 +413,7 @@ export default function NewGroupDMScreen(navigation) {
           return { value: "IconComponent", done: null };
         }
       } else {
-        let c3;
         try {
-          let parent;
           c5 = 2;
           if (0 === c4) {
             if (arg0 === 1) {
@@ -523,40 +424,46 @@ export default function NewGroupDMScreen(navigation) {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              parent = undefined;
+              let parent = tmp8;
+              closure_128_0 = undefined;
               currentUser(true);
               c3 = 2;
               const items = [];
-              HermesBuiltin.arraySpread(items, memo, HermesBuiltin.arraySpread(items, first, 0));
+              HermesBuiltin.arraySpread(memo, HermesBuiltin.arraySpread(first, 0));
               c4 = 3;
               c5 = 1;
-              const obj5 = {
-                value: handleInviteUsers(stateFromStores, items, () => {
-                  const tmp = parent;
-                  parent = parent.getParent();
-                  if (parent == null) {
-                    parent = tmp;
+              const obj6 = {
+                value: (function handleInviteUsers() {
+                  const self = this;
+                  const apply = closure_1_22.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
+                  return applyArgumentsResult;
+                })(stateFromStores, items, () => {
+                  parent = parent.getParent();
                   return parent.goBack();
                 }),
                 done: false,
               };
-              return obj5;
+              return obj6;
             }
-          } else if (1 === c4) {
+          } else if (1 === tmp8) {
             c3 = 0;
             closure_129_11(false);
-            throw locationPage;
+            throw tmp50;
           } else {
-            if (2 === c4) {
+            if (2 === tmp8) {
               c3 = 1;
-              const obj6 = { key: "GROUP_DM_ADD_ERROR", content: intl.string(parent(locationPage[24]).t["N/9OFy"]) };
-              const open = tmp(locationPage[23]).open;
-              const tmp27 = tmp(locationPage[23]);
-              intl = parent(locationPage[24]).intl;
-              open(obj6);
+              const obj7 = { key: "GROUP_DM_ADD_ERROR", content: null };
+              const intl = parent(tmp50[24]).intl;
+              obj7.content = intl.string(parent(tmp50[24]).t["N/9OFy"]);
+              tmp4(tmp50[23]).open(obj7);
+              const obj5 = tmp4(tmp50[23]);
             } else {
-              if (3 === c4) {
+              if (3 === tmp8) {
                 if (arg0 === 1) {
                   c5 = 3;
                   throw value;
@@ -564,18 +471,21 @@ export default function NewGroupDMScreen(navigation) {
                   c3 = 0;
                   closure_129_11(false);
                   c5 = 3;
-                  const obj7 = { value, done: true };
-                  return obj7;
+                  const obj8 = { value, done: true };
+                  return obj8;
                 } else {
-                  parent = value;
-                  const tmp11 = null == closure_129_4 && null != parent && "" !== closure_129_12;
-                  if (tmp11) {
-                    c4 = 4;
-                    c5 = 1;
-                    const obj8 = { value: obj2.setName(parent, closure_129_12), done: false };
-                    obj2 = tmp(locationPage[13]);
-                    return obj8;
+                  closure_128_0 = value;
+                  let tmp14 = null == closure_129_4;
+                  if (tmp14) {
+                    tmp14 = null != closure_128_0;
                   }
+                  if (tmp14) {
+                    tmp14 = "" !== closure_129_12;
+                  }
+                  c4 = 4;
+                  c5 = 1;
+                  const obj9 = { value: tmp4(tmp50[13]).setName(closure_128_0, closure_129_12), done: false };
+                  return obj9;
                 }
               } else if (arg0 === 1) {
                 c5 = 3;
@@ -584,7 +494,7 @@ export default function NewGroupDMScreen(navigation) {
                 c3 = 0;
                 closure_129_11(false);
                 c5 = 3;
-                obj = { value, done: true };
+                const obj = { value, done: true };
                 return obj;
               }
               c3 = 1;
@@ -592,17 +502,15 @@ export default function NewGroupDMScreen(navigation) {
             c3 = 0;
             closure_129_11(false);
             c5 = 3;
-            return { value: "IconComponent", done: null };
           }
-        } catch (tmp48) {
-          locationPage = tmp48;
-          if (0 === c3) {
-            c5 = 3;
-            throw tmp48;
-          } else if (1 === tmp50) {
-            c4 = 1;
+        } catch (tmp50) {
+          if (tmp5 === c3) {
+            c5 = tmp3;
+            throw tmp50;
+          } else if (tmp2 === tmp52) {
+            c4 = tmp2;
           } else {
-            c4 = 2;
+            c4 = tmp;
           }
         }
       }
@@ -614,97 +522,87 @@ export default function NewGroupDMScreen(navigation) {
     first1,
     navigation,
     sum,
-    tmp23,
-    tmp24,
+    tmp22,
+    sum > tmp22,
     memo,
     selectedUserIds,
     result,
-    tmp27,
+    sum >= tmp22,
     callback1,
     tmp,
   ];
   const layoutEffect = obj4.useLayoutEffect(() => {
-    let button;
-    let memberCount;
-    let recipientLimit;
-    let stringResult;
     let isGroupDMResult;
     if (stateFromStores != null) {
       isGroupDMResult = stateFromStores.isGroupDM();
     }
-    let intl = navigation(locationPage[24]).intl;
+    let intl = options(locationPage[24]).intl;
     let string = intl.string;
-    let t = navigation(locationPage[24]).t;
+    let t = options(locationPage[24]).t;
     if (isGroupDMResult) {
-      stringResult = string(t["LR+Ptf"]);
+      let stringResult = string(t["LR+Ptf"]);
     } else {
       stringResult = string(t["3hF1W4"]);
     }
-    navigation = stringResult;
-    const intl2 = navigation(locationPage[24]).intl;
-    let obj2 = { numMembers, maxMemberLimit };
-    let formatToPlainStringResult = intl2.formatToPlainString(navigation(locationPage[24]).t["9EQix0"], obj2);
+    options = stringResult;
+    const intl2 = options(locationPage[24]).intl;
+    let formatToPlainStringResult = intl2.formatToPlainString(options(locationPage[24]).t["9EQix0"], {
+      numMembers,
+      maxMemberLimit,
+    });
     if (!c20) {
-      let tmp7 = navigation;
-      const intl3 = navigation(locationPage[24]).intl;
+      const intl3 = options(locationPage[24]).intl;
       let obj3 = { numMembers, maxMemberLimit };
-      formatToPlainStringResult = intl3.formatToPlainString(navigation(locationPage[24]).t.YUhnoy, obj3);
+      formatToPlainStringResult = intl3.formatToPlainString(options(locationPage[24]).t.YUhnoy, obj3);
     }
-    const subtitle = formatToPlainStringResult;
-    let closure_2 = c20 ? closure_21 : disabled;
-    let obj4 = {
+    closure_1 = formatToPlainStringResult;
+    closure_2 = c20 ? closure_21 : disabled;
+    options.setOptions({
       title: "" + stringResult + " (" + formatToPlainStringResult + ")",
       headerTitle: c20
-        ? () => {
-            obj = { title: stringResult, memberCount, recipientLimit };
-            return memberCount(GroupDMRecipientLimitTitleDefault, obj);
-          }
+        ? () => constants(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })
         : (arg0) => {
-            let str;
             if (arg0 == null) {
               throw new TypeError("Cannot destructure 'undefined' or 'null'.");
             } else {
               const merged = Object.assign(arg0, undefined);
-              obj = { title: stringResult, subtitle, color: str };
-              const GenericHeaderTitle = HeaderShared.GenericHeaderTitle;
+              const obj = {};
               const merged1 = Object.assign(merged);
-              str = "mobile-text-heading-primary";
+              obj.title = stringResult;
+              obj.subtitle = formatToPlainStringResult;
+              let str = "mobile-text-heading-primary";
               if (closure_2) {
                 str = "text-feedback-critical";
               }
-              return memberCount(GenericHeaderTitle, obj);
+              obj.color = str;
+              return constants(HeaderShared.GenericHeaderTitle, obj);
             }
           },
       headerRight(arg0) {
-        let result;
-        let tmp26;
         if (first1) {
           const obj2 = { color: button.button.color, size: "small" };
-          result = memberCount(metroRequire, obj2);
+          let result = constants(timestampProducer, obj2);
         } else {
           let isGroupDMResult;
           if (stateFromStores != null) {
             isGroupDMResult = stateFromStores.isGroupDM();
           }
           const getRenderHeaderTextButton = HeaderShared.getRenderHeaderTextButton;
-          const intl = intl4.intl;
+          const intl = util.intl;
           const string = intl.string;
-          const t = intl4.t;
+          const t = util.t;
           if (isGroupDMResult) {
-            const obj3 = { disabled: tmp26 };
-            stringResult = string(t.OYkgVk);
+            const obj3 = {};
             const renderHeaderTextButton = getRenderHeaderTextButton(
-              stringResult,
-              _asyncToGenerator(async () => {
-                let c0;
-                let c1;
+              string(t.OYkgVk),
+              asyncGeneratorStep(async () => {
                 await closure_1_23();
                 return value;
               }),
             );
             const merged = Object.assign(arg0);
-            tmp26 = disabled;
-            if (!tmp26) {
+            let tmp25 = disabled;
+            if (!disabled) {
               let isGroupDMResult1;
               if (stateFromStores != null) {
                 isGroupDMResult1 = stateFromStores.isGroupDM();
@@ -712,64 +610,137 @@ export default function NewGroupDMScreen(navigation) {
               if (isGroupDMResult1) {
                 isGroupDMResult1 = first.length <= 0;
               }
-              tmp26 = isGroupDMResult1;
+              tmp25 = isGroupDMResult1;
             }
+            obj3.disabled = tmp25;
             result = renderHeaderTextButton(obj3);
+            stringResult = string(t.OYkgVk);
           } else {
-            const obj4 = { disabled };
-            const stringResult1 = string(t.CumH4u);
+            const obj4 = {};
             const renderHeaderTextButton1 = getRenderHeaderTextButton(
-              stringResult1,
-              _asyncToGenerator(async () => {
-                let c0;
-                let c1;
+              string(t.CumH4u),
+              asyncGeneratorStep(async () => {
                 await closure_1_23();
                 return value;
               }),
             );
             const merged1 = Object.assign(arg0);
+            obj4.disabled = disabled;
             result = renderHeaderTextButton1(obj4);
+            const stringResult1 = string(t.CumH4u);
+          }
+        }
+        return result;
+      },
+    });
+    let obj2 = { numMembers, maxMemberLimit };
+    let obj4 = {
+      title: "" + stringResult + " (" + formatToPlainStringResult + ")",
+      headerTitle: c20
+        ? () => constants(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })
+        : (arg0) => {
+            if (arg0 == null) {
+              throw new TypeError("Cannot destructure 'undefined' or 'null'.");
+            } else {
+              const merged = Object.assign(arg0, undefined);
+              const obj = {};
+              const merged1 = Object.assign(merged);
+              obj.title = stringResult;
+              obj.subtitle = formatToPlainStringResult;
+              let str = "mobile-text-heading-primary";
+              if (closure_2) {
+                str = "text-feedback-critical";
+              }
+              obj.color = str;
+              return constants(HeaderShared.GenericHeaderTitle, obj);
+            }
+          },
+      headerRight(arg0) {
+        if (first1) {
+          const obj2 = { color: button.button.color, size: "small" };
+          let result = constants(timestampProducer, obj2);
+        } else {
+          let isGroupDMResult;
+          if (stateFromStores != null) {
+            isGroupDMResult = stateFromStores.isGroupDM();
+          }
+          const getRenderHeaderTextButton = HeaderShared.getRenderHeaderTextButton;
+          const intl = util.intl;
+          const string = intl.string;
+          const t = util.t;
+          if (isGroupDMResult) {
+            const obj3 = {};
+            const renderHeaderTextButton = getRenderHeaderTextButton(
+              string(t.OYkgVk),
+              asyncGeneratorStep(async () => {
+                await closure_1_23();
+                return value;
+              }),
+            );
+            const merged = Object.assign(arg0);
+            let tmp25 = disabled;
+            if (!disabled) {
+              let isGroupDMResult1;
+              if (stateFromStores != null) {
+                isGroupDMResult1 = stateFromStores.isGroupDM();
+              }
+              if (isGroupDMResult1) {
+                isGroupDMResult1 = first.length <= 0;
+              }
+              tmp25 = isGroupDMResult1;
+            }
+            obj3.disabled = tmp25;
+            result = renderHeaderTextButton(obj3);
+            stringResult = string(t.OYkgVk);
+          } else {
+            const obj4 = {};
+            const renderHeaderTextButton1 = getRenderHeaderTextButton(
+              string(t.CumH4u),
+              asyncGeneratorStep(async () => {
+                await closure_1_23();
+                return value;
+              }),
+            );
+            const merged1 = Object.assign(arg0);
+            obj4.disabled = disabled;
+            result = renderHeaderTextButton1(obj4);
+            const stringResult1 = string(t.CumH4u);
           }
         }
         return result;
       },
     };
-    navigation.setOptions(obj4);
   }, items6);
-  const items7 = [memo, tmp23, result, enabled, callback];
+  const items7 = [memo, tmp22, result, enabled, callback];
   const callback2 = obj4.useCallback((id) => {
-    let found;
-    let closure_0 = id;
     const current = ref.current;
     const hasItem = current.includes(id.id);
     const items = [...current];
     new Set(items);
     if (!hasItem) {
       if (c20) {
-        if (tmp3 >= maxMemberLimit) {
+        if (tmp3 >= closure_18) {
           if (enabled) {
             openGroupDMNitroCapLimitSheetDefault("NewGroupDMScreen");
           } else {
-            obj = ToastUtils;
-            obj.showMaxGroupMembers();
+            ToastUtils.showMaxGroupMembers();
           }
         }
       }
     }
     if (hasItem) {
-      found = current.filter((item) => item !== id.id);
+      let found = current.filter((item) => item !== id.id);
     } else {
       found = [];
-      found[HermesBuiltin.arraySpread(found, current, 0)] = id.id;
+      found[HermesBuiltin.arraySpread(current, 0)] = id.id;
     }
     callback(found);
   }, items7);
-  [c24, c25] = tmp5(obj4.useState(false), 2);
-  tmp5(obj4.useState(false), 2);
-  const tmp36 = require("useIsUsingClientTheme")();
+  let obj6 = require("GroupDMNitroUpsellModel");
+  const tmp30 = stateFromStores;
+  [c24, c25] = tmp5(stateFromStores1.useState(false), 2);
+  const tmp5Result = tmp5(stateFromStores1.useState(false), 2);
   callback3 = obj4.useCallback(() => {
-    let contentLength;
-    let layoutHeight;
     ({ contentLength, layoutHeight } = closure_15.current);
     if (null != contentLength) {
       if (null != layoutHeight) {
@@ -797,7 +768,7 @@ export default function NewGroupDMScreen(navigation) {
     closure_15.current.layoutHeight = nativeEvent.nativeEvent.layout.height;
     callback3();
   }, items9);
-  let obj2 = { style: tmp.container, children: items11 };
+  let obj2 = { style: tmp.container, children: null };
   let isGroupDMResult;
   const callback6 = obj4.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
@@ -805,8 +776,6 @@ export default function NewGroupDMScreen(navigation) {
     closure_15.current.offsetY = nativeEvent.contentOffset.y;
     callback3();
   }, items10);
-  const tmp31 = stateFromStores;
-  const tmp41 = maxMemberLimit;
   if (stateFromStores != null) {
     isGroupDMResult = stateFromStores.isGroupDM();
   }
@@ -814,27 +783,16 @@ export default function NewGroupDMScreen(navigation) {
     isGroupDMResult = null != stateFromStores1;
   }
   if (isGroupDMResult) {
-    isGroupDMResult = !tmp24;
+    isGroupDMResult = !tmp23;
   }
   if (isGroupDMResult) {
-    let obj7 = { style: tmp.instantInviteView, children: c17(tmp14Result, obj8) };
-    obj8 = {
-      onItemPressed: function () {
-        return closure_0(...arguments);
-      },
-    };
-    tmp14Result = require("InstantInviteShareApps");
-    let closure_0 = tmp31(function* (arg0) {
-      let channel;
-      let formatToPlainString;
-      let obj2;
-      let obj7;
-      let prop;
-      closure_0 = arg0;
+    let obj7 = { style: tmp.instantInviteView, children: null };
+    let obj8 = { onItemPressed: null };
+    _require = tmp30(function* (arg0) {
       if (channel === 2) {
         channel = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -845,7 +803,6 @@ export default function NewGroupDMScreen(navigation) {
         }
       } else {
         try {
-          let code;
           channel = 2;
           if (0 === c3) {
             if (arg0 === 1) {
@@ -856,62 +813,75 @@ export default function NewGroupDMScreen(navigation) {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              let closure_2 = tmp4;
-              code = undefined;
-              if (!closure_1_24) {
-                closure_1_25(true);
+              closure_2 = tmp5;
+              closure_1 = tmp2;
+              closure_129_0 = options;
+              closure_129_1 = undefined;
+              if (closure_1_24) {
+                channel = 3;
+              } else {
+                _undefined(true);
                 c3 = 1;
                 channel = 1;
-                const obj5 = { value: obj2.mobileCreateInvite(channel, constants.GROUP_DM), done: false };
-                obj2 = require("InstantInviteActionCreators");
+                const obj5 = {
+                  value: require("InstantInviteActionCreators").mobileCreateInvite(channel, constants.GROUP_DM),
+                  done: false,
+                };
                 return obj5;
               }
             }
           } else if (arg0 === 1) {
             channel = 3;
             throw value;
-          } else if (arg0 === 2) {
-            channel = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            code = value;
-            if (null != code) {
-              const obj6 = { channel, code, message: formatToPlainString(prop, obj7), location: constants.GROUP_DM };
-              const intl = closure_0(locationPage[24]).intl;
-              formatToPlainString = intl.formatToPlainString;
-              obj7 = { username: user.username, link: require("getInviteURL")(code) };
-              prop = closure_0(locationPage[24]).t["+zWvOQ"];
-              closure_0(obj6);
+          } else if (arg0 !== 2) {
+            closure_129_1 = value;
+            if (null != closure_129_1) {
+              const obj6 = { channel, code: closure_129_1, message: null, location: null };
+              const intl = options(locationPage[24]).intl;
+              const obj7 = { username: user.username, link: require("getInviteURL")(closure_129_1) };
+              obj6.message = intl.formatToPlainString(options(locationPage[24]).t["+zWvOQ"], obj7);
+              obj6.location = constants.GROUP_DM;
+              closure_129_0(obj6);
             }
-            closure_1_25(false);
+            _undefined(false);
           }
           channel = 3;
-          return { value: "IconComponent", done: null };
-        } catch (tmp14) {
-          channel = 3;
-          throw tmp14;
+          const obj = { value, done: true };
+          return obj;
+        } catch (tmp15) {
+          channel = tmp;
+          throw tmp15;
         }
       }
     });
-    isGroupDMResult = c17(tmp42, obj7);
-  }
-  items11 = [isGroupDMResult, , ,];
-  let tmp46 = null;
-  if (flag) {
-    const obj9 = { style: tmp.nameInputContainer, children: c17(TextInput, obj10) };
-    obj10 = {
-      style: tmp.nameInput,
-      value: first2,
-      onChangeText: tmp13,
-      placeholder: intl.string(tmp2(locationPage[24]).t.KSVhrX),
+    obj8.onItemPressed = function () {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     };
-    TextInput = tmp2(locationPage[33]).TextInput;
-    intl = tmp2(locationPage[24]).intl;
-    tmp46 = c17(tmp42, obj9);
+    obj7.children = c17(require("InstantInviteShareApps"), obj8);
+    isGroupDMResult = c17(tmp41, obj7);
+    const tmp13Result = require("InstantInviteShareApps");
   }
-  items11[1] = tmp46;
-  const obj11 = {
+  const items11 = [isGroupDMResult, , ,];
+  let tmp45 = null;
+  if (flag) {
+    let obj9 = { style: tmp.nameInputContainer, children: null };
+    const obj10 = { style: tmp.nameInput, value: first2, onChangeText: tmp11[1], placeholder: null };
+    let intl = tmp2(locationPage[24]).intl;
+    obj10.placeholder = intl.string(tmp2(locationPage[24]).t.KSVhrX);
+    obj9.children = c17(tmp2(locationPage[33]).TextInput, obj10);
+    tmp45 = c17(tmp41, obj9);
+  }
+  items11[1] = tmp45;
+  const tmp35 = require("useIsUsingClientTheme")();
+  const tmp40 = maxMemberLimit;
+  items11[2] = c17(require("SearchableUserList"), {
     rowMode: first2.TOGGLE,
     onSelectUser: callback2,
     disabledUserIds: memo,
@@ -919,21 +889,21 @@ export default function NewGroupDMScreen(navigation) {
     focusOnAdd: false,
     withAffinitySuggestions: true,
     withAlphabeticalSections: false,
-    insetEnd: tmp16,
+    insetEnd: tmp15,
     onContentLengthChange: callback4,
     onLayout: callback5,
     onScroll: callback6,
     disableGradient: true,
-    disableStickySections: tmp36,
-  };
-  items11[2] = c17(require("SearchableUserList"), obj11);
+    disableStickySections: require("useIsUsingClientTheme")(),
+  });
   items11[3] = c17(require("GroupDMNitroUpsellBanner"), {
     location: "NewGroupDMScreen",
     memberCount: sum,
-    recipientLimit: tmp23,
+    recipientLimit: tmp22,
     floating: true,
-    hideFloatingGradient: tmp19,
-    onFloatingListInsetChange: tmp17,
+    hideFloatingGradient: tmp18,
+    onFloatingListInsetChange: tmp16,
   });
-  return tmp41(closure_7, obj2);
+  obj2.children = items11;
+  return tmp40(closure_7, obj2);
 }

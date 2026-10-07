@@ -1,94 +1,85 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx
-import react2 from "../../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../../../../intl/index.native.tsx";
+import util from "../../../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import ThemedGradientDefault from "../../../../../client_themes/native/ThemedGradient.tsx";
 import useStateFromSharedValueDefault from "../../../../../reanimated/native/useStateFromSharedValue.tsx";
-import react from "../../../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-let StyleSheet;
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-({ View: closure_4, StyleSheet } = react_native);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
-const sum = Text_Text.TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
-let createStyles = createStyles_mod;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const sum = fn(4892).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const createStyles = fn(4896);
 let obj = {
   headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" },
-  stickyOverlay: obj2,
-  headerText: obj3,
+  stickyOverlay: null,
+  headerText: null,
 };
-obj2 = { backgroundColor: nativeDefault.colors.PANEL_BG };
-createStyles = createStyles.createStyles;
+let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
-let closure_8 = createStyles(obj);
+obj3.backgroundColor = nativeDefault.colors.PANEL_BG;
+obj.stickyOverlay = obj3;
+obj.headerText = { marginHorizontal: nativeDefault.space.PX_16 };
+let closure_8 = createStyles.createStyles(obj);
 const __initData = {
   code: "function MessagesItemSuggestedFriendsHeaderTsx1(){const{stickyAt,scrollPosition}=this.__closure;return stickyAt!=null&&scrollPosition.get()>=stickyAt;}",
 };
 const __initData2 = {
   code: "function MessagesItemSuggestedFriendsHeaderTsx2(){const{stickyAt,scrollPosition}=this.__closure;return stickyAt!=null&&scrollPosition.get()>=stickyAt;}",
 };
-const memoResult = react.memo(
+const ReactCompilerGating = fn(558);
+let obj4 = { marginHorizontal: nativeDefault.space.PX_16 };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx",
+);
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (stickyAt) => {
-        let items;
-        let items1;
-        let stickyLeft;
-        let stickyTop;
-        const obj = react2;
-        const cResult = obj.c(14);
+        const cResult = c.c(14);
         stickyAt = stickyAt.stickyAt;
         const scrollPosition = stickyAt.scrollPosition;
         ({ stickyLeft, stickyTop } = stickyAt);
         const tmp4 = closure_8();
         const fn = function l() {
-          const tmp2 = null != stickyAt && scrollPosition.get() >= tmp;
+          let tmp2 = null != stickyAt;
+          if (tmp2) {
+            tmp2 = scrollPosition.get() >= tmp;
+          }
           return tmp2;
         };
         fn.__closure = { stickyAt, scrollPosition };
         fn.__workletHash = 895751186732;
         fn.__initData = __initData;
-        const obj2 = ReanimatedRexport;
-        const derivedValue = obj2.useDerivedValue(fn);
+        const derivedValue = ReanimatedRexport.useDerivedValue(fn);
         const tmp7 = useStateFromSharedValueDefault(derivedValue);
         if (cResult[0] === -stickyLeft) {
-          let tmp10;
-          if (cResult[1] === -stickyTop) {
-            tmp10 = cResult[2];
+          if (cResult[1] === tmp9) {
+            let tmp10 = cResult[2];
           }
           if (cResult[3] === tmp7) {
             if (cResult[4] === tmp10) {
-              let tmp12;
-              let tmp19;
-              let tmp21;
               if (cResult[5] === tmp4.stickyOverlay) {
-                tmp12 = cResult[6];
+                let tmp12 = cResult[6];
               }
               const _Symbol = Symbol;
-              const headerText = tmp4.headerText;
               if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = intl2.intl;
-                const stringResult = intl.string(intl2.t["1uAmCw"]);
+                const intl = util.intl;
+                const stringResult = intl.string(util.t["1uAmCw"]);
                 cResult[7] = stringResult;
-                tmp19 = stringResult;
+                let tmp19 = stringResult;
               } else {
                 tmp19 = cResult[7];
               }
               if (cResult[8] !== tmp4.headerText) {
                 const obj3 = {
-                  style: headerText,
+                  style: tmp4.headerText,
                   maxFontSizeMultiplier: 2,
                   lineClamp: 1,
                   accessibilityRole: "header",
@@ -99,22 +90,22 @@ const memoResult = react.memo(
                 const tmp23 = hasOwnProperty(Text_Text.Text, obj3);
                 cResult[8] = tmp4.headerText;
                 cResult[9] = tmp23;
-                tmp21 = tmp23;
+                let tmp21 = tmp23;
               } else {
                 tmp21 = cResult[9];
               }
               if (cResult[10] === tmp4.headerContainer) {
                 if (cResult[11] === tmp12) {
-                  let tmp24;
                   if (cResult[12] === tmp21) {
-                    tmp24 = cResult[13];
+                    let tmp24 = cResult[13];
                   }
                   return tmp24;
                 }
               }
-              const obj4 = { style: tmp11, collapsable: false, children: items };
-              items = [tmp12, tmp21];
-              const tmp27 = metroImportDefault(React3, obj4);
+              const obj4 = { style: tmp11, collapsable: false, children: null };
+              const items = [tmp12, tmp21];
+              obj4.children = items;
+              const tmp27 = React5(React4, obj4);
               cResult[10] = tmp4.headerContainer;
               cResult[11] = tmp12;
               cResult[12] = tmp21;
@@ -124,12 +115,13 @@ const memoResult = react.memo(
           }
           let tmp13 = null;
           if (tmp7) {
-            const obj5 = { children: items1 };
+            const obj5 = { children: null };
             const obj6 = { absolute: true, wide: true, componentStyles: tmp10, tall: true, mix: true };
-            items1 = [hasOwnProperty(ThemedGradientDefault, obj6)];
+            const items1 = [hasOwnProperty(ThemedGradientDefault, obj6)];
             const obj7 = { style: tmp4.stickyOverlay };
-            items1[1] = hasOwnProperty(React3, obj7);
-            tmp13 = metroImportDefault(metroRequire, obj5);
+            items1[1] = hasOwnProperty(React4, obj7);
+            obj5.children = items1;
+            tmp13 = React5(timestampProducer, obj5);
           }
           cResult[3] = tmp7;
           cResult[4] = tmp10;
@@ -144,36 +136,35 @@ const memoResult = react.memo(
         tmp10 = rect;
       }
     : (stickyAt) => {
-        let intl;
-        let items1;
-        let items2;
         stickyAt = stickyAt.stickyAt;
         const scrollPosition = stickyAt.scrollPosition;
         const stickyLeft = stickyAt.stickyLeft;
         const stickyTop = stickyAt.stickyTop;
         const tmp = closure_8();
         const fn = function x() {
-          const tmp2 = null != stickyAt && scrollPosition.get() >= tmp;
+          let tmp2 = null != stickyAt;
+          if (tmp2) {
+            tmp2 = scrollPosition.get() >= tmp;
+          }
           return tmp2;
         };
         fn.__closure = { stickyAt, scrollPosition };
         fn.__workletHash = 10594399404463;
         fn.__initData = __initData2;
-        const obj = ReanimatedRexport;
-        const derivedValue = obj.useDerivedValue(fn);
+        const derivedValue = ReanimatedRexport.useDerivedValue(fn);
         const items = [stickyLeft, stickyTop];
+        const obj2 = { style: tmp.headerContainer, collapsable: false, children: null };
         let tmp8Result = null;
-        const obj2 = { style: tmp.headerContainer, collapsable: false, children: items2 };
-        const tmp6 = useStateFromSharedValueDefault(derivedValue);
         if (tmp6) {
-          const obj3 = { children: items1 };
+          const obj3 = { children: null };
           const obj4 = { absolute: true, wide: true, componentStyles: tmp7, tall: true, mix: true };
-          items1 = [hasOwnProperty(ThemedGradientDefault, obj4)];
+          const items1 = [hasOwnProperty(ThemedGradientDefault, obj4)];
           const obj5 = { style: tmp.stickyOverlay };
-          items1[1] = hasOwnProperty(React3, obj5);
-          tmp8Result = metroImportDefault(metroRequire, obj3);
+          items1[1] = hasOwnProperty(React4, obj5);
+          obj3.children = items1;
+          tmp8Result = React5(timestampProducer, obj3);
         }
-        items2 = [tmp8Result];
+        const items2 = [tmp8Result];
         const obj6 = {
           style: tmp.headerText,
           maxFontSizeMultiplier: 2,
@@ -181,17 +172,13 @@ const memoResult = react.memo(
           accessibilityRole: "header",
           variant: "text-md/semibold",
           color: "text-default",
-          children: intl.string(intl2.t["1uAmCw"]),
+          children: null,
         };
-        const Text = Text_Text.Text;
-        intl = intl2.intl;
-        items2[1] = hasOwnProperty(Text, obj6);
-        return metroImportDefault(React3, obj2);
+        const intl = util.intl;
+        obj6.children = intl.string(util.t["1uAmCw"]);
+        items2[1] = hasOwnProperty(Text_Text.Text, obj6);
+        obj2.children = items2;
+        return React5(React4, obj2);
       },
 );
-const result = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx",
-);
-
-export default memoResult;
 export const MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT = sum;

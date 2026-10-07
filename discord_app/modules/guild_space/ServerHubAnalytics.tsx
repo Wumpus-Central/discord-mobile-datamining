@@ -16,12 +16,8 @@ export const ServerHubVisitSource = {
   LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
 };
 export const trackServerHubToggleSetting = function trackServerHubToggleSetting(id, settingType, value) {
-  const obj = AnalyticsUtilsDefault;
-  const obj2 = { guild_id: id, type: settingType, value };
-  obj.track(AnalyticEvents.SERVER_HUB_TOGGLE_SETTING, obj2);
+  AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_TOGGLE_SETTING, { guild_id: id, type: settingType, value });
 };
 export const trackServerHubVisit = function trackServerHubVisit(guild_id, source) {
-  const obj = AnalyticsUtilsDefault;
-  const obj2 = { guild_id, source };
-  obj.track(AnalyticEvents.SERVER_HUB_VISIT, obj2);
+  AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_VISIT, { guild_id, source });
 };

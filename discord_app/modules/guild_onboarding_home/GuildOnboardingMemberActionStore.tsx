@@ -1,42 +1,44 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {};
 obj = {};
 const set = new Set();
-const Store = get_initializedDefault.Store;
-class GuildOnboardingMemberActionStore extends Store {
-  getCompletedActions(guildId) {
-    let tmp = null;
-    if (null != guildId) {
-      tmp = obj[guildId];
-    }
-    return tmp;
-  }
-  hasCompletedActionForChannel(id, id2) {
-    const completedActions = this.getCompletedActions(id);
-    return null != completedActions && null != completedActions[id2];
-  }
-  getState(arg0) {
-    if (null == arg0) {
-      obj = {};
-    } else {
-      obj = { completedActions: obj[arg0], loading: set.has(arg0) };
-    }
-    return obj;
-  }
-}
+const Store = initializeDefault.Store;
+class GuildOnboardingMemberActionStore extends Store {}
 const prototype = GuildOnboardingMemberActionStore.prototype;
+prototype["getCompletedActions"] = function getCompletedActions(guildId) {
+  let tmp = null;
+  if (null != guildId) {
+    tmp = obj[guildId];
+  }
+  return tmp;
+};
+prototype["hasCompletedActionForChannel"] = function hasCompletedActionForChannel(id, id2) {
+  const completedActions = this.getCompletedActions(id);
+  let tmp2 = null != completedActions;
+  if (tmp2) {
+    tmp2 = null != completedActions[id2];
+  }
+  return tmp2;
+};
+prototype["getState"] = function getState(arg0) {
+  if (null == arg0) {
+    obj = {};
+  } else {
+    obj = { completedActions: null, loading: null };
+    obj.completedActions = obj[arg0];
+    obj.loading = set.has(arg0);
+  }
+  return obj;
+};
 GuildOnboardingMemberActionStore.displayName = "GuildOnboardingMemberActionStore";
-let obj2 = {
+const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(DispatcherDefault, {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function handleMemberActionsFetchStart(guildId) {
     set.add(guildId.guildId);
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function handleMemberActionsFetchSuccess(arg0) {
-    let guildId;
-    let memberActions;
     ({ memberActions, guildId } = arg0);
     if (null != memberActions) {
       obj[guildId] = memberActions;
@@ -48,22 +50,20 @@ let obj2 = {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function handleMemberActionsFetchFail(guildId) {
     set.delete(guildId.guildId);
   },
-  GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function handleNewMemberActionsDelete(guildId) {
-    guildId = guildId.guildId;
-    if (null == obj[guildId]) {
+  GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function handleNewMemberActionsDelete(arg0) {
+    if (null == obj[arg0.guildId]) {
       return false;
     } else {
-      delete obj[guildId];
+      delete tmp[tmp2];
     }
   },
   COMPLETE_NEW_MEMBER_ACTION: function handleCompleteNewMemberAction(guildId) {
     guildId = guildId.guildId;
     obj = {};
-    const channelId = guildId.channelId;
     const merged = Object.assign(obj);
     const obj2 = {};
     const merged1 = Object.assign(obj[guildId]);
-    obj2[channelId] = true;
+    obj2[guildId.channelId] = true;
     obj[guildId] = obj2;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -71,11 +71,12 @@ let obj2 = {
     if (null == obj[guild.id]) {
       return false;
     } else {
-      delete obj[guild.id];
+      const id = guild.id;
+      delete tmp2[tmp];
     }
   },
-};
-const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx");
 
 export default guildOnboardingMemberActionStore;

@@ -1,27 +1,17 @@
 // discord_app/modules/safety_hub/hooks/useSafetyHubClassifications.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import react2 from "../../../../_runtime/00576_react.js";
-import SafetyHubConstants from "../SafetyHubConstants.tsx";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import SafetyHubActionCreatorsAll from "../SafetyHubActionCreators.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require;
-
-const ViolationType = SafetyHubConstants.ViolationType;
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+const ViolationType = fn(8126).ViolationType;
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let classifications;
-      let tmp4;
-      let tmp5;
-      let tmp7;
-      let obj = react2;
-      const cResult = obj.c(5);
+      const cResult = c.c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
         const fn = function s() {
@@ -34,67 +24,48 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStoresArray = tmpResult.useStateFromStoresArray(tmp4, tmp5);
+      const stateFromStoresArray = initialize.useStateFromStoresArray(tmp4, tmp5);
       if (cResult[2] !== stateFromStoresArray) {
-        let tmp8;
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function n(id, id2) {
-            const obj = SnowflakeUtilsDefault;
-            const extractTimestampResult = obj.extractTimestamp(id2.id);
-            const obj2 = SnowflakeUtilsDefault;
-            return extractTimestampResult - obj2.extractTimestamp(id.id);
+            const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
+            return extractTimestampResult - SnowflakeUtilsDefault.extractTimestamp(id.id);
           };
           cResult[4] = fn2;
-          tmp8 = fn2;
+          let tmp7 = fn2;
         } else {
-          tmp8 = cResult[4];
+          tmp7 = cResult[4];
         }
-        const sorted = stateFromStoresArray.sort(tmp8);
+        const sorted = stateFromStoresArray.sort(tmp7);
         cResult[2] = stateFromStoresArray;
         cResult[3] = sorted;
-        tmp7 = sorted;
       } else {
-        tmp7 = cResult[3];
+        return cResult[3];
       }
-      return tmp7;
+      const tmpResult = initialize;
     }
   : () => {
-      let classifications;
-      let obj = get_initialized;
       const items = [SafetyHubStore];
-      const stateFromStoresArray = obj.useStateFromStoresArray(items, () => classifications.getClassifications());
+      const stateFromStoresArray = initialize.useStateFromStoresArray(items, () =>
+        classifications.getClassifications(),
+      );
       return stateFromStoresArray.sort((id, id2) => {
-        const obj = SnowflakeUtilsDefault;
-        const extractTimestampResult = obj.extractTimestamp(id2.id);
-        const obj2 = SnowflakeUtilsDefault;
-        return extractTimestampResult - obj2.extractTimestamp(id.id);
+        const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id2.id);
+        return extractTimestampResult - SnowflakeUtilsDefault.extractTimestamp(id.id);
       });
     };
 let closure_7 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let USER;
-      let closure_0;
-      let first;
-      let tmp10;
-      let tmp12;
-      let tmp13;
-      let tmp16;
-      let tmp17;
-      let tmp29;
-      let tmp6;
-      let tmp8;
       _require = arg0;
-      let tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(21);
+      const cResult = require("c").c(21);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -104,16 +75,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [SafetyHubStore];
         cResult[3] = items1;
-        tmp8 = items1;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[3];
       }
@@ -123,12 +94,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[4] = arg0;
         cResult[5] = fn2;
-        tmp10 = fn2;
+        let tmp10 = fn2;
       } else {
         tmp10 = cResult[5];
       }
-      const tmpResult5 = tmp(504);
-      const stateFromStores1 = tmpResult5.useStateFromStores(tmp8, tmp10);
+      const tmpResult = require("initialize");
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [SafetyHubStore];
         const fn3 = function p() {
@@ -136,277 +107,285 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[6] = items2;
         cResult[7] = fn3;
-        tmp13 = fn3;
-        tmp12 = items2;
+        let tmp13 = fn3;
+        let tmp12 = items2;
       } else {
         tmp12 = cResult[6];
         tmp13 = cResult[7];
       }
-      const tmpResult6 = tmp(504);
-      const stateFromStores2 = tmpResult6.useStateFromStores(tmp12, tmp13);
+      const tmpResult5 = require("initialize");
+      const stateFromStores2 = require("initialize").useStateFromStores(tmp12, tmp13);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const items3 = [SafetyHubStore];
         class E {
           constructor() {
-            return SafetyHubStore.getIsAppealEligible();
+            return closure_1_5.getIsAppealEligible();
           }
         }
         cResult[8] = items3;
         cResult[9] = E;
-        tmp17 = E;
-        tmp16 = items3;
+        let tmp17 = E;
+        let tmp16 = items3;
       } else {
         tmp16 = cResult[8];
         tmp17 = cResult[9];
       }
-      const tmpResult7 = tmp(504);
-      const stateFromStores3 = tmpResult7.useStateFromStores(tmp16, tmp17);
-      const tmpResult8 = tmp(8125);
+      const tmpResult6 = require("initialize");
+      const stateFromStores3 = require("initialize").useStateFromStores(tmp16, tmp17);
+      const tmpResult7 = require("initialize");
       if (tmpResult8.isGuildClassification(stateFromStores)) {
-        let GUILD_MEMBER;
         const guild_metadata = stateFromStores.guild_metadata;
         class E {
           constructor() {
-            return SafetyHubStore.getIsAppealEligible();
+            return closure_1_5.getIsAppealEligible();
           }
         }
         if (undefined === tmp(8127).MemberType.OWNER) {
-          GUILD_MEMBER = ViolationType.GUILD_OWNER;
+          let GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;
         }
-        USER = GUILD_MEMBER;
       } else {
-        USER = ViolationType.USER;
-      }
-      if (cResult[10] === stateFromStores) {
-        if (cResult[11] === stateFromStores1) {
-          let tmp25;
-          let tmp26;
-          if (cResult[12] === arg0) {
-            tmp25 = cResult[13];
-            tmp26 = cResult[14];
-          }
-          const effect = react.useEffect(tmp25, tmp26);
-          class E {
-            constructor() {
-              return SafetyHubStore.getIsAppealEligible();
+        const USER = ViolationType.USER;
+        if (cResult[10] === stateFromStores) {
+          if (cResult[11] === stateFromStores1) {
+            if (cResult[12] === arg0) {
+              let tmp26 = cResult[13];
+              let tmp27 = cResult[14];
             }
-          }
-          if (tmp29) {
-            tmp29 = null != stateFromStores;
-          }
-          if (tmp29) {
-            tmp29 = null == stateFromStores.appeal_status;
-          }
-          if (cResult[15] === stateFromStores) {
-            if (cResult[16] === stateFromStores1) {
-              if (cResult[17] === stateFromStores2) {
-                if (cResult[18] === tmp29) {
-                  let tmp32;
-                  if (cResult[19] === USER) {
-                    tmp32 = cResult[20];
+            const effect = noop.useEffect(tmp26, tmp27);
+            class D {
+              constructor() {
+                tmp = undefined === closure_1;
+                if (tmp) {
+                  tmp2 = closure_2;
+                  tmp3 = null;
+                  tmp = null == closure_2;
+                }
+                if (tmp) {
+                  tmp4 = closure_2;
+                  tmp5 = closure_3;
+                  obj = closure_2(closure_3[9]);
+                  tmp6 = closure_0;
+                  safetyHubDataForClassification = obj.getSafetyHubDataForClassification(closure_0);
+                }
+                return;
+              }
+            }
+            if (stateFromStores3) {
+              let tmp30 = null != stateFromStores;
+            }
+            if (tmp30) {
+              tmp30 = null == stateFromStores.appeal_status;
+            }
+            if (cResult[15] === stateFromStores) {
+              if (cResult[16] === stateFromStores1) {
+                if (cResult[17] === stateFromStores2) {
+                  if (cResult[18] === tmp30) {
+                    if (cResult[19] === USER) {
+                      let tmp33 = cResult[20];
+                    }
+                    return tmp33;
                   }
-                  return tmp32;
                 }
               }
             }
-          }
-          const obj2 = {
-            classification: stateFromStores,
-            classificationRequestState: stateFromStores1,
-            isDsaEligible: stateFromStores2,
-            isAppealEligible: tmp29,
-            violationType: USER,
-          };
-          cResult[15] = stateFromStores;
-          cResult[16] = stateFromStores1;
-          cResult[17] = stateFromStores2;
-          cResult[18] = tmp29;
-          cResult[19] = USER;
-          cResult[20] = obj2;
-          tmp32 = obj2;
-        }
-      }
-      class D {
-        constructor() {
-          const tmp = undefined === stateFromStores && null == stateFromStores1;
-          if (tmp) {
-            const obj = SafetyHubActionCreatorsAll;
-            const safetyHubDataForClassification = obj.getSafetyHubDataForClassification(closure_0);
+            const obj2 = {
+              classification: stateFromStores,
+              classificationRequestState: stateFromStores1,
+              isDsaEligible: stateFromStores2,
+              isAppealEligible: tmp30,
+              violationType: USER,
+            };
+            cResult[15] = stateFromStores;
+            cResult[16] = stateFromStores1;
+            cResult[17] = stateFromStores2;
+            cResult[18] = tmp30;
+            cResult[19] = USER;
+            cResult[20] = obj2;
+            tmp33 = obj2;
           }
         }
+        class D {
+          constructor() {
+            tmp = undefined === closure_1;
+            if (tmp) {
+              tmp2 = closure_2;
+              tmp3 = null;
+              tmp = null == closure_2;
+            }
+            if (tmp) {
+              tmp4 = closure_2;
+              tmp5 = closure_3;
+              obj = closure_2(closure_3[9]);
+              tmp6 = closure_0;
+              safetyHubDataForClassification = obj.getSafetyHubDataForClassification(closure_0);
+            }
+            return;
+          }
+        }
+        const items4 = [arg0, stateFromStores, stateFromStores1];
+        cResult[10] = stateFromStores;
+        cResult[11] = stateFromStores1;
+        cResult[12] = arg0;
+        cResult[13] = D;
+        cResult[14] = items4;
+        tmp27 = items4;
+        tmp26 = D;
       }
-      const items4 = [arg0, stateFromStores, stateFromStores1];
-      cResult[10] = stateFromStores;
-      cResult[11] = stateFromStores1;
-      cResult[12] = arg0;
-      cResult[13] = D;
-      cResult[14] = items4;
-      tmp26 = items4;
-      tmp25 = D;
+      tmpResult8 = require("SafetyHubUtils");
     }
   : (arg0) => {
-      let USER;
-      let closure_0;
       _require = arg0;
-      let tmp = _require;
-      let obj = require("get initialized");
       const items = [SafetyHubStore];
-      const stateFromStores = obj.useStateFromStores(items, () => SafetyHubStore.getClassification(closure_0));
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        SafetyHubStore.getClassification(closure_0),
+      );
+      let obj = require("initialize");
+      let tmp = _require;
       const items1 = [SafetyHubStore];
-      const obj2 = require("get initialized");
-      const stateFromStores1 = obj2.useStateFromStores(items1, () =>
+      const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
         SafetyHubStore.getClassificationRequestState(closure_0),
       );
+      const obj2 = require("initialize");
       const items2 = [SafetyHubStore];
-      const obj3 = require("get initialized");
-      const stateFromStores2 = obj3.useStateFromStores(items2, () => SafetyHubStore.getIsDsaEligible());
+      const stateFromStores2 = require("initialize").useStateFromStores(items2, () =>
+        SafetyHubStore.getIsDsaEligible(),
+      );
+      const obj3 = require("initialize");
       const items3 = [SafetyHubStore];
-      const obj4 = require("get initialized");
-      let stateFromStores3 = obj4.useStateFromStores(items3, () => SafetyHubStore.getIsAppealEligible());
-      const obj5 = require("SafetyHubUtils");
+      let stateFromStores3 = require("initialize").useStateFromStores(items3, () =>
+        SafetyHubStore.getIsAppealEligible(),
+      );
+      const obj4 = require("initialize");
       if (obj5.isGuildClassification(stateFromStores)) {
-        let GUILD_MEMBER;
         const guild_metadata = stateFromStores.guild_metadata;
         let member_type;
         if (guild_metadata != null) {
           member_type = guild_metadata.member_type;
         }
         if (member_type === tmp(8127).MemberType.OWNER) {
-          GUILD_MEMBER = ViolationType.GUILD_OWNER;
+          let GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;
         }
-        USER = GUILD_MEMBER;
       } else {
-        USER = ViolationType.USER;
-      }
-      const items4 = [arg0, stateFromStores, stateFromStores1];
-      const effect = react.useEffect(() => {
-        const tmp = undefined === stateFromStores && null == stateFromStores1;
-        if (tmp) {
-          const obj = SafetyHubActionCreatorsAll;
-          const safetyHubDataForClassification = obj.getSafetyHubDataForClassification(closure_0);
+        const items4 = [arg0, stateFromStores, stateFromStores1];
+        const effect = noop.useEffect(() => {
+          let tmp = undefined === stateFromStores;
+          if (tmp) {
+            tmp = null == stateFromStores1;
+          }
+          if (tmp) {
+            const safetyHubDataForClassification =
+              SafetyHubActionCreatorsAll.getSafetyHubDataForClassification(closure_0);
+          }
+        }, items4);
+        const obj6 = {
+          classification: stateFromStores,
+          classificationRequestState: stateFromStores1,
+          isDsaEligible: stateFromStores2,
+          isAppealEligible: null,
+          violationType: null,
+        };
+        if (stateFromStores3) {
+          stateFromStores3 = null != stateFromStores;
         }
-      }, items4);
-      const obj6 = {
-        classification: stateFromStores,
-        classificationRequestState: stateFromStores1,
-        isDsaEligible: stateFromStores2,
-        isAppealEligible: stateFromStores3,
-        violationType: USER,
-      };
-      if (stateFromStores3) {
-        stateFromStores3 = null != stateFromStores;
+        if (stateFromStores3) {
+          stateFromStores3 = null == stateFromStores.appeal_status;
+        }
+        obj6.isAppealEligible = stateFromStores3;
+        obj6.violationType = ViolationType.USER;
+        return obj6;
       }
-      if (stateFromStores3) {
-        stateFromStores3 = null == stateFromStores.appeal_status;
-      }
-      return obj6;
+      obj5 = require("SafetyHubUtils");
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function () {
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(4);
+ReactCompilerGating = fn(558);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(4);
       const arr = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const _Date = Date;
-        const self = this;
-        const self2 = this;
-        let date = new Date();
+        const date = new Date();
         cResult[0] = date;
         let first = date;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arr) {
-        let tmp6;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function n(max_expiration_time) {
-            const date = new Date(max_expiration_time.max_expiration_time);
-            return date > first;
+            return new Date(max_expiration_time.max_expiration_time) > first;
           };
           cResult[3] = fn;
-          tmp6 = fn;
+          let tmp7 = fn;
         } else {
-          tmp6 = cResult[3];
+          tmp7 = cResult[3];
         }
-        const found = arr.filter(tmp6);
+        const found = arr.filter(tmp7);
         cResult[1] = arr;
         cResult[2] = found;
-        tmp5 = found;
       } else {
-        tmp5 = cResult[2];
+        return cResult[2];
       }
-      return tmp5;
     }
   : () => {
-      const arr = closure_7();
       let date = new Date();
-      return arr.filter((max_expiration_time) => {
+      return closure_7().filter((max_expiration_time) => {
         date = new Date(max_expiration_time.max_expiration_time);
         return date > date;
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function () {
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(4);
+ReactCompilerGating = fn(558);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(4);
       const arr = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const _Date = Date;
-        const self = this;
-        const self2 = this;
-        let date = new Date();
+        const date = new Date();
         cResult[0] = date;
         let first = date;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arr) {
-        let tmp6;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function n(max_expiration_time) {
-            const date = new Date(max_expiration_time.max_expiration_time);
-            return date <= first;
+            return new Date(max_expiration_time.max_expiration_time) <= first;
           };
           cResult[3] = fn;
-          tmp6 = fn;
+          let tmp7 = fn;
         } else {
-          tmp6 = cResult[3];
+          tmp7 = cResult[3];
         }
-        const found = arr.filter(tmp6);
+        const found = arr.filter(tmp7);
         cResult[1] = arr;
         cResult[2] = found;
-        tmp5 = found;
       } else {
-        tmp5 = cResult[2];
+        return cResult[2];
       }
-      return tmp5;
     }
   : () => {
-      const arr = closure_7();
       let date = new Date();
-      return arr.filter((max_expiration_time) => {
+      return closure_7().filter((max_expiration_time) => {
         date = new Date(max_expiration_time.max_expiration_time);
         return date <= date;
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
+
+export const useSafetyHubClassifications = tmp2;
+export const useSafetyHubClassification = tmp3;
+export const useActiveSafetyHubClassifications = tmp4;
+export const useExpiredSafetyHubClassifications = tmp5;
+export const useSafetyHubAppealSignal = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let appealSignal;
-      let tmp4;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
         const fn = function s() {
@@ -419,19 +398,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      return tmpResult.useStateFromStores(tmp4, tmp5);
+      return initialize.useStateFromStores(tmp4, tmp5);
     }
   : () => {
-      let appealSignal;
       const items = [SafetyHubStore];
-      const obj = get_initialized;
-      return obj.useStateFromStores(items, () => appealSignal.getAppealSignal());
+      return initialize.useStateFromStores(items, () => appealSignal.getAppealSignal());
     };
-const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
-
-export const useSafetyHubClassifications = tmp2;
-export const useSafetyHubClassification = tmp3;
-export const useActiveSafetyHubClassifications = tmp4;
-export const useExpiredSafetyHubClassifications = tmp5;
-export const useSafetyHubAppealSignal = tmp6;

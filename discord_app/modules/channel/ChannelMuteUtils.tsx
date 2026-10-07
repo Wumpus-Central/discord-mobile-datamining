@@ -5,13 +5,13 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
 
 export const getMuteSettings = function getMuteSettings(selected_time_window) {
-  let toISOStringResult;
-  const mute_config = { selected_time_window, end_time: toISOStringResult };
-  toISOStringResult = null;
+  const mute_config = { selected_time_window, end_time: null };
+  let toISOStringResult = null;
   if (selected_time_window > 0) {
     const obj2 = _modDef4467();
-    const addResult = obj2.add(selected_time_window, "second");
-    toISOStringResult = addResult.toISOString();
+    toISOStringResult = _modDef4467().add(selected_time_window, "second").toISOString();
+    const addResult = _modDef4467().add(selected_time_window, "second");
   }
+  mute_config.end_time = toISOStringResult;
   return { muted: true, mute_config };
 };

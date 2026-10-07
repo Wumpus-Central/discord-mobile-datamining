@@ -1,28 +1,27 @@
 // discord_app/modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import useStableCallbackDefault from "../../../hooks/useStableCallback.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0 = arg0;
-      const obj = react2;
-      const cResult = obj.c(4);
+      closure_0 = arg0;
+      const cResult = c.c(4);
       const tmp2 = useStableCallbackDefault(arg1);
-      let closure_1 = tmp2;
+      closure_1 = tmp2;
       if (cResult[0] === arg0) {
-        let tmp3;
-        let tmp4;
         if (cResult[1] === tmp2) {
-          tmp3 = cResult[2];
-          tmp4 = cResult[3];
+          let tmp3 = cResult[2];
+          let tmp4 = cResult[3];
         }
-        const effect = react.useEffect(tmp3, tmp4);
+        const effect = noop.useEffect(tmp3, tmp4);
       }
       const fn = function u() {
-        let timeout;
         if (null != timeout) {
           const _Date = Date;
           const diff = tmp - Date.now();
@@ -44,12 +43,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = fn;
     }
   : (arg0, arg1) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const tmp = useStableCallbackDefault(arg1);
-      let closure_1 = tmp;
+      closure_1 = tmp;
       const items = [arg0, tmp];
-      const effect = react.useEffect(() => {
-        let timeout;
+      const effect = noop.useEffect(() => {
         if (null != timeout) {
           const _Date = Date;
           const diff = tmp - Date.now();
@@ -63,6 +61,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
-
-export default tmp2;

@@ -1,92 +1,45 @@
 // discord_app/modules/user_profile/native/BotUserProfileContent.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import ActionSheetConstants from "../../action_sheet/native/ActionSheetConstants.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
-import react_mod from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
-import Constants from "Constants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let c10;
-let c9;
-let metroImportDefault;
-let metroRequire;
-let unpackModuleId;
-let react = react_mod;
-let View = react_native.View;
-({ PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: metroImportDefault } =
-  Constants);
-const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = Fragment);
-const memoResult = react.memo(function BotUserProfileContent(user) {
-  let Button;
-  let ChatIcon;
-  let application;
-  let bannerAnimatedStyle;
-  let bannerImageAnimatedStyle;
-  let blurAnimatedProps;
-  let closure_3;
-  let contentAnimatedStyle;
-  let currentUser;
-  let disableMessage;
-  let displayProfile;
-  let formatToPlainString;
-  let guildId1;
-  let handleCopyUsername;
-  let handlePressPronouns;
-  let id1;
-  let intl;
-  let intl2;
-  let items3;
-  let items4;
-  let items6;
-  let items7;
-  let items9;
-  let obj18;
-  let obj19;
-  let obj20;
-  let obj5;
-  let obj8;
-  let primaryColor;
-  let pronouns;
-  let scrollPosition;
-  let secondaryColor;
-  let showBlur;
-  let showUserProfileActionSheet;
-  let theme;
-  let tmp38Result;
-  let tmpResult9;
-  let zFfSFQ;
+require = fn;
+const View = fn(17).View;
+const Constants = fn(6714);
+({ PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7 } = Constants);
+const ACTION_SHEET_MAX_WIDTH = fn(6653).ACTION_SHEET_MAX_WIDTH;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/BotUserProfileContent.tsx");
+
+export default noop.memo(function BotUserProfileContent(user) {
   user = user.user;
   const channel = user.channel;
   ({ displayProfile, showUserProfileActionSheet } = user);
   let trackUserProfileAction;
-  react = undefined;
+  noop = undefined;
   let guild_id;
-  const tmp = channel;
-  let tmp2 = trackUserProfileAction;
   ({ disableMessage, scrollPosition } = user);
   const tmp3 = channel(trackUserProfileAction[6])();
   const tmp5 = channel(trackUserProfileAction[7])(ACTION_SHEET_MAX_WIDTH);
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = channel(
     trackUserProfileAction[8],
   )({ scrollPosition, bannerHeight: tmp5 }));
-  channel(trackUserProfileAction[8])({ scrollPosition, bannerHeight: tmp5 });
-  const bottom = channel(trackUserProfileAction[9])().bottom;
+  const tmp6 = channel(trackUserProfileAction[8])({ scrollPosition, bannerHeight: tmp5 });
+  trackUserProfileAction = user(trackUserProfileAction[10]).useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj = user(trackUserProfileAction[10]);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj2 = user(trackUserProfileAction[11]);
   let items = [UserStore];
-  const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = user(trackUserProfileAction[11]).useStateFromStores(items, () =>
+    currentUser.getCurrentUser(),
+  );
+  let obj2 = user(trackUserProfileAction[11]);
   let guildId;
-  const useName = channel(trackUserProfileAction[12]).useName;
-  channel(trackUserProfileAction[12]);
   if (displayProfile != null) {
     guildId = displayProfile.guildId;
   }
@@ -94,39 +47,46 @@ const memoResult = react.memo(function BotUserProfileContent(user) {
   if (channel != null) {
     id = channel.id;
   }
-  const name = useName(guildId, id, user);
-  const tmpResult = tmp(tmp2[13]);
-  react = tmpResult.useUserTag(user);
+  const name = channel(trackUserProfileAction[12]).useName(guildId, id, user);
+  const obj3 = channel(trackUserProfileAction[12]);
+  noop = channel(trackUserProfileAction[13]).useUserTag(user);
   if (displayProfile != null) {
-    application = displayProfile.application;
+    const application = displayProfile.application;
   }
   guild_id = undefined;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
   const items1 = [guild_id, user];
-  const memo = react.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != guild_id) {
       if (null != user) {
-        const items = [tmp2.id];
         const obj = {};
+        const items = [tmp2.id];
         obj[tmp] = items;
       }
       return {};
     }
   }, items1);
-  const tmp7Result = user(tmp2[14]);
-  const subscribeGuildMembers = tmp7Result.useSubscribeGuildMembers(memo, "BotUserProfileContent");
-  const tmp16 = tmp(tmp2[15])(displayProfile);
-  const tmp17 = tmp(tmp2[16])(user.id);
-  ({ primaryColor, theme, secondaryColor } = tmp(tmp2[17])({ user, displayProfile }));
-  tmp(tmp2[17])({ user, displayProfile });
-  const tmp7Result3 = user(tmp2[18]);
-  const userProfileColors = tmp7Result3.useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const tmpResult = channel(trackUserProfileAction[13]);
+  const subscribeGuildMembers = user(trackUserProfileAction[14]).useSubscribeGuildMembers(
+    memo,
+    "BotUserProfileContent",
+  );
+  const tmp7Result = user(trackUserProfileAction[14]);
+  const tmp16 = channel(trackUserProfileAction[16])(user.id);
+  const tmp15 = channel(trackUserProfileAction[15])(displayProfile);
+  ({ primaryColor, theme, secondaryColor } = channel(trackUserProfileAction[17])({ user, displayProfile }));
+  const tmp17 = channel(trackUserProfileAction[17])({ user, displayProfile });
+  const userProfileColors = user(trackUserProfileAction[18]).useUserProfileColors({
+    theme,
+    primaryColor,
+    secondaryColor,
+  });
   const containerBackground = userProfileColors.containerBackground;
   if (null != user) {
     if (null != stateFromStores) {
-      let obj3 = {
+      const obj4 = {
         user,
         displayProfile,
         bannerHeight: tmp5,
@@ -135,176 +95,191 @@ const memoResult = react.memo(function BotUserProfileContent(user) {
         blurAnimatedProps,
         showBlur,
       };
-      const items2 = [closure_9(tmp(tmp2[21]), obj3), ,];
-      let obj4 = { style: items3, children: closure_9(tmp(tmp2[23]), obj5) };
-      items3 = [tmp3.bannerButtons, bannerAnimatedStyle];
-      View = tmp(tmp2[22]).View;
-      obj5 = { user, currentUser: stateFromStores, application, displayProfile, channel };
-      items2[1] = closure_9(View, obj4);
-      const obj6 = { style: contentAnimatedStyle, children: items4 };
-      const View2 = tmp(tmp2[22]).View;
-      const obj7 = { user, guildId: guildId1, backgroundColor: tmp20, statusStyle: obj8 };
-      guildId1 = undefined;
-      const OpenableUserProfileAvatar = tmp7(tmp2[24]).OpenableUserProfileAvatar;
+      const items2 = [closure_9(tmp(tmp2[21]), obj4), ,];
+      const obj5 = { style: null, children: null };
+      const items3 = [tmp3.bannerButtons, bannerAnimatedStyle];
+      obj5.style = items3;
+      const obj6 = { user, currentUser: stateFromStores, application, displayProfile, channel };
+      obj5.children = closure_9(tmp(tmp2[23]), obj6);
+      items2[1] = closure_9(tmp(tmp2[22]).View, obj5);
+      const obj7 = { style: contentAnimatedStyle, children: null };
+      const obj8 = { user, guildId: null, backgroundColor: null, statusStyle: null };
+      let guildId1;
       if (displayProfile != null) {
         guildId1 = displayProfile.guildId;
       }
-      obj8 = { backgroundColor: tmp21 };
-      items4 = [closure_9(OpenableUserProfileAvatar, obj7)];
+      obj8.guildId = guildId1;
+      obj8.backgroundColor = tmp19;
+      const obj9 = { backgroundColor: tmp20 };
+      obj8.statusStyle = obj9;
+      const items4 = [closure_9(tmp7(tmp2[24]).OpenableUserProfileAvatar, obj8)];
       const items5 = [, ,];
       ({ profileContentWrapper: arr4[0], profileContent: arr4[1] } = tmp3);
       let num = 0;
-      if (null == tmp17) {
+      if (null == tmp16) {
         num = closure_7;
       }
-      const obj10 = { style: items5, children: items6 };
-      const obj11 = { paddingTop: num, paddingBottom: bottom + closure_6 };
-      items5[2] = obj11;
-      const obj12 = {
-        customStatusActivity: tmp17,
+      const obj11 = { style: null, children: null };
+      const obj12 = { paddingTop: num, paddingBottom: channel(trackUserProfileAction[9])().bottom + closure_6 };
+      items5[2] = obj12;
+      obj11.style = items5;
+      const obj13 = {
+        customStatusActivity: tmp16,
         hasCustomProfileTheme: null != primaryColor,
         onPressTruncatedStatus() {
+          const obj = ActionSheetActionCreatorsDefault;
+          const obj2 = { user, guildId: guild_id, channelId: null };
           let id;
-          const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-          ActionSheetActionCreatorsDefault;
-          const obj = { user, guildId: guild_id, channelId: id };
-          id = undefined;
-          const tmp2 = asyncRequire(10852, dependencyMap.paths);
           if (channel != null) {
             id = channel.id;
           }
-          openLazy(tmp2, "UserProfileCustomStatusActionSheet", obj, "stack");
+          obj2.channelId = id;
+          obj.openLazy(
+            asyncRequireImpl(10852, dependencyMap.paths),
+            "UserProfileCustomStatusActionSheet",
+            obj2,
+            "stack",
+          );
         },
         style: null,
         emojiOnlyStyle: null,
       };
-      ({ customStatusBubble: obj9.style, emojiOnlyCustomStatusBubble: obj9.emojiOnlyStyle } = tmp3);
-      items6 = [closure_9(tmp(tmp2[25]), obj12), ,];
-      const obj13 = { style: tmp3.primaryInfo, children: items7 };
-      const obj14 = {
+      ({ customStatusBubble: obj10.style, emojiOnlyCustomStatusBubble: obj10.emojiOnlyStyle } = tmp3);
+      const items6 = [closure_9(tmp(tmp2[25]), obj13), ,];
+      const obj14 = { style: tmp3.primaryInfo, children: null };
+      const obj15 = {
         user,
         guildId: guild_id,
         displayName: name,
-        pronouns,
-        badges: tmp16,
-        badgeContainerBackground: containerBackground,
-        displayNameAccessibilityHint: intl.string(user(tmp2[30]).t.y5MwJy),
-        onPressDisplayName: handleCopyUsername,
-        onPressUserTag: handleCopyUsername,
-        onPressPronouns: handlePressPronouns,
+        pronouns: null,
+        badges: null,
+        badgeContainerBackground: null,
+        displayNameAccessibilityHint: null,
+        onPressDisplayName: null,
+        onPressUserTag: null,
+        onPressPronouns: null,
         showBadgeToastOnPress: true,
       };
-      pronouns = undefined;
-      const tmpResult6 = tmp(tmp2[29]);
+      let pronouns;
       if (displayProfile != null) {
         pronouns = displayProfile.pronouns;
       }
-      handleCopyUsername = function handleCopyUsername() {
+      function handleCopyUsername() {
         trackUserProfileAction({ action: "COPY_USERNAME" });
-        const obj = ClipboardUtils;
-        obj.copy(closure_3);
-        const obj2 = ToastUtils;
-        const result = obj2.presentUsernameCopied();
-      };
-      handlePressPronouns = function handlePressPronouns() {
+        ClipboardUtils.copy(closure_3);
+        const result = ToastUtils.presentUsernameCopied();
+      }
+      obj15.pronouns = pronouns;
+      obj15.badges = tmp15;
+      obj15.badgeContainerBackground = containerBackground;
+      function handlePressPronouns() {
         trackUserProfileAction({ action: "PRESS_PRONOUNS" });
-        const obj = ToastUtils;
-        obj.presentUserPronouns();
-      };
-      intl = tmp7(tmp2[30]).intl;
-      items7 = [closure_9(tmpResult6, obj14), ,];
-      const obj15 = { user };
-      items7[1] = closure_9(tmp(tmp2[31]), obj15);
-      const obj16 = {
+        ToastUtils.presentUserPronouns();
+      }
+      const intl = tmp7(tmp2[30]).intl;
+      obj15.displayNameAccessibilityHint = intl.string(tmp7(tmp2[30]).t.y5MwJy);
+      obj15.onPressDisplayName = handleCopyUsername;
+      obj15.onPressUserTag = handleCopyUsername;
+      obj15.onPressPronouns = handlePressPronouns;
+      const items7 = [closure_9(tmp(tmp2[29]), obj15), ,];
+      const obj16 = { user };
+      items7[1] = closure_9(tmp(tmp2[31]), obj16);
+      const obj17 = {
         style: tmp3.primaryButtons,
         maxWidth: ACTION_SHEET_MAX_WIDTH,
-        primaryButton: tmp38Result,
-        secondaryButton: closure_9(Button, obj18),
+        primaryButton: null,
+        secondaryButton: null,
       };
-      tmp38Result = undefined;
-      const tmpResult7 = tmp(tmp2[32]);
+      let tmp37Result;
+      const tmpResult6 = tmp(tmp2[29]);
       if (null != application) {
-        const tmp7Result4 = user(tmp2[33]);
         if (tmp7Result4.canInstallApplication(application)) {
-          const obj17 = { application, botUserId: user.id, channel, guildId: guild_id };
+          const obj18 = { application, botUserId: user.id, channel, guildId: guild_id };
+          tmp37Result = closure_9(tmp(tmp2[34]), obj18);
           const tmpResult8 = tmp(tmp2[34]);
-          tmp38Result = closure_9(tmpResult8, obj17);
         }
+        tmp7Result4 = tmp7(tmp2[33]);
       }
-      obj18 = {
-        icon: closure_9(ChatIcon, obj19),
-        text: intl2.string(user(tmp2[30]).t.zROXEV),
+      obj17.primaryButton = tmp37Result;
+      const obj19 = {
+        icon: null,
+        text: null,
         variant: "secondary",
-        disabled: disableMessage,
+        disabled: null,
         grow: true,
-        accessibilityHint: formatToPlainString(zFfSFQ, obj20),
-        onPress() {
-          trackUserProfileAction({ action: "SEND_MESSAGE" });
-          const obj = ActionSheetActionCreatorsDefault;
-          obj.hideAllActionSheets();
-          const obj2 = ModalActionCreatorsDefault;
-          obj2.popAll();
-          const obj3 = ChannelActionCreatorsDefault;
-          const obj4 = { recipientIds: user.id };
-          obj3.openPrivateChannel(obj4);
-        },
+        accessibilityHint: null,
+        onPress: null,
       };
-      Button = tmp7(tmp2[35]).Button;
-      obj19 = { size: "sm", color: tmp(tmp2[37]).colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-      ChatIcon = tmp7(tmp2[36]).ChatIcon;
-      intl2 = tmp7(tmp2[30]).intl;
+      const obj20 = { size: "sm", color: tmp(tmp2[37]).colors.CONTROL_SECONDARY_TEXT_DEFAULT };
+      obj19.icon = closure_9(tmp7(tmp2[36]).ChatIcon, obj20);
+      const intl2 = tmp7(tmp2[30]).intl;
+      obj19.text = intl2.string(tmp7(tmp2[30]).t.zROXEV);
+      obj19.disabled = disableMessage;
       const intl3 = tmp7(tmp2[30]).intl;
-      formatToPlainString = intl3.formatToPlainString;
-      obj20 = { name: tmpResult9.getName(user) };
-      zFfSFQ = tmp7(tmp2[30]).t.zFfSFQ;
-      tmpResult9 = tmp(tmp2[13]);
-      items7[2] = closure_9(tmpResult7, obj16);
-      items6[1] = closure_10(guild_id, obj13);
-      let tmp36Result2 = null;
+      const obj21 = { name: null };
+      const tmpResult7 = tmp(tmp2[32]);
+      obj21.name = tmp(tmp2[13]).getName(user);
+      obj19.accessibilityHint = intl3.formatToPlainString(tmp7(tmp2[30]).t.zFfSFQ, obj21);
+      obj19.onPress = function onPress() {
+        trackUserProfileAction({ action: "SEND_MESSAGE" });
+        ActionSheetActionCreatorsDefault.hideAllActionSheets();
+        ModalActionCreatorsDefault.popAll();
+        ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
+      };
+      obj17.secondaryButton = closure_9(tmp7(tmp2[35]).Button, obj19);
+      items7[2] = closure_9(tmpResult7, obj17);
+      obj14.children = items7;
+      items6[1] = closure_10(guild_id, obj14);
+      let tmp35Result2 = null;
       if (null != stateFromStores) {
         const items8 = [tmp3.card];
-        const obj21 = { backgroundColor: containerBackground };
-        items8[1] = obj21;
-        const obj22 = { style: tmp3.cards, children: items9 };
-        const obj23 = { user, currentUser: stateFromStores, guildId: guild_id, style: items8 };
-        items9 = [closure_9(tmp(tmp2[40]), obj23), , ,];
-        const obj24 = { userId: user.id, displayProfile, channel, style: items8 };
-        items9[1] = closure_9(tmp(tmp2[41]), obj24);
-        let tmp36Result = null != guild_id;
-        if (tmp36Result) {
-          const obj25 = { userId: user.id, guildId: guild_id, style: items8 };
-          const items10 = [closure_9(tmp(tmp2[42]), obj25)];
-          const obj26 = {
+        const obj22 = { backgroundColor: containerBackground };
+        items8[1] = obj22;
+        const obj23 = { style: tmp3.cards, children: null };
+        const obj24 = { user, currentUser: stateFromStores, guildId: guild_id, style: items8 };
+        const items9 = [closure_9(tmp(tmp2[40]), obj24), , ,];
+        const obj25 = { userId: user.id, displayProfile, channel, style: items8 };
+        items9[1] = closure_9(tmp(tmp2[41]), obj25);
+        let tmp35Result = null != guild_id;
+        if (tmp35Result) {
+          const obj26 = { userId: user.id, guildId: guild_id, style: items8 };
+          const items10 = [closure_9(tmp(tmp2[42]), obj26)];
+          const obj27 = {
             user,
             currentUser: stateFromStores,
             guildId: guild_id,
-            channelId: id1,
-            showUserProfile: showUserProfileActionSheet,
-            style: items8,
+            channelId: null,
+            showUserProfile: null,
+            style: null,
           };
-          id1 = undefined;
-          const tmpResult10 = tmp(tmp2[43]);
+          let id1;
           if (channel != null) {
             id1 = channel.id;
           }
-          const obj27 = { children: items10 };
-          items10[1] = closure_9(tmpResult10, obj26);
-          tmp36Result = closure_10(closure_11, obj27);
+          const obj28 = { children: null };
+          obj27.channelId = id1;
+          obj27.showUserProfile = showUserProfileActionSheet;
+          obj27.style = items8;
+          items10[1] = closure_9(tmp(tmp2[43]), obj27);
+          obj28.children = items10;
+          tmp35Result = closure_10(closure_11, obj28);
+          const tmpResult10 = tmp(tmp2[43]);
         }
-        items9[2] = tmp36Result;
-        const obj28 = { userId: user.id, onBack: showUserProfileActionSheet };
-        items9[3] = closure_9(tmp(tmp2[44]), obj28);
-        tmp36Result2 = closure_10(tmp23, obj22);
+        items9[2] = tmp35Result;
+        const obj29 = { userId: user.id, onBack: showUserProfileActionSheet };
+        items9[3] = closure_9(tmp(tmp2[44]), obj29);
+        obj23.children = items9;
+        tmp35Result2 = closure_10(tmp22, obj23);
       }
-      const obj29 = { children: items2 };
-      items6[2] = tmp36Result2;
-      items4[1] = closure_10(guild_id, obj10);
-      items2[2] = closure_10(View2, obj6);
-      return closure_10(closure_11, obj29);
+      const obj30 = { children: null };
+      items6[2] = tmp35Result2;
+      obj11.children = items6;
+      items4[1] = closure_10(guild_id, obj11);
+      obj7.children = items4;
+      items2[2] = closure_10(tmp(tmp2[22]).View, obj7);
+      obj30.children = items2;
+      return closure_10(closure_11, obj30);
     }
   }
   return null;
 });
-let result = size.fileFinishedImporting("modules/user_profile/native/BotUserProfileContent.tsx");
-
-export default memoResult;

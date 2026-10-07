@@ -1,37 +1,11 @@
 // discord_app/modules/errors/av_errors/AVError.tsx
-import _mod2 from "../../../../_runtime/metro/00002__.js";
 import LoggerDefault from "../../debug/Logger.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
-let obj10;
-let obj11;
-let obj12;
-let obj13;
-let obj14;
-let obj15;
-let obj16;
-let obj17;
-let obj18;
-let obj19;
-let obj20;
-let obj21;
-let obj22;
-let obj23;
-let obj24;
-let obj25;
-let obj26;
-let obj27;
-let obj28;
-let obj5;
-let obj6;
-let obj7;
-let obj8;
-let obj9;
 let closure_2 = ["type"];
-const tmp2 = new LoggerDefault("AVError");
-const logger = tmp2;
-let obj = {
+const logger = new LoggerDefault("AVError");
+const obj = {
   STREAM_FAILED_TO_START: "stream-failed-to-start",
   NO_INPUT_DEVICES: "no-input-devices",
   NO_AUDIO_INPUT_DETECTED: "no-audio-input-detected",
@@ -57,7 +31,7 @@ let obj = {
   SCREENSHARE_OS_ERROR: "screenshare-os-error",
   VIDEO_BACKGROUND_UNAVAILABLE: "video-background-unavailable",
 };
-let obj2 = { Audio: "audio", Video: "video", Devices: "devices", Debug: "debug" };
+const obj2 = { Audio: "audio", Video: "video", Devices: "devices", Debug: "debug" };
 const obj3 = { Critical: "critical", Warning: "warning", Info: "info" };
 const obj4 = {
   [obj.STREAM_SOUNDSHARE_FAILED]: obj5,
@@ -85,7 +59,10 @@ const obj4 = {
   [obj.SCREENSHARE_OS_ERROR]: obj27,
   [obj.DEBUG_LOG_UPLOAD_FAILED]: obj28,
 };
-let closure_1;
+let closure_129_1;
+const values = Object.values(obj4);
+const mapped = values.map((errorCode) => errorCode.errorCode);
+let closure_129_0 = mapped;
 obj10 = { errorCode: 2003, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
 obj11 = { errorCode: 2004, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
 obj12 = { errorCode: 2005, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: true };
@@ -110,33 +87,25 @@ obj6 = { errorCode: 1002, severity: obj3.Warning, category: obj2.Audio, isErrorO
 obj7 = { errorCode: 1003, severity: obj3.Warning, category: obj2.Audio, isErrorOutbound: true };
 obj8 = { errorCode: 2001, severity: obj3.Critical, category: obj2.Video, isErrorOutbound: true };
 obj9 = { errorCode: 2002, severity: obj3.Warning, category: obj2.Video, isErrorOutbound: false };
-const values = Object.values(obj4);
-const mapped = values.map((errorCode) => errorCode.errorCode);
-const set = new Set(mapped);
+const tmp2 = new LoggerDefault("AVError");
 if (mapped.length !== set.size) {
-  closure_1 = mapped.filter((item, index) => mapped.indexOf(item) !== index);
+  closure_129_1 = mapped.filter((item, index) => importDefault.indexOf(item) !== index);
   const _Object = Object;
   const entries = Object.entries(obj4);
   const found = entries.filter((item) => {
-    let tmp;
     [, tmp] = item;
-    return closure_1.includes(tmp.errorCode);
+    return dependencyMap.includes(tmp.errorCode);
   });
   const mapped1 = found.map((item) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = item;
     return "" + tmp + ": " + tmp2.errorCode;
   });
   const _Error = Error;
   const _HermesInternal = HermesInternal;
-  const self = this;
-  const self2 = this;
   const error = new Error("Duplicate AV error codes found:\n" + mapped1.join("\n"));
   throw error;
 } else {
-  const _module = _mod2;
-  const result = _module.fileFinishedImporting("modules/errors/av_errors/AVError.tsx");
+  const result = fn(2).fileFinishedImporting("modules/errors/av_errors/AVError.tsx");
   exports.AVError = obj;
   exports.AVErrorCategory = obj2;
   exports.AVErrorSeverity = obj3;
@@ -166,18 +135,17 @@ if (mapped.length !== set.size) {
   exports.reportAVError = function reportAVError(context) {
     const type = context.type;
     logger.error("AV error reported: " + type + " " + JSON.stringify(_objectWithoutProperties(context, closure_2)));
-    const obj = DispatcherDefault;
-    const obj2 = {
+    DispatcherDefault.dispatch({
       type: "REPORT_AV_ERROR",
       error: type,
       errorCode: obj4[type].errorCode,
       severity: obj4[type].severity,
       category: obj4[type].category,
       context,
-    };
-    obj.dispatch(obj2);
+    });
   };
   exports.getErrorInfo = function getErrorInfo(STREAM_FAILED_TO_START) {
     return obj4[STREAM_FAILED_TO_START];
   };
 }
+set = new Set(mapped);

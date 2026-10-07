@@ -2,79 +2,74 @@
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
+const require = fn;
+const ReactCompilerGating = fn(558);
 function getDeafStates(channel) {
-  let flag;
-  let tmp = VoiceStateStore;
+  let obj = VoiceStateStore;
   if (VoiceStateStore === undefined) {
-    tmp = VoiceStateStore;
+    obj = VoiceStateStore;
   }
-  let obj = MediaEngineStore;
+  let obj2 = MediaEngineStore;
   if (MediaEngineStore === undefined) {
-    obj = MediaEngineStore;
+    obj2 = MediaEngineStore;
   }
-  let obj2 = AuthenticationStore;
+  let obj3 = AuthenticationStore;
   if (AuthenticationStore === undefined) {
-    obj2 = AuthenticationStore;
+    obj3 = AuthenticationStore;
   }
   let voiceState = null;
   if (null != channel) {
-    const getVoiceState = tmp.getVoiceState;
     const guildId = channel.getGuildId();
-    voiceState = getVoiceState(guildId, obj2.getId());
+    voiceState = obj.getVoiceState(guildId, obj3.getId());
   }
-  const obj3 = { selfDeaf: obj.isSelfDeaf(), deaf: flag };
-  flag = undefined;
+  const obj4 = { selfDeaf: obj2.isSelfDeaf(), deaf: null };
+  let flag;
   if (voiceState != null) {
     flag = voiceState.deaf;
   }
   if (flag == null) {
     flag = false;
   }
-  return obj3;
+  obj4.deaf = flag;
+  return obj4;
 }
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      let tmp8;
-      let tmp9;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(4);
-      const tmp = _require;
+      const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
         const fn = function o() {
-          let flag;
           if (VoiceStateStore !== undefined) {
             if (MediaEngineStore !== undefined) {
               if (AuthenticationStore !== undefined) {
                 let voiceState = null;
                 if (null != guildId) {
-                  const getVoiceState = VoiceStateStore.getVoiceState;
                   guildId = guildId.getGuildId();
-                  voiceState = getVoiceState(guildId, AuthenticationStore.getId());
+                  voiceState = VoiceStateStore.getVoiceState(guildId, AuthenticationStore.getId());
                 }
-                const obj4 = { selfDeaf: MediaEngineStore.isSelfDeaf(), deaf: flag };
-                flag = undefined;
+                const obj5 = { selfDeaf: MediaEngineStore.isSelfDeaf(), deaf: null };
+                let flag;
                 if (voiceState != null) {
                   flag = voiceState.deaf;
                 }
                 if (flag == null) {
                   flag = false;
                 }
-                return obj4;
+                obj5.deaf = flag;
+                return obj5;
               }
             }
           }
@@ -83,42 +78,40 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp9 = items1;
-        tmp8 = fn;
+        let tmp9 = items1;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      return tmpResult.useStateFromStoresObject(first, tmp8, tmp9);
+      const obj = require("c");
+      return require("initialize").useStateFromStoresObject(first, tmp8, tmp9);
     }
   : (arg0) => {
       _require = arg0;
       const items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
       const items1 = [arg0];
-      const obj = require("get initialized");
-      return obj.useStateFromStoresObject(
+      return require("initialize").useStateFromStoresObject(
         items,
         () => {
-          let flag;
           if (VoiceStateStore !== undefined) {
             if (MediaEngineStore !== undefined) {
               if (AuthenticationStore !== undefined) {
                 let voiceState = null;
                 if (null != guildId) {
-                  const getVoiceState = VoiceStateStore.getVoiceState;
                   guildId = guildId.getGuildId();
-                  voiceState = getVoiceState(guildId, AuthenticationStore.getId());
+                  voiceState = VoiceStateStore.getVoiceState(guildId, AuthenticationStore.getId());
                 }
-                const obj4 = { selfDeaf: MediaEngineStore.isSelfDeaf(), deaf: flag };
-                flag = undefined;
+                const obj5 = { selfDeaf: MediaEngineStore.isSelfDeaf(), deaf: null };
+                let flag;
                 if (voiceState != null) {
                   flag = voiceState.deaf;
                 }
                 if (flag == null) {
                   flag = false;
                 }
-                return obj4;
+                obj5.deaf = flag;
+                return obj5;
               }
             }
           }
@@ -126,7 +119,4 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
-
-export default tmp2;
 export { getDeafStates };

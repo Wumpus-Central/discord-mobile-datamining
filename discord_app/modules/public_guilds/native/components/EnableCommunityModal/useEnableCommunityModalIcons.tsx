@@ -1,32 +1,27 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx
-import Constants from "../../../../../../discord_common/js/shared/Constants.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const ThemeTypes = Constants.ThemeTypes;
+const require = fn;
+const ThemeTypes = fn(1096).ThemeTypes;
 class EnableCommunityModalIcons {
-  constructor(theme) {
-    const merged = Object.assign({ theme: null });
+  constructor(arg0) {
+    merged = Object.assign({ theme: null });
     merged[0] = ThemeTypes.LIGHT;
-    merged.theme = theme;
+    merged.theme = global;
     return merged;
   }
 }
 const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
-    let tmpResult;
-    const obj = require("shared");
     if (obj.isThemeDark(this.theme)) {
-      tmpResult = require("AssetRegistry");
+      let tmpResult = require("../../../../../../_runtime/metro/17887__.js");
     } else {
-      tmpResult = require("AssetRegistry");
+      tmpResult = require("../../../../../../_runtime/metro/17888__.js");
     }
     return tmpResult;
   },
@@ -34,19 +29,16 @@ Object.defineProperty(prototype, "safetyCheck", {
 });
 Object.defineProperty(prototype, "channelSetup", {
   get: function channelSetup() {
-    const obj = require("ChannelSetup");
-    return obj.getChannelSetupSource(this.theme);
+    return require("ChannelSetup").getChannelSetupSource(this.theme);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
-    let tmpResult;
-    const obj = require("shared");
     if (obj.isThemeDark(this.theme)) {
-      tmpResult = require("AssetRegistry");
+      let tmpResult = require("../../../../../../_runtime/metro/17893__.js");
     } else {
-      tmpResult = require("AssetRegistry");
+      tmpResult = require("../../../../../../_runtime/metro/17894__.js");
     }
     return tmpResult;
   },
@@ -54,16 +46,19 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require("AssetRegistry");
+    return require("../../../../../../_runtime/metro/04815__.js");
   },
   set: undefined,
 });
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_0;
-      let tmp3;
-      const obj = require("react");
-      const cResult = obj.c(2);
+      const cResult = require("c").c(2);
       const tmp2 = useThemeDefault();
       _require = tmp2;
       if (cResult[0] !== tmp2) {
@@ -79,16 +74,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = tmp2;
         cResult[1] = fn;
-        tmp3 = fn;
+        let tmp3 = fn;
       } else {
         tmp3 = cResult[1];
       }
-      return _slicedToArray(react.useState(tmp3), 1)[0];
+      return _slicedToArray(noop.useState(tmp3), 1)[0];
     }
   : () => {
-      let closure_0 = useThemeDefault();
+      closure_0 = useThemeDefault();
       return _slicedToArray(
-        react.useState(() => {
+        noop.useState(() => {
           if (typeof EnableCommunityModalIcons === "function") {
             const merged = Object.assign({ theme: null });
             merged[0] = ThemeTypes.LIGHT;
@@ -101,8 +96,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0];
     };
-const result = size.fileFinishedImporting(
-  "modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx",
-);
-
-export default tmp2;

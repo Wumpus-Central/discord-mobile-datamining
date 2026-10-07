@@ -1,12 +1,10 @@
 // discord_app/modules/directory_channels/GuildDirectoryConstants.tsx
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import intl72 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
 ({ ChannelTypes: c3, Permissions: closure_4 } = Constants);
 const HubGuildTemplateId = {
   CREATE: "CREATE",
@@ -46,440 +44,431 @@ export { HubGuildTemplateId };
 export const DirectoryEntryCategories = obj2;
 export const HQ_CHANNEL_ID = "883060064561299456";
 export const getHubCategories = function getHubCategories(arg0) {
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let intl5;
-  let intl6;
-  let intl7;
-  let intl8;
-  let items1;
   if (arg0 === c7) {
-    const obj = { id: "club", value: obj2.SCHOOL_CLUB, label: intl.string(intl72.t["Z+MPN/"]) };
-    intl = intl72.intl;
+    const obj = { id: "club", value: obj2.SCHOOL_CLUB, label: null };
+    const intl = util.intl;
+    obj.label = intl.string(util.t["Z+MPN/"]);
     const items = [obj, , ,];
-    obj2 = { id: "class", value: obj2.CLASS, label: intl2.string(intl72.t.dV9uBr) };
-    intl2 = intl72.intl;
+    obj2 = { id: "class", value: null, label: null };
+    obj2.value = obj2.CLASS;
+    const intl2 = util.intl;
+    obj2.label = intl2.string(util.t.dV9uBr);
     items[1] = obj2;
-    const obj3 = { id: "study", value: obj2.STUDY_SOCIAL, label: intl3.string(intl72.t.xoHQcn) };
-    intl3 = intl72.intl;
+    const obj3 = { id: "study", value: obj2.STUDY_SOCIAL, label: null };
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t.xoHQcn);
     items[2] = obj3;
-    const obj4 = { id: "misc", value: obj2.MISC, label: intl4.string(intl72.t.Ao41ri) };
-    intl4 = intl72.intl;
+    const obj4 = { id: "misc", value: obj2.MISC, label: null };
+    const intl4 = util.intl;
+    obj4.label = intl4.string(util.t.Ao41ri);
     items[3] = obj4;
-    items1 = items;
+    let items1 = items;
   } else {
-    const obj5 = { id: "club", value: obj2.SCHOOL_CLUB, label: intl5.string(intl72.t.oNHFUL), idealSize: 100 };
-    intl5 = intl72.intl;
+    const obj5 = { id: "club", value: obj2.SCHOOL_CLUB, label: null, idealSize: 100 };
+    const intl5 = util.intl;
+    obj5.label = intl5.string(util.t.oNHFUL);
     items1 = [obj5, , ,];
-    const obj6 = { id: "class", value: obj2.CLASS, label: intl6.string(intl72.t.V1i8nS) };
-    intl6 = intl72.intl;
+    const obj6 = { id: "class", value: obj2.CLASS, label: null };
+    const intl6 = util.intl;
+    obj6.label = intl6.string(util.t.V1i8nS);
     items1[1] = obj6;
-    const obj7 = { id: "study", value: obj2.STUDY_SOCIAL, label: intl7.string(intl72.t.Z2ygQt), idealSize: 50 };
-    intl7 = intl72.intl;
+    const obj7 = { id: "study", value: obj2.STUDY_SOCIAL, label: null, idealSize: 50 };
+    const intl7 = util.intl;
+    obj7.label = intl7.string(util.t.Z2ygQt);
     items1[2] = obj7;
-    const obj8 = { id: "misc", value: obj2.MISC, label: intl8.string(intl72.t["0Bg9La"]) };
-    intl8 = intl72.intl;
+    const obj8 = { id: "misc", value: obj2.MISC, label: null };
+    const intl8 = util.intl;
+    obj8.label = intl8.string(util.t["0Bg9La"]);
     items1[3] = obj8;
   }
   return items1;
 };
 export const getHubGuildTemplatesMap = function getHubGuildTemplatesMap() {
-  let intl;
-  let intl10;
-  let intl11;
-  let intl12;
-  let intl13;
-  let intl14;
-  let intl15;
-  let intl16;
-  let intl17;
-  let intl18;
-  let intl19;
-  let intl2;
-  let intl20;
-  let intl21;
-  let intl22;
-  let intl23;
-  let intl24;
-  let intl25;
-  let intl26;
-  let intl27;
-  let intl28;
-  let intl29;
-  let intl3;
-  let intl30;
-  let intl31;
-  let intl32;
-  let intl33;
-  let intl34;
-  let intl35;
-  let intl36;
-  let intl37;
-  let intl38;
-  let intl39;
-  let intl4;
-  let intl40;
-  let intl41;
-  let intl42;
-  let intl43;
-  let intl44;
-  let intl45;
-  let intl46;
-  let intl47;
-  let intl48;
-  let intl49;
-  let intl5;
-  let intl50;
-  let intl51;
-  let intl52;
-  let intl53;
-  let intl54;
-  let intl55;
-  let intl56;
-  let intl57;
-  let intl58;
-  let intl59;
-  let intl6;
-  let intl60;
-  let intl61;
-  let intl62;
-  let intl63;
-  let intl64;
-  let intl65;
-  let intl66;
-  let intl67;
-  let intl68;
-  let intl69;
-  let intl7;
-  let intl70;
-  let intl71;
-  let intl8;
-  let intl9;
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let items5;
-  let items6;
-  let obj18;
   const obj = {};
-  const CREATE = obj.CREATE;
-  obj2 = {
-    id: obj.CREATE,
-    code: "2TffvPucqHkN",
-    label: intl.string(intl72.t["H3+6BK"]),
-    channels: [],
-    system_channel_id: null,
-  };
-  intl = intl72.intl;
-  obj[CREATE] = obj2;
-  const HUB_SCHOOL_CLUB = obj.HUB_SCHOOL_CLUB;
+  obj2 = { id: obj.CREATE, code: "2TffvPucqHkN", label: null, channels: null, system_channel_id: null };
+  const intl = util.intl;
+  obj2.label = intl.string(util.t["H3+6BK"]);
+  obj2.channels = [];
+  obj[obj.CREATE] = obj2;
   const obj3 = {
     id: obj.HUB_SCHOOL_CLUB,
     code: "UMUbvRpRZhS6",
-    label: intl2.string(intl72.t.mmFA51),
-    channels: items,
-    roles: items1,
+    label: null,
+    channels: null,
+    roles: null,
     system_channel_id: "12",
   };
-  intl2 = intl72.intl;
-  const obj4 = { id: "00", parent_id: null, name: intl3.string(intl72.t["VCAA/X"]), type: constants.GUILD_CATEGORY };
-  intl3 = intl72.intl;
-  items = [obj4, , , , , , , , , , ,];
-  const obj5 = { id: "01", parent_id: "00", name: intl4.string(intl72.t.GHQoEd), type: constants.GUILD_TEXT };
-  intl4 = intl72.intl;
+  const intl2 = util.intl;
+  obj3.label = intl2.string(util.t.mmFA51);
+  const obj4 = { id: "00", parent_id: null, name: null, type: null };
+  const intl3 = util.intl;
+  obj4.name = intl3.string(util.t["VCAA/X"]);
+  obj4.type = constants.GUILD_CATEGORY;
+  const items = [obj4, , , , , , , , , , ,];
+  const obj5 = { id: "01", parent_id: "00", name: null, type: null };
+  const intl4 = util.intl;
+  obj5.name = intl4.string(util.t.GHQoEd);
+  obj5.type = constants.GUILD_TEXT;
   items[1] = obj5;
-  const obj6 = { id: "02", parent_id: "00", name: intl5.string(intl72.t.nSsoSF), type: constants.GUILD_TEXT };
-  intl5 = intl72.intl;
+  const obj6 = { id: "02", parent_id: "00", name: null, type: null };
+  const intl5 = util.intl;
+  obj6.name = intl5.string(util.t.nSsoSF);
+  obj6.type = constants.GUILD_TEXT;
   items[2] = obj6;
-  const obj7 = { id: "03", parent_id: "00", name: intl6.string(intl72.t.yZCzMa), type: constants.GUILD_TEXT };
-  intl6 = intl72.intl;
+  const obj7 = { id: "03", parent_id: "00", name: null, type: null };
+  const intl6 = util.intl;
+  obj7.name = intl6.string(util.t.yZCzMa);
+  obj7.type = constants.GUILD_TEXT;
   items[3] = obj7;
-  const obj8 = { id: "10", parent_id: null, name: intl7.string(intl72.t.mobYpC), type: constants.GUILD_CATEGORY };
-  intl7 = intl72.intl;
+  const obj8 = { id: "10", parent_id: null, name: null, type: null };
+  const intl7 = util.intl;
+  obj8.name = intl7.string(util.t.mobYpC);
+  obj8.type = constants.GUILD_CATEGORY;
   items[4] = obj8;
-  const obj9 = { id: "11", parent_id: "10", name: intl8.string(intl72.t.pIOigB), type: constants.GUILD_TEXT };
-  intl8 = intl72.intl;
+  const obj9 = { id: "11", parent_id: "10", name: null, type: null };
+  const intl8 = util.intl;
+  obj9.name = intl8.string(util.t.pIOigB);
+  obj9.type = constants.GUILD_TEXT;
   items[5] = obj9;
-  const obj10 = { id: "12", parent_id: "10", name: intl9.string(intl72.t.ao2wxq), type: constants.GUILD_TEXT };
-  intl9 = intl72.intl;
+  const obj10 = { id: "12", parent_id: "10", name: null, type: null };
+  const intl9 = util.intl;
+  obj10.name = intl9.string(util.t.ao2wxq);
+  obj10.type = constants.GUILD_TEXT;
   items[6] = obj10;
-  const obj11 = { id: "13", parent_id: "10", name: intl10.string(intl72.t.AIszv8), type: constants.GUILD_TEXT };
-  intl10 = intl72.intl;
+  const obj11 = { id: "13", parent_id: "10", name: null, type: null };
+  const intl10 = util.intl;
+  obj11.name = intl10.string(util.t.AIszv8);
+  obj11.type = constants.GUILD_TEXT;
   items[7] = obj11;
-  const obj12 = { id: "20", parent_id: null, name: intl11.string(intl72.t.vcKDMv), type: constants.GUILD_CATEGORY };
-  intl11 = intl72.intl;
+  const obj12 = { id: "20", parent_id: null, name: null, type: null };
+  const intl11 = util.intl;
+  obj12.name = intl11.string(util.t.vcKDMv);
+  obj12.type = constants.GUILD_CATEGORY;
   items[8] = obj12;
-  const obj13 = { id: "21", parent_id: "20", name: intl12.string(intl72.t.XS6gcJ), type: constants.GUILD_VOICE };
-  intl12 = intl72.intl;
+  const obj13 = { id: "21", parent_id: "20", name: null, type: null };
+  const intl12 = util.intl;
+  obj13.name = intl12.string(util.t.XS6gcJ);
+  obj13.type = constants.GUILD_VOICE;
   items[9] = obj13;
-  const obj14 = { id: "22", parent_id: "20", name: intl13.string(intl72.t.hi1Ykg), type: constants.GUILD_VOICE };
-  intl13 = intl72.intl;
+  const obj14 = { id: "22", parent_id: "20", name: null, type: null };
+  const intl13 = util.intl;
+  obj14.name = intl13.string(util.t.hi1Ykg);
+  obj14.type = constants.GUILD_VOICE;
   items[10] = obj14;
-  const obj15 = { id: "22", parent_id: "20", name: intl14.string(intl72.t.vw8oaS), type: constants.GUILD_VOICE };
-  intl14 = intl72.intl;
+  const obj15 = { id: "22", parent_id: "20", name: null, type: null };
+  const intl14 = util.intl;
+  obj15.name = intl14.string(util.t.vw8oaS);
+  obj15.type = constants.GUILD_VOICE;
   items[11] = obj15;
-  items1 = [{ id: "00", name: "@everyone", permissions: PermissionUtilsAll.DEFAULT }];
+  obj3.channels = items;
+  const items1 = [{ id: "00", name: "@everyone", permissions: PermissionUtilsAll.DEFAULT }];
   const obj17 = {
     id: "01",
     name: "officers (example)",
     mentionable: true,
     hoist: true,
-    permissions: obj18.combine(
-      PermissionUtilsAll.DEFAULT,
-      constants2.MANAGE_ROLES,
-      constants2.MANAGE_CHANNELS,
-      constants2.KICK_MEMBERS,
-      constants2.BAN_MEMBERS,
-      constants2.MANAGE_NICKNAMES,
-      constants2.MANAGE_GUILD_EXPRESSIONS,
-      constants2.MANAGE_MESSAGES,
-      constants2.SEND_TTS_MESSAGES,
-    ),
+    permissions: null,
     color: 3066993,
   };
-  ({ id: "00", name: "@everyone", permissions: PermissionUtilsAll.DEFAULT });
+  const obj16 = { id: "00", name: "@everyone", permissions: PermissionUtilsAll.DEFAULT };
+  obj17.permissions = BigFlagUtilsAll.combine(
+    PermissionUtilsAll.DEFAULT,
+    constants2.MANAGE_ROLES,
+    constants2.MANAGE_CHANNELS,
+    constants2.KICK_MEMBERS,
+    constants2.BAN_MEMBERS,
+    constants2.MANAGE_NICKNAMES,
+    constants2.MANAGE_GUILD_EXPRESSIONS,
+    constants2.MANAGE_MESSAGES,
+    constants2.SEND_TTS_MESSAGES,
+  );
   items1[1] = obj17;
-  obj[HUB_SCHOOL_CLUB] = obj3;
-  obj18 = BigFlagUtilsAll;
-  const HUB_STUDY = obj.HUB_STUDY;
-  const obj19 = {
-    id: obj.HUB_STUDY,
-    code: "2JBhzzca2vfT",
-    label: intl15.string(intl72.t.fYwSi2),
-    channels: items2,
-    system_channel_id: "12",
-  };
-  intl15 = intl72.intl;
-  const obj20 = { id: "00", parent_id: null, name: intl16.string(intl72.t["HY+vdA"]), type: constants.GUILD_CATEGORY };
-  intl16 = intl72.intl;
-  items2 = [obj20, , , , , , , , , ,];
-  const obj21 = { id: "01", parent_id: "00", name: intl17.string(intl72.t["3eM+Lh"]), type: constants.GUILD_TEXT };
-  intl17 = intl72.intl;
+  obj3.roles = items1;
+  obj[obj.HUB_SCHOOL_CLUB] = obj3;
+  const obj19 = { id: obj.HUB_STUDY, code: "2JBhzzca2vfT", label: null, channels: null, system_channel_id: "12" };
+  const intl15 = util.intl;
+  obj19.label = intl15.string(util.t.fYwSi2);
+  const obj20 = { id: "00", parent_id: null, name: null, type: null };
+  const intl16 = util.intl;
+  obj20.name = intl16.string(util.t["HY+vdA"]);
+  obj20.type = constants.GUILD_CATEGORY;
+  const items2 = [obj20, , , , , , , , , ,];
+  const obj21 = { id: "01", parent_id: "00", name: null, type: null };
+  const intl17 = util.intl;
+  obj21.name = intl17.string(util.t["3eM+Lh"]);
+  obj21.type = constants.GUILD_TEXT;
   items2[1] = obj21;
-  const obj22 = { id: "02", parent_id: "00", name: intl18.string(intl72.t.Qi0D7e), type: constants.GUILD_TEXT };
-  intl18 = intl72.intl;
+  const obj22 = { id: "02", parent_id: "00", name: null, type: null };
+  const intl18 = util.intl;
+  obj22.name = intl18.string(util.t.Qi0D7e);
+  obj22.type = constants.GUILD_TEXT;
   items2[2] = obj22;
-  const obj23 = { id: "10", parent_id: null, name: intl19.string(intl72.t.yZIUVx), type: constants.GUILD_CATEGORY };
-  intl19 = intl72.intl;
+  const obj23 = { id: "10", parent_id: null, name: null, type: null };
+  const intl19 = util.intl;
+  obj23.name = intl19.string(util.t.yZIUVx);
+  obj23.type = constants.GUILD_CATEGORY;
   items2[3] = obj23;
-  const obj24 = { id: "11", parent_id: "10", name: intl20.string(intl72.t.pIOigB), type: constants.GUILD_TEXT };
-  intl20 = intl72.intl;
+  const obj24 = { id: "11", parent_id: "10", name: null, type: null };
+  const intl20 = util.intl;
+  obj24.name = intl20.string(util.t.pIOigB);
+  obj24.type = constants.GUILD_TEXT;
   items2[4] = obj24;
-  const obj25 = { id: "12", parent_id: "10", name: intl21.string(intl72.t.ao2wxq), type: constants.GUILD_TEXT };
-  intl21 = intl72.intl;
+  const obj25 = { id: "12", parent_id: "10", name: null, type: null };
+  const intl21 = util.intl;
+  obj25.name = intl21.string(util.t.ao2wxq);
+  obj25.type = constants.GUILD_TEXT;
   items2[5] = obj25;
-  const obj26 = { id: "12", parent_id: "10", name: intl22.string(intl72.t.AIszv8), type: constants.GUILD_TEXT };
-  intl22 = intl72.intl;
+  const obj26 = { id: "12", parent_id: "10", name: null, type: null };
+  const intl22 = util.intl;
+  obj26.name = intl22.string(util.t.AIszv8);
+  obj26.type = constants.GUILD_TEXT;
   items2[6] = obj26;
-  const obj27 = { id: "20", parent_id: null, name: intl23.string(intl72.t.vcKDMv), type: constants.GUILD_CATEGORY };
-  intl23 = intl72.intl;
+  const obj27 = { id: "20", parent_id: null, name: null, type: null };
+  const intl23 = util.intl;
+  obj27.name = intl23.string(util.t.vcKDMv);
+  obj27.type = constants.GUILD_CATEGORY;
   items2[7] = obj27;
-  const obj28 = { id: "21", parent_id: "20", name: intl24.string(intl72.t.XS6gcJ), type: constants.GUILD_VOICE };
-  intl24 = intl72.intl;
+  const obj28 = { id: "21", parent_id: "20", name: null, type: null };
+  const intl24 = util.intl;
+  obj28.name = intl24.string(util.t.XS6gcJ);
+  obj28.type = constants.GUILD_VOICE;
   items2[8] = obj28;
-  const obj29 = {
-    id: "22",
-    parent_id: "20",
-    name: intl25.formatToPlainString(intl72.t.LuNsNf, { number: 1 }),
-    type: constants.GUILD_VOICE,
-  };
-  intl25 = intl72.intl;
+  const obj29 = { id: "22", parent_id: "20", name: null, type: null };
+  const intl25 = util.intl;
+  obj29.name = intl25.formatToPlainString(util.t.LuNsNf, { number: 1 });
+  obj29.type = constants.GUILD_VOICE;
   items2[9] = obj29;
-  const obj30 = {
-    id: "23",
-    parent_id: "20",
-    name: intl26.formatToPlainString(intl72.t.LuNsNf, { number: 2 }),
-    type: constants.GUILD_VOICE,
-  };
-  intl26 = intl72.intl;
+  const obj30 = { id: "23", parent_id: "20", name: null, type: null };
+  const intl26 = util.intl;
+  obj30.name = intl26.formatToPlainString(util.t.LuNsNf, { number: 2 });
+  obj30.type = constants.GUILD_VOICE;
   items2[10] = obj30;
-  obj[HUB_STUDY] = obj19;
-  const HUB_CLASS = obj.HUB_CLASS;
-  const obj31 = {
-    id: obj.HUB_CLASS,
-    code: "r86WWBwTGspb",
-    label: intl27.string(intl72.t.e5gFS3),
-    channels: items3,
-    system_channel_id: "12",
-  };
-  intl27 = intl72.intl;
-  const obj32 = { id: "00", parent_id: null, name: intl28.string(intl72.t["HY+vdA"]), type: constants.GUILD_CATEGORY };
-  intl28 = intl72.intl;
-  items3 = [obj32, , , , , , , , , ,];
-  const obj33 = { id: "01", parent_id: "00", name: intl29.string(intl72.t["710tNh"]), type: constants.GUILD_TEXT };
-  intl29 = intl72.intl;
+  obj19.channels = items2;
+  obj[obj.HUB_STUDY] = obj19;
+  const obj31 = { id: obj.HUB_CLASS, code: "r86WWBwTGspb", label: null, channels: null, system_channel_id: "12" };
+  const intl27 = util.intl;
+  obj31.label = intl27.string(util.t.e5gFS3);
+  const obj32 = { id: "00", parent_id: null, name: null, type: null };
+  const intl28 = util.intl;
+  obj32.name = intl28.string(util.t["HY+vdA"]);
+  obj32.type = constants.GUILD_CATEGORY;
+  const items3 = [obj32, , , , , , , , , ,];
+  const obj33 = { id: "01", parent_id: "00", name: null, type: null };
+  const intl29 = util.intl;
+  obj33.name = intl29.string(util.t["710tNh"]);
+  obj33.type = constants.GUILD_TEXT;
   items3[1] = obj33;
-  const obj34 = { id: "02", parent_id: "00", name: intl30.string(intl72.t.Qi0D7e), type: constants.GUILD_TEXT };
-  intl30 = intl72.intl;
+  const obj34 = { id: "02", parent_id: "00", name: null, type: null };
+  const intl30 = util.intl;
+  obj34.name = intl30.string(util.t.Qi0D7e);
+  obj34.type = constants.GUILD_TEXT;
   items3[2] = obj34;
-  const obj35 = { id: "10", parent_id: null, name: intl31.string(intl72.t.yZIUVx), type: constants.GUILD_CATEGORY };
-  intl31 = intl72.intl;
+  const obj35 = { id: "10", parent_id: null, name: null, type: null };
+  const intl31 = util.intl;
+  obj35.name = intl31.string(util.t.yZIUVx);
+  obj35.type = constants.GUILD_CATEGORY;
   items3[3] = obj35;
-  const obj36 = { id: "11", parent_id: "10", name: intl32.string(intl72.t.pIOigB), type: constants.GUILD_TEXT };
-  intl32 = intl72.intl;
+  const obj36 = { id: "11", parent_id: "10", name: null, type: null };
+  const intl32 = util.intl;
+  obj36.name = intl32.string(util.t.pIOigB);
+  obj36.type = constants.GUILD_TEXT;
   items3[4] = obj36;
-  const obj37 = { id: "12", parent_id: "10", name: intl33.string(intl72.t.ao2wxq), type: constants.GUILD_TEXT };
-  intl33 = intl72.intl;
+  const obj37 = { id: "12", parent_id: "10", name: null, type: null };
+  const intl33 = util.intl;
+  obj37.name = intl33.string(util.t.ao2wxq);
+  obj37.type = constants.GUILD_TEXT;
   items3[5] = obj37;
-  const obj38 = { id: "13", parent_id: "10", name: intl34.string(intl72.t.AIszv8), type: constants.GUILD_TEXT };
-  intl34 = intl72.intl;
+  const obj38 = { id: "13", parent_id: "10", name: null, type: null };
+  const intl34 = util.intl;
+  obj38.name = intl34.string(util.t.AIszv8);
+  obj38.type = constants.GUILD_TEXT;
   items3[6] = obj38;
-  const obj39 = { id: "20", parent_id: null, name: intl35.string(intl72.t.vcKDMv), type: constants.GUILD_CATEGORY };
-  intl35 = intl72.intl;
+  const obj39 = { id: "20", parent_id: null, name: null, type: null };
+  const intl35 = util.intl;
+  obj39.name = intl35.string(util.t.vcKDMv);
+  obj39.type = constants.GUILD_CATEGORY;
   items3[7] = obj39;
-  const obj40 = { id: "21", parent_id: "20", name: intl36.string(intl72.t.XS6gcJ), type: constants.GUILD_VOICE };
-  intl36 = intl72.intl;
+  const obj40 = { id: "21", parent_id: "20", name: null, type: null };
+  const intl36 = util.intl;
+  obj40.name = intl36.string(util.t.XS6gcJ);
+  obj40.type = constants.GUILD_VOICE;
   items3[8] = obj40;
-  const obj41 = {
-    id: "22",
-    parent_id: "20",
-    name: intl37.formatToPlainString(intl72.t.LuNsNf, { number: 1 }),
-    type: constants.GUILD_VOICE,
-  };
-  intl37 = intl72.intl;
+  const obj41 = { id: "22", parent_id: "20", name: null, type: null };
+  const intl37 = util.intl;
+  obj41.name = intl37.formatToPlainString(util.t.LuNsNf, { number: 1 });
+  obj41.type = constants.GUILD_VOICE;
   items3[9] = obj41;
-  const obj42 = {
-    id: "23",
-    parent_id: "20",
-    name: intl38.formatToPlainString(intl72.t.LuNsNf, { number: 2 }),
-    type: constants.GUILD_VOICE,
-  };
-  intl38 = intl72.intl;
+  const obj42 = { id: "23", parent_id: "20", name: null, type: null };
+  const intl38 = util.intl;
+  obj42.name = intl38.formatToPlainString(util.t.LuNsNf, { number: 2 });
+  obj42.type = constants.GUILD_VOICE;
   items3[10] = obj42;
-  obj[HUB_CLASS] = obj31;
-  const HUB_SOCIAL = obj.HUB_SOCIAL;
-  const obj43 = {
-    id: obj.HUB_SOCIAL,
-    code: "AvvtXE3mfbCR",
-    label: intl39.string(intl72.t.oOj7It),
-    channels: items4,
-    system_channel_id: "02",
-  };
-  intl39 = intl72.intl;
-  const obj44 = { id: "00", parent_id: null, name: intl40.string(intl72.t.yZIUVx), type: constants.GUILD_CATEGORY };
-  intl40 = intl72.intl;
-  items4 = [obj44, , , , , , , ,];
-  const obj45 = { id: "01", parent_id: "00", name: intl41.string(intl72.t.pIOigB), type: constants.GUILD_TEXT };
-  intl41 = intl72.intl;
+  obj31.channels = items3;
+  obj[obj.HUB_CLASS] = obj31;
+  const obj43 = { id: obj.HUB_SOCIAL, code: "AvvtXE3mfbCR", label: null, channels: null, system_channel_id: "02" };
+  const intl39 = util.intl;
+  obj43.label = intl39.string(util.t.oOj7It);
+  const obj44 = { id: "00", parent_id: null, name: null, type: null };
+  const intl40 = util.intl;
+  obj44.name = intl40.string(util.t.yZIUVx);
+  obj44.type = constants.GUILD_CATEGORY;
+  const items4 = [obj44, , , , , , , ,];
+  const obj45 = { id: "01", parent_id: "00", name: null, type: null };
+  const intl41 = util.intl;
+  obj45.name = intl41.string(util.t.pIOigB);
+  obj45.type = constants.GUILD_TEXT;
   items4[1] = obj45;
-  const obj46 = { id: "02", parent_id: "00", name: intl42.string(intl72.t.ao2wxq), type: constants.GUILD_TEXT };
-  intl42 = intl72.intl;
+  const obj46 = { id: "02", parent_id: "00", name: null, type: null };
+  const intl42 = util.intl;
+  obj46.name = intl42.string(util.t.ao2wxq);
+  obj46.type = constants.GUILD_TEXT;
   items4[2] = obj46;
-  const obj47 = { id: "03", parent_id: "00", name: intl43.string(intl72.t.AIszv8), type: constants.GUILD_TEXT };
-  intl43 = intl72.intl;
+  const obj47 = { id: "03", parent_id: "00", name: null, type: null };
+  const intl43 = util.intl;
+  obj47.name = intl43.string(util.t.AIszv8);
+  obj47.type = constants.GUILD_TEXT;
   items4[3] = obj47;
-  const obj48 = { id: "04", parent_id: "00", name: intl44.string(intl72.t.d4F8gP), type: constants.GUILD_TEXT };
-  intl44 = intl72.intl;
+  const obj48 = { id: "04", parent_id: "00", name: null, type: null };
+  const intl44 = util.intl;
+  obj48.name = intl44.string(util.t.d4F8gP);
+  obj48.type = constants.GUILD_TEXT;
   items4[4] = obj48;
-  const obj49 = { id: "10", parent_id: null, name: intl45.string(intl72.t.vcKDMv), type: constants.GUILD_CATEGORY };
-  intl45 = intl72.intl;
+  const obj49 = { id: "10", parent_id: null, name: null, type: null };
+  const intl45 = util.intl;
+  obj49.name = intl45.string(util.t.vcKDMv);
+  obj49.type = constants.GUILD_CATEGORY;
   items4[5] = obj49;
-  const obj50 = { id: "11", parent_id: "10", name: intl46.string(intl72.t.CLWKNs), type: constants.GUILD_VOICE };
-  intl46 = intl72.intl;
+  const obj50 = { id: "11", parent_id: "10", name: null, type: null };
+  const intl46 = util.intl;
+  obj50.name = intl46.string(util.t.CLWKNs);
+  obj50.type = constants.GUILD_VOICE;
   items4[6] = obj50;
-  const obj51 = { id: "12", parent_id: "10", name: intl47.string(intl72.t.g3qPRn), type: constants.GUILD_VOICE };
-  intl47 = intl72.intl;
+  const obj51 = { id: "12", parent_id: "10", name: null, type: null };
+  const intl47 = util.intl;
+  obj51.name = intl47.string(util.t.g3qPRn);
+  obj51.type = constants.GUILD_VOICE;
   items4[7] = obj51;
-  const obj52 = { id: "13", parent_id: "10", name: intl48.string(intl72.t["yQZpe/"]), type: constants.GUILD_VOICE };
-  intl48 = intl72.intl;
+  const obj52 = { id: "13", parent_id: "10", name: null, type: null };
+  const intl48 = util.intl;
+  obj52.name = intl48.string(util.t["yQZpe/"]);
+  obj52.type = constants.GUILD_VOICE;
   items4[8] = obj52;
-  obj[HUB_SOCIAL] = obj43;
-  const HUB_MAJOR = obj.HUB_MAJOR;
-  const obj53 = {
-    id: obj.HUB_MAJOR,
-    code: "FhmfDR6Arvsc",
-    label: intl49.string(intl72.t["9kly4U"]),
-    channels: items5,
-    system_channel_id: "12",
-  };
-  intl49 = intl72.intl;
-  const obj54 = { id: "00", parent_id: null, name: intl50.string(intl72.t["HY+vdA"]), type: constants.GUILD_CATEGORY };
-  intl50 = intl72.intl;
-  items5 = [obj54, , , , , , , , , ,];
-  const obj55 = { id: "01", parent_id: "00", name: intl51.string(intl72.t.yZCzMa), type: constants.GUILD_TEXT };
-  intl51 = intl72.intl;
+  obj43.channels = items4;
+  obj[obj.HUB_SOCIAL] = obj43;
+  const obj53 = { id: obj.HUB_MAJOR, code: "FhmfDR6Arvsc", label: null, channels: null, system_channel_id: "12" };
+  const intl49 = util.intl;
+  obj53.label = intl49.string(util.t["9kly4U"]);
+  const obj54 = { id: "00", parent_id: null, name: null, type: null };
+  const intl50 = util.intl;
+  obj54.name = intl50.string(util.t["HY+vdA"]);
+  obj54.type = constants.GUILD_CATEGORY;
+  const items5 = [obj54, , , , , , , , , ,];
+  const obj55 = { id: "01", parent_id: "00", name: null, type: null };
+  const intl51 = util.intl;
+  obj55.name = intl51.string(util.t.yZCzMa);
+  obj55.type = constants.GUILD_TEXT;
   items5[1] = obj55;
-  const obj56 = { id: "02", parent_id: "00", name: intl52.string(intl72.t.Qi0D7e), type: constants.GUILD_TEXT };
-  intl52 = intl72.intl;
+  const obj56 = { id: "02", parent_id: "00", name: null, type: null };
+  const intl52 = util.intl;
+  obj56.name = intl52.string(util.t.Qi0D7e);
+  obj56.type = constants.GUILD_TEXT;
   items5[2] = obj56;
-  const obj57 = { id: "10", parent_id: null, name: intl53.string(intl72.t.yZIUVx), type: constants.GUILD_CATEGORY };
-  intl53 = intl72.intl;
+  const obj57 = { id: "10", parent_id: null, name: null, type: null };
+  const intl53 = util.intl;
+  obj57.name = intl53.string(util.t.yZIUVx);
+  obj57.type = constants.GUILD_CATEGORY;
   items5[3] = obj57;
-  const obj58 = { id: "11", parent_id: "10", name: intl54.string(intl72.t.pIOigB), type: constants.GUILD_TEXT };
-  intl54 = intl72.intl;
+  const obj58 = { id: "11", parent_id: "10", name: null, type: null };
+  const intl54 = util.intl;
+  obj58.name = intl54.string(util.t.pIOigB);
+  obj58.type = constants.GUILD_TEXT;
   items5[4] = obj58;
-  const obj59 = { id: "12", parent_id: "10", name: intl55.string(intl72.t.ao2wxq), type: constants.GUILD_TEXT };
-  intl55 = intl72.intl;
+  const obj59 = { id: "12", parent_id: "10", name: null, type: null };
+  const intl55 = util.intl;
+  obj59.name = intl55.string(util.t.ao2wxq);
+  obj59.type = constants.GUILD_TEXT;
   items5[5] = obj59;
-  const obj60 = { id: "13", parent_id: "10", name: intl56.string(intl72.t.AIszv8), type: constants.GUILD_TEXT };
-  intl56 = intl72.intl;
+  const obj60 = { id: "13", parent_id: "10", name: null, type: null };
+  const intl56 = util.intl;
+  obj60.name = intl56.string(util.t.AIszv8);
+  obj60.type = constants.GUILD_TEXT;
   items5[6] = obj60;
-  const obj61 = { id: "20", parent_id: null, name: intl57.string(intl72.t.vcKDMv), type: constants.GUILD_CATEGORY };
-  intl57 = intl72.intl;
+  const obj61 = { id: "20", parent_id: null, name: null, type: null };
+  const intl57 = util.intl;
+  obj61.name = intl57.string(util.t.vcKDMv);
+  obj61.type = constants.GUILD_CATEGORY;
   items5[7] = obj61;
-  const obj62 = { id: "21", parent_id: "20", name: intl58.string(intl72.t.XS6gcJ), type: constants.GUILD_VOICE };
-  intl58 = intl72.intl;
+  const obj62 = { id: "21", parent_id: "20", name: null, type: null };
+  const intl58 = util.intl;
+  obj62.name = intl58.string(util.t.XS6gcJ);
+  obj62.type = constants.GUILD_VOICE;
   items5[8] = obj62;
-  const obj63 = {
-    id: "22",
-    parent_id: "20",
-    name: intl59.formatToPlainString(intl72.t.LuNsNf, { number: 1 }),
-    type: constants.GUILD_VOICE,
-  };
-  intl59 = intl72.intl;
+  const obj63 = { id: "22", parent_id: "20", name: null, type: null };
+  const intl59 = util.intl;
+  obj63.name = intl59.formatToPlainString(util.t.LuNsNf, { number: 1 });
+  obj63.type = constants.GUILD_VOICE;
   items5[9] = obj63;
-  const obj64 = {
-    id: "23",
-    parent_id: "20",
-    name: intl60.formatToPlainString(intl72.t.LuNsNf, { number: 2 }),
-    type: constants.GUILD_VOICE,
-  };
-  intl60 = intl72.intl;
+  const obj64 = { id: "23", parent_id: "20", name: null, type: null };
+  const intl60 = util.intl;
+  obj64.name = intl60.formatToPlainString(util.t.LuNsNf, { number: 2 });
+  obj64.type = constants.GUILD_VOICE;
   items5[10] = obj64;
-  obj[HUB_MAJOR] = obj53;
-  const HUB_DORM = obj.HUB_DORM;
-  const obj65 = {
-    id: obj.HUB_DORM,
-    code: "fkq8xHfrGE58",
-    label: intl61.string(intl72.t["ppGw/P"]),
-    channels: items6,
-    system_channel_id: "12",
-  };
-  intl61 = intl72.intl;
-  const obj66 = { id: "00", parent_id: null, name: intl62.string(intl72.t["HY+vdA"]), type: constants.GUILD_CATEGORY };
-  intl62 = intl72.intl;
-  items6 = [obj66, , , , , , , , ,];
-  const obj67 = { id: "01", parent_id: "00", name: intl63.string(intl72.t["b2+FCc"]), type: constants.GUILD_TEXT };
-  intl63 = intl72.intl;
+  obj53.channels = items5;
+  obj[obj.HUB_MAJOR] = obj53;
+  const obj65 = { id: obj.HUB_DORM, code: "fkq8xHfrGE58", label: null, channels: null, system_channel_id: "12" };
+  const intl61 = util.intl;
+  obj65.label = intl61.string(util.t["ppGw/P"]);
+  const obj66 = { id: "00", parent_id: null, name: null, type: null };
+  const intl62 = util.intl;
+  obj66.name = intl62.string(util.t["HY+vdA"]);
+  obj66.type = constants.GUILD_CATEGORY;
+  const items6 = [obj66, , , , , , , , ,];
+  const obj67 = { id: "01", parent_id: "00", name: null, type: null };
+  const intl63 = util.intl;
+  obj67.name = intl63.string(util.t["b2+FCc"]);
+  obj67.type = constants.GUILD_TEXT;
   items6[1] = obj67;
-  const obj68 = { id: "10", parent_id: null, name: intl64.string(intl72.t.yZIUVx), type: constants.GUILD_CATEGORY };
-  intl64 = intl72.intl;
+  const obj68 = { id: "10", parent_id: null, name: null, type: null };
+  const intl64 = util.intl;
+  obj68.name = intl64.string(util.t.yZIUVx);
+  obj68.type = constants.GUILD_CATEGORY;
   items6[2] = obj68;
-  const obj69 = { id: "11", parent_id: "10", name: intl65.string(intl72.t.pIOigB), type: constants.GUILD_TEXT };
-  intl65 = intl72.intl;
+  const obj69 = { id: "11", parent_id: "10", name: null, type: null };
+  const intl65 = util.intl;
+  obj69.name = intl65.string(util.t.pIOigB);
+  obj69.type = constants.GUILD_TEXT;
   items6[3] = obj69;
-  const obj70 = { id: "12", parent_id: "10", name: intl66.string(intl72.t.ao2wxq), type: constants.GUILD_TEXT };
-  intl66 = intl72.intl;
+  const obj70 = { id: "12", parent_id: "10", name: null, type: null };
+  const intl66 = util.intl;
+  obj70.name = intl66.string(util.t.ao2wxq);
+  obj70.type = constants.GUILD_TEXT;
   items6[4] = obj70;
-  const obj71 = { id: "13", parent_id: "10", name: intl67.string(intl72.t.AIszv8), type: constants.GUILD_TEXT };
-  intl67 = intl72.intl;
+  const obj71 = { id: "13", parent_id: "10", name: null, type: null };
+  const intl67 = util.intl;
+  obj71.name = intl67.string(util.t.AIszv8);
+  obj71.type = constants.GUILD_TEXT;
   items6[5] = obj71;
-  const obj72 = { id: "20", parent_id: null, name: intl68.string(intl72.t.vcKDMv), type: constants.GUILD_CATEGORY };
-  intl68 = intl72.intl;
+  const obj72 = { id: "20", parent_id: null, name: null, type: null };
+  const intl68 = util.intl;
+  obj72.name = intl68.string(util.t.vcKDMv);
+  obj72.type = constants.GUILD_CATEGORY;
   items6[6] = obj72;
-  const obj73 = { id: "21", parent_id: "20", name: intl69.string(intl72.t.XS6gcJ), type: constants.GUILD_VOICE };
-  intl69 = intl72.intl;
+  const obj73 = { id: "21", parent_id: "20", name: null, type: null };
+  const intl69 = util.intl;
+  obj73.name = intl69.string(util.t.XS6gcJ);
+  obj73.type = constants.GUILD_VOICE;
   items6[7] = obj73;
-  const obj74 = { id: "22", parent_id: "20", name: intl70.string(intl72.t.g3qPRn), type: constants.GUILD_VOICE };
-  intl70 = intl72.intl;
+  const obj74 = { id: "22", parent_id: "20", name: null, type: null };
+  const intl70 = util.intl;
+  obj74.name = intl70.string(util.t.g3qPRn);
+  obj74.type = constants.GUILD_VOICE;
   items6[8] = obj74;
-  const obj75 = { id: "23", parent_id: "20", name: intl71.string(intl72.t.CLWKNs), type: constants.GUILD_VOICE };
-  intl71 = intl72.intl;
+  const obj75 = { id: "23", parent_id: "20", name: null, type: null };
+  const intl71 = util.intl;
+  obj75.name = intl71.string(util.t.CLWKNs);
+  obj75.type = constants.GUILD_VOICE;
   items6[9] = obj75;
-  obj[HUB_DORM] = obj65;
+  obj65.channels = items6;
+  obj[obj.HUB_DORM] = obj65;
   return obj;
 };

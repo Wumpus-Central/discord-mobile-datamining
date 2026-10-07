@@ -4,9 +4,6 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c2;
-let c3;
-let closure_4;
 ({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/stage_channels/sendStageRequestToSpeakEphemeralMessage.tsx");
 
@@ -15,36 +12,46 @@ export const sendStageRequestToSpeakEphemeralMessage = function sendStageRequest
   user,
   requestToSpeakTimestamp,
 ) {
-  let obj2;
-  let obj3;
-  const obj = {
+  const obj2 = {
     type: "MESSAGE_CREATE",
     channelId,
-    message: obj2,
+    message: null,
     optimistic: false,
-    sendMessageOptions: {},
+    sendMessageOptions: null,
     isPushNotification: false,
   };
-  obj2 = {
-    id: obj3.fromTimestamp(Date.parse(requestToSpeakTimestamp)),
-    type: constants3.STAGE_RAISE_HAND,
-    flags: constants.EPHEMERAL,
+  const obj3 = {
+    id: null,
+    type: null,
+    flags: null,
     content: "",
-    channel_id: channelId,
-    author: user,
-    attachments: [],
-    embeds: [],
+    channel_id: null,
+    author: null,
+    attachments: null,
+    embeds: null,
     pinned: false,
-    mentions: [],
-    mention_channels: [],
-    mention_roles: [],
+    mentions: null,
+    mention_channels: null,
+    mention_roles: null,
     mention_everyone: false,
-    timestamp: requestToSpeakTimestamp,
-    state: constants2.SENT,
+    timestamp: null,
+    state: null,
     tts: false,
   };
-  const dispatch = DispatcherDefault.dispatch;
-  DispatcherDefault;
-  obj3 = SnowflakeUtilsDefault;
-  dispatch(obj);
+  const obj = DispatcherDefault;
+  obj3.id = SnowflakeUtilsDefault.fromTimestamp(Date.parse(requestToSpeakTimestamp));
+  obj3.type = constants3.STAGE_RAISE_HAND;
+  obj3.flags = constants.EPHEMERAL;
+  obj3.channel_id = channelId;
+  obj3.author = user;
+  obj3.attachments = [];
+  obj3.embeds = [];
+  obj3.mentions = [];
+  obj3.mention_channels = [];
+  obj3.mention_roles = [];
+  obj3.timestamp = requestToSpeakTimestamp;
+  obj3.state = constants2.SENT;
+  obj2.message = obj3;
+  obj2.sendMessageOptions = {};
+  obj.dispatch(obj2);
 };

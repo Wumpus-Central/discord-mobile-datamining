@@ -1,54 +1,46 @@
 // discord_app/utils/SentryUtils.native.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
-import react_native from "../../_runtime/00017_react-native.js";
+import _mod17 from "../../_runtime/metro/00017__.js";
 import addSentryBreadcrumbDefault from "../modules/sentry/addSentryBreadcrumb.native.tsx";
 import _modAll686 from "../../_runtime/metro/00686__.js";
-import react_nativeAll from "native/ClientInfoUtils.tsx";
 import SentryInitUtils_mod from "../modules/errors/native/SentryInitUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, exception, importAll;
 
-const NativeModules = react_native.NativeModules;
-let tmp2 = new LoggerDefault("Sentry");
-let closure_5 = tmp2;
+const NativeModules = _mod17.NativeModules;
+let closure_5 = new LoggerDefault("Sentry");
 let SentryInitUtils = SentryInitUtils_mod;
 SentryInitUtils = SentryInitUtils.initSentry();
-let obj = {
+let result = size.fileFinishedImporting("utils/SentryUtils.native.tsx");
+
+export default {
   setUser(id, username, email, staff) {
     const user = { id, username, email, staff };
-    const obj2 = _modAll686;
-    const currentScope = obj2.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setUser(user);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser(user);
   },
   clearUser() {
-    const obj = _modAll686;
-    const currentScope = obj.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setUser(null);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser({ staff: false });
   },
   setTags(arg0) {
-    const obj = _modAll686;
-    const currentScope = obj.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setTags(arg0);
   },
   setExtra(arg0) {
-    const obj = _modAll686;
-    const currentScope = obj.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setExtras(arg0);
   },
   captureException(arg0, extra) {
-    let closure_0;
-    let closure_2;
     _require = arg0;
+    importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let obj = require("ErrorCommonUtils");
-    importAll = obj.getUpdatedOptions(extra);
-    const obj2 = _modAll686;
-    obj2.withScope((setTags) => {
+    _modAll686.withScope((setTags) => {
       if (null != closure_2) {
         if (null != closure_2.tags) {
           setTags.setTags(closure_2.tags);
@@ -57,16 +49,13 @@ let obj = {
           setTags.setExtras(closure_2.extra);
         }
       }
-      const obj = _modAll686;
-      closure_1 = obj.captureException(closure_0);
+      closure_1 = _modAll686.captureException(closure_0);
     });
     return closure_1;
   },
   captureCrash(error, extra) {
-    let closure_3;
     _require = error;
-    let obj = require("ErrorCommonUtils");
-    const updatedOptions = obj.getUpdatedOptions(extra);
+    const updatedOptions = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let tags;
     if (updatedOptions != null) {
       tags = updatedOptions.tags;
@@ -78,9 +67,8 @@ let obj = {
       }
     }
     dependencyMap = Object.assign({ crash: "true" }, {});
-    const obj2 = updatedOptions(686);
-    obj2.withScope((setExtras) => {
-      const tmp2 = null != updatedOptions && null != updatedOptions.extra;
+    let obj = require("ErrorCommonUtils");
+    updatedOptions(686).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(updatedOptions.extra);
       }
@@ -96,35 +84,30 @@ let obj = {
           }
         }
         if (null != first) {
-          const obj = { handled: false };
+          const obj = {};
           const merged = Object.assign(first.mechanism);
+          obj.handled = false;
           first.mechanism = obj;
         }
         return exception;
       });
-      let obj = _modAll686;
-      closure_1 = obj.captureException(error);
+      closure_1 = _modAll686.captureException(closure_0);
+      tmp2 = null != updatedOptions && null != updatedOptions.extra;
     });
     return closure_1;
   },
   captureMessage(arg0, extra, arg2) {
-    let closure_0;
-    let closure_2;
     _require = arg0;
-    let closure_1 = arg2;
+    closure_1 = arg2;
+    importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let obj = require("ErrorCommonUtils");
-    importAll = obj.getUpdatedOptions(extra);
-    const obj2 = _modAll686;
-    obj2.withScope((setExtras) => {
-      const tmp2 = null != closure_2 && null != closure_2.extra;
+    _modAll686.withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(closure_2.extra);
       }
-      const tmp4 = null != closure_2 && null != closure_2.tags;
       if (tmp4) {
         setExtras.setTags(closure_2.tags);
       }
-      const tmp6 = null != closure_2 && null != closure_2.fingerprint;
       if (tmp6) {
         setExtras.setFingerprint(closure_2.fingerprint);
         setExtras.addEventProcessor((arg0) => {
@@ -132,14 +115,15 @@ let obj = {
           return arg0;
         });
       }
-      const obj = _modAll686;
-      obj.captureMessage(closure_0, closure_1);
+      _modAll686.captureMessage(closure_0, closure_1);
+      tmp2 = null != closure_2 && null != closure_2.extra;
+      tmp4 = null != closure_2 && null != closure_2.tags;
+      tmp6 = null != closure_2 && null != closure_2.fingerprint;
     });
   },
   addFeatureFlag(arg0, arg1) {
     const getClient = _modAll686.getClient;
     let client;
-    _modAll686;
     if (getClient != null) {
       client = getClient();
     }
@@ -163,10 +147,9 @@ let obj = {
   },
   profiledRootComponent(displayName) {
     let withProfilerResult = displayName;
-    const obj = react_nativeAll;
     if ("canaryRelease" === obj.getConstants().ReleaseChannel) {
+      withProfilerResult = _modAll686.withProfiler(displayName, { includeRender: true, includeUpdates: true });
       const tmpResult = _modAll686;
-      withProfilerResult = tmpResult.withProfiler(displayName, { includeRender: true, includeUpdates: true });
     }
     return withProfilerResult;
   },
@@ -192,9 +175,9 @@ let obj = {
     }
   },
   getLastCrashReport() {
-    const promise = new Promise((fn, arg1) => {
-      let closure_0 = fn;
-      let closure_1 = arg1;
+    return new Promise((fn, arg1) => {
+      closure_0 = fn;
+      closure_1 = arg1;
       const CrashReportingManager = NativeModules.CrashReportingManager;
       let getLastCrashReport;
       if (CrashReportingManager != null) {
@@ -202,147 +185,139 @@ let obj = {
       }
       if (null != getLastCrashReport) {
         const lastCrashReport = CrashReportingManager.getLastCrashReport((timestamp) => {
-          let tmp5;
-          function parseNativeCrashReport(timestamp) {
-            let obj;
-            let obj5;
-            let str3;
-            let tmp4;
-            let result;
-            if (typeof timestamp.timestamp === "number") {
-              const _Number = Number;
-              if (!Number.isNaN(timestamp.timestamp)) {
-                result = timestamp.timestamp / 1000;
-              }
-            }
-            let str = timestamp.level;
-            if (str == null) {
-              let str2 = "error";
-              if (timestamp.is_native) {
-                str2 = "fatal";
-              }
-              str = str2;
-            }
-            let formatted;
-            if (str != null) {
-              formatted = str.toLowerCase();
-            }
-            obj = {
-              type: "y",
-              event_id: timestamp.event_id,
-              timestamp: result,
-              level: formatted,
-              tags: tmp4,
-              extra: Object.assign({}, obj.extra, obj5),
-            };
-            const origin = timestamp.origin;
-            let tmp3 = typeof origin === "string";
-            if (typeof origin === "string") {
-              tmp3 = origin.length > 0;
-            }
-            tmp4 = undefined;
-            if (tmp3) {
-              tmp4 = { "event.origin": timestamp.origin };
-              const obj2 = { "event.origin": timestamp.origin };
-            }
-            const error_message = timestamp.error_message;
-            let tmp5 = typeof error_message === "string";
-            if (typeof error_message === "string") {
-              tmp5 = error_message.length > 0;
-            }
-            obj5 = { native_is_native: str3 };
-            if (tmp5) {
-              ({ error_message: obj.message, error_message: obj3.persisted_error_message } = timestamp);
-            }
-            const error_stack = timestamp.error_stack;
-            let tmp6 = typeof error_stack === "string";
-            if (typeof error_stack === "string") {
-              tmp6 = error_stack.length > 0;
-            }
-            if (tmp6) {
-              obj5.persisted_error_stack = timestamp.error_stack;
-            }
-            if (timestamp.is_native) {
-              const exit_reason = timestamp.exit_reason;
-              let tmp7 = typeof exit_reason === "string";
-              if (typeof exit_reason === "string") {
-                tmp7 = exit_reason.length > 0;
-              }
-              if (tmp7) {
-                obj5.native_exit_reason = timestamp.exit_reason;
-              }
-              const exit_description = timestamp.exit_description;
-              let tmp8 = typeof exit_description === "string";
-              if (typeof exit_description === "string") {
-                tmp8 = exit_description.length > 0;
-              }
-              if (tmp8) {
-                obj5.native_exit_description = timestamp.exit_description;
-              }
-              const tombstone = timestamp.tombstone;
-              let tmp9 = typeof tombstone === "string";
-              if (typeof tombstone === "string") {
-                tmp9 = tombstone.length > 0;
-              }
-              if (tmp9) {
-                obj5.native_tombstone = timestamp.tombstone;
-              }
-              const tombstone_cause = timestamp.tombstone_cause;
-              let tmp10 = typeof tombstone_cause === "string";
-              if (typeof tombstone_cause === "string") {
-                tmp10 = tombstone_cause.length > 0;
-              }
-              if (tmp10) {
-                obj5.native_tombstone_cause = timestamp.tombstone_cause;
-              }
-              const tombstone_hash = timestamp.tombstone_hash;
-              let tmp11 = typeof tombstone_hash === "string";
-              if (typeof tombstone_hash === "string") {
-                tmp11 = tombstone_hash.length > 0;
-              }
-              if (tmp11) {
-                obj5.native_tombstone_hash = timestamp.tombstone_hash;
-              }
-              const tombstone_group_by = timestamp.tombstone_group_by;
-              let tmp12 = typeof tombstone_group_by === "string";
-              if (typeof tombstone_group_by === "string") {
-                tmp12 = tombstone_group_by.length > 0;
-              }
-              if (tmp12) {
-                obj5.native_tombstone_group_by = timestamp.tombstone_group_by;
-              }
-              const tombstone_origin = timestamp.tombstone_origin;
-              let tmp13 = typeof tombstone_origin === "string";
-              if (typeof tombstone_origin === "string") {
-                tmp13 = tombstone_origin.length > 0;
-              }
-              if (tmp13) {
-                obj5.native_tombstone_origin = timestamp.tombstone_origin;
-              }
-            }
-            str3 = "false";
-            if (timestamp.is_native) {
-              str3 = "true";
-            }
-            return obj;
-          }
           try {
             let tmp3 = null;
             if (null != timestamp) {
-              tmp3 = parseNativeCrashReport(timestamp);
+              tmp3 = (function parseNativeCrashReport(timestamp) {
+                let result;
+                if (typeof timestamp.timestamp === "number") {
+                  const _Number = Number;
+                  if (!Number.isNaN(timestamp.timestamp)) {
+                    result = timestamp.timestamp / 1000;
+                  }
+                }
+                let str = timestamp.level;
+                if (str == null) {
+                  let str2 = "error";
+                  if (timestamp.is_native) {
+                    str2 = "fatal";
+                  }
+                  str = str2;
+                }
+                let formatted;
+                if (str != null) {
+                  formatted = str.toLowerCase();
+                }
+                const obj = {
+                  type: "y",
+                  event_id: timestamp.event_id,
+                  timestamp: result,
+                  level: formatted,
+                  tags: null,
+                };
+                const origin = timestamp.origin;
+                let tmp3 = typeof origin === "string";
+                if (typeof origin === "string") {
+                  tmp3 = origin.length > 0;
+                }
+                let tmp4;
+                if (tmp3) {
+                  const obj2 = { "event.origin": timestamp.origin };
+                  tmp4 = obj2;
+                }
+                obj.tags = tmp4;
+                const error_message = timestamp.error_message;
+                let tmp5 = typeof error_message === "string";
+                if (typeof error_message === "string") {
+                  tmp5 = error_message.length > 0;
+                }
+                const obj5 = {};
+                if (tmp5) {
+                  ({ error_message: obj.message, error_message: obj3.persisted_error_message } = timestamp);
+                }
+                const error_stack = timestamp.error_stack;
+                let tmp6 = typeof error_stack === "string";
+                if (typeof error_stack === "string") {
+                  tmp6 = error_stack.length > 0;
+                }
+                if (tmp6) {
+                  obj5.persisted_error_stack = timestamp.error_stack;
+                }
+                if (timestamp.is_native) {
+                  const exit_reason = timestamp.exit_reason;
+                  let tmp7 = typeof exit_reason === "string";
+                  if (typeof exit_reason === "string") {
+                    tmp7 = exit_reason.length > 0;
+                  }
+                  if (tmp7) {
+                    obj5.native_exit_reason = timestamp.exit_reason;
+                  }
+                  const exit_description = timestamp.exit_description;
+                  let tmp8 = typeof exit_description === "string";
+                  if (typeof exit_description === "string") {
+                    tmp8 = exit_description.length > 0;
+                  }
+                  if (tmp8) {
+                    obj5.native_exit_description = timestamp.exit_description;
+                  }
+                  const tombstone = timestamp.tombstone;
+                  let tmp9 = typeof tombstone === "string";
+                  if (typeof tombstone === "string") {
+                    tmp9 = tombstone.length > 0;
+                  }
+                  if (tmp9) {
+                    obj5.native_tombstone = timestamp.tombstone;
+                  }
+                  const tombstone_cause = timestamp.tombstone_cause;
+                  let tmp10 = typeof tombstone_cause === "string";
+                  if (typeof tombstone_cause === "string") {
+                    tmp10 = tombstone_cause.length > 0;
+                  }
+                  if (tmp10) {
+                    obj5.native_tombstone_cause = timestamp.tombstone_cause;
+                  }
+                  const tombstone_hash = timestamp.tombstone_hash;
+                  let tmp11 = typeof tombstone_hash === "string";
+                  if (typeof tombstone_hash === "string") {
+                    tmp11 = tombstone_hash.length > 0;
+                  }
+                  if (tmp11) {
+                    obj5.native_tombstone_hash = timestamp.tombstone_hash;
+                  }
+                  const tombstone_group_by = timestamp.tombstone_group_by;
+                  let tmp12 = typeof tombstone_group_by === "string";
+                  if (typeof tombstone_group_by === "string") {
+                    tmp12 = tombstone_group_by.length > 0;
+                  }
+                  if (tmp12) {
+                    obj5.native_tombstone_group_by = timestamp.tombstone_group_by;
+                  }
+                  const tombstone_origin = timestamp.tombstone_origin;
+                  let tmp13 = typeof tombstone_origin === "string";
+                  if (typeof tombstone_origin === "string") {
+                    tmp13 = tombstone_origin.length > 0;
+                  }
+                  if (tmp13) {
+                    obj5.native_tombstone_origin = timestamp.tombstone_origin;
+                  }
+                }
+                let str3 = "false";
+                if (timestamp.is_native) {
+                  str3 = "true";
+                }
+                obj5.native_is_native = str3;
+                obj.extra = Object.assign({}, obj.extra, obj5);
+                return obj;
+              })(timestamp);
             }
             closure_0(tmp3);
           } catch (tmp5) {
-            let tmp7 = closure_1(tmp5);
+            closure_1(tmp5);
           }
         });
       } else {
         fn(null);
       }
     });
-    return promise;
   },
 };
-let result = size.fileFinishedImporting("utils/SentryUtils.native.tsx");
-
-export default obj;

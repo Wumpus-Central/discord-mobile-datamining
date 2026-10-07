@@ -6,21 +6,18 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const UserSettingsSections = Constants.UserSettingsSections;
-const obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Blur";
   },
-  parent: MobileUserSettings.DESIGN_SYSTEMS,
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
   screen: {
-    route: UserSettingsSections.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW,
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW,
     getComponent() {
       return require("UserSettingsDesignSystemAlertModal").default;
     },
   },
-};
-const route = SettingBuilders.createRoute(obj);
+});
 const result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/DesignSystemsBackgroundBlurViewSetting.tsx",
 );

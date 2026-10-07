@@ -2,27 +2,27 @@
 import ApexExperiment_mod from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj2;
-let obj4;
 let ApexExperiment = ApexExperiment_mod;
 const obj = {
   kind: "user",
   name: "2026-08-top-soundboard-sounds",
   defaultConfig: { enabled: false, topSoundsFirst: false },
-  variations: obj2,
+  variations: null,
 };
-obj2 = { 1: null, 2: { enabled: true, topSoundsFirst: true } };
+const obj2 = { 1: null, 2: { enabled: true, topSoundsFirst: true } };
 obj2[2] = { enabled: true, topSoundsFirst: false };
+obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-ApexExperiment = ApexExperiment_mod;
+let ApexExperiment = ApexExperiment_mod;
 const obj3 = {
   kind: "user",
   name: "2026-08-top-soundboard-sounds-mobile",
   defaultConfig: { enabled: false, topSoundsFirst: false },
-  variations: obj4,
+  variations: null,
 };
-obj4 = { 1: null, 2: { enabled: true, topSoundsFirst: true } };
+const obj4 = { 1: null, 2: { enabled: true, topSoundsFirst: true } };
 obj4[2] = { enabled: true, topSoundsFirst: false };
+obj3.variations = obj4;
 const apexExperiment1 = ApexExperiment.createApexExperiment(obj3);
 const result = size.fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundsExperiment.tsx");
 

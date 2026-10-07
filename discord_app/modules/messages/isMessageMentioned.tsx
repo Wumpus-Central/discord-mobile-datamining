@@ -2,15 +2,8 @@
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 function isMentioned(suppressRoles) {
-  let channelId;
-  let mentionEveryone;
-  let mentionRoles;
-  let mentionUsers;
-  let suppressEveryone;
-  let userId;
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);
   ({ channelId, mentionEveryone } = suppressRoles);
   if (suppressEveryone === undefined) {
@@ -43,13 +36,13 @@ function isMentioned(suppressRoles) {
               return false;
             } else {
               member = GuildMemberStore.getMember(guildId, userId);
-              const tmp7 =
+              return (
                 null != member &&
                 mentionRoles.some((item) => {
                   const roles = member.roles;
                   return roles.includes(item);
-                });
-              return tmp7;
+                })
+              );
             }
           }
         }
@@ -58,71 +51,67 @@ function isMentioned(suppressRoles) {
     return false;
   }
 }
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isMessageMentioned.tsx");
 
-export default function isMessageMentioned(userId) {
-  let message;
-  let suppressEveryone;
-  ({ message, suppressEveryone } = userId);
-  userId = userId.userId;
+export default function isMessageMentioned(suppressRoles) {
+  ({ message, suppressEveryone } = suppressRoles);
   if (suppressEveryone === undefined) {
     suppressEveryone = false;
   }
-  let flag = userId.suppressRoles;
+  let flag = suppressRoles.suppressRoles;
   if (flag === undefined) {
     flag = false;
   }
-  const obj = {
-    userId,
+  return isMentioned({
+    userId: suppressRoles.userId,
     channelId: message.channel_id,
     mentionEveryone: message.mentionEveryone,
     mentionUsers: message.mentions,
     mentionRoles: message.mentionRoles,
     suppressEveryone,
     suppressRoles: flag,
-  };
-  return isMentioned(obj);
+  });
 }
-export const isRawMessageMentioned = function isRawMessageMentioned(userId) {
-  let flag2;
-  let mapped;
-  let mention_roles;
-  let rawMessage;
-  let suppressEveryone;
-  ({ rawMessage, suppressEveryone } = userId);
-  userId = userId.userId;
+export const isRawMessageMentioned = function isRawMessageMentioned(suppressRoles) {
+  ({ rawMessage, suppressEveryone } = suppressRoles);
   if (suppressEveryone === undefined) {
     suppressEveryone = false;
   }
-  let flag = userId.suppressRoles;
+  let flag = suppressRoles.suppressRoles;
   if (flag === undefined) {
     flag = false;
   }
   const obj = {
-    userId,
+    userId: suppressRoles.userId,
     channelId: rawMessage.channel_id,
-    mentionEveryone: flag2,
-    mentionUsers: mapped,
-    mentionRoles: mention_roles,
-    suppressEveryone,
-    suppressRoles: flag,
+    mentionEveryone: null,
+    mentionUsers: null,
+    mentionRoles: null,
+    suppressEveryone: null,
+    suppressRoles: null,
   };
-  flag2 = rawMessage.mention_everyone;
+  let flag2 = rawMessage.mention_everyone;
   if (flag2 == null) {
     flag2 = false;
   }
+  obj.mentionEveryone = flag2;
   const mentions = rawMessage.mentions;
-  mapped = undefined;
+  let mapped;
   if (mentions != null) {
     mapped = mentions.map((id) => id.id);
   }
   if (mapped == null) {
     mapped = [];
   }
-  mention_roles = rawMessage.mention_roles;
+  obj.mentionUsers = mapped;
+  let mention_roles = rawMessage.mention_roles;
   if (mention_roles == null) {
     mention_roles = [];
   }
+  obj.mentionRoles = mention_roles;
+  obj.suppressEveryone = suppressEveryone;
+  obj.suppressRoles = flag;
   return isMentioned(obj);
 };
 export { isMentioned };

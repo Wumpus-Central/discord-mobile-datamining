@@ -1,28 +1,23 @@
 // discord_app/modules/premium/powerups/native/BoostProgressBarCoachmark.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import intl4 from "../../../../intl/index.native.tsx";
-import DismissibleContentConstants from "../../../dismissible_content/DismissibleContentConstants.tsx";
+import util from "../../../../intl/index.native.tsx";
 import _modDef2553 from "../GuildPowerups.messages.js";
 import BoostThisServerRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BoostThisServerRive.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let dependencyMap, guild;
-
-const View = react_native.View;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (guild) => {
-      let riveContainer;
-      let tmp5;
-      let obj = guild(576);
-      const cResult = obj.c(14);
+      const cResult = guild(576).c(14);
       guild = guild.guild;
       const markAsDismissed = guild.markAsDismissed;
       const tmp4 = closure_7();
@@ -33,17 +28,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = markAsDismissed;
         cResult[1] = fn;
-        tmp5 = fn;
+        let tmp5 = fn;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === guild.id) {
-        let tmp6;
-        let tmp9;
-        let tmp8;
-        let tmp14;
         if (cResult[3] === markAsDismissed) {
-          tmp6 = cResult[4];
+          let tmp6 = cResult[4];
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,8 +44,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const stringResult1 = intl2.string(markAsDismissed(2553).MIwlcR);
           cResult[5] = stringResult;
           cResult[6] = stringResult1;
-          tmp9 = stringResult1;
-          tmp8 = stringResult;
+          let tmp9 = stringResult1;
+          let tmp8 = stringResult;
         } else {
           tmp8 = cResult[5];
           tmp9 = cResult[6];
@@ -62,11 +53,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] !== tmp4.riveContainer) {
           class I {
             constructor() {
-              return (
-                <View style={riveContainer.riveContainer}>
-                  {jsx(BoostThisServerRive.BoostThisServerRive, { stateMachine: "State Machine 1" })}
-                </View>
-              );
+              obj = {
+                style: closure_2.riveContainer,
+                children: jsx(closure_0(closure_2[10]).BoostThisServerRive, { stateMachine: "State Machine 1" }),
+              };
+              return jsx(View, obj);
             }
           }
           cResult[7] = tmp4.riveContainer;
@@ -74,11 +65,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class I {
             constructor() {
-              return (
-                <View style={riveContainer.riveContainer}>
-                  {jsx(BoostThisServerRive.BoostThisServerRive, { stateMachine: "State Machine 1" })}
-                </View>
-              );
+              obj = {
+                style: closure_2.riveContainer,
+                children: jsx(closure_0(closure_2[10]).BoostThisServerRive, { stateMachine: "State Machine 1" }),
+              };
+              return jsx(View, obj);
             }
           }
         }
@@ -86,35 +77,35 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
             constructor() {
-              return (
-                <View style={riveContainer.riveContainer}>
-                  {jsx(BoostThisServerRive.BoostThisServerRive, { stateMachine: "State Machine 1" })}
-                </View>
-              );
+              obj = {
+                style: closure_2.riveContainer,
+                children: jsx(closure_0(closure_2[10]).BoostThisServerRive, { stateMachine: "State Machine 1" }),
+              };
+              return jsx(View, obj);
             }
           }
-          const stringResult2 = obj2.string(guild(1126).t["0CJWP2"]);
+          const stringResult2 = obj2.string(tmp(1126).t["0CJWP2"]);
           cResult[9] = stringResult2;
-          tmp14 = stringResult2;
+          const tmp14 = stringResult2;
         } else {
           class I {
             constructor() {
-              return (
-                <View style={riveContainer.riveContainer}>
-                  {jsx(BoostThisServerRive.BoostThisServerRive, { stateMachine: "State Machine 1" })}
-                </View>
-              );
+              obj = {
+                style: closure_2.riveContainer,
+                children: jsx(closure_0(closure_2[10]).BoostThisServerRive, { stateMachine: "State Machine 1" }),
+              };
+              return jsx(View, obj);
             }
           }
         }
         if (cResult[10] === tmp6) {
           class I {
             constructor() {
-              return (
-                <View style={riveContainer.riveContainer}>
-                  {jsx(BoostThisServerRive.BoostThisServerRive, { stateMachine: "State Machine 1" })}
-                </View>
-              );
+              obj = {
+                style: closure_2.riveContainer,
+                children: jsx(closure_0(closure_2[10]).BoostThisServerRive, { stateMachine: "State Machine 1" }),
+              };
+              return jsx(View, obj);
             }
           }
         }
@@ -137,20 +128,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn2 = function p() {
         markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-        const obj = GuildSettingsActionCreatorsDefault;
-        obj.saveGuild(guild.id, { premiumProgressBarEnabled: true });
+        GuildSettingsActionCreatorsDefault.saveGuild(guild.id, { premiumProgressBarEnabled: true });
       };
       cResult[2] = guild.id;
       cResult[3] = markAsDismissed;
       cResult[4] = fn2;
       tmp6 = fn2;
+      const obj = guild(576);
     }
   : (guild) => {
-      let closure_2;
       guild = guild.guild;
       const markAsDismissed = guild.markAsDismissed;
       let onDismiss;
-      const targetRef = guild.targetRef;
       const tmp = closure_7();
       dependencyMap = tmp;
       const items = [markAsDismissed];
@@ -160,42 +149,39 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [guild.id, markAsDismissed];
       const callback1 = onDismiss.useCallback(() => {
         markAsDismissed(ContentDismissActionType.TAKE_ACTION);
-        const obj = GuildSettingsActionCreatorsDefault;
-        obj.saveGuild(guild.id, { premiumProgressBarEnabled: true });
+        GuildSettingsActionCreatorsDefault.saveGuild(guild.id, { premiumProgressBarEnabled: true });
       }, items1);
       const items2 = [onDismiss, callback1, tmp.riveContainer];
       const memo = onDismiss.useMemo(() => {
-        let intl;
-        let intl2;
-        let intl3;
-        let riveContainer;
         const obj = {
-          title: intl.string(_modDef2553.uwV2dH),
-          description: intl2.string(_modDef2553.MIwlcR),
+          title: null,
+          description: null,
           visible: true,
           position: "bottom",
           offsetY: 8,
-          onDismiss,
-          renderImgComponent() {
-            return (
-              <callback1 style={riveContainer.riveContainer}>
-                {jsx(guild(riveContainer[10]).BoostThisServerRive, { stateMachine: "State Machine 1" })}
-              </callback1>
-            );
-          },
-          buttonLabel: intl3.string(intl4.t["0CJWP2"]),
+          onDismiss: null,
+          renderImgComponent: null,
+          buttonLabel: null,
           buttonVariant: "primary",
-          onButtonPress: callback1,
+          onButtonPress: null,
         };
-        intl = intl4.intl;
-        intl2 = intl4.intl;
-        intl3 = intl4.intl;
+        const intl = util.intl;
+        obj.title = intl.string(_modDef2553.uwV2dH);
+        const intl2 = util.intl;
+        obj.description = intl2.string(_modDef2553.MIwlcR);
+        obj.onDismiss = onDismiss;
+        obj.renderImgComponent = function renderImgComponent() {
+          return (
+            <callback1 style={riveContainer.riveContainer}>
+              {jsx(guild(riveContainer[10]).BoostThisServerRive, { stateMachine: "State Machine 1" })}
+            </callback1>
+          );
+        };
+        const intl3 = util.intl;
+        obj.buttonLabel = intl3.string(util.t["0CJWP2"]);
+        obj.onButtonPress = callback1;
         return obj;
       }, items2);
-      let obj = guild(9895);
-      const coachmark = obj.useCoachmark(targetRef, memo);
+      const coachmark = guild(9895).useCoachmark(guild.targetRef, memo);
       return null;
     };
-const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
-
-export default tmp2;

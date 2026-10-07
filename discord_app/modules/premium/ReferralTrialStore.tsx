@@ -1,11 +1,10 @@
 // discord_app/modules/premium/ReferralTrialStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import ReferralTrialActionCreators from "ReferralTrialActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 function emitChanges() {
   return true;
 }
@@ -13,33 +12,34 @@ function handleLoadMessages(messages) {
   messages = messages.messages;
   const item = messages.forEach((type) => {
     let content = null;
-    if (type.type === content(closure_2[4]).MessageTypes.PREMIUM_REFERRAL) {
+    if (type.type === content(1101).MessageTypes.PREMIUM_REFERRAL) {
       content = type.content;
     }
     if (null != content) {
-      const hasItem = set2.has(content) || set.has(content);
+      let hasItem = set2.has(content);
+      if (!hasItem) {
+        hasItem = set.has(content);
+      }
       if (!hasItem) {
         set.add(content);
-        let obj = closure_1(closure_2[3]);
-        obj.wait(() => {
-          const obj = ReferralTrialActionCreators;
-          const referralTrialOffer = obj.resolveReferralTrialOffer(content);
+        closure_1(584).wait(() => {
+          const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(content);
           return referralTrialOffer.catch(NOOP_NULL);
         });
+        const obj = closure_1(584);
       }
     }
     return false;
   });
 }
-const NOOP_NULL = Constants.NOOP_NULL;
+const NOOP_NULL = fn(1085).NOOP_NULL;
 let c5 = null;
 let set = new Set();
 let map = new Map();
-let recipient_status = map;
 let c8 = false;
-const set1 = new Set();
-const set2 = new Set();
-const map1 = new Map();
+let set1 = new Set();
+let set2 = new Set();
+let map1 = new Map();
 map = map1;
 let c12 = 0;
 let c13 = null;
@@ -48,101 +48,103 @@ let c15 = false;
 let c16 = 0;
 let c17 = false;
 let c18 = false;
-let refresh_at = null;
-let reminder_state_id = null;
-const Store = get_initializedDefault.Store;
-class ReferralTrialStore extends Store {
-  initialize() {
-    this.waitFor(UserStore);
-    const items = [UserStore];
-    this.syncWith(items, emitChanges);
-  }
-  checkAndFetchReferralsRemaining() {
-    let tmp = null == c5 && !c8 && c12 < 6;
-    if (tmp) {
-      let tmp5 = null == c13;
-      if (!tmp5) {
-        const _Date = Date;
-        tmp5 = tmp4 < Date.now();
-      }
-      tmp = tmp5;
-    }
-    if (tmp) {
-      const obj = ReferralTrialActionCreators;
-      const referralsRemaining = obj.fetchReferralsRemaining();
-    }
-  }
-  getReferralsRemaining() {
-    let obj = arg0;
-    if (arg0 === undefined) {
-      obj = {};
-    }
-    let flag = obj.bypassFetch;
-    if (flag === undefined) {
-      flag = false;
-    }
-    if (!flag) {
-      const self = this;
-      const result = this.checkAndFetchReferralsRemaining();
-    }
-    return c5;
-  }
-  getSentUserIds() {
-    const result = this.checkAndFetchReferralsRemaining();
-    return Array.from(set.values());
-  }
-  isFetchingReferralsRemaining() {
-    return c8;
-  }
-  getRelevantUserTrialOffer(referralTrialOfferId) {
-    return map.get(referralTrialOfferId);
-  }
-  isResolving(arg0) {
-    return set1.has(arg0);
-  }
-  getEligibleUsers() {
-    return closure_14;
-  }
-  getFetchingEligibleUsers() {
-    return c15;
-  }
-  getNextIndexOfEligibleUsers() {
-    return c16;
-  }
-  getIsEligibleToSendReferrals() {
-    return c17;
-  }
-  getHasEligibleFriends() {
-    return c18;
-  }
-  getRefreshAt() {
-    return refresh_at;
-  }
-  getAllRelevantReferralTrialOffers() {
-    return Array.from(map.values());
-  }
-  getRecipientStatus() {
-    return recipient_status;
-  }
-  getReminderStateId() {
-    return reminder_state_id;
-  }
-}
+let c19 = null;
+let c20 = null;
+const Store = initializeDefault.Store;
+class ReferralTrialStore extends Store {}
 const prototype = ReferralTrialStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(UserStore);
+  const items = [UserStore];
+  this.syncWith(items, emitChanges);
+};
+prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRemaining() {
+  let tmp = null == c5;
+  if (tmp) {
+    tmp = !c8;
+  }
+  if (tmp) {
+    tmp = c12 < 6;
+  }
+  if (tmp) {
+    let tmp5 = null == c13;
+    if (!tmp5) {
+      const _Date = Date;
+      tmp5 = tmp4 < Date.now();
+    }
+    tmp = tmp5;
+  }
+  if (tmp) {
+    const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
+  }
+};
+prototype["getReferralsRemaining"] = function getReferralsRemaining() {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let flag = obj.bypassFetch;
+  if (flag === undefined) {
+    flag = false;
+  }
+  if (!flag) {
+    const self = this;
+    const result = this.checkAndFetchReferralsRemaining();
+  }
+  return c5;
+};
+prototype["getSentUserIds"] = function getSentUserIds() {
+  const result = this.checkAndFetchReferralsRemaining();
+  return Array.from(set.values());
+};
+prototype["isFetchingReferralsRemaining"] = function isFetchingReferralsRemaining() {
+  return c8;
+};
+prototype["getRelevantUserTrialOffer"] = function getRelevantUserTrialOffer(referralTrialOfferId) {
+  return map.get(referralTrialOfferId);
+};
+prototype["isResolving"] = function isResolving(arg0) {
+  return set1.has(arg0);
+};
+prototype["getEligibleUsers"] = function getEligibleUsers() {
+  return closure_14;
+};
+prototype["getFetchingEligibleUsers"] = function getFetchingEligibleUsers() {
+  return c15;
+};
+prototype["getNextIndexOfEligibleUsers"] = function getNextIndexOfEligibleUsers() {
+  return c16;
+};
+prototype["getIsEligibleToSendReferrals"] = function getIsEligibleToSendReferrals() {
+  return c17;
+};
+prototype["getHasEligibleFriends"] = function getHasEligibleFriends() {
+  return c18;
+};
+prototype["getRefreshAt"] = function getRefreshAt() {
+  return c19;
+};
+prototype["getAllRelevantReferralTrialOffers"] = function getAllRelevantReferralTrialOffers() {
+  return Array.from(map.values());
+};
+prototype["getRecipientStatus"] = function getRecipientStatus() {
+  return map1;
+};
+prototype["getReminderStateId"] = function getReminderStateId() {
+  return c20;
+};
 ReferralTrialStore.displayName = "ReferralTrialStore";
-let obj = {
+const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      let obj = userTrialOfferId(6975);
-      const referralsRemaining = obj.fetchReferralsRemaining();
+      const referralsRemaining = userTrialOfferId(6975).fetchReferralsRemaining();
+      const obj = userTrialOfferId(6975);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
-      const obj2 = DispatcherDefault;
-      obj2.wait(() => {
-        const obj = ReferralTrialActionCreators;
-        const referralTrialOffer = obj.resolveReferralTrialOffer(userTrialOfferId);
+      DispatcherDefault.wait(() => {
+        const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(userTrialOfferId);
         return referralTrialOffer.catch(NOOP_NULL);
       });
     }
@@ -151,7 +153,7 @@ let obj = {
     if (arg0 == null) {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
-      refresh_at = null;
+      c19 = null;
       c8 = true;
     }
   },
@@ -161,7 +163,9 @@ let obj = {
     c8 = false;
     const referrals_remaining = has_eligible_friends.referrals_remaining;
     ({ refresh_at, recipient_status, reminder_state_id } = has_eligible_friends);
-    set = new Set(has_eligible_friends.sent_user_ids);
+    new Set(has_eligible_friends.sent_user_ids);
+    c19 = refresh_at;
+    c20 = reminder_state_id;
     c12 = 0;
     c13 = null;
   },
@@ -169,16 +173,15 @@ let obj = {
     if (arg0 == null) {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
-      let result;
       c17 = false;
       c18 = false;
-      refresh_at = null;
+      c19 = null;
       c8 = false;
       const sum = c12 + 1;
       c12 = sum;
       if (sum <= 3) {
         const _Math2 = Math;
-        result = 1000 * Math.pow(2, c12);
+        let result = 1000 * Math.pow(2, c12);
       } else {
         const _Math = Math;
         result = 8000 * Math.pow(4, c12 - 3);
@@ -191,16 +194,13 @@ let obj = {
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function handleCreateReferralSuccess(userTrialOffer) {
     userTrialOffer = userTrialOffer.userTrialOffer;
-    const obj = ReferralTrialActionCreators;
-    const referralsRemaining = obj.fetchReferralsRemaining();
+    const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
     const result = map.set(userTrialOffer.id, userTrialOffer);
     set.add(userTrialOffer.userId);
   },
-  CREATE_REFERRALS_SUCCESS: function handleCreateReferralsSuccess(userTrialOffers) {
-    userTrialOffers = userTrialOffers.userTrialOffers;
-    const obj = ReferralTrialActionCreators;
-    const referralsRemaining = obj.fetchReferralsRemaining();
-    for (const item10012 of userTrialOffers) {
+  CREATE_REFERRALS_SUCCESS: function handleCreateReferralsSuccess(arg0) {
+    const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
+    for (const item10012 of tmp) {
       let result = map.set(item10012.id, item10012);
       let addResult = set.add(item10012.userId);
       continue;
@@ -237,13 +237,14 @@ let obj = {
       content = message.content;
     }
     if (null != content) {
-      const hasItem = set2.has(content) || set1.has(content);
+      let hasItem = set2.has(content);
+      if (!hasItem) {
+        hasItem = set1.has(content);
+      }
       if (!hasItem) {
         set1.add(content);
-        const obj = DispatcherDefault;
-        obj.wait(() => {
-          const obj = ReferralTrialActionCreators;
-          const referralTrialOffer = obj.resolveReferralTrialOffer(content);
+        DispatcherDefault.wait(() => {
+          const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(content);
           return referralTrialOffer.catch(NOOP_NULL);
         });
       }
@@ -252,11 +253,11 @@ let obj = {
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   LOGOUT: function handleReset() {
     c5 = null;
-    new Set();
+    set = new Set();
     c8 = false;
-    new Set();
-    new Set();
-    new Map();
+    set1 = new Set();
+    set2 = new Set();
+    map = new Map();
     c12 = 0;
     c13 = null;
     closure_14 = [];
@@ -264,13 +265,12 @@ let obj = {
     c16 = 0;
     c17 = false;
     c18 = false;
-    refresh_at = null;
-    recipient_status = new Map();
-    reminder_state_id = null;
-    new Map();
+    c19 = null;
+    map1 = new Map();
+    c20 = null;
   },
-};
-const referralTrialStore = new ReferralTrialStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/ReferralTrialStore.tsx");
 
 export default referralTrialStore;

@@ -1,95 +1,79 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx
-import react from "../../../../../_runtime/00576_react.js";
-import intl3 from "../../../../intl/index.native.tsx";
-import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import c from "../../../../../_runtime/00576_c.js";
+import util from "../../../../intl/index.native.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCenterControlledSettingsUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const ExplicitMediaRedactionUtils = obj(7122);
+require = fn;
+const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = react;
-      const cResult = obj.c(2);
-      const obj2 = useParentalControlSettings;
-      const parentalControlledGoreContentSettings = obj2.useParentalControlledGoreContentSettings();
+      let obj = require;
+      let tmp = dependencyMap;
+      const cResult = c.c(2);
+      const parentalControlledGoreContentSettings =
+        useParentalControlSettings.useParentalControlledGoreContentSettings();
       let prop;
       if (parentalControlledGoreContentSettings != null) {
         prop = parentalControlledGoreContentSettings.goreContentNonFriendDm;
       }
-      let tmp6 = null;
-      if (null != prop) {
-        let tmp7;
-        if (cResult[0] !== prop) {
-          const tmpResult = ExplicitMediaRedactionUtils;
-          const tmp8 = tmpResult.redactionSettingToRenderedString(prop)();
-          cResult[0] = prop;
-          cResult[1] = tmp8;
-          tmp7 = tmp8;
-        } else {
-          tmp7 = cResult[1];
-        }
-        tmp6 = tmp7;
+      if (null == prop) {
+        return null;
+      } else if (cResult[0] !== prop) {
+        obj = ExplicitMediaRedactionUtils;
+        tmp = obj.redactionSettingToRenderedString(prop)();
+        cResult[0] = prop;
+        cResult[1] = tmp;
       }
-      return tmp6;
     }
   : () => {
-      const obj = useParentalControlSettings;
-      const parentalControlledGoreContentSettings = obj.useParentalControlledGoreContentSettings();
+      const parentalControlledGoreContentSettings =
+        useParentalControlSettings.useParentalControlledGoreContentSettings();
       let prop;
       if (parentalControlledGoreContentSettings != null) {
         prop = parentalControlledGoreContentSettings.goreContentNonFriendDm;
       }
       let tmp5 = null;
       if (null != prop) {
+        tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(prop)();
         const tmpResult = ExplicitMediaRedactionUtils;
-        tmp5 = tmpResult.redactionSettingToRenderedString(prop)();
       }
       return tmp5;
     };
 function onGoreContentNonFriendsDmOnPress() {
-  let intl;
-  let intl2;
-  let items;
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14645);
-    const goreContentNonFriendDm = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
-    let obj2 = {
-      title: intl.string(selectedTeenId(1126).t["16/3Bi"]),
-      subtitle: intl2.string(selectedTeenId(1126).t["Yh+HX1"]),
-      handlePress(goreContentNonFriendDm) {
-        const obj = FamilyCenterControlledSettingsUtils;
-        const obj2 = { goreContentNonFriendDm };
-        return obj.updateGoreContentSetting(selectedTeenId, obj2);
-      },
-      currentValue: goreContentNonFriendDm,
-      excluded: items,
+    const obj = selectedTeenId(14645);
+    const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
+    const intl = selectedTeenId(1126).intl;
+    obj3.title = intl.string(selectedTeenId(1126).t["16/3Bi"]);
+    const intl2 = selectedTeenId(1126).intl;
+    obj3.subtitle = intl2.string(selectedTeenId(1126).t["Yh+HX1"]);
+    obj3.handlePress = function handlePress(goreContentNonFriendDm) {
+      return FamilyCenterControlledSettingsUtils.updateGoreContentSetting(selectedTeenId, { goreContentNonFriendDm });
     };
-    const handleSensitiveMediaFilterPress = selectedTeenId(14650).handleSensitiveMediaFilterPress;
-    selectedTeenId(14650);
-    intl = selectedTeenId(1126).intl;
-    intl2 = selectedTeenId(1126).intl;
-    items = [selectedTeenId(1197).ExplicitContentRedaction.SHOW];
-    const result = handleSensitiveMediaFilterPress(obj2);
+    obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
+    const items = [selectedTeenId(1197).ExplicitContentRedaction.SHOW];
+    obj3.excluded = items;
+    const result = selectedTeenId(14650).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(14650);
   }
 }
 function getTitle() {
-  const intl = intl3.intl;
-  return intl.string(intl3.t["Yh+HX1"]);
+  const intl = util.intl;
+  return intl.string(util.t["Yh+HX1"]);
 }
-let obj = {
+const SettingBuilders = fn(11142);
+const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(7645).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: tmp2,
   onPress: onGoreContentNonFriendsDmOnPress,
   unsearchable: true,
-};
-const pressable = SettingBuilders.createPressable(obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx",
 );

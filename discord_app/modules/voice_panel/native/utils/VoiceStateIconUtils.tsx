@@ -1,18 +1,17 @@
 // discord_app/modules/voice_panel/native/utils/VoiceStateIconUtils.tsx
-import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import discord_common_shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, obj1;
-
+const require = fn;
 function isStableVoiceStateEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
-    tmp = null != arg0 && null != arg1 && shallowEqualDefault(arg0, arg1);
-    const tmp3 = null != arg0 && null != arg1 && shallowEqualDefault(arg0, arg1);
+    let tmp3 = null != arg0 && null != arg1;
+    if (tmp3) {
+      tmp3 = discord_common_shallowEqualDefault(arg0, arg1);
+    }
+    tmp = tmp3;
   }
   return tmp;
 }
@@ -36,29 +35,23 @@ let obj2 = {
   VIDEO_ACTIVE: 2,
   [2]: "VIDEO_ACTIVE",
 };
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let first;
       _require = arg0;
-      let closure_1 = arg1;
-      const tmp = _require;
-      let obj = require("react");
-      const cResult = obj.c(5);
+      closure_1 = arg1;
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore, VoiceStateStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg1) {
-        let tmp7;
-        let tmp8;
         if (cResult[2] === arg0) {
-          tmp7 = cResult[3];
-          tmp8 = cResult[4];
+          let tmp7 = cResult[3];
+          let tmp8 = cResult[4];
         }
         const tmpResult = tmp(504);
         return tmpResult.useStateFromStores(first, tmp7, tmp8, isStableVoiceStateEqual);
@@ -88,28 +81,24 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp8 = items1;
       tmp7 = E;
+      let obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
       _require = arg0;
-      let closure_1 = arg1;
-      let obj = require("get initialized");
+      closure_1 = arg1;
       const items = [MediaEngineStore, VoiceStateStore];
       const items1 = [arg0, arg1];
-      return obj.useStateFromStores(
+      return require("initialize").useStateFromStores(
         items,
         () => {
           if (null != closure_0) {
             const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
             if (null != voiceState) {
-              const obj = {
-                deaf: null,
-                selfDeaf: null,
-                mute: null,
-                isLocalMute: MediaEngineStore.isLocalMute(voiceState.userId),
-                selfMute: voiceState.selfMute,
-              };
+              const obj = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
               ({ deaf: obj.deaf, selfDeaf: obj.selfDeaf, mute: obj.mute } = voiceState);
+              obj.isLocalMute = MediaEngineStore.isLocalMute(voiceState.userId);
+              obj.selfMute = voiceState.selfMute;
               return obj;
             }
           }
@@ -119,80 +108,26 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 let closure_8 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
-      const tmp = closure_8(arg0, arg1);
-      let tmp2 = null;
-      if (null != tmp) {
-        let DEAFENED_SERVER;
-        if (tmp.deaf) {
-          DEAFENED_SERVER = obj.DEAFENED_SERVER;
-        } else if (tmp.selfDeaf) {
-          DEAFENED_SERVER = obj.DEAFENED;
-        } else if (tmp.mute) {
-          DEAFENED_SERVER = obj.MUTED_SERVER;
-        } else if (tmp.isLocalMute) {
-          DEAFENED_SERVER = obj.MUTED_LOCAL;
-        } else {
-          DEAFENED_SERVER = null;
-          if (tmp.selfMute) {
-            DEAFENED_SERVER = obj.MUTED;
-          }
-        }
-        tmp2 = DEAFENED_SERVER;
-      }
-      return tmp2;
-    }
-  : (arg0, arg1) => {
-      const tmp = closure_8(arg0, arg1);
-      let tmp2 = null;
-      if (null != tmp) {
-        let DEAFENED_SERVER;
-        if (tmp.deaf) {
-          DEAFENED_SERVER = obj.DEAFENED_SERVER;
-        } else if (tmp.selfDeaf) {
-          DEAFENED_SERVER = obj.DEAFENED;
-        } else if (tmp.mute) {
-          DEAFENED_SERVER = obj.MUTED_SERVER;
-        } else if (tmp.isLocalMute) {
-          DEAFENED_SERVER = obj.MUTED_LOCAL;
-        } else {
-          DEAFENED_SERVER = null;
-          if (tmp.selfMute) {
-            DEAFENED_SERVER = obj.MUTED;
-          }
-        }
-        tmp2 = DEAFENED_SERVER;
-      }
-      return tmp2;
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let first;
       _require = arg0;
-      let closure_1 = arg1;
-      const obj = require("react");
-      const cResult = obj.c(5);
-      const tmp = _require;
+      closure_1 = arg1;
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MediaEngineStore, VoiceStateStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg1) {
-        let tmp7;
-        let tmp8;
         if (cResult[2] === arg0) {
-          tmp7 = cResult[3];
-          tmp8 = cResult[4];
+          let tmp7 = cResult[3];
+          let tmp8 = cResult[4];
         }
-        const tmpResult = tmp(504);
-        return tmpResult.useStateFromStoresObject(first, tmp7, tmp8);
+        return tmp(504).useStateFromStoresObject(first, tmp7, tmp8);
       }
       class E {
         constructor() {
@@ -229,26 +164,24 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp8 = items1;
       tmp7 = E;
+      const obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
       _require = arg0;
-      let closure_1 = arg1;
+      closure_1 = arg1;
       const items = [MediaEngineStore, VoiceStateStore];
       const items1 = [arg1, arg0];
-      const obj = require("get initialized");
-      return obj.useStateFromStoresObject(
+      return require("initialize").useStateFromStoresObject(
         items,
         () => {
-          let tmp5;
-          let voiceState;
           if (null != closure_0) {
-            voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
+            const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
           }
           if (null != closure_0) {
             if (null != voiceState) {
-              obj2 = { selfVideo: voiceState.selfVideo, localVideoDisabledState: tmp5 };
-              tmp5 = null;
+              obj2 = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
+              let tmp5 = null;
               if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
                 let str = "manual";
                 if (MediaEngineStore.isLocalVideoAutoDisabled(voiceState.userId)) {
@@ -256,6 +189,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 tmp5 = str;
               }
+              obj2.localVideoDisabledState = tmp5;
               return obj2;
             }
           }
@@ -265,48 +199,47 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 let closure_9 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      const tmp = closure_9(arg0, arg1);
-      let tmp2 = null;
-      if (null != tmp) {
-        let tmp3 = null;
-        if (tmp.selfVideo) {
-          let VIDEO_ACTIVE;
-          if ("auto" === tmp.localVideoDisabledState) {
-            VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL_AUTO;
-          } else if ("manual" === tmp.localVideoDisabledState) {
-            VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL;
-          } else {
-            VIDEO_ACTIVE = obj2.VIDEO_ACTIVE;
-          }
-          tmp3 = VIDEO_ACTIVE;
+      const tmp = closure_8(arg0, arg1);
+      if (null == tmp) {
+        return null;
+      } else if (tmp.deaf) {
+        let DEAFENED_SERVER = obj.DEAFENED_SERVER;
+      } else if (tmp.selfDeaf) {
+        DEAFENED_SERVER = obj.DEAFENED;
+      } else if (tmp.mute) {
+        DEAFENED_SERVER = obj.MUTED_SERVER;
+      } else if (tmp.isLocalMute) {
+        DEAFENED_SERVER = obj.MUTED_LOCAL;
+      } else {
+        DEAFENED_SERVER = null;
+        if (tmp.selfMute) {
+          DEAFENED_SERVER = obj.MUTED;
         }
-        tmp2 = tmp3;
       }
-      return tmp2;
     }
   : (arg0, arg1) => {
-      const tmp = closure_9(arg0, arg1);
-      let tmp2 = null;
-      if (null != tmp) {
-        let tmp3 = null;
-        if (tmp.selfVideo) {
-          let VIDEO_ACTIVE;
-          if ("auto" === tmp.localVideoDisabledState) {
-            VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL_AUTO;
-          } else if ("manual" === tmp.localVideoDisabledState) {
-            VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL;
-          } else {
-            VIDEO_ACTIVE = obj2.VIDEO_ACTIVE;
-          }
-          tmp3 = VIDEO_ACTIVE;
+      const tmp = closure_8(arg0, arg1);
+      if (null == tmp) {
+        return null;
+      } else if (tmp.deaf) {
+        let DEAFENED_SERVER = obj.DEAFENED_SERVER;
+      } else if (tmp.selfDeaf) {
+        DEAFENED_SERVER = obj.DEAFENED;
+      } else if (tmp.mute) {
+        DEAFENED_SERVER = obj.MUTED_SERVER;
+      } else if (tmp.isLocalMute) {
+        DEAFENED_SERVER = obj.MUTED_LOCAL;
+      } else {
+        DEAFENED_SERVER = null;
+        if (tmp.selfMute) {
+          DEAFENED_SERVER = obj.MUTED;
         }
-        tmp2 = tmp3;
       }
-      return tmp2;
     };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
 
 export { MuteDeafenIconState };
@@ -314,4 +247,36 @@ export const VideoIconState = obj2;
 export const useStableVoiceParticipant = tmp2;
 export const useMuteDeafenIconState = tmp3;
 export const useStableVideoState = tmp4;
-export const useVideoIconState = tmp5;
+export const useVideoIconState = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      const tmp = closure_9(arg0, arg1);
+      let tmp2 = null;
+      if (null != tmp) {
+        if (!tmp.selfVideo) {
+          tmp2 = null;
+        } else if ("auto" === tmp.localVideoDisabledState) {
+          let VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL_AUTO;
+        } else if ("manual" === tmp.localVideoDisabledState) {
+          VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL;
+        } else {
+          VIDEO_ACTIVE = obj2.VIDEO_ACTIVE;
+        }
+      }
+      return tmp2;
+    }
+  : (arg0, arg1) => {
+      const tmp = closure_9(arg0, arg1);
+      let tmp2 = null;
+      if (null != tmp) {
+        if (!tmp.selfVideo) {
+          tmp2 = null;
+        } else if ("auto" === tmp.localVideoDisabledState) {
+          let VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL_AUTO;
+        } else if ("manual" === tmp.localVideoDisabledState) {
+          VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL;
+        } else {
+          VIDEO_ACTIVE = obj2.VIDEO_ACTIVE;
+        }
+      }
+      return tmp2;
+    };

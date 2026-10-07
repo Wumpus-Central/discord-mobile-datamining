@@ -2,15 +2,13 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
-import ChannelPermissionsConstants from "../../ChannelPermissionsConstants.tsx";
 import ChannelPermissionsUtilsAll from "../../ChannelPermissionsUtils.tsx";
 import ChannelSettingsPermissionsActionCreators from "../../../../actions/ChannelSettingsPermissionsActionCreators.tsx";
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem.tsx";
 import channel_permissions_ChannelPermissionsUtils from "../ChannelPermissionsUtils.tsx";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelSettingsPermissionsStore from "../../../../stores/ChannelSettingsPermissionsStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
@@ -19,35 +17,18 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let accessPermissions, c3, channel, navigation;
 
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_24;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
+require = fn;
 function onBack() {
-  const obj = AlertActionCreatorsDefault;
-  obj.close();
+  AlertActionCreatorsDefault.close();
   return false;
 }
-let _slicedToArray = _slicedToArray_mod;
-let _asyncToGenerator = _asyncToGenerator_mod;
-({ View: metroImportDefault, ScrollView: metroImportAll } = react_native);
-const SettingMode = ChannelPermissionsConstants.SettingMode;
+get_ActivityIndicator = fn(17);
+({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
+const SettingMode = fn(8110).SettingMode;
+const Constants = fn(1085);
 ({
   ChannelTypes: closure_18,
   Permissions: closure_19,
@@ -55,357 +36,338 @@ const SettingMode = ChannelPermissionsConstants.SettingMode;
   ChannelSettingsSections: closure_21,
   SettingsPaneTypes: closure_22,
 } = Constants);
-({ jsx: closure_23, jsxs: closure_24 } = Fragment);
+const jsxProd = fn(21);
+({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-let createStyles = createStyles_mod;
-let obj = { container: obj2, content: { marginTop: 16, flex: 1 }, adminWarning: obj3 };
-obj2 = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-createStyles = createStyles.createStyles;
-obj3 = { marginTop: nativeDefault.space.PX_12 };
-let closure_26 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const createStyles = fn(4896);
+let obj2 = {
+  container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
+  content: { marginTop: 16, flex: 1 },
+  adminWarning: null,
+};
+let obj3 = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj2.adminWarning = { marginTop: nativeDefault.space.PX_12 };
+let closure_26 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   ? (channel) => {
-      let first;
-      let tmp10;
-      let tmp13;
-      const tmp = channel;
-      let obj = channel(navigation[18]);
-      const cResult = obj.c(98);
+      const cResult = channel(navigation[18]).c(98);
       channel = channel.channel;
       const privateToggleState = channel.privateToggleState;
       const setPrivateToggleState = channel.setPrivateToggleState;
       closure_26();
-      const obj2 = channel(navigation[19]);
+      let obj = channel(navigation[18]);
+      const tmp = channel;
       const tmp2 = navigation;
-      navigation = obj2.useNavigation();
-      const obj3 = channel(navigation[20]);
-      const appChannelBotUserId = obj3.useAppChannelBotUserId(channel);
+      navigation = channel(navigation[19]).useNavigation();
+      let obj2 = channel(navigation[19]);
+      const appChannelBotUserId = channel(navigation[20]).useAppChannelBotUserId(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, GuildRoleStore];
+        let items = [GuildStore, GuildRoleStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== channel) {
         const fn = function c() {
-          let sortedRoles;
           guild = GuildStore.getGuild(channel.getGuildId());
-          const obj = { guild, sortedGuildRoles: sortedRoles };
-          sortedRoles = undefined;
+          const obj = { guild, sortedGuildRoles: null };
+          let sortedRoles;
           if (null != guild) {
             sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
           }
+          obj.sortedGuildRoles = sortedRoles;
           return obj;
         };
         cResult[1] = channel;
         cResult[2] = fn;
-        tmp10 = fn;
+        let tmp10 = fn;
       } else {
         tmp10 = cResult[2];
       }
-      const tmpResult = tmp(tmp2[21]);
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp10);
-      let guild = stateFromStoresObject.guild;
+      let obj3 = channel(navigation[20]);
+      const stateFromStoresObject = tmp(tmp2[21]).useStateFromStoresObject(first, tmp10);
+      guild = stateFromStoresObject.guild;
       if (cResult[3] !== navigation) {
         class N {
           constructor() {
-            navigation.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            return;
           }
         }
         const items1 = [navigation];
         cResult[3] = navigation;
         cResult[4] = N;
         cResult[5] = items1;
-        tmp13 = items1;
+        let tmp13 = items1;
       } else {
         class N {
           constructor() {
-            navigation.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            return;
           }
         }
         tmp13 = cResult[5];
       }
-      const layoutEffect = react.useLayoutEffect(N, tmp13);
+      const layoutEffect = noop.useLayoutEffect(N, tmp13);
       if (null != guild) {
         class N {
           constructor() {
-            navigation.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            return;
           }
         }
-        if (null != guild) {
-          class N {
-            constructor() {
-              navigation.setOptions({ headerRight: "r" });
-            }
-          }
-        }
-        return null;
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            navigation.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            return;
           }
         }
         cResult[6] = tmp16;
       } else {
         class N {
           constructor() {
-            navigation.setOptions({ headerRight: "r" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            return;
           }
         }
       }
+      if (null != guild) {
+        class N {
+          constructor() {
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+            return;
+          }
+        }
+      }
+      return null;
     }
   : (channel) => {
-      let HelpMessage;
-      let HelpMessage2;
-      let TableRow;
-      let TableSwitchRow;
-      let intl4;
-      let intl5;
-      let intl6;
-      let intl7;
-      let items3;
-      let obj10;
-      let obj12;
-      let obj14;
-      let obj16;
-      let obj18;
       channel = channel.channel;
       const privateToggleState = channel.privateToggleState;
       const setPrivateToggleState = channel.setPrivateToggleState;
-      navigation = undefined;
-      let c9;
+      let navigation;
+      c9 = undefined;
       function togglePrivateChannel() {
-        return obj(...arguments);
+        const self = this;
+        const apply = closure_7.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       }
-      let obj = function _togglePrivateChannel2() {
-        obj = _asyncToGenerator(async () => {
-          let closure_0;
-          let currentUser;
-          let v2;
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
+      closure_7 = async function _togglePrivateChannel2() {
+        if (dependencyMap === 2) {
+          dependencyMap = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          try {
+            dependencyMap = 2;
+            if (0 === v2) {
+              if (arg0 === 1) {
+                dependencyMap = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                dependencyMap = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_1 = tmp5;
+                closure_128_0 = undefined;
+                accessPermissions = accessPermissions.accessPermissions;
+                const result = v2(9250).isPrivateGuildChannel(accessPermissions);
+                const obj9 = v2(9250);
+                const tmp21 = v2;
+                closure_128_0 = v2(9250).flipEveryonePermission(accessPermissions, accessPermissions, result);
+                currentUser = currentUser.getCurrentUser();
+                let tmp7 = ChannelSettingsPermissionsStore;
+                const obj10 = v2(9250);
+                if (!ChannelSettingsPermissionsStore) {
+                  tmp7 = null == currentUser;
+                }
+                if (!tmp7) {
+                  tmp7 = canResult;
+                }
+                if (!tmp7) {
+                  v2 = 1;
+                  dependencyMap = 1;
+                  const obj4 = {
+                    value: tmp21(9250).grantUserChannelAccess(accessPermissions, accessPermissions),
+                    done: false,
+                  };
+                  return obj4;
+                }
+                canResult = PermissionStore.can(constants.ADMINISTRATOR, guild);
+              }
+            } else if (1 === tmp5) {
+              if (arg0 === 1) {
+                dependencyMap = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                dependencyMap = 3;
+                const obj6 = { value, done: true };
+                return obj6;
+              }
+            } else if (arg0 === 1) {
+              dependencyMap = 3;
               throw value;
             } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
+              dependencyMap = 3;
+              const obj = { value, done: true };
+              return obj;
             } else {
+              dependencyMap = 3;
               return { value: "IconComponent", done: null };
             }
+            const items = [closure_128_0];
+            v2 = 2;
+            dependencyMap = 1;
+            const obj7 = { value: tmp2(9251).savePermissionUpdates(closure_129_0.id, items), done: false };
+            return obj7;
+          } catch (tmp16) {
+            dependencyMap = tmp;
+            throw tmp16;
+          }
+        }
+      };
+      closure_8 = async function _onPrivateChannelSwitchChange2() {
+        if (dependencyMap === 2) {
+          dependencyMap = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            try {
-              let tmp;
-              c3 = 2;
-              if (0 === v2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  let closure_1 = tmp4;
-                  accessPermissions = accessPermissions.accessPermissions;
-                  const obj9 = v2(c3[22]);
-                  const result = obj9.isPrivateGuildChannel(accessPermissions);
-                  const obj10 = v2(c3[22]);
-                  tmp = obj10.flipEveryonePermission(accessPermissions, accessPermissions, result);
-                  currentUser = currentUser.getCurrentUser();
-                  let tmp6 = closure_2_9;
-                  const canResult = closure_1_14.can(constants.ADMINISTRATOR, guild);
-                  const tmp19 = v2;
-                  if (!closure_2_9) {
-                    tmp6 = null == currentUser;
-                  }
-                  if (!tmp6) {
-                    tmp6 = canResult;
-                  }
-                  if (!tmp6) {
-                    v2 = 1;
-                    const tmp19Result = tmp19(c3[22]);
-                    c3 = 1;
-                    const obj4 = {
-                      value: tmp19Result.grantUserChannelAccess(accessPermissions, accessPermissions),
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          try {
+            dependencyMap = 2;
+            if (0 === c2) {
+              if (arg0 === 1) {
+                dependencyMap = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                dependencyMap = 3;
+                const obj5 = { value, done: true };
+                return obj5;
+              } else {
+                closure_128_0 = undefined;
+                closure_128_1 = undefined;
+                closure_128_2 = undefined;
+                if (null != guild_id.guild_id) {
+                  if (!privateToggleState) {
+                    c2 = 1;
+                    dependencyMap = 1;
+                    const obj6 = {
+                      value: tmp5(9252).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                        guild_id,
+                        constants.VIEW_CHANNEL,
+                      ),
                       done: false,
                     };
-                    return obj4;
+                    return obj6;
                   }
                 }
-              } else if (1 === v2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else {
-                c3 = 3;
-                return { value: "IconComponent", done: null };
               }
-              const items = [tmp];
-              v2 = 2;
-              const obj5 = tmp(c3[23]);
-              c3 = 1;
-              const obj7 = { value: obj5.savePermissionUpdates(closure_129_0.id, items), done: false };
-              return obj7;
-            } catch (tmp15) {
-              c3 = 3;
-              throw tmp15;
-            }
-          }
-        });
-        return obj(...arguments);
-      };
-      obj = function _onPrivateChannelSwitchChange2() {
-        let guild_id;
-        obj = _asyncToGenerator(async () => {
-          let body;
-          let intl3;
-          let intl4;
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
+            } else if (arg0 === 1) {
+              dependencyMap = 3;
               throw value;
             } else if (arg0 === 2) {
-              const obj3 = { value, done: true };
-              return obj3;
+              dependencyMap = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else if (!value) {
+              dependencyMap = 3;
+              return { value: "IconComponent", done: null };
+            }
+            const intl = tmp5(1126).intl;
+            const string = intl.string;
+            const t = tmp5(1126).t;
+            if (closure_129_1) {
+              let stringResult = string(t.vw48TT);
             } else {
-              return { value: "IconComponent", done: null };
+              stringResult = string(t["47gQYL"]);
             }
-          } else {
-            try {
-              let title;
-              let channelName;
-              let stringResult;
-              let formatResult;
-              c3 = 2;
-              if (0 === body) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj5 = { value, done: true };
-                  return obj5;
-                } else {
-                  title = undefined;
-                  channelName = undefined;
-                  body = undefined;
-                  if (null != guild_id.guild_id) {
-                    if (!privateToggleState) {
-                      body = 1;
-                      const obj2 = title(c3[24]);
-                      c3 = 1;
-                      const obj6 = {
-                        value: obj2.checkChattableChannelThresholdMetAfterChannelPermissionDeny(
-                          guild_id,
-                          constants.VIEW_CHANNEL,
-                        ),
-                        done: false,
-                      };
-                      return obj6;
-                    }
-                  }
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else if (!value) {
-                c3 = 3;
-                return { value: "IconComponent", done: null };
-              }
-              const intl = title(c3[25]).intl;
-              const string = intl.string;
-              const t = title(c3[25]).t;
-              if (closure_129_1) {
-                stringResult = string(t.vw48TT);
-              } else {
-                stringResult = string(t["47gQYL"]);
-              }
-              title = stringResult;
-              const obj4 = title(c3[26]);
-              channelName = obj4.computeChannelName(closure_129_0, closure_1_16, closure_1_15);
-              const intl2 = title(c3[25]).intl;
-              const format = intl2.format;
-              const t2 = title(c3[25]).t;
-              if (closure_129_1) {
-                const obj7 = { channelName };
-                formatResult = format(t2.hGzPnx, obj7);
-              } else {
-                const obj8 = { channelName };
-                formatResult = format(t2.rKzX1E, obj8);
-              }
-              body = formatResult;
-              closure_129_2(!closure_129_1);
-              const obj9 = {
-                title,
-                body,
-                cancelText: intl3.string(title(c3[25]).t["ETE/oC"]),
-                confirmText: intl4.string(title(c3[25]).t.p89ACt),
-                onConfirm: closure_129_6,
-                hideActionSheet: false,
-                onCancel() {
-                  obj = c2(c3[22]);
-                  body(obj.isPrivateGuildChannel(title));
-                },
-                isDismissable: false,
-              };
-              const show = channelName(c3[27]).show;
-              const tmp41 = channelName(c3[27]);
-              intl3 = title(c3[25]).intl;
-              intl4 = title(c3[25]).intl;
-              show(obj9);
-              c3 = 3;
-              return { value: "IconComponent", done: null };
-            } catch (tmp54) {
-              c3 = 3;
-              throw tmp54;
+            closure_128_0 = stringResult;
+            closure_128_1 = tmp5(5049).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+            let intl2 = tmp5(1126).intl;
+            let onCancel = intl2.format;
+            let show = tmp5(1126).t;
+            if (closure_129_1) {
+              const obj7 = { channelName: closure_128_1 };
+              let onCancelResult = onCancel(show.hGzPnx, obj7);
+            } else {
+              const obj8 = { channelName: closure_128_1 };
+              onCancelResult = onCancel(show.rKzX1E, obj8);
             }
+            closure_128_2 = onCancelResult;
+            closure_129_2(!closure_129_1);
+            const obj4 = tmp5(5049);
+            show = tmp2(5714).show;
+            const obj9 = {
+              title: closure_128_0,
+              body: closure_128_2,
+              cancelText: null,
+              confirmText: null,
+              onConfirm: null,
+              hideActionSheet: false,
+              onCancel: null,
+              isDismissable: false,
+            };
+            const intl3 = tmp5(1126).intl;
+            obj9.cancelText = intl3.string(tmp5(1126).t["ETE/oC"]);
+            const intl4 = tmp5(1126).intl;
+            obj9.confirmText = intl4.string(tmp5(1126).t.p89ACt);
+            intl2 = closure_129_6;
+            obj9.onConfirm = closure_129_6;
+            onCancel = function onCancel() {
+              closure_1_2(c2(c3[22]).isPrivateGuildChannel(closure_1_0));
+            };
+            obj9.onCancel = onCancel;
+            show(obj9);
+            dependencyMap = 3;
+            const tmp42 = tmp2(5714);
+          } catch (tmp54) {
+            dependencyMap = tmp;
+            throw tmp54;
           }
-        });
-        return obj(...arguments);
+        }
       };
-      let tmp = closure_26();
-      const tmp3 = navigation;
-      obj = channel(navigation[19]);
-      navigation = obj.useNavigation();
+      const tmp = closure_26();
+      navigation = channel(navigation[19]).useNavigation();
+      let obj = channel(navigation[19]);
+      const appChannelBotUserId = channel(navigation[20]).useAppChannelBotUserId(channel);
       let obj2 = channel(navigation[20]);
-      const appChannelBotUserId = obj2.useAppChannelBotUserId(channel);
-      let obj3 = channel(navigation[21]);
       let items = [GuildStore, GuildRoleStore];
-      const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => {
-        let sortedRoles;
+      const stateFromStoresObject = channel(navigation[21]).useStateFromStoresObject(items, () => {
         guild = GuildStore.getGuild(channel.getGuildId());
-        obj = { guild, sortedGuildRoles: sortedRoles };
-        sortedRoles = undefined;
+        const obj = { guild, sortedGuildRoles: null };
+        let sortedRoles;
         if (null != guild) {
           sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
         }
+        obj.sortedGuildRoles = sortedRoles;
         return obj;
       });
-      let guild = stateFromStoresObject.guild;
+      guild = stateFromStoresObject.guild;
       const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
       const items1 = [navigation];
       const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
@@ -415,7 +377,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const memo = togglePrivateChannel.useMemo(() => {
         if (null != guild) {
           if (null != sortedGuildRoles) {
-            obj = ChannelPermissionsUtilsAll;
+            const obj = ChannelPermissionsUtilsAll;
             const existingRolesRows = obj.getExistingRolesRows(
               guild,
               sortedGuildRoles,
@@ -428,18 +390,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       if (null != guild) {
         if (null != sortedGuildRoles) {
-          let stringResult;
-          let string2Result;
           let id;
-          const getMemberIds = GuildMemberStore.getMemberIds;
-          const isCategoryResult = channel.isCategory();
           if (guild != null) {
             id = guild.id;
           }
-          const memberIds = getMemberIds(id);
+          const memberIds = GuildMemberStore.getMemberIds(id);
           let obj4 = setPrivateToggleState(tmp3[22]);
           let obj5 = { appChannelBotUserId };
-          const tmp15 = obj5;
           const existingMembersRows = obj4.getExistingMembersRows(
             memberIds,
             channel,
@@ -447,18 +404,21 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             channel.accessPermissions,
             obj5,
           );
-          let obj6 = setPrivateToggleState(tmp3[22]);
-          let result = obj6.isPrivateGuildChannel(channel);
+          const isCategoryResult = channel.isCategory();
+          let result = setPrivateToggleState(tmp3[22]).isPrivateGuildChannel(channel);
           c9 = result;
+          let obj6 = setPrivateToggleState(tmp3[22]);
           let obj7 = setPrivateToggleState(tmp3[29]);
-          const canEveryoneRoleResult = obj7.canEveryoneRole(constants2.VIEW_CHANNEL, guild);
-          let obj8 = setPrivateToggleState(tmp3[29]);
-          const canEveryoneRoleResult1 = obj8.canEveryoneRole(constants2.ADMINISTRATOR, guild);
+          const canEveryoneRoleResult = setPrivateToggleState(tmp3[29]).canEveryoneRole(constants2.VIEW_CHANNEL, guild);
+          const canEveryoneRoleResult1 = setPrivateToggleState(tmp3[29]).canEveryoneRole(
+            constants2.ADMINISTRATOR,
+            guild,
+          );
           const type = channel.type;
           let string = tmp2(tmp3[25]).intl.string;
           if (type === constants.GUILD_CATEGORY) {
             let intl2 = tmp2(tmp3[25]).intl;
-            stringResult = intl2.string(tmp2(tmp3[25]).t.RQUk61);
+            let stringResult = intl2.string(tmp2(tmp3[25]).t.RQUk61);
           } else {
             stringResult = tmp20;
             if (type === tmp21.GUILD_VOICE) {
@@ -466,122 +426,124 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               stringResult = intl.string(tmp2(tmp3[25]).t.cLjvKg);
             }
           }
-          let obj9 = { style: obj10, spacing: privateToggleState(tmp3[16]).space.PX_16, children: items3 };
-          obj10 = { paddingHorizontal: privateToggleState(tmp3[16]).space.PX_16 };
-          const Stack = tmp2(tmp3[30]).Stack;
-          const obj11 = { title: stringResult, hasIcons: false, children: closure_23(TableSwitchRow, obj12) };
-          const TableRowGroup = tmp2(tmp3[32]).TableRowGroup;
-          TableSwitchRow = tmp2(tmp3[31]).TableSwitchRow;
+          let obj9 = { style: null, spacing: null, children: null };
+          let obj10 = { paddingHorizontal: privateToggleState(tmp3[16]).space.PX_16 };
+          obj9.style = obj10;
+          obj9.spacing = privateToggleState(tmp3[16]).space.PX_16;
+          const obj11 = { title: stringResult, hasIcons: false, children: null };
           let intl3 = tmp2(tmp3[25]).intl;
           const string2 = intl3.string;
           let t = tmp2(tmp3[25]).t;
           if (isCategoryResult) {
-            string2Result = string2(t.lEPAZ5);
+            let string2Result = string2(t.lEPAZ5);
           } else {
             string2Result = string2(t.aUI70g);
           }
-          obj12 = {
+          const obj12 = {
             label: string2Result,
             value: privateToggleState,
             onValueChange: function onPrivateChannelSwitchChange() {
-              return obj(...arguments);
+              const self = this;
+              const apply = closure_8.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
             },
           };
-          items3 = [closure_23(TableRowGroup, obj11), , , , ,];
+          obj11.children = closure_23(tmp2(tmp3[31]).TableSwitchRow, obj12);
+          const items3 = [closure_23(tmp2(tmp3[32]).TableRowGroup, obj11), , , , ,];
           let tmp25Result = canEveryoneRoleResult1;
-          if (tmp25Result) {
-            const obj13 = { style: tmp.adminWarning, children: closure_23(HelpMessage, obj14) };
-            obj14 = {
-              messageType: channel(tmp3[33]).HelpMessageTypes.WARNING,
-              children: intl4.string(channel(tmp3[25]).t["5f3HIC"]),
-            };
-            HelpMessage = tmp2(tmp3[33]).HelpMessage;
-            intl4 = tmp2(tmp3[25]).intl;
-            tmp25Result = closure_23(obj, obj13);
+          if (canEveryoneRoleResult1) {
+            const obj13 = { style: tmp.adminWarning, children: null };
+            const obj14 = { messageType: tmp2(tmp3[33]).HelpMessageTypes.WARNING, children: null };
+            let intl4 = tmp2(tmp3[25]).intl;
+            obj14.children = intl4.string(tmp2(tmp3[25]).t["5f3HIC"]);
+            obj13.children = closure_23(tmp2(tmp3[33]).HelpMessage, obj14);
+            tmp25Result = closure_23(closure_7, obj13);
           }
           items3[1] = tmp25Result;
-          let tmp25Result2 = !canEveryoneRoleResult1 && !canEveryoneRoleResult && !result;
+          let tmp25Result2 = !canEveryoneRoleResult1;
+          if (!canEveryoneRoleResult1) {
+            tmp25Result2 = !canEveryoneRoleResult;
+          }
           if (tmp25Result2) {
-            const obj15 = { style: tmp.adminWarning, children: closure_23(HelpMessage2, obj16) };
-            obj16 = {
-              messageType: channel(tmp3[33]).HelpMessageTypes.WARNING,
-              children: intl5.string(channel(tmp3[25]).t.ZAk4Q9),
-            };
-            HelpMessage2 = tmp2(tmp3[33]).HelpMessage;
-            intl5 = tmp2(tmp3[25]).intl;
-            tmp25Result2 = closure_23(obj, obj15);
+            tmp25Result2 = !result;
+          }
+          if (tmp25Result2) {
+            const obj15 = { style: tmp.adminWarning, children: null };
+            const obj16 = { messageType: tmp2(tmp3[33]).HelpMessageTypes.WARNING, children: null };
+            const intl5 = tmp2(tmp3[25]).intl;
+            obj16.children = intl5.string(tmp2(tmp3[25]).t.ZAk4Q9);
+            obj15.children = closure_23(tmp2(tmp3[33]).HelpMessage, obj16);
+            tmp25Result2 = closure_23(closure_7, obj15);
           }
           items3[2] = tmp25Result2;
-          const obj17 = { hasIcons: true, children: closure_23(TableRow, obj18) };
-          const TableRowGroup2 = tmp2(tmp3[32]).TableRowGroup;
-          obj18 = {
+          const obj17 = { hasIcons: true, children: null };
+          const obj18 = {
             arrow: true,
-            icon: closure_23(channel(tmp3[34]).CirclePlusIcon, {}),
-            label: intl6.string(channel(tmp3[25]).t.dMJ3Y6),
-            onPress() {
-              if (null != channel) {
-                obj = channel_permissions_ChannelPermissionsUtils;
-                const result = obj.openAddMembersActionSheet(tmp);
-              }
-            },
+            icon: closure_23(tmp2(tmp3[34]).CirclePlusIcon, {}),
+            label: null,
+            onPress: null,
           };
-          TableRow = tmp2(tmp3[35]).TableRow;
-          intl6 = tmp2(tmp3[25]).intl;
-          items3[3] = closure_23(TableRowGroup2, obj17);
-          const obj19 = {
-            title: intl7.string(channel(tmp3[25]).t.ES4CC6),
-            hasIcons: true,
-            children: memo.map((item) => {
-              obj = { item, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id };
-              return closure_23(ChannelOverwritesItemDefault, obj, item.id);
-            }),
+          const intl6 = tmp2(tmp3[25]).intl;
+          obj18.label = intl6.string(tmp2(tmp3[25]).t.dMJ3Y6);
+          obj18.onPress = function onPress() {
+            if (null != channel) {
+              const result = channel_permissions_ChannelPermissionsUtils.openAddMembersActionSheet(tmp);
+            }
           };
-          const TableRowGroup3 = tmp2(tmp3[32]).TableRowGroup;
-          intl7 = tmp2(tmp3[25]).intl;
-          items3[4] = closure_23(TableRowGroup3, obj19);
+          obj17.children = closure_23(tmp2(tmp3[35]).TableRow, obj18);
+          items3[3] = closure_23(tmp2(tmp3[32]).TableRowGroup, obj17);
+          const obj19 = { title: null, hasIcons: true, children: null };
+          const intl7 = tmp2(tmp3[25]).intl;
+          obj19.title = intl7.string(tmp2(tmp3[25]).t.ES4CC6);
+          obj19.children = memo.map((item) =>
+            closure_2_23(
+              ChannelOverwritesItemDefault,
+              { item, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id },
+              item.id,
+            ),
+          );
+          items3[4] = closure_23(tmp2(tmp3[32]).TableRowGroup, obj19);
           const obj20 = {
             hasIcons: true,
-            children: existingMembersRows.map((item) => {
-              obj = { item, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id };
-              return closure_23(ChannelOverwritesItemDefault, obj, item.id);
-            }),
+            children: existingMembersRows.map((item) =>
+              closure_2_23(
+                ChannelOverwritesItemDefault,
+                { item, channelId: channel.id, showType: true, showRemove: true, guildId: channel.guild_id },
+                item.id,
+              ),
+            ),
           };
-          const TableRowGroup4 = tmp2(tmp3[32]).TableRowGroup;
-          items3[5] = closure_23(TableRowGroup4, obj20);
-          return closure_24(Stack, obj9);
+          items3[5] = closure_23(tmp2(tmp3[32]).TableRowGroup, obj20);
+          obj9.children = items3;
+          return closure_24(tmp2(tmp3[30]).Stack, obj9);
         }
       }
       return null;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let obj4 = { marginTop: nativeDefault.space.PX_12 };
+const size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/channel_permissions/native/components/EasyChannelPermissionSettings.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EasyChannelPermissionSettings(channelId) {
-      let BASIC;
-      let advancedMode;
-      let closure_4;
-      let closure_5;
-      let first;
-      let first1;
-      let tmp10;
-      let tmp19;
-      let tmp23;
-      let tmp25;
-      let tmp29;
-      let tmp30;
-      let tmp8;
-      let tmp9;
-      const tmp2 = first1;
-      let obj = channelId(first1[18]);
-      const cResult = obj.c(33);
+      const cResult = channelId(first1[18]).c(33);
       channelId = channelId.channelId;
       const origin = channelId.origin;
-      let obj2 = channelId(first1[37]);
-      obj2.useNavigatorBackPressHandler(onBack);
+      let obj = channelId(first1[18]);
+      channelId(first1[37]).useNavigatorBackPressHandler(onBack);
       closure_26();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -591,12 +553,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = channelId;
         cResult[2] = fn;
-        tmp8 = fn;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[2];
       }
-      const tmpResult = channelId(tmp2[21]);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp8);
+      let obj2 = channelId(first1[37]);
+      const stateFromStores = channelId(first1[21]).useStateFromStores(first, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelSettingsPermissionsStore];
         const fn2 = function f() {
@@ -604,104 +566,89 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = items1;
         cResult[4] = fn2;
-        tmp10 = fn2;
-        tmp9 = items1;
+        let tmp10 = fn2;
+        let tmp9 = items1;
       } else {
         tmp9 = cResult[3];
         tmp10 = cResult[4];
       }
+      const tmpResult = channelId(first1[21]);
       let isGuildStageVoiceResult;
-      const tmpResult2 = channelId(tmp2[21]);
-      const stateFromStores1 = tmpResult2.useStateFromStores(tmp9, tmp10);
-      const useState = react.useState;
+      const stateFromStores1 = channelId(first1[21]).useStateFromStores(tmp9, tmp10);
       if (stateFromStores != null) {
         isGuildStageVoiceResult = stateFromStores.isGuildStageVoice();
       }
       if (isGuildStageVoiceResult) {
-        BASIC = constants.MODERATORS;
+        let BASIC = constants.MODERATORS;
       } else if (stateFromStores1) {
         BASIC = constants.ADVANCED;
       } else {
         BASIC = constants.BASIC;
       }
-      const tmp17 = _slicedToArray(useState(BASIC), 2);
-      first1 = tmp17[0];
-      _slicedToArray = tmp17[1];
+      [first1, _slicedToArray] = noop.useState(BASIC);
       if (cResult[5] !== stateFromStores) {
-        const obj7 = stateFromStores(tmp2[22]);
-        const result = obj7.isPrivateGuildChannel(stateFromStores);
+        const result = stateFromStores(tmp2[22]).isPrivateGuildChannel(stateFromStores);
         cResult[5] = stateFromStores;
         cResult[6] = result;
-        tmp19 = result;
+        let tmp19 = result;
+        const obj7 = stateFromStores(tmp2[22]);
       } else {
         tmp19 = cResult[6];
       }
-      [r10079, tmp23] = _slicedToArray(react.useState(tmp19), 2);
-      _asyncToGenerator = tmp23;
-      _slicedToArray(react.useState(tmp19), 2);
+      const tmpResult2 = channelId(first1[21]);
+      [r10079, tmp23] = noop.useState(tmp19);
+      asyncGeneratorStep = tmp23;
       if (cResult[7] !== origin) {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
         const items2 = [origin];
         cResult[7] = origin;
         cResult[8] = U;
         cResult[9] = items2;
-        tmp25 = items2;
+        let tmp25 = items2;
       } else {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
         tmp25 = cResult[9];
       }
-      const effect = react.useEffect(U, tmp25);
+      const effect = noop.useEffect(U, tmp25);
       if (cResult[10] !== stateFromStores) {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
         cResult[10] = stateFromStores;
@@ -709,66 +656,54 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
       }
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
-        const stringResult = obj8.string(channelId(tmp2[25]).t["Mw/UDN"]);
+        const stringResult = obj8.string(tmp(tmp2[25]).t["Mw/UDN"]);
         const intl = tmp(tmp2[25]).intl;
-        const stringResult1 = intl.string(channelId(tmp2[25]).t["0a6awf"]);
+        const stringResult1 = intl.string(tmp(tmp2[25]).t["0a6awf"]);
         cResult[12] = stringResult1;
         cResult[13] = stringResult;
-        tmp30 = stringResult;
-        tmp29 = stringResult1;
+        let tmp30 = stringResult;
+        const tmp29 = stringResult1;
       } else {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
         tmp30 = cResult[13];
@@ -776,20 +711,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[14] !== stateFromStores) {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
         arr4[0] = tmp30;
@@ -797,126 +728,116 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           class U {
             constructor() {
-              const OVERVIEW = constants2.OVERVIEW;
-              let CHANNEL_SETTINGS = null;
-              const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-              const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-              AppAnalyticsUtilsDefault;
-              if (origin === OVERVIEW) {
-                CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+              tmp = ChannelSettingsSections;
+              obj = closure_1(closure_3[38]);
+              CHANNEL_SETTINGS = null;
+              if (origin === ChannelSettingsSections.OVERVIEW) {
+                tmp3 = SettingsPaneTypes;
+                CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
               }
-              const obj = {
-                settings_type: "channel",
-                origin_pane: CHANNEL_SETTINGS,
-                destination_pane: constants2.PERMISSIONS,
-              };
-              trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+              obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+              return;
             }
           }
         }
-        if (true === undefined) {
-          let tmp35;
+        if (true !== undefined) {
           class U {
             constructor() {
-              const OVERVIEW = constants2.OVERVIEW;
-              let CHANNEL_SETTINGS = null;
-              const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-              const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-              AppAnalyticsUtilsDefault;
-              if (origin === OVERVIEW) {
-                CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+              tmp = ChannelSettingsSections;
+              obj = closure_1(closure_3[38]);
+              CHANNEL_SETTINGS = null;
+              if (origin === ChannelSettingsSections.OVERVIEW) {
+                tmp3 = SettingsPaneTypes;
+                CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
               }
-              const obj = {
-                settings_type: "channel",
-                origin_pane: CHANNEL_SETTINGS,
-                destination_pane: constants2.PERMISSIONS,
-              };
-              trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+              obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+              return;
+            }
+          }
+          cResult[14] = stateFromStores;
+          cResult[15] = arr4;
+        } else {
+          class U {
+            constructor() {
+              tmp = ChannelSettingsSections;
+              obj = closure_1(closure_3[38]);
+              CHANNEL_SETTINGS = null;
+              if (origin === ChannelSettingsSections.OVERVIEW) {
+                tmp3 = SettingsPaneTypes;
+                CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
+              }
+              obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+              return;
             }
           }
           if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
             class U {
               constructor() {
-                const OVERVIEW = constants2.OVERVIEW;
-                let CHANNEL_SETTINGS = null;
-                const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-                const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-                AppAnalyticsUtilsDefault;
-                if (origin === OVERVIEW) {
-                  CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+                tmp = ChannelSettingsSections;
+                obj = closure_1(closure_3[38]);
+                CHANNEL_SETTINGS = null;
+                if (origin === ChannelSettingsSections.OVERVIEW) {
+                  tmp3 = SettingsPaneTypes;
+                  CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
                 }
-                const obj = {
-                  settings_type: "channel",
-                  origin_pane: CHANNEL_SETTINGS,
-                  destination_pane: constants2.PERMISSIONS,
-                };
-                trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+                obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+                return;
               }
             }
-            const stringResult2 = obj9.string(channelId(tmp2[25]).t.YIIUJ3);
+            const stringResult2 = obj9.string(tmp(tmp2[25]).t.YIIUJ3);
             cResult[16] = stringResult2;
-            tmp35 = stringResult2;
+            const tmp35 = stringResult2;
           } else {
             class U {
               constructor() {
-                const OVERVIEW = constants2.OVERVIEW;
-                let CHANNEL_SETTINGS = null;
-                const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-                const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-                AppAnalyticsUtilsDefault;
-                if (origin === OVERVIEW) {
-                  CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+                tmp = ChannelSettingsSections;
+                obj = closure_1(closure_3[38]);
+                CHANNEL_SETTINGS = null;
+                if (origin === ChannelSettingsSections.OVERVIEW) {
+                  tmp3 = SettingsPaneTypes;
+                  CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
                 }
-                const obj = {
-                  settings_type: "channel",
-                  origin_pane: CHANNEL_SETTINGS,
-                  destination_pane: constants2.PERMISSIONS,
-                };
-                trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+                obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+                return;
               }
             }
           }
           arr4.push(tmp35);
         }
-        cResult[14] = stateFromStores;
-        cResult[15] = arr4;
       } else {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
       }
       if (cResult[17] !== arr4) {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
         cResult[17] = arr4;
@@ -924,82 +845,62 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
       }
       if (cResult[19] === tmp28) {
         class U {
           constructor() {
-            const OVERVIEW = constants2.OVERVIEW;
-            let CHANNEL_SETTINGS = null;
-            const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-            const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-            AppAnalyticsUtilsDefault;
-            if (origin === OVERVIEW) {
-              CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+            tmp = ChannelSettingsSections;
+            obj = closure_1(closure_3[38]);
+            CHANNEL_SETTINGS = null;
+            if (origin === ChannelSettingsSections.OVERVIEW) {
+              tmp3 = SettingsPaneTypes;
+              CHANNEL_SETTINGS = SettingsPaneTypes.CHANNEL_SETTINGS;
             }
-            const obj = {
-              settings_type: "channel",
-              origin_pane: CHANNEL_SETTINGS,
-              destination_pane: constants2.PERMISSIONS,
-            };
-            trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
+            obj1 = { settings_type: "channel", origin_pane: CHANNEL_SETTINGS, destination_pane: tmp.PERMISSIONS };
+            trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.SETTINGS_PANE_VIEWED, obj1);
+            return;
           }
         }
       }
-      let obj3 = { pageWidth: 0, defaultIndex: first1, onSetActiveIndex: tmp28, items: tmp39 };
       cResult[19] = tmp28;
       cResult[20] = first1;
       cResult[21] = tmp39;
-      cResult[22] = obj3;
+      cResult[22] = { pageWidth: 0, defaultIndex: first1, onSetActiveIndex: tmp28, items: tmp39 };
+      let obj3 = { pageWidth: 0, defaultIndex: first1, onSetActiveIndex: tmp28, items: tmp39 };
+      const tmp16Result = _slicedToArray(noop.useState(tmp19), 2);
     }
   : function EasyChannelPermissionSettings(arg0) {
-      let BASIC;
-      let advancedMode;
-      let closure_4;
-      let defaultIndex;
-      let items6;
-      let obj10;
-      let obj9;
-      let origin;
-      let tmp23Result;
-      let tmp8;
       ({ channelId: require, origin } = arg0);
       defaultIndex = undefined;
       _slicedToArray = undefined;
-      let closure_5;
-      const tmp2 = defaultIndex;
-      let obj = require("useNavigatorBackPressHandler");
-      obj.useNavigatorBackPressHandler(onBack);
+      closure_5 = undefined;
+      require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(onBack);
       const tmp4 = closure_26();
-      let obj2 = require("get initialized");
+      let obj = require("useNavigatorBackPressHandler");
       const items = [ChannelStore];
-      const stateFromStores = obj2.useStateFromStores(items, () => ChannelStore.getChannel(require));
+      const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(require));
+      let obj2 = require("initialize");
       const items1 = [ChannelSettingsPermissionsStore];
       let isGuildStageVoiceResult;
-      const obj4 = require("get initialized");
-      const stateFromStores1 = obj4.useStateFromStores(items1, () => advancedMode.advancedMode);
-      const useState = react.useState;
+      const stateFromStores1 = require("initialize").useStateFromStores(items1, () => advancedMode.advancedMode);
       if (stateFromStores != null) {
         isGuildStageVoiceResult = stateFromStores.isGuildStageVoice();
       }
       if (isGuildStageVoiceResult) {
-        BASIC = constants.MODERATORS;
-        tmp8 = constants;
+        let BASIC = constants.MODERATORS;
+        let tmp8 = constants;
       } else if (stateFromStores1) {
         BASIC = constants.ADVANCED;
         tmp8 = constants;
@@ -1007,104 +908,103 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         BASIC = constants.BASIC;
         tmp8 = constants;
       }
-      [defaultIndex, _slicedToArray] = useState(BASIC);
-      const useState2 = react.useState;
-      const obj6 = stateFromStores(tmp2[22]);
-      const tmp11 = _slicedToArray(useState2(obj6.isPrivateGuildChannel(stateFromStores)), 2);
-      closure_5 = tmp13;
+      [defaultIndex, _slicedToArray] = noop.useState(BASIC);
+      const obj4 = require("initialize");
+      const tmp11 = _slicedToArray(
+        noop.useState(stateFromStores(defaultIndex[22]).isPrivateGuildChannel(stateFromStores)),
+        2,
+      );
+      closure_5 = tmp12;
       const items2 = [origin];
-      const first1 = tmp11[0];
-      const effect = react.useEffect(() => {
-        const OVERVIEW = constants2.OVERVIEW;
+      const effect = noop.useEffect(() => {
         let CHANNEL_SETTINGS = null;
-        const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-        const SETTINGS_PANE_VIEWED = constants.SETTINGS_PANE_VIEWED;
-        AppAnalyticsUtilsDefault;
-        if (origin === OVERVIEW) {
-          CHANNEL_SETTINGS = constants3.CHANNEL_SETTINGS;
+        if (origin === constants4.OVERVIEW) {
+          CHANNEL_SETTINGS = constants5.CHANNEL_SETTINGS;
         }
-        const obj = {
+        AppAnalyticsUtilsDefault.trackWithMetadata(constants3.SETTINGS_PANE_VIEWED, {
           settings_type: "channel",
           origin_pane: CHANNEL_SETTINGS,
-          destination_pane: constants2.PERMISSIONS,
+          destination_pane: constants4.PERMISSIONS,
+        });
+        const obj2 = {
+          settings_type: "channel",
+          origin_pane: CHANNEL_SETTINGS,
+          destination_pane: constants4.PERMISSIONS,
         };
-        trackWithMetadata(SETTINGS_PANE_VIEWED, obj);
       }, items2);
       const items3 = [stateFromStores];
-      const callback = react.useCallback((arg0) => {
+      const callback = noop.useCallback((arg0) => {
         if (arg0 === constants.ADVANCED) {
-          const obj3 = ChannelSettingsPermissionsActionCreators;
-          obj3.setAdvancedMode(true);
+          ChannelSettingsPermissionsActionCreators.setAdvancedMode(true);
         } else {
-          const obj = ChannelPermissionsUtilsAll;
-          closure_5(obj.isPrivateGuildChannel(stateFromStores));
-          const obj2 = ChannelSettingsPermissionsActionCreators;
-          obj2.setAdvancedMode(false);
+          closure_5(ChannelPermissionsUtilsAll.isPrivateGuildChannel(stateFromStores));
+          ChannelSettingsPermissionsActionCreators.setAdvancedMode(false);
         }
         closure_4(arg0);
       }, items3);
-      const intl = require("intl").intl;
-      const items4 = [intl.string(require("intl").t["Mw/UDN"])];
-      const intl2 = require("intl").intl;
-      items4[1] = intl2.string(require("intl").t["0a6awf"]);
+      const intl = require("util").intl;
+      const items4 = [intl.string(require("util").t["Mw/UDN"])];
+      const intl2 = require("util").intl;
+      items4[1] = intl2.string(require("util").t["0a6awf"]);
       let isGuildStageVoiceResult1;
       if (stateFromStores != null) {
         isGuildStageVoiceResult1 = stateFromStores.isGuildStageVoice();
       }
       if (true === isGuildStageVoiceResult1) {
-        const push = items4.push;
-        const intl3 = require("intl").intl;
-        push(intl3.string(require("intl").t.YIIUJ3));
+        const intl3 = require("util").intl;
+        items4.push(intl3.string(require("util").t.YIIUJ3));
       }
+      const obj6 = stateFromStores(defaultIndex[22]);
       const tmpResult = require("SegmentedControlState");
+      const items5 = [stateFromStores, defaultIndex];
+      const segmentedControlState = tmpResult.useSegmentedControlState({
+        pageWidth: 0,
+        defaultIndex,
+        onSetActiveIndex: callback,
+        items: items4.map((id) => ({ id, label: id, page: null })),
+      });
+      const effect1 = noop.useEffect(() => {
+        if (first === constants.BASIC) {
+          let ADVANCED = SettingMode.BASIC;
+        } else {
+          ADVANCED = SettingMode.ADVANCED;
+        }
+        const obj2 = { mode: ADVANCED, channel_is_private: null };
+        const obj = AppAnalyticsUtilsDefault;
+        obj2.channel_is_private = ChannelPermissionsUtilsAll.isPrivateGuildChannel(stateFromStores);
+        obj.trackWithMetadata(constants3.CHANNEL_PERMISSIONS_PAGE_VIEWED, obj2);
+      }, items5);
+      if (null == stateFromStores) {
+        return null;
+      } else {
+        const obj7 = { style: tmp4.container, children: null };
+        const obj8 = { style: null, children: null };
+        const obj9 = { paddingHorizontal: origin(tmp2[16]).space.PX_12 };
+        obj8.style = obj9;
+        const obj10 = { state: segmentedControlState };
+        obj8.children = closure_23(require("SegmentedControl").SegmentedControl, obj10);
+        const items6 = [closure_23(closure_7, obj8)];
+        let obj11 = { style: tmp4.content, children: null };
+        if (defaultIndex === tmp8.BASIC) {
+          const obj12 = { channel: stateFromStores, privateToggleState: tmp11[0], setPrivateToggleState: tmp12 };
+          let tmp21Result = closure_23(closure_27, obj12);
+        } else if (defaultIndex === tmp8.MODERATORS) {
+          const obj13 = { channel: stateFromStores };
+          tmp21Result = closure_23(origin(tmp2[41]), obj13);
+        } else {
+          const obj14 = { channelId: stateFromStores.id };
+          tmp21Result = closure_23(origin(tmp2[42]), obj14);
+        }
+        obj11.children = tmp21Result;
+        obj11 = closure_23(closure_8, obj11);
+        items6[1] = obj11;
+        obj7.children = items6;
+        closure_24(closure_7, obj7);
+      }
       let obj3 = {
         pageWidth: 0,
         defaultIndex,
         onSetActiveIndex: callback,
         items: items4.map((id) => ({ id, label: id, page: null })),
       };
-      const items5 = [stateFromStores, defaultIndex];
-      const segmentedControlState = tmpResult.useSegmentedControlState(obj3);
-      const effect1 = react.useEffect(() => {
-        let ADVANCED;
-        let obj2;
-        const trackWithMetadata = AppAnalyticsUtilsDefault.trackWithMetadata;
-        const CHANNEL_PERMISSIONS_PAGE_VIEWED = constants.CHANNEL_PERMISSIONS_PAGE_VIEWED;
-        AppAnalyticsUtilsDefault;
-        if (first === constants.BASIC) {
-          ADVANCED = SettingMode.BASIC;
-        } else {
-          ADVANCED = SettingMode.ADVANCED;
-        }
-        const obj = { mode: ADVANCED, channel_is_private: obj2.isPrivateGuildChannel(stateFromStores) };
-        obj2 = ChannelPermissionsUtilsAll;
-        trackWithMetadata(CHANNEL_PERMISSIONS_PAGE_VIEWED, obj);
-      }, items5);
-      let tmp21Result = null;
-      if (null != stateFromStores) {
-        const obj7 = { style: tmp4.container, children: items6 };
-        const obj8 = { style: obj9, children: closure_23(require("SegmentedControl").SegmentedControl, obj10) };
-        obj10 = { state: segmentedControlState };
-        obj9 = { paddingHorizontal: origin(tmp2[16]).space.PX_12 };
-        items6 = [closure_23(closure_7, obj8)];
-        const obj11 = { style: tmp4.content, children: tmp23Result };
-        if (defaultIndex === tmp8.BASIC) {
-          const obj12 = { channel: stateFromStores, privateToggleState: first1, setPrivateToggleState: tmp11[1] };
-          tmp23Result = closure_23(closure_27, obj12);
-        } else if (defaultIndex === tmp8.MODERATORS) {
-          const obj13 = { channel: stateFromStores };
-          tmp23Result = closure_23(origin(tmp2[41]), obj13);
-        } else {
-          const obj14 = { channelId: stateFromStores.id };
-          tmp23Result = closure_23(origin(tmp2[42]), obj14);
-        }
-        items6[1] = closure_23(closure_8, obj11);
-        tmp21Result = closure_24(closure_7, obj7);
-      }
-      return tmp21Result;
     };
-let result = size.fileFinishedImporting(
-  "modules/channel_permissions/native/components/EasyChannelPermissionSettings.tsx",
-);
-
-export default tmp6;

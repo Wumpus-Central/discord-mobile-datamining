@@ -5,22 +5,16 @@ import OAuth2Scopes from "../../../../../../discord_common/js/shared/shared-cons
 import NativeRPCHelpers from "../NativeRPCHelpers.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let obj3;
-const RPC_SCOPE_CONFIG = Constants2.RPC_SCOPE_CONFIG;
-let obj = {};
-const obj2 = {
-  scope: obj3,
-  handler() {
-    const obj = NativeRPCHelpers;
-    return obj.getDeprecatedVoiceSettings();
-  },
-};
-obj3 = {};
-const GET_VOICE_SETTINGS = Constants.RPCCommands.GET_VOICE_SETTINGS;
-const ANY = RPC_SCOPE_CONFIG.ANY;
+const obj = {};
+const obj2 = { scope: null, handler: null };
+const obj3 = {};
 const items = [OAuth2Scopes.OAuth2Scopes.RPC, OAuth2Scopes.OAuth2Scopes.RPC_VOICE_READ];
-obj3[ANY] = items;
-obj[GET_VOICE_SETTINGS] = obj2;
+obj3[Constants2.RPC_SCOPE_CONFIG.ANY] = items;
+obj2.scope = obj3;
+obj2.handler = function handler() {
+  return NativeRPCHelpers.getDeprecatedVoiceSettings();
+};
+obj[Constants.RPCCommands.GET_VOICE_SETTINGS] = obj2;
 const result = size.fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");
 
 export default obj;

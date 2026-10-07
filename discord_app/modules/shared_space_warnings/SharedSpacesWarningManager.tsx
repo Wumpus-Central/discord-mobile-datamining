@@ -2,34 +2,14 @@
 import DurationsDefault from "../../utils/Durations.tsx";
 import ConstantsIOS from "../../ConstantsIOS.tsx";
 import showGdmBlockedUserModal from "show_gdm_modal/showGdmBlockedUserModal.native.tsx";
-import showVoiceChannelBlockedUserWarning2 from "show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx";
+import showVoiceChannelBlockedUserWarning from "show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
-import SharedSpacesWarningStore from "SharedSpacesWarningStore.tsx";
 import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let set;
-
-let c9;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-const f115140 = (item) => {
-  let flag = false;
-  {
-    let num = closure_1_6(item);
-    if (num == null) {
-      num = 0;
-    }
-    const _Date = Date;
-    flag = num > Date.now() - closure_1_12;
-  }
-  return flag;
-};
+require = fn;
 function handleChannelSelect(channelId) {
   channelId = channelId.channelId;
   if (null != channelId) {
@@ -40,7 +20,6 @@ function handleChannelSelect(channelId) {
         const found = recipients.filter((item) => RelationshipStore.isBlocked(item));
         const recipients1 = channel.recipients;
         const found1 = recipients1.filter((item) => RelationshipStore.isIgnored(item));
-        const tmp = found.length > 0 || found1.length > 0;
         if (tmp) {
           let blockedUserWarningDismissed = channel.blockedUserWarningDismissed;
           if (!blockedUserWarningDismissed) {
@@ -53,10 +32,10 @@ function handleChannelSelect(channelId) {
           }
           if (!blockedUserWarningDismissed) {
             const obj2 = { channelId, blockedUserIds: found, ignoredUserIds: found1 };
-            const obj = showGdmBlockedUserModal;
-            const result = obj.showGdmBlockedUserModal(obj2);
+            const result = showGdmBlockedUserModal.showGdmBlockedUserModal(obj2);
           }
         }
+        tmp = found.length > 0 || found1.length > 0;
       }
     }
   }
@@ -68,18 +47,15 @@ function handleAppStateChanged(state) {
       const blockedUsersForVoiceChannel = VoiceChannelBlockedUserStore.getBlockedUsersForVoiceChannel(channelId);
       const ignoredUsersForVoiceChannel = VoiceChannelBlockedUserStore.getIgnoredUsersForVoiceChannel(channelId);
       if (blockedUsersForVoiceChannel.size > 0) {
-        if (metroImportAll()) {
+        if (closure_1_8()) {
           const _Set = Set;
           const items = [];
           HermesBuiltin.arraySpread(
-            items,
             ignoredUsersForVoiceChannel,
-            HermesBuiltin.arraySpread(items, blockedUsersForVoiceChannel, 0),
+            HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
           );
-          const self = this;
-          const self2 = this;
-          set = new Set(items);
-          let num3 = metroImportDefault();
+          const set = new Set(items);
+          let num3 = React5();
           if (num3 == null) {
             num3 = 0;
           }
@@ -87,51 +63,62 @@ function handleAppStateChanged(state) {
           let everyResult = num3 > Date.now() - HOUR;
           if (!everyResult) {
             const _Array = Array;
+            everyResult = Array.from(set).every((item) => {
+              let flag = false;
+              {
+                let num = closure_1_6(item);
+                if (num == null) {
+                  num = 0;
+                }
+                const _Date = Date;
+                flag = num > Date.now() - closure_1_12;
+              }
+              return flag;
+            });
             const arr = Array.from(set);
-            everyResult = arr.every(f115140);
           }
           if (!everyResult) {
             const items1 = [];
-            const showVoiceChannelBlockedUserWarning =
-              showVoiceChannelBlockedUserWarning2.showVoiceChannelBlockedUserWarning;
-            showVoiceChannelBlockedUserWarning2;
             HermesBuiltin.arraySpread(
-              items1,
               ignoredUsersForVoiceChannel,
-              HermesBuiltin.arraySpread(items1, blockedUsersForVoiceChannel, 0),
+              HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0),
             );
-            const result = showVoiceChannelBlockedUserWarning(channelId, items1[0]);
+            const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
+            const tmpResult = showVoiceChannelBlockedUserWarning;
           }
         }
       }
-      React4();
+      options();
     } else {
-      React4();
+      options();
     }
   }
 }
+const SharedSpacesWarningStore = fn(13561);
 ({
   getChannelDismissTimestamp: hasOwnProperty,
   getUserDismissTimestamp: metroRequire,
-  getGlobalDismissTimestamp: metroImportDefault,
-  isBlockedWarningQueued: metroImportAll,
-  dequeueBlockWarning: c9,
+  getGlobalDismissTimestamp: closure_7,
+  isBlockedWarningQueued: closure_8,
+  dequeueBlockWarning: closure_9,
 } = SharedSpacesWarningStore);
 let closure_11 = 3 * DurationsDefault.Millis.DAY;
 let closure_12 = 2 * DurationsDefault.Millis.DAY;
 const HOUR = DurationsDefault.Millis.HOUR;
-class SharedSpacesWarningManager extends AutomaticLifecycleManager {
+class SharedSpacesWarningManager extends tmp3 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const obj = { CHANNEL_SELECT: handleChannelSelect, APP_STATE_UPDATE: handleAppStateChanged };
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    obj = { CHANNEL_SELECT: handleChannelSelect, APP_STATE_UPDATE: handleAppStateChanged };
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;
   }
-  handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, userId) {
+}
+SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin"] =
+  function handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, userId) {
     channelId = RTCConnectionStore.getChannelId();
     if (channelId === channelId) {
       if (null != ChannelStore.getChannel(channelId)) {
-        let num = metroImportDefault();
+        let num = React5();
         if (num == null) {
           num = 0;
         }
@@ -139,7 +126,7 @@ class SharedSpacesWarningManager extends AutomaticLifecycleManager {
         const tmp5 = num <= Date.now() - HOUR;
         let tmp6 = !tmp5;
         if (tmp5) {
-          let num2 = metroRequire(userId);
+          let num2 = timestampProducer(userId);
           if (num2 == null) {
             num2 = 0;
           }
@@ -147,38 +134,47 @@ class SharedSpacesWarningManager extends AutomaticLifecycleManager {
           tmp6 = num2 > Date.now() - closure_12;
         }
         if (!tmp6) {
-          const obj = showVoiceChannelBlockedUserWarning2;
-          const result = obj.showVoiceChannelBlockedUserWarning(channelId, userId);
+          const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, userId);
         }
       }
     }
-  }
-}
-const prototype = SharedSpacesWarningManager.prototype;
+  };
 const sharedSpacesWarningManager = new SharedSpacesWarningManager();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningManager.tsx");
 
 export default sharedSpacesWarningManager;
 export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarningInCooldownForUsers(arg0) {
-  let num = metroImportDefault();
+  let num = React5();
   if (num == null) {
     num = 0;
   }
   let everyResult = num > Date.now() - HOUR;
   if (!everyResult) {
     const _Array = Array;
+    everyResult = Array.from(arg0).every((item) => {
+      let flag = false;
+      {
+        let num = closure_1_6(item);
+        if (num == null) {
+          num = 0;
+        }
+        const _Date = Date;
+        flag = num > Date.now() - closure_1_12;
+      }
+      return flag;
+    });
     const arr = Array.from(arg0);
-    everyResult = arr.every(f115140);
   }
   return everyResult;
 };
-export const userBlockedWarningInCooldown = function userBlockedWarningInCooldown(View) {
+export const userBlockedWarningInCooldown = function userBlockedWarningInCooldown(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   if (!flag) {
-    let num = metroImportDefault();
+    let num = React5();
     if (num == null) {
       num = 0;
     }
@@ -187,7 +183,7 @@ export const userBlockedWarningInCooldown = function userBlockedWarningInCooldow
   }
   let tmp5 = !flag;
   if (flag) {
-    let num2 = metroRequire(View);
+    let num2 = timestampProducer(arg0);
     if (num2 == null) {
       num2 = 0;
     }

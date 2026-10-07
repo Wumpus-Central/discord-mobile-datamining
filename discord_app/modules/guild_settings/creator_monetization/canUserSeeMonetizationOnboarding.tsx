@@ -3,33 +3,31 @@ import CreatorMonetizationRestrictionsUtils from "../../creator_monetization_rev
 import GuildRoleSubscriptionSettingUtils from "../../guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
 import CreatorMonetizationEligibilityExperimentUtils from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx",
 );
 
 export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(guild) {
-  let obj2;
-  let obj3;
-  let obj4;
-  const ownerId = guild.ownerId;
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  const obj = {
+  const obj2 = {
     guild,
-    isOwner: ownerId === id,
-    canManageGuildRoleSubscriptions: obj2.canManageGuildRoleSubscriptions(guild),
-    isUserInCreatorMonetizationEligibleCountry: obj3.isUserInCreatorMonetizationEligibleCountry(),
-    shouldRestrictUpdatingRoleSubscriptionSettings: obj4.shouldRestrictUpdatingCreatorMonetizationSettings(guild.id),
+    isOwner: guild.ownerId === id,
+    canManageGuildRoleSubscriptions: null,
+    isUserInCreatorMonetizationEligibleCountry: null,
+    shouldRestrictUpdatingRoleSubscriptionSettings: null,
   };
-  const canSeeGuildRoleSubscriptionSettings = GuildRoleSubscriptionSettingUtils.canSeeGuildRoleSubscriptionSettings;
-  GuildRoleSubscriptionSettingUtils;
-  obj2 = GuildRoleSubscriptionSettingUtils;
-  obj3 = CreatorMonetizationEligibilityExperimentUtils;
-  obj4 = CreatorMonetizationRestrictionsUtils;
-  return canSeeGuildRoleSubscriptionSettings(obj);
+  const obj = GuildRoleSubscriptionSettingUtils;
+  obj2.canManageGuildRoleSubscriptions = GuildRoleSubscriptionSettingUtils.canManageGuildRoleSubscriptions(guild);
+  obj2.isUserInCreatorMonetizationEligibleCountry =
+    CreatorMonetizationEligibilityExperimentUtils.isUserInCreatorMonetizationEligibleCountry();
+  obj2.shouldRestrictUpdatingRoleSubscriptionSettings =
+    CreatorMonetizationRestrictionsUtils.shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
+  return obj.canSeeGuildRoleSubscriptionSettings(obj2);
 };

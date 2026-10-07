@@ -1,14 +1,11 @@
 // discord_app/modules/billing/native/subscription/useRestorePurchases.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import size from "../../../../../_runtime/metro/00002__.js";
-
-let c4;
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
 let closure_5 = new LoggerDefault("useRestorePurchases");
-new LoggerDefault("useRestorePurchases");
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/subscription/useRestorePurchases.tsx");
 
 export default function useRestorePurchases() {
@@ -20,106 +17,103 @@ export default function useRestorePurchases() {
   if (flag === undefined) {
     flag = true;
   }
-  obj = function _restore() {
-    obj = _asyncToGenerator(async () => {
-      let logger;
-      let obj2;
-      if (logger === 2) {
-        logger = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  _slicedToArray = async function _restore(noop) {
+    if (logger === 2) {
+      logger = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (noop === 1) {
+        throw value;
+      } else if (noop === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        let c3;
-        try {
-          let closure_0;
-          logger = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              logger = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              logger = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              let closure_1 = tmp;
-              closure_0 = tmp4;
-              closure_2_2(true);
-              logger.log("isRestoring true");
-              c3 = 2;
-              c4 = 3;
-              logger = 1;
-              const obj5 = { value: obj2.restoreAndApplyPurchases(), done: false };
-              obj2 = closure_0(closure_1[4]);
-              return obj5;
-            }
-          } else if (1 === c4) {
-            c3 = 0;
-            closure_129_2(false);
-            logger.log("isRestoring false");
-            throw closure_2;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        logger = 2;
+        if (0 === c4) {
+          if (noop === 1) {
+            logger = 3;
+            throw value;
+          } else if (noop === 2) {
+            logger = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            if (2 === c4) {
-              c3 = 1;
-              closure_0 = closure_2;
-              logger.error(closure_0);
-            } else if (arg0 === 1) {
-              logger = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              closure_129_2(false);
-              logger.log("isRestoring false");
-              logger = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              logger.log("restored unfinished transactions");
-              closure_129_1.current = true;
-              c3 = 1;
-            }
+            closure_0 = tmp8;
+            asyncGeneratorStep(true);
+            logger.log("isRestoring true");
+            c3 = 2;
+            c4 = 3;
+            logger = 1;
+            const obj5 = { value: closure_0(tmp4[4]).restoreAndApplyPurchases(), done: false };
+            return obj5;
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_129_2(false);
+          logger.log("isRestoring false");
+          throw closure_2;
+        } else {
+          if (2 === tmp8) {
+            c3 = 1;
+            closure_128_0 = closure_2;
+            logger.error(closure_128_0);
             c3 = 0;
             closure_129_2(false);
             logger.log("isRestoring false");
             logger = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp39) {
-          closure_2 = tmp39;
-          if (0 === c3) {
+          } else if (noop === 1) {
             logger = 3;
-            throw tmp39;
-          } else if (1 === tmp41) {
-            c4 = 1;
-          } else {
-            c4 = 2;
+            throw value;
+          } else if (noop !== 2) {
+            logger.log("restored unfinished transactions");
+            closure_129_1.current = true;
+            c3 = 1;
           }
+          c3 = 0;
+          closure_129_2(false);
+          logger.log("isRestoring false");
+          logger = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp43) {
+        closure_2 = tmp43;
+        if (tmp5 === c3) {
+          logger = tmp3;
+          throw tmp43;
+        } else if (tmp2 === tmp45) {
+          c4 = tmp2;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    return obj(...arguments);
-  };
-  const ref = react.useRef(false);
-  let tmp = obj(react.useState(false), 2);
-  let closure_2 = tmp[1];
-  const items = [flag];
-  const first = tmp[0];
-  const effect = react.useEffect(() => {
-    function restore() {
-      return obj(...arguments);
     }
-    const tmp = flag || !ref.current;
+  };
+  noop.useRef(false);
+  let tmp = _slicedToArray(noop.useState(false), 2);
+  closure_2 = tmp[1];
+  const items = [flag];
+  const effect = noop.useEffect(() => {
+    let tmp = flag;
+    if (!flag) {
+      tmp = !ref.current;
+    }
     if (tmp) {
-      restore();
+      (function restore() {
+        const self = this;
+        const apply = closure_1_3.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
     }
   }, items);
-  return first;
+  return tmp[0];
 }

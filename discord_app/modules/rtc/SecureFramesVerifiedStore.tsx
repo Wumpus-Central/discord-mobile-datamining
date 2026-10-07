@@ -1,7 +1,6 @@
 // discord_app/modules/rtc/SecureFramesVerifiedStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import Constants from "../../Constants.tsx";
 import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
 import SecureFramesUtils from "SecureFramesUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -9,27 +8,18 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StreamRTCConnectionStore from "../../stores/StreamRTCConnectionStore.tsx";
 import TransientKeyStore from "TransientKeyStore.tsx";
 import VerifiedKeyStore from "VerifiedKeyStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const f100452 = (acc, item) => {
-  const obj = closure_0(dependencyMap[7]);
-  const tmp = true === map.get(obj.decodeStreamKey(item).ownerId);
-  const value = map1.get(item);
-  const result = map1.set(item, tmp);
-  return value !== tmp || acc;
-};
+require = fn;
 function computeCallVerification() {
   let userIds = RTCConnectionStore.getUserIds();
   if (userIds == null) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
     userIds = new Set();
   }
   let flag = true;
   for (const item10020 of userIds) {
-    if (tmp3 !== item10020) {
-      if (true !== map.get(tmp4)) {
+    if (tmp5 !== item10020) {
+      if (true !== map.get(tmp6)) {
         flag = false;
         obj.return();
         break;
@@ -49,60 +39,57 @@ function handleUserUpdate(userId) {
     let flag = false;
     if (null != secureFramesRosterMapEntry) {
       const _Uint8Array = Uint8Array;
-      const self = this;
-      const self2 = this;
       const uint8Array = new Uint8Array(secureFramesRosterMapEntry);
-      let isKeyVerifiedResult =
-        VerifiedKeyStore.isKeyVerified(userId, uint8Array) || TransientKeyStore.isKeyVerified(userId, uint8Array);
+      let isKeyVerifiedResult = VerifiedKeyStore.isKeyVerified(userId, uint8Array);
+      if (!isKeyVerifiedResult) {
+        isKeyVerifiedResult = TransientKeyStore.isKeyVerified(userId, uint8Array);
+      }
       const items = [RTCConnectionStore, StreamRTCConnectionStore];
-      const obj = SecureFramesUtils;
       if (isKeyVerifiedResult) {
         isKeyVerifiedResult = !obj.getIsSecureFramesKeyInconsistent(userId, items);
       }
       flag = isKeyVerifiedResult !== map.get(userId);
       const result = map.set(userId, isKeyVerifiedResult);
+      obj = SecureFramesUtils;
     }
     const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-    const reduced = allActiveStreamKeys.reduce(f100452, false);
-    const tmp16 = computeCallVerification();
+    const reduced = allActiveStreamKeys.reduce((acc, item) => {
+      const tmp = true === map.get(closure_0(dependencyMap[7]).decodeStreamKey(item).ownerId);
+      value = map1.get(item);
+      const result = map1.set(item, tmp);
+      return value !== tmp || acc;
+    }, false);
     if (!flag) {
       flag = reduced;
     }
     if (!flag) {
-      flag = tmp16;
+      flag = tmp18;
     }
     return flag;
   }
 }
-const RTCConnectionStates = Constants.RTCConnectionStates;
+const RTCConnectionStates = fn(1085).RTCConnectionStates;
 const map = new Map();
 const map1 = new Map();
 let c10 = false;
 let channelId = null;
-const Store = get_initializedDefault.Store;
-class SecureFramesVerifiedStore extends Store {
-  initialize() {
-    this.waitFor(
-      AuthenticationStore,
-      RTCConnectionStore,
-      StreamRTCConnectionStore,
-      TransientKeyStore,
-      VerifiedKeyStore,
-    );
-  }
-  isCallVerified() {
-    return c10;
-  }
-  isStreamVerified(streamKey) {
-    return map1.get(streamKey);
-  }
-  isUserVerified(userId) {
-    return map.get(userId);
-  }
-}
+const Store = initializeDefault.Store;
+class SecureFramesVerifiedStore extends Store {}
 const prototype = SecureFramesVerifiedStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore, RTCConnectionStore, StreamRTCConnectionStore, TransientKeyStore, VerifiedKeyStore);
+};
+prototype["isCallVerified"] = function isCallVerified() {
+  return c10;
+};
+prototype["isStreamVerified"] = function isStreamVerified(streamKey) {
+  return map1.get(streamKey);
+};
+prototype["isUserVerified"] = function isUserVerified(userId) {
+  return map.get(userId);
+};
 SecureFramesVerifiedStore.displayName = "SecureFramesVerifiedStore";
-let obj = {
+const secureFramesVerifiedStore = new SecureFramesVerifiedStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleReset() {
     map.clear();
     map1.clear();
@@ -119,8 +106,6 @@ let obj = {
     }
   },
   RTC_CONNECTION_STATE: function handleRtcConnectionState(state) {
-    let context;
-    let streamKey;
     ({ streamKey, context } = state);
     if (state.state !== RTCConnectionStates.DISCONNECTED) {
       return false;
@@ -138,7 +123,6 @@ let obj = {
     }
   },
   RTC_CONNECTION_ROSTER_MAP_UPDATE: function handleBulkUserUpdate(userIds) {
-    let closure_0;
     userIds = userIds.userIds;
     const id = AuthenticationStore.getId();
     let reduced = userIds.reduce((acc, userId) => {
@@ -146,13 +130,17 @@ let obj = {
       if (closure_0 !== userId) {
         const obj = { userId };
         tmp = handleUserUpdate(obj) || acc;
-        handleUserUpdate(obj) || acc;
+        const tmp3 = handleUserUpdate(obj) || acc;
       }
       return tmp;
     }, false);
     const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-    const reduced1 = allActiveStreamKeys.reduce(f100452, false);
-    const tmp3 = computeCallVerification();
+    const reduced1 = allActiveStreamKeys.reduce((acc, item) => {
+      const tmp = true === map.get(closure_0(dependencyMap[7]).decodeStreamKey(item).ownerId);
+      value = map1.get(item);
+      const result = map1.set(item, tmp);
+      return value !== tmp || acc;
+    }, false);
     if (!reduced) {
       reduced = reduced1;
     }
@@ -166,8 +154,8 @@ let obj = {
   SECURE_FRAMES_VERIFIED_KEY_CREATE: handleUserUpdate,
   SECURE_FRAMES_VERIFIED_KEY_DELETE: handleUserUpdate,
   SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: handleUserUpdate,
-};
-const secureFramesVerifiedStore = new SecureFramesVerifiedStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesVerifiedStore.tsx");
 
 export default secureFramesVerifiedStore;

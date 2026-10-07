@@ -1,5 +1,5 @@
 // discord_app/modules/media_channel/MediaPostEmbedUtils.tsx
-import intl3 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
@@ -10,28 +10,14 @@ import LinkUtils from "../links/LinkUtils.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import Constants from "../../Constants.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let metroImportDefault;
-let metroRequire;
-({ GuildFeatures: metroRequire, MessageAttachmentFlags: metroImportDefault } = Constants);
+require = fn;
+const Constants = fn(1085);
+({ GuildFeatures: metroRequire, MessageAttachmentFlags: closure_7 } = Constants);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
 
 export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(arg0) {
-  let author_id;
-  let canAccess;
-  let channelName;
-  let guild;
-  let height;
-  let mediaPostEmbedData;
-  let name1;
-  let parentChannel;
-  let postThread;
-  let selectedGuildId;
-  let stringResult1;
-  let user;
-  let width;
   ({ mediaPostEmbedData, guild, parentChannel, user, canAccess } = arg0);
   ({ postThread, selectedGuildId } = arg0);
   if (canAccess === undefined) {
@@ -40,55 +26,49 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
   if (null == mediaPostEmbedData) {
     return null;
   } else {
-    let stringResult;
     let has_media_attachment = !canAccess;
-    const obj6 = MediaPostThumbnailUtils;
-    const thumbnailImage = obj6.getThumbnailImage(mediaPostEmbedData.thumbnail);
+    const thumbnailImage = MediaPostThumbnailUtils.getThumbnailImage(mediaPostEmbedData.thumbnail);
     if (!canAccess) {
       has_media_attachment = mediaPostEmbedData.has_media_attachment;
     }
-    const intl = intl3.intl;
+    const intl = util.intl;
     const string = intl.string;
-    const t = intl3.t;
+    const t = util.t;
     if (canAccess) {
-      stringResult = string(t.UsZEBI);
+      let stringResult = string(t.UsZEBI);
     } else {
       stringResult = string(t.ReFzYZ);
     }
     let name;
     if (null != user) {
-      const obj = NicknameUtilsDefault;
-      name = obj.getName(mediaPostEmbedData.guild_id, mediaPostEmbedData.channel_id, user);
+      name = NicknameUtilsDefault.getName(mediaPostEmbedData.guild_id, mediaPostEmbedData.channel_id, user);
     }
     let avatarURL;
     if (user != null) {
       let id;
-      const getAvatarURL = user.getAvatarURL;
       if (guild != null) {
         id = guild.id;
       }
-      avatarURL = getAvatarURL(id, 40);
+      avatarURL = user.getAvatarURL(id, 40);
     }
-    const tmp6 = null != avatarURL && selectedGuildId === mediaPostEmbedData.guild_id;
     if (!tmp6) {
-      const obj5 = { id: null, icon: null, size: 40, canAnimate: false };
       ({ guild_id: obj3.id, guild_icon: obj3.icon } = mediaPostEmbedData);
-      const obj2 = AvatarUtilsDefault;
-      avatarURL = obj2.getGuildIconURL(obj5);
+      avatarURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 40, canAnimate: false });
+      const obj4 = { id: null, icon: null, size: 40, canAnimate: false };
     }
     const thumbnail = mediaPostEmbedData.thumbnail;
     let flag = false;
     if (null != thumbnail) {
       ({ height, width } = thumbnail);
       flag = null != height && null != width && height >= width;
+      const tmp8 = null != height && null != width && height >= width;
     }
     if (flag) {
       flag = !has_media_attachment;
     }
+    tmp6 = null != avatarURL && selectedGuildId === mediaPostEmbedData.guild_id;
     const thumbnail2 = mediaPostEmbedData.thumbnail;
     let num2;
-    const hasFlag = FlagUtils.hasFlag;
-    FlagUtils;
     if (thumbnail2 != null) {
       num2 = thumbnail2.flags;
     }
@@ -96,72 +76,84 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
       num2 = 0;
     }
     let str = mediaPostEmbedData.title;
-    const hasFlagResult = hasFlag(num2, metroImportDefault.IS_SPOILER);
+    const tmp17Result = FlagUtils;
     if (str == null) {
       str = "";
     }
-    const obj8 = {
+    const obj6 = {
       title: str,
       subtitle: mediaPostEmbedData.description,
       ctaText: stringResult,
       coverImage: thumbnailImage,
-      coverImageOverlayText: stringResult1,
+      coverImageOverlayText: null,
       parentChannelId: null,
       threadId: null,
-      postThread,
-      messageId: mediaPostEmbedData.message_id,
-      canAccess,
-      guildId: mediaPostEmbedData.guild_id,
-      guildName: name1,
-      authorId: author_id,
-      authorName: name,
-      channelName,
-      avatarUrl: avatarURL,
-      shouldShowBlurredThumbnailImage: has_media_attachment,
-      shouldContainMediaWithBackground: flag,
-      shouldSpoiler: hasFlagResult,
+      postThread: null,
+      messageId: null,
+      canAccess: null,
+      guildId: null,
+      guildName: null,
+      authorId: null,
+      authorName: null,
+      channelName: null,
+      avatarUrl: null,
+      shouldShowBlurredThumbnailImage: null,
+      shouldContainMediaWithBackground: null,
+      shouldSpoiler: null,
       obscureAwaitingScan: false,
       flags: null,
       contentScanVersion: null,
     };
-    stringResult1 = undefined;
+    let stringResult1;
     if (has_media_attachment) {
-      const intl2 = intl3.intl;
-      stringResult1 = intl2.string(intl3.t.Yonlia);
+      const intl2 = util.intl;
+      stringResult1 = intl2.string(util.t.Yonlia);
     }
-    ({ parent_channel_id: obj4.parentChannelId, channel_id: obj4.threadId } = mediaPostEmbedData);
-    name1 = undefined;
+    obj6.coverImageOverlayText = stringResult1;
+    ({ parent_channel_id: obj5.parentChannelId, channel_id: obj5.threadId } = mediaPostEmbedData);
+    obj6.postThread = postThread;
+    obj6.messageId = mediaPostEmbedData.message_id;
+    obj6.canAccess = canAccess;
+    obj6.guildId = mediaPostEmbedData.guild_id;
+    let name1;
     if (guild != null) {
       name1 = guild.name;
     }
     if (name1 == null) {
       name1 = mediaPostEmbedData.guild_name;
     }
-    author_id = undefined;
+    obj6.guildName = name1;
+    let author_id;
     if (mediaPostEmbedData != null) {
       author_id = mediaPostEmbedData.author_id;
     }
-    channelName = undefined;
+    obj6.authorId = author_id;
+    obj6.authorName = name;
+    let channelName;
     if (null != parentChannel) {
-      const tmp18Result2 = useChannelName;
-      channelName = tmp18Result2.computeChannelName(parentChannel, UserStore, RelationshipStore);
+      channelName = useChannelName.computeChannelName(parentChannel, UserStore, RelationshipStore);
+      const tmp17Result2 = useChannelName;
     }
-    ({ flags: obj4.flags, content_scan_version: obj4.contentScanVersion } = mediaPostEmbedData);
-    return obj8;
+    obj6.channelName = channelName;
+    obj6.avatarUrl = avatarURL;
+    obj6.shouldShowBlurredThumbnailImage = has_media_attachment;
+    obj6.shouldContainMediaWithBackground = flag;
+    obj6.shouldSpoiler = FlagUtils.hasFlag(num2, constants2.IS_SPOILER);
+    ({ flags: obj5.flags, content_scan_version: obj5.contentScanVersion } = mediaPostEmbedData);
+    return obj6;
   }
 };
 export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(url) {
   let tryParseChannelPathResult;
   if (null != url) {
-    const obj = findCodedLinks;
-    const parseURLSafelyResult = obj.parseURLSafely(url);
+    const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      const tmp2Result = findCodedLinks;
-      const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
+      const result = findCodedLinks.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
+        tryParseChannelPathResult = LinkUtils.tryParseChannelPath(result);
         const tmp2Result2 = LinkUtils;
-        tryParseChannelPathResult = tmp2Result2.tryParseChannelPath(result);
       }
+      const tmp2Result = findCodedLinks;
     }
   }
   if (null != tryParseChannelPathResult) {
@@ -176,30 +168,27 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
 };
 export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPath(url) {
   if (null != url) {
-    const obj = findCodedLinks;
-    const parseURLSafelyResult = obj.parseURLSafely(url);
+    const parseURLSafelyResult = findCodedLinks.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      const tmpResult = findCodedLinks;
-      const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
+      const result = findCodedLinks.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        const tmpResult2 = LinkUtils;
-        return tmpResult2.tryParseChannelPath(result);
+        return LinkUtils.tryParseChannelPath(result);
       }
+      const tmpResult = findCodedLinks;
     }
   }
 };
 export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMediaChannel) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != isMediaChannel) {
       const features = guild.features;
-      let hasItem = features.has(metroRequire.CREATOR_MONETIZABLE);
+      let hasItem = features.has(constants.CREATOR_MONETIZABLE);
       if (!hasItem) {
         const features2 = guild.features;
-        hasItem = features2.has(metroRequire.CREATOR_MONETIZABLE_PROVISIONAL);
+        hasItem = features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL);
       }
-      const tmp5 = true === isMediaChannel.isMediaChannel() && hasItem;
-      return tmp5;
+      return true === isMediaChannel.isMediaChannel() && hasItem;
     }
   }
   return false;

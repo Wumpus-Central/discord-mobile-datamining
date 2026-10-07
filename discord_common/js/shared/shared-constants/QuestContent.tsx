@@ -3,14 +3,16 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
   DISMISSIBLE: new Set([0, 1, 4, 5, 10, 13]),
-  TARGETED: new Set([0, 8]),
-  DESKTOP_DELIVERY: new Set([1, 10]),
-  MOBILE_DELIVERY: new Set([13]),
+  TARGETED: null,
+  DESKTOP_DELIVERY: null,
+  MOBILE_DELIVERY: null,
 };
-new Set([0, 1, 4, 5, 10, 13]);
-new Set([0, 8]);
-new Set([1, 10]);
-new Set([13]);
+const set = new Set([0, 1, 4, 5, 10, 13]);
+obj.TARGETED = new Set([0, 8]);
+const set1 = new Set([0, 8]);
+obj.DESKTOP_DELIVERY = new Set([1, 10]);
+const set2 = new Set([1, 10]);
+obj.MOBILE_DELIVERY = new Set([13]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestContent.tsx");
 
 export const QuestContent = {

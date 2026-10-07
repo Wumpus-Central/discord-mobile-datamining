@@ -1,152 +1,151 @@
 // discord_app/modules/react_asset/native/native_required_assets_icons.tsx
-import AssetRegistryDefault from "../../../../_runtime/04584_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/04810_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/04827_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/04833_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/04846_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/04852_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/05821_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../_runtime/05824_AssetRegistry.js";
-import AssetRegistryDefault9 from "../../../../_runtime/05825_AssetRegistry.js";
-import AssetRegistryDefault10 from "../../../../_runtime/05827_AssetRegistry.js";
-import AssetRegistryDefault11 from "../../../../_runtime/05828_AssetRegistry.js";
-import AssetRegistryDefault12 from "../../../../_runtime/05829_AssetRegistry.js";
-import AssetRegistryDefault13 from "../../../../_runtime/05843_AssetRegistry.js";
-import AssetRegistryDefault14 from "../../../../_runtime/05844_AssetRegistry.js";
-import AssetRegistryDefault15 from "../../../../_runtime/05859_AssetRegistry.js";
-import AssetRegistryDefault16 from "../../../../_runtime/06008_AssetRegistry.js";
-import AssetRegistryDefault17 from "../../../../_runtime/06022_AssetRegistry.js";
-import AssetRegistryDefault18 from "../../../../_runtime/06025_AssetRegistry.js";
-import AssetRegistryDefault19 from "../../../../_runtime/06464_AssetRegistry.js";
-import AssetRegistryDefault20 from "../../../../_runtime/06466_AssetRegistry.js";
-import AssetRegistryDefault21 from "../../../../_runtime/06636_AssetRegistry.js";
-import AssetRegistryDefault22 from "../../../../_runtime/07535_AssetRegistry.js";
-import AssetRegistryDefault23 from "../../../../_runtime/07537_AssetRegistry.js";
-import AssetRegistryDefault24 from "../../../../_runtime/07566_AssetRegistry.js";
-import AssetRegistryDefault25 from "../../../../_runtime/07589_AssetRegistry.js";
-import AssetRegistryDefault26 from "../../../../_runtime/07636_AssetRegistry.js";
-import AssetRegistryDefault27 from "../../../../_runtime/07756_AssetRegistry.js";
-import AssetRegistryDefault28 from "../../../../_runtime/07764_AssetRegistry.js";
-import AssetRegistryDefault29 from "../../../../_runtime/07831_AssetRegistry.js";
-import AssetRegistryDefault30 from "../../../../_runtime/07960_AssetRegistry.js";
-import AssetRegistryDefault31 from "../../../../_runtime/07962_AssetRegistry.js";
-import AssetRegistryDefault32 from "../../../../_runtime/08386_AssetRegistry.js";
-import AssetRegistryDefault33 from "../../../../_runtime/08445_AssetRegistry.js";
-import AssetRegistryDefault34 from "../../../../_runtime/08578_AssetRegistry.js";
-import AssetRegistryDefault35 from "../../../../_runtime/08580_AssetRegistry.js";
-import AssetRegistryDefault36 from "../../../../_runtime/08910_AssetRegistry.js";
-import AssetRegistryDefault37 from "../../../../_runtime/09585_AssetRegistry.js";
-import AssetRegistryDefault38 from "../../../../_runtime/09596_AssetRegistry.js";
-import AssetRegistryDefault39 from "../../../../_runtime/09611_AssetRegistry.js";
-import AssetRegistryDefault40 from "../../../../_runtime/09681_AssetRegistry.js";
-import AssetRegistryDefault41 from "../../../../_runtime/09703_AssetRegistry.js";
-import AssetRegistryDefault42 from "../../../../_runtime/10070_AssetRegistry.js";
-import AssetRegistryDefault43 from "../../../../_runtime/10381_AssetRegistry.js";
-import AssetRegistryDefault44 from "../../../../_runtime/10383_AssetRegistry.js";
-import AssetRegistryDefault45 from "../../../../_runtime/10706_AssetRegistry.js";
-import AssetRegistryDefault46 from "../../../../_runtime/10858_AssetRegistry.js";
-import AssetRegistryDefault47 from "../../../../_runtime/11006_AssetRegistry.js";
-import AssetRegistryDefault48 from "../../../../_runtime/11290_AssetRegistry.js";
-import AssetRegistryDefault49 from "../../../../_runtime/11330_AssetRegistry.js";
-import AssetRegistryDefault50 from "../../../../_runtime/11380_AssetRegistry.js";
-import AssetRegistryDefault51 from "../../../../_runtime/11479_AssetRegistry.js";
-import AssetRegistryDefault52 from "../../../../_runtime/11577_AssetRegistry.js";
-import AssetRegistryDefault53 from "../../../../_runtime/12137_AssetRegistry.js";
-import AssetRegistryDefault54 from "../../../../_runtime/12206_AssetRegistry.js";
-import AssetRegistryDefault55 from "../../../../_runtime/12773_AssetRegistry.js";
-import AssetRegistryDefault56 from "../../../../_runtime/13149_AssetRegistry.js";
-import AssetRegistryDefault57 from "../../../../_runtime/13671_AssetRegistry.js";
-import AssetRegistryDefault58 from "../../../../_runtime/13673_AssetRegistry.js";
-import AssetRegistryDefault59 from "../../../../_runtime/14795_AssetRegistry.js";
-import AssetRegistryDefault60 from "../../../../_runtime/14798_AssetRegistry.js";
-import AssetRegistryDefault61 from "../../../../_runtime/14971_AssetRegistry.js";
-import AssetRegistryDefault62 from "../../../../_runtime/15041_AssetRegistry.js";
-import AssetRegistryDefault63 from "../../../../_runtime/16045_AssetRegistry.js";
-import AssetRegistryDefault64 from "../../../../_runtime/16380_AssetRegistry.js";
-import AssetRegistryDefault65 from "../../../../_runtime/16382_AssetRegistry.js";
-import AssetRegistryDefault66 from "../../../../_runtime/17769_AssetRegistry.js";
-import AssetRegistryDefault67 from "../../../../_runtime/18148_AssetRegistry.js";
-import AssetRegistryDefault68 from "../../../../_runtime/18149_AssetRegistry.js";
-import AssetRegistryDefault69 from "../../../../_runtime/18150_AssetRegistry.js";
-import AssetRegistryDefault70 from "../../../../_runtime/18151_AssetRegistry.js";
-import AssetRegistryDefault71 from "../../../../_runtime/18152_AssetRegistry.js";
-import AssetRegistryDefault72 from "../../../../_runtime/18153_AssetRegistry.js";
+import _modDef4584 from "../../../../_runtime/metro/04584__.js";
+import _modDef4810 from "../../../../_runtime/metro/04810__.js";
+import _modDef4827 from "../../../../_runtime/metro/04827__.js";
+import _modDef4833 from "../../../../_runtime/metro/04833__.js";
+import _modDef4846 from "../../../../_runtime/metro/04846__.js";
+import _modDef4852 from "../../../../_runtime/metro/04852__.js";
+import _modDef5821 from "../../../../_runtime/metro/05821__.js";
+import _modDef5824 from "../../../../_runtime/metro/05824__.js";
+import _modDef5825 from "../../../../_runtime/metro/05825__.js";
+import _modDef5827 from "../../../../_runtime/metro/05827__.js";
+import _modDef5828 from "../../../../_runtime/metro/05828__.js";
+import _modDef5829 from "../../../../_runtime/metro/05829__.js";
+import _modDef5843 from "../../../../_runtime/metro/05843__.js";
+import _modDef5844 from "../../../../_runtime/metro/05844__.js";
+import _modDef5859 from "../../../../_runtime/metro/05859__.js";
+import _modDef6008 from "../../../../_runtime/metro/06008__.js";
+import _modDef6022 from "../../../../_runtime/metro/06022__.js";
+import _modDef6025 from "../../../../_runtime/metro/06025__.js";
+import _modDef6464 from "../../../../_runtime/metro/06464__.js";
+import _modDef6466 from "../../../../_runtime/metro/06466__.js";
+import _modDef6636 from "../../../../_runtime/metro/06636__.js";
+import _modDef7535 from "../../../../_runtime/metro/07535__.js";
+import _modDef7537 from "../../../../_runtime/metro/07537__.js";
+import _modDef7566 from "../../../../_runtime/metro/07566__.js";
+import _modDef7589 from "../../../../_runtime/metro/07589__.js";
+import _modDef7636 from "../../../../_runtime/metro/07636__.js";
+import _modDef7756 from "../../../../_runtime/metro/07756__.js";
+import _modDef7764 from "../../../../_runtime/metro/07764__.js";
+import _modDef7831 from "../../../../_runtime/metro/07831__.js";
+import _modDef7960 from "../../../../_runtime/metro/07960__.js";
+import _modDef7962 from "../../../../_runtime/metro/07962__.js";
+import _modDef8386 from "../../../../_runtime/metro/08386__.js";
+import _modDef8445 from "../../../../_runtime/metro/08445__.js";
+import _modDef8578 from "../../../../_runtime/metro/08578__.js";
+import _modDef8580 from "../../../../_runtime/metro/08580__.js";
+import _modDef8910 from "../../../../_runtime/metro/08910__.js";
+import _modDef9585 from "../../../../_runtime/metro/09585__.js";
+import _modDef9596 from "../../../../_runtime/metro/09596__.js";
+import _modDef9611 from "../../../../_runtime/metro/09611__.js";
+import _modDef9681 from "../../../../_runtime/metro/09681__.js";
+import _modDef9703 from "../../../../_runtime/metro/09703__.js";
+import _modDef10070 from "../../../../_runtime/metro/10070__.js";
+import _modDef10381 from "../../../../_runtime/metro/10381__.js";
+import _modDef10383 from "../../../../_runtime/metro/10383__.js";
+import _modDef10706 from "../../../../_runtime/metro/10706__.js";
+import _modDef10858 from "../../../../_runtime/metro/10858__.js";
+import _modDef11006 from "../../../../_runtime/metro/11006__.js";
+import _modDef11290 from "../../../../_runtime/metro/11290__.js";
+import _modDef11330 from "../../../../_runtime/metro/11330__.js";
+import _modDef11380 from "../../../../_runtime/metro/11380__.js";
+import _modDef11479 from "../../../../_runtime/metro/11479__.js";
+import _modDef11577 from "../../../../_runtime/metro/11577__.js";
+import _modDef12137 from "../../../../_runtime/metro/12137__.js";
+import _modDef12206 from "../../../../_runtime/metro/12206__.js";
+import _modDef12773 from "../../../../_runtime/metro/12773__.js";
+import _modDef13149 from "../../../../_runtime/metro/13149__.js";
+import _modDef13671 from "../../../../_runtime/metro/13671__.js";
+import _modDef13673 from "../../../../_runtime/metro/13673__.js";
+import _modDef14795 from "../../../../_runtime/metro/14795__.js";
+import _modDef14798 from "../../../../_runtime/metro/14798__.js";
+import _modDef14971 from "../../../../_runtime/metro/14971__.js";
+import _modDef15041 from "../../../../_runtime/metro/15041__.js";
+import _modDef16045 from "../../../../_runtime/metro/16045__.js";
+import _modDef16380 from "../../../../_runtime/metro/16380__.js";
+import _modDef16382 from "../../../../_runtime/metro/16382__.js";
+import _modDef17769 from "../../../../_runtime/metro/17769__.js";
+import _modDef18148 from "../../../../_runtime/metro/18148__.js";
+import _modDef18149 from "../../../../_runtime/metro/18149__.js";
+import _modDef18150 from "../../../../_runtime/metro/18150__.js";
+import _modDef18151 from "../../../../_runtime/metro/18151__.js";
+import _modDef18152 from "../../../../_runtime/metro/18152__.js";
+import _modDef18153 from "../../../../_runtime/metro/18153__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
-  AnnouncementsIcon: AssetRegistryDefault10,
-  AppsIcon: AssetRegistryDefault8,
-  ArrowAngleLeftUpIcon: AssetRegistryDefault50,
-  ArrowAngleRightUpIcon: AssetRegistryDefault49,
-  ArrowLargeLeftIcon: AssetRegistryDefault17,
-  ArrowLargeRightIcon: AssetRegistryDefault67,
-  AttachmentIcon: AssetRegistryDefault44,
-  BellZIcon: AssetRegistryDefault56,
-  BoostGemIcon: AssetRegistryDefault4,
-  ChannelListMagnifyingGlassIcon: AssetRegistryDefault58,
-  CheckmarkLargeIcon: AssetRegistryDefault,
-  ChatXIcon: AssetRegistryDefault53,
-  CheckmarkSmallIcon: AssetRegistryDefault21,
-  ChevronSmallDownIcon: AssetRegistryDefault46,
-  ChevronSmallRightIcon: AssetRegistryDefault16,
-  CircleErrorIcon: AssetRegistryDefault68,
-  CircleInformationIcon: AssetRegistryDefault69,
-  CircleQuestionIcon: AssetRegistryDefault61,
-  ClipsIcon: AssetRegistryDefault60,
-  ClockWarningIcon: AssetRegistryDefault51,
-  ConnectionAverageIcon: AssetRegistryDefault70,
-  ConnectionBadIcon: AssetRegistryDefault71,
-  ConnectionFineIcon: AssetRegistryDefault65,
-  ConnectionUnknownIcon: AssetRegistryDefault64,
-  DownloadIcon: AssetRegistryDefault6,
-  EyeIcon: AssetRegistryDefault20,
-  EyeSlashIcon: AssetRegistryDefault19,
-  GameControllerIcon: AssetRegistryDefault29,
-  GifIcon: AssetRegistryDefault28,
-  GroupIcon: AssetRegistryDefault9,
-  HandRequestSpeakIcon: AssetRegistryDefault39,
-  HomeIcon: AssetRegistryDefault66,
-  ImageBrokenIcon: AssetRegistryDefault72,
-  ImageIcon: AssetRegistryDefault13,
-  ImageWarningIcon: AssetRegistryDefault14,
-  LinkIcon: AssetRegistryDefault5,
-  LockIcon: AssetRegistryDefault15,
-  LockUnlockedIcon: AssetRegistryDefault42,
-  MaximizeIcon: AssetRegistryDefault52,
-  MicrophoneArrowRightIcon: AssetRegistryDefault38,
-  MicrophoneIcon: AssetRegistryDefault41,
-  MicrophoneSlashIcon: AssetRegistryDefault3,
-  MoreHorizontalIcon: AssetRegistryDefault25,
-  MusicIcon: AssetRegistryDefault37,
-  PaperIcon: AssetRegistryDefault24,
-  PauseIcon: AssetRegistryDefault31,
-  PencilIcon: AssetRegistryDefault26,
-  PhoneCallIcon: AssetRegistryDefault22,
-  PhoneHangUpIcon: AssetRegistryDefault23,
-  PinIcon: AssetRegistryDefault45,
-  PlayIcon: AssetRegistryDefault30,
-  PlaystationNeutralIcon: AssetRegistryDefault35,
-  PollsIcon: AssetRegistryDefault43,
-  ReactionIcon: AssetRegistryDefault33,
-  RefreshIcon: AssetRegistryDefault59,
-  ScreenIcon: AssetRegistryDefault34,
-  SignPostIcon: AssetRegistryDefault57,
-  SlashBoxIcon: AssetRegistryDefault47,
-  SpotifyNeutralIcon: AssetRegistryDefault63,
-  StageIcon: AssetRegistryDefault11,
-  StickerIcon: AssetRegistryDefault54,
-  SuperReactionIcon: AssetRegistryDefault36,
-  ThreadIcon: AssetRegistryDefault7,
-  TicketIcon: AssetRegistryDefault62,
-  TopicsIcon: AssetRegistryDefault48,
-  UserCheckIcon: AssetRegistryDefault27,
-  VoiceNormalIcon: AssetRegistryDefault12,
-  VoiceXIcon: AssetRegistryDefault40,
-  WarningIcon: AssetRegistryDefault2,
-  WindowLaunchIcon: AssetRegistryDefault55,
-  XSmallIcon: AssetRegistryDefault18,
-  XboxNeutralIcon: AssetRegistryDefault32,
-};
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_icons.tsx");
 
-export const NATIVE_REQUIRED_ASSETS_ICONS = obj;
+export const NATIVE_REQUIRED_ASSETS_ICONS = {
+  AnnouncementsIcon: _modDef5827,
+  AppsIcon: _modDef5824,
+  ArrowAngleLeftUpIcon: _modDef11380,
+  ArrowAngleRightUpIcon: _modDef11330,
+  ArrowLargeLeftIcon: _modDef6022,
+  ArrowLargeRightIcon: _modDef18148,
+  AttachmentIcon: _modDef10383,
+  BellZIcon: _modDef13149,
+  BoostGemIcon: _modDef4833,
+  ChannelListMagnifyingGlassIcon: _modDef13673,
+  CheckmarkLargeIcon: _modDef4584,
+  ChatXIcon: _modDef12137,
+  CheckmarkSmallIcon: _modDef6636,
+  ChevronSmallDownIcon: _modDef10858,
+  ChevronSmallRightIcon: _modDef6008,
+  CircleErrorIcon: _modDef18149,
+  CircleInformationIcon: _modDef18150,
+  CircleQuestionIcon: _modDef14971,
+  ClipsIcon: _modDef14798,
+  ClockWarningIcon: _modDef11479,
+  ConnectionAverageIcon: _modDef18151,
+  ConnectionBadIcon: _modDef18152,
+  ConnectionFineIcon: _modDef16382,
+  ConnectionUnknownIcon: _modDef16380,
+  DownloadIcon: _modDef4852,
+  EyeIcon: _modDef6466,
+  EyeSlashIcon: _modDef6464,
+  GameControllerIcon: _modDef7831,
+  GifIcon: _modDef7764,
+  GroupIcon: _modDef5825,
+  HandRequestSpeakIcon: _modDef9611,
+  HomeIcon: _modDef17769,
+  ImageBrokenIcon: _modDef18153,
+  ImageIcon: _modDef5843,
+  ImageWarningIcon: _modDef5844,
+  LinkIcon: _modDef4846,
+  LockIcon: _modDef5859,
+  LockUnlockedIcon: _modDef10070,
+  MaximizeIcon: _modDef11577,
+  MicrophoneArrowRightIcon: _modDef9596,
+  MicrophoneIcon: _modDef9703,
+  MicrophoneSlashIcon: _modDef4827,
+  MoreHorizontalIcon: _modDef7589,
+  MusicIcon: _modDef9585,
+  PaperIcon: _modDef7566,
+  PauseIcon: _modDef7962,
+  PencilIcon: _modDef7636,
+  PhoneCallIcon: _modDef7535,
+  PhoneHangUpIcon: _modDef7537,
+  PinIcon: _modDef10706,
+  PlayIcon: _modDef7960,
+  PlaystationNeutralIcon: _modDef8580,
+  PollsIcon: _modDef10381,
+  ReactionIcon: _modDef8445,
+  RefreshIcon: _modDef14795,
+  ScreenIcon: _modDef8578,
+  SignPostIcon: _modDef13671,
+  SlashBoxIcon: _modDef11006,
+  SpotifyNeutralIcon: _modDef16045,
+  StageIcon: _modDef5828,
+  StickerIcon: _modDef12206,
+  SuperReactionIcon: _modDef8910,
+  ThreadIcon: _modDef5821,
+  TicketIcon: _modDef15041,
+  TopicsIcon: _modDef11290,
+  UserCheckIcon: _modDef7756,
+  VoiceNormalIcon: _modDef5829,
+  VoiceXIcon: _modDef9681,
+  WarningIcon: _modDef4810,
+  WindowLaunchIcon: _modDef12773,
+  XSmallIcon: _modDef6025,
+  XboxNeutralIcon: _modDef8386,
+};

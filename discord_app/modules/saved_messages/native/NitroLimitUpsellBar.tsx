@@ -1,27 +1,36 @@
 // discord_app/modules/saved_messages/native/NitroLimitUpsellBar.tsx
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09655_AssetRegistry.js";
+import _modDef9655 from "../../../../_runtime/metro/09655__.js";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
+import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
+import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-({ Image: c3, View: closure_4 } = react_native);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
-let obj = { container: obj2, icon: { height: 20, width: 20 }, text: { flex: 1 } };
-obj2 = {
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = {
+  container: {
+    alignItems: "center",
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+    borderRadius: nativeDefault.radii.md,
+    flexDirection: "row",
+    gap: nativeDefault.space.PX_8,
+    marginBottom: nativeDefault.space.PX_16,
+    marginHorizontal: nativeDefault.space.PX_16,
+    padding: nativeDefault.space.PX_12,
+  },
+  icon: { height: 20, width: 20 },
+  text: { flex: 1 },
+};
+let closure_7 = createStyles.createStyles(obj);
+let obj2 = {
   alignItems: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderRadius: nativeDefault.radii.md,
@@ -31,151 +40,129 @@ obj2 = {
   marginHorizontal: nativeDefault.space.PX_16,
   padding: nativeDefault.space.PX_12,
 };
-let closure_7 = createStyles.createStyles(obj);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const result = size.fileFinishedImporting("modules/saved_messages/native/NitroLimitUpsellBar.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let intl2;
-      let isAtLimit;
-      let items;
-      let items1;
-      let loading;
-      let onPress;
-      let str2;
-      let text;
-      let tmp6Result;
-      const obj = react;
-      const cResult = obj.c(16);
+      let stringResult = dependencyMap;
+      const cResult = c.c(16);
       ({ text, isAtLimit, onPress, loading } = arg0);
       const tmp4 = closure_7();
       if (cResult[0] === isAtLimit) {
-        let tmp5;
-        let tmp11;
         if (cResult[1] === tmp4.icon) {
-          tmp5 = cResult[2];
-        }
-        const _Symbol = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { variant: "text-xs/bold", color: "text-brand", children: str2.toUpperCase() };
-          const Text = Text_Text.Text;
-          const intl = intl3.intl;
-          str2 = intl.string(intl3.t.oW0eUd);
-          const tmp13 = hasOwnProperty(Text, obj2);
-          cResult[3] = tmp13;
-          tmp11 = tmp13;
-        } else {
-          tmp11 = cResult[3];
-        }
-        if (cResult[4] === tmp4.text) {
-          let tmp14;
-          let Button;
-          if (cResult[5] === text) {
-            tmp14 = cResult[6];
+          const _Symbol = Symbol;
+          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+            const obj2 = { variant: "text-xs/bold", color: "text-brand", children: null };
+            const intl = util.intl;
+            obj2.children = intl.string(util.t.oW0eUd).toUpperCase();
+            const tmp13 = hasOwnProperty(Text_Text.Text, obj2);
+            cResult[3] = tmp13;
+            let tmp11 = tmp13;
+            const str2 = intl.string(util.t.oW0eUd);
+          } else {
+            tmp11 = cResult[3];
           }
-          if (cResult[7] === isAtLimit) {
-            if (cResult[8] === loading) {
-              let tmp17;
-              if (cResult[9] === onPress) {
-                tmp17 = cResult[10];
-              }
-              if (cResult[11] === tmp4.container) {
-                if (cResult[12] === tmp5) {
-                  if (cResult[13] === tmp14) {
-                    let tmp21;
-                    if (cResult[14] === tmp17) {
-                      tmp21 = cResult[15];
+          if (cResult[4] === tmp4.text) {
+            if (cResult[5] === text) {
+              let tmp14 = cResult[6];
+            }
+            if (cResult[7] === isAtLimit) {
+              if (cResult[8] === loading) {
+                if (cResult[9] === onPress) {
+                  if (cResult[11] === tmp4.container) {
+                    if (cResult[12] === tmp5) {
+                      if (cResult[13] === tmp14) {
+                        if (cResult[14] === tmp17) {
+                          let tmp22 = cResult[15];
+                        }
+                        return tmp22;
+                      }
                     }
-                    return tmp21;
                   }
+                  const obj3 = { style: tmp4.container, children: null };
+                  const items = [tmp5, tmp14, cResult[10]];
+                  obj3.children = items;
+                  const tmp25 = timestampProducer(React4, obj3);
+                  cResult[11] = tmp4.container;
+                  cResult[12] = tmp5;
+                  cResult[13] = tmp14;
+                  cResult[14] = cResult[10];
+                  cResult[15] = tmp25;
+                  tmp22 = tmp25;
                 }
               }
-              const obj3 = { style: tmp4.container, children: items };
-              items = [tmp5, tmp14, tmp17];
-              const tmp24 = metroRequire(React3, obj3);
-              cResult[11] = tmp4.container;
-              cResult[12] = tmp5;
-              cResult[13] = tmp14;
-              cResult[14] = tmp17;
-              cResult[15] = tmp24;
-              tmp21 = tmp24;
             }
+            if (isAtLimit) {
+              let Button = NitroUpsellButtonDefault;
+            } else {
+              Button = components_Button_Button.Button;
+            }
+            const obj4 = { size: "sm", text: null, onPress: null, loading: null };
+            const intl2 = util.intl;
+            stringResult = intl2.string(util.t["8x0jKT"]);
+            obj4.text = stringResult;
+            obj4.onPress = onPress;
+            obj4.loading = loading;
+            const tmp18Result = hasOwnProperty(Button, obj4);
+            cResult[7] = isAtLimit;
+            cResult[8] = loading;
+            cResult[9] = onPress;
+            cResult[10] = tmp18Result;
           }
-          if (isAtLimit) {
-            Button = NitroUpsellButtonDefault;
-          } else {
-            Button = components_Button_Button.Button;
-          }
-          const obj4 = { size: "sm", text: intl2.string(intl3.t["8x0jKT"]), onPress, loading };
-          intl2 = intl3.intl;
-          const tmp18Result = hasOwnProperty(Button, obj4);
-          cResult[7] = isAtLimit;
-          cResult[8] = loading;
-          cResult[9] = onPress;
-          cResult[10] = tmp18Result;
-          tmp17 = tmp18Result;
+          const obj5 = { variant: "text-xs/medium", color: "text-default", style: tmp4.text, children: null };
+          const items1 = [tmp11, " \u00B7 ", text];
+          obj5.children = items1;
+          const tmp16 = timestampProducer(Text_Text.Text, obj5);
+          cResult[4] = tmp4.text;
+          cResult[5] = text;
+          cResult[6] = tmp16;
+          tmp14 = tmp16;
         }
-        const obj5 = { variant: "text-xs/medium", color: "text-default", style: tmp4.text, children: items1 };
-        items1 = [tmp11, " \u00B7 ", text];
-        const tmp16 = metroRequire(Text_Text.Text, obj5);
-        cResult[4] = tmp4.text;
-        cResult[5] = text;
-        cResult[6] = tmp16;
-        tmp14 = tmp16;
       }
       if (isAtLimit) {
         const obj6 = { color: "text-feedback-warning", style: tmp4.icon };
-        tmp6Result = hasOwnProperty(WarningIcon.WarningIcon, obj6);
+        let tmp6Result = hasOwnProperty(WarningIcon.WarningIcon, obj6);
       } else {
-        const obj7 = { source: AssetRegistryDefault, style: tmp4.icon };
-        tmp6Result = hasOwnProperty(_false, obj7);
+        const obj7 = { source: _modDef9655, style: tmp4.icon };
+        tmp6Result = hasOwnProperty(React3, obj7);
       }
       cResult[0] = isAtLimit;
       cResult[1] = tmp4.icon;
       cResult[2] = tmp6Result;
-      tmp5 = tmp6Result;
     }
   : (isAtLimit) => {
-      let Button;
-      let intl2;
-      let items;
-      let items1;
-      let loading;
-      let onPress;
-      let str;
-      let text;
-      let tmp4Result;
-      let tmp9;
       isAtLimit = isAtLimit.isAtLimit;
       ({ text, onPress, loading } = isAtLimit);
       const tmp = closure_7();
-      const obj = { style: tmp.container, children: items };
+      const obj = { style: tmp.container, children: null };
       if (isAtLimit) {
         const obj2 = { color: "text-feedback-warning", style: tmp.icon };
-        tmp4Result = hasOwnProperty(WarningIcon.WarningIcon, obj2);
-        tmp9 = hasOwnProperty;
+        let tmp4Result = hasOwnProperty(WarningIcon.WarningIcon, obj2);
+        let tmp9 = hasOwnProperty;
       } else {
-        const obj3 = { source: AssetRegistryDefault, style: tmp.icon };
-        tmp4Result = hasOwnProperty(_false, obj3);
+        const obj3 = { source: _modDef9655, style: tmp.icon };
+        tmp4Result = hasOwnProperty(React3, obj3);
         tmp9 = hasOwnProperty;
       }
-      items = [tmp4Result, ,];
-      const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: items1 };
-      const Text = Text_Text.Text;
-      const obj5 = { variant: "text-xs/bold", color: "text-brand", children: str.toUpperCase() };
-      const Text2 = Text_Text.Text;
-      const intl = intl3.intl;
-      str = intl.string(intl3.t.oW0eUd);
-      items1 = [tmp9(Text2, obj5), " \u00B7 ", text];
-      items[1] = metroRequire(Text, obj4);
+      const items = [tmp4Result, ,];
+      const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
+      const obj5 = { variant: "text-xs/bold", color: "text-brand", children: null };
+      const intl = util.intl;
+      obj5.children = intl.string(util.t.oW0eUd).toUpperCase();
+      const items1 = [tmp9(Text_Text.Text, obj5), " \u00B7 ", text];
+      obj4.children = items1;
+      items[1] = timestampProducer(Text_Text.Text, obj4);
       if (isAtLimit) {
-        Button = NitroUpsellButtonDefault;
+        let Button = NitroUpsellButtonDefault;
       } else {
         Button = components_Button_Button.Button;
       }
-      const obj6 = { size: "sm", text: intl2.string(intl3.t["8x0jKT"]), onPress, loading };
-      intl2 = intl3.intl;
+      const obj6 = { size: "sm", text: null, onPress: null, loading: null };
+      const intl2 = util.intl;
+      obj6.text = intl2.string(util.t["8x0jKT"]);
+      obj6.onPress = onPress;
+      obj6.loading = loading;
       items[2] = tmp9(Button, obj6);
-      return metroRequire(React3, obj);
+      obj.children = items;
+      return timestampProducer(React4, obj);
     };
-const result = size.fileFinishedImporting("modules/saved_messages/native/NitroLimitUpsellBar.tsx");
-
-export default tmp4;

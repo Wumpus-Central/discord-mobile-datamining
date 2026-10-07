@@ -1,22 +1,18 @@
 // discord_app/modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx
-import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
-import react from "../../../../_runtime/00576_react.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let open;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      let tmp9;
-      let voiceChannelId;
-      const obj = react;
-      const cResult = obj.c(4);
+      const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedChannelStore];
         const fn = function s() {
@@ -29,8 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ActionSheetStore];
         const fn2 = function c() {
@@ -38,17 +33,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = items1;
         cResult[3] = fn2;
-        tmp9 = fn2;
-        tmp8 = items1;
+        let tmp9 = fn2;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const tmpResult3 = get_initialized;
-      const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp9);
+      const tmpResult = initialize;
+      const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
+      const tmpResult3 = initialize;
       let tmp13 = !stateFromStores;
-      const tmpResult4 = NavigationRouteUtils;
-      const isModalOpen = tmpResult4.useIsModalOpen();
+      const isModalOpen = NavigationRouteUtils.useIsModalOpen();
       if (!stateFromStores) {
         tmp13 = !stateFromStores1;
       }
@@ -58,17 +53,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp13;
     }
   : () => {
-      let open;
-      let voiceChannelId;
       const items = [SelectedChannelStore];
-      const obj = get_initialized;
-      const stateFromStores = obj.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
+      const stateFromStores = initialize.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
       const items1 = [ActionSheetStore];
-      const obj2 = get_initialized;
-      const stateFromStores1 = obj2.useStateFromStores(items1, () => open.isOpen());
+      const stateFromStores1 = initialize.useStateFromStores(items1, () => open.isOpen());
       let tmp4 = !stateFromStores;
-      const obj3 = NavigationRouteUtils;
-      const isModalOpen = obj3.useIsModalOpen();
+      const isModalOpen = NavigationRouteUtils.useIsModalOpen();
       if (!stateFromStores) {
         tmp4 = !stateFromStores1;
       }
@@ -77,6 +67,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4;
     };
-const result = size.fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
-
-export default tmp2;

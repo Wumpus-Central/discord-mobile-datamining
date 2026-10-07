@@ -1,54 +1,46 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import MemberVerificationTypes from "../../MemberVerificationTypes.tsx";
-import TermsFieldDefault from "form_fields/TermsField.tsx";
-import UserVerificationDefault from "form_fields/UserVerification.tsx";
-import TextInputFieldDefault from "form_fields/TextInputField.tsx";
-import ParagraphFieldDefault from "form_fields/ParagraphField.tsx";
-import MultipleChoiceFieldDefault from "form_fields/MultipleChoiceField.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let c3;
-let closure_4;
-({ Keyboard: c3, View: closure_4 } = react_native);
-const jsx = Fragment.jsx;
+const require = globalThis.__r;
+
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Keyboard: c3, View: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 0 },
 });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (rulesChannelId) => {
-      let formFields;
-      let onChange;
-      let verification;
-      const obj = rulesChannelId(verification[5]);
-      const cResult = obj.c(10);
+      const cResult = rulesChannelId(verification[5]).c(10);
       rulesChannelId = rulesChannelId.rulesChannelId;
       ({ formFields, onChange } = rulesChannelId);
       verification = rulesChannelId.verification;
       const tmp2 = closure_6();
       if (cResult[0] === onChange) {
         if (cResult[1] === rulesChannelId) {
-          let tmp3;
           if (cResult[2] === verification) {
-            tmp3 = cResult[3];
+            let tmp3 = cResult[3];
           }
-          let closure_3 = tmp3;
+          closure_3 = tmp3;
           if (cResult[4] === formFields) {
-            let tmp4;
             if (cResult[5] === tmp3) {
-              tmp4 = cResult[6];
+              let tmp4 = cResult[6];
             }
             if (cResult[7] === tmp2.container) {
-              let tmp7;
               if (cResult[8] === tmp4) {
-                tmp7 = cResult[9];
+                let tmp7 = cResult[9];
               }
               return tmp7;
             }
+            let obj2 = { style: tmp2.container, children: tmp4 };
             const tmp10 = <closure_4 style={tmp2.container}>{tmp4}</closure_4>;
             cResult[7] = tmp2.container;
             cResult[8] = tmp4;
@@ -66,10 +58,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function c(field_type, arg1, id) {
-        let closure_0;
         rulesChannelId = arg1;
         field_type = field_type.field_type;
         if (rulesChannelId(verification[6]).VerificationFormFieldTypes.TERMS === field_type) {
+          const obj2 = {
+            field: field_type,
+            rulesChannelId,
+            onChange(arg0) {
+              onChange(closure_0, arg0);
+              React3.dismiss();
+            },
+          };
           return jsx(
             onChange(verification[7]),
             {
@@ -77,14 +76,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               rulesChannelId,
               onChange(arg0) {
                 onChange(closure_0, arg0);
-                _false.dismiss();
+                React3.dismiss();
               },
             },
             id,
           );
-        } else if (rulesChannelId(verification[6]).VerificationFormFieldTypes.VERIFICATION === field_type) {
+        } else if (tmp(verification[6]).VerificationFormFieldTypes.VERIFICATION === field_type) {
+          const obj3 = { verification, field: field_type };
           return jsx(onChange(verification[8]), { verification, field: field_type }, id);
-        } else if (rulesChannelId(verification[6]).VerificationFormFieldTypes.TEXT_INPUT === field_type) {
+        } else if (tmp(verification[6]).VerificationFormFieldTypes.TEXT_INPUT === field_type) {
+          const obj4 = {
+            field: field_type,
+            onChange(arg0) {
+              return onChange(closure_0, arg0);
+            },
+          };
           return jsx(
             onChange(verification[9]),
             {
@@ -95,7 +101,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             },
             id,
           );
-        } else if (rulesChannelId(verification[6]).VerificationFormFieldTypes.PARAGRAPH === field_type) {
+        } else if (tmp(verification[6]).VerificationFormFieldTypes.PARAGRAPH === field_type) {
+          const obj5 = {
+            field: field_type,
+            onChange(arg0) {
+              return onChange(closure_0, arg0);
+            },
+          };
           return jsx(
             onChange(verification[10]),
             {
@@ -106,7 +118,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             },
             id,
           );
-        } else if (rulesChannelId(verification[6]).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        } else if (tmp(verification[6]).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+          const obj = {
+            field: field_type,
+            hasIcons: false,
+            onChange(arg0) {
+              onChange(closure_0, arg0);
+              React3.dismiss();
+            },
+          };
           return jsx(
             onChange(verification[11]),
             {
@@ -114,7 +134,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               hasIcons: false,
               onChange(arg0) {
                 onChange(closure_0, arg0);
-                _false.dismiss();
+                React3.dismiss();
               },
             },
             id,
@@ -128,67 +148,94 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = verification;
       cResult[3] = fn;
       tmp3 = fn;
+      let obj = rulesChannelId(verification[5]);
     }
   : (arg0) => {
-      let formFields;
-      let rulesChannelId;
-      let verification;
       ({ rulesChannelId: require, formFields, onChange: importDefault, verification: dependencyMap } = arg0);
+      let obj = { style: closure_6().container, children: null };
       let mapped;
       if (formFields != null) {
         mapped = formFields.map((field_type, index) => {
-          let tmp4;
           const combined = "verification-field-" + index;
-          require = index;
+          rulesChannelId = index;
           field_type = field_type.field_type;
-          if (MemberVerificationTypes.VerificationFormFieldTypes.TERMS === field_type) {
-            tmp4 = jsx(
-              TermsFieldDefault,
+          if (rulesChannelId(verification[6]).VerificationFormFieldTypes.TERMS === field_type) {
+            const obj2 = {
+              field: field_type,
+              rulesChannelId,
+              onChange(arg0) {
+                importDefault(closure_0, arg0);
+                React3.dismiss();
+              },
+            };
+            let tmp4 = jsx(
+              require("TermsField"),
               {
                 field: field_type,
-                rulesChannelId: require,
+                rulesChannelId,
                 onChange(arg0) {
-                  importDefault(index, arg0);
-                  _false.dismiss();
+                  importDefault(closure_0, arg0);
+                  React3.dismiss();
                 },
               },
               combined,
             );
-          } else if (MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION === field_type) {
-            tmp4 = jsx(UserVerificationDefault, { verification: dependencyMap, field: field_type }, combined);
-          } else if (MemberVerificationTypes.VerificationFormFieldTypes.TEXT_INPUT === field_type) {
+          } else if (tmp2(verification[6]).VerificationFormFieldTypes.VERIFICATION === field_type) {
+            const obj3 = { verification, field: field_type };
+            tmp4 = jsx(require("UserVerification"), { verification, field: field_type }, combined);
+          } else if (tmp2(verification[6]).VerificationFormFieldTypes.TEXT_INPUT === field_type) {
+            const obj4 = {
+              field: field_type,
+              onChange(arg0) {
+                return importDefault(closure_0, arg0);
+              },
+            };
             tmp4 = jsx(
-              TextInputFieldDefault,
+              require("TextInputField"),
               {
                 field: field_type,
                 onChange(arg0) {
-                  return importDefault(index, arg0);
+                  return importDefault(closure_0, arg0);
                 },
               },
               combined,
             );
-          } else if (MemberVerificationTypes.VerificationFormFieldTypes.PARAGRAPH === field_type) {
+          } else if (tmp2(verification[6]).VerificationFormFieldTypes.PARAGRAPH === field_type) {
+            const obj = {
+              field: field_type,
+              onChange(arg0) {
+                return importDefault(closure_0, arg0);
+              },
+            };
             tmp4 = jsx(
-              ParagraphFieldDefault,
+              require("ParagraphField"),
               {
                 field: field_type,
                 onChange(arg0) {
-                  return importDefault(index, arg0);
+                  return importDefault(closure_0, arg0);
                 },
               },
               combined,
             );
           } else {
             tmp4 = null;
-            if (MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+            if (tmp2(verification[6]).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+              const obj5 = {
+                field: field_type,
+                hasIcons: false,
+                onChange(arg0) {
+                  importDefault(closure_0, arg0);
+                  React3.dismiss();
+                },
+              };
               tmp4 = jsx(
-                MultipleChoiceFieldDefault,
+                require("MultipleChoiceField"),
                 {
                   field: field_type,
                   hasIcons: false,
                   onChange(arg0) {
-                    importDefault(index, arg0);
-                    _false.dismiss();
+                    importDefault(closure_0, arg0);
+                    React3.dismiss();
                   },
                 },
                 combined,
@@ -198,10 +245,6 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp4;
         });
       }
-      return <closure_4 style={closure_6().container}>{mapped}</closure_4>;
+      obj.children = mapped;
+      return <closure_4 style={closure_6().container}>{null}</closure_4>;
     };
-const result = size.fileFinishedImporting(
-  "modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx",
-);
-
-export default tmp4;

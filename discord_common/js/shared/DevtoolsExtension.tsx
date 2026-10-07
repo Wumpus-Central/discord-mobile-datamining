@@ -5,7 +5,6 @@ const result = size.fileFinishedImporting("../discord_common/js/shared/DevtoolsE
 
 export const logFluxAction = function logFluxAction(description, durationMs) {
   let __DISCORD_DEVTOOLS = null;
-  const obj = { type: "Flux-Dispatch", description: description.type, data: description, durationMs };
   if (typeof window !== "undefined") {
     const _window = window;
     __DISCORD_DEVTOOLS = window.__DISCORD_DEVTOOLS;

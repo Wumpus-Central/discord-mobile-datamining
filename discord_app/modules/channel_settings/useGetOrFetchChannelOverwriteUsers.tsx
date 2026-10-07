@@ -1,37 +1,27 @@
 // discord_app/modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
-import createAggregatorDefault from "../../../_runtime/17032_createAggregator.js";
-import _slicedToArray_mod from "../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../_runtime/00019_react.js";
+import _modDef17032 from "../../../_runtime/metro/17032__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const f128216 = (id) => id.id;
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let first;
-      let first1;
-      let length;
-      let mapped;
-      let tmp6;
-      let tmp7;
       _require = arg0;
-      let tmp2 = first1;
-      let obj = require("react");
-      const cResult = obj.c(17);
+      const cResult = require("c").c(17);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildMemberStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -43,94 +33,124 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = arg0;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp7 = items1;
-        tmp6 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const tmpResult = require("get initialized");
-      const stateFromStoresArray = tmpResult.useStateFromStoresArray(first, tmp6, tmp7);
+      let obj = require("c");
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(first, tmp6, tmp7);
       if (cResult[4] === stateFromStoresArray) {
-        let tmp9;
         if (cResult[5] === arg1) {
-          tmp9 = cResult[6];
-        }
-        const tmp15 = _slicedToArray(tmp9, 2);
-        first1 = tmp15[0];
-        _slicedToArray = tmp17;
-        if (cResult[9] === arg0) {
-          let tmp18;
-          let tmp19;
-          let tmp22;
-          let tmp25;
-          if (cResult[10] === tmp15[1]) {
-            tmp18 = cResult[11];
-            tmp19 = cResult[12];
-          }
-          const effect = react.useEffect(tmp18, tmp19);
-          const _Symbol = Symbol;
-          if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            const items2 = [UserStore];
-            cResult[13] = items2;
-            tmp22 = items2;
-          } else {
-            tmp22 = cResult[13];
-          }
-          if (cResult[14] !== first1) {
-            class I {
-              constructor() {
-                const mapped = first1.map(UserStore.getUser);
-                return mapped.filter(GlobalUtils.isNotNullish);
-              }
+          const tmp14 = _slicedToArray(cResult[6], 2);
+          first1 = tmp14[0];
+          _slicedToArray = tmp16;
+          if (cResult[9] === arg0) {
+            if (cResult[10] === tmp16) {
+              let tmp17 = cResult[11];
+              let tmp18 = cResult[12];
             }
-            const items3 = [first1];
-            cResult[14] = first1;
-            cResult[15] = I;
-            cResult[16] = items3;
-            class F {
-              constructor() {
-                const tmp2 = length.length > 0 && null != closure_0;
-                if (tmp2) {
-                  const obj = GuildActionCreatorsDefault;
-                  const membersById = obj.requestMembersById(closure_0, length, false);
+            const effect = noop.useEffect(tmp17, tmp18);
+            const _Symbol = Symbol;
+            if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+              const items2 = [UserStore];
+              cResult[13] = items2;
+            }
+            if (cResult[14] !== first1) {
+              class I {
+                constructor() {
+                  mapped = closure_2.map(closure_6.getUser);
+                  return mapped.filter(closure_0(closure_2[10]).isNotNullish);
+                }
+              }
+              const items3 = [first1];
+              cResult[14] = first1;
+              cResult[15] = I;
+              class F {
+                constructor() {
+                  tmp2 = closure_3.length > 0;
+                  tmp = closure_3;
+                  if (tmp2) {
+                    tmp3 = closure_0;
+                    tmp4 = null;
+                    tmp2 = null != closure_0;
+                  }
+                  if (tmp2) {
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj = closure_1(closure_2[9]);
+                    tmp7 = closure_0;
+                    flag = false;
+                    membersById = obj.requestMembersById(closure_0, tmp, false);
+                  }
+                  return;
+                }
+              }
+            } else {
+              class I {
+                constructor() {
+                  mapped = closure_2.map(closure_6.getUser);
+                  return mapped.filter(closure_0(closure_2[10]).isNotNullish);
                 }
               }
             }
-          } else {
-            class I {
+            tmp(tmp2[7]);
+            class F {
               constructor() {
-                const mapped = first1.map(UserStore.getUser);
-                return mapped.filter(GlobalUtils.isNotNullish);
+                tmp2 = closure_3.length > 0;
+                tmp = closure_3;
+                if (tmp2) {
+                  tmp3 = closure_0;
+                  tmp4 = null;
+                  tmp2 = null != closure_0;
+                }
+                if (tmp2) {
+                  tmp5 = closure_1;
+                  tmp6 = closure_2;
+                  obj = closure_1(closure_2[9]);
+                  tmp7 = closure_0;
+                  flag = false;
+                  membersById = obj.requestMembersById(closure_0, tmp, false);
+                }
+                return;
               }
             }
-            tmp25 = cResult[16];
           }
-          const tmpResult2 = require("get initialized");
-          return tmpResult2.useStateFromStoresArray(tmp22, I, tmp25);
-        }
-        class F {
-          constructor() {
-            const tmp2 = length.length > 0 && null != closure_0;
-            if (tmp2) {
-              const obj = GuildActionCreatorsDefault;
-              const membersById = obj.requestMembersById(closure_0, length, false);
+          class F {
+            constructor() {
+              tmp2 = closure_3.length > 0;
+              tmp = closure_3;
+              if (tmp2) {
+                tmp3 = closure_0;
+                tmp4 = null;
+                tmp2 = null != closure_0;
+              }
+              if (tmp2) {
+                tmp5 = closure_1;
+                tmp6 = closure_2;
+                obj = closure_1(closure_2[9]);
+                tmp7 = closure_0;
+                flag = false;
+                membersById = obj.requestMembersById(closure_0, tmp, false);
+              }
+              return;
             }
           }
+          const items4 = [tmp14[1], arg0];
+          cResult[9] = arg0;
+          cResult[10] = tmp14[1];
+          cResult[11] = F;
+          cResult[12] = items4;
+          tmp18 = items4;
+          tmp17 = F;
         }
-        const items4 = [tmp15[1], arg0];
-        cResult[9] = arg0;
-        cResult[10] = tmp15[1];
-        cResult[11] = F;
-        cResult[12] = items4;
-        tmp19 = items4;
-        tmp18 = F;
       }
       if (cResult[7] !== stateFromStoresArray) {
         class I {
           constructor() {
-            const mapped = first1.map(UserStore.getUser);
-            return mapped.filter(GlobalUtils.isNotNullish);
+            mapped = closure_2.map(closure_6.getUser);
+            return mapped.filter(closure_0(closure_2[10]).isNotNullish);
           }
         }
         cResult[7] = stateFromStoresArray;
@@ -138,82 +158,81 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class I {
           constructor() {
-            const mapped = first1.map(UserStore.getUser);
-            return mapped.filter(GlobalUtils.isNotNullish);
+            mapped = closure_2.map(closure_6.getUser);
+            return mapped.filter(closure_0(closure_2[10]).isNotNullish);
           }
         }
       }
-      const tmp11 = stateFromStoresArray(tmp2[8]);
+      const tmpResult = require("initialize");
       if (null == arg1) {
         class I {
           constructor() {
-            const mapped = first1.map(UserStore.getUser);
-            return mapped.filter(GlobalUtils.isNotNullish);
+            mapped = closure_2.map(closure_6.getUser);
+            return mapped.filter(closure_0(closure_2[10]).isNotNullish);
           }
         }
       } else {
         class I {
           constructor() {
-            const mapped = first1.map(UserStore.getUser);
-            return mapped.filter(GlobalUtils.isNotNullish);
+            mapped = closure_2.map(closure_6.getUser);
+            return mapped.filter(closure_0(closure_2[10]).isNotNullish);
           }
         }
         const values = Object.values(arg1);
         const found = values.filter(
           (type) => type.type === closure_1_0(stateFromStoresArray[4]).PermissionOverwriteType.MEMBER,
         );
-        mapped = found.map(f128216);
+        let mapped = found.map((id) => id.id);
       }
-      const tmp11Result = tmp11(mapped, S);
+      const tmp10 = stateFromStoresArray(first1[8]);
       cResult[4] = stateFromStoresArray;
       cResult[5] = arg1;
-      cResult[6] = tmp11Result;
-      tmp9 = tmp11Result;
+      cResult[6] = stateFromStoresArray(first1[8])(mapped, S);
+      const tmp10Result = stateFromStoresArray(first1[8])(mapped, S);
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let first;
-      let length;
-      let stateFromStoresArray;
       _require = arg0;
-      let closure_1 = arg1;
-      let obj = require("get initialized");
+      closure_1 = arg1;
       let items = [GuildMemberStore];
       const items1 = [arg0];
-      stateFromStoresArray = obj.useStateFromStoresArray(items, () => GuildMemberStore.getMemberIds(closure_0), items1);
+      stateFromStoresArray = require("initialize").useStateFromStoresArray(
+        items,
+        () => GuildMemberStore.getMemberIds(closure_0),
+        items1,
+      );
       const items2 = [arg1, stateFromStoresArray];
       let tmp2 = first(
-        react.useMemo(() => {
-          let items;
-          const tmp = createAggregatorDefault;
+        noop.useMemo(() => {
           if (null == closure_1) {
-            items = [];
+            let items = [];
           } else {
             const _Object = Object;
             const values = Object.values(tmp2);
             const found = values.filter(
               (type) => type.type === closure_1_0(stateFromStoresArray[4]).PermissionOverwriteType.MEMBER,
             );
-            items = found.map(f128216);
+            items = found.map((id) => id.id);
           }
-          return tmp(items, (arg0) => stateFromStoresArray.includes(arg0));
+          return _modDef17032(items, (arg0) => stateFromStoresArray.includes(arg0));
         }, items2),
         2,
       );
       first = tmp2[0];
-      react = tmp4;
-      const items3 = [tmp4, arg0];
-      const effect = react.useEffect(() => {
-        const tmp2 = length.length > 0 && null != closure_0;
+      noop = tmp4;
+      const items3 = [tmp2[1], arg0];
+      const effect = noop.useEffect(() => {
+        let tmp2 = length.length > 0;
         if (tmp2) {
-          const obj = GuildActionCreatorsDefault;
-          const membersById = obj.requestMembersById(closure_0, length, false);
+          tmp2 = null != closure_0;
+        }
+        if (tmp2) {
+          const membersById = GuildActionCreatorsDefault.requestMembersById(closure_0, length, false);
         }
       }, items3);
+      let obj = require("initialize");
       const items4 = [UserStore];
       const items5 = [first];
-      const obj2 = require("get initialized");
-      return obj2.useStateFromStoresArray(
+      return require("initialize").useStateFromStoresArray(
         items4,
         () => {
           const mapped = first.map(UserStore.getUser);
@@ -222,6 +241,3 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items5,
       );
     };
-const result = size.fileFinishedImporting("modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx");
-
-export default tmp2;

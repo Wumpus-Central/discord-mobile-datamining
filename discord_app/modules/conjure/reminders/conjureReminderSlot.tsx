@@ -1,26 +1,14 @@
 // discord_app/modules/conjure/reminders/conjureReminderSlot.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import useConjureWindowFocusedDefault from "../shared/useConjureWindowFocused.native.tsx";
 import useConjurePublishActionDefault from "../publish/useConjurePublishAction.tsx";
 import conjurePublishCard from "../publish/conjurePublishCard.tsx";
 import conjureIdeasOffer from "conjureIdeasOffer.tsx";
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
-import ConjureChatStore from "../chat/ConjureChatStore.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let _require, dependencyMap, importDefault, set;
-
-let metroImportDefault;
-let metroRequire;
-const f126209 = (item) => {
-  const obj = { leaving: true };
-  const merged = Object.assign(item);
-  return obj;
-};
+require = fn;
 function selectConjureReminder(arr, unseen) {
   if (unseen.unseen) {
     return { shown: null, nextDueAt: null };
@@ -30,13 +18,8 @@ function selectConjureReminder(arr, unseen) {
     if (null == first) {
       return { shown: null, nextDueAt: null };
     } else {
-      let obj2;
-      const _Math3 = Math;
-      let num = unseen.lastMessageAt;
       const _Math2 = Math;
-      const now = unseen.now;
-      const clock = first.clock;
-      const max2 = Math.max;
+      let num = unseen.lastMessageAt;
       if (num == null) {
         num = -Infinity;
       }
@@ -49,14 +32,15 @@ function selectConjureReminder(arr, unseen) {
         num3 = -Infinity;
       }
       let num4 = -Infinity;
-      if ("visit" === clock) {
+      if ("visit" === first.clock) {
         num4 = unseen.visitStartedAt;
       }
       const _Math = Math;
-      const sum = unseen.now + Math.max(0, first.idleDelayMs - max(0, now - max2(num, num2, num3, num4)));
+      const sum =
+        unseen.now + Math.max(0, first.idleDelayMs - Math.max(0, unseen.now - Math.max(num, num2, num3, num4)));
       if (sum <= unseen.now) {
-        obj2 = { shown: first.key, nextDueAt: null };
         const obj = { shown: first.key, nextDueAt: null };
+        let obj2 = obj;
       } else {
         obj2 = { shown: null, nextDueAt: sum };
       }
@@ -65,35 +49,30 @@ function selectConjureReminder(arr, unseen) {
   }
 }
 function nextReminderClockState(projectId, projectId2, now) {
-  let bound;
-  let bound2;
-  let lastActivityAt;
-  let tmp66;
   if (projectId.projectId !== projectId2.projectId) {
     const tmp59 = now();
-    const obj3 = {
-      now: tmp59,
-      visitStartedAt: tmp59,
-      draftTyped: false,
-      lastActivityAt: null,
-      lastMessageAt: bound,
-      seenAt: null,
-      unseen: false,
-      hiddenAt: tmp66,
-      outdatedShown: false,
-      outdatedBackoff: 0,
-      outdatedUpdating: false,
-    };
+    const obj3 = {};
     const merged = Object.assign(projectId2);
-    bound = null;
+    obj3.now = tmp59;
+    obj3.visitStartedAt = tmp59;
+    obj3.draftTyped = false;
+    obj3.lastActivityAt = null;
+    let bound = null;
     if (null != projectId2.messageAt) {
       const _Math3 = Math;
       bound = Math.min(projectId2.messageAt, tmp59);
     }
-    tmp66 = null;
+    obj3.lastMessageAt = bound;
+    obj3.seenAt = null;
+    obj3.unseen = false;
+    let tmp66 = null;
     if (!projectId2.visible) {
       tmp66 = tmp59;
     }
+    obj3.hiddenAt = tmp66;
+    obj3.outdatedShown = false;
+    obj3.outdatedBackoff = 0;
+    obj3.outdatedUpdating = false;
     return obj3;
   } else {
     if (projectId.draftHasText === projectId2.draftHasText) {
@@ -108,13 +87,16 @@ function nextReminderClockState(projectId, projectId2, now) {
       }
     }
     const tmp = now();
-    const obj = { now: tmp };
+    const obj = {};
     const merged1 = Object.assign(projectId);
+    obj.now = tmp;
     let tmp5 = obj;
     if (projectId.draftHasText !== projectId2.draftHasText) {
-      const obj4 = { lastActivityAt: tmp, outdatedUpdating: projectId2.publishing && obj.outdatedUpdating };
+      const obj4 = {};
       const merged2 = Object.assign(obj);
       ({ draftHasText: obj2.draftHasText, draftHasText: obj2.draftTyped } = projectId2);
+      obj4.lastActivityAt = tmp;
+      obj4.outdatedUpdating = projectId2.publishing && obj.outdatedUpdating;
       tmp5 = obj4;
     }
     let tmp9 = tmp5;
@@ -122,29 +104,32 @@ function nextReminderClockState(projectId, projectId2, now) {
       let outdatedUpdating = tmp5.outdatedUpdating;
       if (outdatedUpdating) {
         outdatedUpdating = projectId2.publishing || projectId2.drift;
+        const tmp10 = projectId2.publishing || projectId2.drift;
       }
-      const obj5 = {
-        publishing: projectId2.publishing,
-        lastActivityAt,
-        outdatedShown: false,
-        outdatedBackoff: 0,
-        outdatedUpdating: projectId2.publishing && tmp5.outdatedUpdating,
-      };
+      const obj5 = {};
       const merged3 = Object.assign(tmp5);
-      lastActivityAt = tmp;
+      obj5.publishing = projectId2.publishing;
+      let lastActivityAt = tmp;
       if (outdatedUpdating) {
         lastActivityAt = tmp5.lastActivityAt;
       }
+      obj5.lastActivityAt = lastActivityAt;
+      obj5.outdatedShown = false;
+      obj5.outdatedBackoff = 0;
+      obj5.outdatedUpdating = projectId2.publishing && tmp5.outdatedUpdating;
       tmp9 = obj5;
     }
     let tmp14 = tmp9;
     if (projectId.drift !== projectId2.drift) {
-      const obj6 = { drift: projectId2.drift };
+      const obj6 = {};
       const merged4 = Object.assign(tmp9);
+      obj6.drift = projectId2.drift;
       let tmp18 = obj6;
       if (!projectId2.drift) {
-        const obj7 = { outdatedShown: false, outdatedBackoff: 0 };
+        const obj7 = {};
         const merged5 = Object.assign(obj6);
+        obj7.outdatedShown = false;
+        obj7.outdatedBackoff = 0;
         tmp18 = obj7;
       }
       tmp14 = tmp18;
@@ -156,114 +141,115 @@ function nextReminderClockState(projectId, projectId2, now) {
         const _Math = Math;
         bound1 = Math.min(projectId2.messageAt, tmp);
       }
-      const obj8 = { messageAt: projectId2.messageAt, lastMessageAt: bound1 };
+      const obj8 = {};
       const merged6 = Object.assign(tmp14);
+      obj8.messageAt = projectId2.messageAt;
+      obj8.lastMessageAt = bound1;
       let tmp28 = obj8;
       if (obj8.outdatedShown) {
         tmp28 = obj8;
         if (!obj8.publishing) {
           const _Math2 = Math;
-          const obj9 = { outdatedShown: false, outdatedBackoff: bound2 };
-          bound2 = Math.min(obj8.outdatedBackoff + 1, items.length - 1);
+          const obj9 = {};
+          const bound2 = Math.min(obj8.outdatedBackoff + 1, items.length - 1);
           const merged7 = Object.assign(obj8);
+          obj9.outdatedShown = false;
+          obj9.outdatedBackoff = bound2;
           tmp28 = obj9;
         }
       }
       let tmp35 = tmp28;
       if (!tmp28.publishing) {
-        const obj10 = { outdatedUpdating: false };
+        const obj10 = {};
         const merged8 = Object.assign(tmp28);
+        obj10.outdatedUpdating = false;
         tmp35 = obj10;
       }
       tmp22 = tmp35;
-      const tmp39 = projectId2.visible || null == projectId.messageAt;
       if (!tmp39) {
-        const obj11 = { unseen: true };
+        const obj11 = {};
         const merged9 = Object.assign(tmp35);
+        obj11.unseen = true;
         tmp22 = obj11;
       }
+      tmp39 = projectId2.visible || null == projectId.messageAt;
     }
-    let tmp43 = tmp22;
-    if (projectId.visible !== projectId2.visible) {
-      let obj29;
-      const obj12 = { visible: projectId2.visible };
+    if (projectId.visible === projectId2.visible) {
+      return tmp22;
+    } else {
+      let obj12 = {};
       const merged10 = Object.assign(tmp22);
-      if (projectId2.visible) {
-        let tmp49;
-        let hiddenAt = projectId.hiddenAt;
-        if (hiddenAt == null) {
-          hiddenAt = tmp;
-        }
-        if (tmp - hiddenAt >= c9) {
-          const obj13 = { visitStartedAt: tmp };
-          const merged11 = Object.assign(obj12);
-          tmp49 = obj13;
-        } else {
-          tmp49 = obj12;
-          if (obj12.unseen) {
-            const obj14 = { seenAt: tmp };
-            const merged12 = Object.assign(obj12);
-            tmp49 = obj14;
-          }
-        }
-        const obj15 = { hiddenAt: null, unseen: false };
-        const merged13 = Object.assign(tmp49);
-        obj29 = obj15;
-      } else {
-        obj29 = { hiddenAt: tmp, unseen: false };
-        const merged14 = Object.assign(obj12);
+      obj12.visible = projectId2.visible;
+      if (!projectId2.visible) {
+        const obj13 = {};
+        const merged11 = Object.assign(obj12);
+        obj13.hiddenAt = tmp;
+        obj13.unseen = false;
       }
-      tmp43 = obj29;
+      let hiddenAt = projectId.hiddenAt;
+      let flag7 = null;
+      if (hiddenAt == null) {
+        hiddenAt = tmp;
+      }
+      if (tmp - hiddenAt >= c9) {
+        const obj14 = {};
+        obj12 = Object.assign(obj12);
+        obj14.visitStartedAt = tmp;
+        let tmp48 = obj14;
+      } else {
+        tmp48 = obj12;
+        if (obj12.unseen) {
+          const obj15 = {};
+          const merged12 = Object.assign(obj12);
+          obj15.seenAt = tmp;
+          tmp48 = obj15;
+        }
+      }
+      const obj29 = {};
+      const merged13 = Object.assign(tmp48);
+      obj29.hiddenAt = flag7;
+      flag7 = false;
+      obj29.unseen = false;
     }
-    return tmp43;
   }
 }
-let _slicedToArray = _slicedToArray_mod;
-let react = react_mod;
-({ isStrandedSegment: metroRequire, turnSettled: metroImportDefault } = ConjureChatStore);
+const ConjureChatStore = fn(12924);
+({ isStrandedSegment: metroRequire, turnSettled: closure_7 } = ConjureChatStore);
 let items = [60000, 180000, 600000];
 let c9 = 600000;
-let obj = {
-  key: "outdated",
-  priority: 2,
-  idleDelayMs: 60000,
-  backoffDelaysMs: items,
-  clock: "persistent",
-  eligible(outdatedUpdating) {
-    let draftTyped;
-    let publish;
-    let showsOutdatedNoticeResult;
-    ({ publish, draftTyped } = outdatedUpdating);
-    if (outdatedUpdating.outdatedUpdating) {
-      let isUpdate;
-      if (publish != null) {
-        isUpdate = publish.isUpdate;
-      }
-      showsOutdatedNoticeResult = true === isUpdate;
-    } else {
-      showsOutdatedNoticeResult = !draftTyped;
-      if (showsOutdatedNoticeResult) {
-        const obj = conjurePublishCard;
-        showsOutdatedNoticeResult = obj.showsOutdatedNotice(publish);
-      }
-    }
-    return showsOutdatedNoticeResult;
-  },
-};
 let items1 = [
-  obj,
+  {
+    key: "outdated",
+    priority: 2,
+    idleDelayMs: 60000,
+    backoffDelaysMs: items,
+    clock: "persistent",
+    eligible(outdatedUpdating) {
+      ({ publish, draftTyped } = outdatedUpdating);
+      if (outdatedUpdating.outdatedUpdating) {
+        let isUpdate;
+        if (publish != null) {
+          isUpdate = publish.isUpdate;
+        }
+        let showsOutdatedNoticeResult = true === isUpdate;
+      } else {
+        showsOutdatedNoticeResult = !draftTyped;
+        if (!draftTyped) {
+          showsOutdatedNoticeResult = conjurePublishCard.showsOutdatedNotice(publish);
+        }
+      }
+      return showsOutdatedNoticeResult;
+    },
+  },
   {
     key: "ideas",
     priority: 1,
     idleDelayMs: 60000,
     clock: "visit",
     eligible(arg0) {
-      let draftHasText;
-      let publish;
-      let turn;
       ({ turn, publish, draftHasText } = arg0);
       let isIdeasOfferTurnResult = !draftHasText;
-      if (isIdeasOfferTurnResult) {
+      if (!draftHasText) {
         let publishing;
         if (publish != null) {
           publishing = publish.publishing;
@@ -271,14 +257,12 @@ let items1 = [
         isIdeasOfferTurnResult = true !== publishing;
       }
       if (isIdeasOfferTurnResult) {
-        const obj = conjureIdeasOffer;
-        isIdeasOfferTurnResult = obj.isIdeasOfferTurn(turn);
+        isIdeasOfferTurnResult = conjureIdeasOffer.isIdeasOfferTurn(turn);
       }
       if (isIdeasOfferTurnResult) {
         let result = null != turn.publishCta;
         if (result) {
-          const obj2 = conjurePublishCard;
-          result = obj2.isConjurePublishCtaVisible(publish);
+          result = conjurePublishCard.isConjurePublishCtaVisible(publish);
         }
         isIdeasOfferTurnResult = !result;
       }
@@ -287,43 +271,35 @@ let items1 = [
   },
 ];
 const map = new Map();
-let ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+let ReactCompilerGating = fn(558);
+let obj = {
+  key: "outdated",
+  priority: 2,
+  idleDelayMs: 60000,
+  backoffDelaysMs: items,
+  clock: "persistent",
+  eligible(outdatedUpdating) {
+    ({ publish, draftTyped } = outdatedUpdating);
+    if (outdatedUpdating.outdatedUpdating) {
+      let isUpdate;
+      if (publish != null) {
+        isUpdate = publish.isUpdate;
+      }
+      let showsOutdatedNoticeResult = true === isUpdate;
+    } else {
+      showsOutdatedNoticeResult = !draftTyped;
+      if (!draftTyped) {
+        showsOutdatedNoticeResult = conjurePublishCard.showsOutdatedNotice(publish);
+      }
+    }
+    return showsOutdatedNoticeResult;
+  },
+};
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arr, arg2) => {
-      let closure_0;
-      let closure_2;
-      let closure_4;
-      let messageAt;
-      let nextDueAt;
-      let outdatedBackoff;
-      let shown;
-      let tmp32;
-      let tmp33;
-      let tmp45;
-      let tmp50;
-      const f126211 = (key) => {
-        let num;
-        const obj = { idleDelayMs: num, eligible: null != react && key.eligible(tmp6) };
-        const merged = Object.assign(key);
-        if ("outdated" !== key.key) {
-          const backoffDelaysMs = key.backoffDelaysMs;
-          let idleDelayMs;
-          if (backoffDelaysMs != null) {
-            idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
-          }
-          if (idleDelayMs == null) {
-            idleDelayMs = key.idleDelayMs;
-          }
-          num = idleDelayMs;
-        } else {
-          num = 0;
-        }
-        null != react && key.eligible(tmp6);
-        return obj;
-      };
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(30);
+      const cResult = require("c").c(30);
       const tmp2 = useConjurePublishActionDefault(arg0);
       const tmp3 = useConjureWindowFocusedDefault();
       let diff = arr.length - 1;
@@ -360,208 +336,189 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === arr) {
           if (cResult[2] === arg0) {
             let publishing;
-            const tmp10 = cResult[3];
             if (tmp2 != null) {
               publishing = tmp2.publishing;
             }
-            if (tmp10 === publishing) {
-              let tmp14;
-              let tmp15;
-              let tmp16;
-              let tmp17;
-              let tmp18;
-              let state;
-              const tmp12 = cResult[4];
+            if (cResult[3] === publishing) {
+              state = undefined;
               if (tmp2 != null) {
                 const status = tmp2.status;
                 if (status != null) {
                   state = status.state;
                 }
               }
-              if (tmp12 === state) {
-                tmp14 = cResult[5];
-                tmp15 = cResult[6];
-                tmp16 = cResult[7];
-                tmp17 = cResult[8];
-                tmp18 = cResult[9];
+              if (cResult[4] === state) {
+                let tmp12 = cResult[5];
+                let tmp13 = cResult[6];
+                let tmp14 = cResult[7];
+                let tmp15 = cResult[8];
+                let tmp16 = cResult[9];
               }
-              if (cResult[10] === tmp14) {
-                if (cResult[11] === tmp15) {
-                  if (cResult[12] === tmp16) {
-                    if (cResult[13] === tmp17) {
-                      if (cResult[14] === tmp18) {
-                        let tmp28;
+              if (cResult[10] === tmp12) {
+                if (cResult[11] === tmp13) {
+                  if (cResult[12] === tmp14) {
+                    if (cResult[13] === tmp15) {
+                      if (cResult[14] === tmp16) {
                         if (cResult[15] === tmp3) {
-                          tmp28 = cResult[16];
+                          let tmp26 = cResult[16];
                         }
-                        importDefault = tmp28;
-                        if (cResult[17] !== tmp28) {
+                        importDefault = tmp26;
+                        if (cResult[17] !== tmp26) {
                           class T {
                             constructor() {
-                              let bound;
-                              let tmp5;
-                              const timestamp = Date.now();
-                              const obj = {
-                                now: timestamp,
-                                visitStartedAt: timestamp,
-                                draftTyped: false,
-                                lastActivityAt: null,
-                                lastMessageAt: bound,
-                                seenAt: null,
-                                unseen: false,
-                                hiddenAt: tmp5,
-                                outdatedShown: false,
-                                outdatedBackoff: 0,
-                                outdatedUpdating: false,
-                              };
-                              const merged = Object.assign(messageAt);
+                              tmp = closure_1;
+                              timestamp = Date.now();
+                              obj = {};
+                              merged = Object.assign(closure_1);
+                              obj.now = timestamp;
+                              obj.visitStartedAt = timestamp;
+                              obj.draftTyped = false;
+                              obj.lastActivityAt = null;
                               bound = null;
-                              if (null != messageAt.messageAt) {
-                                const _Math = Math;
-                                bound = Math.min(messageAt.messageAt, timestamp);
+                              if (null != closure_1.messageAt) {
+                                _Math = Math;
+                                bound = Math.min(tmp.messageAt, timestamp);
                               }
+                              obj.lastMessageAt = bound;
+                              obj.seenAt = null;
+                              obj.unseen = false;
                               tmp5 = null;
-                              if (!messageAt.visible) {
+                              if (!tmp.visible) {
                                 tmp5 = timestamp;
                               }
+                              obj.hiddenAt = tmp5;
+                              obj.outdatedShown = false;
+                              obj.outdatedBackoff = 0;
+                              obj.outdatedUpdating = false;
                               return obj;
                             }
                           }
-                          cResult[17] = tmp28;
+                          cResult[17] = tmp26;
                           cResult[18] = T;
                         } else {
                           class T {
                             constructor() {
-                              let bound;
-                              let tmp5;
-                              const timestamp = Date.now();
-                              const obj = {
-                                now: timestamp,
-                                visitStartedAt: timestamp,
-                                draftTyped: false,
-                                lastActivityAt: null,
-                                lastMessageAt: bound,
-                                seenAt: null,
-                                unseen: false,
-                                hiddenAt: tmp5,
-                                outdatedShown: false,
-                                outdatedBackoff: 0,
-                                outdatedUpdating: false,
-                              };
-                              const merged = Object.assign(messageAt);
+                              tmp = closure_1;
+                              timestamp = Date.now();
+                              obj = {};
+                              merged = Object.assign(closure_1);
+                              obj.now = timestamp;
+                              obj.visitStartedAt = timestamp;
+                              obj.draftTyped = false;
+                              obj.lastActivityAt = null;
                               bound = null;
-                              if (null != messageAt.messageAt) {
-                                const _Math = Math;
-                                bound = Math.min(messageAt.messageAt, timestamp);
+                              if (null != closure_1.messageAt) {
+                                _Math = Math;
+                                bound = Math.min(tmp.messageAt, timestamp);
                               }
+                              obj.lastMessageAt = bound;
+                              obj.seenAt = null;
+                              obj.unseen = false;
                               tmp5 = null;
-                              if (!messageAt.visible) {
+                              if (!tmp.visible) {
                                 tmp5 = timestamp;
                               }
+                              obj.hiddenAt = tmp5;
+                              obj.outdatedShown = false;
+                              obj.outdatedBackoff = 0;
+                              obj.outdatedUpdating = false;
                               return obj;
                             }
                           }
                         }
-                        [tmp32, tmp33] = react.useState(T);
-                        dependencyMap = tmp33;
+                        [tmp30, tmp31] = noop.useState(T);
+                        dependencyMap = tmp31;
                         let _Date = Date;
-                        _slicedToArray(react.useState(T), 2);
-                        const tmp36 = nextReminderClockState(tmp32, tmp28, Date.now);
-                        _slicedToArray = tmp36;
-                        let tmp37 = null;
+                        const tmp34 = nextReminderClockState(tmp30, tmp26, Date.now);
+                        _slicedToArray = tmp34;
+                        let tmp35 = null;
                         if (null != tmp5) {
                           class T {
                             constructor() {
-                              let bound;
-                              let tmp5;
-                              const timestamp = Date.now();
-                              const obj = {
-                                now: timestamp,
-                                visitStartedAt: timestamp,
-                                draftTyped: false,
-                                lastActivityAt: null,
-                                lastMessageAt: bound,
-                                seenAt: null,
-                                unseen: false,
-                                hiddenAt: tmp5,
-                                outdatedShown: false,
-                                outdatedBackoff: 0,
-                                outdatedUpdating: false,
-                              };
-                              const merged = Object.assign(messageAt);
+                              tmp = closure_1;
+                              timestamp = Date.now();
+                              obj = {};
+                              merged = Object.assign(closure_1);
+                              obj.now = timestamp;
+                              obj.visitStartedAt = timestamp;
+                              obj.draftTyped = false;
+                              obj.lastActivityAt = null;
                               bound = null;
-                              if (null != messageAt.messageAt) {
-                                const _Math = Math;
-                                bound = Math.min(messageAt.messageAt, timestamp);
+                              if (null != closure_1.messageAt) {
+                                _Math = Math;
+                                bound = Math.min(tmp.messageAt, timestamp);
                               }
+                              obj.lastMessageAt = bound;
+                              obj.seenAt = null;
+                              obj.unseen = false;
                               tmp5 = null;
-                              if (!messageAt.visible) {
+                              if (!tmp.visible) {
                                 tmp5 = timestamp;
                               }
+                              obj.hiddenAt = tmp5;
+                              obj.outdatedShown = false;
+                              obj.outdatedBackoff = 0;
+                              obj.outdatedUpdating = false;
                               return obj;
                             }
                           }
-                          if (!tmp38) {
+                          if (!tmp36) {
                             class T {
                               constructor() {
-                                let bound;
-                                let tmp5;
-                                const timestamp = Date.now();
-                                const obj = {
-                                  now: timestamp,
-                                  visitStartedAt: timestamp,
-                                  draftTyped: false,
-                                  lastActivityAt: null,
-                                  lastMessageAt: bound,
-                                  seenAt: null,
-                                  unseen: false,
-                                  hiddenAt: tmp5,
-                                  outdatedShown: false,
-                                  outdatedBackoff: 0,
-                                  outdatedUpdating: false,
-                                };
-                                const merged = Object.assign(messageAt);
+                                tmp = closure_1;
+                                timestamp = Date.now();
+                                obj = {};
+                                merged = Object.assign(closure_1);
+                                obj.now = timestamp;
+                                obj.visitStartedAt = timestamp;
+                                obj.draftTyped = false;
+                                obj.lastActivityAt = null;
                                 bound = null;
-                                if (null != messageAt.messageAt) {
-                                  const _Math = Math;
-                                  bound = Math.min(messageAt.messageAt, timestamp);
+                                if (null != closure_1.messageAt) {
+                                  _Math = Math;
+                                  bound = Math.min(tmp.messageAt, timestamp);
                                 }
+                                obj.lastMessageAt = bound;
+                                obj.seenAt = null;
+                                obj.unseen = false;
                                 tmp5 = null;
-                                if (!messageAt.visible) {
+                                if (!tmp.visible) {
                                   tmp5 = timestamp;
                                 }
+                                obj.hiddenAt = tmp5;
+                                obj.outdatedShown = false;
+                                obj.outdatedBackoff = 0;
+                                obj.outdatedUpdating = false;
                                 return obj;
                               }
                             }
-                            if (tmp39 != null) {
+                            if (tmp37 != null) {
                               class T {
                                 constructor() {
-                                  let bound;
-                                  let tmp5;
-                                  const timestamp = Date.now();
-                                  const obj = {
-                                    now: timestamp,
-                                    visitStartedAt: timestamp,
-                                    draftTyped: false,
-                                    lastActivityAt: null,
-                                    lastMessageAt: bound,
-                                    seenAt: null,
-                                    unseen: false,
-                                    hiddenAt: tmp5,
-                                    outdatedShown: false,
-                                    outdatedBackoff: 0,
-                                    outdatedUpdating: false,
-                                  };
-                                  const merged = Object.assign(messageAt);
+                                  tmp = closure_1;
+                                  timestamp = Date.now();
+                                  obj = {};
+                                  merged = Object.assign(closure_1);
+                                  obj.now = timestamp;
+                                  obj.visitStartedAt = timestamp;
+                                  obj.draftTyped = false;
+                                  obj.lastActivityAt = null;
                                   bound = null;
-                                  if (null != messageAt.messageAt) {
-                                    const _Math = Math;
-                                    bound = Math.min(messageAt.messageAt, timestamp);
+                                  if (null != closure_1.messageAt) {
+                                    _Math = Math;
+                                    bound = Math.min(tmp.messageAt, timestamp);
                                   }
+                                  obj.lastMessageAt = bound;
+                                  obj.seenAt = null;
+                                  obj.unseen = false;
                                   tmp5 = null;
-                                  if (!messageAt.visible) {
+                                  if (!tmp.visible) {
                                     tmp5 = timestamp;
                                   }
+                                  obj.hiddenAt = tmp5;
+                                  obj.outdatedShown = false;
+                                  obj.outdatedBackoff = 0;
+                                  obj.outdatedUpdating = false;
                                   return obj;
                                 }
                               }
@@ -569,365 +526,384 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             if (undefined == null) {
                               class T {
                                 constructor() {
-                                  let bound;
-                                  let tmp5;
-                                  const timestamp = Date.now();
-                                  const obj = {
-                                    now: timestamp,
-                                    visitStartedAt: timestamp,
-                                    draftTyped: false,
-                                    lastActivityAt: null,
-                                    lastMessageAt: bound,
-                                    seenAt: null,
-                                    unseen: false,
-                                    hiddenAt: tmp5,
-                                    outdatedShown: false,
-                                    outdatedBackoff: 0,
-                                    outdatedUpdating: false,
-                                  };
-                                  const merged = Object.assign(messageAt);
+                                  tmp = closure_1;
+                                  timestamp = Date.now();
+                                  obj = {};
+                                  merged = Object.assign(closure_1);
+                                  obj.now = timestamp;
+                                  obj.visitStartedAt = timestamp;
+                                  obj.draftTyped = false;
+                                  obj.lastActivityAt = null;
                                   bound = null;
-                                  if (null != messageAt.messageAt) {
-                                    const _Math = Math;
-                                    bound = Math.min(messageAt.messageAt, timestamp);
+                                  if (null != closure_1.messageAt) {
+                                    _Math = Math;
+                                    bound = Math.min(tmp.messageAt, timestamp);
                                   }
+                                  obj.lastMessageAt = bound;
+                                  obj.seenAt = null;
+                                  obj.unseen = false;
                                   tmp5 = null;
-                                  if (!messageAt.visible) {
+                                  if (!tmp.visible) {
                                     tmp5 = timestamp;
                                   }
+                                  obj.hiddenAt = tmp5;
+                                  obj.outdatedShown = false;
+                                  obj.outdatedBackoff = 0;
+                                  obj.outdatedUpdating = false;
                                   return obj;
                                 }
                               }
                             }
                           }
-                          tmp37 = null;
-                          if (!tmp38) {
+                          tmp35 = null;
+                          if (!tmp36) {
                             class T {
                               constructor() {
-                                let bound;
-                                let tmp5;
-                                const timestamp = Date.now();
-                                const obj = {
-                                  now: timestamp,
-                                  visitStartedAt: timestamp,
-                                  draftTyped: false,
-                                  lastActivityAt: null,
-                                  lastMessageAt: bound,
-                                  seenAt: null,
-                                  unseen: false,
-                                  hiddenAt: tmp5,
-                                  outdatedShown: false,
-                                  outdatedBackoff: 0,
-                                  outdatedUpdating: false,
-                                };
-                                const merged = Object.assign(messageAt);
+                                tmp = closure_1;
+                                timestamp = Date.now();
+                                obj = {};
+                                merged = Object.assign(closure_1);
+                                obj.now = timestamp;
+                                obj.visitStartedAt = timestamp;
+                                obj.draftTyped = false;
+                                obj.lastActivityAt = null;
                                 bound = null;
-                                if (null != messageAt.messageAt) {
-                                  const _Math = Math;
-                                  bound = Math.min(messageAt.messageAt, timestamp);
+                                if (null != closure_1.messageAt) {
+                                  _Math = Math;
+                                  bound = Math.min(tmp.messageAt, timestamp);
                                 }
+                                obj.lastMessageAt = bound;
+                                obj.seenAt = null;
+                                obj.unseen = false;
                                 tmp5 = null;
-                                if (!messageAt.visible) {
+                                if (!tmp.visible) {
                                   tmp5 = timestamp;
                                 }
+                                obj.hiddenAt = tmp5;
+                                obj.outdatedShown = false;
+                                obj.outdatedBackoff = 0;
+                                obj.outdatedUpdating = false;
                                 return obj;
                               }
                             }
-                            tmp41[0] = tmp5;
-                            tmp41[1] = tmp2;
-                            tmp41[2] = arg2;
-                            tmp41[3] = tmp36.draftTyped && arg2;
-                            tmp41[4] = tmp36.outdatedUpdating;
-                            tmp37 = tmp41;
+                            tmp39[0] = tmp5;
+                            tmp39[1] = tmp2;
+                            tmp39[2] = arg2;
+                            tmp39[3] = tmp34.draftTyped && arg2;
+                            tmp39[4] = tmp34.outdatedUpdating;
+                            tmp35 = tmp39;
                           }
                         }
-                        react = tmp37;
-                        ({ shown, nextDueAt } = selectConjureReminder(items1.map(f126211), tmp36));
-                        selectConjureReminder(items1.map(f126211), tmp36);
+                        noop = tmp35;
+                        const tmp29 = _slicedToArray(noop.useState(T), 2);
+                        ({ shown, nextDueAt } = selectConjureReminder(
+                          items1.map((key) => {
+                            const obj = {};
+                            const merged = Object.assign(key);
+                            if ("outdated" !== key.key) {
+                              const backoffDelaysMs = key.backoffDelaysMs;
+                              let idleDelayMs;
+                              if (backoffDelaysMs != null) {
+                                idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+                              }
+                              if (idleDelayMs == null) {
+                                idleDelayMs = key.idleDelayMs;
+                              }
+                              let num = idleDelayMs;
+                            } else {
+                              num = 0;
+                            }
+                            obj.idleDelayMs = num;
+                            obj.eligible = null != closure_4 && key.eligible(tmp6);
+                            return obj;
+                          }),
+                          tmp34,
+                        ));
                         if ("outdated" === shown) {
                           class T {
                             constructor() {
-                              let bound;
-                              let tmp5;
-                              const timestamp = Date.now();
-                              const obj = {
-                                now: timestamp,
-                                visitStartedAt: timestamp,
-                                draftTyped: false,
-                                lastActivityAt: null,
-                                lastMessageAt: bound,
-                                seenAt: null,
-                                unseen: false,
-                                hiddenAt: tmp5,
-                                outdatedShown: false,
-                                outdatedBackoff: 0,
-                                outdatedUpdating: false,
-                              };
-                              const merged = Object.assign(messageAt);
+                              tmp = closure_1;
+                              timestamp = Date.now();
+                              obj = {};
+                              merged = Object.assign(closure_1);
+                              obj.now = timestamp;
+                              obj.visitStartedAt = timestamp;
+                              obj.draftTyped = false;
+                              obj.lastActivityAt = null;
                               bound = null;
-                              if (null != messageAt.messageAt) {
-                                const _Math = Math;
-                                bound = Math.min(messageAt.messageAt, timestamp);
+                              if (null != closure_1.messageAt) {
+                                _Math = Math;
+                                bound = Math.min(tmp.messageAt, timestamp);
                               }
+                              obj.lastMessageAt = bound;
+                              obj.seenAt = null;
+                              obj.unseen = false;
                               tmp5 = null;
-                              if (!messageAt.visible) {
+                              if (!tmp.visible) {
                                 tmp5 = timestamp;
                               }
+                              obj.hiddenAt = tmp5;
+                              obj.outdatedShown = false;
+                              obj.outdatedBackoff = 0;
+                              obj.outdatedUpdating = false;
                               return obj;
                             }
                           }
                           if (cResult[19] === arg0) {
                             class T {
                               constructor() {
-                                let bound;
-                                let tmp5;
-                                const timestamp = Date.now();
-                                const obj = {
-                                  now: timestamp,
-                                  visitStartedAt: timestamp,
-                                  draftTyped: false,
-                                  lastActivityAt: null,
-                                  lastMessageAt: bound,
-                                  seenAt: null,
-                                  unseen: false,
-                                  hiddenAt: tmp5,
-                                  outdatedShown: false,
-                                  outdatedBackoff: 0,
-                                  outdatedUpdating: false,
-                                };
-                                const merged = Object.assign(messageAt);
+                                tmp = closure_1;
+                                timestamp = Date.now();
+                                obj = {};
+                                merged = Object.assign(closure_1);
+                                obj.now = timestamp;
+                                obj.visitStartedAt = timestamp;
+                                obj.draftTyped = false;
+                                obj.lastActivityAt = null;
                                 bound = null;
-                                if (null != messageAt.messageAt) {
-                                  const _Math = Math;
-                                  bound = Math.min(messageAt.messageAt, timestamp);
+                                if (null != closure_1.messageAt) {
+                                  _Math = Math;
+                                  bound = Math.min(tmp.messageAt, timestamp);
                                 }
+                                obj.lastMessageAt = bound;
+                                obj.seenAt = null;
+                                obj.unseen = false;
                                 tmp5 = null;
-                                if (!messageAt.visible) {
+                                if (!tmp.visible) {
                                   tmp5 = timestamp;
                                 }
+                                obj.hiddenAt = tmp5;
+                                obj.outdatedShown = false;
+                                obj.outdatedBackoff = 0;
+                                obj.outdatedUpdating = false;
                                 return obj;
                               }
                             }
                             if (cResult[22] !== arg0) {
                               class T {
                                 constructor() {
-                                  let bound;
-                                  let tmp5;
-                                  const timestamp = Date.now();
-                                  const obj = {
-                                    now: timestamp,
-                                    visitStartedAt: timestamp,
-                                    draftTyped: false,
-                                    lastActivityAt: null,
-                                    lastMessageAt: bound,
-                                    seenAt: null,
-                                    unseen: false,
-                                    hiddenAt: tmp5,
-                                    outdatedShown: false,
-                                    outdatedBackoff: 0,
-                                    outdatedUpdating: false,
-                                  };
-                                  const merged = Object.assign(messageAt);
+                                  tmp = closure_1;
+                                  timestamp = Date.now();
+                                  obj = {};
+                                  merged = Object.assign(closure_1);
+                                  obj.now = timestamp;
+                                  obj.visitStartedAt = timestamp;
+                                  obj.draftTyped = false;
+                                  obj.lastActivityAt = null;
                                   bound = null;
-                                  if (null != messageAt.messageAt) {
-                                    const _Math = Math;
-                                    bound = Math.min(messageAt.messageAt, timestamp);
+                                  if (null != closure_1.messageAt) {
+                                    _Math = Math;
+                                    bound = Math.min(tmp.messageAt, timestamp);
                                   }
+                                  obj.lastMessageAt = bound;
+                                  obj.seenAt = null;
+                                  obj.unseen = false;
                                   tmp5 = null;
-                                  if (!messageAt.visible) {
+                                  if (!tmp.visible) {
                                     tmp5 = timestamp;
                                   }
+                                  obj.hiddenAt = tmp5;
+                                  obj.outdatedShown = false;
+                                  obj.outdatedBackoff = 0;
+                                  obj.outdatedUpdating = false;
                                   return obj;
                                 }
                               }
-                              tmp47[0] = arg0;
+                              tmp45[0] = arg0;
                               cResult[22] = arg0;
                               class E {
                                 constructor() {
                                   if (null != nextDueAt) {
-                                    const _setTimeout = setTimeout;
-                                    const _Math = Math;
-                                    const _Date = Date;
-                                    const timeout = setTimeout(
+                                    tmp2 = globalThis;
+                                    _setTimeout = setTimeout;
+                                    _Math = Math;
+                                    _Date = Date;
+                                    num = 0;
+                                    closure_0 = setTimeout(
                                       () =>
                                         closure_1_2((arg0) => {
-                                          const obj = { now: Date.now() };
+                                          const obj = {};
                                           const merged = Object.assign(arg0);
+                                          obj.now = Date.now();
                                           return obj;
                                         }),
                                       Math.max(0, tmp - Date.now()),
                                     );
                                     return () => clearTimeout(closure_0);
+                                  } else {
+                                    return;
                                   }
                                 }
                               }
-                              cResult[23] = tmp47;
+                              cResult[23] = tmp45;
                             } else {
                               class T {
                                 constructor() {
-                                  let bound;
-                                  let tmp5;
-                                  const timestamp = Date.now();
-                                  const obj = {
-                                    now: timestamp,
-                                    visitStartedAt: timestamp,
-                                    draftTyped: false,
-                                    lastActivityAt: null,
-                                    lastMessageAt: bound,
-                                    seenAt: null,
-                                    unseen: false,
-                                    hiddenAt: tmp5,
-                                    outdatedShown: false,
-                                    outdatedBackoff: 0,
-                                    outdatedUpdating: false,
-                                  };
-                                  const merged = Object.assign(messageAt);
+                                  tmp = closure_1;
+                                  timestamp = Date.now();
+                                  obj = {};
+                                  merged = Object.assign(closure_1);
+                                  obj.now = timestamp;
+                                  obj.visitStartedAt = timestamp;
+                                  obj.draftTyped = false;
+                                  obj.lastActivityAt = null;
                                   bound = null;
-                                  if (null != messageAt.messageAt) {
-                                    const _Math = Math;
-                                    bound = Math.min(messageAt.messageAt, timestamp);
+                                  if (null != closure_1.messageAt) {
+                                    _Math = Math;
+                                    bound = Math.min(tmp.messageAt, timestamp);
                                   }
+                                  obj.lastMessageAt = bound;
+                                  obj.seenAt = null;
+                                  obj.unseen = false;
                                   tmp5 = null;
-                                  if (!messageAt.visible) {
+                                  if (!tmp.visible) {
                                     tmp5 = timestamp;
                                   }
+                                  obj.hiddenAt = tmp5;
+                                  obj.outdatedShown = false;
+                                  obj.outdatedBackoff = 0;
+                                  obj.outdatedUpdating = false;
                                   return obj;
                                 }
                               }
                             }
-                            const effect = obj3.useEffect(tmp45, tmp47);
+                            const effect = obj3.useEffect(tmp43, tmp45);
                             if (cResult[24] === nextDueAt) {
                               class T {
                                 constructor() {
-                                  let bound;
-                                  let tmp5;
-                                  const timestamp = Date.now();
-                                  const obj = {
-                                    now: timestamp,
-                                    visitStartedAt: timestamp,
-                                    draftTyped: false,
-                                    lastActivityAt: null,
-                                    lastMessageAt: bound,
-                                    seenAt: null,
-                                    unseen: false,
-                                    hiddenAt: tmp5,
-                                    outdatedShown: false,
-                                    outdatedBackoff: 0,
-                                    outdatedUpdating: false,
-                                  };
-                                  const merged = Object.assign(messageAt);
+                                  tmp = closure_1;
+                                  timestamp = Date.now();
+                                  obj = {};
+                                  merged = Object.assign(closure_1);
+                                  obj.now = timestamp;
+                                  obj.visitStartedAt = timestamp;
+                                  obj.draftTyped = false;
+                                  obj.lastActivityAt = null;
                                   bound = null;
-                                  if (null != messageAt.messageAt) {
-                                    const _Math = Math;
-                                    bound = Math.min(messageAt.messageAt, timestamp);
+                                  if (null != closure_1.messageAt) {
+                                    _Math = Math;
+                                    bound = Math.min(tmp.messageAt, timestamp);
                                   }
+                                  obj.lastMessageAt = bound;
+                                  obj.seenAt = null;
+                                  obj.unseen = false;
                                   tmp5 = null;
-                                  if (!messageAt.visible) {
+                                  if (!tmp.visible) {
                                     tmp5 = timestamp;
                                   }
+                                  obj.hiddenAt = tmp5;
+                                  obj.outdatedShown = false;
+                                  obj.outdatedBackoff = 0;
+                                  obj.outdatedUpdating = false;
                                   return obj;
                                 }
                               }
-                              if (cResult[27] === tmp36.now) {
+                              if (cResult[27] === tmp34.now) {
                                 class T {
                                   constructor() {
-                                    let bound;
-                                    let tmp5;
-                                    const timestamp = Date.now();
-                                    const obj = {
-                                      now: timestamp,
-                                      visitStartedAt: timestamp,
-                                      draftTyped: false,
-                                      lastActivityAt: null,
-                                      lastMessageAt: bound,
-                                      seenAt: null,
-                                      unseen: false,
-                                      hiddenAt: tmp5,
-                                      outdatedShown: false,
-                                      outdatedBackoff: 0,
-                                      outdatedUpdating: false,
-                                    };
-                                    const merged = Object.assign(messageAt);
+                                    tmp = closure_1;
+                                    timestamp = Date.now();
+                                    obj = {};
+                                    merged = Object.assign(closure_1);
+                                    obj.now = timestamp;
+                                    obj.visitStartedAt = timestamp;
+                                    obj.draftTyped = false;
+                                    obj.lastActivityAt = null;
                                     bound = null;
-                                    if (null != messageAt.messageAt) {
-                                      const _Math = Math;
-                                      bound = Math.min(messageAt.messageAt, timestamp);
+                                    if (null != closure_1.messageAt) {
+                                      _Math = Math;
+                                      bound = Math.min(tmp.messageAt, timestamp);
                                     }
+                                    obj.lastMessageAt = bound;
+                                    obj.seenAt = null;
+                                    obj.unseen = false;
                                     tmp5 = null;
-                                    if (!messageAt.visible) {
+                                    if (!tmp.visible) {
                                       tmp5 = timestamp;
                                     }
+                                    obj.hiddenAt = tmp5;
+                                    obj.outdatedShown = false;
+                                    obj.outdatedBackoff = 0;
+                                    obj.outdatedUpdating = false;
                                     return obj;
                                   }
                                 }
-                                const effect1 = obj3.useEffect(E, tmp50);
+                                const effect1 = obj3.useEffect(E, tmp48);
                                 return shown;
                               }
                               items = [nextDueAt];
                               class E {
                                 constructor() {
                                   if (null != nextDueAt) {
-                                    const _setTimeout = setTimeout;
-                                    const _Math = Math;
-                                    const _Date = Date;
-                                    const timeout = setTimeout(
+                                    tmp2 = globalThis;
+                                    _setTimeout = setTimeout;
+                                    _Math = Math;
+                                    _Date = Date;
+                                    num = 0;
+                                    closure_0 = setTimeout(
                                       () =>
                                         closure_1_2((arg0) => {
-                                          const obj = { now: Date.now() };
+                                          const obj = {};
                                           const merged = Object.assign(arg0);
+                                          obj.now = Date.now();
                                           return obj;
                                         }),
                                       Math.max(0, tmp - Date.now()),
                                     );
                                     return () => clearTimeout(closure_0);
+                                  } else {
+                                    return;
                                   }
                                 }
                               }
-                              cResult[27] = tmp36.now;
+                              cResult[27] = tmp34.now;
                               cResult[28] = nextDueAt;
                               cResult[29] = items;
-                              tmp50 = items;
+                              tmp48 = items;
                             }
                             class E {
                               constructor() {
                                 if (null != nextDueAt) {
-                                  const _setTimeout = setTimeout;
-                                  const _Math = Math;
-                                  const _Date = Date;
-                                  const timeout = setTimeout(
+                                  tmp2 = globalThis;
+                                  _setTimeout = setTimeout;
+                                  _Math = Math;
+                                  _Date = Date;
+                                  num = 0;
+                                  closure_0 = setTimeout(
                                     () =>
                                       closure_1_2((arg0) => {
-                                        const obj = { now: Date.now() };
+                                        const obj = {};
                                         const merged = Object.assign(arg0);
+                                        obj.now = Date.now();
                                         return obj;
                                       }),
                                     Math.max(0, tmp - Date.now()),
                                   );
                                   return () => clearTimeout(closure_0);
+                                } else {
+                                  return;
                                 }
                               }
                             }
                             cResult[24] = nextDueAt;
-                            cResult[25] = tmp33;
+                            cResult[25] = tmp31;
                             cResult[26] = E;
                           }
                           const fn = function k() {
                             function onActivity() {
                               closure_1_2((arg0) => {
-                                const obj = { outdatedUpdating: true };
+                                const obj = {};
                                 const merged = Object.assign(arg0);
+                                obj.outdatedUpdating = true;
                                 return obj;
                               });
                             }
-                            set = map.get(onActivity);
-                            const tmp = onActivity;
+                            let set = map.get(onActivity);
                             if (set == null) {
                               const _Set = Set;
-                              const self = this;
-                              const self2 = this;
                               set = new Set();
                             }
-                            const result = map.set(tmp, set);
+                            const result = map.set(onActivity, set);
                             set.add(onActivity);
                             return () => {
                               set.delete(onActivity);
@@ -936,65 +912,85 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             };
                           };
-                          cResult[20] = tmp33;
+                          cResult[20] = tmp31;
                           cResult[21] = fn;
-                          tmp45 = fn;
+                          tmp43 = fn;
                         }
-                        if (tmp36 !== tmp32) {
+                        if (tmp34 !== tmp30) {
                           class T {
                             constructor() {
-                              let bound;
-                              let tmp5;
-                              const timestamp = Date.now();
-                              const obj = {
-                                now: timestamp,
-                                visitStartedAt: timestamp,
-                                draftTyped: false,
-                                lastActivityAt: null,
-                                lastMessageAt: bound,
-                                seenAt: null,
-                                unseen: false,
-                                hiddenAt: tmp5,
-                                outdatedShown: false,
-                                outdatedBackoff: 0,
-                                outdatedUpdating: false,
-                              };
-                              const merged = Object.assign(messageAt);
+                              tmp = closure_1;
+                              timestamp = Date.now();
+                              obj = {};
+                              merged = Object.assign(closure_1);
+                              obj.now = timestamp;
+                              obj.visitStartedAt = timestamp;
+                              obj.draftTyped = false;
+                              obj.lastActivityAt = null;
                               bound = null;
-                              if (null != messageAt.messageAt) {
-                                const _Math = Math;
-                                bound = Math.min(messageAt.messageAt, timestamp);
+                              if (null != closure_1.messageAt) {
+                                _Math = Math;
+                                bound = Math.min(tmp.messageAt, timestamp);
                               }
+                              obj.lastMessageAt = bound;
+                              obj.seenAt = null;
+                              obj.unseen = false;
                               tmp5 = null;
-                              if (!messageAt.visible) {
+                              if (!tmp.visible) {
                                 tmp5 = timestamp;
                               }
+                              obj.hiddenAt = tmp5;
+                              obj.outdatedShown = false;
+                              obj.outdatedBackoff = 0;
+                              obj.outdatedUpdating = false;
                               return obj;
                             }
                           }
                         }
+                        const tmp42 = selectConjureReminder(
+                          items1.map((key) => {
+                            const obj = {};
+                            const merged = Object.assign(key);
+                            if ("outdated" !== key.key) {
+                              const backoffDelaysMs = key.backoffDelaysMs;
+                              let idleDelayMs;
+                              if (backoffDelaysMs != null) {
+                                idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+                              }
+                              if (idleDelayMs == null) {
+                                idleDelayMs = key.idleDelayMs;
+                              }
+                              let num = idleDelayMs;
+                            } else {
+                              num = 0;
+                            }
+                            obj.idleDelayMs = num;
+                            obj.eligible = null != closure_4 && key.eligible(tmp6);
+                            return obj;
+                          }),
+                          tmp34,
+                        );
                       }
                     }
                   }
                 }
               }
               const obj2 = {
-                projectId: tmp14,
-                draftHasText: tmp15,
-                publishing: tmp16,
-                drift: tmp17,
-                messageAt: tmp18,
+                projectId: tmp12,
+                draftHasText: tmp13,
+                publishing: tmp14,
+                drift: tmp15,
+                messageAt: tmp16,
                 visible: tmp3,
               };
-              let num = 10;
-              cResult[10] = tmp14;
-              cResult[11] = tmp15;
-              cResult[12] = tmp16;
-              cResult[13] = tmp17;
-              cResult[14] = tmp18;
+              cResult[10] = tmp12;
+              cResult[11] = tmp13;
+              cResult[12] = tmp14;
+              cResult[13] = tmp15;
+              cResult[14] = tmp16;
               cResult[15] = tmp3;
               cResult[16] = obj2;
-              tmp28 = obj2;
+              tmp26 = obj2;
             }
           }
         }
@@ -1003,32 +999,30 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp2 != null) {
         class T {
           constructor() {
-            let bound;
-            let tmp5;
-            const timestamp = Date.now();
-            const obj = {
-              now: timestamp,
-              visitStartedAt: timestamp,
-              draftTyped: false,
-              lastActivityAt: null,
-              lastMessageAt: bound,
-              seenAt: null,
-              unseen: false,
-              hiddenAt: tmp5,
-              outdatedShown: false,
-              outdatedBackoff: 0,
-              outdatedUpdating: false,
-            };
-            const merged = Object.assign(messageAt);
+            tmp = closure_1;
+            timestamp = Date.now();
+            obj = {};
+            merged = Object.assign(closure_1);
+            obj.now = timestamp;
+            obj.visitStartedAt = timestamp;
+            obj.draftTyped = false;
+            obj.lastActivityAt = null;
             bound = null;
-            if (null != messageAt.messageAt) {
-              const _Math = Math;
-              bound = Math.min(messageAt.messageAt, timestamp);
+            if (null != closure_1.messageAt) {
+              _Math = Math;
+              bound = Math.min(tmp.messageAt, timestamp);
             }
+            obj.lastMessageAt = bound;
+            obj.seenAt = null;
+            obj.unseen = false;
             tmp5 = null;
-            if (!messageAt.visible) {
+            if (!tmp.visible) {
               tmp5 = timestamp;
             }
+            obj.hiddenAt = tmp5;
+            obj.outdatedShown = false;
+            obj.outdatedBackoff = 0;
+            obj.outdatedUpdating = false;
             return obj;
           }
         }
@@ -1036,152 +1030,148 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp2 != null) {
         class T {
           constructor() {
-            let bound;
-            let tmp5;
-            const timestamp = Date.now();
-            const obj = {
-              now: timestamp,
-              visitStartedAt: timestamp,
-              draftTyped: false,
-              lastActivityAt: null,
-              lastMessageAt: bound,
-              seenAt: null,
-              unseen: false,
-              hiddenAt: tmp5,
-              outdatedShown: false,
-              outdatedBackoff: 0,
-              outdatedUpdating: false,
-            };
-            const merged = Object.assign(messageAt);
+            tmp = closure_1;
+            timestamp = Date.now();
+            obj = {};
+            merged = Object.assign(closure_1);
+            obj.now = timestamp;
+            obj.visitStartedAt = timestamp;
+            obj.draftTyped = false;
+            obj.lastActivityAt = null;
             bound = null;
-            if (null != messageAt.messageAt) {
-              const _Math = Math;
-              bound = Math.min(messageAt.messageAt, timestamp);
+            if (null != closure_1.messageAt) {
+              _Math = Math;
+              bound = Math.min(tmp.messageAt, timestamp);
             }
+            obj.lastMessageAt = bound;
+            obj.seenAt = null;
+            obj.unseen = false;
             tmp5 = null;
-            if (!messageAt.visible) {
+            if (!tmp.visible) {
               tmp5 = timestamp;
             }
+            obj.hiddenAt = tmp5;
+            obj.outdatedShown = false;
+            obj.outdatedBackoff = 0;
+            obj.outdatedUpdating = false;
             return obj;
           }
         }
-        if (tmp21 != null) {
+        if (tmp19 != null) {
           class T {
             constructor() {
-              let bound;
-              let tmp5;
-              const timestamp = Date.now();
-              const obj = {
-                now: timestamp,
-                visitStartedAt: timestamp,
-                draftTyped: false,
-                lastActivityAt: null,
-                lastMessageAt: bound,
-                seenAt: null,
-                unseen: false,
-                hiddenAt: tmp5,
-                outdatedShown: false,
-                outdatedBackoff: 0,
-                outdatedUpdating: false,
-              };
-              const merged = Object.assign(messageAt);
+              tmp = closure_1;
+              timestamp = Date.now();
+              obj = {};
+              merged = Object.assign(closure_1);
+              obj.now = timestamp;
+              obj.visitStartedAt = timestamp;
+              obj.draftTyped = false;
+              obj.lastActivityAt = null;
               bound = null;
-              if (null != messageAt.messageAt) {
-                const _Math = Math;
-                bound = Math.min(messageAt.messageAt, timestamp);
+              if (null != closure_1.messageAt) {
+                _Math = Math;
+                bound = Math.min(tmp.messageAt, timestamp);
               }
+              obj.lastMessageAt = bound;
+              obj.seenAt = null;
+              obj.unseen = false;
               tmp5 = null;
-              if (!messageAt.visible) {
+              if (!tmp.visible) {
                 tmp5 = timestamp;
               }
+              obj.hiddenAt = tmp5;
+              obj.outdatedShown = false;
+              obj.outdatedBackoff = 0;
+              obj.outdatedUpdating = false;
               return obj;
             }
           }
         }
       }
-      let maxResult = null;
+      let bound = null;
       if (null != atResult) {
         class T {
           constructor() {
-            let bound;
-            let tmp5;
-            const timestamp = Date.now();
-            const obj = {
-              now: timestamp,
-              visitStartedAt: timestamp,
-              draftTyped: false,
-              lastActivityAt: null,
-              lastMessageAt: bound,
-              seenAt: null,
-              unseen: false,
-              hiddenAt: tmp5,
-              outdatedShown: false,
-              outdatedBackoff: 0,
-              outdatedUpdating: false,
-            };
-            const merged = Object.assign(messageAt);
+            tmp = closure_1;
+            timestamp = Date.now();
+            obj = {};
+            merged = Object.assign(closure_1);
+            obj.now = timestamp;
+            obj.visitStartedAt = timestamp;
+            obj.draftTyped = false;
+            obj.lastActivityAt = null;
             bound = null;
-            if (null != messageAt.messageAt) {
-              const _Math = Math;
-              bound = Math.min(messageAt.messageAt, timestamp);
+            if (null != closure_1.messageAt) {
+              _Math = Math;
+              bound = Math.min(tmp.messageAt, timestamp);
             }
+            obj.lastMessageAt = bound;
+            obj.seenAt = null;
+            obj.unseen = false;
             tmp5 = null;
-            if (!messageAt.visible) {
+            if (!tmp.visible) {
               tmp5 = timestamp;
             }
+            obj.hiddenAt = tmp5;
+            obj.outdatedShown = false;
+            obj.outdatedBackoff = 0;
+            obj.outdatedUpdating = false;
             return obj;
           }
         }
         const finished_at = atResult.finished_at;
-        let _Math = Math;
         class E {
           constructor() {
             if (null != nextDueAt) {
-              const _setTimeout = setTimeout;
-              const _Math = Math;
-              const _Date = Date;
-              const timeout = setTimeout(
+              tmp2 = globalThis;
+              _setTimeout = setTimeout;
+              _Math = Math;
+              _Date = Date;
+              num = 0;
+              closure_0 = setTimeout(
                 () =>
                   closure_1_2((arg0) => {
-                    const obj = { now: Date.now() };
+                    const obj = {};
                     const merged = Object.assign(arg0);
+                    obj.now = Date.now();
                     return obj;
                   }),
                 Math.max(0, tmp - Date.now()),
               );
               return () => clearTimeout(closure_0);
+            } else {
+              return;
             }
           }
         }
         if (finished_at == null) {
           class T {
             constructor() {
-              let bound;
-              let tmp5;
-              const timestamp = Date.now();
-              const obj = {
-                now: timestamp,
-                visitStartedAt: timestamp,
-                draftTyped: false,
-                lastActivityAt: null,
-                lastMessageAt: bound,
-                seenAt: null,
-                unseen: false,
-                hiddenAt: tmp5,
-                outdatedShown: false,
-                outdatedBackoff: 0,
-                outdatedUpdating: false,
-              };
-              const merged = Object.assign(messageAt);
+              tmp = closure_1;
+              timestamp = Date.now();
+              obj = {};
+              merged = Object.assign(closure_1);
+              obj.now = timestamp;
+              obj.visitStartedAt = timestamp;
+              obj.draftTyped = false;
+              obj.lastActivityAt = null;
               bound = null;
-              if (null != messageAt.messageAt) {
-                const _Math = Math;
-                bound = Math.min(messageAt.messageAt, timestamp);
+              if (null != closure_1.messageAt) {
+                _Math = Math;
+                bound = Math.min(tmp.messageAt, timestamp);
               }
+              obj.lastMessageAt = bound;
+              obj.seenAt = null;
+              obj.unseen = false;
               tmp5 = null;
-              if (!messageAt.visible) {
+              if (!tmp.visible) {
                 tmp5 = timestamp;
               }
+              obj.hiddenAt = tmp5;
+              obj.outdatedShown = false;
+              obj.outdatedBackoff = 0;
+              obj.outdatedUpdating = false;
               return obj;
             }
           }
@@ -1190,37 +1180,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (settled_at == null) {
           class T {
             constructor() {
-              let bound;
-              let tmp5;
-              const timestamp = Date.now();
-              const obj = {
-                now: timestamp,
-                visitStartedAt: timestamp,
-                draftTyped: false,
-                lastActivityAt: null,
-                lastMessageAt: bound,
-                seenAt: null,
-                unseen: false,
-                hiddenAt: tmp5,
-                outdatedShown: false,
-                outdatedBackoff: 0,
-                outdatedUpdating: false,
-              };
-              const merged = Object.assign(messageAt);
+              tmp = closure_1;
+              timestamp = Date.now();
+              obj = {};
+              merged = Object.assign(closure_1);
+              obj.now = timestamp;
+              obj.visitStartedAt = timestamp;
+              obj.draftTyped = false;
+              obj.lastActivityAt = null;
               bound = null;
-              if (null != messageAt.messageAt) {
-                const _Math = Math;
-                bound = Math.min(messageAt.messageAt, timestamp);
+              if (null != closure_1.messageAt) {
+                _Math = Math;
+                bound = Math.min(tmp.messageAt, timestamp);
               }
+              obj.lastMessageAt = bound;
+              obj.seenAt = null;
+              obj.unseen = false;
               tmp5 = null;
-              if (!messageAt.visible) {
+              if (!tmp.visible) {
                 tmp5 = timestamp;
               }
+              obj.hiddenAt = tmp5;
+              obj.outdatedShown = false;
+              obj.outdatedBackoff = 0;
+              obj.outdatedUpdating = false;
               return obj;
             }
           }
         }
-        maxResult = max(tmp23, finished_at, settled_at);
+        bound = Math.max(tmp21, finished_at, settled_at);
       }
       cResult[0] = arg2;
       cResult[1] = arr;
@@ -1228,32 +1216,30 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp2 != null) {
         class T {
           constructor() {
-            let bound;
-            let tmp5;
-            const timestamp = Date.now();
-            const obj = {
-              now: timestamp,
-              visitStartedAt: timestamp,
-              draftTyped: false,
-              lastActivityAt: null,
-              lastMessageAt: bound,
-              seenAt: null,
-              unseen: false,
-              hiddenAt: tmp5,
-              outdatedShown: false,
-              outdatedBackoff: 0,
-              outdatedUpdating: false,
-            };
-            const merged = Object.assign(messageAt);
+            tmp = closure_1;
+            timestamp = Date.now();
+            obj = {};
+            merged = Object.assign(closure_1);
+            obj.now = timestamp;
+            obj.visitStartedAt = timestamp;
+            obj.draftTyped = false;
+            obj.lastActivityAt = null;
             bound = null;
-            if (null != messageAt.messageAt) {
-              const _Math = Math;
-              bound = Math.min(messageAt.messageAt, timestamp);
+            if (null != closure_1.messageAt) {
+              _Math = Math;
+              bound = Math.min(tmp.messageAt, timestamp);
             }
+            obj.lastMessageAt = bound;
+            obj.seenAt = null;
+            obj.unseen = false;
             tmp5 = null;
-            if (!messageAt.visible) {
+            if (!tmp.visible) {
               tmp5 = timestamp;
             }
+            obj.hiddenAt = tmp5;
+            obj.outdatedShown = false;
+            obj.outdatedBackoff = 0;
+            obj.outdatedUpdating = false;
             return obj;
           }
         }
@@ -1262,64 +1248,60 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp2 != null) {
         class T {
           constructor() {
-            let bound;
-            let tmp5;
-            const timestamp = Date.now();
-            const obj = {
-              now: timestamp,
-              visitStartedAt: timestamp,
-              draftTyped: false,
-              lastActivityAt: null,
-              lastMessageAt: bound,
-              seenAt: null,
-              unseen: false,
-              hiddenAt: tmp5,
-              outdatedShown: false,
-              outdatedBackoff: 0,
-              outdatedUpdating: false,
-            };
-            const merged = Object.assign(messageAt);
+            tmp = closure_1;
+            timestamp = Date.now();
+            obj = {};
+            merged = Object.assign(closure_1);
+            obj.now = timestamp;
+            obj.visitStartedAt = timestamp;
+            obj.draftTyped = false;
+            obj.lastActivityAt = null;
             bound = null;
-            if (null != messageAt.messageAt) {
-              const _Math = Math;
-              bound = Math.min(messageAt.messageAt, timestamp);
+            if (null != closure_1.messageAt) {
+              _Math = Math;
+              bound = Math.min(tmp.messageAt, timestamp);
             }
+            obj.lastMessageAt = bound;
+            obj.seenAt = null;
+            obj.unseen = false;
             tmp5 = null;
-            if (!messageAt.visible) {
+            if (!tmp.visible) {
               tmp5 = timestamp;
             }
+            obj.hiddenAt = tmp5;
+            obj.outdatedShown = false;
+            obj.outdatedBackoff = 0;
+            obj.outdatedUpdating = false;
             return obj;
           }
         }
-        if (tmp25 != null) {
+        if (tmp23 != null) {
           class T {
             constructor() {
-              let bound;
-              let tmp5;
-              const timestamp = Date.now();
-              const obj = {
-                now: timestamp,
-                visitStartedAt: timestamp,
-                draftTyped: false,
-                lastActivityAt: null,
-                lastMessageAt: bound,
-                seenAt: null,
-                unseen: false,
-                hiddenAt: tmp5,
-                outdatedShown: false,
-                outdatedBackoff: 0,
-                outdatedUpdating: false,
-              };
-              const merged = Object.assign(messageAt);
+              tmp = closure_1;
+              timestamp = Date.now();
+              obj = {};
+              merged = Object.assign(closure_1);
+              obj.now = timestamp;
+              obj.visitStartedAt = timestamp;
+              obj.draftTyped = false;
+              obj.lastActivityAt = null;
               bound = null;
-              if (null != messageAt.messageAt) {
-                const _Math = Math;
-                bound = Math.min(messageAt.messageAt, timestamp);
+              if (null != closure_1.messageAt) {
+                _Math = Math;
+                bound = Math.min(tmp.messageAt, timestamp);
               }
+              obj.lastMessageAt = bound;
+              obj.seenAt = null;
+              obj.unseen = false;
               tmp5 = null;
-              if (!messageAt.visible) {
+              if (!tmp.visible) {
                 tmp5 = timestamp;
               }
+              obj.hiddenAt = tmp5;
+              obj.outdatedShown = false;
+              obj.outdatedBackoff = 0;
+              obj.outdatedUpdating = false;
               return obj;
             }
           }
@@ -1330,83 +1312,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = arg2;
       cResult[7] = true === undefined;
       cResult[8] = "changes" === undefined;
-      cResult[9] = maxResult;
-      tmp18 = maxResult;
-      tmp17 = tmp27;
-      tmp16 = tmp26;
-      tmp15 = arg2;
-      tmp14 = arg0;
+      cResult[9] = bound;
+      tmp16 = bound;
+      tmp15 = tmp25;
+      tmp14 = tmp24;
+      tmp13 = arg2;
+      tmp12 = arg0;
+      let obj = require("c");
     }
   : (projectId, arr, draftHasText) => {
-      let closure_2;
-      let maxResult;
-      let nextDueAt;
-      let obj;
-      let obj3;
-      let outdatedBackoff;
-      let publishing;
-      let shown;
-      let state;
-      let tmp15;
-      let tmp16;
-      const f126214 = () => {
-        let bound;
-        let tmp5;
-        const timestamp = Date.now();
-        obj = {
-          now: timestamp,
-          visitStartedAt: timestamp,
-          draftTyped: false,
-          lastActivityAt: null,
-          lastMessageAt: bound,
-          seenAt: null,
-          unseen: false,
-          hiddenAt: tmp5,
-          outdatedShown: false,
-          outdatedBackoff: 0,
-          outdatedUpdating: false,
-        };
-        const merged = Object.assign(obj);
-        bound = null;
-        if (null != obj.messageAt) {
-          const _Math = Math;
-          bound = Math.min(tmp.messageAt, timestamp);
-        }
-        tmp5 = null;
-        if (!obj.visible) {
-          tmp5 = timestamp;
-        }
-        return obj;
-      };
-      const f126215 = (key) => {
-        let num;
-        obj = { idleDelayMs: num, eligible: null != obj3 && key.eligible(tmp6) };
-        const merged = Object.assign(key);
-        if ("outdated" !== key.key) {
-          const backoffDelaysMs = key.backoffDelaysMs;
-          let idleDelayMs;
-          if (backoffDelaysMs != null) {
-            idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
-          }
-          if (idleDelayMs == null) {
-            idleDelayMs = key.idleDelayMs;
-          }
-          num = idleDelayMs;
-        } else {
-          num = 0;
-        }
-        null != obj3 && key.eligible(tmp6);
-        return obj;
-      };
-      let closure_0 = projectId;
-      let tmp = obj(16652)(projectId);
+      closure_0 = projectId;
+      const tmp = obj(16652)(projectId);
       let diff = arr.length - 1;
       let tmp4 = null;
-      const tmp2 = obj(16183)();
       if (0 <= diff) {
         while (true) {
           let tmp5 = arr[diff];
-          let tmp6 = diff;
           if ("publish_notice" === tmp5.kind) {
             diff = diff - 1;
             tmp4 = null;
@@ -1433,18 +1354,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const atResult = arr.at(-1);
-      obj = {
-        projectId,
-        draftHasText,
-        publishing: true === publishing,
-        drift: "changes" === state,
-        messageAt: maxResult,
-        visible: tmp2,
-      };
-      publishing = undefined;
+      obj = { projectId, draftHasText, publishing: null, drift: null, messageAt: null, visible: null };
+      let publishing;
       if (tmp != null) {
         publishing = tmp.publishing;
       }
+      obj.publishing = true === publishing;
       state = undefined;
       if (tmp != null) {
         const status = tmp.status;
@@ -1452,11 +1367,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           state = status.state;
         }
       }
-      maxResult = null;
+      obj.drift = "changes" === state;
+      let bound = null;
       if (null != atResult) {
         let num = atResult.finished_at;
-        let _Math = Math;
-        const created_at = atResult.created_at;
         if (num == null) {
           num = 0;
         }
@@ -1464,11 +1378,38 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (num2 == null) {
           num2 = 0;
         }
-        maxResult = max(created_at, num, num2);
+        bound = Math.max(atResult.created_at, num, num2);
       }
-      [tmp15, tmp16] = obj3.useState(f126214);
+      obj.messageAt = bound;
+      obj.visible = obj(16183)();
+      const tmp2 = obj(16183)();
+      [tmp15, tmp16] = obj3.useState(() => {
+        const timestamp = Date.now();
+        obj = {};
+        const merged = Object.assign(obj);
+        obj.now = timestamp;
+        obj.visitStartedAt = timestamp;
+        obj.draftTyped = false;
+        obj.lastActivityAt = null;
+        let bound = null;
+        if (null != obj.messageAt) {
+          const _Math = Math;
+          bound = Math.min(tmp.messageAt, timestamp);
+        }
+        obj.lastMessageAt = bound;
+        obj.seenAt = null;
+        obj.unseen = false;
+        let tmp5 = null;
+        if (!obj.visible) {
+          tmp5 = timestamp;
+        }
+        obj.hiddenAt = tmp5;
+        obj.outdatedShown = false;
+        obj.outdatedBackoff = 0;
+        obj.outdatedUpdating = false;
+        return obj;
+      });
       dependencyMap = tmp16;
-      _slicedToArray(obj3.useState(f126214), 2);
       const tmp17 = nextReminderClockState(tmp15, obj, Date.now);
       _slicedToArray = tmp17;
       let tmp18 = null;
@@ -1498,43 +1439,91 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       obj3 = tmp18;
-      ({ shown, nextDueAt } = selectConjureReminder(items1.map(f126215), tmp17));
-      selectConjureReminder(items1.map(f126215), tmp17);
+      const tmp14 = _slicedToArray(
+        obj3.useState(() => {
+          const timestamp = Date.now();
+          obj = {};
+          const merged = Object.assign(obj);
+          obj.now = timestamp;
+          obj.visitStartedAt = timestamp;
+          obj.draftTyped = false;
+          obj.lastActivityAt = null;
+          let bound = null;
+          if (null != obj.messageAt) {
+            const _Math = Math;
+            bound = Math.min(tmp.messageAt, timestamp);
+          }
+          obj.lastMessageAt = bound;
+          obj.seenAt = null;
+          obj.unseen = false;
+          let tmp5 = null;
+          if (!obj.visible) {
+            tmp5 = timestamp;
+          }
+          obj.hiddenAt = tmp5;
+          obj.outdatedShown = false;
+          obj.outdatedBackoff = 0;
+          obj.outdatedUpdating = false;
+          return obj;
+        }),
+        2,
+      );
+      ({ shown, nextDueAt } = selectConjureReminder(
+        items1.map((key) => {
+          obj = {};
+          const merged = Object.assign(key);
+          if ("outdated" !== key.key) {
+            const backoffDelaysMs = key.backoffDelaysMs;
+            let idleDelayMs;
+            if (backoffDelaysMs != null) {
+              idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+            }
+            if (idleDelayMs == null) {
+              idleDelayMs = key.idleDelayMs;
+            }
+            let num = idleDelayMs;
+          } else {
+            num = 0;
+          }
+          obj.idleDelayMs = num;
+          obj.eligible = null != obj3 && key.eligible(tmp6);
+          return obj;
+        }),
+        tmp17,
+      ));
       if ("outdated" === shown) {
         if (!tmp17.outdatedShown) {
-          const obj4 = { outdatedShown: true };
+          const obj4 = {};
           let merged = Object.assign(tmp17);
+          obj4.outdatedShown = true;
           tmp16(obj4);
         }
         items = [projectId];
-        const effect = obj2.useEffect(function () {
+        const effect = obj2.useEffect(() => {
           function onActivity() {
             closure_1_2((arg0) => {
-              obj = { outdatedUpdating: true };
+              obj = {};
               const merged = Object.assign(arg0);
+              obj.outdatedUpdating = true;
               return obj;
             });
           }
-          set = map.get(onActivity);
-          const tmp = onActivity;
+          let set = map.get(onActivity);
           if (set == null) {
             const _Set = Set;
-            const self = this;
-            const self2 = this;
             set = new Set();
           }
-          const result = map.set(tmp, set);
+          const result = map.set(onActivity, set);
           set.add(onActivity);
           return () => {
             set.delete(onActivity);
             if (0 === set.size) {
-              map.delete(projectId);
+              map.delete(closure_0);
             }
           };
         }, items);
         items1 = [nextDueAt, tmp17.now];
         const effect1 = obj2.useEffect(() => {
-          let closure_0;
           if (null != nextDueAt) {
             const _setTimeout = setTimeout;
             const _Math = Math;
@@ -1542,8 +1531,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const timeout = setTimeout(
               () =>
                 closure_1_2((arg0) => {
-                  obj = { now: Date.now() };
+                  obj = {};
                   const merged = Object.assign(arg0);
+                  obj.now = Date.now();
                   return obj;
                 }),
               Math.max(0, tmp - Date.now()),
@@ -1556,27 +1546,43 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp17 !== tmp15) {
         tmp16(tmp17);
       }
+      const tmp20 = selectConjureReminder(
+        items1.map((key) => {
+          obj = {};
+          const merged = Object.assign(key);
+          if ("outdated" !== key.key) {
+            const backoffDelaysMs = key.backoffDelaysMs;
+            let idleDelayMs;
+            if (backoffDelaysMs != null) {
+              idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+            }
+            if (idleDelayMs == null) {
+              idleDelayMs = key.idleDelayMs;
+            }
+            let num = idleDelayMs;
+          } else {
+            num = 0;
+          }
+          obj.idleDelayMs = num;
+          obj.eligible = null != obj3 && key.eligible(tmp6);
+          return obj;
+        }),
+        tmp17,
+      );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (key) => {
-      let arr2;
-      let first;
-      let tmp13;
-      let tmp16;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         items = [];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
-      [arr2, tmp5] = react.useState(first);
-      let closure_0 = tmp5;
-      _slicedToArray(react.useState(first), 2);
+      [arr2, tmp4] = noop.useState(first);
+      closure_0 = tmp4;
       const found = arr2.find((leaving) => !leaving.leaving);
       key = undefined;
       if (found != null) {
@@ -1588,71 +1594,69 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (key !== key) {
         closure_0 = key;
         const found1 = arr2.filter((key) => key.key !== closure_0);
-        const mapped = found1.map(f126209);
-        let tmp9 = mapped;
+        const mapped = found1.map((item) => {
+          const obj = {};
+          const merged = Object.assign(item);
+          obj.leaving = true;
+          return obj;
+        });
+        let tmp8 = mapped;
         if (null != key) {
           items1 = [];
           const obj3 = { key, leaving: false };
-          items1[HermesBuiltin.arraySpread(items1, mapped, 0)] = obj3;
-          tmp9 = items1;
+          items1[HermesBuiltin.arraySpread(mapped, 0)] = obj3;
+          tmp8 = items1;
         }
-        tmp5(tmp9);
+        tmp4(tmp8);
       }
       if (cResult[1] !== arr2) {
-        let tmp14;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function l(leaving) {
             return leaving.leaving;
           };
           cResult[3] = fn;
-          tmp14 = fn;
+          let tmp13 = fn;
         } else {
-          tmp14 = cResult[3];
+          tmp13 = cResult[3];
         }
-        const someResult = arr2.some(tmp14);
+        const someResult = arr2.some(tmp13);
         cResult[1] = arr2;
         cResult[2] = someResult;
-        tmp13 = someResult;
       } else {
-        tmp13 = cResult[2];
-      }
-      let closure_1 = tmp13;
-      if (cResult[4] !== tmp13) {
-        const fn2 = function p() {
-          if (closure_1) {
-            const _setTimeout = setTimeout;
-            const timeout = setTimeout(() => closure_0((arr) => arr.filter((leaving) => !leaving.leaving)), 180);
-            return () => clearTimeout(closure_0);
-          }
-        };
-        cResult[4] = tmp13;
-        cResult[5] = fn2;
-        tmp16 = fn2;
-      } else {
-        tmp16 = cResult[5];
-      }
-      if (cResult[6] === tmp13) {
-        let tmp17;
-        if (cResult[7] === arr2) {
-          tmp17 = cResult[8];
+        closure_1 = tmp12;
+        if (cResult[4] !== cResult[2]) {
+          const fn2 = function p() {
+            if (closure_1) {
+              const _setTimeout = setTimeout;
+              const timeout = setTimeout(() => closure_0((arr) => arr.filter((leaving) => !leaving.leaving)), 180);
+              return () => clearTimeout(closure_0);
+            }
+          };
+          cResult[4] = tmp12;
+          cResult[5] = fn2;
+          let tmp16 = fn2;
+        } else {
+          tmp16 = cResult[5];
         }
-        const effect = react.useEffect(tmp16, tmp17);
-        return arr2;
+        if (cResult[6] === cResult[2]) {
+          if (cResult[7] === arr2) {
+            let tmp17 = cResult[8];
+          }
+          const effect = noop.useEffect(tmp16, tmp17);
+          return arr2;
+        }
+        const items2 = [cResult[2], arr2];
+        cResult[6] = cResult[2];
+        cResult[7] = arr2;
+        cResult[8] = items2;
+        tmp17 = items2;
       }
-      const items2 = [tmp13, arr2];
-      cResult[6] = tmp13;
-      cResult[7] = arr2;
-      cResult[8] = items2;
-      tmp17 = items2;
+      const tmp3 = _slicedToArray(noop.useState(first), 2);
     }
   : (key) => {
-      let arr;
-      let tmp3;
-      const f126222 = (leaving) => leaving.leaving;
-      [arr, tmp3] = react.useState([]);
-      let closure_0 = tmp3;
-      _slicedToArray(react.useState([]), 2);
+      [arr, tmp2] = noop.useState([]);
+      closure_0 = tmp2;
       const found = arr.find((leaving) => !leaving.leaving);
       key = undefined;
       if (found != null) {
@@ -1664,19 +1668,25 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (key !== key) {
         closure_0 = key;
         const found1 = arr.filter((key) => key.key !== closure_0);
-        const mapped = found1.map(f126209);
-        let tmp7 = mapped;
+        const mapped = found1.map((item) => {
+          const obj = {};
+          const merged = Object.assign(item);
+          obj.leaving = true;
+          return obj;
+        });
+        let tmp6 = mapped;
         if (null != key) {
           items = [];
           const obj2 = { key, leaving: false };
-          items[HermesBuiltin.arraySpread(items, mapped, 0)] = obj2;
-          tmp7 = items;
+          items[HermesBuiltin.arraySpread(mapped, 0)] = obj2;
+          tmp6 = items;
         }
-        tmp3(tmp7);
+        tmp2(tmp6);
       }
-      items1 = [arr.some(f126222), arr];
-      arr.some(f126222);
-      const effect = react.useEffect(() => {
+      const someResult = arr.some((leaving) => leaving.leaving);
+      importDefault = someResult;
+      items1 = [someResult, arr];
+      const effect = noop.useEffect(() => {
         if (closure_1) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => closure_0((arr) => arr.filter((leaving) => !leaving.leaving)), 180);
@@ -1685,111 +1695,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       return arr;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      let stateFromStores;
-      let tmp10;
-      let tmp11;
-      let tmp4;
-      let tmp5;
-      let tmp9;
-      let useReducedMotion;
-      const obj = stateFromStores(576);
-      const cResult = obj.c(8);
-      const tmp = stateFromStores;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        items = [AccessibilityStore];
-        const fn = function s() {
-          return useReducedMotion.useReducedMotion;
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      const tmpResult = tmp(504);
-      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      [tmp9, importDefault] = react.useState(1);
-      _slicedToArray(react.useState(1), 2);
-      if (cResult[2] !== stateFromStores) {
-        const fn2 = function l() {
-          let closure_0;
-          let interval;
-          if (!interval) {
-            const _setInterval = setInterval;
-            interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
-            return () => clearInterval(closure_0);
-          }
-        };
-        items1 = [stateFromStores];
-        cResult[2] = stateFromStores;
-        cResult[3] = fn2;
-        cResult[4] = items1;
-        tmp11 = items1;
-        tmp10 = fn2;
-      } else {
-        tmp10 = cResult[3];
-        tmp11 = cResult[4];
-      }
-      const effect = react.useEffect(tmp10, tmp11);
-      if (cResult[5] === tmp9) {
-        let tmp13;
-        if (cResult[6] === stateFromStores) {
-          tmp13 = cResult[7];
-        }
-        return tmp13;
-      }
-      let num5 = 3;
-      const repeat = ".".repeat;
-      if (!stateFromStores) {
-        num5 = tmp9;
-      }
-      const repeatResult = repeat(num5);
-      cResult[5] = tmp9;
-      cResult[6] = stateFromStores;
-      cResult[7] = repeatResult;
-      tmp13 = repeatResult;
-    }
-  : () => {
-      let closure_1;
-      let first;
-      let stateFromStores;
-      let useReducedMotion;
-      items = [AccessibilityStore];
-      const obj = stateFromStores(504);
-      stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      [first, closure_1] = react.useState(1);
-      items1 = [stateFromStores];
-      const effect = react.useEffect(() => {
-        let closure_0;
-        let interval;
-        if (!interval) {
-          const _setInterval = setInterval;
-          interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
-          return () => clearInterval(closure_0);
-        }
-      }, items1);
-      let num = 3;
-      const repeat = ".".repeat;
-      if (!stateFromStores) {
-        num = first;
-      }
-      return repeat(num);
-    };
-function reminderSlotTurn(View) {
-  let diff = View.length - 1;
+function reminderSlotTurn(arg0) {
+  let diff = arg0.length - 1;
   if (0 <= diff) {
     while (true) {
-      let tmp2 = View[diff];
+      let tmp2 = arg0[diff];
       if ("publish_notice" !== tmp2.kind) {
         if ("user" === tmp2.role) {
           break;
-        } else if (metroImportDefault(tmp2)) {
+        } else if (React5(tmp2)) {
           return tmp2;
-        } else if (!metroRequire(View, diff)) {
+        } else if (!timestampProducer(arg0, diff)) {
           return null;
         }
       }
@@ -1817,8 +1733,6 @@ function hasOpenAsk(awaitingUser) {
 }
 function reminderActivityAt(finished_at) {
   let num = finished_at.finished_at;
-  const _Math = Math;
-  const created_at = finished_at.created_at;
   if (num == null) {
     num = 0;
   }
@@ -1826,24 +1740,30 @@ function reminderActivityAt(finished_at) {
   if (num2 == null) {
     num2 = 0;
   }
-  return max(created_at, num, num2);
+  return Math.max(finished_at.created_at, num, num2);
 }
 function clampToObserved(arg0, arg1) {
   return Math.min(arg0, arg1);
 }
 function nextReminderLayers(arr, key) {
-  let closure_0 = key;
+  closure_0 = key;
   const found = arr.filter((key) => key.key !== closure_0);
-  const mapped = found.map(f126209);
-  let tmp3 = mapped;
+  const mapped = found.map((item) => {
+    const obj = {};
+    const merged = Object.assign(item);
+    obj.leaving = true;
+    return obj;
+  });
+  let tmp2 = mapped;
   if (null != key) {
     items = [];
     const obj = { key, leaving: false };
-    items[HermesBuiltin.arraySpread(items, mapped, 0)] = obj;
-    tmp3 = items;
+    items[HermesBuiltin.arraySpread(mapped, 0)] = obj;
+    tmp2 = items;
   }
-  return tmp3;
+  return tmp2;
 }
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/reminders/conjureReminderSlot.tsx");
 
 export const CONJURE_REMINDER_IDLE_DELAY_MS = 60000;
@@ -1858,7 +1778,7 @@ export { reminderActivityAt };
 export { clampToObserved };
 export { selectConjureReminder };
 export const markConjureReminderActivity = function markConjureReminderActivity(projectId) {
-  const value = map.get(projectId);
+  value = map.get(projectId);
   if (value != null) {
     const item = value.forEach((fn) => fn());
   }
@@ -1866,4 +1786,77 @@ export const markConjureReminderActivity = function markConjureReminderActivity(
 export const useConjureReminder = tmp4;
 export { nextReminderLayers };
 export const useConjureReminderLayers = tmp5;
-export const useConjureUpdatingDots = tmp6;
+export const useConjureUpdatingDots = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = stateFromStores(576).c(8);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        items = [AccessibilityStore];
+        const fn = function s() {
+          return useReducedMotion.useReducedMotion;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      const obj = stateFromStores(576);
+      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
+      const tmpResult = stateFromStores(504);
+      [tmp9, importDefault] = noop.useState(1);
+      if (cResult[2] !== stateFromStores) {
+        const fn2 = function l() {
+          if (!interval) {
+            const _setInterval = setInterval;
+            interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
+            return () => clearInterval(closure_0);
+          }
+        };
+        items1 = [stateFromStores];
+        cResult[2] = stateFromStores;
+        cResult[3] = fn2;
+        cResult[4] = items1;
+        let tmp11 = items1;
+        let tmp10 = fn2;
+      } else {
+        tmp10 = cResult[3];
+        tmp11 = cResult[4];
+      }
+      const effect = noop.useEffect(tmp10, tmp11);
+      if (cResult[5] === tmp9) {
+        if (cResult[6] === stateFromStores) {
+          let tmp13 = cResult[7];
+        }
+        return tmp13;
+      }
+      let num5 = 3;
+      if (!stateFromStores) {
+        num5 = tmp9;
+      }
+      const repeatResult = ".".repeat(num5);
+      cResult[5] = tmp9;
+      cResult[6] = stateFromStores;
+      cResult[7] = repeatResult;
+      tmp13 = repeatResult;
+      const tmp8 = _slicedToArray(noop.useState(1), 2);
+    }
+  : () => {
+      items = [AccessibilityStore];
+      stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const tmp2 = _slicedToArray(noop.useState(1), 2);
+      closure_1 = tmp2[1];
+      items1 = [stateFromStores];
+      const effect = noop.useEffect(() => {
+        if (!interval) {
+          const _setInterval = setInterval;
+          interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
+          return () => clearInterval(closure_0);
+        }
+      }, items1);
+      let num = 3;
+      if (!stateFromStores) {
+        num = tmp2[0];
+      }
+      return ".".repeat(num);
+    };

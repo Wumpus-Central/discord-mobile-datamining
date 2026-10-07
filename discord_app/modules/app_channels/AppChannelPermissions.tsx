@@ -1,6 +1,7 @@
 // discord_app/modules/app_channels/AppChannelPermissions.tsx
 import Constants from "../../Constants.tsx";
-import BigFlagUtils_mod from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import "BigFlagUtils";
+import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const Permissions = Constants.Permissions;
@@ -14,17 +15,14 @@ const items = [, , , , , ,];
   ADD_REACTIONS: arr[5],
   USE_EXTERNAL_EMOJIS: arr[6],
 } = Permissions);
-let BigFlagUtils = BigFlagUtils_mod;
 const items1 = [...items];
 const items2 = [,];
 ({ MANAGE_CHANNELS: arr3[0], MANAGE_ROLES: arr3[1] } = Permissions);
-const applyResult = BigFlagUtils.combine.apply(items1);
-HermesBuiltin.arraySpread(items2, items, 2);
-BigFlagUtils = BigFlagUtils_mod;
+HermesBuiltin.arraySpread(items, 2);
 const items3 = [...items2];
-const applyResult1 = BigFlagUtils.combine.apply(items3);
+const applyResult = BigFlagUtils.combine.apply(items1);
 const result = size.fileFinishedImporting("modules/app_channels/AppChannelPermissions.tsx");
 
 export const APP_CHANNEL_MINIMUM_BOT_PERMISSIONS = applyResult;
 export const SWAP_APP_CHANNEL_APPLICATION_PERMISSION_LIST = items2;
-export const SWAP_APP_CHANNEL_APPLICATION_PERMISSIONS = applyResult1;
+export const SWAP_APP_CHANNEL_APPLICATION_PERMISSIONS = BigFlagUtils.combine.apply(items3);

@@ -1,37 +1,29 @@
 // discord_app/modules/user_settings/profiles/native/useHasFinishedPresenting.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let navigation;
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/useHasFinishedPresenting.tsx");
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_2;
-      let first;
-      const obj = react2;
-      const cResult = obj.c(4);
-      const obj2 = useNavigation;
-      navigation = obj2.useNavigation();
-      [first, closure_2] = react.useState(false);
+      const cResult = c.c(4);
+      let navigation = useNavigation.useNavigation();
+      [first, closure_2] = noop.useState(false);
       if (cResult[0] === first) {
-        let tmp5;
-        let tmp6;
         if (cResult[1] === navigation) {
-          tmp5 = cResult[2];
-          tmp6 = cResult[3];
+          let tmp5 = cResult[2];
+          let tmp6 = cResult[3];
         }
-        const effect = react.useEffect(tmp5, tmp6);
+        const effect = noop.useEffect(tmp5, tmp6);
         return first;
       }
       const fn = function s() {
-        let closure_1;
-        let timeout;
-        const tmp = timeout;
-        if (!tmp) {
+        if (!timeout) {
           const parent = navigation.getParent();
           let addListenerResult;
           if (parent != null) {
@@ -45,7 +37,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const _setTimeout = setTimeout;
           timeout = setTimeout(() => closure_1_2(true), 500);
           return () => {
-            if (navigation != null) {
+            if (addListenerResult != null) {
               tmp();
             }
             clearTimeout(closure_1);
@@ -61,17 +53,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
     }
   : () => {
-      let closure_2;
-      let first;
-      const obj = useNavigation;
-      navigation = obj.useNavigation();
-      [first, closure_2] = react.useState(false);
+      let navigation = useNavigation.useNavigation();
+      [first, closure_2] = noop.useState(false);
       const items = [navigation, first];
-      const effect = react.useEffect(() => {
-        let closure_1;
-        let timeout;
-        const tmp = timeout;
-        if (!tmp) {
+      const effect = noop.useEffect(() => {
+        if (!timeout) {
           const parent = navigation.getParent();
           let addListenerResult;
           if (parent != null) {
@@ -85,7 +71,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const _setTimeout = setTimeout;
           timeout = setTimeout(() => closure_1_2(true), 500);
           return () => {
-            if (navigation != null) {
+            if (addListenerResult != null) {
               tmp();
             }
             clearTimeout(closure_1);
@@ -94,6 +80,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       return first;
     };
-const result = size.fileFinishedImporting("modules/user_settings/profiles/native/useHasFinishedPresenting.tsx");
-
-export default tmp2;

@@ -6,26 +6,21 @@ import EnhancedRoleColorUtils from "../modules/premium/enhanced_role_colors/Enha
 import size from "../../_runtime/metro/00002__.js";
 
 function compareGuildRoles(guildId, id) {
-  let num;
   guildId = guildId.guildId;
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      const obj2 = SnowflakeUtilsDefault;
-      num2 = obj2.compare(guildId.id, id.id);
+      num2 = SnowflakeUtilsDefault.compare(guildId.id, id.id);
     }
-    num = num2;
+    let num = num2;
   } else {
     num = -1;
     if (id.id !== guildId) {
-      let diff;
       if (guildId.position !== id.position) {
-        diff = id.position - guildId.position;
+        let diff = id.position - guildId.position;
       } else {
-        const obj = SnowflakeUtilsDefault;
-        diff = obj.compare(guildId.id, id.id);
+        diff = SnowflakeUtilsDefault.compare(guildId.id, id.id);
       }
-      num = diff;
     }
   }
   return num;
@@ -38,72 +33,63 @@ export const sortGuildRoleRecords = function sortGuildRoleRecords(arr) {
 };
 export { compareGuildRoles };
 export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
-  let num;
   guildId = guildId.guildId;
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      const obj2 = SnowflakeUtilsDefault;
-      num2 = obj2.compare(guildId.id, id.id);
+      num2 = SnowflakeUtilsDefault.compare(guildId.id, id.id);
     }
-    num = num2;
+    let num = num2;
   } else {
     num = -1;
     if (id.id !== guildId) {
-      let diff;
       if (guildId.position !== id.position) {
-        diff = id.position - guildId.position;
+        let diff = id.position - guildId.position;
       } else {
-        const obj = SnowflakeUtilsDefault;
-        diff = obj.compare(guildId.id, id.id);
+        diff = SnowflakeUtilsDefault.compare(guildId.id, id.id);
       }
-      num = diff;
     }
   }
   return num < 0;
 };
 export const sortInviteRoles = function sortInviteRoles(position, position2) {
-  let diff;
   if (position.position !== position2.position) {
-    diff = position2.position - position.position;
+    let diff = position2.position - position.position;
   } else {
-    const obj = SnowflakeUtilsDefault;
-    diff = obj.compare(position.id, position2.id);
+    diff = SnowflakeUtilsDefault.compare(position.id, position2.id);
   }
   return diff;
 };
-export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id2) {
-  let icon;
-  let int2hexResult;
-  let result;
-  let unicode_emoji;
+export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) {
   const obj = {
     id: id.id,
     name: id.name,
     guildId: id,
-    colorString: int2hexResult,
-    colorStrings: result,
-    icon,
-    unicodeEmoji: unicode_emoji,
+    colorString: null,
+    colorStrings: null,
+    icon: null,
+    unicodeEmoji: null,
   };
-  int2hexResult = null;
+  let int2hexResult = null;
   if (0 !== id.color) {
-    const obj2 = utils_ColorUtils;
-    int2hexResult = obj2.int2hex(id.color);
+    int2hexResult = utils_ColorUtils.int2hex(id.color);
   }
-  result = null;
+  obj.colorString = int2hexResult;
+  let result = null;
   if (null != id.colors) {
-    const obj3 = EnhancedRoleColorUtils;
-    result = obj3.extractColorStringsFromServerColors(id.colors);
+    result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
   }
-  icon = id.icon;
+  obj.colorStrings = result;
+  let icon = id.icon;
   if (icon == null) {
     icon = null;
   }
-  unicode_emoji = id.unicode_emoji;
+  obj.icon = icon;
+  let unicode_emoji = id.unicode_emoji;
   if (unicode_emoji == null) {
     unicode_emoji = null;
   }
+  obj.unicodeEmoji = unicode_emoji;
   return obj;
 };
 export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRoles) {
@@ -118,20 +104,19 @@ export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRol
   if (items1.length + items.length === 0) {
     return unsafeMutableRoles;
   } else {
-    const obj3 = {};
+    const obj2 = {};
     const merged = Object.assign(unsafeMutableRoles);
     if (null != items1) {
       for (const item10012 of items1) {
-        delete obj2[item10012];
+        delete tmp[tmp2];
         continue;
       }
     }
     for (const item10018 of items) {
-      id = item10018.id;
       let obj = GuildRoleRecordUtilsAll;
-      obj3[id] = obj.fromServer(id, item10018);
+      obj2[item10018.id] = obj.fromServer(arg0, item10018);
       continue;
     }
-    return obj3;
+    return obj2;
   }
 };

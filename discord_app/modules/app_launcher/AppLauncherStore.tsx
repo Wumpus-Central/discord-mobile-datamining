@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/AppLauncherStore.tsx
-import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AppLauncherTypes from "AppLauncherTypes.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
+require = fn;
 function handleDismissWithDismissed() {
   let DISMISSED = AppLauncherTypes.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
@@ -28,54 +28,56 @@ function handleSetActiveCommand() {
 }
 const obj = {
   show: false,
-  entrypoint: AppLauncherTypes.AppLauncherEntrypoint.NONE,
-  lastShownEntrypoint: AppLauncherTypes.AppLauncherEntrypoint.NONE,
+  entrypoint: fn(8961).AppLauncherEntrypoint.NONE,
+  lastShownEntrypoint: fn(8961).AppLauncherEntrypoint.NONE,
   activeViewType: null,
   activeChannelId: null,
-  closeReason: AppLauncherTypes.AppLauncherCloseReason.DISMISSED,
+  closeReason: fn(8961).AppLauncherCloseReason.DISMISSED,
   initialState: "applicationId",
 };
-const Store = get_initializedDefault.Store;
-class AppLauncherStore extends Store {
-  initialize() {}
-  shouldShowPopup() {
-    const show = obj.show && obj.entrypoint === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
-    return show;
-  }
-  shouldShowModal() {
-    const show = obj.show && obj.entrypoint === AppLauncherTypes.AppLauncherEntrypoint.VOICE;
-    return show;
-  }
-  entrypoint() {
-    return obj.entrypoint;
-  }
-  lastShownEntrypoint() {
-    return obj.lastShownEntrypoint;
-  }
-  activeViewType() {
-    return obj.activeViewType;
-  }
-  activeChannelId() {
-    let activeChannelId = obj.activeChannelId;
-    if (activeChannelId == null) {
-      activeChannelId = null;
-    }
-    return activeChannelId;
-  }
-  closeReason() {
-    return obj.closeReason;
-  }
-  initialState() {
-    return obj.initialState;
-  }
-}
+const Store = initializeDefault.Store;
+class AppLauncherStore extends Store {}
 const prototype = AppLauncherStore.prototype;
+prototype["initialize"] = function initialize() {};
+prototype["shouldShowPopup"] = function shouldShowPopup() {
+  let show = obj.show;
+  if (show) {
+    show = obj.entrypoint === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
+  }
+  return show;
+};
+prototype["shouldShowModal"] = function shouldShowModal() {
+  let show = obj.show;
+  if (show) {
+    show = obj.entrypoint === AppLauncherTypes.AppLauncherEntrypoint.VOICE;
+  }
+  return show;
+};
+prototype["entrypoint"] = function entrypoint() {
+  return obj.entrypoint;
+};
+prototype["lastShownEntrypoint"] = function lastShownEntrypoint() {
+  return obj.lastShownEntrypoint;
+};
+prototype["activeViewType"] = function activeViewType() {
+  return obj.activeViewType;
+};
+prototype["activeChannelId"] = function activeChannelId() {
+  let activeChannelId = obj.activeChannelId;
+  if (activeChannelId == null) {
+    activeChannelId = null;
+  }
+  return activeChannelId;
+};
+prototype["closeReason"] = function closeReason() {
+  return obj.closeReason;
+};
+prototype["initialState"] = function initialState() {
+  return obj.initialState;
+};
 AppLauncherStore.displayName = "AppLauncherStore";
-const obj2 = {
+const appLauncherStore = new AppLauncherStore(DispatcherDefault, {
   APP_LAUNCHER_SHOW: function handleShow(entrypoint) {
-    let activeChannelId;
-    let activeViewType;
-    let initialState;
     entrypoint = entrypoint.entrypoint;
     obj.show = true;
     obj.entrypoint = entrypoint;
@@ -104,8 +106,8 @@ const obj2 = {
   CHANNEL_SELECT: handleDismissWithDismissed,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: handleSetActiveCommand,
   APP_LAUNCHER_SET_ACTIVE_COMMAND: handleSetActiveCommand,
-};
-const appLauncherStore = new AppLauncherStore(DispatcherDefault, obj2);
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherStore.tsx");
 
 export default appLauncherStore;

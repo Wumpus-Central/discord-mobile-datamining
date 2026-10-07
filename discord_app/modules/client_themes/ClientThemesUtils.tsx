@@ -12,40 +12,39 @@ const ThemeTypes = Constants.ThemeTypes;
 const result = size.fileFinishedImporting("modules/client_themes/ClientThemesUtils.tsx");
 
 export const getThemeForColor = function getThemeForColor(l) {
-  let LIGHT;
   if (l.l <= 0.3) {
-    LIGHT = ThemeTypes.DARK;
+    let LIGHT = ThemeTypes.DARK;
   } else {
     LIGHT = ThemeTypes.LIGHT;
   }
   return LIGHT;
 };
 export const getCustomThemeBaseTheme = function getCustomThemeBaseTheme(theme) {
-  const obj = shared;
-  return obj.isThemeDark(theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
+  return shared.isThemeDark(theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
 };
 export const hasCustomTheme = function hasCustomTheme(colors) {
-  return null != colors && colors.colors.length > 0;
+  let tmp = null != colors;
+  if (tmp) {
+    tmp = colors.colors.length > 0;
+  }
+  return tmp;
 };
 export const resolveThemeWithCustomSettings = function resolveThemeWithCustomSettings(theme, customUserThemeSettings) {
-  let tmp2 = theme;
-  const tmp = null != customUserThemeSettings && customUserThemeSettings.colors.length > 0;
+  let tmp = null != customUserThemeSettings;
   if (tmp) {
-    const obj = shared;
-    tmp2 = obj.isThemeDark(theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
+    tmp = customUserThemeSettings.colors.length > 0;
   }
-  return tmp2;
+  if (!tmp) {
+    return theme;
+  } else {
+    shared.isThemeDark(theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
+  }
 };
 export const getLinearGradientForBackgroundGradient = function getLinearGradientForBackgroundGradient(gradientPreset) {
-  let angle;
-  let colors;
   ({ angle, colors } = gradientPreset);
   const mapped = colors.map((item) => {
-    let stop;
-    let token;
     ({ token, stop } = item);
-    const obj = shims;
-    return "" + obj.unsafe_getResolvedRawColor(token, { saturation: 1 }) + " " + stop + "%";
+    return "" + shims.unsafe_getResolvedRawColor(token, { saturation: 1 }) + " " + stop + "%";
   });
   return "linear-gradient(" + angle + "deg, " + mapped.join(", ") + ")";
 };
@@ -55,18 +54,17 @@ export const areThemesEqualForGradientThemes = function areThemesEqualForGradien
     let tmp3 = arg0 === ThemeTypes.ASH && arg1 === ThemeTypes.DARK;
     if (!tmp3) {
       tmp3 = arg0 === ThemeTypes.DARK && arg1 === ThemeTypes.ASH;
+      const tmp4 = arg0 === ThemeTypes.DARK && arg1 === ThemeTypes.ASH;
     }
     tmp = tmp3;
   }
   return tmp;
 };
 export const getBaseTheme = function getBaseTheme(UNSET) {
-  const tmp = closure_3[UNSET];
-  const obj = shared;
-  return obj.isThemeDark(tmp) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
+  return shared.isThemeDark(closure_3[UNSET]) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
 };
 export const getThemeName = function getThemeName(ASH) {
-  let closure_0 = ASH;
+  closure_0 = ASH;
   const found = closure_2.find((theme) => theme.theme === closure_0);
   let str;
   if (found != null) {

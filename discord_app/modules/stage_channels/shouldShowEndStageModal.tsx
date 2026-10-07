@@ -3,11 +3,11 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import StageChannelParticipantStore from "StageChannelParticipantStore.tsx";
 import StageChannelRoleStore from "StageChannelRoleStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
+const require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/shouldShowEndStageModal.tsx");
 
 export default function shouldShowEndStageModal(isGuildStageVoice) {
@@ -23,8 +23,10 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
           let tmp7 =
             null ==
             mutableParticipants.find((user) => {
-              const isModeratorResult =
-                user.user.id !== id && StageChannelRoleStore.isModerator(user.user.id, isGuildStageVoice.id);
+              let isModeratorResult = user.user.id !== id;
+              if (isModeratorResult) {
+                isModeratorResult = StageChannelRoleStore.isModerator(user.user.id, isGuildStageVoice.id);
+              }
               return isModeratorResult;
             });
           if (!tmp7) {
@@ -35,8 +37,10 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
             tmp7 =
               null ==
               mutableParticipants1.find((user) => {
-                const isModeratorResult =
-                  user.user.id !== id && StageChannelRoleStore.isModerator(user.user.id, isGuildStageVoice.id);
+                let isModeratorResult = user.user.id !== id;
+                if (isModeratorResult) {
+                  isModeratorResult = StageChannelRoleStore.isModerator(user.user.id, isGuildStageVoice.id);
+                }
                 return isModeratorResult;
               });
           }

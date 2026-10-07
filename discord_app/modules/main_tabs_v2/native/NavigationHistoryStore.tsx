@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/NavigationHistoryStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import NavigationRouteUtils from "../helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../RootNavigationRef.native.tsx";
 import useChatLayout from "../../chat/native/useChatLayout.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
+require = fn;
 function getIdFromHistoryItem(str) {
   return str.replace(regExp, "");
 }
 function removeHistoryItem(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let flag = map.delete(arg0);
   if (flag) {
     history = history.filter((item) => item !== combined);
@@ -31,46 +31,45 @@ function handleChannelDelete(channel) {
 let c3 = "channel-";
 let c4 = "guild-";
 const regExp = new RegExp("^(?:" + "channel-" + "|" + "guild-" + ")");
-const metroRequire = [];
+let history = [];
 const map = new Map();
-const PersistedStore = get_initializedDefault.PersistedStore;
-class NavigationHistoryStore extends PersistedStore {
-  initialize(history) {
-    this.waitFor(ChannelStore);
-    map.clear();
-    history = undefined;
-    if (history != null) {
-      history = history.history;
-    }
-    if (history == null) {
-      history = [];
-    }
-    for (const item10015 of history) {
-      let result = map.set(item10015, undefined);
-      continue;
-    }
-    let closure_6 = Array.from(map.keys());
-  }
-  getState() {
-    return { history };
-  }
-  getLastHistory() {
-    let num = arg0;
-    if (arg0 === undefined) {
-      num = 1;
-    }
-    return history[history.length - num];
-  }
-  getLastFocusedTimestampForHistoryItem(arg0) {
-    return map.get(arg0);
-  }
-}
+const PersistedStore = initializeDefault.PersistedStore;
+class NavigationHistoryStore extends PersistedStore {}
 const prototype = NavigationHistoryStore.prototype;
+prototype["initialize"] = function initialize(history) {
+  this.waitFor(ChannelStore);
+  map.clear();
+  history = undefined;
+  if (history != null) {
+    history = history.history;
+  }
+  if (history == null) {
+    history = [];
+  }
+  for (const item10015 of history) {
+    let result = map.set(item10015, undefined);
+    continue;
+  }
+  closure_6 = Array.from(map.keys());
+};
+prototype["getState"] = function getState() {
+  return { history };
+};
+prototype["getLastHistory"] = function getLastHistory() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 1;
+  }
+  return history[history.length - num];
+};
+prototype["getLastFocusedTimestampForHistoryItem"] = function getLastFocusedTimestampForHistoryItem(arg0) {
+  return map.get(arg0);
+};
 NavigationHistoryStore.displayName = "NavigationHistoryStore";
 NavigationHistoryStore.persistKey = "NavigationHistoryStore";
-let obj = {
+const navigationHistoryStore = new NavigationHistoryStore(DispatcherDefault, {
   LOGOUT() {
-    let closure_6 = [];
+    closure_6 = [];
     map.clear();
   },
   CHANNEL_DELETE: handleChannelDelete,
@@ -83,19 +82,19 @@ let obj = {
       const _HermesInternal = HermesInternal;
       let flag = removeHistoryItem("" + c4 + guild.id);
       const items = [];
-      HermesBuiltin.arraySpread(items, history, 0);
+      HermesBuiltin.arraySpread(closure_6, 0);
       const iter = items[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp4 = nextResult;
+        let tmp3 = nextResult;
         if (nextResult.startsWith(c3)) {
-          let basicChannel = ChannelStore.getBasicChannel(getIdFromHistoryItem(tmp4));
-          let tmp11 = null != basicChannel;
-          if (tmp11) {
-            tmp11 = tmp10.guild_id !== guild.id;
+          let basicChannel = ChannelStore.getBasicChannel(getIdFromHistoryItem(tmp3));
+          let tmp10 = null != basicChannel;
+          if (tmp10) {
+            tmp10 = tmp9.guild_id !== guild.id;
           }
-          if (!tmp11) {
-            if (removeHistoryItem(tmp4)) {
+          if (!tmp10) {
+            if (removeHistoryItem(tmp3)) {
               flag = true;
             }
           }
@@ -105,8 +104,8 @@ let obj = {
       return flag;
     }
   },
-};
-const navigationHistoryStore = new NavigationHistoryStore(DispatcherDefault, obj);
+});
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
 
 export default navigationHistoryStore;
@@ -114,20 +113,15 @@ export const CHANNEL_PREFIX = "channel-";
 export const GUILD_PREFIX = "guild-";
 export { getIdFromHistoryItem };
 export const handleHistoryStoreNavigationChange = function handleHistoryStoreNavigationChange() {
-  const f93526 = (item) => item !== combined;
-  const obj = RootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     const currentRoute = rootNavigationRef.getCurrentRoute();
     if (null != currentRoute) {
       if (null != currentRoute.params) {
-        const tmpResult = NavigationRouteUtils;
-        const coerceChannelRouteResult = tmpResult.coerceChannelRoute(currentRoute);
+        const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
         if (null == coerceChannelRouteResult) {
-          const tmpResult3 = NavigationRouteUtils;
-          const coerceGuildsRouteResult = tmpResult3.coerceGuildsRoute(currentRoute);
+          const coerceGuildsRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);
           if (null != coerceGuildsRouteResult) {
-            const tmpResult4 = useChatLayout;
             if (tmpResult4.getChatLayout().isChatLockedOpen) {
               const params = coerceGuildsRouteResult.params;
               let channelId;
@@ -137,8 +131,9 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               if (null != channelId) {
                 const _HermesInternal = HermesInternal;
                 const combined = "" + c3 + channelId;
+                let combined2 = combined;
                 if (map.has(combined)) {
-                  history = history.filter(f93526);
+                  history = history.filter((item) => item !== combined2);
                 }
                 if (null != history[history.length - 1]) {
                   const _Date3 = Date;
@@ -160,8 +155,9 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
             if (null != guildId) {
               const _HermesInternal3 = HermesInternal;
               const combined1 = "" + c4 + guildId;
+              combined2 = combined1;
               if (map.has(combined1)) {
-                history = history.filter(f93526);
+                history = history.filter((item) => item !== combined2);
               }
               if (null != history[history.length - 1]) {
                 const _Date2 = Date;
@@ -174,12 +170,14 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
               }
               navigationHistoryStore.emitChange();
             }
+            tmpResult4 = useChatLayout;
           }
+          const tmpResult3 = NavigationRouteUtils;
         } else {
           const _HermesInternal2 = HermesInternal;
-          const combined2 = "" + c3 + coerceChannelRouteResult.params.channelId;
+          combined2 = "" + c3 + coerceChannelRouteResult.params.channelId;
           if (map.has(combined2)) {
-            history = history.filter(f93526);
+            history = history.filter((item) => item !== combined2);
           }
           if (null != history[history.length - 1]) {
             const _Date = Date;
@@ -192,10 +190,11 @@ export const handleHistoryStoreNavigationChange = function handleHistoryStoreNav
           }
           navigationHistoryStore.emitChange();
         }
+        const tmpResult = NavigationRouteUtils;
       }
     }
   }
 };
 export function getNavigationHistory() {
-  return history;
+  return closure_6;
 }

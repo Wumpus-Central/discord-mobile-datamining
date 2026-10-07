@@ -1,22 +1,18 @@
 // discord_app/modules/badges/useShowBadgeProgress.tsx
-import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
-import react from "../../../_runtime/00576_react.js";
-import Constants from "../../Constants.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../_runtime/00576_c.js";
 import BadgeUtils from "BadgeUtils.tsx";
 import ConsentStore from "../../stores/ConsentStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-const Consents = Constants.Consents;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const Consents = fn(1085).Consents;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let badge;
-      let isViewingOtherUser;
-      let tmp4;
-      let tmp5;
-      let viewerBadge;
-      const obj = react;
-      const cResult = obj.c(7);
+      const cResult = c.c(7);
       ({ badge, viewerBadge, isViewingOtherUser } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConsentStore];
@@ -30,52 +26,61 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = get_initialized;
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
       if (viewerBadge == null) {
         viewerBadge = badge;
       }
       if (cResult[2] !== viewerBadge) {
-        const tmpResult3 = BadgeUtils;
+        const findTierResult = BadgeUtils.findTier(viewerBadge, viewerBadge.next_tier);
         cResult[2] = viewerBadge;
-        cResult[3] = tmpResult3.findTier(viewerBadge, viewerBadge.next_tier);
-        const findTierResult = tmpResult3.findTier(viewerBadge, viewerBadge.next_tier);
+        cResult[3] = findTierResult;
+        const tmpResult3 = BadgeUtils;
       }
       if (cResult[4] === badge.badge_id) {
-        let tmp11;
         if (cResult[5] === stateFromStores) {
-          tmp11 = cResult[6];
+          let tmp11 = cResult[6];
         }
-        return !isViewingOtherUser && viewerBadge.owned && tmp10 && !tmp11;
+        let owned = !isViewingOtherUser;
+        if (!isViewingOtherUser) {
+          owned = viewerBadge.owned;
+        }
+        if (owned) {
+          owned = tmp10;
+        }
+        if (owned) {
+          owned = !tmp11;
+        }
+        return owned;
       }
-      const tmpResult4 = BadgeUtils;
-      const tmp12 = tmpResult4.isPersonalizationGatedBadge(badge.badge_id) && !stateFromStores;
+      const tmpResult = initialize;
+      const tmp12 = BadgeUtils.isPersonalizationGatedBadge(badge.badge_id) && !stateFromStores;
       cResult[4] = badge.badge_id;
       cResult[5] = stateFromStores;
       cResult[6] = tmp12;
       tmp11 = tmp12;
+      const tmpResult4 = BadgeUtils;
     }
   : (arg0) => {
-      let badge;
-      let isViewingOtherUser;
-      let viewerBadge;
       ({ badge, viewerBadge, isViewingOtherUser } = arg0);
       const items = [ConsentStore];
-      const obj = get_initialized;
-      const stateFromStores = obj.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
+      const stateFromStores = initialize.useStateFromStores(items, () =>
+        ConsentStore.hasConsented(constants.PERSONALIZATION),
+      );
       if (viewerBadge == null) {
         viewerBadge = badge;
       }
       const tmpResult = BadgeUtils;
-      const tmp4 = null != tmpResult.findTier(viewerBadge, viewerBadge.next_tier);
+      const tmp4 = null != BadgeUtils.findTier(viewerBadge, viewerBadge.next_tier);
       const tmpResult2 = BadgeUtils;
-      const tmp6 =
-        !isViewingOtherUser &&
-        viewerBadge.owned &&
-        tmp4 &&
-        !(tmpResult2.isPersonalizationGatedBadge(badge.badge_id) && !stateFromStores);
-      return tmp6;
+      let owned = !isViewingOtherUser;
+      if (!isViewingOtherUser) {
+        owned = viewerBadge.owned;
+      }
+      if (owned) {
+        owned = tmp4;
+      }
+      if (owned) {
+        owned = !tmp5;
+      }
+      return owned;
     };
-const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.tsx");
-
-export default tmp2;

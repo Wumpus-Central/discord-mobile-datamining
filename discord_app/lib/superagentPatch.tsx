@@ -1,58 +1,46 @@
 // discord_app/lib/superagentPatch.tsx
 import LogAggregatorAll from "../modules/debug/LogAggregator.tsx";
-import Constants from "../Constants.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import RequestDefault from "../../_runtime/01283_Request.js";
-import asyncRequire from "../../_runtime/01987_asyncRequire.js";
-import UserLimitedAccessUtils from "../modules/user_limited_access/UserLimitedAccessUtils.tsx";
-import IdGenerator from "IdGenerator.tsx";
+import _createForOfIteratorHelperDefault from "../../_runtime/01283__createForOfIteratorHelper.js";
 import getTimeZoneDefault from "getTimeZone.native.tsx";
 import trackHttpRequestDefault from "../modules/telemetry_ring/trackHttpRequest.tsx";
-import GuildLimitedAccessUtils from "../modules/guild_limited_access/GuildLimitedAccessUtils.tsx";
-import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
-import ApexExperiment from "../modules/experiments/apex/index.tsx";
 import Dispatcher from "../Dispatcher.tsx";
-import HTTPUtils_mod from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import size from "../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-let arr, c2, c3, c4, importAll, importDefault, status;
-
-let obj2;
 function isAnalyticsEndpoint(pathname) {
   try {
     const _URL = URL;
-    const self = this;
-    const self2 = this;
     const uRL = new URL(pathname);
     return re8.test(uRL.pathname);
   } catch (err) {
-    return re8.test(pathname);
+    return re8.test(tmp);
   }
 }
-const AbortCodes = Constants.AbortCodes;
+const AbortCodes = fn(1085).AbortCodes;
 let closure_6 = [
   "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
   "https://cdn.discordapp.com/bad-domains/hashes.json",
 ];
-RequestDefault.parse[""] = JSON.parse;
-const idGenerator = new IdGenerator.IdGenerator();
+_createForOfIteratorHelperDefault.parse[""] = JSON.parse;
+const idGenerator = new fn(17448).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
-let obj = {
+const ApexExperiment = fn(1440);
+let obj2 = {
   name: "2026-07-reject-with-error-kill-switch",
   kind: "user",
   defaultConfig: { migrationKilled: false },
-  variations: obj2,
+  variations: null,
 };
-obj2 = { 1: null };
-obj2[1] = { migrationKilled: true };
-const config = ApexExperiment.createApexExperiment(obj);
+let obj3 = { 1: null };
+obj3[1] = { migrationKilled: true };
+obj2.variations = obj3;
+const config = ApexExperiment.createApexExperiment(obj2);
 let closure_11 = null;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   closure_11 = null;
 });
-let HTTPUtils = HTTPUtils_mod;
+let HTTPUtils = fn(1282);
 let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedErrorEnabled() {
   let tmp = closure_11;
   if (null == closure_11) {
@@ -67,132 +55,133 @@ let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedE
   }
   return tmp;
 });
-HTTPUtils = HTTPUtils_mod;
-let obj3 = {
+HTTPUtils = fn(1282);
+HTTPUtils.setRequestPatch({
   prepareRequest(promise) {
-    let closure_1;
-    function populateQValues(items) {
-      let closure_0 = 10;
-      const reduced = items.reduce((arr, item) => {
-        if (10 === closure_0) {
-          arr = arr.push(item);
-        } else {
-          const _HermesInternal = HermesInternal;
-          arr.push("" + item + ";q=0." + closure_0);
-        }
-        closure_0 = Math.max(closure_0 - 1, 1);
-        return arr;
-      }, []);
-      return reduced.join(",");
-    }
-    function getDatadogAPMUrl(generateResult) {
-      const str = new URLSearchParams();
-      str.append("query", '@http.x_client_trace_id:"' + generateResult + '"');
-      str.append("showAllSpans", "true");
-      const obj = closure_1(dependencyMap[5]);
-      const str2 = obj.toURLSafe("traces?" + str.toString(), "https://datadog.discord.tools/apm/");
-      let str1 = null;
-      if (null != str2) {
-        str1 = str2.toString();
-      }
-      return str1;
-    }
-    function shouldTrackHttpRequest(url) {
-      return !isAnalyticsEndpoint(url);
-    }
-    _require = promise;
-    const _default = require("AuthenticationStore").default;
-    const _default2 = require("DeveloperOptionsStore").default;
-    const _default3 = require("LocaleStore").default;
-    const _default4 = require("UserStore").default;
-    const _default5 = require("AnalyticsUtils").default;
-    const isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
+    const _default = promise(502).default;
+    const _default2 = promise(1357).default;
+    const _default3 = promise(1377).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
-      const tmpResult = require("HTTPUtils");
-      promise.url = tmpResult.getAPIBaseURL() + promise.url;
+      promise.url = tmp(1282).getAPIBaseURL() + promise.url;
       let tmp3 = "Authorization" in promise.header;
       if (!tmp3) {
-        let str = "authorization";
         tmp3 = "authorization" in promise.header;
       }
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      const tmpResult2 = require("updateDynamicSuperProperties");
-      const result1 = tmpResult2.updateDynamicSuperProperties();
-      const superPropertiesBase64 = _default5.getSuperPropertiesBase64();
+      const tmpResult = tmp(1282);
+      const result1 = tmp(17449).updateDynamicSuperProperties();
+      const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
-        let str2 = "X-Super-Properties";
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
       }
       const fingerprint = _default.getFingerprint();
-      let tmp10 = null != fingerprint && "" !== fingerprint;
+      let tmp10 = null != fingerprint;
+      if (tmp10) {
+        tmp10 = "" !== fingerprint;
+      }
       if (tmp10) {
         const result3 = promise.set("X-Fingerprint", fingerprint);
       }
       const installationForTracking = _default.getInstallationForTracking();
-      let tmp13 = null != installationForTracking && "" !== installationForTracking;
+      let tmp13 = null != installationForTracking;
+      if (tmp13) {
+        tmp13 = "" !== installationForTracking;
+      }
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (isPlatformEmbedded) {
+      if (promise(1369).isPlatformEmbedded) {
         let items = [];
-        const _default6 = require("react-native").default;
-        if (null != _default6) {
-          let Languages = _default6.getConstants().Languages;
+        const _default5 = tmp(1127).default;
+        if (null != _default5) {
+          let Languages = _default5.getConstants().Languages;
           if (Languages == null) {
             Languages = [];
           }
           items = Languages;
         }
-        const result5 = promise.set("Accept-Language", populateQValues(items));
+        const result5 = promise.set(
+          "Accept-Language",
+          (function populateQValues(items) {
+            closure_0 = 10;
+            const reduced = items.reduce((arr, item) => {
+              if (10 === closure_0) {
+                arr = arr.push(item);
+              } else {
+                const _HermesInternal = HermesInternal;
+                arr.push("" + item + ";q=0." + closure_0);
+              }
+              closure_0 = Math.max(closure_0 - 1, 1);
+              return arr;
+            }, []);
+            return reduced.join(",");
+          })(items),
+        );
       }
-      const result6 = promise.set("X-Discord-Locale", _default3.locale);
+      const result6 = promise.set("X-Discord-Locale", promise(2116).default.locale);
       const tmp18 = getTimeZoneDefault();
       if (null != tmp18) {
         const result7 = promise.set("X-Discord-Timezone", tmp18);
       }
       const debugOptionsHeaderValue = _default2.getDebugOptionsHeaderValue();
-      const tmp21 = null != debugOptionsHeaderValue && "" !== debugOptionsHeaderValue;
+      let tmp21 = null != debugOptionsHeaderValue;
+      if (tmp21) {
+        tmp21 = "" !== debugOptionsHeaderValue;
+      }
       if (tmp21) {
         const result8 = promise.set("X-Debug-Options", debugOptionsHeaderValue);
       }
       const routingKeyHeaderValue = _default2.getRoutingKeyHeaderValue();
-      const tmp24 = null != routingKeyHeaderValue && "" !== routingKeyHeaderValue;
+      let tmp24 = null != routingKeyHeaderValue;
+      if (tmp24) {
+        tmp24 = "" !== routingKeyHeaderValue;
+      }
       if (tmp24) {
         const result9 = promise.set("X-Routing-Key", routingKeyHeaderValue);
       }
       if (_default2.isTracingRequests) {
-        const currentUser = _default4.getCurrentUser();
+        const currentUser = _default3.getCurrentUser();
         let str14;
-        const generate = idGenerator.generate;
         if (currentUser != null) {
           str14 = currentUser.id;
         }
         if (str14 == null) {
           str14 = "0";
         }
-        const generateResult = generate(str14);
+        const generateResult = idGenerator.generate(str14);
         const result10 = promise.set("x-client-trace-id", generateResult);
         try {
           const _URL = URL;
-          const self = this;
-          const self2 = this;
           const uRL = new URL(promise.url);
           if (!isAnalyticsEndpoint(uRL.pathname)) {
-            getDatadogAPMUrl(generateResult);
+            (function getDatadogAPMUrl(generateResult) {
+              const str = new URLSearchParams();
+              str.append("query", '@http.x_client_trace_id:"' + generateResult + '"');
+              str.append("showAllSpans", "true");
+              const str2 = closure_1(dependencyMap[5]).toURLSafe(
+                "traces?" + str.toString(),
+                "https://datadog.discord.tools/apm/",
+              );
+              let str1 = null;
+              if (null != str2) {
+                str1 = str2.toString();
+              }
+              return str1;
+            })(generateResult);
           }
         } catch (err) {}
       }
+      const tmpResult2 = tmp(17449);
     }
-    importAll = shouldTrackHttpRequest(promise.url);
-    let obj2 = LogAggregatorAll;
-    obj2.report("Network", "Sending " + promise.method + " to " + promise.url);
+    importAll = (function shouldTrackHttpRequest(url) {
+      return !isAnalyticsEndpoint(url);
+    })(promise.url);
+    _default4 = promise(1252).default;
+    LogAggregatorAll.report("Network", "Sending " + promise.method + " to " + promise.url);
     promise.on("response", (status) => {
-      let method;
-      let status1;
-      let url;
       let text = null;
       if (null != status) {
         text = null;
@@ -205,43 +194,30 @@ let obj3 = {
         const _HermesInternal = HermesInternal;
         str = "and body: " + text;
       }
-      ({ method, url } = promise);
+      ({ method, url } = closure_0);
       status = undefined;
-      const report = LogAggregatorAll.report;
-      LogAggregatorAll;
       if (status != null) {
         status = status.status;
       }
-      report("Network", "Completed " + method + " to " + url + " with status: " + status + " " + str);
-      const tmp8 = c2;
-      if (tmp8) {
-        const request = {
-          url: null,
-          method: null,
-          status_code: status1,
-          duration_ms: Math.round(performance.now() - closure_1),
-        };
-        ({ url: obj.url, method: obj.method } = promise);
-        status1 = undefined;
-        const tmp10 = trackHttpRequestDefault;
+      LogAggregatorAll.report("Network", "Completed " + method + " to " + url + " with status: " + status + " " + str);
+      if (c2) {
+        const request = { url: null, method: null, status_code: null, duration_ms: null };
+        ({ url: obj2.url, method: obj2.method } = closure_0);
+        let status1;
         if (status != null) {
           status1 = status.status;
         }
+        request.status_code = status1;
         const _Math = Math;
         const _performance = performance;
-        tmp10(request);
+        request.duration_ms = Math.round(performance.now() - closure_1);
+        trackHttpRequestDefault(request);
         c2 = false;
       }
     });
     promise.on("error", (status, text) => {
-      let method;
-      let request;
-      let status1;
-      let url;
       ({ method, url } = promise);
       status = undefined;
-      const report = LogAggregatorAll.report;
-      LogAggregatorAll;
       if (status != null) {
         status = status.status;
       }
@@ -249,7 +225,10 @@ let obj3 = {
       if (text != null) {
         text = text.text;
       }
-      report("Network", "Failed " + method + " to " + url + " with status " + status + " and body: " + text);
+      LogAggregatorAll.report(
+        "Network",
+        "Failed " + method + " to " + url + " with status " + status + " and body: " + text,
+      );
       if (null != status) {
         if ("parse" in status) {
           if (status.parse) {
@@ -265,51 +244,45 @@ let obj3 = {
               }
               str = substr;
             }
-            const obj2 = { category: "superagent", message: "Failed to parse HTTP response.", data: request };
-            request = { method: null, url: null, responseText: str, status: status.status };
-            ({ method: obj3.method, url: obj3.url } = promise);
-            const obj = SentryUtilsDefault;
-            obj.addBreadcrumb(obj2);
+            const obj3 = { category: "superagent", message: "Failed to parse HTTP response.", data: null };
+            const request = { method: null, url: null, responseText: null, status: null };
+            ({ method: obj4.method, url: obj4.url } = promise);
+            request.responseText = str;
+            request.status = status.status;
+            obj3.data = request;
+            SentryUtilsDefault.addBreadcrumb(obj3);
           }
         }
       }
-      const tmp11 = c2;
-      if (tmp11) {
-        const request1 = {
-          url: null,
-          method: null,
-          status_code: status1,
-          duration_ms: Math.round(performance.now() - closure_1),
-        };
-        ({ url: obj4.url, method: obj4.method } = promise);
-        status1 = undefined;
-        const tmp13 = trackHttpRequestDefault;
+      if (c2) {
+        const request1 = { url: null, method: null, status_code: null, duration_ms: null };
+        ({ url: obj5.url, method: obj5.method } = promise);
+        let status1;
         if (text != null) {
           status1 = text.status;
         }
+        request1.status_code = status1;
         const _Math = Math;
         const _performance = performance;
-        tmp13(request1);
+        request1.duration_ms = Math.round(performance.now() - closure_1);
+        trackHttpRequestDefault(request1);
         c2 = false;
       }
     });
   },
   interceptResponse(statusCode, arg1, arg2) {
-    let flag;
-    let closure_0 = statusCode;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+    closure_1 = arg1;
+    closure_2 = arg2;
     if (400 === statusCode.statusCode) {
       let body = statusCode.body;
-      const tmp = null;
       let captcha_key;
       if (body != null) {
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [asyncRequire(17454, dependencyMap.paths), asyncRequire(5414, dependencyMap.paths)];
-        const allResult = all(items);
-        const nextPromise = allResult.then((result) => {
+        const items = [statusCode(1987)(17454, dependencyMap.paths), statusCode(1987)(5414, dependencyMap.paths)];
+        const allPromises = Promise.all(items);
+        const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
           let nextResult;
           if (iter !== undefined) {
@@ -317,35 +290,84 @@ let obj3 = {
           }
           let nextResult1;
           let tmp4 = tmp;
-          const _default = nextResult.default;
-          if (!tmp4) {
+          if (iter !== undefined) {
             tmp4 = tmp6;
-            if (!tmp4) {
+            if (iter !== undefined) {
               nextResult1 = iter.next();
               tmp4 = tmp6;
             }
           }
-          const extractCaptchaPropsFromResponse = nextResult1.extractCaptchaPropsFromResponse;
           if (!tmp4) {
             iter.return();
           }
-          return _default.showCaptchaAsync(extractCaptchaPropsFromResponse(closure_0.body));
+          return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
         });
-        const nextPromise1 = nextPromise.then((X_Captcha_Key) => {
-          let captcha_rqtoken;
-          let captcha_session_id;
-          ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
-          const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
-          if (null != captcha_rqtoken) {
-            obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
-          }
-          if (null != captcha_session_id) {
-            obj["X-Captcha-Session-Id"] = captcha_session_id;
-          }
-          closure_1(obj);
-        });
-        nextPromise1.catch(arg2);
-        flag = true;
+        Promise.all(items)
+          .then((result) => {
+            const iter = result[Symbol.iterator]();
+            let nextResult;
+            if (iter !== undefined) {
+              nextResult = iter.next();
+            }
+            let nextResult1;
+            let tmp4 = tmp;
+            if (iter !== undefined) {
+              tmp4 = tmp6;
+              if (iter !== undefined) {
+                nextResult1 = iter.next();
+                tmp4 = tmp6;
+              }
+            }
+            if (!tmp4) {
+              iter.return();
+            }
+            return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
+          })
+          .then((X_Captcha_Key) => {
+            ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
+            const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
+            if (null != captcha_rqtoken) {
+              obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
+            }
+            if (null != captcha_session_id) {
+              obj["X-Captcha-Session-Id"] = captcha_session_id;
+            }
+            closure_1(obj);
+          })
+          .catch(arg2);
+        let flag = true;
+        const nextPromise1 = Promise.all(items)
+          .then((result) => {
+            const iter = result[Symbol.iterator]();
+            let nextResult;
+            if (iter !== undefined) {
+              nextResult = iter.next();
+            }
+            let nextResult1;
+            let tmp4 = tmp;
+            if (iter !== undefined) {
+              tmp4 = tmp6;
+              if (iter !== undefined) {
+                nextResult1 = iter.next();
+                tmp4 = tmp6;
+              }
+            }
+            if (!tmp4) {
+              iter.return();
+            }
+            return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
+          })
+          .then((X_Captcha_Key) => {
+            ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
+            const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
+            if (null != captcha_rqtoken) {
+              obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
+            }
+            if (null != captcha_session_id) {
+              obj["X-Captcha-Session-Id"] = captcha_session_id;
+            }
+            closure_1(obj);
+          });
       }
       return flag;
     }
@@ -362,50 +384,47 @@ let obj3 = {
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = asyncRequire(15513, dependencyMap.paths);
-          const nextPromise2 = promise4.then((openMFAModal) => {
-            openMFAModal.openMFAModal(closure_0.body.mfa, closure_1, closure_2);
-          });
-          nextPromise2.catch(arg2);
+          const promise4 = statusCode(1987)(15513, dependencyMap.paths);
+          statusCode(1987)(15513, dependencyMap.paths)
+            .then((openMFAModal) => {
+              openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
+            })
+            .catch(arg2);
           flag = true;
+          const nextPromise2 = statusCode(1987)(15513, dependencyMap.paths).then((openMFAModal) => {
+            openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
+          });
         }
       }
     }
     const body4 = statusCode.body;
     let code1;
-    const isLimitedAccessErrorCode = UserLimitedAccessUtils.isLimitedAccessErrorCode;
-    statusCode = statusCode.statusCode;
-    UserLimitedAccessUtils;
     if (body4 != null) {
       code1 = body4.code;
     }
-    if (isLimitedAccessErrorCode(statusCode, code1)) {
-      const promise3 = asyncRequire(5920, dependencyMap.paths);
-      promise3.then((result) => {
+    if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
+      tmp7(1987)(5920, dependencyMap.paths).then((result) => {
         result.default();
       });
       flag = false;
+      const promise3 = tmp7(1987)(5920, dependencyMap.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
-      const isLimitedAccessErrorCode2 = GuildLimitedAccessUtils.isLimitedAccessErrorCode;
-      const statusCode2 = statusCode.statusCode;
-      GuildLimitedAccessUtils;
       if (body5 != null) {
         code2 = body5.code;
       }
-      if (isLimitedAccessErrorCode2(statusCode2, code2)) {
-        const promise2 = asyncRequire(13659, dependencyMap.paths);
-        promise2.then((result) => {
-          const body = closure_0.body;
+      if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
+        tmp7(1987)(13659, dependencyMap.paths).then((result) => {
+          const body = statusCode.body;
           let guild_id;
-          const _default = result.default;
           if (body != null) {
             guild_id = body.guild_id;
           }
-          _default(guild_id);
+          result.default(guild_id);
         });
         flag = false;
+        const promise2 = tmp7(1987)(13659, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -417,27 +436,24 @@ let obj3 = {
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          const promise = asyncRequire(17463, dependencyMap.paths);
-          promise.then((openRestrictedHoursModal) => {
+          tmp7(1987)(17463, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
+          const promise = tmp7(1987)(17463, dependencyMap.paths);
         }
       }
+      tmp7Result = tmp7(17462);
     }
+    obj = statusCode(9450);
   },
-};
-HTTPUtils.setRequestPatch(obj3);
-HTTPUtils = HTTPUtils_mod;
-const setAwaitOnline = HTTPUtils.setAwaitOnline;
-let _require = _asyncToGenerator(async (arg0) => {
-  let closure_1;
-  let closure_2;
-  closure_0 = arg0;
+});
+HTTPUtils = fn(1282);
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -449,7 +465,7 @@ let _require = _asyncToGenerator(async (arg0) => {
   } else {
     try {
       c4 = 2;
-      if (0 === c3) {
+      if (0 === dependencyMap) {
         if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -458,39 +474,46 @@ let _require = _asyncToGenerator(async (arg0) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
+          closure_129_0 = closure_0;
           const _HermesInternal2 = HermesInternal;
-          const obj7 = tmp4(c3[19]);
-          obj7.report("Network", "Request to " + closure_0 + " failed, will retry.");
-          const obj8 = tmp(c3[30]);
-          if (!obj8.isOnline()) {
-            const tmp22Result = tmp(c3[30]);
-            c3 = 1;
+          tmp5(7).report("Network", "Request to " + closure_0 + " failed, will retry.");
+          const obj7 = tmp5(7);
+          if (obj8.isOnline()) {
+            c4 = 3;
+          } else {
+            dependencyMap = 1;
             c4 = 1;
-            const obj4 = { value: tmp22Result.awaitOnline(), done: false };
+            const obj4 = { value: tmp2(1468).awaitOnline(), done: false };
             return obj4;
           }
+          obj8 = tmp2(1468);
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
+      } else if (arg0 !== 2) {
         const _HermesInternal = HermesInternal;
-        const obj = tmp4(c3[19]);
-        obj.report("Network", "Network detected online, retrying " + closure_0);
+        tmp5(7).report("Network", "Network detected online, retrying " + closure_129_0);
+        const obj = tmp5(7);
       }
       c4 = 3;
-      return { value: "IconComponent", done: null };
-    } catch (tmp13) {
-      c4 = 3;
-      throw tmp13;
+      const obj5 = { value, done: true };
+      return obj5;
+    } catch (tmp14) {
+      c4 = tmp;
+      throw tmp14;
     }
   }
 });
-setAwaitOnline(function () {
-  return closure_0(...arguments);
+HTTPUtils.setAwaitOnline(function () {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 });
+const size = fn(2);
 let result1 = size.fileFinishedImporting("lib/superagentPatch.tsx");

@@ -1,45 +1,25 @@
 // discord_app/modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx
-import react2 from "../../../../_runtime/00576_react.js";
-import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import v1 from "../../../../_runtime/01266_v1.js";
-import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import RolePermissionUtils from "../RolePermissionUtils.tsx";
 import StoreUtils from "../../../utils/StoreUtils.tsx";
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
-import GuildRoleSubscriptionsConstants from "../GuildRoleSubscriptionsConstants.tsx";
 import GuildRoleSubscriptionsHooks from "../GuildRoleSubscriptionsHooks.tsx";
 import useSubscriptionRoleDefault from "../useSubscriptionRole.tsx";
-import Contants from "Contants.tsx";
 import useTrialIntervalOptionsDefault from "../useTrialIntervalOptions.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
-import GuildRoleSubscriptionEditStore from "GuildRoleSubscriptionEditStore.tsx";
-import Constants from "../../../Constants.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, c5, c6, c7, dependencyMap, guildId, importDefault, listings;
 
-let c10;
-let c9;
-let closure_12;
-let map1;
-const f144737 = () => {
-  state.setState((listings) => {
-    let obj2;
-    obj = { listings: obj2 };
-    obj2 = {};
-    const merged = Object.assign(listings.listings);
-    obj2[closure_1_0] = listings.listings.nonexistantEditStateId;
-    return obj;
-  });
-};
+const utils_ColorUtils = obj(1103);
+const Contants = obj(15063);
+require = fn;
 function getRoleEmojis(arr, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   if (0 === arr.length) {
     return set;
   } else {
@@ -48,443 +28,436 @@ function getRoleEmojis(arr, arg1) {
       return roles.includes(id);
     });
     const _Set = Set;
-    const self = this;
-    const self2 = this;
     set = new Set(found.map((id) => id.id));
     return set;
   }
 }
 function clearEditState(NEW_LISTING_EDIT_STATE_ID) {
   _require = NEW_LISTING_EDIT_STATE_ID;
-  obj = require("react-native");
-  obj.batchUpdates(f144737);
+  require("ReactBatchUpdates").batchUpdates(() => {
+    state.setState((listings) => {
+      const obj = { listings: null };
+      const obj2 = {};
+      const merged = Object.assign(listings.listings);
+      obj2[closure_1_0] = listings.listings.nonexistantEditStateId;
+      obj.listings = obj2;
+      return obj;
+    });
+  });
 }
-let obj = function _updateListingPeripheralsFromEditState() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c0;
-    let c1;
-    let closure_0;
-    let closure_2;
-    let icon;
-    let obj7;
-    let unicodeEmoji;
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_22 = async function _updateListingPeripheralsFromEditState(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let subscriptionListing;
-        let role_id;
-        let id;
-        let closure_5;
-        let roleColor;
-        let roleIcon;
-        let trialLimit;
-        let trialInterval;
-        let tierEmojiIds;
-        let subscriptionTrial;
-        let closure_13;
-        let closure_14;
-        c4 = 2;
-        if (0 === c3) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          let obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ guildId: closure_129_0, editStateId: closure_129_1 } = guildId);
+          let subscriptionListing;
+          let role_id;
+          let id;
+          closure_129_5 = undefined;
+          let roleColor;
+          let roleIcon;
+          let trialLimit;
+          let trialInterval;
+          let tierEmojiIds;
+          let subscriptionTrial;
+          closure_129_12 = undefined;
+          closure_129_13 = undefined;
+          closure_129_14 = undefined;
+          closure_129_15 = undefined;
+          closure_129_16 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else {
+        if (1 === tmp5) {
           if (arg0 === 1) {
             c4 = 3;
             throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            let obj3 = { value, done: true };
-            return obj3;
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            let closure_1 = tmp;
-            c0 = undefined;
-            c1 = undefined;
-            ({ guildId: c0, editStateId: c1 } = guildId);
-            subscriptionListing = undefined;
-            role_id = undefined;
-            id = undefined;
-            closure_5 = undefined;
-            roleColor = undefined;
-            roleIcon = undefined;
-            trialLimit = undefined;
-            trialInterval = undefined;
-            tierEmojiIds = undefined;
-            subscriptionTrial = undefined;
-            closure_12 = undefined;
-            closure_13 = undefined;
-            closure_14 = undefined;
-            closure_15 = undefined;
-            closure_16 = undefined;
-            c3 = 1;
-            c4 = 1;
-            return { value: "Reflect", done: true };
+            subscriptionListing = closure_130_8.getSubscriptionListing(closure_129_1);
+            closure_130_1(closure_130_3[22])(null != subscriptionListing, "listing doesnt exist");
+            role_id = subscriptionListing.role_id;
+            id = subscriptionListing.id;
+            closure_129_5 = closure_130_10.getState().listings[closure_129_1];
+            closure_130_1(closure_130_3[22])(null != closure_129_5, "edit state does not exist");
+            roleColor = closure_129_5.roleColor;
+            roleIcon = closure_129_5.roleIcon;
+            trialLimit = closure_129_5.trialLimit;
+            trialInterval = closure_129_5.trialInterval;
+            tierEmojiIds = closure_129_5.tierEmojiIds;
+            let tmp8 = undefined === roleColor;
+            if (tmp8) {
+              tmp8 = undefined === roleIcon;
+            }
+            if (!tmp8) {
+              const obj6 = { color: roleColor, icon: null, unicodeEmoji: null };
+              let icon;
+              if (roleIcon != null) {
+                icon = roleIcon.icon;
+              }
+              obj6.icon = icon;
+              let unicodeEmoji;
+              if (roleIcon != null) {
+                unicodeEmoji = roleIcon.unicodeEmoji;
+              }
+              obj6.unicodeEmoji = unicodeEmoji;
+              c3 = 2;
+              c4 = 1;
+              const obj9 = {
+                value: closure_130_1(closure_130_3[23]).updateRole(closure_129_0, role_id, obj6),
+                done: false,
+              };
+              return obj9;
+            }
           }
         } else {
-          if (1 === c3) {
+          if (2 === tmp5) {
             if (arg0 === 1) {
               c4 = 3;
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              subscriptionListing = closure_130_8.getSubscriptionListing(c1);
-              closure_130_1(closure_130_3[22])(null != subscriptionListing, "listing doesnt exist");
-              role_id = subscriptionListing.role_id;
-              id = subscriptionListing.id;
-              closure_5 = closure_130_10.getState().listings[c1];
-              closure_130_1(closure_130_3[22])(null != closure_5, "edit state does not exist");
-              roleColor = closure_5.roleColor;
-              roleIcon = closure_5.roleIcon;
-              trialLimit = closure_5.trialLimit;
-              trialInterval = closure_5.trialInterval;
-              tierEmojiIds = closure_5.tierEmojiIds;
-              let tmp8 = undefined === roleColor;
-              if (tmp8) {
-                tmp8 = undefined === roleIcon;
-              }
-              if (!tmp8) {
-                const obj5 = { color: roleColor, icon, unicodeEmoji };
-                icon = undefined;
-                const updateRole = closure_130_1(closure_130_3[23]).updateRole;
-                const tmp13 = closure_130_1(closure_130_3[23]);
-                const tmp14 = c0;
-                const tmp15 = role_id;
-                if (roleIcon != null) {
-                  icon = roleIcon.icon;
-                }
-                unicodeEmoji = undefined;
-                if (roleIcon != null) {
-                  unicodeEmoji = roleIcon.unicodeEmoji;
-                }
-                c3 = 2;
-                c4 = 1;
-                const obj6 = { value: updateRole(tmp14, tmp15, obj5), done: false };
-                return obj6;
-              }
-            }
-          } else {
-            if (2 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj8 = { value, done: true };
-                return obj8;
-              }
-            } else if (3 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj9 = { value, done: true };
-                return obj9;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              if (undefined !== tierEmojiIds) {
-                closure_12 = closure_130_20(closure_130_7.getGuildEmoji(c0), role_id);
-                let items = [];
-                const difference = closure_130_0(closure_130_3[25]).difference;
-                const tmp43 = closure_130_0(closure_130_3[25]);
-                HermesBuiltin.arraySpread(items, tierEmojiIds, 0);
-                const items1 = [];
-                HermesBuiltin.arraySpread(items1, closure_12, 0);
-                closure_13 = difference(items, items1);
-                const items2 = [];
-                const difference2 = closure_130_0(closure_130_3[25]).difference;
-                const tmp51 = closure_130_0(closure_130_3[25]);
-                HermesBuiltin.arraySpread(items2, closure_12, 0);
-                const items3 = [];
-                HermesBuiltin.arraySpread(items3, tierEmojiIds, 0);
-                closure_14 = difference2(items2, items3);
-                closure_15 = closure_13.map((item) => {
-                  let items;
-                  const customEmojiById = closure_2_7.getCustomEmojiById(item);
-                  if (null != customEmojiById) {
-                    const obj2 = { guildId, emojiId: customEmojiById.id, roles: items };
-                    items = [];
-                    items[HermesBuiltin.arraySpread(items, customEmojiById.roles, 0)] = closure_1_3;
-                    obj = guildId(c3[26]);
-                    return obj.updateEmoji(obj2);
-                  }
-                });
-                closure_16 = closure_14.map((item) => {
-                  const customEmojiById = closure_2_7.getCustomEmojiById(item);
-                  if (null != customEmojiById) {
-                    let updateEmojiResult;
-                    const roles = customEmojiById.roles;
-                    const found = roles.filter((item) => item !== closure_1_3);
-                    if (found.length > 0) {
-                      const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
-                      const obj2 = guildId(c3[26]);
-                      updateEmojiResult = obj2.updateEmoji(obj3);
-                    } else {
-                      obj = guildId(c3[26]);
-                      updateEmojiResult = obj.deleteEmoji(guildId, customEmojiById.id);
-                    }
-                    return updateEmojiResult;
-                  }
-                });
-                const items4 = [];
-                HermesBuiltin.arraySpread(items4, closure_16, HermesBuiltin.arraySpread(items4, closure_15, 0));
-                c3 = 3;
-                c4 = 1;
-                const obj10 = { value: all(items4), done: false };
-                return obj10;
-              }
-            } else {
-              c4 = 3;
-              obj = { value, done: true };
-              return obj;
-            }
-            c4 = 3;
-            return { value: "IconComponent", done: null };
-          }
-          subscriptionTrial = closure_130_8.getSubscriptionTrial(id);
-          let tmp26 = null != trialLimit || null != trialInterval;
-          if (!tmp26) {
-            const tmp31 = null != subscriptionTrial && null == trialInterval;
-            tmp26 = tmp31;
-          }
-          if (tmp26) {
-            const obj11 = { trial: trialInterval, max_num_active_trial_users: trialLimit };
-            c3 = 4;
-            c4 = 1;
-            const obj12 = { value: obj7.updateSubscriptionTrial(c0, id, obj11), done: false };
-            obj7 = closure_130_2(closure_130_3[24]);
-            return obj12;
-          }
-        }
-      } catch (tmp74) {
-        c4 = 3;
-        throw tmp74;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-obj = function _createListingFromEditState() {
-  obj = _asyncToGenerator(async (guildId) => {
-    let c0;
-    let c1;
-    let c2;
-    let c3;
-    let obj10;
-    let obj13;
-    let obj4;
-    let obj8;
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (guildId === 1) {
-        throw value;
-      } else if (guildId === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        let onBeforeDispatchNewListing;
-        let closure_4;
-        let name;
-        let description;
-        let channelBenefits;
-        let intangibleBenefits;
-        let priceTier;
-        let image;
-        let channelAccessFormat;
-        let can_access_all_channels;
-        let id;
-        let items;
-        let analyticsContext;
-        c7 = 2;
-        if (0 === c6) {
-          if (guildId === 1) {
-            c7 = 3;
-            throw value;
-          } else if (guildId === 2) {
-            c7 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            let closure_5 = tmp4;
-            let c4 = 0;
-            guildId = undefined;
-            c1 = undefined;
-            c2 = undefined;
-            onBeforeDispatchNewListing = undefined;
-            ({ guildId: c0, editStateId: c1, groupListingId: c2, onBeforeDispatchNewListing: c3 } = closure_0);
-            closure_4 = undefined;
-            name = undefined;
-            description = undefined;
-            channelBenefits = undefined;
-            intangibleBenefits = undefined;
-            priceTier = undefined;
-            image = undefined;
-            channelAccessFormat = undefined;
-            can_access_all_channels = undefined;
-            id = undefined;
-            items = undefined;
-            analyticsContext = undefined;
-            c6 = 1;
-            c7 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else {
-          if (1 === c6) {
-            if (guildId === 1) {
-              c7 = 3;
-              throw value;
-            } else if (guildId === 2) {
-              c7 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              closure_4 = closure_133_10.getState().listings[c1];
-              closure_133_1(closure_133_3[22])(null != closure_4, "edit state does not exist");
-              name = closure_4.name;
-              description = closure_4.description;
-              channelBenefits = closure_4.channelBenefits;
-              intangibleBenefits = closure_4.intangibleBenefits;
-              priceTier = closure_4.priceTier;
-              image = closure_4.image;
-              channelAccessFormat = closure_4.channelAccessFormat;
-              closure_133_1(closure_133_3[22])(null != name, "no name provided");
-              closure_133_1(closure_133_3[22])(null != description, "no description provided");
-              closure_133_1(closure_133_3[22])(null != priceTier, "no priceTier provided");
-              closure_133_1(closure_133_3[22])(null != image, "no image provided");
-              can_access_all_channels = channelAccessFormat === closure_133_9.ALL_CHANNELS_ACCESS;
-              id = c2;
-              if (null == id) {
-                c6 = 2;
-                c7 = 1;
-                const obj7 = { value: obj10.createSubscriptionGroupListing(guildId, {}), done: false };
-                obj10 = closure_133_2(closure_133_3[24]);
-                return obj7;
-              } else {
-                const tmp9 = null != channelBenefits && channelBenefits.length > 0;
-                if (tmp9) {
-                  c6 = 3;
-                  c7 = 1;
-                  const obj9 = {
-                    value: obj8.createChannelsFromTemplateTierBenefits(guildId, channelBenefits),
-                    done: false,
-                  };
-                  obj8 = closure_133_0(closure_133_3[27]);
-                  return obj9;
-                }
-              }
-            }
-          } else if (2 === c6) {
-            if (guildId === 1) {
-              c7 = 3;
-              throw value;
-            } else if (guildId === 2) {
-              c7 = 3;
               const obj11 = { value, done: true };
               return obj11;
-            } else {
-              id = value.id;
             }
-          } else if (guildId === 1) {
-            c7 = 3;
+          } else if (3 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj12 = { value, done: true };
+              return obj12;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
             throw value;
-          } else if (guildId === 2) {
-            c7 = 3;
-            obj = { value, done: true };
+          } else if (arg0 !== 2) {
+            if (undefined !== tierEmojiIds) {
+              closure_129_12 = closure_130_20(closure_130_7.getGuildEmoji(closure_129_0), role_id);
+              let items = [];
+              HermesBuiltin.arraySpread(tierEmojiIds, 0);
+              const items1 = [];
+              HermesBuiltin.arraySpread(closure_129_12, 0);
+              closure_129_13 = closure_130_0(closure_130_3[25]).difference(items, items1);
+              const obj7 = closure_130_0(closure_130_3[25]);
+              const items2 = [];
+              HermesBuiltin.arraySpread(closure_129_12, 0);
+              const items3 = [];
+              HermesBuiltin.arraySpread(tierEmojiIds, 0);
+              closure_129_14 = closure_130_0(closure_130_3[25]).difference(items2, items3);
+              closure_129_15 = closure_129_13.map((item) => {
+                const customEmojiById = closure_2_7.getCustomEmojiById(item);
+                if (null != customEmojiById) {
+                  const obj2 = { guildId, emojiId: customEmojiById.id, roles: null };
+                  const items = [];
+                  items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
+                  obj2.roles = items;
+                  return guildId(9952).updateEmoji(obj2);
+                }
+              });
+              closure_129_16 = closure_129_14.map((item) => {
+                const customEmojiById = closure_2_7.getCustomEmojiById(item);
+                if (null != customEmojiById) {
+                  const roles = customEmojiById.roles;
+                  const found = roles.filter((item) => item !== dependencyMap);
+                  if (found.length > 0) {
+                    const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
+                    let updateEmojiResult = guildId(9952).updateEmoji(obj3);
+                    const obj2 = guildId(9952);
+                  } else {
+                    updateEmojiResult = guildId(9952).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(9952);
+                  }
+                  return updateEmojiResult;
+                }
+              });
+              const items4 = [];
+              HermesBuiltin.arraySpread(closure_129_16, HermesBuiltin.arraySpread(closure_129_15, 0));
+              c3 = 3;
+              c4 = 1;
+              const obj13 = { value: Promise.all(items4), done: false };
+              return obj13;
+            }
+          } else {
+            c4 = 3;
+            let obj = { value, done: true };
             return obj;
           }
-          let closure_1 = 0;
-          let closure_2 = channelBenefits;
-          if (channelBenefits == null) {
-            closure_2 = [];
-          }
-          items = [];
-          closure_1 = HermesBuiltin.arraySpread(items, closure_2, closure_1);
-          let closure_3 = intangibleBenefits;
-          if (intangibleBenefits == null) {
-            closure_3 = [];
-          }
-          closure_1 = HermesBuiltin.arraySpread(items, closure_3, closure_1);
-          const obj3 = closure_133_0(closure_133_3[27]);
-          analyticsContext = obj3.getTemplateTierCreationAnalyticsContext(c1, guildId);
-          const obj12 = { guildId, groupListingId: id, data: obj13, analyticsContext, onBeforeDispatchNewListing };
-          obj13 = { can_access_all_channels, image, name, description, benefits: items, priceTier };
-          c7 = 3;
-          const obj14 = { value: obj4.createSubscriptionListing(obj12), done: true };
-          obj4 = closure_133_2(closure_133_3[24]);
-          return obj14;
+          c4 = 3;
+          return { value: "IconComponent", done: null };
         }
-      } catch (tmp52) {
-        c7 = 3;
-        throw tmp52;
+        subscriptionTrial = closure_130_8.getSubscriptionTrial(id);
+        let tmp25 = null != trialLimit;
+        if (!tmp25) {
+          tmp25 = null != trialInterval;
+        }
+        if (!tmp25) {
+          let tmp30 = null != subscriptionTrial;
+          if (tmp30) {
+            tmp30 = null == trialInterval;
+          }
+          tmp25 = tmp30;
+        }
+        if (tmp25) {
+          const obj14 = { trial: trialInterval, max_num_active_trial_users: trialLimit };
+          c3 = 4;
+          c4 = 1;
+          const obj15 = {
+            value: closure_130_2(closure_130_3[24]).updateSubscriptionTrial(closure_129_0, id, obj14),
+            done: false,
+          };
+          return obj15;
+        }
       }
+    } catch (tmp71) {
+      c4 = tmp;
+      throw tmp71;
     }
-  });
-  return obj(...arguments);
+  }
 };
-({ AllChannelAccessOptions: c9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = GuildRoleSubscriptionsConstants.GuildRoleSubscriptionBenefitTypes;
+let closure_23 = async function _createListingFromEditState(arg0) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_5 = tmp4;
+          c4 = 0;
+          closure_132_0 = undefined;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          closure_132_3 = undefined;
+          ({
+            guildId: closure_132_0,
+            editStateId: closure_132_1,
+            groupListingId: closure_132_2,
+            onBeforeDispatchNewListing: closure_132_3,
+          } = closure_0);
+          closure_132_4 = undefined;
+          let name;
+          let description;
+          let channelBenefits;
+          let intangibleBenefits;
+          let priceTier;
+          let image;
+          let channelAccessFormat;
+          closure_132_12 = undefined;
+          let id;
+          closure_132_14 = undefined;
+          let templateTierCreationAnalyticsContext;
+          c6 = 1;
+          c7 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else {
+        if (1 === tmp4) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_132_4 = closure_133_10.getState().listings[closure_132_1];
+            closure_133_1(closure_133_3[22])(null != closure_132_4, "edit state does not exist");
+            name = closure_132_4.name;
+            description = closure_132_4.description;
+            channelBenefits = closure_132_4.channelBenefits;
+            intangibleBenefits = closure_132_4.intangibleBenefits;
+            priceTier = closure_132_4.priceTier;
+            image = closure_132_4.image;
+            channelAccessFormat = closure_132_4.channelAccessFormat;
+            closure_133_1(closure_133_3[22])(null != name, "no name provided");
+            closure_133_1(closure_133_3[22])(null != description, "no description provided");
+            closure_133_1(closure_133_3[22])(null != priceTier, "no priceTier provided");
+            closure_133_1(closure_133_3[22])(null != image, "no image provided");
+            closure_132_12 = channelAccessFormat === closure_133_9.ALL_CHANNELS_ACCESS;
+            id = closure_132_2;
+            if (null == id) {
+              c6 = 2;
+              c7 = 1;
+              const obj7 = {
+                value: closure_133_2(closure_133_3[24]).createSubscriptionGroupListing(closure_132_0, {}),
+                done: false,
+              };
+              return obj7;
+            } else {
+              let tmp9 = null != channelBenefits;
+              if (tmp9) {
+                tmp9 = channelBenefits.length > 0;
+              }
+              if (tmp9) {
+                c6 = 3;
+                c7 = 1;
+                const obj9 = {
+                  value: closure_133_0(closure_133_3[27]).createChannelsFromTemplateTierBenefits(
+                    closure_132_0,
+                    channelBenefits,
+                  ),
+                  done: false,
+                };
+                return obj9;
+              }
+            }
+          }
+        } else if (2 === tmp4) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          } else {
+            id = value.id;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        closure_1 = 0;
+        closure_2 = channelBenefits;
+        if (channelBenefits == null) {
+          closure_2 = [];
+        }
+        const items = [];
+        closure_1 = HermesBuiltin.arraySpread(closure_2, closure_1);
+        closure_3 = intangibleBenefits;
+        if (intangibleBenefits == null) {
+          closure_3 = [];
+        }
+        closure_1 = HermesBuiltin.arraySpread(closure_3, closure_1);
+        closure_132_14 = items;
+        templateTierCreationAnalyticsContext = closure_133_0(closure_133_3[27]).getTemplateTierCreationAnalyticsContext(
+          closure_132_1,
+          closure_132_0,
+        );
+        const obj3 = closure_133_0(closure_133_3[27]);
+        const obj12 = {
+          guildId: closure_132_0,
+          groupListingId: id,
+          data: null,
+          analyticsContext: null,
+          onBeforeDispatchNewListing: null,
+        };
+        const obj13 = {
+          can_access_all_channels: closure_132_12,
+          image,
+          name,
+          description,
+          benefits: closure_132_14,
+          priceTier,
+        };
+        obj12.data = obj13;
+        obj12.analyticsContext = templateTierCreationAnalyticsContext;
+        obj12.onBeforeDispatchNewListing = closure_132_3;
+        c7 = 3;
+        const obj14 = { value: closure_133_2(closure_133_3[24]).createSubscriptionListing(obj12), done: true };
+        return obj14;
+      }
+    } catch (tmp52) {
+      c7 = tmp;
+      throw tmp52;
+    }
+  }
+};
+const GuildRoleSubscriptionEditStore = fn(15061);
+({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
+let closure_11 = fn(15038).GuildRoleSubscriptionBenefitTypes;
+const Constants = fn(1085);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
-const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
-let ReactCompilerGating = ReactCompilerGating_mod;
+const SubscriptionIntervalTypes = fn(1379).SubscriptionIntervalTypes;
+let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1, arg2) => {
-      let first;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       let tmp = arg2;
-      let closure_2 = arg2;
-      obj = react2;
-      const cResult = obj.c(12);
+      closure_2 = arg2;
+      const cResult = c.c(12);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function r(setListing) {
           return setListing.setListing;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
-      const tmp5 = authStore(first);
-      let closure_3 = tmp5;
+      const tmp5 = v65535(first);
+      closure_3 = tmp5;
       if (cResult[1] === arg1) {
         if (cResult[2] === arg0) {
           if (cResult[3] === tmp) {
-            let tmp6;
             if (cResult[4] === tmp5) {
-              tmp6 = cResult[5];
+              let tmp6 = cResult[5];
             }
             if (cResult[6] === arg1) {
-              let tmp7;
               if (cResult[7] === arg0) {
-                tmp7 = cResult[8];
+                let tmp7 = cResult[8];
               }
-              const tmp4Result = authStore(tmp7);
+              const tmp4Result = v65535(tmp7);
               if (undefined !== tmp4Result) {
                 tmp = tmp4Result;
               }
               if (cResult[9] === tmp6) {
-                let tmp9;
                 if (cResult[10] === tmp) {
-                  tmp9 = cResult[11];
+                  let tmp9 = cResult[11];
                 }
                 return tmp9;
               }
@@ -510,7 +483,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn2 = function s(arg0) {
         closure_0 = arg0;
-        const tmp = closure_3(closure_0, (arg0) => {
+        closure_3(closure_0, (arg0) => {
           let tmpResult = closure_0;
           if (typeof closure_0 === "function") {
             let tmp4;
@@ -522,7 +495,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmpResult = tmp(tmp4);
           }
-          obj = {};
+          const obj = {};
           obj[closure_1] = tmpResult;
           return Object.assign({}, arg0, obj);
         });
@@ -535,16 +508,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn2;
     }
   : (arg0, arg1, arg2) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       let tmp = arg2;
-      let closure_2 = arg2;
-      let tmp2 = authStore((setListing) => setListing.setListing);
-      let closure_3 = tmp2;
+      closure_2 = arg2;
+      let tmp2 = v65535((setListing) => setListing.setListing);
+      closure_3 = tmp2;
       const items = [tmp2, arg0, arg1, arg2];
-      const callback = react.useCallback((arg0) => {
+      const callback = noop.useCallback((arg0) => {
         closure_0 = arg0;
-        const tmp = closure_3(closure_0, (arg0) => {
+        closure_3(closure_0, (arg0) => {
           let tmpResult = closure_0;
           if (typeof closure_0 === "function") {
             let tmp4;
@@ -556,12 +529,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmpResult = tmp(tmp4);
           }
-          obj = {};
+          const obj = {};
           obj[closure_1] = tmpResult;
           return Object.assign({}, arg0, obj);
         });
       }, items);
-      let tmp4 = authStore((arg0) => {
+      let tmp4 = v65535((arg0) => {
         let tmp2;
         if (arg0.listings[closure_0] != null) {
           tmp2 = tmp[closure_1];
@@ -575,64 +548,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return items1;
     };
 let closure_15 = tmp4;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
-      let tmp2;
-      let tmp3;
-      _require = arg0;
-      obj = require("react");
-      const cResult = obj.c(3);
-      if (cResult[0] !== arg0) {
-        const fn = function t() {
-          return () => {
-            closure_0 = closure_1_0;
-            obj = closure_0(dependencyMap[21]);
-            obj.batchUpdates(f144737);
-          };
-        };
-        const items = [arg0];
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        cResult[2] = items;
-        tmp3 = items;
-        tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-        tmp3 = cResult[2];
-      }
-      const effect = react.useEffect(tmp2, tmp3);
-    }
-  : (arg0) => {
-      let closure_0 = arg0;
-      const items = [arg0];
-      const effect = react.useEffect(
-        () => () => {
-          let state;
-          closure_0 = closure_1_0;
-          obj = closure_0(dependencyMap[21]);
-          obj.batchUpdates(f144737);
-        },
-        items,
-      );
-    };
-ReactCompilerGating = ReactCompilerGating_mod;
+fn(558);
+ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let first;
-      let tmp6;
-      let tmp8;
       _require = arg0;
       importDefault = arg1;
-      obj = require("react");
-      const cResult = obj.c(8);
-      const tmp = _require;
+      const cResult = require("c").c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildRoleSubscriptionsStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -642,27 +568,26 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if (cResult[3] !== arg1) {
         const fn2 = function l() {
           return closure_1;
         };
         cResult[3] = arg1;
         cResult[4] = fn2;
-        tmp8 = fn2;
+        let tmp8 = fn2;
       } else {
         tmp8 = cResult[4];
       }
       const tmp9 = useInitialValueDefault(tmp8);
       if (cResult[5] === tmp9) {
-        let tmp10;
         if (cResult[6] === stateFromStores) {
-          tmp10 = cResult[7];
+          let tmp10 = cResult[7];
         }
         return tmp10;
       }
@@ -671,29 +596,77 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = stateFromStores;
       cResult[7] = tmp9Result;
       tmp10 = tmp9Result;
+      const tmpResult = require("initialize");
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let closure_3;
       _require = arg0;
       importDefault = arg1;
       const items = [GuildRoleSubscriptionsStore];
-      obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(items, () =>
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
         GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0),
       );
       const tmp2 = useInitialValueDefault(() => closure_1);
       dependencyMap = tmp2;
       const items1 = [stateFromStores, tmp2];
-      return react.useMemo(() => closure_3(stateFromStores), items1);
+      return noop.useMemo(() => closure_3(stateFromStores), items1);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(3);
+      if (cResult[0] !== arg0) {
+        const fn = function t() {
+          return () => {
+            closure_0 = closure_1_0;
+            closure_0(dependencyMap[21]).batchUpdates(() => {
+              state.setState((listings) => {
+                const obj = { listings: null };
+                const obj2 = {};
+                const merged = Object.assign(listings.listings);
+                obj2[closure_1_0] = listings.listings.nonexistantEditStateId;
+                obj.listings = obj2;
+                return obj;
+              });
+            });
+          };
+        };
+        const items = [arg0];
+        cResult[0] = arg0;
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp3 = items;
+        let tmp2 = fn;
+      } else {
+        tmp2 = cResult[1];
+        tmp3 = cResult[2];
+      }
+      const effect = noop.useEffect(tmp2, tmp3);
+    }
+  : (arg0) => {
+      closure_0 = arg0;
+      const items = [arg0];
+      const effect = noop.useEffect(
+        () => () => {
+          closure_0 = closure_1_0;
+          closure_0(dependencyMap[21]).batchUpdates(() => {
+            state.setState((listings) => {
+              const obj = { listings: null };
+              const obj2 = {};
+              const merged = Object.assign(listings.listings);
+              obj2[closure_1_0] = listings.listings.nonexistantEditStateId;
+              obj.listings = obj2;
+              return obj;
+            });
+          });
+        },
+        items,
+      );
+    };
+ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(name) {
           let str;
@@ -706,7 +679,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           return str;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -727,12 +700,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           return str;
         }),
       );
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(arg0) {
           let price;
@@ -745,7 +716,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           return price;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -766,12 +737,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           return price;
         }),
       );
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(description) {
           let str;
@@ -784,7 +753,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           return str;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -805,14 +774,11 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           return str;
         }),
       );
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let tmp2;
       _require = arg1;
-      obj = require("react");
-      const cResult = obj.c(2);
+      const cResult = require("c").c(2);
       if (cResult[0] !== arg1) {
         const fn = function n(image_asset) {
           image_asset = undefined;
@@ -820,20 +786,19 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             image_asset = image_asset.image_asset;
           }
           if (null != image_asset) {
-            obj = StoreUtils;
-            return obj.getAssetURL(image_asset.application_id, image_asset.image_asset, closure_0);
+            return StoreUtils.getAssetURL(image_asset.application_id, image_asset.image_asset, closure_0);
           }
         };
         cResult[0] = arg1;
         cResult[1] = fn;
-        tmp2 = fn;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
       return closure_15(arg0, "image", closure_16(arg0, tmp2));
     }
   : (arg0, arg1) => {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       return closure_15(
         arg0,
         "image",
@@ -843,18 +808,15 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             image_asset = image_asset.image_asset;
           }
           if (null != image_asset) {
-            obj = StoreUtils;
-            return obj.getAssetURL(image_asset.application_id, image_asset.image_asset, closure_0);
+            return StoreUtils.getAssetURL(image_asset.application_id, image_asset.image_asset, closure_0);
           }
         }),
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(application_id) {
           application_id = undefined;
@@ -864,7 +826,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
           return application_id;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -878,11 +840,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return application_id;
       });
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp11 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       const tmp2 = useSubscriptionRoleDefault(arg1, arg0);
       let icon;
       if (tmp2 != null) {
@@ -893,9 +854,8 @@ const tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         unicodeEmoji = tmp2.unicodeEmoji;
       }
       if (cResult[0] === icon) {
-        let tmp5;
         if (cResult[1] === unicodeEmoji) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         return closure_15(arg0, "roleIcon", tmp5);
       }
@@ -907,35 +867,34 @@ const tmp11 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0, arg1) => {
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
-      let closure_0 = tmp;
+      closure_0 = tmp;
       const items = [tmp];
       return closure_15(
         arg0,
         "roleIcon",
-        react.useMemo(() => {
-          let unicodeEmoji;
+        noop.useMemo(() => {
           let icon;
           if (closure_0 != null) {
             icon = closure_0.icon;
           }
-          obj = { icon, unicodeEmoji };
-          unicodeEmoji = undefined;
+          const obj = { icon, unicodeEmoji: null };
+          let unicodeEmoji;
           if (closure_0 != null) {
             unicodeEmoji = closure_0.unicodeEmoji;
           }
+          obj.unicodeEmoji = unicodeEmoji;
           return obj;
         }, items),
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const tmp12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let tmp5;
-      let tmp8;
-      let closure_0 = arg0;
-      obj = react2;
-      const cResult = obj.c(10);
-      const tmp4 = useSubscriptionRoleDefault(arg1, arg0);
+      closure_0 = arg0;
+      let obj = require;
+      let int2hexResult = dependencyMap;
+      const cResult = c.c(10);
+      const tmp3 = useSubscriptionRoleDefault(arg1, arg0);
       if (cResult[0] !== arg0) {
         const fn = function n(arg0) {
           let roleColor;
@@ -946,11 +905,11 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        tmp5 = fn;
+        let tmp4 = fn;
       } else {
-        tmp5 = cResult[1];
+        tmp4 = cResult[1];
       }
-      const tmp7 = authStore(tmp5);
+      const tmp6 = v65535(tmp4);
       if (cResult[2] !== arg0) {
         const fn2 = function s(arg0) {
           let roleIcon;
@@ -961,62 +920,59 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[2] = arg0;
         cResult[3] = fn2;
-        tmp8 = fn2;
+        let tmp7 = fn2;
       } else {
-        tmp8 = cResult[3];
+        tmp7 = cResult[3];
       }
-      const tmp6Result = authStore(tmp8);
-      let DEFAULT_PREVIEW_ROLE = tmp4;
-      if (tmp4 == null) {
+      const tmp5Result = v65535(tmp7);
+      let DEFAULT_PREVIEW_ROLE = tmp3;
+      if (tmp3 == null) {
         DEFAULT_PREVIEW_ROLE = Contants.DEFAULT_PREVIEW_ROLE;
       }
-      if (cResult[4] === tmp7) {
-        if (cResult[5] === tmp6Result) {
-          let tmp10;
+      if (cResult[4] === tmp6) {
+        if (cResult[5] === tmp5Result) {
           if (cResult[6] === DEFAULT_PREVIEW_ROLE) {
-            tmp10 = cResult[7];
+            let tmp9 = cResult[7];
           }
-          return tmp10;
+          return tmp9;
         }
       }
-      const obj2 = {};
+      const obj3 = {};
       const merged = Object.assign(DEFAULT_PREVIEW_ROLE);
-      if (undefined !== tmp6Result) {
-        let str = tmp6Result.icon;
+      if (undefined !== tmp5Result) {
+        let str = tmp5Result.icon;
         if (str == null) {
           str = "";
         }
-        obj2.icon = str;
-        let str2 = tmp6Result.unicodeEmoji;
+        obj3.icon = str;
+        let str2 = tmp5Result.unicodeEmoji;
         if (str2 == null) {
           str2 = "";
         }
-        obj2.unicodeEmoji = str2;
+        obj3.unicodeEmoji = str2;
       }
-      if (undefined !== tmp7) {
-        let tmp12;
-        obj2.color = tmp7;
-        if (cResult[8] !== tmp7) {
-          const tmpResult = utils_ColorUtils;
-          const int2hexResult = tmpResult.int2hex(tmp7);
-          cResult[8] = tmp7;
+      if (undefined === tmp6) {
+        cResult[4] = tmp6;
+        cResult[5] = tmp5Result;
+        cResult[6] = DEFAULT_PREVIEW_ROLE;
+        cResult[7] = obj3;
+        tmp9 = obj3;
+      } else {
+        obj3.color = tmp6;
+        if (cResult[8] !== tmp6) {
+          obj = utils_ColorUtils;
+          int2hexResult = obj.int2hex(tmp6);
+          cResult[8] = tmp6;
           cResult[9] = int2hexResult;
-          tmp12 = int2hexResult;
+          let tmp11 = int2hexResult;
         } else {
-          tmp12 = cResult[9];
+          tmp11 = cResult[9];
         }
-        obj2.colorString = tmp12;
+        obj3.colorString = tmp11;
       }
-      cResult[4] = tmp7;
-      cResult[5] = tmp6Result;
-      cResult[6] = DEFAULT_PREVIEW_ROLE;
-      cResult[7] = obj2;
-      tmp10 = obj2;
     }
   : (arg0, arg1) => {
-      let closure_1;
-      let closure_3;
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       importDefault = tmp;
       const tmp2 = closure_10((arg0) => {
@@ -1036,12 +992,12 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       });
       dependencyMap = tmp3;
       const items = [tmp, tmp3, tmp2];
-      return react.useMemo(() => {
+      return noop.useMemo(() => {
         let DEFAULT_PREVIEW_ROLE = closure_1;
         if (closure_1 == null) {
           DEFAULT_PREVIEW_ROLE = Contants.DEFAULT_PREVIEW_ROLE;
         }
-        obj = {};
+        const obj = {};
         const merged = Object.assign(DEFAULT_PREVIEW_ROLE);
         if (undefined !== closure_3) {
           let str = closure_3.icon;
@@ -1057,14 +1013,14 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (undefined !== color) {
           obj.color = color;
-          const obj2 = utils_ColorUtils;
-          obj.colorString = obj2.int2hex(color);
+          obj.colorString = utils_ColorUtils.int2hex(color);
         }
         return obj;
       }, items);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let closure_17 = [];
+const tmp13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       let color;
@@ -1072,7 +1028,7 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
         color = tmp.color;
       }
       if (color == null) {
-        color = map1;
+        color = __initData2;
       }
       return closure_15(arg0, "roleColor", color);
     }
@@ -1083,28 +1039,26 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_15(
         arg0,
         "roleColor",
-        react.useMemo(() => {
+        noop.useMemo(() => {
           color = undefined;
           if (color != null) {
             color = color.color;
           }
           if (color == null) {
-            color = map1;
+            color = __initData2;
           }
           return color;
         }, items),
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_17 = [];
-let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let closure_18 = [];
+const tmp14 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
       const tmp2 = useSubscriptionRoleDefault(arg1, arg0);
       if (null != tmp2) {
-        let SOME_CHANNELS_ACCESS;
-        obj = RolePermissionUtils;
         if (obj.hasViewChannelPermission(tmp2)) {
-          SOME_CHANNELS_ACCESS = constants.ALL_CHANNELS_ACCESS;
+          let SOME_CHANNELS_ACCESS = constants.ALL_CHANNELS_ACCESS;
         }
         return closure_15(arg0, "channelAccessFormat", SOME_CHANNELS_ACCESS);
       }
@@ -1112,18 +1066,16 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0, arg1) => {
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
-      let closure_0 = tmp;
+      closure_0 = tmp;
       const items = [tmp];
       return closure_15(
         arg0,
         "channelAccessFormat",
-        react.useMemo(() => {
-          let SOME_CHANNELS_ACCESS;
+        noop.useMemo(() => {
           if (null == closure_0) {
-            SOME_CHANNELS_ACCESS = constants.SOME_CHANNELS_ACCESS;
+            let SOME_CHANNELS_ACCESS = constants.SOME_CHANNELS_ACCESS;
           } else {
-            obj = RolePermissionUtils;
-            SOME_CHANNELS_ACCESS = obj.hasViewChannelPermission(tmp)
+            SOME_CHANNELS_ACCESS = RolePermissionUtils.hasViewChannelPermission(tmp)
               ? constants.ALL_CHANNELS_ACCESS
               : constants.SOME_CHANNELS_ACCESS;
           }
@@ -1131,18 +1083,14 @@ let tmp14 = ReactCompilerGating.isReactCompilerEnabled()
         }, items),
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_18 = [];
+ReactCompilerGating = fn(558);
 let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(role_benefits) {
-          let found;
           if (null == role_benefits) {
-            found = closure_1_17;
+            let found = closure_1_17;
           } else {
             const benefits = role_benefits.role_benefits.benefits;
             found = benefits.filter(require("GuildRoleSubscriptionTypeUtils").isChannelBenefit);
@@ -1150,7 +1098,7 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
           return found;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -1161,9 +1109,8 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
         arg0,
         "channelBenefits",
         closure_16(arg0, (role_benefits) => {
-          let found;
           if (null == role_benefits) {
-            found = closure_1_17;
+            let found = closure_1_17;
           } else {
             const benefits = role_benefits.role_benefits.benefits;
             found = benefits.filter(require("GuildRoleSubscriptionTypeUtils").isChannelBenefit);
@@ -1171,17 +1118,15 @@ let tmp15 = ReactCompilerGating.isReactCompilerEnabled()
           return found;
         }),
       );
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp16 = ReactCompilerGating.isReactCompilerEnabled()
+let set = new Set();
+ReactCompilerGating = fn(558);
+const tmp16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      obj = react2;
-      const cResult = obj.c(1);
+      const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function t(role_benefits) {
-          let found;
           if (null == role_benefits) {
-            found = closure_1_18;
+            let found = closure_1_18;
           } else {
             const benefits = role_benefits.role_benefits.benefits;
             found = benefits.filter(require("GuildRoleSubscriptionTypeUtils").isIntangibleBenefit);
@@ -1189,7 +1134,7 @@ let tmp16 = ReactCompilerGating.isReactCompilerEnabled()
           return found;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -1200,9 +1145,8 @@ let tmp16 = ReactCompilerGating.isReactCompilerEnabled()
         arg0,
         "intangibleBenefits",
         closure_16(arg0, (role_benefits) => {
-          let found;
           if (null == role_benefits) {
-            found = closure_1_18;
+            let found = closure_1_18;
           } else {
             const benefits = role_benefits.role_benefits.benefits;
             found = benefits.filter(require("GuildRoleSubscriptionTypeUtils").isIntangibleBenefit);
@@ -1210,81 +1154,61 @@ let tmp16 = ReactCompilerGating.isReactCompilerEnabled()
           return found;
         }),
       );
-let set = new Set();
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function (arg0, arg1) {
-      let closure_0;
-      let first;
-      let tmp7;
-      let tmp8;
-      let tmp9;
-      _require = arg1;
-      obj = require("react");
-      const cResult = obj.c(7);
-      const tmp4 = useSubscriptionRoleDefault(arg1, arg0);
-      const tmp = _require;
+ReactCompilerGating = fn(558);
+const tmp18 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      let id = arg1;
+      const cResult = id(576).c(7);
+      id = useSubscriptionRoleDefault(arg1, arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmojiStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== arg1) {
         const fn = function o() {
-          return EmojiStore.getGuildEmoji(closure_0);
+          return EmojiStore.getGuildEmoji(id);
         };
         const items1 = [arg1];
         cResult[1] = arg1;
         cResult[2] = fn;
         cResult[3] = items1;
-        tmp8 = items1;
-        tmp7 = fn;
+        let tmp7 = items1;
+        let tmp6 = fn;
       } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
+        tmp6 = cResult[2];
+        tmp7 = cResult[3];
       }
-      const tmpResult = tmp(504);
-      const stateFromStoresArray = tmpResult.useStateFromStoresArray(first, tmp7, tmp8);
-      if (null != tmp4) {
-        if (cResult[4] === stateFromStoresArray) {
-          let tmp10;
-          if (cResult[5] === tmp4.id) {
-            tmp10 = cResult[6];
-          }
-          tmp9 = tmp10;
-        }
-        const id = tmp4.id;
+      const obj = id(576);
+      const stateFromStoresArray = id(504).useStateFromStoresArray(first, tmp6, tmp7);
+      if (null != id) {
+        id = id.id;
         if (0 !== stateFromStoresArray.length) {
           const found = stateFromStoresArray.filter((roles) => {
             roles = roles.roles;
             return roles.includes(id);
           });
           const _Set = Set;
-          const self = this;
-          const self2 = this;
           set = new Set(found.map((id) => id.id));
         }
         cResult[4] = stateFromStoresArray;
-        cResult[5] = tmp4.id;
+        id = id.id;
+        cResult[5] = id;
         cResult[6] = set;
-        tmp10 = set;
       } else {
-        tmp9 = set;
+        return closure_15(arg0, "tierEmojiIds", set);
       }
-      return closure_15(arg0, "tierEmojiIds", tmp9);
+      const tmpResult = id(504);
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
       _require = arg1;
       const tmp = useSubscriptionRoleDefault(arg1, arg0);
       importDefault = tmp;
       const items = [EmojiStore];
       const items1 = [arg1];
-      obj = require("get initialized");
-      const stateFromStoresArray = obj.useStateFromStoresArray(
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(
         items,
         () => EmojiStore.getGuildEmoji(closure_0),
         items1,
@@ -1293,7 +1217,7 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_15(
         arg0,
         "tierEmojiIds",
-        react.useMemo(function () {
+        noop.useMemo(() => {
           if (null != closure_1) {
             const id = tmp.id;
             if (0 !== stateFromStoresArray.length) {
@@ -1302,8 +1226,6 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
                 return roles.includes(id);
               });
               const _Set = Set;
-              const self = this;
-              const self2 = this;
               set = new Set(found.map((id) => id.id));
             }
           }
@@ -1311,47 +1233,42 @@ let tmp18 = ReactCompilerGating.isReactCompilerEnabled()
         }, items2),
       );
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp19 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      obj = GuildRoleSubscriptionsHooks;
-      const subscriptionTrial = obj.useSubscriptionTrial(arg0);
+      const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let active_trial;
-      const tmp2 = useTrialIntervalOptionsDefault;
       if (subscriptionTrial != null) {
         active_trial = subscriptionTrial.active_trial;
       }
       if (active_trial == null) {
         active_trial = null;
       }
-      let selectedOption = tmp2(active_trial).selectedOption;
+      let selectedOption = useTrialIntervalOptionsDefault(active_trial).selectedOption;
       if (selectedOption == null) {
         selectedOption = null;
       }
       return closure_15(arg0, "trialInterval", selectedOption);
     }
   : (arg0) => {
-      obj = GuildRoleSubscriptionsHooks;
-      const subscriptionTrial = obj.useSubscriptionTrial(arg0);
+      const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let active_trial;
-      const tmp2 = useTrialIntervalOptionsDefault;
       if (subscriptionTrial != null) {
         active_trial = subscriptionTrial.active_trial;
       }
       if (active_trial == null) {
         active_trial = null;
       }
-      let selectedOption = tmp2(active_trial).selectedOption;
+      let selectedOption = useTrialIntervalOptionsDefault(active_trial).selectedOption;
       if (selectedOption == null) {
         selectedOption = null;
       }
       return closure_15(arg0, "trialInterval", selectedOption);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      obj = GuildRoleSubscriptionsHooks;
-      const subscriptionTrial = obj.useSubscriptionTrial(arg0);
+      const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let prop;
       if (subscriptionTrial != null) {
         prop = subscriptionTrial.max_num_active_trial_users;
@@ -1362,8 +1279,7 @@ const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_15(arg0, "trialLimit", prop);
     }
   : (arg0) => {
-      obj = GuildRoleSubscriptionsHooks;
-      const subscriptionTrial = obj.useSubscriptionTrial(arg0);
+      const subscriptionTrial = GuildRoleSubscriptionsHooks.useSubscriptionTrial(arg0);
       let prop;
       if (subscriptionTrial != null) {
         prop = subscriptionTrial.max_num_active_trial_users;
@@ -1373,36 +1289,32 @@ const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return closure_15(arg0, "trialLimit", prop);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp21 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp2;
-      let closure_0 = arg0;
-      obj = react2;
-      const cResult = obj.c(2);
+      closure_0 = arg0;
+      const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         const fn = function t(arg0) {
           return undefined !== arg0.listings[closure_0];
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        tmp2 = fn;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
-      return authStore(tmp2);
+      return v65535(tmp2);
     }
   : (arg0) => {
-      let closure_0 = arg0;
-      return authStore((arg0) => undefined !== arg0.listings[closure_0]);
+      closure_0 = arg0;
+      return v65535((arg0) => undefined !== arg0.listings[closure_0]);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp22 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let tmp2;
-      let closure_0 = arg0;
-      obj = react2;
-      const cResult = obj.c(2);
+      closure_0 = arg0;
+      const cResult = c.c(2);
       if (cResult[0] !== arg0) {
         const fn = function t(arg0) {
           for (const item10006 of closure_0) {
@@ -1416,15 +1328,15 @@ const tmp22 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = arg0;
         cResult[1] = fn;
-        tmp2 = fn;
+        let tmp2 = fn;
       } else {
         tmp2 = cResult[1];
       }
-      return authStore(tmp2);
+      return v65535(tmp2);
     }
   : (arg0) => {
-      let closure_0 = arg0;
-      return authStore((arg0) => {
+      closure_0 = arg0;
+      return v65535((arg0) => {
         for (const item10006 of closure_0) {
           if (undefined !== arg0.listings[item10006]) {
             obj.return();
@@ -1435,12 +1347,10 @@ const tmp22 = ReactCompilerGating.isReactCompilerEnabled()
         return false;
       });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let first;
-      obj = react2;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n(arg0) {
           let first;
@@ -1450,7 +1360,7 @@ const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
           return first;
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -1498,16 +1408,14 @@ const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === currency) {
           if (cResult[3] === interval) {
             if (cResult[4] === num3) {
-              let tmp9;
-              let tmp10;
               if (cResult[5] === str) {
-                tmp9 = cResult[6];
+                let tmp9 = cResult[6];
               }
               if (cResult[7] !== tmp9) {
                 const items = [tmp9];
                 cResult[7] = tmp9;
                 cResult[8] = items;
-                tmp10 = items;
+                let tmp10 = items;
               } else {
                 tmp10 = cResult[8];
               }
@@ -1537,11 +1445,7 @@ const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
       let first = _slicedToArray(closure_15(arg0, "priceTier", undefined), 1)[0];
       const items = [tmp, first];
       const items1 = [
-        react.useMemo(() => {
-          let currency;
-          let interval;
-          let num2;
-          let str;
+        noop.useMemo(() => {
           let num = first;
           if (first == null) {
             price = undefined;
@@ -1553,328 +1457,45 @@ const tmp23 = ReactCompilerGating.isReactCompilerEnabled()
           if (num == null) {
             num = 0;
           }
-          obj = { price: num, currency, interval, interval_count: num2, id: str };
-          currency = undefined;
+          const obj = { price: num, currency: null, interval: null, interval_count: null, id: null };
+          let currency;
           if (price != null) {
             currency = tmp2.currency;
           }
           if (currency == null) {
-            currency = constants.USD;
+            currency = constants2.USD;
           }
-          interval = undefined;
+          obj.currency = currency;
+          let interval;
           if (price != null) {
             interval = tmp2.interval;
           }
           if (interval == null) {
             interval = SubscriptionIntervalTypes.MONTH;
           }
-          num2 = undefined;
+          obj.interval = interval;
+          let num2;
           if (price != null) {
             num2 = tmp2.interval_count;
           }
           if (num2 == null) {
             num2 = 1;
           }
-          str = undefined;
+          obj.interval_count = num2;
+          let str;
           if (price != null) {
             str = tmp2.id;
           }
           if (str == null) {
             str = "";
           }
+          obj.id = str;
           return obj;
         }, items),
       ];
       return items1;
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1, arg2) => {
-      let tmp15;
-      let tmp4;
-      let tmp6;
-      let tmp9;
-      _require = arg1;
-      obj = require("react");
-      const cResult = obj.c(27);
-      const tmp = _require;
-      if (cResult[0] !== arg2) {
-        let obj2 = arg2;
-        if (undefined === arg2) {
-          obj2 = { includeSoftDeleted: false };
-        }
-        cResult[0] = arg2;
-        cResult[1] = obj2;
-        tmp4 = obj2;
-      } else {
-        tmp4 = cResult[1];
-      }
-      const tmpResult = tmp(15045);
-      const subscriptionListingsForGroup = tmpResult.useSubscriptionListingsForGroup(arg0, tmp4);
-      if (cResult[2] !== arg1) {
-        const fn = function s(arg0) {
-          return arg0.editStateIdsForGroup[closure_0];
-        };
-        cResult[2] = arg1;
-        cResult[3] = fn;
-        tmp6 = fn;
-      } else {
-        tmp6 = cResult[3];
-      }
-      const tmp8 = closure_10(tmp6);
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function f(setEditStateIdsForGroup) {
-          return setEditStateIdsForGroup.setEditStateIdsForGroup;
-        };
-        cResult[4] = fn2;
-        tmp9 = fn2;
-      } else {
-        tmp9 = cResult[4];
-      }
-      const tmp7Result = closure_10(tmp9);
-      importDefault = tmp7Result;
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor(setListing) {
-            return setListing.setListing;
-          }
-        }
-        cResult[5] = S;
-      } else {
-        class S {
-          constructor(setListing) {
-            return setListing.setListing;
-          }
-        }
-      }
-      const tmp7Result2 = closure_10(S);
-      let closure_2 = tmp7Result2;
-      if (cResult[6] === subscriptionListingsForGroup) {
-        class S {
-          constructor(setListing) {
-            return setListing.setListing;
-          }
-        }
-        if (cResult[12] === arg1) {
-          class S {
-            constructor(setListing) {
-              return setListing.setListing;
-            }
-          }
-          if (cResult[15] === arg1) {
-            class S {
-              constructor(setListing) {
-                return setListing.setListing;
-              }
-            }
-          }
-          class L {
-            constructor() {
-              obj = closure_0(closure_3[28]);
-              closure_0 = obj.v4();
-              tmp = closure_1(closure_0, (arg0) => {
-                let items = arg0;
-                if (arg0 == null) {
-                  items = [];
-                }
-                const items1 = [];
-                items1[HermesBuiltin.arraySpread(items1, items, 0)] = closure_0;
-                return items1;
-              });
-              return;
-            }
-          }
-          cResult[15] = arg1;
-          cResult[16] = tmp7Result;
-          cResult[17] = tmp7Result2;
-          cResult[18] = tmp19;
-        }
-        class L {
-          constructor() {
-            obj = closure_0(closure_3[28]);
-            closure_0 = obj.v4();
-            tmp = closure_1(closure_0, (arg0) => {
-              let items = arg0;
-              if (arg0 == null) {
-                items = [];
-              }
-              const items1 = [];
-              items1[HermesBuiltin.arraySpread(items1, items, 0)] = closure_0;
-              return items1;
-            });
-            return;
-          }
-        }
-        cResult[12] = arg1;
-        cResult[13] = tmp7Result;
-        cResult[14] = L;
-      }
-      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor(setListing) {
-            return setListing.setListing;
-          }
-        }
-        class L {
-          constructor() {
-            obj = closure_0(closure_3[28]);
-            closure_0 = obj.v4();
-            tmp = closure_1(closure_0, (arg0) => {
-              let items = arg0;
-              if (arg0 == null) {
-                items = [];
-              }
-              const items1 = [];
-              items1[HermesBuiltin.arraySpread(items1, items, 0)] = closure_0;
-              return items1;
-            });
-            return;
-          }
-        }
-      } else {
-        class S {
-          constructor(setListing) {
-            return setListing.setListing;
-          }
-        }
-      }
-      if (cResult[10] !== tmp8) {
-        class S {
-          constructor(setListing) {
-            return setListing.setListing;
-          }
-        }
-        class L {
-          constructor() {
-            obj = closure_0(closure_3[28]);
-            closure_0 = obj.v4();
-            tmp = closure_1(closure_0, (arg0) => {
-              let items = arg0;
-              if (arg0 == null) {
-                items = [];
-              }
-              const items1 = [];
-              items1[HermesBuiltin.arraySpread(items1, items, 0)] = closure_0;
-              return items1;
-            });
-            return;
-          }
-        }
-        cResult[10] = tmp8;
-        cResult[11] = tmp8;
-        tmp15 = tmp8;
-      } else {
-        class S {
-          constructor(setListing) {
-            return setListing.setListing;
-          }
-        }
-      }
-      let items = [...tmp15];
-      cResult[6] = subscriptionListingsForGroup;
-      cResult[7] = tmp8;
-      cResult[8] = items;
-    }
-  : (arg0, arg1) => {
-      let closure_3;
-      let items;
-      let items1;
-      let items2;
-      let items3;
-      _require = arg1;
-      obj = arg2;
-      if (arg2 === undefined) {
-        obj = { includeSoftDeleted: false };
-      }
-      const obj2 = require("GuildRoleSubscriptionsHooks");
-      let subscriptionListingsForGroup = obj2.useSubscriptionListingsForGroup(arg0, obj);
-      const tmp2 = closure_10((arg0) => arg0.editStateIdsForGroup[closure_0]);
-      let closure_2 = tmp2;
-      const tmp3 = closure_10((setEditStateIdsForGroup) => setEditStateIdsForGroup.setEditStateIdsForGroup);
-      dependencyMap = tmp3;
-      const tmp4 = closure_10((setListing) => setListing.setListing);
-      let closure_4 = tmp4;
-      const obj3 = {
-        editStateIds: react.useMemo(() => {
-          const items = [...subscriptionListingsForGroup.map((id) => id.id)];
-          let items1 = closure_2;
-          if (closure_2 == null) {
-            items1 = [];
-          }
-          HermesBuiltin.arraySpread(items, items1, tmp2);
-          return items;
-        }, items),
-        addNewEditStateId: react.useCallback(() => {
-          obj = v1;
-          closure_0 = obj.v4();
-          closure_3(closure_0, (arg0) => {
-            let items = arg0;
-            if (arg0 == null) {
-              items = [];
-            }
-            const items1 = [];
-            items1[HermesBuiltin.arraySpread(items1, items, 0)] = closure_0;
-            return items1;
-          });
-        }, items1),
-        addNewEditStateFromTemplate: react.useCallback((listings) => {
-          closure_0 = listings;
-          obj = closure_0(closure_3[28]);
-          const v4Result = obj.v4();
-          subscriptionListingsForGroup = v4Result;
-          closure_3(closure_0, (arg0) => {
-            let items = arg0;
-            if (arg0 == null) {
-              items = [];
-            }
-            const items1 = [];
-            items1[HermesBuiltin.arraySpread(items1, items, 0)] = subscriptionListingsForGroup;
-            return items1;
-          });
-          listings = listings.listings;
-          const item = listings.forEach((item) => {
-            closure_1_4(closure_1, () => {
-              let channels;
-              obj = {
-                name: item.name,
-                description: item.description,
-                priceTier: item.price_tier,
-                image: item.image,
-                intangibleBenefits: item.additional_perks,
-                channelBenefits: channels.map((id) => ({
-                  ref_id: id.id,
-                  ref_type: constants.CHANNEL,
-                  description: id.description,
-                  name: id.name,
-                  emoji_name: id.emoji_name,
-                })),
-                roleIcon: obj2,
-                roleColor: item.role_color,
-                usedTemplate: item.category,
-              };
-              channels = item.channels;
-              return obj;
-            });
-          });
-          return v4Result;
-        }, items2),
-        removeEditStateId: react.useCallback((arg0) => {
-          closure_0 = arg0;
-          closure_3(closure_0, (arg0) => {
-            let items = arg0;
-            if (arg0 == null) {
-              items = [];
-            }
-            return items.filter((item) => item !== closure_1_0);
-          });
-        }, items3),
-      };
-      items = [tmp2, subscriptionListingsForGroup];
-      items1 = [arg1, tmp3];
-      items2 = [arg1, tmp3, tmp4];
-      items3 = [arg1, tmp3];
-      return obj3;
-    };
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx",
 );
@@ -1900,109 +1521,17 @@ export const useHasChangesForEditStateIds = tmp22;
 export const useSubscriptionPlan = tmp23;
 export { clearEditState };
 export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateListingFromEditState() {
-  let closure_1;
-  let first;
-  let require;
-  let tmp2;
-  const tmp = _slicedToArray(react.useState(false), 2);
-  [tmp2, require] = tmp;
-  [first, closure_1] = react.useState();
-  const useCallback = react.useCallback;
-  let closure_0 = _asyncToGenerator(async (guildId) => {
-    let c0;
-    let c1;
-    let c2;
-    let c3;
-    let c4;
-    function updateListingFromEditState(editStateId) {
-      let channelAccessFormat;
-      let channelBenefits;
-      let description;
-      let image;
-      let intangibleBenefits;
-      let name;
-      let priceTier;
-      editStateId = editStateId.editStateId;
-      ({ guildId, groupListingId } = editStateId);
-      subscriptionListing = subscriptionListing.getSubscriptionListing(editStateId);
-      closure_1_1(onBeforeDispatchNewListing[22])(null != subscriptionListing, "listing doesnt exist");
-      const tmp5 = closure_1_10.getState().listings[editStateId];
-      closure_1_1(onBeforeDispatchNewListing[22])(null != tmp5, "edit state does not exist");
-      ({ name, description, channelBenefits, intangibleBenefits, priceTier, image, channelAccessFormat } = tmp5);
-      obj = {};
-      if (name !== subscriptionListing.name) {
-        obj.name = name;
-      }
-      if (description !== subscriptionListing.description) {
-        obj.description = description;
-      }
-      const first = subscriptionListing.subscription_plans[0];
-      let price;
-      if (first != null) {
-        price = first.price;
-      }
-      if (priceTier !== price) {
-        obj.priceTier = priceTier;
-      }
-      if (null != image) {
-        obj.image = image;
-      }
-      if (null != channelAccessFormat) {
-        obj.can_access_all_channels = channelAccessFormat === constants.ALL_CHANNELS_ACCESS;
-      }
-      if (null != channelBenefits) {
-        const benefits = subscriptionListing.role_benefits.benefits;
-        const benefits1 = subscriptionListing.role_benefits.benefits;
-        const found = benefits.filter(closure_1_0(onBeforeDispatchNewListing[18]).isChannelBenefit);
-        const found1 = benefits1.filter(closure_1_0(onBeforeDispatchNewListing[18]).isIntangibleBenefit);
-        if (channelBenefits == null) {
-          channelBenefits = found;
-        }
-        const items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(items, channelBenefits, 0);
-        if (intangibleBenefits == null) {
-          intangibleBenefits = found1;
-        }
-        HermesBuiltin.arraySpread(items, intangibleBenefits, arraySpreadResult);
-        obj.benefits = items;
-      }
-      const obj2 = closure_1_0(onBeforeDispatchNewListing[25]);
-      if (!obj2.isEmpty(obj)) {
-        const obj4 = { guildId, groupListingId, listingId: editStateId, data: obj };
-        const obj3 = closure_1_2(onBeforeDispatchNewListing[24]);
-        subscriptionListing = obj3.updateSubscriptionListing(obj4);
-      }
-      return subscriptionListing;
-    }
-    function createListingFromEditState() {
-      return closure_1_23(...arguments);
-    }
-    function moveEditState(c1, id) {
-      closure_0 = c1;
-      closure_1 = id;
-      obj = closure_0(closure_3[21]);
-      obj.batchUpdates(() => {
-        closure_2_10.setState((listings) => {
-          let obj2;
-          obj = { listings: obj2 };
-          obj2 = {};
-          const merged = Object.assign(listings.listings);
-          obj2[id] = listings.listings[closure_1_0];
-          obj2[closure_1_0] = undefined;
-          return obj;
-        });
-      });
-    }
-    function updateListingPeripheralsFromEditState() {
-      return closure_1_22(...arguments);
-    }
+  [tmp2, closure_0] = noop.useState(false);
+  const tmp3 = _slicedToArray(noop.useState(), 2);
+  closure_1 = tmp3[1];
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (guildId === 1) {
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
         throw value;
-      } else if (guildId === 2) {
+      } else if (arg0 === 2) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
@@ -2010,159 +1539,464 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
       }
     } else {
       try {
-        let groupListingId;
-        let onBeforeDispatchNewListing;
-        let subscriptionListing2;
-        let id;
         c6 = 2;
-        const tmp4 = c5;
         if (0 === c5) {
-          if (guildId === 1) {
+          if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (guildId === 2) {
+          } else if (arg0 === 2) {
             c6 = 3;
             let obj3 = { value, done: true };
             return obj3;
           } else {
-            let closure_2 = tmp;
-            closure_1 = tmp4;
-            guildId = undefined;
-            c1 = undefined;
-            groupListingId = undefined;
-            onBeforeDispatchNewListing = undefined;
-            c4 = undefined;
+            closure_2 = tmp4;
+            closure_1 = tmp8;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            closure_129_3 = undefined;
+            closure_129_4 = undefined;
             ({
-              guildId: c0,
-              editStateId: c1,
-              groupListingId: c2,
-              onBeforeDispatchNewListing: c3,
-              onAfterDispatchNewListing: c4,
-            } = guildId);
-            subscriptionListing2 = undefined;
-            id = undefined;
+              guildId: closure_129_0,
+              editStateId: closure_129_1,
+              groupListingId: closure_129_2,
+              onBeforeDispatchNewListing: closure_129_3,
+              onAfterDispatchNewListing: closure_129_4,
+            } = closure_0);
+            closure_129_5 = undefined;
+            let subscriptionListing2;
+            closure_129_7 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "Reflect", done: true };
           }
-        } else if (1 === tmp4) {
-          if (guildId === 1) {
+        } else if (1 === tmp8) {
+          if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (guildId === 2) {
+          } else if (arg0 === 2) {
             c6 = 3;
             let obj4 = { value, done: true };
             return obj4;
           } else {
-            id = c1;
-            subscriptionListing2 = subscriptionListing.getSubscriptionListing(id);
+            closure_129_5 = closure_129_1;
+            subscriptionListing2 = subscriptionListing.getSubscriptionListing(closure_129_5);
             c4 = 2;
-            guildId(true);
+            closure_0(true);
             closure_1(undefined);
             if (null != subscriptionListing2) {
-              closure_2_1(dependencyMap[22])(null != groupListingId, "groupListingId is null");
-              const obj5 = { guildId, editStateId: id, groupListingId };
+              closure_1(dependencyMap[22])(null != closure_129_2, "groupListingId is null");
+              const obj5 = { guildId: closure_129_0, editStateId: closure_129_5, groupListingId: closure_129_2 };
               c5 = 4;
               c6 = 1;
-              const obj6 = { value: updateListingFromEditState(obj5), done: false };
+              const obj6 = {
+                value: (function updateListingFromEditState(editStateId) {
+                  editStateId = editStateId.editStateId;
+                  ({ guildId, groupListingId } = editStateId);
+                  subscriptionListing = subscriptionListing.getSubscriptionListing(editStateId);
+                  closure_1_1(38)(null != subscriptionListing, "listing doesnt exist");
+                  const tmp4 = closure_1_10.getState().listings[editStateId];
+                  closure_1_1(38)(null != tmp4, "edit state does not exist");
+                  ({ name, description, channelBenefits, intangibleBenefits, priceTier, image, channelAccessFormat } =
+                    tmp4);
+                  const obj = {};
+                  if (name !== subscriptionListing.name) {
+                    obj.name = name;
+                  }
+                  if (description !== subscriptionListing.description) {
+                    obj.description = description;
+                  }
+                  const first = subscriptionListing.subscription_plans[0];
+                  let price;
+                  if (first != null) {
+                    price = first.price;
+                  }
+                  if (priceTier !== price) {
+                    obj.priceTier = priceTier;
+                  }
+                  if (null != image) {
+                    obj.image = image;
+                  }
+                  if (null != channelAccessFormat) {
+                    obj.can_access_all_channels = channelAccessFormat === constants.ALL_CHANNELS_ACCESS;
+                  }
+                  if (null != channelBenefits) {
+                    const benefits = subscriptionListing.role_benefits.benefits;
+                    const benefits1 = subscriptionListing.role_benefits.benefits;
+                    const found = benefits.filter(closure_1_0(15064).isChannelBenefit);
+                    const found1 = benefits1.filter(closure_1_0(15064).isIntangibleBenefit);
+                    if (channelBenefits == null) {
+                      channelBenefits = found;
+                    }
+                    const items = [];
+                    const arraySpreadResult = HermesBuiltin.arraySpread(channelBenefits, 0);
+                    if (intangibleBenefits == null) {
+                      intangibleBenefits = found1;
+                    }
+                    HermesBuiltin.arraySpread(intangibleBenefits, arraySpreadResult);
+                    obj.benefits = items;
+                  }
+                  if (!obj2.isEmpty(obj)) {
+                    const obj4 = { guildId, groupListingId, listingId: editStateId, data: obj };
+                    subscriptionListing = closure_1_2(6768).updateSubscriptionListing(obj4);
+                    const obj3 = closure_1_2(6768);
+                  }
+                  return subscriptionListing;
+                })(obj5),
+                done: false,
+              };
               return obj6;
             } else {
-              const obj7 = { guildId, editStateId: id, groupListingId, onBeforeDispatchNewListing };
+              const obj7 = {
+                guildId: closure_129_0,
+                editStateId: closure_129_5,
+                groupListingId: closure_129_2,
+                onBeforeDispatchNewListing: closure_129_3,
+              };
               c5 = 5;
               c6 = 1;
-              const obj8 = { value: createListingFromEditState(obj7), done: false };
+              const obj8 = {
+                value: (function createListingFromEditState() {
+                  const self = this;
+                  const apply = closure_1_23.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(obj7),
+                done: false,
+              };
               return obj8;
             }
           }
-        } else if (2 === tmp4) {
+        } else if (2 === tmp8) {
           c4 = 0;
-          guildId(false);
-          throw closure_3;
-        } else if (3 === tmp4) {
+          closure_0(false);
+          throw dependencyMap;
+        } else if (3 === tmp8) {
           c4 = 1;
-          subscriptionListing = closure_3;
-          if ("getAnyErrorMessage" in subscriptionListing) {
-            closure_1(subscriptionListing);
+          closure_129_8 = dependencyMap;
+          if ("getAnyErrorMessage" in closure_129_8) {
+            closure_1(closure_129_8);
             c4 = 0;
-            guildId(false);
+            closure_0(false);
             c6 = 3;
             return { value: "IconComponent", done: null };
           } else {
-            throw subscriptionListing;
+            throw closure_129_8;
           }
         } else {
-          if (4 === tmp4) {
-            if (guildId === 1) {
+          if (4 === tmp8) {
+            if (arg0 === 1) {
               c6 = 3;
               throw value;
-            } else if (guildId === 2) {
+            } else if (arg0 === 2) {
               c4 = 0;
-              guildId(false);
+              closure_0(false);
               c6 = 3;
               const obj9 = { value, done: true };
               return obj9;
+            } else {
+              const obj10 = { guildId: closure_129_0, editStateId: closure_129_5 };
+              (function updateListingPeripheralsFromEditState() {
+                const self = this;
+                const apply = closure_1_22.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(obj10);
+              c5 = 6;
+              c6 = 1;
             }
-          } else if (5 === tmp4) {
-            if (guildId === 1) {
+          } else if (5 === tmp8) {
+            if (arg0 === 1) {
               c6 = 3;
               throw value;
-            } else if (guildId === 2) {
-              c4 = 0;
-              guildId(false);
-              c6 = 3;
-              const obj10 = { value, done: true };
-              return obj10;
-            } else {
-              id = value;
-              id = id.id;
-              moveEditState(c1, id);
-              if (c4 != null) {
-                tmp20(id);
+            } else if (arg0 !== 2) {
+              closure_129_7 = value;
+              const id = closure_129_7.id;
+              closure_129_5 = id;
+              (function moveEditState(arg0, id) {
+                closure_0 = arg0;
+                closure_1 = id;
+                closure_0(1259).batchUpdates(() => {
+                  closure_2_10.setState((listings) => {
+                    const obj = { listings: null };
+                    const obj2 = {};
+                    const merged = Object.assign(listings.listings);
+                    obj2[id] = listings.listings[closure_1_0];
+                    obj2[closure_1_0] = undefined;
+                    obj.listings = obj2;
+                    return obj;
+                  });
+                });
+              })(closure_129_1, id);
+              if (closure_129_4 != null) {
+                tmp24(closure_129_7);
               }
             }
-          } else if (guildId === 1) {
+          } else if (arg0 === 1) {
             c6 = 3;
             throw value;
-          } else if (guildId === 2) {
+          } else if (arg0 === 2) {
             c4 = 0;
-            guildId(false);
+            closure_0(false);
             c6 = 3;
-            obj = { value, done: true };
+            let obj = { value, done: true };
             return obj;
           } else {
-            let tmp5 = closure_1;
-            clearEditState(id);
+            clearEditState(closure_129_5);
             c4 = 0;
-            guildId(false);
+            closure_0(false);
             c6 = 3;
             return { value: true, done: true };
           }
-          const obj11 = { guildId, editStateId: id };
-          c5 = 6;
-          c6 = 1;
-          const obj12 = { value: updateListingPeripheralsFromEditState(obj11), done: false };
-          return obj12;
-        }
-      } catch (tmp65) {
-        closure_3 = tmp65;
-        if (0 === c4) {
+          c4 = 0;
+          closure_0(false);
           c6 = 3;
-          throw tmp65;
-        } else if (1 === tmp67) {
-          c5 = 2;
+          const obj11 = { value, done: true };
+          return obj11;
+        }
+      } catch (tmp70) {
+        dependencyMap = tmp70;
+        if (tmp5 === c4) {
+          c6 = tmp3;
+          throw tmp70;
+        } else if (tmp2 === tmp72) {
+          c5 = tmp;
         } else {
-          c5 = 3;
+          c5 = tmp3;
         }
       }
     }
   });
-  obj = {
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  return {
     loading: tmp2,
-    error: first,
-    handleCreateOrUpdateFromEditState: useCallback(function () {
-      return closure_0(...arguments);
+    error: tmp3[0],
+    handleCreateOrUpdateFromEditState: noop.useCallback(function () {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     }, []),
   };
-  return obj;
 };
-export const useEditStateIds = tmp24;
+export const useEditStateIds = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1, arg2) => {
+      _require = arg1;
+      const cResult = require("c").c(27);
+      if (cResult[0] !== arg2) {
+        let obj2 = arg2;
+        if (undefined === arg2) {
+          obj2 = { includeSoftDeleted: false };
+        }
+        cResult[0] = arg2;
+        cResult[1] = obj2;
+        let tmp4 = obj2;
+      } else {
+        tmp4 = cResult[1];
+      }
+      let obj = require("c");
+      const subscriptionListingsForGroup = require("GuildRoleSubscriptionsHooks").useSubscriptionListingsForGroup(
+        arg0,
+        tmp4,
+      );
+      if (cResult[2] !== arg1) {
+        const fn = function s(arg0) {
+          return arg0.editStateIdsForGroup[closure_0];
+        };
+        cResult[2] = arg1;
+        cResult[3] = fn;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[3];
+      }
+      const tmp8 = closure_10(tmp6);
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn2 = function f(setEditStateIdsForGroup) {
+          return setEditStateIdsForGroup.setEditStateIdsForGroup;
+        };
+        cResult[4] = fn2;
+        let tmp9 = fn2;
+      } else {
+        tmp9 = cResult[4];
+      }
+      const tmpResult = require("GuildRoleSubscriptionsHooks");
+      closure_1 = closure_10(tmp9);
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor(arg0) {
+            return arg0.setListing;
+          }
+        }
+        cResult[5] = S;
+      } else {
+        class S {
+          constructor(arg0) {
+            return arg0.setListing;
+          }
+        }
+      }
+      const tmp7Result = closure_10(tmp9);
+      closure_2 = closure_10(S);
+      if (cResult[6] === subscriptionListingsForGroup) {
+        class S {
+          constructor(arg0) {
+            return arg0.setListing;
+          }
+        }
+      }
+      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor(arg0) {
+            return arg0.setListing;
+          }
+        }
+        cResult[9] = tmp14;
+      } else {
+        class S {
+          constructor(arg0) {
+            return arg0.setListing;
+          }
+        }
+      }
+      if (cResult[10] !== tmp8) {
+        class S {
+          constructor(arg0) {
+            return arg0.setListing;
+          }
+        }
+        if (tmp8 == null) {
+          class S {
+            constructor(arg0) {
+              return arg0.setListing;
+            }
+          }
+        }
+        cResult[10] = tmp8;
+        cResult[11] = tmp8;
+        const tmp15 = tmp8;
+      } else {
+        class S {
+          constructor(arg0) {
+            return arg0.setListing;
+          }
+        }
+      }
+      let items = [...tmp15];
+      cResult[6] = subscriptionListingsForGroup;
+      cResult[7] = tmp8;
+      cResult[8] = items;
+      const tmp7Result2 = closure_10(S);
+    }
+  : (arg0, arg1) => {
+      _require = arg1;
+      let obj = arg2;
+      if (arg2 === undefined) {
+        obj = { includeSoftDeleted: false };
+      }
+      let subscriptionListingsForGroup = require("GuildRoleSubscriptionsHooks").useSubscriptionListingsForGroup(
+        arg0,
+        obj,
+      );
+      const tmp2 = closure_10((arg0) => arg0.editStateIdsForGroup[closure_0]);
+      closure_2 = tmp2;
+      const tmp3 = closure_10((setEditStateIdsForGroup) => setEditStateIdsForGroup.setEditStateIdsForGroup);
+      dependencyMap = tmp3;
+      const tmp4 = closure_10((setListing) => setListing.setListing);
+      closure_4 = tmp4;
+      const obj3 = {
+        editStateIds: null,
+        addNewEditStateId: null,
+        addNewEditStateFromTemplate: null,
+        removeEditStateId: null,
+      };
+      let items = [tmp2, subscriptionListingsForGroup];
+      obj3.editStateIds = noop.useMemo(() => {
+        const items = [...subscriptionListingsForGroup.map((id) => id.id)];
+        let items1 = closure_2;
+        if (closure_2 == null) {
+          items1 = [];
+        }
+        HermesBuiltin.arraySpread(items1, tmp);
+        return items;
+      }, items);
+      let items1 = [arg1, tmp3];
+      obj3.addNewEditStateId = noop.useCallback(() => {
+        closure_0 = v1.v4();
+        dependencyMap(closure_0, (arg0) => {
+          let items = arg0;
+          if (arg0 == null) {
+            items = [];
+          }
+          const items1 = [];
+          items1[HermesBuiltin.arraySpread(items, 0)] = closure_0;
+          return items1;
+        });
+      }, items1);
+      const items2 = [arg1, tmp3, tmp4];
+      obj3.addNewEditStateFromTemplate = noop.useCallback((listings) => {
+        closure_0 = listings;
+        const v4Result = closure_0(1266).v4();
+        subscriptionListingsForGroup = v4Result;
+        dependencyMap(closure_0, (arg0) => {
+          let items = arg0;
+          if (arg0 == null) {
+            items = [];
+          }
+          const items1 = [];
+          items1[HermesBuiltin.arraySpread(items, 0)] = v4Result;
+          return items1;
+        });
+        listings = listings.listings;
+        const item = listings.forEach((item) => {
+          closure_1_4(closure_1, () => {
+            const obj = {
+              name: item.name,
+              description: item.description,
+              priceTier: item.price_tier,
+              image: item.image,
+              intangibleBenefits: item.additional_perks,
+              channelBenefits: null,
+              roleIcon: null,
+              roleColor: item.role_color,
+              usedTemplate: item.category,
+            };
+            const channels = item.channels;
+            obj.channelBenefits = channels.map((id) => ({
+              ref_id: id.id,
+              ref_type: constants.CHANNEL,
+              description: id.description,
+              name: id.name,
+              emoji_name: id.emoji_name,
+            }));
+            const obj2 = { unicodeEmoji: "Array", icon: item.image };
+            obj.roleIcon = obj2;
+            return obj;
+          });
+        });
+        return v4Result;
+      }, items2);
+      const items3 = [arg1, tmp3];
+      obj3.removeEditStateId = noop.useCallback((arg0) => {
+        closure_0 = arg0;
+        dependencyMap(closure_0, (arg0) => {
+          let items = arg0;
+          if (arg0 == null) {
+            items = [];
+          }
+          return items.filter((item) => item !== closure_1_0);
+        });
+      }, items3);
+      return obj3;
+    };

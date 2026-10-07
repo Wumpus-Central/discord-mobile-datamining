@@ -1,21 +1,17 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import XSmallIcon2 from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let onPress;
-
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_4 = createStyles.createStyles(() => {
-  const obj = { closeButton: size };
-  size = {
+  const obj = { closeButton: null };
+  const size = {
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
@@ -23,36 +19,40 @@ let closure_4 = createStyles.createStyles(() => {
     width: nativeDefault.space.PX_32,
     height: nativeDefault.space.PX_32,
   };
+  obj.closeButton = size;
   return obj;
 });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onPress) => {
-      let first;
-      let tmp7;
-      const obj = react2;
-      const cResult = obj.c(5);
+      const cResult = c.c(5);
       onPress = onPress.onPress;
       const tmp4 = closure_4();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = intl2.intl;
-        const stringResult = intl.string(intl2.t.cpT0Cq);
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.cpT0Cq);
         cResult[0] = stringResult;
-        first = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const XSmallIcon = XSmallIcon2.XSmallIcon;
-        const tmp10 = <XSmallIcon size="sm" color={nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT} />;
+        const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
+        const tmp10 = jsx(XSmallIcon.XSmallIcon, {
+          size: "sm",
+          color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+        });
         cResult[1] = tmp10;
-        tmp7 = tmp10;
+        let tmp7 = tmp10;
       } else {
         tmp7 = cResult[1];
       }
       if (cResult[2] === onPress) {
-        let tmp11;
         if (cResult[3] === tmp4.closeButton) {
-          tmp11 = cResult[4];
+          let tmp11 = cResult[4];
         }
         return tmp11;
       }
@@ -68,27 +68,39 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp4.closeButton;
       cResult[4] = tmp12;
       tmp11 = tmp12;
+      const obj3 = {
+        accessibilityLabel: first,
+        accessibilityRole: "button",
+        hitSlop: 12,
+        onPress,
+        style: tmp4.closeButton,
+        children: tmp7,
+      };
     }
   : (onPress) => {
-      onPress = onPress.onPress;
+      const obj = {
+        accessibilityLabel: null,
+        accessibilityRole: "button",
+        hitSlop: 12,
+        onPress: null,
+        style: null,
+        children: null,
+      };
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+      obj.onPress = onPress.onPress;
+      obj.style = closure_4().closeButton;
       const tmp = closure_4();
-      const PressableOpacity = Pressables.PressableOpacity;
-      const intl = intl2.intl;
-      ({ size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });
-      const XSmallIcon = XSmallIcon2.XSmallIcon;
-      return (
-        <PressableOpacity
-          accessibilityLabel={intl.string(intl2.t.cpT0Cq)}
-          accessibilityRole="button"
-          hitSlop={12}
-          onPress={onPress}
-          style={tmp.closeButton}
-        >
-          {null}
-        </PressableOpacity>
-      );
+      obj.children = jsx(XSmallIcon.XSmallIcon, {
+        size: "sm",
+        color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
+      });
+      return jsx(Pressables.PressableOpacity, {
+        accessibilityLabel: null,
+        accessibilityRole: "button",
+        hitSlop: 12,
+        onPress: null,
+        style: null,
+        children: null,
+      });
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
-
-export default tmp3;

@@ -1,9 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/ConnectionBanner.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../_runtime/metro/00683__.js";
-import Constants from "../../../Constants.tsx";
-import intl4 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
@@ -11,38 +10,25 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import _modDef6059 from "../../../../_runtime/metro/06059__.js";
-import ConnectivityIndicatorStateStore2 from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment.tsx";
-import ConnectionUnknownIcon2 from "../../../design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx";
-import ConnectionFineIcon2 from "../../../design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx";
-import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
-import YouBarConstants from "you_bar/YouBarConstants.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import ConnectionUnknownIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx";
+import ConnectionFineIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ConnectivityIndicatorStateStore from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 
-const require = globalThis.__r;
 const ReanimatedRexportDefault = ReanimatedRexport;
-const ConnectivityIndicatorStateStore = ConnectivityIndicatorStateStore2;
-let _require, dependencyMap, importDefault, set;
 
-let closure_12;
-let hasOwnProperty;
-let items;
-let map1;
-let metroRequire;
-let obj2;
-let rect;
-let _slicedToArray = _slicedToArray_mod;
-({ ActivityIndicator: hasOwnProperty, View: metroRequire } = react_native);
-const constants = ConnectivityIndicatorStateStore2.ConnectivityIndicatorState;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const constants = fn(13513).ConnectivityIndicatorState;
+const YouBarConstants = fn(14915);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
-const AnalyticEvents = Constants.AnalyticEvents;
-({ jsx: closure_12, jsxs: map1 } = Fragment);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const colors = ["transparent", "black", "black", "transparent"];
 const locations = [0, 0.25, 0.75, 1];
 const start = { x: 0, y: 0.5 };
@@ -50,15 +36,16 @@ const end = { x: 1, y: 0.5 };
 const locations2 = [0, 0.4, 0.75, 1];
 const start2 = { x: 0, y: 0 };
 const end2 = { x: 0, y: 1 };
-let obj = {
+const createStyles = fn(4896);
+let obj2 = {
   container: { position: "absolute", left: 0, right: 0, bottom: 0 },
   glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 },
   glowMaskGradient: { flex: 1 },
-  content: rect,
-  leadingSlot: { width: 16, height: 16, alignItems: "center", justifyContent: "center" },
-  spinner: obj2,
+  content: null,
+  leadingSlot: null,
+  spinner: null,
 };
-rect = {
+const rect = {
   position: "absolute",
   top: 0,
   left: 0,
@@ -70,86 +57,80 @@ rect = {
   gap: nativeDefault.space.PX_8,
   paddingHorizontal: nativeDefault.space.PX_12,
 };
-obj2 = { transform: items };
-items = [{ scale: 0.8 }];
-let closure_21 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+obj2.content = rect;
+obj2.leadingSlot = { width: 16, height: 16, alignItems: "center", justifyContent: "center" };
+let obj3 = { transform: null };
+let items = [{ scale: 0.8 }];
+obj3.transform = items;
+obj2.spinner = obj3;
+let closure_21 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
   ? (state) => {
-      const obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       state = state.state;
       const tmp4 = closure_21();
-      const obj2 = useToken;
-      const token = obj2.useToken(nativeDefault.colors.INTERACTIVE_ICON_DEFAULT);
+      const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_ICON_DEFAULT);
       if (constants.WAITING_FOR_NETWORK === state) {
         if (cResult[0] === token) {
-          let tmp24;
           if (cResult[1] === tmp4.spinner) {
-            tmp24 = cResult[2];
+            let tmp24 = cResult[2];
           }
           if (cResult[3] === tmp4.leadingSlot) {
-            let tmp28;
             if (cResult[4] === tmp24) {
-              tmp28 = cResult[5];
+              let tmp28 = cResult[5];
             }
             return tmp28;
           }
           const obj3 = { style: tmp4.leadingSlot, children: tmp24 };
-          const tmp31 = closure_12(metroRequire, obj3);
+          const tmp31 = __initData(timestampProducer, obj3);
           cResult[3] = tmp4.leadingSlot;
           cResult[4] = tmp24;
           cResult[5] = tmp31;
           tmp28 = tmp31;
         }
         const obj4 = { size: "small", color: token, style: tmp4.spinner };
-        const tmp27 = closure_12(hasOwnProperty, obj4);
+        const tmp27 = __initData(hasOwnProperty, obj4);
         cResult[0] = token;
         cResult[1] = tmp4.spinner;
         cResult[2] = tmp27;
         tmp24 = tmp27;
       } else if (constants.NO_CONNECTION === state) {
-        let tmp17;
-        let tmp20;
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj5 = { size: "xs", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-          const ConnectionUnknownIcon = ConnectionUnknownIcon2.ConnectionUnknownIcon;
-          const tmp19 = closure_12(ConnectionUnknownIcon, obj5);
+          const tmp19 = __initData(ConnectionUnknownIcon.ConnectionUnknownIcon, obj5);
           cResult[6] = tmp19;
-          tmp17 = tmp19;
+          let tmp17 = tmp19;
         } else {
           tmp17 = cResult[6];
         }
         if (cResult[7] !== tmp4.leadingSlot) {
           const obj6 = { style: tmp4.leadingSlot, children: tmp17 };
-          const tmp23 = closure_12(metroRequire, obj6);
+          const tmp23 = __initData(timestampProducer, obj6);
           cResult[7] = tmp4.leadingSlot;
           cResult[8] = tmp23;
-          tmp20 = tmp23;
+          let tmp20 = tmp23;
         } else {
           tmp20 = cResult[8];
         }
         return tmp20;
       } else if (constants.BACK_ONLINE === state) {
-        let tmp9;
-        let tmp12;
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const obj7 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-          const ConnectionFineIcon = ConnectionFineIcon2.ConnectionFineIcon;
-          const tmp11 = closure_12(ConnectionFineIcon, obj7);
+          const tmp11 = __initData(ConnectionFineIcon.ConnectionFineIcon, obj7);
           cResult[9] = tmp11;
-          tmp9 = tmp11;
+          let tmp9 = tmp11;
         } else {
           tmp9 = cResult[9];
         }
         if (cResult[10] !== tmp4.leadingSlot) {
           const obj8 = { style: tmp4.leadingSlot, children: tmp9 };
-          const tmp15 = closure_12(metroRequire, obj8);
+          const tmp15 = __initData(timestampProducer, obj8);
           cResult[10] = tmp4.leadingSlot;
           cResult[11] = tmp15;
-          tmp12 = tmp15;
+          let tmp12 = tmp15;
         } else {
           tmp12 = cResult[11];
         }
@@ -157,47 +138,38 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : (state) => {
-      let ConnectionFineIcon;
-      let ConnectionUnknownIcon;
-      let obj3;
-      let obj5;
-      let obj6;
       state = state.state;
       const tmp = closure_21();
       useToken;
       if (constants.WAITING_FOR_NETWORK === state) {
-        const obj2 = { style: tmp.leadingSlot, children: closure_12(hasOwnProperty, obj3) };
-        obj3 = { size: "small", color: tmp6, style: tmp.spinner };
-        return closure_12(metroRequire, obj2);
+        const obj2 = { style: tmp.leadingSlot, children: null };
+        const obj3 = { size: "small", color: tmp6, style: tmp.spinner };
+        obj2.children = __initData(hasOwnProperty, obj3);
+        return __initData(timestampProducer, obj2);
       } else if (constants.NO_CONNECTION === state) {
-        const obj4 = { style: tmp.leadingSlot, children: closure_12(ConnectionUnknownIcon, obj5) };
-        obj5 = { size: "xs", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-        ConnectionUnknownIcon = ConnectionUnknownIcon2.ConnectionUnknownIcon;
-        return closure_12(metroRequire, obj4);
+        const obj4 = { style: tmp.leadingSlot, children: null };
+        const obj5 = { size: "xs", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
+        obj4.children = __initData(ConnectionUnknownIcon.ConnectionUnknownIcon, obj5);
+        return __initData(timestampProducer, obj4);
       } else if (constants.BACK_ONLINE === state) {
-        const obj = { style: tmp.leadingSlot, children: closure_12(ConnectionFineIcon, obj6) };
-        obj6 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-        ConnectionFineIcon = ConnectionFineIcon2.ConnectionFineIcon;
-        return closure_12(metroRequire, obj);
+        const obj = { style: tmp.leadingSlot, children: null };
+        const obj6 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
+        obj.children = __initData(ConnectionFineIcon.ConnectionFineIcon, obj6);
+        return __initData(timestampProducer, obj);
       }
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
   ? (state) => {
-      let items;
-      let tmp10;
-      let tmp5;
-      const obj = react2;
-      const cResult = obj.c(11);
+      const cResult = c.c(11);
       state = state.state;
       const tmp4 = closure_21();
-      const content = tmp4.content;
       if (cResult[0] !== state) {
         const obj2 = { state };
-        const tmp8 = closure_12(closure_22, obj2);
+        const tmp8 = __initData(closure_22, obj2);
         cResult[0] = state;
         cResult[1] = tmp8;
-        tmp5 = tmp8;
+        let tmp5 = tmp8;
       } else {
         tmp5 = cResult[1];
       }
@@ -206,114 +178,100 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         str = "text-feedback-positive";
       }
       if (cResult[2] !== state) {
-        let stringResult;
         if (constants.WAITING_FOR_NETWORK === state) {
-          const intl2 = intl4.intl;
-          stringResult = intl2.string(intl4.t.XKk1gp);
-        } else if (constants.NO_CONNECTION === state) {
-          const intl = intl4.intl;
-          stringResult = intl.string(intl4.t.zPerw8);
-        } else if (constants.BACK_ONLINE === state) {
-          const intl3 = intl4.intl;
-          stringResult = intl3.string(intl4.t.j8lYE2);
-        }
-        cResult[2] = state;
-        cResult[3] = stringResult;
-        tmp10 = stringResult;
-      } else {
-        tmp10 = cResult[3];
-      }
-      if (cResult[4] === str) {
-        let tmp12;
-        if (cResult[5] === tmp10) {
-          tmp12 = cResult[6];
-        }
-        if (cResult[7] === tmp4.content) {
-          if (cResult[8] === tmp5) {
-            let tmp14;
-            if (cResult[9] === tmp12) {
-              tmp14 = cResult[10];
-            }
-            return tmp14;
+          const intl2 = util.intl;
+          let stringResult = intl2.string(util.t.XKk1gp);
+          cResult[2] = state;
+          cResult[3] = stringResult;
+        } else if (constants.NO_CONNECTION !== state) {
+          if (constants.BACK_ONLINE === state) {
+            const intl3 = util.intl;
+            stringResult = intl3.string(util.t.j8lYE2);
           }
         }
-        const obj3 = { style: content, children: items };
-        items = [tmp5, tmp12];
-        const tmp17 = map1(metroRequire, obj3);
-        cResult[7] = tmp4.content;
-        cResult[8] = tmp5;
-        cResult[9] = tmp12;
-        cResult[10] = tmp17;
-        tmp14 = tmp17;
+        const intl = util.intl;
+        stringResult = intl.string(util.t.zPerw8);
+      } else {
+        if (cResult[4] === str) {
+          if (cResult[5] === tmp10) {
+            let tmp13 = cResult[6];
+          }
+          if (cResult[7] === tmp4.content) {
+            if (cResult[8] === tmp5) {
+              if (cResult[9] === tmp13) {
+                let tmp16 = cResult[10];
+              }
+              return tmp16;
+            }
+          }
+          const obj3 = { style: tmp4.content, children: null };
+          const items = [tmp5, tmp13];
+          obj3.children = items;
+          const tmp19 = __initData2(timestampProducer, obj3);
+          cResult[7] = tmp4.content;
+          cResult[8] = tmp5;
+          cResult[9] = tmp13;
+          cResult[10] = tmp19;
+          tmp16 = tmp19;
+        }
+        const obj4 = { variant: "text-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: cResult[3] };
+        const tmp15 = __initData(Text_Text.Text, obj4);
+        cResult[4] = str;
+        cResult[5] = cResult[3];
+        cResult[6] = tmp15;
+        tmp13 = tmp15;
       }
-      const tmp13 = closure_12(Text_Text.Text, {
-        variant: "text-sm/medium",
-        color: str,
-        maxFontSizeMultiplier: 1.5,
-        children: tmp10,
-      });
-      cResult[4] = str;
-      cResult[5] = tmp10;
-      cResult[6] = tmp13;
-      tmp12 = tmp13;
     }
   : (state) => {
-      let items;
-      let stringResult;
       state = state.state;
-      const obj = { style: closure_21().content, children: items };
-      items = [closure_12(closure_22, { state })];
+      const obj = { style: closure_21().content, children: null };
+      const items = [__initData(closure_22, { state })];
       let str = "text-muted";
-      const Text = Text_Text.Text;
       if (state === constants.BACK_ONLINE) {
         str = "text-feedback-positive";
       }
-      const obj2 = { variant: "text-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: stringResult };
+      const obj2 = { variant: "text-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: null };
       if (constants.WAITING_FOR_NETWORK === state) {
-        const intl2 = intl4.intl;
-        stringResult = intl2.string(intl4.t.XKk1gp);
+        const intl2 = util.intl;
+        let stringResult = intl2.string(util.t.XKk1gp);
       } else if (constants.NO_CONNECTION === state) {
-        const intl = intl4.intl;
-        stringResult = intl.string(intl4.t.zPerw8);
+        const intl = util.intl;
+        stringResult = intl.string(util.t.zPerw8);
       } else if (constants.BACK_ONLINE === state) {
-        const intl3 = intl4.intl;
-        stringResult = intl3.string(intl4.t.j8lYE2);
+        const intl3 = util.intl;
+        stringResult = intl3.string(util.t.j8lYE2);
       }
-      items[1] = closure_12(Text, obj2);
-      return map1(metroRequire, obj);
+      obj2.children = stringResult;
+      items[1] = __initData(Text_Text.Text, obj2);
+      obj.children = items;
+      return __initData2(timestampProducer, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
   ? (progress) => {
-      let tmp6;
-      let tmp7;
-      let tmp8;
-      let tmp9;
-      const obj = react2;
-      const cResult = obj.c(27);
+      const cResult = c.c(27);
       progress = progress.progress;
       const tmp3 = closure_21();
-      const obj2 = useToken;
-      const token = obj2.useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+      const token = useToken.useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
       if (cResult[0] !== token) {
         const obj3 = _modDef683(token);
+        const cssResult = obj3.alpha(0).css();
         const alphaResult = obj3.alpha(0);
-        const cssResult = alphaResult.css();
+        const cssResult1 = obj3.alpha(0.1).css();
         const alphaResult1 = obj3.alpha(0.1);
-        const cssResult1 = alphaResult1.css();
+        const cssResult2 = obj3.alpha(0.28).css();
         const alphaResult2 = obj3.alpha(0.28);
-        const cssResult2 = alphaResult2.css();
-        const alphaResult3 = obj3.alpha(0.55);
-        const cssResult3 = alphaResult3.css();
+        const cssResult3 = obj3.alpha(0.55).css();
         cResult[0] = token;
         cResult[1] = cssResult;
         cResult[2] = cssResult1;
         cResult[3] = cssResult2;
         cResult[4] = cssResult3;
-        tmp9 = cssResult3;
-        tmp8 = cssResult2;
-        tmp7 = cssResult1;
-        tmp6 = cssResult;
+        let tmp9 = cssResult3;
+        let tmp8 = cssResult2;
+        let tmp7 = cssResult1;
+        let tmp6 = cssResult;
+        const alphaResult3 = obj3.alpha(0.55);
       } else {
         tmp6 = cResult[1];
         tmp7 = cResult[2];
@@ -323,54 +281,47 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] === tmp6) {
         if (cResult[6] === tmp7) {
           if (cResult[7] === tmp8) {
-            let tmp14;
-            let tmp15;
             if (cResult[8] === tmp9) {
-              tmp14 = cResult[9];
+              let tmp14 = cResult[9];
             }
             if (cResult[10] !== progress) {
               const obj4 = { opacity: progress };
               cResult[10] = progress;
               cResult[11] = obj4;
-              tmp15 = obj4;
+              let tmp15 = obj4;
             } else {
               tmp15 = cResult[11];
             }
             if (cResult[12] === tmp3.glow) {
-              let tmp16;
-              let tmp17;
               if (cResult[13] === tmp15) {
-                tmp16 = cResult[14];
+                let tmp16 = cResult[14];
               }
               if (cResult[15] !== tmp3.glowMaskGradient) {
                 const obj5 = { style: tmp3.glowMaskGradient, colors, locations, start, end };
-                const tmp23 = closure_12(LinearGradientDefault, obj5);
+                const tmp23 = __initData(LinearGradientDefault, obj5);
                 cResult[15] = tmp3.glowMaskGradient;
                 cResult[16] = tmp23;
-                tmp17 = tmp23;
+                let tmp17 = tmp23;
               } else {
                 tmp17 = cResult[16];
               }
               if (cResult[17] === tmp14) {
-                let tmp24;
                 if (cResult[18] === tmp3.glowMaskGradient) {
-                  tmp24 = cResult[19];
+                  let tmp24 = cResult[19];
                 }
                 if (cResult[20] === tmp3.glow) {
                   if (cResult[21] === tmp17) {
-                    let tmp30;
                     if (cResult[22] === tmp24) {
-                      tmp30 = cResult[23];
+                      let tmp30 = cResult[23];
                     }
                     if (cResult[24] === tmp30) {
-                      let tmp33;
                       if (cResult[25] === tmp16) {
-                        tmp33 = cResult[26];
+                        let tmp33 = cResult[26];
                       }
                       return tmp33;
                     }
                     const obj6 = { style: tmp16, pointerEvents: "none", children: tmp30 };
-                    const tmp35 = closure_12(ReanimatedRexportDefault.View, obj6);
+                    const tmp35 = __initData(ReanimatedRexportDefault.View, obj6);
                     cResult[24] = tmp30;
                     cResult[25] = tmp16;
                     cResult[26] = tmp35;
@@ -378,7 +329,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj7 = { style: tmp3.glow, maskElement: tmp17, children: tmp24 };
-                const tmp32 = closure_12(_modDef6059, obj7);
+                const tmp32 = __initData(_modDef6059, obj7);
                 cResult[20] = tmp3.glow;
                 cResult[21] = tmp17;
                 cResult[22] = tmp24;
@@ -392,7 +343,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 start: start2,
                 end: end2,
               };
-              const tmp29 = closure_12(LinearGradientDefault, obj8);
+              const tmp29 = __initData(LinearGradientDefault, obj8);
               cResult[17] = tmp14;
               cResult[18] = tmp3.glowMaskGradient;
               cResult[19] = tmp29;
@@ -414,56 +365,49 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = items1;
       tmp14 = items1;
     }
-  : (progress) => {
-      let items1;
-      let obj3;
-      let obj4;
-      let obj5;
-      let tmp4;
+  : (opacity) => {
       let token;
-      progress = progress.progress;
       const tmp = closure_21();
-      let obj = token(4586);
-      token = obj.useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
+      token = token(4586).useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
       let items = [token];
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         const obj = _modDef683(token);
-        const items = [, , ,];
+        const items = [obj.alpha(0).css(), , ,];
         const alphaResult = obj.alpha(0);
-        items[0] = alphaResult.css();
+        items[1] = obj.alpha(0.1).css();
         const alphaResult1 = obj.alpha(0.1);
-        items[1] = alphaResult1.css();
+        items[2] = obj.alpha(0.28).css();
         const alphaResult2 = obj.alpha(0.28);
-        items[2] = alphaResult2.css();
-        const alphaResult3 = obj.alpha(0.55);
-        items[3] = alphaResult3.css();
+        items[3] = obj.alpha(0.55).css();
         return items;
       }, items);
-      const obj2 = { style: items1, pointerEvents: "none", children: closure_12(tmp4, obj3) };
-      items1 = [tmp.glow, { opacity: progress }];
-      const View = ReanimatedRexportDefault.View;
-      obj3 = {
-        style: tmp.glow,
-        maskElement: closure_12(LinearGradientDefault, obj4),
-        children: closure_12(LinearGradientDefault, obj5),
-      };
-      obj4 = { style: tmp.glowMaskGradient, colors, locations, start, end };
-      obj5 = { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 };
-      tmp4 = _modDef6059;
-      return closure_12(View, obj2);
+      const obj2 = { style: null, pointerEvents: "none", children: null };
+      const items1 = [tmp.glow, { opacity: opacity.progress }];
+      obj2.style = items1;
+      const obj3 = { style: tmp.glow, maskElement: null, children: null };
+      let obj = token(4586);
+      obj3.maskElement = closure_12(LinearGradientDefault, {
+        style: tmp.glowMaskGradient,
+        colors,
+        locations,
+        start,
+        end,
+      });
+      obj3.children = closure_12(LinearGradientDefault, {
+        style: tmp.glowMaskGradient,
+        colors: memo,
+        locations: locations2,
+        start: start2,
+        end: end2,
+      });
+      obj2.children = closure_12(_modDef6059, obj3);
+      return closure_12(ReanimatedRexportDefault.View, obj2);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let ref;
-      let state;
-      let tmp4;
-      let tmp5;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(6);
-      const tmp = _require;
+      const cResult = require("c").c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectivityIndicatorStateStore];
         const fn = function s() {
@@ -476,41 +420,47 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      dependencyMap = react.useRef(null);
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+      dependencyMap = noop.useRef(null);
       if (cResult[2] === stateFromStores) {
-        let tmp8;
-        let tmp9;
         if (cResult[3] === arg0) {
-          tmp8 = cResult[4];
-          tmp9 = cResult[5];
+          let tmp8 = cResult[4];
+          let tmp9 = cResult[5];
         }
-        const effect = react.useEffect(tmp8, tmp9);
+        const effect = noop.useEffect(tmp8, tmp9);
       }
       class N {
         constructor() {
-          const current = ref.current;
-          ref.current = stateFromStores;
+          current = closure_2.current;
+          tmp = closure_1;
+          closure_2.current = closure_1;
           if (null != current) {
-            if (current === constants.HIDDEN) {
-              if (stateFromStores !== constants.HIDDEN) {
-                if (stateFromStores !== constants.BACK_ONLINE) {
-                  let str = "hidden";
+            tmp7 = closure_8;
+            if (current === closure_8.HIDDEN) {
+              if (tmp !== tmp7.HIDDEN) {
+                if (tmp !== tmp7.BACK_ONLINE) {
+                  tmp2 = closure_0;
+                  str = "hidden";
                   if (!closure_0) {
-                    let str2 = "connecting";
-                    if (stateFromStores === constants.NO_CONNECTION) {
+                    str2 = "connecting";
+                    if (tmp === tmp7.NO_CONNECTION) {
                       str2 = "offline";
                     }
                     str = str2;
                   }
-                  const obj2 = { connection_indicator_type: str };
-                  const obj = AnalyticsUtilsDefault;
-                  obj.track(AnalyticEvents.CONNECTION_INDICATOR_SHOWN, obj2);
+                  tmp3 = closure_1;
+                  tmp4 = closure_2;
+                  obj = closure_1(closure_2[21]);
+                  tmp5 = AnalyticEvents;
+                  obj1 = { connection_indicator_type: null };
+                  obj1.connection_indicator_type = str;
+                  trackResult = obj.track(AnalyticEvents.CONNECTION_INDICATOR_SHOWN, obj1);
                 }
               }
             }
           }
+          return;
         }
       }
       const items1 = [stateFromStores, arg0];
@@ -520,18 +470,15 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp9 = items1;
       tmp8 = N;
+      const tmpResult = require("initialize");
     }
   : (arg0) => {
-      let closure_0;
-      let ref;
-      let state;
       _require = arg0;
-      let obj = require("get initialized");
       const items = [ConnectivityIndicatorStateStore];
-      const stateFromStores = obj.useStateFromStores(items, () => state.getState());
-      dependencyMap = react.useRef(null);
+      const stateFromStores = require("initialize").useStateFromStores(items, () => state.getState());
+      dependencyMap = noop.useRef(null);
       const items1 = [stateFromStores, arg0];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         const current = ref.current;
         ref.current = stateFromStores;
         if (null != current) {
@@ -547,8 +494,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                   str = str2;
                 }
                 const obj2 = { connection_indicator_type: str };
-                const obj = AnalyticsUtilsDefault;
-                obj.track(AnalyticEvents.CONNECTION_INDICATOR_SHOWN, obj2);
+                AnalyticsUtilsDefault.track(AnalyticEvents.CONNECTION_INDICATOR_SHOWN, obj2);
               }
             }
           }
@@ -567,32 +513,18 @@ let closure_28 = {
 const __initData2 = {
   code: "function ConnectionBannerTsx4(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}",
 };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let closure_1;
-      let setRenderState;
-      let sharedValue;
-      let sharedValue1;
-      let shouldShowBanner;
-      let state;
-      let tmp16;
-      let tmp17;
-      let tmp6;
-      let tmp7;
-      let tmp = _require;
-      const tmp2 = sharedValue;
-      let obj = require("react");
-      const cResult = obj.c(25);
+      const cResult = require("c").c(25);
       const tmp4 = closure_21();
-      const obj2 = require("useYouBarMargins");
-      const youBarBottomMargin = obj2.useYouBarBottomMargin();
+      let obj = require("c");
+      const youBarBottomMargin = require("useYouBarMargins").useYouBarBottomMargin();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [ConnectivityIndicatorStateStore];
         let fn = function s() {
           return state.getState();
         };
-        let num = 0;
         cResult[0] = items;
         cResult[1] = fn;
         tmp6 = items;
@@ -600,50 +532,45 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const tmpResult = tmp(tmp2[20]);
-      const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
+      let obj2 = require("useYouBarMargins");
+      const stateFromStores = require("initialize").useStateFromStores(tmp6, tmp7);
       _require = tmp11;
       importDefault = tmp12;
       let tmp13 = null;
       if (stateFromStores !== constants.HIDDEN) {
         tmp13 = stateFromStores;
       }
-      const tmpResult4 = tmp(tmp2[19]);
-      sharedValue = tmpResult4.useSharedValue(0);
+      const tmpResult = require("initialize");
+      sharedValue = require("ReanimatedRexport").useSharedValue(0);
+      const tmpResult4 = require("ReanimatedRexport");
       [tmp16, tmp17] = sharedValue1.useState(tmp13);
-      _slicedToArray(sharedValue1.useState(tmp13), 2);
       _slicedToArray = tmp17;
-      const tmpResult5 = tmp(tmp2[19]);
-      sharedValue1 = tmpResult5.useSharedValue(0);
-      const tmp19 = null != tmp13 && tmp16 !== tmp13;
+      const tmp15 = _slicedToArray(sharedValue1.useState(tmp13), 2);
+      sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
       if (tmp19) {
         tmp17(tmp13);
       }
       if (cResult[2] === sharedValue1) {
-        let tmp21;
-        let tmp22;
-        if ((cResult[3] === stateFromStores) !== constants.HIDDEN) {
-          tmp21 = cResult[4];
-          tmp22 = cResult[5];
+        if (cResult[3] === tmp11) {
+          let tmp21 = cResult[4];
+          let tmp22 = cResult[5];
         }
         const effect = obj5.useEffect(tmp21, tmp22);
         if (cResult[6] === sharedValue) {
-          let tmp24;
-          let tmp25;
-          let tmp31;
-          if ((cResult[7] === stateFromStores) === constants.BACK_ONLINE) {
-            tmp24 = cResult[8];
-            tmp25 = cResult[9];
+          if (cResult[7] === tmp12) {
+            let tmp24 = cResult[8];
+            let tmp25 = cResult[9];
           }
           const effect1 = obj5.useEffect(tmp24, tmp25);
           const sum = youBarBottomMargin + CONNECTION_BANNER_HEIGHT;
-          const tmpResult6 = tmp(tmp2[19]);
           class L {
             constructor() {
-              let items;
-              const obj = { transform: items, opacity: sharedValue1.get() };
-              items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
-              ({ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT });
+              obj = { transform: null, opacity: null };
+              obj1 = { translateY: (1 - closure_4.get()) * CONNECTION_BANNER_HEIGHT };
+              items = [];
+              items[0] = obj1;
+              obj.transform = items;
+              obj.opacity = closure_4.get();
               return obj;
             }
           }
@@ -651,34 +578,33 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           L.__closure = obj3;
           L.__workletHash = 13973493587548;
           L.__initData = __initData;
-          const animatedStyle = tmpResult6.useAnimatedStyle(L);
+          const animatedStyle = tmp(tmp2[19]).useAnimatedStyle(L);
           if (cResult[10] !== sum) {
             const obj4 = { height: sum };
             cResult[10] = sum;
             class L {
               constructor() {
-                let items;
-                const obj = { transform: items, opacity: sharedValue1.get() };
-                items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
-                ({ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT });
+                obj = { transform: null, opacity: null };
+                obj1 = { translateY: (1 - closure_4.get()) * CONNECTION_BANNER_HEIGHT };
+                items = [];
+                items[0] = obj1;
+                obj.transform = items;
+                obj.opacity = closure_4.get();
                 return obj;
               }
             }
-            tmp31 = obj4;
+            let tmp31 = obj4;
           } else {
             tmp31 = cResult[11];
           }
           if (cResult[12] === animatedStyle) {
             if (cResult[13] === tmp4.container) {
-              let tmp32;
               if (cResult[14] === tmp31) {
-                tmp32 = cResult[15];
+                let tmp32 = cResult[15];
               }
               if (cResult[16] === sharedValue) {
-                let tmp33;
-                let tmp37;
                 if (cResult[17] === tmp16) {
-                  tmp33 = cResult[18];
+                  let tmp33 = cResult[18];
                 }
                 if (cResult[19] !== tmp16) {
                   let tmp38 = null;
@@ -689,32 +615,35 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[19] = tmp16;
                   class L {
                     constructor() {
-                      let items;
-                      const obj = { transform: items, opacity: sharedValue1.get() };
-                      items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
-                      ({ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT });
+                      obj = { transform: null, opacity: null };
+                      obj1 = { translateY: (1 - closure_4.get()) * CONNECTION_BANNER_HEIGHT };
+                      items = [];
+                      items[0] = obj1;
+                      obj.transform = items;
+                      obj.opacity = closure_4.get();
                       return obj;
                     }
                   }
-                  tmp37 = tmp38;
+                  let tmp37 = tmp38;
                 } else {
                   tmp37 = cResult[20];
                 }
                 if (cResult[21] === tmp32) {
                   if (cResult[22] === tmp33) {
-                    let tmp41;
                     if (cResult[23] === tmp37) {
-                      tmp41 = cResult[24];
+                      let tmp41 = cResult[24];
                     }
                     return tmp41;
                   }
                 }
                 class L {
                   constructor() {
-                    let items;
-                    const obj = { transform: items, opacity: sharedValue1.get() };
-                    items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
-                    ({ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT });
+                    obj = { transform: null, opacity: null };
+                    obj1 = { translateY: (1 - closure_4.get()) * CONNECTION_BANNER_HEIGHT };
+                    items = [];
+                    items[0] = obj1;
+                    obj.transform = items;
+                    obj.opacity = closure_4.get();
                     return obj;
                   }
                 }
@@ -735,10 +664,12 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               }
               class L {
                 constructor() {
-                  let items;
-                  const obj = { transform: items, opacity: sharedValue1.get() };
-                  items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
-                  ({ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT });
+                  obj = { transform: null, opacity: null };
+                  obj1 = { translateY: (1 - closure_4.get()) * CONNECTION_BANNER_HEIGHT };
+                  items = [];
+                  items[0] = obj1;
+                  obj.transform = items;
+                  obj.opacity = closure_4.get();
                   return obj;
                 }
               }
@@ -753,20 +684,18 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp31;
           cResult[15] = items2;
           tmp32 = items2;
+          const tmpResult6 = tmp(tmp2[19]);
         }
         const fn3 = function f() {
           let num = 0;
-          set = sharedValue.set;
-          const withSpring = spring.withSpring;
-          spring;
           if (closure_1) {
             num = 1;
           }
-          const result = set(withSpring(num, YOU_BAR_SPRING_CONFIG));
+          const result = sharedValue.set(spring.withSpring(num, YOU_BAR_SPRING_CONFIG));
         };
         const items3 = [, sharedValue];
         cResult[6] = sharedValue;
-        cResult[7] = stateFromStores === constants.BACK_ONLINE;
+        cResult[7] = tmp12;
         cResult[8] = fn3;
         cResult[9] = items3;
         tmp25 = items3;
@@ -774,24 +703,22 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn2 = function h() {
         let num = 0;
-        set = sharedValue1.set;
-        const withSpring = spring.withSpring;
-        spring;
         if (shouldShowBanner) {
           num = 1;
         }
         const fn = function t(arg0) {
-          const tmp = true !== arg0 || closure_1_0;
           if (!tmp) {
+            closure_0(sharedValue[19]).runOnJS(setRenderState)(null);
             const obj = closure_0(sharedValue[19]);
-            obj.runOnJS(setRenderState)(null);
           }
+          tmp = true !== arg0 || shouldShowBanner;
         };
-        let obj = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState: _slicedToArray };
-        fn.__closure = obj;
+        let obj = spring;
+        fn.__closure = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
         fn.__workletHash = 3065113239920;
         fn.__initData = __initData;
-        const result = set(withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
+        const result = sharedValue1.set(obj.withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
+        const obj2 = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
       };
       const items4 = [stateFromStores !== constants.HIDDEN, sharedValue1];
       cResult[2] = sharedValue1;
@@ -800,156 +727,130 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items4;
       tmp22 = items4;
       tmp21 = fn2;
+      tmp19 = null != tmp13 && tmp16 !== tmp13;
+      const tmpResult5 = require("ReanimatedRexport");
     }
   : () => {
-      let closure_1;
-      let items3;
-      let items4;
-      let setRenderState;
-      let sharedValue;
-      let sharedValue1;
-      let shouldShowBanner;
-      let state;
-      let tmp12;
-      let tmp13;
-      const tmp2 = _require;
       let tmp = closure_21();
+      const youBarBottomMargin = require("useYouBarMargins").useYouBarBottomMargin();
       let obj = require("useYouBarMargins");
-      const youBarBottomMargin = obj.useYouBarBottomMargin();
-      const obj2 = require("get initialized");
       let items = [ConnectivityIndicatorStateStore];
-      const stateFromStores = obj2.useStateFromStores(items, () => state.getState());
+      const stateFromStores = require("initialize").useStateFromStores(items, () => state.getState());
       _require = tmp7;
       importDefault = tmp8;
       let tmp9 = null;
       if (stateFromStores !== constants.HIDDEN) {
         tmp9 = stateFromStores;
       }
-      const tmp2Result = tmp2(sharedValue[19]);
-      sharedValue = tmp2Result.useSharedValue(0);
+      let obj2 = require("initialize");
+      sharedValue = require("ReanimatedRexport").useSharedValue(0);
+      const tmp2Result = require("ReanimatedRexport");
       [tmp12, tmp13] = sharedValue1.useState(tmp9);
-      _slicedToArray(sharedValue1.useState(tmp9), 2);
       _slicedToArray = tmp13;
-      const tmp2Result3 = tmp2(sharedValue[19]);
-      sharedValue1 = tmp2Result3.useSharedValue(0);
-      const tmp15 = null != tmp9 && tmp12 !== tmp9;
+      const tmp11 = _slicedToArray(sharedValue1.useState(tmp9), 2);
+      sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
       if (tmp15) {
         tmp13(tmp9);
       }
       const items1 = [stateFromStores !== constants.HIDDEN, sharedValue1];
       const effect = obj4.useEffect(() => {
         let num = 0;
-        set = sharedValue1.set;
-        const withSpring = spring.withSpring;
-        spring;
         if (shouldShowBanner) {
           num = 1;
         }
         const fn = function t(arg0) {
-          const tmp = true !== arg0 || closure_1_0;
           if (!tmp) {
+            closure_0(sharedValue[19]).runOnJS(setRenderState)(null);
             const obj = closure_0(sharedValue[19]);
-            obj.runOnJS(setRenderState)(null);
           }
+          tmp = true !== arg0 || shouldShowBanner;
         };
-        let obj = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState: _slicedToArray };
-        fn.__closure = obj;
+        let obj = spring;
+        fn.__closure = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
         fn.__workletHash = 14365072236530;
         fn.__initData = __initData;
-        const result = set(withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
+        const result = sharedValue1.set(obj.withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
+        const obj2 = { shouldShowBanner, runOnJS: ReanimatedRexport.runOnJS, setRenderState };
       }, items1);
       const items2 = [stateFromStores === constants.BACK_ONLINE, sharedValue];
       const effect1 = obj4.useEffect(() => {
         let num = 0;
-        set = sharedValue.set;
-        const withSpring = spring.withSpring;
-        spring;
         if (closure_1) {
           num = 1;
         }
-        const result = set(withSpring(num, YOU_BAR_SPRING_CONFIG));
+        const result = sharedValue.set(spring.withSpring(num, YOU_BAR_SPRING_CONFIG));
       }, items2);
+      tmp15 = null != tmp9 && tmp12 !== tmp9;
+      const tmp2Result3 = require("ReanimatedRexport");
       let fn = function w() {
-        let items;
-        const obj = { transform: items, opacity: sharedValue1.get() };
-        items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
-        ({ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT });
+        const obj = { transform: null, opacity: null };
+        const items = [{ translateY: (1 - sharedValue1.get()) * CONNECTION_BANNER_HEIGHT }];
+        obj.transform = items;
+        obj.opacity = sharedValue1.get();
         return obj;
       };
-      const obj3 = { progress: sharedValue1, CONNECTION_BANNER_HEIGHT };
-      fn.__closure = obj3;
+      fn.__closure = { progress: sharedValue1, CONNECTION_BANNER_HEIGHT };
       fn.__workletHash = 4433680948698;
       fn.__initData = __initData2;
-      const tmp2Result4 = tmp2(sharedValue[19]);
-      const animatedStyle = tmp2Result4.useAnimatedStyle(fn);
-      const obj5 = { pointerEvents: "none", style: items3, children: items4 };
-      items3 = [tmp.container, { height: youBarBottomMargin + CONNECTION_BANNER_HEIGHT }, animatedStyle];
+      const animatedStyle = require("ReanimatedRexport").useAnimatedStyle(fn);
+      const obj5 = { pointerEvents: "none", style: null, children: null };
+      const items3 = [tmp.container, { height: youBarBottomMargin + CONNECTION_BANNER_HEIGHT }, animatedStyle];
+      obj5.style = items3;
       let tmp21 = null;
-      const View = require("ReanimatedRexport").View;
       if (tmp12 === constants.BACK_ONLINE) {
         const obj6 = { progress: sharedValue };
         tmp21 = closure_12(closure_24, obj6);
       }
-      items4 = [tmp21];
+      const items4 = [tmp21];
       let tmp24 = null;
       if (null != tmp12) {
         const obj7 = { state: tmp12 };
         tmp24 = closure_12(closure_23, obj7);
       }
       items4[1] = tmp24;
-      return closure_13(View, obj5);
+      obj5.children = items4;
+      return closure_13(require("ReanimatedRexport").View, obj5);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      const obj = react2;
-      const cResult = obj.c(2);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { location: "ConnectionBanner" };
         cResult[0] = obj2;
-        first = obj2;
+        let first = obj2;
       } else {
         first = cResult[0];
       }
-      const obj3 = ConnectionIndicatorExperimentDefault;
-      const config = obj3.useConfig(first);
+      const config = ConnectionIndicatorExperimentDefault.useConfig(first);
       const hidden = config.hidden;
-      const timeoutMs = config.timeoutMs;
       closure_25(hidden);
       let tmp6 = null;
-      if (null != timeoutMs) {
+      if (null != config.timeoutMs) {
         tmp6 = null;
         if (!hidden) {
-          let tmp7;
           const _Symbol = Symbol;
           if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp10 = closure_12(closure_30, {});
+            const tmp10 = __initData(closure_30, {});
             cResult[1] = tmp10;
-            tmp7 = tmp10;
-          } else {
-            tmp7 = cResult[1];
           }
-          tmp6 = tmp7;
         }
       }
       return tmp6;
     }
   : () => {
-      const obj = ConnectionIndicatorExperimentDefault;
-      const config = obj.useConfig({ location: "ConnectionBanner" });
+      const config = ConnectionIndicatorExperimentDefault.useConfig({ location: "ConnectionBanner" });
       const hidden = config.hidden;
-      const timeoutMs = config.timeoutMs;
       closure_25(hidden);
       let tmp3 = null;
-      if (null != timeoutMs) {
+      if (null != config.timeoutMs) {
         tmp3 = null;
         if (!hidden) {
-          tmp3 = closure_12(closure_30, {});
+          tmp3 = __initData(closure_30, {});
         }
       }
       return tmp3;
     };
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
-
-export default tmp5;

@@ -1,27 +1,22 @@
 // discord_app/modules/media_channel/useShouldHideMediaOptions.tsx
-import ChannelConstants from "../channel/ChannelConstants.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const ChannelFlags = ChannelConstants.ChannelFlags;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const ChannelFlags = fn(2058).ChannelFlags;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp6;
-      let tmp7;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(5);
-      const tmp = _require;
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -37,23 +32,22 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             channel1 = null;
             if (channel.isForumPost()) {
               let parent_id1;
-              const getChannel = ChannelStore.getChannel;
               if (channel != null) {
                 parent_id1 = channel.parent_id;
               }
-              channel1 = getChannel(parent_id1);
+              channel1 = ChannelStore.getChannel(parent_id1);
             }
           }
           return channel1;
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp6 = fn;
+        let tmp6 = fn;
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(573);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      const obj = require("c");
+      const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
       if (cResult[3] !== stateFromStores) {
         let hasFlagResult;
         if (stateFromStores != null) {
@@ -61,18 +55,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[3] = stateFromStores;
         cResult[4] = hasFlagResult;
-        tmp7 = hasFlagResult;
+        let tmp7 = hasFlagResult;
       } else {
         tmp7 = cResult[4];
       }
       return true === tmp7;
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
       const items = [ChannelStore];
-      const obj = require("useStateFromStores");
-      const stateFromStores = obj.useStateFromStores(items, () => {
+      const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
         const channel = ChannelStore.getChannel(closure_0);
         let parent_id;
         if (channel != null) {
@@ -83,11 +75,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           channel1 = null;
           if (channel.isForumPost()) {
             let parent_id1;
-            const getChannel = ChannelStore.getChannel;
             if (channel != null) {
               parent_id1 = channel.parent_id;
             }
-            channel1 = getChannel(parent_id1);
+            channel1 = ChannelStore.getChannel(parent_id1);
           }
         }
         return channel1;
@@ -98,6 +89,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return true === hasFlagResult;
     };
-const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
-
-export default tmp2;

@@ -3,38 +3,52 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
   UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64, 68]),
-  GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
-  USER_MESSAGE: new Set([0, 19, 20, 23, 26, 41, 45, 47, 68]),
-  NOTIFIABLE_SYSTEM_MESSAGE: new Set([7, 22, 35, 46, 64]),
-  REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]),
-  FORWARDABLE: new Set([0, 19, 20, 23, 35]),
-  REFERENCED_MESSAGE_AVAILABLE: new Set([19, 21, 23]),
-  AVAILABLE_IN_GUILD_FEED: new Set([0, 19]),
-  DEADCHAT_PROMPTS: new Set([40, 42]),
-  NON_COLLAPSIBLE: new Set([24]),
-  NON_PARSED: new Set([4, 12, 18, 27, 28, 31]),
-  NON_REPORTABLE: new Set([67]),
-  AUTOMOD_INCIDENT_ACTIONS: new Set([36, 37, 38, 39]),
-  SELF_MENTIONABLE_SYSTEM: new Set([46]),
-  SCHEDULABLE: new Set([0, 19]),
-  SILENTLY_CREATABLE: new Set([67]),
+  GUILD_DISCOVERY_STATUS: null,
+  USER_MESSAGE: null,
+  NOTIFIABLE_SYSTEM_MESSAGE: null,
+  REPLYABLE: null,
+  FORWARDABLE: null,
+  REFERENCED_MESSAGE_AVAILABLE: null,
+  AVAILABLE_IN_GUILD_FEED: null,
+  DEADCHAT_PROMPTS: null,
+  NON_COLLAPSIBLE: null,
+  NON_PARSED: null,
+  NON_REPORTABLE: null,
+  AUTOMOD_INCIDENT_ACTIONS: null,
+  SELF_MENTIONABLE_SYSTEM: null,
+  SCHEDULABLE: null,
+  SILENTLY_CREATABLE: null,
 };
-new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64, 68]);
-new Set([14, 15, 16, 17]);
-new Set([0, 19, 20, 23, 26, 41, 45, 47, 68]);
-new Set([7, 22, 35, 46, 64]);
-new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]);
-new Set([0, 19, 20, 23, 35]);
-new Set([19, 21, 23]);
-new Set([0, 19]);
-new Set([40, 42]);
-new Set([24]);
-new Set([4, 12, 18, 27, 28, 31]);
-new Set([67]);
-new Set([36, 37, 38, 39]);
-new Set([46]);
-new Set([0, 19]);
-new Set([67]);
+const set = new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64, 68]);
+obj.GUILD_DISCOVERY_STATUS = new Set([14, 15, 16, 17]);
+const set1 = new Set([14, 15, 16, 17]);
+obj.USER_MESSAGE = new Set([0, 19, 20, 23, 26, 41, 45, 47, 68]);
+const set2 = new Set([0, 19, 20, 23, 26, 41, 45, 47, 68]);
+obj.NOTIFIABLE_SYSTEM_MESSAGE = new Set([7, 22, 35, 46, 64]);
+const set3 = new Set([7, 22, 35, 46, 64]);
+obj.REPLYABLE = new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]);
+const set4 = new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]);
+obj.FORWARDABLE = new Set([0, 19, 20, 23, 35]);
+const set5 = new Set([0, 19, 20, 23, 35]);
+obj.REFERENCED_MESSAGE_AVAILABLE = new Set([19, 21, 23]);
+const set6 = new Set([19, 21, 23]);
+obj.AVAILABLE_IN_GUILD_FEED = new Set([0, 19]);
+const set7 = new Set([0, 19]);
+obj.DEADCHAT_PROMPTS = new Set([40, 42]);
+const set8 = new Set([40, 42]);
+obj.NON_COLLAPSIBLE = new Set([24]);
+const set9 = new Set([24]);
+obj.NON_PARSED = new Set([4, 12, 18, 27, 28, 31]);
+const set10 = new Set([4, 12, 18, 27, 28, 31]);
+obj.NON_REPORTABLE = new Set([67]);
+const set11 = new Set([67]);
+obj.AUTOMOD_INCIDENT_ACTIONS = new Set([36, 37, 38, 39]);
+const set12 = new Set([36, 37, 38, 39]);
+obj.SELF_MENTIONABLE_SYSTEM = new Set([46]);
+const set13 = new Set([46]);
+obj.SCHEDULABLE = new Set([0, 19]);
+const set14 = new Set([0, 19]);
+obj.SILENTLY_CREATABLE = new Set([67]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MessageTypes.tsx");
 
 export const MessageTypes = {

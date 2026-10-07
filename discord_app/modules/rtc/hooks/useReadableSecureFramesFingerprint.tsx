@@ -1,31 +1,27 @@
 // discord_app/modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx
 import byteLengthDefault from "../../../../_runtime/00206_byteLength.js";
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import _mod9363 from "../../../../discord_common/js/packages/libdave/index.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function (arg0) {
-      let chunkSize;
-      let desiredLength;
-      let fingerprintBase64;
-      const obj = react2;
-      const cResult = obj.c(4);
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx");
+
+export const useReadableSecureFramesFingerprint = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(4);
       ({ fingerprintBase64, chunkSize, desiredLength } = arg0);
       if (cResult[0] === chunkSize) {
         if (cResult[1] === desiredLength) {
-          let tmp4;
           if (cResult[2] === fingerprintBase64) {
-            tmp4 = cResult[3];
+            let tmp4 = cResult[3];
           }
           if (null != fingerprintBase64) {
             if ("" !== fingerprintBase64) {
               if (null == tmp4) {
                 const _Error = Error;
-                const self3 = this;
-                const self4 = this;
                 const error = new Error("[useReadableSecureFramesCode] Failed to parse base 64 code.");
                 throw error;
               }
@@ -38,16 +34,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != fingerprintBase64) {
         tmp5 = null;
         if ("" !== fingerprintBase64) {
-          const obj2 = byteLengthDefault;
-          const toByteArrayResult = obj2.toByteArray(fingerprintBase64);
-          const tmpResult = _mod9363;
-          const str7 = tmpResult.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+          const toByteArrayResult = byteLengthDefault.toByteArray(fingerprintBase64);
+          const str7 = _mod9363.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
           tmp5 = null;
           if (null != str7) {
             const _RegExp = RegExp;
             const _HermesInternal = HermesInternal;
-            const self = this;
-            const self2 = this;
             const regExp = new RegExp(".{1," + chunkSize + "}", "g");
             const match = str7.match(regExp);
             let arr = null;
@@ -57,6 +49,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp5 = arr;
           }
+          const tmpResult = _mod9363;
         }
       }
       cResult[0] = chunkSize;
@@ -65,25 +58,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       tmp4 = tmp5;
     }
-  : function (fingerprintBase64) {
+  : (fingerprintBase64) => {
       fingerprintBase64 = fingerprintBase64.fingerprintBase64;
       const chunkSize = fingerprintBase64.chunkSize;
       const desiredLength = fingerprintBase64.desiredLength;
       const items = [chunkSize, fingerprintBase64, desiredLength];
-      const memo = react.useMemo(function () {
+      const memo = noop.useMemo(() => {
         if (null != fingerprintBase64) {
           if ("" !== fingerprintBase64) {
-            const obj = byteLengthDefault;
-            const toByteArrayResult = obj.toByteArray(fingerprintBase64);
-            const obj2 = _mod9363;
-            const str5 = obj2.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+            const toByteArrayResult = byteLengthDefault.toByteArray(fingerprintBase64);
+            const str5 = _mod9363.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
             if (null == str5) {
               return null;
             } else {
               const _RegExp = RegExp;
               const _HermesInternal = HermesInternal;
-              const self = this;
-              const self2 = this;
               const regExp = new RegExp(".{1," + chunkSize + "}", "g");
               const match = str5.match(regExp);
               let arr = null;
@@ -101,8 +90,6 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if ("" !== fingerprintBase64) {
           if (null == memo) {
             const _Error = Error;
-            let self = this;
-            let self2 = this;
             const error = new Error("[useReadableSecureFramesCode] Failed to parse base 64 code.");
             throw error;
           }
@@ -110,6 +97,3 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return memo;
     };
-const result = size.fileFinishedImporting("modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx");
-
-export const useReadableSecureFramesFingerprint = tmp2;

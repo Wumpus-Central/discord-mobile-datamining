@@ -20,10 +20,13 @@ export const isHeicFile = function isHeicFile(type) {
     const lastIndexOfResult = str.lastIndexOf(".");
     let formatted = null;
     if (lastIndexOfResult >= 0) {
+      formatted = str.slice(lastIndexOfResult).toLowerCase();
       const str3 = str.slice(lastIndexOfResult);
-      formatted = str3.toLowerCase();
     }
-    const hasItem = null != formatted && set1.has(formatted);
+    let hasItem = null != formatted;
+    if (hasItem) {
+      hasItem = set1.has(formatted);
+    }
     return hasItem;
   }
 };
@@ -38,18 +41,20 @@ export const isJxrFile = function isJxrFile(file) {
     const lastIndexOfResult = str.lastIndexOf(".");
     let formatted = null;
     if (lastIndexOfResult >= 0) {
+      formatted = str.slice(lastIndexOfResult).toLowerCase();
       const str3 = str.slice(lastIndexOfResult);
-      formatted = str3.toLowerCase();
     }
-    const hasItem = null != formatted && set3.has(formatted);
+    let hasItem = null != formatted;
+    if (hasItem) {
+      hasItem = set3.has(formatted);
+    }
     return hasItem;
   }
 };
 export const heicMimeType = function heicMimeType(file) {
-  let str3;
   let str = "";
   if ("" !== file.type) {
-    str3 = file.type;
+    let str3 = file.type;
   } else {
     if (typeof file.name === "string") {
       str = file.name;
@@ -70,9 +75,8 @@ export const jxrMimeType = function jxrMimeType(file) {
   return str;
 };
 export const renameToJpegExtension = function renameToJpegExtension(name) {
-  let replaced;
   if (re2.test(name)) {
-    replaced = name.replace(re2, ".jpg");
+    let replaced = name.replace(re2, ".jpg");
   } else if (re5.test(name)) {
     replaced = name.replace(re5, ".jpg");
   } else {

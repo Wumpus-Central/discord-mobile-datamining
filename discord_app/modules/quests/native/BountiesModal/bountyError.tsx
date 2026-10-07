@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/bountyError.tsx
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04813_AssetRegistry.js";
+import _modDef4813 from "../../../../../_runtime/metro/04813__.js";
 import BountiesModalConstants from "BountiesModalConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,30 +11,23 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/b
 
 export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErrorToast(code) {
   code = undefined;
-  const open = ToastActionCreatorsDefault.open;
-  ToastActionCreatorsDefault;
   if (code != null) {
     code = code.code;
   }
   if (null != code) {
     if (set.has(code.code)) {
-      let message;
       let message1;
       if (code != null) {
         message1 = code.message;
       }
       if (null != message1) {
-        message = code.message;
+        let message = code.message;
       }
-      const obj = {
-        key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED",
-        content: message,
-        icon: AssetRegistryDefault,
-        toastDurationMs,
-      };
-      open(obj);
+      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef4813, toastDurationMs };
+      obj.open(obj2);
     }
   }
-  const intl = intl2.intl;
-  message = intl.string(intl2.t.uLjCfn);
+  const intl = util.intl;
+  message = intl.string(util.t.uLjCfn);
+  obj = ToastActionCreatorsDefault;
 };

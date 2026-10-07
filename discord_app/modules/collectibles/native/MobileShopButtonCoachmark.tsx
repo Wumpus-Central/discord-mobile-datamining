@@ -1,50 +1,40 @@
 // discord_app/modules/collectibles/native/MobileShopButtonCoachmark.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import intl2 from "../../../intl/index.native.tsx";
-import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
-import react_mod from "../../../../_runtime/00019_react.js";
-import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import util from "../../../intl/index.native.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let size;
-let react = react_mod;
-const Image = react_native.Image;
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const jsx = Fragment.jsx;
-let obj = { image: size };
-size = { height: 80, width: 80, marginTop: nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_16 };
-let closure_6 = createStyles.createStyles(obj);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const Image = fn(17).Image;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+const obj2 = { image: null };
+let size = { height: 80, width: 80, marginTop: nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_16 };
+obj2.image = size;
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let image;
-      let marketing;
-      let navigateToShop;
-      let onDismiss;
-      let stringResult;
-      let visible;
-      const obj = navigateToShop(onDismiss[7]);
-      const cResult = obj.c(22);
+      const cResult = navigateToShop(onDismiss[7]).c(22);
       ({ marketing, navigateToShop } = arg0);
       ({ visible, onDismiss } = arg0);
       const tmp4 = closure_6();
-      react = tmp4;
+      noop = tmp4;
       const assetLight = marketing.assetLight;
-      const obj2 = react;
-      let closure_4 = react.useRef(false);
+      closure_4 = noop.useRef(false);
       if (cResult[0] === navigateToShop) {
-        let tmp5;
-        let tmp11;
         if (cResult[1] === onDismiss) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         if (cResult[3] !== onDismiss) {
           class C {
             constructor() {
               closure_4.current = true;
-              onDismiss(ContentDismissActionType.USER_DISMISS);
+              tmp = onDismiss(ContentDismissActionType.USER_DISMISS);
+              return;
             }
           }
           cResult[3] = onDismiss;
@@ -53,15 +43,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           class C {
             constructor() {
               closure_4.current = true;
-              onDismiss(ContentDismissActionType.USER_DISMISS);
+              tmp = onDismiss(ContentDismissActionType.USER_DISMISS);
+              return;
             }
           }
         }
-        let closure_5 = obj2.useRef(onDismiss);
+        closure_5 = obj2.useRef(onDismiss);
         if (cResult[5] !== onDismiss) {
           class D {
             constructor() {
               closure_5.current = onDismiss;
+              return;
             }
           }
           cResult[5] = onDismiss;
@@ -70,6 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           class D {
             constructor() {
               closure_5.current = onDismiss;
+              return;
             }
           }
         }
@@ -88,7 +81,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [];
           cResult[7] = E;
           cResult[8] = items;
-          tmp11 = items;
+          let tmp11 = items;
         } else {
           class E {
             constructor() {
@@ -161,18 +154,26 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = {
             title: null,
             description: null,
-            visible,
+            visible: null,
             position: "top",
-            renderImgComponent: R,
-            buttonLabel: tmp14,
+            renderImgComponent: null,
+            buttonLabel: null,
             buttonVariant: "secondary",
-            onButtonPress: tmp5,
-            onDismiss: C,
+            onButtonPress: null,
+            onDismiss: null,
           };
           ({ title: obj4.title, body: obj4.description } = marketing);
+          obj5.visible = visible;
+          obj5.renderImgComponent = R;
+          obj5.buttonLabel = tmp14;
+          obj5.onButtonPress = tmp5;
+          obj5.onDismiss = C;
           class R {
             constructor() {
-              return <Image style={image.image} source={{ uri: assetLight }} />;
+              obj = { style: closure_2.image, source: null };
+              obj1 = { uri: assetLight };
+              obj.source = obj1;
+              return jsx(Image, obj);
             }
           }
           cResult[15] = C;
@@ -185,7 +186,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         class R {
           constructor() {
-            return <Image style={image.image} source={{ uri: assetLight }} />;
+            obj = { style: closure_2.image, source: null };
+            obj1 = { uri: assetLight };
+            obj.source = obj1;
+            return jsx(Image, obj);
           }
         }
         cResult[9] = assetLight;
@@ -201,6 +205,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = onDismiss;
       cResult[2] = fn;
       tmp5 = fn;
+      let obj = navigateToShop(onDismiss[7]);
     }
   : (marketing) => {
       marketing = marketing.marketing;
@@ -208,9 +213,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const visible = marketing.visible;
       const onDismiss = marketing.onDismiss;
       closure_6 = undefined;
-      const shopButtonRef = marketing.shopButtonRef;
       const tmp = closure_6();
-      let closure_4 = tmp;
+      closure_4 = tmp;
       const assetLight = marketing.assetLight;
       closure_6 = visible.useRef(false);
       const items = [onDismiss, navigateToShop];
@@ -224,19 +228,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         closure_6.current = true;
         onDismiss(ContentDismissActionType.USER_DISMISS);
       }, items1);
-      let closure_9 = visible.useRef(onDismiss);
+      closure_9 = visible.useRef(onDismiss);
       const effect = visible.useEffect(() => {
         closure_9.current = onDismiss;
       });
-      const effect1 = visible.useEffect(() => {
-        let ref;
-        let ref2;
-        return () => {
+      const effect1 = visible.useEffect(
+        () => () => {
           if (!ref.current) {
             ref2.current(constants.AUTO_DISMISS);
           }
-        };
-      }, []);
+        },
+        [],
+      );
       const items2 = [, , , , , , ,];
       ({ title: arr3[0], body: arr3[1], buttonLabel: arr3[2] } = marketing);
       items2[3] = visible;
@@ -245,37 +248,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       items2[6] = onButtonPress;
       items2[7] = callback1;
       const memo = visible.useMemo(() => {
-        let buttonLabel;
-        let image;
-        let uri;
         let obj = {
           title: marketing.title,
           description: marketing.body,
           visible,
           position: "top",
           renderImgComponent() {
-            let obj2;
-            const obj = { style: image.image, source: obj2 };
-            obj2 = { uri };
+            const obj = { style: image.image, source: { uri } };
             return assetLight(onDismiss, obj);
           },
-          buttonLabel,
+          buttonLabel: null,
           buttonVariant: "secondary",
-          onButtonPress,
-          onDismiss: callback1,
+          onButtonPress: null,
+          onDismiss: null,
         };
-        buttonLabel = marketing.buttonLabel;
+        let buttonLabel = marketing.buttonLabel;
         if (buttonLabel == null) {
-          const intl = intl2.intl;
-          buttonLabel = intl.string(intl2.t.fYfGgK);
+          const intl = util.intl;
+          buttonLabel = intl.string(util.t.fYfGgK);
         }
+        obj.buttonLabel = buttonLabel;
+        obj.onButtonPress = onButtonPress;
+        obj.onDismiss = callback1;
         return obj;
       }, items2);
-      let obj = marketing(navigateToShop[9]);
-      const coachmark = obj.useCoachmark(shopButtonRef, memo);
+      const coachmark = marketing(navigateToShop[9]).useCoachmark(marketing.shopButtonRef, memo);
       return null;
     };
-size = size_mod;
-const result = size.fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
-
-export default tmp2;

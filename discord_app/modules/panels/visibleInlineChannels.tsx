@@ -1,25 +1,21 @@
 // discord_app/modules/panels/visibleInlineChannels.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-let set;
-
 const map = new Map();
 let result = size.fileFinishedImporting("modules/panels/visibleInlineChannels.tsx");
 
 export const registerVisibleInlineChannel = function registerVisibleInlineChannel(channelId, windowId) {
-  let value = map.get(channelId);
+  value = map.get(channelId);
   if (null == value) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
-    set = new Set();
+    const set = new Set();
     const result = map.set(channelId, set);
     value = set;
   }
   value.add(windowId);
 };
 export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(channelId, windowId) {
-  const value = map.get(channelId);
+  value = map.get(channelId);
   if (null != value) {
     value.delete(windowId);
     if (0 === value.size) {
@@ -28,12 +24,12 @@ export const unregisterVisibleInlineChannel = function unregisterVisibleInlineCh
   }
 };
 export const isChannelVisibleInline = function isChannelVisibleInline(channelId, fn) {
-  const value = map.get(channelId);
+  value = map.get(channelId);
   if (null == value) {
     return false;
   } else {
     for (const item10010 of value) {
-      if (fn(item10010)) {
+      if (arg1(item10010)) {
         obj.return();
         let flag = true;
         return true;

@@ -13,13 +13,10 @@ const items = [
   AutomodTriggerType.AutomodTriggerType.KEYWORD,
 ];
 const result = size.fileFinishedImporting("modules/guild_automod/Constants.tsx");
-const AutomodEventType_export = AutomodEventType.AutomodEventType;
-const AutomodTriggerType_export = AutomodTriggerType.AutomodTriggerType;
-const AutomodActionType_export = AutomodActionType.AutomodActionType;
 
-export { AutomodEventType_export as AutomodEventType };
-export { AutomodTriggerType_export as AutomodTriggerType };
-export { AutomodActionType_export as AutomodActionType };
+export const AutomodEventType = AutomodEventType.AutomodEventType;
+export const AutomodTriggerType = AutomodTriggerType.AutomodTriggerType;
+export const AutomodActionType = AutomodActionType.AutomodActionType;
 export const KeywordPreset = {
   PROFANITY: 1,
   [1]: "PROFANITY",

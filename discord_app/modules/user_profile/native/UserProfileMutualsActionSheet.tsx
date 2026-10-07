@@ -1,12 +1,11 @@
 // discord_app/modules/user_profile/native/UserProfileMutualsActionSheet.tsx
-import react2 from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
-import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import Constants from "../Constants.tsx";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import ActivityStatusDefault from "../../activity_status/native/ActivityStatus.tsx";
 import UserProfileStackedActionSheet from "UserProfileStackedActionSheet.tsx";
 import useUserProfileMutualsDefault from "../hooks/useUserProfileMutuals.tsx";
@@ -14,108 +13,84 @@ import NoMutualServers from "../../../design/components/Illustration/native/rede
 import NoMutualFriends from "../../../design/components/Illustration/native/redesign/generated/NoMutualFriends.tsx";
 import getMutualFriendsLabelDefault from "../utils/getMutualFriendsLabel.tsx";
 import getMutualGuildsLabelDefault from "../utils/getMutualGuildsLabel.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../_runtime/00019_react.js";
-import react_native from "../../../../_runtime/00017_react-native.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const GuildIconDefault = GuildIcon;
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 
-let c10;
-let c9;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-let obj4;
-let obj5;
-let react = react_mod;
-({ View: hasOwnProperty, ActivityIndicator: metroRequire } = react_native);
-const UserProfileSections = Constants.UserProfileSections;
-({ jsx: c9, jsxs: c10 } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
-  container: obj2,
-  loadingState: obj3,
-  emptyState: { alignItems: "center" },
-  activityStatusText: obj4,
-  mutualGuildSubLabel: obj5,
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
+const UserProfileSections = fn(7865).UserProfileSections;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  container: { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 },
+  loadingState: null,
+  emptyState: null,
+  activityStatusText: null,
+  mutualGuildSubLabel: null,
 };
-obj2 = { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 };
-createStyles = createStyles.createStyles;
-obj3 = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
-obj4 = { color: nativeDefault.colors.TEXT_SUBTLE };
-obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-let closure_11 = createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+let obj3 = { flex: 1, gap: 20, paddingTop: nativeDefault.space.PX_8 };
+obj2.loadingState = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
+obj2.emptyState = { alignItems: "center" };
+let obj4 = { paddingTop: nativeDefault.space.PX_8, alignItems: "center" };
+obj2.activityStatusText = { color: nativeDefault.colors.TEXT_SUBTLE };
+let obj5 = { color: nativeDefault.colors.TEXT_SUBTLE };
+obj2.mutualGuildSubLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+let closure_11 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (mutualFriend) => {
-      let end;
-      let first;
-      let guildId;
-      let isMobileOnline;
-      let isVROnline;
-      let onPress;
-      let start;
-      let status;
-      let tmp8;
-      let user;
-      let obj = user(576);
-      const cResult = obj.c(25);
+      const cResult = user(576).c(25);
       ({ guildId, onPress, start, end } = mutualFriend);
       user = mutualFriend.mutualFriend.user;
       const tmp4 = closure_11();
-      const obj2 = user(7898);
-      const avatarDecoration = obj2.useAvatarDecoration(user);
+      const obj = user(576);
+      const avatarDecoration = user(7898).useAvatarDecoration(user);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PresenceStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== user.id) {
         const fn = function n() {
-          const obj = {
+          return {
             status: PresenceStore.getStatus(user.id),
             isMobileOnline: PresenceStore.isMobileOnline(user.id),
             isVROnline: PresenceStore.isVROnline(user.id),
           };
-          return obj;
         };
         cResult[1] = user.id;
         cResult[2] = fn;
-        tmp8 = fn;
+        let tmp8 = fn;
       } else {
         tmp8 = cResult[2];
       }
-      const tmpResult = user(504);
-      const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp8);
+      const obj2 = user(7898);
+      const stateFromStoresObject = user(504).useStateFromStoresObject(first, tmp8);
       ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
       if (cResult[3] === avatarDecoration) {
         if (cResult[4] === guildId) {
           if (cResult[5] === isMobileOnline) {
             if (cResult[6] === isVROnline) {
               if (cResult[7] === status) {
-                let tmp11;
                 if (cResult[8] === user) {
-                  tmp11 = cResult[9];
+                  let tmp11 = cResult[9];
                 }
                 if (cResult[10] === guildId) {
-                  let tmp13;
                   if (cResult[11] === user) {
-                    tmp13 = cResult[12];
+                    let tmp13 = cResult[12];
                   }
                   if (cResult[13] === guildId) {
                     if (cResult[14] === tmp4.activityStatusText) {
-                      let tmp16;
                       if (cResult[15] === user.id) {
-                        tmp16 = cResult[16];
+                        let tmp16 = cResult[16];
                       }
                       if (cResult[17] === end) {
                         if (cResult[18] === onPress) {
@@ -123,9 +98,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                             if (cResult[20] === tmp11) {
                               if (cResult[21] === tmp13) {
                                 if (cResult[22] === tmp16) {
-                                  let tmp20;
                                   if (cResult[23] === user.id) {
-                                    tmp20 = cResult[24];
+                                    let tmp20 = cResult[24];
                                   }
                                   return tmp20;
                                 }
@@ -135,7 +109,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const obj3 = { onPress, icon: tmp11, label: tmp13, subLabel: tmp16, start, end };
-                      const tmp22 = closure_9(user(6000).TableRow, obj3, tmp10);
+                      const tmp22 = closure_9(tmp(6000).TableRow, obj3, tmp10);
                       cResult[17] = end;
                       cResult[18] = onPress;
                       cResult[19] = start;
@@ -155,8 +129,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[16] = tmp19;
                   tmp16 = tmp19;
                 }
-                const obj5 = NicknameUtilsDefault;
-                const name = obj5.getName(guildId, undefined, user);
+                const name = NicknameUtilsDefault.getName(guildId, undefined, user);
                 cResult[10] = guildId;
                 cResult[11] = user;
                 cResult[12] = name;
@@ -166,6 +139,25 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
+      const tmpResult = user(504);
+      const tmp12 = closure_9(user(1188).Avatar, {
+        user,
+        size: user(1188).AvatarSizes.REFRESH_MEDIUM_32,
+        avatarDecoration,
+        status,
+        guildId,
+        isMobileOnline,
+        isVROnline,
+        autoStatusCutout: true,
+      });
+      cResult[3] = avatarDecoration;
+      cResult[4] = guildId;
+      cResult[5] = isMobileOnline;
+      cResult[6] = isVROnline;
+      cResult[7] = status;
+      cResult[8] = user;
+      cResult[9] = tmp12;
+      tmp11 = tmp12;
       const obj6 = {
         user,
         size: user(1188).AvatarSizes.REFRESH_MEDIUM_32,
@@ -176,55 +168,34 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         isVROnline,
         autoStatusCutout: true,
       };
-      const Avatar = tmp(1188).Avatar;
-      const tmp12 = closure_9(Avatar, obj6);
-      cResult[3] = avatarDecoration;
-      cResult[4] = guildId;
-      cResult[5] = isMobileOnline;
-      cResult[6] = isVROnline;
-      cResult[7] = status;
-      cResult[8] = user;
-      cResult[9] = tmp12;
-      tmp11 = tmp12;
     }
   : (mutualFriend) => {
-      let Avatar;
-      let end;
-      let isMobileOnline;
-      let isVROnline;
-      let obj4;
-      let obj5;
-      let obj6;
-      let onPress;
-      let start;
-      let status;
       const user = mutualFriend.mutualFriend.user;
       const guildId = mutualFriend.guildId;
       ({ onPress, start, end } = mutualFriend);
       const tmp = closure_11();
-      let obj = user(7898);
-      const avatarDecoration = obj.useAvatarDecoration(user);
+      const avatarDecoration = user(7898).useAvatarDecoration(user);
+      const obj = user(7898);
       const items = [PresenceStore];
-      const obj2 = user(504);
-      const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
-        const obj = {
-          status: PresenceStore.getStatus(user.id),
-          isMobileOnline: PresenceStore.isMobileOnline(user.id),
-          isVROnline: PresenceStore.isVROnline(user.id),
-        };
-        return obj;
-      });
+      const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({
+        status: PresenceStore.getStatus(user.id),
+        isMobileOnline: PresenceStore.isMobileOnline(user.id),
+        isVROnline: PresenceStore.isVROnline(user.id),
+      }));
       ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-      const obj3 = {
-        onPress,
-        icon: closure_9(Avatar, obj4),
-        label: obj5.getName(guildId, undefined, user),
-        subLabel: closure_9(ActivityStatusDefault, obj6),
-        start,
-        end,
-      };
-      const TableRow = user(6000).TableRow;
-      obj4 = {
+      const obj3 = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
+      const obj2 = user(504);
+      obj3.icon = closure_9(user(1188).Avatar, {
+        user,
+        size: user(1188).AvatarSizes.REFRESH_MEDIUM_32,
+        avatarDecoration,
+        status,
+        guildId,
+        isMobileOnline,
+        isVROnline,
+        autoStatusCutout: true,
+      });
+      const obj4 = {
         user,
         size: user(1188).AvatarSizes.REFRESH_MEDIUM_32,
         avatarDecoration,
@@ -234,74 +205,59 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         isVROnline,
         autoStatusCutout: true,
       };
-      Avatar = user(1188).Avatar;
-      obj5 = NicknameUtilsDefault;
-      obj6 = { userId: user.id, guildId, textStyle: tmp.activityStatusText };
-      return closure_9(TableRow, obj3, user.id);
+      obj3.label = NicknameUtilsDefault.getName(guildId, undefined, user);
+      obj3.subLabel = closure_9(ActivityStatusDefault, { userId: user.id, guildId, textStyle: tmp.activityStatusText });
+      obj3.start = start;
+      obj3.end = end;
+      return closure_9(user(6000).TableRow, obj3, user.id);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let end;
-      let guild;
-      let items;
-      let mutualGuild;
-      let nick;
-      let onPress;
-      let start;
-      let user;
-      const obj = react2;
-      const cResult = obj.c(28);
+      const cResult = c.c(28);
       ({ mutualGuild, user, onPress, start, end } = arg0);
       ({ guild, nick } = mutualGuild);
       const tmp4 = closure_11();
       if (cResult[0] === guild.id) {
-        let tmp5;
-        let tmp7;
         if (cResult[1] === user) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         if (cResult[3] !== guild) {
           const obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32 };
-          const tmp10 = GuildIconDefault;
-          const tmp11 = React4(tmp10, obj2);
+          const tmp11 = options(GuildIconDefault, obj2);
           cResult[3] = guild;
           cResult[4] = tmp11;
-          tmp7 = tmp11;
+          let tmp7 = tmp11;
         } else {
           tmp7 = cResult[4];
         }
         if (cResult[5] === guild.id) {
           if (cResult[6] === tmp5) {
-            let tmp12;
-            let tmp15;
             if (cResult[7] === user) {
-              tmp12 = cResult[8];
+              let tmp12 = cResult[8];
             }
             if (cResult[9] !== nick) {
               let tmp17 = null != nick;
               if (tmp17) {
                 const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: nick };
-                tmp17 = React4(Text_Text.Text, obj3);
+                tmp17 = options(Text_Text.Text, obj3);
               }
               cResult[9] = nick;
               cResult[10] = tmp17;
-              tmp15 = tmp17;
+              let tmp15 = tmp17;
             } else {
               tmp15 = cResult[10];
             }
             if (cResult[11] === tmp5) {
               if (cResult[12] === nick) {
-                let tmp19;
                 if (cResult[13] === user.username) {
-                  tmp19 = cResult[14];
+                  let tmp19 = cResult[14];
                 }
                 if (cResult[15] === tmp4.mutualGuildSubLabel) {
                   if (cResult[16] === tmp12) {
                     if (cResult[17] === tmp15) {
-                      let tmp23;
                       if (cResult[18] === tmp19) {
-                        tmp23 = cResult[19];
+                        let tmp23 = cResult[19];
                       }
                       if (cResult[20] === end) {
                         if (cResult[21] === guild.id) {
@@ -309,9 +265,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             if (cResult[23] === onPress) {
                               if (cResult[24] === start) {
                                 if (cResult[25] === tmp7) {
-                                  let tmp27;
                                   if (cResult[26] === tmp23) {
-                                    tmp27 = cResult[27];
+                                    let tmp27 = cResult[27];
                                   }
                                   return tmp27;
                                 }
@@ -321,7 +276,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const obj4 = { onPress, icon: tmp7, label: guild.name, subLabel: tmp23, start, end };
-                      const tmp29 = React4(TableRow2.TableRow, obj4, guild.id);
+                      const tmp29 = options(TableRow.TableRow, obj4, guild.id);
                       cResult[20] = end;
                       cResult[21] = guild.id;
                       cResult[22] = guild.name;
@@ -334,9 +289,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const obj5 = { style: tmp4.mutualGuildSubLabel, children: items };
-                items = [tmp12, tmp15, tmp19];
-                const tmp26 = authStore(hasOwnProperty, obj5);
+                const obj5 = { style: tmp4.mutualGuildSubLabel, children: null };
+                const items = [tmp12, tmp15, tmp19];
+                obj5.children = items;
+                const tmp26 = v65535(hasOwnProperty, obj5);
                 cResult[15] = tmp4.mutualGuildSubLabel;
                 cResult[16] = tmp12;
                 cResult[17] = tmp15;
@@ -348,7 +304,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp21 = null == nick && tmp5;
             if (tmp21) {
               const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: user.username };
-              tmp21 = React4(Text_Text.Text, obj6);
+              tmp21 = options(Text_Text.Text, obj6);
             }
             cResult[11] = tmp5;
             cResult[12] = nick;
@@ -358,10 +314,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let tmp13 = tmp5;
-        if (tmp13) {
+        if (tmp5) {
           const obj7 = { size: native.AvatarSizes.SIZE_16, user, guildId: guild.id };
-          const Avatar = native.Avatar;
-          tmp13 = React4(Avatar, obj7);
+          tmp13 = options(native.Avatar, obj7);
         }
         cResult[5] = guild.id;
         cResult[6] = tmp5;
@@ -376,74 +331,58 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = hasAvatarForGuildResult;
     }
   : (mutualGuild) => {
-      let end;
-      let guild;
-      let items;
-      let nick;
-      let obj2;
-      let obj3;
-      let onPress;
-      let start;
-      let tmp6;
       ({ guild, nick } = mutualGuild.mutualGuild);
       const user = mutualGuild.user;
       ({ onPress, start, end } = mutualGuild);
-      const tmp = closure_11();
       const hasAvatarForGuildResult = user.hasAvatarForGuild(guild.id);
-      const obj = {
-        onPress,
-        icon: React4(tmp6, obj2),
-        label: guild.name,
-        subLabel: authStore(hasOwnProperty, obj3),
-        start,
-        end,
-      };
-      const TableRow = TableRow2.TableRow;
-      obj2 = { guild, size: GuildIcon.GuildIconSizes.SMALL_32 };
+      const obj = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
+      const obj2 = { guild, size: null };
+      const tmp = closure_11();
+      obj2.size = GuildIcon.GuildIconSizes.SMALL_32;
+      obj.icon = options(GuildIconDefault, obj2);
+      obj.label = guild.name;
+      const obj3 = { style: tmp.mutualGuildSubLabel, children: null };
       let tmp3Result = hasAvatarForGuildResult;
-      obj3 = { style: tmp.mutualGuildSubLabel, children: items };
-      tmp6 = GuildIconDefault;
-      if (tmp3Result) {
+      if (hasAvatarForGuildResult) {
         const obj4 = { size: native.AvatarSizes.SIZE_16, user, guildId: guild.id };
-        const Avatar = native.Avatar;
-        tmp3Result = React4(Avatar, obj4);
+        tmp3Result = options(native.Avatar, obj4);
       }
-      items = [tmp3Result, ,];
+      const items = [tmp3Result, ,];
       let tmp3Result3 = null != nick;
       if (tmp3Result3) {
         const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: nick };
-        tmp3Result3 = React4(Text_Text.Text, obj5);
+        tmp3Result3 = options(Text_Text.Text, obj5);
       }
       items[1] = tmp3Result3;
       let tmp3Result4 = null == nick && hasAvatarForGuildResult;
       if (tmp3Result4) {
         const obj6 = { variant: "text-xs/medium", color: "text-subtle", children: user.username };
-        tmp3Result4 = React4(Text_Text.Text, obj6);
+        tmp3Result4 = options(Text_Text.Text, obj6);
       }
       items[2] = tmp3Result4;
-      return React4(TableRow, obj, guild.id);
+      obj3.children = items;
+      obj.subLabel = v65535(hasOwnProperty, obj3);
+      obj.start = start;
+      obj.end = end;
+      return options(TableRow.TableRow, obj, guild.id);
     };
-let closure_13 = tmp5;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_13 = tmp4;
+ReactCompilerGating = fn(558);
+let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (user) => {
-      let closure_4;
-      let closure_5;
-      let items;
-      let obj5;
-      let onPressMutualFriend;
-      let tmp6;
-      let obj = user(onPressMutualFriend[9]);
-      const cResult = obj.c(42);
+      const cResult = user(onPressMutualFriend[9]).c(42);
       user = user.user;
       const guildId = user.guildId;
       onPressMutualFriend = user.onPressMutualFriend;
       const onPressMutualGuild = user.onPressMutualGuild;
-      const section = user.section;
       let tmp4 = closure_11();
-      react = tmp4;
-      [tmp6, closure_5] = onPressMutualGuild(react.useState(0), 2);
-      onPressMutualGuild(react.useState(0), 2);
+      noop = tmp4;
+      let obj = user(onPressMutualFriend[9]);
+      [tmp6, closure_5] = onPressMutualGuild(noop.useState(0), 2);
       const tmp8 = guildId(onPressMutualFriend[18])(user);
       const mutualFriends = tmp8.mutualFriends;
       const mutualGuilds = tmp8.mutualGuilds;
@@ -451,41 +390,54 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === mutualFriends) {
           if (cResult[2] === onPressMutualFriend) {
             if (cResult[3] === tmp4.emptyState) {
-              let tmp9;
               if (cResult[4] === tmp4.loadingState) {
-                tmp9 = cResult[5];
+                let tmp9 = cResult[5];
               }
               if (cResult[6] === mutualGuilds) {
                 if (cResult[7] === onPressMutualGuild) {
                   if (cResult[8] === tmp4.emptyState) {
                     if (cResult[9] === tmp4.loadingState) {
-                      let tmp10;
-                      let tmp14;
-                      let tmp16;
                       if (cResult[10] === user) {
-                        tmp10 = cResult[11];
+                        let tmp10 = cResult[11];
                       }
                       class F {
                         constructor() {
-                          let tmp4;
+                          arr = mutualGuilds;
                           if (null == mutualGuilds) {
-                            const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                            tmp4 = React4(hasOwnProperty, obj2);
-                          } else if (0 === mutualGuilds.length) {
-                            const obj3 = {
-                              style: closure_4.emptyState,
-                              children: React4(NoMutualServers.NoMutualServers, {}),
-                            };
-                            tmp4 = React4(hasOwnProperty, obj3);
+                            tmp11 = jsx;
+                            tmp12 = View;
+                            obj1 = { style: null, children: null };
+                            tmp13 = closure_4;
+                            obj1.style = closure_4.loadingState;
+                            tmp14 = jsx;
+                            tmp15 = ActivityIndicator;
+                            obj1.children = jsx(ActivityIndicator, {});
+                            tmp4 = jsx(View, obj1);
                           } else {
-                            let obj = {
-                              data: mutualGuilds,
-                              keyExtractor(guild) {
+                            num = 0;
+                            if (0 === arr.length) {
+                              tmp5 = jsx;
+                              tmp6 = View;
+                              obj4 = { style: null, children: null };
+                              tmp7 = closure_4;
+                              obj4.style = closure_4.emptyState;
+                              tmp8 = jsx;
+                              tmp9 = closure_0;
+                              tmp10 = closure_2;
+                              obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                              tmp4 = jsx(View, obj4);
+                            } else {
+                              tmp = jsx;
+                              tmp2 = closure_0;
+                              tmp3 = closure_2;
+                              obj = { data: null, keyExtractor: null, renderItem: null };
+                              obj.data = arr;
+                              obj.keyExtractor = function keyExtractor(guild) {
                                 return guild.guild.id;
-                              },
-                              renderItem(start) {
+                              };
+                              obj.renderItem = function renderItem(start) {
                                 const item = start.item;
-                                const obj = {
+                                return closure_1_9(closure_1_13, {
                                   user: item,
                                   mutualGuild: item,
                                   onPress() {
@@ -493,11 +445,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                   },
                                   start: start.start,
                                   end: start.end,
-                                };
-                                return closure_1_9(closure_1_13, obj);
-                              },
-                            };
-                            tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                });
+                              };
+                              tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                            }
                           }
                           return tmp4;
                         }
@@ -507,28 +458,45 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                         length = mutualFriends.length;
                       }
                       if (cResult[12] !== length) {
-                        const tmp15 = guildId(onPressMutualFriend[22])(length);
+                        const tmp15 = tmp7(tmp2[22])(length);
                         class F {
                           constructor() {
-                            let tmp4;
+                            arr = mutualGuilds;
                             if (null == mutualGuilds) {
-                              const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                              tmp4 = React4(hasOwnProperty, obj2);
-                            } else if (0 === mutualGuilds.length) {
-                              const obj3 = {
-                                style: closure_4.emptyState,
-                                children: React4(NoMutualServers.NoMutualServers, {}),
-                              };
-                              tmp4 = React4(hasOwnProperty, obj3);
+                              tmp11 = jsx;
+                              tmp12 = View;
+                              obj1 = { style: null, children: null };
+                              tmp13 = closure_4;
+                              obj1.style = closure_4.loadingState;
+                              tmp14 = jsx;
+                              tmp15 = ActivityIndicator;
+                              obj1.children = jsx(ActivityIndicator, {});
+                              tmp4 = jsx(View, obj1);
                             } else {
-                              let obj = {
-                                data: mutualGuilds,
-                                keyExtractor(guild) {
+                              num = 0;
+                              if (0 === arr.length) {
+                                tmp5 = jsx;
+                                tmp6 = View;
+                                obj4 = { style: null, children: null };
+                                tmp7 = closure_4;
+                                obj4.style = closure_4.emptyState;
+                                tmp8 = jsx;
+                                tmp9 = closure_0;
+                                tmp10 = closure_2;
+                                obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                tmp4 = jsx(View, obj4);
+                              } else {
+                                tmp = jsx;
+                                tmp2 = closure_0;
+                                tmp3 = closure_2;
+                                obj = { data: null, keyExtractor: null, renderItem: null };
+                                obj.data = arr;
+                                obj.keyExtractor = function keyExtractor(guild) {
                                   return guild.guild.id;
-                                },
-                                renderItem(start) {
+                                };
+                                obj.renderItem = function renderItem(start) {
                                   const item = start.item;
-                                  const obj = {
+                                  return closure_1_9(closure_1_13, {
                                     user: item,
                                     mutualGuild: item,
                                     onPress() {
@@ -536,17 +504,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                     },
                                     start: start.start,
                                     end: start.end,
-                                  };
-                                  return closure_1_9(closure_1_13, obj);
-                                },
-                              };
-                              tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                  });
+                                };
+                                tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                              }
                             }
                             return tmp4;
                           }
                         }
                         cResult[13] = tmp15;
-                        tmp14 = tmp15;
+                        let tmp14 = tmp15;
                       } else {
                         tmp14 = cResult[13];
                       }
@@ -554,25 +521,42 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                         const tmp9Result = tmp9();
                         class F {
                           constructor() {
-                            let tmp4;
+                            arr = mutualGuilds;
                             if (null == mutualGuilds) {
-                              const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                              tmp4 = React4(hasOwnProperty, obj2);
-                            } else if (0 === mutualGuilds.length) {
-                              const obj3 = {
-                                style: closure_4.emptyState,
-                                children: React4(NoMutualServers.NoMutualServers, {}),
-                              };
-                              tmp4 = React4(hasOwnProperty, obj3);
+                              tmp11 = jsx;
+                              tmp12 = View;
+                              obj1 = { style: null, children: null };
+                              tmp13 = closure_4;
+                              obj1.style = closure_4.loadingState;
+                              tmp14 = jsx;
+                              tmp15 = ActivityIndicator;
+                              obj1.children = jsx(ActivityIndicator, {});
+                              tmp4 = jsx(View, obj1);
                             } else {
-                              let obj = {
-                                data: mutualGuilds,
-                                keyExtractor(guild) {
+                              num = 0;
+                              if (0 === arr.length) {
+                                tmp5 = jsx;
+                                tmp6 = View;
+                                obj4 = { style: null, children: null };
+                                tmp7 = closure_4;
+                                obj4.style = closure_4.emptyState;
+                                tmp8 = jsx;
+                                tmp9 = closure_0;
+                                tmp10 = closure_2;
+                                obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                tmp4 = jsx(View, obj4);
+                              } else {
+                                tmp = jsx;
+                                tmp2 = closure_0;
+                                tmp3 = closure_2;
+                                obj = { data: null, keyExtractor: null, renderItem: null };
+                                obj.data = arr;
+                                obj.keyExtractor = function keyExtractor(guild) {
                                   return guild.guild.id;
-                                },
-                                renderItem(start) {
+                                };
+                                obj.renderItem = function renderItem(start) {
                                   const item = start.item;
-                                  const obj = {
+                                  return closure_1_9(closure_1_13, {
                                     user: item,
                                     mutualGuild: item,
                                     onPress() {
@@ -580,48 +564,61 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                     },
                                     start: start.start,
                                     end: start.end,
-                                  };
-                                  return closure_1_9(closure_1_13, obj);
-                                },
-                              };
-                              tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                  });
+                                };
+                                tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                              }
                             }
                             return tmp4;
                           }
                         }
                         cResult[15] = tmp9Result;
-                        tmp16 = tmp9Result;
+                        let tmp16 = tmp9Result;
                       } else {
                         tmp16 = cResult[15];
                       }
                       if (cResult[16] === tmp14) {
-                        let tmp18;
-                        let tmp20;
-                        let tmp22;
                         if (cResult[17] === tmp16) {
-                          tmp18 = cResult[18];
+                          let tmp18 = cResult[18];
                         }
                         class F {
                           constructor() {
-                            let tmp4;
+                            arr = mutualGuilds;
                             if (null == mutualGuilds) {
-                              const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                              tmp4 = React4(hasOwnProperty, obj2);
-                            } else if (0 === mutualGuilds.length) {
-                              const obj3 = {
-                                style: closure_4.emptyState,
-                                children: React4(NoMutualServers.NoMutualServers, {}),
-                              };
-                              tmp4 = React4(hasOwnProperty, obj3);
+                              tmp11 = jsx;
+                              tmp12 = View;
+                              obj1 = { style: null, children: null };
+                              tmp13 = closure_4;
+                              obj1.style = closure_4.loadingState;
+                              tmp14 = jsx;
+                              tmp15 = ActivityIndicator;
+                              obj1.children = jsx(ActivityIndicator, {});
+                              tmp4 = jsx(View, obj1);
                             } else {
-                              let obj = {
-                                data: mutualGuilds,
-                                keyExtractor(guild) {
+                              num = 0;
+                              if (0 === arr.length) {
+                                tmp5 = jsx;
+                                tmp6 = View;
+                                obj4 = { style: null, children: null };
+                                tmp7 = closure_4;
+                                obj4.style = closure_4.emptyState;
+                                tmp8 = jsx;
+                                tmp9 = closure_0;
+                                tmp10 = closure_2;
+                                obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                tmp4 = jsx(View, obj4);
+                              } else {
+                                tmp = jsx;
+                                tmp2 = closure_0;
+                                tmp3 = closure_2;
+                                obj = { data: null, keyExtractor: null, renderItem: null };
+                                obj.data = arr;
+                                obj.keyExtractor = function keyExtractor(guild) {
                                   return guild.guild.id;
-                                },
-                                renderItem(start) {
+                                };
+                                obj.renderItem = function renderItem(start) {
                                   const item = start.item;
-                                  const obj = {
+                                  return closure_1_9(closure_1_13, {
                                     user: item,
                                     mutualGuild: item,
                                     onPress() {
@@ -629,38 +626,54 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                     },
                                     start: start.start,
                                     end: start.end,
-                                  };
-                                  return closure_1_9(closure_1_13, obj);
-                                },
-                              };
-                              tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                  });
+                                };
+                                tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                              }
                             }
                             return tmp4;
                           }
                         }
                         if (cResult[19] !== undefined) {
-                          const tmp21 = guildId(onPressMutualFriend[23])(undefined);
+                          const tmp21 = tmp7(tmp2[23])(tmp19);
                           class F {
                             constructor() {
-                              let tmp4;
+                              arr = mutualGuilds;
                               if (null == mutualGuilds) {
-                                const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                                tmp4 = React4(hasOwnProperty, obj2);
-                              } else if (0 === mutualGuilds.length) {
-                                const obj3 = {
-                                  style: closure_4.emptyState,
-                                  children: React4(NoMutualServers.NoMutualServers, {}),
-                                };
-                                tmp4 = React4(hasOwnProperty, obj3);
+                                tmp11 = jsx;
+                                tmp12 = View;
+                                obj1 = { style: null, children: null };
+                                tmp13 = closure_4;
+                                obj1.style = closure_4.loadingState;
+                                tmp14 = jsx;
+                                tmp15 = ActivityIndicator;
+                                obj1.children = jsx(ActivityIndicator, {});
+                                tmp4 = jsx(View, obj1);
                               } else {
-                                let obj = {
-                                  data: mutualGuilds,
-                                  keyExtractor(guild) {
+                                num = 0;
+                                if (0 === arr.length) {
+                                  tmp5 = jsx;
+                                  tmp6 = View;
+                                  obj4 = { style: null, children: null };
+                                  tmp7 = closure_4;
+                                  obj4.style = closure_4.emptyState;
+                                  tmp8 = jsx;
+                                  tmp9 = closure_0;
+                                  tmp10 = closure_2;
+                                  obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                  tmp4 = jsx(View, obj4);
+                                } else {
+                                  tmp = jsx;
+                                  tmp2 = closure_0;
+                                  tmp3 = closure_2;
+                                  obj = { data: null, keyExtractor: null, renderItem: null };
+                                  obj.data = arr;
+                                  obj.keyExtractor = function keyExtractor(guild) {
                                     return guild.guild.id;
-                                  },
-                                  renderItem(start) {
+                                  };
+                                  obj.renderItem = function renderItem(start) {
                                     const item = start.item;
-                                    const obj = {
+                                    return closure_1_9(closure_1_13, {
                                       user: item,
                                       mutualGuild: item,
                                       onPress() {
@@ -668,17 +681,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                       },
                                       start: start.start,
                                       end: start.end,
-                                    };
-                                    return closure_1_9(closure_1_13, obj);
-                                  },
-                                };
-                                tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                    });
+                                  };
+                                  tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                }
                               }
                               return tmp4;
                             }
                           }
                           cResult[20] = tmp21;
-                          tmp20 = tmp21;
+                          let tmp20 = tmp21;
                         } else {
                           tmp20 = cResult[20];
                         }
@@ -686,25 +698,42 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                           const tmp10Result = tmp10();
                           class F {
                             constructor() {
-                              let tmp4;
+                              arr = mutualGuilds;
                               if (null == mutualGuilds) {
-                                const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                                tmp4 = React4(hasOwnProperty, obj2);
-                              } else if (0 === mutualGuilds.length) {
-                                const obj3 = {
-                                  style: closure_4.emptyState,
-                                  children: React4(NoMutualServers.NoMutualServers, {}),
-                                };
-                                tmp4 = React4(hasOwnProperty, obj3);
+                                tmp11 = jsx;
+                                tmp12 = View;
+                                obj1 = { style: null, children: null };
+                                tmp13 = closure_4;
+                                obj1.style = closure_4.loadingState;
+                                tmp14 = jsx;
+                                tmp15 = ActivityIndicator;
+                                obj1.children = jsx(ActivityIndicator, {});
+                                tmp4 = jsx(View, obj1);
                               } else {
-                                let obj = {
-                                  data: mutualGuilds,
-                                  keyExtractor(guild) {
+                                num = 0;
+                                if (0 === arr.length) {
+                                  tmp5 = jsx;
+                                  tmp6 = View;
+                                  obj4 = { style: null, children: null };
+                                  tmp7 = closure_4;
+                                  obj4.style = closure_4.emptyState;
+                                  tmp8 = jsx;
+                                  tmp9 = closure_0;
+                                  tmp10 = closure_2;
+                                  obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                  tmp4 = jsx(View, obj4);
+                                } else {
+                                  tmp = jsx;
+                                  tmp2 = closure_0;
+                                  tmp3 = closure_2;
+                                  obj = { data: null, keyExtractor: null, renderItem: null };
+                                  obj.data = arr;
+                                  obj.keyExtractor = function keyExtractor(guild) {
                                     return guild.guild.id;
-                                  },
-                                  renderItem(start) {
+                                  };
+                                  obj.renderItem = function renderItem(start) {
                                     const item = start.item;
-                                    const obj = {
+                                    return closure_1_9(closure_1_13, {
                                       user: item,
                                       mutualGuild: item,
                                       onPress() {
@@ -712,58 +741,68 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                       },
                                       start: start.start,
                                       end: start.end,
-                                    };
-                                    return closure_1_9(closure_1_13, obj);
-                                  },
-                                };
-                                tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                    });
+                                  };
+                                  tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                }
                               }
                               return tmp4;
                             }
                           }
                           cResult[22] = tmp10Result;
-                          tmp22 = tmp10Result;
+                          let tmp22 = tmp10Result;
                         } else {
                           tmp22 = cResult[22];
                         }
                         if (cResult[23] === tmp22) {
-                          let tmp24;
                           if (cResult[24] === tmp20) {
-                            tmp24 = cResult[25];
+                            let tmp24 = cResult[25];
                           }
                           if (cResult[26] === tmp24) {
-                            let tmp25;
                             if (cResult[27] === tmp18) {
-                              tmp25 = cResult[28];
+                              let tmp25 = cResult[28];
                             }
                             if (cResult[29] === tmp6) {
                               if (cResult[30] === tmp25) {
-                                let tmp37;
-                                user(onPressMutualFriend[24]);
+                                tmp(tmp2[24]);
                                 class F {
                                   constructor() {
-                                    let tmp4;
+                                    arr = mutualGuilds;
                                     if (null == mutualGuilds) {
-                                      const obj2 = {
-                                        style: closure_4.loadingState,
-                                        children: React4(metroRequire, {}),
-                                      };
-                                      tmp4 = React4(hasOwnProperty, obj2);
-                                    } else if (0 === mutualGuilds.length) {
-                                      const obj3 = {
-                                        style: closure_4.emptyState,
-                                        children: React4(NoMutualServers.NoMutualServers, {}),
-                                      };
-                                      tmp4 = React4(hasOwnProperty, obj3);
+                                      tmp11 = jsx;
+                                      tmp12 = View;
+                                      obj1 = { style: null, children: null };
+                                      tmp13 = closure_4;
+                                      obj1.style = closure_4.loadingState;
+                                      tmp14 = jsx;
+                                      tmp15 = ActivityIndicator;
+                                      obj1.children = jsx(ActivityIndicator, {});
+                                      tmp4 = jsx(View, obj1);
                                     } else {
-                                      let obj = {
-                                        data: mutualGuilds,
-                                        keyExtractor(guild) {
+                                      num = 0;
+                                      if (0 === arr.length) {
+                                        tmp5 = jsx;
+                                        tmp6 = View;
+                                        obj4 = { style: null, children: null };
+                                        tmp7 = closure_4;
+                                        obj4.style = closure_4.emptyState;
+                                        tmp8 = jsx;
+                                        tmp9 = closure_0;
+                                        tmp10 = closure_2;
+                                        obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                        tmp4 = jsx(View, obj4);
+                                      } else {
+                                        tmp = jsx;
+                                        tmp2 = closure_0;
+                                        tmp3 = closure_2;
+                                        obj = { data: null, keyExtractor: null, renderItem: null };
+                                        obj.data = arr;
+                                        obj.keyExtractor = function keyExtractor(guild) {
                                           return guild.guild.id;
-                                        },
-                                        renderItem(start) {
+                                        };
+                                        obj.renderItem = function renderItem(start) {
                                           const item = start.item;
-                                          const obj = {
+                                          return closure_1_9(closure_1_13, {
                                             user: item,
                                             mutualGuild: item,
                                             onPress() {
@@ -771,14 +810,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                             },
                                             start: start.start,
                                             end: start.end,
-                                          };
-                                          return closure_1_9(closure_1_13, obj);
-                                        },
-                                      };
-                                      tmp4 = React4(
-                                        UserProfileStackedActionSheet.UserProfileStackedActionSheetList,
-                                        obj,
-                                      );
+                                          });
+                                        };
+                                        tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                      }
                                     }
                                     return tmp4;
                                   }
@@ -786,34 +821,49 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                 const _Symbol = Symbol;
                                 if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
                                   class B {
-                                    constructor(nativeEvent) {
-                                      closure_5(nativeEvent.nativeEvent.layout.width);
+                                    constructor(arg0) {
+                                      tmp = closure_5(user.nativeEvent.layout.width);
+                                      return;
                                     }
                                   }
                                   class F {
                                     constructor() {
-                                      let tmp4;
+                                      arr = mutualGuilds;
                                       if (null == mutualGuilds) {
-                                        const obj2 = {
-                                          style: closure_4.loadingState,
-                                          children: React4(metroRequire, {}),
-                                        };
-                                        tmp4 = React4(hasOwnProperty, obj2);
-                                      } else if (0 === mutualGuilds.length) {
-                                        const obj3 = {
-                                          style: closure_4.emptyState,
-                                          children: React4(NoMutualServers.NoMutualServers, {}),
-                                        };
-                                        tmp4 = React4(hasOwnProperty, obj3);
+                                        tmp11 = jsx;
+                                        tmp12 = View;
+                                        obj1 = { style: null, children: null };
+                                        tmp13 = closure_4;
+                                        obj1.style = closure_4.loadingState;
+                                        tmp14 = jsx;
+                                        tmp15 = ActivityIndicator;
+                                        obj1.children = jsx(ActivityIndicator, {});
+                                        tmp4 = jsx(View, obj1);
                                       } else {
-                                        let obj = {
-                                          data: mutualGuilds,
-                                          keyExtractor(guild) {
+                                        num = 0;
+                                        if (0 === arr.length) {
+                                          tmp5 = jsx;
+                                          tmp6 = View;
+                                          obj4 = { style: null, children: null };
+                                          tmp7 = closure_4;
+                                          obj4.style = closure_4.emptyState;
+                                          tmp8 = jsx;
+                                          tmp9 = closure_0;
+                                          tmp10 = closure_2;
+                                          obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                          tmp4 = jsx(View, obj4);
+                                        } else {
+                                          tmp = jsx;
+                                          tmp2 = closure_0;
+                                          tmp3 = closure_2;
+                                          obj = { data: null, keyExtractor: null, renderItem: null };
+                                          obj.data = arr;
+                                          obj.keyExtractor = function keyExtractor(guild) {
                                             return guild.guild.id;
-                                          },
-                                          renderItem(start) {
+                                          };
+                                          obj.renderItem = function renderItem(start) {
                                             const item = start.item;
-                                            const obj = {
+                                            return closure_1_9(closure_1_13, {
                                               user: item,
                                               mutualGuild: item,
                                               onPress() {
@@ -821,57 +871,69 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                               },
                                               start: start.start,
                                               end: start.end,
-                                            };
-                                            return closure_1_9(closure_1_13, obj);
-                                          },
-                                        };
-                                        tmp4 = React4(
-                                          UserProfileStackedActionSheet.UserProfileStackedActionSheetList,
-                                          obj,
-                                        );
+                                            });
+                                          };
+                                          tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                        }
                                       }
                                       return tmp4;
                                     }
                                   }
                                 } else {
                                   class B {
-                                    constructor(nativeEvent) {
-                                      closure_5(nativeEvent.nativeEvent.layout.width);
+                                    constructor(arg0) {
+                                      tmp = closure_5(user.nativeEvent.layout.width);
+                                      return;
                                     }
                                   }
                                 }
                                 const _Symbol2 = Symbol;
                                 if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
                                   class B {
-                                    constructor(nativeEvent) {
-                                      closure_5(nativeEvent.nativeEvent.layout.width);
+                                    constructor(arg0) {
+                                      tmp = closure_5(user.nativeEvent.layout.width);
+                                      return;
                                     }
                                   }
                                   const string = tmp34.string;
                                   class F {
                                     constructor() {
-                                      let tmp4;
+                                      arr = mutualGuilds;
                                       if (null == mutualGuilds) {
-                                        const obj2 = {
-                                          style: closure_4.loadingState,
-                                          children: React4(metroRequire, {}),
-                                        };
-                                        tmp4 = React4(hasOwnProperty, obj2);
-                                      } else if (0 === mutualGuilds.length) {
-                                        const obj3 = {
-                                          style: closure_4.emptyState,
-                                          children: React4(NoMutualServers.NoMutualServers, {}),
-                                        };
-                                        tmp4 = React4(hasOwnProperty, obj3);
+                                        tmp11 = jsx;
+                                        tmp12 = View;
+                                        obj1 = { style: null, children: null };
+                                        tmp13 = closure_4;
+                                        obj1.style = closure_4.loadingState;
+                                        tmp14 = jsx;
+                                        tmp15 = ActivityIndicator;
+                                        obj1.children = jsx(ActivityIndicator, {});
+                                        tmp4 = jsx(View, obj1);
                                       } else {
-                                        let obj = {
-                                          data: mutualGuilds,
-                                          keyExtractor(guild) {
+                                        num = 0;
+                                        if (0 === arr.length) {
+                                          tmp5 = jsx;
+                                          tmp6 = View;
+                                          obj4 = { style: null, children: null };
+                                          tmp7 = closure_4;
+                                          obj4.style = closure_4.emptyState;
+                                          tmp8 = jsx;
+                                          tmp9 = closure_0;
+                                          tmp10 = closure_2;
+                                          obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                          tmp4 = jsx(View, obj4);
+                                        } else {
+                                          tmp = jsx;
+                                          tmp2 = closure_0;
+                                          tmp3 = closure_2;
+                                          obj = { data: null, keyExtractor: null, renderItem: null };
+                                          obj.data = arr;
+                                          obj.keyExtractor = function keyExtractor(guild) {
                                             return guild.guild.id;
-                                          },
-                                          renderItem(start) {
+                                          };
+                                          obj.renderItem = function renderItem(start) {
                                             const item = start.item;
-                                            const obj = {
+                                            return closure_1_9(closure_1_13, {
                                               user: item,
                                               mutualGuild: item,
                                               onPress() {
@@ -879,14 +941,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                               },
                                               start: start.start,
                                               end: start.end,
-                                            };
-                                            return closure_1_9(closure_1_13, obj);
-                                          },
-                                        };
-                                        tmp4 = React4(
-                                          UserProfileStackedActionSheet.UserProfileStackedActionSheetList,
-                                          obj,
-                                        );
+                                            });
+                                          };
+                                          tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                        }
                                       }
                                       return tmp4;
                                     }
@@ -894,41 +952,57 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                   cResult[34] = tmp35;
                                 } else {
                                   class B {
-                                    constructor(nativeEvent) {
-                                      closure_5(nativeEvent.nativeEvent.layout.width);
+                                    constructor(arg0) {
+                                      tmp = closure_5(user.nativeEvent.layout.width);
+                                      return;
                                     }
                                   }
                                 }
                                 if (cResult[35] !== tmp30) {
                                   class B {
-                                    constructor(nativeEvent) {
-                                      closure_5(nativeEvent.nativeEvent.layout.width);
+                                    constructor(arg0) {
+                                      tmp = closure_5(user.nativeEvent.layout.width);
+                                      return;
                                     }
                                   }
                                   class F {
                                     constructor() {
-                                      let tmp4;
+                                      arr = mutualGuilds;
                                       if (null == mutualGuilds) {
-                                        const obj2 = {
-                                          style: closure_4.loadingState,
-                                          children: React4(metroRequire, {}),
-                                        };
-                                        tmp4 = React4(hasOwnProperty, obj2);
-                                      } else if (0 === mutualGuilds.length) {
-                                        const obj3 = {
-                                          style: closure_4.emptyState,
-                                          children: React4(NoMutualServers.NoMutualServers, {}),
-                                        };
-                                        tmp4 = React4(hasOwnProperty, obj3);
+                                        tmp11 = jsx;
+                                        tmp12 = View;
+                                        obj1 = { style: null, children: null };
+                                        tmp13 = closure_4;
+                                        obj1.style = closure_4.loadingState;
+                                        tmp14 = jsx;
+                                        tmp15 = ActivityIndicator;
+                                        obj1.children = jsx(ActivityIndicator, {});
+                                        tmp4 = jsx(View, obj1);
                                       } else {
-                                        let obj = {
-                                          data: mutualGuilds,
-                                          keyExtractor(guild) {
+                                        num = 0;
+                                        if (0 === arr.length) {
+                                          tmp5 = jsx;
+                                          tmp6 = View;
+                                          obj4 = { style: null, children: null };
+                                          tmp7 = closure_4;
+                                          obj4.style = closure_4.emptyState;
+                                          tmp8 = jsx;
+                                          tmp9 = closure_0;
+                                          tmp10 = closure_2;
+                                          obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                          tmp4 = jsx(View, obj4);
+                                        } else {
+                                          tmp = jsx;
+                                          tmp2 = closure_0;
+                                          tmp3 = closure_2;
+                                          obj = { data: null, keyExtractor: null, renderItem: null };
+                                          obj.data = arr;
+                                          obj.keyExtractor = function keyExtractor(guild) {
                                             return guild.guild.id;
-                                          },
-                                          renderItem(start) {
+                                          };
+                                          obj.renderItem = function renderItem(start) {
                                             const item = start.item;
-                                            const obj = {
+                                            return closure_1_9(closure_1_13, {
                                               user: item,
                                               mutualGuild: item,
                                               onPress() {
@@ -936,74 +1010,91 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                               },
                                               start: start.start,
                                               end: start.end,
-                                            };
-                                            return closure_1_9(closure_1_13, obj);
-                                          },
-                                        };
-                                        tmp4 = React4(
-                                          UserProfileStackedActionSheet.UserProfileStackedActionSheetList,
-                                          obj,
-                                        );
+                                            });
+                                          };
+                                          tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                        }
                                       }
                                       return tmp4;
                                     }
                                   }
                                   let obj2 = { state: tmp30 };
-                                  tmp39[0] = closure_9(user(onPressMutualFriend[26]).Tabs, obj2);
-                                  let obj3 = { state: tmp30 };
+                                  tmp39[0] = closure_9(tmp(tmp2[26]).Tabs, obj2);
                                   const tmp40 = closure_9(closure_5, tmp39);
-                                  const tmp41 = closure_9(user(onPressMutualFriend[27]).SegmentedControlPages, obj3);
+                                  let obj3 = { state: tmp30 };
+                                  const tmp41 = closure_9(tmp(tmp2[27]).SegmentedControlPages, obj3);
                                   cResult[35] = tmp30;
                                   cResult[36] = tmp40;
                                   cResult[37] = tmp41;
-                                  tmp37 = tmp41;
+                                  let tmp37 = tmp41;
                                 } else {
                                   class B {
-                                    constructor(nativeEvent) {
-                                      closure_5(nativeEvent.nativeEvent.layout.width);
+                                    constructor(arg0) {
+                                      tmp = closure_5(user.nativeEvent.layout.width);
+                                      return;
                                     }
                                   }
                                   tmp37 = cResult[37];
                                 }
                                 if (cResult[38] === tmp4.container) {
                                   class B {
-                                    constructor(nativeEvent) {
-                                      closure_5(nativeEvent.nativeEvent.layout.width);
+                                    constructor(arg0) {
+                                      tmp = closure_5(user.nativeEvent.layout.width);
+                                      return;
                                     }
                                   }
                                 }
-                                const obj4 = { scrollable: true, title: tmp35, children: closure_10(closure_5, obj5) };
-                                obj5 = { style: tmp4.container, onLayout: B, children: items };
-                                items = [tmp36, tmp37];
-                                const tmp7Result = guildId(onPressMutualFriend[20]);
+                                const obj4 = { scrollable: true, title: tmp35, children: null };
+                                const obj5 = { style: tmp4.container, onLayout: B, children: null };
+                                const items = [tmp36, tmp37];
+                                obj5.children = items;
+                                obj4.children = closure_10(closure_5, obj5);
+                                const tmp47 = closure_9(tmp7(tmp2[20]), obj4);
                                 cResult[38] = tmp4.container;
                                 cResult[39] = tmp36;
                                 cResult[40] = tmp37;
-                                cResult[41] = closure_9(tmp7Result, obj4);
-                                const tmp47 = closure_9(tmp7Result, obj4);
+                                cResult[41] = tmp47;
+                                const tmp7Result = tmp7(tmp2[20]);
                               }
                             }
                             class F {
                               constructor() {
-                                let tmp4;
+                                arr = mutualGuilds;
                                 if (null == mutualGuilds) {
-                                  const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                                  tmp4 = React4(hasOwnProperty, obj2);
-                                } else if (0 === mutualGuilds.length) {
-                                  const obj3 = {
-                                    style: closure_4.emptyState,
-                                    children: React4(NoMutualServers.NoMutualServers, {}),
-                                  };
-                                  tmp4 = React4(hasOwnProperty, obj3);
+                                  tmp11 = jsx;
+                                  tmp12 = View;
+                                  obj1 = { style: null, children: null };
+                                  tmp13 = closure_4;
+                                  obj1.style = closure_4.loadingState;
+                                  tmp14 = jsx;
+                                  tmp15 = ActivityIndicator;
+                                  obj1.children = jsx(ActivityIndicator, {});
+                                  tmp4 = jsx(View, obj1);
                                 } else {
-                                  let obj = {
-                                    data: mutualGuilds,
-                                    keyExtractor(guild) {
+                                  num = 0;
+                                  if (0 === arr.length) {
+                                    tmp5 = jsx;
+                                    tmp6 = View;
+                                    obj4 = { style: null, children: null };
+                                    tmp7 = closure_4;
+                                    obj4.style = closure_4.emptyState;
+                                    tmp8 = jsx;
+                                    tmp9 = closure_0;
+                                    tmp10 = closure_2;
+                                    obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                    tmp4 = jsx(View, obj4);
+                                  } else {
+                                    tmp = jsx;
+                                    tmp2 = closure_0;
+                                    tmp3 = closure_2;
+                                    obj = { data: null, keyExtractor: null, renderItem: null };
+                                    obj.data = arr;
+                                    obj.keyExtractor = function keyExtractor(guild) {
                                       return guild.guild.id;
-                                    },
-                                    renderItem(start) {
+                                    };
+                                    obj.renderItem = function renderItem(start) {
                                       const item = start.item;
-                                      const obj = {
+                                      return closure_1_9(closure_1_13, {
                                         user: item,
                                         mutualGuild: item,
                                         onPress() {
@@ -1011,11 +1102,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                         },
                                         start: start.start,
                                         end: start.end,
-                                      };
-                                      return closure_1_9(closure_1_13, obj);
-                                    },
-                                  };
-                                  tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                      });
+                                    };
+                                    tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                  }
                                 }
                                 return tmp4;
                               }
@@ -1030,25 +1120,42 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                           class F {
                             constructor() {
-                              let tmp4;
+                              arr = mutualGuilds;
                               if (null == mutualGuilds) {
-                                const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                                tmp4 = React4(hasOwnProperty, obj2);
-                              } else if (0 === mutualGuilds.length) {
-                                const obj3 = {
-                                  style: closure_4.emptyState,
-                                  children: React4(NoMutualServers.NoMutualServers, {}),
-                                };
-                                tmp4 = React4(hasOwnProperty, obj3);
+                                tmp11 = jsx;
+                                tmp12 = View;
+                                obj1 = { style: null, children: null };
+                                tmp13 = closure_4;
+                                obj1.style = closure_4.loadingState;
+                                tmp14 = jsx;
+                                tmp15 = ActivityIndicator;
+                                obj1.children = jsx(ActivityIndicator, {});
+                                tmp4 = jsx(View, obj1);
                               } else {
-                                let obj = {
-                                  data: mutualGuilds,
-                                  keyExtractor(guild) {
+                                num = 0;
+                                if (0 === arr.length) {
+                                  tmp5 = jsx;
+                                  tmp6 = View;
+                                  obj4 = { style: null, children: null };
+                                  tmp7 = closure_4;
+                                  obj4.style = closure_4.emptyState;
+                                  tmp8 = jsx;
+                                  tmp9 = closure_0;
+                                  tmp10 = closure_2;
+                                  obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                                  tmp4 = jsx(View, obj4);
+                                } else {
+                                  tmp = jsx;
+                                  tmp2 = closure_0;
+                                  tmp3 = closure_2;
+                                  obj = { data: null, keyExtractor: null, renderItem: null };
+                                  obj.data = arr;
+                                  obj.keyExtractor = function keyExtractor(guild) {
                                     return guild.guild.id;
-                                  },
-                                  renderItem(start) {
+                                  };
+                                  obj.renderItem = function renderItem(start) {
                                     const item = start.item;
-                                    const obj = {
+                                    return closure_1_9(closure_1_13, {
                                       user: item,
                                       mutualGuild: item,
                                       onPress() {
@@ -1056,11 +1163,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                       },
                                       start: start.start,
                                       end: start.end,
-                                    };
-                                    return closure_1_9(closure_1_13, obj);
-                                  },
-                                };
-                                tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                                    });
+                                  };
+                                  tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                                }
                               }
                               return tmp4;
                             }
@@ -1089,22 +1195,42 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               }
               class F {
                 constructor() {
-                  let tmp4;
+                  arr = mutualGuilds;
                   if (null == mutualGuilds) {
-                    const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-                    tmp4 = React4(hasOwnProperty, obj2);
-                  } else if (0 === mutualGuilds.length) {
-                    const obj3 = { style: closure_4.emptyState, children: React4(NoMutualServers.NoMutualServers, {}) };
-                    tmp4 = React4(hasOwnProperty, obj3);
+                    tmp11 = jsx;
+                    tmp12 = View;
+                    obj1 = { style: null, children: null };
+                    tmp13 = closure_4;
+                    obj1.style = closure_4.loadingState;
+                    tmp14 = jsx;
+                    tmp15 = ActivityIndicator;
+                    obj1.children = jsx(ActivityIndicator, {});
+                    tmp4 = jsx(View, obj1);
                   } else {
-                    let obj = {
-                      data: mutualGuilds,
-                      keyExtractor(guild) {
+                    num = 0;
+                    if (0 === arr.length) {
+                      tmp5 = jsx;
+                      tmp6 = View;
+                      obj4 = { style: null, children: null };
+                      tmp7 = closure_4;
+                      obj4.style = closure_4.emptyState;
+                      tmp8 = jsx;
+                      tmp9 = closure_0;
+                      tmp10 = closure_2;
+                      obj4.children = jsx(closure_0(closure_2[21]).NoMutualServers, {});
+                      tmp4 = jsx(View, obj4);
+                    } else {
+                      tmp = jsx;
+                      tmp2 = closure_0;
+                      tmp3 = closure_2;
+                      obj = { data: null, keyExtractor: null, renderItem: null };
+                      obj.data = arr;
+                      obj.keyExtractor = function keyExtractor(guild) {
                         return guild.guild.id;
-                      },
-                      renderItem(start) {
+                      };
+                      obj.renderItem = function renderItem(start) {
                         const item = start.item;
-                        const obj = {
+                        return closure_1_9(closure_1_13, {
                           user: item,
                           mutualGuild: item,
                           onPress() {
@@ -1112,11 +1238,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                           },
                           start: start.start,
                           end: start.end,
-                        };
-                        return closure_1_9(closure_1_13, obj);
-                      },
-                    };
-                    tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+                        });
+                      };
+                      tmp4 = jsx(closure_0(closure_2[20]).UserProfileStackedActionSheetList, obj);
+                    }
                   }
                   return tmp4;
                 }
@@ -1133,22 +1258,21 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function o() {
-        let tmp4;
         if (null == mutualFriends) {
-          const obj2 = { style: closure_4.loadingState, children: React4(metroRequire, {}) };
-          tmp4 = React4(hasOwnProperty, obj2);
+          const obj2 = { style: closure_4.loadingState, children: options(timestampProducer, {}) };
+          let tmp4 = options(hasOwnProperty, obj2);
         } else if (0 === mutualFriends.length) {
-          const obj3 = { style: closure_4.emptyState, children: React4(NoMutualFriends.NoMutualFriends, {}) };
-          tmp4 = React4(hasOwnProperty, obj3);
+          const obj3 = { style: closure_4.emptyState, children: options(NoMutualFriends.NoMutualFriends, {}) };
+          tmp4 = options(hasOwnProperty, obj3);
         } else {
-          let obj = {
+          const obj = {
             data: mutualFriends,
             keyExtractor(user) {
               return user.user.id;
             },
             renderItem(start) {
               const item = start.item;
-              const obj = {
+              return closure_1_9(closure_1_12, {
                 mutualFriend: item,
                 guildId,
                 onPress() {
@@ -1156,11 +1280,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 },
                 start: start.start,
                 end: start.end,
-              };
-              return closure_1_9(closure_1_12, obj);
+              });
             },
           };
-          tmp4 = React4(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
+          tmp4 = options(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, obj);
         }
         return tmp4;
       };
@@ -1171,61 +1294,48 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4.loadingState;
       cResult[5] = fn;
       tmp9 = fn;
+      const tmp5 = onPressMutualGuild(noop.useState(0), 2);
     }
   : (user) => {
-      let closure_4;
-      let first;
-      let guildId;
-      let intl;
-      let items;
-      let items1;
-      let mutualFriends;
-      let mutualGuilds;
-      let num;
-      let obj12;
-      let tmp11;
-      let tmp11Result;
-      let tmp12;
       user = user.user;
       ({ guildId: importDefault, onPressMutualFriend: dependencyMap, onPressMutualGuild: _slicedToArray } = user);
-      react = undefined;
-      const section = user.section;
+      noop = undefined;
       const tmp = closure_11();
-      let obj = react;
-      [first, react] = react.useState(0);
+      const tmp2 = _slicedToArray(noop.useState(0), 2);
+      noop = tmp2[1];
       ({ mutualFriends, mutualGuilds } = useUserProfileMutualsDefault(user));
-      useUserProfileMutualsDefault(user);
-      const obj2 = { pageWidth: first, defaultIndex: num, items };
-      num = 0;
-      const useSegmentedControlState = user(9317).useSegmentedControlState;
-      user(9317);
-      if (section === UserProfileSections.MUTUAL_GUILDS) {
+      const obj = noop;
+      const tmp5 = useUserProfileMutualsDefault(user);
+      const obj3 = { pageWidth: tmp2[0], defaultIndex: null, items: null };
+      let num = 0;
+      if (user.section === UserProfileSections.MUTUAL_GUILDS) {
         num = 1;
       }
+      obj3.defaultIndex = num;
       let length;
-      const tmp4Result = getMutualFriendsLabelDefault;
+      const obj2 = user(9317);
       if (mutualFriends != null) {
         length = mutualFriends.length;
       }
-      const obj3 = { id: "mutual-friends", label: tmp4Result(length), page: tmp12 };
+      const obj4 = { id: "mutual-friends", label: getMutualFriendsLabelDefault(length), page: null };
       if (null == mutualFriends) {
-        const obj4 = { style: tmp.loadingState, children: closure_9(closure_6, {}) };
-        tmp12 = closure_9(closure_5, obj4);
-        tmp11 = closure_9;
+        const obj5 = { style: tmp.loadingState, children: closure_9(closure_6, {}) };
+        let tmp10 = closure_9(closure_5, obj5);
+        let tmp9 = closure_9;
       } else if (0 === mutualFriends.length) {
-        const obj5 = { style: tmp.emptyState, children: closure_9(user(12291).NoMutualFriends, {}) };
-        tmp12 = closure_9(closure_5, obj5);
-        tmp11 = closure_9;
+        const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12291).NoMutualFriends, {}) };
+        tmp10 = closure_9(closure_5, obj6);
+        tmp9 = closure_9;
       } else {
-        tmp11 = closure_9;
-        const obj6 = {
+        tmp9 = closure_9;
+        const obj7 = {
           data: mutualFriends,
           keyExtractor(user) {
             return user.user.id;
           },
           renderItem(start) {
             const item = start.item;
-            const obj = {
+            return closure_1_9(closure_1_12, {
               mutualFriend: item,
               guildId,
               onPress() {
@@ -1233,34 +1343,34 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               },
               start: start.start,
               end: start.end,
-            };
-            return closure_1_9(closure_1_12, obj);
+            });
           },
         };
-        tmp12 = closure_9(tmp7(10854).UserProfileStackedActionSheetList, obj6);
+        tmp10 = closure_9(tmp6(10854).UserProfileStackedActionSheetList, obj7);
       }
-      items = [obj3];
+      obj4.page = tmp10;
+      const items = [obj4];
       let length1;
-      const tmp4Result3 = getMutualGuildsLabelDefault;
+      const tmp3Result = getMutualFriendsLabelDefault;
       if (mutualGuilds != null) {
         length1 = mutualGuilds.length;
       }
-      const obj7 = { id: "mutual-guilds", label: tmp4Result3(length1), page: tmp11Result };
+      const obj8 = { id: "mutual-guilds", label: getMutualGuildsLabelDefault(length1), page: null };
       if (null == mutualGuilds) {
-        const obj8 = { style: tmp.loadingState, children: tmp11(closure_6, {}) };
-        tmp11Result = tmp11(closure_5, obj8);
+        const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
+        let tmp9Result = tmp9(closure_5, obj9);
       } else if (0 === mutualGuilds.length) {
-        const obj9 = { style: tmp.emptyState, children: tmp11(user(12286).NoMutualServers, {}) };
-        tmp11Result = tmp11(closure_5, obj9);
+        const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12286).NoMutualServers, {}) };
+        tmp9Result = tmp9(closure_5, obj10);
       } else {
-        const obj10 = {
+        const obj11 = {
           data: mutualGuilds,
           keyExtractor(guild) {
             return guild.guild.id;
           },
           renderItem(start) {
             const item = start.item;
-            const obj = {
+            return closure_1_9(closure_1_13, {
               user: item,
               mutualGuild: item,
               onPress() {
@@ -1268,32 +1378,30 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               },
               start: start.start,
               end: start.end,
-            };
-            return closure_1_9(closure_1_13, obj);
+            });
           },
         };
-        tmp11Result = tmp11(tmp7(10854).UserProfileStackedActionSheetList, obj10);
+        tmp9Result = tmp9(tmp6(10854).UserProfileStackedActionSheetList, obj11);
       }
-      items[1] = obj7;
-      const segmentedControlState = useSegmentedControlState(obj2);
+      obj8.page = tmp9Result;
+      items[1] = obj8;
+      obj3.items = items;
+      const segmentedControlState = obj2.useSegmentedControlState(obj3);
       const callback = obj.useCallback((nativeEvent) => {
         closure_4(nativeEvent.nativeEvent.layout.width);
       }, []);
-      const obj11 = {
-        scrollable: true,
-        title: intl.string(user(1126).t["l2/aLi"]),
-        children: closure_10(closure_5, obj12),
-      };
-      const tmp4Result4 = UserProfileStackedActionSheetDefault;
-      intl = tmp7(1126).intl;
-      obj12 = { style: tmp.container, onLayout: callback, children: items1 };
-      items1 = [,];
-      const obj13 = { children: tmp11(user(12297).Tabs, { state: segmentedControlState }) };
-      items1[0] = tmp11(closure_5, obj13);
-      items1[1] = tmp11(user(10987).SegmentedControlPages, { state: segmentedControlState });
-      return tmp11(tmp4Result4, obj11);
+      const obj12 = { scrollable: true, title: null, children: null };
+      const tmp3Result3 = getMutualGuildsLabelDefault;
+      const intl = tmp6(1126).intl;
+      obj12.title = intl.string(user(1126).t["l2/aLi"]);
+      const obj13 = { style: tmp.container, onLayout: callback, children: null };
+      const tmp3Result4 = UserProfileStackedActionSheetDefault;
+      const items1 = [
+        tmp9(closure_5, { children: tmp9(user(12297).Tabs, { state: segmentedControlState }) }),
+        tmp9(user(10987).SegmentedControlPages, { state: segmentedControlState }),
+      ];
+      obj13.children = items1;
+      obj12.children = closure_10(closure_5, obj13);
+      return tmp9(tmp3Result4, obj12);
     };
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
-
-export default tmp6;
-export const MutualGuildRow = tmp5;
+export const MutualGuildRow = tmp4;

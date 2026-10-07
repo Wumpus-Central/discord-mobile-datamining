@@ -1,100 +1,70 @@
 // discord_app/modules/user_settings/billing/native/OrbsFlowTestModal.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import LayerScope2 from "../../../../design/components/Layers/native/LayerScope.native.tsx";
+import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import getNavigationModalPresentationDefault from "../../../main_tabs_v2/native/utils/getNavigationModalPresentation.tsx";
 import BalanceWidgetMenuDefault from "../../../virtual_currency/native/BalanceWidgetMenu.tsx";
 import OrbCheckoutMenuDefault from "../../../virtual_currency/native/OrbCheckoutMenu.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-let _require;
-
-let c10;
-let c9;
-let metroImportAll;
-let metroImportDefault;
-let obj2;
-let obj3;
-let obj4;
+require = fn;
 function BalanceWidgetPillSection() {
-  let balance;
-  let closure_1;
-  let first1;
-  let items2;
-  let items3;
   const tmp = closure_12();
-  [balance, closure_1] = react.useState(1000);
-  [first1, closure_3] = react.useState("1000");
+  [balance, closure_1] = noop.useState(1000);
+  [first1, closure_3] = noop.useState("1000");
   const items = [first1];
-  const callback = react.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     closure_3(arg0);
   }, []);
   const items1 = [balance];
-  const callback1 = react.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     const parsed = parseInt(first1, 10);
-    let tmp3 = !isNaN(parsed);
-    isNaN(parsed);
-    if (tmp3) {
+    const isNaNResult = isNaN(parsed);
+    let tmp3 = !isNaNResult;
+    if (!isNaNResult) {
       tmp3 = parsed >= 0;
     }
     if (tmp3) {
       closure_1(parsed);
     }
   }, items);
-  const callback2 = react.useCallback(() => {
-    let intl;
-    let intl2;
-    let obj2;
-    let obj3;
-    let paths;
-    let obj = { balance, primaryButtonConfig: obj2, secondaryButtonConfig: obj3 };
-    obj2 = {
-      buttonText: intl.string(intl3.t.cpT0Cq),
-      onButtonPress() {
-        const obj = closure_1_1(paths[16]);
-        obj.hideActionSheet();
-      },
+  const callback2 = noop.useCallback(() => {
+    const obj2 = { balance, primaryButtonConfig: null, secondaryButtonConfig: null };
+    const obj3 = { buttonText: null, onButtonPress: null };
+    const intl = util.intl;
+    obj3.buttonText = intl.string(util.t.cpT0Cq);
+    obj3.onButtonPress = function onButtonPress() {
+      closure_1_1(paths[16]).hideActionSheet();
     };
-    const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-    ActionSheetActionCreatorsDefault;
-    intl = intl3.intl;
-    obj3 = {
-      buttonText: intl2.string(intl3.t.WAI6xu),
-      onButtonPress() {
-        const obj = closure_1_1(paths[16]);
-        obj.hideActionSheet();
-      },
+    obj2.primaryButtonConfig = obj3;
+    const obj4 = { buttonText: null, onButtonPress: null };
+    const intl2 = util.intl;
+    obj4.buttonText = intl2.string(util.t.WAI6xu);
+    obj4.onButtonPress = function onButtonPress() {
+      closure_1_1(paths[16]).hideActionSheet();
     };
-    intl2 = intl3.intl;
-    openLazy(
-      () => {
-        const promise = balance(paths[18])(paths[17], paths.paths);
-        return promise.then((result) => result.default);
-      },
+    obj2.secondaryButtonConfig = obj4;
+    ActionSheetActionCreatorsDefault.openLazy(
+      () => balance(paths[18])(paths[17], paths.paths).then((result) => result.default),
       "OrbsFlowTestModalBalanceWidgetMenuKey",
-      obj,
+      obj2,
     );
   }, items1);
-  let obj = { spacing: 16, style: tmp.container, children: items2 };
-  const Stack = balance(first1[15]).Stack;
-  let obj2 = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Pill" };
-  items2 = [
-    closure_9(balance(first1[13]).Text, obj2),
+  const obj = { spacing: 16, style: tmp.container, children: null };
+  const items2 = [
+    closure_9(balance(first1[13]).Text, {
+      variant: "text-lg/semibold",
+      style: tmp.title,
+      children: "Balance Widget Pill",
+    }),
     closure_9(balance(first1[20]).TextInput, {
       value: first1,
       onChange: callback,
@@ -103,53 +73,50 @@ function BalanceWidgetPillSection() {
     }),
     closure_9(balance(first1[21]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }),
   ];
-  let obj3 = { style: tmp.balancePillContainer, children: items3 };
-  items3 = [
+  let obj3 = { style: tmp.balancePillContainer, children: null };
+  const items3 = [
     closure_9(balance(first1[22]).BalanceWidgetPill, { balance }),
     closure_9(balance(first1[23]).BalanceWidgetPillButton, { balance, onPress: callback2 }),
   ];
+  obj3.children = items3;
   items2[3] = closure_10(closure_8, obj3);
-  return closure_10(Stack, obj);
+  obj.children = items2;
+  return closure_10(balance(first1[15]).Stack, obj);
 }
 let closure_3 = ["children"];
-({ ScrollView: metroImportDefault, View: metroImportAll } = react_native);
-({ jsx: c9, jsxs: c10 } = Fragment);
-let closure_11 = NativeStackView.createNativeStackNavigator();
-let ReactCompilerGating = ReactCompilerGating_mod;
+get_ActivityIndicator = fn(17);
+({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const NativeStackNavigator = fn(7568);
+let closure_11 = NativeStackNavigator.createNativeStackNavigator();
+let ReactCompilerGating = fn(558);
+const createStyles = fn(4896);
+let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let accessibilityNativeStackOptions;
-      let tmp3;
-      let tmp4;
-      let tmp9;
+      const cResult = accessibilityNativeStackOptions(576).c(5);
       let obj = accessibilityNativeStackOptions(576);
-      const cResult = obj.c(5);
-      let obj2 = accessibilityNativeStackOptions(6503);
-      accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
+      accessibilityNativeStackOptions = accessibilityNativeStackOptions(6503).useAccessibilityNativeStackOptions();
       if (cResult[0] !== accessibilityNativeStackOptions) {
         const fn = function n(navigation) {
-          let obj2;
-          let obj = {
+          const obj = {
             headerTitle(children) {
-              children = children.children;
-              const obj = { title: children };
-              const tmp = closure_1_5(children, closure_1_3);
-              const GenericHeaderTitle = accessibilityNativeStackOptions(closure_1_2[9]).GenericHeaderTitle;
-              const merged = Object.assign(tmp);
-              return closure_1_9(GenericHeaderTitle, obj);
+              const merged = Object.assign(closure_1_5(children, closure_1_3));
+              return closure_1_9(accessibilityNativeStackOptions(closure_1_2[9]).GenericHeaderTitle, {
+                title: children.children,
+              });
             },
-            headerLeft: obj2.getRenderModalCloseImage(navigation),
+            headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
             headerTitleAlign: "center",
           };
-          navigation = navigation.navigation;
-          obj2 = HeaderShared;
           let merged = Object.assign(accessibilityNativeStackOptions);
           const merged1 = Object.assign(getNavigationModalPresentationDefault());
           return obj;
         };
         cResult[0] = accessibilityNativeStackOptions;
         cResult[1] = fn;
-        tmp3 = fn;
+        let tmp3 = fn;
       } else {
         tmp3 = cResult[1];
       }
@@ -163,7 +130,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp8 = closure_9(closure_11.Screen, obj3);
         cResult[2] = tmp8;
-        tmp4 = tmp8;
+        let tmp4 = tmp8;
       } else {
         tmp4 = cResult[2];
       }
@@ -172,126 +139,106 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp12 = closure_9(closure_11.Navigator, obj4);
         cResult[3] = tmp3;
         cResult[4] = tmp12;
-        tmp9 = tmp12;
+        let tmp9 = tmp12;
       } else {
         tmp9 = cResult[4];
       }
       return tmp9;
     }
   : () => {
-      let closure_0;
-      let obj3;
-      let obj = require("Navigator");
-      _require = obj.useAccessibilityNativeStackOptions();
-      let obj2 = {
+      _require = require("Navigator").useAccessibilityNativeStackOptions();
+      const obj2 = {
         screenOptions(navigation) {
-          let obj2;
-          let obj = {
+          const obj = {
             headerTitle(children) {
-              children = children.children;
               const merged = Object.assign(children, Object.assign({ children: 0 }));
-              const obj = { title: children };
-              const GenericHeaderTitle = closure_1_0(closure_1_2[9]).GenericHeaderTitle;
               const merged1 = Object.assign(merged);
-              return closure_1_9(GenericHeaderTitle, obj);
+              return closure_1_9(closure_1_0(closure_1_2[9]).GenericHeaderTitle, { title: children.children });
             },
-            headerLeft: obj2.getRenderModalCloseImage(navigation),
+            headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
             headerTitleAlign: "center",
           };
-          navigation = navigation.navigation;
-          obj2 = HeaderShared;
           let merged = Object.assign(closure_0);
           let merged1 = Object.assign(getNavigationModalPresentationDefault());
           return obj;
         },
-        children: closure_9(closure_11.Screen, obj3),
+        children: closure_9(closure_11.Screen, {
+          name: "OrbsFlowTest",
+          options() {
+            return { title: "Orbs Flow Test" };
+          },
+          component,
+        }),
       };
-      const Navigator = closure_11.Navigator;
-      obj3 = {
-        name: "OrbsFlowTest",
-        options() {
-          return { title: "Orbs Flow Test" };
-        },
-        component,
-      };
-      return closure_9(Navigator, obj2);
+      return closure_9(closure_11.Navigator, obj2);
     };
-let createStyles = createStyles_mod;
-let obj = { wrap: obj2, container: obj3, title: { marginBottom: 8 }, balancePillContainer: obj4 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-createStyles = createStyles.createStyles;
-obj3 = { padding: nativeDefault.space.PX_16 };
-obj4 = {
+obj.wrap = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.container = { padding: nativeDefault.space.PX_16 };
+obj.title = { marginBottom: 8 };
+const obj6 = { padding: nativeDefault.space.PX_16 };
+obj.balancePillContainer = {
   flexDirection: "row",
   justifyContent: "center",
   marginBottom: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_16,
 };
-let closure_12 = createStyles(obj);
-ReactCompilerGating = ReactCompilerGating_mod;
+let closure_12 = createStyles.createStyles(obj);
+ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let items;
-      let tmp5;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(6);
+      const cResult = c.c(6);
       const tmp4 = closure_12();
       if (cResult[0] !== tmp4.title) {
         const obj2 = { variant: "text-lg/semibold", style: tmp4.title, children: "Balance Widget Menu" };
-        const tmp7 = React4(Text_Text.Text, obj2);
+        const tmp7 = options(Text_Text.Text, obj2);
         cResult[0] = tmp4.title;
         cResult[1] = tmp7;
-        tmp5 = tmp7;
+        let tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = React4(BalanceWidgetMenuDefault, {});
+        const tmp11 = options(BalanceWidgetMenuDefault, {});
         cResult[2] = tmp11;
-        tmp8 = tmp11;
+        let tmp8 = tmp11;
       } else {
         tmp8 = cResult[2];
       }
       if (cResult[3] === tmp4.container) {
-        let tmp12;
         if (cResult[4] === tmp5) {
-          tmp12 = cResult[5];
+          let tmp12 = cResult[5];
         }
         return tmp12;
       }
-      const obj3 = { spacing: 16, style: tmp4.container, children: items };
-      items = [tmp5, tmp8];
-      const tmp13 = authStore(Stack_Stack.Stack, obj3);
+      const obj3 = { spacing: 16, style: tmp4.container, children: null };
+      const items = [tmp5, tmp8];
+      obj3.children = items;
+      const tmp13 = v65535(Stack_Stack.Stack, obj3);
       cResult[3] = tmp4.container;
       cResult[4] = tmp5;
       cResult[5] = tmp13;
       tmp12 = tmp13;
     }
   : () => {
-      let items;
       const tmp = closure_12();
-      const obj = { spacing: 16, style: tmp.container, children: items };
-      const Stack = Stack_Stack.Stack;
-      items = [,];
-      const obj2 = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
-      items[0] = React4(Text_Text.Text, obj2);
-      items[1] = React4(BalanceWidgetMenuDefault, {});
-      return authStore(Stack, obj);
+      const obj = { spacing: 16, style: tmp.container, children: null };
+      const items = [
+        options(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }),
+        options(BalanceWidgetMenuDefault, {}),
+      ];
+      obj.children = items;
+      return v65535(Stack_Stack.Stack, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = fn(558);
 const component = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let items;
-      let obj4;
-      const obj = react2;
-      const cResult = obj.c(12);
+      const cResult = c.c(12);
       const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { includeKeyboardHeight: true };
         cResult[0] = obj2;
-        first = obj2;
+        let first = obj2;
       } else {
         first = cResult[0];
       }
@@ -299,41 +246,37 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === insets.bottom) {
         if (cResult[2] === insets.left) {
           if (cResult[3] === insets.right) {
-            let tmp7;
-            let tmp10;
-            let tmp9;
-            let tmp8;
             if (cResult[4] === insets.top) {
-              tmp7 = cResult[5];
+              let tmp7 = cResult[5];
             }
             const _Symbol = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp13 = React4(closure_13, {});
-              const tmp15 = React4(BalanceWidgetPillSection, {});
-              const tmp16 = React4(OrbCheckoutMenuDefault, {});
+              const tmp13 = options(closure_13, {});
+              const tmp15 = options(BalanceWidgetPillSection, {});
+              const tmp16 = options(OrbCheckoutMenuDefault, {});
               cResult[6] = tmp13;
               cResult[7] = tmp15;
               cResult[8] = tmp16;
-              tmp10 = tmp16;
-              tmp9 = tmp15;
-              tmp8 = tmp13;
+              let tmp10 = tmp16;
+              let tmp9 = tmp15;
+              let tmp8 = tmp13;
             } else {
               tmp8 = cResult[6];
               tmp9 = cResult[7];
               tmp10 = cResult[8];
             }
             if (cResult[9] === tmp4.wrap) {
-              let tmp17;
               if (cResult[10] === tmp7) {
-                tmp17 = cResult[11];
+                let tmp17 = cResult[11];
               }
               return tmp17;
             }
-            const obj3 = { children: authStore(metroImportDefault, obj4) };
-            obj4 = { style: tmp4.wrap, contentContainerStyle: tmp7, children: items };
-            items = [tmp8, tmp9, tmp10];
-            const LayerScope = LayerScope2.LayerScope;
-            const tmp21 = React4(LayerScope, obj3);
+            const obj3 = { children: null };
+            const obj4 = { style: tmp4.wrap, contentContainerStyle: tmp7, children: null };
+            const items = [tmp8, tmp9, tmp10];
+            obj4.children = items;
+            obj3.children = v65535(React5, obj4);
+            const tmp21 = options(LayerScope.LayerScope, obj3);
             cResult[9] = tmp4.wrap;
             cResult[10] = tmp7;
             cResult[11] = tmp21;
@@ -355,26 +298,34 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
       tmp7 = obj5;
     }
   : () => {
-      let items;
-      let obj2;
-      const tmp = closure_12();
       const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
-      const obj = { children: authStore(metroImportDefault, obj2) };
-      obj2 = {
-        style: tmp.wrap,
+      const obj = { children: null };
+      const obj2 = {
+        style: closure_12().wrap,
         contentContainerStyle: {
           paddingBottom: insets.bottom,
           paddingTop: insets.top,
           paddingLeft: insets.left,
           paddingRight: insets.right,
         },
-        children: items,
+        children: null,
       };
-      const LayerScope = LayerScope2.LayerScope;
-      items = [React4(closure_13, {}), React4(BalanceWidgetPillSection, {}), React4(OrbCheckoutMenuDefault, {})];
-      return React4(LayerScope, obj);
+      const items = [
+        options(closure_13, {}),
+        options(BalanceWidgetPillSection, {}),
+        options(OrbCheckoutMenuDefault, {}),
+      ];
+      obj2.children = items;
+      obj.children = v65535(React5, obj2);
+      return options(LayerScope.LayerScope, obj);
     };
-const memoResult = react.memo(tmp4);
+const obj7 = {
+  flexDirection: "row",
+  justifyContent: "center",
+  marginBottom: nativeDefault.space.PX_16,
+  gap: nativeDefault.space.PX_16,
+};
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/billing/native/OrbsFlowTestModal.tsx");
 
-export default memoResult;
+export default noop.memo(tmp4);

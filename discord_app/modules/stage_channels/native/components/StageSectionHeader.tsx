@@ -2,35 +2,24 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06660_AssetRegistry.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _modDef6660 from "../../../../../_runtime/metro/06660__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let obj1;
-
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-let obj2;
-let obj3;
-({ TouchableOpacity: c3, View: closure_4 } = react_native);
-({ jsxs: hasOwnProperty, jsx: metroRequire } = Fragment);
-let createStyles = createStyles_mod;
-let obj = {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   section: { height: 48, paddingHorizontal: 4 },
   children: { marginLeft: 12 },
   collapseButton: { marginLeft: "auto" },
-  collapseIcon: obj2,
-  audience: obj3,
+  collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
+  audience: null,
 };
-obj2 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.audience = {
   height: 48,
   flex: 1,
   flexDirection: "row",
@@ -40,89 +29,84 @@ obj3 = {
   paddingHorizontal: 4,
   borderRadius: nativeDefault.radii.xs,
 };
-let closure_7 = createStyles(obj);
+let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: 'function StageSectionHeaderTsx1(){const{withTiming,collapsed}=this.__closure;return{transform:[{rotate:withTiming(collapsed?"180deg":"0deg",{duration:150})}]};}',
 };
 const __initData2 = {
   code: "function StageSectionHeaderTsx2(){const{withTiming,collapsed}=this.__closure;return{transform:[{rotate:withTiming(collapsed?'180deg':'0deg',{duration:150})}]};}",
 };
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj4 = {
+  height: 48,
+  flex: 1,
+  flexDirection: "row",
+  alignItems: "center",
+  borderBottomWidth: 1,
+  borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
+  paddingHorizontal: 4,
+  borderRadius: nativeDefault.radii.xs,
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let children;
-      let collapsed;
-      let count;
-      let items;
-      let items1;
-      let label;
-      let onToggleCollapse;
-      let obj = collapsed(576);
-      const cResult = obj.c(23);
+      const cResult = collapsed(576).c(23);
       ({ label, count, collapsed } = arg0);
       ({ onToggleCollapse, children } = arg0);
       const tmp4 = closure_7();
-      const obj2 = collapsed(4618);
+      let obj = collapsed(576);
       const fn = function n() {
-        let items;
         let str = "0deg";
-        const withTiming = timing.withTiming;
-        timing;
         if (collapsed) {
           str = "180deg";
         }
-        const obj = { transform: items };
-        items = [{ rotate: withTiming(str, { duration: 150 }) }];
-        ({ rotate: withTiming(str, { duration: 150 }) });
-        return obj;
+        const obj2 = { transform: null };
+        const items = [{ rotate: timing.withTiming(str, { duration: 150 }) }];
+        obj2.transform = items;
+        return obj2;
       };
+      let obj2 = collapsed(4618);
       fn.__closure = { withTiming: collapsed(4897).withTiming, collapsed };
       fn.__workletHash = 8513320305499;
       fn.__initData = __initData;
-      ({ withTiming: collapsed(4897).withTiming, collapsed });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       if (cResult[0] === count) {
-        let tmp6;
         if (cResult[1] === label) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
         if (cResult[3] === children) {
-          let tmp8;
-          let tmp13;
           if (cResult[4] === tmp4.children) {
-            tmp8 = cResult[5];
+            let tmp8 = cResult[5];
           }
           if (cResult[6] !== tmp4.collapseIcon) {
-            const obj4 = { source: AssetRegistryDefault, style: tmp4.collapseIcon };
-            const Icon = collapsed(1188).Icon;
-            const tmp16 = closure_6(Icon, obj4);
+            const obj4 = { source: _modDef6660, style: tmp4.collapseIcon };
+            const tmp16 = closure_6(collapsed(1188).Icon, obj4);
             cResult[6] = tmp4.collapseIcon;
             cResult[7] = tmp16;
-            tmp13 = tmp16;
+            let tmp13 = tmp16;
           } else {
             tmp13 = cResult[7];
           }
           if (cResult[8] === tmp13) {
-            let tmp17;
             if (cResult[9] === animatedStyle) {
-              tmp17 = cResult[10];
+              let tmp17 = cResult[10];
             }
             if (cResult[11] === tmp4.collapseButton) {
-              let tmp21;
               if (cResult[12] === tmp17) {
-                tmp21 = cResult[13];
+                let tmp21 = cResult[13];
               }
               if (cResult[14] === onToggleCollapse) {
                 if (cResult[15] === tmp4.audience) {
                   if (cResult[16] === tmp6) {
                     if (cResult[17] === tmp8) {
-                      let tmp25;
                       if (cResult[18] === tmp21) {
-                        tmp25 = cResult[19];
+                        let tmp25 = cResult[19];
                       }
                       if (cResult[20] === tmp4.section) {
-                        let tmp29;
                         if (cResult[21] === tmp25) {
-                          tmp29 = cResult[22];
+                          let tmp29 = cResult[22];
                         }
                         return tmp29;
                       }
@@ -136,8 +120,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const obj6 = { style: tmp4.audience, onPress: onToggleCollapse, children: items };
-              items = [tmp6, tmp8, tmp21];
+              const obj6 = { style: tmp4.audience, onPress: onToggleCollapse, children: null };
+              let items = [tmp6, tmp8, tmp21];
+              obj6.children = items;
               const tmp28 = closure_5(closure_3, obj6);
               cResult[14] = onToggleCollapse;
               cResult[15] = tmp4.audience;
@@ -175,77 +160,67 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "text-md/semibold",
         color: "text-overlay-light",
         accessibilityRole: "header",
-        children: items1,
+        children: null,
       };
-      items1 = [label, " \u2014 ", count];
+      const items1 = [label, " \u2014 ", count];
+      obj10.children = items1;
       const tmp7 = closure_5(collapsed(4892).Text, obj10);
       cResult[0] = count;
       cResult[1] = label;
       cResult[2] = tmp7;
       tmp6 = tmp7;
+      const obj3 = { withTiming: collapsed(4897).withTiming, collapsed };
     }
   : (collapsed) => {
-      let Icon;
-      let View;
-      let count;
-      let items;
-      let items1;
-      let label;
-      let obj4;
-      let obj8;
-      let obj9;
-      let onToggleCollapse;
       collapsed = collapsed.collapsed;
       const children = collapsed.children;
       ({ label, count, onToggleCollapse } = collapsed);
       const tmp = closure_7();
-      let obj = collapsed(4618);
-      const tmp2 = collapsed;
       class T {
         constructor() {
-          tmp = closure_0(closure_2[8]);
+          obj = closure_0(closure_2[8]);
           str = "0deg";
-          withTiming = tmp.withTiming;
           if (collapsed) {
             str = "180deg";
           }
-          obj = { transform: null };
-          obj1 = { rotate: withTiming(str, { duration: 150 }) };
+          obj1 = { transform: null };
+          obj4 = { rotate: obj.withTiming(str, { duration: 150 }) };
           items = [];
-          items[0] = obj1;
-          obj.transform = items;
-          return obj;
+          items[0] = obj4;
+          obj1.transform = items;
+          return obj1;
         }
       }
-      const obj2 = { withTiming: collapsed(4897).withTiming, collapsed };
-      T.__closure = obj2;
+      let obj = collapsed(4618);
+      const tmp2 = collapsed;
+      T.__closure = { withTiming: collapsed(4897).withTiming, collapsed };
       T.__workletHash = 13209446315864;
       T.__initData = __initData2;
-      const obj3 = { style: tmp.section, children: closure_5(closure_3, obj4) };
-      obj4 = { style: tmp.audience, onPress: onToggleCollapse, children: items1 };
+      const obj3 = { style: tmp.section, children: null };
+      const obj4 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
       const animatedStyle = obj.useAnimatedStyle(T);
       const obj5 = {
         variant: "text-md/semibold",
         color: "text-overlay-light",
         accessibilityRole: "header",
-        children: items,
+        children: null,
       };
-      items = [label, " \u2014 ", count];
-      items1 = [closure_5(collapsed(4892).Text, obj5), ,];
+      let items = [label, " \u2014 ", count];
+      obj5.children = items;
+      const items1 = [closure_5(collapsed(4892).Text, obj5), ,];
       let tmp5Result = null != children;
       if (tmp5Result) {
         const obj6 = { style: tmp.children, children };
         tmp5Result = closure_6(closure_4, obj6);
       }
       items1[1] = tmp5Result;
-      const obj7 = { style: tmp.collapseButton, children: closure_6(View, obj8) };
-      obj8 = { style: animatedStyle, children: closure_6(Icon, obj9) };
-      View = ReanimatedRexportDefault.View;
-      obj9 = { source: AssetRegistryDefault, style: tmp.collapseIcon };
-      Icon = tmp2(1188).Icon;
+      const obj7 = { style: tmp.collapseButton, children: null };
+      const obj8 = { style: animatedStyle, children: null };
+      let obj2 = { withTiming: collapsed(4897).withTiming, collapsed };
+      obj8.children = closure_6(tmp2(1188).Icon, { source: _modDef6660, style: tmp.collapseIcon });
+      obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
       items1[2] = closure_6(closure_4, obj7);
+      obj4.children = items1;
+      obj3.children = closure_5(closure_3, obj4);
       return closure_6(closure_4, obj3);
     };
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
-
-export default tmp6;

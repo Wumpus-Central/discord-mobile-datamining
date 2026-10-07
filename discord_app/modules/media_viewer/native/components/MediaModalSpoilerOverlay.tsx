@@ -1,171 +1,153 @@
 // discord_app/modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl3 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import ImageWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
-import PlatformUtils_mod from "../../../../utils/PlatformUtils.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let PlatformUtils;
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let unsafe_rawColors;
-({ StyleSheet: closure_4, View: hasOwnProperty } = react_native);
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let createStyles = createStyles_mod;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4896);
 let obj = {
   spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 },
-  obscureContentContainer: obj2,
-  spoilerOverlayBackground: obj3,
+  obscureContentContainer: {
+    gap: nativeDefault.space.PX_4,
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
+  },
+  spoilerOverlayBackground: null,
 };
-obj2 = { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-createStyles = createStyles.createStyles;
-obj3 = {
+let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   borderRadius: nativeDefault.radii.lg,
   height: nativeDefault.space.PX_32,
-  backgroundColor: PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600,
+  backgroundColor: null,
   flexGrow: 0,
   justifyContent: "center",
   alignItems: "center",
   alignSelf: "center",
 };
-PlatformUtils = PlatformUtils_mod;
+let PlatformUtils = fn(1369);
 PlatformUtils = PlatformUtils.isAndroid();
-unsafe_rawColors = nativeDefault.unsafe_rawColors;
-let closure_8 = createStyles(obj);
-const memoResult = react.memo(
+const unsafe_rawColors = nativeDefault.unsafe_rawColors;
+obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
+obj.spoilerOverlayBackground = obj4;
+let closure_8 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let obj3 = { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (index) => {
-        let Text;
-        let intl2;
-        let items;
-        let items1;
-        let obj9;
-        let source;
-        let str2;
-        let style;
-        const obj = react2;
-        const cResult = obj.c(17);
-        ({ style, source } = index);
-        index = index.index;
+        const cResult = c.c(17);
+        ({ style, source: spoilerOverlayBackground } = index);
         const tmp4 = closure_8();
-        const obj2 = useToken;
-        const token = obj2.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
-        const obj3 = useMediaItemSpoilerState;
-        const tmp7 = _slicedToArray(obj3.useMediaItemSpoilerState(index), 2);
+        const token = useToken.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
+        const tmp7 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index.index), 2);
         if (tmp7[0]) {
-          if (cResult[0] === tmp7[1]) {
-            let tmp10;
-            let str;
+          if (cResult[0] === tmp8) {
             if (cResult[1] === style) {
-              tmp10 = cResult[2];
+              let tmp10 = cResult[2];
             }
-            if (source.obscure) {
-              str = "dark";
+            if (spoilerOverlayBackground.obscure) {
+              let str = "dark";
             } else {
-              PlatformUtils;
+              PlatformUtils2;
               str = "light";
             }
             if (cResult[3] === token) {
-              let tmp12;
-              let tmp19;
               if (cResult[4] === str) {
-                tmp12 = cResult[5];
+                let tmp12 = cResult[5];
               }
-              if (cResult[6] === source.obscure) {
+              if (cResult[6] === spoilerOverlayBackground.obscure) {
                 if (cResult[7] === tmp4.obscureContentContainer) {
-                  let tmp16;
                   if (cResult[8] === tmp4.spoilerOverlayBackground) {
-                    tmp16 = cResult[9];
-                  }
-                  if (cResult[10] === tmp4.spoilerOverlayContainer) {
-                    let tmp23;
-                    if (cResult[11] === tmp16) {
-                      tmp23 = cResult[12];
-                    }
-                    if (cResult[13] === tmp10) {
-                      if (cResult[14] === tmp12) {
-                        let tmp27;
-                        if (cResult[15] === tmp23) {
-                          tmp27 = cResult[16];
-                        }
-                        return tmp27;
+                    if (cResult[10] === tmp4.spoilerOverlayContainer) {
+                      if (cResult[11] === tmp16) {
+                        let tmp24 = cResult[12];
                       }
+                      if (cResult[13] === tmp10) {
+                        if (cResult[14] === tmp12) {
+                          if (cResult[15] === tmp24) {
+                            let tmp28 = cResult[16];
+                          }
+                          return tmp28;
+                        }
+                      }
+                      const obj4 = { style: tmp10, children: null };
+                      const items = [tmp12, tmp24];
+                      obj4.children = items;
+                      const tmp30 = React5(ReanimatedRexportDefault.View, obj4);
+                      cResult[13] = tmp10;
+                      cResult[14] = tmp12;
+                      cResult[15] = tmp24;
+                      cResult[16] = tmp30;
+                      tmp28 = tmp30;
                     }
-                    const obj4 = { style: tmp10, children: items };
-                    items = [tmp12, tmp23];
-                    const tmp29 = metroImportDefault(ReanimatedRexportDefault.View, obj4);
-                    cResult[13] = tmp10;
-                    cResult[14] = tmp12;
-                    cResult[15] = tmp23;
-                    cResult[16] = tmp29;
-                    tmp27 = tmp29;
+                    const obj5 = { style: tmp4.spoilerOverlayContainer, children: cResult[9] };
+                    const tmp27 = timestampProducer(hasOwnProperty, obj5);
+                    cResult[10] = tmp4.spoilerOverlayContainer;
+                    cResult[11] = cResult[9];
+                    cResult[12] = tmp27;
+                    tmp24 = tmp27;
                   }
-                  const obj5 = { style: tmp4.spoilerOverlayContainer, children: tmp16 };
-                  const tmp26 = metroRequire(hasOwnProperty, obj5);
-                  cResult[10] = tmp4.spoilerOverlayContainer;
-                  cResult[11] = tmp16;
-                  cResult[12] = tmp26;
-                  tmp23 = tmp26;
                 }
               }
-              if (source.obscure) {
-                const obj6 = { style: tmp4.obscureContentContainer, children: items1 };
-                items1 = [metroRequire(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "white" })];
+              if (spoilerOverlayBackground.obscure) {
+                const obj6 = { style: tmp4.obscureContentContainer, children: null };
+                const items1 = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "white" })];
                 const obj7 = {
                   accessibilityRole: "text",
                   variant: "heading-md/medium",
                   color: "text-overlay-light",
-                  children: intl2.string(intl3.t.SpxcUR),
+                  children: null,
                 };
-                const Text2 = Text_Text.Text;
-                intl2 = intl3.intl;
-                items1[1] = metroRequire(Text2, obj7);
-                tmp19 = metroImportDefault(hasOwnProperty, obj6);
+                const intl2 = util.intl;
+                obj7.children = intl2.string(util.t.SpxcUR);
+                items1[1] = timestampProducer(Text_Text.Text, obj7);
+                obj6.children = items1;
+                let tmp19 = React5(hasOwnProperty, obj6);
               } else {
-                const obj8 = { style: tmp4.spoilerOverlayBackground, children: metroRequire(Text, obj9) };
-                obj9 = {
+                const obj8 = { style: tmp4.spoilerOverlayBackground, children: null };
+                const obj9 = {
                   accessibilityRole: "text",
                   variant: "heading-md/medium",
                   color: "text-overlay-light",
-                  children: str2.toUpperCase(),
+                  children: null,
                 };
-                Text = Text_Text.Text;
-                const intl = intl3.intl;
-                str2 = intl.string(intl3.t["F+x38C"]);
-                tmp19 = metroRequire(hasOwnProperty, obj8);
+                const intl = util.intl;
+                obj9.children = intl.string(util.t["F+x38C"]).toUpperCase();
+                obj8.children = timestampProducer(Text_Text.Text, obj9);
+                tmp19 = timestampProducer(hasOwnProperty, obj8);
+                const str2 = intl.string(util.t["F+x38C"]);
               }
-              cResult[6] = source.obscure;
-              cResult[7] = tmp4.obscureContentContainer;
-              cResult[8] = tmp4.spoilerOverlayBackground;
+              cResult[6] = spoilerOverlayBackground.obscure;
+              ({ obscureContentContainer: tmp3[7], spoilerOverlayBackground } = tmp4);
+              cResult[8] = spoilerOverlayBackground;
               cResult[9] = tmp19;
-              tmp16 = tmp19;
             }
-            const obj10 = { blurTheme: str, android_fallbackColor: token, style: React3.absoluteFill };
-            const tmp15 = metroRequire(VisualEffectViewDefault, obj10);
+            const obj10 = { blurTheme: str, android_fallbackColor: token, style: React4.absoluteFill };
+            const tmp15 = timestampProducer(VisualEffectViewDefault, obj10);
             cResult[3] = token;
             cResult[4] = str;
             cResult[5] = tmp15;
             tmp12 = tmp15;
           }
-          const items2 = [style, React3.absoluteFill, tmp7[1]];
-          cResult[0] = tmp7[1];
+          const items2 = [style, React4.absoluteFill, tmp8];
+          cResult[0] = tmp8;
           cResult[1] = style;
           cResult[2] = items2;
           tmp10 = items2;
@@ -174,71 +156,63 @@ const memoResult = react.memo(
         }
       }
     : (source) => {
-        let index;
-        let intl2;
-        let items;
-        let items1;
-        let str2;
-        let style;
-        let tmp11Result;
         source = source.source;
         ({ style, index } = source);
-        const tmp = closure_8();
-        const obj = useToken;
-        const token = obj.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
-        let tmp9Result2 = null;
-        const obj2 = useMediaItemSpoilerState;
-        const tmp6 = _slicedToArray(obj2.useMediaItemSpoilerState(index), 2);
-        if (tmp6[0]) {
-          let str;
-          const obj3 = { style: items, children: items1 };
-          items = [style, React3.absoluteFill, tmp7];
-          const View = ReanimatedRexportDefault.View;
-          const tmp4Result = VisualEffectViewDefault;
+        let items2 = closure_8();
+        let stringResult = dependencyMap;
+        const token = useToken.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
+        if (!tmp5[0]) {
+          return null;
+        } else {
+          const obj3 = { style: null, children: null };
+          const items = [style, React4.absoluteFill, tmp6];
+          obj3.style = items;
           if (source.obscure) {
-            str = "dark";
+            let str = "dark";
           } else {
-            PlatformUtils;
+            PlatformUtils2;
             str = "light";
           }
-          const obj4 = { blurTheme: str, android_fallbackColor: token, style: React3.absoluteFill };
-          items1 = [metroRequire(tmp4Result, obj4)];
+          const obj4 = { blurTheme: str, android_fallbackColor: token, style: React4.absoluteFill };
+          const items1 = [timestampProducer(VisualEffectViewDefault, obj4)];
+          let obj5 = { style: items2.spoilerOverlayContainer, children: null };
           const obj6 = { style: null, children: null };
-          const obj5 = { style: tmp.spoilerOverlayContainer, children: tmp11Result };
           if (source.obscure) {
-            obj6.style = tmp.obscureContentContainer;
-            const items2 = [metroRequire(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "white" })];
+            obj6.style = items2.obscureContentContainer;
+            items2 = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "white" })];
             const obj7 = {
               accessibilityRole: "text",
               variant: "heading-md/medium",
               color: "text-overlay-light",
-              children: intl2.string(intl3.t.SpxcUR),
+              children: null,
             };
-            const Text2 = Text_Text.Text;
-            intl2 = intl3.intl;
-            items2[1] = metroRequire(Text2, obj7);
+            const intl2 = util.intl;
+            stringResult = intl2.string(util.t.SpxcUR);
+            obj7.children = stringResult;
+            items2[1] = timestampProducer(Text_Text.Text, obj7);
             obj6.children = items2;
-            tmp11Result = metroImportDefault(hasOwnProperty, obj6);
+            let tmp9Result = React5(hasOwnProperty, obj6);
           } else {
-            obj6.style = tmp.spoilerOverlayBackground;
+            obj6.style = items2.spoilerOverlayBackground;
             const obj8 = {
               accessibilityRole: "text",
               variant: "heading-md/medium",
               color: "text-overlay-light",
-              children: str2.toUpperCase(),
+              children: null,
             };
-            const Text = Text_Text.Text;
-            const intl = intl3.intl;
-            str2 = intl.string(intl3.t["F+x38C"]);
-            obj6.children = metroRequire(Text, obj8);
-            tmp11Result = metroRequire(hasOwnProperty, obj6);
+            const intl = util.intl;
+            obj8.children = intl.string(util.t["F+x38C"]).toUpperCase();
+            obj6.children = timestampProducer(Text_Text.Text, obj8);
+            tmp9Result = timestampProducer(hasOwnProperty, obj6);
+            const str2 = intl.string(util.t["F+x38C"]);
           }
-          items1[1] = metroRequire(hasOwnProperty, obj5);
-          tmp9Result2 = metroImportDefault(View, obj3);
+          obj5.children = tmp9Result;
+          obj5 = timestampProducer(hasOwnProperty, obj5);
+          items1[1] = obj5;
+          obj3.children = items1;
+          React5(ReanimatedRexportDefault.View, obj3);
+          const tmp3Result = VisualEffectViewDefault;
         }
-        return tmp9Result2;
+        tmp5 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);
       },
 );
-const result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx");
-
-export default memoResult;

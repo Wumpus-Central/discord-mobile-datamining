@@ -1,12 +1,10 @@
 // discord_app/modules/guild_sidebar/native/VoiceUserItem.tsx
-import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Constants from "../../../Constants.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import MicrophoneSlashIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/05824_AssetRegistry.js";
+import _modDef5824 from "../../../../_runtime/metro/05824__.js";
 import HeadphonesDenyIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
@@ -15,37 +13,28 @@ import getConsoleIcon from "../../game_console/native/getConsoleIcon.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import VoiceUserNameItemDefault from "VoiceUserNameItem.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
-import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-let _require, member, source;
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-let size;
-const View = react_native.View;
-const AnalyticEvents = Constants.AnalyticEvents;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+const View = fn(17).View;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
-const XSMALL_20 = native.AvatarSizes.XSMALL_20;
-let createStyles = createStyles_mod;
+const XSMALL_20 = fn(1188).AvatarSizes.XSMALL_20;
+const createStyles = fn(4896);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
-  voiceStateCollapsed: size,
-  voiceStateIcon: obj2,
-  legacyVoiceStateIcon: obj3,
-  gameIcon: { marginLeft: 6 },
+  voiceStateCollapsed: null,
+  voiceStateIcon: null,
+  legacyVoiceStateIcon: null,
+  gameIcon: null,
 };
-size = {
+let size = {
   marginTop: 4,
   marginRight: 8,
   width: 32,
@@ -56,19 +45,24 @@ size = {
   alignItems: "center",
   overflow: "hidden",
 };
-createStyles = createStyles.createStyles;
-obj2 = { marginLeft: 6 };
+obj.voiceStateCollapsed = size;
+const ChannelListLayout = fn(11712);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
-obj3 = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
-let closure_11 = createStyles(obj);
-const memoResult = react.memo(
+obj.voiceStateIcon = { marginLeft: 6 };
+obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
+obj.gameIcon = { marginLeft: 6 };
+let closure_11 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let obj3 = { marginLeft: 6 };
+let obj4 = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserItem.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (member) => {
-        let user;
         _require = member;
-        let tmp = user;
-        let obj = require("react");
-        const cResult = obj.c(80);
+        const cResult = require("c").c(80);
         member = member.member;
         user = member.user;
         const guildId = member.guildId;
@@ -84,11 +78,12 @@ const memoResult = react.memo(
         const platform = member.platform;
         const isInEmbeddedActivity = member.isInEmbeddedActivity;
         const voicePlatform = member.voicePlatform;
-        const tmp3 = video();
-        let closure_16 = tmp3;
+        let tmp3 = video();
+        closure_16 = tmp3;
+        let obj = require("c");
+        let tmp = user;
         let tmp4 = member;
-        let tmp5 = member(user[11])("channel_list");
-        const first = member(user[12])(user.id, guildId, tmp5)[0];
+        const first = member(user[12])(user.id, guildId, member(user[11])("channel_list"))[0];
         let application_id;
         if (first != null) {
           application_id = first.application_id;
@@ -96,163 +91,212 @@ const memoResult = react.memo(
         const gameRecord = tmp4(tmp[13])(application_id).gameRecord;
         if (cResult[0] === channelId) {
           if (cResult[1] === application_id) {
-            let tmp8;
             if (cResult[2] === guildId) {
-              tmp8 = cResult[3];
+              let tmp8 = cResult[3];
             }
             const onShown = tmp8;
             if (cResult[4] === guildId) {
               if (cResult[5] === member) {
-                let tmp9;
                 if (cResult[6] === user) {
-                  tmp9 = cResult[7];
+                  let tmp9 = cResult[7];
                 }
                 source = tmp9;
                 if (cResult[8] === tmp9) {
                   if (cResult[11] !== tmp9) {
                     class U {
                       constructor() {
-                        const obj = { source, size: XSMALL_20 };
-                        return metroRequire(native.Avatar, obj);
+                        obj = { source: closure_20, size: XSMALL_20 };
+                        return jsx(closure_0(closure_2[4]).Avatar, obj);
                       }
                     }
                     cResult[11] = tmp9;
                     class G {
                       constructor() {
-                        let obj2;
-                        const obj = {
-                          style: closure_16.voiceStateCollapsed,
-                          children: metroRequire(native.Avatar, obj2),
-                        };
-                        obj2 = { source, size: XSMALL_20 };
-                        return metroRequire(View, obj);
+                        obj = { style: closure_16.voiceStateCollapsed, children: null };
+                        obj1 = { source: closure_20, size: XSMALL_20 };
+                        obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
+                        return jsx(View, obj);
                       }
                     }
                     class X {
                       constructor() {
-                        let tmp = null;
-                        if (!disabled) {
-                          let tmp5;
+                        if (disabled) {
+                          return null;
+                        } else {
+                          tmp = serverMute;
                           if (serverMute) {
-                            const obj2 = {
-                              style: closure_16.voiceStateIcon,
-                              color: "text-feedback-critical",
-                              size: "custom",
-                            };
-                            tmp5 = metroRequire(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
-                          } else if (localMute) {
-                            const obj3 = { style: closure_16.voiceStateIcon, size: "custom", color };
-                            tmp5 = metroRequire(MicrophoneDenyIcon.MicrophoneDenyIcon, obj3);
+                            tmp15 = jsx;
+                            tmp16 = closure_0;
+                            tmp17 = closure_2;
+                            obj1 = { style: null, color: "text-feedback-critical", size: "custom" };
+                            tmp18 = closure_16;
+                            obj1.style = closure_16.voiceStateIcon;
+                            tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj1);
                           } else {
-                            tmp5 = null;
-                            if (mute) {
-                              const obj = { style: closure_16.voiceStateIcon, size: "custom", color };
-                              tmp5 = metroRequire(MicrophoneSlashIcon.MicrophoneSlashIcon, obj);
+                            tmp2 = localMute;
+                            if (localMute) {
+                              tmp10 = jsx;
+                              tmp11 = closure_0;
+                              tmp12 = closure_2;
+                              obj4 = { style: null, size: "custom", color: null };
+                              tmp13 = closure_16;
+                              obj4.style = closure_16.voiceStateIcon;
+                              tmp14 = c9;
+                              obj4.color = c9;
+                              tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj4);
+                            } else {
+                              tmp3 = mute;
+                              tmp4 = null;
+                              if (mute) {
+                                tmp5 = jsx;
+                                tmp6 = closure_0;
+                                tmp7 = closure_2;
+                                obj = { style: null, size: "custom", color: null };
+                                tmp8 = closure_16;
+                                obj.style = closure_16.voiceStateIcon;
+                                tmp9 = c9;
+                                obj.color = c9;
+                                tmp4 = jsx(closure_0(closure_2[18]).MicrophoneSlashIcon, obj);
+                              }
                             }
                           }
-                          tmp = tmp5;
+                          tmp19 = tmp4;
                         }
-                        return tmp;
+                        return;
                       }
                     }
                   } else {
                     class U {
                       constructor() {
-                        const obj = { source, size: XSMALL_20 };
-                        return metroRequire(native.Avatar, obj);
+                        obj = { source: closure_20, size: XSMALL_20 };
+                        return jsx(closure_0(closure_2[4]).Avatar, obj);
                       }
                     }
                   }
                   if (cResult[13] !== member) {
                     class U {
                       constructor() {
-                        const obj = { source, size: XSMALL_20 };
-                        return metroRequire(native.Avatar, obj);
+                        obj = { source: closure_20, size: XSMALL_20 };
+                        return jsx(closure_0(closure_2[4]).Avatar, obj);
                       }
                     }
                     cResult[13] = member;
                     class G {
                       constructor() {
-                        let obj2;
-                        const obj = {
-                          style: closure_16.voiceStateCollapsed,
-                          children: metroRequire(native.Avatar, obj2),
-                        };
-                        obj2 = { source, size: XSMALL_20 };
-                        return metroRequire(View, obj);
+                        obj = { style: closure_16.voiceStateCollapsed, children: null };
+                        obj1 = { source: closure_20, size: XSMALL_20 };
+                        obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
+                        return jsx(View, obj);
                       }
                     }
                     class X {
                       constructor() {
-                        let tmp = null;
-                        if (!disabled) {
-                          let tmp5;
+                        if (disabled) {
+                          return null;
+                        } else {
+                          tmp = serverMute;
                           if (serverMute) {
-                            const obj2 = {
-                              style: closure_16.voiceStateIcon,
-                              color: "text-feedback-critical",
-                              size: "custom",
-                            };
-                            tmp5 = metroRequire(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
-                          } else if (localMute) {
-                            const obj3 = { style: closure_16.voiceStateIcon, size: "custom", color };
-                            tmp5 = metroRequire(MicrophoneDenyIcon.MicrophoneDenyIcon, obj3);
+                            tmp15 = jsx;
+                            tmp16 = closure_0;
+                            tmp17 = closure_2;
+                            obj1 = { style: null, color: "text-feedback-critical", size: "custom" };
+                            tmp18 = closure_16;
+                            obj1.style = closure_16.voiceStateIcon;
+                            tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj1);
                           } else {
-                            tmp5 = null;
-                            if (mute) {
-                              const obj = { style: closure_16.voiceStateIcon, size: "custom", color };
-                              tmp5 = metroRequire(MicrophoneSlashIcon.MicrophoneSlashIcon, obj);
+                            tmp2 = localMute;
+                            if (localMute) {
+                              tmp10 = jsx;
+                              tmp11 = closure_0;
+                              tmp12 = closure_2;
+                              obj4 = { style: null, size: "custom", color: null };
+                              tmp13 = closure_16;
+                              obj4.style = closure_16.voiceStateIcon;
+                              tmp14 = c9;
+                              obj4.color = c9;
+                              tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj4);
+                            } else {
+                              tmp3 = mute;
+                              tmp4 = null;
+                              if (mute) {
+                                tmp5 = jsx;
+                                tmp6 = closure_0;
+                                tmp7 = closure_2;
+                                obj = { style: null, size: "custom", color: null };
+                                tmp8 = closure_16;
+                                obj.style = closure_16.voiceStateIcon;
+                                tmp9 = c9;
+                                obj.color = c9;
+                                tmp4 = jsx(closure_0(closure_2[18]).MicrophoneSlashIcon, obj);
+                              }
                             }
                           }
-                          tmp = tmp5;
+                          tmp19 = tmp4;
                         }
-                        return tmp;
+                        return;
                       }
                     }
                   } else {
                     class U {
                       constructor() {
-                        const obj = { source, size: XSMALL_20 };
-                        return metroRequire(native.Avatar, obj);
+                        obj = { source: closure_20, size: XSMALL_20 };
+                        return jsx(closure_0(closure_2[4]).Avatar, obj);
                       }
                     }
                   }
                   class G {
                     constructor() {
-                      let obj2;
-                      const obj = {
-                        style: closure_16.voiceStateCollapsed,
-                        children: metroRequire(native.Avatar, obj2),
-                      };
-                      obj2 = { source, size: XSMALL_20 };
-                      return metroRequire(View, obj);
+                      obj = { style: closure_16.voiceStateCollapsed, children: null };
+                      obj1 = { source: closure_20, size: XSMALL_20 };
+                      obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
+                      return jsx(View, obj);
                     }
                   }
                   class X {
                     constructor() {
-                      let tmp = null;
-                      if (!disabled) {
-                        let tmp5;
+                      if (disabled) {
+                        return null;
+                      } else {
+                        tmp = serverMute;
                         if (serverMute) {
-                          const obj2 = {
-                            style: closure_16.voiceStateIcon,
-                            color: "text-feedback-critical",
-                            size: "custom",
-                          };
-                          tmp5 = metroRequire(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
-                        } else if (localMute) {
-                          const obj3 = { style: closure_16.voiceStateIcon, size: "custom", color };
-                          tmp5 = metroRequire(MicrophoneDenyIcon.MicrophoneDenyIcon, obj3);
+                          tmp15 = jsx;
+                          tmp16 = closure_0;
+                          tmp17 = closure_2;
+                          obj1 = { style: null, color: "text-feedback-critical", size: "custom" };
+                          tmp18 = closure_16;
+                          obj1.style = closure_16.voiceStateIcon;
+                          tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj1);
                         } else {
-                          tmp5 = null;
-                          if (mute) {
-                            const obj = { style: closure_16.voiceStateIcon, size: "custom", color };
-                            tmp5 = metroRequire(MicrophoneSlashIcon.MicrophoneSlashIcon, obj);
+                          tmp2 = localMute;
+                          if (localMute) {
+                            tmp10 = jsx;
+                            tmp11 = closure_0;
+                            tmp12 = closure_2;
+                            obj4 = { style: null, size: "custom", color: null };
+                            tmp13 = closure_16;
+                            obj4.style = closure_16.voiceStateIcon;
+                            tmp14 = c9;
+                            obj4.color = c9;
+                            tmp4 = jsx(closure_0(closure_2[17]).MicrophoneDenyIcon, obj4);
+                          } else {
+                            tmp3 = mute;
+                            tmp4 = null;
+                            if (mute) {
+                              tmp5 = jsx;
+                              tmp6 = closure_0;
+                              tmp7 = closure_2;
+                              obj = { style: null, size: "custom", color: null };
+                              tmp8 = closure_16;
+                              obj.style = closure_16.voiceStateIcon;
+                              tmp9 = c9;
+                              obj.color = c9;
+                              tmp4 = jsx(closure_0(closure_2[18]).MicrophoneSlashIcon, obj);
+                            }
                           }
                         }
-                        tmp = tmp5;
+                        tmp19 = tmp4;
                       }
-                      return tmp;
+                      return;
                     }
                   }
                   cResult[15] = disabled;
@@ -264,10 +308,10 @@ const memoResult = react.memo(
                 }
                 class G {
                   constructor() {
-                    let obj2;
-                    const obj = { style: closure_16.voiceStateCollapsed, children: metroRequire(native.Avatar, obj2) };
-                    obj2 = { source, size: XSMALL_20 };
-                    return metroRequire(View, obj);
+                    obj = { style: closure_16.voiceStateCollapsed, children: null };
+                    obj1 = { source: closure_20, size: XSMALL_20 };
+                    obj.children = jsx(closure_0(closure_2[4]).Avatar, obj1);
+                    return jsx(View, obj);
                   }
                 }
                 cResult[8] = tmp9;
@@ -277,15 +321,19 @@ const memoResult = react.memo(
             }
             class O {
               constructor() {
+                tmp = member;
                 if (null != member) {
-                  let guildMemberAvatarSource;
-                  if (null != member.avatar) {
-                    const obj = AvatarUtilsDefault;
-                    guildMemberAvatarSource = obj.getGuildMemberAvatarSource(member, user);
+                  if (null != tmp.avatar) {
+                    tmp3 = closure_1;
+                    tmp4 = closure_2;
+                    obj = closure_1(closure_2[15]);
+                    tmp5 = user;
+                    guildMemberAvatarSource = obj.getGuildMemberAvatarSource(tmp, user);
                   }
                   return guildMemberAvatarSource;
                 }
                 guildMemberAvatarSource = user.getAvatarSource(guildId);
+                return;
               }
             }
             cResult[4] = guildId;
@@ -296,52 +344,35 @@ const memoResult = react.memo(
           }
         }
         const fn = function n() {
-          const obj = AnalyticsUtilsDefault;
-          const obj2 = { guild_id: guildId, channel_id: channelId, application_id };
-          obj.track(AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN, obj2);
+          AnalyticsUtilsDefault.track(AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN, {
+            guild_id: guildId,
+            channel_id: channelId,
+            application_id,
+          });
         };
         cResult[0] = channelId;
         cResult[1] = application_id;
         cResult[2] = guildId;
         cResult[3] = fn;
         tmp8 = fn;
+        const tmp5 = member(user[11])("channel_list");
       }
     : (guildId) => {
-        let collapsed;
-        let deaf;
-        let disabled;
-        let isInEmbeddedActivity;
-        let items2;
-        let localMute;
-        let mute;
-        let obj3;
-        let platform;
-        let require;
-        let serverDeaf;
-        let serverMute;
-        let stream;
-        let tmp8Result;
-        let user;
-        let video;
-        let voicePlatform;
         ({ member: require, user } = guildId);
         guildId = guildId.guildId;
         const channelId = guildId.channelId;
         ({ disabled, platform, isInEmbeddedActivity } = guildId);
         ({ collapsed, stream, serverMute, serverDeaf, mute, deaf, localMute, video, voicePlatform } = guildId);
         const tmp = closure_11();
-        const tmp4 = user(guildId[11])("channel_list");
-        const first = user(guildId[12])(user.id, guildId, tmp4)[0];
+        const first = user(guildId[12])(user.id, guildId, user(guildId[11])("channel_list"))[0];
         let application_id;
         if (first != null) {
           application_id = first.application_id;
         }
         function getSource() {
           if (null != _require) {
-            let guildMemberAvatarSource;
             if (null != _require.avatar) {
-              const obj = AvatarUtilsDefault;
-              guildMemberAvatarSource = obj.getGuildMemberAvatarSource(_require, user);
+              let guildMemberAvatarSource = AvatarUtilsDefault.getGuildMemberAvatarSource(_require, user);
             }
             return guildMemberAvatarSource;
           }
@@ -350,128 +381,115 @@ const memoResult = react.memo(
         const gameRecord = user(tmp3[13])(application_id).gameRecord;
         const items = [guildId, channelId, application_id];
         if (collapsed) {
-          let obj2 = { style: tmp.voiceStateCollapsed, children: closure_6(require("native").Avatar, obj3) };
-          obj3 = { source: getSource, size: XSMALL_20 };
-          tmp8Result = closure_6(application_id, obj2);
+          const obj2 = { style: tmp.voiceStateCollapsed, children: null };
+          const obj3 = { source: getSource, size: XSMALL_20 };
+          obj2.children = closure_6(require("native").Avatar, obj3);
+          let tmp8Result = closure_6(application_id, obj2);
         } else {
           const items1 = [tmp.voiceState];
           let disabled2 = disabled;
-          const tmp9 = application_id;
           if (disabled) {
             disabled2 = tmp.disabled;
           }
-          let obj = { style: items1, children: items2 };
+          let obj = { style: null, children: null };
           items1[1] = disabled2;
+          obj.style = items1;
           const obj4 = { source: getSource, size: XSMALL_20 };
-          items2 = [closure_6(require("native").Avatar, obj4), , , , , , , ,];
+          const items2 = [closure_6(require("native").Avatar, obj4), , , , , , , ,];
           const obj5 = { variant, color };
-          const tmp2Result = user(guildId[16]);
           const merged = Object.assign(guildId);
-          items2[1] = closure_6(tmp2Result, obj5);
-          let tmp19 = null;
-          if (!disabled) {
-            let tmp10Result;
-            if (serverMute) {
-              const obj6 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-              tmp10Result = closure_6(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj6);
-            } else if (localMute) {
-              const obj7 = { style: tmp.voiceStateIcon, size: "custom", color };
-              tmp10Result = closure_6(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj7);
-            } else {
-              tmp10Result = null;
-              if (mute) {
-                const obj8 = { style: tmp.voiceStateIcon, size: "custom", color };
-                tmp10Result = closure_6(require("MicrophoneSlashIcon").MicrophoneSlashIcon, obj8);
+          items2[1] = closure_6(user(tmp3[16]), obj5);
+          if (disabled) {
+            items2[2] = null;
+            if (disabled) {
+              items2[3] = null;
+              let tmp10Result = null;
+              if (video) {
+                tmp10Result = null;
+                if (!disabled) {
+                  const obj6 = { size: "custom", color, style: tmp.voiceStateIcon };
+                  tmp10Result = closure_6(require("VideoIcon").VideoIcon, obj6);
+                }
               }
-            }
-            tmp19 = tmp10Result;
-          }
-          items2[2] = tmp19;
-          let tmp21 = null;
-          if (!disabled) {
-            let tmp10Result7;
-            if (serverDeaf) {
-              const obj9 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-              tmp10Result7 = closure_6(require("HeadphonesDenyIcon").HeadphonesDenyIcon, obj9);
+              items2[4] = tmp10Result;
+              let tmp10Result7 = null;
+              if (isInEmbeddedActivity) {
+                const obj7 = {
+                  source: user(tmp3[23]),
+                  size: require("native").Icon.Sizes.REFRESH_SMALL_16,
+                  style: tmp.legacyVoiceStateIcon,
+                };
+                tmp10Result7 = closure_6(require("native").Icon, obj7);
+              }
+              items2[5] = tmp10Result7;
+              if (platform == null) {
+                platform = "";
+              }
+              let tmp2Result1Result = user(tmp3[22])(platform);
+              if (tmp2Result1Result == null) {
+                tmp2Result1Result = require("getConsoleIcon").getConsoleIconForVoicePlatform(voicePlatform);
+                const tmp11Result = require("getConsoleIcon");
+              }
+              let tmp10Result8 = null;
+              if (null != tmp2Result1Result) {
+                const obj8 = {
+                  source: tmp2Result1Result,
+                  size: require("native").Icon.Sizes.REFRESH_SMALL_16,
+                  style: tmp.legacyVoiceStateIcon,
+                };
+                tmp10Result8 = closure_6(require("native").Icon, obj8);
+              }
+              items2[6] = tmp10Result8;
+              let tmp10Result9 = null;
+              if (stream) {
+                const obj9 = { style: tmp.legacyVoiceStateIcon };
+                tmp10Result9 = closure_6(require("native").LiveTag, obj9);
+              }
+              items2[7] = tmp10Result9;
+              let tmp10Result10 = null;
+              if (!disabled) {
+                tmp10Result10 = null;
+                if (!isInEmbeddedActivity) {
+                  tmp10Result10 = null;
+                  if (null != gameRecord) {
+                    const obj10 = { game: gameRecord, size: 16, fallback: "none", style: tmp.gameIcon, onShown: tmp7 };
+                    tmp10Result10 = closure_6(user(tmp3[24]), obj10);
+                  }
+                }
+              }
+              items2[8] = tmp10Result10;
+              obj.children = items2;
+              tmp8Result = closure_7(tmp9, obj);
+              const tmp2Result2 = user(tmp3[22]);
+            } else if (serverDeaf) {
+              const obj11 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
+              let tmp10Result11 = closure_6(require("HeadphonesDenyIcon").HeadphonesDenyIcon, obj11);
             } else {
-              tmp10Result7 = null;
+              tmp10Result11 = null;
               if (deaf) {
-                const obj10 = { style: tmp.voiceStateIcon, size: "custom", color };
-                tmp10Result7 = closure_6(require("HeadphonesSlashIcon").HeadphonesSlashIcon, obj10);
+                const obj12 = { style: tmp.voiceStateIcon, size: "custom", color };
+                tmp10Result11 = closure_6(require("HeadphonesSlashIcon").HeadphonesSlashIcon, obj12);
               }
             }
-            tmp21 = tmp10Result7;
-          }
-          items2[3] = tmp21;
-          let tmp10Result8 = null;
-          if (video) {
-            tmp10Result8 = null;
-            if (!disabled) {
-              const obj11 = { size: "custom", color, style: tmp.voiceStateIcon };
-              tmp10Result8 = closure_6(require("VideoIcon").VideoIcon, obj11);
-            }
-          }
-          items2[4] = tmp10Result8;
-          let tmp10Result9 = null;
-          if (isInEmbeddedActivity) {
-            const obj12 = {
-              source: user(guildId[23]),
-              size: require("native").Icon.Sizes.REFRESH_SMALL_16,
-              style: tmp.legacyVoiceStateIcon,
-            };
-            const Icon = require("native").Icon;
-            tmp10Result9 = closure_6(Icon, obj12);
-          }
-          items2[5] = tmp10Result9;
-          const tmp2Result2 = user(guildId[22]);
-          if (platform == null) {
-            platform = "";
-          }
-          let tmp2Result1Result = tmp2Result2(platform);
-          if (tmp2Result1Result == null) {
-            const tmp11Result = require("getConsoleIcon");
-            tmp2Result1Result = tmp11Result.getConsoleIconForVoicePlatform(voicePlatform);
-          }
-          let tmp10Result10 = null;
-          if (null != tmp2Result1Result) {
-            const obj13 = {
-              source: tmp2Result1Result,
-              size: require("native").Icon.Sizes.REFRESH_SMALL_16,
-              style: tmp.legacyVoiceStateIcon,
-            };
-            const Icon2 = require("native").Icon;
-            tmp10Result10 = closure_6(Icon2, obj13);
-          }
-          items2[6] = tmp10Result10;
-          let tmp10Result11 = null;
-          if (stream) {
-            const obj14 = { style: tmp.legacyVoiceStateIcon };
-            tmp10Result11 = closure_6(require("native").LiveTag, obj14);
-          }
-          items2[7] = tmp10Result11;
-          let tmp10Result12 = null;
-          if (!disabled) {
+          } else if (serverMute) {
+            const obj13 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
+            let tmp10Result12 = closure_6(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj13);
+          } else if (localMute) {
+            const obj14 = { style: tmp.voiceStateIcon, size: "custom", color };
+            tmp10Result12 = closure_6(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj14);
+          } else {
             tmp10Result12 = null;
-            if (!isInEmbeddedActivity) {
-              tmp10Result12 = null;
-              if (null != gameRecord) {
-                const obj15 = { game: gameRecord, size: 16, fallback: "none", style: tmp.gameIcon, onShown: tmp7 };
-                tmp10Result12 = closure_6(user(tmp3[24]), obj15);
-              }
+            if (mute) {
+              const obj15 = { style: tmp.voiceStateIcon, size: "custom", color };
+              tmp10Result12 = closure_6(require("MicrophoneSlashIcon").MicrophoneSlashIcon, obj15);
             }
           }
-          items2[8] = tmp10Result12;
-          tmp8Result = closure_7(tmp9, obj);
+          const tmp2Result = user(tmp3[16]);
+          tmp9 = application_id;
         }
         return tmp8Result;
       },
 );
-size = size_mod;
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserItem.tsx");
-
-export default memoResult;
 export const getVoiceUserHeight = function getVoiceUserHeight(fontScale) {
-  const obj = useScaledTextLineHeight;
-  const scaleTextLineHeightResult = obj.scaleTextLineHeight(c8, fontScale);
-  return Math.max(scaleTextLineHeightResult, native.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
+  return Math.max(useScaledTextLineHeight.scaleTextLineHeight(c8, fontScale), native.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
 };

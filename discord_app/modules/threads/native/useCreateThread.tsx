@@ -1,35 +1,22 @@
 // discord_app/modules/threads/native/useCreateThread.tsx
-import MessageConstants from "../../messages/MessageConstants.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
-import DraftStore from "../../../stores/DraftStore.tsx";
 import MessageParserDefault from "../../messages/MessageParser.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import handleUploadAttachmentErrors from "../../media_uploads/handleUploadAttachmentErrors.native.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let files;
+const require = globalThis.__r;
 
-const DraftType = DraftStore.DraftType;
-const MessageSendLocation = MessageConstants.MessageSendLocation;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const DraftType = fn(7044).DraftType;
+const MessageSendLocation = fn(4889).MessageSendLocation;
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let _location;
-      let analyticsLocations;
-      let onThreadCreated;
-      let parentChannel;
-      let parentMessageId;
-      let privateThreadMode;
-      let threadSettings;
-      let tmp4;
-      let useDefaultThreadName;
-      const tmp = analyticsLocations;
-      let obj = analyticsLocations(576);
-      const cResult = obj.c(11);
+      const cResult = analyticsLocations(576).c(11);
       ({
         parentChannel,
         parentMessageId,
@@ -44,16 +31,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const fn = function n(id, attachmentsToUpload, arg2) {
           const guildId = id;
           const uploads = attachmentsToUpload;
-          id = id.id;
-          const sendMessage = MessageActionCreatorsDefault.sendMessage;
-          MessageActionCreatorsDefault;
-          let obj = MessageParserDefault;
-          let obj2 = {
+          let obj = MessageActionCreatorsDefault;
+          obj.sendMessage(id.id, MessageParserDefault.parse(id, arg2), undefined, {
             location: constants.THREAD_CREATION,
             attachmentsToUpload,
             onAttachmentUploadError(file, code, reason) {
               const obj = handleUploadAttachmentErrors;
-              const obj2 = { file, guildId: guildId.getGuildId(), analyticsLocations, code, reason };
               if (obj.handleUploadMessageAttachmentsErrors(obj2)) {
                 const obj4 = {
                   channelId: guildId.id,
@@ -61,16 +44,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   draftType: DraftType.FirstThreadMessage,
                   resetState: true,
                 };
-                const obj3 = UploadAttachmentActionCreatorsDefault;
-                obj3.setUploads(obj4);
+                UploadAttachmentActionCreatorsDefault.setUploads(obj4);
               }
+              obj2 = { file, guildId: guildId.getGuildId(), analyticsLocations, code, reason };
             },
-          };
-          sendMessage(id, obj.parse(id, arg2), undefined, obj2);
+          });
         };
         cResult[0] = analyticsLocations;
         cResult[1] = fn;
-        tmp4 = fn;
+        let tmp4 = fn;
       } else {
         tmp4 = cResult[1];
       }
@@ -81,12 +63,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[6] === parentMessageId) {
                 if (cResult[7] === privateThreadMode) {
                   if (cResult[8] === threadSettings) {
-                    let tmp5;
                     if (cResult[9] === useDefaultThreadName) {
-                      tmp5 = cResult[10];
+                      let tmp5 = cResult[10];
                     }
-                    const tmpResult = tmp(8840);
-                    return tmpResult.useCreateThreadCommon(tmp5);
+                    return tmp(8840).useCreateThreadCommon(tmp5);
                   }
                 }
               }
@@ -114,15 +94,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = useDefaultThreadName;
       cResult[10] = obj2;
       tmp5 = obj2;
+      let obj = analyticsLocations(576);
+      tmp = analyticsLocations;
     }
   : (arg0) => {
-      let _location;
-      let onThreadCreated;
-      let parentChannel;
-      let parentMessageId;
-      let privateThreadMode;
-      let threadSettings;
-      let useDefaultThreadName;
       ({
         parentChannel,
         parentMessageId,
@@ -133,8 +108,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         useDefaultThreadName,
       } = arg0);
       const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-      let obj = analyticsLocations(8840);
-      let obj2 = {
+      return analyticsLocations(8840).useCreateThreadCommon({
         parentChannel,
         parentMessageId,
         threadSettings,
@@ -145,16 +119,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         uploadHandler(id, attachmentsToUpload, arg2) {
           const guildId = id;
           const uploads = attachmentsToUpload;
-          id = id.id;
-          const sendMessage = MessageActionCreatorsDefault.sendMessage;
-          MessageActionCreatorsDefault;
-          let obj = MessageParserDefault;
-          let obj2 = {
+          let obj = MessageActionCreatorsDefault;
+          obj.sendMessage(id.id, MessageParserDefault.parse(id, arg2), undefined, {
             location: constants.THREAD_CREATION,
             attachmentsToUpload,
             onAttachmentUploadError(file, code, reason) {
               const obj = handleUploadAttachmentErrors;
-              const obj2 = { file, guildId: guildId.getGuildId(), analyticsLocations, code, reason };
               if (obj.handleUploadMessageAttachmentsErrors(obj2)) {
                 const obj4 = {
                   channelId: guildId.id,
@@ -162,33 +132,28 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   draftType: DraftType.FirstThreadMessage,
                   resetState: true,
                 };
-                const obj3 = UploadAttachmentActionCreatorsDefault;
-                obj3.setUploads(obj4);
+                UploadAttachmentActionCreatorsDefault.setUploads(obj4);
               }
+              obj2 = { file, guildId: guildId.getGuildId(), analyticsLocations, code, reason };
             },
-          };
-          sendMessage(id, obj.parse(id, arg2), undefined, obj2);
+          });
         },
-      };
-      return obj.useCreateThreadCommon(obj2);
+      });
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/useCreateThread.tsx");
+
+export default tmp2;
+export const useCreateForumPost = ReactCompilerGating.isReactCompilerEnabled()
   ? (parentChannel) => {
-      let analyticsLocations;
-      let appliedTags;
-      let onThreadCreated;
-      let threadSettings;
-      const tmp = parentChannel;
-      let obj = parentChannel(576);
-      const cResult = obj.c(10);
+      const cResult = require("c").c(10);
       parentChannel = parentChannel.parentChannel;
+      _require = parentChannel;
       ({ threadSettings, appliedTags, onThreadCreated } = parentChannel);
       analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
-        let tmp4;
         if (cResult[1] === parentChannel) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
         let str;
         if (threadSettings != null) {
@@ -202,12 +167,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[5] === onThreadCreated) {
               if (cResult[6] === parentChannel) {
                 if (cResult[7] === str) {
-                  let tmp6;
                   if (cResult[8] === tmp4) {
-                    tmp6 = cResult[9];
+                    let tmp6 = cResult[9];
                   }
-                  const tmpResult = tmp(8840);
-                  return tmpResult.useCreateForumPostCommon(tmp6);
+                  return tmp(8840).useCreateForumPostCommon(tmp6);
                 }
               }
             }
@@ -223,125 +186,129 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = obj2;
         tmp6 = obj2;
       }
-      let closure_0 = _asyncToGenerator(async (arg0) => {
-        let FirstThreadMessage;
-        let closure_1;
+      _require = asyncGeneratorStep(async (arg0) => {
         const guildId = arg0;
-        let c2 = 0;
-        let c3 = 0;
-        return (async function (arg0) {
-          const self = this;
-          const self2 = this;
-          const obj7 = new analyticsLocations(closure_2_2[12])();
-          const obj8 = guildId(closure_2_2[13]);
-          const maxFileSizeResult = obj8.maxFileSize(guildId.getGuildId());
-          const obj9 = guildId(closure_2_2[14]);
-          const effectiveUploadLimit = obj9.getEffectiveUploadLimit(maxFileSizeResult);
+        c2 = 0;
+        c3 = 0;
+        return (async (arg0) => {
+          analyticsLocations = tmp4;
+          closure_129_0 = guildId;
+          const obj7 = new analyticsLocations(7478)();
+          closure_129_1 = obj7;
+          const maxFileSizeResult = guildId(7283).maxFileSize(guildId.getGuildId());
+          closure_129_2 = maxFileSizeResult;
+          const effectiveUploadLimit = guildId(7308).getEffectiveUploadLimit(maxFileSizeResult);
           obj7.on("progress", (currentSize) => {
-            if (currentSize.currentSize > closure_3) {
-              obj7.cancel();
+            if (currentSize.currentSize > closure_1_3) {
+              analyticsLocations.cancel();
               const obj2 = {
-                channelId: guildId.id,
+                channelId: uploads.id,
                 uploads,
                 draftType: FirstThreadMessage.FirstThreadMessage,
                 resetState: true,
               };
-              const obj = obj7(baseMaxSize[10]);
-              obj.setUploads(obj2);
-              const obj3 = {
-                file: currentSize,
-                maxSize: tmp,
-                baseMaxSize,
-                guildId: guildId.getGuildId(),
-                analyticsLocations,
-              };
-              const tmp10 = obj7(baseMaxSize[15]);
-              tmp10(obj3);
+              analyticsLocations(8842).setUploads(obj2);
+              const obj3 = { file: currentSize, maxSize: tmp, baseMaxSize, guildId: null, analyticsLocations: null };
+              const obj = analyticsLocations(8842);
+              obj3.guildId = uploads.getGuildId();
+              obj3.analyticsLocations = analyticsLocations;
+              analyticsLocations(8845)(obj3);
+              const tmp10 = analyticsLocations(8845);
             }
           });
           await obj7.uploadFiles(guildId);
-          files = value;
-          let obj = { uploaderFile: obj7._file, files };
-          return obj;
+          closure_129_4 = value;
+          return { uploaderFile: closure_129_1._file, files: closure_129_4 };
         })();
       });
       const fn = function () {
-        return closure_0(...arguments);
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       };
       cResult[0] = analyticsLocations;
       cResult[1] = parentChannel;
       cResult[2] = fn;
       tmp4 = fn;
+      let obj = require("c");
+      tmp = _require;
     }
   : (parentChannel) => {
-      let appliedTags;
-      let onThreadCreated;
-      let str;
       parentChannel = parentChannel.parentChannel;
       const threadSettings = parentChannel.threadSettings;
       let analyticsLocations;
       ({ appliedTags, onThreadCreated } = parentChannel);
       analyticsLocations = analyticsLocations(6664)().analyticsLocations;
-      const useCallback = react.useCallback;
-      let closure_0 = _asyncToGenerator(async (arg0) => {
-        let FirstThreadMessage;
-        let closure_1;
+      _require = asyncGeneratorStep(async (arg0) => {
         const guildId = arg0;
-        let c2 = 0;
-        let c3 = 0;
-        return (async function (arg0) {
-          const self = this;
-          const self2 = this;
-          const obj7 = new analyticsLocations(closure_2_2[12])();
-          const obj8 = guildId(closure_2_2[13]);
-          const maxFileSizeResult = obj8.maxFileSize(guildId.getGuildId());
-          const obj9 = guildId(closure_2_2[14]);
-          const effectiveUploadLimit = obj9.getEffectiveUploadLimit(maxFileSizeResult);
+        c2 = 0;
+        c3 = 0;
+        return (async (arg0) => {
+          analyticsLocations = tmp4;
+          closure_129_0 = guildId;
+          const obj7 = new analyticsLocations(7478)();
+          closure_129_1 = obj7;
+          const maxFileSizeResult = guildId(7283).maxFileSize(guildId.getGuildId());
+          closure_129_2 = maxFileSizeResult;
+          const effectiveUploadLimit = guildId(7308).getEffectiveUploadLimit(maxFileSizeResult);
           obj7.on("progress", (currentSize) => {
-            if (currentSize.currentSize > closure_3) {
-              obj7.cancel();
+            if (currentSize.currentSize > closure_1_3) {
+              analyticsLocations.cancel();
               const obj2 = {
-                channelId: guildId.id,
+                channelId: uploads.id,
                 uploads,
                 draftType: FirstThreadMessage.FirstThreadMessage,
                 resetState: true,
               };
-              const obj = obj7(baseMaxSize[10]);
-              obj.setUploads(obj2);
-              const obj3 = {
-                file: currentSize,
-                maxSize: tmp,
-                baseMaxSize,
-                guildId: guildId.getGuildId(),
-                analyticsLocations,
-              };
-              const tmp10 = obj7(baseMaxSize[15]);
-              tmp10(obj3);
+              analyticsLocations(8842).setUploads(obj2);
+              const obj3 = { file: currentSize, maxSize: tmp, baseMaxSize, guildId: null, analyticsLocations: null };
+              const obj = analyticsLocations(8842);
+              obj3.guildId = uploads.getGuildId();
+              obj3.analyticsLocations = analyticsLocations;
+              analyticsLocations(8845)(obj3);
+              const tmp10 = analyticsLocations(8845);
             }
           });
           await obj7.uploadFiles(guildId);
-          files = value;
-          let obj = { uploaderFile: obj7._file, files };
-          return obj;
+          closure_129_4 = value;
+          return { uploaderFile: closure_129_1._file, files: closure_129_4 };
         })();
       });
       const items = [analyticsLocations, parentChannel];
-      const callback = useCallback(function () {
-        return closure_0(...arguments);
+      const callback = noop.useCallback(function () {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
       }, items);
-      const tmp2 = parentChannel(8840);
-      let obj = { parentChannel, name: str, appliedTags, analyticsLocations, onThreadCreated, upload: callback };
-      str = undefined;
-      const useCreateForumPostCommon = tmp2.useCreateForumPostCommon;
+      let obj2 = {
+        parentChannel,
+        name: null,
+        appliedTags: null,
+        analyticsLocations: null,
+        onThreadCreated: null,
+        upload: null,
+      };
+      let str;
       if (threadSettings != null) {
         str = threadSettings.name;
       }
       if (str == null) {
         str = "";
       }
-      return useCreateForumPostCommon(obj);
+      obj2.name = str;
+      obj2.appliedTags = appliedTags;
+      obj2.analyticsLocations = analyticsLocations;
+      obj2.onThreadCreated = onThreadCreated;
+      obj2.upload = callback;
+      return require("ThreadCreationHooks").useCreateForumPostCommon(obj2);
     };
-const result = size.fileFinishedImporting("modules/threads/native/useCreateThread.tsx");
-
-export default tmp2;
-export const useCreateForumPost = tmp3;

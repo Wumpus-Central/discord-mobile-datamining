@@ -1,29 +1,31 @@
 // discord_app/modules/conjure/preview/conjurePreviewCall.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-class PreviewFrameCallTimeout extends Error {
-  constructor(c0, timeoutMs) {
-    const tmp2 = new tmp("preview frame did not answer " + c0 + " within " + timeoutMs + "ms", " within ");
-    tmp2.name = "PreviewFrameCallTimeout";
-    return tmp2;
-  }
-}
+const prototype = function PreviewFrameCallTimeout(c0, timeoutMs) {
+  const tmp2 = new tmp("preview frame did not answer " + c0 + " within " + timeoutMs + "ms", " within ");
+  tmp2.name = "PreviewFrameCallTimeout";
+  return tmp2;
+}.prototype;
+class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewCall.tsx");
 
 export const previewCallTypes = function previewCallTypes(control) {
   const combined = "vibegrations-" + control;
-  const obj = { request: combined, result: "" + combined + "-result", ack: "" + combined + "-ack" };
-  return obj;
+  return { request: combined, result: "" + combined + "-result", ack: "" + combined + "-ack" };
 };
 export const isResultEnvelope = function isResultEnvelope(parsed, ack, id) {
   if (typeof parsed === "object") {
     if (null != parsed) {
-      return parsed.type === ack && parsed.id === id;
+      let tmp2 = parsed.type === ack;
+      if (tmp2) {
+        tmp2 = parsed.id === id;
+      }
+      return tmp2;
     }
   }
   return false;
 };
-export { PreviewFrameCallTimeout };
+export const PreviewFrameCallTimeout = prototype;
 export const controlAnswerTimeoutMs = function controlAnswerTimeoutMs(timeoutMs) {
   timeoutMs = timeoutMs.timeoutMs;
   let num = 20000;

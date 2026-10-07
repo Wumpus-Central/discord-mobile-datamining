@@ -5,7 +5,6 @@ import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTP
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, throwErr;
 
 const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting(
@@ -14,53 +13,36 @@ const result = size.fileFinishedImporting(
 
 export const fetchVanityUrl = function fetchVanityUrl(id) {
   const HTTP = HTTPUtils.HTTP;
-  let obj = { url: Endpoints.GUILD_VANITY_URL(id), oldFormErrors: true, rejectWithError: true };
-  const value = HTTP.get(obj);
+  value = HTTP.get({ url: Endpoints.GUILD_VANITY_URL(id), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
-    let code;
-    let error;
-    let uses;
     ({ code, uses, error } = body.body);
-    const obj = DispatcherDefault;
-    obj.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses, error });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses, error });
   });
 };
 export const resetCode = function resetCode() {
-  const obj = DispatcherDefault;
-  obj.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
 };
 export const setCode = function setCode(code) {
-  const obj = DispatcherDefault;
-  const obj2 = { type: "GUILD_SETTINGS_VANITY_URL_SET", code };
-  obj.dispatch(obj2);
+  DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code });
 };
 export const saveCode = function saveCode(id, code, arg2) {
-  let obj;
-  let obj3;
   _require = arg2;
   const HTTP = require("HTTPUtils").HTTP;
   const request = {
     url: Endpoints.GUILD_VANITY_URL(id),
-    body: obj,
+    body: { code },
     oldFormErrors: true,
-    rejectWithError: obj3.rejectWithMigratedError(),
+    rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
   };
-  const patch = HTTP.patch;
-  obj = { code };
-  obj3 = require("HTTPUtils");
-  const patchResult = patch(request);
-  return patchResult.then(
+  let obj = { code };
+  const obj3 = require("HTTPUtils");
+  return HTTP.patch(request).then(
     (body) => {
-      let code;
-      let uses;
       ({ code, uses } = body.body);
-      const obj = DispatcherDefault;
-      obj.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
+      DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
     },
     (body) => {
-      const obj = DispatcherDefault;
-      const obj2 = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
-      obj.dispatch(obj2);
+      DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body });
       throwErr = undefined;
       if (throwErr != null) {
         throwErr = throwErr.throwErr;
@@ -70,6 +52,7 @@ export const saveCode = function saveCode(id, code, arg2) {
       } else {
         return body;
       }
+      const obj2 = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
     },
   );
 };

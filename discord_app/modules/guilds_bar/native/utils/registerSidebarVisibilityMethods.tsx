@@ -5,18 +5,15 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const SortedGuildStore = SortedGuildStore2;
-let set;
 
-let _window;
-let map;
-({ setGetVisibleChannelIds: _window, setGetVisibleGuildIds: map } = SidebarVisibilityMethodStore);
+({ setGetVisibleChannelIds: closure_0, setGetVisibleGuildIds: closure_1 } = SidebarVisibilityMethodStore);
 const GuildsNodeType = SortedGuildStore2.GuildsNodeType;
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
 
 export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(fastListRef) {
   const current = fastListRef.current;
   if (null != current) {
-    let tmp2 = closure_1(function () {
+    closure_1(() => {
       if (null == current) {
         return [];
       } else {
@@ -24,26 +21,29 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
         const scrollPosition = current.getScrollPosition();
         const containerSize = current.containerSize;
         const guilds = GuildStore.getGuilds();
-        const guildsTree = SortedGuildStore.getGuildsTree();
+        const node = SortedGuildStore.getGuildsTree();
         const _Set = Set;
-        const self = this;
-        const self2 = this;
-        set = new Set();
+        const set = new Set();
         let item = items.forEach((recyclerKey) => {
-          let tmp;
-          const element = node.getNode(recyclerKey.recyclerKey);
-          if (undefined !== element) {
+          let forEach = node.getNode(recyclerKey.recyclerKey);
+          if (undefined !== forEach) {
             const layoutStart = recyclerKey.layoutStart;
-            const tmp2 = layoutStart + recyclerKey.layoutSize >= closure_0 && layoutStart <= tmp + containerSize;
+            let tmp2 = layoutStart + recyclerKey.layoutSize >= closure_0;
             if (tmp2) {
-              let children;
-              if (element.type === constants.FOLDER) {
-                children = element.children;
+              tmp2 = layoutStart <= tmp + containerSize;
+            }
+            if (tmp2) {
+              if (forEach.type === constants.FOLDER) {
+                let children = forEach.children;
               } else {
-                children = [element];
+                children = [forEach];
               }
-              const item = children.forEach((type) => {
-                const tmp = type.type === set.GUILD && type.id in closure_1_2;
+              forEach = children.forEach;
+              const item = forEach((type) => {
+                let tmp = type.type === set.GUILD;
+                if (tmp) {
+                  tmp = type.id in closure_1_2;
+                }
                 if (tmp) {
                   set.add(type.id);
                 }
@@ -61,11 +61,10 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
   ref,
   guildChannels,
 ) {
-  const _window = guildChannels;
+  closure_0 = guildChannels;
   const current = ref.current;
   if (null != current) {
     React(() => {
-      let containerSize;
       if (null == containerSize) {
         return [];
       } else {
@@ -81,18 +80,22 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
               if (channelFromSectionRow != null) {
                 channel = channelFromSectionRow.channel;
               }
-            } catch (err) {}
-            if (null != tmp) {
-              const layoutStart = section.layoutStart;
-              const tmp10 =
-                layoutStart + section.layoutSize >= channelFromSectionRow && layoutStart <= tmp9 + containerSize;
-              if (tmp10) {
-                items1.push(tmp.id);
+              if (null != channel) {
+                const layoutStart = section.layoutStart;
+                let tmp12 = layoutStart + section.layoutSize >= channelFromSectionRow;
+                if (tmp12) {
+                  tmp12 = layoutStart <= tmp11 + containerSize;
+                }
+                if (tmp12) {
+                  items1.push(tmp8.id);
+                }
               }
-            }
-          } catch (tmp15) {
-            if (null != tmp) {
-              throw tmp15;
+            } catch (err) {}
+          } catch (tmp17) {
+            if (null == tmp2) {
+              return tmp;
+            } else {
+              throw tmp17;
             }
           }
         });

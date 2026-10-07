@@ -1,53 +1,43 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
-import Constants from "../../../Constants.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/01975_AssetRegistry.js";
+import _modDef1975 from "../../../../_runtime/metro/01975__.js";
 import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import ApplicationCommandConstants from "../../application_commands/ApplicationCommandConstants.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "../../application_commands/ApplicationCommandTypes.tsx";
 import ApplicationCommandActionCreatorsAll from "../../application_commands/ApplicationCommandActionCreators.tsx";
 import AppLauncherUtils from "../utils/AppLauncherUtils.tsx";
 import FrecencySection from "screens/home/FrecencySection.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
-import AppLauncherNativeConstants from "AppLauncherNativeConstants.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, onActivityItemSelected;
 
-let metroImportAll;
-let metroImportDefault;
-({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: metroImportDefault, AppLauncherRouteName: metroImportAll } =
-  AppLauncherNativeConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
-const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const AppLauncherNativeConstants = fn(1489);
+({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const BuiltInSectionId = fn(5795).BuiltInSectionId;
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("react");
-      const cResult = obj.c(7);
-      let obj2 = require("AppLauncherContext");
-      const entrypoint = obj2.useAppLauncherContext().entrypoint;
+      const cResult = require("c").c(7);
+      let obj = require("c");
+      const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
       if (cResult[0] === entrypoint) {
-        let tmp2;
         if (cResult[1] === arg0) {
-          tmp2 = cResult[2];
+          let tmp2 = cResult[2];
         }
         if (cResult[3] === entrypoint) {
           if (cResult[4] === arg1) {
-            let tmp4;
             if (cResult[5] === arg0) {
-              tmp4 = cResult[6];
+              let tmp4 = cResult[6];
             }
-            const effect = react.useEffect(tmp2, tmp4);
+            const effect = noop.useEffect(tmp2, tmp4);
           }
         }
         const items = [arg0, arg1, entrypoint];
@@ -60,67 +50,295 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const fn = function c() {
         if (null != closure_0) {
           const obj2 = { type: tmp, source: entrypoint };
-          const obj = AppAnalyticsUtils;
-          obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
+          AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
         }
       };
       cResult[0] = entrypoint;
       cResult[1] = arg0;
       cResult[2] = fn;
       tmp2 = fn;
+      let obj2 = require("AppLauncherContext");
     }
   : (arg0, arg1) => {
-      let closure_0;
       _require = arg0;
-      let obj = require("AppLauncherContext");
-      const entrypoint = obj.useAppLauncherContext().entrypoint;
+      const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
       const items = [arg0, arg1, entrypoint];
-      const effect = react.useEffect(() => {
+      const effect = noop.useEffect(() => {
         if (null != closure_0) {
           const obj2 = { type: tmp, source: entrypoint };
-          const obj = AppAnalyticsUtils;
-          obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
+          AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
         }
       }, items);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
+
+export const handleApplicationSelected = function handleApplicationSelected(entrypoint) {
+  ({ application, navigation, sectionName, navigates } = entrypoint);
+  ({ location: _location, context, installOnDemand, query, searchResultsPosition } = entrypoint);
+  if (navigates === undefined) {
+    navigates = true;
+  }
+  entrypoint = entrypoint.entrypoint;
+  const obj2 = {
+    location: _location,
+    section: null,
+    application_id: null,
+    section_name: null,
+    query: null,
+    search_results_position: null,
+    source: null,
+  };
+  if (application.id === BuiltInSectionId.BUILT_IN) {
+    let APP = ApplicationCommandTypes.ApplicationCommandTriggerSections.BUILT_IN;
+  } else {
+    APP = ApplicationCommandTypes.ApplicationCommandTriggerSections.APP;
+  }
+  obj2.section = APP;
+  let id = application.id;
+  if (id == null) {
+    id = null;
+  }
+  obj2.application_id = id;
+  obj2.section_name = sectionName;
+  obj2.query = query;
+  obj2.search_results_position = searchResultsPosition;
+  obj2.source = entrypoint;
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_SECTION_SELECTED, obj2);
+  if (navigates) {
+    const obj3 = { application, context, installOnDemand, sectionName, entrypoint };
+    navigation.navigate(constants.APPLICATION_VIEW, obj3);
+  }
+};
+export const handleViewAllSelected = function handleViewAllSelected(arg0) {
+  ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
+  ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
+  const obj = AppAnalyticsUtils;
+  obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, {
+    section_name: sectionName,
+    num: sectionItemType === FrecencySection.SectionItemType.APPS ? applications.length : commands.length,
+  });
+  navigation.navigate(constants.APP_LIST_VIEW, {
+    analyticsLocation: _location,
+    context,
+    sectionName,
+    sectionOverallPosition,
+    applications,
+    sectionItemType,
+    commands,
+    sectionDescriptors,
+    title,
+    promotedApplicationIds,
+  });
+};
+export const handleApplicationCommandSelected = function handleApplicationCommandSelected(arg0) {
+  ({ location: _location, context, command } = arg0);
+  ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
+  ({ searchResultsPosition, onCommandExecuted } = arg0);
+  const obj2 = {
+    command,
+    location: _location,
+    triggerSection: null,
+    queryLength: null,
+    sectionName: null,
+    query: null,
+    searchResultsPosition: null,
+    source: null,
+  };
+  const obj = ApplicationCommandUtils;
+  obj2.triggerSection = ApplicationCommandUtils.getCommandTriggerSection(section);
+  obj2.queryLength = query.length;
+  obj2.sectionName = sectionName;
+  obj2.query = query;
+  obj2.searchResultsPosition = searchResultsPosition;
+  obj2.source = entrypoint;
+  obj.trackCommandSelected(obj2);
+  if (command.type === Server.ApplicationCommandType.PRIMARY_ENTRY_POINT) {
+    const obj5 = { application: section.application, context, installOnDemand, sectionName, entrypoint };
+    navigation.navigate(constants.APPLICATION_VIEW, obj5);
+  } else {
+    let tmp5 = section;
+    if (section.id === BuiltInSectionId.FRECENCY) {
+      const found = sectionDescriptors.find((id) => id.id === command.applicationId);
+      tmp5 = section;
+      if (null != found) {
+        tmp5 = found;
+      }
+    }
+    if ("channel" === context.type) {
+      const result = ApplicationCommandActionCreatorsAll.setAppLauncherActiveCommand(context.channel.id, command);
+      const obj6 = {
+        command,
+        section: tmp5,
+        context,
+        installOnDemand,
+        sectionName,
+        analyticsLocation: _location,
+        onCommandExecuted,
+      };
+      navigation.navigate(constants.COMMAND_VIEW, obj6);
+    }
+  }
+};
+export const getInitialOptionValues = function getInitialOptionValues(option) {
+  option = option.option;
+  ({ prefilledValues, roles } = option);
+  let found;
+  if (prefilledValues != null) {
+    found = prefilledValues.find((name) => name.name === option.name && name.type === tmp.type);
+  }
+  const type = option.type;
+  if (Server.ApplicationCommandOptionType.BOOLEAN === type) {
+    if (null != found) {
+      const obj2 = { type: "text", text: null };
+      const _String8 = String;
+      const _Boolean = Boolean;
+      obj2.text = String(Boolean(found.value));
+      const items = [obj2];
+      let items1 = items;
+    } else {
+      items1 = [{ type: "text", text: "false" }];
+    }
+    return items1;
+  } else {
+    if (Server.ApplicationCommandOptionType.STRING !== type) {
+      if (Server.ApplicationCommandOptionType.INTEGER !== type) {
+        if (Server.ApplicationCommandOptionType.NUMBER !== type) {
+          if (Server.ApplicationCommandOptionType.CHANNEL === type) {
+            if (null != found) {
+              const _String5 = String;
+              if (null != ChannelStore.getChannel(String(found.value))) {
+                const obj3 = { type: "channelMention", channelId: null };
+                const _String6 = String;
+                obj3.channelId = String(found.value);
+                const items2 = [obj3];
+                let items3 = items2;
+              }
+              return items3;
+            }
+            items3 = [{ type: "text", text: "" }];
+          } else if (Server.ApplicationCommandOptionType.USER === type) {
+            if (null != found) {
+              const _String3 = String;
+              if (null != UserStore.getUser(String(found.value))) {
+                const obj4 = { type: "userMention", userId: null };
+                const _String4 = String;
+                obj4.userId = String(found.value);
+                const items4 = [obj4];
+                let items5 = items4;
+              }
+              return items5;
+            }
+            items5 = [{ type: "text", text: "" }];
+          } else if (Server.ApplicationCommandOptionType.ROLE === type) {
+            if (null != found) {
+              if (typeof found.value === "string") {
+                if (found.value in roles) {
+                  const obj5 = { type: "roleMention", roleId: found.value };
+                  const items6 = [obj5];
+                  let items7 = items6;
+                }
+                return items7;
+              }
+            }
+            items7 = [{ type: "text", text: "" }];
+          } else if (Server.ApplicationCommandOptionType.MENTIONABLE === type) {
+            if (null != found) {
+              if (found.value === option.guildId) {
+                const items8 = [{ type: "textMention", text: "@everyone" }];
+                return items8;
+              } else {
+                if (typeof found.value === "string") {
+                  if (found.value in roles) {
+                    const obj6 = { type: "roleMention", roleId: found.value };
+                    const items9 = [obj6];
+                    return items9;
+                  }
+                }
+                const _String = String;
+                if (null != UserStore.getUser(String(found.value))) {
+                  const obj = { type: "userMention", userId: null };
+                  const _String2 = String;
+                  obj.userId = String(found.value);
+                  const items10 = [obj];
+                  return items10;
+                }
+              }
+            }
+            const items11 = [{ type: "text", text: "" }];
+            return items11;
+          } else {
+            const items12 = [{ type: "text", text: "" }];
+            return items12;
+          }
+        }
+      }
+    }
+    if (null != found) {
+      if (null == option.choices) {
+        const obj7 = { type: "text", text: null };
+        const _String7 = String;
+        obj7.text = String(found.value);
+        const items13 = [obj7];
+        return items13;
+      } else {
+        const choices = option.choices;
+        if (choices.some((value) => value.value === found.value)) {
+          const obj8 = { type: "text", text: null };
+          const choices1 = option.choices;
+          obj8.text = choices1.find((value) => value.value === found.value).displayName;
+          const items14 = [obj8];
+          return items14;
+        }
+      }
+    }
+    const items15 = [{ type: "text", text: "" }];
+    return items15;
+  }
+};
+export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
+  if (null == application) {
+    let applicationIconSource = _modDef1975;
+  } else {
+    const obj2 = AvatarUtilsDefault;
+    if (isRealApplicationResult) {
+      ({ id: obj3.id, icon: obj3.icon, bot: obj3.bot } = application);
+      applicationIconSource = obj2.getApplicationIconSource({ id: null, icon: null, bot: null, botIconFirst: false });
+      const obj4 = { id: null, icon: null, bot: null, botIconFirst: false };
+    } else {
+      applicationIconSource = obj2.makeSource(React5);
+    }
+    isRealApplicationResult = AppLauncherUtils.isRealApplication(application);
+  }
+  return applicationIconSource;
+};
+export const useLogAppLauncherEmptyStateView = tmp3;
+export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompilerEnabled()
   ? (onActivityItemSelected) => {
-      let applicationId;
-      let context;
-      let entrypoint;
-      let fetchesApplication;
-      let launchingComponentId;
-      let sectionName;
-      const tmp = sectionName;
-      let obj = sectionName(entrypoint[16]);
-      const cResult = obj.c(23);
+      const cResult = sectionName(entrypoint[16]).c(23);
       ({ applicationId, context, sectionName } = onActivityItemSelected);
       onActivityItemSelected = onActivityItemSelected.onActivityItemSelected;
       const _location = onActivityItemSelected.location;
       entrypoint = onActivityItemSelected.entrypoint;
       ({ launchingComponentId, fetchesApplication } = onActivityItemSelected);
-      const tmpResult = tmp(entrypoint[18]);
-      const analyticsContext = tmpResult.useAnalyticsContext();
+      let obj = sectionName(entrypoint[16]);
+      const analyticsContext = sectionName(entrypoint[18]).useAnalyticsContext();
       if (cResult[0] === applicationId) {
         if (cResult[1] === context) {
-          let tmp6;
-          if (cResult[2] === (undefined === fetchesApplication || fetchesApplication)) {
-            tmp6 = cResult[3];
+          if (cResult[2] === tmp4) {
+            let tmp6 = cResult[3];
           }
-          const tmpResult5 = tmp(entrypoint[19]);
-          const activityAction = tmpResult5.useActivityAction(tmp6);
-          const tmpResult6 = tmp(entrypoint[20]);
-          const getOrFetchApplication = tmpResult6.useGetOrFetchApplication(applicationId, tmp4);
-          const tmpResult7 = tmp(entrypoint[17]);
-          const entrypointParams = tmpResult7.useAppLauncherContext().entrypointParams;
+          const activityAction = tmp(tmp2[19]).useActivityAction(tmp6);
+          const tmpResult5 = tmp(tmp2[19]);
+          const getOrFetchApplication = tmp(tmp2[20]).useGetOrFetchApplication(applicationId, tmp4);
+          const tmpResult6 = tmp(tmp2[20]);
+          const entrypointParams = tmp(tmp2[17]).useAppLauncherContext().entrypointParams;
           if (cResult[4] === activityAction) {
             if (cResult[5] === entrypoint) {
               if (cResult[6] === _location) {
                 if (cResult[7] === onActivityItemSelected) {
-                  let tmp9;
                   if (cResult[8] === sectionName) {
-                    tmp9 = cResult[9];
+                    let tmp9 = cResult[9];
                   }
                   let customId;
                   if (entrypointParams != null) {
@@ -134,23 +352,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[11] === getOrFetchApplication) {
                       if (cResult[12] === context) {
                         if (cResult[13] === entrypoint) {
-                          if (cResult[14] === (undefined === fetchesApplication || fetchesApplication)) {
+                          if (cResult[14] === tmp4) {
                             if (cResult[15] === launchingComponentId) {
                               if (cResult[16] === sectionName) {
                                 if (cResult[17] === tmp9) {
                                   if (cResult[18] === customId) {
-                                    let tmp13;
-                                    let tmp16;
                                     if (cResult[19] === referrerId) {
-                                      tmp13 = cResult[20];
+                                      let tmp13 = cResult[20];
                                     }
-                                    const tmpResult8 = tmp(entrypoint[19]);
-                                    const onActivityItemSelected1 = tmpResult8.useOnActivityItemSelected(tmp13);
+                                    const onActivityItemSelected1 = tmp(tmp2[19]).useOnActivityItemSelected(tmp13);
                                     if (cResult[21] !== onActivityItemSelected1) {
-                                      let obj2 = {
+                                      const obj2 = {
                                         handleActivityItemSelected() {
-                                          const obj = HapticUtils;
-                                          const result = obj.triggerHapticFeedback(
+                                          const result = HapticUtils.triggerHapticFeedback(
                                             HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM,
                                           );
                                           onActivityItemSelected1();
@@ -158,7 +372,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                       };
                                       cResult[21] = onActivityItemSelected1;
                                       cResult[22] = obj2;
-                                      tmp16 = obj2;
+                                      let tmp16 = obj2;
                                     } else {
                                       tmp16 = cResult[22];
                                     }
@@ -172,7 +386,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  let obj3 = {
+                  const obj3 = {
                     application: getOrFetchApplication,
                     context,
                     embeddedActivitiesManager: onActivityItemSelected(tmp2[21]),
@@ -182,7 +396,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     commandOrigin: tmp(tmp2[7]).CommandOrigin.APPLICATION_LAUNCHER,
                     sectionName,
                     source: entrypoint,
-                    fetchesApplication: undefined === fetchesApplication || fetchesApplication,
+                    fetchesApplication: tmp4,
                     customId,
                     referrerId,
                   };
@@ -190,7 +404,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[11] = getOrFetchApplication;
                   cResult[12] = context;
                   cResult[13] = entrypoint;
-                  cResult[14] = undefined === fetchesApplication || fetchesApplication;
+                  cResult[14] = tmp4;
                   cResult[15] = launchingComponentId;
                   cResult[16] = sectionName;
                   cResult[17] = tmp9;
@@ -208,15 +422,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj = { applicationId };
               tmp(obj);
             }
-            const obj2 = AppAnalyticsUtils;
-            const obj3 = {
+            AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
               location: _location,
               application_id: applicationId,
               section_name: sectionName,
               action: activityAction,
               source: entrypoint,
-            };
-            obj2.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, obj3);
+            });
           };
           cResult[4] = activityAction;
           cResult[5] = entrypoint;
@@ -225,6 +437,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = sectionName;
           cResult[9] = fn;
           tmp9 = fn;
+          const tmpResult7 = tmp(tmp2[17]);
         }
       }
       const obj4 = {
@@ -239,32 +452,26 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = obj4;
     }
   : (fetchesApplication) => {
-      let _location;
-      let applicationId;
-      let context;
-      let customId;
-      let entrypoint;
-      let referrerId;
-      let sectionName;
       ({ applicationId, context, sectionName } = fetchesApplication);
       ({ onActivityItemSelected: importDefault, location: importAll, entrypoint } = fetchesApplication);
       let flag = fetchesApplication.fetchesApplication;
-      const launchingComponentId = fetchesApplication.launchingComponentId;
       if (flag === undefined) {
         flag = true;
       }
-      let closure_5;
+      closure_5 = undefined;
+      const analyticsContext = sectionName(entrypoint[18]).useAnalyticsContext();
       let obj = sectionName(entrypoint[18]);
-      const analyticsContext = obj.useAnalyticsContext();
-      let obj2 = sectionName(entrypoint[19]);
-      const action = obj2.useActivityAction({ context, applicationId, fetchesApplication: flag });
-      let obj3 = sectionName(entrypoint[20]);
-      const getOrFetchApplication = obj3.useGetOrFetchApplication(applicationId, flag);
+      const action = sectionName(entrypoint[19]).useActivityAction({
+        context,
+        applicationId,
+        fetchesApplication: flag,
+      });
+      const obj2 = sectionName(entrypoint[19]);
+      const getOrFetchApplication = sectionName(entrypoint[20]).useGetOrFetchApplication(applicationId, flag);
+      const obj3 = sectionName(entrypoint[20]);
+      const entrypointParams = sectionName(entrypoint[17]).useAppLauncherContext().entrypointParams;
       const obj4 = sectionName(entrypoint[17]);
-      const entrypointParams = obj4.useAppLauncherContext().entrypointParams;
-      const tmp3 = sectionName(entrypoint[19]);
-      const useOnActivityItemSelected = tmp3.useOnActivityItemSelected;
-      const obj5 = {
+      const obj6 = {
         application: getOrFetchApplication,
         context,
         embeddedActivitiesManager: require("EmbeddedActivitiesNativeManager"),
@@ -275,311 +482,37 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const obj = { applicationId };
             tmp(obj);
           }
-          const obj2 = AppAnalyticsUtils;
-          const obj3 = {
-            location: importAll,
+          AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+            location: _location,
             application_id: applicationId,
             section_name: sectionName,
             action,
             source: entrypoint,
-          };
-          obj2.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, obj3);
+          });
         },
-        launchingComponentId,
+        launchingComponentId: fetchesApplication.launchingComponentId,
         commandOrigin: sectionName(entrypoint[7]).CommandOrigin.APPLICATION_LAUNCHER,
         sectionName,
         source: entrypoint,
         fetchesApplication: flag,
-        customId,
-        referrerId,
+        customId: null,
+        referrerId: null,
       };
-      customId = undefined;
+      let customId;
       if (entrypointParams != null) {
         customId = entrypointParams.customId;
       }
-      referrerId = undefined;
+      obj6.customId = customId;
+      let referrerId;
       if (entrypointParams != null) {
         referrerId = entrypointParams.referrerId;
       }
-      closure_5 = useOnActivityItemSelected(obj5);
+      obj6.referrerId = referrerId;
+      closure_5 = sectionName(entrypoint[19]).useOnActivityItemSelected(obj6);
       return {
         handleActivityItemSelected() {
-          const obj = HapticUtils;
-          const result = obj.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
+          const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
           closure_5();
         },
       };
     };
-let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
-
-export const handleApplicationSelected = function handleApplicationSelected(entrypoint) {
-  let APP;
-  let _location;
-  let application;
-  let context;
-  let id;
-  let installOnDemand;
-  let navigates;
-  let query;
-  let searchResultsPosition;
-  let sectionName;
-  ({ application, navigation, sectionName, navigates } = entrypoint);
-  ({ location: _location, context, installOnDemand, query, searchResultsPosition } = entrypoint);
-  if (navigates === undefined) {
-    navigates = true;
-  }
-  entrypoint = entrypoint.entrypoint;
-  const obj = {
-    location: _location,
-    section: APP,
-    application_id: id,
-    section_name: sectionName,
-    query,
-    search_results_position: searchResultsPosition,
-    source: entrypoint,
-  };
-  const trackWithMetadata = AppAnalyticsUtils.trackWithMetadata;
-  const APPLICATION_COMMAND_SECTION_SELECTED = AnalyticEvents.APPLICATION_COMMAND_SECTION_SELECTED;
-  AppAnalyticsUtils;
-  if (application.id === BuiltInSectionId.BUILT_IN) {
-    APP = ApplicationCommandTypes.ApplicationCommandTriggerSections.BUILT_IN;
-  } else {
-    APP = ApplicationCommandTypes.ApplicationCommandTriggerSections.APP;
-  }
-  id = application.id;
-  if (id == null) {
-    id = null;
-  }
-  trackWithMetadata(APPLICATION_COMMAND_SECTION_SELECTED, obj);
-  if (navigates) {
-    const obj2 = { application, context, installOnDemand, sectionName, entrypoint };
-    navigation.navigate(metroImportAll.APPLICATION_VIEW, obj2);
-  }
-};
-export const handleViewAllSelected = function handleViewAllSelected(arg0) {
-  let _location;
-  let applications;
-  let commands;
-  let context;
-  let promotedApplicationIds;
-  let sectionDescriptors;
-  let sectionItemType;
-  let sectionName;
-  let sectionOverallPosition;
-  let title;
-  ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
-  ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
-  const obj = AppAnalyticsUtils;
-  const obj2 = {
-    section_name: sectionName,
-    num: sectionItemType === FrecencySection.SectionItemType.APPS ? applications.length : commands.length,
-  };
-  obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, obj2);
-  navigation.navigate(metroImportAll.APP_LIST_VIEW, {
-    analyticsLocation: _location,
-    context,
-    sectionName,
-    sectionOverallPosition,
-    applications,
-    sectionItemType,
-    commands,
-    sectionDescriptors,
-    title,
-    promotedApplicationIds,
-  });
-};
-export const handleApplicationCommandSelected = function handleApplicationCommandSelected(arg0) {
-  let _location;
-  let command;
-  let context;
-  let entrypoint;
-  let installOnDemand;
-  let obj2;
-  let onCommandExecuted;
-  let query;
-  let searchResultsPosition;
-  let section;
-  let sectionDescriptors;
-  let sectionName;
-  ({ location: _location, context, command } = arg0);
-  ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
-  ({ searchResultsPosition, onCommandExecuted } = arg0);
-  const obj = {
-    command,
-    location: _location,
-    triggerSection: obj2.getCommandTriggerSection(section),
-    queryLength: query.length,
-    sectionName,
-    query,
-    searchResultsPosition,
-    source: entrypoint,
-  };
-  const trackCommandSelected = ApplicationCommandUtils.trackCommandSelected;
-  ApplicationCommandUtils;
-  obj2 = ApplicationCommandUtils;
-  trackCommandSelected(obj);
-  if (command.type === Server.ApplicationCommandType.PRIMARY_ENTRY_POINT) {
-    const obj4 = { application: section.application, context, installOnDemand, sectionName, entrypoint };
-    navigation.navigate(metroImportAll.APPLICATION_VIEW, obj4);
-  } else {
-    let tmp6 = section;
-    if (section.id === BuiltInSectionId.FRECENCY) {
-      const found = sectionDescriptors.find((id) => id.id === command.applicationId);
-      tmp6 = section;
-      if (null != found) {
-        tmp6 = found;
-      }
-    }
-    if ("channel" === context.type) {
-      const obj3 = ApplicationCommandActionCreatorsAll;
-      const result = obj3.setAppLauncherActiveCommand(context.channel.id, command);
-      const obj5 = {
-        command,
-        section: tmp6,
-        context,
-        installOnDemand,
-        sectionName,
-        analyticsLocation: _location,
-        onCommandExecuted,
-      };
-      navigation.navigate(metroImportAll.COMMAND_VIEW, obj5);
-    }
-  }
-};
-export const getInitialOptionValues = function getInitialOptionValues(option) {
-  let choices1;
-  let prefilledValues;
-  let roles;
-  option = option.option;
-  ({ prefilledValues, roles } = option);
-  let found;
-  const guildId = option.guildId;
-  if (prefilledValues != null) {
-    found = prefilledValues.find((name) => name.name === option.name && name.type === tmp.type);
-  }
-  const type = option.type;
-  if (Server.ApplicationCommandOptionType.BOOLEAN === type) {
-    let items1;
-    if (null != found) {
-      const _String8 = String;
-      const _Boolean = Boolean;
-      const items = [{ type: "text", text: String(Boolean(found.value)) }];
-      items1 = items;
-      const obj2 = { type: "text", text: String(Boolean(found.value)) };
-    } else {
-      items1 = [{ type: "text", text: "false" }];
-    }
-    return items1;
-  } else {
-    if (Server.ApplicationCommandOptionType.STRING !== type) {
-      if (Server.ApplicationCommandOptionType.INTEGER !== type) {
-        if (Server.ApplicationCommandOptionType.NUMBER !== type) {
-          if (Server.ApplicationCommandOptionType.CHANNEL === type) {
-            if (null != found) {
-              let items3;
-              const _String5 = String;
-              if (null != ChannelStore.getChannel(String(found.value))) {
-                const _String6 = String;
-                const items2 = [{ type: "channelMention", channelId: String(found.value) }];
-                items3 = items2;
-                const obj3 = { type: "channelMention", channelId: String(found.value) };
-              }
-              return items3;
-            }
-            items3 = [{ type: "text", text: "" }];
-          } else if (Server.ApplicationCommandOptionType.USER === type) {
-            if (null != found) {
-              let items5;
-              const _String3 = String;
-              if (null != UserStore.getUser(String(found.value))) {
-                const _String4 = String;
-                const items4 = [{ type: "userMention", userId: String(found.value) }];
-                items5 = items4;
-                const obj4 = { type: "userMention", userId: String(found.value) };
-              }
-              return items5;
-            }
-            items5 = [{ type: "text", text: "" }];
-          } else if (Server.ApplicationCommandOptionType.ROLE === type) {
-            if (null != found) {
-              if (typeof found.value === "string") {
-                let items7;
-                if (found.value in roles) {
-                  const items6 = [{ type: "roleMention", roleId: found.value }];
-                  items7 = items6;
-                  const obj5 = { type: "roleMention", roleId: found.value };
-                }
-                return items7;
-              }
-            }
-            items7 = [{ type: "text", text: "" }];
-          } else if (Server.ApplicationCommandOptionType.MENTIONABLE === type) {
-            if (null != found) {
-              if (found.value === guildId) {
-                const items8 = [{ type: "textMention", text: "@everyone" }];
-                return items8;
-              } else {
-                if (typeof found.value === "string") {
-                  if (found.value in roles) {
-                    const items9 = [{ type: "roleMention", roleId: found.value }];
-                    return items9;
-                  }
-                }
-                const _String = String;
-                if (null != UserStore.getUser(String(found.value))) {
-                  const _String2 = String;
-                  const items10 = [{ type: "userMention", userId: String(found.value) }];
-                  const obj = { type: "userMention", userId: String(found.value) };
-                  return items10;
-                }
-              }
-            }
-            const items11 = [{ type: "text", text: "" }];
-            return items11;
-          } else {
-            const items12 = [{ type: "text", text: "" }];
-            return items12;
-          }
-        }
-      }
-    }
-    if (null != found) {
-      if (null == option.choices) {
-        const _String7 = String;
-        const items13 = [{ type: "text", text: String(found.value) }];
-        const obj7 = { type: "text", text: String(found.value) };
-        return items13;
-      } else {
-        const choices = option.choices;
-        if (choices.some((value) => value.value === found.value)) {
-          const obj8 = { type: "text", text: choices1.find((value) => value.value === found.value).displayName };
-          choices1 = option.choices;
-          const items14 = [obj8];
-          return items14;
-        }
-      }
-    }
-    const items15 = [{ type: "text", text: "" }];
-    return items15;
-  }
-};
-export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
-  let applicationIconSource;
-  if (null == application) {
-    applicationIconSource = AssetRegistryDefault;
-  } else {
-    const obj = AppLauncherUtils;
-    const isRealApplicationResult = obj.isRealApplication(application);
-    const obj2 = AvatarUtilsDefault;
-    if (isRealApplicationResult) {
-      const obj4 = { id: null, icon: null, bot: null, botIconFirst: false };
-      ({ id: obj3.id, icon: obj3.icon, bot: obj3.bot } = application);
-      applicationIconSource = obj2.getApplicationIconSource(obj4);
-    } else {
-      applicationIconSource = obj2.makeSource(metroImportDefault);
-    }
-  }
-  return applicationIconSource;
-};
-export const useLogAppLauncherEmptyStateView = tmp3;
-export const useHandleActivityItemSelected = tmp4;

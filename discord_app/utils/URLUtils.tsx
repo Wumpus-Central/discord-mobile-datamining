@@ -2,27 +2,27 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import Constants from "../Constants.tsx";
 import URLUtilsDefault from "URLUtils.tsx";
-import urlParseAll from "../../_runtime/01373_urlParse.js";
+import UrlAll from "../../_runtime/01373_Url.js";
 import GlobalUtils from "GlobalUtils.tsx";
 import ip from "../../_runtime/01372_ip.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {
-  const tmp = null != arg1 && null != arg2 && arg1 !== arg2;
   if (tmp) {
     if (null == url) {
       return false;
     } else {
-      const obj2 = URLUtilsDefault;
-      url = obj2.toURLSafe(url);
+      url = URLUtilsDefault.toURLSafe(url);
       let tmp9 = null != url;
       if (tmp9) {
-        const obj = GlobalUtils;
-        const result = obj.isDiscordBackendDevelopment();
+        const result = GlobalUtils.isDiscordBackendDevelopment();
         let tmp5 = !result;
         if (result) {
-          tmp5 = "localhost" !== url.hostname && "127.0.0.1" !== url.hostname;
-          const tmp6 = "localhost" !== url.hostname && "127.0.0.1" !== url.hostname;
+          let tmp6 = "localhost" !== url.hostname;
+          if (tmp6) {
+            tmp6 = "127.0.0.1" !== url.hostname;
+          }
+          tmp5 = tmp6;
         }
         if (!tmp5) {
           tmp5 = "4000" !== url.port;
@@ -38,6 +38,7 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
   } else {
     return false;
   }
+  tmp = null != arg1 && null != arg2 && arg1 !== arg2;
 }
 const Routes = Constants.Routes;
 const re5 = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i;
@@ -64,15 +65,15 @@ const items = [
   window.GLOBAL_ENV.GUILD_TEMPLATE_HOST,
 ];
 const set1 = new Set(items);
-let obj = {
+let result = size.fileFinishedImporting("utils/URLUtils.tsx");
+
+export default {
   URL_REGEX: regExp,
   makeUrl(BILLING_LOGIN_HANDOFF, arg1) {
     if (arg1 == null) {
-      let INVITE_HOST;
-      const obj = GlobalUtils;
       if (!obj.isDiscordFrontendDevelopment()) {
         const _location = location;
-        INVITE_HOST = location.host;
+        let INVITE_HOST = location.host;
       }
       const _location2 = location;
       const _HermesInternal = HermesInternal;
@@ -102,7 +103,10 @@ let obj = {
     return tmp;
   },
   isDiscordLocalhost(host, hostname) {
-    let tmp = null != host && null != hostname;
+    let tmp = null != host;
+    if (tmp) {
+      tmp = null != hostname;
+    }
     if (tmp) {
       const _window = window;
       tmp = window.location.host === host;
@@ -110,7 +114,11 @@ let obj = {
     return tmp;
   },
   isDiscordProtocol(protocol) {
-    return null != protocol && "discord:" === protocol;
+    let tmp = null != protocol;
+    if (tmp) {
+      tmp = "discord:" === protocol;
+    }
+    return tmp;
   },
   isDiscordUrl(ctaLink, arg1) {
     let flag = arg1;
@@ -118,8 +126,7 @@ let obj = {
       flag = false;
     }
     if (null != ctaLink) {
-      const obj = URLUtilsDefault;
-      const toURLSafeResult = obj.toURLSafe(ctaLink);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(ctaLink);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;
@@ -146,13 +153,15 @@ let obj = {
     }
     return false;
   },
-  isDiscordUri(GUILD_TEMPLATE_HOST) {
-    let tmp = null != GUILD_TEMPLATE_HOST;
+  isDiscordUri(sanitizeUrlResult) {
+    let tmp = null != sanitizeUrlResult;
     if (tmp) {
-      const obj = urlParseAll;
-      const protocol = obj.parse(GUILD_TEMPLATE_HOST).protocol;
-      tmp = null != protocol && "discord:" === protocol;
-      const tmp4 = null != protocol && "discord:" === protocol;
+      const protocol = UrlAll.parse(sanitizeUrlResult).protocol;
+      let tmp4 = null != protocol;
+      if (tmp4) {
+        tmp4 = "discord:" === protocol;
+      }
+      tmp = tmp4;
     }
     return tmp;
   },
@@ -160,8 +169,7 @@ let obj = {
     let tmp = null != src;
     if (tmp) {
       const _window = window;
-      const obj = urlParseAll;
-      tmp = obj.parse(src).hostname === window.GLOBAL_ENV.CDN_HOST;
+      tmp = UrlAll.parse(src).hostname === window.GLOBAL_ENV.CDN_HOST;
     }
     return tmp;
   },
@@ -169,21 +177,25 @@ let obj = {
     if (null == shareURI) {
       return false;
     } else {
-      const obj2 = URLUtilsDefault;
-      const toURLSafeResult = obj2.toURLSafe(shareURI);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(shareURI);
       let tmp9 = null != toURLSafeResult;
       if (tmp9) {
-        const obj = GlobalUtils;
-        const result = obj.isDiscordBackendDevelopment();
+        const result = GlobalUtils.isDiscordBackendDevelopment();
         let tmp3 = !result;
         if (result) {
-          tmp3 = "localhost" !== toURLSafeResult.hostname && "127.0.0.1" !== toURLSafeResult.hostname;
-          const tmp4 = "localhost" !== toURLSafeResult.hostname && "127.0.0.1" !== toURLSafeResult.hostname;
+          let tmp4 = "localhost" !== toURLSafeResult.hostname;
+          if (tmp4) {
+            tmp4 = "127.0.0.1" !== toURLSafeResult.hostname;
+          }
+          tmp3 = tmp4;
         }
         let tmp5 = !tmp3;
         if (tmp3) {
           const _window = window;
-          const isMatch = toURLSafeResult.hostname === window.GLOBAL_ENV.CDN_HOST || re6.test(toURLSafeResult.hostname);
+          let isMatch = toURLSafeResult.hostname === window.GLOBAL_ENV.CDN_HOST;
+          if (!isMatch) {
+            isMatch = re6.test(toURLSafeResult.hostname);
+          }
           tmp5 = isMatch;
         }
         tmp9 = tmp5;
@@ -196,30 +208,36 @@ let obj = {
     if (null == url) {
       return false;
     } else {
-      const obj = URLUtilsDefault;
-      const toURLSafeResult = obj.toURLSafe(url);
-      const hasItem = null != toURLSafeResult && set.has(toURLSafeResult.hostname);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
+      let hasItem = null != toURLSafeResult;
+      if (hasItem) {
+        hasItem = set.has(toURLSafeResult.hostname);
+      }
       return hasItem;
     }
   },
   isDiscordAssetUrl(url, arg1, arg2) {
     let flag = false;
     if (null != url) {
-      const obj = URLUtilsDefault;
-      const toURLSafeResult = obj.toURLSafe(url);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
       let tmp4 = null != toURLSafeResult;
       if (tmp4) {
-        const obj2 = GlobalUtils;
-        const result = obj2.isDiscordBackendDevelopment();
+        const result = GlobalUtils.isDiscordBackendDevelopment();
         let tmp7 = !result;
         if (result) {
-          tmp7 = "localhost" !== toURLSafeResult.hostname && "127.0.0.1" !== toURLSafeResult.hostname;
-          const tmp8 = "localhost" !== toURLSafeResult.hostname && "127.0.0.1" !== toURLSafeResult.hostname;
+          let tmp8 = "localhost" !== toURLSafeResult.hostname;
+          if (tmp8) {
+            tmp8 = "127.0.0.1" !== toURLSafeResult.hostname;
+          }
+          tmp7 = tmp8;
         }
         let tmp9 = !tmp7;
         if (tmp7) {
           const _window = window;
-          const isMatch = toURLSafeResult.hostname === window.GLOBAL_ENV.CDN_HOST || re6.test(toURLSafeResult.hostname);
+          let isMatch = toURLSafeResult.hostname === window.GLOBAL_ENV.CDN_HOST;
+          if (!isMatch) {
+            isMatch = re6.test(toURLSafeResult.hostname);
+          }
           tmp9 = isMatch;
         }
         tmp4 = tmp9;
@@ -232,9 +250,11 @@ let obj = {
       if (!tmp17) {
         let flag2 = false;
         if (null != url) {
-          const obj3 = URLUtilsDefault;
-          const toURLSafeResult1 = obj3.toURLSafe(url);
-          const hasItem = null != toURLSafeResult1 && set.has(toURLSafeResult1.hostname);
+          const toURLSafeResult1 = URLUtilsDefault.toURLSafe(url);
+          let hasItem = null != toURLSafeResult1;
+          if (hasItem) {
+            hasItem = set.has(toURLSafeResult1.hostname);
+          }
           flag2 = hasItem;
         }
         tmp17 = flag2;
@@ -246,8 +266,7 @@ let obj = {
   isDiscordUrlOrUri(url) {
     let flag = false;
     if (null != url) {
-      const obj = URLUtilsDefault;
-      const toURLSafeResult = obj.toURLSafe(url);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;
@@ -257,7 +276,7 @@ let obj = {
         let tmp5 = null != hostname;
         if (tmp5) {
           tmp5 = re5.test(hostname) || false;
-          re5.test(hostname) || false;
+          const tmp7 = re5.test(hostname) || false;
         }
         flag = false;
         if (tmp5) {
@@ -268,10 +287,12 @@ let obj = {
     if (!flag) {
       let tmp8 = null != url;
       if (tmp8) {
-        const obj2 = urlParseAll;
-        const protocol = obj2.parse(url).protocol;
-        tmp8 = null != protocol && "discord:" === protocol;
-        const tmp11 = null != protocol && "discord:" === protocol;
+        const protocol = UrlAll.parse(url).protocol;
+        let tmp11 = null != protocol;
+        if (tmp11) {
+          tmp11 = "discord:" === protocol;
+        }
+        tmp8 = tmp11;
       }
       flag = tmp8;
     }
@@ -279,33 +300,30 @@ let obj = {
   },
   isAppRoute(pathname) {
     const formatted = pathname.toLowerCase();
-    const startsWithResult = formatted.startsWith("/channels/") || formatted.startsWith(Routes.ACTIVITY);
+    let startsWithResult = formatted.startsWith("/channels/");
+    if (!startsWithResult) {
+      startsWithResult = formatted.startsWith(Routes.ACTIVITY);
+    }
     return startsWithResult;
   },
   format(safeParseWithQueryResult) {
-    const obj = urlParseAll;
-    return obj.format(safeParseWithQueryResult);
+    return UrlAll.format(safeParseWithQueryResult);
   },
   formatPathWithQuery(pathname, arg1) {
-    let obj2;
-    const obj = { pathname, query: obj2.pickBy(arg1) };
-    const format = urlParseAll.format;
-    urlParseAll;
-    obj2 = _modDef12;
-    return format(obj);
+    const obj2 = { pathname, query: null };
+    const obj = UrlAll;
+    obj2.query = _modDef12.pickBy(arg1);
+    return obj.format(obj2);
   },
   formatSearch(arg0) {
-    let obj2;
-    const obj = { query: obj2.pickBy(arg0) };
-    const format = urlParseAll.format;
-    urlParseAll;
-    obj2 = _modDef12;
-    return format(obj);
+    const obj2 = { query: null };
+    const obj = UrlAll;
+    obj2.query = _modDef12.pickBy(arg0);
+    return obj.format(obj2);
   },
   safeParseWithQuery(target) {
     try {
-      const obj = urlParseAll;
-      return obj.parse(target, true);
+      return UrlAll.parse(target, true);
     } catch (err) {
       return null;
     }
@@ -313,8 +331,6 @@ let obj = {
   toURLSafe(url, arg1) {
     try {
       const _URL = URL;
-      const self = this;
-      const self2 = this;
       const uRL = new URL(url, arg1);
       return uRL;
     } catch (err) {
@@ -330,6 +346,3 @@ let obj = {
     }
   },
 };
-let result = size.fileFinishedImporting("utils/URLUtils.tsx");
-
-export default obj;

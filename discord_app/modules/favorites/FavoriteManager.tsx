@@ -1,58 +1,44 @@
 // discord_app/modules/favorites/FavoriteManager.tsx
-import Constants from "../../Constants.tsx";
 import FavoritesUtils from "FavoritesUtils.tsx";
 import FavoritesActionCreators from "FavoritesActionCreators.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
-import FavoritesGuildSuggestionsStore from "FavoritesGuildSuggestionsStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let c3;
-let closure_4;
+require = fn;
 function handleChannelDelete(channel) {
-  const id = channel.channel.id;
-  const obj = FavoritesActionCreators;
-  const result = obj.removeFavoriteChannel(id, { trackAnalytics: false });
+  const result = FavoritesActionCreators.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
 }
 function handleCategoryCollapse(id) {
-  id = id.id;
-  const obj = FavoritesActionCreators;
-  const result = obj.setFavoriteCategoriesCollapsed(true, id);
+  const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(true, id.id);
 }
 function handleCategoryExpand(id) {
-  id = id.id;
-  const obj = FavoritesActionCreators;
-  const result = obj.setFavoriteCategoriesCollapsed(false, id);
+  const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(false, id.id);
 }
 function handleCategoryCollapseAll(guildId) {
-  guildId = guildId.guildId;
-  const obj = FavoritesUtils;
-  if (obj.isFavoritesGuildId(guildId)) {
+  if (obj.isFavoritesGuildId(guildId.guildId)) {
+    const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(true);
     const tmpResult = FavoritesActionCreators;
-    const result = tmpResult.setFavoriteCategoriesCollapsed(true);
   }
+  obj = FavoritesUtils;
 }
 function handleCategoryExpandAll(guildId) {
-  guildId = guildId.guildId;
-  const obj = FavoritesUtils;
-  if (obj.isFavoritesGuildId(guildId)) {
+  if (obj.isFavoritesGuildId(guildId.guildId)) {
+    const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(false);
     const tmpResult = FavoritesActionCreators;
-    const result = tmpResult.setFavoriteCategoriesCollapsed(false);
   }
+  obj = FavoritesUtils;
 }
 function handleLogout() {
-  React3(_false);
+  React4(React3);
 }
 function handleThreadMembersUpdate(addedMembers) {
   addedMembers = addedMembers.addedMembers;
-  const id = addedMembers.id;
-  const id1 = AuthenticationStore.getId();
-  const tmp2 = null != id1 && null != addedMembers && addedMembers.some((userId) => userId.userId === id1);
+  const id = AuthenticationStore.getId();
   if (tmp2) {
-    const obj = FavoritesActionCreators;
-    const result = obj.autoAddJoinedThreadToFavorites(id);
+    const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(addedMembers.id);
     result.catch(NOOP);
   }
+  tmp2 = null != id && null != addedMembers && addedMembers.some((userId) => userId.userId === id);
 }
 function handleThreadCreate(channel) {
   channel = channel.channel;
@@ -67,8 +53,6 @@ function handleThreadCreate(channel) {
     if (tmp3) {
       const _Date = Date;
       const _Date2 = Date;
-      const self = this;
-      const self2 = this;
       const timestamp = Date.now();
       const date = new Date(joinTimestamp);
       tmp3 = timestamp - date.getTime() < 60000;
@@ -76,14 +60,11 @@ function handleThreadCreate(channel) {
     tmp2 = tmp3;
   }
   if (tmp2) {
-    const obj2 = FavoritesActionCreators;
-    const result = obj2.autoAddJoinedThreadToFavorites(channel.id);
+    const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(channel.id);
     result.catch(NOOP);
   }
 }
 function handleThreadMemberUpdate(joinTimestamp) {
-  let id;
-  let userId;
   joinTimestamp = joinTimestamp.joinTimestamp;
   ({ id, userId } = joinTimestamp);
   let tmp = AuthenticationStore.getId() === userId;
@@ -92,8 +73,6 @@ function handleThreadMemberUpdate(joinTimestamp) {
     if (tmp3) {
       const _Date = Date;
       const _Date2 = Date;
-      const self = this;
-      const self2 = this;
       const timestamp = Date.now();
       const date = new Date(joinTimestamp);
       tmp3 = timestamp - date.getTime() < 60000;
@@ -101,32 +80,31 @@ function handleThreadMemberUpdate(joinTimestamp) {
     tmp = tmp3;
   }
   if (tmp) {
-    const obj2 = FavoritesActionCreators;
-    const result = obj2.autoAddJoinedThreadToFavorites(id);
+    const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(id);
     result.catch(NOOP);
   }
 }
+const FavoritesGuildSuggestionsStore = fn(16166);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
-const NOOP = Constants.NOOP;
-class FavoriteManager extends AutomaticLifecycleManager {
-  constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const obj = {
-      CHANNEL_DELETE: handleChannelDelete,
-      CATEGORY_COLLAPSE: handleCategoryCollapse,
-      CATEGORY_EXPAND: handleCategoryExpand,
-      CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll,
-      CATEGORY_EXPAND_ALL: handleCategoryExpandAll,
-      LOGOUT: handleLogout,
-      THREAD_CREATE: handleThreadCreate,
-      THREAD_MEMBERS_UPDATE: handleThreadMembersUpdate,
-      THREAD_MEMBER_UPDATE: handleThreadMemberUpdate,
-    };
-    applyArgumentsResult.actions = obj;
-    return applyArgumentsResult;
-  }
-}
-const favoriteManager = new FavoriteManager();
+const NOOP = fn(1085).NOOP;
+const prototype = function FavoriteManager() {
+  const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  applyArgumentsResult.actions = {
+    CHANNEL_DELETE: handleChannelDelete,
+    CATEGORY_COLLAPSE: handleCategoryCollapse,
+    CATEGORY_EXPAND: handleCategoryExpand,
+    CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll,
+    CATEGORY_EXPAND_ALL: handleCategoryExpandAll,
+    LOGOUT: handleLogout,
+    THREAD_CREATE: handleThreadCreate,
+    THREAD_MEMBERS_UPDATE: handleThreadMembersUpdate,
+    THREAD_MEMBER_UPDATE: handleThreadMemberUpdate,
+  };
+  return applyArgumentsResult;
+}.prototype;
+class prototype extends tmp3 {}
+const prototype1 = new prototype();
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 
-export default favoriteManager;
+export default prototype1;

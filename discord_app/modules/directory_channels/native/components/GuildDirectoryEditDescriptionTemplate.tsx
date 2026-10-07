@@ -1,227 +1,195 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx
-import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildDirectoryStore from "../../GuildDirectoryStore.tsx";
-import GuildDirectoryConstants from "../../GuildDirectoryConstants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let c4, closure_2;
 
-let c10;
-let c9;
-let closure_12;
-let metroImportDefault;
-let metroRequire;
-let unpackModuleId;
-let react = react_mod;
-({ View: metroRequire, Keyboard: metroImportDefault } = react_native);
-({ DirectoryEntryCategories: c9, getHubCategories: c10 } = GuildDirectoryConstants);
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, Keyboard: closure_7 } = get_ActivityIndicator);
+const GuildDirectoryConstants = fn(11947);
+({ DirectoryEntryCategories: closure_9, getHubCategories: c10 } = GuildDirectoryConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
 let closure_13 = createStyles.createStyles({ container: { marginHorizontal: 16, gap: 24 } });
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx",
 );
 
 export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
-  let _undefined;
-  let anyErrorMessage;
-  let c5;
-  let c6;
-  let directoryChannelId;
-  let entry;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let items1;
-  let obj3;
-  let str2;
-  let tmp12;
   ({ onSubmit: require, entry, directoryChannelId } = buttonLabel);
   let defaultValue;
-  let closure_3;
+  closure_3 = undefined;
   let first1;
-  react = undefined;
+  noop = undefined;
   c6 = undefined;
-  let obj = function _handleSubmit() {
-    obj = _asyncToGenerator(async function () {
-      let closure_1;
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+  closure_7 = async function _handleSubmit() {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        let c3;
-        try {
-          let closure_0;
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_0 = tmp4;
-              _undefined(true);
-              c3 = 2;
-              c4 = 3;
-              c5 = 1;
-              const obj4 = { value: require(first1, defaultValue), done: false };
-              return obj4;
-            }
-          } else if (1 === c4) {
-            c3 = 0;
-            closure_129_5(false);
-            throw closure_2;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            if (2 === c4) {
-              c3 = 1;
-              closure_0 = closure_2;
-              const self = this;
-              const self2 = this;
-              const tmp16 = new tmp(closure_2[9])(closure_0);
-              closure_129_6(tmp16);
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              closure_129_5(false);
-              c5 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              c3 = 1;
-            }
+            closure_0 = tmp8;
+            noop(true);
+            c3 = 2;
+            c4 = 3;
+            c5 = 1;
+            const obj4 = { value: _require(first1, defaultValue), done: false };
+            return obj4;
+          }
+        } else if (1 === tmp8) {
+          c3 = 0;
+          closure_129_5(false);
+          throw tmp38;
+        } else {
+          if (2 === tmp8) {
+            c3 = 1;
+            closure_128_0 = tmp38;
+            const tmp22 = new tmp4(tmp38[9])(closure_128_0);
+            closure_129_6(tmp22);
             c3 = 0;
             closure_129_5(false);
             c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp32) {
-          closure_2 = tmp32;
-          if (0 === c3) {
+          } else if (arg0 === 1) {
             c5 = 3;
-            throw tmp32;
-          } else if (1 === tmp34) {
-            c4 = 1;
-          } else {
-            c4 = 2;
+            throw value;
+          } else if (arg0 !== 2) {
+            c3 = 1;
           }
+          c3 = 0;
+          closure_129_5(false);
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp38) {
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp38;
+        } else if (tmp2 === tmp40) {
+          c4 = tmp2;
+        } else {
+          c4 = tmp;
         }
       }
-    });
-    return obj(...arguments);
+    }
   };
-  buttonLabel = buttonLabel.buttonLabel;
   const tmp = closure_13();
-  const tmp3 = defaultValue;
   const arr = closure_10(directoryChannelId);
-  obj = require("get initialized");
   const items = [GuildDirectoryStore];
-  let obj2 = react;
   let primaryCategoryId;
-  const stateFromStores = obj.useStateFromStores(items, () =>
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildDirectoryStore.getCurrentCategoryId(directoryChannelId),
   );
-  const useState = react.useState;
   if (entry != null) {
     primaryCategoryId = entry.primaryCategoryId;
   }
   if (primaryCategoryId == null) {
     primaryCategoryId = stateFromStores;
   }
-  const tmp7 = first1(useState(primaryCategoryId), 2);
+  const tmp7 = first1(noop.useState(primaryCategoryId), 2);
   defaultValue = tmp7[0];
   closure_3 = tmp7[1];
   let str;
-  const useState2 = obj2.useState;
   if (entry != null) {
     str = entry.description;
   }
   if (str == null) {
     str = "";
   }
-  const tmp6Result = first1(useState2(str), 2);
+  const tmp6Result = first1(noop.useState(str), 2);
   first1 = tmp6Result[0];
-  const tmp10 = tmp6Result[1];
-  [tmp12, c5] = first1(obj2.useState(false), 2);
-  first1(obj2.useState(false), 2);
-  [obj3, c6] = first1(obj2.useState(null), 2);
-  let obj4 = { style: tmp.container, children: items1 };
+  let obj = require("initialize");
+  [tmp11, c5] = first1(noop.useState(false), 2);
+  const tmp6Result3 = first1(noop.useState(false), 2);
+  [obj3, c6] = first1(noop.useState(null), 2);
+  let obj4 = { style: tmp.container, children: null };
   const obj5 = {
-    label: intl.string(require("intl").t.FFFAGt),
-    description: intl2.string(require("intl").t["/zbXqm"]),
-    value: first1,
-    onChange: tmp10,
-    placeholder: intl3.string(require("intl").t.VzuITC),
+    label: null,
+    description: null,
+    value: null,
+    onChange: null,
+    placeholder: null,
     maxLength: 200,
-    status: str2,
-    errorMessage: anyErrorMessage,
+    status: null,
+    errorMessage: null,
     submitBehavior: "blurAndSubmit",
     returnKeyType: "done",
   };
-  first1(obj2.useState(null), 2);
-  const TextArea = require("TextArea").TextArea;
-  intl = require("intl").intl;
-  intl2 = require("intl").intl;
-  intl3 = require("intl").intl;
-  str2 = "default";
-  const tmp15 = c6;
+  const intl = require("util").intl;
+  obj5.label = intl.string(require("util").t.FFFAGt);
+  const intl2 = require("util").intl;
+  obj5.description = intl2.string(require("util").t["/zbXqm"]);
+  obj5.value = first1;
+  obj5.onChange = tmp6Result[1];
+  const intl3 = require("util").intl;
+  obj5.placeholder = intl3.string(require("util").t.VzuITC);
+  let str2 = "default";
   if (null != obj3) {
     str2 = "error";
   }
-  anyErrorMessage = undefined;
+  obj5.status = str2;
+  let anyErrorMessage;
   if (obj3 != null) {
     anyErrorMessage = obj3.getAnyErrorMessage();
   }
-  items1 = [closure_11(TextArea, obj5), ,];
-  const obj6 = {
-    title: intl4.string(require("intl").t.Olo8FB),
-    defaultValue,
-    onChange(arg0) {
-      metroImportDefault.dismiss();
-      closure_3(arg0);
-    },
-    hasIcons: false,
-    children: arr.map((label) => {
-      obj = { label: label.label, value: label.value };
-      return closure_1_11(require("TableRadioRow").TableRadioRow, obj, label.value);
-    }),
+  obj5.errorMessage = anyErrorMessage;
+  const items1 = [closure_11(require("TextArea").TextArea, obj5), ,];
+  const obj6 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
+  const intl4 = require("util").intl;
+  obj6.title = intl4.string(require("util").t.Olo8FB);
+  obj6.defaultValue = defaultValue;
+  obj6.onChange = function onChange(arg0) {
+    React5.dismiss();
+    closure_3(arg0);
   };
-  const TableRadioGroup = require("TableRadioGroup").TableRadioGroup;
-  intl4 = require("intl").intl;
-  items1[1] = closure_11(TableRadioGroup, obj6);
-  let tmp18 = 0 === first1.length;
-  const Button = require("components/Button/Button").Button;
-  if (!tmp18) {
-    tmp18 = defaultValue === constants.ALL;
+  obj6.children = arr.map((label) =>
+    closure_1_11(require("TableRadioRow").TableRadioRow, { label: label.label, value: label.value }, label.value),
+  );
+  items1[1] = closure_11(require("TableRadioGroup").TableRadioGroup, obj6);
+  let tmp17 = 0 === first1.length;
+  if (!tmp17) {
+    tmp17 = defaultValue === constants.ALL;
   }
-  const obj7 = {
-    disabled: tmp18,
+  items1[2] = closure_11(require("components/Button/Button").Button, {
+    disabled: tmp17,
     onPress: function handleSubmit() {
-      return obj(...arguments);
+      const self = this;
+      const apply = closure_7.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
     },
-    loading: tmp12,
-    text: buttonLabel,
+    loading: tmp11,
+    text: buttonLabel.buttonLabel,
     size: "lg",
-  };
-  items1[2] = closure_11(Button, obj7);
-  return closure_12(tmp15, obj4);
+  });
+  obj4.children = items1;
+  return closure_12(c6, obj4);
 }

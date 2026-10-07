@@ -1,122 +1,119 @@
 // discord_app/modules/threads/native/components/redesign/ThreadListTableRow.tsx
-import react_native from "../../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../../_runtime/00576_react.js";
-import TableRow2 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import c from "../../../../../../_runtime/00576_c.js";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ThreadBrowserRowSubtext from "../ThreadBrowserRowSubtext.tsx";
-import react from "../../../../../../_runtime/00019_react.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
-let thread, threadId;
-
-const View = react_native.View;
-const jsx = Fragment.jsx;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
 let closure_6 = createStyles.createStyles({ subLabel: { maxWidth: "100%", marginTop: 2 } });
-let ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? (thread) => {
-      let end;
-      let start;
-      let tmp7;
-      const obj = react2;
-      const cResult = obj.c(14);
+      const cResult = c.c(14);
       thread = thread.thread;
-      const onPress = thread.onPress;
+      let id = thread.onPress;
       ({ start, end } = thread);
       const tmp4 = closure_6();
-      if (null != onPress) {
-        const fn = function u() {
-          return onPress(thread.id);
-        };
-        cResult[0] = onPress;
-        cResult[1] = thread.id;
-        cResult[2] = fn;
-      }
-      if (cResult[3] !== thread) {
-        const tmp9 = jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread });
-        cResult[3] = thread;
-        cResult[4] = tmp9;
-        tmp7 = tmp9;
-      } else {
-        tmp7 = cResult[4];
-      }
-      if (cResult[5] === tmp4.subLabel) {
-        let tmp10;
-        if (cResult[6] === tmp7) {
-          tmp10 = cResult[7];
+      if (null == id) {
+        if (cResult[3] !== thread) {
+          const obj2 = { thread };
+          const tmp9 = jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread });
+          cResult[3] = thread;
+          cResult[4] = tmp9;
+          let tmp7 = tmp9;
+        } else {
+          tmp7 = cResult[4];
         }
-        if (cResult[8] === end) {
-          if (cResult[9] === tmp5) {
-            if (cResult[10] === start) {
-              if (cResult[11] === tmp10) {
-                let tmp12;
-                if (cResult[12] === thread.name) {
-                  tmp12 = cResult[13];
+        if (cResult[5] === tmp4.subLabel) {
+          if (cResult[6] === tmp7) {
+            let tmp10 = cResult[7];
+          }
+          if (cResult[8] === end) {
+            if (cResult[9] === undefined) {
+              if (cResult[10] === start) {
+                if (cResult[11] === tmp10) {
+                  if (cResult[12] === thread.name) {
+                    let tmp14 = cResult[13];
+                  }
+                  return tmp14;
                 }
-                return tmp12;
               }
             }
           }
+          const obj3 = { label: thread.name, subLabel: tmp10, onPress: undefined, start, end, arrow: true };
+          const tmp16 = jsx(TableRow.TableRow, {
+            label: thread.name,
+            subLabel: tmp10,
+            onPress: undefined,
+            start,
+            end,
+            arrow: true,
+          });
+          cResult[8] = end;
+          cResult[9] = undefined;
+          cResult[10] = start;
+          cResult[11] = tmp10;
+          cResult[12] = thread.name;
+          cResult[13] = tmp16;
+          tmp14 = tmp16;
         }
-        const tmp14 = jsx(TableRow2.TableRow, {
-          label: thread.name,
-          subLabel: tmp10,
-          onPress: tmp5,
-          start,
-          end,
-          arrow: true,
-        });
-        cResult[8] = end;
-        cResult[9] = tmp5;
-        cResult[10] = start;
-        cResult[11] = tmp10;
-        cResult[12] = thread.name;
-        cResult[13] = tmp14;
-        tmp12 = tmp14;
+        const obj4 = { style: tmp4.subLabel, children: tmp7 };
+        const tmp13 = <View style={tmp4.subLabel}>{tmp7}</View>;
+        cResult[5] = tmp4.subLabel;
+        cResult[6] = tmp7;
+        cResult[7] = tmp13;
+        tmp10 = tmp13;
+      } else {
+        if (cResult[0] === id) {
+        }
+        const fn = function u() {
+          return id(thread.id);
+        };
+        cResult[0] = id;
+        id = thread.id;
+        cResult[1] = id;
+        cResult[2] = fn;
       }
-      const tmp11 = <View style={tmp4.subLabel}>{tmp7}</View>;
-      cResult[5] = tmp4.subLabel;
-      cResult[6] = tmp7;
-      cResult[7] = tmp11;
-      tmp10 = tmp11;
     }
   : (thread) => {
-      let end;
-      let start;
       thread = thread.thread;
       const onPress = thread.onPress;
       ({ start, end } = thread);
       const items = [onPress, thread.id];
+      const memo = noop.useMemo(() => (null != onPress ? () => onPress(id.id) : undefined), items);
+      const obj = { label: thread.name, subLabel: null, onPress: null, start: null, end: null, arrow: true };
       const tmp = closure_6();
-      const memo = react.useMemo(() => {
-        let id;
-        return null != onPress ? () => onPress(id.id) : undefined;
-      }, items);
-      const TableRow = TableRow2.TableRow;
-      return <TableRow label={thread.name} subLabel={null} onPress={memo} start={start} end={end} arrow />;
+      obj.subLabel = <View style={closure_6().subLabel}>{jsx(ThreadBrowserRowSubtext.ThreadSubtext, { thread })}</View>;
+      obj.onPress = memo;
+      obj.start = start;
+      obj.end = end;
+      return jsx(TableRow.TableRow, {
+        label: thread.name,
+        subLabel: null,
+        onPress: null,
+        start: null,
+        end: null,
+        arrow: true,
+      });
     };
-let memo = react.memo;
-ReactCompilerGating = ReactCompilerGating_mod;
-const memoResult = memo(
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
+
+export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (threadId) => {
-        let end;
-        let first;
-        let onPress;
-        let start;
-        let tmp6;
-        const obj = threadId(576);
-        const cResult = obj.c(8);
-        const tmp = threadId;
+        const cResult = threadId(576).c(8);
         threadId = threadId.threadId;
         ({ onPress, start, end } = threadId);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelStore];
           cResult[0] = items;
-          first = items;
+          let first = items;
         } else {
           first = cResult[0];
         }
@@ -126,51 +123,41 @@ const memoResult = memo(
           };
           cResult[1] = threadId;
           cResult[2] = fn;
-          tmp6 = fn;
+          let tmp6 = fn;
         } else {
           tmp6 = cResult[2];
         }
-        const tmpResult = tmp(504);
-        const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-        let tmp8 = null;
-        if (null != stateFromStores) {
+        const obj = threadId(576);
+        const stateFromStores = threadId(504).useStateFromStores(first, tmp6);
+        if (null == stateFromStores) {
+          return null;
+        } else {
           if (cResult[3] === end) {
             if (cResult[4] === onPress) {
               if (cResult[5] === start) {
-                let tmp9;
-                if (cResult[6] === stateFromStores) {
-                  tmp9 = cResult[7];
-                }
-                tmp8 = tmp9;
               }
             }
           }
-          const tmp12 = <closure_7 thread={stateFromStores} start={start} end={end} onPress={onPress} />;
+          const obj2 = { thread: stateFromStores, start, end, onPress };
+          const tmp11 = <closure_7 thread={stateFromStores} start={start} end={end} onPress={onPress} />;
           cResult[3] = end;
           cResult[4] = onPress;
           cResult[5] = start;
           cResult[6] = stateFromStores;
-          cResult[7] = tmp12;
-          tmp9 = tmp12;
+          cResult[7] = tmp11;
         }
-        return tmp8;
+        const tmpResult = threadId(504);
       }
     : (threadId) => {
-        let end;
-        let onPress;
-        let start;
         threadId = threadId.threadId;
         ({ onPress, start, end } = threadId);
         const items = [ChannelStore];
-        const obj = threadId(504);
-        const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(threadId));
+        const stateFromStores = threadId(504).useStateFromStores(items, () => ChannelStore.getChannel(threadId));
         let tmp2 = null;
         if (null != stateFromStores) {
+          const obj2 = { thread: stateFromStores, start, end, onPress };
           tmp2 = <closure_7 thread={stateFromStores} start={start} end={end} onPress={onPress} />;
         }
         return tmp2;
       },
 );
-const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
-
-export default memoResult;

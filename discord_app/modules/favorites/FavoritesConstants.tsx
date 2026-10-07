@@ -2,7 +2,6 @@
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const constructFromPartialGuildRecord = GuildRecordUtils.constructFromPartialGuildRecord;
 const obj = {
   id: "373",
   name: "Favorites",
@@ -10,8 +9,7 @@ const obj = {
   joinedAt: new Date(),
   maxMembers: 500000,
 };
-new Date();
-const result = constructFromPartialGuildRecord(obj);
+const result = GuildRecordUtils.constructFromPartialGuildRecord(obj);
 const result1 = size.fileFinishedImporting("modules/favorites/FavoritesConstants.tsx");
 
 export const FAVORITES_RAW_GUILD_ID = "373";

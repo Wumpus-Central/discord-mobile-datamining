@@ -1,34 +1,26 @@
 // discord_app/design/mana/components/Toast/Toast.native.tsx
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
-import CircleCheckIcon from "../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
-import CircleErrorIcon from "../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import _mod14280 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
 import ToastEntity from "ToastEntity.native.tsx";
-import isEmptyDefault from "../../../../../_runtime/14282_isEmpty.js";
-import react from "../../../../../_runtime/00019_react.js";
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import _modDef14282 from "../../../../../_runtime/metro/14282__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_4;
-let hasOwnProperty;
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let obj3;
-({ StyleSheet: closure_4, View: hasOwnProperty } = react_native);
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
-let wrapper = { success: obj2, critical: obj3 };
-obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: CircleCheckIcon.CircleCheckIcon };
-obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: CircleErrorIcon.CircleErrorIcon };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let wrapper = {
+  success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(4798).CircleCheckIcon },
+  critical: null,
+};
+let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(4798).CircleCheckIcon };
+wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(4806).CircleErrorIcon };
+const createStyles = fn(4896);
 let closure_9 = createStyles.createStyles((arg0) => {
-  let BACKGROUND_BASE_LOW;
-  let obj3;
   wrapper = {
     flexDirection: "row",
     gap: nativeDefault.space.PX_8,
@@ -37,144 +29,64 @@ let closure_9 = createStyles.createStyles((arg0) => {
     justifyContent: "center",
     alignItems: "center",
     maxWidth: nativeDefault.modules.toast.MAX_WIDTH,
-    backgroundColor: BACKGROUND_BASE_LOW,
+    backgroundColor: null,
   };
   if ("default" === arg0) {
-    BACKGROUND_BASE_LOW = nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST;
+    let BACKGROUND_BASE_LOW = nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST;
   } else {
     BACKGROUND_BASE_LOW = nativeDefault.colors.BACKGROUND_BASE_LOW;
   }
-  const obj2 = {
-    wrapper,
-    baselayer: obj3,
-    default: { borderColor: nativeDefault.colors.BORDER_NORMAL },
-    success: {
-      borderColor: nativeDefault.colors.TOAST_SUCCESS_BORDER,
-      backgroundColor: nativeDefault.colors.TOAST_SUCCESS_BACKGROUND,
-    },
-    critical: {
-      borderColor: nativeDefault.colors.TOAST_CRITICAL_BORDER,
-      backgroundColor: nativeDefault.colors.TOAST_CRITICAL_BACKGROUND,
-    },
-    icon: { flexShrink: 0 },
-    text: { flexShrink: 1 },
-  };
+  const obj2 = { wrapper: null, baselayer: null, default: null, success: null, critical: null, icon: null, text: null };
+  wrapper.backgroundColor = BACKGROUND_BASE_LOW;
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-  obj3 = { borderRadius: nativeDefault.radii.md, borderWidth: 1 };
+  obj2.wrapper = wrapper;
   const merged1 = Object.assign(absoluteFill.absoluteFill);
-  ({ borderColor: nativeDefault.colors.BORDER_NORMAL });
-  ({
+  obj2.baselayer = { borderRadius: nativeDefault.radii.md, borderWidth: 1 };
+  const obj3 = { borderRadius: nativeDefault.radii.md, borderWidth: 1 };
+  obj2.default = { borderColor: nativeDefault.colors.BORDER_NORMAL };
+  const obj4 = { borderColor: nativeDefault.colors.BORDER_NORMAL };
+  obj2.success = {
     borderColor: nativeDefault.colors.TOAST_SUCCESS_BORDER,
     backgroundColor: nativeDefault.colors.TOAST_SUCCESS_BACKGROUND,
-  });
-  ({
+  };
+  const obj5 = {
+    borderColor: nativeDefault.colors.TOAST_SUCCESS_BORDER,
+    backgroundColor: nativeDefault.colors.TOAST_SUCCESS_BACKGROUND,
+  };
+  obj2.critical = {
     borderColor: nativeDefault.colors.TOAST_CRITICAL_BORDER,
     backgroundColor: nativeDefault.colors.TOAST_CRITICAL_BACKGROUND,
-  });
+  };
+  obj2.icon = { flexShrink: 0 };
+  obj2.text = { flexShrink: 1 };
   return obj2;
 });
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+const ReactCompilerGating = fn(558);
+let obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(4806).CircleErrorIcon };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/mana/components/Toast/Toast.native.tsx");
+
+export const Toast = ReactCompilerGating.isReactCompilerEnabled()
   ? (iconColor) => {
-      let icon;
-      let items1;
-      let items2;
-      let secondaryIconColor;
-      let text;
-      let tmp10;
-      let variant;
-      const obj = react2;
+      const obj = c;
       const cResult = obj.c(23);
       ({ variant, text, icon, secondaryIconColor } = iconColor);
       let str = "default";
-      iconColor = iconColor.iconColor;
       if (undefined !== variant) {
         str = variant;
       }
       const tmp4 = closure_9(str);
-      const tmpResult = useToken;
-      const token = tmpResult.useToken(nativeDefault.modules.toast.TEXT_LINE_COUNT);
+      const token = useToken.useToken(nativeDefault.modules.toast.TEXT_LINE_COUNT);
       if (null == obj[str]) {
-        let tmp22;
-        const tmpResult3 = _mod14280;
         if (tmpResult3.isToastEntity(icon)) {
-          let tmp19;
           if (cResult[0] !== icon) {
             const obj2 = { entity: icon };
-            const tmp21 = metroRequire(ToastEntity.ToastEntity, obj2);
+            const tmp21 = timestampProducer(ToastEntity.ToastEntity, obj2);
             cResult[0] = icon;
             cResult[1] = tmp21;
-            tmp19 = tmp21;
-          } else {
-            tmp19 = cResult[1];
           }
-          tmp10 = tmp19;
         }
-        if (cResult[9] !== tmp4.wrapper) {
-          const items = [tmp4.wrapper];
-          cResult[9] = tmp4.wrapper;
-          cResult[10] = items;
-          tmp22 = items;
-        } else {
-          tmp22 = cResult[10];
-        }
-        if (cResult[11] === tmp4.baselayer) {
-          let tmp24;
-          if (cResult[12] === tmp4[str]) {
-            tmp24 = cResult[13];
-          }
-          if (cResult[14] === tmp4.text) {
-            if (cResult[15] === text) {
-              let tmp28;
-              if (cResult[16] === token) {
-                tmp28 = cResult[17];
-              }
-              if (cResult[18] === tmp10) {
-                if (cResult[19] === tmp22) {
-                  if (cResult[20] === tmp24) {
-                    let tmp32;
-                    if (cResult[21] === tmp28) {
-                      tmp32 = cResult[22];
-                    }
-                    return tmp32;
-                  }
-                }
-              }
-              const obj3 = { style: tmp22, children: items1 };
-              items1 = [tmp24, tmp10, tmp28];
-              const tmp35 = metroImportDefault(hasOwnProperty, obj3);
-              cResult[18] = tmp10;
-              cResult[19] = tmp22;
-              cResult[20] = tmp24;
-              cResult[21] = tmp28;
-              cResult[22] = tmp35;
-              tmp32 = tmp35;
-            }
-          }
-          let tmp30 = !isEmptyDefault(text);
-          isEmptyDefault(text);
-          if (tmp30) {
-            const obj4 = {
-              variant: "text-md/normal",
-              color: "text-strong",
-              lineClamp: token,
-              style: tmp4.text,
-              children: text,
-            };
-            tmp30 = metroRequire(Text_Text.Text, obj4);
-          }
-          cResult[14] = tmp4.text;
-          cResult[15] = text;
-          cResult[16] = token;
-          cResult[17] = tmp30;
-          tmp28 = tmp30;
-        }
-        const obj5 = { style: items2 };
-        items2 = [tmp4.baselayer, tmp4[str]];
-        const tmp27 = metroRequire(hasOwnProperty, obj5);
-        cResult[11] = tmp4.baselayer;
-        cResult[12] = tmp4[str];
-        cResult[13] = tmp27;
-        tmp24 = tmp27;
+        tmpResult3 = _mod14280;
       }
       let icon1;
       if (obj[str] != null) {
@@ -182,63 +94,122 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (icon1 == null) {
         let tmp9;
-        const tmpResult4 = _mod14280;
         if (!tmpResult4.isToastEntity(icon)) {
           tmp9 = icon;
         }
         icon1 = tmp9;
+        tmpResult4 = _mod14280;
       }
-      tmp10 = null;
+      let tmp10 = null;
       if (null != icon1) {
         let color;
-        if (obj[str] != null) {
+        if (tmp7 != null) {
           color = tmp7.color;
         }
         if (color == null) {
-          color = iconColor;
+          color = iconColor.iconColor;
         }
         if (color == null) {
           color = nativeDefault.colors.ICON_DEFAULT;
         }
         if (cResult[2] === secondaryIconColor) {
-          let tmp12;
           if (cResult[3] === color) {
-            tmp12 = cResult[4];
+            let tmp12 = cResult[4];
           }
           if (cResult[5] === icon1) {
             if (cResult[6] === tmp12) {
-              let tmp13;
               if (cResult[7] === tmp4.icon) {
-                tmp13 = cResult[8];
+                let tmp13 = cResult[8];
               }
               tmp10 = tmp13;
             }
           }
-          const obj6 = { style: tmp4.icon, size: "sm" };
+          const obj3 = { style: tmp4.icon, size: "sm" };
           const merged = Object.assign(tmp12);
-          const tmp18 = metroRequire(icon1, obj6);
+          const tmp18 = timestampProducer(icon1, obj3);
           cResult[5] = icon1;
           cResult[6] = tmp12;
           cResult[7] = tmp4.icon;
           cResult[8] = tmp18;
           tmp13 = tmp18;
         }
-        const obj7 = { color };
+        const obj4 = { color };
         if (null != secondaryIconColor) {
-          obj7.secondaryColor = secondaryIconColor;
+          obj4.secondaryColor = secondaryIconColor;
         }
         cResult[2] = secondaryIconColor;
         cResult[3] = color;
-        cResult[4] = obj7;
-        tmp12 = obj7;
+        cResult[4] = obj4;
+        tmp12 = obj4;
       }
+      if (cResult[9] !== tmp4.wrapper) {
+        const items = [tmp4.wrapper];
+        cResult[9] = tmp4.wrapper;
+        cResult[10] = items;
+        let tmp23 = items;
+      } else {
+        tmp23 = cResult[10];
+      }
+      if (cResult[11] === tmp4.baselayer) {
+        if (cResult[12] === tmp24) {
+          let tmp25 = cResult[13];
+        }
+        if (cResult[14] === tmp4.text) {
+          if (cResult[15] === text) {
+            if (cResult[16] === token) {
+              let tmp27 = cResult[17];
+            }
+            if (cResult[18] === tmp10) {
+              if (cResult[19] === tmp23) {
+                if (cResult[20] === tmp25) {
+                  if (cResult[21] === tmp27) {
+                    let tmp31 = cResult[22];
+                  }
+                  return tmp31;
+                }
+              }
+            }
+            const obj5 = { style: tmp23, children: null };
+            const items1 = [tmp25, tmp10, tmp27];
+            obj5.children = items1;
+            const tmp34 = React5(hasOwnProperty, obj5);
+            cResult[18] = tmp10;
+            cResult[19] = tmp23;
+            cResult[20] = tmp25;
+            cResult[21] = tmp27;
+            cResult[22] = tmp34;
+            tmp31 = tmp34;
+          }
+        }
+        const tmp28 = _modDef14282(text);
+        let tmp29 = !tmp28;
+        if (!tmp28) {
+          const obj6 = {
+            variant: "text-md/normal",
+            color: "text-strong",
+            lineClamp: token,
+            style: tmp4.text,
+            children: text,
+          };
+          tmp29 = timestampProducer(Text_Text.Text, obj6);
+        }
+        cResult[14] = tmp4.text;
+        cResult[15] = text;
+        cResult[16] = token;
+        cResult[17] = tmp29;
+        tmp27 = tmp29;
+      }
+      const obj7 = { style: null };
+      const items2 = [tmp4.baselayer, tmp4[str]];
+      obj7.style = items2;
+      const tmp26 = timestampProducer(hasOwnProperty, obj7);
+      cResult[11] = tmp4.baselayer;
+      cResult[12] = tmp4[str];
+      cResult[13] = tmp26;
+      tmp25 = tmp26;
+      const tmpResult = useToken;
     }
   : (variant) => {
-      let icon;
-      let items1;
-      let items2;
-      let items3;
-      let text;
       let str = variant.variant;
       if (str === undefined) {
         str = "default";
@@ -248,22 +219,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const secondaryIconColor = variant.secondaryIconColor;
       const tmp = closure_9(str);
       icon = tmp;
-      let obj = str(iconColor[9]);
       const items = [icon, iconColor, secondaryIconColor, tmp.icon, str];
-      const token = obj.useToken(icon(iconColor[3]).modules.toast.TEXT_LINE_COUNT);
-      let obj2 = { style: items1, children: items3 };
-      items1 = [tmp.wrapper];
-      let obj3 = { style: items2 };
-      items2 = [tmp.baselayer, tmp[str]];
+      const token = str(iconColor[9]).useToken(icon(iconColor[3]).modules.toast.TEXT_LINE_COUNT);
+      let obj2 = { style: null, children: null };
+      const items1 = [tmp.wrapper];
+      obj2.style = items1;
+      let obj3 = { style: null };
+      const items2 = [tmp.baselayer, tmp[str]];
+      obj3.style = items2;
       const memo = secondaryIconColor.useMemo(() => {
-        let obj;
         if (null == obj[str]) {
           obj = _mod14280;
-          const tmp4 = icon;
           if (obj.isToastEntity(icon)) {
             const obj3 = { entity: tmp4 };
-            return metroRequire(ToastEntity.ToastEntity, obj3);
+            return timestampProducer(ToastEntity.ToastEntity, obj3);
           }
+          tmp4 = icon;
         }
         icon = undefined;
         if (obj[str] != null) {
@@ -271,18 +242,18 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (icon == null) {
           let tmp9;
-          const obj2 = _mod14280;
-          const tmp8 = icon;
           if (!obj2.isToastEntity(icon)) {
             tmp9 = tmp8;
           }
           icon = tmp9;
+          obj2 = _mod14280;
+          tmp8 = icon;
         }
         if (null == icon) {
           return null;
         } else {
           let color;
-          if (obj[str] != null) {
+          if (tmp != null) {
             color = tmp.color;
           }
           if (color == null) {
@@ -297,15 +268,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj5 = { style: icon.icon, size: "sm" };
           const merged = Object.assign(obj4);
-          return metroRequire(icon, obj5);
+          return timestampProducer(icon, obj5);
         }
       }, items);
-      items3 = [closure_6(closure_5, obj3), memo];
+      const items3 = [closure_6(closure_5, obj3), memo];
       let tmp9 = icon(iconColor[12])(text);
       let tmp8Result = !tmp9;
-      const tmp2 = str;
-      const tmp3 = iconColor;
-      if (tmp8Result) {
+      if (!tmp9) {
         let obj4 = {
           variant: "text-md/normal",
           color: "text-strong",
@@ -313,11 +282,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.text,
           children: text,
         };
-        tmp8Result = closure_6(tmp2(tmp3[13]).Text, obj4);
+        tmp8Result = closure_6(str(iconColor[13]).Text, obj4);
       }
       items3[2] = tmp8Result;
+      obj2.children = items3;
       return closure_7(closure_5, obj2);
     };
-const result = size.fileFinishedImporting("design/mana/components/Toast/Toast.native.tsx");
-
-export const Toast = tmp4;

@@ -1,31 +1,27 @@
 // discord_app/modules/stage_channels/native/components/StageChannelBackground.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import react2 from "../../../../../_runtime/00576_react.js";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let children;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelBackground.tsx");
 
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { container: obj2 };
-obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
-let closure_4 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (children) => {
-      const obj = react2;
-      const cResult = obj.c(3);
+      const cResult = c.c(3);
       children = children.children;
       const tmp2 = closure_4();
       if (cResult[0] === children) {
-        let tmp3;
         if (cResult[1] === tmp2.container) {
-          tmp3 = cResult[2];
+          let tmp3 = cResult[2];
         }
         return tmp3;
       }
@@ -36,6 +32,3 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp3 = tmp4;
     }
   : (children) => <View style={closure_4().container}>{children.children}</View>;
-const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelBackground.tsx");
-
-export default tmp3;

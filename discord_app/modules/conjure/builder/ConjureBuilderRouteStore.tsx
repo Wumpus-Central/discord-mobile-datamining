@@ -1,146 +1,139 @@
 // discord_app/modules/conjure/builder/ConjureBuilderRouteStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ChannelConstants from "../../channel/ChannelConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let _null, closure_3;
-
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 let lastProjectIdByGuildId = { lastProjectIdByGuildId: {} };
-const React2 = null;
-const _false = lastProjectIdByGuildId;
-const PersistedStore = get_initializedDefault.PersistedStore;
-class ConjureBuilderRouteStore extends PersistedStore {
-  initialize(arg0) {
-    let tmp = arg0;
-    if (arg0 == null) {
-      tmp = obj;
-    }
-    closure_3 = tmp;
-  }
-  getState() {
-    return closure_3;
-  }
-  getRoutedProjectId(guildId) {
-    guildId = undefined;
-    if (_null != null) {
-      guildId = _null.guildId;
-    }
-    let projectId = null;
-    if (guildId === guildId) {
-      projectId = _null.projectId;
-    }
-    return projectId;
-  }
-  getLastProjectId(id) {
-    let tmp = closure_3.lastProjectIdByGuildId[id];
-    if (tmp == null) {
-      tmp = null;
-    }
-    return tmp;
-  }
-}
+let c2 = null;
+let closure_3 = lastProjectIdByGuildId;
+const PersistedStore = initializeDefault.PersistedStore;
+class ConjureBuilderRouteStore extends PersistedStore {}
 const prototype = ConjureBuilderRouteStore.prototype;
+prototype["initialize"] = function initialize(arg0) {
+  let tmp = arg0;
+  if (arg0 == null) {
+    tmp = obj;
+  }
+  closure_3 = tmp;
+};
+prototype["getState"] = function getState() {
+  return closure_3;
+};
+prototype["getRoutedProjectId"] = function getRoutedProjectId(guildId) {
+  guildId = undefined;
+  if (_null != null) {
+    guildId = _null.guildId;
+  }
+  let projectId = null;
+  if (guildId === guildId) {
+    projectId = _null.projectId;
+  }
+  return projectId;
+};
+prototype["getLastProjectId"] = function getLastProjectId(guildId) {
+  let tmp = closure_3.lastProjectIdByGuildId[guildId];
+  if (tmp == null) {
+    tmp = null;
+  }
+  return tmp;
+};
 ConjureBuilderRouteStore.displayName = "ConjureBuilderRouteStore";
 ConjureBuilderRouteStore.persistKey = "VibegrationsBuilderRoute";
-let obj2 = {
+const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
-    let guildId;
-    let messageId;
     ({ guildId, messageId } = channelId);
-    let tmp = null;
+    let tmp3 = null;
     if (channelId.channelId === StaticChannelRoute.CONJURE) {
-      tmp = null;
+      tmp3 = null;
       if (null != guildId) {
-        tmp = null;
+        tmp3 = null;
         if (null != messageId) {
-          tmp = { guildId, projectId: messageId };
           const obj = { guildId, projectId: messageId };
+          tmp3 = obj;
         }
       }
     }
     let guildId1;
-    if (tmp != null) {
-      guildId1 = tmp.guildId;
+    if (tmp3 != null) {
+      guildId1 = tmp3.guildId;
     }
     let guildId2;
     if (_null != null) {
       guildId2 = _null.guildId;
     }
-    let tmp4 = guildId1 !== guildId2;
-    if (!tmp4) {
+    let tmp6 = guildId1 !== guildId2;
+    if (!tmp6) {
       let projectId;
-      if (tmp != null) {
-        projectId = tmp.projectId;
+      if (tmp3 != null) {
+        projectId = tmp3.projectId;
       }
       let projectId1;
       if (_null != null) {
         projectId1 = _null.projectId;
       }
-      tmp4 = projectId !== projectId1;
+      tmp6 = projectId !== projectId1;
     }
-    _null = tmp;
-    let tmp7 = tmp4;
+    _null = tmp3;
+    let tmp9 = tmp6;
     if (null != guildId) {
       let projectId2;
-      if (tmp != null) {
-        projectId2 = tmp.projectId;
+      if (tmp3 != null) {
+        projectId2 = tmp3.projectId;
       }
       if (projectId2 == null) {
         projectId2 = null;
       }
-      let tmp10 = closure_3.lastProjectIdByGuildId[guildId];
-      if (tmp10 == null) {
-        tmp10 = null;
+      let tmp12 = closure_3.lastProjectIdByGuildId[guildId];
+      if (tmp12 == null) {
+        tmp12 = null;
       }
       let flag = false;
-      if (tmp10 !== projectId2) {
-        const obj3 = {};
+      if (tmp12 === projectId2) {
+        if (!flag) {
+          flag = tmp6;
+        }
+        tmp9 = flag;
+      } else {
+        const obj2 = {};
         const merged = Object.assign(closure_3.lastProjectIdByGuildId);
         if (null == projectId2) {
-          delete obj2[guildId];
+          delete tmp2[tmp];
         } else {
-          obj3[guildId] = projectId2;
+          obj2[guildId] = projectId2;
         }
-        closure_3 = { lastProjectIdByGuildId: obj3 };
-        flag = true;
-        const obj5 = { lastProjectIdByGuildId: obj3 };
+        const obj3 = { lastProjectIdByGuildId: obj2 };
+        closure_3 = obj3;
       }
-      if (!flag) {
-        flag = tmp4;
-      }
-      tmp7 = flag;
     }
-    return tmp7;
+    return tmp9;
   },
-  CONJURE_PROJECT_SELECT: function handleProjectSelect(guildId) {
-    guildId = guildId.guildId;
-    let tmp = null == guildId.projectId;
-    if (tmp) {
-      let tmp3 = closure_3.lastProjectIdByGuildId[guildId];
-      if (tmp3 == null) {
-        tmp3 = null;
+  CONJURE_PROJECT_SELECT: function handleProjectSelect(projectId) {
+    let tmp4 = null == projectId.projectId;
+    if (tmp4) {
+      let tmp6 = closure_3.lastProjectIdByGuildId[tmp3];
+      if (tmp6 == null) {
+        tmp6 = null;
       }
       let flag = false;
-      if (tmp3 !== null) {
+      if (tmp6 !== null) {
         lastProjectIdByGuildId = {};
         const merged = Object.assign(closure_3.lastProjectIdByGuildId);
-        delete lastProjectIdByGuildId[guildId];
-        closure_3 = { lastProjectIdByGuildId };
-        flag = true;
+        delete tmp2[tmp];
         const obj2 = { lastProjectIdByGuildId };
+        closure_3 = obj2;
+        flag = true;
       }
-      tmp = flag;
+      tmp4 = flag;
     }
-    return tmp;
+    return tmp4;
   },
   LOGOUT: function handleLogout() {
-    let c2 = null;
+    c2 = null;
     closure_3 = obj;
   },
-};
-const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault, obj2);
+});
 const result = size.fileFinishedImporting("modules/conjure/builder/ConjureBuilderRouteStore.tsx");
 
 export default conjureBuilderRouteStore;

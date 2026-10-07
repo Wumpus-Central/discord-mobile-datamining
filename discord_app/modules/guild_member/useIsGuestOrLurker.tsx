@@ -1,50 +1,42 @@
 // discord_app/modules/guild_member/useIsGuestOrLurker.tsx
-import Constants from "../../Constants.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-const GuildFeatures = Constants.GuildFeatures;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+const require = fn;
+const GuildFeatures = fn(1085).GuildFeatures;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
-      let first;
       _require = arg0;
       dependencyMap = arg1;
-      const obj = require("react");
-      const cResult = obj.c(5);
-      const tmp = _require;
+      const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore, GuildMemberStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === arg0) {
-        let tmp7;
-        let tmp8;
         if (cResult[2] === arg1) {
-          tmp7 = cResult[3];
-          tmp8 = cResult[4];
+          let tmp7 = cResult[3];
+          let tmp8 = cResult[4];
         }
-        const tmpResult = tmp(504);
-        return tmpResult.useStateFromStores(first, tmp7, tmp8);
+        return tmp(504).useStateFromStores(first, tmp7, tmp8);
       }
       const fn = function o() {
-        const guild = GuildStore.getGuild(closure_0);
+        guild = GuildStore.getGuild(closure_0);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
           hasItem = features.has(GuildFeatures.CONFERENCE);
         }
-        const tmp6 = true !== hasItem && GuildMemberStore.isGuestOrLurker(closure_0, closure_1);
-        return tmp6;
+        return true !== hasItem && GuildMemberStore.isGuestOrLurker(closure_0, closure_1);
       };
       const items1 = [arg0, arg1];
       cResult[1] = arg0;
@@ -53,40 +45,38 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items1;
       tmp8 = items1;
       tmp7 = fn;
+      const obj = require("c");
+      tmp = _require;
     }
   : (arg0, arg1) => {
-      let closure_0;
-      let closure_1;
       _require = arg0;
       dependencyMap = arg1;
       const items = [GuildStore, GuildMemberStore];
       const items1 = [arg0, arg1];
-      const obj = require("get initialized");
-      return obj.useStateFromStores(
+      return require("initialize").useStateFromStores(
         items,
         () => {
-          const guild = GuildStore.getGuild(closure_0);
+          guild = GuildStore.getGuild(closure_0);
           let hasItem;
           if (guild != null) {
             const features = guild.features;
             hasItem = features.has(GuildFeatures.CONFERENCE);
           }
-          const tmp6 = true !== hasItem && GuildMemberStore.isGuestOrLurker(closure_0, closure_1);
-          return tmp6;
+          return true !== hasItem && GuildMemberStore.isGuestOrLurker(closure_0, closure_1);
         },
         items1,
       );
     };
-const result = size.fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
-
-export default tmp2;
 export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, id) {
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
     hasItem = features.has(GuildFeatures.CONFERENCE);
   }
-  const isGuestOrLurkerResult = true !== hasItem && GuildMemberStore.isGuestOrLurker(guild_id, id);
+  let isGuestOrLurkerResult = true !== hasItem;
+  if (isGuestOrLurkerResult) {
+    isGuestOrLurkerResult = GuildMemberStore.isGuestOrLurker(guild_id, id);
+  }
   return isGuestOrLurkerResult;
 };

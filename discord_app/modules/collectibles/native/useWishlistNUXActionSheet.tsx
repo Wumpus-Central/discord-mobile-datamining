@@ -1,29 +1,18 @@
 // discord_app/modules/collectibles/native/useWishlistNUXActionSheet.tsx
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import react from "../../../../_runtime/00019_react.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileStore from "../../user_profile/UserProfileStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ReactCompilerGating = fn(558);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let id;
-      let stateFromStores;
-      let tmp10;
-      let tmp12;
-      let tmp14;
-      let tmp4;
-      let tmp5;
-      let tmp8;
-      const obj = stateFromStores(576);
-      const cResult = obj.c(8);
+      const cResult = stateFromStores(576).c(8);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AuthenticationStore];
         const fn = function n() {
@@ -36,12 +25,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const tmpResult = stateFromStores(504);
-      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      const obj = stateFromStores(576);
+      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserProfileStore];
         cResult[2] = items1;
-        tmp8 = items1;
+        let tmp8 = items1;
       } else {
         tmp8 = cResult[2];
       }
@@ -51,83 +40,96 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[3] = stateFromStores;
         cResult[4] = fn2;
-        tmp10 = fn2;
+        let tmp10 = fn2;
       } else {
         tmp10 = cResult[4];
       }
-      const tmpResult3 = stateFromStores(504);
-      const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, tmp10);
+      const tmpResult = stateFromStores(504);
+      const stateFromStores1 = stateFromStores(504).useStateFromStores(tmp8, tmp10);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [UserProfileStore];
         cResult[5] = items2;
-        tmp12 = items2;
+        let tmp12 = items2;
       } else {
         tmp12 = cResult[5];
       }
       if (cResult[6] !== stateFromStores) {
         const fn3 = function h() {
           const userProfile = UserProfileStore.getUserProfile(stateFromStores);
-          return null != userProfile && userProfile.fetchEndedAt > 0;
+          let tmp2 = null != userProfile;
+          if (tmp2) {
+            tmp2 = userProfile.fetchEndedAt > 0;
+          }
+          return tmp2;
         };
         cResult[6] = stateFromStores;
         cResult[7] = fn3;
-        tmp14 = fn3;
+        let tmp14 = fn3;
       } else {
         tmp14 = cResult[7];
       }
-      const tmpResult4 = stateFromStores(504);
-      const stateFromStores2 = tmpResult4.useStateFromStores(tmp12, tmp14) && null == stateFromStores1;
+      const tmpResult3 = stateFromStores(504);
+      let stateFromStores2 = stateFromStores(504).useStateFromStores(tmp12, tmp14);
+      if (stateFromStores2) {
+        stateFromStores2 = null == stateFromStores1;
+      }
       return stateFromStores2;
     }
   : () => {
-      let closure_0;
-      let id;
       const items = [AuthenticationStore];
-      const obj = require("get initialized");
-      _require = obj.useStateFromStores(items, () => id.getId());
+      _require = require("initialize").useStateFromStores(items, () => id.getId());
+      const obj = require("initialize");
       const items1 = [UserProfileStore];
-      const obj2 = require("get initialized");
-      const stateFromStores = obj2.useStateFromStores(items1, () => UserProfileStore.getFirstWishlistId(closure_0));
+      const stateFromStores = require("initialize").useStateFromStores(items1, () =>
+        UserProfileStore.getFirstWishlistId(closure_0),
+      );
+      const obj2 = require("initialize");
       const items2 = [UserProfileStore];
-      const obj3 = require("get initialized");
-      const stateFromStores1 =
-        obj3.useStateFromStores(items2, () => {
-          const userProfile = UserProfileStore.getUserProfile(closure_0);
-          return null != userProfile && userProfile.fetchEndedAt > 0;
-        }) && null == stateFromStores;
+      let stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+        const userProfile = UserProfileStore.getUserProfile(closure_0);
+        let tmp2 = null != userProfile;
+        if (tmp2) {
+          tmp2 = userProfile.fetchEndedAt > 0;
+        }
+        return tmp2;
+      });
+      if (stateFromStores1) {
+        stateFromStores1 = null == stateFromStores;
+      }
       return stateFromStores1;
     };
 let closure_7 = tmp2;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
 export default function useWishlistNUXActionSheet() {
-  let paths;
   let tmp = closure_7();
-  const useIsDismissibleContentDismissed_UNSAFE = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE;
-  DismissibleContentUnsafeUtils;
   if (tmp) {
-    tmp = !useIsDismissibleContentDismissed_UNSAFE(
+    tmp = !obj.useIsDismissibleContentDismissed_UNSAFE(
       dismissible_content.DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
     );
   }
-  let obj = {
+  obj = DismissibleContentUnsafeUtils;
+  return {
     shouldShowWishlistNUXActionSheet: tmp,
-    showWishlistNUXActionSheet: react.useCallback((product) => {
-      const obj = require("DismissibleContentUtils");
-      const result = obj.trackDismissibleContentShown(
+    showWishlistNUXActionSheet: noop.useCallback((product) => {
+      const result = require("DismissibleContentUtils").trackDismissibleContentShown(
         require("dismissible_content").DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
+      );
+      const obj = require("DismissibleContentUtils");
+      require("ActionSheetActionCreators").openLazy(
+        require("asyncRequireImpl")(paths[11], paths.paths),
+        "WishlistNUXAddedItemActionSheet",
+        { product },
+        "stack",
       );
       const obj2 = require("ActionSheetActionCreators");
       const obj3 = { product };
-      obj2.openLazy(require("asyncRequire")(paths[11], paths.paths), "WishlistNUXAddedItemActionSheet", obj3, "stack");
-      const obj4 = require("DismissibleContentUnsafeUtils");
-      const obj5 = { dismissAction: constants.USER_DISMISS, forceTrack: true };
-      const result1 = obj4.UNSAFE_markDismissibleContentAsDismissed(
+      const result1 = require("DismissibleContentUnsafeUtils").UNSAFE_markDismissibleContentAsDismissed(
         require("dismissible_content").DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
-        obj5,
+        { dismissAction: constants.USER_DISMISS, forceTrack: true },
       );
     }, []),
   };
-  return obj;
 }
 export const useHasNeverWishlisted = tmp2;

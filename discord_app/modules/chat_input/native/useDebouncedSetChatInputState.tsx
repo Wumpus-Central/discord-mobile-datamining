@@ -1,19 +1,18 @@
 // discord_app/modules/chat_input/native/useDebouncedSetChatInputState.tsx
-import react2 from "../../../../_runtime/00576_react.js";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import c from "../../../../_runtime/00576_c.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/useDebouncedSetChatInputState.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
-      let first;
-      let tmp3;
-      let tmp4;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      const obj = react2;
-      const cResult = obj.c(11);
-      let closure_2 = react.useRef(null);
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const cResult = c.c(11);
+      noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function c() {
           if (null != ref.current) {
@@ -23,7 +22,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
@@ -34,18 +33,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [first];
         cResult[1] = fn2;
         cResult[2] = items;
-        tmp4 = items;
-        tmp3 = fn2;
+        let tmp4 = items;
+        let tmp3 = fn2;
       } else {
         tmp3 = cResult[1];
         tmp4 = cResult[2];
       }
-      const effect = react.useEffect(tmp3, tmp4);
+      const effect = noop.useEffect(tmp3, tmp4);
       if (cResult[3] === arg1) {
-        let tmp6;
-        let tmp7;
         if (cResult[4] === arg0) {
-          tmp6 = cResult[5];
+          let tmp6 = cResult[5];
         }
         if (cResult[6] !== arg0) {
           const fn4 = function v(arg0) {
@@ -54,14 +51,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           };
           cResult[6] = arg0;
           cResult[7] = fn4;
-          tmp7 = fn4;
+          let tmp7 = fn4;
         } else {
           tmp7 = cResult[7];
         }
         if (cResult[8] === tmp6) {
-          let tmp8;
           if (cResult[9] === tmp7) {
-            tmp8 = cResult[10];
+            let tmp8 = cResult[10];
           }
           return tmp8;
         }
@@ -99,12 +95,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = fn3;
     }
   : (arg0, arg1) => {
-      let items1;
-      let items2;
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = react.useRef(null);
-      const callback = react.useCallback(() => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      noop.useRef(null);
+      const callback = noop.useCallback(() => {
         if (null != ref.current) {
           const _clearTimeout = clearTimeout;
           clearTimeout(ref.current);
@@ -112,39 +106,35 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, []);
       const items = [callback];
-      const effect = react.useEffect(() => callback, items);
-      const obj = {
-        setData: react.useCallback((arg0) => {
-          closure_0 = arg0;
-          callback();
-          closure_2.current = setTimeout(() => {
-            focused((focused) => {
-              let tmp2 = focused;
-              if (focused.focused === focused.focused) {
+      const effect = noop.useEffect(() => callback, items);
+      const obj = { setData: null, setDataImmediate: null };
+      const items1 = [callback, arg0, arg1];
+      obj.setData = noop.useCallback((arg0) => {
+        closure_0 = arg0;
+        callback();
+        closure_2.current = setTimeout(() => {
+          focused((focused) => {
+            let tmp2 = focused;
+            if (focused.focused === focused.focused) {
+              tmp2 = focused;
+              if (focused.text === focused.text) {
                 tmp2 = focused;
-                if (focused.text === focused.text) {
+                if (focused.selectionStart === focused.selectionStart) {
                   tmp2 = focused;
-                  if (focused.selectionStart === focused.selectionStart) {
+                  if (focused.selectionEnd === focused.selectionEnd) {
                     tmp2 = focused;
-                    if (focused.selectionEnd === focused.selectionEnd) {
-                      tmp2 = focused;
-                    }
                   }
                 }
               }
-              return tmp2;
-            });
-          }, closure_1);
-        }, items1),
-        setDataImmediate: react.useCallback((arg0) => {
-          callback();
-          closure_0(arg0);
-        }, items2),
-      };
-      items1 = [callback, arg0, arg1];
-      items2 = [callback, arg0];
+            }
+            return tmp2;
+          });
+        }, closure_1);
+      }, items1);
+      const items2 = [callback, arg0];
+      obj.setDataImmediate = noop.useCallback((arg0) => {
+        callback();
+        closure_0(arg0);
+      }, items2);
       return obj;
     };
-const result = size.fileFinishedImporting("modules/chat_input/native/useDebouncedSetChatInputState.tsx");
-
-export default tmp2;

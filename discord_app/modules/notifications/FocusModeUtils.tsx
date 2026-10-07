@@ -1,49 +1,42 @@
 // discord_app/modules/notifications/FocusModeUtils.tsx
-import react from "../../../_runtime/00576_react.js";
+import c from "../../../_runtime/00576_c.js";
 import wrappers from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import NotificationConstants from "NotificationConstants.tsx";
-import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
-import Constants from "../../Constants.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, importDefault;
 
-let hasOwnProperty;
-let metroRequire;
-const constants = NotificationConstants.NotificationSettingsUpdateType;
+const AlertActionCreatorsDefault = tmp5(5714);
+require = fn;
+const constants = fn(4528).NotificationSettingsUpdateType;
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, StatusTypes: metroRequire } = Constants);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function () {
-      const obj = react;
-      const cResult = obj.c(3);
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
+
+export const useFocusModeEnabled = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(3);
       const FocusMode = UserSettings.FocusMode;
       const setting = FocusMode.useSetting();
       const FocusModeExpiresAtSetting = UserSettings.FocusModeExpiresAtSetting;
       const setting1 = FocusModeExpiresAtSetting.useSetting();
       if (cResult[0] === setting) {
-        let tmp4;
         if (cResult[1] === setting1) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
         return tmp4;
       }
       let tmp5 = setting;
-      if (tmp5) {
+      if (setting) {
         let tmp6 = "0" === setting1;
         if (!tmp6) {
           const _Date = Date;
           const _Number = Number;
-          const self = this;
-          const self2 = this;
-          const _Date2 = Date;
-          const self3 = this;
-          const self4 = this;
           const date = new Date(Number(setting1));
+          const _Date2 = Date;
           const time = date.getTime();
           const date1 = new Date();
           tmp6 = time - date1.getTime() > 0;
@@ -55,7 +48,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp5;
       tmp4 = tmp5;
     }
-  : function () {
+  : () => {
       const FocusMode = UserSettings.FocusMode;
       let setting = FocusMode.useSetting();
       const FocusModeExpiresAtSetting = UserSettings.FocusModeExpiresAtSetting;
@@ -65,12 +58,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp3) {
           const _Date = Date;
           const _Number = Number;
-          const self = this;
-          const self2 = this;
-          const _Date2 = Date;
-          const self3 = this;
-          const self4 = this;
           const date = new Date(Number(setting1));
+          const _Date2 = Date;
           const time = date.getTime();
           const date1 = new Date();
           tmp3 = time - date1.getTime() > 0;
@@ -79,9 +68,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return setting;
     };
-const result = size.fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
-
-export const useFocusModeEnabled = tmp3;
 export const getFocusModeEnabled = function getFocusModeEnabled() {
   const FocusMode = UserSettings.FocusMode;
   let setting = FocusMode.getSetting();
@@ -93,12 +79,8 @@ export const getFocusModeEnabled = function getFocusModeEnabled() {
   if (setting) {
     const _Date = Date;
     const _Number = Number;
-    const self = this;
-    const self2 = this;
-    const _Date2 = Date;
-    const self3 = this;
-    const self4 = this;
     const date = new Date(Number(setting1));
+    const _Date2 = Date;
     const time = date.getTime();
     const date1 = new Date();
     setting = time - date1.getTime() > 0;
@@ -106,15 +88,8 @@ export const getFocusModeEnabled = function getFocusModeEnabled() {
   return setting;
 };
 export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
-  let closure_1;
-  let intl;
-  let intl2;
-  let intl3;
-  let intl4;
-  let value;
   _require = quiet_mode_enabled;
   importDefault = arg1;
-  const tmp = _require;
   const FocusMode = require("UserSettings").FocusMode;
   const setting = FocusMode.getSetting();
   const PreloadedUserSettingsActionCreators =
@@ -123,8 +98,7 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     "notifications",
     async (arg0) => {
       const BoolValue = wrappers.BoolValue;
-      const obj = { value };
-      arg0.quietMode = BoolValue.create(obj);
+      arg0.quietMode = BoolValue.create({ value });
       let str = "0";
       if (value) {
         str = "0";
@@ -138,30 +112,30 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
-  let obj = AnalyticsUtilsDefault;
-  const obj2 = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
-  obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj2);
+  AnalyticsUtilsDefault.track(constants2.NOTIFICATION_SETTINGS_UPDATED, {
+    update_type: constants.ACCOUNT,
+    quiet_mode_enabled,
+    quiet_mode_enabled_old: setting,
+  });
   let tmp7 = SelfPresenceStore.getStatus() === constants3.DND && quiet_mode_enabled;
   if (tmp7) {
     tmp7 = null == arg1;
   }
   if (tmp7) {
-    const obj3 = {
-      title: intl.string(tmp(1126).t["B+cbLS"]),
-      body: intl2.string(tmp(1126).t.CYVgLI),
-      cancelText: intl3.string(tmp(1126).t.f3Pet9),
-      confirmText: intl4.string(tmp(1126).t.BddRzS),
-      onConfirm() {
-        const obj = { nextStatus: constants.ONLINE };
-        closure_1(dependencyMap[11])(obj);
-      },
+    const obj3 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+    const intl = tmp(1126).intl;
+    obj3.title = intl.string(tmp(1126).t["B+cbLS"]);
+    const intl2 = tmp(1126).intl;
+    obj3.body = intl2.string(tmp(1126).t.CYVgLI);
+    const intl3 = tmp(1126).intl;
+    obj3.cancelText = intl3.string(tmp(1126).t.f3Pet9);
+    const intl4 = tmp(1126).intl;
+    obj3.confirmText = intl4.string(tmp(1126).t.BddRzS);
+    obj3.onConfirm = function onConfirm() {
+      closure_1(dependencyMap[11])({ nextStatus: constants.ONLINE });
     };
-    const show = tmp5(5714).show;
-    AlertActionCreatorsDefault;
-    intl = tmp(1126).intl;
-    intl2 = tmp(1126).intl;
-    intl3 = tmp(1126).intl;
-    intl4 = tmp(1126).intl;
-    show(obj3);
+    AlertActionCreatorsDefault.show(obj3);
+    const tmp5Result = AlertActionCreatorsDefault;
   }
+  const obj2 = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
 };

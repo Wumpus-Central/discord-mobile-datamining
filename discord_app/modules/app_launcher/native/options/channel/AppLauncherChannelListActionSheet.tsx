@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx
-import react2 from "../../../../../../_runtime/00576_react.js";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -7,35 +7,25 @@ import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import TextIcon3 from "../../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
-import TableRow2 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import AppLauncherOptionIconDefault from "../../base_components/AppLauncherOptionIcon.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../../_runtime/00019_react.js";
-import GuildStore_mod from "../../../../../stores/GuildStore.tsx";
-import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
-let length, onChannelPress, query, ref;
 
-let metroImportDefault;
-let metroRequire;
-let obj2;
-let GuildStore = GuildStore_mod;
-({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-let obj = { channelIconWrapper: obj2 };
-obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
-let closure_9 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
+const createStyles = fn(4896);
+let obj2 = { channelIconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
+let closure_9 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let channel;
-      let wrapperSize;
-      const obj = react2;
-      const cResult = obj.c(9);
+      const cResult = c.c(9);
       ({ channel, size, wrapperSize } = arg0);
       let str = "sm";
       if (undefined !== size) {
@@ -46,54 +36,46 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num = wrapperSize;
       }
       const tmp4 = closure_9();
-      let TextIcon = TextIcon3.TextIcon;
-      if (null != channel) {
-        let tmp5;
-        if (cResult[0] !== channel) {
-          const guild = GuildStore.getGuild(channel.getGuildId());
-          const tmpResult = utils_ChannelUtils;
-          let TextIcon2 = tmpResult.getChannelIconComponentWithGuild(channel, guild);
-          if (TextIcon2 == null) {
-            TextIcon2 = TextIcon3.TextIcon;
+      const TextIcon = TextIcon3.TextIcon;
+      if (null == channel) {
+        if (cResult[2] === TextIcon) {
+          if (cResult[3] === str) {
+            let tmp9 = cResult[4];
           }
-          cResult[0] = channel;
-          cResult[1] = TextIcon2;
-          tmp5 = TextIcon2;
-        } else {
-          tmp5 = cResult[1];
-        }
-        TextIcon = tmp5;
-      }
-      if (cResult[2] === TextIcon) {
-        let tmp8;
-        if (cResult[3] === str) {
-          tmp8 = cResult[4];
-        }
-        if (cResult[5] === tmp4.channelIconWrapper) {
-          if (cResult[6] === tmp8) {
-            let tmp10;
-            if (cResult[7] === num) {
-              tmp10 = cResult[8];
+          if (cResult[5] === tmp4.channelIconWrapper) {
+            if (cResult[6] === tmp9) {
+              if (cResult[7] === num) {
+                let tmp12 = cResult[8];
+              }
+              return tmp12;
             }
-            return tmp10;
           }
+          const obj2 = { icon: tmp9, wrapperStyle: tmp4.channelIconWrapper, wrapperSize: num };
+          const tmp15 = ref(AppLauncherOptionIconDefault, obj2);
+          cResult[5] = tmp4.channelIconWrapper;
+          cResult[6] = tmp9;
+          cResult[7] = num;
+          cResult[8] = tmp15;
+          tmp12 = tmp15;
         }
-        const obj2 = { icon: tmp8, wrapperStyle: tmp4.channelIconWrapper, wrapperSize: num };
-        const tmp13 = metroRequire(AppLauncherOptionIconDefault, obj2);
-        cResult[5] = tmp4.channelIconWrapper;
-        cResult[6] = tmp8;
-        cResult[7] = num;
-        cResult[8] = tmp13;
-        tmp10 = tmp13;
+        const obj3 = { size: str, color: "interactive-text-default" };
+        const tmp11 = ref(TextIcon, obj3);
+        cResult[2] = TextIcon;
+        cResult[3] = str;
+        cResult[4] = tmp11;
+        tmp9 = tmp11;
+      } else if (cResult[0] !== channel) {
+        guild = GuildStore.getGuild(channel.getGuildId());
+        let TextIcon2 = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
+        if (TextIcon2 == null) {
+          TextIcon2 = TextIcon3.TextIcon;
+        }
+        cResult[0] = channel;
+        cResult[1] = TextIcon2;
+        const tmpResult = utils_ChannelUtils;
       }
-      const tmp9 = metroRequire(TextIcon, { size: str, color: "interactive-text-default" });
-      cResult[2] = TextIcon;
-      cResult[3] = str;
-      cResult[4] = tmp9;
-      tmp8 = tmp9;
     }
   : (wrapperSize) => {
-      let channel;
       ({ channel, size } = wrapperSize);
       if (size === undefined) {
         size = "sm";
@@ -102,115 +84,190 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (num === undefined) {
         num = 32;
       }
-      const tmp = closure_9();
       let TextIcon = TextIcon3.TextIcon;
       if (null != channel) {
-        const guild = GuildStore.getGuild(channel.getGuildId());
-        const tmp2Result = utils_ChannelUtils;
-        let TextIcon2 = tmp2Result.getChannelIconComponentWithGuild(channel, guild);
+        guild = GuildStore.getGuild(channel.getGuildId());
+        let TextIcon2 = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
         if (TextIcon2 == null) {
           TextIcon2 = TextIcon3.TextIcon;
         }
         TextIcon = TextIcon2;
+        const tmp2Result = utils_ChannelUtils;
       }
-      const obj = {
-        icon: metroRequire(TextIcon, { size, color: "interactive-text-default" }),
-        wrapperStyle: tmp.channelIconWrapper,
-        wrapperSize: num,
-      };
-      const tmp6 = AppLauncherOptionIconDefault;
-      return metroRequire(tmp6, obj);
+      const obj = { icon: null, wrapperStyle: null, wrapperSize: null };
+      const tmp = closure_9();
+      obj.icon = ref(TextIcon, { size, color: "interactive-text-default" });
+      obj.wrapperStyle = tmp.channelIconWrapper;
+      obj.wrapperSize = num;
+      return ref(AppLauncherOptionIconDefault, obj);
     };
 let closure_10 = tmp3;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+ReactCompilerGating = fn(558);
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (totalCount) => {
+      const cResult = c.c(11);
+      ({ channel, index, onPress } = totalCount);
+      const tmp4 = useChannelNameDefault(channel);
+      if (cResult[0] !== tmp4) {
+        const obj2 = {
+          lineClamp: 1,
+          variant: "text-md/semibold",
+          color: "mobile-text-heading-primary",
+          children: tmp4,
+        };
+        const tmp7 = ref(Text_Text.Text, obj2);
+        cResult[0] = tmp4;
+        cResult[1] = tmp7;
+        let tmp5 = tmp7;
+      } else {
+        tmp5 = cResult[1];
+      }
+      if (cResult[2] !== channel) {
+        const obj3 = { channel };
+        const tmp11 = ref(closure_10, obj3);
+        cResult[2] = channel;
+        cResult[3] = tmp11;
+        let tmp8 = tmp11;
+      } else {
+        tmp8 = cResult[3];
+      }
+      if (cResult[4] === channel.id) {
+        if (cResult[5] === onPress) {
+          if (cResult[6] === tmp5) {
+            if (cResult[7] === tmp8) {
+              if (cResult[8] === tmp12) {
+                if (cResult[9] === tmp13) {
+                  let tmp14 = cResult[10];
+                }
+                return tmp14;
+              }
+            }
+          }
+        }
+      }
+      const tmp15 = ref(
+        TableRow.TableRow,
+        { onPress, label: tmp5, icon: tmp8, start: 0 === index, end: index === totalCount.totalCount - 1 },
+        channel.id,
+      );
+      cResult[4] = channel.id;
+      cResult[5] = onPress;
+      cResult[6] = tmp5;
+      cResult[7] = tmp8;
+      cResult[8] = 0 === index;
+      cResult[9] = index === totalCount.totalCount - 1;
+      cResult[10] = tmp15;
+      tmp14 = tmp15;
+    }
+  : (arg0) => {
+      ({ channel, index } = arg0);
+      ({ totalCount, onPress } = arg0);
+      const tmp = useChannelNameDefault(channel);
+      return ref(
+        TableRow.TableRow,
+        {
+          onPress,
+          label: ref(Text_Text.Text, {
+            lineClamp: 1,
+            variant: "text-md/semibold",
+            color: "mobile-text-heading-primary",
+            children: useChannelNameDefault(channel),
+          }),
+          icon: ref(closure_10, { channel }),
+          start: 0 === index,
+          end: index === totalCount - 1,
+        },
+        channel.id,
+      );
+    };
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (onChannelPress) => {
-      let channel;
-      let closure_5;
-      let closure_8;
-      let first1;
-      let obj = onChannelPress(channel[7]);
-      const cResult = obj.c(24);
+      const cResult = onChannelPress(channel[7]).c(24);
       onChannelPress = onChannelPress.onChannelPress;
       const onActionSheetDismiss = onChannelPress.onActionSheetDismiss;
       channel = onChannelPress.channel;
       const option = onChannelPress.option;
-      let obj2 = query;
       const tmp3 = option(query.useState(""), 2);
       query = tmp3[0];
       GuildStore = tmp3[1];
-      ref = query.useRef(null);
-      const tmp2 = option;
+      query.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
         cResult[0] = items;
-        first1 = items;
+        let first1 = items;
       } else {
         first1 = cResult[0];
       }
-      const tmp2Result = tmp2(obj2.useState(first1), 2);
+      const tmp2Result = option(query.useState(first1), 2);
       const first2 = tmp2Result[0];
       AppLauncherChannelListActionSheet = tmp2Result[1];
       if (cResult[1] === channel) {
         if (cResult[2] === option) {
-          let tmp8;
-          let tmp9;
           if (cResult[3] === query) {
-            tmp8 = cResult[4];
-            tmp9 = cResult[5];
+            let tmp8 = cResult[4];
+            let tmp9 = cResult[5];
           }
           const effect = obj2.useEffect(tmp8, tmp9);
           if (cResult[6] !== onActionSheetDismiss) {
             const fn = function b() {
-              const obj = ActionSheetActionCreatorsDefault;
-              obj.hideActionSheet(AppLauncherChannelListActionSheet);
+              ActionSheetActionCreatorsDefault.hideActionSheet(AppLauncherChannelListActionSheet);
               onActionSheetDismiss();
             };
             cResult[6] = onActionSheetDismiss;
             cResult[7] = fn;
             class O {
-              constructor(channel) {
-                const obj = { channel: channel.channel };
-                onChannelPress(obj);
-                closure_9();
+              constructor(arg0) {
+                obj = { channel: onChannelPress.channel };
+                tmp = onChannelPress(obj);
+                tmp2 = closure_9();
+                return;
               }
             }
           }
           closure_9 = tmp11;
           if (cResult[8] === tmp11) {
-            let tmp12;
             if (cResult[9] === onChannelPress) {
-              tmp12 = cResult[10];
+              let tmp12 = cResult[10];
             }
             closure_10 = tmp12;
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               class W {
-                constructor(str) {
-                  closure_5(str.toLowerCase());
-                  const current = ref.current;
+                constructor(arg0) {
+                  tmp = closure_5(onChannelPress.toLowerCase());
+                  current = closure_6.current;
                   if (current != null) {
-                    current.scrollToOffset({ offset: 0, animated: false });
+                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
                   }
+                  return;
                 }
               }
               cResult[11] = W;
             } else {
               class W {
-                constructor(str) {
-                  closure_5(str.toLowerCase());
-                  const current = ref.current;
+                constructor(arg0) {
+                  tmp = closure_5(onChannelPress.toLowerCase());
+                  current = closure_6.current;
                   if (current != null) {
-                    current.scrollToOffset({ offset: 0, animated: false });
+                    scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
                   }
+                  return;
                 }
               }
             }
             class O {
-              constructor(channel) {
-                const obj = { channel: channel.channel };
-                onChannelPress(obj);
-                closure_9();
+              constructor(arg0) {
+                obj = { channel: onChannelPress.channel };
+                tmp = onChannelPress(obj);
+                tmp2 = closure_9();
+                return;
               }
             }
             class N {
@@ -221,8 +278,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   index: onChannelPress.index,
                   totalCount: closure_7.length,
                   onPress() {
-                    const obj = { channel: item };
-                    return closure_10(obj);
+                    return closure_10({ channel: item });
                   },
                 };
                 return closure_6(closure_1_11, obj);
@@ -233,10 +289,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[14] = N;
           }
           class O {
-            constructor(channel) {
-              const obj = { channel: channel.channel };
-              onChannelPress(obj);
-              closure_9();
+            constructor(arg0) {
+              obj = { channel: onChannelPress.channel };
+              tmp = onChannelPress(obj);
+              tmp2 = closure_9();
+              return;
             }
           }
           cResult[8] = tmp11;
@@ -247,9 +304,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class I {
         constructor() {
-          const obj = AutocompleteUtilsDefault;
-          const obj2 = { query, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
-          closure_8(obj.queryApplicationCommandChannelResults(obj2).channels);
+          obj = closure_1(closure_2[11]);
+          obj1 = { query: closure_4, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
+          tmp = closure_8(obj.queryApplicationCommandChannelResults(obj1).channels);
+          return;
         }
       }
       const items1 = [query, channel, option];
@@ -260,165 +318,69 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = items1;
       tmp9 = items1;
       tmp8 = I;
+      const obj = onChannelPress(channel[7]);
     }
   : (channel) => {
-      let items1;
-      let onActionSheetDismiss;
-      let tmp9Result;
       ({ onChannelPress: require, onActionSheetDismiss } = channel);
       channel = channel.channel;
       const option = channel.option;
       query = undefined;
       const tmp = option(query.useState(""), 2);
       query = tmp[0];
-      let closure_5 = tmp[1];
+      closure_5 = tmp[1];
       ref = query.useRef(null);
       const tmp4 = option(query.useState([]), 2);
       const first1 = tmp4[0];
-      let closure_8 = tmp4[1];
+      closure_8 = tmp4[1];
       const items = [query, channel, option];
-      length = first1.length;
       const effect = query.useEffect(() => {
-        const obj = AutocompleteUtilsDefault;
-        const obj2 = { query, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
-        closure_8(obj.queryApplicationCommandChannelResults(obj2).channels);
+        closure_8(
+          AutocompleteUtilsDefault.queryApplicationCommandChannelResults({
+            query,
+            channel,
+            channelTypes: option.channelTypes,
+            limit: null,
+            allowSnowflake: true,
+          }).channels,
+        );
       }, items);
-      let obj = { onDismiss: onActionSheetDismiss, option, children: items1 };
-      const AppLauncherCommandOptionActionSheet =
-        require("AppLauncherCommandOptionActionSheet").AppLauncherCommandOptionActionSheet;
-      let obj2 = {
-        onChange(str) {
-          closure_5(str.toLowerCase());
-          const current = ref.current;
-          if (current != null) {
-            current.scrollToOffset({ offset: 0, animated: false });
-          }
-        },
-      };
-      items1 = [ref(require("AppLauncherList").AppLauncherListSearchBar, obj2)];
-      const tmp6 = first1;
-      if (0 === length) {
-        tmp9Result = tmp9(require("AppLauncherList").AppLauncherListEmptyState, {});
+      const obj = { onDismiss: onActionSheetDismiss, option, children: null };
+      const items1 = [
+        ref(require("AppLauncherList").AppLauncherListSearchBar, {
+          onChange(str) {
+            closure_5(str.toLowerCase());
+            const current = ref.current;
+            if (current != null) {
+              current.scrollToOffset({ offset: 0, animated: false });
+            }
+          },
+        }),
+      ];
+      if (0 === first1.length) {
+        let tmp9Result = tmp9(require("AppLauncherList").AppLauncherListEmptyState, {});
       } else {
         const obj3 = {
           ref,
           data: first1,
           renderItem(index) {
             const item = index.item;
-            let obj = {
+            return ref(closure_1_11, {
               channel: item,
               index: index.index,
               totalCount: first1.length,
               onPress() {
-                const obj = { channel: item };
-                require(obj);
-                const obj2 = closure_1_1(channel[12]);
-                obj2.hideActionSheet(closure_1_8);
+                require({ channel: item });
+                closure_1_1(channel[12]).hideActionSheet(closure_1_8);
                 onActionSheetDismiss();
               },
-            };
-            return ref(closure_1_11, obj);
+            });
           },
         };
         tmp9Result = tmp9(require("AppLauncherList").AppLauncherList, obj3);
       }
       items1[1] = tmp9Result;
-      return tmp6(AppLauncherCommandOptionActionSheet, obj);
+      obj.children = items1;
+      return first1(require("AppLauncherCommandOptionActionSheet").AppLauncherCommandOptionActionSheet, obj);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (totalCount) => {
-      let channel;
-      let index;
-      let onPress;
-      let tmp5;
-      let tmp8;
-      const obj = react2;
-      const cResult = obj.c(11);
-      ({ channel, index, onPress } = totalCount);
-      totalCount = totalCount.totalCount;
-      const tmp4 = useChannelNameDefault(channel);
-      if (cResult[0] !== tmp4) {
-        const obj2 = {
-          lineClamp: 1,
-          variant: "text-md/semibold",
-          color: "mobile-text-heading-primary",
-          children: tmp4,
-        };
-        const tmp7 = metroRequire(Text_Text.Text, obj2);
-        cResult[0] = tmp4;
-        cResult[1] = tmp7;
-        tmp5 = tmp7;
-      } else {
-        tmp5 = cResult[1];
-      }
-      if (cResult[2] !== channel) {
-        const obj3 = { channel };
-        const tmp11 = metroRequire(closure_10, obj3);
-        cResult[2] = channel;
-        cResult[3] = tmp11;
-        tmp8 = tmp11;
-      } else {
-        tmp8 = cResult[3];
-      }
-      if (cResult[4] === channel.id) {
-        if (cResult[5] === onPress) {
-          if (cResult[6] === tmp5) {
-            if (cResult[7] === tmp8) {
-              if ((cResult[8] === 0) === index) {
-                let tmp14;
-                if ((cResult[9] === index) === totalCount - 1) {
-                  tmp14 = cResult[10];
-                }
-                return tmp14;
-              }
-            }
-          }
-        }
-      }
-      const tmp15 = metroRequire(
-        TableRow2.TableRow,
-        { onPress, label: tmp5, icon: tmp8, start: 0 === index, end: index === totalCount - 1 },
-        channel.id,
-      );
-      cResult[4] = channel.id;
-      cResult[5] = onPress;
-      cResult[6] = tmp5;
-      cResult[7] = tmp8;
-      cResult[8] = 0 === index;
-      cResult[9] = index === totalCount - 1;
-      cResult[10] = tmp15;
-      tmp14 = tmp15;
-    }
-  : (arg0) => {
-      let channel;
-      let index;
-      let onPress;
-      let tmp;
-      let totalCount;
-      ({ channel, index } = arg0);
-      ({ totalCount, onPress } = arg0);
-      const obj = {
-        onPress,
-        label: metroRequire(Text_Text.Text, {
-          lineClamp: 1,
-          variant: "text-md/semibold",
-          color: "mobile-text-heading-primary",
-          children: tmp,
-        }),
-        icon: metroRequire(closure_10, { channel }),
-        start: 0 === index,
-        end: index === totalCount - 1,
-      };
-      tmp = useChannelNameDefault(channel);
-      const TableRow = TableRow2.TableRow;
-      return metroRequire(TableRow, obj, channel.id);
-    };
-let size = size_mod;
-const result = size.fileFinishedImporting(
-  "modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx",
-);
-
-export default tmp4;
 export const APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY = "AppLauncherChannelListActionSheet";
 export const ChannelIcon = tmp3;

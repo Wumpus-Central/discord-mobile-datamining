@@ -1,111 +1,112 @@
 // discord_app/modules/applications/disclosures.tsx
-import Constants from "../../Constants.tsx";
-import intl3 from "../../intl/index.native.tsx";
+import util from "../../intl/index.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import applications from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let obj = function _getDisclosures() {
-  obj = _asyncToGenerator(async (arg0) => {
-    let c2;
-    let c3;
-    let closure_1;
-    let obj8;
-    let closure_0 = arg0;
-    const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
-    const HTTP = HTTPUtils.HTTP;
-    const obj4 = { url: result, retries: 3, rejectWithError: obj8.rejectWithMigratedError() };
-    const get = HTTP.get;
-    obj8 = HTTPUtils;
-    await get(obj4);
-    closure_0 = value;
-    obj = {
-      disclosures: closure_0.body.disclosures,
-      ackedDisclosures: closure_0.body.acked_disclosures,
-      allAcked: closure_0.body.all_acked,
-    };
-    return obj;
-  });
-  return obj(...arguments);
+require = fn;
+let closure_4 = async function _getDisclosures() {
+  closure_1 = tmp2;
+  const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({ url: result, retries: 3, rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  closure_129_0 = value;
+  return {
+    disclosures: closure_129_0.body.disclosures,
+    ackedDisclosures: closure_129_0.body.acked_disclosures,
+    allAcked: closure_129_0.body.all_acked,
+  };
 };
-obj = function _ackDisclosures() {
-  obj = _asyncToGenerator(async (arg0, disclosures) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c2 = 0;
-    return (async (arg0, value) => {
-      let obj4;
-      let obj7;
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp2 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+let closure_5 = async function _ackDisclosures(arg0) {
+  closure_0 = arg0;
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              return { value, done: true };
-            } else {
-              const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
-              const HTTP = HTTPUtils.HTTP;
-              const request = { url: result, body: obj4, rejectWithError: obj7.rejectWithMigratedError() };
-              const post = HTTP.post;
-              obj4 = { disclosures };
-              c3 = 1;
-              c2 = 1;
-              obj7 = HTTPUtils;
-              const obj5 = { value: post(request), done: false };
-              return obj5;
-            }
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
             c2 = 3;
             throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            return { value, done: true };
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            c2 = 3;
-            return { value: "IconComponent", done: null };
+            const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: result, body: null, rejectWithError: null };
+            const obj4 = { disclosures };
+            request.body = obj4;
+            request.rejectWithError = HTTPUtils.rejectWithMigratedError();
+            c3 = 1;
+            c2 = 1;
+            const obj5 = { value: HTTP.post(request), done: false };
+            return obj5;
           }
-        } catch (tmp4) {
+        } else if (arg0 === 1) {
           c2 = 3;
-          throw tmp4;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c2 = 3;
+          return { value: "IconComponent", done: null };
         }
+      } catch (tmp5) {
+        c2 = tmp;
+        throw tmp5;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = applications.ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(8755).ApplicationDisclosureType;
 export const getDisclosures = function getDisclosures() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_4.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const ackDisclosures = function ackDisclosures() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const getTextForDisclosure = function getTextForDisclosure(disclosure) {
   if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
-    const intl2 = intl3.intl;
-    return intl2.string(intl3.t["6wPmjo"]);
+    const intl2 = util.intl;
+    return intl2.string(util.t["6wPmjo"]);
   } else if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
-    const intl = intl3.intl;
-    return intl.string(intl3.t["/uOMKZ"]);
+    const intl = util.intl;
+    return intl.string(util.t["/uOMKZ"]);
   } else {
     return null;
   }

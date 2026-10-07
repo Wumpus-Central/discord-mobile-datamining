@@ -1,66 +1,66 @@
 // discord_app/utils/FriendsUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import intl8 from "../intl/index.native.tsx";
+import util from "../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "AnalyticsUtils.tsx";
 import ValidationUtilsDefault from "ValidationUtils.tsx";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
-import Constants from "../Constants.tsx";
-import size from "../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../_runtime/metro/00032__.js";
 
-let closure_4;
-let hasOwnProperty;
+require = fn;
 function validateDiscordTag(substr) {
-  let first;
-  let str2;
-  let tmp5Result;
-  let tmp5Result2;
   let stringResult = null;
   if (!re8.test(substr)) {
     if (!substr.includes("#")) {
-      [first, str2] = substr.split("#");
-      const obj = {
+      const tmp4 = _slicedToArray(substr.split("#"), 2);
+      let str2 = tmp4[1];
+      const obj2 = {
         reason: "Invalid Username",
         query: substr,
-        discrim_len: str2.length,
-        username_len: first.length,
-        is_email_like: tmp5Result.isEmail(substr),
-        is_invite_like: tmp5Result2.isInvite(substr),
-        is_num_only: re6.test(substr),
+        discrim_len: null,
+        username_len: null,
+        is_email_like: null,
+        is_invite_like: null,
+        is_num_only: null,
       };
-      const track = AnalyticsUtilsDefault.track;
-      const FRIEND_REQUEST_FAILED = hasOwnProperty.FRIEND_REQUEST_FAILED;
-      AnalyticsUtilsDefault;
-      tmp5Result = ValidationUtilsDefault;
-      tmp5Result2 = ValidationUtilsDefault;
-      track(FRIEND_REQUEST_FAILED, obj);
-      const intl = intl8.intl;
-      stringResult = intl.string(intl8.t.paDJBM);
+      if (str2 == null) {
+        str2 = "";
+      }
+      obj2.discrim_len = str2.length;
+      obj2.username_len = tmp4[0].length;
+      const obj = AnalyticsUtilsDefault;
+      obj2.is_email_like = ValidationUtilsDefault.isEmail(substr);
+      const tmp5Result = ValidationUtilsDefault;
+      obj2.is_invite_like = ValidationUtilsDefault.isInvite(substr);
+      obj2.is_num_only = re6.test(substr);
+      obj.track(constants2.FRIEND_REQUEST_FAILED, obj2);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.paDJBM);
+      const tmp5Result2 = ValidationUtilsDefault;
     } else {
       stringResult = null;
     }
   }
   return stringResult;
 }
-function humanizeAbortCode(arg0, trimmed) {
+function humanizeAbortCode(arg0, substr) {
   if (constants.RELATIONSHIP_INCOMING_DISABLED === arg0) {
-    const intl7 = intl8.intl;
-    const obj = { discordTag: trimmed };
-    return intl7.format(intl8.t.Oxe6Ur, obj);
+    const intl7 = util.intl;
+    const obj = { discordTag: substr };
+    return intl7.format(util.t.Oxe6Ur, obj);
   } else if (constants.TOO_MANY_FRIENDS === arg0) {
-    const intl6 = intl8.intl;
-    return intl6.string(intl8.t.tnBalD);
+    const intl6 = util.intl;
+    return intl6.string(util.t.tnBalD);
   } else if (constants.RELATIONSHIP_ALREADY_FRIENDS === arg0) {
-    const intl5 = intl8.intl;
-    return intl5.string(intl8.t.VNLneq);
+    const intl5 = util.intl;
+    return intl5.string(util.t.VNLneq);
   } else {
     if (constants.USER_QUARANTINED !== arg0) {
       if (constants.USER_FRIEND_REQUEST_LIMITED_ACCESS !== arg0) {
         if (constants.TOO_MANY_BLOCKED_USERS === arg0) {
-          const intl3 = intl8.intl;
-          return intl3.string(intl8.t.sIGo1i);
+          const intl3 = util.intl;
+          return intl3.string(util.t.sIGo1i);
         } else if (constants.TOO_MANY_PENDING_OUTGOING === arg0) {
-          const intl2 = intl8.intl;
-          return intl2.string(intl8.t.k1K15p);
+          const intl2 = util.intl;
+          return intl2.string(util.t.k1K15p);
         } else {
           if (constants.RELATIONSHIP_INCOMING_BLOCKED !== arg0) {
             if (constants.RELATIONSHIP_INVALID_SELF !== arg0) {
@@ -69,19 +69,21 @@ function humanizeAbortCode(arg0, trimmed) {
               }
             }
           }
-          const intl = intl8.intl;
-          return intl.string(intl8.t.paDJBM);
+          const intl = util.intl;
+          return intl.string(util.t.paDJBM);
         }
       }
     }
-    const intl4 = intl8.intl;
-    return intl4.string(intl8.t.EouHwv);
+    const intl4 = util.intl;
+    return intl4.string(util.t.EouHwv);
   }
 }
+const Constants = fn(1085);
 ({ AbortCodes: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 const re6 = /^\d+$/;
 const re7 = /^(.+?@.+?\..+?|.+?#\d{4})$/;
 const re8 = /^[a-zA-Z0-9_\\.]+$/;
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/FriendsUtils.tsx");
 
 export { validateDiscordTag };
@@ -89,12 +91,12 @@ export const isValidDiscordTag = function isValidDiscordTag(substr) {
   return null == validateDiscordTag(substr);
 };
 export { humanizeAbortCode };
-export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, trimmed) {
-  let formatToPlainStringResult = humanizeAbortCode(arg0, trimmed);
+export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, substr) {
+  let formatToPlainStringResult = humanizeAbortCode(arg0, substr);
   if (arg0 === constants.RELATIONSHIP_INCOMING_DISABLED) {
-    const intl = intl8.intl;
-    const obj = { discordTag: trimmed };
-    formatToPlainStringResult = intl.formatToPlainString(intl8.t["ihb+UW"], obj);
+    const intl = util.intl;
+    const obj = { discordTag: substr };
+    formatToPlainStringResult = intl.formatToPlainString(util.t["ihb+UW"], obj);
   }
   _modDef38(typeof formatToPlainStringResult === "string", "abortCode should be a string for a11y");
   return formatToPlainStringResult;

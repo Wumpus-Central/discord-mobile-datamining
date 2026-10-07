@@ -1,139 +1,119 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupSetupModal.tsx
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import Constants from "../../../../Constants.tsx";
-import intl2 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import RoleTierEditStore from "../RoleTierEditStore.tsx";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
-import react_mod from "../../../../../_runtime/00019_react.js";
-import GuildRoleSubscriptionsConstants from "../../GuildRoleSubscriptionsConstants.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-let _require, c4, c6, closure_10, dependencyMap, editStateId, importAll, state;
-
-let c10;
-let unpackModuleId;
+require = fn;
 function createGroupFromStore() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_15.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
-let obj = function _createGroupFromStore() {
-  obj = _asyncToGenerator(async (arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let closure_3 = arg3;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+let closure_15 = async function _createGroupFromStore(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      try {
-        let id;
-        let groupCover;
-        let groupDescription;
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_4 = tmp3;
-            closure_1 = closure_2;
-            closure_2 = closure_3;
-            id = undefined;
-            state = state.getState();
-            groupCover = state.groupCover;
-            groupDescription = state.groupDescription;
-            const tmp22 = closure_1;
-            if (null != groupCover) {
-              const obj4 = { description: groupDescription };
-              c5 = 1;
-              c6 = 1;
-              const obj5 = { value: tmp22(closure_0, obj4), done: false };
-              return obj5;
-            }
-          }
-        } else if (1 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            id = value;
-            if (null != id) {
-              const obj7 = { cover_image: groupCover.uri, description: groupDescription };
-              c5 = 2;
-              c6 = 1;
-              const obj8 = { value: closure_1(closure_0, obj7), done: false };
-              return obj8;
-            }
-          }
-        } else if (arg0 === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_2(id);
-          c6 = 3;
-          obj = { value: id.id, done: true };
-          return obj;
+          closure_4 = tmp4;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_2;
+          closure_132_2 = closure_3;
+          closure_132_3 = undefined;
+          closure_132_4 = undefined;
+          closure_132_5 = undefined;
+          state = state.getState();
+          const groupCover = state.groupCover;
+          closure_132_3 = groupCover;
+          const groupDescription = state.groupDescription;
+          closure_132_4 = groupDescription;
+          if (null != groupCover) {
+            const obj4 = { description: groupDescription };
+            c5 = 1;
+            c6 = 1;
+            const obj5 = { value: importDefault(closure_0, obj4), done: false };
+            return obj5;
+          }
         }
+      } else if (1 === tmp4) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_132_5 = value;
+          if (null != closure_132_5) {
+            const obj7 = { cover_image: closure_132_3.uri, description: closure_132_4 };
+            c5 = 2;
+            c6 = 1;
+            const obj8 = { value: closure_132_1(closure_132_0, obj7), done: false };
+            return obj8;
+          }
+        }
+      } else if (arg0 === 1) {
         c6 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp12) {
+        throw value;
+      } else if (arg0 === 2) {
         c6 = 3;
-        throw tmp12;
+        const obj9 = { value, done: true };
+        return obj9;
+      } else {
+        closure_132_2(closure_132_5);
+        c6 = 3;
+        const obj = { value: closure_132_5.id, done: true };
+        return obj;
       }
+      c6 = 3;
+      return { value: "IconComponent", done: null };
+    } catch (tmp13) {
+      c6 = tmp;
+      throw tmp13;
     }
-  });
-  return obj(...arguments);
+  }
 };
 let closure_4 = ["editStateId"];
-let _slicedToArray = _slicedToArray_mod;
-let _asyncToGenerator = _asyncToGenerator_mod;
-let react = react_mod;
-const useRoleTierEditStore = RoleTierEditStore.useRoleTierEditStore;
-({ GuildRoleSubscriptionsTierScenes: c10, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: unpackModuleId } =
+const useRoleTierEditStore = fn(17972).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(15038);
+({ GuildRoleSubscriptionsTierScenes: c10, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_11 } =
   GuildRoleSubscriptionsConstants);
-const AnalyticEvents = Constants.AnalyticEvents;
-const jsx = Fragment.jsx;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? (editStateId) => {
-      let closure_7;
-      let createSubscriptionGroupListing;
-      let first1;
-      let handleCreateOrUpdateFromEditState;
-      let tmp4;
-      let tmp5;
-      let updateSubscriptionsSettings;
-      const tmp = _require;
-      const tmp2 = dependencyMap;
-      obj = require("react");
-      const cResult = obj.c(29);
+      const cResult = require("c").c(29);
       if (cResult[0] !== editStateId) {
         editStateId = editStateId.editStateId;
         const tmp8 = first1(editStateId, createSubscriptionGroupListing);
@@ -141,28 +121,28 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = editStateId;
         cResult[1] = editStateId;
         cResult[2] = tmp8;
-        tmp5 = tmp8;
-        tmp4 = editStateId;
+        let tmp4 = editStateId;
       } else {
         tmp4 = cResult[1];
         _require = cResult[2];
       }
       let guildId = tmp5.guildId;
-      let obj2 = handleCreateOrUpdateFromEditState;
       const tmp9 = updateSubscriptionsSettings(handleCreateOrUpdateFromEditState.useState(), 2);
       const first = tmp9[0];
       dependencyMap = tmp9[1];
-      const tmpResult = tmp(15045);
-      createSubscriptionGroupListing = tmpResult.useCreateSubscriptionGroupListing().createSubscriptionGroupListing;
-      const tmpResult2 = tmp(15045);
-      const updateSubscriptionsSettings1 = tmpResult2.useUpdateSubscriptionsSettings();
+      let obj = require("c");
+      let obj2 = handleCreateOrUpdateFromEditState;
+      createSubscriptionGroupListing =
+        require("GuildRoleSubscriptionsHooks").useCreateSubscriptionGroupListing().createSubscriptionGroupListing;
+      const tmpResult = require("GuildRoleSubscriptionsHooks");
+      const updateSubscriptionsSettings1 = require("GuildRoleSubscriptionsHooks").useUpdateSubscriptionsSettings();
       updateSubscriptionsSettings = updateSubscriptionsSettings1.updateSubscriptionsSettings;
       let error = updateSubscriptionsSettings1.error;
       const tmp12 = updateSubscriptionsSettings(handleCreateOrUpdateFromEditState.useState(tmp4), 2);
       first1 = tmp12[0];
-      _asyncToGenerator = tmp12[1];
-      let obj5 = first(15060);
-      const createOrUpdateListingFromEditState = obj5.useCreateOrUpdateListingFromEditState();
+      asyncGeneratorStep = tmp12[1];
+      const tmpResult2 = require("GuildRoleSubscriptionsHooks");
+      const createOrUpdateListingFromEditState = first(15060).useCreateOrUpdateListingFromEditState();
       handleCreateOrUpdateFromEditState = createOrUpdateListingFromEditState.handleCreateOrUpdateFromEditState;
       if (error == null) {
         error = createOrUpdateListingFromEditState.error;
@@ -171,47 +151,38 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === first1) {
           if (cResult[5] === error) {
             let id;
-            const tmp15 = cResult[6];
             if (first != null) {
               id = first.id;
             }
-            if (tmp15 === id) {
+            if (cResult[6] === id) {
               if (cResult[7] === guildId) {
                 if (cResult[8] === handleCreateOrUpdateFromEditState) {
                   if (cResult[9] === tmp5) {
-                    let tmp17;
-                    let tmp19;
-                    let tmp18;
-                    let tmp22;
-                    let tmp24;
-                    let tmp25;
                     if (cResult[10] === updateSubscriptionsSettings) {
-                      tmp17 = cResult[11];
+                      let tmp16 = cResult[11];
                     }
                     if (cResult[12] !== error) {
                       const fn = function x() {
                         if (null != error) {
-                          const presentError = ToastUtils.presentError;
-                          ToastUtils;
                           let anyErrorMessage = error.getAnyErrorMessage();
                           if (anyErrorMessage == null) {
-                            const intl = intl2.intl;
-                            anyErrorMessage = intl.string(intl2.t.R0RpRX);
+                            const intl = util.intl;
+                            anyErrorMessage = intl.string(util.t.R0RpRX);
                           }
-                          presentError(anyErrorMessage);
+                          ToastUtils.presentError(anyErrorMessage);
                         }
                       };
                       const items = [error];
                       cResult[12] = error;
                       cResult[13] = fn;
                       cResult[14] = items;
-                      tmp19 = items;
-                      tmp18 = fn;
+                      let tmp18 = items;
+                      let tmp17 = fn;
                     } else {
-                      tmp18 = cResult[13];
-                      tmp19 = cResult[14];
+                      tmp17 = cResult[13];
+                      tmp18 = cResult[14];
                     }
-                    const effect = obj2.useEffect(tmp18, tmp19);
+                    const effect = obj2.useEffect(tmp17, tmp18);
                     const _Symbol = Symbol;
                     if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
                       const items1 = [, , , , , ,];
@@ -226,120 +197,141 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       let obj3 = { scene: closure_10.CONFIRMATION, extraProps: { isForGroupSetupModal: true } };
                       items1[6] = obj3;
                       cResult[15] = items1;
-                      tmp22 = items1;
+                      let tmp21 = items1;
                     } else {
-                      tmp22 = cResult[15];
+                      tmp21 = cResult[15];
                     }
-                    closure_10 = tmp22;
+                    closure_10 = tmp21;
                     const _Symbol2 = Symbol;
                     if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
                       let obj4 = {
                         impressionName: tmp(1260).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING,
                       };
                       cResult[16] = obj4;
-                      tmp24 = obj4;
+                      let tmp23 = obj4;
                     } else {
-                      tmp24 = cResult[16];
+                      tmp23 = cResult[16];
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                       let obj6 = {};
-                      obj6[closure_10.GATING] = tmp24;
+                      obj6[closure_10.GATING] = tmp23;
                       let obj7 = {
                         impressionName: tmp(1260).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP,
                       };
-                      const DETAILS = closure_10.DETAILS;
-                      obj6[DETAILS] = obj7;
+                      obj6[closure_10.DETAILS] = obj7;
                       cResult[17] = obj6;
-                      tmp25 = obj6;
+                      let tmp24 = obj6;
                     } else {
-                      tmp25 = cResult[17];
+                      tmp24 = cResult[17];
                     }
                     const _Symbol4 = Symbol;
                     if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
                       class X {
                         constructor(arg0) {
-                          closure_0 = arg0;
-                          const findIndexResult = closure_10.findIndex((item) => item === closure_0);
-                          obj = AppAnalyticsUtilsDefault;
-                          const obj2 = { setup_modal_step: findIndexResult + 1 };
-                          obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj2);
+                          closure_0 = editStateId;
+                          findIndexResult = closure_10.findIndex((item) => item === closure_0);
+                          obj = closure_1(closure_3[15]);
+                          obj1 = { setup_modal_step: findIndexResult + 1 };
+                          trackWithMetadataResult = obj.trackWithMetadata(
+                            AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED,
+                            obj1,
+                          );
+                          return;
                         }
                       }
                       cResult[18] = X;
                     } else {
                       class X {
                         constructor(arg0) {
-                          closure_0 = arg0;
-                          const findIndexResult = closure_10.findIndex((item) => item === closure_0);
-                          obj = AppAnalyticsUtilsDefault;
-                          const obj2 = { setup_modal_step: findIndexResult + 1 };
-                          obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj2);
+                          closure_0 = editStateId;
+                          findIndexResult = closure_10.findIndex((item) => item === closure_0);
+                          obj = closure_1(closure_3[15]);
+                          obj1 = { setup_modal_step: findIndexResult + 1 };
+                          trackWithMetadataResult = obj.trackWithMetadata(
+                            AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED,
+                            obj1,
+                          );
+                          return;
                         }
                       }
                     }
-                    if (cResult[19] === tmp17) {
+                    if (cResult[19] === tmp16) {
                       class X {
                         constructor(arg0) {
-                          closure_0 = arg0;
-                          const findIndexResult = closure_10.findIndex((item) => item === closure_0);
-                          obj = AppAnalyticsUtilsDefault;
-                          const obj2 = { setup_modal_step: findIndexResult + 1 };
-                          obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj2);
+                          closure_0 = editStateId;
+                          findIndexResult = closure_10.findIndex((item) => item === closure_0);
+                          obj = closure_1(closure_3[15]);
+                          obj1 = { setup_modal_step: findIndexResult + 1 };
+                          trackWithMetadataResult = obj.trackWithMetadata(
+                            AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED,
+                            obj1,
+                          );
+                          return;
                         }
                       }
                       if (cResult[22] === guildId) {
                         class X {
                           constructor(arg0) {
-                            closure_0 = arg0;
-                            const findIndexResult = closure_10.findIndex((item) => item === closure_0);
-                            obj = AppAnalyticsUtilsDefault;
-                            const obj2 = { setup_modal_step: findIndexResult + 1 };
-                            obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj2);
+                            closure_0 = editStateId;
+                            findIndexResult = closure_10.findIndex((item) => item === closure_0);
+                            obj = closure_1(closure_3[15]);
+                            obj1 = { setup_modal_step: findIndexResult + 1 };
+                            trackWithMetadataResult = obj.trackWithMetadata(
+                              AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED,
+                              obj1,
+                            );
+                            return;
                           }
                         }
                         if (cResult[25] === first1) {
                           class X {
                             constructor(arg0) {
-                              closure_0 = arg0;
-                              const findIndexResult = closure_10.findIndex((item) => item === closure_0);
-                              obj = AppAnalyticsUtilsDefault;
-                              const obj2 = { setup_modal_step: findIndexResult + 1 };
-                              obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj2);
+                              closure_0 = editStateId;
+                              findIndexResult = closure_10.findIndex((item) => item === closure_0);
+                              obj = closure_1(closure_3[15]);
+                              obj1 = { setup_modal_step: findIndexResult + 1 };
+                              trackWithMetadataResult = obj.trackWithMetadata(
+                                AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED,
+                                obj1,
+                              );
+                              return;
                             }
                           }
                         }
-                        let tmp42 = jsx(tmp(17990).EditStateContextProvider, {
+                        let obj8 = { guildId, editStateId: first1, groupListingId: null, children: tmp36 };
+                        const tmp41 = jsx(tmp(17990).EditStateContextProvider, {
                           guildId,
                           editStateId: first1,
                           groupListingId: null,
-                          children: tmp37,
+                          children: tmp36,
                         });
                         cResult[25] = first1;
                         cResult[26] = guildId;
-                        cResult[27] = tmp37;
-                        cResult[28] = tmp42;
+                        cResult[27] = tmp36;
+                        cResult[28] = tmp41;
                       }
+                      const obj9 = { guildId, children: tmp27 };
+                      const tmp38 = jsx(tmp(17967).RoleSubscriptionSettingsDisabledContextProvider, {
+                        guildId,
+                        children: tmp27,
+                      });
                       cResult[22] = guildId;
-                      cResult[23] = tmp28;
-                      cResult[24] = jsx(tmp(17967).RoleSubscriptionSettingsDisabledContextProvider, {
-                        guildId,
-                        children: tmp28,
-                      });
-                      const tmp39 = jsx(tmp(17967).RoleSubscriptionSettingsDisabledContextProvider, {
-                        guildId,
-                        children: tmp28,
-                      });
+                      cResult[23] = tmp27;
+                      cResult[24] = tmp38;
                     }
-                    const obj10 = { modalKey, onDone: tmp17, steps: tmp22, onClose: X, stepScreenPropsMap: tmp25 };
-                    guildId(17982);
+                    const obj10 = {};
                     const merged = Object.assign(tmp5);
-                    const tmp36 = (
-                      <tmp31 modalKey={modalKey} onDone={tmp17} steps={tmp22} onClose={X} stepScreenPropsMap={tmp25} />
-                    );
-                    cResult[19] = tmp17;
+                    obj10.modalKey = modalKey;
+                    obj10.onDone = tmp16;
+                    obj10.steps = tmp21;
+                    obj10.onClose = X;
+                    obj10.stepScreenPropsMap = tmp24;
+                    const tmp35 = jsx(guildId(17982), {});
+                    cResult[19] = tmp16;
                     cResult[20] = tmp5;
-                    cResult[21] = tmp36;
+                    cResult[21] = tmp35;
+                    const tmp30 = guildId(17982);
                   }
                 }
               }
@@ -347,8 +339,148 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      _require = _asyncToGenerator(async () => {
-        let anyErrorMessage;
+      _require = asyncGeneratorStep(async () => {
+        if (c5 === 2) {
+          c5 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp5 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: null };
+          }
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_130_0 = undefined;
+                let id;
+                if (tmp3 != null) {
+                  id = tmp3.id;
+                }
+                closure_0 = id;
+                if (id == null) {
+                  c4 = 1;
+                  c5 = 1;
+                  const obj4 = { value: createGroupFromStore(guildId, c4, c5, tmp2), done: false };
+                  return obj4;
+                } else {
+                  closure_130_0 = closure_0;
+                  if (null != closure_130_0) {
+                    if (null != anyErrorMessage) {
+                      anyErrorMessage = anyErrorMessage.getAnyErrorMessage();
+                      guildId = anyErrorMessage;
+                      if (anyErrorMessage == null) {
+                        const intl = closure_0(tmp2[13]).intl;
+                        guildId = intl.string(closure_0(tmp2[13]).t.ZUEGFn);
+                      }
+                      closure_0(tmp2[12]).presentError(guildId);
+                      const obj8 = closure_0(tmp2[12]);
+                    }
+                    const obj5 = {
+                      guildId,
+                      editStateId,
+                      groupListingId: closure_130_0,
+                      onBeforeDispatchNewListing(id) {
+                        return closure_1_7(id.id);
+                      },
+                    };
+                    c4 = 2;
+                    c5 = 1;
+                    const obj6 = { value: handleCreateOrUpdateFromEditState(obj5), done: false };
+                    return obj6;
+                  } else {
+                    c5 = 3;
+                  }
+                }
+              }
+            } else if (1 === tmp6) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj7 = { value, done: true };
+                return obj7;
+              } else {
+                closure_0 = value;
+              }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              if (value) {
+                closure_0.onClose();
+              }
+            }
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } catch (tmp35) {
+            c5 = tmp;
+            throw tmp35;
+          }
+        }
+      });
+      cResult[3] = createSubscriptionGroupListing;
+      cResult[4] = first1;
+      cResult[5] = error;
+      if (first != null) {
+        class X {
+          constructor(arg0) {
+            closure_0 = editStateId;
+            findIndexResult = closure_10.findIndex((item) => item === closure_0);
+            obj = closure_1(closure_3[15]);
+            obj1 = { setup_modal_step: findIndexResult + 1 };
+            trackWithMetadataResult = obj.trackWithMetadata(
+              AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED,
+              obj1,
+            );
+            return;
+          }
+        }
+      }
+      function handleCreateGroupAndTier() {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }
+      cResult[6] = undefined;
+      cResult[7] = guildId;
+      cResult[8] = handleCreateOrUpdateFromEditState;
+      cResult[9] = tmp5;
+      cResult[10] = updateSubscriptionsSettings;
+      cResult[11] = handleCreateGroupAndTier;
+      tmp16 = handleCreateGroupAndTier;
+      let obj5 = first(15060);
+    }
+  : (editStateId) => {
+      let merged = Object.assign(editStateId, Object.assign({ editStateId: 0 }));
+      importAll = undefined;
+      dependencyMap = undefined;
+      _slicedToArray = undefined;
+      editStateId = undefined;
+      closure_7 = undefined;
+      noop = undefined;
+      error = undefined;
+      let memo;
+      constants = async function _handleCreateGroupAndTier2() {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -363,8 +495,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         } else {
           try {
-            let groupListingId;
-            let id;
             c5 = 2;
             if (0 === c4) {
               if (arg0 === 1) {
@@ -375,249 +505,104 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                closure_3 = tmp;
-                groupListingId = undefined;
-                id = undefined;
+                dependencyMap = tmp5;
+                closure_2 = tmp2;
+                closure_130_0 = undefined;
+                let id;
                 if (id != null) {
                   id = id.id;
                 }
+                merged = id;
                 if (id == null) {
                   c4 = 1;
                   c5 = 1;
-                  const obj4 = { value: createGroupFromStore(guildId, c4, c5, closure_3), done: false };
+                  const obj4 = {
+                    value: createGroupFromStore(guildId, closure_2_4, _slicedToArray, _undefined),
+                    done: false,
+                  };
                   return obj4;
+                } else {
+                  closure_130_0 = merged;
+                  if (null != closure_130_0) {
+                    if (null != closure_131_9) {
+                      const anyErrorMessage = closure_131_9.getAnyErrorMessage();
+                      closure_1 = anyErrorMessage;
+                      if (anyErrorMessage == null) {
+                        const intl = merged(1126).intl;
+                        closure_1 = intl.string(merged(1126).t.ZUEGFn);
+                      }
+                      merged(4573).presentError(closure_1);
+                      const obj8 = merged(4573);
+                    }
+                    const obj5 = {
+                      guildId: closure_131_1,
+                      editStateId: closure_131_6,
+                      groupListingId: closure_130_0,
+                      onBeforeDispatchNewListing(id) {
+                        return closure_1_7(id.id);
+                      },
+                    };
+                    c4 = 2;
+                    c5 = 1;
+                    const obj6 = { value: closure_131_8(obj5), done: false };
+                    return obj6;
+                  } else {
+                    c5 = 3;
+                  }
                 }
               }
-            } else {
-              if (1 === tmp5) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  const obj5 = { value, done: true };
-                  return obj5;
-                } else {
-                  id = value;
-                }
-              } else if (arg0 === 1) {
+            } else if (1 === tmp5) {
+              if (arg0 === 1) {
                 c5 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value, done: true };
-                return obj;
-              } else if (value) {
-                id.onClose();
+                const obj7 = { value, done: true };
+                return obj7;
+              } else {
+                merged = value;
               }
+            } else if (arg0 === 1) {
               c5 = 3;
-              return { value: "IconComponent", done: null };
-            }
-            groupListingId = id;
-            if (null != groupListingId) {
-              if (null != anyErrorMessage) {
-                const presentError = groupListingId(closure_2_3[12]).presentError;
-                const tmp42 = groupListingId(closure_2_3[12]);
-                anyErrorMessage = anyErrorMessage.getAnyErrorMessage();
-                guildId = anyErrorMessage;
-                if (anyErrorMessage == null) {
-                  const intl = groupListingId(closure_2_3[13]).intl;
-                  guildId = intl.string(groupListingId(closure_2_3[13]).t.ZUEGFn);
-                }
-                presentError(guildId);
+              throw value;
+            } else if (arg0 !== 2) {
+              if (value) {
+                closure_131_0.onClose();
               }
-              const obj6 = {
-                guildId,
-                editStateId,
-                groupListingId,
-                onBeforeDispatchNewListing(id) {
-                  return closure_1_7(id.id);
-                },
-              };
-              c4 = 2;
-              c5 = 1;
-              const obj7 = { value: handleCreateOrUpdateFromEditState(obj6), done: false };
-              return obj7;
             }
-          } catch (tmp34) {
             c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } catch (tmp34) {
+            c5 = tmp;
             throw tmp34;
           }
         }
-      });
-      cResult[3] = createSubscriptionGroupListing;
-      cResult[4] = first1;
-      cResult[5] = error;
-      if (first != null) {
-        class X {
-          constructor(arg0) {
-            closure_0 = arg0;
-            const findIndexResult = closure_10.findIndex((item) => item === closure_0);
-            obj = AppAnalyticsUtilsDefault;
-            const obj2 = { setup_modal_step: findIndexResult + 1 };
-            obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj2);
-          }
-        }
-      }
-      function handleCreateGroupAndTier() {
-        return closure_0(...arguments);
-      }
-      cResult[6] = undefined;
-      cResult[7] = guildId;
-      cResult[8] = handleCreateOrUpdateFromEditState;
-      cResult[9] = tmp5;
-      cResult[10] = updateSubscriptionsSettings;
-      cResult[11] = handleCreateGroupAndTier;
-      tmp17 = handleCreateGroupAndTier;
-    }
-  : (editStateId) => {
-      let _undefined;
-      let c2;
-      let c3;
-      let c5;
-      let closure_7;
-      let closure_8;
-      let error;
-      editStateId = editStateId.editStateId;
-      const merged = Object.assign(editStateId, Object.assign({ editStateId: 0 }));
-      importAll = undefined;
-      dependencyMap = undefined;
-      _slicedToArray = undefined;
-      editStateId = undefined;
-      closure_7 = undefined;
-      react = undefined;
-      error = undefined;
-      let memo;
-      obj = function _handleCreateGroupAndTier2() {
-        obj = _asyncToGenerator(async () => {
-          if (c5 === 2) {
-            c5 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: null };
-            }
-          } else {
-            try {
-              let closure_3;
-              let groupListingId;
-              c5 = 2;
-              if (0 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  const obj3 = { value, done: true };
-                  return obj3;
-                } else {
-                  closure_3 = tmp4;
-                  let closure_2 = tmp;
-                  groupListingId = undefined;
-                  id = undefined;
-                  if (id != null) {
-                    id = id.id;
-                  }
-                  if (id == null) {
-                    c4 = 1;
-                    c5 = 1;
-                    const obj4 = { value: closure_1_14(guildId, closure_2_4, closure_2_5, _undefined), done: false };
-                    return obj4;
-                  }
-                }
-              } else {
-                if (1 === c4) {
-                  if (arg0 === 1) {
-                    c5 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c5 = 3;
-                    const obj5 = { value, done: true };
-                    return obj5;
-                  } else {
-                    id = value;
-                  }
-                } else if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else if (value) {
-                  closure_131_0.onClose();
-                }
-                c5 = 3;
-                return { value: "IconComponent", done: null };
-              }
-              groupListingId = id;
-              if (null != groupListingId) {
-                if (null != closure_131_9) {
-                  const presentError = id(closure_3[12]).presentError;
-                  const tmp41 = id(closure_3[12]);
-                  const anyErrorMessage = closure_131_9.getAnyErrorMessage();
-                  let closure_1 = anyErrorMessage;
-                  if (anyErrorMessage == null) {
-                    const intl = id(closure_3[13]).intl;
-                    closure_1 = intl.string(id(closure_3[13]).t.ZUEGFn);
-                  }
-                  presentError(closure_1);
-                }
-                const obj6 = {
-                  guildId: closure_131_1,
-                  editStateId: closure_131_6,
-                  groupListingId,
-                  onBeforeDispatchNewListing(id) {
-                    return closure_1_7(id.id);
-                  },
-                };
-                c4 = 2;
-                c5 = 1;
-                const obj7 = { value: closure_131_8(obj6), done: false };
-                return obj7;
-              }
-            } catch (tmp33) {
-              c5 = 3;
-              throw tmp33;
-            }
-          }
-        });
-        return obj(...arguments);
       };
       const guildId = merged.guildId;
-      obj = react;
-      [c2, c3] = react.useState();
-      const tmp3 = merged;
-      const tmp4 = dependencyMap;
-      _slicedToArray(react.useState(), 2);
+      [c2, c3] = noop.useState();
+      const tmp2 = _slicedToArray(noop.useState(), 2);
+      closure_4 = merged(15045).useCreateSubscriptionGroupListing().createSubscriptionGroupListing;
       let obj2 = merged(15045);
-      closure_4 = obj2.useCreateSubscriptionGroupListing().createSubscriptionGroupListing;
-      let obj3 = merged(15045);
-      const updateSubscriptionsSettings = obj3.useUpdateSubscriptionsSettings();
+      const updateSubscriptionsSettings = merged(15045).useUpdateSubscriptionsSettings();
       ({ updateSubscriptionsSettings: c5, error } = updateSubscriptionsSettings);
-      [editStateId, closure_7] = react.useState(editStateId);
-      let obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
-      const createOrUpdateListingFromEditState = obj4.useCreateOrUpdateListingFromEditState();
-      react = createOrUpdateListingFromEditState.handleCreateOrUpdateFromEditState;
+      [editStateId, closure_7] = noop.useState(editStateId.editStateId);
+      let obj3 = merged(15045);
+      const createOrUpdateListingFromEditState =
+        GuildRoleSubscriptionListingEditStateUtilsAll.useCreateOrUpdateListingFromEditState();
+      noop = createOrUpdateListingFromEditState.handleCreateOrUpdateFromEditState;
       if (error == null) {
         error = createOrUpdateListingFromEditState.error;
       }
       let items = [error];
       const effect = obj.useEffect(() => {
         if (null != error) {
-          const presentError = ToastUtils.presentError;
-          ToastUtils;
           let anyErrorMessage = error.getAnyErrorMessage();
           if (anyErrorMessage == null) {
-            const intl = intl2.intl;
-            anyErrorMessage = intl.string(intl2.t.R0RpRX);
+            const intl = util.intl;
+            anyErrorMessage = intl.string(util.t.R0RpRX);
           }
-          presentError(anyErrorMessage);
+          ToastUtils.presentError(anyErrorMessage);
         }
       }, items);
       memo = obj.useMemo(() => {
@@ -629,52 +614,60 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           CHANNEL_BENEFITS: arr[3],
           INTANGIBLE_BENEFITS: arr[4],
           DESIGN: arr[5],
-        } = obj);
-        items[6] = { scene: obj.CONFIRMATION, extraProps: { isForGroupSetupModal: true } };
+        } = constants);
+        items[6] = { scene: constants.CONFIRMATION, extraProps: { isForGroupSetupModal: true } };
         return items;
       }, []);
       const items1 = [memo];
       const memo1 = obj.useMemo(() => {
-        obj = {};
-        obj[obj.GATING] = {
-          impressionName: merged(c3[14]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING,
+        const obj = {};
+        obj[constants.GATING] = {
+          impressionName: merged(_undefined[14]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING,
         };
-        ({ impressionName: merged(c3[14]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING });
-        obj[obj.DETAILS] = {
-          impressionName: merged(c3[14]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP,
+        const obj2 = {
+          impressionName: merged(_undefined[14]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_LANDING,
         };
-        ({ impressionName: merged(c3[14]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP });
+        obj[constants.DETAILS] = {
+          impressionName: merged(_undefined[14]).ImpressionNames.ROLE_SUBSCRIPTION_INITIAL_SETUP_MODAL_TIER_STEP,
+        };
         return obj;
       }, []);
       const callback = obj.useCallback((arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         const findIndexResult = memo.findIndex((item) => item === closure_0);
-        obj = AppAnalyticsUtilsDefault;
-        const obj2 = { setup_modal_step: findIndexResult + 1 };
-        obj.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, obj2);
+        AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED, {
+          setup_modal_step: findIndexResult + 1,
+        });
       }, items1);
-      const EditStateContextProvider = tmp3(17990).EditStateContextProvider;
+      let obj5 = { guildId, editStateId, groupListingId: null, children: null };
       let obj6 = { guildId, children: null };
-      const RoleSubscriptionSettingsDisabledContextProvider =
-        tmp3(17967).RoleSubscriptionSettingsDisabledContextProvider;
-      let obj7 = {
-        modalKey: memo,
-        onDone: function handleCreateGroupAndTier() {
-          return obj(...arguments);
-        },
-        steps: memo,
-        onClose: callback,
-        stepScreenPropsMap: memo1,
-      };
-      guildId(17982);
+      let obj7 = {};
       const merged1 = Object.assign(merged);
-      return (
-        <EditStateContextProvider guildId={guildId} editStateId={editStateId} groupListingId={null}>
-          {null}
-        </EditStateContextProvider>
-      );
+      obj7.modalKey = memo;
+      obj7.onDone = function handleCreateGroupAndTier() {
+        const self = this;
+        const apply = closure_10.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      obj7.steps = memo;
+      obj7.onClose = callback;
+      obj7.stepScreenPropsMap = memo1;
+      obj6.children = jsx(guildId(17982), {});
+      obj5.children = jsx(merged(17967).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: null });
+      return jsx(merged(17990).EditStateContextProvider, {
+        guildId,
+        editStateId,
+        groupListingId: null,
+        children: null,
+      });
     };
 tmp3.modalConfig = { closable: false };
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupSetupModal.tsx",
 );

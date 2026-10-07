@@ -1,82 +1,69 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx
-import react2 from "../../../../_runtime/00576_react.js";
-import Constants from "../../../Constants.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import router_utils from "../../routing/router_utils.tsx";
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
-import react from "../../../../_runtime/00019_react.js";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import noop from "../../../../_runtime/metro/00019__.js";
 
-const Routes = Constants.Routes;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const Routes = fn(1085).Routes;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      let first;
-      let tmp6;
-      let obj = react2;
-      const cResult = obj.c(6);
-      const obj2 = FavoritesHooks;
-      const hasAccess = obj2.useFavoritesAccess().hasAccess;
+      let tmp2 = dependencyMap;
+      const cResult = c.c(6);
+      const hasAccess = FavoritesHooks.useFavoritesAccess().hasAccess;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          const obj = router_utils;
-          obj.transitionTo(constants.ME);
+          router_utils.transitionTo(constants.ME);
         };
         cResult[0] = fn;
-        first = fn;
+        let first = fn;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== hasAccess) {
-        let ojM1xJ;
-        const intl = intl2.intl;
-        const string = intl.string;
+        const intl = util.intl;
         if (hasAccess) {
-          ojM1xJ = _modDef3395.G9fGlP;
+          tmp2 = _modDef3395;
+          let ojM1xJ = tmp2.G9fGlP;
         } else {
-          ojM1xJ = intl2.t.ojM1xJ;
+          ojM1xJ = util.t.ojM1xJ;
         }
-        const stringResult = string(ojM1xJ);
+        const stringResult = intl.string(ojM1xJ);
         cResult[1] = hasAccess;
         cResult[2] = stringResult;
-        tmp6 = stringResult;
       } else {
-        tmp6 = cResult[2];
-      }
-      if (cResult[3] === !hasAccess) {
-        let tmp9;
-        if (cResult[4] === tmp6) {
-          tmp9 = cResult[5];
+        if (cResult[3] === tmp5) {
+          if (cResult[4] === tmp6) {
+            let tmp10 = cResult[5];
+          }
+          return tmp10;
         }
-        return tmp9;
+        const obj3 = { isPreview: tmp5, label: cResult[2], exitPreview: first };
+        cResult[3] = tmp5;
+        cResult[4] = cResult[2];
+        cResult[5] = obj3;
+        tmp10 = obj3;
       }
-      const obj3 = { isPreview: !hasAccess, label: tmp6, exitPreview: first };
-      cResult[3] = !hasAccess;
-      cResult[4] = tmp6;
-      cResult[5] = obj3;
-      tmp9 = obj3;
     }
   : () => {
-      let callback;
-      let ojM1xJ;
-      let string;
-      let obj = FavoritesHooks;
-      const hasAccess = obj.useFavoritesAccess().hasAccess;
-      const obj2 = { isPreview: !hasAccess, label: string(ojM1xJ), exitPreview: callback };
-      callback = react.useCallback(() => {
-        const obj = router_utils;
-        obj.transitionTo(constants.ME);
+      const hasAccess = FavoritesHooks.useFavoritesAccess().hasAccess;
+      const obj2 = { isPreview: !hasAccess, label: null, exitPreview: null };
+      const callback = noop.useCallback(() => {
+        router_utils.transitionTo(constants.ME);
       }, []);
-      const intl = intl2.intl;
-      string = intl.string;
+      const intl = util.intl;
       if (hasAccess) {
-        ojM1xJ = _modDef3395.G9fGlP;
+        let ojM1xJ = _modDef3395.G9fGlP;
       } else {
-        ojM1xJ = intl2.t.ojM1xJ;
+        ojM1xJ = util.t.ojM1xJ;
       }
+      obj2.label = intl.string(ojM1xJ);
+      obj2.exitPreview = callback;
       return obj2;
     };
-const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
-
-export default tmp2;

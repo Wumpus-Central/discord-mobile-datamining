@@ -5,20 +5,14 @@ import UserSettings from "../user_settings/UserSettings.tsx";
 import FeedbackConfig from "FeedbackConfig.tsx";
 import HotspotStore from "../hotspot/HotspotStore.tsx";
 import FeedbackOverrideStore from "FeedbackOverrideStore.tsx";
-import Constants from "Constants.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
-let _require, optOutExpiryTime;
-
-let closure_4;
-let hasOwnProperty;
+require = fn;
 function optOutEligibilityCheck(hotspot) {
   _require = hotspot;
   const InAppFeedbackStates = require("UserSettings").InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[hotspot.feedbackType];
   optOutExpiryTime = undefined;
-  const tmp = _require;
   if (tmp3 != null) {
     optOutExpiryTime = tmp3.optOutExpiryTime;
   }
@@ -37,31 +31,34 @@ function optOutEligibilityCheck(hotspot) {
     tmp10 = !tmp5;
   }
   if (tmp10) {
-    const InAppFeedbackStates2 = tmp(2028).InAppFeedbackStates;
+    const InAppFeedbackStates2 = require("UserSettings").InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
-      const feedbackType = hotspot.feedbackType;
-      const obj2 = { optOutExpiryTime: hasOwnProperty };
+      const obj2 = {};
       const merged1 = Object.assign(arg0[hotspot.feedbackType]);
-      obj[feedbackType] = obj2;
+      obj2.optOutExpiryTime = optOutExpiryTime;
+      obj[hotspot.feedbackType] = obj2;
       return obj;
     });
   }
-  return !tmp5 && !!hasHotspotResult;
+  let tmp12 = !tmp5;
+  if (!tmp5) {
+    tmp12 = !tmp9;
+  }
+  return tmp12;
 }
 function triggerRateEligibilityCheck(chance) {
   return Math.random() < chance.chance;
 }
 function recencyEligibilityCheck(cooldown, storageKey) {
-  let closure_0 = storageKey;
   const InAppFeedbackStates = UserSettings.InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[storageKey.feedbackType];
   let lastImpressionTime;
   if (tmp3 != null) {
     lastImpressionTime = tmp3.lastImpressionTime;
   }
-  let c1;
+  c1 = undefined;
   let isNaNResult = null != lastImpressionTime;
   if (isNaNResult) {
     const _Number = Number;
@@ -73,7 +70,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   let tmp7;
   if (!isNaNResult) {
     const Storage = Storage2.Storage;
-    const value = Storage.get(storageKey.storageKey);
+    value = Storage.get(storageKey.storageKey);
     c1 = value;
     isNaNResult = null == value;
     tmp7 = value;
@@ -87,16 +84,15 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     InAppFeedbackStates2.updateSetting((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
-      const feedbackType = closure_0.feedbackType;
-      const obj2 = { lastImpressionTime };
-      const merged1 = Object.assign(arg0[closure_0.feedbackType]);
-      obj[feedbackType] = obj2;
+      const obj2 = {};
+      const merged1 = Object.assign(arg0[storageKey.feedbackType]);
+      obj2.lastImpressionTime = lastImpressionTime;
+      obj[storageKey.feedbackType] = obj2;
       return obj;
     });
   }
   const items = [lastImpressionTime, tmp7];
-  const tmpResult = _mod12;
-  let num = tmpResult.max(items);
+  let num = _mod12.max(items);
   if (num == null) {
     num = 0;
   }
@@ -104,7 +100,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
   return sum < Date.now();
 }
 function groupRecencyEligibilityCheck(cooldown) {
-  let closure_0 = cooldown;
+  const group = cooldown;
   const values = Object.values(FeedbackConfig.FeedbackConfig);
   const found = values.filter((group) => group.group === group.group);
   const obj = found[Symbol.iterator]();
@@ -119,26 +115,28 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
+const Constants = fn(11262);
 ({ FeedbackTypePrecedence: closure_4, MAX_REPRESENTABLE_DATE: hasOwnProperty } = Constants);
-class FeedbackManager extends AutomaticLifecycleManager {
+class FeedbackManager extends tmp3 {
   constructor() {
-    const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    const require = applyArgumentsResult;
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    closure_0 = applyArgumentsResult;
     applyArgumentsResult.feedbackTypeToShow = null;
-    let obj = _mod12;
+    obj = closure_0(closure_1[6]);
     applyArgumentsResult.showFeedbackModalDebounced = obj.debounce((fn, fn2) => {
-      if (null != require.feedbackTypeToShow) {
-        const feedbackTypeToShow = require.feedbackTypeToShow;
+      if (null != applyArgumentsResult.feedbackTypeToShow) {
+        const feedbackTypeToShow = applyArgumentsResult.feedbackTypeToShow;
         const InAppFeedbackStates = UserSettings.InAppFeedbackStates;
         InAppFeedbackStates.updateSetting((arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          const obj2 = { lastImpressionTime: Date.now() };
+          const obj2 = {};
           const merged1 = Object.assign(arg0[feedbackTypeToShow]);
+          obj2.lastImpressionTime = Date.now();
           obj[feedbackTypeToShow] = obj2;
           return obj;
         });
-        require.feedbackTypeToShow = null;
+        applyArgumentsResult.feedbackTypeToShow = null;
         fn();
       } else if (fn2 != null) {
         fn2();
@@ -146,29 +144,29 @@ class FeedbackManager extends AutomaticLifecycleManager {
     }, 200);
     return applyArgumentsResult;
   }
-  possiblyShowFeedbackModal(ACTIVITY, arg1, fn) {
-    let feedbackConfig = FeedbackOverrideStore.getFeedbackConfig(ACTIVITY);
-    if (feedbackConfig == null) {
-      feedbackConfig = FeedbackConfig.FeedbackConfig[ACTIVITY];
-    }
-    let eligibilityChecks = feedbackConfig.eligibilityChecks;
-    if (eligibilityChecks == null) {
-      eligibilityChecks = [];
-    }
-    const items = [triggerRateEligibilityCheck, optOutEligibilityCheck, groupRecencyEligibilityCheck];
-    const tmp4 = items.every((fn) => fn(feedbackConfig)) && eligibilityChecks.every((fn) => fn(feedbackConfig));
-    if (!tmp4) {
-      if (fn != null) {
-        fn();
-      }
-    } else {
-      const self = this;
-      self.feedbackTypeToShow = ACTIVITY;
-      const result = self.showFeedbackModalDebounced(arg1, fn);
-    }
-  }
 }
-const prototype = FeedbackManager.prototype;
+FeedbackManager.prototype["possiblyShowFeedbackModal"] = function possiblyShowFeedbackModal(ACTIVITY, arg1, fn) {
+  let feedbackConfig = FeedbackOverrideStore.getFeedbackConfig(ACTIVITY);
+  if (feedbackConfig == null) {
+    feedbackConfig = FeedbackConfig.FeedbackConfig[ACTIVITY];
+  }
+  let eligibilityChecks = feedbackConfig.eligibilityChecks;
+  if (eligibilityChecks == null) {
+    eligibilityChecks = [];
+  }
+  const items = [triggerRateEligibilityCheck, optOutEligibilityCheck, groupRecencyEligibilityCheck];
+  if (!tmp4) {
+    if (fn != null) {
+      fn();
+    }
+  } else {
+    const self = this;
+    self.feedbackTypeToShow = ACTIVITY;
+    const result = self.showFeedbackModalDebounced(arg1, fn);
+  }
+  tmp4 = items.every((fn) => fn(feedbackConfig)) && eligibilityChecks.every((fn) => fn(feedbackConfig));
+};
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/feedback/FeedbackManager.tsx");
 
 export default FeedbackManager;

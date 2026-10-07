@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastListConstants.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
 
 const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const sum = 18 + PX_24 + PX_8;
+const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/UsersFastListConstants.tsx",
 );

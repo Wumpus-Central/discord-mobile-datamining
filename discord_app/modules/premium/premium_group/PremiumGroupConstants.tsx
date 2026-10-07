@@ -1,12 +1,10 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
-import intl2 from "../../../intl/index.native.tsx";
+import util from "../../../intl/index.native.tsx";
 import _modDef3233 from "PremiumGroup.messages.js";
 import Constants from "../../../Constants.tsx";
 import HelpdeskUtils from "../../../utils/HelpdeskUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let HelpdeskArticles;
-let SubscriptionStatusTypes;
 ({ SubscriptionStatusTypes, HelpdeskArticles } = Constants);
 const items = [, , , ,];
 ({
@@ -26,12 +24,12 @@ export const PREMIUM_GROUP_ANNOUNCEMENT_MODAL_PROMOTION_KEY = "2026-07-premium-g
 export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export const getPremiumGroupProductName = function getPremiumGroupProductName() {
-  const intl = intl2.intl;
+  const intl = util.intl;
   return intl.string(_modDef3233.aFBQ3d);
 };
 export const getPremiumGroupCountryName = function getPremiumGroupCountryName() {
-  const intl = intl2.intl;
-  return intl.string(intl2.t.jI66M4);
+  const intl = util.intl;
+  return intl.string(util.t.jI66M4);
 };
 export const PremiumGroupInviteState = {
   UNKNOWN: "UNKNOWN",

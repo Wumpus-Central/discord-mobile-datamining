@@ -1,80 +1,75 @@
 // discord_app/utils/BillingUtils.tsx
-import Constants from "../../discord_common/js/shared/Constants.tsx";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BraintreeUtils from "BraintreeUtils.tsx";
 import BillingErrorDefault from "../errors/BillingError.tsx";
-import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-let braintree_device_data;
-
-let obj = function _createGatewayCheckoutContext() {
-  obj = _asyncToGenerator(async (arg0) => {
-    const paymentGateway = arg0;
-    let c2 = 0;
-    let c3 = 0;
-    return (async (arg0) => {
-      let obj3;
-      if (c3 === 2) {
-        c3 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          return { value, done: true };
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+require = fn;
+let closure_5 = async function _createGatewayCheckoutContext(arg0) {
+  let paymentGateway = arg0;
+  c2 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          let obj6;
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              return { value, done: true };
-            } else {
-              braintree_device_data = undefined;
-              obj6 = null;
-              if (null != paymentGateway) {
-                if (paymentGateway.paymentGateway === constants.BRAINTREE) {
-                  c2 = 1;
-                  c3 = 1;
-                  const obj5 = { value: obj3.collectDeviceData(), done: false };
-                  obj3 = BraintreeUtils;
-                  return obj5;
-                }
-              }
-            }
-          } else if (arg0 === 1) {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            return { value, done: true };
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            braintree_device_data = value;
-            if (null != braintree_device_data) {
-              obj6 = { braintree_device_data };
+            closure_1 = tmp2;
+            closure_129_1 = undefined;
+            closure_129_0 = null;
+            if (null != paymentGateway) {
+              if (paymentGateway.paymentGateway === constants.BRAINTREE) {
+                c2 = 1;
+                c3 = 1;
+                const obj5 = { value: BraintreeUtils.collectDeviceData(), done: false };
+                return obj5;
+              }
             }
+            c3 = 3;
           }
+        } else if (arg0 === 1) {
           c3 = 3;
-          return { value: obj6, done: true };
-        } catch (tmp12) {
-          c3 = 3;
-          throw tmp12;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_1 = value;
+          if (null != closure_129_1) {
+            const obj6 = { braintree_device_data: closure_129_1 };
+            closure_129_0 = obj6;
+          }
         }
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } catch (tmp14) {
+        c3 = tmp;
+        throw tmp14;
       }
-    })();
-  });
-  return obj(...arguments);
+    }
+  })();
 };
-const PaymentGateways = Constants.PaymentGateways;
+const PaymentGateways = fn(1096).PaymentGateways;
+const size = fn(2);
 const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
 
 export const getLocalizedDisplayMonth = function getLocalizedDisplayMonth(arg0, arg1) {
@@ -83,53 +78,77 @@ export const getLocalizedDisplayMonth = function getLocalizedDisplayMonth(arg0, 
   return date.toLocaleString(arg1, { month: "short" });
 };
 export const createGatewayCheckoutContext = function createGatewayCheckoutContext() {
-  return obj(...arguments);
-};
-export const captureBillingException = function captureBillingException(error, tags) {
-  let obj2;
-  obj = { tags: obj2 };
-  const captureException = SentryUtilsDefault.captureException;
-  SentryUtilsDefault;
-  const merged = Object.assign(tags);
-  tags = undefined;
-  if (tags != null) {
-    tags = tags.tags;
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
-  obj2 = { app_context: "billing" };
+  return applyArgumentsResult;
+};
+export const captureBillingException = function captureBillingException(error, merged) {
+  const obj2 = {};
+  merged = Object.assign(merged);
+  let tags;
+  if (merged != null) {
+    tags = merged.tags;
+  }
+  const obj3 = {};
   const merged1 = Object.assign(tags);
-  captureException(error, obj);
+  obj3.app_context = "billing";
+  obj2.tags = obj3;
+  SentryUtilsDefault.captureException(error, obj2);
 };
 export const isExpectedHttpClientError = function isExpectedHttpClientError(status) {
-  let tmp2 = status instanceof HTTPUtils.HTTPResponseError && status.status >= 400 && status.status < 500;
+  let tmp2 = status instanceof HTTPUtils.HTTPResponseError;
+  if (tmp2) {
+    tmp2 = status.status >= 400;
+  }
+  if (tmp2) {
+    tmp2 = status.status < 500;
+  }
   if (!tmp2) {
-    tmp2 =
-      status instanceof BillingErrorDefault && null != status.status && status.status >= 400 && status.status < 500;
-    const tmp4 =
-      status instanceof BillingErrorDefault && null != status.status && status.status >= 400 && status.status < 500;
+    let tmp4 = status instanceof BillingErrorDefault;
+    if (tmp4) {
+      tmp4 = null != status.status;
+    }
+    if (tmp4) {
+      tmp4 = status.status >= 400;
+    }
+    if (tmp4) {
+      tmp4 = status.status < 500;
+    }
+    tmp2 = tmp4;
   }
   return tmp2;
 };
 export const captureBillingMessage = function captureBillingMessage(arg0, tags) {
-  let obj2;
-  obj = { tags: obj2 };
-  const captureMessage = SentryUtilsDefault.captureMessage;
-  SentryUtilsDefault;
+  const obj2 = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
     tags = tags.tags;
   }
-  obj2 = { app_context: "billing" };
+  const obj3 = {};
   const merged1 = Object.assign(tags);
-  captureMessage(arg0, obj);
+  obj3.app_context = "billing";
+  obj2.tags = obj3;
+  SentryUtilsDefault.captureMessage(arg0, obj2);
 };
 export function calculateStandardizedUnits(billingPeriod, billingPeriod2) {
   let tmp = "P1M" === billingPeriod;
-  const tmp2 = tmp && "P1Y" === billingPeriod2;
+  let tmp2 = tmp;
+  if (tmp) {
+    tmp2 = "P1Y" === billingPeriod2;
+  }
   if (tmp2 === true) {
     return 12;
   } else {
-    const tmp3 = tmp && "P6M" === billingPeriod2;
+    let tmp3 = tmp;
+    if (tmp) {
+      tmp3 = "P6M" === billingPeriod2;
+    }
     if (tmp3 === true) {
       return 6;
     } else {
@@ -140,7 +159,10 @@ export function calculateStandardizedUnits(billingPeriod, billingPeriod2) {
         return 3;
       } else {
         let tmp4 = "P3M" === billingPeriod;
-        const tmp5 = tmp4 && "P1Y" === billingPeriod2;
+        let tmp5 = tmp4;
+        if (tmp4) {
+          tmp5 = "P1Y" === billingPeriod2;
+        }
         if (tmp5 === true) {
           return 4;
         } else {
@@ -148,7 +170,10 @@ export function calculateStandardizedUnits(billingPeriod, billingPeriod2) {
             tmp4 = "P6M" === billingPeriod2;
           }
           if (tmp4 !== true) {
-            const tmp6 = "P6M" === billingPeriod && "P1Y" === billingPeriod2;
+            let tmp6 = "P6M" === billingPeriod;
+            if (tmp6) {
+              tmp6 = "P1Y" === billingPeriod2;
+            }
             if (tmp6 !== true) {
               return 1;
             }

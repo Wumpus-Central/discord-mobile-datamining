@@ -1,33 +1,27 @@
 // discord_app/design/components/TagGroup/native/TagGroup.native.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Tag from "Tag.native.tsx";
-import react from "../../../../../_runtime/00019_react.js";
-import createStyles from "../../Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size_mod from "../../../../../_runtime/metro/00002__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 
-let obj2;
-const View = react_native.View;
-const jsx = Fragment.jsx;
-let obj = { group: obj2, inline: { flexWrap: "nowrap", flexShrink: 1, overflow: "hidden" } };
-obj2 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let closure_4 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4896);
+let obj2 = {
+  group: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 },
+  inline: { flexWrap: "nowrap", flexShrink: 1, overflow: "hidden" },
+};
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj3 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: nativeDefault.space.PX_8 };
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TagGroup/native/TagGroup.native.tsx");
+
+export const TagGroup = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let items;
-      let label;
-      let layout;
-      let str;
-      let str2;
-      let variant;
-      const obj = str2(str[6]);
-      const cResult = obj.c(19);
+      const cResult = str2(str[6]).c(19);
       ({ label, items, layout, size, variant } = arg0);
-      const tmp2 = str;
       str = "default";
-      const tmp = str2;
       str2 = "default";
       if (undefined !== layout) {
         str2 = layout;
@@ -36,51 +30,51 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         str = variant;
       }
       if (cResult[0] === str2) {
-        let tmp4;
         if (cResult[1] === size) {
-          tmp4 = cResult[2];
+          let tmp4 = cResult[2];
         }
         size = tmp4;
         const tmp7 = closure_4();
         if (cResult[3] === tmp7.group) {
-          let tmp9;
-          let tmp10;
-          if (cResult[4] === ("inline" === str2 && tmp7.inline)) {
-            tmp9 = cResult[5];
+          if (cResult[4] === tmp8) {
+            let tmp9 = cResult[5];
           }
           if (cResult[6] === items) {
             if (cResult[7] === str2) {
               if (cResult[8] === tmp4) {
                 if (cResult[9] === str) {
-                  tmp10 = cResult[10];
-                }
-                if (cResult[15] === label) {
-                  if (cResult[16] === tmp9) {
-                    let tmp13;
-                    if (cResult[17] === tmp10) {
-                      tmp13 = cResult[18];
+                  if (cResult[15] === label) {
+                    if (cResult[16] === tmp9) {
+                      if (cResult[17] === tmp10) {
+                        let tmp14 = cResult[18];
+                      }
+                      return tmp14;
                     }
-                    return tmp13;
                   }
+                  const obj2 = {
+                    style: tmp9,
+                    accessibilityRole: "list",
+                    accessibilityLabel: label,
+                    children: cResult[10],
+                  };
+                  const tmp17 = (
+                    <size style={tmp9} accessibilityRole="list" accessibilityLabel={label}>
+                      {cResult[10]}
+                    </size>
+                  );
+                  cResult[15] = label;
+                  cResult[16] = tmp9;
+                  cResult[17] = cResult[10];
+                  cResult[18] = tmp17;
+                  tmp14 = tmp17;
                 }
-                const tmp16 = (
-                  <size style={tmp9} accessibilityRole="list" accessibilityLabel={label}>
-                    {tmp10}
-                  </size>
-                );
-                cResult[15] = label;
-                cResult[16] = tmp9;
-                cResult[17] = tmp10;
-                cResult[18] = tmp16;
-                tmp13 = tmp16;
               }
             }
           }
           if (cResult[11] === str2) {
             if (cResult[12] === tmp4) {
-              let tmp11;
               if (cResult[13] === str) {
-                tmp11 = cResult[14];
+                let tmp11 = cResult[14];
               }
               const mapped = items.map(tmp11);
               cResult[6] = items;
@@ -88,7 +82,6 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[8] = tmp4;
               cResult[9] = str;
               cResult[10] = mapped;
-              tmp10 = mapped;
             }
           }
           const fn = function h(item) {
@@ -108,31 +101,30 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let defaultTagGroupSize = size;
       if (size == null) {
+        defaultTagGroupSize = tmp(tmp2[7]).getDefaultTagGroupSize(str2);
         const tmpResult = tmp(tmp2[7]);
-        defaultTagGroupSize = tmpResult.getDefaultTagGroupSize(str2);
       }
       cResult[0] = str2;
       cResult[1] = size;
       cResult[2] = defaultTagGroupSize;
       tmp4 = defaultTagGroupSize;
+      const obj = str2(str[6]);
+      tmp = str2;
+      tmp2 = str;
     }
-  : (label) => {
-      let items;
-      let layout;
-      let variant;
-      ({ items, layout } = label);
-      label = label.label;
+  : (accessibilityLabel) => {
+      ({ items, layout } = accessibilityLabel);
       if (layout === undefined) {
         layout = "default";
       }
-      ({ size, variant } = label);
+      ({ size, variant } = accessibilityLabel);
       if (variant === undefined) {
         variant = "default";
       }
       size = undefined;
       if (size == null) {
+        size = layout(variant[7]).getDefaultTagGroupSize(layout);
         const obj = layout(variant[7]);
-        size = obj.getDefaultTagGroupSize(layout);
       }
       const tmp3 = closure_4();
       const items1 = [tmp3.group];
@@ -142,12 +134,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[1] = inline;
       return (
-        <tmp5 style={items1} accessibilityRole="list" accessibilityLabel={label}>
+        <size style={items1} accessibilityRole="list" accessibilityLabel={accessibilityLabel.label}>
           {items.map((item) => jsx(Tag.Tag, { item, size, variant, inline: "inline" === layout }, item.id))}
-        </tmp5>
+        </size>
       );
     };
-let size = size_mod;
-const result = size.fileFinishedImporting("design/components/TagGroup/native/TagGroup.native.tsx");
-
-export const TagGroup = tmp3;

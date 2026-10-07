@@ -1,197 +1,126 @@
 // discord_app/modules/app_database/modules/GuildEmojis.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
-import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let c2;
-
-let tmp2 = new LoggerDefault("GuildEmojis");
-let closure_3 = tmp2;
+let closure_3 = new LoggerDefault("GuildEmojis");
 class GuildEmojis {
   constructor() {
-    const obj = Object.create(new.target.prototype);
+    obj = Object.create(new.target.prototype);
+    closure_0 = obj;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
-        return obj.handleBackgroundSync(arg0, arg1);
-      },
+            return obj.handleBackgroundSync(arg0, arg1);
+          },
       CONNECTION_OPEN(arg0, arg1) {
-        return obj.handleConnectionOpen(arg0, arg1);
-      },
+            return obj.handleConnectionOpen(arg0, arg1);
+          },
       GUILD_CREATE(arg0, arg1) {
-        return obj.handleGuildCreate(arg0, arg1);
-      },
+            return obj.handleGuildCreate(arg0, arg1);
+          },
       GUILD_DELETE(arg0, arg1) {
-        return obj.handleGuildDelete(arg0, arg1);
-      },
+            return obj.handleGuildDelete(arg0, arg1);
+          },
       GUILD_EMOJIS_UPDATE(arg0, arg1) {
-        return obj.handleGuildEmojisUpdate(arg0, arg1);
-      },
+            return obj.handleGuildEmojisUpdate(arg0, arg1);
+          },
       GUILD_UPDATE(arg0, arg1) {
-        return obj.handleGuildUpdate(arg0, arg1);
-      },
+            return obj.handleGuildUpdate(arg0, arg1);
+          }
     };
     return obj;
   }
-  getAsync(arg0) {
-    let closure_0 = arg0;
-    return (async () => {
-      let emojisResult;
-      let logger;
-      let value;
-      if (logger === 2) {
-        logger = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          let closure_2;
-          let tmp;
-          logger = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              logger = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              logger = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              value = undefined;
-              closure_2 = undefined;
-              const _performance2 = performance;
-              tmp = performance.now();
-              const obj6 = tmp(value[2]);
-              c2 = 1;
-              logger = 1;
-              const obj4 = { value: emojisResult.getMapEntries(), done: false };
-              emojisResult = obj6.emojis(tmp);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            logger = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            logger = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            const _performance = performance;
-            closure_2 = performance.now();
-            const _HermesInternal = HermesInternal;
-            logger.log("asynchronously loaded in " + closure_2 - tmp + "ms (guilds: " + value.length + ")");
-            logger = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-        } catch (tmp5) {
-          logger = 3;
-          throw tmp5;
-        }
-      }
-    })();
-  }
-  handleConnectionOpen(unavailableGuilds, database) {
-    const self = this;
-    const items = [...unavailableGuilds.unavailableGuilds];
-    const obj = DatabaseDaosDefault;
-    const emojisTransactionResult = obj.emojisTransaction(database);
-    emojisTransactionResult.deleteAllExcept(items);
-    const guilds = unavailableGuilds.guilds;
-    for (const item10027 of guilds) {
-      let handleOneGuildCreateResult = self.handleOneGuildCreate(item10027, database);
-      continue;
-    }
-  }
-  handleGuildCreate(guild, arg1) {
-    this.handleOneGuildCreate(guild.guild, arg1);
-  }
-  handleGuildUpdate(guild, arg1) {
-    const replaced = this.replace(guild.guild.id, guild.guild.emojis, arg1);
-  }
-  handleGuildDelete(guild, arg1) {
-    this.delete(guild.guild.id, arg1);
-  }
-  handleGuildEmojisUpdate(guildId, arg1) {
-    const replaced = this.replace(guildId.guildId, guildId.emojis, arg1);
-  }
-  handleBackgroundSync(promisesForBackgroundSyncToWaitOn, arg1) {
-    const self = this;
-    let closure_0 = arg1;
-    const prop = promisesForBackgroundSyncToWaitOn.promisesForBackgroundSyncToWaitOn;
-    const emojis = promisesForBackgroundSyncToWaitOn.emojis;
-    prop.push(
-      Promise.all(
-        emojis.map((dataMode) => {
-          if ("unavailable" === dataMode.dataMode) {
-            return Promise.resolve();
-          } else if ("full" === dataMode.dataMode) {
-            const _HermesInternal2 = HermesInternal;
-            closure_3.verbose("Replacing " + dataMode.entities.length + " emojis for " + dataMode.guildId);
-            const replaced = self.replace(dataMode.guildId, dataMode.entities, closure_0);
-          } else {
-            const tmp = dataMode.updatedEntities.length > 0 || dataMode.deletedEntityIds.length > 0;
-            if (tmp) {
-              const _HermesInternal = HermesInternal;
-              closure_3.verbose(
-                "Updating " +
-                  dataMode.updatedEntities.length +
-                  " and deleting " +
-                  dataMode.deletedEntityIds.length +
-                  " emojis for " +
-                  dataMode.guildId,
-              );
-              self.update(dataMode.guildId, dataMode.updatedEntities, dataMode.deletedEntityIds, closure_0);
-            }
-          }
-        }),
-      ),
-    );
-  }
-  handleOneGuildCreate(emojis, arg1) {
-    const op = emojis.emojis.op;
-    const self = this;
-    if ("full_sync" === op) {
-      const replaced = self.replace(emojis.id, emojis.emojis.items, arg1);
-    } else if ("update" === op) {
-      self.update(emojis.id, emojis.emojis.writes, emojis.emojis.deletes, arg1);
-    } else {
-      emojis = emojis.emojis;
-    }
-  }
-  resetInMemoryState() {}
-  replace(arg0, arg1, database) {
-    const obj = DatabaseDaosDefault;
-    const emojisTransactionResult = obj.emojisTransaction(database);
-    const replaced = emojisTransactionResult.replaceAll(arg0, arg1);
-  }
-  delete(arg0, database) {
-    const obj = DatabaseDaosDefault;
-    const emojisTransactionResult = obj.emojisTransaction(database);
-    emojisTransactionResult.delete(arg0);
-  }
-  update(arg0, arg1, arg2, database) {
-    const obj = DatabaseDaosDefault;
-    const emojisTransactionResult = obj.emojisTransaction(database);
-    emojisTransactionResult.putAll(arg0, arg1);
-    const tmp2 = arg2[Symbol.iterator]();
-    while (tmp2 !== undefined) {
-      let deleteResult = emojisTransactionResult.delete(arg0, tmp3);
-      continue;
-    }
-  }
 }
 const prototype = GuildEmojis.prototype;
-let obj = Object.create(GuildEmojis.prototype);
-obj.actions = {
+prototype["getAsync"] = function getAsync(arg0) {
+  closure_0 = arg0;
+  return (async () => {
+    const _performance2 = performance;
+    closure_128_0 = performance.now();
+    tmp2(tmp5[2]);
+    await tmp2(tmp5[2]).emojis(tmp2).getMapEntries();
+    closure_128_1 = value;
+    const _performance = performance;
+    closure_128_2 = performance.now();
+    const _HermesInternal = HermesInternal;
+    logger.log("asynchronously loaded in " + closure_128_2 - closure_128_0 + "ms (guilds: " + closure_128_1.length + ")");
+    return closure_128_1;
+  })();
+};
+prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
+  const self = this;
+  const items = [...unavailableGuilds.unavailableGuilds];
+  DatabaseDaosDefault.emojisTransaction(database).deleteAllExcept(items);
+  for (const item10027 of tmp2) {
+    let handleOneGuildCreateResult = self.handleOneGuildCreate(item10027, arg1);
+    continue;
+  }
+};
+prototype["handleGuildCreate"] = function handleGuildCreate(guild, arg1) {
+  this.handleOneGuildCreate(guild.guild, arg1);
+};
+prototype["handleGuildUpdate"] = function handleGuildUpdate(guild, arg1) {
+  const replaced = this.replace(guild.guild.id, guild.guild.emojis, arg1);
+};
+prototype["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
+  this.delete(guild.guild.id, arg1);
+};
+prototype["handleGuildEmojisUpdate"] = function handleGuildEmojisUpdate(guildId, arg1) {
+  const replaced = this.replace(guildId.guildId, guildId.emojis, arg1);
+};
+prototype["handleBackgroundSync"] = function handleBackgroundSync(promisesForBackgroundSyncToWaitOn, arg1) {
+  const self = this;
+  closure_0 = arg1;
+  const prop = promisesForBackgroundSyncToWaitOn.promisesForBackgroundSyncToWaitOn;
+  const emojis = promisesForBackgroundSyncToWaitOn.emojis;
+  prop.push(Promise.all(emojis.map((dataMode) => {
+    if ("unavailable" === dataMode.dataMode) {
+      return Promise.resolve();
+    } else if ("full" === dataMode.dataMode) {
+      const _HermesInternal2 = HermesInternal;
+      closure_3.verbose("Replacing " + dataMode.entities.length + " emojis for " + dataMode.guildId);
+      const replaced = self.replace(dataMode.guildId, dataMode.entities, closure_0);
+    } else {
+      if (tmp) {
+        const _HermesInternal = HermesInternal;
+        closure_3.verbose("Updating " + dataMode.updatedEntities.length + " and deleting " + dataMode.deletedEntityIds.length + " emojis for " + dataMode.guildId);
+        self.update(dataMode.guildId, dataMode.updatedEntities, dataMode.deletedEntityIds, closure_0);
+      }
+      tmp = dataMode.updatedEntities.length > 0 || dataMode.deletedEntityIds.length > 0;
+    }
+  })));
+};
+prototype["handleOneGuildCreate"] = function handleOneGuildCreate(emojis, arg1) {
+  const op = emojis.emojis.op;
+  const self = this;
+  if ("full_sync" === op) {
+    const replaced = self.replace(emojis.id, emojis.emojis.items, arg1);
+  } else if ("update" === op) {
+    self.update(emojis.id, emojis.emojis.writes, emojis.emojis.deletes, arg1);
+  } else {
+    emojis = emojis.emojis;
+  }
+};
+prototype["resetInMemoryState"] = function resetInMemoryState() {
+
+};
+prototype["replace"] = function replace(arg0, arg1, database) {
+  const replaced = DatabaseDaosDefault.emojisTransaction(database).replaceAll(arg0, arg1);
+};
+prototype["delete"] = function delete(arg0, database) {
+  DatabaseDaosDefault.emojisTransaction(database).delete(arg0);
+};
+prototype["update"] = function update(arg0, arg1, arg2, database) {
+  const emojisTransactionResult = DatabaseDaosDefault.emojisTransaction(database);
+  emojisTransactionResult.putAll(arg0, arg1);
+  while (tmp2 !== undefined) {
+    let deleteResult = emojisTransactionResult.delete(arg0, tmp3);
+    continue;
+  }
+};
+const obj2 = Object.create(GuildEmojis.prototype);
+let closure_129_0 = obj2;
+obj2.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -209,8 +138,9 @@ obj.actions = {
   },
   GUILD_UPDATE(arg0, arg1) {
     return obj.handleGuildUpdate(arg0, arg1);
-  },
+  }
 };
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/GuildEmojis.tsx");
 
-export default obj;
+export default obj2;

@@ -1,27 +1,27 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
-import react from "../../../../_runtime/00576_react.js";
+import c from "../../../../_runtime/00576_c.js";
 import Link from "../../../../_runtime/01491_Link.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = ReactCompilerGating_mod;
+let ReactCompilerGating = ReactCompilerGating_mod;
 const fn = () => {
-  const obj = Link;
-  const params = obj.useRoute().params;
+  const params = Link.useRoute().params;
   let guildId;
   if (params != null) {
     guildId = params.guildId;
   }
   return guildId;
 };
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const result1 = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
+
+export default fn;
+export const useGuildsRouteGuildAndChannelId = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      const obj = react;
-      const cResult = obj.c(3);
-      const obj2 = Link;
-      const route = obj2.useRoute();
+      const cResult = c.c(3);
+      const route = Link.useRoute();
       let guildId;
       if (route != null) {
         const params = route.params;
@@ -37,9 +37,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[0] === guildId) {
-        let tmp5;
         if (cResult[1] === channelId) {
-          tmp5 = cResult[2];
+          let tmp5 = cResult[2];
         }
         return tmp5;
       }
@@ -50,8 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = items;
     }
   : () => {
-      const obj = Link;
-      const route = obj.useRoute();
+      const route = Link.useRoute();
       let guildId;
       if (route != null) {
         const params = route.params;
@@ -70,7 +68,3 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = channelId;
       return items;
     };
-const result1 = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
-
-export default fn;
-export const useGuildsRouteGuildAndChannelId = tmp3;

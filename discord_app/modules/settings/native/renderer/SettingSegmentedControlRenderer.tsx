@@ -1,106 +1,106 @@
 // discord_app/modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import SettingRendererConstants from "SettingRendererConstants.tsx";
 import SettingsRendererConfig from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
 import SettingRendererUtils from "SettingRendererUtils.tsx";
 import SettingTreeManagerDefault from "SettingTreeManager.tsx";
-import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStore.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, node;
 
-let c10;
-let c9;
-let metroImportAll;
-let obj2;
-let _slicedToArray = _slicedToArray_mod;
-const View = react_native.View;
-const NodeType = SettingRendererConstants.NodeType;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = Fragment);
-let obj = { controlContainer: obj2, pageContainer: { flex: 1 } };
-obj2 = {
+require = fn;
+const View = fn(17).View;
+const NodeType = fn(11143).NodeType;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
+  controlContainer: {
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingTop: nativeDefault.space.PX_16,
+    paddingBottom: nativeDefault.space.PX_8,
+  },
+  pageContainer: { flex: 1 },
+};
+let closure_11 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingTop: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_8,
 };
-let closure_11 = createStyles.createStyles(obj);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (node) => {
-      let defaultIndex;
-      let tmp11;
-      let tmp5;
-      let obj = defaultIndex(576);
-      const cResult = obj.c(23);
+      const cResult = defaultIndex(576).c(23);
       node = node.node;
       defaultIndex = node.defaultIndex;
       const settings = node.settings;
-      let tmp2 = closure_11();
-      [tmp5, dependencyMap] = react.useState(0);
-      _slicedToArray(react.useState(0), 2);
+      closure_11();
+      let obj = defaultIndex(576);
       const tmp3 = _slicedToArray;
+      [tmp5, dependencyMap] = noop.useState(0);
       if (cResult[0] === defaultIndex) {
-        let tmp6;
         if (cResult[1] === settings) {
-          tmp6 = cResult[2];
+          let tmp6 = cResult[2];
         }
-        const first = tmp3(react.useState(tmp6), 1)[0];
+        const first = tmp3(noop.useState(tmp6), 1)[0];
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           class O {
-            constructor(nativeEvent) {
-              dependencyMap(nativeEvent.nativeEvent.layout.width);
+            constructor(arg0) {
+              tmp = closure_2(node.nativeEvent.layout.width);
+              return;
             }
           }
           cResult[3] = O;
         } else {
           class O {
-            constructor(nativeEvent) {
-              dependencyMap(nativeEvent.nativeEvent.layout.width);
+            constructor(arg0) {
+              tmp = closure_2(node.nativeEvent.layout.width);
+              return;
             }
           }
         }
         if (cResult[4] !== settings) {
           class O {
-            constructor(nativeEvent) {
-              dependencyMap(nativeEvent.nativeEvent.layout.width);
+            constructor(arg0) {
+              tmp = closure_2(node.nativeEvent.layout.width);
+              return;
             }
           }
           _slicedToArray = tmp11;
           const item = settings.forEach((id) => {
-            let component;
-            let obj2;
             const tmp = SettingsRendererConfig.SETTING_RENDERER_CONFIG[id];
-            const tmp2 = _modDef38;
-            tmp2(tmp.type === NodeType.ROUTE, "Invalid setting type for segmented control: " + id);
+            _modDef38(tmp.type === NodeType.ROUTE, "Invalid setting type for segmented control: " + id);
             const screen = tmp.screen;
-            const obj = { label: obj2.getSettingTitle(id), id, page: metroImportAll(component, {}) };
-            component = screen.getComponent();
-            const push = _slicedToArray.push;
-            obj2 = SettingRendererUtils;
-            push(obj);
+            const obj = { label: null, id: null, page: null };
+            const component = screen.getComponent();
+            obj.label = SettingRendererUtils.getSettingTitle(id);
+            obj.id = id;
+            obj.page = closure_2_8(component, {});
+            tmp11.push(obj);
           });
           cResult[4] = settings;
           cResult[5] = tmp11;
         } else {
           class O {
-            constructor(nativeEvent) {
-              dependencyMap(nativeEvent.nativeEvent.layout.width);
+            constructor(arg0) {
+              tmp = closure_2(node.nativeEvent.layout.width);
+              return;
             }
           }
           _slicedToArray = tmp11;
         }
         if (cResult[6] === first) {
           class O {
-            constructor(nativeEvent) {
-              dependencyMap(nativeEvent.nativeEvent.layout.width);
+            constructor(arg0) {
+              tmp = closure_2(node.nativeEvent.layout.width);
+              return;
             }
           }
         }
@@ -111,17 +111,26 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = obj3;
         class C {
           constructor() {
-            const field = UserSettingSearchStore.getField("selected");
+            field = closure_6.getField("selected");
             if (null != field) {
-              const index = settings.indexOf(field);
+              tmp2 = settings;
+              index = settings.indexOf(field);
+              num = -1;
               if (-1 !== index) {
                 return index;
               } else {
-                const obj = SettingTreeManagerDefault;
-                const ancestors = obj.getAncestors(field);
+                tmp4 = closure_1;
+                tmp5 = closure_2;
+                obj = closure_1(closure_2[10]);
+                ancestors = obj.getAncestors(field);
+                tmp7 = ancestors;
+                tmp8 = ancestors;
                 for (const item10020 of ancestors) {
-                  let index1 = settings.indexOf(item10020);
+                  tmp9 = settings;
+                  index1 = settings.indexOf(item10020);
+                  tmp11 = index1;
                   if (-1 !== index1) {
+                    tmp12 = obj2;
                     obj2.return();
                     return index1;
                   }
@@ -134,17 +143,26 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       class C {
         constructor() {
-          const field = UserSettingSearchStore.getField("selected");
+          field = closure_6.getField("selected");
           if (null != field) {
-            const index = settings.indexOf(field);
+            tmp2 = settings;
+            index = settings.indexOf(field);
+            num = -1;
             if (-1 !== index) {
               return index;
             } else {
-              const obj = SettingTreeManagerDefault;
-              const ancestors = obj.getAncestors(field);
+              tmp4 = closure_1;
+              tmp5 = closure_2;
+              obj = closure_1(closure_2[10]);
+              ancestors = obj.getAncestors(field);
+              tmp7 = ancestors;
+              tmp8 = ancestors;
               for (const item10020 of ancestors) {
-                let index1 = settings.indexOf(item10020);
+                tmp9 = settings;
+                index1 = settings.indexOf(item10020);
+                tmp11 = index1;
                 if (-1 !== index1) {
+                  tmp12 = obj2;
                   obj2.return();
                   return index1;
                 }
@@ -158,24 +176,24 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = settings;
       cResult[2] = C;
       tmp6 = C;
+      const tmp4 = _slicedToArray(noop.useState(0), 2);
     }
   : (node) => {
-      let _undefined;
-      let c0;
-      let c2;
-      let items1;
-      let settings;
-      let tmp3;
-      let tmp5;
-      const f117333 = () => {
+      _require = undefined;
+      settings = undefined;
+      dependencyMap = undefined;
+      ({ defaultIndex: c0, settings } = node.node);
+      let tmp = closure_11();
+      [tmp3, c2] = noop.useState(0);
+      let tmp2 = _slicedToArray(noop.useState(0), 2);
+      [tmp5, r10021] = noop.useState(() => {
         const field = UserSettingSearchStore.getField("selected");
         if (null != field) {
           const index = settings.indexOf(field);
           if (-1 !== index) {
             return index;
           } else {
-            const obj = SettingTreeManagerDefault;
-            const ancestors = obj.getAncestors(field);
+            const ancestors = SettingTreeManagerDefault.getAncestors(field);
             for (const item10020 of ancestors) {
               let index1 = settings.indexOf(item10020);
               if (-1 !== index1) {
@@ -186,54 +204,72 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         return c0;
-      };
-      _require = undefined;
-      settings = undefined;
-      dependencyMap = undefined;
-      ({ defaultIndex: c0, settings } = node.node);
-      let tmp = closure_11();
-      let tmp2 = _slicedToArray(react.useState(0), 2);
-      [tmp3, c2] = tmp2;
-      [tmp5, r10021] = react.useState(f117333);
+      });
       let items = [settings];
-      _slicedToArray(react.useState(f117333), 2);
-      const callback = react.useCallback((nativeEvent) => {
+      const callback = noop.useCallback((nativeEvent) => {
         _undefined(nativeEvent.nativeEvent.layout.width);
       }, []);
-      const memo = react.useMemo(() => {
+      const memo = noop.useMemo(() => {
         const items = [];
         const item = settings.forEach((id) => {
-          let component;
-          let obj2;
-          const tmp = closure_2_0(_undefined[11]).SETTING_RENDERER_CONFIG[id];
-          const tmp2 = settings(_undefined[12]);
-          tmp2(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
+          const tmp = items(14425).SETTING_RENDERER_CONFIG[id];
+          settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
           const screen = tmp.screen;
-          const obj = { label: obj2.getSettingTitle(id), id, page: closure_2_8(component, {}) };
-          component = screen.getComponent();
-          const push = items.push;
-          obj2 = closure_2_0(_undefined[13]);
-          push(obj);
+          const obj = { label: null, id: null, page: null };
+          const component = screen.getComponent();
+          const tmp2 = settings(38);
+          obj.label = items(14519).getSettingTitle(id);
+          obj.id = id;
+          obj.page = closure_2_8(component, {});
+          items.push(obj);
         });
         return items;
       }, items);
+      const tmp4 = _slicedToArray(
+        noop.useState(() => {
+          const field = UserSettingSearchStore.getField("selected");
+          if (null != field) {
+            const index = settings.indexOf(field);
+            if (-1 !== index) {
+              return index;
+            } else {
+              const ancestors = SettingTreeManagerDefault.getAncestors(field);
+              for (const item10020 of ancestors) {
+                let index1 = settings.indexOf(item10020);
+                if (-1 !== index1) {
+                  obj2.return();
+                  return index1;
+                }
+              }
+            }
+          }
+          return c0;
+        }),
+        2,
+      );
+      const segmentedControlState = require("SegmentedControlState").useSegmentedControlState({
+        items: memo,
+        pageWidth: tmp3,
+        defaultIndex: tmp5,
+      });
+      const obj2 = { children: null };
       let obj = require("SegmentedControlState");
-      const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp3, defaultIndex: tmp5 });
-      let obj2 = { children: items1 };
-      items1 = [,];
+      const items1 = [
+        closure_8(View, {
+          style: tmp.controlContainer,
+          onLayout: callback,
+          children: closure_8(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }),
+        }),
+      ];
       const obj3 = {
         style: tmp.controlContainer,
         onLayout: callback,
         children: closure_8(require("SegmentedControl").SegmentedControl, { state: segmentedControlState }),
       };
-      items1[0] = closure_8(View, obj3);
-      const obj4 = {
+      items1[1] = closure_8(View, {
         style: tmp.pageContainer,
         children: closure_8(require("SegmentedControlPages").SegmentedControlPages, { state: segmentedControlState }),
-      };
-      items1[1] = closure_8(View, obj4);
+      });
+      obj2.children = items1;
       return closure_10(closure_9, obj2);
     };
-const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
-
-export default tmp3;

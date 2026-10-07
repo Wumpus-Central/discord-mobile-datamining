@@ -2,19 +2,16 @@
 import UserSettings from "../user_settings/UserSettings.tsx";
 import useUserIsTeen from "../self_mod/hooks/useUserIsTeen.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
-import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
+require = fn;
+let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
       const setting = HideFriendRequestNotes.useSetting();
-      const obj = useUserIsTeen;
-      let userIsTeen = obj.useUserIsTeen();
+      let userIsTeen = useUserIsTeen.useUserIsTeen();
       if (null != setting) {
         userIsTeen = setting;
       }
@@ -23,29 +20,28 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       const HideFriendRequestNotes = UserSettings.HideFriendRequestNotes;
       const setting = HideFriendRequestNotes.useSetting();
-      const obj = useUserIsTeen;
-      let userIsTeen = obj.useUserIsTeen();
+      let userIsTeen = useUserIsTeen.useUserIsTeen();
       if (null != setting) {
         userIsTeen = setting;
       }
       return userIsTeen;
     };
 let closure_3 = tmp2;
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");
+
+export const useHideFriendRequestNotes = tmp2;
+export const useFriendRequestNote = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
-      let closure_0;
-      let first;
-      let tmp7;
       _require = arg0;
-      const obj = require("react");
-      const cResult = obj.c(3);
+      const cResult = require("c").c(3);
+      const obj = require("c");
       const tmp = _require;
-      const tmp4 = closure_3();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -55,12 +51,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[1] = arg0;
         cResult[2] = fn;
-        tmp7 = fn;
+        let tmp7 = fn;
       } else {
         tmp7 = cResult[2];
       }
-      const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
+      const tmp4 = closure_3();
+      const stateFromStores = tmp(504).useStateFromStores(first, tmp7);
       let tmp9 = null;
       if (!tmp4) {
         tmp9 = null;
@@ -74,12 +70,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp9;
     }
   : (arg0) => {
-      let closure_0;
       _require = arg0;
-      const items = [RelationshipStore];
       const tmp = closure_3();
-      const obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(items, () => RelationshipStore.getNote(closure_0));
+      const items = [RelationshipStore];
+      const stateFromStores = require("initialize").useStateFromStores(items, () =>
+        RelationshipStore.getNote(closure_0),
+      );
       let tmp3 = null;
       if (!tmp) {
         tmp3 = null;
@@ -92,7 +88,3 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3;
     };
-const result = size.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");
-
-export const useHideFriendRequestNotes = tmp2;
-export const useFriendRequestNote = tmp3;

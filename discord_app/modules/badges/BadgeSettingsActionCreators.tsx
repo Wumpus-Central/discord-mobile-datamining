@@ -1,126 +1,122 @@
 // discord_app/modules/badges/BadgeSettingsActionCreators.tsx
-import Constants from "../../Constants.tsx";
-import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
-import size from "../../../_runtime/metro/00002__.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let c5, c6, closure_3, display_order;
-
-let obj = function _updateBadgeSettings() {
-  obj = _asyncToGenerator(async (display_order) => {
-    let c0;
-    let c1;
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (display_order === 1) {
-        throw value;
-      } else if (display_order === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
+const require = fn;
+let closure_5 = async function _updateBadgeSettings(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      let c4;
-      try {
-        let hidden_badges;
-        let obj8;
-        c6 = 2;
-        if (0 === c5) {
-          if (display_order === 1) {
-            c6 = 3;
-            throw value;
-          } else if (display_order === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            let closure_2 = tmp;
-            let closure_1 = tmp4;
-            display_order = undefined;
-            hidden_badges = undefined;
-            ({ displayOrder: c0, hiddenBadges: c1 } = closure_0);
-            obj8 = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "Reflect", done: true };
-          }
-        } else if (1 === c5) {
-          if (display_order === 1) {
-            c6 = 3;
-            throw value;
-          } else if (display_order === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            let obj7;
-            let obj10;
-            if (null != display_order) {
-              const obj6 = { display_order };
-              obj7 = obj6;
-            } else {
-              obj7 = {};
-            }
-            obj8 = {};
-            const merged = Object.assign(obj7);
-            if (null != hidden_badges) {
-              const obj9 = { hidden_badges };
-              obj10 = obj9;
-            } else {
-              obj10 = {};
-            }
-            const merged1 = Object.assign(obj10);
-            const _Object = Object;
-            if (0 === Object.keys(obj8).length) {
-              c6 = 3;
-              return { value: true, done: true };
-            } else {
-              c4 = 1;
-              const HTTP = closure_130_0(closure_130_2[2]).HTTP;
-              const request = { url: closure_130_4.USER_BADGE_SETTINGS, body: obj8, rejectWithError: true };
-              c5 = 3;
-              c6 = 1;
-              const obj11 = { value: HTTP.patch(request), done: false };
-              return obj11;
-            }
-          }
-        } else if (2 === c5) {
-          c4 = 0;
-          const obj2 = closure_130_1(closure_130_2[3]);
-          obj2.captureException(closure_3);
-          c6 = 3;
-          return { value: false, done: true };
-        } else if (display_order === 1) {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
           c6 = 3;
           throw value;
-        } else if (display_order === 2) {
-          c4 = 0;
+        } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          c4 = 0;
-          c6 = 3;
-          return { value: true, done: true };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ displayOrder: closure_129_0, hiddenBadges: closure_129_1 } = closure_0);
+          closure_129_2 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
         }
-      } catch (tmp34) {
-        closure_3 = tmp34;
-        if (0 === c4) {
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
           c6 = 3;
-          throw tmp34;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          c5 = 2;
+          if (null != closure_129_0) {
+            const obj6 = { display_order: closure_129_0 };
+            let obj7 = obj6;
+          } else {
+            obj7 = {};
+          }
+          const obj8 = {};
+          const merged = Object.assign(obj7);
+          if (null != closure_129_1) {
+            const obj9 = { hidden_badges: closure_129_1 };
+            let obj10 = obj9;
+          } else {
+            obj10 = {};
+          }
+          const merged1 = Object.assign(obj10);
+          closure_129_2 = obj8;
+          const _Object = Object;
+          if (0 === Object.keys(closure_129_2).length) {
+            c6 = 3;
+            return { value: true, done: true };
+          } else {
+            c4 = 1;
+            const HTTP = closure_130_0(closure_130_2[2]).HTTP;
+            const request = { url: closure_130_4.USER_BADGE_SETTINGS, body: closure_129_2, rejectWithError: true };
+            c5 = 3;
+            c6 = 1;
+            const obj11 = { value: HTTP.patch(request), done: false };
+            return obj11;
+          }
         }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        closure_129_3 = closure_3;
+        closure_130_1(closure_130_2[3]).captureException(closure_129_3);
+        c6 = 3;
+        return { value: false, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      } else {
+        c4 = 0;
+        c6 = 3;
+        return { value: true, done: true };
+      }
+    } catch (tmp37) {
+      closure_3 = tmp37;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp37;
+      } else {
+        c5 = tmp;
       }
     }
-  });
-  return obj(...arguments);
+  }
 };
-const Endpoints = Constants.Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
 
 export const updateBadgeSettings = function updateBadgeSettings() {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_5.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

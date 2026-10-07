@@ -6,15 +6,15 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {
-  let IOS;
-  const obj = PlatformUtils;
   if (obj.isIOS()) {
-    IOS = Server.EmbeddedActivitySupportedPlatforms.IOS;
+    let IOS = Server.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
     const tmpResult = PlatformUtils;
-    const isAndroidResult = tmpResult.isAndroid();
     const EmbeddedActivitySupportedPlatforms = Server.EmbeddedActivitySupportedPlatforms;
-    IOS = isAndroidResult ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
+    IOS = PlatformUtils.isAndroid()
+      ? EmbeddedActivitySupportedPlatforms.ANDROID
+      : EmbeddedActivitySupportedPlatforms.WEB;
+    const isAndroidResult = PlatformUtils.isAndroid();
   }
   let flag;
   if (arr != null) {

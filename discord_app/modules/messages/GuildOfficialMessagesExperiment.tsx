@@ -2,15 +2,15 @@
 import createExperiment from "../experiments/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let items;
 const obj = {
   kind: "guild",
   id: "2026-03_guild_official_messages",
   label: "Guild Official Messages",
   defaultConfig: { enabled: false },
-  treatments: items,
+  treatments: null,
 };
-items = [{ id: 1, label: "Enable official messages", config: { enabled: true } }];
+const items = [{ id: 1, label: "Enable official messages", config: { enabled: true } }];
+obj.treatments = items;
 const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/messages/GuildOfficialMessagesExperiment.tsx");
 

@@ -1,45 +1,14 @@
 // discord_app/modules/conjure/presence/ConjureRichPresenceStore.tsx
-import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
+import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import Constants from "../../../Constants.tsx";
-import ChannelConstants from "../../channel/ChannelConstants.tsx";
 import conjurePresenceActivity from "conjurePresenceActivity.tsx";
 import IdleStore from "../../../stores/IdleStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
 
-let _null, c10, c12, c9;
-
+require = fn;
 function updateActivity(withGracePeriod) {
-  let found;
-  let obj3;
-  let timeout;
-  let timeout2;
-  const f106647 = () => {
-    let found;
-    let timeout = null;
-    if (null != _null) {
-      const obj = { details: found[Math.floor(Math, Math.random(Math) * found.length)] };
-      const merged = Object.assign(_null);
-      const details = _null.details;
-      const prop = conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_LINES;
-      found = prop.filter((item) => item !== details);
-      const _Math = Math;
-      const _Math2 = Math;
-      _null = obj;
-      if (null != timeout) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(timeout);
-        timeout = null;
-      }
-      const _setTimeout = setTimeout;
-      timeout = setTimeout(f106647, closure_1_8);
-      conjureRichPresenceStore.emitChange();
-    }
-  };
-  withGracePeriod = withGracePeriod.withGracePeriod;
   if (IdleStore.isIdle()) {
     if (null != timeout) {
       const _clearTimeout7 = clearTimeout;
@@ -59,7 +28,6 @@ function updateActivity(withGracePeriod) {
     }
     return flag4;
   } else {
-    let flag;
     if (null != selectedProjectId) {
       if (null == ConjureProjectStore.getProject(selectedProjectId)) {
         if (null != timeout) {
@@ -98,49 +66,45 @@ function updateActivity(withGracePeriod) {
       }
     }
     if (null == tmp7) {
-      let flag2;
-      if (null != obj2) {
-        if (withGracePeriod) {
-          flag2 = false;
-          if (null == timeout) {
-            const _setTimeout2 = setTimeout;
-            timeout = setTimeout(() => {
-              c11 = null;
-              if (null != c12) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(c12);
-                c12 = null;
-              }
-              c9 = null;
-              let flag = null != c10;
-              if (flag) {
-                c10 = null;
-                flag = true;
-              }
-              if (flag) {
-                conjureRichPresenceStore.emitChange();
-              }
-            }, 30000);
-            flag2 = false;
-          }
+      if (null == obj2) {
+        if (null != timeout) {
+          const _clearTimeout3 = clearTimeout;
+          clearTimeout(timeout);
+          timeout = null;
         }
-        flag = flag2;
+        if (null != timeout2) {
+          const _clearTimeout4 = clearTimeout;
+          clearTimeout(timeout2);
+          timeout2 = null;
+        }
+        selectedProjectId = null;
+        let flag2 = null != obj2;
+        if (flag2) {
+          obj2 = null;
+          flag2 = true;
+        }
       }
-      if (null != timeout) {
-        const _clearTimeout3 = clearTimeout;
-        clearTimeout(timeout);
-        timeout = null;
-      }
-      if (null != timeout2) {
-        const _clearTimeout4 = clearTimeout;
-        clearTimeout(timeout2);
-        timeout2 = null;
-      }
-      selectedProjectId = null;
-      flag2 = null != obj2;
-      if (flag2) {
-        obj2 = null;
-        flag2 = true;
+      flag2 = false;
+      if (null == timeout) {
+        const _setTimeout2 = setTimeout;
+        timeout = setTimeout(() => {
+          c11 = null;
+          if (null != c12) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(c12);
+            c12 = null;
+          }
+          c9 = null;
+          let flag = null != c10;
+          if (flag) {
+            c10 = null;
+            flag = true;
+          }
+          if (flag) {
+            conjureRichPresenceStore.emitChange();
+          }
+        }, 30000);
+        flag2 = false;
       }
     } else {
       if (null != timeout) {
@@ -148,55 +112,139 @@ function updateActivity(withGracePeriod) {
         clearTimeout(timeout);
         timeout = null;
       }
-      flag = tmp7 !== selectedProjectId || null == obj2;
+      let flag = tmp7 !== selectedProjectId;
+      if (!flag) {
+        flag = null == obj2;
+      }
       if (flag) {
         selectedProjectId = tmp7;
-        obj2 = {
-          type: ActivityTypes.PLAYING,
-          name: conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_NAME,
-          details: found[Math.floor(Math, Math.random(Math) * found.length)],
-          timestamps: obj3,
-        };
-        let c0;
-        let prop = conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_LINES;
-        found = prop.filter((item) => item !== details);
-        let _Math = Math;
-        let _Math2 = Math;
+        obj2 = { type: ActivityTypes.PLAYING, name: conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_NAME, details: null, timestamps: null };
+        c0 = undefined;
+        const prop = conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_LINES;
+        const found = prop.filter((item) => item !== details);
+        const _Math = Math;
+        const _Math2 = Math;
+        obj2.details = found[Math.floor(Math, Math.random(Math) * found.length)];
+        const obj3 = { start: null };
         const _Date = Date;
-        obj3 = { start: Date.now() };
+        obj3.start = Date.now();
+        obj2.timestamps = obj3;
         if (null != timeout2) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(timeout2);
           timeout2 = null;
         }
-        let _setTimeout = setTimeout;
-        timeout2 = setTimeout(f106647, c8);
+        const _setTimeout = setTimeout;
+        timeout2 = setTimeout(() => {
+          let timeout = null;
+          if (null != closure_1_10) {
+            let obj = {};
+            let merged = Object.assign(closure_1_10);
+            details = closure_1_10.details;
+            let prop = closure_1_0(closure_1_1[6]).CONJURE_PRESENCE_ACTIVITY_LINES;
+            let found = prop.filter((item) => item !== details);
+            let _Math = Math;
+            let _Math2 = Math;
+            obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
+            closure_1_10 = obj;
+            if (null != timeout) {
+              let _clearTimeout = clearTimeout;
+              clearTimeout(timeout);
+              timeout = null;
+            }
+            let _setTimeout = setTimeout;
+            timeout = setTimeout(() => {
+              let timeout = null;
+              if (null != closure_1_10) {
+                let obj = {};
+                let merged = Object.assign(closure_1_10);
+                details = closure_1_10.details;
+                let prop = closure_1_0(closure_1_1[6]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                let found = prop.filter((item) => item !== details);
+                let _Math = Math;
+                let _Math2 = Math;
+                obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
+                closure_1_10 = obj;
+                if (null != timeout) {
+                  let _clearTimeout = clearTimeout;
+                  clearTimeout(timeout);
+                  timeout = null;
+                }
+                let _setTimeout = setTimeout;
+                timeout = setTimeout(() => {
+                  let timeout = null;
+                  if (null != closure_1_10) {
+                    let obj = {};
+                    let merged = Object.assign(closure_1_10);
+                    details = closure_1_10.details;
+                    let prop = closure_1_0(closure_1_1[6]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                    let found = prop.filter((item) => item !== details);
+                    let _Math = Math;
+                    let _Math2 = Math;
+                    obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
+                    closure_1_10 = obj;
+                    if (null != timeout) {
+                      let _clearTimeout = clearTimeout;
+                      clearTimeout(timeout);
+                      timeout = null;
+                    }
+                    let _setTimeout = setTimeout;
+                    timeout = setTimeout(() => {
+                      let timeout = null;
+                      if (null != closure_1_10) {
+                        let obj = {};
+                        let merged = Object.assign(closure_1_10);
+                        details = closure_1_10.details;
+                        let prop = closure_1_0(closure_1_1[6]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                        let found = prop.filter(/* F106646 */ function() { ... });
+                        let _Math = Math;
+                        let _Math2 = Math;
+                        obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
+                        closure_1_10 = obj;
+                        if (null != timeout) {
+                          let _clearTimeout = clearTimeout;
+                          clearTimeout(timeout);
+                          timeout = null;
+                        }
+                        let _setTimeout = setTimeout;
+                        timeout = setTimeout(() => { ... }, closure_1_8);
+                        closure_1_14.emitChange();
+                      }
+                    }, closure_1_8);
+                    closure_1_14.emitChange();
+                  }
+                }, closure_1_8);
+                closure_1_14.emitChange();
+              }
+            }, closure_1_8);
+            closure_1_14.emitChange();
+          }
+        }, c8);
         flag = true;
       }
+      return flag;
     }
-    return flag;
   }
 }
-const ActivityTypes = Constants.ActivityTypes;
-const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
+const ActivityTypes = fn(1085).ActivityTypes;
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
 let c8 = 300000;
 let selectedProjectId = null;
-let obj2 = null;
 let c11 = null;
 let closure_12 = null;
-const Store = get_initializedDefault.Store;
+const Store = initializeDefault.Store;
 class ConjureRichPresenceStore extends Store {
-  initialize() {
-    const items = [IdleStore, SelectedChannelStore, SelectedGuildStore, ConjureProjectStore];
-    this.syncWith(items, () => updateActivity({ withGracePeriod: true }));
-  }
-  getActivity() {
-    return obj2;
-  }
 }
 const prototype = ConjureRichPresenceStore.prototype;
+prototype["initialize"] = function initialize() {
+  const items = [IdleStore, SelectedChannelStore, SelectedGuildStore, ConjureProjectStore];
+  this.syncWith(items, () => updateActivity({ withGracePeriod: true }));
+};
+prototype["getActivity"] = function getActivity() {
+  return obj2;
+};
 ConjureRichPresenceStore.displayName = "ConjureRichPresenceStore";
-let obj = {
+const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault, {
   CONNECTION_OPEN() {
     return updateActivity({ withGracePeriod: false });
   },
@@ -212,10 +260,14 @@ let obj = {
       closure_12 = null;
     }
     selectedProjectId = null;
-    return null != obj2 && true;
-  },
-};
-const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault, obj);
+    let flag = null != obj2;
+    if (flag) {
+      flag = true;
+    }
+    return flag;
+  }
+});
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/presence/ConjureRichPresenceStore.tsx");
 
 export default conjureRichPresenceStore;

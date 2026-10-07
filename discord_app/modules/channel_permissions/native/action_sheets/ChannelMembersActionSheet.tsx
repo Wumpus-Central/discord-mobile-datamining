@@ -1,20 +1,18 @@
 // discord_app/modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx
-import react_native from "../../../../../_runtime/00017_react-native.js";
-import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import intl7 from "../../../../intl/index.native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
-import BottomSheetTitleHeader2 from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import RowButton2 from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import ChannelPermissionsUtils from "../../ChannelPermissionsUtils.tsx";
 import ChannelOverwritesItemDefault from "../components/ChannelOverwritesItem.tsx";
 import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
@@ -22,58 +20,45 @@ import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSet
 import channel_permissions_ChannelPermissionsUtils from "../ChannelPermissionsUtils.tsx";
 import AppChannelPermissionUtils from "../../../app_channels/AppChannelPermissionUtils.tsx";
 import ChannelDetailsUtils from "../../../main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx";
-import react from "../../../../../_runtime/00019_react.js";
+import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
-import Constants from "../../../../Constants.tsx";
-import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
 
-let BottomSheet, dependencyMap, navigation, obj1;
-
-let c10;
-let c9;
-let closure_12;
-let obj2;
-let unpackModuleId;
-const View = react_native.View;
-({ ChannelSettingsSections: c9, Permissions: c10 } = Constants);
-({ jsx: unpackModuleId, jsxs: closure_12 } = Fragment);
-let obj = {
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1085);
+({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4896);
+let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
-  sectionRowWrapper: obj2,
+  sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },
   warning: { margin: 16, marginBottom: 0 },
 };
-obj2 = { paddingVertical: nativeDefault.space.PX_12 };
-let closure_13 = createStyles.createStyles(obj);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_13 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { paddingVertical: nativeDefault.space.PX_12 };
+const size = fn(2);
+let result = size.fileFinishedImporting(
+  "modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx",
+);
+
+export default ReactCompilerGating.isReactCompilerEnabled()
   ? (channelId) => {
-      let first;
-      let guild;
-      let sectionRowWrapper;
-      let showRemove;
-      let sortedGuildRoles;
-      let tmp11;
-      let tmp14;
-      let tmp16;
-      let tmp18;
-      let obj = channelId(576);
-      const cResult = obj.c(65);
+      const cResult = channelId(576).c(65);
       channelId = channelId.channelId;
       let guildId = channelId.guildId;
+      let obj = channelId(576);
       dependencyMap = closure_13();
-      closure_13();
       guildId(1618)();
-      const tmp5 = guildId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [navigation];
         cResult[0] = items;
-        first = items;
+        let first = items;
       } else {
         first = cResult[0];
       }
@@ -92,8 +77,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = channelId(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, I);
+      const tmp4 = closure_13();
+      const tmp5 = guildId;
+      const stateFromStores = channelId(504).useStateFromStores(first, I);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
           constructor() {
@@ -102,7 +88,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items1 = [GuildStore, GuildRoleStore];
         cResult[3] = items1;
-        tmp11 = items1;
+        const tmp11 = items1;
       } else {
         class I {
           constructor() {
@@ -116,11 +102,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_3;
             guildId = undefined;
             tmp = closure_7;
-            getGuild = closure_7.getGuild;
             if (closure_3 != null) {
               guildId = obj.getGuildId();
             }
-            guild = getGuild(guildId);
+            guild = closure_7.getGuild(guildId);
             obj1 = { guild, sortedGuildRoles: null };
             sortedRoles = undefined;
             if (null != guild) {
@@ -135,18 +120,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = stateFromStores;
         cResult[5] = M;
         cResult[6] = items2;
-        tmp14 = items2;
+        let tmp14 = items2;
       } else {
         class M {
           constructor() {
             obj = closure_3;
             guildId = undefined;
             tmp = closure_7;
-            getGuild = closure_7.getGuild;
             if (closure_3 != null) {
               guildId = obj.getGuildId();
             }
-            guild = getGuild(guildId);
+            guild = closure_7.getGuild(guildId);
             obj1 = { guild, sortedGuildRoles: null };
             sortedRoles = undefined;
             if (null != guild) {
@@ -159,8 +143,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp14 = cResult[6];
       }
-      const tmpResult5 = channelId(504);
-      const stateFromStoresObject = tmpResult5.useStateFromStoresObject(tmp11, M, tmp14);
+      const tmpResult = channelId(504);
+      const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp11, M, tmp14);
       ({ guild, sortedGuildRoles } = stateFromStoresObject);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         class M {
@@ -168,11 +152,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_3;
             guildId = undefined;
             tmp = closure_7;
-            getGuild = closure_7.getGuild;
             if (closure_3 != null) {
               guildId = obj.getGuildId();
             }
-            guild = getGuild(guildId);
+            guild = closure_7.getGuild(guildId);
             obj1 = { guild, sortedGuildRoles: null };
             sortedRoles = undefined;
             if (null != guild) {
@@ -185,18 +168,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items3 = [GuildMemberStore];
         cResult[7] = items3;
-        tmp16 = items3;
+        const tmp16 = items3;
       } else {
         class M {
           constructor() {
             obj = closure_3;
             guildId = undefined;
             tmp = closure_7;
-            getGuild = closure_7.getGuild;
             if (closure_3 != null) {
               guildId = obj.getGuildId();
             }
-            guild = getGuild(guildId);
+            guild = closure_7.getGuild(guildId);
             obj1 = { guild, sortedGuildRoles: null };
             sortedRoles = undefined;
             if (null != guild) {
@@ -214,129 +196,101 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_3;
             guildId = undefined;
             tmp = closure_5;
-            getMemberIds = closure_5.getMemberIds;
             if (closure_3 != null) {
               guildId = obj.getGuildId();
             }
-            return getMemberIds(guildId);
+            return closure_5.getMemberIds(guildId);
           }
         }
         const items4 = [stateFromStores];
         cResult[8] = stateFromStores;
         cResult[9] = A;
         cResult[10] = items4;
-        tmp18 = items4;
+        let tmp18 = items4;
       } else {
         class A {
           constructor() {
             obj = closure_3;
             guildId = undefined;
             tmp = closure_5;
-            getMemberIds = closure_5.getMemberIds;
             if (closure_3 != null) {
               guildId = obj.getGuildId();
             }
-            return getMemberIds(guildId);
+            return closure_5.getMemberIds(guildId);
           }
         }
         tmp18 = cResult[10];
       }
+      const tmpResult5 = channelId(504);
+      const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp16, A, tmp18);
       const tmpResult6 = channelId(504);
-      const stateFromStoresArray = tmpResult6.useStateFromStoresArray(tmp16, A, tmp18);
-      const tmpResult7 = channelId(1490);
-      navigation = tmpResult7.useNavigation();
+      navigation = channelId(1490).useNavigation();
       tmp5(5049)(stateFromStores);
-      const tmpResult8 = channelId(11245);
-      const appChannelBotUserId = tmpResult8.useAppChannelBotUserId(stateFromStores);
+      const tmpResult7 = channelId(1490);
+      const appChannelBotUserId = channelId(11245).useAppChannelBotUserId(stateFromStores);
       if (null != stateFromStores) {
         class A {
           constructor() {
             obj = closure_3;
             guildId = undefined;
             tmp = closure_5;
-            getMemberIds = closure_5.getMemberIds;
             if (closure_3 != null) {
               guildId = obj.getGuildId();
             }
-            return getMemberIds(guildId);
+            return closure_5.getMemberIds(guildId);
           }
         }
       }
       return null;
     }
   : (arg0) => {
-      let HelpMessage;
-      let channelId;
-      let guild;
-      let intl;
-      let intl2;
-      let intl3;
-      let intl4;
-      let intl5;
-      let intl6;
-      let items6;
-      let obj11;
-      let obj14;
-      let obj16;
-      let sectionRowWrapper;
-      let showRemove;
-      let sortedGuildRoles;
-      let tmp32Result;
       ({ channelId: require, guildId: importDefault } = arg0);
-      let closure_4;
-      let c5;
+      closure_4 = undefined;
+      c5 = undefined;
       const tmp = closure_13();
       dependencyMap = tmp;
       const tmp4 = useSafeAreaInsetsDefault();
-      let obj = get_initialized;
       const items = [closure_4];
-      const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(require));
-      let obj2 = get_initialized;
+      const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
       const items1 = [GuildStore, GuildRoleStore];
       const items2 = [stateFromStores];
-      const stateFromStoresObject = obj2.useStateFromStoresObject(
+      const stateFromStoresObject = initialize.useStateFromStoresObject(
         items1,
         () => {
-          let sortedRoles;
           guildId = undefined;
-          const getGuild = GuildStore.getGuild;
           if (stateFromStores != null) {
             guildId = stateFromStores.getGuildId();
           }
-          const guild = getGuild(guildId);
-          const obj2 = { guild, sortedGuildRoles: sortedRoles };
-          sortedRoles = undefined;
+          guild = GuildStore.getGuild(guildId);
+          const obj2 = { guild, sortedGuildRoles: null };
+          let sortedRoles;
           if (null != guild) {
             sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
           }
+          obj2.sortedGuildRoles = sortedRoles;
           return obj2;
         },
         items2,
       );
       ({ guild, sortedGuildRoles } = stateFromStoresObject);
-      let obj3 = get_initialized;
       const items3 = [c5];
       const items4 = [stateFromStores];
-      const stateFromStoresArray = obj3.useStateFromStoresArray(
+      const stateFromStoresArray = initialize.useStateFromStoresArray(
         items3,
         () => {
           guildId = undefined;
-          const getMemberIds = GuildMemberStore.getMemberIds;
           if (stateFromStores != null) {
             guildId = stateFromStores.getGuildId();
           }
-          return getMemberIds(guildId);
+          return GuildMemberStore.getMemberIds(guildId);
         },
         items4,
       );
-      const obj4 = useNavigation;
-      closure_4 = obj4.useNavigation();
-      const tmp9 = useChannelNameDefault(stateFromStores);
+      closure_4 = useNavigation.useNavigation();
       AppChannelPermissionUtils;
       if (null != stateFromStores) {
         if (null != guild) {
           if (null != sortedGuildRoles) {
-            let tmp32Result2;
             const canResult = PermissionStore.can(constants2.MANAGE_ROLES, stateFromStores);
             c5 = canResult;
             const tmp5Result = ChannelPermissionsUtils;
@@ -346,10 +300,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               stateFromStores,
               stateFromStores.accessPermissions,
             );
-            const items5 = [];
-            const obj5 = { appChannelBotUserId: tmp11 };
             const tmp5Result2 = ChannelPermissionsUtils;
-            const obj6 = { title: intl4.string(intl7.t["LPJmL/"]), data: existingRolesRows };
+            const obj5 = { appChannelBotUserId: tmp11 };
+            const items5 = [];
+            const obj6 = { title: null, data: null };
             const existingMembersRows = tmp5Result2.getExistingMembersRows(
               stateFromStoresArray,
               stateFromStores,
@@ -357,120 +311,107 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               stateFromStores.accessPermissions,
               obj5,
             );
-            const push = items5.push;
-            intl4 = intl7.intl;
-            push(obj6);
-            const push2 = items5.push;
-            const obj7 = { title: intl5.string(intl7.t["9Oq93m"]), data: existingMembersRows };
-            intl5 = intl7.intl;
-            push2(obj7);
-            BottomSheet = Sheet_BottomSheet.BottomSheet;
-            const obj8 = { title: intl6.string(intl7.t.ES4CC6), subtitle: "#" + tmp9, trailing: tmp32Result };
-            const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
-            intl6 = intl7.intl;
+            const intl4 = util.intl;
+            obj6.title = intl4.string(util.t["LPJmL/"]);
+            obj6.data = existingRolesRows;
+            items5.push(obj6);
+            const obj7 = { title: null, data: null };
+            const intl5 = util.intl;
+            obj7.title = intl5.string(util.t["9Oq93m"]);
+            obj7.data = existingMembersRows;
+            items5.push(obj7);
+            const obj8 = { title: null, subtitle: null, trailing: null };
+            const intl6 = util.intl;
+            obj8.title = intl6.string(util.t.ES4CC6);
             const _HermesInternal = HermesInternal;
-            tmp32Result = canResult;
-            if (tmp32Result) {
+            obj8.subtitle = "#" + tmp9;
+            let tmp32Result = canResult;
+            if (canResult) {
               const obj9 = {
                 onPress() {
-                  const obj = ActionSheetActionCreatorsDefault;
-                  obj.hideActionSheet();
-                  const obj2 = ChannelSettingsActionCreatorsDefault;
-                  obj2.init(require);
-                  const obj3 = ChannelDetailsUtils;
-                  const result = obj3.navigateToChannelDetailsScreen(
+                  ActionSheetActionCreatorsDefault.hideActionSheet();
+                  ChannelSettingsActionCreatorsDefault.init(channelId);
+                  const result = ChannelDetailsUtils.navigateToChannelDetailsScreen(
                     closure_4,
                     constants.PERMISSIONS,
-                    require,
+                    channelId,
                     "channel-members-action-sheet",
                   );
                 },
                 accessibilityRole: "button",
-                accessibilityLabel: intl.string(intl7.t.XPDhcc),
-                children: closure_11(SettingsIcon.SettingsIcon, {}),
+                accessibilityLabel: null,
+                children: null,
               };
-              const PressableOpacity = Pressables.PressableOpacity;
-              intl = intl7.intl;
-              tmp32Result = closure_11(PressableOpacity, obj9);
+              let intl = util.intl;
+              obj9.accessibilityLabel = intl.string(util.t.XPDhcc);
+              obj9.children = closure_11(SettingsIcon.SettingsIcon, {});
+              tmp32Result = closure_11(Pressables.PressableOpacity, obj9);
             }
-            const obj10 = {
-              scrollable: true,
-              header: closure_11(BottomSheetTitleHeader, obj8),
-              startExpanded: true,
-              children: closure_12(stateFromStores, obj11),
-            };
-            obj11 = { style: tmp.container, children: items6 };
+            const obj10 = { scrollable: true, header: null, startExpanded: true, children: null };
+            obj8.trailing = tmp32Result;
+            obj10.header = closure_11(BottomSheetTitleHeader.BottomSheetTitleHeader, obj8);
+            const obj11 = { style: tmp.container, children: null };
             if (canResult) {
-              const obj12 = {
-                label: intl3.string(intl7.t.dMJ3Y6),
-                onPress() {
-                  const obj = channel_permissions_ChannelPermissionsUtils;
-                  return obj.openAddMembersActionSheet(stateFromStores);
-                },
-                icon: closure_11(GroupPlusIcon.GroupPlusIcon, {}),
+              const obj12 = { label: null, onPress: null, icon: null };
+              const intl3 = util.intl;
+              obj12.label = intl3.string(util.t.dMJ3Y6);
+              obj12.onPress = function onPress() {
+                return channel_permissions_ChannelPermissionsUtils.openAddMembersActionSheet(stateFromStores);
               };
-              const RowButton = RowButton2.RowButton;
-              intl3 = intl7.intl;
-              tmp32Result2 = closure_11(RowButton, obj12);
+              obj12.icon = closure_11(GroupPlusIcon.GroupPlusIcon, {});
+              let tmp32Result2 = closure_11(RowButton.RowButton, obj12);
             } else {
-              const obj13 = { style: tmp.warning, children: closure_11(HelpMessage, obj14) };
-              obj14 = { messageType: native.HelpMessageTypes.INFO, children: intl2.string(intl7.t.VOuiSj) };
-              HelpMessage = native.HelpMessage;
-              intl2 = intl7.intl;
+              const obj13 = { style: tmp.warning, children: null };
+              const obj14 = { messageType: native.HelpMessageTypes.INFO, children: null };
+              const intl2 = util.intl;
+              obj14.children = intl2.string(util.t.VOuiSj);
+              obj13.children = closure_11(native.HelpMessage, obj14);
               tmp32Result2 = closure_11(tmp14, obj13);
             }
-            items6 = [tmp32Result2];
+            const items6 = [tmp32Result2];
             const obj15 = {
-              contentContainerStyle: obj16,
-              renderItem(index) {
-                let item;
-                let section;
-                index = index.index;
-                ({ item, section } = index);
-                const obj = {
-                  start: 0 === index,
-                  end: index === section.data.length - 1,
-                  guildId: importDefault,
-                  item,
-                  channelId: require,
-                  showType: true,
-                  showRemove,
-                };
-                return unpackModuleId(ChannelOverwritesItemDefault, obj);
-              },
-              renderSectionHeader(section) {
-                let data;
-                let intl;
-                let obj2;
-                let title;
-                ({ title, data } = section.section);
-                const obj = {
-                  style: sectionRowWrapper.sectionRowWrapper,
-                  maxFontSizeMultiplier: 2,
-                  accessibilityRole: "header",
-                  variant: "text-sm/semibold",
-                  color: "interactive-text-default",
-                  children: intl.format(intl7.t.u8CWLl, obj2),
-                };
-                const Text = Text_Text.Text;
-                intl = intl7.intl;
-                obj2 = { numberOfItems: data.length, sectionTitle: title };
-                return unpackModuleId(Text, obj);
-              },
-              sections: items5,
+              contentContainerStyle: null,
+              renderItem: null,
+              renderSectionHeader: null,
+              sections: null,
               stickySectionHeadersEnabled: false,
             };
-            obj16 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
-            const BottomSheetSectionList = BottomSheetModal.BottomSheetSectionList;
-            items6[1] = closure_11(BottomSheetSectionList, obj15);
-            return closure_11(BottomSheet, obj10);
+            const obj16 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
+            obj15.contentContainerStyle = obj16;
+            obj15.renderItem = function renderItem(index) {
+              index = index.index;
+              ({ item, section } = index);
+              return closure_2_11(ChannelOverwritesItemDefault, {
+                start: 0 === index,
+                end: index === section.data.length - 1,
+                guildId,
+                item,
+                channelId,
+                showType: true,
+                showRemove,
+              });
+            };
+            obj15.renderSectionHeader = function renderSectionHeader(section) {
+              ({ title, data } = section.section);
+              const obj = {
+                style: sectionRowWrapper.sectionRowWrapper,
+                maxFontSizeMultiplier: 2,
+                accessibilityRole: "header",
+                variant: "text-sm/semibold",
+                color: "interactive-text-default",
+                children: null,
+              };
+              const intl = util.intl;
+              obj.children = intl.format(util.t.u8CWLl, { numberOfItems: data.length, sectionTitle: title });
+              return closure_2_11(Text_Text.Text, obj);
+            };
+            obj15.sections = items5;
+            items6[1] = closure_11(BottomSheetModal.BottomSheetSectionList, obj15);
+            obj11.children = items6;
+            obj10.children = closure_12(stateFromStores, obj11);
+            return closure_11(Sheet_BottomSheet.BottomSheet, obj10);
           }
         }
       }
       return null;
     };
-let result = size.fileFinishedImporting(
-  "modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx",
-);
-
-export default tmp5;
