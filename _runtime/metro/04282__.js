@@ -1,49 +1,14 @@
 // === Module 4282: ? ===
 
 // Module 4282
-import module_3968_mod from "module_3968" /* 3968 */;
-import _typeof_mod from "module_3964" /* 3964 */;
-import module_4204_mod from "module_4204" /* 4204 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import module_2133 from "module_2133" /* 2133 */;
 
-let module_3968 = module_3968_mod;
-if (!module_3968) {
-  const obj = { default: module_3968 };
-  let tmp3 = obj;
+if (!module_2133) {
+  const obj2 = { default: module_2133 };
+  let obj = obj2;
 } else {
-  tmp3 = module_3968;
+  obj = module_2133;
 }
-module_3968 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4204 = module_4204_mod;
-if (!module_4204) {
-  const obj3 = { default: module_4204 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4204;
-}
-module_4204 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
 
-export default function setUTCWeek(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4204.default(defaultResult1, arg2) - module_3968.default(arg1);
-  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
-  return defaultResult1;
-};
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "y-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "'kl'. HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'kl.' {{time}}", long: "{{date}} 'kl.' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

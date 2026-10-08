@@ -1,53 +1,7 @@
 // === Module 4031: ? ===
 
 // Module 4031
-import module_3966_mod from "module_3966" /* 3966 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-let module_3966 = module_3966_mod;
-if (!module_3966) {
-  const obj = { default: module_3966 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3966;
-}
-module_3966 = tmp3;
-const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
-let closure_2 = {
-  lastWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3966.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica scorsa alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} scorso alle' p`;
-      }
-    }
-    return str;
-  },
-  yesterday: "'ieri alle' p",
-  today: "'oggi alle' p",
-  tomorrow: "'domani alle' p",
-  nextWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3966.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica prossima alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
-      }
-    }
-    return str;
-  },
-  other: "P"
-};
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_2[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
-};
-export default exports.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb3JlL3dlYi9TeXN0ZW1UcmF5", scales: [1], hash: "394c23530acc7256a50589f523120085", name: "hi.messages.394c23530acc7256a50589f523120085.compiled.messages", type: "jsona" });

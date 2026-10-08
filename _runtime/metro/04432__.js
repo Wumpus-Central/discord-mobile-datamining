@@ -1,9 +1,28 @@
 // === Module 4432: ? ===
 
 // Module 4432
-let closure_0 = { lastWeek: "'\u092A\u093F\u091B\u0932\u0947' eeee p", yesterday: "'\u0915\u0932' p", today: "'\u0906\u091C' p", tomorrow: "'\u0915\u0932' p", nextWeek: "eeee '\u0915\u094B' p", other: "P" };
+import _typeof_mod from "module_4156" /* 4156 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function getMonth(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getMonth();
 };
 export default exports.default;

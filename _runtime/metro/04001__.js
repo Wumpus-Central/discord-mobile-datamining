@@ -1,15 +1,7 @@
 // === Module 4001: ? ===
 
 // Module 4001
-let closure_0 = { lastWeek: "'el' eeee 'pasado a la' p", yesterday: "'ayer a la' p", today: "'hoy a la' p", tomorrow: "'ma\u00F1ana a la' p", nextWeek: "eeee 'a la' p", other: "P" };
-let closure_1 = { lastWeek: "'el' eeee 'pasado a las' p", yesterday: "'ayer a las' p", today: "'hoy a las' p", tomorrow: "'ma\u00F1ana a las' p", nextWeek: "eeee 'a las' p", other: "P" };
+import registerAsset from "module_1132" /* 1132 */;
 
-export default function formatRelative(arg0, getUTCHours, arg2, arg3) {
-  if (1 !== getUTCHours.getUTCHours()) {
-    let tmp2 = closure_1[arg0];
-  } else {
-    tmp2 = closure_0[arg0];
-  }
-  return tmp2;
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX21vZGU=", scales: [1], hash: "1618190494c19892510aa7fd7b63f46f", name: "hr.messages.1618190494c19892510aa7fd7b63f46f.compiled.messages", type: "jsona" });

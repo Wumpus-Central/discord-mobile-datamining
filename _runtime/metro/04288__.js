@@ -1,101 +1,14 @@
 // === Module 4288: ? ===
 
 // Module 4288
-import _mod3969 from "module_3969" /* 3969 */;
-import _typeof_mod from "module_3964" /* 3964 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
-import module_3968_mod from "module_3968" /* 3968 */;
+import module_2133 from "module_2133" /* 2133 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2133) {
+  const obj2 = { default: module_2133 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2133;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-let module_3968 = module_3968_mod;
-if (!module_3968) {
-  const obj3 = { default: module_3968 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3968;
-}
-module_3968 = tmp7;
 
-export default function setUTCDay(arg0, arg1, weekStartsOn) {
-  requiredArgs.default(2, arguments);
-  const defaultOptions = _mod3969.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult1 = module_3968.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = _typeof.default(arg0);
-      const defaultResult3 = module_3968.default(arg1);
-      let num4 = 0;
-      const uTCDay = defaultResult2.getUTCDay();
-      if ((defaultResult3 % 7 + 7) % 7 < defaultResult1) {
-        num4 = 7;
-      }
-      const diff = num4 + defaultResult3 - uTCDay;
-      defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff);
-      return defaultResult2;
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
-};
+export default { date: obj.default({ formats: { full: "\u0E27\u0E31\u0E19EEEE\u0E17\u0E35\u0E48 do MMMM y", long: "do MMMM y", medium: "d MMM y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss \u0E19. zzzz", long: "H:mm:ss \u0E19. z", medium: "H:mm:ss \u0E19.", short: "H:mm \u0E19." }, defaultWidth: "medium" }), dateTime: obj.default({ formats: { full: "{{date}} '\u0E40\u0E27\u0E25\u0E32' {{time}}", long: "{{date}} '\u0E40\u0E27\u0E25\u0E32' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

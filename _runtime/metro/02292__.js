@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/collectibles/web", scales: [1], hash: "badc2ccdf19fd542b091b55c09e8bee9", name: "ShopExternalSkus.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9naWZ0X2NhcmRzL21lc3NhZ2Vz", scales: [1], hash: "a924956e38b84d744151b28f2153f56f", name: "no.messages.a924956e38b84d744151b28f2153f56f.compiled.messages", type: "jsona" });

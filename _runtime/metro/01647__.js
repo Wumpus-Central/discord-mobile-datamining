@@ -1,13 +1,9 @@
 // === Module 1647: ? ===
 
 // Module 1647
-const require = globalThis.__r;
+import module_65 from "module_65" /* 65 */;
 
-for (const key10013 in require("module_1648")) {
-  arg5[key10013] = require("module_1648")[key10013];
-  continue;
-}
-for (const key10017 in require("logToConsole")) {
-  arg5[key10017] = require("logToConsole")[key10017];
-  continue;
-}
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "KeyboardGestureArea", validAttributes: { interpolator: true, showOnSwipeUp: true, enableSwipeToDismiss: true, offset: true, textInputNativeID: true } };
+
+export default module_65.get("KeyboardGestureArea", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

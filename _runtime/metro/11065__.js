@@ -1,7 +1,16 @@
 // === Module 11065: ? ===
 
 // Module 11065
-import registerAsset from "module_1132" /* 1132 */;
+import _mod11064 from "module_11064" /* 11064 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "4f3507228f76eea58da6db7d8807bb01", name: "ic_file_small_ps", type: "png" });
+export const getTraceMetaTags = function getTraceMetaTags() {
+  const entries = Object.entries(_mod11064.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
+  });
+  return mapped.join("\n");
+};

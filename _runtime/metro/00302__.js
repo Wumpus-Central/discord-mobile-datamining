@@ -125,7 +125,7 @@ const entry = {
     obj.children = items1;
     const obj3 = { style: drawerSubview.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
-    const tmp3Result = v65535(ViewDefault, obj);
+    const tmp3Result = collapsed(ViewDefault, obj);
     if (tmp2) {
       const obj4 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
       tmp12 = options(_modDef304, obj4);
@@ -144,7 +144,7 @@ const entry = {
     obj3.children = items2;
     const tmp4Result = ViewDefault;
     const obj13 = {};
-    const tmp3Result2 = v65535(ViewDefault, obj3);
+    const tmp3Result2 = collapsed(ViewDefault, obj3);
     const merged = Object.assign(tmp);
     obj13.ref = self._nativeRef;
     obj13.drawerBackgroundColor = str;
@@ -156,7 +156,7 @@ const entry = {
     ({ _onDrawerSlide: obj7.onDrawerSlide, _onDrawerOpen: obj7.onDrawerOpen, _onDrawerClose: obj7.onDrawerClose, _onDrawerStateChanged: obj7.onDrawerStateChanged } = self);
     const items5 = [tmp3Result2, tmp3Result];
     obj13.children = items5;
-    return v65535(_modDef309, obj13);
+    return collapsed(_modDef309, obj13);
   }
 };
 let items = [

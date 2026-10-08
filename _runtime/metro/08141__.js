@@ -1,21 +1,7 @@
 // === Module 8141: ? ===
 
 // Module 8141
-import _mod514 from "module_514" /* 514 */;
-import baseIteratee from "baseIteratee" /* 595 */;
-import arrayAggregator from "arrayAggregator" /* 8142 */;
-import baseAggregator from "baseAggregator" /* 8143 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default function createAggregator(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0, arg1) => {
-    if (_mod514(arg0)) {
-      let tmpResult = arrayAggregator;
-    } else {
-      tmpResult = baseAggregator;
-    }
-    return tmpResult(arg0, closure_0, baseIteratee(arg1, 2), closure_1 ? closure_1() : {});
-  };
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3cca2566d6ada925d540d64d7940bca5", name: "AtIcon", type: "png" });

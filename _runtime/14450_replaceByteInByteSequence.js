@@ -1,0 +1,24 @@
+// === Module 14450: replaceByteInByteSequence ===
+
+// Module 14450 (replaceByteInByteSequence)
+import _mod14451 from "module_14451" /* 14451 */;
+import _mod14455 from "module_14455" /* 14455 */;
+import _mod14458 from "module_14458" /* 14458 */;
+
+const obj = {};
+const _URL = _mod14451.URL;
+_URL.install(obj);
+const _URLSearchParams = _mod14451.URLSearchParams;
+_URLSearchParams.install(obj);
+({ URL: exports.URL, URLSearchParams: exports.URLSearchParams } = obj);
+
+export const parseURL = _mod14455.parseURL;
+export const basicURLParse = _mod14455.basicURLParse;
+export const serializeURL = _mod14455.serializeURL;
+export const serializeHost = _mod14455.serializeHost;
+export const serializeInteger = _mod14455.serializeInteger;
+export const serializeURLOrigin = _mod14455.serializeURLOrigin;
+export const setTheUsername = _mod14455.setTheUsername;
+export const setThePassword = _mod14455.setThePassword;
+export const cannotHaveAUsernamePasswordPort = _mod14455.cannotHaveAUsernamePasswordPort;
+export const percentDecode = _mod14458.percentDecode;

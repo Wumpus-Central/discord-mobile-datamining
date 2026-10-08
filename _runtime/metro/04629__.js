@@ -1,51 +1,26 @@
 // === Module 4629: ? ===
 
 // Module 4629
-import _mod4621 from "module_4621" /* 4621 */;
-
-require = arg1;
-const dependencyMap = arg6;
-const map = new Map();
-
-export const getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
-  closure_0 = arg0;
-  if (map.has(arg0)) {
-    return map.get(arg0);
-  } else {
-    function constructorFunc() {
-      const NitroModules = _mod4621.NitroModules;
-      const hybridObject = NitroModules.createHybridObject(closure_0);
-      const prototypeOf = Object.getPrototypeOf(hybridObject);
-      if (constructorFunc.prototype !== prototypeOf) {
-        constructorFunc.prototype = prototypeOf;
-        constructorFunc.prototypeInitialized = true;
-      }
-      return hybridObject;
-    }
-    constructorFunc.prototypeInitialized = false;
-    let _Object = Object;
-    const _Symbol = Symbol;
-    const obj2 = {
-      value(arg0) {
-          if (!constructorFunc.prototypeInitialized) {
-            const NitroModules = _mod4621.NitroModules;
-            const _Object = Object;
-            constructorFunc.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(closure_0));
-            constructorFunc.prototypeInitialized = true;
-          }
-          let prototypeOf = Object.getPrototypeOf(arg0);
-          if (null != prototypeOf) {
-            while (prototypeOf !== constructorFunc.prototype) {
-              let _Object2 = Object;
-              prototypeOf = Object.getPrototypeOf(prototypeOf);
-            }
-            return true;
-          }
-          return false;
-        }
-    };
-    Object.defineProperty(constructorFunc, Symbol.hasInstance, obj2);
-    const result = map.set(arg0, constructorFunc);
-    return constructorFunc;
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "da" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, narrow: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, short: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" }, narrow: { end: "{0} el. {1}", middle: "{0}, {1}", pair: "{0} el. {1}", start: "{0}, {1}" }, short: { end: "{0} el. {1}", middle: "{0}, {1}", pair: "{0} el. {1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, narrow: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, short: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-};
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, narrow: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, short: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" }, narrow: { end: "{0} el. {1}", middle: "{0}, {1}", pair: "{0} el. {1}", start: "{0}, {1}" }, short: { end: "{0} el. {1}", middle: "{0}, {1}", pair: "{0} el. {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, narrow: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" }, short: { end: "{0} og {1}", middle: "{0}, {1}", pair: "{0} og {1}", start: "{0}, {1}" } } }, locale: "da" };
+prop.push(obj);

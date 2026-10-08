@@ -1,7 +1,23 @@
 // === Module 6558: ? ===
 
 // Module 6558
-import registerAsset from "module_1132" /* 1132 */;
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
+  } else {
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  module.exports = exports;
+  return exports(arg0);
+}
+let exports = _getPrototypeOf;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 160, height: 160, scales: [2, 3], hash: "b7eca7761481c5ff3cc170b16fbdff57", name: "img_no_results", type: "png" });
+export default _getPrototypeOf;

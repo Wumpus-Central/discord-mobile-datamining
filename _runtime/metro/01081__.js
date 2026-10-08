@@ -234,7 +234,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "duration", attachment: "toCharArray$esjava$1", attachmentUri: "toCharArray$esjava$1" });
+                  debug.setState({ filename: "useSharedValue", attachment: "apply", attachmentUri: "next" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -464,7 +464,7 @@ class FeedbackWidget {
       FeedbackWidget._savedState = Object.assign({}, state.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "unicodeVersion", attachment: "PX_8", attachmentUri: "jsx" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "emoji", attachment: "toCharArray$esjava$1", attachmentUri: "toCharArray$esjava$1" };
     };
     tmp4Result._hasScreenshot = () => undefined !== state.state.filename && undefined !== state.state.attachment && undefined !== state.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -790,12 +790,12 @@ let items = [
 const entry1 = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "unicodeVersion", attachment: "PX_8", attachmentUri: "jsx" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "emoji", attachment: "toCharArray$esjava$1", attachmentUri: "toCharArray$esjava$1" };
   }
 };
 const items1 = [entry1];
 const importDefaultResultResult = _createClass(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = fn(1077).defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "unicodeVersion", attachment: "PX_8", attachmentUri: "jsx" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "emoji", attachment: "toCharArray$esjava$1", attachmentUri: "toCharArray$esjava$1" };
 
 export const FeedbackWidget = importDefaultResultResult;

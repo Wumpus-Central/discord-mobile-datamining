@@ -1,283 +1,202 @@
 // === Module 1811: ? ===
 
 // Module 1811
-import _mod1654 from "module_1654" /* 1654 */;
-import _mod1686 from "module_1686" /* 1686 */;
-import runOnRuntime from "runOnRuntime" /* 1687 */;
-import _mod1795 from "module_1795" /* 1795 */;
-import _mod1812 from "module_1812" /* 1812 */;
-import convertLrgbToOklabDefault from "convertLrgbToOklab" /* 1813 */;
+import runWorkletOnJS from "runWorkletOnJS" /* 1662 */;
+import _mod1680 from "module_1680" /* 1680 */;
+import runOnRuntime from "runOnRuntime" /* 1699 */;
+import noop from "module_19" /* 19 */;
 
-const interpolateColorsHSV = function o(arg0, items, h, useCorrectedHSVInterpolation) {
-  useCorrectedHSVInterpolation = useCorrectedHSVInterpolation.useCorrectedHSVInterpolation;
-  if (undefined !== useCorrectedHSVInterpolation) {
-    if (!useCorrectedHSVInterpolation) {
-      const obj = _mod1812;
-      let interpolateResult = obj.interpolate(arg0, items, h.h, _mod1812.Extrapolation.CLAMP);
-    }
-    const tmpResult = _mod1812;
-    const interpolateResult1 = tmpResult.interpolate(arg0, items, h.s, _mod1812.Extrapolation.CLAMP);
-    const tmpResult4 = _mod1812;
-    const interpolateResult2 = tmpResult4.interpolate(arg0, items, h.v, _mod1812.Extrapolation.CLAMP);
-    const tmpResult5 = _mod1812;
-    const tmpResult6 = _mod1686;
-    return tmpResult6.hsvToColor(interpolateResult, interpolateResult1, interpolateResult2, tmpResult5.interpolate(arg0, items, h.a, _mod1812.Extrapolation.CLAMP));
+const require = globalThis.__r;
+
+({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
+function eulerToQuaternion(arg0, arg1, arg2) {
+  const cosResult = Math.cos(arg0 / 2);
+  const sinResult = Math.sin(arg0 / 2);
+  const cosResult1 = Math.cos(arg1 / 2);
+  const sinResult1 = Math.sin(arg1 / 2);
+  const cosResult2 = Math.cos(arg2 / 2);
+  const sinResult2 = Math.sin(arg2 / 2);
+  const items = [sinResult * cosResult1 * cosResult2 - cosResult * sinResult1 * sinResult2, cosResult * sinResult1 * cosResult2 + sinResult * cosResult1 * sinResult2, cosResult * cosResult1 * sinResult2 + sinResult * sinResult1 * cosResult2, cosResult * cosResult1 * cosResult2 - sinResult * sinResult1 * sinResult2];
+  return items;
+}
+eulerToQuaternion.__closure = {};
+eulerToQuaternion.__workletHash = 14525486759705;
+eulerToQuaternion.__initData = { code: "function eulerToQuaternion_Pnpm_useAnimatedSensorTs1(pitch,roll,yaw){const c1=Math.cos(pitch/2);const s1=Math.sin(pitch/2);const c2=Math.cos(roll/2);const s2=Math.sin(roll/2);const c3=Math.cos(yaw/2);const s3=Math.sin(yaw/2);return[s1*c2*c3-c1*s2*s3,c1*s2*c3+s1*c2*s3,c1*c2*s3+s1*s2*c3,c1*c2*c3-s1*s2*s3];}" };
+function adjustRotationToInterfaceOrientation(pitch) {
+  ({ interfaceOrientation, pitch, roll, yaw } = pitch);
+  if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_90) {
+    pitch.pitch = roll;
+    pitch.roll = -pitch;
+    const _Math2 = Math;
+    pitch.yaw = yaw - Math.PI / 2;
+  } else if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_270) {
+    pitch.pitch = -roll;
+    pitch.roll = pitch;
+    const _Math = Math;
+    pitch.yaw = yaw + Math.PI / 2;
+  } else if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_180) {
+    pitch.pitch = pitch.pitch * -1;
+    pitch.roll = pitch.roll * -1;
+    pitch.yaw = pitch.yaw * -1;
   }
-  items = [];
-  items[0] = items[0];
-  h = h.h;
-  const items1 = [h[0]];
-  let num = 1;
-  if (1 < h.length) {
-    while (true) {
-      let diff = num - 1;
-      let diff1 = h[num] - h[diff];
-      if (h[num] > h[diff]) {
-        if (diff1 > 0.5) {
-          let arr = items.push(items[num]);
-          let arr2 = items.push(items[num] + 0.00001);
-          let arr3 = items1.push(h[num] - 1);
-          let arr13 = items1.push(h[num]);
-          num = num + 1;
-          if (num >= h.length) {
-            break;
-          }
-        }
-      }
-      if (h[num] < h[diff]) {
-        if (diff1 < -0.5) {
-          let arr14 = items.push(items[num]);
-          let arr15 = items.push(items[num] + 0.00001);
-          let arr16 = items1.push(h[num] + 1);
-          let arr17 = items1.push(h[num]);
-        }
-      }
-      let arr18 = items.push(items[num]);
-      let arr19 = items1.push(h[num]);
-    }
-  }
-  interpolateResult = (_mod1812.interpolate(arg0, items, items1, _mod1812.Extrapolation.CLAMP) + 1) % 1;
-};
-interpolateColorsHSV.__closure = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, hsvToColor: _mod1686.hsvToColor };
-interpolateColorsHSV.__workletHash = 1574790978150;
-interpolateColorsHSV.__initData = { code: "function pnpm_interpolateColorTs1(value,inputRange,colors,options){const{interpolate,Extrapolation,hsvToColor}=this.__closure;let h=0;const{useCorrectedHSVInterpolation=true}=options;if(useCorrectedHSVInterpolation){const correctedInputRange=[inputRange[0]];const originalH=colors.h;const correctedH=[originalH[0]];for(let i=1;i<originalH.length;++i){const d=originalH[i]-originalH[i-1];if(originalH[i]>originalH[i-1]&&d>0.5){correctedInputRange.push(inputRange[i]);correctedInputRange.push(inputRange[i]+0.00001);correctedH.push(originalH[i]-1);correctedH.push(originalH[i]);}else if(originalH[i]<originalH[i-1]&&d<-0.5){correctedInputRange.push(inputRange[i]);correctedInputRange.push(inputRange[i]+0.00001);correctedH.push(originalH[i]+1);correctedH.push(originalH[i]);}else{correctedInputRange.push(inputRange[i]);correctedH.push(originalH[i]);}}h=(interpolate(value,correctedInputRange,correctedH,Extrapolation.CLAMP)+1)%1;}else{h=interpolate(value,inputRange,colors.h,Extrapolation.CLAMP);}const s=interpolate(value,inputRange,colors.s,Extrapolation.CLAMP);const v=interpolate(value,inputRange,colors.v,Extrapolation.CLAMP);const a=interpolate(value,inputRange,colors.a,Extrapolation.CLAMP);return hsvToColor(h,s,v,a);}" };
-const fn2 = function t(arr, arg1) {
-  closure_0 = arg1;
-  return arr.map((item) => Math.pow(item / 255, num));
-};
-fn2.__closure = {};
-fn2.__workletHash = 16826369876333;
-fn2.__initData = { code: "function pnpm_interpolateColorTs2(x,gamma){return x.map(function(v){return Math.pow(v/255,gamma);});}" };
-const fn3 = function r(sum, arg1) {
-  return Math.round(255 * Math.pow(sum, 1 / arg1));
-};
-fn3.__closure = {};
-fn3.__workletHash = 5856560656141;
-fn3.__initData = { code: "function pnpm_interpolateColorTs3(x,gamma){return Math.round(Math.pow(x,1/gamma)*255);}" };
-const fn4 = function a(arg0, items, arg2, gamma) {
-  gamma = gamma.gamma;
-  let num = 2.2;
-  if (undefined !== gamma) {
-    num = gamma;
-  }
-  ({ r, g, b } = arg2);
-  let mapped = b;
-  let tmp2 = g;
-  let tmp3 = r;
-  if (1 !== num) {
-    if (typeof fn2 === "function") {
-      if (typeof fn2 === "function") {
-        if (typeof fn2 === "function") {
-          mapped = b.map((item) => Math.pow(item / 255, num));
-          tmp2 = tmp5;
-          tmp3 = tmp4;
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-  const interpolateResult = _mod1812.interpolate(arg0, items, tmp3, _mod1812.Extrapolation.CLAMP);
-  const interpolateResult1 = _mod1812.interpolate(arg0, items, tmp2, _mod1812.Extrapolation.CLAMP);
-  const interpolateResult2 = _mod1812.interpolate(arg0, items, mapped, _mod1812.Extrapolation.CLAMP);
-  const interpolateResult3 = _mod1812.interpolate(arg0, items, arg2.a, _mod1812.Extrapolation.CLAMP);
-  if (1 === num) {
-    const tmp6Result = _mod1686;
-    let rgbaColorResult = tmp6Result.rgbaColor(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3);
+  ({ pitch: pitch2, roll: roll2, yaw: yaw2 } = pitch);
+  if (typeof eulerToQuaternion === "function") {
+    const _Math3 = Math;
+    const cosResult = Math.cos(pitch2 / 2);
+    const _Math4 = Math;
+    const sinResult = Math.sin(pitch2 / 2);
+    const _Math5 = Math;
+    const cosResult1 = Math.cos(roll2 / 2);
+    const _Math6 = Math;
+    const sinResult1 = Math.sin(roll2 / 2);
+    const _Math7 = Math;
+    const cosResult2 = Math.cos(yaw2 / 2);
+    const _Math8 = Math;
+    const sinResult2 = Math.sin(yaw2 / 2);
+    const items = [sinResult * cosResult1 * cosResult2 - cosResult * sinResult1 * sinResult2, cosResult * sinResult1 * cosResult2 + sinResult * cosResult1 * sinResult2, cosResult * cosResult1 * sinResult2 + sinResult * sinResult1 * cosResult2, cosResult * cosResult1 * cosResult2 - sinResult * sinResult1 * sinResult2];
+    [pitch.qx, pitch.qy, pitch.qz, pitch.qw] = items;
+    return pitch;
   } else {
-    if (typeof fn3 === "function") {
-      const _Math = Math;
-      const _Math2 = Math;
-      const rounded = Math.round(255 * Math.pow(interpolateResult, 1 / num));
-      if (typeof fn3 === "function") {
-        const _Math3 = Math;
-        const _Math4 = Math;
-        const rounded1 = Math.round(255 * Math.pow(interpolateResult1, 1 / num));
-        if (typeof fn3 === "function") {
-          const _Math5 = Math;
-          const _Math6 = Math;
-          rgbaColorResult = tmp27(rounded, rounded1, Math.round(255 * Math.pow(interpolateResult2, 1 / num)), interpolateResult3);
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-    const tmp6Result2 = _mod1686;
-  }
-  return rgbaColorResult;
-};
-let obj = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, hsvToColor: _mod1686.hsvToColor };
-fn4.__closure = { toLinearSpace: fn2, interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, rgbaColor: _mod1686.rgbaColor, toGammaSpace: fn3 };
-fn4.__workletHash = 13883480600753;
-fn4.__initData = { code: "function pnpm_interpolateColorTs4(value,inputRange,colors,options){const{toLinearSpace,interpolate,Extrapolation,rgbaColor,toGammaSpace}=this.__closure;const{gamma=2.2}=options;let{r:outputR,g:outputG,b:outputB}=colors;if(gamma!==1){outputR=toLinearSpace(outputR,gamma);outputG=toLinearSpace(outputG,gamma);outputB=toLinearSpace(outputB,gamma);}const r=interpolate(value,inputRange,outputR,Extrapolation.CLAMP);const g=interpolate(value,inputRange,outputG,Extrapolation.CLAMP);const b=interpolate(value,inputRange,outputB,Extrapolation.CLAMP);const a=interpolate(value,inputRange,colors.a,Extrapolation.CLAMP);if(gamma===1){return rgbaColor(r,g,b,a);}return rgbaColor(toGammaSpace(r,gamma),toGammaSpace(g,gamma),toGammaSpace(b,gamma),a);}" };
-const fn5 = function n(arg0, items, l, arg3) {
-  const interpolateResult = _mod1812.interpolate(arg0, items, l.l, _mod1812.Extrapolation.CLAMP);
-  const interpolateResult1 = _mod1812.interpolate(arg0, items, l.a, _mod1812.Extrapolation.CLAMP);
-  const interpolateResult2 = _mod1812.interpolate(arg0, items, l.b, _mod1812.Extrapolation.CLAMP);
-  const convert = convertLrgbToOklabDefault.oklab.convert;
-  const interpolateResult3 = _mod1812.interpolate(arg0, items, l.alpha, _mod1812.Extrapolation.CLAMP);
-  ({ r, g, b, alpha } = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1812.interpolate(arg0, items, l.alpha, _mod1812.Extrapolation.CLAMP) }));
-  const toRgbResult = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1812.interpolate(arg0, items, l.alpha, _mod1812.Extrapolation.CLAMP) });
-  return _mod1686.rgbaColor(r, g, b, alpha);
-};
-let obj2 = { toLinearSpace: fn2, interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, rgbaColor: _mod1686.rgbaColor, toGammaSpace: fn3 };
-fn5.__closure = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, culori: convertLrgbToOklabDefault, rgbaColor: _mod1686.rgbaColor };
-fn5.__workletHash = 7788654685113;
-fn5.__initData = { code: "function pnpm_interpolateColorTs5(value,inputRange,colors,_options){const{interpolate,Extrapolation,culori,rgbaColor}=this.__closure;const l=interpolate(value,inputRange,colors.l,Extrapolation.CLAMP);const a=interpolate(value,inputRange,colors.a,Extrapolation.CLAMP);const b=interpolate(value,inputRange,colors.b,Extrapolation.CLAMP);const alpha=interpolate(value,inputRange,colors.alpha,Extrapolation.CLAMP);const{r:_r,g:_g,b:_b,alpha:_alpha}=culori.oklab.convert.toRgb({l:l,a:a,b:b,alpha:alpha});return rgbaColor(_r,_g,_b,_alpha);}" };
-const fn6 = function l(arg0, fn) {
-  const ch1 = [];
-  const ch2 = [];
-  const ch3 = [];
-  const alpha = [];
-  for (let num = 0; num < arg0.length; num = num + 1) {
-    let obj = _mod1686;
-    let processColorResult = obj.processColor(arg0[num]);
-    if (typeof processColorResult === "number") {
-      let obj2 = { r: null, g: null, b: null };
-      let tmpResult = _mod1686;
-      obj2.r = tmpResult.red(processColorResult);
-      let tmpResult4 = _mod1686;
-      obj2.g = tmpResult4.green(processColorResult);
-      let tmpResult5 = _mod1686;
-      obj2.b = tmpResult5.blue(processColorResult);
-      let tmp5 = fn(obj2);
-      let arr = ch1.push(tmp5.ch1);
-      let arr2 = ch2.push(tmp5.ch2);
-      let arr3 = ch3.push(tmp5.ch3);
-      let tmpResult6 = _mod1686;
-      let arr4 = alpha.push(tmpResult6.opacity(processColorResult));
-    }
-  }
-  return { ch1, ch2, ch3, alpha };
-};
-const color = { processColor: _mod1686.processColor, red: _mod1686.red, green: _mod1686.green, blue: _mod1686.blue, opacity: _mod1686.opacity };
-fn6.__closure = color;
-fn6.__workletHash = 8764168362190;
-fn6.__initData = { code: "function pnpm_interpolateColorTs6(colors,convFromRgb){const{processColor,red,green,blue,opacity}=this.__closure;const ch1=[];const ch2=[];const ch3=[];const alpha=[];for(let i=0;i<colors.length;i++){const color=colors[i];const processedColor=processColor(color);if(typeof processedColor==='number'){const convertedColor=convFromRgb({r:red(processedColor),g:green(processedColor),b:blue(processedColor)});ch1.push(convertedColor.ch1);ch2.push(convertedColor.ch2);ch3.push(convertedColor.ch3);alpha.push(opacity(processedColor));}}return{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha};}" };
-const fn7 = function c(arg0) {
-  const tmp = fn6(arg0, (ch1) => ({ ch1: ch1.r, ch2: ch1.g, ch3: ch1.b }));
-  return { r: tmp.ch1, g: tmp.ch2, b: tmp.ch3, a: tmp.alpha };
-};
-fn7.__closure = { _splitColorsIntoChannels: fn6 };
-fn7.__workletHash = 937749076324;
-fn7.__initData = { code: "function pnpm_interpolateColorTs7(colors){const{_splitColorsIntoChannels}=this.__closure;const{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha}=_splitColorsIntoChannels(colors,function(color){return{ch1:color.r,ch2:color.g,ch3:color.b};});return{r:ch1,g:ch2,b:ch3,a:alpha};}" };
-const fn8 = function p(arg0) {
-  const tmp = fn6(arg0, (arg0) => {
-    const RGBtoHSVResult = _mod1686.RGBtoHSV(arg0.r, arg0.g, arg0.b);
-    return { ch1: RGBtoHSVResult.h, ch2: RGBtoHSVResult.s, ch3: RGBtoHSVResult.v };
-  });
-  return { h: tmp.ch1, s: tmp.ch2, v: tmp.ch3, a: tmp.alpha };
-};
-let obj3 = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, culori: convertLrgbToOklabDefault, rgbaColor: _mod1686.rgbaColor };
-fn8.__closure = { _splitColorsIntoChannels: fn6, RGBtoHSV: _mod1686.RGBtoHSV };
-fn8.__workletHash = 11798906675452;
-fn8.__initData = { code: "function pnpm_interpolateColorTs8(colors){const{_splitColorsIntoChannels,RGBtoHSV}=this.__closure;const{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha}=_splitColorsIntoChannels(colors,function(color){const hsvColor=RGBtoHSV(color.r,color.g,color.b);return{ch1:hsvColor.h,ch2:hsvColor.s,ch3:hsvColor.v};});return{h:ch1,s:ch2,v:ch3,a:alpha};}" };
-const fn9 = function i(arg0) {
-  const tmp = fn6(arg0, (arg0) => {
-    const convert = convertLrgbToOklabDefault.oklab.convert;
-    const fromRgbResult = convert.fromRgb(arg0);
-    return { ch1: fromRgbResult.l, ch2: fromRgbResult.a, ch3: fromRgbResult.b };
-  });
-  return { l: tmp.ch1, a: tmp.ch2, b: tmp.ch3, alpha: tmp.alpha };
-};
-let obj4 = { _splitColorsIntoChannels: fn6, RGBtoHSV: _mod1686.RGBtoHSV };
-fn9.__closure = { _splitColorsIntoChannels: fn6, culori: convertLrgbToOklabDefault };
-fn9.__workletHash = 11214827752418;
-fn9.__initData = { code: "function pnpm_interpolateColorTs9(colors){const{_splitColorsIntoChannels,culori}=this.__closure;const{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha}=_splitColorsIntoChannels(colors,function(color){const labColor=culori.oklab.convert.fromRgb(color);return{ch1:labColor.l,ch2:labColor.a,ch3:labColor.b};});return{l:ch1,a:ch2,b:ch3,alpha:alpha};}" };
-function interpolateColor(arg0, arg1, arg2) {
-  let str = arg3;
-  if (arg3 === undefined) {
-    str = "RGB";
-  }
-  let obj = arg4;
-  if (arg4 === undefined) {
-    obj = {};
-  }
-  if ("HSV" === str) {
-    if (typeof fn8 === "function") {
-      const obj7 = { h: null, s: null, v: null, a: null };
-      ({ ch1: obj4.h, ch2: obj4.s, ch3: obj4.v, alpha: obj4.a } = fn6(arg2, (arg0) => {
-        const RGBtoHSVResult = _mod1686.RGBtoHSV(arg0.r, arg0.g, arg0.b);
-        return { ch1: RGBtoHSVResult.h, ch2: RGBtoHSVResult.s, ch3: RGBtoHSVResult.v };
-      }));
-      return tmp24(arg0, arg1, obj7, obj);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else if ("RGB" === str) {
-    if (typeof fn7 === "function") {
-      const obj8 = { r: null, g: null, b: null, a: null };
-      ({ ch1: obj3.r, ch2: obj3.g, ch3: obj3.b, alpha: obj3.a } = fn6(arg2, (ch1) => ({ ch1: ch1.r, ch2: ch1.g, ch3: ch1.b })));
-      return tmp16(arg0, arg1, obj8, obj);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else if ("LAB" === str) {
-    if (typeof fn9 === "function") {
-      const obj9 = { l: null, a: null, b: null, alpha: null };
-      ({ ch1: obj2.l, ch2: obj2.a, ch3: obj2.b, alpha: obj2.alpha } = fn6(arg2, (arg0) => {
-        const convert = convertLrgbToOklabDefault.oklab.convert;
-        const fromRgbResult = convert.fromRgb(arg0);
-        return { ch1: fromRgbResult.l, ch2: fromRgbResult.a, ch3: fromRgbResult.b };
-      }));
-      return tmp8(arg0, arg1, obj9, obj);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    const _HermesInternal = HermesInternal;
-    const reanimatedError = new _mod1654.ReanimatedError("Invalid color space provided: " + str + ". Supported values are: ['RGB', 'HSV', 'LAB'].");
-    throw reanimatedError;
+    throw new TypeError("Trying to call a non-function");
   }
 }
-interpolateColor.__closure = { interpolateColorsHSV, getInterpolateHSV: fn8, interpolateColorsRGB: fn4, getInterpolateRGB: fn7, interpolateColorsLAB: fn5, getInterpolateLAB: fn9 };
-interpolateColor.__workletHash = 10004340589678;
-interpolateColor.__initData = { code: "function interpolateColor_Pnpm_interpolateColorTs10(value,inputRange,outputRange,colorSpace='RGB',options={}){const{interpolateColorsHSV,getInterpolateHSV,interpolateColorsRGB,getInterpolateRGB,interpolateColorsLAB,getInterpolateLAB}=this.__closure;if(colorSpace==='HSV'){return interpolateColorsHSV(value,inputRange,getInterpolateHSV(outputRange),options);}else if(colorSpace==='RGB'){return interpolateColorsRGB(value,inputRange,getInterpolateRGB(outputRange),options);}else if(colorSpace==='LAB'){return interpolateColorsLAB(value,inputRange,getInterpolateLAB(outputRange),options);}throw new ReanimatedError(\"Invalid color space provided: \"+colorSpace+\". Supported values are: ['RGB', 'HSV', 'LAB'].\");}" };
-const obj6 = { RGB: 0, [0]: "RGB", HSV: 1, [1]: "HSV", LAB: 2, [2]: "LAB" };
+adjustRotationToInterfaceOrientation.__closure = { InterfaceOrientation: _mod1680.InterfaceOrientation, eulerToQuaternion };
+adjustRotationToInterfaceOrientation.__workletHash = 16635654688360;
+adjustRotationToInterfaceOrientation.__initData = { code: "function adjustRotationToInterfaceOrientation_Pnpm_useAnimatedSensorTs2(data){const{InterfaceOrientation,eulerToQuaternion}=this.__closure;const{interfaceOrientation:interfaceOrientation,pitch:pitch,roll:roll,yaw:yaw}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.pitch=roll;data.roll=-pitch;data.yaw=yaw-Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.pitch=-roll;data.roll=pitch;data.yaw=yaw+Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.pitch*=-1;data.roll*=-1;data.yaw*=-1;}const q=eulerToQuaternion(data.pitch,data.roll,data.yaw);data.qx=q[0];data.qy=q[1];data.qz=q[2];data.qw=q[3];return data;}" };
+function adjustVectorToInterfaceOrientation(arg0) {
+  ({ interfaceOrientation, x, y } = arg0);
+  if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_90) {
+    arg0.x = -y;
+    arg0.y = x;
+  } else if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_270) {
+    arg0.x = y;
+    arg0.y = -x;
+  } else if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_180) {
+    arg0.x = arg0.x * -1;
+    arg0.y = arg0.y * -1;
+  }
+  return arg0;
+}
+let obj = { InterfaceOrientation: _mod1680.InterfaceOrientation, eulerToQuaternion };
+adjustVectorToInterfaceOrientation.__closure = { InterfaceOrientation: _mod1680.InterfaceOrientation };
+adjustVectorToInterfaceOrientation.__workletHash = 5352466445526;
+adjustVectorToInterfaceOrientation.__initData = { code: "function adjustVectorToInterfaceOrientation_Pnpm_useAnimatedSensorTs3(data){const{InterfaceOrientation}=this.__closure;const{interfaceOrientation:interfaceOrientation,x:x,y:y}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.x=-y;data.y=x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.x=y;data.y=-x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.x*=-1;data.y*=-1;}return data;}" };
+let closure_8 = { code: "function pnpm_useAnimatedSensorTs4(data){const{adjustToInterfaceOrientation,sensorType,SensorType,adjustRotationToInterfaceOrientation,adjustVectorToInterfaceOrientation,sensorData,callMicrotasks}=this.__closure;if(adjustToInterfaceOrientation){if(sensorType===SensorType.ROTATION){data=adjustRotationToInterfaceOrientation(data);}else{data=adjustVectorToInterfaceOrientation(data);}}sensorData.value=data;callMicrotasks();}" };
 
-export const Extrapolate = _mod1812.Extrapolation;
-export { interpolateColor };
-export const ColorSpace = obj6;
-export const useInterpolateConfig = function useInterpolateConfig(inputRange, outputRange) {
-  let RGB = arg2;
-  if (arg2 === undefined) {
-    RGB = obj6.RGB;
+export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterfaceOrientation) {
+  _require = arg0;
+  const tmp2 = closure_4(adjustToInterfaceOrientation);
+  dependencyMap = tmp2;
+  let current = tmp2.current;
+  let prop;
+  if (current != null) {
+    prop = current.adjustToInterfaceOrientation;
   }
-  let obj = arg3;
-  if (arg3 === undefined) {
-    obj = {};
+  let prop1;
+  if (adjustToInterfaceOrientation != null) {
+    prop1 = adjustToInterfaceOrientation.adjustToInterfaceOrientation;
   }
-  const obj3 = { inputRange, outputRange, colorSpace: RGB, cache: null, options: null };
-  const obj2 = _mod1795;
-  obj3.cache = runOnRuntime.makeMutable(null);
-  obj3.options = obj;
-  return obj2.useSharedValue(obj3);
+  let tmp5 = prop !== prop1;
+  if (!tmp5) {
+    const current2 = tmp2.current;
+    let interval;
+    if (current2 != null) {
+      interval = current2.interval;
+    }
+    let interval1;
+    if (adjustToInterfaceOrientation != null) {
+      interval1 = adjustToInterfaceOrientation.interval;
+    }
+    tmp5 = interval !== interval1;
+  }
+  if (!tmp5) {
+    const current3 = tmp2.current;
+    let iosReferenceFrame;
+    if (current3 != null) {
+      iosReferenceFrame = current3.iosReferenceFrame;
+    }
+    let iosReferenceFrame1;
+    if (adjustToInterfaceOrientation != null) {
+      iosReferenceFrame1 = adjustToInterfaceOrientation.iosReferenceFrame;
+    }
+    tmp5 = iosReferenceFrame !== iosReferenceFrame1;
+  }
+  if (tmp5) {
+    let obj = {};
+    let merged = Object.assign(adjustToInterfaceOrientation);
+    tmp2.current = obj;
+  }
+  const items = [tmp2.current];
+  const tmp13 = tmpResult(() => {
+    const merged = Object.assign(ref.current);
+    return { interval: "auto", adjustToInterfaceOrientation: true, iosReferenceFrame: _mod1680.IOSReferenceFrame.Auto };
+  }, items);
+  let config = tmp13;
+  let obj2 = {
+    sensor: require("runOnRuntime").initializeSensor(arg0, tmp13),
+    unregister() {
+
+    },
+    isAvailable: false,
+    config: tmp13
+  };
+  tmpResult = closure_4(obj2);
+  const items1 = [arg0, tmp13];
+  config(() => {
+    let obj = {
+      sensor: closure_0(ref[2]).initializeSensor(sensor, config),
+      unregister() {
+
+      },
+      isAvailable: false,
+      config
+    };
+    ref2.current = obj;
+    sensor = ref2.current.sensor;
+    const adjustToInterfaceOrientation = ref2.current.config.adjustToInterfaceOrientation;
+    const obj2 = closure_0(ref[2]);
+    const fn = function n(pitch) {
+      if (adjustToInterfaceOrientation) {
+        if (closure_0 === _mod1680.SensorType.ROTATION) {
+          adjustRotationToInterfaceOrientation(pitch);
+        } else if (typeof adjustVectorToInterfaceOrientation === "function") {
+          ({ interfaceOrientation, x, y } = pitch);
+          if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_90) {
+            pitch.x = -y;
+            pitch.y = x;
+          } else if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_270) {
+            pitch.x = y;
+            pitch.y = -x;
+          } else if (interfaceOrientation === _mod1680.InterfaceOrientation.ROTATION_180) {
+            pitch.x = pitch.x * -1;
+            pitch.y = pitch.y * -1;
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
+      sensor.value = pitch;
+      runWorkletOnJS.callMicrotasks();
+    };
+    const obj3 = closure_0(ref[2]);
+    fn.__closure = { adjustToInterfaceOrientation, sensorType: sensor, SensorType: closure_0(ref[1]).SensorType, adjustRotationToInterfaceOrientation, adjustVectorToInterfaceOrientation, sensorData: sensor, callMicrotasks: closure_0(ref[3]).callMicrotasks };
+    fn.__workletHash = 6807952122364;
+    fn.__initData = __initData;
+    const registerSensorResult = obj3.registerSensor(sensor, config, fn);
+    config = registerSensorResult;
+    if (-1 !== registerSensorResult) {
+      ref2.current.unregister = () => runOnRuntime.unregisterSensor(registerSensorResult);
+      ref2.current.isAvailable = true;
+    } else {
+      ref2.current.unregister = () => {
+
+      };
+      ref2.current.isAvailable = false;
+    }
+    return () => {
+      const current = ref.current;
+      current.unregister();
+    };
+  }, items1);
+  return tmpResult.current;
 };

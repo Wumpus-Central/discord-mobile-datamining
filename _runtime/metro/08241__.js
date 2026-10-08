@@ -1,20 +1,5 @@
 // === Module 8241: ? ===
 
 // Module 8241
-import _mod26 from "module_26" /* 26 */;
-import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGImage", directEventTypes: { topLoad: { registrationName: "onLoad" }, topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, width: true, height: true, src: null, align: true, meetOrSlice: true };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-size.src = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoad: true, onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = size;
-
-export default module_65.get("RNSVGImage", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default ["7z", "ade", "adp", "arj", "apk", "appimage", "application", "appx", "appxbundle", "asx", "bas", "bat", "cab", "cer", "chm", "cmd", "cnt", "cpl", "crt", "csh", "deb", "der", "diagcab", "dll", "dmg", "docm", "dotm", "ex", "ex_", "exe", "flatpak", "flatpakref", "fxp", "gadget", "grp", "gz", "hlp", "hpj", "hta", "htc", "inf", "ins", "ipa", "iso", "isp", "its", "jar", "jnlp", "jse", "ksh", "lib", "lnk", "mad", "maf", "mag", "mam", "maq", "mar", "mas", "mat", "mau", "mav", "maw", "mcf", "mda", "mdb", "mde", "mdt", "mdw", "mdz", "msc", "msh", "msh1", "msh1xml", "msh2", "msh2xml", "mshxml", "msi", "msix", "msixbundle", "msp", "mst", "msu", "nsh", "ops", "osd", "pcd", "pif", "pkg", "pl", "plg", "potm", "ppam", "ppsm", "pptm", "prf", "prg", "printerexport", "ps1", "ps1xml", "ps2", "ps2xml", "psc1", "psc2", "psd1", "psdm1", "pst", "py", "pyc", "pyo", "pyw", "pyz", "pyzw", "rar", "reg", "rpm", "scf", "scr", "sct", "shb", "shs", "sldm", "snap", "sys", "theme", "tmp", "url", "vb", "vbe", "vbp", "vbs", "vhd", "vhdx", "vsmacros", "vsw", "vxd", "webpnp", "ws", "wsc", "wsf", "wsh", "xbap", "xlam", "xll", "xlsm", "xltm", "xnk", "z", "zip"];

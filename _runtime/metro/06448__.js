@@ -1,117 +1,205 @@
 // === Module 6448: ? ===
 
 // Module 6448
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
-export const encode = (arg0) => {
-  let sum3;
-  let buffer = arg0;
-  if (!Buffer.isBuffer(arg0)) {
-    const _Buffer = Buffer;
-    buffer = new Buffer(arg0);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const rounded = Math.floor(buffer.length / 5);
-  let sum = rounded;
-  if (buffer.length % 5 !== 0) {
-    sum = rounded + 1;
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(translationX, translationX2) {
+  if (undefined === translationX2) {
+    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = { changeX: translationX.translationX - translationX2.translationX, changeY: translationX.translationY - translationX2.translationY };
   }
-  const buffer1 = new Buffer(8 * sum);
-  let num2 = 0;
-  let num3 = 0;
-  let num4 = 0;
-  let num5 = 0;
-  if (0 < buffer.length) {
-    do {
-      let tmp6 = buffer[num4];
-      if (3 < num2) {
-        let sum1 = num4 + 1;
-        let num6 = 0;
-        let tmp16 = tmp6 & 255 >> num2;
-        if (sum1 < buffer.length) {
-          num6 = buffer[sum1];
-        }
-        let result = (num2 + 5) % 8;
-        let tmp13 = tmp16 << result | num6 >> 8 - result;
-        let tmp14 = result;
-        sum3 = sum1;
-      } else {
-        let sum2 = num2 + 5;
-        let tmp11 = tmp6 >> 8 - sum2 & 31;
-        let result1 = sum2 % 8;
-        tmp13 = tmp11;
-        tmp14 = result1;
-        sum3 = num4;
-        if (0 === result1) {
-          sum3 = num4 + 1;
-          tmp13 = tmp11;
-          tmp14 = result1;
-        }
-      }
-      let charCodeAt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt;
-      buffer1[num3] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(tmp13);
-      num3 = num3 + 1;
-      num2 = tmp14;
-      num4 = sum3;
-      num5 = num3;
-    } while (sum3 < buffer.length);
+  const merged = Object.assign(translationX);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 1947784830943;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}" };
+class PanGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, PanGesture);
+    tmp2 = c2;
+    obj = c2(PanGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "PanGestureHandler";
+    return tmp3Result;
   }
-  if (num5 < buffer1.length) {
-    do {
-      buffer1[num5] = 61;
-      num5 = num5 + 1;
-      length = buffer1.length;
-    } while (num5 < length);
+}
+_classCallCheck = PanGesture;
+_inherits(PanGesture, fn(6347).ContinousBaseGesture);
+const entry = {
+  key: "activeOffsetY",
+  value: function activeOffsetY(items) {
+    const self = this;
+    if (Array.isArray(items)) {
+      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
+    } else if (items < 0) {
+      self.config.activeOffsetYStart = items;
+    } else {
+      self.config.activeOffsetYEnd = items;
+    }
+    return self;
   }
-  return buffer1;
 };
-export const decode = (arg0) => {
-  let buffer = arg0;
-  if (!Buffer.isBuffer(arg0)) {
-    const _Buffer = Buffer;
-    buffer = new Buffer(arg0);
-  }
-  const buffer1 = new Buffer(Math.ceil(5 * buffer.length / 8));
-  let num = 0;
-  if (0 < buffer.length) {
-    let num7 = 0;
-    let num8 = 0;
-    let num9 = 0;
-    num = 0;
-    if (61 !== buffer[0]) {
-      const diff = buffer[num7] - 48;
-      while (diff < length.length) {
-        let tmp14 = length[diff];
-        if (num9 <= 3) {
-          let result = (num9 + 5) % 8;
-          if (0 === result) {
-            buffer1[num8] = tmp4 | tmp14;
-            let sum = num8 + 1;
-            let result1 = result;
-            let num10 = 0;
-          } else {
-            num10 = tmp4 | 255 & tmp14 << 8 - result;
-            sum = num8;
-            result1 = result;
-          }
-        } else {
-          result1 = (num9 + 5) % 8;
-          buffer1[num8] = tmp4 | 255 & tmp14 >>> result1;
-          sum = num8 + 1;
-          num10 = 255 & tmp14 << 8 - result1;
-        }
-        let sum1 = num7 + 1;
-        num = sum;
-        if (sum1 < buffer.length) {
-          num7 = sum1;
-          num8 = sum;
-          num9 = result1;
-          tmp4 = num10;
-          num = sum;
-        }
+let items = [
+  entry,
+  {
+    key: "activeOffsetX",
+    value: function activeOffsetX(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
+      } else if (items < 0) {
+        self.config.activeOffsetXStart = items;
+      } else {
+        self.config.activeOffsetXEnd = items;
       }
-      const _Error = Error;
-      const error = new Error("Invalid input - it is not base32 encoded string");
-      throw error;
+      return self;
+    }
+  },
+  {
+    key: "failOffsetY",
+    value: function failOffsetY(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = items;
+      } else if (items < 0) {
+        self.config.failOffsetYStart = items;
+      } else {
+        self.config.failOffsetYEnd = items;
+      }
+      return self;
+    }
+  },
+  {
+    key: "failOffsetX",
+    value: function failOffsetX(items1) {
+      const self = this;
+      if (Array.isArray(items1)) {
+        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
+      } else if (items1 < 0) {
+        self.config.failOffsetXStart = items1;
+      } else {
+        self.config.failOffsetXEnd = items1;
+      }
+      return self;
+    }
+  },
+  {
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    }
+  },
+  {
+    key: "maxPointers",
+    value: function maxPointers(maxPointers) {
+      this.config.maxPointers = maxPointers;
+      return this;
+    }
+  },
+  {
+    key: "minDistance",
+    value: function minDistance(minDist) {
+      this.config.minDist = minDist;
+      return this;
+    }
+  },
+  {
+    key: "minVelocity",
+    value: function minVelocity(minVelocity) {
+      this.config.minVelocity = minVelocity;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityX",
+    value: function minVelocityX(minVelocityX) {
+      this.config.minVelocityX = minVelocityX;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityY",
+    value: function minVelocityY(minVelocityY) {
+      this.config.minVelocityY = minVelocityY;
+      return this;
+    }
+  },
+  {
+    key: "averageTouches",
+    value: function averageTouches(avgTouches) {
+      this.config.avgTouches = avgTouches;
+      return this;
+    }
+  },
+  {
+    key: "enableTrackpadTwoFingerGesture",
+    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
+      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
+      return this;
+    }
+  },
+  {
+    key: "activateAfterLongPress",
+    value: function activateAfterLongPress(activateAfterLongPress) {
+      this.config.activateAfterLongPress = activateAfterLongPress;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
     }
   }
-  return buffer1.slice(0, num);
-};
+];
+
+export const PanGesture = _createClass(PanGesture, items);

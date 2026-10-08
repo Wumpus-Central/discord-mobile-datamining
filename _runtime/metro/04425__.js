@@ -1,9 +1,19 @@
 // === Module 4425: ? ===
 
 // Module 4425
-let closure_0 = { lastWeek: "'\u4E0A\u500B'eeee p", yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: "'\u4E0B\u500B'eeee p", other: "P" };
+import _mod4161 from "module_4161" /* 4161 */;
+import assign_mod from "assign" /* 4406 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
+  let tmp3 = obj;
+} else {
+  tmp3 = assign;
+}
+assign = tmp3;
+
+export default function getDefaultOptions() {
+  return assign.default({}, _mod4161.getDefaultOptions());
 };
 export default exports.default;

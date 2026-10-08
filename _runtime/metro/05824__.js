@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5e2fd14b31cdd1bad77d12d7b0ab7334", name: "AppsIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 628, height: 167, scales: [1], hash: "87dcaca9679ceb1e78d3b15aba4c2917", name: "img_account_sync_samsung_white", type: "svg" });

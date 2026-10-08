@@ -1,28 +1,37 @@
 // === Module 4325: ? ===
 
 // Module 4325
-import module_4317_mod from "module_4317" /* 4317 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import module_4160_mod from "module_4160" /* 4160 */;
+import module_4305_mod from "module_4305" /* 4305 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-let module_4317 = module_4317_mod;
-if (!module_4317) {
-  const obj = { default: module_4317 };
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj = { default: module_4160 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4317;
+  tmp3 = module_4160;
 }
-module_4317 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4160 = tmp3;
+let module_4305 = module_4305_mod;
+if (!module_4305) {
+  const obj2 = { default: module_4305 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4305;
 }
-requiredArgs = tmp5;
+module_4305 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isThisSecond(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4317.default(Date.now(), arg0);
+export default function addYears(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4305.default(interval, 12 * module_4160.default(arg1));
 };
 export default exports.default;

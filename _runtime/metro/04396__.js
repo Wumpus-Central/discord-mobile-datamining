@@ -1,107 +1,50 @@
 // === Module 4396: ? ===
 
 // Module 4396
-import subDays_mod from "subDays" /* 4335 */;
-import subMonths_mod from "subMonths" /* 4397 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
-import module_3968_mod from "module_3968" /* 3968 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import startOfUTCWeek_mod from "startOfUTCWeek" /* 4159 */;
+import startOfUTCWeekYear_mod from "startOfUTCWeekYear" /* 4397 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj = { default: subDays };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = subDays;
+  tmp3 = _typeof;
 }
-subDays = tmp3;
-let subMonths = subMonths_mod;
-if (!subMonths) {
-  const obj2 = { default: subMonths };
+_typeof = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = subMonths;
+  tmp5 = startOfUTCWeek;
 }
-subMonths = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+startOfUTCWeek = tmp5;
+let startOfUTCWeekYear = startOfUTCWeekYear_mod;
+if (!startOfUTCWeekYear) {
+  const obj3 = { default: startOfUTCWeekYear };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = startOfUTCWeekYear;
 }
-requiredArgs = tmp7;
-let module_3968 = module_3968_mod;
-if (!module_3968) {
-  const obj4 = { default: module_3968 };
+startOfUTCWeekYear = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
   let tmp9 = obj4;
 } else {
-  tmp9 = module_3968;
+  tmp9 = requiredArgs;
 }
-module_3968 = tmp9;
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function sub(arg0, years) {
-  requiredArgs.default(2, arguments);
-  if (years) {
-    if ("object" === _typeof(years)) {
-      let num = 0;
-      if (years.years) {
-        num = module_3968.default(years.years);
-      }
-      let num2 = 0;
-      if (years.months) {
-        num2 = module_3968.default(years.months);
-      }
-      let num3 = 0;
-      if (years.weeks) {
-        num3 = module_3968.default(years.weeks);
-      }
-      let num4 = 0;
-      if (years.days) {
-        num4 = module_3968.default(years.days);
-      }
-      let num5 = 0;
-      if (years.hours) {
-        num5 = module_3968.default(years.hours);
-      }
-      let num6 = 0;
-      if (years.minutes) {
-        num6 = module_3968.default(years.minutes);
-      }
-      let num7 = 0;
-      if (years.seconds) {
-        num7 = module_3968.default(years.seconds);
-      }
-      const _Date = Date;
-      const sum = num7 + 60 * (num6 + 60 * num5);
-      const date = new Date(subDays.default(subMonths.default(arg0, num2 + 12 * num), num4 + 7 * num3).getTime() - 1000 * sum);
-      return date;
-    }
-  }
-  return new Date(NaN);
+export default function getUTCWeek(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

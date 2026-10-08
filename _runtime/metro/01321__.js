@@ -2,4 +2,4 @@
 
 // Module 1321
 
-export default Math.pow;
+export default Function.prototype.apply;

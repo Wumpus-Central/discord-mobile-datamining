@@ -5,7 +5,7 @@ import baseIsEqual from "baseIsEqual" /* 643 */;
 import Stack from "Stack" /* 650 */;
 
 
-export default function baseIsMatch(arg0, arg1, arg2, fn) {
+export default function baseIsMatch(arg0, resizeMode, arg2, fn) {
   if (null == arg0) {
     return !length;
   } else {
@@ -58,7 +58,7 @@ export default function baseIsMatch(arg0, arg1, arg2, fn) {
         let tmp20 = new Stack();
         let tmp21 = tmp20;
         if (fn) {
-          tmp13 = fn(tmp11, tmp12, first, ObjectResult, arg1, tmp21);
+          tmp13 = fn(tmp11, tmp12, first, ObjectResult, resizeMode, tmp21);
         }
         let tmp28 = tmp13;
         if (undefined === tmp13) {

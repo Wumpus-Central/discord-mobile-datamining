@@ -1,7 +1,9 @@
 // === Module 4813: ? ===
 
 // Module 4813
-import registerAsset from "module_1132" /* 1132 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "f6824e7bd3f8a83813ab333cc29423f8", name: "yellow-alert", type: "png" });
+for (const key10013 in require("module_4814")) {
+  arg5[key10013] = require("module_4814")[key10013];
+  continue;
+}

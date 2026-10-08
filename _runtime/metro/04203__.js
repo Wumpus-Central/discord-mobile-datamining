@@ -1,56 +1,26 @@
 // === Module 4203: ? ===
 
 // Module 4203
-import _typeof_mod from "module_3964" /* 3964 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
-import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 4201 */;
+let closure_0 = { lessThanXSeconds: { one: "moins d\u2019une seconde", other: "moins de {{count}} secondes" }, xSeconds: { one: "1 seconde", other: "{{count}} secondes" }, halfAMinute: "30 secondes", lessThanXMinutes: { one: "moins d\u2019une minute", other: "moins de {{count}} minutes" }, xMinutes: { one: "1 minute", other: "{{count}} minutes" }, aboutXHours: { one: "environ 1 heure", other: "environ {{count}} heures" }, xHours: { one: "1 heure", other: "{{count}} heures" }, xDays: { one: "1 jour", other: "{{count}} jours" }, aboutXWeeks: { one: "environ 1 semaine", other: "environ {{count}} semaines" }, xWeeks: { one: "1 semaine", other: "{{count}} semaines" }, aboutXMonths: { one: "environ 1 mois", other: "environ {{count}} mois" }, xMonths: { one: "1 mois", other: "{{count}} mois" }, aboutXYears: { one: "environ 1 an", other: "environ {{count}} ans" }, xYears: { one: "1 an", other: "{{count}} ans" }, overXYears: { one: "plus d\u2019un an", other: "plus de {{count}} ans" }, almostXYears: { one: "presqu\u2019un an", other: "presque {{count}} ans" } };
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  const obj3 = { default: startOfUTCISOWeek };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfUTCISOWeek;
-}
-startOfUTCISOWeek = tmp7;
-
-export default function getUTCISOWeekYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const uTCFullYear = defaultResult1.getUTCFullYear();
-  const date = new Date(0);
-  date.setUTCFullYear(uTCFullYear + 1, 0, 4);
-  date.setUTCHours(0, 0, 0, 0);
-  const date1 = new Date(0);
-  date1.setUTCFullYear(uTCFullYear, 0, 4);
-  date1.setUTCHours(0, 0, 0, 0);
-  const defaultResult2 = startOfUTCISOWeek.default(date);
-  const time = defaultResult1.getTime();
-  if (time >= defaultResult2.getTime()) {
-    let sum = uTCFullYear + 1;
-  } else {
-    const time1 = defaultResult1.getTime();
-    sum = uTCFullYear;
-    if (time1 < defaultResult3.getTime()) {
-      sum = uTCFullYear - 1;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `il y a ${tmp}`;
+        }
+        text = `dans ${tmp}`;
+      }
     }
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
-  return sum;
 };
 export default exports.default;

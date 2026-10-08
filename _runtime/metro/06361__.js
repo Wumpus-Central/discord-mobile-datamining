@@ -1,32 +1,7 @@
 // === Module 6361: ? ===
 
 // Module 6361
-import _mod6362 from "module_6362" /* 6362 */;
+import _mod17 from "module_17" /* 17 */;
 
 
-export default function toPrimitive(arg0, arg1) {
-  if ("object" == obj.default(arg0)) {
-    if (arg0) {
-      let str = arg1;
-      const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
-        const call = tmp4.call;
-        if (!str) {
-          str = "default";
-        }
-        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
-        if ("object" != tmpResult.default(tmp5)) {
-          return tmp5;
-        } else {
-          const _TypeError = TypeError;
-          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
-          throw typeError;
-        }
-        tmpResult = _mod6362;
-      } else {
-        return "string" === str ? String : Number(arg0);
-      }
-    }
-  }
-  return arg0;
-};
+export default _mod17.findNodeHandle;

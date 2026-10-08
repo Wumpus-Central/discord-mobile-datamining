@@ -1,15 +1,7 @@
 // === Module 4993: ? ===
 
 // Module 4993
-import _process from "_process" /* 539 */;
-import baseUnary from "baseUnary" /* 540 */;
-import baseIsSet from "baseIsSet" /* 4994 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const tmp = _process && _process.isSet;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsSet;
-}
 
-export default _module;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleCheckIcon-secondary", type: "png" });

@@ -1,15 +1,11 @@
 // === Module 5352: ? ===
 
 // Module 5352
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
-export default function isPrimitive(fn) {
-  let tmp = null === fn;
-  if (!tmp) {
-    let tmp2 = typeof fn !== "function";
-    if (typeof fn !== "function") {
-      tmp2 = typeof fn !== "object";
-    }
-    tmp = tmp2;
-  }
-  return tmp;
-};
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
+
+export default module_65.get("RNSScreenFooter", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

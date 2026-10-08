@@ -1,30 +1,26 @@
 // === Module 4648: ? ===
 
 // Module 4648
-import c from "c" /* 576 */;
-import _mod4649 from "module_4649" /* 4649 */;
-import _slicedToArray from "module_32" /* 32 */;
-
-require = arg1;
-function getNumberProperty(numberProperty, arg1) {
-  return numberProperty.numberProperty(arg1);
-}
-
-export const useRiveNumber = function useRiveNumber(arg0, arg1) {
-  const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4649.useRiveProperty(arg1, arg0, getNumberProperty);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
-      }
-      return tmp6;
-    }
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "ru" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
-};
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } } }, locale: "ru" };
+prop.push(obj);

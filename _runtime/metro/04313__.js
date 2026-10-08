@@ -1,30 +1,56 @@
 // === Module 4313: ? ===
 
 // Module 4313
-import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4125 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import startOfISOWeek_mod from "startOfISOWeek" /* 4314 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = _typeof;
 }
-startOfISOWeekYear = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+_typeof = tmp3;
+let startOfISOWeek = startOfISOWeek_mod;
+if (!startOfISOWeek) {
+  const obj2 = { default: startOfISOWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfISOWeek;
 }
-requiredArgs = tmp5;
+startOfISOWeek = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isSameISOWeekYear(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
+export default function getISOWeekYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  const date = new Date(0);
+  date.setFullYear(fullYear + 1, 0, 4);
+  date.setHours(0, 0, 0, 0);
+  const date1 = new Date(0);
+  date1.setFullYear(fullYear, 0, 4);
+  date1.setHours(0, 0, 0, 0);
+  const defaultResult2 = startOfISOWeek.default(date);
   const time = defaultResult1.getTime();
-  return time === startOfISOWeekYear.default(arg1).getTime();
+  if (time >= defaultResult2.getTime()) {
+    let sum = fullYear + 1;
+  } else {
+    const time1 = defaultResult1.getTime();
+    sum = fullYear;
+    if (time1 < defaultResult3.getTime()) {
+      sum = fullYear - 1;
+    }
+  }
+  return sum;
 };
 export default exports.default;

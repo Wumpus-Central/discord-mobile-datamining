@@ -1,98 +1,39 @@
 // === Module 4578: ? ===
 
 // Module 4578
-function createStoreImpl(fn) {
-  const set = new Set();
-  function setState(fn, arg1) {
-    let tmp = fn;
-    if (typeof fn === "function") {
-      tmp = fn(merged);
-    }
-    if (!Object.is(tmp, merged)) {
-      let tmp2 = arg1;
-      if (null == arg1) {
-        let tmp5 = typeof tmp !== "object";
-        if (typeof tmp === "object") {
-          tmp5 = null === tmp;
-        }
-        tmp2 = tmp5;
-      }
-      merged = tmp;
-      if (!tmp2) {
-        const _Object = Object;
-        merged = Object.assign({}, merged, tmp);
-      }
-      const item = set.forEach((fn) => fn(closure_0, merged));
-    }
-  }
-  function getState() {
-    return closure_0;
-  }
-  const store = {
-    setState,
-    getState,
-    getInitialState() {
-      return closure_2;
-    },
-    subscribe(arg0) {
-      closure_0 = arg0;
-      set.add(arg0);
-      return () => set.delete(closure_0);
-    }
-  };
-  const tmp2 = fn(setState, getState, store);
-  closure_0 = tmp2;
-  closure_2 = tmp2;
-  return store;
-}
+import module_4160_mod from "module_4160" /* 4160 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-export const createStore = (fn) => {
-  if (fn) {
-    const _Set = Set;
-    const set = new Set();
-    function setState(fn, arg1) {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(merged);
-      }
-      if (!Object.is(tmp, merged)) {
-        let tmp2 = arg1;
-        if (null == arg1) {
-          let tmp5 = typeof tmp !== "object";
-          if (typeof tmp === "object") {
-            tmp5 = null === tmp;
-          }
-          tmp2 = tmp5;
-        }
-        merged = tmp;
-        if (!tmp2) {
-          const _Object = Object;
-          merged = Object.assign({}, merged, tmp);
-        }
-        const item = set.forEach((fn) => fn(closure_0, merged));
-      }
-    }
-    function getState() {
-      return closure_0;
-    }
-    const store = {
-      setState,
-      getState,
-      getInitialState() {
-          return closure_2;
-        },
-      subscribe(arg0) {
-          closure_0 = arg0;
-          set.add(arg0);
-          return () => set.delete(closure_0);
-        }
-    };
-    const tmp7 = fn(setState, getState, store);
-    closure_0 = tmp7;
-    closure_2 = tmp7;
-    let tmp = store;
-  } else {
-    tmp = createStoreImpl;
-  }
-  return tmp;
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj = { default: module_4160 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4160;
+}
+module_4160 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function setMinutes(module_4160, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(module_4160);
+  defaultResult1.setMinutes(module_4160.default(arg1));
+  return defaultResult1;
 };
+export default exports.default;

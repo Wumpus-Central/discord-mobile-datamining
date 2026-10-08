@@ -1,37 +1,52 @@
 // === Module 1302: ? ===
 
 // Module 1302
-import _mod1294 from "module_1294" /* 1294 */;
-import callBindBasic from "callBindBasic" /* 1303 */;
+import _mod1303 from "module_1303" /* 1303 */;
+import _mod1305 from "module_1305" /* 1305 */;
+import _mod1339 from "module_1339" /* 1339 */;
+import _mod1341 from "module_1341" /* 1341 */;
+import _mod1342 from "module_1342" /* 1342 */;
 
-try {
-  const _Array = Array;
-  let _module = [].__proto__ === Array.prototype;
-  if (_module) {
-    _module = _mod1294;
-  }
-  if (_module) {
-    const _Object = Object;
-    _module = _mod1294(Object.prototype, "__proto__");
-  }
-  const _Object2 = Object;
-  if (_module) {
-    if (typeof _module.get === "function") {
-      const items = [_module.get];
-      let getDunder = callBindBasic(items);
-    }
-    module.exports = getDunder;
-  }
-  getDunder = typeof getPrototypeOf === "function";
-  if (typeof getPrototypeOf === "function") {
-    getDunder = function getDunder(arg0) {
-      let tmp2 = arg0;
-      if (null != arg0) {
-        tmp2 = Object(arg0);
+let closure_2 = _mod1303 || _mod1341 || _mod1342;
+
+export default function getSideChannel() {
+  let obj = {
+    assert(arg0) {
+      if (!obj.has(arg0)) {
+        const tmp32 = new _mod1305("Side channel does not contain " + _mod1339(arg0));
+        throw tmp32;
       }
-      return getPrototypeOf(tmp2);
-    };
-  }
-} catch (tmp2) {
-  throw tmp2;
-}
+    },
+    delete(arg0) {
+      let deleteResult = set;
+      if (deleteResult) {
+        deleteResult = set.delete(arg0);
+      }
+      return deleteResult;
+    },
+    get(arg0) {
+      value = set;
+      if (set) {
+        value = set.get(arg0);
+      }
+      return value;
+    },
+    has(arg0) {
+      let hasItem = set;
+      if (hasItem) {
+        hasItem = set.has(arg0);
+      }
+      return hasItem;
+    },
+    set(arg0, arg1) {
+      obj = closure_0;
+      if (!closure_0) {
+        const tmp2 = closure_2();
+        closure_0 = tmp2;
+        obj = tmp2;
+      }
+      const result = obj.set(arg0, arg1);
+    }
+  };
+  return obj;
+};

@@ -1,14 +1,28 @@
 // === Module 4418: ? ===
 
 // Module 4418
-import module_2121 from "module_2121" /* 2121 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-if (!module_2121) {
-  const obj2 = { default: module_2121 };
-  let obj = obj2;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  obj = module_2121;
+  tmp3 = _typeof;
 }
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function getDate(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getDate();
+};
 export default exports.default;

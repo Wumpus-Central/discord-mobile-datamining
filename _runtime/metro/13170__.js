@@ -1,173 +1,185 @@
 // === Module 13170: ? ===
 
 // Module 13170
-import _mod12575 from "module_12575" /* 12575 */;
+import _mod13115 from "module_13115" /* 13115 */;
 
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          for (const key10009 in arg0) {
+            let tmp9 = "default" !== key10009;
+            if (!tmp9) {
+              if (!tmp9) {
+                continue;
+              } else {
+                let tmp6 = self2(obj, arg0, key10009);
+                continue;
+              }
+              continue;
+            } else {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10009);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10009);
+              }
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    exports.default = function default_1() {
+      if (typeof error === "function") {
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "\u00E0mi", verb: "n\u00ED" }, file: { unit: "bytes", verb: "n\u00ED" }, array: { unit: "nkan", verb: "n\u00ED" }, set: { unit: "nkan", verb: "n\u00ED" } };
+        closure_1 = { regex: "\u1EB9\u0300r\u1ECD \u00ECb\u00E1w\u1ECDl\u00E9", email: "\u00E0d\u00EDr\u1EB9\u0301s\u00EC \u00ECm\u1EB9\u0301l\u00EC", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "\u00E0k\u00F3k\u00F2 ISO", date: "\u1ECDj\u1ECD\u0301 ISO", time: "\u00E0k\u00F3k\u00F2 ISO", duration: "\u00E0k\u00F3k\u00F2 t\u00F3 p\u00E9 ISO", ipv4: "\u00E0d\u00EDr\u1EB9\u0301s\u00EC IPv4", ipv6: "\u00E0d\u00EDr\u1EB9\u0301s\u00EC IPv6", cidrv4: "\u00E0gb\u00E8gb\u00E8 IPv4", cidrv6: "\u00E0gb\u00E8gb\u00E8 IPv6", base64: "\u1ECD\u0300r\u1ECD\u0300 t\u00ED a k\u1ECD\u0301 n\u00ED base64", base64url: "\u1ECD\u0300r\u1ECD\u0300 base64url", json_string: "\u1ECD\u0300r\u1ECD\u0300 JSON", e164: "n\u1ECD\u0301mb\u00E0 E.164", jwt: "JWT", template_literal: "\u1EB9\u0300r\u1ECD \u00ECb\u00E1w\u1ECDl\u00E9" };
+        closure_2 = { nan: "NaN", number: "n\u1ECD\u0301mb\u00E0", array: "akop\u1ECD" };
+        obj.localeError = (code) => {
+          switch (code.code) {
+            case "invalid_type":
+              let expected = closure_2[code.expected];
+              if (expected == null) {
+                expected = code.expected;
+              }
+              const parsedTypeResult = closure_2.parsedType(code.input);
+              let tmp38 = closure_2[parsedTypeResult];
+              if (tmp38 == null) {
+                tmp38 = parsedTypeResult;
+              }
+              if (obj.test(code.expected)) {
+                const _HermesInternal17 = HermesInternal;
+                let combined = "\u00CCb\u00E1w\u1ECDl\u00E9 a\u1E63\u00EC\u1E63e: a n\u00ED l\u00E1ti fi instanceof " + code.expected + ", \u00E0m\u1ECD\u0300 a r\u00ED " + tmp38;
+              } else {
+                const _HermesInternal16 = HermesInternal;
+                combined = "\u00CCb\u00E1w\u1ECDl\u00E9 a\u1E63\u00EC\u1E63e: a n\u00ED l\u00E1ti fi " + expected + ", \u00E0m\u1ECD\u0300 a r\u00ED " + tmp38;
+              }
+              return combined;
+            case "invalid_value":
+              if (1 === code.values.length) {
+                const _HermesInternal15 = HermesInternal;
+                let combined1 = "\u00CCb\u00E1w\u1ECDl\u00E9 a\u1E63\u00EC\u1E63e: a n\u00ED l\u00E1ti fi " + closure_2.stringifyPrimitive(code.values[0]);
+              } else {
+                const _HermesInternal14 = HermesInternal;
+                combined1 = "\u00C0\u1E63\u00E0y\u00E0n a\u1E63\u00EC\u1E63e: yan \u1ECD\u0300kan l\u00E1ra " + closure_2.joinValues(code.values, "|");
+              }
+              return combined1;
+            case "too_big":
+              let str23 = "<";
+              if (code.inclusive) {
+                str23 = "<=";
+              }
+              let tmp22 = obj2[code.origin];
+              if (tmp22 == null) {
+                tmp22 = null;
+              }
+              if (tmp22) {
+                let str25 = code.origin;
+                if (str25 == null) {
+                  str25 = "iye";
+                }
+                const _HermesInternal13 = HermesInternal;
+                let combined2 = "T\u00F3 p\u1ECD\u0300 j\u00F9: a n\u00ED l\u00E1ti j\u1EB9\u0301 p\u00E9 " + str25 + " " + tmp22.verb + " " + str23 + code.maximum + " " + tmp22.unit;
+              } else {
+                const _HermesInternal12 = HermesInternal;
+                combined2 = "T\u00F3 p\u1ECD\u0300 j\u00F9: a n\u00ED l\u00E1ti j\u1EB9\u0301 " + str23 + code.maximum;
+              }
+              return combined2;
+            case "too_small":
+              let str16 = ">";
+              if (code.inclusive) {
+                str16 = ">=";
+              }
+              let tmp15 = obj2[code.origin];
+              if (tmp15 == null) {
+                tmp15 = null;
+              }
+              if (tmp15) {
+                const _HermesInternal11 = HermesInternal;
+                let combined3 = "K\u00E9r\u00E9 ju: a n\u00ED l\u00E1ti j\u1EB9\u0301 p\u00E9 " + code.origin + " " + tmp15.verb + " " + str16 + code.minimum + " " + tmp15.unit;
+              } else {
+                const _HermesInternal10 = HermesInternal;
+                combined3 = "K\u00E9r\u00E9 ju: a n\u00ED l\u00E1ti j\u1EB9\u0301 " + str16 + code.minimum;
+              }
+              return combined3;
+            case "invalid_format":
+              if ("starts_with" === code.format) {
+                const _HermesInternal9 = HermesInternal;
+                let combined4 = "\u1ECC\u0300r\u1ECD\u0300 a\u1E63\u00EC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 b\u1EB9\u0300r\u1EB9\u0300 p\u1EB9\u0300l\u00FA \"" + code.prefix + "\"";
+              } else if ("ends_with" === code.format) {
+                const _HermesInternal8 = HermesInternal;
+                combined4 = "\u1ECC\u0300r\u1ECD\u0300 a\u1E63\u00EC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 par\u00ED p\u1EB9\u0300l\u00FA \"" + code.suffix + "\"";
+              } else if ("includes" === code.format) {
+                const _HermesInternal7 = HermesInternal;
+                combined4 = "\u1ECC\u0300r\u1ECD\u0300 a\u1E63\u00EC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 n\u00ED \"" + code.includes + "\"";
+              } else if ("regex" === code.format) {
+                const _HermesInternal6 = HermesInternal;
+                combined4 = "\u1ECC\u0300r\u1ECD\u0300 a\u1E63\u00EC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 b\u00E1 \u00E0p\u1EB9\u1EB9r\u1EB9 mu " + code.pattern;
+              } else {
+                let format = closure_1[code.format];
+                if (format == null) {
+                  format = code.format;
+                }
+                const _HermesInternal5 = HermesInternal;
+                combined4 = "A\u1E63\u00EC\u1E63e: " + format;
+              }
+              return combined4;
+            case "not_multiple_of":
+              const _HermesInternal4 = HermesInternal;
+              return "N\u1ECD\u0301mb\u00E0 a\u1E63\u00EC\u1E63e: gb\u1ECD\u0301d\u1ECD\u0300 j\u1EB9\u0301 \u00E8y\u00E0 p\u00EDp\u00EDn ti " + code.divisor;
+            case "unrecognized_keys":
+              const _HermesInternal3 = HermesInternal;
+              return "B\u1ECDt\u00ECn\u00EC \u00E0\u00ECm\u1ECD\u0300: " + closure_2.joinValues(code.keys, ", ");
+            case "invalid_key":
+              const _HermesInternal2 = HermesInternal;
+              return "B\u1ECDt\u00ECn\u00EC a\u1E63\u00EC\u1E63e n\u00EDn\u00FA " + code.origin;
+            case "invalid_union":
+              return "\u00CCb\u00E1w\u1ECDl\u00E9 a\u1E63\u00EC\u1E63e";
+            case "invalid_element":
+              const _HermesInternal = HermesInternal;
+              return "Iye a\u1E63\u00EC\u1E63e n\u00EDn\u00FA " + code.origin;
+            default:
+              return "\u00CCb\u00E1w\u1ECDl\u00E9 a\u1E63\u00EC\u1E63e";
+          }
+        };
+        return obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    };
+    let closure_2 = fn(_mod13115);
+    function error() {
 
-export const BAGGAGE_HEADER_NAME = _mod12575.BAGGAGE_HEADER_NAME;
-export const CONSOLE_LEVELS = _mod12575.CONSOLE_LEVELS;
-export const DEFAULT_RETRY_AFTER = _mod12575.DEFAULT_RETRY_AFTER;
-export const DEFAULT_USER_INCLUDES = _mod12575.DEFAULT_USER_INCLUDES;
-export const GLOBAL_OBJ = _mod12575.GLOBAL_OBJ;
-export const LRUMap = _mod12575.LRUMap;
-export const MAX_BAGGAGE_STRING_LENGTH = _mod12575.MAX_BAGGAGE_STRING_LENGTH;
-export const SDK_VERSION = _mod12575.SDK_VERSION;
-export const SENTRY_BAGGAGE_KEY_PREFIX = _mod12575.SENTRY_BAGGAGE_KEY_PREFIX;
-export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = _mod12575.SENTRY_BAGGAGE_KEY_PREFIX_REGEX;
-export const SentryError = _mod12575.SentryError;
-export const SyncPromise = _mod12575.SyncPromise;
-export const TRACEPARENT_REGEXP = _mod12575.TRACEPARENT_REGEXP;
-export const UNKNOWN_FUNCTION = _mod12575.UNKNOWN_FUNCTION;
-export const _asyncNullishCoalesce = _mod12575._asyncNullishCoalesce;
-export const _asyncOptionalChain = _mod12575._asyncOptionalChain;
-export const _asyncOptionalChainDelete = _mod12575._asyncOptionalChainDelete;
-export const _browserPerformanceTimeOriginMode = _mod12575._browserPerformanceTimeOriginMode;
-export const _nullishCoalesce = _mod12575._nullishCoalesce;
-export const _optionalChain = _mod12575._optionalChain;
-export const _optionalChainDelete = _mod12575._optionalChainDelete;
-export const addConsoleInstrumentationHandler = _mod12575.addConsoleInstrumentationHandler;
-export const addContextToFrame = _mod12575.addContextToFrame;
-export const addExceptionMechanism = _mod12575.addExceptionMechanism;
-export const addExceptionTypeValue = _mod12575.addExceptionTypeValue;
-export const addFetchEndInstrumentationHandler = _mod12575.addFetchEndInstrumentationHandler;
-export const addFetchInstrumentationHandler = _mod12575.addFetchInstrumentationHandler;
-export const addGlobalErrorInstrumentationHandler = _mod12575.addGlobalErrorInstrumentationHandler;
-export const addGlobalUnhandledRejectionInstrumentationHandler = _mod12575.addGlobalUnhandledRejectionInstrumentationHandler;
-export const addHandler = _mod12575.addHandler;
-export const addItemToEnvelope = _mod12575.addItemToEnvelope;
-export const addNonEnumerableProperty = _mod12575.addNonEnumerableProperty;
-export const addNormalizedRequestDataToEvent = _mod12575.addNormalizedRequestDataToEvent;
-export const addRequestDataToEvent = _mod12575.addRequestDataToEvent;
-export const applyAggregateErrorsToEvent = _mod12575.applyAggregateErrorsToEvent;
-export const arrayify = _mod12575.arrayify;
-export const baggageHeaderToDynamicSamplingContext = _mod12575.baggageHeaderToDynamicSamplingContext;
-export const basename = _mod12575.basename;
-export const browserPerformanceTimeOrigin = _mod12575.browserPerformanceTimeOrigin;
-export const callFrameToStackFrame = _mod12575.callFrameToStackFrame;
-export const checkOrSetAlreadyCaught = _mod12575.checkOrSetAlreadyCaught;
-export const consoleSandbox = _mod12575.consoleSandbox;
-export const convertToPlainObject = _mod12575.convertToPlainObject;
-export const createAttachmentEnvelopeItem = _mod12575.createAttachmentEnvelopeItem;
-export const createClientReportEnvelope = _mod12575.createClientReportEnvelope;
-export const createEnvelope = _mod12575.createEnvelope;
-export const createEventEnvelopeHeaders = _mod12575.createEventEnvelopeHeaders;
-export const createSpanEnvelopeItem = _mod12575.createSpanEnvelopeItem;
-export const createStackParser = _mod12575.createStackParser;
-export const dateTimestampInSeconds = _mod12575.dateTimestampInSeconds;
-export const dirname = _mod12575.dirname;
-export const disabledUntil = _mod12575.disabledUntil;
-export const dropUndefinedKeys = _mod12575.dropUndefinedKeys;
-export const dsnFromString = _mod12575.dsnFromString;
-export const dsnToString = _mod12575.dsnToString;
-export const dynamicRequire = _mod12575.dynamicRequire;
-export const dynamicSamplingContextToSentryBaggageHeader = _mod12575.dynamicSamplingContextToSentryBaggageHeader;
-export const envelopeContainsItemType = _mod12575.envelopeContainsItemType;
-export const envelopeItemTypeToDataCategory = _mod12575.envelopeItemTypeToDataCategory;
-export const escapeStringForRegex = _mod12575.escapeStringForRegex;
-export const eventFromMessage = _mod12575.eventFromMessage;
-export const eventFromUnknownInput = _mod12575.eventFromUnknownInput;
-export const exceptionFromError = _mod12575.exceptionFromError;
-export const extractExceptionKeysForMessage = _mod12575.extractExceptionKeysForMessage;
-export const extractPathForTransaction = _mod12575.extractPathForTransaction;
-export const extractRequestData = _mod12575.extractRequestData;
-export const extractTraceparentData = _mod12575.extractTraceparentData;
-export const filenameIsInApp = _mod12575.filenameIsInApp;
-export const fill = _mod12575.fill;
-export const flatten = _mod12575.flatten;
-export const forEachEnvelopeItem = _mod12575.forEachEnvelopeItem;
-export const generatePropagationContext = _mod12575.generatePropagationContext;
-export const generateSentryTraceHeader = _mod12575.generateSentryTraceHeader;
-export const getBreadcrumbLogLevelFromHttpStatusCode = _mod12575.getBreadcrumbLogLevelFromHttpStatusCode;
-export const getComponentName = _mod12575.getComponentName;
-export const getDebugImagesForResources = _mod12575.getDebugImagesForResources;
-export const getDomElement = _mod12575.getDomElement;
-export const getEventDescription = _mod12575.getEventDescription;
-export const getFilenameToDebugIdMap = _mod12575.getFilenameToDebugIdMap;
-export const getFramesFromEvent = _mod12575.getFramesFromEvent;
-export const getFunctionName = _mod12575.getFunctionName;
-export const getGlobalSingleton = _mod12575.getGlobalSingleton;
-export const getLocationHref = _mod12575.getLocationHref;
-export const getNumberOfUrlSegments = _mod12575.getNumberOfUrlSegments;
-export const getOriginalFunction = _mod12575.getOriginalFunction;
-export const getSDKSource = _mod12575.getSDKSource;
-export const getSanitizedUrlString = _mod12575.getSanitizedUrlString;
-export const getSdkMetadataForEnvelopeHeader = _mod12575.getSdkMetadataForEnvelopeHeader;
-export const htmlTreeAsString = _mod12575.htmlTreeAsString;
-export const isAbsolute = _mod12575.isAbsolute;
-export const isBrowser = _mod12575.isBrowser;
-export const isBrowserBundle = _mod12575.isBrowserBundle;
-export const isDOMError = _mod12575.isDOMError;
-export const isDOMException = _mod12575.isDOMException;
-export const isElement = _mod12575.isElement;
-export const isError = _mod12575.isError;
-export const isErrorEvent = _mod12575.isErrorEvent;
-export const isEvent = _mod12575.isEvent;
-export const isInstanceOf = _mod12575.isInstanceOf;
-export const isMatchingPattern = _mod12575.isMatchingPattern;
-export const isNativeFunction = _mod12575.isNativeFunction;
-export const isNodeEnv = _mod12575.isNodeEnv;
-export const isParameterizedString = _mod12575.isParameterizedString;
-export const isPlainObject = _mod12575.isPlainObject;
-export const isPrimitive = _mod12575.isPrimitive;
-export const isRateLimited = _mod12575.isRateLimited;
-export const isRegExp = _mod12575.isRegExp;
-export const isString = _mod12575.isString;
-export const isSyntheticEvent = _mod12575.isSyntheticEvent;
-export const isThenable = _mod12575.isThenable;
-export const isVueViewModel = _mod12575.isVueViewModel;
-export const join = _mod12575.join;
-export const loadModule = _mod12575.loadModule;
-export const logger = _mod12575.logger;
-export const makeDsn = _mod12575.makeDsn;
-export const makeFifoCache = _mod12575.makeFifoCache;
-export const makePromiseBuffer = _mod12575.makePromiseBuffer;
-export const markFunctionWrapped = _mod12575.markFunctionWrapped;
-export const maybeInstrument = _mod12575.maybeInstrument;
-export const memoBuilder = _mod12575.memoBuilder;
-export const node = _mod12575.node;
-export const nodeStackLineParser = _mod12575.nodeStackLineParser;
-export const normalize = _mod12575.normalize;
-export const normalizePath = _mod12575.normalizePath;
-export const normalizeToSize = _mod12575.normalizeToSize;
-export const normalizeUrlToBase = _mod12575.normalizeUrlToBase;
-export const objectify = _mod12575.objectify;
-export const originalConsoleMethods = _mod12575.originalConsoleMethods;
-export const parseBaggageHeader = _mod12575.parseBaggageHeader;
-export const parseEnvelope = _mod12575.parseEnvelope;
-export const parseRetryAfterHeader = _mod12575.parseRetryAfterHeader;
-export const parseSemver = _mod12575.parseSemver;
-export const parseStackFrames = _mod12575.parseStackFrames;
-export const parseUrl = _mod12575.parseUrl;
-export const propagationContextFromHeaders = _mod12575.propagationContextFromHeaders;
-export const rejectedSyncPromise = _mod12575.rejectedSyncPromise;
-export const relative = _mod12575.relative;
-export const resetInstrumentationHandlers = _mod12575.resetInstrumentationHandlers;
-export const resolve = _mod12575.resolve;
-export const resolvedSyncPromise = _mod12575.resolvedSyncPromise;
-export const safeJoin = _mod12575.safeJoin;
-export const serializeEnvelope = _mod12575.serializeEnvelope;
-export const severityLevelFromString = _mod12575.severityLevelFromString;
-export const snipLine = _mod12575.snipLine;
-export const stackParserFromStackParserOptions = _mod12575.stackParserFromStackParserOptions;
-export const stringMatchesSomePattern = _mod12575.stringMatchesSomePattern;
-export const stripSentryFramesAndReverse = _mod12575.stripSentryFramesAndReverse;
-export const stripUrlQueryAndFragment = _mod12575.stripUrlQueryAndFragment;
-export const supportsDOMError = _mod12575.supportsDOMError;
-export const supportsDOMException = _mod12575.supportsDOMException;
-export const supportsErrorEvent = _mod12575.supportsErrorEvent;
-export const supportsFetch = _mod12575.supportsFetch;
-export const supportsHistory = _mod12575.supportsHistory;
-export const supportsNativeFetch = _mod12575.supportsNativeFetch;
-export const supportsReferrerPolicy = _mod12575.supportsReferrerPolicy;
-export const supportsReportingObserver = _mod12575.supportsReportingObserver;
-export const timestampInSeconds = _mod12575.timestampInSeconds;
-export const triggerHandlers = _mod12575.triggerHandlers;
-export const truncate = _mod12575.truncate;
-export const updateRateLimits = _mod12575.updateRateLimits;
-export const urlEncode = _mod12575.urlEncode;
-export const uuid4 = _mod12575.uuid4;
-export const validSeverityLevels = _mod12575.validSeverityLevels;
-export const vercelWaitUntil = _mod12575.vercelWaitUntil;
-export const watchdogTimer = _mod12575.watchdogTimer;
-export const winterCGHeadersToDict = _mod12575.winterCGHeadersToDict;
-export const winterCGRequestToRequestData = _mod12575.winterCGRequestToRequestData;
+    }
+    module.exports = exports.default;
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

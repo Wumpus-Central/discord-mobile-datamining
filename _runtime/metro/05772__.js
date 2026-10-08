@@ -1,17 +1,7 @@
 // === Module 5772: ? ===
 
 // Module 5772
-import _modDef5747 from "module_5747" /* 5747 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default function useTransitionProgress() {
-  const context = noop.useContext(_modDef5747);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "dd9ba5b8ac4831db353c60f9d72ff648", name: "img_account_sync_bluesky_light_and_dark", type: "png" });

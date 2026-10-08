@@ -1,8 +1,8 @@
 // === Module 4307: ? ===
 
 // Module 4307
-import _typeof_mod from "module_3964" /* 3964 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,8 +21,13 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isMonday(arg0) {
+export default function isWeekend(arg0) {
   requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDay();
+  const day = _typeof.default(arg0).getDay();
+  let tmp3 = 0 === day;
+  if (!tmp3) {
+    tmp3 = 6 === day;
+  }
+  return tmp3;
 };
 export default exports.default;

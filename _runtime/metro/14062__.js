@@ -1,5 +1,7 @@
 // === Module 14062: ? ===
 
 // Module 14062
+import registerAsset from "module_1132" /* 1132 */;
 
-export const calendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-civil", "islamic-rgsa", "islamic-tbla", "islamic-umalqura", "islamicc", "iso8601", "japanese", "persian", "roc"];
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "99f159454017c9a8930c299b70fe8f24", name: "MessagesTab", type: "lottie" });

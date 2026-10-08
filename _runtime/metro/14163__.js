@@ -1,7 +1,7 @@
 // === Module 14163: ? ===
 
 // Module 14163
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 14151 */;
+import _mod14152 from "module_14152" /* 14152 */;
 
 
-export const URLSearchParams = replaceByteInByteSequence.URLSearchParams;
+export default (arg0, arg1) => new _mod14152(arg0, arg1).minor;

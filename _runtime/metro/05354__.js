@@ -1,30 +1,11 @@
 // === Module 5354: ? ===
 
 // Module 5354
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1326 */;
-import _mod1451 from "module_1451" /* 1451 */;
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
-let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
-let closure_1 = callBoundIntrinsic("Object.prototype.toString");
-let closure_2 = _mod1451();
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
 
-export default function isDateObject(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
-  }
-  if (!tmp) {
-    return tmp;
-  } else if (closure_2) {
-    let tmp4 = (function tryDateGetDayCall(arg0) {
-      try {
-        closure_1_0(arg0);
-        return true;
-      } catch (err) {
-        return false;
-      }
-    })(obj);
-  } else {
-    tmp4 = "[object Date]" === closure_1(obj);
-  }
-};
+export default module_65.get("RNSFullWindowOverlay", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

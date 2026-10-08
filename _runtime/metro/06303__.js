@@ -1,82 +1,39 @@
 // === Module 6303: ? ===
 
 // Module 6303
-import jsxProd from "jsxProd" /* 21 */;
-import value2 from "value2" /* 6120 */;
 import _mod6304 from "module_6304" /* 6304 */;
-import noop_mod from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod6306 from "module_6306" /* 6306 */;
+import _mod6308 from "module_6308" /* 6308 */;
+import _mod6313 from "module_6313" /* 6313 */;
+import _mod6314 from "module_6314" /* 6314 */;
+import _mod6323 from "module_6323" /* 6323 */;
+import _mod6324 from "module_6324" /* 6324 */;
+import _mod6467 from "module_6467" /* 6467 */;
+import _mod6468 from "module_6468" /* 6468 */;
+import _mod6471 from "module_6471" /* 6471 */;
+import _mod6472 from "module_6472" /* 6472 */;
+import _mod6473 from "module_6473" /* 6473 */;
+import _mod6474 from "module_6474" /* 6474 */;
+import _mod6475 from "module_6475" /* 6475 */;
+import _mod6476 from "module_6476" /* 6476 */;
+import _mod6477 from "module_6477" /* 6477 */;
+import _mod6478 from "module_6478" /* 6478 */;
 
-let noop = noop_mod;
-({ useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
-  if (topInset === undefined) {
-    topInset = 0;
-  }
-  let num = bottomInset.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  let flag = bottomInset.shouldCalculateHeight;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const detached = bottomInset.detached;
-  const style = bottomInset.style;
-  const tmp = num(null);
-  const ref = tmp;
-  let items = [style, detached, topInset, num];
-  const tmp2 = topInset(() => {
-    const items = [style, _mod6304.styles.container, ];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
-    }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
-  let stableCallback;
-  if (flag) {
-    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
-      const height = nativeEvent.nativeEvent.layout.height;
-      height.value = height;
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (value.value) {
-            num = arg5;
-            let num2 = arg5;
-            if (arg5 == null) {
-              num2 = 0;
-            }
-            const rect = { top: num2, left: 0, right: 0, bottom: null };
-            if (num == null) {
-              num = 0;
-            }
-            let num3 = currentHeight.currentHeight;
-            const sum = num + height;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
-            tmp.value = rect;
-          }
-        });
-      }
-    });
-  }
-  obj2.onLayout = stableCallback;
-  obj2.style = tmp2;
-  obj2.children = bottomInset.children;
-  return ref(style, obj2);
-});
-memoResult.displayName = "BottomSheetHostingContainer";
 
-export const BottomSheetHostingContainer = memoResult;
+export const useBottomSheet = _mod6304.useBottomSheet;
+export const useBottomSheetInternal = _mod6306.useBottomSheetInternal;
+export const useBottomSheetModal = _mod6308.useBottomSheetModal;
+export const useBottomSheetModalInternal = _mod6313.useBottomSheetModalInternal;
+export const useScrollable = _mod6314.useScrollable;
+export const useScrollableSetter = _mod6323.useScrollableSetter;
+export const useScrollHandler = _mod6324.useScrollHandler;
+export const useGestureHandler = _mod6467.useGestureHandler;
+export const useGestureEventsHandlersDefault = _mod6468.useGestureEventsHandlersDefault;
+export const useBottomSheetGestureHandlers = _mod6471.useBottomSheetGestureHandlers;
+export const useKeyboard = _mod6472.useKeyboard;
+export const useStableCallback = _mod6473.useStableCallback;
+export const usePropsValidator = _mod6474.usePropsValidator;
+export const useAnimatedSnapPoints = _mod6475.useAnimatedSnapPoints;
+export const useReactiveSharedValue = _mod6476.useReactiveSharedValue;
+export const useBoundingClientRect = _mod6477.useBoundingClientRect;
+export const useBottomSheetContentContainerStyle = _mod6478.useBottomSheetContentContainerStyle;

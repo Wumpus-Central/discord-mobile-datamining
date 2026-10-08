@@ -1,18 +1,11 @@
 // === Module 6537: ? ===
 
 // Module 6537
-import GestureHandlerRefContext from "GestureHandlerRefContext" /* 6510 */;
-import noop from "module_19" /* 19 */;
 
-require = arg1;
-
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export default function _classCallCheck(arg0, arg1) {
+  if (!(arg0 instanceof arg1)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Cannot call a class as a function");
+    throw typeError;
   }
 };

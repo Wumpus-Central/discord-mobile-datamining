@@ -48,7 +48,7 @@ export default function createAnimatedPropsHook(arg0) {
   closure_1 = require("module_389").createAnimatedPropsMemoHook(arg0);
   let obj = require("module_389");
   importAll = _modAll27.shouldUseSetNativePropsInFabric();
-  return function useAnimatedProps(fn2) {
+  return function useAnimatedProps(fn) {
     closure_1 = _slicedToArray(closure_1_9((arg0) => arg0 + 1, 0), 2)[1];
     closure_2 = closure_1_10(null);
     closure_3 = closure_1_10(null);
@@ -60,7 +60,7 @@ export default function createAnimatedPropsHook(arg0) {
         currentResult = current();
       }
       return currentResult;
-    }, closure_0, closure_4), fn2);
+    }, closure_0, closure_4), fn);
     closure_1_7(() => {
       if (!closure_1(357).shouldSignalBatch) {
         const API = closure_1(357).API;
@@ -206,7 +206,7 @@ export default function createAnimatedPropsHook(arg0) {
         tmp2 = result[Symbol.iterator]();
       };
     }, items1);
-    const merged = Object.assign(obj.__getValueWithStaticProps(fn2));
+    const merged = Object.assign(obj.__getValueWithStaticProps(fn));
     obj2.collapsable = false;
     const items2 = [
       obj2,

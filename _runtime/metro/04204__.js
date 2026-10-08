@@ -1,50 +1,14 @@
 // === Module 4204: ? ===
 
 // Module 4204
-import _typeof_mod from "module_3964" /* 3964 */;
-import startOfUTCWeek_mod from "startOfUTCWeek" /* 3967 */;
-import startOfUTCWeekYear_mod from "startOfUTCWeekYear" /* 4205 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import module_2133 from "module_2133" /* 2133 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2133) {
+  const obj2 = { default: module_2133 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2133;
 }
-_typeof = tmp3;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj2 = { default: startOfUTCWeek };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfUTCWeek;
-}
-startOfUTCWeek = tmp5;
-let startOfUTCWeekYear = startOfUTCWeekYear_mod;
-if (!startOfUTCWeekYear) {
-  const obj3 = { default: startOfUTCWeekYear };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfUTCWeekYear;
-}
-startOfUTCWeekYear = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-let c4 = 604800000;
 
-export default function getUTCWeek(arg0, arg1) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
-};
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u00E0' {{time}}", long: "{{date}} '\u00E0' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

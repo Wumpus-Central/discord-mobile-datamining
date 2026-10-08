@@ -1,88 +1,110 @@
 // === Module 1612: ? ===
 
 // Module 1612
-import BaseNavigationContainer from "BaseNavigationContainer" /* 1493 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
 
-export const useScrollToTop = function useScrollToTop(ref) {
-  closure_0 = ref;
-  const context = noop.useContext(BaseNavigationContainer.NavigationContext);
-  const route = BaseNavigationContainer.useRoute();
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
-    throw error;
-  } else {
-    let items = [context, ref, route.key];
-    const effect = noop.useEffect(() => {
-      const items = [];
-      for (let parent = closure_1; parent; parent = parent.getParent()) {
-        if ("tab" === parent.getState().type) {
-          let arr = items.push(parent);
+export const useThenable = function useThenable(arg0) {
+  const first = items(noop.useState(arg0), 1)[0];
+  items = [false, undefined];
+  first.then((result) => {
+    items = [true, result];
+  });
+  [tmp3, noop] = items(noop.useState(items), 2);
+  const first1 = items(tmp3, 1)[0];
+  let items1 = [first, first1];
+  const effect = noop.useEffect(() => {
+    c0 = first(function*() {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_1 = tmp3;
+              closure_0 = tmp7;
+              closure_128_0 = undefined;
+              c3 = 1;
+              c4 = 2;
+              c5 = 1;
+              const obj4 = { value, done: false };
+              return obj4;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            if (!closure_0) {
+              items = [true, closure_128_0];
+              noop(items);
+            }
+            throw closure_2;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            if (!closure_0) {
+              const items1 = [true, closure_128_0];
+              noop(items1);
+            }
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_0 = value;
+            c3 = 0;
+            if (!closure_0) {
+              const items2 = [true, closure_128_0];
+              noop(items2);
+            }
+            c5 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp28) {
+          closure_2 = tmp28;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp28;
+          } else {
+            c4 = tmp;
+          }
         }
       }
-      if (0 !== items.length) {
-        closure_1 = items.map((addListener) => addListener.addListener("tabPress", (arg0) => {
-          const defaultPrevented = arg0;
-          focused = focused.isFocused();
-          let hasItem = ref.includes(focused);
-          if (!hasItem) {
-            hasItem = obj.getState().routes[0].key === key.key;
-          }
-          const animationFrame = requestAnimationFrame(() => {
-            if (null == ref.current) {
-              let tmp3 = closure_1;
-              if (closure_1) {
-                tmp3 = hasItem;
-              }
-              if (tmp3) {
-                tmp3 = null;
-              }
-              if (tmp3) {
-                tmp3 = !defaultPrevented.defaultPrevented;
-              }
-              if (tmp3) {
-                if ("scrollToTop" in null) {
-                  null.scrollToTop();
-                } else if ("scrollTo" in null) {
-                  null.scrollTo({ y: 0, animated: true });
-                } else if ("scrollToOffset" in null) {
-                  null.scrollToOffset({ offset: 0, animated: true });
-                } else if ("scrollResponderScrollTo" in null) {
-                  const result = null.scrollResponderScrollTo({ y: 0, animated: true });
-                }
-              }
-            } else {
-              if (!("scrollToTop" in ref.current)) {
-                if (!("scrollTo" in ref.current)) {
-                  if (!("scrollToOffset" in ref.current)) {
-                    if (!("scrollResponderScrollTo" in ref.current)) {
-                      const current = ref.current;
-                      if ("getScrollResponder" in ref.current) {
-                        let current3 = current.getScrollResponder();
-                      } else {
-                        const current2 = ref.current;
-                        if ("getNode" in current) {
-                          current3 = current2.getNode();
-                        } else {
-                          current3 = current2;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              current3 = ref.current;
-            }
-          });
-          obj = focused;
-        }));
-        return () => {
-          const item = closure_1.forEach((fn) => fn());
-        };
-      }
-    }, items);
-  }
+    });
+    if (!first1) {
+      (function resolve() {
+        const self = this;
+        const apply = c0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
+    }
+    return () => {
+      c0 = true;
+    };
+  }, items1);
+  return tmp3;
 };

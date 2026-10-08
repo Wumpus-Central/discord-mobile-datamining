@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 34, height: 34, scales: [2, 3], hash: "36d299b9a20b89def78675ec02a95049", name: "badge_2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf_channels/native/images", width: 23, height: 45, scales: [1], hash: "997fd56d3361833ef80c750f0e0e48a8", name: "star_purple", type: "png" });

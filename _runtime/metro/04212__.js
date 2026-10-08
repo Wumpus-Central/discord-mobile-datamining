@@ -1,196 +1,30 @@
 // === Module 4212: ? ===
 
 // Module 4212
-import _mod3969 from "module_3969" /* 3969 */;
-import compareAsc_mod from "compareAsc" /* 4140 */;
-import differenceInMonths_mod from "differenceInMonths" /* 4162 */;
-import differenceInSeconds_mod from "differenceInSeconds" /* 4167 */;
-import code_mod from "module_4210" /* 4210 */;
-import _typeof_mod from "module_3964" /* 3964 */;
-import cloneObject_mod from "cloneObject" /* 4213 */;
-import assign_mod from "assign" /* 4214 */;
-import module_4127_mod from "module_4127" /* 4127 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import module_2136 from "module_2136" /* 2136 */;
 
-let compareAsc = compareAsc_mod;
-if (!compareAsc) {
-  let obj = { default: compareAsc };
-  let tmp3 = obj;
+if (!module_2136) {
+  const obj2 = { default: module_2136 };
+  let obj = obj2;
 } else {
-  tmp3 = compareAsc;
+  obj = module_2136;
 }
-compareAsc = tmp3;
-let differenceInMonths = differenceInMonths_mod;
-if (!differenceInMonths) {
-  const obj2 = { default: differenceInMonths };
-  let tmp5 = obj2;
-} else {
-  tmp5 = differenceInMonths;
-}
-differenceInMonths = tmp5;
-let differenceInSeconds = differenceInSeconds_mod;
-if (!differenceInSeconds) {
-  const obj3 = { default: differenceInSeconds };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInSeconds;
-}
-differenceInSeconds = tmp7;
-let code = code_mod;
-if (!code) {
-  const obj4 = { default: code };
-  let tmp9 = obj4;
-} else {
-  tmp9 = code;
-}
-code = tmp9;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj5 = { default: _typeof };
-  let tmp11 = obj5;
-} else {
-  tmp11 = _typeof;
-}
-_typeof = tmp11;
-let cloneObject = cloneObject_mod;
-if (!cloneObject) {
-  const obj6 = { default: cloneObject };
-  let tmp13 = obj6;
-} else {
-  tmp13 = cloneObject;
-}
-cloneObject = tmp13;
-let assign = assign_mod;
-if (!assign) {
-  const obj7 = { default: assign };
-  let tmp15 = obj7;
-} else {
-  tmp15 = assign;
-}
-assign = tmp15;
-let module_4127 = module_4127_mod;
-if (!module_4127) {
-  const obj8 = { default: module_4127 };
-  let tmp17 = obj8;
-} else {
-  tmp17 = module_4127;
-}
-module_4127 = tmp17;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj9 = { default: requiredArgs };
-  let tmp19 = obj9;
-} else {
-  tmp19 = requiredArgs;
-}
-requiredArgs = tmp19;
-let c11 = 1440;
-let c12 = 2520;
-let c13 = 43200;
-let c14 = 86400;
-
-export default function formatDistance(arg0, arg1, locale) {
-  requiredArgs.default(2, arguments);
-  locale = undefined;
-  const defaultOptions = _mod3969.getDefaultOptions();
-  if (null != locale) {
-    locale = locale.locale;
-  }
-  if (null === locale) {
-    locale = defaultOptions.locale;
-  }
-  if (null === locale) {
-    locale = code.default;
-  }
-  if (locale.formatDistance) {
-    const defaultResult1 = compareAsc.default(arg0, arg1);
-    const _isNaN = isNaN;
-    if (isNaN(defaultResult1)) {
-      const _RangeError2 = RangeError;
-      const rangeError = new RangeError("Invalid time value");
-      throw rangeError;
-    } else {
-      let addSuffix;
-      if (null != locale) {
-        addSuffix = locale.addSuffix;
-      }
-      const obj = { addSuffix: Boolean(addSuffix), comparison: defaultResult1 };
-      const defaultResult3 = assign.default(cloneObject.default(locale), obj);
-      if (defaultResult1 > 0) {
-        let defaultResult4 = _typeof.default(arg1);
-        let defaultResult5 = _typeof.default(arg0);
-      } else {
-        defaultResult4 = _typeof.default(arg0);
-        defaultResult5 = _typeof.default(arg1);
-      }
-      const defaultResult6 = differenceInSeconds.default(defaultResult5, defaultResult4);
-      const defaultResult2 = cloneObject.default(locale);
-      const _Math = Math;
-      const rounded = Math.round((defaultResult6 - (module_4127.default(defaultResult5) - module_4127.default(defaultResult4)) / 1000) / 60);
-      if (rounded < 2) {
-        if (null != locale) {
-          if (locale.includeSeconds) {
-            if (defaultResult6 < 5) {
-              let formatDistanceResult = locale.formatDistance("lessThanXSeconds", 5, defaultResult3);
-            } else if (defaultResult6 < 10) {
-              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 10, defaultResult3);
-            } else if (defaultResult6 < 20) {
-              formatDistanceResult = locale.formatDistance("lessThanXSeconds", 20, defaultResult3);
-            } else if (defaultResult6 < 40) {
-              formatDistanceResult = locale.formatDistance("halfAMinute", 0, defaultResult3);
-            } else if (defaultResult6 < 60) {
-              formatDistanceResult = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
-            } else {
-              formatDistanceResult = locale.formatDistance("xMinutes", 1, defaultResult3);
-            }
-          }
-        }
-        if (0 === rounded) {
-          let formatDistanceResult1 = locale.formatDistance("lessThanXMinutes", 1, defaultResult3);
-        } else {
-          formatDistanceResult1 = locale.formatDistance("xMinutes", rounded, defaultResult3);
-        }
-        return formatDistanceResult1;
-      } else if (rounded < 45) {
-        return locale.formatDistance("xMinutes", rounded, defaultResult3);
-      } else if (rounded < 90) {
-        return locale.formatDistance("aboutXHours", 1, defaultResult3);
-      } else if (rounded < c11) {
-        const _Math6 = Math;
-        return locale.formatDistance("aboutXHours", Math.round(rounded / 60), defaultResult3);
-      } else if (rounded < c12) {
-        return locale.formatDistance("xDays", 1, defaultResult3);
-      } else if (rounded < c13) {
-        const _Math5 = Math;
-        return locale.formatDistance("xDays", Math.round(rounded / tmp37), defaultResult3);
-      } else if (rounded < c14) {
-        const _Math4 = Math;
-        return locale.formatDistance("aboutXMonths", Math.round(rounded / c13), defaultResult3);
-      } else {
-        const defaultResult8 = differenceInMonths.default(defaultResult5, defaultResult4);
-        if (defaultResult8 < 12) {
-          const _Math3 = Math;
-          return locale.formatDistance("xMonths", Math.round(rounded / c13), defaultResult3);
-        } else {
-          const result = defaultResult8 % 12;
-          const _Math2 = Math;
-          const rounded1 = Math.floor(defaultResult8 / 12);
-          if (result < 3) {
-            let formatDistanceResult2 = locale.formatDistance("aboutXYears", rounded1, defaultResult3);
-          } else if (result < 9) {
-            formatDistanceResult2 = locale.formatDistance("overXYears", rounded1, defaultResult3);
-          } else {
-            formatDistanceResult2 = locale.formatDistance("almostXYears", rounded1 + 1, defaultResult3);
-          }
-          return formatDistanceResult2;
-        }
-      }
-      const defaultResult7 = module_4127.default(defaultResult5);
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
+  },
+  era: obj.default({ values: { narrow: ["pr.n.e.", "AD"], abbreviated: ["pr. Kr.", "po. Kr."], wide: ["Prije Krista", "Poslije Krista"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1.", "2.", "3.", "4."], abbreviated: ["1. kv.", "2. kv.", "3. kv.", "4. kv."], wide: ["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-  } else {
-    const _RangeError = RangeError;
-    const rangeError1 = new RangeError("locale must contain formatDistance property");
-    throw rangeError1;
-  }
+  }),
+  month: obj.default({ values: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Danj", "velja\u010Da", "o\u017Eujak", "travanj", "svibanj", "lipanj", "srpanj", "kolovoz", "rujan", "listopad", "studeni", "prosinac"] }, defaultWidth: "wide", formattingValues: { narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."], abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"], wide: ["sije\u010Dnja", "velja\u010De", "o\u017Eujka", "travnja", "svibnja", "lipnja", "srpnja", "kolovoza", "rujna", "listopada", "studenog", "prosinca"] }, defaultFormattingWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["N", "P", "U", "S", "\u010C", "P", "S"], short: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], abbreviated: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"], wide: ["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010Detvrtak", "petak", "subota"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, abbreviated: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "popodne", evening: "nave\u010Der", night: "no\u0107u" }, wide: { am: "AM", pm: "PM", midnight: "pono\u0107", noon: "podne", morning: "ujutro", afternoon: "poslije podne", evening: "nave\u010Der", night: "no\u0107u" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

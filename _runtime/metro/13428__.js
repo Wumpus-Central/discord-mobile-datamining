@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 424, height: 254, scales: [1], hash: "616e0e1297b795db059112c52470eab4", name: "top_perk_streaming_quality", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf_channels/native/images", width: 275.5, height: 78, scales: [2, 3], hash: "b55be157bc31f9c933d8fe113de3e547", name: "voice_channels", type: "png" });

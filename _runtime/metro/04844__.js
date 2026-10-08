@@ -1,7 +1,30 @@
 // === Module 4844: ? ===
 
 // Module 4844
-import registerAsset from "module_1132" /* 1132 */;
+import c from "c" /* 576 */;
+import _mod4841 from "module_4841" /* 4841 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+require = arg1;
+function getBooleanProperty(booleanProperty, arg1) {
+  return booleanProperty.booleanProperty(arg1);
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "262032a99df43d5b5fc14dd6e335ec5e", name: "UserMinusIcon", type: "png" });
+export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod4841.useRiveProperty(arg1, arg0, getBooleanProperty);
+  if (cResult[0] === tmp5) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp3) {
+        let tmp6 = cResult[3];
+      }
+      return tmp6;
+    }
+  }
+  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
+  cResult[0] = tmp5;
+  cResult[1] = tmp4;
+  cResult[2] = tmp3;
+  cResult[3] = obj3;
+  tmp6 = obj3;
+};

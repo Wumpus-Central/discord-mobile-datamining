@@ -1,7 +1,24 @@
 // === Module 14394: ? ===
 
 // Module 14394
-import registerAsset from "module_1132" /* 1132 */;
+import _mod14378 from "module_14378" /* 14378 */;
+import _mod14379 from "module_14379" /* 14379 */;
+import _mod14395 from "module_14395" /* 14395 */;
 
+let prop = _mod14378["__core-js_shared__"];
+if (!prop) {
+  prop = _mod14379("__core-js_shared__", {});
+}
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod14395) {
+  str2 = "pure";
+}
+versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "4d2adea177cc0cf5fd8e4a93e093db12", name: "mic", type: "png" });
+export default prop;

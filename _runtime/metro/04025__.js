@@ -1,36 +1,7 @@
 // === Module 4025: ? ===
 
 // Module 4025
-let c0 = ["vas\u00E1rnap", "h\u00E9tf\u0151n", "kedden", "szerd\u00E1n", "cs\u00FCt\u00F6rt\u00F6k\u00F6n", "p\u00E9nteken", "szombaton"];
-const obj = {
-  lastWeek: (arg0) => {
-    let str = "'m\u00FAlt' ";
-    if (c0) {
-      str = "";
-    }
-    const combined = "".concat(str, "'");
-    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
-  },
-  yesterday: "'tegnap' p'-kor'",
-  today: "'ma' p'-kor'",
-  tomorrow: "'holnap' p'-kor'",
-  nextWeek: (arg0) => {
-    let str = "'m\u00FAlt' ";
-    if (c0) {
-      str = "";
-    }
-    const combined = "".concat(str, "'");
-    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
-  },
-  other: "P"
-};
-c0 = true;
+import registerAsset from "module_1132" /* 1132 */;
 
-export default function formatRelative(arg0, arg1) {
-  let tmpResult = tmp;
-  if (typeof obj[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb3JlL3dlYi9TeXN0ZW1UcmF5", scales: [1], hash: "3919baf72e6cf0c495a5c7450218ab56", name: "el.messages.3919baf72e6cf0c495a5c7450218ab56.compiled.messages", type: "jsona" });

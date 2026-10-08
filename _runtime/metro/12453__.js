@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/forums/native/images", width: 120, height: 80, scales: [2, 3], hash: "78be237a71ac693684ba99bcd912e5ac", name: "img_forum_empty_state_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 215.5, height: 135, scales: [2, 3], hash: "fad7ba73a3f13e1d6de72f833c30efc1", name: "header-art-onboarding", type: "png" });

@@ -1,9 +1,7 @@
 // === Module 4079: ? ===
 
 // Module 4079
-let closure_0 = { lastWeek: "eeee 'trecut\u0103 la' p", yesterday: "'ieri la' p", today: "'ast\u0103zi la' p", tomorrow: "'m\u00E2ine la' p", nextWeek: "eeee 'viitoare la' p", other: "P" };
+import registerAsset from "module_1132" /* 1132 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRlbGxpZ2VuY2VfbGF5ZXIvc2VhcmNo", scales: [1], hash: "df24cc0d1498d2d127c5f5dbe90cb3cb", name: "vi.messages.df24cc0d1498d2d127c5f5dbe90cb3cb.compiled.messages", type: "jsona" });

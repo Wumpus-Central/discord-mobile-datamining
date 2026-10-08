@@ -1,110 +1,280 @@
 // === Module 4481: ? ===
 
 // Module 4481
-import _mod4467 from "module_4467" /* 4467 */;
+import _mod4462 from "module_4462" /* 4462 */;
+import module_4480_mod from "module_4480" /* 4480 */;
 
-const fn = function n(moment) {
-  function translateSingular(arg0, arg1, arg2, arg3) {
-    const parts = dependencyMap[arg2].split("_");
-    if (arg1) {
-      let first = parts[0];
-    } else {
-      first = arg3 ? parts[1] : parts[2];
+let _createSuperInternal = require;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
     }
-    return first;
+    return _typeof(arg0);
   }
-  function translate(arg0, arg1, arg2, arg3) {
-    const text = `${arg0} `;
-    if (1 === arg0) {
-      const parts = dependencyMap[arg2[0]].split("_");
-      if (arg1) {
-        let first = parts[0];
-      } else {
-        first = arg3 ? parts[1] : parts[2];
-      }
-      const sum = text + first;
-    } else if (arg1) {
-      const result = arg0 % 10;
-      let tmp10 = result === 0;
-      if (result !== 0) {
-        let tmp11 = arg0 > 10;
-        if (tmp11) {
-          tmp11 = arg0 < 20;
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
         }
-        tmp10 = tmp11;
+        return str;
       }
-      const parts1 = dependencyMap[arg2].split("_");
-      const sum1 = text + (tmp10 ? parts1[1] : parts1[0]);
-    } else {
-      if (arg3) {
-        let sum2 = text + dependencyMap[arg2].split("_")[1];
+    }
+    str = typeof arg0;
+  };
+}
+function _setPrototypeOf(LocalDayParser, Parser) {
+  _setPrototypeOf = Object.setPrototypeOf;
+  if (!_setPrototypeOf) {
+    _setPrototypeOf = function _setPrototypeOf(LocalDayParser, Parser) {
+      LocalDayParser.__proto__ = Parser;
+      return LocalDayParser;
+    };
+  }
+  return _setPrototypeOf(LocalDayParser, Parser);
+}
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    _getPrototypeOf = Object.getPrototypeOf;
+  } else {
+    _getPrototypeOf = function _getPrototypeOf(arg0) {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  return _getPrototypeOf(arg0);
+}
+let module_4480 = module_4480_mod;
+if (!module_4480) {
+  let obj = { default: module_4480 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4480;
+}
+module_4480 = tmp3;
+const Parser = _mod4462.Parser;
+_createSuperInternal = undefined;
+class LocalDayParser {
+  constructor() {
+    if (this instanceof closure_1) {
+      length = arguments.length;
+      _Array = Array;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = length;
+      array = new Array(length);
+      tmp10 = array;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          array[num] = arguments[num];
+          num = num + 1;
+        } while (num < length);
+      }
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
+      items = [];
+      items[0] = tmp;
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      tmp13 = undefined === applyResult;
+      if (tmp13) {
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
+        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        tmp23 = referenceError;
+        throw referenceError;
       } else {
-        const result1 = arg0 % 10;
-        let tmp3 = result1 === 0;
-        if (result1 !== 0) {
-          let tmp4 = arg0 > 10;
-          if (tmp4) {
-            tmp4 = arg0 < 20;
+        str2 = "priority";
+        if ("priority" in applyResult) {
+          _Object = Object;
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+        } else {
+          num3 = 90;
+          applyResult.priority = 90;
+        }
+        if (tmp13) {
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
+          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp19 = referenceError1;
+          throw referenceError1;
+        } else {
+          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "c", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
+            _Object2 = Object;
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          } else {
+            applyResult.incompatibleTokens = items1;
           }
-          tmp3 = tmp4;
+          return applyResult;
         }
-        const parts2 = dependencyMap[arg2].split("_");
-        sum2 = text + (tmp3 ? parts2[1] : parts2[2]);
       }
-      return sum2;
+    } else {
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
     }
   }
-  const dependencyMap = { ss: "sekund\u0117_sekund\u017Ei\u0173_sekundes", m: "minut\u0117_minut\u0117s_minut\u0119", mm: "minut\u0117s_minu\u010Di\u0173_minutes", h: "valanda_valandos_valand\u0105", hh: "valandos_valand\u0173_valandas", d: "diena_dienos_dien\u0105", dd: "dienos_dien\u0173_dienas", M: "m\u0117nuo_m\u0117nesio_m\u0117nes\u012F", MM: "m\u0117nesiai_m\u0117nesi\u0173_m\u0117nesius", y: "metai_met\u0173_metus", yy: "metai_met\u0173_metus" };
-  const obj = { months: { format: "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split("_"), standalone: "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split("_"), isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/ }, monthsShort: "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_"), weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, week: null };
-  const obj2 = { format: "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split("_"), standalone: "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split("_"), isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/ };
-  obj.weekdays = { format: "sekmadien\u012F_pirmadien\u012F_antradien\u012F_tre\u010Diadien\u012F_ketvirtadien\u012F_penktadien\u012F_\u0161e\u0161tadien\u012F".split("_"), standalone: "sekmadienis_pirmadienis_antradienis_tre\u010Diadienis_ketvirtadienis_penktadienis_\u0161e\u0161tadienis".split("_"), isFormat: /dddd HH:mm/ };
-  obj.weekdaysShort = "Sek_Pir_Ant_Tre_Ket_Pen_\u0160e\u0161".split("_");
-  obj.weekdaysMin = "S_P_A_T_K_Pn_\u0160".split("_");
-  obj.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY-MM-DD", LL: "YYYY [m.] MMMM D [d.]", LLL: "YYYY [m.] MMMM D [d.], HH:mm [val.]", LLLL: "YYYY [m.] MMMM D [d.], dddd, HH:mm [val.]", l: "YYYY-MM-DD", ll: "YYYY [m.] MMMM D [d.]", lll: "YYYY [m.] MMMM D [d.], HH:mm [val.]", llll: "YYYY [m.] MMMM D [d.], ddd, HH:mm [val.]" };
-  obj.calendar = { sameDay: "[\u0160iandien] LT", nextDay: "[Rytoj] LT", nextWeek: "dddd LT", lastDay: "[Vakar] LT", lastWeek: "[Pra\u0117jus\u012F] dddd LT", sameElse: "L" };
-  obj.relativeTime = {
-    future: "po %s",
-    past: "prie\u0161 %s",
-    s: function translateSeconds(arg0, arg1, arg2, arg3) {
-      let str = "kelios sekund\u0117s";
-      if (!arg1) {
-        let str2 = "kelias sekundes";
-        if (arg3) {
-          str2 = "keli\u0173 sekund\u017Ei\u0173";
+}
+let dependencyMap = LocalDayParser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
+    throw typeError;
+  }
+}
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+LocalDayParser.prototype = Object.create(prototype, { constructor: { value: LocalDayParser, writable: true, configurable: true } });
+if (Parser) {
+  _setPrototypeOf(LocalDayParser, Parser);
+}
+let num = 0;
+dependencyMap = (function _isNativeReflectConstruct() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect3 = Reflect;
+    if (Reflect.construct) {
+      const _Reflect = Reflect;
+      if (Reflect.construct.sham) {
+        return false;
+      } else {
+        const _Proxy = Proxy;
+        if (typeof Proxy === "function") {
+          return true;
+        } else {
+          try {
+            const _Boolean = Boolean;
+            const call = valueOf.call;
+            const _Reflect2 = Reflect;
+            const _Boolean2 = Boolean;
+            if (typeof call === "unknown") {
+              valueOf();
+            } else {
+              call(constructResult);
+            }
+            return true;
+          } catch (err) {
+            return false;
+          }
         }
-        str = str2;
       }
-      return str;
-    },
-    ss: translate,
-    m: translateSingular,
-    mm: translate,
-    h: translateSingular,
-    hh: translate,
-    d: translateSingular,
-    dd: translate,
-    M: translateSingular,
-    MM: translate,
-    y: translateSingular,
-    yy: translate
-  };
-  obj.dayOfMonthOrdinalParse = /\d{1,2}-oji/;
-  obj.ordinal = function ordinal(arg0) {
-    return arg0 + "-oji";
-  };
-  obj.week = { dow: 1, doy: 4 };
-  return moment.defineLocale("lt", obj);
+    }
+  }
+  return false;
+})();
+_createSuperInternal = function _createSuperInternal() {
+  const self = this;
+  const obj = hasOwnProperty(_createSuperInternal);
+  if (closure_1) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
+  }
+  if (!constructResult) {
+    let tmp8 = self;
+    if (undefined === self) {
+      const _ReferenceError = ReferenceError;
+      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw referenceError;
+    }
+  } else {
+    tmp8 = constructResult;
+    if ("object" !== _typeof(constructResult)) {
+      tmp8 = constructResult;
+    }
+  }
+  return tmp8;
 };
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      fn(_mod4467);
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, ordinalNumber, arg3) {
+    const weekStartsOn = arg3;
+    function valueCallback(arg0) {
+      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
+    }
+    if ("e" !== arg1) {
+      if ("ee" !== arg1) {
+        if ("eo" === arg1) {
+          return _createSuperInternal(4464).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
+        } else if ("eee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        } else if ("eeeee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        } else if ("eeeeee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        } else {
+          return ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        }
+      }
+    }
+    return _createSuperInternal(4464).mapValue(_createSuperInternal(4464).parseNDigits(arg1.length, arg0), valueCallback);
+  }
+};
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 0;
+      if (tmp) {
+        tmp = arg1 <= 6;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(arg0, arg1, arg2, arg3) {
+      const defaultResult = module_4480.default(arg0, arg2, arg3);
+      defaultResult.setUTCHours(0, 0, 0, 0);
+      return defaultResult;
     }
   }
+];
+if (0 < items.length) {
+  do {
+    let tmp7 = items[num];
+    let flag = tmp7.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp7.enumerable = flag;
+    tmp7.configurable = true;
+    if ("value" in tmp7) {
+      tmp7.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
+    num = num + 1;
+  } while (num < items.length);
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], fn);
-  }
-}
-fn(this.moment);
+
+export { LocalDayParser };

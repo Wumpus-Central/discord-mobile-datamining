@@ -1,36 +1,55 @@
 // === Module 6369: ? ===
 
 // Module 6369
-import RecyclerViewManager from "RecyclerViewManager" /* 6370 */;
-import _slicedToArray from "module_6349" /* 6349 */;
+import cancelAnimation from "cancelAnimation" /* 1655 */;
+import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4809 */;
+import tagMessage from "tagMessage" /* 6331 */;
+import ghQueueMicrotask from "ghQueueMicrotask" /* 6358 */;
+import _mod6370 from "module_6370" /* 6370 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+try {
+  const _module = cancelAnimation;
+  try {
+    const _module1 = reactNativeWorkletsCompat;
+    if (_module1 != null) {
+      const fn = function t() {
 
-export const useRecyclerViewManager = (data) => {
-  let recyclerViewManager = velocityTracker(closure_5(() => {
-    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
-    return recyclerViewManager;
-  }), 1)[0];
-  velocityTracker = velocityTracker(closure_5(() => {
-    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
-    return velocityTracker;
-  }), 1)[0];
-  const items = [data];
-  closure_4(() => {
-    recyclerViewManager.updateProps(closure_0);
-  }, items);
-  const items1 = [data.data];
-  closure_4(() => {
-    recyclerViewManager.processDataUpdate();
-  }, items1);
-  closure_3(() => {
-    recyclerViewManager.restoreIfNeeded();
-    return () => {
-      recyclerViewManager.dispose();
-      velocityTracker.cleanUp();
-    };
-  }, []);
-  return { recyclerViewManager, velocityTracker };
-};
+      };
+      fn.__closure = {};
+      fn.__workletHash = 1792171573139;
+      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
+      _module1.scheduleOnUI(fn);
+    }
+    const _module2 = ghQueueMicrotask;
+    _module2.ghQueueMicrotask(() => {
+      const NativeProxy = _mod6370.NativeProxy;
+      if (!NativeProxy.installUIRuntimeBindings()) {
+        const _console = console;
+        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
+        const tmpResult = tagMessage;
+      }
+    });
+    let useSharedValue;
+    if (_module != null) {
+      useSharedValue = _module.useSharedValue;
+    }
+    let setGestureState = undefined === _module;
+    if (!setGestureState) {
+      setGestureState = _module.setGestureState;
+    }
+    if (!setGestureState) {
+      const fn2 = function o() {
+        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
+      };
+      const obj = { tagMessage: tagMessage.tagMessage };
+      fn2.__closure = obj;
+      fn2.__workletHash = 3596069664305;
+      fn2.__initData = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
+      _module.setGestureState = fn2;
+      const obj2 = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
+    }
+    exports.Reanimated = _module;
+  } catch (err) {
+  }
+} catch (err) {
+}

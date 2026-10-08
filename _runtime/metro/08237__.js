@@ -1,9 +1,7 @@
 // === Module 8237: ? ===
 
 // Module 8237
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFilter", validAttributes: { name: true, x: true, y: true, height: true, width: true, filterUnits: true, primitiveUnits: true } };
 
-export default module_65.get("RNSVGFilter", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_sidebar", width: 24, height: 24, scales: [2, 3], hash: "ff39eeadf9f2f52f7094ca9f3833e97b", name: "img_guild_folder", type: "png" });

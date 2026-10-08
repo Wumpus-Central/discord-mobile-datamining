@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 60, height: 60, scales: [2, 3], hash: "063292ce4c9cf6ef0db464edc768d34e", name: "icon-server-muted", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "455a164c9b4dae0f0a0a75aaf6c4170d", name: "ic_headset_neutral", type: "png" });

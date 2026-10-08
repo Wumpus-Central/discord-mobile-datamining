@@ -1,7 +1,16 @@
 // === Module 6471: ? ===
 
 // Module 6471
-import registerAsset from "module_1132" /* 1132 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6310 from "module_6310" /* 6310 */;
 
+const useContext = _mod19.useContext;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 480, height: 413, scales: [2, 3], hash: "b25b2e24db6c14f15201cb7533aed65e", name: "register-background-dark", type: "png" });
+export const useBottomSheetGestureHandlers = () => {
+  const tmp = useContext(_mod6310.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

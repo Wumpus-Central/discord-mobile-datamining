@@ -1,8 +1,8 @@
 // === Module 4308: ? ===
 
 // Module 4308
-import _typeof_mod from "module_3964" /* 3964 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,9 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isPast(date) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(date).getTime();
-  return time < Date.now();
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

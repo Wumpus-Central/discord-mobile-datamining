@@ -48,7 +48,7 @@ function ItemWithSeparator(leadingItem) {
   const first1 = tmp6[0];
   closure_13 = tmp8;
   const items = [cellKey, setSelfHighlightCallback, tmp6[1], setSelfUpdatePropsCallback];
-  v65535(() => {
+  collapsed(() => {
     setSelfHighlightCallback(cellKey, closure_9);
     setSelfUpdatePropsCallback(cellKey, closure_13);
     return () => {

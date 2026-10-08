@@ -1,26 +1,122 @@
 // === Module 4439: ? ===
 
 // Module 4439
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "el" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} \u03BA\u03B1\u03B9 {1}", middle: "{0}, {1}", pair: "{0} \u03BA\u03B1\u03B9 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u03BA\u03B1\u03B9 {1}", middle: "{0}, {1}", pair: "{0} \u03BA\u03B1\u03B9 {1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" }, short: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
+import _mod4161 from "module_4161" /* 4161 */;
+import startOfWeek_mod from "startOfWeek" /* 4315 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import module_4160_mod from "module_4160" /* 4160 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
+
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfWeek;
+}
+startOfWeek = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj3 = { default: module_4160 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4160;
+}
+module_4160 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function getWeekYear(arg0, firstWeekContainsDate) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  const defaultOptions = _mod4161.getDefaultOptions();
+  let prop;
+  if (null != firstWeekContainsDate) {
+    prop = firstWeekContainsDate.firstWeekContainsDate;
   }
-}
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} \u03BA\u03B1\u03B9 {1}", middle: "{0}, {1}", pair: "{0} \u03BA\u03B1\u03B9 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u03BA\u03B1\u03B9 {1}", middle: "{0}, {1}", pair: "{0} \u03BA\u03B1\u03B9 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" }, short: { end: "{0} \u03AE {1}", middle: "{0}, {1}", pair: "{0} \u03AE {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "el" };
-prop.push(obj);
+  if (null === prop) {
+    let prop1;
+    if (null != firstWeekContainsDate) {
+      locale = firstWeekContainsDate.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              prop1 = options.firstWeekContainsDate;
+            }
+          }
+        }
+      }
+    }
+    prop = prop1;
+  }
+  if (null === prop) {
+    prop = defaultOptions.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    const locale2 = defaultOptions.locale;
+    let prop2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            prop2 = options2.firstWeekContainsDate;
+          }
+        }
+      }
+    }
+    prop = prop2;
+  }
+  let num = 1;
+  if (null !== prop) {
+    num = 1;
+    if (undefined !== prop) {
+      num = prop;
+    }
+  }
+  const defaultResult2 = module_4160.default(num);
+  if (defaultResult2 >= 1) {
+    if (defaultResult2 <= 7) {
+      const _Date = Date;
+      const date = new Date(0);
+      date.setFullYear(fullYear + 1, 0, defaultResult2);
+      date.setHours(0, 0, 0, 0);
+      const _Date2 = Date;
+      const date1 = new Date(0);
+      date1.setFullYear(fullYear, 0, defaultResult2);
+      date1.setHours(0, 0, 0, 0);
+      const defaultResult3 = startOfWeek.default(date, firstWeekContainsDate);
+      const time = defaultResult1.getTime();
+      if (time >= defaultResult3.getTime()) {
+        let sum = fullYear + 1;
+      } else {
+        const time1 = defaultResult1.getTime();
+        sum = fullYear;
+        if (time1 < defaultResult4.getTime()) {
+          sum = fullYear - 1;
+        }
+      }
+      return sum;
+    }
+  }
+  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  throw rangeError;
+};
+export default exports.default;

@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f9f36b748bcc7c6393cf056bc860ba1e", name: "HandRequestSpeakIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "11d1f1c27d6ce094f9dea47191c76875", name: "feedback-modal-sad-desaturated", type: "png" });

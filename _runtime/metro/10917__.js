@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b257d44a90a2362cd1a14481bdf7249c", name: "ExperimentalEpicIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 6, height: 6, scales: [2, 3], hash: "96f4f50193c5df13e000233d90f42a59", name: "ic_sparkle2", type: "png" });

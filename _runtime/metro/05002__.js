@@ -1,17 +1,7 @@
 // === Module 5002: ? ===
 
 // Module 5002
-import identity from "identity" /* 549 */;
-import _mod680 from "module_680" /* 680 */;
-import constant from "constant" /* 5003 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-if (_mod680) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod680(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
 
-export default fn;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "db11ea9da81d79144310eac53428fbe9", name: "CircleErrorIcon-primary", type: "png" });

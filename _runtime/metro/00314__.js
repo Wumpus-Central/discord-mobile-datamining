@@ -959,7 +959,7 @@ let items = [
             },
           style: StyleSheet.compose(arg1, type.props.style)
         };
-        tmp = v65535(type, obj);
+        tmp = collapsed(type, obj);
       }
       return tmp;
     }
@@ -1114,7 +1114,7 @@ let items = [
           _defaultRenderScrollComponent = self._defaultRenderScrollComponent;
         }
         const obj16 = { ref: self._captureScrollRef };
-        obj12.children = v65535(_defaultRenderScrollComponent(obj9), obj16, items);
+        obj12.children = collapsed(_defaultRenderScrollComponent(obj9), obj16, items);
         const tmp73Result = collapsedCategories(VirtualizedList(322).VirtualizedListContextProvider, obj12);
         let tmp78 = tmp73Result;
         if (self.props.debug) {

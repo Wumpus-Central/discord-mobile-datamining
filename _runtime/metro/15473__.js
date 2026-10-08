@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "5a2bc6869d662b6a68fce91294a99a63", name: "de.messages.5a2bc6869d662b6a68fce91294a99a63.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "581f8c52f7fbe4b74bb81eae47db1969", name: "EmojiFaceWithMonocleIcon", type: "png" });

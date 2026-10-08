@@ -1,334 +1,101 @@
 // === Module 6324: ? ===
 
 // Module 6324
-import normalizeSnapPoint from "normalizeSnapPoint" /* 6136 */;
-import id from "id" /* 6326 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop_mod from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1655 */;
 
-require = fn;
-let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
-let noop = fn(19);
-({ useCallback: metroRequire, useImperativeHandle: closure_7, useMemo: closure_8, useRef: closure_9, useState: c10, createElement: closure_11, forwardRef, memo } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-let closure_14 = { mount: false, data: "a" };
-const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1) {
-  _require = arg1;
-  name = name.name;
-  let DEFAULT_STACK_BEHAVIOR = name.stackBehavior;
-  if (undefined === DEFAULT_STACK_BEHAVIOR) {
-    DEFAULT_STACK_BEHAVIOR = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_STACK_BEHAVIOR;
-  }
-  let DEFAULT_ENABLE_DISMISS_ON_CLOSE = name.enableDismissOnClose;
-  if (undefined === DEFAULT_ENABLE_DISMISS_ON_CLOSE) {
-    DEFAULT_ENABLE_DISMISS_ON_CLOSE = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_ENABLE_DISMISS_ON_CLOSE;
-  }
-  const onDismiss = name.onDismiss;
-  const onAnimate = name.onAnimate;
-  const index = name.index;
-  let num = 0;
-  if (undefined !== index) {
-    num = index;
-  }
-  let enablePanDownToClose = name.enablePanDownToClose;
-  let tmp5 = undefined === enablePanDownToClose;
-  if (!tmp5) {
-    tmp5 = enablePanDownToClose;
-  }
-  enablePanDownToClose = tmp5;
-  const animateOnMount = name.animateOnMount;
-  let Fragment = name.containerComponent;
-  if (undefined === Fragment) {
-    Fragment = willUnmountSheet.Fragment;
-  }
-  const onChange = name.onChange;
-  const children = name.children;
-  const tmp8 = onAnimate(name, DEFAULT_ENABLE_DISMISS_ON_CLOSE);
-  const tmp9 = onDismiss(mountSheet(closure_14), 2);
-  const first = tmp9[0];
-  const mount = first.mount;
-  closure_9 = tmp9[1];
-  const bottomSheetModalInternal = require("module_6124").useBottomSheetModalInternal();
-  ({ hostName, mountSheet } = bottomSheetModalInternal);
-  const unmountSheet = bottomSheetModalInternal.unmountSheet;
-  willUnmountSheet = bottomSheetModalInternal.willUnmountSheet;
-  ({ containerHeight, containerOffset } = bottomSheetModalInternal);
-  let obj = require("module_6124");
-  const tmp11 = _require;
-  const removePortal = require("Portal").usePortal(hostName).removePortal;
-  const tmp15 = closure_9(null);
-  closure_14 = tmp15;
-  let num2 = -1;
-  if (!(undefined === animateOnMount || animateOnMount)) {
-    num2 = num;
-  }
-  closure_9(num2);
-  closure_9(null);
-  closure_9(-1);
-  closure_18 = tmp14(false);
-  closure_9(false);
-  const tmp14Result = closure_9(false);
-  tmp14Result.current = mount;
-  let items = [name];
-  const tmp17 = onChange(() => {
-    let combined = name;
-    if (!name) {
-      const _HermesInternal = HermesInternal;
-      combined = "bottom-sheet-modal-" + id.id();
-    }
-    return combined;
-  }, items);
-  closure_21 = tmp17;
-  function resetVariables() {
-    normalizeSnapPoint.print({ component: memoResult.name, method: resetVariables.name });
-    closure_15.current = -1;
-    closure_17.current = -1;
-    closure_18.current = false;
-    closure_20.current = false;
-    closure_19.current = false;
-  }
-  const tmp18 = num(resetVariables, []);
-  closure_22 = tmp18;
-  let items1 = [tmp17, tmp18, unmountSheet, removePortal, onDismiss];
-  const tmp19 = num(function unmount() {
-    closure_22();
-    unmountSheet(closure_21);
-    removePortal(closure_21);
-    if (ref5.current) {
-      closure_9(closure_14);
-    }
-    if (onDismiss) {
-      onDismiss();
-    }
-  }, items1);
-  closure_23 = tmp19;
-  let snapToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToIndex = current.snapToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let snapToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToPosition = current.snapToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToIndex = current.setToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToPosition = current.setToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let expand = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        expand = current.expand;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let collapse = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        collapse = current.collapse;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let close = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        close = current.close;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let forceClose = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        forceClose = current.forceClose;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  const items2 = [tmp17, DEFAULT_STACK_BEHAVIOR, mountSheet];
-  const present = num(function handlePresent(data) {
-    const animationFrame = requestAnimationFrame(() => {
-      closure_9({ mount: true, data });
-      mountSheet(closure_21, data, DEFAULT_STACK_BEHAVIOR);
-    });
-  }, items2);
-  const items3 = [willUnmountSheet, tmp19, tmp17, tmp5];
-  const dismiss = num(function handleDismiss(arg0) {
-    let tmp3 = -1 !== ref.current;
-    if (!tmp3) {
-      tmp3 = false !== closure_18.current;
-    }
-    if (!tmp3) {
-      tmp3 = tmp;
-    }
-    if (tmp3) {
-      if (tmp) {
-        willUnmountSheet(closure_21);
-        closure_19.current = true;
-        const current = closure_14.current;
-        if (current != null) {
-          current.forceClose(arg0);
-        }
-      } else if (closure_18.current) {
-        closure_23();
-      }
-    }
-  }, items3);
-  const items4 = [num];
-  const minimize = num(function handleMinimize() {
-    if (!closure_18.current) {
-      tmp.current = true;
-      if (-1 === ref.current) {
-        closure_17.current = num;
-      } else {
-        closure_17.current = tmp2.current;
-      }
-      const current = closure_14.current;
-      if (current != null) {
-        current.close();
-      }
-    }
-  }, items4);
-  const restore = num(function handleRestore() {
-    let current = closure_18.current;
-    if (current) {
-      current = !ref4.current;
-    }
-    if (current) {
-      closure_18.current = false;
-      const current2 = closure_14.current;
-      if (current2 != null) {
-        current2.snapToIndex(ref3.current);
-      }
-    }
-  }, []);
-  const items5 = [tmp17, tmp19, willUnmountSheet];
-  const obj2 = require("Portal");
-  const tmp21 = num(function handlePortalRender(fn) {
-    if (ref5.current) {
-      fn();
-    }
-  }, []);
-  const items6 = [onChange];
-  const items7 = [onAnimate];
-  const tmp20 = num(function handlePortalOnUnmount() {
-    let tmp = -1 === ref.current;
-    if (tmp) {
-      tmp = false === closure_18.current;
-    }
-    if (!tmp) {
-      closure_20.current = false;
-      closure_19.current = true;
-      if (closure_18.current) {
-        closure_23();
-      } else {
-        willUnmountSheet(closure_21);
-        const current = closure_14.current;
-        if (current != null) {
-          current.close();
-        }
-      }
-    }
-  }, items5);
-  const items8 = [DEFAULT_ENABLE_DISMISS_ON_CLOSE, tmp19];
-  const tmp22 = num(function handleBottomSheetOnChange(current, arg1, arg2) {
-    closure_15.current = current;
-    closure_16.current = null;
-    if (onChange) {
-      tmp(current, arg1, arg2);
-    }
-  }, items6);
-  const tmp23 = num((arg0, current, arg2, arg3, arg4) => {
-    closure_16.current = current;
-    if (onAnimate) {
-      tmp(arg0, current, arg2, arg3, arg4);
-    }
-  }, items7);
-  enablePanDownToClose(arg1, () => ({ snapToIndex, snapToPosition, setToIndex, setToPosition, expand, collapse, close, forceClose, dismiss, present, minimize, restore }));
-  let tmp27Result2 = null;
-  if (mount) {
-    const obj3 = { name: tmp17, hostName, handleOnMount: tmp21, handleOnUpdate: tmp21, handleOnUnmount: tmp20, children: null };
-    const obj4 = {};
-    const merged = Object.assign(tmp8);
-    obj4.ref = tmp15;
-    obj4.key = tmp17;
-    obj4.index = num;
-    obj4.snapPoints = name.snapPoints;
-    obj4.enablePanDownToClose = tmp5;
-    obj4.animateOnMount = tmp6;
-    obj4.containerHeight = containerHeight;
-    obj4.containerOffset = containerOffset;
-    obj4.onChange = tmp22;
-    obj4.onClose = tmp24;
-    obj4.onAnimate = tmp23;
-    obj4.$modal = true;
-    let tmp27Result = children;
-    if (typeof children === "function") {
-      const obj5 = { data: first.data };
-      tmp27Result = tmp27(children, obj5);
-    }
-    const obj6 = { children: unmountSheet(name(tmp12[9]), obj4, tmp27Result) };
-    obj3.children = removePortal(Fragment, obj6, tmp17);
-    tmp27Result2 = tmp27(tmp11(tmp12[6]).Portal, obj3, tmp17);
-    const tmp30 = name(tmp12[9]);
-  }
-  return tmp27Result2;
-}));
-memoResult.displayName = "BottomSheetModal";
+const require = globalThis.__r;
 
-export default memoResult;
+require = arg1;
+let dependencyMap = arg6;
+let __initData = { code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}" };
+let closure_3 = { code: "function pnpm_useScrollHandlerTs2(event,context){const{handleOnBeginDrag,onScrollBeginDrag,runOnJS}=this.__closure;handleOnBeginDrag(event,context);if(onScrollBeginDrag){runOnJS(onScrollBeginDrag)({nativeEvent:event});}}" };
+let closure_4 = { code: "function pnpm_useScrollHandlerTs3(event,context){const{handleOnEndDrag,onScrollEndDrag,runOnJS}=this.__closure;handleOnEndDrag(event,context);if(onScrollEndDrag){runOnJS(onScrollEndDrag)({nativeEvent:event});}}" };
+
+export const useScrollHandler = () => {
+  let useScrollEventsHandlersDefault = scrollEventsHandlersHook;
+  if (scrollEventsHandlersHook === undefined) {
+    useScrollEventsHandlersDefault = require("module_6325").useScrollEventsHandlersDefault;
+  }
+  _require = onScroll;
+  dependencyMap = onScrollBeginDrag;
+  __initData = onScrollEndDrag;
+  let workletNoop2;
+  let workletNoop3;
+  const animatedRef = require("cancelAnimation").useAnimatedRef();
+  let obj = require("cancelAnimation");
+  const sharedValue = require("cancelAnimation").useSharedValue(0);
+  const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
+  let workletNoop = scrollEventsHandlersDefault.handleOnScroll;
+  if (undefined === workletNoop) {
+    workletNoop = tmp3(6315).workletNoop;
+  }
+  workletNoop2 = scrollEventsHandlersDefault.handleOnBeginDrag;
+  if (undefined === workletNoop2) {
+    workletNoop2 = tmp3(6315).workletNoop;
+  }
+  workletNoop3 = scrollEventsHandlersDefault.handleOnEndDrag;
+  if (undefined === workletNoop3) {
+    workletNoop3 = tmp3(6315).workletNoop;
+  }
+  let workletNoop4 = scrollEventsHandlersDefault.handleOnMomentumEnd;
+  if (undefined === workletNoop4) {
+    workletNoop4 = tmp3(6315).workletNoop;
+  }
+  let workletNoop5 = scrollEventsHandlersDefault.handleOnMomentumBegin;
+  if (undefined === workletNoop5) {
+    workletNoop5 = tmp3(6315).workletNoop;
+  }
+  const obj3 = { scrollHandler: null, scrollableRef: null, scrollableContentOffsetY: null };
+  let obj2 = require("cancelAnimation");
+  const obj4 = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumBegin: null, onMomentumEnd: null };
+  const fn = function v(nativeEvent, arg1) {
+    workletNoop(nativeEvent, arg1);
+    if (closure_0) {
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
+    }
+  };
+  const tmp3Result = require("cancelAnimation");
+  fn.__closure = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
+  fn.__workletHash = 13105350120634;
+  fn.__initData = __initData;
+  obj4.onScroll = fn;
+  const fn2 = function _(nativeEvent, arg1) {
+    workletNoop2(nativeEvent, arg1);
+    if (closure_1) {
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
+    }
+  };
+  const obj5 = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
+  fn2.__closure = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  fn2.__workletHash = 803385440782;
+  fn2.__initData = workletNoop;
+  obj4.onBeginDrag = fn2;
+  class O {
+    constructor(arg0, arg1) {
+      tmp = workletNoop(scrollEventsHandlersHook, onScroll);
+      if (closure_2) {
+        tmp3 = closure_0;
+        tmp4 = closure_1;
+        obj = closure_0(closure_1[1]);
+        obj1 = { nativeEvent: null };
+        obj1.nativeEvent = scrollEventsHandlersHook;
+        tmp5 = obj.runOnJS(tmp2)(obj1);
+      }
+      return;
+    }
+  }
+  const obj6 = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__closure = { handleOnEndDrag: workletNoop3, onScrollEndDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__workletHash = 3274737678599;
+  O.__initData = workletNoop2;
+  obj4.onEndDrag = O;
+  obj4.onMomentumBegin = workletNoop5;
+  obj4.onMomentumEnd = workletNoop4;
+  const items = [workletNoop, workletNoop2, workletNoop3, workletNoop5, workletNoop4, onScroll, onScrollBeginDrag, onScrollEndDrag];
+  obj3.scrollHandler = tmp3Result.useAnimatedScrollHandler(obj4, items);
+  obj3.scrollableRef = animatedRef;
+  obj3.scrollableContentOffsetY = sharedValue;
+  return obj3;
+};

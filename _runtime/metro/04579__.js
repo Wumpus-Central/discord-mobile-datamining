@@ -1,63 +1,48 @@
 // === Module 4579: ? ===
 
 // Module 4579
-import noop from "module_19" /* 19 */;
+import module_4160_mod from "module_4160" /* 4160 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import module_4569_mod from "module_4569" /* 4569 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-function identity(arg0) {
-  return arg0;
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj = { default: module_4160 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4160;
 }
-function createImpl(arg0) {
-  store = store(4578).createStore(arg0);
-  function useBoundStore(arg0) {
-    let tmp = arg0;
-    closure_0 = store;
-    if (arg0 === undefined) {
-      tmp = identity;
-    }
-    closure_1 = tmp;
-    const syncExternalStore = noop.useSyncExternalStore(store.subscribe, () => closure_1(closure_0.getState()), () => closure_1(closure_0.getInitialState()));
-    const debugValue = noop.useDebugValue(syncExternalStore);
-    return syncExternalStore;
-  }
-  const merged = Object.assign(useBoundStore, store);
-  return useBoundStore;
+module_4160 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
+_typeof = tmp5;
+let module_4569 = module_4569_mod;
+if (!module_4569) {
+  const obj3 = { default: module_4569 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4569;
+}
+module_4569 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export const create = (arg0) => {
-  if (arg0) {
-    if (typeof createImpl === "function") {
-      store = store(4578).createStore(arg0);
-      function useBoundStore(arg0) {
-        let tmp = arg0;
-        closure_0 = store;
-        if (arg0 === undefined) {
-          tmp = identity;
-        }
-        closure_1 = tmp;
-        const syncExternalStore = noop.useSyncExternalStore(store.subscribe, () => closure_1(closure_0.getState()), () => closure_1(closure_0.getInitialState()));
-        const debugValue = noop.useDebugValue(syncExternalStore);
-        return syncExternalStore;
-      }
-      const _Object = Object;
-      const merged = Object.assign(useBoundStore, store);
-      let tmp2 = useBoundStore;
-      const obj = store(4578);
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    tmp2 = createImpl;
-  }
-  return tmp2;
+export default function setQuarter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4160.default(arg1) - (Math.floor(defaultResult1.getMonth() / 3) + 1);
+  return module_4569.default(defaultResult1, defaultResult1.getMonth() + 3 * diff);
 };
-export const useStore = function useStore(subscribe) {
-  closure_0 = subscribe;
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = identity;
-  }
-  closure_1 = tmp;
-  const syncExternalStore = noop.useSyncExternalStore(subscribe.subscribe, () => closure_1(closure_0.getState()), () => closure_1(closure_0.getInitialState()));
-  const debugValue = noop.useDebugValue(syncExternalStore);
-  return syncExternalStore;
-};
+export default exports.default;

@@ -1,36 +1,7 @@
 // === Module 12612: ? ===
 
 // Module 12612
-import _mod12607 from "module_12607" /* 12607 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
-    if (!globalThis.__SENTRY_TRACING__) {
-      return false;
-    }
-  }
-  let tmp = tracesSampler;
-  const client = _mod12607.getClient();
-  if (!tracesSampler) {
-    options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
-  }
-  let tmp3 = tmp;
-  if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
-    }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
-    tmp3 = enableTracing;
-  }
-  return tmp3;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "bbba3abb9f8c7848e1476bd19131aa3a", name: "MagicWandIcon", type: "png" });

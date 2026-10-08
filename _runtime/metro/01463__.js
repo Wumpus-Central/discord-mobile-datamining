@@ -1,21 +1,14 @@
 // === Module 1463: ? ===
 
 // Module 1463
-const require = globalThis.__r;
+import _mod1309 from "module_1309" /* 1309 */;
 
-function hasPropertyDescriptors() {
-  return require("flag");
-}
-hasPropertyDescriptors.hasArrayLengthDefineBug = function hasArrayLengthDefineBug() {
-  if (require("flag")) {
-    try {
-      return 1 !== require("flag")([], "length", { value: 1 }).length;
-    } catch (err) {
-      return true;
-    }
-  } else {
-    return null;
+
+export default function hasToStringTagShams() {
+  let toStringTag = _mod1309();
+  if (toStringTag) {
+    const _Symbol = Symbol;
+    toStringTag = Symbol.toStringTag;
   }
+  return toStringTag;
 };
-
-export default hasPropertyDescriptors;

@@ -1,23 +1,7 @@
 // === Module 6197: ? ===
 
 // Module 6197
-import _mod19 from "module_19" /* 19 */;
-import _modDef6182 from "module_6182" /* 6182 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-_mod19.useCallback;
 
-export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
-  const previousViewTag = current;
-  const items = [current, detectorUpdater];
-  return useCallback((viewRef) => {
-    if (null !== viewRef) {
-      previousViewTag.viewRef = viewRef;
-      if (-1 === previousViewTag.previousViewTag) {
-        previousViewTag.previousViewTag = _modDef6182(previousViewTag.viewRef);
-      }
-      if (!previousViewTag.firstRender) {
-        detectorUpdater(true);
-      }
-    }
-  }, items);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c1eae5d24a46f9d36a9168ec38445f00", name: "DragIcon", type: "png" });

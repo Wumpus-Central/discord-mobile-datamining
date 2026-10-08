@@ -1,7 +1,14 @@
 // === Module 11108: ? ===
 
 // Module 11108
-import registerAsset from "module_1132" /* 1132 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/billing/native/images", width: 223, height: 128.5, scales: [2, 3], hash: "f5aa8d22ffc464d3c9704d96fbbd1afa", name: "blocked-purchases-dark", type: "png" });
+export function getSDKSource() {
+  return "npm";
+}
+export const isBrowserBundle = function isBrowserBundle() {
+  let prop = typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined";
+  if (typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined") {
+    prop = globalThis.__SENTRY_BROWSER_BUNDLE__;
+  }
+  return prop;
+};

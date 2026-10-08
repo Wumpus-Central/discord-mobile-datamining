@@ -1,10 +1,18 @@
 // === Module 14188: ? ===
 
 // Module 14188
-import _mod14189 from "module_14189" /* 14189 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod14181 from "module_14181" /* 14181 */;
 
 
-export default function getReactNativeVersion() {
-  return _mod14189.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
+export default (arg0, arg1) => {
+  try {
+    const tmp8 = new _mod14181(arg0, arg1);
+    let str = tmp8.range;
+    if (!str) {
+      str = "*";
+    }
+    return str;
+  } catch (err) {
+    return null;
+  }
 };

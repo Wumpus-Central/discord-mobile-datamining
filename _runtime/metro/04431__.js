@@ -1,14 +1,28 @@
 // === Module 4431: ? ===
 
 // Module 4431
-import module_2121 from "module_2121" /* 2121 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-if (!module_2121) {
-  const obj2 = { default: module_2121 };
-  let obj = obj2;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  obj = module_2121;
+  tmp3 = _typeof;
 }
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default { date: obj.default({ formats: { full: "EEEE, do MMMM, y", long: "do MMMM, y", medium: "d MMM, y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "h:mm:ss a zzzz", long: "h:mm:ss a z", medium: "h:mm:ss a", short: "h:mm a" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u0915\u094B' {{time}}", long: "{{date}} '\u0915\u094B' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function getMinutes(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getMinutes();
+};
 export default exports.default;

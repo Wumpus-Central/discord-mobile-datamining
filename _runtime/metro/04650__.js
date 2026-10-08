@@ -1,44 +1,26 @@
 // === Module 4650: ? ===
 
 // Module 4650
-import noop from "module_19" /* 19 */;
-
-({ useRef: closure_0, useEffect: closure_1 } = noop);
-let deps = Symbol("UNINITIALIZED");
-
-export const useDisposableMemo = function useDisposableMemo(fn2, _temp, items, current2) {
-  const obj = { value: "r", deps, pendingDisposal: null };
-  const tmp2 = React(obj);
-  closure_0 = tmp2;
-  const obj2 = React(_temp);
-  obj2.current = _temp;
-  const tmp3 = React(current2);
-  deps = tmp3;
-  tmp3.current = current2;
-  if (tmp2.current.deps === deps) {
-    if (tmp2.current.deps !== deps) {
-      if (tmp3.current) {
-        tmp3.current.current = undefined;
-      }
-      try {
-        obj2.current(tmp2.current.value);
-      } catch (err) {
-      }
-    }
-    const obj3 = { value: fn2(), deps: items, pendingDisposal: null };
-    tmp2.current = obj3;
-    if (tmp3.current) {
-      tmp3.current.current = tmp2.current.value;
-    }
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "th" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, narrow: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" }, short: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} \u0E41\u0E25\u0E30 {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  framebus(() => () => {
-    if (ref3.current) {
-      ref3.current.current = undefined;
-    }
-    try {
-      ref2.current(ref.current.value);
-    } catch (err) {
-    }
-  }, []);
-  return tmp2.current.value;
-};
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, narrow: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30{1}", middle: "{0} {1}", pair: "{0}\u0E41\u0E25\u0E30{1}", start: "{0} {1}" } }, disjunction: { long: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" }, short: { end: "{0} \u0E2B\u0E23\u0E37\u0E2D {1}", middle: "{0}, {1}", pair: "{0}\u0E2B\u0E23\u0E37\u0E2D{1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} \u0E41\u0E25\u0E30 {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} \u0E41\u0E25\u0E30 {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } } }, locale: "th" };
+prop.push(obj);

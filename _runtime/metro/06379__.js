@@ -1,23 +1,47 @@
 // === Module 6379: ? ===
 
 // Module 6379
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import _mod19 from "module_19" /* 19 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6357 */;
+import MountRegistry2 from "MountRegistry" /* 6360 */;
 
-export default _getPrototypeOf;
+function shouldUpdateDetector(blocksHandlers, handlerTag) {
+  if (undefined === blocksHandlers) {
+    return false;
+  } else {
+    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
+    for (const item10012 of result) {
+      if (item10012 === arg1.handlerTag) {
+        obj2.return();
+        let flag = true;
+        return true;
+      }
+    }
+    return false;
+  }
+}
+const useEffect = _mod19.useEffect;
+
+export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
+  closure_0 = detectorUpdater;
+  closure_1 = current2;
+  const items = [detectorUpdater, current2];
+  useEffect(() => {
+    const MountRegistry = MountRegistry2.MountRegistry;
+    return MountRegistry.addMountListener((handlerTag) => {
+      if (current2.isMounted) {
+        const attachedGestures = current2.attachedGestures;
+        const iter = attachedGestures[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let requireToFail = nextResult.config.requireToFail;
+          let simultaneousWith = nextResult.config.simultaneousWith;
+          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
+          }
+          let tmp9 = detectorUpdater();
+          iter.return();
+        }
+      }
+    });
+  }, items);
+};

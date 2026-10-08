@@ -1,11 +1,7 @@
 // === Module 5771: ? ===
 
 // Module 5771
-import _mod17 from "module_17" /* 17 */;
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
 
-export default module_65.get("RNSFullWindowOverlay", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "f2fc96c4a753dd0c5dd02646aa2a518c", name: "img_account_sync_battlenet_white", type: "svg" });

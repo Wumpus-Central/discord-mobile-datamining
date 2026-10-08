@@ -1,11 +1,18 @@
 // === Module 6253: ? ===
 
 // Module 6253
-import _mod6254 from "module_6254" /* 6254 */;
-import _mod6256 from "module_6256" /* 6256 */;
-import _mod6257 from "module_6257" /* 6257 */;
+import HeaderHeightContext from "HeaderHeightContext" /* 6252 */;
+import noop from "module_19" /* 19 */;
 
+require = arg1;
 
-export const useCompetingGestures = _mod6254.useCompetingGestures;
-export const useExclusiveGestures = _mod6256.useExclusiveGestures;
-export const useSimultaneousGestures = _mod6257.useSimultaneousGestures;
+export const useHeaderHeight = function useHeaderHeight() {
+  const context = noop.useContext(HeaderHeightContext.HeaderHeightContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a navigator with a header?");
+    throw error;
+  } else {
+    return context;
+  }
+};

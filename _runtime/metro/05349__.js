@@ -1,15 +1,20 @@
 // === Module 5349: ? ===
 
 // Module 5349
+import _modDef5350 from "module_5350" /* 5350 */;
+import noop from "module_19" /* 19 */;
 
-export default function isPrimitive(fn) {
-  let tmp = null === fn;
-  if (!tmp) {
-    let tmp2 = typeof fn !== "function";
-    if (typeof fn !== "function") {
-      tmp2 = typeof fn !== "object";
-    }
-    tmp = tmp2;
-  }
-  return tmp;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
+
+export const SafeAreaView = function SafeAreaView(style) {
+  const obj = {};
+  const merged = Object.assign(style);
+  const items = [styles.flex, style.style];
+  obj.style = items;
+  const rect = { top: false, bottom: false, left: false, right: false };
+  const merged1 = Object.assign(style.edges);
+  obj.edges = rect;
+  return jsx(_modDef5350, {});
 };

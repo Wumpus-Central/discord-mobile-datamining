@@ -1,52 +1,30 @@
 // === Module 1584: ? ===
 
 // Module 1584
-import _slicedToArray from "module_32" /* 32 */;
+import NavigationBuilderContext from "NavigationBuilderContext" /* 1532 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+require = arg1;
 
-const require = arg1;
-
-export const usePreventRemove = function usePreventRemove(stateFromStores, arg1) {
-  _require = stateFromStores;
-  importDefault = arg1;
-  const first = navigation(key.useState(() => stateFromStores(first[2]).nanoid()), 1)[0];
-  navigation = require("module_1533").useNavigation();
-  let obj = require("module_1533");
-  key = require("module_1530").useRoute().key;
-  const obj2 = require("module_1530");
-  const preventRemoveContext = require("module_1585").usePreventRemoveContext();
-  const setPreventRemove = preventRemoveContext.setPreventRemove;
-  const notifyPreventRemove = preventRemoveContext.notifyPreventRemove;
-  const items = [setPreventRemove, first, key, stateFromStores];
-  const insertionEffect = key.useInsertionEffect(() => {
-    setPreventRemove(first, key, closure_0);
-    return () => {
-      setPreventRemove(first, key, false);
-    };
+export const useOnRouteFocus = function useOnRouteFocus(router) {
+  router = router.router;
+  const getState = router.getState;
+  const key = router.key;
+  const setState = router.setState;
+  const onRouteFocus = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).onRouteFocus;
+  const items = [getState, onRouteFocus, router, setState, key];
+  return noop.useCallback((arg0) => {
+    const tmp = getState();
+    const stateForRouteFocus = router.getStateForRouteFocus(tmp, arg0);
+    if (stateForRouteFocus !== tmp) {
+      setState(stateForRouteFocus);
+    }
+    let tmp6 = undefined !== onRouteFocus;
+    if (tmp6) {
+      tmp6 = undefined !== key;
+    }
+    if (tmp6) {
+      onRouteFocus(key);
+    }
   }, items);
-  const items1 = [first, key, stateFromStores, notifyPreventRemove];
-  const effect = key.useEffect(() => {
-    notifyPreventRemove();
-    return () => {
-      notifyPreventRemove();
-    };
-  }, items1);
-  const tmp6 = require("module_1512")((preventDefault) => {
-    if (closure_0) {
-      preventDefault.preventDefault();
-      const obj = { data: preventDefault.data };
-      closure_1(obj);
-    }
-  });
-  closure_7 = tmp6;
-  const items2 = [navigation, tmp6];
-  const effect1 = key.useEffect(() => {
-    let addListenerResult;
-    if (navigation != null) {
-      addListenerResult = navigation.addListener("beforeRemove", closure_7);
-    }
-    return addListenerResult;
-  }, items2);
 };

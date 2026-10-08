@@ -1,7 +1,19 @@
 // === Module 14393: ? ===
 
 // Module 14393
-import registerAsset from "module_1132" /* 1132 */;
+import _mod14394 from "module_14394" /* 14394 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "72603ac548e054665a7efcd4a8c834e5", name: "disconnect", type: "png" });
+export default (arg0, arg1) => {
+  let tmp3 = _mod14394[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod14394[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod14394;
+  }
+  return tmp3;
+};

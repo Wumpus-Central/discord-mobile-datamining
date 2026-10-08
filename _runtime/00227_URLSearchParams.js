@@ -209,7 +209,7 @@ let items = [
     key: "entries",
     value: function entries() {
       return (function generateEntries(_searchParams) {
-        const dependencyMap = _searchParams;
+        dependencyMap = _searchParams;
         c9 = 0;
         c10 = 0;
         c8 = 0;

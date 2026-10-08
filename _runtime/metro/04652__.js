@@ -1,30 +1,26 @@
 // === Module 4652: ? ===
 
 // Module 4652
-import c from "c" /* 576 */;
-import _mod4649 from "module_4649" /* 4649 */;
-import _slicedToArray from "module_32" /* 32 */;
-
-require = arg1;
-function getBooleanProperty(booleanProperty, arg1) {
-  return booleanProperty.booleanProperty(arg1);
-}
-
-export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
-  const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4649.useRiveProperty(arg1, arg0, getBooleanProperty);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp6 = cResult[3];
-      }
-      return tmp6;
-    }
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "uk" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } };
+    obj3.conjunction = obj4;
+    const obj5 = { long: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, short: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" } };
+    obj3.disjunction = obj5;
+    const obj6 = { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
-};
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = { data: { conjunction: { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" }, short: { end: "{0} \u0430\u0431\u043E {1}", middle: "{0}, {1}", pair: "{0} \u0430\u0431\u043E {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" } } }, locale: "uk" };
+prop.push(obj);

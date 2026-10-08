@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 192.33333333333334, height: 416, scales: [3], hash: "38957e8b938c7ee2a40f1e8c893feb71", name: "welcome-bg", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "a252d183eacce43fd0ee5d8aedb6e162", name: "ic_download_24px", type: "png" });

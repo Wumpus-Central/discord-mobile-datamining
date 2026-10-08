@@ -1,20 +1,7 @@
 // === Module 5766: ? ===
 
 // Module 5766
-import _modDef5767 from "module_5767" /* 5767 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const StyleSheet = fn(17).StyleSheet;
-const jsx = fn(21).jsx;
-const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export const SafeAreaView = function SafeAreaView(style) {
-  const obj = {};
-  const merged = Object.assign(style);
-  const items = [styles.flex, style.style];
-  obj.style = items;
-  const rect = { top: false, bottom: false, left: false, right: false };
-  const merged1 = Object.assign(style.edges);
-  obj.edges = rect;
-  return jsx(_modDef5767, {});
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "8b42912ce44ddbe707d5a6f54419c49d", name: "img_account_sync_youtube_light_and_dark", type: "svg" });

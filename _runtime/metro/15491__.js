@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "93a62708802e82d2ac90d97219fba2a0", name: "ro.messages.93a62708802e82d2ac90d97219fba2a0.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "55d614823d330c269b44a0f5edd649b6", name: "EmojiSmilingFaceWithSunglassesIcon", type: "png" });

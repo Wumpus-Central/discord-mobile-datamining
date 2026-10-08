@@ -1,37 +1,23 @@
 // === Module 6699: ? ===
 
 // Module 6699
-import get_ActivityIndicator from "module_17" /* 17 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
-const enforcing = TurboModuleRegistry.getEnforcing("RNCClipboard");
-const RNCClipboard_TEXT_CHANGED = "RNCClipboard_TEXT_CHANGED";
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcing);
-const listenerCount = nativeEventEmitter.listenerCount;
-let fn = listenerCount;
-if (listenerCount) {
-  const listenerCount2 = nativeEventEmitter.listenerCount;
-  fn = listenerCount2.bind(nativeEventEmitter);
-} else {
-  fn = (arg0) => nativeEventEmitter.listeners(arg0).length;
-}
-
-export default enforcing;
-export const addListener = (arg0) => {
-  if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
-    enforcing.setListener();
-  }
-  const addListenerResult = nativeEventEmitter.addListener(RNCClipboard_TEXT_CHANGED, arg0);
-  addListenerResult._remove = addListenerResult.remove;
-  addListenerResult.remove = function() {
-    this._remove();
-    if (0 === fn(RNCClipboard_TEXT_CHANGED)) {
-      enforcing.removeListener();
+export function getInvertedMultiplier(gestureDirection, arg1) {
+  if ("vertical" === gestureDirection) {
+    return 1;
+  } else if ("vertical-inverted" === gestureDirection) {
+    return -1;
+  } else if ("horizontal" === gestureDirection) {
+    let num2 = 1;
+    if (arg1) {
+      num2 = -1;
     }
-  };
-  return addListenerResult;
-};
-export const removeAllListeners = () => {
-  nativeEventEmitter.removeAllListeners(RNCClipboard_TEXT_CHANGED);
-  enforcing.removeListener();
-};
+    return num2;
+  } else if ("horizontal-inverted" === gestureDirection) {
+    let num = -1;
+    if (arg1) {
+      num = 1;
+    }
+    return num;
+  }
+}

@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/core/web/SystemTray", scales: [1], hash: "583747ddf8d5f6f15b7529afcdae5252", name: "SystemTray.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mcmllbmRz", scales: [1], hash: "9caafc7b18057ad120d00aa6068cf5c6", name: "th.messages.9caafc7b18057ad120d00aa6068cf5c6.compiled.messages", type: "jsona" });

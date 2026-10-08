@@ -1,56 +1,7 @@
 // === Module 4121: ? ===
 
 // Module 4121
-import _typeof_mod from "module_3964" /* 3964 */;
-import startOfISOWeek_mod from "startOfISOWeek" /* 4122 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let startOfISOWeek = startOfISOWeek_mod;
-if (!startOfISOWeek) {
-  const obj2 = { default: startOfISOWeek };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfISOWeek;
-}
-startOfISOWeek = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function getISOWeekYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const date = new Date(0);
-  date.setFullYear(fullYear + 1, 0, 4);
-  date.setHours(0, 0, 0, 0);
-  const date1 = new Date(0);
-  date1.setFullYear(fullYear, 0, 4);
-  date1.setHours(0, 0, 0, 0);
-  const defaultResult2 = startOfISOWeek.default(date);
-  const time = defaultResult1.getTime();
-  if (time >= defaultResult2.getTime()) {
-    let sum = fullYear + 1;
-  } else {
-    const time1 = defaultResult1.getTime();
-    sum = fullYear;
-    if (time1 < defaultResult3.getTime()) {
-      sum = fullYear - 1;
-    }
-  }
-  return sum;
-};
-export default exports.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==", scales: [1], hash: "e90f605b7eab08ff12e89eb7059a21bc", name: "de.messages.e90f605b7eab08ff12e89eb7059a21bc.compiled.messages", type: "jsona" });

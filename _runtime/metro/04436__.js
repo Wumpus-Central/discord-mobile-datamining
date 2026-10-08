@@ -1,26 +1,28 @@
 // === Module 4436: ? ===
 
 // Module 4436
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "cs" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, narrow: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, short: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import module_4435_mod from "module_4435" /* 4435 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
+
+let module_4435 = module_4435_mod;
+if (!module_4435) {
+  const obj = { default: module_4435 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4435;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+module_4435 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, narrow: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" }, short: { end: "{0} nebo {1}", middle: "{0}, {1}", pair: "{0} nebo {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0} a\u00A0{1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} a\u00A0{1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "cs" };
-prop.push(obj);
+requiredArgs = tmp5;
+
+export default function getUnixTime(arg0) {
+  requiredArgs.default(1, arguments);
+  return Math.floor(module_4435.default(arg0) / 1000);
+};
+export default exports.default;

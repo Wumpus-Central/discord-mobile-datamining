@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 103, height: 113, scales: [1, 2, 3], hash: "343480e621e13dced5261af60d8976f8", name: "graggle", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/chat_sidebar", width: 24, height: 24, scales: [2, 3], hash: "c0d7195f1a47742034be311c1f70ceed", name: "ic_settings", type: "png" });

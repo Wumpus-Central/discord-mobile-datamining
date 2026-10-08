@@ -1,26 +1,62 @@
 // === Module 4462: ? ===
 
 // Module 4462
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "zh-Hans" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
+const Parser = arg1;
+const dependencyMap = arg6;
+class Parser {
+  constructor() {
+    if (this instanceof Parser) {
+      return;
+    } else {
+      tmp = globalThis;
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
+    }
   }
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+const entry = {
+  key: "run",
+  value: function run(arg0, arg1, arg2, arg3) {
+    const self = this;
+    const iter = this.parse(arg0, arg1, arg2, arg3);
+    let tmp = null;
+    if (iter) {
+      const obj = { setter: null, rest: null };
+      const valueSetter = new Parser(4459).ValueSetter(iter.value, self.validate, self.set, self.priority, self.subPriority);
+      obj.setter = valueSetter;
+      obj.rest = iter.rest;
+      tmp = obj;
+    }
+    return tmp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1, arg2) {
+      return true;
+    }
+  }
+];
+for (let num = 0; num < items.length; num = num + 1) {
+  let tmp3 = items[num];
+  let flag = tmp3.enumerable;
+  if (!flag) {
+    flag = false;
+  }
+  tmp3.enumerable = flag;
+  tmp3.configurable = true;
+  if ("value" in tmp3) {
+    tmp3.writable = true;
+  }
+  let _Object = Object;
+  let definePropertyResult1 = Object.defineProperty(tmp2, tmp3.key, tmp3);
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" } }, disjunction: { long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" }, short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" } }, unit: { long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" }, short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" } } }, locale: "zh-Hans" };
-prop.push(obj);
+
+export { Parser };

@@ -1,275 +1,261 @@
 // === Module 4490: ? ===
 
 // Module 4490
-import _mod4467 from "module_4467" /* 4467 */;
+import _mod4462 from "module_4462" /* 4462 */;
 
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      const _module = _mod4467;
-      let closure_129_0 = { 1: "'inci", 5: "'inci", 8: "'inci", 70: "'inci", 80: "'inci", 2: "'nci", 7: "'nci", 20: "'nci", 50: "'nci", 3: "'\u00FCnc\u00FC", 4: "'\u00FCnc\u00FC", 100: "'\u00FCnc\u00FC", 6: "'nc\u0131", 9: "'uncu", 10: "'uncu", 30: "'uncu", 60: "'\u0131nc\u0131", 90: "'\u0131nc\u0131" };
-      const obj2 = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, meridiem: null, meridiemParse: null, isPM: null, longDateFormat: null, calendar: null, relativeTime: null, ordinal: null, week: null };
-      const split = "Ocak_\u015Eubat_Mart_Nisan_May\u0131s_Haziran_Temmuz_A\u011Fustos_Eyl\u00FCl_Ekim_Kas\u0131m_Aral\u0131k".split;
-      obj2.months = "Ocak_\u015Eubat_Mart_Nisan_May\u0131s_Haziran_Temmuz_A\u011Fustos_Eyl\u00FCl_Ekim_Kas\u0131m_Aral\u0131k".split("_");
-      const split2 = "Oca_\u015Eub_Mar_Nis_May_Haz_Tem_A\u011Fu_Eyl_Eki_Kas_Ara".split;
-      obj2.monthsShort = "Oca_\u015Eub_Mar_Nis_May_Haz_Tem_A\u011Fu_Eyl_Eki_Kas_Ara".split("_");
-      const split3 = "Pazar_Pazartesi_Sal\u0131_\u00C7ar\u015Famba_Per\u015Fembe_Cuma_Cumartesi".split;
-      obj2.weekdays = "Pazar_Pazartesi_Sal\u0131_\u00C7ar\u015Famba_Per\u015Fembe_Cuma_Cumartesi".split("_");
-      const split4 = "Paz_Pzt_Sal_\u00C7ar_Per_Cum_Cmt".split;
-      obj2.weekdaysShort = "Paz_Pzt_Sal_\u00C7ar_Per_Cum_Cmt".split("_");
-      const split5 = "Pz_Pt_Sa_\u00C7a_Pe_Cu_Ct".split;
-      obj2.weekdaysMin = "Pz_Pt_Sa_\u00C7a_Pe_Cu_Ct".split("_");
-      obj2.meridiem = function meridiem(arg0, arg1, arg2) {
-        if (arg0 < 12) {
-          let str2 = "\u00D6\u00D6";
-          if (arg2) {
-            str2 = "\u00F6\u00F6";
-          }
-          let str = str2;
-        } else {
-          str = "\u00D6S";
-          if (arg2) {
-            str = "\u00F6s";
-          }
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
         }
         return str;
-      };
-      obj2.meridiemParse = /öö|ÖÖ|ös|ÖS/;
-      obj2.isPM = function isPM(arg0) {
-        let tmp = "\u00F6s" === arg0;
-        if (!tmp) {
-          tmp = "\u00D6S" === arg0;
-        }
-        return tmp;
-      };
-      obj2.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD.MM.YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd, D MMMM YYYY HH:mm" };
-      obj2.calendar = { sameDay: "[bug\u00FCn saat] LT", nextDay: "[yar\u0131n saat] LT", nextWeek: "[gelecek] dddd [saat] LT", lastDay: "[d\u00FCn] LT", lastWeek: "[ge\u00E7en] dddd [saat] LT", sameElse: "L" };
-      obj2.relativeTime = { future: "%s sonra", past: "%s \u00F6nce", s: "birka\u00E7 saniye", ss: "%d saniye", m: "bir dakika", mm: "%d dakika", h: "bir saat", hh: "%d saat", d: "bir g\u00FCn", dd: "%d g\u00FCn", w: "bir hafta", ww: "%d hafta", M: "bir ay", MM: "%d ay", y: "bir y\u0131l", yy: "%d y\u0131l" };
-      obj2.ordinal = function ordinal(arg0, arg1) {
-        if ("d" !== arg1) {
-          if ("D" !== arg1) {
-            if ("Do" !== arg1) {
-              if ("DD" !== arg1) {
-                if (0 === arg0) {
-                  return arg0 + "'\u0131nc\u0131";
-                } else {
-                  const result = arg0 % 10;
-                  let tmp3 = dependencyMap[result];
-                  if (!tmp3) {
-                    tmp3 = dependencyMap[arg0 % 100 - result];
-                  }
-                  if (!tmp3) {
-                    let num5 = null;
-                    if (arg0 >= 100) {
-                      num5 = 100;
-                    }
-                    tmp3 = dependencyMap[num5];
-                  }
-                  return arg0 + tmp3;
-                }
-              }
-            }
-          }
-        }
-        return arg0;
-      };
-      obj2.week = { dow: 1, doy: 7 };
-      _module.defineLocale("tr", obj2);
+      }
     }
-  }
+    str = typeof arg0;
+  };
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function n(defineLocale) {
-      const dependencyMap = { 1: "'inci", 5: "'inci", 8: "'inci", 70: "'inci", 80: "'inci", 2: "'nci", 7: "'nci", 20: "'nci", 50: "'nci", 3: "'\u00FCnc\u00FC", 4: "'\u00FCnc\u00FC", 100: "'\u00FCnc\u00FC", 6: "'nc\u0131", 9: "'uncu", 10: "'uncu", 30: "'uncu", 60: "'\u0131nc\u0131", 90: "'\u0131nc\u0131" };
-      return defineLocale.defineLocale("tr", {
-        months: "Ocak_\u015Eubat_Mart_Nisan_May\u0131s_Haziran_Temmuz_A\u011Fustos_Eyl\u00FCl_Ekim_Kas\u0131m_Aral\u0131k".split("_"),
-        monthsShort: "Oca_\u015Eub_Mar_Nis_May_Haz_Tem_A\u011Fu_Eyl_Eki_Kas_Ara".split("_"),
-        weekdays: "Pazar_Pazartesi_Sal\u0131_\u00C7ar\u015Famba_Per\u015Fembe_Cuma_Cumartesi".split("_"),
-        weekdaysShort: "Paz_Pzt_Sal_\u00C7ar_Per_Cum_Cmt".split("_"),
-        weekdaysMin: "Pz_Pt_Sa_\u00C7a_Pe_Cu_Ct".split("_"),
-        meridiem(arg0, arg1, arg2) {
-          if (arg0 < 12) {
-            let str2 = "\u00D6\u00D6";
-            if (arg2) {
-              str2 = "\u00F6\u00F6";
-            }
-            let str = str2;
+function _setPrototypeOf(Hour0To11Parser, Parser) {
+  _setPrototypeOf = Object.setPrototypeOf;
+  if (!_setPrototypeOf) {
+    _setPrototypeOf = function _setPrototypeOf(Hour0To11Parser, Parser) {
+      Hour0To11Parser.__proto__ = Parser;
+      return Hour0To11Parser;
+    };
+  }
+  return _setPrototypeOf(Hour0To11Parser, Parser);
+}
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    _getPrototypeOf = Object.getPrototypeOf;
+  } else {
+    _getPrototypeOf = function _getPrototypeOf(arg0) {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  return _getPrototypeOf(arg0);
+}
+const Parser = _mod4462.Parser;
+let _createSuperInternal;
+class Hour0To11Parser {
+  constructor() {
+    if (this instanceof closure_1) {
+      length = arguments.length;
+      _Array = Array;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = length;
+      array = new Array(length);
+      tmp10 = array;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          array[num] = arguments[num];
+          num = num + 1;
+        } while (num < length);
+      }
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
+      items = [];
+      items[0] = tmp;
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      tmp13 = undefined === applyResult;
+      if (tmp13) {
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
+        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        tmp23 = referenceError;
+        throw referenceError;
+      } else {
+        str2 = "priority";
+        if ("priority" in applyResult) {
+          _Object = Object;
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+        } else {
+          num3 = 70;
+          applyResult.priority = 70;
+        }
+        if (tmp13) {
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
+          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp19 = referenceError1;
+          throw referenceError1;
+        } else {
+          items1 = ["h", "H", "k", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
+            _Object2 = Object;
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            str = "\u00D6S";
-            if (arg2) {
-              str = "\u00F6s";
-            }
+            applyResult.incompatibleTokens = items1;
           }
-          return str;
-        },
-        meridiemParse: /öö|ÖÖ|ös|ÖS/,
-        isPM(arg0) {
-          let tmp = "\u00F6s" === arg0;
-          if (!tmp) {
-            tmp = "\u00D6S" === arg0;
-          }
-          return tmp;
-        },
-        longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD.MM.YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd, D MMMM YYYY HH:mm" },
-        calendar: { sameDay: "[bug\u00FCn saat] LT", nextDay: "[yar\u0131n saat] LT", nextWeek: "[gelecek] dddd [saat] LT", lastDay: "[d\u00FCn] LT", lastWeek: "[ge\u00E7en] dddd [saat] LT", sameElse: "L" },
-        relativeTime: { future: "%s sonra", past: "%s \u00F6nce", s: "birka\u00E7 saniye", ss: "%d saniye", m: "bir dakika", mm: "%d dakika", h: "bir saat", hh: "%d saat", d: "bir g\u00FCn", dd: "%d g\u00FCn", w: "bir hafta", ww: "%d hafta", M: "bir ay", MM: "%d ay", y: "bir y\u0131l", yy: "%d y\u0131l" },
-        ordinal(arg0, arg1) {
-          if ("d" !== arg1) {
-            if ("D" !== arg1) {
-              if ("Do" !== arg1) {
-                if ("DD" !== arg1) {
-                  if (0 === arg0) {
-                    return arg0 + "'\u0131nc\u0131";
-                  } else {
-                    const result = arg0 % 10;
-                    let tmp3 = dependencyMap[result];
-                    if (!tmp3) {
-                      tmp3 = dependencyMap[arg0 % 100 - result];
-                    }
-                    if (!tmp3) {
-                      let num5 = null;
-                      if (arg0 >= 100) {
-                        num5 = 100;
-                      }
-                      tmp3 = dependencyMap[num5];
-                    }
-                    return arg0 + tmp3;
-                  }
-                }
-              }
-            }
-          }
-          return arg0;
-        },
-        week: { dow: 1, doy: 7 }
-      });
-    });
+          return applyResult;
+        }
+      }
+    } else {
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
+    }
   }
 }
-const moment = this.moment;
-let closure_0 = { 1: "'inci", 5: "'inci", 8: "'inci", 70: "'inci", 80: "'inci", 2: "'nci", 7: "'nci", 20: "'nci", 50: "'nci", 3: "'\u00FCnc\u00FC", 4: "'\u00FCnc\u00FC", 100: "'\u00FCnc\u00FC", 6: "'nc\u0131", 9: "'uncu", 10: "'uncu", 30: "'uncu", 60: "'\u0131nc\u0131", 90: "'\u0131nc\u0131" };
-moment.defineLocale("tr", {
-  months: "Ocak_\u015Eubat_Mart_Nisan_May\u0131s_Haziran_Temmuz_A\u011Fustos_Eyl\u00FCl_Ekim_Kas\u0131m_Aral\u0131k".split("_"),
-  monthsShort: "Oca_\u015Eub_Mar_Nis_May_Haz_Tem_A\u011Fu_Eyl_Eki_Kas_Ara".split("_"),
-  weekdays: "Pazar_Pazartesi_Sal\u0131_\u00C7ar\u015Famba_Per\u015Fembe_Cuma_Cumartesi".split("_"),
-  weekdaysShort: "Paz_Pzt_Sal_\u00C7ar_Per_Cum_Cmt".split("_"),
-  weekdaysMin: "Pz_Pt_Sa_\u00C7a_Pe_Cu_Ct".split("_"),
-  meridiem(arg0, arg1, arg2) {
-    if (arg0 < 12) {
-      let str2 = "\u00D6\u00D6";
-      if (arg2) {
-        str2 = "\u00F6\u00F6";
-      }
-      let str = str2;
-    } else {
-      str = "\u00D6S";
-      if (arg2) {
-        str = "\u00F6s";
-      }
-    }
-    return str;
-  },
-  meridiemParse: /öö|ÖÖ|ös|ÖS/,
-  isPM(arg0) {
-    let tmp = "\u00F6s" === arg0;
-    if (!tmp) {
-      tmp = "\u00D6S" === arg0;
-    }
-    return tmp;
-  },
-  longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD.MM.YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd, D MMMM YYYY HH:mm" },
-  calendar: { sameDay: "[bug\u00FCn saat] LT", nextDay: "[yar\u0131n saat] LT", nextWeek: "[gelecek] dddd [saat] LT", lastDay: "[d\u00FCn] LT", lastWeek: "[ge\u00E7en] dddd [saat] LT", sameElse: "L" },
-  relativeTime: { future: "%s sonra", past: "%s \u00F6nce", s: "birka\u00E7 saniye", ss: "%d saniye", m: "bir dakika", mm: "%d dakika", h: "bir saat", hh: "%d saat", d: "bir g\u00FCn", dd: "%d g\u00FCn", w: "bir hafta", ww: "%d hafta", M: "bir ay", MM: "%d ay", y: "bir y\u0131l", yy: "%d y\u0131l" },
-  ordinal(arg0, arg1) {
-    if ("d" !== arg1) {
-      if ("D" !== arg1) {
-        if ("Do" !== arg1) {
-          if ("DD" !== arg1) {
-            if (0 === arg0) {
-              return arg0 + "'\u0131nc\u0131";
+let dependencyMap = Hour0To11Parser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
+    throw typeError;
+  }
+}
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+Hour0To11Parser.prototype = Object.create(prototype, { constructor: { value: Hour0To11Parser, writable: true, configurable: true } });
+if (Parser) {
+  _setPrototypeOf(Hour0To11Parser, Parser);
+}
+let num = 0;
+dependencyMap = (function _isNativeReflectConstruct() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect3 = Reflect;
+    if (Reflect.construct) {
+      const _Reflect = Reflect;
+      if (Reflect.construct.sham) {
+        return false;
+      } else {
+        const _Proxy = Proxy;
+        if (typeof Proxy === "function") {
+          return true;
+        } else {
+          try {
+            const _Boolean = Boolean;
+            const call = valueOf.call;
+            const _Reflect2 = Reflect;
+            const _Boolean2 = Boolean;
+            if (typeof call === "unknown") {
+              valueOf();
             } else {
-              const result = arg0 % 10;
-              let tmp3 = dependencyMap[result];
-              if (!tmp3) {
-                tmp3 = dependencyMap[arg0 % 100 - result];
-              }
-              if (!tmp3) {
-                let num5 = null;
-                if (arg0 >= 100) {
-                  num5 = 100;
-                }
-                tmp3 = dependencyMap[num5];
-              }
-              return arg0 + tmp3;
+              call(constructResult);
             }
+            return true;
+          } catch (err) {
+            return false;
           }
         }
       }
     }
-    return arg0;
-  },
-  week: { dow: 1, doy: 7 }
-});
-const obj = {
-  months: "Ocak_\u015Eubat_Mart_Nisan_May\u0131s_Haziran_Temmuz_A\u011Fustos_Eyl\u00FCl_Ekim_Kas\u0131m_Aral\u0131k".split("_"),
-  monthsShort: "Oca_\u015Eub_Mar_Nis_May_Haz_Tem_A\u011Fu_Eyl_Eki_Kas_Ara".split("_"),
-  weekdays: "Pazar_Pazartesi_Sal\u0131_\u00C7ar\u015Famba_Per\u015Fembe_Cuma_Cumartesi".split("_"),
-  weekdaysShort: "Paz_Pzt_Sal_\u00C7ar_Per_Cum_Cmt".split("_"),
-  weekdaysMin: "Pz_Pt_Sa_\u00C7a_Pe_Cu_Ct".split("_"),
-  meridiem(arg0, arg1, arg2) {
-    if (arg0 < 12) {
-      let str2 = "\u00D6\u00D6";
-      if (arg2) {
-        str2 = "\u00F6\u00F6";
-      }
-      let str = str2;
-    } else {
-      str = "\u00D6S";
-      if (arg2) {
-        str = "\u00F6s";
-      }
+  }
+  return false;
+})();
+_createSuperInternal = function _createSuperInternal() {
+  const self = this;
+  const obj = _getPrototypeOf(_createSuperInternal);
+  if (closure_1) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
+  }
+  if (!constructResult) {
+    let tmp8 = self;
+    if (undefined === self) {
+      const _ReferenceError = ReferenceError;
+      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw referenceError;
     }
-    return str;
-  },
-  meridiemParse: /öö|ÖÖ|ös|ÖS/,
-  isPM(arg0) {
-    let tmp = "\u00F6s" === arg0;
-    if (!tmp) {
-      tmp = "\u00D6S" === arg0;
+  } else {
+    tmp8 = constructResult;
+    if ("object" !== _typeof(constructResult)) {
+      tmp8 = constructResult;
     }
-    return tmp;
-  },
-  longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD.MM.YYYY", LL: "D MMMM YYYY", LLL: "D MMMM YYYY HH:mm", LLLL: "dddd, D MMMM YYYY HH:mm" },
-  calendar: { sameDay: "[bug\u00FCn saat] LT", nextDay: "[yar\u0131n saat] LT", nextWeek: "[gelecek] dddd [saat] LT", lastDay: "[d\u00FCn] LT", lastWeek: "[ge\u00E7en] dddd [saat] LT", sameElse: "L" },
-  relativeTime: { future: "%s sonra", past: "%s \u00F6nce", s: "birka\u00E7 saniye", ss: "%d saniye", m: "bir dakika", mm: "%d dakika", h: "bir saat", hh: "%d saat", d: "bir g\u00FCn", dd: "%d g\u00FCn", w: "bir hafta", ww: "%d hafta", M: "bir ay", MM: "%d ay", y: "bir y\u0131l", yy: "%d y\u0131l" },
-  ordinal(arg0, arg1) {
-    if ("d" !== arg1) {
-      if ("D" !== arg1) {
-        if ("Do" !== arg1) {
-          if ("DD" !== arg1) {
-            if (0 === arg0) {
-              return arg0 + "'\u0131nc\u0131";
-            } else {
-              const result = arg0 % 10;
-              let tmp3 = dependencyMap[result];
-              if (!tmp3) {
-                tmp3 = dependencyMap[arg0 % 100 - result];
-              }
-              if (!tmp3) {
-                let num5 = null;
-                if (arg0 >= 100) {
-                  num5 = 100;
-                }
-                tmp3 = dependencyMap[num5];
-              }
-              return arg0 + tmp3;
-            }
-          }
-        }
-      }
-    }
-    return arg0;
-  },
-  week: { dow: 1, doy: 7 }
+  }
+  return tmp8;
 };
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("K" === arg1) {
+      return _createSuperInternal(4464).parseNumericPattern(_createSuperInternal(4465).numericPatterns.hour11h, arg0);
+    } else if ("Ko" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
+    } else {
+      return _createSuperInternal(4464).parseNDigits(arg1.length, arg0);
+    }
+  }
+};
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 0;
+      if (tmp) {
+        tmp = arg1 <= 11;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(getUTCHours, arg1, arg2) {
+      if (getUTCHours.getUTCHours() >= 12) {
+        if (arg2 < 12) {
+          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
+        }
+        return getUTCHours;
+      }
+      getUTCHours.setUTCHours(arg2, 0, 0, 0);
+    }
+  }
+];
+if (0 < items.length) {
+  do {
+    let tmp5 = items[num];
+    let flag = tmp5.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp5.enumerable = flag;
+    tmp5.configurable = true;
+    if ("value" in tmp5) {
+      tmp5.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    num = num + 1;
+  } while (num < items.length);
+}
+
+export { Hour0To11Parser };

@@ -1,29 +1,16 @@
 // === Module 6308: ? ===
 
 // Module 6308
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6309 from "module_6309" /* 6309 */;
-import noop_mod from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 6309 */;
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  let items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    const items = [_mod6309.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
-  }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(6310).BottomSheetBackground;
+const useContext = _mod19.useContext;
+
+export const useBottomSheetModal = () => {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
+  if (null === tmp) {
+    throw "'BottomSheetModalContext' cannot be null!";
+  } else {
+    return tmp;
   }
-  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
-
-export const BottomSheetBackgroundContainer = memoResult;
+};

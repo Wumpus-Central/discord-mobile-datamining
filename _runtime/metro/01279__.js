@@ -1,111 +1,117 @@
 // === Module 1279: ? ===
 
 // Module 1279
+import uint8ArrayDefault from "uint8Array" /* 1280 */;
+import unsafeStringify from "unsafeStringify" /* 1281 */;
 
-export default function sha1(str) {
-  let length;
-  if (typeof str === "string") {
-    const _unescape = unescape;
-    const _encodeURIComponent = encodeURIComponent;
-    const unescapeResult = unescape(encodeURIComponent(str));
-    const items = [];
-    let num = 0;
-    let arr = items;
-    if (0 < unescapeResult.length) {
-      do {
-        let arr2 = items.push(unescapeResult.charCodeAt(num));
-        num = num + 1;
-        arr = items;
-        length = unescapeResult.length;
-      } while (num < length);
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+let msecs = 0;
+
+export default function v1(COLLAPSED, c4, arg2) {
+  let unsafeStringifyResult = c4;
+  let num = c4;
+  if (c4) {
+    num = arg2;
+  }
+  if (!num) {
+    num = 0;
+  }
+  let array = unsafeStringifyResult;
+  if (!unsafeStringifyResult) {
+    const _Array = Array;
+    array = new Array(16);
+  }
+  let obj = COLLAPSED;
+  if (!COLLAPSED) {
+    obj = {};
+  }
+  const tmp7 = undefined !== obj.clockseq ? obj.clockseq : closure_4;
+  if (null == (obj.node || items)) {
+    let random = obj.random;
+    if (!random) {
+      let rng = obj.rng;
+      if (!rng) {
+        rng = uint8ArrayDefault;
+      }
+      random = rng();
+    }
+    let tmp12 = tmp6;
+    if (null == tmp6) {
+      items = [1 | random[0], random[1], random[2], random[3], random[4], random[5]];
+      tmp12 = items;
+    }
+    let tmp9 = tmp7;
+    let tmp8 = tmp12;
+    if (null == tmp7) {
+      closure_4 = tmp13;
+      tmp9 = tmp13;
+      tmp8 = tmp12;
     }
   } else {
-    const _Array2 = Array;
-    arr = str;
-    if (!Array.isArray(str)) {
-      const _Array = Array;
-      const call = slice.call;
-      arr = typeof call === "unknown" ? slice() : call(str);
+    tmp8 = tmp6;
+    tmp9 = tmp7;
+  }
+  if (undefined !== obj.msecs) {
+    msecs = obj.msecs;
+  } else {
+    const _Date = Date;
+    msecs = Date.now();
+  }
+  if (undefined !== obj.nsecs) {
+    num7 = obj.nsecs;
+  } else {
+    num7 = num7 + 1;
+  }
+  const sum = msecs - msecs + (num7 - num7) / 10000;
+  let tmp17 = sum < 0;
+  let tmp18 = tmp17;
+  if (sum < 0) {
+    tmp18 = undefined === obj.clockseq;
+  }
+  let tmp19 = tmp9;
+  if (tmp18) {
+    tmp19 = tmp9 + 1 & 16383;
+  }
+  if (sum >= 0) {
+    tmp17 = msecs > msecs;
+  }
+  if (tmp17) {
+    tmp17 = undefined === obj.nsecs;
+  }
+  if (tmp17) {
+    num7 = 0;
+  }
+  if (num7 >= 10000) {
+    const _Error = Error;
+    const error = new Error("uuid.v1(): Can't create more than 10M uuids/sec");
+    throw error;
+  } else {
+    closure_4 = tmp19;
+    const sum1 = msecs + 12219292800000;
+    const result = (10000 * (268435455 & sum1) + num7) % 4294967296;
+    array[+num] = result >>> 24 & 255;
+    array[++num + 1] = result >>> 16 & 255;
+    const tmp32 = +++num + 1 + 1;
+    array[tmp32] = result >>> 8 & 255;
+    array[+tmp32 + 1] = 255 & result;
+    array[++tmp32 + 1 + 1] = (sum1 / 4294967296 * 10000 & 268435455) >>> 8 & 255;
+    const tmp36 = +++tmp32 + 1 + 1 + 1;
+    array[tmp36] = 255 & (sum1 / 4294967296 * 10000 & 268435455);
+    array[+tmp36 + 1] = (sum1 / 4294967296 * 10000 & 268435455) >>> 24 & 15 | 16;
+    array[++tmp36 + 1 + 1] = (sum1 / 4294967296 * 10000 & 268435455) >>> 16 & 255;
+    const tmp39 = +++tmp36 + 1 + 1 + 1;
+    array[tmp39] = tmp19 >>> 8 | 128;
+    array[+tmp39 + 1] = 255 & tmp19;
+    let num10 = 0;
+    do {
+      array[tmp40 + 1 + num10] = tmp8[num10];
+      num10 = num10 + 1;
+    } while (num10 < 6);
+    if (!unsafeStringifyResult) {
+      unsafeStringifyResult = unsafeStringify.unsafeStringify(array);
     }
+    return unsafeStringifyResult;
   }
-  arr.push(128);
-  const rounded = Math.ceil((arr.length / 4 + 2) / 16);
-  const array = new Array(rounded);
-  let num3 = 0;
-  if (0 < rounded) {
-    const _Uint32Array = Uint32Array;
-    const uint32Array = new Uint32Array(16);
-    let num5 = 0;
-    do {
-      do {
-        let sum = tmp10 + 4 * num5;
-        uint32Array[num5] = arr[sum] << 24 | arr[sum + 1] << 16 | arr[sum + 2] << 8 | arr[sum + 3];
-        num5 = num5 + 1;
-      } while (num5 < 16);
-      array[num3] = uint32Array;
-      num3 = num3 + 1;
-    } while (num3 < rounded);
-  }
-  const items1 = [1732584193, 4023233417, 2562383102, 271733878, 3285377520];
-  const diff = arr.length - 1;
-  array[rounded - 1][14] = 8 * diff / Math.pow(2, 32);
-  array[rounded - 1][14] = Math.floor(array[rounded - 1][14]);
-  array[rounded - 1][15] = 8 * (arr.length - 1) & 4294967295;
-  let num6 = 0;
-  if (0 < rounded) {
-    const _Uint32Array2 = Uint32Array;
-    const uint32Array1 = new Uint32Array(80);
-    let num8 = 0;
-    do {
-      do {
-        uint32Array1[num8] = array[num6][num8];
-        num8 = num8 + 1;
-        let num9 = 16;
-      } while (num8 < 16);
-      do {
-        let tmp19 = uint32Array1[num9 - 3] ^ uint32Array1[num9 - 8] ^ uint32Array1[num9 - 14] ^ uint32Array1[num9 - 16];
-        uint32Array1[num9] = tmp19 << 1 | tmp19 >>> 31;
-        num9 = num9 + 1;
-      } while (num9 < 80);
-      [tmp20, tmp21, tmp22, tmp23, tmp24] = items1;
-      let num10 = 0;
-      do {
-        let _Math = Math;
-        let rounded1 = Math.floor(num10 / 20);
-        let tmp26 = tmp20 << 5;
-        let tmp27 = tmp20 >>> 27;
-        let tmp30 = tmp23;
-        let tmp31 = tmp22;
-        let tmp33 = tmp20;
-        if (0 === rounded1) {
-          let tmp34 = tmp21 & tmp22 ^ ~tmp21 & tmp23;
-        } else {
-          if (1 !== rounded1) {
-            if (3 !== rounded1) {
-              if (2 === rounded1) {
-                tmp34 = tmp21 & tmp22 ^ tmp21 & tmp23 ^ tmp22 & tmp23;
-              }
-            }
-          }
-          tmp34 = tmp21 ^ tmp22 ^ tmp23;
-        }
-        let tmp35 = (tmp26 | tmp27) + tmp34 + tmp24 + [1518500249, 1859775393, 2400959708, 3395469782][rounded1] + uint32Array1[num10] >>> 0;
-        let tmp36 = (tmp21 << 30 | tmp21 >>> 2) >>> 0;
-        num10 = num10 + 1;
-        tmp24 = tmp23;
-        tmp23 = tmp22;
-        tmp22 = tmp36;
-        tmp21 = tmp20;
-        tmp20 = tmp35;
-      } while (num10 < 80);
-      items1[0] = items1[0] + tmp35 >>> 0;
-      items1[1] = items1[1] + tmp33 >>> 0;
-      items1[2] = items1[2] + tmp36 >>> 0;
-      items1[3] = items1[3] + tmp31 >>> 0;
-      items1[4] = items1[4] + tmp30 >>> 0;
-      num6 = num6 + 1;
-    } while (num6 < rounded);
-  }
-  const items2 = [items1[0] >> 24 & 255, items1[0] >> 16 & 255, items1[0] >> 8 & 255, 255 & items1[0], items1[1] >> 24 & 255, items1[1] >> 16 & 255, items1[1] >> 8 & 255, 255 & items1[1], items1[2] >> 24 & 255, items1[2] >> 16 & 255, items1[2] >> 8 & 255, 255 & items1[2], items1[3] >> 24 & 255, items1[3] >> 16 & 255, items1[3] >> 8 & 255, 255 & items1[3], items1[4] >> 24 & 255, items1[4] >> 16 & 255, items1[4] >> 8 & 255, 255 & items1[4]];
-  return items2;
 };

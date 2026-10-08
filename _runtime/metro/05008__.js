@@ -1,26 +1,7 @@
 // === Module 5008: ? ===
 
 // Module 5008
-import _mod514 from "module_514" /* 514 */;
-import _mod523 from "module_523" /* 523 */;
-import baseIsArguments from "baseIsArguments" /* 533 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
 
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
-    }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
-  }
-  return tmp3;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "d7e806908635ad007fa68ad7fb2ccc9f", name: "ic_warning_24px", type: "png" });

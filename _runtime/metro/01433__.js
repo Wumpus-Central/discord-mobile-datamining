@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 498, height: 498, scales: [1], hash: "df3228db1e67e406cba743551d2b055e", name: "clyde-avatar", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/provisional_account_avatars", width: 320, height: 320, scales: [1], hash: "a596b7b1c5591bc84dec5104138dc6b9", name: "default_provisional_avatar_3", type: "png" });

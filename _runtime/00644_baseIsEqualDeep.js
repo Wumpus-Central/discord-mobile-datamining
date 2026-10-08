@@ -11,7 +11,7 @@ import valueOf from "valueOf" /* 662 */;
 import equalObjects from "equalObjects" /* 666 */;
 
 
-export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
+export default function baseIsEqualDeep(value, value2, arr, height, fn, arg5) {
   const tmp3 = _mod514(value);
   let str = "[object Array]";
   let str2 = "[object Array]";
@@ -49,14 +49,14 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
       }
       if (!flag2) {
         if (!_mod538(value)) {
-          let tmp19 = valueOf(value, value2, str2, arg2, arg3, fn, tmp9);
+          let tmp19 = valueOf(value, value2, str2, arr, height, fn, tmp9);
         }
         return tmp19;
       }
-      tmp19 = equalArrays(value, value2, arg2, arg3, fn, tmp9);
+      tmp19 = equalArrays(value, value2, arr, height, fn, tmp9);
     }
   }
-  if (!(1 & arg2)) {
+  if (!(1 & arr)) {
     if (!flag) {
       if (!tmp6) {
         let valueResult = value;
@@ -71,7 +71,7 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
         if (!tmp8) {
           tmp34 = new Stack();
         }
-        return fn(valueResult, valueResult2, arg2, arg3, tmp34);
+        return fn(valueResult, valueResult2, arr, height, tmp34);
       } else {
         const call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
@@ -94,7 +94,7 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
     if (!tmp8) {
       tmp8 = new Stack();
     }
-    tmp42 = equalObjects(value, value2, arg2, arg3, fn, tmp8);
+    tmp42 = equalObjects(value, value2, arr, height, fn, tmp8);
   }
   return tmp42;
 };

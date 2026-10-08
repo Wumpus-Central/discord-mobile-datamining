@@ -1,13 +1,16 @@
 // === Module 6304: ? ===
 
 // Module 6304
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6305 from "module_6305" /* 6305 */;
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.pointerEvents = "box-none";
-obj.container = obj2;
+const useContext = _mod19.useContext;
 
-export const styles = StyleSheet.create(obj);
+export const useBottomSheet = () => {
+  const tmp = useContext(_mod6305.BottomSheetContext);
+  if (null === tmp) {
+    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

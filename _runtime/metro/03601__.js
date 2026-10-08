@@ -1,7 +1,0 @@
-// === Module 3601: ? ===
-
-// Module 3601
-import registerAsset from "module_1132" /* 1132 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "edd9aebc3aa7ce3ca429edc77c2311db", name: "fr.messages.edd9aebc3aa7ce3ca429edc77c2311db.compiled.messages", type: "jsona" });

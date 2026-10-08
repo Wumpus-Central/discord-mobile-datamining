@@ -1,7 +1,9 @@
 // === Module 10992: ? ===
 
 // Module 10992
-import registerAsset from "module_1132" /* 1132 */;
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5dd78d279cf4e486538a5a399b9d186a", name: "PlusMediumIcon", type: "png" });
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

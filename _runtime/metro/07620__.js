@@ -1,7 +1,14 @@
 // === Module 7620: ? ===
 
 // Module 7620
-import registerAsset from "module_1132" /* 1132 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGForeignObject", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, x: true, y: true, height: true, width: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = size;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_channel/native/images", width: 49, height: 50, scales: [2, 3], hash: "83d9ad6473cb40e1d6825c7dbdb7f70f", name: "ic_media_post_share_prompt", type: "png" });
+export default module_65.get("RNSVGForeignObject", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,47 +1,14 @@
 // === Module 4228: ? ===
 
 // Module 4228
-import _typeof_mod from "module_3964" /* 3964 */;
-import startOfYear_mod from "startOfYear" /* 4183 */;
-import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 4126 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import module_2133 from "module_2133" /* 2133 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2133) {
+  const obj2 = { default: module_2133 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2133;
 }
-_typeof = tmp3;
-let startOfYear = startOfYear_mod;
-if (!startOfYear) {
-  const obj2 = { default: startOfYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfYear;
-}
-startOfYear = tmp5;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj3 = { default: differenceInCalendarDays };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
 
-export default function getDayOfYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
-};
+export default { date: obj.default({ formats: { full: "y\u5E74M\u6708d\u65E5EEEE", long: "y\u5E74M\u6708d\u65E5", medium: "y/MM/dd", short: "y/MM/dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H\u6642mm\u5206ss\u79D2 zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

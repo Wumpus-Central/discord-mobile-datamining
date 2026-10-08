@@ -1,7 +1,71 @@
 // === Module 9876: ? ===
 
 // Module 9876
-import registerAsset from "module_1132" /* 1132 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9778 */;
+import _mod9865 from "module_9865" /* 9865 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
+const NLTimeUnitLaterFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const regExp = new RegExp("(" + _mod9865.TIME_UNITS_PATTERN + ")(later|na|vanaf nu|voortaan|vooruit|uit)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod9865.TIME_UNITS_PATTERN + ")(later|vanaf nu)(?=(?:\\W|$))", "i");
+class NLTimeUnitLaterFormatParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, NLTimeUnitLaterFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLTimeUnitLaterFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
+  }
+}
+_inherits(NLTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.strictMode ? regExp1 : regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = NLTimeUnitLaterFormatParser(9774).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitLaterFormatParser(9865).parseDuration(arg1[1]));
+    }
+  }
+];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "6220c6fc32c3a2a05a977c59f0c7790d", name: "wumpus-ash", type: "png" });
+export default _createClass(NLTimeUnitLaterFormatParser, items);

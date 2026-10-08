@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "f404f612098b02658fa33a60af8c49b1", name: "tr.messages.f404f612098b02658fa33a60af8c49b1.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "86bac5d1c2c3692fd913c76c5af70f86", name: "EmojiUpsideDownFaceIcon", type: "png" });

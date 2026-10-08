@@ -1,7 +1,78 @@
 // === Module 9917: ? ===
 
 // Module 9917
-import registerAsset from "module_1132" /* 1132 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod9792 from "module_9792" /* 9792 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ESMergeDateTimeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ESMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(ESMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = ESMergeDateTimeRefiner;
+_inherits(ESMergeDateTimeRefiner, fn(_mod9792).default);
+const entry = {
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(?:,|de|aslas|a)?\\s*$");
+    return regExp;
+  }
+};
+const items = [entry];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 16, height: 16, scales: [2, 3], hash: "f5a4357d7c0b7e1db64214ae6f5682c3", name: "ic_premium_channel_16px", type: "png" });
+export default _createClass(ESMergeDateTimeRefiner, items);

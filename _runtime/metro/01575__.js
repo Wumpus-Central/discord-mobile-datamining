@@ -1,54 +1,50 @@
 // === Module 1575: ? ===
 
 // Module 1575
+import _mod1545 from "module_1545" /* 1545 */;
 import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
-export const useOnGetState = function useOnGetState(getState) {
-  getState = getState.getState;
-  const getStateListeners = getState.getStateListeners;
-  let addKeyedListener;
-  let callback;
-  addKeyedListener = addKeyedListener.useContext(getState(getStateListeners[1]).NavigationBuilderContext).addKeyedListener;
-  const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
-  let str = "root";
-  if (context) {
-    str = context.key;
+export const useFocusEffect = function useFocusEffect(cResult) {
+  let navigation = _mod1545.useNavigation();
+  if (undefined !== arguments[1]) {
+    const _console = console;
+    console.error("You passed a second argument to 'useFocusEffect', but it only accepts one argument. If you want to pass a dependency array, you can use 'React.useCallback':\n\nuseFocusEffect(\n  React.useCallback(() => {\n    // Your code here\n  }, [depA, depB])\n);\n\nSee usage guide: https://reactnavigation.org/docs/use-focus-effect");
   }
-  const items = [getState, getStateListeners];
-  callback = obj.useCallback(() => {
-    const tmp = getState();
-    const routes = tmp.routes;
-    const mapped = routes.map((state) => {
-      let tmpResult;
-      if (getStateListeners[state.key] != null) {
-        tmpResult = tmp();
+  const items = [cResult, navigation];
+  const effect = noop.useEffect(() => {
+    navigation = false;
+    if (navigation.isFocused()) {
+      const tmp2 = cResult();
+      navigation = true;
+    }
+    closure_2 = obj.addListener("focus", () => {
+      if (!c1) {
+        if (undefined !== _undefined) {
+          _undefined();
+        }
+        const tmp3 = _undefined();
+        if (undefined === tmp3) {
+          const tmp4 = tmp3;
+        }
+        _undefined = tmp4;
+        c1 = true;
       }
-      let tmp3 = state;
-      if (state.state !== tmpResult) {
-        const obj = {};
-        const merged = Object.assign(state);
-        obj.state = tmpResult;
-        tmp3 = obj;
-      }
-      return tmp3;
     });
-    let tmp3 = tmp;
-    if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      const obj2 = {};
-      let merged = Object.assign(tmp);
-      obj2.routes = mapped;
-      tmp3 = obj2;
-    }
-    return tmp3;
+    closure_3 = obj.addListener("blur", () => {
+      if (undefined !== _undefined) {
+        _undefined();
+      }
+      _undefined = undefined;
+      c1 = false;
+    });
+    return () => {
+      if (undefined !== _undefined) {
+        _undefined();
+      }
+      closure_2();
+      closure_3();
+    };
   }, items);
-  const items1 = [addKeyedListener, callback, str];
-  const effect = obj.useEffect(() => {
-    let tmpResult;
-    if (addKeyedListener != null) {
-      tmpResult = tmp("getState", str, callback);
-    }
-    return tmpResult;
-  }, items1);
 };

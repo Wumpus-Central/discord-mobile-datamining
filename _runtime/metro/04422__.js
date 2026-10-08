@@ -1,44 +1,47 @@
 // === Module 4422: ? ===
 
 // Module 4422
-import module_4423 from "module_4423" /* 4423 */;
-import module_4424 from "module_4424" /* 4424 */;
-import module_4425 from "module_4425" /* 4425 */;
-import date_mod from "module_4426" /* 4426 */;
-import date_mod from "module_4427" /* 4427 */;
+import _typeof_mod from "module_4156" /* 4156 */;
+import module_4423_mod from "module_4423" /* 4423 */;
+import requiredArgs_mod from "requiredArgs" /* 4157 */;
 
-if (!module_4423) {
-  const obj = { default: module_4423 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4423;
+  tmp3 = _typeof;
 }
-if (!module_4424) {
-  const obj2 = { default: module_4424 };
+_typeof = tmp3;
+let module_4423 = module_4423_mod;
+if (!module_4423) {
+  const obj2 = { default: module_4423 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4424;
+  tmp5 = module_4423;
 }
-if (!module_4425) {
-  const obj3 = { default: module_4425 };
+module_4423 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4425;
+  tmp7 = requiredArgs;
 }
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp7;
 
-export default { code: "zh-TW", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function getDaysInYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  if ("Invalid Date" === String(date)) {
+    return NaN;
+  } else {
+    let num = 365;
+    if (module_4423.default(defaultResult1)) {
+      num = 366;
+    }
+    return num;
+  }
+  date = new Date(defaultResult1);
+};
 export default exports.default;

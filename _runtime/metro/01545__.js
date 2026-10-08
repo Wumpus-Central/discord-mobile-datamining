@@ -1,75 +1,24 @@
 // === Module 1545: ? ===
 
 // Module 1545
-function getStateFromRouteParams(params) {
-  if (null != params) {
-    if (typeof params === "object") {
-      if ("state" in params) {
-        if (params.state) {
-          if (typeof params.state === "object") {
-            if ("routes" in params.state) {
-              const _Array = Array;
-              if (Array.isArray(params.state.routes)) {
-                const routes = params.state.routes;
-                if (routes.every((name) => {
-                  let tmp = typeof name === "object";
-                  if (typeof name === "object") {
-                    tmp = null != name;
-                  }
-                  if (tmp) {
-                    tmp = "name" in name;
-                  }
-                  if (tmp) {
-                    tmp = typeof name.name === "string";
-                  }
-                  return tmp;
-                })) {
-                  state = params.state;
-                }
-                return state;
-              }
-            }
-          }
-        }
-      }
-      if ("screen" in params) {
-        if (params.screen) {
-          if (typeof params.screen === "string") {
-            const obj2 = { name: params.screen, params: null, path: null, state: null };
-            params = undefined;
-            if ("params" in params) {
-              if (typeof params.params === "object") {
-                if (null != params.params) {
-                  params = params.params;
-                }
-              }
-            }
-            obj2.params = params;
-            let path;
-            if ("path" in params) {
-              if (typeof params.path === "string") {
-                path = params.path;
-              }
-            }
-            obj2.path = path;
-            let tmp4;
-            if ("params" in params) {
-              if (typeof params.params === "object") {
-                if (null != params.params) {
-                  tmp4 = getStateFromRouteParams(params.params);
-                }
-              }
-            }
-            const obj = { routes: null };
-            obj2.state = tmp4;
-            const items = [obj2];
-            obj.routes = items;
-            state = obj;
-          }
-        }
-      }
+import NavigationContainerRefContext from "NavigationContainerRefContext" /* 1533 */;
+import NavigationContext from "NavigationContext" /* 1546 */;
+import noop from "module_19" /* 19 */;
+
+require = arg1;
+
+export const useNavigation = function useNavigation() {
+  const context = noop.useContext(NavigationContainerRefContext.NavigationContainerRefContext);
+  let context1 = noop.useContext(NavigationContext.NavigationContext);
+  if (undefined === context1) {
+    if (undefined === context) {
+      const _Error = Error;
+      const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+      throw error;
     }
   }
-}
-
-export { getStateFromRouteParams };
+  if (context1 == null) {
+    context1 = context;
+  }
+  return context1;
+};

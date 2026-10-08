@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==", scales: [1], hash: "277cee809330c511936d96d22ff4ddc7", name: "fi.messages.277cee809330c511936d96d22ff4ddc7.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/gift_cards/messages", scales: [1], hash: "3bed3d26d010020e4b771bdb2fb915bf", name: "GiftCards.compiled.messages", type: "jsona" });

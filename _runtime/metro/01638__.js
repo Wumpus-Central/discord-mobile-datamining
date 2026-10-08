@@ -3,7 +3,7 @@
 // Module 1638
 import module_65 from "module_65" /* 65 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "KeyboardBackgroundView", validAttributes: {} };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaView", validAttributes: { mode: true, edges: true } };
 
-export default module_65.get("KeyboardBackgroundView", () => obj);
+export default module_65.get("RNCSafeAreaView", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

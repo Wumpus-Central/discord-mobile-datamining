@@ -1,20 +1,9 @@
 // === Module 6529: ? ===
 
 // Module 6529
-import _mod17 from "module_17" /* 17 */;
 
-const constants = _mod17.Platform.constants;
-if (constants != null) {
-  const reactNativeVersion = constants.reactNativeVersion;
-}
-try {
-  let major;
-  if (reactNativeVersion != null) {
-    major = reactNativeVersion.major;
+export default function _arrayWithHoles(arg0) {
+  if (Array.isArray(arg0)) {
+    return arg0;
   }
-  if (0 !== major) {
-    const InteractionManager = _mod17.InteractionManager;
-  }
-  exports.InteractionManager = InteractionManager;
-} catch (err) {
-}
+};

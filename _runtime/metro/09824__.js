@@ -1,7 +1,90 @@
 // === Module 9824: ? ===
 
 // Module 9824
-import registerAsset from "module_1132" /* 1132 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9778 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
+const DETimeUnitAgoFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class DETimeUnitAgoFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, DETimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(DETimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp("(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" + DETimeUnitAgoFormatParser(9817).NUMBER_PATTERN + ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" + DETimeUnitAgoFormatParser(9771).matchAnyPattern(DETimeUnitAgoFormatParser(9817).TIME_UNIT_DICTIONARY) + ")", "i");
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      let num = 1;
+      if (arg1[2]) {
+        num = DETimeUnitAgoFormatParser(9817).parseNumberPattern(arg1[2]);
+      }
+      const obj = {};
+      obj[DETimeUnitAgoFormatParser(9817).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /vor/.test(formatted);
+        if (!isMatch) {
+          isMatch = /letzte/.test(formatted);
+          const obj3 = /letzte/;
+        }
+        if (!isMatch) {
+          isMatch = /vergangen/.test(formatted);
+          const obj4 = /vergangen/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = DETimeUnitAgoFormatParser(9773).reverseDuration(obj);
+        }
+        const ParsingComponents = DETimeUnitAgoFormatParser(9774).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[1] || arg1[3] || "";
+    }
+  }
+];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/self_mod/stranger_danger/images", width: 21, height: 20, scales: [1, 2, 3], hash: "4ea1c192cad9acc1fe190c6de3d2e5ff", name: "ic_thumbsdown", type: "png" });
+export default _createClass(DETimeUnitAgoFormatParser, items);

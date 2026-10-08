@@ -1,227 +1,260 @@
 // === Module 4491: ? ===
 
 // Module 4491
-import _mod4467 from "module_4467" /* 4467 */;
+import _mod4462 from "module_4462" /* 4462 */;
 
-let fn = function _(moment) {
-  function relativeTimeWithPlural(arg0, arg1, arg2) {
-    if ("m" === arg2) {
-      let str7 = "\u0445\u0432\u0438\u043B\u0438\u043D\u0443";
-      if (arg1) {
-        str7 = "\u0445\u0432\u0438\u043B\u0438\u043D\u0430";
-      }
-      let sum = str7;
-    } else if ("h" === arg2) {
-      let str6 = "\u0433\u043E\u0434\u0438\u043D\u0443";
-      if (arg1) {
-        str6 = "\u0433\u043E\u0434\u0438\u043D\u0430";
-      }
-      sum = str6;
-    } else {
-      let str = "\u0441\u0435\u043A\u0443\u043D\u0434\u0443_\u0441\u0435\u043A\u0443\u043D\u0434\u0438_\u0441\u0435\u043A\u0443\u043D\u0434";
-      const text = `${arg0} `;
-      if (arg1) {
-        str = "\u0441\u0435\u043A\u0443\u043D\u0434\u0430_\u0441\u0435\u043A\u0443\u043D\u0434\u0438_\u0441\u0435\u043A\u0443\u043D\u0434";
-      }
-      const obj = { ss: str, mm: null, hh: null, dd: "\u0434\u0435\u043D\u044C_\u0434\u043D\u0456_\u0434\u043D\u0456\u0432", MM: "\u043C\u0456\u0441\u044F\u0446\u044C_\u043C\u0456\u0441\u044F\u0446\u0456_\u043C\u0456\u0441\u044F\u0446\u0456\u0432", yy: "\u0440\u0456\u043A_\u0440\u043E\u043A\u0438_\u0440\u043E\u043A\u0456\u0432" };
-      let str2 = "\u0445\u0432\u0438\u043B\u0438\u043D\u0443_\u0445\u0432\u0438\u043B\u0438\u043D\u0438_\u0445\u0432\u0438\u043B\u0438\u043D";
-      if (arg1) {
-        str2 = "\u0445\u0432\u0438\u043B\u0438\u043D\u0430_\u0445\u0432\u0438\u043B\u0438\u043D\u0438_\u0445\u0432\u0438\u043B\u0438\u043D";
-      }
-      obj.mm = str2;
-      let str3 = "\u0433\u043E\u0434\u0438\u043D\u0443_\u0433\u043E\u0434\u0438\u043D\u0438_\u0433\u043E\u0434\u0438\u043D";
-      if (arg1) {
-        str3 = "\u0433\u043E\u0434\u0438\u043D\u0430_\u0433\u043E\u0434\u0438\u043D\u0438_\u0433\u043E\u0434\u0438\u043D";
-      }
-      obj.hh = str3;
-      const parts = obj[arg2].split("_");
-      const result = tmp % 10;
-      if (result === 1) {
-        if (tmp % 100 !== 11) {
-          let first = parts[0];
-        }
-        sum = text + first;
-      }
-      if (2 <= result) {
-        if (result <= 4) {
-          const result1 = tmp % 100;
-          first = parts[1];
-        }
-      }
-      first = parts[2];
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
     }
-    return sum;
+    return _typeof(arg0);
   }
-  let obj = {
-    months: { format: "\u0441\u0456\u0447\u043D\u044F_\u043B\u044E\u0442\u043E\u0433\u043E_\u0431\u0435\u0440\u0435\u0437\u043D\u044F_\u043A\u0432\u0456\u0442\u043D\u044F_\u0442\u0440\u0430\u0432\u043D\u044F_\u0447\u0435\u0440\u0432\u043D\u044F_\u043B\u0438\u043F\u043D\u044F_\u0441\u0435\u0440\u043F\u043D\u044F_\u0432\u0435\u0440\u0435\u0441\u043D\u044F_\u0436\u043E\u0432\u0442\u043D\u044F_\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434\u0430_\u0433\u0440\u0443\u0434\u043D\u044F".split("_"), standalone: "\u0441\u0456\u0447\u0435\u043D\u044C_\u043B\u044E\u0442\u0438\u0439_\u0431\u0435\u0440\u0435\u0437\u0435\u043D\u044C_\u043A\u0432\u0456\u0442\u0435\u043D\u044C_\u0442\u0440\u0430\u0432\u0435\u043D\u044C_\u0447\u0435\u0440\u0432\u0435\u043D\u044C_\u043B\u0438\u043F\u0435\u043D\u044C_\u0441\u0435\u0440\u043F\u0435\u043D\u044C_\u0432\u0435\u0440\u0435\u0441\u0435\u043D\u044C_\u0436\u043E\u0432\u0442\u0435\u043D\u044C_\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434_\u0433\u0440\u0443\u0434\u0435\u043D\u044C".split("_") },
-    monthsShort: "\u0441\u0456\u0447_\u043B\u044E\u0442_\u0431\u0435\u0440_\u043A\u0432\u0456\u0442_\u0442\u0440\u0430\u0432_\u0447\u0435\u0440\u0432_\u043B\u0438\u043F_\u0441\u0435\u0440\u043F_\u0432\u0435\u0440_\u0436\u043E\u0432\u0442_\u043B\u0438\u0441\u0442_\u0433\u0440\u0443\u0434".split("_"),
-    weekdays: function weekdaysCaseReplace(arg0, arg1) {
-      const obj = { nominative: "\u043D\u0435\u0434\u0456\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A_\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A_\u0441\u0435\u0440\u0435\u0434\u0430_\u0447\u0435\u0442\u0432\u0435\u0440_\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044F_\u0441\u0443\u0431\u043E\u0442\u0430".split("_"), accusative: "\u043D\u0435\u0434\u0456\u043B\u044E_\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A_\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A_\u0441\u0435\u0440\u0435\u0434\u0443_\u0447\u0435\u0442\u0432\u0435\u0440_\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E_\u0441\u0443\u0431\u043E\u0442\u0443".split("_"), genitive: "\u043D\u0435\u0434\u0456\u043B\u0456_\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043A\u0430_\u0432\u0456\u0432\u0442\u043E\u0440\u043A\u0430_\u0441\u0435\u0440\u0435\u0434\u0438_\u0447\u0435\u0442\u0432\u0435\u0440\u0433\u0430_\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u0456_\u0441\u0443\u0431\u043E\u0442\u0438".split("_") };
-      if (true === arg0) {
-        const nominative1 = obj.nominative;
-        const substr = nominative1.slice(1, 7);
-        const nominative2 = obj.nominative;
-        let nominative = substr.concat(nominative2.slice(0, 1));
-      } else if (arg0) {
-        let str = "accusative";
-        if (!obj2.test(arg1)) {
-          let str2 = "nominative";
-          if (obj3.test(arg1)) {
-            str2 = "genitive";
-          }
-          str = str2;
-          obj3 = /\[?(?:минулої|наступної)? ?\] ?dddd/;
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
         }
-        nominative = obj[str][arg0.day(arg0)];
-        obj2 = /(\[[ВвУу]\]) ?dddd/;
-      } else {
-        nominative = obj.nominative;
+        return str;
       }
-      return nominative;
-    },
-    weekdaysShort: "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split("_"),
-    weekdaysMin: "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split("_"),
-    longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD.MM.YYYY", LL: "D MMMM YYYY \u0440.", LLL: "D MMMM YYYY \u0440., HH:mm", LLLL: "dddd, D MMMM YYYY \u0440., HH:mm" },
-    calendar: {
-      sameDay: function() {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      nextDay: function() {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      lastDay: function() {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      nextWeek: function() {
-        let str = "";
-        if (11 === this.hours()) {
-          str = "\u0431";
-        }
-        return c0 + "\u043E" + str + "] LT";
-      },
-      lastWeek() {
-        const self = this;
-        const dayResult = this.day();
-        if (0 !== dayResult) {
-          if (3 !== dayResult) {
-            if (5 !== dayResult) {
-              if (6 !== dayResult) {
-                c0 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0433\u043E] dddd [";
-                const fn = function() {
-                  let str = "";
-                  if (11 === this.hours()) {
-                    str = "\u0431";
-                  }
-                  return c0 + "\u043E" + str + "] LT";
-                };
-                const call = fn.call;
-                if (typeof call === "unknown") {
-                  let str2 = "";
-                  if (11 === self.hours()) {
-                    str2 = "\u0431";
-                  }
-                  const _HermesInternal = HermesInternal;
-                  let combined = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0433\u043E] dddd [\u043E" + str2 + "] LT";
-                } else {
-                  combined = call(self);
-                }
-                return combined;
-              }
-            }
-          }
-        }
-        closure_129_0 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0457] dddd [";
-        const fn2 = function() {
-          let str = "";
-          if (11 === this.hours()) {
-            str = "\u0431";
-          }
-          return c0 + "\u043E" + str + "] LT";
-        };
-        const call2 = fn2.call;
-        if (typeof call2 === "unknown") {
-          let str5 = "";
-          if (11 === self.hours()) {
-            str5 = "\u0431";
-          }
-          const _HermesInternal2 = HermesInternal;
-          let combined1 = "[\u041C\u0438\u043D\u0443\u043B\u043E\u0457] dddd [\u043E" + str5 + "] LT";
-        } else {
-          combined1 = call2(self);
-        }
-        return combined1;
-      },
-      sameElse: "L"
-    },
-    relativeTime: { future: "\u0437\u0430 %s", past: "%s \u0442\u043E\u043C\u0443", s: "\u0434\u0435\u043A\u0456\u043B\u044C\u043A\u0430 \u0441\u0435\u043A\u0443\u043D\u0434", ss: relativeTimeWithPlural, m: relativeTimeWithPlural, mm: relativeTimeWithPlural, h: "\u0433\u043E\u0434\u0438\u043D\u0443", hh: relativeTimeWithPlural, d: "\u0434\u0435\u043D\u044C", dd: relativeTimeWithPlural, M: "\u043C\u0456\u0441\u044F\u0446\u044C", MM: relativeTimeWithPlural, y: "\u0440\u0456\u043A", yy: relativeTimeWithPlural },
-    meridiemParse: /ночі|ранку|дня|вечора/,
-    isPM(arg0) {
-      return /^(дня|вечора)$/.test(arg0);
-    },
-    meridiem(arg0, arg1, arg2) {
-      let str = "\u043D\u043E\u0447\u0456";
-      if (arg0 >= 4) {
-        let str2 = "\u0440\u0430\u043D\u043A\u0443";
-        if (arg0 >= 12) {
-          let str3 = "\u0432\u0435\u0447\u043E\u0440\u0430";
-          if (arg0 < 17) {
-            str3 = "\u0434\u043D\u044F";
-          }
-          str2 = str3;
-        }
-        str = str2;
-      }
-      return str;
-    },
-    dayOfMonthOrdinalParse: /\d{1,2}-(й|го)/,
-    ordinal(arg0, arg1) {
-      if ("M" !== arg1) {
-        if ("d" !== arg1) {
-          if ("DDD" !== arg1) {
-            if ("w" !== arg1) {
-              if ("W" !== arg1) {
-                if ("D" === arg1) {
-                  return arg0 + "-\u0433\u043E";
-                } else {
-                  return arg0;
-                }
-              }
-            }
-          }
-        }
-      }
-      return arg0 + "-\u0439";
-    },
-    week: { dow: 1, doy: 7 }
+    }
+    str = typeof arg0;
   };
-  c0 = "[\u0421\u044C\u043E\u0433\u043E\u0434\u043D\u0456 ";
-  closure_129_0 = "[\u0417\u0430\u0432\u0442\u0440\u0430 ";
-  closure_130_0 = "[\u0412\u0447\u043E\u0440\u0430 ";
-  closure_131_0 = "[\u0423] dddd [";
-  return moment.defineLocale("uk", obj);
-};
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      fn(_mod4467);
+}
+function _setPrototypeOf(Hour1To24Parser, Parser) {
+  _setPrototypeOf = Object.setPrototypeOf;
+  if (!_setPrototypeOf) {
+    _setPrototypeOf = function _setPrototypeOf(Hour1To24Parser, Parser) {
+      Hour1To24Parser.__proto__ = Parser;
+      return Hour1To24Parser;
+    };
+  }
+  return _setPrototypeOf(Hour1To24Parser, Parser);
+}
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    _getPrototypeOf = Object.getPrototypeOf;
+  } else {
+    _getPrototypeOf = function _getPrototypeOf(arg0) {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  return _getPrototypeOf(arg0);
+}
+const Parser = _mod4462.Parser;
+let _createSuperInternal;
+class Hour1To24Parser {
+  constructor() {
+    if (this instanceof closure_1) {
+      length = arguments.length;
+      _Array = Array;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = length;
+      array = new Array(length);
+      tmp10 = array;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          array[num] = arguments[num];
+          num = num + 1;
+        } while (num < length);
+      }
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
+      items = [];
+      items[0] = tmp;
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      tmp13 = undefined === applyResult;
+      if (tmp13) {
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
+        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        tmp23 = referenceError;
+        throw referenceError;
+      } else {
+        str2 = "priority";
+        if ("priority" in applyResult) {
+          _Object = Object;
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+        } else {
+          num3 = 70;
+          applyResult.priority = 70;
+        }
+        if (tmp13) {
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
+          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp19 = referenceError1;
+          throw referenceError1;
+        } else {
+          items1 = ["a", "b", "h", "H", "K", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
+            _Object2 = Object;
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          } else {
+            applyResult.incompatibleTokens = items1;
+          }
+          return applyResult;
+        }
+      }
+    } else {
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
     }
   }
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], fn);
+let dependencyMap = Hour1To24Parser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
+    throw typeError;
   }
 }
-fn(this.moment);
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+Hour1To24Parser.prototype = Object.create(prototype, { constructor: { value: Hour1To24Parser, writable: true, configurable: true } });
+if (Parser) {
+  _setPrototypeOf(Hour1To24Parser, Parser);
+}
+let num = 0;
+dependencyMap = (function _isNativeReflectConstruct() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect3 = Reflect;
+    if (Reflect.construct) {
+      const _Reflect = Reflect;
+      if (Reflect.construct.sham) {
+        return false;
+      } else {
+        const _Proxy = Proxy;
+        if (typeof Proxy === "function") {
+          return true;
+        } else {
+          try {
+            const _Boolean = Boolean;
+            const call = valueOf.call;
+            const _Reflect2 = Reflect;
+            const _Boolean2 = Boolean;
+            if (typeof call === "unknown") {
+              valueOf();
+            } else {
+              call(constructResult);
+            }
+            return true;
+          } catch (err) {
+            return false;
+          }
+        }
+      }
+    }
+  }
+  return false;
+})();
+_createSuperInternal = function _createSuperInternal() {
+  const self = this;
+  const obj = _getPrototypeOf(_createSuperInternal);
+  if (closure_1) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
+  }
+  if (!constructResult) {
+    let tmp8 = self;
+    if (undefined === self) {
+      const _ReferenceError = ReferenceError;
+      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw referenceError;
+    }
+  } else {
+    tmp8 = constructResult;
+    if ("object" !== _typeof(constructResult)) {
+      tmp8 = constructResult;
+    }
+  }
+  return tmp8;
+};
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("k" === arg1) {
+      return _createSuperInternal(4464).parseNumericPattern(_createSuperInternal(4465).numericPatterns.hour24h, arg0);
+    } else if ("ko" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
+    } else {
+      return _createSuperInternal(4464).parseNDigits(arg1.length, arg0);
+    }
+  }
+};
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 24;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(setUTCHours, arg1, arg2) {
+      let result = arg2;
+      if (arg2 <= 24) {
+        result = arg2 % 24;
+      }
+      setUTCHours.setUTCHours(result, 0, 0, 0);
+      return setUTCHours;
+    }
+  }
+];
+if (0 < items.length) {
+  do {
+    let tmp5 = items[num];
+    let flag = tmp5.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp5.enumerable = flag;
+    tmp5.configurable = true;
+    if ("value" in tmp5) {
+      tmp5.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    num = num + 1;
+  } while (num < items.length);
+}
+
+export { Hour1To24Parser };

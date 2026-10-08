@@ -1,110 +1,68 @@
 // === Module 1600: ? ===
 
 // Module 1600
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
+import BaseNavigationContainer from "BaseNavigationContainer" /* 1505 */;
+import _mod1601 from "module_1601" /* 1601 */;
+import _mod1603 from "module_1603" /* 1603 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
 
-export const useThenable = function useThenable(arg0) {
-  const first = items(noop.useState(arg0), 1)[0];
-  items = [false, undefined];
-  first.then((result) => {
-    items = [true, result];
-  });
-  [tmp3, noop] = items(noop.useState(items), 2);
-  const first1 = items(tmp3, 1)[0];
-  let items1 = [first, first1];
-  const effect = noop.useEffect(() => {
-    c0 = first(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_1 = tmp3;
-              closure_0 = tmp7;
-              closure_128_0 = undefined;
-              c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              const obj4 = { value, done: false };
-              return obj4;
-            }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            if (!closure_0) {
-              items = [true, closure_128_0];
-              noop(items);
-            }
-            throw closure_2;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            if (!closure_0) {
-              const items1 = [true, closure_128_0];
-              noop(items1);
-            }
-            c5 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_128_0 = value;
-            c3 = 0;
-            if (!closure_0) {
-              const items2 = [true, closure_128_0];
-              noop(items2);
-            }
-            c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp28) {
-          closure_2 = tmp28;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp28;
-          } else {
-            c4 = tmp;
-          }
-        }
-      }
-    });
-    if (!first1) {
-      (function resolve() {
-        const self = this;
-        const apply = c0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
+require = fn;
+let closure_2 = ["children", "id", "initialRouteName", "layout", "screenLayout", "screenListeners", "screenOptions", "UNSTABLE_routeNamesChangeBehavior", "UNSTABLE_router"];
+const jsx = fn(21).jsx;
+
+export const createStandardNavigationFactories = function createStandardNavigationFactories(arg0, arg1, arg2) {
+  _require = arg1;
+  dependencyMap = arg2;
+  ({ type, version, NavigatorContent: closure_2 } = arg0);
+  if ("standard" !== type) {
+    let str3 = "unknown type.";
+    if (typeof type === "string") {
+      const _HermesInternal2 = HermesInternal;
+      str3 = "type \"" + type + "\".";
     }
-    return () => {
-      c0 = true;
+    const error = new Error("createStandardNavigationFactories only works with standard navigator objects, but got navigator of " + str3);
+    throw error;
+  } else if (1 !== version) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error1 = new Error("createStandardNavigationFactories only works with version 1 of standard navigator objects, but got version " + version + ".");
+    throw error1;
+  } else {
+    let obj = {
+      createNavigator: require("BaseNavigationContainer").createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
+          const navigationBuilder = BaseNavigationContainer.useNavigationBuilder(closure_0, UNSTABLE_routeNamesChangeBehavior);
+          closure_1 = _mod1601.useBuildHref();
+          let tmp2 = _mod1603;
+          let flag = tmp2.useMemoArray;
+          if (!("preloadedRoutes" in navigationBuilder.state)) {
+            let routes1 = navigationBuilder.state.routes;
+            const flagResult = flag(routes1.map((key) => {
+              const tmp = closure_1(key.name, key.params);
+              const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }, ];
+              const items1 = [, , , ];
+              ({ key: arr2[0], name: arr2[1], params: arr2[2] } = key);
+              items1[3] = tmp;
+              items[1] = items1;
+              return items;
+            }));
+            closure_2 = flagResult;
+            let items = [navigationBuilder.state.index, flagResult];
+            const routes2 = noop.useMemo(() => ({ index: navigationBuilder.state.index, routes: flagResult }), items).routes;
+            tmp2 = routes2[Symbol.iterator]();
+            flag = true;
+          } else {
+            const _Array = Array;
+          }
+          const routes = navigationBuilder.state.routes;
+          routes1 = routes.concat(navigationBuilder.state.preloadedRoutes);
+        }),
+      createScreen: null
     };
-  }, items1);
-  return tmp3;
+    let obj2 = require("BaseNavigationContainer");
+    obj.createScreen = require("BaseNavigationContainer").createScreenFactory();
+    return obj;
+  }
 };

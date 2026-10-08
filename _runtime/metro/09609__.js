@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9bcd40cb62b748b314b1aa933da9be99", name: "HandRequestDenyIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/dark-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "8c873b9cb75ee33da36a337b20746c97", name: "feedback-modal-sad-desaturated", type: "png" });

@@ -1,30 +1,14 @@
 // === Module 4258: ? ===
 
 // Module 4258
-import _typeof_mod from "module_3964" /* 3964 */;
-import requiredArgs_mod from "requiredArgs" /* 3965 */;
+import module_2133 from "module_2133" /* 2133 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2133) {
+  const obj2 = { default: module_2133 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2133;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function isAfter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time > _typeof.default(arg1).getTime();
-};
+export default { date: obj.default({ formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

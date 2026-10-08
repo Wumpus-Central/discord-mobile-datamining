@@ -1,7 +1,33 @@
 // === Module 10990: ? ===
 
 // Module 10990
-import registerAsset from "module_1132" /* 1132 */;
+import _mod10991 from "module_10991" /* 10991 */;
+import _mod10994 from "module_10994" /* 10994 */;
 
+require = arg1;
+const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod10994.GLOBAL_OBJ.onerror;
+  _mod10994.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+    _mod10991.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+    const obj = { column, error, line, msg, url };
+  };
+  _mod10994.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+}
+let onerror = null;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/badge", width: 30, height: 30, scales: [2, 3], hash: "581374036ac67fb316291b50b3effd2f", name: "ic_badge_nitro", type: "png" });
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod10991.addHandler("error", errorCallback);
+  _mod10991.maybeInstrument("error", instrumentError);
+};

@@ -1,10 +1,27 @@
 // === Module 6244: ? ===
 
 // Module 6244
-import _mod26 from "module_26" /* 26 */;
-import module_65 from "module_65" /* 65 */;
+import noop from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerButton", validAttributes: { exclusive: true, foreground: true, borderless: true, enabled: true, rippleColor: _mod26.colorAttribute, rippleRadius: true, touchSoundDisabled: true, pointerEvents: true, tapAnimationInDuration: true, tapAnimationOutDuration: true, longPressDuration: true, longPressAnimationOutDuration: true, needsOffscreenAlphaCompositing: true, activeOpacity: true, activeScale: true, activeUnderlayOpacity: true, hoverOpacity: true, hoverScale: true, hoverUnderlayOpacity: true, hoverAnimationInDuration: true, hoverAnimationOutDuration: true, defaultOpacity: true, defaultScale: true, defaultUnderlayOpacity: true, underlayColor: _mod26.colorAttribute, borderWidth: true, borderColor: _mod26.colorAttribute, borderStyle: true, overflow: true, borderLeftWidth: true, borderRightWidth: true, borderTopWidth: true, borderBottomWidth: true, borderStartWidth: true, borderEndWidth: true, borderLeftColor: _mod26.colorAttribute, borderRightColor: _mod26.colorAttribute, borderTopColor: _mod26.colorAttribute, borderBottomColor: _mod26.colorAttribute, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true } };
-
-export default module_65.get("RNGestureHandlerButton", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+const UIManager = fn(17).UIManager;
+const jsx = fn(21).jsx;
+try {
+  let closure_0 = fn(6245).default;
+  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
+  exports.MaskedView = function MaskedView(children) {
+    children = children.children;
+    const merged = Object.assign(children, Object.assign({ children: 0 }));
+    let tmp2 = children;
+    if (closure_2) {
+      tmp2 = children;
+      if (closure_0) {
+        const obj = {};
+        const merged1 = Object.assign(merged);
+        obj.children = children;
+        tmp2 = <tmp3 />;
+      }
+    }
+    return tmp2;
+  };
+} catch (err) {
+}

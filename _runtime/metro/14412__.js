@@ -1,86 +1,39 @@
 // === Module 14412: ? ===
 
 // Module 14412
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import SentryInitUtils from "SentryInitUtils" /* 1243 */;
-import RootNavigationRef from "RootNavigationRef" /* 4743 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 5102 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
-import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 14413 */;
-import _slicedToArray from "module_32" /* 32 */;
-import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import _mod14403 from "module_14403" /* 14403 */;
+import _mod14404 from "module_14404" /* 14404 */;
+import _mod14411 from "module_14411" /* 14411 */;
 
-require = fn;
-function handleNavigationOnReady() {
-  ModalDispatchQueueDefault.flush();
-  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-  ComponentDispatch.dispatch(constants.NAVIGATOR_READY);
-  const routingInstrumentation = SentryInitUtils.routingInstrumentation;
-  const result = routingInstrumentation.registerNavigationContainer(RootNavigationRef.getRootNavigationRef());
-  closure_7();
-}
-const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6841).handleHistoryStoreNavigationChange;
-const Constants = fn(1085);
-({ AnalyticEvents: c10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
-const isStaticChannelRoute = fn(2058).isStaticChannelRoute;
-const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4896);
-let obj2 = { flex: { flex: 1 }, rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND } };
-let closure_16 = createStyles.createStyles(obj2);
-const ReanimatedRexport = fn(4618);
-let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
-let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4618).ReanimatedLogLevel.error, strict: false });
-const ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
-  const cResult = c.c(6);
-  children = children.children;
-  const tmp3 = closure_16();
-  let rootBackgroundColor;
-  if (obj2.useIsScreenLandscape()) {
-    rootBackgroundColor = tmp3.rootBackgroundColor;
-  }
-  if (cResult[0] === tmp3.flex) {
-    if (cResult[1] === rootBackgroundColor) {
-      let tmp5 = cResult[2];
-    }
-    if (cResult[3] === children) {
-      if (cResult[4] === tmp5) {
-        let tmp6 = cResult[5];
+
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod14404(toString)) {
+      const tmp4 = _mod14411(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
       }
-      return tmp6;
+      tmpResult = _mod14403;
     }
-    const obj3 = { style: tmp5, children };
-    const tmp9 = state(DiscordGestureHandlerRootViewDefault, obj3);
-    cResult[3] = children;
-    cResult[4] = tmp5;
-    cResult[5] = tmp9;
-    tmp6 = tmp9;
   }
-  const items = [tmp3.flex, rootBackgroundColor];
-  cResult[0] = tmp3.flex;
-  cResult[1] = rootBackgroundColor;
-  cResult[2] = items;
-  tmp5 = items;
-  obj2 = useIsScreenLandscape;
-}) : ((children) => {
-  const tmp = closure_16();
-  const styles = tmp;
-  const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
-  let items = [isScreenLandscape, tmp];
-  const style = noop.useMemo(() => {
-    const items = [styles.flex, ];
-    let rootBackgroundColor;
-    if (isScreenLandscape) {
-      rootBackgroundColor = styles.rootBackgroundColor;
+  const valueOf = arg0.valueOf;
+  if (_mod14404(valueOf)) {
+    const tmp8 = _mod14411(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
     }
-    items[1] = rootBackgroundColor;
-    return items;
-  }, items);
-  return state(DiscordGestureHandlerRootViewDefault, { style, children: children.children });
-});
+    tmp5Result = _mod14403;
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod14404(toString2)) {
+      const tmp10 = _mod14411(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod14403;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
+};
