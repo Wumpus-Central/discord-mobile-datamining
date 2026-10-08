@@ -1,28 +1,60 @@
 // _runtime/metro/04316__.js
-import startOfQuarter_mod from "../04176_startOfQuarter.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import module_4160_mod from "04160__.js";
+import _typeof_mod from "04156__.js";
+import startOfISOWeekYear_mod from "../04317_startOfISOWeekYear.js";
+import differenceInCalendarDays_mod from "../04318_differenceInCalendarDays.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
 
-let startOfQuarter = startOfQuarter_mod;
-if (!startOfQuarter) {
-  const obj = { default: startOfQuarter };
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj = { default: module_4160 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfQuarter;
+  tmp3 = module_4160;
 }
-startOfQuarter = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4160 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
+_typeof = tmp5;
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj3 = { default: startOfISOWeekYear };
+  let tmp7 = obj3;
+} else {
+  tmp7 = startOfISOWeekYear;
+}
+startOfISOWeekYear = tmp7;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  const obj4 = { default: differenceInCalendarDays };
+  let tmp9 = obj4;
+} else {
+  tmp9 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp9;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
+} else {
+  tmp11 = requiredArgs;
+}
+requiredArgs = tmp11;
 
-export default function isSameQuarter(arg0, arg1) {
+export default function setISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfQuarter.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfQuarter.default(arg1).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_4160.default(arg1);
+  const date = new Date(0);
+  date.setFullYear(defaultResult2, 0, 4);
+  date.setHours(0, 0, 0, 0);
+  const defaultResult4 = startOfISOWeekYear.default(date);
+  defaultResult4.setDate(defaultResult4.getDate() + differenceInCalendarDays.default(defaultResult1, startOfISOWeekYear.default(defaultResult1)));
+  return defaultResult4;
 };
 export default exports.default;

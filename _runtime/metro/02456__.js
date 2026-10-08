@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_space",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==",
   scales: [1],
-  hash: "81453aaeacad48d6ca8e46cdd897c06d",
-  name: "GuildSpace.compiled.messages",
+  hash: "141ea7e276edcedc89d2eab078cd2d02",
+  name: "no.messages.141ea7e276edcedc89d2eab078cd2d02.compiled.messages",
   type: "jsona",
 });

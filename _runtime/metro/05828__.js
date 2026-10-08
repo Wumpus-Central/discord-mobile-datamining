@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/platforms",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "38e1b93a52067f9cce24c90cbb1af007",
-  name: "StageIcon",
-  type: "png",
+  scales: [1],
+  hash: "1e0df3230db3924611b6f5b8d19fe029",
+  name: "img_account_sync_github_white",
+  type: "svg",
 });

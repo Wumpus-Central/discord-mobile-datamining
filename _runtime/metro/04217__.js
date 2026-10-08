@@ -1,26 +1,34 @@
 // _runtime/metro/04217__.js
-import module_4215_mod from "04215__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+let c0 = ["vas\u00E1rnap", "h\u00E9tf\u0151n", "kedden", "szerd\u00E1n", "cs\u00FCt\u00F6rt\u00F6k\u00F6n", "p\u00E9nteken", "szombaton"];
+const obj = {
+  lastWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
+    }
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  yesterday: "'tegnap' p'-kor'",
+  today: "'ma' p'-kor'",
+  tomorrow: "'holnap' p'-kor'",
+  nextWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
+    }
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  other: "P"
+};
+c0 = true;
 
-let module_4215 = module_4215_mod;
-if (!module_4215) {
-  const obj = { default: module_4215 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4215;
-}
-module_4215 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function formatDistanceToNowStrict(arg0, arg1) {
-  requiredArgs.default(1, arguments);
-  return module_4215.default(arg0, Date.now(), arg1);
+export default function formatRelative(arg0, arg1) {
+  let tmpResult = tmp;
+  if (typeof obj[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
 };
 export default exports.default;

@@ -1,14 +1,13 @@
 // _runtime/metro/05772__.js
-import _modDef5747 from "05747__.js";
-import noop from "00019__.js";
+import registerAsset from "01132__.js";
 
-export default function useTransitionProgress() {
-  const context = noop.useContext(_modDef5747);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "dd9ba5b8ac4831db353c60f9d72ff648",
+  name: "img_account_sync_bluesky_light_and_dark",
+  type: "png",
+});

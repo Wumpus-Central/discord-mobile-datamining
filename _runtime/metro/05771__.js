@@ -1,9 +1,13 @@
 // _runtime/metro/05771__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import registerAsset from "01132__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
-
-export default module_65.get("RNSFullWindowOverlay", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 24,
+  height: 24,
+  scales: [1],
+  hash: "f2fc96c4a753dd0c5dd02646aa2a518c",
+  name: "img_account_sync_battlenet_white",
+  type: "svg",
+});

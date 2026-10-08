@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "1cfdcaa3b94766eef2db25157ec0c919",
-  name: "VoiceNormalIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "0532db77ab79fc799b897b15ddfe70e2",
+  name: "img_account_sync_playstation_light",
   type: "png",
 });

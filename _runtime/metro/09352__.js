@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 188.5,
+  height: 121,
   scales: [2, 3],
-  hash: "0d58e61e562c5031f46b78cbe36725ec",
-  name: "HeadphonesDenyIcon",
+  hash: "a1c720960ae9ac46d7d61ad850607231",
+  name: "img_tier_0_clouds_bigger",
   type: "png",
 });

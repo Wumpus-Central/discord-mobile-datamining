@@ -1,21 +1,49 @@
 // _runtime/metro/07789__.js
-import reviveBigInts from "../07790_reviveBigInts.js";
-import DiscordMarkdownDefault from "../07791_DiscordMarkdown.js";
+import _mod7790 from "07790__.js";
+import _mod7791 from "07791__.js";
+import _mod7792 from "07792__.js";
+import _mod7793 from "07793__.js";
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export const parse = function parse(arg0, arg1, arg2) {
-  const obj = reviveBigInts;
-  let json;
-  if (null != arg1) {
-    const _JSON = JSON;
-    json = JSON.stringify(arg1);
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
   }
-  return obj.decodeAstJson(DiscordMarkdownDefault.parseToAstString(arg0, json, arg2));
-};
-export const unparse = function unparse(arg0) {
-  const obj = DiscordMarkdownDefault;
-  return obj.unparseFromAstString(reviveBigInts.encodeAstJson(arg0));
-};
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(_mod7790, exports);
+  fn(_mod7791, exports);
+  fn(_mod7792, exports);
+  fn(_mod7793, exports);
+} else {
+  let _Object = Object;
+}

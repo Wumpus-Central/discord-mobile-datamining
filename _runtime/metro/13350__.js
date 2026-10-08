@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2e0d6978350694e35552111153599c69",
-  name: "BoostTier3Icon",
+  hash: "dcfca3dda846f0acd5adc9867fb467b3",
+  name: "ic_group_dm",
   type: "png",
 });

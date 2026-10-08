@@ -1,9 +1,13 @@
 // _runtime/metro/04999__.js
-import shortOut from "../05000_shortOut.js";
-import overRest from "../05004_overRest.js";
-import flatten from "../05006_flatten.js";
+import registerAsset from "01132__.js";
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "737159bf8222c1bab03c6bbf25897f2f",
+  name: "CircleXIcon-primary",
+  type: "png",
+});

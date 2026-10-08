@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "fee15a76bef55eb0f2b368d5439c39b9",
-  name: "TextIcon",
-  type: "png",
+  httpServerLocation: "/assets/images/platforms",
+  width: 628,
+  height: 167,
+  scales: [1],
+  hash: "55756313f22e0871d81c45d7dcc50aec",
+  name: "img_account_sync_samsung_light_and_dark",
+  type: "svg",
 });

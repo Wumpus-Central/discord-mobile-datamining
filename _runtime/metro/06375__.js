@@ -1,183 +1,73 @@
 // _runtime/metro/06375__.js
-import _modDef6359 from "06359__.js";
-import _classCallCheck from "06358__.js";
+import handlerIDToTag from "../06330_handlerIDToTag.js";
+import convertToHandlerTag from "../06350_convertToHandlerTag.js";
+import RNGestureHandlerModuleDefault from "../06355_RNGestureHandlerModule.js";
+import transformIntoHandlerTags from "../06357_transformIntoHandlerTags.js";
 
-const ViewabilityHelper = arg1;
-class ViewabilityHelper {
-  constructor(arg0, arg1) {
-    tmp = c2(this, ViewabilityHelper);
-    this.possiblyViewableIndices = [];
-    this.hasInteracted = false;
-    this.viewableIndices = [];
-    this.lastReportedViewableIndices = [];
-    set = new Set();
-    this.timers = set;
-    this.viewabilityConfig = global;
-    this.viewableIndicesChanged = arg1;
-    return;
+const require = globalThis.__r;
+
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export const updateHandlers = function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
+  _require = attachedGestures;
+  prepare.prepare();
+  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
+    let tmp2 = attachedGestures.attachedGestures[num];
+    let obj = require("convertToHandlerTag");
+    let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
+      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
+    }
   }
-}
-const entry = {
-  key: "dispose",
-  value: function dispose() {
-    const timers = this.timers;
-    const item = timers.forEach(clearTimeout);
-  },
+  attachedGestures = attachedGestures.attachedGestures;
+  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+    if (attachedGestures.isMounted) {
+      let arr = attachedGestures;
+      if (attachedGestures === tmp.attachedGestures) {
+        let tmp21 = arr.length !== gesturesToAttach.length;
+        let num = 0;
+        let tmp22 = tmp21;
+        if (0 < gesturesToAttach.length) {
+          do {
+            let tmp3 = attachedGestures[num];
+            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
+            let flag = tmp21;
+            if (tmp4) {
+              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
+              tmp4 = tmp6;
+            }
+            if (tmp4) {
+              flag = true;
+            }
+            tmp3.config = gesturesToAttach[num].config;
+            tmp3.handlers = gesturesToAttach[num].handlers;
+            let obj = RNGestureHandlerModuleDefault;
+            let obj2 = transformIntoHandlerTags;
+            let result = obj.setGestureHandlerConfig(
+              tmp3.handlerTag,
+              obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS),
+            );
+            let obj3 = RNGestureHandlerModuleDefault;
+            let obj4 = convertToHandlerTag;
+            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
+            let obj5 = handlerIDToTag;
+            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            num = num + 1;
+            tmp21 = flag;
+            tmp22 = flag;
+            arr = attachedGestures;
+          } while (num < gesturesToAttach.length);
+        }
+        if (attachedGestures.animatedHandlers) {
+          if (tmp22) {
+            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
+          }
+        }
+        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+      }
+    }
+  });
 };
-const items = [
-  entry,
-  {
-    key: "updateViewableItems",
-    value: function updateViewableItems(arg0, arg1, arg2, arg3, arg4, possiblyViewableIndices) {
-      const self = this;
-      closure_1 = arg0;
-      closure_2 = arg1;
-      closure_3 = arg2;
-      closure_4 = arg3;
-      closure_5 = arg4;
-      if (undefined !== possiblyViewableIndices) {
-        self.possiblyViewableIndices = possiblyViewableIndices;
-      }
-      let viewabilityConfig = self.viewabilityConfig;
-      let prop;
-      if (viewabilityConfig != null) {
-        prop = viewabilityConfig.itemVisiblePercentThreshold;
-      }
-      if (null !== prop) {
-        let viewabilityConfig2 = self.viewabilityConfig;
-        let prop1;
-        if (viewabilityConfig2 != null) {
-          prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
-        }
-        if (undefined !== prop1) {
-          const viewabilityConfig3 = self.viewabilityConfig;
-          let prop2;
-          if (viewabilityConfig3 != null) {
-            prop2 = viewabilityConfig3.viewAreaCoveragePercentThreshold;
-          }
-          if (null !== prop2) {
-            const viewabilityConfig4 = self.viewabilityConfig;
-            let prop3;
-            if (viewabilityConfig4 != null) {
-              prop3 = viewabilityConfig4.viewAreaCoveragePercentThreshold;
-            }
-            if (undefined !== prop3) {
-              const _Error = Error;
-              const error = new Error(
-                ViewabilityHelper(6346).ErrorMessages.multipleViewabilityThresholdTypesNotSupported,
-              );
-              throw error;
-            }
-          }
-        }
-      }
-      const viewabilityConfig5 = self.viewabilityConfig;
-      let waitForInteraction;
-      if (viewabilityConfig5 != null) {
-        waitForInteraction = viewabilityConfig5.waitForInteraction;
-      }
-      if (!waitForInteraction) {
-        const prop4 = self.possiblyViewableIndices;
-        const found = prop4.filter((item) => {
-          const viewabilityConfig = self.viewabilityConfig;
-          let prop;
-          if (viewabilityConfig != null) {
-            prop = viewabilityConfig.viewAreaCoveragePercentThreshold;
-          }
-          const viewabilityConfig2 = self.viewabilityConfig;
-          let prop1;
-          if (viewabilityConfig2 != null) {
-            prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
-          }
-          return self.isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
-        });
-        self.viewableIndices = found;
-        const viewabilityConfig6 = self.viewabilityConfig;
-        let num;
-        if (viewabilityConfig6 != null) {
-          num = viewabilityConfig6.minimumViewTime;
-        }
-        if (num == null) {
-          num = 250;
-        }
-        if (num > 0) {
-          const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => {
-            const timers = self.timers;
-            timers.delete(timerId);
-            const result = self.checkViewableIndicesChanges(found);
-          }, num);
-          let timers = self.timers;
-          timers.add(timerId);
-        } else {
-          let result = self.checkViewableIndicesChanges(found);
-        }
-      }
-    },
-  },
-  {
-    key: "checkViewableIndicesChanges",
-    value: function checkViewableIndicesChanges(found) {
-      const self = this;
-      found = found.filter((item) => {
-        const viewableIndices = self.viewableIndices;
-        return viewableIndices.includes(item);
-      });
-      const found1 = found.filter((item) => {
-        const lastReportedViewableIndices = self.lastReportedViewableIndices;
-        return !lastReportedViewableIndices.includes(item);
-      });
-      const prop = this.lastReportedViewableIndices;
-      const found2 = prop.filter((item) => !found.includes(item));
-      if (tmp) {
-        self.lastReportedViewableIndices = found;
-        const result = self.viewableIndicesChanged(found, found1, found2);
-      }
-    },
-  },
-  {
-    key: "clearLastReportedViewableIndices",
-    value: function clearLastReportedViewableIndices() {
-      this.lastReportedViewableIndices = [];
-    },
-  },
-  {
-    key: "isItemViewable",
-    value: function isItemViewable(item, arg1, arg2, arg3, width, prop, prop1, fn) {
-      const size = fn(item);
-      if (undefined === size) {
-        return false;
-      } else {
-        const diff = (arg1 ? size.x : size.y) - arg2;
-        const tmp3 = arg1 ? size.width : size.height;
-        if (arg1) {
-          width = width.width;
-        } else {
-          width = width.height - arg3;
-        }
-        const _Math = Math;
-        const _Math2 = Math;
-        const bound = Math.min(diff + tmp3, width);
-        const diff1 = bound - Math.max(diff, 0);
-        if (diff1 === tmp3) {
-          return true;
-        } else if (0 === diff1) {
-          return false;
-        } else {
-          if (null != prop) {
-            let result = 0.01 * prop;
-          } else {
-            let num2 = prop1;
-            if (prop1 == null) {
-              num2 = 0;
-            }
-            result = 0.01 * num2;
-          }
-          return (null != prop ? diff1 / width : diff1 / tmp3) >= result;
-        }
-      }
-    },
-  },
-];
-
-export default _modDef6359(ViewabilityHelper, items);

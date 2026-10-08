@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/mfa/native/images",
-  width: 762,
-  height: 525,
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
   scales: [1],
-  hash: "685e4a9eb5133a148de7ce27d400a483",
-  name: "img_register_header",
+  hash: "10bb7b2e55f0a34f23d903121de6b9bc",
+  name: "es-ES",
   type: "png",
 });

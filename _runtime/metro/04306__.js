@@ -1,249 +1,117 @@
 // _runtime/metro/04306__.js
-import Parser2 from "../04270_Parser.js";
+import module_4307_mod from "04307__.js";
+import _typeof_mod from "04156__.js";
+import module_4160_mod from "04160__.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
+import module_4308_mod from "04308__.js";
+import module_4309_mod from "04309__.js";
 
-let closure_1 = dependencyMap;
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
+let module_4307 = module_4307_mod;
+if (!module_4307) {
+  const obj = { default: module_4307 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4307;
 }
-function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
-      TimestampMillisecondsParser.__proto__ = Parser;
-      return TimestampMillisecondsParser;
-    };
-  }
-  return _setPrototypeOf(TimestampMillisecondsParser, Parser);
+module_4307 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  let obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
+_typeof = tmp5;
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj3 = { default: module_4160 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4160;
 }
-const Parser = Parser2.Parser;
-let _createSuperInternal;
-class TimestampMillisecondsParser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str6 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 20,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
-        } else {
-          num3 = 20;
-          applyResult.priority = 20;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str5 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", {
-              value: "*",
-              enumerable: true,
-              configurable: true,
-              writable: true,
-            });
-          } else {
-            str4 = "*";
-            applyResult.incompatibleTokens = "*";
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
+module_4160 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
 }
-closure_1 = TimestampMillisecondsParser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
+requiredArgs = tmp9;
+let module_4308 = module_4308_mod;
+if (!module_4308) {
+  const obj5 = { default: module_4308 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4308;
 }
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
+module_4308 = tmp11;
+let module_4309 = module_4309_mod;
+if (!module_4309) {
+  const obj6 = { default: module_4309 };
+  let tmp13 = obj6;
+} else {
+  tmp13 = module_4309;
 }
-TimestampMillisecondsParser.prototype = Object.create(prototype, {
-  constructor: { value: TimestampMillisecondsParser, writable: true, configurable: true },
-});
-if (Parser) {
-  _setPrototypeOf(TimestampMillisecondsParser, Parser);
-}
-let num = 0;
-closure_1 = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-const entry = {
-  key: "parse",
-  value: function parse(arg0) {
-    return _createSuperInternal(closure_1[0]).parseAnyDigitsSigned(arg0);
-  },
-};
-let items = [
-  entry,
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2) {
-      const items = [new Date(arg2), { timestampIsSet: true }];
-      return items;
-    },
-  },
-];
-if (0 < items.length) {
-  do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
-    num = num + 1;
-  } while (num < items.length);
-}
+module_4309 = tmp13;
 
-export { TimestampMillisecondsParser };
+export default function addBusinessDays(arg0, arg1) {
+  let diff;
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  let obj2 = module_4307;
+  let defaultResult2 = module_4307.default(defaultResult1);
+  const defaultResult3 = module_4160.default(arg1);
+  if (isNaN(defaultResult3)) {
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    let num3 = 1;
+    const hours = defaultResult1.getHours();
+    if (defaultResult3 < 0) {
+      num3 = -1;
+    }
+    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_4160.default(defaultResult3 / 5));
+    const _Math = Math;
+    let absolute = Math.abs(defaultResult3 % 5);
+    if (absolute > 0) {
+      do {
+        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
+        diff = absolute;
+        if (!module_4307.default(defaultResult1)) {
+          diff = absolute - 1;
+        }
+        absolute = diff;
+        obj2 = module_4307;
+      } while (diff > 0);
+    }
+    if (defaultResult2) {
+      defaultResult2 = obj2.default(defaultResult1);
+    }
+    if (defaultResult2) {
+      defaultResult2 = 0 !== defaultResult3;
+    }
+    if (defaultResult2) {
+      if (module_4309.default(defaultResult1)) {
+        let num6 = -1;
+        if (num3 < 0) {
+          num6 = 2;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num6);
+        const date1 = defaultResult1.getDate();
+      }
+      if (module_4308.default(defaultResult1)) {
+        let num7 = -2;
+        if (num3 < 0) {
+          num7 = 1;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num7);
+        const date2 = defaultResult1.getDate();
+      }
+    }
+    defaultResult1.setHours(hours);
+    return defaultResult1;
+  }
+};
+export default exports.default;

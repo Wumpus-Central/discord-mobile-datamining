@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs",
+  httpServerLocation: "/assets/modules/partner_perks/xbox/partner_pass",
   scales: [1],
-  hash: "46c0c5d93c0058a8de58aac553dd0d07",
-  name: "fi.messages.46c0c5d93c0058a8de58aac553dd0d07.compiled.messages",
+  hash: "af399233cf0437cbc649d89eb97e72fd",
+  name: "XboxPartnerPass.compiled.messages",
   type: "jsona",
 });

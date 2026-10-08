@@ -3,9 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "3adffc9213a038d780795feb55d27139",
-  name: "cs.messages.3adffc9213a038d780795feb55d27139.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "11800cac78ee381d38bd7d0b06eed7b0",
+  name: "EmojiFaceVomitingIcon",
+  type: "png",
 });

@@ -1,13 +1,14 @@
 // _runtime/metro/06471__.js
-import registerAsset from "01132__.js";
+import _mod19 from "00019__.js";
+import _mod6310 from "06310__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/auth/native/images",
-  width: 480,
-  height: 413,
-  scales: [2, 3],
-  hash: "b25b2e24db6c14f15201cb7533aed65e",
-  name: "register-background-dark",
-  type: "png",
-});
+const useContext = _mod19.useContext;
+
+export const useBottomSheetGestureHandlers = () => {
+  const tmp = useContext(_mod6310.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

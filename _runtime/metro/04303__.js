@@ -1,5 +1,9 @@
 // _runtime/metro/04303__.js
-import Parser2 from "../04270_Parser.js";
+import module_4304_mod from "04304__.js";
+import module_4305_mod from "04305__.js";
+import _typeof_mod from "04156__.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
+import module_4160_mod from "04160__.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -26,246 +30,96 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-      ISOTimezoneWithZParser.__proto__ = Parser;
-      return ISOTimezoneWithZParser;
-    };
-  }
-  return _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+let module_4304 = module_4304_mod;
+if (!module_4304) {
+  const obj = { default: module_4304 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4304;
 }
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
+module_4304 = tmp3;
+let module_4305 = module_4305_mod;
+if (!module_4305) {
+  const obj2 = { default: module_4305 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4305;
 }
-const Parser = Parser2.Parser;
-let _createSuperInternal;
-class ISOTimezoneWithZParser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 10,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
-        } else {
-          num3 = 10;
-          applyResult.priority = 10;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          items1 = ["t", "T", "x"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj.value = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-          } else {
-            applyResult.incompatibleTokens = items1;
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
+module_4305 = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
+} else {
+  tmp7 = _typeof;
 }
-let dependencyMap = ISOTimezoneWithZParser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
+_typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
 }
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
+requiredArgs = tmp9;
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj5 = { default: module_4160 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4160;
 }
-ISOTimezoneWithZParser.prototype = Object.create(prototype, {
-  constructor: { value: ISOTimezoneWithZParser, writable: true, configurable: true },
-});
-if (Parser) {
-  _setPrototypeOf(ISOTimezoneWithZParser, Parser);
-}
-let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-const entry = {
-  key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("X" === arg1) {
-      return _createSuperInternal(4272).parseTimezonePattern(
-        _createSuperInternal(4273).timezonePatterns.basicOptionalMinutes,
-        arg0,
-      );
-    } else if ("XX" === arg1) {
-      return _createSuperInternal(4272).parseTimezonePattern(_createSuperInternal(4273).timezonePatterns.basic, arg0);
-    } else if ("XXXX" === arg1) {
-      return _createSuperInternal(4272).parseTimezonePattern(
-        _createSuperInternal(4273).timezonePatterns.basicOptionalSeconds,
-        arg0,
-      );
-    } else if ("XXXXX" === arg1) {
-      return _createSuperInternal(4272).parseTimezonePattern(
-        _createSuperInternal(4273).timezonePatterns.extendedOptionalSeconds,
-        arg0,
-      );
-    } else {
-      return _createSuperInternal(4272).parseTimezonePattern(
-        _createSuperInternal(4273).timezonePatterns.extended,
-        arg0,
-      );
-    }
-  },
-};
-let items = [
-  entry,
-  {
-    key: "set",
-    value: function set(getTime, timestampIsSet, arg2) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
-      }
-      return date;
-    },
-  },
-];
-if (0 < items.length) {
-  do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
-    num = num + 1;
-  } while (num < items.length);
-}
+module_4160 = tmp11;
 
-export { ISOTimezoneWithZParser };
+export default function add(arg0, years) {
+  requiredArgs.default(2, arguments);
+  if (years) {
+    if ("object" === _typeof(years)) {
+      let num = 0;
+      if (years.years) {
+        num = module_4160.default(years.years);
+      }
+      let num2 = 0;
+      if (years.months) {
+        num2 = module_4160.default(years.months);
+      }
+      let num3 = 0;
+      if (years.weeks) {
+        num3 = module_4160.default(years.weeks);
+      }
+      let num4 = 0;
+      if (years.days) {
+        num4 = module_4160.default(years.days);
+      }
+      let num5 = 0;
+      if (years.hours) {
+        num5 = module_4160.default(years.hours);
+      }
+      let num6 = 0;
+      if (years.minutes) {
+        num6 = module_4160.default(years.minutes);
+      }
+      let num7 = 0;
+      if (years.seconds) {
+        num7 = module_4160.default(years.seconds);
+      }
+      const defaultResult1 = _typeof.default(arg0);
+      if (num2) {
+        let defaultResult2 = module_4305.default(defaultResult1, num2 + 12 * num);
+      } else {
+        defaultResult2 = defaultResult1;
+      }
+      if (num4) {
+        let defaultResult3 = module_4304.default(defaultResult2, num4 + 7 * num3);
+      } else {
+        defaultResult3 = defaultResult2;
+      }
+      const _Date = Date;
+      const sum = num7 + 60 * (num6 + 60 * num5);
+      const date = new Date(defaultResult3.getTime() + 1000 * sum);
+      return date;
+    }
+  }
+  return new Date(NaN);
+};
+export default exports.default;

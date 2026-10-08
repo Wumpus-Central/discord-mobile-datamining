@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "2007c026f7f9ad4b2d38f1d4bc513524",
-  name: "VoiceNormalSpoilerIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "083817c43b3689d5baeb4ee0ef9714bc",
+  name: "img_account_sync_epic_light",
   type: "png",
 });

@@ -1,126 +1,111 @@
 // _runtime/metro/01342__.js
-import supported from "../01343_supported.js";
-import shim from "../01344_shim.js";
+import _mod1305 from "01305__.js";
+import _mod1339 from "01339__.js";
 
-function isUndefinedOrNull(time) {
-  return null == time;
-}
-function isBuffer(copy) {
-  let tmp = !copy;
-  if (copy) {
-    tmp = typeof copy !== "object";
-  }
-  if (!tmp) {
-    tmp = typeof copy.length !== "number";
-  }
-  let tmp2 = !tmp;
-  if (!tmp) {
-    copy = copy.copy;
-    let tmp3 = typeof copy === "function";
-    if (typeof copy === "function") {
-      tmp3 = typeof copy.slice === "function";
-    }
-    if (tmp3) {
-      tmp3 = !(copy.length > 0 && typeof copy[0] !== "number");
-      const tmp4 = copy.length > 0 && typeof copy[0] !== "number";
-    }
-    tmp2 = tmp3;
-  }
-  return tmp2;
-}
-const exports = (time, getTime, arg2) => {
-  let obj = arg2;
-  if (!arg2) {
-    obj = {};
-  }
-  let tmp = time === getTime;
-  if (tmp) {
-    return tmp;
-  } else {
-    const _Date = Date;
-    if (!(time instanceof Date)) {
-      if (time) {
-        if (getTime) {
-          let tmp3 = (function objEquiv(time, getTime, arg2) {
-            if (!isUndefinedOrNull(time)) {
-              if (!isUndefinedOrNull(getTime)) {
-                if (time.prototype !== getTime.prototype) {
-                  return false;
-                } else if (supported(time)) {
-                  const tmp17 = supported(getTime);
-                  if (!tmp17) {
-                    return tmp17;
-                  } else {
-                    const call = slice.call;
-                    const call2 = slice.call;
-                    exports(
-                      typeof call === "unknown" ? slice() : call(time),
-                      typeof call2 === "unknown" ? slice() : call2(getTime),
-                      arg2,
-                    );
-                    const tmp19 = typeof call === "unknown" ? slice() : call(time);
-                  }
-                } else if (isBuffer(time)) {
-                  if (isBuffer(getTime)) {
-                    if (time.length !== getTime.length) {
-                      return false;
-                    } else {
-                      let num = 0;
-                      if (0 < time.length) {
-                        while (time[num] === getTime[num]) {
-                          num = num + 1;
-                        }
-                        return false;
-                      }
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  try {
-                    const arr = shim(time);
-                    const arr2 = shim(getTime);
-                    if (arr.length != arr2.length) {
-                      return false;
-                    } else {
-                      const sorted = arr.sort();
-                      const sorted1 = arr2.sort();
-                      let diff = arr.length - 1;
-                      if (0 <= diff) {
-                        while (arr[diff] == arr2[diff]) {
-                          diff = diff - 1;
-                        }
-                        return false;
-                      }
-                      let diff1 = arr.length - 1;
-                      if (0 <= diff1) {
-                        while (exports(time[arr[diff1]], getTime[arr[diff1]], arg2)) {
-                          diff1 = diff1 - 1;
-                        }
-                        return false;
-                      }
-                      return typeof time === typeof getTime;
-                    }
-                  } catch (err) {
-                    return false;
-                  }
-                }
-              }
-            }
-            return false;
-          })(time, getTime, obj);
+export default function getSideChannelList() {
+  let obj = {
+    assert(arg0) {
+      if (!obj.has(arg0)) {
+        const tmp32 = new _mod1305("Side channel does not contain " + _mod1339(arg0));
+        throw tmp32;
+      }
+    },
+    delete(arg0) {
+      let next = obj;
+      if (obj) {
+        next = obj.next;
+      }
+      let iter = obj;
+      if (!obj) {
+        let tmp6;
+        if (undefined) {
+          tmp6 = next;
         }
+        if (tmp6) {
+          tmp6 = next === undefined;
+        }
+      } else {
+        let iter2 = iter.next;
+        if (null != iter2) {
+          while (iter2.key !== arg0) {
+            let next2 = iter2.next;
+            iter = iter2;
+            iter2 = next2;
+          }
+        }
+        iter.next = iter2.next;
       }
-      if (!obj.strict) {
-        tmp = time == getTime;
+    },
+    get(arg0) {
+      let tmp;
+      if (obj) {
+        let iter2 = obj.next;
+        let tmp3 = obj;
+        let tmp4;
+        if (null != iter2) {
+          while (iter2.key !== arg0) {
+            let next = iter2.next;
+            tmp3 = iter2;
+            iter2 = next;
+          }
+          tmp3.next = iter2.next;
+          iter2.next = obj.next;
+          obj.next = iter2;
+          tmp4 = iter2;
+        }
+        value = tmp4;
+        if (tmp4) {
+          value = tmp4.value;
+        }
+        tmp = value;
       }
-    } else {
-      const _Date2 = Date;
-    }
-    time = time.getTime();
-    tmp3 = time === getTime.getTime();
-  }
-};
-
-export default exports;
+      return tmp;
+    },
+    has(arg0) {
+      if (!obj) {
+        return obj;
+      } else {
+        let iter2 = obj.next;
+        let tmp3 = obj;
+        if (null != iter2) {
+          while (iter2.key !== arg0) {
+            let next = iter2.next;
+            tmp3 = iter2;
+            iter2 = next;
+          }
+        }
+        tmp3.next = iter2.next;
+        iter2.next = obj.next;
+        obj.next = iter2;
+      }
+    },
+    set(key, value) {
+      let iter = obj;
+      if (!obj) {
+        obj = { next: "create" };
+        iter = obj;
+      }
+      let iter2 = iter.next;
+      let tmp = iter;
+      let tmp2;
+      if (null != iter2) {
+        while (iter2.key !== key) {
+          let next = iter2.next;
+          tmp = iter2;
+          iter2 = next;
+        }
+        tmp.next = iter2.next;
+        iter2.next = iter.next;
+        iter.next = iter2;
+        tmp2 = iter2;
+      }
+      if (tmp2) {
+        tmp2.value = value;
+      } else {
+        const entry = { key, next: iter.next, value };
+        iter.next = entry;
+      }
+    },
+  };
+  return obj;
+}

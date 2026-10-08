@@ -1,6 +1,6 @@
 // _runtime/metro/04308__.js
-import _typeof_mod from "03964__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import _typeof_mod from "04156__.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,9 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isPast(date) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(date).getTime();
-  return time < Date.now();
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

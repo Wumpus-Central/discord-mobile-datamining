@@ -1,13 +1,7 @@
 // _runtime/metro/04813__.js
-import registerAsset from "01132__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f6824e7bd3f8a83813ab333cc29423f8",
-  name: "yellow-alert",
-  type: "png",
-});
+for (const key10013 in require("04814__.js")) {
+  arg5[key10013] = require("04814__.js")[key10013];
+  continue;
+}

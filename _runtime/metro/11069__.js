@@ -1,13 +1,28 @@
 // _runtime/metro/11069__.js
-import registerAsset from "01132__.js";
+import eventFromMessage from "../11053_eventFromMessage.js";
+import _mod11070 from "11070__.js";
+import setupIntegration from "11049__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "2650502107a79cae01df0fa151a7570a",
-  name: "ic_file_small_video",
-  type: "png",
+export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  closure_0 = obj.limit || 5;
+  closure_1 = obj.key || "cause";
+  return {
+    name: "LinkedErrors",
+    preprocessEvent(exception, originalException, getOptions) {
+      options = getOptions.getOptions();
+      const result = _mod11070.applyAggregateErrorsToEvent(
+        eventFromMessage.exceptionFromError,
+        options.stackParser,
+        options.maxValueLength,
+        closure_1,
+        closure_0,
+        exception,
+        originalException,
+      );
+    },
+  };
 });

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/guild_settings/overview",
+  width: 343,
+  height: 193,
   scales: [2, 3],
-  hash: "924c2fd8a6878b0bc9ad00c273667c49",
-  name: "ic_select_all_24px",
+  hash: "14f8bd930afc02eff31d9dfb6640a712",
+  name: "asset_gradient",
   type: "png",
 });

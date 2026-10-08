@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs",
+  httpServerLocation: "/assets/modules/conversations",
   scales: [1],
-  hash: "870089ad1ec2b13624246f3affe44890",
-  name: "el.messages.870089ad1ec2b13624246f3affe44890.compiled.messages",
+  hash: "8e7c46ba423edaf69778fd849d9ff2b9",
+  name: "Conversations.compiled.messages",
   type: "jsona",
 });

@@ -1,107 +1,74 @@
 // _runtime/metro/01835__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _mod1659 from "01659__.js";
+import _mod1698 from "01698__.js";
+import module_1658_mod from "01658__.js";
 
-let c2 = true;
-let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
-obj.timestamp = new Date().getTime();
-let global = obj;
-let KeyboardEvents = fn(1633).KeyboardEvents;
-KeyboardEvents.addListener("keyboardDidHide", (arg0) => {
-  c2 = true;
-  global = arg0;
-});
-const KeyboardEvents2 = fn(1633).KeyboardEvents;
-KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
-  c2 = false;
-  global = arg0;
-});
-let closure_0 = asyncGeneratorStep(async (arg0) => {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
+function setNativePropsFabric(fn, updates) {
+  if (globalThis._WORKLET) {
+    const tmp6 = fn();
+    _mod1698.processColorsInProps(updates);
+    const obj2 = { shadowNodeWrapper: tmp6, updates };
+    const items = [obj2];
+    global._updatePropsFabric(items);
+  } else {
+    const logger = _mod1659.logger;
+    logger.warn("setNativeProps() can only be used on the UI runtime.");
+  }
+}
+setNativePropsFabric.__closure = { logger: _mod1659.logger, processColorsInProps: _mod1698.processColorsInProps };
+setNativePropsFabric.__workletHash = 13825557000530;
+setNativePropsFabric.__initData = {
+  code: "function setNativePropsFabric_Pnpm_setNativePropsTs1(animatedRef,updates){const{logger,processColorsInProps}=this.__closure;if(!_WORKLET){logger.warn('setNativeProps() can only be used on the UI runtime.');return;}const shadowNodeWrapper=animatedRef();processColorsInProps(updates);global._updatePropsFabric([{shadowNodeWrapper:shadowNodeWrapper,updates:updates}]);}",
+};
+function setNativePropsPaper(viewName, updates) {
+  if (globalThis._WORKLET) {
+    value = undefined;
+    if (viewName.viewName != null) {
+      value = iter.value;
+    }
+    if (value == null) {
+      value = null;
+    }
+    const tmp5 = viewName();
+    _mod1698.processColorsInProps(updates);
+    const obj2 = { tag: tmp5, name: value, updates };
+    const items = [obj2];
+    global._updatePropsPaper(items);
+  } else {
+    const logger = _mod1659.logger;
+    logger.warn("setNativeProps() can only be used on the UI runtime.");
+  }
+}
+let obj = { logger: _mod1659.logger, processColorsInProps: _mod1698.processColorsInProps };
+setNativePropsPaper.__closure = { logger: _mod1659.logger, processColorsInProps: _mod1698.processColorsInProps };
+setNativePropsPaper.__workletHash = 9895881337862;
+setNativePropsPaper.__initData = {
+  code: "function setNativePropsPaper_Pnpm_setNativePropsTs2(animatedRef,updates){const{logger,processColorsInProps}=this.__closure;var _viewName$value,_viewName;if(!_WORKLET){logger.warn('setNativeProps() can only be used on the UI runtime.');return;}const tag=animatedRef();const name=(_viewName$value=(_viewName=animatedRef.viewName)===null||_viewName===void 0?void 0:_viewName.value)!==null&&_viewName$value!==void 0?_viewName$value:null;processColorsInProps(updates);global._updatePropsPaper([{tag:tag,name:name,updates:updates}]);}",
+};
+let module_1658 = module_1658_mod;
+module_1658.shouldBeUseWeb();
+let module_1658 = module_1658_mod;
+if (module_1658) {
+  if (module_1658.isJest()) {
+    function setNativePropsJest() {
+      const logger = _mod1659.logger;
+      logger.warn("setNativeProps() is not supported with Jest.");
     }
   } else {
-    try {
-      c3 = 2;
-      if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        let keepFocus;
-        if (closure_0 != null) {
-          keepFocus = tmp18.keepFocus;
+    const _module2 = module_1658;
+    setNativePropsJest = _module2.isChromeDebugger()
+      ? function setNativePropsChromeDebugger() {
+          const logger = _mod1659.logger;
+          logger.warn("setNativeProps() is not supported with Chrome Debugger.");
         }
-        c1 = keepFocus;
-        if (keepFocus == null) {
-          c1 = false;
-        }
-        closure_0 = c1;
-        let animated;
-        if (closure_0 != null) {
-          animated = tmp18.animated;
-        }
-        c2 = animated;
-        if (animated == null) {
-          c2 = true;
-        }
-        dependencyMap = c2;
-        const promise = new Promise((fn) => {
-          closure_0 = fn;
-          if (c2) {
-            fn();
-          } else {
-            const KeyboardEvents = closure_0(1633).KeyboardEvents;
-            closure_1 = KeyboardEvents.addListener("keyboardDidHide", () => {
-              closure_0(undefined);
-              closure_1.remove();
-            });
-            const KeyboardControllerNative = closure_0(1633).KeyboardControllerNative;
-            KeyboardControllerNative.dismiss(closure_0, closure_1);
-          }
-        });
-        c3 = 3;
-        const obj = { value: promise, done: true };
-        return obj;
-      }
-    } catch (tmp13) {
-      c3 = tmp;
-      throw tmp13;
-    }
+      : function setNativePropsDefault() {
+          const logger = _mod1659.logger;
+          logger.warn("setNativeProps() is not supported on this configuration.");
+        };
   }
-});
-const date = new Date();
-
-export const KeyboardController = {
-  setDefaultMode: fn(1633).KeyboardControllerNative.setDefaultMode,
-  setInputMode: fn(1633).KeyboardControllerNative.setInputMode,
-  setFocusTo: fn(1633).KeyboardControllerNative.setFocusTo,
-  preload: fn(1633).KeyboardControllerNative.preload,
-  dismiss(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  },
-  isVisible() {
-    return !c2;
-  },
-  state() {
-    return global;
-  },
-};
+} else {
+  if (module_1658.isFabric()) {
+    setNativePropsPaper = setNativePropsFabric;
+  }
+  exports.setNativeProps = setNativePropsPaper;
+}

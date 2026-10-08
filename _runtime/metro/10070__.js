@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 302,
+  height: 42,
   scales: [2, 3],
-  hash: "faa248a786366f008b1ac80b3ae581a2",
-  name: "LockUnlockedIcon",
+  hash: "2192040384b5c0bcacd48b43d2555bec",
+  name: "img_plan_activated_light",
   type: "png",
 });

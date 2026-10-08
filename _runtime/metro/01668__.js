@@ -1,75 +1,135 @@
 // _runtime/metro/01668__.js
-function isWorkletFunction(onUpdate) {
-  let __workletHash = typeof onUpdate === "function";
-  if (typeof onUpdate === "function") {
-    __workletHash = onUpdate.__workletHash;
-  }
-  return __workletHash;
+let prop;
+if (nativeFabricUIManager != null) {
+  prop = nativeFabricUIManager.nativeFabricUIManager;
 }
-isWorkletFunction.__closure = {};
-isWorkletFunction.__workletHash = 327007448384;
-isWorkletFunction.__initData = {
-  code: "function isWorkletFunction_Pnpm_commonTypesTs1(value){return(typeof value==='function'&&!!value.__workletHash);}",
+let obj = {
+  borderBottomEndRadius: true,
+  borderBottomLeftRadius: true,
+  borderBottomRightRadius: true,
+  borderBottomStartRadius: true,
+  borderRadius: true,
+  borderTopEndRadius: true,
+  borderTopLeftRadius: true,
+  borderTopRightRadius: true,
+  borderTopStartRadius: true,
 };
+let obj2 = obj;
+if (null == prop) {
+  obj2 = {};
+}
+let obj3 = { color: true, tintColor: true, shadowColor: true, placeholderTextColor: true };
+const obj4 = {
+  opacity: true,
+  transform: true,
+  backgroundColor: true,
+  borderRightColor: true,
+  borderBottomColor: true,
+  borderColor: true,
+  borderEndColor: true,
+  borderLeftColor: true,
+  borderStartColor: true,
+  borderTopColor: true,
+  shadowOpacity: true,
+  shadowRadius: true,
+};
+const merged = Object.assign(obj2);
+obj4.scaleX = true;
+obj4.scaleY = true;
+obj4.translateX = true;
+obj4.translateY = true;
+let obj5 = obj3;
+if (null == prop) {
+  obj5 = {};
+}
+const obj6 = { UI_THREAD_PROPS_WHITELIST: null, NATIVE_THREAD_PROPS_WHITELIST: null };
+const merged1 = Object.assign(obj5);
+obj6.UI_THREAD_PROPS_WHITELIST = obj4;
+if (null != prop) {
+  obj3 = {};
+}
+const size = {
+  borderBottomWidth: true,
+  borderEndWidth: true,
+  borderLeftWidth: true,
+  borderRightWidth: true,
+  borderStartWidth: true,
+  borderTopWidth: true,
+  borderWidth: true,
+  bottom: true,
+  boxShadow: true,
+  flex: true,
+  flexGrow: true,
+  flexShrink: true,
+  height: true,
+  left: true,
+  margin: true,
+  marginBottom: true,
+  marginEnd: true,
+  marginHorizontal: true,
+  marginLeft: true,
+  marginRight: true,
+  marginStart: true,
+  marginTop: true,
+  marginVertical: true,
+  maxHeight: true,
+  maxWidth: true,
+  minHeight: true,
+  minWidth: true,
+  padding: true,
+  paddingBottom: true,
+  paddingEnd: true,
+  paddingHorizontal: true,
+  paddingLeft: true,
+  paddingRight: true,
+  paddingStart: true,
+  paddingTop: true,
+  paddingVertical: true,
+  right: true,
+  start: true,
+  top: true,
+  width: true,
+  zIndex: true,
+  elevation: true,
+  fontSize: true,
+  lineHeight: true,
+  textShadowRadius: true,
+  textShadowOffset: true,
+  letterSpacing: true,
+  aspectRatio: true,
+  columnGap: true,
+  end: true,
+  flexBasis: true,
+  gap: true,
+  rowGap: true,
+  display: true,
+  backfaceVisibility: true,
+  overflow: true,
+  resizeMode: true,
+  fontStyle: true,
+  fontWeight: true,
+  textAlign: true,
+  textDecorationLine: true,
+  fontFamily: true,
+  textAlignVertical: true,
+  fontVariant: true,
+  textDecorationStyle: true,
+  textTransform: true,
+  writingDirection: true,
+  alignContent: true,
+  alignItems: true,
+  alignSelf: true,
+  direction: true,
+  flexDirection: true,
+  flexWrap: true,
+  justifyContent: true,
+  position: true,
+};
+const merged2 = Object.assign(obj3);
+if (null != prop) {
+  obj = {};
+}
+const merged3 = Object.assign(obj);
+obj6.NATIVE_THREAD_PROPS_WHITELIST = size;
 
-export const LayoutAnimationType = {
-  ENTERING: 1,
-  [1]: "ENTERING",
-  EXITING: 2,
-  [2]: "EXITING",
-  LAYOUT: 3,
-  [3]: "LAYOUT",
-  SHARED_ELEMENT_TRANSITION: 4,
-  [4]: "SHARED_ELEMENT_TRANSITION",
-  SHARED_ELEMENT_TRANSITION_PROGRESS: 5,
-  [5]: "SHARED_ELEMENT_TRANSITION_PROGRESS",
-};
-export const SharedTransitionType = { ANIMATION: "animation", PROGRESS_ANIMATION: "progressAnimation" };
-export { isWorkletFunction };
-export const SensorType = {
-  ACCELEROMETER: 1,
-  [1]: "ACCELEROMETER",
-  GYROSCOPE: 2,
-  [2]: "GYROSCOPE",
-  GRAVITY: 3,
-  [3]: "GRAVITY",
-  MAGNETIC_FIELD: 4,
-  [4]: "MAGNETIC_FIELD",
-  ROTATION: 5,
-  [5]: "ROTATION",
-};
-export const IOSReferenceFrame = {
-  XArbitraryZVertical: 0,
-  [0]: "XArbitraryZVertical",
-  XArbitraryCorrectedZVertical: 1,
-  [1]: "XArbitraryCorrectedZVertical",
-  XMagneticNorthZVertical: 2,
-  [2]: "XMagneticNorthZVertical",
-  XTrueNorthZVertical: 3,
-  [3]: "XTrueNorthZVertical",
-  Auto: 4,
-  [4]: "Auto",
-};
-export const InterfaceOrientation = {
-  ROTATION_0: 0,
-  [0]: "ROTATION_0",
-  ROTATION_90: 90,
-  [90]: "ROTATION_90",
-  ROTATION_180: 180,
-  [180]: "ROTATION_180",
-  ROTATION_270: 270,
-  [270]: "ROTATION_270",
-};
-export const KeyboardState = {
-  UNKNOWN: 0,
-  [0]: "UNKNOWN",
-  OPENING: 1,
-  [1]: "OPENING",
-  OPEN: 2,
-  [2]: "OPEN",
-  CLOSING: 3,
-  [3]: "CLOSING",
-  CLOSED: 4,
-  [4]: "CLOSED",
-};
-export const ReduceMotion = { System: "system", Always: "always", Never: "never" };
+export const PropsAllowlists = obj6;

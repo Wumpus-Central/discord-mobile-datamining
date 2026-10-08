@@ -1,560 +1,177 @@
 // _runtime/metro/06507__.js
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import hasOwnProperty from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import value2 from "../06299_value2.js";
+import noop_mod from "00019__.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
-let StackView = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let closure_2 = ["state", "descriptors"];
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-let GestureHandlerRootView = fn(6508).GestureHandlerRootView;
-if (GestureHandlerRootView == null) {
-  GestureHandlerRootView = View;
-}
-function isArrayEqual(arg0, arg1) {}
-class StackView {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_4(this, StackView);
-    items1 = [...items];
-    tmp2 = metroRequire;
-    obj = metroRequire(StackView);
-    tmp3 = hasOwnProperty;
-    if (closure_8()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    obj1 = {
-      routes: [],
-      previousState: "y",
-      openingRouteKeys: "local",
-      closingRouteKeys: null,
-      replacingRouteKeys: null,
-      descriptors: null,
-    };
-    obj1.openingRouteKeys = [];
-    obj1.closingRouteKeys = [];
-    obj1.replacingRouteKeys = [];
-    obj1.descriptors = {};
-    tmp3Result.state = obj1;
-    tmp3Result.getPreviousRoute = (route) => {
-      route = route.route;
-      c1 = undefined;
-      c2 = undefined;
-      ({ closingRouteKeys: c1, replacingRouteKeys: c2 } = closure_0.state);
-      const routes = closure_0.state.routes;
-      const found = routes.filter((key) => {
-        let tmp = key.key === route.key;
-        if (!tmp) {
-          const hasItem = _undefined.includes(key.key);
-          let tmp4 = !hasItem;
-          if (!hasItem) {
-            tmp4 = !_undefined2.includes(key.key);
-          }
-          tmp = tmp4;
-        }
-        return tmp;
-      });
-      return found[found.findIndex(found, (key) => key.key === route.key) - 1];
-    };
-    tmp3Result.renderHeader = (arg0) => {
-      const merged = Object.assign(arg0);
-      return jsx(closure_0(6511).HeaderContainer, {});
-    };
-    tmp3Result.handleOpenRoute = (route) => {
-      route = route.route;
-      ({ state, navigation } = closure_0.props);
-      ({ closingRouteKeys, replacingRouteKeys } = closure_0.state);
-      if (closingRouteKeys.some((item) => item === route.key)) {
-        if (replacingRouteKeys.every((item) => item !== route.key)) {
-          const routeNames = state.routeNames;
-          if (routeNames.includes(route.name)) {
-            let routes = state.routes;
-            if (!routes.some((key) => key.key === route.key)) {
-              navigation.dispatch((routes) => {
-                routes = routes.routes;
-                const items = [];
-                items[
-                  HermesBuiltin.arraySpread(
-                    routes.filter((key) => key.key !== key.key),
-                    0,
-                  )
-                ] = route;
-                const CommonActions = key(1491).CommonActions;
-                const obj = {};
-                const merged = Object.assign(routes);
-                obj.routes = items;
-                obj.index = items.length - 1;
-                return CommonActions.reset(obj);
-              });
-            }
-          }
-        }
+let noop = noop_mod;
+({ useCallback: c2, useMemo: c3, useRef: closure_4 } = noop);
+let noop = noop_mod;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+
+export default function _default(children) {
+  let sharedValue;
+  let sharedValue1;
+  closure_3 = undefined;
+  let mountSheet;
+  sharedValue = sharedValue(sharedValue1[2]).useSharedValue(sharedValue(sharedValue1[3]).INITIAL_CONTAINER_HEIGHT);
+  let obj = sharedValue(sharedValue1[2]);
+  sharedValue1 = sharedValue(sharedValue1[2]).useSharedValue(sharedValue(sharedValue1[3]).INITIAL_CONTAINER_OFFSET);
+  let tmp3 = closure_3(() => "bottom-sheet-portal-" + sharedValue(sharedValue1[4]).id(), []);
+  const hostName = tmp3;
+  closure_3 = mountSheet([]);
+  let tmp4 = hostName((key, current, arg2) => {
+    closure_0 = key;
+    const current1 = closure_3.current;
+    const substr = current1.slice();
+    const findIndexResult = substr.findIndex((key) => key.key === closure_0);
+    if (-1 === findIndexResult) {
+      let tmp5 = tmp4;
+      if (substr[substr.length - 1]) {
+        tmp5 = !tmp4.willUnmount;
       }
-      closure_0.setState((routes) => {
-        closure_0 = routes;
-        routes = routes.routes;
-        const routes1 = routes.routes;
-        const substr = routes1.slice(
-          0,
-          routes.findIndex((key) => key.key === closure_0.key),
-        );
-        const found = substr.filter((key) => {
-          const replacingRouteKeys = closure_0.replacingRouteKeys;
-          return replacingRouteKeys.includes(key.key);
-        });
-        const set = new Set(found.map((key) => key.key));
-        const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null, replacingRouteKeys: null };
-        const routes2 = routes.routes;
-        obj.routes = routes2.filter((key) => !set.has(key.key));
-        const openingRouteKeys = routes.openingRouteKeys;
-        obj.openingRouteKeys = openingRouteKeys.filter((item) => item !== closure_0.key);
-        const closingRouteKeys = routes.closingRouteKeys;
-        obj.closingRouteKeys = closingRouteKeys.filter((item) => item !== closure_0.key);
-        let replacingRouteKeys = routes.replacingRouteKeys;
-        obj.replacingRouteKeys = replacingRouteKeys.filter((item) => !set.has(item));
-        return obj;
-      });
-    };
-    tmp3Result.handleCloseRoute = (route) => {
-      route = route.route;
-      ({ state, navigation } = closure_0.props);
-      let routes = state.routes;
-      if (routes.some((key) => key.key === route.key)) {
-        const obj2 = {};
-        const StackActions = StackView(1491).StackActions;
-        const merged = Object.assign(StackActions.pop());
-        obj2.source = route.key;
-        obj2.target = state.key;
-        navigation.dispatch(obj2);
-      } else {
-        closure_0.setState((routes) => {
-          const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null };
-          routes = routes.routes;
-          obj.routes = routes.filter((key) => key.key !== route.key);
-          const openingRouteKeys = routes.openingRouteKeys;
-          obj.openingRouteKeys = openingRouteKeys.filter((item) => item !== route.key);
-          const closingRouteKeys = routes.closingRouteKeys;
-          obj.closingRouteKeys = closingRouteKeys.filter((item) => item !== route.key);
-          return obj;
-        });
-      }
-    };
-    tmp3Result.handleTransitionStart = (route, closing) => {
-      const navigation = closure_0.props.navigation;
-      const obj = { type: "transitionStart", data: { closing }, target: route.route.key };
-      return navigation.emit(obj);
-    };
-    tmp3Result.handleTransitionEnd = (route, closing) => {
-      const navigation = closure_0.props.navigation;
-      const obj = { type: "transitionEnd", data: { closing }, target: route.route.key };
-      return navigation.emit(obj);
-    };
-    tmp3Result.handleGestureStart = (route) => {
-      const navigation = closure_0.props.navigation;
-      navigation.emit({ type: "gestureStart", target: route.route.key });
-    };
-    tmp3Result.handleGestureEnd = (route) => {
-      const navigation = closure_0.props.navigation;
-      navigation.emit({ type: "gestureEnd", target: route.route.key });
-    };
-    tmp3Result.handleGestureCancel = (route) => {
-      const navigation = closure_0.props.navigation;
-      navigation.emit({ type: "gestureCancel", target: route.route.key });
-    };
-    return tmp3Result;
-  }
-}
-_inherits(StackView, noop.Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    let props = this.props;
-    state = props.state;
-    closure_2 = _objectWithoutProperties(props, closure_2);
-    ({
-      routes: _objectWithoutProperties,
-      descriptors: _classCallCheck,
-      openingRouteKeys: closure_5,
-      closingRouteKeys: _getPrototypeOf,
-    } = this.state);
-    const preloadedRoutes = state.preloadedRoutes;
-    StackView = preloadedRoutes.reduce((acc, key) => {
-      let describeResult = acc[key.key];
-      if (!describeResult) {
-        const props = self.props;
-        describeResult = props.describe(key, true);
-      }
-      acc[key.key] = describeResult;
-      return acc;
-    }, {});
-    const obj = { style: container.container, children: null };
-    const obj2 = {
-      children: self(StackView(state[13]).SafeAreaInsetsContext.Consumer, {
-        children(arg0) {
-          closure_0 = arg0;
-          return self(closure_0(state[14]).ModalPresentationContext.Consumer, {
-            children(arg0) {
-              closure_0 = arg0;
-              return self(closure_0(state[12]).HeaderShownContext.Consumer, {
-                children(isParentHeaderShown) {
-                  const merged = Object.assign(closure_2);
-                  return jsx(StackView(6517).CardStack, {
-                    insets: preloadedDescriptors,
-                    isParentHeaderShown,
-                    isParentModal: preloadedDescriptors,
-                    getPreviousRoute: self.getPreviousRoute,
-                    routes,
-                    openingRouteKeys,
-                    closingRouteKeys,
-                    onOpenRoute: self.handleOpenRoute,
-                    onCloseRoute: self.handleCloseRoute,
-                    onTransitionStart: self.handleTransitionStart,
-                    onTransitionEnd: self.handleTransitionEnd,
-                    renderHeader: self.renderHeader,
-                    state,
-                    descriptors,
-                    onGestureStart: self.handleGestureStart,
-                    onGestureEnd: self.handleGestureEnd,
-                    onGestureCancel: self.handleGestureCancel,
-                    preloadedDescriptors,
-                  });
-                },
-              });
-            },
-          });
-        },
-      }),
-    };
-    obj.children = self(StackView(state[12]).SafeAreaProviderCompat, obj2);
-    return self(GestureHandlerRootView, obj);
-  },
-};
-let items = [entry];
-const entry1 = {
-  key: "getDerivedStateFromProps",
-  value: function getDerivedStateFromProps(state, previousState) {
-    let arr3 = state;
-    dependencyMap = previousState;
-    const items = [...state.state.preloadedRoutes];
-    const items1 = [];
-    if (previousState.previousState) {
-      HermesBuiltin.arraySpread(
-        previousState.previousState.preloadedRoutes,
-        HermesBuiltin.arraySpread(previousState.previousState.routes, 0),
-      );
-      arr3 = items1;
-    } else {
-      arr3 = items1;
-    }
-    const mapped = items.map((key) => key.key);
-    const mapped1 = arr3.map((key) => key.key);
-    if (typeof isArrayEqual === "function") {
-      arr3 = mapped1;
       if (tmp5) {
-        if (previousState.routes.length) {
-          let routes = previousState.routes;
-          const found = routes.filter((key) => {
-            const closingRouteKeys = previousState.closingRouteKeys;
-            let hasItem = closingRouteKeys.includes(key.key);
-            if (hasItem) {
-              const routes = arr3.state.routes;
-              hasItem = !routes.some((key) => key.key === key.key);
+        if (arg2 === value2.MODAL_STACK_BEHAVIOR.replace) {
+          if (tmp4.ref != null) {
+            const current2 = ref2.current;
+            if (current2 != null) {
+              current2.dismiss();
             }
-            return hasItem;
-          });
-          const routes1 = previousState.routes;
-          const found1 = routes1.filter((key) => {
-            const replacingRouteKeys = previousState.replacingRouteKeys;
-            let hasItem = replacingRouteKeys.includes(key.key);
-            if (hasItem) {
-              const routes = arr3.state.routes;
-              hasItem = !routes.some((key) => key.key === key.key);
-            }
-            return hasItem;
-          });
-          const routes2 = state.state.routes;
-          const substr = routes2.slice();
-          if (found1.length) {
-            const splice3 = substr.splice;
-            const items2 = [substr.length - 1, 0];
-            HermesBuiltin.arraySpread(found1, 2);
-            HermesBuiltin.apply(items2, substr);
           }
-          if (found.length) {
-            const push = substr.push;
-            const items3 = [];
-            HermesBuiltin.arraySpread(found, 0);
-            HermesBuiltin.apply(items3, substr);
-          }
-          if (typeof isArrayEqual === "function") {
-            let mapped2 = substr;
-            if (!tmp72) {
-              closure_2 = items.reduce((acc, key) => {
-                acc[key.key] = key;
-                return acc;
-              }, {});
-              mapped2 = substr.map((item) => closure_2[item.key] || item);
+        } else if (arg2 === value2.MODAL_STACK_BEHAVIOR.switch) {
+          if (tmp4.ref != null) {
+            current = ref.current;
+            if (current != null) {
+              current.minimize();
             }
-            const items4 = [];
-            HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(mapped2, 0));
-            const obj3 = {
-              routes: mapped2,
-              previousState: state.state,
-              descriptors: items4.reduce((acc, key) => {
-                let tmp = arr3.descriptors[key.key];
-                if (!tmp) {
-                  tmp = previousState.descriptors[key.key];
-                }
-                acc[key.key] = tmp;
-                return acc;
-              }, {}),
-            };
-            return obj3;
-          } else {
-            throw new TypeError("Trying to call a non-function");
           }
         }
       }
-      if (state.state.index < state.state.routes.length - 1) {
-        const routes3 = state.state.routes;
-        let substr1 = routes3.slice(0, state.state.index + 1);
-      } else {
-        substr1 = state.state.routes;
-      }
-      let substr3 = substr1;
-      ({ openingRouteKeys, closingRouteKeys } = previousState);
-      let replacingRouteKeys = previousState.replacingRouteKeys;
-      const found2 = closingRouteKeys.filter((item) => {
-        closure_0 = item;
-        return !substr3.some((key) => key.key === closure_0);
-      });
-      let found9 = found2;
-      const found3 = replacingRouteKeys.filter((item) => {
-        closure_0 = item;
-        return !substr3.some((key) => key.key === closure_0);
-      });
-      let items10 = found3;
-      let tmp6;
-      if (previousState.previousState) {
-        tmp6 = previousState.previousState.routes[previousState.previousState.index];
-      }
-      closure_6 = tmp6;
-      closure_7 = tmp7;
-      function isAnimationEnabled(arg0) {}
-      if (tmp6) {
-        if (tmp6.key !== tmp7.key) {
-          if (arr3.some((key) => key.key === closure_7.key)) {
-            if (!substr1.some((key) => key.key === closure_6.key)) {
-              let animation;
-              if ((state.descriptors[tmp6.key] || previousState.descriptors[tmp6.key]) != null) {
-                animation = tmp18.options.animation;
-              }
-              const obj = arr3(6517);
-              let tmp9 = found3;
-              let tmp10 = found2;
-              let found4 = openingRouteKeys;
-              let arr11 = substr1;
-              if (tmp23) {
-                const items5 = [];
-                items5[HermesBuiltin.arraySpread(found2, 0)] = tmp6.key;
-                found9 = items5;
-                found4 = openingRouteKeys.filter((item) => item !== closure_6.key);
-                const found5 = found3.filter((item) => item !== closure_6.key);
-                items10 = found5;
-                const items6 = [];
-                items6[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
-                substr3 = items6;
-                tmp9 = found5;
-                tmp10 = items5;
-                arr11 = items6;
-              }
-              tmp23 = arr3(6517).getAnimationEnabled(animation) && !found2.includes(tmp6.key);
-            }
+      if (-1 !== findIndexResult) {
+        substr.splice(findIndexResult, 1);
+        if (current != null) {
+          const current3 = current.current;
+          if (current3 != null) {
+            current3.restore();
           }
-          let animation1;
-          if ((state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key]) != null) {
-            animation1 = tmp29.options.animation;
-          }
-          tmp9 = found3;
-          tmp10 = found2;
-          found4 = openingRouteKeys;
-          arr11 = substr1;
-          if (obj2.getAnimationEnabled(animation1)) {
-            tmp9 = found3;
-            tmp10 = found2;
-            found4 = openingRouteKeys;
-            arr11 = substr1;
-            if (!openingRouteKeys.includes(tmp7.key)) {
-              const items7 = [];
-              items7[HermesBuiltin.arraySpread(openingRouteKeys, 0)] = tmp7.key;
-              const found6 = found2.filter((item) => item !== closure_7.key);
-              found9 = found6;
-              const found7 = found3.filter((item) => item !== closure_7.key);
-              items10 = found7;
-              tmp9 = found7;
-              tmp10 = found6;
-              found4 = items7;
-              arr11 = substr1;
-              if (!substr1.some((key) => key.key === closure_6.key)) {
-                const found8 = items7.filter((item) => item !== closure_6.key);
-                let str =
-                  state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key].options.animationTypeForReplace;
-                if (str == null) {
-                  str = "push";
-                }
-                if ("pop" === str) {
-                  const items8 = [];
-                  items8[HermesBuiltin.arraySpread(found6, 0)] = tmp6.key;
-                  found9 = items8;
-                  found4 = found8.filter((item) => item !== closure_7.key);
-                  const items9 = [];
-                  items9[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
-                  substr3 = items9;
-                  tmp9 = found7;
-                  tmp10 = items8;
-                  arr11 = items9;
-                } else {
-                  items10 = [];
-                  items10[HermesBuiltin.arraySpread(found7, 0)] = tmp6.key;
-                  found9 = found6.filter((item) => item !== closure_6.key);
-                  const substr2 = substr1.slice();
-                  substr3 = substr2;
-                  substr2.splice(substr2.length - 1, 0, tmp6);
-                  const routes4 = previousState.routes;
-                  const found10 = routes4.filter((key) => {
-                    let hasItem = items10.includes(key.key);
-                    if (hasItem) {
-                      hasItem = !substr3.some((key) => key.key === key.key);
-                    }
-                    return hasItem;
-                  });
-                  tmp9 = items10;
-                  tmp10 = found9;
-                  found4 = found8;
-                  arr11 = substr2;
-                  if (found10.length) {
-                    const splice2 = substr2.splice;
-                    const items11 = [substr2.length - 2, 0];
-                    HermesBuiltin.arraySpread(found10, 2);
-                    HermesBuiltin.apply(items11, substr2);
-                    tmp9 = items10;
-                    tmp10 = found9;
-                    found4 = found8;
-                    arr11 = substr2;
-                  }
-                }
-                const tmp37 = state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key];
-              }
-            }
-          }
-          obj2 = arr3(6517);
-        }
-        if (arr11.length) {
-          const items12 = [];
-          HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(arr11, 0));
-          const obj4 = {
-            routes: arr11,
-            previousState: state.state,
-            openingRouteKeys: found4,
-            closingRouteKeys: tmp10,
-            replacingRouteKeys: tmp9,
-            descriptors: items12.reduce((acc, key) => {
-              let tmp = arr3.descriptors[key.key];
-              if (!tmp) {
-                tmp = previousState.descriptors[key.key];
-              }
-              acc[key.key] = tmp;
-              return acc;
-            }, {}),
-          };
-          return obj4;
-        } else {
-          const _Error = Error;
-          const error = new Error("There should always be at least one route in the navigation state.");
-          throw error;
         }
       }
-      tmp9 = found3;
-      tmp10 = found2;
-      found4 = openingRouteKeys;
-      arr11 = substr1;
-      if (tmp8) {
-        substr3 = substr1.slice();
-        const splice = substr3.splice;
-        const items13 = [substr3.length - 1, 0];
-        const routes5 = previousState.routes;
-        HermesBuiltin.arraySpread(
-          routes5.filter((key) => {
-            if (typeof isAnimationEnabled === "function") {
-              let tmp2 = arr3.descriptors[key];
-              if (!tmp2) {
-                tmp2 = previousState.descriptors[key];
-              }
-              let animation;
-              if (tmp2 != null) {
-                animation = tmp2.options.animation;
-              }
-              let animationEnabled = StackView(6517).getAnimationEnabled(animation);
-              if (animationEnabled) {
-                let hasItem = items10.includes(key);
-                if (!hasItem) {
-                  hasItem = found9.includes(key);
-                }
-                animationEnabled = hasItem;
-              }
-              return animationEnabled;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          }),
-          2,
-        );
-        HermesBuiltin.apply(items13, substr3);
-        tmp9 = found3;
-        tmp10 = found2;
-        found4 = openingRouteKeys;
-        arr11 = substr3;
-      }
-      tmp5 = mapped.length === mapped1.length && mapped.every((item, index) => Object.is(item, arr3[index]));
-      tmp8 = found3.length || found2.length;
-    } else {
-      throw new TypeError("Trying to call a non-function");
+      const obj = { key, ref: current, willUnmount: false };
+      substr.push(obj);
+      closure_3.current = substr;
     }
-  },
-};
-let items1 = [entry1];
-const container = StyleSheet.create({ container: { flex: 1 } });
-
-export const StackView = _createClass(StackView, items, items1);
+  }, []);
+  mountSheet = tmp4;
+  let tmp5 = hostName((arg0) => {
+    closure_0 = arg0;
+    const current1 = closure_3.current;
+    const substr = current1.slice();
+    const findIndexResult = substr.findIndex((key) => key.key === closure_0);
+    let tmp3 = findIndexResult === substr.length - 1;
+    substr.splice(findIndexResult, 1);
+    closure_3.current = substr;
+    if (tmp3) {
+      tmp3 = closure_3.current.length > 0;
+    }
+    if (tmp3) {
+      tmp3 = tmp5;
+    }
+    if (tmp3) {
+      tmp3 = !tmp5.willUnmount;
+    }
+    if (tmp3) {
+      const ref = closure_3.current[closure_3.current.length - 1].ref;
+      if (ref != null) {
+        const current = ref.current;
+        if (current != null) {
+          current.restore();
+        }
+      }
+    }
+  }, []);
+  const unmountSheet = tmp5;
+  const tmp6 = hostName((arg0) => {
+    closure_0 = arg0;
+    const current1 = closure_3.current;
+    const substr = current1.slice();
+    const findIndexResult = substr.findIndex((key) => key.key === closure_0);
+    const diff = substr.length - 1;
+    if (-1 !== findIndexResult) {
+      substr[findIndexResult].willUnmount = true;
+    }
+    if (tmp4) {
+      if (substr[substr.length - 2].ref != null) {
+        const current = ref.current;
+        if (current != null) {
+          current.restore();
+        }
+      }
+    }
+    closure_3.current = substr;
+    tmp4 = findIndexResult === diff && substr.length > 1;
+  }, []);
+  const willUnmountSheet = tmp6;
+  const tmp7 = hostName((arg0) => {
+    closure_0 = arg0;
+    const current1 = closure_3.current;
+    if (arg0) {
+      let found = current1.find((key) => key.key === closure_0);
+    } else {
+      found = current1[tmp.current.length - 1];
+    }
+    let flag = found;
+    if (flag) {
+      flag = true;
+      if (found.ref != null) {
+        const current = ref.current;
+        flag = true;
+        if (current != null) {
+          current.dismiss();
+          flag = true;
+        }
+      }
+    }
+    return flag;
+  }, []);
+  const dismiss = tmp7;
+  const tmp8 = hostName(() => {
+    let current = closure_3.current;
+    const mapped = current.map((ref) => {
+      if (ref.ref != null) {
+        const current = ref.current;
+        if (current != null) {
+          current.dismiss();
+        }
+      }
+    });
+  }, []);
+  const dismissAll = tmp8;
+  const items = [tmp7, tmp8];
+  const items1 = [tmp3, sharedValue, sharedValue1, tmp4, tmp5, tmp6];
+  const obj2 = sharedValue(sharedValue1[2]);
+  const tmp9 = closure_3(() => ({ dismiss, dismissAll }), items);
+  const obj3 = { value: tmp9, children: null };
+  const obj4 = {
+    value: closure_3(
+      () => ({
+        hostName,
+        containerHeight: sharedValue,
+        containerOffset: sharedValue1,
+        mountSheet,
+        unmountSheet,
+        willUnmountSheet,
+      }),
+      items1,
+    ),
+    children: null,
+  };
+  const items2 = [
+    unmountSheet(sharedValue(sharedValue1[7]).BottomSheetHostingContainer, {
+      containerOffset: sharedValue1,
+      containerHeight: sharedValue,
+    }),
+    unmountSheet(sharedValue(sharedValue1[8]).PortalProvider, { rootHostName: tmp3, children: children.children }),
+  ];
+  obj4.children = items2;
+  obj3.children = willUnmountSheet(sharedValue(sharedValue1[6]).BottomSheetModalInternalProvider, obj4);
+  return unmountSheet(sharedValue(sharedValue1[6]).BottomSheetModalProvider, obj3);
+}

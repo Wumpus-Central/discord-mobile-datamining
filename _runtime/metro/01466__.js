@@ -1,18 +1,55 @@
 // _runtime/metro/01466__.js
+import _mod1306 from "01306__.js";
+import _mod1337 from "01337__.js";
+import callBoundIntrinsic from "../01338_callBoundIntrinsic.js";
 
-export default function isBuffer(copy) {
-  let tmp = copy;
-  if (copy) {
-    tmp = typeof copy === "object";
+if (tmp) {
+  let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");
+  let closure_3 = {};
+  function throwRegexMarker() {
+    throw closure_3;
   }
-  if (tmp) {
-    tmp = typeof copy.copy === "function";
+  const obj = { toString: throwRegexMarker, valueOf: throwRegexMarker };
+  const _Symbol = Symbol;
+  if (typeof Symbol.toPrimitive === "symbol") {
+    const _Symbol2 = Symbol;
+    obj[Symbol.toPrimitive] = throwRegexMarker;
   }
-  if (tmp) {
-    tmp = typeof copy.fill === "function";
+  function isRegex(obj) {
+    if (obj) {
+      if (typeof obj === "object") {
+        const tmp8 = _mod1306(obj, "lastIndex");
+        if (tmp8) {
+          if (_mod1337(tmp8, "value")) {
+            try {
+              closure_2(obj, obj);
+            } catch (tmp4) {
+              return tmp4 === closure_3;
+            }
+          }
+        }
+        return false;
+      }
+    }
+    return false;
   }
-  if (tmp) {
-    tmp = typeof copy.readUInt8 === "function";
-  }
-  return tmp;
+} else {
+  let closure_5 = callBoundIntrinsic("Object.prototype.toString");
+  isRegex = function isRegex(obj) {
+    let tmp = !obj;
+    if (obj) {
+      let tmp2 = typeof obj !== "object";
+      if (typeof obj !== "object") {
+        tmp2 = typeof obj !== "function";
+      }
+      tmp = tmp2;
+    }
+    let tmp3 = !tmp;
+    if (!tmp) {
+      tmp3 = "[object RegExp]" === closure_5(obj);
+    }
+    return tmp3;
+  };
 }
+
+export default isRegex;

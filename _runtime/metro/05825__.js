@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "45e56b0ad20f9774b74dbe6cbb00fca0",
-  name: "GroupIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "be629a43a1506b7ff0f25b34b78ebb11",
+  name: "img_account_sync_github_light",
   type: "png",
 });

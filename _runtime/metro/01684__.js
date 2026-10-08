@@ -1,38 +1,52 @@
 // _runtime/metro/01684__.js
-import 01646__ from "01646__.js";
-import 01680__ from "01680__.js";
+import ReactFabric from "../00116_ReactFabric.js";
+import _mod1666 from "01666__.js";
 
-if (module_1646.isWeb()) {
-  const _module1 = module_1646;
-  let matches = _module1.isWindowAvailable();
-  if (matches) {
-    let _window = window;
-    matches = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  }
-  let prop = matches;
-} else {
-  prop = global._REANIMATED_IS_REDUCED_MOTION;
-}
-const ReducedMotionManager = { jsValue: prop, uiValue: null, setEnabled: null };
-function isReducedMotionEnabledInSystem() {
-  if (obj.isWeb()) {
-    let matches = module_1646.isWindowAvailable();
-    if (matches) {
-      const _window = window;
-      matches = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+require = arg1;
+const dependencyMap = arg6;
+
+export const findHostInstance = function findHostInstance(_componentRef) {
+  _componentRef = _componentRef._componentRef;
+  let tmp;
+  if (_componentRef) {
+    if (_componentRef.__internalInstanceHandle) {
+      if (_componentRef.__nativeTag) {
+        if (!_componentRef.__viewConfig) {
+          tmp = tmp2;
+        }
+      }
+      tmp2 = _componentRef;
     }
-    let prop = matches;
-    const tmpResult = module_1646;
-  } else {
-    prop = global._REANIMATED_IS_REDUCED_MOTION;
   }
-  return prop;
-}
-ReducedMotionManager.uiValue = module_1680.makeMutable(prop);
-ReducedMotionManager.setEnabled = function setEnabled(jsValue) {
-  obj.jsValue = jsValue;
-  obj.uiValue.value = jsValue;
+  if (undefined === tmp) {
+    (function resolveFindHostInstance_DEPRECATED() {
+      if (undefined === prop) {
+        try {
+          const tmp4 = ReactFabric;
+          prop = undefined;
+          if (tmp4 != null) {
+            if (tmp4.default != null) {
+              prop = _default.findHostInstance_DEPRECATED;
+            }
+          }
+          if (prop == null) {
+            let prop1;
+            if (tmp4 != null) {
+              prop1 = tmp4.findHostInstance_DEPRECATED;
+            }
+            prop = prop1;
+          }
+        } catch (err) {
+          const reanimatedError = new _mod1666.ReanimatedError("Failed to resolve findHostInstance_DEPRECATED");
+          throw reanimatedError;
+        }
+      }
+    })();
+    let _componentRef2 = _componentRef._componentRef;
+    if (_componentRef2 == null) {
+      _componentRef2 = _componentRef;
+    }
+    tmp = React2(_componentRef2);
+  }
+  return tmp;
 };
-
-export { isReducedMotionEnabledInSystem };
-export { ReducedMotionManager };

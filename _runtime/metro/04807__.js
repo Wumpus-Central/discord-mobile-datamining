@@ -1,13 +1,51 @@
 // _runtime/metro/04807__.js
-import registerAsset from "01132__.js";
+import installWorkletsSupport_mod from "../04808_installWorkletsSupport.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleErrorIcon-secondary",
-  type: "png",
-});
+const require = globalThis.__r;
+
+let installWorkletsSupport = installWorkletsSupport_mod;
+installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
+for (const key10017 in require("04817__.js")) {
+  arg5[key10017] = require("04817__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("04818__.js")) {
+  arg5[key10021] = require("04818__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("04819__.js")) {
+  arg5[key10025] = require("04819__.js")[key10025];
+  continue;
+}
+for (const key10029 in require("04820__.js")) {
+  arg5[key10029] = require("04820__.js")[key10029];
+  continue;
+}
+for (const key10033 in require("04821__.js")) {
+  arg5[key10033] = require("04821__.js")[key10033];
+  continue;
+}
+for (const key10037 in require("04822__.js")) {
+  arg5[key10037] = require("04822__.js")[key10037];
+  continue;
+}
+for (const key10041 in require("04813__.js")) {
+  arg5[key10041] = require("04813__.js")[key10041];
+  continue;
+}
+for (const key10045 in require("04823__.js")) {
+  arg5[key10045] = require("04823__.js")[key10045];
+  continue;
+}
+for (const key10049 in require("04824__.js")) {
+  arg5[key10049] = require("04824__.js")[key10049];
+  continue;
+}
+for (const key10053 in require("04825__.js")) {
+  arg5[key10053] = require("04825__.js")[key10053];
+  continue;
+}
+for (const key10057 in require("04826__.js")) {
+  arg5[key10057] = require("04826__.js")[key10057];
+  continue;
+}

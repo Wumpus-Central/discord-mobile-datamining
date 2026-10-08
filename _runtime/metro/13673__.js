@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b3429e38ab32663de7a271eafbda6e13",
-  name: "ChannelListMagnifyingGlassIcon",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
+  scales: [1],
+  hash: "e2676a24ea3247f11452fad9b442341d",
+  name: "img_wumpus_nitro",
   type: "png",
 });

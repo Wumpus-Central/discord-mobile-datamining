@@ -1,105 +1,67 @@
 // _runtime/metro/06259__.js
-import tagMessage from "../06152_tagMessage.js";
-import _mod6153 from "06153__.js";
+import _mod1633 from "01633__.js";
+import FrameSizeProvider from "../06236_FrameSizeProvider.js";
+import noop from "00019__.js";
 
 require = fn;
-const dependencyMap = arg6;
-const setGestureState = function t(arg0, arg1) {
-  const _globalThis = globalThis;
-  if (globalThis._setGestureStateSync) {
-    _globalThis._setGestureStateSync(arg0, arg1);
-  } else if (_globalThis._setGestureStateAsync) {
-    const _globalThis2 = globalThis;
-    const result = globalThis._setGestureStateAsync(arg0, arg1);
-  } else {
-    const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-    throw error;
+get_ActivityIndicator = fn(17);
+({ Dimensions, Platform, StyleSheet, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = Dimensions.get("window");
+const width = size.width;
+let num = 0;
+if (undefined !== width) {
+  num = width;
+}
+const height = size.height;
+let num2 = 0;
+if (undefined !== height) {
+  num2 = height;
+}
+if (null == fn(1633).initialWindowMetrics) {
+  let obj = { frame: null, insets: null };
+  const size1 = { x: 0, y: 0, width: num, height: num2 };
+  obj.frame = size1;
+  obj.insets = { top: 0, left: 0, right: 0, bottom: 0 };
+  let initialWindowMetrics = obj;
+} else {
+  initialWindowMetrics = fn(1633).initialWindowMetrics;
+}
+class SafeAreaProviderCompat {
+  constructor(arg0) {
+    ({ children, style } = global);
+    closure_2 = undefined;
+    closure_2 = closure_2.useContext(children(style[3]).SafeAreaInsetsContext);
+    obj = {
+      initialFrame: initialWindowMetrics.frame,
+      render(onLayout) {
+        onLayout = onLayout.onLayout;
+        if (closure_2) {
+          const obj2 = { ref: tmp, onLayout, style: null, children: null };
+          const items = [container.container, style];
+          obj2.style = items;
+          obj2.children = children;
+          let tmp2Result = (
+            <React3 ref={tmp} onLayout={onLayout} style={null}>
+              {null}
+            </React3>
+          );
+        } else {
+          const obj = { initialMetrics: initialWindowMetrics, style, onLayout, children };
+          tmp2Result = jsx(_mod1633.SafeAreaProvider, {
+            initialMetrics: initialWindowMetrics,
+            style,
+            onLayout,
+            children,
+          });
+        }
+        return tmp2Result;
+      },
+    };
+    return jsx(children(style[4]).FrameSizeProvider, obj);
   }
-};
-setGestureState.__closure = { tagMessage: fn(6152).tagMessage };
-setGestureState.__workletHash = 727405139747;
-setGestureState.__initData = {
-  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
-};
-const obj2 = { activate: null, fail: null, deactivate: null };
-const fn2 = function _(arg0) {
-  const ACTIVE = _mod6153.State.ACTIVE;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, ACTIVE);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj = { tagMessage: fn(6152).tagMessage };
-fn2.__closure = { setGestureState, State: fn(6153).State };
-fn2.__workletHash = 14928129771754;
-fn2.__initData = {
-  code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}",
-};
-obj2.activate = fn2;
-const fn3 = function n(arg0) {
-  const FAILED = _mod6153.State.FAILED;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, FAILED);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, FAILED);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj3 = { setGestureState, State: fn(6153).State };
-fn3.__closure = { setGestureState, State: fn(6153).State };
-fn3.__workletHash = 1703030189599;
-fn3.__initData = {
-  code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}",
-};
-obj2.fail = fn3;
-const fn4 = function s(arg0) {
-  const END = _mod6153.State.END;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, END);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, END);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj4 = { setGestureState, State: fn(6153).State };
-fn4.__closure = { setGestureState, State: fn(6153).State };
-fn4.__workletHash = 5511283927342;
-fn4.__initData = {
-  code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}",
-};
-obj2.deactivate = fn4;
+}
+SafeAreaProviderCompat.initialMetrics = initialWindowMetrics;
+const styles = StyleSheet.create({ container: { flex: 1 } });
 
-export const GestureStateManager = obj2;
+export { SafeAreaProviderCompat };

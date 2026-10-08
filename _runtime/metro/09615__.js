@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "87c2408460473066b05c992e498cb968",
-  name: "header_arrow_right",
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 48,
+  height: 48,
+  scales: [2, 3],
+  hash: "047af24ad7333177fbe250a3bbe8025e",
+  name: "feedback-modal-neutral-desaturated_darker",
   type: "png",
 });

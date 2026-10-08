@@ -1,11 +1,7 @@
 // _runtime/metro/02134__.js
-import registerAsset from "01132__.js";
+let closure_0 = { lastWeek: "'last' eeee 'at' p", yesterday: "'yesterday at' p", today: "'today at' p", tomorrow: "'tomorrow at' p", nextWeek: "eeee 'at' p", other: "P" };
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/ZGVzaWdu",
-  scales: [1],
-  hash: "ddaba06c5ff8c4eca982d33ccd827fa8",
-  name: "el.messages.ddaba06c5ff8c4eca982d33ccd827fa8.compiled.messages",
-  type: "jsona",
-});
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
+export default exports.default;

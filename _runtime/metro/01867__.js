@@ -1,84 +1,52 @@
 // _runtime/metro/01867__.js
-import _mod1835 from "01835__.js";
-import "module_19";
-
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4 } = noop);
-get_ActivityIndicator = fn(17);
-({ StyleSheet, Text: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const doneButtonContainer = StyleSheet.create({
-  doneButton: { fontWeight: "600", fontSize: 15 },
-  doneButtonContainer: { marginRight: 16, marginLeft: 8 },
-});
-
-export default function _default(rippleRadius) {
-  ({ children, onPress } = rippleRadius);
-  let num = rippleRadius.rippleRadius;
-  if (num === undefined) {
-    num = 28;
+let __initData = {
+  code: "function pnpm_utilsTs2(...args){const{value,wait,worklet}=this.__closure;const t=Date.now();const now=t-value.time;if(now<wait){value.time=t;return;}value.time=t;return worklet(...args);}",
+};
+let fn = function t(worklet, arg1) {
+  __initData = worklet;
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 0;
   }
-  ({ button, text } = rippleRadius);
-  if (button === undefined) {
-    button = keyboardState(theme[3]);
-  }
-  theme = undefined;
-  keyboardState = onPress(theme[4]).useKeyboardState((appearance) => appearance.appearance);
-  const obj = onPress(theme[4]);
-  theme = onPress(theme[5]).useToolbarContext().theme;
-  let items = [keyboardState, theme];
-  const items1 = [onPress];
-  const obj2 = onPress(theme[5]);
-  const obj3 = {
-    accessibilityHint: "Closes the keyboard",
-    accessibilityLabel: "Done",
-    rippleRadius: num,
-    style: doneButtonContainer.doneButtonContainer,
-    testID: null,
-    theme: null,
-    onPress: null,
-    children: null,
+  value = { time: 0 };
+  const fn = function o() {
+    const items = [...arguments];
+    const timestamp = Date.now();
+    if (timestamp - obj.time < num) {
+      obj.time = timestamp;
+    } else {
+      obj.time = timestamp;
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      return HermesBuiltin.apply(items1, undefined);
+    }
   };
-  const tmp4 = closure_4(() => {
-    const items = [doneButton.doneButton, { color: theme[keyboardState].primary }];
-    return items;
-  }, items);
-  obj3.testID = onPress(theme[7]).TEST_ID_KEYBOARD_TOOLBAR_DONE;
-  obj3.theme = theme;
-  obj3.onPress = closure_3((isDefaultPrevented) => {
-    if (onPress != null) {
-      tmp(isDefaultPrevented);
-    }
-    if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = _mod1835.KeyboardController;
-      KeyboardController.dismiss();
-    }
-  }, items1);
-  const obj4 = { maxFontSizeMultiplier: 1.3, style: tmp4, children: null };
-  if (children == null) {
-    children = text;
+  fn.__closure = { value, wait: num, worklet };
+  fn.__workletHash = 8768898864142;
+  fn.__initData = __initData;
+  return fn;
+};
+fn.__closure = {};
+fn.__workletHash = 1678132827161;
+fn.__initData = {
+  code: 'function pnpm_utilsTs1(worklet,wait=0){const value={time:0};return function(...args){"worklet";const t=Date.now();const now=t-value.time;if(now<wait){value.time=t;return;}value.time=t;return worklet(...args);};}',
+};
+const fn2 = function n(arg0, snapToOffsets) {
+  closure_0 = arg0;
+  let found;
+  if (snapToOffsets) {
+    found = snapToOffsets.find((item) => item >= closure_0);
   }
-  if (children == null) {
-    children = "Done";
+  if (found == null) {
+    found = arg0;
   }
-  obj4.children = children;
-  obj3.children = (
-    <closure_5 maxFontSizeMultiplier={1.3} style={tmp4}>
-      {null}
-    </closure_5>
-  );
-  return (
-    <button
-      accessibilityHint="Closes the keyboard"
-      accessibilityLabel="Done"
-      rippleRadius={num}
-      style={doneButtonContainer.doneButtonContainer}
-      testID={null}
-      theme={null}
-      onPress={null}
-    >
-      {null}
-    </button>
-  );
-}
+  return found;
+};
+fn2.__closure = {};
+fn2.__workletHash = 10680474034033;
+fn2.__initData = {
+  code: "function pnpm_utilsTs3(defaultScrollValue,snapPoints){let snapPoint;if(snapPoints){snapPoint=snapPoints.find(function(offset){return offset>=defaultScrollValue;});}return snapPoint!==null&&snapPoint!==void 0?snapPoint:defaultScrollValue;}",
+};
+
+export const debounce = fn;
+export const scrollDistanceWithRespectToSnapPoints = fn2;

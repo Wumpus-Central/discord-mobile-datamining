@@ -1,10 +1,13 @@
 // _runtime/metro/13477__.js
-import _mod13491 from "13491__.js";
-import assign from "13478__.js";
-import Deflate from "../13479_Deflate.js";
-import Inflate from "../13487_Inflate.js";
+import registerAsset from "01132__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod13491);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 411,
+  height: 134,
+  scales: [2, 3],
+  hash: "1e7b4b86ff7b632a5724a01e406c1753",
+  name: "img_subheader_error_mobile",
+  type: "png",
+});

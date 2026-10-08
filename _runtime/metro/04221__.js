@@ -1,84 +1,23 @@
 // _runtime/metro/04221__.js
-import requiredArgs_mod from "../03965_requiredArgs.js";
+let closure_0 = { lessThanXSeconds: { one: "meno di un secondo", other: "meno di {{count}} secondi" }, xSeconds: { one: "un secondo", other: "{{count}} secondi" }, halfAMinute: "alcuni secondi", lessThanXMinutes: { one: "meno di un minuto", other: "meno di {{count}} minuti" }, xMinutes: { one: "un minuto", other: "{{count}} minuti" }, aboutXHours: { one: "circa un'ora", other: "circa {{count}} ore" }, xHours: { one: "un'ora", other: "{{count}} ore" }, xDays: { one: "un giorno", other: "{{count}} giorni" }, aboutXWeeks: { one: "circa una settimana", other: "circa {{count}} settimane" }, xWeeks: { one: "una settimana", other: "{{count}} settimane" }, aboutXMonths: { one: "circa un mese", other: "circa {{count}} mesi" }, xMonths: { one: "un mese", other: "{{count}} mesi" }, aboutXYears: { one: "circa un anno", other: "circa {{count}} anni" }, xYears: { one: "un anno", other: "{{count}} anni" }, overXYears: { one: "pi\u00F9 di un anno", other: "pi\u00F9 di {{count}} anni" }, almostXYears: { one: "quasi un anno", other: "quasi {{count}} anni" } };
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} fa`;
         }
-        return str;
+        text = `tra ${tmp}`;
       }
     }
-    str = typeof arg0;
-  };
-}
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
-  let tmp3 = obj;
-} else {
-  tmp3 = requiredArgs;
-}
-requiredArgs = tmp3;
-
-export default function formatISODuration(years) {
-  requiredArgs.default(1, arguments);
-  if ("object" !== _typeof(years)) {
-    const _Error = Error;
-    const error = new Error("Duration must be an object");
-    throw error;
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
   } else {
-    years = years.years;
-    let num = 0;
-    if (undefined !== years) {
-      num = years;
-    }
-    const months = years.months;
-    let num2 = 0;
-    if (undefined !== months) {
-      num2 = months;
-    }
-    const days = years.days;
-    let num3 = 0;
-    if (undefined !== days) {
-      num3 = days;
-    }
-    const hours = years.hours;
-    let num4 = 0;
-    if (undefined !== hours) {
-      num4 = hours;
-    }
-    const minutes = years.minutes;
-    let num5 = 0;
-    if (undefined !== minutes) {
-      num5 = minutes;
-    }
-    const seconds = years.seconds;
-    let num6 = 0;
-    if (undefined !== seconds) {
-      num6 = seconds;
-    }
-    const concat = "P".concat;
-    const combined = "P".concat(num, "Y");
-    const combined1 = combined.concat(num2, "M");
-    const combined2 = combined1.concat(num3, "DT");
-    const combined3 = combined2.concat(num4, "H");
-    const combined4 = combined3.concat(num5, "M");
-    return combined4.concat(num6, "S");
+    one = tmp.other.replace("{{count}}", arg1.toString());
   }
 };
 export default exports.default;

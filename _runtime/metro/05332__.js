@@ -1,12 +1,63 @@
 // _runtime/metro/05332__.js
-import requirePromise from "../05331_requirePromise.js";
-import _mod5333 from "05333__.js";
+import get_synchronousScreenUpdatesEnabled from "../05312_get_synchronousScreenUpdatesEnabled.js";
+import noop from "00019__.js";
 
-export default function getPolyfill() {
-  requirePromise();
-  if (typeof Promise.allSettled === "function") {
-  } else {
-    allSettled = _mod5333;
+require = arg1;
+let context = noop.createContext({
+  topAlreadyApplied: false,
+  leftDisabled: false,
+  rightDisabled: false,
+  bottomDisabled: false,
+});
+
+export const EdgeInsetApplicationContext = context;
+export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
+  context = noop.useContext(context);
+  const topAlreadyApplied = context.topAlreadyApplied;
+  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
+  const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
+  flag = undefined;
+  if (experiment != null) {
+    flag = experiment.androidLegacyTopInsetBehavior;
   }
-  return allSettled;
-}
+  if (flag == null) {
+    flag = false;
+  }
+  let tmp2 = flag;
+  if (!flag) {
+    let tmp3 = !topAlreadyApplied;
+    if (!topAlreadyApplied) {
+      tmp3 = arg0;
+    }
+    tmp2 = tmp3;
+  }
+  closure_1 = tmp2;
+  let tmp4 = tmp2;
+  if (tmp2) {
+    tmp4 = !flag;
+  }
+  if (!leftDisabled) {
+    leftDisabled = flag2;
+  }
+  if (!rightDisabled) {
+    rightDisabled = flag3;
+  }
+  if (!bottomDisabled) {
+    bottomDisabled = flag4;
+  }
+  const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
+  return {
+    appliesTopInset: tmp4,
+    consumeLeftInset: !leftDisabled,
+    consumeRightInset: !rightDisabled,
+    consumeBottomInset: !bottomDisabled,
+    useLegacyBehavior: flag,
+    nextContextValue: noop.useMemo(() => {
+      let tmp = topAlreadyApplied;
+      if (!topAlreadyApplied) {
+        tmp = closure_1;
+      }
+      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
+    }, items),
+  };
+};

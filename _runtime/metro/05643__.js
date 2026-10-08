@@ -1,7 +1,12 @@
 // _runtime/metro/05643__.js
+import requirePromise from "../05642_requirePromise.js";
+import _mod5644 from "05644__.js";
 
-export default (arg0) =>
-  encodeURIComponent(arg0).replace(/[!'()*]/g, (str) => {
-    str = str.charCodeAt(0);
-    return "%" + str.toString(16).toUpperCase();
-  });
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
+  } else {
+    allSettled = _mod5644;
+  }
+  return allSettled;
+}

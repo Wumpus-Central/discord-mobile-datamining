@@ -1,16 +1,10 @@
 // _runtime/metro/06321__.js
-import _mod17 from "00017__.js";
-import value2 from "../06120_value2.js";
+const global = arg0;
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * value2.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
 };
-obj.indicator = size;
-
-export const styles = StyleSheet.create(obj);

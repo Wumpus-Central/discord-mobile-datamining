@@ -1,182 +1,163 @@
 // _runtime/metro/01789__.js
-import _mod1654 from "01654__.js";
-import _mod1668 from "01668__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function isAnimated(onFrame) {
-  if (Array.isArray(onFrame)) {
-    let someResult = onFrame.some(require);
-  } else {
-    someResult = typeof onFrame === "object";
-    if (typeof onFrame === "object") {
-      someResult = null !== onFrame;
+const SequencedTransition = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (someResult) {
-      let someResult1 = undefined !== onFrame.onFrame;
-      if (!someResult1) {
-        const _Object = Object;
-        const values = Object.values(onFrame);
-        someResult1 = values.some(require);
-      }
-      someResult = someResult1;
-    }
-  }
-  return someResult;
-}
-let closure_129_0 = isAnimated;
-isAnimated.__closure = {};
-isAnimated.__workletHash = 4296700641760;
-isAnimated.__initData = {
-  code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}",
-};
-function shallowEqual(c8, arg1) {
-  const keys = Object.keys(c8);
-  if (keys.length !== Object.keys(arg1).length) {
-    return false;
-  } else {
-    let num = 0;
-    if (0 < keys.length) {
-      while (c8[keys[num]] === arg1[keys[num]]) {
-        num = num + 1;
-      }
-      return false;
-    }
-    return true;
-  }
-}
-shallowEqual.__closure = {};
-shallowEqual.__workletHash = 6945711106539;
-shallowEqual.__initData = {
-  code: "function shallowEqual_Pnpm_utilsTs2(a,b){const aKeys=Object.keys(a);const bKeys=Object.keys(b);if(aKeys.length!==bKeys.length){return false;}for(let i=0;i<aKeys.length;i++){if(a[aKeys[i]]!==b[aKeys[i]]){return false;}}return true;}",
-};
-function validateAnimatedStyles(obj) {
-  if (typeof obj !== "object") {
-    const _HermesInternal = HermesInternal;
-    const reanimatedError = new _mod1654.ReanimatedError(
-      "`useAnimatedStyle` has to return an object, found " + typeof obj + " instead.",
-    );
-    throw reanimatedError;
-  } else {
-    const _Array = Array;
-    if (Array.isArray(obj)) {
-      const reanimatedError1 = new _mod1654.ReanimatedError(
-        "`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.",
-      );
-      throw reanimatedError1;
-    }
-  }
-}
-validateAnimatedStyles.__closure = {};
-validateAnimatedStyles.__workletHash = 9250446401049;
-validateAnimatedStyles.__initData = {
-  code: "function validateAnimatedStyles_Pnpm_utilsTs3(styles){if(typeof styles!=='object'){throw new ReanimatedError(\"`useAnimatedStyle` has to return an object, found \"+typeof styles+\" instead.\");}else if(Array.isArray(styles)){throw new ReanimatedError('`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.');}}",
-};
-
-export const buildWorkletsHash = function buildWorkletsHash(items1) {
-  const values = Object.values(items1);
-  return values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), "");
-};
-export const buildDependencies = function buildDependencies(arr, memoizedGestureCallbacks) {
-  const values = Object.values(memoizedGestureCallbacks);
-  const found = values.filter((item) => undefined !== item);
-  let tmp2 = found;
-  if (arr) {
-    const _Object = Object;
-    const values2 = Object.values(found);
-    arr = arr.push(values2.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
-    tmp2 = arr;
-  }
-  return tmp2;
-};
-export const areDependenciesEqual = function areDependenciesEqual(dependencies, savedDependencies) {
-  if (typeof Object.is === "function") {
-    const _Object = Object;
-  } else {
-    is = function is(arg0, arg1) {
-      let tmp = arg0 === arg1;
-      if (tmp) {
-        let tmp2 = 0 !== arg0;
-        if (!tmp2) {
-          tmp2 = 1 / arg0 === 1 / arg1;
-        }
-        tmp = tmp2;
-      }
-      if (!tmp) {
-        const _Number = Number;
-        let isNaNResult = Number.isNaN(arg0);
-        if (isNaNResult) {
-          const _Number2 = Number;
-          isNaNResult = Number.isNaN(arg1);
-        }
-        tmp = isNaNResult;
-      }
-      return tmp;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-  }
-  let flag = false;
-  if (dependencies) {
-    flag = false;
-    if (savedDependencies) {
-      flag = false;
-      if (savedDependencies.length === dependencies.length) {
-        let num = 0;
-        flag = true;
-        if (0 < savedDependencies.length) {
-          while (true) {
-            let tmp2 = dependencies[num];
-            let tmp3 = savedDependencies[num];
-            if (is(tmp2, tmp3)) {
-              let sum = num + 1;
-              num = sum;
-              flag = true;
-              if (sum >= savedDependencies.length) {
-                break;
-              }
-            } else {
-              let obj = _mod1668;
-              flag = false;
-              if (!obj.isWorkletFunction(tmp2)) {
-                break;
-              } else {
-                let tmp5Result = _mod1668;
-                flag = false;
-                if (!tmp5Result.isWorkletFunction(tmp3)) {
-                  break;
-                } else {
-                  let __closure = tmp2;
-                  let __closure2 = tmp3;
-                  let flag2 = false;
-                  if (tmp2.__workletHash === tmp3.__workletHash) {
-                    let _Object2 = Object;
-                    let keys = Object.keys(tmp2.__closure);
-                    let _Object3 = Object;
-                    let tmp7 =
-                      keys.length === Object.keys(tmp3.__closure).length &&
-                      keys.every((item) => {
-                        let tmp2 = item in __closure2.__closure;
-                        if (tmp2) {
-                          tmp2 = __closure.__closure[item] === tmp.__closure[item];
-                        }
-                        return tmp2;
-                      });
-                    flag2 = tmp7;
-                  }
-                  flag = false;
-                  if (!flag2) {
-                    break;
-                  }
-                }
-              }
-            }
-            break;
-          }
-        }
-      }
-    }
-  }
-  return flag;
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let closure_6 = {
+  code: "function pnpm_SequencedTransitionTs1(values){const{delayFunction,delay,withSequence,withTiming,reverse,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withSequence(withTiming(reverse?values.currentOriginX:values.targetOriginX,config),withTiming(values.targetOriginX,config))),originY:delayFunction(delay,withSequence(withTiming(reverse?values.targetOriginY:values.currentOriginY,config),withTiming(values.targetOriginY,config))),width:delayFunction(delay,withSequence(withTiming(reverse?values.currentWidth:values.targetWidth,config),withTiming(values.targetWidth,config))),height:delayFunction(delay,withSequence(withTiming(reverse?values.targetHeight:values.currentHeight,config),withTiming(values.targetHeight,config)))},callback:callback};}",
 };
-export { isAnimated };
-export { shallowEqual };
-export { validateAnimatedStyles };
+class SequencedTransition {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, SequencedTransition);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(SequencedTransition);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.reversed = false;
+    tmp3Result.build = () => {
+      delayFunction = delayFunction.getDelayFunction();
+      const callbackV = delayFunction.callbackV;
+      const delay = delayFunction.getDelay();
+      let num = delayFunction.durationV;
+      if (num == null) {
+        num = 500;
+      }
+      const config = { duration: num / 2 };
+      const reversed = delayFunction.reversed;
+      const fn = function e(originX) {
+        const obj = {
+          initialValues: {
+            originX: originX.currentOriginX,
+            originY: originX.currentOriginY,
+            width: originX.currentWidth,
+            height: originX.currentHeight,
+          },
+          animations: null,
+          callback: null,
+        };
+        const obj2 = delayFunction(1727);
+        const size = { originX: null, originY: null, width: null, height: null };
+        const obj3 = delayFunction(1727);
+        const withTimingResult = delayFunction(1727).withTiming(
+          reversed ? originX.currentOriginX : originX.targetOriginX,
+          obj,
+        );
+        size.originX = delayFunction(
+          delay,
+          obj2.withSequence(withTimingResult, delayFunction(1727).withTiming(originX.targetOriginX, obj)),
+        );
+        const tmp3Result = delayFunction(1727);
+        const tmp3Result10 = delayFunction(1727);
+        const tmp3Result11 = delayFunction(1727);
+        const withTimingResult1 = delayFunction(1727).withTiming(
+          reversed ? originX.targetOriginY : originX.currentOriginY,
+          obj,
+        );
+        size.originY = delayFunction(
+          delay,
+          tmp3Result10.withSequence(withTimingResult1, delayFunction(1727).withTiming(originX.targetOriginY, obj)),
+        );
+        const tmp3Result12 = delayFunction(1727);
+        const tmp3Result13 = delayFunction(1727);
+        const tmp3Result14 = delayFunction(1727);
+        const withTimingResult2 = delayFunction(1727).withTiming(
+          reversed ? originX.currentWidth : originX.targetWidth,
+          obj,
+        );
+        size.width = delayFunction(
+          delay,
+          tmp3Result13.withSequence(withTimingResult2, delayFunction(1727).withTiming(originX.targetWidth, obj)),
+        );
+        const tmp3Result15 = delayFunction(1727);
+        const tmp3Result16 = delayFunction(1727);
+        const tmp3Result17 = delayFunction(1727);
+        const withTimingResult3 = delayFunction(1727).withTiming(
+          reversed ? originX.targetHeight : originX.currentHeight,
+          obj,
+        );
+        size.height = delayFunction(
+          delay,
+          tmp3Result16.withSequence(withTimingResult3, delayFunction(1727).withTiming(originX.targetHeight, obj)),
+        );
+        obj.animations = size;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = {
+        delayFunction,
+        delay,
+        withSequence: SequencedTransition(1727).withSequence,
+        withTiming: SequencedTransition(1727).withTiming,
+        reverse: reversed,
+        config,
+        callback: callbackV,
+      };
+      fn.__workletHash = 255577740024;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_inherits(SequencedTransition, fn(1725).BaseAnimationBuilder);
+const entry = {
+  key: "reverse",
+  value: function reverse() {
+    this.reversed = !this.reversed;
+    return this;
+  },
+};
+let items = [entry];
+const entry1 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return SequencedTransition();
+  },
+};
+let items1 = [
+  entry1,
+  {
+    key: "reverse",
+    value: function reverse() {
+      const instance = SequencedTransition.createInstance();
+      return instance.reverse();
+    },
+  },
+];
+const importDefaultResultResult = _createClass(SequencedTransition, items, items1);
+importDefaultResultResult.presetName = "SequencedTransition";
+
+export const SequencedTransition = importDefaultResultResult;

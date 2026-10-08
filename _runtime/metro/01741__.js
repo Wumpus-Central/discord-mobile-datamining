@@ -1,59 +1,46 @@
 // _runtime/metro/01741__.js
-const require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {
-  code: "function pnpm_ViewDescriptorsSetTs1(descriptors){const{item,updater}=this.__closure;var _updater;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===item.tag;});if(index!==-1){descriptors[index]=item;}else{descriptors.push(item);}(_updater=updater)===null||_updater===void 0||_updater(true);return descriptors;}",
-};
-let closure_3 = {
-  code: "function pnpm_ViewDescriptorsSetTs2(descriptors){const{viewTag}=this.__closure;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===viewTag;});if(index!==-1){descriptors.splice(index,1);}return descriptors;}",
-};
+import _makeShareableClone from "../01665__makeShareableClone.js";
 
-export const makeViewDescriptorsSet = function makeViewDescriptorsSet() {
-  mutable = mutable(set[0]).makeMutable([]);
-  set = new Set();
-  return {
-    shareableViewDescriptors: mutable,
-    add(tag, current) {
-      closure_0 = tag;
-      set.add(tag.tag);
-      current = undefined;
-      if (current != null) {
-        current = current.current;
-      }
-      const fn = function u(arr) {
-        const findIndexResult = arr.findIndex((tag) => tag.tag === tag.tag);
-        if (-1 !== findIndexResult) {
-          arr[findIndexResult] = tag;
-        } else {
-          arr = arr.push(tag);
-        }
-        if (current != null) {
-          tmp5(true);
-        }
-        return arr;
-      };
-      fn.__closure = { item: tag, updater: current };
-      fn.__workletHash = 1368679644593;
-      fn.__initData = __initData;
-      mutable.modify(fn, false);
-    },
-    remove(viewTag) {
-      closure_0 = viewTag;
-      set.delete(viewTag);
-      const fn = function c(arr) {
-        const findIndexResult = arr.findIndex((tag) => tag.tag === viewTag);
-        if (-1 !== findIndexResult) {
-          arr.splice(findIndexResult, 1);
-        }
-        return arr;
-      };
-      fn.__closure = { viewTag };
-      fn.__workletHash = 5508648561577;
-      fn.__initData = __initData2;
-      mutable.modify(fn, false);
-    },
-    has(arg0) {
-      return set.has(arg0);
-    },
-  };
+const require = globalThis.__r;
+
+require = arg1;
+const dependencyMap = arg6;
+const weakMap = new WeakMap();
+
+export const snapshots = weakMap;
+export const makeElementVisible = function makeElementVisible(_componentDOMRef, arg1) {
+  _require = _componentDOMRef;
+  if (0 === arg1) {
+    require("_makeShareableClone")._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
+    const obj = require("_makeShareableClone");
+  } else {
+    const _setTimeout = setTimeout;
+    const timerId = setTimeout(() => {
+      _makeShareableClone._updatePropsJS({ visibility: "initial" }, closure_0);
+    }, 1000 * arg1);
+  }
+};
+export const setElementPosition = function setElementPosition(cloneNodeResult, rect) {
+  cloneNodeResult.style.transform = "";
+  cloneNodeResult.style.position = "absolute";
+  cloneNodeResult.style.top = "" + rect.top + "px";
+  cloneNodeResult.style.left = "" + rect.left + "px";
+  cloneNodeResult.style.width = "" + rect.width + "px";
+  cloneNodeResult.style.height = "" + rect.height + "px";
+  cloneNodeResult.style.margin = "0px";
+  if (cloneNodeResult.parentElement) {
+    const parentElement = cloneNodeResult.parentElement;
+    rect = parentElement.getBoundingClientRect();
+    const _parseInt = parseInt;
+    const _parseInt2 = parseInt;
+    const parsed = parseInt(globalThis.getComputedStyle(parentElement).borderTopWidth);
+    const parsed1 = parseInt(globalThis.getComputedStyle(parentElement).borderLeftWidth);
+    const rect2 = cloneNodeResult.getBoundingClientRect();
+    if (rect2.top !== rect.top) {
+      cloneNodeResult.style.top = `${rect.top - rect.top - tmp}px`;
+    }
+    if (rect2.left !== rect.left) {
+      cloneNodeResult.style.left = `${rect.left - rect.left - tmp2}px`;
+    }
+  }
 };

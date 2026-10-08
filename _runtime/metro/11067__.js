@@ -1,13 +1,30 @@
 // _runtime/metro/11067__.js
-import registerAsset from "01132__.js";
+import setupIntegration from "11049__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "d51dcd36c49102cc28f65e2bcdf9f203",
-  name: "ic_file_small_spreadsheet",
-  type: "png",
-});
+const weakMap = new WeakMap();
+
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function () {
+        const items = [...arguments];
+        const originalFunction = closure_1_0(10999).getOriginalFunction(this);
+        const obj = closure_1_0(10999);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {}
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
+  },
+}));

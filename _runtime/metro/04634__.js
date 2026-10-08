@@ -1,45 +1,55 @@
 // _runtime/metro/04634__.js
-import _mod17 from "00017__.js";
-import _modAll65 from "00065__.js";
-
-const Platform = _mod17.Platform;
-
-export const getHostComponent = function getHostComponent(RiveView, arg1) {
-  closure_0 = arg1;
-  if (null == _modAll65) {
-    const _Error = Error;
-    const error = new Error("NativeComponentRegistry is not available on android!");
-    throw error;
-  } else {
-    return _modAll65.get(RiveView, () => {
-      const tmp = closure_0();
-      const validAttributes = tmp.validAttributes;
-      (function wrapValidAttributes(validAttributes) {
-        const keys = Object.keys(validAttributes);
-        for (const item10009 of keys) {
-          let obj = {
-            diff(arg0, arg1) {
-              return arg0 !== arg1;
-            },
-            process(arg0) {
-              return arg0;
-            },
-          };
-          arg0[item10009] = obj;
-          continue;
-        }
-        return validAttributes;
-      })(validAttributes);
-      tmp.validAttributes = validAttributes;
-      return tmp;
-    });
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "es" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      short: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      short: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      short: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    },
+    disjunction: {
+      long: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+      short: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+    },
+    unit: {
+      long: { end: "{0} y {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} y {1}", start: "{0}, {1}" },
+    },
+  },
+  locale: "es",
 };
-export const callback = function callback(f) {
-  let tmp = f;
-  if (typeof f === "function") {
-    const obj = { f };
-    tmp = obj;
-  }
-  return tmp;
-};
+prop.push(obj);

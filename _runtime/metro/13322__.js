@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 351,
-  height: 100,
-  scales: [2, 3],
-  hash: "7e6a8bbab7f30fd349a76227a78736a2",
-  name: "img_subheader_error_mobile_v2_light",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 25,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "495d1e3b5fc10bbfc9830f32405f0c83",
+  name: "ic_feedback_dark",
   type: "png",
 });

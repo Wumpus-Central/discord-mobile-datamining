@@ -1,11 +1,13 @@
 // _runtime/metro/15385__.js
-import _mod15390 from "15390__.js";
-import 07964__ from "07964__.js";
+import registerAsset from "01132__.js";
 
-const require = globalThis.__r;
-
-
-export const getYoutubeMeta = require("15386__.js").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_7964(_mod15390).default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 161,
+  scales: [1],
+  hash: "f06539dd2236c72b26d5b18fa1a5f589",
+  name: "amanda_2",
+  type: "png",
+});

@@ -1,13 +1,14 @@
 // _runtime/metro/11065__.js
-import registerAsset from "01132__.js";
+import _mod11064 from "11064__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "4f3507228f76eea58da6db7d8807bb01",
-  name: "ic_file_small_ps",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const getTraceMetaTags = function getTraceMetaTags() {
+  const entries = Object.entries(_mod11064.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
+  });
+  return mapped.join("\n");
+};

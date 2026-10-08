@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
-  width: 256,
-  height: 256,
+  httpServerLocation: "/assets/images/provisional_account_avatars",
+  width: 320,
+  height: 320,
   scales: [1],
-  hash: "424407a78216a455f8fc1ac2080855a1",
-  name: "auto_moderation_avatar",
+  hash: "fb3b5529cfb55c06f1bdff816af8a17a",
+  name: "default_provisional_avatar_5",
   type: "png",
 });

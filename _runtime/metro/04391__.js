@@ -1,44 +1,31 @@
 // _runtime/metro/04391__.js
-import module_3968_mod from "03968__.js";
-import _typeof_mod from "03964__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import _typeof_mod from "04156__.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
 
-let module_3968 = module_3968_mod;
-if (!module_3968) {
-  const obj = { default: module_3968 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3968;
-}
-module_3968 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
+let c2 = 86400000;
 
-export default function setYear(date, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(date);
-  if (isNaN(defaultResult1.getTime())) {
-    const _Date = Date;
-    date = new Date(NaN);
-    return date;
-  } else {
-    defaultResult1.setFullYear(defaultResult2);
-    return defaultResult1;
-  }
-  defaultResult2 = module_3968.default(arg1);
+export default function getUTCDayOfYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  defaultResult1.setUTCMonth(0, 1);
+  defaultResult1.setUTCHours(0, 0, 0, 0);
+  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
 };
 export default exports.default;

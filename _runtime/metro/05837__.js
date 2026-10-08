@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "c170cae09967261462282317c17e6a43",
-  name: "AnnouncementsWarningIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "eb232cce91e81121373a2c7b4cc58581",
+  name: "img_account_sync_riot_light_and_dark",
   type: "png",
 });

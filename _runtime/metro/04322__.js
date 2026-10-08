@@ -1,26 +1,35 @@
 // _runtime/metro/04322__.js
-import module_4314_mod from "04314__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import module_4160_mod from "04160__.js";
+import module_4305_mod from "04305__.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
 
-let module_4314 = module_4314_mod;
-if (!module_4314) {
-  const obj = { default: module_4314 };
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj = { default: module_4160 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4314;
+  tmp3 = module_4160;
 }
-module_4314 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4160 = tmp3;
+let module_4305 = module_4305_mod;
+if (!module_4305) {
+  const obj2 = { default: module_4305 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4305;
 }
-requiredArgs = tmp5;
+module_4305 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isThisMinute(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4314.default(Date.now(), arg0);
+export default function addQuarters(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4305.default(arg0, 3 * module_4160.default(arg1));
 };
 export default exports.default;

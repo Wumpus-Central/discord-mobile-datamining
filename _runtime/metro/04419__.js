@@ -1,33 +1,26 @@
 // _runtime/metro/04419__.js
-import module_3966_mod from "03966__.js";
+import _typeof_mod from "04156__.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
 
-let module_3966 = module_3966_mod;
-if (!module_3966) {
-  const obj = { default: module_3966 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3966;
+  tmp3 = _typeof;
 }
-function checkWeek(getTime, getTime2, arg2) {
-  let str = "eeee p";
-  if (!module_3966.default(getTime, getTime2, arg2)) {
-    const time = getTime.getTime();
-    let str2 = "'\u4E0A\u4E2A'eeee p";
-    if (time > getTime2.getTime()) {
-      str2 = "'\u4E0B\u4E2A'eeee p";
-    }
-    str = str2;
-  }
-  return str;
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
 }
-module_3966 = tmp3;
-let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
+requiredArgs = tmp5;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
+export default function getDay(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getDay();
 };
 export default exports.default;

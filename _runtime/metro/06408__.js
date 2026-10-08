@@ -1,7 +1,23 @@
 // _runtime/metro/06408__.js
-import _mod17 from "00017__.js";
-import FlashList from "../06347_FlashList.js";
+import ComposedGestureName from "../06385_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06394_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6409 from "06409__.js";
 
-const Animated = _mod17.Animated;
+require = arg1;
+const dependencyMap = arg6;
+const items = [
+  ["maxDistance", "maxDist"],
+  ["maxDuration", "maxDurationMs"],
+  ["maxDelay", "maxDelayMs"],
+];
+const map = new Map(items);
+let closure_3 = {};
 
-export default Animated.createAnimatedComponent(FlashList.FlashList);
+export const useTapGesture = function useTapGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_3;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod6409.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+};

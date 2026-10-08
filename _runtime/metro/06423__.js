@@ -1,54 +1,8 @@
 // _runtime/metro/06423__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod6124 from "06124__.js";
-import LegacyBaseButton from "../06147_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
+import _mod26 from "00026__.js";
+import 00065__ from "00065__.js";
 
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3 } = noop);
-({ memo, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(
-  forwardRef((onFocus, ref) => {
-    onFocus = onFocus.onFocus;
-    const onBlur = onFocus.onBlur;
-    const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
-    const shouldHandleKeyboardEvents = _mod6124.useBottomSheetInternal().shouldHandleKeyboardEvents;
-    const items = [onFocus, shouldHandleKeyboardEvents];
-    const items1 = [onBlur, shouldHandleKeyboardEvents];
-    const items2 = [shouldHandleKeyboardEvents];
-    const tmp2 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = true;
-      if (onFocus) {
-        tmp(arg0);
-      }
-    }, items);
-    React3(
-      () => () => {
-        shouldHandleKeyboardEvents.value = false;
-      },
-      items2,
-    );
-    const tmp3 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = false;
-      if (onBlur) {
-        tmp(arg0);
-      }
-    }, items1);
-    const merged1 = Object.assign(merged);
-    return jsx(LegacyBaseButton.TextInput, {
-      ref,
-      onFocus: tmp2,
-      onBlur: React2((arg0) => {
-        shouldHandleKeyboardEvents.value = false;
-        if (onBlur) {
-          tmp(arg0);
-        }
-      }, items1),
-    });
-  }),
-);
-memoResult.displayName = "BottomSheetTextInput";
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerButton", validAttributes: { exclusive: true, foreground: true, borderless: true, enabled: true, rippleColor: _mod26.colorAttribute, rippleRadius: true, touchSoundDisabled: true, pointerEvents: true, tapAnimationInDuration: true, tapAnimationOutDuration: true, longPressDuration: true, longPressAnimationOutDuration: true, needsOffscreenAlphaCompositing: true, activeOpacity: true, activeScale: true, activeUnderlayOpacity: true, hoverOpacity: true, hoverScale: true, hoverUnderlayOpacity: true, hoverAnimationInDuration: true, hoverAnimationOutDuration: true, defaultOpacity: true, defaultScale: true, defaultUnderlayOpacity: true, underlayColor: _mod26.colorAttribute, borderWidth: true, borderColor: _mod26.colorAttribute, borderStyle: true, overflow: true, borderLeftWidth: true, borderRightWidth: true, borderTopWidth: true, borderBottomWidth: true, borderStartWidth: true, borderEndWidth: true, borderLeftColor: _mod26.colorAttribute, borderRightColor: _mod26.colorAttribute, borderTopColor: _mod26.colorAttribute, borderBottomColor: _mod26.colorAttribute, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true } };
 
-export default memoResult;
+export default module_65.get("RNGestureHandlerButton", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

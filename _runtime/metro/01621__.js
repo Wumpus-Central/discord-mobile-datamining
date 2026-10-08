@@ -1,19 +1,21 @@
 // _runtime/metro/01621__.js
-const require = globalThis.__r;
+import BaseNavigationContainer from "../01505_BaseNavigationContainer.js";
+import _mod1601 from "01601__.js";
+import noop from "00019__.js";
 
-for (const key10013 in require("01622__.js")) {
-  arg5[key10013] = require("01622__.js")[key10013];
-  continue;
-}
-for (const key10017 in require("SafeAreaView")) {
-  arg5[key10017] = require("SafeAreaView")[key10017];
-  continue;
-}
-for (const key10021 in require("initialWindowMetrics")) {
-  arg5[key10021] = require("initialWindowMetrics")[key10021];
-  continue;
-}
-for (const key10025 in require("01629__.js")) {
-  arg5[key10025] = require("01629__.js")[key10025];
-  continue;
-}
+require = arg1;
+
+export const useLinkTo = function useLinkTo() {
+  const context = noop.useContext(BaseNavigationContainer.NavigationContainerRefContext);
+  const buildAction = _mod1601.useBuildAction();
+  const items = [buildAction, context];
+  return noop.useCallback((arg0) => {
+    if (undefined === context) {
+      const _Error = Error;
+      const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
+      throw error;
+    } else {
+      context.dispatch(buildAction(arg0));
+    }
+  }, items);
+};

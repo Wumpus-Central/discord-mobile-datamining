@@ -1,35 +1,27 @@
 // _runtime/metro/01802__.js
-import FrameCallbackRegistryJSDefault from "../01803_FrameCallbackRegistryJS.js";
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import WorkletEventHandlerNative from "../01760_WorkletEventHandlerNative.js";
 
-({ useEffect: closure_0, useRef: closure_1 } = noop);
-let closure_2 = new FrameCallbackRegistryJSDefault();
+const useRef = _mod19.useRef;
 
-export const useFrameCallback = function useFrameCallback(fn, arg1) {
-  closure_0 = fn;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = true;
+export const useEvent = function useEvent(fn) {
+  let items = cResult;
+  if (cResult === undefined) {
+    items = [];
   }
-  closure_1 = undefined;
-  const tmp = closure_1({
-    setActive(isActive) {
-      const result = closure_2.manageStateFrameCallback(closure_1.current.callbackId, isActive);
-      closure_1.current.isActive = isActive;
-    },
-    isActive: flag,
-    callbackId: -1,
-  });
-  closure_1 = tmp;
-  const items = [fn, flag];
-  closure_0(() => {
-    closure_1.current.callbackId = closure_2.registerFrameCallback(callbackId);
-    ({ current: closure_0, current } = closure_1);
-    current.setActive(closure_1.current.isActive);
-    return () => {
-      const result = closure_2_2.unregisterFrameCallback(callbackId.callbackId);
-      callbackId.callbackId = -1;
-    };
-  }, items);
+  let flag = doDependenciesDiffer;
+  if (doDependenciesDiffer === undefined) {
+    flag = false;
+  }
+  const tmp = useRef(null);
+  if (null === tmp.current) {
+    const workletEventHandler1 = new WorkletEventHandlerNative.WorkletEventHandler(fn, items);
+    const obj2 = { workletEventHandler: workletEventHandler1 };
+    tmp.current = obj2;
+  } else if (flag) {
+    tmp.current.workletEventHandler.updateEventHandler(fn, items);
+    const obj = { workletEventHandler: tmp.current.workletEventHandler };
+    tmp.current = obj;
+  }
   return tmp.current;
 };

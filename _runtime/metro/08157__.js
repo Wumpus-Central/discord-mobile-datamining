@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f6beefc7c46ba35914164c9b6ddbe0f6",
-  name: "GoogleNeutralIcon",
+  hash: "50398ad483a7c69d1d35b3cb9c9b7bde",
+  name: "ForumSpoilerIcon",
   type: "png",
 });

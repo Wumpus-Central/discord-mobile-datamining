@@ -1,131 +1,279 @@
 // _runtime/metro/04473__.js
-import _mod4467 from "04467__.js";
+import _mod4462 from "04462__.js";
+import module_4474_mod from "04474__.js";
+import startOfUTCWeek_mod from "../04159_startOfUTCWeek.js";
 
-const fn = function n(moment) {
-  closure_0 = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_");
-  closure_1 = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_");
-  const items = [
-    /^ene/i,
-    /^feb/i,
-    /^mar/i,
-    /^abr/i,
-    /^may/i,
-    /^jun/i,
-    /^jul/i,
-    /^ago/i,
-    /^sep/i,
-    /^oct/i,
-    /^nov/i,
-    /^dic/i,
-  ];
-  const tmp =
-    /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
-  let obj = {
-    months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-    monthsShort(arg0, arg1) {
-      if (arg0) {
-        if (obj.test(arg1)) {
-          let tmp3 = closure_1[arg0.month(arg0)];
-        } else {
-          tmp3 = closure_0[arg0.month(arg0)];
+let _createSuperInternal = require;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
         }
-        obj = /-MMM-/;
-      } else {
-        return closure_0;
+        return str;
       }
-    },
-    monthsRegex: tmp,
-    monthsShortRegex: tmp,
-    monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
-    monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
-    monthsParse: items,
-    longMonthsParse: items,
-    shortMonthsParse: items,
-    weekdays: "domingo_lunes_martes_mi\u00E9rcoles_jueves_viernes_s\u00E1bado".split("_"),
-    weekdaysShort: "dom._lun._mar._mi\u00E9._jue._vie._s\u00E1b.".split("_"),
-    weekdaysMin: "do_lu_ma_mi_ju_vi_s\u00E1".split("_"),
-    weekdaysParseExact: true,
-    longDateFormat: {
-      LT: "H:mm",
-      LTS: "H:mm:ss",
-      L: "DD/MM/YYYY",
-      LL: "D [de] MMMM [de] YYYY",
-      LLL: "D [de] MMMM [de] YYYY H:mm",
-      LLLL: "dddd, D [de] MMMM [de] YYYY H:mm",
-    },
-    calendar: {
-      sameDay() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[hoy a la" + str + "] LT";
-      },
-      nextDay() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[ma\u00F1ana a la" + str + "] LT";
-      },
-      nextWeek() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "dddd [a la" + str + "] LT";
-      },
-      lastDay() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[ayer a la" + str + "] LT";
-      },
-      lastWeek() {
-        let str = "";
-        if (1 !== this.hours()) {
-          str = "s";
-        }
-        return "[el] dddd [pasado a la" + str + "] LT";
-      },
-      sameElse: "L",
-    },
-    relativeTime: {
-      future: "en %s",
-      past: "hace %s",
-      s: "unos segundos",
-      ss: "%d segundos",
-      m: "un minuto",
-      mm: "%d minutos",
-      h: "una hora",
-      hh: "%d horas",
-      d: "un d\u00EDa",
-      dd: "%d d\u00EDas",
-      w: "una semana",
-      ww: "%d semanas",
-      M: "un mes",
-      MM: "%d meses",
-      y: "un a\u00F1o",
-      yy: "%d a\u00F1os",
-    },
-    dayOfMonthOrdinalParse: /\d{1,2}º/,
-    ordinal: "%d\u00BA",
-    week: { dow: 1, doy: 4 },
-    invalidDate: "Fecha inv\u00E1lida",
+    }
+    str = typeof arg0;
   };
-  return moment.defineLocale("es", obj);
-};
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      fn(_mod4467);
+}
+function _setPrototypeOf(LocalWeekParser, Parser) {
+  _setPrototypeOf = Object.setPrototypeOf;
+  if (!_setPrototypeOf) {
+    _setPrototypeOf = function _setPrototypeOf(LocalWeekParser, Parser) {
+      LocalWeekParser.__proto__ = Parser;
+      return LocalWeekParser;
+    };
+  }
+  return _setPrototypeOf(LocalWeekParser, Parser);
+}
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    _getPrototypeOf = Object.getPrototypeOf;
+  } else {
+    _getPrototypeOf = function _getPrototypeOf(arg0) {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  return _getPrototypeOf(arg0);
+}
+let module_4474 = module_4474_mod;
+if (!module_4474) {
+  let obj = { default: module_4474 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4474;
+}
+module_4474 = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfUTCWeek;
+}
+startOfUTCWeek = tmp5;
+const Parser = _mod4462.Parser;
+_createSuperInternal = undefined;
+class LocalWeekParser {
+  constructor() {
+    if (this instanceof closure_1) {
+      length = arguments.length;
+      _Array = Array;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = length;
+      array = new Array(length);
+      tmp10 = array;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          array[num] = arguments[num];
+          num = num + 1;
+        } while (num < length);
+      }
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
+      items = [];
+      items[0] = tmp;
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      tmp13 = undefined === applyResult;
+      if (tmp13) {
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
+        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        tmp23 = referenceError;
+        throw referenceError;
+      } else {
+        str2 = "priority";
+        if ("priority" in applyResult) {
+          _Object = Object;
+          definePropertyResult = Object.defineProperty(applyResult, "priority", {
+            value: 100,
+            enumerable: true,
+            configurable: true,
+            writable: true,
+          });
+        } else {
+          num3 = 100;
+          applyResult.priority = 100;
+        }
+        if (tmp13) {
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
+          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp19 = referenceError1;
+          throw referenceError1;
+        } else {
+          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "i", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
+            _Object2 = Object;
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj.value = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+          } else {
+            applyResult.incompatibleTokens = items1;
+          }
+          return applyResult;
+        }
+      }
+    } else {
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
     }
   }
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], fn);
+let dependencyMap = LocalWeekParser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
+    throw typeError;
   }
 }
-fn(this.moment);
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+LocalWeekParser.prototype = Object.create(prototype, {
+  constructor: { value: LocalWeekParser, writable: true, configurable: true },
+});
+if (Parser) {
+  _setPrototypeOf(LocalWeekParser, Parser);
+}
+let num = 0;
+dependencyMap = (function _isNativeReflectConstruct() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect3 = Reflect;
+    if (Reflect.construct) {
+      const _Reflect = Reflect;
+      if (Reflect.construct.sham) {
+        return false;
+      } else {
+        const _Proxy = Proxy;
+        if (typeof Proxy === "function") {
+          return true;
+        } else {
+          try {
+            const _Boolean = Boolean;
+            const call = valueOf.call;
+            const _Reflect2 = Reflect;
+            const _Boolean2 = Boolean;
+            if (typeof call === "unknown") {
+              valueOf();
+            } else {
+              call(constructResult);
+            }
+            return true;
+          } catch (err) {
+            return false;
+          }
+        }
+      }
+    }
+  }
+  return false;
+})();
+_createSuperInternal = function _createSuperInternal() {
+  const self = this;
+  const obj = metroRequire(_createSuperInternal);
+  if (closure_1) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, metroRequire(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
+  }
+  if (!constructResult) {
+    let tmp8 = self;
+    if (undefined === self) {
+      const _ReferenceError = ReferenceError;
+      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw referenceError;
+    }
+  } else {
+    tmp8 = constructResult;
+    if ("object" !== _typeof(constructResult)) {
+      tmp8 = constructResult;
+    }
+  }
+  return tmp8;
+};
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("w" === arg1) {
+      return _createSuperInternal(4464).parseNumericPattern(_createSuperInternal(4465).numericPatterns.week, arg0);
+    } else if ("wo" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
+    } else {
+      return _createSuperInternal(4464).parseNDigits(arg1.length, arg0);
+    }
+  },
+};
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 53;
+      }
+      return tmp;
+    },
+  },
+  {
+    key: "set",
+    value: function set(arg0, arg1, arg2, arg3) {
+      return startOfUTCWeek.default(module_4474.default(arg0, arg2, arg3), arg3);
+    },
+  },
+];
+if (0 < items.length) {
+  do {
+    let tmp9 = items[num];
+    let flag = tmp9.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp9.enumerable = flag;
+    tmp9.configurable = true;
+    if ("value" in tmp9) {
+      tmp9.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
+    num = num + 1;
+  } while (num < items.length);
+}
+
+export { LocalWeekParser };

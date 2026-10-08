@@ -1,24 +1,13 @@
 // _runtime/metro/05008__.js
-import _mod514 from "00514__.js";
-import _mod523 from "00523__.js";
-import baseIsArguments from "../00533_baseIsArguments.js";
+import registerAsset from "01132__.js";
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
-
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
-    }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
-  }
-  return tmp3;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "d7e806908635ad007fa68ad7fb2ccc9f",
+  name: "ic_warning_24px",
+  type: "png",
+});

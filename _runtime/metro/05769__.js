@@ -1,9 +1,13 @@
 // _runtime/metro/05769__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import registerAsset from "01132__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
-
-export default module_65.get("RNSScreenFooter", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "74748dfcc94ad61e313c4e70aacf64f7",
+  name: "img_account_sync_battlenet_white",
+  type: "png",
+});

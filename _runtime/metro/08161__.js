@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a568e12daf3f479ad26c9db6582fe1a2",
-  name: "CreditCardIcon",
+  hash: "b84343ac07458c13e43241d47e243dd3",
+  name: "AppsWarningIcon",
   type: "png",
 });

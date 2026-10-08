@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3lvdXR1YmVfM3Bw",
+  httpServerLocation: "/assets/modules/premium/call_of_duty_3pp",
   scales: [1],
-  hash: "0d3b2cc721d2a39a811fc82fee70a024",
-  name: "hi.messages.0d3b2cc721d2a39a811fc82fee70a024.compiled.messages",
+  hash: "11d34bfaf58dae63618b0f9e7cb2f98a",
+  name: "CallOfDuty3PP.compiled.messages",
   type: "jsona",
 });

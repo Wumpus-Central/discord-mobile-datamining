@@ -1,21 +1,13 @@
 // _runtime/metro/06197__.js
-import _mod19 from "00019__.js";
-import _modDef6182 from "06182__.js";
+import registerAsset from "01132__.js";
 
-_mod19.useCallback;
-
-export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
-  const previousViewTag = current;
-  const items = [current, detectorUpdater];
-  return useCallback((viewRef) => {
-    if (null !== viewRef) {
-      previousViewTag.viewRef = viewRef;
-      if (-1 === previousViewTag.previousViewTag) {
-        previousViewTag.previousViewTag = _modDef6182(previousViewTag.viewRef);
-      }
-      if (!previousViewTag.firstRender) {
-        detectorUpdater(true);
-      }
-    }
-  }, items);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "c1eae5d24a46f9d36a9168ec38445f00",
+  name: "DragIcon",
+  type: "png",
+});

@@ -1,13 +1,29 @@
 // _runtime/metro/11061__.js
-import registerAsset from "01132__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "56256b2d0c1f686d3df4fce9de28505a",
-  name: "ic_file_small_audio",
-  type: "png",
-});
+export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  let tmp2 = dsn && arr.includes(dsn.host);
+  if (!tmp2) {
+    let flag = false;
+    if (tunnel) {
+      let substr = arr;
+      if ("/" === arr[arr.length - 1]) {
+        substr = arr.slice(0, -1);
+      }
+      let substr1 = tunnel;
+      if ("/" === tunnel[tunnel.length - 1]) {
+        substr1 = tunnel.slice(0, -1);
+      }
+      flag = substr === substr1;
+    }
+    tmp2 = flag;
+  }
+  return tmp2;
+};

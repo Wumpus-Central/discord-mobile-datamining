@@ -1,7 +1,7 @@
 // _runtime/metro/01638__.js
 import 00065__ from "00065__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "KeyboardBackgroundView", validAttributes: {} };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaView", validAttributes: { mode: true, edges: true } };
 
-export default module_65.get("KeyboardBackgroundView", () => obj);
+export default module_65.get("RNCSafeAreaView", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

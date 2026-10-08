@@ -1,8 +1,15 @@
 // _runtime/metro/06306__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _mod6307 from "06307__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+const useContext = _mod19.useContext;
 
-export const styles = StyleSheet.create({
-  container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 },
-});
+export const useBottomSheetInternal = function useBottomSheetInternal(arg0) {
+  const tmp = useContext(_mod6307.BottomSheetInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
+    }
+  }
+  return tmp;
+};

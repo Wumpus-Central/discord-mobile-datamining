@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0182b31d51043571e01025e7bba542aa",
-  name: "FileUpIcon",
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 216,
+  height: 216,
+  scales: [1],
+  hash: "e8cc96dfc04f2226c8870fdf46cc16af",
+  name: "ExampleVoiceChatActivity",
   type: "png",
 });

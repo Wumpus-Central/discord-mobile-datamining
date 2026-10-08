@@ -1,57 +1,55 @@
 // _runtime/metro/04654__.js
-import c from "../00576_c.js";
-import _mod4649 from "04649__.js";
-import _slicedToArray from "00032__.js";
-
-const RiveColor2 = tmp(4644);
-require = fn;
-fn(19).useCallback;
-const f31263 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
-
-export const useRiveColor = function useRiveColor(arg0, arg1) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod4649.useRiveProperty(arg1, arg0, f31263), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
-      }
-      tmp6(fromHexStringResult.toInt());
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "zh-Hans" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
     };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
   }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u548C{1}", middle: "{0}\u3001{1}", pair: "{0}\u548C{1}", start: "{0}\u3001{1}" },
+    },
+    disjunction: {
+      long: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u6216{1}", middle: "{0}\u3001{1}", pair: "{0}\u6216{1}", start: "{0}\u3001{1}" },
+    },
+    unit: {
+      long: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      short: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+    },
+  },
+  locale: "zh-Hans",
 };
+prop.push(obj);

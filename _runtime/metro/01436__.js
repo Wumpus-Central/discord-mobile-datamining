@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 256,
-  height: 256,
+  httpServerLocation: "/assets/images/group_dms",
+  width: 96,
+  height: 96,
   scales: [1],
-  hash: "c3359f2e4aef01a86f637754d719562b",
-  name: "icon-group",
+  hash: "62009eabd9baf2e6b0ee2431e3de721e",
+  name: "icon0",
   type: "png",
 });

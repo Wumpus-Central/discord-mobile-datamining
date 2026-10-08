@@ -1,13 +1,9 @@
 // _runtime/metro/05352__.js
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default function isPrimitive(fn) {
-  let tmp = null === fn;
-  if (!tmp) {
-    let tmp2 = typeof fn !== "function";
-    if (typeof fn !== "function") {
-      tmp2 = typeof fn !== "object";
-    }
-    tmp = tmp2;
-  }
-  return tmp;
-}
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
+
+export default module_65.get("RNSScreenFooter", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

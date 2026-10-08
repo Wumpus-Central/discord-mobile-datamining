@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 327,
-  height: 285,
-  scales: [2, 3],
-  hash: "21d9af173c2aa764d18866600cd204ee",
-  name: "onboarding_v2_upsell",
+  httpServerLocation: "/assets/images/native",
+  width: 192.33333333333334,
+  height: 416,
+  scales: [3],
+  hash: "38957e8b938c7ee2a40f1e8c893feb71",
+  name: "welcome-bg",
   type: "png",
 });

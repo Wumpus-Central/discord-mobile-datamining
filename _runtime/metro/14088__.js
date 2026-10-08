@@ -1,7 +1,11 @@
 // _runtime/metro/14088__.js
-import _mod14086 from "14086__.js";
+import registerAsset from "01132__.js";
 
-let closure_0 = _mod14086({}.toString);
-let closure_1 = _mod14086("".slice);
-
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "2c315f321285573a3e0f3421e17e59ea",
+  name: "NitroGem24",
+  type: "lottie",
+});

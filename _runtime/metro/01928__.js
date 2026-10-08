@@ -1,37 +1,24 @@
 // _runtime/metro/01928__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hi",
+  locale: "nl",
   pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
-      let str3 = "one";
-      if (1 != arg0) {
-        let str5 = "two";
-        if (2 != arg0) {
-          str5 = "two";
-          if (3 != arg0) {
-            let str6 = "few";
-            if (4 != arg0) {
-              let str7 = "other";
-              if (6 == arg0) {
-                str7 = "many";
-              }
-              str6 = str7;
-            }
-            str5 = str6;
-          }
-        }
-        str3 = str5;
-      }
-      let str2 = str3;
-    } else {
-      str2 = "other";
-      if (arg0 >= 0) {
-        str2 = "other";
-        if (arg0 <= 1) {
-          str2 = "one";
+    let str2 = "other";
+    if (!arg1) {
+      let str3 = "other";
+      if (1 == arg0) {
+        str3 = "other";
+        if (!str.split(".")[1]) {
+          str3 = "one";
         }
       }
+      str2 = str3;
     }
     return str2;
   },
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-AW", parentLocale: "nl" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BE", parentLocale: "nl" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BQ", parentLocale: "nl" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-CW", parentLocale: "nl" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-SR", parentLocale: "nl" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-SX", parentLocale: "nl" });

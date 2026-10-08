@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/display_name_styles/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25zX2luYm94",
   scales: [1],
-  hash: "889604500459daea680c0353d6ff84d0",
-  name: "DisplayNameStyles.compiled.messages",
+  hash: "77d9dddf5b3bc99904e5ea017719828d",
+  name: "no.messages.77d9dddf5b3bc99904e5ea017719828d.compiled.messages",
   type: "jsona",
 });

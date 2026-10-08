@@ -1,7 +1,15 @@
 // _runtime/metro/01913__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "ja",
+  locale: "bg",
   pluralRuleFunction(arg0, arg1) {
-    return "other";
+    let str = "other";
+    let str2 = "other";
+    if (!arg1) {
+      if (1 == arg0) {
+        str = "one";
+      }
+      str2 = str;
+    }
+    return str2;
   },
 });

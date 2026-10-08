@@ -374,7 +374,7 @@ let items = [
         null,
       ];
       obj2.children = items;
-      return v65535(tmp17, obj2);
+      return collapsed(tmp17, obj2);
     },
   },
   {

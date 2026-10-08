@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/PirateIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "02ec404298afd1c009d52e4ac428845a",
-  name: "PirateIcon",
+  hash: "d6b6d301228ff846f051730b4a535337",
+  name: "SteamNeutralIcon",
   type: "png",
 });

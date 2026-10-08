@@ -1,35 +1,26 @@
 // _runtime/metro/04265__.js
-import _typeof_mod from "04266__.js";
-import module_4146_mod from "04146__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      let str = "\u00FAltimo";
+    } else {
+      str = "\u00FAltima";
+    }
+    return "'" + str + "' eeee '\u00E0s' p";
+  },
+  yesterday: "'ontem \u00E0s' p",
+  today: "'hoje \u00E0s' p",
+  tomorrow: "'amanh\u00E3 \u00E0s' p",
+  nextWeek: "eeee '\u00E0s' p",
+  other: "P"
+};
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let module_4146 = module_4146_mod;
-if (!module_4146) {
-  const obj2 = { default: module_4146 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4146;
-}
-module_4146 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function isMatch(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  return module_4146.default(_typeof.default(arg0, arg1, new Date(), arg2));
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
 };
 export default exports.default;

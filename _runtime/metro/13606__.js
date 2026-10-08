@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/nuf_channels/native/images",
-  width: 275.5,
-  height: 78,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 51,
+  height: 13,
   scales: [2, 3],
-  hash: "b55be157bc31f9c933d8fe113de3e547",
-  name: "voice_channels",
+  hash: "ee96056252cac57fcc904e8f5b1f0e16",
+  name: "img_logo_basic_small_light",
   type: "png",
 });

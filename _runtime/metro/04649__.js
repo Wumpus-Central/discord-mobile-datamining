@@ -1,82 +1,55 @@
 // _runtime/metro/04649__.js
-import _mod4650 from "04650__.js";
-import _slicedToArray from "00032__.js";
-
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
-
-export const useRiveProperty = function useRiveProperty(arg0, arg1, f31263) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = f31263;
-  let tmp = hasOwnProperty(undefined);
-  const items = [arg0, arg1];
-  const disposableMemo = _mod4650.useDisposableMemo(
-    () => {
-      if (closure_0) {
-        return closure_2(tmp, closure_1);
-      }
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "sv" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
+      short: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
+      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      short: { end: "{0} och {1}", middle: "{0}, {1}", pair: "{0} och {1}", start: "{0}, {1}" },
     },
-    (dispose) => {
-      let disposeResult;
-      if (dispose != null) {
-        disposeResult = dispose.dispose();
-      }
-      return disposeResult;
+    disjunction: {
+      long: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
+      short: { end: "{0} eller {1}", middle: "{0}, {1}", pair: "{0} eller {1}", start: "{0}, {1}" },
     },
-    items,
-    tmp,
-  );
-  [first, closure_6] = timestampProducer(undefined);
-  const tmp5 = _slicedToArray(timestampProducer(null), 2);
-  closure_7 = tmp5[1];
-  const items1 = [arg1, arg0];
-  React4(() => {
-    closure_7(null);
-  }, items1);
-  const items2 = [arg0, disposableMemo, arg1];
-  React4(() => {
-    let tmp = closure_0;
-    if (closure_0) {
-      tmp = !disposableMemo;
-    }
-    if (tmp) {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error('Property "' + closure_1 + '" not found in the ViewModel instance');
-      closure_7(error);
-    }
-  }, items2);
-  const items3 = [disposableMemo];
-  React4(() => {
-    if (disposableMemo) {
-      closure_6(disposableMemo.value);
-      closure_0 = disposableMemo.addListener((arg0) => {
-        closure_1_6(arg0);
-      });
-      return () => {
-        try {
-          closure_0();
-        } catch (err) {}
-      };
-    }
-  }, items3);
-  const items4 = [disposableMemo, first];
-  const items5 = [
-    first,
-    React3((fn) => {
-      const current = ref.current;
-      if (current) {
-        let tmp2 = fn;
-        if (typeof fn === "function") {
-          tmp2 = fn(first);
-        }
-        current.value = tmp2;
-      }
-    }, items4),
-    tmp5[0],
-    disposableMemo,
-  ];
-  return items5;
+    unit: {
+      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
+    },
+  },
+  locale: "sv",
 };
+prop.push(obj);

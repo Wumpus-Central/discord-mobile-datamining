@@ -1,13 +1,27 @@
 // _runtime/metro/11063__.js
-import registerAsset from "01132__.js";
+import _mod10995 from "10995__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "317510f9e9255b233aed4b094f163966",
-  name: "ic_file_small_document",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
+  let arr = arg2;
+  if (arg2 === undefined) {
+    const items = [arg1];
+    arr = items;
+  }
+  let str = arg3;
+  if (arg3 === undefined) {
+    str = "npm";
+  }
+  const tmp = _metadata._metadata || {};
+  if (!tmp.sdk) {
+    const obj = { name: null, packages: null, version: null };
+    const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod10995.SDK_VERSION }));
+    obj.version = str(10995).SDK_VERSION;
+    tmp.sdk = obj;
+  }
+  _metadata._metadata = tmp;
+};

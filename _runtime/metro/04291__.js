@@ -1,308 +1,71 @@
 // _runtime/metro/04291__.js
-import Parser2 from "../04270_Parser.js";
-import module_4292_mod from "04292__.js";
+import 02138__ from "02138__.js";
+import 02139__ from "02139__.js";
 
-let _createSuperInternal = require;
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-function _setPrototypeOf(ISODayParser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISODayParser, Parser) {
-      ISODayParser.__proto__ = Parser;
-      return ISODayParser;
-    };
-  }
-  return _setPrototypeOf(ISODayParser, Parser);
-}
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
-}
-let module_4292 = module_4292_mod;
-if (!module_4292) {
-  let obj = { default: module_4292 };
-  let tmp3 = obj;
+if (!module_2138) {
+  const obj2 = { default: module_2138 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4292;
+  obj = module_2138;
 }
-module_4292 = tmp3;
-const Parser = Parser2.Parser;
-_createSuperInternal = undefined;
-class ISODayParser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 90,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
-        } else {
-          num3 = 90;
-          applyResult.priority = 90;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "E", "e", "c", "t", "T"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj.value = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-          } else {
-            applyResult.incompatibleTokens = items1;
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
+if (!module_2139) {
+  const obj4 = { default: module_2139 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2139;
+}
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^\d+/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-  }
-}
-let dependencyMap = ISODayParser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
-}
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
-}
-ISODayParser.prototype = Object.create(prototype, {
-  constructor: { value: ISODayParser, writable: true, configurable: true },
-});
-if (Parser) {
-  _setPrototypeOf(ISODayParser, Parser);
-}
-let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = hasOwnProperty(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
 };
-const entry = {
-  key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("i" !== arg1) {
-      if ("ii" !== arg1) {
-        if ("io" === arg1) {
-          return ordinalNumber.ordinalNumber(arg0, { unit: "day" });
-        } else {
-          function valueCallback(arg0) {
-            let num = 7;
-            if (0 !== arg0) {
-              num = arg0;
-            }
-            return num;
-          }
-          if ("iii" === arg1) {
-            return _createSuperInternal(4272).mapValue(
-              ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) ||
-                ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
-                ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }),
-              valueCallback,
-            );
-          } else if ("iiiii" === arg1) {
-            return _createSuperInternal(4272).mapValue(
-              ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }),
-              valueCallback,
-            );
-          } else if ("iiiiii" === arg1) {
-            return _createSuperInternal(4272).mapValue(
-              ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
-                ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }),
-              valueCallback,
-            );
-          } else {
-            return _createSuperInternal(4272).mapValue(
-              ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) ||
-                ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) ||
-                ordinalNumber.day(arg0, { width: "short", context: "formatting" }) ||
-                ordinalNumber.day(arg0, { width: "narrow", context: "formatting" }),
-              valueCallback,
-            );
-          }
-        }
-      }
-    }
-    return _createSuperInternal(4272).parseNDigits(arg1.length, arg0);
-  },
+const obj6 = { matchPatterns: { narrow: /^([bB]|[aA]|คศ)/i, abbreviated: /^([bB]\.?\s?[cC]\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?|ค\.?ศ\.?)/i, wide: /^(ก่อนคริสตกาล|คริสต์ศักราช|คริสตกาล)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^[bB]/i, /^(^[aA]|ค\.?ศ\.?|คริสตกาล|คริสต์ศักราช|)/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^ไตรมาส(ที่)? ?[1234]/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
 };
-let items = [
-  entry,
-  {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
-      if (tmp) {
-        tmp = arg1 <= 7;
-      }
-      return tmp;
-    },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2) {
-      const defaultResult = module_4292.default(arg0, arg2);
-      defaultResult.setUTCHours(0, 0, 0, 0);
-      return defaultResult;
-    },
-  },
-];
-if (0 < items.length) {
-  do {
-    let tmp7 = items[num];
-    let flag = tmp7.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp7.enumerable = flag;
-    tmp7.configurable = true;
-    if ("value" in tmp7) {
-      tmp7.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
-    num = num + 1;
-  } while (num < items.length);
-}
+const obj9 = { any: null };
+const items1 = [/(1|แรก|หนึ่ง)/i, /(2|สอง)/i, /(3|สาม)/i, /(4|สี่)/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?)/i, abbreviated: /^(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?')/i, wide: /^(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { wide: null, any: null };
+const items2 = [/^มก/i, /^กุม/i, /^มี/i, /^เม/i, /^พฤษ/i, /^มิ/i, /^กรก/i, /^ส/i, /^กัน/i, /^ต/i, /^พฤศ/i, /^ธ/i];
+obj11.wide = items2;
+const items3 = [/^ม\.?ค\.?/i, /^ก\.?พ\.?/i, /^มี\.?ค\.?/i, /^เม\.?ย\.?/i, /^พ\.?ค\.?/i, /^มิ\.?ย\.?/i, /^ก\.?ค\.?/i, /^ส\.?ค\.?/i, /^ก\.?ย\.?/i, /^ต\.?ค\.?/i, /^พ\.?ย\.?/i, /^ธ\.?ค\.?/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i, short: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i, abbreviated: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i, wide: /^(อาทิตย์|จันทร์|อังคาร|พุธ|พฤหัสบดี|ศุกร์|เสาร์)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { wide: null, any: null };
+const items4 = [/^อา/i, /^จั/i, /^อั/i, /^พุธ/i, /^พฤ/i, /^ศ/i, /^เส/i];
+obj13.wide = items4;
+const items5 = [/^อา/i, /^จ/i, /^อ/i, /^พ(?!ฤ)/i, /^พฤ/i, /^ศ/i, /^ส/i];
+obj13.any = items5;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { any: /^(ก่อนเที่ยง|หลังเที่ยง|เที่ยงคืน|เที่ยง|(ตอน.*?)?.*(เที่ยง|เช้า|บ่าย|เย็น|กลางคืน))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^ก่อนเที่ยง/i, pm: /^หลังเที่ยง/i, midnight: /^เที่ยงคืน/i, noon: /^เที่ยง/i, morning: /เช้า/i, afternoon: /บ่าย/i, evening: /เย็น/i, night: /กลางคืน/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
 
-export { ISODayParser };
+export default date;
+export default exports.default;

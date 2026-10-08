@@ -1,67 +1,67 @@
 // _runtime/metro/01852__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import cancelAnimation from "../01643_cancelAnimation.js";
-import noop_mod from "00019__.js";
+import _mod1847 from "01847__.js";
+import _slicedToArray from "00032__.js";
 
-let noop = noop_mod;
-({ useMemo: c3, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-let closure_5 = {
-  code: "function pnpm_indexTsx1(){const{interpolate,progress,closed,opened,enabled,height}=this.__closure;const offset=interpolate(progress.value,[0,1],[closed,opened]);return{transform:[{translateY:enabled?height.value+offset:closed}]};}",
-};
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
+let closure_5 = ["keyboardWillShow", "keyboardDidHide"];
+function getLatestState() {}
+function defaultSelector(arg0) {
+  return arg0;
+}
 
-export default forwardRef((offset, ref) => {
-  offset = offset.offset;
-  if (offset === undefined) {
-    offset = {};
+export const useKeyboardState = function useKeyboardState() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = defaultSelector;
   }
-  let num = offset.closed;
-  if (num === undefined) {
-    num = 0;
-  }
-  let num2 = offset.opened;
-  if (num2 === undefined) {
-    num2 = 0;
-  }
-  const style = offset.style;
-  let flag = offset.enabled;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const merged = Object.assign(offset, Object.assign({ children: 0, offset: 0, style: 0, enabled: 0 }));
-  const reanimatedKeyboardAnimation = num(style[2]).useReanimatedKeyboardAnimation();
-  const height = reanimatedKeyboardAnimation.height;
-  const progress = reanimatedKeyboardAnimation.progress;
-  const obj2 = num(style[2]);
-  const fn = function h() {
-    cancelAnimation;
-    let sum = num;
-    const items = [num, num2];
-    if (flag) {
-      sum = height.value + tmp3;
+  closure_0 = tmp;
+  const tmp2 = _slicedToArray(
+    closure_4(() => {
+      if (typeof getLatestState === "function") {
+        const obj = {};
+        const KeyboardController = _mod1847.KeyboardController;
+        const merged = Object.assign(KeyboardController.state());
+        const KeyboardController2 = _mod1847.KeyboardController;
+        obj.isVisible = KeyboardController2.isVisible();
+        return tmp(obj);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }),
+    2,
+  );
+  dependencyMap = tmp2[1];
+  closure_3(() => {
+    closure_0 = closure_1_5.map((item) => {
+      const KeyboardEvents = closure_0(1645).KeyboardEvents;
+      return KeyboardEvents.addListener(item, () => {
+        if (typeof closure_2_6 === "function") {
+          const obj = {};
+          const KeyboardController = closure_0(1847).KeyboardController;
+          const merged = Object.assign(KeyboardController.state());
+          const KeyboardController2 = closure_0(1847).KeyboardController;
+          obj.isVisible = KeyboardController2.isVisible();
+          return tmp(tmp2(obj));
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      });
+    });
+    if (typeof getLatestState === "function") {
+      let obj = {};
+      let KeyboardController = closure_0(1847).KeyboardController;
+      let merged = Object.assign(KeyboardController.state());
+      let KeyboardController2 = closure_0(1847).KeyboardController;
+      obj.isVisible = KeyboardController2.isVisible();
+      tmp(tmp2(obj));
+      return () => {
+        const item = closure_0.forEach((remove) => remove.remove());
+      };
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = { transform: null };
-    const items1 = [{ translateY: sum }];
-    obj.transform = items1;
-    return obj;
-  };
-  const obj3 = num(style[3]);
-  fn.__closure = { interpolate: num(style[3]).interpolate, progress, closed: num, opened: num2, enabled: flag, height };
-  fn.__workletHash = 13627085806149;
-  fn.__initData = progress;
-  let items = [num, num2, flag];
-  const animatedStyle = obj3.useAnimatedStyle(fn, items);
-  let items1 = [style, animatedStyle];
-  let obj = { interpolate: num(style[3]).interpolate, progress, closed: num, opened: num2, enabled: flag, height };
-  const obj4 = {
-    ref,
-    style: flag(() => {
-      const items = [style, animatedStyle];
-      return items;
-    }, items1),
-  };
-  const merged1 = Object.assign(merged);
-  obj4.children = offset.children;
-  return height(num2(style[3]).View, obj4);
-});
+  }, []);
+  return tmp2[0];
+};

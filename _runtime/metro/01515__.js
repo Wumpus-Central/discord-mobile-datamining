@@ -1,21 +1,14 @@
 // _runtime/metro/01515__.js
-import noop from "00019__.js";
 
-export const useKeyedChildListeners = function useKeyedChildListeners() {
-  const current = noop.useRef(Object.assign(Object.create(null), { getState: {}, beforeRemove: {} })).current;
-  const items = [current];
-  return {
-    keyedListeners: current,
-    addKeyedListener: noop.useCallback((arg0, arg1, arg2) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      closure_2 = arg2;
-      closure_0[arg0][arg1] = arg2;
-      return () => {
-        if (current[closure_0][closure_1] === closure_2) {
-          current[closure_0][tmp] = undefined;
-        }
-      };
-    }, items),
-  };
+export const createParamsFromAction = function createParamsFromAction(routeParamList) {
+  routeParamList = routeParamList.routeParamList;
+  ({ name, params } = routeParamList.action.payload);
+  let tmp = params;
+  if (undefined !== routeParamList[name]) {
+    const obj = {};
+    const merged = Object.assign(routeParamList[name]);
+    const merged1 = Object.assign(params);
+    tmp = obj;
+  }
+  return tmp;
 };

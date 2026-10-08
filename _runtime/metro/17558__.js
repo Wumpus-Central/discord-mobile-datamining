@@ -3,9 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/holidays/assets",
-  scales: [1],
-  hash: "28cac85f0af67c534e11b773b5017c66",
-  name: "halloween_loading_light",
-  type: "webm",
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3, 4],
+  hash: "4d740f655500daa7dbc22677153114f7",
+  name: "stream",
+  type: "png",
 });

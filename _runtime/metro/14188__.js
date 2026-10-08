@@ -1,7 +1,15 @@
 // _runtime/metro/14188__.js
-import _mod14189 from "14189__.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod14181 from "14181__.js";
 
-export default function getReactNativeVersion() {
-  return _mod14189.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
-}
+export default (arg0, arg1) => {
+  try {
+    const tmp8 = new _mod14181(arg0, arg1);
+    let str = tmp8.range;
+    if (!str) {
+      str = "*";
+    }
+    return str;
+  } catch (err) {
+    return null;
+  }
+};

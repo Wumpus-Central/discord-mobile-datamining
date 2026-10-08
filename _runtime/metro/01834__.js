@@ -1,79 +1,35 @@
 // _runtime/metro/01834__.js
-import cancelAnimation from "../01643_cancelAnimation.js";
+import _mod1659 from "01659__.js";
+import 01658__ from "01658__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const __initData = {
-  code: 'function pnpm_reanimatedNativeTs1(event){const{handlers,context}=this.__closure;const{onKeyboardMoveStart:onKeyboardMoveStart,onKeyboardMove:onKeyboardMove,onKeyboardMoveEnd:onKeyboardMoveEnd,onKeyboardMoveInteractive:onKeyboardMoveInteractive}=handlers;if(onKeyboardMoveStart&&event.eventName.endsWith("onKeyboardMoveStart")){onKeyboardMoveStart(event,context);}if(onKeyboardMove&&event.eventName.endsWith("onKeyboardMove")){onKeyboardMove(event,context);}if(onKeyboardMoveEnd&&event.eventName.endsWith("onKeyboardMoveEnd")){onKeyboardMoveEnd(event,context);}if(onKeyboardMoveInteractive&&event.eventName.endsWith("onKeyboardMoveInteractive")){onKeyboardMoveInteractive(event,context);}}',
-};
-const __initData2 = {
-  code: 'function pnpm_reanimatedNativeTs2(event){const{handlers,context}=this.__closure;const{onFocusedInputLayoutChanged:onFocusedInputLayoutChanged}=handlers;if(onFocusedInputLayoutChanged&&event.eventName.endsWith("onFocusedInputLayoutChanged")){onFocusedInputLayoutChanged(event,context);}}',
-};
-
-export const useAnimatedKeyboardHandler = (handlers, items10) => {
-  closure_0 = handlers;
-  const handler = cancelAnimation.useHandler(handlers, items10);
-  const context = handler.context;
-  const fn = function v(eventName) {
-    ({ onKeyboardMoveStart, onKeyboardMove, onKeyboardMoveEnd, onKeyboardMoveInteractive } = closure_0);
-    let endsWithResult = onKeyboardMoveStart;
-    if (onKeyboardMoveStart) {
-      eventName = eventName.eventName;
-      endsWithResult = eventName.endsWith("onKeyboardMoveStart");
+function setGestureStateNative(arg0, arg1) {
+  if (globalThis._WORKLET) {
+    global._setGestureState(arg0, arg1);
+  } else {
+    const logger = _mod1659.logger;
+    logger.warn("You can not use setGestureState in non-worklet function.");
+  }
+}
+setGestureStateNative.__closure = { logger: _mod1659.logger };
+setGestureStateNative.__workletHash = 13301434022691;
+setGestureStateNative.__initData = { code: "function setGestureStateNative_Pnpm_setGestureStateTs1(handlerTag,newState){const{logger}=this.__closure;if(!_WORKLET){logger.warn('You can not use setGestureState in non-worklet function.');return;}global._setGestureState(handlerTag,newState);}" };
+if (!module_1658.shouldBeUseWeb()) {
+  exports.setGestureState = setGestureStateNative;
+} else {
+  const _module1 = module_1658;
+  if (_module1.isJest()) {
+    function setGestureStateJest() {
+      const logger = _mod1659.logger;
+      logger.warn("setGestureState() cannot be used with Jest.");
     }
-    if (endsWithResult) {
-      onKeyboardMoveStart(eventName, context);
-    }
-    let endsWithResult1 = onKeyboardMove;
-    if (onKeyboardMove) {
-      const eventName2 = eventName.eventName;
-      endsWithResult1 = eventName2.endsWith("onKeyboardMove");
-    }
-    if (endsWithResult1) {
-      onKeyboardMove(eventName, context);
-    }
-    let endsWithResult2 = onKeyboardMoveEnd;
-    if (onKeyboardMoveEnd) {
-      const eventName3 = eventName.eventName;
-      endsWithResult2 = eventName3.endsWith("onKeyboardMoveEnd");
-    }
-    if (endsWithResult2) {
-      onKeyboardMoveEnd(eventName, context);
-    }
-    let endsWithResult3 = onKeyboardMoveInteractive;
-    if (onKeyboardMoveInteractive) {
-      const eventName4 = eventName.eventName;
-      endsWithResult3 = eventName4.endsWith("onKeyboardMoveInteractive");
-    }
-    if (endsWithResult3) {
-      const result = onKeyboardMoveInteractive(eventName, context);
-    }
-  };
-  fn.__closure = { handlers, context };
-  fn.__workletHash = 6092807753388;
-  fn.__initData = __initData;
-  return cancelAnimation.useEvent(
-    fn,
-    ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"],
-    handler.doDependenciesDiffer,
-  );
-};
-export const useFocusedInputLayoutHandler = (handlers, items10) => {
-  const handler = cancelAnimation.useHandler(handlers, items10);
-  const context = handler.context;
-  const fn = function v(eventName) {
-    const onFocusedInputLayoutChanged = handlers.onFocusedInputLayoutChanged;
-    let endsWithResult = onFocusedInputLayoutChanged;
-    if (onFocusedInputLayoutChanged) {
-      eventName = eventName.eventName;
-      endsWithResult = eventName.endsWith("onFocusedInputLayoutChanged");
-    }
-    if (endsWithResult) {
-      const result = onFocusedInputLayoutChanged(eventName, context);
-    }
-  };
-  fn.__closure = { handlers, context };
-  fn.__workletHash = 9976853307145;
-  fn.__initData = __initData2;
-  return cancelAnimation.useEvent(fn, ["onFocusedInputLayoutChanged"], handler.doDependenciesDiffer);
-};
+  } else {
+    const _module2 = module_1658;
+    setGestureStateJest = _module2.isChromeDebugger() ? (function setGestureStateChromeDebugger() {
+      const logger = _mod1659.logger;
+      logger.warn("setGestureState() cannot be used with Chrome Debugger.");
+    }) : (function setGestureStateDefault() {
+      const logger = _mod1659.logger;
+      logger.warn("setGestureState() is not supported on this configuration.");
+    });
+  }
+}

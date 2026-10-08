@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/provisional_account_avatars",
-  width: 320,
-  height: 320,
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "ffe52daac60a8380b844bea02dece12e",
-  name: "default_provisional_avatar_4",
+  hash: "3c6ccb83716d1e4fb91d3082f6b21d77",
+  name: "default_avatar_4",
   type: "png",
 });

@@ -1,17 +1,52 @@
 // _runtime/metro/01866__.js
-import TEST_ID_KEYBOARD_TOOLBAR from "../01861_TEST_ID_KEYBOARD_TOOLBAR.js";
+import cancelAnimation from "../01655_cancelAnimation.js";
+import _mod1844 from "01844__.js";
 import noop from "00019__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: c2 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const styles = StyleSheet.create({ flex: { flex: 1 } });
+({ useCallback: c2, useEffect: c3 } = noop);
+let closure_4 = ["onScroll", "onScrollBeginDrag", "onScrollEndDrag", "onMomentumScrollBegin", "onMomentumScrollEnd"];
+const __initData = {
+  code: "function pnpm_useScrollStateTs1(event){const{offset,layout,size}=this.__closure;offset.value=event.contentOffset.y;layout.value=event.layoutMeasurement;size.value=event.contentSize;}",
+};
 
-export default function _default(children) {
-  return (
-    <React2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>
-      {children.children}
-    </React2>
-  );
+export default function _default(arg0) {
+  const sharedValue = cancelAnimation.useSharedValue(0);
+  const sharedValue1 = cancelAnimation.useSharedValue({ width: 0, height: 0 });
+  const sharedValue2 = cancelAnimation.useSharedValue({ width: 0, height: 0 });
+  closure_3 = _mod1844.useEventHandlerRegistration(arg0);
+  const fn = function l(contentOffset) {
+    sharedValue.value = contentOffset.contentOffset.y;
+    sharedValue1.value = contentOffset.layoutMeasurement;
+    sharedValue2.value = contentOffset.contentSize;
+  };
+  fn.__closure = { offset: sharedValue, layout: sharedValue1, size: sharedValue2 };
+  fn.__workletHash = 10534434800111;
+  fn.__initData = __initData;
+  closure_4 = cancelAnimation.useEvent(fn, closure_4);
+  React3(() => {
+    closure_0 = closure_3(closure_4);
+    return () => {
+      closure_0();
+    };
+  }, []);
+  const items = [sharedValue1];
+  const items1 = [sharedValue2];
+  const tmp5 = React2((nativeEvent) => {
+    sharedValue1.value = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
+  }, items);
+  return {
+    offset: sharedValue,
+    layout: sharedValue1,
+    size: sharedValue2,
+    onLayout: React2((nativeEvent) => {
+      sharedValue1.value = {
+        width: nativeEvent.nativeEvent.layout.width,
+        height: nativeEvent.nativeEvent.layout.height,
+      };
+    }, items),
+    onContentSizeChange: React2((width, height) => {
+      const size = { width, height };
+      sharedValue2.value = size;
+    }, items1),
+  };
 }

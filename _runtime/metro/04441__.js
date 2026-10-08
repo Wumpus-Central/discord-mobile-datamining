@@ -1,55 +1,44 @@
 // _runtime/metro/04441__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "en" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0}, and {1}", middle: "{0}, {1}", pair: "{0} and {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0}, & {1}", middle: "{0}, {1}", pair: "{0} & {1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: { end: "{0}, or {1}", middle: "{0}, {1}", pair: "{0} or {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, or {1}", middle: "{0}, {1}", pair: "{0} or {1}", start: "{0}, {1}" },
-      short: { end: "{0}, or {1}", middle: "{0}, {1}", pair: "{0} or {1}", start: "{0}, {1}" },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import differenceInCalendarWeeks_mod from "../04345_differenceInCalendarWeeks.js";
+import lastDayOfMonth_mod from "../04442_lastDayOfMonth.js";
+import startOfMonth_mod from "../04372_startOfMonth.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
+
+let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
+if (!differenceInCalendarWeeks) {
+  const obj = { default: differenceInCalendarWeeks };
+  let tmp3 = obj;
+} else {
+  tmp3 = differenceInCalendarWeeks;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+differenceInCalendarWeeks = tmp3;
+let lastDayOfMonth = lastDayOfMonth_mod;
+if (!lastDayOfMonth) {
+  const obj2 = { default: lastDayOfMonth };
+  let tmp5 = obj2;
+} else {
+  tmp5 = lastDayOfMonth;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0}, and {1}", middle: "{0}, {1}", pair: "{0} and {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0}, & {1}", middle: "{0}, {1}", pair: "{0} & {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: { end: "{0}, or {1}", middle: "{0}, {1}", pair: "{0} or {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, or {1}", middle: "{0}, {1}", pair: "{0} or {1}", start: "{0}, {1}" },
-      short: { end: "{0}, or {1}", middle: "{0}, {1}", pair: "{0} or {1}", start: "{0}, {1}" },
-    },
-    unit: {
-      long: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "en",
+lastDayOfMonth = tmp5;
+let startOfMonth = startOfMonth_mod;
+if (!startOfMonth) {
+  const obj3 = { default: startOfMonth };
+  let tmp7 = obj3;
+} else {
+  tmp7 = startOfMonth;
+}
+startOfMonth = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function getWeeksInMonth(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
 };
-prop.push(obj);
+export default exports.default;

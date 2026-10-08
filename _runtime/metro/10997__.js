@@ -1,13 +1,31 @@
 // _runtime/metro/10997__.js
-import registerAsset from "01132__.js";
+import _mod10991 from "10991__.js";
+import _mod10994 from "10994__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CirclePlusIcon-secondary",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod10994.GLOBAL_OBJ.onunhandledrejection;
+  _mod10994.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
+    _mod10991.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
+    } else {
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+  };
+  _mod10994.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+}
+let onunhandledrejection = null;
+
+export const addGlobalUnhandledRejectionInstrumentationHandler =
+  function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+    _mod10991.addHandler("unhandledrejection", errorCallback);
+    _mod10991.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
+  };

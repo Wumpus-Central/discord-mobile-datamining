@@ -1,390 +1,75 @@
 // _runtime/metro/04267__.js
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-function _setPrototypeOf(DateToSystemTimezoneSetter, Setter) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(DateToSystemTimezoneSetter, Setter) {
-      DateToSystemTimezoneSetter.__proto__ = Setter;
-      return DateToSystemTimezoneSetter;
-    };
-  }
-  return _setPrototypeOf(DateToSystemTimezoneSetter, Setter);
-}
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
-}
-function _createClass(DateToSystemTimezoneSetter, items, arg2) {
-  for (let num = 0; num < items.length; num = num + 1) {
-    let tmp2 = items[num];
-    let flag = tmp2.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp2.enumerable = flag;
-    tmp2.configurable = true;
-    if ("value" in tmp2) {
-      tmp2.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult = Object.defineProperty(tmp, tmp2.key, tmp2);
-  }
-  return DateToSystemTimezoneSetter;
-}
-class Setter {
-  constructor() {
-    self = this;
-    if (this instanceof _typeof) {
-      str2 = "subPriority";
-      if ("subPriority" in self) {
-        tmp6 = globalThis;
-        _Object = Object;
-        definePropertyResult = Object.defineProperty(self, "subPriority", {
-          value: 0,
-          enumerable: true,
-          configurable: true,
-          writable: true,
-        });
-      } else {
-        num = 0;
-        self.subPriority = 0;
-      }
-      return;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let closure_129_0 = Setter;
-const entry = {
-  key: "validate",
-  value: function validate(arg0, arg1) {
-    return true;
-  },
-};
-let items = [entry];
-_createClass(Setter, items);
-let closure_130_0;
-class ValueSetter {
-  constructor(arg0, arg1, arg2, arg3, arg4) {
-    self = this;
-    if (this instanceof _setPrototypeOf) {
-      tmp6 = _typeof;
-      call = _typeof.call;
-      tmp7 = typeof call === "unknown" ? tmp6() : call(self);
-      tmp8 = arg0;
-      tmp9 = arg1;
-      tmp10 = arg2;
-      tmp11 = arg3;
-      tmp12 = arg4;
-      tmp7.value = arg0;
-      tmp7.validateValue = arg1;
-      tmp7.setValue = arg2;
-      tmp7.priority = arg3;
-      if (arg4) {
-        tmp7.subPriority = arg4;
-      }
-      return tmp7;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let closure_130_1 = ValueSetter;
-ValueSetter.prototype = Object.create(Setter.prototype, {
-  constructor: { value: ValueSetter, writable: true, configurable: true },
-});
-_setPrototypeOf(ValueSetter, Setter);
-_typeof = ValueSetter;
-_setPrototypeOf = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-closure_130_0 = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_typeof);
-  if (_setPrototypeOf) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-const entry1 = {
-  key: "validate",
-  value: function validate(arg0, arg1) {
-    return this.validateValue(arg0, this.value, arg1);
-  },
-};
-const items1 = [
-  entry1,
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2) {
-      return this.setValue(arg0, arg1, this.value, arg2);
-    },
-  },
-];
-_createClass(ValueSetter, items1);
-let closure_131_0;
-class DateToSystemTimezoneSetter {
-  constructor() {
-    if (this instanceof _setPrototypeOf) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _typeof;
-      call = _typeof.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_typeof, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 10,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
-        } else {
-          num3 = 10;
-          applyResult.priority = 10;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          str3 = "subPriority";
-          if ("subPriority" in applyResult) {
-            _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", {
-              value: -1,
-              enumerable: true,
-              configurable: true,
-              writable: true,
-            });
-          } else {
-            num4 = -1;
-            applyResult.subPriority = -1;
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let closure_131_1 = DateToSystemTimezoneSetter;
-DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, {
-  constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true },
-});
-_setPrototypeOf(DateToSystemTimezoneSetter, Setter);
-_typeof = DateToSystemTimezoneSetter;
-_setPrototypeOf = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-closure_131_0 = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_typeof);
-  if (_setPrototypeOf) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-const entry2 = {
-  key: "set",
-  value: function set(getUTCFullYear, timestampIsSet) {
-    if (timestampIsSet.timestampIsSet) {
-      return getUTCFullYear;
-    } else {
-      const _Date = Date;
-      const date = new Date(0);
-      const uTCFullYear = getUTCFullYear.getUTCFullYear();
-      const uTCMonth = getUTCFullYear.getUTCMonth();
-      date.setFullYear(uTCFullYear, uTCMonth, getUTCFullYear.getUTCDate());
-      const uTCHours = getUTCFullYear.getUTCHours();
-      const uTCMinutes = getUTCFullYear.getUTCMinutes();
-      const uTCSeconds = getUTCFullYear.getUTCSeconds();
-      date.setHours(uTCHours, uTCMinutes, uTCSeconds, getUTCFullYear.getUTCMilliseconds());
-      return date;
-    }
-  },
-};
-const items2 = [entry2];
-_createClass(DateToSystemTimezoneSetter, items2);
+import 02138__ from "02138__.js";
+import 02139__ from "02139__.js";
 
-export { Setter };
-export { ValueSetter };
-export { DateToSystemTimezoneSetter };
+if (!module_2138) {
+  const obj2 = { default: module_2138 };
+  let obj = obj2;
+} else {
+  obj = module_2138;
+}
+if (!module_2139) {
+  const obj4 = { default: module_2139 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2139;
+}
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)[ºªo]?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
+    }
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+const obj6 = { matchPatterns: { narrow: /^(ac|dc|a|d)/i, abbreviated: /^(a\.?\s?c\.?|d\.?\s?c\.?)/i, wide: /^(antes de cristo|depois de cristo)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null, wide: null };
+const items = [/^ac/i, /^dc/i];
+obj7.any = items;
+const items1 = [/^antes de cristo/i, /^depois de cristo/i];
+obj7.wide = items1;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^[1234](º)? trimestre/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj9 = { any: null };
+const items2 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items2;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[jfmajsond]/i, abbreviated: /^(jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)/i, wide: /^(janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items3 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.narrow = items3;
+const items4 = [/^ja/i, /^fev/i, /^mar/i, /^abr/i, /^mai/i, /^jun/i, /^jul/i, /^ago/i, /^set/i, /^out/i, /^nov/i, /^dez/i];
+obj11.any = items4;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^(dom|[23456]ª?|s[aá]b)/i, short: /^(dom|[23456]ª?|s[aá]b)/i, abbreviated: /^(dom|seg|ter|qua|qui|sex|s[aá]b)/i, wide: /^(domingo|(segunda|ter[cç]a|quarta|quinta|sexta)([- ]feira)?|s[aá]bado)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { short: null, narrow: null, any: null };
+const items5 = [/^d/i, /^2/i, /^3/i, /^4/i, /^5/i, /^6/i, /^s[aá]/i];
+obj13.short = items5;
+const items6 = [/^d/i, /^2/i, /^3/i, /^4/i, /^5/i, /^6/i, /^s[aá]/i];
+obj13.narrow = items6;
+const items7 = [/^d/i, /^seg/i, /^t/i, /^qua/i, /^qui/i, /^sex/i, /^s[aá]b/i];
+obj13.any = items7;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(a|p|mn|md|(da) (manhã|tarde|noite))/i, any: /^([ap]\.?\s?m\.?|meia[-\s]noite|meio[-\s]dia|(da) (manhã|tarde|noite))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a/i, pm: /^p/i, midnight: /^mn|^meia[-\s]noite/i, noon: /^md|^meio[-\s]dia/i, morning: /manhã/i, afternoon: /tarde/i, evening: /tarde/i, night: /noite/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
+export default exports.default;

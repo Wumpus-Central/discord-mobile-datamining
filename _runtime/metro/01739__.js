@@ -1,354 +1,254 @@
 // _runtime/metro/01739__.js
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _slicedToArray from "00032__.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-function isInlineStyleTransform(arr) {
-  return Array.isArray(arr) && arr.some((item) => {
-    let someResult = item;
-    if (someResult) {
-      let _Object = Object;
-      let keys = Object.keys(item);
-      someResult = keys.some((item) => {
-        let isSharedValueResult = closure_2_0(closure_2_1[3]).isSharedValue(obj);
-        if (!isSharedValueResult) {
-          let tmp2 = "transform" === item;
-          if (tmp2) {
-            let _Array = Array;
-            tmp2 = Array.isArray(obj) && obj.some((item) => {
-              let someResult = item;
-              if (someResult) {
-                let _Object = Object;
-                let keys = Object.keys(item);
-                someResult = keys.some((item) => {
-                  let isSharedValueResult = closure_2_0(closure_2_1[3]).isSharedValue(obj);
-                  if (!isSharedValueResult) {
-                    let tmp2 = "transform" === item;
-                    if (tmp2) {
-                      let _Array = Array;
-                      tmp2 = Array.isArray(obj) && obj.some(() => { ... });
-                      let tmp4 = Array.isArray(obj) && obj.some(() => { ... });
-                    }
-                    isSharedValueResult = tmp2;
-                  }
-                  return isSharedValueResult;
-                });
-              }
-              return someResult;
-            });
-            let tmp4 = Array.isArray(obj) && obj.some((item) => {
-              let someResult = item;
-              if (someResult) {
-                let _Object = Object;
-                let keys = Object.keys(item);
-                someResult = keys.some((item) => {
-                  let isSharedValueResult = closure_2_0(closure_2_1[3]).isSharedValue(obj);
-                  if (!isSharedValueResult) {
-                    let tmp2 = "transform" === item;
-                    if (tmp2) {
-                      let _Array = Array;
-                      tmp2 = Array.isArray(obj) && obj.some(() => { ... });
-                      let tmp4 = Array.isArray(obj) && obj.some(() => { ... });
-                    }
-                    isSharedValueResult = tmp2;
-                  }
-                  return isSharedValueResult;
-                });
-              }
-              return someResult;
-            });
-          }
-          isSharedValueResult = tmp2;
-        }
-        return isSharedValueResult;
-      });
-    }
-    return someResult;
-  });
-}
-function getInlinePropsUpdate(viewDescriptors) {
-  const obj = {};
-  const entries = Object.entries(viewDescriptors);
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    let obj2 = InlinePropManager(1692);
-    if (obj2.isSharedValue(tmp7)) {
-      obj[tmp6] = tmp7.value;
+const ComplexAnimationBuilder = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      let _Array = Array;
-      if (Array.isArray(tmp7)) {
-        obj[tmp6] = tmp7.map((item) => InlinePropManager(item));
-      } else {
-        if (typeof tmp7 === "object") {
-          let tmp15 = InlinePropManager(tmp7);
-        } else {
-          tmp15 = tmp7;
-        }
-        obj[tmp6] = tmp15;
-      }
+      callResult = call(constructResult);
     }
-    continue;
-  }
-  return obj;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-const InlinePropManager = getInlinePropsUpdate;
-getInlinePropsUpdate.__closure = { isSharedValue: fn(1692).isSharedValue };
-getInlinePropsUpdate.__workletHash = 14886679339062;
-getInlinePropsUpdate.__initData = { code: "function getInlinePropsUpdate_Pnpm_InlinePropManagerTs1(inlineProps){const getInlinePropsUpdate_Pnpm_InlinePropManagerTs1=this._recur;const{isSharedValue}=this.__closure;const update={};for(const[key,styleValue]of Object.entries(inlineProps)){if(isSharedValue(styleValue)){update[key]=styleValue.value;}else if(Array.isArray(styleValue)){update[key]=styleValue.map(function(item){return getInlinePropsUpdate_Pnpm_InlinePropManagerTs1(item);});}else if(typeof styleValue==='object'){update[key]=getInlinePropsUpdate_Pnpm_InlinePropManagerTs1(styleValue);}else{update[key]=styleValue;}}return update;}" };
-const __initData = { code: "function pnpm_InlinePropManagerTs2(){const{getInlinePropsUpdate,newInlineProps,updateProps,shareableViewDescriptors}=this.__closure;const update=getInlinePropsUpdate(newInlineProps);updateProps(shareableViewDescriptors,update);}" };
-class InlinePropManager {
+class ComplexAnimationBuilder {
   constructor() {
-    tmp = c2(this, InlinePropManager);
-    this._inlinePropsViewDescriptors = null;
-    this._inlinePropsMapperId = null;
-    this._inlineProps = {};
-    return;
+    self = this;
+    tmp = c2(this, ComplexAnimationBuilder);
+    tmp2 = closure_4;
+    obj = closure_4(ComplexAnimationBuilder);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
+_inherits(ComplexAnimationBuilder, fn(1726).BaseAnimationBuilder);
 const entry = {
-  key: "attachInlineProps",
-  value: function attachInlineProps(self, self2) {
-    const props = self.props;
-    const _inlineProps = {};
-    for (const key10008 in props) {
-      let tmp20 = props[key10008];
-      if ("style" === key10008) {
-        let obj3 = _inlineProps(1740);
-        let style = props.style;
-        if (style == null) {
-          style = [];
-        }
-        let flattenArrayResult = obj3.flattenArray(style);
-        let item = flattenArrayResult.forEach((item) => {
-          if (item) {
-            const _Object = Object;
-            const entries = Object.entries(item);
-            const tmp4 = entries[Symbol.iterator]();
-            while (tmp4 !== undefined) {
-              let tmp9 = _slicedToArray(tmp6, 2);
-              [tmp10, tmp11] = tmp9;
-              obj = InlinePropManager(1692);
-              let isSharedValueResult = obj.isSharedValue(tmp11);
-              if (!isSharedValueResult) {
-                let tmp17 = "transform" === tmp10;
-                if (tmp17) {
-                  tmp17 = isInlineStyleTransform(tmp11);
-                }
-                isSharedValueResult = tmp17;
-              }
-              if (isSharedValueResult) {
-                obj[tmp10] = tmp11;
-              }
-              continue;
-            }
-          }
-        });
-        continue;
-      } else {
-        let obj2 = _inlineProps(1692);
-        if (!obj2.isSharedValue(tmp20)) {
-          continue;
-        } else {
-          _inlineProps[key10008] = tmp20;
-          continue;
-        }
-        continue;
-      }
-      continue;
-    }
-    self = this;
-    closure_129_0 = _inlineProps;
-    if ((function inlinePropsHasChanged(_inlineProps, _inlineProps) {
-      if (Object.keys(_inlineProps).length !== Object.keys(_inlineProps).length) {
-        return true;
-      } else {
-        const _Object = Object;
-        const keys = Object.keys(_inlineProps);
-        for (const item10018 of keys) {
-          if (arg0[item10018] !== arg1[item10018]) {
-            obj.return();
-            let flag = true;
-            return true;
-          }
-        }
-        return false;
-      }
-    })(_inlineProps, this._inlineProps)) {
-      if (!self._inlinePropsViewDescriptors) {
-        self._inlinePropsViewDescriptors = _inlineProps(1741).makeViewDescriptorsSet();
-        const viewConfig = self2.viewConfig;
-        let _Object = Object;
-        ({ viewTag, viewName, shadowNodeWrapper } = self2);
-        const obj4 = _inlineProps(1741);
-        const tmp7 = _inlineProps;
-        if (tmp10) {
-          tmp7(1742).adaptViewConfig(viewConfig);
-          const tmp7Result = tmp7(1742);
-        }
-        const _inlinePropsViewDescriptors = self._inlinePropsViewDescriptors;
-        const obj5 = { tag: viewTag, name: viewName, shadowNodeWrapper };
-        _inlinePropsViewDescriptors.add(obj5);
-        tmp10 = Object.keys(_inlineProps).length && viewConfig;
-      }
-      const shareableViewDescriptors = self._inlinePropsViewDescriptors.shareableViewDescriptors;
-      closure_129_1 = shareableViewDescriptors;
-      const fn = function o() {
-        obj = InlinePropManager(1743);
-        obj.updateProps(dependencyMap, getInlinePropsUpdate(obj));
-      };
-      const obj6 = { getInlinePropsUpdate, newInlineProps: _inlineProps, updateProps: _inlineProps(1743).updateProps, shareableViewDescriptors };
-      fn.__closure = obj6;
-      fn.__workletHash = 4459550727912;
-      fn.__initData = __initData;
-      self._inlineProps = _inlineProps;
-      if (self._inlinePropsMapperId) {
-        tmp14(1691).stopMapper(self._inlinePropsMapperId);
-        const tmp14Result = tmp14(1691);
-      }
-      self._inlinePropsMapperId = null;
-      const _Object2 = Object;
-      if (Object.keys(_inlineProps).length) {
-        const _Object3 = Object;
-        self._inlinePropsMapperId = tmp14(1691).startMapper(fn, Object.values(_inlineProps));
-        const tmp14Result2 = tmp14(1691);
-      }
-    }
-  }
+  key: "easing",
+  value: function easing(easingV) {
+    this.easingV = easingV;
+    return this;
+  },
 };
-const items = [
+let items = [
   entry,
   {
-    key: "detachInlineProps",
-    value: function detachInlineProps() {
-      if (this._inlinePropsMapperId) {
-        InlinePropManager(1691).stopMapper(tmp._inlinePropsMapperId);
-        const obj = InlinePropManager(1691);
+    key: "rotate",
+    value: function rotate(rotateV) {
+      this.rotateV = rotateV;
+      return this;
+    },
+  },
+  {
+    key: "springify",
+    value: function springify(durationV) {
+      return { durationV, type: ComplexAnimationBuilder(1727).withSpring };
+    },
+  },
+  {
+    key: "dampingRatio",
+    value: function dampingRatio(dampingRatioV) {
+      this.dampingRatioV = dampingRatioV;
+      return this;
+    },
+  },
+  {
+    key: "damping",
+    value: function damping(dampingV) {
+      this.dampingV = dampingV;
+      return this;
+    },
+  },
+  {
+    key: "mass",
+    value: function mass(massV) {
+      this.massV = massV;
+      return this;
+    },
+  },
+  {
+    key: "stiffness",
+    value: function stiffness(stiffnessV) {
+      this.stiffnessV = stiffnessV;
+      return this;
+    },
+  },
+  {
+    key: "overshootClamping",
+    value: function overshootClamping(overshootClampingV) {
+      this.overshootClampingV = overshootClampingV;
+      return this;
+    },
+  },
+  {
+    key: "restDisplacementThreshold",
+    value: function restDisplacementThreshold(restDisplacementThresholdV) {
+      this.restDisplacementThresholdV = restDisplacementThresholdV;
+      return this;
+    },
+  },
+  {
+    key: "restSpeedThreshold",
+    value: function restSpeedThreshold(restSpeedThresholdV) {
+      this.restSpeedThresholdV = restSpeedThresholdV;
+      return this;
+    },
+  },
+  {
+    key: "withInitialValues",
+    value: function withInitialValues(initialValues) {
+      this.initialValues = initialValues;
+      return this;
+    },
+  },
+  {
+    key: "getAnimationAndConfig",
+    value: function getAnimationAndConfig() {
+      const self = this;
+      ({ easingV, durationV, rotateV } = this);
+      if (this.type) {
+        let withTiming = self.type;
+      } else {
+        withTiming = ComplexAnimationBuilder(1727).withTiming;
       }
-    }
-  }
+      const obj = {};
+      ({
+        dampingV,
+        dampingRatioV,
+        massV,
+        stiffnessV,
+        overshootClampingV,
+        restDisplacementThresholdV,
+        restSpeedThresholdV,
+      } = self);
+      if (withTiming === ComplexAnimationBuilder(1727).withTiming) {
+        if (easingV) {
+          obj.easing = easingV;
+        }
+      }
+      const items = [
+        { variableName: "damping", value: dampingV },
+        { variableName: "dampingRatio", value: dampingRatioV },
+        { variableName: "mass", value: massV },
+        { variableName: "stiffness", value: stiffnessV },
+        { variableName: "overshootClamping", value: overshootClampingV },
+        { variableName: "restDisplacementThreshold", value: restDisplacementThresholdV },
+        { variableName: "restSpeedThreshold", value: restSpeedThresholdV },
+        { variableName: "duration", value: durationV },
+        { variableName: "rotate", value: rotateV },
+      ];
+      const item = items.forEach((value) => {
+        value = value.value;
+        if (value) {
+          obj[tmp] = value;
+        }
+      });
+      const items1 = [withTiming, obj];
+      return items1;
+    },
+  },
+];
+const entry1 = {
+  key: "easing",
+  value: function easing(arg0) {
+    const instance = this.createInstance();
+    return instance.easing(arg0);
+  },
+};
+let items1 = [
+  entry1,
+  {
+    key: "rotate",
+    value: function rotate(arg0) {
+      const instance = this.createInstance();
+      return instance.rotate(arg0);
+    },
+  },
+  {
+    key: "springify",
+    value: function springify(arg0) {
+      const instance = this.createInstance();
+      return instance.springify(arg0);
+    },
+  },
+  {
+    key: "dampingRatio",
+    value: function dampingRatio(arg0) {
+      const instance = this.createInstance();
+      return instance.dampingRatio(arg0);
+    },
+  },
+  {
+    key: "damping",
+    value: function damping(arg0) {
+      const instance = this.createInstance();
+      return instance.damping(arg0);
+    },
+  },
+  {
+    key: "mass",
+    value: function mass(arg0) {
+      const instance = this.createInstance();
+      return instance.mass(arg0);
+    },
+  },
+  {
+    key: "stiffness",
+    value: function stiffness(arg0) {
+      const instance = this.createInstance();
+      return instance.stiffness(arg0);
+    },
+  },
+  {
+    key: "overshootClamping",
+    value: function overshootClamping(arg0) {
+      const instance = this.createInstance();
+      return instance.overshootClamping(arg0);
+    },
+  },
+  {
+    key: "restDisplacementThreshold",
+    value: function restDisplacementThreshold(arg0) {
+      const instance = this.createInstance();
+      return instance.restDisplacementThreshold(arg0);
+    },
+  },
+  {
+    key: "restSpeedThreshold",
+    value: function restSpeedThreshold(arg0) {
+      const instance = this.createInstance();
+      return instance.restSpeedThreshold(arg0);
+    },
+  },
+  {
+    key: "withInitialValues",
+    value: function withInitialValues(arg0) {
+      const instance = this.createInstance();
+      return instance.withInitialValues(arg0);
+    },
+  },
 ];
 
-export const hasInlineStyles = function hasInlineStyles(viewDescriptors) {
-  closure_0 = viewDescriptors;
-  let someResult = viewDescriptors;
-  if (someResult) {
-    const _Object = Object;
-    const keys = Object.keys(viewDescriptors);
-    someResult = keys.some((item) => {
-      let isSharedValueResult = closure_2_0(closure_2_1[3]).isSharedValue(obj);
-      if (!isSharedValueResult) {
-        let tmp2 = "transform" === item;
-        if (tmp2) {
-          let _Array = Array;
-          tmp2 = Array.isArray(obj) && obj.some((item) => {
-            let someResult = item;
-            if (someResult) {
-              let _Object = Object;
-              let keys = Object.keys(item);
-              someResult = keys.some((item) => {
-                let isSharedValueResult = closure_2_0(closure_2_1[3]).isSharedValue(obj);
-                if (!isSharedValueResult) {
-                  let tmp2 = "transform" === item;
-                  if (tmp2) {
-                    let _Array = Array;
-                    tmp2 = Array.isArray(obj) && obj.some((item) => {
-                      let someResult = item;
-                      if (someResult) {
-                        let _Object = Object;
-                        let keys = Object.keys(item);
-                        someResult = keys.some(() => { ... });
-                      }
-                      return someResult;
-                    });
-                    let tmp4 = Array.isArray(obj) && obj.some((item) => {
-                      let someResult = item;
-                      if (someResult) {
-                        let _Object = Object;
-                        let keys = Object.keys(item);
-                        someResult = keys.some(() => { ... });
-                      }
-                      return someResult;
-                    });
-                  }
-                  isSharedValueResult = tmp2;
-                }
-                return isSharedValueResult;
-              });
-            }
-            return someResult;
-          });
-          let tmp4 = Array.isArray(obj) && obj.some((item) => {
-            let someResult = item;
-            if (someResult) {
-              let _Object = Object;
-              let keys = Object.keys(item);
-              someResult = keys.some((item) => {
-                let isSharedValueResult = closure_2_0(closure_2_1[3]).isSharedValue(obj);
-                if (!isSharedValueResult) {
-                  let tmp2 = "transform" === item;
-                  if (tmp2) {
-                    let _Array = Array;
-                    tmp2 = Array.isArray(obj) && obj.some((item) => {
-                      let someResult = item;
-                      if (someResult) {
-                        let _Object = Object;
-                        let keys = Object.keys(item);
-                        someResult = keys.some(() => { ... });
-                      }
-                      return someResult;
-                    });
-                    let tmp4 = Array.isArray(obj) && obj.some((item) => {
-                      let someResult = item;
-                      if (someResult) {
-                        let _Object = Object;
-                        let keys = Object.keys(item);
-                        someResult = keys.some(() => { ... });
-                      }
-                      return someResult;
-                    });
-                  }
-                  isSharedValueResult = tmp2;
-                }
-                return isSharedValueResult;
-              });
-            }
-            return someResult;
-          });
-        }
-        isSharedValueResult = tmp2;
-      }
-      return isSharedValueResult;
-    });
-  }
-  return someResult;
-};
-export const getInlineStyle = function getInlineStyle(viewDescriptors, _isFirstRender) {
-  if (_isFirstRender) {
-    return getInlinePropsUpdate(viewDescriptors);
-  } else {
-    const obj = {};
-    const _Object = Object;
-    const entries = Object.entries(viewDescriptors);
-    const tmp4 = entries[Symbol.iterator]();
-    while (tmp4 !== undefined) {
-      let tmp9 = _slicedToArray(tmp6, 2);
-      [tmp10, tmp11] = tmp9;
-      let obj2 = InlinePropManager(1692);
-      let isSharedValueResult = obj2.isSharedValue(tmp11);
-      if (!isSharedValueResult) {
-        let tmp17 = "transform" === tmp10;
-        if (tmp17) {
-          tmp17 = isInlineStyleTransform(tmp11);
-        }
-        isSharedValueResult = tmp17;
-      }
-      if (!isSharedValueResult) {
-        obj[tmp10] = tmp11;
-      }
-      continue;
-    }
-    return obj;
-  }
-};
-export const InlinePropManager = _createClass(InlinePropManager, items);
+export const ComplexAnimationBuilder = _createClass(ComplexAnimationBuilder, items, items1);

@@ -1,19 +1,25 @@
 // _runtime/metro/06509__.js
-import LegacyBaseButton from "../06147_LegacyBaseButton.js";
-import GestureHandlerRefContext from "../06510_GestureHandlerRefContext.js";
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import value2 from "../06299_value2.js";
 
-require = fn;
-const jsx = fn(21).jsx;
+const useMemo = _mod19.useMemo;
 
-export const PanGestureHandler = function PanGestureHandler(arg0) {
-  const ref = noop.useRef(null);
-  const obj = { value: ref, children: null };
-  const obj2 = {};
-  const merged = Object.assign(arg0);
-  obj2.ref = ref;
-  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
-  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
+export const useBottomSheetTimingConfigs = (arg0) => {
+  const easing = arg0;
+  const items = [, ,];
+  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
+  return useMemo(() => {
+    let ANIMATION_EASING = easing.easing;
+    if (!ANIMATION_EASING) {
+      ANIMATION_EASING = value2.ANIMATION_EASING;
+    }
+    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
+    let ANIMATION_DURATION = easing.duration;
+    if (!ANIMATION_DURATION) {
+      ANIMATION_DURATION = value2.ANIMATION_DURATION;
+    }
+    obj.duration = ANIMATION_DURATION;
+    obj.reduceMotion = easing.reduceMotion;
+    return obj;
+  }, items);
 };
-export const GestureHandlerRootView = fn(6147).GestureHandlerRootView;
-export const GestureState = fn(6147).State;

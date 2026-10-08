@@ -1,18 +1,13 @@
 // _runtime/metro/08141__.js
-import _mod514 from "00514__.js";
-import baseIteratee from "../00595_baseIteratee.js";
-import arrayAggregator from "../08142_arrayAggregator.js";
-import baseAggregator from "../08143_baseAggregator.js";
+import registerAsset from "01132__.js";
 
-export default function createAggregator(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0, arg1) => {
-    if (_mod514(arg0)) {
-      let tmpResult = arrayAggregator;
-    } else {
-      tmpResult = baseAggregator;
-    }
-    return tmpResult(arg0, closure_0, baseIteratee(arg1, 2), closure_1 ? closure_1() : {});
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3cca2566d6ada925d540d64d7940bca5",
+  name: "AtIcon",
+  type: "png",
+});

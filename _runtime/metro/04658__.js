@@ -1,297 +1,345 @@
 // _runtime/metro/04658__.js
-import callDispose from "../04638_callDispose.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import _slicedToArray from "00032__.js";
+import _mod4659 from "04659__.js";
 
-require = fn;
-const noop = fn(19);
-({ useState: closure_4, useEffect: hasOwnProperty, useMemo: metroRequire, useRef: closure_7 } = noop);
-const Image = fn(17).Image;
-
-export const useRiveFile = function useRiveFile(src, arg1) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  c1 = undefined;
-  let str2;
-  let uri;
-  let riveFile;
-  [tmp2, c1] = str2({ riveFile: "IconComponent", isLoading: null, error: "sku" });
-  const items = [obj.referencedAssets];
-  let tmp3 = riveFile(() => {
-    const referencedAssets = obj.referencedAssets;
-    obj = {};
-    let tmp;
-    if (undefined !== referencedAssets) {
-      const _Object = Object;
-      const entries = Object.entries(referencedAssets);
-      const item = entries.forEach((item) => {
-        [tmp, tmp2] = item;
-        let tmp4 = null !== tmp2;
-        if (tmp4) {
-          tmp4 = typeof tmp2 === "object";
-        }
-        if (tmp4) {
-          tmp4 = "__type" in tmp2;
-        }
-        if (tmp4) {
-          tmp4 = "HybridObject<RiveImage>" === tmp2.__type;
-        }
-        if (tmp4) {
-          const obj2 = { image: tmp2 };
-          let tmp10 = obj2;
+if (typeof exports === "object") {
+  if (undefined !== module) {
+    if (typeof require === "function") {
+      const _module = _mod4659;
+      const obj2 = {
+        months: null,
+        monthsShort: null,
+        weekdays: null,
+        weekdaysShort: null,
+        weekdaysMin: null,
+        longDateFormat: null,
+        calendar: null,
+        relativeTime: null,
+        dayOfMonthOrdinalParse: null,
+        ordinal: null,
+        week: null,
+      };
+      const split =
+        "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438"
+          .split;
+      obj2.months =
+        "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
+          "_",
+        );
+      const split2 =
+        "\u044F\u043D\u0443_\u0444\u0435\u0432_\u043C\u0430\u0440_\u0430\u043F\u0440_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433_\u0441\u0435\u043F_\u043E\u043A\u0442_\u043D\u043E\u0435_\u0434\u0435\u043A"
+          .split;
+      obj2.monthsShort =
+        "\u044F\u043D\u0443_\u0444\u0435\u0432_\u043C\u0430\u0440_\u0430\u043F\u0440_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433_\u0441\u0435\u043F_\u043E\u043A\u0442_\u043D\u043E\u0435_\u0434\u0435\u043A".split(
+          "_",
+        );
+      const split3 =
+        "\u043D\u0435\u0434\u0435\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A_\u0432\u0442\u043E\u0440\u043D\u0438\u043A_\u0441\u0440\u044F\u0434\u0430_\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A_\u043F\u0435\u0442\u044A\u043A_\u0441\u044A\u0431\u043E\u0442\u0430"
+          .split;
+      obj2.weekdays =
+        "\u043D\u0435\u0434\u0435\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A_\u0432\u0442\u043E\u0440\u043D\u0438\u043A_\u0441\u0440\u044F\u0434\u0430_\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A_\u043F\u0435\u0442\u044A\u043A_\u0441\u044A\u0431\u043E\u0442\u0430".split(
+          "_",
+        );
+      const split4 =
+        "\u043D\u0435\u0434_\u043F\u043E\u043D_\u0432\u0442\u043E_\u0441\u0440\u044F_\u0447\u0435\u0442_\u043F\u0435\u0442_\u0441\u044A\u0431"
+          .split;
+      obj2.weekdaysShort =
+        "\u043D\u0435\u0434_\u043F\u043E\u043D_\u0432\u0442\u043E_\u0441\u0440\u044F_\u0447\u0435\u0442_\u043F\u0435\u0442_\u0441\u044A\u0431".split(
+          "_",
+        );
+      const split5 = "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split;
+      obj2.weekdaysMin =
+        "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split("_");
+      obj2.longDateFormat = {
+        LT: "H:mm",
+        LTS: "H:mm:ss",
+        L: "D.MM.YYYY",
+        LL: "D MMMM YYYY",
+        LLL: "D MMMM YYYY H:mm",
+        LLLL: "dddd, D MMMM YYYY H:mm",
+      };
+      const obj3 = {
+        sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
+        nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
+        nextWeek: "dddd [\u0432] LT",
+        lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
+        lastWeek() {
+          const dayResult = this.day();
+          if (0 !== dayResult) {
+            if (3 !== dayResult) {
+              if (6 !== dayResult) {
+                return "[\u041C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
+              }
+            }
+          }
+          return "[\u041C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
+        },
+        sameElse: "L",
+      };
+      obj2.calendar = obj3;
+      obj2.relativeTime = {
+        future: "\u0441\u043B\u0435\u0434 %s",
+        past: "\u043F\u0440\u0435\u0434\u0438 %s",
+        s: "\u043D\u044F\u043A\u043E\u043B\u043A\u043E \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+        ss: "%d \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+        m: "\u043C\u0438\u043D\u0443\u0442\u0430",
+        mm: "%d \u043C\u0438\u043D\u0443\u0442\u0438",
+        h: "\u0447\u0430\u0441",
+        hh: "%d \u0447\u0430\u0441\u0430",
+        d: "\u0434\u0435\u043D",
+        dd: "%d \u0434\u0435\u043D\u0430",
+        w: "\u0441\u0435\u0434\u043C\u0438\u0446\u0430",
+        ww: "%d \u0441\u0435\u0434\u043C\u0438\u0446\u0438",
+        M: "\u043C\u0435\u0441\u0435\u0446",
+        MM: "%d \u043C\u0435\u0441\u0435\u0446\u0430",
+        y: "\u0433\u043E\u0434\u0438\u043D\u0430",
+        yy: "%d \u0433\u043E\u0434\u0438\u043D\u0438",
+      };
+      obj2.dayOfMonthOrdinalParse = /\d{1,2}-(ев|ен|ти|ви|ри|ми)/;
+      obj2.ordinal = function ordinal(arg0) {
+        const result = arg0 % 10;
+        const result1 = arg0 % 100;
+        if (0 === arg0) {
+          let text = `${arg0}-ев`;
+        } else if (0 === result1) {
+          text = `${arg0}-ен`;
         } else {
-          const source = tmp2.source;
-          if (typeof source === "number") {
-            const assetSource = Image.resolveAssetSource(source);
-            if (assetSource) {
-              if (assetSource.uri) {
-                const obj3 = { sourceAssetId: assetSource.uri };
-                tmp10 = obj3;
-              }
+          if (10 < result1) {
+            if (result1 < 20) {
+              text = `${arg0}-ти`;
             }
-            const _Error2 = Error;
-            const error = new Error("Invalid asset source provided.");
-            throw error;
+          }
+          if (1 === result) {
+            text = `${arg0}-ви`;
+          } else if (2 === result) {
+            text = `${arg0}-ри`;
           } else {
-            uri = source.uri;
-            if (typeof source === "object") {
-              if (uri) {
-                const obj4 = { sourceUrl: uri };
-                tmp10 = obj4;
+            if (7 !== result) {
+              if (8 !== result) {
+                text = `${arg0}-ти`;
               }
             }
-            ({ fileName, path } = source);
-            if (typeof source === "object") {
-              if (fileName) {
-                obj = { sourceAsset: fileName };
-                tmp10 = obj;
-                if (path) {
-                  obj.path = path;
-                  tmp10 = obj;
-                }
-              }
-            }
-            const _Error = Error;
-            const error1 = new Error("Invalid source provided.");
-            throw error1;
+            text = `${arg0}-ми`;
           }
         }
-        obj[tmp] = tmp10;
-      });
-      tmp = obj;
+        return text;
+      };
+      obj2.week = { dow: 1, doy: 7 };
+      _module.defineLocale("bg", obj2);
     }
-    return tmp;
-  }, items);
-  closure_2 = tmp3;
-  _slicedToArray = closure_7(tmp3);
-  let tmp4 = null != src && typeof src === "object";
-  if (tmp4) {
-    tmp4 = "uri" in src;
   }
-  str2 = "primitive";
-  if (tmp4) {
-    str2 = "uri";
-  }
-  let tmp5 = null != src && typeof src === "object";
-  if (tmp5) {
-    tmp5 = "uri" in src;
-  }
-  uri = src;
-  if (tmp5) {
-    uri = src.uri;
-  }
-  const items1 = [str2, uri];
-  uri(() => {
-    closure_0 = closure_2(function* () {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          let tmp17Result = c4;
-          if (0 !== c4) {
-            if (1 === tmp17Result) {
-              c3 = 0;
-              closure_128_0 = closure_2;
-              const _console = console;
-              console.error(closure_128_0);
-              const _Error = Error;
-              if (closure_128_0 instanceof Error) {
-                let error = closure_128_0;
-              } else {
-                const _Error2 = Error;
-                error = new Error("Failed to load Rive file");
-              }
-              const obj3 = { riveFile: null, isLoading: false, error };
-              tmp17Result = _undefined(obj3);
-              c5 = 3;
-            } else {
-              if (2 === tmp17Result) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  c5 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
+}
+if (typeof globalThis.define === "function") {
+  if (globalThis.define.amd) {
+    globalThis.define(["../moment"], function t(defineLocale) {
+      const obj = {
+        months:
+          "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
+            "_",
+          ),
+        monthsShort:
+          "\u044F\u043D\u0443_\u0444\u0435\u0432_\u043C\u0430\u0440_\u0430\u043F\u0440_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433_\u0441\u0435\u043F_\u043E\u043A\u0442_\u043D\u043E\u0435_\u0434\u0435\u043A".split(
+            "_",
+          ),
+        weekdays:
+          "\u043D\u0435\u0434\u0435\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A_\u0432\u0442\u043E\u0440\u043D\u0438\u043A_\u0441\u0440\u044F\u0434\u0430_\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A_\u043F\u0435\u0442\u044A\u043A_\u0441\u044A\u0431\u043E\u0442\u0430".split(
+            "_",
+          ),
+        weekdaysShort:
+          "\u043D\u0435\u0434_\u043F\u043E\u043D_\u0432\u0442\u043E_\u0441\u0440\u044F_\u0447\u0435\u0442_\u043F\u0435\u0442_\u0441\u044A\u0431".split(
+            "_",
+          ),
+        weekdaysMin: "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split(
+          "_",
+        ),
+        longDateFormat: {
+          LT: "H:mm",
+          LTS: "H:mm:ss",
+          L: "D.MM.YYYY",
+          LL: "D MMMM YYYY",
+          LLL: "D MMMM YYYY H:mm",
+          LLLL: "dddd, D MMMM YYYY H:mm",
+        },
+        calendar: {
+          sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
+          nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
+          nextWeek: "dddd [\u0432] LT",
+          lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
+          lastWeek() {
+            const dayResult = this.day();
+            if (0 !== dayResult) {
+              if (3 !== dayResult) {
+                if (6 !== dayResult) {
+                  return "[\u041C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
                 }
-              } else {
-                if (3 === tmp17Result) {
-                  if (arg0 === 1) {
-                    c5 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 0;
-                    c5 = 3;
-                    const obj5 = { value, done: true };
-                    return obj5;
-                  }
-                } else if (4 === tmp17Result) {
-                  if (arg0 === 1) {
-                    c5 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 0;
-                    c5 = 3;
-                    const obj7 = { value, done: true };
-                    return obj7;
-                  } else {
-                    riveFile = value;
-                  }
-                } else if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 !== 2) {
-                  riveFile = value;
-                }
-                c3 = 0;
-                c5 = 3;
-                obj = { value, done: true };
-                return obj;
               }
-              riveFile = value;
             }
-            const obj8 = { riveFile, isLoading: false, error: null };
-            _undefined(obj8);
-            c3 = 0;
-          }
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
+            return "[\u041C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
+          },
+          sameElse: "L",
+        },
+        relativeTime: {
+          future: "\u0441\u043B\u0435\u0434 %s",
+          past: "\u043F\u0440\u0435\u0434\u0438 %s",
+          s: "\u043D\u044F\u043A\u043E\u043B\u043A\u043E \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+          ss: "%d \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+          m: "\u043C\u0438\u043D\u0443\u0442\u0430",
+          mm: "%d \u043C\u0438\u043D\u0443\u0442\u0438",
+          h: "\u0447\u0430\u0441",
+          hh: "%d \u0447\u0430\u0441\u0430",
+          d: "\u0434\u0435\u043D",
+          dd: "%d \u0434\u0435\u043D\u0430",
+          w: "\u0441\u0435\u0434\u043C\u0438\u0446\u0430",
+          ww: "%d \u0441\u0435\u0434\u043C\u0438\u0446\u0438",
+          M: "\u043C\u0435\u0441\u0435\u0446",
+          MM: "%d \u043C\u0435\u0441\u0435\u0446\u0430",
+          y: "\u0433\u043E\u0434\u0438\u043D\u0430",
+          yy: "%d \u0433\u043E\u0434\u0438\u043D\u0438",
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
+        ordinal(arg0) {
+          const result = arg0 % 10;
+          const result1 = arg0 % 100;
+          if (0 === arg0) {
+            let text = `${arg0}-ев`;
+          } else if (0 === result1) {
+            text = `${arg0}-ен`;
           } else {
-            closure_1 = tmp3;
-            riveFile = tmp17Result;
-            c3 = 1;
-            if ("uri" === str2) {
-              const obj10 = { uri };
-              let obj6 = obj10;
-            } else {
-              obj6 = uri;
+            if (10 < result1) {
+              if (result1 < 20) {
+                text = `${arg0}-ти`;
+              }
             }
-            if (null == obj6) {
-              const obj11 = { riveFile: null, isLoading: false, error: null };
-              const _Error3 = Error;
-              const error1 = new Error("No Rive file input provided.");
-              obj11.error = error1;
-              _undefined(obj11);
-              c3 = 0;
-              c5 = 3;
-              const obj12 = { value: undefined, done: true };
-              return obj12;
-            } else if (typeof obj6 === "string") {
-              if (!obj6.startsWith("http://")) {
-                if (!obj6.startsWith("https://")) {
-                  const RiveFileFactory3 = obj(tmp3[4]).RiveFileFactory;
-                  c4 = 2;
-                  c5 = 1;
-                  const obj13 = { value: RiveFileFactory3.fromResource(obj6, ref.current), done: false };
-                  return obj13;
+            if (1 === result) {
+              text = `${arg0}-ви`;
+            } else if (2 === result) {
+              text = `${arg0}-ри`;
+            } else {
+              if (7 !== result) {
+                if (8 !== result) {
+                  text = `${arg0}-ти`;
                 }
               }
-              const RiveFileFactory4 = obj(tmp3[4]).RiveFileFactory;
-              c4 = 3;
-              c5 = 1;
-              const obj14 = { value: RiveFileFactory4.fromURL(obj6, ref.current), done: false };
-              return obj14;
-            } else {
-              if (typeof obj6 !== "number") {
-                if (!("uri" in obj6)) {
-                  const _ArrayBuffer = ArrayBuffer;
-                  if (obj6 instanceof ArrayBuffer) {
-                    const RiveFileFactory = obj(tmp3[4]).RiveFileFactory;
-                    c4 = 5;
-                    c5 = 1;
-                    const obj15 = { value: RiveFileFactory.fromBytes(obj6, ref.current), done: false };
-                    return obj15;
-                  }
-                }
-              }
-              const RiveFileFactory2 = obj(tmp3[4]).RiveFileFactory;
-              c4 = 4;
-              c5 = 1;
-              const obj16 = { value: RiveFileFactory2.fromSource(obj6, ref.current), done: false };
-              return obj16;
+              text = `${arg0}-ми`;
             }
           }
-        } catch (tmp46) {
-          closure_2 = tmp46;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp46;
-          } else {
-            c4 = tmp;
-          }
-        }
-      }
+          return text;
+        },
+        week: { dow: 1, doy: 7 },
+      };
+      return defineLocale.defineLocale("bg", obj);
     });
-    (function loadRiveFile() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  }
+}
+const moment = this.moment;
+let obj = {
+  months:
+    "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
+      "_",
+    ),
+  monthsShort:
+    "\u044F\u043D\u0443_\u0444\u0435\u0432_\u043C\u0430\u0440_\u0430\u043F\u0440_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433_\u0441\u0435\u043F_\u043E\u043A\u0442_\u043D\u043E\u0435_\u0434\u0435\u043A".split(
+      "_",
+    ),
+  weekdays:
+    "\u043D\u0435\u0434\u0435\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A_\u0432\u0442\u043E\u0440\u043D\u0438\u043A_\u0441\u0440\u044F\u0434\u0430_\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A_\u043F\u0435\u0442\u044A\u043A_\u0441\u044A\u0431\u043E\u0442\u0430".split(
+      "_",
+    ),
+  weekdaysShort:
+    "\u043D\u0435\u0434_\u043F\u043E\u043D_\u0432\u0442\u043E_\u0441\u0440\u044F_\u0447\u0435\u0442_\u043F\u0435\u0442_\u0441\u044A\u0431".split(
+      "_",
+    ),
+  weekdaysMin: "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split("_"),
+  longDateFormat: {
+    LT: "H:mm",
+    LTS: "H:mm:ss",
+    L: "D.MM.YYYY",
+    LL: "D MMMM YYYY",
+    LLL: "D MMMM YYYY H:mm",
+    LLLL: "dddd, D MMMM YYYY H:mm",
+  },
+  calendar: {
+    sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
+    nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
+    nextWeek: "dddd [\u0432] LT",
+    lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
+    lastWeek() {
+      const dayResult = this.day();
+      if (0 !== dayResult) {
+        if (3 !== dayResult) {
+          if (6 !== dayResult) {
+            return "[\u041C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
+          }
+        }
+      }
+      return "[\u041C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
+    },
+    sameElse: "L",
+  },
+  relativeTime: {
+    future: "\u0441\u043B\u0435\u0434 %s",
+    past: "\u043F\u0440\u0435\u0434\u0438 %s",
+    s: "\u043D\u044F\u043A\u043E\u043B\u043A\u043E \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+    ss: "%d \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+    m: "\u043C\u0438\u043D\u0443\u0442\u0430",
+    mm: "%d \u043C\u0438\u043D\u0443\u0442\u0438",
+    h: "\u0447\u0430\u0441",
+    hh: "%d \u0447\u0430\u0441\u0430",
+    d: "\u0434\u0435\u043D",
+    dd: "%d \u0434\u0435\u043D\u0430",
+    w: "\u0441\u0435\u0434\u043C\u0438\u0446\u0430",
+    ww: "%d \u0441\u0435\u0434\u043C\u0438\u0446\u0438",
+    M: "\u043C\u0435\u0441\u0435\u0446",
+    MM: "%d \u043C\u0435\u0441\u0435\u0446\u0430",
+    y: "\u0433\u043E\u0434\u0438\u043D\u0430",
+    yy: "%d \u0433\u043E\u0434\u0438\u043D\u0438",
+  },
+  dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
+  ordinal(arg0) {
+    const result = arg0 % 10;
+    const result1 = arg0 % 100;
+    if (0 === arg0) {
+      let text = `${arg0}-ев`;
+    } else if (0 === result1) {
+      text = `${arg0}-ен`;
+    } else {
+      if (10 < result1) {
+        if (result1 < 20) {
+          text = `${arg0}-ти`;
+        }
+      }
+      if (1 === result) {
+        text = `${arg0}-ви`;
+      } else if (2 === result) {
+        text = `${arg0}-ри`;
       } else {
-        applyArgumentsResult = apply(self, arguments);
+        if (7 !== result) {
+          if (8 !== result) {
+            text = `${arg0}-ти`;
+          }
+        }
+        text = `${arg0}-ми`;
       }
-      return applyArgumentsResult;
-    })();
-    return () => {
-      if (closure_0) {
-        callDispose.callDispose(closure_0);
+    }
+    return text;
+  },
+  week: { dow: 1, doy: 7 },
+};
+moment.defineLocale("bg", obj);
+const obj4 = {
+  sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
+  nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
+  nextWeek: "dddd [\u0432] LT",
+  lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
+  lastWeek() {
+    const dayResult = this.day();
+    if (0 !== dayResult) {
+      if (3 !== dayResult) {
+        if (6 !== dayResult) {
+          return "[\u041C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
+        }
       }
-    };
-  }, items1);
-  riveFile = tmp2.riveFile;
-  const items2 = [tmp3, riveFile];
-  uri(() => {
-    let tmp3 = ref.current !== current;
-    if (tmp3) {
-      tmp3 = riveFile;
     }
-    if (tmp3) {
-      tmp3 = current;
-    }
-    if (tmp3) {
-      obj = { data: current };
-      const result = riveFile.updateReferencedAssets(obj);
-      ref.current = current;
-    }
-  }, items2);
-  return { riveFile: tmp2.riveFile, isLoading: tmp2.isLoading, error: tmp2.error };
+    return "[\u041C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
+  },
+  sameElse: "L",
 };

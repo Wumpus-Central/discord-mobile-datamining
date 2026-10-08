@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "313d0291c31affa2231c3200ee7f2822",
-  name: "CircleQuestionIcon",
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 76,
+  height: 76,
+  scales: [1],
+  hash: "357b6ff4f5f31060d463e9e4858af437",
+  name: "family_center_chat_check_icon",
   type: "png",
 });

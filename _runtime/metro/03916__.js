@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/game_mode",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mcmllbmRz",
   scales: [1],
-  hash: "b8c3a60d7df8c1a9ccb3d12fd5bdc629",
-  name: "GameMode.compiled.messages",
+  hash: "671342d1b62ae719358adebf9145a0b1",
+  name: "ru.messages.671342d1b62ae719358adebf9145a0b1.compiled.messages",
   type: "jsona",
 });

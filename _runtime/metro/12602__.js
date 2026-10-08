@@ -1,17 +1,13 @@
 // _runtime/metro/12602__.js
-import _mod12586 from "12586__.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const _sentrySpan = "_sentrySpan";
-
-export const _getSpanForScope = function _getSpanForScope(currentScope) {
-  return currentScope[_sentrySpan];
-};
-export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
-  if (arg1) {
-    const result = _mod12586.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-  } else {
-    delete tmp2[tmp];
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "07392a850e043822a5c8062588fbfbb4",
+  name: "WaveformIcon",
+  type: "png",
+});

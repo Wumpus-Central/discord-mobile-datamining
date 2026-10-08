@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "11800cac78ee381d38bd7d0b06eed7b0",
-  name: "EmojiFaceVomitingIcon",
+  httpServerLocation: "/assets/modules/quests/native/images",
+  width: 375,
+  height: 58,
+  scales: [1, 2, 3],
+  hash: "e5d497e242dfffadb8102108e8df2b1a",
+  name: "clouds_background",
   type: "png",
 });

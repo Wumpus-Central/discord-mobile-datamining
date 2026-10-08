@@ -1,36 +1,11 @@
 // _runtime/metro/04146__.js
-import _typeof_mod from "04147__.js";
-import _typeof_mod from "03964__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import registerAsset from "01132__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
+  scales: [1],
+  hash: "2365f8a990c2a379d00ee4a3e78c6502",
+  name: "zh-CN.messages.2365f8a990c2a379d00ee4a3e78c6502.compiled.messages",
+  type: "jsona",
+});

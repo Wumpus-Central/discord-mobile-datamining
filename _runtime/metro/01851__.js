@@ -1,20 +1,29 @@
 // _runtime/metro/01851__.js
-import _mod19 from "00019__.js";
+import _slicedToArray from "00032__.js";
 
-_mod19.useCallback;
+const require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
+const Dimensions = fn(17).Dimensions;
+const size = Dimensions.get("window");
+let global = { width: size.width, height: size.height };
+let WindowDimensionsEvents = fn(1645).WindowDimensionsEvents;
+WindowDimensionsEvents.addListener("windowDidResize", (arg0) => {
+  global = arg0;
+});
 
-export default function _default() {
-  const items = [...arguments];
-  return useCallback((current) => {
-    for (const item10007 of items) {
-      if (item10007) {
-        if (typeof item10007 === "function") {
-          let tmpResult = item10007(arg0);
-        } else {
-          item10007.current = arg0;
-        }
-      }
-      continue;
-    }
-  }, items);
-}
+export const useWindowDimensions = () => {
+  const tmp = _slicedToArray(closure_4(global), 2);
+  closure_0 = tmp[1];
+  closure_3(() => {
+    const WindowDimensionsEvents = closure_0(dependencyMap[3]).WindowDimensionsEvents;
+    closure_0 = WindowDimensionsEvents.addListener("windowDidResize", (arg0) => {
+      closure_0(arg0);
+    });
+    closure_0(global);
+    return () => {
+      closure_0.remove();
+    };
+  }, []);
+  return tmp[0];
+};

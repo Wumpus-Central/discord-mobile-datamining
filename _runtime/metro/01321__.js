@@ -1,3 +1,3 @@
 // _runtime/metro/01321__.js
 
-export default Math.pow;
+export default Function.prototype.apply;

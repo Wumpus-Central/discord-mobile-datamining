@@ -1,15 +1,13 @@
 // _runtime/metro/05002__.js
-import identity from "../00549_identity.js";
-import _mod680 from "00680__.js";
-import constant from "../05003_constant.js";
+import registerAsset from "01132__.js";
 
-if (_mod680) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod680(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
-
-export default fn;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "db11ea9da81d79144310eac53428fbe9",
+  name: "CircleErrorIcon-primary",
+  type: "png",
+});

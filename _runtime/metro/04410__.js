@@ -1,42 +1,75 @@
 // _runtime/metro/04410__.js
-import 04411__ from "04411__.js";
-import 04412__ from "04412__.js";
-import 04413__ from "04413__.js";
-import date_mod from "04414__.js";
-import date_mod from "04415__.js";
+import _mod4161 from "04161__.js";
+import code_mod from "04402__.js";
 
-if (!module_4411) {
-  const obj = { default: module_4411 };
+let code = code_mod;
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4411;
+  tmp3 = code;
 }
-if (!module_4412) {
-  const obj2 = { default: module_4412 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4412;
-}
-if (!module_4413) {
-  const obj3 = { default: module_4413 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4413;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+code = tmp3;
+let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
 
-export default { code: "vi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function formatDuration(arg0, locale) {
+  closure_0 = arg0;
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    locale = undefined;
+    const defaultOptions = _mod4161.getDefaultOptions();
+    if (null != locale) {
+      locale = locale.locale;
+    }
+    if (null === locale) {
+      locale = defaultOptions.locale;
+    }
+    if (null === locale) {
+      locale = code.default;
+    }
+    let format;
+    if (null != locale) {
+      format = locale.format;
+    }
+    if (null === format) {
+      format = closure_3;
+    }
+    let zero;
+    if (null != locale) {
+      zero = locale.zero;
+    }
+    closure_2 = null !== zero && undefined !== zero && zero;
+    let delimiter;
+    if (null != locale) {
+      delimiter = locale.delimiter;
+    }
+    let str2 = " ";
+    if (null !== delimiter) {
+      str2 = " ";
+      if (undefined !== delimiter) {
+        str2 = delimiter;
+      }
+    }
+    if (locale.formatDistance) {
+      const reduced = format.reduce((arr, item) => {
+        let combined = arr;
+        if (typeof closure_0[item] === "number") {
+          if (closure_2) {
+            combined = arr.concat(locale.formatDistance(tmp, tmp3));
+          } else {
+            combined = arr;
+          }
+        }
+        return combined;
+      }, []);
+      return reduced.join(str2);
+    } else {
+      return "";
+    }
+  }
+};
 export default exports.default;

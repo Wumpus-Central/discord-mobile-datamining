@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/summaries/native/images",
-  width: 14,
-  height: 18,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 250,
+  height: 200,
   scales: [2, 3],
-  hash: "a62b86dc1d2c11cbfe0a98b586c4b359",
-  name: "summary_indicator_start",
+  hash: "3c95b7ec7d2eb4c8fde35f37e918dd98",
+  name: "img_bans_empty_light",
   type: "png",
 });

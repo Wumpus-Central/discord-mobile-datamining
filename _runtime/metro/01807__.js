@@ -1,11 +1,23 @@
 // _runtime/metro/01807__.js
-import _mod19 from "00019__.js";
+import runOnRuntime from "../01699_runOnRuntime.js";
+import _slicedToArray from "00032__.js";
 
-_mod19.useCallback;
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
 
-export const useWorkletCallback = function useWorkletCallback(fn, items) {
-  if (items == null) {
-    items = [];
-  }
-  return useCallback(fn, items);
+export const useSharedValue = function useSharedValue(point) {
+  closure_0 = point;
+  const first = _slicedToArray(
+    closure_4(() => runOnRuntime.makeMutable(closure_0)),
+    1,
+  )[0];
+  const items = [first];
+  closure_3(
+    () => () => {
+      closure_0(first[3]).cancelAnimation(closure_1_1);
+    },
+    items,
+  );
+  return first;
 };

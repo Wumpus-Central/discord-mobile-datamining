@@ -1,21 +1,13 @@
 // _runtime/metro/13486__.js
-import _mod13478 from "13478__.js";
+import registerAsset from "01132__.js";
 
-let c2 = true;
-let c3 = true;
-try {
-  const _String = String;
-  fromCharCode.apply(null, [0]);
-  try {
-    const _String2 = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(1);
-    fromCharCode2.apply(null, uint8Array);
-    const buf8 = new _mod13478.Buf8(256);
-    require = 252;
-  } catch (err) {
-    c3 = false;
-  }
-} catch (err) {
-  c2 = false;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 36,
+  scales: [2, 3],
+  hash: "24a795d24a7018dbf13e204b38f24588",
+  name: "img_classic_resubscribe_mobile",
+  type: "png",
+});

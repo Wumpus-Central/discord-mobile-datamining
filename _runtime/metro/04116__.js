@@ -1,26 +1,11 @@
 // _runtime/metro/04116__.js
-import _typeof_mod from "03964__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import registerAsset from "01132__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function isSunday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 0 === _typeof.default(arg0).getDay();
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/premium/promotions/third_party/code_blurple",
+  scales: [1],
+  hash: "a979de81cbe8173e8146a43809e9923a",
+  name: "CodeBlurple.compiled.messages",
+  type: "jsona",
+});

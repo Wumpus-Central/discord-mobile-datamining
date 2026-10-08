@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/sidebar/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [2, 3, 4],
-  hash: "5be7f14768f9acc824d9e93779c75d9c",
-  name: "icon-call",
+  scales: [2, 3],
+  hash: "c8f47b968e51eb4d5f2964cb9e696a2a",
+  name: "ChannelsFollowedIcon",
   type: "png",
 });

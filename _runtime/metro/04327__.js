@@ -1,26 +1,34 @@
 // _runtime/metro/04327__.js
-import module_4319_mod from "04319__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import _typeof_mod from "04328__.js";
+import _typeof_mod from "04329__.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
 
-let module_4319 = module_4319_mod;
-if (!module_4319) {
-  const obj = { default: module_4319 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4319;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
 }
-module_4319 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isThisYear(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4319.default(arg0, Date.now());
+export default function clamp(arg0, arg1) {
+  ({ start, end } = arg1);
+  requiredArgs.default(2, arguments);
+  const items = [arg0, start];
+  const items1 = [_typeof.default(items), end];
+  return _typeof.default(items1);
 };
 export default exports.default;

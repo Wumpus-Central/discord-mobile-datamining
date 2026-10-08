@@ -1,30 +1,7 @@
 // _runtime/metro/04235__.js
-import _typeof_mod from "03964__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+let closure_0 = { lastWeek: "'\uC9C0\uB09C' eeee p", yesterday: "'\uC5B4\uC81C' p", today: "'\uC624\uB298' p", tomorrow: "'\uB0B4\uC77C' p", nextWeek: "'\uB2E4\uC74C' eeee p", other: "P" };
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function getISODay(arg0) {
-  requiredArgs.default(1, arguments);
-  let num = _typeof.default(arg0).getDay();
-  if (0 === num) {
-    num = 7;
-  }
-  return num;
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
 };
 export default exports.default;

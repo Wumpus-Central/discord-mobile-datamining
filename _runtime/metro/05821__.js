@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f5152f59510615cd9a196a52f24801ee",
-  name: "ThreadIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 228,
+  height: 60,
+  scales: [1],
+  hash: "0bb27de2f1b5a855e060166d68a98581",
+  name: "img_account_sync_samsung_light_and_dark",
   type: "png",
 });

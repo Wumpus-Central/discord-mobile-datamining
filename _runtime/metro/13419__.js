@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "3cb1cd2fa7a6da13fc0880992d84830f",
-  name: "ChevronLargeDownIcon",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 120,
+  height: 120,
+  scales: [1],
+  hash: "94bb0fdcfba6a856a1567cdd4f281049",
+  name: "mallow",
   type: "png",
 });

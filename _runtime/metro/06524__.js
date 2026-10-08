@@ -1,35 +1,31 @@
 // _runtime/metro/06524__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-try {
-  let closure_0 = fn(5722);
-  exports.MaybeScreenContainer = (enabled) => {
-    const merged = Object.assign(enabled, Object.assign({ enabled: 0 }));
-    if (null != closure_0) {
-      const obj2 = { enabled: enabled.enabled };
-      const merged1 = Object.assign(merged);
-      let tmp8 = <tmp2.ScreenContainer enabled={enabled.enabled} />;
-    } else {
-      const obj = {};
-      const merged2 = Object.assign(merged);
-      tmp8 = <View />;
+const Platform = _mod17.Platform;
+
+export const isNewArch = function isNewArch() {
+  if (undefined !== c1) {
+    return c1;
+  } else {
+    try {
+      let prop;
+      if (global != null) {
+        prop = global.nativeFabricUIManager;
+      }
+      let flag = Boolean(prop);
+      if (global != null) {
+        const __turboModuleProxy = global.__turboModuleProxy;
+      }
+      if (!flag) {
+        flag = Boolean(__turboModuleProxy);
+      }
+      if (!flag) {
+        flag = false;
+      }
+      c1 = flag;
+      return c1;
+    } catch (err) {
+      c1 = true;
     }
-    return tmp8;
-  };
-  exports.MaybeScreen = (arg0) => {
-    ({ enabled, active } = arg0);
-    const merged = Object.assign(arg0, Object.assign({ enabled: 0, active: 0 }));
-    if (null != closure_0) {
-      const obj2 = { enabled, activityState: active };
-      const merged1 = Object.assign(merged);
-      let tmp8 = <tmp2.Screen enabled={enabled} activityState={active} />;
-    } else {
-      const obj = {};
-      const merged2 = Object.assign(merged);
-      tmp8 = <View />;
-    }
-    return tmp8;
-  };
-} catch (err) {}
+  }
+};

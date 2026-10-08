@@ -1,62 +1,13 @@
 // _runtime/metro/12678__.js
-import _mod12580 from "12580__.js";
-import _mod12607 from "12607__.js";
-import _mod12608 from "12608__.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const profiler = {
-  startProfiler() {
-    const client = _mod12607.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod12608.DEBUG_BUILD) {
-          const logger3 = _mod12580.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12608.DEBUG_BUILD) {
-        const logger2 = _mod12580.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod12608.DEBUG_BUILD) {
-      const logger = _mod12580.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-  stopProfiler() {
-    const client = _mod12607.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod12608.DEBUG_BUILD) {
-          const logger3 = _mod12580.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod12608.DEBUG_BUILD) {
-        const logger2 = _mod12580.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod12608.DEBUG_BUILD) {
-      const logger = _mod12580.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "ce5302624e28acc38af07d238a4e16fe",
+  name: "BellZIcon",
+  type: "png",
+});

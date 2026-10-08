@@ -1,194 +1,28 @@
 // _runtime/metro/04224__.js
-import _mod3969 from "03969__.js";
-import differenceInCalendarDays_mod from "../04126_differenceInCalendarDays.js";
-import format_mod from "04196__.js";
-import code_mod from "04210__.js";
-import subMilliseconds_mod from "../04197_subMilliseconds.js";
-import _typeof_mod from "03964__.js";
-import module_4127_mod from "04127__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
-import module_3968_mod from "03968__.js";
+import 02136__ from "02136__.js";
 
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  let obj = { default: differenceInCalendarDays };
-  let tmp3 = obj;
+if (!module_2136) {
+  const obj2 = { default: module_2136 };
+  let obj = obj2;
 } else {
-  tmp3 = differenceInCalendarDays;
+  obj = module_2136;
 }
-differenceInCalendarDays = tmp3;
-let format = format_mod;
-if (!format) {
-  let obj2 = { default: format };
-  let tmp5 = obj2;
-} else {
-  tmp5 = format;
-}
-format = tmp5;
-let code = code_mod;
-if (!code) {
-  const obj3 = { default: code };
-  let tmp7 = obj3;
-} else {
-  tmp7 = code;
-}
-code = tmp7;
-let subMilliseconds = subMilliseconds_mod;
-if (!subMilliseconds) {
-  const obj4 = { default: subMilliseconds };
-  let tmp9 = obj4;
-} else {
-  tmp9 = subMilliseconds;
-}
-subMilliseconds = tmp9;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj5 = { default: _typeof };
-  let tmp11 = obj5;
-} else {
-  tmp11 = _typeof;
-}
-_typeof = tmp11;
-let module_4127 = module_4127_mod;
-if (!module_4127) {
-  const obj6 = { default: module_4127 };
-  let tmp13 = obj6;
-} else {
-  tmp13 = module_4127;
-}
-module_4127 = tmp13;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj7 = { default: requiredArgs };
-  let tmp15 = obj7;
-} else {
-  tmp15 = requiredArgs;
-}
-requiredArgs = tmp15;
-let module_3968 = module_3968_mod;
-if (!module_3968) {
-  const obj8 = { default: module_3968 };
-  let tmp17 = obj8;
-} else {
-  tmp17 = module_3968;
-}
-module_3968 = tmp17;
-
-export default function formatRelative(arg0, arg1, locale) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
-  const defaultOptions = _mod3969.getDefaultOptions();
-  let locale1;
-  if (null != locale) {
-    locale1 = locale.locale;
-  }
-  if (null === locale1) {
-    locale1 = defaultOptions.locale;
-  }
-  if (null === locale1) {
-    locale1 = code.default;
-  }
-  let weekStartsOn;
-  if (null != locale) {
-    weekStartsOn = locale.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != locale) {
-      locale = locale.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
-        }
-      }
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return String(Number(arg0));
+  },
+  era: obj.default({ values: { narrow: ["aC", "dC"], abbreviated: ["a.C.", "d.C."], wide: ["avanti Cristo", "dopo Cristo"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult3 = module_3968.default(num);
-  if (locale1.localize) {
-    if (locale1.formatLong) {
-      if (locale1.formatRelative) {
-        const defaultResult4 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
-        const _isNaN = isNaN;
-        if (isNaN(defaultResult4)) {
-          const _RangeError4 = RangeError;
-          const rangeError = new RangeError("Invalid time value");
-          throw rangeError;
-        } else {
-          let str4 = "other";
-          let str5 = "other";
-          if (defaultResult4 >= -6) {
-            let str6 = "lastWeek";
-            if (defaultResult4 >= -1) {
-              let str7 = "yesterday";
-              if (defaultResult4 >= 0) {
-                let str8 = "today";
-                if (defaultResult4 >= 1) {
-                  let str9 = "tomorrow";
-                  if (defaultResult4 >= 2) {
-                    if (defaultResult4 < 7) {
-                      str4 = "nextWeek";
-                    }
-                    str9 = str4;
-                  }
-                  str8 = str9;
-                }
-                str7 = str8;
-              }
-              str6 = str7;
-            }
-            str5 = str6;
-          }
-          const defaultResult5 = subMilliseconds.default(defaultResult1, module_4127.default(defaultResult1));
-          const obj = { locale: locale1, weekStartsOn: defaultResult3 };
-          const obj2 = { locale: locale1, weekStartsOn: defaultResult3 };
-          return format.default(defaultResult1, locale1.formatRelative(str5, defaultResult5, subMilliseconds.default(defaultResult2, module_4127.default(defaultResult2)), obj), obj2);
-        }
-      } else {
-        const _RangeError3 = RangeError;
-        const rangeError1 = new RangeError("locale must contain formatRelative property");
-        throw rangeError1;
-      }
-    } else {
-      const _RangeError2 = RangeError;
-      const rangeError2 = new RangeError("locale must contain formatLong property");
-      throw rangeError2;
-    }
-  } else {
-    const _RangeError = RangeError;
-    const rangeError3 = new RangeError("locale must contain localize property");
-    throw rangeError3;
-  }
+  }),
+  month: obj.default({ values: { narrow: ["G", "F", "M", "A", "M", "G", "L", "A", "S", "O", "N", "D"], abbreviated: ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"], wide: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["D", "L", "M", "M", "G", "V", "S"], short: ["dom", "lun", "mar", "mer", "gio", "ven", "sab"], abbreviated: ["dom", "lun", "mar", "mer", "gio", "ven", "sab"], wide: ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "m.", pm: "p.", midnight: "mezzanotte", noon: "mezzogiorno", morning: "mattina", afternoon: "pomeriggio", evening: "sera", night: "notte" }, abbreviated: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "mattina", afternoon: "pomeriggio", evening: "sera", night: "notte" }, wide: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "mattina", afternoon: "pomeriggio", evening: "sera", night: "notte" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "m.", pm: "p.", midnight: "mezzanotte", noon: "mezzogiorno", morning: "di mattina", afternoon: "del pomeriggio", evening: "di sera", night: "di notte" }, abbreviated: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "di mattina", afternoon: "del pomeriggio", evening: "di sera", night: "di notte" }, wide: { am: "AM", pm: "PM", midnight: "mezzanotte", noon: "mezzogiorno", morning: "di mattina", afternoon: "del pomeriggio", evening: "di sera", night: "di notte" } }, defaultFormattingWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

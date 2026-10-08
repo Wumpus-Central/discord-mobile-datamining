@@ -1,51 +1,24 @@
 // _runtime/metro/04615__.js
-import installWorkletsSupport_mod from "../04616_installWorkletsSupport.js";
+let closure_0 = { lessThanXSeconds: { one: "\u5C11\u65BC 1 \u79D2", other: "\u5C11\u65BC {{count}} \u79D2" }, xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" }, halfAMinute: "\u534A\u5206\u9418", lessThanXMinutes: { one: "\u5C11\u65BC 1 \u5206\u9418", other: "\u5C11\u65BC {{count}} \u5206\u9418" }, xMinutes: { one: "1 \u5206\u9418", other: "{{count}} \u5206\u9418" }, xHours: { one: "1 \u5C0F\u6642", other: "{{count}} \u5C0F\u6642" }, aboutXHours: { one: "\u5927\u7D04 1 \u5C0F\u6642", other: "\u5927\u7D04 {{count}} \u5C0F\u6642" }, xDays: { one: "1 \u5929", other: "{{count}} \u5929" }, aboutXWeeks: { one: "\u5927\u7D04 1 \u500B\u661F\u671F", other: "\u5927\u7D04 {{count}} \u500B\u661F\u671F" }, xWeeks: { one: "1 \u500B\u661F\u671F", other: "{{count}} \u500B\u661F\u671F" }, aboutXMonths: { one: "\u5927\u7D04 1 \u500B\u6708", other: "\u5927\u7D04 {{count}} \u500B\u6708" }, xMonths: { one: "1 \u500B\u6708", other: "{{count}} \u500B\u6708" }, aboutXYears: { one: "\u5927\u7D04 1 \u5E74", other: "\u5927\u7D04 {{count}} \u5E74" }, xYears: { one: "1 \u5E74", other: "{{count}} \u5E74" }, overXYears: { one: "\u8D85\u904E 1 \u5E74", other: "\u8D85\u904E {{count}} \u5E74" }, almostXYears: { one: "\u5C07\u8FD1 1 \u5E74", other: "\u5C07\u8FD1 {{count}} \u5E74" } };
 
-const require = globalThis.__r;
-
-let installWorkletsSupport = installWorkletsSupport_mod;
-installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
-for (const key10017 in require("04625__.js")) {
-  arg5[key10017] = require("04625__.js")[key10017];
-  continue;
-}
-for (const key10021 in require("04626__.js")) {
-  arg5[key10021] = require("04626__.js")[key10021];
-  continue;
-}
-for (const key10025 in require("04627__.js")) {
-  arg5[key10025] = require("04627__.js")[key10025];
-  continue;
-}
-for (const key10029 in require("04628__.js")) {
-  arg5[key10029] = require("04628__.js")[key10029];
-  continue;
-}
-for (const key10033 in require("04629__.js")) {
-  arg5[key10033] = require("04629__.js")[key10033];
-  continue;
-}
-for (const key10037 in require("04630__.js")) {
-  arg5[key10037] = require("04630__.js")[key10037];
-  continue;
-}
-for (const key10041 in require("04621__.js")) {
-  arg5[key10041] = require("04621__.js")[key10041];
-  continue;
-}
-for (const key10045 in require("04631__.js")) {
-  arg5[key10045] = require("04631__.js")[key10045];
-  continue;
-}
-for (const key10049 in require("04632__.js")) {
-  arg5[key10049] = require("04632__.js")[key10049];
-  continue;
-}
-for (const key10053 in require("04633__.js")) {
-  arg5[key10053] = require("04633__.js")[key10053];
-  continue;
-}
-for (const key10057 in require("04634__.js")) {
-  arg5[key10057] = require("04634__.js")[key10057];
-  continue;
-}
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp}前`;
+        }
+        text = `${tmp}內`;
+      }
+    }
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+  }
+};
+export default exports.default;

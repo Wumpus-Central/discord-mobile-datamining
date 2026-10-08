@@ -1,14 +1,11 @@
 // _runtime/metro/04127__.js
+import registerAsset from "01132__.js";
 
-export default function getTimezoneOffsetInMilliseconds(getFullYear) {
-  const fullYear = getFullYear.getFullYear();
-  const month = getFullYear.getMonth();
-  const hours = getFullYear.getHours();
-  const minutes = getFullYear.getMinutes();
-  const seconds = getFullYear.getSeconds();
-  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
-  date1.setUTCFullYear(getFullYear.getFullYear());
-  const time = getFullYear.getTime();
-  return time - date1.getTime();
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
+  scales: [1],
+  hash: "503da46d77decbd9448f3c0814a193ce",
+  name: "fr.messages.503da46d77decbd9448f3c0814a193ce.compiled.messages",
+  type: "jsona",
+});

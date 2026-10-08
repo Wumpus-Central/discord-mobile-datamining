@@ -1,265 +1,1859 @@
 // _runtime/metro/04299__.js
-import Parser2 from "../04270_Parser.js";
-
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-function _setPrototypeOf(Hour1To24Parser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1To24Parser, Parser) {
-      Hour1To24Parser.__proto__ = Parser;
-      return Hour1To24Parser;
-    };
-  }
-  return _setPrototypeOf(Hour1To24Parser, Parser);
-}
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
-}
-const Parser = Parser2.Parser;
-let _createSuperInternal;
-class Hour1To24Parser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 70,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
-        } else {
-          num3 = 70;
-          applyResult.priority = 70;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          items1 = ["a", "b", "h", "H", "K", "t", "T"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj.value = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-          } else {
-            applyResult.incompatibleTokens = items1;
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let dependencyMap = Hour1To24Parser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
-}
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
-}
-Hour1To24Parser.prototype = Object.create(prototype, {
-  constructor: { value: Hour1To24Parser, writable: true, configurable: true },
-});
-if (Parser) {
-  _setPrototypeOf(Hour1To24Parser, Parser);
-}
-let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
+let obj = {
+  lessThanXSeconds: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
             }
-            return true;
-          } catch (err) {
-            return false;
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
           }
         }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
       }
     }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
     }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
     }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  xSeconds: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  halfAMinute: function halfAtMinute(arg0, addSuffix) {
+    let str = "\u043F\u0456\u0432\u0445\u0432\u0438\u043B\u0438\u043D\u0438";
+    if (addSuffix) {
+      str = "\u043F\u0456\u0432\u0445\u0432\u0438\u043B\u0438\u043D\u0438";
+      if (addSuffix.addSuffix) {
+        let str3 = "\u043F\u0456\u0432\u0445\u0432\u0438\u043B\u0438\u043D\u0438 \u0442\u043E\u043C\u0443";
+        if (addSuffix.comparison) {
+          str3 = "\u043F\u0456\u0432\u0445\u0432\u0438\u043B\u0438\u043D\u0438 \u0442\u043E\u043C\u0443";
+          if (addSuffix.comparison > 0) {
+            str3 = "\u0437\u0430 \u043F\u0456\u0432\u0445\u0432\u0438\u043B\u0438\u043D\u0438";
+          }
+        }
+        str = str3;
+      }
+    }
+    return str;
+  },
+  lessThanXMinutes: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  xMinutes: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  aboutXHours: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  xHours: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  xDays: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  aboutXWeeks: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  xWeeks: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  aboutXMonths: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  xMonths: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  aboutXYears: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  xYears: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  overXYears: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
+  },
+  almostXYears: (arg0, addSuffix) => {
+    if (addSuffix) {
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          if (obj.past) {
+            const past = obj.past;
+            if (undefined === past.one) {
+              const result = arg0 % 10;
+              const result1 = arg0 % 100;
+              if (1 === result) {
+                if (11 !== result1) {
+                  const _String8 = String;
+                  let one3 = past.singularNominative.replace("{{count}}", String(arg0));
+                }
+              }
+              if (2 <= result) {
+                if (result <= 4) {
+                  const _String7 = String;
+                  one3 = past.singularGenitive.replace("{{count}}", String(arg0));
+                }
+              }
+              const _String6 = String;
+              one3 = past.pluralGenitive.replace("{{count}}", String(arg0));
+            }
+            one3 = past.one;
+          } else {
+            const regular2 = obj.regular;
+            if (undefined !== regular2.one) {
+              if (1 === arg0) {
+                let one2 = regular2.one;
+              }
+              const text = `${one2} тому`;
+            }
+            const result2 = arg0 % 10;
+            const result3 = arg0 % 100;
+            if (1 === result2) {
+              if (11 !== result3) {
+                const _String5 = String;
+                one2 = regular2.singularNominative.replace("{{count}}", String(arg0));
+              }
+            }
+            if (2 <= result2) {
+              if (result2 <= 4) {
+                const _String4 = String;
+                one2 = regular2.singularGenitive.replace("{{count}}", String(arg0));
+              }
+            }
+            const _String3 = String;
+            one2 = regular2.pluralGenitive.replace("{{count}}", String(arg0));
+          }
+        }
+        if (!obj.future) {
+          const regular3 = obj.regular;
+          if (undefined !== regular3.one) {
+            if (1 === arg0) {
+              let one4 = regular3.one;
+            }
+            const text1 = `за ${one4}`;
+          }
+          const result4 = arg0 % 10;
+          const result5 = arg0 % 100;
+          if (1 === result4) {
+            if (11 !== result5) {
+              const _String11 = String;
+              one4 = regular3.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result4) {
+            if (result4 <= 4) {
+              const _String10 = String;
+              one4 = regular3.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String9 = String;
+          one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        const future = obj.future;
+        if (undefined === future.one) {
+          const result6 = arg0 % 10;
+          const result7 = arg0 % 100;
+          if (1 === result6) {
+            if (11 !== result7) {
+              const _String14 = String;
+              let one5 = future.singularNominative.replace("{{count}}", String(arg0));
+            }
+          }
+          if (2 <= result6) {
+            if (result6 <= 4) {
+              const _String13 = String;
+              one5 = future.singularGenitive.replace("{{count}}", String(arg0));
+            }
+          }
+          const _String12 = String;
+          one5 = future.pluralGenitive.replace("{{count}}", String(arg0));
+        }
+        one5 = future.one;
+      }
+    }
+    const regular = obj.regular;
+    if (undefined !== regular.one) {
+      if (1 === arg0) {
+        let one = regular.one;
+      }
+      return one;
+    }
+    const result8 = arg0 % 10;
+    const result9 = arg0 % 100;
+    if (1 === result8) {
+      if (11 !== result9) {
+        const _String2 = String;
+        one = regular.singularNominative.replace("{{count}}", String(arg0));
+      }
+    }
+    if (2 <= result8) {
+      if (result8 <= 4) {
+        const _String = String;
+        one = regular.singularGenitive.replace("{{count}}", String(arg0));
+      }
+    }
+    one = regular.pluralGenitive.replace("{{count}}", String(arg0));
   }
-  return tmp8;
 };
-const entry = {
-  key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("k" === arg1) {
-      return _createSuperInternal(4272).parseNumericPattern(_createSuperInternal(4273).numericPatterns.hour24h, arg0);
-    } else if ("ko" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
-    } else {
-      return _createSuperInternal(4272).parseNDigits(arg1.length, arg0);
-    }
-  },
-};
-let items = [
-  entry,
-  {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
-      if (tmp) {
-        tmp = arg1 <= 24;
-      }
-      return tmp;
-    },
-  },
-  {
-    key: "set",
-    value: function set(setUTCHours, arg1, arg2) {
-      let result = arg2;
-      if (arg2 <= 24) {
-        result = arg2 % 24;
-      }
-      setUTCHours.setUTCHours(result, 0, 0, 0);
-      return setUTCHours;
-    },
-  },
-];
-if (0 < items.length) {
-  do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
-    num = num + 1;
-  } while (num < items.length);
-}
+let closure_129_0 = { regular: { one: "\u043C\u0435\u043D\u0448\u0435 \u0441\u0435\u043A\u0443\u043D\u0434\u0438", singularNominative: "\u043C\u0435\u043D\u0448\u0435 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438", singularGenitive: "\u043C\u0435\u043D\u0448\u0435 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434", pluralGenitive: "\u043C\u0435\u043D\u0448\u0435 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434" }, future: { one: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 \u0441\u0435\u043A\u0443\u043D\u0434\u0443", singularNominative: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0443", singularGenitive: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438", pluralGenitive: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434" } };
+let closure_130_0 = { regular: { singularNominative: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0430", singularGenitive: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438", pluralGenitive: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434" }, past: { singularNominative: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0443 \u0442\u043E\u043C\u0443", singularGenitive: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438 \u0442\u043E\u043C\u0443", pluralGenitive: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434 \u0442\u043E\u043C\u0443" }, future: { singularNominative: "\u0437\u0430 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0443", singularGenitive: "\u0437\u0430 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438", pluralGenitive: "\u0437\u0430 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434" } };
+let closure_131_0 = { regular: { one: "\u043C\u0435\u043D\u0448\u0435 \u0445\u0432\u0438\u043B\u0438\u043D\u0438", singularNominative: "\u043C\u0435\u043D\u0448\u0435 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0438", singularGenitive: "\u043C\u0435\u043D\u0448\u0435 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D", pluralGenitive: "\u043C\u0435\u043D\u0448\u0435 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D" }, future: { one: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 \u0445\u0432\u0438\u043B\u0438\u043D\u0443", singularNominative: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0443", singularGenitive: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0438", pluralGenitive: "\u043C\u0435\u043D\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D" } };
+let closure_132_0 = { regular: { singularNominative: "{{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0430", singularGenitive: "{{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0438", pluralGenitive: "{{count}} \u0445\u0432\u0438\u043B\u0438\u043D" }, past: { singularNominative: "{{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0443 \u0442\u043E\u043C\u0443", singularGenitive: "{{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0438 \u0442\u043E\u043C\u0443", pluralGenitive: "{{count}} \u0445\u0432\u0438\u043B\u0438\u043D \u0442\u043E\u043C\u0443" }, future: { singularNominative: "\u0437\u0430 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0443", singularGenitive: "\u0437\u0430 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D\u0438", pluralGenitive: "\u0437\u0430 {{count}} \u0445\u0432\u0438\u043B\u0438\u043D" } };
+let closure_133_0 = { regular: { singularNominative: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0433\u043E\u0434\u0438\u043D\u0438", singularGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0433\u043E\u0434\u0438\u043D", pluralGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0433\u043E\u0434\u0438\u043D" }, future: { singularNominative: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0433\u043E\u0434\u0438\u043D\u0443", singularGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438", pluralGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0433\u043E\u0434\u0438\u043D" } };
+let closure_134_0 = { regular: { singularNominative: "{{count}} \u0433\u043E\u0434\u0438\u043D\u0443", singularGenitive: "{{count}} \u0433\u043E\u0434\u0438\u043D\u0438", pluralGenitive: "{{count}} \u0433\u043E\u0434\u0438\u043D" } };
+let closure_135_0 = { regular: { singularNominative: "{{count}} \u0434\u0435\u043D\u044C", singularGenitive: "{{count}} \u0434\u043Di", pluralGenitive: "{{count}} \u0434\u043D\u0456\u0432" } };
+let closure_136_0 = { regular: { singularNominative: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0442\u0438\u0436\u043D\u044F", singularGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0442\u0438\u0436\u043D\u0456\u0432", pluralGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0442\u0438\u0436\u043D\u0456\u0432" }, future: { singularNominative: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0442\u0438\u0436\u0434\u0435\u043D\u044C", singularGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0442\u0438\u0436\u043D\u0456", pluralGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0442\u0438\u0436\u043D\u0456\u0432" } };
+let closure_137_0 = { regular: { singularNominative: "{{count}} \u0442\u0438\u0436\u0434\u0435\u043D\u044C", singularGenitive: "{{count}} \u0442\u0438\u0436\u043D\u0456", pluralGenitive: "{{count}} \u0442\u0438\u0436\u043D\u0456\u0432" } };
+let closure_138_0 = { regular: { singularNominative: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u043C\u0456\u0441\u044F\u0446\u044F", singularGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u043C\u0456\u0441\u044F\u0446\u0456\u0432", pluralGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u043C\u0456\u0441\u044F\u0446\u0456\u0432" }, future: { singularNominative: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u043C\u0456\u0441\u044F\u0446\u044C", singularGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u043C\u0456\u0441\u044F\u0446\u0456", pluralGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u043C\u0456\u0441\u044F\u0446\u0456\u0432" } };
+let closure_139_0 = { regular: { singularNominative: "{{count}} \u043C\u0456\u0441\u044F\u0446\u044C", singularGenitive: "{{count}} \u043C\u0456\u0441\u044F\u0446\u0456", pluralGenitive: "{{count}} \u043C\u0456\u0441\u044F\u0446\u0456\u0432" } };
+let closure_140_0 = { regular: { singularNominative: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0440\u043E\u043A\u0443", singularGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0440\u043E\u043A\u0456\u0432", pluralGenitive: "\u0431\u043B\u0438\u0437\u044C\u043A\u043E {{count}} \u0440\u043E\u043A\u0456\u0432" }, future: { singularNominative: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0440\u0456\u043A", singularGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0440\u043E\u043A\u0438", pluralGenitive: "\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E \u0437\u0430 {{count}} \u0440\u043E\u043A\u0456\u0432" } };
+let closure_141_0 = { regular: { singularNominative: "{{count}} \u0440\u0456\u043A", singularGenitive: "{{count}} \u0440\u043E\u043A\u0438", pluralGenitive: "{{count}} \u0440\u043E\u043A\u0456\u0432" } };
+let closure_142_0 = { regular: { singularNominative: "\u0431\u0456\u043B\u044C\u0448\u0435 {{count}} \u0440\u043E\u043A\u0443", singularGenitive: "\u0431\u0456\u043B\u044C\u0448\u0435 {{count}} \u0440\u043E\u043A\u0456\u0432", pluralGenitive: "\u0431\u0456\u043B\u044C\u0448\u0435 {{count}} \u0440\u043E\u043A\u0456\u0432" }, future: { singularNominative: "\u0431\u0456\u043B\u044C\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0440\u0456\u043A", singularGenitive: "\u0431\u0456\u043B\u044C\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0440\u043E\u043A\u0438", pluralGenitive: "\u0431\u0456\u043B\u044C\u0448\u0435, \u043D\u0456\u0436 \u0437\u0430 {{count}} \u0440\u043E\u043A\u0456\u0432" } };
+let closure_143_0 = { regular: { singularNominative: "\u043C\u0430\u0439\u0436\u0435 {{count}} \u0440\u0456\u043A", singularGenitive: "\u043C\u0430\u0439\u0436\u0435 {{count}} \u0440\u043E\u043A\u0438", pluralGenitive: "\u043C\u0430\u0439\u0436\u0435 {{count}} \u0440\u043E\u043A\u0456\u0432" }, future: { singularNominative: "\u043C\u0430\u0439\u0436\u0435 \u0437\u0430 {{count}} \u0440\u0456\u043A", singularGenitive: "\u043C\u0430\u0439\u0436\u0435 \u0437\u0430 {{count}} \u0440\u043E\u043A\u0438", pluralGenitive: "\u043C\u0430\u0439\u0436\u0435 \u0437\u0430 {{count}} \u0440\u043E\u043A\u0456\u0432" } };
 
-export { Hour1To24Parser };
+export default function formatDistance(arg0, arg1, arg2) {
+  obj = arg2;
+  if (!arg2) {
+    obj = {};
+  }
+  return obj[arg0](arg1, obj);
+};
+export default exports.default;

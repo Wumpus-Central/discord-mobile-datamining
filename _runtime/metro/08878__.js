@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "68832d737c55ed046c40e8d11571a54e",
-  name: "CircuitIcon",
+  hash: "119c03ecfe749b5d0f4e60c612bb714f",
+  name: "RiotGamesNeutralIcon",
   type: "png",
 });

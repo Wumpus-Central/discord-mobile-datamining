@@ -1,8 +1,16 @@
 // _runtime/metro/06316__.js
-import _mod17 from "00017__.js";
+const fn = function n(item, value) {
+  let result = item;
+  if (typeof item === "string") {
+    const _Number = Number;
+    result = (Number(item.split("%")[0]) * value) / 100;
+  }
+  return Math.max(0, value - result);
+};
+fn.__closure = {};
+fn.__workletHash = 14612470006791;
+fn.__initData = {
+  code: "function pnpm_normalizeSnapPointTs1(snapPoint,containerHeight){let normalizedSnapPoint=snapPoint;if(typeof normalizedSnapPoint==='string'){normalizedSnapPoint=Number(normalizedSnapPoint.split('%')[0])*containerHeight/100;}return Math.max(0,containerHeight-normalizedSnapPoint);}",
+};
 
-const StyleSheet = _mod17.StyleSheet;
-
-export const styles = StyleSheet.create({
-  container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" },
-});
+export const normalizeSnapPoint = fn;

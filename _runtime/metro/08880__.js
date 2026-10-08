@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BlushIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "def0b6d35103453cf4894471df6b84ad",
-  name: "BlushIcon",
+  hash: "eaee56f86ca7905c61b8b9a3d1c990d4",
+  name: "MinecraftNeutralIcon-primary",
   type: "png",
 });

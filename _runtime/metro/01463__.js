@@ -1,19 +1,11 @@
 // _runtime/metro/01463__.js
-const require = globalThis.__r;
+import _mod1309 from "01309__.js";
 
-function hasPropertyDescriptors() {
-  return require("flag");
-}
-hasPropertyDescriptors.hasArrayLengthDefineBug = function hasArrayLengthDefineBug() {
-  if (require("flag")) {
-    try {
-      return 1 !== require("flag")([], "length", { value: 1 }).length;
-    } catch (err) {
-      return true;
-    }
-  } else {
-    return null;
+export default function hasToStringTagShams() {
+  let toStringTag = _mod1309();
+  if (toStringTag) {
+    const _Symbol = Symbol;
+    toStringTag = Symbol.toStringTag;
   }
-};
-
-export default hasPropertyDescriptors;
+  return toStringTag;
+}

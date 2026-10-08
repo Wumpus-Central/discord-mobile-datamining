@@ -1,52 +1,13 @@
 // _runtime/metro/05343__.js
-import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
-import ToObject from "../05344_ToObject.js";
-import _mod5346 from "05346__.js";
-import ToUint32 from "../05347_ToUint32.js";
-import ToString from "../05359_ToString.js";
-import _mod5371 from "05371__.js";
-import ArraySpeciesCreate from "../05372_ArraySpeciesCreate.js";
-import Get from "../05382_Get.js";
-import HasProperty from "../05395_HasProperty.js";
-import Call from "../05396_Call.js";
-import CreateDataPropertyOrThrow from "../05397_CreateDataPropertyOrThrow.js";
+import _mod17 from "00017__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const ObjectResult = Object("a");
-let tmp2 = "a" !== ObjectResult[0];
-if (!tmp2) {
-  tmp2 = !(0 in ObjectResult);
-}
-let closure_2 = tmp2;
-let closure_3 = callBoundIntrinsic("String.prototype.split");
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { nativeContainerBackgroundColor: _mod26.colorAttribute };
 
-export default function map(arg0) {
-  const tmp3 = ToObject(this);
-  let arr = tmp3;
-  if (closure_2) {
-    arr = tmp3;
-    if (_mod5346(tmp3)) {
-      arr = closure_3(tmp3, "");
-    }
-  }
-  const tmp5 = ToUint32(arr.length);
-  if (_mod5371(arg0)) {
-    if (arguments.length > 1) {
-      const tmp11 = arguments[1];
-    }
-    const tmp12 = ArraySpeciesCreate(tmp3, tmp5);
-    for (let num2 = 0; num2 < tmp5; num2 = num2 + 1) {
-      let tmp15 = ToString(num2);
-      if (HasProperty(tmp3, tmp15)) {
-        let tmp17 = Get(tmp3, tmp15);
-        let items = [tmp17, num2, tmp3];
-        let tmp18 = Call(arg0, tmp11, items);
-        let tmp19 = CreateDataPropertyOrThrow(tmp12, tmp15, tmp18);
-      }
-    }
-    return tmp12;
-  } else {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Array.prototype.map callback must be a function");
-    throw typeError;
-  }
-}
+export default module_65.get("RNSScreenStack", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

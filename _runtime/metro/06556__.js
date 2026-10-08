@@ -1,13 +1,17 @@
 // _runtime/metro/06556__.js
-import registerAsset from "01132__.js";
+import _mod6541 from "06541__.js";
+import _mod6557 from "06557__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "45c8ad8f30ca8563a8afaab90a692e66",
-  name: "MagnifyingGlassIcon",
-  type: "png",
-});
+export default function _possibleConstructorReturn(arg0, fn) {
+  if (fn) {
+    _mod6541;
+    return fn;
+  }
+  if (undefined !== fn) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Derived constructors may only return object or undefined");
+    throw typeError;
+  } else {
+    return _mod6557(arg0);
+  }
+}

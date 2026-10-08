@@ -1,28 +1,11 @@
 // _runtime/metro/04145__.js
-import startOfDay_mod from "../04128_startOfDay.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import registerAsset from "01132__.js";
 
-let startOfDay = startOfDay_mod;
-if (!startOfDay) {
-  const obj = { default: startOfDay };
-  let tmp3 = obj;
-} else {
-  tmp3 = startOfDay;
-}
-startOfDay = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function isSameDay(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfDay.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfDay.default(arg1).getTime();
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
+  scales: [1],
+  hash: "5188e8d67a48b98323b911b79610f11f",
+  name: "vi.messages.5188e8d67a48b98323b911b79610f11f.compiled.messages",
+  type: "jsona",
+});

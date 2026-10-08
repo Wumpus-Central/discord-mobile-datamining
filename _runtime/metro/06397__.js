@@ -1,137 +1,113 @@
 // _runtime/metro/06397__.js
-import _mod6394 from "06394__.js";
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
+import TouchEventType from "../06334_TouchEventType.js";
+import _mod6347 from "06347__.js";
 
-({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
-  closure_0 = recyclerViewManager;
-  closure_1 = arg1;
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(Date.now());
-  const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = _mod6394.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  let num = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num = recyclerViewManager.getWindowSize().height;
+const useMemo = _mod19.useMemo;
+function getHandler(arg0, onBegin) {
+  if (_mod6347.CALLBACK_TYPE.BEGAN === arg0) {
+    return onBegin.onBegin;
+  } else if (_mod6347.CALLBACK_TYPE.START === arg0) {
+    return onBegin.onActivate;
+  } else if (_mod6347.CALLBACK_TYPE.UPDATE === arg0) {
+    return onBegin.onUpdate;
+  } else if (_mod6347.CALLBACK_TYPE.END === arg0) {
+    return onBegin.onDeactivate;
+  } else if (_mod6347.CALLBACK_TYPE.FINALIZE === arg0) {
+    return onBegin.onFinalize;
+  } else if (_mod6347.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
+    return onBegin.onTouchesDown;
+  } else if (_mod6347.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
+    return onBegin.onTouchesMove;
+  } else if (_mod6347.CALLBACK_TYPE.TOUCHES_UP === arg0) {
+    return onBegin.onTouchesUp;
+  } else if (_mod6347.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
+    return onBegin.onTouchesCancel;
   }
-  let num2 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num2 = recyclerViewManager.getChildContainerDimensions().height;
-  }
-  let num3 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num3 = recyclerViewManager.getWindowSize().width;
-  }
-  let num4 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num4 = recyclerViewManager.getChildContainerDimensions().width;
-  }
-  const items = [recyclerViewManager];
-  const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
-  const checkBounds = React2(() => {
-    closure_5.current = Date.now();
-    const props = closure_0.props;
-    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } =
-      props);
-    let num;
-    if (maintainVisibleContentPosition != null) {
-      num = maintainVisibleContentPosition.autoscrollToBottomThreshold;
-    }
-    if (num == null) {
-      num = -1;
-    }
-    if (closure_0.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = closure_0.getAbsoluteLastScrollOffset();
-      const size = closure_0.getChildContainerDimensions();
-      const size2 = closure_0.getWindowSize();
-      const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + closure_0.firstItemOffset;
-      if (tmp3 > 0) {
-        if (onEndReached) {
-          if (onEndReachedThreshold == null) {
-            onEndReachedThreshold = 0.5;
-          }
-          const _Math = Math;
-          const result = onEndReachedThreshold * tmp3;
-          const tmp6 = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result;
-          let tmp7 = tmp6;
-          if (tmp6) {
-            tmp7 = !ref.current;
-          }
-          if (tmp7) {
-            ref.current = true;
-            onEndReached();
-          }
-          ref.current = tmp6;
-        }
-        if (onStartReached) {
-          if (onStartReachedThreshold == null) {
-            onStartReachedThreshold = 0.2;
-          }
-          let tmp13 = tmp12;
-          if (absoluteLastScrollOffset <= onStartReachedThreshold * tmp3) {
-            tmp13 = !ref2.current;
-          }
-          if (tmp13) {
-            ref2.current = true;
-            onStartReached();
-          }
-          ref2.current = absoluteLastScrollOffset <= onStartReachedThreshold * tmp3;
-        }
-        if (!tmp2) {
-          if (num >= 0) {
-            const _Math2 = Math;
-            const result1 = num * tmp3;
-            closure_4.current = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result1;
-          }
-        }
-      }
-    }
-  }, items);
-  const tmp2 = React2(() => {
-    let current = props.isOffsetProjectionEnabled;
-    if (current) {
-      current = ref3.current;
-    }
-    if (current) {
-      ref3.current = false;
-      _requestAnimationFrame(() => {
-        const maintainVisibleContentPosition = props.props.maintainVisibleContentPosition;
-        let flag;
-        if (maintainVisibleContentPosition != null) {
-          flag = maintainVisibleContentPosition.animateAutoScrollToBottom;
-        }
-        if (flag == null) {
-          flag = true;
-        }
-        const current = ref.current;
-        if (current != null) {
-          if (flag) {
-            flag = !props.ignoreScrollEvents;
-          }
-          const obj = { animated: flag };
-          current.scrollToEnd(obj);
-        }
-      });
-    }
-  }, items1);
-  closure_7 = tmp2;
-  const items2 = [data];
-  React4(() => {
-    closure_2.current = false;
-  }, items2);
-  const items3 = [data, tmp2, num, num3];
-  React3(() => {
-    closure_7();
-  }, items3);
-  const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
-  React3(() => {
-    if (Date.now() - ref4.current >= 100) {
-      closure_7();
-    }
-  }, items4);
-  return { checkBounds };
+}
+getHandler.__closure = { CALLBACK_TYPE: _mod6347.CALLBACK_TYPE };
+getHandler.__workletHash = 8647314057396;
+getHandler.__initData = {
+  code: "function getHandler_Pnpm_eventHandlersUtilsTs1(type,callbacks){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return callbacks.onBegin;case CALLBACK_TYPE.START:return callbacks.onActivate;case CALLBACK_TYPE.UPDATE:return callbacks.onUpdate;case CALLBACK_TYPE.END:return callbacks.onDeactivate;case CALLBACK_TYPE.FINALIZE:return callbacks.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return callbacks.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return callbacks.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return callbacks.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return callbacks.onTouchesCancel;}}",
 };
+function touchEventTypeToCallbackType(arg0) {
+  if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
+    return _mod6347.CALLBACK_TYPE.TOUCHES_DOWN;
+  } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === arg0) {
+    return _mod6347.CALLBACK_TYPE.TOUCHES_MOVE;
+  } else if (TouchEventType.TouchEventType.TOUCHES_UP === arg0) {
+    return _mod6347.CALLBACK_TYPE.TOUCHES_UP;
+  } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === arg0) {
+    return _mod6347.CALLBACK_TYPE.TOUCHES_CANCEL;
+  } else {
+    return _mod6347.CALLBACK_TYPE.UNDEFINED;
+  }
+}
+let obj = { CALLBACK_TYPE: _mod6347.CALLBACK_TYPE };
+touchEventTypeToCallbackType.__closure = {
+  TouchEventType: TouchEventType.TouchEventType,
+  CALLBACK_TYPE: _mod6347.CALLBACK_TYPE,
+};
+touchEventTypeToCallbackType.__workletHash = 2066229974382;
+touchEventTypeToCallbackType.__initData = {
+  code: "function touchEventTypeToCallbackType_Pnpm_eventHandlersUtilsTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}",
+};
+function runCallback(arg0, arg1, arg2) {
+  const tmp = getHandler(arg0, arg1);
+  if (tmp) {
+    tmp(arg2);
+  }
+}
+runCallback.__closure = { getHandler };
+runCallback.__workletHash = 9892811129293;
+runCallback.__initData = {
+  code: "function runCallback_Pnpm_eventHandlersUtilsTs3(type,callbacks,event){const{getHandler}=this.__closure;const handler=getHandler(type,callbacks);if(!handler){return;}handler(event);}",
+};
+
+export const useMemoizedGestureCallbacks = function useMemoizedGestureCallbacks(disableReanimated) {
+  const items = [, , , , , , , ,];
+  ({
+    onActivate: arr[0],
+    onBegin: arr[1],
+    onDeactivate: arr[2],
+    onFinalize: arr[3],
+    onTouchesCancel: arr[4],
+    onTouchesDown: arr[5],
+    onTouchesMove: arr[6],
+    onTouchesUp: arr[7],
+    onUpdate: arr[8],
+  } = disableReanimated);
+  return useMemo(() => {
+    const obj = {};
+    if (disableReanimated.onBegin) {
+      obj.onBegin = disableReanimated.onBegin;
+    }
+    if (disableReanimated.onActivate) {
+      obj.onActivate = disableReanimated.onActivate;
+    }
+    if (disableReanimated.onDeactivate) {
+      obj.onDeactivate = disableReanimated.onDeactivate;
+    }
+    if (disableReanimated.onFinalize) {
+      obj.onFinalize = disableReanimated.onFinalize;
+    }
+    if (disableReanimated.onUpdate) {
+      obj.onUpdate = disableReanimated.onUpdate;
+    }
+    if (disableReanimated.onTouchesDown) {
+      obj.onTouchesDown = disableReanimated.onTouchesDown;
+    }
+    if (disableReanimated.onTouchesMove) {
+      obj.onTouchesMove = disableReanimated.onTouchesMove;
+    }
+    if (disableReanimated.onTouchesUp) {
+      obj.onTouchesUp = disableReanimated.onTouchesUp;
+    }
+    if (disableReanimated.onTouchesCancel) {
+      obj.onTouchesCancel = disableReanimated.onTouchesCancel;
+    }
+    return obj;
+  }, items);
+};
+export { touchEventTypeToCallbackType };
+export { runCallback };

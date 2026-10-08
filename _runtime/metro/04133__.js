@@ -1,35 +1,11 @@
 // _runtime/metro/04133__.js
-import module_3968_mod from "03968__.js";
-import module_4113_mod from "04113__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import registerAsset from "01132__.js";
 
-let module_3968 = module_3968_mod;
-if (!module_3968) {
-  const obj = { default: module_3968 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3968;
-}
-module_3968 = tmp3;
-let module_4113 = module_4113_mod;
-if (!module_4113) {
-  const obj2 = { default: module_4113 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4113;
-}
-module_4113 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addYears(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4113.default(interval, 12 * module_3968.default(arg1));
-};
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
+  scales: [1],
+  hash: "aea983bc5a120eddefc397c663d82048",
+  name: "ko.messages.aea983bc5a120eddefc397c663d82048.compiled.messages",
+  type: "jsona",
+});

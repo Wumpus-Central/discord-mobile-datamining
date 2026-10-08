@@ -1,26 +1,36 @@
 // _runtime/metro/04321__.js
+import module_4160_mod from "04160__.js";
 import module_4311_mod from "04311__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
+import requiredArgs_mod from "../04157_requiredArgs.js";
 
-let module_4311 = module_4311_mod;
-if (!module_4311) {
-  const obj = { default: module_4311 };
+let module_4160 = module_4160_mod;
+if (!module_4160) {
+  const obj = { default: module_4160 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4311;
+  tmp3 = module_4160;
 }
-module_4311 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4160 = tmp3;
+let module_4311 = module_4311_mod;
+if (!module_4311) {
+  const obj2 = { default: module_4311 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4311;
 }
-requiredArgs = tmp5;
+module_4311 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let c3 = 60000;
 
-export default function isThisISOWeek(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4311.default(arg0, Date.now());
+export default function addMinutes(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4311.default(interval, module_4160.default(arg1) * c3);
 };
 export default exports.default;

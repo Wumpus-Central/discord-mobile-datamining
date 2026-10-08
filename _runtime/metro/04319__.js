@@ -1,28 +1,14 @@
 // _runtime/metro/04319__.js
-import _typeof_mod from "03964__.js";
-import requiredArgs_mod from "../03965_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function isSameYear(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  return fullYear === _typeof.default(arg1).getFullYear();
+export default function getTimezoneOffsetInMilliseconds(getFullYear) {
+  const fullYear = getFullYear.getFullYear();
+  const month = getFullYear.getMonth();
+  const hours = getFullYear.getHours();
+  const minutes = getFullYear.getMinutes();
+  const seconds = getFullYear.getSeconds();
+  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
+  date1.setUTCFullYear(getFullYear.getFullYear());
+  const time = getFullYear.getTime();
+  return time - date1.getTime();
 };
 export default exports.default;
